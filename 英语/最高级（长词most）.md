@@ -27,15 +27,15 @@ aliases: [最高级（长词most）, most最高级, superlative adjectives long,
 
 ### 常见长词最高级
 
-| 原级 | 最高级 |
-|------|--------|
-| outgoing | the most outgoing |
+| 原级          | 最高级                  |
+| ----------- | -------------------- |
+| outgoing    | the most outgoing    |
 | interesting | the most interesting |
-| important | the most important |
-| beautiful | the most beautiful |
-| difficult | the most difficult |
-| expensive | the most expensive |
-| popular | the most popular |
+| important   | the most important   |
+| beautiful   | the most beautiful   |
+| difficult   | the most difficult   |
+| expensive   | the most expensive   |
+| popular     | the most popular     |
 
 ### 核心句型
 

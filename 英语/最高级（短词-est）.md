@@ -28,12 +28,12 @@ aliases: [最高级（短词-est）, 最高级-est, superlative adjectives short
 
 ### 变化规则（同比较级）
 
-| 类型 | 规则 | 原级 → 最高级 |
-|------|------|--------------|
-| 一般词 | + est | tall → tallest |
-| 以 e 结尾 | + st | nice → nicest |
-| 辅音 + y | y→i + est | funny → funniest |
-| 重读闭音节 | 双写辅音 + est | big → biggest |
+| 类型     | 规则         | 原级 → 最高级         |
+| ------ | ---------- | ---------------- |
+| 一般词    | + est      | tall → tallest   |
+| 以 e 结尾 | + st       | nice → nicest    |
+| 辅音 + y | y→i + est  | funny → funniest |
+| 重读闭音节  | 双写辅音 + est | big → biggest    |
 
 ### 常用短词最高级
 
