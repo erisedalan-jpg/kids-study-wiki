@@ -1,6 +1,6 @@
 ---
 title: there be句型
-aliases: [there be, 存在句, there is, there are]
+aliases: [there be句型, there be, 存在句, there is, there are]
 学科: 英语
 学段: [小学, 初中]
 主题: [语法, 句型]

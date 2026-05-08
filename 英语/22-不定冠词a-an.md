@@ -1,6 +1,6 @@
 ---
 title: 不定冠词a-an
-aliases: [不定冠词, a/an, indefinite article]
+aliases: [不定冠词a-an, 不定冠词, a/an, indefinite article]
 学科: 英语
 学段: [小学, 初中]
 主题: [语法, 冠词]

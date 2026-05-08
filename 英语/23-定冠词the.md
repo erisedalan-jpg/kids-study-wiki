@@ -1,6 +1,6 @@
 ---
 title: 定冠词the
-aliases: [定冠词, the, definite article]
+aliases: [定冠词the, 定冠词, the, definite article]
 学科: 英语
 学段: [小学, 初中]
 主题: [语法, 冠词]

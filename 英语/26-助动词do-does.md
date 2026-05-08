@@ -1,6 +1,6 @@
 ---
 title: 助动词do-does
-aliases: [助动词, do, does, did, auxiliary verb]
+aliases: [助动词do-does, 助动词, do, does, did, auxiliary verb]
 学科: 英语
 学段: [小学, 初中]
 主题: [语法, 动词]

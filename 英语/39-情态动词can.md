@@ -1,6 +1,6 @@
 ---
 title: 情态动词can
-aliases: [情态动词, modal verb, can, can't, could]
+aliases: [情态动词can, 情态动词, modal verb, can, can't, could]
 学科: 英语
 学段: [小学, 初中]
 主题: [语法, 动词]
