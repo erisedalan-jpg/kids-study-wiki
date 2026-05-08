@@ -1,0 +1,222 @@
+---
+title: 定冠词the
+aliases: [定冠词, the, definite article]
+学科: 英语
+学段: [小学, 初中]
+主题: [语法, 冠词]
+状态: 全龄完成
+英文术语: definite article
+首次共读: 
+最近共读: 
+---
+
+# 定冠词 the
+
+> **一句话**：the 是"那个/这个"的意思——说话人和听话人都知道是哪一个，就用 the。
+> **English**: "The" is the definite article — use it when both speaker and listener know exactly which thing is being talked about.
+
+---
+
+## 🧒 给 3-6 岁（共读版）
+
+你和妈妈在家里，妈妈说："把**那本书**拿给我！"
+
+妈妈不是说"一本书"——她说的是你们都知道的**那一本**！
+
+英语里，"那一个"就用 **the**：
+- **the** book（那本书）
+- **the** dog（那只狗）
+- **the** sun（太阳——只有一个太阳！）
+
+**共读小活动：** 指着房间里的东西说 "the ___"，让孩子猜你在说哪一个！
+
+---
+
+## 📚 给 6-12 岁（自读版）
+
+### the 的核心用法
+
+#### 1. 特指——说话双方都知道是哪一个
+
+- Please close **the** door.（请关那扇门。）——就是面前这扇门
+- Where is **the** cat?（猫在哪儿？）——家里的那只猫
+- **The** book on the table is mine.（桌子上的那本书是我的。）
+
+#### 2. 第二次提及——第一次用 a/an，再次提及用 the
+
+> I saw **a** bird. **The** bird was singing beautifully.
+> （我看到了一只鸟。那只鸟唱得很好听。）
+
+第一次出现：a bird（某一只，听者还不知道哪只）
+第二次出现：the bird（现在双方都知道是哪只了）
+
+#### 3. 独一无二的事物——世界上只有一个
+
+| 英文 | 中文 |
+|------|------|
+| the sun | 太阳 |
+| the moon | 月亮 |
+| the earth | 地球 |
+| the sky | 天空 |
+| the Internet | 互联网 |
+| the world | 世界 |
+
+用法：The **sun** rises in the east.（太阳从东方升起。）
+
+#### 4. 序数词前
+
+- **the** first（第一）
+- **the** second（第二）
+- **the** last（最后一个）
+
+例：She is **the** first student to arrive.（她是第一个到达的学生。）
+
+#### 5. 最高级前（必须加 the！）
+
+- **the** best（最好的）
+- **the** biggest（最大的）
+- **the** most beautiful（最漂亮的）
+
+例：He is **the** tallest boy in the class.（他是班里最高的男孩。）
+
+#### 6. 乐器前
+
+学乐器时，乐器名称前加 the：
+- play **the** piano（弹钢琴）
+- play **the** guitar（弹吉他）
+- play **the** violin（拉小提琴）
+- play **the** drums（打鼓）
+
+> **注意：** 球类运动前不加 the：play basketball / play football（不用 the！）
+
+#### 7. 地理名称前
+
+有些地理名称前加 the，有些不加：
+
+**加 the：**
+| 类型 | 例子 |
+|------|------|
+| 河流 | the Yellow River（黄河）, the Amazon |
+| 海洋 | the Pacific Ocean（太平洋）|
+| 山脉 | the Himalayas（喜马拉雅山脉）|
+| 群岛 | the Philippines（菲律宾群岛）|
+
+**不加 the：**
+| 类型 | 例子 |
+|------|------|
+| 单座山 | Mount Everest（珠穆朗玛峰）|
+| 湖泊 | Lake Victoria |
+| 国家（大多数）| China, France |
+| 城市 | Beijing, Paris |
+| 洲 | Asia, Europe |
+
+---
+
+## 🎓 给 12+（进阶版）
+
+### 零冠词（No Article）与 the 的微妙区别
+
+很多情况下**不用 the**——称为"零冠词"（zero article）。理解零冠词有助于真正掌握 the 的边界。
+
+| 场景 | 零冠词（泛指） | the（特指） |
+|------|-------------|------------|
+| 进餐 | I'm having **lunch**.（吃午饭这件事） | The lunch was delicious.（那顿午饭很好吃） |
+| 季节 | **Summer** is hot.（夏天总体上热） | The summer of 2023 was record-hot.（那个特定的夏天） |
+| 运动 | I play **basketball**.（泛指运动） | The basketball on the shelf is mine.（那个球） |
+| 学科 | I study **history**.（历史这个科目） | The history of China is fascinating.（特定的历史） |
+| 生病 | She has **flu**.（患了流感，泛指） | — |
+
+### the 在惯用语中的固定搭配
+
+有些表达固定使用 the，不遵循普通规则：
+
+| 惯用语 | 中文 |
+|-------|------|
+| in the morning / afternoon / evening | 在上午/下午/晚上 |
+| at the same time | 同时 |
+| on the other hand | 另一方面 |
+| in the end | 最终 |
+| by the way | 顺便说一句 |
+| on the whole | 总体上 |
+
+### 英式与美式英语差异
+
+部分场景中，英美用法不同：
+- 英式：**in hospital**（住院）；美式：**in the hospital**
+- 英式：**at university**（上大学）；美式：**at the university**
+- 英式：**go to hospital / school**（去医院/上学，功能性）；美式：**go to the hospital / the school**
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| 定冠词 | definite article | n. | the sun, the moon |
+| 特指 | specific reference | n. | the book on the table |
+| 独一无二 | unique | adj. | the earth, the sky |
+| 零冠词 | zero article | n. | play basketball |
+
+### 例句（可朗读对照）
+
+| 中文 | English |
+|------|---------|
+| 请关门。 | Please close the door. |
+| 太阳从东方升起。 | The sun rises in the east. |
+| 她是班里最高的。 | She is the tallest in the class. |
+| 他会弹钢琴。 | He can play the piano. |
+| 黄河是中国最长的河流之一。 | The Yellow River is one of the longest rivers in China. |
+| 第一个到达的是她。 | She was the first to arrive. |
+| 那只鸟唱得很好听。 | The bird sang beautifully. |
+| 我喜欢月亮。 | I like the moon. |
+
+---
+
+## 📖 相关绘本
+
+- **《Goodnight Moon》** — Margaret Wise Brown 著。经典睡前绘本，大量使用 the（the moon, the room, the cow…），自然渗透特指用法。适龄：1-4 岁共读。
+- **《The Very Hungry Caterpillar》** — Eric Carle 著。书名本身就是 The（特指那条毛毛虫）。适龄：2-6 岁。
+- 🚧 其他含有 the 的日常情境英文绘本，家长可在绘本馆自行选择。
+
+---
+
+## 🗣️ 家长讲解话术
+
+- 孩子可能问 **"the 和 a 有什么区别？"** → 可以说："a 是'一个某某'——你不知道是哪个，就用 a，比如'I saw a dog（我看到了一条狗）'；the 是'那个某某'——大家都知道是哪个，就用 the，比如'Did you feed the dog?（你喂那条狗了吗？）'就是咱家的那条狗。"
+
+- 孩子可能问 **"为什么 play the piano 用 the，但 play basketball 不用？"** → 可以说："这是英语的习惯用法：乐器前加 the，运动/游戏前不加。可能因为乐器是特定的物品，而篮球是一项活动。记住这个规律就好！"
+
+- 孩子可能问 **"the 怎么发音？"** → 可以说："the 有两种发音：在辅音音前读'/ðə/'（轻'的'），在元音音前读'/ðiː/'（长'的'），比如 'the apple' 读'/ðiː æpl/'，但 'the book' 读'/ðə bʊk/'。"
+
+- **共读小活动：** 读绘本时，每遇到 the，就停下来问：为什么用 the？因为是第几次提到？还是因为独一无二？还是上下文都知道是哪个？
+
+---
+
+## 📺 讲解版（开屏对孩子讲时用）
+
+🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。
+
+---
+
+## 📑 出处与参考资料
+
+- **教材**：[[素材/教材/ChinaTextbook/小学/英语/人教版（PEP）（三年级起点）（主编：吴欣）/]]三年级起贯穿各册（**待家长核对具体单元**）
+- **绘本对应**：见上文"相关绘本"区块
+- **课标**：义务教育英语课程标准（2022 年版）第一学段语法项目：定冠词 the（**待家长核对具体页码**）
+- **百科**：https://en.wikipedia.org/wiki/English_articles
+- **拓展阅读**：英语冠词零冠词系统；英美冠词用法差异
+- **生成校对**：Claude 生成于 2026-05-08，由家长核对
+
+---
+
+## 🔗 相关词条
+
+[[不定冠词a-an]] · [[名词单复数]] · [[形容词最高级]] · [[序数词]] · [[自然景观]]
+
+---
+
+## 📚 素材
+
+🚧

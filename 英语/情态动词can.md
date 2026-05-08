@@ -1,0 +1,211 @@
+---
+title: 情态动词can
+aliases: [情态动词, modal verb, can, can't, could]
+学科: 英语
+学段: [小学, 初中]
+主题: [语法, 动词]
+状态: 全龄完成
+英文术语: modal verb can
+首次共读: 
+最近共读: 
+---
+
+# 情态动词can
+
+> **一句话**：can 表示"能、会、可以"——说明某人有能力做某事，或征求对方许可。
+> **English**: "Can" expresses ability ("I can swim") or permission ("Can I go out?") — always followed by the base form of a verb.
+
+---
+
+## 🧒 给 3-6 岁（共读版）
+
+你会游泳吗？用英文说：**"I can swim!"** — 就是"我会游泳！"
+
+- I **can** jump!（我会跳！）
+- I **can** run fast!（我能跑得很快！）
+- I **can't** fly.（我不会飞。）
+
+想要东西的时候也可以说 **Can I …?**（我可以……吗？）：
+- **Can** I have a cookie, please?（我可以要一块饼干吗？）
+- **Can** I watch TV?（我可以看电视吗？）
+
+**共读小活动：** 全家做"can 游戏"——轮流说一件自己会做的事："I can …!"（拍手、跳跃、画画……），比一比谁说得多！
+
+---
+
+## 📚 给 6-12 岁（自读版）
+
+### can 的三大用法
+
+#### 1. 表示能力（ability）
+
+说明某人有能力、技能做某件事：
+
+> I **can** play the piano.（我会弹钢琴。）
+> She **can** speak three languages.（她会说三种语言。）
+> My dog **can** catch a ball.（我的狗会接球。）
+
+**对话场景——才艺展示：**
+> — What **can** you do?（你会什么？）
+> — I **can** sing and dance! **Can** you dance?（我会唱歌和跳舞！你会跳舞吗？）
+> — No, I **can't**, but I **can** draw.（不会，但我会画画。）
+
+#### 2. 表示请求许可（permission）
+
+语气比 may 随意，适合朋友或家人之间：
+
+> **Can** I use your pen?（我可以用你的笔吗？）
+> **Can** I go to the bathroom?（我可以去洗手间吗？）
+
+**对话场景——课堂：**
+> — **Can** I open the window? It's hot.（我可以开窗吗？好热。）
+> — Sure, go ahead.（当然，请便。）
+
+#### 3. 表示可能性（possibility）
+
+多用在疑问句或否定句，表示"可能是……"：
+
+> It **can** be very cold in winter here.（这里冬天可能很冷。）
+> **Can** this be true?（这有可能是真的吗？）
+
+### 否定形式
+
+| 形式 | 用法 |
+|------|------|
+| cannot | 正式书写 |
+| can't | 日常口语（更常用） |
+
+> I **can't** swim. = I **cannot** swim.
+
+### 疑问句结构
+
+**Can + 主语 + 动词原形 …?**
+
+> **Can** you ride a bike?（你会骑自行车吗？）
+> — Yes, I **can**. / No, I **can't**.
+
+**对话场景——农场参观（PEP 四下 Unit 4）：**
+> — **Can** the horse run fast?（马跑得快吗？）
+> — Yes, it **can**! It **can** run very fast.（是的！它跑得很快。）
+> — **Can** the hen swim?（母鸡会游泳吗？）
+> — No, it **can't**.（不会。）
+
+### 过去式 could
+
+could 是 can 的过去式，也可以表示更礼貌的请求：
+
+> When I was five, I **could** already read.（我五岁时就能读书了。）
+> **Could** you please open the door?（请问您能开门吗？— 更礼貌）
+
+---
+
+## 🎓 给 12+（进阶版）
+
+### can / may / could / might 对比
+
+| 情态动词 | 能力 | 许可 | 可能性（程度） |
+|---------|------|------|--------------|
+| can | ✅ 强 | ✅ 非正式 | ✅ 一般可能 |
+| could | ✅ 过去/礼貌 | ✅ 礼貌请求 | ✅ 较小可能 |
+| may | — | ✅ 正式 | ✅ 中等可能 |
+| might | — | — | ✅ 较小可能 |
+
+场景对比：
+> Can I leave early?（非正式，问朋友/同学）
+> May I leave early?（正式，问老师/上司）
+> Could I possibly leave early?（最礼貌）
+
+可能性：
+> It **can** be cold in April.（四月有时会冷—一般陈述）
+> It **might** rain tomorrow.（明天可能下雨—不确定）
+> It **could** be true.（这也许是真的—存疑）
+
+### can 的哲学：能力与许可的边界
+
+有趣的语用学现象：
+> — Can you pass the salt?
+> — Technically yes, I can. （我当然能——在能力上）
+
+但在实际语境中，这是在请求对方帮忙传盐（请求用法）。能力（can do）与被允许（may do）的边界在口语中常模糊。这是语用学（pragmatics）的核心课题。
+
+### can't 与 mustn't 的区别
+
+- **can't**：不可能（impossibility）→ She **can't** be at home, I saw her at school.
+- **mustn't**：不应该/禁止（prohibition）→ You **mustn't** smoke here.
+
+两者都是否定，但语义完全不同！
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| 能、会 | can | modal v. | I can ride a bike. |
+| 不会、不能 | can't / cannot | modal v. | She can't fly. |
+| 会（过去）/ 能否（礼貌） | could | modal v. | Could you help me? |
+| 可以（正式许可） | may | modal v. | May I come in? |
+| 也许（低可能） | might | modal v. | It might snow. |
+| 能力 | ability | n. | Swimming is an ability. |
+| 许可 | permission | n. | Can I have permission? |
+| 情态动词 | modal verb | n. | Can is a modal verb. |
+| 动词原形 | base form | n. | can + swim (base form) |
+
+### 例句（可朗读对照）
+
+| 中文 | English |
+|------|---------|
+| 我会游泳。 | I can swim. |
+| 她会弹钢琴吗？ | Can she play the piano? |
+| 我可以用你的橡皮吗？ | Can I use your eraser? |
+| 猫不会飞。 | Cats can't fly. |
+| 我五岁就会骑车了。 | I could ride a bike when I was five. |
+| 请您能帮我吗？ | Could you help me, please? |
+
+---
+
+## 📖 相关绘本
+
+- **《I Can Do It!》** — 多个版本，以"I can…"句式鼓励孩子独立完成任务，适合 3-6 岁。
+- 🚧 推荐以动物才艺（can/can't）为主题的绘本，家长在绘本馆选择。
+
+---
+
+## 🗣️ 家长讲解话术
+
+- 孩子可能问 **"can 和 can't 怎么区分发音？"** → 可以说："can 在肯定句里通常轻读，发音像'k'n'；can't 一定重读，而且最后有个停顿（glottal stop）。练习时先说 'I can do it'（轻）再说 'I can't do it'（重），感受区别。"
+
+- 孩子可能问 **"为什么 can 后面动词不加 to？"** → 可以说："情态动词是特殊的帮手，它们后面直接接动词原形，不需要 to。就像说 'I can swim'，不说 'I can to swim'。want/need 才需要 to。"
+
+- **共读小活动：** 角色扮演"动物才艺秀"——每人扮一种动物，说"I am a ___. I can ___, but I can't ___."（我是一只___。我会___，但我不会___。），全家轮流猜是什么动物。
+
+---
+
+## 📺 讲解版（开屏对孩子讲时用）
+
+🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。
+
+---
+
+## 📑 出处与参考资料
+
+- **教材**：[[素材/教材/ChinaTextbook/小学/英语/人教版（PEP）（三年级起点）（主编：吴欣）/]] — 四年级下册 Unit 4 At the farm（p.36）；五年级上册 Unit 4 What can you do?（p.36）
+- **绘本对应**：见上文"相关绘本"区块
+- **课标**：义务教育英语课程标准（2022 年版）第一学段语法：情态动词 can（**待家长核对具体页码**）
+- **百科**：https://zh.wikipedia.org/wiki/情态动词
+- **拓展阅读**：can/may/could/might 语用对比；能力与许可的语用学边界
+- **生成校对**：Claude 生成于 2026-05-08，由家长核对
+
+---
+
+## 🔗 相关词条
+
+[[助动词do-does]] · [[一般现在时]] · [[be动词]] · [[动作词-基本]] · [[兴趣爱好]]
+
+---
+
+## 📚 素材
+
+🚧
