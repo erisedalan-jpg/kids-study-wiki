@@ -1,0 +1,92 @@
+---
+title: age / 年龄
+aliases: [age, 年龄, how old]
+学科: 英语
+学段: [初中, 高中]
+主题: [词汇, 七上, 数字]
+状态: 全龄完成
+英文术语: age
+首次共读:
+最近共读:
+---
+
+## age / 年龄
+
+**音标**：/eɪdʒ/
+**词性**：名词 (n.) / 动词 (v.)
+**中文释义**：年龄；岁数；时代
+
+---
+
+## 📚 给 6-12 岁（小学英语回溯版）
+
+**Age** 是**年龄**！
+
+**问年龄的两种方式**：
+1. How old are you?（你几岁？）—— 最常用！
+2. What's your age?（你的年龄是多少？）—— 较正式
+
+**回答年龄**：
+- I am **twelve** years old.（我十二岁。）
+- I am **12**.（简短说法）
+- I'm **12 years old**.
+
+**注意**："岁" 在英语里说 **years old**（复数），不是 year old（除非说1岁）！
+
+---
+
+## 🎓 给 12+（进阶版）
+
+### 年龄的表达方式
+
+| 表达 | 例句 | 说明 |
+|------|------|------|
+| How old are you? | I'm 15. | 最常用 |
+| What's your age? | My age is 15. | 较正式 |
+| at the age of | She started at the age of 5. | "在……岁时" |
+| aged + 数字 | a girl aged 10 | 描述年龄 |
+
+### 名词 age 的其他含义
+
+| 含义 | 例句 |
+|------|------|
+| 年龄 | What is your age? |
+| 时代 | the Ice Age（冰河时代）|
+| 年代 | the age of technology（科技时代）|
+
+### 动词 age 的用法
+- He has **aged** a lot recently.（他最近老了很多。）
+- aged cheese（陈年奶酪）
+- The wine **ages** well.（这酒越陈越好。）
+
+### 礼貌文化
+- 在西方，询问成年人（尤其是女性）的年龄被认为是**不礼貌**的。
+- 对孩子问年龄是完全正常的。
+
+---
+
+## 例句（中英对照）
+
+1. How old are you? — I'm twelve years old. （你几岁？——我十二岁。）
+2. She started learning piano at the age of five. （她五岁时开始学钢琴。）
+3. Children of all ages love this movie. （所有年龄的孩子都喜欢这部电影。）
+4. What's the age limit for this ride? （这个游乐设施的年龄限制是什么？）
+5. People of different ages have different interests. （不同年龄的人有不同的兴趣。）
+
+---
+
+## 📑 出处
+
+- **课标**：义务教育英语课程标准（2022 年版）第二学段核心词汇
+- **教材**：`[[素材/教材/ChinaTextbook/初中/英语/人教版-人民教育出版社/七年级/义务教育教科书·英语七年级上册.pdf]]` Unit 2/7（待家长核对）
+- **生成校对**：Claude 生成于 2026-05-08
+
+---
+
+## 🔗 相关词条
+
+- [[cardinal-numbers-1-100]]
+- [[ordinal-numbers]]
+- [[be-verb-am-is-are]]
+- [[when-is-your-birthday]]
+- [[grandparents]]
