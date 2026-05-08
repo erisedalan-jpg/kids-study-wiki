@@ -1,0 +1,136 @@
+---
+title: SAS判定
+aliases: [SAS判定, SAS congruence, 两边夹角判定, side-angle-side]
+学科: 数学
+学段: [初中, 高中]
+主题: [几何, 八上, 全等三角形]
+状态: 全龄完成
+英文术语: SAS congruence criterion
+首次共读:
+最近共读:
+---
+
+# SAS判定
+
+> **课本定义**：两边和它们的夹角分别相等的两个三角形全等（简写成"边角边"或"SAS"）。
+
+---
+
+## 📚 6-12 岁（回溯版）
+
+### SAS 是什么？
+
+SAS = **Side-Angle-Side**（边-角-边）
+
+**关键词**："夹角"——角必须被两条边**夹在中间**。
+
+$$AB = DE, \quad \angle B = \angle E, \quad BC = EF \implies \triangle ABC \cong \triangle DEF \ (\text{SAS})$$
+
+图示：$\angle B$ 是边 $AB$ 和边 $BC$ 的夹角。
+
+### 夹角 vs 非夹角
+
+| 条件 | 判断 |
+|------|------|
+| 两边和**夹角**相等 | 可以用 SAS ✓ |
+| 两边和**非夹角**相等 | **不能**用 SAS（SSA 不是全等判定！）|
+
+**注意**：SSA（两边和一个非夹角相等）无法确定三角形全等，这是常见陷阱！
+
+### 使用步骤
+
+1. 找两个三角形
+2. 找出两对对应边相等
+3. 确认**夹在这两边中间**的角也相等
+4. 写全等式，注明（SAS）
+
+### 例子
+
+已知 $OA = OC$，$OB = OD$，$O$ 是 $AC$、$BD$ 的交点。
+
+在 $\triangle AOB$ 和 $\triangle COD$ 中：$OA = OC$，$\angle AOB = \angle COD$（对顶角），$OB = OD$
+
+∴ $\triangle AOB \cong \triangle COD$（SAS）
+
+---
+
+## 🎓 12+ 进阶版
+
+### 严格定理
+
+**SAS 判定定理**（公理）：若 $AB = DE$，$\angle ABC = \angle DEF$，$BC = EF$，则 $\triangle ABC \cong \triangle DEF$。
+
+SAS 在欧几里得体系中通常作为**公理**（公理 4），是最基本的全等判定。
+
+### 为什么 SSA 不成立？
+
+已知两边 $a, b$ 和非夹角 $\angle A$（$A$ 对 $a$），对应的三角形可能有**两个**（当 $h < a < b$，$h$ 为高）。这种"二义性"使 SSA 无法唯一确定三角形。
+
+例外：直角三角形的斜边和直角边（HL 判定）可以确定全等。
+
+### 典型例题
+
+**例题 1**：已知 $AB = AD$，$\angle BAC = \angle DAC$，$AC$ 为公共边，证明 $BC = DC$。
+
+证明：在 $\triangle ABC$ 和 $\triangle ADC$ 中：
+
+$AB = AD$（已知），$\angle BAC = \angle DAC$（已知），$AC = AC$（公共边）
+
+∴ $\triangle ABC \cong \triangle ADC$（SAS）
+
+∴ $BC = DC$（对应边相等）✓
+
+**例题 2**：四边形 $ABCD$ 中，$AB \parallel CD$，$AB = CD$，对角线 $AC$ 和 $BD$ 交于 $O$，证明 $OA = OC$。
+
+证明：因 $AB \parallel CD$，$\angle BAC = \angle DCA$（内错角），$\angle ABD = \angle CDB$（内错角）
+
+在 $\triangle AOB$ 和 $\triangle COD$ 中：$\angle OAB = \angle OCD$，$AB = CD$，$\angle ABD = \angle CDB$
+
+由 ASA，$\triangle AOB \cong \triangle COD$（此题实际用 ASA 更直接）
+
+∴ $OA = OC$ ✓
+
+### 易错点
+
+1. **SSA 不是全等判定**：两边和**非**夹角相等，不能推出全等。
+2. SAS 中的角必须是**夹角**：被两条已知边夹在中间。
+3. 使用对顶角时，两边要在对顶角两侧——$OA = OC$，$OB = OD$，$\angle AOB = \angle COD$ 这组组合符合 SAS。
+
+### 知识联系
+
+- → [[SSS判定]]：三边判定，最直接的全等条件
+- → [[ASA-AAS-HL判定]]：角边角、角角边和直角三角形判定
+- → [[全等三角形性质]]：全等后推导结论
+
+---
+
+## 🌐 中英对照
+
+| 中文 | English |
+|------|---------|
+| SAS 判定 | SAS congruence criterion |
+| 夹角 | included angle |
+| 非夹角 | non-included angle |
+| 对顶角 | vertical angles |
+| 公共边 | common side |
+| SSA（无效）| SSA (not a valid criterion) |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf]] 第十二章 — 待家长核对具体页码
+- **课标**：义务教育数学课程标准（2022 年版）
+- **拓展**：欧几里得《几何原本》公理 4
+- **生成校对**：Claude 生成于 2026-05-08
+
+---
+
+## 🔗 相关词条
+
+- [[全等图形]]
+- [[全等三角形性质]]
+- [[SSS判定]]
+- [[ASA-AAS-HL判定]]
+- [[等腰三角形性质]]
+- [[线段垂直平分线]]

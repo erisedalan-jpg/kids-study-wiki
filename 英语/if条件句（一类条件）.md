@@ -1,0 +1,87 @@
+---
+title: if条件句（一类条件）
+aliases: [if条件句（一类条件）, if条件句, conditional sentences, if clause, 条件句]
+学科: 英语
+学段: 初中
+主题: [八上, 语法, 条件句]
+状态: 完成
+英文术语: conditional sentences type 1 (real conditionals)
+---
+
+# if 条件句（一类条件句）
+
+## 基本概念
+
+**一类条件句**表示真实的或可能发生的条件和结果，用**"如果……，那么……"** 结构。
+
+---
+
+## 📚 6-12 岁自读版
+
+### 基本结构
+
+**If + 一般现在时，主句 + will + 动词原形**
+
+- **If** you study hard, you **will** pass the exam. 如果你努力学习，你就会通过考试。
+- **If** it rains, we **will** stay inside. 如果下雨，我们就待在室内。
+- **If** you go now, you**'ll** catch the bus. 如果你现在走，你就能赶上公交车。
+
+### 关键记忆点
+
+- **if 从句**：用**一般现在时**（不用 will！）
+- **主句**：用 **will + 动词原形**
+
+❌ If it **will rain**, we will stay inside.（错误：if 从句不用 will）
+✅ If it **rains**, we will stay inside.
+
+---
+
+## 🎓 12+ 进阶版
+
+### 句序灵活
+
+if 从句可以放前面或后面，意思相同：
+- **If it rains**, I'll bring an umbrella.
+- I'll bring an umbrella **if it rains**.
+
+放前面时，两个分句之间通常加**逗号**。
+
+### 主句中 will 的替代
+
+主句不一定用 will，也可以用：
+- **can**：If you run, you **can** catch the bus.（能力）
+- **may/might**：If it rains, we **might** cancel the trip.（可能性较低）
+- **should**：If you feel sick, you **should** see a doctor.（建议）
+- **命令式**：If you see him, **tell** me.（祈使句）
+
+### unless = if ... not
+
+- **Unless** you study, you **will** fail. = **If** you **don't** study, you will fail.
+
+---
+
+## 例句（中英对照）
+
+| 英文 | 中文 |
+|------|------|
+| If you go now, you'll catch the bus. | 如果你现在走，你就能赶上公交车。 |
+| If it snows tomorrow, school will be cancelled. | 如果明天下雪，学校将停课。 |
+| If you eat too much junk food, you will get sick. | 如果你吃太多垃圾食品，你会生病的。 |
+| If she calls you, please tell her I'm busy. | 如果她打电话给你，请告诉她我很忙。 |
+| Unless you hurry, you'll miss the train. | 如果你不快点，你就会错过火车。 |
+
+---
+
+## 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/初中/英语/人教版-人民教育出版社/八年级/义务教育教科书·英语八年级上册.pdf]] 待家长核对具体 Unit
+- **课标依据**：义务教育英语课程标准（2022）条件句
+- **生成校对**：Claude 生成于 2026-05-08，待家长核对
+
+---
+
+## 相关词条
+
+- [[一般将来时（will）]] — will 的用法
+- [[一般将来时（be going to）]] — be going to
+- [[If you go now, you'll catch the bus.]] — 核心句型

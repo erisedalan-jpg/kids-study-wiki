@@ -1,0 +1,93 @@
+---
+title: as...as同级比较
+aliases: [as...as同级比较, as...as, as as, 同级比较, as tall as]
+学科: 英语
+学段: 初中
+主题: [八上, 语法, 比较]
+状态: 完成
+英文术语: as...as (comparison of equality)
+---
+
+# as...as 同级比较
+
+## 基本概念
+
+**as...as** 结构用于比较两者相同或相近的程度，表示"与……一样……"。
+
+---
+
+## 📚 6-12 岁自读版
+
+### 句型结构
+
+**A + is/are + as + 原级形容词/副词 + as + B**
+
+- She is **as tall as** her mother. 她和妈妈一样高。
+- I run **as fast as** my brother. 我跑得和哥哥一样快。
+
+### 否定形式（不如……）
+
+**A + is not + as + 形容词 + as + B** = A 不如 B……
+
+- I'm **not as tall as** Tom. 我没有汤姆高。（= I'm shorter than Tom.）
+- English is **not as difficult as** Chinese. 英语没有中文难。
+
+### 记忆口诀
+
+as【形容词原形】as = 两边一样
+not as【形容词原形】as = 左边不如右边
+
+---
+
+## 🎓 12+ 进阶版
+
+### 结构变体
+
+1. **as + 形容词/副词 + as**（基本形式）：
+   - She is **as clever as** her sister.
+
+2. **as + 形容词 + a/an + 名词 + as**：
+   - She is **as good a student as** her brother.
+
+3. **not so...as**（老式，等同 not as...as）：
+   - He is **not so tall as** Tom. = He is **not as tall as** Tom.
+
+4. **twice as...as / three times as...as**（倍数表达）：
+   - He earns **twice as much as** I do. 他挣的是我的两倍。
+
+### as...as 与比较级对比
+
+| 结构 | 含义 | 例子 |
+|------|------|------|
+| as tall as | 一样高 | She is as tall as me. |
+| taller than | 更高 | She is taller than me. |
+| not as tall as | 没那么高 | I'm not as tall as her. |
+
+---
+
+## 例句（中英对照）
+
+| 英文 | 中文 |
+|------|------|
+| My sister is as outgoing as I am. | 我姐姐和我一样外向。 |
+| Is your school as big as ours? | 你们学校和我们的一样大吗？ |
+| I'm not as good at math as my brother. | 我数学不如我哥哥好。 |
+| She can sing as well as a professional singer. | 她唱歌唱得和专业歌手一样好。 |
+| Today is not as cold as yesterday. | 今天没有昨天冷。 |
+
+---
+
+## 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/初中/英语/人教版-人民教育出版社/八年级/义务教育教科书·英语八年级上册.pdf]] Unit 3（待家长核对具体 Unit）
+- **课标依据**：义务教育英语课程标准（2022）形容词比较
+- **生成校对**：Claude 生成于 2026-05-08，待家长核对
+
+---
+
+## 相关词条
+
+- [[比较级（短词-er）]] — 比较级
+- [[比较级（长词more）]] — 长词比较级
+- [[最高级（短词-est）]] — 最高级
+- [[Who is taller，A or B？]] — 核心句型
