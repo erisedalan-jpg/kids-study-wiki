@@ -1,0 +1,85 @@
+---
+title: 定语从句 as 的用法
+aliases: [定语从句as, as引导定语从句, as关系代词]
+学科: 英语
+学段: [高中]
+主题: [必修二, 语法, Unit 1]
+状态: 全龄完成
+英文术语: Relative Clause with "as"
+首次共读:
+最近共读:
+---
+
+# 定语从句 as 的用法
+
+> **一句话**：as 作关系代词，与 the same...as / such...as / as...as 搭配引导限制性定语从句，或在非限制性定语从句中代替 which 修饰整句。
+> **English**: "As" as a relative pronoun introduces restrictive clauses after "the same...as," "such...as," or introduces non-restrictive clauses meaning "which" when modifying an entire sentence.
+
+---
+
+## 🎓 规则·例句对照·高考考点
+
+### 用法一：与 the same...as 搭配
+
+结构：the same + 名词 + as + 从句（从句成分缺宾语或主语）
+
+| 对比 | the same...that（同一个）| the same...as（同类，不一定同一个）|
+|------|----------------------|----------------------------------|
+| 含义 | 指同一物体 | 指同类/相似的东西 |
+| 例句 | This is the same pen that I lost.（就是那支笔） | This is the same pen as I lost.（同款笔） |
+
+### 用法二：与 such...as 搭配
+
+结构：such + 名词 + as + 从句（表示"像……这样的……"）
+
+例句：
+- He is such a man as everyone respects.（他是这样一个受人尊敬的人。）
+- She bought such books as her teacher recommended.（她买了老师推荐的那类书。）
+
+### 用法三：非限制性用法（代整句）
+
+as 放句首、句中或句末，指代整个主句内容（相当于 which，但有细微差别）：
+
+| 位置 | 含义 | 例句 |
+|------|------|------|
+| 句首 | 如正如……（先提从句内容） | **As** is known to all, health is wealth. |
+| 句中 | 正如……所…… | China, **as** everyone knows, is a great country. |
+| 句末 | 这一点正如……（后置） | He passed the exam, **as** I had expected. |
+
+### as vs which（非限制性）
+
+| | as | which |
+|--|-----|-------|
+| 位置灵活性 | 句首/中/末 | 通常句末（逗号后）|
+| 含义倾向 | "正如……"（常与预期/常识呼应） | 中性补充信息 |
+| 例句 | As we all know, ... | He failed, which shocked us. |
+
+### 中英例句对照
+
+| 中文 | English |
+|------|---------|
+| 众所周知，教育对国家发展至关重要。 | As is known to all, education is vital to a nation's development. |
+| 她买了和我一样款式的裙子。 | She bought the same style of dress as I did. |
+| 他是一个受所有人尊重的领导者。 | He is such a leader as everyone respects. |
+| 他再次迟到，这正如我所预料的。 | He was late again, as I had expected. |
+| 正如文章所指出的，污染是一个严峻挑战。 | As the article points out, pollution is a serious challenge. |
+| 中国，如大家所知，拥有五千年文明史。 | China, as everyone knows, has a civilization of 5,000 years. |
+
+---
+
+## 📑 出处
+
+- **课标**：普通高中英语课程标准（2020 年版）必修第二册 Unit 1 Cultural Heritage（语法重点）
+- **教材**：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语必修 第二册.pdf]] — Unit 1（待家长核对页码）
+- **百科**：English Grammar — As a Relative Pronoun (Quirk et al.)
+- **生成校对**：Claude 生成于 2026-05-09，由家长核对
+
+## 🔗 相关词条
+
+- [[非限定性定语从句]]
+- [[that-which区别-高中]]
+- [[关系副词-where-when-why]]
+- [[定语从句介词加which-whom]]
+- [[定语从句先行词为代词]]
+- [[It-is-said-that]]
+- [[定语从句-高中入门]]
