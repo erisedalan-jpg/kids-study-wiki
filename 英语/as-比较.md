@@ -1,0 +1,73 @@
+---
+title: as...as 比较结构
+aliases: [as-比较, as比较, as...as, as as比较句, comparative as]
+学科: 英语
+学段: [高中]
+主题: [选必二, 语法, Unit 3]
+状态: 全龄完成
+英文术语: as...as comparison
+首次共读:
+最近共读:
+---
+
+## 🎓 as...as 比较结构
+
+**定义**：as + 形容词/副词原级 + as 构成"同等比较"结构，表示两者在某方面程度相同或相近。
+
+### 基本结构
+
+| 结构 | 含义 | 示例 |
+|---|---|---|
+| as + 形容词/副词 + as | 与……一样（程度相同）| as delicious **as** / as quickly **as** |
+| not as/so + 形容词/副词 + as | 不如……（程度较低）| not as nutritious **as** |
+| as + many/much/few/little + 名词 + as | 与……一样多/少 | as many dishes **as** |
+| twice/three times + as + 形容词 + as | 是……的两倍/三倍 | twice as spicy **as** |
+
+### 常见固定句型
+
+| 句型 | 含义 |
+|---|---|
+| as soon as possible（ASAP）| 尽快 |
+| as far as I know | 据我所知 |
+| as long as | 只要 |
+| as well as | 以及；也 |
+| as a result | 结果（as 作名词）|
+| as many as + 数字 | 多达……（强调数量之多）|
+
+### 例句（中英对照）
+
+| 英文 | 中文 |
+|---|---|
+| Chinese cuisine is **as** diverse **as** the country's geography. | 中国美食与这个国家的地理一样多样。 |
+| The new recipe is **not as** complicated **as** I expected. | 这道新食谱没有我预想的那么复杂。 |
+| She can prepare a dish **twice as** quickly **as** her classmates. | 她做菜的速度是同学们的两倍。 |
+| Spend **as** much time **as** you can exploring local cuisines when travelling. | 旅行时尽量多花时间探索当地美食。 |
+| **As far as** nutrition is concerned, a balanced diet is essential. | 就营养而言，均衡饮食至关重要。 |
+
+### 高考考点
+
+1. **倍数表达**：twice/three times as + adj. + as（注意：中文"A 是 B 的两倍大"= A is twice **as large as** B，不是 twice larger than B）
+2. **not as/so...as**：否定时两者均可，但 not so...as 更正式。
+3. **as...as 中间的成分**：可以是形容词（原级）、副词（原级）或"many/much + 名词"；不可用比较级（× as bigger as）。
+
+### 易错点
+
+- × She is as taller as her sister. → ✅ She is as **tall** as her sister.（中间必须用形容词/副词原级）
+- × She runs as fast than him. → ✅ She runs as fast **as** him.（第二个 as 不可替换为 than）
+- "倍数"错误：× China is three times bigger than...（可接受但逻辑矛盾）→ 标准表达：China is three times **as large as**...
+
+## 📑 出处
+
+- 课标(2020)：《普通高中英语课程标准（2020 年版）》语法：比较级——同等比较
+- 教材：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语选择性必修 第二册.pdf]] Unit 3（待家长核对页码）
+- 百科：Wikipedia — Comparison (grammar)
+- 生成校对：Claude Sonnet 4.6，2026-05-09
+
+## 🔗 相关词条
+
+- [[as-多义]]
+- [[as-定语从句]]
+- [[as-状语从句]]
+- [[cuisine-高中]]
+- [[flavor]]
+- [[nutrition-高中]]

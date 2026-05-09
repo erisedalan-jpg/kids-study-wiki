@@ -1,0 +1,76 @@
+---
+title: as 引导状语从句
+aliases: [as-状语从句, as状语从句, as adverbial clause, as连词]
+学科: 英语
+学段: [高中]
+主题: [选必二, 语法, Unit 3]
+状态: 全龄完成
+英文术语: as (conjunction in adverbial clause)
+首次共读:
+最近共读:
+---
+
+## 🎓 as 引导状语从句
+
+**定义**：as 作连词引导多种状语从句（时间、原因、方式、让步），是选必二 Unit 3 重点语法。
+
+### 四种状语从句
+
+#### 1. 时间状语从句（当……时；随着……）
+
+表示主句动作与从句动作同时进行，或从句情况随主句变化而变化。
+
+- As **she grew older**, she became more independent.（随着她长大，她变得更加独立。）
+- As **he was walking home**, he noticed a fire.（就在他走路回家时，他发现了一场火灾。）
+
+#### 2. 原因状语从句（因为……，由于……）
+
+as 引导原因从句时，语气比 because 弱，常表示说话者认为听者已知的原因；从句常置于主句之前。
+
+- **As** the weather was fine, we decided to go hiking.（因为天气很好，我们决定去徒步。）
+- **As** you know, cultural exchange requires mutual respect.（正如你所知，文化交流需要相互尊重。）
+
+#### 3. 方式状语从句（按照……方式；正如……）
+
+- Do **as** the recipe instructs and the dish will taste great.（按照食谱指示做，菜就会很美味。）
+- Leave things **as** they are.（保持原样。）
+
+#### 4. 让步状语从句（尽管……，虽然……）【倒装结构】
+
+**句式**：形容词/副词/名词 + as + 主语 + 谓语（注意倒装！）
+
+- **Hard as** it is to believe, robots can now write poetry.（尽管难以置信，机器人如今可以写诗了。）
+- **Young as** she is, she is already an expert chef.（尽管她很年轻，她已经是位烹饪专家了。）
+- **Much as** I love Chinese cuisine, I also enjoy Italian food.（尽管我很爱中国美食，我也喜欢意大利料理。）
+
+### 例句（中英对照）
+
+| 英文 | 中文 | 类型 |
+|---|---|---|
+| As the journey continued, the landscape changed dramatically. | 随着旅程继续，景色急剧变化。 | 时间 |
+| As first aid is essential, everyone should learn it. | 因为急救至关重要，每个人都应该学习。 | 原因 |
+| Cook the vegetables as the chef demonstrates. | 像厨师示范的那样烹饪蔬菜。 | 方式 |
+| Difficult as the recipe is, she managed to perfect it. | 尽管食谱很难，她还是设法做到完美了。 | 让步（倒装）|
+| As he bandaged the wound, he stayed calm throughout. | 当他包扎伤口时，他全程保持冷静。 | 时间 |
+
+### 高考考点
+
+- **让步从句倒装**：形容词/副词/名词前置是高考语法填空和写作高频考点。
+- **as vs. though（让步）**：两者均可引导让步从句（倒装），as 更常见；though 也可不倒装（Though it is hard...）。
+- **as vs. since/because（原因）**：because 语气最强，引导主要原因；since 表示"既然"（已知事实）；as 最弱，常位于句首。
+
+## 📑 出处
+
+- 课标(2020)：《普通高中英语课程标准（2020 年版）》语法：状语从句——连词 as
+- 教材：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语选择性必修 第二册.pdf]] Unit 3（待家长核对页码）
+- 百科：Wikipedia — Adverbial clause
+- 生成校对：Claude Sonnet 4.6，2026-05-09
+
+## 🔗 相关词条
+
+- [[as-多义]]
+- [[as-定语从句]]
+- [[as-比较]]
+- [[cuisine-高中]]
+- [[journey-2-高中]]
+- [[On-no-account-倒装]]
