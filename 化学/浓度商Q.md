@@ -1,0 +1,100 @@
+---
+title: 浓度商Q
+aliases: [浓度商Q, reaction quotient, Q值, 反应商]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第二章]
+状态: 进阶完成
+英文术语: reaction quotient
+---
+
+# 浓度商Q
+
+> **一句话**：与平衡常数表达式相同，但使用任意时刻（非平衡）浓度计算的商值，通过与 $K$ 比较判断反应方向。
+> **English**: The reaction quotient Q has the same form as the equilibrium expression but uses concentrations at any point in time; comparing Q to K predicts the direction of reaction.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+**浓度商**（reaction quotient）$Q$：对于反应 $a\text{A} + b\text{B} \rightleftharpoons c\text{C} + d\text{D}$，
+
+$$
+Q = \frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}
+$$
+
+表达式与 $K$ 完全相同，但 $Q$ 使用**任意时刻**的浓度，而非平衡浓度。
+
+通过比较 $Q$ 与 $K$，判断反应方向：
+
+| 比较 | 含义 | 反应方向 |
+|------|------|---------|
+| $Q < K$ | 生成物相对不足 | 正向进行（→）|
+| $Q = K$ | 已达平衡 | 无净变化 |
+| $Q > K$ | 生成物相对过多 | 逆向进行（←）|
+
+### 公式 / 方程式
+
+$$
+Q_c = \frac{\prod [\text{产物}]^{\nu_i}}{\prod [\text{反应物}]^{\nu_j}} \quad \text{（任意时刻）}
+$$
+
+平衡判断规则：
+
+$$
+Q \begin{cases} < K & \rightarrow \text{正向移动} \\ = K & \rightarrow \text{平衡} \\ > K & \rightarrow \text{逆向移动} \end{cases}
+$$
+
+### 典型例题
+
+**例**：对于 $\text{N}_2 + 3\text{H}_2 \rightleftharpoons 2\text{NH}_3$，$K = 15$（某温度下）。  
+当前浓度：$[\text{N}_2] = 0.5$，$[\text{H}_2] = 0.5$，$[\text{NH}_3] = 0.3$ mol/L。判断反应方向。
+
+$$
+Q = \frac{(0.3)^2}{0.5 \times (0.5)^3} = \frac{0.09}{0.5 \times 0.125} = \frac{0.09}{0.0625} = 1.44
+$$
+
+$Q = 1.44 < K = 15$，反应正向进行（生成更多 NH₃）。
+
+### 易错点
+
+- $Q$ 与 $K$ 表达式相同，区别在于浓度是否为平衡值
+- 固体和纯液体同样不写入 $Q$ 表达式
+- 改变压强或体积时，需先计算新浓度，再计算新的 $Q$ 与 $K$ 比较
+- 催化剂不改变 $K$，因此加催化剂后 $Q = K$ 关系不变（平衡不移动）
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| 浓度商/反应商 | reaction quotient |
+| 平衡常数 | equilibrium constant |
+| 正向反应 | forward reaction |
+| 逆向反应 | reverse reaction |
+
+### 例句
+
+- If Q < K, the reaction proceeds forward to produce more products.（若 Q < K，反应正向进行以生成更多产物。）
+- The reaction quotient Q tells us how far the reaction is from equilibrium.（反应商 Q 告诉我们反应距平衡有多远。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第二章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"反应商"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[化学平衡常数]]
+- [[平衡浓度]]
+- [[平衡移动]]
+- [[化学平衡的特征]]

@@ -1,0 +1,98 @@
+---
+title: sp3杂化
+aliases: [sp3杂化, sp³杂化, sp3 hybridization]
+学科: 化学
+学段: [高中]
+主题: [选必二, 第二章]
+状态: 进阶完成
+英文术语: sp3 hybridization
+---
+
+# sp3杂化
+
+> **一句话**：1个s轨道与3个p轨道杂化，形成4个sp³杂化轨道，指向正四面体四个顶点，键角109.5°。
+> **English**: One s orbital mixes with three p orbitals to form four sp³ hybrid orbitals pointing to the vertices of a tetrahedron, with bond angles of 109.5°.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+**sp³ 杂化**：中心原子的 1 个 s 轨道与 3 个 p 轨道杂化，形成 **4 个 sp³ 杂化轨道**：
+- 四个杂化轨道指向**正四面体**的四个顶点
+- 相邻杂化轨道夹角 **109.5°**（正四面体角）
+- 每个轨道用于形成 σ 键或容纳孤对电子
+
+### sp³ 杂化的特征
+
+| 特征 | 说明 |
+|------|------|
+| 参与轨道 | 1s + 3p |
+| 杂化轨道数 | 4 个 |
+| 理想键角 | 109.5° |
+| 无孤对时形状 | 正四面体 |
+| 有孤对时形状 | 三角锥（1孤）/ V形（2孤）|
+
+### 典型 sp³ 杂化分子
+
+| 分子 | 成键对 | 孤对 | 形状 | 键角 |
+|------|--------|------|------|------|
+| CH₄ | 4 | 0 | 正四面体 | 109.5° |
+| NH₃ | 3 | 1 | 三角锥 | 107° |
+| H₂O | 2 | 2 | V形 | 104.5° |
+| CCl₄ | 4 | 0 | 正四面体 | 109.5° |
+| PCl₃ | 3 | 1 | 三角锥 | 100° |
+
+### 甲烷（CH₄）的 sp³ 杂化
+- C 的 1s 和 3p 轨道杂化 → 4 个 sp³ 杂化轨道，指向正四面体顶点
+- 每个 sp³ 轨道与 H 的 1s 轨道正面重叠 → 4 个 C−H σ 键
+- 键角 109.5°，分子呈正四面体形
+- 无 π 键（所有 p 轨道均参与杂化）
+
+### 键角偏移原因（NH₃ 和 H₂O）
+孤对电子排斥成键电子，使键角压缩：
+- NH₃：1 孤对，107° < 109.5°
+- H₂O：2 孤对，104.5° < 107°
+
+### 典型例题
+**题**：H₂O 中 O 的杂化方式？写出 O 的 4 个电子对的类型。
+**解**：O 有 2 个 O−H σ 键 + 2 个孤对，共 4 对 → **sp³ 杂化**
+4 个 sp³ 轨道：2 个用于 σ 键，2 个容纳孤对
+分子形状：V 形，键角 104.5°
+
+### 易错点
+- sp³ 杂化不仅限于"无孤对"情况，NH₃、H₂O 的 N、O 也是 sp³ 杂化
+- CH₄ 中 C 没有 π 键（所有 p 轨道参与杂化）
+- 含 sp³ 杂化 C 的链（如乙烷）可绕 C−C 键旋转（σ 键旋转）
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| sp³ 杂化 | sp³ hybridization | n. | Carbon in methane is sp³ hybridized. |
+| 正四面体 | regular tetrahedron | n. | CH₄ has a regular tetrahedral shape. |
+| 三角锥形 | trigonal pyramidal | adj. | NH₃ has a trigonal pyramidal molecular shape. |
+
+### 例句
+
+| 中文 | English |
+|------|---------|
+| 甲烷中 C 为 sp³ 杂化，4 个 C−H 键指向正四面体顶点。 | Carbon in methane is sp³ hybridized, with four C−H bonds pointing to the vertices of a regular tetrahedron. |
+| NH₃ 的键角为 107°，小于 109.5°，因孤对电子的排斥。 | The bond angle in NH₃ is 107°, less than 109.5°, due to lone pair repulsion. |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf]] 第二章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"杂化轨道"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+[[杂化轨道理论]] [[sp杂化]] [[sp2杂化]] [[σ键]] [[四面体形分子]] [[VSEPR]] [[键角]]

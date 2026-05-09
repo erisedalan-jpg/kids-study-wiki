@@ -1,0 +1,87 @@
+---
+title: p轨道
+aliases: [p轨道, p orbital]
+学科: 化学
+学段: [高中]
+主题: [选必二, 第一章]
+状态: 进阶完成
+英文术语: p orbital
+---
+
+# p轨道
+
+> **一句话**：角量子数 l=1 的原子轨道，呈哑铃形，每个能层有 3 个方向互相垂直的 p 轨道。
+> **English**: Atomic orbitals with angular quantum number l=1; dumbbell-shaped, with three mutually perpendicular p orbitals per energy level.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+**p 轨道**是角量子数 l = 1 的原子轨道，磁量子数 m = −1, 0, +1，对应三个空间取向：**px、py、pz**，分别沿 x、y、z 轴方向分布。
+
+### 结构特征
+
+| 特征 | 说明 |
+|------|------|
+| 形状 | 哑铃形（两个花瓣对称分布在核两侧）|
+| 取向 | px、py、pz 三个，互相垂直 |
+| 节面 | 一个平面节（通过原子核）|
+| 最小出现 | 第 2 能层（2p）|
+| 每层数目 | 3 个（从第 2 层开始）|
+| 最多电子 | 6 个（3 轨道 × 2 电子）|
+
+### 空间取向示意
+- **2px**：哑铃叶沿 x 轴，yz 平面为节面
+- **2py**：哑铃叶沿 y 轴，xz 平面为节面
+- **2pz**：哑铃叶沿 z 轴，xy 平面为节面
+
+三个 2p 轨道能量相同（简并），形状相同，方向不同。
+
+### 化学意义
+- p 轨道是形成 π 键的重要轨道（侧面重叠）
+- p 轨道参与 sp、sp²、sp³ 杂化
+- 非金属元素（C、N、O、F 等）的价电子大量在 p 轨道
+- 半满（p³）和全满（p⁶）构型相对稳定
+
+### 典型例题
+**题**：N（Z=7）有几个未成对的 p 电子？写出 2p 轨道的排布。
+**解**：N：1s²2s²2p³，根据洪特规则，2px¹2py¹2pz¹，三个 p 轨道各有 1 个电子，共 3 个未成对电子。
+
+### 易错点
+- p 轨道有 3 个（px、py、pz），能量简并，不要只写"p"而忘记方向
+- π 键由 p 轨道侧面重叠形成，与 σ 键（轴向重叠）不同
+- 1s 之后才有 p 轨道（最低为 2p）
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| p 轨道 | p orbital | n. | Carbon uses p orbitals to form π bonds. |
+| 哑铃形 | dumbbell-shaped | adj. | p orbitals are dumbbell-shaped. |
+| 简并 | degenerate | adj. | The three 2p orbitals are degenerate. |
+| 节面 | nodal plane | n. | Each p orbital has one nodal plane. |
+
+### 例句
+
+| 中文 | English |
+|------|---------|
+| 2p 轨道有三个，互相垂直。 | There are three 2p orbitals, mutually perpendicular. |
+| p 轨道侧面重叠形成 π 键。 | π bonds form by lateral overlap of p orbitals. |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf]] 第一章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"原子轨道"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+[[原子轨道]] [[s轨道]] [[d轨道]] [[角量子数]] [[磁量子数]] [[洪特规则]] [[σ键]] [[π键]] [[sp杂化]] [[sp2杂化]] [[sp3杂化]]

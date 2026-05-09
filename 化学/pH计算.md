@@ -1,0 +1,133 @@
+---
+title: pH计算
+aliases: [pH计算, pH calculation, 酸碱pH计算]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第三章]
+状态: 进阶完成
+英文术语: pH calculation
+---
+
+# pH计算
+
+> **一句话**：根据溶液中 [H⁺] 或 [OH⁻] 计算 pH 的系统方法，涵盖强酸强碱直接计算、弱酸弱碱近似计算、混合溶液计算。
+> **English**: Systematic methods for calculating pH from [H⁺] or [OH⁻], covering strong acid/base direct calculation, weak acid/base approximation, and mixed solution calculations.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+pH 计算的核心公式：
+
+$$
+\text{pH} = -\lg[\text{H}^+], \quad [\text{H}^+] = 10^{-\text{pH}}
+$$
+
+### 公式 / 方程式
+
+**（一）强酸溶液**
+
+$$
+c(\text{HCl}) = c_0 \Rightarrow [\text{H}^+] = c_0 \Rightarrow \text{pH} = -\lg c_0
+$$
+
+**（二）强碱溶液**
+
+$$
+[\text{OH}^-] = c_0 \Rightarrow [\text{H}^+] = \frac{K_w}{c_0} \Rightarrow \text{pH} = 14 + \lg c_0\ \text{(25 ℃)}
+$$
+
+**（三）弱酸溶液**（近似法）
+
+$$
+[\text{H}^+] \approx \sqrt{K_a \cdot c_0}
+$$
+
+**（四）弱碱溶液**（近似法）
+
+$$
+[\text{OH}^-] \approx \sqrt{K_b \cdot c_0} \Rightarrow [\text{H}^+] = \frac{K_w}{[\text{OH}^-]}
+$$
+
+**（五）混合溶液**
+
+| 情况 | 计算策略 |
+|------|---------|
+| 强酸 + 强碱（酸过量）| 先计算剩余 [H⁺]，再求 pH |
+| 强酸 + 强碱（碱过量）| 先计算剩余 [OH⁻]，再用 $K_w$ 求 [H⁺] |
+| 恰好中和 | pH 取决于盐类水解 |
+| 混合弱酸/碱 | 需用缓冲方程 |
+
+**（六）稀释规律**（25 ℃）
+
+| 情况 | 规律 |
+|------|------|
+| 强酸稀释 10 倍 | pH 升高 1 |
+| 弱酸稀释 10 倍 | pH 升高 < 1 |
+| 强酸极度稀释 | pH → 7（趋近，不超过 7）|
+
+### 典型例题
+
+**例**：0.1 mol/L NaOH 溶液（25 ℃）的 pH。
+
+$$
+[\text{OH}^-] = 0.1\ \text{mol/L}
+$$
+
+$$
+[\text{H}^+] = \frac{10^{-14}}{0.1} = 10^{-13}\ \text{mol/L}
+$$
+
+$$
+\text{pH} = 13
+$$
+
+**例**：50 mL pH=1 的 HCl 与 50 mL pH=13 的 NaOH 混合后的 pH？
+
+- $[\text{H}^+] = 0.1$ mol/L，$n(\text{HCl}) = 0.005$ mol
+- $[\text{OH}^-] = 0.1$ mol/L，$n(\text{NaOH}) = 0.005$ mol
+- 恰好中和，溶液 pH = 7
+
+### 易错点
+
+- 强酸 pH 计算：直接取对数；弱酸需先求 [H⁺]
+- 稀释强酸 pH 升高，但不超过 7
+- 酸碱混合时，先用物质的量计算，再换算浓度，再求 pH
+- 非 25 ℃ 时，不能用"pH=7 为中性"或"pH+pOH=14"
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| pH 计算 | pH calculation |
+| 强酸 | strong acid |
+| 稀释 | dilution |
+| 混合溶液 | mixed solution |
+
+### 例句
+
+- For strong acids, pH = −log(concentration of H⁺).（对于强酸，pH = −log[H⁺]。）
+- When diluting a strong acid ten-fold, pH increases by exactly 1 unit.（强酸稀释 10 倍时，pH 正好升高 1 个单位。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第三章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"pH"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[pH（高中）]]
+- [[离子积常数Kw]]
+- [[电离常数]]
+- [[酸碱中和滴定]]
+- [[缓冲溶液]]

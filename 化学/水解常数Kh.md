@@ -1,0 +1,101 @@
+---
+title: 水解常数Kh
+aliases: [水解常数Kh, hydrolysis constant, Kh]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第三章]
+状态: 进阶完成
+英文术语: hydrolysis constant
+---
+
+# 水解常数Kh
+
+> **一句话**：盐离子水解反应的平衡常数，等于水的离子积 $K_w$ 除以对应弱电解质的电离常数（$K_h = K_w / K_a$ 或 $K_w / K_b$）。
+> **English**: The equilibrium constant for the hydrolysis of a salt ion; equals Kw divided by the ionization constant of the corresponding weak electrolyte (Kh = Kw/Ka or Kw/Kb).
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+**水解常数**（hydrolysis constant）$K_h$：盐离子水解平衡的平衡常数。
+
+与电离常数的关系：
+
+| 水解离子 | 水解方程式 | $K_h$ |
+|---------|---------|-------|
+| CH₃COO⁻（弱酸根）| CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻ | $K_w / K_a$ |
+| NH₄⁺（弱碱阳离子）| NH₄⁺ + H₂O ⇌ NH₃·H₂O + H⁺ | $K_w / K_b$ |
+| HCO₃⁻（第一步）| HCO₃⁻ + H₂O ⇌ H₂CO₃ + OH⁻ | $K_w / K_{a2}$ |
+
+### 公式 / 方程式
+
+弱酸根水解常数：
+
+$$
+K_h(\text{A}^-) = \frac{K_w}{K_a(\text{HA})}
+$$
+
+弱碱阳离子水解常数：
+
+$$
+K_h(\text{BH}^+) = \frac{K_w}{K_b(\text{B})}
+$$
+
+$K_h$ 越大 → 水解程度越大 → 对应弱酸（碱）越弱：
+
+| 弱酸 | $K_a$ | $K_h(\text{A}^-)$ | 水解程度 |
+|------|-------|-----------------|---------|
+| HF | $6.8 \times 10^{-4}$ | $1.5 \times 10^{-11}$ | 极小 |
+| CH₃COOH | $1.8 \times 10^{-5}$ | $5.6 \times 10^{-10}$ | 很小 |
+| HCN | $6.2 \times 10^{-10}$ | $1.6 \times 10^{-5}$ | 较大 |
+
+### 典型例题
+
+**例**：比较等浓度的 NaF 和 NaCN 溶液的 pH 大小（25 ℃）。
+
+- $K_h(\text{F}^-) = K_w / K_a(\text{HF}) = 10^{-14} / 6.8 \times 10^{-4} = 1.5 \times 10^{-11}$
+- $K_h(\text{CN}^-) = K_w / K_a(\text{HCN}) = 10^{-14} / 6.2 \times 10^{-10} = 1.6 \times 10^{-5}$
+- $K_h(\text{CN}^-) \gg K_h(\text{F}^-)$，CN⁻ 水解程度更大
+- CN⁻ 水解产生更多 OH⁻，NaCN 溶液 pH 更高
+- **pH(NaCN) > pH(NaF)**
+
+### 易错点
+
+- $K_h = K_w / K_a$（弱酸根）：弱酸越弱（$K_a$ 越小），$K_h$ 越大，水解越剧烈
+- 多元弱酸根的水解：CO₃²⁻ 水解用 $K_{a2}$，HCO₃⁻ 水解用 $K_{a2}$（HCO₃⁻ 的电离用 $K_{a2}$）
+- $K_h$ 只与温度有关，与浓度无关（与 $K_a$ 性质相同）
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| 水解常数 | hydrolysis constant |
+| 弱酸根 | weak acid anion |
+| 电离常数 | ionization constant |
+
+### 例句
+
+- The hydrolysis constant Kh = Kw / Ka for the conjugate base of a weak acid.（弱酸共轭碱的水解常数 Kh = Kw / Ka。）
+- A larger Kh indicates a greater degree of hydrolysis.（较大的 Kh 表示更大程度的水解。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第三章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"盐的水解"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[盐类水解]]
+- [[水解平衡]]
+- [[电离常数]]
+- [[离子积常数Kw]]

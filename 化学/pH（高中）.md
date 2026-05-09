@@ -1,0 +1,118 @@
+---
+title: pH（高中）
+aliases: [pH（高中）, pH, 酸碱度, hydrogen ion exponent]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第三章]
+状态: 进阶完成
+英文术语: pH
+---
+
+# pH（高中）
+
+> **一句话**：溶液酸碱性的定量标度，$\text{pH} = -\lg[\text{H}^+]$；25 ℃ 时 pH < 7 酸性，pH = 7 中性，pH > 7 碱性。
+> **English**: A quantitative measure of acidity: pH = −log[H⁺]; at 25°C, pH < 7 is acidic, pH = 7 is neutral, pH > 7 is basic.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+**pH**（potential of hydrogen）：
+
+$$
+\text{pH} = -\lg[\text{H}^+]
+$$
+
+- pH 是对数标度，每差 1 个 pH 单位，[H⁺] 相差 10 倍
+- pH 越小，[H⁺] 越大，酸性越强
+- pH 越大，[H⁺] 越小，碱性越强（碱性由 $K_w$ 确定 [OH⁻]）
+
+pH 的适用范围：通常在 0~14 之间（25 ℃），但也可超出此范围（极强酸碱）。
+
+### 公式 / 方程式
+
+$$
+\text{pH} = -\lg[\text{H}^+] \quad \Leftrightarrow \quad [\text{H}^+] = 10^{-\text{pH}}
+$$
+
+$$
+\text{pOH} = -\lg[\text{OH}^-] \quad \text{pH} + \text{pOH} = 14\ \text{(25 ℃)}
+$$
+
+常见 pH 值参考（25 ℃）：
+
+| 溶液 | 近似 pH |
+|------|---------|
+| 0.1 mol/L HCl | 1 |
+| 0.1 mol/L CH₃COOH | ~2.9 |
+| 纯水 | 7 |
+| 0.1 mol/L NH₃·H₂O | ~11.1 |
+| 0.1 mol/L NaOH | 13 |
+| 人血液 | 7.35–7.45 |
+| 胃液 | 1.5–3.5 |
+
+pH 与 [H⁺] 的换算：
+
+| pH | [H⁺] / mol·L⁻¹ | [OH⁻] / mol·L⁻¹ |
+|----|----------------|-----------------|
+| 1 | 0.1 | 10⁻¹³ |
+| 7 | 10⁻⁷ | 10⁻⁷ |
+| 13 | 10⁻¹³ | 0.1 |
+
+### 典型例题
+
+**例**：将 pH = 2 的盐酸与 pH = 12 的 NaOH 溶液等体积混合，求混合后 pH。
+
+- HCl：$[\text{H}^+] = 0.01$ mol/L，$c(\text{HCl}) = 0.01$ mol/L
+- NaOH：$[\text{OH}^-] = 0.01$ mol/L，$c(\text{NaOH}) = 0.01$ mol/L
+- 等体积混合：酸碱恰好中和，溶液显**中性**，pH = 7
+
+**例**：pH = 3 的盐酸加水稀释 100 倍后的 pH？
+
+- 原 $[\text{H}^+] = 10^{-3}$ mol/L
+- 稀释 100 倍：$[\text{H}^+] = 10^{-5}$ mol/L
+- pH = 5（pH 从 3 变为 5，增大 2，不超过 7）
+
+### 易错点
+
+- pH = 7 只在 25 ℃ 时为中性，其他温度需重新计算
+- 弱酸 pH 不能由浓度直接计算，需结合 $K_a$
+- 稀释强酸 pH 升高，但不超过 7；稀释强碱 pH 降低，但不低于 7
+- pH 是对数量，pH 加 1 意味着酸性减弱 10 倍
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| pH | pH (potential of hydrogen) |
+| 酸性 | acidic |
+| 碱性 | basic/alkaline |
+| 中性 | neutral |
+| 对数 | logarithm |
+
+### 例句
+
+- The pH scale runs from 0 to 14 at 25°C, with 7 representing neutral.（25 ℃ 时 pH 范围为 0–14，7 代表中性。）
+- Each unit decrease in pH corresponds to a 10-fold increase in [H⁺].（pH 每降低一个单位，[H⁺] 增大 10 倍。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第三章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"pH"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[离子积常数Kw]]
+- [[pH计算]]
+- [[水的电离]]
+- [[酸碱中和滴定]]

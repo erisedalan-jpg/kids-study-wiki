@@ -1,0 +1,86 @@
+---
+title: s轨道
+aliases: [s轨道, s orbital]
+学科: 化学
+学段: [高中]
+主题: [选必二, 第一章]
+状态: 进阶完成
+英文术语: s orbital
+---
+
+# s轨道
+
+> **一句话**：角量子数 l=0 的原子轨道，形状为球形，每个能层只有 1 个 s 轨道。
+> **English**: An atomic orbital with angular quantum number l=0; it is spherically shaped, with one s orbital per energy level.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+**s 轨道**是角量子数 l = 0 的原子轨道，各向同性，呈**球形对称**。每个能层 n 中只有 1 个 s 轨道（磁量子数 m = 0）。
+
+### 结构特征
+
+| 轨道 | 形状 | 节面数 | 特点 |
+|------|------|--------|------|
+| 1s | 球形 | 0 | 最小，能量最低 |
+| 2s | 球形（更大）| 1（球形节面）| 有一个径向节面 |
+| 3s | 球形（更大）| 2 | 有两个径向节面 |
+
+- 随 n 增大，s 轨道半径增大，电子平均距核距离增大
+- 每个 s 轨道最多容纳 **2 个**自旋相反的电子
+
+### 与其他轨道对比
+
+| 类型 | l 值 | 形状 | 每层数目 |
+|------|------|------|---------|
+| s | 0 | 球形 | 1 |
+| p | 1 | 哑铃形 | 3 |
+| d | 2 | 花瓣形 | 5 |
+| f | 3 | 复杂 | 7 |
+
+### 化学意义
+- s 轨道电子（s 电子）对化学键贡献：参与 sp、sp²、sp³ 杂化
+- 1s 轨道是 H 的唯一轨道；He 的 1s² 构成稳定满壳层
+- 碱金属的价电子均在 ns 轨道（n=2~6）
+
+### 典型例题
+**题**：Na（Z=11）的电子排布式中，哪些是 s 轨道上的电子？共有几个 s 轨道电子？
+**解**：Na：1s²2s²2p⁶3s¹，s 轨道上有 1s²、2s²、3s¹，共 5 个 s 电子，占据 3 个 s 轨道。
+
+### 易错点
+- s 轨道是球形，但不同能层 s 轨道大小不同
+- "球形"指概率分布，不代表电子真的在球面运动
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| s 轨道 | s orbital | n. | The s orbital is spherically symmetric. |
+| 球形对称 | spherically symmetric | adj. | All s orbitals are spherically symmetric. |
+| 角量子数 | angular quantum number | n. | For s orbitals, the angular quantum number l=0. |
+
+### 例句
+
+| 中文 | English |
+|------|---------|
+| s 轨道呈球形，无方向性。 | The s orbital is spherical and has no directional preference. |
+| 每个能层只有一个 s 轨道。 | Each energy level contains only one s orbital. |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf]] 第一章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"原子轨道"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+[[原子轨道]] [[p轨道]] [[d轨道]] [[f轨道]] [[角量子数]] [[电子云]] [[杂化轨道理论]]

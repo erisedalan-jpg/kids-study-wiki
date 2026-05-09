@@ -1,0 +1,122 @@
+---
+title: 离子积常数Kw
+aliases: [离子积常数Kw, ion product constant of water, Kw, 水的离子积]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第三章]
+状态: 进阶完成
+英文术语: ion product constant of water
+---
+
+# 离子积常数Kw
+
+> **一句话**：水的电离平衡常数，$K_w = [\text{H}^+][\text{OH}^-]$，25 ℃ 时为 $10^{-14}$，是酸碱计算的基础常数。
+> **English**: The equilibrium constant for water's self-ionization: Kw = [H⁺][OH⁻] = 10⁻¹⁴ at 25°C; the fundamental constant for acid-base calculations.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+**离子积常数**（ion product constant of water）$K_w$：
+
+$$
+K_w = [\text{H}^+][\text{OH}^-]
+$$
+
+在任何水溶液中（无论酸性、中性、碱性），$K_w$ 在温度一定时都是常数。
+
+$K_w$ 的性质：
+- 只与温度有关，温度升高 $K_w$ 增大（电离吸热）
+- 在所有水溶液中成立（$[\text{H}^+][\text{OH}^-] = K_w$ 是普适关系）
+- 25 ℃ 时 $K_w = 1.0 \times 10^{-14}$，$\text{p}K_w = 14$
+
+### 公式 / 方程式
+
+$$
+K_w = [\text{H}^+][\text{OH}^-] = 1.0 \times 10^{-14}\ \text{(25 ℃)}
+$$
+
+由此得到 [OH⁻] 的计算：
+
+$$
+[\text{OH}^-] = \frac{K_w}{[\text{H}^+]} = \frac{10^{-14}}{[\text{H}^+]}
+$$
+
+pH 与 pOH 的关系（25 ℃）：
+
+$$
+\text{pH} + \text{pOH} = \text{p}K_w = 14
+$$
+
+酸碱判断（25 ℃）：
+
+| 溶液性质 | 条件 | [H⁺] 与 [OH⁻] |
+|---------|------|---------------|
+| 酸性 | pH < 7 | [H⁺] > [OH⁻] > 0 |
+| 中性 | pH = 7 | [H⁺] = [OH⁻] = 10⁻⁷ |
+| 碱性 | pH > 7 | [OH⁻] > [H⁺] > 0 |
+
+### 典型例题
+
+**例**：某 NaOH 溶液 pH = 12，25 ℃，求 [H⁺]、[OH⁻] 及 NaOH 浓度。
+
+$$
+[\text{H}^+] = 10^{-12}\ \text{mol/L}
+$$
+
+$$
+[\text{OH}^-] = \frac{10^{-14}}{10^{-12}} = 10^{-2}\ \text{mol/L}
+$$
+
+NaOH 完全电离，$c(\text{NaOH}) = [\text{OH}^-] = 0.01\ \text{mol/L}$。
+
+**例**：混合等体积 pH=3 盐酸和 pH=11 NaOH 溶液后的 pH？
+
+- HCl：$[\text{H}^+] = 10^{-3}$ mol/L
+- NaOH：$[\text{OH}^-] = 10^{-3}$ mol/L（pH=11，$[\text{H}^+] = 10^{-11}$，$[\text{OH}^-] = 10^{-3}$）
+- 等体积混合，酸碱等量中和，pH = 7
+
+### 易错点
+
+- $K_w$ 在所有水溶液中成立，不只在纯水中
+- 酸性溶液中 $[\text{OH}^-] \neq 0$，只是非常小
+- 混合强酸强碱时，先比较 H⁺ 和 OH⁻ 的物质的量，再确定 pH
+- 非 25 ℃ 时不能用 pH = 7 作为中性判断标准
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| 离子积常数 | ion product constant |
+| 水的离子积 | ion product of water |
+| 酸性 | acidic |
+| 碱性 | basic/alkaline |
+| 中性 | neutral |
+
+### 例句
+
+- At 25°C, Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴.（25 ℃ 时，Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴。）
+- The ion product of water applies to all aqueous solutions, not just pure water.（水的离子积适用于所有水溶液，不只是纯水。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第三章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"水的离子积"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[水的电离]]
+- [[pH（高中）]]
+- [[pH计算]]
+- [[电离常数]]
+- [[盐类水解]]

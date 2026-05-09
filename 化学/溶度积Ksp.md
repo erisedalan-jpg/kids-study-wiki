@@ -1,0 +1,117 @@
+---
+title: 溶度积Ksp
+aliases: [溶度积Ksp, solubility product, Ksp, 溶积常数]
+学科: 化学
+学段: [高中]
+主题: [选必一, 第三章]
+状态: 进阶完成
+英文术语: solubility product
+---
+
+# 溶度积Ksp
+
+> **一句话**：难溶电解质饱和溶液中，各离子浓度幂之积，是沉淀溶解平衡的平衡常数，只与温度有关。
+> **English**: The product of ion concentrations raised to their stoichiometric powers in a saturated solution of a sparingly soluble electrolyte; a temperature-dependent equilibrium constant.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+
+**溶度积**（solubility product，$K_{sp}$）：难溶电解质溶解平衡的平衡常数。
+
+对于 $\text{M}_m\text{A}_n(s) \rightleftharpoons m\text{M}^{n+}(aq) + n\text{A}^{m-}(aq)$：
+
+$$
+K_{sp} = [\text{M}^{n+}]^m [\text{A}^{m-}]^n
+$$
+
+### 公式 / 方程式
+
+常见难溶盐的 $K_{sp}$（25 ℃）：
+
+| 难溶盐 | $K_{sp}$ | 溶解度（mol/L）|
+|--------|---------|--------------|
+| AgCl | $1.8 \times 10^{-10}$ | $1.34 \times 10^{-5}$ |
+| AgBr | $5.4 \times 10^{-13}$ | $7.3 \times 10^{-7}$ |
+| AgI | $8.5 \times 10^{-17}$ | $9.2 \times 10^{-9}$ |
+| BaSO₄ | $1.1 \times 10^{-10}$ | $1.0 \times 10^{-5}$ |
+| CaCO₃ | $3.3 \times 10^{-9}$ | $5.7 \times 10^{-5}$ |
+| Fe(OH)₃ | $2.8 \times 10^{-39}$ | - |
+
+$K_{sp}$ 与溶解度 $s$ 的换算（AB 型，$K_{sp} = s^2$）：
+
+$$
+s = \sqrt{K_{sp}}
+$$
+
+利用 $K_{sp}$ 判断沉淀状态（引入浓度商 $Q_{ip}$）：
+
+$$
+Q_{ip} = [\text{M}^{n+}]^m [\text{A}^{m-}]^n
+$$
+
+| $Q_{ip}$ 与 $K_{sp}$ | 状态 |
+|---------------------|------|
+| $Q_{ip} < K_{sp}$ | 不饱和，无沉淀（或沉淀溶解）|
+| $Q_{ip} = K_{sp}$ | 恰好饱和，平衡 |
+| $Q_{ip} > K_{sp}$ | 过饱和，有沉淀生成 |
+
+### 典型例题
+
+**例**：将 0.001 mol/L AgNO₃ 与 0.001 mol/L NaCl 等体积混合，判断是否有 AgCl 沉淀生成。
+
+混合后：$[\text{Ag}^+] = 5 \times 10^{-4}$ mol/L，$[\text{Cl}^-] = 5 \times 10^{-4}$ mol/L
+
+$$
+Q_{ip} = (5 \times 10^{-4})^2 = 2.5 \times 10^{-7}
+$$
+
+$$
+Q_{ip} = 2.5 \times 10^{-7} > K_{sp}(\text{AgCl}) = 1.8 \times 10^{-10}
+$$
+
+$Q_{ip} > K_{sp}$，有 AgCl 沉淀生成。
+
+### 易错点
+
+- 同名离子效应：加入 NaCl 使 $[\text{Cl}^-]$ 增大，$[\text{Ag}^+]$ 减小（AgCl 溶解度降低），但 $K_{sp}$ 不变
+- 不同类型盐（AB vs. AB₂）不能直接用 $K_{sp}$ 大小比较溶解度，需计算
+- $K_{sp}$ 随温度升高通常增大（溶解是吸热过程，大多数情况下）
+- 难溶盐不等于不溶，只是溶解极少量
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| 溶度积 | solubility product |
+| 溶解度 | solubility |
+| 同名离子效应 | common ion effect |
+| 过饱和 | supersaturated |
+
+### 例句
+
+- The solubility product Ksp of AgCl is 1.8 × 10⁻¹⁰ at 25°C.（25 ℃ 时 AgCl 的溶度积为 1.8 × 10⁻¹⁰。）
+- If the ion product Q > Ksp, precipitation occurs.（若离子积 Q > Ksp，则产生沉淀。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf]] 第三章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"溶度积"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[沉淀溶解平衡]]
+- [[沉淀生成]]
+- [[沉淀溶解]]
+- [[沉淀转化]]
+- [[离子浓度比较]]

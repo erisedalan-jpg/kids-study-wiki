@@ -1,0 +1,89 @@
+---
+title: d轨道
+aliases: [d轨道, d orbital]
+学科: 化学
+学段: [高中]
+主题: [选必二, 第一章]
+状态: 进阶完成
+英文术语: d orbital
+---
+
+# d轨道
+
+> **一句话**：角量子数 l=2 的原子轨道，每个能层有 5 个 d 轨道，是过渡元素价电子的主要轨道。
+> **English**: Atomic orbitals with angular quantum number l=2; five d orbitals per energy level, crucial for transition metal chemistry.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+**d 轨道**是角量子数 l = 2 的原子轨道，磁量子数 m = −2, −1, 0, +1, +2，对应 **5 个空间取向**，最低出现在第三能层（3d）。
+
+### 五种 d 轨道
+
+| 轨道 | 形状描述 | 主要分布方向 |
+|------|---------|------------|
+| dxy | 四叶花瓣形 | xy 平面，45° 方向 |
+| dxz | 四叶花瓣形 | xz 平面 |
+| dyz | 四叶花瓣形 | yz 平面 |
+| dx²-y² | 四叶花瓣形 | 沿 x、y 轴 |
+| dz² | 哑铃形+环 | 沿 z 轴（赤道环）|
+
+5 个 d 轨道能量简并，最多容纳 **10 个**电子。
+
+### 化学意义
+- d 轨道是**过渡元素**（第 4、5、6 周期 d 区）的价电子轨道
+- 过渡金属催化剂活性与 d 轨道电子排布密切相关
+- 配合物中 d 轨道受配体影响发生**晶体场分裂**（高中了解即可）
+- d 轨道半充满（d⁵）和全充满（d¹⁰）具有额外稳定性
+  - 例：Cr [Ar]3d⁵4s¹（非 3d⁴4s²）；Cu [Ar]3d¹⁰4s¹（非 3d⁹4s²）
+
+### 电子排布特例
+
+| 元素 | 预期排布 | 实际排布 | 原因 |
+|------|---------|---------|------|
+| Cr (Z=24) | [Ar]3d⁴4s² | [Ar]3d⁵4s¹ | d⁵ 半满稳定 |
+| Cu (Z=29) | [Ar]3d⁹4s² | [Ar]3d¹⁰4s¹ | d¹⁰ 全满稳定 |
+
+### 典型例题
+**题**：Fe（Z=26）的 3d 轨道上有几个未成对电子？
+**解**：Fe：[Ar]3d⁶4s²，3d 有 6 个电子分布在 5 个轨道：↑↓ ↑ ↑ ↑ ↑，有 4 个未成对电子。
+
+### 易错点
+- d 轨道从第 3 能层（3d）开始，不是第 2 层
+- Cr、Cu 等过渡元素的电子排布有特例，需记住
+- d¹⁰ 构型（如 Zn）的过渡金属无未成对 d 电子
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 词性 | 例句 |
+|------|---------|------|------|
+| d 轨道 | d orbital | n. | Transition metals have partially filled d orbitals. |
+| 过渡元素 | transition element | n. | Iron is a transition element with 3d⁶4s² configuration. |
+| 晶体场分裂 | crystal field splitting | n. | Crystal field splitting explains the color of transition metal complexes. |
+| 半满 | half-filled | adj. | A half-filled d subshell (d⁵) is extra stable. |
+
+### 例句
+
+| 中文 | English |
+|------|---------|
+| 第 3 能层有 5 个 d 轨道。 | The third energy level has five d orbitals. |
+| Cr 的电子排布因 d 轨道半满而出现特例。 | Cr has an anomalous electron configuration due to the stability of the half-filled d subshell. |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf]] 第一章（待家长核对页码）
+- **课标**：普通高中化学课程标准(2017年版2020年修订)
+- **百科**：维基百科"原子轨道"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+[[原子轨道]] [[s轨道]] [[p轨道]] [[f轨道]] [[过渡元素]] [[洪特规则]] [[电子排布式]] [[配合物]]
