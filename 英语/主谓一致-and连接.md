@@ -1,0 +1,81 @@
+---
+title: 主谓一致（and 连接）
+aliases: [主谓一致-and连接, and连接主谓一致, subject-verb agreement with and]
+学科: 英语
+学段: [高中]
+主题: [选必一, 语法, Unit 5]
+状态: 全龄完成
+英文术语: subject-verb agreement with and
+首次共读:
+最近共读:
+---
+
+## 🎓 主谓一致（and 连接）
+
+**定义**：and 连接两个或多个主语时，谓语动词的数取决于具体语法规则，不能一律用复数。
+
+---
+
+### 核心规则总表
+
+| 连接方式 | 规则 | 例子 |
+|---------|------|------|
+| A and B（一般）| 谓语复数 | Tom and Mary **are** friends. |
+| A and B（同一人/物）| 谓语单数 | The poet and painter **is** here. |
+| not A but B | 动词随 B（就近原则）| Not Tom but his brothers **are** responsible. |
+| not only A but also B | 动词随 B（就近原则）| Not only the teacher but also the students **were** moved. |
+| either A or B | 动词随 B（就近原则）| Either the students or the teacher **is** right. |
+| neither A nor B | 动词随 B（就近原则）| Neither the teacher nor the students **were** on time. |
+| A as well as B | 动词随 A | The teacher, as well as the students, **was** late. |
+| A together with B | 动词随 A | The manager, together with his team, **was** present. |
+
+---
+
+### 例句（中英对照）
+
+| 英文例句 | 中文翻译 |
+|----------|----------|
+| Rice and wheat are major food crops. | 水稻和小麦是主要粮食作物。（两者→复数）|
+| The director and producer is a busy man. | 这位导演兼制片人是个大忙人。（同一人→单数）|
+| Not only farmers but also scientists are concerned. | 不仅农民，科学家们也很担忧。（随 scientists→复数）|
+| Either the farmer or his sons are responsible. | 要么农民要么他的儿子们负责。（随 sons→复数）|
+| The team leader, together with the members, was praised. | 队长连同成员们一起受到了表扬。（随 leader→单数）|
+| Neither the result nor the methods were satisfactory. | 既不是结果，也不是方法令人满意。（随 methods→复数）|
+
+---
+
+### 高考考点
+
+1. **就近原则**：not...but.../ either...or.../ neither...nor.../ not only...but also... → 动词随最近的主语
+2. **就前原则**：A as well as B / A together with B / A along with B → 动词随 A（较远的主语）
+3. **同一人/物**：and 连接同一人的两个身份 → 单数
+4. **语法填空/改错**：区分就近原则和就前原则
+
+### 易错点
+
+- **就近 vs 就前**（常见混淆）：
+  - either A or **B** → 随 B（就近）
+  - A**, as well as** B → 随 A（就前）
+- 同一人/物判断：有冠词则是两人（**a** poet and **a** painter → 复数）；无冠词可能同一人（**the** poet and painter → 视语境）
+- 固定搭配也影响数：**Every** boy and girl **is** equal.（every 修饰的 and 连接用单数）
+
+---
+
+## 📑 出处
+
+- **课标依据**：《普通高中英语课程标准（2017年版2020年修订）》，必修语法：主谓一致，Unit 5（待家长核对）
+- **本地教材**：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语选择性必修 第一册.pdf]] Unit 5（待家长核对具体页码）
+- **参考**：《高中英语语法精讲》；Collins English Grammar
+- **生成校对**：Claude Sonnet 4.6，2026-05-09
+
+---
+
+## 🔗 相关词条
+
+- [[主谓一致-集体名词]]
+- [[harvest]]
+- [[agricultural]]
+- [[nutrition]]
+- [[动名词作主语]]
+- [[the-fact-that-同位语]]
+- [[Now-that-既然]]
