@@ -1,0 +1,142 @@
+---
+title: CO2检验
+aliases: [CO2检验, CO₂检验, detection of CO2, 二氧化碳检验]
+学科: 化学
+学段: [初中]
+主题: [九上, 第六单元]
+状态: 全龄完成
+英文术语: detection of CO2
+---
+
+# CO2检验
+
+> **一句话**：检验CO₂最常用的方法是将气体通入澄清石灰水，若石灰水变浑浊则证明含有CO₂，反应为CO₂+Ca(OH)₂=CaCO₃↓+H₂O。
+> **English**: The most common method to detect CO₂ is to pass the gas through limewater (Ca(OH)₂ solution); if the limewater turns milky, it indicates the presence of CO₂, via CO₂+Ca(OH)₂=CaCO₃↓+H₂O.
+
+---
+
+## 📚 给 6-12 岁（自读版）
+
+怎么知道一瓶气体里有没有 CO₂？最简单的方法是把它通进**澄清石灰水**（Ca(OH)₂ 溶液）——如果石灰水变浑浊（变白），就说明有 CO₂！
+
+**检验 CO₂ 的原理**
+
+CO₂ 和石灰水（氢氧化钙溶液）发生化学反应：
+
+$$CO_2 + Ca(OH)_2 = CaCO_3\downarrow + H_2O$$
+
+生成的 CaCO₃（碳酸钙）是白色固体，不溶于水，所以溶液变浑浊（变白）。
+
+**实验步骤**
+
+1. 准备一瓶澄清的石灰水（透明，无浑浊）
+2. 将待检气体通入石灰水中
+3. 观察：变浑浊 → 有 CO₂；不变 → 不含 CO₂（或含量极少）
+
+**注意：过量 CO₂ 会让浑浊消失！**
+
+如果继续通入大量 CO₂，沉淀的 CaCO₃ 会溶解（和过量 CO₂ 继续反应），石灰水又变清了：
+
+$$CaCO_3 + CO_2 + H_2O = Ca(HCO_3)_2$$（可溶）
+
+所以：**先浑浊后变清**，也能说明 CO₂ 存在（且是过量）！
+
+**口诀**：CO₂ 检验用石灰水，通入变浑浊就确定，先白后清也是它，碳酸钙变碳酸氢钙！
+
+---
+
+## 🎓 给 12+（进阶版）
+
+### 定义
+
+CO₂ 的检验（鉴别）是利用 CO₂ 与 Ca(OH)₂ 发生沉淀反应的特征来定性检测 CO₂ 的存在。此方法在化学实验中广泛使用，是 CO₂ 的定性鉴别标准方法。
+
+### 性质 / 反应 / 公式
+
+**标准检验方法：通入澄清石灰水**
+
+$$CO_2 + Ca(OH)_2 = CaCO_3\downarrow + H_2O$$
+
+| 步骤 | 操作 | 现象 |
+|------|------|------|
+| 1 | 准备澄清石灰水 | 无色透明溶液 |
+| 2 | 通入待检气体 | 开始变浑浊 |
+| 3 | 继续通入（少量 CO₂）| 保持浑浊（CaCO₃ 白色沉淀）|
+| 4 | 继续通入（过量 CO₂）| 沉淀溶解，再次变清 |
+
+**两个方程式（少量 vs 过量 CO₂）**
+
+| CO₂ 量 | 方程式 | 现象 |
+|--------|--------|------|
+| 少量（适量）| $CO_2 + Ca(OH)_2 = CaCO_3\downarrow + H_2O$ | 变浑浊 |
+| 过量 | $CaCO_3 + CO_2 + H_2O = Ca(HCO_3)_2$ | 再变清 |
+
+**其他检验 CO₂ 的方法**
+
+| 方法 | 试剂 | 现象 | 缺点 |
+|------|------|------|------|
+| 石灰水法 | Ca(OH)₂ | 变浑浊 | 最通用，推荐 |
+| 石蕊试液法 | 紫色石蕊 | 变红（CO₂+H₂O=H₂CO₃）| 不专一（SO₂ 等也变红）|
+| BaCl₂ 法 | BaCl₂ 溶液 | 无明显变化（BaCO₃ 不溶，但加碱才沉淀）| 一般不用 |
+
+**CO₂ 与 CO 的区分**
+
+| 性质 | CO₂ | CO |
+|------|------|-----|
+| 石灰水 | 变浑浊 | 不变化 |
+| 可燃性 | 不可燃 | 可燃（蓝色火焰）|
+| 毒性 | 无毒（高浓度窒息）| 剧毒 |
+| 用途 | 光合作用原料，灭火 | 冶铁还原剂 |
+
+### 典型实验 / 例题
+
+**例题**：向石灰水中通入 CO₂，现象是先浑浊后变清，其原因是（ ）
+A. CaCO₃ 分解了  
+B. 过量 CO₂ 与 CaCO₃ 和水反应，生成可溶的 Ca(HCO₃)₂  
+C. 石灰水浓度降低了  
+D. CO₂ 把 CaCO₃ 洗走了
+
+**解析**：过量 CO₂ 使 CaCO₃ 转化为可溶的 Ca(HCO₃)₂：$CaCO_3 + CO_2 + H_2O = Ca(HCO_3)_2$，沉淀溶解，溶液再次变清，选 **B**。
+
+### 易错点
+
+1. 石灰水变浑浊说明有 CO₂，但 SO₂ 也能使石灰水浑浊（BaSO₃ 沉淀）——石灰水法检验 CO₂ 时，要排除 SO₂ 等干扰（先通过品红溶液检验 SO₂）。
+2. **过量 CO₂ 使浑浊消失**是重要知识点，先浑浊后变清 ≠ 无 CO₂，而是 CO₂ 过量的特征！
+3. "通入 CO₂ 后石灰水不变浑浊"可能是：CO₂ 量极少（未达到检测限）或石灰水太稀（Ca(OH)₂ 不足）。
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | English | 例句 |
+|------|---------|------|
+| 澄清石灰水 | limewater | Pass CO₂ through limewater to detect it. |
+| 变浑浊 | turn milky | Limewater turns milky in the presence of CO₂. |
+| 碳酸钙沉淀 | calcium carbonate precipitate | CaCO₃ precipitates and causes the cloudiness. |
+| 碳酸氢钙 | calcium bicarbonate | Excess CO₂ forms soluble calcium bicarbonate. |
+| 检验 | detect / test | Limewater is used to test for CO₂. |
+
+### 例句
+
+| 中文 | English |
+|------|---------|
+| 将 CO₂ 通入澄清石灰水，石灰水变浑浊。 | When CO₂ is passed into limewater, the limewater turns milky. |
+| 过量 CO₂ 会使浑浊的石灰水再次变清。 | Excess CO₂ will cause the cloudy limewater to become clear again. |
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/初中/化学/人教版-人民教育出版社/九年级/义务教育教科书·化学九年级上册.pdf]] 第六单元（待家长核对页码）
+- **课标**：义务教育化学课程标准(2022年版)
+- **百科**：维基百科"二氧化碳"
+- **生成校对**：Claude 生成于 2026-05-09
+
+## 🔗 相关词条
+
+- [[二氧化碳]]
+- [[CO2制备]]
+- [[一氧化碳]]
+- [[化学实验基本操作]]
