@@ -1,0 +1,77 @@
+---
+title: if 从句虚拟
+aliases: [if-从句虚拟, if虚拟语气, conditional subjunctive]
+学科: 英语
+学段: [高中]
+主题: [必修三, 语法, Unit 3]
+状态: 全龄完成
+英文术语: conditional subjunctive (if-clause)
+首次共读:
+最近共读:
+---
+
+## 🎓 if 从句虚拟语气综合
+
+**定义**：以 if 引导的条件状语从句，使用虚拟语气时态，表达与现实、过去或将来相反/不太可能的假设。
+
+### 三种类型对比总表
+
+| 类型 | if 从句（条件）| 主句 | 含义 |
+|------|-------------|------|------|
+| 与现在相反 | if + 过去式（were/did）| would/could/might + do | 现在其实并非如此 |
+| 与过去相反 | if + had + 过去分词 | would/could/might + have done | 过去并未发生 |
+| 与将来相反 | if + should/were to + do | would/could/might + do | 将来可能性极低 |
+
+### 倒装省略 if 的三种形式
+
+| 完整形式 | 倒装形式 |
+|---------|---------|
+| If I were you... | Were I you... |
+| If I had known... | Had I known... |
+| If it should rain... | Should it rain... |
+
+### 例句（中英对照）
+
+| 中文 | English |
+|------|---------|
+| 如果我有更多时间，我就能帮你了。（与现在相反）| If I had more time, I could help you. |
+| 如果他当时来了，他就见到她了。（与过去相反）| If he had come then, he would have met her. |
+| 万一你遇到麻烦，打电话给我。（将来小概率）| Should you get into trouble, call me. |
+| 要是我知道答案就好了。（现在遗憾）| If only I knew the answer! |
+| 即使已经知道结果，他也会做同样的选择。 | Even if he had known the result, he would have made the same choice. |
+| 假如我是总统，我会怎么做？ | If I were the president, what would I do? |
+
+### 混合虚拟（重要！）
+
+条件从句和主句所指时间不一致时，各自按对应时间选择时态：
+- If I had taken the medicine yesterday, I would feel better **now**.
+  （条件：昨天虚拟 → if + had taken；结果：现在 → would + do）
+
+### 高考考点
+
+1. **三种类型的时态匹配**是语法填空、单句改写最高频考点
+2. **倒装结构**（were/had/should 提前）是写作加分亮点
+3. **混合虚拟时态**（过去条件→现在结果）是区分高手的难点
+
+### 易错点
+
+- ❌ If I would know... → ✅ If I knew...（条件从句不用 would）
+- ❌ If I had more time yesterday, I can help you. → ✅ If I had had more time yesterday, I could have helped you.
+
+---
+
+## 📑 出处
+
+- **课标**：《普通高中英语课程标准（2017 年版 2020 年修订）》语法知识·情态与语气
+- **教材**：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语必修 第三册.pdf]] Unit 3 语法板块（待家长核对具体页码）
+- **百科**：Wikipedia: Conditional sentence in English
+- **生成校对**：Claude 生成于 2026-05-09，由家长核对
+
+## 🔗 相关词条
+
+- [[虚拟语气-入门]]
+- [[虚拟语气-与现在事实相反]]
+- [[虚拟语气-与过去事实相反]]
+- [[虚拟语气-与未来事实相反]]
+- [[虚拟语气-wish]]
+- [[状语从句-条件]]
