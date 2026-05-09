@@ -1,0 +1,81 @@
+---
+title: as-引导定语综合
+aliases: [as-引导定语综合, as引导定语从句, as定语从句]
+学科: 英语
+学段: [高中]
+主题: [选必三, 语法, Unit 4]
+状态: 全龄完成
+英文术语: as-relative clause
+首次共读:
+最近共读:
+---
+
+## 🎓 as 引导的定语从句——综合梳理
+
+**定义**：as 可作关系代词引导非限制性定语从句，修饰整个主句，意为"正如……；这一点……"。与 which 引导的非限制性定语从句有重要区别，是高考阅读理解和语法填空的高频考点。
+
+---
+
+### as 与 which 的核心区别
+
+| 比较点 | as | which |
+|-------|-----|-------|
+| 位置 | 可置于主句**前、中、后** | 只能置于主句**后** |
+| 意义 | 通常含"正如""众所周知"等语义 | 泛指前文内容 |
+| 常见固定搭配 | as is known / as is often the case / as was reported | 无特定固定搭配 |
+| 从句谓语形式 | 常见 is/was/were（be 动词） | 灵活 |
+
+---
+
+### 常见固定搭配
+
+| 搭配 | 含义 | 示例 |
+|------|------|------|
+| as is known (to all) | 众所周知 | As is known to all, practice makes perfect. |
+| as is often the case | 正如常见的情况 | As is often the case, he arrived late. |
+| as was reported | 正如报道的 | As was reported, the project succeeded. |
+| as has been mentioned | 如前所述 | As has been mentioned, ... |
+| as is expected | 正如所料 | As is expected, she won. |
+
+---
+
+### 例句（中英对照）
+
+| 中文 | English |
+|------|---------|
+| 众所周知，练习是提高技能的最好方法。 | As is known to all, practice is the best way to improve skills. |
+| 正如常见的情况，他又迟到了。 | As is often the case, he was late again. |
+| 正如报道所述，这项计划已经成功实施。 | As was reported, the plan has been successfully implemented. |
+| 她通过了考试，这是意料之中的。 | She passed the exam, as was expected. |
+| 如前所述，环境保护需要全社会共同努力。 | As has been mentioned, environmental protection requires the joint efforts of the whole society. |
+| 他失去了工作，这正如许多人所预料的那样。 | He lost his job, as many people had predicted. |
+
+---
+
+### 高考考点
+
+1. **语法填空/改错**：判断用 as 还是 which，关键看位置（主句前只能用 as）
+2. **阅读理解**：as is known to all... 开头的句子要识别其修饰整个主句的逻辑
+3. **写作高分**：As is known to all, ... 是议论文常用的开场白句型
+
+### 易错点
+
+- ❌ Which is known to all, practice makes perfect. → ✅ As is known to all, ...（置于主句前只能用 as）
+- as 引导从句中 be 动词常保留（as is / as was），不可随意省略
+
+---
+
+## 📑 出处
+
+- **课标**：《普通高中英语课程标准（2017 年版 2020 年修订）》语法知识·定语从句·as 引导
+- **教材**：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语选择性必修 第三册.pdf]] Unit 4 Adversity and Courage 语法板块（待家长核对具体页码）
+- **百科**：Wikipedia: Relative clause
+- **生成校对**：Claude 生成于 2026-05-09，由家长核对
+
+## 🔗 相关词条
+
+- [[省略-定语从句]]
+- [[非限定性定语从句]]
+- [[倒装-综合]]
+- [[however-引导让步]]
+- [[虚拟语气-综合]]

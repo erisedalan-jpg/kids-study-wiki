@@ -1,0 +1,68 @@
+---
+title: art / 艺术
+aliases: [art-高中, art, 艺术, 美术]
+学科: 英语
+学段: [高中]
+主题: [选必三, 词汇, Unit 1]
+状态: 全龄完成
+英文术语: art
+首次共读:
+最近共读:
+---
+
+## 🎓 art / 艺术
+
+**定义**：art（名词/不可数）指人类通过绘画、雕塑、音乐、文学等形式表达创造力与情感的活动或作品的总称；亦可用复数 arts 指各门类艺术（the arts）。
+
+### 词形变化与派生词
+
+| 形式 | 词性 | 含义 |
+|------|------|------|
+| art | n. (U/C) | 艺术；艺术品 |
+| artist | n. | 艺术家 |
+| artistic | adj. | 艺术的；有艺术才能的 |
+| artistically | adv. | 艺术地 |
+| artistry | n. | 艺术才能；技艺 |
+| the arts | n. pl. | 各类艺术（总称） |
+| fine art / fine arts | n. | 纯艺术（绘画、雕塑等） |
+
+### 例句（中英对照）
+
+| 中文 | English |
+|------|---------|
+| 艺术能够跨越语言的界限传达情感。 | Art can convey emotions beyond the barrier of language. |
+| 她从小就展现出对艺术的浓厚兴趣。 | She showed a keen interest in art from an early age. |
+| 这幅画被认为是西方艺术的杰作之一。 | This painting is considered one of the masterpieces of Western art. |
+| 学校大力支持各类艺术的发展。 | The school strongly supports the development of the arts. |
+| 他在艺术创作方面极具天赋。 | He has exceptional artistic talent. |
+| 艺术以其独特方式反映社会现实。 | Art reflects social reality in its own unique way. |
+
+### 高考考点
+
+1. **art 与 arts 区分**：art（不可数）= 艺术整体概念；arts（可数/复数）= 各门类艺术，如 the performing arts（表演艺术）
+2. **固定短语**：work of art（艺术品）、state-of-the-art（最先进的）、art gallery（美术馆）
+3. **写作常用搭配**：appreciate art（欣赏艺术）、create art（创作艺术）、traditional/contemporary art（传统/当代艺术）
+
+### 易错点
+
+- ❌ He is an art. → ✅ He is an artist.（人要用 artist）
+- ❌ I like arts very much. → ✅ I like art very much.（泛指艺术整体用不可数）
+- **state-of-the-art** 用作形容词时要加连字符：a state-of-the-art facility
+
+---
+
+## 📑 出处
+
+- **课标**：《普通高中英语课程标准（2017 年版 2020 年修订）》主题语境·人与社会·艺术与文化
+- **教材**：[[素材/教材/ChinaTextbook/高中/英语/人教版-人民教育出版社/普通高中教科书·英语选择性必修 第三册.pdf]] Unit 1 Art（待家长核对具体页码）
+- **百科**：Wikipedia: Art
+- **生成校对**：Claude 生成于 2026-05-09，由家长核对
+
+## 🔗 相关词条
+
+- [[painter]]
+- [[sculpture]]
+- [[aesthetic]]
+- [[masterpiece]]
+- [[虚拟语气-综合]]
+- [[art-高中]]
