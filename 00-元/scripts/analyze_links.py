@@ -36,29 +36,40 @@ ALIASES_LINE_RE = re.compile(r"^aliases\s*:\s*\[(.*?)\]\s*$", re.MULTILINE)
 
 
 def parse_aliases(fm_text: str) -> list[str]:
-    """解析 inline list `aliases: [a, b, "x,y", ...]`，识别引号包裹值。"""
+    """解析 inline list `aliases: [a, b, "x,y", ...]`，仅在值起始位置识别引号。
+
+    YAML 语义：`What's-the-matter` 中间的 `'` 是字面量，不是字符串边界。
+    """
     m = ALIASES_LINE_RE.search(fm_text)
     if not m:
         return []
     s = m.group(1)
+    # split by 顶层逗号（忽略引号包裹值内的逗号）
     out: list[str] = []
     buf: list[str] = []
     quote: str | None = None
+    started = False  # 当前值是否已开始（用于决定引号是边界还是字面量）
     for ch in s:
         if quote:
             if ch == quote:
                 quote = None
+                # 引号闭合后，剩余字符直到逗号都是同值的一部分，但不再视为字符串
             else:
                 buf.append(ch)
-        elif ch in ('"', "'"):
+        elif not started and ch in ('"', "'"):
             quote = ch
+            started = True
         elif ch == ",":
             v = "".join(buf).strip()
             if v:
                 out.append(v)
             buf = []
+            started = False
+        elif ch.isspace() and not started:
+            continue  # 跳过值起始前的空白
         else:
             buf.append(ch)
+            started = True
     v = "".join(buf).strip()
     if v:
         out.append(v)

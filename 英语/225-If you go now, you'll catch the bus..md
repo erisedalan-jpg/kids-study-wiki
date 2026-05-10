@@ -1,6 +1,6 @@
 ---
 title: If you go now, you'll catch the bus.
-aliases: [If you go now, you'll catch the bus., If you go now, you'll catch the bus., If you go now, you'll catch the bus., If you go now you'll catch the bus, 条件句示例, 如果你现在走就能赶上公交]
+aliases: ["If you go now, you'll catch the bus.", If you go now, you'll catch the bus., If you go now, you'll catch the bus., If you go now, you'll catch the bus., If you go now you'll catch the bus, 条件句示例, 如果你现在走就能赶上公交]
 学科: 英语
 学段: 初中
 主题: [八上, 句型, 条件句]
