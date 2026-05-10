@@ -36,10 +36,33 @@ ALIASES_LINE_RE = re.compile(r"^aliases\s*:\s*\[(.*?)\]\s*$", re.MULTILINE)
 
 
 def parse_aliases(fm_text: str) -> list[str]:
+    """解析 inline list `aliases: [a, b, "x,y", ...]`，识别引号包裹值。"""
     m = ALIASES_LINE_RE.search(fm_text)
     if not m:
         return []
-    return [a.strip().strip("\"'") for a in m.group(1).split(",") if a.strip()]
+    s = m.group(1)
+    out: list[str] = []
+    buf: list[str] = []
+    quote: str | None = None
+    for ch in s:
+        if quote:
+            if ch == quote:
+                quote = None
+            else:
+                buf.append(ch)
+        elif ch in ('"', "'"):
+            quote = ch
+        elif ch == ",":
+            v = "".join(buf).strip()
+            if v:
+                out.append(v)
+            buf = []
+        else:
+            buf.append(ch)
+    v = "".join(buf).strip()
+    if v:
+        out.append(v)
+    return out
 
 
 def collect_all() -> tuple[dict[str, Path], dict[str, str], dict[str, str]]:
@@ -112,7 +135,8 @@ def build_graph(
         m = fm_re.match(text)
         if m:
             als = parse_aliases(m.group(1))
-            if not als or als[0] != bare:
+            # 规则：aliases 必须包含 bare-name（不强制首位，以兼容消歧后缀词条）
+            if bare not in als:
                 missing_alias.append(bare)
         for lm in LINK_RE.finditer(text):
             target = lm.group(1)
