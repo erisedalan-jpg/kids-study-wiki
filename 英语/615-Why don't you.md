@@ -1,6 +1,6 @@
 ---
 title: Why don't you
-aliases: ["Why don't you", "Why don't you...?", "Why-dont-you", 提议句型]
+aliases: ["Why don't you", "Why don't you...?", "Why-dont-you", 提议句型, "Why-don't-you"]
 学科: 英语
 学段: [初中]
 主题: [八上, 句型, 给建议, 提议]

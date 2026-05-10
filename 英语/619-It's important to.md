@@ -1,6 +1,6 @@
 ---
 title: It's important to...
-aliases: ["It's important to...", "It's important to", "It is important to", 重要性句型]
+aliases: ["It's important to...", "It's important to", "It is important to", 重要性句型, "Its-important-to"]
 学科: 英语
 学段: [初中]
 主题: [八下, 句型, 评价, 强调重要性]

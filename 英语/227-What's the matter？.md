@@ -1,6 +1,6 @@
 ---
 title: What's the matter？
-aliases: [What's the matter？, What's the matter, 怎么了, 哪里不舒服]
+aliases: [What's the matter？, What's the matter, 怎么了, 哪里不舒服, "What's-the-matter", "Whats-the-matter"]
 学科: 英语
 学段: 初中
 主题: [八上, 句型, 健康与身体]

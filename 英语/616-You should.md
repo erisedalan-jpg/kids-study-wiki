@@ -1,6 +1,6 @@
 ---
 title: You should...
-aliases: ["You should...", "You should", "should 句型", 建议句型]
+aliases: ["You should...", "You should", "should 句型", 建议句型, "You-should"]
 学科: 英语
 学段: [初中]
 主题: [八上, 句型, 给建议, 情态动词]

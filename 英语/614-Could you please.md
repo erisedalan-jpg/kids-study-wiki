@@ -1,6 +1,6 @@
 ---
 title: Could you please...?
-aliases: ["Could you please...?", "Could you please", "Could you please...", 礼貌请求]
+aliases: ["Could you please...?", "Could you please", "Could you please...", 礼貌请求, "Could-you-please"]
 学科: 英语
 学段: [初中]
 主题: [八下, 句型, 礼貌请求, 情态动词]
