@@ -1,0 +1,112 @@
+---
+title: PCR
+aliases: [PCR, 聚合酶链反应, polymerase chain reaction]
+学科: 生物
+学段: [高中]
+主题: [选必三, 基因工程]
+状态: 进阶完成
+英文术语: polymerase chain reaction (PCR)
+---
+
+# PCR
+> **一句话**：在体外用耐高温DNA聚合酶和特异引物，通过反复变性—退火—延伸循环，将特定DNA片段指数级扩增的技术。
+> **English**: A technique that exponentially amplifies a specific DNA segment in vitro by repeated cycles of denaturation, annealing, and extension using thermostable DNA polymerase.
+
+---
+
+## 🎓 高中进阶
+### 定义
+聚合酶链反应（Polymerase Chain Reaction, PCR）是一种在体外快速大量扩增特定DNA片段的分子生物学技术。通过反复循环"**变性—退火—延伸**"三个步骤，以指数级速度复制目标DNA片段，无需生物体即可在试管中完成。
+
+PCR技术由美国科学家穆里斯（Kary Mullis）于1983年发明，1993年因此获诺贝尔化学奖。
+
+### 原理 / 步骤 / 应用
+
+**基本原理**
+
+模拟体内DNA复制过程，在体外：
+- **变性（Denaturation）**：高温（94–98 °C）使双链DNA解开为单链
+- **退火（Annealing）**：降温（50–65 °C）使引物与模板单链互补配对
+- **延伸（Extension）**：适宜温度（72 °C）下，耐热DNA聚合酶（Taq酶）以引物为起点，按5'→3'方向合成新链
+
+**PCR反应体系**
+
+| 组分 | 作用 |
+|------|------|
+| 模板DNA | 含目的基因的DNA片段 |
+| 引物（一对） | 特异性识别目的片段两端，提供3'-OH起点 |
+| 耐高温DNA聚合酶（Taq酶） | 在高温循环中保持活性，延伸新链 |
+| 四种dNTP | 原料（dATP、dTTP、dGTP、dCTP） |
+| 缓冲液（含Mg²⁺） | 维持pH和酶的活性 |
+
+**循环过程（以30次循环为例）**
+
+```
+初始变性
+↓ 第1循环：94°C变性 → 55°C退火 → 72°C延伸
+↓ 第2循环：...
+↓ 第n循环：...
+（约30次循环后，目的片段数量 = 2³⁰ ≈ 10⁹ 倍）
+```
+
+理论上n次循环后，目的片段数量约为**2ⁿ**（指数增长）。
+
+**引物的关键作用**
+
+- 引物是与目的基因两端互补的短链DNA（约18–25个碱基）
+- 一对引物分别与目的基因两条链的末端互补，确保只扩增目的片段
+- 引物的特异性决定PCR的特异性
+
+**Taq酶的重要性**
+
+普通DNA聚合酶在高温下失活，无法用于循环扩增。耐热DNA聚合酶（Taq酶，来源于热泉细菌*Thermus aquaticus*）在95 °C高温下仍保持活性，使PCR自动化循环成为可能。
+
+**应用领域**
+
+| 领域 | 用途 |
+|------|------|
+| 基因工程 | 获取/扩增目的基因 |
+| 疾病诊断 | 检测病毒/细菌DNA（如PCR新冠检测、结核病检测） |
+| 法医鉴定 | DNA指纹分析（STR分型） |
+| 考古遗传学 | 扩增古DNA（化石样品） |
+| 基因测序 | 测序前的模板制备 |
+
+### 典型例题
+**例**：PCR反应需要两条引物，这两条引物与模板的关系是什么？为什么需要耐高温的DNA聚合酶而不用普通聚合酶？
+
+**解析**：两条引物分别与目的基因两条链的**3'端**（方向相反）互补，确保两条新链都从目的基因的端点开始延伸，从而扩增中间的目的片段。需要耐高温聚合酶是因为PCR每次循环都需在约94 °C高温下变性解链，普通DNA聚合酶在此温度下会失活，而Taq酶能耐受高温，在整个循环过程中保持活性，无需每次循环后重新加酶。
+
+### 易错点
+- PCR需要**一对引物**（正向+反向），不是一条；引物是DNA（不是RNA）
+- PCR的模板是**单链DNA**（变性后），延伸的方向是**5'→3'**
+- PCR属于**体外**扩增，不需要活细胞；不是转基因，扩增的只是DNA片段，不涉及导入生物体
+- 每次循环产物不一定都是精确的目的片段，前几个循环产生的是"长片段"，约第10次循环后目的片段比例才成为主体
+
+---
+
+## 🌐 中英对照
+### 词汇
+| 中文 | 英文 |
+|------|------|
+| 聚合酶链反应 | polymerase chain reaction (PCR) |
+| 变性 | denaturation |
+| 退火 | annealing |
+| 延伸 | extension |
+| 引物 | primer |
+| 耐热DNA聚合酶 | thermostable DNA polymerase / Taq polymerase |
+| 脱氧核苷酸 | deoxyribonucleotide (dNTP) |
+
+### 例句
+- PCR can amplify a single DNA molecule to billions of copies within a few hours. （PCR可在数小时内将单个DNA分子扩增到数十亿个拷贝。）
+- The thermostable Taq polymerase is essential for PCR because it withstands the high temperatures needed for DNA denaturation. （耐热Taq聚合酶对PCR至关重要，因为它能承受DNA变性所需的高温。）
+
+---
+
+## 📑 出处
+- **教材**：[[素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修3 生物技术与工程.pdf]] 第3章
+- **课标**：普通高中生物学课程标准(2017年版2020年修订)
+- **百科**：维基百科"Polymerase chain reaction"
+- **生成校对**：Claude 生成于 2026-05-10
+
+## 🔗 相关词条
+[[基因工程]] [[目的基因]] [[重组DNA分子]] [[基因诊断]] [[DNA连接酶]]

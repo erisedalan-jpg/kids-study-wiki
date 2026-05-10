@@ -1,0 +1,86 @@
+---
+title: DNA是主要的遗传物质
+aliases: [DNA是主要的遗传物质, DNA as the primary genetic material]
+学科: 生物
+学段: [高中]
+主题: [必修二, 第3章基因的本质]
+状态: 进阶完成
+英文术语: DNA as the primary genetic material
+---
+
+# DNA是主要的遗传物质
+
+> **一句话**：通过肺炎双球菌转化实验和 T₂ 噬菌体侵染实验，科学家证明 DNA 是绝大多数生物的遗传物质；RNA 是少数 RNA 病毒的遗传物质，故称"主要"。
+> **English**: Transformation and phage infection experiments proved that DNA is the genetic material in most organisms; RNA viruses use RNA, so DNA is called the "primary" genetic material.
+
+---
+
+## 🎓 高中进阶
+
+### 定义
+**DNA 是主要的遗传物质**：在细胞生物（原核、真核）及 DNA 病毒中，遗传信息储存于 DNA；少数 RNA 病毒（如 HIV、流感病毒、烟草花叶病毒）的遗传物质为 RNA。因此，**DNA 是主要的遗传物质，RNA 也可作为遗传物质**。
+
+### 原理 / 规律
+
+#### 证明 DNA 是遗传物质的两个关键实验
+
+| 实验 | 时间/人物 | 核心结论 |
+|------|-----------|---------|
+| 肺炎双球菌转化实验 | 1928 Griffith（体内）/ 1944 Avery（体外） | DNA 是转化因子，即遗传物质 |
+| T₂ 噬菌体侵染实验 | 1952 Hershey & Chase | 进入细菌的是 DNA，不是蛋白质；DNA 指导噬菌体增殖 |
+
+#### 为什么说"主要"？
+
+$$\text{绝大多数生物的遗传物质} = \text{DNA}$$
+$$\text{少数 RNA 病毒的遗传物质} = \text{RNA}$$
+$$\text{有细胞结构的生物} \Rightarrow \text{遗传物质一定是 DNA}$$
+
+#### DNA 作为遗传物质的理由
+1. **稳定性**：DNA 双链结构 + 碱基互补，化学性质稳定，能精确复制。
+2. **信息容量**：四种碱基的多样排列（4^n 种可能）能编码复杂生命信息。
+3. **传递性**：DNA 随染色体精确分配，能代代相传。
+4. **变异性**：碱基序列可发生突变，提供进化原材料。
+
+### 典型例题
+
+**例题**：下列生物中，遗传物质是 RNA 的是？
+A. 烟草花叶病毒   B. 大肠杆菌   C. 酵母菌   D. T₂ 噬菌体
+
+**解题**：烟草花叶病毒（TMV）是 RNA 病毒，遗传物质为 RNA。大肠杆菌（原核细胞）、酵母菌（真核细胞）、T₂ 噬菌体（DNA 病毒）遗传物质均为 DNA。**答案：A**。
+
+### 易错点
+1. **"主要"不等于"全部"**：RNA 病毒的遗传物质是 RNA，不可一概而论。
+2. **有细胞结构的生物遗传物质一定是 DNA**：包括病毒以外的所有生物。
+3. **DNA 和蛋白质都含 N、P 等元素**（不是 DNA 独有 P），区分两者的实验方法是同位素标记分离追踪。
+
+---
+
+## 🌐 中英对照
+
+### 词汇
+
+| 中文 | 英文 |
+|------|------|
+| 遗传物质 | genetic material |
+| 转化实验 | transformation experiment |
+| 同位素标记 | isotope labeling |
+| RNA 病毒 | RNA virus |
+| DNA 病毒 | DNA virus |
+
+### 例句
+- *DNA is the primary genetic material in all cellular organisms, while some viruses use RNA.*（DNA 是所有细胞生物的主要遗传物质，而部分病毒使用 RNA 作为遗传物质。）
+
+---
+
+## 📑 出处
+
+- **教材**：[[素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf]] 第3章
+- **课标**：普通高中生物学课程标准(2017年版2020年修订)
+- **百科**：维基百科"遗传物质"
+- **生成校对**：Claude 生成于 2026-05-10
+
+## 🔗 相关词条
+- [[肺炎双球菌转化实验]]
+- [[T2噬菌体侵染细菌实验]]
+- [[DNA分子结构]]
+- [[中心法则]]
