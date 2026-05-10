@@ -34,6 +34,10 @@ QNO_RE = re.compile(r"^\s*(\d{1,2})\s*[\.、．]\s*", re.MULTILINE)
 ANSWER_TAG_RE = re.compile(r"【答案】([^\n【]*)")
 SOLUTION_TAG_RE = re.compile(r"【解析】([^【]+)")
 
+# 真题章节起始标记：真题部分从这里开始（PDF 头部的"考生须知"在此之前）
+# 高考数学卷标准章节：一、单项选择题/二、多项选择题/三、填空题/四、解答题
+PREAMBLE_END_RE = re.compile(r"一[、，．,]\s*单项选择题|一[、，．,]\s*选择题")
+
 
 def _classify_qtype(stem: str, qno: int, total_q: int) -> str:
     """题型分类（题号兜底 + stem 启发式校验）。
@@ -75,8 +79,15 @@ def _classify_score(qno: int, qtype: str) -> int:
 
 
 def _split_questions(full_text: str) -> list[tuple[int, str]]:
-    """按题号边界把全文切成 [(qno, body)] 列表。"""
-    matches = list(QNO_RE.finditer(full_text))
+    """按题号边界把全文切成 [(qno, body)] 列表。
+
+    先跳过"考生须知"段落（找到"一、单项选择题"标记之前的所有 "1./2./..." 编号
+    都属于须知），再按题号递增约束切分真题。
+    """
+    pre = PREAMBLE_END_RE.search(full_text)
+    text = full_text[pre.start():] if pre else full_text
+
+    matches = list(QNO_RE.finditer(text))
     out: list[tuple[int, str]] = []
     for i, m in enumerate(matches):
         qno = int(m.group(1))
@@ -85,8 +96,8 @@ def _split_questions(full_text: str) -> list[tuple[int, str]]:
         if not out and qno != 1:
             continue
         start = m.end()
-        end = matches[i + 1].start() if i + 1 < len(matches) else len(full_text)
-        out.append((qno, full_text[start:end].strip()))
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        out.append((qno, text[start:end].strip()))
     return out
 
 
