@@ -70,6 +70,21 @@ SUBJECT_DIRS: list[str] = [
 ]
 
 
+# 真题词条根（区别于 SUBJECT_DIRS 的学科目录）
+# 子目录命名: <省份>-<学科>，如 真题/吉林-数学/
+EXAM_BASE_DIR = "真题"
+
+
+def iter_exam_dirs() -> Iterator[Path]:
+    """遍历 真题/<省份>-<学科>/ 子目录。"""
+    base = REPO_ROOT / EXAM_BASE_DIR
+    if not base.is_dir():
+        return
+    for sub in sorted(base.iterdir()):
+        if sub.is_dir() and not sub.name.startswith("."):
+            yield sub
+
+
 # frontmatter 边界
 _FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 # 文件名前缀（2-4 位数字 + 短横线）

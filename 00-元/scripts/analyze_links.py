@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from _utils import (  # noqa: E402
-    REPO_ROOT, SUBJECT_DIRS, bare_name, iter_entries,
+    REPO_ROOT, SUBJECT_DIRS, bare_name, iter_entries, iter_exam_dirs,
     read_frontmatter, setup_utf8,
 )
 
@@ -94,6 +94,20 @@ def collect_all() -> tuple[dict[str, Path], dict[str, str], dict[str, str]]:
                 continue
             files[bare] = p
             subject_of[bare] = s
+            text = p.read_text(encoding="utf-8", errors="replace")
+            m = fm_re.match(text)
+            if not m:
+                continue
+            for a in parse_aliases(m.group(1)):
+                aliases.setdefault(a, bare)
+    # 真题词条也纳入图，避免反链被误判为断链
+    for exam_dir in iter_exam_dirs():
+        for p in iter_entries(exam_dir):
+            bare = bare_name(p)
+            if bare in files:
+                continue
+            files[bare] = p
+            subject_of[bare] = exam_dir.name  # 例如 "吉林-数学"
             text = p.read_text(encoding="utf-8", errors="replace")
             m = fm_re.match(text)
             if not m:
