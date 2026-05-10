@@ -120,7 +120,43 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 ## 真题分析进度
 
 <!-- EXAM-PROGRESS-START -->
-（暂未启动；由 aggregate_exam_indices.py 维护）
+
+| 省份-学科 | 年份范围 | 卷数 | 题词条数 | 索引 | 状态 |
+|---|---|---:|---:|---|---|
+| 吉林-数学 | 2022-2024 | 4/19 | 87 | 4 份 | ⏳ P2 部分（5/19）|
+
+**P0 脚手架** ✅（5 个参数化脚本 + yaml 配置 + 18 单元测试）：
+- `00-元/scripts/exam_pipeline_config.yaml` — 省份/学科/卷别归一/tag 池过滤
+- `00-元/scripts/_exam_utils.py` — load_config / normalize_paper / normalize_gender / build_atom_filename / is_in_tag_pool
+- `00-元/scripts/build_subject_lexicon.py` — 学科 → 白名单 JSON（数学 1843 terms）
+- `00-元/scripts/parse_exam_pdf.py` — pdfplumber 切分（跳过考生须知段落）
+- `00-元/scripts/tag_questions.py` — 白名单候选 tag 生成
+- `00-元/scripts/render_exam_atoms.py` — 真题词条渲染（15 字段 frontmatter）
+- `00-元/scripts/aggregate_exam_indices.py` — 4 份索引 + 反链回填（幂等）
+
+**4 份索引**（位于 `索引/真题/`）：
+- `吉林数学-高频考点.md` — 函数最值/函数零点/函数极值各 4-6 次（基于 87 题，不含 P3 数据）
+- `吉林数学-题型×考点交叉表.md` — 选择/填空/解答 × 考点矩阵
+- `吉林数学-缺口词条清单.md` — 真题命中但现有词条未覆盖（导数/复数/独立事件/排列组合等高频缺口）
+- `吉林数学-试卷地图.md` — 4 张卷题数/题型分布概览
+
+**反链回填**：22 个数学词条末尾追加 `<!-- exam-backlinks-start/end -->` 区段，重跑幂等。
+
+**已跑卷**：2024 新课标Ⅱ（19题，P1 Pilot）+ 2023 新课标Ⅱ（22题）+ 2022 文/理 全国乙（各 23 题）= **87 题** / 4 张卷。
+
+**待跑卷**（15 张）：
+- P2 剩余 5 张：2020/2021 文+理 + 2020 文/理 — 等 sonnet quota 恢复（2026-05-15）后子代理批跑
+- P3 全部 10 张：2015-2019 文+理 — 同上
+
+**可复用流水线**（5 个参数化脚本 + 1 yaml 配置）：后续接 北京/黑龙江/其他学科零代码改动平移。
+
+**已知限制**：
+- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回
+- 真题词条 bare-name 跨年同名（如 `新课标Ⅱ-08` 在 2023 和 2024 均存在）→ analyze_links 看到 68 个孤岛/缺 alias，但反链文本仍正确
+- 7 题待人工核对（候选 tag 为空/无对应 term：复数/排列组合/概率传输/算法/独立事件等）
+
+详见 `docs/superpowers/specs/2026-05-10-jilin-math-exam-analysis-design.md` 与 `docs/superpowers/plans/2026-05-10-jilin-math-exam-analysis-plan.md`。
+
 <!-- EXAM-PROGRESS-END -->
 
 ## 工作模式提示
