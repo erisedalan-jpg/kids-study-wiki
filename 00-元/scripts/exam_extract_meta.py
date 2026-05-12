@@ -75,6 +75,17 @@ def extract_meta(pdf_path: Path) -> dict[int, dict[str, str]]:
     result = md.convert(str(pdf_path))
     text = result.text_content
     chunks = split_by_question(text)
+    if chunks:
+        max_qno = max(chunks.keys())
+        if max_qno > len(chunks):
+            missing = sorted(set(range(1, max_qno + 1)) - set(chunks.keys()))
+            sys.stderr.write(
+                f"⚠️  split_by_question: 题号不连续/丢弃 {len(missing)} 题: {missing[:20]}\n"
+            )
+    else:
+        sys.stderr.write(
+            f"⚠️  split_by_question: 未识别到任何题号（首题非 1 或全部不递增？）\n"
+        )
     return {
         qno: {
             "answer": extract_answer(chunk),
@@ -108,8 +119,29 @@ def main() -> int:
 
     qa_path = Path(args.questions)
     qa = json.loads(qa_path.read_text(encoding="utf-8"))
+
+    # 校验 source_pdf 字段
+    if "source_pdf" not in qa:
+        print(
+            f"ERROR: questions.json 缺 source_pdf 字段: {qa_path}",
+            file=sys.stderr,
+        )
+        return 1
+
     pdf_path = REPO_ROOT / qa["source_pdf"]
-    meta = extract_meta(pdf_path)
+    if not pdf_path.exists():
+        print(f"ERROR: PDF 不存在: {pdf_path}", file=sys.stderr)
+        return 1
+
+    # markitdown 转换可能抛 FileNotFoundError / 解析异常等
+    try:
+        meta = extract_meta(pdf_path)
+    except Exception as e:
+        print(
+            f"ERROR: markitdown 转换失败 {pdf_path.name}: {type(e).__name__}: {e}",
+            file=sys.stderr,
+        )
+        return 1
 
     # 合并到 questions.json
     for q in qa["questions"]:
