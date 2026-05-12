@@ -49,5 +49,47 @@ class TestFindAnchors(unittest.TestCase):
         self.assertEqual(anchors[0]["y0"], 100)
 
 
+from unittest.mock import MagicMock
+
+
+class TestRegionsAndRender(unittest.TestCase):
+    def _make_words(self, items):
+        """items: list[(x0,y0,x1,y1,text)]"""
+        return [(x[0], x[1], x[2], x[3], x[4], 0, i, 0) for i, x in enumerate(items)]
+
+    def test_compute_question_regions_single_page(self):
+        """同页 Q1: 题号→answer 之间是题面；answer→Q2 之间是解析。"""
+        from exam_screenshot import compute_regions  # noqa
+        words = self._make_words([
+            (10, 100, 20, 110, "1."),
+            (25, 100, 80, 110, "集合A=..."),
+            (10, 200, 50, 210, "【答案】"),
+            (10, 300, 50, 310, "解析内容"),
+            (10, 400, 20, 410, "2."),
+        ])
+        q_anchors = find_question_anchors(words, 5)
+        a_anchors = find_answer_anchors(words)
+        regions = compute_regions(q_anchors, a_anchors, page_height=600)
+        # Q1 题面: y=100→200 (answer 起)
+        self.assertEqual(regions[1]["q"]["y0"], 100)
+        self.assertAlmostEqual(regions[1]["q"]["y1"], 200, delta=5)
+        # Q1 解析: y=200→400 (Q2 起)
+        self.assertEqual(regions[1]["a"]["y0"], 200)
+        self.assertAlmostEqual(regions[1]["a"]["y1"], 400, delta=5)
+
+    def test_compute_question_regions_no_answer_uses_next_q(self):
+        """如果没找到 answer anchor（罕见），题面延伸到下一题号。"""
+        from exam_screenshot import compute_regions
+        words = self._make_words([
+            (10, 100, 20, 110, "1."),
+            (10, 400, 20, 410, "2."),
+        ])
+        q_anchors = find_question_anchors(words, 5)
+        a_anchors = find_answer_anchors(words)
+        regions = compute_regions(q_anchors, a_anchors, page_height=600)
+        self.assertAlmostEqual(regions[1]["q"]["y1"], 400, delta=5)
+        self.assertIsNone(regions[1]["a"])
+
+
 if __name__ == "__main__":
     unittest.main()

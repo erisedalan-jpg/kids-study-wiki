@@ -93,3 +93,40 @@ def find_answer_anchors(words: list[tuple]) -> list[dict[str, float]]:
             })
     anchors.sort(key=lambda a: a["y0"])
     return anchors
+
+
+def compute_regions(
+    q_anchors: dict[int, dict],
+    a_anchors: list[dict],
+    page_height: float,
+) -> dict[int, dict[str, dict | None]]:
+    """根据题号+答案 anchor 算每题的截图区域。
+
+    返回 {qno: {"q": region_or_None, "a": region_or_None}}
+    region = {"x0": 0, "y0": float, "x1": page_width, "y1": float}
+
+    策略:
+    - 题面 region: y0=题号 y0, y1=该题对应 answer anchor 的 y0 (若有)，否则下一题题号 y0
+    - 解析 region: y0=answer y0, y1=下一题题号 y0（若无下一题用 page_height）
+    """
+    sorted_qnos = sorted(q_anchors.keys())
+    regions: dict[int, dict] = {}
+    for i, qno in enumerate(sorted_qnos):
+        q_y0 = q_anchors[qno]["y0"]
+        next_q_y0 = (
+            q_anchors[sorted_qnos[i + 1]]["y0"]
+            if i + 1 < len(sorted_qnos)
+            else page_height
+        )
+        # 找该题区间内第一个 answer anchor
+        a_in_range = next(
+            (a for a in a_anchors if q_y0 < a["y0"] < next_q_y0), None
+        )
+        if a_in_range:
+            q_region = {"y0": q_y0, "y1": a_in_range["y0"]}
+            a_region = {"y0": a_in_range["y0"], "y1": next_q_y0}
+        else:
+            q_region = {"y0": q_y0, "y1": next_q_y0}
+            a_region = None
+        regions[qno] = {"q": q_region, "a": a_region}
+    return regions
