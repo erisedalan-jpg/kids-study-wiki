@@ -171,71 +171,109 @@ def render_screenshots(
     """从 PDF 提取题号 + 渲染截图到目标目录。
 
     返回 questions.json 数据（含 qno / page / 截图相对路径）。
+
+    失败模式（明确 raise）：
+    - PDF 不存在 → FileNotFoundError
+    - PDF 损坏 / 不可读 → ValueError
+    - PDF 加密 → ValueError
+    - 全部页面识别不到任何题号（如扫描版无文字层）→ ValueError
     """
+    if not pdf_path.exists():
+        raise FileNotFoundError(f"PDF 不存在: {pdf_path}")
+
     cfg = load_config()
     fname = pdf_path.name
     paper = normalize_paper(fname, cfg)
     gender = normalize_gender(fname, cfg)
     paper_id = f"{year}-{gender}-{paper}"
 
-    # 截图输出目录
     out_dir = REPO_ROOT / "素材" / "真题截图" / f"{province}-{subject}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    doc = fitz.open(str(pdf_path))
-    all_questions: list[dict] = []
-    all_q_anchors: dict[int, tuple[int, dict]] = {}  # qno -> (page_no, anchor)
-    all_a_anchors_by_page: dict[int, list[dict]] = {}
+    try:
+        doc = fitz.open(str(pdf_path))
+    except fitz.FileDataError as e:
+        raise ValueError(f"PDF 损坏或不可读: {pdf_path}: {e}") from e
 
-    # 第一遍：扫所有页面找 anchor
-    for page_no, page in enumerate(doc):
-        words = page.get_text("words")
-        q_anchors = find_question_anchors(words, expected_max_qno)
-        # 全局合并，按 page+y 排序
-        for qno, info in q_anchors.items():
-            if qno not in all_q_anchors:  # 首次出现优先
-                all_q_anchors[qno] = (page_no, info)
-        all_a_anchors_by_page[page_no] = find_answer_anchors(words)
+    try:
+        if doc.is_encrypted:
+            raise ValueError(f"PDF 已加密，需先解密: {pdf_path}")
 
-    # 第二遍：渲染每题截图
-    for qno in sorted(all_q_anchors.keys()):
-        page_no, q_info = all_q_anchors[qno]
-        page = doc[page_no]
-        a_anchors = all_a_anchors_by_page.get(page_no, [])
-        # 用本页 q_anchors + a_anchors 算 region（跨页题暂用本页截到底）
-        page_words = page.get_text("words")
-        page_q_anchors = find_question_anchors(page_words, expected_max_qno)
-        regions = compute_regions(page_q_anchors, a_anchors, page.rect.height)
-        if qno not in regions:
-            continue  # 跨页题：本页找不到 qno 起点
-        q_region = regions[qno]["q"]
-        a_region = regions[qno]["a"]
+        all_questions: list[dict] = []
+        all_q_anchors: dict[int, tuple[int, dict]] = {}
+        # 缓存每页的 q/a anchors（消除第二遍重复 get_text("words")）
+        per_page_anchors: dict[int, dict[str, Any]] = {}
+        per_page_height: dict[int, float] = {}
 
-        # 渲染 q.png
-        q_filename = build_screenshot_filename(year, gender, paper, qno, "q")
-        q_path = out_dir / q_filename
-        clip = fitz.Rect(0, q_region["y0"], page.rect.width, q_region["y1"])
-        pix = page.get_pixmap(clip=clip, dpi=dpi)
-        pix.save(str(q_path))
+        # 第一遍：扫所有页面找 anchor 并缓存
+        for page_no, page in enumerate(doc):
+            words = page.get_text("words")
+            q_anchors = find_question_anchors(words, expected_max_qno)
+            a_anchors = find_answer_anchors(words)
+            per_page_anchors[page_no] = {
+                "q_anchors": q_anchors,
+                "a_anchors": a_anchors,
+            }
+            per_page_height[page_no] = page.rect.height
+            for qno, info in q_anchors.items():
+                if qno not in all_q_anchors:
+                    all_q_anchors[qno] = (page_no, info)
 
-        # 渲染 a.png（可能 None）
-        a_filename = None
-        if a_region:
-            a_filename = build_screenshot_filename(year, gender, paper, qno, "a")
-            a_path = out_dir / a_filename
-            clip_a = fitz.Rect(0, a_region["y0"], page.rect.width, a_region["y1"])
-            pix_a = page.get_pixmap(clip=clip_a, dpi=dpi)
-            pix_a.save(str(a_path))
+        if not all_q_anchors:
+            raise ValueError(
+                f"未识别到任何题号: {pdf_path.name} (可能是扫描版无文字层 / "
+                f"或题号格式不在 QNO_TOKEN_RE 范围)"
+            )
 
-        all_questions.append({
-            "qno": qno,
-            "page": page_no + 1,  # 用户友好的 1-indexed
-            "题面图": f"素材/真题截图/{province}-{subject}/{q_filename}",
-            "解析图": f"素材/真题截图/{province}-{subject}/{a_filename}" if a_filename else "",
-        })
+        # 第二遍：渲染每题截图（用缓存的 anchors）
+        for qno in sorted(all_q_anchors.keys()):
+            page_no, _q_info = all_q_anchors[qno]
+            page = doc[page_no]
+            cache = per_page_anchors[page_no]
+            page_q_anchors = cache["q_anchors"]
+            a_anchors = cache["a_anchors"]
+            regions = compute_regions(
+                page_q_anchors, a_anchors, per_page_height[page_no]
+            )
+            if qno not in regions:
+                continue  # 跨页题：本页找不到 qno 起点（保守跳过）
+            q_region = regions[qno]["q"]
+            a_region = regions[qno]["a"]
 
-    doc.close()
-    rel_pdf = pdf_path.relative_to(REPO_ROOT) if pdf_path.is_relative_to(REPO_ROOT) else pdf_path
+            # 渲染 q.png
+            q_filename = build_screenshot_filename(year, gender, paper, qno, "q")
+            q_path = out_dir / q_filename
+            clip = fitz.Rect(0, q_region["y0"], page.rect.width, q_region["y1"])
+            pix = page.get_pixmap(clip=clip, dpi=dpi)
+            pix.save(str(q_path))
+
+            # 渲染 a.png（可能 None）
+            a_filename = None
+            if a_region:
+                a_filename = build_screenshot_filename(year, gender, paper, qno, "a")
+                a_path = out_dir / a_filename
+                clip_a = fitz.Rect(0, a_region["y0"], page.rect.width, a_region["y1"])
+                pix_a = page.get_pixmap(clip=clip_a, dpi=dpi)
+                pix_a.save(str(a_path))
+
+            all_questions.append({
+                "qno": qno,
+                "page": page_no + 1,
+                "题面图": f"素材/真题截图/{province}-{subject}/{q_filename}",
+                "解析图": (
+                    f"素材/真题截图/{province}-{subject}/{a_filename}"
+                    if a_filename
+                    else ""
+                ),
+            })
+    finally:
+        doc.close()
+
+    rel_pdf = (
+        pdf_path.relative_to(REPO_ROOT)
+        if pdf_path.is_relative_to(REPO_ROOT)
+        else pdf_path
+    )
     return {
         "paper_id": paper_id,
         "year": year,
@@ -293,16 +331,23 @@ def main() -> int:
     )
 
     violations = assert_screenshot_quality(qa, (args.expected_min, args.expected_max))
+
+    # 无论 L1 通过与否都 dump JSON（含 violations 字段供调试）
+    qa["_violations"] = violations
+    out_dir = REPO_ROOT / args.out
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = (
+        out_dir / f"{args.province}-{args.subject}-{qa['paper_id']}-questions.json"
+    )
+    out_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2), encoding="utf-8")
+
     if violations:
         print("L1 断言失败:", file=sys.stderr)
         for v in violations:
             print(f"  - {v}", file=sys.stderr)
+        print(f"⚠️ 仍写入 questions.json 含 _violations 字段 → {out_path}", file=sys.stderr)
         return 1
 
-    out_dir = REPO_ROOT / args.out
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{args.province}-{args.subject}-{qa['paper_id']}-questions.json"
-    out_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"OK: 截图 {len(qa['questions'])} 题 + questions.json → {out_path}")
     return 0
 
