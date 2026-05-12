@@ -117,52 +117,11 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
   - 模板：初中两层正文（📚 6-12 + 🎓 12+）/ 高中单层 🎓
   - 备注：sonnet 子代理 quota 耗尽（重置 2026-05-15）后由主会话直接补齐 49 条
 
-## 真题分析进度
+## 真题分析
 
 <!-- EXAM-PROGRESS-START -->
 
-| 省份-学科 | 年份范围 | 卷数 | 题词条数 | 索引 | 状态 |
-|---|---|---:|---:|---|---|
-| 吉林-数学 | 2022-2024 | 4/19 | 87 | 4 份 | ⏳ P2 部分（5/19）|
-
-**P0 脚手架** ✅（5 个参数化脚本 + yaml 配置 + 18 单元测试）：
-- `00-元/scripts/exam_pipeline_config.yaml` — 省份/学科/卷别归一/tag 池过滤
-- `00-元/scripts/_exam_utils.py` — load_config / normalize_paper / normalize_gender / build_atom_filename / is_in_tag_pool
-- `00-元/scripts/build_subject_lexicon.py` — 学科 → 白名单 JSON（数学 1843 terms）
-- `00-元/scripts/parse_exam_pdf.py` — pdfplumber 切分（跳过考生须知段落）
-- `00-元/scripts/tag_questions.py` — 白名单候选 tag 生成
-- `00-元/scripts/render_exam_atoms.py` — 真题词条渲染（15 字段 frontmatter）
-- `00-元/scripts/aggregate_exam_indices.py` — 4 份索引 + 反链回填（幂等）
-
-**4 份索引**（位于 `索引/真题/`）：
-- `吉林数学-高频考点.md` — 函数最值/函数零点/函数极值各 4-6 次（基于 87 题，不含 P3 数据）
-- `吉林数学-题型×考点交叉表.md` — 选择/填空/解答 × 考点矩阵
-- `吉林数学-缺口词条清单.md` — 真题命中但现有词条未覆盖（导数/复数/独立事件/排列组合等高频缺口）
-- `吉林数学-试卷地图.md` — 4 张卷题数/题型分布概览
-
-**反链回填**：22 个数学词条末尾追加 `<!-- exam-backlinks-start/end -->` 区段，重跑幂等。
-
-**已跑卷**：2024 新课标Ⅱ（19题，P1 Pilot）+ 2023 新课标Ⅱ（22题）+ 2022 文/理 全国乙（各 23 题）= **87 题** / 4 张卷。
-
-**待跑卷**（15 张）：
-- P2 剩余 5 张：2020/2021 文+理 + 2020 文/理 — 等 sonnet quota 恢复（2026-05-15）后子代理批跑
-- P3 全部 10 张：2015-2019 文+理 — 同上
-
-**可复用流水线**（5 个参数化脚本 + 1 yaml 配置）：后续接 北京/黑龙江/其他学科零代码改动平移。
-
-**已知限制**：
-- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回 — 由 `lexicon_health_check.py` 输出缺口清单，Opus 审后修补
-- 10 题孤岛/候选 tag 为空（2022 文/理 + 部分 2023 卷的 Q21/Q4 等）：需主会话从 lexicon 体检报告里抽 `extracted_concepts` 手工补 tag
-- pdfplumber 字符级残余 bug（占真题约 5%）：分数符号 `B(3/2,-1)` 的 `3/2` 丢失、`∩` 渲染为 `I`、`{}` 渲染为 `ð` 等。**95% 真问题已由 `_split_questions` orphan merge 修复**（2026-05-12 task #8）；剩余 5% 走 known-issue 接受，未来遇阻塞时再启动 task #7 换 PDF 提取库（详见 [docs/superpowers/plans/2026-05-12-pdf-extractor-replacement.md]）
-- v4-pro 在"字符级编码审查 / 细粒度 OCR 判断"类任务上**噪声大**（~80% LLM 主观判断 vs ~5% 真实字符级 bug）→ **这类任务改用 Opus 主会话或 Sonnet subagent**，不再走 v4-pro
-
-**修复记录 (2026-05-12)**：
-- `_utils.bare_name()` 对真题目录不剥年份前缀（之前 `2022-` 被当序号剥掉导致跨年 bare 冲突 → 误报 68 缺 alias）。修复后 `analyze_links` 缺 alias 归零，真题入图数 68→87
-- `_llm_router` 删除 deepseek-reasoner（即将弃用），推理/自检并入 v4-pro
-- `lexicon_health_check.py` 调 v4-pro 必加 `system` message + `temperature=0.3`，否则空 content 概率高
-- `parse_exam_pdf._split_questions` 加 orphan merge：题号 N. 之前的"游离数学定义行"（如 `M ={...}`, `x²`）prepend 到 Q_N stem 头部。修复 4 个已知真问题题（2022 文 Q1/Q21、2022 理 Q1、2023 Q5）。4 卷 87 题已重切 + 真题词条 .md 已重生。剩余 5% 字符级 pdfplumber bug 走 known-issue
-
-详见 `docs/superpowers/specs/2026-05-10-jilin-math-exam-analysis-design.md` 与 `docs/superpowers/plans/2026-05-10-jilin-math-exam-analysis-plan.md`。
+_2026-05-12 已清空 v1 全部产出（数据 + 脚本 + 文档），保留 zip 备份于 `素材/backup/2026-05-12/exam-pre-migrate.zip`。新方案待重新规划。_
 
 <!-- EXAM-PROGRESS-END -->
 

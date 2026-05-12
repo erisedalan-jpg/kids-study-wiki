@@ -125,13 +125,7 @@ def strip_prefix(name: str) -> str:
 
 
 def bare_name(path: Path) -> str:
-    """去掉前缀和扩展名，返回纯概念名。
-
-    例外：真题词条目录下文件名形如 2022-文-01.md，其中 2022- 是年份而非序号前缀，
-    剥掉会让跨年同名冲突（2022-文-01 与 2020-文-01 撞 bare）。
-    """
-    if "真题" in path.parts:
-        return path.name.removesuffix(".md")
+    """去掉前缀和扩展名，返回纯概念名。"""
     return strip_prefix(path.name).removesuffix(".md")
 
 
