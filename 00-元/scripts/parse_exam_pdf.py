@@ -38,6 +38,81 @@ SOLUTION_TAG_RE = re.compile(r"【解析】([^【]+)")
 # 高考数学卷标准章节：一、单项选择题/二、多项选择题/三、填空题/四、解答题
 PREAMBLE_END_RE = re.compile(r"一[、，．,]\s*单项选择题|一[、，．,]\s*选择题")
 
+# 结构化标记：以下开头的行视为题面/答案/解析内容，**不是**游离数学行
+_STRUCT_MARKER = re.compile(
+    r"^\s*("
+    r"【|"                                 # 【答案】/【解析】/【分析】/【详解】/【小问 N 详解】/【点睛】
+    r"故|综上|因为|所以|则|又|设|当|对|若|由|若|根据|证明|解|"  # 解答常见开头连词
+    r"第\s*\d+\s*页|"                    # 页码 "第 1 页 共 27 页"
+    r"\d+\s*[\.、．]\s|"                  # 题号 "1. xxx"
+    r"[A-D]\s*[\.、．]\s|"                # 选项 "A. xxx"
+    r"[①②③④⑤⑥⑦⑧⑨⑩]"                       # 序号项
+    r")"
+)
+
+# 游离数学行识别：含数学符号或单字母上下标的简短行
+_ORPHAN_MATH_PAT = re.compile(
+    r"[=∈∉⊂⊃⊆⊇∪∩×÷√∑∏∫π∞≤≥≠≈±²³⁴⁵{}|]|"  # 关键数学符号
+    r"\b[a-zA-Z]\s*[=∈]|"                       # 变量赋值 "x =" "a ∈"
+    r"\{[^}]*\}"                                # 集合 {a,b,c}
+)
+
+
+def _is_orphan_math_line(line: str) -> bool:
+    """判断一行是否是"游离数学定义行"。
+
+    典型游离行（应合并到下一题 stem 头部）:
+    - "M ={2,4,6,8,10},N ={ x -1< x<6 }"
+    - "M ∩ N ="
+    - "x²" / "x2"（pdfplumber 把上标拆为单独行）
+    非游离行: 题号 / 答案块标记 / 选项 / 页码 / 普通中文句子。
+    """
+    s = line.strip()
+    if not s:
+        return False
+    if _STRUCT_MARKER.match(s):
+        return False
+    if len(s) > 80:
+        return False  # 长句子不太可能是数学定义行
+    if s[-1] in "。.，；！？":
+        return False  # 普通句子以标点结尾排除
+    # 整行是简短数学变量+上下标（如 "x²"、"x2"、"y3"）
+    # 要求首字符是字母 + 末字符是数字或上下标，避免把纯数字（如 "10"、"16" 页码碎片）误判
+    if len(s) <= 5 and re.fullmatch(r"[a-zA-Z][a-zA-Z\d²³⁴⁵√^_]*[\d²³⁴⁵√]", s):
+        return True
+    if _ORPHAN_MATH_PAT.search(s):
+        return True
+    return False
+
+
+def _extract_trailing_orphan(text: str) -> tuple[str, str]:
+    """从 text 尾部反扫，把连续的"游离数学行"段切出来。
+
+    返回 (text_without_orphans, orphan_text)。无游离尾时 orphan_text 为空串。
+    """
+    lines = text.split("\n")
+    end = len(lines) - 1
+    while end >= 0 and not lines[end].strip():
+        end -= 1
+    if end < 0:
+        return text, ""
+    start = end
+    while start >= 0:
+        stripped = lines[start].strip()
+        if not stripped:
+            start -= 1
+            continue
+        if _is_orphan_math_line(stripped):
+            start -= 1
+        else:
+            break
+    first_orphan_idx = start + 1
+    if first_orphan_idx > end:
+        return text, ""
+    orphan = "\n".join(lines[first_orphan_idx : end + 1])
+    kept = "\n".join(lines[:first_orphan_idx] + lines[end + 1 :]).rstrip()
+    return kept, orphan
+
 
 def _classify_qtype(stem: str, qno: int, total_q: int) -> str:
     """题型分类（题号兜底 + stem 启发式校验）。
@@ -83,22 +158,45 @@ def _split_questions(full_text: str) -> list[tuple[int, str]]:
 
     先跳过"考生须知"段落（找到"一、单项选择题"标记之前的所有 "1./2./..." 编号
     都属于须知），再按题号递增约束切分真题。
+
+    切分后做一次"游离数学行归属"修正：题号 N. 之前/上一题答案之后的简短数学
+    定义行（如 "M ={2,4,6,8,10}"、"x²"）原本会被丢失，修正后 prepend 到 Q_N 的
+    stem 头部。修复历史 OCR 报告中约 40% 的"题面不完整"误差。
     """
     pre = PREAMBLE_END_RE.search(full_text)
     text = full_text[pre.start():] if pre else full_text
 
     matches = list(QNO_RE.finditer(text))
-    out: list[tuple[int, str]] = []
+    raw: list[tuple[int, int, int, int]] = []  # (qno, qno_start, body_start, body_end)
     for i, m in enumerate(matches):
         qno = int(m.group(1))
-        if out and qno != out[-1][0] + 1:
+        if raw and qno != raw[-1][0] + 1:
             continue
-        if not out and qno != 1:
+        if not raw and qno != 1:
             continue
-        start = m.end()
-        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
-        out.append((qno, text[start:end].strip()))
-    return out
+        body_start = m.end()
+        body_end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        raw.append((qno, m.start(), body_start, body_end))
+
+    if not raw:
+        return []
+
+    bodies: list[list] = [[qno, text[bs:be].strip()] for qno, _, bs, be in raw]
+
+    # 1) Q1 之前的游离数学行（PREAMBLE 后 → Q1 题号前）prepend 到 Q1 stem
+    pre_q1 = text[: raw[0][1]]
+    _, orphan_lead = _extract_trailing_orphan(pre_q1)
+    if orphan_lead:
+        bodies[0][1] = orphan_lead + "\n" + bodies[0][1]
+
+    # 2) 题间游离行：上一题 body 尾部的游离行剥离并 prepend 到下一题
+    for i in range(len(bodies) - 1):
+        kept, orphan_tail = _extract_trailing_orphan(bodies[i][1])
+        if orphan_tail:
+            bodies[i][1] = kept
+            bodies[i + 1][1] = orphan_tail + "\n" + bodies[i + 1][1]
+
+    return [(qno, body.strip()) for qno, body in bodies]
 
 
 def parse_pdf(pdf_path: Path, *, subject: str, province: str, year: int) -> dict[str, Any]:
