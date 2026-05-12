@@ -151,15 +151,16 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 **可复用流水线**（5 个参数化脚本 + 1 yaml 配置）：后续接 北京/黑龙江/其他学科零代码改动平移。
 
 **已知限制**：
-- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回 — 由 `lexicon_health_check.py` 跑 v4-pro 输出缺口清单，Opus 审后修补
+- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回 — 由 `lexicon_health_check.py` 输出缺口清单，Opus 审后修补
 - 10 题孤岛/候选 tag 为空（2022 文/理 + 部分 2023 卷的 Q21/Q4 等）：需主会话从 lexicon 体检报告里抽 `extracted_concepts` 手工补 tag
-- pdfplumber 切分把题号上方的"游离数学定义行"切到 stem 之外（约 40% 题真实 OCR 不完整，根因相同）→ **决定长期换 PDF 提取库**，详见 [docs/superpowers/plans/2026-05-12-pdf-extractor-replacement.md]。在此完成前：Phase 2 P2 续跑暂缓，task #5 golden test 暂缓
-- v4-flash 在长解答题（Q21 系列）OCR 校验上偶发空 content；脚本已对失败题升级到 v4-pro retry，仍可能失败 → 解答题以选择题/填空题代抽
+- pdfplumber 字符级残余 bug（占真题约 5%）：分数符号 `B(3/2,-1)` 的 `3/2` 丢失、`∩` 渲染为 `I`、`{}` 渲染为 `ð` 等。**95% 真问题已由 `_split_questions` orphan merge 修复**（2026-05-12 task #8）；剩余 5% 走 known-issue 接受，未来遇阻塞时再启动 task #7 换 PDF 提取库（详见 [docs/superpowers/plans/2026-05-12-pdf-extractor-replacement.md]）
+- v4-pro 在"字符级编码审查 / 细粒度 OCR 判断"类任务上**噪声大**（~80% LLM 主观判断 vs ~5% 真实字符级 bug）→ **这类任务改用 Opus 主会话或 Sonnet subagent**，不再走 v4-pro
 
 **修复记录 (2026-05-12)**：
 - `_utils.bare_name()` 对真题目录不剥年份前缀（之前 `2022-` 被当序号剥掉导致跨年 bare 冲突 → 误报 68 缺 alias）。修复后 `analyze_links` 缺 alias 归零，真题入图数 68→87
 - `_llm_router` 删除 deepseek-reasoner（即将弃用），推理/自检并入 v4-pro
 - `lexicon_health_check.py` 调 v4-pro 必加 `system` message + `temperature=0.3`，否则空 content 概率高
+- `parse_exam_pdf._split_questions` 加 orphan merge：题号 N. 之前的"游离数学定义行"（如 `M ={...}`, `x²`）prepend 到 Q_N stem 头部。修复 4 个已知真问题题（2022 文 Q1/Q21、2022 理 Q1、2023 Q5）。4 卷 87 题已重切 + 真题词条 .md 已重生。剩余 5% 字符级 pdfplumber bug 走 known-issue
 
 详见 `docs/superpowers/specs/2026-05-10-jilin-math-exam-analysis-design.md` 与 `docs/superpowers/plans/2026-05-10-jilin-math-exam-analysis-plan.md`。
 
@@ -176,10 +177,10 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 
 详见 `docs/superpowers/plans/2026-05-12-multi-model-workflow-v3.md`。核心规则：
 
-- **Opus 主会话** = 核心 / 编排 / 终审 / 古文 / 古诗 / 敏感议题亲自写
-- **Sonnet subagent** = 并行复检 / 抽 topics / 扩省份 checklist（不再做主体生成）
-- **DeepSeek v4-pro** = 批量生成（**含小批量**）+ 50% 自检 + lexicon 体检（取代已弃用的 deepseek-reasoner）
-- **DeepSeek v4-flash** = OCR 抽样 / 短文本清洗
+- **Opus 主会话** = 核心 / 编排 / 终审 / 古文 / 古诗 / 敏感议题亲自写 / **字符级编码审查**
+- **Sonnet subagent** = 并行复检 / 抽 topics / 扩省份 checklist / **字符级 OCR 判断（替代 v4-pro 在这类任务上的噪声）**（不再做主体生成）
+- **DeepSeek v4-pro** = 批量生成（**含小批量**）+ 50% 自检 + lexicon 概念抽取（取代已弃用的 deepseek-reasoner）。**禁用场景：字符级编码审查 / 细粒度 OCR 判断**（噪声率 > 信号率）
+- **DeepSeek v4-flash** = OCR 抽样 / 短文本清洗（注意：长解答题字符审查仍噪声大，必要时升 sonnet/opus）
 - 词条生成统一走工作流 A（无批量阈值）；古文/敏感议题在 topics.jsonl 打 `route: opus` 跳过 v4-pro
 - 复检比例 `10/40/50`（Opus / Sonnet / v4-pro）；过渡期 5/12–5/15 用 `30,0,70`
 - 交叉复检按场景触发：新学科 / 新配置 10%，稳定期 5% 或 0%

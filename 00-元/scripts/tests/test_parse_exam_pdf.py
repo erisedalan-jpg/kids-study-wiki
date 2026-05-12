@@ -6,8 +6,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from parse_exam_pdf import (  # noqa: E402
+    SOLUTION_TAG_RE,
+    _classify_score,
     _is_orphan_math_line,
     _split_questions,
+    _strip_footer_lines,
     parse_pdf,
 )
 
@@ -142,6 +145,117 @@ B. 选项B
         q1_body = next(body for qno, body in result if qno == 1)
         self.assertIn("第一题题面", q1_body)
         self.assertIn("选项A", q1_body)
+
+
+class TestStripFooterLines(unittest.TestCase):
+    """整行剥离页眉/页脚（页码、学科网水印）。"""
+
+    def test_strips_chinese_page_footer(self):
+        text = "题面内容\n第 1 页 | 共 27 页\n下一行\n第3页/共25页\n"
+        result = _strip_footer_lines(text)
+        self.assertIn("题面内容", result)
+        self.assertIn("下一行", result)
+        self.assertNotIn("第 1 页", result)
+        self.assertNotIn("第3页", result)
+
+    def test_strips_xueke_watermark(self):
+        text = "题面\n学科网（北京）股份有限公司\n下一题\n"
+        result = _strip_footer_lines(text)
+        self.assertNotIn("学科网", result)
+        self.assertIn("下一题", result)
+
+    def test_strips_secret_marker(self):
+        text = "绝密★启用前\n2022 年普通高等学校招生全国统一考试\n"
+        result = _strip_footer_lines(text)
+        self.assertNotIn("绝密", result)
+        self.assertIn("2022", result)
+
+    def test_does_not_strip_math_with_digits(self):
+        # 含数字的题面不应被误剥
+        text = "已知 z=1-2i，求|z|。\n23 名学生中随机抽 3 人。\n"
+        result = _strip_footer_lines(text)
+        self.assertIn("已知 z=1-2i", result)
+        self.assertIn("23 名学生", result)
+
+
+class TestClassifyScore(unittest.TestCase):
+    def test_choice_and_fill_5pt(self):
+        self.assertEqual(_classify_score(1, "选择", 2022, 23), 5)
+        self.assertEqual(_classify_score(13, "填空", 2022, 23), 5)
+
+    def test_2022_quanguoyi_q22_q23_optional_10pt(self):
+        # 2022 全国乙 Q22/23 选做题 10 分
+        self.assertEqual(_classify_score(22, "解答", 2022, 23), 10)
+        self.assertEqual(_classify_score(23, "解答", 2022, 23), 10)
+
+    def test_2022_quanguoyi_q17_q21_12pt(self):
+        self.assertEqual(_classify_score(17, "解答", 2022, 23), 12)
+        self.assertEqual(_classify_score(21, "解答", 2022, 23), 12)
+
+    def test_2024_xinkebiao2_q19_17pt(self):
+        self.assertEqual(_classify_score(19, "解答", 2024, 19), 17)
+
+    def test_2024_xinkebiao2_q15_q18_12pt(self):
+        self.assertEqual(_classify_score(15, "解答", 2024, 19), 12)
+        self.assertEqual(_classify_score(18, "解答", 2024, 19), 12)
+
+    def test_2023_xinkebiao2_q22_12pt(self):
+        # 2023 新课标Ⅱ 22 题，无选做，全 12 分
+        self.assertEqual(_classify_score(22, "解答", 2023, 22), 12)
+
+
+class TestSolutionTagRegex(unittest.TestCase):
+    """SOLUTION_TAG_RE 应能抓【解析】之后全部内容（含【分析】【详解】等）。"""
+
+    def test_captures_solution_through_analysis_and_detail(self):
+        body = (
+            "题面\n"
+            "【答案】A\n"
+            "【解析】\n"
+            "【分析】首先计算\n"
+            "【详解】具体步骤...\n"
+        )
+        m = SOLUTION_TAG_RE.search(body)
+        self.assertIsNotNone(m)
+        text = m.group(1)
+        self.assertIn("【分析】", text)
+        self.assertIn("【详解】", text)
+        self.assertIn("具体步骤", text)
+
+    def test_no_solution_tag(self):
+        body = "只有题面，没有解析块"
+        self.assertIsNone(SOLUTION_TAG_RE.search(body))
+
+    def test_spaced_solution_tag_matches(self):
+        # 部分 PDF 渲染为带空格的 "【 解 析 】"
+        body = "题面\n【 解 析 】\n详细推导..."
+        m = SOLUTION_TAG_RE.search(body)
+        self.assertIsNotNone(m)
+        self.assertIn("详细推导", m.group(1))
+
+
+class TestAnswerTagRegex(unittest.TestCase):
+    """ANSWER_TAG_RE 应兼容字符间空格变体 "【 答 案 】"。"""
+
+    def setUp(self):
+        from parse_exam_pdf import ANSWER_TAG_RE
+        self.re = ANSWER_TAG_RE
+
+    def test_normal_no_space(self):
+        m = self.re.search("【答案】A")
+        self.assertEqual(m.group(1), "A")
+
+    def test_with_spaces(self):
+        # 2022 全国乙 Q15/Q14 渲染为 "【 答 案 】"
+        m = self.re.search("【 答 案 】A")
+        self.assertEqual(m.group(1), "A")
+
+    def test_spaced_answer_then_newline_then_content(self):
+        body = "题面\n【 答 案 】\nx-22 +y-32=13\n【解析】"
+        m = self.re.search(body)
+        self.assertIsNotNone(m)
+        # 题面应该能被截到 ANSWER_TAG 之前
+        self.assertLess(m.start(), body.index("【解析】"))
 
 
 @unittest.skipUnless(PDF.exists(), "需要 2024 新课标Ⅱ 解析卷 PDF")

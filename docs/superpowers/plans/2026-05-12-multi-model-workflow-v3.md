@@ -16,10 +16,10 @@
 
 | 模型 | 身份 | 主职 | 禁区 |
 |---|---|---|---|
-| **Opus 4.7** (1M ctx) | 🎯 核心 / 编排 / 终审 | 拆批 · 起 subagent · 审 verdict · 古文/敏感议题亲自写 · 跨学段一致性 | 不亲自生成大批量概念词条 |
-| **Sonnet 4.6** | 🤝 并行工人 | subagent 并行复检 · 整理 topics · checklist 跑 | 不再做大批量主体生成（v4-pro 更稳） |
-| **DeepSeek v4-pro** | ⚙️ 批量生成 + 自检 | 词条骨架（**含小批量**）· 长文 · 50% 自检 · lexicon 体检 | 古文 / 古诗 / 敏感议题 |
-| **DeepSeek v4-flash** | ⚙️ 轻量清洗 | OCR 抽样校验 · 短文本清洗 · 字段抽取 | 整条词条生成 |
+| **Opus 4.7** (1M ctx) | 🎯 核心 / 编排 / 终审 | 拆批 · 起 subagent · 审 verdict · 古文/敏感议题亲自写 · 跨学段一致性 · **字符级编码审查** | 不亲自生成大批量概念词条 |
+| **Sonnet 4.6** | 🤝 并行工人 | subagent 并行复检 · 整理 topics · checklist 跑 · **字符级 OCR 判断** | 不再做大批量主体生成（v4-pro 更稳） |
+| **DeepSeek v4-pro** | ⚙️ 批量生成 + 自检 | 词条骨架（**含小批量**）· 长文 · 50% 自检 · lexicon 概念抽取（仅概念名，不做字符级 OCR 判断） | 古文 / 古诗 / 敏感议题 · **字符级编码审查 / OCR 完整性判断**（噪声 > 信号） |
+| **DeepSeek v4-flash** | ⚙️ 轻量清洗 | OCR 抽样（短题） · 短文本清洗 · 字段抽取 | 整条词条生成 · 长解答题字符审查（升 sonnet/opus） |
 | **零 LLM 脚本** | 🔧 流水线 | renumber/stats/analyze_links/真题流水线/golden test | — |
 
 **与旧规则的核心转变**
@@ -27,6 +27,7 @@
 - ✅ 小批量也走 v4-pro，Opus 改为「编排 + 终审」
 - ❌ `Task.REASONING` / `deepseek-reasoner` 弃用
 - ✅ 推理 / 自检并入 `Task.COMPLEX` → v4-pro
+- ⚠️ **新规则 (2026-05-12)**：字符级编码审查 / 细粒度 OCR 完整性判断不走 v4-pro（实测噪声率 ~80% vs 真实 bug ~5%），改走 Opus 主会话或 Sonnet subagent
 
 ## 2. 四层分级架构
 

@@ -31,8 +31,17 @@ from _exam_utils import load_config, normalize_gender, normalize_paper  # noqa: 
 
 # 题号边界识别（不区分学科的通用版）
 QNO_RE = re.compile(r"^\s*(\d{1,2})\s*[\.、．]\s*", re.MULTILINE)
-ANSWER_TAG_RE = re.compile(r"【答案】([^\n【]*)")
-SOLUTION_TAG_RE = re.compile(r"【解析】([^【]+)")
+# 答案/解析标签兼容字符间空格变体（部分 PDF 渲染为 "【 答 案 】"）
+ANSWER_TAG_RE = re.compile(r"【\s*答\s*案\s*】([^\n【]*)")
+# solution 抓【解析】到 body 末（含【分析】【详解】【小问详解】【点睛】等结构化段）
+SOLUTION_TAG_RE = re.compile(r"【\s*解\s*析\s*】(.+)", re.DOTALL)
+
+# 页眉/页脚行模式：在 _strip_footer_lines 中整行剥离
+_FOOTER_LINE_PATTERNS = [
+    re.compile(r"^\s*第\s*\d+\s*[页/].*共\s*\d+\s*页\s*$"),  # "第 1 页 ｜ 共 27 页" / "第1页/共25页"
+    re.compile(r"^\s*学科网（北京）股份有限公司\s*$"),         # 页脚水印
+    re.compile(r"^\s*绝密★启用前\s*$"),                       # 试卷头部水印
+]
 
 # 真题章节起始标记：真题部分从这里开始（PDF 头部的"考生须知"在此之前）
 # 高考数学卷标准章节：一、单项选择题/二、多项选择题/三、填空题/四、解答题
@@ -142,14 +151,35 @@ def _classify_qtype(stem: str, qno: int, total_q: int) -> str:
         return "解答"
 
 
-def _classify_score(qno: int, qtype: str) -> int:
-    """高考数学典型分值。"""
+def _strip_footer_lines(text: str) -> str:
+    """整行剥离 PDF 页眉/页脚（页码、学科网水印等）。
+
+    保守策略：只剥整行匹配 _FOOTER_LINE_PATTERNS 之一的行，避免误伤含数字的题面。
+    """
+    kept = []
+    for line in text.split("\n"):
+        if any(p.match(line) for p in _FOOTER_LINE_PATTERNS):
+            continue
+        kept.append(line)
+    return "\n".join(kept)
+
+
+def _classify_score(qno: int, qtype: str, year: int, total_q: int) -> int:
+    """高考数学典型分值（按 year + total_q 区分卷型）。
+
+    - 2024+ 新课标Ⅱ (total_q=19): Q15-18=12+, Q19=17
+    - 2023 新课标Ⅱ (total_q=22): Q15-22=12
+    - 2022 全国乙 (total_q=23): Q17-21=12, Q22-23=10（选做题）
+    """
     if qtype == "选择":
         return 5
     if qtype == "填空":
         return 5
-    if qno >= 17:
-        return 12 if qno < 22 else 17
+    # 解答题分值按卷型
+    if total_q == 19 and qno == 19:
+        return 17
+    if total_q == 23 and qno >= 22:
+        return 10  # 2022 全国乙 选做题
     return 12
 
 
@@ -208,6 +238,7 @@ def parse_pdf(pdf_path: Path, *, subject: str, province: str, year: int) -> dict
 
     with pdfplumber.open(pdf_path) as pdf:
         text = "\n".join((page.extract_text() or "") for page in pdf.pages)
+    text = _strip_footer_lines(text)
 
     raw = _split_questions(text)
     total_q = len(raw)
@@ -226,7 +257,7 @@ def parse_pdf(pdf_path: Path, *, subject: str, province: str, year: int) -> dict
         questions.append({
             "qno": qno,
             "qtype": qtype,
-            "score": _classify_score(qno, qtype),
+            "score": _classify_score(qno, qtype, year, total_q),
             "stem": stem,
             "answer": ans_m.group(1).strip() if ans_m else "",
             "solution": sol_m.group(1).strip() if sol_m else "",
