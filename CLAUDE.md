@@ -151,9 +151,15 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 **可复用流水线**（5 个参数化脚本 + 1 yaml 配置）：后续接 北京/黑龙江/其他学科零代码改动平移。
 
 **已知限制**：
-- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回
-- 真题词条 bare-name 跨年同名（如 `新课标Ⅱ-08` 在 2023 和 2024 均存在）→ analyze_links 看到 68 个孤岛/缺 alias，但反链文本仍正确
-- 7 题待人工核对（候选 tag 为空/无对应 term：复数/排列组合/概率传输/算法/独立事件等）
+- lexicon 召回率不足：tag_pool_filters `额外纳入` 列出但数学词条目录未维护 alias 的概念（如"单调性"/"立体几何"）会让 tag 命中漏召回 — 由 `lexicon_health_check.py` 跑 v4-pro 输出缺口清单，Opus 审后修补
+- 10 题孤岛/候选 tag 为空（2022 文/理 + 部分 2023 卷的 Q21/Q4 等）：需主会话从 lexicon 体检报告里抽 `extracted_concepts` 手工补 tag
+- pdfplumber 切分把题号上方的"游离数学定义行"切到 stem 之外（约 40% 题真实 OCR 不完整，根因相同）→ **决定长期换 PDF 提取库**，详见 [docs/superpowers/plans/2026-05-12-pdf-extractor-replacement.md]。在此完成前：Phase 2 P2 续跑暂缓，task #5 golden test 暂缓
+- v4-flash 在长解答题（Q21 系列）OCR 校验上偶发空 content；脚本已对失败题升级到 v4-pro retry，仍可能失败 → 解答题以选择题/填空题代抽
+
+**修复记录 (2026-05-12)**：
+- `_utils.bare_name()` 对真题目录不剥年份前缀（之前 `2022-` 被当序号剥掉导致跨年 bare 冲突 → 误报 68 缺 alias）。修复后 `analyze_links` 缺 alias 归零，真题入图数 68→87
+- `_llm_router` 删除 deepseek-reasoner（即将弃用），推理/自检并入 v4-pro
+- `lexicon_health_check.py` 调 v4-pro 必加 `system` message + `temperature=0.3`，否则空 content 概率高
 
 详见 `docs/superpowers/specs/2026-05-10-jilin-math-exam-analysis-design.md` 与 `docs/superpowers/plans/2026-05-10-jilin-math-exam-analysis-plan.md`。
 
@@ -161,12 +167,22 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 
 ## 工作模式提示
 
-- 大批量词条生成（≥ 30 词条）走 **批量任务标准流程**，详见 [[00-元/工作流#批量任务标准流程（≥ 30 词条时使用）]]
-- 工具箱：`00-元/scripts/` 提供 `renumber.py` / `stats.py` / `check_naming_conflicts.py` / `check_missing.py` —— **不要再为每个学科一次性写脚本**
-- 路由原则：古文 / 历史人物 / 敏感议题 / < 60 词条 → 主会话；现代说明文 + 数理化生概念 + ≥ 60 词条 → sonnet 子代理
+- 工具箱：`00-元/scripts/` 提供 `renumber.py` / `stats.py` / `check_naming_conflicts.py` / `check_missing.py` / `analyze_links.py` —— **不要再为每个学科一次性写脚本**
 - 用户可能开启 `caveman mode`：进入后回复必须简洁压缩，保留技术准确性
 - 词条与学习路径分离：路径在 `00-元/学习路径/<学段>/<学科>/`，词条在 `<学科>/`
 - 风格参考：`数学/16-加法.md`（标准 A 模式全龄完成）、`数学/18-长方体.md`（含教材链接的几何类）
+
+## 多模型工作流 v3 路由
+
+详见 `docs/superpowers/plans/2026-05-12-multi-model-workflow-v3.md`。核心规则：
+
+- **Opus 主会话** = 核心 / 编排 / 终审 / 古文 / 古诗 / 敏感议题亲自写
+- **Sonnet subagent** = 并行复检 / 抽 topics / 扩省份 checklist（不再做主体生成）
+- **DeepSeek v4-pro** = 批量生成（**含小批量**）+ 50% 自检 + lexicon 体检（取代已弃用的 deepseek-reasoner）
+- **DeepSeek v4-flash** = OCR 抽样 / 短文本清洗
+- 词条生成统一走工作流 A（无批量阈值）；古文/敏感议题在 topics.jsonl 打 `route: opus` 跳过 v4-pro
+- 复检比例 `10/40/50`（Opus / Sonnet / v4-pro）；过渡期 5/12–5/15 用 `30,0,70`
+- 交叉复检按场景触发：新学科 / 新配置 10%，稳定期 5% 或 0%
 
 ## 已启用插件（来自全局 `~/.claude/CLAUDE.md`）
 
