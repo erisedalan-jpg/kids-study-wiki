@@ -46,6 +46,37 @@ class TestEnrichQuestion(unittest.TestCase):
         self.assertEqual(result["tags"], ["集合的运算", "并集"])
         self.assertEqual(result["difficulty"], "易")
 
+    @patch("exam_enrich.call")
+    def test_enrich_retries_on_parse_error(self, mock_call):
+        """第一次解析失败 → retry t=0.5 max=600；第二次成功。"""
+        from exam_enrich import LLMError  # noqa
+        # 第一次返回空（触发 parse_error），第二次返回正常
+        mock_call.side_effect = [
+            MagicMock(text="", model="deepseek-v4-pro"),
+            MagicMock(text="考点摘要\n概念A, 概念B\n中", model="deepseek-v4-pro"),
+        ]
+        q = {"qno": 1, "solution_text": "..."}
+        result = enrich_question(q)
+        self.assertEqual(mock_call.call_count, 2)
+        # 第二次调用 temperature 应为 0.5
+        second_call_kwargs = mock_call.call_args_list[1].kwargs
+        self.assertEqual(second_call_kwargs.get("temperature"), 0.5)
+        self.assertEqual(second_call_kwargs.get("max_tokens"), 600)
+        # 最终成功
+        self.assertEqual(result["tags"], ["概念A", "概念B"])
+
+    @patch("exam_enrich.call")
+    def test_enrich_returns_parse_error_on_llm_error(self, mock_call):
+        """LLMError 直接返回 parse_error（不 retry）。"""
+        from exam_enrich import LLMError
+        mock_call.side_effect = LLMError("429 rate limit")
+        q = {"qno": 1, "solution_text": "..."}
+        result = enrich_question(q)
+        # LLMError 不应触发 retry
+        self.assertEqual(mock_call.call_count, 1)
+        self.assertIn("parse_error", result)
+        self.assertIn("429", result["parse_error"])
+
 
 if __name__ == "__main__":
     unittest.main()

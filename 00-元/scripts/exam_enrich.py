@@ -116,6 +116,7 @@ def main() -> int:
         q["summary"] = result["summary"]
         q["tags"] = result["tags"]
         q["difficulty"] = result["difficulty"]
+        q.pop("enrich_error", None)  # 之前失败留下的错误信息，成功后清理
         print(f"[ok] Q{q['qno']}: {len(result['tags'])} tags, {result['difficulty']}")
 
     qa_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2), encoding="utf-8")
