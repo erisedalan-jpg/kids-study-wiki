@@ -90,6 +90,36 @@ class TestRegionsAndRender(unittest.TestCase):
         self.assertAlmostEqual(regions[1]["q"]["y1"], 400, delta=5)
         self.assertIsNone(regions[1]["a"])
 
+    def test_compute_regions_answer_at_question_y0(self):
+        """边界用例: answer anchor 与题号同 y0（左闭区间应包含）。"""
+        from exam_screenshot import compute_regions
+        words = self._make_words([
+            (10, 100, 20, 110, "1."),
+            (200, 100, 250, 110, "【答案】"),  # 同 y0=100
+            (10, 400, 20, 410, "2."),
+        ])
+        q_anchors = find_question_anchors(words, 5)
+        a_anchors = find_answer_anchors(words)
+        regions = compute_regions(q_anchors, a_anchors, page_height=600)
+        # answer 应被识别为属于 Q1
+        self.assertIsNotNone(regions[1]["a"])
+        self.assertEqual(regions[1]["a"]["y0"], 100)
+
+    def test_compute_regions_warns_unmatched_answer(self):
+        """answer anchor y < 任何 q_y0（排序异常）应触发 stderr warning。"""
+        import io
+        from contextlib import redirect_stderr
+        from exam_screenshot import compute_regions
+        # answer 在 y=50，q1 在 y=100（answer 早于第一题）
+        a_anchors = [{"x0": 0, "y0": 50, "x1": 50, "y1": 60}]
+        q_anchors = {1: {"x0": 0, "y0": 100, "x1": 20, "y1": 110}}
+        buf = io.StringIO()
+        with redirect_stderr(buf):
+            regions = compute_regions(q_anchors, a_anchors, page_height=600)
+        self.assertIn("未匹配", buf.getvalue())
+        # 该 answer 不应被分到 Q1（异常情况，a_region=None）
+        self.assertIsNone(regions[1]["a"])
+
 
 if __name__ == "__main__":
     unittest.main()

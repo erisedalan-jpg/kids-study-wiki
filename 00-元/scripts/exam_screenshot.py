@@ -100,17 +100,26 @@ def compute_regions(
     a_anchors: list[dict],
     page_height: float,
 ) -> dict[int, dict[str, dict | None]]:
-    """根据题号+答案 anchor 算每题的截图区域。
+    """根据题号+答案 anchor 算每题的截图区域（**单页内**）。
 
     返回 {qno: {"q": region_or_None, "a": region_or_None}}
-    region = {"x0": 0, "y0": float, "x1": page_width, "y1": float}
+    region = {"y0": float, "y1": float}（x 范围由调用方在渲染时补，通常用整页宽）
 
     策略:
     - 题面 region: y0=题号 y0, y1=该题对应 answer anchor 的 y0 (若有)，否则下一题题号 y0
     - 解析 region: y0=answer y0, y1=下一题题号 y0（若无下一题用 page_height）
+    - answer anchor 区间用左闭右开 [q_y0, next_q_y0)，对应"恰好在 q_y0 行的 answer 也归当前题"语义
+
+    范围边界:
+    - 本函数仅处理**单页内**切分。跨页题（题号在本页但 answer/下一题号在下一页）
+      的处理由上层 `render_screenshots` 负责（按 page 拆 + 跨页合并截图）。
+    - 最后一题的 y1 = page_height，可能包含页脚/页码；上层渲染时自行 crop 或忽略。
+    - PyMuPDF y 排序异常（如浮动元素导致 a_y0 < q_y0）：未匹配的 answer 会被静默
+      丢弃，但函数末尾打印 stderr warning 提示上层。
     """
     sorted_qnos = sorted(q_anchors.keys())
     regions: dict[int, dict] = {}
+    matched_a_indices: set[int] = set()
     for i, qno in enumerate(sorted_qnos):
         q_y0 = q_anchors[qno]["y0"]
         next_q_y0 = (
@@ -118,15 +127,33 @@ def compute_regions(
             if i + 1 < len(sorted_qnos)
             else page_height
         )
-        # 找该题区间内第一个 answer anchor
-        a_in_range = next(
-            (a for a in a_anchors if q_y0 < a["y0"] < next_q_y0), None
+        # 找该题区间内第一个 answer anchor（左闭右开）
+        a_idx_in_range = next(
+            (
+                idx for idx, a in enumerate(a_anchors)
+                if q_y0 <= a["y0"] < next_q_y0
+            ),
+            None,
         )
-        if a_in_range:
-            q_region = {"y0": q_y0, "y1": a_in_range["y0"]}
-            a_region = {"y0": a_in_range["y0"], "y1": next_q_y0}
+        if a_idx_in_range is not None:
+            a = a_anchors[a_idx_in_range]
+            matched_a_indices.add(a_idx_in_range)
+            q_region = {"y0": q_y0, "y1": a["y0"]}
+            a_region = {"y0": a["y0"], "y1": next_q_y0}
         else:
             q_region = {"y0": q_y0, "y1": next_q_y0}
             a_region = None
         regions[qno] = {"q": q_region, "a": a_region}
+
+    # 警告：有未匹配的 answer anchor（y 排序异常）
+    unmatched = [
+        a for idx, a in enumerate(a_anchors) if idx not in matched_a_indices
+    ]
+    if unmatched and q_anchors:
+        import sys as _sys
+        _sys.stderr.write(
+            f"compute_regions: {len(unmatched)} answer anchor(s) "
+            f"未匹配到任何题号区间（y 排序异常？）\n"
+        )
+
     return regions
