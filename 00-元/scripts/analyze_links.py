@@ -33,13 +33,37 @@ from _utils import (  # noqa: E402
 
 LINK_RE = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|[^\]]*)?\]\]")
 ALIASES_LINE_RE = re.compile(r"^aliases\s*:\s*\[(.*?)\]\s*$", re.MULTILINE)
+ALIASES_BLOCK_RE = re.compile(
+    r"^aliases\s*:\s*\n((?:[ \t]+-[ \t]+.+\n)+)", re.MULTILINE
+)
 
 
 def parse_aliases(fm_text: str) -> list[str]:
-    """解析 inline list `aliases: [a, b, "x,y", ...]`，仅在值起始位置识别引号。
+    """解析 frontmatter aliases，支持 inline 和 block 两种 YAML 格式。
+
+    Inline: `aliases: [a, b, "x,y", ...]`
+    Block:
+        aliases:
+          - a
+          - b
 
     YAML 语义：`What's-the-matter` 中间的 `'` 是字面量，不是字符串边界。
     """
+    # 先试 block 格式
+    bm = ALIASES_BLOCK_RE.search(fm_text)
+    if bm:
+        out: list[str] = []
+        for line in bm.group(1).splitlines():
+            stripped = line.strip()
+            if stripped.startswith("- "):
+                v = stripped[2:].strip()
+                # 去掉外层引号
+                if len(v) >= 2 and v[0] == v[-1] and v[0] in ("'", '"'):
+                    v = v[1:-1]
+                if v:
+                    out.append(v)
+        return out
+    # fallback 到 inline 格式
     m = ALIASES_LINE_RE.search(fm_text)
     if not m:
         return []
@@ -160,8 +184,14 @@ def build_graph(
         m = fm_re.match(text)
         if m:
             als = parse_aliases(m.group(1))
+            # 真题词条 (真题/<省份>-<学科>/) 的 bare-name 是 `文-01` 这种切片名，
+            # 没人会写 `[[文-01]]` 类链接，跳过该检查
+            is_exam_atom = (
+                p.parts[-3:-1] == ("真题",) + (p.parts[-2],) if len(p.parts) >= 3
+                else False
+            ) or "真题" in p.parts
             # 规则：aliases 必须包含 bare-name（不强制首位，以兼容消歧后缀词条）
-            if bare not in als:
+            if not is_exam_atom and bare not in als:
                 missing_alias.append(bare)
         for lm in LINK_RE.finditer(text):
             target = lm.group(1)

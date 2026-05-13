@@ -64,6 +64,23 @@ def _in_spans(pos: int, spans: list[tuple[int, int]]) -> bool:
     return False
 
 
+def _table_row_spans(text: str) -> list[tuple[int, int]]:
+    """识别 markdown 表格行区间。
+
+    Markdown table row 特征：trim 后以 `|` 开头且包含至少 2 个 `|`。
+    在 table row 内的 wikilink 必须转义 `|` 为 `\\|`，否则破坏列分隔。
+    """
+    spans: list[tuple[int, int]] = []
+    pos = 0
+    for line in text.split("\n"):
+        end = pos + len(line)
+        stripped = line.strip()
+        if stripped.startswith("|") and stripped.count("|") >= 2:
+            spans.append((pos, end))
+        pos = end + 1  # +1 for '\n'
+    return spans
+
+
 def collect_targets() -> tuple[dict[str, str], dict[str, str]]:
     """返回 (stem_set, lookup)。
 
@@ -108,6 +125,7 @@ def rewrite_text(
     unresolved: list[str] = []
     fixed = 0
     code_spans = _code_spans(text)
+    table_spans = _table_row_spans(text)
 
     def replace(m: re.Match) -> str:
         nonlocal fixed
@@ -125,10 +143,12 @@ def rewrite_text(
         # 已经是规范 stem：跳过
         if target in stem_set:
             return m.group(0)
+        # markdown 表格行内的 | 必须转义为 \\| 避免破坏列分隔
+        sep = "\\|" if _in_spans(m.start(), table_spans) else "|"
         # 命中 alias / bare-name → 改写
         if target in lookup:
             fixed += 1
-            return f"[[{lookup[target]}{section}|{target}]]"
+            return f"[[{lookup[target]}{section}{sep}{target}]]"
         # 旧前缀残留：[[22-古诗]] → 去前缀重试 → [[468-古诗|古诗]]
         if OLD_PREFIX_RE.match(target):
             stripped = OLD_PREFIX_RE.sub("", target)
@@ -137,7 +157,7 @@ def rewrite_text(
             )
             if target_stem:
                 fixed += 1
-                return f"[[{target_stem}{section}|{stripped}]]"
+                return f"[[{target_stem}{section}{sep}{stripped}]]"
         # 解析不到 → 记为 unresolved，保持原样
         unresolved.append(target)
         return m.group(0)

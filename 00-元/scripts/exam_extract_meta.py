@@ -85,11 +85,23 @@ def split_by_question(md_text: str) -> dict[int, str]:
 
 
 def extract_answer(chunk: str, max_len: int = 50) -> str:
-    """从题 chunk 抽答案，截断到 max_len 字符。"""
+    """从题 chunk 抽答案，截断到 max_len 字符。
+
+    清洗 markdown 表格残片：当 markitdown 把答案塞进 `| ##0.3 | | | ... |`
+    形式的表格时，去掉前导 `|`、`##`、以及尾部 `|     |     |`。
+    """
     m = ANSWER_TAG_RE.search(chunk)
     if not m:
         return ""
-    return m.group(1).strip()[:max_len]
+    raw = m.group(1).strip()
+    # 1) 去掉所有 markdown 表格分隔符 `|`
+    if "|" in raw:
+        cells = [c.strip() for c in raw.split("|") if c.strip()]
+        # 取第一个非空 cell 作为答案候选
+        raw = cells[0] if cells else ""
+    # 2) 去掉 markitdown 偶发前缀 `##` (来自 heading marker 误转)
+    raw = re.sub(r"^#+\s*", "", raw).strip()
+    return raw[:max_len]
 
 
 def extract_solution_text(chunk: str) -> str:
@@ -98,6 +110,64 @@ def extract_solution_text(chunk: str) -> str:
     if not m:
         return ""
     return m.group(1).strip()
+
+
+def fallback_from_pdf_region(
+    pdf_path: Path, missing_qnos: list[int], expected_max_qno: int = 25
+) -> dict[int, str]:
+    """markitdown 漏题降级：用 PyMuPDF 切片该题区域抽 raw text。
+
+    可能含 CJK glyph 编码乱码（PDF 自定义字体导致），但至少给 v4-pro 一些
+    上下文。返回 {qno: raw_text}（按 missing_qnos 子集）。
+    """
+    import fitz  # type: ignore
+    from exam_screenshot import find_question_anchors  # noqa: E402
+
+    if not missing_qnos:
+        return {}
+    out: dict[int, str] = {}
+    try:
+        doc = fitz.open(str(pdf_path))
+    except Exception as e:
+        sys.stderr.write(f"⚠️  fallback fitz.open 失败: {e}\n")
+        return {}
+    try:
+        # 跨页 running counter 找全部题号 anchor
+        all_anchors: dict[int, tuple[int, dict]] = {}
+        per_page_height: dict[int, float] = {}
+        running = 1
+        for pno, page in enumerate(doc):
+            words = page.get_text("words")
+            q_anchors = find_question_anchors(
+                words, expected_max_qno, start_qno=running
+            )
+            per_page_height[pno] = page.rect.height
+            for qno, info in q_anchors.items():
+                all_anchors.setdefault(qno, (pno, info))
+            if q_anchors:
+                running = max(q_anchors.keys()) + 1
+
+        sorted_qnos = sorted(all_anchors.keys())
+        for i, qno in enumerate(sorted_qnos):
+            if qno not in missing_qnos:
+                continue
+            pno, info = all_anchors[qno]
+            page = doc[pno]
+            y0 = info["y0"]
+            # 下一题 y0 同页：到下一题；不同页/无下一题：到本页底部
+            y1 = per_page_height[pno]
+            if i + 1 < len(sorted_qnos):
+                next_qno = sorted_qnos[i + 1]
+                next_pno, next_info = all_anchors[next_qno]
+                if next_pno == pno:
+                    y1 = next_info["y0"]
+            clip = fitz.Rect(0, y0, page.rect.width, y1)
+            raw = page.get_text("text", clip=clip).strip()
+            if raw:
+                out[qno] = raw
+    finally:
+        doc.close()
+    return out
 
 
 def extract_meta(pdf_path: Path) -> dict[int, dict[str, str]]:
@@ -179,6 +249,27 @@ def main() -> int:
         m = meta.get(q["qno"], {})
         q["answer"] = m.get("answer", "")
         q["solution_text"] = m.get("solution_text", "")
+
+    # 降级：markitdown 漏题用 fitz 切片该题区域作 solution_text 兜底
+    missing_qnos = [
+        q["qno"] for q in qa["questions"]
+        if not q.get("solution_text") or len(q.get("solution_text", "")) < 30
+    ]
+    if missing_qnos:
+        print(
+            f"⚠️  markitdown 漏 {len(missing_qnos)} 题，尝试 fitz fallback: "
+            f"{missing_qnos[:10]}{'...' if len(missing_qnos) > 10 else ''}",
+            file=sys.stderr,
+        )
+        fallback = fallback_from_pdf_region(pdf_path, missing_qnos)
+        for q in qa["questions"]:
+            if q["qno"] in fallback:
+                q["solution_text"] = fallback[q["qno"]]
+        recovered = sum(1 for qno in missing_qnos if qno in fallback)
+        print(
+            f"   fitz fallback 找回 {recovered}/{len(missing_qnos)} 题 raw text",
+            file=sys.stderr,
+        )
 
     violations = assert_meta_quality(qa)
     if violations:

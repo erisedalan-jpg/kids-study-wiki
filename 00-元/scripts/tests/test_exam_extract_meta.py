@@ -55,6 +55,16 @@ class TestExtractAnswer(unittest.TestCase):
         result = extract_answer(chunk)
         self.assertLessEqual(len(result), 50)
 
+    def test_strips_markdown_table_remnants(self):
+        """markitdown 把答案塞进表格 cell 时去掉 | 和 ##。"""
+        chunk = "题面\n| 【答案】 | ##0.3 |     |     |     |     |"
+        self.assertEqual(extract_answer(chunk), "0.3")
+
+    def test_strips_heading_prefix(self):
+        """## 前缀是 markitdown 把数字误判为 heading 残留，需去除。"""
+        chunk = "题面\n【答案】##5\n"
+        self.assertEqual(extract_answer(chunk), "5")
+
 
 class TestExtractSolutionText(unittest.TestCase):
     def test_captures_analysis_and_detail(self):
