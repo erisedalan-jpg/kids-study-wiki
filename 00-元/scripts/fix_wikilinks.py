@@ -40,6 +40,28 @@ from analyze_links import parse_aliases  # noqa: E402
 FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 # `[[X]]` 不含 `|`（已经规范化的 `[[X|Y]]` 跳过）
 LINK_RE = re.compile(r"\[\[([^\]\[|#]+)(#[^\]\[|]*)?\]\]")
+# 旧前缀残留 `[[22-古诗]]` / `[[430-词牌-高中]]` — 2~4 位数字 + `-`
+OLD_PREFIX_RE = re.compile(r"^\d{1,4}-")
+# 跳过 markdown 代码区：fenced (```...```) 和 inline (`...` / ``...``)
+FENCED_RE = re.compile(r"```.*?```", re.DOTALL)
+INLINE_CODE_RE = re.compile(r"(`+)(?:(?!\1).)+?\1")
+
+
+def _code_spans(text: str) -> list[tuple[int, int]]:
+    """返回所有 markdown code 区域的 (start, end) 区间。"""
+    spans = [(m.start(), m.end()) for m in FENCED_RE.finditer(text)]
+    spans += [(m.start(), m.end()) for m in INLINE_CODE_RE.finditer(text)]
+    return sorted(spans)
+
+
+def _in_spans(pos: int, spans: list[tuple[int, int]]) -> bool:
+    """二分查找 pos 是否落在 spans 任一区间内。"""
+    for s, e in spans:
+        if s <= pos < e:
+            return True
+        if pos < s:
+            return False
+    return False
 
 
 def collect_targets() -> tuple[dict[str, str], dict[str, str]]:
@@ -85,9 +107,13 @@ def rewrite_text(
     """对单文件正文做改写。返回 (new_text, fixed_count, unresolved_targets)."""
     unresolved: list[str] = []
     fixed = 0
+    code_spans = _code_spans(text)
 
     def replace(m: re.Match) -> str:
         nonlocal fixed
+        # markdown 代码区内的 [[X]] 是示例文本，跳过
+        if _in_spans(m.start(), code_spans):
+            return m.group(0)
         target = m.group(1).strip()
         section = m.group(2) or ""  # 形如 '#xxx' 或 ''
         # 路径型链接（教材 / 学习路径 子目录）：跳过
@@ -103,6 +129,15 @@ def rewrite_text(
         if target in lookup:
             fixed += 1
             return f"[[{lookup[target]}{section}|{target}]]"
+        # 旧前缀残留：[[22-古诗]] → 去前缀重试 → [[468-古诗|古诗]]
+        if OLD_PREFIX_RE.match(target):
+            stripped = OLD_PREFIX_RE.sub("", target)
+            target_stem = (
+                stripped if stripped in stem_set else lookup.get(stripped)
+            )
+            if target_stem:
+                fixed += 1
+                return f"[[{target_stem}{section}|{stripped}]]"
         # 解析不到 → 记为 unresolved，保持原样
         unresolved.append(target)
         return m.group(0)
