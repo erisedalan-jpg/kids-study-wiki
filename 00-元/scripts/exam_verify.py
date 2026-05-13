@@ -37,12 +37,15 @@ v4-pro 抽出的元数据：
 第二行: 一句话说明理由（≤ 40 字；部分偏差时说明建议改哪些 tag）
 """
 
-VALID_VERDICTS = {"吻合", "部分偏差", "严重偏差"}
+VALID_VERDICTS = ("严重偏差", "部分偏差", "吻合")  # priority order: most severe first
 
 
 def render_verify_prompt(q: dict) -> str:
     """生成单题 verify prompt。image 路径用绝对路径方便 Opus/sonnet 找到。"""
-    image_path = REPO_ROOT / q["题面图"]
+    image_rel = q.get("题面图")
+    if not image_rel:
+        raise ValueError(f"Q{q.get('qno', '?')}: 缺少题面图字段")
+    image_path = REPO_ROOT / image_rel
     tags_str = ", ".join(q.get("tags", []))
     return PROMPT_TEMPLATE.format(
         image_abs_path=str(image_path).replace("\\", "/"),
@@ -72,17 +75,26 @@ def parse_verdict_response(text: str) -> dict[str, str]:
 
 def run_prepare(qa_path: Path) -> int:
     """写 verify prompt 队列。"""
-    qa = json.loads(qa_path.read_text(encoding="utf-8"))
+    if not qa_path.exists():
+        sys.exit(f"ERROR: questions.json 不存在: {qa_path}")
+    try:
+        qa = json.loads(qa_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
     queue_dir = qa_path.parent / "verdicts"
     queue_dir.mkdir(parents=True, exist_ok=True)
     pending_log = queue_dir / "_pending.jsonl"
 
     queued = 0
-    with pending_log.open("a", encoding="utf-8") as f:
+    with pending_log.open("w", encoding="utf-8") as f:
         for q in qa["questions"]:
-            if q.get("verdict"):
-                continue  # 已 ingest 过
-            prompt = render_verify_prompt(q)
+            if q.get("verdict") in ("吻合", "部分偏差", "严重偏差"):
+                continue  # 已 ingest 过最终 verdict（失败/未识别仍重排队）
+            try:
+                prompt = render_verify_prompt(q)
+            except ValueError as e:
+                print(f"[skip] {e}")
+                continue
             prompt_file = queue_dir / f"q{q['qno']:02d}.prompt.md"
             prompt_file.write_text(prompt, encoding="utf-8")
             record = {
@@ -103,7 +115,12 @@ def run_prepare(qa_path: Path) -> int:
 
 def run_ingest(qa_path: Path) -> int:
     """读 verdict.txt 回写 questions.json。"""
-    qa = json.loads(qa_path.read_text(encoding="utf-8"))
+    if not qa_path.exists():
+        sys.exit(f"ERROR: questions.json 不存在: {qa_path}")
+    try:
+        qa = json.loads(qa_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
     queue_dir = qa_path.parent / "verdicts"
     if not queue_dir.exists():
         sys.exit(f"ERROR: verdicts 目录不存在: {queue_dir}")
@@ -112,7 +129,7 @@ def run_ingest(qa_path: Path) -> int:
     missing = 0
     severe = 0
     for q in qa["questions"]:
-        if q.get("verdict"):
+        if q.get("verdict") in ("吻合", "部分偏差", "严重偏差"):
             continue
         verdict_file = queue_dir / f"q{q['qno']:02d}.verdict.txt"
         if not verdict_file.exists():
