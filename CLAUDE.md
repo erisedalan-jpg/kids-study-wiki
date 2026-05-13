@@ -38,7 +38,10 @@ docs/superpowers/         设计稿与实施计划
 - 学科目录词条按"首次出现学期"加 2 位序号前缀，如 `16-加法.md`、`73-圆周率.md`
 - frontmatter `aliases` 数组**首位必含 bare-name**（如 `aliases: [加法, addition, plus]`），保持 `[[加法]]` 链接通过 alias 解析有效
 
-**工作流**（详见 `00-元/工作流.md`）：7 条触发短语（新增/升级骨架/批量/共读/找漏链/PPT 轻量/PPT 精装）+ 6 条红线（核心：教材引用必引本地 ChinaTextbook PDF；学科目录词条必加序号前缀 + bare-name alias）
+**工作流**（详见 `00-元/工作流.md`）：7 条触发短语（新增/升级骨架/批量/共读/找漏链/PPT 轻量/PPT 精装）+ 7 条红线：
+- 教材引用必引本地 ChinaTextbook PDF
+- 学科目录词条必加序号前缀 + bare-name alias
+- **wikilinks 必须规范化**：Obsidian `[[X]]` 只看文件名，必须写 `[[017-减法|减法]]` 形式；4 个内置生成脚本（`gen_atom_skeleton.py` / `exam_render.py` / `exam_index.py` / `backfill_author_links.py`）已自动 hook；手动编辑后跑 `python 00-元/scripts/fix_wikilinks.py --apply`
 
 ## 已完成进度
 

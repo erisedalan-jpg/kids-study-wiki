@@ -133,10 +133,20 @@ def main() -> int:
 
     print(f"扫描候选 {len(targets)} 个作品词条")
     fixed = 0
+    touched: list[Path] = []
     for p, author in targets:
         if process(p, author, args.dry_run):
             fixed += 1
+            if not args.dry_run:
+                touched.append(p)
     print(f"完成：{fixed}/{len(targets)} ({'dry-run' if args.dry_run else 'written'})")
+    # 规范化新插入的 [[X]] 链接（Obsidian 跳转兼容）
+    if touched:
+        from fix_wikilinks import canonicalize_files
+        n_fixed, unresolved = canonicalize_files(touched)
+        if n_fixed:
+            uniq = len(set(unresolved))
+            print(f"📎 规范化 {n_fixed} 条 wikilinks（unresolved: {uniq} 唯一 tag）")
     return 0
 
 

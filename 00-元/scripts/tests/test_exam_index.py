@@ -87,16 +87,16 @@ class TestBackfillBacklinks(unittest.TestCase):
                     {"考点": ["集合的运算"], "_bare": "2022-文-02"},
                 ]
                 # 首次回填
-                n1 = backfill_backlinks(atoms, "数学")
-                self.assertEqual(n1, 1)
+                paths1 = backfill_backlinks(atoms, "数学")
+                self.assertEqual(len(paths1), 1)
                 t1 = target.read_text(encoding="utf-8")
                 self.assertIn(BACKLINK_START, t1)
                 self.assertIn(BACKLINK_END, t1)
                 self.assertIn("[[2022-文-01]]", t1)
                 self.assertIn("[[2022-文-02]]", t1)
-                # 同样 atoms 再跑一次，文件应字节不变（updated == 0）
-                n2 = backfill_backlinks(atoms, "数学")
-                self.assertEqual(n2, 0, "second run should be no-op")
+                # 同样 atoms 再跑一次，文件应字节不变（updated 列表为空）
+                paths2 = backfill_backlinks(atoms, "数学")
+                self.assertEqual(paths2, [], "second run should be no-op")
                 t2 = target.read_text(encoding="utf-8")
                 self.assertEqual(t1, t2)
             finally:
@@ -134,8 +134,8 @@ class TestBackfillBacklinks(unittest.TestCase):
             self._make_repo(tmp)
             try:
                 atoms = [{"考点": ["集合的运算"], "_bare": "2022-文-01"}]
-                n = backfill_backlinks(atoms, "数学")  # 学科目录不存在
-                self.assertEqual(n, 0)
+                paths = backfill_backlinks(atoms, "数学")  # 学科目录不存在
+                self.assertEqual(paths, [])
             finally:
                 self._restore()
 

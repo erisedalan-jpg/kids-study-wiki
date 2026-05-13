@@ -147,6 +147,12 @@ def main() -> int:
     qa = json.loads(Path(args.questions).read_text(encoding="utf-8"))
     files = render_paper(qa)
     print(f"OK: 渲染 {len(files)} 题词条到 真题/{qa['province']}-{qa['subject']}/")
+    # 规范化新生成词条中的 [[X]] 链接（Obsidian 跳转兼容，详见 fix_wikilinks.py）
+    from fix_wikilinks import canonicalize_files
+    fixed, unresolved = canonicalize_files(files)
+    if fixed:
+        uniq = len(set(unresolved))
+        print(f"📎 规范化 {fixed} 条 wikilinks（unresolved: {uniq} 唯一 tag）")
     return 0
 
 

@@ -159,8 +159,11 @@ def write_paper_map(pmap: dict, out_path: Path, label: str) -> None:
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def backfill_backlinks(atoms: list[dict], subject: str) -> int:
-    """把"该考点命中的真题题号"作为反链段追加到 学科/<考点>.md 末尾。"""
+def backfill_backlinks(atoms: list[dict], subject: str) -> list[Path]:
+    """把"该考点命中的真题题号"作为反链段追加到 学科/<考点>.md 末尾。
+
+    Returns 实际改动的词条 path 列表（供调用方做后续规范化等处理）。
+    """
     # tag → list[atom_bare_name]
     tag_to_atoms: dict[str, list[str]] = defaultdict(list)
     for a in atoms:
@@ -170,12 +173,12 @@ def backfill_backlinks(atoms: list[dict], subject: str) -> int:
     # 找 学科/<tag>.md（用 bare_name 匹配）
     subject_dir = REPO_ROOT / subject
     if not subject_dir.is_dir():
-        return 0
+        return []
     bare_to_path: dict[str, Path] = {}
     for p in iter_entries(subject_dir):
         bare_to_path[bare_name(p)] = p
 
-    updated = 0
+    updated: list[Path] = []
     section_re = re.compile(
         re.escape(BACKLINK_START) + r".*?" + re.escape(BACKLINK_END),
         re.DOTALL,
@@ -196,7 +199,7 @@ def backfill_backlinks(atoms: list[dict], subject: str) -> int:
                 new_text = text.rstrip() + "\n" + section
             if new_text != text:
                 path.write_text(new_text, encoding="utf-8")
-                updated += 1
+                updated.append(path)
         except (OSError, UnicodeDecodeError) as e:
             print(f"[skip] 反链回填失败 {path.name}: {e}")
             continue
@@ -231,13 +234,28 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     label = f"{args.province}{args.subject}"
 
-    write_freq_index(freq, out_dir / f"{label}-高频考点.md", label)
-    write_qtype_cross(cross, out_dir / f"{label}-题型×考点交叉表.md", label)
-    write_gap_list(gaps, out_dir / f"{label}-缺口词条清单.md", label)
-    write_paper_map(pmap, out_dir / f"{label}-试卷地图.md", label)
+    index_files = [
+        out_dir / f"{label}-高频考点.md",
+        out_dir / f"{label}-题型×考点交叉表.md",
+        out_dir / f"{label}-缺口词条清单.md",
+        out_dir / f"{label}-试卷地图.md",
+    ]
+    write_freq_index(freq, index_files[0], label)
+    write_qtype_cross(cross, index_files[1], label)
+    write_gap_list(gaps, index_files[2], label)
+    write_paper_map(pmap, index_files[3], label)
 
-    updated = backfill_backlinks(atoms, args.subject)
-    print(f"OK: 4 份索引 + 反链回填 {updated} 词条（{args.province}-{args.subject}）")
+    updated_paths = backfill_backlinks(atoms, args.subject)
+    print(
+        f"OK: 4 份索引 + 反链回填 {len(updated_paths)} 词条"
+        f"（{args.province}-{args.subject}）"
+    )
+    # 规范化新生成 / 改动文件中的 [[X]] 链接（Obsidian 跳转兼容）
+    from fix_wikilinks import canonicalize_files
+    fixed, unresolved = canonicalize_files(index_files + updated_paths)
+    if fixed:
+        uniq = len(set(unresolved))
+        print(f"📎 规范化 {fixed} 条 wikilinks（unresolved: {uniq} 唯一 tag）")
     return 0
 
 

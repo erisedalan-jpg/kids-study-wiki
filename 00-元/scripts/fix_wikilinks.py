@@ -111,6 +111,32 @@ def rewrite_text(
     return new_text, fixed, unresolved
 
 
+def canonicalize_files(paths: list[Path]) -> tuple[int, list[str]]:
+    """对指定文件做 `[[X]]` → `[[stem|X]]` 局部规范化。
+
+    适合在生成脚本（exam_render / gen_atom_skeleton / ...）写盘后调用，
+    只规范化"刚写出的那批文件"，不动其他文件。
+
+    Returns
+    -------
+    (rewritten_count, unresolved_targets) :
+        改写的链接数 + 未能解析的 link target 列表（保持原样的）。
+    """
+    stem_set, lookup = collect_targets()
+    total_fixed = 0
+    all_unresolved: list[str] = []
+    for p in paths:
+        if not p.is_file():
+            continue
+        text = p.read_text(encoding="utf-8", errors="replace")
+        new_text, fixed, unresolved = rewrite_text(text, stem_set, lookup)
+        all_unresolved.extend(unresolved)
+        if fixed:
+            p.write_text(new_text, encoding="utf-8")
+            total_fixed += fixed
+    return total_fixed, all_unresolved
+
+
 def iter_all_md() -> list[Path]:
     """所有需要扫描的 .md 路径（学科 + 真题 + 学习路径 + 索引 + 元目录）。"""
     out: list[Path] = []

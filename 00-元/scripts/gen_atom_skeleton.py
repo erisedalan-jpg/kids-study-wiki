@@ -137,6 +137,7 @@ def main() -> int:
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
 
     failed = 0
+    written_paths: list[Path] = []
     with manifest_path.open("a", encoding="utf-8") as mf:
         for item in items:
             tgt = target_path(item)
@@ -186,6 +187,15 @@ def main() -> int:
             entry["tokens"] = result.usage.total_tokens
             mf.write(json.dumps(entry, ensure_ascii=False) + "\n")
             print(f"[ok]   {item['title']} → {tgt.relative_to(REPO_ROOT)} ({result.usage.total_tokens} tok)")
+            written_paths.append(tgt)
+
+    # 规范化新生成词条中的 [[X]] 链接（Obsidian 跳转兼容）
+    if written_paths:
+        from fix_wikilinks import canonicalize_files
+        fixed, unresolved = canonicalize_files(written_paths)
+        if fixed:
+            uniq = len(set(unresolved))
+            print(f"📎 规范化 {fixed} 条 wikilinks（unresolved: {uniq} 唯一 tag）")
 
     if failed:
         print(f"\n失败 {failed} 条，详见 {manifest_path}", file=sys.stderr)
