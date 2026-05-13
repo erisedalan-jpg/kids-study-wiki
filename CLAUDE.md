@@ -121,7 +121,23 @@ _由 `00-元/scripts/stats.py` 生成，共 3235 词条 / 7 学科。_
 
 <!-- EXAM-PROGRESS-START -->
 
-_2026-05-12 已清空 v1 全部产出（数据 + 脚本 + 文档），保留 zip 备份于 `素材/backup/2026-05-12/exam-pre-migrate.zip`。新方案待重新规划。_
+v2 架构：截图 + 摘要 + 指针 + 三层复审（L1 自动断言 / L2 看图复验 / L3 Opus 仲裁）。设计稿 `docs/superpowers/specs/2026-05-12-jilin-math-exam-v2-design.md`，实施计划 `docs/superpowers/plans/2026-05-12-jilin-math-exam-v2-plan.md`。v1 zip 备份保留于 `素材/backup/2026-05-12/exam-pre-migrate.zip`。
+
+**脚本管线**（`00-元/scripts/exam_*.py`，62 单测全过）：
+
+1. `exam_screenshot.py` — PyMuPDF 找题号/答案锚点 + 渲染 PNG（含跨页 running counter）
+2. `exam_extract_meta.py` — markitdown 抽答案/解析（最长上升序列容错表格题号）
+3. `exam_enrich.py` — DeepSeek v4-pro 抽 摘要/考点/难度（含 retry + LLMError 路径）
+4. `exam_verify.py` — L2 复验两步法（prepare 写 prompt 队列 / ingest 收 verdict）
+5. `exam_render.py` — 渲染题级 .md (frontmatter + 截图 + 摘要 + tags 反链 + PDF 指针)
+6. `exam_index.py` — 4 索引 + 反链回填学科词条（按学科 per-tag 错误隔离）
+
+**Pilot 1**（2026-05-13）：吉林 2022 数学文卷（全国乙），23/23 题入库 → `真题/吉林-数学/`，4 索引 → `索引/真题/`，12 数学词条获反链。L2 复检：18 吻合 / 2 部分偏差（Q6/Q9 tag 微调建议）/ 3 严重偏差（Q14/15/19，markitdown 漏 Q15/Q19 元数据导致 tag 漂移，Opus L3 已修正）。9 题孤岛 = 高考考点术语在小学初中 lexicon 中未建词条（缺口清单已生成）。
+
+**Pilot 已知问题**（待后续扩省份/年份前修）：
+- markitdown 在多列 PDF 上偶发漏题（Q15/Q19 缺解析），需在 `enrich_question` 中加截图回退分支或改用 fitz region 切片
+- `analyze_links.py` 的 bare-name alias 检查对真题路径不适用（误报 23 题缺 alias）
+- Q14 答案字段抓到 markdown 表格残片（已手动 patch；需在 `extract_answer` 加管道符清洗）
 
 <!-- EXAM-PROGRESS-END -->
 
