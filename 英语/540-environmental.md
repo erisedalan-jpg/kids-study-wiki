@@ -1,6 +1,6 @@
 ---
 title: environmental / 环境的
-aliases: [environmental, 环境的, 环保的]
+aliases: [environmental, 环境的, 环保的, 环保]
 学科: 英语
 学段: [高中]
 主题: [选必三, 词汇, Unit 3]
@@ -9,7 +9,6 @@ aliases: [environmental, 环境的, 环保的]
 首次共读:
 最近共读:
 ---
-
 ## 🎓 environmental / 环境的；环保的
 
 **定义**：environmental（形容词）意为"与环境相关的；对环境产生影响的"，是 environment（环境）的形容词形式。在现代语境中常隐含环保意义。

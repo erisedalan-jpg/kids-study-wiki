@@ -1,6 +1,6 @@
 ---
 title: 乘公共汽车 / Take a Bus
-aliases: [take-a-bus, 乘公共汽车, take the bus, 坐公共汽车]
+aliases: [take-a-bus, 乘公共汽车, take the bus, 坐公共汽车, 汽车]
 学科: 英语
 学段: [初中]
 主题: [词汇, 七下, 交通方式]
@@ -9,7 +9,6 @@ aliases: [take-a-bus, 乘公共汽车, take the bus, 坐公共汽车]
 首次共读:
 最近共读:
 ---
-
 ## 乘公共汽车 / Take a Bus
 
 **音标**：/teɪk ə bʌs/

@@ -1,6 +1,6 @@
 ---
 title: monument 纪念碑/遗址（高中）
-aliases: [monument-高中, monument, 纪念碑, 纪念物, 历史遗址]
+aliases: [monument-高中, monument, 纪念碑, 纪念物, 历史遗址, 历史]
 学科: 英语
 学段: [高中]
 主题: [选必四, 词汇, Unit 2]
@@ -9,7 +9,6 @@ aliases: [monument-高中, monument, 纪念碑, 纪念物, 历史遗址]
 首次共读:
 最近共读:
 ---
-
 ## 🎓 monument 纪念碑；纪念物；历史遗址
 
 **词性**：n. 纪念碑；纪念物；历史遗址；丰碑；典范

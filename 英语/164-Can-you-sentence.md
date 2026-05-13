@@ -1,6 +1,6 @@
 ---
 title: 你能……吗？/ Can You...?
-aliases: [Can-you-sentence, Can you, Yes I can, 能力问答, 你能吗]
+aliases: [Can-you-sentence, Can you, Yes I can, 能力问答, 你能吗, Can-you]
 学科: 英语
 学段: [初中]
 主题: [句型, 七下, 交际功能]
@@ -9,7 +9,6 @@ aliases: [Can-you-sentence, Can you, Yes I can, 能力问答, 你能吗]
 首次共读:
 最近共读:
 ---
-
 ## 你能……吗？/ Can You...?
 
 **核心句型**：询问能力或请求帮助

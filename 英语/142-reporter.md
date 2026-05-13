@@ -106,4 +106,4 @@ aliases: [reporter, 记者, journalist, 新闻工作者]
 
 ## 🔗 相关词条
 
-[[057-职业|doctor]] · [[057-职业|teacher]] · [[151-waiter|waiter]] · [[146-student|student]] · [[job]] · [[586-interview-高中|interview]] · [[news]]
+[[057-职业|doctor]] · [[057-职业|teacher]] · [[151-waiter|waiter]] · [[146-student|student]] · [[057-职业|job]] · [[586-interview-高中|interview]] · [[194-新闻文体|news]]

@@ -1,6 +1,6 @@
 ---
 title: Sn与an关系
-aliases: [Sn与an关系, relation between partial sum and term, 前n项和与通项]
+aliases: [Sn与an关系, relation between partial sum and term, 前n项和与通项, 前n项和]
 学科: 数学
 学段: [高中]
 主题: [选择性必修二, 第八章数列拓展]
@@ -9,7 +9,6 @@ aliases: [Sn与an关系, relation between partial sum and term, 前n项和与通
 首次共读:
 最近共读:
 ---
-
 ## 🎓 $S_n$ 与 $a_n$ 的关系
 
 ### 基本公式

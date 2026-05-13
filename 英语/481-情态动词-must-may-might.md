@@ -1,6 +1,6 @@
 ---
 title: 情态动词 must / may / might
-aliases: [情态动词-must-may-might, must may might, 情态动词推测现在]
+aliases: [情态动词-must-may-might, must may might, 情态动词推测现在, 情态动词-must]
 学科: 英语
 学段: [高中]
 主题: [选必一, 语法, Unit 3]
@@ -9,7 +9,6 @@ aliases: [情态动词-must-may-might, must may might, 情态动词推测现在]
 首次共读:
 最近共读:
 ---
-
 ## 🎓 情态动词 must / may / might
 
 **核心用法**：表示对现在/一般情况的推测（现在推测）。

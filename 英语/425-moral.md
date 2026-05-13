@@ -1,6 +1,6 @@
 ---
 title: moral 道德
-aliases: [moral, 道德, 道德的]
+aliases: [moral, 道德, 道德的, morals]
 学科: 英语
 学段: [高中]
 主题: [必修三, 词汇, Unit 2]
@@ -9,7 +9,6 @@ aliases: [moral, 道德, 道德的]
 首次共读:
 最近共读:
 ---
-
 ## 🎓 moral 道德
 
 **词性**：adj. 道德的；有道德的 / n. 道德；寓意（morals 复数：道德观）

@@ -1,6 +1,6 @@
 ---
 title: cardinal numbers 1-100 / 基数词1-100
-aliases: [cardinal-numbers-1-100, 基数词, 数字1-100, cardinal numbers]
+aliases: [cardinal-numbers-1-100, 基数词, 数字1-100, cardinal numbers, 数词]
 学科: 英语
 学段: [初中, 高中]
 主题: [词汇, 七上, 数字]
@@ -9,7 +9,6 @@ aliases: [cardinal-numbers-1-100, 基数词, 数字1-100, cardinal numbers]
 首次共读:
 最近共读:
 ---
-
 ## cardinal numbers 1-100 / 基数词1-100
 
 **定义**：基数词是表示数量多少的数词，用于计数。
