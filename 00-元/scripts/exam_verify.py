@@ -81,7 +81,9 @@ def run_prepare(qa_path: Path) -> int:
         qa = json.loads(qa_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
-    queue_dir = qa_path.parent / "verdicts"
+    # 每张试卷独立子目录，避免多卷共用 verdicts/ 互相覆盖
+    paper_id = qa.get("paper_id") or qa_path.stem.replace("-questions", "")
+    queue_dir = qa_path.parent / "verdicts" / paper_id
     queue_dir.mkdir(parents=True, exist_ok=True)
     pending_log = queue_dir / "_pending.jsonl"
 
@@ -121,7 +123,8 @@ def run_ingest(qa_path: Path) -> int:
         qa = json.loads(qa_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
-    queue_dir = qa_path.parent / "verdicts"
+    paper_id = qa.get("paper_id") or qa_path.stem.replace("-questions", "")
+    queue_dir = qa_path.parent / "verdicts" / paper_id
     if not queue_dir.exists():
         sys.exit(f"ERROR: verdicts 目录不存在: {queue_dir}")
 

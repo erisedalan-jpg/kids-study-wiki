@@ -84,16 +84,17 @@ class TestRunPrepare(unittest.TestCase):
             td_path = Path(td)
             qa_path = td_path / "questions.json"
             qa = {
+                "paper_id": "test-paper",
                 "questions": [
                     _make_question(1, with_verdict=True),
                     _make_question(2, with_verdict=False),
-                ]
+                ],
             }
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
             run_prepare(qa_path)
-            queue_dir = td_path / "verdicts"
+            queue_dir = td_path / "verdicts" / "test-paper"
             self.assertFalse((queue_dir / "q01.prompt.md").exists())
             self.assertTrue((queue_dir / "q02.prompt.md").exists())
 
@@ -103,17 +104,18 @@ class TestRunPrepare(unittest.TestCase):
             td_path = Path(td)
             qa_path = td_path / "questions.json"
             qa = {
+                "paper_id": "test-paper",
                 "questions": [
                     _make_question(1, with_verdict=False),
                     _make_question(2, with_verdict=False),
-                ]
+                ],
             }
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
             run_prepare(qa_path)
             run_prepare(qa_path)
-            pending_log = td_path / "verdicts" / "_pending.jsonl"
+            pending_log = td_path / "verdicts" / "test-paper" / "_pending.jsonl"
             lines = [
                 ln for ln in pending_log.read_text(encoding="utf-8").splitlines()
                 if ln.strip()
@@ -128,15 +130,16 @@ class TestRunIngest(unittest.TestCase):
             td_path = Path(td)
             qa_path = td_path / "questions.json"
             qa = {
+                "paper_id": "test-paper",
                 "questions": [
                     _make_question(1, with_verdict=False),
                     _make_question(2, with_verdict=False),
-                ]
+                ],
             }
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
-            queue_dir = td_path / "verdicts"
+            queue_dir = td_path / "verdicts" / "test-paper"
             queue_dir.mkdir(parents=True, exist_ok=True)
             rc = run_ingest(qa_path)
             self.assertEqual(rc, 1)
@@ -149,11 +152,14 @@ class TestRunIngest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             td_path = Path(td)
             qa_path = td_path / "questions.json"
-            qa = {"questions": [_make_question(1, with_verdict=False)]}
+            qa = {
+                "paper_id": "test-paper",
+                "questions": [_make_question(1, with_verdict=False)],
+            }
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
-            queue_dir = td_path / "verdicts"
+            queue_dir = td_path / "verdicts" / "test-paper"
             queue_dir.mkdir(parents=True, exist_ok=True)
             (queue_dir / "q01.verdict.txt").write_text(
                 "严重偏差\n该题考的是导数不是集合", encoding="utf-8"
