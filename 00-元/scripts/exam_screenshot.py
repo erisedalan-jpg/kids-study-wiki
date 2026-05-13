@@ -37,8 +37,10 @@ from _exam_utils import (  # noqa: E402
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 
-# 题号正则：行首数字 + 点 + 空白（不允许点后接数字，排除 0.04 / 1.6158 等小数）
-QNO_TOKEN_RE = re.compile(r"^([1-9]\d?)[\.、．]$")
+# 题号正则：行首数字 + 点（不允许点后接数字，排除 0.04 / 1.6158 等小数）
+# 不要求 token 整体仅为题号 —— 早年 PDF (2008-2020) PyMuPDF 把题号+题面合并成
+# 单个 word（如 "1．（5分）已知集合M="），仍可从开头取 anchor。
+QNO_TOKEN_RE = re.compile(r"^([1-9]\d?)[\.、．](?!\d)")
 
 
 def find_question_anchors(
