@@ -42,31 +42,45 @@ _ANSWER_LOOKAHEAD = 1500
 def split_by_question(md_text: str) -> dict[int, str]:
     """按题号切分 markdown，返回 {qno: chunk}。
 
-    题号递增约束：从 1 开始，跳号忽略。
-    仅接受后续 1500 字符内含 `【答案】` 标记的 QNO，过滤掉说明节中的伪题号。
+    策略：
+    1. 用 QNO_RE 收集所有 QNO 候选（含 `^N.` 与 ` |N.` 两种形态）。
+    2. 仅保留后续 _ANSWER_LOOKAHEAD 字符内有 `【答案】` 的 QNO（过滤说明节伪题号）。
+    3. 在文档顺序内找**最长严格上升子序列**（连续 slice），跳号容忍。
+       这样可以越过顶部说明区的 [1,2,3] 残段，从真题区域 [1,2,3,...,N] 开始切。
     """
     matches = list(QNO_RE.finditer(md_text))
     ans_positions = [m.start() for m in ANSWER_TAG_RE.finditer(md_text)]
 
-    # 过滤：QNO 必须在 _ANSWER_LOOKAHEAD 字符内有 【答案】 跟随
     valid: list = []
     for m in matches:
         pos = m.end()
         if any(pos <= a < pos + _ANSWER_LOOKAHEAD for a in ans_positions):
             valid.append(m)
 
+    if not valid:
+        return {}
+
+    qnos = [int(m.group(1)) for m in valid]
+    n = len(qnos)
+    # 找最长 contiguous slice [i, j) 使 qnos[i..j-1] 严格上升
+    best_start, best_end = 0, 1
+    cur_start = 0
+    for i in range(1, n):
+        if qnos[i] > qnos[i - 1]:
+            if i + 1 - cur_start > best_end - best_start:
+                best_start, best_end = cur_start, i + 1
+        else:
+            cur_start = i
+    selected = valid[best_start:best_end]
+    selected_qnos = qnos[best_start:best_end]
+
     chunks: dict[int, str] = {}
-    accepted_qnos: list[int] = []
-    for i, m in enumerate(valid):
-        qno = int(m.group(1))
-        if accepted_qnos and qno != accepted_qnos[-1] + 1:
-            continue
-        if not accepted_qnos and qno != 1:
-            continue
+    for k, (qno, m) in enumerate(zip(selected_qnos, selected)):
         body_start = m.end()
-        body_end = valid[i + 1].start() if i + 1 < len(valid) else len(md_text)
+        body_end = (
+            selected[k + 1].start() if k + 1 < len(selected) else len(md_text)
+        )
         chunks[qno] = md_text[body_start:body_end].strip()
-        accepted_qnos.append(qno)
     return chunks
 
 
