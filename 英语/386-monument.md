@@ -68,10 +68,10 @@ aliases: [monument, 纪念碑, 遗迹]
 
 ## 🔗 相关词条
 
-- [[heritage]]
-- [[preserve]]
-- [[restore]]
-- [[tradition-高中]]
-- [[legend]]
-- [[关系副词-where-when-why]]
-- [[非限定性定语从句]]
+- [[379-heritage|heritage]]
+- [[388-preserve|preserve]]
+- [[389-restore|restore]]
+- [[392-tradition-高中|tradition-高中]]
+- [[383-legend|legend]]
+- [[398-关系副词-where-when-why|关系副词-where-when-why]]
+- [[358-定语从句-限定与非限定|非限定性定语从句]]

@@ -85,8 +85,8 @@ aliases: [possessive-s, 名词所有格, 's所有格, apostrophe s]
 
 ## 🔗 相关词条
 
-- [[possessive-pronouns]]
-- [[family-tree]]
-- [[whats-your-name]]
-- [[father]]
-- [[mother]]
+- [[103-possessive-pronouns|possessive-pronouns]]
+- [[079-family-tree|family-tree]]
+- [[117-whats-your-name|whats-your-name]]
+- [[080-father|father]]
+- [[087-mother|mother]]

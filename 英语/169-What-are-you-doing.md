@@ -92,7 +92,7 @@ A: That's boring. Do you want to come over?
 
 ## 🔗 相关词条
 
-- [[present-continuous-tense]]
-- [[simple-present-tense]]
-- [[frequency-adverbs]]
-- [[last-weekend]]
+- [[161-present-continuous-tense|present-continuous-tense]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[155-frequency-adverbs|frequency-adverbs]]
+- [[173-last-weekend|last-weekend]]

@@ -91,7 +91,7 @@ aliases: [cough, 咳嗽]
 
 ## 相关词条
 
-- [[sore-throat]] — 喉咙痛
-- [[fever]] — 发烧
-- [[matter]] — what's the matter
+- [[256-sore-throat|sore-throat]] — 喉咙痛
+- [[062-看病|fever]] — 发烧
+- [[249-matter|matter]] — what's the matter
 - [[since / for 区别]] — 时间表达

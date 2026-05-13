@@ -93,8 +93,8 @@ July, August, September, October, November, December
 
 ## 🔗 相关词条
 
-- [[ordinal-numbers]]
-- [[cardinal-numbers-1-100]]
-- [[age]]
-- [[be-verb-am-is-are]]
-- [[preposition-phrase]]
+- [[090-ordinal-numbers|ordinal-numbers]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]
+- [[067-age|age]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[105-preposition-phrase|preposition-phrase]]

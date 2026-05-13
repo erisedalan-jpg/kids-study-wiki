@@ -81,7 +81,7 @@ aliases: [funnier, funny的比较级, 更有趣的, 更滑稽的]
 
 ## 相关词条
 
-- [[more-outgoing]] — more + 形容词比较级
-- [[比较级（短词-er）]] — 语法详解
-- [[Who is taller，A or B？]] — 核心句型
-- [[both-of-us]] — 比较句常见搭配
+- [[189-more-outgoing|more-outgoing]] — more + 形容词比较级
+- [[217-比较级（短词-er）|比较级（短词-er）]] — 语法详解
+- [[230-Who is taller，A or B？|Who is taller，A or B？]] — 核心句型
+- [[179-both-of-us|both-of-us]] — 比较句常见搭配

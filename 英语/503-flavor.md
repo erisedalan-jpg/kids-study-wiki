@@ -54,9 +54,9 @@ aliases: [flavor, 味道, 风味, flavour, flavoring, flavorful]
 
 ## 🔗 相关词条
 
-- [[cuisine-高中]]
-- [[recipe-高中]]
-- [[nutrition-高中]]
-- [[as-比较]]
-- [[as-状语从句]]
-- [[the-thing-is-that]]
+- [[498-cuisine-高中|cuisine-高中]]
+- [[511-recipe-高中|recipe-高中]]
+- [[510-nutrition-高中|nutrition-高中]]
+- [[516-as-比较|as-比较]]
+- [[517-as-状语从句|as-状语从句]]
+- [[533-the-thing-is-that|the-thing-is-that]]

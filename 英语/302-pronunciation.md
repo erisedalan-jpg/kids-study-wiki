@@ -95,4 +95,4 @@ aliases: [pronunciation, 发音, 读音, 语音]
 
 ## 🔗 相关词条
 
-[[pronounce]] · [[aloud]] · [[textbook]] · [[native-speaker]] · [[自然拼读]] · [[字母音标]] · [[宾语从句-初中]]
+[[301-pronounce|pronounce]] · [[286-aloud|aloud]] · [[306-textbook|textbook]] · [[138-native-speaker|native-speaker]] · [[028-自然拼读|自然拼读]] · [[017-字母音标|字母音标]] · [[315-宾语从句-初中|宾语从句-初中]]

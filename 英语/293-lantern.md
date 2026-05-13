@@ -94,4 +94,4 @@ aliases: [lantern, 灯笼, 花灯, 灯]
 
 ## 🔗 相关词条
 
-[[moon-cake]] · [[mid-autumn-festival]] · [[心情情绪]] · [[国家与国籍]] · [[I-think-that]] · [[What-do-you-think-of]] · [[节日]]
+[[296-moon-cake|moon-cake]] · [[295-mid-autumn-festival|mid-autumn-festival]] · [[059-心情情绪|心情情绪]] · [[060-国家与国籍|国家与国籍]] · [[325-I-think-that|I-think-that]] · [[327-What-do-you-think-of|What-do-you-think-of]] · [[422-festival-高中|节日]]

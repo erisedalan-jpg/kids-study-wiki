@@ -74,4 +74,4 @@ aliases: [register, registration, 注册, 登记, 报名]
 
 ## 🔗 相关词条
 
-[[senior-high-school]] · [[recommend-高中]] · [[appreciate]] · [[名词性从句-入门]] · [[Do-you-mind-doing]] · [[What-do-you-think-of-高中]] · [[It-takes-sb-time-to-do]]
+[[350-senior-high-school|senior-high-school]] · [[347-recommend-高中|recommend-高中]] · [[334-appreciate|appreciate]] · [[356-名词性从句-入门|名词性从句-入门]] · [[366-Do-you-mind-doing|Do-you-mind-doing]] · [[369-What-do-you-think-of-高中|What-do-you-think-of-高中]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]]

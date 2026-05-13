@@ -79,4 +79,4 @@ aliases: [survive, survival, survivor, 生还, 幸存, 存活]
 
 ## 🔗 相关词条
 
-[[disaster]] · [[damage]] · [[rescue]] · [[过去进行时-高中]] · [[过去完成时]] · [[as-soon-as]] · [[cant-help-doing]]
+[[342-disaster|disaster]] · [[340-damage|damage]] · [[349-rescue|rescue]] · [[365-过去进行时-高中|过去进行时-高中]] · [[364-过去完成时|过去完成时]] · [[370-as-soon-as|as-soon-as]] · [[371-cant-help-doing|cant-help-doing]]

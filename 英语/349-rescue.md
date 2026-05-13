@@ -71,4 +71,4 @@ aliases: [rescue, 救援, 营救, 救助, 救灾]
 
 ## 🔗 相关词条
 
-[[disaster]] · [[survive]] · [[damage]] · [[过去进行时-高中]] · [[过去完成时]] · [[as-soon-as]] · [[not-only-but-also]]
+[[342-disaster|disaster]] · [[352-survive|survive]] · [[340-damage|damage]] · [[365-过去进行时-高中|过去进行时-高中]] · [[364-过去完成时|过去完成时]] · [[370-as-soon-as|as-soon-as]] · [[372-not-only-but-also|not-only-but-also]]

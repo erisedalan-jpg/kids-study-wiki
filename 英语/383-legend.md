@@ -68,10 +68,10 @@ aliases: [legend, 传说, 传奇, 图例]
 
 ## 🔗 相关词条
 
-- [[tradition-高中]]
-- [[heritage]]
-- [[kingdom-高中]]
-- [[过去完成时-高中深化]]
-- [[间接引语-高中]]
-- [[非限定性定语从句]]
-- [[It-is-said-that]]
+- [[392-tradition-高中|tradition-高中]]
+- [[379-heritage|heritage]]
+- [[382-kingdom-高中|kingdom-高中]]
+- [[403-过去完成时-高中深化|过去完成时-高中深化]]
+- [[404-间接引语-高中|间接引语-高中]]
+- [[358-定语从句-限定与非限定|非限定性定语从句]]
+- [[408-It-is-said-that|It-is-said-that]]

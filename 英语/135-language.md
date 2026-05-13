@@ -92,9 +92,9 @@ aliases: [language, 语言, languages]
 
 ## 🔗 相关词条
 
-- [[native-speaker]]
-- [[pen-pal]]
-- [[Canada]]
-- [[Singapore]]
-- [[Japan]]
-- [[Where-are-you-from]]
+- [[138-native-speaker|native-speaker]]
+- [[141-pen-pal|pen-pal]]
+- [[120-Canada|Canada]]
+- [[122-Singapore|Singapore]]
+- [[121-Japan|Japan]]
+- [[171-Where-are-you-from|Where-are-you-from]]

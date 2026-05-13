@@ -87,9 +87,9 @@ aliases: [ride-a-bike, 骑自行车, ride a bicycle, 骑单车]
 
 ## 🔗 相关词条
 
-- [[take-a-bus]]
-- [[walk-to-school]]
-- [[by-train]]
-- [[transportation]]
-- [[How-do-you-go-to-school]]
-- [[can-cant]]
+- [[147-take-a-bus|take-a-bus]]
+- [[152-walk-to-school|walk-to-school]]
+- [[127-by-train|by-train]]
+- [[056-出行方式|transportation]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]
+- [[154-can-cant|can-cant]]

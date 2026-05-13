@@ -55,10 +55,10 @@ aliases: [名词性从句-whether-if, whether从句, if从句, whether or if nou
 
 ## 🔗 相关词条
 
-- [[名词性从句-that]]
-- [[名词性从句-wh]]
-- [[It-doesnt-matter-whether]]
-- [[Suppose-that-假设]]
-- [[robot-高中]]
-- [[firstaid]]
-- [[emergency]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[521-名词性从句-wh|名词性从句-wh]]
+- [[526-It-doesnt-matter-whether|It-doesnt-matter-whether]]
+- [[531-Suppose-that-假设|Suppose-that-假设]]
+- [[512-robot-高中|robot-高中]]
+- [[502-firstaid|firstaid]]
+- [[500-emergency|emergency]]

@@ -84,9 +84,9 @@ aliases: [is-are-this-that, Is this, Are these, 这是什么, 那是什么]
 
 ## 🔗 相关词条
 
-- [[demonstrative-pronouns]]
-- [[be-verb-am-is-are]]
-- [[yes-no-questions]]
-- [[possessive-pronouns]]
-- [[pencil]]
-- [[eraser]]
+- [[100-demonstrative-pronouns|demonstrative-pronouns]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[103-possessive-pronouns|possessive-pronouns]]
+- [[029-学校用品|pencil]]
+- [[029-学校用品|eraser]]

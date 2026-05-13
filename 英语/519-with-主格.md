@@ -63,9 +63,9 @@ aliases: [with-主格, with复合结构, with compound structure, with absolute]
 
 ## 🔗 相关词条
 
-- [[独立主格-入门]]
-- [[独立主格-名词加分词]]
-- [[独立主格-名词加形容词]]
-- [[having-done-状语]]
-- [[bandage]]
-- [[journey-2-高中]]
+- [[523-独立主格-入门|独立主格-入门]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[525-独立主格-名词加形容词|独立主格-名词加形容词]]
+- [[518-having-done-状语|having-done-状语]]
+- [[495-bandage|bandage]]
+- [[506-journey-2-高中|journey-2-高中]]

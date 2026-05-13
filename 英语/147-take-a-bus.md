@@ -89,8 +89,8 @@ aliases: [take-a-bus, 乘公共汽车, take the bus, 坐公共汽车]
 
 ## 🔗 相关词条
 
-- [[ride-a-bike]]
-- [[walk-to-school]]
-- [[by-train]]
-- [[transportation]]
-- [[How-do-you-go-to-school]]
+- [[143-ride-a-bike|ride-a-bike]]
+- [[152-walk-to-school|walk-to-school]]
+- [[127-by-train|by-train]]
+- [[056-出行方式|transportation]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

@@ -61,9 +61,9 @@ What matters is (that) + 表语从句
 
 ## 🔗 相关词条
 
-- [[名词性从句-wh]]
-- [[名词性从句-that]]
-- [[the-thing-is-that]]
-- [[It-strikes-me-that]]
-- [[It-makes-no-sense-to-do]]
-- [[cultural-exchange]]
+- [[521-名词性从句-wh|名词性从句-wh]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[533-the-thing-is-that|the-thing-is-that]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[499-cultural-exchange|cultural-exchange]]

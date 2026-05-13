@@ -108,4 +108,4 @@ Unit 6 常用的发明类问句：
 
 ## 🔗 相关词条
 
-[[Where-was-it-invented]] · [[被动语态-by短语]] · [[invent]] · [[invention]] · [[accidental]] · [[被动语态入门]] · [[一般过去被动语态]]
+[[332-Where-was-it-invented|Where-was-it-invented]] · [[319-被动语态-by短语|被动语态-by短语]] · [[291-invent|invent]] · [[292-invention|invention]] · [[284-accidental|accidental]] · [[274-被动语态入门|被动语态入门]] · [[267-一般过去被动语态|一般过去被动语态]]

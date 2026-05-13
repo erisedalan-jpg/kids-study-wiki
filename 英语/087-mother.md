@@ -79,9 +79,9 @@ aliases: [mother, 母亲, mom, mum]
 
 ## 🔗 相关词条
 
-- [[father]]
-- [[brother]]
-- [[sister]]
-- [[grandparents]]
-- [[family-tree]]
-- [[possessive-s]]
+- [[080-father|father]]
+- [[071-brother|brother]]
+- [[096-sister|sister]]
+- [[083-grandparents|grandparents]]
+- [[079-family-tree|family-tree]]
+- [[104-possessive-s|possessive-s]]

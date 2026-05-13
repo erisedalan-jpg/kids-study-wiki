@@ -103,4 +103,4 @@ aliases: [afraid, 害怕的, 恐惧的, 担心的]
 
 ## 🔗 相关词条
 
-[[used-to]] · [[used-to-do]] · [[daily]] · [[心情情绪]] · [[情态动词can]] · [[宾语从句-初中]] · [[make-sb-do]]
+[[308-used-to|used-to]] · [[311-used-to-do|used-to-do]] · [[289-daily|daily]] · [[059-心情情绪|心情情绪]] · [[039-情态动词can|情态动词can]] · [[315-宾语从句-初中|宾语从句-初中]] · [[309-make-sb-do|make-sb-do]]

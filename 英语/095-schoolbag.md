@@ -78,10 +78,10 @@ aliases: [schoolbag, 书包, backpack, school bag]
 
 ## 🔗 相关词条
 
-- [[pencil]]
-- [[eraser]]
-- [[ruler]]
-- [[notebook]]
-- [[dictionary]]
-- [[i-have-do-you-have]]
-- [[preposition-phrase]]
+- [[029-学校用品|pencil]]
+- [[029-学校用品|eraser]]
+- [[029-学校用品|ruler]]
+- [[089-notebook|notebook]]
+- [[075-dictionary|dictionary]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]
+- [[105-preposition-phrase|preposition-phrase]]

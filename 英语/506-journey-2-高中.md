@@ -61,9 +61,9 @@ aliases: [journey-2-高中, journey, 旅程, journeys, travelling]
 
 ## 🔗 相关词条
 
-- [[landscape-2-高中]]
-- [[nature-高中]]
-- [[landmark]]
-- [[独立主格-名词加分词]]
-- [[having-done-状语]]
-- [[On-no-account-倒装]]
+- [[508-landscape-2-高中|landscape-2-高中]]
+- [[509-nature-高中|nature-高中]]
+- [[507-landmark|landmark]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[518-having-done-状语|having-done-状语]]
+- [[530-On-no-account-倒装|On-no-account-倒装]]

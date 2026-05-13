@@ -99,4 +99,4 @@ I think (that) + 完整句子（从句，陈述语序）
 
 ## 🔗 相关词条
 
-[[What-do-you-think-of]] · [[宾语从句-初中]] · [[moon-cake]] · [[mid-autumn-festival]] · [[invention]] · [[定语从句-初中入门]] · [[I-remember-doing]]
+[[327-What-do-you-think-of|What-do-you-think-of]] · [[315-宾语从句-初中|宾语从句-初中]] · [[296-moon-cake|moon-cake]] · [[295-mid-autumn-festival|mid-autumn-festival]] · [[292-invention|invention]] · [[314-定语从句-初中入门|定语从句-初中入门]] · [[324-I-remember-doing|I-remember-doing]]

@@ -62,9 +62,9 @@ aliases: [landscape-2-高中, landscape, 风景, 景观, landscapes]
 
 ## 🔗 相关词条
 
-- [[journey-2-高中]]
-- [[nature-高中]]
-- [[landmark]]
-- [[独立主格-名词加分词]]
-- [[with-主格]]
-- [[having-done-状语]]
+- [[506-journey-2-高中|journey-2-高中]]
+- [[509-nature-高中|nature-高中]]
+- [[507-landmark|landmark]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[519-with-主格|with-主格]]
+- [[518-having-done-状语|having-done-状语]]

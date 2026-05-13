@@ -82,9 +82,9 @@ aliases: [family-tree, 家谱, 族谱, family chart]
 
 ## 🔗 相关词条
 
-- [[father]]
-- [[mother]]
-- [[brother]]
-- [[sister]]
-- [[grandparents]]
-- [[possessive-s]]
+- [[080-father|father]]
+- [[087-mother|mother]]
+- [[071-brother|brother]]
+- [[096-sister|sister]]
+- [[083-grandparents|grandparents]]
+- [[104-possessive-s|possessive-s]]

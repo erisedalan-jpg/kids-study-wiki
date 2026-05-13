@@ -85,7 +85,7 @@ aliases: [Which is the most...？, Which is the most, 最高级问句, 哪个最
 
 ## 相关词条
 
-- [[最高级（短词-est）]] — -est 最高级
-- [[最高级（长词most）]] — most 最高级
-- [[Who is taller，A or B？]] — 比较级问句
-- [[比较级（短词-er）]] — 比较级语法
+- [[215-最高级（短词-est）|最高级（短词-est）]] — -est 最高级
+- [[216-最高级（长词most）|最高级（长词most）]] — most 最高级
+- [[230-Who is taller，A or B？|Who is taller，A or B？]] — 比较级问句
+- [[217-比较级（短词-er）|比较级（短词-er）]] — 比较级语法

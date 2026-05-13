@@ -57,8 +57,8 @@ aliases: [recycle, 回收利用, 循环利用, 再利用]
 
 ## 🔗 相关词条
 
-- [[environmental]]
-- [[pollution-高中]]
-- [[sustainable]]
-- [[conservation]]
-- [[prevent]]
+- [[540-environmental|environmental]]
+- [[548-pollution-高中|pollution-高中]]
+- [[552-sustainable|sustainable]]
+- [[538-conservation|conservation]]
+- [[549-prevent|prevent]]

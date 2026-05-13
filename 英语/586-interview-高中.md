@@ -64,9 +64,9 @@ aliases: [interview-高中, interview, 面试, 采访, 访谈]
 
 ## 🔗 相关词条
 
-- [[career]]
-- [[resume]]
-- [[cv]]
-- [[achievement-高中]]
-- [[Last-but-not-least]]
-- [[高考语法综合复习]]
+- [[578-career|career]]
+- [[590-resume|resume]]
+- [[581-cv|cv]]
+- [[455-achievement-高中|achievement-高中]]
+- [[612-Last-but-not-least|Last-but-not-least]]
+- [[605-高考语法综合复习|高考语法综合复习]]

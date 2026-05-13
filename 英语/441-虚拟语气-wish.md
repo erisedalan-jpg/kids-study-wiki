@@ -62,9 +62,9 @@ aliases: [虚拟语气-wish, wish虚拟, wish subjunctive]
 
 ## 🔗 相关词条
 
-- [[虚拟语气-入门]]
-- [[虚拟语气-与现在事实相反]]
-- [[虚拟语气-与过去事实相反]]
-- [[if-从句虚拟]]
-- [[as-if-as-though]]
-- [[It-is-high-time-that]]
+- [[445-虚拟语气-入门|虚拟语气-入门]]
+- [[443-虚拟语气-与现在事实相反|虚拟语气-与现在事实相反]]
+- [[444-虚拟语气-与过去事实相反|虚拟语气-与过去事实相反]]
+- [[434-if-从句虚拟|if-从句虚拟]]
+- [[449-as-if-as-though|as-if-as-though]]
+- [[446-It-is-high-time-that|It-is-high-time-that]]

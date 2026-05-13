@@ -84,9 +84,9 @@ aliases: [Australia, 澳大利亚, Australian, 澳洲]
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Japan]]
-- [[Singapore]]
-- [[Sydney]]
-- [[koala]]
-- [[pen-pal]]
+- [[120-Canada|Canada]]
+- [[121-Japan|Japan]]
+- [[122-Singapore|Singapore]]
+- [[123-Sydney|Sydney]]
+- [[134-koala|koala]]
+- [[141-pen-pal|pen-pal]]

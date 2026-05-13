@@ -65,10 +65,10 @@ aliases: [landscape-高中, landscape, 风景, 地貌, 景观]
 
 ## 🔗 相关词条
 
-- [[wildlife-高中]]
-- [[panda]]
-- [[expedition]]
-- [[过去分词作定语]]
-- [[过去分词作状语]]
-- [[What-impressed-me-most]]
-- [[Now-that-既然]]
+- [[473-wildlife-高中|wildlife-高中]]
+- [[140-panda|panda]]
+- [[460-expedition|expedition]]
+- [[484-过去分词作定语|过去分词作定语]]
+- [[485-过去分词作状语|过去分词作状语]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[489-Now-that-既然|Now-that-既然]]

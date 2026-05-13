@@ -86,8 +86,8 @@ aliases: [rule, 规则, rules, 规定]
 
 ## 🔗 相关词条
 
-- [[classroom-rule]]
-- [[dormitory-rule]]
-- [[must-mustnt]]
-- [[have-to]]
-- [[imperative-sentence]]
+- [[128-classroom-rule|classroom-rule]]
+- [[130-dormitory-rule|dormitory-rule]]
+- [[158-must-mustnt|must-mustnt]]
+- [[156-have-to|have-to]]
+- [[157-imperative-sentence|imperative-sentence]]

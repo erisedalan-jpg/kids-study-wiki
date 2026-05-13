@@ -71,10 +71,10 @@ aliases: [It-is-reported-that, it is reported that, 据报道句型]
 
 ## 🔗 相关词条
 
-- [[It-is-said-that]]
-- [[It-is-believed-that]]
-- [[make-it-clear-that]]
-- [[find-it-adj-to-do]]
-- [[internet]]
-- [[digital-高中]]
-- [[间接引语-高中]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[381-internet|internet]]
+- [[375-digital-高中|digital-高中]]
+- [[404-间接引语-高中|间接引语-高中]]

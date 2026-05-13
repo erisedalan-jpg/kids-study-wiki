@@ -101,4 +101,4 @@ aliases: [定语从句-who-whose, who从句, whose从句, 人的定语从句]
 
 ## 🔗 相关词条
 
-[[定语从句-初中入门]] · [[定语从句-that-which]] · [[宾语从句-初中]] · [[What-kind-of-music-do-you-like]] · [[被动语态入门]] · [[prefer]] · [[物主代词]]
+[[314-定语从句-初中入门|定语从句-初中入门]] · [[312-定语从句-that-which|定语从句-that-which]] · [[315-宾语从句-初中|宾语从句-初中]] · [[329-What-kind-of-music-do-you-like|What-kind-of-music-do-you-like]] · [[274-被动语态入门|被动语态入门]] · [[299-prefer|prefer]] · [[050-物主代词|物主代词]]

@@ -97,4 +97,4 @@ What do you think of/about + 名词（短语）?
 
 ## 🔗 相关词条
 
-[[I-think-that]] · [[宾语从句-初中]] · [[moon-cake]] · [[mid-autumn-festival]] · [[What-kind-of-music-do-you-like]] · [[prefer]] · [[stressed]]
+[[325-I-think-that|I-think-that]] · [[315-宾语从句-初中|宾语从句-初中]] · [[296-moon-cake|moon-cake]] · [[295-mid-autumn-festival|mid-autumn-festival]] · [[329-What-kind-of-music-do-you-like|What-kind-of-music-do-you-like]] · [[299-prefer|prefer]] · [[304-stressed|stressed]]

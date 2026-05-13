@@ -93,9 +93,9 @@ aliases: [can-you, Can you, 你能吗, 请求句型]
 
 ## 🔗 相关词条
 
-- [[modal-verb-can]]
-- [[yes-no-questions]]
-- [[lets]]
-- [[simple-present-tense]]
-- [[ruler]]
-- [[dictionary]]
+- [[101-modal-verb-can|modal-verb-can]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[115-lets|lets]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[029-学校用品|ruler]]
+- [[075-dictionary|dictionary]]

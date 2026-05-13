@@ -94,10 +94,10 @@ aliases: [How do you make...？, How do you make, 你怎么做, 食谱问句]
 
 ## 相关词条
 
-- [[recipe]] — 食谱
-- [[mix]] — 混合
-- [[chop]] — 切碎
-- [[peel]] — 削皮
-- [[pour]] — 倒入
-- [[smoothie]] — 果昔
-- [[sandwich]] — 三明治
+- [[194-recipe|recipe]] — 食谱
+- [[188-mix|mix]] — 混合
+- [[181-chop|chop]] — 切碎
+- [[192-peel|peel]] — 削皮
+- [[193-pour|pour]] — 倒入
+- [[197-smoothie|smoothie]] — 果昔
+- [[196-sandwich|sandwich]] — 三明治

@@ -94,7 +94,7 @@ aliases: [最高级（长词most）, most最高级, superlative adjectives long,
 
 ## 相关词条
 
-- [[最高级（短词-est）]] — 短词最高级
-- [[比较级（长词more）]] — 长词比较级
-- [[Which is the most...？]] — 核心句型
-- [[more-outgoing]] — 词汇示例
+- [[215-最高级（短词-est）|最高级（短词-est）]] — 短词最高级
+- [[218-比较级（长词more）|比较级（长词more）]] — 长词比较级
+- [[229-Which is the most...？|Which is the most...？]] — 核心句型
+- [[189-more-outgoing|more-outgoing]] — 词汇示例

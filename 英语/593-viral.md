@@ -58,9 +58,9 @@ aliases: [viral, 病毒式传播, 爆红, go viral]
 
 ## 🔗 相关词条
 
-- [[share-高中]]
-- [[audience]]
-- [[broadcast]]
-- [[digital-高中]]
-- [[online-高中]]
-- [[Beyond-the-shadow-of-doubt]]
+- [[591-share-高中|share-高中]]
+- [[576-audience|audience]]
+- [[577-broadcast|broadcast]]
+- [[375-digital-高中|digital-高中]]
+- [[387-online-高中|online-高中]]
+- [[606-Beyond-the-shadow-of-doubt|Beyond-the-shadow-of-doubt]]

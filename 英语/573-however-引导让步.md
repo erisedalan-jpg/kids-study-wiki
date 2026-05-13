@@ -77,8 +77,8 @@ However + 形容词/副词 + 主语 + 谓语 = No matter how + 形容词/副词 
 
 ## 🔗 相关词条
 
-- [[Be-it-ever-so-humble]]
-- [[Come-what-may]]
-- [[省略-状语从句]]
-- [[倒装-only状语置首]]
-- [[poem]]
+- [[566-Be-it-ever-so-humble|Be-it-ever-so-humble]]
+- [[567-Come-what-may|Come-what-may]]
+- [[560-省略-状语从句|省略-状语从句]]
+- [[555-倒装-only状语置首|倒装-only状语置首]]
+- [[547-poem|poem]]

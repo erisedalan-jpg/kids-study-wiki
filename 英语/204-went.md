@@ -80,7 +80,7 @@ aliases: [went, go的过去式, 去了]
 
 ## 相关词条
 
-- [[vacation]] — 假期
-- [[一般过去时（规则与不规则动词）]] — 语法详解
-- [[不规则动词表]] — go-went-gone 类
-- [[Where did you go on vacation？]] — 句型练习
+- [[203-vacation|vacation]] — 假期
+- [[212-一般过去时（规则与不规则动词）|一般过去时（规则与不规则动词）]] — 语法详解
+- [[214-不规则动词表|不规则动词表]] — go-went-gone 类
+- [[228-Where did you go on vacation？|Where did you go on vacation？]] — 句型练习

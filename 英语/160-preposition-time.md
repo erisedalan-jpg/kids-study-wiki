@@ -102,7 +102,7 @@ aliases: [preposition-time, 时间介词, in on at, 介词时间用法]
 
 ## 🔗 相关词条
 
-- [[frequency-adverbs]]
-- [[simple-present-tense]]
-- [[simple-past-tense]]
-- [[How-do-you-go-to-school]]
+- [[155-frequency-adverbs|frequency-adverbs]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[163-simple-past-tense|simple-past-tense]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

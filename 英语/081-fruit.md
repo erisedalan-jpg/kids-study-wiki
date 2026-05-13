@@ -86,9 +86,9 @@ aliases: [fruit, 水果, fruits]
 
 ## 🔗 相关词条
 
-- [[apple]]
-- [[banana]]
-- [[vegetable]]
-- [[salad]]
-- [[i-like]]
-- [[whats-your-favorite]]
+- [[068-apple|apple]]
+- [[069-banana|banana]]
+- [[098-vegetable|vegetable]]
+- [[094-salad|salad]]
+- [[113-i-like|i-like]]
+- [[116-whats-your-favorite|whats-your-favorite]]

@@ -95,6 +95,6 @@ aliases: [I'm going to be a... when I grow up., I'm going to be a when I grow up
 
 ## 相关词条
 
-- [[一般将来时（be going to）]] — be going to 语法
-- [[不定式作宾语（want to do）]] — want to be
-- [[if条件句（一类条件）]] — If you study hard, you'll...
+- [[210-一般将来时（be going to）|一般将来时（be going to）]] — be going to 语法
+- [[213-不定式作宾语（want to do）|不定式作宾语（want to do）]] — want to be
+- [[209-if条件句（一类条件）|if条件句（一类条件）]] — If you study hard, you'll...

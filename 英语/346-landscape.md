@@ -77,4 +77,4 @@ aliases: [landscape, 风景, 地貌, 景色, 景观]
 
 ## 🔗 相关词条
 
-[[tourist]] · [[souvenir]] · [[journey-高中]] · [[disaster]] · [[damage]] · [[appreciate]] · [[定语从句-高中入门]]
+[[353-tourist|tourist]] · [[351-souvenir|souvenir]] · [[345-journey-高中|journey-高中]] · [[342-disaster|disaster]] · [[340-damage|damage]] · [[334-appreciate|appreciate]] · [[359-定语从句-高中入门|定语从句-高中入门]]

@@ -102,4 +102,4 @@ aliases: [You-are-supposed-to, You are supposed to, 应该做, 按规矩应该]
 
 ## 🔗 相关词条
 
-[[custom]] · [[polite]] · [[should-be-allowed]] · [[must-mustnt]] · [[情态动词can]] · [[宾语从句-初中]] · [[国家与国籍]]
+[[288-custom|custom]] · [[297-polite|polite]] · [[310-should-be-allowed|should-be-allowed]] · [[158-must-mustnt|must-mustnt]] · [[039-情态动词can|情态动词can]] · [[315-宾语从句-初中|宾语从句-初中]] · [[060-国家与国籍|国家与国籍]]

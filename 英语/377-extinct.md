@@ -69,10 +69,10 @@ aliases: [extinct, 灭绝, 绝种, extinction]
 
 ## 🔗 相关词条
 
-- [[endangered]]
-- [[species]]
-- [[wildlife]]
-- [[habitat]]
-- [[preserve]]
-- [[It-is-believed-that]]
-- [[现在完成进行时-深化]]
+- [[376-endangered|endangered]]
+- [[390-species|species]]
+- [[393-wildlife|wildlife]]
+- [[378-habitat|habitat]]
+- [[388-preserve|preserve]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]

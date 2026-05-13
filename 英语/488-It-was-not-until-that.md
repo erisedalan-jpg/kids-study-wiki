@@ -72,10 +72,10 @@ aliases: [It-was-not-until-that, It was not until that, 直到才, not until强�
 
 ## 🔗 相关词条
 
-- [[Only-when-倒装]]
-- [[Hardly-when-倒装]]
-- [[Now-that-既然]]
-- [[the-fact-that-同位语]]
-- [[the-reason-why-is-that]]
-- [[情态动词推测-过去]]
-- [[过去分词作状语]]
+- [[490-Only-when-倒装|Only-when-倒装]]
+- [[486-Hardly-when-倒装|Hardly-when-倒装]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]
+- [[485-过去分词作状语|过去分词作状语]]

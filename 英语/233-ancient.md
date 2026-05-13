@@ -96,8 +96,8 @@ aliases: [ancient, 古代的, 古老的, 远古的]
 
 ## 相关词条
 
-- [[mysterious]] — 神秘的
-- [[achievement]] — 成就
-- [[civilization]] — 文明
-- [[wonder]] — 奇观
+- [[250-mysterious|mysterious]] — 神秘的
+- [[231-achievement|achievement]] — 成就
+- [[236-civilization|civilization]] — 文明
+- [[263-wonder|wonder]] — 奇观
 - [[It's said that...]] — 据说句型

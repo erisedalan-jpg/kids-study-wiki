@@ -82,8 +82,8 @@ Dictionary 源自拉丁语 *dictionarium*，来自 *dictio*（说话），原意
 
 ## 🔗 相关词条
 
-- [[pencil]]
-- [[schoolbag]]
-- [[notebook]]
-- [[noun-plurals]]
-- [[i-have-do-you-have]]
+- [[029-学校用品|pencil]]
+- [[095-schoolbag|schoolbag]]
+- [[089-notebook|notebook]]
+- [[102-noun-plurals|noun-plurals]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]

@@ -76,10 +76,10 @@ aliases: [the-more-the-more, the more the more, 越越句型]
 
 ## 🔗 相关词条
 
-- [[not-until-倒装]]
-- [[with-复合结构]]
-- [[find-it-adj-to-do]]
-- [[make-it-clear-that]]
-- [[melody]]
-- [[talent]]
-- [[现在完成进行时-深化]]
+- [[411-not-until-倒装|not-until-倒装]]
+- [[413-with-复合结构|with-复合结构]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[385-melody|melody]]
+- [[391-talent|talent]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]

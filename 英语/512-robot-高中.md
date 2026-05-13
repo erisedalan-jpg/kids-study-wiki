@@ -53,9 +53,9 @@ aliases: [robot-高中, robot, 机器人, robotic, robotics]
 
 ## 🔗 相关词条
 
-- [[science-fiction]]
-- [[imagination]]
-- [[clone]]
-- [[engineer]]
-- [[名词性从句-whether-if]]
-- [[It-strikes-me-that]]
+- [[513-science-fiction|science-fiction]]
+- [[504-imagination|imagination]]
+- [[497-clone|clone]]
+- [[501-engineer|engineer]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]

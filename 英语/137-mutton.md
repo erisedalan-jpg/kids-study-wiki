@@ -95,8 +95,8 @@ aliases: [mutton, 羊肉, lamb, 绵羊肉]
 
 ## 🔗 相关词条
 
-- [[beef]]
-- [[noodles]]
-- [[dumpling]]
-- [[special]]
-- [[a-piece-of]]
+- [[126-beef|beef]]
+- [[139-noodles|noodles]]
+- [[131-dumpling|dumpling]]
+- [[145-special|special]]
+- [[153-a-piece-of|a-piece-of]]

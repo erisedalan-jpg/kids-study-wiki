@@ -80,9 +80,9 @@ aliases: [name, 名字, full name]
 
 ## 🔗 相关词条
 
-- [[family-name]]
-- [[given-name]]
-- [[English-name]]
-- [[whats-your-name]]
-- [[hello]]
-- [[possessive-pronouns]]
+- [[078-family-name|family-name]]
+- [[082-given-name|given-name]]
+- [[066-English-name|English-name]]
+- [[117-whats-your-name|whats-your-name]]
+- [[085-hello|hello]]
+- [[103-possessive-pronouns|possessive-pronouns]]

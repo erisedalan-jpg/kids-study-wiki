@@ -96,4 +96,4 @@ aliases: [moon-cake, moon cake, 月饼, mooncake]
 
 ## 🔗 相关词条
 
-[[lantern]] · [[mid-autumn-festival]] · [[I-think-that]] · [[What-do-you-think-of]] · [[心情情绪]] · [[国家与国籍]] · [[节日]]
+[[293-lantern|lantern]] · [[295-mid-autumn-festival|mid-autumn-festival]] · [[325-I-think-that|I-think-that]] · [[327-What-do-you-think-of|What-do-you-think-of]] · [[059-心情情绪|心情情绪]] · [[060-国家与国籍|国家与国籍]] · [[422-festival-高中|节日]]

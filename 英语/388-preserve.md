@@ -72,10 +72,10 @@ aliases: [preserve, 保存, 保护, preservation]
 
 ## 🔗 相关词条
 
-- [[heritage]]
-- [[monument]]
-- [[restore]]
-- [[endangered]]
-- [[habitat]]
-- [[wildlife]]
-- [[It-is-said-that]]
+- [[379-heritage|heritage]]
+- [[386-monument|monument]]
+- [[389-restore|restore]]
+- [[376-endangered|endangered]]
+- [[378-habitat|habitat]]
+- [[393-wildlife|wildlife]]
+- [[408-It-is-said-that|It-is-said-that]]

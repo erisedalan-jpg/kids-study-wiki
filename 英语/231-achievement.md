@@ -89,7 +89,7 @@ aliases: [achievement, 成就, 成绩, 成果]
 
 ## 相关词条
 
-- [[ancient]] — 古老的
-- [[civilization]] — 文明
-- [[mysterious]] — 神秘的
-- [[wonder]] — 奇观
+- [[233-ancient|ancient]] — 古老的
+- [[236-civilization|civilization]] — 文明
+- [[250-mysterious|mysterious]] — 神秘的
+- [[263-wonder|wonder]] — 奇观

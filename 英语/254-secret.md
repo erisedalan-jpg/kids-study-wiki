@@ -90,7 +90,7 @@ aliases: [secret, 秘密, 秘密的]
 
 ## 相关词条
 
-- [[share]] — 分享
-- [[argue]] — 争吵
-- [[allow]] — 允许
+- [[255-share|share]] — 分享
+- [[234-argue|argue]] — 争吵
+- [[232-allow|allow]] — 允许
 - [[I think / I don't think...]] — 表达观点

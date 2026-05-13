@@ -86,9 +86,9 @@ Hamburger 来自德国的城市 **Hamburg**（汉堡市）！
 
 ## 🔗 相关词条
 
-- [[ice-cream]]
-- [[salad]]
-- [[vegetable]]
-- [[fruit]]
-- [[i-like]]
-- [[how-much-is-are]]
+- [[086-ice-cream|ice-cream]]
+- [[094-salad|salad]]
+- [[098-vegetable|vegetable]]
+- [[081-fruit|fruit]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]

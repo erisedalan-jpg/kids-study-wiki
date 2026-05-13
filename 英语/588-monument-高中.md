@@ -64,9 +64,9 @@ aliases: [monument-高中, monument, 纪念碑, 纪念物, 历史遗址]
 
 ## 🔗 相关词条
 
-- [[iconic]]
-- [[attraction]]
-- [[architecture]]
-- [[culture-高中]]
-- [[landscape-高中]]
-- [[双重定语从句]]
+- [[583-iconic|iconic]]
+- [[575-attraction|attraction]]
+- [[494-architect|architecture]]
+- [[418-culture-高中|culture-高中]]
+- [[467-landscape-高中|landscape-高中]]
+- [[600-双重定语从句|双重定语从句]]

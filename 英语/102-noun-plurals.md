@@ -88,8 +88,8 @@ aliases: [noun-plurals, 名词复数, plural nouns, 单复数]
 
 ## 🔗 相关词条
 
-- [[dictionary]]
-- [[there-be]]
-- [[cardinal-numbers-1-100]]
-- [[simple-present-tense]]
-- [[i-have-do-you-have]]
+- [[075-dictionary|dictionary]]
+- [[107-there-be|there-be]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]

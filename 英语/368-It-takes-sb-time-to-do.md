@@ -74,4 +74,4 @@ aliases: [It-takes-sb-time-to-do, It takes sb time to do, take 花时间, 花时
 
 ## 🔗 相关词条
 
-[[It-is-+adj+to-do]] · [[主语从句]] · [[名词性从句-入门]] · [[athlete]] · [[fitness]] · [[journey-高中]] · [[rescue]]
+[[367-It-is-+adj+to-do|It-is-+adj+to-do]] · [[354-主语从句|主语从句]] · [[356-名词性从句-入门|名词性从句-入门]] · [[335-athlete|athlete]] · [[343-fitness|fitness]] · [[345-journey-高中|journey-高中]] · [[349-rescue|rescue]]

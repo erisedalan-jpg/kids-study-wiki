@@ -51,9 +51,9 @@ aliases: [religion, 宗教]
 
 ## 🔗 相关词条
 
-- [[festival-高中]]
-- [[tradition-习俗]]
-- [[culture-高中]]
-- [[diverse]]
-- [[multicultural]]
-- [[moral]]
+- [[422-festival-高中|festival-高中]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[418-culture-高中|culture-高中]]
+- [[421-diverse|diverse]]
+- [[426-multicultural|multicultural]]
+- [[425-moral|moral]]

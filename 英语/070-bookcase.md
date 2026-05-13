@@ -79,9 +79,9 @@ aliases: [bookcase, 书柜, bookshelf]
 
 ## 🔗 相关词条
 
-- [[desk]]
-- [[chair]]
-- [[sofa]]
-- [[drawer]]
-- [[preposition-phrase]]
-- [[there-be]]
+- [[031-教室物品|desk]]
+- [[032-房间-家具|chair]]
+- [[032-房间-家具|sofa]]
+- [[076-drawer|drawer]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[107-there-be|there-be]]

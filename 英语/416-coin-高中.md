@@ -52,9 +52,9 @@ aliases: [coin-高中, coin, 硬币]
 
 ## 🔗 相关词条
 
-- [[currency]]
-- [[wealth]]
-- [[notes-纸币]]
-- [[It-is-no-wonder-that]]
-- [[虚拟语气-与现在事实相反]]
-- [[状语从句-结果]]
+- [[419-currency|currency]]
+- [[433-wealth|wealth]]
+- [[427-notes-纸币|notes-纸币]]
+- [[447-It-is-no-wonder-that|It-is-no-wonder-that]]
+- [[443-虚拟语气-与现在事实相反|虚拟语气-与现在事实相反]]
+- [[439-状语从句-结果|状语从句-结果]]

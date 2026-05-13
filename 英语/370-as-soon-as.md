@@ -80,4 +80,4 @@ aliases: [as-soon-as, as soon as, 一就, 时间状语从句连词]
 
 ## 🔗 相关词条
 
-[[过去进行时-高中]] · [[过去完成时]] · [[when-while区别]] · [[disaster]] · [[rescue]] · [[survive]] · [[not-only-but-also]]
+[[365-过去进行时-高中|过去进行时-高中]] · [[364-过去完成时|过去完成时]] · [[266-when-while区别|when-while区别]] · [[342-disaster|disaster]] · [[349-rescue|rescue]] · [[352-survive|survive]] · [[372-not-only-but-also|not-only-but-also]]

@@ -66,10 +66,10 @@ aliases: [genius, 天才, 天赋, 天才人物]
 
 ## 🔗 相关词条
 
-- [[achievement-高中]]
-- [[dedicate]]
-- [[academic]]
-- [[award-高中]]
-- [[innovation]]
-- [[What-impressed-me-most]]
-- [[the-reason-why-is-that]]
+- [[455-achievement-高中|achievement-高中]]
+- [[459-dedicate|dedicate]]
+- [[454-academic|academic]]
+- [[457-award-高中|award-高中]]
+- [[465-innovation|innovation]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]

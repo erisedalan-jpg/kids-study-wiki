@@ -90,9 +90,9 @@ aliases: [giraffe, 长颈鹿, giraffes]
 
 ## 🔗 相关词条
 
-- [[lion]]
-- [[tiger]]
-- [[elephant]]
-- [[panda]]
-- [[koala]]
-- [[Why-do-you-like]]
+- [[136-lion|lion]]
+- [[149-tiger|tiger]]
+- [[132-elephant|elephant]]
+- [[140-panda|panda]]
+- [[134-koala|koala]]
+- [[172-Why-do-you-like|Why-do-you-like]]

@@ -82,4 +82,4 @@ aliases: [fitness, fit, physical fitness, 健身, 体适能, 适合]
 
 ## 🔗 相关词条
 
-[[athlete]] · [[award]] · [[champion]] · [[cycle-动词]] · [[It-takes-sb-time-to-do]] · [[not-only-but-also]] · [[would-rather-do-than]]
+[[335-athlete|athlete]] · [[336-award|award]] · [[337-champion|champion]] · [[339-cycle-动词|cycle-动词]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]] · [[372-not-only-but-also|not-only-but-also]] · [[373-would-rather-do-than|would-rather-do-than]]

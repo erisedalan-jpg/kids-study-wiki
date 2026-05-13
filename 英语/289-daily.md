@@ -97,4 +97,4 @@ Unit 4 主题是"成长与变化"，`daily` 常用于描述过去和现在的日
 
 ## 🔗 相关词条
 
-[[used-to]] · [[afraid]] · [[used-to-do]] · [[一般现在时]] · [[时间表达]] · [[宾语从句-初中]] · [[make-sb-do]]
+[[308-used-to|used-to]] · [[285-afraid|afraid]] · [[311-used-to-do|used-to-do]] · [[027-一般现在时|一般现在时]] · [[034-时间表达|时间表达]] · [[315-宾语从句-初中|宾语从句-初中]] · [[309-make-sb-do|make-sb-do]]

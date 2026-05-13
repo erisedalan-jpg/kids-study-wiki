@@ -81,8 +81,8 @@ aliases: [yes-no-questions, 一般疑问句, yes or no questions, 一般疑问]
 
 ## 🔗 相关词条
 
-- [[be-verb-am-is-are]]
-- [[simple-present-tense]]
-- [[is-are-this-that]]
-- [[i-have-do-you-have]]
-- [[modal-verb-can]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]
+- [[101-modal-verb-can|modal-verb-can]]

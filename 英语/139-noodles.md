@@ -91,8 +91,8 @@ aliases: [noodles, 面条, noodle, 拉面]
 
 ## 🔗 相关词条
 
-- [[dumpling]]
-- [[beef]]
-- [[mutton]]
-- [[special]]
-- [[a-piece-of]]
+- [[131-dumpling|dumpling]]
+- [[126-beef|beef]]
+- [[137-mutton|mutton]]
+- [[145-special|special]]
+- [[153-a-piece-of|a-piece-of]]

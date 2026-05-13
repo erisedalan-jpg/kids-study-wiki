@@ -62,9 +62,9 @@ aliases: [creative, 创意的, 有创造力的, 创新]
 
 ## 🔗 相关词条
 
-- [[imagination-高中]]
-- [[inspire]]
-- [[iconic]]
-- [[achievement-高中]]
-- [[career]]
-- [[It-makes-perfect-sense]]
+- [[584-imagination-高中|imagination-高中]]
+- [[585-inspire|inspire]]
+- [[583-iconic|iconic]]
+- [[455-achievement-高中|achievement-高中]]
+- [[578-career|career]]
+- [[610-It-makes-perfect-sense|It-makes-perfect-sense]]

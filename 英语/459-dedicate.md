@@ -66,10 +66,10 @@ aliases: [dedicate, 致力于, 奉献, dedicated]
 
 ## 🔗 相关词条
 
-- [[achievement-高中]]
-- [[academic]]
-- [[genius]]
-- [[award-高中]]
-- [[动名词作宾语]]
-- [[动名词作主语]]
-- [[What-impressed-me-most]]
+- [[455-achievement-高中|achievement-高中]]
+- [[454-academic|academic]]
+- [[462-genius|genius]]
+- [[457-award-高中|award-高中]]
+- [[477-动名词作宾语|动名词作宾语]]
+- [[476-动名词作主语|动名词作主语]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]

@@ -106,4 +106,4 @@ Unit 10 主题是"礼仪与习俗"（manners and customs），比较不同国家
 
 ## 🔗 相关词条
 
-[[You-are-supposed-to]] · [[polite]] · [[mid-autumn-festival]] · [[国家与国籍]] · [[宾语从句-初中]] · [[teenager]] · [[make-sb-do]]
+[[333-You-are-supposed-to|You-are-supposed-to]] · [[297-polite|polite]] · [[295-mid-autumn-festival|mid-autumn-festival]] · [[060-国家与国籍|国家与国籍]] · [[315-宾语从句-初中|宾语从句-初中]] · [[305-teenager|teenager]] · [[309-make-sb-do|make-sb-do]]

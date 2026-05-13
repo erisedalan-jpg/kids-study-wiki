@@ -75,10 +75,10 @@ It occurred to sb. to do sth.
 
 ## 🔗 相关词条
 
-- [[the-reason-why-is-that]]
-- [[What-impressed-me-most]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
-- [[dedicate]]
-- [[gesture]]
-- [[动名词作主语]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[459-dedicate|dedicate]]
+- [[463-gesture|gesture]]
+- [[476-动名词作主语|动名词作主语]]

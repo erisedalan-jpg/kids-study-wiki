@@ -89,8 +89,8 @@ aliases: [Dont-Please-dont, Don't, Please don't, 祈使句否定, 禁止表达]
 
 ## 🔗 相关词条
 
-- [[imperative-sentence]]
-- [[must-mustnt]]
-- [[rule]]
-- [[classroom-rule]]
-- [[can-cant]]
+- [[157-imperative-sentence|imperative-sentence]]
+- [[158-must-mustnt|must-mustnt]]
+- [[093-ruler|rule]]
+- [[128-classroom-rule|classroom-rule]]
+- [[154-can-cant|can-cant]]

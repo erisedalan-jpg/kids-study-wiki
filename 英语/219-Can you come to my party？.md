@@ -90,9 +90,9 @@ aliases: [Can you come to my party？, Can you come to my party, 你能来我的
 
 ## 相关词条
 
-- [[invite]] — 邀请
-- [[available]] — 有空的
-- [[calendar]] — 日历
-- [[refuse]] — 拒绝
-- [[accept]] — 接受
-- [[I'd like to invite you to...]] — 正式邀请句型
+- [[186-invite|invite]] — 邀请
+- [[178-available|available]] — 有空的
+- [[180-calendar|calendar]] — 日历
+- [[195-refuse|refuse]] — 拒绝
+- [[174-accept|accept]] — 接受
+- [[223-I'd like to invite you to...|I'd like to invite you to...]] — 正式邀请句型

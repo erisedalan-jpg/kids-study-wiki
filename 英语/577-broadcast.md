@@ -63,9 +63,9 @@ aliases: [broadcast, 广播, 播出, 播送]
 
 ## 🔗 相关词条
 
-- [[share-高中]]
-- [[audience]]
-- [[viral]]
-- [[digital-高中]]
-- [[online-高中]]
-- [[Now-that-在新形势下]]
+- [[591-share-高中|share-高中]]
+- [[576-audience|audience]]
+- [[593-viral|viral]]
+- [[375-digital-高中|digital-高中]]
+- [[387-online-高中|online-高中]]
+- [[613-Now-that-在新形势下|Now-that-在新形势下]]

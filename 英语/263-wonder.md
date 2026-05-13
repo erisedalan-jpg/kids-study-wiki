@@ -89,7 +89,7 @@ aliases: [wonder, 奇观, 奇迹, 惊叹]
 
 ## 相关词条
 
-- [[mysterious]] — 神秘的
-- [[ancient]] — 古老的
-- [[achievement]] — 成就
-- [[civilization]] — 文明
+- [[250-mysterious|mysterious]] — 神秘的
+- [[233-ancient|ancient]] — 古老的
+- [[231-achievement|achievement]] — 成就
+- [[236-civilization|civilization]] — 文明

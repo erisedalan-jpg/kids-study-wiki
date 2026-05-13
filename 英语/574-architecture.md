@@ -64,9 +64,9 @@ aliases: [architecture, 建筑, 建筑学, 建筑风格]
 
 ## 🔗 相关词条
 
-- [[iconic]]
-- [[attraction]]
-- [[monument-高中]]
-- [[culture-高中]]
-- [[landscape-高中]]
-- [[It-stands-to-reason-that]]
+- [[583-iconic|iconic]]
+- [[575-attraction|attraction]]
+- [[588-monument-高中|monument-高中]]
+- [[418-culture-高中|culture-高中]]
+- [[467-landscape-高中|landscape-高中]]
+- [[611-It-stands-to-reason-that|It-stands-to-reason-that]]

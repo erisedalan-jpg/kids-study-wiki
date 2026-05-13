@@ -51,9 +51,9 @@ aliases: [universe-高中, universe, 宇宙]
 
 ## 🔗 相关词条
 
-- [[astronaut]]
-- [[orbit]]
-- [[gravity-高中]]
-- [[虚拟语气-与现在事实相反]]
-- [[状语从句-目的]]
-- [[It-is-no-wonder-that]]
+- [[414-astronaut|astronaut]]
+- [[428-orbit|orbit]]
+- [[423-gravity-高中|gravity-高中]]
+- [[443-虚拟语气-与现在事实相反|虚拟语气-与现在事实相反]]
+- [[438-状语从句-目的|状语从句-目的]]
+- [[447-It-is-no-wonder-that|It-is-no-wonder-that]]

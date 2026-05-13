@@ -57,8 +57,8 @@ aliases: [poem, 诗, 诗歌, 一首诗]
 
 ## 🔗 相关词条
 
-- [[verse]]
-- [[aesthetic]]
-- [[art-高中]]
-- [[省略-状语从句]]
-- [[however-引导让步]]
+- [[553-verse|verse]]
+- [[536-aesthetic|aesthetic]]
+- [[537-art-高中|art-高中]]
+- [[560-省略-状语从句|省略-状语从句]]
+- [[573-however-引导让步|however-引导让步]]

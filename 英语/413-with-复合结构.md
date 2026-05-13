@@ -78,10 +78,10 @@ aliases: [with-复合结构, with复合结构, with宾语宾补结构]
 
 ## 🔗 相关词条
 
-- [[find-it-adj-to-do]]
-- [[make-it-clear-that]]
-- [[not-until-倒装]]
-- [[the-more-the-more]]
-- [[melody]]
-- [[instrument]]
-- [[主谓一致-就远原则]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[411-not-until-倒装|not-until-倒装]]
+- [[412-the-more-the-more|the-more-the-more]]
+- [[385-melody|melody]]
+- [[380-instrument|instrument]]
+- [[397-主谓一致-就远原则|主谓一致-就远原则]]

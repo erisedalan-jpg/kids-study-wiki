@@ -99,8 +99,8 @@ aliases: [simple-past-tense, 一般过去时, past tense, 过去时]
 
 ## 🔗 相关词条
 
-- [[simple-present-tense]]
-- [[present-continuous-tense]]
-- [[last-weekend]]
-- [[How-was-your-weekend]]
-- [[frequency-adverbs]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[161-present-continuous-tense|present-continuous-tense]]
+- [[173-last-weekend|last-weekend]]
+- [[167-How-was-your-weekend|How-was-your-weekend]]
+- [[155-frequency-adverbs|frequency-adverbs]]

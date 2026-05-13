@@ -72,9 +72,9 @@ aliases: [wh-ever-复合词, wh-ever, whatever whoever whenever wherever however
 
 ## 🔗 相关词条
 
-- [[whatever]]
-- [[whoever]]
-- [[whenever]]
-- [[wherever]]
-- [[名词性从句-wh]]
-- [[状语从句-让步]]
+- [[596-whatever|whatever]]
+- [[599-whoever|whoever]]
+- [[597-whenever|whenever]]
+- [[598-wherever|wherever]]
+- [[521-名词性从句-wh|名词性从句-wh]]
+- [[440-状语从句-让步|状语从句-让步]]

@@ -56,8 +56,8 @@ aliases: [mental, 心理的, 精神的, 脑力的]
 
 ## 🔗 相关词条
 
-- [[physical]]
-- [[lifestyle]]
-- [[addiction]]
-- [[prevent]]
-- [[adversity]]
+- [[546-physical|physical]]
+- [[541-lifestyle|lifestyle]]
+- [[534-addiction|addiction]]
+- [[549-prevent|prevent]]
+- [[535-adversity|adversity]]

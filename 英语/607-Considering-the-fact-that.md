@@ -70,9 +70,9 @@ aliases: [Considering-the-fact-that, considering the fact that, 考虑到, 鉴�
 
 ## 🔗 相关词条
 
-- [[Given-the-fact-that]]
-- [[Now-that-在新形势下]]
-- [[It-stands-to-reason-that]]
-- [[It-makes-perfect-sense]]
-- [[Last-but-not-least]]
-- [[In-conclusion-写作]]
+- [[608-Given-the-fact-that|Given-the-fact-that]]
+- [[613-Now-that-在新形势下|Now-that-在新形势下]]
+- [[611-It-stands-to-reason-that|It-stands-to-reason-that]]
+- [[610-It-makes-perfect-sense|It-makes-perfect-sense]]
+- [[612-Last-but-not-least|Last-but-not-least]]
+- [[609-In-conclusion-写作|In-conclusion-写作]]

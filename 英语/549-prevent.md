@@ -56,8 +56,8 @@ aliases: [prevent, 预防, 防止, 阻止]
 
 ## 🔗 相关词条
 
-- [[lifestyle]]
-- [[physical]]
-- [[mental]]
-- [[addiction]]
-- [[conservation]]
+- [[541-lifestyle|lifestyle]]
+- [[546-physical|physical]]
+- [[543-mental|mental]]
+- [[534-addiction|addiction]]
+- [[538-conservation|conservation]]

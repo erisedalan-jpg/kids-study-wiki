@@ -25,7 +25,7 @@ Were it not for + 名词（短语）, 主语 + would/could/should/might + do...
 
 **过去虚拟对应形式**：
 - Were it not for → 现在虚拟（与现在相反）
-- Had it not been for → 过去虚拟（与过去相反，见 [[Had-I-known]]）
+- Had it not been for → 过去虚拟（与过去相反，见 [[568-Had-I-known|Had-I-known]]）
 
 ---
 
@@ -74,8 +74,8 @@ Were it not for + 名词（短语）, 主语 + would/could/should/might + do...
 
 ## 🔗 相关词条
 
-- [[虚拟语气-but-for]]
-- [[虚拟语气-含蓄条件]]
-- [[省略-虚拟从句]]
-- [[Had-I-known]]
-- [[Should-you-need-help]]
+- [[562-虚拟语气-but-for|虚拟语气-but-for]]
+- [[564-虚拟语气-含蓄条件|虚拟语气-含蓄条件]]
+- [[561-省略-虚拟从句|省略-虚拟从句]]
+- [[568-Had-I-known|Had-I-known]]
+- [[570-Should-you-need-help|Should-you-need-help]]

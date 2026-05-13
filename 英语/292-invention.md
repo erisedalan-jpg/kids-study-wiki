@@ -96,4 +96,4 @@ aliases: [invention, 发明物, 发明, 创造物]
 
 ## 🔗 相关词条
 
-[[invent]] · [[accidental]] · [[Where-was-it-invented]] · [[When-was-it-invented]] · [[被动语态-by短语]] · [[宾语从句-初中]] · [[What-do-you-think-of]]
+[[291-invent|invent]] · [[284-accidental|accidental]] · [[332-Where-was-it-invented|Where-was-it-invented]] · [[330-When-was-it-invented|When-was-it-invented]] · [[319-被动语态-by短语|被动语态-by短语]] · [[315-宾语从句-初中|宾语从句-初中]] · [[327-What-do-you-think-of|What-do-you-think-of]]

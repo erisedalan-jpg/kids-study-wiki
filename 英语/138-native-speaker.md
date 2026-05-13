@@ -87,7 +87,7 @@ aliases: [native-speaker, 母语者, native speaker, 母语人士]
 
 ## 🔗 相关词条
 
-- [[language]]
-- [[pen-pal]]
-- [[Canada]]
-- [[Australia]]
+- [[135-language|language]]
+- [[141-pen-pal|pen-pal]]
+- [[120-Canada|Canada]]
+- [[119-Australia|Australia]]

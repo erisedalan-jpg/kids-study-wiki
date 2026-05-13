@@ -81,10 +81,10 @@ aliases: [chair, 椅子]
 
 ## 🔗 相关词条
 
-- [[desk]]
-- [[sofa]]
-- [[bookcase]]
-- [[drawer]]
-- [[preposition-phrase]]
-- [[there-be]]
-- [[cardinal-numbers-1-100]]
+- [[031-教室物品|desk]]
+- [[032-房间-家具|sofa]]
+- [[070-bookcase|bookcase]]
+- [[076-drawer|drawer]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[107-there-be|there-be]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]

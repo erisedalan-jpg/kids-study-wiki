@@ -65,9 +65,9 @@ aliases: [Nor-can-I-倒装, Nor can I, nor倒装, neither nor倒装, 省略倒�
 
 ## 🔗 相关词条
 
-- [[On-no-account-倒装]]
-- [[as-状语从句]]
-- [[名词性从句-whether-if]]
-- [[firstaid]]
-- [[emergency]]
-- [[nature-高中]]
+- [[530-On-no-account-倒装|On-no-account-倒装]]
+- [[517-as-状语从句|as-状语从句]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[502-firstaid|firstaid]]
+- [[500-emergency|emergency]]
+- [[509-nature-高中|nature-高中]]

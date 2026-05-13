@@ -84,7 +84,7 @@ aliases: [refuse, 拒绝, 谢绝]
 
 ## 相关词条
 
-- [[accept]] — 接受
-- [[invite]] — 邀请
-- [[available]] — 有空的
-- [[Can you come to my party？]] — 核心句型
+- [[174-accept|accept]] — 接受
+- [[186-invite|invite]] — 邀请
+- [[178-available|available]] — 有空的
+- [[219-Can you come to my party？|Can you come to my party？]] — 核心句型

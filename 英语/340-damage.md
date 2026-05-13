@@ -71,4 +71,4 @@ aliases: [damage, damages, 损坏, 破坏, 损失]
 
 ## 🔗 相关词条
 
-[[disaster]] · [[survive]] · [[rescue]] · [[过去进行时-高中]] · [[过去完成时]] · [[as-soon-as]] · [[现在完成进行时]]
+[[342-disaster|disaster]] · [[352-survive|survive]] · [[349-rescue|rescue]] · [[365-过去进行时-高中|过去进行时-高中]] · [[364-过去完成时|过去完成时]] · [[370-as-soon-as|as-soon-as]] · [[362-现在完成进行时|现在完成进行时]]

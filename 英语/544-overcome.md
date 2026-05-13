@@ -56,8 +56,8 @@ aliases: [overcome, 克服, 战胜, 压倒]
 
 ## 🔗 相关词条
 
-- [[adversity]]
-- [[courage]]
-- [[mental]]
-- [[Were-it-not-for]]
-- [[Had-I-known]]
+- [[535-adversity|adversity]]
+- [[539-courage|courage]]
+- [[543-mental|mental]]
+- [[572-Were-it-not-for|Were-it-not-for]]
+- [[568-Had-I-known|Had-I-known]]

@@ -88,7 +88,7 @@ aliases: [how-are-you, How are you, 你好吗, 问候语]
 
 ## 🔗 相关词条
 
-- [[hello]]
-- [[whats-your-name]]
-- [[be-verb-am-is-are]]
-- [[lets]]
+- [[085-hello|hello]]
+- [[117-whats-your-name|whats-your-name]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[115-lets|lets]]

@@ -99,8 +99,8 @@ aliases: [cardinal-numbers-1-100, 基数词, 数字1-100, cardinal numbers]
 
 ## 🔗 相关词条
 
-- [[ordinal-numbers]]
-- [[age]]
-- [[prices]]
-- [[how-much-is-are]]
-- [[when-is-your-birthday]]
+- [[090-ordinal-numbers|ordinal-numbers]]
+- [[067-age|age]]
+- [[092-prices|prices]]
+- [[111-how-much-is-are|how-much-is-are]]
+- [[118-when-is-your-birthday|when-is-your-birthday]]

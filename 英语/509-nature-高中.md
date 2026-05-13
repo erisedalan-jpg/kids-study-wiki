@@ -54,9 +54,9 @@ aliases: [nature-高中, nature, 自然, natural, naturally]
 
 ## 🔗 相关词条
 
-- [[journey-2-高中]]
-- [[landscape-2-高中]]
-- [[firstaid]]
-- [[独立主格-入门]]
-- [[with-主格]]
-- [[Nor-can-I-倒装]]
+- [[506-journey-2-高中|journey-2-高中]]
+- [[508-landscape-2-高中|landscape-2-高中]]
+- [[502-firstaid|firstaid]]
+- [[523-独立主格-入门|独立主格-入门]]
+- [[519-with-主格|with-主格]]
+- [[529-Nor-can-I-倒装|Nor-can-I-倒装]]

@@ -72,10 +72,10 @@ aliases: [as-if-as-though, as if, as though, 好像虚拟句型]
 
 ## 🔗 相关词条
 
-- [[It-is-high-time-that]]
-- [[虚拟语气]]
+- [[446-It-is-high-time-that|It-is-high-time-that]]
+- [[445-虚拟语气-入门|虚拟语气]]
 - [[wish虚拟语气]]
-- [[It-is-time-to-do]]
-- [[状语从句]]
+- [[448-It-is-time-to-do|It-is-time-to-do]]
+- [[617-状语从句|状语从句]]
 - [[morals]]
-- [[virtue]]
+- [[432-virtue|virtue]]

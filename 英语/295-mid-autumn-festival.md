@@ -100,4 +100,4 @@ aliases: [mid-autumn-festival, Mid-Autumn Festival, 中秋节, 中秋, Moon Fest
 
 ## 🔗 相关词条
 
-[[moon-cake]] · [[lantern]] · [[I-think-that]] · [[What-do-you-think-of]] · [[国家与国籍]] · [[心情情绪]] · [[节日]]
+[[296-moon-cake|moon-cake]] · [[293-lantern|lantern]] · [[325-I-think-that|I-think-that]] · [[327-What-do-you-think-of|What-do-you-think-of]] · [[060-国家与国籍|国家与国籍]] · [[059-心情情绪|心情情绪]] · [[422-festival-高中|节日]]

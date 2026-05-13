@@ -94,7 +94,7 @@ B: Oh, that sounds tough. Maybe we can do something fun next weekend?
 
 ## 🔗 相关词条
 
-- [[simple-past-tense]]
-- [[last-weekend]]
-- [[frequency-adverbs]]
-- [[What-are-you-doing]]
+- [[163-simple-past-tense|simple-past-tense]]
+- [[173-last-weekend|last-weekend]]
+- [[155-frequency-adverbs|frequency-adverbs]]
+- [[169-What-are-you-doing|What-are-you-doing]]

@@ -89,8 +89,8 @@ aliases: [take-out-trash, take out the trash, 倒垃圾, 扔垃圾]
 
 ## 相关词条
 
-- [[do-the-dishes]] — 洗碗
-- [[sweep-the-floor]] — 扫地
-- [[fold-clothes]] — 叠衣服
-- [[chore]] — 家务
+- [[239-do-the-dishes|do-the-dishes]] — 洗碗
+- [[258-sweep-the-floor|sweep-the-floor]] — 扫地
+- [[244-fold-clothes|fold-clothes]] — 叠衣服
+- [[235-chore|chore]] — 家务
 - [[already / yet 用法]] — 现在完成时副词

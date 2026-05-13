@@ -75,6 +75,6 @@ aliases: [anywhere, 任何地方, 哪里]
 
 ## 相关词条
 
-- [[anyone]] — 任何人
-- [[vacation]] — 假期
-- [[went]] — go 的过去式
+- [[176-anyone|anyone]] — 任何人
+- [[203-vacation|vacation]] — 假期
+- [[204-went|went]] — go 的过去式

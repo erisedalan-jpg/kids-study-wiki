@@ -67,10 +67,10 @@ aliases: [breakthrough, 突破, 重大进展, 重大发现]
 
 ## 🔗 相关词条
 
-- [[innovation]]
-- [[future-高中]]
-- [[prediction]]
-- [[achievement-高中]]
-- [[the-fact-that-同位语]]
-- [[It-occurred-to-me-that]]
-- [[Now-that-既然]]
+- [[465-innovation|innovation]]
+- [[461-future-高中|future-高中]]
+- [[471-prediction|prediction]]
+- [[455-achievement-高中|achievement-高中]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[489-Now-that-既然|Now-that-既然]]

@@ -67,10 +67,10 @@ aliases: [academic, 学术的, 学术, 学者]
 
 ## 🔗 相关词条
 
-- [[achievement-高中]]
-- [[dedicate]]
-- [[genius]]
-- [[innovation]]
-- [[动名词作主语]]
-- [[the-reason-why-is-that]]
-- [[What-impressed-me-most]]
+- [[455-achievement-高中|achievement-高中]]
+- [[459-dedicate|dedicate]]
+- [[462-genius|genius]]
+- [[465-innovation|innovation]]
+- [[476-动名词作主语|动名词作主语]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]

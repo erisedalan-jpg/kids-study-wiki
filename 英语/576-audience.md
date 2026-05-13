@@ -64,9 +64,9 @@ aliases: [audience, 观众, 受众, 听众]
 
 ## 🔗 相关词条
 
-- [[share-高中]]
-- [[broadcast]]
-- [[viral]]
-- [[digital-高中]]
-- [[online-高中]]
-- [[that-省略]]
+- [[591-share-高中|share-高中]]
+- [[577-broadcast|broadcast]]
+- [[593-viral|viral]]
+- [[375-digital-高中|digital-高中]]
+- [[387-online-高中|online-高中]]
+- [[594-that-省略|that-省略]]

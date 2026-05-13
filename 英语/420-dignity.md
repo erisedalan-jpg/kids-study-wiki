@@ -51,9 +51,9 @@ aliases: [dignity, 尊严, 庄重]
 
 ## 🔗 相关词条
 
-- [[moral]]
-- [[virtue]]
-- [[merciful]]
-- [[culture-高中]]
-- [[状语从句-让步]]
-- [[even-if-让步]]
+- [[425-moral|moral]]
+- [[432-virtue|virtue]]
+- [[424-merciful|merciful]]
+- [[418-culture-高中|culture-高中]]
+- [[440-状语从句-让步|状语从句-让步]]
+- [[451-even-if-让步|even-if-让步]]

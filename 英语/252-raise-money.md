@@ -85,7 +85,7 @@ aliases: [raise-money, raise money, 募款, 筹钱, 筹款]
 
 ## 相关词条
 
-- [[volunteer]] — 志愿者
-- [[help-out]] — 帮忙
-- [[fix-up]] — 修缮
-- [[hand-out]] — 分发
+- [[262-volunteer|volunteer]] — 志愿者
+- [[248-help-out|help-out]] — 帮忙
+- [[243-fix-up|fix-up]] — 修缮
+- [[246-hand-out|hand-out]] — 分发

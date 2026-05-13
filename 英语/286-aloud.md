@@ -102,4 +102,4 @@ aliases: [aloud, 大声地, 出声地, 朗读]
 
 ## 🔗 相关词条
 
-[[pronunciation]] · [[pronounce]] · [[textbook]] · [[native-speaker]] · [[should-be-allowed]] · [[宾语从句-初中]] · [[自然拼读]]
+[[302-pronunciation|pronunciation]] · [[301-pronounce|pronounce]] · [[306-textbook|textbook]] · [[138-native-speaker|native-speaker]] · [[310-should-be-allowed|should-be-allowed]] · [[315-宾语从句-初中|宾语从句-初中]] · [[028-自然拼读|自然拼读]]

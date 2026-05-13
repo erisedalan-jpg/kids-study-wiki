@@ -76,10 +76,10 @@ aliases: [find-it-adj-to-do, find it adj to do, 形式宾语it句型]
 
 ## 🔗 相关词条
 
-- [[make-it-clear-that]]
-- [[It-is-said-that]]
-- [[It-is-believed-that]]
-- [[It-is-reported-that]]
-- [[internet]]
-- [[online-高中]]
-- [[Whether-If引导宾语从句]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[407-It-is-reported-that|It-is-reported-that]]
+- [[381-internet|internet]]
+- [[387-online-高中|online-高中]]
+- [[394-Whether-If引导宾语从句|Whether-If引导宾语从句]]

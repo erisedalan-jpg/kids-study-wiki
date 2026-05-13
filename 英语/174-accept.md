@@ -92,8 +92,8 @@ aliases: [accept, 接受, 答应]
 
 ## 相关词条
 
-- [[refuse]] — 拒绝
-- [[invite]] — 邀请
-- [[available]] — 有空的
-- [[I'd like to invite you to...]] — 核心句型
-- [[Can you come to my party？]] — 核心句型
+- [[195-refuse|refuse]] — 拒绝
+- [[186-invite|invite]] — 邀请
+- [[178-available|available]] — 有空的
+- [[223-I'd like to invite you to...|I'd like to invite you to...]] — 核心句型
+- [[219-Can you come to my party？|Can you come to my party？]] — 核心句型

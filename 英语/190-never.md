@@ -82,7 +82,7 @@ aliases: [never, 从不, 绝不, 永远不]
 
 ## 相关词条
 
-- [[hardly-ever]] — 几乎从不
-- [[always]] — 总是
-- [[sometimes]] — 有时
-- [[How often do you exercise？]] — 核心句型
+- [[184-hardly-ever|hardly-ever]] — 几乎从不
+- [[175-always|always]] — 总是
+- [[198-sometimes|sometimes]] — 有时
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

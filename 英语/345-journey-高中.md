@@ -76,4 +76,4 @@ journey 在英语中频繁用于比喻：
 
 ## 🔗 相关词条
 
-[[tourist]] · [[landscape]] · [[souvenir]] · [[cycle-动词]] · [[现在完成时-高中深化]] · [[过去完成时]] · [[过去进行时-高中]]
+[[353-tourist|tourist]] · [[346-landscape|landscape]] · [[351-souvenir|souvenir]] · [[339-cycle-动词|cycle-动词]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[364-过去完成时|过去完成时]] · [[365-过去进行时-高中|过去进行时-高中]]

@@ -86,7 +86,7 @@ aliases: [more-outgoing, more outgoing, 更外向的, 更开朗的]
 
 ## 相关词条
 
-- [[funnier]] — funny 的比较级（短词规则）
-- [[比较级（长词more）]] — 语法详解
-- [[both-of-us]] — 比较句搭配
-- [[in-common]] — 共同点
+- [[183-funnier|funnier]] — funny 的比较级（短词规则）
+- [[218-比较级（长词more）|比较级（长词more）]] — 语法详解
+- [[179-both-of-us|both-of-us]] — 比较句搭配
+- [[185-in-common|in-common]] — 共同点

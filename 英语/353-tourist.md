@@ -76,4 +76,4 @@ aliases: [tourist, tourism, 游客, 旅游者, 旅游]
 
 ## 🔗 相关词条
 
-[[landscape]] · [[souvenir]] · [[journey-高中]] · [[cycle-动词]] · [[定语从句-高中入门]] · [[现在完成时-高中深化]] · [[过去完成时]]
+[[346-landscape|landscape]] · [[351-souvenir|souvenir]] · [[345-journey-高中|journey-高中]] · [[339-cycle-动词|cycle-动词]] · [[359-定语从句-高中入门|定语从句-高中入门]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[364-过去完成时|过去完成时]]

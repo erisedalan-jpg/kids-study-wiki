@@ -65,10 +65,10 @@ aliases: [expedition, 探险, 考察, 远征]
 
 ## 🔗 相关词条
 
-- [[landscape-高中]]
-- [[wildlife-高中]]
-- [[panda]]
-- [[过去分词作状语]]
-- [[过去分词作定语]]
-- [[What-impressed-me-most]]
-- [[Now-that-既然]]
+- [[467-landscape-高中|landscape-高中]]
+- [[473-wildlife-高中|wildlife-高中]]
+- [[140-panda|panda]]
+- [[485-过去分词作状语|过去分词作状语]]
+- [[484-过去分词作定语|过去分词作定语]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[489-Now-that-既然|Now-that-既然]]

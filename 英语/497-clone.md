@@ -53,10 +53,10 @@ aliases: [clone, 克隆, cloning, cloned]
 
 ## 🔗 相关词条
 
-- [[science-fiction]]
-- [[robot-高中]]
-- [[imagination]]
-- [[名词性从句-that]]
-- [[名词性从句-whether-if]]
-- [[It-makes-no-sense-to-do]]
-- [[engineer]]
+- [[513-science-fiction|science-fiction]]
+- [[512-robot-高中|robot-高中]]
+- [[504-imagination|imagination]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[501-engineer|engineer]]

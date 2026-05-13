@@ -91,6 +91,6 @@ aliases: [Have-you-ever-been-to, Have you ever been to...？, have you ever been
 
 ## 相关词条
 
-- [[现在完成时入门]] — have/has + 过去分词
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词
 - [[already / yet 用法]] — 完成时副词
 - [[I have already / I haven't...yet.]] — 完成时核心句型

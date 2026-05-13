@@ -12,7 +12,7 @@ aliases: [What-do-you-think-of-高中, What do you think of, 你对...怎么看,
 
 ## 🎓 What do you think of...?（高中）
 
-> 初中已学：[[What-do-you-think-of]]（基础用法）  
+> 初中已学：[[327-What-do-you-think-of|What-do-you-think-of]]（基础用法）  
 > 本词条：高中深化 — 多种"表达观点"句式 + 学术写作应用
 
 ### 结构分析
@@ -85,4 +85,4 @@ aliases: [What-do-you-think-of-高中, What do you think of, 你对...怎么看,
 
 ## 🔗 相关词条
 
-[[What-do-you-think-of]] · [[appreciate]] · [[recommend-高中]] · [[宾语从句-高中]] · [[名词性从句-入门]] · [[not-only-but-also]] · [[would-rather-do-than]]
+[[327-What-do-you-think-of|What-do-you-think-of]] · [[334-appreciate|appreciate]] · [[347-recommend-高中|recommend-高中]] · [[360-宾语从句-高中|宾语从句-高中]] · [[356-名词性从句-入门|名词性从句-入门]] · [[372-not-only-but-also|not-only-but-also]] · [[373-would-rather-do-than|would-rather-do-than]]

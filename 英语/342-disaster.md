@@ -75,4 +75,4 @@ aliases: [disaster, disastrous, 灾难, 灾害, 天灾]
 
 ## 🔗 相关词条
 
-[[survive]] · [[damage]] · [[rescue]] · [[过去进行时-高中]] · [[过去完成时]] · [[as-soon-as]] · [[not-only-but-also]]
+[[352-survive|survive]] · [[340-damage|damage]] · [[349-rescue|rescue]] · [[365-过去进行时-高中|过去进行时-高中]] · [[364-过去完成时|过去完成时]] · [[370-as-soon-as|as-soon-as]] · [[372-not-only-but-also|not-only-but-also]]

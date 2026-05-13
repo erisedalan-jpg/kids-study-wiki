@@ -70,9 +70,9 @@ aliases: [It-stands-to-reason-that, it stands to reason, 理所当然, 合乎情
 
 ## 🔗 相关词条
 
-- [[It-makes-perfect-sense]]
-- [[Beyond-the-shadow-of-doubt]]
-- [[Given-the-fact-that]]
-- [[Now-that-在新形势下]]
-- [[In-conclusion-写作]]
-- [[高考语法综合复习]]
+- [[610-It-makes-perfect-sense|It-makes-perfect-sense]]
+- [[606-Beyond-the-shadow-of-doubt|Beyond-the-shadow-of-doubt]]
+- [[608-Given-the-fact-that|Given-the-fact-that]]
+- [[613-Now-that-在新形势下|Now-that-在新形势下]]
+- [[609-In-conclusion-写作|In-conclusion-写作]]
+- [[605-高考语法综合复习|高考语法综合复习]]

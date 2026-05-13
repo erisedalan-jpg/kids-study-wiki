@@ -86,6 +86,6 @@ aliases: [wonderful, 美妙的, 极好的]
 
 ## 相关词条
 
-- [[vacation]] — 假期
-- [[diary]] — 日记
-- [[went]] — 去了
+- [[203-vacation|vacation]] — 假期
+- [[182-diary|diary]] — 日记
+- [[204-went|went]] — 去了

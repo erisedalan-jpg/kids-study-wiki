@@ -80,10 +80,10 @@ aliases: [情态动词-could-would, could would, 情态动词过去式]
 
 ## 🔗 相关词条
 
-- [[情态动词推测-过去]]
-- [[情态动词-must-may-might]]
-- [[情态动词-shall-should]]
-- [[动名词作宾语]]
-- [[the-reason-why-is-that]]
-- [[Now-that-既然]]
-- [[Only-when-倒装]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]
+- [[481-情态动词-must-may-might|情态动词-must-may-might]]
+- [[482-情态动词-shall-should|情态动词-shall-should]]
+- [[477-动名词作宾语|动名词作宾语]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[490-Only-when-倒装|Only-when-倒装]]

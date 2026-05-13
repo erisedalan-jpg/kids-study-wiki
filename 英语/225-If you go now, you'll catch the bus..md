@@ -90,6 +90,6 @@ aliases: ["If you go now, you'll catch the bus.", If you go now, you'll catch th
 
 ## 相关词条
 
-- [[if条件句（一类条件）]] — 语法详解
-- [[一般将来时（will）]] — will 的用法
-- [[一般将来时（be going to）]] — be going to
+- [[209-if条件句（一类条件）|if条件句（一类条件）]] — 语法详解
+- [[211-一般将来时（will）|一般将来时（will）]] — will 的用法
+- [[210-一般将来时（be going to）|一般将来时（be going to）]] — be going to

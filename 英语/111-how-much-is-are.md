@@ -97,9 +97,9 @@ aliases: [how-much-is-are, How much is, How much are, 多少钱, 问价格]
 
 ## 🔗 相关词条
 
-- [[prices]]
-- [[cardinal-numbers-1-100]]
-- [[be-verb-am-is-are]]
-- [[demonstrative-pronouns]]
-- [[hamburger]]
-- [[apple]]
+- [[092-prices|prices]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[100-demonstrative-pronouns|demonstrative-pronouns]]
+- [[084-hamburger|hamburger]]
+- [[068-apple|apple]]

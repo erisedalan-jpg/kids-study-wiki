@@ -94,8 +94,8 @@ aliases: [teacher, 老师, 教师, teachers]
 
 ## 🔗 相关词条
 
-- [[reporter]]
-- [[doctor]]
-- [[waiter]]
-- [[I-want-to-be]]
-- [[classroom-rule]]
+- [[142-reporter|reporter]]
+- [[057-职业|doctor]]
+- [[151-waiter|waiter]]
+- [[168-I-want-to-be|I-want-to-be]]
+- [[128-classroom-rule|classroom-rule]]

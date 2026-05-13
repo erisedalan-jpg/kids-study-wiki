@@ -67,10 +67,10 @@ aliases: [wildlife-高中, wildlife, 野生动物, 野生动植物]
 
 ## 🔗 相关词条
 
-- [[landscape-高中]]
-- [[panda]]
-- [[expedition]]
-- [[过去分词作定语]]
-- [[过去分词作状语]]
-- [[Now-that-既然]]
-- [[the-fact-that-同位语]]
+- [[467-landscape-高中|landscape-高中]]
+- [[140-panda|panda]]
+- [[460-expedition|expedition]]
+- [[484-过去分词作定语|过去分词作定语]]
+- [[485-过去分词作状语|过去分词作状语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]

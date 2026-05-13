@@ -65,10 +65,10 @@ aliases: [panda, 大熊猫, giant panda, 熊猫]
 
 ## 🔗 相关词条
 
-- [[wildlife-高中]]
-- [[landscape-高中]]
-- [[expedition]]
-- [[过去分词作定语]]
-- [[Now-that-既然]]
-- [[the-fact-that-同位语]]
-- [[What-impressed-me-most]]
+- [[473-wildlife-高中|wildlife-高中]]
+- [[467-landscape-高中|landscape-高中]]
+- [[460-expedition|expedition]]
+- [[484-过去分词作定语|过去分词作定语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]

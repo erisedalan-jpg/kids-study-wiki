@@ -80,4 +80,4 @@ aliases: [cycle-动词, cycle, cycling, 骑自行车, 循环]
 
 ## 🔗 相关词条
 
-[[tourist]] · [[journey-高中]] · [[athlete]] · [[fitness]] · [[landscape]] · [[souvenir]] · [[as-soon-as]]
+[[353-tourist|tourist]] · [[345-journey-高中|journey-高中]] · [[335-athlete|athlete]] · [[343-fitness|fitness]] · [[346-landscape|landscape]] · [[351-souvenir|souvenir]] · [[370-as-soon-as|as-soon-as]]

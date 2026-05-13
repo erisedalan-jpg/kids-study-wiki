@@ -71,10 +71,10 @@ aliases: [restore, 修复, 恢复, restoration]
 
 ## 🔗 相关词条
 
-- [[heritage]]
-- [[monument]]
-- [[preserve]]
-- [[endangered]]
-- [[habitat]]
-- [[It-is-reported-that]]
-- [[被动语态]]
+- [[379-heritage|heritage]]
+- [[386-monument|monument]]
+- [[388-preserve|preserve]]
+- [[376-endangered|endangered]]
+- [[378-habitat|habitat]]
+- [[407-It-is-reported-that|It-is-reported-that]]
+- [[274-被动语态入门|被动语态]]

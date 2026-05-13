@@ -66,9 +66,9 @@ aliases: [wherever, 无论在哪里, 无论到哪里]
 
 ## 🔗 相关词条
 
-- [[wh-ever-复合词]]
-- [[whatever]]
-- [[whoever]]
-- [[whenever]]
-- [[状语从句-让步]]
-- [[定语从句-where-when-why]]
+- [[595-wh-ever-复合词|wh-ever-复合词]]
+- [[596-whatever|whatever]]
+- [[599-whoever|whoever]]
+- [[597-whenever|whenever]]
+- [[440-状语从句-让步|状语从句-让步]]
+- [[357-定语从句-where-when-why|定语从句-where-when-why]]

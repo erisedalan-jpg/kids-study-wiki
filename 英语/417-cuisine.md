@@ -50,9 +50,9 @@ aliases: [cuisine, 菜肴, 烹饪, 料理]
 
 ## 🔗 相关词条
 
-- [[culture-高中]]
-- [[diverse]]
-- [[multicultural]]
-- [[tradition-习俗]]
-- [[虚拟语气-入门]]
-- [[as-if-as-though]]
+- [[418-culture-高中|culture-高中]]
+- [[421-diverse|diverse]]
+- [[426-multicultural|multicultural]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[445-虚拟语气-入门|虚拟语气-入门]]
+- [[449-as-if-as-though|as-if-as-though]]

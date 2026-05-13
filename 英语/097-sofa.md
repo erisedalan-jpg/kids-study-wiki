@@ -81,9 +81,9 @@ aliases: [sofa, 沙发, couch]
 
 ## 🔗 相关词条
 
-- [[desk]]
-- [[chair]]
-- [[bookcase]]
-- [[drawer]]
-- [[preposition-phrase]]
-- [[there-be]]
+- [[031-教室物品|desk]]
+- [[032-房间-家具|chair]]
+- [[070-bookcase|bookcase]]
+- [[076-drawer|drawer]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[107-there-be|there-be]]

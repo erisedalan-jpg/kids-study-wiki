@@ -90,7 +90,7 @@ aliases: [mysterious, 神秘的, 神秘]
 
 ## 相关词条
 
-- [[ancient]] — 古老的
-- [[achievement]] — 成就
-- [[civilization]] — 文明
-- [[wonder]] — 奇观
+- [[233-ancient|ancient]] — 古老的
+- [[231-achievement|achievement]] — 成就
+- [[236-civilization|civilization]] — 文明
+- [[263-wonder|wonder]] — 奇观

@@ -82,9 +82,9 @@ always（100%）> usually（80%）> often（60%）> sometimes（40%）> hardly e
 
 ## 相关词条
 
-- [[usually]] — 通常
-- [[often]] — 经常
-- [[sometimes]] — 有时
-- [[hardly-ever]] — 几乎从不
-- [[never]] — 从不
-- [[How often do you exercise？]] — 核心句型
+- [[202-usually|usually]] — 通常
+- [[191-often|often]] — 经常
+- [[198-sometimes|sometimes]] — 有时
+- [[184-hardly-ever|hardly-ever]] — 几乎从不
+- [[190-never|never]] — 从不
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

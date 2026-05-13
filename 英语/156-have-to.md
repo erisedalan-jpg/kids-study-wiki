@@ -85,7 +85,7 @@ aliases: [have-to, 不得不, have to, has to, 必须]
 
 ## 🔗 相关词条
 
-- [[must-mustnt]]
-- [[can-cant]]
-- [[rule]]
-- [[classroom-rule]]
+- [[158-must-mustnt|must-mustnt]]
+- [[154-can-cant|can-cant]]
+- [[093-ruler|rule]]
+- [[128-classroom-rule|classroom-rule]]

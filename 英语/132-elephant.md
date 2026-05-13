@@ -88,9 +88,9 @@ aliases: [elephant, 大象, elephants]
 
 ## 🔗 相关词条
 
-- [[lion]]
-- [[tiger]]
-- [[panda]]
-- [[giraffe]]
-- [[koala]]
-- [[Why-do-you-like]]
+- [[136-lion|lion]]
+- [[149-tiger|tiger]]
+- [[140-panda|panda]]
+- [[133-giraffe|giraffe]]
+- [[134-koala|koala]]
+- [[172-Why-do-you-like|Why-do-you-like]]

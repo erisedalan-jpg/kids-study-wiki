@@ -93,7 +93,7 @@ aliases: [rRNA, 核糖体RNA, ribosomal RNA]
 - **生成校对**：Claude 生成于 2026-05-10
 
 ## 🔗 相关词条
-- [[mRNA]]
-- [[tRNA]]
-- [[翻译]]
-- [[中心法则]]
+- [[292-mRNA|mRNA]]
+- [[294-tRNA|tRNA]]
+- [[466-interpret|翻译]]
+- [[295-中心法则|中心法则]]

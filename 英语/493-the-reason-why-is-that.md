@@ -78,10 +78,10 @@ The reason for + 名词/动名词 is that...
 
 ## 🔗 相关词条
 
-- [[It-occurred-to-me-that]]
-- [[What-impressed-me-most]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
-- [[achievement-高中]]
-- [[gesture]]
-- [[动名词作主语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[455-achievement-高中|achievement-高中]]
+- [[463-gesture|gesture]]
+- [[476-动名词作主语|动名词作主语]]

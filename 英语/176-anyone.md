@@ -79,6 +79,6 @@ aliases: [anyone, 任何人, 有人]
 
 ## 相关词条
 
-- [[anywhere]] — 任何地方
-- [[vacation]] — 假期
-- [[Where did you go on vacation？]] — 核心句型
+- [[177-anywhere|anywhere]] — 任何地方
+- [[203-vacation|vacation]] — 假期
+- [[228-Where did you go on vacation？|Where did you go on vacation？]] — 核心句型

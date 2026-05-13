@@ -96,10 +96,10 @@ aliases: [whats-your-name, What's your name, 你叫什么名字]
 
 ## 🔗 相关词条
 
-- [[name]]
-- [[hello]]
-- [[how-are-you]]
-- [[be-verb-am-is-are]]
-- [[possessive-pronouns]]
-- [[family-name]]
-- [[given-name]]
+- [[088-name|name]]
+- [[085-hello|hello]]
+- [[110-how-are-you|how-are-you]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[103-possessive-pronouns|possessive-pronouns]]
+- [[078-family-name|family-name]]
+- [[082-given-name|given-name]]

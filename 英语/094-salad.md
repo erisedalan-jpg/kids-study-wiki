@@ -82,9 +82,9 @@ aliases: [salad, 沙拉]
 
 ## 🔗 相关词条
 
-- [[apple]]
-- [[banana]]
-- [[vegetable]]
-- [[fruit]]
-- [[i-like]]
-- [[how-much-is-are]]
+- [[068-apple|apple]]
+- [[069-banana|banana]]
+- [[098-vegetable|vegetable]]
+- [[081-fruit|fruit]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]

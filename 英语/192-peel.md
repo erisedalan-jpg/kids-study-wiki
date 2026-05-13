@@ -87,8 +87,8 @@ aliases: [peel, 削皮, 剥皮]
 
 ## 相关词条
 
-- [[mix]] — 混合
-- [[chop]] — 切碎
-- [[pour]] — 倒入
-- [[smoothie]] — 冰沙
-- [[How do you make...？]] — 核心句型
+- [[188-mix|mix]] — 混合
+- [[181-chop|chop]] — 切碎
+- [[193-pour|pour]] — 倒入
+- [[197-smoothie|smoothie]] — 冰沙
+- [[220-How do you make...？|How do you make...？]] — 核心句型

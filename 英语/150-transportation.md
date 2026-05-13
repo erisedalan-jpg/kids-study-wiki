@@ -90,8 +90,8 @@ aliases: [transportation, 交通运输, transport, 交通]
 
 ## 🔗 相关词条
 
-- [[take-a-bus]]
-- [[ride-a-bike]]
-- [[walk-to-school]]
-- [[by-train]]
-- [[How-do-you-go-to-school]]
+- [[147-take-a-bus|take-a-bus]]
+- [[143-ride-a-bike|ride-a-bike]]
+- [[152-walk-to-school|walk-to-school]]
+- [[127-by-train|by-train]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

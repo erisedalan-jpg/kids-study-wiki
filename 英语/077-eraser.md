@@ -79,9 +79,9 @@ aliases: [eraser, 橡皮, rubber]
 
 ## 🔗 相关词条
 
-- [[pencil]]
-- [[ruler]]
-- [[schoolbag]]
-- [[notebook]]
-- [[is-are-this-that]]
-- [[preposition-phrase]]
+- [[029-学校用品|pencil]]
+- [[029-学校用品|ruler]]
+- [[095-schoolbag|schoolbag]]
+- [[089-notebook|notebook]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[105-preposition-phrase|preposition-phrase]]

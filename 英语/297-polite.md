@@ -101,4 +101,4 @@ aliases: [polite, 礼貌的, 有礼貌, 客气的]
 
 ## 🔗 相关词条
 
-[[restroom]] · [[Could-you-please-tell-me-where]] · [[间接引语-疑问句]] · [[礼貌用语]] · [[You-are-supposed-to]] · [[custom]] · [[宾语从句-初中]]
+[[303-restroom|restroom]] · [[322-Could-you-please-tell-me-where|Could-you-please-tell-me-where]] · [[321-间接引语-疑问句|间接引语-疑问句]] · [[002-礼貌用语|礼貌用语]] · [[333-You-are-supposed-to|You-are-supposed-to]] · [[288-custom|custom]] · [[315-宾语从句-初中|宾语从句-初中]]

@@ -55,8 +55,8 @@ aliases: [lifestyle, 生活方式, way of life]
 
 ## 🔗 相关词条
 
-- [[physical]]
-- [[mental]]
-- [[addiction]]
-- [[prevent]]
-- [[sustainable]]
+- [[546-physical|physical]]
+- [[543-mental|mental]]
+- [[534-addiction|addiction]]
+- [[549-prevent|prevent]]
+- [[552-sustainable|sustainable]]

@@ -58,7 +58,7 @@ aliases: [pollution, 污染]
 - The air **is polluted** by car exhaust. 空气被汽车尾气污染。（现在被动）
 - Many lakes **were polluted** in the past. 过去许多湖泊遭受污染。（过去被动）
 
-（详见 [[被动语态入门]]）
+（详见 [[274-被动语态入门|被动语态入门]]）
 
 ### 解决方案
 
@@ -92,7 +92,7 @@ aliases: [pollution, 污染]
 
 ## 相关词条
 
-- [[environment]] — 环境
-- [[future]] — 未来
-- [[被动语态入门]] — be + 过去分词
-- [[It's important to...]] — 重要性句型
+- [[240-environment|environment]] — 环境
+- [[245-future|future]] — 未来
+- [[274-被动语态入门|被动语态入门]] — be + 过去分词
+- [[619-It's important to|It's important to...]] — 重要性句型

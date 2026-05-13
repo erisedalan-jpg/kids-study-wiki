@@ -89,9 +89,9 @@ aliases: [i-have-do-you-have, I have, Do you have, have句型]
 
 ## 🔗 相关词条
 
-- [[simple-present-tense]]
-- [[yes-no-questions]]
-- [[there-be]]
-- [[noun-plurals]]
-- [[schoolbag]]
-- [[dictionary]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[107-there-be|there-be]]
+- [[102-noun-plurals|noun-plurals]]
+- [[095-schoolbag|schoolbag]]
+- [[075-dictionary|dictionary]]

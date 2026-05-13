@@ -89,8 +89,8 @@ aliases: [I'd like to invite you to..., I'd like to invite, 邀请句型, 我想
 
 ## 相关词条
 
-- [[invite]] — 邀请（动词）
-- [[available]] — 有空的
-- [[accept]] — 接受
-- [[refuse]] — 拒绝
-- [[Can you come to my party？]] — 口语邀请句型
+- [[186-invite|invite]] — 邀请（动词）
+- [[178-available|available]] — 有空的
+- [[174-accept|accept]] — 接受
+- [[195-refuse|refuse]] — 拒绝
+- [[219-Can you come to my party？|Can you come to my party？]] — 口语邀请句型

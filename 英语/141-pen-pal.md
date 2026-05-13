@@ -90,10 +90,10 @@ Your pen pal,
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Australia]]
-- [[Japan]]
-- [[Singapore]]
-- [[language]]
-- [[native-speaker]]
-- [[Where-are-you-from]]
+- [[120-Canada|Canada]]
+- [[119-Australia|Australia]]
+- [[121-Japan|Japan]]
+- [[122-Singapore|Singapore]]
+- [[135-language|language]]
+- [[138-native-speaker|native-speaker]]
+- [[171-Where-are-you-from|Where-are-you-from]]

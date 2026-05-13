@@ -70,10 +70,10 @@ aliases: [It-is-high-time-that, it is high time that, 早该句型]
 
 ## 🔗 相关词条
 
-- [[It-is-time-to-do]]
-- [[虚拟语气]]
+- [[448-It-is-time-to-do|It-is-time-to-do]]
+- [[445-虚拟语气-入门|虚拟语气]]
 - [[wish虚拟语气]]
-- [[as-if-as-though]]
-- [[festival]]
-- [[celebration]]
+- [[449-as-if-as-though|as-if-as-though]]
+- [[422-festival-高中|festival]]
+- [[415-celebrate|celebration]]
 - [[情态动词should]]

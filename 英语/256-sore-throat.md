@@ -87,7 +87,7 @@ aliases: [sore-throat, sore throat, 喉咙痛, 嗓子疼]
 
 ## 相关词条
 
-- [[matter]] — what's the matter
-- [[fever]] — 发烧
-- [[cough]] — 咳嗽
-- [[You should...]] — 建议句型
+- [[249-matter|matter]] — what's the matter
+- [[062-看病|fever]] — 发烧
+- [[238-cough|cough]] — 咳嗽
+- [[616-You should|You should...]] — 建议句型

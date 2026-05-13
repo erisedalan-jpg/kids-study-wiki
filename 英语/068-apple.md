@@ -83,9 +83,9 @@ aliases: [apple, 苹果]
 
 ## 🔗 相关词条
 
-- [[banana]]
-- [[salad]]
-- [[fruit]]
-- [[vegetable]]
-- [[i-like]]
-- [[how-much-is-are]]
+- [[069-banana|banana]]
+- [[094-salad|salad]]
+- [[081-fruit|fruit]]
+- [[098-vegetable|vegetable]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]

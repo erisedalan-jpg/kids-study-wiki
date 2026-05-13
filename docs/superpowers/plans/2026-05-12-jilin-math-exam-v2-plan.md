@@ -1460,7 +1460,7 @@ class TestRenderAtom(unittest.TestCase):
 
     def test_includes_tags_backlinks(self):
         text = render_atom(self.qa_meta, self.q)
-        self.assertIn("[[集合的运算]]", text)
+        self.assertIn("[[314-集合的运算|集合的运算]]", text)
         self.assertIn("[[并集]]", text)
 
     def test_summary_section(self):

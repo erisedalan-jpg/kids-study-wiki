@@ -98,8 +98,8 @@ aliases: [imperative-sentence, 祈使句, 命令句, Don't Please don't]
 
 ## 🔗 相关词条
 
-- [[must-mustnt]]
-- [[rule]]
-- [[classroom-rule]]
-- [[Dont-Please-dont]]
-- [[can-cant]]
+- [[158-must-mustnt|must-mustnt]]
+- [[093-ruler|rule]]
+- [[128-classroom-rule|classroom-rule]]
+- [[165-Dont-Please-dont|Dont-Please-dont]]
+- [[154-can-cant|can-cant]]

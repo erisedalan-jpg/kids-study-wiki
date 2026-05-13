@@ -54,9 +54,9 @@ aliases: [the-thing-is-that, the thing is that, the thing is, 关键是/问题�
 
 ## 🔗 相关词条
 
-- [[名词性从句-that]]
-- [[It-strikes-me-that]]
-- [[What-matters-is]]
-- [[It-makes-no-sense-to-do]]
-- [[cuisine-高中]]
-- [[cultural-exchange]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]
+- [[532-What-matters-is|What-matters-is]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[498-cuisine-高中|cuisine-高中]]
+- [[499-cultural-exchange|cultural-exchange]]

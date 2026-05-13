@@ -83,9 +83,9 @@ aliases: [sister, 姐妹, 姐姐, 妹妹]
 
 ## 🔗 相关词条
 
-- [[brother]]
-- [[father]]
-- [[mother]]
-- [[grandparents]]
-- [[family-tree]]
-- [[noun-plurals]]
+- [[071-brother|brother]]
+- [[080-father|father]]
+- [[087-mother|mother]]
+- [[083-grandparents|grandparents]]
+- [[079-family-tree|family-tree]]
+- [[102-noun-plurals|noun-plurals]]

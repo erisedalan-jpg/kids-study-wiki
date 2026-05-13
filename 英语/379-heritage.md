@@ -70,10 +70,10 @@ aliases: [heritage, 遗产, cultural heritage]
 
 ## 🔗 相关词条
 
-- [[monument]]
-- [[preserve]]
-- [[restore]]
-- [[endangered]]
-- [[tradition-高中]]
-- [[legend]]
-- [[关系副词-where-when-why]]
+- [[386-monument|monument]]
+- [[388-preserve|preserve]]
+- [[389-restore|restore]]
+- [[376-endangered|endangered]]
+- [[392-tradition-高中|tradition-高中]]
+- [[383-legend|legend]]
+- [[398-关系副词-where-when-why|关系副词-where-when-why]]

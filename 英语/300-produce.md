@@ -98,4 +98,4 @@ Unit 5 的核心语法：
 
 ## 🔗 相关词条
 
-[[material]] · [[What-is-it-made-of]] · [[Where-is-it-made]] · [[被动语态-was-made-of]] · [[现在被动语态]] · [[invent]] · [[被动语态入门]]
+[[294-material|material]] · [[328-What-is-it-made-of|What-is-it-made-of]] · [[331-Where-is-it-made|Where-is-it-made]] · [[320-被动语态-was-made-of|被动语态-was-made-of]] · [[273-现在被动语态|现在被动语态]] · [[291-invent|invent]] · [[274-被动语态入门|被动语态入门]]

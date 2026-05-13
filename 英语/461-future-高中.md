@@ -66,10 +66,10 @@ aliases: [future-高中, future, 未来, 将来]
 
 ## 🔗 相关词条
 
-- [[breakthrough]]
-- [[innovation]]
-- [[prediction]]
-- [[tendency]]
-- [[Now-that-既然]]
-- [[It-was-not-until-that]]
-- [[the-fact-that-同位语]]
+- [[458-breakthrough|breakthrough]]
+- [[465-innovation|innovation]]
+- [[471-prediction|prediction]]
+- [[472-tendency|tendency]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[488-It-was-not-until-that|It-was-not-until-that]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]

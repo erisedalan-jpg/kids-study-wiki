@@ -92,8 +92,8 @@ aliases: [do-the-dishes, do the dishes, 洗碗, 刷碗]
 
 ## 相关词条
 
-- [[sweep-the-floor]] — 扫地
-- [[take-out-trash]] — 倒垃圾
-- [[fold-clothes]] — 叠衣服
-- [[chore]] — 家务
-- [[Could you please...?]] — 委婉请求
+- [[258-sweep-the-floor|sweep-the-floor]] — 扫地
+- [[260-take-out-trash|take-out-trash]] — 倒垃圾
+- [[244-fold-clothes|fold-clothes]] — 叠衣服
+- [[235-chore|chore]] — 家务
+- [[614-Could you please|Could you please...?]] — 委婉请求

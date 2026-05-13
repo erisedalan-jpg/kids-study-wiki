@@ -95,7 +95,7 @@ aliases: [fall, 跌倒, 落下, 秋天, 下降]
 
 ## 相关词条
 
-- [[environment]] — 环境
-- [[pollution]] — 污染
+- [[240-environment|environment]] — 环境
+- [[251-pollution|pollution]] — 污染
 - [[过去进行时（was/were doing）]] — 过去进行时态
-- [[现在完成时入门]] — have/has + 过去分词
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词

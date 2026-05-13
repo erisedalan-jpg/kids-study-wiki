@@ -70,10 +70,10 @@ aliases: [endangered, 濒危, 濒临灭绝]
 
 ## 🔗 相关词条
 
-- [[wildlife]]
-- [[species]]
-- [[extinct]]
-- [[habitat]]
-- [[preserve]]
-- [[现在完成进行时-深化]]
-- [[It-is-believed-that]]
+- [[393-wildlife|wildlife]]
+- [[390-species|species]]
+- [[377-extinct|extinct]]
+- [[378-habitat|habitat]]
+- [[388-preserve|preserve]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]
+- [[406-It-is-believed-that|It-is-believed-that]]

@@ -100,6 +100,6 @@ aliases: [Why-dont-you, Why don't you...？, why don't you, 你为什么不, 何
 ## 相关词条
 
 - [[You should... / You shouldn't...]] — 建议句型
-- [[Could you please...?]] — 礼貌请求
-- [[argue]] — 争吵（友谊话题）
+- [[614-Could you please|Could you please...?]] — 礼貌请求
+- [[234-argue|argue]] — 争吵（友谊话题）
 - [[I think / I don't think...]] — 表达观点

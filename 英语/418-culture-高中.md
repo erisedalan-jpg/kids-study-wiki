@@ -51,9 +51,9 @@ aliases: [culture-高中, culture, 文化]
 
 ## 🔗 相关词条
 
-- [[diverse]]
-- [[multicultural]]
-- [[cuisine]]
-- [[tradition-习俗]]
-- [[religion]]
-- [[虚拟语气-入门]]
+- [[421-diverse|diverse]]
+- [[426-multicultural|multicultural]]
+- [[417-cuisine|cuisine]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[429-religion|religion]]
+- [[445-虚拟语气-入门|虚拟语气-入门]]

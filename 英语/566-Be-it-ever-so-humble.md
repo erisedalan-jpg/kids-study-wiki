@@ -76,8 +76,8 @@ Be it ever so + 形容词 = Though/However + 主语 + may be + 形容词
 
 ## 🔗 相关词条
 
-- [[however-引导让步]]
-- [[Come-what-may]]
-- [[虚拟语气-综合]]
-- [[poem]]
-- [[verse]]
+- [[573-however-引导让步|however-引导让步]]
+- [[567-Come-what-may|Come-what-may]]
+- [[565-虚拟语气-综合|虚拟语气-综合]]
+- [[547-poem|poem]]
+- [[553-verse|verse]]

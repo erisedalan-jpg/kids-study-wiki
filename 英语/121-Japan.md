@@ -86,9 +86,9 @@ aliases: [Japan, 日本, Japanese]
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Australia]]
-- [[Singapore]]
-- [[Tokyo]]
-- [[pen-pal]]
-- [[language]]
+- [[120-Canada|Canada]]
+- [[119-Australia|Australia]]
+- [[122-Singapore|Singapore]]
+- [[124-Tokyo|Tokyo]]
+- [[141-pen-pal|pen-pal]]
+- [[135-language|language]]

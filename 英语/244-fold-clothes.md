@@ -85,8 +85,8 @@ aliases: [fold-clothes, fold clothes, 叠衣服, 折叠衣物]
 
 ## 相关词条
 
-- [[do-the-dishes]] — 洗碗
-- [[sweep-the-floor]] — 扫地
-- [[take-out-trash]] — 倒垃圾
-- [[chore]] — 家务
-- [[Could you please...?]] — 委婉请求
+- [[239-do-the-dishes|do-the-dishes]] — 洗碗
+- [[258-sweep-the-floor|sweep-the-floor]] — 扫地
+- [[260-take-out-trash|take-out-trash]] — 倒垃圾
+- [[235-chore|chore]] — 家务
+- [[614-Could you please|Could you please...?]] — 委婉请求

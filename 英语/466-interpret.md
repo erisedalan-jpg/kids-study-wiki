@@ -66,10 +66,10 @@ aliases: [interpret, 解读, 口译, 翻译, interpretation]
 
 ## 🔗 相关词条
 
-- [[gesture]]
-- [[posture]]
-- [[the-reason-why-is-that]]
-- [[It-occurred-to-me-that]]
-- [[情态动词-must-may-might]]
-- [[What-impressed-me-most]]
-- [[Now-that-既然]]
+- [[463-gesture|gesture]]
+- [[470-posture|posture]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[481-情态动词-must-may-might|情态动词-must-may-might]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[489-Now-that-既然|Now-that-既然]]

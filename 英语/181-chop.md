@@ -87,8 +87,8 @@ aliases: [chop, 切碎, 剁碎]
 
 ## 相关词条
 
-- [[mix]] — 混合
-- [[peel]] — 削皮
-- [[pour]] — 倒入
-- [[recipe]] — 食谱
-- [[How do you make...？]] — 核心句型
+- [[188-mix|mix]] — 混合
+- [[192-peel|peel]] — 削皮
+- [[193-pour|pour]] — 倒入
+- [[194-recipe|recipe]] — 食谱
+- [[220-How do you make...？|How do you make...？]] — 核心句型

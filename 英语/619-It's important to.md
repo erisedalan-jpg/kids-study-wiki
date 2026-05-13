@@ -71,7 +71,7 @@ aliases: ["It's important to...", "It's important to", "It is important to", 重
 
 ## 🔗 相关词条
 
-[[Could you please]] · [[You should]] · [[Why don't you]] · [[一般疑问句]] · [[句子结构-语序]] · [[祈使句]] · [[感叹句]] · [[宾语从句]]
+[[614-Could you please|Could you please]] · [[616-You should|You should]] · [[615-Why don't you|Why don't you]] · [[108-yes-no-questions|一般疑问句]] · [[603-句子结构-语序|句子结构-语序]] · [[537-祈使句|祈使句]] · [[498-感叹句|感叹句]] · [[315-宾语从句-初中|宾语从句]]
 
 ---
 

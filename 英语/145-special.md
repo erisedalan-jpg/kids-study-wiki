@@ -84,8 +84,8 @@ aliases: [special, 特色, 特别的, specialty, 招牌菜]
 
 ## 🔗 相关词条
 
-- [[dumpling]]
-- [[noodles]]
-- [[beef]]
-- [[mutton]]
-- [[waiter]]
+- [[131-dumpling|dumpling]]
+- [[139-noodles|noodles]]
+- [[126-beef|beef]]
+- [[137-mutton|mutton]]
+- [[151-waiter|waiter]]

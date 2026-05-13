@@ -51,9 +51,9 @@ aliases: [celebrate, 庆祝, celebration]
 
 ## 🔗 相关词条
 
-- [[festival-高中]]
-- [[tradition-习俗]]
-- [[culture-高中]]
-- [[religion]]
-- [[It-is-time-to-do]]
-- [[so-that-目的]]
+- [[422-festival-高中|festival-高中]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[418-culture-高中|culture-高中]]
+- [[429-religion|religion]]
+- [[448-It-is-time-to-do|It-is-time-to-do]]
+- [[452-so-that-目的|so-that-目的]]

@@ -92,5 +92,5 @@ aliases: [have to与must区别, have to, must, 情态动词must, 必须]
 
 ## 相关词条
 
-- [[could表过去能力]] — 情态动词 could
-- [[一般将来时（will）]] — will 情态动词
+- [[207-could表过去能力|could表过去能力]] — 情态动词 could
+- [[211-一般将来时（will）|一般将来时（will）]] — will 情态动词

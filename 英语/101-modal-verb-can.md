@@ -88,8 +88,8 @@ aliases: [modal-verb-can, 情态动词can, can, 能力情态动词]
 
 ## 🔗 相关词条
 
-- [[can-you]]
-- [[yes-no-questions]]
-- [[be-verb-am-is-are]]
-- [[simple-present-tense]]
-- [[lets]]
+- [[109-can-you|can-you]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[115-lets|lets]]

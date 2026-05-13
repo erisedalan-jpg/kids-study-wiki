@@ -75,8 +75,8 @@ Such + be 动词 + 主语（+ that 从句）
 
 ## 🔗 相关词条
 
-- [[倒装-so-such句型]]
-- [[倒装-综合]]
-- [[adversity]]
-- [[courage]]
-- [[overcome]]
+- [[556-倒装-so-such句型|倒装-so-such句型]]
+- [[558-倒装-综合|倒装-综合]]
+- [[535-adversity|adversity]]
+- [[539-courage|courage]]
+- [[544-overcome|overcome]]

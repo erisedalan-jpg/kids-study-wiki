@@ -87,9 +87,9 @@ aliases: [invite, 邀请, 请帖]
 
 ## 相关词条
 
-- [[available]] — 有空的
-- [[calendar]] — 日历
-- [[refuse]] — 拒绝
-- [[accept]] — 接受
-- [[I'd like to invite you to...]] — 核心句型
-- [[Can you come to my party？]] — 核心句型
+- [[178-available|available]] — 有空的
+- [[180-calendar|calendar]] — 日历
+- [[195-refuse|refuse]] — 拒绝
+- [[174-accept|accept]] — 接受
+- [[223-I'd like to invite you to...|I'd like to invite you to...]] — 核心句型
+- [[219-Can you come to my party？|Can you come to my party？]] — 核心句型

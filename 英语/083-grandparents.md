@@ -78,9 +78,9 @@ aliases: [grandparents, 祖父母, 爷爷奶奶, 外公外婆]
 
 ## 🔗 相关词条
 
-- [[father]]
-- [[mother]]
-- [[brother]]
-- [[sister]]
-- [[family-tree]]
-- [[age]]
+- [[080-father|father]]
+- [[087-mother|mother]]
+- [[071-brother|brother]]
+- [[096-sister|sister]]
+- [[079-family-tree|family-tree]]
+- [[067-age|age]]

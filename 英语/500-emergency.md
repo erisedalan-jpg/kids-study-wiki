@@ -53,9 +53,9 @@ aliases: [emergency, 紧急情况, emergencies, emergency services]
 
 ## 🔗 相关词条
 
-- [[firstaid]]
-- [[injure]]
-- [[bandage]]
-- [[Suppose-that-假设]]
-- [[名词性从句-whether-if]]
-- [[On-no-account-倒装]]
+- [[502-firstaid|firstaid]]
+- [[505-injure|injure]]
+- [[495-bandage|bandage]]
+- [[531-Suppose-that-假设|Suppose-that-假设]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[530-On-no-account-倒装|On-no-account-倒装]]

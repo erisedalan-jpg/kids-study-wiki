@@ -91,6 +91,6 @@ aliases: [不定式作宾语（want to do）, 不定式作宾语, want to do, in
 
 ## 相关词条
 
-- [[一般将来时（be going to）]] — I'm going to + 原形
-- [[I'm going to be a... when I grow up.]] — 核心句型
-- [[I think that...]] — 表达观点句型
+- [[210-一般将来时（be going to）|一般将来时（be going to）]] — I'm going to + 原形
+- [[224-I'm going to be a... when I grow up.|I'm going to be a... when I grow up.]] — 核心句型
+- [[222-I think that...|I think that...]] — 表达观点句型

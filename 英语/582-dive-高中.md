@@ -63,9 +63,9 @@ aliases: [dive-高中, dive, 潜水, 俯冲, 跳水]
 
 ## 🔗 相关词条
 
-- [[ocean-高中]]
-- [[marine]]
-- [[submarine]]
-- [[current-海流]]
-- [[journey-高中]]
-- [[非谓语-动名词分词区别]]
+- [[589-ocean-高中|ocean-高中]]
+- [[587-marine|marine]]
+- [[592-submarine|submarine]]
+- [[580-current-海流|current-海流]]
+- [[345-journey-高中|journey-高中]]
+- [[603-非谓语-动名词分词区别|非谓语-动名词分词区别]]

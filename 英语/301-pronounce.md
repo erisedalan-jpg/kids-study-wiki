@@ -95,4 +95,4 @@ aliases: [pronounce, 发音, 念出, 说出]
 
 ## 🔗 相关词条
 
-[[pronunciation]] · [[aloud]] · [[textbook]] · [[字母音标]] · [[自然拼读]] · [[native-speaker]] · [[宾语从句-初中]]
+[[302-pronunciation|pronunciation]] · [[286-aloud|aloud]] · [[306-textbook|textbook]] · [[017-字母音标|字母音标]] · [[028-自然拼读|自然拼读]] · [[138-native-speaker|native-speaker]] · [[315-宾语从句-初中|宾语从句-初中]]

@@ -62,7 +62,7 @@ aliases: ["Why don't you", "Why don't you...?", "Why-dont-you", 提议句型, "W
 
 ## 🔗 相关词条
 
-[[Could you please]] · [[You should]] · [[祈使句]] · [[一般疑问句]] · [[感叹句]] · [[句子结构-语序]] · [[特殊疑问句]]
+[[614-Could you please|Could you please]] · [[616-You should|You should]] · [[537-祈使句|祈使句]] · [[108-yes-no-questions|一般疑问句]] · [[498-感叹句|感叹句]] · [[603-句子结构-语序|句子结构-语序]] · [[621-特殊疑问句|特殊疑问句]]
 
 ---
 

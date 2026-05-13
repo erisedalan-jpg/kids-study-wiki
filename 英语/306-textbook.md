@@ -94,4 +94,4 @@ aliases: [textbook, 教科书, 课本, 教材]
 
 ## 🔗 相关词条
 
-[[pronunciation]] · [[notebook]] · [[学校用品]] · [[aloud]] · [[native-speaker]] · [[simple-present-tense]] · [[学习路径]]
+[[302-pronunciation|pronunciation]] · [[089-notebook|notebook]] · [[029-学校用品|学校用品]] · [[286-aloud|aloud]] · [[138-native-speaker|native-speaker]] · [[106-simple-present-tense|simple-present-tense]] · [[学习路径]]

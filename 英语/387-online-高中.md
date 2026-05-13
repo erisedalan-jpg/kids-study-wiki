@@ -73,10 +73,10 @@ aliases: [online-高中, online, 在线, 网络的]
 
 ## 🔗 相关词条
 
-- [[internet]]
-- [[digital-高中]]
-- [[find-it-adj-to-do]]
-- [[make-it-clear-that]]
-- [[the-more-the-more]]
-- [[宾语从句-高中]]
-- [[Whether-If引导宾语从句]]
+- [[381-internet|internet]]
+- [[375-digital-高中|digital-高中]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[412-the-more-the-more|the-more-the-more]]
+- [[360-宾语从句-高中|宾语从句-高中]]
+- [[394-Whether-If引导宾语从句|Whether-If引导宾语从句]]

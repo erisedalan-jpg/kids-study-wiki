@@ -73,10 +73,10 @@ aliases: [It-is-said-that, it is said that, 据说句型]
 
 ## 🔗 相关词条
 
-- [[It-is-believed-that]]
-- [[It-is-reported-that]]
-- [[make-it-clear-that]]
-- [[find-it-adj-to-do]]
-- [[heritage]]
-- [[legend]]
-- [[非限定性定语从句]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[407-It-is-reported-that|It-is-reported-that]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[379-heritage|heritage]]
+- [[383-legend|legend]]
+- [[358-定语从句-限定与非限定|非限定性定语从句]]

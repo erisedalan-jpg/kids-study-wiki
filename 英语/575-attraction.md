@@ -65,9 +65,9 @@ aliases: [attraction, 景点, 吸引力, attract]
 
 ## 🔗 相关词条
 
-- [[iconic]]
-- [[architecture]]
-- [[monument-高中]]
-- [[landscape-高中]]
-- [[journey-高中]]
-- [[定语从句先行词复杂]]
+- [[583-iconic|iconic]]
+- [[494-architect|architecture]]
+- [[588-monument-高中|monument-高中]]
+- [[467-landscape-高中|landscape-高中]]
+- [[345-journey-高中|journey-高中]]
+- [[601-定语从句先行词复杂|定语从句先行词复杂]]

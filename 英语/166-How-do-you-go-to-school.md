@@ -83,9 +83,9 @@ A: I walk. My school is very close to my home.
 
 ## 🔗 相关词条
 
-- [[take-a-bus]]
-- [[ride-a-bike]]
-- [[walk-to-school]]
-- [[by-train]]
-- [[transportation]]
-- [[frequency-adverbs]]
+- [[147-take-a-bus|take-a-bus]]
+- [[143-ride-a-bike|ride-a-bike]]
+- [[152-walk-to-school|walk-to-school]]
+- [[127-by-train|by-train]]
+- [[056-出行方式|transportation]]
+- [[155-frequency-adverbs|frequency-adverbs]]

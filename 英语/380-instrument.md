@@ -69,10 +69,10 @@ aliases: [instrument, 乐器, 仪器, 工具]
 
 ## 🔗 相关词条
 
-- [[melody]]
-- [[lyric-高中]]
-- [[compose]]
-- [[talent]]
-- [[with-复合结构]]
-- [[find-it-adj-to-do]]
-- [[主谓一致-就近原则]]
+- [[385-melody|melody]]
+- [[384-lyric-高中|lyric-高中]]
+- [[374-compose|compose]]
+- [[391-talent|talent]]
+- [[413-with-复合结构|with-复合结构]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[396-主谓一致-就近原则|主谓一致-就近原则]]

@@ -78,4 +78,4 @@ aliases: [athlete, athletic, athletics, 运动员, 田径运动员]
 
 ## 🔗 相关词条
 
-[[fitness]] · [[award]] · [[champion]] · [[cycle-动词]] · [[not-only-but-also]] · [[It-takes-sb-time-to-do]] · [[现在完成时-高中深化]]
+[[343-fitness|fitness]] · [[336-award|award]] · [[337-champion|champion]] · [[339-cycle-动词|cycle-动词]] · [[372-not-only-but-also|not-only-but-also]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]] · [[361-现在完成时-高中深化|现在完成时-高中深化]]

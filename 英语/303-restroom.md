@@ -95,4 +95,4 @@ aliases: [restroom, 洗手间, 卫生间, 厕所]
 
 ## 🔗 相关词条
 
-[[polite]] · [[Could-you-please-tell-me-where]] · [[间接引语-疑问句]] · [[问路]] · [[场所]] · [[介词-位置]] · [[礼貌用语]]
+[[297-polite|polite]] · [[322-Could-you-please-tell-me-where|Could-you-please-tell-me-where]] · [[321-间接引语-疑问句|间接引语-疑问句]] · [[061-问路|问路]] · [[055-场所|场所]] · [[042-介词-位置|介词-位置]] · [[002-礼貌用语|礼貌用语]]

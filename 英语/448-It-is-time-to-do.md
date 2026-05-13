@@ -26,7 +26,7 @@ aliases: [It-is-time-to-do, it is time to do, 是时候句型]
 | It is time to do sth. | 基本结构，to do 为不定式，表示"该做某事了" |
 | It is time for sb. to do sth. | 加逻辑主语，明确是谁该做这件事 |
 | It is time for sth. | 接名词，表示"是某事物的时候了" |
-| It is high time to do / that... | 强调语气加强版（详见 [[It-is-high-time-that]]）|
+| It is high time to do / that... | 强调语气加强版（详见 [[446-It-is-high-time-that|It-is-high-time-that]]）|
 
 ### 与 It is high time 对比
 
@@ -63,10 +63,10 @@ aliases: [It-is-time-to-do, it is time to do, 是时候句型]
 
 ## 🔗 相关词条
 
-- [[It-is-high-time-that]]
-- [[It-is-+adj+to-do]]
-- [[It-is-said-that]]
-- [[虚拟语气]]
+- [[446-It-is-high-time-that|It-is-high-time-that]]
+- [[367-It-is-+adj+to-do|It-is-+adj+to-do]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[445-虚拟语气-入门|虚拟语气]]
 - [[不定式]]
-- [[festival]]
-- [[celebration]]
+- [[422-festival-高中|festival]]
+- [[415-celebrate|celebration]]

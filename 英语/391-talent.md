@@ -71,10 +71,10 @@ aliases: [talent, 天赋, 才能, talented]
 
 ## 🔗 相关词条
 
-- [[melody]]
-- [[lyric-高中]]
-- [[compose]]
-- [[instrument]]
-- [[find-it-adj-to-do]]
-- [[It-is-said-that]]
-- [[the-more-the-more]]
+- [[385-melody|melody]]
+- [[384-lyric-高中|lyric-高中]]
+- [[374-compose|compose]]
+- [[380-instrument|instrument]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[412-the-more-the-more|the-more-the-more]]

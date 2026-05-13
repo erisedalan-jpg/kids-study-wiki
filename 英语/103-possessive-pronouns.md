@@ -88,8 +88,8 @@ aliases: [possessive-pronouns, 物主代词, my your his her, 形容词性物主
 
 ## 🔗 相关词条
 
-- [[whats-your-name]]
-- [[be-verb-am-is-are]]
-- [[is-are-this-that]]
-- [[possessive-s]]
-- [[demonstrative-pronouns]]
+- [[117-whats-your-name|whats-your-name]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[104-possessive-s|possessive-s]]
+- [[100-demonstrative-pronouns|demonstrative-pronouns]]

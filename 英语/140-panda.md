@@ -85,9 +85,9 @@ aliases: [panda, 大熊猫, giant panda, 熊猫]
 
 ## 🔗 相关词条
 
-- [[koala]]
-- [[lion]]
-- [[tiger]]
-- [[elephant]]
-- [[giraffe]]
-- [[Why-do-you-like]]
+- [[134-koala|koala]]
+- [[136-lion|lion]]
+- [[149-tiger|tiger]]
+- [[132-elephant|elephant]]
+- [[133-giraffe|giraffe]]
+- [[172-Why-do-you-like|Why-do-you-like]]

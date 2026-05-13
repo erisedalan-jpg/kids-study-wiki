@@ -85,6 +85,6 @@ aliases: [一般将来时（will）, will表将来, will future tense, shall]
 
 ## 相关词条
 
-- [[一般将来时（be going to）]] — be going to 表将来
-- [[if条件句（一类条件）]] — If + 现在时 + will
-- [[If you go now, you'll catch the bus.]] — 核心句型
+- [[210-一般将来时（be going to）|一般将来时（be going to）]] — be going to 表将来
+- [[209-if条件句（一类条件）|if条件句（一类条件）]] — If + 现在时 + will
+- [[225-If you go now, you'll catch the bus.|If you go now, you'll catch the bus.]] — 核心句型

@@ -78,8 +78,8 @@ aliases: [English-name, 英文名, English first name]
 
 ## 🔗 相关词条
 
-- [[name]]
-- [[family-name]]
-- [[given-name]]
-- [[whats-your-name]]
-- [[possessive-pronouns]]
+- [[088-name|name]]
+- [[078-family-name|family-name]]
+- [[082-given-name|given-name]]
+- [[117-whats-your-name|whats-your-name]]
+- [[103-possessive-pronouns|possessive-pronouns]]

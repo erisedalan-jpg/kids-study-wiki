@@ -85,8 +85,8 @@ aliases: [Toronto, 多伦多]
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Sydney]]
-- [[Tokyo]]
-- [[pen-pal]]
-- [[Where-are-you-from]]
+- [[120-Canada|Canada]]
+- [[123-Sydney|Sydney]]
+- [[124-Tokyo|Tokyo]]
+- [[141-pen-pal|pen-pal]]
+- [[171-Where-are-you-from|Where-are-you-from]]

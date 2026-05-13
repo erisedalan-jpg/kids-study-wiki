@@ -88,8 +88,8 @@ aliases: [tiger, 老虎, tigers]
 
 ## 🔗 相关词条
 
-- [[lion]]
-- [[elephant]]
-- [[panda]]
-- [[giraffe]]
-- [[Why-do-you-like]]
+- [[136-lion|lion]]
+- [[132-elephant|elephant]]
+- [[140-panda|panda]]
+- [[133-giraffe|giraffe]]
+- [[172-Why-do-you-like|Why-do-you-like]]

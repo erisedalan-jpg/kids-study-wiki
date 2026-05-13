@@ -57,8 +57,8 @@ aliases: [conservation, 保护, 自然保护, 资源保护]
 
 ## 🔗 相关词条
 
-- [[environmental]]
-- [[pollution-高中]]
-- [[sustainable]]
-- [[recycle]]
-- [[prevent]]
+- [[540-environmental|environmental]]
+- [[548-pollution-高中|pollution-高中]]
+- [[552-sustainable|sustainable]]
+- [[550-recycle|recycle]]
+- [[549-prevent|prevent]]

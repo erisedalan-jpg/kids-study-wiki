@@ -89,7 +89,7 @@ aliases: [stomachache, 胃疼, 肚子疼, stomach ache]
 
 ## 相关词条
 
-- [[headache]] — 头疼
-- [[toothache]] — 牙疼
-- [[matter]] — what's the matter
-- [[You should...]] — 建议句型
+- [[062-看病|headache]] — 头疼
+- [[261-toothache|toothache]] — 牙疼
+- [[249-matter|matter]] — what's the matter
+- [[616-You should|You should...]] — 建议句型

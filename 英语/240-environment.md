@@ -91,7 +91,7 @@ aliases: [environment, 环境, 自然环境]
 
 ## 相关词条
 
-- [[pollution]] — 污染
-- [[future]] — 未来
-- [[robot]] — 机器人
-- [[It's important to...]] — 重要性句型
+- [[251-pollution|pollution]] — 污染
+- [[245-future|future]] — 未来
+- [[018-玩具|robot]] — 机器人
+- [[619-It's important to|It's important to...]] — 重要性句型

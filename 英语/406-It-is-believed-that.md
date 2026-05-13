@@ -71,10 +71,10 @@ aliases: [It-is-believed-that, it is believed that, 人们相信句型]
 
 ## 🔗 相关词条
 
-- [[It-is-said-that]]
-- [[It-is-reported-that]]
-- [[make-it-clear-that]]
-- [[find-it-adj-to-do]]
-- [[endangered]]
-- [[wildlife]]
-- [[现在完成进行时-深化]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[407-It-is-reported-that|It-is-reported-that]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[376-endangered|endangered]]
+- [[393-wildlife|wildlife]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]

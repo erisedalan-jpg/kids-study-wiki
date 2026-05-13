@@ -58,9 +58,9 @@ aliases: [imagination-高中, imagination, 想象力, 想象]
 
 ## 🔗 相关词条
 
-- [[inspire]]
-- [[creative]]
-- [[universe-高中]]
-- [[robot-高中]]
-- [[future-高中]]
-- [[wh-ever-复合词]]
+- [[585-inspire|inspire]]
+- [[579-creative|creative]]
+- [[431-universe-高中|universe-高中]]
+- [[512-robot-高中|robot-高中]]
+- [[461-future-高中|future-高中]]
+- [[595-wh-ever-复合词|wh-ever-复合词]]

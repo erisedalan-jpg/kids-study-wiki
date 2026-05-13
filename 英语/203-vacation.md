@@ -77,7 +77,7 @@ aliases: [vacation, 假期, 度假]
 
 ## 相关词条
 
-- [[went]] — go 的过去式
-- [[wonderful]] — 美妙的
-- [[Where did you go on vacation？]] — 核心句型
-- [[diary]] — 日记
+- [[204-went|went]] — go 的过去式
+- [[205-wonderful|wonderful]] — 美妙的
+- [[228-Where did you go on vacation？|Where did you go on vacation？]] — 核心句型
+- [[182-diary|diary]] — 日记

@@ -102,5 +102,5 @@ aliases: [What's the matter？, What's the matter, 怎么了, 哪里不舒服, "
 
 ## 相关词条
 
-- [[have to与must区别]] — should/must 建议
-- [[could表过去能力]] — 情态动词
+- [[208-have to与must区别|have to与must区别]] — should/must 建议
+- [[207-could表过去能力|could表过去能力]] — 情态动词

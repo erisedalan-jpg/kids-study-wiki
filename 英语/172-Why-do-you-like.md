@@ -93,10 +93,10 @@ aliases: [Why-do-you-like, 你为什么喜欢, why do you like, Because原因句
 
 ## 🔗 相关词条
 
-- [[lion]]
-- [[tiger]]
-- [[elephant]]
-- [[panda]]
-- [[koala]]
-- [[giraffe]]
-- [[I-want-to-be]]
+- [[136-lion|lion]]
+- [[149-tiger|tiger]]
+- [[132-elephant|elephant]]
+- [[140-panda|panda]]
+- [[134-koala|koala]]
+- [[133-giraffe|giraffe]]
+- [[168-I-want-to-be|I-want-to-be]]

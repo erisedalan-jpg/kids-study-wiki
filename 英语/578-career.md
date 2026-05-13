@@ -63,9 +63,9 @@ aliases: [career, 职业, 事业, 职业生涯]
 
 ## 🔗 相关词条
 
-- [[interview-高中]]
-- [[resume]]
-- [[cv]]
-- [[achievement-高中]]
-- [[future-高中]]
-- [[In-conclusion-写作]]
+- [[586-interview-高中|interview-高中]]
+- [[590-resume|resume]]
+- [[581-cv|cv]]
+- [[455-achievement-高中|achievement-高中]]
+- [[461-future-高中|future-高中]]
+- [[609-In-conclusion-写作|In-conclusion-写作]]

@@ -63,7 +63,7 @@ aliases: [volunteer, 志愿者, 义工, 志愿]
 - **Have you ever volunteered?** 你有过志愿服务的经历吗？
 - I **have volunteered** at the animal shelter three times. 我在动物收容所做过三次志愿服务。
 
-（详见 [[Have you ever been to...?]] / [[现在完成时入门]]）
+（详见 [[618-Have you ever been to|Have you ever been to...?]] / [[272-现在完成时入门|现在完成时入门]]）
 
 ---
 
@@ -89,7 +89,7 @@ aliases: [volunteer, 志愿者, 义工, 志愿]
 
 ## 相关词条
 
-- [[help-out]] — 帮忙
-- [[raise-money]] — 募款
-- [[fix-up]] — 修缮
-- [[现在完成时入门]] — have/has + 过去分词
+- [[248-help-out|help-out]] — 帮忙
+- [[252-raise-money|raise-money]] — 募款
+- [[243-fix-up|fix-up]] — 修缮
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词

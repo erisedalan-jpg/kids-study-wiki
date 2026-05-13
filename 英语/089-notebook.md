@@ -83,9 +83,9 @@ aliases: [notebook, 笔记本, exercise book]
 
 ## 🔗 相关词条
 
-- [[pencil]]
-- [[eraser]]
-- [[schoolbag]]
-- [[dictionary]]
-- [[preposition-phrase]]
-- [[i-have-do-you-have]]
+- [[029-学校用品|pencil]]
+- [[029-学校用品|eraser]]
+- [[095-schoolbag|schoolbag]]
+- [[075-dictionary|dictionary]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]

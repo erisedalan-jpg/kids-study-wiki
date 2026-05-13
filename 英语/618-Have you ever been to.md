@@ -82,7 +82,7 @@ aliases: ["Have you ever been to...?", "Have you ever been to", "Have-you-ever-b
 
 ## 🔗 相关词条
 
-[[现在完成时]] · [[一般过去时]] · [[一般疑问句]] · [[特殊疑问句]] · [[Could you please]] · [[You should]] · [[It's important to]] · [[句子结构-语序]] · [[I have already / I haven't yet]]
+[[272-现在完成时入门|现在完成时]] · [[054-一般过去时|一般过去时]] · [[108-yes-no-questions|一般疑问句]] · [[621-特殊疑问句|特殊疑问句]] · [[614-Could you please|Could you please]] · [[616-You should|You should]] · [[619-It's important to|It's important to]] · [[603-句子结构-语序|句子结构-语序]] · [[I have already / I haven't yet]]
 
 ---
 

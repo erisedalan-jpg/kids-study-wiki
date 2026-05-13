@@ -93,7 +93,7 @@ aliases: [prices, 价格, price, 价钱]
 
 ## 🔗 相关词条
 
-- [[cardinal-numbers-1-100]]
-- [[how-much-is-are]]
-- [[demonstrative-pronouns]]
-- [[be-verb-am-is-are]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]
+- [[111-how-much-is-are|how-much-is-are]]
+- [[100-demonstrative-pronouns|demonstrative-pronouns]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]

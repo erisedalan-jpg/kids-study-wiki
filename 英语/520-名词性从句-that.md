@@ -56,10 +56,10 @@ aliases: [名词性从句-that, that从句, that引导名词性从句, noun clau
 
 ## 🔗 相关词条
 
-- [[名词性从句-whether-if]]
-- [[名词性从句-wh]]
-- [[science-fiction]]
-- [[clone]]
-- [[It-strikes-me-that]]
-- [[the-thing-is-that]]
-- [[What-matters-is]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[521-名词性从句-wh|名词性从句-wh]]
+- [[513-science-fiction|science-fiction]]
+- [[497-clone|clone]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]
+- [[533-the-thing-is-that|the-thing-is-that]]
+- [[532-What-matters-is|What-matters-is]]

@@ -75,4 +75,4 @@ aliases: [not-only-but-also, not only but also, 不仅而且, 并列连词高级
 
 ## 🔗 相关词条
 
-[[athlete]] · [[champion]] · [[fitness]] · [[It-is-+adj+to-do]] · [[as-soon-as]] · [[would-rather-do-than]] · [[定语从句-限定与非限定]]
+[[335-athlete|athlete]] · [[337-champion|champion]] · [[343-fitness|fitness]] · [[367-It-is-+adj+to-do|It-is-+adj+to-do]] · [[370-as-soon-as|as-soon-as]] · [[373-would-rather-do-than|would-rather-do-than]] · [[358-定语从句-限定与非限定|定语从句-限定与非限定]]

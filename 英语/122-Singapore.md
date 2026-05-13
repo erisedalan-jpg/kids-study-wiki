@@ -83,9 +83,9 @@ aliases: [Singapore, 新加坡, Singaporean]
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Australia]]
-- [[Japan]]
-- [[language]]
-- [[pen-pal]]
-- [[native-speaker]]
+- [[120-Canada|Canada]]
+- [[119-Australia|Australia]]
+- [[121-Japan|Japan]]
+- [[135-language|language]]
+- [[141-pen-pal|pen-pal]]
+- [[138-native-speaker|native-speaker]]

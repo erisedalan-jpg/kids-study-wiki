@@ -90,7 +90,7 @@ aliases: [doctor, 医生, physician, 大夫]
 
 ## 🔗 相关词条
 
-- [[reporter]]
-- [[teacher]]
-- [[waiter]]
-- [[I-want-to-be]]
+- [[142-reporter|reporter]]
+- [[057-职业|teacher]]
+- [[151-waiter|waiter]]
+- [[168-I-want-to-be|I-want-to-be]]

@@ -92,7 +92,7 @@ aliases: [比较级（长词more）, more比较级, comparative adjectives long,
 
 ## 相关词条
 
-- [[比较级（短词-er）]] — 短词比较级
-- [[最高级（长词most）]] — 最高级
-- [[more-outgoing]] — 词汇示例
-- [[Which is the most...？]] — 最高级句型
+- [[217-比较级（短词-er）|比较级（短词-er）]] — 短词比较级
+- [[216-最高级（长词most）|最高级（长词most）]] — 最高级
+- [[189-more-outgoing|more-outgoing]] — 词汇示例
+- [[229-Which is the most...？|Which is the most...？]] — 最高级句型

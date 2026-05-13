@@ -95,9 +95,9 @@ aliases: [be-verb-am-is-are, be动词, am is are, 系动词]
 
 ## 🔗 相关词条
 
-- [[whats-your-name]]
-- [[how-are-you]]
-- [[is-are-this-that]]
-- [[there-be]]
-- [[simple-present-tense]]
-- [[possessive-pronouns]]
+- [[117-whats-your-name|whats-your-name]]
+- [[110-how-are-you|how-are-you]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[107-there-be|there-be]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[103-possessive-pronouns|possessive-pronouns]]

@@ -75,9 +75,9 @@ aliases: [Now-that-在新形势下, Now that, 既然, 由于现在]
 
 ## 🔗 相关词条
 
-- [[Given-the-fact-that]]
-- [[Considering-the-fact-that]]
-- [[It-stands-to-reason-that]]
-- [[状语从句-原因]]
-- [[高考语法综合复习]]
-- [[In-conclusion-写作]]
+- [[608-Given-the-fact-that|Given-the-fact-that]]
+- [[607-Considering-the-fact-that|Considering-the-fact-that]]
+- [[611-It-stands-to-reason-that|It-stands-to-reason-that]]
+- [[435-状语从句-原因|状语从句-原因]]
+- [[605-高考语法综合复习|高考语法综合复习]]
+- [[609-In-conclusion-写作|In-conclusion-写作]]

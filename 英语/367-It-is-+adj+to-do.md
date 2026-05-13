@@ -82,4 +82,4 @@ aliases: [It-is-+adj+to-do, It is adj to do, 形式主语句型, it 作形式主
 
 ## 🔗 相关词条
 
-[[主语从句]] · [[It-takes-sb-time-to-do]] · [[名词性从句-入门]] · [[appreciate]] · [[senior-high-school]] · [[fitness]] · [[not-only-but-also]]
+[[354-主语从句|主语从句]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]] · [[356-名词性从句-入门|名词性从句-入门]] · [[334-appreciate|appreciate]] · [[350-senior-high-school|senior-high-school]] · [[343-fitness|fitness]] · [[372-not-only-but-also|not-only-but-also]]

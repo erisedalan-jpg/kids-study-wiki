@@ -80,9 +80,9 @@ aliases: [desk, 书桌, 课桌]
 
 ## 🔗 相关词条
 
-- [[bookcase]]
-- [[chair]]
-- [[sofa]]
-- [[drawer]]
-- [[preposition-phrase]]
-- [[there-be]]
+- [[070-bookcase|bookcase]]
+- [[032-房间-家具|chair]]
+- [[032-房间-家具|sofa]]
+- [[076-drawer|drawer]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[107-there-be|there-be]]

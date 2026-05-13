@@ -73,10 +73,10 @@ aliases: [the-fact-that-同位语, the fact that, 同位语从句, appositive cl
 
 ## 🔗 相关词条
 
-- [[It-occurred-to-me-that]]
-- [[the-reason-why-is-that]]
-- [[What-impressed-me-most]]
-- [[Now-that-既然]]
-- [[innovation]]
-- [[prediction]]
-- [[动名词的复合结构]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[465-innovation|innovation]]
+- [[471-prediction|prediction]]
+- [[479-动名词的复合结构|动名词的复合结构]]

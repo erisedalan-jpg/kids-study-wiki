@@ -88,7 +88,7 @@ aliases: [lets, Let's, let us, 一起吧, 提建议]
 
 ## 🔗 相关词条
 
-- [[modal-verb-can]]
-- [[can-you]]
-- [[simple-present-tense]]
-- [[hello]]
+- [[101-modal-verb-can|modal-verb-can]]
+- [[109-can-you|can-you]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[085-hello|hello]]

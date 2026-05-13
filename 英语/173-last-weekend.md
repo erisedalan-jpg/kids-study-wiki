@@ -92,7 +92,7 @@ happy weekend!
 
 ## 🔗 相关词条
 
-- [[simple-past-tense]]
-- [[How-was-your-weekend]]
-- [[What-are-you-doing]]
-- [[frequency-adverbs]]
+- [[163-simple-past-tense|simple-past-tense]]
+- [[167-How-was-your-weekend|How-was-your-weekend]]
+- [[169-What-are-you-doing|What-are-you-doing]]
+- [[155-frequency-adverbs|frequency-adverbs]]

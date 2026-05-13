@@ -75,10 +75,10 @@ aliases: [make-it-clear-that, make it clear that, 形式宾语make句型]
 
 ## 🔗 相关词条
 
-- [[find-it-adj-to-do]]
-- [[It-is-said-that]]
-- [[It-is-believed-that]]
-- [[It-is-reported-that]]
-- [[internet]]
-- [[Whether-If引导宾语从句]]
-- [[宾语从句-高中]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[407-It-is-reported-that|It-is-reported-that]]
+- [[381-internet|internet]]
+- [[394-Whether-If引导宾语从句|Whether-If引导宾语从句]]
+- [[360-宾语从句-高中|宾语从句-高中]]

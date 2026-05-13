@@ -77,8 +77,8 @@ aliases: [given-name, 名, first name, forename]
 
 ## 🔗 相关词条
 
-- [[name]]
-- [[family-name]]
-- [[English-name]]
-- [[whats-your-name]]
-- [[possessive-pronouns]]
+- [[088-name|name]]
+- [[078-family-name|family-name]]
+- [[066-English-name|English-name]]
+- [[117-whats-your-name|whats-your-name]]
+- [[103-possessive-pronouns|possessive-pronouns]]

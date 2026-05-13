@@ -54,9 +54,9 @@ aliases: [It-doesnt-matter-whether, It doesn't matter whether, it doesn't matter
 
 ## 🔗 相关词条
 
-- [[名词性从句-whether-if]]
-- [[What-matters-is]]
-- [[the-thing-is-that]]
-- [[It-strikes-me-that]]
-- [[cuisine-高中]]
-- [[firstaid]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[532-What-matters-is|What-matters-is]]
+- [[533-the-thing-is-that|the-thing-is-that]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]
+- [[498-cuisine-高中|cuisine-高中]]
+- [[502-firstaid|firstaid]]

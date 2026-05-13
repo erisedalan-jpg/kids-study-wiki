@@ -57,8 +57,8 @@ aliases: [addiction, 成瘾, 上瘾, 沉迷]
 
 ## 🔗 相关词条
 
-- [[lifestyle]]
-- [[physical]]
-- [[mental]]
-- [[prevent]]
-- [[adversity]]
+- [[541-lifestyle|lifestyle]]
+- [[546-physical|physical]]
+- [[543-mental|mental]]
+- [[549-prevent|prevent]]
+- [[535-adversity|adversity]]

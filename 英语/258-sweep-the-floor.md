@@ -91,8 +91,8 @@ aliases: [sweep-the-floor, sweep the floor, 扫地, 扫地板]
 
 ## 相关词条
 
-- [[do-the-dishes]] — 洗碗
-- [[take-out-trash]] — 倒垃圾
-- [[fold-clothes]] — 叠衣服
-- [[chore]] — 家务
+- [[239-do-the-dishes|do-the-dishes]] — 洗碗
+- [[260-take-out-trash|take-out-trash]] — 倒垃圾
+- [[244-fold-clothes|fold-clothes]] — 叠衣服
+- [[235-chore|chore]] — 家务
 - [[already / yet 用法]] — 现在完成时副词

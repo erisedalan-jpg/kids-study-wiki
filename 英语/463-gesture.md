@@ -66,10 +66,10 @@ aliases: [gesture, 手势, 姿态, 示意动作]
 
 ## 🔗 相关词条
 
-- [[posture]]
-- [[interpret]]
-- [[It-occurred-to-me-that]]
-- [[the-reason-why-is-that]]
-- [[情态动词-must-may-might]]
-- [[Now-that-既然]]
-- [[What-impressed-me-most]]
+- [[470-posture|posture]]
+- [[466-interpret|interpret]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[481-情态动词-must-may-might|情态动词-must-may-might]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]

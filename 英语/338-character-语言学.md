@@ -85,4 +85,4 @@ aliases: [character-语言学, character, 汉字, 字符, 性格, 人物]
 
 ## 🔗 相关词条
 
-[[dialect]] · [[定语从句-高中入门]] · [[定语从句-where-when-why]] · [[名词性从句-入门]] · [[同位语从句]] · [[appreciate]] · [[What-do-you-think-of-高中]]
+[[341-dialect|dialect]] · [[359-定语从句-高中入门|定语从句-高中入门]] · [[357-定语从句-where-when-why|定语从句-where-when-why]] · [[356-名词性从句-入门|名词性从句-入门]] · [[355-同位语从句|同位语从句]] · [[334-appreciate|appreciate]] · [[369-What-do-you-think-of-高中|What-do-you-think-of-高中]]

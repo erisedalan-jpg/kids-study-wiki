@@ -70,10 +70,10 @@ aliases: [kingdom-高中, kingdom, 王国, 领域]
 
 ## 🔗 相关词条
 
-- [[tradition-高中]]
-- [[legend]]
-- [[heritage]]
-- [[过去完成时-高中深化]]
-- [[间接引语-高中]]
-- [[not-until-倒装]]
-- [[非限定性定语从句]]
+- [[392-tradition-高中|tradition-高中]]
+- [[383-legend|legend]]
+- [[379-heritage|heritage]]
+- [[403-过去完成时-高中深化|过去完成时-高中深化]]
+- [[404-间接引语-高中|间接引语-高中]]
+- [[411-not-until-倒装|not-until-倒装]]
+- [[358-定语从句-限定与非限定|非限定性定语从句]]

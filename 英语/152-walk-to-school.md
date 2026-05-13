@@ -85,8 +85,8 @@ aliases: [walk-to-school, 步行上学, walk, 走路上学]
 
 ## 🔗 相关词条
 
-- [[take-a-bus]]
-- [[ride-a-bike]]
-- [[by-train]]
-- [[transportation]]
-- [[How-do-you-go-to-school]]
+- [[147-take-a-bus|take-a-bus]]
+- [[143-ride-a-bike|ride-a-bike]]
+- [[127-by-train|by-train]]
+- [[056-出行方式|transportation]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

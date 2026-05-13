@@ -54,7 +54,7 @@ aliases: [What-is-it-made-of, What is it made of, 材料问句, 问材料句型]
 
 **注意**：`of` 不能省略——*What is it made?*（错误！）
 
-### made of vs made from（详见 [[被动语态-was-made-of]]）
+### made of vs made from（详见 [[320-被动语态-was-made-of|被动语态-was-made-of]]）
 
 | 介词 | 变化类型 | 例句 |
 |------|---------|------|
@@ -111,4 +111,4 @@ aliases: [What-is-it-made-of, What is it made of, 材料问句, 问材料句型]
 
 ## 🔗 相关词条
 
-[[Where-is-it-made]] · [[被动语态-was-made-of]] · [[material]] · [[被动语态入门]] · [[现在被动语态]] · [[衣服]] · [[produce]]
+[[331-Where-is-it-made|Where-is-it-made]] · [[320-被动语态-was-made-of|被动语态-was-made-of]] · [[294-material|material]] · [[274-被动语态入门|被动语态入门]] · [[273-现在被动语态|现在被动语态]] · [[038-衣服|衣服]] · [[300-produce|produce]]

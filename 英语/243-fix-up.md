@@ -88,7 +88,7 @@ aliases: [fix-up, fix up, 修缮, 整修, 修好]
 
 ## 相关词条
 
-- [[volunteer]] — 志愿者
-- [[help-out]] — 帮忙
-- [[raise-money]] — 募款
-- [[现在完成时入门]] — have/has + 过去分词
+- [[262-volunteer|volunteer]] — 志愿者
+- [[248-help-out|help-out]] — 帮忙
+- [[252-raise-money|raise-money]] — 募款
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词

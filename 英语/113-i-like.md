@@ -90,9 +90,9 @@ aliases: [i-like, I like, 我喜欢, like句型]
 
 ## 🔗 相关词条
 
-- [[whats-your-favorite]]
-- [[simple-present-tense]]
-- [[yes-no-questions]]
-- [[apple]]
-- [[banana]]
-- [[fruit]]
+- [[116-whats-your-favorite|whats-your-favorite]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[068-apple|apple]]
+- [[069-banana|banana]]
+- [[081-fruit|fruit]]

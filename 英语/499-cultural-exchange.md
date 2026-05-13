@@ -53,9 +53,9 @@ aliases: [cultural-exchange, 文化交流, cultural exchange, intercultural]
 
 ## 🔗 相关词条
 
-- [[bridge-高中]]
-- [[architect]]
-- [[landmark]]
-- [[as-状语从句]]
-- [[独立主格-入门]]
-- [[What-matters-is]]
+- [[496-bridge-高中|bridge-高中]]
+- [[494-architect|architect]]
+- [[507-landmark|landmark]]
+- [[517-as-状语从句|as-状语从句]]
+- [[523-独立主格-入门|独立主格-入门]]
+- [[532-What-matters-is|What-matters-is]]

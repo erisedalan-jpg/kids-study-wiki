@@ -94,9 +94,9 @@ aliases: [classroom-rule, 课堂规则, classroom rules, 班级规定]
 
 ## 🔗 相关词条
 
-- [[rule]]
-- [[dormitory-rule]]
-- [[must-mustnt]]
-- [[have-to]]
-- [[can-cant]]
-- [[imperative-sentence]]
+- [[093-ruler|rule]]
+- [[130-dormitory-rule|dormitory-rule]]
+- [[158-must-mustnt|must-mustnt]]
+- [[156-have-to|have-to]]
+- [[154-can-cant|can-cant]]
+- [[157-imperative-sentence|imperative-sentence]]

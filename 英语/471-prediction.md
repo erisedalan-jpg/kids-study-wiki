@@ -68,10 +68,10 @@ aliases: [prediction, 预测, 预言, predict]
 
 ## 🔗 相关词条
 
-- [[future-高中]]
-- [[breakthrough]]
-- [[innovation]]
-- [[tendency]]
-- [[the-fact-that-同位语]]
-- [[It-occurred-to-me-that]]
-- [[情态动词推测-过去]]
+- [[461-future-高中|future-高中]]
+- [[458-breakthrough|breakthrough]]
+- [[465-innovation|innovation]]
+- [[472-tendency|tendency]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]

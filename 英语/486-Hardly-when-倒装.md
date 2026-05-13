@@ -76,10 +76,10 @@ Hardly/Scarcely + had + 主语 + 过去分词，when/before + 主语 + 过去时
 
 ## 🔗 相关词条
 
-- [[Only-when-倒装]]
-- [[It-was-not-until-that]]
-- [[Now-that-既然]]
-- [[情态动词推测-过去]]
-- [[过去分词作状语]]
-- [[gesture]]
-- [[expedition]]
+- [[490-Only-when-倒装|Only-when-倒装]]
+- [[488-It-was-not-until-that|It-was-not-until-that]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]
+- [[485-过去分词作状语|过去分词作状语]]
+- [[463-gesture|gesture]]
+- [[460-expedition|expedition]]

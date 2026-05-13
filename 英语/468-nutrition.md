@@ -70,10 +70,10 @@ aliases: [nutrition, 营养, 营养学, nutritious]
 
 ## 🔗 相关词条
 
-- [[harvest]]
-- [[agricultural]]
-- [[主谓一致-集体名词]]
-- [[主谓一致-and连接]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
-- [[过去分词作状语]]
+- [[464-harvest|harvest]]
+- [[456-agricultural|agricultural]]
+- [[475-主谓一致-集体名词|主谓一致-集体名词]]
+- [[474-主谓一致-and连接|主谓一致-and连接]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[485-过去分词作状语|过去分词作状语]]

@@ -91,4 +91,4 @@ aliases: [teenager, 青少年, 少年, 青年, teen]
 
 ## 🔗 相关词条
 
-[[should-be-allowed]] · [[custom]] · [[情态动词推测-must]] · [[宾语从句-初中]] · [[make-sb-do]] · [[职业]] · [[兴趣爱好]]
+[[310-should-be-allowed|should-be-allowed]] · [[288-custom|custom]] · [[318-情态动词推测-must|情态动词推测-must]] · [[315-宾语从句-初中|宾语从句-初中]] · [[309-make-sb-do|make-sb-do]] · [[057-职业|职业]] · [[058-兴趣爱好|兴趣爱好]]

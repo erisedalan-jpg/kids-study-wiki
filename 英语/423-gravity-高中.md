@@ -53,9 +53,9 @@ aliases: [gravity-高中, gravity, 重力, 引力]
 
 ## 🔗 相关词条
 
-- [[astronaut]]
-- [[orbit]]
-- [[universe-高中]]
-- [[状语从句-原因]]
-- [[虚拟语气-与过去事实相反]]
-- [[It-is-no-wonder-that]]
+- [[414-astronaut|astronaut]]
+- [[428-orbit|orbit]]
+- [[431-universe-高中|universe-高中]]
+- [[435-状语从句-原因|状语从句-原因]]
+- [[444-虚拟语气-与过去事实相反|虚拟语气-与过去事实相反]]
+- [[447-It-is-no-wonder-that|It-is-no-wonder-that]]

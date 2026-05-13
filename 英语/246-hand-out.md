@@ -83,7 +83,7 @@ aliases: [hand-out, hand out, handout, 分发, 散发]
 
 ## 相关词条
 
-- [[volunteer]] — 志愿者
-- [[raise-money]] — 募款
-- [[help-out]] — 帮忙
-- [[Could you please...?]] — 委婉请求
+- [[262-volunteer|volunteer]] — 志愿者
+- [[252-raise-money|raise-money]] — 募款
+- [[248-help-out|help-out]] — 帮忙
+- [[614-Could you please|Could you please...?]] — 委婉请求

@@ -78,7 +78,7 @@ aliases: [matter, what's the matter, 怎么了, 问题]
 
 ## 相关词条
 
-- [[sore-throat]] — 喉咙痛
-- [[fever]] — 发烧
-- [[What's the matter？]] — 核心句型
-- [[You should...]] — 建议句型
+- [[256-sore-throat|sore-throat]] — 喉咙痛
+- [[062-看病|fever]] — 发烧
+- [[227-What's the matter？|What's the matter？]] — 核心句型
+- [[616-You should|You should...]] — 建议句型

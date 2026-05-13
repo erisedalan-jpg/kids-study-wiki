@@ -84,9 +84,9 @@ aliases: [banana, 香蕉]
 
 ## 🔗 相关词条
 
-- [[apple]]
-- [[fruit]]
-- [[salad]]
-- [[i-like]]
-- [[how-much-is-are]]
-- [[noun-plurals]]
+- [[068-apple|apple]]
+- [[081-fruit|fruit]]
+- [[094-salad|salad]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]
+- [[102-noun-plurals|noun-plurals]]

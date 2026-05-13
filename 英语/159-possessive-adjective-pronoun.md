@@ -90,6 +90,6 @@ aliases: [possessive-adjective-pronoun, 物主代词, 形容词性物主代词, 
 
 ## 🔗 相关词条
 
-- [[reflexive-pronouns]]
-- [[simple-present-tense]]
-- [[can-cant]]
+- [[162-reflexive-pronouns|reflexive-pronouns]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[154-can-cant|can-cant]]

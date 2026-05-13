@@ -33,8 +33,8 @@ aliases: [future, 未来, 将来]
 
 | 句型 | 含义 |
 |------|------|
-| will + 动词原形 | 预测/将要（详见 [[一般将来时（will）]]） |
-| be going to + 动词原形 | 计划/打算（详见 [[一般将来时（be going to）]]） |
+| will + 动词原形 | 预测/将要（详见 [[211-一般将来时（will）|一般将来时（will）]]） |
+| be going to + 动词原形 | 计划/打算（详见 [[210-一般将来时（be going to）|一般将来时（be going to）]]） |
 | I hope to... | 我希望… |
 | I think... will... | 我认为…将会… |
 
@@ -87,7 +87,7 @@ aliases: [future, 未来, 将来]
 
 ## 相关词条
 
-- [[robot]] — 机器人
-- [[environment]] — 环境
-- [[pollution]] — 污染
-- [[一般将来时（will）]] — 将来时态
+- [[018-玩具|robot]] — 机器人
+- [[240-environment|environment]] — 环境
+- [[251-pollution|pollution]] — 污染
+- [[211-一般将来时（will）|一般将来时（will）]] — 将来时态

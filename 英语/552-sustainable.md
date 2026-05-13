@@ -57,8 +57,8 @@ aliases: [sustainable, 可持续的, 可持续发展]
 
 ## 🔗 相关词条
 
-- [[environmental]]
-- [[pollution-高中]]
-- [[recycle]]
-- [[conservation]]
-- [[lifestyle]]
+- [[540-environmental|environmental]]
+- [[548-pollution-高中|pollution-高中]]
+- [[550-recycle|recycle]]
+- [[538-conservation|conservation]]
+- [[541-lifestyle|lifestyle]]

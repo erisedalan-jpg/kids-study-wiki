@@ -82,10 +82,10 @@ aliases: [such-that-结果, such that, so that结果, 结果状语从句, such..
 
 ## 🔗 相关词条
 
-- [[so-that-目的]]
-- [[as-long-as-条件]]
-- [[状语从句]]
+- [[452-so-that-目的|so-that-目的]]
+- [[450-as-long-as-条件|as-long-as-条件]]
+- [[617-状语从句|状语从句]]
 - [[倒装句]]
-- [[形容词]]
+- [[494-形容词|形容词]]
 - [[space]]
 - [[explore]]

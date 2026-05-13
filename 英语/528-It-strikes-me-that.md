@@ -55,9 +55,9 @@ aliases: [It-strikes-me-that, It strikes me that, strikes me that, 突然觉得]
 
 ## 🔗 相关词条
 
-- [[名词性从句-that]]
-- [[It-makes-no-sense-to-do]]
-- [[the-thing-is-that]]
-- [[What-matters-is]]
-- [[science-fiction]]
-- [[cultural-exchange]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[533-the-thing-is-that|the-thing-is-that]]
+- [[532-What-matters-is|What-matters-is]]
+- [[513-science-fiction|science-fiction]]
+- [[499-cultural-exchange|cultural-exchange]]

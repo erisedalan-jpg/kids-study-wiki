@@ -82,9 +82,9 @@ aliases: [there-be, there be句型, there is, there are]
 
 ## 🔗 相关词条
 
-- [[preposition-phrase]]
-- [[be-verb-am-is-are]]
-- [[noun-plurals]]
-- [[bookcase]]
-- [[desk]]
-- [[i-have-do-you-have]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[102-noun-plurals|noun-plurals]]
+- [[070-bookcase|bookcase]]
+- [[031-教室物品|desk]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]

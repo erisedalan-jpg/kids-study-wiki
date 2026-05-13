@@ -52,9 +52,9 @@ aliases: [landmark, 地标, landmarks, iconic landmark]
 
 ## 🔗 相关词条
 
-- [[bridge-高中]]
-- [[architect]]
-- [[cultural-exchange]]
-- [[journey-2-高中]]
-- [[landscape-2-高中]]
-- [[as-定语从句]]
+- [[496-bridge-高中|bridge-高中]]
+- [[494-architect|architect]]
+- [[499-cultural-exchange|cultural-exchange]]
+- [[506-journey-2-高中|journey-2-高中]]
+- [[508-landscape-2-高中|landscape-2-高中]]
+- [[515-as-定语从句|as-定语从句]]

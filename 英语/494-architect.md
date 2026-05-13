@@ -53,9 +53,9 @@ aliases: [architect, 建筑师, architecture, architectural]
 
 ## 🔗 相关词条
 
-- [[bridge-高中]]
-- [[landmark]]
-- [[engineer]]
-- [[cultural-exchange]]
-- [[独立主格-名词加形容词]]
-- [[with-主格]]
+- [[496-bridge-高中|bridge-高中]]
+- [[507-landmark|landmark]]
+- [[501-engineer|engineer]]
+- [[499-cultural-exchange|cultural-exchange]]
+- [[525-独立主格-名词加形容词|独立主格-名词加形容词]]
+- [[519-with-主格|with-主格]]

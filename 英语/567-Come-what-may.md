@@ -78,8 +78,8 @@ Come what may = Whatever may come（无论发生什么）
 
 ## 🔗 相关词条
 
-- [[Be-it-ever-so-humble]]
-- [[however-引导让步]]
-- [[adversity]]
-- [[courage]]
-- [[overcome]]
+- [[566-Be-it-ever-so-humble|Be-it-ever-so-humble]]
+- [[573-however-引导让步|however-引导让步]]
+- [[535-adversity|adversity]]
+- [[539-courage|courage]]
+- [[544-overcome|overcome]]

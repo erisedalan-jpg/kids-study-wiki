@@ -83,9 +83,9 @@ aliases: [ice-cream, 冰淇淋, 雪糕, ice cream]
 
 ## 🔗 相关词条
 
-- [[hamburger]]
-- [[salad]]
-- [[fruit]]
-- [[i-like]]
-- [[how-much-is-are]]
-- [[whats-your-favorite]]
+- [[084-hamburger|hamburger]]
+- [[094-salad|salad]]
+- [[081-fruit|fruit]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]
+- [[116-whats-your-favorite|whats-your-favorite]]

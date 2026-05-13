@@ -90,7 +90,7 @@ A: Sure! I'd love to.
 
 ## 🔗 相关词条
 
-- [[can-cant]]
-- [[What-can-you-do]]
-- [[I-want-to-be]]
-- [[reflexive-pronouns]]
+- [[154-can-cant|can-cant]]
+- [[170-What-can-you-do|What-can-you-do]]
+- [[168-I-want-to-be|I-want-to-be]]
+- [[162-reflexive-pronouns|reflexive-pronouns]]

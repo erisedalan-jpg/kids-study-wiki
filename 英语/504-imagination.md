@@ -55,9 +55,9 @@ aliases: [imagination, 想象力, imagine, imaginative]
 
 ## 🔗 相关词条
 
-- [[science-fiction]]
-- [[robot-高中]]
-- [[clone]]
-- [[名词性从句-that]]
-- [[Suppose-that-假设]]
-- [[What-matters-is]]
+- [[513-science-fiction|science-fiction]]
+- [[512-robot-高中|robot-高中]]
+- [[497-clone|clone]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[531-Suppose-that-假设|Suppose-that-假设]]
+- [[532-What-matters-is|What-matters-is]]

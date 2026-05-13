@@ -101,4 +101,4 @@ aliases: [used-to-do, used to do, 过去常常做, used to语法详解]
 
 ## 🔗 相关词条
 
-[[used-to]] · [[afraid]] · [[daily]] · [[一般过去时（规则与不规则动词）]] · [[被动语态入门]] · [[宾语从句-初中]] · [[make-sb-do]]
+[[308-used-to|used-to]] · [[285-afraid|afraid]] · [[289-daily|daily]] · [[212-一般过去时（规则与不规则动词）|一般过去时（规则与不规则动词）]] · [[274-被动语态入门|被动语态入门]] · [[315-宾语从句-初中|宾语从句-初中]] · [[309-make-sb-do|make-sb-do]]

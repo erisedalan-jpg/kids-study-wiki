@@ -62,9 +62,9 @@ aliases: [ocean-高中, ocean, 海洋, 大洋]
 
 ## 🔗 相关词条
 
-- [[marine]]
-- [[submarine]]
-- [[dive-高中]]
-- [[current-海流]]
-- [[nature-高中]]
-- [[universe-高中]]
+- [[587-marine|marine]]
+- [[592-submarine|submarine]]
+- [[582-dive-高中|dive-高中]]
+- [[580-current-海流|current-海流]]
+- [[509-nature-高中|nature-高中]]
+- [[431-universe-高中|universe-高中]]

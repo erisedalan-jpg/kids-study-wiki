@@ -89,8 +89,8 @@ aliases: [family-name, 姓, last name, surname]
 
 ## 🔗 相关词条
 
-- [[name]]
-- [[given-name]]
-- [[English-name]]
-- [[whats-your-name]]
-- [[family-tree]]
+- [[088-name|name]]
+- [[082-given-name|given-name]]
+- [[066-English-name|English-name]]
+- [[117-whats-your-name|whats-your-name]]
+- [[079-family-tree|family-tree]]

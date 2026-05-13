@@ -78,4 +78,4 @@ aliases: [souvenir, 纪念品, 纪念物, 旅游纪念品]
 
 ## 🔗 相关词条
 
-[[tourist]] · [[landscape]] · [[journey-高中]] · [[cycle-动词]] · [[appreciate]] · [[现在完成时-高中深化]] · [[过去完成时]]
+[[353-tourist|tourist]] · [[346-landscape|landscape]] · [[345-journey-高中|journey-高中]] · [[339-cycle-动词|cycle-动词]] · [[334-appreciate|appreciate]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[364-过去完成时|过去完成时]]

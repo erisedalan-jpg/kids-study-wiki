@@ -62,9 +62,9 @@ aliases: [current-海流, current, 洋流, 电流, 当前的, 水流]
 
 ## 🔗 相关词条
 
-- [[ocean-高中]]
-- [[marine]]
-- [[submarine]]
-- [[dive-高中]]
-- [[nature-高中]]
-- [[定语从句先行词复杂]]
+- [[589-ocean-高中|ocean-高中]]
+- [[587-marine|marine]]
+- [[592-submarine|submarine]]
+- [[582-dive-高中|dive-高中]]
+- [[509-nature-高中|nature-高中]]
+- [[601-定语从句先行词复杂|定语从句先行词复杂]]

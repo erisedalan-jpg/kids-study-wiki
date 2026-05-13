@@ -63,9 +63,9 @@ aliases: [injure, 受伤, injury, injured, injuries]
 
 ## 🔗 相关词条
 
-- [[firstaid]]
-- [[bandage]]
-- [[emergency]]
-- [[with-主格]]
-- [[独立主格-名词加分词]]
-- [[It-makes-no-sense-to-do]]
+- [[502-firstaid|firstaid]]
+- [[495-bandage|bandage]]
+- [[500-emergency|emergency]]
+- [[519-with-主格|with-主格]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]

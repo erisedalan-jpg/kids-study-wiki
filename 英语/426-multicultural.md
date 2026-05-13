@@ -51,9 +51,9 @@ aliases: [multicultural, 多元文化的, 多文化的]
 
 ## 🔗 相关词条
 
-- [[diverse]]
-- [[culture-高中]]
-- [[tradition-习俗]]
-- [[cuisine]]
-- [[虚拟语气-入门]]
-- [[as-if-as-though]]
+- [[421-diverse|diverse]]
+- [[418-culture-高中|culture-高中]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[417-cuisine|cuisine]]
+- [[445-虚拟语气-入门|虚拟语气-入门]]
+- [[449-as-if-as-though|as-if-as-though]]

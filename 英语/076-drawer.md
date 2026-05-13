@@ -83,8 +83,8 @@ aliases: [drawer, 抽屉]
 
 ## 🔗 相关词条
 
-- [[desk]]
-- [[bookcase]]
-- [[sofa]]
-- [[preposition-phrase]]
-- [[there-be]]
+- [[031-教室物品|desk]]
+- [[070-bookcase|bookcase]]
+- [[032-房间-家具|sofa]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[107-there-be|there-be]]

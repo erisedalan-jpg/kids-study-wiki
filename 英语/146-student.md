@@ -90,8 +90,8 @@ aliases: [student, 学生, students, pupil]
 
 ## 🔗 相关词条
 
-- [[teacher]]
-- [[classroom-rule]]
-- [[dormitory-rule]]
-- [[rule]]
-- [[I-want-to-be]]
+- [[057-职业|teacher]]
+- [[128-classroom-rule|classroom-rule]]
+- [[130-dormitory-rule|dormitory-rule]]
+- [[093-ruler|rule]]
+- [[168-I-want-to-be|I-want-to-be]]

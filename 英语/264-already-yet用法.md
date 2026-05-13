@@ -96,6 +96,6 @@ aliases: [already-yet用法, already / yet 用法, already yet, already和yet]
 
 ## 相关词条
 
-- [[现在完成时入门]] — have/has + 过去分词
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词
 - [[since / for 区别]] — 时间表达
 - [[I have already / I haven't...yet.]] — 核心句型

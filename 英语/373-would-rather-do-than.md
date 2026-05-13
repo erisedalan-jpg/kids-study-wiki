@@ -79,4 +79,4 @@ aliases: [would-rather-do-than, would rather do than, 宁愿, would rather 句�
 
 ## 🔗 相关词条
 
-[[cant-help-doing]] · [[Do-you-mind-doing]] · [[not-only-but-also]] · [[journey-高中]] · [[tourist]] · [[fitness]] · [[宾语从句-高中]]
+[[371-cant-help-doing|cant-help-doing]] · [[366-Do-you-mind-doing|Do-you-mind-doing]] · [[372-not-only-but-also|not-only-but-also]] · [[345-journey-高中|journey-高中]] · [[353-tourist|tourist]] · [[343-fitness|fitness]] · [[360-宾语从句-高中|宾语从句-高中]]

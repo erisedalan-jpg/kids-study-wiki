@@ -88,8 +88,8 @@ aliases: [pour, 倒入, 倾倒]
 
 ## 相关词条
 
-- [[mix]] — 混合
-- [[chop]] — 切碎
-- [[peel]] — 削皮
-- [[smoothie]] — 冰沙
-- [[recipe]] — 食谱
+- [[188-mix|mix]] — 混合
+- [[181-chop|chop]] — 切碎
+- [[192-peel|peel]] — 削皮
+- [[197-smoothie|smoothie]] — 冰沙
+- [[194-recipe|recipe]] — 食谱

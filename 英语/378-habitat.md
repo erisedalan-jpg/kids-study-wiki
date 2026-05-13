@@ -70,10 +70,10 @@ aliases: [habitat, 栖息地, 生境]
 
 ## 🔗 相关词条
 
-- [[wildlife]]
-- [[endangered]]
-- [[species]]
-- [[extinct]]
-- [[preserve]]
-- [[restore]]
-- [[现在完成进行时-深化]]
+- [[393-wildlife|wildlife]]
+- [[376-endangered|endangered]]
+- [[390-species|species]]
+- [[377-extinct|extinct]]
+- [[388-preserve|preserve]]
+- [[389-restore|restore]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]

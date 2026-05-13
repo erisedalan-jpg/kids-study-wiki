@@ -51,9 +51,9 @@ aliases: [tradition-习俗, tradition, 传统, 习俗]
 
 ## 🔗 相关词条
 
-- [[festival-高中]]
-- [[celebrate]]
-- [[culture-高中]]
-- [[religion]]
-- [[diverse]]
-- [[multicultural]]
+- [[422-festival-高中|festival-高中]]
+- [[415-celebrate|celebrate]]
+- [[418-culture-高中|culture-高中]]
+- [[429-religion|religion]]
+- [[421-diverse|diverse]]
+- [[426-multicultural|multicultural]]

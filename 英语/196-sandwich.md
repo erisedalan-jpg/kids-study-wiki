@@ -84,7 +84,7 @@ aliases: [sandwich, 三明治, 夹心面包]
 
 ## 相关词条
 
-- [[smoothie]] — 冰沙
-- [[recipe]] — 食谱
-- [[mix]] — 混合
-- [[How do you make...？]] — 核心句型
+- [[197-smoothie|smoothie]] — 冰沙
+- [[194-recipe|recipe]] — 食谱
+- [[188-mix|mix]] — 混合
+- [[220-How do you make...？|How do you make...？]] — 核心句型

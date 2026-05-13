@@ -89,8 +89,8 @@ aliases: [How often do you exercise？, How often, 频率问句, 多长时间一
 
 ## 相关词条
 
-- [[always]] — 频率副词（总是）
-- [[sometimes]] — 有时
-- [[never]] — 从不
-- [[twice-a-week]] — 每周两次
-- [[often]] — 经常
+- [[175-always|always]] — 频率副词（总是）
+- [[198-sometimes|sometimes]] — 有时
+- [[190-never|never]] — 从不
+- [[201-twice-a-week|twice-a-week]] — 每周两次
+- [[191-often|often]] — 经常

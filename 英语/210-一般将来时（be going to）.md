@@ -85,6 +85,6 @@ aliases: [一般将来时（be going to）, be going to, going to, 将来时be g
 
 ## 相关词条
 
-- [[一般将来时（will）]] — will 表将来
-- [[I'm going to be a... when I grow up.]] — 核心句型
-- [[if条件句（一类条件）]] — 条件句
+- [[211-一般将来时（will）|一般将来时（will）]] — will 表将来
+- [[224-I'm going to be a... when I grow up.|I'm going to be a... when I grow up.]] — 核心句型
+- [[209-if条件句（一类条件）|if条件句（一类条件）]] — 条件句

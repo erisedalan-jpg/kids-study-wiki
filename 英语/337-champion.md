@@ -75,4 +75,4 @@ aliases: [champion, championship, 冠军, 卫冕, 捍卫]
 
 ## 🔗 相关词条
 
-[[award]] · [[athlete]] · [[fitness]] · [[not-only-but-also]] · [[It-takes-sb-time-to-do]] · [[现在完成时-高中深化]] · [[过去完成时]]
+[[336-award|award]] · [[335-athlete|athlete]] · [[343-fitness|fitness]] · [[372-not-only-but-also|not-only-but-also]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[364-过去完成时|过去完成时]]

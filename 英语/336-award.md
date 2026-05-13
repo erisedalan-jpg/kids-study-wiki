@@ -72,4 +72,4 @@ aliases: [award, 奖项, 奖励, 授予, 颁奖]
 
 ## 🔗 相关词条
 
-[[champion]] · [[athlete]] · [[fitness]] · [[not-only-but-also]] · [[现在完成时-高中深化]] · [[过去完成时]] · [[It-takes-sb-time-to-do]]
+[[337-champion|champion]] · [[335-athlete|athlete]] · [[343-fitness|fitness]] · [[372-not-only-but-also|not-only-but-also]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[364-过去完成时|过去完成时]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]]

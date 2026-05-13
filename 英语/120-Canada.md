@@ -87,9 +87,9 @@ aliases: [Canada, 加拿大, Canadian]
 
 ## 🔗 相关词条
 
-- [[Australia]]
-- [[Japan]]
-- [[Singapore]]
-- [[Toronto]]
-- [[pen-pal]]
-- [[Where-are-you-from]]
+- [[119-Australia|Australia]]
+- [[121-Japan|Japan]]
+- [[122-Singapore|Singapore]]
+- [[125-Toronto|Toronto]]
+- [[141-pen-pal|pen-pal]]
+- [[171-Where-are-you-from|Where-are-you-from]]

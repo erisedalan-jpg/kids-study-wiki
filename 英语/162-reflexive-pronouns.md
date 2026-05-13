@@ -94,6 +94,6 @@ aliases: [reflexive-pronouns, 反身代词, myself yourself himself herself, 自
 
 ## 🔗 相关词条
 
-- [[possessive-adjective-pronoun]]
-- [[can-cant]]
-- [[What-can-you-do]]
+- [[159-possessive-adjective-pronoun|possessive-adjective-pronoun]]
+- [[154-can-cant|can-cant]]
+- [[170-What-can-you-do|What-can-you-do]]

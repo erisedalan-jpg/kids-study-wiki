@@ -51,9 +51,9 @@ aliases: [virtue, 美德, 品德]
 
 ## 🔗 相关词条
 
-- [[moral]]
-- [[dignity]]
-- [[merciful]]
-- [[状语从句-让步]]
-- [[even-if-让步]]
-- [[虚拟语气-入门]]
+- [[425-moral|moral]]
+- [[420-dignity|dignity]]
+- [[424-merciful|merciful]]
+- [[440-状语从句-让步|状语从句-让步]]
+- [[451-even-if-让步|even-if-让步]]
+- [[445-虚拟语气-入门|虚拟语气-入门]]

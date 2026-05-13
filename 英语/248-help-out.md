@@ -87,7 +87,7 @@ aliases: [help-out, help out, 帮忙, 出手相助]
 
 ## 相关词条
 
-- [[volunteer]] — 志愿者
-- [[fix-up]] — 修缮
-- [[raise-money]] — 募款
-- [[Could you please...?]] — 委婉请求
+- [[262-volunteer|volunteer]] — 志愿者
+- [[243-fix-up|fix-up]] — 修缮
+- [[252-raise-money|raise-money]] — 募款
+- [[614-Could you please|Could you please...?]] — 委婉请求

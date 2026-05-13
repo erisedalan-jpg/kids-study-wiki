@@ -51,9 +51,9 @@ aliases: [festival-高中, festival, 节日]
 
 ## 🔗 相关词条
 
-- [[celebrate]]
-- [[tradition-习俗]]
-- [[religion]]
-- [[culture-高中]]
+- [[415-celebrate|celebrate]]
+- [[430-tradition-习俗|tradition-习俗]]
+- [[429-religion|religion]]
+- [[418-culture-高中|culture-高中]]
 - [[295-mid-autumn-festival]]
-- [[状语从句-时间]]
+- [[436-状语从句-时间|状语从句-时间]]

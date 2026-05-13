@@ -84,7 +84,7 @@ aliases: [both-of-us, both of us, 我们两个都, 我们俩]
 
 ## 相关词条
 
-- [[in-common]] — 共同点
-- [[talented]] — 有才华的
-- [[比较级（短词-er）]] — 比较句语法
-- [[Who is taller，A or B？]] — 核心句型
+- [[185-in-common|in-common]] — 共同点
+- [[200-talented|talented]] — 有才华的
+- [[217-比较级（短词-er）|比较级（短词-er）]] — 比较句语法
+- [[230-Who is taller，A or B？|Who is taller，A or B？]] — 核心句型

@@ -51,9 +51,9 @@ aliases: [merciful, 仁慈的, 慈悲的]
 
 ## 🔗 相关词条
 
-- [[moral]]
-- [[virtue]]
-- [[dignity]]
-- [[状语从句-让步]]
-- [[even-if-让步]]
-- [[虚拟语气-wish]]
+- [[425-moral|moral]]
+- [[432-virtue|virtue]]
+- [[420-dignity|dignity]]
+- [[440-状语从句-让步|状语从句-让步]]
+- [[451-even-if-让步|even-if-让步]]
+- [[441-虚拟语气-wish|虚拟语气-wish]]

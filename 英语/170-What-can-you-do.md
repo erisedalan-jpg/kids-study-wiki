@@ -88,8 +88,8 @@ Student: A little, but I'm better at singing.
 
 ## 🔗 相关词条
 
-- [[can-cant]]
-- [[Can-you-sentence]]
-- [[I-want-to-be]]
-- [[reporter]]
-- [[doctor]]
+- [[154-can-cant|can-cant]]
+- [[164-Can-you-sentence|Can-you-sentence]]
+- [[168-I-want-to-be|I-want-to-be]]
+- [[142-reporter|reporter]]
+- [[057-职业|doctor]]

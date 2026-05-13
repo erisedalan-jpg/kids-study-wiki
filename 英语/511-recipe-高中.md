@@ -52,9 +52,9 @@ aliases: [recipe-高中, recipe, 食谱, recipes]
 
 ## 🔗 相关词条
 
-- [[cuisine-高中]]
-- [[nutrition-高中]]
-- [[flavor]]
-- [[as-状语从句]]
-- [[Suppose-that-假设]]
-- [[What-matters-is]]
+- [[498-cuisine-高中|cuisine-高中]]
+- [[510-nutrition-高中|nutrition-高中]]
+- [[503-flavor|flavor]]
+- [[517-as-状语从句|as-状语从句]]
+- [[531-Suppose-that-假设|Suppose-that-假设]]
+- [[532-What-matters-is|What-matters-is]]

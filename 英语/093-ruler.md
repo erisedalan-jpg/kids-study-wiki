@@ -79,9 +79,9 @@ aliases: [ruler, 尺子, rule]
 
 ## 🔗 相关词条
 
-- [[pencil]]
-- [[eraser]]
-- [[schoolbag]]
-- [[notebook]]
-- [[preposition-phrase]]
-- [[cardinal-numbers-1-100]]
+- [[029-学校用品|pencil]]
+- [[029-学校用品|eraser]]
+- [[095-schoolbag|schoolbag]]
+- [[089-notebook|notebook]]
+- [[105-preposition-phrase|preposition-phrase]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]

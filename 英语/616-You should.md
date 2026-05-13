@@ -63,7 +63,7 @@ aliases: ["You should...", "You should", "should 句型", 建议句型, "You-sho
 
 ## 🔗 相关词条
 
-[[情态动词-should]] · [[情态动词-must]] · [[Why don't you]] · [[Could you please]] · [[祈使句]] · [[一般疑问句]] · [[句子结构-语序]] · [[take-medicine]]
+[[情态动词-should]] · [[情态动词-must]] · [[615-Why don't you|Why don't you]] · [[614-Could you please|Could you please]] · [[537-祈使句|祈使句]] · [[108-yes-no-questions|一般疑问句]] · [[603-句子结构-语序|句子结构-语序]] · [[259-take-medicine|take-medicine]]
 
 ---
 

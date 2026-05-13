@@ -86,8 +86,8 @@ aliases: [dumpling, 饺子, dumplings, 水饺]
 
 ## 🔗 相关词条
 
-- [[noodles]]
-- [[beef]]
-- [[mutton]]
-- [[special]]
-- [[waiter]]
+- [[139-noodles|noodles]]
+- [[126-beef|beef]]
+- [[137-mutton|mutton]]
+- [[145-special|special]]
+- [[151-waiter|waiter]]

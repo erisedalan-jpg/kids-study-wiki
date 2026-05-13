@@ -78,9 +78,9 @@ aliases: [father, 父亲, dad, daddy]
 
 ## 🔗 相关词条
 
-- [[mother]]
-- [[brother]]
-- [[sister]]
-- [[grandparents]]
-- [[family-tree]]
-- [[possessive-s]]
+- [[087-mother|mother]]
+- [[071-brother|brother]]
+- [[096-sister|sister]]
+- [[083-grandparents|grandparents]]
+- [[079-family-tree|family-tree]]
+- [[104-possessive-s|possessive-s]]

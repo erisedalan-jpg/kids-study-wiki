@@ -56,8 +56,8 @@ aliases: [sculpture, 雕塑, 雕刻]
 
 ## 🔗 相关词条
 
-- [[art-高中]]
-- [[painter]]
-- [[aesthetic]]
-- [[masterpiece]]
-- [[虚拟语气-综合]]
+- [[537-art-高中|art-高中]]
+- [[545-painter|painter]]
+- [[536-aesthetic|aesthetic]]
+- [[542-masterpiece|masterpiece]]
+- [[565-虚拟语气-综合|虚拟语气-综合]]

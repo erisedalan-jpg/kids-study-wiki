@@ -96,8 +96,8 @@ Dormitory Rules:
 
 ## 🔗 相关词条
 
-- [[rule]]
-- [[classroom-rule]]
-- [[must-mustnt]]
-- [[have-to]]
-- [[can-cant]]
+- [[093-ruler|rule]]
+- [[128-classroom-rule|classroom-rule]]
+- [[158-must-mustnt|must-mustnt]]
+- [[156-have-to|have-to]]
+- [[154-can-cant|can-cant]]

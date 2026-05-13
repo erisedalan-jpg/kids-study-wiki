@@ -71,10 +71,10 @@ aliases: [compose, 创作, 作曲, composition]
 
 ## 🔗 相关词条
 
-- [[melody]]
-- [[lyric-高中]]
-- [[talent]]
-- [[instrument]]
-- [[with-复合结构]]
-- [[find-it-adj-to-do]]
-- [[主谓一致-就近原则]]
+- [[385-melody|melody]]
+- [[384-lyric-高中|lyric-高中]]
+- [[391-talent|talent]]
+- [[380-instrument|instrument]]
+- [[413-with-复合结构|with-复合结构]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[396-主谓一致-就近原则|主谓一致-就近原则]]

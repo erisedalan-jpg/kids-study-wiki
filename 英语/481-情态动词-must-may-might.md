@@ -72,10 +72,10 @@ aliases: [情态动词-must-may-might, must may might, 情态动词推测现在]
 
 ## 🔗 相关词条
 
-- [[情态动词推测-过去]]
-- [[情态动词-could-would]]
-- [[情态动词-shall-should]]
-- [[gesture]]
-- [[interpret]]
-- [[posture]]
-- [[the-reason-why-is-that]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]
+- [[480-情态动词-could-would|情态动词-could-would]]
+- [[482-情态动词-shall-should|情态动词-shall-should]]
+- [[463-gesture|gesture]]
+- [[466-interpret|interpret]]
+- [[470-posture|posture]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]

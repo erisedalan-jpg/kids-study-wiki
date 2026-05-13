@@ -88,9 +88,9 @@ B: I can read a lot of books and practice writing every day.
 
 ## 🔗 相关词条
 
-- [[reporter]]
-- [[doctor]]
-- [[teacher]]
-- [[waiter]]
-- [[What-can-you-do]]
-- [[Why-do-you-like]]
+- [[142-reporter|reporter]]
+- [[057-职业|doctor]]
+- [[057-职业|teacher]]
+- [[151-waiter|waiter]]
+- [[170-What-can-you-do|What-can-you-do]]
+- [[172-Why-do-you-like|Why-do-you-like]]

@@ -90,9 +90,9 @@ aliases: [must-mustnt, 情态动词must, must, mustn't, 禁止]
 
 ## 🔗 相关词条
 
-- [[have-to]]
-- [[can-cant]]
-- [[rule]]
-- [[classroom-rule]]
-- [[dormitory-rule]]
-- [[imperative-sentence]]
+- [[156-have-to|have-to]]
+- [[154-can-cant|can-cant]]
+- [[093-ruler|rule]]
+- [[128-classroom-rule|classroom-rule]]
+- [[130-dormitory-rule|dormitory-rule]]
+- [[157-imperative-sentence|imperative-sentence]]

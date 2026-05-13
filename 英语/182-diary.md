@@ -81,6 +81,6 @@ aliases: [diary, 日记, 日记本]
 
 ## 相关词条
 
-- [[kept]] — keep 的过去式（keep a diary）
-- [[vacation]] — 假期
-- [[stayed]] — 待在某处
+- [[187-kept|kept]] — keep 的过去式（keep a diary）
+- [[203-vacation|vacation]] — 假期
+- [[199-stayed|stayed]] — 待在某处

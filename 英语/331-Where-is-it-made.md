@@ -104,4 +104,4 @@ Q: What is it made for?     →  A: It's made for teenagers.
 
 ## 🔗 相关词条
 
-[[What-is-it-made-of]] · [[被动语态-was-made-of]] · [[material]] · [[produce]] · [[被动语态入门]] · [[现在被动语态]] · [[国家与国籍]]
+[[328-What-is-it-made-of|What-is-it-made-of]] · [[320-被动语态-was-made-of|被动语态-was-made-of]] · [[294-material|material]] · [[300-produce|produce]] · [[274-被动语态入门|被动语态入门]] · [[273-现在被动语态|现在被动语态]] · [[060-国家与国籍|国家与国籍]]

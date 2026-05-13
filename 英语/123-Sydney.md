@@ -84,8 +84,8 @@ aliases: [Sydney, 悉尼]
 
 ## 🔗 相关词条
 
-- [[Australia]]
-- [[Toronto]]
-- [[Tokyo]]
-- [[pen-pal]]
-- [[koala]]
+- [[119-Australia|Australia]]
+- [[125-Toronto|Toronto]]
+- [[124-Tokyo|Tokyo]]
+- [[141-pen-pal|pen-pal]]
+- [[134-koala|koala]]

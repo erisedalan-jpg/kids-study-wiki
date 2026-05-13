@@ -80,7 +80,7 @@ always → usually → often → sometimes → hardly ever → never
 
 ## 相关词条
 
-- [[never]] — 从不
-- [[sometimes]] — 有时
-- [[always]] — 总是
-- [[How often do you exercise？]] — 核心句型
+- [[190-never|never]] — 从不
+- [[198-sometimes|sometimes]] — 有时
+- [[175-always|always]] — 总是
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

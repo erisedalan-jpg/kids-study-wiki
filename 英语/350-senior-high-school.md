@@ -84,4 +84,4 @@ aliases: [senior-high-school, senior high school, high school, 高中, 普通高
 
 ## 🔗 相关词条
 
-[[teenager]] · [[register]] · [[appreciate]] · [[定语从句-高中入门]] · [[现在完成时-高中深化]] · [[senior-high-school]] · [[What-do-you-think-of-高中]]
+[[305-teenager|teenager]] · [[348-register|register]] · [[334-appreciate|appreciate]] · [[359-定语从句-高中入门|定语从句-高中入门]] · [[361-现在完成时-高中深化|现在完成时-高中深化]] · [[350-senior-high-school|senior-high-school]] · [[369-What-do-you-think-of-高中|What-do-you-think-of-高中]]

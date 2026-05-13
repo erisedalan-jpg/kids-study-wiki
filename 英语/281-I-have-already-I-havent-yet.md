@@ -97,5 +97,5 @@ aliases: [I-have-already-I-havent-yet, I have already / I haven't...yet., I have
 ## 相关词条
 
 - [[already / yet 用法]] — already 和 yet 的规则
-- [[现在完成时入门]] — have/has + 过去分词
-- [[Have you ever been to...?]] — 经历句型
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词
+- [[618-Have you ever been to|Have you ever been to...?]] — 经历句型

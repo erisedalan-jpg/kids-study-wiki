@@ -99,8 +99,8 @@ aliases: [simple-present-tense, 一般现在时, present tense, 现在时]
 
 ## 🔗 相关词条
 
-- [[be-verb-am-is-are]]
-- [[yes-no-questions]]
-- [[i-like]]
-- [[i-have-do-you-have]]
-- [[noun-plurals]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[108-yes-no-questions|yes-no-questions]]
+- [[113-i-like|i-like]]
+- [[112-i-have-do-you-have|i-have-do-you-have]]
+- [[102-noun-plurals|noun-plurals]]

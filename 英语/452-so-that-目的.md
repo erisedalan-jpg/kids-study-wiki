@@ -24,7 +24,7 @@ aliases: [so-that-目的, so that, 以便句型, 目的状语从句]
 | 结构 | 含义 | 示例 |
 |------|------|------|
 | 主句 + so that + 从句（含情态动词） | 目的 | She spoke slowly so that we could understand. |
-| 主句 + so + adj./adv. + that + 从句 | 结果（详见 [[such-that-结果]]） | She spoke so slowly that we fell asleep. |
+| 主句 + so + adj./adv. + that + 从句 | 结果（详见 [[453-such-that-结果|such-that-结果]]） | She spoke so slowly that we fell asleep. |
 
 > 注意：**so that（目的）** 与 **so...that（结果）** 形式相近，必须区分！
 
@@ -82,10 +82,10 @@ aliases: [so-that-目的, so that, 以便句型, 目的状语从句]
 
 ## 🔗 相关词条
 
-- [[such-that-结果]]
-- [[as-long-as-条件]]
-- [[even-if-让步]]
-- [[状语从句]]
+- [[453-such-that-结果|such-that-结果]]
+- [[450-as-long-as-条件|as-long-as-条件]]
+- [[451-even-if-让步|even-if-让步]]
+- [[617-状语从句|状语从句]]
 - [[不定式表目的]]
 - [[space]]
 - [[explore]]

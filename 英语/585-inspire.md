@@ -61,9 +61,9 @@ aliases: [inspire, 激励, 启发, 鼓励]
 
 ## 🔗 相关词条
 
-- [[imagination-高中]]
-- [[creative]]
-- [[achievement-高中]]
-- [[future-高中]]
-- [[career]]
-- [[非谓语-不定式分词区别]]
+- [[584-imagination-高中|imagination-高中]]
+- [[579-creative|creative]]
+- [[455-achievement-高中|achievement-高中]]
+- [[461-future-高中|future-高中]]
+- [[578-career|career]]
+- [[602-非谓语-不定式分词区别|非谓语-不定式分词区别]]

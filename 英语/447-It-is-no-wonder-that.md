@@ -70,10 +70,10 @@ aliases: [It-is-no-wonder-that, it is no wonder that, 难怪句型, no wonder]
 
 ## 🔗 相关词条
 
-- [[It-is-said-that]]
-- [[It-is-believed-that]]
-- [[It-is-+adj+to-do]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[406-It-is-believed-that|It-is-believed-that]]
+- [[367-It-is-+adj+to-do|It-is-+adj+to-do]]
 - [[形式主语it]]
-- [[主语从句]]
+- [[354-主语从句|主语从句]]
 - [[morals]]
-- [[virtue]]
+- [[432-virtue|virtue]]

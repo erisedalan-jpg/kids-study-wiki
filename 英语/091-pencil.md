@@ -80,10 +80,10 @@ aliases: [pencil, 铅笔]
 
 ## 🔗 相关词条
 
-- [[eraser]]
-- [[ruler]]
-- [[schoolbag]]
-- [[notebook]]
-- [[dictionary]]
-- [[is-are-this-that]]
-- [[possessive-pronouns]]
+- [[029-学校用品|eraser]]
+- [[029-学校用品|ruler]]
+- [[095-schoolbag|schoolbag]]
+- [[089-notebook|notebook]]
+- [[075-dictionary|dictionary]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[103-possessive-pronouns|possessive-pronouns]]

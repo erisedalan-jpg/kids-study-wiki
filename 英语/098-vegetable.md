@@ -86,9 +86,9 @@ aliases: [vegetable, 蔬菜, veggie, vegetables]
 
 ## 🔗 相关词条
 
-- [[fruit]]
-- [[salad]]
-- [[apple]]
-- [[banana]]
-- [[i-like]]
-- [[how-much-is-are]]
+- [[081-fruit|fruit]]
+- [[094-salad|salad]]
+- [[068-apple|apple]]
+- [[069-banana|banana]]
+- [[113-i-like|i-like]]
+- [[111-how-much-is-are|how-much-is-are]]

@@ -90,8 +90,8 @@ aliases: [calendar, 日历, 日程表]
 
 ## 相关词条
 
-- [[available]] — 有空的
-- [[invite]] — 邀请
-- [[refuse]] — 拒绝
-- [[accept]] — 接受
-- [[Can you come to my party？]] — 核心句型
+- [[178-available|available]] — 有空的
+- [[186-invite|invite]] — 邀请
+- [[195-refuse|refuse]] — 拒绝
+- [[174-accept|accept]] — 接受
+- [[219-Can you come to my party？|Can you come to my party？]] — 核心句型

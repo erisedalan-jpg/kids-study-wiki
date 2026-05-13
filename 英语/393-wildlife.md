@@ -69,10 +69,10 @@ aliases: [wildlife, 野生动物, 野生生物]
 
 ## 🔗 相关词条
 
-- [[endangered]]
-- [[species]]
-- [[extinct]]
-- [[habitat]]
-- [[preserve]]
-- [[现在完成进行时-深化]]
-- [[find-it-adj-to-do]]
+- [[376-endangered|endangered]]
+- [[390-species|species]]
+- [[377-extinct|extinct]]
+- [[378-habitat|habitat]]
+- [[388-preserve|preserve]]
+- [[402-现在完成进行时-深化|现在完成进行时-深化]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]

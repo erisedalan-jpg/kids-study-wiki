@@ -88,7 +88,7 @@ aliases: [fever, 发烧, 发热]
 
 ## 相关词条
 
-- [[matter]] — what's the matter
-- [[sore-throat]] — 喉咙痛
+- [[249-matter|matter]] — what's the matter
+- [[256-sore-throat|sore-throat]] — 喉咙痛
 - [[since / for 区别]] — 时间表达
-- [[You should...]] — 建议句型
+- [[616-You should|You should...]] — 建议句型

@@ -93,7 +93,7 @@ aliases: [take-medicine, take medicine, 吃药, 服药]
 
 ## 相关词条
 
-- [[matter]] — what's the matter
-- [[fever]] — 发烧
-- [[You should...]] — 建议句型
+- [[249-matter|matter]] — what's the matter
+- [[062-看病|fever]] — 发烧
+- [[616-You should|You should...]] — 建议句型
 - [[I had to / I have to...]] — 不得不做某事

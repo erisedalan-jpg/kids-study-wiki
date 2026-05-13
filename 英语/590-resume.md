@@ -64,9 +64,9 @@ aliases: [resume, 简历, 个人简历, résumé]
 
 ## 🔗 相关词条
 
-- [[cv]]
-- [[career]]
-- [[interview-高中]]
-- [[achievement-高中]]
-- [[In-conclusion-写作]]
-- [[高考语法综合复习]]
+- [[581-cv|cv]]
+- [[578-career|career]]
+- [[586-interview-高中|interview-高中]]
+- [[455-achievement-高中|achievement-高中]]
+- [[609-In-conclusion-写作|In-conclusion-写作]]
+- [[605-高考语法综合复习|高考语法综合复习]]

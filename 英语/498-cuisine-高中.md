@@ -52,9 +52,9 @@ aliases: [cuisine-高中, cuisine, 美食, 烹饪风格, culinary]
 
 ## 🔗 相关词条
 
-- [[nutrition-高中]]
-- [[recipe-高中]]
-- [[flavor]]
-- [[as-状语从句]]
-- [[as-比较]]
-- [[the-thing-is-that]]
+- [[510-nutrition-高中|nutrition-高中]]
+- [[511-recipe-高中|recipe-高中]]
+- [[503-flavor|flavor]]
+- [[517-as-状语从句|as-状语从句]]
+- [[516-as-比较|as-比较]]
+- [[533-the-thing-is-that|the-thing-is-that]]

@@ -62,9 +62,9 @@ aliases: [On-no-account-倒装, On no account, on no account倒装, 否定副词
 
 ## 🔗 相关词条
 
-- [[Nor-can-I-倒装]]
-- [[as-状语从句]]
-- [[firstaid]]
-- [[emergency]]
-- [[landscape-2-高中]]
-- [[having-done-状语]]
+- [[529-Nor-can-I-倒装|Nor-can-I-倒装]]
+- [[517-as-状语从句|as-状语从句]]
+- [[502-firstaid|firstaid]]
+- [[500-emergency|emergency]]
+- [[508-landscape-2-高中|landscape-2-高中]]
+- [[518-having-done-状语|having-done-状语]]

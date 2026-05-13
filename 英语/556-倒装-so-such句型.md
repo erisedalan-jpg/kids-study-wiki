@@ -72,8 +72,8 @@ aliases: [倒装-so-such句型, so倒装, such倒装, so-that倒装]
 
 ## 🔗 相关词条
 
-- [[倒装-综合]]
-- [[倒装-否定词置首]]
-- [[倒装-only状语置首]]
-- [[Such-was-his-determination]]
-- [[虚拟语气-综合]]
+- [[558-倒装-综合|倒装-综合]]
+- [[557-倒装-否定词置首|倒装-否定词置首]]
+- [[555-倒装-only状语置首|倒装-only状语置首]]
+- [[571-Such-was-his-determination|Such-was-his-determination]]
+- [[565-虚拟语气-综合|虚拟语气-综合]]

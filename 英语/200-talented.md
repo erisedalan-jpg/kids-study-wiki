@@ -88,7 +88,7 @@ aliases: [talented, 有才华的, 有天赋的]
 
 ## 相关词条
 
-- [[both-of-us]] — 我们两个都
-- [[in-common]] — 共同点
-- [[more-outgoing]] — 更外向的
-- [[比较级（长词more）]] — 语法详解
+- [[179-both-of-us|both-of-us]] — 我们两个都
+- [[185-in-common|in-common]] — 共同点
+- [[189-more-outgoing|more-outgoing]] — 更外向的
+- [[218-比较级（长词more）|比较级（长词more）]] — 语法详解

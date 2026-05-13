@@ -79,10 +79,10 @@ aliases: [as-long-as-条件, as long as, 只要句型, 条件状语从句as-long
 
 ## 🔗 相关词条
 
-- [[even-if-让步]]
-- [[so-that-目的]]
-- [[状语从句]]
+- [[451-even-if-让步|even-if-让步]]
+- [[452-so-that-目的|so-that-目的]]
+- [[617-状语从句|状语从句]]
 - [[条件句if]]
-- [[as-soon-as]]
-- [[ocean]]
-- [[environment]]
+- [[370-as-soon-as|as-soon-as]]
+- [[045-自然景观|ocean]]
+- [[240-environment|environment]]

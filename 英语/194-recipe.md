@@ -85,8 +85,8 @@ aliases: [recipe, 食谱, 配方]
 
 ## 相关词条
 
-- [[smoothie]] — 冰沙
-- [[sandwich]] — 三明治
-- [[mix]] — 混合
-- [[chop]] — 切碎
-- [[How do you make...？]] — 核心句型
+- [[197-smoothie|smoothie]] — 冰沙
+- [[196-sandwich|sandwich]] — 三明治
+- [[188-mix|mix]] — 混合
+- [[181-chop|chop]] — 切碎
+- [[220-How do you make...？|How do you make...？]] — 核心句型

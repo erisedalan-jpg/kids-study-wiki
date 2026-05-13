@@ -63,9 +63,9 @@ aliases: [share-高中, share, 分享, 传播, 共享]
 
 ## 🔗 相关词条
 
-- [[audience]]
-- [[broadcast]]
-- [[viral]]
-- [[digital-高中]]
-- [[online-高中]]
-- [[Now-that-在新形势下]]
+- [[576-audience|audience]]
+- [[577-broadcast|broadcast]]
+- [[593-viral|viral]]
+- [[375-digital-高中|digital-高中]]
+- [[387-online-高中|online-高中]]
+- [[613-Now-that-在新形势下|Now-that-在新形势下]]

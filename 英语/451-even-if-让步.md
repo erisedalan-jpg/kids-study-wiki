@@ -80,10 +80,10 @@ aliases: [even-if-让步, even if, even though, 即使句型, 让步状语从句
 
 ## 🔗 相关词条
 
-- [[as-long-as-条件]]
-- [[so-that-目的]]
-- [[状语从句]]
+- [[450-as-long-as-条件|as-long-as-条件]]
+- [[452-so-that-目的|so-that-目的]]
+- [[617-状语从句|状语从句]]
 - [[条件句if]]
-- [[虚拟语气]]
-- [[ocean]]
+- [[445-虚拟语气-入门|虚拟语气]]
+- [[045-自然景观|ocean]]
 - [[perseverance]]

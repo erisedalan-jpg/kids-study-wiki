@@ -57,8 +57,8 @@ aliases: [environmental, 环境的, 环保的]
 
 ## 🔗 相关词条
 
-- [[pollution-高中]]
-- [[sustainable]]
-- [[recycle]]
-- [[conservation]]
-- [[prevent]]
+- [[548-pollution-高中|pollution-高中]]
+- [[552-sustainable|sustainable]]
+- [[550-recycle|recycle]]
+- [[538-conservation|conservation]]
+- [[549-prevent|prevent]]

@@ -53,9 +53,9 @@ aliases: [engineer, 工程师, engineering, engineered]
 
 ## 🔗 相关词条
 
-- [[science-fiction]]
-- [[robot-高中]]
-- [[architect]]
-- [[landmark]]
-- [[clone]]
-- [[独立主格-入门]]
+- [[513-science-fiction|science-fiction]]
+- [[512-robot-高中|robot-高中]]
+- [[494-architect|architect]]
+- [[507-landmark|landmark]]
+- [[497-clone|clone]]
+- [[523-独立主格-入门|独立主格-入门]]

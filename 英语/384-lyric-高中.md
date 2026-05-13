@@ -70,10 +70,10 @@ aliases: [lyric-高中, lyric, lyrics, 歌词, 抒情的]
 
 ## 🔗 相关词条
 
-- [[melody]]
-- [[compose]]
-- [[talent]]
-- [[instrument]]
-- [[with-复合结构]]
-- [[find-it-adj-to-do]]
-- [[the-more-the-more]]
+- [[385-melody|melody]]
+- [[374-compose|compose]]
+- [[391-talent|talent]]
+- [[380-instrument|instrument]]
+- [[413-with-复合结构|with-复合结构]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[412-the-more-the-more|the-more-the-more]]

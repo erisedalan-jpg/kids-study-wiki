@@ -90,9 +90,9 @@ aliases: [preposition-phrase, 介词短语, 方位介词, in on under next to]
 
 ## 🔗 相关词条
 
-- [[there-be]]
-- [[bookcase]]
-- [[desk]]
-- [[drawer]]
-- [[sofa]]
-- [[is-are-this-that]]
+- [[107-there-be|there-be]]
+- [[070-bookcase|bookcase]]
+- [[031-教室物品|desk]]
+- [[076-drawer|drawer]]
+- [[032-房间-家具|sofa]]
+- [[114-is-are-this-that|is-are-this-that]]

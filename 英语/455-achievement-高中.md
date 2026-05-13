@@ -67,10 +67,10 @@ aliases: [achievement-高中, achievement, 成就, 成绩]
 
 ## 🔗 相关词条
 
-- [[dedicate]]
-- [[academic]]
-- [[genius]]
-- [[award-高中]]
-- [[innovation]]
-- [[动名词作主语]]
-- [[It-occurred-to-me-that]]
+- [[459-dedicate|dedicate]]
+- [[454-academic|academic]]
+- [[462-genius|genius]]
+- [[457-award-高中|award-高中]]
+- [[465-innovation|innovation]]
+- [[476-动名词作主语|动名词作主语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]

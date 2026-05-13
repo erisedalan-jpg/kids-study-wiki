@@ -57,8 +57,8 @@ aliases: [courage, 勇气, 勇敢, 胆量]
 
 ## 🔗 相关词条
 
-- [[adversity]]
-- [[overcome]]
-- [[mental]]
-- [[Come-what-may]]
-- [[Had-I-known]]
+- [[535-adversity|adversity]]
+- [[544-overcome|overcome]]
+- [[543-mental|mental]]
+- [[567-Come-what-may|Come-what-may]]
+- [[568-Had-I-known|Had-I-known]]

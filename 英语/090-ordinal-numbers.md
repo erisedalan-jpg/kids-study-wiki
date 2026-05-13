@@ -96,7 +96,7 @@ aliases: [ordinal-numbers, 序数词, ordinal, first second third]
 
 ## 🔗 相关词条
 
-- [[cardinal-numbers-1-100]]
-- [[age]]
-- [[when-is-your-birthday]]
-- [[preposition-phrase]]
+- [[072-cardinal-numbers-1-100|cardinal-numbers-1-100]]
+- [[067-age|age]]
+- [[118-when-is-your-birthday|when-is-your-birthday]]
+- [[105-preposition-phrase|preposition-phrase]]

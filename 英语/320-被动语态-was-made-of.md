@@ -96,4 +96,4 @@ aliases: [被动语态-was-made-of, was made of, be made of, 材料被动]
 
 ## 🔗 相关词条
 
-[[被动语态-by短语]] · [[What-is-it-made-of]] · [[Where-is-it-made]] · [[material]] · [[被动语态入门]] · [[现在被动语态]] · [[一般过去被动语态]]
+[[319-被动语态-by短语|被动语态-by短语]] · [[328-What-is-it-made-of|What-is-it-made-of]] · [[331-Where-is-it-made|Where-is-it-made]] · [[294-material|material]] · [[274-被动语态入门|被动语态入门]] · [[273-现在被动语态|现在被动语态]] · [[267-一般过去被动语态|一般过去被动语态]]

@@ -67,10 +67,10 @@ aliases: [award-高中, award, 奖项, 授予, 颁奖]
 
 ## 🔗 相关词条
 
-- [[achievement-高中]]
-- [[genius]]
-- [[dedicate]]
-- [[academic]]
-- [[innovation]]
-- [[What-impressed-me-most]]
-- [[the-reason-why-is-that]]
+- [[455-achievement-高中|achievement-高中]]
+- [[462-genius|genius]]
+- [[459-dedicate|dedicate]]
+- [[454-academic|academic]]
+- [[465-innovation|innovation]]
+- [[491-What-impressed-me-most|What-impressed-me-most]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]

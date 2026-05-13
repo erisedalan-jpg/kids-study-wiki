@@ -68,10 +68,10 @@ aliases: [innovation, 创新, 革新, 创新成果]
 
 ## 🔗 相关词条
 
-- [[breakthrough]]
-- [[future-高中]]
-- [[prediction]]
-- [[achievement-高中]]
-- [[academic]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
+- [[458-breakthrough|breakthrough]]
+- [[461-future-高中|future-高中]]
+- [[471-prediction|prediction]]
+- [[455-achievement-高中|achievement-高中]]
+- [[454-academic|academic]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]

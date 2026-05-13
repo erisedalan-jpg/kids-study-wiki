@@ -88,8 +88,8 @@ aliases: [demonstrative-pronouns, 指示代词, this that these those]
 
 ## 🔗 相关词条
 
-- [[is-are-this-that]]
-- [[be-verb-am-is-are]]
-- [[possessive-pronouns]]
-- [[noun-plurals]]
-- [[yes-no-questions]]
+- [[114-is-are-this-that|is-are-this-that]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]
+- [[103-possessive-pronouns|possessive-pronouns]]
+- [[102-noun-plurals|noun-plurals]]
+- [[108-yes-no-questions|yes-no-questions]]

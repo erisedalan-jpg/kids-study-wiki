@@ -57,8 +57,8 @@ aliases: [physical, 身体的, 体格的, 物质的]
 
 ## 🔗 相关词条
 
-- [[mental]]
-- [[lifestyle]]
-- [[addiction]]
-- [[prevent]]
-- [[虚拟语气-综合]]
+- [[543-mental|mental]]
+- [[541-lifestyle|lifestyle]]
+- [[534-addiction|addiction]]
+- [[549-prevent|prevent]]
+- [[565-虚拟语气-综合|虚拟语气-综合]]

@@ -97,4 +97,4 @@ aliases: [used-to, used to, 过去常常, 以前曾经]
 
 ## 🔗 相关词条
 
-[[used-to-do]] · [[afraid]] · [[daily]] · [[一般过去时（规则与不规则动词）]] · [[情态动词can]] · [[宾语从句-初中]] · [[make-sb-do]]
+[[311-used-to-do|used-to-do]] · [[285-afraid|afraid]] · [[289-daily|daily]] · [[212-一般过去时（规则与不规则动词）|一般过去时（规则与不规则动词）]] · [[039-情态动词can|情态动词can]] · [[315-宾语从句-初中|宾语从句-初中]] · [[309-make-sb-do|make-sb-do]]

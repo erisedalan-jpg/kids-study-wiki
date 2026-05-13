@@ -83,7 +83,7 @@ aliases: [stayed, stay的过去式, 待在, 住在]
 
 ## 相关词条
 
-- [[vacation]] — 假期
-- [[kept]] — keep 的过去式
-- [[一般过去时（规则与不规则动词）]] — 语法详解
-- [[Where did you go on vacation？]] — 核心句型
+- [[203-vacation|vacation]] — 假期
+- [[187-kept|kept]] — keep 的过去式
+- [[212-一般过去时（规则与不规则动词）|一般过去时（规则与不规则动词）]] — 语法详解
+- [[228-Where did you go on vacation？|Where did you go on vacation？]] — 核心句型

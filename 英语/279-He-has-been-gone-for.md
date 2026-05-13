@@ -88,5 +88,5 @@ aliases: [He-has-been-gone-for, He has been gone for two years., has been gone f
 ## 相关词条
 
 - [[since / for 区别]] — 时间表达
-- [[现在完成时入门]] — have/has + 过去分词
-- [[Have you ever been to...?]] — 经历句型
+- [[272-现在完成时入门|现在完成时入门]] — have/has + 过去分词
+- [[618-Have you ever been to|Have you ever been to...?]] — 经历句型

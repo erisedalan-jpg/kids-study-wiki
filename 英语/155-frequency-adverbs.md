@@ -91,7 +91,7 @@ aliases: [frequency-adverbs, 频度副词, always usually often sometimes never,
 
 ## 🔗 相关词条
 
-- [[simple-present-tense]]
-- [[present-continuous-tense]]
-- [[preposition-time]]
-- [[How-do-you-go-to-school]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[161-present-continuous-tense|present-continuous-tense]]
+- [[160-preposition-time|preposition-time]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

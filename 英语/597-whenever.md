@@ -66,9 +66,9 @@ aliases: [whenever, 无论何时, 每当]
 
 ## 🔗 相关词条
 
-- [[wh-ever-复合词]]
-- [[whatever]]
-- [[whoever]]
-- [[wherever]]
-- [[状语从句-时间]]
-- [[状语从句-让步]]
+- [[595-wh-ever-复合词|wh-ever-复合词]]
+- [[596-whatever|whatever]]
+- [[599-whoever|whoever]]
+- [[598-wherever|wherever]]
+- [[436-状语从句-时间|状语从句-时间]]
+- [[440-状语从句-让步|状语从句-让步]]

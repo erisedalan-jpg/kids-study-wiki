@@ -74,8 +74,8 @@ It is up to + 人（名词/代词） + to do + 动词原形
 
 ## 🔗 相关词条
 
-- [[lifestyle]]
-- [[prevent]]
-- [[conservation]]
-- [[倒装-only状语置首]]
-- [[however-引导让步]]
+- [[541-lifestyle|lifestyle]]
+- [[549-prevent|prevent]]
+- [[538-conservation|conservation]]
+- [[555-倒装-only状语置首|倒装-only状语置首]]
+- [[573-however-引导让步|however-引导让步]]

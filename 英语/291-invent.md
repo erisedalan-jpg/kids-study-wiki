@@ -99,4 +99,4 @@ aliases: [invent, 发明, 创造, 发明（动词）]
 
 ## 🔗 相关词条
 
-[[invention]] · [[accidental]] · [[Where-was-it-invented]] · [[When-was-it-invented]] · [[被动语态-by短语]] · [[被动语态入门]] · [[produce]]
+[[292-invention|invention]] · [[284-accidental|accidental]] · [[332-Where-was-it-invented|Where-was-it-invented]] · [[330-When-was-it-invented|When-was-it-invented]] · [[319-被动语态-by短语|被动语态-by短语]] · [[274-被动语态入门|被动语态入门]] · [[300-produce|produce]]

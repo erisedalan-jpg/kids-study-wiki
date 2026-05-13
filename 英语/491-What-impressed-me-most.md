@@ -77,10 +77,10 @@ What + 主语 + 动词 + is + that/名词
 
 ## 🔗 相关词条
 
-- [[It-occurred-to-me-that]]
-- [[the-reason-why-is-that]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
-- [[achievement-高中]]
-- [[dedicate]]
-- [[动名词作主语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[455-achievement-高中|achievement-高中]]
+- [[459-dedicate|dedicate]]
+- [[476-动名词作主语|动名词作主语]]

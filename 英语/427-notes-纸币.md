@@ -51,9 +51,9 @@ aliases: [notes-纸币, notes, 纸币, banknote]
 
 ## 🔗 相关词条
 
-- [[currency]]
-- [[wealth]]
-- [[coin-高中]]
-- [[虚拟语气-与现在事实相反]]
-- [[状语从句-条件]]
-- [[as-long-as-条件]]
+- [[419-currency|currency]]
+- [[433-wealth|wealth]]
+- [[416-coin-高中|coin-高中]]
+- [[443-虚拟语气-与现在事实相反|虚拟语气-与现在事实相反]]
+- [[437-状语从句-条件|状语从句-条件]]
+- [[450-as-long-as-条件|as-long-as-条件]]

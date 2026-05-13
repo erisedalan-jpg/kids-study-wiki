@@ -88,8 +88,8 @@ aliases: [chore, chores, 家务, 家务活]
 
 ## 相关词条
 
-- [[do-the-dishes]] — 洗碗
-- [[sweep-the-floor]] — 扫地
-- [[take-out-trash]] — 倒垃圾
-- [[fold-clothes]] — 叠衣服
-- [[Could you please...?]] — 委婉请求
+- [[239-do-the-dishes|do-the-dishes]] — 洗碗
+- [[258-sweep-the-floor|sweep-the-floor]] — 扫地
+- [[260-take-out-trash|take-out-trash]] — 倒垃圾
+- [[244-fold-clothes|fold-clothes]] — 叠衣服
+- [[614-Could you please|Could you please...?]] — 委婉请求

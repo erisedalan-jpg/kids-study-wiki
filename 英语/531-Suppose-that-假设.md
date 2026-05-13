@@ -52,9 +52,9 @@ aliases: [Suppose-that-假设, Suppose that, suppose假设, suppose that句型]
 
 ## 🔗 相关词条
 
-- [[名词性从句-that]]
-- [[名词性从句-whether-if]]
-- [[science-fiction]]
-- [[clone]]
-- [[It-makes-no-sense-to-do]]
-- [[It-strikes-me-that]]
+- [[520-名词性从句-that|名词性从句-that]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[513-science-fiction|science-fiction]]
+- [[497-clone|clone]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[528-It-strikes-me-that|It-strikes-me-that]]

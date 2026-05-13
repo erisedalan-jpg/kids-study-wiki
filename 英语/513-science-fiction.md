@@ -52,9 +52,9 @@ aliases: [science-fiction, 科幻, science fiction, sci-fi]
 
 ## 🔗 相关词条
 
-- [[imagination]]
-- [[robot-高中]]
-- [[clone]]
-- [[engineer]]
-- [[名词性从句-that]]
+- [[504-imagination|imagination]]
+- [[512-robot-高中|robot-高中]]
+- [[497-clone|clone]]
+- [[501-engineer|engineer]]
+- [[520-名词性从句-that|名词性从句-that]]
 - [[科技]]

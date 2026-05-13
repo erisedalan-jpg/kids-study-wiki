@@ -55,9 +55,9 @@ aliases: [nutrition-高中, nutrition, 营养, nutritious, nutrient]
 
 ## 🔗 相关词条
 
-- [[cuisine-高中]]
-- [[recipe-高中]]
-- [[flavor]]
-- [[firstaid]]
-- [[as-比较]]
-- [[It-doesnt-matter-whether]]
+- [[498-cuisine-高中|cuisine-高中]]
+- [[511-recipe-高中|recipe-高中]]
+- [[503-flavor|flavor]]
+- [[502-firstaid|firstaid]]
+- [[516-as-比较|as-比较]]
+- [[526-It-doesnt-matter-whether|It-doesnt-matter-whether]]

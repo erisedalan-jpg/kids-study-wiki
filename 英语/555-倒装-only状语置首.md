@@ -63,8 +63,8 @@ aliases: [倒装-only状语置首, only倒装, only inversion]
 
 ## 🔗 相关词条
 
-- [[倒装-综合]]
-- [[倒装-否定词置首]]
-- [[倒装-so-such句型]]
-- [[It-is-up-to-sb-to-do]]
-- [[however-引导让步]]
+- [[558-倒装-综合|倒装-综合]]
+- [[557-倒装-否定词置首|倒装-否定词置首]]
+- [[556-倒装-so-such句型|倒装-so-such句型]]
+- [[569-It-is-up-to-sb-to-do|It-is-up-to-sb-to-do]]
+- [[573-however-引导让步|however-引导让步]]

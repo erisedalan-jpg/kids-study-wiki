@@ -71,10 +71,10 @@ aliases: [internet, 互联网, 因特网]
 
 ## 🔗 相关词条
 
-- [[online-高中]]
-- [[digital-高中]]
-- [[find-it-adj-to-do]]
-- [[make-it-clear-that]]
-- [[with-复合结构]]
-- [[It-is-said-that]]
-- [[宾语从句-高中]]
+- [[387-online-高中|online-高中]]
+- [[375-digital-高中|digital-高中]]
+- [[409-find-it-adj-to-do|find-it-adj-to-do]]
+- [[410-make-it-clear-that|make-it-clear-that]]
+- [[413-with-复合结构|with-复合结构]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[360-宾语从句-高中|宾语从句-高中]]

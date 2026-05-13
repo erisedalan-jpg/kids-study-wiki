@@ -89,6 +89,6 @@ aliases: [twice-a-week, twice a week, 每周两次, 一周两次]
 
 ## 相关词条
 
-- [[always]] — 频率副词体系
-- [[often]] — 经常
-- [[How often do you exercise？]] — 核心句型
+- [[175-always|always]] — 频率副词体系
+- [[191-often|often]] — 经常
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

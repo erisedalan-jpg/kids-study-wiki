@@ -92,7 +92,7 @@ aliases: [argue, argument, 争论, 吵架, 争吵]
 
 ## 相关词条
 
-- [[share]] — 分享
-- [[secret]] — 秘密
-- [[allow]] — 允许
-- [[Why don't you...?]] — 建议句型
+- [[255-share|share]] — 分享
+- [[254-secret|secret]] — 秘密
+- [[232-allow|allow]] — 允许
+- [[615-Why don't you|Why don't you...?]] — 建议句型

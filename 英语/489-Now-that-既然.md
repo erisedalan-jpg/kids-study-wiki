@@ -74,10 +74,10 @@ Now that + 从句，主句
 
 ## 🔗 相关词条
 
-- [[It-occurred-to-me-that]]
-- [[the-reason-why-is-that]]
-- [[the-fact-that-同位语]]
-- [[It-was-not-until-that]]
-- [[future-高中]]
-- [[breakthrough]]
-- [[动名词作宾语]]
+- [[487-It-occurred-to-me-that|It-occurred-to-me-that]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[488-It-was-not-until-that|It-was-not-until-that]]
+- [[461-future-高中|future-高中]]
+- [[458-breakthrough|breakthrough]]
+- [[477-动名词作宾语|动名词作宾语]]

@@ -56,8 +56,8 @@ aliases: [adversity, 逆境, 困境, 艰难]
 
 ## 🔗 相关词条
 
-- [[courage]]
-- [[overcome]]
-- [[mental]]
-- [[倒装-综合]]
-- [[Were-it-not-for]]
+- [[539-courage|courage]]
+- [[544-overcome|overcome]]
+- [[543-mental|mental]]
+- [[558-倒装-综合|倒装-综合]]
+- [[572-Were-it-not-for|Were-it-not-for]]

@@ -59,9 +59,9 @@ aliases: [submarine, 潜水艇, 潜艇, 水下的]
 
 ## 🔗 相关词条
 
-- [[ocean-高中]]
-- [[marine]]
-- [[dive-高中]]
-- [[current-海流]]
-- [[gravity-高中]]
-- [[非谓语-综合判断]]
+- [[589-ocean-高中|ocean-高中]]
+- [[587-marine|marine]]
+- [[582-dive-高中|dive-高中]]
+- [[580-current-海流|current-海流]]
+- [[423-gravity-高中|gravity-高中]]
+- [[604-非谓语-综合判断|非谓语-综合判断]]

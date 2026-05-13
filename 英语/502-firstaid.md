@@ -52,9 +52,9 @@ aliases: [firstaid, first aid, 急救, first-aid]
 
 ## 🔗 相关词条
 
-- [[injure]]
-- [[bandage]]
-- [[emergency]]
-- [[名词性从句-whether-if]]
-- [[It-makes-no-sense-to-do]]
-- [[It-doesnt-matter-whether]]
+- [[505-injure|injure]]
+- [[495-bandage|bandage]]
+- [[500-emergency|emergency]]
+- [[522-名词性从句-whether-if|名词性从句-whether-if]]
+- [[527-It-makes-no-sense-to-do|It-makes-no-sense-to-do]]
+- [[526-It-doesnt-matter-whether|It-doesnt-matter-whether]]

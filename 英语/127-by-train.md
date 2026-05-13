@@ -90,8 +90,8 @@ aliases: [by-train, 乘火车, take a train, 坐火车]
 
 ## 🔗 相关词条
 
-- [[take-a-bus]]
-- [[ride-a-bike]]
-- [[walk-to-school]]
-- [[transportation]]
-- [[How-do-you-go-to-school]]
+- [[147-take-a-bus|take-a-bus]]
+- [[143-ride-a-bike|ride-a-bike]]
+- [[152-walk-to-school|walk-to-school]]
+- [[056-出行方式|transportation]]
+- [[166-How-do-you-go-to-school|How-do-you-go-to-school]]

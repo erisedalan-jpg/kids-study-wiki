@@ -80,9 +80,9 @@ aliases: [brother, 兄弟, 哥哥, 弟弟]
 
 ## 🔗 相关词条
 
-- [[sister]]
-- [[father]]
-- [[mother]]
-- [[grandparents]]
-- [[family-tree]]
-- [[noun-plurals]]
+- [[096-sister|sister]]
+- [[080-father|father]]
+- [[087-mother|mother]]
+- [[083-grandparents|grandparents]]
+- [[079-family-tree|family-tree]]
+- [[102-noun-plurals|noun-plurals]]

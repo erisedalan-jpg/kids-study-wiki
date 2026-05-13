@@ -62,9 +62,9 @@ aliases: [having-done-状语, having done状语, perfect participle adverbial, h
 
 ## 🔗 相关词条
 
-- [[独立主格-入门]]
-- [[独立主格-名词加分词]]
-- [[with-主格]]
-- [[journey-2-高中]]
-- [[firstaid]]
-- [[On-no-account-倒装]]
+- [[523-独立主格-入门|独立主格-入门]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[519-with-主格|with-主格]]
+- [[506-journey-2-高中|journey-2-高中]]
+- [[502-firstaid|firstaid]]
+- [[530-On-no-account-倒装|On-no-account-倒装]]

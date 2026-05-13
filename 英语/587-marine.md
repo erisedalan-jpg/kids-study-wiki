@@ -63,9 +63,9 @@ aliases: [marine, 海洋的, 海军的, 海洋生物]
 
 ## 🔗 相关词条
 
-- [[ocean-高中]]
-- [[submarine]]
-- [[dive-高中]]
-- [[current-海流]]
-- [[nature-高中]]
-- [[Given-the-fact-that]]
+- [[589-ocean-高中|ocean-高中]]
+- [[592-submarine|submarine]]
+- [[582-dive-高中|dive-高中]]
+- [[580-current-海流|current-海流]]
+- [[509-nature-高中|nature-高中]]
+- [[608-Given-the-fact-that|Given-the-fact-that]]

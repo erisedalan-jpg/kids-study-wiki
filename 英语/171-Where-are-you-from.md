@@ -87,9 +87,9 @@ B: I speak English and a little French.
 
 ## 🔗 相关词条
 
-- [[Canada]]
-- [[Australia]]
-- [[Japan]]
-- [[Singapore]]
-- [[pen-pal]]
-- [[language]]
+- [[120-Canada|Canada]]
+- [[119-Australia|Australia]]
+- [[121-Japan|Japan]]
+- [[122-Singapore|Singapore]]
+- [[141-pen-pal|pen-pal]]
+- [[135-language|language]]

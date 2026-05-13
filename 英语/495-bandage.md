@@ -52,9 +52,9 @@ aliases: [bandage, 绷带, bandages, bandaging]
 
 ## 🔗 相关词条
 
-- [[firstaid]]
-- [[injure]]
-- [[emergency]]
-- [[with-主格]]
-- [[独立主格-名词加分词]]
-- [[Suppose-that-假设]]
+- [[502-firstaid|firstaid]]
+- [[505-injure|injure]]
+- [[500-emergency|emergency]]
+- [[519-with-主格|with-主格]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[531-Suppose-that-假设|Suppose-that-假设]]

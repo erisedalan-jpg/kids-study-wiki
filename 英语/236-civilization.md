@@ -93,7 +93,7 @@ aliases: [civilization, civilisation, 文明, 人类文明]
 
 ## 相关词条
 
-- [[ancient]] — 古老的
-- [[achievement]] — 成就
-- [[mysterious]] — 神秘的
-- [[wonder]] — 奇观
+- [[233-ancient|ancient]] — 古老的
+- [[231-achievement|achievement]] — 成就
+- [[250-mysterious|mysterious]] — 神秘的
+- [[263-wonder|wonder]] — 奇观

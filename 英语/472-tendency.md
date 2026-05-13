@@ -66,10 +66,10 @@ aliases: [tendency, 趋势, 倾向, tend]
 
 ## 🔗 相关词条
 
-- [[prediction]]
-- [[future-高中]]
-- [[innovation]]
-- [[breakthrough]]
-- [[the-reason-why-is-that]]
-- [[Now-that-既然]]
-- [[the-fact-that-同位语]]
+- [[471-prediction|prediction]]
+- [[461-future-高中|future-高中]]
+- [[465-innovation|innovation]]
+- [[458-breakthrough|breakthrough]]
+- [[493-the-reason-why-is-that|the-reason-why-is-that]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]

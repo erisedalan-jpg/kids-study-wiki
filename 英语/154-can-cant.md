@@ -95,8 +95,8 @@ aliases: [can-cant, can, can't, cannot, 情态动词can, 能力许可]
 
 ## 🔗 相关词条
 
-- [[must-mustnt]]
-- [[have-to]]
-- [[What-can-you-do]]
+- [[158-must-mustnt|must-mustnt]]
+- [[156-have-to|have-to]]
+- [[170-What-can-you-do|What-can-you-do]]
 - [[Can-you]]
-- [[rule]]
+- [[093-ruler|rule]]

@@ -90,7 +90,7 @@ aliases: [toothache, 牙疼, 牙痛]
 
 ## 相关词条
 
-- [[headache]] — 头疼
-- [[stomachache]] — 胃疼
-- [[matter]] — what's the matter
-- [[You should...]] — 建议句型
+- [[062-看病|headache]] — 头疼
+- [[257-stomachache|stomachache]] — 胃疼
+- [[249-matter|matter]] — what's the matter
+- [[616-You should|You should...]] — 建议句型

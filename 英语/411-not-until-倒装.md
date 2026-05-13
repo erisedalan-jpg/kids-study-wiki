@@ -78,10 +78,10 @@ aliases: [not-until-倒装, not until倒装, not until句型]
 
 ## 🔗 相关词条
 
-- [[the-more-the-more]]
-- [[过去完成时-高中深化]]
-- [[间接引语-高中]]
-- [[kingdom-高中]]
-- [[tradition-高中]]
-- [[with-复合结构]]
-- [[主谓一致-就近原则]]
+- [[412-the-more-the-more|the-more-the-more]]
+- [[403-过去完成时-高中深化|过去完成时-高中深化]]
+- [[404-间接引语-高中|间接引语-高中]]
+- [[382-kingdom-高中|kingdom-高中]]
+- [[392-tradition-高中|tradition-高中]]
+- [[413-with-复合结构|with-复合结构]]
+- [[396-主谓一致-就近原则|主谓一致-就近原则]]

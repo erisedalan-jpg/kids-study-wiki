@@ -95,7 +95,7 @@ aliases: [copy, 抄袭, 复制, 仿照]
 
 ## 相关词条
 
-- [[argue]] — 争吵
-- [[share]] — 分享
-- [[allow]] — 允许
+- [[234-argue|argue]] — 争吵
+- [[255-share|share]] — 分享
+- [[232-allow|allow]] — 允许
 - [[You should... / You shouldn't...]] — 建议句型

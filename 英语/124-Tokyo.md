@@ -82,8 +82,8 @@ aliases: [Tokyo, 东京]
 
 ## 🔗 相关词条
 
-- [[Japan]]
-- [[Toronto]]
-- [[Sydney]]
-- [[pen-pal]]
-- [[language]]
+- [[121-Japan|Japan]]
+- [[125-Toronto|Toronto]]
+- [[123-Sydney|Sydney]]
+- [[141-pen-pal|pen-pal]]
+- [[135-language|language]]

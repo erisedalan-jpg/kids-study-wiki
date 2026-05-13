@@ -71,10 +71,10 @@ aliases: [tradition-高中, tradition, 传统, traditional]
 
 ## 🔗 相关词条
 
-- [[heritage]]
-- [[legend]]
-- [[kingdom-高中]]
-- [[过去完成时-高中深化]]
-- [[间接引语-高中]]
-- [[It-is-said-that]]
-- [[非限定性定语从句]]
+- [[379-heritage|heritage]]
+- [[383-legend|legend]]
+- [[382-kingdom-高中|kingdom-高中]]
+- [[403-过去完成时-高中深化|过去完成时-高中深化]]
+- [[404-间接引语-高中|间接引语-高中]]
+- [[408-It-is-said-that|It-is-said-that]]
+- [[358-定语从句-限定与非限定|非限定性定语从句]]

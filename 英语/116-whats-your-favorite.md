@@ -95,8 +95,8 @@ aliases: [whats-your-favorite, What's your favorite, 最喜欢, favorite]
 
 ## 🔗 相关词条
 
-- [[i-like]]
-- [[fruit]]
-- [[vegetable]]
-- [[ice-cream]]
-- [[be-verb-am-is-are]]
+- [[113-i-like|i-like]]
+- [[081-fruit|fruit]]
+- [[098-vegetable|vegetable]]
+- [[086-ice-cream|ice-cream]]
+- [[099-be-verb-am-is-are|be-verb-am-is-are]]

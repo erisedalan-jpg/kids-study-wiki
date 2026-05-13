@@ -77,7 +77,7 @@ aliases: [in-common, in common, 共同的, 共有的]
 
 ## 相关词条
 
-- [[both-of-us]] — 我们两个都
-- [[talented]] — 有才华的
-- [[funnier]] — funny 的比较级
-- [[比较级（短词-er）]] — 比较句语法
+- [[179-both-of-us|both-of-us]] — 我们两个都
+- [[200-talented|talented]] — 有才华的
+- [[183-funnier|funnier]] — funny 的比较级
+- [[217-比较级（短词-er）|比较级（短词-er）]] — 比较句语法

@@ -80,8 +80,8 @@ aliases: [sometimes, 有时, 偶尔]
 
 ## 相关词条
 
-- [[always]] — 总是
-- [[often]] — 经常
-- [[hardly-ever]] — 几乎从不
-- [[never]] — 从不
-- [[How often do you exercise？]] — 核心句型
+- [[175-always|always]] — 总是
+- [[191-often|often]] — 经常
+- [[184-hardly-ever|hardly-ever]] — 几乎从不
+- [[190-never|never]] — 从不
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

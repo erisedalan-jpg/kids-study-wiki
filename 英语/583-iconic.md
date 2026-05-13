@@ -62,9 +62,9 @@ aliases: [iconic, 标志性的, 经典的, icon]
 
 ## 🔗 相关词条
 
-- [[attraction]]
-- [[architecture]]
-- [[monument-高中]]
-- [[culture-高中]]
-- [[landscape-高中]]
-- [[Given-the-fact-that]]
+- [[575-attraction|attraction]]
+- [[494-architect|architecture]]
+- [[588-monument-高中|monument-高中]]
+- [[418-culture-高中|culture-高中]]
+- [[467-landscape-高中|landscape-高中]]
+- [[608-Given-the-fact-that|Given-the-fact-that]]

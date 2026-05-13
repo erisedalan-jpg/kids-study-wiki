@@ -66,10 +66,10 @@ aliases: [harvest, 收获, 收割, 丰收]
 
 ## 🔗 相关词条
 
-- [[agricultural]]
-- [[nutrition]]
-- [[主谓一致-集体名词]]
-- [[主谓一致-and连接]]
-- [[过去分词作状语]]
-- [[Now-that-既然]]
-- [[the-fact-that-同位语]]
+- [[456-agricultural|agricultural]]
+- [[468-nutrition|nutrition]]
+- [[475-主谓一致-集体名词|主谓一致-集体名词]]
+- [[474-主谓一致-and连接|主谓一致-and连接]]
+- [[485-过去分词作状语|过去分词作状语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]

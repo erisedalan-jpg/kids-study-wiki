@@ -78,10 +78,10 @@ aliases: [情态动词-shall-should, shall should, 情态动词义务建议]
 
 ## 🔗 相关词条
 
-- [[情态动词推测-过去]]
-- [[情态动词-must-may-might]]
-- [[情态动词-could-would]]
-- [[动名词作宾语]]
-- [[the-fact-that-同位语]]
-- [[Now-that-既然]]
-- [[It-was-not-until-that]]
+- [[483-情态动词推测-过去|情态动词推测-过去]]
+- [[481-情态动词-must-may-might|情态动词-must-may-might]]
+- [[480-情态动词-could-would|情态动词-could-would]]
+- [[477-动名词作宾语|动名词作宾语]]
+- [[492-the-fact-that-同位语|the-fact-that-同位语]]
+- [[489-Now-that-既然|Now-that-既然]]
+- [[488-It-was-not-until-that|It-was-not-until-that]]

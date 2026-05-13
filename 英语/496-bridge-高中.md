@@ -53,10 +53,10 @@ aliases: [bridge-高中, bridge, 桥梁, bridging, bridged]
 
 ## 🔗 相关词条
 
-- [[cultural-exchange]]
-- [[architect]]
-- [[landmark]]
-- [[engineer]]
-- [[独立主格-名词加分词]]
-- [[with-主格]]
-- [[as-定语从句]]
+- [[499-cultural-exchange|cultural-exchange]]
+- [[494-architect|architect]]
+- [[507-landmark|landmark]]
+- [[501-engineer|engineer]]
+- [[524-独立主格-名词加分词|独立主格-名词加分词]]
+- [[519-with-主格|with-主格]]
+- [[515-as-定语从句|as-定语从句]]

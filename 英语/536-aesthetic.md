@@ -57,8 +57,8 @@ aliases: [aesthetic, 审美, 美学]
 
 ## 🔗 相关词条
 
-- [[art-高中]]
-- [[painter]]
-- [[sculpture]]
-- [[masterpiece]]
-- [[虚拟语气-综合]]
+- [[537-art-高中|art-高中]]
+- [[545-painter|painter]]
+- [[551-sculpture|sculpture]]
+- [[542-masterpiece|masterpiece]]
+- [[565-虚拟语气-综合|虚拟语气-综合]]

@@ -86,10 +86,10 @@ aliases: [koala, 树袋熊, koala bear, 考拉]
 
 ## 🔗 相关词条
 
-- [[panda]]
-- [[lion]]
-- [[tiger]]
-- [[elephant]]
-- [[giraffe]]
-- [[Australia]]
-- [[Why-do-you-like]]
+- [[140-panda|panda]]
+- [[136-lion|lion]]
+- [[149-tiger|tiger]]
+- [[132-elephant|elephant]]
+- [[133-giraffe|giraffe]]
+- [[119-Australia|Australia]]
+- [[172-Why-do-you-like|Why-do-you-like]]

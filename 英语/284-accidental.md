@@ -98,4 +98,4 @@ Unit 6 介绍了许多意外发明的故事：
 
 ## 🔗 相关词条
 
-[[invent]] · [[invention]] · [[Where-was-it-invented]] · [[When-was-it-invented]] · [[被动语态-by短语]] · [[宾语从句-初中]] · [[被动语态入门]]
+[[291-invent|invent]] · [[292-invention|invention]] · [[332-Where-was-it-invented|Where-was-it-invented]] · [[330-When-was-it-invented|When-was-it-invented]] · [[319-被动语态-by短语|被动语态-by短语]] · [[315-宾语从句-初中|宾语从句-初中]] · [[274-被动语态入门|被动语态入门]]

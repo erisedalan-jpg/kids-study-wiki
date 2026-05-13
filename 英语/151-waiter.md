@@ -91,9 +91,9 @@ aliases: [waiter, 服务员, waitress, 侍者]
 
 ## 🔗 相关词条
 
-- [[reporter]]
-- [[doctor]]
-- [[teacher]]
-- [[I-want-to-be]]
-- [[dumpling]]
-- [[noodles]]
+- [[142-reporter|reporter]]
+- [[057-职业|doctor]]
+- [[057-职业|teacher]]
+- [[168-I-want-to-be|I-want-to-be]]
+- [[131-dumpling|dumpling]]
+- [[139-noodles|noodles]]

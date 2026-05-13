@@ -64,9 +64,9 @@ whatever 引导条件让步，可与 no matter what 互换。
 
 ## 🔗 相关词条
 
-- [[wh-ever-复合词]]
-- [[whoever]]
-- [[whenever]]
-- [[wherever]]
-- [[名词性从句-wh]]
-- [[状语从句-让步]]
+- [[595-wh-ever-复合词|wh-ever-复合词]]
+- [[599-whoever|whoever]]
+- [[597-whenever|whenever]]
+- [[598-wherever|wherever]]
+- [[521-名词性从句-wh|名词性从句-wh]]
+- [[440-状语从句-让步|状语从句-让步]]

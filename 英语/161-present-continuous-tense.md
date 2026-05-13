@@ -104,7 +104,7 @@ aliases: [present-continuous-tense, 现在进行时, present progressive, v-ing�
 
 ## 🔗 相关词条
 
-- [[simple-present-tense]]
-- [[simple-past-tense]]
-- [[What-are-you-doing]]
-- [[frequency-adverbs]]
+- [[106-simple-present-tense|simple-present-tense]]
+- [[163-simple-past-tense|simple-past-tense]]
+- [[169-What-are-you-doing|What-are-you-doing]]
+- [[155-frequency-adverbs|frequency-adverbs]]

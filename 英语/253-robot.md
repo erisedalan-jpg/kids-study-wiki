@@ -95,7 +95,7 @@ aliases: [robot, 机器人]
 
 ## 相关词条
 
-- [[future]] — 未来
-- [[environment]] — 环境
-- [[It's important to...]] — 重要性句型
+- [[245-future|future]] — 未来
+- [[240-environment|environment]] — 环境
+- [[619-It's important to|It's important to...]] — 重要性句型
 - [[I think / I don't think...]] — 表达观点

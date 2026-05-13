@@ -81,7 +81,7 @@ aliases: [usually, 通常, 一般]
 
 ## 相关词条
 
-- [[always]] — 总是
-- [[often]] — 经常
-- [[sometimes]] — 有时
-- [[How often do you exercise？]] — 核心句型
+- [[175-always|always]] — 总是
+- [[191-often|often]] — 经常
+- [[198-sometimes|sometimes]] — 有时
+- [[221-How often do you exercise？|How often do you exercise？]] — 核心句型

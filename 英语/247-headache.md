@@ -91,7 +91,7 @@ aliases: [headache, 头疼, 头痛]
 
 ## 相关词条
 
-- [[stomachache]] — 胃疼
-- [[toothache]] — 牙疼
-- [[fever]] — 发烧
-- [[matter]] — what's the matter
+- [[257-stomachache|stomachache]] — 胃疼
+- [[261-toothache|toothache]] — 牙疼
+- [[062-看病|fever]] — 发烧
+- [[249-matter|matter]] — what's the matter
