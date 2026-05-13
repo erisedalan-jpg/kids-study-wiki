@@ -42,7 +42,7 @@ QNO_TOKEN_RE = re.compile(r"^([1-9]\d?)[\.、．]$")
 
 
 def find_question_anchors(
-    words: list[tuple], expected_max_qno: int
+    words: list[tuple], expected_max_qno: int, start_qno: int = 1
 ) -> dict[int, dict[str, float]]:
     """找题号 anchor。
 
@@ -50,7 +50,8 @@ def find_question_anchors(
            (x0, y0, x1, y1, text, block_no, line_no, word_no)
     返回: {qno: {"x0", "y0", "x1", "y1", "block_no", "line_no"}}
 
-    题号必须从 1 开始严格递增，跳号丢弃。
+    题号必须从 `start_qno` 起严格递增，跳号丢弃。
+    多页 PDF 应由调用方跨页传递 running counter（见 render_screenshots）。
     """
     candidates: list[tuple[int, dict]] = []
     for w in words:
@@ -70,7 +71,7 @@ def find_question_anchors(
     # 按 y 坐标排序（页面阅读顺序），然后筛递增
     candidates.sort(key=lambda x: x[1]["y0"])
     result: dict[int, dict] = {}
-    next_expected = 1
+    next_expected = start_qno
     for qno, info in candidates:
         if qno == next_expected:
             result[qno] = info
@@ -205,10 +206,13 @@ def render_screenshots(
         per_page_anchors: dict[int, dict[str, Any]] = {}
         per_page_height: dict[int, float] = {}
 
-        # 第一遍：扫所有页面找 anchor 并缓存
+        # 第一遍：扫所有页面找 anchor 并缓存（running counter 跨页递增）
+        running_qno = 1
         for page_no, page in enumerate(doc):
             words = page.get_text("words")
-            q_anchors = find_question_anchors(words, expected_max_qno)
+            q_anchors = find_question_anchors(
+                words, expected_max_qno, start_qno=running_qno
+            )
             a_anchors = find_answer_anchors(words)
             per_page_anchors[page_no] = {
                 "q_anchors": q_anchors,
@@ -218,6 +222,8 @@ def render_screenshots(
             for qno, info in q_anchors.items():
                 if qno not in all_q_anchors:
                     all_q_anchors[qno] = (page_no, info)
+            if q_anchors:
+                running_qno = max(q_anchors.keys()) + 1
 
         if not all_q_anchors:
             raise ValueError(

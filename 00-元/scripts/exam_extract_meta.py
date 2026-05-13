@@ -25,29 +25,46 @@ from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 
 # 题号边界（同 v1 修复版）：1-9 开头，点后非数字（防小数误识别）
-QNO_RE = re.compile(r"^\s*([1-9]\d?)\s*[\.、．](?!\d)\s*", re.MULTILINE)
+# 行首 或 紧跟 markdown 表格分隔符 `|`（markitdown 会把多列 PDF 题号包进 `| N. ...|`）
+QNO_RE = re.compile(
+    r"(?:^|\|)\s*([1-9]\d?)\s*[\.、．](?!\d)\s*",
+    re.MULTILINE,
+)
 # 答案标签兼容 "【答案】" 和 "【 答 案 】"
 ANSWER_TAG_RE = re.compile(r"【\s*答\s*案\s*】([^\n【]*)")
 # 解析段
 SOLUTION_TAG_RE = re.compile(r"【\s*解\s*析\s*】(.+)", re.DOTALL)
+
+# 仅当 QNO marker 后 _ANSWER_LOOKAHEAD 字符内存在 【答案】 才视为真题（过滤说明节中的 "1. 答卷前..." 等）
+_ANSWER_LOOKAHEAD = 1500
 
 
 def split_by_question(md_text: str) -> dict[int, str]:
     """按题号切分 markdown，返回 {qno: chunk}。
 
     题号递增约束：从 1 开始，跳号忽略。
+    仅接受后续 1500 字符内含 `【答案】` 标记的 QNO，过滤掉说明节中的伪题号。
     """
     matches = list(QNO_RE.finditer(md_text))
+    ans_positions = [m.start() for m in ANSWER_TAG_RE.finditer(md_text)]
+
+    # 过滤：QNO 必须在 _ANSWER_LOOKAHEAD 字符内有 【答案】 跟随
+    valid: list = []
+    for m in matches:
+        pos = m.end()
+        if any(pos <= a < pos + _ANSWER_LOOKAHEAD for a in ans_positions):
+            valid.append(m)
+
     chunks: dict[int, str] = {}
     accepted_qnos: list[int] = []
-    for i, m in enumerate(matches):
+    for i, m in enumerate(valid):
         qno = int(m.group(1))
         if accepted_qnos and qno != accepted_qnos[-1] + 1:
             continue
         if not accepted_qnos and qno != 1:
             continue
         body_start = m.end()
-        body_end = matches[i + 1].start() if i + 1 < len(matches) else len(md_text)
+        body_end = valid[i + 1].start() if i + 1 < len(valid) else len(md_text)
         chunks[qno] = md_text[body_start:body_end].strip()
         accepted_qnos.append(qno)
     return chunks

@@ -38,6 +38,19 @@ class TestFindAnchors(unittest.TestCase):
         self.assertIn(2, anchors)
         self.assertNotIn(5, anchors)
 
+    def test_question_anchor_running_counter_across_pages(self):
+        """多页 PDF: start_qno 跨页传递，第二页 Q4 单独出现应被识别。"""
+        # 模拟"page 1" 只含 Q4 anchor（无 Q1-Q3）
+        words = [
+            (10, 100, 20, 110, "4.", 0, 0, 0),
+            (25, 100, 50, 110, "随机", 0, 0, 1),
+        ]
+        anchors = find_question_anchors(words, expected_max_qno=23, start_qno=4)
+        self.assertIn(4, anchors)
+        # 同 words 但 start_qno=1（默认）应丢弃 Q4，因为期望从 1 开始
+        anchors_default = find_question_anchors(words, expected_max_qno=23)
+        self.assertNotIn(4, anchors_default)
+
     def test_answer_anchor_detects_bracket(self):
         """'【答案】' 或 '【 答 案 】' 都应识别为 answer anchor。"""
         words = [
