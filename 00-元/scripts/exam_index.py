@@ -23,6 +23,7 @@ from _utils import REPO_ROOT, bare_name, iter_entries, read_frontmatter, setup_u
 
 BACKLINK_START = "<!-- exam-backlinks-start -->"
 BACKLINK_END = "<!-- exam-backlinks-end -->"
+NATURAL_QTYPE_ORDER = ["选择", "填空", "解答"]
 
 
 def parse_atom_fm(text: str) -> dict[str, Any]:
@@ -53,7 +54,11 @@ def collect_atoms(province: str, subject: str) -> list[dict[str, Any]]:
         return []
     atoms: list[dict] = []
     for p in sorted(exam_dir.glob("*.md")):
-        text = p.read_text(encoding="utf-8")
+        try:
+            text = p.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError) as e:
+            print(f"[skip] 读取失败 {p.name}: {e}")
+            continue
         fm = parse_atom_fm(text)
         if fm:
             fm["_path"] = p
@@ -112,7 +117,8 @@ def write_freq_index(freq: Counter, out_path: Path, label: str) -> None:
 def write_qtype_cross(cross: dict[str, Counter], out_path: Path, label: str) -> None:
     all_tags = sorted({t for c in cross.values() for t in c})
     lines = [f"# {label} · 题型 × 考点 交叉表\n"]
-    qtypes = sorted(cross.keys())
+    qtypes = [q for q in NATURAL_QTYPE_ORDER if q in cross]
+    qtypes += sorted(set(cross.keys()) - set(NATURAL_QTYPE_ORDER))
     header = ["考点"] + qtypes + ["合计"]
     lines.append("| " + " | ".join(header) + " |")
     lines.append("|" + "|".join(["---"] * len(header)) + "|")
@@ -138,7 +144,12 @@ def write_paper_map(pmap: dict, out_path: Path, label: str) -> None:
     lines = [f"# {label} · 试卷地图\n"]
     lines.append("| 年份 | 卷别 | 文理 | 题数 | 选择 | 填空 | 解答 |")
     lines.append("|---|---|---|---:|---:|---:|---:|")
-    for (year, paper, gender), stat in sorted(pmap.items()):
+
+    def _pm_sort_key(item):
+        (y, p, g), _ = item
+        return (str(y or ""), p or "", g or "")
+
+    for (year, paper, gender), stat in sorted(pmap.items(), key=_pm_sort_key):
         lines.append(
             f"| {year} | {paper} | {gender} | {stat['total']} | "
             f"{stat['by_qtype'].get('选择', 0)} | "
@@ -173,18 +184,22 @@ def backfill_backlinks(atoms: list[dict], subject: str) -> int:
         path = bare_to_path.get(tag)
         if not path:
             continue
-        text = path.read_text(encoding="utf-8")
-        body = "\n".join([f"- [[{atom}]]" for atom in sorted(set(exam_atoms))])
-        section = (
-            f"\n{BACKLINK_START}\n## 高考真题命中\n{body}\n{BACKLINK_END}\n"
-        )
-        if BACKLINK_START in text:
-            new_text = section_re.sub(section.strip(), text)
-        else:
-            new_text = text.rstrip() + "\n" + section
-        if new_text != text:
-            path.write_text(new_text, encoding="utf-8")
-            updated += 1
+        try:
+            text = path.read_text(encoding="utf-8")
+            body = "\n".join([f"- [[{atom}]]" for atom in sorted(set(exam_atoms))])
+            section = (
+                f"\n{BACKLINK_START}\n## 高考真题命中\n{body}\n{BACKLINK_END}\n"
+            )
+            if BACKLINK_START in text:
+                new_text = section_re.sub(section.strip(), text)
+            else:
+                new_text = text.rstrip() + "\n" + section
+            if new_text != text:
+                path.write_text(new_text, encoding="utf-8")
+                updated += 1
+        except (OSError, UnicodeDecodeError) as e:
+            print(f"[skip] 反链回填失败 {path.name}: {e}")
+            continue
     return updated
 
 

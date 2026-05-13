@@ -5,7 +5,14 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from exam_index import build_freq_table, build_gap_list, BACKLINK_START, BACKLINK_END  # noqa: E402
+from exam_index import (  # noqa: E402
+    BACKLINK_START,
+    BACKLINK_END,
+    build_freq_table,
+    build_gap_list,
+    backfill_backlinks,
+    parse_atom_fm,
+)
 
 
 class TestFreqTable(unittest.TestCase):
@@ -36,6 +43,101 @@ class TestBacklinkMarkers(unittest.TestCase):
     def test_markers_defined(self):
         self.assertEqual(BACKLINK_START, "<!-- exam-backlinks-start -->")
         self.assertEqual(BACKLINK_END, "<!-- exam-backlinks-end -->")
+
+
+class TestParseAtomFm(unittest.TestCase):
+    def test_list_field_parsed(self):
+        text = "---\ntitle: foo\n考点: [集合的运算, 并集]\n---\n\nbody"
+        fm = parse_atom_fm(text)
+        self.assertEqual(fm["考点"], ["集合的运算", "并集"])
+        self.assertEqual(fm["title"], "foo")
+
+    def test_no_frontmatter_returns_empty(self):
+        self.assertEqual(parse_atom_fm("no fm here"), {})
+
+
+class TestBackfillBacklinks(unittest.TestCase):
+    """跑真实文件系统：在 tmp 工作目录里建一个学科目录 + 真题词条。"""
+
+    def _make_repo(self, tmp_path: Path):
+        # 这些测试只能改 _path 字段触发；为简单起见，monkey-patch REPO_ROOT
+        import exam_index
+        self._orig_root = exam_index.REPO_ROOT
+        exam_index.REPO_ROOT = tmp_path
+        # 重要：_utils.REPO_ROOT 也得 monkey-patch，因为 iter_entries 内部用它
+        import _utils
+        self._orig_utils_root = _utils.REPO_ROOT
+        _utils.REPO_ROOT = tmp_path
+
+    def _restore(self):
+        import exam_index, _utils
+        exam_index.REPO_ROOT = self._orig_root
+        _utils.REPO_ROOT = self._orig_utils_root
+
+    def test_first_append_then_idempotent_rewrite(self):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_repo(tmp)
+            try:
+                (tmp / "数学").mkdir()
+                target = tmp / "数学" / "016-集合的运算.md"
+                target.write_text("---\ntitle: 集合的运算\n---\n\n正文。\n", encoding="utf-8")
+                atoms = [
+                    {"考点": ["集合的运算"], "_bare": "2022-文-01"},
+                    {"考点": ["集合的运算"], "_bare": "2022-文-02"},
+                ]
+                # 首次回填
+                n1 = backfill_backlinks(atoms, "数学")
+                self.assertEqual(n1, 1)
+                t1 = target.read_text(encoding="utf-8")
+                self.assertIn(BACKLINK_START, t1)
+                self.assertIn(BACKLINK_END, t1)
+                self.assertIn("[[2022-文-01]]", t1)
+                self.assertIn("[[2022-文-02]]", t1)
+                # 同样 atoms 再跑一次，文件应字节不变（updated == 0）
+                n2 = backfill_backlinks(atoms, "数学")
+                self.assertEqual(n2, 0, "second run should be no-op")
+                t2 = target.read_text(encoding="utf-8")
+                self.assertEqual(t1, t2)
+            finally:
+                self._restore()
+
+    def test_replace_existing_section(self):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_repo(tmp)
+            try:
+                (tmp / "数学").mkdir()
+                target = tmp / "数学" / "016-集合的运算.md"
+                target.write_text("---\ntitle: 集合的运算\n---\n\n正文。\n", encoding="utf-8")
+                # 首次：1 题
+                backfill_backlinks([{"考点": ["集合的运算"], "_bare": "2022-文-01"}], "数学")
+                # 再跑：2 题
+                backfill_backlinks(
+                    [
+                        {"考点": ["集合的运算"], "_bare": "2022-文-01"},
+                        {"考点": ["集合的运算"], "_bare": "2022-文-02"},
+                    ],
+                    "数学",
+                )
+                text = target.read_text(encoding="utf-8")
+                self.assertIn("[[2022-文-02]]", text)
+                # 标记只出现一次（不重复 section）
+                self.assertEqual(text.count(BACKLINK_START), 1)
+                self.assertEqual(text.count(BACKLINK_END), 1)
+            finally:
+                self._restore()
+
+    def test_missing_subject_dir_returns_zero(self):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_repo(tmp)
+            try:
+                atoms = [{"考点": ["集合的运算"], "_bare": "2022-文-01"}]
+                n = backfill_backlinks(atoms, "数学")  # 学科目录不存在
+                self.assertEqual(n, 0)
+            finally:
+                self._restore()
 
 
 if __name__ == "__main__":
