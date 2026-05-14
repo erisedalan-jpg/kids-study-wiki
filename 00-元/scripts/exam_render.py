@@ -16,6 +16,21 @@ from _exam_utils import build_atom_filename  # noqa: E402
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 
+def _as_list(v: Any) -> list[str]:
+    """兼容 题面图/解析图 字段为 str (旧) 或 list (新)。"""
+    if not v:
+        return []
+    if isinstance(v, str):
+        return [v]
+    return [s for s in v if s]
+
+
+def _fm_list(v: Any) -> str:
+    """frontmatter 输出 list 形式 `[a, b]`，空时输出 `[]`。"""
+    items = _as_list(v)
+    return "[" + ", ".join(items) + "]"
+
+
 # 题型按题号 + 总题数启发式（沿用 v1）
 def classify_qtype(qno: int, total: int) -> str:
     if total <= 20:
@@ -82,8 +97,8 @@ def render_atom(qa_meta: dict[str, Any], q: dict[str, Any]) -> str:
         f"难度: {q.get('difficulty', '中')}",
         f"PDF: {qa_meta['source_pdf']}",
         f"PDF页码: {q.get('page', 0)}",
-        f"题面图: {q.get('题面图', '')}",
-        f"解析图: {q.get('解析图', '')}",
+        f"题面图: {_fm_list(q.get('题面图'))}",
+        f"解析图: {_fm_list(q.get('解析图'))}",
         f"答案: {q.get('answer', '')}",
         f"录入状态: {state}",
         "---",
@@ -91,13 +106,13 @@ def render_atom(qa_meta: dict[str, Any], q: dict[str, Any]) -> str:
     ]
 
     # 截图路径用相对路径（从 真题/<province>-<subject>/ 到 素材/...，两级 ../）
-    q_img_rel = "../../" + q.get("题面图", "")
-    a_img_rel = "../../" + q.get("解析图", "") if q.get("解析图") else ""
+    q_imgs = _as_list(q.get("题面图"))
+    a_imgs = _as_list(q.get("解析图"))
 
-    body_lines = [
-        "## 题面",
-        "",
-        f"![]({q_img_rel})",
+    body_lines = ["## 题面", ""]
+    for rel in q_imgs:
+        body_lines.append(f"![](../../{rel})")
+    body_lines += [
         "",
         "## 摘要",
         "",
@@ -108,13 +123,11 @@ def render_atom(qa_meta: dict[str, Any], q: dict[str, Any]) -> str:
     ]
     for tag in tags:
         body_lines.append(f"- [[{tag}]]")
-    body_lines += [
-        "",
-        "## 答案与解析",
-        "",
-    ]
-    if a_img_rel:
-        body_lines += [f"![]({a_img_rel})", ""]
+    body_lines += ["", "## 答案与解析", ""]
+    for rel in a_imgs:
+        body_lines.append(f"![](../../{rel})")
+    if a_imgs:
+        body_lines.append("")
     body_lines += [
         f"> 📄 原 PDF 第 {q.get('page', 0)} 页：`{qa_meta['source_pdf']}`",
         "",

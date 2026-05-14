@@ -239,46 +239,99 @@ def render_screenshots(
                 f"或题号格式不在 QNO_TOKEN_RE 范围)"
             )
 
-        # 第二遍：渲染每题截图（用缓存的 anchors）
-        for qno in sorted(all_q_anchors.keys()):
-            page_no, _q_info = all_q_anchors[qno]
-            page = doc[page_no]
-            cache = per_page_anchors[page_no]
-            page_q_anchors = cache["q_anchors"]
-            a_anchors = cache["a_anchors"]
-            regions = compute_regions(
-                page_q_anchors, a_anchors, per_page_height[page_no]
-            )
-            if qno not in regions:
-                continue  # 跨页题：本页找不到 qno 起点（保守跳过）
-            q_region = regions[qno]["q"]
-            a_region = regions[qno]["a"]
+        # 第二遍：渲染每题截图（跨页支持，多图保留不拼接）
+        sorted_qnos = sorted(all_q_anchors.keys())
+        for i, qno in enumerate(sorted_qnos):
+            page_no, q_info = all_q_anchors[qno]
+            q_y0 = q_info["y0"]
 
-            # 渲染 q.png
-            q_filename = build_screenshot_filename(year, gender, paper, qno, "q")
-            q_path = out_dir / q_filename
-            clip = fitz.Rect(0, q_region["y0"], page.rect.width, q_region["y1"])
-            pix = page.get_pixmap(clip=clip, dpi=dpi)
-            pix.save(str(q_path))
+            # 下一题边界
+            if i + 1 < len(sorted_qnos):
+                next_qno = sorted_qnos[i + 1]
+                next_page_no, next_info = all_q_anchors[next_qno]
+                next_q_y0 = next_info["y0"]
+            else:
+                next_page_no = len(doc) - 1
+                next_q_y0 = per_page_height[next_page_no]
 
-            # 渲染 a.png（可能 None）
-            a_filename = None
-            if a_region:
-                a_filename = build_screenshot_filename(year, gender, paper, qno, "a")
-                a_path = out_dir / a_filename
-                clip_a = fitz.Rect(0, a_region["y0"], page.rect.width, a_region["y1"])
-                pix_a = page.get_pixmap(clip=clip_a, dpi=dpi)
-                pix_a.save(str(a_path))
+            # 跨页找 a_anchor
+            a_anchor = None
+            for p in range(page_no, next_page_no + 1):
+                for a in per_page_anchors[p]["a_anchors"]:
+                    if p == page_no and a["y0"] <= q_y0:
+                        continue
+                    if p == next_page_no and a["y0"] >= next_q_y0:
+                        continue
+                    a_anchor = (p, a["y0"])
+                    break
+                if a_anchor:
+                    break
+
+            # 计算 q_pages 和 a_pages 列表 [(page_no, y0, y1), ...]
+            q_pages: list[tuple[int, float, float]] = []
+            a_pages: list[tuple[int, float, float]] = []
+            if a_anchor:
+                a_pno, a_y0 = a_anchor
+                # 题面: q_y0 → a_anchor
+                if page_no == a_pno:
+                    q_pages.append((page_no, q_y0, a_y0))
+                else:
+                    q_pages.append((page_no, q_y0, per_page_height[page_no]))
+                    for p in range(page_no + 1, a_pno):
+                        q_pages.append((p, 0.0, per_page_height[p]))
+                    if a_y0 > 0:
+                        q_pages.append((a_pno, 0.0, a_y0))
+                # 解析: a_anchor → next_q
+                if a_pno == next_page_no:
+                    a_pages.append((a_pno, a_y0, next_q_y0))
+                else:
+                    a_pages.append((a_pno, a_y0, per_page_height[a_pno]))
+                    for p in range(a_pno + 1, next_page_no):
+                        a_pages.append((p, 0.0, per_page_height[p]))
+                    if next_q_y0 > 0:
+                        a_pages.append((next_page_no, 0.0, next_q_y0))
+            else:
+                # 无 a_anchor：题面区域跨到 next_q
+                if page_no == next_page_no:
+                    q_pages.append((page_no, q_y0, next_q_y0))
+                else:
+                    q_pages.append((page_no, q_y0, per_page_height[page_no]))
+                    for p in range(page_no + 1, next_page_no):
+                        q_pages.append((p, 0.0, per_page_height[p]))
+                    if next_q_y0 > 0:
+                        q_pages.append((next_page_no, 0.0, next_q_y0))
+
+            # 渲染 q 系列
+            q_rel_paths: list[str] = []
+            for idx, (p, y0, y1) in enumerate(q_pages):
+                if y1 - y0 < 5:  # 跳过过小切片
+                    continue
+                fname = build_screenshot_filename(year, gender, paper, qno, "q", idx)
+                out_path = out_dir / fname
+                clip = fitz.Rect(0, y0, doc[p].rect.width, y1)
+                doc[p].get_pixmap(clip=clip, dpi=dpi).save(str(out_path))
+                q_rel_paths.append(
+                    f"素材/真题截图/{province}-{subject}/{fname}"
+                )
+
+            # 渲染 a 系列
+            a_rel_paths: list[str] = []
+            for idx, (p, y0, y1) in enumerate(a_pages):
+                if y1 - y0 < 5:
+                    continue
+                fname = build_screenshot_filename(year, gender, paper, qno, "a", idx)
+                out_path = out_dir / fname
+                clip = fitz.Rect(0, y0, doc[p].rect.width, y1)
+                doc[p].get_pixmap(clip=clip, dpi=dpi).save(str(out_path))
+                a_rel_paths.append(
+                    f"素材/真题截图/{province}-{subject}/{fname}"
+                )
 
             all_questions.append({
                 "qno": qno,
                 "page": page_no + 1,
-                "题面图": f"素材/真题截图/{province}-{subject}/{q_filename}",
-                "解析图": (
-                    f"素材/真题截图/{province}-{subject}/{a_filename}"
-                    if a_filename
-                    else ""
-                ),
+                "题面图": q_rel_paths,
+                "解析图": a_rel_paths,
             })
     finally:
         doc.close()
@@ -300,6 +353,15 @@ def render_screenshots(
     }
 
 
+def _as_img_list(v: Any) -> list[str]:
+    """规范化 题面图/解析图 字段：兼容 str (旧) 和 list (新)。"""
+    if not v:
+        return []
+    if isinstance(v, str):
+        return [v]
+    return list(v)
+
+
 def assert_screenshot_quality(qa: dict[str, Any], expected_qno_range: tuple[int, int]) -> list[str]:
     """L1 自动断言。返回违规列表（空 = 通过）。"""
     violations: list[str] = []
@@ -308,17 +370,23 @@ def assert_screenshot_quality(qa: dict[str, Any], expected_qno_range: tuple[int,
     if not (lo <= n <= hi):
         violations.append(f"题数 {n} 不在期望范围 {lo}-{hi}")
     for q in qa["questions"]:
-        q_img_path = REPO_ROOT / q["题面图"]
-        if not q_img_path.exists():
-            violations.append(f"Q{q['qno']}: 题面图不存在 {q['题面图']}")
+        q_imgs = _as_img_list(q.get("题面图"))
+        if not q_imgs:
+            violations.append(f"Q{q['qno']}: 题面图为空")
             continue
-        size = q_img_path.stat().st_size
+        # 至少首张题面图必须存在
+        first_q = REPO_ROOT / q_imgs[0]
+        if not first_q.exists():
+            violations.append(f"Q{q['qno']}: 题面图不存在 {q_imgs[0]}")
+            continue
+        size = first_q.stat().st_size
         if size < 10 * 1024:
             violations.append(f"Q{q['qno']}: 题面图过小 ({size} bytes < 10KB)")
-        if q.get("解析图"):
-            a_img_path = REPO_ROOT / q["解析图"]
+        for a_rel in _as_img_list(q.get("解析图")):
+            a_img_path = REPO_ROOT / a_rel
             if not a_img_path.exists():
-                violations.append(f"Q{q['qno']}: 解析图不存在")
+                violations.append(f"Q{q['qno']}: 解析图不存在 {a_rel}")
+                break
     return violations
 
 

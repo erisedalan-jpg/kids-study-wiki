@@ -41,10 +41,16 @@ VALID_VERDICTS = ("严重偏差", "部分偏差", "吻合")  # priority order: m
 
 
 def render_verify_prompt(q: dict) -> str:
-    """生成单题 verify prompt。image 路径用绝对路径方便 Opus/sonnet 找到。"""
-    image_rel = q.get("题面图")
-    if not image_rel:
+    """生成单题 verify prompt。image 路径用绝对路径方便 Opus/sonnet 找到。
+
+    兼容 题面图 为 str (旧) 或 list[str] (新): 取首张。
+    """
+    raw = q.get("题面图")
+    if not raw:
         raise ValueError(f"Q{q.get('qno', '?')}: 缺少题面图字段")
+    image_rel = raw[0] if isinstance(raw, list) else raw
+    if not image_rel:
+        raise ValueError(f"Q{q.get('qno', '?')}: 题面图为空")
     image_path = REPO_ROOT / image_rel
     tags_str = ", ".join(q.get("tags", []))
     return PROMPT_TEMPLATE.format(

@@ -50,13 +50,18 @@ def build_atom_filename(year: int, gender: str, paper: str, qno: int) -> str:
     return f"{year}-{paper}-{nn}.md"
 
 
-def build_screenshot_filename(year: int, gender: str, paper: str, qno: int, kind: str) -> str:
-    """截图文件名 <year>-<gender|paper>-<qno>.<kind>.png
+def build_screenshot_filename(
+    year: int, gender: str, paper: str, qno: int, kind: str, page_idx: int = 0
+) -> str:
+    """截图文件名 <year>-<gender|paper>-<qno>.<kind>[.p<N>].png
 
     kind: "q"(题面) 或 "a"(答案/解析)
+    page_idx: 0=主图（向后兼容），>0 表跨页续图（如 .q.p2.png / .a.p3.png）
     """
     if kind not in ("q", "a"):
         raise ValueError(f"kind 必须是 'q' 或 'a'，收到 {kind!r}")
     nn = f"{qno:02d}"
     prefix = gender if gender in ("文", "理") else paper
-    return f"{year}-{prefix}-{nn}.{kind}.png"
+    if page_idx == 0:
+        return f"{year}-{prefix}-{nn}.{kind}.png"
+    return f"{year}-{prefix}-{nn}.{kind}.p{page_idx + 1}.png"
