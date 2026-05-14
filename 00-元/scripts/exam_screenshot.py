@@ -82,11 +82,17 @@ def find_question_anchors(
 
 
 def find_answer_anchors(words: list[tuple]) -> list[dict[str, float]]:
-    """找【答案】或【 答 案 】anchor。
+    """找题面与解答区段的分隔 anchor。
+
+    覆盖多种 PDF 格式:
+    - 【答案】 / 【 答 案 】 — 2021+ 新格式
+    - 【考点】 — 2008-2020 旧格式题面后首块
+    - 【解答】 / 【解析】 — 解析主体
+    取最早出现者作为分隔，所以 q.png 仅含题面+选项，a.png 含其后全部解析。
 
     返回按 y 坐标排序的 list[{"x0", "y0", "x1", "y1"}]。
     """
-    answer_re = re.compile(r"^【\s*答\s*案\s*】")
+    answer_re = re.compile(r"^【\s*(?:答\s*案|考\s*点|解\s*答|解\s*析)\s*】")
     anchors: list[dict] = []
     for w in words:
         text = w[4]
@@ -347,6 +353,26 @@ def main() -> int:
     out_path = (
         out_dir / f"{args.province}-{args.subject}-{qa['paper_id']}-questions.json"
     )
+
+    # merge: 重跑 screenshot 时保留已有 enrich/verify 字段，避免 LLM 数据丢失
+    if out_path.exists():
+        try:
+            old_qa = json.loads(out_path.read_text(encoding="utf-8"))
+            old_by_qno = {q["qno"]: q for q in old_qa.get("questions", [])}
+            preserve_keys = (
+                "answer", "solution_text", "summary", "tags", "difficulty",
+                "verdict", "verdict_note", "enrich_error",
+            )
+            for q in qa["questions"]:
+                old = old_by_qno.get(q["qno"])
+                if not old:
+                    continue
+                for k in preserve_keys:
+                    if k in old and old[k] not in (None, "", []):
+                        q[k] = old[k]
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"⚠️  merge 失败 (旧 file 损坏？): {e}", file=sys.stderr)
+
     out_path.write_text(json.dumps(qa, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if violations:
