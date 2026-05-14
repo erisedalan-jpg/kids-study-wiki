@@ -104,10 +104,11 @@ def find_answer_anchors(words: list[tuple]) -> list[dict[str, float]]:
     """
     answer_re = re.compile(
         r"^(?:"
-        r"【\s*(?:答\s*案|考\s*点|解\s*答|解\s*析)\s*】"
+        r"【\s*(?:答\s*案|考\s*点|解\s*答|解\s*析|参\s*考\s*答\s*案|参\s*考\s*译\s*文)\s*】"
         r"|答\s*案\s*[：:]"
         r"|解\s*析\s*[：:]"
         r"|解\s*答\s*[：:]"
+        r"|参\s*考\s*答\s*案\s*[：:]"
         r")"
     )
     anchors: list[dict] = []
@@ -289,6 +290,7 @@ def render_screenshots(
         # 真题 Q1/Q2 之间含 answer → 保留
         filtered_per_page: dict[int, dict[int, dict]] = defaultdict(dict)
         n = len(all_q_candidates)
+        passed_count = 0
         for i, (p, qno, info) in enumerate(all_q_candidates):
             if i + 1 < n:
                 np_, _, ninfo = all_q_candidates[i + 1]
@@ -298,6 +300,16 @@ def render_screenshots(
                 next_y = per_page_height[next_p]
             if relax_strict or has_answer_between(p, info["y0"], next_p, next_y):
                 filtered_per_page[p][qno] = info
+                passed_count += 1
+
+        # Fallback: 如果过滤后保留率 < 30%，说明该 PDF anchor 稀疏（如英语
+        # 答案集中卷末），filter 太严，改为放过所有 q candidate。
+        if n > 0 and passed_count / n < 0.3 and not relax_strict:
+            filtered_per_page = defaultdict(dict)
+            for p, qno, info in all_q_candidates:
+                # 每页每 qno 取首次 — 后续 strict-from-1 自动去重
+                if qno not in filtered_per_page[p]:
+                    filtered_per_page[p][qno] = info
 
         # 第二遍：在过滤后 q_anchors 上应用 strict-from-1（除非 relax_strict）
         running_qno = 1
