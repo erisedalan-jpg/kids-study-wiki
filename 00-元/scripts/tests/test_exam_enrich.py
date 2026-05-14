@@ -40,7 +40,7 @@ class TestEnrichQuestion(unittest.TestCase):
             text="考集合运算\n集合的运算, 并集\n易",
             model="deepseek-v4-pro",
         )
-        q = {"qno": 1, "solution_text": "M 与 N 的交集计算..."}
+        q = {"qno": 1, "solution_text": "M 与 N 的交集计算过程，含集合的并集和交集运算"}
         result = enrich_question(q)
         self.assertEqual(result["summary"], "考集合运算")
         self.assertEqual(result["tags"], ["集合的运算", "并集"])
@@ -55,7 +55,7 @@ class TestEnrichQuestion(unittest.TestCase):
             MagicMock(text="", model="deepseek-v4-pro"),
             MagicMock(text="考点摘要\n概念A, 概念B\n中", model="deepseek-v4-pro"),
         ]
-        q = {"qno": 1, "solution_text": "..."}
+        q = {"qno": 1, "solution_text": "M 与 N 的交集运算 集合 元素 包含关系 求解过程"}
         result = enrich_question(q)
         self.assertEqual(mock_call.call_count, 2)
         # 第二次调用 temperature 应为 0.5
@@ -70,7 +70,7 @@ class TestEnrichQuestion(unittest.TestCase):
         """LLMError 直接返回 parse_error（不 retry）。"""
         from exam_enrich import LLMError
         mock_call.side_effect = LLMError("429 rate limit")
-        q = {"qno": 1, "solution_text": "..."}
+        q = {"qno": 1, "solution_text": "M 与 N 的交集运算 集合 元素 包含关系 求解过程"}
         result = enrich_question(q)
         # LLMError 不应触发 retry
         self.assertEqual(mock_call.call_count, 1)
