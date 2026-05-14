@@ -44,7 +44,8 @@ QNO_TOKEN_RE = re.compile(r"^([1-9]\d?)[\.、．](?!\d)")
 
 
 def find_question_anchors(
-    words: list[tuple], expected_max_qno: int, start_qno: int = 1
+    words: list[tuple], expected_max_qno: int, start_qno: int = 1,
+    relax_strict: bool = False,
 ) -> dict[int, dict[str, float]]:
     """找题号 anchor。
 
@@ -52,7 +53,9 @@ def find_question_anchors(
            (x0, y0, x1, y1, text, block_no, line_no, word_no)
     返回: {qno: {"x0", "y0", "x1", "y1", "block_no", "line_no"}}
 
-    题号必须从 `start_qno` 起严格递增，跳号丢弃。
+    relax_strict=False (默认): 题号必须从 `start_qno` 起严格递增，跳号丢弃。
+    relax_strict=True: 接受每个 unique qno 首次出现，用于 PDF 中部分题号缺
+        失的异常卷救援。
     多页 PDF 应由调用方跨页传递 running counter（见 render_screenshots）。
     """
     candidates: list[tuple[int, dict]] = []
@@ -73,6 +76,12 @@ def find_question_anchors(
     # 按 y 坐标排序（页面阅读顺序），然后筛递增
     candidates.sort(key=lambda x: x[1]["y0"])
     result: dict[int, dict] = {}
+    if relax_strict:
+        # 每 qno 取首次出现，不强制递增
+        for qno, info in candidates:
+            if qno not in result:
+                result[qno] = info
+        return result
     next_expected = start_qno
     for qno, info in candidates:
         if qno == next_expected:
@@ -85,14 +94,22 @@ def find_answer_anchors(words: list[tuple]) -> list[dict[str, float]]:
     """找题面与解答区段的分隔 anchor。
 
     覆盖多种 PDF 格式:
-    - 【答案】 / 【 答 案 】 — 2021+ 新格式
+    - 【答案】/【 答 案 】 — 2021+ 新格式
     - 【考点】 — 2008-2020 旧格式题面后首块
-    - 【解答】 / 【解析】 — 解析主体
+    - 【解答】/【解析】 — 解析主体
+    - `答案：` / `解析：` / `解答：` — 2021 数学卷类无括号变体
     取最早出现者作为分隔，所以 q.png 仅含题面+选项，a.png 含其后全部解析。
 
     返回按 y 坐标排序的 list[{"x0", "y0", "x1", "y1"}]。
     """
-    answer_re = re.compile(r"^【\s*(?:答\s*案|考\s*点|解\s*答|解\s*析)\s*】")
+    answer_re = re.compile(
+        r"^(?:"
+        r"【\s*(?:答\s*案|考\s*点|解\s*答|解\s*析)\s*】"
+        r"|答\s*案\s*[：:]"
+        r"|解\s*析\s*[：:]"
+        r"|解\s*答\s*[：:]"
+        r")"
+    )
     anchors: list[dict] = []
     for w in words:
         text = w[4]
@@ -176,6 +193,7 @@ def render_screenshots(
     year: int,
     expected_max_qno: int = 25,
     dpi: int = 200,
+    relax_strict: bool = False,
 ) -> dict[str, Any]:
     """从 PDF 提取题号 + 渲染截图到目标目录。
 
@@ -214,24 +232,93 @@ def render_screenshots(
         per_page_anchors: dict[int, dict[str, Any]] = {}
         per_page_height: dict[int, float] = {}
 
-        # 第一遍：扫所有页面找 anchor 并缓存（running counter 跨页递增）
-        running_qno = 1
+        # 第一遍：先扫每页所有 qno candidate（**保留重复** — instruction-1 + real-Q1 都要）
+        raw_q_per_page: dict[int, list[tuple[int, dict]]] = {}
+        raw_a_per_page: dict[int, list[dict]] = {}
         for page_no, page in enumerate(doc):
             words = page.get_text("words")
-            q_anchors = find_question_anchors(
-                words, expected_max_qno, start_qno=running_qno
-            )
-            a_anchors = find_answer_anchors(words)
-            per_page_anchors[page_no] = {
-                "q_anchors": q_anchors,
-                "a_anchors": a_anchors,
-            }
+            cands: list[tuple[int, dict]] = []
+            for w in words:
+                m = QNO_TOKEN_RE.match(w[4].strip())
+                if not m:
+                    continue
+                qno = int(m.group(1))
+                if qno > expected_max_qno + 5:
+                    continue
+                cands.append((qno, {
+                    "x0": w[0], "y0": w[1], "x1": w[2], "y1": w[3],
+                    "block_no": w[5] if len(w) > 5 else 0,
+                    "line_no": w[6] if len(w) > 6 else 0,
+                }))
+            cands.sort(key=lambda x: x[1]["y0"])
+            raw_q_per_page[page_no] = cands
+            raw_a_per_page[page_no] = find_answer_anchors(words)
             per_page_height[page_no] = page.rect.height
-            for qno, info in q_anchors.items():
+
+        # 用 spatial-lookahead 过滤：每个 q 候选必须其后某距离内出现 answer anchor
+        # 这能跳过 PDF 顶部 "注意事项 1./2./3./4." 这种伪题号
+        from collections import defaultdict
+        page_count = len(doc)
+        # 把所有 q 候选 + answer anchor 按 (page, y) 全局排序
+        all_q_candidates: list[tuple[int, int, dict]] = [
+            (p, qno, info)
+            for p, cands in raw_q_per_page.items()
+            for qno, info in cands
+        ]
+        all_q_candidates.sort(key=lambda x: (x[0], x[2]["y0"]))
+        # answer anchor 全局位置（page, y0）
+        all_a_positions: list[tuple[int, float]] = [
+            (p, a["y0"]) for p, anchors in raw_a_per_page.items() for a in anchors
+        ]
+        all_a_positions.sort()
+
+        def has_answer_between(
+            p1: int, y1: float, p2: int, y2: float
+        ) -> bool:
+            """位置 (p1,y1) 到 (p2,y2) 之间是否有 answer anchor。"""
+            for ap, ay in all_a_positions:
+                if (ap, ay) <= (p1, y1):
+                    continue
+                if (ap, ay) >= (p2, y2):
+                    return False
+                return True
+            return False
+
+        # 过滤伪题号: 每相邻 (q_i, q_{i+1}) 区间必须含 answer anchor
+        # instruction 区段 1./2./3./4. 之间无 anchor → 全部过滤掉
+        # 真题 Q1/Q2 之间含 answer → 保留
+        filtered_per_page: dict[int, dict[int, dict]] = defaultdict(dict)
+        n = len(all_q_candidates)
+        for i, (p, qno, info) in enumerate(all_q_candidates):
+            if i + 1 < n:
+                np_, _, ninfo = all_q_candidates[i + 1]
+                next_p, next_y = np_, ninfo["y0"]
+            else:
+                next_p = page_count - 1
+                next_y = per_page_height[next_p]
+            if relax_strict or has_answer_between(p, info["y0"], next_p, next_y):
+                filtered_per_page[p][qno] = info
+
+        # 第二遍：在过滤后 q_anchors 上应用 strict-from-1（除非 relax_strict）
+        running_qno = 1
+        for page_no in range(page_count):
+            filtered_q = filtered_per_page.get(page_no, {})
+            if relax_strict:
+                final_q = filtered_q
+            else:
+                # 仅保留 == running_qno 的，然后递增
+                final_q = {}
+                for qno in sorted(filtered_q.keys(), key=lambda q: filtered_q[q]["y0"]):
+                    if qno == running_qno:
+                        final_q[qno] = filtered_q[qno]
+                        running_qno += 1
+            per_page_anchors[page_no] = {
+                "q_anchors": final_q,
+                "a_anchors": raw_a_per_page[page_no],
+            }
+            for qno, info in final_q.items():
                 if qno not in all_q_anchors:
                     all_q_anchors[qno] = (page_no, info)
-            if q_anchors:
-                running_qno = max(q_anchors.keys()) + 1
 
         if not all_q_anchors:
             raise ValueError(
@@ -401,6 +488,10 @@ def main() -> int:
     ap.add_argument("--expected-min", type=int, default=18, help="期望最少题数（含）")
     ap.add_argument("--expected-max", type=int, default=25, help="期望最多题数（含）")
     ap.add_argument("--dpi", type=int, default=200)
+    ap.add_argument(
+        "--relax-strict", action="store_true",
+        help="跳过 strict-from-1 anchor 检查 (用于 PDF 中部分题号缺失的卷)",
+    )
     args = ap.parse_args()
 
     qa = render_screenshots(
@@ -410,6 +501,7 @@ def main() -> int:
         year=args.year,
         expected_max_qno=args.expected_max,
         dpi=args.dpi,
+        relax_strict=args.relax_strict,
     )
 
     violations = assert_screenshot_quality(qa, (args.expected_min, args.expected_max))
