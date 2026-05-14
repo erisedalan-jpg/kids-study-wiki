@@ -302,12 +302,13 @@ def render_screenshots(
                 filtered_per_page[p][qno] = info
                 passed_count += 1
 
-        # Fallback: 如果过滤后保留率 < 30%，说明该 PDF anchor 稀疏（如英语
-        # 答案集中卷末），filter 太严，改为放过所有 q candidate。
-        if n > 0 and passed_count / n < 0.3 and not relax_strict:
+        # Fallback: 如果过滤后保留率 < 80%，说明 filter 误伤真题（如英语
+        # 卷答案集中卷末，Q1-Q19 之间无 anchor → 全被 reject），改放过所有。
+        # 安全是因为：fallback 后仍走 strict-from-1，instruction 1./2./3./4.
+        # 只在数理化生 PDF 出现 (那些卷 filter 通过率高，不会 fallback)。
+        if n > 0 and passed_count / n < 0.8 and not relax_strict:
             filtered_per_page = defaultdict(dict)
             for p, qno, info in all_q_candidates:
-                # 每页每 qno 取首次 — 后续 strict-from-1 自动去重
                 if qno not in filtered_per_page[p]:
                     filtered_per_page[p][qno] = info
 
