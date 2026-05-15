@@ -1172,7 +1172,7 @@ git commit -m "feat(exam): v4-pro enrich (summary + tags + difficulty)"
 - Create: `00-元/scripts/exam_verify.py`
 - Test: `00-元/scripts/tests/test_exam_verify.py`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 ```python
 # 00-元/scripts/tests/test_exam_verify.py
@@ -1233,12 +1233,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: 跑测试看 fail**
+- [x] **Step 2: 跑测试看 fail**
 
 Run: `python -m unittest 00-元.scripts.tests.test_exam_verify -v`
 Expected: ImportError
 
-- [ ] **Step 3: 写实现**
+- [x] **Step 3: 写实现**
 
 ```python
 # 00-元/scripts/exam_verify.py
@@ -1393,17 +1393,12 @@ if __name__ == "__main__":
     raise SystemExit(main())
 ```
 
-- [ ] **Step 4: 跑测试**
+- [x] **Step 4: 跑测试**
 
 Run: `python -m unittest 00-元.scripts.tests.test_exam_verify -v`
-Expected: 5 tests pass
+Expected: 5 tests pass — 实测 8 tests pass (扩展含 Fix1/2/4/5)
 
-- [ ] **Step 5: Commit**
-
-```bash
-git add "00-元/scripts/exam_verify.py" "00-元/scripts/tests/test_exam_verify.py"
-git commit -m "feat(exam): L2 verify queue (prepare/ingest two-phase)"
-```
+- [x] **Step 5: Commit** — 已 commit。后续大量扩展（subject-aware/paper_id-collision/双重复核）已并入大批量 verify 工作流；详见 redo_severe_2026-05-15.log + commit 历史 (`c00cd38c` Obsidian Git 拦截) 与 `redo_severe.sh`。
 
 ---
 
