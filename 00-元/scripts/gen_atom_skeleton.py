@@ -53,15 +53,14 @@ from _llm_router import LLMError, Task, call  # noqa: E402
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 
-PROMPT_TEMPLATE = (Path(__file__).parent / "_prompts" / "atom_skeleton.md").read_text(
-    encoding="utf-8"
-)
+_PROMPTS_DIR = Path(__file__).parent / "_prompts"
+DEFAULT_PROMPT = _PROMPTS_DIR / "atom_skeleton.md"
 
 ROUTE_MARKER = "__ROUTE_TO_OPUS__"
 
 
-def render_prompt(item: dict, *, today: str, model_tag: str) -> str:
-    """把 atom_skeleton.md 中的 {placeholder} 替换为本条参数。"""
+def render_prompt(item: dict, *, today: str, model_tag: str, template: str) -> str:
+    """把 prompt 模板中的 {placeholder} 替换为本条参数。"""
     fields = {
         "title": item["title"],
         "subject": item["subject"],
@@ -72,7 +71,7 @@ def render_prompt(item: dict, *, today: str, model_tag: str) -> str:
         "today": today,
         "model_tag": model_tag,
     }
-    out = PROMPT_TEMPLATE
+    out = template
     for k, v in fields.items():
         out = out.replace("{" + k + "}", str(v))
     return out
@@ -124,9 +123,19 @@ def main() -> int:
         help="路由 Task：simple→v4-flash / complex→v4-pro",
     )
     ap.add_argument("--out-manifest", required=True, help="输出 manifest.jsonl 路径")
+    ap.add_argument(
+        "--prompt-file",
+        help="自定义 prompt 模板路径（默认 _prompts/atom_skeleton.md）。"
+        "真题缺口考点词条用 _prompts/exam_lexicon.md",
+    )
     ap.add_argument("--dry-run", action="store_true", help="只渲染 prompt 不调 API")
     ap.add_argument("--overwrite", action="store_true", help="覆盖已存在的词条文件")
     args = ap.parse_args()
+
+    prompt_path = Path(args.prompt_file) if args.prompt_file else DEFAULT_PROMPT
+    if not prompt_path.is_absolute():
+        prompt_path = (REPO_ROOT / prompt_path) if not prompt_path.exists() else prompt_path
+    prompt_template = prompt_path.read_text(encoding="utf-8")
 
     items = load_items(args)
     task_enum = {"simple": Task.SIMPLE, "complex": Task.COMPLEX}[args.model]
@@ -157,7 +166,9 @@ def main() -> int:
                 print(f"[skip] {tgt.relative_to(REPO_ROOT)} 已存在", file=sys.stderr)
                 continue
 
-            prompt = render_prompt(item, today=today, model_tag=model_tag)
+            prompt = render_prompt(
+                item, today=today, model_tag=model_tag, template=prompt_template
+            )
             if args.dry_run:
                 print(f"--- DRY RUN · {item['title']} ---\n{prompt[:500]}...\n", file=sys.stderr)
                 entry["status"] = "dry_run"
