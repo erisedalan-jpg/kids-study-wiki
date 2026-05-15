@@ -94,7 +94,7 @@ class TestRunPrepare(unittest.TestCase):
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
             run_prepare(qa_path)
-            queue_dir = td_path / "verdicts" / "test-paper"
+            queue_dir = td_path / "verdicts" / "吉林-数学-test-paper"
             self.assertFalse((queue_dir / "q01.prompt.md").exists())
             self.assertTrue((queue_dir / "q02.prompt.md").exists())
 
@@ -115,7 +115,7 @@ class TestRunPrepare(unittest.TestCase):
             )
             run_prepare(qa_path)
             run_prepare(qa_path)
-            pending_log = td_path / "verdicts" / "test-paper" / "_pending.jsonl"
+            pending_log = td_path / "verdicts" / "吉林-数学-test-paper" / "_pending.jsonl"
             lines = [
                 ln for ln in pending_log.read_text(encoding="utf-8").splitlines()
                 if ln.strip()
@@ -139,7 +139,7 @@ class TestRunIngest(unittest.TestCase):
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
-            queue_dir = td_path / "verdicts" / "test-paper"
+            queue_dir = td_path / "verdicts" / "吉林-数学-test-paper"
             queue_dir.mkdir(parents=True, exist_ok=True)
             rc = run_ingest(qa_path)
             self.assertEqual(rc, 1)
@@ -159,7 +159,7 @@ class TestRunIngest(unittest.TestCase):
             qa_path.write_text(
                 json.dumps(qa, ensure_ascii=False), encoding="utf-8"
             )
-            queue_dir = td_path / "verdicts" / "test-paper"
+            queue_dir = td_path / "verdicts" / "吉林-数学-test-paper"
             queue_dir.mkdir(parents=True, exist_ok=True)
             (queue_dir / "q01.verdict.txt").write_text(
                 "严重偏差\n该题考的是导数不是集合", encoding="utf-8"

@@ -26,21 +26,28 @@ from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 PROMPT_TEMPLATE = """请打开题面截图 (用 Read 工具或视觉能力查看)：
 `{image_abs_path}`
 
+题目所属学科: {subject}
 v4-pro 抽出的元数据：
 - 摘要: {summary}
 - 考点 tags: {tags}
 
-任务：看截图判断 v4-pro 抽的考点和摘要是否吻合实际题面。
+任务: 看截图，对 v4-pro 抽的元数据做**双重复核**:
+1. **关联考点**: tag 是否对应题面真实考查内容?
+   - 必须包含本学科核心考点
+   - 允许跨学科 tag (例: 物理化学融合题、英语阅读涉及科技/历史)，但需要与题面强相关
+   - 拒绝: 无关 tag、过度泛化 tag、与题面不符 tag
+2. **摘要**: 是否准确概括题目考查内容?
+   - 拒绝: 过短(<10字)、答非所问、误判题型/学科
 
 按下面两行格式输出，不要额外内容:
 第一行: 吻合 / 部分偏差 / 严重偏差
-第二行: 一句话说明理由（≤ 40 字；部分偏差时说明建议改哪些 tag）
+第二行: 一句话说明 (≤ 60 字；部分偏差/严重偏差时指明 tag 或 summary 问题点)
 """
 
 VALID_VERDICTS = ("严重偏差", "部分偏差", "吻合")  # priority order: most severe first
 
 
-def render_verify_prompt(q: dict) -> str:
+def render_verify_prompt(q: dict, subject: str = "数学") -> str:
     """生成单题 verify prompt。image 路径用绝对路径方便 Opus/sonnet 找到。
 
     兼容 题面图 为 str (旧) 或 list[str] (新): 取首张。
@@ -57,6 +64,7 @@ def render_verify_prompt(q: dict) -> str:
         image_abs_path=str(image_path).replace("\\", "/"),
         summary=q.get("summary", "(无)"),
         tags=tags_str,
+        subject=subject,
     )
 
 
@@ -89,7 +97,10 @@ def run_prepare(qa_path: Path) -> int:
         sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
     # 每张试卷独立子目录，避免多卷共用 verdicts/ 互相覆盖
     paper_id = qa.get("paper_id") or qa_path.stem.replace("-questions", "")
-    queue_dir = qa_path.parent / "verdicts" / paper_id
+    subject = qa.get("subject", "数学")
+    province = qa.get("province", "吉林")
+    # 多学科可能共享 paper_id (年+文理+卷别)，需加 province-subject 区分
+    queue_dir = qa_path.parent / "verdicts" / f"{province}-{subject}-{paper_id}"
     queue_dir.mkdir(parents=True, exist_ok=True)
     pending_log = queue_dir / "_pending.jsonl"
 
@@ -99,7 +110,7 @@ def run_prepare(qa_path: Path) -> int:
             if q.get("verdict") in ("吻合", "部分偏差", "严重偏差"):
                 continue  # 已 ingest 过最终 verdict（失败/未识别仍重排队）
             try:
-                prompt = render_verify_prompt(q)
+                prompt = render_verify_prompt(q, subject=subject)
             except ValueError as e:
                 print(f"[skip] {e}")
                 continue
@@ -130,7 +141,9 @@ def run_ingest(qa_path: Path) -> int:
     except json.JSONDecodeError as e:
         sys.exit(f"ERROR: questions.json 损坏 ({qa_path}): {e}")
     paper_id = qa.get("paper_id") or qa_path.stem.replace("-questions", "")
-    queue_dir = qa_path.parent / "verdicts" / paper_id
+    subject = qa.get("subject", "数学")
+    province = qa.get("province", "吉林")
+    queue_dir = qa_path.parent / "verdicts" / f"{province}-{subject}-{paper_id}"
     if not queue_dir.exists():
         sys.exit(f"ERROR: verdicts 目录不存在: {queue_dir}")
 
