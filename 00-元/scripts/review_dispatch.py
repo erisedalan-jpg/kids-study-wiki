@@ -151,7 +151,7 @@ def write_pending(reviewer: str, entry: dict, atom_text: str, queue_dir: Path) -
 
 
 def run_prepare(args: argparse.Namespace) -> int:
-    manifest_path = Path(args.manifest)
+    manifest_path = Path(args.manifest).resolve()
     if not manifest_path.exists():
         sys.exit(f"ERROR: manifest 不存在: {manifest_path}")
 
@@ -230,7 +230,7 @@ def run_prepare(args: argparse.Namespace) -> int:
 
 
 def run_ingest(args: argparse.Namespace) -> int:
-    manifest_path = Path(args.manifest)
+    manifest_path = Path(args.manifest).resolve()
     if not manifest_path.exists():
         sys.exit(f"ERROR: manifest 不存在: {manifest_path}")
 
