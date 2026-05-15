@@ -87,20 +87,32 @@ def parse_llm_output(text: str) -> dict:
     }
 
 
-BAD_TAGS = {"无", "无考点", "非数学题", "无数学考点", "无对应考点", "无可识别考点"}
+BAD_TAGS_EXACT = {
+    "无", "无考点", "非数学题", "无数学考点", "无对应考点",
+    "无可识别考点", "非数学考点", "暂无数学考点",
+}
+# 注意: "非谓语动词"/"非特异性免疫"/"非金属性比较"/"非细胞生物" 等是真考点，
+# 不能用 startswith("非") 一刀切。
+BAD_TAGS_PATTERNS = [
+    re.compile(r"^暂无.*考点$"),
+    re.compile(r"^无.*考点$"),
+    re.compile(r"^非数学.*$"),
+    re.compile(r"^无.*[（(].*[)）]$"),
+]
+# 兼容: 老代码 import BAD_TAGS
+BAD_TAGS = BAD_TAGS_EXACT
 
 
 def _clean_bad_tags(tags: list[str], subject: str) -> list[str]:
-    """过滤无意义占位 tag。"""
+    """过滤无意义占位 tag (精确匹配，避免误伤真考点)。"""
     out = []
     for t in tags:
         t = t.strip()
-        if not t or t in BAD_TAGS:
+        if not t:
             continue
-        # "无<学科>考点" / "非<学科>题"
-        if t.startswith("无") and t.endswith("考点"):
+        if t in BAD_TAGS_EXACT:
             continue
-        if t.startswith("非") and t.endswith("题"):
+        if any(p.match(t) for p in BAD_TAGS_PATTERNS):
             continue
         out.append(t)
     return out
@@ -152,14 +164,17 @@ def main() -> int:
 
     failed = 0
     for q in qa["questions"]:
-        if args.force_clean and q.get("tags"):
-            cleaned = _clean_bad_tags(q["tags"], subject)
-            if len(cleaned) != len(q["tags"]):
-                q["tags"] = cleaned
+        if args.force_clean:
+            orig_tags = q.get("tags") or []
+            cleaned = _clean_bad_tags(orig_tags, subject)
             if not cleaned:
-                # 全是占位，清空触发 redo
+                # 全占位或空 → redo
                 q.pop("tags", None)
                 q.pop("summary", None)
+            elif len(cleaned) < len(orig_tags):
+                # 部分清洗 → 也 redo（让 LLM 用新规则补正确 tag）
+                q["tags"] = cleaned  # 保底
+                q.pop("summary", None)  # 触发 redo
 
         if q.get("summary") and q.get("tags"):
             continue  # 已富化过则跳过
