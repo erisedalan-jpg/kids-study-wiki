@@ -69,6 +69,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -78,7 +79,8 @@ from _llm_router import LLMError, Task, call  # noqa: E402
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 
-REVIEW_PROMPT = (Path(__file__).parent / "_prompts" / "review_atom.md").read_text(encoding="utf-8")
+_DEFAULT_REVIEW_PROMPT = Path(__file__).parent / "_prompts" / "review_atom.md"
+REVIEW_PROMPT = _DEFAULT_REVIEW_PROMPT.read_text(encoding="utf-8")
 
 # 仅 deepseek-self 走 API；opus/sonnet 改为写 prompt 队列由主会话处理
 DEEPSEEK_SELF_TASK = Task.COMPLEX
@@ -96,8 +98,11 @@ def assign_reviewers(n: int, ratios: tuple[int, int, int], seed: int = 42) -> li
     return assignments
 
 
+_VERDICTS = ("reroute_to_opus", "fix_major", "fix_minor", "pass")
+
+
 def parse_review(text: str) -> dict:
-    """解析 LLM 返回的 JSON。容忍前后包裹 ```json 代码块。"""
+    """解析 LLM 返回的 JSON。容忍 ```json 包裹；非法 JSON 时尽量从文本/截断 JSON 救回 verdict。"""
     s = text.strip()
     if s.startswith("```"):
         s = s.strip("`")
@@ -105,8 +110,30 @@ def parse_review(text: str) -> dict:
             s = s[4:].lstrip()
     try:
         return json.loads(s)
-    except json.JSONDecodeError as e:
-        return {"verdict": "fix_major", "issues": [{"item": 0, "level": "FAIL", "msg": f"复检结果非合法 JSON: {e}"}]}
+    except json.JSONDecodeError:
+        pass
+    # 容错 1：截断的 JSON——抓第一个完整对象
+    brace = s.find("{")
+    if brace != -1:
+        depth = 0
+        for i in range(brace, len(s)):
+            if s[i] == "{":
+                depth += 1
+            elif s[i] == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(s[brace : i + 1])
+                    except json.JSONDecodeError:
+                        break
+    # 容错 2：从文本里救 verdict 关键词（优先级：最严重优先）
+    m = re.search(r'"verdict"\s*:\s*"([a-z_]+)"', s)
+    if m and m.group(1) in _VERDICTS:
+        return {"verdict": m.group(1), "issues": [{"item": 0, "level": "WARN", "msg": "JSON 不完整，仅救回 verdict"}]}
+    for v in _VERDICTS:
+        if v in s:
+            return {"verdict": v, "issues": [{"item": 0, "level": "WARN", "msg": "非 JSON 输出，按关键词判定 verdict"}]}
+    return {"verdict": "fix_minor", "issues": [{"item": 0, "level": "WARN", "msg": "复检结果无法解析，保守判 fix_minor 待人工抽查"}]}
 
 
 def render_review_prompt(reviewer: str, entry: dict, atom_text: str) -> str:
@@ -309,7 +336,19 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--dry-run", action="store_true", help="只分配 reviewer，不调用 LLM / 不写队列")
     ap.add_argument("--ingest", action="store_true", help="收回主会话产出的 verdict.json，写回 manifest")
+    ap.add_argument(
+        "--prompt-file",
+        help="自定义复检 prompt 模板（默认 _prompts/review_atom.md）。"
+        "exam_lexicon 精简词条用 _prompts/review_exam_lexicon.md",
+    )
     args = ap.parse_args()
+
+    if args.prompt_file:
+        pp = Path(args.prompt_file)
+        if not pp.exists():
+            pp = REPO_ROOT / args.prompt_file
+        global REVIEW_PROMPT
+        REVIEW_PROMPT = pp.read_text(encoding="utf-8")
 
     if args.ingest:
         return run_ingest(args)
