@@ -1,0 +1,53 @@
+---
+title: DNA的结构与复制
+aliases: [DNA的结构与复制]
+学科: 生物
+学段: [高中]
+主题: []
+状态: 骨架
+英文术语: Structure and Replication of DNA
+---
+
+# DNA的结构与复制
+
+> **一句话**：DNA是由两条反向平行的脱氧核苷酸链通过碱基互补配对形成的双螺旋结构，并通过半保留复制机制实现遗传信息的精确传递。
+> **English**: DNA is a double helix composed of two antiparallel strands of deoxynucleotides held together by complementary base pairing, and it replicates semiconservatively to ensure accurate transmission of genetic information.
+
+## 🎓 考点精讲
+
+**结构原理**：DNA的基本单位是脱氧核糖核苷酸，每个核苷酸由磷酸、脱氧核糖和含氮碱基（A、T、G、C）组成。两条多核苷酸链反向平行盘旋，外侧为磷酸-脱氧核糖骨架，内侧为碱基，严格按照**碱基互补配对原则**：A与T通过两个氢键配对，G与C通过三个氢键配对。因此在任何双链DNA分子中，**A=T、G=C、嘌呤总数=嘧啶总数**。
+
+**复制原理**：DNA复制以亲代DNA的每一条链为模板，在DNA聚合酶等的作用下合成新链，子代DNA分子中一条链是旧的、一条链是新合成的，称为**半保留复制**。复制过程需**解旋酶**断开氢键形成复制叉，**DNA聚合酶**沿模板链3'→5'方向读取，使新链沿5'→3'方向延伸；其中一条链连续合成（前导链），另一条不连续合成冈崎片段后连接（后随链）。
+
+**典型应用**：高考常结合同位素标记实验（如Meselson-Stahl实验）证明半保留复制，要求根据离心条带位置推断复制代数及含标记链的比例；或结合DNA分子中碱基比例计算，如已知某DNA分子A占20%，推算连续复制n次所需某种碱基数；或结合PCR技术、基因突变等情境考查复制准确性及碱基对改变。
+
+## ⚠️ 高频易错点
+
+- 混淆DNA与RNA的化学成分：DNA含脱氧核糖和T，RNA含核糖和U；误认为DNA复制需要尿嘧啶。
+- 计算碱基数时忽略“双链”与“单链”区别：求某条链的碱基比例时需根据互补关系换算，而非直接相等。
+- 误认为两条子链均连续合成，忽略后随链的不连续复制和冈崎片段。
+- 将“半保留复制”误解为子代DNA全为新链或全为旧链；误判复制n次后含亲代链的DNA分子比例。
+
+## 🌐 中英对照（术语表）
+
+| 中文 | English | 说明 |
+|------|---------|------|
+| 脱氧核糖核酸 | Deoxyribonucleic acid (DNA) | 遗传信息的载体 |
+| 碱基互补配对 | Complementary base pairing | A与T配对，G与C配对 |
+| 半保留复制 | Semiconservative replication | 子代DNA保留一条亲代链 |
+| DNA聚合酶 | DNA polymerase | 催化脱氧核苷酸链延伸的酶 |
+| 冈崎片段 | Okazaki fragment | 后随链上不连续合成的短片段 |
+
+## 📑 出处与参考资料
+
+- **教材**：(待主会话核对教材索引)
+- **课标**：遗传与进化 · 遗传信息的传递
+- **生成校对**：DeepSeek-complex 生成于 2026-05-16，由家长核对
+
+## 🔗 相关考点
+
+- DNA的结构
+- DNA的复制
+- 基因的表达
+- 基因突变
+- PCR技术
