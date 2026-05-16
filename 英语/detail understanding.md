@@ -59,7 +59,7 @@ aliases: [detail understanding, Detail Understanding, detail comprehension]
 
 ## 🔗 相关考点
 
-- [[main idea]] 主旨大意题
+- [[518-概括|main idea]] 主旨大意题
 - [[inference]] 推理判断题
 - [[word guessing]] 词义猜测题
 - [[reading strategies]] 阅读策略

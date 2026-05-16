@@ -52,7 +52,7 @@ aliases: [Specific Information, 细节理解, 事实细节]
 ## 🔗 相关考点
 
 - [[Main Idea]]
-- [[Inference]]
+- [[logic inference|Inference]]
 - [[Vocabulary in Context]]
 - [[Attitude and Tone]]
 - [[Text Structure]]

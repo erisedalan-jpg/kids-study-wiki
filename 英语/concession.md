@@ -62,7 +62,7 @@ aliases: [concession, 让步状语从句, Concessive clause]
 
 ## 🔗 相关考点
 
-- [[状语从句]]
+- [[617-状语从句|状语从句]]
 - [[although 与 but 的用法]]
 - [[as 的倒装结构]]
 - [[whatever 与 no matter what]]

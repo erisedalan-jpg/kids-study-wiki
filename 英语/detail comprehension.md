@@ -59,7 +59,7 @@ aliases: [detail comprehension]
 
 ## 🔗 相关考点
 
-- [[main idea]]
+- [[518-概括|main idea]]
 - [[inference]]
 - [[guessing word meaning]]
 - [[text structure]]

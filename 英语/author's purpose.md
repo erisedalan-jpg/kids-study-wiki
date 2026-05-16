@@ -52,7 +52,7 @@ aliases: [author's purpose, 写作目的]
 
 ## 🔗 相关考点
 
-- [[main idea]]
+- [[518-概括|main idea]]
 - [[tone and attitude]]
 - [[inference]]
 - [[text type and genre]]

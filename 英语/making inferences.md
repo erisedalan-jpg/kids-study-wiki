@@ -57,6 +57,6 @@ aliases: [making inferences, Inference]
 
 - [[main idea and supporting details]]
 - [[author's purpose]]
-- [[guessing meaning from context]]
+- [[guess meaning from context|guessing meaning from context]]
 - [[logical connectors]]
 - [[distinguishing fact from opinion]]

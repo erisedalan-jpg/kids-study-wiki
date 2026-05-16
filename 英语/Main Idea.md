@@ -53,7 +53,7 @@ aliases: [Main Idea]
 ## 🔗 相关考点
 
 - [[Fact and Opinion]]
-- [[Inference]]
+- [[logic inference|Inference]]
 - [[Text Structure]]
 - [[Summarizing]]
 - [[Author’s Purpose]]

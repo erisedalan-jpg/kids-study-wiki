@@ -46,7 +46,7 @@ aliases: [Occupation Identification]
 
 ## 🔗 相关考点
 
-- [[Guessing Word Meaning]]
+- [[猜测词义|Guessing Word Meaning]]
 - [[Reading Comprehension for Narrative Texts]]
 - [[Inferring Character's Intention and Attitude]]
 - [[Context Clues in Discourse Analysis]]

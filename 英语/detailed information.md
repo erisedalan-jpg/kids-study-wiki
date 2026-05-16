@@ -57,7 +57,7 @@ aliases: [detailed information, 细节信息理解]
 ## 🔗 相关考点
 
 - [[skimming and scanning]]
-- [[main idea]]
+- [[518-概括|main idea]]
 - [[inference]]
 - [[词义猜测]]
 - [[时间顺序与逻辑衔接]]

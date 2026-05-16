@@ -48,6 +48,6 @@ aliases: [reading comprehension, 阅读理解, Reading Comprehension]
 
 - [[vocabulary in context]]
 - [[inference]]
-- [[main idea]]
+- [[518-概括|main idea]]
 - [[author's purpose]]
 - [[text structure]]
