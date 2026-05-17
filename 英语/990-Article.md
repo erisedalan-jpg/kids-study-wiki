@@ -60,7 +60,7 @@ aliases: [Article, 冠词]
 - [[Noun]]
 - [[Determiner]]
 - [[691-Subject-Verb Agreement|Subject-Verb Agreement]]
-- [[Error Correction]]
+- [[1015-短文改错|Error Correction]]
 - [[语境判断|Contextual Clues]]
 
 <!-- exam-backlinks-start -->

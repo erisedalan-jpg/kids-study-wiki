@@ -58,7 +58,7 @@ aliases: [making inferences, Inference]
 - [[main idea and supporting details]]
 - [[700-author's purpose|author's purpose]]
 - [[guess meaning from context|guessing meaning from context]]
-- [[logical connectors]]
+- [[1023-逻辑连接词|logical connectors]]
 - [[distinguishing fact from opinion]]
 
 <!-- exam-backlinks-start -->

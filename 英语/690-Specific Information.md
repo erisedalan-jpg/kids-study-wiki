@@ -55,7 +55,7 @@ aliases: [Specific Information, 细节理解, 事实细节]
 - [[logic inference|Inference]]
 - [[Vocabulary in Context]]
 - [[Attitude and Tone]]
-- [[Text Structure]]
+- [[1016-篇章结构|Text Structure]]
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中

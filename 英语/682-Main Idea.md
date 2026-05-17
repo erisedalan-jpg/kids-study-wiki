@@ -54,7 +54,7 @@ aliases: [Main Idea]
 
 - [[Fact and Opinion]]
 - [[logic inference|Inference]]
-- [[Text Structure]]
+- [[1016-篇章结构|Text Structure]]
 - [[Summarizing]]
 - [[Author’s Purpose]]
 

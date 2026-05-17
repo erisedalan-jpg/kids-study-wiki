@@ -59,7 +59,7 @@ aliases: [inference, 推理判断]
 - [[725-reading comprehension|阅读理解]]
 - [[细节捕捉|细节理解题]]
 - [[628-main idea identification|主旨大意题]]
-- [[词义猜测题]]
+- [[1019-词义猜测题|词义猜测题]]
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中
