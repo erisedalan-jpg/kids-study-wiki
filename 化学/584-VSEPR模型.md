@@ -53,5 +53,6 @@ aliases: [VSEPR模型, 价层电子对互斥理论]
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中
-- [[2024-辽宁-02]]
+- [[2023-北京-02]]
+- [[2024-北京-14]]
 <!-- exam-backlinks-end -->
