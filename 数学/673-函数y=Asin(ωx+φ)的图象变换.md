@@ -73,6 +73,5 @@ aliases: [函数y=Asin(ωx+φ)的图象变换, Transformations of the graph of y
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中
-- [[2013-文-16]]
 - [[2016-理-07]]
 <!-- exam-backlinks-end -->
