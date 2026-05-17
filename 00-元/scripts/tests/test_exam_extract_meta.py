@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from exam_extract_meta import (  # noqa: E402
     extract_answer,
     extract_solution_text,
+    split_by_answer_tag,
     split_by_question,
 )
 
@@ -33,6 +34,24 @@ class TestSplitByQuestion(unittest.TestCase):
 """
         chunks = split_by_question(md)
         self.assertEqual(list(chunks.keys()), [1])
+
+
+class TestSplitByAnswerTag(unittest.TestCase):
+    """北京卷等版式适配降级：按【答案】序号直映射。"""
+
+    def test_maps_answer_order_to_expected_qnos(self):
+        # 公式碎片化致题号不可切，但【答案】顺序 = 题号顺序
+        md = """碎\n片\n1.乱码题面【答案】A\n【解析】略\n更多碎片\n【答案】C\n【解析】略2\n【答案】B\n【解析】略3"""
+        chunks = split_by_answer_tag(md, [1, 2, 3])
+        self.assertEqual(list(chunks.keys()), [1, 2, 3])
+        self.assertEqual(extract_answer(chunks[1]), "A")
+        self.assertEqual(extract_answer(chunks[2]), "C")
+        self.assertEqual(extract_answer(chunks[3]), "B")
+
+    def test_returns_empty_on_count_mismatch(self):
+        # 【答案】数 != expected_qnos 数 → 不安全，放弃映射
+        md = "【答案】A\n【答案】B\n"
+        self.assertEqual(split_by_answer_tag(md, [1, 2, 3]), {})
 
 
 class TestExtractAnswer(unittest.TestCase):
@@ -64,6 +83,22 @@ class TestExtractAnswer(unittest.TestCase):
         """## 前缀是 markitdown 把数字误判为 heading 残留，需去除。"""
         chunk = "题面\n【答案】##5\n"
         self.assertEqual(extract_answer(chunk), "5")
+
+    def test_beijing_fill_formula_fragment(self):
+        # 北京理科卷: 公式答案被 PyMuPDF 拆成多行碎片+私有区字形码;
+        # 跨行正则 + 去字形码 + 折叠空白 -> 还原可读串(不退化单字符)
+        NL = chr(10)
+        PUA = chr(0xF028)   # PDF 私有区括号字形
+        RC = chr(0xFFFD)    # replacement char
+        chunk = ("题面" + NL + "【答案】" + PUA + "-1,1" + PUA + NL
+                 + "或" + NL + "x" + NL + "=" + NL + "2" + RC + NL
+                 + "【解析】【分析】略")
+        r = extract_answer(chunk)
+        self.assertNotIn(PUA, r)
+        self.assertNotIn(RC, r)
+        self.assertIn("-1,1", r)
+        self.assertGreater(len(r), 1)
+
 
 
 class TestExtractSolutionText(unittest.TestCase):

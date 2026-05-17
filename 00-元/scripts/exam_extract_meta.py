@@ -31,7 +31,12 @@ QNO_RE = re.compile(
     re.MULTILINE,
 )
 # 答案标签兼容 "【答案】" 和 "【 答 案 】"
-ANSWER_TAG_RE = re.compile(r"【\s*答\s*案\s*】([^\n【]*)")
+# 跨行抓到下个【（通常【解析】）前：北京理科卷公式答案被 PyMuPDF 拆成
+# 多行单字符碎片，单行 [^\n【]* 只能抓到首字符（如 "-"/"±"），跨行后由
+# extract_answer 折叠空白还原（选择题 "A\n" 折叠后仍为 "A"，向后兼容）。
+ANSWER_TAG_RE = re.compile(r"【\s*答\s*案\s*】([^【]*)")
+# PDF 自定义字体私有区字形码 + replacement char（北京卷字体编码损伤）
+_GLYPH_NOISE_RE = re.compile(r"[-�]")
 # 解析段
 SOLUTION_TAG_RE = re.compile(r"【\s*解\s*析\s*】(.+)", re.DOTALL)
 
@@ -111,11 +116,16 @@ def extract_answer(chunk: str, max_len: int = 50) -> str:
 
     清洗 markdown 表格残片：当 markitdown 把答案塞进 `| ##0.3 | | | ... |`
     形式的表格时，去掉前导 `|`、`##`、以及尾部 `|     |     |`。
+
+    北京理科卷：ANSWER_TAG_RE 跨行抓到【解析】前全部内容，公式答案是被
+    PyMuPDF 拆碎的多行片段 + 私有区字形码 → 先去字形噪声，末尾折叠空白
+    （选择题 "A\n" 折叠回 "A"，公式答案折成单行串供 enrich/人工判断）。
     """
     m = ANSWER_TAG_RE.search(chunk)
     if not m:
         return ""
-    raw = m.group(1).strip()
+    # 0) 去 PDF 自定义字体私有区字形码 / replacement char
+    raw = _GLYPH_NOISE_RE.sub("", m.group(1)).strip()
     # 1) 去掉所有 markdown 表格分隔符 `|`
     if "|" in raw:
         cells = [c.strip() for c in raw.split("|") if c.strip()]
@@ -123,6 +133,8 @@ def extract_answer(chunk: str, max_len: int = 50) -> str:
         raw = cells[0] if cells else ""
     # 2) 去掉 markitdown 偶发前缀 `##` (来自 heading marker 误转)
     raw = re.sub(r"^#+\s*", "", raw).strip()
+    # 3) 折叠跨行/多空白为单空格（跨行抓取后归一）
+    raw = re.sub(r"\s+", " ", raw).strip()
     return raw[:max_len]
 
 
