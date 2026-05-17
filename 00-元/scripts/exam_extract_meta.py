@@ -84,6 +84,28 @@ def split_by_question(md_text: str) -> dict[int, str]:
     return chunks
 
 
+def split_by_answer_tag(
+    md_text: str, expected_qnos: list[int]
+) -> dict[int, str]:
+    """北京卷等版式适配降级：旁路题号切分，按【答案】出现顺序切块。
+
+    解析卷每题恰一个【答案】，顺序严格 = 题号顺序。当 markitdown 文本因
+    公式碎片化导致 split_by_question 严重失分，但【答案】标记数恰等于
+    screenshot 已定位的题数时，按第 k 个【答案】块映射到 expected_qnos[k]。
+    块边界 = [ans[k].start() : ans[k+1].start())，块首即【答案】，
+    extract_answer / extract_solution_text 可直接复用。
+    """
+    ans = list(ANSWER_TAG_RE.finditer(md_text))
+    if len(ans) != len(expected_qnos):
+        return {}
+    chunks: dict[int, str] = {}
+    for k, qno in enumerate(expected_qnos):
+        start = ans[k].start()
+        end = ans[k + 1].start() if k + 1 < len(ans) else len(md_text)
+        chunks[qno] = md_text[start:end].strip()
+    return chunks
+
+
 def extract_answer(chunk: str, max_len: int = 50) -> str:
     """从题 chunk 抽答案，截断到 max_len 字符。
 
@@ -170,8 +192,15 @@ def fallback_from_pdf_region(
     return out
 
 
-def extract_meta(pdf_path: Path) -> dict[int, dict[str, str]]:
-    """主入口：PDF → {qno: {"answer", "solution_text"}}"""
+def extract_meta(
+    pdf_path: Path, expected_qnos: list[int] | None = None
+) -> dict[int, dict[str, str]]:
+    """主入口：PDF → {qno: {"answer", "solution_text"}}
+
+    expected_qnos：screenshot 已定位的题号序列。当 split_by_question 因
+    PDF 公式碎片化（如北京理科卷）严重失分，而【答案】标记数恰等于
+    expected_qnos 时，降级走 split_by_answer_tag（按【答案】序号直映射）。
+    """
     md = MarkItDown()
     result = md.convert(str(pdf_path))
     text = result.text_content
@@ -187,6 +216,22 @@ def extract_meta(pdf_path: Path) -> dict[int, dict[str, str]]:
         sys.stderr.write(
             f"⚠️  split_by_question: 未识别到任何题号（首题非 1 或全部不递增？）\n"
         )
+
+    # 版式适配降级：现逻辑严重失分（题数 < 【答案】数）且 screenshot 题数
+    # 与【答案】数一致 → 按【答案】序号直映射（北京卷等公式碎片化版式）
+    if expected_qnos:
+        ans_count = len(ANSWER_TAG_RE.findall(text))
+        if (
+            ans_count == len(expected_qnos)
+            and len(chunks) < ans_count
+        ):
+            alt = split_by_answer_tag(text, expected_qnos)
+            if alt:
+                sys.stderr.write(
+                    f"ℹ️  启用【答案】序号直映射降级: split_by_question {len(chunks)} 题 "
+                    f"< 【答案】{ans_count} 个 = screenshot {len(expected_qnos)} 题\n"
+                )
+                chunks = alt
     return {
         qno: {
             "answer": extract_answer(chunk),
@@ -236,7 +281,8 @@ def main() -> int:
 
     # markitdown 转换可能抛 FileNotFoundError / 解析异常等
     try:
-        meta = extract_meta(pdf_path)
+        expected_qnos = [q["qno"] for q in qa["questions"]]
+        meta = extract_meta(pdf_path, expected_qnos)
     except Exception as e:
         print(
             f"ERROR: markitdown 转换失败 {pdf_path.name}: {type(e).__name__}: {e}",
