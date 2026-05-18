@@ -104,3 +104,8 @@ $$\text{mRNA 密码子}(5' \to 3') \leftrightarrow \text{tRNA 反密码子}(3' \
 - [[466-interpret|翻译]]
 - [[296-密码子|密码子]]
 - [[290-碱基互补配对|碱基互补配对]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2013-新课标Ⅰ-01]]
+<!-- exam-backlinks-end -->

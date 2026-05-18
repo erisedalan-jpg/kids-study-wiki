@@ -97,3 +97,8 @@ aliases: [rRNA, 核糖体RNA, ribosomal RNA]
 - [[294-tRNA|tRNA]]
 - [[466-interpret|翻译]]
 - [[295-中心法则|中心法则]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2022-湖南-14]]
+<!-- exam-backlinks-end -->
