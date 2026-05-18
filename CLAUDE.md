@@ -42,6 +42,7 @@ docs/superpowers/         设计稿与实施计划
 - 教材引用必引本地 ChinaTextbook PDF
 - 学科目录词条必加序号前缀 + bare-name alias
 - **wikilinks 必须规范化**：Obsidian `[[X]]` 只看文件名，必须写 `[[017-减法|减法]]` 形式；4 个内置生成脚本（`gen_atom_skeleton.py` / `exam_render.py` / `exam_index.py` / `backfill_author_links.py`）已自动 hook；手动编辑后跑 `python 00-元/scripts/fix_wikilinks.py --apply`
+- **数学公式必须用 Obsidian 定界符**：行内 `$...$` / 块级 `$$...$$`。DeepSeek/v4-pro 生成的二三级词条（尤数学/物理）惯用 LaTeX `\(\)\[\]`，Obsidian 默认 MathJax 不渲染（字面显示反斜杠/`^2`/`\sqrt`/`\pi`）。缺口词条已植入 `_prompts/exam_lexicon.md` 红线 8 防复发；存量批量后跑 `python docs/superpowers/working/fix_latex_delim.py --apply`（按 manifest 严限范围 + 负向后顾保护 `\\[Npt]` 行距；奇数计数文件须手清未配对定界符）
 
 ## 已完成进度
 
