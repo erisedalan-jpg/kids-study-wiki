@@ -26,6 +26,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 NOISE = re.compile(r"第\s*\d+\s*页|共\s*\d+\s*页|学科网|股份有限公司")
+# 听力块：raw_sol 以【原文】开头（截图偶丢前导【，故【可选）。
+# 篇章块以【导语】开头 → 永不命中；北京机考无听力卷亦无此标记 → 向后兼容。
+LISTENING = re.compile(r"^\s*【?\s*原\s*文\s*】")
 ANS_TAG = re.compile(r"【\s*答\s*案\s*】")
 GENRE = re.compile(r"本文是一篇\s*(.{1,10}?文)")
 WRITING = re.compile(r"书面表达|应用文写|读后续写")
@@ -98,6 +101,14 @@ def main() -> int:
     for b in qa["blocks"]:
         raw_ans = b.get("raw_ans", "")
         raw_sol = b.get("raw_sol", "")
+        b["is_listening"] = bool(LISTENING.match(raw_sol))
+        if b["is_listening"]:
+            # 听力块不进篇章考点模型（render 跳过），仅标记
+            b["answer"] = clean_answer(raw_ans)
+            b["genre"] = ""
+            b["qtype"] = "听力"
+            b["solution_text"] = ""
+            continue
         b["answer"] = clean_answer(raw_ans)
         b["genre"] = infer_genre(raw_sol)
         b["qtype"] = infer_qtype(b.get("qnos", []), b["answer"], raw_ans, raw_sol)

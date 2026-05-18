@@ -118,12 +118,17 @@ def main() -> int:
     out_dir = REPO_ROOT / "真题" / f"{qa['province']}-英语"
     out_dir.mkdir(parents=True, exist_ok=True)
     files: list[Path] = []
+    skipped = 0
     for b in qa["blocks"]:
+        if b.get("is_listening"):
+            skipped += 1
+            continue
         nn = f"{b['block_no']:02d}"
         fp = out_dir / f"{qa['year']}-{qa['paper']}-E{nn}.md"
         fp.write_text(render_block(qa, b), encoding="utf-8")
         files.append(fp)
-    print(f"OK: 渲染 {len(files)} 篇章词条到 真题/{qa['province']}-英语/")
+    print(f"OK: 渲染 {len(files)} 篇章词条到 真题/{qa['province']}-英语/"
+          f"（跳过听力块 {skipped}）")
 
     from fix_wikilinks import canonicalize_files
     fixed, unresolved = canonicalize_files(files)
