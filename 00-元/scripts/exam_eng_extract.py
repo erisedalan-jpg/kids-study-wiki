@@ -78,6 +78,10 @@ def infer_qtype(qnos: list[int], answer: str, raw_ans: str, raw_sol: str) -> str
     # 3) 长句答案 → 阅读表达（主观简答）
     if longish and len(longish) >= max(1, len(vals) // 2):
         return "阅读表达"
+    # 3.5) 单篇 ≥10 个单字母空 → 完形填空（阅读篇章每篇 ≤5 题；
+    #      北京完形 qno1-10 亦 ≥10 空命中，向后兼容）
+    if single_letter and len(single_letter) == len(vals) and len(vals) >= 10:
+        return "完形填空"
     # 4) 纯单字母 ABCD，qno≥21 → 阅读理解
     if single_letter and len(single_letter) == len(vals) and start >= 21:
         return "阅读理解"
