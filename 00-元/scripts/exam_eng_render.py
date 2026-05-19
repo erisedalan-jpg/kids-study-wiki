@@ -120,7 +120,7 @@ def main() -> int:
     files: list[Path] = []
     skipped = 0
     for b in qa["blocks"]:
-        if b.get("is_listening"):
+        if b.get("skip_render"):
             skipped += 1
             continue
         nn = f"{b['block_no']:02d}"

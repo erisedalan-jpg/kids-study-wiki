@@ -26,9 +26,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
 NOISE = re.compile(r"第\s*\d+\s*页|共\s*\d+\s*页|学科网|股份有限公司")
-# 听力块：raw_sol 以【原文】开头（截图偶丢前导【，故【可选）。
-# 篇章块以【导语】开头 → 永不命中；北京机考无听力卷亦无此标记 → 向后兼容。
-LISTENING = re.compile(r"^\s*【?\s*原\s*文\s*】")
+# 实质篇章块正向判据：raw_sol 含【导语】或【N题详解】/【详解】（阅读/完形/
+# 语篇填空/书面表达解析必有）。听力块（【原文】或纯答案空 raw_sol）、湖南
+# 自主卷【小题N】/【考点定位】无此标记 → 过滤。北京篇章卷含【导语】+【N题
+# 详解】→ 全保留，向后兼容（北京机考无听力，本判据不改变其行为）。
+SUBSTANTIVE = re.compile(r"【\s*导\s*语\s*】|【\s*\d*\s*题?\s*详\s*解\s*】|【\s*详\s*解\s*】")
 ANS_TAG = re.compile(r"【\s*答\s*案\s*】")
 GENRE = re.compile(r"本文是一篇\s*(.{1,10}?文)")
 WRITING = re.compile(r"书面表达|应用文写|读后续写")
@@ -105,12 +107,12 @@ def main() -> int:
     for b in qa["blocks"]:
         raw_ans = b.get("raw_ans", "")
         raw_sol = b.get("raw_sol", "")
-        b["is_listening"] = bool(LISTENING.match(raw_sol))
-        if b["is_listening"]:
-            # 听力块不进篇章考点模型（render 跳过），仅标记
+        b["skip_render"] = not bool(SUBSTANTIVE.search(raw_sol))
+        if b["skip_render"]:
+            # 听力/纯答案空块/湖南自主卷非标准格式 → 不进篇章模型，仅标记
             b["answer"] = clean_answer(raw_ans)
             b["genre"] = ""
-            b["qtype"] = "听力"
+            b["qtype"] = "非篇章(过滤)"
             b["solution_text"] = ""
             continue
         b["answer"] = clean_answer(raw_ans)
