@@ -57,5 +57,6 @@ aliases: [Listening for Details, Listening for Specific Information]
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中
+- [[2022-全国乙-14]]
 - [[2024-新课标Ⅱ-16]]
 <!-- exam-backlinks-end -->

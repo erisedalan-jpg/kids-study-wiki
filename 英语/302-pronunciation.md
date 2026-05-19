@@ -96,3 +96,10 @@ aliases: [pronunciation, 发音, 读音, 语音]
 ## 🔗 相关词条
 
 [[301-pronounce|pronounce]] · [[286-aloud|aloud]] · [[306-textbook|textbook]] · [[138-native-speaker|native-speaker]] · [[028-自然拼读|自然拼读]] · [[017-字母音标|字母音标]] · [[315-宾语从句-初中|宾语从句-初中]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2010-新课标Ⅱ-03]]
+- [[2010-新课标Ⅱ-04]]
+- [[2010-新课标Ⅱ-05]]
+<!-- exam-backlinks-end -->

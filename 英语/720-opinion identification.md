@@ -70,4 +70,5 @@ aliases: [opinion identification, 观点识别, fact vs opinion]
 <!-- exam-backlinks-start -->
 ## 高考真题命中
 - [[2014-新课标Ⅱ-18]]
+- [[2015-新课标Ⅱ-02]]
 <!-- exam-backlinks-end -->

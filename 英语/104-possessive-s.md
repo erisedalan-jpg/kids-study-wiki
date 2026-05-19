@@ -90,3 +90,8 @@ aliases: [possessive-s, 名词所有格, 's所有格, apostrophe s]
 - [[117-whats-your-name|whats-your-name]]
 - [[080-father|father]]
 - [[087-mother|mother]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2012-新课标-06]]
+<!-- exam-backlinks-end -->

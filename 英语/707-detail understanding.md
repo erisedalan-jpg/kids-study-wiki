@@ -68,7 +68,10 @@ aliases: [detail understanding, Detail Understanding, detail comprehension]
 <!-- exam-backlinks-start -->
 ## 高考真题命中
 - [[2009-全国Ⅱ-06]]
+- [[2009-全国Ⅱ-08]]
 - [[2009-全国Ⅱ-16]]
+- [[2009-全国Ⅱ-18]]
+- [[2016-新课标Ⅱ-26]]
 - [[2020-新课标Ⅱ-20]]
 - [[2021-全国乙-14]]
 - [[2022-全国乙-09]]

@@ -54,5 +54,8 @@ aliases: [logic inference, Inference]
 
 <!-- exam-backlinks-start -->
 ## 高考真题命中
+- [[2015-新课标Ⅱ-24]]
 - [[2022-全国乙-25]]
+- [[2023-新课标Ⅱ-31]]
+- [[2024-新课标Ⅱ-07]]
 <!-- exam-backlinks-end -->

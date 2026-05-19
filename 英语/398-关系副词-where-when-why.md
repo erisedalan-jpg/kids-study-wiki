@@ -78,3 +78,8 @@ where 可修饰抽象"地点"含义的名词：
 - [[399-定语从句as|定语从句as]]
 - [[379-heritage|heritage]]
 - [[359-定语从句-高中入门|定语从句-高中入门]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2013-新课标Ⅱ-24]]
+<!-- exam-backlinks-end -->

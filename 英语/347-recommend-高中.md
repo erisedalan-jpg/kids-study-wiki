@@ -79,3 +79,8 @@ recommend 后接不同结构，意义相同但形式有差：
 ## 🔗 相关词条
 
 [[350-senior-high-school|senior-high-school]] · [[334-appreciate|appreciate]] · [[369-What-do-you-think-of-高中|What-do-you-think-of-高中]] · [[360-宾语从句-高中|宾语从句-高中]] · [[356-名词性从句-入门|名词性从句-入门]] · [[suggest]] · [[368-It-takes-sb-time-to-do|It-takes-sb-time-to-do]]
+
+<!-- exam-backlinks-start -->
+## 高考真题命中
+- [[2020-新课标Ⅱ-20]]
+<!-- exam-backlinks-end -->

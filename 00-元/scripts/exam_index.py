@@ -175,8 +175,20 @@ def backfill_backlinks(atoms: list[dict], subject: str) -> list[Path]:
     if not subject_dir.is_dir():
         return []
     bare_to_path: dict[str, Path] = {}
+    stem_to_path: dict[str, Path] = {}
     for p in iter_entries(subject_dir):
         bare_to_path[bare_name(p)] = p
+        stem_to_path[p.stem] = p
+    # alias-aware 解析：考点 tag 可能是某词条的 alias（非 bare-name），
+    # 如 tag「余弦定理」→ 文件 126-定理.md（bare=定理，余弦定理在 aliases）。
+    # 复用 fix_wikilinks 的 lookup（alias/bare → canonical stem），与索引
+    # canonicalize_files 同源，保证反链目标与索引链接一致。否则 alias tag
+    # 全部漏反链（大量真题相关词条无「高考真题命中」）。
+    try:
+        from fix_wikilinks import collect_targets
+        _, _alias_lookup = collect_targets()
+    except Exception:
+        _alias_lookup = {}
 
     updated: list[Path] = []
     section_re = re.compile(
@@ -186,10 +198,21 @@ def backfill_backlinks(atoms: list[dict], subject: str) -> list[Path]:
     for tag, exam_atoms in tag_to_atoms.items():
         path = bare_to_path.get(tag)
         if not path:
+            st = _alias_lookup.get(tag)
+            if st:
+                path = stem_to_path.get(st)
+        if not path:
             continue
         try:
             text = path.read_text(encoding="utf-8")
-            body = "\n".join([f"- [[{atom}]]" for atom in sorted(set(exam_atoms))])
+            # 跨省并集：保留已有块内真题项，与本次省份的命中合并去重，
+            # 避免按省替换导致只剩末次运行省份（吉林/北京/湖南 累加）。
+            merged = set(exam_atoms)
+            if BACKLINK_START in text:
+                m_old = section_re.search(text)
+                if m_old:
+                    merged |= set(re.findall(r"\[\[([^\]]+)\]\]", m_old.group(0)))
+            body = "\n".join([f"- [[{atom}]]" for atom in sorted(merged)])
             section = (
                 f"\n{BACKLINK_START}\n## 高考真题命中\n{body}\n{BACKLINK_END}\n"
             )

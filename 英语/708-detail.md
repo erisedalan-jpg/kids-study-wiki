@@ -64,6 +64,7 @@ aliases: [detail, specific information]
 <!-- exam-backlinks-start -->
 ## 高考真题命中
 - [[2013-新课标Ⅱ-08]]
+- [[2019-新课标Ⅱ-13]]
 - [[2020-新课标Ⅱ-03]]
 - [[2021-全国乙-31]]
 <!-- exam-backlinks-end -->
