@@ -14,14 +14,16 @@
 ```
 00-元/                    元规则：模板/命名/工作流/教材索引/学习路径
 00-元/学习路径/小学/<学科>/  10 学科 × 12 册学习路径文档（已加序号 01-12）
-数学/                     264 词条，已序号 001-264（小学 001-081 + 初中 082-264）
-语文/                     421 词条，已序号 001-421（小学 001-240 + 初中 241-421）
-英语/                     333 词条，已序号 001-333（小学 001-065 + 初中 066-333）
-生活与社会/               其他学科词条（部分已升级，部分仍骨架）
-索引/                     Dataview 视图：状态-未完成/按学段/最近共读/待家长核对
+00-元/scripts/            工具脚本（含 exam_* 真题管线 + 通用工具 + tests/）
+数学/ 语文/ 英语/        小学→高中三段词条，3 位序号前缀（具体计数见下方 stats 表）
+物理/ 化学/ 生物/        初中+高中两段词条，3 位序号前缀
+生活与社会/ 历史/ 地理/ 政治/   其他学科词条（部分骨架，部分已升级）
+真题/{省}-{科}/          高考真题题级 md（北京/吉林/湖南 × 5 科）
+索引/                     Dataview 视图 + 真题 4 索引/省·科
 素材/讲解PPT/             家长讲解 PPT（轻量 / 精装）
 素材/教材/                本地 PDF 教材库（gitignore）
-docs/superpowers/         设计稿与实施计划
+素材/真题/                高考真题 PDF 源
+docs/superpowers/         设计稿/实施计划/working 草稿与一次性脚本
 ```
 
 ## 词条创建规范
@@ -42,7 +44,9 @@ docs/superpowers/         设计稿与实施计划
 - 教材引用必引本地 ChinaTextbook PDF
 - 学科目录词条必加序号前缀 + bare-name alias
 - **wikilinks 必须规范化**：Obsidian `[[X]]` 只看文件名，必须写 `[[017-减法|减法]]` 形式；4 个内置生成脚本（`gen_atom_skeleton.py` / `exam_render.py` / `exam_index.py` / `backfill_author_links.py`）已自动 hook；手动编辑后跑 `python 00-元/scripts/fix_wikilinks.py --apply`
-- **数学公式必须用 Obsidian 定界符**：行内 `$...$` / 块级 `$$...$$`。DeepSeek/v4-pro 生成的二三级词条（尤数学/物理）惯用 LaTeX `\(\)\[\]`，Obsidian 默认 MathJax 不渲染（字面显示反斜杠/`^2`/`\sqrt`/`\pi`）。缺口词条已植入 `_prompts/exam_lexicon.md` 红线 8 防复发；存量批量后跑 `python docs/superpowers/working/fix_latex_delim.py --apply`（按 manifest 严限范围 + 负向后顾保护 `\\[Npt]` 行距；奇数计数文件须手清未配对定界符）
+- **数学公式必须用 Obsidian 定界符**：行内 `$...$` / 块级 `$$...$$`。DeepSeek/v4-pro 生成的二三级词条（尤数学/物理）惯用 LaTeX `\(\)\[\]`，Obsidian 默认 MathJax 不渲染（字面显示反斜杠/`^2`/`\sqrt`/`\pi`）。缺口词条已植入 `_prompts/exam_lexicon.md` 红线 8 防复发；存量批量后跑 `python 00-元/scripts/fix_latex_delim.py --apply`（按 manifest 严限范围 + 负向后顾保护 `\\[Npt]` 行距；奇数计数文件须手清未配对定界符）
+- **renumber 后必跑 `fix_stale_links.py`**：`fix_wikilinks.LINK_RE` 故意只处理无管线 `[[X]]`，跳过 `[[X|Y]]`；而 `exam_render` / `exam_index` 产出恒带管线 `[[旧号-裸名|显示]]`，renumber 后变 stale 无人修。批量改号 → `python 00-元/scripts/fix_stale_links.py --apply`（按裸名→当前号唯一映射改写；0/多候选保守不动）
+- **反链回填走 alias-aware**：`exam_index.backfill_backlinks` 已复用 `fix_wikilinks.collect_targets()`，tag 是 alias（如「余弦定理」→ `126-定理.md`）也能命中；跨省运行用并集合并（避免按省覆盖只剩末次省份）
 
 ## 已完成进度
 
@@ -127,32 +131,76 @@ _由 `00-元/scripts/stats.py` 生成，共 5375 词条 / 7 学科。_
 
 v2 架构：截图 + 摘要 + 指针 + 三层复审（L1 自动断言 / L2 看图复验 / L3 Opus 仲裁）。设计稿 `docs/superpowers/specs/2026-05-12-jilin-math-exam-v2-design.md`，实施计划 `docs/superpowers/plans/2026-05-12-jilin-math-exam-v2-plan.md`。v1 zip 备份保留于 `素材/backup/2026-05-12/exam-pre-migrate.zip`。
 
-**脚本管线**（`00-元/scripts/exam_*.py`，62 单测全过）：
+**数理化生管线**（`00-元/scripts/exam_*.py`，62 单测全过）：
 
-1. `exam_screenshot.py` — PyMuPDF 找题号/答案锚点 + 渲染 PNG（含跨页 running counter）
-2. `exam_extract_meta.py` — markitdown 抽答案/解析（最长上升序列容错表格题号）
+1. `exam_screenshot.py` — PyMuPDF 找题号/答案锚点 + 渲染 PNG（含跨页 running counter，命名 `{year}-{paper}-{NN}.q.png`）
+2. `exam_extract_meta.py` — markitdown 抽答案/解析（最长上升序列容错表格题号）；北京公式碎片走 `split_by_answer_tag` 降级
 3. `exam_enrich.py` — DeepSeek v4-pro 抽 摘要/考点/难度（含 retry + LLMError 路径）
 4. `exam_verify.py` — L2 复验两步法（prepare 写 prompt 队列 / ingest 收 verdict）
-5. `exam_render.py` — 渲染题级 .md (frontmatter + 截图 + 摘要 + tags 反链 + PDF 指针)
-6. `exam_index.py` — 4 索引 + 反链回填学科词条（按学科 per-tag 错误隔离）
+5. `exam_render.py` — 渲染题级 .md（frontmatter + 截图 + 摘要 + tags 反链 + PDF 指针）
+6. `exam_index.py` — 4 索引 + 反链回填学科词条（alias-aware 解析 + 跨省并集合并）
 
-**Pilot 1**（2026-05-13）：吉林 2022 数学文卷（全国乙），23/23 题入库 → `真题/吉林-数学/`，4 索引 → `索引/真题/`，12 数学词条获反链。L2 复检：18 吻合 / 2 部分偏差（Q6/Q9 tag 微调建议）/ 3 严重偏差（Q14/15/19，markitdown 漏 Q15/Q19 元数据导致 tag 漂移，Opus L3 已修正）。9 题孤岛 = 高考考点术语在小学初中 lexicon 中未建词条（缺口清单已生成）。
+**英语篇章管线**（`exam_eng_*.py`，无 enrich 步）：
+
+1. `exam_eng_screenshot.py` — 按【答案】锚分篇章块，渲染 PNG（**遗留：裸号命名 `{NN}.q.png` 跨卷碰撞，待修**）
+2. `exam_eng_extract.py` — `SUBSTANTIVE` 正向谓词 (`raw_sol` 含 `【导语】` 或 `【N题详解】`) 判要不要 render；`infer_qtype` 单字母 ≥10 = 完形填空（先于阅读理解规则）
+3. `exam_eng_render.py` — `skip_render` 跳过听力/纯版式块
+
+**全量结论**（2026-05-19）：北京/吉林/湖南 × 5 科 = 15 组全量入库；数理化生 ~1000 题，英语 45 篇章。湖南为独立卷（与吉林 ratio 0.07-0.29，非同卷）；黑龙江与吉林 ratio=1.0000 全同卷，**新增词条 = 0**，详见 `索引/真题/黑龙江-同卷说明.md`。`paper_aliases` 已加新高考Ⅰ / 全国卷Ⅰ / 湖南。
 
 **Pilot 已知问题**（待后续扩省份/年份前修）：
 - markitdown 在多列 PDF 上偶发漏题（Q15/Q19 缺解析），需在 `enrich_question` 中加截图回退分支或改用 fitz region 切片
 - `analyze_links.py` 的 bare-name alias 检查对真题路径不适用（误报 23 题缺 alias）
 - Q14 答案字段抓到 markdown 表格残片（已手动 patch；需在 `extract_answer` 加管道符清洗）
+- **英语截图裸号命名**（`素材/真题截图/{省}-英语/{NN}.q.png`）跨卷碰撞覆盖，需统一为 `{year}-{paper}-E{NN}.q.png`
 
-**黑龙江扩展结论**（2026-05-17，PDF 内容比对）：黑龙江 5 学科 2008–2024 真题与吉林**逐字符精确相同**（东北同卷：全国Ⅱ→新课标→新课标Ⅱ→全国乙→新课标Ⅱ）。201 对 PDF fitz 文本归一化比对全 ratio=1.0000，二进制差异仅 PDF 封装来源不同。**新增词条 = 0**，不建 `真题/黑龙江-*` 镜像。详见 `索引/真题/黑龙江-同卷说明.md`，复现 `docs/superpowers/working/pdf_content_diff.py`。
+**扩省份规则**：必先跑 `python 00-元/scripts/pdf_content_diff.py`（fitz 提文本 → 归一化 → SequenceMatcher.ratio）判同卷，**不要看文件名**。ratio=1.0 → 不建镜像，仅写同卷说明；ratio < 0.5 → 独立卷，进 5 步管线。
 
 <!-- EXAM-PROGRESS-END -->
 
 ## 工作模式提示
 
-- 工具箱：`00-元/scripts/` 提供 `renumber.py` / `stats.py` / `check_naming_conflicts.py` / `check_missing.py` / `analyze_links.py` —— **不要再为每个学科一次性写脚本**
+- **工具箱**（`00-元/scripts/` 通用；`docs/superpowers/working/` 一次性修补）—— **不要再为每个学科一次性写脚本**：
+  - 进度：`stats.py`（含 `--write` 同步 CLAUDE.md 表）
+  - 命名/链接：`renumber.py` / `check_naming_conflicts.py` / `check_missing.py` / `analyze_links.py` / `fix_aliases.py`
+  - 链接修复：`fix_wikilinks.py`（规范化 `[[X]] → [[NN-X|X]]`）/ `fix_stale_links.py`（修 renumber 致 stale 号链）/ `fix_latex_delim.py`（`\(\)\[\] → $$`）
+  - 词条生成：`gen_atom_skeleton.py`（v4-pro 批量骨架）/ `review_dispatch.py`（复检派发）/ `backfill_author_links.py`（古诗作者反链）
+  - 真题：`exam_*.py` 数理化生 5 步 + `exam_eng_*.py` 英语 3 步；`pdf_content_diff.py` 扩省份判同卷
 - 用户可能开启 `caveman mode`：进入后回复必须简洁压缩，保留技术准确性
 - 词条与学习路径分离：路径在 `00-元/学习路径/<学段>/<学科>/`，词条在 `<学科>/`
 - 风格参考：`数学/16-加法.md`（标准 A 模式全龄完成）、`数学/18-长方体.md`（含教材链接的几何类）
+
+## 常用命令
+
+```bash
+# 进度刷新（同时改 CLAUDE.md 进度表）
+python 00-元/scripts/stats.py --write
+
+# 单测（62 用例全过为基线）
+pytest 00-元/scripts/tests/
+pytest 00-元/scripts/tests/test_exam_index.py        # 单文件
+
+# 链接体检与修复
+python 00-元/scripts/analyze_links.py                # 报告漏 alias / 死链
+python 00-元/scripts/fix_wikilinks.py --apply        # 规范化无管线 [[X]]
+python 00-元/scripts/fix_stale_links.py --apply  # 修 renumber 致 stale 号链（必跑）
+python 00-元/scripts/fix_latex_delim.py --apply  # \(\)\[\] → $$
+
+# 真题数理化生（5 步串行，单 {省}-{科}）
+python 00-元/scripts/exam_screenshot.py    --province 湖南 --subject 数学
+python 00-元/scripts/exam_extract_meta.py  --province 湖南 --subject 数学
+python 00-元/scripts/exam_enrich.py        --province 湖南 --subject 数学
+python 00-元/scripts/exam_render.py        --province 湖南 --subject 数学
+python 00-元/scripts/exam_index.py         --province 湖南 --subject 数学
+
+# 真题英语（3 步，无 enrich）
+python 00-元/scripts/exam_eng_screenshot.py --province 湖南
+python 00-元/scripts/exam_eng_extract.py    --province 湖南
+python 00-元/scripts/exam_eng_render.py     --province 湖南
+
+# 扩省份前必跑：判同卷
+python 00-元/scripts/pdf_content_diff.py
+```
 
 ## 多模型工作流 v3 路由
 
