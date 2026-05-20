@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦耳定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>焦耳定律</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十八章电功率]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 焦耳定律, Joule&#x27;s law, Q=I²Rt, 电热定律</p><h1>焦耳定律</h1>
+<blockquote>
+<p><strong>一句话</strong>：电流通过导体产生的热量Q=I²Rt，与电流的平方、电阻和通电时间成正比；在纯电阻电路中，电热等于电功。
+<strong>English</strong>: Joule's law states Q=I²Rt; heat produced is proportional to the square of current, resistance, and time; in purely resistive circuits, heat generated equals electrical work done.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>用电吹风时，为什么吹风管会变热？用充电器充手机时，充电器会变热？</p>
+<p>因为<strong>电流通过电阻就会产生热量</strong>——这就是焦耳定律！</p>
+<p><strong>焦耳定律公式：</strong></p>
+<p>$$Q = I^2 Rt$$</p>
+<ul>
+<li>Q：产生的热量（焦耳，J）</li>
+<li>I：电流（安培，A，注意是平方！）</li>
+<li>R：电阻（欧姆，Ω）</li>
+<li>t：时间（秒，s）</li>
+</ul>
+<p><strong>直觉理解：</strong>
+- 电流越大，热量越多（$Q \propto I^2$，注意是平方关系！）
+- 电阻越大，热量越多（$Q \propto R$）
+- 时间越长，热量越多（$Q \propto t$）</p>
+<p><strong>谁发现的？</strong> 英国物理学家<strong>詹姆斯·焦耳</strong>（James Joule），能量的单位"焦耳"就是以他命名的！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>焦耳定律</h3>
+<p>$$Q = I^2 Rt$$</p>
+<p><strong>适用范围</strong>：适用于任何电阻性元件（导体）。</p>
+<p><strong>另两种等价形式</strong>（纯电阻电路，适用不同的已知量）：</p>
+<p>$$Q = \frac{U^2}{R} \cdot t = UIt = Pt$$</p>
+<p>选择哪个取决于已知量。</p>
+<h3>纯电阻电路与非纯电阻电路</h3>
+<p><strong>纯电阻电路</strong>（如电热丝、电炉、白炽灯丝）：
+$$Q = W = UIt = I^2 Rt = \frac{U^2 t}{R}$$</p>
+<p>电热 = 电功，电能全部转化为热能。</p>
+<p><strong>非纯电阻电路</strong>（如电动机）：
+$$W = UIt, \quad Q = I^2 Rt, \quad W &gt; Q$$</p>
+<p>电功一部分转化为机械能，一部分转化为热能（由于线圈电阻）。</p>
+<h3>焦耳热的应用</h3>
+<p><strong>有益利用</strong>：
+- 电热水壶、电炉、电热毯（利用电阻发热）
+- 白炽灯（钨丝电阻高，高温发光）
+- 保险丝（过流时熔断）
+- 焊接（电弧焊利用焦耳热）</p>
+<p><strong>需要避免</strong>：
+- 输电线路的电阻损耗（解决方法：高压输电，减小电流）
+- 电子元件散热（芯片发热需要散热片）</p>
+<h3>高压输电减少损耗的原理</h3>
+<p>输电线路损耗：$Q_{损} = I^2 R_{线} t$</p>
+<p>提高电压 $U$ 倍（变压器升压），传输功率不变时，电流降低为 $1/U$ 倍：</p>
+<p>$$Q_{损} \propto I^2 \propto \frac{1}{U^2}$$</p>
+<p>电压提高 10 倍，线路损耗减小 100 倍。这是高压输电的物理依据。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一段导线电阻 5 Ω，通过 2 A 电流，工作 10 分钟，产生多少热量？</p>
+<p>$$Q = I^2 Rt = 2^2 \times 5 \times (10 \times 60) = 4 \times 5 \times 600 = 12000 \text{ J}$$</p>
+<p><strong>例2</strong>：两电阻 $R_1 = 10$ Ω，$R_2 = 5$ Ω 并联，接在电源上，通电相同时间，哪个产生热量多？</p>
+<p><strong>解</strong>：并联时两端电压相同（$U$），用 $Q = U^2t/R$：</p>
+<p>$$\frac{Q_1}{Q_2} = \frac{U^2t/R_1}{U^2t/R_2} = \frac{R_2}{R_1} = \frac{5}{10} = \frac{1}{2}$$</p>
+<p>$Q_2 = 2Q_1$，$R_2$（5Ω）产生热量更多。并联中电阻小的发热更多！</p>
+<p><strong>易错点：</strong>
+- $Q = I^2 Rt$（通用公式）；但并联时用 $Q = U^2t/R$ 更方便
+- 含电动机等非纯电阻元件时，$Q = I^2 Rt$，不等于 $W = UIt$
+- 焦耳热与电流平方成正比（减小电流效果显著）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>焦耳定律</td>
+<td>Joule's law</td>
+<td>n.</td>
+<td>Joule's law gives the heat produced by current.</td>
+</tr>
+<tr>
+<td>电热</td>
+<td>joule heating / resistive heating</td>
+<td>n.</td>
+<td>Joule heating occurs in all resistors.</td>
+</tr>
+<tr>
+<td>纯电阻</td>
+<td>pure resistance</td>
+<td>n.</td>
+<td>Joule heat equals electrical work in pure resistance circuits.</td>
+</tr>
+<tr>
+<td>高压输电</td>
+<td>high-voltage transmission</td>
+<td>n.</td>
+<td>High-voltage transmission reduces power loss.</td>
+</tr>
+<tr>
+<td>电流平方</td>
+<td>square of current</td>
+<td>n.</td>
+<td>Heat is proportional to the square of current.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十八章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 焦耳定律</li>
+<li><strong>百科</strong>：维基百科"焦耳定律"；中文百科"焦耳热"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电热</a></li>
+<li><a class="dead" title="未收录">电热应用</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+<li><a class="dead" title="未收录">电功</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+<li><a class="dead" title="未收录">电阻影响因素</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-06</a></li>
+<li><a class="dead" title="未收录">2012-北京-03</a></li>
+<li><a href="../exam/2022-全国乙-11.html">2022-全国乙-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数的几何意义</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复数的几何意义</h1><div class="meta-card"><span><strong>权重</strong>27</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 复数, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复数的几何意义, geometric meaning of complex numbers, 复平面, 高斯平面</p><h2>🎓 复数的几何意义</h2>
+<h3>复平面</h3>
+<p>建立平面直角坐标系，将复数 $z = a + b\text{i}$ 对应平面上的点 $Z(a, b)$：</p>
+<ul>
+<li>$x$ 轴称为<strong>实轴</strong>（real axis）：表示实部</li>
+<li>$y$ 轴称为<strong>虚轴</strong>（imaginary axis）：表示虚部</li>
+<li>此坐标平面称为<strong>复平面</strong>（complex plane），又称<strong>高斯平面</strong></li>
+</ul>
+<p><strong>对应关系</strong>：
+$$z = a + b\text{i} \longleftrightarrow Z(a, b) \longleftrightarrow \overrightarrow{OZ}$$</p>
+<p>每个复数对应复平面上唯一一个点，也对应从原点出发的唯一一个向量。</p>
+<h3>复数的模</h3>
+<p>复数 $z = a + b\text{i}$ 的<strong>模</strong>（绝对值）：</p>
+<p>$$|z| = |a + b\text{i}| = \sqrt{a^2 + b^2}$$</p>
+<p>几何意义：点 $Z(a, b)$ 到原点的距离。</p>
+<h3>共轭复数</h3>
+<p>$z = a + b\text{i}$ 的<strong>共轭复数</strong>：</p>
+<p>$$\bar{z} = a - b\text{i}$$</p>
+<p>几何意义：$Z$ 关于实轴的对称点。</p>
+<p>性质：
+$$z + \bar{z} = 2a \in \mathbb{R}, \quad z \cdot \bar{z} = a^2 + b^2 = |z|^2$$</p>
+<h3>复数的辐角</h3>
+<p>向量 $\overrightarrow{OZ}$ 与正实轴正方向的夹角 $\theta$ 称为复数 $z$ 的<strong>辐角</strong>（argument）：</p>
+<p>$$\cos\theta = \frac{a}{|z|}, \quad \sin\theta = \frac{b}{|z|}$$</p>
+<p>辐角不唯一（相差 $2k\pi$），主辐角范围 $(-\pi, \pi]$。</p>
+<h3>两复数对应点的距离</h3>
+<p>$z_1 = a_1 + b_1\text{i}$，$z_2 = a_2 + b_2\text{i}$ 对应点 $Z_1, Z_2$ 的距离：</p>
+<p>$$|z_1 - z_2| = \sqrt{(a_1-a_2)^2 + (b_1-b_2)^2}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：在复平面内画出 $z_1 = 2 + 3\text{i}$，$z_2 = -1 - \text{i}$ 对应的点，并求两点距离。</p>
+<p><strong>解</strong>：$Z_1(2, 3)$，$Z_2(-1, -1)$，$|z_1 - z_2| = \sqrt{9 + 16} = 5$</p>
+<p><strong>例2</strong>：复数 $z = 1 - \sqrt{3}\text{i}$ 的模和辐角。</p>
+<p><strong>解</strong>：$|z| = \sqrt{1 + 3} = 2$，$\cos\theta = \frac{1}{2}$，$\sin\theta = -\frac{\sqrt{3}}{2}$，$\theta = -60°$（即 $300°$）。</p>
+<p><strong>例3</strong>：满足 $|z - 1| = 2$ 的复数 $z$ 对应的点的轨迹。</p>
+<p><strong>解</strong>：以 $Z_0(1, 0)$ 为圆心，$2$ 为半径的圆。</p>
+<h3>易错点</h3>
+<ul>
+<li>虚轴上的点（$a=0, b \neq 0$）表示<strong>纯虚数</strong>，实轴上的点表示<strong>实数</strong></li>
+<li>模是非负实数，$|z| \geq 0$</li>
+<li>共轭复数 $\bar{z}$ 与 $z$ 关于<strong>实轴</strong>对称（不是虚轴）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第七章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第七章 § 7.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/复平面">复平面 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/330-复数概念.html">复数概念</a></li>
+<li><a class="dead" title="未收录">复数的加减运算</a></li>
+<li><a href="../atoms/332-复数的乘除运算.html">复数的乘除运算</a></li>
+<li><a class="dead" title="未收录">复数的三角表示</a></li>
+<li><a class="dead" title="未收录">向量的概念</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-09.html">2010-理-09</a></li>
+<li><a href="../exam/2013-文-01.html">2013-文-01</a></li>
+<li><a href="../exam/2013-理-01.html">2013-理-01</a></li>
+<li><a href="../exam/2013-理-02.html">2013-理-02</a></li>
+<li><a href="../exam/2014-理-02.html">2014-理-02</a></li>
+<li><a href="../exam/2016-理-01.html">2016-理-01</a></li>
+<li><a href="../exam/2016-理-09.html">2016-理-09</a></li>
+<li><a href="../exam/2017-文-02.html">2017-文-02</a></li>
+<li><a href="../exam/2017-理-02.html">2017-理-02</a></li>
+<li><a href="../exam/2018-文-02.html">2018-文-02</a></li>
+<li><a href="../exam/2018-理-02.html">2018-理-02</a></li>
+<li><a href="../exam/2019-理-02.html">2019-理-02</a></li>
+<li><a class="dead" title="未收录">2023-北京-02</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-01.html">2023-新课标Ⅱ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中点坐标公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>中点坐标公式</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 中点坐标公式, Midpoint Formula</p><h1>中点坐标公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：在平面直角坐标系中，连接两点 $A(x_1,y_1)$、$B(x_2,y_2)$ 的线段的中点 $M$ 坐标为 $\displaystyle\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$，即对应坐标的算术平均值。
+<strong>English</strong>: The midpoint formula states that the midpoint $M$ of the segment with endpoints $A(x_1,y_1)$ and $B(x_2,y_2)$ has coordinates $\displaystyle\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+在平面直角坐标系中，若 $A(x_1,y_1)$，$B(x_2,y_2)$，则线段 $AB$ 的中点 $M$ 的坐标为：
+$$
+M\left(\frac{x_1+x_2}{2},\ \frac{y_1+y_2}{2}\right)
+$$
+若在空间直角坐标系中，加 $z$ 坐标同理：$M\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2},\frac{z_1+z_2}{2}\right)$。其本质是坐标的平均，可由向量中点公式或定比分点公式 $\lambda=1$ 导出。</p>
+<p><strong>关键方法</strong><br />
+- <strong>直接代入</strong>：已知两端点坐标求中点，直接套用公式。<br />
+- <strong>逆用求端点</strong>：已知一个端点和中点坐标，利用 $x_2=2x_M-x_1$，$y_2=2y_M-y_1$ 求另一端。<br />
+- <strong>结合点差法</strong>：处理直线与圆锥曲线相交弦的中点问题时，设弦端点 $A(x_1,y_1),B(x_2,y_2)$，代入曲线方程作差，将 $x_1+x_2$、$y_1+y_2$ 用中点坐标的 2 倍替换，进一步将 $\frac{y_1-y_2}{x_1-x_2}$ 化为中点与斜率的关系，即可求出直线斜率或中点轨迹。该法称“设而不求”。</p>
+<p><strong>典型应用</strong><br />
+高考常见设问：<br />
+1. <strong>求线段中点坐标</strong>：直接应用，常作为向量或解析几何小题的第一步。<br />
+2. <strong>已知弦中点求直线方程</strong>：如“已知椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 内一点 $P$ 为弦的中点，求弦所在直线方程”。需联立点差法，利用中点坐标公式将两端点坐标和代换为 $2x_P,2y_P$，算出斜率，写出方程，最后必须检验判别式 $\Delta&gt;0$。<br />
+3. <strong>对称问题</strong>：点关于点对称、直线关于点对称，本质是用中点公式建立对称点坐标关系。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>公式混淆</strong>：将中点坐标写成差的一半 $(x_1-x_2)/2$ 或忘记除以 2，直接写 $x_1+x_2$。</li>
+<li><strong>空间坐标遗漏</strong>：空间问题中只求 $x,y$ 而忽略 $z$ 坐标，导致立体几何中中点坐标错误。</li>
+<li><strong>点差法忽略斜率不存在</strong>：利用中点坐标公式代换后求得斜率，但未讨论直线垂直于 $x$ 轴（斜率不存在）的情况，导致漏解。</li>
+<li><strong>混淆中点与定比分点</strong>：中点只是定比分点 $\lambda=1$ 的特例，若记成 $\frac{x_1+\lambda x_2}{1+\lambda}$ 时误将 $\lambda$ 取错，或错用相似比推导坐标。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中点坐标公式</td>
+<td>Midpoint formula</td>
+<td>求线段中点坐标的代数表达式</td>
+</tr>
+<tr>
+<td>线段</td>
+<td>Line segment</td>
+<td>直线上两点间的有限部分</td>
+</tr>
+<tr>
+<td>坐标</td>
+<td>Coordinate</td>
+<td>表示点在坐标系中有序数的集合</td>
+</tr>
+<tr>
+<td>点差法</td>
+<td>Method of difference (or point difference method)</td>
+<td>利用曲线方程相减处理弦中点问题的方法</td>
+</tr>
+<tr>
+<td>对称</td>
+<td>Symmetry</td>
+<td>点或图形关于点、直线或平面的反射变换</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/626-两点间距离公式.html">两点间距离公式</a></li>
+<li><a class="dead" title="未收录">直线的斜率</a></li>
+<li><a class="dead" title="未收录">点差法解决弦中点问题</a></li>
+<li><a class="dead" title="未收录">向量坐标运算</a></li>
+<li><a class="dead" title="未收录">定比分点公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-19.html">2009-文-19</a></li>
+<li><a href="../exam/2013-文-23.html">2013-文-23</a></li>
+<li><a href="../exam/2013-理-23.html">2013-理-23</a></li>
+<li><a href="../exam/2017-理-18.html">2017-理-18</a></li>
+<li><a href="../exam/2018-理-22.html">2018-理-22</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-05.html">2024-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

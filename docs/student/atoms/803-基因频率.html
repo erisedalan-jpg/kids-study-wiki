@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基因频率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>基因频率</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[遗传与进化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 基因频率, Gene frequency, 等位基因频率</p><h1>基因频率</h1>
+<blockquote>
+<p><strong>一句话</strong>：基因频率是指在一个种群基因库中，某个基因占全部等位基因数的比率。
+<strong>English</strong>: Gene frequency is the ratio of a particular allele to the total number of all alleles at that locus in a population.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与核心原理</strong>
+基因频率是描述种群基因库组成的基本参数。设某基因位点有一对等位基因 $A$ 和 $a$，种群个体数为 $N$，其中基因型 $AA$、$Aa$、$aa$ 的个体数分别为 $N_{AA}$、$N_{Aa}$、$N_{aa}$，则基因频率计算公式为：
+- 基因 $A$ 的频率：$p = \frac{2N_{AA} + N_{Aa}}{2N}$
+- 基因 $a$ 的频率：$q = \frac{2N_{aa} + N_{Aa}}{2N}$，且 $p + q = 1$。</p>
+<p>若已知各基因型频率 $P(AA)$、$P(Aa)$、$P(aa)$，则 $p = P(AA) + \frac{1}{2}P(Aa)$。</p>
+<p><strong>关键方法</strong>
+1. <strong>常染色体基因频率计算</strong>：直接由基因型频率推基因频率，使用上述公式。若题目给出患者数量，先求隐性（或显性）基因型频率，开平方求基因频率（仅在遗传平衡时适用），再代入公式求其余基因型频率。
+2. <strong>伴 X 染色体基因频率计算</strong>：需区分雌雄。例如计算 X 染色体上某等位基因 $X^B$ 的频率，应使用 $p = \frac{2N_{X^BX^B} + N_{X^BX^b} + N_{X^BY}}{2N_{雌} + N_{雄}}$。特别注意 Y 染色体上无对应等位基因，分母不可直接使用 2 倍总个体数。
+3. <strong>遗传平衡定律（哈代-温伯格定律）应用</strong>：当种群满足无限大、随机交配、无突变、无迁移、无自然选择时，基因频率和基因型频率在世代间保持恒定，且基因型频率可用 $p^2 + 2pq + q^2 = 1$ 描述。高考中常见题型为利用该定律由隐性纯合子频率求基因频率，进而计算杂合子频率。</p>
+<p><strong>典型应用</strong>
+- <strong>基因频率变化与进化</strong>：通过比较不同世代基因频率是否改变，判断种群是否发生进化。基因频率的改变是生物进化的实质。
+- <strong>遗传病基因频率计算</strong>：如已知某常染色体隐性遗传病在人群中的发病率（即 $q^2$），求正常人群中携带者概率。先求出 $q$，得 $p = 1 - q$，则携带者概率为 $\frac{2pq}{p^2 + 2pq}$ 或直接 $\frac{2q}{1+q}$（待家长核对）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“基因频率”与“基因型频率”</strong>：前者针对单个基因，后者针对基因型组合。计算时不可将杂合子频率直接当作基因频率，必须乘以 1/2。</li>
+<li><strong>伴性遗传基因频率分母算错</strong>：计算 X 染色体基因频率时，分母的基因总数在雌性中为个体数 ×2，雄性中为个体数 ×1。常见错误是直接除以 2 倍总个体数。</li>
+<li><strong>误用遗传平衡定律条件</strong>：在存在选择、迁入迁出或非随机交配的种群中，机械套用 $p^2$、$2pq$、$q^2$ 计算基因型频率，导致错解。使用前必须确认题干是否明确“理想条件”或“已达平衡”。</li>
+<li><strong>自交与自由交配计算混淆</strong>：自交改变基因型频率但不改变基因频率，自由交配（随机交配）在无其他因素时基因频率也不变，但其基因型频率变化规律不同。计算子代基因频率时，若为自交，应直接由亲代基因型频率推，不可用平衡定律一步到位。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基因频率</td>
+<td>Gene frequency</td>
+<td>某等位基因占该基因座全部等位基因的比率</td>
+</tr>
+<tr>
+<td>基因型频率</td>
+<td>Genotype frequency</td>
+<td>某种特定基因型的个体数占种群总个体数的比率</td>
+</tr>
+<tr>
+<td>基因库</td>
+<td>Gene pool</td>
+<td>一个种群中全部个体所含有的全部基因</td>
+</tr>
+<tr>
+<td>哈代-温伯格定律</td>
+<td>Hardy-Weinberg principle</td>
+<td>在理想种群中，基因频率和基因型频率世代保持恒定的定律</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">基因型频率</a></li>
+<li><a class="dead" title="未收录">基因突变和基因重组</a></li>
+<li><a class="dead" title="未收录">自然选择与生物进化</a></li>
+<li><a href="../atoms/276-伴性遗传.html">伴性遗传</a></li>
+<li><a class="dead" title="未收录">现代生物进化理论</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-10</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2020-北京-21</a></li>
+<li><a class="dead" title="未收录">2021-湖南-08</a></li>
+<li><a class="dead" title="未收录">2021-湖南-10</a></li>
+<li><a class="dead" title="未收录">2023-北京-05</a></li>
+<li><a class="dead" title="未收录">2023-北京-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同角三角函数基本关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>同角三角函数基本关系</h1><div class="meta-card"><span><strong>权重</strong>25</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 同角三角函数基本关系</p><h1>同角三角函数基本关系</h1>
+<blockquote>
+<p><strong>一句话</strong>：对于任意一个角 α，其正弦、余弦、正切之间恒满足的平方关系与商数关系。
+<strong>English</strong>: For any angle α, the fundamental relationships among its sine, cosine, and tangent are given by the Pythagorean identity and the quotient identity.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+同角三角函数的基本关系包括两个恒等式：</p>
+<ol>
+<li><strong>平方关系</strong>：$\sin^2\alpha + \cos^2\alpha = 1$，可变形为 $\sin^2\alpha = 1 - \cos^2\alpha$ 或 $\cos^2\alpha = 1 - \sin^2\alpha$。</li>
+<li><strong>商数关系</strong>：$\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$，其中 $\alpha \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}$（即分母 $\cos\alpha \neq 0$）。</li>
+</ol>
+<p>这两个关系是三角恒等变换的基石。注意它们成立的唯一条件是“同角”——即公式中出现的所有三角函数都针对同一个角 α。</p>
+<p><strong>关键方法</strong>
+高考中此类问题的标准解题步骤为“知一求二”：
+已知角 α 所在象限及其正弦、余弦、正切中的某一个值，利用平方关系和商数关系求出其余两个三角函数值。
+关键步骤：先由平方关系求出 $\sin\alpha$ 或 $\cos\alpha$ 的绝对值，再根据角 α 所在象限确定符号，最后由商数关系求 $\tan\alpha$（或逆用）。</p>
+<p><strong>典型应用</strong>
+高考中常见考查形式：
+- <strong>给值求值</strong>：例如“已知 $\sin\alpha = \frac{3}{5}$，且 α 为第二象限角，求 $\cos\alpha$ 和 $\tan\alpha$”。由平方关系得 $\cos^2\alpha = 1 - (\frac{3}{5})^2 = \frac{16}{25}$，因第二象限余弦为负，故 $\cos\alpha = -\frac{4}{5}$，再由商数关系得 $\tan\alpha = \frac{3/5}{-4/5} = -\frac{3}{4}$。
+- <strong>化简求值</strong>：如“化简 $\frac{\sin\alpha}{1 - \cos\alpha}$”，常将分子分母同乘 $1 + \cos\alpha$，利用平方关系将分母化为 $\sin^2\alpha$ 后约分。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视象限导致符号错误</strong>：开方 $\sqrt{\cos^2\alpha} = |\cos\alpha|$ 时，忘记根据角所在象限判断 $\cos\alpha$ 的正负，直接取正号。</li>
+<li><strong>公式混淆</strong>：将 $\sin^2\alpha + \cos^2\alpha = 1$ 误记为 $\sin\alpha + \cos\alpha = 1$，或将商数关系误写为 $\tan\alpha = \frac{\cos\alpha}{\sin\alpha}$。</li>
+<li><strong>忽略定义域</strong>：使用 $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$ 时不先判断 $\cos\alpha \neq 0$，在求值结果中未排除 α 的终边落在 y 轴上的情况。</li>
+<li><strong>与诱导公式混用</strong>：在化简 $\sin\alpha + \cos(\frac{\pi}{2} - \alpha)$ 这类含不同角的式子时，错误套用同角关系，而非先用诱导公式化为同角再处理。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平方关系</td>
+<td>Pythagorean identity</td>
+<td>$\sin^2\alpha + \cos^2\alpha = 1$</td>
+</tr>
+<tr>
+<td>商数关系</td>
+<td>quotient identity</td>
+<td>$\tan\alpha = \sin\alpha / \cos\alpha$</td>
+</tr>
+<tr>
+<td>正弦</td>
+<td>sine</td>
+<td>角 α 的对边与斜边之比</td>
+</tr>
+<tr>
+<td>余弦</td>
+<td>cosine</td>
+<td>角 α 的邻边与斜边之比</td>
+</tr>
+<tr>
+<td>正切</td>
+<td>tangent</td>
+<td>角 α 的对边与邻边之比</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">任意角的三角函数定义</a></li>
+<li><a class="dead" title="未收录">三角函数线</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a class="dead" title="未收录">三角函数的图象与性质</a></li>
+<li><a class="dead" title="未收录">简单的三角恒等变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-04.html">2009-文-04</a></li>
+<li><a href="../exam/2009-理-03.html">2009-理-03</a></li>
+<li><a href="../exam/2010-文-10.html">2010-文-10</a></li>
+<li><a href="../exam/2010-理-15.html">2010-理-15</a></li>
+<li><a href="../exam/2011-理-09.html">2011-理-09</a></li>
+<li><a href="../exam/2013-理-15.html">2013-理-15</a></li>
+<li><a href="../exam/2013-理-17.html">2013-理-17</a></li>
+<li><a href="../exam/2014-文-12.html">2014-文-12</a></li>
+<li><a href="../exam/2016-文-14.html">2016-文-14</a></li>
+<li><a href="../exam/2017-文-15.html">2017-文-15</a></li>
+<li><a href="../exam/2019-文-10.html">2019-文-10</a></li>
+<li><a href="../exam/2019-文-11.html">2019-文-11</a></li>
+<li><a class="dead" title="未收录">2020-北京-17</a></li>
+<li><a href="../exam/2020-理-09.html">2020-理-09</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-17</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-07.html">2023-新课标Ⅱ-07</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-13.html">2024-新课标Ⅱ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

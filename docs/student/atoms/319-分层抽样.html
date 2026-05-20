@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分层抽样</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分层抽样</h1><div class="meta-card"><span><strong>权重</strong>24</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 统计, 第九章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分层抽样, stratified sampling, 按比例抽样</p><h2>🎓 分层抽样</h2>
+<h3>定义</h3>
+<p>当总体由差异明显的几个<strong>层</strong>（群体）组成时，按各层的比例分别进行简单随机抽样，称为<strong>分层抽样</strong>（按比例分层抽样）。</p>
+<h3>适用场景</h3>
+<p>总体由不同类别（层）组成，各层之间差异显著，而层内个体差异较小。</p>
+<p>例：调查全校学生的视力，按<strong>年级</strong>分层（高一、高二、高三各自抽样）。</p>
+<h3>计算方法</h3>
+<p>设总体有 $N$ 个个体，分为 $k$ 层，第 $i$ 层有 $N_i$ 个个体（$\sum N_i = N$），需抽取 $n$ 个样本：</p>
+<p>第 $i$ 层应抽取：</p>
+<p>$$n_i = \frac{N_i}{N} \times n = n \times \frac{N_i}{N}$$</p>
+<p><strong>比例不变原则</strong>：各层抽取数量之比 $=$ 各层数量之比。</p>
+<h3>与简单随机抽样的比较</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>简单随机抽样</th>
+<th>分层抽样</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用</td>
+<td>总体差异不大</td>
+<td>总体有明显层次</td>
+</tr>
+<tr>
+<td>代表性</td>
+<td>每个个体均等机会</td>
+<td>各层按比例代表</td>
+</tr>
+<tr>
+<td>操作</td>
+<td>整体随机</td>
+<td>层内随机，层间按比例</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：某校高中生 1500 人（高一 500，高二 600，高三 400），用分层抽样抽取 150 人，各年级各抽多少？</p>
+<p><strong>解</strong>：<br />
+高一：$\dfrac{500}{1500} \times 150 = 50$ 人<br />
+高二：$\dfrac{600}{1500} \times 150 = 60$ 人<br />
+高三：$\dfrac{400}{1500} \times 150 = 40$ 人</p>
+<p><strong>例2</strong>：某工厂生产三种零件，$A$ 型 200 件，$B$ 型 300 件，$C$ 型 500 件，用分层抽样抽取 50 件，$A$ 型抽多少件？</p>
+<p><strong>解</strong>：总体 1000 件，$A$ 型占 $\dfrac{200}{1000} = 20\%$，抽 $50 \times 20\% = 10$ 件。</p>
+<h3>分层抽样的优点</h3>
+<ol>
+<li><strong>代表性更强</strong>：各层都有代表</li>
+<li><strong>估计精度更高</strong>：减少因层间差异带来的误差</li>
+<li><strong>便于分析</strong>：可以分析各层之间的差异</li>
+</ol>
+<h3>易错点</h3>
+<ul>
+<li>各层比例要用该层数量除以总体数量，不是各层样本数之比</li>
+<li>每层内部用<strong>简单随机</strong>抽样</li>
+<li>当总体各部分差异不大时，分层抽样与简单随机抽样效果相近</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第九章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第九章 § 9.1，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">随机抽样-简单</a></li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+<li><a class="dead" title="未收录">用样本估计总体</a></li>
+<li><a class="dead" title="未收录">中位数众数平均数</a></li>
+<li><a class="dead" title="未收录">统计案例</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-20.html">2009-文-20</a></li>
+<li><a href="../exam/2009-理-20.html">2009-理-20</a></li>
+<li><a href="../exam/2010-理-19.html">2010-理-19</a></li>
+<li><a href="../exam/2013-文-03.html">2013-文-03</a></li>
+<li><a href="../exam/2013-理-02.html">2013-理-02</a></li>
+<li><a href="../exam/2014-理-02.html">2014-理-02</a></li>
+<li><a href="../exam/2015-文-04.html">2015-文-04</a></li>
+<li><a href="../exam/2016-理-16.html">2016-理-16</a></li>
+<li><a href="../exam/2017-文-17.html">2017-文-17</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-03.html">2023-新课标Ⅱ-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

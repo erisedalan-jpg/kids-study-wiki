@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>方程</h1><div class="meta-card"><span><strong>权重</strong>76</span><span><strong>吉林命中</strong>19</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[代数, 方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 方程, equation, 字母代数, 解方程, x, 未知数, 无理方程, 方程求解, 椭圆的标准方程, 参数方程</p><h1>方程</h1>
+<blockquote>
+<p><strong>一句话</strong>：方程是含有未知数的等式，解方程就是找出让等式成立的那个数。
+<strong>English</strong>: An equation is a statement that two expressions are equal; solving it means finding the value that makes the equation true.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>想象一架<strong>天平</strong>：左边放了 3 个苹果，右边也放了 3 个苹果——天平平衡了！</p>
+<p>现在左边放 x 个苹果和 2 个苹果，右边放 5 个苹果——天平还平衡。那 x 是几个？</p>
+<p>x + 2 = 5，把 2 个苹果从左边拿走，右边也拿走 2 个，剩下 x = 3！</p>
+<p>这个用字母代表未知数量，再想办法找出它的数学游戏，就叫<strong>方程</strong>（equation）。</p>
+<p><strong>共读小活动：</strong> 找一个玩具天平，左边放 4 个积木，右边放 2 个积木，问孩子"再放几个右边才能平？"——这就是 x + 2 = 4 的直觉版本。</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>用字母表示数</h3>
+<p>在数学里，我们用字母（通常是 x、y、a、b 等）来表示<strong>未知的数</strong>或<strong>变化的数</strong>。</p>
+<p><strong>例子：</strong>
+- 小明有 x 元，买了一支 2 元的铅笔，还剩 5 元 → x - 2 = 5
+- 长方形的周长 = 2 × (长 + 宽)，写成：C = 2(l + w)</p>
+<p>字母可以代表任何数——这是代数最强大的思想！</p>
+<hr />
+<h3>什么是方程？</h3>
+<p><strong>方程</strong>：含有<strong>未知数</strong>的<strong>等式</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>式子</th>
+<th>是不是方程？</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 + 5 = 8</td>
+<td>不是</td>
+<td>没有未知数</td>
+</tr>
+<tr>
+<td>x + 3</td>
+<td>不是</td>
+<td>不是等式</td>
+</tr>
+<tr>
+<td>x + 3 = 8</td>
+<td>✅ 是</td>
+<td>有未知数，是等式</td>
+</tr>
+<tr>
+<td>2x - 1 = 9</td>
+<td>✅ 是</td>
+<td>有未知数，是等式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解（solution）</strong>：让方程成立的未知数的值。如 x + 3 = 8 的解是 x = 5。</p>
+<hr />
+<h3>等式的性质（解方程的依据）</h3>
+<p><strong>天平原理：</strong> 等式两边同时做同样的事，等式仍然成立。</p>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>数学表示</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两边同加相同的数</td>
+<td>a = b → a+c = b+c</td>
+<td>天平两边同加同样重物</td>
+</tr>
+<tr>
+<td>两边同减相同的数</td>
+<td>a = b → a-c = b-c</td>
+<td>天平两边同取走同样重物</td>
+</tr>
+<tr>
+<td>两边同乘相同的数</td>
+<td>a = b → a×c = b×c</td>
+<td>两边同时变成若干倍</td>
+</tr>
+<tr>
+<td>两边同除相同的数（≠0）</td>
+<td>a = b → a÷c = b÷c</td>
+<td>两边同时缩小若干倍</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>解一元一次方程</h3>
+<p><strong>步骤：</strong> 用等式性质，把 x 单独"分离"到等号一边。</p>
+<p><strong>例 1：</strong> x + 5 = 12</p>
+<pre><code>x + 5 = 12
+x + 5 - 5 = 12 - 5    ← 两边同减 5
+x = 7
+</code></pre>
+<p>验证：7 + 5 = 12 ✓</p>
+<p><strong>例 2：</strong> 3x = 21</p>
+<pre><code>3x = 21
+3x ÷ 3 = 21 ÷ 3       ← 两边同除以 3
+x = 7
+</code></pre>
+<p>验证：3 × 7 = 21 ✓</p>
+<p><strong>例 3：</strong> 2x + 4 = 18（两步方程）</p>
+<pre><code>2x + 4 = 18
+2x + 4 - 4 = 18 - 4   ← 先两边减 4
+2x = 14
+2x ÷ 2 = 14 ÷ 2       ← 再两边除以 2
+x = 7
+</code></pre>
+<p>验证：2 × 7 + 4 = 18 ✓</p>
+<hr />
+<h3>列方程解应用题</h3>
+<p>用方程解应用题比算术更强大，尤其是复杂题型。</p>
+<p><strong>步骤：</strong>
+1. <strong>设</strong> 未知数（"设 x 为……"）
+2. <strong>列</strong> 方程（根据题意写出等式）
+3. <strong>解</strong> 方程（用等式性质求 x）
+4. <strong>验</strong> 答案（代入原题检查，写结论）</p>
+<p><strong>例题：</strong> 一本书，已读了 45 页，还剩 x 页未读，全书共 120 页，求 x。</p>
+<pre><code>设剩余页数为 x 页
+列方程：45 + x = 120
+解：x = 120 - 45 = 75
+验：45 + 75 = 120 ✓
+答：还剩 75 页未读。
+</code></pre>
+<hr />
+<h3>方程 vs 算术</h3>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>算术方法</th>
+<th>方程方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>思路</td>
+<td>逆推（从答案推条件）</td>
+<td>顺推（直接列出关系）</td>
+</tr>
+<tr>
+<td>适合</td>
+<td>简单题</td>
+<td>复杂题</td>
+</tr>
+<tr>
+<td>优势</td>
+<td>直觉</td>
+<td>系统化，可扩展</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>一元二次方程</h3>
+<p>当 x 出现平方，就是二次方程：ax² + bx + c = 0</p>
+<p><strong>求根公式（配方法推导）：</strong></p>
+<pre><code>x = (-b ± √(b²-4ac)) / (2a)
+</code></pre>
+<p>判别式 Δ = b² - 4ac：
+- Δ &gt; 0：两个不同实数根
+- Δ = 0：两个相等实数根（重根）
+- Δ &lt; 0：无实数根（有复数根）</p>
+<p><strong>例：</strong> x² - 5x + 6 = 0</p>
+<pre><code>Δ = 25 - 24 = 1 &gt; 0
+x = (5 ± 1) / 2
+x₁ = 3，x₂ = 2
+</code></pre>
+<p>验证：(x-3)(x-2) = 0，因式分解更简便。</p>
+<hr />
+<h3>丢番图方程</h3>
+<p><strong>丢番图方程（Diophantine equation）</strong> 要求解必须是整数。</p>
+<p>最简单的丢番图方程：ax + by = c（其中 a, b, c 为整数）</p>
+<p>由<strong>贝祖定理（Bézout's identity）</strong>：当且仅当 gcd(a, b) | c 时，方程有整数解。</p>
+<p><strong>著名例子：</strong>
+- <strong>费马大定理（Fermat's Last Theorem）</strong>：xⁿ + yⁿ = zⁿ（n &gt; 2）没有正整数解。这个命题由费马于 1637 年提出，直到 1995 年才被安德鲁·怀尔斯证明，历时 358 年！</p>
+<hr />
+<h3>伽罗瓦理论与方程的可解性</h3>
+<p>一元五次及以上方程（n ≥ 5）<strong>没有通用求根公式</strong>——这不是数学家"还没找到"，而是被<strong>伽罗瓦（Galois）</strong> 在 19 世纪用群论彻底证明了不存在。</p>
+<p>伽罗瓦在 20 岁决斗前夜写下了关键证明，开创了群论，深刻影响了整个现代代数。这是数学史上最浪漫的故事之一。</p>
+<p><strong>群论的核心问题：</strong> 方程的求根公式能否用加减乘除和开方表达，取决于方程的"伽罗瓦群"是否可解。</p>
+<hr />
+<h3>方程在物理中：建模思想</h3>
+<p>物理中几乎所有定律都是方程：
+- 牛顿第二定律：F = ma
+- 爱因斯坦质能方程：E = mc²
+- 薛定谔方程（量子力学核心）</p>
+<p>从算术到方程，是从"计算具体数"到"描述关系"的思维飞跃，这正是科学的语言。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程</td>
+<td>equation</td>
+<td>n.</td>
+<td>核心概念</td>
+</tr>
+<tr>
+<td>未知数</td>
+<td>unknown / variable</td>
+<td>n.</td>
+<td>用字母表示的数</td>
+</tr>
+<tr>
+<td>解（名词）</td>
+<td>solution</td>
+<td>n.</td>
+<td>使方程成立的值</td>
+</tr>
+<tr>
+<td>解（动词）</td>
+<td>solve</td>
+<td>v.</td>
+<td>求出方程的解</td>
+</tr>
+<tr>
+<td>等式</td>
+<td>equality</td>
+<td>n.</td>
+<td>含等号的式子</td>
+</tr>
+<tr>
+<td>一元一次方程</td>
+<td>linear equation in one variable</td>
+<td>n.</td>
+<td>最简单的方程类型</td>
+</tr>
+<tr>
+<td>等式性质</td>
+<td>properties of equality</td>
+<td>n.</td>
+<td>天平原理</td>
+</tr>
+<tr>
+<td>代入</td>
+<td>substitute</td>
+<td>v.</td>
+<td>把数放回验证</td>
+</tr>
+<tr>
+<td>验算</td>
+<td>check / verify</td>
+<td>v.</td>
+<td>检验答案正确性</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>discriminant</td>
+<td>n.</td>
+<td>b²-4ac</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x 加 5 等于 12。</td>
+<td>x plus 5 equals 12.</td>
+</tr>
+<tr>
+<td>解这个方程。</td>
+<td>Solve this equation.</td>
+</tr>
+<tr>
+<td>等式两边同减 5。</td>
+<td>Subtract 5 from both sides.</td>
+</tr>
+<tr>
+<td>x 的解是 7。</td>
+<td>The solution is x = 7.</td>
+</tr>
+<tr>
+<td>把答案代入方程验算。</td>
+<td>Substitute the answer back to check.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 代数思维启蒙绘本请家长在书店挑选，推荐含"猜数字"或"天平游戏"情节的故事型绘本。</li>
+<li>🚧 英文推荐：查找 "algebra for kids" 或 "unknown number stories" 类别，适龄 8-12 岁。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"x 是什么意思？"</strong> → 可以说："x 就是一个我们还不知道的数，用字母占个位置。就像谜语里说'我是谁？'——方程就是用算式来描述这个谜，解方程就是猜出谜底。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"为什么两边同加同减，等式还成立？"</strong> → 可以说："想想天平：如果两边一样重，同时在两边各加 1 克，还是一样重。等式就是数的天平，两边做同样的事，平衡不会破坏。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"列方程和直接算哪个更好？"</strong> → 可以说："简单题用直接算更快；复杂题（比如未知数出现在中间）用方程更清晰、不容易出错。方程是一个更强大的工具，掌握了就不会退回去的。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 家长出题："我想到了一个数，乘以 3 再加 4 等于 19，这个数是多少？"让孩子先猜，再用方程来解：3x + 4 = 19。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学五年级上册.pdf</a> 第 5 单元《简易方程》(p52-83)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第二学段"数与代数"——方程（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/方程</li>
+<li><strong>拓展阅读</strong>：伽罗瓦传记科普；费马大定理的故事（Simon Singh 著《费马大定理》）；丢番图方程入门</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">运算律</a> · <a class="dead" title="未收录">混合运算</a> · <a class="dead" title="未收录">乘法口诀</a> · <a class="dead" title="未收录">多位数乘法</a> · <a class="dead" title="未收录">倍</a> · <a href="../atoms/037-推理.html">推理</a> · <a href="../atoms/042-集合.html">集合</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-21.html">2009-理-21</a></li>
+<li><a href="../exam/2010-文-23.html">2010-文-23</a></li>
+<li><a href="../exam/2010-理-04.html">2010-理-04</a></li>
+<li><a href="../exam/2010-理-23.html">2010-理-23</a></li>
+<li><a href="../exam/2011-理-19.html">2011-理-19</a></li>
+<li><a href="../exam/2011-理-23.html">2011-理-23</a></li>
+<li><a href="../exam/2012-文-19.html">2012-文-19</a></li>
+<li><a href="../exam/2012-理-19.html">2012-理-19</a></li>
+<li><a href="../exam/2013-文-10.html">2013-文-10</a></li>
+<li><a href="../exam/2013-文-23.html">2013-文-23</a></li>
+<li><a href="../exam/2013-理-09.html">2013-理-09</a></li>
+<li><a href="../exam/2013-理-12.html">2013-理-12</a></li>
+<li><a href="../exam/2013-理-23.html">2013-理-23</a></li>
+<li><a href="../exam/2014-理-03.html">2014-理-03</a></li>
+<li><a href="../exam/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/2014-理-16.html">2014-理-16</a></li>
+<li><a href="../exam/2014-理-21.html">2014-理-21</a></li>
+<li><a href="../exam/2014-理-23.html">2014-理-23</a></li>
+<li><a href="../exam/2015-文-20.html">2015-文-20</a></li>
+<li><a href="../exam/2015-理-13.html">2015-理-13</a></li>
+<li><a href="../exam/2015-理-19.html">2015-理-19</a></li>
+<li><a href="../exam/2015-理-23.html">2015-理-23</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2016-文-23.html">2016-文-23</a></li>
+<li><a href="../exam/2017-文-19.html">2017-文-19</a></li>
+<li><a href="../exam/2017-理-20.html">2017-理-20</a></li>
+<li><a href="../exam/2017-理-22.html">2017-理-22</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2018-文-20.html">2018-文-20</a></li>
+<li><a href="../exam/2018-文-22.html">2018-文-22</a></li>
+<li><a href="../exam/2018-理-19.html">2018-理-19</a></li>
+<li><a href="../exam/2019-文-09.html">2019-文-09</a></li>
+<li><a href="../exam/2019-文-14.html">2019-文-14</a></li>
+<li><a href="../exam/2019-理-04.html">2019-理-04</a></li>
+<li><a href="../exam/2019-理-10.html">2019-理-10</a></li>
+<li><a href="../exam/2019-理-22.html">2019-理-22</a></li>
+<li><a class="dead" title="未收录">2020-北京-20</a></li>
+<li><a href="../exam/2020-文-03.html">2020-文-03</a></li>
+<li><a href="../exam/2020-文-14.html">2020-文-14</a></li>
+<li><a href="../exam/2020-文-22.html">2020-文-22</a></li>
+<li><a href="../exam/2020-理-03.html">2020-理-03</a></li>
+<li><a href="../exam/2020-理-04.html">2020-理-04</a></li>
+<li><a href="../exam/2020-理-06.html">2020-理-06</a></li>
+<li><a href="../exam/2020-理-22.html">2020-理-22</a></li>
+<li><a href="../exam/2022-文-10.html">2022-文-10</a></li>
+<li><a href="../exam/2022-文-21.html">2022-文-21</a></li>
+<li><a href="../exam/2022-文-22.html">2022-文-22</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-16</a></li>
+<li><a href="../exam/2022-理-08.html">2022-理-08</a></li>
+<li><a href="../exam/2022-理-20.html">2022-理-20</a></li>
+<li><a href="../exam/2022-理-22.html">2022-理-22</a></li>
+<li><a class="dead" title="未收录">2023-北京-19</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-18</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-20</a></li>
+<li><a class="dead" title="未收录">2024-北京-14</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

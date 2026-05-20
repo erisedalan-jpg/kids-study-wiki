@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热力学第二定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热力学第二定律</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 热力学定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热力学第二定律, second law of thermodynamics, 熵增原理</p><h2>🎓 热力学第二定律</h2>
+<h3>两种等价表述</h3>
+<p><strong>克劳修斯表述</strong>（热传导方向）：</p>
+<blockquote>
+<p>热量不能自发地从低温物体传向高温物体。</p>
+</blockquote>
+<p><strong>开尔文表述</strong>（热机效率方向）：</p>
+<blockquote>
+<p>不可能从单一热源吸热，并将其完全转化为功，而不产生其他影响。</p>
+<p>两种表述等价：违反其中一个必然违反另一个。</p>
+</blockquote>
+<h3>自然过程的方向性</h3>
+<p>热力学第二定律揭示了自然过程的<strong>不可逆性</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>自发过程（实际发生）</th>
+<th>逆过程（不自发发生）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热量从高温流向低温</td>
+<td>热量从低温流向高温</td>
+</tr>
+<tr>
+<td>气体自由膨胀（扩散）</td>
+<td>气体自动收缩回原区域</td>
+</tr>
+<tr>
+<td>机械能摩擦转化为内能</td>
+<td>内能自动转化为物体的有序运动</td>
+</tr>
+<tr>
+<td>食盐溶解在水中</td>
+<td>食盐自动从盐水中析出</td>
+</tr>
+</tbody>
+</table>
+<h3>热机效率的限制</h3>
+<p>由于放热 $Q_2 &gt; 0$ 是不可避免的（第二定律要求），热机效率 $\eta &lt; 1$：</p>
+<p>$$\eta = 1 - \frac{Q_2}{Q_1} &lt; 1$$</p>
+<p><strong>卡诺定理</strong>：在相同高温热源 $T_1$ 和低温热源 $T_2$ 之间工作的所有热机中，卡诺热机效率最高：</p>
+<p>$$\eta_{\text{卡诺}} = 1 - \frac{T_2}{T_1}$$</p>
+<p>高中阶段了解即可，不要求推导（待家长核对教材深度要求）。</p>
+<h3>与热力学第一定律的关系</h3>
+<table>
+<thead>
+<tr>
+<th>定律</th>
+<th>内容</th>
+<th>回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一定律</td>
+<td>能量守恒</td>
+<td>过程<strong>能量守衡吗</strong>？</td>
+</tr>
+<tr>
+<td>第二定律</td>
+<td>过程方向性</td>
+<td>过程<strong>能自发发生吗</strong>？</td>
+</tr>
+</tbody>
+</table>
+<p>第一定律不能判断方向——一个满足能量守恒的过程，不一定能实际发生（方向可能反了）。</p>
+<h3>第二类永动机不可能</h3>
+<p><strong>第二类永动机</strong>：从单一热源（如海洋、大气）吸热并完全转化为功的机器（效率 100%）。</p>
+<p>热力学第二定律指出：<strong>第二类永动机不可能制成</strong>。（第一类永动机违反第一定律；第二类永动机违反第二定律。）</p>
+<p>详见：<a class="dead" title="未收录">永动机不可能性</a></p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：下列说法正确的是（）</p>
+<p>A. 热量可以从低温物体传向高温物体，但需要外界做功<br />
+B. 热力学第二定律说明能量不守恒<br />
+C. 热机效率可以达到 100%，只要技术足够先进<br />
+D. 所有自然过程都是不可逆的</p>
+<p><strong>答</strong>：A 和 D</p>
+<ul>
+<li>A 对：制冷机（如冰箱、空调）正是这样工作的，需要消耗外部能量</li>
+<li>B 错：第二定律是关于过程方向的，能量守恒仍然成立</li>
+<li>C 错：第二定律决定了热机效率必须小于 100%（除非低温热源温度为 0 K，不可达）</li>
+<li>D 对：第二定律的本质就是自然过程具有方向性（不可逆性）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li>第二定律不禁止热量从低温传向高温，但要求这个过程<strong>必须有外界做功</strong>（如制冷机）</li>
+<li>自发过程不可逆，但可逆过程（理想情况）存在于理论中</li>
+<li>第二定律不违反第一定律（能量守恒），两者互相补充</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第三章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/热力学第二定律">热力学第二定律 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/440-热力学第一定律.html">热力学第一定律</a></li>
+<li><a class="dead" title="未收录">熵-初步</a></li>
+<li><a class="dead" title="未收录">能量转化效率</a></li>
+<li><a class="dead" title="未收录">永动机不可能性</a></li>
+<li><a class="dead" title="未收录">内能-高中</a></li>
+<li><a class="dead" title="未收录">温度的微观本质</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-新课标-13.html">2012-新课标-13</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-13</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-13.html">2020-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2022-湖南-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

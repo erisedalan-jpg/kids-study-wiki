@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>轨迹方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>轨迹方程</h1><div class="meta-card"><span><strong>权重</strong>42</span><span><strong>吉林命中</strong>9</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 综合专题]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 轨迹方程, locus equation, 轨迹</p><h2>🎓 轨迹方程</h2>
+<h3>基本概念</h3>
+<p><strong>轨迹</strong>（locus）：满足某一条件的所有点构成的图形。</p>
+<p><strong>轨迹方程</strong>：用坐标 $(x,y)$ 表达轨迹的代数方程。</p>
+<p><strong>求轨迹的本质</strong>：将几何条件翻译为关于 $x, y$ 的方程，化简后识别曲线类型。</p>
+<h3>求轨迹方程的一般方法</h3>
+<h4>方法一：直接法</h4>
+<p>直接将几何条件（距离、中点、角度等）写成关于 $(x,y)$ 的方程，化简整理。</p>
+<p><strong>例</strong>：到两定点 $A(2,0), B(-2,0)$ 距离之积 $|PA|\cdot|PB|=4$，求轨迹。</p>
+<p>$$\sqrt{(x-2)^2+y^2} \cdot \sqrt{(x+2)^2+y^2} = 4$$</p>
+<p>两边平方：$[(x-2)^2+y^2][(x+2)^2+y^2]=16$</p>
+<p>展开化简…（此类轨迹有时为柱面方程或复杂曲线）</p>
+<h4>方法二：参数法</h4>
+<p>设动点满足参数 $t$，用 $t$ 表示 $x, y$，消去 $t$ 得方程。</p>
+<p><strong>例</strong>：圆 $x^2+y^2=4$ 上点 $Q$，$P$ 是 $Q$ 与圆内固定点 $A(1,0)$ 的中点，求 $P$ 的轨迹。</p>
+<p>设 $Q(2\cos\theta, 2\sin\theta)$，$A(1,0)$，$P = \left(\dfrac{2\cos\theta+1}{2}, \dfrac{2\sin\theta}{2}\right) = \left(\cos\theta+\dfrac{1}{2}, \sin\theta\right)$</p>
+<p>令 $x=\cos\theta+\dfrac{1}{2}, y=\sin\theta$，则 $\cos\theta=x-\dfrac{1}{2}, \sin\theta=y$：</p>
+<p>$\left(x-\dfrac{1}{2}\right)^2+y^2=1$（圆，圆心 $\left(\dfrac{1}{2},0\right)$，半径 1）</p>
+<h4>方法三：代入消参法</h4>
+<p>适合中点、分点类问题：设两端点坐标，用联立和韦达定理，消去另一个量。</p>
+<p><strong>见</strong>：<a class="dead" title="未收录">圆锥曲线综合应用</a> 中的"点差法（中点弦）"</p>
+<h4>方法四：坐标变换</h4>
+<p>平移、旋转后化为标准形，再还原。（高中一般不要求旋转，平移较常见）</p>
+<h3>常见轨迹结论</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>轨迹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>PA</td>
+</tr>
+<tr>
+<td>$</td>
+<td></td>
+</tr>
+<tr>
+<td>$</td>
+<td>PF</td>
+</tr>
+<tr>
+<td>$</td>
+<td>PA</td>
+</tr>
+<tr>
+<td>$\angle APB=90°$</td>
+<td>以 $AB$ 为直径的圆（除 $A,B$）</td>
+</tr>
+<tr>
+<td>$</td>
+<td>PA</td>
+</tr>
+<tr>
+<td>中点在弦上</td>
+<td>椭圆的中点弦轨迹</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$A(-3,0), B(3,0)$，$|PA|^2+|PB|^2=50$，求 $P$ 的轨迹。</p>
+<p><strong>解</strong>：$(x+3)^2+y^2+(x-3)^2+y^2=50$，$2x^2+18+2y^2=50$，$x^2+y^2=16$（圆）</p>
+<p><strong>例2</strong>：动点 $P$ 满足到 $x$ 轴距离等于到点 $F(2,0)$ 的距离，求轨迹。</p>
+<p><strong>解</strong>：$|y|=\sqrt{(x-2)^2+y^2}$，平方：$y^2=(x-2)^2+y^2$，$0=(x-2)^2$，$x=2$（直线，非抛物线！）</p>
+<p>注意：此处条件是到"$x$ 轴"距离（$|y|$），不是到"$x=-2$"准线的距离，结果不同。</p>
+<p>若改为"到直线 $x=-2$ 的距离等于到 $F(2,0)$ 的距离"：抛物线 $y^2=8x$。</p>
+<p><strong>例3</strong>：点 $M$ 是线段 $OP$ 的中点，$P$ 在圆 $x^2+y^2=4$ 上，$O$ 是原点，求 $M$ 的轨迹。</p>
+<p><strong>解</strong>：$P(2x_0,2y_0)$（$M=(x_0,y_0)$），$P$ 在圆上：$(2x_0)^2+(2y_0)^2=4$，$x_0^2+y_0^2=1$，圆 $x^2+y^2=1$。</p>
+<h3>注意事项</h3>
+<ul>
+<li>求出方程后，检查<strong>范围限制</strong>（动点不能取哪些点）</li>
+<li>验证：用具体点代入原几何条件检验</li>
+<li>轨迹可能是曲线的一部分（需说明范围）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册综合章节</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">圆锥曲线轨迹问题</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+<li><a href="../atoms/377-定点定值问题.html">定点定值问题</a></li>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a class="dead" title="未收录">抛物线定义与方程</a></li>
+<li><a href="../atoms/373-圆的标准方程.html">圆的标准方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-04.html">2008-理-04</a></li>
+<li><a href="../exam/2010-理-14.html">2010-理-14</a></li>
+<li><a href="../exam/2010-理-19.html">2010-理-19</a></li>
+<li><a href="../exam/2010-理-23.html">2010-理-23</a></li>
+<li><a href="../exam/2011-文-23.html">2011-文-23</a></li>
+<li><a href="../exam/2011-理-14.html">2011-理-14</a></li>
+<li><a href="../exam/2011-理-20.html">2011-理-20</a></li>
+<li><a href="../exam/2011-理-23.html">2011-理-23</a></li>
+<li><a href="../exam/2013-文-20.html">2013-文-20</a></li>
+<li><a href="../exam/2017-文-20.html">2017-文-20</a></li>
+<li><a href="../exam/2017-文-22.html">2017-文-22</a></li>
+<li><a href="../exam/2017-理-20.html">2017-理-20</a></li>
+<li><a href="../exam/2017-理-22.html">2017-理-22</a></li>
+<li><a href="../exam/2019-文-21.html">2019-文-21</a></li>
+<li><a href="../exam/2019-文-22.html">2019-文-22</a></li>
+<li><a href="../exam/2019-理-21.html">2019-理-21</a></li>
+<li><a href="../exam/2019-理-22.html">2019-理-22</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-21</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-22</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-05.html">2024-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

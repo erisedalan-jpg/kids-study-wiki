@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>磁感应强度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>磁感应强度</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电磁场基础]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 磁感应强度, magnetic flux density, 磁场强度B, B</p><h2>🎓 磁感应强度（Magnetic Flux Density）</h2>
+<h3>定义</h3>
+<p><strong>磁感应强度</strong>（$B$）是描述磁场强弱和方向的物理量，通过通电导体在磁场中所受安培力来定义：</p>
+<p>$$B = \frac{F}{IL}$$</p>
+<p>其中：
+- $F$：通电导体所受安培力（N）
+- $I$：电流强度（A）
+- $L$：导体在磁场中的有效长度（m，且导体方向垂直于磁场）</p>
+<p>单位：<strong>特斯拉</strong>（T），$1\,\text{T} = 1\,\text{N/(A·m)} = 1\,\text{Wb/m}^2$</p>
+<h3>物理意义</h3>
+<p>$B$ 是磁场的<strong>固有属性</strong>，反映磁场对放入其中的电流（或运动电荷）施力能力的大小，与放入其中的导体无关。</p>
+<h3>方向</h3>
+<p>磁感应强度的方向规定为：该点<strong>小磁针北极</strong>静止时的指向，即磁感线的切线方向（指向 N 极一侧）。</p>
+<h3>常见磁场的磁感应强度</h3>
+<table>
+<thead>
+<tr>
+<th>磁场</th>
+<th>$B$ 大小（大约值）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地球表面地磁场</td>
+<td>$\sim 5\times10^{-5}\,\text{T}$</td>
+</tr>
+<tr>
+<td>普通永磁体</td>
+<td>$0.1 \sim 1\,\text{T}$</td>
+</tr>
+<tr>
+<td>强电磁铁（实验室）</td>
+<td>$1 \sim 10\,\text{T}$</td>
+</tr>
+<tr>
+<td>MRI 核磁共振仪</td>
+<td>$1.5 \sim 3\,\text{T}$</td>
+</tr>
+<tr>
+<td>中子星表面</td>
+<td>$\sim 10^8\,\text{T}$</td>
+</tr>
+</tbody>
+</table>
+<h3>磁感应强度的矢量性</h3>
+<p>$B$ 是矢量，同一点处多个磁场的磁感应强度应按<strong>矢量叠加</strong>。</p>
+<h3>安培力公式</h3>
+<p>$$F = BIL\sin\theta$$</p>
+<p>其中 $\theta$ 为电流方向与磁场方向的夹角。当 $\theta = 90°$（电流垂直磁场）时，$F$ 最大 $= BIL$；当 $\theta = 0°$（电流平行磁场）时，$F = 0$。</p>
+<h3>洛伦兹力公式</h3>
+<p>$$f = qvB\sin\theta$$</p>
+<p>带电量 $q$、速度 $v$ 的粒子在磁场中受到的洛伦兹力（$\theta$ 为 $v$ 与 $B$ 的夹角）。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某匀强磁场中，长 $L = 0.5\,\text{m}$ 的导线通电流 $I = 2\,\text{A}$，电流方向垂直于磁场，受安培力 $F = 0.3\,\text{N}$，求磁感应强度。</p>
+<p>$$B = \frac{F}{IL} = \frac{0.3}{2\times0.5} = 0.3\,\text{T}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>$B = F/(IL)$ 是磁感应强度的<strong>定义式</strong>，不能理解为 $B$ 随 $F$ 增大而增大。</li>
+<li>磁感应强度是描述磁场本身的量，与放入的导线属性（粗细、材料等）无关。</li>
+<li>当导线与磁场<strong>平行</strong>时，$F = 0$（但磁场仍存在，$B \ne 0$）。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中学过安培力的定性概念；高中引入磁感应强度作为定量描述磁场的物理量，类似于电场中引入电场强度 $E$ 的方式，形成完整的场论框架。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十二章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/磁感应强度">维基百科·磁感应强度</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">磁场-高中</a></li>
+<li><a class="dead" title="未收录">磁通量</a></li>
+<li><a class="dead" title="未收录">安培力</a></li>
+<li><a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><a class="dead" title="未收录">匀强磁场</a></li>
+<li><a class="dead" title="未收录">磁感线-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-新课标-05.html">2011-新课标-05</a></li>
+<li><a href="../exam/2012-新课标-10.html">2012-新课标-10</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-07.html">2018-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

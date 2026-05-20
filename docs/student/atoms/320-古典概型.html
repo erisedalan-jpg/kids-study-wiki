@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>古典概型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>古典概型</h1><div class="meta-card"><span><strong>权重</strong>38</span><span><strong>吉林命中</strong>11</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 概率, 第十章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 古典概型, classical probability model, 等可能概率</p><h2>🎓 古典概型</h2>
+<h3>定义</h3>
+<p>满足以下两个条件的概率模型称为<strong>古典概型</strong>：</p>
+<ol>
+<li><strong>有限性</strong>：样本空间只含<strong>有限个</strong>基本事件</li>
+<li><strong>等可能性</strong>：每个基本事件发生的可能性<strong>相同</strong></li>
+</ol>
+<h3>古典概型概率公式</h3>
+<p>$$P(A) = \frac{\text{事件} A \text{ 包含的基本事件数}}{\text{样本空间的基本事件总数}} = \frac{|A|}{|\Omega|}$$</p>
+<p>其中 $|A|$ 表示 $A$ 中基本事件的个数（有利结果数），$|\Omega|$ 为总数（所有可能结果数）。</p>
+<h3>计算方法</h3>
+<p>古典概型的计算核心是<strong>排列组合</strong>：</p>
+<ul>
+<li><strong>排列</strong>（顺序有关）：$P_n^r = A_n^r = n(n-1)\cdots(n-r+1) = \dfrac{n!}{(n-r)!}$</li>
+<li><strong>组合</strong>（顺序无关）：$C_n^r = \dbinom{n}{r} = \dfrac{n!}{r!(n-r)!}$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：掷两枚骰子，求两点数之和为 7 的概率。</p>
+<p><strong>解</strong>：总结果 $|\Omega| = 36$。点数和为 7 的结果：$(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$，共 6 种。</p>
+<p>$P = \dfrac{6}{36} = \dfrac{1}{6}$</p>
+<p><strong>例2</strong>：从 5 男 3 女中随机选 3 人，恰好有 2 女的概率。</p>
+<p><strong>解</strong>：$|\Omega| = C_8^3 = 56$，$|A| = C_3^2 \times C_5^1 = 3 \times 5 = 15$</p>
+<p>$P = \dfrac{15}{56}$</p>
+<p><strong>例3</strong>：袋中红球 3 个、白球 2 个，不放回取 2 个，全是红球的概率。</p>
+<p><strong>解</strong>：$|\Omega| = C_5^2 = 10$，$|A| = C_3^2 = 3$，$P = \dfrac{3}{10}$</p>
+<p><strong>例4</strong>：4 张牌（A,2,3,4）随机排列，A 在首位的概率。</p>
+<p><strong>解</strong>：总排列 $4! = 24$，A 在首位的排列 $3! = 6$，$P = \dfrac{6}{24} = \dfrac{1}{4}$</p>
+<h3>应用范围</h3>
+<p>古典概型适用：抽签、摸球、掷骰子、扑克牌问题、抽样等<strong>有限等可能</strong>情形。</p>
+<h3>易错点</h3>
+<ul>
+<li>确认等可能性：抛硬币（正反面各 $\frac{1}{2}$）vs 不匀质骰子（各面不等可能）</li>
+<li>用组合还是排列：无放回取球且"同时取"用组合（顺序无关）；先后取且顺序有关用排列</li>
+<li>分子（有利结果）和分母（总结果）的计数方法要统一（都排列或都组合）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第十章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第十章 § 10.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/古典概型">古典概型 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a href="../atoms/317-事件的关系运算.html">事件的关系运算</a></li>
+<li><a class="dead" title="未收录">概率的基本性质</a></li>
+<li><a href="../atoms/318-事件的独立性.html">事件的独立性</a></li>
+<li><a class="dead" title="未收录">概率应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-06.html">2008-理-06</a></li>
+<li><a href="../exam/2009-理-20.html">2009-理-20</a></li>
+<li><a href="../exam/2011-文-06.html">2011-文-06</a></li>
+<li><a href="../exam/2011-文-16.html">2011-文-16</a></li>
+<li><a href="../exam/2011-理-04.html">2011-理-04</a></li>
+<li><a href="../exam/2013-文-13.html">2013-文-13</a></li>
+<li><a href="../exam/2013-文-16.html">2013-文-16</a></li>
+<li><a href="../exam/2013-文-18.html">2013-文-18</a></li>
+<li><a href="../exam/2013-理-14.html">2013-理-14</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2013-理-18.html">2013-理-18</a></li>
+<li><a href="../exam/2014-文-13.html">2014-文-13</a></li>
+<li><a href="../exam/2014-理-16.html">2014-理-16</a></li>
+<li><a href="../exam/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/2015-文-16.html">2015-文-16</a></li>
+<li><a href="../exam/2015-理-18.html">2015-理-18</a></li>
+<li><a href="../exam/2016-文-03.html">2016-文-03</a></li>
+<li><a href="../exam/2016-文-06.html">2016-文-06</a></li>
+<li><a href="../exam/2016-理-16.html">2016-理-16</a></li>
+<li><a href="../exam/2016-理-18.html">2016-理-18</a></li>
+<li><a href="../exam/2017-文-11.html">2017-文-11</a></li>
+<li><a href="../exam/2017-文-17.html">2017-文-17</a></li>
+<li><a href="../exam/2017-理-17.html">2017-理-17</a></li>
+<li><a href="../exam/2018-文-05.html">2018-文-05</a></li>
+<li><a href="../exam/2018-文-17.html">2018-文-17</a></li>
+<li><a href="../exam/2018-理-08.html">2018-理-08</a></li>
+<li><a href="../exam/2018-理-17.html">2018-理-17</a></li>
+<li><a href="../exam/2019-文-04.html">2019-文-04</a></li>
+<li><a href="../exam/2019-理-06.html">2019-理-06</a></li>
+<li><a href="../exam/2020-文-04.html">2020-文-04</a></li>
+<li><a href="../exam/2020-文-17.html">2020-文-17</a></li>
+<li><a href="../exam/2022-文-04.html">2022-文-04</a></li>
+<li><a href="../exam/2022-文-14.html">2022-文-14</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-05</a></li>
+<li><a href="../exam/2022-理-13.html">2022-理-13</a></li>
+<li><a class="dead" title="未收录">2023-北京-18</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-21</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

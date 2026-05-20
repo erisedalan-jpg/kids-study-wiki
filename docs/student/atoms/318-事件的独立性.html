@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>事件的独立性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>事件的独立性</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 概率, 第十章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 事件的独立性, independence of events, 独立事件, 独立重复试验</p><h2>🎓 事件的独立性</h2>
+<h3>定义</h3>
+<p>若事件 $A$ 的发生不影响事件 $B$ 发生的概率，则称 $A$ 与 $B$ <strong>相互独立</strong>。</p>
+<p><strong>数学定义</strong>：</p>
+<p>$$A \text{ 与 } B \text{ 独立} \iff P(AB) = P(A) \cdot P(B)$$</p>
+<h3>独立的性质</h3>
+<p>若 $A$ 与 $B$ 独立，则以下事件对也独立：
+- $A$ 与 $\bar{B}$
+- $\bar{A}$ 与 $B$
+- $\bar{A}$ 与 $\bar{B}$</p>
+<p><strong>推论</strong>：$P(A\bar{B}) = P(A) \cdot P(\bar{B}) = P(A)[1 - P(B)]$</p>
+<h3>独立 vs 互斥</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>独立</th>
+<th>互斥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>$P(AB) = P(A)P(B)$</td>
+<td>$P(AB) = 0$（$A \cap B = \emptyset$）</td>
+</tr>
+<tr>
+<td>含义</td>
+<td>发生与否互不影响</td>
+<td>不能同时发生</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>互斥的非零概率事件<strong>不独立</strong></td>
+<td>独立事件不互斥（除非某概率为0）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>若 $A, B$ 互斥且 $P(A) &gt; 0, P(B) &gt; 0$，则 $P(AB) = 0 \neq P(A)P(B)$，故<strong>互斥 $\neq$ 独立</strong>。</p>
+</blockquote>
+<h3>独立重复试验与二项分布</h3>
+<p><strong>独立重复试验</strong>：在相同条件下，重复进行 $n$ 次独立试验，每次成功概率为 $p$。</p>
+<p>$n$ 次试验中恰好成功 $k$ 次的概率（<strong>二项分布</strong>）：</p>
+<p>$$P(X = k) = C_n^k p^k (1-p)^{n-k}, \quad k = 0, 1, 2, \ldots, n$$</p>
+<p>记 $X \sim B(n, p)$，期望 $E(X) = np$，方差 $D(X) = np(1-p)$。</p>
+<p><strong>伯努利试验</strong>：只有两种结果（成功/失败）的独立重复试验。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：甲乙射击，命中率分别为 0.8 和 0.7，两人各射一次，求：</p>
+<p>（1）两人都命中；（2）至少一人命中；（3）恰好一人命中</p>
+<p><strong>解</strong>：（设甲命中为 $A$，乙命中为 $B$，$A, B$ 独立）</p>
+<p>（1）$P(AB) = 0.8 \times 0.7 = 0.56$</p>
+<p>（2）$P(A \cup B) = 1 - P(\bar{A}\bar{B}) = 1 - 0.2 \times 0.3 = 0.94$</p>
+<p>（3）$P(A\bar{B}) + P(\bar{A}B) = 0.8 \times 0.3 + 0.2 \times 0.7 = 0.24 + 0.14 = 0.38$</p>
+<p><strong>例2</strong>（二项分布）：某产品次品率 10%，随机抽 5 件，恰好 2 件次品的概率。</p>
+<p><strong>解</strong>：$P(X=2) = C_5^2 \times 0.1^2 \times 0.9^3 = 10 \times 0.01 \times 0.729 = 0.0729$</p>
+<p><strong>例3</strong>：射手命中率 0.6，独立射击直到命中为止，求恰好第 3 次命中的概率。</p>
+<p><strong>解</strong>：$P = (1-0.6)^2 \times 0.6 = 0.16 \times 0.6 = 0.096$</p>
+<h3>易错点</h3>
+<ul>
+<li>独立不是互斥，两者是不同的关系</li>
+<li>独立事件的积概率 $P(AB) = P(A)P(B)$（乘法），互斥事件 $P(AB) = 0$</li>
+<li>二项分布要求每次试验独立，概率恒为 $p$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第十章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第十章 § 10.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/独立性_(概率论)">独立事件 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a href="../atoms/317-事件的关系运算.html">事件的关系运算</a></li>
+<li><a class="dead" title="未收录">概率的基本性质</a></li>
+<li><a href="../atoms/320-古典概型.html">古典概型</a></li>
+<li><a href="../atoms/340-条件概率初步.html">条件概率初步</a></li>
+<li><a class="dead" title="未收录">概率应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-17.html">2009-理-17</a></li>
+<li><a href="../exam/2019-理-18.html">2019-理-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

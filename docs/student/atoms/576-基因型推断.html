@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基因型推断</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>基因型推断</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 基因型推断, Genotype inference</p><h1>基因型推断</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据个体的表现型、亲代与子代遗传关系及群体遗传规律，反推个体基因组成的过程。
+<strong>English</strong>: The process of deducing an organism‘s genetic constitution based on its phenotype, familial inheritance patterns, and population genetic principles.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+基因型推断的核心依据是孟德尔分离定律与自由组合定律，以及伴性遗传和基因互作等遗传规律。其本质是通过遗传“结果”（表现型及比例）反推“原因”（基因型）。常用的一条根本原理是：<strong>隐性性状一旦出现，其基因型可直接确定为隐性纯合</strong>（如 <code>aa</code>）；而显性性状个体的基因型则需通过亲子代关系或测交实验进一步确定。</p>
+<p><strong>关键方法</strong>
+1.  <strong>系谱图法（图解法）</strong>：针对遗传系谱图题，首先判断致病基因的显隐性（口诀：“无中生有为隐性，有中生无为显性”），再判断基因位置（常染色体或性染色体）。然后从确定性个体（如隐性纯合子）入手，采用“遗传图解填充法”逐步推出其他个体的基因型。
+2.  <strong>杂交实验分析法</strong>：针对实验数据表格或比例描述题，分析杂交后代的性状分离比。若出现 <code>3:1</code>，则亲本均为杂合子（<code>Aa × Aa</code>）；若出现 <code>1:1</code>，则为测交类型（<code>Aa × aa</code>）。对于两对等位基因，<code>9:3:3:1</code> 或变形比例是推断自由组合与基因互作的关键依据。
+3.  <strong>概率逆推法</strong>：在无法完全确定基因型时，需基于已有信息列出所有可能的基因型及其概率，再结合子代表现型进行概率计算和推断。</p>
+<p><strong>典型应用</strong>
+高考中，该考点常以<strong>遗传系谱图</strong>和<strong>杂交实验设计</strong>两种形式出现。
+- <strong>场景一（系谱图推断）</strong>：题目给出一张遗传病家族系谱图，要求推断某一未出生孩子的患病概率。解题关键在于准确推断出致病基因是位于常染色体还是X染色体上的显性或隐性基因，并写出核心家庭成员的基因型。
+- <strong>场景二（实验数据推断）</strong>：题目呈现不同杂交组合的子代性状数目，设问“某株显性个体的基因型是什么”。解题时需利用测交或自交的子代表现型比例进行逆推，例如，若自交后代无性状分离，则该个体为显性纯合子。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略隐性纯合的确定作用</strong>：在系谱图中未第一时间锁定所有隐性性状个体（为纯合子），导致后续推断失去“锚点”而混乱。</li>
+<li><strong>混淆基因在性染色体上的区段</strong>：推断伴性遗传时，误将仅位于Y染色体上的“限雄遗传”与位于X、Y同源区段或仅X染色体上的基因混淆，导致男女患病概率推断错误。</li>
+<li><strong>只推基因型不推概率</strong>：对于不确定的个体（如系谱图中的 <code>A_</code>），推断其所有可能的基因型后，漏算每种可能性的概率（如 <code>AA</code> 概率为 <code>1/3</code>、<code>Aa</code> 概率为 <code>2/3</code>），直接导致最终概率计算错误。</li>
+<li><strong>无视“配子不育”或“胚胎致死”等隐含条件</strong>：看到 <code>3:1</code> 就写 <code>Aa × Aa</code>，但若题目隐含致死条件，实际的子代比例和基因型分布会发生根本改变，必须根据修正后的比例重新推断。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基因型</td>
+<td>Genotype</td>
+<td>个体控制性状的全部基因组合</td>
+</tr>
+<tr>
+<td>表现型</td>
+<td>Phenotype</td>
+<td>基因型在与环境相互作用下呈现的性状</td>
+</tr>
+<tr>
+<td>等位基因</td>
+<td>Allele</td>
+<td>位于一对同源染色体相同座位上控制相对性状的基因</td>
+</tr>
+<tr>
+<td>分离定律</td>
+<td>Law of Segregation</td>
+<td>形成配子时成对的等位基因彼此分离，分别进入不同配子</td>
+</tr>
+<tr>
+<td>测交</td>
+<td>Test cross</td>
+<td>与隐性纯合子杂交以确定个体基因型的实验方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">孟德尔遗传定律</a></li>
+<li><a href="../atoms/276-伴性遗传.html">伴性遗传</a></li>
+<li><a class="dead" title="未收录">遗传系谱图分析</a></li>
+<li><a href="../atoms/272-自由组合定律.html">基因的自由组合定律</a></li>
+<li><a class="dead" title="未收录">遗传概率计算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-04</a></li>
+<li><a class="dead" title="未收录">2013-北京-07</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2021-北京-06</a></li>
+<li><a href="../exam/2023-新课标-05.html">2023-新课标-05</a></li>
+<li><a href="../exam/2023-新课标-10.html">2023-新课标-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

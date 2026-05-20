@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简单线性规划</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>简单线性规划</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 简单线性规划, 线性规划</p><h1>简单线性规划</h1>
+<blockquote>
+<p><strong>一句话</strong>：在由二元一次不等式组所确定的平面区域（可行域）内，求二元一次目标函数的最大值或最小值的方法。
+<strong>English</strong>: A method for finding the maximum or minimum value of a linear objective function over a feasible region defined by linear inequalities.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong><br />
+  简单线性规划研究的是 <strong>目标函数</strong> $z=ax+by$ 在 <strong>约束条件</strong> 下的最值问题，其中约束条件是关于 $x,y$ 的二元一次不等式组：</li>
+</ul>
+<p>$$
+  \begin{cases}
+  a_1x + b_1y \le c_1 \quad (\text{或} \ge) \
+  a_2x + b_2y \le c_2 \quad (\text{或} \ge) \
+  \cdots
+  \end{cases}
+  $$</p>
+<p>每个不等式在平面直角坐标系内表示一个半平面（包括或排除边界，取决于是否含等号），它们的交集构成 <strong>可行域</strong>——通常是凸多边形区域。目标函数  $z=ax+by$  可看作一族斜率为 $-\dfrac{a}{b}$ 的平行直线，令 $z$ 变化时，直线上下平移，与可行域首次、末次接触的点(往往为多边形的顶点)给出 $z$ 的最小值或最大值。</p>
+<ul>
+<li><strong>关键方法</strong><br />
+  解线性规划问题的标准步骤（图解法）：</li>
+<li><strong>画线定界</strong>：将每个不等式对应直线画出，根据不等号方向判定边界虚实（“&gt;”或“&lt;”画虚线；“≥”或“≤”画实线），并用特殊点（如原点，若直线不过原点）检验确定半平面区域。  </li>
+<li><strong>找可行域</strong>：标出所有半平面交集的区域，即为可行域。  </li>
+<li><strong>平移求最值</strong>：将目标函数改写为 $y = -\dfrac{a}{b}x + \dfrac{z}{b}$（$b \neq 0$），固定斜率平移该直线，观察在可行域内与哪一点（通常为顶点）相切时 $z$ 取得最值。若 $b=0$，则目标函数为 $z=ax$，直接看 $x$ 的最值。  </li>
+<li>
+<p><strong>代点求解</strong>：将最优解对应顶点坐标代入目标函数，算出最值。若目标函数的等值线与可行域某一边界重合，则有无穷多最优解。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考常见题型：  </p>
+</li>
+<li><strong>求线性目标函数的最值</strong>：给出二元一次不等式组可行域，求 $z=ax+by$ 的最大/最小值。例如：可行域由 $\begin{cases} x \ge 0, y \ge 0 \ x+y \le 4 \ x+2y \le 6 \end{cases}$ 决定，求 $z=2x+3y$ 的最大值。画出可行域后发现顶点 $(2,2)$ 给出最大值 10。  </li>
+<li><strong>含参数的线性规划</strong>：约束条件或目标函数中含参数，要求确定参数范围以使目标函数在某些条件下取最值或有无穷多最优解，需结合斜率关系分析。  </li>
+<li><strong>整数解问题</strong>：当最优解要求 $x,y$ 为整数时，不能简单取可行域内最靠近边界的点，必须用 “调整法” 或网格描点找到真正符合整数条件的最大值点（易错）。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>边界虚实混淆</strong>：约束中不等式若没有等号，边界直线应画为虚线，所表示的区域不包括边界。但在求最值时往往需要带等号才能取到最值，忽略虚实会直接导致最优解选择错误。  </li>
+<li><strong>目标函数平移方向判反</strong>：将目标函数化为斜截式时，注意截距 $\frac{z}{b}$ 的符号：若 $b&gt;0$，截距最大对应 $z$ 最大；若 $b&lt;0$，截距最小反而对应 $z$ 最大。不看斜率与截距关系而盲目平移是常见错误。  </li>
+<li><strong>最优解在非顶点处</strong>：当目标函数等值线与可行域某边界平行且截距满足条件时，整条线段上的点都是最优解，作答时需将端点坐标或范围描述清楚。  </li>
+<li><strong>整数最优解的“就近”误区</strong>：需求整数解时，不能简单取距边界顶点最近的整点作为最优解，必须将目标函数等值线逐格平移，找到可行域内使 $z$ 最优的所有整点。例如顶点 $(3.2, 4.8)$ 附近最近整点是 $(3,5)$，但实际最优整点可能是 $(4,4)$，依据目标函数而定。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线性规划</td>
+<td>linear programming</td>
+<td>在线性约束下优化线性目标函数的数学方法</td>
+</tr>
+<tr>
+<td>可行域</td>
+<td>feasible region</td>
+<td>所有满足约束条件的点的集合（平面区域）</td>
+</tr>
+<tr>
+<td>目标函数</td>
+<td>objective function</td>
+<td>需求最值的线性函数 $z=ax+by$</td>
+</tr>
+<tr>
+<td>约束条件</td>
+<td>constraints</td>
+<td>由二元一次不等式（组）构成的限制条件</td>
+</tr>
+<tr>
+<td>最优解</td>
+<td>optimal solution</td>
+<td>使目标函数取得最大值或最小值的坐标点</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">二元一次不等式（组）表示平面区域</a></li>
+<li><a class="dead" title="未收录">线性目标函数的最值</a></li>
+<li><a class="dead" title="未收录">含参数的线性规划问题</a></li>
+<li><a class="dead" title="未收录">线性规划中的整数解问题</a></li>
+<li><a class="dead" title="未收录">简单的非线性规划</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-11.html">2010-文-11</a></li>
+<li><a href="../exam/2011-文-14.html">2011-文-14</a></li>
+<li><a href="../exam/2011-理-13.html">2011-理-13</a></li>
+<li><a href="../exam/2012-文-05.html">2012-文-05</a></li>
+<li><a href="../exam/2012-理-14.html">2012-理-14</a></li>
+<li><a href="../exam/2013-文-03.html">2013-文-03</a></li>
+<li><a href="../exam/2013-文-12.html">2013-文-12</a></li>
+<li><a href="../exam/2013-理-08.html">2013-理-08</a></li>
+<li><a href="../exam/2013-理-09.html">2013-理-09</a></li>
+<li><a href="../exam/2014-文-09.html">2014-文-09</a></li>
+<li><a href="../exam/2014-文-13.html">2014-文-13</a></li>
+<li><a href="../exam/2014-理-06.html">2014-理-06</a></li>
+<li><a href="../exam/2014-理-09.html">2014-理-09</a></li>
+<li><a href="../exam/2015-文-14.html">2015-文-14</a></li>
+<li><a href="../exam/2015-理-02.html">2015-理-02</a></li>
+<li><a href="../exam/2016-文-07.html">2016-文-07</a></li>
+<li><a href="../exam/2016-文-14.html">2016-文-14</a></li>
+<li><a href="../exam/2016-理-02.html">2016-理-02</a></li>
+<li><a href="../exam/2017-文-04.html">2017-文-04</a></li>
+<li><a href="../exam/2017-文-07.html">2017-文-07</a></li>
+<li><a href="../exam/2017-文-14.html">2017-文-14</a></li>
+<li><a href="../exam/2017-理-04.html">2017-理-04</a></li>
+<li><a href="../exam/2017-理-14.html">2017-理-14</a></li>
+<li><a href="../exam/2018-文-08.html">2018-文-08</a></li>
+<li><a href="../exam/2018-文-14.html">2018-文-14</a></li>
+<li><a href="../exam/2018-理-13.html">2018-理-13</a></li>
+<li><a href="../exam/2018-理-14.html">2018-理-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

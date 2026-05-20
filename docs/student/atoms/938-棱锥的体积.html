@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>棱锥的体积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>棱锥的体积</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 棱锥的体积, Volume of a Pyramid</p><h1>棱锥的体积</h1>
+<blockquote>
+<p><strong>一句话</strong>：棱锥的体积等于同底等高棱柱体积的三分之一，公式为 $V = \frac{1}{3}Sh$（其中 $S$ 为底面积，$h$ 为高）。
+<strong>English</strong>: The volume of a pyramid is one third of the volume of a prism with the same base and height: $V = \frac{1}{3}Sh$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：棱锥的体积公式 $V = \frac{1}{3}Sh$ 是核心结论，其推导可用三棱锥补形为三棱柱（将三棱柱分割成三个等体积的三棱锥）完成，或借助祖暅原理理解。对任意棱锥，只要底面积 $S$ 确定，且高 $h$ 为顶点到底面的垂直距离，公式均成立。注意：高必须是垂直距离，而非侧棱长或斜高。若题目给出斜高或侧棱长，需先用勾股定理求高。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：高考中解棱锥体积问题，步骤通常为：</p>
+</li>
+<li><strong>确定底面并求底面积 $S$</strong>：若底面为规则多边形（正三角形、正方形、正六边形等），直接套用面积公式；若为一般多边形，可能需要分割或利用已知条件。</li>
+<li><strong>确定高 $h$</strong>：关键步骤。若顶点在底面的投影为底面中心（正棱锥），可结合侧棱长、斜高与底面内切圆半径等构建直角三角形求高；若为一般顶点位置，常需借助线面垂直关系或空间向量法。</li>
+<li><strong>代入公式 $V = \frac{1}{3}Sh$</strong>。</li>
+<li>
+<p><strong>等体积转化</strong>：当直接求高困难时，可利用三棱锥的“换底”技巧（同一三棱锥，选不同的面作底，体积不变）转化求解。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见考查形式有：</p>
+</li>
+<li><strong>直接计算</strong>：给出正三棱锥底面边长和侧棱长，求体积。</li>
+<li><strong>等体积法求点面距</strong>：设问“求点 $A$ 到平面 $\alpha$ 的距离”，可构造以 $A$ 为顶点、平面 $\alpha$ 上的三角形为底面的三棱锥，通过体积和底面积反求距离 $d = \frac{3V}{S}$。</li>
+<li><strong>割补法求体积</strong>：对不规则几何体，将其分割为若干棱锥或补形为可求体积的柱体再减去棱锥体积。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆高与斜高/侧棱长</strong>：体积公式中的 $h$ 是顶点到底面的<strong>垂直距离</strong>，遇到斜高或侧棱长必须先利用几何关系（如正棱锥中侧棱、高、底面外接圆半径构成直角三角形）求出正高，直接代入斜高是常见错误。</li>
+<li><strong>漏掉 $\frac{1}{3}$ 系数</strong>：直接写成 $V = Sh$，与棱柱体积公式混淆。</li>
+<li><strong>三棱锥等积转化时底面积与高不匹配</strong>：换底后必须保证高是新顶点到新底面的垂直距离，错误地沿用原高会导致结果全错。</li>
+<li><strong>顶点投影位置判断失误</strong>：非正棱锥中，若不清楚顶点在底面的投影位置，则无法正确求出高，需结合线面垂直的判定定理仔细论证。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>棱锥</td>
+<td>Pyramid</td>
+<td>一个多面体，底面为多边形，其余各面为有一个公共顶点的三角形。</td>
+</tr>
+<tr>
+<td>底面积</td>
+<td>Base area</td>
+<td>棱锥底面的面积，用 $S$ 表示。</td>
+</tr>
+<tr>
+<td>高</td>
+<td>Height</td>
+<td>顶点到底面的垂直距离，用 $h$ 表示。</td>
+</tr>
+<tr>
+<td>等体积法</td>
+<td>Method of equal volume</td>
+<td>利用同一几何体体积不变，通过换底建立方程求解未知量（如点面距）。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">棱柱的体积</a></li>
+<li><a class="dead" title="未收录">三视图与体积计算</a></li>
+<li><a class="dead" title="未收录">空间几何体的表面积</a></li>
+<li><a class="dead" title="未收录">点面距离与等体积法</a></li>
+<li><a class="dead" title="未收录">祖暅原理及其应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-15.html">2011-理-15</a></li>
+<li><a href="../exam/2012-理-07.html">2012-理-07</a></li>
+<li><a href="../exam/2017-文-06.html">2017-文-06</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

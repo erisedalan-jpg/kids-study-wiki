@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>推理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>推理</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 平面几何拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 推理, reasoning, 逻辑推理, 数学推理, 演绎推理, 归纳推理, 科学推理</p><h2>课本定义</h2>
+<p><strong>推理</strong>是从已知条件出发，依据定义、公理、定理等，经过逻辑分析，得到新的结论的过程。数学中的推理主要有<strong>演绎推理</strong>（从一般到特殊）和<strong>归纳推理</strong>（从特殊到一般）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"一步一步地推出答案"</h3>
+<p><strong>推理</strong>就是：从你知道的出发，一步一步地得出新的结论。</p>
+<p><strong>生活中的推理：</strong>
+- 我知道："今天是周一，学校规定周一要升旗"
+- 推出："今天要升旗"（演绎推理）</p>
+<ul>
+<li>我观察："1是奇数，3是奇数，5是奇数，7是奇数……"</li>
+<li>猜测："所有奇数……"（归纳推理）</li>
+</ul>
+<p><strong>数学中的两种推理：</strong></p>
+<p><strong>演绎推理</strong>（从大到小，从一般到特殊）：
+- 已知：所有平行四边形的对角相等（一般规律）
+- 已知：ABCD是平行四边形（特殊情况）
+- 推出：ABCD的对角相等（特殊结论）</p>
+<p><strong>归纳推理</strong>（从小到大，从特殊到一般）：
+- 观察：1+3=4=2², 1+3+5=9=3², 1+3+5+7=16=4²
+- 归纳猜测：前 n 个奇数之和 = n²</p>
+<p>注意：<strong>归纳出的猜测还需要证明才能成为定理</strong>！</p>
+<p><strong>推理的链条：</strong>
+已知1 → 推出1 → 已知2 → 推出2 → … → 最终结论</p>
+<p>每一步都要有依据（公理、定理、已知条件），不能随意猜测！</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>推理</strong>（reasoning）：从一个或多个前提（已知条件），依据逻辑规则，得出结论的过程。</p>
+<p><strong>演绎推理</strong>（deductive reasoning）：从一般性原理（公理、定理）推导出特殊情况的结论，结论是<strong>必然</strong>的（若前提真，结论必真）。</p>
+<p><strong>归纳推理</strong>（inductive reasoning）：从多个特殊事例出发，归纳出一般性结论，结论是<strong>或然</strong>的（可能正确，需要验证）。</p>
+<h3>演绎推理的基本形式</h3>
+<p><strong>三段论（syllogism）：</strong>
+- <strong>大前提</strong>：一般性命题（已知规律）
+- <strong>小前提</strong>：特殊情况（某个具体案例符合大前提条件）
+- <strong>结论</strong>：对该特殊情况的结论</p>
+<p><strong>例：</strong>
+- 大前提：对顶角相等（定理）
+- 小前提：∠1 与 ∠3 是对顶角（已知条件）
+- 结论：∠1 = ∠3（推导结论）</p>
+<h3>推理的格式（几何证明常用）</h3>
+<p>常用语：
+- "因为……（理由/依据），所以……（结论）"
+- "由……得……"
+- "根据……，有……"</p>
+<p><strong>规范的推理链：</strong></p>
+<p>已知：l₁ ∥ l₂，截线 t 与两线相交</p>
+<p>求证：∠1 = ∠2（内错角）</p>
+<p>证明：
+∵ l₁ ∥ l₂（已知）
+∴ ∠1 = ∠3（平行线同位角相等）……①</p>
+<p>∵ ∠3 = ∠2（对顶角相等）……②</p>
+<p>由①②得：∠1 = ∠2 ∎</p>
+<h3>归纳推理的例子和局限</h3>
+<p><strong>例：</strong> 
+1² - 1 = 0 = 0×1（整数乘积）
+2² - 2 = 2 = 1×2（整数乘积）
+3² - 3 = 6 = 2×3（整数乘积）
+4² - 4 = 12 = 3×4（整数乘积）</p>
+<p>归纳：n² - n = n(n-1)，对任意自然数 n，n(n-1) 是连续整数之积，必能被 2 整除。</p>
+<p>（可进一步用演绎推理验证：n(n-1) 中 n 和 n-1 必有一个是偶数，故乘积为偶数。）</p>
+<p><strong>归纳推理的局限：</strong>
+- 仅凭有限例子不能保证一般结论正确
+- 名例：素数 2, 3, 5, 7 都是奇数 → 错误归纳"所有素数都是奇数"（反例：2 是偶素数）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 用演绎推理推出结论：</p>
+<p>已知：平行线的同旁内角互补（定理），AB∥CD，直线 EF 截两线，∠1 = 70°（∠1 是同旁内角之一），求另一同旁内角∠2。</p>
+<p>解：
+∵ AB∥CD（已知）
+∴ ∠1 + ∠2 = 180°（平行线同旁内角互补）
+∵ ∠1 = 70°（已知）
+∴ ∠2 = 180° - 70° = 110°</p>
+<p><strong>例题2：</strong> 归纳规律并验证</p>
+<p>1 = 1
+1+2 = 3
+1+2+3 = 6
+1+2+3+4 = 10</p>
+<p>归纳：前 n 个自然数之和 = n(n+1)/2</p>
+<p>验证：数学归纳法（高中）或直接计算验证特殊值。</p>
+<h3>推理的依据层级</h3>
+<table>
+<thead>
+<tr>
+<th>依据类型</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已知条件</td>
+<td>题目给出的已知</td>
+</tr>
+<tr>
+<td>公理</td>
+<td>两点确定直线</td>
+</tr>
+<tr>
+<td>定义</td>
+<td>对顶角的定义</td>
+</tr>
+<tr>
+<td>定理</td>
+<td>对顶角相等定理</td>
+</tr>
+<tr>
+<td>之前推出的结论</td>
+<td>本题已证的步骤</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理</td>
+<td>reasoning</td>
+<td>从前提推导结论</td>
+</tr>
+<tr>
+<td>演绎推理</td>
+<td>deductive reasoning</td>
+<td>从一般到特殊</td>
+</tr>
+<tr>
+<td>归纳推理</td>
+<td>inductive reasoning</td>
+<td>从特殊到一般</td>
+</tr>
+<tr>
+<td>三段论</td>
+<td>syllogism</td>
+<td>大前提+小前提=结论</td>
+</tr>
+<tr>
+<td>前提</td>
+<td>premise</td>
+<td>推理的出发点</td>
+</tr>
+<tr>
+<td>结论</td>
+<td>conclusion</td>
+<td>推理的终点</td>
+</tr>
+<tr>
+<td>反例</td>
+<td>counterexample</td>
+<td>证明命题为假的例子</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第五章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>拓展</strong>：亚里士多德《论证分析》；波利亚《数学与猜想》（归纳推理）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">命题</a></li>
+<li><a href="../atoms/126-定理.html">定理</a></li>
+<li><a class="dead" title="未收录">几何证明入门</a></li>
+<li><a class="dead" title="未收录">对顶角</a></li>
+<li><a class="dead" title="未收录">平行线</a></li>
+<li><a href="../atoms/037-推理.html">推理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-14.html">2008-理-14</a></li>
+<li><a href="../exam/2009-理-14.html">2009-理-14</a></li>
+<li><a href="../exam/2009-理-20.html">2009-理-20</a></li>
+<li><a href="../exam/2012-文-20.html">2012-文-20</a></li>
+<li><a href="../exam/2016-理-08.html">2016-理-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

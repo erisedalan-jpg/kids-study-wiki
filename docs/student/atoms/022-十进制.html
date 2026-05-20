@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>十进制</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>十进制</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>7</span><span><strong>学段</strong>[学前, 小学, 初中, 高中]</span><span><strong>主题</strong>[数感, 进位]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 十进制, decimal system, base ten</p><h1>十进制</h1>
+<blockquote>
+<p><strong>一句话</strong>：满了 10 个，就把它们打包成一个"更大单位"——这就是十进制的规律。
+<strong>English</strong>: In the decimal system (base ten), every time you reach 10, you bundle them up and move to the next place value.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>你有 10 根手指，正好用来数数！数到 10 之后，我们不再说"十一根手指"——而是换一个新的位置，从头再数：11、12、13……</p>
+<p><strong>游戏：换豆子！</strong>
+- 准备很多小豆子
+- 每数够 10 颗，就换成 1 颗大豆（或 1 枚硬币）
+- 比如 23 颗小豆子 = 2 颗大豆 + 3 颗小豆子</p>
+<p>这就是满 10 换 1——十进制的样子！</p>
+<p><strong>共读小活动：</strong> 摆出一排 10 颗豆子，换成 1 枚硬币，再摆 10 颗，再换……看看 30 颗豆子换成几枚硬币（答案：3 枚）。</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>位值：每个数字所在的位置很重要</h3>
+<p>"123"里的三个"1、2、3"意思大不同：</p>
+<table>
+<thead>
+<tr>
+<th>数字</th>
+<th>位置</th>
+<th>代表的值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>百位</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>十位</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>个位</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>所以 123 = 100 + 20 + 3。这叫<strong>位值（place value）</strong>——同一个数字，位置不同，值就不同。</p>
+<h3>十进制的结构</h3>
+<pre><code>…千位  百位  十位  个位
+   1    0    2    5   = 1025
+</code></pre>
+<p>每向左一位，就乘以 10：
+- 个位：10⁰ = 1
+- 十位：10¹ = 10
+- 百位：10² = 100
+- 千位：10³ = 1000</p>
+<h3>为什么人类用十进制？</h3>
+<p>最普遍的说法：因为人有 10 根手指，最早用手指计数自然产生了十进制。不同文明独立发展，都用了十进制（或接近十进制的系统）。不过历史上有例外——古代玛雅人用二十进制（20 根手指+脚趾），古巴比伦用六十进制（<strong>待家长核对</strong>）。</p>
+<p>想了解更多运算，可以看 <a class="dead" title="未收录">加法</a>、<a class="dead" title="未收录">凑十</a>。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>其他进制</h3>
+<p>十进制不是唯一的计数系统：</p>
+<table>
+<thead>
+<tr>
+<th>进制</th>
+<th>基数</th>
+<th>使用的数字</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二进制（Binary）</td>
+<td>2</td>
+<td>0, 1</td>
+<td>计算机内部</td>
+</tr>
+<tr>
+<td>八进制（Octal）</td>
+<td>8</td>
+<td>0–7</td>
+<td>Unix 文件权限</td>
+</tr>
+<tr>
+<td>十六进制（Hexadecimal）</td>
+<td>16</td>
+<td>0–9, A–F</td>
+<td>颜色代码、内存地址</td>
+</tr>
+<tr>
+<td>六十进制（Sexagesimal）</td>
+<td>60</td>
+<td>—</td>
+<td>时间、角度（源自古巴比伦，<strong>待家长核对</strong>）</td>
+</tr>
+</tbody>
+</table>
+<p>例：十进制 255 = 二进制 11111111 = 十六进制 FF</p>
+<p>颜色 <code>#FF0000</code> 是红色：R=255, G=0, B=0。</p>
+<h3>位值制的发明史</h3>
+<p>位值制（positional notation）是数学史上最重要的发明之一。关键是<strong>零的引入</strong>：没有 0，就没法区分 12 和 102（古罗马数字体系就没有位值制，做乘除法极其繁琐）。</p>
+<p>印度数学家约在公元 5-7 世纪完善了包含 0 的十进制位值系统，经阿拉伯数学家传入欧洲，成为今天全球通用的"阿拉伯数字"系统。（<strong>待家长核对具体年代和传播路径</strong>）</p>
+<h3>二进制与计算机</h3>
+<p>所有计算机内部只用 0 和 1（二进制），因为电路的开/关状态正好对应两种值。十进制 13 = 二进制 1101（8+4+0+1）。</p>
+<p>CPU 做加法，用的是二进制加法器；内存地址用十六进制表示，方便程序员读写（每个十六进制位 = 4 个二进制位）。</p>
+<p>学会不同进制之间的转换，是计算机科学的入门技能。</p>
+<h3>古巴比伦六十进制的遗产</h3>
+<p>六十进制至今留存在我们日常生活中：
+- 1 小时 = 60 分钟，1 分钟 = 60 秒
+- 1 圆周 = 360 度（6 × 60）</p>
+<p>60 有很多因数（1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60），分割起来方便，这是古人选择 60 的原因之一。（<strong>待家长核对古巴比伦六十进制史实</strong>）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十进制</td>
+<td>decimal system / base ten</td>
+<td>n.</td>
+<td>核心概念</td>
+</tr>
+<tr>
+<td>位值</td>
+<td>place value</td>
+<td>n.</td>
+<td>每个数字的位置含义</td>
+</tr>
+<tr>
+<td>个位</td>
+<td>ones place</td>
+<td>n.</td>
+<td>最小的位</td>
+</tr>
+<tr>
+<td>十位</td>
+<td>tens place</td>
+<td>n.</td>
+<td>第二位</td>
+</tr>
+<tr>
+<td>百位</td>
+<td>hundreds place</td>
+<td>n.</td>
+<td>第三位</td>
+</tr>
+<tr>
+<td>进位</td>
+<td>carry / regroup</td>
+<td>v./n.</td>
+<td>满 10 换位</td>
+</tr>
+<tr>
+<td>二进制</td>
+<td>binary</td>
+<td>n.</td>
+<td>基数为 2</td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>hexadecimal</td>
+<td>n.</td>
+<td>基数为 16</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>我们用的是十进制。</td>
+<td>We use the decimal system (base ten).</td>
+</tr>
+<tr>
+<td>123 里，1 在百位，2 在十位，3 在个位。</td>
+<td>In 123, 1 is in the hundreds place, 2 in the tens, and 3 in the ones.</td>
+</tr>
+<tr>
+<td>满 10 进 1。</td>
+<td>Regroup when you reach ten.</td>
+</tr>
+<tr>
+<td>计算机用二进制。</td>
+<td>Computers use binary (base two).</td>
+</tr>
+<tr>
+<td>颜色代码用十六进制。</td>
+<td>Color codes use hexadecimal.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li><strong>《数字从哪里来？》</strong> — 🚧 占位，家长可查找介绍数字历史（印度-阿拉伯数字、0 的发明）的科普童书。适龄：7-10 岁。</li>
+<li>🚧 关于"十进制"的低幼专项绘本较少，推荐配合积木（单块 vs 十连块 vs 百块板）演示位值，比绘本更直观。</li>
+<li>🚧 乐高 / 积木类玩具（1 块 = 个位，1 条 = 十位，1 片 = 百位）是极好的十进制实物模型。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"为什么 10 后面是 11，不是别的数？"</strong> → 可以说："因为我们用十进制——有 10 个了就打包成一个'十'，个位重新从 1 开始数。10 = 1 个十，0 个一；11 = 1 个十，1 个一。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"为什么要有位值？"</strong> → 可以说："如果没有位值，123 和 321 写起来一模一样，没法区分。有了位值，每个数字站在哪个位置就代表不同的大小，读一眼就知道这个数是大还是小。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"计算机为什么用二进制？"</strong> → 可以说："计算机里面都是电路，电路要么开着（1），要么关着（0）。用两种状态最简单、最稳定，不容易出错。所以所有数字在计算机里都变成了 0 和 1 的组合。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 用单位积木演示：10 块单块变成 1 条十块；10 条十块变成 1 片百块。摆出 135：1 片百块 + 3 条十块 + 5 块单块，让孩子数一数总共几块。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第一学段"数与代数"（<strong>待家长核对</strong>）</li>
+<li><strong>教材</strong>：人教版数学一年级上册"认识 11-20"、二年级"100 以内的数"（<strong>待家长核对版本</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/十进制</li>
+<li><strong>拓展阅读</strong>：零的发明史；二进制与计算机入门；古巴比伦六十进制</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-06，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">1-10</a> · <a class="dead" title="未收录">凑十</a> · <a class="dead" title="未收录">加法</a> · <a class="dead" title="未收录">人民币认识</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

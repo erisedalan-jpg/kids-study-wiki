@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛伦兹力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>洛伦兹力</h1><div class="meta-card"><span><strong>权重</strong>36</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 带电粒子在磁场中运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 洛伦兹力, Lorentz force, 磁场对运动电荷的力</p><h2>🎓 洛伦兹力（Lorentz Force）</h2>
+<h3>定义</h3>
+<p><strong>洛伦兹力</strong>是磁场对<strong>运动电荷</strong>施加的力。</p>
+<p>$$f = qvB\sin\theta$$</p>
+<p>其中：
+- $f$：洛伦兹力（N）
+- $q$：电荷量（C）
+- $v$：粒子速度（m/s）
+- $B$：磁感应强度（T）
+- $\theta$：速度方向与磁场方向的夹角</p>
+<table>
+<thead>
+<tr>
+<th>特殊情形</th>
+<th>$\theta$</th>
+<th>$f$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v \perp B$</td>
+<td>$90°$</td>
+<td>$f = qvB$（最大）</td>
+</tr>
+<tr>
+<td>$v \parallel B$</td>
+<td>$0°$ 或 $180°$</td>
+<td>$f = 0$</td>
+</tr>
+</tbody>
+</table>
+<h3>最重要性质：洛伦兹力不做功</h3>
+<p>$$W = \boldsymbol{f} \cdot \boldsymbol{v}\Delta t = 0$$</p>
+<p>因为洛伦兹力始终<strong>垂直于速度方向</strong>，所以：
+- 不改变粒子的<strong>速率</strong>（动能不变）
+- 只改变粒子的<strong>速度方向</strong></p>
+<p><strong>推论</strong>：在纯磁场中运动的带电粒子，动能保持不变。</p>
+<h3>洛伦兹力与安培力的关系</h3>
+<p>安培力是洛伦兹力的宏观表现：</p>
+<p>$$F_{安培} = nqv_d SL \cdot B = qv_d B \cdot nSL = I L B$$</p>
+<p>其中 $n$ 为载流子数密度，$v_d$ 为漂移速度，$nSL$ 为导线内总电荷数。</p>
+<p>本质上，安培力 = 所有传导电子洛伦兹力之和。</p>
+<h3>洛伦兹力方向</h3>
+<p>使用<strong>左手定则</strong>（见 <a class="dead" title="未收录">洛伦兹力方向</a>）：
+- 四指指向速度方向（正电荷），$B$ 穿手心
+- 大拇指所指 = 洛伦兹力方向
+- 负电荷：四指指<strong>速度反方向</strong></p>
+<h3>在匀强磁场中的圆周运动</h3>
+<p>当 $v \perp B$ 时，洛伦兹力提供向心力：</p>
+<p>$$qvB = \frac{mv^2}{r} \Rightarrow r = \frac{mv}{qB}$$</p>
+<p>见 <a class="dead" title="未收录">带电粒子在磁场中圆周运动</a>。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：质子（$m = 1.67\times10^{-27}\,\text{kg}$，$q = 1.6\times10^{-19}\,\text{C}$）以 $v = 2\times10^6\,\text{m/s}$ 垂直射入 $B = 0.3\,\text{T}$ 的匀强磁场，求洛伦兹力大小和轨道半径。</p>
+<p>$$f = qvB = 1.6\times10^{-19}\times2\times10^6\times0.3 = 9.6\times10^{-14}\,\text{N}$$</p>
+<p>$$r = \frac{mv}{qB} = \frac{1.67\times10^{-27}\times2\times10^6}{1.6\times10^{-19}\times0.3} \approx 0.07\,\text{m} = 7\,\text{cm}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>洛伦兹力<strong>永远不做功</strong>，是高中物理的重要结论，不要与安培力做功混淆。</li>
+<li>当 $v \parallel B$ 时（粒子平行磁场运动），$f = 0$，粒子做<strong>匀速直线运动</strong>。</li>
+<li>负电荷受的洛伦兹力方向与正电荷<strong>相反</strong>（同速度、同磁场下）。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了匀速圆周运动和向心力；本节引入洛伦兹力，当 $v \perp B$ 时洛伦兹力提供向心力，是带电粒子在磁场中做圆周运动的根本原因。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十三章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/洛伦兹力">维基百科·洛伦兹力</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">洛伦兹力方向</a></li>
+<li><a class="dead" title="未收录">带电粒子在磁场中圆周运动</a></li>
+<li><a class="dead" title="未收录">带电粒子在磁场中半径周期</a></li>
+<li><a class="dead" title="未收录">安培力</a></li>
+<li><a class="dead" title="未收录">霍尔效应</a></li>
+<li><a class="dead" title="未收录">带电粒子复合场运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-07</a></li>
+<li><a href="../exam/2009-全国Ⅱ-12.html">2009-全国Ⅱ-12</a></li>
+<li><a class="dead" title="未收录">2010-北京-11</a></li>
+<li><a href="../exam/2010-新课标Ⅰ-12.html">2010-新课标Ⅰ-12</a></li>
+<li><a class="dead" title="未收录">2012-北京-04</a></li>
+<li><a href="../exam/2012-新课标-12.html">2012-新课标-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-12</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2014-北京-04</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2015-北京-05</a></li>
+<li><a class="dead" title="未收录">2016-北京-05</a></li>
+<li><a class="dead" title="未收录">2016-北京-11</a></li>
+<li><a class="dead" title="未收录">2017-北京-12</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-03</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-05.html">2017-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2018-北京-06</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-11.html">2020-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2021-北京-18</a></li>
+<li><a class="dead" title="未收录">2022-北京-07</a></li>
+<li><a class="dead" title="未收录">2022-北京-14</a></li>
+<li><a class="dead" title="未收录">2022-北京-20</a></li>
+<li><a class="dead" title="未收录">2022-湖南-13</a></li>
+<li><a href="../exam/2023-新课标-05.html">2023-新课标-05</a></li>
+<li><a class="dead" title="未收录">2024-北京-22</a></li>
+<li><a href="../exam/2024-辽宁-13.html">2024-辽宁-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

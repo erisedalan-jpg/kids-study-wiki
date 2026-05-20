@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>折射率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>折射率</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 折射率, index of refraction, refractive index</p><h2>🎓 折射率</h2>
+<h3>定义</h3>
+<p><strong>折射率</strong>（refractive index）是描述光在介质中传播速度相对于真空中速度减慢程度的物理量。</p>
+<p><strong>绝对折射率</strong>（相对于真空）：</p>
+<p>$$n = \frac{c}{v}$$</p>
+<ul>
+<li>$c$：光在真空中的速度，$c = 3\times10^8\text{ m/s}$</li>
+<li>$v$：光在该介质中的速度（$v &lt; c$）</li>
+<li>$n \geq 1$（真空 $n=1$，其他介质 $n&gt;1$）</li>
+</ul>
+<h3>斯涅尔定律中的折射率</h3>
+<p>光从介质1进入介质2：</p>
+<p>$$n_1\sin\theta_1 = n_2\sin\theta_2$$</p>
+<p>相对折射率：</p>
+<p>$$n_{21} = \frac{n_2}{n_1} = \frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2}$$</p>
+<h3>常见介质折射率</h3>
+<table>
+<thead>
+<tr>
+<th>介质</th>
+<th>折射率 $n$</th>
+<th>光速 $v$（m/s）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真空</td>
+<td>1.000</td>
+<td>$3.00\times10^8$</td>
+</tr>
+<tr>
+<td>空气</td>
+<td>1.0003 ≈ 1</td>
+<td>$\approx 3.00\times10^8$</td>
+</tr>
+<tr>
+<td>水</td>
+<td>1.33</td>
+<td>$2.26\times10^8$</td>
+</tr>
+<tr>
+<td>玻璃（普通）</td>
+<td>1.5</td>
+<td>$2.00\times10^8$</td>
+</tr>
+<tr>
+<td>金刚石</td>
+<td>2.42</td>
+<td>$1.24\times10^8$</td>
+</tr>
+</tbody>
+</table>
+<h3>折射率与颜色（色散）</h3>
+<p>同一介质对不同颜色（频率）的光，折射率不同：</p>
+<p>$$n_{紫} &gt; n_{蓝} &gt; n_{绿} &gt; n_{黄} &gt; n_{橙} &gt; n_{红}$$</p>
+<p>紫光折射率最大，在介质中速度最小；红光折射率最小，速度最大。</p>
+<p>这就是<strong>色散</strong>的原因——棱镜将白光分解为彩虹色谱。</p>
+<h3>折射率与全反射的关系</h3>
+<p>$$\sin C = \frac{1}{n} \quad \text{（光从介质射向空气时的临界角）}$$</p>
+<p>折射率越大，临界角越小，越容易发生全反射。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：光在某介质中速度 $v = 2\times10^8\text{ m/s}$，求该介质折射率。</p>
+<p>$$n = \frac{c}{v} = \frac{3\times10^8}{2\times10^8} = 1.5$$</p>
+<p><strong>例2</strong>：光以 $\theta_1 = 30°$ 从空气射入折射率 $n = \sqrt{3}$ 的介质，求折射角。</p>
+<p>$$\sin\theta_2 = \frac{n_1\sin\theta_1}{n_2} = \frac{1\times0.5}{\sqrt{3}} \approx 0.289$$</p>
+<p>$$\theta_2 \approx 16.8°$$</p>
+<p><strong>例3</strong>：折射率 $n = 1.5$ 的玻璃，光在其中的速度？</p>
+<p>$$v = \frac{c}{n} = \frac{3\times10^8}{1.5} = 2\times10^8\text{ m/s}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>折射率恒 ≥ 1</strong>：光速不能超过真空中速度，所以 $v \leq c$，$n \geq 1$。</li>
+<li><strong>折射率是介质的属性</strong>：同一介质对不同颜色光折射率不同；对同一颜色光，折射率固定。</li>
+<li><strong>空气折射率近似为 1</strong>：计算时通常取 $n_{空气} = 1$。</li>
+<li><strong>"光密"不是密度大</strong>：折射率大的是光密介质，与物理密度无必然关系（如某些液体折射率可能大于固体）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：折射率 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">光的折射-高中</a></li>
+<li><a href="../atoms/343-全反射.html">全反射</a></li>
+<li><a href="../atoms/336-临界角.html">临界角</a></li>
+<li><a class="dead" title="未收录">光导纤维</a></li>
+<li><a class="dead" title="未收录">光的色散</a></li>
+<li><a class="dead" title="未收录">双缝干涉实验</a></li>
+<li><a class="dead" title="未收录">光的反射-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-02</a></li>
+<li><a href="../exam/2010-新课标Ⅰ-14.html">2010-新课标Ⅰ-14</a></li>
+<li><a class="dead" title="未收录">2013-北京-02</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-15</a></li>
+<li><a href="../exam/2021-全国乙-16.html">2021-全国乙-16</a></li>
+<li><a class="dead" title="未收录">2021-北京-02</a></li>
+<li><a class="dead" title="未收录">2021-湖南-18</a></li>
+<li><a class="dead" title="未收录">2023-湖南-07</a></li>
+<li><a class="dead" title="未收录">2024-北京-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>集合运算</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 集合运算, Set Operations</p><h1>集合运算</h1>
+<blockquote>
+<p><strong>一句话</strong>：集合运算是由已知集合构造新集合的数学操作，主要包括并、交、补（差）运算，是描述与处理分类关系的核心工具。
+<strong>English</strong>: Set operations are mathematical processes, such as union, intersection, and complement, used to construct new sets from given ones, serving as a fundamental tool for describing and handling classification relationships.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+对于两个集合 $A$ 和 $B$（通常在某全集 $U$ 下讨论）：
+- <strong>并集</strong> $A \cup B = { x \mid x \in A \text{ 或 } x \in B }$；
+- <strong>交集</strong> $A \cap B = { x \mid x \in A \text{ 且 } x \in B }$；
+- <strong>补集</strong> $\complement_U A = { x \mid x \in U \text{ 且 } x \notin A }$（常记作 $\overline{A}$）；
+- <strong>差集</strong> $A \setminus B = { x \mid x \in A \text{ 且 } x \notin B }$。
+核心性质：交换律、结合律、分配律（$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$，其对偶亦成立）以及德摩根律：
+$\complement_U (A\cup B)=\complement_U A \cap \complement_U B$，
+$\complement_U (A\cap B)=\complement_U A \cup \complement_U B$。</p>
+<p><strong>关键方法</strong>
+1. <strong>Venn 图与数轴</strong>：对于离散有限集，利用 Venn 图直观处理容斥关系；对于连续数集（不等式解集），借助数轴进行交、并、补运算，尤其注意端点虚实。
+2. <strong>分类讨论</strong>：参数含集合关系时，常需讨论子集是否为空集；补集运算常转化为“全集减去集合本身”进行元素列举。
+3. <strong>转化与化归</strong>：将抽象集合条件转化为具体不等式或方程，如 $A\subseteq B$ 转化为对应区间端点的比较关系。</p>
+<p><strong>典型应用</strong>
+高考常以选择题或填空题出现，主要设问角度：
+- 给定两个不等式解集，求 $A\cap B$、$A\cup (\complement_U B)$ 等，考查数集运算与区间端点取舍。
+- 已知集合关系（如 $A\cap B = B$），求参数取值范围，需注意 $B=\varnothing$ 的情形。
+- 新定义运算：定义一种新的集合运算（如 $A\otimes B = \complement_U(A\cap B)$），要求计算具体结果或判断运算律是否成立，考查抽象符号理解与性质验证。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略空集</strong>：在 $A\subseteq B$ 或 $A\cap B=A$ 等条件中，忽视 $A=\varnothing$ 的可能，导致参数漏解。</li>
+<li><strong>端点取舍混淆</strong>：用数轴求解不等式解集的交并补时，等号是否可取判断错误，常见误把开区间当成闭区间或反之。</li>
+<li><strong>补集范围误认</strong>：计算补集时未明确全集 $U$，例如题目隐含 $U=\mathbf{R}$，却误当成整数集或给定有限集。</li>
+<li><strong>运算律记混</strong>：德摩根律记忆错误，写反并集与交集符号，或在分配律应用中变形出错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合</td>
+<td>Set</td>
+<td>具有某种特定性质的事物的总体</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>Element</td>
+<td>构成集合的每一个对象</td>
+</tr>
+<tr>
+<td>并集</td>
+<td>Union</td>
+<td>由所有属于A或属于B的元素组成的集合</td>
+</tr>
+<tr>
+<td>交集</td>
+<td>Intersection</td>
+<td>由所有既属于A又属于B的元素组成的集合</td>
+</tr>
+<tr>
+<td>补集</td>
+<td>Complement</td>
+<td>在全集中所有不属于A的元素组成的集合</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">集合的概念与表示</a></li>
+<li><a class="dead" title="未收录">简易逻辑</a></li>
+<li><a class="dead" title="未收录">函数定义域</a></li>
+<li><a href="../atoms/083-不等式.html">不等式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-01.html">2009-文-01</a></li>
+<li><a href="../exam/2009-理-02.html">2009-理-02</a></li>
+<li><a href="../exam/2010-文-09.html">2010-文-09</a></li>
+<li><a href="../exam/2013-文-10.html">2013-文-10</a></li>
+<li><a href="../exam/2013-理-01.html">2013-理-01</a></li>
+<li><a href="../exam/2016-文-14.html">2016-文-14</a></li>
+<li><a href="../exam/2016-理-01.html">2016-理-01</a></li>
+<li><a href="../exam/2019-文-02.html">2019-文-02</a></li>
+<li><a class="dead" title="未收录">2021-北京-01</a></li>
+<li><a href="../exam/2021-文-01.html">2021-文-01</a></li>
+<li><a class="dead" title="未收录">2022-北京-01</a></li>
+<li><a class="dead" title="未收录">2024-北京-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

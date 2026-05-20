@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反应热</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>反应热</h1><div class="meta-card"><span><strong>权重</strong>40</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>4</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 反应热, heat of reaction, 反应焓</p><h1>反应热</h1>
+<blockquote>
+<p><strong>一句话</strong>：反应热是在恒压或恒容条件下，化学反应过程中释放或吸收的热量，常用ΔH（焓变）表示，单位为kJ/mol。
+<strong>English</strong>: The heat of reaction is the heat released or absorbed during a chemical reaction under constant pressure or volume, commonly expressed as ΔH (enthalpy change) in kJ/mol.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>反应热</strong>：在一定条件（恒压或恒温）下，发生一定量化学反应所释放或吸收的热量。</p>
+<p>高中化学主要讨论<strong>恒压反应热</strong> = <strong>焓变（ΔH）</strong>。</p>
+<p>规定：
+- ΔH &lt; 0：放热反应，反应热为负值
+- ΔH &gt; 0：吸热反应，反应热为正值</p>
+<h3>常见反应热的类型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>定义</th>
+<th>符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>燃烧热</td>
+<td>1 mol物质完全燃烧生成稳定氧化物所放出的热量</td>
+<td>ΔH_c</td>
+</tr>
+<tr>
+<td>中和热</td>
+<td>稀溶液中强酸强碱反应生成1 mol H₂O的热量</td>
+<td>ΔH_n</td>
+</tr>
+<tr>
+<td>溶解热</td>
+<td>1 mol物质溶于水时的热量变化</td>
+<td>ΔH_s</td>
+</tr>
+<tr>
+<td>生成热</td>
+<td>由稳定单质生成1 mol化合物的热量变化</td>
+<td>ΔH_f</td>
+</tr>
+</tbody>
+</table>
+<h3>标准燃烧热（部分）</h3>
+<table>
+<thead>
+<tr>
+<th>物质</th>
+<th>燃烧热 ΔH (kJ/mol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂(g)</td>
+<td>-285.8</td>
+</tr>
+<tr>
+<td>C(石墨,s)</td>
+<td>-393.5</td>
+</tr>
+<tr>
+<td>CH₄(g)</td>
+<td>-890.3</td>
+</tr>
+<tr>
+<td>C₂H₅OH(l)</td>
+<td>-1366.8</td>
+</tr>
+<tr>
+<td>C₆H₁₂O₆(s)</td>
+<td>-2803.0</td>
+</tr>
+</tbody>
+</table>
+<h3>中和热</h3>
+<p><strong>强酸强碱稀溶液中和热</strong>：
+$$\text{H}^+(aq) + \text{OH}^-(aq) \rightarrow \text{H}_2\text{O}(l) \quad \Delta H = -57.3 \text{ kJ/mol}$$</p>
+<p><strong>注意</strong>：
+- 弱酸（如CH₃COOH）或弱碱（如NH₃·H₂O）参与时，中和热绝对值&lt;57.3 kJ/mol（弱电解质电离吸热）
+- 若酸碱为浓溶液，结果也会偏差（稀释热）</p>
+<h3>反应热的计算</h3>
+<p><strong>方法1：键能法</strong>
+$$\Delta H = \sum E_\text{(反应物键能)} - \sum E_\text{(生成物键能)}$$</p>
+<p><strong>方法2：盖斯定律</strong>
+反应热只与初态和终态有关，与路径无关：
+若：反应1 + 反应2 = 目标反应，则：
+$$\Delta H_\text{目标} = \Delta H_1 + \Delta H_2$$</p>
+<p><strong>示例（盖斯定律）</strong>：
+已知：
+- ① C(s) + O₂(g) → CO₂(g)，ΔH₁ = -393.5 kJ/mol
+- ② CO(g) + ½O₂(g) → CO₂(g)，ΔH₂ = -283.0 kJ/mol</p>
+<p>求：C(s) + ½O₂(g) → CO(g)，ΔH = ?</p>
+<p>解：①-② → C + ½O₂ → CO
+ΔH = ΔH₁ - ΔH₂ = -393.5 - (-283.0) = -110.5 kJ/mol</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：1 g CH₄完全燃烧放热多少kJ？（燃烧热 = -890.3 kJ/mol）</p>
+<p><strong>分析</strong>：M(CH₄) = 16 g/mol，1g CH₄ = 1/16 mol
+Q = (1/16) × 890.3 = 55.6 kJ</p>
+<p><strong>例2</strong>：实验测定盐酸与NaOH中和热时，测得温度升高了3.4°C，溶液总体积为100 mL（密度近似为1 g/mL），计算中和热。</p>
+<p><strong>分析</strong>：
+Q = 100 × 4.18 × 3.4 = 1421 J = 1.421 kJ
+n(H₂O) = 0.05 mol
+中和热 = 1.421/0.05 = 28.4 kJ/mol（实验值偏小，热量损失）</p>
+<h3>易错点</h3>
+<ul>
+<li>燃烧热指1 mol物质完全燃烧，不是燃烧1g</li>
+<li>中和热规定为生成1 mol H₂O的热量，不是1 mol酸或碱</li>
+<li>盖斯定律中，方程式倒写时ΔH变号，乘以系数时ΔH也同倍数变化</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>反应热</td>
+<td>Heat of reaction</td>
+</tr>
+<tr>
+<td>燃烧热</td>
+<td>Heat of combustion</td>
+</tr>
+<tr>
+<td>中和热</td>
+<td>Heat of neutralization</td>
+</tr>
+<tr>
+<td>生成热</td>
+<td>Heat of formation</td>
+</tr>
+<tr>
+<td>盖斯定律</td>
+<td>Hess's Law</td>
+</tr>
+<tr>
+<td>焓变</td>
+<td>Enthalpy change</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>盖斯定律指出，反应热只与反应的初态和终态有关，与路径无关。</td>
+<td>Hess's Law states that the heat of reaction depends only on the initial and final states, not on the pathway.</td>
+</tr>
+<tr>
+<td>甲烷的燃烧热为-890.3 kJ/mol。</td>
+<td>The heat of combustion of methane is -890.3 kJ/mol.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学必修 第二册.pdf</a> 第六章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"反应热"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">焓变</a> · <a class="dead" title="未收录">放热反应</a> · <a class="dead" title="未收录">吸热反应</a> · <a class="dead" title="未收录">化学能</a> · <a href="../atoms/284-化学平衡.html">化学平衡</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-09.html">2008-全国Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2010-北京-09</a></li>
+<li><a href="../exam/2010-新课标-05.html">2010-新课标-05</a></li>
+<li><a class="dead" title="未收录">2011-北京-08</a></li>
+<li><a href="../exam/2011-新课标-09.html">2011-新课标-09</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-10.html">2020-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2021-北京-10</a></li>
+<li><a class="dead" title="未收录">2023-北京-13</a></li>
+<li><a class="dead" title="未收录">2023-北京-16</a></li>
+<li><a href="../exam/2023-新课标-10.html">2023-新课标-10</a></li>
+<li><a href="../exam/2024-辽宁-18.html">2024-辽宁-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

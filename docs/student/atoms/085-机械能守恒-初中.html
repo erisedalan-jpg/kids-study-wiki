@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>机械能守恒定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>机械能守恒定律</h1><div class="meta-card"><span><strong>权重</strong>19</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八下, 第十一章功和机械能, 机械能]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 机械能守恒-初中, 机械能守恒定律, 机械能守恒, conservation of mechanical energy</p><h1>机械能守恒定律</h1>
+<blockquote>
+<p><strong>一句话</strong>：只有重力（和弹力）做功时，物体的动能和势能可以相互转化，但总机械能保持不变。
+<strong>English</strong>: When only gravity (and elastic forces) do work, kinetic and potential energy interconvert while total mechanical energy remains constant.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>一个球从高处落下，速度越来越快（动能增大），高度越来越低（势能减小）——但神奇的是，动能增加的量刚好等于势能减少的量！两者之和（机械能）始终不变。</p>
+<p>这就是<strong>机械能守恒定律</strong>：</p>
+<p><strong>条件：</strong> 只有重力做功（没有空气阻力，没有摩擦力，没有其他力）</p>
+<p><strong>结论：</strong> 动能 + 势能 = 常数（总机械能不变）</p>
+<p><strong>数学表达：</strong>
+$$E_{k1} + E_{p1} = E_{k2} + E_{p2}$$</p>
+<p>或：
+$$\Delta E_k = -\Delta E_p \quad \text{（动能增多少，势能就减多少）}$$</p>
+<p><strong>不守恒的情况：</strong> 有摩擦或空气阻力时，一部分机械能转化为热能，机械能减小。</p>
+<p><strong>例子（理想情况）：</strong>
+- 跳水运动员：从 10 m 高台跳下，触水时速度（由机械能守恒计算）
+- 单摆：来回摆动，最高点势能最大，最低点动能最大，总量不变</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定律表述</h3>
+<p><strong>机械能守恒定律：</strong> 在只有重力（和弹力）做功的条件下，物体的动能和势能可以相互转化，但总机械能保持不变。</p>
+<p>$$E_{机} = E_k + E_p = \text{常数}$$</p>
+<p>$$E_{k1} + E_{p1} = E_{k2} + E_{p2}$$</p>
+<h3>守恒条件分析</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>机械能是否守恒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只有重力做功</td>
+<td>✅ 守恒</td>
+</tr>
+<tr>
+<td>只有弹力做功（弹簧）</td>
+<td>✅ 守恒</td>
+</tr>
+<tr>
+<td>有摩擦力做功</td>
+<td>❌ 不守恒（减小）</td>
+</tr>
+<tr>
+<td>有空气阻力做功</td>
+<td>❌ 不守恒（减小）</td>
+</tr>
+<tr>
+<td>有外力做正功（如电机）</td>
+<td>❌ 不守恒（增大）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>本质：</strong> 机械能守恒是能量守恒（热力学第一定律）在特殊条件（无耗散）下的体现。</p>
+<h3>能量方程的推广</h3>
+<p><strong>有摩擦时（更一般的形式）：</strong></p>
+<p>$$E_{k1} + E_{p1} = E_{k2} + E_{p2} + W_{摩擦}$$</p>
+<p>其中 $W_{摩擦}$ 是摩擦力做功的大小（正值），等于转化为热能的量。</p>
+<h3>典型例题</h3>
+<p><strong>例1：</strong> 一个 2 kg 的球从 5 m 高处静止释放，忽略空气阻力，求触地时速度。（$g = 10\text{ N/kg}$）</p>
+<p>解：机械能守恒，选地面为参考面：</p>
+<p>初始：$E_{机} = mgh = 2 \times 10 \times 5 = 100\text{ J}$（$v_0 = 0$，$E_k = 0$）</p>
+<p>触地时（$h = 0$）：$E_{机} = E_k = \frac{1}{2}mv^2$</p>
+<p>$100 = \frac{1}{2} \times 2 \times v^2 = v^2$</p>
+<p>$v = 10\text{ m/s}$</p>
+<p><strong>例2：</strong> 竖直上抛，初速度 20 m/s，最高点高度是多少？（$g = 10\text{ N/kg}$，忽略空气阻力）</p>
+<p>解：初始：$E_k = \frac{1}{2}mv_0^2 = \frac{1}{2}m \times 400 = 200m$</p>
+<p>最高点（$v = 0$）：$E_p = mgh$</p>
+<p>机械能守恒：$200m = mgh$</p>
+<p>$h = 200/10 = 20\text{ m}$</p>
+<p><strong>例3：</strong> 实际的单摆，摆动 10 次后摆幅减小，说明了什么？</p>
+<p>解：空气阻力和支点摩擦做功，机械能不守恒，机械能逐渐减小（转化为内能），所以摆幅越来越小。</p>
+<h3>应用：求速度的通用方法</h3>
+<p><strong>方法：</strong> 在两个位置之间应用机械能守恒（或考虑摩擦的能量方程），联立求解。</p>
+<p>$$\frac{1}{2}mv_1^2 + mgh_1 = \frac{1}{2}mv_2^2 + mgh_2$$</p>
+<p>（两边消去 $m$，与质量无关！）</p>
+<p>$$v_2 = \sqrt{v_1^2 + 2g(h_1 - h_2)}$$</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>机械能守恒不是绝对的</strong>，只在特定条件下成立（只有重力/弹力做功）。</li>
+<li>机械能守恒中，动能和势能分别变化，但<strong>总量不变</strong>——不是各自都不变。</li>
+<li>竖直上抛忽略空气阻力时守恒；实际竖直上抛不守恒（触地速度 &lt; 抛出速度）。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育物理课程标准（2022 年版），第三学段"功和机械能"（<strong>待家长核对页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级下册.pdf</a> 第十一章（<strong>待家长核对页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/机械能守恒定律</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/084-机械能.html">机械能</a> · <a href="../atoms/067-动能.html">动能</a> · <a href="../atoms/116-重力势能.html">重力势能</a> · <a class="dead" title="未收录">机械能转化</a> · <a class="dead" title="未收录">内能与机械能</a> · <a href="../atoms/062-功-物理.html">功-物理</a> · <a class="dead" title="未收录">力学综合应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-07</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-09.html">2013-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2014-北京-10</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-18</a></li>
+<li><a class="dead" title="未收录">2020-北京-13</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-07</a></li>
+<li><a href="../exam/2021-全国乙-01.html">2021-全国乙-01</a></li>
+<li><a class="dead" title="未收录">2021-北京-06</a></li>
+<li><a class="dead" title="未收录">2021-北京-20</a></li>
+<li><a class="dead" title="未收录">2021-湖南-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

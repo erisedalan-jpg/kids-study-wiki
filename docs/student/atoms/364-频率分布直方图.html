@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>频率分布直方图</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>频率分布直方图</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 统计, 第九章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 频率分布直方图, frequency distribution histogram, 频率直方图</p><h2>🎓 频率分布直方图</h2>
+<h3>基本概念</h3>
+<p><strong>频数</strong>（frequency）：某组数据在样本中出现的次数。</p>
+<p><strong>频率</strong>（relative frequency）：该组频数除以总频数（样本容量）：</p>
+<p>$$\text{频率} = \frac{\text{频数}}{\text{样本容量}}$$</p>
+<p>所有组的频率之和 $= 1$。</p>
+<h3>频率分布直方图的构造</h3>
+<p>将数据分成若干等宽<strong>区间</strong>（组距），以区间为底，以<strong>频率/组距</strong>为高画矩形。</p>
+<blockquote>
+<p>纵轴：<strong>频率/组距</strong>（不是频率本身）<br />
+横轴：数据范围</p>
+</blockquote>
+<p>各矩形面积 $= $ 频率/组距 $\times$ 组距 $=$ 该区间的频率。</p>
+<p><strong>所有矩形面积之和 $= 1$</strong>（频率之和）。</p>
+<h3>读图方法</h3>
+<ul>
+<li><strong>某区间频率</strong> = 该矩形面积 = 高 $\times$ 组距</li>
+<li><strong>某区间频率估计</strong> = 该矩形面积 / 总面积（总面积 = 1）</li>
+</ul>
+<h3>频率分布表</h3>
+<table>
+<thead>
+<tr>
+<th>区间</th>
+<th>频数</th>
+<th>频率</th>
+<th>频率/组距</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[a_1, a_2)$</td>
+<td>$f_1$</td>
+<td>$f_1/n$</td>
+<td>$f_1/(n \cdot d)$</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p>（$n$ = 样本容量，$d$ = 组距）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：100 名学生成绩，组距 10 分，$[70, 80)$ 的频率/组距 $= 0.04$，该区间有多少人？</p>
+<p><strong>解</strong>：频率 $= 0.04 \times 10 = 0.4$，频数 $= 0.4 \times 100 = 40$ 人</p>
+<p><strong>例2</strong>：某直方图中各矩形面积为 $0.2, 0.35, 0.3, 0.15$，第 $3$ 组组距为 $5$，频率/组距为多少？</p>
+<p><strong>解</strong>：第 $3$ 组频率 $= 0.3$，频率/组距 $= 0.3 \div 5 = 0.06$</p>
+<p><strong>例3</strong>：利用频率分布直方图估计中位数。</p>
+<p><strong>解</strong>：找频率累计达到 $0.5$ 的位置即为中位数（面积累计法）。</p>
+<h3>与茎叶图的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>频率分布直方图</th>
+<th>茎叶图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据量</td>
+<td>大量数据</td>
+<td>中小数据（几十个）</td>
+</tr>
+<tr>
+<td>原始数据</td>
+<td>不保留</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>比较组数</td>
+<td>一组</td>
+<td>两组对比</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>纵轴是<strong>频率/组距</strong>，不是频率（当组距不等于 1 时区别很大）</li>
+<li>各矩形面积之和必须等于 1（可用此验证计算）</li>
+<li>读图时区间是左闭右开 $[a, b)$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第九章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第九章 § 9.2，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">茎叶图</a></li>
+<li><a class="dead" title="未收录">中位数众数平均数</a></li>
+<li><a class="dead" title="未收录">方差与标准差-高中</a></li>
+<li><a class="dead" title="未收录">用样本估计总体</a></li>
+<li><a class="dead" title="未收录">随机抽样-简单</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-11.html">2010-理-11</a></li>
+<li><a href="../exam/2013-文-19.html">2013-文-19</a></li>
+<li><a href="../exam/2013-理-19.html">2013-理-19</a></li>
+<li><a href="../exam/2014-文-18.html">2014-文-18</a></li>
+<li><a href="../exam/2015-文-18.html">2015-文-18</a></li>
+<li><a href="../exam/2017-文-17.html">2017-文-17</a></li>
+<li><a href="../exam/2017-文-19.html">2017-文-19</a></li>
+<li><a href="../exam/2017-理-18.html">2017-理-18</a></li>
+<li><a href="../exam/2018-文-19.html">2018-文-19</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-19.html">2023-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

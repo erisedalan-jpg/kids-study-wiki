@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电动势</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电动势</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电路及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电动势, electromotive force, EMF, emf</p><h2>🎓 电动势（Electromotive Force, EMF）</h2>
+<h3>定义</h3>
+<p><strong>电动势</strong>（$\varepsilon$）是描述电源将其他形式能量转化为电能能力的物理量，定义为：非静电力将单位正电荷从负极移到正极所做的功。</p>
+<p>$$\varepsilon = \frac{W_{非}}{q}$$</p>
+<ul>
+<li>$W_{非}$：非静电力做的功（J）</li>
+<li>$q$：移动的电荷量（C）</li>
+<li>单位：伏特（V），与电压单位相同</li>
+</ul>
+<h3>物理意义</h3>
+<p>电动势是电源的<strong>固有属性</strong>，反映电源将非电能转化为电能的能力，与外电路状态（接不接负载）无关。</p>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>电动势 $\varepsilon$</th>
+<th>路端电压 $U$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本质</td>
+<td>非静电力做功的能力（内部）</td>
+<td>外电路两端的实际电压（外部）</td>
+</tr>
+<tr>
+<td>与外电路关系</td>
+<td>无关（固有属性）</td>
+<td>随外电路变化</td>
+</tr>
+<tr>
+<td>数值关系</td>
+<td>$\varepsilon \geq U$（有内阻时）</td>
+<td>$U = \varepsilon - Ir$</td>
+</tr>
+</tbody>
+</table>
+<h3>全路欧姆定律</h3>
+<p>$$\varepsilon = IR + Ir = I(R + r)$$</p>
+<p>解出电流：</p>
+<p>$$I = \frac{\varepsilon}{R + r}$$</p>
+<p>路端电压：</p>
+<p>$$U = IR = \varepsilon - Ir$$</p>
+<p>其中 $R$ 为外阻，$r$ 为内阻，$I$ 为电路电流。</p>
+<h3>能量观点</h3>
+<p>$$\varepsilon I = UI + I^2r$$</p>
+<ul>
+<li>$\varepsilon I$：电源总功率</li>
+<li>$UI$：外电路消耗功率（有效输出）</li>
+<li>$I^2r$：内阻消耗功率（损耗）</li>
+</ul>
+<h3>常见电源的电动势</h3>
+<table>
+<thead>
+<tr>
+<th>电源</th>
+<th>电动势（大约值）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>干电池（锌锰）</td>
+<td>1.5 V</td>
+</tr>
+<tr>
+<td>铅酸蓄电池（单格）</td>
+<td>2.0 V</td>
+</tr>
+<tr>
+<td>锂电池</td>
+<td>3.6～3.7 V</td>
+</tr>
+<tr>
+<td>镍氢电池</td>
+<td>1.2 V</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某电源 $\varepsilon = 6\,\text{V}$，$r = 0.5\,\Omega$，外接电阻 $R = 11.5\,\Omega$，求电路电流和路端电压。</p>
+<p>$$I = \frac{\varepsilon}{R + r} = \frac{6}{11.5 + 0.5} = 0.5\,\text{A}$$</p>
+<p>$$U = \varepsilon - Ir = 6 - 0.5\times0.5 = 5.75\,\text{V}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>电动势不等于路端电压（只有 $r = 0$ 或 $I = 0$ 时相等）。</li>
+<li>电动势由电源类型决定，增加外电阻不会改变电动势，只改变电流和路端电压。</li>
+<li>"路端电压随电流增大而减小"是内阻存在的必然结果：$U = \varepsilon - Ir$。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了欧姆定律（$I = U/R$）；本节将欧姆定律推广到含电源的完整回路，引入电动势和内阻，建立<strong>全路欧姆定律</strong>。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十一章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/电动势">维基百科·电动势</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电源</a></li>
+<li><a class="dead" title="未收录">内阻</a></li>
+<li><a class="dead" title="未收录">路端电压</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">电阻定律</a></li>
+<li><a class="dead" title="未收录">电路串联-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标Ⅰ-06.html">2010-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切线方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>切线方程</h1><div class="meta-card"><span><strong>权重</strong>28</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 切线方程, tangent line equation, 曲线切线</p><h2>🎓 切线方程</h2>
+<h3>基本公式</h3>
+<p>曲线 $y=f(x)$ 在点 $(x_0, y_0)$（$y_0=f(x_0)$）处的切线方程：</p>
+<p>$$\boxed{y - y_0 = f'(x_0)(x - x_0)}$$</p>
+<p><strong>条件</strong>：$f'(x_0)$ 存在（若 $f'(x_0)$ 不存在，切线可能是垂直线 $x=x_0$）。</p>
+<h3>两类基本问题</h3>
+<p><strong>类型 1：已知切点，求切线</strong></p>
+<p>已知切点坐标 $(x_0, y_0)$（或给定 $x_0$），直接计算 $f'(x_0)$ 代入公式。</p>
+<p><strong>类型 2：已知曲线外一点，求切线</strong></p>
+<p>设切点为 $(t, f(t))$，切线需同时满足：
+- 切点在曲线上：$y_0=f(t)$
+- 斜率为导数：$k=f'(t)$
+- 切线过已知点 $(a,b)$：$b-f(t)=f'(t)(a-t)$</p>
+<p>由此解出 $t$，得到切点和切线方程。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>（已知切点）求 $y=x^2+1$ 在 $(1,2)$ 处的切线方程。</p>
+<p>$y'=2x$，$f'(1)=2$。切线：$y-2=2(x-1)$，即 $y=2x$。</p>
+<p><strong>例 2</strong>（已知斜率）求 $y=x^3-x$ 上斜率为 $2$ 的切线方程。</p>
+<p>$y'=3x^2-1$，令 $3x^2-1=2$：$x=\pm 1$。</p>
+<p>$x=1$：$y=0$，切线 $y-0=2(x-1)$，即 $y=2x-2$。</p>
+<p>$x=-1$：$y=0$，切线 $y-0=2(x+1)$，即 $y=2x+2$。</p>
+<p><strong>例 3</strong>（外点切线）过点 $(2,3)$ 作曲线 $y=x^2$ 的切线，求切线方程。</p>
+<p>设切点 $(t, t^2)$，$y'=2x$，斜率 $k=2t$。</p>
+<p>切线过 $(2,3)$：$3-t^2=2t(2-t)=4t-2t^2$</p>
+<p>$t^2-4t+3=0$，$(t-1)(t-3)=0$，$t=1$ 或 $t=3$。</p>
+<ul>
+<li>$t=1$：切点 $(1,1)$，$k=2$，切线 $y-3=2(x-2)$，即 $y=2x-1$</li>
+<li>$t=3$：切点 $(3,9)$，$k=6$，切线 $y-3=6(x-2)$，即 $y=6x-9$</li>
+</ul>
+<p><strong>例 4</strong>（特殊切线）$y=e^x$ 过原点的切线方程。</p>
+<p>设切点 $(t,e^t)$，斜率 $e^t$，过原点：$\dfrac{e^t-0}{t-0}=e^t$，即 $e^t=te^t$，$t=1$（$e^t&gt;0$）。</p>
+<p>切点 $(1,e)$，切线 $y=ex$。</p>
+<h3>法线方程</h3>
+<p>与切线垂直（斜率互为负倒数，$f'(x_0)\neq 0$ 时）：</p>
+<p>$$y - y_0 = -\frac{1}{f'(x_0)}(x - x_0)$$</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>外点切线</strong>：不能直接把已知点当切点，必须设参数 $t$ 联立</li>
+<li>斜率不存在时（竖直切线）：方程写成 $x=x_0$</li>
+<li>两条切线的情况（外点问题）不要只找一条</li>
+<li>切点纵坐标 $y_0=f(x_0)$，不是任意给定值</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/切线</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/440-导数的几何意义.html">导数的几何意义</a> · <a class="dead" title="未收录">切线法判定根的个数</a> · <a class="dead" title="未收录">导数的概念</a> · <a class="dead" title="未收录">导数综合应用</a> · <a class="dead" title="未收录">导数压轴题型</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">幂函数导数-高中</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-04.html">2009-理-04</a></li>
+<li><a href="../exam/2010-文-04.html">2010-文-04</a></li>
+<li><a href="../exam/2010-理-03.html">2010-理-03</a></li>
+<li><a href="../exam/2011-理-20.html">2011-理-20</a></li>
+<li><a href="../exam/2012-文-13.html">2012-文-13</a></li>
+<li><a href="../exam/2013-文-18.html">2013-文-18</a></li>
+<li><a href="../exam/2014-理-08.html">2014-理-08</a></li>
+<li><a href="../exam/2015-文-16.html">2015-文-16</a></li>
+<li><a href="../exam/2016-文-20.html">2016-文-20</a></li>
+<li><a href="../exam/2016-理-16.html">2016-理-16</a></li>
+<li><a href="../exam/2017-文-14.html">2017-文-14</a></li>
+<li><a href="../exam/2018-文-06.html">2018-文-06</a></li>
+<li><a href="../exam/2018-文-13.html">2018-文-13</a></li>
+<li><a href="../exam/2018-理-05.html">2018-理-05</a></li>
+<li><a href="../exam/2018-理-13.html">2018-理-13</a></li>
+<li><a href="../exam/2019-文-10.html">2019-文-10</a></li>
+<li><a href="../exam/2019-文-13.html">2019-文-13</a></li>
+<li><a href="../exam/2019-理-13.html">2019-理-13</a></li>
+<li><a class="dead" title="未收录">2020-北京-18</a></li>
+<li><a class="dead" title="未收录">2020-北京-19</a></li>
+<li><a href="../exam/2020-文-15.html">2020-文-15</a></li>
+<li><a href="../exam/2020-理-06.html">2020-理-06</a></li>
+<li><a href="../exam/2021-文-21.html">2021-文-21</a></li>
+<li><a href="../exam/2021-文-22.html">2021-文-22</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-15</a></li>
+<li><a class="dead" title="未收录">2024-北京-20</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>功能关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>功能关系</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 机械能守恒]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 功能关系, work-energy relationship, 功与能的关系</p><h2>🎓 功能关系</h2>
+<h3>核心思想</h3>
+<p><strong>功能关系</strong>：功是能量转化的量度，做功的过程就是能量转化的过程。</p>
+<p>$$W = \Delta E$$</p>
+<p>"做了多少功"等于"转化了多少能量"。</p>
+<h3>各力做功与能量变化</h3>
+<table>
+<thead>
+<tr>
+<th>做功的力</th>
+<th>能量变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重力做正功</td>
+<td>重力势能减少 $\Delta E_p = -W_G$</td>
+</tr>
+<tr>
+<td>弹力做正功</td>
+<td>弹性势能减少 $\Delta E_{pe} = -W_{\text{弹}}$</td>
+</tr>
+<tr>
+<td>合外力做功</td>
+<td>动能变化 $\Delta E_k = W_{\text{合}}$</td>
+</tr>
+<tr>
+<td>摩擦力做功</td>
+<td>机械能减少，内能增加</td>
+</tr>
+<tr>
+<td>安培力做功</td>
+<td>动能与电能（或热能）转化</td>
+</tr>
+</tbody>
+</table>
+<h3>非保守力做功与机械能变化</h3>
+<p>$$W_{\text{非保守力}} = \Delta E_{\text{机}} = \Delta E_k + \Delta E_p$$</p>
+<p>（非保守力的功 = 机械能的变化量）</p>
+<p>特别地，摩擦力做功：</p>
+<p>$$W_f = -\Delta E_{\text{机}} \implies |\Delta E_{\text{机}}| = |W_f| = f \cdot s$$</p>
+<p>（$s$ 为相对滑动路程，不是位移）</p>
+<h3>系统能量守恒</h3>
+<p>$$\Delta E_{\text{机}} + \Delta E_{\text{内}} + \Delta E_{\text{电}} + \cdots = W_{\text{外力}}$$</p>
+<p>无外力做功时：</p>
+<p>$$\Delta E_{\text{机}} + \Delta E_{\text{内}} = 0 \implies E_{\text{机}} + E_{\text{内}} = \text{常数}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（重力做功）</strong>：$m = 2\ \text{kg}$，下降 $h = 5\ \text{m}$（有摩擦），重力做功？势能变化？</p>
+<p>$$W_G = mgh = 2 \times 10 \times 5 = 100\ \text{J}$$
+$$\Delta E_p = -W_G = -100\ \text{J}$$（势能减少100 J）</p>
+<p><strong>例2（摩擦做功）</strong>：物体在粗糙面滑行，初速 $v_1 = 8\ \text{m/s}$，末速 $v_2 = 4\ \text{m/s}$，$m = 1\ \text{kg}$，机械能变化？产生热量？</p>
+<p>$$\Delta E_k = \frac{1}{2} \times 1 \times 16 - \frac{1}{2} \times 1 \times 64 = 8 - 32 = -24\ \text{J}$$
+（高度不变，$\Delta E_p = 0$）</p>
+<p>$$\Delta E_{\text{机}} = -24\ \text{J}$$，产生热量 $Q = 24\ \text{J}$$</p>
+<p><strong>例3（完整能量分析）</strong>：$m = 1\ \text{kg}$，从高 $h = 10\ \text{m}$ 斜面下滑（摩擦力做功 $W_f = -20\ \text{J}$），到底部速度？</p>
+<p>$$W_{\text{合}} = W_G + W_f = 100 - 20 = 80\ \text{J}$$</p>
+<p>由动能定理（初速为零）：</p>
+<p>$$\frac{1}{2}mv^2 = 80\ \text{J} \implies v = \sqrt{160} = 4\sqrt{10} \approx 12.6\ \text{m/s}$$</p>
+<p>机械能变化：$\Delta E_{\text{机}} = W_f = -20\ \text{J}$（产生热量20 J）</p>
+<h3>功能关系汇总图</h3>
+<pre><code>做功 → 能量转化
+重力正功 → 重力势能减少 → 动能增加（机械能守恒时）
+外力正功 → 动能增加（动能定理）
+摩擦力功 → 机械能减少，内能增加（不可逆）
+</code></pre>
+<h3>易错点</h3>
+<ol>
+<li><strong>$s$ 与 $\Delta s_{\text{相对}}$ 的区别</strong>：产热 $Q = f \cdot \Delta s_{\text{相对}}$（相对路程），不是位移。</li>
+<li><strong>功可正可负</strong>：做正功能量转入，做负功能量转出。</li>
+<li><strong>机械能减少不等于能量消失</strong>：转化为内能（热能），总能量守恒。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第八章，页码待家长核对）</li>
+<li><strong>百科</strong>：功能关系 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/251-动能定理.html">动能定理</a></li>
+<li><a href="../atoms/085-机械能守恒-初中.html">机械能守恒定律</a></li>
+<li><a class="dead" title="未收录">能量守恒-高中</a></li>
+<li><a class="dead" title="未收录">功的定义-高中</a></li>
+<li><a class="dead" title="未收录">机械能-高中</a></li>
+<li><a class="dead" title="未收录">重力做功特点</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-北京-06</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-08.html">2015-新课标Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-12</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-06.html">2016-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-08.html">2016-新课标Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-08</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2021-北京-20</a></li>
+<li><a class="dead" title="未收录">2022-北京-18</a></li>
+<li><a class="dead" title="未收录">2024-北京-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

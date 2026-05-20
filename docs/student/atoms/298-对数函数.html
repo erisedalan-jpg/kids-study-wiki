@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对数函数</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>11</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对数函数, logarithmic function, 对数函数性质</p><h2>🎓 对数函数</h2>
+<h3>定义</h3>
+<p>形如 $y = \log_a x$（$a &gt; 0$ 且 $a \neq 1$，$x &gt; 0$）的函数，称为<strong>对数函数</strong>（logarithmic function）。</p>
+<ul>
+<li><strong>底数</strong> $a$：$a &gt; 0$ 且 $a \neq 1$</li>
+<li><strong>自变量</strong> $x$：定义域为 $(0, +\infty)$（真数必须为正）</li>
+<li><strong>值域</strong>：$(-\infty, +\infty) = \mathbb{R}$（对数值覆盖全体实数）</li>
+</ul>
+<h3>图象特征</h3>
+<p>所有对数函数 $y = \log_a x$ 的图象都经过点 $(1, 0)$（因为 $\log_a 1 = 0$）和 $(a, 1)$（因为 $\log_a a = 1$）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">底数 $a$ 的范围</th>
+<th style="text-align: center;">单调性</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$a &gt; 1$</td>
+<td style="text-align: center;">单调递增</td>
+<td style="text-align: center;">$x \to 0^+$ 时 $y \to -\infty$；$x \to +\infty$ 时 $y \to +\infty$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0 &lt; a &lt; 1$</td>
+<td style="text-align: center;">单调递减</td>
+<td style="text-align: center;">$x \to 0^+$ 时 $y \to +\infty$；$x \to +\infty$ 时 $y \to -\infty$</td>
+</tr>
+</tbody>
+</table>
+<p>图象位于 $y$ 轴右侧（因 $x &gt; 0$），与 $y$ 轴渐近但不相交。</p>
+<p>$y = \log_a x$ 与 $y = \log_{1/a} x$ 的图象关于 $x$ 轴对称。</p>
+<h3>与指数函数的关系</h3>
+<p>$y = \log_a x$ 是 $y = a^x$ 的<strong>反函数</strong>，两者图象关于直线 $y = x$ 对称。</p>
+<p>$$y = a^x \xleftrightarrow{\text{互为反函数}} y = \log_a x$$</p>
+<p><strong>常用对数函数</strong>：
+- $y = \lg x = \log_{10} x$（常用对数）
+- $y = \ln x = \log_e x$（自然对数）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求函数 $y = \log_2(3x-1)$ 的定义域。</p>
+<p>解：需 $3x - 1 &gt; 0$，即 $x &gt; \dfrac{1}{3}$。定义域为 $\left(\dfrac{1}{3}, +\infty\right)$。</p>
+<p><strong>例2</strong>：比较 $\log_3 5$ 与 $\log_3 7$ 的大小。</p>
+<p>解：$y = \log_3 x$，底数 $3 &gt; 1$，单调递增。$5 &lt; 7$，故 $\log_3 5 &lt; \log_3 7$。</p>
+<p><strong>例3</strong>：比较 $\log_3 2$ 与 $\log_5 2$ 的大小。</p>
+<p>解：设 $f(a) = \log_a 2$（$a &gt; 1$）。$2 &lt; 3 &lt; 5$，$\log_3 2 = \dfrac{1}{\log_2 3} &lt; 1$，$\log_5 2 = \dfrac{1}{\log_2 5} &lt; 1$。</p>
+<p>由换底：$\log_3 2 = \dfrac{\lg 2}{\lg 3}$，$\log_5 2 = \dfrac{\lg 2}{\lg 5}$。因 $\lg 3 &lt; \lg 5$，故 $\dfrac{\lg 2}{\lg 3} &gt; \dfrac{\lg 2}{\lg 5}$，即 $\log_3 2 &gt; \log_5 2$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>定义域为正数</strong>：$y = \log_a x$ 要求 $x &gt; 0$，求含 $\log$ 函数的定义域时必须使真数 $&gt; 0$</li>
+<li><strong>过定点 $(1, 0)$</strong>：所有对数函数都过 $(1, 0)$，不是过原点 $(0, 0)$</li>
+<li><strong>底数大小影响单调方向</strong>：$a &gt; 1$ 递增，$0 &lt; a &lt; 1$ 递减，同指数函数一致（配对使用）</li>
+<li><strong>对数不等式变向</strong>：底数 $&lt; 1$ 时，$\log_a f(x) &gt; \log_a g(x) \Rightarrow f(x) &lt; g(x)$（反向）</li>
+<li><strong>$\ln x$ 与 $\log x$</strong>：在高中，$\log$ 通常指 $\lg$（以 $10$ 为底），但在国际语境中 $\log = \ln$，需看具体情境</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中没有正式学习对数函数。高中从指数函数的反函数引入对数函数，强调两者的互逆关系和图象的对称性（关于 $y=x$）。对数函数是高中最重要的函数之一，广泛应用于化学、物理（pH 值、分贝、震级）等领域。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：对数函数（Logarithmic function），自然对数（Natural logarithm）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">对数概念</a></li>
+<li><a class="dead" title="未收录">对数运算性质</a></li>
+<li><a class="dead" title="未收录">对数函数的性质</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a class="dead" title="未收录">换底公式</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-04.html">2008-理-04</a></li>
+<li><a href="../exam/2009-文-03.html">2009-文-03</a></li>
+<li><a href="../exam/2009-文-04.html">2009-文-04</a></li>
+<li><a href="../exam/2009-理-03.html">2009-理-03</a></li>
+<li><a href="../exam/2010-文-12.html">2010-文-12</a></li>
+<li><a href="../exam/2011-文-03.html">2011-文-03</a></li>
+<li><a href="../exam/2011-文-12.html">2011-文-12</a></li>
+<li><a href="../exam/2012-文-11.html">2012-文-11</a></li>
+<li><a href="../exam/2013-理-05.html">2013-理-05</a></li>
+<li><a href="../exam/2014-文-06.html">2014-文-06</a></li>
+<li><a href="../exam/2015-文-08.html">2015-文-08</a></li>
+<li><a href="../exam/2015-理-05.html">2015-理-05</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2016-理-16.html">2016-理-16</a></li>
+<li><a href="../exam/2017-文-09.html">2017-文-09</a></li>
+<li><a href="../exam/2018-文-13.html">2018-文-13</a></li>
+<li><a href="../exam/2019-文-03.html">2019-文-03</a></li>
+<li><a href="../exam/2019-理-03.html">2019-理-03</a></li>
+<li><a href="../exam/2019-理-06.html">2019-理-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-11</a></li>
+<li><a href="../exam/2020-文-12.html">2020-文-12</a></li>
+<li><a href="../exam/2020-理-05.html">2020-理-05</a></li>
+<li><a href="../exam/2020-理-11.html">2020-理-11</a></li>
+<li><a class="dead" title="未收录">2021-北京-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-15</a></li>
+<li><a href="../exam/2022-文-16.html">2022-文-16</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-08.html">2024-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

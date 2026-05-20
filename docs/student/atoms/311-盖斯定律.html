@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>盖斯定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>盖斯定律</h1><div class="meta-card"><span><strong>权重</strong>31</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第一章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 盖斯定律, Hess&#x27;s law, 赫斯定律</p><h1>盖斯定律</h1>
+<blockquote>
+<p><strong>一句话</strong>：化学反应的焓变只与反应的始态和末态有关，与反应途径无关；可用已知反应焓变线性组合计算未知反应焓变。
+<strong>English</strong>: The total enthalpy change of a reaction is independent of the pathway taken; it depends only on the initial and final states (Hess's Law of constant heat summation).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>盖斯定律</strong>（Hess's Law，1840年）：若一个化学反应可以分解为若干步骤，则总反应的焓变等于各步骤焓变的代数和，与路径无关。</p>
+<p>$$
+\Delta H_{\text{总}} = \sum_i \Delta H_i
+$$</p>
+<p>这是焓为<strong>状态函数</strong>的直接推论。</p>
+<h3>公式 / 方程式</h3>
+<p>设目标反应 = $n_1 \times$ 反应① $+ n_2 \times$ 反应② $+ \cdots$，则：</p>
+<p>$$
+\Delta H = n_1 \cdot \Delta H_1 + n_2 \cdot \Delta H_2 + \cdots
+$$</p>
+<p>操作规则：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>对方程式的影响</th>
+<th>对 $\Delta H$ 的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乘以系数 $n$</td>
+<td>各物质系数×n</td>
+<td>$\Delta H$ ×n</td>
+</tr>
+<tr>
+<td>方程式逆写</td>
+<td>反应物与生成物互换</td>
+<td>$\Delta H$ 变号</td>
+</tr>
+<tr>
+<td>方程式相加</td>
+<td>相消同类项</td>
+<td>$\Delta H$ 相加</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：已知：
+- ① $\text{C}(s) + \text{O}_2(g) \rightarrow \text{CO}_2(g)$，$\Delta H_1 = -393.5\ \text{kJ/mol}$
+- ② $\text{CO}(g) + \frac{1}{2}\text{O}_2(g) \rightarrow \text{CO}_2(g)$，$\Delta H_2 = -283.0\ \text{kJ/mol}$</p>
+<p>求：$\text{C}(s) + \frac{1}{2}\text{O}_2(g) \rightarrow \text{CO}(g)$，$\Delta H = ?$</p>
+<p><strong>解</strong>：目标 = ① − ②</p>
+<p>$$
+\Delta H = \Delta H_1 - \Delta H_2 = -393.5 - (-283.0) = -110.5\ \text{kJ·mol}^{-1}
+$$</p>
+<h3>易错点</h3>
+<ul>
+<li>方程式逆写时 $\Delta H$ 必须变号，忘记取负是高频失分点</li>
+<li>乘以系数时 $\Delta H$ 等比例变化，不能遗漏</li>
+<li>相消时注意物质的聚集状态必须完全相同，(g) ≠ (l)</li>
+<li>盖斯定律只适用于焓变（恒压），不适用于 $\Delta G$ 或 $\Delta S$ 的直接加减</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>盖斯定律</td>
+<td>Hess's law</td>
+</tr>
+<tr>
+<td>状态函数</td>
+<td>state function</td>
+</tr>
+<tr>
+<td>线性组合</td>
+<td>linear combination</td>
+</tr>
+<tr>
+<td>热力学循环</td>
+<td>thermodynamic cycle</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>Hess's law allows us to calculate ΔH for reactions that cannot be measured directly.（盖斯定律使我们能计算无法直接测量的反应焓变。）</li>
+<li>The total enthalpy change is the same regardless of the number of steps in the reaction.（无论反应分几步，总焓变相同。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第一章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"赫斯定律"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">反应焓变</a></li>
+<li><a href="../atoms/309-热化学方程式.html">热化学方程式</a></li>
+<li><a class="dead" title="未收录">标准摩尔生成焓</a></li>
+<li><a href="../atoms/127-内能.html">内能</a></li>
+<li><a class="dead" title="未收录">系统与环境</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标-05.html">2010-新课标-05</a></li>
+<li><a class="dead" title="未收录">2011-北京-05</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-06.html">2013-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-09.html">2015-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2018-北京-10</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2020-北京-12</a></li>
+<li><a class="dead" title="未收录">2021-北京-14</a></li>
+<li><a class="dead" title="未收录">2022-湖南-17</a></li>
+<li><a class="dead" title="未收录">2023-北京-12</a></li>
+<li><a class="dead" title="未收录">2023-北京-13</a></li>
+<li><a class="dead" title="未收录">2023-湖南-16</a></li>
+<li><a class="dead" title="未收录">2024-湖南-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

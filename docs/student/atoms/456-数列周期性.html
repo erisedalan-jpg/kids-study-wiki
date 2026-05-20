@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列周期性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列周期性</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第八章数列拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列周期性, periodic sequence, 周期数列</p><h2>🎓 数列周期性</h2>
+<h3>定义</h3>
+<p>数列 ${a_n}$ 称为<strong>周期数列</strong>，若存在正整数 $T$，使得对所有 $n\in\mathbb{N}^*$：</p>
+<p>$$a_{n+T} = a_n$$</p>
+<p>最小的这样的 $T$ 称为数列的<strong>最小正周期</strong>（或周期）。</p>
+<h3>周期数列的来源</h3>
+<ol>
+<li><strong>三角函数型</strong>：$a_n=\sin\dfrac{n\pi}{k}$ 等，周期为 $2k$（与正弦周期对应）</li>
+<li><strong>递推关系型</strong>：由递推式 $a_{n+1}=f(a_n)$ 生成的数列，若轨道有限则形成周期</li>
+<li><strong>取余/循环型</strong>：$a_n=n\bmod k$（$n$ 除以 $k$ 的余数），周期为 $k$</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $a_1=1$，$a_{n+1}=\dfrac{1}{1-a_n}$，证明数列有周期 $3$。</p>
+<p>$a_1=1$，$a_2=\dfrac{1}{1-1}$（分母为 $0$！此递推在 $a_n=1$ 时有问题）</p>
+<p>调整：$a_1=2$，$a_2=\dfrac{1}{1-2}=-1$，$a_3=\dfrac{1}{1-(-1)}=\dfrac{1}{2}$，$a_4=\dfrac{1}{1-1/2}=2=a_1$</p>
+<p>周期为 $3$：$2,-1,\dfrac{1}{2},2,-1,\dfrac{1}{2},\ldots$</p>
+<p><strong>例 2</strong> $a_n=\sin\dfrac{n\pi}{2}$，写出各项并确定周期。</p>
+<p>$n=1$：$\sin\dfrac{\pi}{2}=1$；$n=2$：$\sin\pi=0$；$n=3$：$\sin\dfrac{3\pi}{2}=-1$；$n=4$：$\sin 2\pi=0$；$n=5$：$\sin\dfrac{5\pi}{2}=1=a_1$</p>
+<p>数列为 $1,0,-1,0,1,0,-1,0,\ldots$，周期 $T=4$。</p>
+<p><strong>例 3</strong> $a_1=1$，$a_{n+1}=(-1)^n\cdot a_n+1$</p>
+<p>$a_1=1$，$a_2=(-1)^1\cdot 1+1=0$，$a_3=(-1)^2\cdot 0+1=1=a_1$</p>
+<p>周期 $T=2$，数列为 $1,0,1,0,\ldots$</p>
+<p><strong>例 4</strong>（求周期数列的某项）已知数列周期为 $5$，$a_1=2,a_2=3,a_3=5,a_4=1,a_5=4$，求 $a_{2023}$。</p>
+<p>$2023=5\times 404+3$，故 $a_{2023}=a_3=5$。</p>
+<h3>利用周期求和</h3>
+<p>若数列 ${a_n}$ 周期为 $T$，每个完整周期的和为 $S_T=a_1+a_2+\cdots+a_T$，则：</p>
+<p>$$S_n = \left\lfloor\frac{n}{T}\right\rfloor S_T + (a_1+a_2+\cdots+a_{n\bmod T})$$</p>
+<p><strong>例</strong> 例 $2$ 中数列 $1,0,-1,0,\ldots$，每周期和为 $0$，$S_{100}=25\times 0=0$，$S_{101}=0+a_1=1$。</p>
+<h3>与函数周期性的对比</h3>
+<p>连续函数周期性：$f(x+T)=f(x)$。数列周期性是其离散版本。三角函数是连接两者的桥梁——$\sin x$ 以 $2\pi$ 为周期，其在整数点的样本可能以某正整数为周期（如 $\sin(n\pi/2)$ 以 $4$ 为周期）。</p>
+<h3>易错点</h3>
+<ul>
+<li>周期 $T$ 是正整数（最小的满足 $a_{n+T}=a_n$ 的正整数）</li>
+<li>写出几项后要验证 $a_{T+1}=a_1$ 才能确认周期</li>
+<li>取余运算：$n\bmod T=0$ 时对应第 $T$ 项，不是第 $0$ 项</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第八章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/数列</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">数列与函数</a> · <a class="dead" title="未收录">数列单调性</a> · <a class="dead" title="未收录">数列的应用</a> · <a class="dead" title="未收录">Sn与an关系</a> · <a class="dead" title="未收录">数列求和综合</a> · <a class="dead" title="未收录">三角函数导数</a> · <a class="dead" title="未收录">分组求和</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-14.html">2008-理-14</a></li>
+<li><a href="../exam/2009-理-14.html">2009-理-14</a></li>
+<li><a href="../exam/2014-文-16.html">2014-文-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线几何性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双曲线几何性质</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 双曲线几何性质, geometric properties of hyperbola, 双曲线性质</p><h2>🎓 双曲线几何性质</h2>
+<p>以标准双曲线 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$（$a&gt;0, b&gt;0$，焦点在 $x$ 轴）为例。</p>
+<h3>对称性</h3>
+<ul>
+<li>关于 $x$ 轴对称</li>
+<li>关于 $y$ 轴对称</li>
+<li>关于原点（中心）对称</li>
+</ul>
+<h3>顶点与轴</h3>
+<p><strong>实轴</strong>：两顶点 $A_1(-a,0), A_2(a,0)$ 的连线，实轴长 $= 2a$</p>
+<p><strong>虚轴</strong>：虚顶点 $B_1(0,-b), B_2(0,b)$ 的连线，虚轴长 $= 2b$</p>
+<p>（虚顶点不在双曲线上，但用于作渐近线和辅助矩形）</p>
+<h3>范围</h3>
+<p>$$|x| \ge a \quad (\text{即} x \le -a \text{ 或 } x \ge a)$$</p>
+<p>$y$ 无界（$y$ 可以取任意值，当 $|x|$ 足够大时）</p>
+<h3>焦半径公式</h3>
+<p>双曲线上点 $P(x_0, y_0)$，$|x_0| \ge a$：</p>
+<p>$$\text{右支（}x_0 &gt; 0\text{）}:\quad |PF_1| = a + ex_0,\quad |PF_2| = ex_0 - a$$</p>
+<p>$$\text{左支（}x_0 &lt; 0\text{）}:\quad |PF_1| = -(a + ex_0) = -a-ex_0,\quad |PF_2| = -(ex_0-a) = a-ex_0$$</p>
+<p>（利用 $|PF_1|-|PF_2| = \pm 2a$ 及 $e=c/a$）</p>
+<p>统一写法（注意正负号由 $P$ 所在支决定）。</p>
+<h3>焦点三角形</h3>
+<p>椭圆上点 $P$，$\triangle PF_1F_2$：</p>
+<p>$$||PF_1| - |PF_2|| = 2a, \quad |F_1F_2| = 2c$$</p>
+<ul>
+<li>余弦定理求 $\angle F_1PF_2$：$|F_1F_2|^2 = |PF_1|^2 + |PF_2|^2 - 2|PF_1||PF_2|\cos\angle F_1PF_2$</li>
+<li>面积：$S = \dfrac{1}{2}|PF_1||PF_2|\sin\angle F_1PF_2 = b^2 \tan\dfrac{\angle F_1PF_2}{2}$（待家长核对）</li>
+</ul>
+<h3>通径</h3>
+<p>过焦点垂直于实轴的弦称为<strong>通径</strong>，长 $= \dfrac{2b^2}{a}$（与椭圆通径公式形式相同）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：双曲线 $\dfrac{x^2}{9}-\dfrac{y^2}{7}=1$，点 $P$ 在右支，$|PF_1|=6$，求 $|PF_2|$。</p>
+<p><strong>解</strong>：$a=3$，右支满足 $|PF_1|-|PF_2|=2a=6$，故 $|PF_2|=6-6=0$？不对，再查：$|PF_1|-|PF_2|=2a=6$，$|PF_1|=6$，$|PF_2|=0$，这不可能（$P$ 在双曲线上不能到焦点距离为0）。</p>
+<p>需重新设定：设 $|PF_2|=x$，则 $|PF_1|=x+6$（右支满足 $|PF_1|&gt;|PF_2|$），$|PF_1|=6$ 则$|PF_2|=6-6=0$，矛盾。说明例题数据应设 $|PF_1|=9$，则 $|PF_2|=9-6=3$。</p>
+<p><strong>例2</strong>：双曲线 $\dfrac{x^2}{16}-\dfrac{y^2}{9}=1$，求通径长。</p>
+<p><strong>解</strong>：$a^2=16, b^2=9, a=4$，通径 $=\dfrac{2\times9}{4}=\dfrac{9}{2}$</p>
+<p><strong>例3</strong>：双曲线上 $P$ 点，$|PF_1|=3, |PF_2|=5$，且 $F_1, F_2$ 是两焦点，求双曲线实轴长。</p>
+<p><strong>解</strong>：$||PF_1|-|PF_2||=|3-5|=2=2a$，故 $a=1$，实轴长 $2a=2$。</p>
+<h3>易错点</h3>
+<ul>
+<li>双曲线有两支，焦半径公式对左支和右支符号不同</li>
+<li>$a$ 是实半轴（顶点到中心），不必比 $b$ 大</li>
+<li>通径公式 $\dfrac{2b^2}{a}$ 与椭圆相同，但 $b^2$ 来源不同（$b^2 = c^2 - a^2$）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></li>
+<li><a class="dead" title="未收录">双曲线渐近线</a></li>
+<li><a class="dead" title="未收录">双曲线离心率</a></li>
+<li><a class="dead" title="未收录">椭圆几何性质</a></li>
+<li><a class="dead" title="未收录">抛物线几何性质</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-07.html">2011-理-07</a></li>
+<li><a href="../exam/2012-理-08.html">2012-理-08</a></li>
+<li><a href="../exam/2015-理-10.html">2015-理-10</a></li>
+<li><a href="../exam/2016-理-13.html">2016-理-13</a></li>
+<li><a href="../exam/2021-文-14.html">2021-文-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>排列概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>排列概念</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 排列概念, permutation, 排列, 有序排列</p><h2>🎓 排列概念</h2>
+<h3>定义</h3>
+<p>从 $n$ 个<strong>不同</strong>元素中取出 $m$（$1 \leq m \leq n$）个元素，按照一定<strong>顺序</strong>排成一列，称为从 $n$ 个不同元素中取 $m$ 个元素的一个<strong>排列</strong>。</p>
+<p><strong>排列数</strong>：所有这样的排列的总数，记作 $A_n^m$（或 $P_n^m$）。</p>
+<h3>与组合的本质区别</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>排列</th>
+<th>组合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否有顺序</td>
+<td>有（顺序不同算不同）</td>
+<td>无（顺序不同仍相同）</td>
+</tr>
+<tr>
+<td>例：取 A、B</td>
+<td>AB 和 BA 是<strong>两</strong>种</td>
+<td>{A,B} 只算<strong>一</strong>种</td>
+</tr>
+<tr>
+<td>公式</td>
+<td>$A_n^m = \dfrac{n!}{(n-m)!}$</td>
+<td>$C_n^m = \dfrac{n!}{m!(n-m)!}$</td>
+</tr>
+</tbody>
+</table>
+<h3>全排列</h3>
+<p>当 $m = n$ 时，称为 $n$ 个元素的<strong>全排列</strong>：</p>
+<p>$$A_n^n = n! = n \times (n-1) \times \cdots \times 2 \times 1$$</p>
+<p>规定 $0! = 1$。</p>
+<h3>直观理解</h3>
+<p>$n$ 个元素取 $m$ 个排成一排：
+- 第 1 个位置：$n$ 种选法
+- 第 2 个位置：$n-1$ 种（已用一个）
+- ……
+- 第 $m$ 个位置：$n-m+1$ 种</p>
+<p>$$A_n^m = n(n-1)(n-2)\cdots(n-m+1) \quad \text{（共 } m \text{ 个因数）}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：5 个人中选 3 人排成一排，共有多少种排法？</p>
+<p>$$A_5^3 = 5 \times 4 \times 3 = 60 \text{ 种}$$</p>
+<p><strong>例2</strong>：4 个字母 a, b, c, d 的全排列有多少种？</p>
+<p>$$A_4^4 = 4! = 24 \text{ 种}$$</p>
+<p><strong>例3</strong>：判断下列各量求排列还是组合？
+- 5 人选 2 人站在门的左右两侧 → <strong>排列</strong>（左右有区别）
+- 5 人选 2 人去开会 → <strong>组合</strong>（无顺序要求）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>顺序的判断</strong>：题目中有"站位""编号""顺序"等字眼，通常是排列</li>
+<li><strong>$A_n^m$ 中 $m \leq n$</strong>：从 $n$ 中取 $m$，$m$ 不能超过 $n$</li>
+<li><strong>$A_n^0 = 1$</strong>：什么都不取，只有空排列一种</li>
+<li><strong>混淆 $A_n^n$ 与 $A_n^{n-1}$</strong>：$A_n^n = n!$，$A_n^{n-1} = n!$ 也成立（因为 $A_n^n = A_n^{n-1} \cdot 1$，实际 $A_n^{n-1} = \frac{n!}{1!} = n!$，两者相等）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/排列">排列 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">排列数公式</a></li>
+<li><a href="../atoms/505-组合概念.html">组合概念</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a href="../atoms/477-分步计数原理.html">分步计数原理</a></li>
+<li><a class="dead" title="未收录">排列应用-相邻问题</a></li>
+<li><a class="dead" title="未收录">排列应用-不相邻问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-理-02.html">2012-理-02</a></li>
+<li><a href="../exam/2016-理-05.html">2016-理-05</a></li>
+<li><a href="../exam/2017-理-06.html">2017-理-06</a></li>
+<li><a href="../exam/2021-理-06.html">2021-理-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

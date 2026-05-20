@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平面直角坐标系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平面直角坐标系</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 平面直角坐标系]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平面直角坐标系, Cartesian coordinate system, 直角坐标系, 坐标系</p><h2>课本定义</h2>
+<p>在平面内画两条互相垂直、原点重合的数轴，组成<strong>平面直角坐标系</strong>。水平的数轴叫 <strong>x 轴</strong>（横轴），竖直的数轴叫 <strong>y 轴</strong>（纵轴），两轴的交点 O 叫<strong>原点</strong>。平面上的每个点都有唯一的<strong>坐标</strong> (x, y) 与之对应。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"在平面上给每个点取名字"</h3>
+<p><strong>坐标系是什么？</strong></p>
+<p>想象一张方格纸，画一条横线（x轴）和一条竖线（y轴），两线在中间交叉，交叉点叫<strong>原点O</strong>。</p>
+<pre><code>y轴
+↑
+3|       ·P(2,3)
+2|
+1|
+O+————————————→ x轴
+ 1  2  3
+</code></pre>
+<p><strong>点P(2,3)的意思：</strong>
+- 从原点出发，向右走2格 → x = 2（横坐标）
+- 再向上走3格 → y = 3（纵坐标）
+- 这个点叫 P(2, 3)</p>
+<p><strong>四个象限：</strong>
+x轴和y轴把平面分成四个区域：
+| 象限 | x的符号 | y的符号 | 位置 |
+|------|---------|---------|------|
+| 第一象限 | + | + | 右上 |
+| 第二象限 | - | + | 左上 |
+| 第三象限 | - | - | 左下 |
+| 第四象限 | + | - | 右下 |</p>
+<p><strong>坐标轴上的点：</strong>
+- x轴上的点：(a, 0)，y坐标为0
+- y轴上的点：(0, b)，x坐标为0
+- 原点：(0, 0)</p>
+<p><strong>生活中的坐标系：</strong>
+- 地图：经度（x）和纬度（y）
+- 电子游戏：角色位置 (x, y)
+- 电子表格：列(A,B,C...)和行(1,2,3...)</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>平面直角坐标系</strong>（Cartesian coordinate system）：在平面内，取两条互相垂直且相交于原点 O 的数轴，分别称 x 轴（水平，正方向向右）和 y 轴（竖直，正方向向上），合称<strong>坐标轴</strong>。</p>
+<p>平面上的点与有序数对 (x, y) 一一对应，x 称为<strong>横坐标</strong>（abscissa），y 称为<strong>纵坐标</strong>（ordinate）。</p>
+<h3>坐标系的构成要素</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>定义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原点 O</td>
+<td>(0, 0)</td>
+<td>x轴与y轴交点</td>
+</tr>
+<tr>
+<td>x 轴</td>
+<td>水平数轴</td>
+<td>正方向向右</td>
+</tr>
+<tr>
+<td>y 轴</td>
+<td>竖直数轴</td>
+<td>正方向向上</td>
+</tr>
+<tr>
+<td>单位长度</td>
+<td>两轴刻度单位</td>
+<td>通常相等</td>
+</tr>
+</tbody>
+</table>
+<h3>点与坐标的对应关系</h3>
+<p><strong>已知点求坐标：</strong>
+过点 P 作 x 轴的垂线，垂足在 x 轴上的读数为 x 坐标；
+过点 P 作 y 轴的垂线，垂足在 y 轴上的读数为 y 坐标。</p>
+<p><strong>已知坐标找点：</strong>
+在 x 轴上找 x 坐标的位置，在 y 轴上找 y 坐标的位置，过两点分别作坐标轴的平行线，交点即为所求点。</p>
+<h3>各区域坐标特征</h3>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>x 坐标</th>
+<th>y 坐标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一象限</td>
+<td>x &gt; 0</td>
+<td>y &gt; 0</td>
+</tr>
+<tr>
+<td>第二象限</td>
+<td>x &lt; 0</td>
+<td>y &gt; 0</td>
+</tr>
+<tr>
+<td>第三象限</td>
+<td>x &lt; 0</td>
+<td>y &lt; 0</td>
+</tr>
+<tr>
+<td>第四象限</td>
+<td>x &gt; 0</td>
+<td>y &lt; 0</td>
+</tr>
+<tr>
+<td>x 轴正半轴</td>
+<td>x &gt; 0</td>
+<td>y = 0</td>
+</tr>
+<tr>
+<td>y 轴负半轴</td>
+<td>x = 0</td>
+<td>y &lt; 0</td>
+</tr>
+<tr>
+<td>原点</td>
+<td>x = 0</td>
+<td>y = 0</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 在坐标系中描出 A(3, 2)，B(-1, 4)，C(-2, -3)，D(4, -1) 各点，判断各点所在象限或坐标轴。</p>
+<p>解：
+- A(3, 2)：x&gt;0, y&gt;0，第一象限
+- B(-1, 4)：x&lt;0, y&gt;0，第二象限
+- C(-2, -3)：x&lt;0, y&lt;0，第三象限
+- D(4, -1)：x&gt;0, y&lt;0，第四象限</p>
+<p><strong>例题2：</strong> 点 P(a-1, 2a+3) 在 x 轴上，求 a 的值。</p>
+<p>解：在 x 轴上的点，y 坐标为 0
+∴ 2a + 3 = 0
+a = -3/2</p>
+<h3>历史背景</h3>
+<p>平面直角坐标系由法国数学家<strong>笛卡尔</strong>（René Descartes, 1596-1650）创立，故又称<strong>笛卡尔坐标系</strong>。传说他生病卧床，看着天花板上的苍蝇移动，想到用两个数描述位置，由此发明坐标系，将代数和几何统一（解析几何的诞生）。</p>
+<h3>知识联系</h3>
+<pre><code>平面直角坐标系
+├── 基础 → 有序数对 (x, y)
+├── 与数轴 → 数轴是一维，坐标系是二维
+├── 应用 → 函数图像（y = f(x) 在坐标系中的图形）
+└── 扩展 → 三维坐标系 (x, y, z)（高中/大学）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平面直角坐标系</td>
+<td>Cartesian coordinate system</td>
+<td>笛卡尔坐标系</td>
+</tr>
+<tr>
+<td>x 轴</td>
+<td>x-axis</td>
+<td>水平轴</td>
+</tr>
+<tr>
+<td>y 轴</td>
+<td>y-axis</td>
+<td>竖直轴</td>
+</tr>
+<tr>
+<td>原点</td>
+<td>origin</td>
+<td>(0, 0)</td>
+</tr>
+<tr>
+<td>横坐标</td>
+<td>x-coordinate / abscissa</td>
+<td>x 的值</td>
+</tr>
+<tr>
+<td>纵坐标</td>
+<td>y-coordinate / ordinate</td>
+<td>y 的值</td>
+</tr>
+<tr>
+<td>象限</td>
+<td>quadrant</td>
+<td>坐标系的四个区域</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第七章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>拓展</strong>：笛卡尔传记；解析几何的诞生；三维坐标系</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">有序数对</a></li>
+<li><a class="dead" title="未收录">点的坐标特征</a></li>
+<li><a href="../atoms/078-负数.html">数轴</a></li>
+<li><a class="dead" title="未收录">实数</a></li>
+<li><a class="dead" title="未收录">平移</a></li>
+<li><a href="../atoms/188-函数概念.html">函数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-文-14.html">2011-文-14</a></li>
+<li><a href="../exam/2013-理-20.html">2013-理-20</a></li>
+<li><a href="../exam/2021-理-22.html">2021-理-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

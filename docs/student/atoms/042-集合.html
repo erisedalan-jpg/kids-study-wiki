@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>集合</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[集合, 数学广角]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 集合, set, 集合图, 韦恩图, Venn diagram, 集合的交集运算</p><h1>集合</h1>
+<blockquote>
+<p><strong>一句话</strong>：把有某个共同点的东西放进同一个圈里——用两圆相交来表示"既属于这边，也属于那边"，并且每样东西只数一次。
+<strong>English</strong>: A set is a collection of objects sharing a common property. Two overlapping circles (Venn diagram) show what belongs to both groups — and each item is counted only once.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>班上有些同学既会游泳，又会骑自行车。我们怎么把他们画出来？</p>
+<p>用两个圆圈：
+- 左圆圈：会游泳的同学
+- 右圆圈：会骑车的同学
+- 两个圆重叠的地方：<strong>又会游泳又会骑车</strong>的同学！</p>
+<pre><code>   ( 只游泳 ) ( 两者都会 ) ( 只骑车 )
+       ●●      ●●●        ●●●●
+</code></pre>
+<p>这种图叫<strong>集合图</strong>（也叫<strong>韦恩图</strong>，Venn diagram）。</p>
+<p><strong>共读小活动：</strong> 在地板上用绳子围两个相交的圆，让家里的玩具分类：红色的放左圈，圆形的放右圈，又红又圆的放中间——数数重叠区有几个？</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>集合图（韦恩图）</h3>
+<p><strong>韦恩图</strong>由两个（或多个）相互重叠的圆表示：</p>
+<pre><code>        A圆              B圆
+   +----------+    +----------+
+   |  只属于A  | 共同 |  只属于B  |
+   |          |  区  |          |
+   +----------+    +----------+
+</code></pre>
+<ul>
+<li><strong>A 区</strong>：只属于 A，不属于 B</li>
+<li><strong>B 区</strong>：只属于 B，不属于 A</li>
+<li><strong>中间（A∩B）</strong>：既属于 A 又属于 B</li>
+</ul>
+<h3>不重复计数——排容原理</h3>
+<p><strong>经典题型：</strong></p>
+<blockquote>
+<p>班级 40 人，喜欢语文的 26 人，喜欢数学的 24 人，两者都喜欢的 10 人，问：只喜欢语文或只喜欢数学的人数？</p>
+</blockquote>
+<p><strong>错误做法：</strong> 26 + 24 = 50 ≠ 40（因为两者都喜欢的 10 人被数了两遍）</p>
+<p><strong>正确公式（排容原理）：</strong></p>
+<blockquote>
+<p><strong>|A ∪ B| = |A| + |B| - |A ∩ B|</strong></p>
+</blockquote>
+<p>代入：40 = 26 + 24 - 10 = 40 ✓</p>
+<p>所以：
+- 只喜欢语文：26 - 10 = 16 人
+- 只喜欢数学：24 - 10 = 14 人
+- 两者都喜欢：10 人
+- 验算：16 + 14 + 10 = 40 ✓</p>
+<p><strong>关键思想：</strong> "既……又……"的那部分被加了两次，所以要减去一次。</p>
+<h3>用集合图解题步骤</h3>
+<ol>
+<li>画两个相交的圆，分别标注 A、B</li>
+<li>先填中间（两者都有）</li>
+<li>再填只属于 A、只属于 B 的</li>
+<li>加起来验算总数</li>
+</ol>
+<p><strong>例题：</strong> 水果摊有 20 个苹果和橙子，其中苹果 12 个，既是苹果又是…（不存在，换题）</p>
+<p><strong>例题（实际教材类型）：</strong> 调查 30 名学生：学过画画 20 人，学过钢琴 15 人，两样都学过 8 人，两样都没学过几人？</p>
+<pre><code>画画+钢琴的人 = 20 + 15 - 8 = 27 人
+两样都没学过 = 30 - 27 = 3 人
+</code></pre>
+<h3>集合的基本概念（初中版）</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>符号</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合</td>
+<td>A, B, …</td>
+<td>一组确定对象的总体</td>
+<td>{1, 2, 3}</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>a ∈ A</td>
+<td>a 属于集合 A</td>
+<td 1_2_3="1,2,3">2 ∈</td>
+</tr>
+<tr>
+<td>不属于</td>
+<td>a ∉ A</td>
+<td>a 不在集合中</td>
+<td 1_2_3="1,2,3">5 ∉</td>
+</tr>
+<tr>
+<td>并集</td>
+<td>A ∪ B</td>
+<td>A 和 B 合在一起</td>
+<td>{1,2}∪{2,3}={1,2,3}</td>
+</tr>
+<tr>
+<td>交集</td>
+<td>A ∩ B</td>
+<td>A 和 B 共有的部分</td>
+<td>{1,2}∩{2,3}={2}</td>
+</tr>
+<tr>
+<td>空集</td>
+<td>∅</td>
+<td>什么都没有的集合</td>
+<td>{x : x²=-1} = ∅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>集合论的奠基：康托尔与无穷</h3>
+<p>19 世纪末，德国数学家 <strong>Georg Cantor（乔治·康托尔）</strong> 建立了现代集合论。他证明了：</p>
+<ul>
+<li>自然数集 ℕ 和有理数集 ℚ 的元素"一样多"（都是"可数无穷"，基数 ℵ₀）</li>
+<li>实数集 ℝ 比自然数集"更无穷"（不可数，基数 2^ℵ₀）</li>
+</ul>
+<p>这些结论打破了直觉，初期遭到强烈反对，康托尔曾陷入抑郁。但如今集合论是所有现代数学的基础语言。</p>
+<h3>罗素悖论——集合论的危机</h3>
+<p>1901 年，英国数学家 <strong>Bertrand Russell（罗素）</strong> 发现了一个让集合论崩溃的悖论：</p>
+<blockquote>
+<p>设 R = 所有"不包含自身"的集合的集合。
+问：R ∈ R 吗？</p>
+<ul>
+<li>如果 R ∈ R，那根据定义，R 不该包含自身，矛盾</li>
+<li>如果 R ∉ R，那 R 满足"不包含自身"，应该属于 R，矛盾</li>
+</ul>
+</blockquote>
+<p>通俗版（理发师悖论）：村里的理发师"只给不自己理发的人理发"，那理发师自己理不理？</p>
+<p>这个悖论促使数学家重建集合论的公理基础——ZFC 公理系统（Zermelo-Fraenkel + 选择公理），是现代数学的标准基础。</p>
+<h3>高中集合：子集与幂集</h3>
+<p>若集合 A 的每个元素都属于 B，则 A 是 B 的<strong>子集</strong>：A ⊆ B</p>
+<p>含 n 个元素的集合，共有 <strong>2ⁿ 个子集</strong>（幂集），包括空集和自身。</p>
+<pre><code>{a, b, c} 的子集：
+∅, {a}, {b}, {c}, {a,b}, {a,c}, {b,c}, {a,b,c}
+共 2³ = 8 个
+</code></pre>
+<h3>布尔代数与逻辑电路</h3>
+<p>集合的并（∪）、交（∩）、补（A'）运算，与逻辑中的 OR、AND、NOT 完全对应——这就是<strong>布尔代数</strong>。现代计算机的逻辑电路（与门、或门、非门）正是以此为基础，处理器中每一次指令执行都在进行集合运算。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合</td>
+<td>set</td>
+<td>n.</td>
+<td>核心词</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>element / member</td>
+<td>n.</td>
+<td>集合中的成员</td>
+</tr>
+<tr>
+<td>韦恩图/集合图</td>
+<td>Venn diagram</td>
+<td>n.</td>
+<td>两圆相交图</td>
+</tr>
+<tr>
+<td>并集</td>
+<td>union</td>
+<td>n.</td>
+<td>A∪B</td>
+</tr>
+<tr>
+<td>交集</td>
+<td>intersection</td>
+<td>n.</td>
+<td>A∩B</td>
+</tr>
+<tr>
+<td>子集</td>
+<td>subset</td>
+<td>n.</td>
+<td>A⊆B</td>
+</tr>
+<tr>
+<td>空集</td>
+<td>empty set</td>
+<td>n.</td>
+<td>∅</td>
+</tr>
+<tr>
+<td>排容原理</td>
+<td>inclusion-exclusion principle</td>
+<td>n.</td>
+<td>不重复计数</td>
+</tr>
+<tr>
+<td>属于</td>
+<td>belongs to / is an element of</td>
+<td>短语</td>
+<td>a∈A</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用韦恩图来表示两个集合的关系。</td>
+<td>Use a Venn diagram to show the relationship between two sets.</td>
+</tr>
+<tr>
+<td>A 和 B 的共同部分叫交集。</td>
+<td>The part shared by A and B is called the intersection.</td>
+</tr>
+<tr>
+<td>不要把重叠的部分数两次。</td>
+<td>Don't count the overlapping part twice.</td>
+</tr>
+<tr>
+<td>集合 A 包含 3 个元素。</td>
+<td>Set A has 3 elements.</td>
+</tr>
+<tr>
+<td>5 属于自然数集合。</td>
+<td>5 is an element of the set of natural numbers.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 集合与分类主题的科普绘本，推荐以"分组整理玩具/动物"为情节，适龄 5-8 岁共读。（<strong>具体书名待家长核实</strong>）</li>
+<li>🚧 英文可查找 "sorting and classifying math books for kids"，推荐包含实物分类活动的版本。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"中间那部分为什么要减去？"</strong> → 可以说："因为'两样都有'的人，在左圆圈数了一次，在右圆圈又数了一次，被多数了一遍。|A|+|B| 把他们数了两次，所以要减去一次，才是真正的总人数。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"集合和'一组东西'有什么区别？"</strong> → 可以说："集合里的每样东西都不重复，而且是确定的（要么在，要么不在，没有模糊地带）。比如'高个子的同学'这个集合，就要先定义多高才算高，不然界限不清就不是严格的集合。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"空集是什么意思？"</strong> → 可以说："空集就是'什么都没有'的集合，好像一个空箱子。'比 5 大又比 3 小的整数'就是空集——找不到这样的整数。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 在家里找 20 件物品，分两类：圆形的（A）/ 红色的（B）。分别数 A、B 的数量和既圆又红的数量，用 |A|+|B|-|A∩B| 验算是否等于总数（去掉两类都不是的物品后）。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学三年级上册.pdf</a> 第9单元《数学广角——集合》(p104-107)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）第一学段"数学广角——集合"（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/集合_(数学)</li>
+<li><strong>拓展阅读</strong>：罗素悖论与 ZFC 公理系统（数学史科普）；布尔代数与逻辑电路（计算机科学科普）；康托尔集合论与无穷（数学科普）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">加法</a> · <a class="dead" title="未收录">混合运算</a> · <a class="dead" title="未收录">万以内数</a> · <a class="dead" title="未收录">数数</a> · <a class="dead" title="未收录">除法</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-02.html">2008-文-02</a></li>
+<li><a href="../exam/2009-文-08.html">2009-文-08</a></li>
+<li><a href="../exam/2009-文-14.html">2009-文-14</a></li>
+<li><a href="../exam/2009-理-20.html">2009-理-20</a></li>
+<li><a href="../exam/2010-理-01.html">2010-理-01</a></li>
+<li><a href="../exam/2013-文-01.html">2013-文-01</a></li>
+<li><a href="../exam/2013-文-15.html">2013-文-15</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2014-文-01.html">2014-文-01</a></li>
+<li><a href="../exam/2014-理-01.html">2014-理-01</a></li>
+<li><a href="../exam/2015-文-01.html">2015-文-01</a></li>
+<li><a href="../exam/2015-理-01.html">2015-理-01</a></li>
+<li><a href="../exam/2016-文-01.html">2016-文-01</a></li>
+<li><a href="../exam/2017-文-01.html">2017-文-01</a></li>
+<li><a href="../exam/2018-文-01.html">2018-文-01</a></li>
+<li><a href="../exam/2018-文-02.html">2018-文-02</a></li>
+<li><a href="../exam/2018-文-08.html">2018-文-08</a></li>
+<li><a href="../exam/2018-理-08.html">2018-理-08</a></li>
+<li><a href="../exam/2019-文-01.html">2019-文-01</a></li>
+<li><a class="dead" title="未收录">2020-北京-01</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-01</a></li>
+<li><a href="../exam/2022-文-01.html">2022-文-01</a></li>
+<li><a href="../exam/2022-理-01.html">2022-理-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

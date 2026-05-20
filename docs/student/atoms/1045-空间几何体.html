@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间几何体</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间几何体</p><h1>空间几何体</h1>
+<blockquote>
+<p><strong>一句话</strong>：空间几何体是三维空间中由面围成的封闭图形，主要分为多面体（棱柱、棱锥、棱台）与旋转体（圆柱、圆锥、圆台、球），其核心研究内容是结构特征、表面积与体积。
+<strong>English</strong>: Spatial solids are closed figures in three-dimensional space bounded by surfaces, primarily categorized as polyhedra (prisms, pyramids, truncated pyramids) and solids of revolution (cylinders, cones, truncated cones, spheres); the core studies focus on their structural features, surface areas, and volumes.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+- <strong>多面体</strong>：由若干个平面多边形围成的几何体。面、棱、顶点的关系满足欧拉公式 $V+F-E=2$（简单多面体）。典型：
+  - 棱柱：两个底面是全等且平行的多边形，侧面是平行四边形。正棱柱的侧棱垂直于底面。
+  - 棱锥：一个底面是多边形，侧面是有一个公共顶点的三角形。正棱锥的顶点在底面的射影是底面中心。
+  - 棱台：用一个平行于棱锥底面的平面截棱锥，截面与底面之间的部分。侧棱延长后交于一点。
+- <strong>旋转体</strong>：
+  - 圆柱：以矩形一边所在直线为轴旋转而成。$S_{\text{侧}}=2\pi r l$，$V=\pi r^{2}h$。
+  - 圆锥：以直角三角形一直角边所在直线为轴旋转而成。$S_{\text{侧}}=\pi r l$（$l$为母线），$V=\frac{1}{3}\pi r^{2}h$。
+  - 圆台：用平行于圆锥底面的平面截圆锥得到。$S_{\text{侧}}=\pi(r_1+r_2)l$，$V=\frac{1}{3}\pi h(r_1^{2}+r_2^{2}+r_1 r_2)$。
+  - 球：半圆绕直径所在直线旋转而成。$S=4\pi R^{2}$，$V=\frac{4}{3}\pi R^{3}$。球的截面性质：球心到截面距离 $d=\sqrt{R^{2}-r^{2}}$，$r$ 为截面圆半径。</p>
+<p><strong>关键方法</strong>
+1. <strong>几何体结构判定</strong>：利用定义判断棱柱、棱锥、棱台，特别注意侧棱是否平行或延长后共点，底面是否平行且全等或相似。
+2. <strong>表面积计算</strong>：正确识别侧面展开图（圆柱侧面为矩形，圆锥为扇形，圆台为扇环），区分全面积与侧面积。
+3. <strong>体积计算</strong>：柱体统一 $V=Sh$，锥体 $V=\frac{1}{3}Sh$，台体 $V=\frac{1}{3}h(S'+\sqrt{S'S}+S)$，球体公式直接使用。对于不规则几何体，常用<strong>割补法</strong>（分割为锥、柱）和<strong>等体积法</strong>（变换顶点求高）。
+4. <strong>球的切接问题</strong>：将空间关系转化为平面直角三角形，利用勾股定理求半径。例如长方体（或正棱柱）的外接球直径等于体对角线长；正棱锥的外接球需构造由球心、锥高、侧棱或底面半径组成的直角三角形。</p>
+<p><strong>典型应用</strong>
+高考中常见于选择、填空及解答题第一问。设问角度包括：
+- 根据三视图或直观图求几何体的表面积、体积（新课标卷仍偶有出现）。
+- 与球相关的切、接问题，求半径或体积最值。
+- 平面图形沿直线旋转所得旋转体的侧面积或体积。
+- 组合体体积计算：逐块计算，注意公共部分不重不漏。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆柱、锥、台定义</strong>：误将侧棱延长不交于一点的几何体当作棱台；误将底面不平行或不全等的几何体当作棱柱。</li>
+<li><strong>锥体体积漏乘 $\frac{1}{3}$</strong>：尤其在棱锥与圆锥的体积计算中，常有学生直接用 $Sh$。</li>
+<li><strong>圆台、棱台的公式混淆</strong>：台体体积公式中根号内易漏 $S'S$ 项，侧面积公式中母线 $l$ 与高 $h$ 混淆。</li>
+<li><strong>球的截面问题乱用</strong>：不知球心与截面圆心连线垂直于截面，错误地直接使用 $R$ 或 $d$ 计算截面圆周长或面积。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多面体</td>
+<td>polyhedron</td>
+<td>由多边形面围成的几何体</td>
+</tr>
+<tr>
+<td>棱柱</td>
+<td>prism</td>
+<td>两个底面平行全等多边形，侧面为平行四边形</td>
+</tr>
+<tr>
+<td>棱锥</td>
+<td>pyramid</td>
+<td>一个底面多边形，侧面为共顶点三角形</td>
+</tr>
+<tr>
+<td>圆柱</td>
+<td>cylinder</td>
+<td>以矩形一边为轴旋转而成</td>
+</tr>
+<tr>
+<td>圆锥</td>
+<td>cone</td>
+<td>以直角三角形一直角边为轴旋转而成</td>
+</tr>
+<tr>
+<td>球</td>
+<td>sphere</td>
+<td>空间到定点距离等于定长的点集</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>volume</td>
+<td>几何体所占空间大小</td>
+</tr>
+<tr>
+<td>表面积</td>
+<td>surface area</td>
+<td>所有面的面积之和</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">点、线、面的位置关系</a></li>
+<li><a class="dead" title="未收录">空间向量与立体几何</a></li>
+<li><a class="dead" title="未收录">空间几何体的三视图与直观图</a></li>
+<li><a class="dead" title="未收录">球的切接问题</a></li>
+<li><a class="dead" title="未收录">组合体与割补法求体积</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-15.html">2010-文-15</a></li>
+<li><a href="../exam/2010-理-03.html">2010-理-03</a></li>
+<li><a href="../exam/2011-文-08.html">2011-文-08</a></li>
+<li><a href="../exam/2012-文-07.html">2012-文-07</a></li>
+<li><a href="../exam/2012-理-03.html">2012-理-03</a></li>
+<li><a href="../exam/2013-文-10.html">2013-文-10</a></li>
+<li><a href="../exam/2014-文-07.html">2014-文-07</a></li>
+<li><a href="../exam/2014-文-08.html">2014-文-08</a></li>
+<li><a href="../exam/2014-文-11.html">2014-文-11</a></li>
+<li><a href="../exam/2015-文-07.html">2015-文-07</a></li>
+<li><a href="../exam/2016-理-06.html">2016-理-06</a></li>
+<li><a href="../exam/2019-文-17.html">2019-文-17</a></li>
+<li><a href="../exam/2021-文-16.html">2021-文-16</a></li>
+<li><a class="dead" title="未收录">2024-北京-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

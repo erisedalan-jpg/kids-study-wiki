@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛物线焦点</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>抛物线焦点</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 抛物线焦点, focus of a parabola</p><h1>抛物线焦点</h1>
+<blockquote>
+<p><strong>一句话</strong>：抛物线焦点是到准线与到定点距离相等的点的轨迹中那个定点，是决定抛物线形状与位置的核心要素。
+<strong>English</strong>: The focus of a parabola is the fixed point such that the set of all points equidistant from the focus and a given directrix forms the parabola.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong><br />
+平面内与一个定点 $F$ 和一条定直线 $l$（$F\notin l$）的距离相等的点的轨迹叫做抛物线。定点 $F$ 称为焦点，定直线 $l$ 称为准线。焦点到准线的距离记为 $p$（$p&gt;0$），称为焦准距。</p>
+<p><strong>标准方程与焦点坐标</strong></p>
+<table>
+<thead>
+<tr>
+<th>开口方向</th>
+<th>标准方程</th>
+<th>焦点坐标</th>
+<th>准线方程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>右</td>
+<td>$y^2 = 2px$</td>
+<td>$\left(\frac{p}{2},0\right)$</td>
+<td>$x = -\frac{p}{2}$</td>
+</tr>
+<tr>
+<td>左</td>
+<td>$y^2 = -2px$</td>
+<td>$\left(-\frac{p}{2},0\right)$</td>
+<td>$x = \frac{p}{2}$</td>
+</tr>
+<tr>
+<td>上</td>
+<td>$x^2 = 2py$</td>
+<td>$\left(0,\frac{p}{2}\right)$</td>
+<td>$y = -\frac{p}{2}$</td>
+</tr>
+<tr>
+<td>下</td>
+<td>$x^2 = -2py$</td>
+<td>$\left(0,-\frac{p}{2}\right)$</td>
+<td>$y = \frac{p}{2}$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键性质</strong><br />
+- 焦点弦：过焦点的直线与抛物线相交所得线段 $AB$ 叫焦点弦。通径是焦点垂直于对称轴的弦，长为 $2p$。<br />
+- 焦半径：设 $P(x_0,y_0)$ 在 $y^2 = 2px$ 上，则 $|PF| = x_0 + \frac{p}{2}$，可直接由定义推出。<br />
+- 焦点辅助圆：以焦点弦为直径的圆与准线相切；以焦半径为直径的圆与 $x$ 轴（对称轴）相切。</p>
+<p><strong>高考典型应用</strong><br />
+- <strong>求方程</strong>：根据焦点或准线位置反求 $p$，注意开口方向。<br />
+- <strong>最值问题</strong>：利用定义将曲线上点到焦点的距离转化为到准线的距离，结合点到点距离求 $PA+PF$ 型最值（常通过平移准线或作对称）。<br />
+- <strong>焦点弦问题</strong>：设焦点弦所在直线方程，联立抛物线 $y^2=2px$ 与 $y=k\bigl(x-\frac{p}{2}\bigr)$，利用韦达定理求弦长 $|AB| = x_1+x_2+p$，进而研究面积、向量等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>焦点与准线符号混淆</strong>：$y^2=2px$ 的焦点在 $(\frac{p}{2},0)$，准线为 $x=-\frac{p}{2}$，学生常将准线写成 $x=\frac{p}{2}$ 或焦点写成 $(-\frac{p}{2},0)$。</li>
+<li><strong>开口方向误判</strong>：见到 $x^2=2py$ 时错误地将焦点写成 $(0,-\frac{p}{2})$，把上下开口与正负号对应反了。</li>
+<li><strong>定义转化时不注意 $p&gt;0$</strong>：在含参方程 $y^2=2px$ 中若未说明 $p$ 的正负，焦点坐标可能为 $\bigl(\frac{p}{2},0\bigr)$，但 $p$ 必须为正，否则不满足抛物线定义，需先判断符号。</li>
+<li><strong>焦点弦长公式错用</strong>：对 $y^2=2px$，焦点弦长 $|AB|=x_1+x_2+p$，若直接套用其他开口方向而未调整，容易丢失 $p$ 项或符号错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抛物线</td>
+<td>parabola</td>
+<td>到焦点与准线距离相等的点的轨迹</td>
+</tr>
+<tr>
+<td>焦点</td>
+<td>focus</td>
+<td>决定抛物线位置与形状的定点</td>
+</tr>
+<tr>
+<td>准线</td>
+<td>directrix</td>
+<td>与焦点共同定义抛物线的定直线</td>
+</tr>
+<tr>
+<td>焦准距</td>
+<td>focal parameter</td>
+<td>焦点到准线的距离，通常记作 $p$</td>
+</tr>
+<tr>
+<td>通径</td>
+<td>latus rectum</td>
+<td>过焦点垂直于对称轴的弦，长为 $2p$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">抛物线标准方程</a></li>
+<li><a class="dead" title="未收录">抛物线的几何性质</a></li>
+<li><a class="dead" title="未收录">焦点弦问题</a></li>
+<li><a class="dead" title="未收录">圆锥曲线定义</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-09.html">2009-理-09</a></li>
+<li><a href="../exam/2013-理-07.html">2013-理-07</a></li>
+<li><a href="../exam/2019-文-09.html">2019-文-09</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-10.html">2023-新课标Ⅱ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

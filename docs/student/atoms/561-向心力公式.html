@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向心力公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向心力公式</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向心力公式, centripetal force</p><h1>向心力公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：向心力公式 $F = m\frac{v^2}{r} = m\omega^2 r$ 描述质点做匀速圆周运动时所需的指向圆心的合力，大小与质量、速度平方（或角速度平方）成正比，与半径成反比（或正比）。
+<strong>English</strong>: The centripetal force formula $F = m\frac{v^2}{r} = m\omega^2 r$ gives the net force directed toward the center required to keep an object moving in uniform circular motion.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+向心力是按效果命名的力，它可以是某个力、某个力的分力或几个力的合力，作用是不断改变物体速度的方向，不改变速度的大小（匀速圆周运动中）。最常用的表达式为：<br />
+$$F = m\frac{v^{2}}{r} = m\omega^{2}r = m\frac{4\pi^{2}}{T^{2}}r$$<br />
+其中 $m$ 为物体质量，$v$ 为线速度，$\omega$ 为角速度，$r$ 为圆周半径，$T$ 为周期。公式表明，当 $v$ 或 $\omega$ 一定时，向心力与半径成确定关系；高考中常结合牛顿第二定律写成 $\sum F_{\text{向心}}=ma_n$，$a_n = \frac{v^2}{r} = \omega^2 r$ 为向心加速度。</p>
+<p><strong>关键方法</strong><br />
+处理圆周运动问题的标准步骤：<br />
+1. 明确研究对象，确定圆周运动的平面和圆心、半径；<br />
+2. 受力分析，标出所有力（不单独画“向心力”）；<br />
+3. 沿半径方向（指向圆心）求合力，即 $F_{\text{合向}}=F_{\text{向心}}$；<br />
+4. 根据牛顿第二定律列方程 $F_{\text{合向}} = m\frac{v^{2}}{r}$（或 $m\omega^2r$ 等形式）；<br />
+5. 对于临界问题，找出恰好满足条件时的力（如弹力为零）并求解临界速度。  </p>
+<p><strong>典型应用</strong><br />
+- <strong>水平面内圆周运动</strong>：如汽车在水平弯道转弯，静摩擦力提供向心力，由 $f = m\frac{v^2}{r}$ 分析安全速度；圆锥摆中，摆球的重力和拉力的合力提供向心力，可得 $mg\tan\theta = m\omega^2 l\sin\theta$。<br />
+- <strong>竖直面内圆周运动</strong>：绳模型最高点临界速度为 $v_{\text{min}} = \sqrt{gr}$（此时绳拉力为零，重力完全提供向心力）；杆模型最高点临界速度为 $0$（杆可提供支撑力）。高考常结合动能定理求各位置速度，再代入向心力公式求弹力或判断能否完成圆周运动。<br />
+- <strong>万有引力充当向心力</strong>：天体运动中，$G\frac{Mm}{r^2}=m\frac{v^2}{r}=m\omega^2 r$，可推导出中心天体质量、环绕速度等，是高考高频考点。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>受力分析时凭空添加“向心力”</strong>：向心力不是性质力，不能在受力图中多画一个指向圆心的力，必须从已有力中寻求指向圆心的合力。</li>
+<li><strong>混淆绳模型与杆模型的临界条件</strong>：绳只能拉不能撑，最高点最小速度 $\sqrt{gr}$；杆既能拉也能撑，最高点最小速度 $0$，混淆会导致牛顿第二定律列式错误。</li>
+<li><strong>变速圆周运动中错误使用向心力公式</strong>：公式 $F = mv^2/r$ 对一般曲线运动的瞬时值仍成立，但此时合力不指向圆心，只有向心分力提供向心力，学生常错误计算合力当做向心力。</li>
+<li><strong>半径与角速度、线速度关系不清</strong>：在 $F = mv^2/r$ 和 $F = m\omega^2 r$ 之间转换时，不顾同一物体、同一运动下 $v$ 与 $\omega$ 的约束关系，导致半径变化时力的大小判断错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向心力</td>
+<td>centripetal force</td>
+<td>指向圆心的合外力效果</td>
+</tr>
+<tr>
+<td>线速度</td>
+<td>linear velocity</td>
+<td>物体沿圆周运动切线方向的速度</td>
+</tr>
+<tr>
+<td>角速度</td>
+<td>angular velocity</td>
+<td>单位时间内转过的圆心角</td>
+</tr>
+<tr>
+<td>圆周运动</td>
+<td>circular motion</td>
+<td>轨迹为圆的运动</td>
+</tr>
+<tr>
+<td>临界速度</td>
+<td>critical velocity</td>
+<td>恰好能完成圆周运动的最小（或最大）速度</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017 年版 2020 年修订）必修 2 “圆周运动”模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/258-圆周运动.html">圆周运动</a></li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">竖直面内圆周运动的临界问题</a></li>
+<li><a class="dead" title="未收录">动能定理在曲线运动中的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2009-北京-10</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-11.html">2013-新课标Ⅱ-11</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-02.html">2020-新课标Ⅱ-02</a></li>
+<li><a href="../exam/2021-全国乙-05.html">2021-全国乙-05</a></li>
+<li><a class="dead" title="未收录">2023-北京-10</a></li>
+<li><a class="dead" title="未收录">2023-北京-21</a></li>
+<li><a class="dead" title="未收录">2024-北京-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

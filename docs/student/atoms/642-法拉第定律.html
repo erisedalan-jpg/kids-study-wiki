@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>法拉第定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>法拉第定律</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 法拉第定律, 法拉第电磁感应定律, 电磁感应定律</p><h1>法拉第定律</h1>
+<blockquote>
+<p><strong>一句话</strong>：闭合回路中感应电动势的大小，与穿过该回路的磁通量变化率成正比。
+<strong>English</strong>: The magnitude of the induced electromotive force in a closed circuit is proportional to the rate of change of magnetic flux through the circuit.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：法拉第电磁感应定律的定量表达式为</p>
+<p>$$
+\mathcal{E} = -n \frac{\Delta \Phi}{\Delta t}
+$$</p>
+<p>其中 $\mathcal{E}$ 为感应电动势（单位：V），$n$ 为线圈匝数，$\frac{\Delta \Phi}{\Delta t}$ 为磁通量变化率（单位：Wb/s），负号表示感应电动势的方向（楞次定律）。磁通量 $\Phi = BS\cos\theta$，其变化可由 $B$、$S$ 或 $\theta$ 中任一量的变化引起。</p>
+<p><strong>关键方法</strong>：解决感应电动势计算问题的标准步骤——①确定回路及匝数 $n$；②分析引起磁通量变化的因素（磁场变化？面积变化？夹角变化？）；③计算 $\Delta\Phi = \Phi_2 - \Phi_1$；④代入公式求出 $\mathcal{E}$ 的大小；⑤由楞次定律判定感应电流方向。</p>
+<p><strong>典型应用</strong>：
+1. <strong>均匀变化磁场中的线圈</strong>：如匀强磁场在 $\Delta t$ 内从 $B_1$ 均匀变化到 $B_2$，线圈面积 $S$ 不变、平面垂直于磁场，则 $\mathcal{E} = nS\frac{|B_2 - B_1|}{\Delta t}$。高考常结合 $B\text{-}t$ 图像考查。
+2. <strong>导体棒切割磁感线</strong>（平动切割）：导体棒长度 $L$、垂直磁场 $B$ 以速度 $v$ 运动，等效于回路面积变化，此时 $\mathcal{E} = BLv$（$B,L,v$ 两两垂直），是法拉第定律的衍生应用，选择题与计算题均高频出现。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆磁通量变化率与磁通量大小</strong>：$\Phi$ 最大时（线圈平面与磁场垂直），$\frac{\Delta\Phi}{\Delta t}$ 可能为零（如线圈在匀强磁场中旋转至中性面时），感应电动势为零，学生常误认为最大。</li>
+<li><strong>忘记匝数 $n$</strong>：$\mathcal{E} = n\frac{\Delta\Phi}{\Delta t}$ 中的 $n$ 易漏乘，尤其当题目给出单匝磁通量变化后直接代入计算时。</li>
+<li><strong>有效长度判断错误</strong>：导体切割磁感线使用 $E = BLv$ 时，$L$ 必须是导体在垂直于 $v$ 方向上的有效切割长度，而非导体总长度。</li>
+<li><strong>方向判定遗漏</strong>：仅算出感应电动势大小而没有使用楞次定律或右手定则判定方向，在要求判断电势高低或电流方向的题目中失分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>法拉第电磁感应定律</td>
+<td>Faraday's law of electromagnetic induction</td>
+<td>感应电动势与磁通量变化率成正比</td>
+</tr>
+<tr>
+<td>磁通量</td>
+<td>magnetic flux</td>
+<td>$\Phi = BS\cos\theta$，衡量穿过某面积的磁场</td>
+</tr>
+<tr>
+<td>感应电动势</td>
+<td>induced electromotive force (emf)</td>
+<td>由电磁感应产生的电动势，单位伏特 V</td>
+</tr>
+<tr>
+<td>匝数</td>
+<td>number of turns</td>
+<td>线圈绕制的圈数，符号 $n$</td>
+</tr>
+<tr>
+<td>感应电流</td>
+<td>induced current</td>
+<td>感应电动势在闭合回路中驱动的电流</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a href="../atoms/135-安培定则.html">右手定则</a></li>
+<li><a class="dead" title="未收录">自感与互感</a></li>
+<li><a class="dead" title="未收录">涡流</a></li>
+<li><a class="dead" title="未收录">电磁感应与电路综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2017-新课标Ⅱ-07.html">2017-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

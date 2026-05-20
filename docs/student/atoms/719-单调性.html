@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>单调性</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 单调性, Monotonicity</p><h1>单调性</h1>
+<blockquote>
+<p><strong>一句话</strong>：函数的单调性描述了函数值随自变量增大而增大或减小的性质，是研究函数变化趋势的基础工具。
+<strong>English</strong>: Monotonicity of a function describes the property of its values increasing or decreasing as the independent variable increases, serving as a fundamental tool for analyzing functional trends.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+设函数 $f(x)$ 定义在区间 $I$ 上，若对任意 $x_1, x_2 \in I$，当 $x_1 &lt; x_2$ 时都有 $f(x_1) \le f(x_2)$（或严格 $f(x_1) &lt; f(x_2)$），则称 $f(x)$ 在 $I$ 上单调递增（严格递增）；类似地定义单调递减（严格递减）。在高考中，更多利用导数判定单调性：若在区间内 $f'(x) \ge 0$ 且等号不恒成立，则 $f(x)$ 在此区间内单调递增；若 $f'(x) \le 0$ 且等号不恒成立，则单调递减。导数为零的点需单独讨论。</p>
+<p><strong>关键方法</strong><br />
+1. 求导：求出导数 $f'(x)$，解不等式 $f'(x) \ge 0$ 或 $f'(x) \le 0$ 得到单调区间。<br />
+2. 参数讨论：含参函数需分类讨论导数符号，通常依据导数为零的根的分界。<br />
+3. 结合原函数特性：分段函数、抽象函数单调性常利用定义或性质（如 $f(x)$ 增则 $-f(x)$ 减）。  </p>
+<p><strong>典型应用</strong><br />
+高考直接考查：① 讨论给定函数的单调性（如 $f(x)=x^3-3x^2+2$），常作为大题第一问。② 利用单调性比较大小（如 $\pi^e$ 与 $e^\pi$）。③ 解抽象函数不等式（如 $f(x)$ 为增函数且 $f(2x-1) &lt; f(3)$ 求 $x$ 范围）。④ 利用单调性求函数最值，进一步证明不等式或恒成立问题。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>导数 $f'(x) \ge 0$ 只是函数递增的充分条件，而非必要条件（如 $f(x)=x^3$ 在 $x=0$ 处导数为零但整体递增）。判断时需说明“导数非负且不恒为零”。</li>
+<li>多个单调区间之间不能用“$\cup$”连接。例如“增区间为 $(-\infty,0) \cup (1,+\infty)$”是错误写法，应写为“单调递增区间为 $(-\infty,0)$ 和 $(1,+\infty)$”。</li>
+<li>混淆“在区间 $A$ 上单调递增”与“在定义域内单调递增”的区别。例如 $f(x)=\frac{1}{x}$ 在 $(-\infty,0)$ 和 $(0,+\infty)$ 上分别单调递减，但不能说在定义域上单调递减。</li>
+<li>利用抽象函数单调性解不等式时，忽略自变量的取值范围是否在定义域内。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单调性</td>
+<td>Monotonicity</td>
+<td>函数值随自变量单调变化的性质</td>
+</tr>
+<tr>
+<td>单调递增</td>
+<td>Monotonically Increasing</td>
+<td>$x_1 &lt; x_2 \Rightarrow f(x_1) \le f(x_2)$</td>
+</tr>
+<tr>
+<td>单调递减</td>
+<td>Monotonically Decreasing</td>
+<td>$x_1 &lt; x_2 \Rightarrow f(x_1) \ge f(x_2)$</td>
+</tr>
+<tr>
+<td>单调区间</td>
+<td>Monotone Interval</td>
+<td>使函数保持单调性的最大区间</td>
+</tr>
+<tr>
+<td>导数</td>
+<td>Derivative</td>
+<td>用于判定函数单调性的重要工具</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：函数性质（单调性）模块；导数及其应用模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/705-利用导数研究函数的单调性.html">导数与单调性</a></li>
+<li><a href="../atoms/419-函数最值-高中.html">函数最值</a></li>
+<li><a class="dead" title="未收录">不等式证明</a></li>
+<li><a class="dead" title="未收录">函数零点与方程根</a></li>
+<li><a class="dead" title="未收录">抽象函数问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-03.html">2008-理-03</a></li>
+<li><a href="../exam/2008-理-04.html">2008-理-04</a></li>
+<li><a href="../exam/2011-文-03.html">2011-文-03</a></li>
+<li><a href="../exam/2015-理-05.html">2015-理-05</a></li>
+<li><a href="../exam/2016-文-09.html">2016-文-09</a></li>
+<li><a href="../exam/2016-文-10.html">2016-文-10</a></li>
+<li><a href="../exam/2016-理-14.html">2016-理-14</a></li>
+<li><a href="../exam/2017-文-05.html">2017-文-05</a></li>
+<li><a href="../exam/2017-文-08.html">2017-文-08</a></li>
+<li><a href="../exam/2017-文-09.html">2017-文-09</a></li>
+<li><a href="../exam/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/2019-理-09.html">2019-理-09</a></li>
+<li><a href="../exam/2020-理-09.html">2020-理-09</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2023-北京-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

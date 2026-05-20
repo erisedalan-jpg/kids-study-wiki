@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子在磁场中的圆周运动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>带电粒子在磁场中的圆周运动</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 带电粒子在磁场中的圆周运动</p><h1>带电粒子在磁场中的圆周运动</h1>
+<blockquote>
+<p><strong>一句话</strong>：带电粒子以垂直于匀强磁场方向的速度射入时，在洛伦兹力作用下做匀速圆周运动，由 $qvB = m\dfrac{v^2}{r}$ 确定轨道半径与周期。
+<strong>English</strong>: When a charged particle moves perpendicular to a uniform magnetic field, the Lorentz force acts as centripetal force, resulting in uniform circular motion with radius $r = \dfrac{mv}{qB}$ and period $T = \dfrac{2\pi m}{qB}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+带电粒子（电荷量 $q$、质量 $m$）以速度 $v$ 垂直进入磁感应强度为 $B$ 的匀强磁场时，受到的洛伦兹力 $F = qvB$ 始终与速度方向垂直，充当向心力。<br />
+由 $qvB = m\dfrac{v^2}{r}$ 得轨道半径 $r = \dfrac{mv}{qB}$，周期 $T = \dfrac{2\pi r}{v} = \dfrac{2\pi m}{qB}$。<br />
+可见半径与粒子的动量 $mv$ 成正比，周期仅由比荷和磁场决定，与速度大小无关。<br />
+洛伦兹力不做功，粒子的动能和速率保持不变。</p>
+<p><strong>关键方法</strong><br />
+高考中解决该类问题的标准步骤：<br />
+1. <strong>定圆心</strong>：已知入射和出射速度方向时，作两速度方向的垂线，交点即圆心；或利用弦的中垂线与速度垂线相交确定圆心。<br />
+2. <strong>求半径</strong>：由几何关系（如弦长、圆弧对应的角度）利用三角函数或勾股定理求解，或直接由 $r = \dfrac{mv}{qB}$ 计算。<br />
+3. <strong>算时间</strong>：由偏转角 $\theta$（圆心角）与周期关系，运动时间 $t = \dfrac{\theta}{2\pi}T = \dfrac{\theta m}{qB}$，$\theta$ 常用弧度制表示。<br />
+4. <strong>临界分析</strong>：常结合磁场边界（矩形、圆形）分析最值问题，如最大半径对应最大速度、最短时间对应最小圆心角等。</p>
+<p><strong>典型应用</strong><br />
+- <strong>单一磁场偏转</strong>：给定位点、出射方向或弦长，求解比荷、速度、磁场强度或运动时间。<br />
+- <strong>组合场（电场+磁场）</strong>：粒子先在电场中加速后进入磁场偏转，利用 $qU = \frac12 mv^2$ 与圆周运动公式联立求半径或比荷（如质谱仪原理）。<br />
+- <strong>有界磁场临界问题</strong>：粒子在磁场中恰好不穿出边界的条件，常转化为轨迹圆与边界相切，利用几何关系求临界半径。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>周期与速度无关</strong>：误以为半径变大周期也变大，实际上 $T = \dfrac{2\pi m}{qB}$ 与速度、半径均无关，仅取决于比荷和磁场。  </li>
+<li><strong>洛伦兹力方向判断</strong>：使用左手定则时忘记区分正负电荷——四指指向正电荷运动方向，负电荷则指向运动反方向。  </li>
+<li><strong>角度关系混淆</strong>：偏转角等于圆心角，弦切角等于圆心角的一半，轨迹弧长对应圆心角而非几何三角形的角度，计算时间时需用圆心角（弧度）。  </li>
+<li><strong>半径与动能关系的误用</strong>：由 $r = \dfrac{\sqrt{2mE_k}}{qB}$ 可知，对同种粒子，半径正比于速度而非动能；加速电压 $U$ 与半径的关系为 $r = \dfrac{1}{B}\sqrt{\dfrac{2mU}{q}}$，不要遗漏平方根。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>洛伦兹力</td>
+<td>Lorentz force</td>
+<td>运动电荷在磁场中受到的力</td>
+</tr>
+<tr>
+<td>向心力</td>
+<td>centripetal force</td>
+<td>维持圆周运动指向圆心的合力</td>
+</tr>
+<tr>
+<td>轨道半径</td>
+<td>radius of curvature</td>
+<td>圆周运动的回转半径</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>完成一次完整圆周运动的时间</td>
+</tr>
+<tr>
+<td>比荷</td>
+<td>specific charge</td>
+<td>粒子电荷量与质量之比 $q/m$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准(2017 版 2020 年修订)必修课程“电磁场与电磁波初步”及选择性必修“磁场”相关要求（待家长核对）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">洛伦兹力的方向判断与左手定则</a></li>
+<li><a class="dead" title="未收录">带电粒子在匀强磁场中运动时间的计算</a></li>
+<li><a class="dead" title="未收录">质谱仪与回旋加速器原理</a></li>
+<li><a class="dead" title="未收录">有界磁场中的临界与极值问题</a></li>
+<li><a class="dead" title="未收录">带电粒子在组合场中的运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2019-新课标Ⅱ-04.html">2019-新课标Ⅱ-04</a></li>
+<li><a href="../exam/2021-全国乙-03.html">2021-全国乙-03</a></li>
+<li><a href="../exam/2024-辽宁-13.html">2024-辽宁-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

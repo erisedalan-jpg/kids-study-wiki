@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电场力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电场力</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电场力, 静电力</p><h1>电场力</h1>
+<blockquote>
+<p><strong>一句话</strong>：电场力是电荷在电场中受到的力，其大小由 $F = qE$ 决定，方向与电场方向及电荷正负相关。
+<strong>English</strong>: The electric force is the force experienced by a charge in an electric field; its magnitude is determined by $F = qE$, and its direction is related to the field direction and the sign of the charge.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>电场力本质上是电场对放入其中的电荷的作用力，遵循库仑定律（点电荷间相互作用力 $F = k\frac{q_1 q_2}{r^2}$）和场强定义式 $E = \frac{F}{q}$。在匀强电场中，电场力恒定，可用 $F = qE = q\frac{U}{d}$ 计算；在非匀强电场或点电荷电场中，需要结合电场线分布定性分析或利用力的矢量合成。</p>
+<p><strong>关键方法</strong>：
+1. <strong>受力分析优先</strong>：先明确研究对象（带电体）所处电场的类型与场强方向，判断电场力的大小和方向（正电荷受力与场强方向相同，负电荷相反）。
+2. <strong>运动与能量结合</strong>：当只受电场力或复合场中运动时，常通过动能定理 $qU = \Delta E_k$ 或牛顿第二定律 $F = ma$ 求解加速度、速度、位移等。电势能变化 $\Delta E_p = -W_{电场力}$ 是联系电场力做功与能量转化的纽带。
+3. <strong>轨迹与偏转</strong>：在带电粒子垂直进入匀强电场的类平抛模型中，将运动分解为匀速直线运动（垂直电场方向）和初速度为零的匀加速直线运动（沿电场方向），利用 $y = \frac{1}{2}\frac{qU}{md}\left(\frac{L}{v_0}\right)^2$ 求偏移量，利用 $\tan \theta = \frac{qUL}{md v_0^2}$ 求速度偏转角。</p>
+<p><strong>典型应用</strong>：高考常以带电粒子在电场中的加速、偏转（如示波管模型）或平衡问题（如带电小球在电场中的圆周运动）设问。例如，判断粒子能否从偏转电场飞出、计算偏转距离，或分析在复合场（电场与重力场叠加）中物体能否做匀速圆周运动（此时需 $qE = mg$）。另常见结合电场线与等势面判断电场力做功及电势能变化。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆电场力方向与运动方向</strong>：电场力方向由场强方向与电荷电性共同决定，不一定是带电粒子的运动方向。粒子做曲线运动时，电场力指向轨迹凹侧。</li>
+<li><strong>误用非匀强电场公式</strong>：$F = qE$ 始终成立，但 $E = \frac{U}{d}$ 仅适用于匀强电场。在非匀强电场中，不能直接用 $U = Ed$ 求电场力做功，而应通过 $W = qU$ 计算。</li>
+<li><strong>电势能与电场力做功关系记反</strong>：电场力做正功，电势能减少；电场力做负功，电势能增加，即 $W_{电场力} = -\Delta E_p$。容易与重力做功与重力势能的关系混淆。</li>
+<li><strong>忽略多电荷产生的电场叠加</strong>：当空间存在多个点电荷时，某点场强为各场源电荷单独存在时产生场强的矢量和。此时电荷所受电场力为 $F = qE_合$，不能简单用库仑定律代数相加。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电场力</td>
+<td>electric force</td>
+<td>电荷在电场中受到的作用力</td>
+</tr>
+<tr>
+<td>电场强度</td>
+<td>electric field intensity</td>
+<td>描述电场强弱和方向的物理量，$E = F/q$</td>
+</tr>
+<tr>
+<td>电势能</td>
+<td>electric potential energy</td>
+<td>电荷在电场中因位置而具有的能量</td>
+</tr>
+<tr>
+<td>电势差（电压）</td>
+<td>potential difference (voltage)</td>
+<td>电场中两点间电势的差值，$U = W/q$</td>
+</tr>
+<tr>
+<td>库仑定律</td>
+<td>Coulomb's law</td>
+<td>点电荷间相互作用力的规律</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017 年版 2020 年修订）必修课程“静电场”及选择性必修课程“静电场”相关内容；对应电路与电磁场模块。</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a class="dead" title="未收录">电势能与电势</a></li>
+<li><a class="dead" title="未收录">带电粒子在电场中的运动</a></li>
+<li><a href="../atoms/263-库仑定律.html">库仑定律</a></li>
+<li><a class="dead" title="未收录">电场力做功与电势差</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-11</a></li>
+<li><a class="dead" title="未收录">2011-北京-12</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-11.html">2013-新课标Ⅱ-11</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-01.html">2015-新课标Ⅱ-01</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2018-北京-06</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2021-北京-18</a></li>
+<li><a class="dead" title="未收录">2022-北京-18</a></li>
+<li><a class="dead" title="未收录">2023-北京-08</a></li>
+<li><a class="dead" title="未收录">2023-北京-20</a></li>
+<li><a href="../exam/2023-新课标-05.html">2023-新课标-05</a></li>
+<li><a href="../exam/2023-新课标-12.html">2023-新课标-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

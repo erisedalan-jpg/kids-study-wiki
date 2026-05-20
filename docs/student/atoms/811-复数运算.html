@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复数运算</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复数运算, Complex number operations</p><h1>复数运算</h1>
+<blockquote>
+<p><strong>一句话</strong>：复数运算是在虚数单位 <code>i</code>（<code>i² = -1</code>）下对形如 <code>a+bi (a,b∈R)</code> 的数进行加、减、乘、除、乘方等代数操作及几何变换，是高考基础且必考的运算工具。<br />
+<strong>English</strong>: Complex number operations refer to algebraic manipulations (addition, subtraction, multiplication, division, exponentiation) and geometric transformations of numbers of the form a+bi under the imaginary unit i where i² = -1, a fundamental and mandatory tool in the Gaokao.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+复数 <code>z</code> 的标准代数形式为 <code>z = a + bi</code>（<code>a, b ∈ R</code>），其中 <code>a</code> 为实部，<code>b</code> 为虚部（不含 <code>i</code>）。虚数单位满足 <code>i² = -1</code>，且 <code>i</code> 的幂具有周期性：<code>i⁴ⁿ = 1</code>，<code>i⁴ⁿ⁺¹ = i</code>，<code>i⁴ⁿ⁺² = -1</code>，<code>i⁴ⁿ⁺³ = -i</code>。<br />
+核心运算公式：<br />
+- 加减：<code>(a+bi) ± (c+di) = (a±c) + (b±d)i</code><br />
+- 乘法：<code>(a+bi)(c+di) = (ac - bd) + (ad + bc)i</code><br />
+- 除法：<code>(a+bi)/(c+di) = (a+bi)(c-di)/(c²+d²) = (ac+bd)/(c²+d²) + (bc-ad)/(c²+d²)i</code> （分母实数化）<br />
+共轭复数 <code>\bar{z} = a - bi</code>，模 <code>|z| = √(a²+b²)</code>。常用性质：<code>z·\bar{z} = |z|²</code>，<code>|z₁z₂| = |z₁||z₂|</code>，<code>|z₁/z₂| = |z₁|/|z₂|(z₂≠0)</code>。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>分母实数化</strong>：除法运算时分子分母同乘分母的共轭复数。<br />
+2. <strong>复数相等</strong>：<code>a+bi = c+di ⇔ a=c 且 b=d</code>，用于求解含参数的复数方程。<br />
+3. <strong>利用模与共轭整体处理</strong>：若已知条件为 <code>|z|=1</code> 或 <code>z·\bar{z}=1</code>，可设 <code>z = x+yi</code> 或利用性质简化。<br />
+4. <strong>i 的周期性</strong>：将高次幂转化为低次幂计算。</p>
+<p><strong>典型应用（高考设问）</strong><br />
+- <strong>直接运算求值</strong>：如 “若 <code>z = (1+i)/(1-i)</code>，则 <code>z²⁰ = ?</code>”，需先化简再结合周期性。<br />
+- <strong>复数相等求参数</strong>：由两个复数相等建立方程组，解出实部、虚部中的未知数。<br />
+- <strong>复平面与几何意义</strong>：判断复数对应点在第几象限，或由条件（如 <code>|z-(1+i)|=1</code>）确定动点轨迹（圆）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>虚部表述错误</strong>：复数 <code>z = 3+4i</code> 的虚部是 <code>4</code>，而非 <code>4i</code>。高考填空题常在此设陷阱。  </li>
+<li><strong>除法漏乘共轭</strong>：计算 <code>(1+2i)/(2-i)</code> 时，只对分母或分子单独乘共轭，导致结果错误。必须分子分母同乘 <code>(2+i)</code>。  </li>
+<li><strong>i 的幂化简遗忘</strong>：<code>i²⁰²³</code> 应化为 <code>i⁴ⁿ⁺³ = -i</code>，误算为 <code>-1</code> 或 <code>i</code>。  </li>
+<li><strong>模与平方混淆</strong>：<code>|z|²</code> 等于 <code>z·\bar{z}</code>，但 <code>z²</code> 是复数乘法，两者一般不相等。例如 <code>z = 1+i</code>，<code>|z|² = 2</code> 但 <code>z² = 2i</code>。  </li>
+<li><strong>复数相等对应错误</strong>：若 <code>a+bi = c+di</code>，必须同时满足实部与虚部分别相等，尤其含参数时易漏条件。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复数</td>
+<td>complex number</td>
+<td>形如 a+bi 的数</td>
+</tr>
+<tr>
+<td>虚数单位</td>
+<td>imaginary unit</td>
+<td>记作 i，满足 i²=−1</td>
+</tr>
+<tr>
+<td>实部</td>
+<td>real part</td>
+<td>复数中的实数部分 a</td>
+</tr>
+<tr>
+<td>虚部</td>
+<td>imaginary part</td>
+<td>复数中的实数系数 b，不含 i</td>
+</tr>
+<tr>
+<td>共轭复数</td>
+<td>complex conjugate</td>
+<td>实部相同、虚部互为相反数的复数对</td>
+</tr>
+<tr>
+<td>模</td>
+<td>modulus</td>
+<td>复数对应向量的长度，√(a²+b²)</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">复数的四则运算</a></li>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a class="dead" title="未收录">复数模与共轭</a></li>
+<li><a class="dead" title="未收录">复数相等</a></li>
+<li><a class="dead" title="未收录">虚数单位i的周期性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-01.html">2009-理-01</a></li>
+<li><a href="../exam/2012-文-02.html">2012-文-02</a></li>
+<li><a href="../exam/2013-文-02.html">2013-文-02</a></li>
+<li><a href="../exam/2013-理-01.html">2013-理-01</a></li>
+<li><a href="../exam/2013-理-02.html">2013-理-02</a></li>
+<li><a href="../exam/2014-理-01.html">2014-理-01</a></li>
+<li><a href="../exam/2015-文-01.html">2015-文-01</a></li>
+<li><a href="../exam/2016-文-02.html">2016-文-02</a></li>
+<li><a href="../exam/2017-文-02.html">2017-文-02</a></li>
+<li><a href="../exam/2017-文-03.html">2017-文-03</a></li>
+<li><a href="../exam/2018-文-01.html">2018-文-01</a></li>
+<li><a href="../exam/2019-理-01.html">2019-理-01</a></li>
+<li><a href="../exam/2020-理-01.html">2020-理-01</a></li>
+<li><a href="../exam/2020-理-15.html">2020-理-15</a></li>
+<li><a href="../exam/2021-文-02.html">2021-文-02</a></li>
+<li><a href="../exam/2022-理-02.html">2022-理-02</a></li>
+<li><a class="dead" title="未收录">2024-北京-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

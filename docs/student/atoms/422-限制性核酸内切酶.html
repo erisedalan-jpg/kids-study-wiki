@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>限制性核酸内切酶</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>限制性核酸内切酶</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 基因工程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 限制性核酸内切酶, 限制酶, restriction endonuclease, restriction enzyme</p><h1>限制性核酸内切酶</h1>
+<blockquote>
+<p><strong>一句话</strong>：能识别特定DNA序列并在特定位点切割双链DNA的酶，是基因工程的"分子剪刀"。
+<strong>English</strong>: Enzymes that recognize specific DNA sequences and cleave double-stranded DNA at defined sites, serving as "molecular scissors" in genetic engineering.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>限制性核酸内切酶（Restriction Endonuclease），简称<strong>限制酶</strong>，是一类能识别特定碱基序列（识别位点），并在识别位点内或附近切断双链DNA的酶。主要来源于原核生物（细菌），是细菌防御外来DNA（噬菌体）的天然防御系统的重要组成部分。</p>
+<h3>原理 / 步骤 / 应用</h3>
+<p><strong>识别与切割原理</strong></p>
+<ul>
+<li>每种限制酶识别特定的<strong>回文序列（palindrome）</strong>，即正向与反向互补序列相同（如 5'-GAATTC-3' / 3'-CTTAAG-5'）</li>
+<li>切割方式有两种：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>切割方式</th>
+<th>产生末端</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交错切割</td>
+<td><strong>黏性末端</strong>（单链突出）</td>
+<td>EcoRI → 5'-AATT 悬挂</td>
+</tr>
+<tr>
+<td>平齐切割</td>
+<td><strong>平末端（钝端）</strong></td>
+<td>SmaI → 无突出</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EcoRI切割示意</strong>（交错切割）</p>
+<pre><code>5'…G↓AATTC…3'          5'…G      AATTC…3'
+3'…CTTAA↑G…5'    →     3'…CTTAA      G…5'
+               产生黏性末端（5'-AATT悬挂）
+</code></pre>
+<p><strong>黏性末端的意义</strong></p>
+<ul>
+<li>相同限制酶切割后产生的黏性末端互补，便于目的基因与载体在DNA连接酶作用下连接，形成重组DNA分子</li>
+<li>不同限制酶有时产生相同末端（同尾酶），也可连接，但连接后不能被任何一种原酶识别切割</li>
+</ul>
+<p><strong>特点</strong></p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>专一性</td>
+<td>每种酶只识别特定序列</td>
+</tr>
+<tr>
+<td>切割性</td>
+<td>切割位点固定（识别位点内/附近）</td>
+</tr>
+<tr>
+<td>来源</td>
+<td>主要来自细菌，少数来自古菌</td>
+</tr>
+<tr>
+<td>命名</td>
+<td>属名首字母+种名两字母+菌株+罗马数字（如 EcoRI）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在基因工程中的作用</strong></p>
+<ol>
+<li>从生物基因组中切下<strong>目的基因</strong></li>
+<li>切开<strong>载体</strong>（质粒等），产生相同的黏性末端</li>
+<li>目的基因与载体末端互补配对，经DNA连接酶连接形成<strong>重组DNA</strong></li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：用EcoRI和BamHI两种限制酶同时切割目的基因和质粒载体，目的是什么？</p>
+<p><strong>解析</strong>：用两种不同限制酶切割，使目的基因两端产生不同的黏性末端（一端EcoRI末端，另一端BamHI末端），同时质粒也产生同样的两个不同末端。这样目的基因只能以<strong>固定方向</strong>插入质粒，防止反向插入（即确保目的基因的正确方向），有利于正确表达。</p>
+<h3>易错点</h3>
+<ul>
+<li>限制酶切割的化学键是<strong>磷酸二酯键</strong>，不是氢键（氢键连接碱基对，不由限制酶切断）</li>
+<li>切割产生的黏性末端是<strong>单链DNA</strong>（有突出），两个互补的黏性末端靠氢键临时结合，再由DNA连接酶形成磷酸二酯键</li>
+<li>限制酶来自<strong>原核生物</strong>（细菌的防御系统），不是真核生物特有</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>限制性核酸内切酶</td>
+<td>restriction endonuclease</td>
+</tr>
+<tr>
+<td>识别位点</td>
+<td>recognition site</td>
+</tr>
+<tr>
+<td>黏性末端</td>
+<td>sticky end / cohesive end</td>
+</tr>
+<tr>
+<td>平末端</td>
+<td>blunt end</td>
+</tr>
+<tr>
+<td>回文序列</td>
+<td>palindromic sequence</td>
+</tr>
+<tr>
+<td>磷酸二酯键</td>
+<td>phosphodiester bond</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>EcoRI recognizes the sequence 5'-GAATTC-3' and creates sticky ends. （EcoRI识别5'-GAATTC-3'序列并产生黏性末端。）</li>
+<li>Restriction enzymes are the molecular scissors of genetic engineering. （限制酶是基因工程的分子剪刀。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修3 生物技术与工程.pdf</a> 第3章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"Restriction enzyme"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/411-基因工程.html">基因工程</a> <a href="../atoms/409-DNA连接酶.html">DNA连接酶</a> <a class="dead" title="未收录">质粒</a> <a class="dead" title="未收录">重组DNA分子</a> <a class="dead" title="未收录">目的基因</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-新课标-12.html">2012-新课标-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-07</a></li>
+<li><a class="dead" title="未收录">2017-北京-05</a></li>
+<li><a class="dead" title="未收录">2018-北京-05</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-12.html">2018-新课标Ⅱ-12</a></li>
+<li><a href="../exam/2021-全国乙-12.html">2021-全国乙-12</a></li>
+<li><a class="dead" title="未收录">2024-湖南-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

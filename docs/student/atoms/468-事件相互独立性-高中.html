@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>事件相互独立性-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>事件相互独立性-高中</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 事件相互独立性-高中, independence of events, 事件独立性, 相互独立事件</p><h2>🎓 事件相互独立性-高中</h2>
+<h3>定义</h3>
+<p>若事件 $A$ 的发生不影响事件 $B$ 发生的概率，即：</p>
+<p>$$\boxed{P(AB) = P(A) \cdot P(B)}$$</p>
+<p>则称 $A$ 与 $B$ <strong>相互独立</strong>（简称独立）。</p>
+<p><strong>等价条件</strong>：$A, B$ 独立 $\Leftrightarrow$ $P(A|B) = P(A)$（当 $P(B) &gt; 0$）。</p>
+<h3>注意：独立 $\neq$ 互斥</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>独立</th>
+<th>互斥</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>含义</td>
+<td>$A$ 发生不影响 $B$</td>
+<td>$A,B$ 不能同时发生</td>
+</tr>
+<tr>
+<td>数学条件</td>
+<td>$P(AB) = P(A)P(B)$</td>
+<td>$P(AB) = 0$</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>若 $P(A)&gt;0, P(B)&gt;0$，独立不能互斥</td>
+<td>互斥事件一般不独立</td>
+</tr>
+</tbody>
+</table>
+<h3>独立性的推论</h3>
+<p>若 $A, B$ 独立，则以下各对事件也独立：
+- $A$ 与 $\bar{B}$
+- $\bar{A}$ 与 $B$
+- $\bar{A}$ 与 $\bar{B}$</p>
+<p><strong>多事件独立</strong>：$A_1, A_2, \ldots, A_n$ 相互独立 $\Leftrightarrow$ 其中任意 $k$ 个（$2 \leq k \leq n$）的积的概率等于各自概率的乘积。</p>
+<p><strong>实际判断</strong>：若两个试验的结果互不影响（如两次掷骰子、甲乙各自射击），则对应事件通常独立。</p>
+<h3>独立时的乘法公式</h3>
+<p>$$P(A_1 A_2 \cdots A_n) = P(A_1) \cdot P(A_2) \cdots P(A_n)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（两事件）</strong>：甲的命中率 0.8，乙的命中率 0.7，各射击一次且独立，求两人都命中的概率。</p>
+<p>$$P(\text{两人都中}) = 0.8 \times 0.7 = 0.56$$</p>
+<p><strong>例2（至少一人命中）</strong>：接例1，求至少一人命中的概率。</p>
+<p><strong>方法一（直接）</strong>：</p>
+<p>$$P = P(\text{甲中乙不中}) + P(\text{甲不中乙中}) + P(\text{都中})$$
+$$= 0.8 \times 0.3 + 0.2 \times 0.7 + 0.56 = 0.24 + 0.14 + 0.56 = 0.94$$</p>
+<p><strong>方法二（对立事件）</strong>：</p>
+<p>$$P = 1 - P(\text{都不中}) = 1 - 0.2 \times 0.3 = 1 - 0.06 = 0.94 \; \checkmark$$</p>
+<p><strong>例3（验证独立性）</strong>：掷两枚骰子，$A$ = "第一枚为奇数"，$B$ = "两枚之和为偶数"，判断是否独立。</p>
+<p>$$P(A) = \frac{1}{2}, \quad P(B) = \frac{18}{36} = \frac{1}{2}$$</p>
+<p>$$P(AB) = P(\text{第一枚奇，和偶}) = P(\text{两枚都奇}) = \frac{3 \times 3}{36} = \frac{1}{4}$$</p>
+<p>$$P(A) \cdot P(B) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4} = P(AB) \; \Rightarrow \; A, B \text{ 独立}$$</p>
+<p><strong>例4（多事件）</strong>：三架飞机各自独立攻击目标，命中率分别为 0.4, 0.5, 0.7，求目标被摧毁（至少一架命中）的概率。</p>
+<p>$$P = 1 - (1-0.4)(1-0.5)(1-0.7) = 1 - 0.6 \times 0.5 \times 0.3 = 1 - 0.09 = 0.91$$</p>
+<h3>独立性与条件概率的关系</h3>
+<ul>
+<li>若 $A, B$ 独立：$P(A|B) = P(A)$，$P(B|A) = P(B)$</li>
+<li>若 $A, B$ 不独立：需用 $P(AB) = P(B)P(A|B)$ 计算</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>独立 ≠ 互斥</strong>：两个非零概率事件若互斥，则必定不独立（因为 $P(AB) = 0 \neq P(A)P(B)$）</li>
+<li><strong>$P(AB) = P(A)P(B)$ 才是独立的定义</strong>，不是 $P(A|B) = P(A)$（后者需 $P(B)&gt;0$）</li>
+<li><strong>"与""或"的计算</strong>：独立时 $P(A \text{ 且 } B) = P(A)P(B)$；$P(A \text{ 或 } B) = 1 - P(\bar{A})P(\bar{B})$</li>
+<li><strong>多事件独立的验证</strong>：需要所有子集都满足乘法公式，不只是两两独立</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.4，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/独立事件">独立事件 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">条件概率-高中</a></li>
+<li><a href="../atoms/340-条件概率初步.html">全概率公式</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a class="dead" title="未收录">方差性质-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-18.html">2008-理-18</a></li>
+<li><a href="../exam/2012-理-15.html">2012-理-15</a></li>
+<li><a href="../exam/2014-文-13.html">2014-文-13</a></li>
+<li><a href="../exam/2014-理-05.html">2014-理-05</a></li>
+<li><a href="../exam/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/2016-理-16.html">2016-理-16</a></li>
+<li><a href="../exam/2018-理-17.html">2018-理-17</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-12.html">2023-新课标Ⅱ-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

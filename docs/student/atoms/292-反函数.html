@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>反函数</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 反函数, inverse function, 逆函数</p><h2>🎓 反函数</h2>
+<h3>定义</h3>
+<p>设函数 $y = f(x)$（定义域 $D$，值域 $C$）是一一映射（单射），则对每个 $y \in C$，存在唯一 $x \in D$ 使 $f(x) = y$。</p>
+<p>将 $y$ 视为自变量，$x$ 视为因变量，得到一个新函数：</p>
+<p>$$x = f^{-1}(y), \quad y \in C$$</p>
+<p>习惯上交换 $x, y$ 变量名，写成 $y = f^{-1}(x)$（$x \in C$），称为 $f$ 的<strong>反函数</strong>（inverse function）。</p>
+<p><strong>存在条件</strong>：函数 $f$ 有反函数当且仅当 $f$ 是单射（不同的 $x$ 对应不同的 $y$），即 $f$ 是严格单调函数（在高中范围内，单调函数一定有反函数）。</p>
+<h3>关键性质</h3>
+<p><strong>定义域与值域互换</strong>：$f^{-1}$ 的定义域 $= f$ 的值域；$f^{-1}$ 的值域 $= f$ 的定义域。</p>
+<p><strong>互逆关系</strong>：</p>
+<p>$$f^{-1}(f(x)) = x \quad \forall x \in D$$</p>
+<p>$$f(f^{-1}(y)) = y \quad \forall y \in C$$</p>
+<p><strong>图象关系</strong>：$y = f(x)$ 与 $y = f^{-1}(x)$ 的图象关于直线 $y = x$ 对称（轴对称）。</p>
+<p><strong>反函数的反函数</strong>：$(f^{-1})^{-1} = f$</p>
+<h3>常见函数的反函数</h3>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>反函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y = x^n$（$n$ 奇数，$x \in \mathbb{R}$）</td>
+<td>$y = \sqrt[n]{x}$（$x \in \mathbb{R}$）</td>
+</tr>
+<tr>
+<td>$y = x^2$（$x \geq 0$）</td>
+<td>$y = \sqrt{x}$（$x \geq 0$）</td>
+</tr>
+<tr>
+<td>$y = a^x$（$a&gt;0, a\neq1$）</td>
+<td>$y = \log_a x$（$x &gt; 0$）</td>
+</tr>
+<tr>
+<td>$y = \log_a x$（$x &gt; 0$）</td>
+<td>$y = a^x$（$x \in \mathbb{R}$）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求 $f(x) = 2x - 3$ 的反函数。</p>
+<p>解：由 $y = 2x-3$，解出 $x = \dfrac{y+3}{2}$，交换 $x, y$：$y = f^{-1}(x) = \dfrac{x+3}{2}$（$x \in \mathbb{R}$）。</p>
+<p>验证：$f(f^{-1}(x)) = 2 \cdot \dfrac{x+3}{2} - 3 = x+3-3 = x$ ✓</p>
+<p><strong>例2</strong>：求 $f(x) = \sqrt{x-1} + 2$（$x \geq 1$）的反函数及其定义域。</p>
+<p>解：$y = \sqrt{x-1}+2$，$y - 2 = \sqrt{x-1}$，$(y-2)^2 = x-1$，$x = (y-2)^2 + 1$（$y \geq 2$）。</p>
+<p>交换：$f^{-1}(x) = (x-2)^2 + 1$，定义域 $x \geq 2$，即 $[2, +\infty)$。</p>
+<p><strong>例3</strong>：证明 $y = f(x)$ 与 $y = f^{-1}(x)$ 的图象关于 $y = x$ 对称。</p>
+<p>证：设点 $(a, b)$ 在 $f$ 的图象上，即 $b = f(a)$。则 $(b, a)$ 在 $f^{-1}$ 的图象上（$a = f^{-1}(b)$）。点 $(a,b)$ 与点 $(b,a)$ 关于 $y=x$ 对称（两点连线中点 $\left(\dfrac{a+b}{2}, \dfrac{a+b}{2}\right)$ 在 $y=x$ 上，连线斜率为 $-1 \perp$ 直线 $y=x$）。故两图象关于 $y=x$ 对称。$\square$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>非单调函数无反函数</strong>：$y = x^2$（$x \in \mathbb{R}$）不是单射，无反函数；但限制定义域到 $x \geq 0$ 后有反函数 $y = \sqrt{x}$</li>
+<li><strong>交换变量名</strong>：求反函数时，解出 $x$ 后要交换 $x, y$，最终写成 $y = f^{-1}(x)$ 的形式</li>
+<li><strong>定义域匹配</strong>：反函数的定义域是原函数的值域，必须写清楚</li>
+<li><strong>对称轴是 $y=x$</strong>：反函数图象关于 $y=x$ 对称，不是 $y=0$（$x$ 轴）或 $x=0$（$y$ 轴）</li>
+<li><strong>$f^{-1}(x) \neq \frac{1}{f(x)}$</strong>：反函数符号 $f^{-1}$ 不是"$f$ 的倒数"，而是逆映射</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了正比例函数、一次函数，感性上知道"互为逆运算"（加法与减法、乘法与除法）。高中将这一思想推广为反函数，并与指数函数、对数函数的互逆关系（如 $y = 2^x$ 与 $y = \log_2 x$）紧密结合。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：反函数（Inverse function），一一映射（Bijection）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/296-复合函数.html">复合函数</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">函数的图象变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-03.html">2008-理-03</a></li>
+<li><a href="../exam/2009-文-02.html">2009-文-02</a></li>
+<li><a href="../exam/2012-理-12.html">2012-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

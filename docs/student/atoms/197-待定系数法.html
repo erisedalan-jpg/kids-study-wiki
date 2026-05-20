@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>待定系数法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>待定系数法</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 一次函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 待定系数法, method of undetermined coefficients, 待定系数, 系数</p><h1>待定系数法</h1>
+<blockquote>
+<p><strong>一句话</strong>：先设出含有未知系数的函数解析式，再把已知点的坐标代入，解方程组求出系数——这就是待定系数法。
+<strong>English</strong>: Assume the general form of the function, substitute known points to get equations, then solve for the unknown coefficients.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>方法步骤（以一次函数为例）</h3>
+<p><strong>目标</strong>：已知图象经过的两个点，求一次函数解析式。</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li><strong>设</strong>：设 $y = kx + b$（$k \neq 0$）</li>
+<li><strong>代</strong>：将两个已知点分别代入，得两个方程</li>
+<li><strong>解</strong>：解二元一次方程组，求出 $k$ 和 $b$</li>
+<li><strong>写</strong>：写出最终解析式</li>
+</ol>
+<p><strong>例</strong>：直线过 $A(2, 5)$ 和 $B(0, 1)$，求函数解析式。</p>
+<p>设 $y = kx + b$：</p>
+<p>$$\begin{cases} 2k + b = 5 \ 0 \cdot k + b = 1 \end{cases} \Rightarrow \begin{cases} b = 1 \ k = 2 \end{cases}$$</p>
+<p>故 $y = 2x + 1$。</p>
+<h3>正比例函数的待定系数</h3>
+<p>只有一个未知数 $k$，代入一个点即可：</p>
+<p><strong>例</strong>：正比例函数过 $(3, 6)$，求解析式。</p>
+<p>设 $y = kx$，代入：$6 = 3k \Rightarrow k = 2$，故 $y = 2x$。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>一般应用场景</h3>
+<p>待定系数法不只用于一次函数，还用于：</p>
+<table>
+<thead>
+<tr>
+<th>函数类型</th>
+<th>设式形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正比例函数</td>
+<td>$y = kx$</td>
+</tr>
+<tr>
+<td>一次函数</td>
+<td>$y = kx + b$</td>
+</tr>
+<tr>
+<td>反比例函数（九年级）</td>
+<td>$y = \dfrac{k}{x}$</td>
+</tr>
+<tr>
+<td>二次函数（九年级）</td>
+<td>$y = ax^2 + bx + c$ 或顶点式</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：一次函数 $y=kx+b$ 的图象平行于直线 $y=3x-2$，且过点 $(-1, 4)$，求解析式。</p>
+<p>平行 → $k = 3$（斜率相同）；代点：$4 = 3\times(-1)+b \Rightarrow b = 7$；故 $y = 3x + 7$。</p>
+<p><strong>例 2</strong>：一次函数图象过 $(m, 3)$ 和 $(2m-1, -1)$，且 $k = -2$，求 $m$。</p>
+<p>$$k = \frac{-1-3}{(2m-1)-m} = \frac{-4}{m-1} = -2 \Rightarrow m-1=2 \Rightarrow m=3$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 设正比例函数时写成 $y = kx + b$（正比例必须 $b=0$）</li>
+<li>❌ 代点时把 $x$、$y$ 坐标搞反（$(x,y)$ 中前为 $x$ 后为 $y$）</li>
+<li>❌ 解方程组时计算错误，未验证结果代回两个点均满足</li>
+</ul>
+<h3>知识联系</h3>
+<p>待定系数法本质是<a href="../atoms/061-方程.html">解方程</a>（方程组）的应用；斜率概念见<a class="dead" title="未收录">一次函数图象与性质</a>；该方法在九年级中大量用于<a class="dead" title="未收录">二次函数</a>；高中中用于多项式插值、三角函数系数确定等。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>待定系数法</td>
+<td>method of undetermined coefficients</td>
+</tr>
+<tr>
+<td>系数</td>
+<td>coefficient</td>
+</tr>
+<tr>
+<td>解析式</td>
+<td>analytic expression / formula</td>
+</tr>
+<tr>
+<td>二元一次方程组</td>
+<td>system of two linear equations</td>
+</tr>
+<tr>
+<td>代入法</td>
+<td>substitution method</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第19章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·函数·一次函数</li>
+<li>拓展：<a class="dead" title="未收录">数学/解方程</a> · <a class="dead" title="未收录">数学/一次函数图象与性质</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/177-一次函数定义.html">一次函数定义</a> · <a class="dead" title="未收录">一次函数图象与性质</a> · <a href="../atoms/188-函数概念.html">函数概念</a> · <a href="../atoms/061-方程.html">解方程</a> · <a class="dead" title="未收录">二元一次方程组</a> · <a class="dead" title="未收录">一次函数与方程不等式</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-08.html">2009-理-08</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/2015-文-15.html">2015-文-15</a></li>
+<li><a href="../exam/2015-理-07.html">2015-理-07</a></li>
+<li><a href="../exam/2015-理-09.html">2015-理-09</a></li>
+<li><a class="dead" title="未收录">2020-北京-03</a></li>
+<li><a href="../exam/2020-理-05.html">2020-理-05</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-13</a></li>
+<li><a href="../exam/2021-理-01.html">2021-理-01</a></li>
+<li><a href="../exam/2022-文-15.html">2022-文-15</a></li>
+<li><a href="../exam/2022-理-14.html">2022-理-14</a></li>
+<li><a class="dead" title="未收录">2023-北京-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

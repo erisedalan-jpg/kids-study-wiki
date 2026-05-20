@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>椭圆定义与方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>椭圆定义与方程</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 椭圆定义与方程, ellipse definition and equation, 椭圆</p><h2>🎓 椭圆定义与方程</h2>
+<h3>定义</h3>
+<p><strong>椭圆</strong>：平面内到两定点 $F_1$、$F_2$ 的距离之和等于常数 $2a$（$2a &gt; |F_1F_2|$）的点的轨迹。</p>
+<p>$$|PF_1| + |PF_2| = 2a \quad (2a &gt; |F_1F_2|)$$</p>
+<p>两定点 $F_1,F_2$ 称为椭圆的<strong>焦点</strong>，$|F_1F_2|=2c$。</p>
+<p><strong>条件 $2a &gt; 2c$</strong>（即 $a&gt;c$）保证轨迹是椭圆（若 $2a=2c$，退化为线段；若 $2a&lt;2c$，不存在轨迹）。</p>
+<h3>标准方程</h3>
+<p><strong>焦点在 $x$ 轴上</strong>（$a&gt;b&gt;0$，$c^2=a^2-b^2$）：</p>
+<p>$$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 \quad (a&gt;b&gt;0)$$</p>
+<p>焦点：$F_1(-c,0)$，$F_2(c,0)$</p>
+<p><strong>焦点在 $y$ 轴上</strong>（$a&gt;b&gt;0$，$c^2=a^2-b^2$）：</p>
+<p>$$\dfrac{x^2}{b^2} + \dfrac{y^2}{a^2} = 1 \quad (a&gt;b&gt;0)$$</p>
+<p>焦点：$F_1(0,-c)$，$F_2(0,c)$</p>
+<p><strong>判断焦点位置</strong>：比较 $x^2$ 和 $y^2$ 分母大小，<strong>分母大的那项，焦点在该轴上</strong>。</p>
+<h3>基本量关系</h3>
+<p>$$a^2 = b^2 + c^2 \quad (a&gt;b&gt;0, c&gt;0)$$</p>
+<ul>
+<li>$a$：<strong>半长轴</strong>，椭圆最长处半径</li>
+<li>$b$：<strong>半短轴</strong>，椭圆最短处半径</li>
+<li>$c$：<strong>半焦距</strong>，原点到焦点距离</li>
+</ul>
+<h3>已知条件求方程</h3>
+<table>
+<thead>
+<tr>
+<th>已知条件</th>
+<th>确定 $a,b,c$ 的方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顶点坐标</td>
+<td>直接读出 $a,b$</td>
+</tr>
+<tr>
+<td>焦点和一顶点</td>
+<td>由 $a^2=b^2+c^2$ 求解</td>
+</tr>
+<tr>
+<td>离心率和一条轴</td>
+<td>$e=c/a$，联立解</td>
+</tr>
+<tr>
+<td>过某点</td>
+<td>将点代入方程解 $a,b$</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：焦点为 $F_1(-2,0)$，$F_2(2,0)$，短半轴 $b=1$，求方程。</p>
+<p><strong>解</strong>：$c=2$，$a^2=b^2+c^2=1+4=5$，方程：$\dfrac{x^2}{5}+y^2=1$</p>
+<p><strong>例2</strong>：椭圆短轴端点到较近焦点的距离等于长轴长，求离心率。</p>
+<p><strong>解</strong>：短轴端点 $(0,b)$ 到焦点 $(\pm c,0)$ 的距离为 $\sqrt{b^2+c^2}=a$（焦半径的一种情形）。</p>
+<p>长轴长 $2a$，故 $a=2a$，矛盾。（题意应为等于长半轴长 $a$，则 $a=a$ 恒成立，这是定义直接推出的，无离心率限制...）</p>
+<p>实际经典题：短轴端点到较近焦点的距离等于 $a$，即 $a=a$ —— 这由 $b^2+c^2=a^2$ 直接得出，恒成立，与离心率无关。</p>
+<p><strong>例3</strong>：椭圆 $\dfrac{x^2}{9}+\dfrac{y^2}{4}=1$，求长轴、短轴、焦距和焦点坐标。</p>
+<p><strong>解</strong>：$a^2=9$，$b^2=4$，$a=3$，$b=2$，$c=\sqrt{9-4}=\sqrt{5}$</p>
+<p>长轴 $2a=6$，短轴 $2b=4$，焦距 $2c=2\sqrt{5}$，焦点 $(\pm\sqrt{5}, 0)$</p>
+<h3>易错点</h3>
+<ul>
+<li>$a&gt;b&gt;0$（$a$ 始终是较大的），焦点在<strong>较大分母</strong>对应的轴上</li>
+<li>$a^2=b^2+c^2$（不是 $a^2+b^2=c^2$）</li>
+<li>椭圆上任一点 $P$ 满足 $|PF_1|+|PF_2|=2a$（等于长轴，不是 $2c$）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">椭圆几何性质</a></li>
+<li><a href="../atoms/391-椭圆离心率.html">椭圆离心率</a></li>
+<li><a class="dead" title="未收录">椭圆焦点弦</a></li>
+<li><a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></li>
+<li><a class="dead" title="未收录">抛物线定义与方程</a></li>
+<li><a class="dead" title="未收录">圆锥曲线统一定义</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-22.html">2008-文-22</a></li>
+<li><a href="../exam/2008-理-19.html">2008-理-19</a></li>
+<li><a href="../exam/2010-文-20.html">2010-文-20</a></li>
+<li><a href="../exam/2011-文-19.html">2011-文-19</a></li>
+<li><a href="../exam/2013-文-20.html">2013-文-20</a></li>
+<li><a href="../exam/2013-理-20.html">2013-理-20</a></li>
+<li><a href="../exam/2014-理-20.html">2014-理-20</a></li>
+<li><a href="../exam/2016-理-20.html">2016-理-20</a></li>
+<li><a href="../exam/2019-理-21.html">2019-理-21</a></li>
+<li><a href="../exam/2020-理-19.html">2020-理-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

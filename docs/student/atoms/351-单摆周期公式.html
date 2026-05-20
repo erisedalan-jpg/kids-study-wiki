@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单摆周期公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>单摆周期公式</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械振动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 单摆周期公式, pendulum period formula</p><h2>🎓 单摆周期公式</h2>
+<h3>公式</h3>
+<p>$$\boxed{T = 2\pi\sqrt{\frac{L}{g}}}$$</p>
+<ul>
+<li>$T$：振动周期（s）</li>
+<li>$L$：摆长（悬点到摆球质心的距离，m）</li>
+<li>$g$：当地重力加速度（m/s²，标准值约 9.8 m/s²）</li>
+<li>$\pi \approx 3.14159$</li>
+</ul>
+<h3>推导思路</h3>
+<p>单摆做简谐运动（小角度），等效弹簧系数 $k_{等效} = \dfrac{mg}{L}$。</p>
+<p>代入弹簧振子周期公式 $T = 2\pi\sqrt{\dfrac{m}{k}}$：</p>
+<p>$$T = 2\pi\sqrt{\frac{m}{mg/L}} = 2\pi\sqrt{\frac{L}{g}}$$</p>
+<p>质量 $m$ 约去，周期与质量无关。</p>
+<h3>关键结论（等时性）</h3>
+<p>在小角度范围内（$\theta &lt; 5°$）：
+- 周期与<strong>摆球质量无关</strong>
+- 周期与<strong>振幅无关</strong>（等时性）
+- 周期只与<strong>摆长 $L$</strong> 和<strong>重力加速度 $g$</strong> 有关</p>
+<h3>反推公式：测 g</h3>
+<p>$$g = \frac{4\pi^2 L}{T^2}$$</p>
+<p>实验步骤：
+1. 用刻度尺测摆长 $L$（悬点到球心）
+2. 计时摆动 $n$ 次（通常 $n \geq 30$），总时间 $t$，得 $T = t/n$
+3. 代入公式求 $g$</p>
+<h3>各因素对 T 的影响</h3>
+<table>
+<thead>
+<tr>
+<th>改变量</th>
+<th>对 T 的影响</th>
+<th>计算式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>摆长增为 4 倍</td>
+<td>T 增为 2 倍</td>
+<td>$T' = 2\pi\sqrt{4L/g} = 2T$</td>
+</tr>
+<tr>
+<td>g 增为 4 倍（假设）</td>
+<td>T 减为 1/2</td>
+<td>$T' = 2\pi\sqrt{L/4g} = T/2$</td>
+</tr>
+<tr>
+<td>质量加倍</td>
+<td>T 不变</td>
+<td>质量约去</td>
+</tr>
+<tr>
+<td>振幅加倍（小角度内）</td>
+<td>T 不变</td>
+<td>等时性</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求摆长 $L = 0.25\text{ m}$ 单摆的周期（$g = 9.8\text{ m/s}^2$）。</p>
+<p>$$T = 2\pi\sqrt{\frac{0.25}{9.8}} = 2\pi\sqrt{0.02551} = 2\pi\times0.1597 \approx 1.003\text{ s}$$</p>
+<p>约 1 s，这就是"秒摆"的摆长！</p>
+<p><strong>例2（逆用）</strong>：测得单摆周期 $T = 2\text{ s}$，摆长 $L = 1\text{ m}$，求 $g$。</p>
+<p>$$g = \frac{4\pi^2 L}{T^2} = \frac{4\times9.87\times1}{4} = 9.87\text{ m/s}^2$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>摆长是到质心，不是到球面</strong>：若摆球半径为 $r$，摆长 = 线长 + $r$。</li>
+<li><strong>等时性有条件</strong>：仅限小角度（$&lt;5°$），大摆角时 T 随振幅增大而增大。</li>
+<li><strong>电梯中等效 g 改变</strong>：加速上升时等效 $g' = g + a$，$T$ 减小；失重时 $g' \to 0$，$T \to \infty$（停摆）。</li>
+<li><strong>同一地点 g 相同</strong>：不同质量的摆球周期相同（同摆长下）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第二章第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：单摆 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">单摆</a></li>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+<li><a class="dead" title="未收录">周期与频率-振动</a></li>
+<li><a href="../atoms/361-振幅.html">振幅</a></li>
+<li><a class="dead" title="未收录">重力加速度</a></li>
+<li><a class="dead" title="未收录">受迫振动</a></li>
+<li><a class="dead" title="未收录">共振</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-北京-10</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-15.html">2019-新课标Ⅱ-15</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-15.html">2020-新课标Ⅱ-15</a></li>
+<li><a href="../exam/2023-新课标-10.html">2023-新课标-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>功的计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>功的计算</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: &quot;功的计算&quot;, &quot;Work Calculation&quot;</p><h1>功的计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：功是力对空间的累积效应，等于力的大小、位移大小以及力与位移夹角余弦的乘积，即 $W = F s \cos\theta$，是能量转化的量度。
+<strong>English</strong>: Work is the product of the magnitude of force, displacement, and the cosine of the angle between them, measuring the transfer of energy.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+功是标量，其定义式为 $W = F s \cos\theta$ （恒力做功），其中 $\theta$ 为力与位移的夹角。当 $0 \le \theta &lt; 90^\circ$ 时，$W &gt; 0$，力做正功；$\theta = 90^\circ$，$W=0$，力不做功；$90^\circ &lt; \theta \le 180^\circ$，$W&lt;0$，力做负功。功的国际单位是焦耳（$J$），$1\ \mathrm{J} = 1\ \mathrm{N \cdot m}$。功的本质是能量转化的量度，做功过程必然伴随能量转化。</p>
+<p><strong>关键方法</strong><br />
+处理功的计算问题，首先选定研究对象，分析受力与位移，确定每个力的功。对于恒力，直接使用 $W = F s \cos\theta$，注意对应同一过程。对于变力做功，高考中常用以下方法：<br />
+- <strong>微元法</strong>：将变力过程无限分割成微小段，每段近似恒力，求和得到总功；<br />
+- <strong>图像法</strong>：利用 $F-x$ 图线下的面积求功；<br />
+- <strong>动能定理法</strong>：由 $W_{\text{合}} = \Delta E_k$ 间接求解变力功；<br />
+- <strong>平均力法</strong>：若力随位移线性变化，可用平均力 $\overline{F}$ 计算 $W = \overline{F} s \cos\theta$；<br />
+- <strong>功率法</strong>：若功率恒定，可用 $W = Pt$。</p>
+<p><strong>典型应用</strong><br />
+高考中常以单个物体或多个物体组成的系统为背景，考查恒力做功的计算、摩擦力做功的特点以及变力做功的处理。例如：物体沿粗糙斜面下滑，求解重力、摩擦力及支持力的功；通过弹簧振子模型，借助始末状态弹性势能变化求弹力做功；以 $F-x$ 图像为载体，求变力所做的功。设问常结合动能定理或功能关系，要求学生能够准确选择方法完成功的计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>力与位移的夹角判断错误</strong>：例如物体沿斜面下滑，重力做功的夹角是斜面倾角 $\theta$ 还是 $90^\circ-\theta$ 容易混淆，必须严格找出力方向与位移方向的夹角。  </li>
+<li><strong>功的正负理解偏差</strong>：误以为正负功表示方向，实际上正功表示该力对物体运动起推动作用，负功起阻碍作用，功是标量。  </li>
+<li><strong>摩擦力做功分析不当</strong>：滑动摩擦力做功与路径有关，且摩擦力可能做正功（如传送带对物体的摩擦力），一对静摩擦力做功代数和为零，但一对滑动摩擦力做功代数和为负值，其绝对值等于系统产生的内能。  </li>
+<li><strong>混淆某个力的功与合力的功</strong>：直接代入动能定理时，必须使用所有力做功的代数和，不可遗漏受力。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功</td>
+<td>work</td>
+<td>力在位移方向上的累积量</td>
+</tr>
+<tr>
+<td>恒力</td>
+<td>constant force</td>
+<td>大小方向均不变的力</td>
+</tr>
+<tr>
+<td>变力</td>
+<td>variable force</td>
+<td>大小或方向变化的力</td>
+</tr>
+<tr>
+<td>位移</td>
+<td>displacement</td>
+<td>从初位置指向末位置的有向线段</td>
+</tr>
+<tr>
+<td>动能定理</td>
+<td>work-energy theorem</td>
+<td>合外力做功等于动能的变化量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订） 必修 机械能及其守恒定律</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/251-动能定理.html">动能定理</a></li>
+<li><a href="../atoms/249-功能关系.html">功能关系</a></li>
+<li><a href="../atoms/063-功率.html">功率</a></li>
+<li><a href="../atoms/116-重力势能.html">重力势能</a></li>
+<li><a href="../atoms/197-能量守恒定律.html">能量守恒定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2012-北京-11</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-03.html">2014-新课标Ⅱ-03</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-08.html">2015-新课标Ⅱ-08</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-01.html">2017-新课标Ⅱ-01</a></li>
+<li><a href="../exam/2021-全国乙-11.html">2021-全国乙-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

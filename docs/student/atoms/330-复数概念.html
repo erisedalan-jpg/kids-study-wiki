@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复数概念</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 复数, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复数概念, complex number, 复数, 虚数</p><h2>🎓 复数概念</h2>
+<h3>为什么需要复数</h3>
+<p>实数范围内，方程 $x^2 + 1 = 0$ 无解（任何实数的平方 $\geq 0$）。<br />
+为扩充数系，引入<strong>虚数单位</strong> $\text{i}$，规定：</p>
+<p>$$\text{i}^2 = -1, \quad \text{i} = \sqrt{-1}$$</p>
+<h3>复数的定义</h3>
+<p>形如 $z = a + b\text{i}$（$a, b \in \mathbb{R}$）的数称为<strong>复数</strong>：</p>
+<ul>
+<li>$a$ 称为复数的<strong>实部</strong>（real part），记作 $\text{Re}(z) = a$</li>
+<li>$b$ 称为复数的<strong>虚部</strong>（imaginary part），记作 $\text{Im}(z) = b$</li>
+<li>$b\text{i}$ 称为<strong>虚部</strong>项</li>
+</ul>
+<h3>复数的分类</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$b = 0$</td>
+<td>实数（$z = a$）</td>
+</tr>
+<tr>
+<td>$b \neq 0$</td>
+<td>虚数</td>
+</tr>
+<tr>
+<td>$a = 0, b \neq 0$</td>
+<td>纯虚数（如 $3\text{i}$）</td>
+</tr>
+<tr>
+<td>$b \neq 0$</td>
+<td>虚数（含纯虚数）</td>
+</tr>
+</tbody>
+</table>
+<p>实数是复数的特例，全体复数集记作 $\mathbb{C}$（$\mathbb{R} \subset \mathbb{C}$）。</p>
+<h3>复数相等</h3>
+<p>$$a + b\text{i} = c + d\text{i} \iff a = c \text{ 且 } b = d$$</p>
+<p><strong>推论</strong>：$a + b\text{i} = 0 \iff a = 0 \text{ 且 } b = 0$</p>
+<h3>虚数单位的幂次</h3>
+<p>$$\text{i}^1 = \text{i},\quad \text{i}^2 = -1,\quad \text{i}^3 = -\text{i},\quad \text{i}^4 = 1$$</p>
+<p>规律：以 $4$ 为周期循环。$\text{i}^n$ 的值由 $n \mod 4$ 决定。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：若 $(2x-1) + (y+3)\text{i} = 3 - \text{i}$，求实数 $x, y$。</p>
+<p><strong>解</strong>：$2x - 1 = 3 \Rightarrow x = 2$；$y + 3 = -1 \Rightarrow y = -4$</p>
+<p><strong>例2</strong>：$\text{i}^{2026}$ 的值。</p>
+<p><strong>解</strong>：$2026 = 4 \times 506 + 2$，故 $\text{i}^{2026} = \text{i}^2 = -1$</p>
+<p><strong>例3</strong>：$\dfrac{1}{\text{i}} = ?$</p>
+<p><strong>解</strong>：$\dfrac{1}{\text{i}} = \dfrac{\text{i}}{\text{i}^2} = \dfrac{\text{i}}{-1} = -\text{i}$</p>
+<h3>易错点</h3>
+<ul>
+<li>虚部是 $b$（实数），不是 $b\text{i}$</li>
+<li>"虚数"包含纯虚数，但实数不是虚数</li>
+<li>复数没有大小关系（不能比较 $z_1 &gt; z_2$）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第七章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第七章 § 7.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/复数_(数学)">复数 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a class="dead" title="未收录">复数的加减运算</a></li>
+<li><a href="../atoms/332-复数的乘除运算.html">复数的乘除运算</a></li>
+<li><a class="dead" title="未收录">复数的三角表示</a></li>
+<li><a class="dead" title="未收录">集合-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-理-01.html">2014-理-01</a></li>
+<li><a href="../exam/2015-文-02.html">2015-文-02</a></li>
+<li><a href="../exam/2017-理-03.html">2017-理-03</a></li>
+<li><a href="../exam/2020-理-15.html">2020-理-15</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-02</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-01.html">2024-新课标Ⅱ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>匀变速直线运动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>匀变速直线运动</h1><div class="meta-card"><span><strong>权重</strong>68</span><span><strong>吉林命中</strong>13</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 匀变速直线运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 匀变速直线运动, uniformly accelerated linear motion</p><h2>🎓 匀变速直线运动（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>匀变速直线运动</strong>是沿直线运动且加速度大小和方向均不变的运动。</p>
+<p>$$a = \text{常数（恒量）},\quad \text{轨迹为直线}$$</p>
+<ul>
+<li><strong>匀加速</strong>：$a$ 与 $v$ 同向，速度大小不断增大。</li>
+<li><strong>匀减速</strong>：$a$ 与 $v$ 反向，速度大小不断减小。</li>
+<li>特例：匀速直线运动（$a = 0$）是匀变速的特殊情况。</li>
+</ul>
+<h3>三大运动公式</h3>
+<table>
+<thead>
+<tr>
+<th>公式</th>
+<th>名称</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v_t = v_0 + at$</td>
+<td>速度公式</td>
+<td>$v$-$t$，不含 $x$</td>
+</tr>
+<tr>
+<td>$x = v_0 t + \frac{1}{2}at^2$</td>
+<td>位移公式</td>
+<td>$x$-$t$，不含 $v_t$</td>
+</tr>
+<tr>
+<td>$v_t^2 = v_0^2 + 2ax$</td>
+<td>速度位移公式</td>
+<td>$v$-$x$，不含 $t$</td>
+</tr>
+</tbody>
+</table>
+<p>推论：</p>
+<p>$$x = \frac{v_0 + v_t}{2} \cdot t \quad \text{（平均速度法）}$$</p>
+<p>$$\bar{v} = \frac{v_0 + v_t}{2} = v_{t/2} \quad \text{（中间时刻速度=平均速度）}$$</p>
+<h3>重要推论：逐差法基础</h3>
+<p><strong>相等时间间隔 $T$ 的连续位移差为常数</strong>：</p>
+<p>$$x_2 - x_1 = x_3 - x_2 = \cdots = aT^2$$</p>
+<p>即相邻相等时间内位移差恒为 $aT^2$，这是用<strong>逐差法</strong>求加速度的实验基础。</p>
+<h3>$v$-$t$ 图象特征</h3>
+<p>匀变速直线运动的 $v$-$t$ 图象为<strong>一条斜线</strong>：
+- 斜率 $k = a$（常数）
+- 与 $t$ 轴围成的梯形（或三角形）面积 = 位移</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：物体初速度 $v_0 = 2\text{ m/s}$，加速度 $a = 3\text{ m/s}^2$，求 $t = 4\text{ s}$ 时的速度和位移。</p>
+<p>$$v_t = 2 + 3\times4 = 14\text{ m/s}$$
+$$x = 2\times4 + \frac{1}{2}\times3\times4^2 = 8 + 24 = 32\text{ m}$$</p>
+<p><strong>例2</strong>：汽车以 $20\text{ m/s}$ 匀减速，加速度 $a = -4\text{ m/s}^2$，何时停止？停止前走了多远？</p>
+<p>停止时 $v_t = 0$：
+$$t = \frac{v_t - v_0}{a} = \frac{0-20}{-4} = 5\text{ s}$$
+$$x = \frac{v_t^2 - v_0^2}{2a} = \frac{0 - 400}{-8} = 50\text{ m}$$</p>
+<p><strong>例3</strong>（逐差）：打点计时器每隔0.02s打一点，取连续5段位移：2cm、4cm、6cm、8cm、10cm，求加速度。</p>
+<p>相邻位移差 $= 2\text{ cm} = 0.02\text{ m}$，$T = 0.02\text{ s}$</p>
+<p>$$aT^2 = 0.02\text{ m} \Rightarrow a = \frac{0.02}{(0.02)^2} = 50\text{ m/s}^2$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>匀减速时间终点</strong>：速度减为零后物体停止，不能再用公式算"负速度"继续运动（除非题目说明继续）。</li>
+<li><strong>位移正负</strong>：位移公式中 $x$ 可正可负，$a$ 也可正可负，计算前统一正方向。</li>
+<li><strong>"匀变速"≠"匀速"</strong>：匀变速速度是变化的，只有加速度恒定。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中只接触匀速和"越来越快/慢"，高中定量研究匀变速，引入三大公式，是运动学的核心内容。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：匀变速直线运动 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/214-加速度.html">加速度</a></li>
+<li><a class="dead" title="未收录">速度公式-匀变速</a></li>
+<li><a class="dead" title="未收录">位移公式-匀变速</a></li>
+<li><a class="dead" title="未收录">运动学三大公式</a></li>
+<li><a class="dead" title="未收录">速度时间图象</a></li>
+<li><a class="dead" title="未收录">自由落体运动</a></li>
+<li><a class="dead" title="未收录">初速度为零的匀加速</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-10</a></li>
+<li><a href="../exam/2009-全国Ⅱ-02.html">2009-全国Ⅱ-02</a></li>
+<li><a href="../exam/2009-全国Ⅱ-07.html">2009-全国Ⅱ-07</a></li>
+<li><a href="../exam/2011-新课标-11.html">2011-新课标-11</a></li>
+<li><a class="dead" title="未收录">2012-北京-10</a></li>
+<li><a href="../exam/2012-新课标-05.html">2012-新课标-05</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-01</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-08</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-18</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-12</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-07.html">2015-新课标Ⅱ-07</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-18.html">2015-新课标Ⅱ-18</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-11.html">2016-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-09</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-09.html">2017-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2018-北京-10</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-01</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-06.html">2018-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-12.html">2019-新课标Ⅱ-12</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-12.html">2020-新课标Ⅱ-12</a></li>
+<li><a href="../exam/2021-全国乙-06.html">2021-全国乙-06</a></li>
+<li><a class="dead" title="未收录">2021-湖南-02</a></li>
+<li><a href="../exam/2022-全国乙-07.html">2022-全国乙-07</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a class="dead" title="未收录">2022-北京-18</a></li>
+<li><a class="dead" title="未收录">2022-湖南-14</a></li>
+<li><a href="../exam/2023-新课标-12.html">2023-新课标-12</a></li>
+<li><a class="dead" title="未收录">2024-北京-02</a></li>
+<li><a class="dead" title="未收录">2024-湖南-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

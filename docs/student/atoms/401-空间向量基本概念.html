@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量基本概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间向量基本概念</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第一章空间向量与立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间向量基本概念, space vector, 空间向量, space</p><h2>🎓 空间向量基本概念</h2>
+<h3>定义</h3>
+<p><strong>空间向量</strong>：在空间中，具有<strong>大小</strong>和<strong>方向</strong>的量称为空间向量（也称三维向量）。与平面向量类似，用有向线段表示，记作 $\overrightarrow{AB}$ 或 $\boldsymbol{a}$。</p>
+<p><strong>自由向量</strong>：空间向量是自由向量，只要<strong>大小相同、方向相同</strong>，则无论起点在何处，都视为同一向量（$\overrightarrow{AB} = \overrightarrow{CD}$ 当且仅当 $\overrightarrow{AB} \parallel \overrightarrow{CD}$，方向相同且 $|\overrightarrow{AB}|=|\overrightarrow{CD}|$）。</p>
+<h3>基本概念</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>零向量</strong> $\boldsymbol{0}$</td>
+<td>长度为 0，方向任意</td>
+</tr>
+<tr>
+<td><strong>单位向量</strong></td>
+<td>长度为 1 的向量</td>
+</tr>
+<tr>
+<td><strong>相等向量</strong></td>
+<td>大小相等且方向相同</td>
+</tr>
+<tr>
+<td><strong>共线向量（平行向量）</strong></td>
+<td>方向相同或相反（包括零向量）</td>
+</tr>
+<tr>
+<td><strong>共面向量</strong></td>
+<td>若干向量平移后能放入同一平面</td>
+</tr>
+</tbody>
+</table>
+<h3>空间向量与平面向量的对比</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>平面向量</th>
+<th>空间向量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>维度</td>
+<td>2维（$x,y$）</td>
+<td>3维（$x,y,z$）</td>
+</tr>
+<tr>
+<td>坐标表示</td>
+<td>$(a_1, a_2)$</td>
+<td>$(a_1, a_2, a_3)$</td>
+</tr>
+<tr>
+<td>运算规则</td>
+<td>加减/数乘/数量积</td>
+<td>同，但无"向量积"（高中范围）</td>
+</tr>
+<tr>
+<td>基底</td>
+<td>两个不共线向量</td>
+<td>三个不共面向量</td>
+</tr>
+</tbody>
+</table>
+<h3>空间中两向量共线的条件</h3>
+<p>$\boldsymbol{a}$ 与 $\boldsymbol{b}$ 共线（$\boldsymbol{b} \neq \boldsymbol{0}$）$\Leftrightarrow$ 存在实数 $\lambda$，使得 $\boldsymbol{a} = \lambda \boldsymbol{b}$。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：判断以下说法是否正确：<br />
+"空间中所有长度为 1 的向量都相等。"</p>
+<p><strong>解</strong>：错误。相等向量不仅要求大小相同，还要求<strong>方向相同</strong>。空间中长度为 1 的向量方向可以任意，不一定相等。</p>
+<p><strong>例2</strong>：设 $\overrightarrow{OA} = \boldsymbol{a}$，$\overrightarrow{OB} = \boldsymbol{b}$，求 $\overrightarrow{AB}$ 用 $\boldsymbol{a},\boldsymbol{b}$ 表示。</p>
+<p><strong>解</strong>：$\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \boldsymbol{b} - \boldsymbol{a}$</p>
+<p><strong>例3</strong>：已知 $\boldsymbol{a} = (1, 2, -3)$，$\boldsymbol{b} = (k, 4, -6)$，若 $\boldsymbol{a} \parallel \boldsymbol{b}$，求 $k$。</p>
+<p><strong>解</strong>：$\boldsymbol{a} \parallel \boldsymbol{b}$ 则 $\boldsymbol{b} = \lambda \boldsymbol{a}$，由 $4 = 2\lambda$ 得 $\lambda = 2$，故 $k = 1 \times 2 = 2$。</p>
+<h3>易错点</h3>
+<ul>
+<li>空间向量是<strong>自由向量</strong>，起点不固定；与几何中的"有向线段"不同</li>
+<li>共线向量包含<strong>零向量</strong>，但不能用"方向平行"来定义零向量</li>
+<li>空间中两向量共线 $\Rightarrow$ 可平移到同一直线，但原始向量未必在同一直线上</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第一章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第一章，待家长核对页码）</li>
+<li><strong>百科</strong>：空间向量 — 维基百科 / 数学词典</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">空间向量运算</a></li>
+<li><a class="dead" title="未收录">空间向量基本定理</a></li>
+<li><a href="../atoms/399-空间向量坐标表示.html">空间向量坐标表示</a></li>
+<li><a class="dead" title="未收录">空间向量数量积</a></li>
+<li><a class="dead" title="未收录">向量的概念</a></li>
+<li><a class="dead" title="未收录">空间点直线平面位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-16.html">2008-理-16</a></li>
+<li><a href="../exam/2009-文-16.html">2009-文-16</a></li>
+<li><a href="../exam/2009-文-19.html">2009-文-19</a></li>
+<li><a href="../exam/2009-理-18.html">2009-理-18</a></li>
+<li><a href="../exam/2013-理-17.html">2013-理-17</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a href="../exam/2019-理-16.html">2019-理-16</a></li>
+<li><a href="../exam/2020-理-20.html">2020-理-20</a></li>
+<li><a class="dead" title="未收录">2021-北京-17</a></li>
+<li><a href="../exam/2021-文-18.html">2021-文-18</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-12</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

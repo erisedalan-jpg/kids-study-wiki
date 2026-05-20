@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定点定值问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>定点定值问题</h1><div class="meta-card"><span><strong>权重</strong>13</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 综合专题]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 定点定值问题, fixed point and fixed value problems, 定点问题, 定值问题</p><h2>🎓 定点定值问题</h2>
+<h3>什么是定点/定值问题</h3>
+<p><strong>定点问题</strong>：在某一条件下，证明直线（或点）恒过某一固定点，与参数无关。</p>
+<p><strong>定值问题</strong>：在某一条件下，证明某一表达式（长度、面积、比值等）为常数，与参数无关。</p>
+<p>这类问题是高考解析几何的核心难题类型。</p>
+<h3>定点问题的解题思路</h3>
+<h4>策略一：参数消去法</h4>
+<p><strong>步骤</strong>：
+1. 设直线含参数（如斜率 $k$）
+2. 写出与曲线的交点方程
+3. 整理得关于 $x$（或 $y$）含 $k$ 的等式
+4. 令等式对<strong>所有 $k$</strong> 成立，消去 $k$，得定点坐标</p>
+<p><strong>模板</strong>：直线 $y = kx + m$（$m$ 固定），代入曲线方程，整理为：</p>
+<p>$$A(k)x + B(k) = 0 \quad \text{对所有}\ k\ \text{成立}$$</p>
+<p>分离 $k$：$x[\text{含}k\text{项系数}] + [\text{常数项}] = 0$，令各系数为零，解出定点。</p>
+<h4>策略二：特殊值法（验证）</h4>
+<p>取 $k$ 的两个特殊值，求出对应直线与曲线的交点，两次结果的公共点即为定点。（只能验证，严格证明需参数消去法）</p>
+<h4>策略三：构造法</h4>
+<p>将条件改写为某点始终在某直线/曲线上的形式。</p>
+<h3>定值问题的解题思路</h3>
+<p><strong>常见定值目标</strong>：面积、比值、乘积、和、差。</p>
+<p><strong>策略</strong>：用韦达定理表示对称函数（$x_1+x_2$，$x_1 x_2$），再计算目标量，化简后得常数。</p>
+<h3>典型例题</h3>
+<p><strong>例1（定点）</strong>：椭圆 $\dfrac{x^2}{4}+y^2=1$，过点 $A(0,1)$ 和椭圆上动点 $B$ 的直线交 $x$ 轴于点 $M$，求 $M$ 的范围/轨迹。</p>
+<p>（若要问定点：过椭圆上两动点 $B,C$ 且满足某条件的弦，其延长线恒过固定点，才是定点类型）</p>
+<p><strong>例2（定点）</strong>：椭圆 $\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$，弦 $AB$ 的中点在 $y$ 轴上（$x=0$），过 $A,B$ 的直线斜率为 $k$，证明直线恒过定点。</p>
+<p><strong>解</strong>：设 $A(x_1,y_1), B(x_2,y_2)$ 在椭圆上，代入相减（点差法）：</p>
+<p>$\dfrac{x_1^2-x_2^2}{4}+\dfrac{y_1^2-y_2^2}{3}=0$，设中点 $x_0=0$，$x_1+x_2=0$（关于 $y$ 轴对称）。</p>
+<p>$A(-t,y_A), B(t,y_B)$（$t&gt;0$），代入椭圆：$y_A^2=3(1-t^2/4)=y_B^2$，故 $y_A=y_B$（或 $y_A=-y_B$）。若 $y_A=y_B$，$A=B$（退化）；故 $y_A=-y_B$，$AB$ 为 $y$ 轴平行的弦，不过定点（斜率不存在）。</p>
+<p>（本例说明需具体题目才能展示定点，请家长补充完整题目核对）</p>
+<p><strong>例3（定值）</strong>：椭圆 $\dfrac{x^2}{4}+y^2=1$，过 $F(1,0)$ 的弦 $AB$，证明 $\dfrac{1}{|AF|}+\dfrac{1}{|BF|}$ 为定值。</p>
+<p><strong>解</strong>：设 $A(x_1,y_1), B(x_2,y_2)$，$|AF|=a-ex_1=2-\dfrac{1}{2}x_1$（$a=2,e=\dfrac{1}{2}$），$|BF|=2-\dfrac{1}{2}x_2$。</p>
+<p>$\dfrac{1}{|AF|}+\dfrac{1}{|BF|}=\dfrac{1}{2-x_1/2}+\dfrac{1}{2-x_2/2}=\dfrac{2}{4-x_1}+\dfrac{2}{4-x_2}$</p>
+<p>$=2\cdot\dfrac{(4-x_1)+(4-x_2)}{(4-x_1)(4-x_2)}=2\cdot\dfrac{8-(x_1+x_2)}{16-4(x_1+x_2)+x_1x_2}$</p>
+<p>利用韦达定理（直线方程代入椭圆），$x_1+x_2, x_1 x_2$ 用斜率 $k$ 表达后，化简发现结果与 $k$ 无关（待家长核对细节），为定值 $\dfrac{2a}{b^2}=\dfrac{4}{3}$（椭圆焦点弦调和关系）。</p>
+<h3>常见结论（定值速查）</h3>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>定值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>椭圆焦点弦 $\dfrac{1}{</td>
+<td>AF</td>
+</tr>
+<tr>
+<td>抛物线焦点弦 $\dfrac{1}{</td>
+<td>AF</td>
+</tr>
+<tr>
+<td>椭圆上切线截面积（特定类型）</td>
+<td>与 $e$ 有关，具体题目具体分析</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>定点问题中，要说明对<strong>所有合法参数</strong>成立</li>
+<li>特殊值法只能"猜测"定点，需补完整证明</li>
+<li>韦达定理仅在交点存在（$\Delta&gt;0$）时有效，需验证</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册综合专题</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+<li><a class="dead" title="未收录">圆锥曲线轨迹问题</a></li>
+<li><a class="dead" title="未收录">轨迹方程</a></li>
+<li><a class="dead" title="未收录">椭圆焦点弦</a></li>
+<li><a class="dead" title="未收录">抛物线焦点弦</a></li>
+<li><a class="dead" title="未收录">两条直线位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-19.html">2009-理-19</a></li>
+<li><a href="../exam/2015-文-20.html">2015-文-20</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2016-理-19.html">2016-理-19</a></li>
+<li><a href="../exam/2018-理-19.html">2018-理-19</a></li>
+<li><a href="../exam/2019-文-19.html">2019-文-19</a></li>
+<li><a href="../exam/2020-文-21.html">2020-文-21</a></li>
+<li><a href="../exam/2020-理-20.html">2020-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

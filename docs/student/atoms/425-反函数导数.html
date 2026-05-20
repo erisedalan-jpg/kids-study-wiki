@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反函数导数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>反函数导数</h1><div class="meta-card"><span><strong>权重</strong>30</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 反函数导数, inverse function derivative, 反函数求导, 导数</p><h2>🎓 反函数导数</h2>
+<h3>反函数求导定理</h3>
+<p>设 $y=f(x)$ 可导且 $f'(x)\neq 0$，则其反函数 $x=f^{-1}(y)$ 也可导，且：</p>
+<p>$$\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}} \quad \Longleftrightarrow \quad [f^{-1}(y)]' = \frac{1}{f'(x)}$$</p>
+<p>其中 $x=f^{-1}(y)$。直观理解：自变量和因变量互换后，变化率互成倒数。</p>
+<h3>推导思路</h3>
+<p>若 $y=f(x)$，则 $f(f^{-1}(y))=y$，两边对 $y$ 用链式法则求导：</p>
+<p>$$f'(f^{-1}(y))\cdot [f^{-1}(y)]' = 1$$</p>
+<p>$$[f^{-1}(y)]' = \frac{1}{f'(f^{-1}(y))} = \frac{1}{f'(x)}$$</p>
+<h3>典型应用</h3>
+<p><strong>例 1</strong> 由 $(e^x)'=e^x$ 推导 $(\ln x)'$</p>
+<p>$y=e^x$ 的反函数为 $x=\ln y$，故：</p>
+<p>$$(\ln y)' = \frac{1}{(e^x)'} = \frac{1}{e^x} = \frac{1}{y}$$</p>
+<p>即 $(\ln x)'=\dfrac{1}{x}$（将 $y$ 改写为 $x$）。</p>
+<p><strong>例 2</strong> 由 $(\sin x)'=\cos x$ 推导 $(\arcsin x)'$</p>
+<p>$y=\sin x$ 的反函数 $x=\arcsin y$（定义域限制使反函数存在）：</p>
+<p>$$(\arcsin y)' = \frac{1}{\cos x} = \frac{1}{\sqrt{1-\sin^2 x}} = \frac{1}{\sqrt{1-y^2}}$$</p>
+<p>即 $(\arcsin x)' = \dfrac{1}{\sqrt{1-x^2}}$（高中了解即可，部分高考大纲不要求）</p>
+<p><strong>例 3</strong> 已知 $f(3)=5$，$f'(3)=4$，求 $f^{-1}$ 在 $x=5$ 处的导数。</p>
+<p>$$[f^{-1}]'(5) = \frac{1}{f'(f^{-1}(5))} = \frac{1}{f'(3)} = \frac{1}{4}$$</p>
+<h3>几何意义</h3>
+<p>$y=f(x)$ 和 $y=f^{-1}(x)$ 关于直线 $y=x$ 对称。</p>
+<p>若 $f$ 在点 $(a,b)$ 处切线斜率为 $k$（$k\neq 0$），则 $f^{-1}$ 在对称点 $(b,a)$ 处切线斜率为 $\dfrac{1}{k}$。</p>
+<p>（斜率互为倒数，体现了反函数关系下坐标轴的互换。）</p>
+<h3>与必修衔接</h3>
+<p>必修一学过反函数的定义与图象（关于 $y=x$ 对称）。反函数导数定理是对这一关系的微积分延伸——不仅几何对称，导数也有精确的倒数关系。</p>
+<h3>易错点</h3>
+<ul>
+<li>反函数导数是 $\dfrac{1}{f'(x)}$（$f$ 的导数的倒数），不是 $f'$ 的反函数</li>
+<li>必须确认 $f'(x)\neq 0$，否则反函数在该点不可导（切线水平时，反函数切线垂直）</li>
+<li>注意自变量的对应关系：$f^{-1}$ 在 $y_0=f(x_0)$ 处的导数 $= \dfrac{1}{f'(x_0)}$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/反函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">对数函数导数</a> · <a class="dead" title="未收录">指数函数导数</a> · <a class="dead" title="未收录">复合函数导数</a> · <a class="dead" title="未收录">导数运算法则</a> · <a href="../atoms/440-导数的几何意义.html">导数的几何意义</a> · <a href="../atoms/422-切线方程.html">切线方程</a> · <a class="dead" title="未收录">常见函数导数</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-07.html">2008-文-07</a></li>
+<li><a href="../exam/2008-文-21.html">2008-文-21</a></li>
+<li><a href="../exam/2009-理-04.html">2009-理-04</a></li>
+<li><a href="../exam/2010-理-21.html">2010-理-21</a></li>
+<li><a href="../exam/2014-文-03.html">2014-文-03</a></li>
+<li><a href="../exam/2014-理-08.html">2014-理-08</a></li>
+<li><a href="../exam/2016-文-20.html">2016-文-20</a></li>
+<li><a href="../exam/2016-文-21.html">2016-文-21</a></li>
+<li><a href="../exam/2019-理-20.html">2019-理-20</a></li>
+<li><a href="../exam/2020-理-21.html">2020-理-21</a></li>
+<li><a href="../exam/2022-文-11.html">2022-文-11</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-12</a></li>
+<li><a href="../exam/2022-理-16.html">2022-理-16</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-22.html">2023-新课标Ⅱ-22</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

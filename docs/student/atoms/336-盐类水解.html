@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>盐类水解</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>盐类水解</h1><div class="meta-card"><span><strong>权重</strong>36</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 盐类水解, hydrolysis of salts, 盐的水解</p><h1>盐类水解</h1>
+<blockquote>
+<p><strong>一句话</strong>：弱酸根或弱酸阳离子与水反应，使溶液呈现酸性或碱性的过程，是弱电解质电离的逆过程。
+<strong>English</strong>: The reaction of weak-acid anions or weak-base cations with water, making the solution acidic or basic; it is the reverse of weak electrolyte ionization.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>盐类水解</strong>（hydrolysis of salts）：盐的离子与水反应生成弱酸或弱碱的过程。水解是电离的<strong>逆过程</strong>，破坏水的电离平衡，促进水电离。</p>
+<p>盐的水解规律（"有弱才水解，越弱越水解"）：</p>
+<table>
+<thead>
+<tr>
+<th>盐类型</th>
+<th>举例</th>
+<th>水解离子</th>
+<th>溶液酸碱性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>强酸强碱盐</td>
+<td>NaCl</td>
+<td>不水解</td>
+<td>中性（pH = 7）</td>
+</tr>
+<tr>
+<td>强酸弱碱盐</td>
+<td>NH₄Cl</td>
+<td>NH₄⁺ 水解</td>
+<td>酸性（pH &lt; 7）</td>
+</tr>
+<tr>
+<td>弱酸强碱盐</td>
+<td>CH₃COONa</td>
+<td>CH₃COO⁻ 水解</td>
+<td>碱性（pH &gt; 7）</td>
+</tr>
+<tr>
+<td>弱酸弱碱盐</td>
+<td>CH₃COONH₄</td>
+<td>两者均水解</td>
+<td>取决于 Ka/Kb 大小</td>
+</tr>
+</tbody>
+</table>
+<h3>公式 / 方程式</h3>
+<p>NH₄⁺ 水解（水解方程式用 ⇌，水解程度弱）：</p>
+<p>$$
+\text{NH}_4^+ + \text{H}_2\text{O} \rightleftharpoons \text{NH}_3\cdot\text{H}_2\text{O} + \text{H}^+
+$$</p>
+<p>CH₃COO⁻ 水解：</p>
+<p>$$
+\text{CH}_3\text{COO}^- + \text{H}_2\text{O} \rightleftharpoons \text{CH}_3\text{COOH} + \text{OH}^-
+$$</p>
+<p>水解常数 $K_h$（与电离常数的关系）：</p>
+<p>$$
+K_h(\text{NH}_4^+) = \frac{K_w}{K_b(\text{NH}_3\cdot\text{H}_2\text{O})} = \frac{10^{-14}}{1.8 \times 10^{-5}} = 5.6 \times 10^{-10}
+$$</p>
+<p>$$
+K_h(\text{CH}_3\text{COO}^-) = \frac{K_w}{K_a(\text{CH}_3\text{COOH})} = \frac{10^{-14}}{1.8 \times 10^{-5}} = 5.6 \times 10^{-10}
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：等浓度的 NH₄Cl 和 CH₃COONa 溶液 pH 大小比较。</p>
+<ul>
+<li>NH₄Cl：NH₄⁺ 水解，$K_h = 5.6 \times 10^{-10}$，pH &lt; 7</li>
+<li>CH₃COONa：CH₃COO⁻ 水解，$K_h = 5.6 \times 10^{-10}$，pH &gt; 7</li>
+<li>两者水解常数相同（因为 $K_a(\text{CH}_3\text{COOH}) = K_b(\text{NH}_3\cdot\text{H}_2\text{O}) = 1.8 \times 10^{-5}$）</li>
+<li>pH 关系：$\text{pH}(\text{NH}_4\text{Cl}) &lt; 7 &lt; \text{pH}(\text{CH}_3\text{COONa})$</li>
+<li>两者距 pH=7 的偏差量相同</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>盐类水解程度很小（$K_h$ 通常 &lt;&lt; 1），不要误认为水解完全</li>
+<li>水解方程式用 ⇌，不用 =（水解是平衡过程）</li>
+<li>"有弱才水解"：只有弱酸根或弱碱阳离子才水解，强酸根（Cl⁻、SO₄²⁻）不水解</li>
+<li>促进水解的方法：加水稀释、升温；抑制水解：加同名离子、降温</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>盐类水解</td>
+<td>hydrolysis of salts</td>
+</tr>
+<tr>
+<td>水解常数</td>
+<td>hydrolysis constant</td>
+</tr>
+<tr>
+<td>弱酸根</td>
+<td>weak acid anion</td>
+</tr>
+<tr>
+<td>弱碱阳离子</td>
+<td>weak base cation</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The hydrolysis of ammonium ion makes NH₄Cl solution acidic.（铵离子水解使 NH₄Cl 溶液显酸性。）</li>
+<li>Salts of strong acids and strong bases do not undergo hydrolysis.（强酸强碱盐不发生水解。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"盐的水解"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">水解平衡</a></li>
+<li><a class="dead" title="未收录">水解常数Kh</a></li>
+<li><a class="dead" title="未收录">双水解</a></li>
+<li><a href="../atoms/333-电离常数.html">电离常数</a></li>
+<li><a class="dead" title="未收录">离子浓度比较</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-全国Ⅱ-05.html">2009-全国Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2010-北京-05</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-09</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-05.html">2014-新课标Ⅱ-05</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-07.html">2016-新课标Ⅱ-07</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-01.html">2018-新课标Ⅱ-01</a></li>
+<li><a class="dead" title="未收录">2019-北京-07</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-02.html">2019-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-12</a></li>
+<li><a class="dead" title="未收录">2021-湖南-09</a></li>
+<li><a class="dead" title="未收录">2022-湖南-05</a></li>
+<li><a class="dead" title="未收录">2022-湖南-06</a></li>
+<li><a class="dead" title="未收录">2022-湖南-12</a></li>
+<li><a class="dead" title="未收录">2023-北京-02</a></li>
+<li><a class="dead" title="未收录">2023-北京-05</a></li>
+<li><a class="dead" title="未收录">2023-湖南-08</a></li>
+<li><a class="dead" title="未收录">2024-北京-08</a></li>
+<li><a href="../exam/2024-辽宁-04.html">2024-辽宁-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光电效应</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>光电效应</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 光的波粒二象性]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 光电效应, photoelectric effect, 光电现象</p><h2>🎓 光电效应</h2>
+<h3>现象定义</h3>
+<p>用光照射金属表面，当光的频率超过某一临界值时，金属表面会逸出电子（光电子），这一现象称为<strong>光电效应</strong>。</p>
+<blockquote>
+<p>爱因斯坦凭借对光电效应的理论解释（1905 年）获得 1921 年诺贝尔物理学奖。</p>
+</blockquote>
+<h3>实验规律（四大规律）</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>规律</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>存在<strong>截止频率</strong> $\nu_0$</td>
+<td>频率低于 $\nu_0$ 的光，无论强度多大，都不能产生光电子</td>
+</tr>
+<tr>
+<td>②</td>
+<td>光电子最大初动能与<strong>光的频率</strong>有关</td>
+<td>频率越高，光电子动能越大；与光强无关</td>
+</tr>
+<tr>
+<td>③</td>
+<td>光电流强度与<strong>光的强度</strong>有关</td>
+<td>光强越大，单位时间内逸出电子数越多（光电流越大）</td>
+</tr>
+<tr>
+<td>④</td>
+<td>光电效应<strong>几乎是瞬时的</strong></td>
+<td>无论光强多弱，照射后立即（&lt;10⁻⁹ s）产生光电子</td>
+</tr>
+</tbody>
+</table>
+<h3>爱因斯坦光电方程</h3>
+<p>$$\boxed{E_k = h\nu - W_0}$$</p>
+<p>其中：
+- $E_k$：光电子最大初动能（J），$E_k = \frac{1}{2}mv^2_{\max}$
+- $h = 6.626 \times 10^{-34}\ \text{J·s}$：普朗克常数
+- $\nu$：入射光频率（Hz）
+- $W_0$：金属逸出功（J），$W_0 = h\nu_0$（$\nu_0$ 为截止频率）</p>
+<p><strong>截止频率</strong>：</p>
+<p>$$\nu_0 = \frac{W_0}{h}$$</p>
+<p><strong>截止电压</strong>（使光电流为零的反向电压 $U_c$）：</p>
+<p>$$eU_c = E_k = h\nu - W_0$$</p>
+<h3>为何经典波动理论无法解释</h3>
+<table>
+<thead>
+<tr>
+<th>实验事实</th>
+<th>经典解释（失败）</th>
+<th>量子解释（成功）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>截止频率存在</td>
+<td>任意频率光，增大光强应能提供足够能量</td>
+<td>一个光子能量 $h\nu &lt; W_0$，无法逸出</td>
+</tr>
+<tr>
+<td>瞬时性</td>
+<td>弱光需积累能量，应有时间延迟</td>
+<td>光子与电子一对一作用，即时完成</td>
+</tr>
+<tr>
+<td>动能与频率有关</td>
+<td>光强决定能量，频率不应影响动能</td>
+<td>单个光子能量 $h\nu$ 决定动能</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：用频率 $\nu = 1.0 \times 10^{15}\ \text{Hz}$ 的紫外线照射钠金属，钠的逸出功 $W_0 = 3.32 \times 10^{-19}\ \text{J}$，$h = 6.63 \times 10^{-34}\ \text{J·s}$，求光电子最大初动能。</p>
+<p><strong>解</strong>：</p>
+<p>$$E_k = h\nu - W_0 = 6.63 \times 10^{-34} \times 1.0 \times 10^{15} - 3.32 \times 10^{-19}$$</p>
+<p>$$= 6.63 \times 10^{-19} - 3.32 \times 10^{-19} = 3.31 \times 10^{-19}\ \text{J}$$</p>
+<p><strong>以 eV 表示</strong>：$E_k = 3.31 \times 10^{-19}\ \text{J} \div 1.6 \times 10^{-19}\ \text{J/eV} \approx 2.07\ \text{eV}$</p>
+<h3>易错点</h3>
+<ol>
+<li>截止频率由<strong>金属的逸出功</strong>决定，与光强无关</li>
+<li>增大光强 → 单位时间光子数增多 → 光电流增大，但<strong>不增加单个光电子的动能</strong></li>
+<li>光电方程给出的是<strong>最大初动能</strong>（电子从表面直接逸出）；内部电子还需克服额外阻力，动能更小</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第四章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/光电效应">光电效应 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">普朗克常数</a></li>
+<li><a class="dead" title="未收录">光子</a></li>
+<li><a class="dead" title="未收录">光的波粒二象性</a></li>
+<li><a class="dead" title="未收录">氢原子能级</a></li>
+<li><a class="dead" title="未收录">玻尔原子模型</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-01</a></li>
+<li><a class="dead" title="未收录">2013-北京-08</a></li>
+<li><a class="dead" title="未收录">2015-北京-13</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-17</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-04.html">2018-新课标Ⅱ-04</a></li>
+<li><a class="dead" title="未收录">2019-北京-07</a></li>
+<li><a class="dead" title="未收录">2022-湖南-01</a></li>
+<li><a class="dead" title="未收录">2024-湖南-01</a></li>
+<li><a href="../exam/2024-辽宁-08.html">2024-辽宁-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

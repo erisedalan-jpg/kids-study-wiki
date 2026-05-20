@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量的期望</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离散型随机变量的期望</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离散型随机变量的期望, 数学期望</p><h1>离散型随机变量的期望</h1>
+<blockquote>
+<p><strong>一句话</strong>：若离散型随机变量 $X$ 的分布列为 $P(X=x_i)=p_i\;(i=1,2,\dots,n)$，则其期望 $E(X)=\sum_{i=1}^{n}x_i p_i$。
+<strong>English</strong>: The expected value of a discrete random variable $X$ with distribution $P(X=x_i)=p_i$ is $E(X)=\sum x_i p_i$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与性质</strong><br />
+设离散型随机变量 $X$ 所有可能取值为 $x_1,x_2,\dots,x_n$，对应概率 $p_i=P(X=x_i)$，且 $\sum p_i=1$，则 $X$ 的数学期望（均值）为<br />
+$$
+E(X)=x_1p_1+x_2p_2+\cdots+x_np_n.
+$$<br />
+期望具有线性性质：$E(aX+b)=aE(X)+b$，$E(X+Y)=E(X)+E(Y)$（无论独立与否）。常见分布的期望可直接记忆：若 $X\sim B(n,p)$，则 $E(X)=np$；若 $X$ 服从超几何分布（$N$ 件产品中 $M$ 件次品，不放回抽取 $n$ 件，次品数 $X$），则 $E(X)=n\cdot\frac{M}{N}$。</p>
+<p><strong>关键方法</strong><br />
+求解期望的规范步骤：<br />
+1. 确定随机变量 $X$ 的所有可能取值；<br />
+2. 计算每个取值对应的概率（注意检验概率和为 1）；<br />
+3. 列出分布列，代入 $E(X)=\sum x_i p_i$ 计算。<br />
+涉及多个随机变量组合时优先使用期望的线性性质拆分。对于二项分布与超几何分布，可直接套用期望公式，但必须验证模型前提（独立重复/不放回抽样）。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+- 给出实际情境（投篮命中率、抽检次品数等），完成分布列并求期望；<br />
+- 利用期望进行决策，比较两种方案的期望收益（如“应选择哪种方案？”）；<br />
+- 与二项分布或超几何分布结合，直接求期望并结合方差解释稳定性。<br />
+例：某人投篮命中率 0.6，独立投篮 3 次，命中次数 $X\sim B(3,0.6)$，期望 $E(X)=3\times0.6=1.8$。<br />
+例：一批零件共 10 个，其中 3 个不合格，随机抽取 2 个，不合格品数 $X$ 服从超几何分布，$E(X)=2\times\frac{3}{10}=0.6$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>概率计算失误</strong>：在求分布列时概率算错，或忘记验证 $\sum p_i=1$，导致期望全盘错误。  </li>
+<li><strong>混淆期望与众数</strong>：误将概率最大的取值当作期望，期望是长期平均，不一定等于最可能出现的值。  </li>
+<li><strong>分布期望公式混用</strong>：将超几何分布的期望记成 $np$，或误将二项分布的期望写成 $n\frac{M}{N}$。务必区分：有放回为二项、无放回为超几何。  </li>
+<li><strong>线性性质滥用</strong>：$E(XY)=E(X)E(Y)$ 只在随机变量 <strong>独立</strong> 时成立，未核实独立性直接拆乘积是常见错误（期望的加法无条件成立）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>离散型随机变量</td>
+<td>discrete random variable</td>
+<td>取有限个或可列个值的变量</td>
+</tr>
+<tr>
+<td>概率分布列</td>
+<td>probability distribution</td>
+<td>列出所有可能取值及对应概率的表</td>
+</tr>
+<tr>
+<td>期望（均值）</td>
+<td>expected value (mean)</td>
+<td>各取值以概率为权的加权平均</td>
+</tr>
+<tr>
+<td>二项分布</td>
+<td>binomial distribution</td>
+<td>n 次独立重复试验的成功次数分布</td>
+</tr>
+<tr>
+<td>超几何分布</td>
+<td>hypergeometric distribution</td>
+<td>有限总体不放回抽样的成功次数分布</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中数学课程标准（2017 年版 2020 年修订）— 概率与统计主题</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">离散型随机变量及其分布列</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+<li><a class="dead" title="未收录">超几何分布</a></li>
+<li><a class="dead" title="未收录">方差与标准差</a></li>
+<li><a class="dead" title="未收录">条件概率与独立事件</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-18.html">2008-理-18</a></li>
+<li><a href="../exam/2009-理-20.html">2009-理-20</a></li>
+<li><a href="../exam/2010-理-06.html">2010-理-06</a></li>
+<li><a href="../exam/2012-理-18.html">2012-理-18</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2015-理-18.html">2015-理-18</a></li>
+<li><a href="../exam/2016-理-18.html">2016-理-18</a></li>
+<li><a href="../exam/2017-理-17.html">2017-理-17</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a href="../exam/2018-理-20.html">2018-理-20</a></li>
+<li><a href="../exam/2019-理-17.html">2019-理-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-18</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-18</a></li>
+<li><a class="dead" title="未收录">2022-北京-18</a></li>
+<li><a class="dead" title="未收录">2024-北京-18</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>定理</h1><div class="meta-card"><span><strong>权重</strong>87</span><span><strong>吉林命中</strong>28</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 平面几何拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 定理, theorem, 数学定理, 公理, 推论, 向量的基本定理, 正弦定理, 余弦定理</p><h2>课本定义</h2>
+<p><strong>定理</strong>：经过<strong>推理证明</strong>的真命题，可以作为继续推理的依据。与定理相关的概念：<strong>公理</strong>（不需要证明就承认为正确的命题，作为推理出发点）；<strong>推论</strong>（直接从定理得出的命题）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"数学里的"已证明的真理""</h3>
+<p><strong>数学知识的层次：</strong></p>
+<pre><code>公理（不证自明的基础）
+   ↓ 证明
+定理（经过证明的真命题）
+   ↓ 推导
+推论（从定理直接得出的结论）
+</code></pre>
+<p><strong>公理</strong>：大家都同意、不需要证明的基础规则。
+例："两点之间线段最短"，"过两点只能画一条直线"</p>
+<p><strong>定理</strong>：经过严格证明的结论，可以当作工具用。
+例："对顶角相等"，"平行线的内错角相等"，"三角形内角和=180°"</p>
+<p><strong>推论</strong>：从定理里直接得出的小结论，相对容易。
+例：从"三角形内角和=180°"推出"直角三角形两个锐角互余"</p>
+<p><strong>生活类比：</strong>
+- 公理 ≈ 游戏规则（大家都同意的）
+- 定理 ≈ 经过裁判判定的规则（经过验证的）
+- 推论 ≈ 从规则延伸出的规定（直接推出来的）</p>
+<p><strong>数学里熟悉的定理：</strong>
+| 定理 | 内容 |
+|------|------|
+| 对顶角定理 | 对顶角相等 |
+| 平行线内错角定理 | 两平行线内错角相等 |
+| 三角形内角和定理 | 三角形三内角和=180° |
+| 勾股定理 | 直角三角形 a²+b²=c² |</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>公理</strong>（axiom）：数学体系中无需证明、作为推理出发点的基本命题。公理是整个数学大厦的"地基"。</p>
+<p><strong>定理</strong>（theorem）：从公理出发，经过严格逻辑推理（证明）得到的真命题。定理证明后可以反复使用。</p>
+<p><strong>推论</strong>（corollary）：从某定理直接得出的命题（证明简单，通常只需一两步）。</p>
+<p><strong>引理</strong>（lemma）：为证明重要定理而事先证明的辅助命题。</p>
+<h3>定理的结构</h3>
+<p>定理 = 条件 + 结论（"若……则……"形式）</p>
+<p><strong>例：</strong> 定理"平行线的同位角相等"
+- 条件：两直线平行
+- 结论：同位角相等</p>
+<p><strong>逆定理</strong>：将条件和结论互换，不一定成立（逆命题不保证真）。</p>
+<p><strong>例：</strong> "同位角相等"不能直接推出"两直线平行"（平行线判定是另一个定理）</p>
+<h3>公理体系（欧几里得几何）</h3>
+<p>欧几里得在《几何原本》中建立了以5条公设（公理）为基础的平面几何体系：
+1. 过两点可作且只作一条直线
+2. 线段可以无限延长
+3. 以任意点为圆心、任意长为半径可作圆
+4. 所有直角相等
+5. 平行公设（过一点有且只有一条线与已知线平行）</p>
+<p>从这5条公理出发，推导出整个欧氏几何体系（数百个定理）。</p>
+<h3>七年级常用定理</h3>
+<table>
+<thead>
+<tr>
+<th>定理</th>
+<th>内容</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对顶角定理</td>
+<td>对顶角相等</td>
+<td>相交线</td>
+</tr>
+<tr>
+<td>平行线性质定理1</td>
+<td>平行线同位角相等</td>
+<td>平行线</td>
+</tr>
+<tr>
+<td>平行线性质定理2</td>
+<td>平行线内错角相等</td>
+<td>平行线</td>
+</tr>
+<tr>
+<td>平行线性质定理3</td>
+<td>平行线同旁内角互补</td>
+<td>平行线</td>
+</tr>
+<tr>
+<td>平行线判定定理1</td>
+<td>同位角相等→平行</td>
+<td>平行线</td>
+</tr>
+<tr>
+<td>垂线定理</td>
+<td>过一点有且只有一条垂线</td>
+<td>垂直</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 指出下列哪些是公理，哪些是定理：</p>
+<p>(1) 两点确定一条直线
+(2) 对顶角相等
+(3) 过一点有无数条直线
+(4) 三角形内角和等于180°</p>
+<p>解：
+(1) 公理（直接承认，不证明）
+(2) 定理（可以从对顶角定义+邻补角推导证明）
+(3) 公理（线的性质）
+(4) 定理（可以通过平行线性质证明）</p>
+<p><strong>例题2：</strong> 定理"平行线的内错角相等"的推论是什么？</p>
+<p>解：推论：若两直线平行，则同旁内角互补。
+（因为同旁内角 = 180° - 内错角 = 180° - 相等角，所以互补）</p>
+<h3>定理与命题的关系</h3>
+<ul>
+<li>所有定理都是命题（且是真命题）</li>
+<li>并非所有真命题都是定理（公理也是真命题，但不是定理）</li>
+<li>假命题不可能成为定理</li>
+</ul>
+<pre><code>真命题
+├── 公理（无需证明）
+└── 定理（经过证明）
+    └── 推论（从定理直接得出）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定理</td>
+<td>theorem</td>
+<td>经过证明的真命题</td>
+</tr>
+<tr>
+<td>公理</td>
+<td>axiom</td>
+<td>不需证明的基础命题</td>
+</tr>
+<tr>
+<td>推论</td>
+<td>corollary</td>
+<td>从定理直接推出</td>
+</tr>
+<tr>
+<td>引理</td>
+<td>lemma</td>
+<td>证明定理的辅助命题</td>
+</tr>
+<tr>
+<td>证明</td>
+<td>proof</td>
+<td>严格逻辑推导过程</td>
+</tr>
+<tr>
+<td>逆定理</td>
+<td>converse theorem</td>
+<td>条件和结论互换的定理</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第五章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>拓展</strong>：欧几里得《几何原本》；非欧几何（否定平行公设）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">命题</a></li>
+<li><a href="../atoms/037-推理.html">推理</a></li>
+<li><a class="dead" title="未收录">几何证明入门</a></li>
+<li><a class="dead" title="未收录">对顶角</a></li>
+<li><a class="dead" title="未收录">平行线</a></li>
+<li><a class="dead" title="未收录">相交线</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-17.html">2008-理-17</a></li>
+<li><a href="../exam/2009-文-05.html">2009-文-05</a></li>
+<li><a href="../exam/2009-文-13.html">2009-文-13</a></li>
+<li><a href="../exam/2009-文-18.html">2009-文-18</a></li>
+<li><a href="../exam/2009-理-05.html">2009-理-05</a></li>
+<li><a href="../exam/2009-理-12.html">2009-理-12</a></li>
+<li><a href="../exam/2010-文-16.html">2010-文-16</a></li>
+<li><a href="../exam/2010-理-10.html">2010-理-10</a></li>
+<li><a href="../exam/2010-理-16.html">2010-理-16</a></li>
+<li><a href="../exam/2011-文-09.html">2011-文-09</a></li>
+<li><a href="../exam/2011-文-15.html">2011-文-15</a></li>
+<li><a href="../exam/2011-理-09.html">2011-理-09</a></li>
+<li><a href="../exam/2011-理-16.html">2011-理-16</a></li>
+<li><a href="../exam/2012-文-11.html">2012-文-11</a></li>
+<li><a href="../exam/2012-文-17.html">2012-文-17</a></li>
+<li><a href="../exam/2012-理-11.html">2012-理-11</a></li>
+<li><a href="../exam/2012-理-17.html">2012-理-17</a></li>
+<li><a href="../exam/2013-文-04.html">2013-文-04</a></li>
+<li><a href="../exam/2013-文-05.html">2013-文-05</a></li>
+<li><a href="../exam/2013-理-03.html">2013-理-03</a></li>
+<li><a href="../exam/2013-理-14.html">2013-理-14</a></li>
+<li><a href="../exam/2013-理-15.html">2013-理-15</a></li>
+<li><a href="../exam/2013-理-17.html">2013-理-17</a></li>
+<li><a href="../exam/2014-文-12.html">2014-文-12</a></li>
+<li><a href="../exam/2014-文-17.html">2014-文-17</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/2014-理-15.html">2014-理-15</a></li>
+<li><a href="../exam/2015-文-11.html">2015-文-11</a></li>
+<li><a href="../exam/2015-文-17.html">2015-文-17</a></li>
+<li><a href="../exam/2015-理-12.html">2015-理-12</a></li>
+<li><a href="../exam/2015-理-17.html">2015-理-17</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2016-文-13.html">2016-文-13</a></li>
+<li><a href="../exam/2016-文-15.html">2016-文-15</a></li>
+<li><a href="../exam/2016-理-13.html">2016-理-13</a></li>
+<li><a href="../exam/2016-理-15.html">2016-理-15</a></li>
+<li><a href="../exam/2017-文-11.html">2017-文-11</a></li>
+<li><a href="../exam/2017-文-16.html">2017-文-16</a></li>
+<li><a href="../exam/2017-理-10.html">2017-理-10</a></li>
+<li><a href="../exam/2017-理-15.html">2017-理-15</a></li>
+<li><a href="../exam/2017-理-17.html">2017-理-17</a></li>
+<li><a href="../exam/2018-文-07.html">2018-文-07</a></li>
+<li><a href="../exam/2018-文-14.html">2018-文-14</a></li>
+<li><a href="../exam/2018-文-16.html">2018-文-16</a></li>
+<li><a href="../exam/2018-理-06.html">2018-理-06</a></li>
+<li><a href="../exam/2018-理-15.html">2018-理-15</a></li>
+<li><a href="../exam/2018-理-17.html">2018-理-17</a></li>
+<li><a href="../exam/2019-文-11.html">2019-文-11</a></li>
+<li><a href="../exam/2019-文-12.html">2019-文-12</a></li>
+<li><a href="../exam/2019-文-15.html">2019-文-15</a></li>
+<li><a href="../exam/2019-理-10.html">2019-理-10</a></li>
+<li><a href="../exam/2019-理-12.html">2019-理-12</a></li>
+<li><a href="../exam/2019-理-15.html">2019-理-15</a></li>
+<li><a href="../exam/2019-理-17.html">2019-理-17</a></li>
+<li><a class="dead" title="未收录">2020-北京-17</a></li>
+<li><a href="../exam/2020-文-12.html">2020-文-12</a></li>
+<li><a href="../exam/2020-文-17.html">2020-文-17</a></li>
+<li><a href="../exam/2020-文-18.html">2020-文-18</a></li>
+<li><a href="../exam/2020-文-19.html">2020-文-19</a></li>
+<li><a href="../exam/2020-理-10.html">2020-理-10</a></li>
+<li><a href="../exam/2020-理-16.html">2020-理-16</a></li>
+<li><a href="../exam/2020-理-17.html">2020-理-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-16</a></li>
+<li><a href="../exam/2021-文-15.html">2021-文-15</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-19</a></li>
+<li><a href="../exam/2021-理-15.html">2021-理-15</a></li>
+<li><a href="../exam/2022-文-17.html">2022-文-17</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-18</a></li>
+<li><a href="../exam/2022-理-17.html">2022-理-17</a></li>
+<li><a class="dead" title="未收录">2023-北京-07</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-06</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-16</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-17</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-17.html">2023-新课标Ⅱ-17</a></li>
+<li><a class="dead" title="未收录">2024-北京-16</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-15</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-17.html">2024-新课标Ⅱ-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

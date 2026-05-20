@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计图</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>统计图</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 七下, 数据收集整理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 统计图, statistical chart, 统计图表, 数据可视化, 统计</p><h2>课本定义</h2>
+<p>用图形来表示统计数据的图，叫做<strong>统计图</strong>。常用的统计图有三种：<strong>条形统计图</strong>（比较不同类别的数量）、<strong>扇形统计图</strong>（表示各部分占整体的比例）、<strong>折线统计图</strong>（表示数据随时间的变化趋势）。选择不同的统计图取决于数据类型和分析目的。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"让数据看得见"</h3>
+<p>数字堆在一起看不出规律，<strong>统计图</strong>把数字变成图形，让规律一目了然！</p>
+<p><strong>三种主要统计图：</strong></p>
+<p><strong>1. 条形统计图（Bar Chart）</strong>
+- 用"柱子"的高低表示数量
+- 方便比较不同类别谁多谁少
+- 例：各班男女生人数比较</p>
+<pre><code>人数
+30 |  █
+25 |  █   █
+20 |  █   █   █
+    一班  二班  三班
+</code></pre>
+<p><strong>2. 扇形统计图（Pie Chart）</strong>
+- 把圆形切成几块"饼"，每块代表一个部分
+- 方便看各部分占总体的比例
+- 例：班里喜欢各科的比例</p>
+<pre><code>    ┌──────────────────┐
+    │  数学 30%        │
+    │        语文 25%  │
+    │    英语 20%      │
+    │  体育 15% 其他10%│
+    └──────────────────┘
+</code></pre>
+<p><strong>3. 折线统计图（Line Chart）</strong>
+- 把各时间点的数据用点连成线
+- 方便看数据随时间如何变化（增减趋势）
+- 例：一周气温变化</p>
+<pre><code>温度
+30|    *
+25| *     *   *
+20|           *  *
+  一  二  三  四  五
+</code></pre>
+<p><strong>怎么选统计图？</strong>
+| 想了解什么 | 用什么图 |
+|-----------|---------|
+| 各类别谁多谁少 | 条形图 |
+| 各部分占总体的比例 | 扇形图 |
+| 随时间的变化趋势 | 折线图 |</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>三种统计图详解</h3>
+<p><strong>条形统计图（Bar Chart / Bar Graph）</strong></p>
+<ul>
+<li><strong>纵向条形图</strong>（柱状图）：柱子竖立，横轴为类别，纵轴为数量</li>
+<li><strong>横向条形图</strong>：条形水平延伸</li>
+<li><strong>复式条形图</strong>：并排多组柱子，便于组间对比</li>
+</ul>
+<p><strong>适用：</strong> 离散型分类数据，比较各类别数量大小</p>
+<p><strong>注意：</strong>
+- 纵轴必须从0开始（否则视觉上会夸大差异）
+- 各柱宽度相等，柱间间隔适当</p>
+<p><strong>扇形统计图（Pie Chart）</strong></p>
+<ul>
+<li>整个圆代表总体（100%）</li>
+<li>各扇形面积（圆心角）代表各部分比例</li>
+<li>圆心角 = 频率 × 360°</li>
+</ul>
+<p><strong>适用：</strong> 表示各部分占整体的比例关系，强调"份额"</p>
+<p><strong>注意：</strong>
+- 各扇形的百分比之和必须为 100%
+- 份额太多时（超过7-8个），不易阅读</p>
+<p><strong>折线统计图（Line Chart）</strong></p>
+<ul>
+<li>横轴通常为时间（年份、月份、天……）</li>
+<li>各时间点的数据用点标出，相邻点连成线段</li>
+<li>折线的升降反映数据的变化趋势</li>
+</ul>
+<p><strong>适用：</strong> 表示数据随时间（或其他连续变量）的变化趋势</p>
+<p><strong>注意：</strong>
+- 点的位置代表数据值，线段只是连接辅助
+- 适合连续变化的数据，不适合离散分类</p>
+<h3>读图分析</h3>
+<p>统计图的读取要素：
+1. <strong>标题</strong>：图表说的是什么主题
+2. <strong>横纵轴（或图例）</strong>：各轴代表什么，单位是什么
+3. <strong>数据值</strong>：各数据点的具体数值
+4. <strong>趋势和比较</strong>：数据的增减、大小关系</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 某班级期中考试各科平均分如下，应画哪种统计图？</p>
+<p>语文82, 数学89, 英语76, 物理85, 化学80</p>
+<p>解：比较各科平均分大小 → 用<strong>条形统计图</strong></p>
+<p><strong>例题2：</strong> 某校学生兴趣爱好：音乐30%，体育25%，绘画20%，阅读15%，其他10%，应画哪种统计图？</p>
+<p>解：展示各兴趣的占比 → 用<strong>扇形统计图</strong>
+各圆心角：音乐 108°，体育 90°，绘画 72°，阅读 54°，其他 36°
+（360° × 各比例）</p>
+<p><strong>例题3：</strong> 某地2020-2025年气温（℃）：18, 19, 21, 20, 22, 23，应画哪种统计图？</p>
+<p>解：展示气温随年份的变化趋势 → 用<strong>折线统计图</strong></p>
+<p><strong>例题4：</strong> 从扇形图读数。某扇形图中"数学"扇形圆心角为 108°，求数学爱好者占总人数的比例。</p>
+<p>解：比例 = 108°/360° = 30%</p>
+<h3>统计图的选择原则</h3>
+<table>
+<thead>
+<tr>
+<th>数据特点</th>
+<th>推荐图形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比较各类数量多少</td>
+<td>条形图</td>
+</tr>
+<tr>
+<td>各部分占总体的比例</td>
+<td>扇形图</td>
+</tr>
+<tr>
+<td>数据随时间变化的趋势</td>
+<td>折线图</td>
+</tr>
+<tr>
+<td>数据的分布（频率密度）</td>
+<td>直方图</td>
+</tr>
+<tr>
+<td>两变量的相关性</td>
+<td>散点图（高中）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>统计图</td>
+<td>statistical chart</td>
+<td>数据的图形表示</td>
+</tr>
+<tr>
+<td>条形统计图</td>
+<td>bar chart / bar graph</td>
+<td>用柱子高低表示数量</td>
+</tr>
+<tr>
+<td>扇形统计图</td>
+<td>pie chart</td>
+<td>用扇形大小表示比例</td>
+</tr>
+<tr>
+<td>折线统计图</td>
+<td>line chart / line graph</td>
+<td>用折线表示趋势</td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>histogram</td>
+<td>频率分布图</td>
+</tr>
+<tr>
+<td>圆心角</td>
+<td>central angle</td>
+<td>扇形所对应的角</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第十章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）统计与概率领域</li>
+<li><strong>拓展</strong>：数据可视化原则；Excel制作统计图</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/143-频数分布.html">频数分布</a></li>
+<li><a class="dead" title="未收录">条形统计图</a></li>
+<li><a class="dead" title="未收录">扇形统计图</a></li>
+<li><a class="dead" title="未收录">折线统计图</a></li>
+<li><a class="dead" title="未收录">全面调查</a></li>
+<li><a class="dead" title="未收录">抽样调查</a></li>
+<li><a href="../atoms/055-平均数.html">平均数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-19.html">2011-理-19</a></li>
+<li><a href="../exam/2012-理-17.html">2012-理-17</a></li>
+<li><a href="../exam/2014-文-18.html">2014-文-18</a></li>
+<li><a href="../exam/2015-理-03.html">2015-理-03</a></li>
+<li><a href="../exam/2017-文-19.html">2017-文-19</a></li>
+<li><a href="../exam/2019-文-14.html">2019-文-14</a></li>
+<li><a href="../exam/2019-文-17.html">2019-文-17</a></li>
+<li><a href="../exam/2019-理-13.html">2019-理-13</a></li>
+<li><a href="../exam/2020-理-18.html">2020-理-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

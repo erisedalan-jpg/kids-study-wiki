@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线性规划</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>线性规划</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 线性规划, Linear Programming</p><h1>线性规划</h1>
+<blockquote>
+<p><strong>一句话</strong>：在平面直角坐标系中，求二元一次不等式组（约束条件）所表示的可行域内，线性目标函数的最大值或最小值。
+<strong>English</strong>: A method for finding the maximum or minimum value of a linear objective function subject to a set of linear constraints in a planar region.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+若目标函数为 $z = ax + by$（$a,b$ 为常数，且 $a,b$ 不同时为零），约束条件是由若干个关于 $x,y$ 的二元一次不等式组成的线性约束组，则问题可表示为：
+$$
+\begin{cases}
+a_1x + b_1y \le c_1, \
+\vdots \
+a_mx + b_my \le c_m, \
+x \ge 0, \, y \ge 0 \quad (\text{常含非负约束})
+\end{cases}
+$$
+求 $z$ 的最值。根据线性规划基本定理，若可行域有界，最优解必在可行域的某个顶点处取得；若无界，则可能无最优解。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>画可行域</strong>：将每个不等式化为直线 $a_ix + b_iy = c_i$，取定界（实线或虚线），并用特殊点（如 $(0,0)$）判断区域。所有不等式区域的交集即为可行域（通常为凸多边形）。<br />
+2. <strong>作目标函数线</strong>：令 $z = 0$ 得到直线 $ax + by = 0$，并按目标函数的系数方向平移该直线。将直线在可行域内平移至与可行域首次/最后接触的顶点，即为使 $z$ 取最小/最大的点。<br />
+3. <strong>计算顶点坐标</strong>：解接触点所在的两条边界直线的方程组，得到精确坐标，代入 $z$ 求最值。若目标函数直线斜率与边界平行，整条边界上的点均为最优解（无穷多解）。</p>
+<p><strong>典型应用</strong><br />
+高考常以选择题或填空题出现，设问：“若 $x,y$ 满足约束条件，求 $z = 3x + 2y$ 的最大值（或最小值）”；或求 $\frac{y}{x}$、$x^2 + y^2$ 等几何意义的非线性目标，但此时仍用可行域顶点或几何意义求解。例如，约束条件为 $\begin{cases} x+y \le 4 \ x-y \le 2 \ x\ge0, y\ge0 \end{cases}$，求 $z=2x+y$ 的最大值，通过平移可得最优解在 $(3,1)$ 取得 $z=7$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>不等式方向画反，导致可行域取错；尤其当不等式为 $ax+by \ge c$ 时，不注意 $a$ 的符号导致区域判断失误。  </li>
+<li>忽略隐含的非负约束（如实际问题中 $x \ge 0, y \ge 0$），造成可行域扩大或顶点遗漏。  </li>
+<li>目标函数直线平移方向与最值对应关系混淆：将直线沿系数矢量 $(a,b)$ 方向平移时 $z$ 增大，沿相反方向平移 $z$ 减小。学生常记反。  </li>
+<li>最优解在顶点取得，但计算顶点坐标时解方程组错误或取错交点，特别是可行域边界含多条直线时未精确判断哪两条线交于最优顶点。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线性规划</td>
+<td>Linear Programming</td>
+<td>求解线性目标函数在线性约束下的最优值</td>
+</tr>
+<tr>
+<td>可行域</td>
+<td>Feasible Region</td>
+<td>所有满足约束条件的点构成的集合</td>
+</tr>
+<tr>
+<td>目标函数</td>
+<td>Objective Function</td>
+<td>待求最值的线性函数 $z = ax + by$</td>
+</tr>
+<tr>
+<td>约束条件</td>
+<td>Constraints</td>
+<td>由线性不等式组成的限制条件组</td>
+</tr>
+<tr>
+<td>最优解</td>
+<td>Optimal Solution</td>
+<td>使目标函数取得最大值或最小值的可行解</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">二元一次不等式组</a></li>
+<li><a class="dead" title="未收录">直线的方程</a></li>
+<li><a class="dead" title="未收录">简单线性规划的实际应用</a></li>
+<li><a class="dead" title="未收录">非线性目标函数的几何意义</a></li>
+<li><a class="dead" title="未收录">可行域的顶点与边界</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-06.html">2008-文-06</a></li>
+<li><a href="../exam/2008-理-05.html">2008-理-05</a></li>
+<li><a href="../exam/2009-文-11.html">2009-文-11</a></li>
+<li><a href="../exam/2009-理-10.html">2009-理-10</a></li>
+<li><a href="../exam/2013-文-13.html">2013-文-13</a></li>
+<li><a href="../exam/2013-文-14.html">2013-文-14</a></li>
+<li><a href="../exam/2013-理-04.html">2013-理-04</a></li>
+<li><a href="../exam/2014-理-14.html">2014-理-14</a></li>
+<li><a href="../exam/2015-文-04.html">2015-文-04</a></li>
+<li><a href="../exam/2015-文-13.html">2015-文-13</a></li>
+<li><a href="../exam/2015-理-04.html">2015-理-04</a></li>
+<li><a href="../exam/2015-理-14.html">2015-理-14</a></li>
+<li><a href="../exam/2016-文-16.html">2016-文-16</a></li>
+<li><a href="../exam/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/2018-文-13.html">2018-文-13</a></li>
+<li><a href="../exam/2018-理-08.html">2018-理-08</a></li>
+<li><a href="../exam/2018-理-12.html">2018-理-12</a></li>
+<li><a href="../exam/2019-文-13.html">2019-文-13</a></li>
+<li><a href="../exam/2019-理-05.html">2019-理-05</a></li>
+<li><a href="../exam/2020-文-13.html">2020-文-13</a></li>
+<li><a href="../exam/2020-文-15.html">2020-文-15</a></li>
+<li><a href="../exam/2020-理-13.html">2020-理-13</a></li>
+<li><a href="../exam/2021-文-05.html">2021-文-05</a></li>
+<li><a href="../exam/2021-理-08.html">2021-理-08</a></li>
+<li><a href="../exam/2022-文-05.html">2022-文-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

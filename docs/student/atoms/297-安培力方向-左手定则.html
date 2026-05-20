@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安培力方向-左手定则</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>安培力方向-左手定则</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电磁场基础]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 安培力方向-左手定则, left-hand rule for Ampere force, 左手定则, 安培左手定则</p><h2>🎓 安培力方向——左手定则</h2>
+<h3>左手定则（弗莱明左手定则）</h3>
+<p>判断安培力（磁场对通电导线的力）方向的方法：</p>
+<blockquote>
+<p><strong>伸开左手</strong>，使大拇指与四指垂直：
+1. 让磁感线穿入<strong>手心</strong>（即磁场 $B$ 指向手心，四指朝向 $B$ 的方向）
+2. <strong>四指</strong>弯向<strong>电流</strong> $I$ 的方向
+3. <strong>大拇指</strong>所指方向即为<strong>安培力 $F$ 的方向</strong></p>
+</blockquote>
+<p>或等价描述：
+- 手心面对磁场来的方向（$B$ 穿手心）
+- 四指指向电流方向
+- 大拇指指向安培力方向</p>
+<h3>三个方向的关系</h3>
+<p>当电流垂直于磁场时（$I \perp B$），安培力 $F$、电流 $I$、磁场 $B$ <strong>两两垂直</strong>，构成右手坐标系（但判断用左手）。</p>
+<p>数学表达（大学物理）：$\boldsymbol{F} = I\boldsymbol{L} \times \boldsymbol{B}$</p>
+<h3>判断步骤（实战）</h3>
+<ol>
+<li>确定磁场方向 $B$（磁感线方向）</li>
+<li>确定电流方向 $I$</li>
+<li>用左手：四指指 $I$，$B$ 穿手心</li>
+<li>大拇指所指 = 安培力方向 $F$</li>
+</ol>
+<h3>洛伦兹力方向（同样适用左手定则）</h3>
+<p>对带电粒子：四指指速度 $v$ 方向（正电荷）或速度反方向（负电荷），$B$ 穿手心，大拇指指洛伦兹力方向。</p>
+<blockquote>
+<p>⚠️ 负电荷：四指指<strong>速度反方向</strong>（等效为负电荷反向等于正电荷同向）。</p>
+</blockquote>
+<h3>对比：左手定则 vs 右手定则</h3>
+<table>
+<thead>
+<tr>
+<th>定则</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>左手定则</strong></td>
+<td>判断安培力/洛伦兹力的方向（"动力来自磁"——电生力）</td>
+</tr>
+<tr>
+<td><strong>右手定则（安培定则）</strong></td>
+<td>判断电流产生磁场的方向（"电生磁"——电生磁）</td>
+</tr>
+<tr>
+<td><strong>右手定则（发电机）</strong></td>
+<td>判断导体切割磁力线时产生感应电流方向（"磁生电"）</td>
+</tr>
+</tbody>
+</table>
+<p>记忆口诀："<strong>左力右电</strong>"——左手定则求力，右手定则求电（电流或磁场）。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：水平导线通有向右的电流，匀强磁场方向竖直向上，安培力方向是什么？</p>
+<p>用左手定则：
+- 四指向右（电流方向）
+- $B$（向上）穿手心
+- 大拇指指向：水平向前（垂直纸面向外）</p>
+<p>答：安培力方向水平向前（垂直于 $I$ 和 $B$ 的方向）。</p>
+<h3>易错点</h3>
+<ul>
+<li>注意是<strong>左</strong>手（力的方向），不是右手（磁场方向）。</li>
+<li>电流方向是正电荷定向移动方向（与电子移动方向相反）。</li>
+<li>安培力始终<strong>垂直于电流和磁场</strong>（当 $I \perp B$ 时），不在导线平面内。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了力的方向分析；本节引入左手定则，专门用于判断磁场中的力（安培力和洛伦兹力），是磁力分析的核心工具。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十二章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/弗莱明左手定则">维基百科·弗莱明左手定则</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">安培力</a></li>
+<li><a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><a class="dead" title="未收录">洛伦兹力方向</a></li>
+<li><a href="../atoms/323-磁感应强度.html">磁感应强度</a></li>
+<li><a class="dead" title="未收录">磁场对电流的作用</a></li>
+<li><a class="dead" title="未收录">带电粒子在磁场中圆周运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-02</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a></li>
+<li><a class="dead" title="未收录">2019-北京-04</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-04.html">2020-新课标Ⅱ-04</a></li>
+<li><a class="dead" title="未收录">2022-北京-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

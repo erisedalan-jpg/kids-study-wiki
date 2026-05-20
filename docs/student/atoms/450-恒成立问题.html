@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>恒成立问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>恒成立问题</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第九章综合]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 恒成立问题, always-true problems, 恒成立不等式, 对任意x成立</p><h2>🎓 恒成立问题</h2>
+<h3>问题框架</h3>
+<p><strong>恒成立</strong>：命题"对集合 $I$ 中所有 $x$，不等式 $P(x)$ 成立"。</p>
+<p>等价于：$P(x)$ 在 $I$ 上的最小值 $\geq 0$（严格不等式则 $&gt;0$）。</p>
+<h3>四种标准模型</h3>
+<p><strong>模型 1</strong>：$f(x)&gt;a$ 在 $I$ 上恒成立 → $a &lt; \min_{x\in I} f(x)$</p>
+<p><strong>模型 2</strong>：$f(x)<a$ 在 $I$ 上恒成立 → $a > \max_{x\in I} f(x)$</p>
+<p><strong>模型 3</strong>：$f(x,a)&gt;0$ 在 $I$ 上恒成立 → 参数分离后取极值</p>
+<p><strong>模型 4</strong>：含参函数具有某性质（如单调性、极值）在某区间上恒成立</p>
+<h3>参数分离技巧</h3>
+<p>将含参不等式变形为：</p>
+<p>$$g(x) \odot a \quad (\odot \text{ 为 } &gt;,&lt;,\geq,\leq)$$</p>
+<p>再对 $g(x)$ 在指定区间上取极值：</p>
+<ul>
+<li>$g(x)<a$ 恒成立 → $a > \max g(x)$</li>
+<li>$g(x)&gt;a$ 恒成立 → $a &lt; \min g(x)$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x)=x^2-2ax+a&gt;0$ 在 $\mathbb{R}$ 上恒成立，求 $a$ 的范围。</p>
+<p>判别式 $\Delta = 4a^2-4a&lt;0$ → $a(a-1)&lt;0$ → $0&lt;a&lt;1$。</p>
+<p>（直接用判别式法，不需导数）</p>
+<p><strong>例 2</strong> $\ln x\geq ax-a$ 在 $(0,+\infty)$ 上恒成立，求 $a$ 的范围。</p>
+<p>若 $a=0$：$\ln x\geq 0$ 对 $x&lt;1$ 不成立，故 $a\neq 0$。</p>
+<p>变形（$a\neq 0$）：$a(x-1)\leq\ln x$（若 $a&gt;0$，$a\leq\dfrac{\ln x}{x-1}$；若 $a&lt;0$，$a\geq\dfrac{\ln x}{x-1}$）。</p>
+<p>设 $h(x)=\dfrac{\ln x}{x-1}$（$x&gt;0,x\neq 1$），$\lim_{x\to 1}h(x)=1$（洛必达），$h'(x)=\dfrac{\frac{x-1}{x}-\ln x}{(x-1)^2}$</p>
+<p>令 $p(x)=\dfrac{x-1}{x}-\ln x=1-\dfrac{1}{x}-\ln x$，$p'(x)=\dfrac{1}{x^2}-\dfrac{1}{x}=\dfrac{1-x}{x^2}$</p>
+<p>$x&lt;1$ 时 $p'&gt;0$，$x&gt;1$ 时 $p'&lt;0$，最大值 $p(1)=0$，故 $p(x)\leq 0$，$h'(x)\leq 0$，$h(x)$ 单调递减。</p>
+<p>$h(x)\to 0^+$（$x\to+\infty$），$h(x)\to 0^+$（$x\to 0^+$），$h$ 在 $x=1$ 处取最大值 $1$（补充定义 $h(1)=1$）。</p>
+<ul>
+<li>若 $a&gt;0$：需 $a\leq h(x)$ 恒成立 → $a\leq\min h(x)=0$，矛盾（$a&gt;0$），无解。</li>
+<li>若 $a&lt;0$：需 $a\geq h(x)$ 恒成立 → $a\geq\max h(x)=1$，矛盾（$a&lt;0$），无解。</li>
+<li>若 $a=0$：不满足。</li>
+</ul>
+<p>结论：$a$ 无解（该命题不恒成立）→ 题目可能设定不同的区间，如 $[1,e]$（请家长核对原题）。</p>
+<p><strong>例 3</strong>（简单版）$x^2-2x+a\geq 0$ 在 $[0,3]$ 上恒成立，求 $a$ 的最小值。</p>
+<p>需 $a\geq-(x^2-2x)=2x-x^2$ 对所有 $x\in[0,3]$ 成立。</p>
+<p>设 $g(x)=2x-x^2$，$g'(x)=2-2x=0$，$x=1$，最大值 $g(1)=1$。</p>
+<p>故 $a\geq 1$，最小值为 $a=1$。</p>
+<p><strong>例 4</strong> $f(x)=e^x-ex$ 在 $\mathbb{R}$ 上恒成立 $f(x)\geq 0$（已知结论，用导数证明）。</p>
+<p>$f'(x)=e^x-e$，$f'(x)=0$ 时 $x=1$，$f(1)=e-e=0$，最小值为 $0$，故 $f(x)\geq 0$ 恒成立。</p>
+<h3>恒成立 vs. 存在</h3>
+<table>
+<thead>
+<tr>
+<th>语言表述</th>
+<th>数学含义</th>
+<th>转化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"对任意 $x\in I$，$f(x)&gt;a$"</td>
+<td>恒成立</td>
+<td>$a&lt;\min f$</td>
+</tr>
+<tr>
+<td>"存在 $x\in I$，使 $f(x)&gt;a$"</td>
+<td>存在性</td>
+<td>$a&lt;\max f$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第九章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/不等式</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/428-存在性问题.html">存在性问题</a> · <a href="../atoms/424-参数分类讨论.html">参数分类讨论</a> · <a class="dead" title="未收录">导数与不等式恒成立</a> · <a class="dead" title="未收录">导数证明不等式</a> · <a class="dead" title="未收录">导数构造函数法</a> · <a href="../atoms/419-函数最值-高中.html">函数最值-高中</a> · <a class="dead" title="未收录">导数压轴题型</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-21.html">2010-理-21</a></li>
+<li><a href="../exam/2012-理-24.html">2012-理-24</a></li>
+<li><a href="../exam/2014-文-11.html">2014-文-11</a></li>
+<li><a href="../exam/2014-理-18.html">2014-理-18</a></li>
+<li><a href="../exam/2015-理-21.html">2015-理-21</a></li>
+<li><a href="../exam/2016-文-12.html">2016-文-12</a></li>
+<li><a href="../exam/2017-理-23.html">2017-理-23</a></li>
+<li><a href="../exam/2018-理-11.html">2018-理-11</a></li>
+<li><a href="../exam/2019-文-23.html">2019-文-23</a></li>
+<li><a href="../exam/2019-理-12.html">2019-理-12</a></li>
+<li><a href="../exam/2019-理-13.html">2019-理-13</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-06.html">2023-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

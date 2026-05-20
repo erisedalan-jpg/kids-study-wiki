@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分步计数原理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分步计数原理</h1><div class="meta-card"><span><strong>权重</strong>25</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分步计数原理, multiplication principle, 乘法原理, 分步乘法原理</p><h2>🎓 分步计数原理</h2>
+<h3>基本定义</h3>
+<p><strong>分步计数原理</strong>（又称乘法原理）：完成一件事情需要 $n$ 个步骤，第 $i$ 步有 $m_i$ 种方法，则完成这件事共有</p>
+<p>$$N = m_1 \times m_2 \times \cdots \times m_n$$</p>
+<p>种方法。</p>
+<p><strong>关键条件</strong>：各步骤<strong>独立</strong>（每步的选法不影响其他步），且必须完成<strong>所有步骤</strong>才能完成任务。</p>
+<h3>核心理解</h3>
+<ul>
+<li>分步原理对应"且"关系：第一步 <strong>且</strong> 第二步 <strong>且</strong> ……</li>
+<li>缺少任何一步都无法完成任务</li>
+<li>与分类计数原理（加法原理）的区别：分步用乘法，分类用加法</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1（基础）</strong>：从北京到上海乘火车，再从上海到杭州乘动车，北京到上海有 8 班次，上海到杭州有 5 班次，共有多少种出行方案？</p>
+<p><strong>解</strong>：两步独立，$N = 8 \times 5 = 40$ 种。</p>
+<p><strong>例2（密码问题）</strong>：一个密码由 3 位数字（每位 0–9）和 2 位字母（26 个字母，可重复）组成，共有多少种密码？</p>
+<p><strong>解</strong>：分 5 步（各步独立）：
+$$N = 10 \times 10 \times 10 \times 26 \times 26 = 676000 \text{ 种}$$</p>
+<p><strong>例3（无重复排列）</strong>：3 个人排成一排，有多少种排法？</p>
+<p><strong>解</strong>：
+- 第 1 位：3 种选法
+- 第 2 位：2 种（剩余）
+- 第 3 位：1 种（剩余）</p>
+<p>$$N = 3 \times 2 \times 1 = 6 \text{ 种} = 3!$$</p>
+<h3>与分类计数原理对比</h3>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>原理</th>
+<th>运算</th>
+<th>口诀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完成任务只需一种方法</td>
+<td>分类（加法）</td>
+<td>加</td>
+<td>分类加</td>
+</tr>
+<tr>
+<td>完成任务需要所有步骤</td>
+<td>分步（乘法）</td>
+<td>乘</td>
+<td>分步乘</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>步骤相互影响</strong>：若后一步的方法数依赖前一步的选择，需分情况讨论（不能直接乘）</li>
+<li><strong>遗漏步骤</strong>：少算一步，结果偏小</li>
+<li><strong>与加法原理混用</strong>：是"或"用加，是"且"用乘</li>
+<li><strong>含限制条件的排列</strong>：有特殊限制时，优先安排特殊元素，再用乘法原理</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/乘法原理">乘法原理 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/478-分类计数原理.html">分类计数原理</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a class="dead" title="未收录">排列数公式</a></li>
+<li><a href="../atoms/505-组合概念.html">组合概念</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-05.html">2009-文-05</a></li>
+<li><a href="../exam/2009-理-07.html">2009-理-07</a></li>
+<li><a href="../exam/2009-理-10.html">2009-理-10</a></li>
+<li><a href="../exam/2010-理-04.html">2010-理-04</a></li>
+<li><a href="../exam/2021-理-06.html">2021-理-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

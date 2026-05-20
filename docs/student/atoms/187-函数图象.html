@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数图象</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数图象</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 一次函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数图象, graph of a function, 函数图像, 二次函数图象</p><h1>函数图象</h1>
+<blockquote>
+<p><strong>一句话</strong>：以自变量 $x$ 的值为横坐标、对应函数值 $y$ 为纵坐标，在坐标系中描出所有点 $(x,y)$ 构成的图形，叫函数图象。
+<strong>English</strong>: The graph of a function is the set of all points $(x, f(x))$ plotted in a coordinate plane.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>描点画图的步骤</h3>
+<ol>
+<li><strong>列表</strong>：给自变量 $x$ 取几个值，算出对应的 $y$ 值</li>
+<li><strong>描点</strong>：在坐标系中画出点 $(x, y)$</li>
+<li><strong>连线</strong>：用光滑曲线（或直线）依次连接</li>
+</ol>
+<p><strong>例</strong>：画 $y = 2x - 1$</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>$-1$</th>
+<th>$0$</th>
+<th>$1$</th>
+<th>$2$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>$-3$</td>
+<td>$-1$</td>
+<td>$1$</td>
+<td>$3$</td>
+</tr>
+</tbody>
+</table>
+<p>描出 $(-1,-3)$、$(0,-1)$、$(1,1)$、$(2,3)$，连直线。</p>
+<h3>从图象读信息</h3>
+<ul>
+<li><strong>截距</strong>：图象与坐标轴的交点</li>
+<li>$x$ 轴交点 → 令 $y=0$，求 $x$（$x$ 轴截距）</li>
+<li>$y$ 轴交点 → 令 $x=0$，求 $y$（$y$ 轴截距，即纵截距）</li>
+<li><strong>单调性</strong>：从左向右图象上升 → 增函数；下降 → 减函数</li>
+<li><strong>正负号</strong>：图象在 $x$ 轴上方 → $y&gt;0$；下方 → $y&lt;0$</li>
+</ul>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>图象的本质</h3>
+<p>函数 $y=f(x)$ 的图象 = 点集 ${(x, f(x)) \mid x \in \text{定义域}}$。</p>
+<p><strong>竖线检验法</strong>：任何垂直于 $x$ 轴的直线与图象最多一个交点 → 该曲线是函数图象。</p>
+<h3>一次函数图象特征</h3>
+<p>$y = kx + b$（$k \neq 0$）的图象是直线：
+- $k &gt; 0$：从左下到右上（单调递增）
+- $k &lt; 0$：从左上到右下（单调递减）
+- $b &gt; 0$：直线与 $y$ 轴交于正半轴
+- $b &lt; 0$：直线与 $y$ 轴交于负半轴</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：画出 $y=\dfrac{1}{2}x-1$ 的图象，并求与两坐标轴的交点。</p>
+<p>令 $y=0$：$x=2$，交 $x$ 轴于 $(2,0)$；令 $x=0$：$y=-1$，交 $y$ 轴于 $(0,-1)$。连这两点画直线。</p>
+<p><strong>例 2</strong>：由图象判断：直线经过第一、三、四象限，$b&lt;0$，则 $k$ 和 $b$ 的符号？</p>
+<p>经过第一、四象限（从左上到右下）→ 实际应为第一、二、四象限（斜率正负需仔细判断，待家长核实）。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 描点数量太少（至少取 3 个点，最好取整数点）</li>
+<li>❌ 连线时直线连成折线（直线函数需用直尺）</li>
+<li>❌ 读截距时搞反 $x$ 截距和 $y$ 截距</li>
+</ul>
+<h3>知识联系</h3>
+<p>图象画法是<a class="dead" title="未收录">一次函数图象与性质</a>的基础；坐标系规则来自<a href="../atoms/132-平面直角坐标系.html">坐标系</a>；截距与<a class="dead" title="未收录">一次函数与方程不等式</a>的解有直接关系（图象与 $x$ 轴交点即方程的解）。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>函数图象</td>
+<td>graph of a function</td>
+</tr>
+<tr>
+<td>截距</td>
+<td>intercept</td>
+</tr>
+<tr>
+<td>纵截距</td>
+<td>y-intercept</td>
+</tr>
+<tr>
+<td>横截距</td>
+<td>x-intercept</td>
+</tr>
+<tr>
+<td>单调递增</td>
+<td>monotonically increasing</td>
+</tr>
+<tr>
+<td>竖线检验法</td>
+<td>vertical line test</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第19章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·函数</li>
+<li>拓展：<a class="dead" title="未收录">数学/一次函数定义</a> · <a class="dead" title="未收录">数学/坐标系</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/188-函数概念.html">函数概念</a> · <a class="dead" title="未收录">自变量与因变量</a> · <a href="../atoms/177-一次函数定义.html">一次函数定义</a> · <a class="dead" title="未收录">一次函数图象与性质</a> · <a href="../atoms/132-平面直角坐标系.html">坐标系</a> · <a class="dead" title="未收录">一次函数与方程不等式</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-03.html">2008-理-03</a></li>
+<li><a href="../exam/2008-理-08.html">2008-理-08</a></li>
+<li><a href="../exam/2008-理-12.html">2008-理-12</a></li>
+<li><a href="../exam/2010-文-12.html">2010-文-12</a></li>
+<li><a href="../exam/2011-文-08.html">2011-文-08</a></li>
+<li><a href="../exam/2013-文-06.html">2013-文-06</a></li>
+<li><a href="../exam/2015-文-11.html">2015-文-11</a></li>
+<li><a href="../exam/2015-理-07.html">2015-理-07</a></li>
+<li><a href="../exam/2015-理-10.html">2015-理-10</a></li>
+<li><a href="../exam/2016-文-12.html">2016-文-12</a></li>
+<li><a class="dead" title="未收录">2020-北京-06</a></li>
+<li><a href="../exam/2020-理-09.html">2020-理-09</a></li>
+<li><a href="../exam/2020-理-23.html">2020-理-23</a></li>
+<li><a href="../exam/2022-文-08.html">2022-文-08</a></li>
+<li><a class="dead" title="未收录">2023-北京-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

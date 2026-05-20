@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动量定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>动量定理</h1><div class="meta-card"><span><strong>权重</strong>20</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 动量守恒定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 动量定理, impulse-momentum theorem</p><h2>🎓 动量定理</h2>
+<h3>定义</h3>
+<p><strong>动量定理</strong>：合外力的冲量等于物体动量的变化量。</p>
+<p>$$\vec{I} = \Delta\vec{p} = m\vec{v_2} - m\vec{v_1}$$</p>
+<p>即：</p>
+<p>$$\vec{F}_{合}\cdot t = m\vec{v_2} - m\vec{v_1}$$</p>
+<ul>
+<li>$\vec{F}_{合}$：合外力（N）</li>
+<li>$t$：作用时间（s）</li>
+<li>$\Delta\vec{p}$：动量变化量（kg·m/s）</li>
+</ul>
+<h3>推导</h3>
+<p>由牛顿第二定律：</p>
+<p>$$\vec{F}_{合} = m\vec{a} = m\cdot\frac{\vec{v_2}-\vec{v_1}}{t}$$</p>
+<p>两边乘以 $t$：</p>
+<p>$$\vec{F}_{合}\cdot t = m\vec{v_2} - m\vec{v_1} = \Delta\vec{p}$$</p>
+<p>动量定理是牛顿定律的等价推论，但更适合处理<strong>变力</strong>和<strong>碰撞</strong>等短时作用问题。</p>
+<h3>变力情形</h3>
+<p>当力随时间变化时，动量定理用<strong>平均力</strong> $\bar{F}$：</p>
+<p>$$\bar{F}\cdot t = \Delta\vec{p}$$</p>
+<p>这是动量定理的优势：不需要知道力的瞬时变化，只需知道动量变化和时间。</p>
+<h3>典型应用</h3>
+<p><strong>例1（缓冲原理）</strong>：质量 0.5 kg 的球以 10 m/s 速度落地后静止。</p>
+<ul>
+<li>若与地面作用时间 $t_1 = 0.01\text{ s}$：$\bar{F_1} = \Delta p / t_1 = 5/0.01 = 500\text{ N}$</li>
+<li>若落在海绵上，作用时间 $t_2 = 0.1\text{ s}$：$\bar{F_2} = 5/0.1 = 50\text{ N}$</li>
+</ul>
+<p><strong>延长作用时间→减小冲击力</strong>：安全气囊、跳远时弯腿、拳击手套均利用此原理。</p>
+<p><strong>例2（打击力计算）</strong>：0.1 kg 球以 20 m/s 向右飞来，被球棒打回以 30 m/s 向左飞出，接触时间 0.05 s，求球棒对球的平均力。</p>
+<p>取向右为正：</p>
+<p>$$\Delta p = m v_2 - m v_1 = 0.1\times(-30) - 0.1\times20 = -5\text{ kg·m/s}$$</p>
+<p>$$\bar{F} = \frac{\Delta p}{t} = \frac{-5}{0.05} = -100\text{ N}$$</p>
+<p>球棒对球的力大小 100 N，方向向左。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>动量定理是矢量方程</strong>：必须规定正方向，变向时速度取负值。</li>
+<li><strong>$F$ 是合外力</strong>：包括重力、支持力、摩擦力等所有力的合力。</li>
+<li><strong>时间是力作用的时间</strong>：不是运动总时间，两者可能不同。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第一章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：动量定理 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/346-动量.html">动量</a></li>
+<li><a href="../atoms/345-冲量.html">冲量</a></li>
+<li><a href="../atoms/347-动量守恒定律.html">动量守恒定律</a></li>
+<li><a class="dead" title="未收录">碰撞</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">平均力</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-12</a></li>
+<li><a class="dead" title="未收录">2015-北京-06</a></li>
+<li><a class="dead" title="未收录">2016-北京-13</a></li>
+<li><a class="dead" title="未收录">2016-北京-14</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-18</a></li>
+<li><a class="dead" title="未收录">2018-北京-10</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2020-北京-19</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-01</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-10</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-12</a></li>
+<li><a class="dead" title="未收录">2021-北京-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-08</a></li>
+<li><a href="../exam/2022-全国乙-07.html">2022-全国乙-07</a></li>
+<li><a class="dead" title="未收录">2022-北京-12</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a class="dead" title="未收录">2022-湖南-14</a></li>
+<li><a href="../exam/2023-新课标-06.html">2023-新课标-06</a></li>
+<li><a href="../exam/2023-新课标-13.html">2023-新课标-13</a></li>
+<li><a class="dead" title="未收录">2023-湖南-14</a></li>
+<li><a class="dead" title="未收录">2024-北京-08</a></li>
+<li><a class="dead" title="未收录">2024-北京-22</a></li>
+<li><a class="dead" title="未收录">2024-湖南-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电容器</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电容器</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 静电场深化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电容器, capacitor</p><h2>🎓 电容器（Capacitor）</h2>
+<h3>定义</h3>
+<p><strong>电容器</strong>是两个相互靠近、彼此绝缘的导体（<strong>极板</strong>）组成的储能元件。两极板之间夹有绝缘介质（空气、云母、陶瓷等）。</p>
+<h3>充电与放电</h3>
+<table>
+<thead>
+<tr>
+<th>过程</th>
+<th>操作</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>充电</strong></td>
+<td>接上电源</td>
+<td>两极板分别积累等量异号电荷，两板间建立电场，储存电场能量</td>
+</tr>
+<tr>
+<td><strong>放电</strong></td>
+<td>两端短接</td>
+<td>电荷中和，电场消失，能量以电流形式释放</td>
+</tr>
+</tbody>
+</table>
+<p>充电完成后，若与电源断开：极板电荷量 $Q$ 不变，电压 $U$ 不变，电场 $E$ 不变。</p>
+<h3>电容的定义式</h3>
+<p>$$C = \frac{Q}{U}$$</p>
+<ul>
+<li>$C$：电容量（法拉，F）</li>
+<li>$Q$：极板上的电荷量（C）</li>
+<li>$U$：两板间电压（V）</li>
+</ul>
+<p><strong>电容是电容器储存电荷能力的量度</strong>，由电容器本身结构（面积、间距、介质）决定，与 $Q$、$U$ 无关。</p>
+<h3>常用单位换算</h3>
+<p>$$1\,\text{F} = 10^6\,\mu\text{F} = 10^{12}\,\text{pF}$$</p>
+<p>实际电路常用 $\mu\text{F}$（微法）和 $\text{pF}$（皮法）。</p>
+<h3>储存的电场能量</h3>
+<p>$$E_C = \frac{1}{2}CU^2 = \frac{Q^2}{2C} = \frac{QU}{2}$$</p>
+<h3>在电路中的作用</h3>
+<ul>
+<li>直流稳定电路：电容器相当于<strong>断路</strong>（充满电后无稳定电流）。</li>
+<li>交流电路：允许交流通过（频率越高，容抗越小）。</li>
+<li>应用：滤波、隔直、储能、定时电路等。</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某电容器 $C = 200\,\mu\text{F}$，充电后两极板间电压 $U = 50\,\text{V}$，求极板电荷量和储存的电场能量。</p>
+<p>$$Q = CU = 200\times10^{-6}\times50 = 0.01\,\text{C}$$</p>
+<p>$$E_C = \frac{1}{2}CU^2 = \frac{1}{2}\times200\times10^{-6}\times50^2 = 0.25\,\text{J}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>电容 $C$ 是<strong>固有属性</strong>，改变 $Q$ 或 $U$ 不改变 $C$（除非改变结构）。</li>
+<li>充电完毕<strong>断开电源</strong>后，$Q$ 不变，若改变极板间距，则 $U$ 改变，$C$ 改变。</li>
+<li>充电完毕<strong>保持与电源相连</strong>时，$U$ 不变，若改变极板间距，则 $Q$ 改变，$C$ 改变。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了电能与功；电容器将电能以电场形式储存，体现了电场也能储存能量这一重要物理思想。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/电容器">维基百科·电容器</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电容</a></li>
+<li><a class="dead" title="未收录">平行板电容器电容</a></li>
+<li><a class="dead" title="未收录">电势差与电场强度关系</a></li>
+<li><a class="dead" title="未收录">静电屏蔽</a></li>
+<li><a class="dead" title="未收录">电路串联-高中</a></li>
+<li><a class="dead" title="未收录">电路并联-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2019-北京-11</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-04</a></li>
+<li><a class="dead" title="未收录">2022-北京-09</a></li>
+<li><a class="dead" title="未收录">2024-北京-20</a></li>
+<li><a href="../exam/2024-辽宁-05.html">2024-辽宁-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

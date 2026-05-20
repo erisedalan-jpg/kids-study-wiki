@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向心加速度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向心加速度</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 圆周运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向心加速度, centripetal acceleration</p><h2>🎓 向心加速度</h2>
+<h3>定义</h3>
+<p><strong>向心加速度</strong>：做匀速圆周运动的质点，速度方向不断改变所产生的加速度，方向始终指向圆心（向心），大小恒定。</p>
+<p>$$a = \frac{v^2}{r} = \omega^2 r = \frac{4\pi^2 r}{T^2}$$</p>
+<h3>推导</h3>
+<p>在极短时间 $\Delta t$ 内，速度由 $\vec{v}_1$ 变为 $\vec{v}_2$，方向改变 $\Delta\theta$（速度大小不变 = $v$）：</p>
+<p>$$|\Delta\vec{v}| = v\Delta\theta\ \text{（对小角度）}$$
+$$a = \frac{|\Delta\vec{v}|}{\Delta t} = v\frac{\Delta\theta}{\Delta t} = v\omega$$</p>
+<p>因 $v = r\omega$：</p>
+<p>$$a = v\omega = r\omega^2 = \frac{v^2}{r}$$</p>
+<h3>公式汇总</h3>
+<p>$$a = \frac{v^2}{r} = \omega^2 r = v\omega = \frac{4\pi^2 r}{T^2}$$</p>
+<p>方向：始终<strong>指向圆心</strong>（垂直于速度方向）。</p>
+<h3>向心加速度的性质</h3>
+<ul>
+<li>方向：指向圆心，与速度垂直</li>
+<li>大小：匀速圆周运动中恒定</li>
+<li>作用：改变速度<strong>方向</strong>，不改变速度大小（不做功）</li>
+<li>不是"切向加速度"（切向加速度改变速率）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$r = 2\ \text{m}$，$v = 4\ \text{m/s}$，向心加速度？</p>
+<p>$$a = \frac{v^2}{r} = \frac{16}{2} = 8\ \text{m/s}^2$$</p>
+<p><strong>例2</strong>：$r = 1\ \text{m}$，$T = 2\ \text{s}$，向心加速度？</p>
+<p>$$a = \frac{4\pi^2 r}{T^2} = \frac{4\pi^2 \times 1}{4} = \pi^2 \approx 9.87\ \text{m/s}^2$$</p>
+<p><strong>例3（地球表面 $g$ 关联）</strong>：月球绕地球公转，$r = 3.84 \times 10^8\ \text{m}$，$T = 27.3\ \text{天}$，向心加速度？</p>
+<p>$$T = 27.3 \times 86400 \approx 2.36 \times 10^6\ \text{s}$$
+$$a = \frac{4\pi^2 r}{T^2} = \frac{4\pi^2 \times 3.84 \times 10^8}{(2.36 \times 10^6)^2} \approx 2.72 \times 10^{-3}\ \text{m/s}^2 \approx \frac{g}{3600}$$</p>
+<p>（牛顿用此验证万有引力）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>向心加速度不做功</strong>：因为它垂直于速度，做功为零，不改变动能。</li>
+<li><strong>加速度方向在变</strong>：虽然大小恒定，方向随质点位置一直在改变（始终指向圆心）。</li>
+<li><strong>非匀速圆周运动</strong>：还有切向加速度，合加速度不一定指向圆心。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第六章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第六章 第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：向心加速度 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/258-圆周运动.html">圆周运动</a></li>
+<li><a href="../atoms/256-向心力.html">向心力</a></li>
+<li><a href="../atoms/283-线速度.html">线速度</a></li>
+<li><a href="../atoms/286-角速度.html">角速度</a></li>
+<li><a class="dead" title="未收录">转速与周期</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-北京-04</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-06.html">2015-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2016-北京-06</a></li>
+<li><a class="dead" title="未收录">2018-北京-05</a></li>
+<li><a class="dead" title="未收录">2023-北京-12</a></li>
+<li><a href="../exam/2024-辽宁-02.html">2024-辽宁-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

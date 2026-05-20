@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线的性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双曲线的性质</h1><div class="meta-card"><span><strong>权重</strong>13</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: &quot;双曲线的性质&quot;, &quot;双曲线性质&quot;, &quot;Hyperbola properties&quot;</p><h1>双曲线的性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：双曲线是平面上到两个定点距离之差的绝对值为常数（小于两定点距离）的点的轨迹。
+<strong>English</strong>: A hyperbola is the set of all points in a plane such that the absolute difference of the distances to two fixed points (foci) is a positive constant less than the distance between the foci.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与标准方程</strong><br />
+平面内到两个定点 $F_1,F_2$ 的距离之差的绝对值等于常数 $2a$（$0&lt;2a&lt;|F_1F_2|=2c$）的点的轨迹叫做双曲线。<br />
+焦点在 $x$ 轴：$\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\;(a&gt;0,b&gt;0)$，其中 $c^{2}=a^{2}+b^{2}$，渐近线为 $y=\pm\dfrac{b}{a}x$。<br />
+焦点在 $y$ 轴：$\dfrac{y^{2}}{a^{2}}-\dfrac{x^{2}}{b^{2}}=1\;(a&gt;0,b&gt;0)$，渐近线为 $y=\pm\dfrac{a}{b}x$。</p>
+<p><strong>关键几何性质</strong><br />
+实轴长 $2a$，虚轴长 $2b$，焦距 $2c$。离心率 $e=\dfrac{c}{a}&gt;1$，$e$ 越大开口越阔；双曲线上任一点到焦点距离与到对应准线（$x=\pm\dfrac{a^{2}}{c}$）距离之比为 $e$。焦点到渐近线的距离恒为 $b$（焦点在 $x$ 轴时）。通径长 $\dfrac{2b^{2}}{a}$。</p>
+<p><strong>关键方法</strong><br />
+- <strong>求标准方程</strong>：先定焦点位置，设出对应方程，利用 $a,b,c$ 关系、渐近线、点坐标等条件联立求解。<br />
+- <strong>求离心率</strong>：根据已知条件（渐近线斜率、焦点三角形边角关系、通径等）构造 $a,c$ 的齐次式，解得 $e$。<br />
+- <strong>渐近线应用</strong>：与渐近线平行的直线与双曲线最多一个交点；已知渐近线可设双曲线方程为 $\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=\lambda(\lambda\neq0)$。</p>
+<p><strong>典型高考设问</strong><br />
+给出双曲线的一条渐近线方程和某点坐标求标准方程；已知焦点三角形中角或边的关系求离心率；结合定义求双曲线上点到两焦点的距离问题；与直线、圆结合考查弦长、中点弦（点差法）等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>$a,b,c$ 关系混淆</strong>：双曲线中 $c^{2}=a^{2}+b^{2}$，椭圆中 $a^{2}=b^{2}+c^{2}$，求解时易代错公式。</li>
+<li><strong>渐近线方程写反</strong>：焦点在 $x$ 轴时渐近线为 $y=\pm\frac{b}{a}x$，在 $y$ 轴时为 $y=\pm\frac{a}{b}x$，需先明确焦点所在轴。</li>
+<li><strong>定义漏掉绝对值</strong>：轨迹定义要求 $\big||PF_1|-|PF_2|\big|=2a$；若不考虑绝对值，只能得到一支，导致轨迹不完整。</li>
+<li><strong>忽视焦点位置讨论</strong>：题目未指明焦点在哪条坐标轴时，应分情况讨论，否则容易漏解或错选方程形式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>双曲线</td>
+<td>hyperbola</td>
+<td>到两焦点距离之差的绝对值为常数的点的轨迹</td>
+</tr>
+<tr>
+<td>焦点</td>
+<td>focus (复数 foci)</td>
+<td>定义中两个定点</td>
+</tr>
+<tr>
+<td>渐近线</td>
+<td>asymptote</td>
+<td>双曲线无限趋近但永不相交的直线</td>
+</tr>
+<tr>
+<td>离心率</td>
+<td>eccentricity</td>
+<td>$e=c/a$，决定双曲线开口大小</td>
+</tr>
+<tr>
+<td>实轴</td>
+<td>transverse axis</td>
+<td>连接两顶点的线段，长度为 $2a$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">双曲线的定义</a></li>
+<li><a class="dead" title="未收录">双曲线的标准方程</a></li>
+<li><a class="dead" title="未收录">椭圆的几何性质</a></li>
+<li><a class="dead" title="未收录">抛物线的几何性质</a></li>
+<li><a href="../atoms/391-椭圆离心率.html">离心率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-09.html">2008-理-09</a></li>
+<li><a href="../exam/2009-文-08.html">2009-文-08</a></li>
+<li><a href="../exam/2010-文-05.html">2010-文-05</a></li>
+<li><a href="../exam/2013-理-06.html">2013-理-06</a></li>
+<li><a href="../exam/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/2015-文-12.html">2015-文-12</a></li>
+<li><a href="../exam/2015-理-11.html">2015-理-11</a></li>
+<li><a href="../exam/2016-理-11.html">2016-理-11</a></li>
+<li><a href="../exam/2017-文-05.html">2017-文-05</a></li>
+<li><a href="../exam/2017-理-09.html">2017-理-09</a></li>
+<li><a href="../exam/2018-文-06.html">2018-文-06</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2018-理-05.html">2018-理-05</a></li>
+<li><a href="../exam/2018-理-11.html">2018-理-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

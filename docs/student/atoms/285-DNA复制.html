@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DNA复制</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>DNA复制</h1><div class="meta-card"><span><strong>权重</strong>25</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第3章基因的本质]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: DNA复制, DNA replication</p><h1>DNA复制</h1>
+<blockquote>
+<p><strong>一句话</strong>：以亲代 DNA 双链的每条链为模板，按碱基互补配对原则，在酶的作用下合成两条新链，从而产生两个与亲代 DNA 完全相同的子代 DNA 的过程。
+<strong>English</strong>: The process in which each strand of the parental DNA serves as a template to synthesize a new complementary strand, producing two identical daughter DNA molecules via complementary base pairing.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>DNA 复制</strong>（DNA replication）：DNA 分子在细胞分裂前（S 期）进行的自我复制，产生两个与亲代 DNA 序列完全相同的子代 DNA，遗传信息因此得以精确传递。</p>
+<p>复制方式：<strong>半保留复制</strong>（每个子代 DNA 含一条亲代链 + 一条新合成链）</p>
+<h3>原理 / 规律</h3>
+<h4>复制发生的场所与时期</h4>
+<table>
+<thead>
+<tr>
+<th>生物类型</th>
+<th>复制场所</th>
+<th>时期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真核细胞</td>
+<td>细胞核（主要）、线粒体、叶绿体</td>
+<td>细胞分裂间期 S 期</td>
+</tr>
+<tr>
+<td>原核细胞</td>
+<td>细胞质（拟核区域）</td>
+<td>细胞增殖前</td>
+</tr>
+</tbody>
+</table>
+<h4>复制所需条件</h4>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模板</td>
+<td>亲代 DNA 双链（解旋后各链均为模板）</td>
+</tr>
+<tr>
+<td>原料</td>
+<td>四种游离脱氧核苷酸（dATP、dTTP、dGTP、dCTP）</td>
+</tr>
+<tr>
+<td>酶</td>
+<td>解旋酶（解开双链）、DNA 聚合酶（合成新链）等</td>
+</tr>
+<tr>
+<td>能量（ATP）</td>
+<td>提供合成反应所需能量</td>
+</tr>
+</tbody>
+</table>
+<h4>复制过程</h4>
+<pre><code>亲代 DNA（双链）
+    ↓ 解旋酶解开氢键
+两条模板链（单链）
+    ↓ 各自为模板，dNTP 按互补配对加入
+    ↓ DNA 聚合酶连接磷酸二酯键（5'→3' 方向延伸）
+两个子代 DNA（各含 1 条亲链 + 1 条新链）
+</code></pre>
+<h4>计算模型</h4>
+<p><strong>设亲代 DNA 含 N 个碱基对，复制 n 次后：</strong></p>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子代 DNA 分子数</td>
+<td>2^n</td>
+</tr>
+<tr>
+<td>需要游离脱氧核苷酸总数</td>
+<td>N × (2^n - 1) 对 = N × (2^n - 1) × 2 个</td>
+</tr>
+<tr>
+<td>含亲代链的 DNA 数</td>
+<td>2（始终只有 2 个，因半保留）</td>
+</tr>
+<tr>
+<td>全为新链的 DNA 数</td>
+<td>2^n - 2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例</strong>：含 1000 碱基对的 DNA 复制 3 次：
+- 子代 DNA = 2³ = 8 个
+- 需原料 = 1000 × (8-1) = 7000 对 = 14000 个脱氧核苷酸</p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：用 ¹⁵N 标记的 DNA 在 ¹⁴N 培养基中复制 3 次，含有 ¹⁵N 的 DNA 分子有多少个？全部含 ¹⁴N 的 DNA 有多少个？</p>
+<p><strong>解题</strong>：
+- 复制 3 次 → 共 2³ = 8 个子代 DNA
+- 半保留复制：两条亲代链（¹⁵N）各保留在一个子代 DNA 中
+- <strong>含 ¹⁵N 的 DNA = 2 个</strong>（每个各含 1 条 ¹⁵N 链和 1 条 ¹⁴N 链）
+- 全部含 ¹⁴N 的 DNA = 8 - 2 = <strong>6 个</strong>（两条链均为 ¹⁴N 新链）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>复制在 S 期（分裂间期），不是分裂期</strong>：分裂期染色体已完成复制，正在分离。</li>
+<li><strong>半保留 = 每个子代 DNA 中有一条旧链</strong>，不是一半子代含旧链。</li>
+<li><strong>DNA 聚合酶只能 5'→3' 延伸</strong>，不能从头合成，需要 RNA 引物起始（高中阶段一般不考引物细节）。</li>
+<li><strong>线粒体和叶绿体也能半自主复制 DNA</strong>：真核细胞复制不局限于细胞核。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA 复制</td>
+<td>DNA replication</td>
+</tr>
+<tr>
+<td>半保留复制</td>
+<td>semi-conservative replication</td>
+</tr>
+<tr>
+<td>解旋酶</td>
+<td>helicase</td>
+</tr>
+<tr>
+<td>DNA 聚合酶</td>
+<td>DNA polymerase</td>
+</tr>
+<tr>
+<td>脱氧核苷酸</td>
+<td>deoxyribonucleotide</td>
+</tr>
+<tr>
+<td>模板链</td>
+<td>template strand</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>DNA replication is semi-conservative: each daughter molecule contains one parental strand and one newly synthesized strand.</em>（DNA 复制是半保留的：每个子代分子含一条亲代链和一条新合成链。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第3章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"DNA复制"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">半保留复制</a></li>
+<li><a class="dead" title="未收录">DNA分子结构</a></li>
+<li><a class="dead" title="未收录">碱基互补配对</a></li>
+<li><a href="../atoms/301-基因突变.html">基因突变</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-07</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-05.html">2014-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-02</a></li>
+<li><a href="../exam/2021-全国乙-01.html">2021-全国乙-01</a></li>
+<li><a href="../exam/2021-全国乙-02.html">2021-全国乙-02</a></li>
+<li><a class="dead" title="未收录">2022-湖南-02</a></li>
+<li><a class="dead" title="未收录">2023-北京-21</a></li>
+<li><a class="dead" title="未收录">2024-北京-05</a></li>
+<li><a href="../exam/2024-辽宁-02.html">2024-辽宁-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

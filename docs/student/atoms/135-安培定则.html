@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安培定则</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>安培定则</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第二十章电与磁]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 安培定则, Ampere&#x27;s right-hand rule, 右手定则, 右手螺旋定则</p><h1>安培定则</h1>
+<blockquote>
+<p><strong>一句话</strong>：安培定则（右手定则）是判断通电导线和螺线管磁场方向的规则：右手握住导线或螺线管，拇指指向电流方向，四指弯曲方向即为磁感线方向。
+<strong>English</strong>: Ampere's right-hand rule determines the direction of the magnetic field around a current-carrying wire or solenoid: wrap the right hand around the conductor with the thumb pointing in the current direction; the fingers curl in the direction of the magnetic field lines.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>怎么知道通电导线周围的磁场方向？</strong></p>
+<p>用<strong>右手定则</strong>！</p>
+<p><strong>直导线的磁场：</strong></p>
+<p>右手握住通电直导线：
+- <strong>大拇指</strong>朝向<strong>电流方向</strong>（电流从哪里流向哪里）
+- <strong>四指弯曲的方向</strong>就是磁感线环绕的方向（顺时针还是逆时针）</p>
+<p><strong>螺线管（通电线圈）的磁场：</strong></p>
+<p>右手握住螺线管：
+- <strong>四指弯向电流流过线圈的方向</strong>
+- <strong>大拇指指向的就是N极</strong>！</p>
+<p><strong>记忆口诀：</strong> 右手—安培定则（判断磁场方向）；左手—安培力定则（判断受力方向）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>安培定则的两种应用</h3>
+<p><strong>情形一：直线电流的磁场</strong></p>
+<p>通电直导线周围产生同心圆形磁场：</p>
+<p>右手握住导线，<strong>大拇指指向电流方向（正方向）</strong>，弯曲的四指所指方向即为<strong>磁感线方向</strong>。</p>
+<ul>
+<li>电流向上流动 → 磁感线绕导线<strong>逆时针</strong>（从上方看）</li>
+<li>电流向下流动 → 磁感线绕导线<strong>顺时针</strong>（从上方看）</li>
+</ul>
+<p><strong>情形二：螺线管（通电线圈）的磁场</strong></p>
+<p>通电螺线管产生类似条形磁铁的磁场（两端有N极和S极）：</p>
+<p>右手握住螺线管，<strong>四指弯向线圈中电流的绕行方向</strong>（从一端看，电流方向），<strong>大拇指所指就是N极</strong>。</p>
+<h3>安培定则与安培力定则的区分</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>安培定则（右手）</th>
+<th>安培力定则（左手）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>别名</td>
+<td>右手螺旋定则</td>
+<td>左手定则</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>判断<strong>磁场方向</strong></td>
+<td>判断<strong>受力方向</strong></td>
+</tr>
+<tr>
+<td>输入</td>
+<td>电流方向 → 输出磁场方向</td>
+<td>磁场方向 + 电流方向 → 输出力的方向</td>
+</tr>
+<tr>
+<td>应用</td>
+<td>电磁铁磁极判断</td>
+<td>电动机转向判断</td>
+</tr>
+</tbody>
+</table>
+<h3>直线电流磁场的定量描述</h3>
+<p>直线电流在距离 $r$ 处产生的磁感应强度（毕奥-萨伐尔定律，高中/大学）：</p>
+<p>$$B = \frac{\mu_0 I}{2\pi r}$$</p>
+<ul>
+<li>$\mu_0 = 4\pi \times 10^{-7}$ T·m/A（真空磁导率）</li>
+<li>$I$：电流（A）</li>
+<li>$r$：到导线的距离（m）</li>
+</ul>
+<p>初中阶段只需了解：<strong>电流越大、距导线越近，磁场越强</strong>。</p>
+<h3>螺线管内部磁场</h3>
+<p>螺线管内部磁场近似均匀：</p>
+<p>$$B = \mu_0 n I$$</p>
+<ul>
+<li>$n$：单位长度匝数（匝/m）</li>
+<li>$I$：电流（A）</li>
+</ul>
+<p><strong>磁场强弱与 $nI$（安培匝数）成正比</strong>，这与<a class="dead" title="未收录">电磁铁</a>词条中"增大电流或匝数都能增强磁性"一致。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一根竖直导线，电流从下向上流动，在导线右侧，磁感线方向如何？</p>
+<p><strong>解</strong>：右手握住导线，大拇指朝上（电流向上），弯曲的四指在导线右侧指向<strong>纸面外</strong>。
+→ 导线右侧的磁感线方向：从纸面向外（⊙）</p>
+<p><strong>例2</strong>：一个螺线管，从左端看线圈中的电流是逆时针的，哪端是N极？</p>
+<p><strong>解</strong>：右手握螺线管，四指沿线圈电流方向弯曲（逆时针→从左端看），大拇指指向<strong>左端</strong>。
+→ 左端为N极。</p>
+<p><strong>易错点：</strong>
+- 安培定则（右手）≠ 左手定则（安培力）——两者功能完全不同
+- 螺线管中：大拇指指N极（四指指电流绕行方向）
+- 直导线中：大拇指指电流方向（四指指磁感线绕行方向）——注意两种情形中拇指和四指的"角色"对调了</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安培定则</td>
+<td>Ampere's right-hand rule</td>
+<td>n.</td>
+<td>Use Ampere's right-hand rule to find the magnetic field direction.</td>
+</tr>
+<tr>
+<td>右手螺旋定则</td>
+<td>right-hand screw rule</td>
+<td>n.</td>
+<td>The right-hand screw rule applies to current-carrying conductors.</td>
+</tr>
+<tr>
+<td>磁感线</td>
+<td>magnetic field line</td>
+<td>n.</td>
+<td>Magnetic field lines form closed loops around a wire.</td>
+</tr>
+<tr>
+<td>螺线管</td>
+<td>solenoid</td>
+<td>n.</td>
+<td>A solenoid's field resembles that of a bar magnet.</td>
+</tr>
+<tr>
+<td>磁导率</td>
+<td>magnetic permeability</td>
+<td>n.</td>
+<td>Iron has high magnetic permeability.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第二十章（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 电流的磁效应</li>
+<li><strong>百科</strong>：维基百科"安培定则"；中文百科"右手螺旋定则"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电流的磁效应</a></li>
+<li><a class="dead" title="未收录">电磁铁</a></li>
+<li><a class="dead" title="未收录">磁场对通电导体的作用</a></li>
+<li><a class="dead" title="未收录">磁感线</a></li>
+<li><a href="../atoms/187-磁场.html">磁场</a></li>
+<li><a class="dead" title="未收录">电动机原理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-新课标-01.html">2011-新课标-01</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计推断</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>统计推断</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 统计推断, statistical inference, 统计推断简介, 假设检验, 统计</p><h2>🎓 统计推断</h2>
+<h3>基本概念</h3>
+<p><strong>统计推断</strong>：用<strong>样本</strong>数据推断<strong>总体</strong>特征的方法，是统计学的核心内容。</p>
+<p><strong>两大任务</strong>：
+1. <strong>参数估计</strong>：用样本统计量（$\bar{x}$，$s^2$ 等）估计总体参数（$\mu$，$\sigma^2$ 等）
+2. <strong>假设检验</strong>：根据样本数据，判断关于总体的某个假设是否成立</p>
+<h3>样本与总体</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>总体</th>
+<th>样本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>研究对象的全部</td>
+<td>从总体中抽取的部分</td>
+</tr>
+<tr>
+<td>均值</td>
+<td>$\mu$（参数，通常未知）</td>
+<td>$\bar{x}$（统计量，可计算）</td>
+</tr>
+<tr>
+<td>方差</td>
+<td>$\sigma^2$（参数）</td>
+<td>$s^2$（统计量）</td>
+</tr>
+<tr>
+<td>用途</td>
+<td>目标</td>
+<td>工具（估计总体）</td>
+</tr>
+</tbody>
+</table>
+<h3>高中阶段涉及的统计推断</h3>
+<p><strong>已学（必修）</strong>：
+- 样本均值估计总体均值：$\mu \approx \bar{x}$
+- 频率估计概率：$P(A) \approx f_n(A)$
+- 正态分布的 $3\sigma$ 原则（区间估计）</p>
+<p><strong>新增（选修）</strong>：
+- 回归分析中的推断（用样本回归方程推断总体趋势）
+- 独立性检验（卡方检验，用样本频数推断总体相关性）</p>
+<h3>假设检验的逻辑</h3>
+<ol>
+<li><strong>建立假设</strong>：原假设 $H_0$（无效假设）和备择假设 $H_1$</li>
+<li><strong>构造检验统计量</strong>（如 $\chi^2$）</li>
+<li><strong>确定显著性水平</strong> $\alpha$（犯错误的最大允许概率）</li>
+<li><strong>计算统计量的值</strong></li>
+<li><strong>比较与临界值</strong>：统计量 $\geq$ 临界值 $\Rightarrow$ 拒绝 $H_0$</li>
+</ol>
+<p><strong>注意</strong>：拒绝 $H_0$ 不等于 $H_0$ 一定错，而是在 $H_0$ 成立的条件下观测到该样本的概率很小（$&lt; \alpha$），因此认为 $H_0$ 不成立。</p>
+<h3>两类错误</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$H_0$ 实际为真</th>
+<th>$H_0$ 实际为假</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拒绝 $H_0$</td>
+<td>第一类错误（概率 $= \alpha$）</td>
+<td>正确（功效）</td>
+</tr>
+<tr>
+<td>不拒绝 $H_0$</td>
+<td>正确</td>
+<td>第二类错误（概率 $= \beta$）</td>
+</tr>
+</tbody>
+</table>
+<p>高中阶段主要控制第一类错误（显著性水平 $\alpha$）。</p>
+<h3>统计推断的局限性</h3>
+<ol>
+<li><strong>样本的代表性</strong>：样本必须随机抽取，才能代表总体</li>
+<li><strong>不确定性</strong>：结论是概率性的，存在犯错概率</li>
+<li><strong>相关不等于因果</strong>：统计推断只能说明关联，不能确定因果</li>
+<li><strong>样本量影响</strong>：样本量越大，检验越精确，但越大也可能检测到微小无实际意义的差异</li>
+</ol>
+<h3>统计推断在本册中的应用</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>推断内容</th>
+<th>所用工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>回归分析</td>
+<td>两变量的线性关系</td>
+<td>相关系数 $r$，回归方程</td>
+</tr>
+<tr>
+<td>独立性检验</td>
+<td>两分类变量是否独立</td>
+<td>卡方统计量 $\chi^2$</td>
+</tr>
+<tr>
+<td>正态分布应用</td>
+<td>概率计算与区间估计</td>
+<td>标准化 + 查 $\Phi$ 表</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1（概念辨析）</strong>：以下说法正确的是？</p>
+<p>(A) 独立性检验中，$\chi^2 = 4 &gt; 3.841$，可以 100% 确定两变量有关联。
+(B) 相关系数 $r = 0.8$，说明 $x$ 导致 $y$ 的变化。
+(C) 用样本均值估计总体均值，估计不一定准确，但样本越大误差越小。
+(D) 在显著性水平 0.05 下拒绝 $H_0$，说明犯错概率为 0%。</p>
+<p><strong>答</strong>：(C) 正确。(A) 错（有 5% 犯错概率）；(B) 错（相关≠因果）；(D) 错（犯错概率为 5%）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>"有 95% 把握"不等于"100% 正确"</strong>：统计推断永远有犯错概率</li>
+<li><strong>$P$ 值 vs 置信水平</strong>：显著性水平是拒绝域的概率，不是结论正确的概率</li>
+<li><strong>混淆参数与统计量</strong>：$\mu$ 是参数（固定未知），$\bar{x}$ 是统计量（可计算可变化）</li>
+<li><strong>推断适用范围</strong>：推断结论只对总体成立（前提是样本随机且代表总体）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/统计推断">统计推断 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">独立性检验</a></li>
+<li><a class="dead" title="未收录">卡方公式</a></li>
+<li><a class="dead" title="未收录">2x2列联表</a></li>
+<li><a class="dead" title="未收录">正态分布3σ原则</a></li>
+<li><a class="dead" title="未收录">回归分析综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-文-19.html">2011-文-19</a></li>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2017-理-18.html">2017-理-18</a></li>
+<li><a href="../exam/2021-文-17.html">2021-文-17</a></li>
+<li><a class="dead" title="未收录">2023-北京-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

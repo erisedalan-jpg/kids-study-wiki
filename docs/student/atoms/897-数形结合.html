@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数形结合</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数形结合</h1><div class="meta-card"><span><strong>权重</strong>56</span><span><strong>吉林命中</strong>17</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数形结合, Number-Shape Combination</p><h1>数形结合</h1>
+<blockquote>
+<p><strong>一句话</strong>：数形结合是利用数量关系与空间形式的等价转化，将代数结构与几何直观相互为用，从而解决数学问题的思想方法。
+<strong>English</strong>: A method that solves mathematical problems by transforming between algebraic relations and geometric representations.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>数形结合的本质是通过“以形助数”或“以数解形”实现问题的简化与转化。</p>
+<ul>
+<li><strong>以形助数</strong>：借助几何图形的直观性揭示代数结构中的隐蔽性质。例如，方程 <code>|x-1|+|x-3|=2</code> 的实数解个数问题，可转化为数轴上点到1和3的距离之和等于2的点的个数，由几何意义直接得出解集为 <code>[1,3]</code>。又如，判断方程 <code>log₂x = 3-x</code> 根的个数，可构造函数 <code>y=log₂x</code> 与 <code>y=3-x</code> 的图像，由交点个数即可得解为1个。</li>
+<li><strong>以数解形</strong>：运用代数推演精确刻画几何对象的性质。典型应用是解析几何：通过建立坐标系，将直线、圆、圆锥曲线等表示为方程，利用韦达定理、判别式、弦长公式 <code>∣AB∣ = √(1+k²)·|x₁-x₂|</code> 等代数工具研究位置关系、距离、角度。</li>
+</ul>
+<p><strong>关键方法</strong>：① 构造恰当的代数模型或几何解释（如斜率、距离、三角形面积）；② 准确作出关键特征的草图（截距、渐近线、对称性、最值点）；③ 数与形双向验证：由形得定性结论，由数得定量结果，避免一方出错。</p>
+<p><strong>高考典型设问</strong>：
+1. <strong>函数零点与方程根</strong>：“讨论 <code>f(x)=g(x)</code> 根的个数”，常转化为两个函数图像的交点，需注意定义域与渐近线。
+2. <strong>含参不等式恒成立</strong>：“对于 <code>x&gt;0</code>，<code>x²-ax+1≥0</code> 恒成立”，既可分离参数后用函数最值，也可用二次函数图像开口与判别式。
+3. <strong>最值与范围</strong>：如求 <code>y = (x²+4x+5)/(x+2)</code> 在 <code>x&gt;-2</code> 上的最小值，可化为 <code>y = (x+2) + 1/(x+2)</code>，形如“对勾函数”图像求解；或赋予几何意义：斜率、距离。
+4. <strong>解析几何求离心率</strong>：由图形对称性、三角形边角关系构建 a,b,c 齐次方程，再解出 e。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>图像精度不足导致误判</strong>：随意画图忽略单调性、凹凸性、渐近线，误将相切当作相交，或漏数交点。</li>
+<li><strong>忽视隐含条件致转化不等价</strong>：将方程变形为 <code>√f(x)=g(x)</code> 并作图时，忘记 <code>f(x)≥0, g(x)≥0</code> 的限制，将增根当作解。</li>
+<li><strong>以形代数的绝对化</strong>：仅从图像猜想而不经代数严格证明，如判断数列单调性时仅凭前几项图示错判整体趋势。</li>
+<li><strong>解析几何代数化简出错</strong>：利用韦达定理后，“设而不求”时弄错弦长公式或中点坐标公式的符号，导致后续计算全错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数形结合</td>
+<td>Number-Shape Combination</td>
+<td>代数与几何相互转化的思想</td>
+</tr>
+<tr>
+<td>以形助数</td>
+<td>using shapes to assist numbers</td>
+<td>借助几何图形解决代数问题</td>
+</tr>
+<tr>
+<td>以数解形</td>
+<td>using numbers to interpret shapes</td>
+<td>借助代数工具研究几何对象</td>
+</tr>
+<tr>
+<td>函数图像</td>
+<td>function graph</td>
+<td>数形结合最常用的载体之一</td>
+</tr>
+<tr>
+<td>解析几何</td>
+<td>analytic geometry</td>
+<td>用代数方法研究几何图形的分支</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》中的“基本数学思想方法”</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/187-函数图象.html">函数图像</a></li>
+<li><a class="dead" title="未收录">方程与不等式</a></li>
+<li><a class="dead" title="未收录">解析几何</a></li>
+<li><a class="dead" title="未收录">函数零点与方程根</a></li>
+<li><a class="dead" title="未收录">线性规划</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-05.html">2009-文-05</a></li>
+<li><a href="../exam/2009-理-08.html">2009-理-08</a></li>
+<li><a href="../exam/2010-文-06.html">2010-文-06</a></li>
+<li><a href="../exam/2010-文-12.html">2010-文-12</a></li>
+<li><a href="../exam/2010-理-11.html">2010-理-11</a></li>
+<li><a href="../exam/2010-理-24.html">2010-理-24</a></li>
+<li><a href="../exam/2011-文-13.html">2011-文-13</a></li>
+<li><a href="../exam/2011-理-12.html">2011-理-12</a></li>
+<li><a href="../exam/2011-理-13.html">2011-理-13</a></li>
+<li><a href="../exam/2012-文-05.html">2012-文-05</a></li>
+<li><a href="../exam/2013-文-13.html">2013-文-13</a></li>
+<li><a href="../exam/2013-理-05.html">2013-理-05</a></li>
+<li><a href="../exam/2013-理-06.html">2013-理-06</a></li>
+<li><a href="../exam/2013-理-09.html">2013-理-09</a></li>
+<li><a href="../exam/2014-文-13.html">2014-文-13</a></li>
+<li><a href="../exam/2014-理-09.html">2014-理-09</a></li>
+<li><a href="../exam/2015-文-14.html">2015-文-14</a></li>
+<li><a href="../exam/2015-理-07.html">2015-理-07</a></li>
+<li><a href="../exam/2015-理-15.html">2015-理-15</a></li>
+<li><a href="../exam/2016-文-07.html">2016-文-07</a></li>
+<li><a href="../exam/2016-文-12.html">2016-文-12</a></li>
+<li><a href="../exam/2016-理-02.html">2016-理-02</a></li>
+<li><a href="../exam/2016-理-11.html">2016-理-11</a></li>
+<li><a href="../exam/2016-理-12.html">2016-理-12</a></li>
+<li><a href="../exam/2017-文-05.html">2017-文-05</a></li>
+<li><a href="../exam/2017-文-06.html">2017-文-06</a></li>
+<li><a href="../exam/2017-文-07.html">2017-文-07</a></li>
+<li><a href="../exam/2017-文-12.html">2017-文-12</a></li>
+<li><a href="../exam/2017-理-04.html">2017-理-04</a></li>
+<li><a href="../exam/2018-文-10.html">2018-文-10</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2018-文-13.html">2018-文-13</a></li>
+<li><a href="../exam/2018-文-14.html">2018-文-14</a></li>
+<li><a href="../exam/2018-理-09.html">2018-理-09</a></li>
+<li><a href="../exam/2018-理-12.html">2018-理-12</a></li>
+<li><a href="../exam/2018-理-13.html">2018-理-13</a></li>
+<li><a href="../exam/2018-理-14.html">2018-理-14</a></li>
+<li><a href="../exam/2019-文-10.html">2019-文-10</a></li>
+<li><a href="../exam/2019-文-13.html">2019-文-13</a></li>
+<li><a href="../exam/2019-理-16.html">2019-理-16</a></li>
+<li><a href="../exam/2020-文-15.html">2020-文-15</a></li>
+<li><a href="../exam/2020-文-20.html">2020-文-20</a></li>
+<li><a href="../exam/2020-文-23.html">2020-文-23</a></li>
+<li><a href="../exam/2020-理-23.html">2020-理-23</a></li>
+<li><a class="dead" title="未收录">2021-北京-15</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-07</a></li>
+<li><a href="../exam/2021-理-10.html">2021-理-10</a></li>
+<li><a href="../exam/2021-理-23.html">2021-理-23</a></li>
+<li><a class="dead" title="未收录">2023-北京-15</a></li>
+<li><a class="dead" title="未收录">2024-北京-10</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-06.html">2024-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

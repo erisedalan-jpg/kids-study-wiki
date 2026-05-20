@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数奇偶性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数奇偶性</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数奇偶性, parity of functions</p><h1>函数奇偶性</h1>
+<blockquote>
+<p><strong>一句话</strong>：函数奇偶性是描述函数图像关于y轴或原点对称的代数性质，核心在于f(-x)与f(x)的关系。<br />
+<strong>English</strong>: Parity of a function describes the symmetry of its graph with respect to the y‑axis or the origin, determined by the relationship between f(-x) and f(x).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong><br />
+对于函数 $y=f(x)$，定义域 $D$ 关于原点对称。<br />
+- 若 $\forall x \in D$，有 $f(-x)=f(x)$，则 $f(x)$ 为偶函数，图像关于y轴对称。<br />
+- 若 $\forall x \in D$，有 $f(-x)=-f(x)$，则 $f(x)$ 为奇函数，图像关于原点对称。<br />
+- 若不满足以上任一条件，称为非奇非偶函数。</p>
+<p><strong>关键方法</strong><br />
+1. 判断奇偶性的标准步骤：<br />
+   ① 求定义域，确认是否关于原点对称（不对称则直接判定为非奇非偶）；<br />
+   ② 计算 $f(-x)$，化简后与 $f(x)$ 比较，得出 $f(-x)=f(x)$、$f(-x)=-f(x)$ 或均不成立。<br />
+2. 常用运算性质：<br />
+   - 奇±奇=奇，偶±偶=偶；<br />
+   - 奇×/÷奇=偶，偶×/÷偶=偶，奇×/÷偶=奇；<br />
+   - 复合函数 $f(g(x))$ 的奇偶性遵循“同奇则奇，一偶则偶”（内外层函数奇偶性决定）。<br />
+3. 抽象函数与分段函数常采用赋值法或图像法辅助判断。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+- 直接判断函数（如 $f(x)=x^3+\sin x$、$f(x)=e^x+e^{-x}$）的奇偶性；<br />
+- 已知含参函数为奇/偶函数，利用奇偶性定义求参数值；<br />
+- 结合单调性解不等式：若 $f(x)$ 为奇函数且在 $[0,+\infty)$ 递增，由 $f(a)+f(b)&gt;0$ 可推出 $a+b&gt;0$ 等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略定义域关于原点对称这一前提，直接代入 $f(-x)$ 导致误判。  </li>
+<li>错用奇函数性质：若奇函数在 $x=0$ 处有定义，才有 $f(0)=0$；若定义域不含0，则不能推出该式。  </li>
+<li>分段函数奇偶性判断时，未分段化简 $f(-x)$ 并与对应区间表达式比较，造成错误。  </li>
+<li>误认为图像关于y轴对称就是偶函数，忽略定义域不对称的情形（如定义域左右截取不对称）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 f(-x) = -f(x)</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 f(-x) = f(x)</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>自变量允许取值的集合</td>
+</tr>
+<tr>
+<td>对称性</td>
+<td>symmetry</td>
+<td>图像关于y轴或原点对称</td>
+</tr>
+<tr>
+<td>非奇非偶函数</td>
+<td>neither even nor odd function</td>
+<td>不满足奇偶性定义的函数</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">函数的周期性</a></li>
+<li><a class="dead" title="未收录">函数图像的对称性</a></li>
+<li><a class="dead" title="未收录">抽象函数问题</a></li>
+<li><a class="dead" title="未收录">利用函数性质解不等式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-04.html">2008-文-04</a></li>
+<li><a href="../exam/2009-文-03.html">2009-文-03</a></li>
+<li><a href="../exam/2010-文-09.html">2010-文-09</a></li>
+<li><a href="../exam/2010-理-08.html">2010-理-08</a></li>
+<li><a href="../exam/2011-理-02.html">2011-理-02</a></li>
+<li><a href="../exam/2011-理-11.html">2011-理-11</a></li>
+<li><a href="../exam/2013-文-03.html">2013-文-03</a></li>
+<li><a href="../exam/2013-文-04.html">2013-文-04</a></li>
+<li><a href="../exam/2014-文-15.html">2014-文-15</a></li>
+<li><a href="../exam/2014-理-03.html">2014-理-03</a></li>
+<li><a href="../exam/2015-文-03.html">2015-文-03</a></li>
+<li><a href="../exam/2015-文-08.html">2015-文-08</a></li>
+<li><a href="../exam/2019-文-06.html">2019-文-06</a></li>
+<li><a href="../exam/2019-理-11.html">2019-理-11</a></li>
+<li><a href="../exam/2019-理-14.html">2019-理-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-07</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

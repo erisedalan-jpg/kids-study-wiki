@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图象分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>图象分析</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 图象分析, Graph Analysis</p><h1>图象分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：图象分析是指从物理图象的轴、点、线、斜率、面积、截距等几何特征中提取物理量及其变化规律，从而解决物理问题的方法。
+<strong>English</strong>: Graph analysis in physics refers to the method of extracting physical quantities and their variation laws from geometric features such as axes, points, slopes, areas, and intercepts of graphs to solve physics problems.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：在物理图象中，横、纵坐标轴表示两个相关联的物理量，图象上的每一个点对应一个物理状态。图象的几何特征与物理量之间有严格的对应关系：
+- <strong>斜率</strong>：若纵坐标为 $y$，横坐标为 $x$，则斜率 $k = \frac{\Delta y}{\Delta x}$。例如，$v$-$t$ 图象的斜率表示加速度 $a = \frac{\Delta v}{\Delta t}$；$U$-$I$ 图象的斜率（在纯电阻电路中）表示电阻 $R$；$x$-$t$ 图象的斜率表示速度 $v$。
+- <strong>面积</strong>：图象与横轴所围的面积，若纵轴物理量对横轴物理量有累积关系，则面积表示累积量。例如，$v$-$t$ 图象的面积表示位移 $x$；$F$-$t$ 图象的面积表示冲量 $I$；$P$-$V$ 图象的面积表示气体做功。
+- <strong>截距</strong>：图线与纵轴的交点表示横轴物理量为零时的纵轴物理量。例如，$U$-$I$ 图象的纵截距表示电源电动势 $E$；$v$-$t$ 图象的纵截距表示初速度 $v_0$。
+- <strong>交点</strong>：两条图线的交点表示该时刻两个研究对象具有相同的某物理量，如 $x$-$t$ 图象交点表示相遇。
+- <strong>拐点、转折点</strong>：表示物理过程发生突变或物理量达到极值。</p>
+<p><strong>关键方法</strong>：分析物理图象的一般步骤：
+1. <strong>明确轴</strong>：看清横、纵坐标各代表什么物理量，分清单位与标度。
+2. <strong>看点与线</strong>：确认图线的形状（直线、曲线），以及关键点（起点、终点、拐点、交点）所对应的物理状态。
+3. <strong>析斜率与面积</strong>：根据需要计算斜率或面积，并明确其物理意义。
+4. <strong>联规律</strong>：将图象信息与相关物理规律（如牛顿运动定律、功能关系、闭合电路欧姆定律等）结合，列方程求解。</p>
+<p><strong>典型应用</strong>：高考中图象分析题常见于：
+- <strong>运动学图象</strong>：给出 $v$-$t$ 或 $x$-$t$ 图象，判断运动性质、求加速度、位移、平均速度，或分析追及相遇问题。
+- <strong>动力学图象</strong>：如 $F$-$t$ 图与运动结合求速度、动量变化；$a$-$F$ 图求质量、摩擦因数。
+- <strong>电学图象</strong>：$U$-$I$ 图求电源电动势和内阻、小灯泡的伏安特性曲线；$R$-$L$ 或 $R$-$1/L$ 图象处理实验数据。
+- <strong>功能图象</strong>：$E_k$-$x$、$F$-$x$ 图象求变力做功或动能变化。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆斜率与面积</strong>：误将 $v$-$t$ 图的斜率当作位移，或将 $x$-$t$ 图的面积当作速度，必须根据累积关系正确判断。</li>
+<li><strong>忽略坐标轴的物理量和标度</strong>：看到形状相似的图线就认为是同一类运动，未注意横轴可能是时间 $t$、位移 $x$ 或其他物理量，导致分析完全错误。</li>
+<li><strong>不会处理非线性图象</strong>：对于曲线，误认为切线斜率等于某点物理量（如 $x$-$t$ 图中曲线上某点切线斜率才表示瞬时速度），或不知如何用“化曲为直”思想转换为线性关系（如 $a-\frac{1}{m}$ 图象）。</li>
+<li><strong>交点的误解</strong>：两图线交点不一定是相遇，只有位移-时间图线交点才是相遇，速度-时间图线交点只是速度相等。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图象分析</td>
+<td>Graph Analysis</td>
+<td>从物理图象中提取信息</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>Slope</td>
+<td>表示一个物理量对另一个物理量的变化率</td>
+</tr>
+<tr>
+<td>面积（图下线）</td>
+<td>Area under curve</td>
+<td>表示某些物理量的累积效应</td>
+</tr>
+<tr>
+<td>截距</td>
+<td>Intercept</td>
+<td>表示某一物理量在特殊条件下的值</td>
+</tr>
+<tr>
+<td>坐标轴</td>
+<td>Axis / Axes</td>
+<td>表示相关联的两个物理量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>： (待主会话核对教材索引)</li>
+<li><strong>课标</strong>： 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">运动学图象</a></li>
+<li><a class="dead" title="未收录">动力学图象</a></li>
+<li><a class="dead" title="未收录">电学实验图象处理</a></li>
+<li><a class="dead" title="未收录">功能图象</a></li>
+<li><a class="dead" title="未收录">追及与相遇问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-新课标Ⅱ-11.html">2014-新课标Ⅱ-11</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-18.html">2015-新课标Ⅱ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

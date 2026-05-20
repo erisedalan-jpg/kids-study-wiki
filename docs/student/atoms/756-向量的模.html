@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量的模</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向量的模</h1><div class="meta-card"><span><strong>权重</strong>36</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向量的模, Magnitude of a Vector</p><h1>向量的模</h1>
+<blockquote>
+<p><strong>一句话</strong>：向量的模是一个非负实数，表示向量的长度或大小，等于向量坐标平方和的算术平方根。
+<strong>English</strong>: The magnitude (or modulus) of a vector is its length, computed as the square root of the sum of the squares of its components.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：对于平面向量 $\vec{a} = (x, y)$，其模记作 $|\vec{a}|$，定义为 $|\vec{a}| = \sqrt{x^2 + y^2}$；对于空间向量 $\vec{a} = (x, y, z)$，$|\vec{a}| = \sqrt{x^2 + y^2 + z^2}$。零向量的模为 $0$，单位向量的模为 $1$。模的运算性质包括 $|\lambda \vec{a}| = |\lambda| \, |\vec{a}|$，以及与数量积的联系：$|\vec{a}|^2 = \vec{a} \cdot \vec{a}$。几何上，向量的模就是有向线段的长度，表示两点间的距离。</li>
+<li><strong>关键方法</strong>：计算模的基本方法是直接代入坐标公式；涉及向量和差的模时，常用 $|\vec{a} \pm \vec{b}| = \sqrt{|\vec{a}|^2 + |\vec{b}|^2 \pm 2 \vec{a} \cdot \vec{b}}$。求模的最值问题，可将其转化为关于某个变量的函数，或利用几何意义（如垂线段最短）。在立体几何中，建立空间直角坐标系后，线段长度直接转化为向量的模。</li>
+<li><strong>典型应用</strong>：高考中常以选择、填空题考查模的直接计算，或结合数量积条件求模、已知模反求坐标中的参数。例如：“已知 $\vec{a} = (3, 4)$，求 $|2\vec{a}|$”或“若 $|\vec{a} + \vec{b}| = 7$，$|\vec{a}| = 3$，$|\vec{b}| = 4$，求夹角”。更综合的考法与距离问题结合，如求异面直线距离、线面角的正弦值等，最终都归结于向量的模的计算。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误认为 $|\vec{a} + \vec{b}| = |\vec{a}| + |\vec{b}|$，实际上仅当两向量同向共线时才相等，否则必须用数量积公式计算。</li>
+<li>已知模求向量坐标中的参数时，平方开方后遗忘 $\pm$ 号，导致漏解。</li>
+<li>当向量的起点不是原点时，直接使用终点坐标计算模而忘记减去起点坐标，错误地将点坐标当成向量坐标。</li>
+<li>对 $|\lambda \vec{a}| = |\lambda| \, |\vec{a}|$ 计算时，漏掉系数 $\lambda$ 的绝对值符号，尤其在 $\lambda$ 为负时出错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向量的模</td>
+<td>magnitude (modulus) of a vector</td>
+<td>表示向量的长度</td>
+</tr>
+<tr>
+<td>零向量</td>
+<td>zero vector</td>
+<td>模为 $0$ 的向量</td>
+</tr>
+<tr>
+<td>单位向量</td>
+<td>unit vector</td>
+<td>模为 $1$ 的向量</td>
+</tr>
+<tr>
+<td>数量积</td>
+<td>dot product</td>
+<td>用于关联模与夹角</td>
+</tr>
+<tr>
+<td>空间向量</td>
+<td>space vector</td>
+<td>三维空间中的向量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">向量的坐标运算</a></li>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a class="dead" title="未收录">向量共线定理</a></li>
+<li><a class="dead" title="未收录">空间向量及其运算</a></li>
+<li><a class="dead" title="未收录">向量的应用——距离与夹角问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-10.html">2008-理-10</a></li>
+<li><a href="../exam/2009-文-06.html">2009-文-06</a></li>
+<li><a href="../exam/2009-理-06.html">2009-理-06</a></li>
+<li><a href="../exam/2012-理-13.html">2012-理-13</a></li>
+<li><a href="../exam/2013-文-08.html">2013-文-08</a></li>
+<li><a href="../exam/2014-理-10.html">2014-理-10</a></li>
+<li><a href="../exam/2016-理-04.html">2016-理-04</a></li>
+<li><a href="../exam/2017-文-04.html">2017-文-04</a></li>
+<li><a href="../exam/2018-文-04.html">2018-文-04</a></li>
+<li><a href="../exam/2018-理-04.html">2018-理-04</a></li>
+<li><a href="../exam/2019-文-03.html">2019-文-03</a></li>
+<li><a href="../exam/2019-理-03.html">2019-理-03</a></li>
+<li><a href="../exam/2019-理-07.html">2019-理-07</a></li>
+<li><a class="dead" title="未收录">2020-北京-13</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-10</a></li>
+<li><a href="../exam/2022-理-03.html">2022-理-03</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-13.html">2023-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2024-北京-05</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-03.html">2024-新课标Ⅱ-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

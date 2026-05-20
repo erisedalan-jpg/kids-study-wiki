@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全反射</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>全反射</h1><div class="meta-card"><span><strong>权重</strong>51</span><span><strong>吉林命中</strong>9</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 全反射, total internal reflection, TIR</p><h2>🎓 全反射</h2>
+<h3>定义</h3>
+<p><strong>全反射</strong>（total internal reflection）是光从<strong>光密介质</strong>（折射率大）射向<strong>光疏介质</strong>（折射率小）时，当入射角大于或等于临界角，折射光完全消失，光线全部被反射回光密介质的现象。</p>
+<p><strong>发生全反射的两个必要条件</strong>：
+1. 光从<strong>光密介质</strong>射向<strong>光疏介质</strong>（$n_1 &gt; n_2$）
+2. 入射角 $\theta_i$ <strong>大于或等于</strong>临界角 $C$（$\theta_i \geq C$）</p>
+<h3>临界角</h3>
+<p>$$\sin C = \frac{n_2}{n_1} = \frac{1}{n} \quad \text{（当}n_2 = 1\text{，即射向空气时）}$$</p>
+<ul>
+<li>$C$：临界角</li>
+<li>$n_1$：光密介质折射率</li>
+<li>$n_2$：光疏介质折射率（射向空气时 $n_2 = 1$）</li>
+</ul>
+<p>折射率越大，临界角越小：</p>
+<table>
+<thead>
+<tr>
+<th>介质</th>
+<th>折射率 $n$</th>
+<th>临界角 $C$（射向空气）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水</td>
+<td>1.33</td>
+<td>48.8°</td>
+</tr>
+<tr>
+<td>玻璃（普通）</td>
+<td>1.5</td>
+<td>41.8°</td>
+</tr>
+<tr>
+<td>金刚石</td>
+<td>2.42</td>
+<td>24.4°</td>
+</tr>
+</tbody>
+</table>
+<h3>全反射的过程</h3>
+<p>当光从玻璃（$n=1.5$）射向空气（$n=1$）：</p>
+<table>
+<thead>
+<tr>
+<th>入射角</th>
+<th>现象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\theta &lt; C \approx 41.8°$</td>
+<td>折射光线存在（部分反射，部分折射）</td>
+</tr>
+<tr>
+<td>$\theta = C$</td>
+<td>折射角 = 90°（折射光线沿界面传播）</td>
+</tr>
+<tr>
+<td>$\theta &gt; C$</td>
+<td><strong>全反射</strong>，无折射光，全部反射</td>
+</tr>
+</tbody>
+</table>
+<h3>全反射的应用</h3>
+<ol>
+<li><strong>光导纤维（光纤）</strong>：光在玻璃纤维中不断发生全反射，可以沿弯曲路径传播，损耗极小。</li>
+<li>通信光纤：传输信息</li>
+<li>
+<p>医用内窥镜：将图像导出体外</p>
+</li>
+<li>
+<p><strong>全反射棱镜</strong>：利用 45° 棱镜（$n=1.5$，$C≈41.8°$），光以 45° 入射→全反射→改变方向 90° 或 180°。</p>
+</li>
+<li>
+<p><strong>钻石的闪光</strong>：金刚石折射率 2.42，临界角仅 24.4°，光线极易全反射，多次反射后从特定角度射出，产生璀璨光泽。</p>
+</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：折射率 $n = \sqrt{2}$ 的玻璃，求光从玻璃射向空气时的临界角。</p>
+<p>$$\sin C = \frac{1}{n} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$</p>
+<p>$$C = 45°$$</p>
+<p>当入射角 $\theta \geq 45°$ 时发生全反射。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>全反射只发生在光密→光疏界面</strong>：光从空气（光疏）射向玻璃（光密）时，绝对不会发生全反射。</li>
+<li><strong>入射角必须 ≥ 临界角</strong>：等于临界角时折射光沿界面传播（折射角=90°），严格来说此时刚好发生全反射。</li>
+<li><strong>全反射不是"完全不折射"的普通反射</strong>：是特殊条件下折射光消失的现象。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：全反射 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/336-临界角.html">临界角</a></li>
+<li><a href="../atoms/360-折射率.html">折射率</a></li>
+<li><a class="dead" title="未收录">光的折射-高中</a></li>
+<li><a class="dead" title="未收录">光导纤维</a></li>
+<li><a class="dead" title="未收录">光的反射-高中</a></li>
+<li><a class="dead" title="未收录">双缝干涉实验</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-全国Ⅱ-08.html">2009-全国Ⅱ-08</a></li>
+<li><a href="../exam/2010-新课标Ⅰ-14.html">2010-新课标Ⅰ-14</a></li>
+<li><a href="../exam/2012-新课标-16.html">2012-新课标-16</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-16</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-16.html">2013-新课标Ⅱ-16</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-16</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-16.html">2014-新课标Ⅱ-16</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-15.html">2015-新课标Ⅱ-15</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-16</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-16.html">2017-新课标Ⅱ-16</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-16.html">2018-新课标Ⅱ-16</a></li>
+<li><a href="../exam/2021-全国乙-16.html">2021-全国乙-16</a></li>
+<li><a href="../exam/2022-全国乙-16.html">2022-全国乙-16</a></li>
+<li><a class="dead" title="未收录">2022-湖南-18</a></li>
+<li><a class="dead" title="未收录">2023-湖南-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

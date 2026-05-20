@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离散型随机变量</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离散型随机变量, discrete random variable, 离散随机变量</p><h2>🎓 离散型随机变量</h2>
+<h3>基本概念</h3>
+<p><strong>随机变量</strong>：在随机试验中，其取值随试验结果而变化的变量，通常用大写字母 $X, Y, Z$ 等表示。</p>
+<p><strong>离散型随机变量</strong>：取值为<strong>有限个或可列无穷多个</strong>的随机变量。</p>
+<p><strong>可列</strong>：能与自然数一一对应（如 0,1,2,3,… 这样的序列）。</p>
+<h3>与连续型的区别</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>取值</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>离散型</td>
+<td>有限或可列个数</td>
+<td>掷骰子点数、某班人数</td>
+</tr>
+<tr>
+<td>连续型</td>
+<td>某区间上所有实数</td>
+<td>身高、体重、时间</td>
+</tr>
+</tbody>
+</table>
+<h3>离散型随机变量举例</h3>
+<p><strong>例1（掷骰子）</strong>：$X$ = 掷一枚骰子的点数，$X \in {1,2,3,4,5,6}$（6 个值）</p>
+<p><strong>例2（摸球）</strong>：从含 3 红 2 白球的袋中取 2 球，$X$ = 取出的红球数，$X \in {0,1,2}$（3 个值）</p>
+<p><strong>例3（独立重复试验）</strong>：$X$ = 某产品连续检验直到出现合格品为止的次数，$X \in {1,2,3,\ldots}$（可列无穷多个值）</p>
+<p><strong>例4（离散近似连续）</strong>：$X$ = 某校男生身高四舍五入到厘米的值，如 ${165,166,\ldots,190}$（有限个值，仍是离散型）</p>
+<h3>随机变量的函数</h3>
+<p>若 $X$ 是离散型随机变量，则 $Y = g(X)$（如 $Y = X^2$、$Y = 2X+1$）也是随机变量。</p>
+<p><strong>例</strong>：若 $X \in {-2,-1,0,1,2}$，则 $Y = X^2 \in {0,1,4}$（注意 $(-2)^2 = 2^2 = 4$，合并同值）</p>
+<h3>与必修的衔接</h3>
+<ul>
+<li>必修阶段：学习古典概型、频率/概率的概念</li>
+<li>选修阶段：将"某事件的概率"扩展为"随机变量的分布"，研究整体概率规律</li>
+<li>离散型随机变量的分布用<strong>分布列</strong>描述</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：以下各量哪些是离散型随机变量？</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>是否离散</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>某工厂日产量（件）</td>
+<td>是</td>
+<td>取有限正整数值</td>
+</tr>
+<tr>
+<td>某零件的直径（mm）</td>
+<td>否</td>
+<td>可取区间内任意实数（连续型）</td>
+</tr>
+<tr>
+<td>某商店一天内来客人数</td>
+<td>是</td>
+<td>取非负整数（可列）</td>
+</tr>
+<tr>
+<td>某地今日气温（℃）</td>
+<td>否</td>
+<td>连续型</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例2</strong>：$X$ = 3 次独立投硬币正面朝上的次数，写出 $X$ 的所有可能取值。</p>
+<p>$$X \in {0, 1, 2, 3}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>混淆离散与连续</strong>：整数值 = 离散，区间内连续取值 = 连续</li>
+<li><strong>随机变量不是普通变量</strong>：$X$ 是函数，每个取值对应一个概率</li>
+<li><strong>函数合并</strong>：$Y = X^2$ 时，$X=2$ 和 $X=-2$ 都对应 $Y=4$，概率要相加</li>
+<li><strong>可列无穷的情形</strong>：如几何分布 $X \in {1,2,3,\ldots}$，仍是离散型</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/随机变量">随机变量 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">分布列</a></li>
+<li><a href="../atoms/501-离散型随机变量期望.html">离散型随机变量期望</a></li>
+<li><a class="dead" title="未收录">离散型随机变量方差</a></li>
+<li><a class="dead" title="未收录">连续型随机变量</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+<li><a class="dead" title="未收录">两点分布</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-理-18.html">2012-理-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

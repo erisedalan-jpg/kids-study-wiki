@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对数运算</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对数运算, 对数的运算, 对数运算性质, Logarithmic operation</p><h1>对数运算</h1>
+<blockquote>
+<p><strong>一句话</strong>：对数运算是基于对数的定义与运算性质，对含对数的式子进行化简、求值与证明的过程，核心依赖积、商、幂的对数法则及换底公式。
+<strong>English</strong>: Logarithmic operation refers to the manipulation and simplification of expressions involving logarithms, using properties such as product, quotient, and power rules, as well as the change-of-base formula.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>对数运算根植于指数与对数的互逆关系：若 $a&gt;0$ 且 $a \neq 1$，$N&gt;0$，则 $a^x = N \iff x = \log_a N$。高考要求的运算性质如下：</p>
+<p>设 $a&gt;0, a \neq 1$，$M&gt;0, N&gt;0$：
+1. 积的对数：$\log_a (MN) = \log_a M + \log_a N$
+2. 商的对数：$\log_a \frac{M}{N} = \log_a M - \log_a N$
+3. 幂的对数：$\log_a M^n = n \log_a M \ (n \in \mathbb{R})$
+4. 换底公式：$\log_a b = \frac{\log_c b}{\log_c a}\ (c&gt;0, c \neq 1)$，常用特例为 $\log_a b = \frac{\lg b}{\lg a}$ 或 $\frac{\ln b}{\ln a}$，由此还可推导出 $\log_a b = \frac{1}{\log_b a}$。</p>
+<p><strong>关键方法</strong>：
+- <strong>化简与求值</strong>：将和、差、倍数形式的对数式合并为单个对数，或反向拆解。化简时须始终保证真数为正。
+- <strong>指数与对数的互化</strong>：当题设出现指数连等式（如 $2^x = 3^y = 5^z$）时，令其等于 $k$，再取对数把指数问题转化为对数运算。
+- <strong>统一底数</strong>：遇到不同底数的对数加减乘除，先利用换底公式化成同底（通常为 $10$ 或 $\mathrm{e}$），再进行计算或比较大小。
+- <strong>解对数方程/不等式</strong>：利用对数性质化成代数方程，并必须检验真数大于 $0$ 和底数合法，排除增根。</p>
+<p><strong>典型应用</strong>：高考中常见已知 $\log_a m$ 和 $\log_a n$，要求用它们表示 $\log_a (m^p n^q)$，直接套用幂与积的法则；比较不同底数的对数大小时，通过换底统一为常用对数或利用中间量比较；求解含有 $\log$ 的方程或不等式，变形后落实定义域限制。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视定义域限制</strong>：多次变形中忘记 $\log_a N$ 要求 $N&gt;0$，解方程或不等式时未检验真数是否为正，从而引入增根或丢失解。</li>
+<li><strong>运算法则混淆</strong>：误以为 $\log_a (M+N) = \log_a M \cdot \log_a N$，或把 $\log_a M \cdot \log_a N$ 等同于 $\log_a (MN)$，实际上和差与乘积之间没有直接的对数公式。</li>
+<li><strong>换底公式颠倒分子分母</strong>：错写 $\log_a b = \frac{\log_c a}{\log_c b}$，导致求值结果为倒数。</li>
+<li><strong>幂的对数漏掉符号讨论</strong>：将 $\log_a x^2$ 直接写成 $2\log_a x$ 而不考虑 $x$ 可能为负，丢失定义域；或处理 $\log_a \sqrt{x}$ 时忽略 $x&gt;0$ 的前提。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对数</td>
+<td>logarithm</td>
+<td>指数运算的逆运算，表示幂指数</td>
+</tr>
+<tr>
+<td>底数</td>
+<td>base</td>
+<td>$\log_a$ 中的 $a$，满足 $a&gt;0, a\neq1$</td>
+</tr>
+<tr>
+<td>真数</td>
+<td>argument / antilogarithm</td>
+<td>$\log_a N$ 中的 $N$，必须 $N&gt;0$</td>
+</tr>
+<tr>
+<td>换底公式</td>
+<td>change-of-base formula</td>
+<td>$\log_a b = \frac{\log_c b}{\log_c a}$，用于不同底数转换</td>
+</tr>
+<tr>
+<td>常用对数</td>
+<td>common logarithm</td>
+<td>以 $10$ 为底，记作 $\lg$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">指数运算</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a class="dead" title="未收录">对数的定义与存在条件</a></li>
+<li><a class="dead" title="未收录">指对互化求值</a></li>
+<li><a class="dead" title="未收录">幂运算与根式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-07.html">2009-文-07</a></li>
+<li><a href="../exam/2009-文-12.html">2009-文-12</a></li>
+<li><a href="../exam/2011-文-17.html">2011-文-17</a></li>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2012-文-12.html">2012-文-12</a></li>
+<li><a href="../exam/2015-理-05.html">2015-理-05</a></li>
+<li><a href="../exam/2016-理-17.html">2016-理-17</a></li>
+<li><a href="../exam/2017-理-08.html">2017-理-08</a></li>
+<li><a href="../exam/2017-理-11.html">2017-理-11</a></li>
+<li><a href="../exam/2019-理-14.html">2019-理-14</a></li>
+<li><a href="../exam/2020-理-12.html">2020-理-12</a></li>
+<li><a href="../exam/2021-理-12.html">2021-理-12</a></li>
+<li><a class="dead" title="未收录">2022-北京-07</a></li>
+<li><a class="dead" title="未收录">2023-北京-11</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-04.html">2023-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

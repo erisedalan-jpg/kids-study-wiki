@@ -1,0 +1,94 @@
+/* 学生 HTML 静态站样式（吉林冲刺 · 4 科重点） */
+* { box-sizing: border-box; }
+:root {
+  --gold: #c89b3c;
+  --red: #b54e3c;
+  --blue: #3c6db5;
+  --grey: #8a8d92;
+  --bg: #fafafa;
+  --fg: #222;
+  --card: #fff;
+  --border: #e5e5e5;
+  --link: #2a5db0;
+  --backlink-bg: #fff8e1;
+  --backlink-border: #d4a73c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a; --fg: #e6e6e6; --card: #242424;
+    --border: #333; --link: #6ba8ff;
+    --backlink-bg: #2a2410; --backlink-border: #8a7530;
+  }
+}
+html, body { margin:0; padding:0; background:var(--bg); color:var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+               "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; line-height: 1.65; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.6rem; margin: 0 0 0.5em; }
+h2 { font-size: 1.25rem; margin: 1.4em 0 0.5em; border-bottom: 2px solid var(--border); padding-bottom: 0.2em; }
+h3 { font-size: 1.05rem; margin: 1.1em 0 0.4em; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.dead { color: var(--grey); cursor: not-allowed; text-decoration: line-through; }
+p { margin: 0.7em 0; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 0.2em 0; }
+code { background: var(--card); padding: 1px 4px; border-radius: 3px; font-size: 0.95em; }
+pre code { display: block; padding: 10px; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.92em; }
+th, td { border: 1px solid var(--border); padding: 5px 8px; text-align: left; }
+th { background: var(--card); font-weight: 600; }
+blockquote { border-left: 4px solid var(--border); margin: 1em 0; padding: 0.2em 1em; color: #555; }
+img { max-width: 100%; height: auto; border-radius: 4px; margin: 0.5em 0; }
+
+/* 顶部导航 */
+.nav { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.nav a { padding: 5px 10px; background: var(--card); border: 1px solid var(--border);
+  border-radius: 4px; font-size: 0.9em; }
+
+/* 权重 badge */
+.badge { display: inline-block; padding: 1px 7px; border-radius: 10px;
+  font-size: 0.78em; font-weight: 600; color: #fff; vertical-align: middle; }
+.badge.gold { background: var(--gold); }
+.badge.red  { background: var(--red); }
+.badge.blue { background: var(--blue); }
+.badge.grey { background: var(--grey); }
+
+/* 词条列表（仪表盘） */
+.entry-list { list-style: none; padding: 0; }
+.entry-list li { padding: 8px 10px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px; }
+.entry-list li .title { flex: 1; }
+.entry-list li .meta { font-size: 0.82em; color: var(--grey); }
+.entry-list li.gold { border-left: 3px solid var(--gold); padding-left: 10px; }
+.entry-list li.red  { border-left: 3px solid var(--red); padding-left: 10px; }
+.entry-list li.blue { border-left: 3px solid var(--blue); padding-left: 10px; }
+
+/* 搜索框 */
+.search { width: 100%; padding: 8px 10px; font-size: 1em;
+  border: 1px solid var(--border); border-radius: 4px; background: var(--card);
+  color: var(--fg); margin-bottom: 10px; }
+
+/* 高考真题命中卡片 */
+.backlink-card { background: var(--backlink-bg); border-left: 4px solid var(--backlink-border);
+  padding: 10px 14px; margin: 1em 0; border-radius: 4px; }
+.backlink-card h3 { margin-top: 0; }
+.backlink-card ul { columns: 2; column-gap: 16px; }
+@media (max-width: 480px) { .backlink-card ul { columns: 1; } }
+
+/* 词条 metadata 卡片 */
+.meta-card { background: var(--card); border: 1px solid var(--border);
+  padding: 10px 14px; border-radius: 4px; margin-bottom: 1em; font-size: 0.92em; }
+.meta-card span { margin-right: 14px; }
+.meta-card strong { color: var(--grey); margin-right: 4px; }
+
+/* 公式占位（未渲染时显示反斜杠原文，提示学生） */
+.math-source { color: #7a5; font-family: ui-monospace, monospace; }
+
+/* 移动 */
+@media (max-width: 600px) {
+  .wrap { padding: 10px; }
+  h1 { font-size: 1.35rem; }
+  table { font-size: 0.85em; }
+}

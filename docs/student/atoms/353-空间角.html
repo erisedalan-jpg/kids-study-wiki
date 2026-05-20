@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间角</h1><div class="meta-card"><span><strong>权重</strong>58</span><span><strong>吉林命中</strong>15</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间角, dihedral angle, 二面角, 异面直线所成角, 线面角</p><h2>🎓 空间角</h2>
+<p>空间角有三类：<strong>两异面直线所成角</strong>、<strong>线面角</strong>、<strong>二面角</strong>。</p>
+<h3>1. 两异面直线所成角</h3>
+<p><strong>定义</strong>：将两异面直线之一（或两者）平移，使它们<strong>相交</strong>，相交所成的<strong>锐角或直角</strong>（$[0°, 90°]$）称为异面直线所成角。</p>
+<p><strong>求法</strong>：
+1. 找一条（或两条）平行线，使两线相交
+2. 利用正方体、平行六面体的边平行关系转化
+3. 利用向量：$\cos\theta = \dfrac{|\boldsymbol{a} \cdot \boldsymbol{b}|}{|\boldsymbol{a}||\boldsymbol{b}|}$（取绝对值保证锐角）</p>
+<h3>2. 线面角（直线与平面所成角）</h3>
+<p><strong>定义</strong>：直线 $l$ 与平面 $\alpha$ 相交（不垂直），$l$ 在 $\alpha$ 内的<strong>射影</strong>与 $l$ 所成的角 $\theta$（$\theta \in [0°, 90°)$）。</p>
+<p><strong>求法</strong>：
+1. 找直线在平面内的射影（从交点作垂线到平面，连接）
+2. 计算 $\tan\theta = \dfrac{\text{线在平面外的高}}{\text{射影长度}}$</p>
+<p>若 $l \perp \alpha$，则线面角 $= 90°$；$l \subset \alpha$，则 $= 0°$。</p>
+<h3>3. 二面角</h3>
+<p><strong>定义</strong>：两个半平面 $\alpha$ 和 $\beta$ 的公共棱为 $l$，在 $l$ 上取一点 $O$，从 $O$ 分别在 $\alpha$ 和 $\beta$ 内各作一条垂直于 $l$ 的射线，两射线所成的角称为<strong>二面角</strong>，记作 $\alpha-l-\beta$。</p>
+<p><strong>二面角的平面角</strong>：上述两射线所成的角，范围 $[0°, 180°]$。</p>
+<p><strong>求法</strong>：
+1. 在棱 $l$ 上取一点 $O$
+2. 在 $\alpha$ 内过 $O$ 作 $OM \perp l$
+3. 在 $\beta$ 内过 $O$ 作 $ON \perp l$
+4. $\angle MON$ 即为二面角的平面角</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>（异面直线）：正方体 $ABCD-A_1B_1C_1D_1$ 中，求 $AB$ 与 $A_1D$ 所成角。</p>
+<p><strong>解</strong>：$AB \parallel A_1B_1$，而 $A_1B_1$ 与 $A_1D$ 相交于 $A_1$，$\angle B_1A_1D = 90°$（正方体相邻边垂直），故所成角为 $90°$。</p>
+<p><strong>例2</strong>（线面角）：正三棱锥 $P-ABC$，底边 $a$，高 $h$，求侧棱 $PA$ 与底面所成角。</p>
+<p><strong>解</strong>：$O$ 为底面中心，$AO$ 为 $PA$ 在底面的射影，$\tan\theta = \dfrac{PO}{AO} = \dfrac{h}{\frac{a}{\sqrt{3}}} = \dfrac{h\sqrt{3}}{a}$</p>
+<p><strong>例3</strong>（二面角）：正方体中，二面角 $A_1-AB-B_1$ 的平面角。</p>
+<p><strong>解</strong>：在棱 $AB$ 上取 $A$，$AA_1 \perp AB$，$AB_1 \perp AB$...（正方体各棱垂直），所成角 $= 90°$。</p>
+<h3>易错点</h3>
+<ul>
+<li>异面直线所成角在 $[0°, 90°]$，用向量时需取绝对值</li>
+<li>线面角在 $[0°, 90°]$（不包括 $90°$ 时线与面垂直）</li>
+<li>二面角的平面角必须通过在<strong>棱上取点</strong>作垂线得到，不能随便连线</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">空间点直线平面位置关系</a></li>
+<li><a class="dead" title="未收录">空间直线平面垂直</a></li>
+<li><a href="../atoms/354-空间距离.html">空间距离</a></li>
+<li><a href="../atoms/324-向量的夹角.html">向量的夹角</a></li>
+<li><a class="dead" title="未收录">正弦余弦正切定义</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-20.html">2008-文-20</a></li>
+<li><a href="../exam/2008-理-16.html">2008-理-16</a></li>
+<li><a href="../exam/2009-文-16.html">2009-文-16</a></li>
+<li><a href="../exam/2009-文-19.html">2009-文-19</a></li>
+<li><a href="../exam/2009-理-16.html">2009-理-16</a></li>
+<li><a href="../exam/2010-文-01.html">2010-文-01</a></li>
+<li><a href="../exam/2013-理-17.html">2013-理-17</a></li>
+<li><a href="../exam/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/2014-理-18.html">2014-理-18</a></li>
+<li><a href="../exam/2014-理-19.html">2014-理-19</a></li>
+<li><a href="../exam/2015-文-18.html">2015-文-18</a></li>
+<li><a href="../exam/2015-理-17.html">2015-理-17</a></li>
+<li><a href="../exam/2016-理-17.html">2016-理-17</a></li>
+<li><a href="../exam/2016-理-19.html">2016-理-19</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a href="../exam/2018-文-16.html">2018-文-16</a></li>
+<li><a href="../exam/2019-理-16.html">2019-理-16</a></li>
+<li><a href="../exam/2019-理-17.html">2019-理-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-17</a></li>
+<li><a href="../exam/2021-文-10.html">2021-文-10</a></li>
+<li><a href="../exam/2021-理-05.html">2021-理-05</a></li>
+<li><a href="../exam/2021-理-18.html">2021-理-18</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-09</a></li>
+<li><a href="../exam/2022-理-18.html">2022-理-18</a></li>
+<li><a class="dead" title="未收录">2023-北京-09</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-09.html">2023-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2024-北京-17</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-17</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-07.html">2024-新课标Ⅱ-07</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-17.html">2024-新课标Ⅱ-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

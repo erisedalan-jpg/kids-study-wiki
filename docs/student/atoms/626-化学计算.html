@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>化学计算</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 化学计算, Stoichiometric Calculation</p><h1>化学计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：化学计算是利用化学方程式或关系式中各物质间的定量比例关系，由已知量推算未知量的基本技能，核心是“用物质的量架桥”。
+<strong>English</strong>: Chemical calculation is the process of using the quantitative relationships in chemical equations to determine the amounts of reactants or products, with the mole acting as the central bridge.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：化学计算的根本依据是<strong>质量守恒定律</strong>和<strong>定组成定律</strong>。在高考中，它表现为一系列以<strong>物质的量（$n$）</strong> 为核心的推导过程，核心公式网络包括：
+  $$n = \frac{m}{M} = \frac{V}{V_m} = \frac{N}{N_A} = c \cdot V$$
+  其中，$V_m$ 在标准状况下约为 22.4 L/mol。所有计算都必须通过化学方程式配平后的系数比来建立等式，即各物质的 $n$ 之比等于化学计量数之比，从而将宏观质量、气体体积与微观粒子数统一起来。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：高考解题的核心方法为<strong>关系式法</strong>与<strong>守恒法</strong>。关系式法适用于多步连续反应，可直接根据始态与终态物质中某特定元素的原子守恒，建立一步计算的简化关系式，省略繁杂的中间步骤。守恒法包括质量守恒、原子守恒、得失电子守恒（用于氧化还原反应）及电荷守恒（用于离子反应与溶液电中性），是解决混合物计算和复杂体系配平问题的利器。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考常以工业流程题、反应原理综合题及滴定实验题设问。例如，用<strong>中和滴定</strong>测定未知酸（或碱）浓度时，到达滴定终点时酸提供的 $n(\text{H}^+)$ 等于碱提供的 $n(\text{OH}^-)$，列式 $c_{\text{酸}}V_{\text{酸}} \cdot a = c_{\text{碱}}V_{\text{碱}} \cdot b$（$a, b$ 为元数）即可算出结果。再如，在<strong>热重分析</strong>中，根据固体残留物的质量分数，通过差量法反推失水或分解产物的化学计量关系，判断中间产物的化学式。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视“标准状况”的条件陷阱</strong>：使用 $V_m = 22.4$ L/mol 时，未确认物质状态是否为气态（如水、$\text{SO}_3$、$\text{CCl}_4$ 在标准状况下非气态），或未注意环境是否为标准状况。</li>
+<li><strong>多步反应中产率与过量判断混淆</strong>：将多步反应的总产率直接连续相乘时，未逐个阶段判断原料是否过量，或误用不足量原料的产率数据计算过量原料的转化量。</li>
+<li><strong>守恒法体系选择错误</strong>：在氧化还原滴定中，错误地套用酸碱中和的电荷守恒，而忽略了必须根据得失电子总数相等的原则建立关系式；或是在复杂离子方程式中仅关注原子守恒而遗漏电荷守恒。</li>
+<li><strong>单位换算与容量瓶精度混淆</strong>：在配制一定物质的量浓度溶液的计算中，把容量瓶的标称体积当作烧杯中的实际溶剂体积，或直接用固态溶质质量除以标称体积计算浓度，忽略了溶解稀释过程中的体积变化及有效数字修约规则。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>化学计算</td>
+<td>Stoichiometry</td>
+<td>研究化学反应中物质间定量关系的学科分支。</td>
+</tr>
+<tr>
+<td>物质的量</td>
+<td>Amount of Substance</td>
+<td>国际单位制基本物理量，用于度量粒子集合体，符号 $n$。</td>
+</tr>
+<tr>
+<td>摩尔质量</td>
+<td>Molar Mass</td>
+<td>单位物质的量的质量，符号 $M$，单位 g/mol。</td>
+</tr>
+<tr>
+<td>气体摩尔体积</td>
+<td>Molar Volume of Gas</td>
+<td>标准状况下 1 mol 气体所占体积，约 22.4 L/mol。</td>
+</tr>
+<tr>
+<td>物质的量浓度</td>
+<td>Amount-of-Substance Concentration</td>
+<td>单位体积溶液中溶质的物质的量，符号 $c$，单位 mol/L。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">物质的量</a></li>
+<li><a class="dead" title="未收录">化学方程式</a></li>
+<li><a class="dead" title="未收录">守恒法</a></li>
+<li><a href="../atoms/162-氧化还原反应.html">氧化还原反应</a></li>
+<li><a class="dead" title="未收录">溶液</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-08.html">2015-新课标Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-11</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

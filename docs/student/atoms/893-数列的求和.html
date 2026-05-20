@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列的求和</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列的求和</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列的求和, Summation of sequences</p><h1>数列的求和</h1>
+<blockquote>
+<p><strong>一句话</strong>：数列求和是求给定数列 ${a_n}$ 的前 $n$ 项和 $S_n = a_1 + a_2 + \cdots + a_n$，常用公式法、裂项相消、错位相减、分组求和与倒序相加等方法解决。
+<strong>English</strong>: Summation of sequences is the process of finding the sum $S_n = a_1 + a_2 + \cdots + a_n$ for a given sequence ${a_n}$, with standard methods such as formula application, decomposition and cancellation, dislocation subtraction, grouping, and reverse order addition.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+数列求和的核心是计算前 $n$ 项和 $S_n$。两大基础公式：<br />
+- 等差数列：$S_n = \dfrac{n(a_1 + a_n)}{2} = n a_1 + \dfrac{n(n-1)}{2}d$<br />
+- 等比数列：$S_n = \begin{cases} 
+\dfrac{a_1(1-q^n)}{1-q}, &amp; q \neq 1 \ 
+n a_1, &amp; q=1 
+\end{cases}$</p>
+<p><strong>关键方法</strong>（高考高频考查）<br />
+1. <strong>公式法</strong>：直接套用等差、等比求和公式，注意项数 $n$、首项、公差/公比的正确识别。<br />
+2. <strong>裂项相消</strong>：将通项拆为两项之差，如 $\dfrac{1}{n(n+k)} = \dfrac{1}{k}\left(\dfrac{1}{n} - \dfrac{1}{n+k}\right)$，$\dfrac{1}{\sqrt{n+1}+\sqrt{n}} = \sqrt{n+1}-\sqrt{n}$，求和时中间项相消，仅剩首尾若干项。<br />
+3. <strong>错位相减</strong>：适用于 ${a_n \cdot b_n}$，其中 ${a_n}$ 为等差数列，${b_n}$ 为等比数列。列出 $S_n$ 和公比倍乘的 $qS_n$，两式错位相减，转化为等比数列求和。<br />
+4. <strong>分组求和</strong>：将通项拆分为可求和的部分，如 $a_n = 2n + 3^n$，拆分为等差数列与等比数列分别求和。<br />
+5. <strong>倒序相加</strong>：若数列首末等距项之和相等（如等差数列性质），可用倒序写法相加求 $S_n$。</p>
+<p><strong>典型应用</strong><br />
+高考常以大题第（Ⅱ）问出现，要求根据给定的通项或递推关系求和。常见设问：<br />
+- 已知 $a_n = 2n-1$，$b_n = \dfrac{1}{a_n a_{n+1}}$，求 ${b_n}$ 的前 $n$ 项和，需用裂项 $b_n = \dfrac{1}{(2n-1)(2n+1)} = \dfrac{1}{2}\left(\dfrac{1}{2n-1} - \dfrac{1}{2n+1}\right)$。<br />
+- 已知 $a_n = n \cdot 2^{n-1}$，求前 $n$ 项和，需用错位相减：写出 $S_n$ 和 $2S_n$，相减得 $-S_n = 1 + 2 + 2^2 + \cdots + 2^{n-1} - n\cdot 2^n$，结果整理为 $S_n = (n-1)\cdot 2^n + 1$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>等比求和忽略 $q=1$ 的讨论</strong>：直接使用 $S_n = \frac{a_1(1-q^n)}{1-q}$，但未对 $q=1$ 单独讨论，导致漏解。</li>
+<li><strong>裂项相消时符号与系数错误</strong>：未正确写出拆项后的系数，如 $\frac{1}{n(n+2)}$ 拆为 $\frac{1}{2}(\frac{1}{n} - \frac{1}{n+2})$ 漏掉系数 $\frac{1}{2}$；或符号搞反。</li>
+<li><strong>错位相减最后一项处理不当</strong>：在 $S_n - qS_n$ 后，常忽略最后多出的一项（如 $-n \cdot q^n$）符号，或对中间等比部分求和时项数出错（中间应有 $n-1$ 项等比）。</li>
+<li><strong>项数与下标混淆</strong>：求 $S_n$ 时从 $a_1$ 加到 $a_n$ 共 $n$ 项；若题目给出 $a_2$ 到 $a_{n+1}$，实际仍为 $n$ 项，学生易误作 $n+1$ 项或用错首项。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数列求和</td>
+<td>Summation of sequences</td>
+<td>求数列前 n 项和</td>
+</tr>
+<tr>
+<td>等差数列</td>
+<td>Arithmetic progression</td>
+<td>相邻两项差为常数</td>
+</tr>
+<tr>
+<td>等比数列</td>
+<td>Geometric progression</td>
+<td>相邻两项比为常数</td>
+</tr>
+<tr>
+<td>裂项相消</td>
+<td>Method of decomposition and cancellation</td>
+<td>将通项拆为差式，中间抵消</td>
+</tr>
+<tr>
+<td>错位相减</td>
+<td>Method of dislocation subtraction</td>
+<td>乘公比后错位相减求和</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧（待主会话核对对应模块）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a class="dead" title="未收录">等比数列</a></li>
+<li><a class="dead" title="未收录">数列的通项公式</a></li>
+<li><a class="dead" title="未收录">数列的递推关系</a></li>
+<li><a class="dead" title="未收录">数列与不等式综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2016-理-17.html">2016-理-17</a></li>
+<li><a href="../exam/2017-理-15.html">2017-理-15</a></li>
+<li><a href="../exam/2018-文-17.html">2018-文-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

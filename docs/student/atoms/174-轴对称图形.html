@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>轴对称图形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>轴对称图形</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>4</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 轴对称]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 轴对称图形, line symmetric figure, 对称轴, 轴对称</p><h1>轴对称图形</h1>
+<blockquote>
+<p><strong>课本定义</strong>：如果一个图形沿一条直线折叠后，直线两侧的部分能够完全重合，那么这个图形叫做<strong>轴对称图形</strong>，这条直线叫做<strong>对称轴</strong>。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>生活中的轴对称</h3>
+<ul>
+<li>蝴蝶的翅膀：左右完全对称</li>
+<li>树叶：沿叶脉折叠，两半重合</li>
+<li>汉字"中"：有一条竖向对称轴</li>
+</ul>
+<p><strong>判断方法</strong>：把图形对折，如果两边完全重合，就是轴对称图形。</p>
+<h3>常见轴对称图形</h3>
+<table>
+<thead>
+<tr>
+<th>图形</th>
+<th>对称轴数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线段</td>
+<td>2（垂直平分线 + 所在直线）</td>
+</tr>
+<tr>
+<td>等腰三角形</td>
+<td>1</td>
+</tr>
+<tr>
+<td>等边三角形</td>
+<td>3</td>
+</tr>
+<tr>
+<td>长方形</td>
+<td>2</td>
+</tr>
+<tr>
+<td>正方形</td>
+<td>4</td>
+</tr>
+<tr>
+<td>圆</td>
+<td>无数条</td>
+</tr>
+</tbody>
+</table>
+<h3>轴对称 vs 轴对称图形</h3>
+<ul>
+<li><strong>轴对称图形</strong>：一个图形自身具有对称性（如蝴蝶）</li>
+<li><strong>两个图形关于某直线对称</strong>：两个不同图形，关于一条直线互为镜像</li>
+</ul>
+<h3>对称点的性质</h3>
+<p>如果点 $A$ 和点 $A'$ 关于直线 $l$ 对称，那么：
+1. $l$ 是 $AA'$ 的垂直平分线
+2. $A$ 和 $A'$ 到 $l$ 的距离相等</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p>设直线 $l$ 和点 $P$，点 $P$ 关于 $l$ 的<strong>对称点</strong> $P'$ 是：$l$ 是 $PP'$ 的垂直平分线（即 $PP' \perp l$ 且 $l$ 平分 $PP'$）。</p>
+<p>图形 $F$ 是<strong>轴对称图形</strong>，当且仅当存在直线 $l$，使得 $F$ 关于 $l$ 的对称图形就是 $F$ 本身。</p>
+<h3>对称变换的性质</h3>
+<p>关于直线 $l$ 的反射变换是<strong>等距变换</strong>，保持：
+- 点到点的距离
+- 线段长度
+- 角度大小
+- 面积</p>
+<p>但<strong>方向</strong>（顺时针/逆时针）改变（手性改变）。</p>
+<h3>求对称点坐标</h3>
+<p>已知点 $A(a, b)$，求关于直线 $y = x$ 的对称点 $A'$：</p>
+<p>$A'$ 的坐标为 $(b, a)$（交换横纵坐标）。</p>
+<p>已知点 $A(a, b)$，求关于 $x$ 轴的对称点：$A'(a, -b)$。</p>
+<p>已知点 $A(a, b)$，求关于 $y$ 轴的对称点：$A'(-a, b)$。</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：点 $A(3, -2)$ 关于 $x$ 轴的对称点 $A'$ 坐标是多少？</p>
+<p>解：关于 $x$ 轴对称，$y$ 坐标取反，$x$ 坐标不变。$A'(3, 2)$。</p>
+<p><strong>例题 2</strong>：等腰三角形 $\triangle ABC$，$AB = AC$，$BC = 6$，$AB = 5$，求 $\triangle ABC$ 的对称轴。</p>
+<p>解：等腰三角形的对称轴是顶角 $A$ 的角平分线（也是底边 $BC$ 的垂直平分线）。</p>
+<p>这条对称轴将 $BC$ 分成两个长度为 3 的线段，与 $BC$ 垂直，经过 $A$ 点。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>轴对称图形 ≠ 两图形关于直线对称</strong>：前者是一个图形自身，后者是两个不同图形的关系。</li>
+<li>对称点到对称轴的距离相等，且连线<strong>垂直</strong>于对称轴。</li>
+<li>一个图形可以有<strong>多条</strong>对称轴（如正方形有 4 条，圆有无数条）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a class="dead" title="未收录">线段垂直平分线</a>：对称点的连线被对称轴垂直平分</li>
+<li>→ <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a>：等腰三角形以顶角平分线为对称轴</li>
+<li>→ <a class="dead" title="未收录">等边三角形</a>：等边三角形有 3 条对称轴</li>
+<li>→ <a class="dead" title="未收录">最短路径问题</a>：利用轴对称求最短路径</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轴对称图形</td>
+<td>line symmetric figure</td>
+</tr>
+<tr>
+<td>对称轴</td>
+<td>axis of symmetry / line of symmetry</td>
+</tr>
+<tr>
+<td>对称点</td>
+<td>symmetric point</td>
+</tr>
+<tr>
+<td>反射</td>
+<td>reflection</td>
+</tr>
+<tr>
+<td>等距变换</td>
+<td>isometry</td>
+</tr>
+<tr>
+<td>垂直平分线</td>
+<td>perpendicular bisector</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十三章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《生活中的数学》对称美学</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+<li><a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a></li>
+<li><a class="dead" title="未收录">等边三角形</a></li>
+<li><a class="dead" title="未收录">最短路径问题</a></li>
+<li><a class="dead" title="未收录">全等图形</a></li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2024-新课标Ⅱ-09.html">2024-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

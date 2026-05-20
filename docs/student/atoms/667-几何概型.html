@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何概型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>几何概型</h1><div class="meta-card"><span><strong>权重</strong>20</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 几何概型, geometric probability</p><h1>几何概型</h1>
+<blockquote>
+<p><strong>一句话</strong>：几何概型是指随机试验的样本空间与某一可度量的几何区域对应，且事件发生的概率只与该事件对应子区域的长度（面积、体积）成比例的概率模型。
+<strong>English</strong>: A geometric probability model is one in which the sample space can be identified with a measurable geometric region, and the probability of an event is proportional to the length, area, or volume of the subregion representing that event.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与公式</strong><br />
+设可度量的几何区域 $\Omega$（样本空间）的测度为 $\mu(\Omega)$，事件 $A$ 对应的子区域测度为 $\mu(A)$，在等可能的前提下，事件 $A$ 的概率：
+$$
+P(A) = \frac{\mu(A)}{\mu(\Omega)}
+$$
+其中测度可以是长度、面积或体积，具体由随机试验的几何背景决定。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>抽象几何化</strong>：将随机试验中的基本事件一对一映射为某个几何区域中的点，并保证等可能性。<br />
+2. <strong>确定正确测度</strong>：根据约束条件明确采用一维长度、二维面积还是三维体积作为度量。典型陷阱是误选测度，如会面问题用长度比代替面积比。<br />
+3. <strong>建模与转化</strong>：不等式约束常通过线性规划或解析几何画出可行区域，再利用测度比计算概率。复杂情形可引入变量，将事件转化为平面或空间区域的不等式组，求对应区域测度之比。</p>
+<p><strong>典型应用</strong><br />
+在高考中常见设问：<br />
+- <strong>会面问题</strong>：两人在固定时间段内随机到达，求能见面的概率。需设两人到达时刻分别为 $x, y$，转化为平面区域 $|x-y| \le d$ 的面积比。<br />
+- <strong>随机投点与模拟</strong>：在区间、正方形或正方体内取点，求点到某点距离、线性不等式成立的概率，例如“在区间 $[0,2]$ 上任取两数，求两数之和小于 $1$ 的概率”，需构造面积比。<br />
+- <strong>与线性规划综合</strong>：给出 $x,y$ 在某个区域均匀分布，求满足 $ax+by \le c$ 的概率，通过计算公共区域面积所占比例求解。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>测度选错</strong>：将本应使用面积（如两个独立时间变量的会面问题）误用长度比，导致分母维度错误。  </li>
+<li><strong>等可能性误判</strong>：错误假设点在某曲线上的均匀性，如“在圆上随机取点”与“在圆内随机取点”测度不同，前者为弧长，后者为面积，概率结果完全不同。  </li>
+<li><strong>边界开闭处理不当</strong>：几何概型中单点或边界线的测度为 0，不影响概率，但学生常纠结端点是否包含，实际上端点对测度贡献为零，只需计算开区域测度。  </li>
+<li><strong>无限样本空间与古典概型混淆</strong>：几何概型中基本事件总数无限，不能套用古典概型的计数方法，必须使用几何测度之比。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>几何概型</td>
+<td>geometric probability model</td>
+<td>通过几何测度之比定义概率的模型</td>
+</tr>
+<tr>
+<td>测度</td>
+<td>measure</td>
+<td>描述区域大小的量，如长度、面积、体积</td>
+</tr>
+<tr>
+<td>样本空间</td>
+<td>sample space</td>
+<td>随机试验所有可能结果构成的区域</td>
+</tr>
+<tr>
+<td>等可能性</td>
+<td>equally likely</td>
+<td>试验中每个基本事件发生的机会均等</td>
+</tr>
+<tr>
+<td>随机模拟</td>
+<td>random simulation</td>
+<td>利用随机数产生均匀分布点进行概率估算</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：人教A版必修第二册“概率”；课标对应“概率与统计”主题中的几何概型（2017年版2020年修订普通高中数学课程标准） 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/320-古典概型.html">古典概型</a></li>
+<li><a href="../atoms/340-条件概率初步.html">条件概率</a></li>
+<li><a class="dead" title="未收录">随机模拟与蒙特卡洛方法</a></li>
+<li><a class="dead" title="未收录">线性规划及其应用</a></li>
+<li><a class="dead" title="未收录">平面区域与不等式组</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-14.html">2010-文-14</a></li>
+<li><a href="../exam/2010-理-13.html">2010-理-13</a></li>
+<li><a href="../exam/2012-文-03.html">2012-文-03</a></li>
+<li><a href="../exam/2012-理-02.html">2012-理-02</a></li>
+<li><a href="../exam/2013-文-09.html">2013-文-09</a></li>
+<li><a href="../exam/2013-理-18.html">2013-理-18</a></li>
+<li><a href="../exam/2014-文-05.html">2014-文-05</a></li>
+<li><a href="../exam/2015-理-07.html">2015-理-07</a></li>
+<li><a href="../exam/2016-文-08.html">2016-文-08</a></li>
+<li><a href="../exam/2016-理-10.html">2016-理-10</a></li>
+<li><a href="../exam/2017-文-04.html">2017-文-04</a></li>
+<li><a href="../exam/2017-理-02.html">2017-理-02</a></li>
+<li><a href="../exam/2018-理-10.html">2018-理-10</a></li>
+<li><a href="../exam/2021-文-07.html">2021-文-07</a></li>
+<li><a href="../exam/2021-理-08.html">2021-理-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

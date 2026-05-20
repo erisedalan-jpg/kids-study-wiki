@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电解原理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电解原理</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电解原理, principles of electrolysis, 电解的基本原理</p><h1>电解原理</h1>
+<blockquote>
+<p><strong>一句话</strong>：电解是在外加直流电作用下，电解质中离子定向移动，在电极上发生氧化还原反应的过程，遵循法拉第电解定律。
+<strong>English</strong>: Electrolysis is the process in which ions in an electrolyte migrate directionally under applied DC current, undergoing redox reactions at the electrodes, governed by Faraday's laws of electrolysis.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>电解原理</strong>（principles of electrolysis）：</p>
+<ol>
+<li><strong>外加直流电</strong>驱动，为非自发过程</li>
+<li><strong>阳离子向阴极迁移</strong>（被还原），<strong>阴离子向阳极迁移</strong>（被氧化）</li>
+<li>电解质必须以<strong>离子态</strong>存在（溶液或熔融态）</li>
+<li>两个基本过程：电子通过外电路（导线），离子通过内电路（电解液）</li>
+</ol>
+<h3>公式 / 方程式</h3>
+<p><strong>法拉第第一定律</strong>：电解时，电极上发生化学变化的物质质量与通过的电量成正比：</p>
+<p>$$
+m = \frac{M \cdot Q}{n \cdot F} = \frac{M \cdot I \cdot t}{n \cdot F}
+$$</p>
+<p><strong>法拉第第二定律</strong>：不同物质析出的摩尔数之比等于转移电子数之比（相同电量下）：</p>
+<p>$$
+\frac{n_1}{n_2} = \frac{1/z_1}{1/z_2} = \frac{z_2}{z_1}
+$$</p>
+<p>其中 $z$ 为该物质转移的电子数。</p>
+<p>常数：$F = 96500\ \text{C·mol}^{-1}$（1 mol 电子的电量）</p>
+<p>离子放电顺序：</p>
+<p><strong>阴极（还原，获得电子）</strong>：</p>
+<p>$$
+\text{Ag}^+ &gt; \text{Hg}^{2+} &gt; \text{Cu}^{2+} &gt; \text{H}^+(\text{酸}) &gt; \text{Pb}^{2+} &gt; \cdots &gt; \text{H}^+(\text{水}) &gt; \text{Zn}^{2+} &gt; \cdots &gt; \text{Na}^+
+$$</p>
+<p>活泼性越弱的金属离子越先被还原；$\text{H}^+$ 在金属活泼性表的位置，金属离子活泼性弱于 H 的先析出。</p>
+<p><strong>阳极（氧化，失去电子）</strong>（以水溶液为例）：</p>
+<p>$$
+\text{S}^{2-} &gt; \text{I}^- &gt; \text{Br}^- &gt; \text{Cl}^- &gt; \text{OH}^- &gt; \text{F}^-, \text{含氧酸根}(\text{SO}_4^{2-}, \text{NO}_3^-)
+$$</p>
+<p>还原性越强的阴离子越先被氧化；若阳极为活性金属，则金属优先溶解。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：以铜为阳极、铁为阴极，电解 CuSO₄ 溶液，通过 0.5 mol e⁻，各极反应及析出质量？</p>
+<ul>
+<li>阳极（Cu，活性极）：$\text{Cu} - 2e^- \rightarrow \text{Cu}^{2+}$，溶解 $0.5/2 = 0.25\ \text{mol Cu} = 15.9\ \text{g}$</li>
+<li>阴极（Fe）：$\text{Cu}^{2+} + 2e^- \rightarrow \text{Cu}$，析出 $0.25\ \text{mol Cu} = 15.9\ \text{g}$</li>
+</ul>
+<p><strong>例</strong>：电解熔融 NaCl（工业制钠）：</p>
+<p>$$
+\text{阴极}: \text{Na}^+ + e^- \rightarrow \text{Na}
+$$</p>
+<p>$$
+\text{阳极}: 2\text{Cl}^- - 2e^- \rightarrow \text{Cl}_2\uparrow
+$$</p>
+<h3>易错点</h3>
+<ul>
+<li>活性阳极（Cu、Fe 等）会优先溶解，代替 OH⁻ 或 Cl⁻ 被氧化</li>
+<li>铂（Pt）或石墨为惰性阳极，不参与氧化</li>
+<li>熔融电解质中无水，阳极放出对应阴离子的产物（Cl₂而非O₂）</li>
+<li>法拉第定律中，$n$ 是该物质每摩尔转移的电子数（化合价变化数）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电解原理</td>
+<td>principles of electrolysis</td>
+</tr>
+<tr>
+<td>法拉第定律</td>
+<td>Faraday's law</td>
+</tr>
+<tr>
+<td>法拉第常数</td>
+<td>Faraday constant</td>
+</tr>
+<tr>
+<td>放电顺序</td>
+<td>discharge order</td>
+</tr>
+<tr>
+<td>活性电极</td>
+<td>active electrode</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>Faraday's law states that the mass deposited is proportional to the charge passed and inversely proportional to the number of electrons transferred per ion.（法拉第定律指出，沉积质量与通过的电量成正比，与每个离子转移的电子数成反比。）</li>
+<li>At the cathode, the ions with the highest reduction potential are discharged first.（在阴极，还原电位最高的离子最先放电。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"电解"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+<li><a class="dead" title="未收录">电解电极反应</a></li>
+<li><a class="dead" title="未收录">电镀</a></li>
+<li><a class="dead" title="未收录">电解精炼</a></li>
+<li><a class="dead" title="未收录">氯碱工业</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-05.html">2008-全国Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2011-北京-09</a></li>
+<li><a class="dead" title="未收录">2014-北京-11</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-10.html">2015-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-05.html">2017-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2019-北京-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-18</a></li>
+<li><a class="dead" title="未收录">2023-北京-05</a></li>
+<li><a href="../exam/2024-辽宁-13.html">2024-辽宁-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

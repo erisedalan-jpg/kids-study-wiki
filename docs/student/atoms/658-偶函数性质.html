@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>偶函数性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>偶函数性质</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 偶函数性质, Even Function Properties</p><h1>偶函数性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：对于函数 $f(x)$，若其定义域关于原点对称，且对定义域内任意 $x$ 都满足 $f(-x)=f(x)$，则该函数为偶函数，其图像关于 $y$ 轴对称。
+<strong>English</strong>: A function $f(x)$ is even if its domain is symmetric about the origin and $f(-x)=f(x)$ for all $x$ in the domain, making its graph symmetric about the $y$-axis.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：设函数 $f(x)$ 的定义域为 $I$，若 $\forall x\in I$ 都有 $-x\in I$，且 $f(-x)=f(x)$，则 $f(x)$ 是偶函数。<br />
+由此可导出偶函数的代数特征与几何特征：</p>
+<ul>
+<li><strong>代数特征</strong>：$f(x)-f(-x)=0$ 或 $f(x)=f(|x|)$（适用时）。</li>
+<li><strong>几何特征</strong>：图像关于 $y$ 轴对称，即 $(x,y)$ 与 $(-x,y)$ 同时在函数图像上。</li>
+</ul>
+<p><strong>关键方法</strong>：判断函数奇偶性的标准步骤——<br />
+1. 求定义域，确认是否关于原点对称（不对称即非奇非偶）。<br />
+2. 计算 $f(-x)$，与 $f(x)$ 比较：相等则为偶函数；相反数则为奇函数；否则非奇非偶。<br />
+3. 常用变形技巧：有理化、代入特殊值（用于否定）、利用已知对称性（如 $y=\cos x$ 为偶函数）。  </p>
+<p><strong>典型应用</strong>：高考中偶函数性质常以以下形式考查：<br />
+- <strong>直接判断</strong>：给定初等函数（如 $f(x)=x^2+e^{|x|}$）或分段函数，要求判断奇偶性。<br />
+- <strong>已知奇偶性求参数</strong>：如 $f(x)=ax^4+bx^2+c$ 为偶函数，利用 $f(-x)=f(x)$ 恒成立列方程求参数。<br />
+- <strong>利用对称性解题</strong>：已知偶函数在 $[0,+\infty)$ 上的单调性，求不等式 $f(x)&lt;f(a)$ 的解集，需利用 $f(x)=f(|x|)$ 转化为同侧比较。<br />
+- <strong>抽象函数与对称性结合</strong>：给出 $f(x+y)+f(x-y)=2f(x)f(y)$ 等关系，推证偶函数性质。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域对称性</strong>：直接计算 $f(-x)=f(x)$ 而忘记检查定义域，如 $f(x)=\sqrt{x}$ 看似 $f(-x)=\sqrt{-x}$ 无法比较，但定义域 $[0,+\infty)$ 不对称，实为非奇非偶。</li>
+<li><strong>符号混淆</strong>：将偶函数的 $f(-x)=f(x)$ 误记为 $-f(x)$，或与奇函数图像混淆，如误以为偶函数图像关于原点对称。</li>
+<li><strong>变形不等价</strong>：在化简 $f(-x)$ 时，错误使用偶次根式、绝对值等导致判断错误，如 $f(x)=\sqrt{x^2}=|x|$ 是偶函数，但若直接写 $\sqrt{(-x)^2}=\sqrt{x^2}$ 没问题，而有些学生误以为 $\sqrt{x^2}=x$ 导致判断为非奇非偶。</li>
+<li><strong>单调性误用</strong>：偶函数在对称区间上单调性相反，若误认为相同，则在解不等式时易扩大或缩小解集。例如 $f(x)$ 为偶函数且在 $[0,+\infty)$ 递增，不等式 $f(x)&gt;f(1)$ 的解应为 $(-\infty,-1)\cup(1,+\infty)$，若仅得 $x&gt;1$ 则漏解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 $f(-x)=f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>对称性</td>
+<td>symmetry</td>
+<td>图像关于某线或点对称的性质</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>函数自变量的取值范围</td>
+</tr>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 $f(-x)=-f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>图像变换</td>
+<td>graph transformation</td>
+<td>平移、对称、伸缩等操作</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">奇函数性质</a></li>
+<li><a href="../atoms/432-导数与函数单调性.html">函数单调性</a></li>
+<li><a class="dead" title="未收录">函数周期性</a></li>
+<li><a class="dead" title="未收录">函数图像变换</a></li>
+<li><a class="dead" title="未收录">抽象函数问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-11.html">2009-理-11</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-04.html">2023-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

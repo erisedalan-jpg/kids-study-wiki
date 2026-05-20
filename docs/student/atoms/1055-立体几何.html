@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>立体几何</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>立体几何</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 立体几何, Solid Geometry</p><h1>立体几何</h1>
+<blockquote>
+<p><strong>一句话</strong>：立体几何是研究空间点、线、面位置关系及空间图形度量与性质的数学分支，核心是立足公理体系，用推理与向量计算解决三维空间中的形状、大小与位置问题。
+<strong>English</strong>: Solid Geometry is the branch of mathematics that studies the positional relationships of points, lines, and planes in space, as well as the measurement and properties of spatial figures.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+立体几何以三个基本公理（三线共面公理、两平面交线公理、三点确定平面公理）及平行公理为基础。核心定理包括：线面平行判定定理（平面外一直线与平面内一直线平行，则该直线与平面平行）、线面垂直判定定理（一直线与平面内两相交直线垂直，则与该平面垂直）、面面平行判定定理（一平面内两相交直线分别平行于另一平面，则两平面平行）、三垂线定理及其逆定理。空间向量基本定理：任意三向量不共面，可线性表示空间任一向量。异面直线所成角 $θ∈(0,\frac{π}{2}]$，线面角 $φ∈[0,\frac{π}{2}]$，二面角以其平面角来度量，范围 $[0,π]$。</p>
+<p><strong>关键方法</strong>
+高考中解决立体几何问题有两条主线：
+1. <strong>综合几何法</strong>：直接运用公理、定理，通过作辅助线（如平移直线、找公垂线、作平面角）进行推理论证。常用于证明平行、垂直关系及求某些几何量。
+2. <strong>空间向量法（坐标法）</strong>：建立空间直角坐标系，写出关键点坐标，使用向量坐标运算。设直线方向向量为 $\mathbf{d}$，平面法向量为 $\mathbf{n}$，则线面角 $φ$ 满足 $\sin φ = |\cos\langle \mathbf{d}, \mathbf{n} \rangle|$；二面角的平面角（或其补角）满足 $\cos θ = \frac{|\mathbf{n}_1·\mathbf{n}_2|}{|\mathbf{n}_1||\mathbf{n}_2|}$ 或带符号判断锐钝。点 $P$ 到平面 $α$ 的距离 $d = \frac{|\overrightarrow{AP}·\mathbf{n}|}{|\mathbf{n}|}$（$A$ 为 $α$ 内任一点）。</p>
+<p><strong>典型应用</strong>
+高考常以棱柱、棱锥、组合体为背景设问。典型考查：
+- 第一问（证明）：证明线面平行、垂直或面面垂直，多用综合几何法。
+- 第二问（计算）：求线面角的正弦值、二面角的余弦值或点到面的距离，多建系用向量法。例如：“在四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为正方形，$PA⊥$ 底面 $ABCD$，$PA=AB=2$，$E$ 为 $PC$ 中点，求二面角 $B-AE-D$ 的余弦值。”此时需以 $A$ 为原点建系，写出 $B(2,0,0)$、$D(0,2,0)$、$P(0,0,2)$、$E(1,1,1)$，求两平面的法向量后再计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>线面角的正弦等于向量夹角余弦的绝对值</strong>：学生常混淆线面角公式，错误地将 $\sin φ$ 写成 $\frac{|\mathbf{d}·\mathbf{n}|}{|\mathbf{d}||\mathbf{n}|}$ 后直接用 $\arcsin$ 求解，而实际应为 $\sin φ = |\cos\langle \mathbf{d}, \mathbf{n} \rangle|$，注意不是直接取余弦值。</li>
+<li><strong>二面角锐钝判断错误</strong>：用向量法求二面角时，两法向量夹角可能对应二面角的平面角或其补角。不能在算出余弦值后盲目套绝对值，需结合图形观察二面角是锐角还是钝角，或通过法向量的方向（同进同出/一进一出）来定号。</li>
+<li><strong>建系时坐标计算马虎</strong>：涉及中点、定比分点、底面非直角梯形、菱形等图形时，容易写错关键点的坐标。务必先正确标注底面各点坐标，再根据高度确定竖坐标。</li>
+<li><strong>辅助线作法无依据</strong>：综合法中随意“连接某两点”或“取中点”而不说明理由（如利用中位线定理、平行四边形性质），导致证明过程跳步失分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>立体几何</td>
+<td>Solid Geometry</td>
+<td>研究空间图形的学科</td>
+</tr>
+<tr>
+<td>二面角</td>
+<td>Dihedral angle</td>
+<td>两个相交平面所夹的角，用其平面角度量</td>
+</tr>
+<tr>
+<td>线面垂直</td>
+<td>Line perpendicular to plane</td>
+<td>直线垂直于平面内所有直线</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>Normal vector</td>
+<td>垂直于平面的非零向量</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>Volume</td>
+<td>空间几何体所占空间大小</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》“几何与代数”主题中的立体几何初步、空间向量与立体几何</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">点、线、面之间的位置关系</a></li>
+<li><a class="dead" title="未收录">空间几何体的表面积与体积</a></li>
+<li><a class="dead" title="未收录">空间向量与立体几何</a></li>
+<li><a class="dead" title="未收录">三视图与直观图</a></li>
+<li><a class="dead" title="未收录">异面直线所成的角与距离</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-08.html">2008-文-08</a></li>
+<li><a href="../exam/2008-文-12.html">2008-文-12</a></li>
+<li><a href="../exam/2008-文-16.html">2008-文-16</a></li>
+<li><a href="../exam/2008-文-20.html">2008-文-20</a></li>
+<li><a href="../exam/2010-理-08.html">2010-理-08</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2017-理-16.html">2017-理-16</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a href="../exam/2019-文-16.html">2019-文-16</a></li>
+<li><a href="../exam/2019-理-16.html">2019-理-16</a></li>
+<li><a href="../exam/2019-理-17.html">2019-理-17</a></li>
+<li><a href="../exam/2020-理-16.html">2020-理-16</a></li>
+<li><a href="../exam/2020-理-20.html">2020-理-20</a></li>
+<li><a class="dead" title="未收录">2021-北京-17</a></li>
+<li><a href="../exam/2022-文-09.html">2022-文-09</a></li>
+<li><a href="../exam/2022-理-07.html">2022-理-07</a></li>
+<li><a class="dead" title="未收录">2023-北京-09</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

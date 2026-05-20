@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最值问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>最值问题</h1><div class="meta-card"><span><strong>权重</strong>31</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 最值问题, Extremum problems</p><h1>最值问题</h1>
+<blockquote>
+<p><strong>一句话</strong>：最值问题是在给定约束条件下，求目标函数或表达式的最大值或最小值的数学问题。
+<strong>English</strong>: Extremum problems involve determining the maximum or minimum value of an objective function under specified constraints.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+最值问题研究的是在某个集合（定义域或可行域）内，函数 $f(x)$ 所能达到的最大值或最小值。从数学上，设 $f:D\to\mathbb{R}$，若存在 $x_0\in D$，使得对所有 $x\in D$ 都有 $f(x)\le f(x_0)$（或 $\ge$），则 $f(x_0)$ 为最大值（或最小值）。核心在于目标函数与约束条件的建立。</p>
+<p><strong>关键方法</strong><br />
+高考中解决最值问题的主流方法有：
+- <strong>导数法</strong>：求 $f'(x)$，解 $f'(x)=0$ 得驻点，结合单调性与区间端点比较，确认真·最值。
+- <strong>基本不等式法</strong>：对正数使用 $\frac{a+b}{2}\ge\sqrt{ab}$ 等，遵循“一正、二定、三相等”原则。
+- <strong>二次函数配方法</strong>：化为顶点式 $a(x-h)^2+k$，根据开口方向和定义域求最值。
+- <strong>线性规划图解法</strong>：在可行域内平移目标直线，求得线性目标函数的最值。
+- <strong>三角换元与参数方程</strong>：将条件化为三角式，利用正弦、余弦的有界性求解。</p>
+<p><strong>典型应用</strong><br />
+高考常以应用题形式出现，如利润最大、用料最省、面积体积最值；也常以函数题、不等式题、解析几何题呈现，例如求椭圆上点到定点的距离最值、含参函数在指定区间的最值、数列的最大项等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域或约束条件</strong>：导数求最值时，不将极值与区间端点值比较，导致错失真正的最大值或最小值。</li>
+<li><strong>基本不等式取等条件不验证</strong>：使用 $\ge$ 或 $\le$ 后，未检查等号能否成立，导致最值不真实。</li>
+<li><strong>将极值误认为最值</strong>：在开区间内极值不一定是全局最值，尤其当函数存在多个极值点或边界时。</li>
+<li><strong>线性规划中目标函数斜率画错或可行域边界取错</strong>：容易漏掉最优解位于非整点或边界交点的情况。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最值问题</td>
+<td>Extremum problem / Optimization problem</td>
+<td>求最大或最小值的问题</td>
+</tr>
+<tr>
+<td>目标函数</td>
+<td>Objective function</td>
+<td>要求最值的表达式</td>
+</tr>
+<tr>
+<td>约束条件</td>
+<td>Constraint</td>
+<td>变量必须满足的限制</td>
+</tr>
+<tr>
+<td>极值</td>
+<td>Extremum (local)</td>
+<td>局部范围内的最大或最小值</td>
+</tr>
+<tr>
+<td>基本不等式</td>
+<td>AM-GM inequality</td>
+<td>$\frac{a+b}{2}\ge\sqrt{ab}$ 等基本不等关系</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/286-函数的最值.html">函数的最值</a></li>
+<li><a class="dead" title="未收录">导数与极值</a></li>
+<li><a class="dead" title="未收录">基本不等式应用</a></li>
+<li><a class="dead" title="未收录">线性规划求最值</a></li>
+<li><a href="../atoms/640-二次函数最值.html">二次函数最值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-05.html">2008-理-05</a></li>
+<li><a href="../exam/2011-文-07.html">2011-文-07</a></li>
+<li><a href="../exam/2011-文-20.html">2011-文-20</a></li>
+<li><a href="../exam/2011-理-13.html">2011-理-13</a></li>
+<li><a href="../exam/2011-理-19.html">2011-理-19</a></li>
+<li><a href="../exam/2012-理-06.html">2012-理-06</a></li>
+<li><a href="../exam/2012-理-08.html">2012-理-08</a></li>
+<li><a href="../exam/2013-文-13.html">2013-文-13</a></li>
+<li><a href="../exam/2015-文-07.html">2015-文-07</a></li>
+<li><a href="../exam/2015-文-10.html">2015-文-10</a></li>
+<li><a href="../exam/2017-理-14.html">2017-理-14</a></li>
+<li><a href="../exam/2017-理-16.html">2017-理-16</a></li>
+<li><a href="../exam/2018-文-14.html">2018-文-14</a></li>
+<li><a href="../exam/2019-文-14.html">2019-文-14</a></li>
+<li><a href="../exam/2019-理-14.html">2019-理-14</a></li>
+<li><a class="dead" title="未收录">2020-北京-05</a></li>
+<li><a href="../exam/2022-理-09.html">2022-理-09</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

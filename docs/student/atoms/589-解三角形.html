@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>解三角形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>解三角形</h1><div class="meta-card"><span><strong>权重</strong>46</span><span><strong>吉林命中</strong>13</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 解三角形, Solving Triangles</p><h1>解三角形</h1>
+<blockquote>
+<p><strong>一句话</strong>：已知三角形的若干边角元素，利用正弦定理、余弦定理等工具求出其余未知边角的过程。
+<strong>English</strong>: The process of determining the unknown sides and angles of a triangle given a sufficient set of known elements, using the Law of Sines, Law of Cosines, and related identities.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与核心定理</strong></p>
+<p>解三角形，即求解三角形的六个基本元素（三边 $a,b,c$ 与三角 $A,B,C$）中未知量的问题。其核心依赖两个基本定理：</p>
+<ul>
+<li><strong>正弦定理</strong>：$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$（$R$ 为外接圆半径）。该定理将边与对角的正弦值建立比例关系，适用于已知两角一边或两边一对角的情形。</li>
+<li><strong>余弦定理</strong>：$a^2 = b^2 + c^2 - 2bc\cos A$（及其关于 $b^2, c^2$ 的对称形式）。该定理建立了三边与一角余弦的关系，是已知三边求角或已知两边夹角求第三边的主要工具。</li>
+</ul>
+<p><strong>关键方法</strong></p>
+<p>高考解题的关键步骤在于<strong>边角互化</strong>：
+1.  <strong>确定已知条件类型</strong>：常见的四种可解三角形条件是 ASA/AAS（两角一对边/两角一夹边）、SAS（两边一夹角）、SSS（三边）、SSA（两边一对角，需讨论解的情况）。
+2.  <strong>条件齐次化处理</strong>：当题目给出边角混合等式（如 $a\cos B = b\cos A$）时，优先利用正弦定理将边统一化为角的正弦式，或利用余弦定理将角的余弦统一化为边，化简为纯边或纯角关系。
+3.  <strong>三角形形状判定</strong>：通过边角互化得到的 $a=b$ 或 $\sin(A-B)=0$ 等关系，严格判定三角形为等腰、等边或直角三角形。注意，纯边化通常更严谨，避免角度多值的潜在错误。
+4.  <strong>面积公式运用</strong>：面积 $S = \frac{1}{2}ab\sin C = \frac{1}{2}ac\sin B = \frac{1}{2}bc\sin A$，是边与角的重要关联桥梁，常用于已知面积反求边或角的问题中。</p>
+<p><strong>典型高考设问与应用</strong></p>
+<p>高考对本考点的考查常见于解答题的第一道或选填难题，设问方式高度集中：
+- <strong>求解三角形的基本量</strong>：直接给出三个已知条件，求指定边长、角度或三角形面积。这是最基础的考查形式。
+- <strong>条件等式化简与边角互化</strong>：如“已知 $b\sin A = a\cos B$，求角 $B$”。这需要将边用正弦定理转化为角，得到 $\sin B\sin A = \sin A\cos B$，进而求出 $\tan B = 1$，$B = \frac{\pi}{4}$。
+- <strong>最值与范围问题</strong>：在已知三角形一角及其对边（或面积）恒定的条件下，求解周长、面积的最大值。常用方法为余弦定理结合基本不等式（如 $a^2 = b^2+c^2 - bc \ge 2bc - bc = bc$），或利用正弦定理将边转化为三角函数求值域。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>SSA 情形解的情况讨论</strong>：已知两边及其中一边的对角（如 $a,b,A$），解三角形时解的个数可能为 0、1 或 2。忘记讨论 $a$ 与 $b\sin A$ 以及 $a$ 与 $b$ 的大小关系，导致漏解或多解，是失分重灾区。</li>
+<li><strong>忽略三角形内角的隐含约束</strong>：边角互化后直接约去等式两边的 $\sin A$，却未考虑 $\sin A = 0$（即 $A = 0$ 或 $\pi$）在三角形中不可能成立，虽结果可能正确，但逻辑上存在不严谨性。更致命的是，在求值域时忘记角度范围 $(0, \pi)$ 以及内角和为 $\pi$ 这一根本约束，导致范围扩大。</li>
+<li><strong>余弦定理公式符号混淆</strong>：在角为钝角时，余弦值为负，公式 $a^2 = b^2 + c^2 - 2bc\cos A$ 中“$- 2bc\cos A$”这一项实际上变为加法，部分学生在代数运算中常因符号错误导致边长计算错误。</li>
+<li><strong>面积公式误用</strong>：使用 $S = \frac{1}{2}ab\sin C$ 时，角 $C$ 必须是边 $a$ 与边 $b$ 的夹角，错误地代入非夹角会导致整个计算无效。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>解三角形</td>
+<td>Solving Triangles</td>
+<td>核心考点名称</td>
+</tr>
+<tr>
+<td>正弦定理</td>
+<td>Law of Sines</td>
+<td>建立边与其对角正弦值比例的定理</td>
+</tr>
+<tr>
+<td>余弦定理</td>
+<td>Law of Cosines</td>
+<td>建立三边与一角余弦关系的定理</td>
+</tr>
+<tr>
+<td>三角形面积公式</td>
+<td>Area Formula for Triangles</td>
+<td>$S = \frac{1}{2}ab\sin C$</td>
+</tr>
+<tr>
+<td>边角互化</td>
+<td>Transforming between Sides and Angles</td>
+<td>正弦/余弦定理的核心解题策略</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">正弦定理与余弦定理</a></li>
+<li><a href="../atoms/619-三角形面积公式.html">三角形面积公式</a></li>
+<li><a class="dead" title="未收录">三角函数图像与性质</a></li>
+<li><a class="dead" title="未收录">基本不等式在最值问题中的应用</a></li>
+<li><a class="dead" title="未收录">向量在平面几何中的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-18.html">2009-文-18</a></li>
+<li><a href="../exam/2009-理-17.html">2009-理-17</a></li>
+<li><a href="../exam/2010-理-10.html">2010-理-10</a></li>
+<li><a href="../exam/2010-理-16.html">2010-理-16</a></li>
+<li><a href="../exam/2011-文-09.html">2011-文-09</a></li>
+<li><a href="../exam/2012-文-11.html">2012-文-11</a></li>
+<li><a href="../exam/2012-理-11.html">2012-理-11</a></li>
+<li><a href="../exam/2013-文-05.html">2013-文-05</a></li>
+<li><a href="../exam/2013-理-03.html">2013-理-03</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2015-文-11.html">2015-文-11</a></li>
+<li><a href="../exam/2015-文-17.html">2015-文-17</a></li>
+<li><a href="../exam/2015-理-17.html">2015-理-17</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2016-理-13.html">2016-理-13</a></li>
+<li><a href="../exam/2016-理-15.html">2016-理-15</a></li>
+<li><a href="../exam/2017-文-11.html">2017-文-11</a></li>
+<li><a href="../exam/2017-文-16.html">2017-文-16</a></li>
+<li><a href="../exam/2017-理-17.html">2017-理-17</a></li>
+<li><a href="../exam/2018-文-07.html">2018-文-07</a></li>
+<li><a href="../exam/2018-理-15.html">2018-理-15</a></li>
+<li><a href="../exam/2018-理-16.html">2018-理-16</a></li>
+<li><a href="../exam/2018-理-17.html">2018-理-17</a></li>
+<li><a href="../exam/2019-文-15.html">2019-文-15</a></li>
+<li><a href="../exam/2019-理-12.html">2019-理-12</a></li>
+<li><a href="../exam/2019-理-15.html">2019-理-15</a></li>
+<li><a href="../exam/2020-理-16.html">2020-理-16</a></li>
+<li><a href="../exam/2020-理-17.html">2020-理-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-16</a></li>
+<li><a href="../exam/2021-文-15.html">2021-文-15</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-19</a></li>
+<li><a href="../exam/2021-理-05.html">2021-理-05</a></li>
+<li><a href="../exam/2021-理-15.html">2021-理-15</a></li>
+<li><a class="dead" title="未收录">2024-北京-16</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

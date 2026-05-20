@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列递推关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列递推关系</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列递推关系, 递推公式, recurrence relation</p><h1>数列递推关系</h1>
+<blockquote>
+<p><strong>一句话</strong>：数列递推关系是用数列中前若干项表示后续项的等式，结合初始条件唯一确定数列。
+<strong>English</strong>: A recurrence relation for a sequence is an equation that expresses each term as a function of its preceding terms, together with initial conditions.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+给定数列 ${a_n}$，若存在函数 $f$ 使得对任意 $n \ge k$（$k$ 为某正整数）有
+$$a_n = f(a_{n-1}, a_{n-2}, \dots, a_{n-k})$$
+则称该式为数列的 <strong>$k$ 阶递推关系</strong>，并需给出前 $k$ 项初始值才能唯一确定数列。高考主要考查一阶和二阶递推，核心是 <strong>由递推求通项公式</strong>。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>基本等差/等比递推</strong>：$a_n - a_{n-1} = d$ 或 $\dfrac{a_n}{a_{n-1}} = q$，直接代公式。<br />
+2. <strong>累加法</strong>：当 $a_n - a_{n-1} = f(n)$ 时，$a_n = a_1 + \sum_{k=2}^{n} f(k)$。<br />
+3. <strong>累乘法</strong>：当 $\dfrac{a_n}{a_{n-1}} = f(n)$ 时，$a_n = a_1 \prod_{k=2}^{n} f(k)$。<br />
+4. <strong>一阶线性递推</strong> $a_n = p a_{n-1} + q$（$p \neq 1$）：待定系数法构造 $a_n + \lambda = p(a_{n-1} + \lambda)$，化为等比。<br />
+5. <strong>二阶线性常系数递推</strong> $a_n = p a_{n-1} + q a_{n-2}$：特征方程 $x^2 - px - q = 0$，两不等实根时 $a_n = A x_1^n + B x_2^n$；重根时 $a_n = (A + Bn)x_0^n$。<br />
+6. <strong>分式递推</strong> $a_{n+1} = \dfrac{p a_n + q}{r a_n + s}$：常用不动点法或倒数变换。</p>
+<p><strong>典型应用</strong><br />
+高考中常以解答题形式出现：给出递推式与首项，求 ${a_n}$ 通项公式，再结合求和、不等式证明或恒成立问题。例如 “已知 $a_1=1,\ a_{n+1}=2a_n+3$，求 $a_n$”，或者 “$a_{n+1}=\dfrac{a_n}{2a_n+1}$，求通项并证明 $\sum_{k=1}^n a_k &lt; 1$”。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略初始条件的限制：求出的通项公式必须在 $n=1$ 时成立，否则需分段表示。  </li>
+<li>累加/累乘时未验证 $n=1$ 情形，直接将 $a_n$ 表达式用于求和导致错误。  </li>
+<li>待定系数构造新数列时系数配错：如 $a_n = p a_{n-1} + q$ 应设 $a_n + \dfrac{q}{p-1} = p\left(a_{n-1} + \dfrac{q}{p-1}\right)$。  </li>
+<li>特征方程重根情形误写成两个不同根的通解形式，未加 $n$ 倍项。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>递推关系</td>
+<td>recurrence relation</td>
+<td>相邻项间的等式</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>general term formula</td>
+<td>直接用 $n$ 表示 $a_n$</td>
+</tr>
+<tr>
+<td>初始条件</td>
+<td>initial condition</td>
+<td>起算所需的头几项值</td>
+</tr>
+<tr>
+<td>特征方程</td>
+<td>characteristic equation</td>
+<td>二阶线性递推对应的代数方程</td>
+</tr>
+<tr>
+<td>不动点法</td>
+<td>fixed-point method</td>
+<td>求分式递推不变量的一种技巧</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-18，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a class="dead" title="未收录">等比数列</a></li>
+<li><a class="dead" title="未收录">数列求和</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法</a></li>
+<li><a class="dead" title="未收录">数列的极限</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-06.html">2008-理-06</a></li>
+<li><a href="../exam/2009-理-14.html">2009-理-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

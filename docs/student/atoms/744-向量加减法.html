@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量加减法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向量加减法</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向量加减法, 向量的加减法</p><h1>向量加减法</h1>
+<blockquote>
+<p><strong>一句话</strong>：向量加减法是研究向量合成与分解的代数运算，遵循三角形法则或平行四边形法则，并可通过坐标进行分量运算。
+<strong>English</strong>: Vector addition and subtraction are algebraic operations that combine or resolve vectors, governed by the triangle law or parallelogram law, and can be carried out component‑wise in coordinates.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong><br />
+  向量是有大小和方向的量。向量加法有两种等价法则：  </li>
+<li><strong>三角形法则</strong>：将向量 $\vec{b}$ 的起点接在 $\vec{a}$ 的终点，和向量 $\vec{a}+\vec{b}$ 从 $\vec{a}$ 的起点指向 $\vec{b}$ 的终点。  </li>
+<li>
+<p><strong>平行四边形法则</strong>：若 $\vec{a}$ 与 $\vec{b}$ 起点重合，以它们为邻边作平行四边形，和向量为起点处的对角线。<br />
+  向量减法定义为加法的逆：$\vec{a}-\vec{b}=\vec{a}+(-\vec{b})$。几何上，若 $\vec{a}$ 与 $\vec{b}$ 共起点，则 $\vec{a}-\vec{b}$ 从 $\vec{b}$ 的终点指向 $\vec{a}$ 的终点。<br />
+<strong>坐标运算</strong>：设 $\vec{a}=(x_1,y_1)$，$\vec{b}=(x_2,y_2)$，则<br />
+  $$\vec{a}+\vec{b}=(x_1+x_2,\;y_1+y_2),\quad \vec{a}-\vec{b}=(x_1-x_2,\;y_1-y_2).$$<br />
+  向量加减满足交换律、结合律。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>图形化运算</strong>：借助三角形法则封闭回路，将多个向量的和表示为首尾相接链条的闭合边。  </li>
+<li><strong>坐标化运算</strong>：建立坐标系，把几何问题化为代数运算，适用于规则图形或未知向量较多时。  </li>
+<li>
+<p><strong>基底表示</strong>：选定平面内不共线的两个向量作为基底，所有向量的加减均可通过基底线性组合完成，常配合“系数和=1”等共线条件解题。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考中常在以下两类问题中考查：  </p>
+</li>
+<li><strong>用已知向量表示目标向量</strong>：在三角形、平行四边形或梯形中，利用加减法将待求向量写成若干边的线性组合，常结合向量共线定理求参数。  </li>
+<li><strong>求模长或判定形状</strong>：通过加减法得到关键向量后再求模或点乘，判断平行、垂直、等腰等几何性质。例如，在 $\triangle ABC$ 中，若 $\overrightarrow{AB}+\overrightarrow{AC}$ 的方向与中线重合，可用来求中线向量或证明相关性质。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>向量减法的方向混淆</strong>：$\vec{a}-\vec{b}$ 应指向<strong>被减向量 $\vec{a}$</strong> 的终点，而非减向量 $\vec{b}$ 的终点，作图时容易颠倒。  </li>
+<li><strong>忽视零向量</strong>：零向量方向任意，$\vec{a}+(-\vec{a})=\vec{0}$。在表示与化简时，漏写或误写零向量会导致向量关系出错。  </li>
+<li><strong>向量模的不等式误用</strong>：$||\vec{a}|-|\vec{b}||\le|\vec{a}\pm\vec{b}|\le|\vec{a}|+|\vec{b}|$ 中等号成立条件（共线且同向或反向）常被忽略，尤其在求最值时易错。  </li>
+<li><strong>坐标加减时符号处理</strong>：坐标纵、横分量独立运算时，减法要逐分量相减，部分同学仅对横坐标作差而遗忘了纵坐标，或错误的将减法当作对应分量相加。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向量</td>
+<td>vector</td>
+<td>既有大小又有方向的量</td>
+</tr>
+<tr>
+<td>向量加法</td>
+<td>vector addition</td>
+<td>求两向量之和的运算</td>
+</tr>
+<tr>
+<td>向量减法</td>
+<td>vector subtraction</td>
+<td>求两向量之差的运算</td>
+</tr>
+<tr>
+<td>三角形法则</td>
+<td>triangle law (head‑to‑tail rule)</td>
+<td>首尾相接作和或差的方法</td>
+</tr>
+<tr>
+<td>平行四边形法则</td>
+<td>parallelogram law</td>
+<td>共起点作和的方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">向量数乘</a></li>
+<li><a class="dead" title="未收录">平面向量基本定理</a></li>
+<li><a class="dead" title="未收录">向量的坐标表示</a></li>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a class="dead" title="未收录">向量共线定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-02.html">2009-文-02</a></li>
+<li><a href="../exam/2009-理-02.html">2009-理-02</a></li>
+<li><a href="../exam/2013-理-13.html">2013-理-13</a></li>
+<li><a href="../exam/2016-理-04.html">2016-理-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

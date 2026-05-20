@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线速度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>线速度</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 圆周运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 线速度, linear velocity, tangential velocity</p><h2>🎓 线速度</h2>
+<h3>定义</h3>
+<p><strong>线速度</strong>：做圆周运动的质点，在极短时间 $\Delta t$ 内经过的弧长 $\Delta s$ 与时间之比的极限，方向沿该点切线方向。</p>
+<p>$$v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t}$$</p>
+<p>线速度是矢量，大小为<strong>速率</strong>，方向为轨迹切线方向（指向运动前进侧）。</p>
+<h3>公式</h3>
+<p>$$v = \frac{s}{t} = \frac{2\pi r}{T} = r\omega$$</p>
+<table>
+<thead>
+<tr>
+<th>关系式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v = r\omega$</td>
+<td>线速度与角速度、半径的关系</td>
+</tr>
+<tr>
+<td>$v = \frac{2\pi r}{T}$</td>
+<td>线速度与周期、半径的关系</td>
+</tr>
+<tr>
+<td>$v = 2\pi r f$</td>
+<td>线速度与频率、半径的关系</td>
+</tr>
+</tbody>
+</table>
+<h3>同轴传动（共轴转动）</h3>
+<p>同一轴上不同半径处：<strong>角速度相同，线速度不同</strong>（$v$ 与 $r$ 成正比）</p>
+<p>$$\frac{v_A}{v_B} = \frac{r_A}{r_B}$$</p>
+<h3>皮带传动（皮带连接）</h3>
+<p>皮带两端轮缘：<strong>线速度相同，角速度不同</strong>（$\omega$ 与 $r$ 成反比）</p>
+<p>$$v_A = v_B \implies \omega_A r_A = \omega_B r_B \implies \frac{\omega_A}{\omega_B} = \frac{r_B}{r_A}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：钟表秒针长 $l = 3\ \text{cm}$，分针长 $l = 4\ \text{cm}$，求各自末端线速度。</p>
+<p>秒针：$T_s = 60\ \text{s}$，$v_s = \dfrac{2\pi \times 0.03}{60} = \pi \times 10^{-3} \approx 3.14 \times 10^{-3}\ \text{m/s}$</p>
+<p>分针：$T_m = 3600\ \text{s}$，$v_m = \dfrac{2\pi \times 0.04}{3600} \approx 6.98 \times 10^{-5}\ \text{m/s}$</p>
+<p><strong>例2（皮带传动）</strong>：大轮半径 $R = 0.3\ \text{m}$，小轮半径 $r = 0.1\ \text{m}$，大轮转速 $n = 4\ \text{r/s}$，小轮转速？</p>
+<p>$$\omega_{\text{大}} = 2\pi \times 4 = 8\pi\ \text{rad/s}$$
+$$v_{\text{皮带}} = \omega_{\text{大}} \times R = 8\pi \times 0.3 = 2.4\pi\ \text{m/s}$$
+$$\omega_{\text{小}} = \frac{v_{\text{皮带}}}{r} = \frac{2.4\pi}{0.1} = 24\pi\ \text{rad/s} \implies n_{\text{小}} = 12\ \text{r/s}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>线速度是矢量</strong>：大小（速率）相同的两点线速度不一定相同（方向不同）。</li>
+<li><strong>同轴与皮带传动混淆</strong>：同轴 $\omega$ 相同，皮带 $v$ 相同。</li>
+<li><strong>$v = r\omega$</strong>：半径 $r$ 增大时，角速度相同则线速度增大。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第六章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第六章 第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：线速度 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/258-圆周运动.html">圆周运动</a></li>
+<li><a href="../atoms/286-角速度.html">角速度</a></li>
+<li><a class="dead" title="未收录">转速与周期</a></li>
+<li><a href="../atoms/257-向心加速度.html">向心加速度</a></li>
+<li><a href="../atoms/256-向心力.html">向心力</a></li>
+<li><a href="../atoms/253-匀速圆周运动.html">匀速圆周运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2024-辽宁-02.html">2024-辽宁-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

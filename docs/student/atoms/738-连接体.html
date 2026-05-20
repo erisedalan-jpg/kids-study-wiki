@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>连接体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>连接体</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 连接体, connected bodies</p><h1>连接体</h1>
+<blockquote>
+<p><strong>一句话</strong>：连接体是指通过绳、杆、弹簧、接触面等相互连接，具有运动约束的两个或两个以上物体组成的系统。<br />
+<strong>English</strong>: Connected bodies are systems of two or more objects linked by strings, rods, springs, or contacts, with constraint relations among their motions.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+连接体问题的核心是 <strong>牛顿第二定律（F=ma）</strong> 与 <strong>运动约束</strong>。常用 <strong>整体法</strong>（系统加速度相同时，$F_\text{合} = (m_1+m_2+\cdots)a$ 直接求加速度）和 <strong>隔离法</strong>（将单个物体隔离，列 $F = ma$，求内力或加速度不同的情形）。<br />
+对于加速度不同的连接体（如定滑轮两端物体），需分别隔离并利用约束关系。轻绳张力处处大小相等，轻杆弹力沿杆或视状态而定，弹簧弹力 $F=kx$。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>选择原则</strong>：求外力优先整体法；求内力、加速度不同或需分析多个物体时用隔离法。<br />
+2. <strong>解题步骤</strong>：<br />
+   - 明确研究对象（整体或隔离体）；<br />
+   - 受力分析，画出各力；<br />
+   - 沿运动方向建立坐标轴或正交分解，列牛顿第二定律方程；<br />
+   - 利用物体间加速度关联（如沿绳方向加速度分量相等，绳长不变时加速度大小相等）。  </p>
+<p><strong>典型应用</strong><br />
+高考常见题型：<br />
+- <strong>水平叠加体</strong>：光滑水平面上 A、B 叠放，用力拉 A，求 A、B 间摩擦力。先整体得出 $a = \frac{F}{m_A+m_B}$，再隔离 B 得 $f = m_B a$，与最大静摩擦力比较。<br />
+- <strong>竖直连接体</strong>：定滑轮两侧悬挂 $m_1$、$m_2$（$m_1&gt;m_2$），由 $m_1g - T = m_1a$，$T - m_2g = m_2a$，解得 $a = \frac{(m_1-m_2)g}{m_1+m_2}$，张力 $T = \frac{2m_1m_2g}{m_1+m_2}$。  </p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误认为绳的拉力总等于悬挂物的重力，忽略了加速度时拉力需由牛顿第二定律确定。</li>
+<li>整体法列式时误将系统内力（如两物体间的摩擦力）计入合外力，导致方程错误。</li>
+<li>加速度关联判断失误：如绳连接的物体虽速度大小相等，但若绳不沿直线方向，加速度大小不一定相等；或轻杆连接体角速度相等而线加速度关系混淆。</li>
+<li>隔离列方程时漏画力（常见漏掉某个接触面的弹力或摩擦力），或正方向选取不一致导致符号混乱。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>连接体</td>
+<td>connected bodies (system)</td>
+<td>由约束关联的多个物体</td>
+</tr>
+<tr>
+<td>整体法</td>
+<td>whole-system method</td>
+<td>将系统看作整体分析外力</td>
+</tr>
+<tr>
+<td>隔离法</td>
+<td>isolation method</td>
+<td>单独分析单个物体受力和运动</td>
+</tr>
+<tr>
+<td>绳张力</td>
+<td>rope tension</td>
+<td>轻绳内部拉力，大小沿绳处处相等</td>
+</tr>
+<tr>
+<td>加速度关联</td>
+<td>acceleration constraint</td>
+<td>物体间加速度满足的几何关系</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><a class="dead" title="未收录">整体法与隔离法</a></li>
+<li><a class="dead" title="未收录">绳的弹力</a></li>
+<li><a class="dead" title="未收录">超重与失重</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-05.html">2008-全国Ⅱ-05</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-07.html">2015-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

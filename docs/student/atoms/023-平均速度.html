@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均速度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平均速度</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八上, 机械运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平均速度, average speed, average velocity</p><h1>平均速度</h1>
+<blockquote>
+<p><strong>一句话</strong>：平均速度是总路程与总时间之比，$\bar{v} = s/t$，描述变速运动的整体快慢。
+<strong>English</strong>: Average speed is the total distance divided by total time, $\bar{v} = s/t$, describing the overall pace of non-uniform motion.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>你从家到学校，有时快有时慢，但最后 1 km 走了 15 分钟——平均速度是多少？</p>
+<p>$$\bar{v} = \frac{s}{t} = \frac{1000 \text{ m}}{15 \times 60 \text{ s}} = \frac{1000}{900} \approx 1.11 \text{ m/s}$$</p>
+<p><strong>平均速度 ≠ 速度的平均：</strong>
+- 错误：平均速度 = (速度1 + 速度2) / 2
+- 正确：平均速度 = <strong>总路程 ÷ 总时间</strong></p>
+<p><strong>例子：</strong>
+你开车，前半段路程（50 km）用了 1 小时（50 km/h），后半段路程（50 km）用了 2 小时（25 km/h）</p>
+<ul>
+<li>总路程 = 100 km，总时间 = 3 h</li>
+<li>平均速度 = 100 ÷ 3 ≈ 33.3 km/h（不是（50+25）/2 = 37.5 km/h！）</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>平均速度</strong>（Average Speed / Average Velocity）：</p>
+<p>$$\bar{v} = \frac{s}{t} = \frac{\text{总路程}}{\text{总时间}}$$</p>
+<p>平均速度是对<strong>变速运动</strong>整体快慢的描述，不能反映某一时刻的运动快慢（那是<strong>瞬时速度</strong>）。</p>
+<h3>平均速度 vs. 瞬时速度</h3>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>定义</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均速度 $\bar{v}$</td>
+<td>总路程 / 总时间</td>
+<td>反映整段运动的快慢</td>
+</tr>
+<tr>
+<td>瞬时速度 $v$</td>
+<td>某一时刻的速度</td>
+<td>某一瞬间的快慢</td>
+</tr>
+</tbody>
+</table>
+<p>瞬时速度 = 当 $\Delta t \to 0$ 时的平均速度：$v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t}$</p>
+<h3>常见陷阱</h3>
+<p><strong>陷阱1：路程相等，速度不同的平均速度</strong></p>
+<p>前 $s/2$ 路程速度 $v_1$，后 $s/2$ 路程速度 $v_2$，平均速度：</p>
+<p>$$\bar{v} = \frac{s}{\frac{s/2}{v_1} + \frac{s/2}{v_2}} = \frac{2v_1 v_2}{v_1 + v_2} \neq \frac{v_1 + v_2}{2}$$</p>
+<p>（这是调和平均，不是算术平均！）</p>
+<p><strong>陷阱2：时间相等，速度不同的平均速度</strong></p>
+<p>前 $t/2$ 时间速度 $v_1$，后 $t/2$ 时间速度 $v_2$，平均速度：</p>
+<p>$$\bar{v} = \frac{s}{t} = \frac{v_1 \cdot \frac{t}{2} + v_2 \cdot \frac{t}{2}}{t} = \frac{v_1 + v_2}{2}$$</p>
+<p>（这种情况下，才是算术平均！）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：小明骑自行车，前 6 km 速度 12 km/h，后 4 km 速度 8 km/h，全程平均速度？</p>
+<p>$$t_1 = \frac{6}{12} = 0.5 \text{ h}, \quad t_2 = \frac{4}{8} = 0.5 \text{ h}$$</p>
+<p>$$\bar{v} = \frac{6 + 4}{0.5 + 0.5} = \frac{10}{1} = 10 \text{ km/h}$$</p>
+<p>（本题时间恰好相等，平均速度 = 算术平均 = (12+8)/2 = 10 ✓）</p>
+<p><strong>例2</strong>：某人去程速度 60 km/h，返程同样距离速度 40 km/h，全程平均速度？</p>
+<p>$$\bar{v} = \frac{2 \times 60 \times 40}{60 + 40} = \frac{4800}{100} = 48 \text{ km/h}$$</p>
+<p>（不是 50！这是调和平均）</p>
+<p><strong>易错点：</strong>
+- 平均速度不是速度的算术平均（路程相等时）
+- 只有时间相等时，平均速度才等于速度的算术平均
+- 注意分段时间的计算</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均速度</td>
+<td>average speed</td>
+<td>n.</td>
+<td>The average speed for the whole trip was 50 km/h.</td>
+</tr>
+<tr>
+<td>瞬时速度</td>
+<td>instantaneous speed</td>
+<td>n.</td>
+<td>The speedometer shows the instantaneous speed.</td>
+</tr>
+<tr>
+<td>总路程</td>
+<td>total distance</td>
+<td>n.</td>
+<td>The total distance is 100 km.</td>
+</tr>
+<tr>
+<td>总时间</td>
+<td>total time</td>
+<td>n.</td>
+<td>The total time is 2 hours.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均速度等于总路程除以总时间。</td>
+<td>Average speed equals total distance divided by total time.</td>
+</tr>
+<tr>
+<td>平均速度不等于各段速度的平均。</td>
+<td>Average speed is not the average of individual speeds.</td>
+</tr>
+<tr>
+<td>汽车仪表盘显示的是瞬时速度。</td>
+<td>The car speedometer shows instantaneous speed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级上册.pdf</a> 第1章第4节（待家长核对具体页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 机械运动</li>
+<li><strong>百科</strong>：维基百科"速度"；中文百科"平均速度"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">速度</a></li>
+<li><a href="../atoms/010-匀速直线运动.html">匀速直线运动</a></li>
+<li><a class="dead" title="未收录">机械运动</a></li>
+<li><a class="dead" title="未收录">时间的测量</a></li>
+<li><a class="dead" title="未收录">长度的测量</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-12.html">2008-全国Ⅱ-12</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-01.html">2014-新课标Ⅱ-01</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-09.html">2017-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2023-湖南-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

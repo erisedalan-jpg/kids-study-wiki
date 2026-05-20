@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相似三角形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>相似三角形</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 相似三角形, Similar Triangles</p><h1>相似三角形</h1>
+<blockquote>
+<p><strong>一句话</strong>：两个三角形对应角相等、对应边成比例时，它们相似，其形状相同但大小不一定相等。
+<strong>English</strong>: Triangles are similar if their corresponding angles are congruent and corresponding sides are in proportion, meaning they have the same shape but not necessarily the same size.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与判定定理</strong><br />
+若 $\triangle ABC \sim \triangle DEF$，则 $\angle A=\angle D$，$\angle B=\angle E$，$\angle C=\angle F$，且 $\frac{AB}{DE}=\frac{BC}{EF}=\frac{AC}{DF}=k$（相似比）。判定方法有：<br />
+- <strong>AA（角角）</strong>：两组对应角相等；<br />
+- <strong>SAS（边角边）</strong>：两组对应边成比例且夹角相等；<br />
+- <strong>SSS（边边边）</strong>：三组对应边成比例；<br />
+- <strong>HL（斜边直角边）</strong>：直角三角形中斜边和一直角边对应成比例。</p>
+<p><strong>性质与方法</strong><br />
+相似三角形对应高、中线、角平分线的比均等于相似比 $k$；周长比等于 $k$；面积比等于 $k^2$。解题关键步骤：① 在图形中寻找平行线、共圆或公共角等判定线索；② 锁定对应关系，列比例方程；③ 运用性质求线段长、角度或面积。</p>
+<p><strong>高考典型应用</strong><br />
+常出现在平面几何证明与解三角形题目中，如利用平行线分线段成比例构造相似，或结合圆中的弦切角、相交弦定理找到等角。在解析几何中，常利用三角形相似简化坐标关系；在向量问题中，相似可转化为共线向量的系数比。例如：在 $\triangle ABC$ 中，$D$、$E$ 分别在 $AB$、$AC$ 上且 $DE \parallel BC$，求 $\frac{AD}{DB}$ 或四边形与三角形的面积比，就是典型的相似应用。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>对应关系弄错</strong>：写比例式时未严格对齐公共角或公共边，导致比例式列反而全部错误。</li>
+<li><strong>判定条件混淆</strong>：误认为“两边成比例且一角相等”（非夹角）也能判定相似，这实际是错误命题。</li>
+<li><strong>面积比与相似比混淆</strong>：忘记面积比是相似比的平方，直接用相似比代入面积关系，常见于求面积的最值问题。</li>
+<li><strong>忽略直角三角形的特殊判定</strong>：在直角三角形背景下未优先使用 HL 判定，导致解题绕弯或条件缺失。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相似三角形</td>
+<td>Similar Triangles</td>
+<td>形状相同，大小不一定相等的三角形</td>
+</tr>
+<tr>
+<td>相似比</td>
+<td>Similarity Ratio</td>
+<td>对应边的比值 $k$</td>
+</tr>
+<tr>
+<td>对应角</td>
+<td>Corresponding Angles</td>
+<td>位置对应的相等角</td>
+</tr>
+<tr>
+<td>成比例线段</td>
+<td>Proportional Segments</td>
+<td>对应边长比值相等</td>
+</tr>
+<tr>
+<td>面积比</td>
+<td>Ratio of Areas</td>
+<td>等于相似比的平方</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：图形的相似、比例线段、相似三角形的判定与性质（高中数学课标“几何与图形”板块，具体待核对）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">平行线分线段成比例定理</a></li>
+<li><a class="dead" title="未收录">射影定理</a></li>
+<li><a class="dead" title="未收录">三角形的重心与相似</a></li>
+<li><a href="../atoms/589-解三角形.html">解三角形</a></li>
+<li><a class="dead" title="未收录">圆中的相似与四比例定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-22.html">2010-文-22</a></li>
+<li><a href="../exam/2010-理-22.html">2010-理-22</a></li>
+<li><a href="../exam/2011-理-22.html">2011-理-22</a></li>
+<li><a href="../exam/2012-理-05.html">2012-理-05</a></li>
+<li><a href="../exam/2013-理-08.html">2013-理-08</a></li>
+<li><a href="../exam/2013-理-22.html">2013-理-22</a></li>
+<li><a href="../exam/2015-理-16.html">2015-理-16</a></li>
+<li><a href="../exam/2016-理-22.html">2016-理-22</a></li>
+<li><a href="../exam/2021-理-09.html">2021-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

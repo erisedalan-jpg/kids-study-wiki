@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>受力平衡</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>受力平衡</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 受力平衡, Force equilibrium</p><h1>受力平衡</h1>
+<blockquote>
+<p><strong>一句话</strong>：物体在多个力作用下，保持静止或匀速直线运动状态的条件是合力为零。
+<strong>English</strong>: An object subjected to multiple forces remains at rest or in uniform linear motion when the net external force is zero.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong><br />
+  物体的<strong>平衡状态</strong>包括<strong>静态平衡</strong>（静止）和<strong>动态平衡</strong>（匀速直线运动）。其核心判据是<strong>合力为零</strong>，即<br />
+  $$
+\sum \vec{F} = 0
+$$<br />
+  对于共点力系，常用正交分解法将各力投影到 $x$、$y$ 轴，得到<br />
+  $$
+\begin{cases}
+  \sum F_x = 0 \
+  \sum F_y = 0
+  \end{cases}
+$$<br />
+  若是三力平衡，则可进一步用力的三角形定则或拉密定理求解。当多个物体通过绳、弹簧或接触面关联时，常需结合<strong>整体法</strong>与<strong>隔离法</strong>。</p>
+</li>
+<li>
+<p><strong>关键方法</strong><br />
+  高考中处理平衡问题的标准步骤：  </p>
+</li>
+<li>明确研究对象（单个物体或系统）；  </li>
+<li>对其隔离，并按重力、弹力、摩擦力、其他已知力的顺序进行<strong>受力分析</strong>；  </li>
+<li>建立恰当的坐标系（通常使尽可能多的力落在坐标轴上）；  </li>
+<li>列出平衡方程 $\sum F_x = 0$、$\sum F_y = 0$，对存在转动趋势的题目还可能需力矩平衡 $\sum M = 0$；  </li>
+<li>
+<p>解方程或利用图解（如动态平行四边形、矢量三角形）判断力的大小与方向变化。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  常见设问方式：给定斜面倾角与动摩擦因数，求推力范围使物块不下滑或不滑动；轻杆、轻绳吊挂重物，通过几何关系求绳上张力；动态平衡问题（如缓慢转动的挡板支撑球，分析支持力与挡板压力的变化）。<br />
+  典型情境：重为 $G$ 的匀质圆柱体靠在竖直墙与倾斜挡板之间，挡板与水平面夹角从 $90^\circ$ 缓慢减小到 $0^\circ$，问球对墙的压力如何变化——解题时需将重力沿垂直于墙面与垂直于挡板方向分解，或构建力三角形，观察边长对应的力如何随角度变化。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“速度为零”与“合力为零”</strong>：竖直上抛最高点速度为零但重力始终作用，此时非平衡状态；只有速度为零且加速度为零时才是平衡。  </li>
+<li><strong>受力分析漏力或添力</strong>：常误将“惯性力”“冲力”当作真实力画入受力图，或遗漏接触面上的弹力、摩擦力（如斜面模型中忘掉支持力的水平分量）。  </li>
+<li><strong>动态平衡中错用“主动力”作为恒力</strong>：当三个力中仅大小方向均不变的力（如重力）可作定点，方向不变的力（如墙壁支持力）作定向边，大小方向均可变的力作对边时，学生易把可变的力误认为方向不变，画错矢量三角形导致判断错误。  </li>
+<li><strong>整体法与隔离法混用</strong>：计算系统内物体间相互作用力时，必须隔离该物体单独列平衡方程，若用整体法无法求出内力。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平衡</td>
+<td>Equilibrium</td>
+<td>合力为零的状态</td>
+</tr>
+<tr>
+<td>合力</td>
+<td>Net force</td>
+<td>所有外力的矢量和</td>
+</tr>
+<tr>
+<td>共点力</td>
+<td>Concurrent forces</td>
+<td>作用线交于同一点的一组力</td>
+</tr>
+<tr>
+<td>正交分解</td>
+<td>Perpendicular decomposition</td>
+<td>将力分解到相互垂直的坐标轴上</td>
+</tr>
+<tr>
+<td>动态平衡</td>
+<td>Dynamic equilibrium</td>
+<td>物体缓慢移动但每时每刻均视为平衡的状态</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">牛顿第一定律</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a href="../atoms/532-力的合成与分解.html">力的合成与分解</a></li>
+<li><a href="../atoms/208-共点力平衡.html">共点力平衡</a></li>
+<li><a class="dead" title="未收录">整体法与隔离法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2016-新课标Ⅱ-11.html">2016-新课标Ⅱ-11</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-14.html">2018-新课标Ⅱ-14</a></li>
+<li><a class="dead" title="未收录">2021-湖南-16</a></li>
+<li><a href="../exam/2022-全国乙-14.html">2022-全国乙-14</a></li>
+<li><a href="../exam/2023-新课标-05.html">2023-新课标-05</a></li>
+<li><a href="../exam/2023-新课标-08.html">2023-新课标-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

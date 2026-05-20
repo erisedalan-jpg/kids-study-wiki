@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数最值-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数最值-高中</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数最值-高中, global extreme value, 最大值, 最小值, 函数最值, 最值</p><h2>🎓 函数最值（高中版）</h2>
+<h3>最值与极值的区别</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>极值</th>
+<th>最值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>范围</td>
+<td>局部（邻域内最大/最小）</td>
+<td>全局（整个定义域或指定区间上）</td>
+</tr>
+<tr>
+<td>个数</td>
+<td>可有多个</td>
+<td>只有一个（最大值、最小值各一个）</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>最值必在极值点或端点处取到（闭区间）</td>
+<td>不一定在极值点取到</td>
+</tr>
+</tbody>
+</table>
+<h3>闭区间最值的求法</h3>
+<p>在 $[a,b]$ 上求 $f(x)$ 的最值：</p>
+<ol>
+<li>求 $f'(x)$，找出 $(a,b)$ 内所有驻点 $x_1,x_2,\ldots$</li>
+<li>计算 $f(x_1),f(x_2),\ldots$ 及端点值 $f(a),f(b)$</li>
+<li>比较所有值，最大者为最大值，最小者为最小值</li>
+</ol>
+<h3>开区间/实际问题最值</h3>
+<p>对于开区间 $(a,b)$ 或无穷区间，若 $f(x)$ 只有一个驻点 $x_0$：
+- 若 $x_0$ 是极大值点，则 $f(x_0)$ 是最大值
+- 若 $x_0$ 是极小值点，则 $f(x_0)$ 是最小值</p>
+<p>实际问题中，由实际意义可判断最值存在且只有一个驻点，直接令 $f'=0$ 求解。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 求 $f(x)=x^3-3x^2-9x+5$ 在 $[-2,4]$ 上的最值。</p>
+<p>$f'(x)=3x^2-6x-9=3(x-3)(x+1)$，驻点 $x=-1$（在 $[-2,4]$ 内）和 $x=3$（在 $[-2,4]$ 内）。</p>
+<p>计算所有候选值：
+- $f(-2)=(-8)-12+18+5=3$
+- $f(-1)=(-1)-3+9+5=10$（极大值）
+- $f(3)=27-27-27+5=-22$（极小值）
+- $f(4)=64-48-36+5=-15$</p>
+<p>最大值 $f(-1)=10$，最小值 $f(3)=-22$。</p>
+<p><strong>例 2</strong> 矩形面积最大化：一段长 $20$ m 的篱笆，一侧靠墙围矩形，求面积最大时的尺寸。</p>
+<p>设垂直墙的边长为 $x$，则平行墙的边长为 $20-2x$（$x\in(0,10)$）。</p>
+<p>面积 $S(x)=x(20-2x)=20x-2x^2$，$S'(x)=20-4x$，令 $S'=0$：$x=5$。</p>
+<p>$S(5)=5\times 10=50$ m²（最大值，唯一驻点是极大值）。</p>
+<p><strong>例 3</strong> 最小用料问题：制作容积 $V=1000$ cm³ 的圆柱形罐头（无盖），求表面积最小时的尺寸。</p>
+<p>设底面半径 $r$，高 $h=\dfrac{V}{\pi r^2}=\dfrac{1000}{\pi r^2}$。</p>
+<p>表面积（无盖）：$S(r) = \pi r^2 + 2\pi r h = \pi r^2 + \dfrac{2000}{r}$（$r&gt;0$）</p>
+<p>$S'(r) = 2\pi r - \dfrac{2000}{r^2}$，令 $S'=0$：$2\pi r^3=2000$，$r=\sqrt[3]{\dfrac{1000}{\pi}}\approx 6.83$ cm</p>
+<p>$h=\dfrac{1000}{\pi r^2}=r$（高等于半径时表面积最小）</p>
+<h3>参数范围中的最值</h3>
+<p><strong>例</strong> 已知 $f(x)=x^2-2ax+a$ 在 $[0,1]$ 上最大值为 $2$，求 $a$。</p>
+<p>$f(x)=(x-a)^2+a-a^2$，顶点 $x=a$。</p>
+<p><strong>分情况</strong>：</p>
+<p>(1) $a&lt;0$：$f$ 在 $[0,1]$ 上递增，最大值 $f(1)=1-2a+a=1-a=2$，$a=-1$（满足 $a&lt;0$ ✓）</p>
+<p>(2) $0\leq a\leq \dfrac{1}{2}$：最大值在端点取，$f(0)=a$，$f(1)=1-a$，因 $a\leq\frac{1}{2}$，最大值 $f(0)=a=2$，但 $a=2$ 不满足 $0\leq a\leq\frac{1}{2}$，无解</p>
+<p>(3) $a&gt;\dfrac{1}{2}$（对称情况）类似分析，也需验证</p>
+<h3>易错点</h3>
+<ul>
+<li>闭区间必须<strong>比较端点值</strong>，不能只看极值</li>
+<li>实际问题中必须检验约束条件（定义域）</li>
+<li>分情况讨论时不要漏情况，每种情况都要回代验证</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/极值</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">闭区间最值</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a class="dead" title="未收录">导数应用-生活实际</a> · <a class="dead" title="未收录">导数应用-几何最值</a> · <a class="dead" title="未收录">导数应用-面积最值</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-文-16.html">2012-文-16</a></li>
+<li><a href="../exam/2012-文-18.html">2012-文-18</a></li>
+<li><a href="../exam/2013-理-22.html">2013-理-22</a></li>
+<li><a href="../exam/2014-文-08.html">2014-文-08</a></li>
+<li><a href="../exam/2016-文-10.html">2016-文-10</a></li>
+<li><a href="../exam/2018-理-07.html">2018-理-07</a></li>
+<li><a href="../exam/2019-文-20.html">2019-文-20</a></li>
+<li><a href="../exam/2020-理-21.html">2020-理-21</a></li>
+<li><a class="dead" title="未收录">2021-北京-03</a></li>
+<li><a href="../exam/2021-文-08.html">2021-文-08</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-15</a></li>
+<li><a class="dead" title="未收录">2022-北京-14</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-22</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-06.html">2023-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-19.html">2023-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

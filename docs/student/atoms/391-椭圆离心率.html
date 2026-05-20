@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>椭圆离心率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>椭圆离心率</h1><div class="meta-card"><span><strong>权重</strong>54</span><span><strong>吉林命中</strong>15</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 椭圆离心率, eccentricity of ellipse, 离心率</p><h2>🎓 椭圆离心率</h2>
+<h3>定义</h3>
+<p>椭圆的<strong>离心率</strong>（eccentricity）$e = \dfrac{c}{a}$，其中 $c$ 为半焦距，$a$ 为半长轴。</p>
+<p>$$e = \frac{c}{a} \quad (0 &lt; e &lt; 1)$$</p>
+<p><strong>椭圆离心率范围</strong>：$0 &lt; e &lt; 1$。</p>
+<ul>
+<li>$e \to 0$（$c \to 0$）：椭圆趋近于圆（两焦点重合）</li>
+<li>$e \to 1$（$c \to a$，$b \to 0$）：椭圆趋近于线段（极度扁平）</li>
+<li>$e = 0$：圆（退化情形）</li>
+<li>圆的离心率定义为 $0$</li>
+</ul>
+<h3>离心率与形状的关系</h3>
+<table>
+<thead>
+<tr>
+<th>$e$ 范围</th>
+<th>形状特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接近 0</td>
+<td>接近圆，扁率小</td>
+</tr>
+<tr>
+<td>0.5 左右</td>
+<td>中等椭圆</td>
+</tr>
+<tr>
+<td>接近 1</td>
+<td>极度扁平</td>
+</tr>
+</tbody>
+</table>
+<p><strong>扁率</strong>（oblateness）：$f = 1 - \dfrac{b}{a}$，与离心率关系：$f = 1 - \sqrt{1-e^2}$（待家长核对）</p>
+<h3>离心率与基本量</h3>
+<p>$$e = \frac{c}{a}, \quad b^2 = a^2 - c^2 = a^2(1-e^2)$$</p>
+<p>$$b = a\sqrt{1-e^2}, \quad \frac{b^2}{a^2} = 1-e^2$$</p>
+<h3>焦半径与离心率</h3>
+<p>椭圆上点 $P(x_0, y_0)$，焦点在 $x$ 轴（$F_1(-c,0), F_2(c,0)$）：</p>
+<p>$$|PF_1| = a + ex_0, \quad |PF_2| = a - ex_0$$</p>
+<p>因此离心率越大，焦半径差 $|PF_1| - |PF_2| = 2ex_0$ 越大，点的位置对焦半径影响越显著。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：椭圆 $\dfrac{x^2}{25} + \dfrac{y^2}{16} = 1$，求离心率。</p>
+<p><strong>解</strong>：$a^2=25, b^2=16$，$c=\sqrt{25-16}=3$，$e = \dfrac{3}{5}$</p>
+<p><strong>例2</strong>：椭圆离心率为 $\dfrac{\sqrt{3}}{2}$，短半轴 $b=1$，求方程。</p>
+<p><strong>解</strong>：$e = \dfrac{c}{a} = \dfrac{\sqrt{3}}{2}$，$b^2 = a^2 - c^2$，即 $1 = a^2 - \dfrac{3}{4}a^2 = \dfrac{1}{4}a^2$，故 $a^2=4$，$c^2=3$。</p>
+<p>焦点在 $x$ 轴（因 $a^2=4&gt;b^2=1$）：$\dfrac{x^2}{4} + y^2 = 1$</p>
+<p><strong>例3</strong>：椭圆焦距为 $2\sqrt{5}$，离心率为 $\dfrac{\sqrt{5}}{3}$，求方程（焦点在 $x$ 轴）。</p>
+<p><strong>解</strong>：$2c=2\sqrt{5}$，$c=\sqrt{5}$，$a = \dfrac{c}{e} = \dfrac{\sqrt{5}}{\sqrt{5}/3} = 3$，$b^2 = 9-5=4$</p>
+<p>方程：$\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1$</p>
+<h3>易错点</h3>
+<ul>
+<li>离心率 $e \in (0,1)$（开区间），椭圆不含 $e=0$ 和 $e=1$</li>
+<li>给定离心率和某一条件，要先确定焦点方向（$x$ 轴还是 $y$ 轴）</li>
+<li>$b^2 = a^2(1-e^2)$，注意是 $a^2$ 乘以 $(1-e^2)$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a class="dead" title="未收录">椭圆几何性质</a></li>
+<li><a class="dead" title="未收录">椭圆焦点弦</a></li>
+<li><a class="dead" title="未收录">双曲线离心率</a></li>
+<li><a class="dead" title="未收录">圆锥曲线统一定义</a></li>
+<li><a class="dead" title="未收录">抛物线定义与方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-09.html">2008-理-09</a></li>
+<li><a href="../exam/2009-理-19.html">2009-理-19</a></li>
+<li><a href="../exam/2009-理-21.html">2009-理-21</a></li>
+<li><a href="../exam/2010-文-05.html">2010-文-05</a></li>
+<li><a href="../exam/2011-文-04.html">2011-文-04</a></li>
+<li><a href="../exam/2011-文-19.html">2011-文-19</a></li>
+<li><a href="../exam/2011-理-14.html">2011-理-14</a></li>
+<li><a href="../exam/2011-理-19.html">2011-理-19</a></li>
+<li><a href="../exam/2012-文-04.html">2012-文-04</a></li>
+<li><a href="../exam/2012-理-04.html">2012-理-04</a></li>
+<li><a href="../exam/2013-文-05.html">2013-文-05</a></li>
+<li><a href="../exam/2013-文-07.html">2013-文-07</a></li>
+<li><a href="../exam/2013-文-14.html">2013-文-14</a></li>
+<li><a href="../exam/2013-理-06.html">2013-理-06</a></li>
+<li><a href="../exam/2013-理-14.html">2013-理-14</a></li>
+<li><a href="../exam/2014-文-20.html">2014-文-20</a></li>
+<li><a href="../exam/2014-理-21.html">2014-理-21</a></li>
+<li><a href="../exam/2015-文-06.html">2015-文-06</a></li>
+<li><a href="../exam/2015-文-20.html">2015-文-20</a></li>
+<li><a href="../exam/2015-理-11.html">2015-理-11</a></li>
+<li><a href="../exam/2015-理-19.html">2015-理-19</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2016-理-11.html">2016-理-11</a></li>
+<li><a href="../exam/2016-理-19.html">2016-理-19</a></li>
+<li><a href="../exam/2017-理-09.html">2017-理-09</a></li>
+<li><a href="../exam/2018-文-04.html">2018-文-04</a></li>
+<li><a href="../exam/2018-文-06.html">2018-文-06</a></li>
+<li><a href="../exam/2018-文-11.html">2018-文-11</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2018-理-05.html">2018-理-05</a></li>
+<li><a href="../exam/2018-理-12.html">2018-理-12</a></li>
+<li><a href="../exam/2019-文-05.html">2019-文-05</a></li>
+<li><a href="../exam/2019-文-10.html">2019-文-10</a></li>
+<li><a href="../exam/2019-文-12.html">2019-文-12</a></li>
+<li><a href="../exam/2019-文-20.html">2019-文-20</a></li>
+<li><a href="../exam/2019-理-11.html">2019-理-11</a></li>
+<li><a href="../exam/2019-理-16.html">2019-理-16</a></li>
+<li><a href="../exam/2020-文-19.html">2020-文-19</a></li>
+<li><a href="../exam/2020-理-15.html">2020-理-15</a></li>
+<li><a href="../exam/2020-理-19.html">2020-理-19</a></li>
+<li><a class="dead" title="未收录">2021-北京-05</a></li>
+<li><a href="../exam/2021-理-11.html">2021-理-11</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-16</a></li>
+<li><a href="../exam/2022-理-11.html">2022-理-11</a></li>
+<li><a class="dead" title="未收录">2023-北京-12</a></li>
+<li><a class="dead" title="未收录">2023-北京-19</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-12</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

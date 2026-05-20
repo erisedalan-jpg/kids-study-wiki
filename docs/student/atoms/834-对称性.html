@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对称性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对称性</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对称性</p><h1>对称性</h1>
+<blockquote>
+<p><strong>一句话</strong>：对称性指图形或函数在反射、旋转等变换下保持不变的几何性质，高考中主要研究函数图像的轴对称与中心对称。
+<strong>English</strong>: Symmetry is the property by which a figure or function remains invariant under transformations such as reflection or rotation, with axial symmetry and central symmetry being the primary focus in the Gaokao.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+函数 $f(x)$ 的对称性：<br />
+- <strong>轴对称</strong>：若 $f(a+x)=f(a-x)$ 恒成立，则 $f(x)$ 的图像关于直线 $x=a$ 对称。特别地，当 $a=0$ 时，$f(x)=f(-x)$，即 $f(x)$ 为偶函数，图像关于 $y$ 轴对称。<br />
+- <strong>中心对称</strong>：若 $f(a+x)+f(a-x)=2b$ 恒成立，则图像关于点 $(a,b)$ 中心对称。特别地，当 $a=0,b=0$ 时，$f(-x)=-f(x)$，即 $f(x)$ 为奇函数，图像关于原点对称。<br />
+几何图形的对称性：圆锥曲线中，椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 与双曲线均关于坐标轴和原点对称；抛物线 $y^2=2px$ 关于 $x$ 轴对称。利用对称性可简化方程、设点、求最值等。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>对称性的判定与应用</strong>：利用定义等式 $f(a+x)=f(a-x)$ 或 $f(x)=f(2a-x)$ 确定对称轴，用 $f(x)+f(2a-x)=2b$ 确定对称中心。<br />
+2. <strong>对称与周期的转化</strong>：若函数既有两条对称轴 $x=a$ 和 $x=b$ ($a\neq b$)，则 $T=2|a-b|$ 为一个周期；若有一条对称轴和一个对称中心，则 $T=4|a-b|$ 为一个周期。<br />
+3. <strong>对称设点与构造</strong>：在圆锥曲线中，若两点关于某点或某直线对称，可设对称点坐标并利用中点坐标公式与斜率关系建立方程。</p>
+<p><strong>典型高考设问</strong><br />
+- 已知抽象函数满足 $f(1+x)=f(1-x)$ 或 $f(x)+f(2-x)=4$，求函数值之和、参数或判断周期性。<br />
+- 在导数综合题中，利用极值点偏移的对称性构造对称差函数进行证明。<br />
+- 解析几何中，求以某定点为中点的弦所在直线方程，或验证两定点关于某直线对称。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆函数自身的对称性与两个函数图像的对称性</strong>：$f(a+x)=f(a-x)$ 表示 $f(x)$ 自身关于 $x=a$ 对称；而 $y=f(a+x)$ 与 $y=f(a-x)$ 关于 $x=0$ 对称，二者条件不同。  </li>
+<li><strong>忽略定义域对对称性的约束</strong>：对称轴或对称中心必须在定义域内（或定义域关于对称轴/中心对称），否则相关结论不成立。  </li>
+<li><strong>双对称推导周期时误用系数</strong>：牢记“两轴或两心→$T=2|a-b|$，一轴一心→$T=4|a-b|$”，不能随意更改系数。  </li>
+<li><strong>对称性与奇偶性混淆</strong>：奇偶性仅限于原点或 $y$ 轴，而一般对称性可平移至任意直线或点，需注意推广形式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对称性</td>
+<td>symmetry</td>
+<td>变换下的不变性质</td>
+</tr>
+<tr>
+<td>轴对称</td>
+<td>axial symmetry</td>
+<td>图像沿一直线翻折重合</td>
+</tr>
+<tr>
+<td>中心对称</td>
+<td>central symmetry</td>
+<td>图像绕一点旋转180°重合</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 $f(-x)=f(x)$</td>
+</tr>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 $f(-x)=-f(x)$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a class="dead" title="未收录">函数的周期性</a></li>
+<li><a class="dead" title="未收录">函数图像的对称变换</a></li>
+<li><a class="dead" title="未收录">圆锥曲线的对称性</a></li>
+<li><a class="dead" title="未收录">极值点偏移</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-07.html">2008-理-07</a></li>
+<li><a href="../exam/2011-理-12.html">2011-理-12</a></li>
+<li><a href="../exam/2014-理-03.html">2014-理-03</a></li>
+<li><a href="../exam/2015-文-15.html">2015-文-15</a></li>
+<li><a href="../exam/2017-文-04.html">2017-文-04</a></li>
+<li><a href="../exam/2017-理-02.html">2017-理-02</a></li>
+<li><a href="../exam/2019-文-16.html">2019-文-16</a></li>
+<li><a href="../exam/2019-理-08.html">2019-理-08</a></li>
+<li><a href="../exam/2019-理-11.html">2019-理-11</a></li>
+<li><a href="../exam/2020-理-19.html">2020-理-19</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-12</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-19.html">2024-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

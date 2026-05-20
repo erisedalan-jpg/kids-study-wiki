@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热力学第一定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热力学第一定律</h1><div class="meta-card"><span><strong>权重</strong>61</span><span><strong>吉林命中</strong>11</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 热力学定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热力学第一定律, first law of thermodynamics, 能量守恒定律</p><h2>🎓 热力学第一定律</h2>
+<h3>表述</h3>
+<p>外界对系统做的功 $W$ 与系统吸收的热量 $Q$，共同决定系统内能的变化量 $\Delta U$：</p>
+<p>$$\boxed{\Delta U = W + Q}$$</p>
+<blockquote>
+<p>热力学第一定律是<strong>能量守恒定律</strong>在热力学过程中的具体形式。</p>
+</blockquote>
+<h3>符号规定（人教版）</h3>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>正值含义</th>
+<th>负值含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$W$</td>
+<td>外界对系统做正功（压缩气体）</td>
+<td>系统对外界做功（气体膨胀）</td>
+</tr>
+<tr>
+<td>$Q$</td>
+<td>系统<strong>吸热</strong></td>
+<td>系统<strong>放热</strong></td>
+</tr>
+<tr>
+<td>$\Delta U$</td>
+<td>内能<strong>增加</strong></td>
+<td>内能<strong>减少</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：部分教材写成 $\Delta U = Q - W'$（$W'$ 为系统对外做功），符号定义不同但物理含义相同。高考前务必核对所用教材的符号规定。</p>
+</blockquote>
+<h3>常见过程的分析</h3>
+<table>
+<thead>
+<tr>
+<th>过程</th>
+<th>$W$</th>
+<th>$Q$</th>
+<th>$\Delta U$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等温膨胀</td>
+<td>$W &lt; 0$（气体做功）</td>
+<td>$Q &gt; 0$（吸热补偿）</td>
+<td>$\Delta U = 0$</td>
+</tr>
+<tr>
+<td>绝热压缩</td>
+<td>$W &gt; 0$</td>
+<td>$Q = 0$</td>
+<td>$\Delta U &gt; 0$（温度升高）</td>
+</tr>
+<tr>
+<td>等容加热</td>
+<td>$W = 0$</td>
+<td>$Q &gt; 0$</td>
+<td>$\Delta U = Q &gt; 0$</td>
+</tr>
+<tr>
+<td>等温压缩</td>
+<td>$W &gt; 0$</td>
+<td>$Q &lt; 0$（放热）</td>
+<td>$\Delta U = 0$</td>
+</tr>
+</tbody>
+</table>
+<h3>热机原理</h3>
+<p>热机从高温热源吸热 $Q_1$，对外做功 $W$，向低温热源放热 $Q_2$：</p>
+<p>$$W = Q_1 - Q_2 \quad (\text{能量守恒})$$</p>
+<p>$$\eta = \frac{W}{Q_1} = \frac{Q_1 - Q_2}{Q_1} = 1 - \frac{Q_2}{Q_1} &lt; 1$$</p>
+<p>热机效率永远小于 100%（因 $Q_2 &gt; 0$），这与热力学第二定律一致。</p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：对一定量气体压缩，外界对气体做功 $W = 300\ \text{J}$，同时气体向外放热 $Q_{放} = 100\ \text{J}$，求气体内能变化量。</p>
+<p><strong>解</strong>：</p>
+<ul>
+<li>$W = +300\ \text{J}$（外界对气体做正功）</li>
+<li>气体放热，故系统吸收热量 $Q = -100\ \text{J}$</li>
+</ul>
+<p>$$\Delta U = W + Q = 300 + (-100) = +200\ \text{J}$$</p>
+<p>气体内能<strong>增加</strong> 200 J。</p>
+<p><strong>例题 2</strong>：某热机每次循环吸热 $1000\ \text{J}$，放热 $600\ \text{J}$，求做功和热机效率。</p>
+<p><strong>解</strong>：</p>
+<p>$$W = Q_1 - Q_2 = 1000 - 600 = 400\ \text{J}$$</p>
+<p>$$\eta = \frac{W}{Q_1} = \frac{400}{1000} = 40\%$$</p>
+<h3>易错点</h3>
+<ol>
+<li>放热时 $Q$ 取<strong>负值</strong>代入公式，不要把 $Q_{放}$ 直接当正值</li>
+<li>外界对气体做功（压缩）时 $W &gt; 0$；气体对外做功（膨胀）时 $W &lt; 0$（与功的符号规定一致）</li>
+<li>第一定律是能量守恒，不说明过程方向性（方向性由第二定律判断）</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第三章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/热力学第一定律">热力学第一定律 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/441-热力学第二定律.html">热力学第二定律</a></li>
+<li><a class="dead" title="未收录">内能-高中</a></li>
+<li><a class="dead" title="未收录">能量转化效率</a></li>
+<li><a class="dead" title="未收录">永动机不可能性</a></li>
+<li><a class="dead" title="未收录">熵-初步</a></li>
+<li><a class="dead" title="未收录">理想气体</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-01.html">2008-全国Ⅱ-01</a></li>
+<li><a href="../exam/2009-全国Ⅱ-03.html">2009-全国Ⅱ-03</a></li>
+<li><a href="../exam/2011-新课标-13.html">2011-新课标-13</a></li>
+<li><a href="../exam/2012-新课标-13.html">2012-新课标-13</a></li>
+<li><a class="dead" title="未收录">2013-北京-01</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-14</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-13.html">2013-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-13</a></li>
+<li><a class="dead" title="未收录">2015-北京-01</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-13</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-13.html">2016-新课标Ⅱ-13</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-13.html">2017-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-13</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-13.html">2018-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-13</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-13.html">2020-新课标Ⅱ-13</a></li>
+<li><a href="../exam/2021-全国乙-13.html">2021-全国乙-13</a></li>
+<li><a class="dead" title="未收录">2021-湖南-15</a></li>
+<li><a href="../exam/2022-全国乙-13.html">2022-全国乙-13</a></li>
+<li><a class="dead" title="未收录">2022-北京-03</a></li>
+<li><a href="../exam/2023-新课标-08.html">2023-新课标-08</a></li>
+<li><a class="dead" title="未收录">2024-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

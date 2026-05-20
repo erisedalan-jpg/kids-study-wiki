@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>条件概率初步</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>条件概率初步</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 概率, 第十章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 条件概率初步, conditional probability, 条件概率, 全概率公式</p><h2>🎓 条件概率初步</h2>
+<h3>定义</h3>
+<p>在事件 $A$ 已经发生的条件下，事件 $B$ 发生的概率称为 $B$ 在 $A$ 下的<strong>条件概率</strong>，记作 $P(B|A)$：</p>
+<p>$$P(B|A) = \frac{P(AB)}{P(A)} \quad (P(A) &gt; 0)$$</p>
+<p><strong>直观理解</strong>：$A$ 已发生，样本空间缩小为 $A$，$B$ 在新样本空间中发生的比例。</p>
+<h3>乘法公式</h3>
+<p>由条件概率定义推出：</p>
+<p>$$P(AB) = P(A) \cdot P(B|A) = P(B) \cdot P(A|B)$$</p>
+<p><strong>注意</strong>：若 $A, B$ 独立，则 $P(B|A) = P(B)$，乘法公式退化为 $P(AB) = P(A)P(B)$。</p>
+<h3>全概率公式</h3>
+<p>若 $A_1, A_2, \ldots, A_n$ 是 $\Omega$ 的一个<strong>完备事件组</strong>（两两互斥且并为 $\Omega$），则对任意事件 $B$：</p>
+<p>$$P(B) = \sum_{i=1}^n P(A_i) P(B|A_i)$$</p>
+<p><strong>直觉</strong>：$B$ 通过各种"路径"（$A_i$）发生，全概率是加权求和。</p>
+<h3>贝叶斯公式（逆概率公式）</h3>
+<p>已知 $B$ 发生，推断是通过哪条"路径"$A_k$ 发生的概率：</p>
+<p>$$P(A_k|B) = \frac{P(A_k)P(B|A_k)}{\sum_{i=1}^n P(A_i)P(B|A_i)}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（条件概率）</strong>：掷两枚骰子，已知两点数之和为偶数，求两点数都是偶数的概率。</p>
+<p><strong>解</strong>：$A =$ "和为偶数"，$B =$ "都是偶数"</p>
+<p>$P(A) = \dfrac{18}{36} = \dfrac{1}{2}$（奇奇或偶偶），$P(AB) = \dfrac{9}{36} = \dfrac{1}{4}$（都偶数）</p>
+<p>$P(B|A) = \dfrac{P(AB)}{P(A)} = \dfrac{1/4}{1/2} = \dfrac{1}{2}$</p>
+<p><strong>例2（全概率）</strong>：工厂有甲、乙两条生产线，甲生产占 60%，次品率 2%；乙生产占 40%，次品率 3%。随机取一件，次品概率？</p>
+<p><strong>解</strong>：$P(\text{次品}) = 0.6 \times 0.02 + 0.4 \times 0.03 = 0.012 + 0.012 = 0.024$</p>
+<p><strong>例3（贝叶斯）</strong>：接上题，已知是次品，来自甲线的概率？</p>
+<p><strong>解</strong>：$P(\text{甲}|\text{次品}) = \dfrac{0.6 \times 0.02}{0.024} = \dfrac{0.012}{0.024} = 0.5$</p>
+<h3>独立与条件概率</h3>
+<p>若 $A, B$ 独立：$P(B|A) = P(B)$，即已知 $A$ 发生对 $B$ 的概率无影响。</p>
+<p>这正是独立性的直观含义。</p>
+<h3>易错点</h3>
+<ul>
+<li>$P(B|A) \neq P(AB)$（条件概率是在 $A$ 内的比例，不是联合概率）</li>
+<li>$P(A|B) \neq P(B|A)$（条件概率一般不可交换）</li>
+<li>全概率公式要求 $A_i$ 构成完备事件组（两两互斥且并为全集）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第十章（此内容深度可能为选修或拓展，待家长核对）</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第十章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/条件概率">条件概率 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a href="../atoms/318-事件的独立性.html">事件的独立性</a></li>
+<li><a class="dead" title="未收录">概率的基本性质</a></li>
+<li><a href="../atoms/320-古典概型.html">古典概型</a></li>
+<li><a class="dead" title="未收录">概率应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-理-05.html">2014-理-05</a></li>
+<li><a href="../exam/2016-理-18.html">2016-理-18</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

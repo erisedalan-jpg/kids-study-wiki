@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>组合概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>组合概念</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 组合概念, combination, 组合, 无序选取</p><h2>🎓 组合概念</h2>
+<h3>定义</h3>
+<p>从 $n$ 个<strong>不同</strong>元素中取出 $m$（$0 \leq m \leq n$）个元素，不考虑顺序，组成一组，称为从 $n$ 个不同元素中取 $m$ 个元素的一个<strong>组合</strong>。</p>
+<p><strong>组合数</strong>：所有这样的组合的总数，记作 $C_n^m$（或 $\binom{n}{m}$）。</p>
+<p>规定 $C_n^0 = 1$（什么都不选，只有空集一种），$C_n^n = 1$（全选，只有一种）。</p>
+<h3>与排列的本质区别</h3>
+<p>组合<strong>不计顺序</strong>：从 {A, B, C} 中取 2 个元素：
+- <strong>排列</strong>：AB, BA, AC, CA, BC, CB → 共 6 种（$A_3^2 = 6$）
+- <strong>组合</strong>：{A,B}, {A,C}, {B,C} → 共 3 种（$C_3^2 = 3$）</p>
+<p>关系：$A_n^m = C_n^m \times m!$（每个组合对应 $m!$ 个排列）</p>
+<h3>判断是排列还是组合</h3>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选出……组成一组、选出……委员会</td>
+<td>组合（无顺序）</td>
+</tr>
+<tr>
+<td>排成一排、站位、编号、顺序</td>
+<td>排列（有顺序）</td>
+</tr>
+<tr>
+<td>选出……去参加（不分职务）</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>选出……担任不同职务</td>
+<td>排列</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：从 5 人中选 3 人组成小组，有多少种选法？</p>
+<p>$$C_5^3 = 10 \text{ 种}$$</p>
+<p><strong>例2</strong>：一个凸多边形有 8 个顶点，对角线共有多少条？</p>
+<p><strong>解</strong>：任意两顶点连线共 $C_8^2 = 28$ 条，减去 8 条边：$28 - 8 = 20$ 条对角线。</p>
+<p><strong>例3</strong>：平面上有 10 个点，无三点共线，可以连多少条线段？多少个三角形？</p>
+<p><strong>解</strong>：
+- 线段：$C_{10}^2 = 45$ 条
+- 三角形：$C_{10}^3 = 120$ 个</p>
+<h3>组合数的性质</h3>
+<p>$$C_n^m = C_n^{n-m} \quad \text{（互补性）}$$</p>
+<p>$$C_n^m + C_n^{m+1} = C_{n+1}^{m+1} \quad \text{（帕斯卡恒等式）}$$</p>
+<p>$$\sum_{k=0}^n C_n^k = 2^n$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>有无顺序判断失误</strong>：是否要区分位置/职务，是否计顺序</li>
+<li><strong>$C_n^m = C_n^{n-m}$</strong>：$C_{10}^8 = C_{10}^2 = 45$，避免大数阶乘计算</li>
+<li><strong>$C_n^0 = 1$</strong>：一个都不选也是合法的组合（空集）</li>
+<li><strong>多个限制同时处理</strong>：先处理限制最多的元素，再处理其余</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.3，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/组合">组合 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a class="dead" title="未收录">组合应用-分组问题</a></li>
+<li><a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-10.html">2009-文-10</a></li>
+<li><a href="../exam/2012-理-02.html">2012-理-02</a></li>
+<li><a href="../exam/2016-理-05.html">2016-理-05</a></li>
+<li><a href="../exam/2017-理-06.html">2017-理-06</a></li>
+<li><a href="../exam/2021-理-06.html">2021-理-06</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

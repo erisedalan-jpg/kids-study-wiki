@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>共轭复数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>共轭复数</h1><div class="meta-card"><span><strong>权重</strong>28</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 共轭复数, complex conjugate</p><h1>共轭复数</h1>
+<blockquote>
+<p><strong>一句话</strong>：复数 $z = a+bi\ (a,b\in\mathbb{R})$ 的共轭复数为 $\bar{z}=a-bi$，实部相等，虚部互为相反数。
+<strong>English</strong>: The complex conjugate of $a+bi$ is $a-bi$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：设 $z = a+bi$，记 $\bar{z}=a-bi$。共轭复数的核心性质：
+  $$\bar{z_1 \pm z_2} = \bar{z_1} \pm \bar{z_2},\quad \overline{z_1z_2} = \bar{z_1}\,\bar{z_2},\quad \overline{\left(\frac{z_1}{z_2}\right)} = \frac{\bar{z_1}}{\bar{z_2}}\ (z_2\neq 0)$$
+  $z+\bar{z}=2a$，$z-\bar{z}=2bi$，$z\cdot\bar{z}=a^2+b^2=|z|^2$。对实系数一元二次方程 $ax^2+bx+c=0$，若 $\Delta&lt;0$，则两根为共轭复数。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：涉及共轭复数与方程、模的混合问题，常设 $z=a+bi$（或直接利用 $\bar{z}$ 表达），代入后利用复数相等（实部与实部相等，虚部与虚部相等）建立方程组求解。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常在选择题或填空题出现，要求计算 $|z|$、求 $\bar{z}$、解含 $\bar{z}$ 的方程、或判断复数对应的点所在象限。例如：“若 $z\cdot\bar{z}+2z=8+4i$，求 $z$”，可通过设 $z=a+bi$ 结合共轭性质转化为实数方程组解决。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆共轭与相反数：$z=a+bi$ 的相反数是 $-a-bi$，而共轭是 $a-bi$，解题时代入错误。</li>
+<li>计算 $z\cdot\bar{z}$ 时忘记平方：误算为 $a^2+b$ 或漏掉 $b^2$ 项，正确为 $a^2+b^2$。</li>
+<li>误用共轭性质到除法：$\overline{(z_1/z_2)}=\bar{z_1}/\bar{z_2}$ 必须在分母不等于零时成立，忽略分母为零的讨论。</li>
+<li>实系数方程虚根成对共轭的前提是系数均为实数，若题中系数含虚数则不成立。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>共轭复数</td>
+<td>complex conjugate</td>
+<td>实部相同，虚部互为相反数的复数</td>
+</tr>
+<tr>
+<td>实部</td>
+<td>real part</td>
+<td>$z=a+bi$ 中的 $a$</td>
+</tr>
+<tr>
+<td>虚部</td>
+<td>imaginary part</td>
+<td>$z=a+bi$ 中的 $b$</td>
+</tr>
+<tr>
+<td>模</td>
+<td>modulus</td>
+<td>$</td>
+</tr>
+<tr>
+<td>复数相等</td>
+<td>equality of complex numbers</td>
+<td>实部与虚部分别对应相等</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">复数的四则运算</a></li>
+<li><a class="dead" title="未收录">复数的模</a></li>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a class="dead" title="未收录">实系数一元二次方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-01.html">2009-理-01</a></li>
+<li><a href="../exam/2010-理-02.html">2010-理-02</a></li>
+<li><a href="../exam/2011-理-01.html">2011-理-01</a></li>
+<li><a href="../exam/2012-文-02.html">2012-文-02</a></li>
+<li><a href="../exam/2012-理-03.html">2012-理-03</a></li>
+<li><a href="../exam/2013-理-02.html">2013-理-02</a></li>
+<li><a href="../exam/2014-文-02.html">2014-文-02</a></li>
+<li><a href="../exam/2016-文-02.html">2016-文-02</a></li>
+<li><a href="../exam/2018-文-02.html">2018-文-02</a></li>
+<li><a href="../exam/2018-理-02.html">2018-理-02</a></li>
+<li><a href="../exam/2019-文-02.html">2019-文-02</a></li>
+<li><a href="../exam/2019-理-01.html">2019-理-01</a></li>
+<li><a href="../exam/2019-理-02.html">2019-理-02</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-02</a></li>
+<li><a href="../exam/2021-理-01.html">2021-理-01</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-02</a></li>
+<li><a href="../exam/2022-理-02.html">2022-理-02</a></li>
+<li><a class="dead" title="未收录">2023-北京-02</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

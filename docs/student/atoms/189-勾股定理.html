@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>勾股定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>勾股定理</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 勾股定理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 勾股定理, Pythagorean theorem, 毕达哥拉斯定理, 商高定理</p><h1>勾股定理</h1>
+<blockquote>
+<p><strong>一句话</strong>：直角三角形两直角边的平方和等于斜边的平方：$a^2 + b^2 = c^2$。
+<strong>English</strong>: In a right triangle, the sum of the squares of the two legs equals the square of the hypotenuse: $a^2+b^2=c^2$.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>定理内容</h3>
+<p>直角三角形中，若两直角边长分别为 $a$、$b$，斜边长为 $c$，则：</p>
+<p>$$\boxed{a^2 + b^2 = c^2}$$</p>
+<p><strong>口诀</strong>：勾三股四弦五（最经典的整数例子：$3^2+4^2=5^2$）。</p>
+<h3>直观理解：三个正方形</h3>
+<p>以三角形三边各作正方形，则两直角边上的正方形面积之和 = 斜边上的正方形面积。</p>
+<h3>已知两边求第三边</h3>
+<table>
+<thead>
+<tr>
+<th>已知</th>
+<th>求</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$a$、$b$</td>
+<td>斜边 $c$</td>
+<td>$c = \sqrt{a^2+b^2}$</td>
+</tr>
+<tr>
+<td>$c$、$a$</td>
+<td>直角边 $b$</td>
+<td>$b = \sqrt{c^2-a^2}$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例</strong>：直角三角形两直角边为 5 和 12，斜边为？</p>
+<p>$$c = \sqrt{5^2+12^2} = \sqrt{25+144} = \sqrt{169} = 13$$</p>
+<h3>历史小贴士</h3>
+<p>中国古代称直角三角形为"勾股形"，直角边短者为"勾"，长者为"股"，斜边为"弦"。《周髀算经》记载了商高与周公的对话（约公元前 1000 年）。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>定理及证明思路</h3>
+<p><strong>定理</strong>：设 $\triangle ABC$ 中，$\angle C=90°$，$BC=a$，$AC=b$，$AB=c$，则 $a^2+b^2=c^2$。</p>
+<p><strong>面积法证明（赵爽弦图）</strong>：以 $c$ 为边作大正方形，内置 4 个全等直角三角形，中间空出小正方形：</p>
+<p>$$c^2 = 4 \cdot \frac{1}{2}ab + (a-b)^2 = 2ab + a^2 - 2ab + b^2 = a^2+b^2 \checkmark$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：梯子长 10 m，底部距墙 6 m，梯子顶端离地多高？</p>
+<p>$$h = \sqrt{10^2-6^2} = \sqrt{64} = 8 \text{ m}$$</p>
+<p><strong>例 2</strong>：等腰三角形腰长 13，底边长 10，求高。</p>
+<p>高将底边平分为 5，故 $h = \sqrt{13^2-5^2} = \sqrt{144} = 12$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 把斜边平方写在等号左侧（$c^2 = a^2+b^2$ 才对）</li>
+<li>❌ 对非直角三角形套用公式</li>
+<li>❌ 开根后忘记取正值（长度为正）</li>
+</ul>
+<h3>知识联系</h3>
+<p>定理逆命题 →<a class="dead" title="未收录">勾股定理逆定理</a>；整数解 →<a class="dead" title="未收录">勾股数</a>；坐标系中两点距离公式由勾股定理导出；立体几何中空间距离计算依然用勾股定理；与<a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a>、<a class="dead" title="未收录">正方形</a>结合解综合题。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>勾股定理</td>
+<td>Pythagorean theorem</td>
+</tr>
+<tr>
+<td>直角三角形</td>
+<td>right triangle</td>
+</tr>
+<tr>
+<td>直角边（勾/股）</td>
+<td>leg</td>
+</tr>
+<tr>
+<td>斜边（弦）</td>
+<td>hypotenuse</td>
+</tr>
+<tr>
+<td>勾股数</td>
+<td>Pythagorean triple</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第17章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·勾股定理</li>
+<li>拓展：《周髀算经》原文；欧拉的多种证明方法（超过400种已知证法）</li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实页码。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">勾股定理逆定理</a> · <a class="dead" title="未收录">勾股数</a> · <a class="dead" title="未收录">勾股定理应用</a> · <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a> · <a class="dead" title="未收录">直角三角形</a> · <a class="dead" title="未收录">二次根式定义</a> · <a class="dead" title="未收录">正方形</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-12.html">2008-理-12</a></li>
+<li><a href="../exam/2009-文-05.html">2009-文-05</a></li>
+<li><a href="../exam/2010-理-12.html">2010-理-12</a></li>
+<li><a href="../exam/2011-文-22.html">2011-文-22</a></li>
+<li><a href="../exam/2011-理-15.html">2011-理-15</a></li>
+<li><a href="../exam/2013-理-11.html">2013-理-11</a></li>
+<li><a href="../exam/2014-文-11.html">2014-文-11</a></li>
+<li><a href="../exam/2014-理-12.html">2014-理-12</a></li>
+<li><a href="../exam/2014-理-18.html">2014-理-18</a></li>
+<li><a href="../exam/2016-文-22.html">2016-文-22</a></li>
+<li><a href="../exam/2017-理-07.html">2017-理-07</a></li>
+<li><a href="../exam/2018-理-07.html">2018-理-07</a></li>
+<li><a href="../exam/2018-理-10.html">2018-理-10</a></li>
+<li><a href="../exam/2019-文-16.html">2019-文-16</a></li>
+<li><a href="../exam/2020-文-11.html">2020-文-11</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

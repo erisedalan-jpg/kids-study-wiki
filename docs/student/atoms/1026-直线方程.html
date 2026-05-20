@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线方程</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线方程</p><h1>直线方程</h1>
+<blockquote>
+<p><strong>一句话</strong>：在平面直角坐标系中，用一个关于 $x, y$ 的一次方程 $Ax + By + C = 0$（$A, B$ 不同时为 $0$）来表示一条直线的全体点集。
+<strong>English</strong>: An equation of the form $Ax + By + C = 0$ ($A$ and $B$ not both zero) that represents all points on a straight line in a Cartesian plane.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<h3>定义与形式</h3>
+<p>直线的本质是平面内与一个<strong>方向向量</strong>或<strong>法向量</strong>相关的点集。其方程均为一元一次方程，高考核心考查五种形式及其互化：</p>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>方程</th>
+<th>适用条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点斜式</td>
+<td>$y - y_0 = k(x - x_0)$</td>
+<td>已知斜率 $k$ 及一点 $(x_0, y_0)$</td>
+</tr>
+<tr>
+<td>斜截式</td>
+<td>$y = kx + b$</td>
+<td>已知斜率 $k$ 及纵截距 $b$</td>
+</tr>
+<tr>
+<td>两点式</td>
+<td>$\frac{y - y_1}{y_2 - y_1} = \frac{x - x_1}{x_2 - x_1}$</td>
+<td>已知两点 $(x_1, y_1), (x_2, y_2)$，且 $x_1 \neq x_2, y_1 \neq y_2$</td>
+</tr>
+<tr>
+<td>截距式</td>
+<td>$\frac{x}{a} + \frac{y}{b} = 1$</td>
+<td>已知横截距 $a$、纵截距 $b$，且 $a \neq 0, b \neq 0$</td>
+</tr>
+<tr>
+<td>一般式</td>
+<td>$Ax + By + C = 0$</td>
+<td>$A, B$ 不同时为 $0$，万能形式</td>
+</tr>
+</tbody>
+</table>
+<p>其中，斜率 $k = \tan\alpha$（$\alpha$ 为倾斜角，$\alpha \in [0°, 180°)$），且当 $B \neq 0$ 时，一般式的斜率为 $k = -\frac{A}{B}$，纵截距为 $-\frac{C}{B}$。</p>
+<h3>关键方法：位置关系的判定</h3>
+<p>两直线 $l_1: A_1x + B_1y + C_1 = 0$，$l_2: A_2x + B_2y + C_2 = 0$ 的位置关系判定流程：</p>
+<ul>
+<li><strong>平行</strong>：$A_1B_2 - A_2B_1 = 0$ 且 $A_1C_2 - A_2C_1 \neq 0$（斜率相等但截距不等）  </li>
+<li><strong>重合</strong>：$A_1B_2 - A_2B_1 = 0$ 且 $A_1C_2 - A_2C_1 = 0$（方向向量共线且公共点存在）  </li>
+<li><strong>相交</strong>：$A_1B_2 - A_2B_1 \neq 0$  </li>
+<li><strong>垂直</strong>特例：$A_1A_2 + B_1B_2 = 0$（或斜率之积 $k_1k_2 = -1$，前提是斜率均存在）</li>
+</ul>
+<p><strong>距离公式</strong>是高考计算类题目的必用工具：
+- 点 $(x_0, y_0)$ 到直线 $Ax + By + C = 0$ 的距离：$d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$
+- 两平行直线 $Ax + By + C_1 = 0$ 与 $Ax + By + C_2 = 0$ 的距离：$d = \frac{|C_1 - C_2|}{\sqrt{A^2 + B^2}}$</p>
+<h3>典型应用</h3>
+<p>高考常以以下角度设问：
+1. <strong>求直线方程</strong>：给定几何条件（如过定点、与已知直线垂直/平行、截距相等），选择合适形式设方程并解参数。选择题偏爱考查截距式与一般式的互化。
+2. <strong>对称问题</strong>：点关于直线对称、直线关于点对称、直线关于直线对称，核心是转化为点对称坐标公式 $\left( x' = 2a - x,\ y' = 2b - y \right)$ 及中点落在直线上。
+3. <strong>与圆、圆锥曲线的综合</strong>：直线与曲线的位置关系（联立消元，$\Delta$ 判别式），弦长公式 $|AB| = \sqrt{1+k^2} \cdot |x_1 - x_2|$ 是高频计算点。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略斜率不存在的情况</strong>：使用点斜式、斜截式设直线方程时，必须单独检验 $x = x_0$ 型的竖直直线是否符合题意，否则会漏解。</li>
+<li><strong>截距式漏条件</strong>：截距式 $\frac{x}{a} + \frac{y}{b} = 1$ 不能表示过原点或与坐标轴平行的直线。遇到“截距相等”条件时，务必考虑截距为 $0$（过原点）的情形。</li>
+<li><strong>距离公式与分母混淆</strong>：点 $(x_0, y_0)$ 到直线 $x = a$ 的距离是 $|x_0 - a|$，若盲目套公式 $d = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$ 而不先判断 $B=0$，容易导致分母为零的运算错误。</li>
+<li><strong>含参直线过定点问题</strong>：不会将直线方程整理成关于参数的多项式——如将 $(m+2)x + (m-1)y - 3m = 0$ 整理为 $m(x+y-3) + (2x - y) = 0$，令括号内为零求定点。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>直线倾斜程度，$k = \tan\alpha$</td>
+</tr>
+<tr>
+<td>截距</td>
+<td>intercept</td>
+<td>直线与坐标轴交点的坐标分量</td>
+</tr>
+<tr>
+<td>倾斜角</td>
+<td>angle of inclination</td>
+<td>$x$ 轴正向与直线向上方向的最小正角</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>normal vector</td>
+<td>垂直于直线的向量，一般式中为 $(A, B)$</td>
+</tr>
+<tr>
+<td>对称</td>
+<td>symmetry</td>
+<td>点或图形关于点、直线的一一映射关系</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直线的倾斜角与斜率</a></li>
+<li><a class="dead" title="未收录">两直线的平行与垂直</a></li>
+<li><a class="dead" title="未收录">距离公式：两点间、点到直线、平行线间</a></li>
+<li><a class="dead" title="未收录">点与直线的对称问题</a></li>
+<li><a href="../atoms/394-直线和圆位置关系-高中.html">直线与圆的位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-11.html">2008-理-11</a></li>
+<li><a href="../exam/2008-理-19.html">2008-理-19</a></li>
+<li><a href="../exam/2013-理-07.html">2013-理-07</a></li>
+<li><a href="../exam/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/2016-文-20.html">2016-文-20</a></li>
+<li><a href="../exam/2017-文-12.html">2017-文-12</a></li>
+<li><a href="../exam/2018-理-12.html">2018-理-12</a></li>
+<li><a href="../exam/2018-理-19.html">2018-理-19</a></li>
+<li><a href="../exam/2020-文-21.html">2020-文-21</a></li>
+<li><a class="dead" title="未收录">2023-北京-19</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-19.html">2024-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

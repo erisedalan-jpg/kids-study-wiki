@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>法拉第电磁感应定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>法拉第电磁感应定律</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 法拉第电磁感应定律, Faraday&#x27;s law of electromagnetic induction</p><h2>🎓 法拉第电磁感应定律（高中物理）</h2>
+<h3>定律表述</h3>
+<p><strong>法拉第电磁感应定律</strong>：闭合回路中感应电动势的大小，与穿过回路的磁通量的变化率成正比。</p>
+<p>$$\varepsilon = \frac{\Delta\Phi}{\Delta t}$$</p>
+<p>对于 $N$ 匝线圈：</p>
+<p>$$\varepsilon = N\frac{\Delta\Phi}{\Delta t}$$</p>
+<p>其中：
+- $\varepsilon$：感应电动势（V）
+- $\Delta\Phi$：磁通量变化量（Wb）
+- $\Delta t$：时间间隔（s）
+- $N$：线圈匝数</p>
+<h3>完整形式（含方向）</h3>
+<p>包含楞次定律方向信息的完整表达式：</p>
+<p>$$\varepsilon = -N\frac{\Delta\Phi}{\Delta t}$$</p>
+<p>负号表示感应电动势的方向与磁通量变化方向相反（阻碍原因）。</p>
+<h3>磁通量的计算</h3>
+<p>$$\Phi = BS\cos\theta$$</p>
+<p>其中 $\theta$ 为磁感线方向与线圈面法线方向的夹角。</p>
+<p>特殊情形：
+- 磁场垂直线圈平面：$\Phi = BS$
+- 磁场平行线圈平面：$\Phi = 0$</p>
+<h3>导体切割磁感线的等效形式</h3>
+<p>当导体以速度 $v$ 切割磁感线时，单位时间内"扫过"的面积为 $\Delta S = Lv\Delta t$，</p>
+<p>$$\Delta\Phi = B\Delta S = BLv\Delta t$$</p>
+<p>$$\varepsilon = \frac{\Delta\Phi}{\Delta t} = BLv$$</p>
+<p>这与安培力/洛伦兹力的微观推导结果一致。</p>
+<h3>历史背景</h3>
+<p>法拉第于 1831 年通过系列实验总结出这一规律（没有数学公式，靠实验归纳），麦克斯韦后来将其纳入电磁场方程组，赋予精确的数学形式。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一线圈匝数 $N = 200$，在 $t = 0.2$ s 内磁通量从 $0.05$ Wb 变为 $0.01$ Wb，求感应电动势。</p>
+<p>$$\Delta\Phi = 0.01 - 0.05 = -0.04\text{ Wb}$$
+$$|\varepsilon| = N\frac{|\Delta\Phi|}{\Delta t} = 200 \times \frac{0.04}{0.2} = 40\text{ V}$$</p>
+<p><strong>例2</strong>：线圈在匀强磁场中匀速转动（$B = 0.5$ T，$S = 0.1$ m²，$N = 50$，$\omega = 100$ rad/s），求最大电动势。</p>
+<p>$$\varepsilon_{\max} = NBA\omega = 50 \times 0.5 \times 0.1 \times 100 = 250\text{ V}$$</p>
+<p>（线圈平面平行于磁场时，$\Delta\Phi/\Delta t$ 最大）</p>
+<h3>与安培力公式的联系</h3>
+<p>法拉第定律（宏观） ↔ 安培力/洛伦兹力（微观）：两者描述同一电磁感应过程的不同层面，结论一致。</p>
+<h3>易错点</h3>
+<ol>
+<li>$\varepsilon = \Delta\Phi / \Delta t$ 求的是<strong>平均</strong>感应电动势（$\Delta t$ 不能太大，若磁通量非线性变化则为平均值）。</li>
+<li>感应电动势大小与磁通量本身无关，只与<strong>变化率</strong> $\Delta\Phi/\Delta t$ 有关。</li>
+<li>不要把公式写成 $\varepsilon = \Phi / t$（误），正确是 $\varepsilon = \Delta\Phi / \Delta t$。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：法拉第电磁感应定律 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">感应电动势</a></li>
+<li><a class="dead" title="未收录">感应电动势计算</a></li>
+<li><a class="dead" title="未收录">导线切割磁感线</a></li>
+<li><a class="dead" title="未收录">麦克斯韦电磁理论</a></li>
+<li><a class="dead" title="未收录">交流电的产生</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-全国Ⅱ-11.html">2009-全国Ⅱ-11</a></li>
+<li><a href="../exam/2012-新课标-06.html">2012-新课标-06</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2016-北京-04</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-04</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2020-北京-18</a></li>
+<li><a class="dead" title="未收录">2020-北京-20</a></li>
+<li><a class="dead" title="未收录">2022-北京-11</a></li>
+<li><a class="dead" title="未收录">2023-湖南-09</a></li>
+<li><a class="dead" title="未收录">2023-湖南-14</a></li>
+<li><a class="dead" title="未收录">2024-北京-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间直线平面平行</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间直线平面平行</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间直线平面平行, parallel lines and planes in space, 线面平行, 面面平行</p><h2>🎓 空间直线与平面的平行</h2>
+<h3>线面平行的判定</h3>
+<p><strong>定理</strong>：若平面外一条直线与平面内的一条直线<strong>平行</strong>，则该直线与此平面平行。</p>
+<p>$$l \not\subset \alpha,\quad m \subset \alpha,\quad l \parallel m \implies l \parallel \alpha$$</p>
+<p><strong>助记</strong>："面外线与面内线平行 $\Rightarrow$ 线面平行"</p>
+<h3>线面平行的性质</h3>
+<p><strong>定理</strong>：若直线与平面平行，过该直线的平面与已知平面相交，则直线与交线<strong>平行</strong>。</p>
+<p>$$l \parallel \alpha,\quad l \subset \beta,\quad \alpha \cap \beta = m \implies l \parallel m$$</p>
+<h3>面面平行的判定</h3>
+<p><strong>定理1</strong>：若一个平面内有<strong>两条相交直线</strong>都平行于另一平面，则两平面平行。</p>
+<p>$$l_1 \subset \alpha,\quad l_2 \subset \alpha,\quad l_1 \cap l_2 \neq \emptyset,\quad l_1 \parallel \beta,\quad l_2 \parallel \beta \implies \alpha \parallel \beta$$</p>
+<p><strong>定理2</strong>：若两平面都垂直于同一直线，则两平面平行。</p>
+<p>$$l \perp \alpha,\quad l \perp \beta \implies \alpha \parallel \beta$$</p>
+<h3>面面平行的性质</h3>
+<p><strong>定理</strong>：两平行平面被第三个平面截得的两条交线<strong>平行</strong>。</p>
+<p>$$\alpha \parallel \beta,\quad \gamma \cap \alpha = l_1,\quad \gamma \cap \beta = l_2 \implies l_1 \parallel l_2$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>（线面平行判定）：正方体 $ABCD-A_1B_1C_1D_1$ 中，证明 $BD_1 \parallel$ 平面 $A_1BC_1$。</p>
+<p><strong>证</strong>：设 $BD_1$ 中点为 $M$，$B_1D_1$ 中点为 $N$，则 $MN \parallel BB_1$... 利用中位线定理在平面内找到平行线。</p>
+<p><strong>例2</strong>（面面平行性质）：已知 $\alpha \parallel \beta$，三棱柱的侧棱垂直于底面，则各侧面与底面平行。</p>
+<h3>平行的传递性</h3>
+<p>$$l \parallel m,\quad m \parallel n \implies l \parallel n$$</p>
+<p>$$\alpha \parallel \beta,\quad \beta \parallel \gamma \implies \alpha \parallel \gamma$$</p>
+<h3>易错点</h3>
+<ul>
+<li>线面平行需要"面<strong>外</strong>直线"——直线不能在平面内</li>
+<li>面面平行判定中，两条直线必须<strong>相交</strong>（不能平行），才能确保覆盖整个平面</li>
+<li>不能只用"目测"判断平行，必须通过定理严格证明</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.4，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">空间点直线平面位置关系</a></li>
+<li><a class="dead" title="未收录">空间直线平面垂直</a></li>
+<li><a href="../atoms/353-空间角.html">空间角</a></li>
+<li><a href="../atoms/354-空间距离.html">空间距离</a></li>
+<li><a href="../atoms/346-空间几何体-多面体.html">空间几何体-多面体</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-01.html">2010-文-01</a></li>
+<li><a href="../exam/2013-理-14.html">2013-理-14</a></li>
+<li><a href="../exam/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/2014-理-18.html">2014-理-18</a></li>
+<li><a href="../exam/2015-理-04.html">2015-理-04</a></li>
+<li><a href="../exam/2017-文-06.html">2017-文-06</a></li>
+<li><a href="../exam/2020-文-20.html">2020-文-20</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a href="../exam/2022-文-09.html">2022-文-09</a></li>
+<li><a href="../exam/2022-理-07.html">2022-理-07</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式的证明</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>不等式的证明</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: &quot;不等式的证明&quot;, &quot;Proof of Inequalities&quot;</p><h1>不等式的证明</h1>
+<blockquote>
+<p><strong>一句话</strong>：依据不等式的性质、基本不等式及函数单调性等，通过逻辑推理判定给定不等式恒成立或成立的条件。
+<strong>English</strong>: The process of logically establishing that a given inequality holds, using properties of inequalities, basic inequalities, or function monotonicity.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<h3>定义与原理</h3>
+<p>不等式证明的目标是验证一个不等式在指定范围内永远成立。其理论基础包括：不等式的传递性、同向可加性（$a&gt;b,c&gt;d \Rightarrow a+c&gt;b+d$）、正数的同向可乘性（$a&gt;b&gt;0, c&gt;d&gt;0 \Rightarrow ac&gt;bd$），以及均值不等式 $\frac{a+b}{2}\ge\sqrt{ab}(a,b&gt;0)$、柯西不等式等。当不等式含有变量时，常转化为函数问题，利用单调性（导数工具）证明 $f(x)\ge0$ 或 $f(x)\le0$。</p>
+<h3>核心方法</h3>
+<ol>
+<li><strong>比较法</strong>：作差与 $0$ 比较，作商与 $1$ 比较（需注意正负）。</li>
+<li><strong>综合法</strong>：从已知条件或基本不等式出发，逐步推导，由因导果。</li>
+<li><strong>分析法</strong>：从求证结论入手，寻找使结论成立的充分条件，逐步追溯至已知。</li>
+<li><strong>反证法</strong>：假设结论不成立，推出与已知矛盾。</li>
+<li><strong>数学归纳法</strong>：用于与自然数 $n$ 相关的不等式。</li>
+<li><strong>放缩法</strong>：适当放大或缩小式子，如利用 $\frac{1}{n^2}&lt;\frac{1}{n(n-1)}$。</li>
+<li><strong>构造函数法</strong>：构造辅助函数，借助导数判断单调性求最值。</li>
+</ol>
+<h3>高考典型设问</h3>
+<p>常常直接要求“求证：$e^x \ge x+1$（$x\in\mathbb{R}$）”，或置于函数与导数大题中，如已知 $f(x)=x-\ln(x+1)$，证明 $f(x)\ge0$。另一常见背景为数列不等式，如证明 $1+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}&lt;2$。解题关键：函数类先构造函数、求导、定区间、看最值；数列类则选用数学归纳法或裂项放缩。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视等号成立条件</strong>：用均值不等式等证明时，未验证等号能否取到，导致条件不严谨。</li>
+<li><strong>分析法逻辑颠倒</strong>：用分析法时书写“因为…，所以结论成立”，误将充分条件当必要条件，或过程中未保持可逆性。</li>
+<li><strong>放缩法尺度失效</strong>：放缩过分导致不等式反向（如放大超过上界）或无法达至待证结论，需选择恰当放缩项（如保留前几项再放缩）。</li>
+<li><strong>构造函数时忽略定义域</strong>：求导后讨论单调性，但未注意原函数定义域限制（如对数真数），导致错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不等式证明</td>
+<td>Proof of Inequalities</td>
+<td>判定不等式恒成立的推理过程</td>
+</tr>
+<tr>
+<td>作差比较法</td>
+<td>Difference Comparison</td>
+<td>计算两式差，判断正负以比较大小</td>
+</tr>
+<tr>
+<td>分析法</td>
+<td>Analytic Method</td>
+<td>从结论出发寻充分条件的逆向推理</td>
+</tr>
+<tr>
+<td>综合法</td>
+<td>Synthetic Method</td>
+<td>从已知出发逐步推导的顺向推理</td>
+</tr>
+<tr>
+<td>放缩法</td>
+<td>Scaling Method</td>
+<td>适度放大或缩小以简化不等式证明</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中数学课程标准(2017年版2020年修订) 不等式、函数与导数模块 🚧（待家长核对）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">不等式的基本性质</a></li>
+<li><a href="../atoms/295-基本不等式.html">基本不等式</a></li>
+<li><a href="../atoms/705-利用导数研究函数的单调性.html">利用导数研究函数的单调性</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法</a></li>
+<li><a class="dead" title="未收录">数列求和与放缩</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-22.html">2009-理-22</a></li>
+<li><a href="../exam/2013-理-24.html">2013-理-24</a></li>
+<li><a href="../exam/2015-文-24.html">2015-文-24</a></li>
+<li><a href="../exam/2015-理-24.html">2015-理-24</a></li>
+<li><a href="../exam/2017-文-23.html">2017-文-23</a></li>
+<li><a href="../exam/2017-理-23.html">2017-理-23</a></li>
+</ul></div>
+</div>
+</body>
+</html>

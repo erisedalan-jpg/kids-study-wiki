@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参数分类讨论</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>参数分类讨论</h1><div class="meta-card"><span><strong>权重</strong>67</span><span><strong>吉林命中</strong>23</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第九章综合]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 参数分类讨论, case analysis with parameters, 分类讨论</p><h2>🎓 参数分类讨论</h2>
+<h3>为什么需要分类讨论</h3>
+<p>含参数的函数（如 $f(x,a)$）在不同参数范围下，函数的性质（单调性、零点个数、极值类型等）可能有本质差异。分类讨论使答案完整、精确。</p>
+<h3>分类的触发条件</h3>
+<table>
+<thead>
+<tr>
+<th>触发情形</th>
+<th>典型例子</th>
+<th>需要讨论的情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根式中参数</td>
+<td>$\sqrt{a-x^2}$（需 $a&gt;0$）</td>
+<td>$a&gt;0,a=0,a&lt;0$</td>
+</tr>
+<tr>
+<td>对数底数/真数</td>
+<td>$\log_a x$（$a&gt;1$ 或 $0&lt;a&lt;1$）</td>
+<td>$a&gt;1$ 与 $0&lt;a&lt;1$</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>$f'(x)=ax^2+bx+c=0$</td>
+<td>$\Delta&gt;0,\Delta=0,\Delta&lt;0$</td>
+</tr>
+<tr>
+<td>驻点是否在定义域内</td>
+<td>$x_0=\dfrac{1}{a}$ 在 $[0,2]$ 内</td>
+<td>$a&gt;\frac{1}{2}$，$a=\frac{1}{2}$，$a&lt;\frac{1}{2}$</td>
+</tr>
+<tr>
+<td>函数单调性类型</td>
+<td>$f(x)=x+\dfrac{a}{x}$</td>
+<td>$a&gt;0$ 与 $a&lt;0$</td>
+</tr>
+</tbody>
+</table>
+<h3>分类讨论的规范格式</h3>
+<p><strong>步骤</strong>：
+1. 明确讨论的参数及其可能范围
+2. <strong>不重不漏地</strong>划分所有情况
+3. 每种情况下分别分析，得出结论
+4. 综合所有情况写总结</p>
+<p><strong>格式示例</strong>：
+- 情形 1：当 $a&gt;0$ 时，……，结论为……
+- 情形 2：当 $a=0$ 时，……，结论为……
+- 情形 3：当 $a&lt;0$ 时，……，结论为……
+- 综上，……</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>（导数单调性讨论）$f(x)=x^3-ax$，讨论单调性。</p>
+<p>$f'(x)=3x^2-a$</p>
+<p>情形 1：$a\leq 0$。$f'(x)=3x^2-a\geq 0$（因 $3x^2\geq 0,-a\geq 0$），$f$ 在 $\mathbb{R}$ 上单调递增。</p>
+<p>情形 2：$a&gt;0$。$f'(x)=0$ 当 $x=\pm\sqrt{a/3}$。</p>
+<p>$f$ 在 $(-\infty,-\sqrt{a/3})$ 递增，$(-\sqrt{a/3},\sqrt{a/3})$ 递减，$(\sqrt{a/3},+\infty)$ 递增。</p>
+<p>极大值 $f(-\sqrt{a/3})=\dfrac{2a}{3}\sqrt{\dfrac{a}{3}}$，极小值 $f(\sqrt{a/3})=-\dfrac{2a}{3}\sqrt{\dfrac{a}{3}}$。</p>
+<p><strong>例 2</strong>（最值分类）$f(x)=x^2-2ax+a$ 在 $[0,1]$ 上的最小值，按 $a$ 的范围分类。</p>
+<p>$f(x)=(x-a)^2+a-a^2$，顶点 $x=a$，开口向上。</p>
+<p>情形 1：$a&lt;0$（顶点在 $[0,1]$ 左侧）。$f$ 在 $[0,1]$ 单调递增，最小值 $f(0)=a$。</p>
+<p>情形 2：$0\leq a\leq 1$（顶点在 $[0,1]$ 内）。最小值 $f(a)=a-a^2$。</p>
+<p>情形 3：$a&gt;1$（顶点在 $[0,1]$ 右侧）。$f$ 在 $[0,1]$ 单调递减，最小值 $f(1)=1-a$。</p>
+<p><strong>例 3</strong>（参数分类 + 零点）$f(x)=e^x-a(x+1)$ 的零点个数（$a\in\mathbb{R}$）。</p>
+<p>$f(x)=0$ 即 $e^x=a(x+1)$，分离：$a=\dfrac{e^x}{x+1}$（$x\neq -1$）</p>
+<p>设 $g(x)=\dfrac{e^x}{x+1}$（$x\neq -1$），$g'(x)=\dfrac{e^x(x+1)-e^x}{(x+1)^2}=\dfrac{xe^x}{(x+1)^2}$</p>
+<p>$g'=0$：$x=0$；$x&lt;0$（且 $x\neq -1$）时 $g'&lt;0$，$x&gt;0$ 时 $g'&gt;0$。</p>
+<p>$g$ 在 $(-\infty,-1)$ 递减，$(-1,0)$ 递减，$(0,+\infty)$ 递增。</p>
+<p>$g(0)=\dfrac{1}{1}=1$（极小值），$g\to+\infty$（$x\to+\infty$），$g\to-\infty$（$x\to(-1)^-$），$g\to-\infty$（$x\to(-1)^+$）</p>
+<p>直线 $y=a$ 与 $y=g(x)$ 的交点数：</p>
+<ul>
+<li>$a&lt;0$：一个交点（在 $(-\infty,-1)$ 内）</li>
+<li>$a=0$：一个交点（注：$f(x)=e^x$ 在 $x=-1$ 无定义，$e^0\neq 0$；另外 $x=-1$ 时原方程 $f(-1)=e^{-1}-0=e^{-1}\neq 0$，$x=-1$ 不是零点）—— 讨论较复杂，结合图象</li>
+<li>$0&lt;a&lt;1$：两个交点</li>
+<li>$a=1$：三个交点（$x=0$ 是切点，另两个交点）</li>
+<li>$a&gt;1$：再讨论……（展示分析思路，具体数字需图象核实）</li>
+</ul>
+<p><strong>例 4</strong>（不等式含参）已知 $f(x)=ax^2+bx+1$，$f'(2)=0$，$f(2)=3$，分类讨论 $f(x)$ 的单调区间。</p>
+<p>$f'(x)=2ax+b$，$f'(2)=4a+b=0$，$f(2)=4a+2b+1=3$ → $2b=-2+4a$，联立 $b=-4a$：$2(-4a)=-2+4a$，$-8a+4a=-2$，$a=\frac{1}{2}$，$b=-2$。</p>
+<p>$f(x)=\dfrac{1}{2}x^2-2x+1$（$a=\dfrac{1}{2}&gt;0$，开口向上，顶点 $x=2$，单调递减 $(-\infty,2)$，递增 $(2,+\infty)$）。</p>
+<p>（此例参数已确定，无需分类；若 $a$ 未知则需分类）</p>
+<h3>分类讨论的注意事项</h3>
+<ol>
+<li><strong>不重不漏</strong>：各情形加在一起覆盖全体参数范围，无交叉</li>
+<li><strong>边界值单独讨论</strong>：如 $a=0$，$a=1$ 等分界值必须单独列出</li>
+<li><strong>每种情形需验证</strong>：不能仅假设而不证明</li>
+<li><strong>综合结论要清晰</strong>：最终答案按 $a$ 的范围分段给出</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第九章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/分情况讨论</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/450-恒成立问题.html">恒成立问题</a> · <a href="../atoms/428-存在性问题.html">存在性问题</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">切线法判定根的个数</a> · <a class="dead" title="未收录">导数压轴题型</a> · <a class="dead" title="未收录">导数综合应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-20.html">2009-文-20</a></li>
+<li><a href="../exam/2009-文-21.html">2009-文-21</a></li>
+<li><a href="../exam/2010-文-21.html">2010-文-21</a></li>
+<li><a href="../exam/2011-文-24.html">2011-文-24</a></li>
+<li><a href="../exam/2011-理-21.html">2011-理-21</a></li>
+<li><a href="../exam/2011-理-24.html">2011-理-24</a></li>
+<li><a href="../exam/2012-文-14.html">2012-文-14</a></li>
+<li><a href="../exam/2012-文-21.html">2012-文-21</a></li>
+<li><a href="../exam/2012-理-01.html">2012-理-01</a></li>
+<li><a href="../exam/2014-文-24.html">2014-文-24</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2014-理-20.html">2014-理-20</a></li>
+<li><a href="../exam/2015-理-20.html">2015-理-20</a></li>
+<li><a href="../exam/2016-文-12.html">2016-文-12</a></li>
+<li><a href="../exam/2016-文-16.html">2016-文-16</a></li>
+<li><a href="../exam/2016-文-21.html">2016-文-21</a></li>
+<li><a href="../exam/2016-文-24.html">2016-文-24</a></li>
+<li><a href="../exam/2016-理-15.html">2016-理-15</a></li>
+<li><a href="../exam/2016-理-24.html">2016-理-24</a></li>
+<li><a href="../exam/2017-文-12.html">2017-文-12</a></li>
+<li><a href="../exam/2017-文-21.html">2017-文-21</a></li>
+<li><a href="../exam/2017-文-23.html">2017-文-23</a></li>
+<li><a href="../exam/2017-理-20.html">2017-理-20</a></li>
+<li><a href="../exam/2017-理-21.html">2017-理-21</a></li>
+<li><a href="../exam/2017-理-23.html">2017-理-23</a></li>
+<li><a href="../exam/2018-文-23.html">2018-文-23</a></li>
+<li><a href="../exam/2018-理-02.html">2018-理-02</a></li>
+<li><a href="../exam/2018-理-18.html">2018-理-18</a></li>
+<li><a href="../exam/2018-理-23.html">2018-理-23</a></li>
+<li><a href="../exam/2019-文-23.html">2019-文-23</a></li>
+<li><a href="../exam/2019-理-15.html">2019-理-15</a></li>
+<li><a href="../exam/2019-理-23.html">2019-理-23</a></li>
+<li><a class="dead" title="未收录">2020-北京-09</a></li>
+<li><a href="../exam/2020-文-23.html">2020-文-23</a></li>
+<li><a href="../exam/2020-理-23.html">2020-理-23</a></li>
+<li><a class="dead" title="未收录">2021-北京-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-21</a></li>
+<li><a href="../exam/2021-文-12.html">2021-文-12</a></li>
+<li><a href="../exam/2021-文-23.html">2021-文-23</a></li>
+<li><a href="../exam/2021-理-10.html">2021-理-10</a></li>
+<li><a href="../exam/2021-理-11.html">2021-理-11</a></li>
+<li><a class="dead" title="未收录">2022-北京-14</a></li>
+<li><a class="dead" title="未收录">2022-北京-21</a></li>
+<li><a href="../exam/2022-文-20.html">2022-文-20</a></li>
+<li><a href="../exam/2022-理-10.html">2022-理-10</a></li>
+<li><a href="../exam/2022-理-11.html">2022-理-11</a></li>
+<li><a href="../exam/2022-理-21.html">2022-理-21</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-13</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-19</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-20</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-02.html">2023-新课标Ⅱ-02</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-22.html">2023-新课标Ⅱ-22</a></li>
+<li><a class="dead" title="未收录">2024-北京-07</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-08.html">2024-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

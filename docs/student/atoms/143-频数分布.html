@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>频数分布</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>频数分布</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 七下, 数据收集整理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 频数分布, frequency distribution, 频率分布, 频数, 频率</p><h2>课本定义</h2>
+<p>一组数据中，<strong>频数</strong>是每个数据（或每个区间）出现的次数；<strong>频率</strong>是该频数与数据总数之比。将数据按范围分组，统计各组的频数和频率，制成<strong>频数分布表</strong>，可以清晰地看出数据的分布规律。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"数一数，每种情况出现了几次"</h3>
+<p><strong>频数</strong>：某个数据出现的次数（count）
+<strong>频率</strong>：该数据出现的次数 ÷ 总次数（proportion）</p>
+<p><strong>例子：</strong> 班里30人，调查喜欢的运动：</p>
+<table>
+<thead>
+<tr>
+<th>运动</th>
+<th>人数（频数）</th>
+<th>频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>篮球</td>
+<td>12</td>
+<td>12/30 = 40%</td>
+</tr>
+<tr>
+<td>足球</td>
+<td>8</td>
+<td>8/30 ≈ 26.7%</td>
+</tr>
+<tr>
+<td>乒乓球</td>
+<td>6</td>
+<td>6/30 = 20%</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>4</td>
+<td>4/30 ≈ 13.3%</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>30</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>频数 + 频率一定满足：所有频率加起来 = 1（100%）</strong></p>
+<p><strong>频数分布表（数值型数据）：</strong></p>
+<p>当数据是连续数值（如身高），先分组（区间）：</p>
+<table>
+<thead>
+<tr>
+<th>身高区间（cm）</th>
+<th>频数</th>
+<th>频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[150, 155)</td>
+<td>5</td>
+<td>5/30</td>
+</tr>
+<tr>
+<td>[155, 160)</td>
+<td>10</td>
+<td>10/30</td>
+</tr>
+<tr>
+<td>[160, 165)</td>
+<td>8</td>
+<td>8/30</td>
+</tr>
+<tr>
+<td>[165, 170)</td>
+<td>7</td>
+<td>7/30</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>30</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong> [150, 155) 表示"包含150，不包含155"（左闭右开区间）。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>频数</strong>（frequency）：在一组数据中，某一数据（或某一区间内的数据）出现的次数，记作 f。</p>
+<p><strong>频率</strong>（relative frequency）：某数据的频数与数据总数 n 之比，记作 f/n。</p>
+<p><strong>性质：</strong>
+- 每个数据的频率 ∈ [0, 1]
+- 所有数据的频率之和 = 1（∑(f_i/n) = 1）
+- 频率 = 频数 / 总数</p>
+<h3>频数分布表的制作步骤</h3>
+<p><strong>步骤（连续数据分组）：</strong>
+1. 找数据的最小值和最大值，确定数据范围
+2. 决定组数和组距（组距 = 范围 / 组数，常取5-12组）
+3. 确定各组区间（左闭右开：[a, b)）
+4. 统计各组频数（数据落入各区间的个数）
+5. 计算各组频率 = 频数 / 总数
+6. 验证：频率总和 = 1</p>
+<h3>频数分布直方图</h3>
+<p>频数分布常用<strong>直方图</strong>（histogram）表示：
+- 横轴：数据区间
+- 纵轴：频数（或频率/组距，即频率密度）
+- 每个矩形的面积 = 频率（当纵轴为频率密度时）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 某班40名学生的数学成绩如下（分组）：</p>
+<table>
+<thead>
+<tr>
+<th>成绩区间</th>
+<th>频数</th>
+<th>频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[50, 60)</td>
+<td>4</td>
+<td>4/40 = 0.10</td>
+</tr>
+<tr>
+<td>[60, 70)</td>
+<td>8</td>
+<td>8/40 = 0.20</td>
+</tr>
+<tr>
+<td>[70, 80)</td>
+<td>16</td>
+<td>16/40 = 0.40</td>
+</tr>
+<tr>
+<td>[80, 90)</td>
+<td>10</td>
+<td>10/40 = 0.25</td>
+</tr>
+<tr>
+<td>[90, 100]</td>
+<td>2</td>
+<td>2/40 = 0.05</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>40</td>
+<td>1.00</td>
+</tr>
+</tbody>
+</table>
+<p>分析：
+- 成绩主要集中在 [70, 80)，频率最高（40%）
+- 优秀（≥90）仅 5%，需加强高分提升</p>
+<p><strong>例题2：</strong> 某次调查样本200人，其中男性120人，女性80人，男性中有工作的90人，女性中有工作的50人。制作频率分布表。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>有工作</th>
+<th>无工作</th>
+<th>合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>男性</td>
+<td>90（45%）</td>
+<td>30（15%）</td>
+<td>120（60%）</td>
+</tr>
+<tr>
+<td>女性</td>
+<td>50（25%）</td>
+<td>30（15%）</td>
+<td>80（40%）</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>140（70%）</td>
+<td>60（30%）</td>
+<td>200（100%）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例题3：</strong> 频率与频数的计算</p>
+<p>已知数据组共 n = 50，某区间频率为 0.3，求该区间的频数。</p>
+<p>解：频数 = 频率 × 总数 = 0.3 × 50 = <strong>15</strong></p>
+<h3>频率与概率的联系</h3>
+<p>频率是对概率的<strong>经验估计</strong>：
+- 当试验次数 n 趋向无穷大时，频率趋近于概率（大数定律）
+- 实际应用中，用频率<strong>估计</strong>概率</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>频率 ≠ 频数</strong>：频率是比例（0到1之间），频数是次数（整数）</li>
+<li><strong>所有频率之和必须为1</strong>（如果不等于1，说明有计算错误）</li>
+<li><strong>分组区间通常左闭右开</strong>：[a, b)，最后一组右端闭合 [a, b]</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>频数</td>
+<td>frequency</td>
+<td>某数据出现的次数</td>
+</tr>
+<tr>
+<td>频率</td>
+<td>relative frequency</td>
+<td>频数/总数</td>
+</tr>
+<tr>
+<td>频数分布表</td>
+<td>frequency distribution table</td>
+<td>数据分布的汇总表</td>
+</tr>
+<tr>
+<td>组距</td>
+<td>class width / interval width</td>
+<td>每组区间的宽度</td>
+</tr>
+<tr>
+<td>直方图</td>
+<td>histogram</td>
+<td>频率/频数分布图</td>
+</tr>
+<tr>
+<td>左闭右开</td>
+<td>left-closed right-open</td>
+<td>[a, b) 区间</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第十章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）统计与概率领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">全面调查</a></li>
+<li><a class="dead" title="未收录">抽样调查</a></li>
+<li><a href="../atoms/141-统计图.html">统计图</a></li>
+<li><a class="dead" title="未收录">条形统计图</a></li>
+<li><a class="dead" title="未收录">扇形统计图</a></li>
+<li><a class="dead" title="未收录">折线统计图</a></li>
+<li><a href="../atoms/055-平均数.html">平均数</a></li>
+<li><a class="dead" title="未收录">可能性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2015-文-17.html">2015-文-17</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2019-文-17.html">2019-文-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

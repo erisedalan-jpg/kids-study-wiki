@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>整体法隔离法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>整体法隔离法</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 整体法隔离法, 整体法与隔离法</p><h1>整体法隔离法</h1>
+<blockquote>
+<p><strong>一句话</strong>：整体法是以整个系统为研究对象，只分析系统外物体施加的外力，隔离法则是将单个物体从系统中分隔出来，分析该物体所受的全部外力（含内力）；两者结合用于求解连接体中力与运动的关系。
+<strong>English</strong>: The system method treats multiple connected objects as a single system and considers only external forces, while the isolation method separates a single object to analyze all forces acting on it; together they are used to solve force and motion problems in connected bodies.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+整体法：将多个相互作用的物体组成的系统视为一个整体，根据牛顿第二定律建立方程时，只考虑系统外的物体对系统施加的力（外力），系统内各物体间的相互作用力（内力）成对出现、矢量和为零，不参与系统整体的加速度计算。公式形式为 $\sum F_{\text{外}} = m_{\text{总}} a$ （所有物体加速度 $a$ 相同时适用）。<br />
+隔离法：选取系统中某一物体为研究对象，完整画出该物体受到的其他物体（包括系统内、外）施加的所有力，再用牛顿第二定律列方程 $\sum F = m_i a_i$。求系统内物体间的相互作用力时，必须先隔离。</p>
+<p><strong>关键方法</strong><br />
+解决连接体问题的标准步骤：① 判断系统中各物体的加速度是否相同；② 若求系统整体的加速度或外界对系统的总外力，优先用整体法；③ 若求系统内物体之间的弹力、摩擦力等内力，则先用整体法求出共同加速度，再隔离受力少的物体进行受力分析、列方程求解；④ 若各物体加速度不同，原则上只能分别隔离，或对系统使用质点系牛顿第二定律（合外力等于各质量与加速度乘积的矢量和）。高考解题通常遵循“整体求加速度，隔离求内力”。</p>
+<p><strong>典型应用</strong><br />
+高考常以“滑块—木板”“叠放体”“绳连体（滑轮连接）”等模型出现。例如：光滑水平面上叠放着 A、B 两木块，力 $F$ 作用在 A 上，求 A、B 间的摩擦力。先用整体法求得 $\displaystyle a=\frac{F}{m_A+m_B}$，再隔离 B，由 $f=m_B a$ 得到静摩擦力。若力作用在 B 上，则隔离 A 列式 $f=m_A a$。题目还可能将地面改为粗糙，或改变外力方向，考查整体法与隔离法的灵活切换。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆内力与外力</strong>：整体法时误将系统内物体间的弹力（如绳拉力、物块间弹力）当作外力代入整体方程，导致错误。</li>
+<li><strong>加速度不同时滥用整体法</strong>：直接用 $F_{\text{外}}=(m_1+m_2)a$，忽略了系统内各物体加速度大小或方向不同。此时只能用隔离法或质点系形式 $\sum \vec{F}_{\text{外}} = m_1\vec{a}_1 + m_2\vec{a}_2$ （待家长核对）。</li>
+<li><strong>隔离时受力分析不完整</strong>：隔离物体后漏掉接触面上的弹力或摩擦力，尤其容易漏掉系统内其他物体施加的横向力，或忘记分析重力与环境支持力。</li>
+<li><strong>误判研究对象</strong>：求地面对斜面的支持力或摩擦力时，应优先整体分析（将斜面和其上物体视为系统），学生常错误地隔离斜面而引入不必要的未知内力。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整体法</td>
+<td>system method / overall analysis</td>
+<td>将系统作为整体，只考虑外力。</td>
+</tr>
+<tr>
+<td>隔离法</td>
+<td>isolation method</td>
+<td>单独分析系统中某一物体的受力。</td>
+</tr>
+<tr>
+<td>内力</td>
+<td>internal force</td>
+<td>系统内物体间的相互作用力。</td>
+</tr>
+<tr>
+<td>外力</td>
+<td>external force</td>
+<td>系统外物体对系统内物体的作用力。</td>
+</tr>
+<tr>
+<td>连接体</td>
+<td>connected bodies</td>
+<td>通过接触或轻绳、轻杆等联系的多个物体。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><a href="../atoms/208-共点力平衡.html">共点力平衡</a></li>
+<li><a class="dead" title="未收录">连接体问题</a></li>
+<li><a class="dead" title="未收录">正交分解法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2022-全国乙-14.html">2022-全国乙-14</a></li>
+<li><a href="../exam/2024-辽宁-10.html">2024-辽宁-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

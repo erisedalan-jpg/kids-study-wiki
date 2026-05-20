@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>临界条件</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>临界条件</h1><div class="meta-card"><span><strong>权重</strong>27</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 临界条件, 转折条件, 临界状态</p><h1>临界条件</h1>
+<blockquote>
+<p><strong>一句话</strong>：临界条件是指物理过程中，系统的状态或运动形式发生质的转变时所需满足的极值或等式关系，常表现为加速度、速度、力、角度等物理量达到特定值。
+<strong>English</strong>: A critical condition is the extreme or equality relation that must be met when a system’s state or form of motion undergoes a qualitative change in a physical process.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+在力学中，临界条件通常对应<strong>接触物体即将分离时弹力为零</strong>、<strong>静摩擦力达到最大值</strong>或<strong>物体刚要发生相对滑动时加速度相同但摩擦力达到最大静摩擦力</strong>。例如，两个叠放物体在拉力作用下运动，当下面物体与上面物体即将相对滑动时，满足</p>
+<p>$$
+f_{\text{静}} = f_{\text{max}} = \mu_s N,
+$$</p>
+<p>且此时两物体加速度仍相等。在圆周运动中，物体刚好能通过竖直面最高点的临界条件为最高点处重力完全提供向心力：</p>
+<p>$$
+mg = m\frac{v^2}{R} \quad \Rightarrow \quad v_{\text{临}} = \sqrt{gR}.
+$$</p>
+<p>若速度小于该临界值，物体将无法完成完整的圆周运动。带电粒子在有界磁场中刚好不从磁场边界射出的临界条件，往往对应轨迹圆与边界相切。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>找转折状态</strong>：如“刚好不脱离”“即将滑动”“恰好通过最高点”等关键词，直接对应弹力为零、静摩擦最大、加速度相等且速度达到特定值的瞬间。<br />
+2. <strong>列极限等式</strong>：将转折前的物理规律（牛顿第二定律、能量守恒等）与临界时的极值条件联立，如恰好分离时弹力 $N=0$、恰好相对滑动时 $a_1 = a_2$ 且 $f = f_{\text{max}}$。<br />
+3. <strong>挖隐含不等关系</strong>：很多临界问题最终需要求解一个范围，解题时先由临界条件得出临界值，再根据过程要求判断大于或小于该值。</p>
+<p><strong>高考典型设问</strong><br />
+- <strong>“恰好”类判断题</strong>：恰好通过竖直面最低点/最高点、恰好飞出电场/磁场、恰好不掉落等。<br />
+- <strong>参数范围计算</strong>：求拉力、初速度、质量比等参量的取值范围，使系统不出现相对运动或不脱离轨道。<br />
+- <strong>极值分析</strong>：结合临界条件求最小值或最大值，如最小发射速度、最大压缩量。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“刚好相对滑动”与“已经滑动”</strong>：临界瞬间两物体仍共加速度，但摩擦力已达到最大静摩擦，一旦越过临界值摩擦力突变为滑动摩擦，大小由 $\mu_k N$ 决定，不可混用。  </li>
+<li><strong>竖直面圆周运动中把“刚好通过最高点”误认为速度为零</strong>：实际的临界条件是轨道弹力为零，速度最小为 $\sqrt{gR}$，若圆周运动中还有绳杆模型或电场力等复合场，需重新分析合力。  </li>
+<li><strong>误将临界条件直接当作平衡条件</strong>：临界状态并非一定受力平衡，如竖直弹簧上端物体恰好分离时加速度为 $g$，而非零。  </li>
+<li><strong>有界磁场中不分方向讨论</strong>：粒子从同一边界不同方向射入，临界条件可能是轨迹圆相切于不同位置，需画轨迹图逐一判断。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>临界条件</td>
+<td>critical condition</td>
+<td>系统状态转折所需满足的极限关系</td>
+</tr>
+<tr>
+<td>最大静摩擦力</td>
+<td>maximum static friction force</td>
+<td>两接触面即将发生相对滑动时的摩擦力</td>
+</tr>
+<tr>
+<td>临界速度</td>
+<td>critical velocity</td>
+<td>物体恰好能完成特定运动过程的速度值</td>
+</tr>
+<tr>
+<td>分离条件</td>
+<td>separation condition</td>
+<td>接触物体即将分开时弹力为零的状态</td>
+</tr>
+<tr>
+<td>相切圆轨迹</td>
+<td>tangent circular path</td>
+<td>粒子在有界磁场中恰好不从边界射出的轨迹形状</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2022 版） 必修三·力学模块 (🚧)</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">竖直面内的圆周运动</a></li>
+<li><a class="dead" title="未收录">静摩擦与滑动摩擦</a></li>
+<li><a class="dead" title="未收录">带电粒子在有界磁场中的运动</a></li>
+<li><a class="dead" title="未收录">整体法与隔离法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-04</a></li>
+<li><a href="../exam/2012-新课标-16.html">2012-新课标-16</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-12.html">2013-新课标Ⅱ-12</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-11.html">2020-新课标Ⅱ-11</a></li>
+<li><a href="../exam/2021-全国乙-08.html">2021-全国乙-08</a></li>
+<li><a href="../exam/2023-新课标-11.html">2023-新课标-11</a></li>
+<li><a class="dead" title="未收录">2023-湖南-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

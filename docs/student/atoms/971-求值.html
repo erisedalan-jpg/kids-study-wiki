@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>求值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>求值</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 求值, Evaluation</p><h1>求值</h1>
+<blockquote>
+<p><strong>一句话</strong>：求值是根据已知条件，通过恒等变形、整体代换、方程思想等手段，计算出代数式、函数值、数列项或参数的具体数值的数学过程。
+<strong>English</strong>: Evaluation is the process of calculating a specific numerical result for a mathematical object (expression, function value, sequence term, etc.) based on given conditions using algebraic manipulation, substitution, and equation solving.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+求值的核心是“消元”与“化简”：从已知等式、方程、函数关系中，利用等式的性质、运算法则、函数关系，消除不确定的符号，最终落到一个确定的数。例如，已知 $f(x)=x^2+1$，求 $f(2)$ 就是直接代入求值；已知 $\sin\theta+\cos\theta=\frac{1}{5}$，求 $\sin 2\theta$ 则需要平方变形：$(\sin\theta+\cos\theta)^2=1+\sin 2\theta=\frac{1}{25}$，从而 $\sin 2\theta=-\frac{24}{25}$。</p>
+<p><strong>关键方法</strong><br />
+① <strong>直接代入法</strong>：将已知变量的值代入表达式计算，注意先化简后代。<br />
+② <strong>整体代换法</strong>：不求单个变量，直接构造目标式的整体。如已知 $x+\frac1x=3$，求 $x^2+\frac1{x^2}$，利用 $(x+\frac1x)^2=x^2+2+\frac1{x^2}$ 即可。<br />
+③ <strong>方程思想</strong>：通过建立方程或方程组求出未知数再代入，或利用根与系数的关系整体求值。<br />
+④ <strong>换元法</strong>：引入新变元简化结构，如三角求值中设 $t=\sin\theta+\cos\theta$ 进行转化。</p>
+<p><strong>典型应用</strong><br />
+高考中常以选择、填空形式出现，也可融入解答题的某一环节。常见设问：分段函数求值、抽象函数赋值、三角恒等变换求值、数列递推求特定项、二项式定理求系数和、解析几何中利用参数关系求值（如求离心率的值）。例如：已知 $a_n$ 满足 $a_{n+1}=2a_n+1$，$a_1=1$，求 $a_5$，可构造等比数列 $a_{n+1}+1=2(a_n+1)$ 快速求出。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域</strong>：求函数值或代入表达式时，未先检验自变量的取值是否在定义域内，导致得到无意义的数值。例如求 $f(x)=\sqrt{x-2}$ 在 $x=1$ 处的值。</li>
+<li><strong>忽视隐含条件</strong>：如三角求值中开方时符号判断错误；利用基本不等式求最值时忽略等号成立条件，把取不到的值当作最终结果。</li>
+<li><strong>盲目展开硬算</strong>：缺少“整体意识”，如已知 $x+y$ 和 $xy$ 求 $x^3+y^3$ 时直接解方程求 $x,y$，耗时且易错，应直接利用对称式恒等变形。</li>
+<li><strong>代换不等价</strong>：进行三角换元、根式换元等时，忽视新元的取值范围与旧约束的一致性，导致增解或漏解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>求值</td>
+<td>evaluation</td>
+<td>计算得到数值结果</td>
+</tr>
+<tr>
+<td>代入法</td>
+<td>substitution</td>
+<td>把变量换成已知数值或表达式</td>
+</tr>
+<tr>
+<td>整体代换</td>
+<td>overall substitution</td>
+<td>不单独求中间变量，整体处理</td>
+</tr>
+<tr>
+<td>恒等变换</td>
+<td>identity transformation</td>
+<td>保持等价关系的式子变形</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>自变量允许的取值集合</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：函数、代数运算、三角函数、数列等模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">函数求值</a></li>
+<li><a class="dead" title="未收录">三角恒等变换求值</a></li>
+<li><a class="dead" title="未收录">数列的通项与求和</a></li>
+<li><a class="dead" title="未收录">基本不等式求最值</a></li>
+<li><a class="dead" title="未收录">导数与极值最值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-12.html">2008-理-12</a></li>
+<li><a href="../exam/2022-理-12.html">2022-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

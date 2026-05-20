@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列递推公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列递推公式</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第四章数列]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列递推公式, recurrence relation of sequence, 递推公式, 递推关系</p><h2>🎓 数列递推公式</h2>
+<h3>定义</h3>
+<p><strong>递推公式（递推关系）</strong>：用前若干项表示后一项的公式。给定初始值，可以逐步求出所有项。</p>
+<p>$$a_{n+1} = f(a_n) \quad \text{或} \quad a_{n+1} = f(a_n, a_{n-1}, \ldots)$$</p>
+<p><strong>与通项公式的区别</strong>：
+- 通项公式：$a_n = f(n)$，直接由 $n$ 求 $a_n$
+- 递推公式：$a_{n+1} = g(a_n)$，由已知项推下一项，需给定初始值</p>
+<h3>常见递推类型</h3>
+<h4>类型一：等差型</h4>
+<p>$$a_{n+1} = a_n + d \quad (d \text{ 为常数})$$</p>
+<p>通项：$a_n = a_1 + (n-1)d$</p>
+<h4>类型二：等比型</h4>
+<p>$$a_{n+1} = q \cdot a_n \quad (q \text{ 为常数}, q \ne 0)$$</p>
+<p>通项：$a_n = a_1 q^{n-1}$</p>
+<h4>类型三：一阶线性递推</h4>
+<p>$$a_{n+1} = p \cdot a_n + q \quad (p \ne 1)$$</p>
+<p><strong>解法（特征根法/不动点法）</strong>：找不动点 $r = pr + q$，$r = \dfrac{q}{1-p}$，令 $b_n = a_n - r$：</p>
+<p>$$b_{n+1} = a_{n+1} - r = p(a_n - r) = p \cdot b_n$$</p>
+<p>故 ${b_n}$ 是公比为 $p$ 的等比数列：$b_n = b_1 p^{n-1}$，$a_n = r + (a_1 - r)p^{n-1}$</p>
+<p><strong>例</strong>：$a_{n+1} = 2a_n + 1$，$a_1 = 1$。</p>
+<p>不动点：$r = 2r+1$，$r=-1$，$b_n = a_n+1$，$b_{n+1}=2b_n$，$b_n=2b_1\cdot2^{n-1}=2^n$，$a_n=2^n-1$</p>
+<h4>类型四：$a_{n+1} = a_n + f(n)$（累加法）</h4>
+<p>$$a_n = a_1 + \sum_{k=1}^{n-1}f(k)$$</p>
+<h4>类型五：$a_{n+1} = a_n \cdot f(n)$（累乘法）</h4>
+<p>$$a_n = a_1 \cdot \prod_{k=1}^{n-1}f(k)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$a_1=2, a_{n+1}=3a_n-4$，求通项公式。</p>
+<p><strong>解</strong>：不动点 $r=3r-4$，$r=2$，令 $b_n=a_n-2$，$b_{n+1}=3b_n$，$b_1=0$。</p>
+<p>故 $b_n=0$，$a_n=2$（常数列）。（因为初始值恰好等于不动点）</p>
+<p><strong>例2</strong>：$a_1=1, a_{n+1}=a_n+n$，求 $a_n$。</p>
+<p><strong>解</strong>：$a_n=1+\displaystyle\sum_{k=1}^{n-1}k=1+\dfrac{(n-1)n}{2}=\dfrac{n^2-n+2}{2}$</p>
+<p><strong>例3</strong>：$a_1=1, a_2=2, a_{n+2}=a_{n+1}+a_n$（斐波那契数列），写出前 8 项。</p>
+<p><strong>解</strong>：$1, 2, 3, 5, 8, 13, 21, 34$（此类递推一般无简单闭合公式，高中了解即可）</p>
+<h3>递推与数学归纳法的关系</h3>
+<p>递推公式常用于数学归纳法的证明：
+- 已知 $n=k$ 时命题成立
+- 利用递推关系，推出 $n=k+1$ 时也成立</p>
+<h3>易错点</h3>
+<ul>
+<li>递推公式必须给出<strong>初始值</strong>（$a_1$ 或 $a_1, a_2$ 等）才能确定数列</li>
+<li>一阶线性递推不动点法：注意 $p=1$ 时退化为等差，无需不动点法</li>
+<li>累加法的求和上限是 $n-1$（不是 $n$），最终加上 $a_1$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第四章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第四章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/381-数列概念-高中.html">数列概念-高中</a></li>
+<li><a href="../atoms/384-数列通项公式.html">数列通项公式</a></li>
+<li><a href="../atoms/356-等差数列概念.html">等差数列概念</a></li>
+<li><a class="dead" title="未收录">等比数列概念</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法-初步</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-20.html">2011-理-20</a></li>
+<li><a href="../exam/2012-文-12.html">2012-文-12</a></li>
+<li><a href="../exam/2014-理-20.html">2014-理-20</a></li>
+<li><a href="../exam/2019-理-12.html">2019-理-12</a></li>
+<li><a href="../exam/2019-理-19.html">2019-理-19</a></li>
+<li><a class="dead" title="未收录">2021-北京-21</a></li>
+<li><a class="dead" title="未收录">2022-北京-15</a></li>
+<li><a href="../exam/2022-理-04.html">2022-理-04</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-19.html">2024-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

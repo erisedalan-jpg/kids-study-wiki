@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的奇偶性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的奇偶性</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的奇偶性, odd and even functions, 奇函数, 偶函数</p><h2>🎓 函数的奇偶性</h2>
+<h3>定义</h3>
+<p>设函数 $f(x)$ 的定义域为 $D$，且 $D$ 关于原点对称（即 $\forall x \in D, -x \in D$）。</p>
+<p><strong>偶函数</strong>（even function）：若对所有 $x \in D$，有 $f(-x) = f(x)$，则称 $f(x)$ 为偶函数。
+- 图象特征：关于 $y$ 轴对称</p>
+<p><strong>奇函数</strong>（odd function）：若对所有 $x \in D$，有 $f(-x) = -f(x)$，则称 $f(x)$ 为奇函数。
+- 图象特征：关于原点对称（中心对称）</p>
+<p><strong>注意</strong>：定义域必须先关于原点对称，否则无法讨论奇偶性。</p>
+<h3>重要推论</h3>
+<p>若 $f(x)$ 是奇函数，且 $0 \in D$，则 $f(0) = 0$（因为 $f(0) = -f(0) \Rightarrow f(0) = 0$）。</p>
+<p><strong>四则运算中的奇偶性</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>奇 × 奇</th>
+<th>偶 × 偶</th>
+<th>奇 × 偶</th>
+<th>奇 + 奇</th>
+<th>偶 + 偶</th>
+<th>奇 + 偶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>结果</td>
+<td>偶</td>
+<td>偶</td>
+<td>奇</td>
+<td>奇</td>
+<td>偶</td>
+<td>非奇非偶</td>
+</tr>
+</tbody>
+</table>
+<h3>奇偶性的证明步骤</h3>
+<ol>
+<li><strong>验证定义域</strong>：确认 $D$ 关于原点对称</li>
+<li><strong>计算 $f(-x)$</strong>：将 $-x$ 代入函数表达式，化简</li>
+<li><strong>比较</strong>：若 $f(-x) = f(x)$，则为偶函数；若 $f(-x) = -f(x)$，则为奇函数</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：判断 $f(x) = x^2 - 1$ 的奇偶性。</p>
+<p>解：定义域 $\mathbb{R}$，关于原点对称。
+$f(-x) = (-x)^2 - 1 = x^2 - 1 = f(x)$。
+故 $f(x)$ 是偶函数（图象关于 $y$ 轴对称，顶点在 $y$ 轴上）。</p>
+<p><strong>例2</strong>：判断 $f(x) = x^3 + x$ 的奇偶性。</p>
+<p>解：定义域 $\mathbb{R}$，关于原点对称。
+$f(-x) = (-x)^3 + (-x) = -x^3 - x = -(x^3 + x) = -f(x)$。
+故 $f(x)$ 是奇函数。</p>
+<p><strong>例3</strong>：判断 $f(x) = \dfrac{x^2 + 1}{x}$（$x \neq 0$）的奇偶性。</p>
+<p>解：定义域 $\mathbb{R} \setminus {0}$，关于原点对称。</p>
+<p>$f(-x) = \dfrac{(-x)^2 + 1}{-x} = \dfrac{x^2+1}{-x} = -\dfrac{x^2+1}{x} = -f(x)$。</p>
+<p>故 $f(x)$ 是奇函数。</p>
+<p><strong>例4</strong>：已知 $f(x)$ 是奇函数，且 $f(x)$ 在 $x &gt; 0$ 时 $f(x) = x^2 + 1$，求 $f(-2)$。</p>
+<p>解：$f(-2) = -f(2)$（奇函数）。$f(2) = 2^2 + 1 = 5$（$2 &gt; 0$ 用已知）。故 $f(-2) = -5$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>先验证定义域</strong>：若定义域不关于原点对称（如 $[0, +\infty)$），则函数既非奇函数也非偶函数</li>
+<li><strong>$f(0) = 0$ 是奇函数的必要条件</strong>：0 在定义域内的奇函数，$f(0)$ 必为 0，可作快速排除依据</li>
+<li><strong>既不奇也不偶</strong>：大多数函数既不是奇函数也不是偶函数（如 $f(x) = x+1$）</li>
+<li><strong>$f(-x) = f(x)$ 整体验证</strong>：不能只验证一两个点，必须对所有 $x \in D$ 成立</li>
+<li><strong>复合函数奇偶性</strong>：不要忽视定义域是否关于原点对称这个前置条件</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了"关于 $y$ 轴对称"（偶函数图象特征）和"关于原点对称"（奇函数图象特征），如一次函数 $y = kx$（$k \neq 0$）是奇函数，$y = x^2$ 是偶函数。高中给出精确的代数定义，并系统研究奇偶性的运算法则和证明方法。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：奇函数（Odd function），偶函数（Even function），对称性</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">函数的图象变换</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a href="../atoms/276-余弦函数图象与性质.html">余弦函数图象与性质</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+<li><a class="dead" title="未收录">207-中心对称</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-04.html">2008-文-04</a></li>
+<li><a href="../exam/2008-理-03.html">2008-理-03</a></li>
+<li><a href="../exam/2011-文-03.html">2011-文-03</a></li>
+<li><a href="../exam/2012-文-16.html">2012-文-16</a></li>
+<li><a href="../exam/2014-文-04.html">2014-文-04</a></li>
+<li><a href="../exam/2014-理-15.html">2014-理-15</a></li>
+<li><a href="../exam/2015-文-12.html">2015-文-12</a></li>
+<li><a href="../exam/2015-理-12.html">2015-理-12</a></li>
+<li><a href="../exam/2017-文-14.html">2017-文-14</a></li>
+<li><a href="../exam/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/2018-文-03.html">2018-文-03</a></li>
+<li><a href="../exam/2018-文-06.html">2018-文-06</a></li>
+<li><a href="../exam/2018-理-03.html">2018-理-03</a></li>
+<li><a href="../exam/2019-文-05.html">2019-文-05</a></li>
+<li><a href="../exam/2019-文-06.html">2019-文-06</a></li>
+<li><a href="../exam/2019-理-05.html">2019-理-05</a></li>
+<li><a href="../exam/2020-文-10.html">2020-文-10</a></li>
+<li><a class="dead" title="未收录">2021-北京-06</a></li>
+<li><a href="../exam/2021-文-09.html">2021-文-09</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

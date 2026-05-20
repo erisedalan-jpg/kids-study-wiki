@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方差</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>方差</h1><div class="meta-card"><span><strong>权重</strong>20</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>4</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 八下, 数据分析]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 方差, variance, 数据离散程度</p><h1>方差</h1>
+<blockquote>
+<p><strong>一句话</strong>：方差是各数据与平均数之差的平方的平均数，衡量数据的离散程度——方差越大，数据越分散。
+<strong>English</strong>: Variance is the average of the squared differences from the mean, measuring data dispersion; larger variance means more spread out data.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>为什么需要方差？</h3>
+<p><strong>平均数</strong>只能反映数据的"中心"，不能反映数据的"分散程度"。</p>
+<p><strong>例</strong>：
+- 甲组成绩：80、80、80、80（平均 80，很集中）
+- 乙组成绩：60、70、90、100（平均 80，很分散）</p>
+<p>两组平均分相同，但稳定性（分散程度）不同！<strong>方差</strong>正是为此而生。</p>
+<h3>方差公式</h3>
+<p>$$S^2 = \frac{1}{n}\left[(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2\right]$$</p>
+<p><strong>计算步骤</strong>：</p>
+<ol>
+<li>求<strong>平均数</strong> $\bar{x}$</li>
+<li>求<strong>每个数与平均数的差</strong> $x_i - \bar{x}$</li>
+<li>将差<strong>平方</strong>（消除正负号）</li>
+<li>求<strong>平均</strong>（所有平方值之和 ÷ 个数）</li>
+</ol>
+<p><strong>例</strong>：数据 2、4、6（$\bar{x}=4$）</p>
+<p>$$S^2 = \frac{(2-4)^2+(4-4)^2+(6-4)^2}{3} = \frac{4+0+4}{3} = \frac{8}{3} \approx 2.67$$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格公式</h3>
+<p>$$S^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$$</p>
+<p><strong>简化计算公式</strong>（展开后）：</p>
+<p>$$S^2 = \overline{x^2} - \bar{x}^2 = \frac{1}{n}\sum x_i^2 - \left(\frac{1}{n}\sum x_i\right)^2$$</p>
+<p><strong>加权方差</strong>（数据有频数时）：</p>
+<p>$$S^2 = \frac{1}{n}\sum_{i=1}^{k} f_i(x_i - \bar{x})^2$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：甲组：70、75、80、85、90，乙组：60、70、80、90、100，两组平均分均为 80，比较稳定性。</p>
+<p>甲：$S_甲^2 = \dfrac{(-10)^2+(-5)^2+0^2+5^2+10^2}{5} = \dfrac{250}{5} = 50$</p>
+<p>乙：$S_乙^2 = \dfrac{(-20)^2+(-10)^2+0^2+10^2+20^2}{5} = \dfrac{1000}{5} = 200$</p>
+<p>$S_甲^2 &lt; S_乙^2$，甲组更稳定。</p>
+<p><strong>例 2</strong>：已知 5 个数据的平均数为 4，方差为 2，若每个数据都加 3，求新数据的平均数和方差。</p>
+<p>新平均数 $= 4+3=7$；方差不变（每个数与均值之差不变）$= 2$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 忘记先求平均数，直接计算差值</li>
+<li>❌ 差值没有平方（正负抵消导致结果为 0）</li>
+<li>❌ 把方差和标准差混淆（标准差 = $\sqrt{\text{方差}}$）</li>
+</ul>
+<h3>知识联系</h3>
+<p>方差是<a href="../atoms/055-平均数.html">平均数</a>的延伸（以均值为基准）；方差开根号得<a class="dead" title="未收录">标准差</a>；方差越小说明数据越稳定，在竞争比较（如哪位选手发挥更稳定）中常用；高中引入总体方差与样本方差的区分。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方差</td>
+<td>variance</td>
+</tr>
+<tr>
+<td>离散程度</td>
+<td>dispersion</td>
+</tr>
+<tr>
+<td>标准差</td>
+<td>standard deviation</td>
+</tr>
+<tr>
+<td>平均数</td>
+<td>mean</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>stability</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第20章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·统计与概率·统计</li>
+<li>拓展：<a class="dead" title="未收录">数学/标准差</a> · <a class="dead" title="未收录">数学/平均数</a> · <a class="dead" title="未收录">数学/统计图选择</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/055-平均数.html">平均数</a> · <a href="../atoms/180-中位数.html">中位数</a> · <a class="dead" title="未收录">众数</a> · <a class="dead" title="未收录">标准差</a> · <a class="dead" title="未收录">统计图选择</a> · <a href="../atoms/143-频数分布.html">频数分布</a> · <a href="../atoms/141-统计图.html">统计图</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-文-16.html">2011-文-16</a></li>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2012-文-17.html">2012-文-17</a></li>
+<li><a href="../exam/2012-理-18.html">2012-理-18</a></li>
+<li><a href="../exam/2013-文-16.html">2013-文-16</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2017-文-02.html">2017-文-02</a></li>
+<li><a href="../exam/2017-理-13.html">2017-理-13</a></li>
+<li><a href="../exam/2017-理-17.html">2017-理-17</a></li>
+<li><a href="../exam/2019-理-05.html">2019-理-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

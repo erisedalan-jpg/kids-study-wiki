@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>欧姆定律-初中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>欧姆定律-初中</h1><div class="meta-card"><span><strong>权重</strong>39</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十六章电压电阻, 第十七章欧姆定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 欧姆定律-初中, Ohm&#x27;s law, 欧姆定律, I=U/R</p><h1>欧姆定律-初中</h1>
+<blockquote>
+<p><strong>一句话</strong>：在温度不变的条件下，通过导体的电流与两端电压成正比，与导体电阻成反比，即I=U/R。
+<strong>English</strong>: At constant temperature, the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance: I = U/R.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>欧姆定律</strong>是电学中最重要的定律，把电压、电流、电阻三者联系在了一起！</p>
+<p>$$I = \frac{U}{R}$$</p>
+<ul>
+<li>I：电流（安培，A）</li>
+<li>U：电压（伏特，V）  </li>
+<li>R：电阻（欧姆，Ω）</li>
+</ul>
+<p><strong>直觉理解：</strong>
+- 电压越大，"推力"越大，电流越大 ✓
+- 电阻越大，"阻力"越大，电流越小 ✓</p>
+<p><strong>三个变形公式（三角形记忆法）：</strong></p>
+<p>$$I = \frac{U}{R}, \quad U = IR, \quad R = \frac{U}{I}$$</p>
+<p><strong>例子：</strong>
+一个灯泡电阻 100 Ω，接在 220 V 电源上：</p>
+<p>$$I = \frac{U}{R} = \frac{220}{100} = 2.2 \text{ A}$$</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>欧姆定律</h3>
+<p><strong>内容</strong>：在温度不变的条件下，通过导体的电流（$I$）与导体两端的电压（$U$）成正比，与导体的电阻（$R$）成反比。</p>
+<p>$$I = \frac{U}{R}$$</p>
+<p>$$U = IR, \quad R = \frac{U}{I}$$</p>
+<h3>适用范围</h3>
+<ol>
+<li><strong>纯电阻电路</strong>（用电器只有电阻效应）</li>
+<li><strong>温度不变</strong>（温度改变会导致电阻改变）</li>
+<li><strong>稳恒电流</strong>（直流或低频交流）</li>
+</ol>
+<p><strong>不适用情况：</strong>
+- 白炽灯（温度变化大，灯丝电阻非线性）
+- 二极管（单向导电，非线性）
+- 电动机（含反电动势，不是纯电阻）</p>
+<h3>伏安特性曲线（I-U图像）</h3>
+<p><strong>线性元件（纯电阻）</strong>：I-U图像是过原点的直线，斜率 = 1/R。</p>
+<p>$$斜率 = \frac{\Delta I}{\Delta U} = \frac{1}{R}$$</p>
+<p><strong>非线性元件</strong>（如灯泡）：I-U图像是曲线（电阻随温度变化）。</p>
+<h3>欧姆定律的发现</h3>
+<p>德国物理学家<strong>格奥尔格·西蒙·欧姆</strong>（1787-1854）通过大量实验，于1827年提出欧姆定律。为纪念他的贡献，电阻单位以他的名字命名：欧姆（Ω）。</p>
+<h3>欧姆定律在串并联中的应用</h3>
+<p><strong>串联电路：</strong></p>
+<p>$$I = \frac{U}{R_1 + R_2},\quad U_1 = IR_1,\quad U_2 = IR_2$$</p>
+<p><strong>并联电路：</strong></p>
+<p>$$U = \text{各支路共用},\quad I_1 = \frac{U}{R_1},\quad I_2 = \frac{U}{R_2}$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一电路由 $R_1 = 6$ Ω 和 $R_2 = 3$ Ω 并联后再与 $R_3 = 2$ Ω 串联，总电压 10 V。求干路电流和各支路电流。</p>
+<p><strong>解</strong>：</p>
+<p>并联部分等效电阻：$R_{12} = \frac{R_1 R_2}{R_1 + R_2} = \frac{6 \times 3}{6 + 3} = 2$ Ω</p>
+<p>总电阻：$R = R_{12} + R_3 = 2 + 2 = 4$ Ω</p>
+<p>干路电流：$I = \frac{U}{R} = \frac{10}{4} = 2.5$ A</p>
+<p>并联部分两端电压：$U_{12} = I \cdot R_{12} = 2.5 \times 2 = 5$ V</p>
+<p>$I_1 = \frac{U_{12}}{R_1} = \frac{5}{6} \approx 0.83$ A，$I_2 = \frac{U_{12}}{R_2} = \frac{5}{3} \approx 1.67$ A</p>
+<p>验证：$I_1 + I_2 = 2.5$ A ✓</p>
+<p><strong>易错点：</strong>
+- 欧姆定律只适用于纯电阻元件（温度不变）
+- 含电动机、二极管等器件时不能直接套用
+- $R = U/I$ 是定义式，电阻本身不因 U 和 I 变化而变化</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>欧姆定律</td>
+<td>Ohm's law</td>
+<td>n.</td>
+<td>Ohm's law states that I = U/R.</td>
+</tr>
+<tr>
+<td>正比</td>
+<td>directly proportional</td>
+<td>adj.</td>
+<td>Current is directly proportional to voltage.</td>
+</tr>
+<tr>
+<td>反比</td>
+<td>inversely proportional</td>
+<td>adj.</td>
+<td>Current is inversely proportional to resistance.</td>
+</tr>
+<tr>
+<td>伏安特性曲线</td>
+<td>I-V characteristic curve</td>
+<td>n.</td>
+<td>The I-V curve of a resistor is a straight line.</td>
+</tr>
+<tr>
+<td>纯电阻</td>
+<td>pure resistance</td>
+<td>n.</td>
+<td>Ohm's law applies to pure resistive circuits.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十七章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 欧姆定律</li>
+<li><strong>百科</strong>：维基百科"欧姆定律"；中文百科"格奥尔格·欧姆"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电流与电压关系</a></li>
+<li><a class="dead" title="未收录">电流与电阻关系</a></li>
+<li><a class="dead" title="未收录">欧姆定律应用</a></li>
+<li><a class="dead" title="未收录">欧姆定律串联电路</a></li>
+<li><a class="dead" title="未收录">欧姆定律并联电路</a></li>
+<li><a class="dead" title="未收录">电阻测量-伏安法</a></li>
+<li><a class="dead" title="未收录">欧姆定律综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-10.html">2008-全国Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2008-北京-10</a></li>
+<li><a class="dead" title="未收录">2010-北京-09</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-12.html">2014-新课标Ⅱ-12</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-09.html">2018-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-10.html">2019-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2020-北京-09</a></li>
+<li><a class="dead" title="未收录">2021-北京-16</a></li>
+<li><a class="dead" title="未收录">2021-湖南-06</a></li>
+<li><a href="../exam/2022-全国乙-10.html">2022-全国乙-10</a></li>
+<li><a class="dead" title="未收录">2022-湖南-06</a></li>
+<li><a class="dead" title="未收录">2022-湖南-13</a></li>
+<li><a class="dead" title="未收录">2024-北京-12</a></li>
+<li><a class="dead" title="未收录">2024-湖南-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

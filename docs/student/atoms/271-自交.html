@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自交</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>自交</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第1章遗传因子的发现]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 自交, self-fertilization, selfing</p><h1>自交</h1>
+<blockquote>
+<p><strong>一句话</strong>：自交是指同一植株（或动物个体）的雌雄配子相互结合，或同一基因型个体之间的交配；连续自交可使后代纯合比例逐代增加，是育种中纯化基因型的重要手段。
+<strong>English</strong>: Self-fertilization (selfing) is the union of male and female gametes from the same individual; repeated selfing increases homozygosity in offspring.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>自交</strong>（self-fertilization / selfing）：同一植株花朵的花粉落到同一朵花（或同株另一花）的柱头上完成受精，即雌雄配子来自同一遗传个体。</p>
+<blockquote>
+<p>豌豆是天然自花传粉植物，孟德尔实验中豌豆的自交是最基础的实验操作。
+对于动物或雌雄异株植物，自交指相同基因型个体间的交配（近交）。</p>
+</blockquote>
+<h3>原理 / 规律</h3>
+<h4>杂合子（Aa）连续自交各代纯合比例</h4>
+<p>设第n代自交：</p>
+<p>$$\text{纯合子比例} = 1 - \left(\frac{1}{2}\right)^{n-1}$$</p>
+<p>$$\text{杂合子（Aa）比例} = \left(\frac{1}{2}\right)^{n-1}$$</p>
+<table>
+<thead>
+<tr>
+<th>代次</th>
+<th>AA</th>
+<th>Aa</th>
+<th>aa</th>
+<th>纯合比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F₁（Aa）</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>F₂</td>
+<td>1/4</td>
+<td>1/2</td>
+<td>1/4</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>F₃</td>
+<td>3/8</td>
+<td>1/4</td>
+<td>3/8</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>F₄</td>
+<td>7/16</td>
+<td>1/8</td>
+<td>7/16</td>
+<td>87.5%</td>
+</tr>
+<tr>
+<td>F∞</td>
+<td>1/2</td>
+<td>0</td>
+<td>1/2</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>连续自交使杂合子比例每代减半，纯合子比例趋向100%，但理论上永远不能达到100%（除非无限代）。</p>
+</blockquote>
+<h4>纯合子自交结果</h4>
+<ul>
+<li>AA × AA → 全AA（后代基因型不变）</li>
+<li>aa × aa → 全aa（后代基因型不变）</li>
+</ul>
+<p><strong>结论</strong>：纯合子自交后代基因型永远不变；只有杂合子自交才会发生基因型分离。</p>
+<h4>自交在育种中的应用</h4>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纯化基因型</td>
+<td>连续自交使杂合植株趋于纯合，获得纯合优良品种</td>
+</tr>
+<tr>
+<td>鉴别纯合与杂合</td>
+<td>自交后代发生性状分离→亲本为杂合子</td>
+</tr>
+<tr>
+<td>维持品种纯度</td>
+<td>自交品种自然纯合，无需人工授粉隔离</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：基因型为Aa的豌豆连续自交3代（F₁→F₃→F₄），求F₄中各基因型的比例以及显性性状个体的比例。</p>
+<p><strong>解题</strong>：
+F₁ = Aa，经3次自交到F₄（n=3，即第3代自交产生的F₄）：</p>
+<p>$$\text{Aa 比例} = \left(\frac{1}{2}\right)^3 = \frac{1}{8}$$</p>
+<p>$$\text{AA} = \text{aa} = \frac{1 - 1/8}{2} = \frac{7}{16}$$</p>
+<ul>
+<li>F₄基因型：AA = 7/16, Aa = 1/8 = 2/16, aa = 7/16</li>
+<li>验证：7/16 + 2/16 + 7/16 = 16/16 ✓</li>
+<li>显性个体（AA + Aa）= 7/16 + 2/16 = <strong>9/16</strong></li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>自交≠近亲交配</strong>：自交特指同一个体（或相同基因型个体）间的受精；近亲交配是血缘关系近的不同个体之间的交配，效果相似但有区别。</li>
+<li><strong>每次自交杂合子减半，不是后代总数减半</strong>：自交后代数量不减少，只是杂合子比例减少。</li>
+<li><strong>植物"自花传粉"不一定是自交</strong>：自花传粉的植物通常是自交，但人工异花传粉时不是自交。</li>
+<li><strong>连续自交3代不是n=3</strong>：要明确是"第3次自交后的后代"还是"自交3代后"，注意起点计数。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自交</td>
+<td>self-fertilization / selfing</td>
+</tr>
+<tr>
+<td>自花传粉</td>
+<td>self-pollination</td>
+</tr>
+<tr>
+<td>纯合子</td>
+<td>homozygote</td>
+</tr>
+<tr>
+<td>杂合子</td>
+<td>heterozygote</td>
+</tr>
+<tr>
+<td>近交</td>
+<td>inbreeding</td>
+</tr>
+<tr>
+<td>纯化</td>
+<td>purification</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>Mendel used self-fertilization of pea plants to establish true-breeding lines.</em>（孟德尔通过豌豆自交建立了纯合品系。）</li>
+<li><em>Repeated selfing gradually increases the proportion of homozygotes in a population.</em>（连续自交逐渐增加种群中纯合子的比例。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第1章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"自花传粉"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/270-测交.html">测交</a></li>
+<li><a class="dead" title="未收录">杂交</a></li>
+<li><a href="../atoms/266-分离定律.html">分离定律</a></li>
+<li><a class="dead" title="未收录">基因型与表现型</a></li>
+<li><a href="../atoms/273-遗传图解.html">遗传图解</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-10.html">2019-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

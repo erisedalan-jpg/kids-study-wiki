@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指数函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>指数函数</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 指数函数, exponential function</p><h2>🎓 指数函数</h2>
+<h3>定义</h3>
+<p>形如 $y = a^x$（$a &gt; 0$ 且 $a \neq 1$，$x \in \mathbb{R}$）的函数，称为<strong>指数函数</strong>（exponential function）。</p>
+<ul>
+<li><strong>底数</strong> $a$：必须满足 $a &gt; 0$ 且 $a \neq 1$（$a = 1$ 时为常数函数，$a \leq 0$ 时多处无意义）</li>
+<li><strong>指数</strong> $x$：自变量，取值为全体实数 $\mathbb{R}$</li>
+<li><strong>定义域</strong>：$\mathbb{R}$（$-\infty, +\infty$）</li>
+<li><strong>值域</strong>：$(0, +\infty)$（恒为正数）</li>
+</ul>
+<h3>图象特征</h3>
+<p>所有指数函数 $y = a^x$ 的图象都经过点 $(0, 1)$（因为 $a^0 = 1$），且始终在 $x$ 轴上方（$y &gt; 0$）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">底数 $a$ 的范围</th>
+<th style="text-align: center;">单调性</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$a &gt; 1$</td>
+<td style="text-align: center;">单调递增</td>
+<td style="text-align: center;">$x \to -\infty$ 时 $y \to 0^+$；$x \to +\infty$ 时 $y \to +\infty$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$0 &lt; a &lt; 1$</td>
+<td style="text-align: center;">单调递减</td>
+<td style="text-align: center;">$x \to -\infty$ 时 $y \to +\infty$；$x \to +\infty$ 时 $y \to 0^+$</td>
+</tr>
+</tbody>
+</table>
+<p>两组图象关于 $y$ 轴对称（$y = a^x$ 与 $y = (1/a)^x = a^{-x}$ 关于 $y$ 轴对称）。</p>
+<h3>关键值</h3>
+<p>$$a^0 = 1, \quad a^1 = a, \quad a^{-1} = \frac{1}{a}$$</p>
+<p><strong>自然指数函数</strong>：$y = e^x$，其中 $e \approx 2.71828\ldots$ 是自然常数，$e &gt; 1$，故 $y = e^x$ 单调递增。</p>
+<h3>推导思路</h3>
+<p>指数函数从"复利增长"模型出发：若本金为 $P_0$，年利率为 $r$，$t$ 年后本金为 $P(t) = P_0(1+r)^t$。令 $a = 1+r &gt; 1$，得 $P(t) = P_0 \cdot a^t$，即指数函数。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：比较 $3^{0.7}$ 与 $3^{0.8}$ 的大小。</p>
+<p>解：$y = 3^x$，底数 $3 &gt; 1$，单调递增。$0.7 &lt; 0.8$，故 $3^{0.7} &lt; 3^{0.8}$。</p>
+<p><strong>例2</strong>：解不等式 $\left(\dfrac{1}{2}\right)^{x-1} &gt; \left(\dfrac{1}{2}\right)^{2x}$。</p>
+<p>解：底数 $\dfrac{1}{2} \in (0,1)$，单调递减。"递减函数不等号反向"：$x-1 &lt; 2x$，即 $-1 &lt; x$，解集 $(-1, +\infty)$。</p>
+<p><strong>例3</strong>：已知 $f(x) = a^x$（$a &gt; 0, a \neq 1$），且 $f(1) = 2$，求 $a$ 并求 $f(-2)$。</p>
+<p>解：$f(1) = a^1 = a = 2$，故 $a = 2$，$f(x) = 2^x$，$f(-2) = 2^{-2} = \dfrac{1}{4}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>底数限制</strong>：$a &gt; 0$ 且 $a \neq 1$，写题时不能忘记这两个条件</li>
+<li><strong>值域恒正</strong>：$a^x &gt; 0$ 恒成立（对任意 $x$），指数函数值域为 $(0, +\infty)$，不含 $0$ 和负数</li>
+<li><strong>单调方向依赖底数</strong>：$a &gt; 1$ 递增，$0 &lt; a &lt; 1$ 递减，不要混淆</li>
+<li><strong>指数不等式变号</strong>：底数 $&lt; 1$ 时，指数不等式方向与指数大小相反（底数 $&gt; 1$ 同向）</li>
+<li><strong>$e^x$ 的特殊性</strong>：$e \approx 2.718$，是最常用的底数，后续微积分中导数 $(e^x)' = e^x$ 的性质非常重要</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中接触过"成倍增长"的实际问题，如细菌繁殖、复利计算，隐含了指数函数的思想。高中正式定义指数函数，系统研究其图象和性质，并引入自然底数 $e$，为后续学习对数函数和微积分奠定基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：指数函数（Exponential function），自然常数 $e$（Euler's number）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">指数函数的性质</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a class="dead" title="未收录">分数指数幂</a></li>
+<li><a class="dead" title="未收录">幂函数</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-13.html">2009-理-13</a></li>
+<li><a href="../exam/2012-文-05.html">2012-文-05</a></li>
+<li><a href="../exam/2012-文-11.html">2012-文-11</a></li>
+<li><a href="../exam/2012-文-14.html">2012-文-14</a></li>
+<li><a href="../exam/2013-文-12.html">2013-文-12</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2017-文-05.html">2017-文-05</a></li>
+<li><a href="../exam/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/2017-理-11.html">2017-理-11</a></li>
+<li><a href="../exam/2019-文-03.html">2019-文-03</a></li>
+<li><a href="../exam/2019-理-13.html">2019-理-13</a></li>
+<li><a class="dead" title="未收录">2020-北京-06</a></li>
+<li><a href="../exam/2020-理-11.html">2020-理-11</a></li>
+<li><a href="../exam/2022-理-16.html">2022-理-16</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

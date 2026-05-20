@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等比数列的通项公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等比数列的通项公式</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等比数列的通项公式, General Term Formula of a Geometric Sequence</p><h1>等比数列的通项公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：若数列 ${a_n}$ 是等比数列，首项为 $a_1$，公比为 $q$（$q \neq 0$），则其通项公式为 $a_n = a_1 q^{n-1}$。
+<strong>English</strong>: For a geometric sequence with first term $a_1$ and common ratio $q$ ($q \neq 0$), the general term is $a_n = a_1 q^{n-1}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：等比数列是指从第二项起，每一项与其前一项的比等于同一个常数（公比 $q$）的数列。由此递推关系 $\frac{a_{n}}{a_{n-1}} = q\ (n \ge 2)$ 可推导出通项公式 $a_n = a_1 q^{n-1}$。该公式直接刻画了项与序号 $n$ 的指数关系，是研究等比数列各项性质的基础。更一般地，若已知第 $k$ 项 $a_k$，则 $a_n = a_k q^{n-k}$。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：解决等比数列问题的核心步骤为：（1）设出首项 $a_1$ 与公比 $q$；（2）利用已知条件列方程组，如给出某两项的值可列 $a_m = a_1 q^{m-1}$、$a_n = a_1 q^{n-1}$ 并相除消去 $a_1$ 求 $q$；（3）解出 $a_1$ 和 $q$ 后得到通项，再进行后续运算。判定一个数列是否为等比数列，常利用定义 $\frac{a_{n+1}}{a_n} = q$（常数）或通项形式 $a_n = c \cdot q^{n}$（$c \neq 0$），注意需验证首项不为0且公比不为0。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见题型有：（1）已知某两项求通项或求某一项（如 $a_3=12$，$a_6=96$，求 $a_n$）；（2）利用通项公式求项数或解不等式（如求满足 $a_n &gt; 1000$ 的最小 $n$）；（3）与对数结合考察等差关系（若 ${a_n}$ 为正项等比数列，则 ${\log_b a_n}$ 为等差数列）；（4）在实际情境中建立等比数列模型（如增长率问题、复利计算）。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽视公比 $q \neq 0$ 的条件：等比数列各项均不为0，若推导时将 $q=0$ 代入会导致数列出现0项而不满足定义。</li>
+<li>通项公式中指数写成 $n$ 而非 $n-1$：标准形式 $a_n = a_1 q^{n-1}$，在计算项数较多时易混淆，可通过特例 $n=1$ 检验。</li>
+<li>解方程组时丢失 $q$ 的符号或漏根：若条件给出两项的符号，需判断 $q$ 的正负；偶次方根可能产生正负两解，需根据项的实际符号取舍。</li>
+<li>直接将等比数列通项形式等同于等差数列通项的一次函数形式，忽略指数增长的“爆炸性”特点，导致放缩或比较大小错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence / geometric progression</td>
+<td>各项与它前项的比为常数的数列</td>
+</tr>
+<tr>
+<td>首项</td>
+<td>first term</td>
+<td>数列的第一项，记为 $a_1$</td>
+</tr>
+<tr>
+<td>公比</td>
+<td>common ratio</td>
+<td>相邻两项的比值，记为 $q$</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>general term formula</td>
+<td>用项数 $n$ 表示第 $n$ 项 $a_n$ 的式子</td>
+</tr>
+<tr>
+<td>递推关系</td>
+<td>recurrence relation</td>
+<td>用前一项表示后一项的关系式 $a_n = a_{n-1} q$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧 高中数学课程标准·数列模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">等比数列的定义</a></li>
+<li><a class="dead" title="未收录">等比中项</a></li>
+<li><a class="dead" title="未收录">等比数列的前n项和</a></li>
+<li><a class="dead" title="未收录">等差数列的通项公式</a></li>
+<li><a class="dead" title="未收录">递推数列求通项</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-13.html">2009-文-13</a></li>
+<li><a href="../exam/2010-理-02.html">2010-理-02</a></li>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2012-理-05.html">2012-理-05</a></li>
+<li><a href="../exam/2013-文-11.html">2013-文-11</a></li>
+<li><a href="../exam/2013-理-10.html">2013-理-10</a></li>
+<li><a href="../exam/2015-文-16.html">2015-文-16</a></li>
+<li><a href="../exam/2017-文-17.html">2017-文-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

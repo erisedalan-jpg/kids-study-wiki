@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自由组合定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>自由组合定律</h1><div class="meta-card"><span><strong>权重</strong>48</span><span><strong>吉林命中</strong>9</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第1章遗传因子的发现]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 自由组合定律, Law of Independent Assortment, 孟德尔第二定律, 基因的自由组合定律</p><h1>自由组合定律</h1>
+<blockquote>
+<p><strong>一句话</strong>：孟德尔第二定律：控制不同性状的非等位基因在形成配子时，非同源染色体上的非等位基因彼此自由组合，独立遗传，互不干扰。
+<strong>English</strong>: Mendel's Second Law: genes for different traits on non-homologous chromosomes assort independently into gametes.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>基因的自由组合定律</strong>（孟德尔第二定律）：在减数分裂形成配子时，同源染色体上的等位基因彼此分离（分离定律），非同源染色体上的非等位基因之间则自由组合，互不影响，独立地分配到配子中。</p>
+<blockquote>
+<p><strong>适用前提</strong>：两对（或多对）基因位于非同源染色体上（即不连锁）。若基因连锁则需考虑交换频率，不能直接用自由组合计算。</p>
+</blockquote>
+<h3>原理 / 规律</h3>
+<h4>细胞学基础</h4>
+<p>自由组合定律的实质是<strong>减数第一次分裂后期非同源染色体的自由组合</strong>。非同源染色体之间随机取向并分离，导致其上携带的非等位基因自由组合进入配子。</p>
+<pre><code>         减数第一次分裂后期
+AB染色体组合 或 Ab染色体组合
+aB染色体组合 或 ab染色体组合
+↓
+配子种类：AB : Ab : aB : ab = 1:1:1:1
+</code></pre>
+<h4>YyRr产生的配子</h4>
+<p>YyRr → 4种配子，各占1/4：</p>
+<table>
+<thead>
+<tr>
+<th>配子</th>
+<th>Y基因</th>
+<th>R基因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YR</td>
+<td>Y</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Yr</td>
+<td>Y</td>
+<td>r</td>
+</tr>
+<tr>
+<td>yR</td>
+<td>y</td>
+<td>R</td>
+</tr>
+<tr>
+<td>yr</td>
+<td>y</td>
+<td>r</td>
+</tr>
+</tbody>
+</table>
+<h4>自由组合定律 vs. 分离定律的关系</h4>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>分离定律</th>
+<th>自由组合定律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>研究对象</td>
+<td>一对等位基因</td>
+<td>两对及以上非同源染色体上的非等位基因</td>
+</tr>
+<tr>
+<td>发生时间</td>
+<td>减数第一次分裂后期</td>
+<td>减数第一次分裂后期（同时发生）</td>
+</tr>
+<tr>
+<td>实质</td>
+<td>同源染色体分离</td>
+<td>非同源染色体自由组合</td>
+</tr>
+<tr>
+<td>关系</td>
+<td>自由组合定律以分离定律为基础</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>多对基因自由组合时配子种类</h4>
+<table>
+<thead>
+<tr>
+<th>杂合对数（n）</th>
+<th>配子种类</th>
+<th>F₂表现型种类（完全显性）</th>
+<th>F₂基因型种类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1（Aa）</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2（AaBb）</td>
+<td>4</td>
+<td>4</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3（AaBbCc）</td>
+<td>8</td>
+<td>8</td>
+<td>27</td>
+</tr>
+<tr>
+<td>n</td>
+<td>2ⁿ</td>
+<td>2ⁿ</td>
+<td>3ⁿ</td>
+</tr>
+</tbody>
+</table>
+<h4>9:3:3:1变式比例</h4>
+<p>当两对基因相互影响（上位性等）时，9:3:3:1会变形：</p>
+<table>
+<thead>
+<tr>
+<th>变式</th>
+<th>比例</th>
+<th>遗传现象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>互补效应</td>
+<td>9:7</td>
+<td>A_B_显性，其余均隐性</td>
+</tr>
+<tr>
+<td>显性上位</td>
+<td>12:3:1</td>
+<td>A_遮盖B基因效果</td>
+</tr>
+<tr>
+<td>隐性上位</td>
+<td>9:3:4</td>
+<td>aa遮盖B基因效果</td>
+</tr>
+<tr>
+<td>重复作用</td>
+<td>15:1</td>
+<td>A_B_、A_bb、aaB_均同一表现型</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：AaBbCc × AaBbCc（三对基因均独立遗传），后代中表现型为三显（A_B_C_）的比例是多少？纯合三显（AABBCC）的比例是多少？</p>
+<p><strong>解题</strong>：
+- 各对独立分析：A_=3/4, B_=3/4, C_=3/4
+- 三显 = 3/4 × 3/4 × 3/4 = <strong>27/64</strong>
+- 纯合三显（AABBCC）= 1/4 × 1/4 × 1/4 = <strong>1/64</strong></p>
+<h3>易错点</h3>
+<ol>
+<li><strong>自由组合≠随机组合</strong>：自由组合是指非同源染色体上的非等位基因的组合，同一染色体上连锁的基因不自由组合。</li>
+<li><strong>9:3:3:1前提严格</strong>：两对基因完全显性 + 位于非同源染色体 + 后代足够多。</li>
+<li><strong>变式比例的本质</strong>：所有变式都是9:3:3:1的变形，总份数仍为16，只是某些表现型合并。</li>
+<li><strong>配子种类≠后代基因型种类</strong>：YyRr产生4种配子，YyRr×YyRr后代有9种基因型，不要混淆。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自由组合定律</td>
+<td>Law of Independent Assortment</td>
+</tr>
+<tr>
+<td>非同源染色体</td>
+<td>non-homologous chromosomes</td>
+</tr>
+<tr>
+<td>非等位基因</td>
+<td>non-allelic genes</td>
+</tr>
+<tr>
+<td>上位性</td>
+<td>epistasis</td>
+</tr>
+<tr>
+<td>互补效应</td>
+<td>complementary effect</td>
+</tr>
+<tr>
+<td>配子</td>
+<td>gamete</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>The Law of Independent Assortment states that genes on different chromosomes are inherited independently.</em>（自由组合定律指出，位于不同染色体上的基因是独立遗传的。）</li>
+<li><em>This law applies only when genes are located on different (non-homologous) chromosomes.</em>（该定律只适用于基因位于不同（非同源）染色体上的情况。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第1章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"孟德尔遗传定律"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/266-分离定律.html">分离定律</a></li>
+<li><a class="dead" title="未收录">两对相对性状遗传实验</a></li>
+<li><a href="../atoms/277-减数分裂（高中必二）.html">减数分裂（高中必二）</a></li>
+<li><a class="dead" title="未收录">基因在染色体上</a></li>
+<li><a href="../atoms/273-遗传图解.html">遗传图解</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-新课标-10.html">2011-新课标-10</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-10.html">2013-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-10.html">2016-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-10</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-10</a></li>
+<li><a href="../exam/2021-全国乙-06.html">2021-全国乙-06</a></li>
+<li><a href="../exam/2021-全国乙-09.html">2021-全国乙-09</a></li>
+<li><a href="../exam/2021-全国乙-10.html">2021-全国乙-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-17</a></li>
+<li><a href="../exam/2022-全国乙-10.html">2022-全国乙-10</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a class="dead" title="未收录">2022-北京-18</a></li>
+<li><a class="dead" title="未收录">2022-湖南-15</a></li>
+<li><a href="../exam/2023-新课标-05.html">2023-新课标-05</a></li>
+<li><a class="dead" title="未收录">2023-湖南-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

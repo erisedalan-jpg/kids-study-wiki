@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代入消元法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>代入消元法</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 二元一次方程组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 代入消元法, substitution method, 代入法, substitution elimination</p><h2>课本定义</h2>
+<p>解二元一次方程组时，把一个方程中的一个未知数，用另一个未知数的代数式表示，代入另一个方程，消去一个未知数，化二元为一元，这种方法叫做<strong>代入消元法</strong>（简称<strong>代入法</strong>）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"替换掉一个未知数"</h3>
+<p><strong>代入消元法</strong>就是：
+1. 从其中一个方程里"把 x（或 y）用另一个变量表示"
+2. 把这个表达式"代入"另一个方程
+3. 这样，另一个方程就只剩一个未知数了！</p>
+<p><strong>步骤口诀：</strong> "选一个、解出来、代进去、算答案、再回头"</p>
+<p><strong>例子：</strong> 解方程组
+$$\begin{cases} y = x + 3 \quad (1)\ 2x + y = 9 \quad (2) \end{cases}$$</p>
+<p><strong>步骤：</strong>
+1. 方程 (1) 已经把 y 表达出来了：y = x + 3
+2. 把 y = x + 3 代入方程 (2)：2x + (x + 3) = 9
+3. 化简：3x + 3 = 9，3x = 6，<strong>x = 2</strong>
+4. 代回 (1)：y = 2 + 3 = <strong>5</strong>
+5. 答：x = 2，y = 5</p>
+<p><strong>验证：</strong> 代入 (2)：2(2)+5=9✓</p>
+<p><strong>什么时候用代入法最方便？</strong>
+当方程组中某个方程已经是 "x = ..." 或 "y = ..." 的形式时，用代入法最快！</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>方法步骤（规范格式）</h3>
+<p><strong>解二元一次方程组（代入法）的标准步骤：</strong></p>
+<ol>
+<li><strong>选方程</strong>：从方程组中选一个方程，解出其中一个未知数（选系数为 ±1 的未知数更简便）</li>
+<li><strong>代入</strong>：将解出的表达式代入另一个方程（消去一个未知数）</li>
+<li><strong>求解</strong>：解这个一元一次方程，得到一个未知数的值</li>
+<li><strong>回代</strong>：将求得的值代入第 1 步的表达式，求另一个未知数</li>
+<li><strong>验证</strong>：将解代回原方程组的每个方程，验证是否成立</li>
+<li><strong>写答</strong>：写明 x = __, y = __</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例题1（标准型）：</strong> 解方程组</p>
+<p>$$\begin{cases} 2x - y = 3 \quad (1)\ x + 3y = 10 \quad (2) \end{cases}$$</p>
+<p>解：由 (1) 得 y = 2x - 3 ……(3)</p>
+<p>将 (3) 代入 (2)：x + 3(2x-3) = 10
+x + 6x - 9 = 10
+7x = 19
+x = 19/7</p>
+<p>y = 2(19/7) - 3 = 38/7 - 21/7 = 17/7</p>
+<p>答：x = 19/7，y = 17/7</p>
+<p>验证：(1) 2(19/7) - 17/7 = 38/7 - 17/7 = 21/7 = 3✓
+     (2) 19/7 + 3(17/7) = 19/7 + 51/7 = 70/7 = 10✓</p>
+<p><strong>例题2（已有直接代入条件）：</strong> 解方程组</p>
+<p>$$\begin{cases} y = 3x - 1 \quad (1)\ 4x + 2y = 18 \quad (2) \end{cases}$$</p>
+<p>解：将 (1) 代入 (2)：4x + 2(3x-1) = 18
+4x + 6x - 2 = 18
+10x = 20，x = 2</p>
+<p>y = 3(2) - 1 = 5</p>
+<p>答：x = 2，y = 5</p>
+<p><strong>例题3（应用题）：</strong> 某班男生人数是女生人数的 1.5 倍，全班共40人，求男女各几人。</p>
+<p>设男生 x 人，女生 y 人：
+$$\begin{cases} x = 1.5y \quad (1)\ x + y = 40 \quad (2) \end{cases}$$</p>
+<p>将 (1) 代入 (2)：1.5y + y = 40
+2.5y = 40，y = 16
+x = 1.5 × 16 = 24</p>
+<p>答：男生24人，女生16人。</p>
+<h3>与加减法的比较</h3>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>代入消元法</th>
+<th>加减消元法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用场景</td>
+<td>一个方程中某变量系数为±1</td>
+<td>两变量系数方便倍数化</td>
+</tr>
+<tr>
+<td>步骤特点</td>
+<td>先解出一个变量</td>
+<td>先相加减消元</td>
+</tr>
+<tr>
+<td>计算量</td>
+<td>可能产生分数</td>
+<td>通常整数运算</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>代入时要整体代入</strong>：y = 2x+1 代入 3y，应写 3(2x+1)，不是 3·2x+1</li>
+<li><strong>代入后必须化简整理</strong>，再解一元方程</li>
+<li><strong>最后一步必须回代求另一个未知数</strong>，不能遗漏</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代入消元法</td>
+<td>substitution method</td>
+<td>替换消去变量</td>
+</tr>
+<tr>
+<td>消元</td>
+<td>elimination</td>
+<td>减少未知数</td>
+</tr>
+<tr>
+<td>代入</td>
+<td>substitute</td>
+<td>用表达式替换变量</td>
+</tr>
+<tr>
+<td>回代</td>
+<td>back-substitution</td>
+<td>将已求值代回</td>
+</tr>
+<tr>
+<td>验证</td>
+<td>check / verify</td>
+<td>代入验证解的正确性</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第八章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">七下-二元一次方程组</a></li>
+<li><a class="dead" title="未收录">加减消元法</a></li>
+<li><a class="dead" title="未收录">二元一次方程</a></li>
+<li><a class="dead" title="未收录">一元一次方程</a></li>
+<li><a class="dead" title="未收录">合并同类项</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2024-新课标Ⅱ-05.html">2024-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

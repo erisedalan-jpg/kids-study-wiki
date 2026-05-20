@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>远距离输电</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>远距离输电</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 交变电流]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 远距离输电, long-distance power transmission</p><h2>🎓 远距离输电（高中物理）</h2>
+<h3>核心问题</h3>
+<p>电力从发电站传输到用户，输电线有电阻 $R_{\text{线}}$，会产生功率损耗：</p>
+<p>$$P_{\text{损}} = I_{\text{线}}^2 R_{\text{线}}$$</p>
+<p>为减小损耗，需减小输电电流 $I_{\text{线}}$。在输送功率 $P$ 一定的情况下：</p>
+<p>$$I_{\text{线}} = \frac{P}{U_{\text{线}}}$$</p>
+<p><strong>提高输电电压 → 减小输电电流 → 减小线路损耗</strong></p>
+<h3>输电流程</h3>
+<pre><code>发电机（低压）→ 升压变压器 → 高压输电线 → 降压变压器 → 用户（低压）
+</code></pre>
+<p>具体电压等级（中国，待家长核对）：
+- 发电机：约 10 kV（大型机组）
+- 升压后：110 kV、220 kV、500 kV、1000 kV（特高压）
+- 用户：10 kV（工业）→ 380 V（三相工业）→ 220 V（单相民用）</p>
+<h3>定量分析</h3>
+<p>设输送功率 $P$，输电线电阻为 $R_{\text{线}}$，输电电压（升压后）为 $U$：</p>
+<p>$$I = \frac{P}{U}$$</p>
+<p>$$P_{\text{损}} = I^2 R_{\text{线}} = \frac{P^2 R_{\text{线}}}{U^2}$$</p>
+<p>$$\Delta U_{\text{线}} = IR_{\text{线}} = \frac{PR_{\text{线}}}{U} \quad \text{（线路电压降）}$$</p>
+<p>$$U_{\text{末端}} = U - \Delta U_{\text{线}} \quad \text{（到达降压变压器的电压）}$$</p>
+<p><strong>输电电压提高 $n$ 倍 → 电流减小 $n$ 倍 → 损耗减小 $n^2$ 倍</strong></p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某发电站发电功率 $P = 5\times10^5$ W，输电线总电阻 $R_{\text{线}} = 40$ Ω。</p>
+<p>（1）若直接以 1000 V 输电，求线路损耗功率和损耗百分比。</p>
+<p>$$I = \frac{P}{U} = \frac{5\times10^5}{1000} = 500\text{ A}$$
+$$P_{\text{损}} = I^2R = 500^2\times40 = 10^7\text{ W} = 10000\text{ kW}$$</p>
+<p>损耗远超发电量，不可行！</p>
+<p>（2）改用升压变压器升至 10000 V 输电：</p>
+<p>$$I = \frac{5\times10^5}{10000} = 50\text{ A}$$
+$$P_{\text{损}} = 50^2\times40 = 100000\text{ W} = 100\text{ kW}$$</p>
+<p>损耗 $= 100/500 = 20\%$，尚可接受</p>
+<p>（3）升至 100000 V（100 kV）输电：</p>
+<p>$$I = 5\text{ A}, \quad P_{\text{损}} = 25\times40 = 1000\text{ W} = 1\text{ kW}$$</p>
+<p>损耗 $= 1/500 = 0.2\%$，非常低</p>
+<h3>高压输电的安全措施</h3>
+<ol>
+<li>输电线架设在高空（绝缘）</li>
+<li>采用绝缘子（串型、盘型）</li>
+<li>高压直流输电（HVDC）：减少交流损耗，适合超远距离</li>
+<li>特高压直流（中国自主技术，世界领先）</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li>$P_{\text{损}} = I^2R_{\text{线}}$，不是 $U^2/R_{\text{线}}$（此处 $U$ 是线路两端电压降，不是输电电压）。</li>
+<li>"升压后电压"是<strong>升压变压器次级电压</strong>，不是发电机电压。</li>
+<li>用户端（降压变压器初级）接收的电压 = 输电电压 - 线路电压降，不等于升压变压器次级电压。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第三章，页码待家长核对）</li>
+<li><strong>百科</strong>：高压输电 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">理想变压器</a></li>
+<li><a href="../atoms/381-变压器.html">变压器</a></li>
+<li><a class="dead" title="未收录">电压变换公式</a></li>
+<li><a class="dead" title="未收录">电流变换公式</a></li>
+<li><a class="dead" title="未收录">电能输送原理</a></li>
+<li><a class="dead" title="未收录">交变电流-高中</a></li>
+<li><a class="dead" title="未收录">电磁感应应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2020-新课标Ⅱ-06.html">2020-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2024-湖南-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

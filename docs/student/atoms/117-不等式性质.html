@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>不等式性质</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 不等式与不等式组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 不等式性质, properties of inequalities, 不等式运算性质</p><h2>课本定义</h2>
+<p>不等式有三条基本性质：
+1. 不等式两边加（减）同一个数，不等号方向不变
+2. 不等式两边乘（除）同一个<strong>正数</strong>，不等号方向不变
+3. 不等式两边乘（除）同一个<strong>负数</strong>，不等号<strong>方向改变</strong>（这是最重要也最易错的性质！）</p>
+<hr />
+<h2>📚  6-12 岁回溯版</h2>
+<h3>"不等式的"交通规则""</h3>
+<p><strong>性质一：加减同一个数，方向不变</strong></p>
+<p>5 &gt; 3</p>
+<p>两边都加 2：5+2 &gt; 3+2，即 7 &gt; 5 ✓（方向没变）</p>
+<p>两边都减 4：5-4 &gt; 3-4，即 1 &gt; -1 ✓（方向没变）</p>
+<p><strong>性质二：乘除正数，方向不变</strong></p>
+<p>5 &gt; 3</p>
+<p>两边都乘 2：5×2 &gt; 3×2，即 10 &gt; 6 ✓（方向没变）</p>
+<p>两边都除以 1/2：5÷(1/2) &gt; 3÷(1/2)，即 10 &gt; 6 ✓</p>
+<p><strong>性质三：乘除负数，方向改变！（最重要）</strong></p>
+<p>5 &gt; 3</p>
+<p>两边都乘 -2：5×(-2) ___ 3×(-2)，即 -10 ___ -6</p>
+<p>-10 &lt; -6（方向变了！从 &gt; 变成了 &lt;）</p>
+<p><strong>口诀：</strong>
+- 两边加减，方向不变
+- 两边乘除正数，方向不变<br />
+- 两边乘除<strong>负数</strong>，<strong>方向改变</strong>（翻转！）</p>
+<p><strong>为什么负数要翻转？</strong>
+想想数轴：5 在 3 右边（5&gt;3）。把两个数都乘以-1，5变成-5，3变成-3。-5 在 -3 的左边（-5&lt;-3），顺序翻了！</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>三条性质的严格表述</h3>
+<p>设 a &gt; b，则：</p>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>操作</th>
+<th>结论</th>
+<th>符号表述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性质1</td>
+<td>两边加/减同一数 c</td>
+<td>a±c &gt; b±c</td>
+<td>加减不变向</td>
+</tr>
+<tr>
+<td>性质2</td>
+<td>两边乘/除同一<strong>正数</strong> c</td>
+<td>ac &gt; bc（c&gt;0）</td>
+<td>正数不变向</td>
+</tr>
+<tr>
+<td>性质3</td>
+<td>两边乘/除同一<strong>负数</strong> c</td>
+<td>ac <strong>&lt;</strong> bc（c&lt;0）</td>
+<td>负数<strong>反向</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>性质的推导（性质3的说明）</h3>
+<p>设 a &gt; b，c &lt; 0。</p>
+<p>因 a - b &gt; 0（a 大于 b），c &lt; 0，
+则 (a-b)·c &lt; 0（正数×负数&lt;0）
+即 ac - bc &lt; 0，故 ac &lt; bc。</p>
+<p>结论：乘以负数后，不等号方向改变。</p>
+<h3>不等式的可传递性</h3>
+<p>若 a &gt; b 且 b &gt; c，则 a &gt; c（传递性）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 已知 a &gt; b，用不等号连接下列各式：
+(1) a - 3 与 b - 3
+(2) -2a 与 -2b
+(3) a/(-4) 与 b/(-4)</p>
+<p>解：
+(1) a &gt; b，两边减3，a-3 &gt; b-3（性质1，不变）
+(2) a &gt; b，两边乘-2，-2a &lt; -2b（性质3，反向）
+(3) a &gt; b，两边除-4，a/(-4) &lt; b/(-4)（性质3，反向）</p>
+<p><strong>例题2：</strong> 解不等式 -3x &gt; 6</p>
+<p>解：两边除以 -3（负数！方向改变）
+x &lt; 6/(-3)
+x &lt; -2</p>
+<p>答：x &lt; -2（注意：除以负数后 &gt; 变成 &lt;）</p>
+<p><strong>例题3：</strong> 已知 -1 &lt; x &lt; 3，求 -2x 的范围。</p>
+<p>解：由 -1 &lt; x：两边乘-2（负数），-2·(-1) &gt; -2·x，即 2 &gt; -2x
+由 x &lt; 3：两边乘-2（负数），-2x &gt; -6</p>
+<p>合并：-6 &lt; -2x &lt; 2</p>
+<p>答：-2x 的范围是 -6 &lt; -2x &lt; 2</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>乘除负数必须反向</strong>——这是最常见错误！</li>
+<li><strong>移项时符号改变</strong>（本质是两边加减，符号改变是移项规则，不是不等式性质）</li>
+<li><strong>不能用0去乘除</strong>（0不是正数也不是负数）</li>
+<li><strong>两个不等式相乘</strong>不能直接用性质（需要讨论符号）</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>不等式性质
+├── 类比 → 等式性质（加减不变，乘除不变）
+│         区别：等式乘除不限符号，不等式乘除负数要反向
+├── 应用 → 解一元一次不等式
+├── 应用 → 解一元一次不等式组
+└── 深化 → 绝对值不等式（高中）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不等式性质</td>
+<td>properties of inequalities</td>
+<td>不等式运算规则</td>
+</tr>
+<tr>
+<td>不等号</td>
+<td>inequality sign</td>
+<td>&lt;, &gt;, ≤, ≥</td>
+</tr>
+<tr>
+<td>方向改变</td>
+<td>reverse / flip the inequality</td>
+<td>乘除负数时</td>
+</tr>
+<tr>
+<td>传递性</td>
+<td>transitivity</td>
+<td>a&gt;b且b&gt;c则a&gt;c</td>
+</tr>
+<tr>
+<td>负数</td>
+<td>negative number</td>
+<td>小于0的数</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第九章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">一元一次不等式</a></li>
+<li><a class="dead" title="未收录">不等式解集</a></li>
+<li><a class="dead" title="未收录">一元一次不等式组</a></li>
+<li><a class="dead" title="未收录">等式性质</a></li>
+<li><a class="dead" title="未收录">一元一次方程</a></li>
+<li><a class="dead" title="未收录">实数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-文-05.html">2014-文-05</a></li>
+<li><a href="../exam/2014-理-05.html">2014-理-05</a></li>
+<li><a href="../exam/2017-文-13.html">2017-文-13</a></li>
+<li><a href="../exam/2017-理-13.html">2017-理-13</a></li>
+<li><a href="../exam/2018-文-11.html">2018-文-11</a></li>
+<li><a href="../exam/2022-文-23.html">2022-文-23</a></li>
+<li><a href="../exam/2022-理-23.html">2022-理-23</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

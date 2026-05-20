@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>库仑定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>库仑定律</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 静电场]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 库仑定律, Coulomb&#x27;s law, coulomb force</p><h2>🎓 库仑定律</h2>
+<h3>内容</h3>
+<p><strong>库仑定律</strong>：真空中两静止点电荷之间的相互作用力，与它们电荷量的乘积成正比，与两点电荷间距离的平方成反比，力的方向在连线上（同种相斥，异种相吸）。</p>
+<p>$$\boxed{F = k\frac{q_1 q_2}{r^2}}$$</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>值/单位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$F$</td>
+<td>库仑力（静电力）</td>
+<td>N</td>
+</tr>
+<tr>
+<td>$k$</td>
+<td>静电力常量</td>
+<td>$9 \times 10^9\ \text{N·m}^2/\text{C}^2$</td>
+</tr>
+<tr>
+<td>$q_1, q_2$</td>
+<td>两点电荷的电荷量</td>
+<td>C（带符号）</td>
+</tr>
+<tr>
+<td>$r$</td>
+<td>两点电荷的距离</td>
+<td>m</td>
+</tr>
+</tbody>
+</table>
+<h3>静电力常量</h3>
+<p>$$k = \frac{1}{4\pi\varepsilon_0} = 9 \times 10^9\ \text{N·m}^2/\text{C}^2$$</p>
+<p>（$\varepsilon_0 = 8.85 \times 10^{-12}\ \text{F/m}$ 为真空介电常量）</p>
+<h3>库仑定律与万有引力类比</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>万有引力</th>
+<th>库仑力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>公式</td>
+<td>$F = G\dfrac{Mm}{r^2}$</td>
+<td>$F = k\dfrac{q_1 q_2}{r^2}$</td>
+</tr>
+<tr>
+<td>常量</td>
+<td>$G = 6.67 \times 10^{-11}$</td>
+<td>$k = 9 \times 10^9$</td>
+</tr>
+<tr>
+<td>方向</td>
+<td>总是吸引</td>
+<td>同种斥，异种吸</td>
+</tr>
+<tr>
+<td>源</td>
+<td>质量</td>
+<td>电荷</td>
+</tr>
+<tr>
+<td>范围</td>
+<td>无限远</td>
+<td>无限远</td>
+</tr>
+</tbody>
+</table>
+<p>库仑力比万有引力强约 $10^{40}$ 倍（对质子-质子）。</p>
+<h3>适用条件</h3>
+<ol>
+<li><strong>点电荷</strong>：物体线度远小于两者间距时可视为点电荷</li>
+<li><strong>真空（或空气近似）</strong>：介质中需引入介电常数 $\varepsilon_r$</li>
+<li><strong>静止电荷</strong>：运动电荷还有磁力作用</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$q_1 = 3 \times 10^{-6}\ \text{C}$，$q_2 = 4 \times 10^{-6}\ \text{C}$，$r = 0.3\ \text{m}$，库仑力？</p>
+<p>$$F = 9 \times 10^9 \times \frac{3 \times 10^{-6} \times 4 \times 10^{-6}}{0.09} = 9 \times 10^9 \times \frac{12 \times 10^{-12}}{0.09} = 1.2\ \text{N}$$</p>
+<p><strong>例2（距离变化）</strong>：两电荷间距由 $r$ 增大到 $2r$，库仑力变为原来几倍？</p>
+<p>$$\frac{F'}{F} = \frac{r^2}{(2r)^2} = \frac{1}{4}$$（变为原来 $\frac{1}{4}$）</p>
+<p><strong>例3（三电荷力叠加）</strong>：A、B、C 三点电荷在一条直线上，分别计算 A 对 C 和 B 对 C 的力，再矢量合成。</p>
+<p>（具体计算根据题目电荷量和位置代入公式，注意方向）</p>
+<h3>库仑定律的发现</h3>
+<p>法国物理学家查尔斯·库仑（Charles-Augustin de Coulomb，1736—1806）于1785年用扭秤实验测定，发现与万有引力类似的平方反比定律。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$r$ 是两点电荷中心的距离</strong>，不是表面距离。</li>
+<li><strong>计算时 $q$ 代入大小</strong>（正值），力的方向另行判断；或用符号判断正负（正为斥，负为吸）。</li>
+<li><strong>叠加原理</strong>：多个点电荷对某电荷的合力 = 各力矢量和。</li>
+<li><strong>库仑力与万有引力均遵循平方反比定律</strong>，形式相同但本质不同。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第九章（待家长核对章节归属）</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第九章 第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：库仑定律 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电荷</a></li>
+<li><a class="dead" title="未收录">元电荷</a></li>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a href="../atoms/276-电势能.html">电势能</a></li>
+<li><a class="dead" title="未收录">匀强电场</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标Ⅰ-01.html">2010-新课标Ⅰ-01</a></li>
+<li><a class="dead" title="未收录">2013-北京-06</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-05.html">2013-新课标Ⅱ-05</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-02.html">2016-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2018-北京-12</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

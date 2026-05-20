@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>逐差法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>逐差法</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 逐差法, method of successive differences</p><h1>逐差法</h1>
+<blockquote>
+<p><strong>一句话</strong>：逐差法是通过对等间隔测量的数据分组逐项相减再求平均，以减小偶然误差的实验数据处理方法。
+<strong>English</strong>: A data processing method that reduces random error by averaging multiple difference terms from equidistant measurement data.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong><br />
+  逐差法是把连续等时间间隔测得的物理量数据（如位移）分成前后两组，对应项相减得到若干差值，再对这些差值取平均，从而充分利用所有测量数据、减小偶然误差的方法。<br />
+  在匀变速直线运动中，连续相等时间间隔 $T$ 内的位移满足 $\Delta x = aT^2$。若测得 $n$ 段位移 $x_1, x_2, ..., x_n$ 且 $n$ 为偶数，分为前 $n/2$ 段和后 $n/2$ 段，对应项相减可得：<br />
+  $$x_{\frac{n}{2}+1} - x_1 = x_{\frac{n}{2}+2} - x_2 = \cdots = \frac{n}{2} a T^2$$<br />
+  求加速度的一般式为：<br />
+  $$a = \frac{ \left( x_{\frac{n}{2}+1} + x_{\frac{n}{2}+2} + \cdots + x_n \right) - \left( x_1 + x_2 + \cdots + x_{\frac{n}{2}} \right) }{ \left( \frac{n}{2} \right)^2 T^2 }$$</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li>确定数据段数 $n$，常为偶数（如纸带取 6 段）；若为奇数，通常舍去最短一段或中间段。  </li>
+<li>将数据前后平分，逐项作差，得出一组差值。  </li>
+<li>求出差值的平均值，代入公式计算所需物理量（最常考加速度）。  </li>
+<li>
+<p>特别注意 $T$ 的含义：若每 5 个打点取一个计数点，$T = 0.1\ \mathrm{s}$，而非电源周期 $0.02\ \mathrm{s}$。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考中常结合“研究匀变速直线运动”的实验纸带设问，给出一系列计数点到起点的距离或各段位移，要求：  </p>
+</li>
+<li>计算打某点时的瞬时速度（通常用中间时刻速度法）；  </li>
+<li>利用逐差法求小车运动的加速度；  </li>
+<li>结合 $v-t$ 图像处理数据（逐差法可代替图像法减小误差）。<br />
+  例如：给出 $x_1=2.50\ \mathrm{cm}$，$x_2=5.80\ \mathrm{cm}$，$x_3=9.90\ \mathrm{cm}$，$x_4=14.80\ \mathrm{cm}$，$x_5=20.50\ \mathrm{cm}$，$x_6=27.00\ \mathrm{cm}$，$T=0.1\ \mathrm{s}$，用逐差法求加速度。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>时间间隔 $T$ 取值错误</strong>：混淆打点周期与计数点间隔，没有根据实际“隔几个点”正确计算 $T$。</li>
+<li><strong>直接相邻作差求平均</strong>：误用 $a = \frac{(x_2-x_1)+(x_3-x_2)+\cdots}{(n-1)T^2}$，这样只用到了首尾数据，不能有效减小偶然误差。</li>
+<li><strong>分组与系数计算错误</strong>：偶数段逐差时，忘记分母应为 $(\frac{n}{2})^2 T^2$，比如 6 段数据分母是 $9T^2$ 而非 $3T^2$。</li>
+<li><strong>单位换算失误</strong>：位移常用 $\mathrm{cm}$ 给出，代入公式时忘记换算成 $\mathrm{m}$，导致数量级错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逐差法</td>
+<td>method of successive differences</td>
+<td>分组逐项作差求平均的数据处理方法</td>
+</tr>
+<tr>
+<td>位移</td>
+<td>displacement</td>
+<td>纸带上两点间的距离</td>
+</tr>
+<tr>
+<td>打点计时器</td>
+<td>ticker-tape timer</td>
+<td>记录物体运动轨迹与时间的实验仪器</td>
+</tr>
+<tr>
+<td>加速度</td>
+<td>acceleration</td>
+<td>速度的变化率，逐差法最常求的物理量</td>
+</tr>
+<tr>
+<td>偶然误差</td>
+<td>random error</td>
+<td>不可预测的测量误差，逐差法可将其减小</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/215-匀变速直线运动.html">匀变速直线运动</a></li>
+<li><a class="dead" title="未收录">打点计时器</a></li>
+<li><a class="dead" title="未收录">纸带数据处理</a></li>
+<li><a class="dead" title="未收录">实验：研究匀变速直线运动</a></li>
+<li><a href="../atoms/214-加速度.html">加速度</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2021-全国乙-09.html">2021-全国乙-09</a></li>
+<li><a class="dead" title="未收录">2023-北京-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

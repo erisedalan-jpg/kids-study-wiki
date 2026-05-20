@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分段函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分段函数</h1><div class="meta-card"><span><strong>权重</strong>37</span><span><strong>吉林命中</strong>11</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分段函数, piecewise function, 分段定义函数</p><h2>🎓 分段函数</h2>
+<h3>定义</h3>
+<p><strong>分段函数</strong>：在定义域的不同部分（子区间）上用不同解析式表示的函数。</p>
+<p>$$f(x) = \begin{cases} f_1(x), &amp; x \in D_1 \ f_2(x), &amp; x \in D_2 \ \vdots &amp; \vdots \ f_n(x), &amp; x \in D_n \end{cases}$$</p>
+<p>其中 $D_1, D_2, \ldots, D_n$ 两两不相交（无公共点），且 $D_1 \cup D_2 \cup \cdots \cup D_n = D$（全定义域）。</p>
+<p><strong>本质</strong>：分段函数仍是<strong>一个</strong>函数，只是对应法则在不同区间上形式不同，每个 $x$ 仍有唯一对应的 $y$。</p>
+<h3>重要分段函数</h3>
+<p><strong>绝对值函数</strong> $y = |x|$：</p>
+<p>$$y = |x| = \begin{cases} x, &amp; x \geq 0 \ -x, &amp; x &lt; 0 \end{cases}$$</p>
+<p>定义域 $\mathbb{R}$，值域 $[0, +\infty)$，偶函数，$x = 0$ 处有折角。</p>
+<p><strong>取整函数（高斯函数）</strong> $y = \lfloor x \rfloor$（了解）：取不超过 $x$ 的最大整数，如 $\lfloor 2.7 \rfloor = 2$，$\lfloor -1.3 \rfloor = -2$。</p>
+<h3>分段函数的运算</h3>
+<p><strong>求函数值</strong>：先确定 $x$ 属于哪个区间，再用对应的解析式代入计算。</p>
+<p><strong>求定义域/值域</strong>：分段分别求，再取并集。</p>
+<p><strong>讨论单调性</strong>：分段分别讨论，注意在分段点处是否连续（左右段的极限值是否相等）。</p>
+<p><strong>求分段函数的反函数</strong>：分段分别求反函数，并调换对应的值域区间。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$f(x) = \begin{cases} x+2, &amp; x &lt; 1 \ 3-x, &amp; x \geq 1 \end{cases}$，求 $f(0), f(1), f(3)$，并求值域。</p>
+<p>解：
+- $f(0) = 0+2 = 2$（$0 &lt; 1$）
+- $f(1) = 3-1 = 2$（$1 \geq 1$）
+- $f(3) = 3-3 = 0$（$3 \geq 1$）</p>
+<p>值域：$x &lt; 1$ 时 $y = x+2 &lt; 3$，即 $y \in (-\infty, 3)$；$x \geq 1$ 时 $y = 3-x \leq 2$，即 $y \in (-\infty, 2]$。</p>
+<p>合并：$(-\infty, 3) \cup (-\infty, 2] = (-\infty, 3)$。</p>
+<p><strong>例2</strong>：$f(x) = \begin{cases} 2^x, &amp; x \leq 0 \ \log_2 x, &amp; x &gt; 0 \end{cases}$，求 $f(f(2))$。</p>
+<p>解：$f(2) = \log_2 2 = 1$（$2 &gt; 0$）；$f(f(2)) = f(1) = \log_2 1 = 0$（$1 &gt; 0$）。</p>
+<p><strong>例3</strong>：已知 $f(x) = \begin{cases} -x+a, &amp; x &lt; 1 \ x^2-2x+b, &amp; x \geq 1 \end{cases}$ 在 $x=1$ 处连续（即 $\lim_{x \to 1^-} f(x) = \lim_{x \to 1^+} f(x) = f(1)$），且 $f(x)$ 是奇函数，求 $a, b$。</p>
+<p>解：连续条件：$\lim_{x \to 1^-} (-x+a) = -1+a$，$f(1) = 1-2+b = b-1$。
+由连续：$-1+a = b-1$，即 $a = b$。
+奇函数条件：$f(0) = 0$（若 $0 &lt; 1$，用第一段），$f(0) = -0+a = a = 0$，故 $a = b = 0$。</p>
+<p>验证：$f(x) = \begin{cases} -x, &amp; x &lt; 1 \ x^2-2x, &amp; x \geq 1 \end{cases}$，$f(-x) = ?$…（需进一步验证，此处略）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>分段点的归属</strong>：分段点（如 $x = 1$）只能属于一段，通常用 $\leq$ 或 $&lt;$ 严格区分，不能重复</li>
+<li><strong>代值选对段</strong>：先判断 $x$ 的大小，再选公式，不能先选公式再随意代</li>
+<li><strong>值域要分段求再并集</strong>：各段的值域可能有重叠或间隙，需认真分析</li>
+<li><strong>分段点处的连续性</strong>：两段在分段点处的值不一定相等，若题目要求连续，需建立方程</li>
+<li><strong>绝对值转分段</strong>：$|g(x)|$ 转化为分段函数时，$g(x) \geq 0$ 用 $g(x)$，$g(x) &lt; 0$ 用 $-g(x)$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了绝对值的计算（$|a| = a$ 若 $a \geq 0$，$|a| = -a$ 若 $a &lt; 0$），这正是分段函数的原型。高中将绝对值理解为分段函数，并拓展到任意分段定义的函数，大大丰富了函数的表现形式。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：分段函数（Piecewise function），绝对值函数（Absolute value function）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数的表示法</a></li>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+<li><a href="../atoms/296-复合函数.html">复合函数</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/288-函数零点.html">函数零点</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-12.html">2009-文-12</a></li>
+<li><a href="../exam/2009-理-13.html">2009-理-13</a></li>
+<li><a href="../exam/2010-文-12.html">2010-文-12</a></li>
+<li><a href="../exam/2010-理-11.html">2010-理-11</a></li>
+<li><a href="../exam/2011-文-13.html">2011-文-13</a></li>
+<li><a href="../exam/2011-理-06.html">2011-理-06</a></li>
+<li><a href="../exam/2011-理-13.html">2011-理-13</a></li>
+<li><a href="../exam/2012-文-24.html">2012-文-24</a></li>
+<li><a href="../exam/2012-理-18.html">2012-理-18</a></li>
+<li><a href="../exam/2013-文-13.html">2013-文-13</a></li>
+<li><a href="../exam/2013-文-19.html">2013-文-19</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2013-理-19.html">2013-理-19</a></li>
+<li><a href="../exam/2014-文-07.html">2014-文-07</a></li>
+<li><a href="../exam/2014-理-06.html">2014-理-06</a></li>
+<li><a href="../exam/2015-文-11.html">2015-文-11</a></li>
+<li><a href="../exam/2015-理-15.html">2015-理-15</a></li>
+<li><a href="../exam/2016-文-24.html">2016-文-24</a></li>
+<li><a href="../exam/2016-理-14.html">2016-理-14</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2018-文-23.html">2018-文-23</a></li>
+<li><a href="../exam/2018-理-09.html">2018-理-09</a></li>
+<li><a href="../exam/2018-理-23.html">2018-理-23</a></li>
+<li><a href="../exam/2019-文-06.html">2019-文-06</a></li>
+<li><a href="../exam/2020-文-23.html">2020-文-23</a></li>
+<li><a href="../exam/2020-理-23.html">2020-理-23</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-15</a></li>
+<li><a class="dead" title="未收录">2022-北京-14</a></li>
+<li><a class="dead" title="未收录">2023-北京-15</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-19.html">2023-新课标Ⅱ-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

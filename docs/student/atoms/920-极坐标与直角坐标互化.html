@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>极坐标与直角坐标互化</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>极坐标与直角坐标互化</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 极坐标与直角坐标互化, transformation between polar and rectangular coordinates</p><h1>极坐标与直角坐标互化</h1>
+<blockquote>
+<p><strong>一句话</strong>：给定极坐标系与直角坐标系原点重合、极轴与 x 轴正半轴重合时，利用 <code>x=ρcosθ, y=ρsinθ</code> 与 <code>ρ²=x²+y², tanθ=y/x (x≠0)</code> 实现两种坐标的相互转化。
+<strong>English</strong>: The conversion between polar coordinates <code>(ρ, θ)</code> and Cartesian coordinates <code>(x, y)</code> is achieved via the formulas <code>x = ρ cosθ</code>, <code>y = ρ sinθ</code> and <code>ρ² = x² + y²</code>, <code>tanθ = y/x</code> (x ≠ 0), with the same origin and polar axis along the positive x‑axis.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：<br />
+在平面内取定极点 <code>O</code> 和极轴 <code>Ox</code>，点 <code>P</code> 的极坐标为 <code>(ρ, θ)</code>，其中 <code>ρ</code> 为极径（<code>ρ ≥ 0</code> 通常约定），<code>θ</code> 为极角。若以 <code>O</code> 为原点、<code>Ox</code> 为 x 轴正半轴建立直角坐标系，则点 <code>P</code> 的直角坐标 <code>(x, y)</code> 与极坐标的互化公式为：</p>
+<ul>
+<li><strong>极 → 直</strong>：<code>x = ρ cosθ</code>，<code>y = ρ sinθ</code>；  </li>
+<li><strong>直 → 极</strong>：<code>ρ = √(x² + y²)</code> (常取非负)，<code>tanθ = y/x</code>（<code>x ≠ 0</code>），<code>θ</code> 的终边所在象限由点 <code>(x, y)</code> 所在象限确定。当 <code>x = 0</code> 时，<code>θ = π/2</code> 或 <code>3π/2</code> 由 <code>y</code> 的正负决定。</li>
+</ul>
+<p><strong>关键方法</strong>：
+1. 点坐标互化直接代入公式，注意极角的多值性，通常取 <code>θ ∈ [0, 2π)</code> 或 <code>(−π, π]</code> 的主值。
+2. 方程互化时优先将 <code>ρcosθ</code> 替换为 <code>x</code>，<code>ρsinθ</code> 替换为 <code>y</code>，<code>ρ²</code> 替换为 <code>x² + y²</code>，并消去 <code>ρ, θ</code> 得到 <code>F(x, y) = 0</code>；反之，由直角坐标方程化为极坐标方程时，常用 <code>x = ρcosθ, y = ρsinθ</code> 代入并化简。注意两边同乘 <code>ρ</code> 等代数变形，需保证等价性，防止增根或漏解。</p>
+<p><strong>典型应用</strong>：
+- <strong>题型</strong>：给出极坐标方程（如直线 <code>θ = α</code>、圆 <code>ρ = 2acosθ</code>、圆锥曲线等），要求化为直角坐标方程并判断曲线类型；或给定直角坐标方程化为极坐标方程，以便计算弦长、面积等（常见于坐标系与参数方程选做题）。
+- <strong>具体场景</strong>：将 <code>ρ = 2sinθ</code> 两边同乘 <code>ρ</code> 得 <code>ρ² = 2ρ sinθ</code>，化为 <code>x² + y² = 2y</code>，即 <code>x² + (y−1)² = 1</code>，是以 <code>(0,1)</code> 为圆心、半径为 1 的圆。若方程是 <code>ρ = 1/(1−cosθ)</code>，化为 <code>ρ − ρcosθ = 1</code>，即 <code>ρ = 1 + x</code>，再平方得 <code>x² + y² = (1 + x)²</code>，整理为 <code>y² = 2x + 1</code>，表示抛物线。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略极角所在象限</strong>：由 <code>tanθ = y/x</code> 反求 <code>θ</code> 时，仅用反正切函数可能得到错误象限的角，必须结合点 <code>(x, y)</code> 的符号确定 <code>θ</code> 的终边位置。</li>
+<li><strong>盲目两边同乘 <code>ρ</code> 产生增根</strong>：方程变形如对 <code>ρ = 2cosθ</code> 两边乘 <code>ρ</code> 得 <code>ρ² = 2ρcosθ</code>，此时若原方程有 <code>ρ = 0</code> 的解（极点），该操作仍然等价；但若方程不含极点，乘 <code>ρ</code> 可能引入 <code>ρ = 0</code> 的增解，需检验极点是否满足原方程。</li>
+<li><strong>混淆 <code>ρ</code> 的符号习惯</strong>：教材通常约定 <code>ρ ≥ 0</code>，但有些题目允许 <code>ρ &lt; 0</code>（即点 <code>(ρ, θ)</code> 与 <code>(−ρ, θ+π)</code> 表示同一点），方程互化时必须明确所选约定，否则位置判断与曲线形状可能出错。</li>
+<li><strong>直角坐标方程化极坐标时未整体代换或忽略范围</strong>：只替换部分项而未将 <code>x, y</code> 全部转化为 <code>ρ, θ</code> 的表达式，或忘记极坐标方程中 <code>ρ</code> 可能受定义域限制（如 <code>ρ ≥ 0</code>），导致极坐标方程表示的图形与原直角坐标图形不一致。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>极坐标</td>
+<td>polar coordinates</td>
+<td>用极径和极角表示平面上的点</td>
+</tr>
+<tr>
+<td>直角坐标</td>
+<td>Cartesian coordinates / rectangular coordinates</td>
+<td>用横纵坐标表示点</td>
+</tr>
+<tr>
+<td>极径</td>
+<td>radial coordinate</td>
+<td>极点到该点的距离，记作 <code>ρ</code></td>
+</tr>
+<tr>
+<td>极角</td>
+<td>angular coordinate / polar angle</td>
+<td>极轴到连线的转角，记作 <code>θ</code></td>
+</tr>
+<tr>
+<td>互化公式</td>
+<td>conversion formulas</td>
+<td>两种坐标之间变换的等式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">极坐标方程</a>  </li>
+<li><a class="dead" title="未收录">参数方程与普通方程互化</a>  </li>
+<li><a class="dead" title="未收录">直线与圆的极坐标方程</a>  </li>
+<li><a class="dead" title="未收录">圆锥曲线的极坐标方程</a>  </li>
+<li><a class="dead" title="未收录">坐标系与参数方程综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-文-23.html">2012-文-23</a></li>
+<li><a href="../exam/2012-理-23.html">2012-理-23</a></li>
+<li><a href="../exam/2013-理-09.html">2013-理-09</a></li>
+<li><a href="../exam/2014-文-23.html">2014-文-23</a></li>
+<li><a href="../exam/2015-理-11.html">2015-理-11</a></li>
+<li><a href="../exam/2016-理-11.html">2016-理-11</a></li>
+<li><a href="../exam/2017-文-22.html">2017-文-22</a></li>
+<li><a href="../exam/2018-理-22.html">2018-理-22</a></li>
+<li><a href="../exam/2019-文-22.html">2019-文-22</a></li>
+<li><a href="../exam/2019-理-22.html">2019-理-22</a></li>
+<li><a href="../exam/2020-文-22.html">2020-文-22</a></li>
+<li><a href="../exam/2022-文-22.html">2022-文-22</a></li>
+<li><a href="../exam/2022-理-22.html">2022-理-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

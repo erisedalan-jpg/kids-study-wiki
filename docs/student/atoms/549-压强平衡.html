@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>压强平衡</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>压强平衡</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 压强平衡, pressure equilibrium</p><h1>压强平衡</h1>
+<blockquote>
+<p><strong>一句话</strong>：当与气体接触的液柱、活塞等可动边界处于静止或匀速运动状态时，气体压强由力学平衡条件 $\sum F = 0$ 确定，这种通过力平衡求解气体压强的方法称为压强平衡。
+<strong>English</strong>: The gas pressure is determined by the condition of mechanical equilibrium for a movable boundary (liquid column, piston, etc.), i.e., pressure equilibrium.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+压强平衡的核心是<strong>选取一段液柱或活塞为研究对象</strong>，分析其在竖直或水平方向所受的力：重力、大气压力 $p_0 S$、气体压力 $p S$、器壁支持力等，然后根据平衡条件列方程。若涉及液体，还需用到<strong>液体内部压强公式</strong> $p = p_0 + \rho g h$（其中 $h$ 为深度）以及<strong>连通器原理</strong>：在静止同种液体中，同一水平面上各点压强相等。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>选对象</strong>：取与气体直接接触的液柱（常为最低液面处的一小段）或活塞。<br />
+2. <strong>画受力图</strong>：液柱受重力 $\rho g h S$（方向竖直向下）、上方液面大气压压力 $p_0 S$（向下）、下方气体压力 $p S$（向上）。对活塞可列水平或竖直平衡。<br />
+3. <strong>列方程</strong>：写出力的平衡式 $p S = p_0 S \pm \rho g h S$（注意压力方向），消去截面积 $S$ 得 $p = p_0 \pm \rho g h$，取正负号由液柱相对位置决定。<br />
+4. <strong>单位统一</strong>：通常将压强统一为 Pa 或 cmHg，注意 $1 \text{cmHg} = \rho g h$ 关系。</p>
+<p><strong>典型应用</strong><br />
+高考常以 U 形管、气缸—活塞、玻璃管—水银柱等装置为载体。<br />
+- <strong>U 形管问题</strong>：左、右两管液面高度差为 $h$，封闭端气体压强 $p = p_0 \pm \rho g h$（液面较高一侧压强较小）。若两边液面等高，则气体压强等于大气压。<br />
+- <strong>气缸活塞问题</strong>：活塞质量为 $m$、横截面积为 $S$，气缸竖直放置时，由活塞受力平衡得气体压强 $p = p_0 + \frac{mg}{S}$（气缸口向上）；若气缸水平放置且活塞与缸壁无摩擦，则 $p = p_0$（不计活塞质量）。<br />
+- <strong>连通器与多段气体</strong>：灵活选取不同液面，联立压强平衡式与玻意耳定律（等温变化）求解多段气体的压强与体积。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>漏掉大气压</strong>：习惯只考虑液柱重力，忘记液面与大气相通时 $p_0$ 的贡献。  </li>
+<li><strong>液柱压强方向判断错误</strong>：将 $\rho g h$ 的正负号用反，未理解“越深处压强越大”以及“低压区液面较高”的对应关系。  </li>
+<li><strong>单位混用</strong>：直接将 cmHg 数值代入 $pV$ 计算而不换算为 Pa，或在液体压强 $\rho g h$ 中混用 m 与 cm。  </li>
+<li><strong>忽略连通器等高条件</strong>：误认为 U 形管中只要同种液体静止，任意水平面压强都相等，实则要求该水平面在连通着的同种液体中（不能跨过气体或不同液体界面）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>压强平衡</td>
+<td>pressure equilibrium</td>
+<td>通过力学平衡求解气体压强的方法</td>
+</tr>
+<tr>
+<td>液柱</td>
+<td>liquid column</td>
+<td>受力分析中的研究对象</td>
+</tr>
+<tr>
+<td>大气压</td>
+<td>atmospheric pressure</td>
+<td>敞口液面承受的环境压强</td>
+</tr>
+<tr>
+<td>连通器</td>
+<td>communicating vessels</td>
+<td>用于等高液面压强相等的原理</td>
+</tr>
+<tr>
+<td>受力平衡</td>
+<td>force equilibrium</td>
+<td>列方程的依据 $\sum F = 0$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/446-理想气体状态方程.html">理想气体状态方程</a></li>
+<li><a class="dead" title="未收录">帕斯卡定律</a></li>
+<li><a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><a class="dead" title="未收录">连通器原理</a></li>
+<li><a class="dead" title="未收录">液体的压强</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标Ⅰ-13.html">2010-新课标Ⅰ-13</a></li>
+<li><a href="../exam/2011-新课标-14.html">2011-新课标-14</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-14</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-14.html">2015-新课标Ⅱ-14</a></li>
+<li><a href="../exam/2021-全国乙-14.html">2021-全国乙-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

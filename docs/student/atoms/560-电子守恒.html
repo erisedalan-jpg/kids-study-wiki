@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电子守恒</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电子守恒</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电子守恒, 电荷守恒（氧化还原）</p><h1>电子守恒</h1>
+<blockquote>
+<p><strong>一句话</strong>：在氧化还原反应中，<strong>氧化剂得到的电子总数恒等于还原剂失去的电子总数</strong>。
+<strong>English</strong>: In a redox reaction, the total number of electrons gained by the oxidant is exactly equal to the total number lost by the reductant.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+电子守恒是氧化还原反应定量计算的核心依据。在同一个氧化还原反应中，氧化剂发生还原反应，元素化合价降低 $n$，每个原子得到 $n$ 个电子；还原剂发生氧化反应，元素化合价升高 $m$，每个原子失去 $m$ 个电子。反应体系整体不积累电荷，因此：
+$$n(\text{氧化剂}) \times \Delta\text{降价数} \times \text{变价原子个数} = n(\text{还原剂}) \times \Delta\text{升价数} \times \text{变价原子个数}$$
+更简洁地表示为：<strong>$n(\text{得} e^-) = n(\text{失} e^-)$</strong>。</p>
+<p><strong>关键方法</strong>
+在高考中，运用电子守恒解题的标准步骤为：
+1. <strong>标化合价</strong>：准确标出反应前后所有变价元素的化合价，判断升/降。
+2. <strong>列得失式</strong>：分别写出氧化剂得电子和还原剂失电子的表达式，注意乘以变价原子的下标。
+3. <strong>建等式</strong>：令得电子总数等于失电子总数，即 $n_{\text{氧化剂}} \cdot \Delta\text{降价} \cdot N_{\text{原子}} = n_{\text{还原剂}} \cdot \Delta\text{升价} \cdot N_{\text{原子}}$。
+4. <strong>解未知数</strong>：代入物质的量、气体体积（标况）、质量等已知量，求解未知量。</p>
+<p><strong>典型应用</strong>
+高考对此考点的考查几乎贯穿所有氧化还原大题，常见设问方式包括：
+- <strong>氧化还原滴定计算</strong>：如用 $KMnO_4$ 标准液滴定 $Fe^{2+}$ 或 $H_2C_2O_4$ 溶液，已知消耗 $KMnO_4$ 的体积与浓度，求待测物的质量分数。此时 $n(KMnO_4) \times 5 = n(\text{还原剂}) \times \Delta\text{升价}$ 是核心算式。
+- <strong>多步反应得失电子计算</strong>：如 $Cu$ 与 $HNO_3$ 反应生成 $NO$、$NO_2$ 混合气体，随后气体与 $O_2$、$H_2O$ 反应全部转化为 $HNO_3$。此时 $Cu$ 失去的电子总数直接等于 $O_2$ 得到的电子总数，无需分析中间过程。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略变价原子的下标</strong>：例如 $K_2Cr_2O_7$ 中 Cr 的化合价从 +6 降至 +3，<strong>1 mol</strong> $K_2Cr_2O_7$ 得到 $2 \times 3 = 6\ mol\ e^-$，而非 3 mol。考试时极易漏乘 2。</li>
+<li><strong>混淆“转移电子数”与“单个原子化合价变化数”</strong>：题目问“反应转移的电子总数”，必须用 <strong>物质的量 × 单个微粒得失电子数</strong>，不能只写化合价变化的差值。</li>
+<li><strong>多种氧化剂/还原剂并存时选错主体</strong>：当反应物中同时存在多种变价物质时，必须明确题目给定的“定量”对象是哪一组。优先用已知量和完全参与反应的物质建立电子守恒。</li>
+<li><strong>忽视反应顺序</strong>：例如 $FeBr_2$ 溶液中通入 $Cl_2$，$Fe^{2+}$ 先被氧化，$Br^-$ 后被氧化。通入 $Cl_2$ 量不同时，实际失去电子的物质和总量不同，不可直接套用全反应方程式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电子守恒</td>
+<td>Electron Conservation</td>
+<td>氧化还原反应得失电子总数相等的规律</td>
+</tr>
+<tr>
+<td>氧化剂</td>
+<td>Oxidizing Agent (Oxidant)</td>
+<td>反应中得到电子、化合价降低的物质</td>
+</tr>
+<tr>
+<td>还原剂</td>
+<td>Reducing Agent (Reductant)</td>
+<td>反应中失去电子、化合价升高的物质</td>
+</tr>
+<tr>
+<td>氧化数</td>
+<td>Oxidation Number</td>
+<td>反映元素原子表观电荷数的参数，用于判断化合价</td>
+</tr>
+<tr>
+<td>转移电子数</td>
+<td>Number of Transferred Electrons</td>
+<td>一个反应中实际发生转移的电子的总物质的量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/162-氧化还原反应.html">氧化还原反应</a></li>
+<li><a href="../atoms/170-离子方程式.html">离子方程式</a></li>
+<li><a class="dead" title="未收录">化合价</a></li>
+<li><a class="dead" title="未收录">电化学基础</a></li>
+<li><a class="dead" title="未收录">质量守恒</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-全国Ⅱ-01.html">2009-全国Ⅱ-01</a></li>
+<li><a href="../exam/2024-辽宁-12.html">2024-辽宁-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

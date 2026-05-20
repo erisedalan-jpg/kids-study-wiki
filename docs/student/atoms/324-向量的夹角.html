@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量的夹角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向量的夹角</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 平面向量及其应用, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向量的夹角, angle between vectors, 向量夹角</p><h2>🎓 向量的夹角</h2>
+<h3>定义</h3>
+<p>两个<strong>非零向量</strong> $\boldsymbol{a}$ 和 $\boldsymbol{b}$ 的<strong>夹角</strong> $\theta$ 定义为将二者移至同一起点后所成的角：</p>
+<p>$$\theta \in [0°, 180°]$$</p>
+<blockquote>
+<p>夹角范围是 $[0°, 180°]$，不包括大于 $180°$ 的角。</p>
+</blockquote>
+<h3>夹角公式</h3>
+<p>$$\cos\theta = \frac{\boldsymbol{a} \cdot \boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}$$</p>
+<p>坐标形式（$\boldsymbol{a} = (a_1, a_2)$，$\boldsymbol{b} = (b_1, b_2)$）：</p>
+<p>$$\cos\theta = \frac{a_1 b_1 + a_2 b_2}{\sqrt{a_1^2 + a_2^2} \cdot \sqrt{b_1^2 + b_2^2}}$$</p>
+<h3>特殊角对应关系</h3>
+<table>
+<thead>
+<tr>
+<th>夹角</th>
+<th>$\cos\theta$</th>
+<th>关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0°$</td>
+<td>$1$</td>
+<td>同向</td>
+</tr>
+<tr>
+<td>$90°$</td>
+<td>$0$</td>
+<td>垂直</td>
+</tr>
+<tr>
+<td>$180°$</td>
+<td>$-1$</td>
+<td>反向（共线）</td>
+</tr>
+<tr>
+<td>$60°$</td>
+<td>$\frac{1}{2}$</td>
+<td>常见题型</td>
+</tr>
+<tr>
+<td>$120°$</td>
+<td>$-\frac{1}{2}$</td>
+<td>常见题型</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$\boldsymbol{a} = (1, \sqrt{3})$，$\boldsymbol{b} = (2, 0)$，求夹角 $\theta$。</p>
+<p><strong>解</strong>：<br />
+$\boldsymbol{a} \cdot \boldsymbol{b} = 2$，$|\boldsymbol{a}| = 2$，$|\boldsymbol{b}| = 2$<br />
+$\cos\theta = \dfrac{2}{4} = \dfrac{1}{2}$，故 $\theta = 60°$</p>
+<p><strong>例2</strong>：$|\boldsymbol{a}| = 2$，$|\boldsymbol{b}| = \sqrt{2}$，$\boldsymbol{a} \cdot \boldsymbol{b} = -2$，求夹角。</p>
+<p><strong>解</strong>：$\cos\theta = \dfrac{-2}{2\sqrt{2}} = -\dfrac{\sqrt{2}}{2}$，故 $\theta = 135°$</p>
+<p><strong>例3</strong>：已知三角形 $ABC$，$\overrightarrow{AB} = (1, 2)$，$\overrightarrow{AC} = (3, 1)$，求 $\angle BAC$。</p>
+<p><strong>解</strong>：<br />
+$\cos\angle BAC = \dfrac{1 \times 3 + 2 \times 1}{\sqrt{5} \cdot \sqrt{10}} = \dfrac{5}{5\sqrt{2}} = \dfrac{\sqrt{2}}{2}$，故 $\angle BAC = 45°$</p>
+<h3>易错点</h3>
+<ul>
+<li>夹角是 $[0°, 180°]$ 范围内的角，不会是负角或大于 $180°$</li>
+<li>求夹角时先算 $\cos\theta$，再用反余弦得角度；不能反过来先判断角度</li>
+<li>$\boldsymbol{a} \cdot \boldsymbol{b} &gt; 0 \Rightarrow \theta$ 为锐角；$&lt; 0 \Rightarrow$ 钝角；$= 0 \Rightarrow$ 直角</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第六章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第六章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a class="dead" title="未收录">向量数量积坐标表示</a></li>
+<li><a class="dead" title="未收录">平面向量坐标运算</a></li>
+<li><a class="dead" title="未收录">向量的应用-几何</a></li>
+<li><a class="dead" title="未收录">正弦余弦正切定义</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-10.html">2008-理-10</a></li>
+<li><a href="../exam/2011-理-10.html">2011-理-10</a></li>
+<li><a href="../exam/2017-理-13.html">2017-理-13</a></li>
+<li><a href="../exam/2019-文-08.html">2019-文-08</a></li>
+<li><a href="../exam/2019-理-07.html">2019-理-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

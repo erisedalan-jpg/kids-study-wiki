@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛伦兹力提供向心力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>洛伦兹力提供向心力</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 洛伦兹力提供向心力</p><h1>洛伦兹力提供向心力</h1>
+<blockquote>
+<p><strong>一句话</strong>：带电粒子以垂直磁场方向射入匀强磁场时，它所受到的洛伦兹力全部用于改变粒子的速度方向而充当向心力，使粒子做匀速圆周运动。
+<strong>English</strong>: When a charged particle enters a uniform magnetic field perpendicularly, the Lorentz force acts entirely as the centripetal force, causing the particle to undergo uniform circular motion.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+当电荷量为 $q$、质量为 $m$ 的带电粒子以速度 $v$ 沿垂直于匀强磁场 $B$ 的方向射入磁场时，粒子所受洛伦兹力大小为 $f = qvB$。由于洛伦兹力的方向始终垂直于速度方向，它不做功，不改变粒子的速率，仅改变其运动方向，因此洛伦兹力恰好充当向心力。</p>
+<p>由牛顿第二定律建立等式：
+$$
+qvB = m\frac{v^2}{r}
+$$
+由此解出两个高考核心公式：
+- <strong>轨道半径</strong>：$r = \dfrac{mv}{qB}$
+- <strong>回转周期</strong>：$T = \dfrac{2\pi r}{v} = \dfrac{2\pi m}{qB}$（与速度 $v$、半径 $r$ 无关，仅由比荷和磁感应强度决定）</p>
+<p><strong>关键方法</strong>
+解题的标准步骤为“<strong>定圆心→求半径→画轨迹→算时间</strong>”：
+1. 利用粒子射入和射出点的速度垂线确定圆心（若已知两点和一处速度方向，可用中垂线法）；
+2. 利用几何关系（如弦切角、切线夹角等于圆心角等）求半径 $r$ 或圆心角 $\theta$；
+3. 由 $r = \dfrac{mv}{qB}$ 或几何关系关联待求物理量；
+4. 运动时间 $t = \dfrac{\theta}{2\pi}T = \dfrac{\theta m}{qB}$。</p>
+<p><strong>典型应用</strong>
+高考常考的设问方式包括：
+- <strong>求半径或周期</strong>：已知 $m$、$q$、$v$、$B$ 中的部分量，直接套用公式 $r = \dfrac{mv}{qB}$ 或 $T = \dfrac{2\pi m}{qB}$。
+- <strong>求磁场边界宽度或偏转角</strong>：结合圆形磁场、直线边界等几何条件，利用粒子轨迹的圆与边界的关系求解。例如：一束粒子垂直射入宽度为 $d$ 的匀强磁场区域，若恰好从另一边界射出，则需满足 $r\sin\theta = d$（$\theta$ 为速度方向与边界夹角），再配合 $r = \dfrac{mv}{qB}$ 求解。
+- <strong>求加速电压组合问题</strong>：带电粒子先在电场中经电压 $U$ 加速获得速度 $qU = \dfrac{1}{2}mv^2$，再进入磁场做圆周运动，消去 $v$ 后半径 $r = \dfrac{1}{B}\sqrt{\dfrac{2mU}{q}}$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误判圆心位置</strong>：进入圆形磁场区域时，圆心不在磁场区域中心，而在速度垂线的交点上；若粒子沿径向射入圆形磁场，则必沿径向射出，此时两速度垂线与入/出点连线的交点即为圆心。</li>
+<li><strong>混淆半径公式与周期公式</strong>：半径 $r \propto v$，速度越大半径越大；周期 $T$ 与 $v$ 无关。在加速电压结合磁场的问题中，速度变化不影响周期，但影响半径，学生常误认为周期也随速度改变。</li>
+<li><strong>忽略“恰好”“至少”等临界条件</strong>：粒子从磁场边界“刚好射出”意味着轨迹与边界相切，此时半径与几何量之间存在确定关系，学生往往遗漏临界状态的几何方程。</li>
+<li><strong>混淆左手定则与右手定则</strong>：判定洛伦兹力方向必须用左手定则（磁场穿入手心，四指指向正电荷速度方向，拇指为力方向），而判定感应电流方向则用右手定则，两者在综合题中极易混淆。若粒子带负电，需将四指指向速度反方向。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>洛伦兹力</td>
+<td>Lorentz force</td>
+<td>运动电荷在磁场中所受的力</td>
+</tr>
+<tr>
+<td>向心力</td>
+<td>centripetal force</td>
+<td>使物体做圆周运动所需的指向圆心的力</td>
+</tr>
+<tr>
+<td>轨道半径</td>
+<td>orbital radius</td>
+<td>带电粒子在磁场中做圆周运动的轨迹半径</td>
+</tr>
+<tr>
+<td>圆周运动周期</td>
+<td>period of circular motion</td>
+<td>粒子完成一次完整圆周运动所需的时间</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧 普通高中物理课程标准「磁场」与「圆周运动」交叉模块，具体编号待核对</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">左手定则判断洛伦兹力方向</a></li>
+<li><a class="dead" title="未收录">带电粒子在匀强磁场中的运动规律</a></li>
+<li><a class="dead" title="未收录">电场加速与磁场偏转组合问题</a></li>
+<li><a class="dead" title="未收录">匀速圆周运动向心力公式</a></li>
+<li><a class="dead" title="未收录">带电粒子在有界磁场中的临界问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-01</a></li>
+<li><a class="dead" title="未收录">2019-北京-04</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-04.html">2019-新课标Ⅱ-04</a></li>
+<li><a class="dead" title="未收录">2020-北京-19</a></li>
+<li><a href="../exam/2021-全国乙-03.html">2021-全国乙-03</a></li>
+<li><a class="dead" title="未收录">2021-北京-12</a></li>
+<li><a class="dead" title="未收录">2021-湖南-13</a></li>
+<li><a class="dead" title="未收录">2023-湖南-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数的乘除运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复数的乘除运算</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 复数, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复数的乘除运算, complex multiplication division, 复数乘法, 复数除法</p><h2>🎓 复数的乘除运算</h2>
+<h3>乘法法则</h3>
+<p>设 $z_1 = a + b\text{i}$，$z_2 = c + d\text{i}$：</p>
+<p>$$z_1 \cdot z_2 = (a + b\text{i})(c + d\text{i}) = (ac - bd) + (ad + bc)\text{i}$$</p>
+<p><strong>推导</strong>（多项式展开，利用 $\text{i}^2 = -1$）：</p>
+<p>$$= ac + ad\text{i} + bc\text{i} + bd\text{i}^2 = (ac - bd) + (ad + bc)\text{i}$$</p>
+<h3>除法法则</h3>
+<p>$$\frac{z_1}{z_2} = \frac{a + b\text{i}}{c + d\text{i}} = \frac{(a + b\text{i})(c - d\text{i})}{(c + d\text{i})(c - d\text{i})} = \frac{(ac + bd) + (bc - ad)\text{i}}{c^2 + d^2}$$</p>
+<p><strong>方法</strong>：分子分母同乘<strong>分母的共轭复数</strong> $\bar{z}_2 = c - d\text{i}$，使分母化为实数。</p>
+<p>分母：$(c + d\text{i})(c - d\text{i}) = c^2 + d^2$（恒为正实数）</p>
+<h3>运算律</h3>
+<ul>
+<li>交换律：$z_1 z_2 = z_2 z_1$</li>
+<li>结合律：$(z_1 z_2)z_3 = z_1(z_2 z_3)$</li>
+<li>分配律：$z_1(z_2 + z_3) = z_1 z_2 + z_1 z_3$</li>
+</ul>
+<h3>模的乘除</h3>
+<p>$$|z_1 z_2| = |z_1||z_2|, \quad \left|\frac{z_1}{z_2}\right| = \frac{|z_1|}{|z_2|}$$</p>
+<h3>共轭复数乘积</h3>
+<p>$$z \cdot \bar{z} = (a + b\text{i})(a - b\text{i}) = a^2 + b^2 = |z|^2$$</p>
+<p>这是"复数分母实数化"的核心公式。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$(1 + 2\text{i})(3 - \text{i})$</p>
+<p><strong>解</strong>：$= 3 - \text{i} + 6\text{i} - 2\text{i}^2 = 3 + 5\text{i} + 2 = 5 + 5\text{i}$</p>
+<p><strong>例2</strong>：$\dfrac{3 + \text{i}}{1 - 2\text{i}}$</p>
+<p><strong>解</strong>：<br />
+$$= \frac{(3 + \text{i})(1 + 2\text{i})}{(1 - 2\text{i})(1 + 2\text{i})} = \frac{3 + 6\text{i} + \text{i} + 2\text{i}^2}{1 + 4} = \frac{1 + 7\text{i}}{5} = \frac{1}{5} + \frac{7}{5}\text{i}$$</p>
+<p><strong>例3</strong>：$(1 + \text{i})^4$</p>
+<p><strong>解</strong>：$(1 + \text{i})^2 = 1 + 2\text{i} + \text{i}^2 = 2\text{i}$，故 $(1+\text{i})^4 = (2\text{i})^2 = -4$</p>
+<h3>易错点</h3>
+<ul>
+<li>除法必须<strong>分子分母同乘共轭</strong>（不是乘分母本身）</li>
+<li>乘法展开后 $\text{i}^2 = -1$，不能漏换</li>
+<li>$|z_1 z_2| = |z_1||z_2|$，但 $z_1 z_2$ 的辐角是两辐角之和（三角表示更清晰）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第七章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第七章 § 7.3，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/复数_(数学)">复数 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/330-复数概念.html">复数概念</a></li>
+<li><a class="dead" title="未收录">复数的加减运算</a></li>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a class="dead" title="未收录">复数的三角表示</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-01.html">2009-理-01</a></li>
+<li><a href="../exam/2010-理-09.html">2010-理-09</a></li>
+<li><a href="../exam/2012-文-02.html">2012-文-02</a></li>
+<li><a href="../exam/2013-文-04.html">2013-文-04</a></li>
+<li><a href="../exam/2013-理-02.html">2013-理-02</a></li>
+<li><a href="../exam/2014-文-09.html">2014-文-09</a></li>
+<li><a href="../exam/2015-文-09.html">2015-文-09</a></li>
+<li><a href="../exam/2015-理-02.html">2015-理-02</a></li>
+<li><a href="../exam/2017-文-02.html">2017-文-02</a></li>
+<li><a href="../exam/2018-文-01.html">2018-文-01</a></li>
+<li><a href="../exam/2019-文-02.html">2019-文-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-02</a></li>
+<li><a href="../exam/2021-文-02.html">2021-文-02</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-02</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-01.html">2023-新课标Ⅱ-01</a></li>
+<li><a class="dead" title="未收录">2024-北京-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

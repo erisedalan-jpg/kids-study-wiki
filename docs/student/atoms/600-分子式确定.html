@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分子式确定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分子式确定</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分子式确定, molecular formula determination</p><h1>分子式确定</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据元素分析和相对分子质量测定数据，推导物质分子中原子种类与数目的过程。
+<strong>English</strong>: The process of determining the exact number of each type of atom in a molecule through elemental analysis and molecular mass measurement.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+分子式（molecular formula）是用元素符号表示物质分子组成的式子。分子式确定的核心原理是：化合物中各元素的质量分数固定，通过定量化学实验（如燃烧分析）获得各元素的质量或物质的量，求得最简整数比的实验式（empirical formula）；再借助相对分子质量（可由质谱法、理想气体密度法等测定），确定分子式，即 $分子式 = (实验式)_n$，其中 $n = \frac{相对分子质量}{实验式式量}$。</p>
+<p><strong>关键方法</strong>
+1. <strong>元素比求实验式</strong>：将各元素质量换算为物质的量，再求最简整数比。常见手段为有机物燃烧法：
+   $$C_xH_yO_z + \left(x+\frac{y}{4}-\frac{z}{2}\right)O_2 \rightarrow xCO_2 + \frac{y}{2}H_2O$$
+   由生成的 $n(CO_2)$、$n(H_2O)$ 反推 $n(C)$、$n(H)$，并用总质量减去碳氢质量获得氧质量。
+2. <strong>相对分子质量测定</strong>：常考质谱图上最大质荷比即为相对分子质量；也可用标况密度法 $M = 22.4\rho$ 或相对密度法 $M = D \cdot M_{\text{ref}}$。
+3. <strong>求倍数得分子式</strong>：比较实验式式量与相对分子质量，求出正整数 $n$。</p>
+<p><strong>高考典型应用</strong><br />
+常规大题给出一定质量有机物完全燃烧后生成 $CO_2$ 和 $H_2O$ 的量，再结合质谱数据或标况密度，要求计算分子式。另一典型设问是已知某烃或含氧衍生物的通式和相对分子质量，直接求分子式，或结合红外光谱推断官能团后确定结构。如：2.3 g 某有机物燃烧得 0.1 mol $CO_2$ 和 2.7 g $H_2O$，质谱显示相对分子质量为 46，计算可知 $n(C)=0.1$ mol，$n(H)=0.3$ mol，$m(O)=0.8$ g 即 0.05 mol，实验式为 $C_2H_6O$，式量 46，故分子式即为 $C_2H_6O$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>遗漏氧元素判断</strong>：燃烧产物中的氧可能来自空气和有机物本身，若简单用 $m(O) = m(样品)-m(C)-m(H)$ 计算，必须检验差值是否为零，否则可能错误认为含有氧或无氧。</li>
+<li><strong>实验式未化最简</strong>：计算原子个数比时忘记除以最小物质的量或未化为整数比，导致 $n$ 值出错。</li>
+<li><strong>相对分子质量条件混淆</strong>：使用标准状况气体密度法时，必须确认物质在标况下为气体，且要使用 $22.4\ \text{L·mol}^{-1}$；若为非标况需用理想气体状态方程换算。</li>
+<li><strong>含结晶水化合物的干扰</strong>：计算过程中将结晶水的质量误当作氧元素，或在确定分子式时漏掉结晶水部分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分子式</td>
+<td>Molecular formula</td>
+<td>表示分子中各原子确切数目</td>
+</tr>
+<tr>
+<td>实验式（最简式）</td>
+<td>Empirical formula</td>
+<td>各原子最简整数比</td>
+</tr>
+<tr>
+<td>相对分子质量</td>
+<td>Relative molecular mass</td>
+<td>分子质量与 $^{12}C$ 质量的 1/12 比值</td>
+</tr>
+<tr>
+<td>质谱法</td>
+<td>Mass spectrometry</td>
+<td>通过离子质荷比测定相对分子质量</td>
+</tr>
+<tr>
+<td>燃烧分析</td>
+<td>Combustion analysis</td>
+<td>完全燃烧测定 C、H 等元素含量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">实验式确定</a></li>
+<li><a class="dead" title="未收录">有机物分子式的确定</a></li>
+<li><a class="dead" title="未收录">摩尔质量与气体密度</a></li>
+<li><a class="dead" title="未收录">燃烧分析法</a></li>
+<li><a class="dead" title="未收录">化学式计算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-08</a></li>
+<li><a href="../exam/2009-全国Ⅱ-12.html">2009-全国Ⅱ-12</a></li>
+<li><a href="../exam/2022-全国乙-12.html">2022-全国乙-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

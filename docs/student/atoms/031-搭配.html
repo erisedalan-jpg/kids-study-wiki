@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>搭配</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>搭配</h1><div class="meta-card"><span><strong>权重</strong>34</span><span><strong>吉林命中</strong>9</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[组合, 数学广角, 计数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 搭配, combination, 排列组合, 数学广角-搭配, 有序排列</p><h1>搭配</h1>
+<blockquote>
+<p><strong>一句话</strong>：搭配就是数"有多少种组合方式"——上衣和裤子怎么配、早餐怎么选，都是搭配问题。
+<strong>English</strong>: Combination / arrangement is counting how many ways things can be put together — like pairing tops with trousers or choosing breakfast items.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>今天早上，你有 2 件上衣：红色、蓝色。</p>
+<p>还有 3 条裤子：白色、黑色、灰色。</p>
+<p>你能怎么穿？</p>
+<p>让我们来试试：
+- 红上衣 + 白裤子 ✓
+- 红上衣 + 黑裤子 ✓
+- 红上衣 + 灰裤子 ✓
+- 蓝上衣 + 白裤子 ✓
+- 蓝上衣 + 黑裤子 ✓
+- 蓝上衣 + 灰色裤子 ✓</p>
+<p>一共 <strong>6 种</strong>！</p>
+<p>这就是<strong>搭配</strong>——找出所有可以组合的方式，而且一种都不漏、一种都不重复！</p>
+<p><strong>共读小活动：</strong> 把家里玩具小人的衣服拿出来，试着把所有上衣和裤子配成一对，数一数一共有几套搭配。</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>搭配的关键：有序 + 不重复 + 不遗漏</h3>
+<p>搭配问题最重要的两件事：
+1. <strong>不重复</strong>：每种搭配只数一次
+2. <strong>不遗漏</strong>：一种可能都不能漏掉</p>
+<h3>有序枚举法</h3>
+<p>最可靠的方法：<strong>按顺序一个一个列举</strong>，不乱跳。</p>
+<p><strong>例题：</strong> 早餐有 3 种主食（面包、米饭、粥），2 种饮品（牛奶、豆浆），每次选一种主食+一种饮品，有几种搭配？</p>
+<p><strong>列举：</strong></p>
+<table>
+<thead>
+<tr>
+<th>主食</th>
+<th>饮品</th>
+<th>搭配</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面包</td>
+<td>牛奶</td>
+<td>1</td>
+</tr>
+<tr>
+<td>面包</td>
+<td>豆浆</td>
+<td>2</td>
+</tr>
+<tr>
+<td>米饭</td>
+<td>牛奶</td>
+<td>3</td>
+</tr>
+<tr>
+<td>米饭</td>
+<td>豆浆</td>
+<td>4</td>
+</tr>
+<tr>
+<td>粥</td>
+<td>牛奶</td>
+<td>5</td>
+</tr>
+<tr>
+<td>粥</td>
+<td>豆浆</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>共 <strong>6 种</strong>。</p>
+<p><strong>规律：</strong> 3 种主食 × 2 种饮品 = 6 种搭配 → 直接相乘！</p>
+<h3>树形图（tree diagram）</h3>
+<p>用树形图把所有搭配画出来，清晰又不容易漏：</p>
+<pre><code>面包 ─┬─ 牛奶  → 面包+牛奶
+      └─ 豆浆  → 面包+豆浆
+
+米饭 ─┬─ 牛奶  → 米饭+牛奶
+      └─ 豆浆  → 米饭+豆浆
+
+粥   ─┬─ 牛奶  → 粥+牛奶
+      └─ 豆浆  → 粥+豆浆
+</code></pre>
+<p>从树根出发，每次分叉，数末端的叶子数 = 搭配总数。</p>
+<h3>乘法原理（分步计数）</h3>
+<p><strong>第一步</strong>有 m 种选法，<strong>第二步</strong>有 n 种选法，两步合起来有 m × n 种搭配。</p>
+<ul>
+<li>2 件上衣 × 3 条裤子 = 6 种搭配</li>
+<li>3 主食 × 2 饮品 = 6 种搭配</li>
+<li>3 个路口各有 2 条路可选：2 × 2 × 2 = 8 种路线</li>
+</ul>
+<p><strong>注意：</strong> 乘法原理要求两步选择互不影响（第一步选了什么，第二步仍然有同样多的选择）。</p>
+<h3>搭配 vs 排列：顺序重不重要？</h3>
+<ul>
+<li><strong>搭配/组合</strong>：只关心"选了哪些"，顺序无关</li>
+<li>红上衣+白裤子 ≠ 白裤子+红上衣？不，这是同一套</li>
+<li><strong>排列</strong>：关心"顺序"</li>
+<li>A、B 两人照相：AB 站法 ≠ BA 站法，是两种不同排列</li>
+</ul>
+<p>小学阶段以搭配（组合思想）为主，排列（有序计数）也会涉及。</p>
+<h3>教材对应</h3>
+<ul>
+<li>二年级上册第 8 单元（p97-99）：简单搭配问题，衣服搭配和路线搭配，初步认识有序枚举</li>
+<li>三年级下册第 8 单元（p94-98）：更复杂的搭配，引入树形图，初步乘法原理</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>排列数 A_n^k 与组合数 C_n^k</h3>
+<p><strong>排列（Arrangement/Permutation）</strong>：从 n 个不同元素中，<strong>有序地</strong>取 k 个：</p>
+<pre><code>A_n^k = n × (n-1) × (n-2) × … × (n-k+1) = n! / (n-k)!
+</code></pre>
+<p>例：3 人中选 2 人排成一排，A_3^2 = 3 × 2 = 6 种。</p>
+<p><strong>组合（Combination）</strong>：从 n 个不同元素中，<strong>无序地</strong>取 k 个：</p>
+<pre><code>C_n^k = A_n^k / k! = n! / [k! × (n-k)!]
+</code></pre>
+<p>例：3 人中选 2 人组队（不论顺序），C_3^2 = 3 种。</p>
+<p>关系：C_n^k × k! = A_n^k（将无序组合乘以排列方式数 = 有序排列）</p>
+<h3>帕斯卡三角形（杨辉三角）</h3>
+<p>组合数有一个美丽的图形表示——<strong>杨辉三角</strong>（中国南宋数学家杨辉在 1261 年记录，西方称帕斯卡三角，约 1655 年，<strong>待家长核对年份</strong>）：</p>
+<pre><code>      1
+     1 1
+    1 2 1
+   1 3 3 1
+  1 4 6 4 1
+ 1 5 10 10 5 1
+</code></pre>
+<p>第 n 行第 k 个数（从 0 开始计）= C_n^k。每个数等于它上方两数之和。</p>
+<p>杨辉三角的性质：
+- 每行之和 = 2^n（n 从 0 开始）
+- 斜向之和是斐波那契数列
+- 与二项式展开 (a+b)^n 的系数完全对应</p>
+<h3>搭配在概率中的应用</h3>
+<p>组合数是<strong>概率计算</strong>的基础：</p>
+<pre><code>从 52 张扑克中抽 5 张，共有 C_52^5 = 2,598,960 种
+其中 &quot;同花顺&quot; 共有 40 种
+同花顺的概率 ≈ 40 / 2,598,960 ≈ 0.0015%
+</code></pre>
+<p>从数衣服搭配到计算牌局概率，计数原理（乘法原理 + 组合数）是连接数学与现实世界的桥梁。</p>
+<h3>搭配在算法中：穷举与剪枝</h3>
+<p>计算机解决搭配问题常用<strong>回溯算法（backtracking）</strong>，思路就是树形图的系统化：</p>
+<pre><code class="language-python"># 从 [1,2,3] 中选 2 个数的所有组合
+from itertools import combinations
+for combo in combinations([1, 2, 3], 2):
+    print(combo)
+# 输出: (1,2) (1,3) (2,3)
+</code></pre>
+<p>当选择空间很大时，通过"剪枝"（提前排除不可能的分支）大幅提升效率——这是算法竞赛的核心技巧。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>搭配</td>
+<td>combination / pairing</td>
+<td>n.</td>
+<td>小学核心概念</td>
+</tr>
+<tr>
+<td>排列</td>
+<td>arrangement / permutation</td>
+<td>n.</td>
+<td>有顺序的组合</td>
+</tr>
+<tr>
+<td>组合</td>
+<td>combination</td>
+<td>n.</td>
+<td>无顺序的选法</td>
+</tr>
+<tr>
+<td>枚举</td>
+<td>enumerate / list</td>
+<td>v.</td>
+<td>逐一列举所有情况</td>
+</tr>
+<tr>
+<td>树形图</td>
+<td>tree diagram</td>
+<td>n.</td>
+<td>可视化所有分支</td>
+</tr>
+<tr>
+<td>乘法原理</td>
+<td>multiplication principle</td>
+<td>n.</td>
+<td>分步相乘</td>
+</tr>
+<tr>
+<td>有序</td>
+<td>ordered</td>
+<td>adj.</td>
+<td>顺序有影响</td>
+</tr>
+<tr>
+<td>无序</td>
+<td>unordered</td>
+<td>adj.</td>
+<td>顺序无影响</td>
+</tr>
+<tr>
+<td>阶乘</td>
+<td>factorial (n!)</td>
+<td>n.</td>
+<td>n! = n×(n-1)×…×1</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 件上衣和 3 条裤子共有 6 种搭配。</td>
+<td>2 tops and 3 trousers give 6 possible outfits.</td>
+</tr>
+<tr>
+<td>用树形图找出所有可能的选法。</td>
+<td>Use a tree diagram to find all possible choices.</td>
+</tr>
+<tr>
+<td>选法共有 3 × 2 = 6 种。</td>
+<td>There are 3 × 2 = 6 ways in total.</td>
+</tr>
+<tr>
+<td>组合不考虑顺序，排列考虑顺序。</td>
+<td>Combinations ignore order; permutations consider it.</td>
+</tr>
+<tr>
+<td>有序枚举不会重复，也不会遗漏。</td>
+<td>Systematic listing avoids repetition and omission.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li><strong>《The Button Box》</strong>（Margarette S. Reid 著）— 用各种纽扣分类组合，自然引出搭配计数，适合 4-8 岁共读。（<strong>待家长核对中文引进版</strong>）</li>
+<li><strong>《Rooster's Off to See the World》</strong>（Eric Carle 著）— 动物一批批加入旅程，引入组合变化，适合 3-6 岁。（<strong>待家长核对中文版情况</strong>）</li>
+<li>🚧 中文搭配/组合主题绘本请家长在书店选择，推荐含有穿衣搭配或食物配对互动游戏的图画书。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"怎么保证一种都没漏？"</strong> → 可以说："用树形图！每次只固定一件上衣，把所有裤子都试一遍，然后换下一件上衣，再把所有裤子都试一遍。这样按顺序来，每件上衣都配齐了，一种也不会漏。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"为什么可以直接用乘法算？"</strong> → 可以说："因为每件上衣都可以配所有的裤子——有 2 件上衣，每件配 3 条裤子，就是 2 个'3 种'，加起来是 6 种。2 × 3 = 6，加法和乘法的意义在这里是一样的！"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"搭配和排列有什么不同？"</strong> → 可以说："搭配（组合）不在乎顺序——红上衣配白裤子，和白裤子配红上衣，是一样的穿法。排列在乎顺序——A 站前面 B 站后面，和 B 站前面 A 站后面，是两种不同的排法。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 准备 3 种水果（苹果、香蕉、橙子）和 2 种餐具（勺子、叉子），让孩子把所有搭配列出来，用树形图画出来，验证是否恰好 6 种。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）"综合与实践"——有序思考与简单组合（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学二年级上册.pdf</a> 第 8 单元《数学广角——搭配（一）》(p97-99)；<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书·数学三年级下册.pdf</a> 第 8 单元《数学广角——搭配（二）》(p94-98)</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/组合数学</li>
+<li><strong>拓展阅读</strong>：杨辉三角与帕斯卡三角（数学史）；排列组合公式（高中数学）；回溯算法科普（计算机科学）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">乘法口诀</a> · <a class="dead" title="未收录">加法</a> · <a class="dead" title="未收录">找规律</a> · <a class="dead" title="未收录">数数</a> · <a class="dead" title="未收录">大小</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-14.html">2008-文-14</a></li>
+<li><a href="../exam/2008-文-19.html">2008-文-19</a></li>
+<li><a href="../exam/2008-理-17.html">2008-理-17</a></li>
+<li><a href="../exam/2009-文-05.html">2009-文-05</a></li>
+<li><a href="../exam/2009-理-07.html">2009-理-07</a></li>
+<li><a href="../exam/2010-理-04.html">2010-理-04</a></li>
+<li><a href="../exam/2011-理-12.html">2011-理-12</a></li>
+<li><a href="../exam/2012-理-06.html">2012-理-06</a></li>
+<li><a href="../exam/2013-理-12.html">2013-理-12</a></li>
+<li><a href="../exam/2014-理-13.html">2014-理-13</a></li>
+<li><a href="../exam/2019-理-06.html">2019-理-06</a></li>
+<li><a href="../exam/2020-理-14.html">2020-理-14</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-14.html">2024-新课标Ⅱ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

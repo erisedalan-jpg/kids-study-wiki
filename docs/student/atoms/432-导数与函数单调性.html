@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数与函数单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>导数与函数单调性</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 导数与函数单调性, derivative and monotonicity, 单调性导数判断, 函数单调性</p><h2>🎓 导数与函数单调性</h2>
+<h3>核心定理</h3>
+<p>设 $f(x)$ 在区间 $(a,b)$ 上可导：</p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$f'(x)&gt;0$（$x\in(a,b)$）</td>
+<td>$f(x)$ 在 $(a,b)$ 上单调<strong>递增</strong></td>
+</tr>
+<tr>
+<td>$f'(x)&lt;0$（$x\in(a,b)$）</td>
+<td>$f(x)$ 在 $(a,b)$ 上单调<strong>递减</strong></td>
+</tr>
+<tr>
+<td>$f'(x)=0$（$x\in(a,b)$）</td>
+<td>$f(x)$ 在 $(a,b)$ 上为常数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：条件是开区间上恒成立（允许端点导数为 $0$，如 $f(x)=x^3$ 在 $x=0$ 处 $f'=0$ 但仍单调递增）。</p>
+<h3>求单调区间的步骤</h3>
+<ol>
+<li>确定函数定义域</li>
+<li>求导函数 $f'(x)$</li>
+<li>令 $f'(x)&gt;0$，解不等式得单调递增区间</li>
+<li>令 $f'(x)&lt;0$，解不等式得单调递减区间</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 求 $f(x)=x^3-3x^2-9x+5$ 的单调区间。</p>
+<p>$f'(x) = 3x^2-6x-9 = 3(x^2-2x-3) = 3(x-3)(x+1)$</p>
+<table>
+<thead>
+<tr>
+<th>区间</th>
+<th>$(x-3)$</th>
+<th>$(x+1)$</th>
+<th>$f'(x)$</th>
+<th>单调性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$(-\infty,-1)$</td>
+<td>$-$</td>
+<td>$-$</td>
+<td>$+$</td>
+<td>递增</td>
+</tr>
+<tr>
+<td>$(-1,3)$</td>
+<td>$-$</td>
+<td>$+$</td>
+<td>$-$</td>
+<td>递减</td>
+</tr>
+<tr>
+<td>$(3,+\infty)$</td>
+<td>$+$</td>
+<td>$+$</td>
+<td>$+$</td>
+<td>递增</td>
+</tr>
+</tbody>
+</table>
+<p>单调递增区间：$(-\infty,-1)$ 和 $(3,+\infty)$；单调递减区间：$(-1,3)$。</p>
+<p><strong>例 2</strong> 求 $f(x)=xe^x$ 的单调区间。</p>
+<p>$f'(x) = e^x + xe^x = e^x(1+x)$</p>
+<p>$e^x&gt;0$ 恒成立，故 $f'(x)&gt;0$ 等价于 $1+x&gt;0$，即 $x&gt;-1$。</p>
+<p>单调递增：$(-1,+\infty)$；单调递减：$(-\infty,-1)$。</p>
+<p><strong>例 3</strong> 含参数的单调性：$f(x)=x^3+ax$ 在 $\mathbb{R}$ 上单调递增，求 $a$ 的范围。</p>
+<p>$f'(x)=3x^2+a\geq 0$ 对所有 $x$ 成立，即 $a\geq-3x^2$。因 $-3x^2\leq 0$，需 $a\geq 0$。</p>
+<h3>单调性的几何直觉</h3>
+<ul>
+<li>$f'(x)&gt;0$：切线向右上倾（斜率正），函数"爬坡"</li>
+<li>$f'(x)&lt;0$：切线向右下倾（斜率负），函数"下坡"</li>
+<li>$f'(x_0)=0$：切线水平，可能是极值点或拐点</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>求单调区间时，<strong>先确定定义域</strong>，分母为 $0$ 的点要排除</li>
+<li>分析符号变化时用<strong>符号表</strong>（数轴分析），避免漏掉区间</li>
+<li>单调区间的端点若是定义域端点，可写成闭区间 $[a,b]$；若是 $f'=0$ 的孤立点，通常写开区间</li>
+<li>$f'(x)=0$ 在某区间上的孤立点不影响单调性（如 $x^3$ 的单调递增）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/单调函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">导数判断单调性</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a class="dead" title="未收录">导数的概念</a> · <a href="../atoms/419-函数最值-高中.html">函数最值-高中</a> · <a class="dead" title="未收录">闭区间最值</a> · <a class="dead" title="未收录">导数与不等式恒成立</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-13.html">2008-理-13</a></li>
+<li><a href="../exam/2009-文-07.html">2009-文-07</a></li>
+<li><a href="../exam/2010-文-21.html">2010-文-21</a></li>
+<li><a href="../exam/2010-理-21.html">2010-理-21</a></li>
+<li><a href="../exam/2011-理-02.html">2011-理-02</a></li>
+<li><a href="../exam/2012-理-10.html">2012-理-10</a></li>
+<li><a href="../exam/2013-文-03.html">2013-文-03</a></li>
+<li><a href="../exam/2014-文-09.html">2014-文-09</a></li>
+<li><a href="../exam/2015-文-08.html">2015-文-08</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2016-文-20.html">2016-文-20</a></li>
+<li><a href="../exam/2016-文-21.html">2016-文-21</a></li>
+<li><a href="../exam/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/2019-文-21.html">2019-文-21</a></li>
+<li><a href="../exam/2019-理-20.html">2019-理-20</a></li>
+<li><a href="../exam/2020-文-12.html">2020-文-12</a></li>
+<li><a href="../exam/2020-理-11.html">2020-理-11</a></li>
+<li><a class="dead" title="未收录">2021-北京-03</a></li>
+<li><a href="../exam/2022-文-20.html">2022-文-20</a></li>
+<li><a class="dead" title="未收录">2023-北京-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

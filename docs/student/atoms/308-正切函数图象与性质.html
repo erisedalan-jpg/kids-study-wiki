@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正切函数图象与性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正切函数图象与性质</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正切函数图象与性质, tangent function graph, 正切函数, 正切曲线</p><h2>🎓 正切函数图象与性质</h2>
+<h3>定义</h3>
+<p><strong>正切函数</strong>：$y = \tan x$，定义域为 $\left{x \mid x \neq \dfrac{\pi}{2} + k\pi, k \in \mathbb{Z}\right}$</p>
+<h3>基本性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td>$\mathbb{R} \setminus \left{\dfrac{\pi}{2}+k\pi \mid k\in\mathbb{Z}\right}$</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>$\mathbb{R}$（无界）</td>
+</tr>
+<tr>
+<td>最大值/最小值</td>
+<td>无（趋向 $\pm\infty$）</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>$T = \pi$（<strong>半</strong>周期，比正余弦短一半）</td>
+</tr>
+<tr>
+<td>零点</td>
+<td>$x = k\pi$（$k \in \mathbb{Z}$）</td>
+</tr>
+<tr>
+<td>奇偶性</td>
+<td>奇函数（$\tan(-x) = -\tan x$），关于原点对称</td>
+</tr>
+<tr>
+<td>渐近线</td>
+<td>$x = \dfrac{\pi}{2} + k\pi$（$k \in \mathbb{Z}$）（垂直渐近线）</td>
+</tr>
+</tbody>
+</table>
+<h3>单调性</h3>
+<p>$y = \tan x$ 在每个区间 $\left(-\dfrac{\pi}{2}+k\pi, \dfrac{\pi}{2}+k\pi\right)$（$k \in \mathbb{Z}$）上单调递增。</p>
+<p>注意：不能将多个单调递增区间"合并"，因为各区间之间函数无定义（有垂直渐近线）。</p>
+<h3>图象特征</h3>
+<ul>
+<li>图象由无数段分支组成，每段形状相同（周期 $\pi$）</li>
+<li>每段在渐近线之间，从 $-\infty$ 递增到 $+\infty$</li>
+<li>过每段中点（$x = k\pi$）时 $y = 0$，且图象关于原点对称</li>
+<li>关键点（一个周期内）：$(-\pi/4, -1), (0, 0), (\pi/4, 1)$</li>
+</ul>
+<h3>与正弦余弦的关系</h3>
+<p>$$\tan x = \frac{\sin x}{\cos x} \quad (\cos x \neq 0)$$</p>
+<p>$\cos x = 0$ 时，$\tan x$ 无定义（图象在该处有垂直渐近线）。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求 $y = \tan x$ 在 $\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right)$ 上的单调性。</p>
+<p>解：$y = \tan x$ 在 $\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right)$ 上单调递增（这是一个完整的单调区间，$x$ 从 $-\pi/2$ 趋近时 $\tan x \to -\infty$，趋近 $\pi/2$ 时 $\tan x \to +\infty$）。</p>
+<p><strong>例2</strong>：比较 $\tan 0.5$ 与 $\tan 1$ 的大小（单位：弧度）。</p>
+<p>解：$0.5, 1 \in \left(-\dfrac{\pi}{2}, \dfrac{\pi}{2}\right) \approx (-1.571, 1.571)$，$\tan$ 在此区间递增，$0.5 &lt; 1$，故 $\tan 0.5 &lt; \tan 1$。</p>
+<p><strong>例3</strong>：求 $\tan\dfrac{17\pi}{6}$ 的值。</p>
+<p>解：$\dfrac{17\pi}{6} = 2\pi + \dfrac{5\pi}{6} = 2\pi + \pi - \dfrac{\pi}{6}$，$\tan(2\pi + \alpha) = \tan\alpha$，$\tan\left(\pi - \dfrac{\pi}{6}\right) = -\tan\dfrac{\pi}{6} = -\dfrac{\sqrt{3}}{3}$。</p>
+<p>故 $\tan\dfrac{17\pi}{6} = -\dfrac{\sqrt{3}}{3}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>周期是 $\pi$，不是 $2\pi$</strong>：正切函数的周期是 $\pi$（比正弦余弦短），$\tan(x+\pi) = \tan x$</li>
+<li><strong>无界</strong>：$y = \tan x$ 的值域是全体实数，无最大值和最小值</li>
+<li><strong>单调区间不含端点</strong>：各单调区间是<strong>开</strong>区间 $\left(-\dfrac{\pi}{2}+k\pi, \dfrac{\pi}{2}+k\pi\right)$，不包含端点（端点无意义）</li>
+<li><strong>不能合并单调区间</strong>：$\tan x$ 在相邻两个单调递增区间之间的渐近线处"断开"，不是连续递增的</li>
+<li><strong>$\tan 90°$ 无意义</strong>：$x = \pi/2$ 处无定义，不能代入计算</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了锐角正切（对边/邻边），高中将正切推广到任意角，引入渐近线和无界值域的概念。正切函数的周期为 $\pi$，与正弦余弦的 $2\pi$ 不同，这是因为正切函数关于原点的对称性，每半个 $2\pi$ 就完成一次循环。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：正切函数（Tangent function），渐近线（Asymptote）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a href="../atoms/276-余弦函数图象与性质.html">余弦函数图象与性质</a></li>
+<li><a class="dead" title="未收录">同角三角函数关系</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a class="dead" title="未收录">三角函数线</a></li>
+<li><a class="dead" title="未收录">单位圆</a></li>
+<li><a class="dead" title="未收录">249-正切</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-08.html">2009-理-08</a></li>
+<li><a href="../exam/2018-文-14.html">2018-文-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

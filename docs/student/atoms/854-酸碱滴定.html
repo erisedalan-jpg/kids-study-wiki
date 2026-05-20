@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>酸碱滴定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>酸碱滴定</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 酸碱滴定, acid-base titration</p><h1>酸碱滴定</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用已知浓度的酸（或碱）溶液，通过中和反应测定未知浓度碱（或酸）溶液的定量分析方法，其核心计算基于 $c_1V_1 \nu_2 = c_2V_2 \nu_1$。
+<strong>English</strong>: Acid-base titration is a quantitative analytical method that uses a solution of known concentration to determine the unknown concentration of an acid or base via neutralization reaction, with its core calculation based on the stoichiometric relationship at the equivalence point.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+酸碱滴定基于酸碱中和反应：$H^+ + OH^- \rightarrow H_2O$。核心原理是“等物质的量反应”：当酸提供的 $H^+$ 总物质的量与碱提供的 $OH^-$ 总物质的量恰好完全反应时，即达到<strong>滴定终点</strong>（实际操作中指示剂变色点）与<strong>化学计量点</strong>（理论恰好完全反应点）。定量计算核心关系式为：$c_{\text{标}} V_{\text{标}} \nu_{\text{待}} = c_{\text{待}} V_{\text{待}} \nu_{\text{标}}$，其中 $\nu$ 表示1mol酸或碱能电离出的 $H^+$ 或 $OH^-$ 的物质的量（对于一元强酸强碱，$\nu=1$）。</p>
+<p><strong>关键方法</strong>
+1.  <strong>仪器准备</strong>：酸式滴定管（盛酸性溶液或氧化性溶液）、碱式滴定管（盛碱性溶液）、锥形瓶、移液管。使用前必须<strong>检漏</strong>、<strong>润洗</strong>（滴定管用待装液润洗 2–3 次，锥形瓶<strong>禁用</strong>待测液润洗）。
+2.  <strong>指示剂选择</strong>：根据滴定终点时溶液的酸碱性选择指示剂，原则是指示剂的变色范围全部或部分落在滴定突跃范围内。
+    *   强酸滴定强碱：酚酞（粉红→无色）或甲基橙（黄→橙色）。
+    *   强碱滴定强酸：酚酞（无色→粉红）或甲基橙（红→橙色）。
+    *   强碱滴定弱酸：酚酞（因终点显碱性）。
+    *   强酸滴定弱碱：甲基橙（因终点显酸性）。
+3.  <strong>操作与读数</strong>：左手控制活塞，右手旋摇锥形瓶；读数需平视凹液面最低点，估读至 0.01 mL。</p>
+<p><strong>典型应用</strong>
+*   <strong>题型一：指示剂选择与终点现象判断</strong>。设问角度：“用标准NaOH溶液滴定未知HCl，下列指示剂选用及终点颜色变化正确的是……” 解题关键在于明确最后留在滴定管中的是哪种溶液，从而确定谁滴入谁。如NaOH滴入HCl锥形瓶中，终点酚酞变为浅红色。
+*   <strong>题型二：滴定误差分析</strong>。常考某一不合理操作（如未润洗滴定管、锥形瓶有残留水、滴定前有气泡滴定后消失）会导致最终测定浓度 $c_{\text{待}}$ 偏高还是偏低。解题均回归到核心公式 $c_{\text{待}} = \frac{c_{\text{标}} V_{\text{标}} \nu_{\text{待}}}{V_{\text{待}} \nu_{\text{标}}}$，通过分析该操作使得读取的 $V_{\text{标}}$ 偏大还是偏小来判断。这是高考几乎必考的考点，每项错误操作都必须能机械调用公式分析。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>滴定管润洗混淆</strong>：滴定管必须用所装溶液润洗，否则溶液被稀释，导致 $V_{\text{标}}$ 偏大；锥形瓶若用待测液润洗，则导致待测液物质的量偏大，$V_{\text{标}}$ 偏大，均使结果偏高。锥形瓶中有少量蒸馏水<strong>不影响</strong>结果。</li>
+<li><strong>指示剂用量的误区</strong>：指示剂不是越多越好，2–3 滴即可。过多会使变色不敏锐，且指示剂本身是弱酸或弱碱，消耗额外的标准溶液，引入误差。</li>
+<li><strong>高锰酸钾等氧化还原滴定的仪器混用</strong>：酸性 $KMnO_4$ 溶液具有强氧化性，会腐蚀橡胶管，<strong>必须</strong>盛放在酸式滴定管中，不能用碱式滴定管。这一点常与酸碱滴定仪器要求结合考查。</li>
+<li><strong>读数规则模糊</strong>：忘记估读到小数后两位（0.01 mL）。例如，读取 23.80 mL，不能记为 23.8 mL。俯视或仰视对读数造成 $V_{\text{标}}$ 误差的判断是常错区。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>滴定</td>
+<td>Titration</td>
+<td>将标准溶液从滴定管滴加到待测液中的操作</td>
+</tr>
+<tr>
+<td>化学计量点</td>
+<td>Equivalence point</td>
+<td>酸与碱恰好按化学计量完全反应的理论点</td>
+</tr>
+<tr>
+<td>滴定终点</td>
+<td>Endpoint</td>
+<td>指示剂颜色突变时停止滴定的实际操作点</td>
+</tr>
+<tr>
+<td>滴定突跃</td>
+<td>Titration jump</td>
+<td>化学计量点附近溶液的pH发生急剧变化的范围</td>
+</tr>
+<tr>
+<td>标准溶液</td>
+<td>Standard solution</td>
+<td>浓度准确已知的溶液</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">中和反应</a></li>
+<li><a class="dead" title="未收录">pH计算</a></li>
+<li><a href="../atoms/336-盐类水解.html">盐类水解</a></li>
+<li><a class="dead" title="未收录">氧化还原滴定</a></li>
+<li><a class="dead" title="未收录">仪器使用规范</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-02.html">2008-全国Ⅱ-02</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-10.html">2014-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-09.html">2020-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2023-湖南-03</a></li>
+<li><a class="dead" title="未收录">2023-湖南-11</a></li>
+<li><a class="dead" title="未收录">2024-湖南-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>临界角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>临界角</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 临界角, critical angle</p><h2>🎓 临界角</h2>
+<h3>定义</h3>
+<p><strong>临界角</strong>（critical angle）$C$ 是光从光密介质射向光疏介质时，折射角恰好等于 90°（折射光线沿界面传播）时的入射角。</p>
+<p>当入射角 $\theta_i = C$ 时，折射角 $\theta_r = 90°$；当 $\theta_i &gt; C$ 时，发生全反射。</p>
+<h3>临界角公式</h3>
+<p>光从折射率为 $n_1$ 的介质射向折射率为 $n_2$ 的介质（$n_1 &gt; n_2$）：</p>
+<p>$$\sin C = \frac{n_2}{n_1}$$</p>
+<p>特别地，当光从折射率为 $n$ 的介质射向空气（$n_2 = 1$）：</p>
+<p>$$\boxed{\sin C = \frac{1}{n}}$$</p>
+<h3>临界角的推导</h3>
+<p>由斯涅尔定律：$n_1\sin\theta_1 = n_2\sin\theta_2$</p>
+<p>令 $\theta_1 = C$，$\theta_2 = 90°$（$\sin90° = 1$）：</p>
+<p>$$n_1\sin C = n_2\times1 \implies \sin C = \frac{n_2}{n_1}$$</p>
+<h3>各介质临界角</h3>
+<table>
+<thead>
+<tr>
+<th>介质</th>
+<th>折射率 $n$</th>
+<th>临界角 $C$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水</td>
+<td>1.33</td>
+<td>$\sin C = 1/1.33 \approx 0.752 \to C \approx 48.8°$</td>
+</tr>
+<tr>
+<td>玻璃（$n=1.5$）</td>
+<td>1.5</td>
+<td>$\sin C = 1/1.5 \approx 0.667 \to C \approx 41.8°$</td>
+</tr>
+<tr>
+<td>光密玻璃（$n=1.7$）</td>
+<td>1.7</td>
+<td>$\sin C = 1/1.7 \approx 0.588 \to C \approx 36.0°$</td>
+</tr>
+<tr>
+<td>金刚石</td>
+<td>2.42</td>
+<td>$\sin C = 1/2.42 \approx 0.413 \to C \approx 24.4°$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律</strong>：折射率越大，临界角越小，越容易发生全反射。</p>
+<h3>与全反射的关系</h3>
+<p>$$\theta_i &lt; C \implies \text{折射+反射（部分反射）}$$
+$$\theta_i = C \implies \text{折射角}= 90°\text{（临界状态）}$$
+$$\theta_i &gt; C \implies \text{全反射（无折射光）}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：某玻璃折射率 $n = \sqrt{3}$，求临界角。</p>
+<p>$$\sin C = \frac{1}{\sqrt{3}} \approx 0.577$$</p>
+<p>$$C = \arcsin(0.577) \approx 35.3°$$</p>
+<p><strong>例2（逆用）</strong>：已知光从某介质射向空气，临界角 $C = 30°$，求该介质折射率。</p>
+<p>$$\sin30° = \frac{1}{n} \implies n = \frac{1}{\sin30°} = \frac{1}{0.5} = 2$$</p>
+<p><strong>例3（实际判断）</strong>：$n = 1.5$ 的玻璃中，光以 45° 入射到玻璃-空气界面，是否发生全反射？</p>
+<p>临界角 $C \approx 41.8°$，$\theta_i = 45° &gt; C$，<strong>发生全反射</strong>。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>临界角只适用于光密→光疏界面</strong>：光从光疏射向光密时，无临界角，不会全反射。</li>
+<li><strong>临界角是入射角，不是折射角</strong>：$C$ 对应折射角 = 90°，是入射角的临界值。</li>
+<li><strong>$\sin C = 1/n$ 仅适用于射向空气（$n_2 = 1$）的情形</strong>：若射向其他介质需用通式 $\sin C = n_2/n_1$。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：全反射 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/343-全反射.html">全反射</a></li>
+<li><a href="../atoms/360-折射率.html">折射率</a></li>
+<li><a class="dead" title="未收录">光的折射-高中</a></li>
+<li><a class="dead" title="未收录">光导纤维</a></li>
+<li><a class="dead" title="未收录">光的反射-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-全国Ⅱ-08.html">2009-全国Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-16</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-16</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-16.html">2014-新课标Ⅱ-16</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-16</a></li>
+<li><a href="../exam/2021-全国乙-16.html">2021-全国乙-16</a></li>
+<li><a href="../exam/2022-全国乙-16.html">2022-全国乙-16</a></li>
+<li><a class="dead" title="未收录">2023-湖南-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

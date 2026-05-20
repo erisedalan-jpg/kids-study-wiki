@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平均数</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 八下, 数据分析]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平均数, mean, 算术平均数, 加权平均数, 样本平均数</p><h1>平均数</h1>
+<blockquote>
+<p><strong>一句话</strong>：把所有数据加起来除以个数，得到算术平均数；若各数据重要程度不同，用加权平均数。
+<strong>English</strong>: The arithmetic mean is the sum of all values divided by the count; the weighted mean accounts for different weights (frequencies) of each value.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>算术平均数</h3>
+<p>$$\bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}$$</p>
+<p><strong>例</strong>：五次数学成绩：80、85、90、75、70，平均分？</p>
+<p>$$\bar{x} = \frac{80+85+90+75+70}{5} = \frac{400}{5} = 80 \text{（分）}$$</p>
+<h3>加权平均数</h3>
+<p>当各数据出现次数（权重）不同时，用加权平均数：</p>
+<p>$$\bar{x} = \frac{x_1 f_1 + x_2 f_2 + \cdots + x_k f_k}{f_1+f_2+\cdots+f_k}$$</p>
+<p>其中 $f_i$ 为 $x_i$ 的频数（出现次数）。</p>
+<p><strong>例</strong>：某班成绩：优秀（90分）15人、良好（80分）20人、及格（70分）10人。</p>
+<p>$$\bar{x} = \frac{90\times15+80\times20+70\times10}{15+20+10} = \frac{1350+1600+700}{45} = \frac{3650}{45} \approx 81.1 \text{（分）}$$</p>
+<h3>平均数的特点</h3>
+<ul>
+<li>利用了<strong>所有数据</strong>的信息</li>
+<li>容易受<strong>极端值</strong>影响（如班里一个超高分会拉高平均分）</li>
+</ul>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>算术平均数与加权平均数的关系</h3>
+<p>当所有数据权重相等时，加权平均数退化为算术平均数。加权平均数是更一般的形式。</p>
+<p><strong>公式统一</strong>：
+$$\bar{x} = \sum_{i=1}^{k} x_i \cdot \frac{f_i}{n} = \sum_{i=1}^{k} x_i p_i$$</p>
+<p>其中 $p_i = \dfrac{f_i}{n}$ 是频率，$\sum p_i = 1$。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：某工厂7月份日产量（件）的频率分布表如下（待家长补充具体数据），利用各组中间值计算加权平均数。</p>
+<p>设各组中间值 $x_i$，频率 $p_i$：$\bar{x} = \sum x_i p_i$。</p>
+<p><strong>例 2</strong>：已知 10 个数据的平均数为 6，去掉一个数据 2 后，剩余 9 个数据的平均数为？</p>
+<p>原总和 $= 6\times10=60$，去掉 2 后总和 $=58$，新平均数 $=58/9\approx6.44$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 把"频率"当"频数"（频数是次数，频率是比例）</li>
+<li>❌ 用算术平均数时没有把所有数据纳入（遗漏数据）</li>
+<li>❌ 加权平均数中分母用的是"种类数"而非"总频数"</li>
+</ul>
+<h3>知识联系</h3>
+<p>平均数是数据集中趋势的代表；与<a href="../atoms/180-中位数.html">中位数</a>、<a class="dead" title="未收录">众数</a>并列为三大集中趋势指标；平均数作为基准，方差 = 各数据与平均数之差的平方的平均值（→<a href="../atoms/198-方差.html">方差</a>）；在<a class="dead" title="未收录">统计图选择</a>中用于描述典型水平。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>算术平均数</td>
+<td>arithmetic mean</td>
+</tr>
+<tr>
+<td>加权平均数</td>
+<td>weighted mean</td>
+</tr>
+<tr>
+<td>频数</td>
+<td>frequency</td>
+</tr>
+<tr>
+<td>频率</td>
+<td>relative frequency</td>
+</tr>
+<tr>
+<td>集中趋势</td>
+<td>central tendency</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第20章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·统计与概率·统计</li>
+<li>拓展：<a class="dead" title="未收录">数学/中位数</a> · <a class="dead" title="未收录">数学/方差</a> · <a class="dead" title="未收录">数学/统计图选择</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/180-中位数.html">中位数</a> · <a class="dead" title="未收录">众数</a> · <a href="../atoms/198-方差.html">方差</a> · <a class="dead" title="未收录">标准差</a> · <a class="dead" title="未收录">统计图选择</a> · <a href="../atoms/141-统计图.html">统计图</a> · <a href="../atoms/143-频数分布.html">频数分布</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-文-16.html">2011-文-16</a></li>
+<li><a href="../exam/2011-理-17.html">2011-理-17</a></li>
+<li><a href="../exam/2013-文-18.html">2013-文-18</a></li>
+<li><a href="../exam/2015-理-18.html">2015-理-18</a></li>
+<li><a href="../exam/2016-文-18.html">2016-文-18</a></li>
+<li><a href="../exam/2016-文-19.html">2016-文-19</a></li>
+<li><a href="../exam/2019-文-14.html">2019-文-14</a></li>
+<li><a href="../exam/2019-文-19.html">2019-文-19</a></li>
+<li><a href="../exam/2019-理-05.html">2019-理-05</a></li>
+<li><a href="../exam/2019-理-13.html">2019-理-13</a></li>
+<li><a href="../exam/2020-文-17.html">2020-文-17</a></li>
+<li><a href="../exam/2022-文-04.html">2022-文-04</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

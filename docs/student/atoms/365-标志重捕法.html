@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>标志重捕法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>标志重捕法</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 第1章种群及其动态]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 标志重捕法, mark-recapture method</p><h1>标志重捕法</h1>
+<blockquote>
+<p><strong>一句话</strong>：标志重捕法是通过两次捕获（第一次标记放回，第二次计算标记比例）来估算动物种群总数的方法。
+<strong>English</strong>: The mark-recapture method estimates total population size by capturing, marking, and releasing individuals, then recapturing a sample and calculating the proportion of marked individuals.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>标志重捕法（mark-recapture method）</strong>：调查活动能力强的动物种群密度时，先捕获一部分个体加以标记后放回，经过一段时间后再次捕获，根据重捕样本中标记个体的比例，估算种群总数量的方法。</p>
+<p>又称"捕获-标记-重捕法"（CMR，Capture-Mark-Recapture）。</p>
+<h3>概念 / 类型</h3>
+<p><strong>基本假设</strong>（Lincoln-Petersen 法）：</p>
+<ol>
+<li>调查期间种群数量保持稳定（无大量出生、死亡、迁入、迁出）</li>
+<li>标记个体与未标记个体在重捕时有<strong>相同的被捕概率</strong></li>
+<li>标记物不影响个体的存活率和行为</li>
+<li>标记不脱落</li>
+</ol>
+<p><strong>核心公式</strong>：</p>
+<p>$$N = \frac{M \times n}{m}$$</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N</td>
+<td>种群总数（待估算）</td>
+</tr>
+<tr>
+<td>M</td>
+<td>第一次捕获并标记的个体数</td>
+</tr>
+<tr>
+<td>n</td>
+<td>第二次捕获的总个体数</td>
+</tr>
+<tr>
+<td>m</td>
+<td>第二次捕获中有标记的个体数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>误差分析</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>对 m 的影响</th>
+<th>对 N 估算的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标记个体易被天敌发现</td>
+<td>m 偏小</td>
+<td>N 偏大（高估）</td>
+</tr>
+<tr>
+<td>标记脱落</td>
+<td>m 偏小</td>
+<td>N 偏大（高估）</td>
+</tr>
+<tr>
+<td>标记个体回避捕捉</td>
+<td>m 偏小</td>
+<td>N 偏大（高估）</td>
+</tr>
+<tr>
+<td>两次捕获间有大量死亡</td>
+<td>减少种群基数</td>
+<td>N 偏大（高估）</td>
+</tr>
+<tr>
+<td>两次捕获间有大量迁入</td>
+<td>m 比例下降</td>
+<td>N 偏大（高估）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1（基础）</strong>：捕获田鼠 40 只标记放回，一周后重捕 50 只，其中有标记个体 8 只，估算田鼠种群数量。</p>
+<p>$$N = \frac{40 \times 50}{8} = 250 \text{（只）}$$</p>
+<p><strong>例2（误差分析）</strong>：若上题中部分标记田鼠因标记醒目被天敌捕食，则实际估算值与真实值相比____（偏大/偏小/不变）。</p>
+<p><strong>答</strong>：偏大。因为标记个体死亡导致重捕时 m 偏小，代入公式后 N 偏大。</p>
+<p><strong>例3（应用）</strong>：要使标志重捕法的估算更准确，应注意哪些事项？<br />
+<strong>答</strong>：①标记方法不能伤害动物；②标记物不能过于醒目；③第二次捕获要在标记个体充分混入种群后进行；④调查期间种群数量相对稳定。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>标记方法</strong>：不能影响动物正常生理和行为，常用耳标、翅标、涂色、剪趾等。</li>
+<li><strong>两次捕获的时间间隔</strong>：既要让标记个体充分扩散混合，又不能太长（避免种群数量大幅变化）。</li>
+<li><strong>公式适用条件</strong>：种群数量相对稳定，不适用于繁殖期或种群快速变化时期。</li>
+<li>计算 N 时，m 在分母位置，m 越小 → N 越大，这是高频考查的误差分析逻辑。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标志重捕法</td>
+<td>mark-recapture method</td>
+<td>n.</td>
+<td>动物种群调查</td>
+</tr>
+<tr>
+<td>标记</td>
+<td>mark / tag</td>
+<td>v./n.</td>
+<td>首次捕获后标记</td>
+</tr>
+<tr>
+<td>重捕</td>
+<td>recapture</td>
+<td>v./n.</td>
+<td>第二次捕获</td>
+</tr>
+<tr>
+<td>种群总数</td>
+<td>total population size</td>
+<td>n.</td>
+<td>估算目标</td>
+</tr>
+<tr>
+<td>耳标</td>
+<td>ear tag</td>
+<td>n.</td>
+<td>常用标记工具</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标志重捕法广泛用于野生动物种群密度调查。</td>
+<td>The mark-recapture method is widely used to survey wildlife population density.</td>
+</tr>
+<tr>
+<td>若标记个体因标记醒目而被大量捕食，则估算值偏大。</td>
+<td>If marked individuals are heavily predated due to conspicuous marks, the estimated population size will be overestimated.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修2 生物与环境.pdf</a> 第1章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"标志重捕法"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/370-种群密度.html">种群密度</a> · <a class="dead" title="未收录">种群密度调查方法</a> · <a href="../atoms/366-样方法.html">样方法</a> · <a class="dead" title="未收录">种群</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2011-北京-02</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2022-全国乙-09.html">2022-全国乙-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

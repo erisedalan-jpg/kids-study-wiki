@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>诱导公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>诱导公式</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 诱导公式, reduction formulas, 三角函数诱导公式</p><h2>🎓 诱导公式</h2>
+<h3>定义</h3>
+<p><strong>诱导公式</strong>（reduction formulas）：将任意角的三角函数值化为 $0$ 到 $\dfrac{\pi}{2}$ 之间的锐角三角函数值的一组公式。</p>
+<h3>核心口诀</h3>
+<blockquote>
+<p><strong>"奇变偶不变，符号看象限"</strong></p>
+</blockquote>
+<ul>
+<li><strong>奇变偶不变</strong>：$k$ 为奇数时（$k \cdot \dfrac{\pi}{2} \pm \alpha$），函数名改变（$\sin \leftrightarrow \cos$，$\tan \leftrightarrow \cot$）；$k$ 为偶数时，函数名不变</li>
+<li><strong>符号看象限</strong>：将 $\alpha$ 视为锐角时，$k \cdot \dfrac{\pi}{2} \pm \alpha$ 所在象限的函数符号</li>
+</ul>
+<h3>常用诱导公式（16个分4组）</h3>
+<p><strong>第一组（$2\pi + \alpha$ 或 $-\alpha$）</strong>：</p>
+<p>$$\sin(2k\pi + \alpha) = \sin\alpha \quad (k \in \mathbb{Z})$$</p>
+<p>$$\cos(2k\pi + \alpha) = \cos\alpha \quad (k \in \mathbb{Z})$$</p>
+<p>$$\sin(-\alpha) = -\sin\alpha \quad \text{（正弦为奇函数）}$$</p>
+<p>$$\cos(-\alpha) = \cos\alpha \quad \text{（余弦为偶函数）}$$</p>
+<p><strong>第二组（$\pi + \alpha$）</strong>：</p>
+<p>$$\sin(\pi + \alpha) = -\sin\alpha$$</p>
+<p>$$\cos(\pi + \alpha) = -\cos\alpha$$</p>
+<p>$$\tan(\pi + \alpha) = \tan\alpha$$</p>
+<p><strong>第三组（$\pi - \alpha$）</strong>：</p>
+<p>$$\sin(\pi - \alpha) = \sin\alpha$$</p>
+<p>$$\cos(\pi - \alpha) = -\cos\alpha$$</p>
+<p>$$\tan(\pi - \alpha) = -\tan\alpha$$</p>
+<p><strong>第四组（$\dfrac{\pi}{2} \pm \alpha$）</strong>（奇数倍 $\pi/2$，函数名改变）：</p>
+<p>$$\sin!\left(\frac{\pi}{2} + \alpha\right) = \cos\alpha$$</p>
+<p>$$\cos!\left(\frac{\pi}{2} + \alpha\right) = -\sin\alpha$$</p>
+<p>$$\sin!\left(\frac{\pi}{2} - \alpha\right) = \cos\alpha$$</p>
+<p>$$\cos!\left(\frac{\pi}{2} - \alpha\right) = \sin\alpha$$</p>
+<p>$$\tan!\left(\frac{\pi}{2} - \alpha\right) = \cot\alpha$$</p>
+<h3>推导思路（以 $\pi - \alpha$ 为例）</h3>
+<p>$\pi - \alpha$ 与 $\alpha$ 的终边关于 $y$ 轴对称。设 $\alpha$ 对应单位圆上点 $P(x, y)$，则 $\pi - \alpha$ 对应点 $P'(-x, y)$。故 $\sin(\pi-\alpha) = y = \sin\alpha$，$\cos(\pi-\alpha) = -x = -\cos\alpha$。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $\sin 150°$，$\cos 240°$，$\tan 315°$。</p>
+<p>解：
+- $\sin 150° = \sin(180° - 30°) = \sin 30° = \dfrac{1}{2}$
+- $\cos 240° = \cos(180° + 60°) = -\cos 60° = -\dfrac{1}{2}$
+- $\tan 315° = \tan(360° - 45°) = \tan(-45°) = -\tan 45° = -1$</p>
+<p><strong>例2</strong>：化简 $\sin(\pi + \alpha)\cos(\pi - \alpha)\tan(2\pi - \alpha)$。</p>
+<p>解：
+- $\sin(\pi + \alpha) = -\sin\alpha$
+- $\cos(\pi - \alpha) = -\cos\alpha$
+- $\tan(2\pi - \alpha) = \tan(-\alpha) = -\tan\alpha = -\dfrac{\sin\alpha}{\cos\alpha}$</p>
+<p>原式 $= (-\sin\alpha)(-\cos\alpha)\left(-\dfrac{\sin\alpha}{\cos\alpha}\right) = \sin\alpha \cdot \cos\alpha \cdot \left(-\dfrac{\sin\alpha}{\cos\alpha}\right) = -\sin^2\alpha$</p>
+<p><strong>例3</strong>：已知 $\sin\dfrac{11\pi}{6}$，利用诱导公式化简。</p>
+<p>解：$\dfrac{11\pi}{6} = 2\pi - \dfrac{\pi}{6}$，故 $\sin\dfrac{11\pi}{6} = \sin!\left(2\pi - \dfrac{\pi}{6}\right) = \sin!\left(-\dfrac{\pi}{6}\right) = -\sin\dfrac{\pi}{6} = -\dfrac{1}{2}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>"奇变偶不变"看的是 $k$，不是 $\alpha$</strong>：$k \cdot \dfrac{\pi}{2} + \alpha$ 中，看 $k$ 的奇偶性来决定是否改变函数名</li>
+<li><strong>符号由"假设 $\alpha$ 为锐角时所在象限"决定</strong>：不是 $\alpha$ 实际所在象限</li>
+<li><strong>$\pi + \alpha$ 与 $\pi - \alpha$ 区分</strong>：$\pi + \alpha$ 在第三象限（$\sin, \cos$ 都变负），$\pi - \alpha$ 在第二象限（只有 $\cos$ 变负）</li>
+<li><strong>$\tan(\pi + \alpha) = \tan\alpha$ 不变号</strong>：第三象限 $\tan &gt; 0$（与第一象限同）</li>
+<li><strong>化到锐角</strong>：诱导公式的目的是化为 $0 \sim \pi/2$ 的角，可能需要多次应用</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中只计算锐角的三角函数值，如 $\sin 30° = 0.5$。高中用诱导公式将所有角的三角函数化归到第一象限的锐角，实现"万角归一"，是学习三角函数计算的核心技巧。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：诱导公式（Reduction formulas），三角函数的对称性</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">正弦余弦正切定义</a></li>
+<li><a class="dead" title="未收录">单位圆</a></li>
+<li><a class="dead" title="未收录">同角三角函数关系</a></li>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a class="dead" title="未收录">两角和差正余弦</a></li>
+<li><a class="dead" title="未收录">253-特殊角三角函数值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-15.html">2009-文-15</a></li>
+<li><a href="../exam/2013-文-06.html">2013-文-06</a></li>
+<li><a href="../exam/2016-文-11.html">2016-文-11</a></li>
+<li><a href="../exam/2016-理-09.html">2016-理-09</a></li>
+<li><a href="../exam/2017-文-09.html">2017-文-09</a></li>
+<li><a href="../exam/2017-文-16.html">2017-文-16</a></li>
+<li><a href="../exam/2019-文-07.html">2019-文-07</a></li>
+<li><a href="../exam/2019-文-15.html">2019-文-15</a></li>
+<li><a class="dead" title="未收录">2020-北京-09</a></li>
+<li><a href="../exam/2020-文-17.html">2020-文-17</a></li>
+<li><a class="dead" title="未收录">2021-北京-13</a></li>
+<li><a class="dead" title="未收录">2024-北京-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

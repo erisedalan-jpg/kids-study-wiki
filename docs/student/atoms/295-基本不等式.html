@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基本不等式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>基本不等式</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>12</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 一元二次函数方程不等式, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 基本不等式, AM-GM inequality, 均值不等式, 算术-几何平均不等式</p><h2>🎓 基本不等式</h2>
+<h3>定义与内容</h3>
+<p><strong>基本不等式</strong>（AM-GM 不等式）：对任意实数 $a, b$，有</p>
+<p>$$\frac{a + b}{2} \geq \sqrt{ab} \quad (a, b \geq 0)$$</p>
+<p>即两个非负实数的<strong>算术平均数</strong>不小于它们的<strong>几何平均数</strong>，等号当且仅当 $a = b$ 时成立。</p>
+<p>等价形式：
+$$a + b \geq 2\sqrt{ab} \quad (a, b \geq 0)$$</p>
+<p>$$ab \leq \left(\frac{a+b}{2}\right)^2 \quad (a, b \geq 0)$$</p>
+<p>对于任意实数（不要求非负）：
+$$a^2 + b^2 \geq 2ab$$（展开 $(a-b)^2 \geq 0$ 得）</p>
+<h3>关键推导</h3>
+<p>$$a + b - 2\sqrt{ab} = (\sqrt{a} - \sqrt{b})^2 \geq 0$$</p>
+<p>因为平方项 $(\sqrt{a} - \sqrt{b})^2 \geq 0$，等号当 $\sqrt{a} = \sqrt{b}$，即 $a = b$ 时成立。</p>
+<h3>三个重要推论</h3>
+<p><strong>积定和最小</strong>：若 $ab = S$（乘积固定为 $S$），则 $a + b \geq 2\sqrt{S}$，等号 $a = b$ 时成立。</p>
+<p><strong>和定积最大</strong>：若 $a + b = T$（和固定为 $T$），则 $ab \leq \dfrac{T^2}{4}$，等号 $a = b$ 时成立。</p>
+<p><strong>调和-算术-几何-平方平均链</strong>（了解）：
+$$H \leq G \leq A \leq Q$$</p>
+<p>其中 $H = \dfrac{2ab}{a+b}$（调和均值），$G = \sqrt{ab}$，$A = \dfrac{a+b}{2}$，$Q = \sqrt{\dfrac{a^2+b^2}{2}}$。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知正实数 $a, b$ 满足 $a + b = 4$，求 $ab$ 的最大值。</p>
+<p>解：由基本不等式，$ab \leq \left(\dfrac{a+b}{2}\right)^2 = \left(\dfrac{4}{2}\right)^2 = 4$，等号当 $a = b = 2$ 时成立。故 $ab$ 的最大值为 $4$。</p>
+<p><strong>例2</strong>：已知正实数 $x$，求 $y = x + \dfrac{4}{x}$ 的最小值。</p>
+<p>解：$y = x + \dfrac{4}{x} \geq 2\sqrt{x \cdot \dfrac{4}{x}} = 2\sqrt{4} = 4$，</p>
+<p>等号当 $x = \dfrac{4}{x}$，即 $x^2 = 4, x = 2$（$x &gt; 0$）时成立。最小值为 $4$。</p>
+<p><strong>例3</strong>：设 $a &gt; 0, b &gt; 0$ 且 $\dfrac{1}{a} + \dfrac{2}{b} = 1$，求 $a + b$ 的最小值。</p>
+<p>解：$a + b = (a + b) \cdot 1 = (a + b)\left(\dfrac{1}{a} + \dfrac{2}{b}\right) = 1 + \dfrac{2a}{b} + \dfrac{b}{a} + 2$</p>
+<p>$= 3 + \dfrac{2a}{b} + \dfrac{b}{a} \geq 3 + 2\sqrt{\dfrac{2a}{b} \cdot \dfrac{b}{a}} = 3 + 2\sqrt{2}$</p>
+<p>等号当 $\dfrac{2a}{b} = \dfrac{b}{a}$，即 $b = \sqrt{2}a$ 时，代入约束求得 $a, b$ 具体值，验证可达。故最小值为 $3 + 2\sqrt{2}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>等号条件忘记验证</strong>：用基本不等式求最值时，必须确认等号条件（$a = b$）在约束条件下可以同时满足</li>
+<li><strong>符号要求</strong>：基本不等式 $a+b \geq 2\sqrt{ab}$ 要求 $a, b \geq 0$，若 $a, b$ 可能为负，需用 $a^2+b^2 \geq 2ab$</li>
+<li><strong>"凑"的技巧</strong>：用基本不等式时，常需将表达式凑成 $u + v$ 或 $uv$ 的形式，需要合理拆分/补充</li>
+<li><strong>不能盲目套用</strong>：$f(x) = x + \dfrac{4}{x}$ 在 $x &lt; 0$ 时，$x$ 和 $\dfrac{4}{x}$ 都是负数，最大值而非最小值</li>
+<li><strong>多步不等式方向</strong>：若用了多次不等式放缩，需保持方向一致，不能有的向上放有的向下放</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中接触过"完全平方公式" $(a-b)^2 \geq 0$，这正是基本不等式的推导基础。高中将其提炼为 AM-GM 不等式，成为解决最值问题的核心工具。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第二章，页码待家长核对）</li>
+<li>百科参考：均值不等式（AM-GM inequality），算术-几何平均不等式</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">不等式性质-高中</a></li>
+<li><a href="../atoms/267-一元二次不等式.html">一元二次不等式</a></li>
+<li><a href="../atoms/286-函数的最值.html">函数的最值</a></li>
+<li><a class="dead" title="未收录">相等关系与不等关系</a></li>
+<li><a href="../atoms/083-不等式.html">083-不等式</a></li>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a class="dead" title="未收录">函数的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-文-07.html">2011-文-07</a></li>
+<li><a href="../exam/2012-文-06.html">2012-文-06</a></li>
+<li><a href="../exam/2013-文-24.html">2013-文-24</a></li>
+<li><a href="../exam/2013-理-17.html">2013-理-17</a></li>
+<li><a href="../exam/2013-理-24.html">2013-理-24</a></li>
+<li><a href="../exam/2014-文-19.html">2014-文-19</a></li>
+<li><a href="../exam/2014-文-24.html">2014-文-24</a></li>
+<li><a href="../exam/2015-文-07.html">2015-文-07</a></li>
+<li><a href="../exam/2016-文-10.html">2016-文-10</a></li>
+<li><a href="../exam/2017-理-23.html">2017-理-23</a></li>
+<li><a href="../exam/2019-文-23.html">2019-文-23</a></li>
+<li><a href="../exam/2019-理-23.html">2019-理-23</a></li>
+<li><a href="../exam/2020-文-09.html">2020-文-09</a></li>
+<li><a href="../exam/2020-理-08.html">2020-理-08</a></li>
+<li><a href="../exam/2021-文-08.html">2021-文-08</a></li>
+<li><a href="../exam/2021-文-20.html">2021-文-20</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-05</a></li>
+<li><a href="../exam/2022-文-12.html">2022-文-12</a></li>
+<li><a href="../exam/2022-文-23.html">2022-文-23</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-18</a></li>
+<li><a href="../exam/2022-理-09.html">2022-理-09</a></li>
+<li><a href="../exam/2022-理-23.html">2022-理-23</a></li>
+<li><a class="dead" title="未收录">2024-北京-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

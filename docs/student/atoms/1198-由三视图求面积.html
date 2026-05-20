@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>由三视图求面积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>由三视图求面积</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 由三视图求面积, 三视图求表面积</p><h1>由三视图求面积</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据三视图（主视图、俯视图、左视图）还原空间几何体，并计算其表面积（或侧面积）。
+<strong>English</strong>: Computing the surface area of a solid by reconstructing its shape from three orthographic views.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+三视图是空间几何体在三个互相垂直的投影面上的正投影，遵循“长对正、高平齐、宽相等”：<br />
+- 主视图与俯视图长度相等（长对正）<br />
+- 主视图与左视图高度相等（高平齐）<br />
+- 俯视图与左视图宽度相等（宽相等）</p>
+<p>表面积指几何体所有面的面积之和；若为旋转体（圆柱、圆锥、圆台、球），需运用相应公式（待家长核对）：
+- 圆柱侧面积 $S_{侧}=2\pi r l$（$l$ 为母线长，通常等于高）
+- 圆锥侧面积 $S_{侧}=\pi r l$
+- 圆台侧面积 $S_{侧}=\pi (r_1+r_2) l$
+- 球表面积 $S=4\pi R^2$</p>
+<p><strong>关键方法</strong><br />
+1. <strong>还原几何体</strong>：由三视图识别出是棱柱、棱锥、棱台、圆柱、圆锥、圆台、球，或它们的组合。<br />
+2. <strong>标注尺寸</strong>：利用“长对正、高平齐、宽相等”在视图上标出所有线段长度。实线表示可见轮廓，虚线表示不可见轮廓，要特别注意。<br />
+3. <strong>计算各面面积</strong>：根据几何体特征分别计算底面、侧面及顶面的面积。组合体需分析拼接或挖切后表面的增减。<br />
+4. <strong>求和</strong>：将所有面的面积相加得到表面积，注意是否有重叠面不需要计算。</p>
+<p><strong>典型应用</strong><br />
+高考中常见题为：给出三视图及其尺寸，求几何体的表面积或侧面积。设问如：“某几何体的三视图如图所示（单位：cm），则该几何体的表面积为多少？” 解题时必须先准确还原几何体，再逐一计算。例如：一个几何体的三视图显示主视图为矩形、俯视图为矩形、左视图为矩形，且三个视图对应尺寸不同，可能为长方体；若俯视图为圆，主视图为等腰三角形，则为圆锥。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>虚线实线混淆</strong>：视图中虚线表示被遮挡的轮廓线，还原几何体时容易忽略虚线所代表的棱或交线，导致结构错误。  </li>
+<li><strong>漏算或重算表面</strong>：组合体拼接时，接合面不计入表面积；挖切时新增的内表面需要计入，学生常漏加。  </li>
+<li><strong>尺寸对应错误</strong>：未能正确使用“宽相等”将俯视图与左视图的宽度对应，导致边长或半径取值错误。  </li>
+<li><strong>旋转体公式混淆</strong>：圆锥、圆柱、圆台的侧面积公式中母线长与高的关系分不清，直接代错数据。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三视图</td>
+<td>three views</td>
+<td>主视图、俯视图、左视图的总称</td>
+</tr>
+<tr>
+<td>表面积</td>
+<td>surface area</td>
+<td>几何体所有外表面的面积之和</td>
+</tr>
+<tr>
+<td>主视图</td>
+<td>front view</td>
+<td>从前向后投影得到的视图</td>
+</tr>
+<tr>
+<td>俯视图</td>
+<td>top view</td>
+<td>从上向下投影得到的视图</td>
+</tr>
+<tr>
+<td>左视图</td>
+<td>left view</td>
+<td>从左向右投影得到的视图</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">空间几何体的结构特征</a></li>
+<li><a class="dead" title="未收录">三视图的还原</a></li>
+<li><a class="dead" title="未收录">空间几何体的表面积与体积</a></li>
+<li><a class="dead" title="未收录">组合体的表面积计算</a></li>
+<li><a class="dead" title="未收录">旋转体的侧面积公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-07.html">2011-理-07</a></li>
+<li><a href="../exam/2012-文-07.html">2012-文-07</a></li>
+<li><a href="../exam/2012-理-07.html">2012-理-07</a></li>
+<li><a href="../exam/2016-文-07.html">2016-文-07</a></li>
+<li><a href="../exam/2017-理-07.html">2017-理-07</a></li>
+<li><a href="../exam/2018-文-06.html">2018-文-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

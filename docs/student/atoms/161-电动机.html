@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电动机</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电动机</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第二十章电与磁]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电动机, electric motor, 马达</p><h1>电动机</h1>
+<blockquote>
+<p><strong>一句话</strong>：电动机是将电能转化为机械能的装置，广泛应用于工业、交通和家用电器，是现代文明的核心动力机械之一。
+<strong>English</strong>: An electric motor converts electrical energy into mechanical energy and is widely used in industry, transportation, and home appliances — one of the core machines of modern civilization.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>电动机无处不在！</strong></p>
+<p>电风扇、洗衣机、冰箱、电梯、地铁、电动汽车……几乎所有需要"转动"的机器都用了<strong>电动机（马达）</strong>！</p>
+<p><strong>电动机做了什么？</strong>
+把<strong>电能</strong>变成<strong>机械能</strong>（转动、移动）。</p>
+<p><strong>能量转化：</strong>
+$$\text{电能} \xrightarrow{\text{电动机}} \text{机械能}$$</p>
+<p><strong>不同类型的电动机：</strong>
+- 直流电动机：用直流电（电池供电的小电动机）
+- 交流电动机：用交流电（家用电器中最常见）
+- 步进电动机：精确控制角度（打印机、机器人关节）
+- 无刷电动机：没有碳刷，寿命更长（无人机、电动汽车）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>电动机的分类</h3>
+<p><strong>按电源类型：</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>电源</th>
+<th>特点</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直流电动机（DC）</td>
+<td>直流电</td>
+<td>调速方便，启动力矩大</td>
+<td>电动工具、汽车起动机</td>
+</tr>
+<tr>
+<td>交流同步电动机</td>
+<td>交流电</td>
+<td>转速恒定（与频率同步）</td>
+<td>精密仪器、时钟</td>
+</tr>
+<tr>
+<td>交流感应电动机（异步）</td>
+<td>交流电</td>
+<td>结构简单，可靠耐用</td>
+<td>家用电器、工业机械</td>
+</tr>
+<tr>
+<td>步进电动机</td>
+<td>脉冲信号</td>
+<td>精确定位</td>
+<td>打印机、机器人</td>
+</tr>
+<tr>
+<td>无刷直流电动机</td>
+<td>直流+控制器</td>
+<td>高效、长寿命</td>
+<td>无人机、电动汽车</td>
+</tr>
+</tbody>
+</table>
+<h3>电动机的主要参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>额定电压（V）</td>
+<td>正常工作电压</td>
+</tr>
+<tr>
+<td>额定电流（A）</td>
+<td>正常工作电流</td>
+</tr>
+<tr>
+<td>额定功率（W/kW）</td>
+<td>输出机械功率</td>
+</tr>
+<tr>
+<td>转速（r/min 或 rpm）</td>
+<td>每分钟转数</td>
+</tr>
+<tr>
+<td>效率（%）</td>
+<td>机械功率/电功率</td>
+</tr>
+</tbody>
+</table>
+<h3>电动机效率计算</h3>
+<p>$$P_{电} = UI$$</p>
+<p>$$P_{机} = P_{电} - P_{热} = UI - I^2R$$</p>
+<p>$$\eta = \frac{P_{机}}{P_{电}} = \frac{UI - I^2R}{UI}$$</p>
+<p>现代高效电动机效率可达 95% 以上（永磁同步电动机）。</p>
+<h3>电动机与热机的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>电动机</th>
+<th>热机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能量转化</td>
+<td>电能→机械能</td>
+<td>热能→机械能</td>
+</tr>
+<tr>
+<td>效率</td>
+<td>高（60-97%）</td>
+<td>低（20-45%）</td>
+</tr>
+<tr>
+<td>污染</td>
+<td>本身无污染</td>
+<td>排放废气</td>
+</tr>
+<tr>
+<td>调速</td>
+<td>方便</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>维护</td>
+<td>简单</td>
+<td>复杂（有燃烧、冷却系统）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>为什么电动汽车更高效？</strong>
+电动机效率 &gt; 内燃机效率（但需考虑发电和输电效率）</p>
+<h3>电动机的历史意义</h3>
+<p>19世纪，法拉第发现电磁感应、安培研究电流磁效应，为电动机奠定理论基础。1834年，俄国物理学家雅可比制造了第一台实用直流电动机。电动机的发明推动了第二次工业革命，彻底改变了生产力。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一台电动机额定电压 220V，额定功率 1.5kW，线圈电阻 10Ω。满功率工作时：①电流；②焦耳热功率；③机械功率；④效率。</p>
+<p>$$I = \frac{P}{U} = \frac{1500}{220} \approx 6.82 \text{ A}$$</p>
+<p>$$P_{热} = I^2 R = (6.82)^2 \times 10 \approx 465 \text{ W}$$</p>
+<p>$$P_{机} = P_{电} - P_{热} = 1500 - 465 = 1035 \text{ W}$$</p>
+<p>$$\eta = \frac{P_{机}}{P_{电}} = \frac{1035}{1500} = 69\%$$</p>
+<p><strong>易错点：</strong>
+- 电动机不是纯电阻，不能用 $P = U^2/R$ 计算总功率
+- $W_{总} = UIt$（总电功），不等于 $I^2Rt$（只是焦耳热）
+- 电动机的机械功率是"有用功率"，焦耳热是损耗</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电动机</td>
+<td>electric motor</td>
+<td>n.</td>
+<td>Electric motors power washing machines and fans.</td>
+</tr>
+<tr>
+<td>转速</td>
+<td>rotational speed</td>
+<td>n.</td>
+<td>The motor's rotational speed is 1450 rpm.</td>
+</tr>
+<tr>
+<td>效率</td>
+<td>efficiency</td>
+<td>n.</td>
+<td>Modern motors can achieve over 95% efficiency.</td>
+</tr>
+<tr>
+<td>交流感应电动机</td>
+<td>induction motor</td>
+<td>n.</td>
+<td>Induction motors are used in most home appliances.</td>
+</tr>
+<tr>
+<td>无刷电动机</td>
+<td>brushless motor</td>
+<td>n.</td>
+<td>Brushless motors are used in electric vehicles.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第二十章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 电动机</li>
+<li><strong>百科</strong>：维基百科"电动机"；中文百科"电动机分类"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电动机原理</a></li>
+<li><a class="dead" title="未收录">磁场对通电导体的作用</a></li>
+<li><a href="../atoms/175-电磁感应.html">电磁感应</a></li>
+<li><a class="dead" title="未收录">发电机原理</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2017-新课标Ⅱ-08.html">2017-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

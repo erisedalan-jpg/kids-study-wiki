@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二项分布</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二项分布</h1><div class="meta-card"><span><strong>权重</strong>21</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二项分布, binomial distribution, B(n, p), 伯努利试验分布</p><h2>🎓 二项分布</h2>
+<h3>背景：伯努利试验</h3>
+<p><strong>伯努利试验</strong>：只有两种结果（成功/失败）的随机试验，每次成功的概率为 $p$（$0 &lt; p &lt; 1$）。</p>
+<p><strong>$n$ 重伯努利试验</strong>：将伯努利试验独立重复 $n$ 次。</p>
+<p><strong>二项分布</strong>：$n$ 重伯努利试验中，成功次数 $X$ 所服从的分布，记作</p>
+<p>$$X \sim B(n, p)$$</p>
+<h3>概率公式</h3>
+<p>$$\boxed{P(X=k) = C_n^k p^k (1-p)^{n-k}} \quad k = 0, 1, 2, \ldots, n$$</p>
+<p><strong>推导</strong>：$n$ 次试验中恰好 $k$ 次成功（$p^k$）、$n-k$ 次失败（$(1-p)^{n-k}$），这 $k$ 次成功可分布在 $n$ 次中的 $C_n^k$ 个位置。</p>
+<h3>期望与方差</h3>
+<p>$$\boxed{E(X) = np, \quad D(X) = np(1-p)}$$</p>
+<h3>验证：概率之和为 1</h3>
+<p>$$\sum_{k=0}^n C_n^k p^k(1-p)^{n-k} = (p+(1-p))^n = 1^n = 1 \; \checkmark$$</p>
+<p>（二项式定理！）</p>
+<h3>二项分布的图形</h3>
+<p>$B(n,p)$ 的概率柱状图：
+- $p = 0.5$ 时对称
+- $p &lt; 0.5$ 时右偏（小值概率大）
+- $p &gt; 0.5$ 时左偏（大值概率大）
+- 最大概率在 $k \approx (n+1)p$ 处（众数）</p>
+<h3>典型例题</h3>
+<p><strong>例1（基础）</strong>：某产品合格率 0.9，抽检 10 件（有放回），$X$ = 合格品数，$X \sim B(10, 0.9)$。</p>
+<p>求恰好 8 件合格的概率：</p>
+<p>$$P(X=8) = C_{10}^8 (0.9)^8 (0.1)^2 = 45 \times 0.43046721 \times 0.01 \approx 0.194$$</p>
+<p><strong>例2</strong>：独立射击 5 次，命中率 0.7，$X \sim B(5, 0.7)$，求至少命中 4 次的概率。</p>
+<p>$$P(X \geq 4) = P(X=4) + P(X=5)$$</p>
+<p>$$P(X=4) = C_5^4 (0.7)^4 (0.3)^1 = 5 \times 0.2401 \times 0.3 = 0.36015$$</p>
+<p>$$P(X=5) = (0.7)^5 = 0.16807$$</p>
+<p>$$P(X \geq 4) \approx 0.528$$</p>
+<p><strong>例3（参数反推）</strong>：$X \sim B(n,p)$，$E(X) = 2.4$，$D(X) = 1.44$，求 $n, p$。</p>
+<p>$$np = 2.4, \quad np(1-p) = 1.44$$</p>
+<p>由第二式除第一式：$1-p = 0.6$，$p = 0.4$，代回 $n = 2.4/0.4 = 6$。</p>
+<h3>使用二项分布的条件</h3>
+<ol>
+<li>每次试验只有两种结果（成功/失败）</li>
+<li>$n$ 次试验<strong>相互独立</strong></li>
+<li>每次成功概率 <strong>$p$ 固定</strong>不变</li>
+<li>关注成功次数 $X$</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li><strong>放回 vs 不放回</strong>：不放回抽样概率每次变化，应用超几何分布；有放回且独立时才用二项分布</li>
+<li><strong>$k=0$ 项</strong>：$P(X=0) = (1-p)^n$，全部失败</li>
+<li><strong>$k=n$ 项</strong>：$P(X=n) = p^n$，全部成功</li>
+<li><strong>"至少"用补集</strong>：$P(X \geq k) = 1 - P(X \leq k-1)$（当项数多时更高效）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.3，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/二项分布">二项分布 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">两点分布</a></li>
+<li><a class="dead" title="未收录">超几何分布</a></li>
+<li><a class="dead" title="未收录">二项分布期望方差</a></li>
+<li><a href="../atoms/468-事件相互独立性-高中.html">事件相互独立性-高中</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-18.html">2008-理-18</a></li>
+<li><a href="../exam/2009-文-17.html">2009-文-17</a></li>
+<li><a href="../exam/2009-理-17.html">2009-理-17</a></li>
+<li><a href="../exam/2010-理-06.html">2010-理-06</a></li>
+<li><a href="../exam/2015-理-18.html">2015-理-18</a></li>
+<li><a href="../exam/2017-理-13.html">2017-理-13</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a href="../exam/2018-理-20.html">2018-理-20</a></li>
+<li><a href="../exam/2020-理-03.html">2020-理-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

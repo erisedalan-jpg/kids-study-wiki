@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线定义与方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双曲线定义与方程</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 双曲线定义与方程, hyperbola definition and equation, 双曲线</p><h2>🎓 双曲线定义与方程</h2>
+<h3>定义</h3>
+<p><strong>双曲线</strong>：平面内到两定点 $F_1$、$F_2$ 的距离之<strong>差的绝对值</strong>等于常数 $2a$（$2a &lt; |F_1F_2|$）的点的轨迹。</p>
+<p>$$\bigl||PF_1| - |PF_2|\bigr| = 2a \quad (0 &lt; 2a &lt; |F_1F_2|)$$</p>
+<p>两定点称为<strong>焦点</strong>，$|F_1F_2| = 2c$，条件要求 $a &lt; c$。</p>
+<p><strong>与椭圆对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>椭圆</th>
+<th>双曲线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义</td>
+<td>距离<strong>之和</strong> $= 2a$</td>
+<td>距离<strong>之差绝对值</strong> $= 2a$</td>
+</tr>
+<tr>
+<td>条件</td>
+<td>$2a &gt; 2c$</td>
+<td>$2a &lt; 2c$（即 $a &lt; c$）</td>
+</tr>
+<tr>
+<td>形状</td>
+<td>封闭曲线</td>
+<td>两支开曲线</td>
+</tr>
+</tbody>
+</table>
+<h3>标准方程</h3>
+<p><strong>焦点在 $x$ 轴上</strong>（$a&gt;0, b&gt;0$，$c^2=a^2+b^2$）：</p>
+<p>$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$</p>
+<p>焦点：$F_1(-c,0)$，$F_2(c,0)$；顶点：$(\pm a, 0)$</p>
+<p><strong>焦点在 $y$ 轴上</strong>（$a&gt;0, b&gt;0$，$c^2=a^2+b^2$）：</p>
+<p>$$\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1$$</p>
+<p>焦点：$F_1(0,-c)$，$F_2(0,c)$；顶点：$(0, \pm a)$</p>
+<p><strong>判断焦点位置</strong>：看哪一项为<strong>正</strong>（$x^2$ 正 → 焦点在 $x$ 轴；$y^2$ 正 → 焦点在 $y$ 轴）</p>
+<h3>基本量关系</h3>
+<p>$$c^2 = a^2 + b^2 \quad (a&gt;0, b&gt;0, c&gt;0)$$</p>
+<p>注意：双曲线中 $c^2 = a^2 + \mathbf{b^2}$（比椭圆多一个加号！）</p>
+<ul>
+<li>$a$：<strong>实半轴</strong>（顶点到中心距离）</li>
+<li>$b$：<strong>虚半轴</strong>（辅助矩形的另一半边）</li>
+<li>$c$：<strong>半焦距</strong></li>
+</ul>
+<p>双曲线中 $b$ 不必小于 $a$，可以 $a=b$（等轴双曲线）。</p>
+<h3>等轴双曲线</h3>
+<p>当 $a=b$ 时，$\dfrac{x^2}{a^2} - \dfrac{y^2}{a^2} = 1$，即 $x^2-y^2=a^2$，两条渐近线互相垂直。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：双曲线方程 $\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1$，求 $a, b, c$ 及焦点。</p>
+<p><strong>解</strong>：$a^2=9, b^2=16, a=3, b=4, c=\sqrt{9+16}=5$，焦点 $(\pm5, 0)$</p>
+<p><strong>例2</strong>：双曲线焦点 $F_1(-5,0), F_2(5,0)$，$a=4$，求方程。</p>
+<p><strong>解</strong>：$c=5, b^2=c^2-a^2=25-16=9$，方程：$\dfrac{x^2}{16}-\dfrac{y^2}{9}=1$</p>
+<p><strong>例3</strong>：双曲线上点 $P$，$|PF_1|=8, |PF_2|=2$，判断 $P$ 在哪一支。</p>
+<p><strong>解</strong>：$|PF_1|-|PF_2|=6=2a$，故 $a=3$；$P$ 满足 $|PF_1|&gt;|PF_2|$，说明 $P$ 靠近 $F_2$，在右支（$F_2$ 侧的支）。</p>
+<h3>易错点</h3>
+<ul>
+<li>双曲线 $c^2 = a^2 + b^2$（不是 $a^2 = b^2 + c^2$）</li>
+<li>$b$ 不需要小于 $a$，$b &gt; a$ 也合法</li>
+<li>双曲线有两支，定义中是"距离差的<strong>绝对值</strong>"</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/367-双曲线几何性质.html">双曲线几何性质</a></li>
+<li><a class="dead" title="未收录">双曲线渐近线</a></li>
+<li><a class="dead" title="未收录">双曲线离心率</a></li>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a class="dead" title="未收录">抛物线定义与方程</a></li>
+<li><a class="dead" title="未收录">圆锥曲线统一定义</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-11.html">2008-文-11</a></li>
+<li><a href="../exam/2012-理-05.html">2012-理-05</a></li>
+<li><a href="../exam/2014-文-10.html">2014-文-10</a></li>
+<li><a href="../exam/2015-文-06.html">2015-文-06</a></li>
+<li><a href="../exam/2017-理-15.html">2017-理-15</a></li>
+<li><a href="../exam/2019-文-12.html">2019-文-12</a></li>
+<li><a href="../exam/2019-理-11.html">2019-理-11</a></li>
+<li><a href="../exam/2021-理-13.html">2021-理-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

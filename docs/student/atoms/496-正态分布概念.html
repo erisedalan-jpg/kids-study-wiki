@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正态分布概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正态分布概念</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正态分布概念, normal distribution, 正态分布, 高斯分布, N(μ, σ²)</p><h2>🎓 正态分布概念</h2>
+<h3>定义</h3>
+<p>若连续型随机变量 $X$ 的概率密度函数为：</p>
+<p>$$f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \quad (-\infty &lt; x &lt; +\infty)$$</p>
+<p>则称 $X$ 服从<strong>正态分布</strong>，记作 $X \sim N(\mu, \sigma^2)$，其中 $\mu$ 为均值，$\sigma^2$ 为方差（$\sigma &gt; 0$）。</p>
+<p><strong>期望和方差</strong>：$E(X) = \mu$，$D(X) = \sigma^2$</p>
+<h3>标准正态分布</h3>
+<p>当 $\mu = 0$，$\sigma = 1$ 时，称为<strong>标准正态分布</strong> $N(0,1)$，密度函数为：</p>
+<p>$$\varphi(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}$$</p>
+<p><strong>标准化</strong>：若 $X \sim N(\mu, \sigma^2)$，令 $Z = \dfrac{X - \mu}{\sigma}$，则 $Z \sim N(0,1)$。</p>
+<h3>正态分布的特征</h3>
+<ol>
+<li><strong>对称性</strong>：密度曲线关于 $x = \mu$ 对称</li>
+<li><strong>单峰</strong>：最高点在 $x = \mu$（均值、中位数、众数三合一）</li>
+<li><strong>钟形曲线</strong>（bell curve）：以 $\mu$ 为中心向两侧逐渐降低</li>
+<li><strong>拐点</strong>：曲线在 $x = \mu \pm \sigma$ 处有拐点</li>
+<li><strong>总面积 = 1</strong>：$\int_{-\infty}^{+\infty} f(x)dx = 1$</li>
+</ol>
+<h3>参数的影响</h3>
+<table>
+<thead>
+<tr>
+<th>参数变化</th>
+<th>对图形的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mu$ 增大</td>
+<td>曲线整体右移（峰值位置右移）</td>
+</tr>
+<tr>
+<td>$\sigma$ 增大</td>
+<td>曲线变矮变宽（更分散）</td>
+</tr>
+<tr>
+<td>$\sigma$ 减小</td>
+<td>曲线变高变窄（更集中）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>口诀</strong>：$\mu$ 定位置，$\sigma$ 定形状。</p>
+<h3>现实中的正态分布</h3>
+<p>许多自然现象近似服从正态分布：
+- 人群身高、体重
+- 测量误差
+- 产品尺寸（工业生产）
+- 考试成绩（大规模样本）
+- 股票日收益率（粗略近似）</p>
+<p><strong>中心极限定理（简述）</strong>：大量独立同分布随机变量之和（如 $n$ 重伯努利试验），当 $n$ 很大时，其分布近似正态分布。这解释了正态分布的普遍性。</p>
+<h3>正态分布概率的计算</h3>
+<p>由于密度函数无法用初等函数积分，通常通过<strong>查标准正态分布表</strong>（$\Phi$ 函数表）计算：</p>
+<p>$$\Phi(x) = P(Z \leq x) = \int_{-\infty}^x \varphi(t)dt$$</p>
+<p><strong>对称性</strong>：$\Phi(-x) = 1 - \Phi(x)$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$X \sim N(10, 4)$（即 $\mu = 10, \sigma = 2$），求 $P(X \leq 14)$。</p>
+<p>$$P(X \leq 14) = P\left(\frac{X-10}{2} \leq \frac{14-10}{2}\right) = P(Z \leq 2) = \Phi(2) \approx 0.9772$$</p>
+<p><strong>例2</strong>：$X \sim N(\mu, \sigma^2)$，求 $P(X \leq \mu)$。</p>
+<p>由对称性：$P(X \leq \mu) = 0.5$</p>
+<p><strong>例3（参数估计）</strong>：某校学生身高 $X \sim N(170, 25)$（$\mu = 170$，$\sigma = 5$），求身高在 165 到 175 之间的概率（查表 $\Phi(1) = 0.8413$）。</p>
+<p>$$P(165 \leq X \leq 175) = P\left(-1 \leq \frac{X-170}{5} \leq 1\right) = \Phi(1) - \Phi(-1)$$
+$$= 0.8413 - (1-0.8413) = 0.8413 - 0.1587 = 0.6826$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$\sigma^2$ 是方差，不是 $\sigma$</strong>：$N(\mu, \sigma^2)$ 中第二个参数是<strong>方差</strong>，不是标准差</li>
+<li><strong>标准化方向</strong>：$Z = (X-\mu)/\sigma$，减均值除标准差，不是除方差</li>
+<li><strong>对称性使用</strong>：$P(Z \leq -a) = 1 - P(Z \leq a) = 1 - \Phi(a)$</li>
+<li><strong>正态分布不是离散的</strong>：$P(X = c) = 0$（连续型随机变量单点概率为零）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.5，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/正态分布">正态分布 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">正态分布密度曲线</a></li>
+<li><a class="dead" title="未收录">正态分布3σ原则</a></li>
+<li><a class="dead" title="未收录">连续型随机变量</a></li>
+<li><a class="dead" title="未收录">分布函数概念</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-理-15.html">2012-理-15</a></li>
+<li><a href="../exam/2015-理-07.html">2015-理-07</a></li>
+<li><a href="../exam/2017-理-19.html">2017-理-19</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

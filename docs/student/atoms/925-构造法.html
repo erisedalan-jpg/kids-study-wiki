@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>构造法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>构造法</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 构造法</p><h1>构造法</h1>
+<blockquote>
+<p><strong>一句话</strong>：构造法是根据题设条件和所求结论的结构特征，主动“搭桥”构造出满足特定性质的数学对象（如函数、数列、方程、图形），进而利用该对象的性质解决问题的策略。
+<strong>English</strong>: A strategy that actively constructs a mathematical object (function, sequence, equation, figure, etc.) with desired properties based on the structure of given conditions and conclusions, thereby leveraging the properties of that object to solve the problem.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>构造法本身不是孤立的知识点，而是一种贯穿函数、数列、不等式、解析几何等模块的核心思想方法。高考考查时，通常要求考生通过观察式子的结构或几何特征，联想已有模型，自主“无中生有”地搭建桥梁。</p>
+<ul>
+<li><strong>定义与原理</strong><br />
+  构造法的基本原理是：当直接推理路径受阻时，借助“形式相似性”或“几何直观”，构造一个<strong>辅助对象</strong>，使原问题转化为关于该对象的<strong>熟悉问题</strong>（如单调性、最值、等差/等比数列、方程的根、对称性等）。构造没有固定公式，但常见模型有：</li>
+<li><strong>数列构造</strong>：将非等差、等比递推通过待定系数变形为 $a_{n+1} + \lambda = p(a_n + \lambda)$，构造出新等比数列 ${a_n + \lambda}$。</li>
+<li><strong>函数构造</strong>：比较 $f(a)$ 与 $f(b)$ 时，构造辅助函数 $g(x)=f(x)-kx$，利用导数研究单调性；证明不等式 $h(x) &gt; 0$ 时构造 $h(x)$ 并求其最值。</li>
+<li><strong>方程构造</strong>：将已知等式视为某个二次方程的根与系数关系，或利用同构式 $F(g(x)) = F(h(x))$ 结合 $F$ 的单调性脱去外壳。</li>
+<li>
+<p><strong>几何构造</strong>：添加辅助线、构造相似形、补成特殊几何体等，将分散的条件集中到可算的结构中。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>识别结构</strong>：找准式子中的“同型”部分，例如出现 $e^x + x$ 与 $e^y + y$，联想到 $f(t)=e^t + t$ 的单调性。  </li>
+<li><strong>明确目标</strong>：欲构造出的新对象需具备可用的性质（等差、等比、单调、对称、零点定理等）。  </li>
+<li>
+<p><strong>逆向待定</strong>：在数列与函数构造中，常用待定系数法确定构造参数。如形如 $a_{n+1}=2a_n + 3$，设 $a_{n+1}+t=2(a_n+t)$ 解得 $t=3$，于是 ${a_n+3}$ 为等比数列。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>（高考设问）</p>
+</li>
+<li><em>数列</em>：已知递推求通项，如 $a_{n+1}=3a_n+2$，构造等比数列。  </li>
+<li><em>不等式恒成立与证明</em>：证明当 $x&gt;0$ 时 $\ln(x+1) &gt; \frac{x}{x+1}$，可构造 $h(x)=\ln(x+1)-\frac{x}{x+1}$，求导得 $h'(x)=\frac{x}{(x+1)^2}&gt;0$，结合 $h(0)=0$ 得证。  </li>
+<li><em>比大小与抽象函数</em>：比较 $a=\frac{1}{e}, b=\frac{\ln 2}{2}, c=\frac{\ln 3}{3}$ 时，构造 $f(x)=\frac{\ln x}{x}$，利用单调性比较。  </li>
+<li><em>同构解方程/不等式</em>：$x^2e^x + x = \ln y + y$，可变形为 $xe^x + \ln(xe^x) = y + \ln y$，构造 $F(t)=t+\ln t$ 并利用单调性得 $xe^x = y$。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>构造指向不明</strong>：见到递推就乱配常数，未分辨是一阶线性型（$a_{n+1}=pa_n+q$）还是可倒数型或累加型，导致构造失效。应先判断递推类型再定构造方式。</li>
+<li><strong>忽视定义域与前提</strong>：构造辅助函数后直接求导，忘记讨论定义域（如含 $\ln x$ 须 $x&gt;0$）或忘验证端点，导致不等号方向错误。</li>
+<li><strong>同构时强行凑结构</strong>：为了凑出 $f(g(x))=f(h(x))$ 而对等式两边随意乘除，忽略了可能改变单调性所需的“外函数”特征，或忘记检验 $g(x)$ 与 $h(x)$ 的取值范围是否在 $f$ 的单调区间内。</li>
+<li><strong>构造后未验证新对象的性质</strong>：例如构造出新数列 ${b_n}$ 后，直接代入通项而忽略证明它是等差/等比，跳步失分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>构造法</td>
+<td>construction method</td>
+<td>主动创建辅助数学对象的策略</td>
+</tr>
+<tr>
+<td>待定系数法</td>
+<td>method of undetermined coefficients</td>
+<td>设置未知参数，通过代数恒等变形求出系数</td>
+</tr>
+<tr>
+<td>辅助函数</td>
+<td>auxiliary function</td>
+<td>为利用单调性、零点等性质而引入的函数</td>
+</tr>
+<tr>
+<td>同构式</td>
+<td>isomorphic expression</td>
+<td>结构相同但变量不同的式子，可借助函数单调性脱壳</td>
+</tr>
+<tr>
+<td>递推数列</td>
+<td>recurrence sequence</td>
+<td>通过相邻项关系定义数列，常需构造为等差/等比</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">数列递推求通项</a></li>
+<li><a class="dead" title="未收录">辅助函数构造与单调性</a></li>
+<li><a class="dead" title="未收录">不等式恒成立与能成立</a></li>
+<li><a class="dead" title="未收录">同构方程与同构不等式</a></li>
+<li><a href="../atoms/197-待定系数法.html">待定系数法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-理-16.html">2012-理-16</a></li>
+<li><a href="../exam/2012-理-21.html">2012-理-21</a></li>
+<li><a class="dead" title="未收录">2023-北京-21</a></li>
+</ul></div>
+</div>
+</body>
+</html>

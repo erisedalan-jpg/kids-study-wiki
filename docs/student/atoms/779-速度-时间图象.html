@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>速度-时间图象</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>速度-时间图象</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[运动学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 速度-时间图象, v-t图</p><h1>速度-时间图象</h1>
+<blockquote>
+<p><strong>一句话</strong>：速度-时间图象（v-t图）是描述物体瞬时速度随时间变化关系的物理图像，其斜率表示加速度，图线与时间轴围成的面积表示位移。
+<strong>English</strong>: A velocity-time graph (v-t graph) represents how an object's instantaneous velocity changes with time; the slope gives acceleration and the area under the curve gives displacement.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+以时间 $t$ 为横轴、瞬时速度 $v$ 为纵轴建立的图像。核心物理量关系：
+- <strong>纵轴截距</strong>：初速度 $v_0$；
+- <strong>斜率</strong>：$k = \frac{\Delta v}{\Delta t} = a$，表示加速度；斜率为正、负、零分别对应匀加速、匀减速、匀速运动；
+- <strong>面积</strong>：图线与 $t$ 轴所围区域面积等于这段时间内的位移 $x$，面积在 $t$ 轴上方取正值，下方取负值，总位移为代数面积之和，路程则为各区域面积的绝对值之和；
+- <strong>转折点</strong>：图线出现转折，表明加速度发生突变（速度方向可能不变）。</p>
+<p><strong>关键方法</strong><br />
+解决v-t图象问题的标准步骤：
+1. 观察纵截距确定初速度；
+2. 看斜率变化判断运动性质（匀速、匀变速或变加速）；
+3. 计算面积求位移或路程——若需路程，必须区分轴上方和轴下方区域分别取绝对值；
+4. 结合运动学公式 $v = v_0 + at$、$x = v_0 t + \frac{1}{2}at^2$ 等，将图像信息转化为代数方程。</p>
+<p><strong>典型应用</strong><br />
+高考中常以选择题、实验题或计算题形式出现，设问角度包括：
+- 从v-t图中读取某时刻的速度或加速度；
+- 比较两物体（如追及相遇问题）的速度、加速度及位移关系；
+- 判断物体是否回到出发点（总位移是否为零）；
+- 结合牛顿运动定律，通过v-t图斜率推断合外力变化。
+典型情境：一辆汽车先在0~4 s内以 $a=2 \ \mathrm{m/s^2}$ 匀加速，再匀速行驶6 s，最后以 $a=-3 \ \mathrm{m/s^2}$ 匀减速至停止，要求画出v-t图并求总位移。解题关键：分段画出直线，斜率与加速度对应，再计算梯形或三角形面积。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆v-t图与x-t（位移-时间）图：错把v-t图的纵坐读作位移，或将斜率误判为速度。</li>
+<li>面积计算漏掉正负号：当图线有部分在t轴下方时，直接用几何面积相加作为总位移，忽略下方面积代表负位移。</li>
+<li>将斜率变化错误等同于速度方向改变：v-t图中图线由正斜率变为负斜率只说明加速度方向改变，速度方向是否改变要看纵坐标是否穿越横轴。</li>
+<li>误认为v-t图中两条图线交点代表相遇：实际上交点仅表示该时刻两物体速度相同，是否相遇需比较位移和初始位置。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>速度-时间图象</td>
+<td>velocity-time graph</td>
+<td>描述速度随时间变化关系的图像</td>
+</tr>
+<tr>
+<td>加速度</td>
+<td>acceleration</td>
+<td>速度的变化率，等于v-t图斜率</td>
+</tr>
+<tr>
+<td>位移</td>
+<td>displacement</td>
+<td>由v-t图面积求得的有向线段</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>图线上切线的倾斜程度，物理上表示加速度</td>
+</tr>
+<tr>
+<td>面积</td>
+<td>area under curve</td>
+<td>图线与时间轴所围区域，物理上对应位移</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准(2017版2020修订) 必修一 “匀变速直线运动”模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">位移-时间图象</a></li>
+<li><a href="../atoms/214-加速度.html">加速度</a></li>
+<li><a class="dead" title="未收录">匀变速直线运动规律</a></li>
+<li><a class="dead" title="未收录">自由落体运动</a></li>
+<li><a class="dead" title="未收录">追及相遇问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2018-新课标Ⅱ-06.html">2018-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>利用导数研究函数的极值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>利用导数研究函数的极值</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 利用导数研究函数的极值, 导数求极值</p><h1>利用导数研究函数的极值</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用导数判断函数单调性、求出驻点并分析符号变化，从而确定函数的极大值与极小值。
+<strong>English</strong>: Using derivatives to analyze monotonicity and critical points in order to determine local maxima and minima of a function.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：设函数 $y=f(x)$ 在 $x_0$ 的某邻域内有定义，若对该邻域内异于 $x_0$ 的任意 $x$ 都有 $f(x)<f(x_0)$，则称 $f(x_0)$ 为极大值；若 $f(x)>f(x_0)$，则为极小值。可导函数的极值点必为驻点（即 $f'(x_0)=0$），但驻点不一定是极值点。极值的第一充分条件：设 $f'(x_0)=0$，若 $f'(x)$ 在 $x_0$ 左侧为正、右侧为负，则 $f(x_0)$ 为极大值；左负右正则为极小值；不变号则不是极值。极值的第二充分条件：若 $f'(x_0)=0$ 且 $f''(x_0)\neq 0$，则 $f''(x_0)&lt;0$ 时 $f(x_0)$ 为极大值，$f''(x_0)&gt;0$ 时为极小值。</p>
+<p><strong>关键方法</strong>：求函数极值的标准步骤：① 求定义域；② 求导函数 $f'(x)$；③ 解方程 $f'(x)=0$ 求出驻点，并找出 $f'(x)$ 不存在的不可导点（驻点与不可导点统称临界点，均为极值候选点）；④ 列表分区间判断 $f'(x)$ 符号，或用二阶导判定；⑤ 写出极值与极值点。注意：若函数在闭区间上连续，还需比较端点的函数值才能得出最值。</p>
+<p><strong>典型应用</strong>：高考中常见设问为“求函数 $f(x)$ 的极值（或极大值、极小值）”“已知极值点或极值，求参数的值或取值范围”。例如，已知 $f(x)=x^3+ax^2+bx+1$ 在 $x=-1$ 处取极大值，在 $x=3$ 处取极小值，求 $a,b$。解题时利用 $f'(-1)=0$，$f'(3)=0$ 建立方程组，并验证是否符合极大极小条件。再如含参函数讨论极值个数，需分类讨论判别式及驻点大小。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误以为 $f'(x_0)=0$ 就是极值点，忽略检验符号变化或二阶导，导致把驻点直接当作极值点。</li>
+<li>列表判断符号时忽略定义域间断点与不可导点，特别是被开方数限制、分母为零等情形。</li>
+<li>混淆极值与最值的概念：极值是局部概念，最值是整体概念，闭区间上求最值必须比较极值与端点值。</li>
+<li>已知极值求参数时，求出参数后忘记回代验证是否满足极值的充分条件，未舍去产生增解的情况。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>极值</td>
+<td>extremum (local maximum/minimum)</td>
+<td>函数在某邻域内的最大或最小值</td>
+</tr>
+<tr>
+<td>驻点</td>
+<td>stationary point</td>
+<td>导数为零的点（$f'(x_0)=0$），不含不可导点</td>
+</tr>
+<tr>
+<td>临界点</td>
+<td>critical point</td>
+<td>驻点与不可导点的统称，均为极值候选点</td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>monotonicity</td>
+<td>函数值随自变量增大而持续增大或减小的性质</td>
+</tr>
+<tr>
+<td>第一充分条件</td>
+<td>first derivative test</td>
+<td>通过一阶导数符号变化判定极值</td>
+</tr>
+<tr>
+<td>第二充分条件</td>
+<td>second derivative test</td>
+<td>通过二阶导数符号判定极值</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">导数与函数单调性的关系</a></li>
+<li><a class="dead" title="未收录">利用导数求函数的最值</a></li>
+<li><a class="dead" title="未收录">含参函数的单调性讨论</a></li>
+<li><a class="dead" title="未收录">导数的几何意义与切线方程</a></li>
+<li><a class="dead" title="未收录">二阶导数与函数凹凸性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-22.html">2009-理-22</a></li>
+<li><a href="../exam/2013-文-11.html">2013-文-11</a></li>
+<li><a href="../exam/2013-文-21.html">2013-文-21</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2015-文-19.html">2015-文-19</a></li>
+<li><a href="../exam/2016-理-21.html">2016-理-21</a></li>
+<li><a href="../exam/2017-理-11.html">2017-理-11</a></li>
+<li><a href="../exam/2017-理-21.html">2017-理-21</a></li>
+<li><a href="../exam/2018-文-21.html">2018-文-21</a></li>
+<li><a href="../exam/2018-理-18.html">2018-理-18</a></li>
+<li><a href="../exam/2018-理-21.html">2018-理-21</a></li>
+<li><a class="dead" title="未收录">2021-北京-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

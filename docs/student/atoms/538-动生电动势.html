@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动生电动势</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>动生电动势</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 动生电动势, motional electromotive force</p><h1>动生电动势</h1>
+<blockquote>
+<p><strong>一句话</strong>：导体在磁场中做切割磁感线运动时，由洛伦兹力的分力驱动电荷分离，在导体两端产生的电动势。
+<strong>English</strong>: Motional electromotive force is the emf induced across a conductor moving through a magnetic field, caused by the magnetic Lorentz force on charge carriers.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+长度为 $L$ 的直导体以速度 $v$ 在磁感应强度为 $B$ 的匀强磁场中运动，且 $v$ 与 $B$ 夹角为 $\theta$ 时，动生电动势的大小为：
+$$
+\mathcal{E} = BLv\sin\theta
+$$
+若 $v$、$B$、$L$ 两两垂直，则简化为 $\mathcal{E}=BLv$。其微观本质是导体内自由电荷受到洛伦兹力 $F=qvB$ 的作用发生定向移动，非静电力就是洛伦兹力沿导体方向的分力，对应的非静电场强使电荷在两端积累，形成电动势。动生电动势不要求回路磁通量变化，只要求导体切割磁感线。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>方向判定</strong>：用右手定则（伸开右手，让磁感线穿入手心，拇指指向导体运动方向，四指指向即为感应电流方向，在电源内部电流从负极流向正极）。也可用楞次定律结合等效回路分析。<br />
+2. <strong>大小计算</strong>：明确 $B$、$L$、$v$ 的有效分量，尤其注意 $L$ 为切割的有效长度（垂直于速度方向的投影长度），$v$ 为导体相对磁场的瞬时速度。旋转切割时用平均速度或积分。<br />
+3. <strong>等效电路</strong>：把产生动生电动势的导体视为电源，内阻为导体自身电阻，画出等效电路，结合闭合电路欧姆定律求解电流、电压或功率。</p>
+<p><strong>典型应用与高考设问</strong><br />
+- <strong>单杆切割模型</strong>：水平导轨上导体杆受外力或具有初速度，求感应电动势、电流、安培力，并结合牛顿定律、能量守恒分析运动过程。常见设问：求稳定速度、电荷量、焦耳热。<br />
+- <strong>旋转切割</strong>：如长为 $L$ 的金属棒绕一端在匀强磁场中匀速转动，电动势 $\mathcal{E}= \frac{1}{2}BL^2\omega$。<br />
+- <strong>交流电产生</strong>：线圈在磁场中转动产生交变电动势，其峰值 $E_m = NBS\omega$，实质也是动生电动势。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆动生电动势与感生电动势：动生电动势源于导体运动，洛伦兹力充当非静电力；感生电动势源于磁场变化，涡旋电场力充当非静电力，适用条件不同。  </li>
+<li>乱用右手定则与左手定则：判断感应电流方向（因动生）用右手定则，判断安培力方向必须用左手定则，切勿混淆。  </li>
+<li>忽视有效切割长度：只将导体实际长度代入 $BLv$，未考虑磁场区域宽度或导体与速度不垂直时的投影长度，导致电动势算错。  </li>
+<li>将平均电动势与瞬时电动势公式混用：$\mathcal{E}=BL\bar{v}$ 仅当 $v$ 为平均速度时对应平均电动势，计算电荷量可用，焦耳热需用有效值或能量守恒。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>动生电动势</td>
+<td>motional electromotive force</td>
+<td>导体切割磁感线产生的电动势</td>
+</tr>
+<tr>
+<td>洛伦兹力</td>
+<td>Lorentz force</td>
+<td>运动电荷在磁场中受到的力</td>
+</tr>
+<tr>
+<td>右手定则</td>
+<td>right-hand rule</td>
+<td>判断动生电流方向的方法</td>
+</tr>
+<tr>
+<td>有效长度</td>
+<td>effective length</td>
+<td>导体在垂直于速度方向上的投影长度</td>
+</tr>
+<tr>
+<td>法拉第电磁感应定律</td>
+<td>Faraday's law of induction</td>
+<td>感应电动势与磁通量变化率的关系</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">感应电动势</a></li>
+<li><a class="dead" title="未收录">感生电动势</a></li>
+<li><a href="../atoms/395-法拉第电磁感应定律.html">法拉第电磁感应定律</a></li>
+<li><a href="../atoms/135-安培定则.html">右手定则</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标Ⅰ-08.html">2010-新课标Ⅰ-08</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-04</a></li>
+<li><a class="dead" title="未收录">2014-北京-12</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-11.html">2016-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

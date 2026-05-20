@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>溶度积常数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>溶度积常数</h1><div class="meta-card"><span><strong>权重</strong>27</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[水溶液中的离子平衡]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 溶度积常数, Ksp, 溶度积</p><h1>溶度积常数</h1>
+<blockquote>
+<p><strong>一句话</strong>：溶度积常数（Ksp）是难溶电解质在饱和溶液中各离子浓度幂之积，反映其溶解能力的热力学平衡常数。
+<strong>English</strong>: The solubility product constant (Ksp) is the equilibrium constant for the dissolution of a sparingly soluble solid, equal to the product of ion concentrations in a saturated solution, each raised to the power of its stoichiometric coefficient.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与表达式</strong>
+对于难溶电解质 $A_mB_n(s)$，其溶解平衡为：
+$$A_mB_n(s) \rightleftharpoons mA^{n+}(aq) + nB^{m-}(aq)$$
+溶度积常数表达式为：$K_{sp} = [A^{n+}]^m[B^{m-}]^n$。
+Ksp 仅与难溶电解质的本性和温度有关，与离子浓度无关。同一类型（如均为 AB 型）难溶电解质，Ksp 越小，溶解度通常也越小。</p>
+<p><strong>关键方法：沉淀溶解平衡的判断（溶度积规则）</strong>
+比较任意时刻离子浓度幂之积 $Q_c$ 与 $K_{sp}$ 的大小，判定平衡移动方向：
+- $Q_c &gt; K_{sp}$：溶液过饱和，有沉淀析出，直至 $Q_c = K_{sp}$。
+- $Q_c = K_{sp}$：溶液恰好饱和，达动态平衡。
+- $Q_c &lt; K_{sp}$：溶液不饱和，若无固体存在，无沉淀析出；若有固体存在，固体将继续溶解。</p>
+<p><strong>高考常见考查角度</strong>
+一是 Ksp 的直接计算：利用饱和溶液中某离子浓度推算 Ksp 或溶解度（注意单位换算，常需将浓度转化为物质的量浓度）。二是分步沉淀与离子分离：向含有多种离子的混合溶液中逐滴加入沉淀剂，根据各离子开始沉淀和沉淀完全所需的沉淀剂离子浓度大小，判断离子析出顺序。例如，在 $Cl^-$ 和 $CrO_4^{2-}$ 混合溶液中滴加 $AgNO_3$，需根据 $K_{sp}(AgCl)$ 和 $K_{sp}(Ag_2CrO_4)$ 及离子初始浓度分别计算 $Ag^+$ 需要量，确定谁先沉淀。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆 Ksp 与溶解度大小关系</strong>：直接比较 Ksp 判断溶解度大小<strong>仅适用于同种类型</strong>的难溶电解质（如 AgCl、AgBr 均为 AB 型）。对于不同类型，如 AgCl（AB 型）与 $Ag_2CrO_4$（$A_2B$ 型），必须通过 Ksp 推导出溶解度（mol/L）再行比较。</li>
+<li><strong>忽视温度对 Ksp 的影响</strong>：Ksp 是温度的函数，解题时若题干未提及温度变化，默认使用给定温度下的 Ksp 数值；温度改变时，必须使用对应温度下的新 Ksp 进行判断和计算。</li>
+<li><strong>在离子浓度幂之积 $Q_c$ 计算中漏掉系数指数</strong>：书写 $Q_c$ 时，必须将离子浓度代入表达式，并以化学式前的计量数为指数。典型错误如将 $Mg(OH)_2$ 的 $Q_c$ 错写成 $[Mg^{2+}][OH^-]$，正确应为 $[Mg^{2+}][OH^-]^2$。</li>
+<li><strong>误认为沉淀生成后离子归零</strong>：沉淀反应达到平衡后，溶液中依然存在极微量的构成离子，其浓度满足 $Q_c = K_{sp}$，并非沉淀完全即浓度为零（通常残留离子浓度 $\le 1\times10^{-5} \text{ mol/L}$ 即可视为沉淀完全）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>溶度积常数</td>
+<td>Solubility Product Constant ($K_{sp}$)</td>
+<td>难溶电解质溶解平衡的平衡常数</td>
+</tr>
+<tr>
+<td>离子积</td>
+<td>Ion Product ($Q_c$)</td>
+<td>任意时刻离子浓度幂之积，用于与 Ksp 比较判定沉淀生成或溶解</td>
+</tr>
+<tr>
+<td>饱和溶液</td>
+<td>Saturated Solution</td>
+<td>溶解与沉淀速率相等、固体与离子共存的动态平衡溶液</td>
+</tr>
+<tr>
+<td>分步沉淀</td>
+<td>Fractional Precipitation</td>
+<td>利用溶解度差异，通过控制沉淀剂浓度使离子先后沉淀的方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/342-化学平衡常数.html">化学平衡常数</a></li>
+<li><a class="dead" title="未收录">弱电解质的电离平衡</a></li>
+<li><a class="dead" title="未收录">水的离子积与pH计算</a></li>
+<li><a class="dead" title="未收录">盐类水解平衡</a></li>
+<li><a class="dead" title="未收录">难溶电解质的溶解平衡</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2021-全国乙-07.html">2021-全国乙-07</a></li>
+<li><a href="../exam/2022-全国乙-08.html">2022-全国乙-08</a></li>
+<li><a class="dead" title="未收录">2022-湖南-10</a></li>
+<li><a href="../exam/2023-新课标-07.html">2023-新课标-07</a></li>
+<li><a href="../exam/2024-辽宁-15.html">2024-辽宁-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

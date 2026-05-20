@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>吉林冲刺·学生 HTML</title>
+<link rel="stylesheet" href="./vendor/style.css">
+
+<link rel="stylesheet" href="./vendor/katex/katex.min.css">
+<script defer src="./vendor/katex/katex.min.js"></script>
+<script defer src="./vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="./index.html">总览</a><a href="./数学.html">数学</a><a href="./物理.html">物理</a><a href="./化学.html">化学</a><a href="./生物.html">生物</a></div>
+<h1>吉林冲刺 · 学生重点 HTML</h1><p>数物化生 4 科 weight ≥ 10 的核心词条，离线可读。<br>配置：<code>00-元/scripts/weight_config.yaml</code>；重生成：<code>python 00-元/scripts/gen_html.py --apply --threshold 10</code></p><p><strong>共 610 词条</strong></p><ul><li>🔢 <a href="数学.html">数学 (238)</a></li><li>⚛️ <a href="物理.html">物理 (155)</a></li><li>🧪 <a href="化学.html">化学 (98)</a></li><li>🧬 <a href="生物.html">生物 (119)</a></li><li>📊 <a href="总览.html">总览（跨 4 科 top 30）</a></li></ul><hr><p style="font-size:0.85em;color:#888;">使用提示：</p><ul style="font-size:0.85em;color:#888;"><li>词条间链接 <code>[[X]]</code> 自动跳转；未收录词条灰色</li><li>真题截图在 <code>素材/真题截图/</code>；离线使用须把整个仓库（含 docs/ 与 素材/）拷贝到设备</li><li>公式 $...$ / $$...$$ 由 KaTeX 离线渲染（<code>vendor/katex/</code>，~600KB，首次需联网 <code>--fetch-katex</code> 拉取）</li><li>未生成的内容：英语词条、低 weight 词条、小学/初中、非吉林真题（保留位）</li></ul>
+</div>
+</body>
+</html>

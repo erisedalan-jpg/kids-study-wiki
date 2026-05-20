@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复合函数</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复合函数, composite function, 函数的复合, 复合映射</p><h2>🎓 复合函数</h2>
+<h3>定义</h3>
+<p>设 $y = f(u)$（$u \in B$）和 $u = g(x)$（$x \in A$），且 $g(A) \subseteq B$（即 $g$ 的值域包含在 $f$ 的定义域内），则可以定义<strong>复合函数</strong>：</p>
+<p>$$y = f(g(x)), \quad x \in A$$</p>
+<p>记作 $y = (f \circ g)(x)$，读作"$f$ 复合 $g$"或"$f$ 圈 $g$"。</p>
+<p><strong>中间变量</strong> $u = g(x)$，是连接 $x$ 和 $y$ 的桥梁。</p>
+<h3>复合的条件</h3>
+<p>复合 $f \circ g$ 存在，要求 $g$ 的值域 $\subseteq f$ 的定义域：</p>
+<p>$$\text{Range}(g) \subseteq \text{Domain}(f)$$</p>
+<h3>复合函数的定义域</h3>
+<p>$y = f(g(x))$ 的定义域：在 $g(x)$ 有意义的前提下，$g(x)$ 还必须在 $f$ 的定义域内。即：</p>
+<p>$${x \mid x \in \text{Dom}(g) \text{ 且 } g(x) \in \text{Dom}(f)}$$</p>
+<h3>复合函数的单调性（同增异减）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">$f$ 在 $u$ 上单调</th>
+<th style="text-align: center;">$g$ 在 $x$ 上单调</th>
+<th style="text-align: center;">$f \circ g$ 在 $x$ 上单调</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">递增</td>
+<td style="text-align: center;">递增</td>
+<td style="text-align: center;">递增</td>
+</tr>
+<tr>
+<td style="text-align: center;">递增</td>
+<td style="text-align: center;">递减</td>
+<td style="text-align: center;">递减</td>
+</tr>
+<tr>
+<td style="text-align: center;">递减</td>
+<td style="text-align: center;">递增</td>
+<td style="text-align: center;">递减</td>
+</tr>
+<tr>
+<td style="text-align: center;">递减</td>
+<td style="text-align: center;">递减</td>
+<td style="text-align: center;">递增</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：设 $f(u) = \sqrt{u}$，$g(x) = 1 - x^2$，求 $f(g(x))$ 的定义域。</p>
+<p>解：$g(x) = 1-x^2$，定义域 $\mathbb{R}$。$f(u) = \sqrt{u}$ 要求 $u \geq 0$。
+条件：$g(x) \geq 0$，即 $1-x^2 \geq 0$，解得 $-1 \leq x \leq 1$。
+故 $f(g(x)) = \sqrt{1-x^2}$ 的定义域为 $[-1, 1]$。</p>
+<p><strong>例2</strong>：设 $f(x) = 2x^2 - 1$，$g(x) = \cos x$，求 $f(g(x))$ 和 $g(f(x))$。</p>
+<p>解：
+- $f(g(x)) = 2(\cos x)^2 - 1 = 2\cos^2 x - 1 = \cos 2x$（二倍角公式！）
+- $g(f(x)) = \cos(2x^2-1)$</p>
+<p>注意：$f \circ g \neq g \circ f$，复合不满足交换律。</p>
+<p><strong>例3</strong>：将 $y = \ln(x^2 - 4)$ 分解为 $y = f(u)$，$u = g(x)$ 的形式。</p>
+<p>解：令 $u = g(x) = x^2 - 4$，则 $y = f(u) = \ln u$（$u &gt; 0$）。
+验证：$u &gt; 0 \Rightarrow x^2 - 4 &gt; 0 \Rightarrow x &lt; -2$ 或 $x &gt; 2$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>复合顺序</strong>：$f(g(x))$ 是先算 $g$，再算 $f$（从内到外）；$f \circ g$ 表示先 $g$ 后 $f$</li>
+<li><strong>复合不可交换</strong>：$f \circ g \neq g \circ f$，例2中已说明</li>
+<li><strong>定义域联立</strong>：复合函数定义域需同时满足 $g(x)$ 有意义 $+$ $g(x)$ 在 $f$ 的定义域内，两个条件缺一不可</li>
+<li><strong>中间变量的范围</strong>：求复合函数时，要先确定中间变量 $u = g(x)$ 的取值范围</li>
+<li><strong>单调性同增异减</strong>：看"$f$ 对 $u$"和"$g$ 对 $x$"的单调性，不是"$f$ 对 $x$"</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了函数的代值（将某表达式代入函数），这正是复合函数的直观操作。高中将其形式化，引入 $f \circ g$ 符号，并研究复合函数的定义域和单调性，是分析复杂函数（如 $y = \ln(\sin x)$）的基础工具。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：复合函数（Composite function / Function composition），映射的复合</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+<li><a href="../atoms/290-分段函数.html">分段函数</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a href="../atoms/270-三角函数应用.html">三角函数应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-12.html">2008-理-12</a></li>
+<li><a href="../exam/2015-文-08.html">2015-文-08</a></li>
+<li><a href="../exam/2015-理-05.html">2015-理-05</a></li>
+<li><a href="../exam/2017-文-09.html">2017-文-09</a></li>
+<li><a class="dead" title="未收录">2023-北京-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

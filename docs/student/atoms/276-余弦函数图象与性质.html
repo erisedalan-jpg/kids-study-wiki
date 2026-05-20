@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>余弦函数图象与性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>余弦函数图象与性质</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 余弦函数图象与性质, cosine function graph, 余弦函数, 余弦曲线</p><h2>🎓 余弦函数图象与性质</h2>
+<h3>定义</h3>
+<p><strong>余弦函数</strong>：$y = \cos x$，$x \in \mathbb{R}$</p>
+<h3>基本性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td>$\mathbb{R}$</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>$[-1, 1]$</td>
+</tr>
+<tr>
+<td>最大值</td>
+<td>$1$，在 $x = 2k\pi$（$k \in \mathbb{Z}$）时取得</td>
+</tr>
+<tr>
+<td>最小值</td>
+<td>$-1$，在 $x = \pi + 2k\pi$（$k \in \mathbb{Z}$）时取得</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>$T = 2\pi$</td>
+</tr>
+<tr>
+<td>零点</td>
+<td>$x = \dfrac{\pi}{2} + k\pi$（$k \in \mathbb{Z}$）</td>
+</tr>
+<tr>
+<td>奇偶性</td>
+<td>偶函数（$\cos(-x) = \cos x$），关于 $y$ 轴对称</td>
+</tr>
+<tr>
+<td>对称轴</td>
+<td>$x = k\pi$（$k \in \mathbb{Z}$）（过极值点的竖线）</td>
+</tr>
+</tbody>
+</table>
+<h3>单调区间</h3>
+<p>$$\text{单调递减区间：} [2k\pi, (2k+1)\pi], \quad k \in \mathbb{Z}$$</p>
+<p>即从 $0, 2\pi, 4\pi, \ldots$ 到 $\pi, 3\pi, 5\pi, \ldots$ 各段递减。</p>
+<p>$$\text{单调递增区间：} [(2k-1)\pi, 2k\pi], \quad k \in \mathbb{Z}$$</p>
+<p>即从 $-\pi, \pi, 3\pi, \ldots$ 到 $0, 2\pi, 4\pi, \ldots$ 各段递增。</p>
+<h3>与正弦函数的关系</h3>
+<p>$$\cos x = \sin!\left(x + \frac{\pi}{2}\right) = \sin!\left(\frac{\pi}{2} - x\right)$$</p>
+<p>余弦函数是正弦函数向左平移 $\dfrac{\pi}{2}$ 个单位所得，两者图象形状完全相同（均为正弦曲线形状），只是相位不同。</p>
+<h3>关键点（描绘一个周期）</h3>
+<p>$(0, 1), (\pi/2, 0), (\pi, -1), (3\pi/2, 0), (2\pi, 1)$</p>
+<p>从 $(0, 1)$（最高点）开始，先降到 $(\pi, -1)$（最低点），再回到 $(2\pi, 1)$。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求 $y = \cos x$ 在 $\left[0, \dfrac{3\pi}{2}\right]$ 上的单调递减区间。</p>
+<p>解：余弦递减区间为 $[2k\pi, \pi + 2k\pi]$（$k \in \mathbb{Z}$）。与 $[0, 3\pi/2]$ 的交集为 $[0, \pi]$。</p>
+<p>故在 $[0, 3\pi/2]$ 上的单调递减区间为 $[0, \pi]$。</p>
+<p><strong>例2</strong>：比较 $\cos(-\pi/5)$ 与 $\cos(\pi/4)$ 的大小。</p>
+<p>解：$\cos(-\pi/5) = \cos(\pi/5)$（偶函数）。</p>
+<p>$\pi/5 &lt; \pi/4$（均在 $[0, \pi/2]$ 内，递减区间），$\pi/5$ 更小，故 $\cos(\pi/5) &gt; \cos(\pi/4)$，即 $\cos(-\pi/5) &gt; \cos(\pi/4)$。</p>
+<p><strong>例3</strong>：解方程 $\cos x = -\dfrac{\sqrt{3}}{2}$（$x \in [0, 2\pi]$）。</p>
+<p>解：$\cos x &lt; 0$ 说明 $x$ 在第二或第三象限。</p>
+<p>$|\cos x| = \sqrt{3}/2 = \cos(\pi/6)$（参考角 $\pi/6$）。</p>
+<p>解：$x_1 = \pi - \dfrac{\pi}{6} = \dfrac{5\pi}{6}$（第二象限），$x_2 = \pi + \dfrac{\pi}{6} = \dfrac{7\pi}{6}$（第三象限）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>余弦是偶函数</strong>：$\cos(-x) = \cos x$，关于 $y$ 轴对称，而非关于原点</li>
+<li><strong>最大值在 $x = 0$，不是 $x = \pi/2$</strong>：$\cos 0 = 1$，$\cos(\pi/2) = 0$，不要与正弦混淆</li>
+<li><strong>递减区间从 $0$ 到 $\pi$</strong>：$\cos$ 在 $[0, \pi]$ 递减（从 $1$ 到 $-1$），在 $[\pi, 2\pi]$ 递增</li>
+<li><strong>零点在 $\pi/2 + k\pi$</strong>：$\cos(\pi/2) = 0$，$\cos(3\pi/2) = 0$ 等，不是 $k\pi$</li>
+<li><strong>余弦与正弦的偏移</strong>：$\cos x = \sin(x + \pi/2)$，向左移 $\pi/2$ 就变正弦；$\sin x = \cos(x - \pi/2)$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中了解了余弦作为三角比（邻边/斜边），高中将余弦扩展为全实数上的函数，并与正弦函数建立明确的平移关系（$\cos x = \sin(x+\pi/2)$）。理解余弦曲线是学习 $y = A\cos(\omega x + \varphi)$ 型函数的基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：余弦函数（Cosine function），余弦曲线，三角函数</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a href="../atoms/308-正切函数图象与性质.html">正切函数图象与性质</a></li>
+<li><a class="dead" title="未收录">单位圆</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a href="../atoms/265-Asin(ωx+φ)函数.html">Asin(ωx+φ)函数</a></li>
+<li><a class="dead" title="未收录">三角函数图象变换</a></li>
+<li><a class="dead" title="未收录">239-余弦</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-17.html">2009-理-17</a></li>
+<li><a href="../exam/2015-文-15.html">2015-文-15</a></li>
+<li><a href="../exam/2016-文-04.html">2016-文-04</a></li>
+<li><a href="../exam/2020-理-07.html">2020-理-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

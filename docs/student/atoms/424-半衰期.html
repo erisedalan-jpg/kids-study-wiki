@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>半衰期</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>半衰期</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 原子核与核物理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 半衰期, half-life, 放射性半衰期</p><h2>🎓 半衰期</h2>
+<h3>定义</h3>
+<p><strong>半衰期</strong>（$T_{1/2}$）是放射性核素的数目（或质量）减少到原来<strong>一半</strong>所需的时间。</p>
+<p>$$\boxed{N(t) = N_0 \left(\frac{1}{2}\right)^{t/T_{1/2}}}$$</p>
+<p>$$m(t) = m_0 \left(\frac{1}{2}\right)^{t/T_{1/2}}$$</p>
+<p>其中：
+- $N_0$：初始核素数目
+- $N(t)$：经过时间 $t$ 后剩余核素数目
+- $T_{1/2}$：半衰期
+- $t$：经历时间</p>
+<h3>半衰期的本质</h3>
+<p>半衰期是<strong>统计规律</strong>，反映大量放射性核的集体行为：</p>
+<ul>
+<li>单个原子核何时衰变是随机的，无法预测</li>
+<li>大量核素的整体统计结果符合指数衰减规律</li>
+<li>半衰期只由<strong>核素的种类</strong>决定，与原子所处的物理化学状态（温度、压力、化合物种类等）无关</li>
+</ul>
+<blockquote>
+<p>半衰期不受外部条件（如加热、加压、化学反应）影响，这与化学反应速率根本不同。</p>
+</blockquote>
+<h3>常见核素的半衰期</h3>
+<table>
+<thead>
+<tr>
+<th>核素</th>
+<th>符号</th>
+<th>半衰期</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>碳-14</td>
+<td>${}^{14}_{6}\text{C}$</td>
+<td>5730 年</td>
+<td>考古测年</td>
+</tr>
+<tr>
+<td>铀-238</td>
+<td>${}^{238}_{92}\text{U}$</td>
+<td>45 亿年</td>
+<td>地质年代测定</td>
+</tr>
+<tr>
+<td>镭-226</td>
+<td>${}^{226}_{88}\text{Ra}$</td>
+<td>1600 年</td>
+<td>居里研究对象</td>
+</tr>
+<tr>
+<td>钴-60</td>
+<td>${}^{60}_{27}\text{Co}$</td>
+<td>5.27 年</td>
+<td>医用 γ 射线源</td>
+</tr>
+<tr>
+<td>碘-131</td>
+<td>${}^{131}_{53}\text{I}$</td>
+<td>8.02 天</td>
+<td>甲状腺治疗</td>
+</tr>
+<tr>
+<td>氡-222</td>
+<td>${}^{222}_{86}\text{Rn}$</td>
+<td>3.82 天</td>
+<td>室内空气污染</td>
+</tr>
+<tr>
+<td>铀-235</td>
+<td>${}^{235}_{92}\text{U}$</td>
+<td>7.04 亿年</td>
+<td>核裂变燃料</td>
+</tr>
+</tbody>
+</table>
+<h3>计算方法</h3>
+<p><strong>经过 $k$ 个半衰期后</strong>：</p>
+<p>$$N = N_0 \times \left(\frac{1}{2}\right)^k, \quad k = \frac{t}{T_{1/2}}$$</p>
+<p>当 $k$ 为整数时直接用连乘；当 $k$ 非整数时，使用完整公式或取对数求解。</p>
+<p><strong>剩余比例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>经过的半衰期数 $k$</th>
+<th>剩余比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1/2 = 50%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1/4 = 25%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1/8 = 12.5%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1/16 ≈ 6.3%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1/1024 ≈ 0.1%</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：碘-131 的半衰期为 $8\ \text{d}$（天），初始有 $m_0 = 16\ \text{g}$ 的碘-131，经过 $32\ \text{d}$ 后，剩余多少克？</p>
+<p><strong>解</strong>：</p>
+<p>经历的半衰期数：$k = \frac{32}{8} = 4$</p>
+<p>$$m = m_0 \times \left(\frac{1}{2}\right)^4 = 16 \times \frac{1}{16} = 1\ \text{g}$$</p>
+<p><strong>例题 2</strong>：某放射性核素 $30\ \text{g}$ 经 $60$ 年后剩余 $7.5\ \text{g}$，求半衰期。</p>
+<p><strong>解</strong>：</p>
+<p>$$\frac{7.5}{30} = \frac{1}{4} = \left(\frac{1}{2}\right)^2 \Rightarrow k = 2$$</p>
+<p>$$T_{1/2} = \frac{t}{k} = \frac{60}{2} = 30\ \text{年}$$</p>
+<h3>易错点</h3>
+<ol>
+<li>半衰期描述的是<strong>放射性核素数目</strong>的减少，衰变产物不算（产物可能不再具有放射性）</li>
+<li>温度、压力、化学状态<strong>不影响</strong>半衰期（与化学反应速率不同）</li>
+<li>"半衰期后还剩一半"指的是<strong>放射性母核</strong>的数量，不是总质量（因为衰变产物质量略有差异，但高中题中一般忽略质量亏损近似处理）</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第六章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/半衰期">半衰期 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">天然放射现象</a></li>
+<li><a class="dead" title="未收录">核反应</a></li>
+<li><a href="../atoms/449-质能方程.html">质能方程</a></li>
+<li><a class="dead" title="未收录">原子结构</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-17</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-02.html">2017-新课标Ⅱ-02</a></li>
+<li><a href="../exam/2021-全国乙-04.html">2021-全国乙-04</a></li>
+<li><a class="dead" title="未收录">2021-湖南-01</a></li>
+<li><a class="dead" title="未收录">2024-北京-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

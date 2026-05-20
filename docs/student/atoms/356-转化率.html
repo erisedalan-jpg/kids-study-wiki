@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>转化率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>转化率</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 转化率, conversion rate, percent conversion, 反应物转化率</p><h1>转化率</h1>
+<blockquote>
+<p><strong>一句话</strong>：达到平衡时某反应物已转化的量占初始量的百分比，反映可逆反应进行的程度。
+<strong>English</strong>: The fraction of a reactant that has been converted at equilibrium, expressed as a percentage; indicates how completely a reversible reaction proceeds.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>转化率</strong>（conversion rate）$\alpha$：</p>
+<p>$$
+\alpha(\text{A}) = \frac{n_0(\text{A}) - n_{eq}(\text{A})}{n_0(\text{A})} \times 100\% = \frac{\Delta n(\text{A})}{n_0(\text{A})} \times 100\%
+$$</p>
+<ul>
+<li>$n_0$：初始物质的量（mol）</li>
+<li>$n_{eq}$：平衡时物质的量（mol）</li>
+<li>$\Delta n$：已转化的物质的量</li>
+</ul>
+<p>转化率越大，反应进行程度越大，但对于可逆反应永远 &lt; 100%。</p>
+<h3>公式 / 方程式</h3>
+<p>影响转化率的因素（勒夏特列原理方向一致）：</p>
+<table>
+<thead>
+<tr>
+<th>措施</th>
+<th>对转化率的影响</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增大某反应物浓度</td>
+<td>该物质转化率<strong>降低</strong>，另一物质转化率<strong>升高</strong></td>
+<td>平衡正移但该物质量更多</td>
+</tr>
+<tr>
+<td>升温（放热反应）</td>
+<td>转化率降低</td>
+<td>平衡逆移</td>
+</tr>
+<tr>
+<td>升温（吸热反应）</td>
+<td>转化率升高</td>
+<td>平衡正移</td>
+</tr>
+<tr>
+<td>增大压强（$\Delta n_g &lt; 0$）</td>
+<td>转化率升高</td>
+<td>平衡向气体减少方向移动</td>
+</tr>
+<tr>
+<td>催化剂</td>
+<td>不变</td>
+<td>不改变平衡位置</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：$\text{A}(g) + \text{B}(g) \rightleftharpoons 2\text{C}(g)$，起始 A 和 B 各 1 mol，总体积 1 L，平衡时 C 为 0.8 mol。求 A 的转化率。</p>
+<p>由计量关系：A 转化量 = 0.8/2 = 0.4 mol（每生成 2 mol C 消耗 1 mol A）</p>
+<p>$$
+\alpha(\text{A}) = \frac{0.4}{1} \times 100\% = 40\%
+$$</p>
+<p><strong>例</strong>：若上题中，初始改为 A 1 mol、B 2 mol，则 A 的转化率如何变化？</p>
+<p>B 增多，平衡正移，A 被更充分地消耗，<strong>A 的转化率升高</strong>（B 的转化率下降）。</p>
+<h3>易错点</h3>
+<ul>
+<li>等量增加某反应物，该反应物自身转化率可能降低（但另一物转化率升高）</li>
+<li>恒容扩大体积（降压）：若 $\Delta n_g &gt; 0$，平衡正移，但转化率的变化需具体分析</li>
+<li>催化剂不改变转化率（不改变平衡位置）</li>
+<li>增大压强对 $\Delta n_g = 0$ 的反应，转化率不变</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>转化率</td>
+<td>conversion rate / percent conversion</td>
+</tr>
+<tr>
+<td>平衡产率</td>
+<td>equilibrium yield</td>
+</tr>
+<tr>
+<td>勒夏特列原理</td>
+<td>Le Chatelier's principle</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The conversion rate of N₂ in the Haber process is typically 15–25% per pass.（合成氨工业中 N₂ 的单程转化率通常为 15–25%。）</li>
+<li>Increasing the concentration of one reactant generally increases the conversion of the other.（增大一种反应物的浓度通常会提高另一种反应物的转化率。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"化学平衡"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/342-化学平衡常数.html">化学平衡常数</a></li>
+<li><a class="dead" title="未收录">平衡浓度</a></li>
+<li><a class="dead" title="未收录">平衡移动</a></li>
+<li><a class="dead" title="未收录">等效平衡</a></li>
+<li><a class="dead" title="未收录">工业合成氨</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-09.html">2008-全国Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2010-北京-07</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-10.html">2013-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2023-湖南-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

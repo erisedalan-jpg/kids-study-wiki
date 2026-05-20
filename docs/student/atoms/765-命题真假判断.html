@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命题真假判断</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>命题真假判断</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: &quot;命题真假判断&quot;</p><h1>命题真假判断</h1>
+<blockquote>
+<p><strong>一句话</strong>：在数学逻辑中，能确定真假的陈述句称为命题，正确即为真命题，错误则为假命题。
+<strong>English</strong>: A proposition is a declarative sentence that can be decided to be true or false; a true proposition is one that is correct, and a false proposition is one that is incorrect.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+在数学中，<strong>命题</strong>是可以判断真假的陈述句。若判断为真，称<strong>真命题</strong>；判断为假，称<strong>假命题</strong>。常用的复合命题形式及真值表：</p>
+<table>
+<thead>
+<tr>
+<th>$p$</th>
+<th>$q$</th>
+<th>$p \land q$ (且)</th>
+<th>$p \lor q$ (或)</th>
+<th>$\neg p$ (非)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>真</td>
+<td>真</td>
+<td>真</td>
+<td>真</td>
+<td>假</td>
+</tr>
+<tr>
+<td>真</td>
+<td>假</td>
+<td>假</td>
+<td>真</td>
+<td>假</td>
+</tr>
+<tr>
+<td>假</td>
+<td>真</td>
+<td>假</td>
+<td>真</td>
+<td>真</td>
+</tr>
+<tr>
+<td>假</td>
+<td>假</td>
+<td>假</td>
+<td>假</td>
+<td>真</td>
+</tr>
+</tbody>
+</table>
+<p>含有量词的命题：<strong>全称命题</strong> $\forall x \in M, p(x)$，当且仅当 $M$ 中每个元素都使 $p(x)$ 成立时为真；<strong>特称命题</strong> $\exists x \in M, p(x)$，只要存在一个元素使 $p(x)$ 成立即为真。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>直接法</strong>：依据数学定义、定理、性质直接推断命题真假。<br />
+2. <strong>反例法</strong>：要证全称命题为假，只需找出一个不满足条件的反例；要证特称命题为真，只需给出一个符合条件的正例。<br />
+3. <strong>真值表法</strong>：对复合命题，先拆出简单命题并判定其真值，再根据逻辑联结词的真值表合成本身真假。<br />
+4. <strong>等价转化</strong>：将原命题等价变形为更易判断的形式，例如 $p \to q \Leftrightarrow \neg p \lor q$。</p>
+<p><strong>典型应用</strong><br />
+高考中常直接要求“判断下列命题的真假”，或结合不等式、函数、数列等知识给出命题：<br />
+- 命题“若 $a &gt; b$，则 $ac^2 &gt; bc^2$”的真假判断（假，$c=0$ 时为反例）。<br />
+- 命题“$\forall x \in \mathbf{R}, x^2+2x+2 &gt; 0$”为真，可通过判别式 $\Delta = -4 &lt; 0$ 判定。<br />
+- 已知 $p$ 真、 $q$ 假，判断复合命题“$\neg p \lor q$”的真假：$\neg p$ 假，$q$ 假，故整体为假。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>否定与否命题混淆</strong>：求“若 $p$ 则 $q$”的否定是“$p$ 且 $\neg q$”，而否命题是“若 $\neg p$ 则 $\neg q$”，两者截然不同。  </li>
+<li><strong>量词命题的否定遗漏</strong>：$\neg (\forall x, p(x)) \Leftrightarrow \exists x, \neg p(x)$，学生常只改变量词却未否定结论，或误将“非”仅加在量词上。  </li>
+<li><strong>“或”与“且”的真值误判</strong>：$p \lor q$ 为真只需 $p$、$q$ 中至少一个为真，学生却常误以为两者同真时才真。  </li>
+<li><strong>生活用语的干扰</strong>：“都是”的否定是“不都是”而非“都不是”；“至少有一个”的否定是“一个都没有”。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命题</td>
+<td>proposition</td>
+<td>可判断真假的陈述句</td>
+</tr>
+<tr>
+<td>真命题</td>
+<td>true proposition</td>
+<td>判断为真的命题</td>
+</tr>
+<tr>
+<td>假命题</td>
+<td>false proposition</td>
+<td>判断为假的命题</td>
+</tr>
+<tr>
+<td>全称量词</td>
+<td>universal quantifier</td>
+<td>“所有”的符号 $\forall$</td>
+</tr>
+<tr>
+<td>存在量词</td>
+<td>existential quantifier</td>
+<td>“存在”的符号 $\exists$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/533-充分必要条件.html">充分条件与必要条件</a></li>
+<li><a href="../atoms/280-全称量词与存在量词.html">全称量词与存在量词</a></li>
+<li><a class="dead" title="未收录">逻辑联结词“或”“且”“非”</a></li>
+<li><a class="dead" title="未收录">命题的否定与否命题</a></li>
+<li><a class="dead" title="未收录">四种命题及其关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-理-05.html">2014-理-05</a></li>
+<li><a href="../exam/2015-理-06.html">2015-理-06</a></li>
+<li><a href="../exam/2016-文-08.html">2016-文-08</a></li>
+<li><a href="../exam/2017-文-13.html">2017-文-13</a></li>
+<li><a href="../exam/2018-文-03.html">2018-文-03</a></li>
+<li><a href="../exam/2018-文-11.html">2018-文-11</a></li>
+<li><a href="../exam/2018-理-03.html">2018-理-03</a></li>
+<li><a href="../exam/2020-文-16.html">2020-文-16</a></li>
+<li><a href="../exam/2020-理-16.html">2020-理-16</a></li>
+<li><a href="../exam/2021-文-03.html">2021-文-03</a></li>
+<li><a href="../exam/2021-理-02.html">2021-理-02</a></li>
+<li><a href="../exam/2021-理-03.html">2021-理-03</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-02.html">2024-新课标Ⅱ-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

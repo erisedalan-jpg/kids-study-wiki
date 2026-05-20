@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学反应速率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>化学反应速率</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 化学反应速率, reaction rate, 反应速率</p><h1>化学反应速率</h1>
+<blockquote>
+<p><strong>一句话</strong>：化学反应速率是单位时间内反应物或生成物浓度的变化量，衡量反应进行的快慢，单位为mol/(L·s)或mol/(L·min)。
+<strong>English</strong>: Chemical reaction rate measures how fast a reaction proceeds, defined as the change in concentration of reactants or products per unit time, in units of mol/(L·s) or mol/(L·min).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>$$v = \frac{\Delta c}{\Delta t}$$</p>
+<ul>
+<li><strong>v</strong>：反应速率 [mol/(L·min) 或 mol/(L·s)]</li>
+<li><strong>Δc</strong>：浓度变化量 (mol/L)</li>
+<li><strong>Δt</strong>：时间间隔 (min 或 s)</li>
+</ul>
+<p><strong>注意</strong>：速率始终取<strong>正值</strong>，无论反应物（浓度减小）还是生成物（浓度增大）。</p>
+<h3>对于不同物质，速率之比 = 化学计量数之比</h3>
+<p>对于反应：$a\text{A} + b\text{B} \rightarrow c\text{C} + d\text{D}$</p>
+<p>$$\frac{v(\text{A})}{a} = \frac{v(\text{B})}{b} = \frac{v(\text{C})}{c} = \frac{v(\text{D})}{d}$$</p>
+<p><strong>示例</strong>：N₂ + 3H₂ → 2NH₃</p>
+<p>若 v(N₂) = 0.1 mol/(L·min)，则：
+- v(H₂) = 3×0.1 = 0.3 mol/(L·min)
+- v(NH₃) = 2×0.1 = 0.2 mol/(L·min)</p>
+<h3>影响反应速率的因素</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>增大速率</th>
+<th>减小速率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浓度</td>
+<td>增大反应物浓度</td>
+<td>减小浓度</td>
+</tr>
+<tr>
+<td>温度</td>
+<td>升高温度</td>
+<td>降低温度</td>
+</tr>
+<tr>
+<td>催化剂</td>
+<td>加入正催化剂</td>
+<td>加入负催化剂</td>
+</tr>
+<tr>
+<td>压强</td>
+<td>增大压强（气体反应）</td>
+<td>降低压强</td>
+</tr>
+<tr>
+<td>固体表面积</td>
+<td>研磨成粉末</td>
+<td>大块固体</td>
+</tr>
+</tbody>
+</table>
+<p><strong>温度规律</strong>：温度每升高10°C，反应速率约增大2-4倍（范特霍夫规则）。</p>
+<h3>速率与温度的定量关系（阿伦尼乌斯方程，了解）</h3>
+<p>$$k = A e^{-E_a/(RT)}$$</p>
+<ul>
+<li>Ea：活化能（越小，反应越快）</li>
+<li>催化剂降低活化能，从而加快速率</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：在2L容器中，反应2SO₂ + O₂ → 2SO₃，前2 min内SO₃浓度从0增加到0.4 mol/L，求各物质的反应速率。</p>
+<p><strong>分析</strong>：
+- v(SO₃) = Δc/Δt = 0.4/2 = 0.2 mol/(L·min)
+- 化学计量数：SO₂:O₂:SO₃ = 2:1:2
+- v(SO₂) = v(SO₃) = 0.2 mol/(L·min)
+- v(O₂) = v(SO₃)/2 = 0.1 mol/(L·min)</p>
+<p><strong>例2</strong>：温度从25°C升至55°C（升高30°C），如果每升高10°C速率增大2倍，原速率增大几倍？</p>
+<p><strong>分析</strong>：升高30°C = 升高3个10°C
+速率增大 = 2³ = 8倍</p>
+<h3>易错点</h3>
+<ul>
+<li>速率不能用纯固体或纯液体（水）表示（浓度不变）</li>
+<li>不同物质速率值不同，需要比较时必须除以化学计量数</li>
+<li>增大压强相当于增大浓度（适用于气体），纯固体液体体积不变</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>化学反应速率</td>
+<td>Chemical reaction rate</td>
+</tr>
+<tr>
+<td>浓度</td>
+<td>Concentration</td>
+</tr>
+<tr>
+<td>活化能</td>
+<td>Activation energy</td>
+</tr>
+<tr>
+<td>催化剂</td>
+<td>Catalyst</td>
+</tr>
+<tr>
+<td>有效碰撞</td>
+<td>Effective collision</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>升高温度能增大分子的平均动能，从而增大反应速率。</td>
+<td>Raising the temperature increases the average kinetic energy of molecules, thereby increasing the reaction rate.</td>
+</tr>
+<tr>
+<td>催化剂通过降低活化能来加快反应速率。</td>
+<td>A catalyst accelerates the reaction rate by lowering the activation energy.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学必修 第二册.pdf</a> 第六章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"反应速率"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">影响速率因素</a> · <a class="dead" title="未收录">浓度对速率影响</a> · <a class="dead" title="未收录">温度对速率影响</a> · <a class="dead" title="未收录">催化剂对速率影响</a> · <a href="../atoms/284-化学平衡.html">化学平衡</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-07</a></li>
+<li><a href="../exam/2009-全国Ⅱ-09.html">2009-全国Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2010-北京-07</a></li>
+<li><a href="../exam/2011-新课标-09.html">2011-新课标-09</a></li>
+<li><a class="dead" title="未收录">2014-北京-07</a></li>
+<li><a class="dead" title="未收录">2021-湖南-11</a></li>
+<li><a class="dead" title="未收录">2021-湖南-14</a></li>
+<li><a class="dead" title="未收录">2022-北京-05</a></li>
+<li><a class="dead" title="未收录">2022-湖南-14</a></li>
+<li><a href="../exam/2024-辽宁-07.html">2024-辽宁-07</a></li>
+<li><a href="../exam/2024-辽宁-10.html">2024-辽宁-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

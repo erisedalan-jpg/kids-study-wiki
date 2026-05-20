@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>位移（矢量）</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>位移（矢量）</h1><div class="meta-card"><span><strong>权重</strong>17</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 运动的描述]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 位移-矢量, 位移, displacement, vector displacement</p><h2>🎓 位移（矢量）（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>位移</strong>（displacement）是描述物体位置变化的物理量，是从初位置指向末位置的<strong>有向线段</strong>。</p>
+<p>$$\vec{s} = \vec{r}<em _text_初="\text{初">{\text{末}} - \vec{r}</em>$$}</p>
+<p>位移是<strong>矢量</strong>：既有大小（两点间直线距离），又有方向（初位置→末位置）。</p>
+<h3>矢量的基本性质</h3>
+<p><strong>矢量</strong>（vector）：有大小有方向的量。
+- 位移、速度、加速度、力——均为矢量
+- 路程、时间、质量、温度——均为标量（只有大小）</p>
+<p>矢量的加减遵循<strong>平行四边形定则</strong>（不是简单代数加减）：</p>
+<p>$$|\vec{A} + \vec{B}| \neq |\vec{A}| + |\vec{B}| \quad \text{（一般情况）}$$</p>
+<p>$$|\vec{A} + \vec{B}| = |\vec{A}| + |\vec{B}| \quad \text{（同向时取等）}$$</p>
+<p>$$|\vec{A} + \vec{B}| \geq \big||\vec{A}| - |\vec{B}|\big| \quad \text{（三角不等式）}$$</p>
+<h3>一维情形：符号表示方向</h3>
+<p>在直线运动中，规定正方向后，矢量用正负号表示方向：</p>
+<p>$$\Delta x = x_2 - x_1$$</p>
+<ul>
+<li>$\Delta x = +5\text{ m}$：沿正方向位移5m</li>
+<li>$\Delta x = -3\text{ m}$：沿负方向位移3m</li>
+</ul>
+<p><strong>注意</strong>：坐标差 $\Delta x$ 本身就含方向信息（正负号）。</p>
+<h3>二维情形：分量表示</h3>
+<p>$$\vec{s} = (s_x, s_y) = (\Delta x, \Delta y)$$</p>
+<p>大小：$|\vec{s}| = \sqrt{s_x^2 + s_y^2}$</p>
+<p>方向：$\theta = \arctan\frac{s_y}{s_x}$（与 $x$ 轴的夹角）</p>
+<h3>位移合成（矢量加法）</h3>
+<p>多段位移的总位移 = 各段位移的矢量和：</p>
+<p>$$\vec{s}_{\text{总}} = \vec{s}_1 + \vec{s}_2 + \cdots + \vec{s}_n$$</p>
+<p>一维（同直线）：代数相加（带符号）。
+二维：用坐标分量分别相加，再合成。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一物体先向东位移3m，再向北位移4m，求总位移。</p>
+<p>$$s_x = 3\text{ m（东）},\quad s_y = 4\text{ m（北）}$$
+$$|\vec{s}| = \sqrt{3^2+4^2} = 5\text{ m}$$</p>
+<p>方向：北偏东 $\arctan\frac{3}{4} \approx 37°$（即东偏北 $53°$）</p>
+<p><strong>例2</strong>：物体做圆周运动，从A运动半圈到B（直径两端），半径 $R$。求位移大小。</p>
+<p>A、B是直径两端，位移 = 直径 = $2R$，方向从A指向B。</p>
+<p><strong>例3</strong>：$t=0$ 时物体在 $x_0 = -2\text{ m}$ 处，$t = 5\text{ s}$ 时在 $x = +8\text{ m}$ 处，求位移。</p>
+<p>$$\Delta x = x - x_0 = 8 - (-2) = +10\text{ m（正方向）}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>位移不等于路程</strong>（见<a class="dead" title="未收录">位移与路程</a>）：路程是路径长度，位移是有向线段。</li>
+<li><strong>矢量不能直接代数相加</strong>：两个大小都为5m的位移相加，结果可以是0到10m之间任意值，取决于方向。</li>
+<li><strong>"位移为负"不代表"向后退"</strong>：负号只代表沿负方向，与参考系正方向选取有关。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中学路程（标量），高中引入位移（矢量）。矢量概念贯穿整个高中物理（力、速度、加速度、动量、场强），是最重要的数学工具之一。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第一章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：矢量 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">位移与路程</a></li>
+<li><a class="dead" title="未收录">平均速度-高中</a></li>
+<li><a href="../atoms/214-加速度.html">加速度</a></li>
+<li><a class="dead" title="未收录">力的合成-高中</a></li>
+<li><a class="dead" title="未收录">平行四边形定则</a></li>
+<li><a class="dead" title="未收录">位移公式-匀变速</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标Ⅰ-11.html">2010-新课标Ⅰ-11</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-01.html">2014-新课标Ⅱ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

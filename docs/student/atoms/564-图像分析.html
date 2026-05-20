@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>图像分析</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 图像分析, Image analysis in physics</p><h1>图像分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：图像分析是依据物理量之间的函数关系，从图像上提取坐标、斜率、截距、面积等几何特征，并将其转化为具体物理量或判断物理过程的思维方法。
+<strong>English</strong>: Image analysis refers to extracting geometric features such as coordinates, slopes, intercepts, and areas under curves from graphs of physical quantities, and translating them into physical quantities or physical process judgments.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：物理图像反映两个物理量间的函数关系（如 $y$-$x$ 图）。从中可获取：</li>
+<li><strong>坐标与点</strong>：某时刻（或状态）的物理量值。</li>
+<li><strong>斜率</strong>：表示纵轴物理量对横轴物理量的变化率，例如 $v$–$t$ 图斜率是加速度 $a = \frac{\Delta v}{\Delta t}$，$U$–$I$ 图切点斜率是电阻 $R = \frac{U}{I}$（线性元件）或动态电阻。</li>
+<li><strong>截距</strong>：纵轴截距对应 $x=0$ 时的 $y$ 值（常为初始量或内阻电动势等），横轴截距对应 $y=0$ 时的 $x$。</li>
+<li><strong>图线与横轴所围面积</strong>：积分的几何表示，如 $v$–$t$ 图面积代表位移 $x = \int v\, dt$，$F$–$x$ 图面积代表功 $W = \int F\, dx$，$I$–$t$ 图面积代表电荷量 $q = \int I\, dt$。</li>
+<li>
+<p><strong>拐点与极值</strong>：斜率符号改变对应加速度反向或极值条件；峰值对应物理量最大/最小值。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：</p>
+</li>
+<li><strong>明确轴义</strong>：先看清横轴与纵轴分别代表什么物理量及单位。</li>
+<li><strong>知斜率、面积、截距的物理意义</strong>：根据定义式或基本公式推导，如 $a = \frac{dv}{dt}$，则 $v$–$t$ 图斜率即加速度。对于曲线，则用切线斜率表示瞬时变化率。</li>
+<li><strong>分段分析</strong>：根据图线形状（水平线、斜线、曲线）划分运动或变化阶段。</li>
+<li><strong>写函数关系</strong>：必要时建立 $y$ 与 $x$ 的方程，如 $U = E - Ir$，其 $U$–$I$ 图为一条斜率为 $-r$、截距为 $E$ 的直线，帮助求解电源参数。</li>
+<li>
+<p><strong>转换图像</strong>：如给出 $a$–$t$ 图求速度或位移，需通过面积累加或先画 $v$–$t$ 图。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：</p>
+</li>
+<li><strong>运动学</strong>：从 $v$–$t$ 图求加速度、位移；从 $x$–$t$ 图求速度；比较两物体相遇条件。</li>
+<li><strong>动力学</strong>：从 $F$–$t$ 图面积求冲量及动量变化；从 $F$–$x$ 图求变力做功。</li>
+<li><strong>电路</strong>：$U$–$I$ 图像中求电源电动势和内阻；小灯泡的 $U$–$I$ 曲线体现非线性电阻，其切线斜率代表动态电阻。</li>
+<li><strong>电磁感应</strong>：$B$–$t$ 图、$\Phi$–$t$ 图斜率求感应电动势；$i$–$t$ 图面积求电量。</li>
+<li><strong>实验</strong>：纸带分析、传感器数据记录常转化为图像处理，如加速度测量、动能定理验证。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆斜率与面积</strong>：如误将 $v$–$t$ 图斜率当作位移，或误将 $x$–$t$ 图面积当作速度。务必牢记对应关系。</li>
+<li><strong>忽略轴标单位与数量级</strong>：轴可能标有 $(\times 10^{-3})$ 等，直接读数会带来数量级错误。</li>
+<li><strong>将曲线斜率与割线斜率混淆</strong>：求瞬时加速度必须用切线斜率，而不是两点连线斜率，尤其是在曲线部分。</li>
+<li><strong>面积符号误判</strong>：当图线在横轴下方时，面积应取负值（如 $v$–$t$ 图中 $v&lt;0$ 时位移为负），直接累加绝对值会导致位移计算错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>纵轴物理量对横轴物理量的变化率</td>
+</tr>
+<tr>
+<td>截距</td>
+<td>intercept</td>
+<td>图线与坐标轴的交点坐标，常代表初始值或为零时的对应量</td>
+</tr>
+<tr>
+<td>图线下的面积</td>
+<td>area under curve</td>
+<td>积分求和，表示纵轴量对横轴量的累积效应</td>
+</tr>
+<tr>
+<td>切线</td>
+<td>tangent line</td>
+<td>曲线上某点的瞬时变化率方向</td>
+</tr>
+<tr>
+<td>物理图像</td>
+<td>physical graph</td>
+<td>表示两个物理量关系的图表，如 $v$–$t$ 图</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">运动学图像</a></li>
+<li><a class="dead" title="未收录">动力学图像</a></li>
+<li><a class="dead" title="未收录">电磁感应图像</a></li>
+<li><a class="dead" title="未收录">电学实验图像</a></li>
+<li><a class="dead" title="未收录">图像法在物理实验中的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2016-北京-09</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-08</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-13.html">2019-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2020-北京-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

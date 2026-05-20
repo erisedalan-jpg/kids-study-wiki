@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>绝对值函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>绝对值函数</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 绝对值函数, absolute value function</p><h1>绝对值函数</h1>
+<blockquote>
+<p><strong>一句话</strong>：绝对值函数是一种用 $|x|$ 定义的分段函数，本质是数轴上点到原点的距离，其图像以 $y$ 轴为对称轴，在 $x=0$ 处形成尖点。
+<strong>English</strong>: An absolute value function is a piecewise function defined by $|x|$, representing the distance from a point to the origin on the number line, with a graph that is symmetric about the $y$-axis and has a sharp corner at $x=0$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>绝对值函数的核心定义为分段函数：</p>
+<p>$$|x| = \begin{cases} x, &amp; x \ge 0 \ -x, &amp; x &lt; 0 \end{cases}$$</p>
+<p>一般形式 $y = a|x - h| + k$ 的图像是顶点在 $(h, k)$ 的“V”形折线。当 $a &gt; 0$ 时开口向上，$a &lt; 0$ 时开口向下。$|a|$ 的大小决定“V”字开口的宽窄：$|a|$ 越大，开口越窄。</p>
+<p>解含绝对值的不等式或方程时，关键步骤是“去绝对值符号”。常用方法：
+1. <strong>零点分段法</strong>：令每个绝对值内部的表达式等于零，解出零点，将数轴分为若干区间，分别去掉绝对值符号求解，最后取并集。
+2. <strong>几何意义法</strong>：$|x - a|$ 表示数轴上 $x$ 到 $a$ 的距离。如 $|x - 2| &lt; 3$ 表示到 2 的距离小于 3 的点集，即 $-1 &lt; x &lt; 5$。
+3. <strong>平方法</strong>：对于 $|f(x)| = |g(x)|$ 型方程，可两边平方化为 $f(x)^2 = g(x)^2$ 求解，但需注意验根。</p>
+<p><strong>高考典型设问</strong>：
+- 用分段函数形式给出含绝对值的函数，要求画出图像或用图像判断方程根的个数；
+- 解双重绝对值不等式如 $||x - 1| - 2| \le 3$，需由外向内逐层转化；
+- 含参数的绝对值不等式恒成立问题，常转化为函数最值比较。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忘记讨论或分段点错误</strong>：去掉绝对值时未按零点正确划分区间，导致不等式解集遗漏或重复。务必先解零点，在数轴上标注后逐段求解再取并集。</li>
+<li><strong>误以为绝对值只“去掉负号”</strong>：对含代数式的情形，如 $|x-2|$，当 $x&lt;2$ 时去掉绝对值应为 $2-x$，而非 $x-2$。部分学生在 $x$ 取值不确定时盲目去绝对值。</li>
+<li><strong>解 $|f(x)| &lt; g(x)$ 型不等式时边界失误</strong>：正确转化为 $-g(x) &lt; f(x) &lt; g(x)$，切忌直接写 $f(x) &lt; g(x)$ 或 $f(x) &gt; -g(x)$ 而未联立。若 $g(x)$ 含参数，还需讨论 $g(x)$ 的符号。</li>
+<li><strong>混淆 $|f(x)| = |g(x)|$ 与 $f(x)=\pm g(x)$</strong>：后者需注意 $f(x)=g(x)$ 与 $f(x)=-g(x)$ 的解都应保留，但用平方法时容易引入增根，务必回代检验。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝对值函数</td>
+<td>absolute value function</td>
+<td>用</td>
+</tr>
+<tr>
+<td>绝对值</td>
+<td>absolute value (modulus)</td>
+<td>一个数到零的距离</td>
+</tr>
+<tr>
+<td>分段函数</td>
+<td>piecewise function</td>
+<td>在不同定义域子集上用不同解析式定义的函数</td>
+</tr>
+<tr>
+<td>零点</td>
+<td>zero point (root)</td>
+<td>使绝对值为零的 x 值，用于分段讨论</td>
+</tr>
+<tr>
+<td>不等式</td>
+<td>inequality</td>
+<td>含 &lt;, &gt;, ≤, ≥ 的数学语句</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：函数主线中的“函数与不等式”模块，涉及分段函数与绝对值不等式的解法 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/290-分段函数.html">分段函数</a></li>
+<li><a class="dead" title="未收录">含绝对值的不等式</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a class="dead" title="未收录">零点与方程的根</a></li>
+<li><a class="dead" title="未收录">二次函数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-08.html">2010-理-08</a></li>
+<li><a href="../exam/2010-理-24.html">2010-理-24</a></li>
+<li><a href="../exam/2012-文-24.html">2012-文-24</a></li>
+<li><a href="../exam/2016-文-12.html">2016-文-12</a></li>
+<li><a href="../exam/2018-文-22.html">2018-文-22</a></li>
+<li><a href="../exam/2018-文-23.html">2018-文-23</a></li>
+<li><a href="../exam/2019-文-20.html">2019-文-20</a></li>
+<li><a href="../exam/2019-理-11.html">2019-理-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

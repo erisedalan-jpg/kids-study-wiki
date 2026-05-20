@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路设计</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电路设计</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电路设计, Electronic Circuit Design</p><h1>电路设计</h1>
+<blockquote>
+<p><strong>一句话</strong>：电路设计是根据特定功能和要求，运用电路基本定律（欧姆定律、基尔霍夫定律）和电子元器件的特性，设计并搭建出满足性能指标的实际电路的过程。
+<strong>English</strong>: Circuit design is the process of creating circuits to meet specific functional requirements by applying fundamental circuit laws (Ohm’s law, Kirchhoff’s laws) and the characteristics of electronic components.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>电路设计在高考物理中主要考查学生综合运用电路知识解决实际需求的能力，核心在于<strong>串并联组合、电表改装、伏安特性曲线应用以及逻辑门电路的设计</strong>。</p>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：电路设计以欧姆定律 $I=\frac{U}{R}$、闭合电路欧姆定律 $E=U+Ir$、焦耳定律 $Q=I^2Rt$ 以及基尔霍夫电流/电压定律为基础。设计时需根据设计要求（如电压/电流范围、功率限制、功能逻辑）选择电阻、电源、电表、传感器等元件，并通过合理的串并联实现目标。例如，电表改装本质是利用串并联分压分流原理：将表头（内阻 $R_g$，满偏电流 $I_g$）改装成电压表需串联分压电阻 $R = \frac{U}{I_g} - R_g$，改装成电流表需并联分流电阻 $R = \frac{I_g R_g}{I - I_g}$。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：解决电路设计问题的标准步骤：</p>
+</li>
+<li><strong>明确设计要求</strong>：确定输出电压/电流范围、功率限制、逻辑功能等。</li>
+<li><strong>选择核心元件</strong>：根据功能选电源、电阻、滑动变阻器、电表、逻辑门（与、或、非等）或传感器。</li>
+<li><strong>构建主回路</strong>：设计供电部分、控制部分（如滑动变阻器接成限流式或分压式）及测量/输出部分。</li>
+<li><strong>参数计算</strong>：利用串并联规律和电功率公式算出各电阻阻值、电表量程等。</li>
+<li>
+<p><strong>验证与优化</strong>：考虑元件额定值、误差范围和安全性。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考常见设问类型包括：① “设计一个能测量某元件伏安特性曲线的电路”，需选择分压式接法以保证电压从零开始，电流表内接或外接由待测电阻与电表内阻关系决定；② “用电饭煲的加热/保温功能设计电路”，利用开关控制电阻的串并联以改变功率，如加热时仅 $R_1$ 接入，保温时 $R_1$ 与 $R_2$ 串联，依据 $P=\frac{U^2}{R}$ 实现功率变化；③ “用逻辑门实现简单控制”，如某装置需要两个条件同时满足才工作，应选与门。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>滑动变阻器的接法混淆</strong>：设计伏安特性曲线或要求电压从零调节的电路时，必须用分压式接法；若用限流式则无法获得零电压起点。部分学生误认为任何情况都可用限流式，导致设计错误。</li>
+<li><strong>电表改装中量程与读数混淆</strong>：改装后的电压表或电流表，盘面读数需按比例换算，不能直接读表头原刻度。例如将表头改装成量程 $3V$ 的电压表，实际电压 $U = \frac{3V}{\text{满偏格数}} \times \text{指针格数}$，学生常忘记换算。</li>
+<li><strong>功率型电路设计忽略额定值</strong>：在加热/保温电路设计中，若不校验电阻的额定功率，可能设计出会使电阻烧毁的电路。如用 $P=\frac{U^2}{R}$ 算出的实际功率超过电阻最大功率，应选择功率更大的元件或重新设计。</li>
+<li><strong>逻辑门设计中的真值表推导错误</strong>：将文字条件转化为真值表时，容易搞反输入输出的电平逻辑（高电平有效/低电平有效），导致选错门电路类型。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>串并联电路</td>
+<td>Series and parallel circuits</td>
+<td>电路设计中最基本的连接方式</td>
+</tr>
+<tr>
+<td>分压式接法</td>
+<td>Voltage-divider connection</td>
+<td>滑动变阻器的一种接法，可使输出电压从零开始</td>
+</tr>
+<tr>
+<td>电表改装</td>
+<td>Ammeter/voltmeter modification</td>
+<td>利用电阻串并联扩大量程</td>
+</tr>
+<tr>
+<td>逻辑门</td>
+<td>Logic gate</td>
+<td>实现基本逻辑运算的电子电路，如与门、或门、非门</td>
+</tr>
+<tr>
+<td>额定功率</td>
+<td>Rated power</td>
+<td>元件安全长期工作的最大功率</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">电表的改装</a></li>
+<li><a class="dead" title="未收录">伏安特性曲线</a></li>
+<li><a class="dead" title="未收录">逻辑电路</a></li>
+<li><a class="dead" title="未收录">电功与电热</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2015-新课标Ⅱ-10.html">2015-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2022-全国乙-10.html">2022-全国乙-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

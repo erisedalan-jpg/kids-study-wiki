@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列通项公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列通项公式</h1><div class="meta-card"><span><strong>权重</strong>19</span><span><strong>吉林命中</strong>10</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第四章数列]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列通项公式, general term formula of sequence, 通项公式</p><h2>🎓 数列通项公式</h2>
+<h3>定义</h3>
+<p><strong>通项公式</strong>：用含 $n$ 的解析式表示第 $n$ 项的公式 $a_n = f(n)$，其中 $n \in \mathbb{N}^*$。</p>
+<p>知道通项公式，可以求出数列的任意一项。</p>
+<h3>从数列找通项公式的方法</h3>
+<h4>方法一：观察规律</h4>
+<p>观察各项的特征，归纳出 $a_n$ 与 $n$ 的关系。</p>
+<p><strong>常见规律</strong>：
+- 等差：$a_n = a_1 + (n-1)d$
+- 等比：$a_n = a_1 q^{n-1}$
+- 分子分母各成规律：分别找规律后组合
+- 正负交替：乘以 $(-1)^n$ 或 $(-1)^{n+1}$</p>
+<p><strong>例</strong>：$\dfrac{1}{1\cdot2}, \dfrac{1}{2\cdot3}, \dfrac{1}{3\cdot4}, \ldots$，$a_n = \dfrac{1}{n(n+1)}$</p>
+<h4>方法二：累加法（由递推关系求通项）</h4>
+<p>若 $a_{n+1} - a_n = f(n)$（已知），则：</p>
+<p>$$a_n = a_1 + \sum_{k=1}^{n-1} (a_{k+1} - a_k) = a_1 + \sum_{k=1}^{n-1} f(k)$$</p>
+<p><strong>例</strong>：$a_{n+1} - a_n = 2n$，$a_1 = 1$，求 $a_n$。</p>
+<p>$$a_n = 1 + \sum_{k=1}^{n-1} 2k = 1 + 2\cdot\frac{(n-1)n}{2} = 1 + n(n-1) = n^2-n+1$$</p>
+<h4>方法三：累乘法（等比类递推）</h4>
+<p>若 $\dfrac{a_{n+1}}{a_n} = f(n)$，则：</p>
+<p>$$a_n = a_1 \cdot \prod_{k=1}^{n-1} \frac{a_{k+1}}{a_k} = a_1 \cdot \prod_{k=1}^{n-1} f(k)$$</p>
+<h4>方法四：前 $n$ 项和求通项</h4>
+<p>若已知前 $n$ 项和 $S_n$：</p>
+<p>$$a_n = \begin{cases} S_1 &amp; n=1 \ S_n - S_{n-1} &amp; n \ge 2 \end{cases}$$</p>
+<p><strong>注意</strong>：求出后代入 $n=1$ 验证是否与 $a_1$ 相符；若相符则通项公式可合并，否则分段写。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知 $S_n = n^2 + 2n$，求 $a_n$。</p>
+<p><strong>解</strong>：$n\ge2$：$a_n = S_n - S_{n-1} = n^2+2n - (n-1)^2 - 2(n-1) = 2n+1$</p>
+<p>$n=1$：$a_1=S_1=3=2\times1+1=3$ ✓，故 $a_n = 2n+1$</p>
+<p><strong>例2</strong>：$a_1=2, a_{n+1}=a_n+3$，求 $a_n$。</p>
+<p><strong>解</strong>：$a_n = a_1 + (n-1)\times3 = 2+3(n-1) = 3n-1$（等差数列）</p>
+<p><strong>例3</strong>：数列各项：$2, 5, 10, 17, 26, \ldots$，求通项。</p>
+<p><strong>解</strong>：差数列：$3, 5, 7, 9, \ldots$（等差，公差 2），$a_n = n^2+1$（验证：$a_1=2, a_2=5$ ✓）</p>
+<h3>分段通项公式</h3>
+<p>有时数列需要分段：</p>
+<p>$$a_n = \begin{cases} f(n) &amp; n \le k \ g(n) &amp; n &gt; k \end{cases}$$</p>
+<p><strong>例</strong>：$a_n = \begin{cases} n &amp; n \text{ 为奇数} \ n^2 &amp; n \text{ 为偶数} \end{cases}$</p>
+<h3>易错点</h3>
+<ul>
+<li>$S_n$ 法求 $a_n$ 时，$n=1$ 必须单独验证</li>
+<li>若 $n=1$ 代入 $a_n=S_n-S_{n-1}$ 与 $S_1$ 相同，可合并；否则分段写</li>
+<li>通项公式必须定义域为正整数 $n\ge1$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第四章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第四章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/381-数列概念-高中.html">数列概念-高中</a></li>
+<li><a href="../atoms/383-数列递推公式.html">数列递推公式</a></li>
+<li><a href="../atoms/356-等差数列概念.html">等差数列概念</a></li>
+<li><a class="dead" title="未收录">等比数列概念</a></li>
+<li><a href="../atoms/355-等差数列前n项和.html">等差数列前n项和</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-文-10.html">2009-文-10</a></li>
+<li><a href="../exam/2009-文-14.html">2009-文-14</a></li>
+<li><a href="../exam/2010-文-17.html">2010-文-17</a></li>
+<li><a href="../exam/2011-文-12.html">2011-文-12</a></li>
+<li><a href="../exam/2011-文-17.html">2011-文-17</a></li>
+<li><a href="../exam/2013-理-03.html">2013-理-03</a></li>
+<li><a href="../exam/2014-文-15.html">2014-文-15</a></li>
+<li><a href="../exam/2014-理-13.html">2014-理-13</a></li>
+<li><a href="../exam/2014-理-20.html">2014-理-20</a></li>
+<li><a href="../exam/2015-文-09.html">2015-文-09</a></li>
+<li><a href="../exam/2015-理-04.html">2015-理-04</a></li>
+<li><a href="../exam/2015-理-09.html">2015-理-09</a></li>
+<li><a href="../exam/2016-文-15.html">2016-文-15</a></li>
+<li><a href="../exam/2016-理-10.html">2016-理-10</a></li>
+<li><a href="../exam/2016-理-12.html">2016-理-12</a></li>
+<li><a href="../exam/2017-文-17.html">2017-文-17</a></li>
+<li><a href="../exam/2018-理-09.html">2018-理-09</a></li>
+<li><a href="../exam/2018-理-17.html">2018-理-17</a></li>
+<li><a href="../exam/2019-文-06.html">2019-文-06</a></li>
+<li><a href="../exam/2019-理-14.html">2019-理-14</a></li>
+<li><a href="../exam/2019-理-20.html">2019-理-20</a></li>
+<li><a class="dead" title="未收录">2020-北京-03</a></li>
+<li><a href="../exam/2020-文-06.html">2020-文-06</a></li>
+<li><a href="../exam/2020-文-10.html">2020-文-10</a></li>
+<li><a href="../exam/2020-理-06.html">2020-理-06</a></li>
+<li><a class="dead" title="未收录">2021-北京-10</a></li>
+<li><a href="../exam/2021-理-19.html">2021-理-19</a></li>
+<li><a href="../exam/2022-文-10.html">2022-文-10</a></li>
+<li><a class="dead" title="未收录">2023-北京-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Asin(ωx+φ)函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>Asin(ωx+φ)函数</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: Asin(ωx+φ)函数, sinusoidal function, 正弦型函数, 简谐函数</p><h2>🎓 $y = A\sin(\omega x + \varphi)$ 函数</h2>
+<h3>定义与参数含义</h3>
+<p>$$y = A\sin(\omega x + \varphi) \quad (A &gt; 0, \omega &gt; 0)$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">参数</th>
+<th style="text-align: center;">名称</th>
+<th>物理/数学含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">$A$</td>
+<td style="text-align: center;">振幅（amplitude）</td>
+<td>函数值的最大值（峰值），$y \in [-A, A]$</td>
+</tr>
+<tr>
+<td style="text-align: center;">$\omega$</td>
+<td style="text-align: center;">角频率（angular frequency）</td>
+<td>影响周期 $T = \dfrac{2\pi}{\omega}$；$\omega$ 越大，振荡越快</td>
+</tr>
+<tr>
+<td style="text-align: center;">$\varphi$</td>
+<td style="text-align: center;">初相（initial phase）</td>
+<td>影响图象的水平位置；正值向左移</td>
+</tr>
+<tr>
+<td style="text-align: center;">$T = \dfrac{2\pi}{\omega}$</td>
+<td style="text-align: center;">周期（period）</td>
+<td>一次完整振荡所需的 $x$ 的变化量</td>
+</tr>
+<tr>
+<td style="text-align: center;">$f = \dfrac{1}{T} = \dfrac{\omega}{2\pi}$</td>
+<td style="text-align: center;">频率（frequency）</td>
+<td>单位 $x$ 内振荡的次数</td>
+</tr>
+</tbody>
+</table>
+<h3>关键特征</h3>
+<p><strong>最大值</strong>：$A$，当 $\omega x + \varphi = \dfrac{\pi}{2} + 2k\pi$ 时取得，即 $x = \dfrac{\pi/2 - \varphi + 2k\pi}{\omega}$</p>
+<p><strong>最小值</strong>：$-A$，当 $\omega x + \varphi = -\dfrac{\pi}{2} + 2k\pi$ 时取得</p>
+<p><strong>零点</strong>：当 $\omega x + \varphi = k\pi$ 时，即 $x = \dfrac{k\pi - \varphi}{\omega}$</p>
+<p><strong>图象中心线</strong>：$y = 0$（若有垂直移位 $y = A\sin(\omega x + \varphi) + b$，中心线为 $y = b$）</p>
+<h3>从图象求参数（五步法）</h3>
+<ol>
+<li><strong>振幅 $A$</strong>：$A = \dfrac{y_{\max} - y_{\min}}{2}$（最大值减最小值再除以 $2$）</li>
+<li><strong>周期 $T$</strong>：从图象中读出一个完整周期的 $x$ 跨度，$\omega = \dfrac{2\pi}{T}$</li>
+<li><strong>初相 $\varphi$</strong>：代入特殊点（如最大值点、零点），建立方程求 $\varphi$，并结合 $|\varphi|$ 的限制条件选择</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：写出满足以下条件的函数：振幅 $2$，周期 $\pi$，图象过点 $(0, \sqrt{3})$ 且 $|\varphi| \leq \dfrac{\pi}{2}$。</p>
+<p>解：$A = 2$，$T = \pi$，$\omega = \dfrac{2\pi}{\pi} = 2$，$f(x) = 2\sin(2x + \varphi)$。</p>
+<p>代入 $x = 0, y = \sqrt{3}$：$2\sin\varphi = \sqrt{3}$，$\sin\varphi = \dfrac{\sqrt{3}}{2}$。</p>
+<p>$\varphi = \dfrac{\pi}{3}$ 或 $\varphi = \pi - \dfrac{\pi}{3} = \dfrac{2\pi}{3}$。</p>
+<p>条件 $|\varphi| \leq \dfrac{\pi}{2}$，故 $\varphi = \dfrac{\pi}{3}$，$f(x) = 2\sin!\left(2x + \dfrac{\pi}{3}\right)$。</p>
+<p><strong>例2</strong>：$y = 3\sin!\left(2x - \dfrac{\pi}{6}\right)$ 的最大值、最小值和周期。</p>
+<p>解：$A = 3$（最大值 $3$，最小值 $-3$），$\omega = 2$，$T = \dfrac{2\pi}{2} = \pi$。</p>
+<p>最大值在 $2x - \dfrac{\pi}{6} = \dfrac{\pi}{2}$，即 $x = \dfrac{\pi}{3}$ 时取得（加 $k\pi$ 得全部最大值点）。</p>
+<p><strong>例3</strong>：判断 $y = -2\sin(3x + 1)$ 的振幅和周期。</p>
+<p>解：$y = -2\sin(3x+1) = 2\sin(3x+1+\pi)$（利用 $-\sin\theta = \sin(\theta+\pi)$）。</p>
+<p>振幅 $A = 2$，$\omega = 3$，周期 $T = \dfrac{2\pi}{3}$。</p>
+<p>（或直接：振幅取 $|A| = |-2| = 2$，周期 $T = 2\pi/3$，初相 $\varphi = 1 + \pi$，但需调整为标准形式）</p>
+<h3>物理背景</h3>
+<p>$y = A\sin(\omega t + \varphi)$ 描述<strong>简谐运动</strong>（simple harmonic motion），如弹簧振子、单摆小角度摆动、交流电压/电流。其中：
+- $t$ 为时间，$\omega$ 为角速度（rad/s），$T = 2\pi/\omega$ 为振动周期（秒）
+- 在交流电中，$f = 50$ Hz（中国），$T = 0.02$ s，$\omega = 100\pi$ rad/s</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>振幅取绝对值</strong>：若写成 $y = -3\sin(2x)$，振幅是 $3$ 而非 $-3$（振幅恒为正）</li>
+<li><strong>周期公式</strong>：$T = 2\pi/\omega$，$\omega$ 是括号内 $x$ 的系数，不是 $A$ 或 $\varphi$</li>
+<li><strong>$\varphi$ 不是移位量</strong>：移位量是 $\varphi/\omega$（将 $x$ 增大 $\varphi/\omega$ 相当于整体左移该量）</li>
+<li><strong>初相的多解</strong>：由 $\sin\varphi = c$ 解出 $\varphi$ 时，有两个主值，需用附加条件（$|\varphi| \leq \pi/2$ 等）筛选</li>
+<li><strong>有垂直位移时振幅不变</strong>：$y = A\sin(\omega x+\varphi) + b$ 中，振幅仍为 $A$，中心线上移 $b$，最大值为 $A+b$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中没有 $y = A\sin(\omega x + \varphi)$ 的专题，但学习了函数变换（平移、伸缩）。高中将这些变换应用于三角函数，$y = A\sin(\omega x + \varphi)$ 是描述一切周期振荡现象的通用数学语言。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：正弦型函数（Sinusoidal function），简谐运动（Simple harmonic motion），振幅、周期、频率</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">三角函数图象变换</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a href="../atoms/276-余弦函数图象与性质.html">余弦函数图象与性质</a></li>
+<li><a class="dead" title="未收录">弧度制</a></li>
+<li><a href="../atoms/270-三角函数应用.html">三角函数应用</a></li>
+<li><a class="dead" title="未收录">函数的图象变换</a></li>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2016-理-15.html">2016-理-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

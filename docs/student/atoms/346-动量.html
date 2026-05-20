@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动量</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>动量</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 动量守恒定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 动量, momentum, 线动量, 角动量</p><h2>🎓 动量</h2>
+<h3>定义</h3>
+<p><strong>动量</strong>（momentum）是描述物体运动状态的物理量，等于质量与速度的乘积。</p>
+<p>$$\vec{p} = m\vec{v}$$</p>
+<ul>
+<li>$\vec{p}$：动量，单位 <strong>kg·m/s</strong></li>
+<li>$m$：质量，单位 kg（标量）</li>
+<li>$\vec{v}$：速度，单位 m/s（矢量）</li>
+</ul>
+<p>动量是<strong>矢量</strong>，方向与速度方向相同。</p>
+<h3>物理意义</h3>
+<p>动量衡量物体"运动的量"，综合考虑了质量和速度两个因素。</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>质量</th>
+<th>速度</th>
+<th>动量大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子弹</td>
+<td>小</td>
+<td>极大</td>
+<td>较大</td>
+</tr>
+<tr>
+<td>卡车</td>
+<td>很大</td>
+<td>较小</td>
+<td>很大</td>
+</tr>
+<tr>
+<td>静止物体</td>
+<td>任意</td>
+<td>0</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>同一物体，速度越大动量越大；同一速度，质量越大动量越大。</p>
+<h3>动量的计算</h3>
+<p><strong>例1</strong>：质量 $m = 0.1\text{ kg}$ 的球以 $v = 20\text{ m/s}$ 向右运动，求动量。</p>
+<p>$$p = mv = 0.1 \times 20 = 2\text{ kg·m/s，方向向右}$$</p>
+<p><strong>例2</strong>：质量 $m = 2\text{ kg}$ 的物体，速度由 $v_1 = 3\text{ m/s}$ 向右变为 $v_2 = 3\text{ m/s}$ 向左，求动量变化量。</p>
+<p>取向右为正方向：</p>
+<p>$$\Delta\vec{p} = m\vec{v_2} - m\vec{v_1} = 2\times(-3) - 2\times3 = -12\text{ kg·m/s}$$</p>
+<p>即动量变化量大小为 12 kg·m/s，方向向左。</p>
+<h3>动量与动能的区别</h3>
+<table>
+<thead>
+<tr>
+<th>物理量</th>
+<th>公式</th>
+<th>性质</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>动量 $\vec{p} = m\vec{v}$</td>
+<td>矢量</td>
+<td>kg·m/s</td>
+<td></td>
+</tr>
+<tr>
+<td>动能 $E_k = \frac{1}{2}mv^2$</td>
+<td>标量</td>
+<td>J</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>动量相同，动能不一定相同（如质量不同）</li>
+<li>动能相同，动量不一定相同（如质量不同）</li>
+<li>动量为零 → 动能必为零；动能为零 → 动量必为零</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>动量是矢量</strong>：计算动量变化时必须考虑方向，不能只用大小相减。</li>
+<li><strong>单位区分</strong>：动量单位 kg·m/s，不是焦耳（J）。</li>
+<li><strong>方向与速度一致</strong>：动量方向就是速度方向，不受力的方向影响。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第一章第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：动量 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/345-冲量.html">冲量</a></li>
+<li><a href="../atoms/349-动量定理.html">动量定理</a></li>
+<li><a href="../atoms/347-动量守恒定律.html">动量守恒定律</a></li>
+<li><a class="dead" title="未收录">动量守恒条件</a></li>
+<li><a class="dead" title="未收录">碰撞</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">速度</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-北京-04</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-01</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-02.html">2018-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-02</a></li>
+<li><a class="dead" title="未收录">2022-北京-10</a></li>
+<li><a href="../exam/2023-新课标-07.html">2023-新课标-07</a></li>
+<li><a href="../exam/2024-辽宁-01.html">2024-辽宁-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遗传图解</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>遗传图解</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第1章遗传因子的发现]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 遗传图解, genetic diagram, 遗传棋盘格</p><h1>遗传图解</h1>
+<blockquote>
+<p><strong>一句话</strong>：遗传图解（棋盘格法）是用系统图示表示亲本基因型、配子类型和后代基因型比例的标准分析工具，是解答遗传学计算题的核心方法。
+<strong>English</strong>: A genetic diagram (Punnett square) is a grid used to predict the genotype ratios of offspring from known parental genotypes.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>遗传图解</strong>：将遗传学实验中亲本（P）基因型、经减数分裂产生的配子类型及比例、经随机受精产生的后代基因型和表现型，用规范的图形（通常为棋盘格/Punnett square）和符号系统表示出来，便于分析遗传比例。</p>
+<h3>原理 / 规律</h3>
+<h4>标准书写格式</h4>
+<p>以Aa × Aa为例：</p>
+<pre><code>P:      Aa    ×    Aa
+        ↓配子       ↓配子
+配子:  A  a      A  a
+          ↓受精
+F₁基因型: 见棋盘格
+</code></pre>
+<p><strong>棋盘格（Punnett square）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>A</strong></th>
+<th><strong>a</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>AA</td>
+<td>Aa</td>
+</tr>
+<tr>
+<td><strong>a</strong></td>
+<td>Aa</td>
+<td>aa</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>基因型：AA : Aa : aa = 1 : 2 : 1</li>
+<li>表现型（完全显性）：显性 : 隐性 = 3 : 1</li>
+</ul>
+<h4>两对基因遗传图解（YyRr × YyRr）</h4>
+<p>配子（各1/4）：YR, Yr, yR, yr</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>YR</strong></th>
+<th><strong>Yr</strong></th>
+<th><strong>yR</strong></th>
+<th><strong>yr</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>YR</strong></td>
+<td>YYRR</td>
+<td>YYRr</td>
+<td>YyRR</td>
+<td>YyRr</td>
+</tr>
+<tr>
+<td><strong>Yr</strong></td>
+<td>YYRr</td>
+<td>YYrr</td>
+<td>YyRr</td>
+<td>Yyrr</td>
+</tr>
+<tr>
+<td><strong>yR</strong></td>
+<td>YyRR</td>
+<td>YyRr</td>
+<td>yyRR</td>
+<td>yyRr</td>
+</tr>
+<tr>
+<td><strong>yr</strong></td>
+<td>YyRr</td>
+<td>Yyrr</td>
+<td>yyRr</td>
+<td>yyrr</td>
+</tr>
+</tbody>
+</table>
+<p>后代9种基因型，4种表现型，比例9:3:3:1。</p>
+<h4>遗传图解书写规范（高考要求）</h4>
+<ol>
+<li><strong>标注亲本（P）</strong>：写清楚亲本基因型和表现型。</li>
+<li><strong>写出配子</strong>：在 ↓ 下方列出各种配子及比例（用分数或比值）。</li>
+<li><strong>棋盘格或乘法</strong>：一对基因用文字列举，两对以上用棋盘格或概率乘法。</li>
+<li><strong>标注后代（F₁/F₂）</strong>：写出基因型比和表现型比。</li>
+<li><strong>性别符号</strong>：♀（母/雌）, ♂（父/雄）；伴性遗传需注明X染色体写法（$X^A$，$X^a$，Y）。</li>
+</ol>
+<h4>伴性遗传图解示例（红绿色盲）</h4>
+<pre><code>P:   正常女性(携带者)     ×    正常男性
+     X^A X^a                    X^A Y
+
+配子: X^A, X^a              X^A, Y
+
+后代:
+     X^A X^A  正常女性 (1/4)
+     X^A X^a  携带者女性 (1/4)
+     X^A Y    正常男性 (1/4)
+     X^a Y    色盲男性 (1/4)
+</code></pre>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：写出白化病（aa）患者（♂）与携带者（♀，Aa）婚配的遗传图解，并分析后代患病风险。</p>
+<p><strong>遗传图解</strong>：</p>
+<pre><code>P:   携带者(Aa) ♀  ×  白化病患者(aa) ♂
+
+配子:    A   a           a
+
+后代:   Aa  :  aa  =  1  :  1
+
+表现型: 正常 : 白化 = 1 : 1
+</code></pre>
+<p><strong>结论</strong>：
+- 后代患白化病概率 = 1/2
+- 后代中正常个体（Aa）均为携带者，概率也为1/2</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>配子写法</strong>：只写基因组成，不写基因型符号（写A不写AA，写XᴬY不写男性/女性）。</li>
+<li><strong>棋盘格是"雌配子×雄配子"</strong>：列表头时注意行列分别代表雌雄配子，不要混淆。</li>
+<li><strong>概率计算≠实际后代数</strong>：遗传图解给出的是概率，实际后代因样本有限会偏差。</li>
+<li><strong>"/"与":"区别</strong>：基因型内等位基因用斜杠 Aa = A/a（有时这样写）；比例用冒号1:2:1。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>遗传图解</td>
+<td>genetic diagram</td>
+</tr>
+<tr>
+<td>棋盘格</td>
+<td>Punnett square</td>
+</tr>
+<tr>
+<td>配子</td>
+<td>gamete</td>
+</tr>
+<tr>
+<td>后代</td>
+<td>offspring / progeny</td>
+</tr>
+<tr>
+<td>亲本</td>
+<td>parent (P)</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>A Punnett square is used to predict the probability of offspring inheriting a particular genotype.</em>（棋盘格用于预测后代继承特定基因型的概率。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第1章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"庞纳特方格"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/266-分离定律.html">分离定律</a></li>
+<li><a href="../atoms/272-自由组合定律.html">自由组合定律</a></li>
+<li><a href="../atoms/270-测交.html">测交</a></li>
+<li><a href="../atoms/276-伴性遗传.html">伴性遗传</a></li>
+<li><a class="dead" title="未收录">红绿色盲遗传</a></li>
+<li><a class="dead" title="未收录">基因型与表现型</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2018-新课标Ⅱ-10.html">2018-新课标Ⅱ-10</a></li>
+<li><a href="../exam/2021-全国乙-10.html">2021-全国乙-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

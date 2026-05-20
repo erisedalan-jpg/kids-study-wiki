@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生态系统能量流动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>生态系统能量流动</h1><div class="meta-card"><span><strong>权重</strong>41</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 生态系统能量流动, energy flow in ecosystem, 能量流动</p><h1>生态系统能量流动</h1>
+<blockquote>
+<p><strong>一句话</strong>：能量沿食物链（网）从低营养级流向高营养级，具有单向流动、逐营养级递减的特点，传递效率约10%~20%。
+<strong>English</strong>: Energy flows unidirectionally along food chains from lower to higher trophic levels, decreasing at each level with a transfer efficiency of approximately 10%–20%.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>生态系统能量流动</strong>是指生态系统中能量的输入、传递、转化和散失的过程。能量是生命活动的驱动力，其流动规律是生态系统功能分析的核心。</p>
+<h3>概念 / 类型</h3>
+<p><strong>能量流动的过程</strong>：</p>
+<pre><code>太阳能
+  ↓ 生产者光合作用固定
+生产者同化量（GPP）
+  ├─ 自身呼吸散失（热能，不可再利用）
+  └─ 净初级生产量（NPP）
+       ├─ 分解者分解（遗体等）
+       └─ 流向消费者
+            ├─ 呼吸散失
+            ├─ 分解者分解
+            └─ 流向下一营养级
+</code></pre>
+<p><strong>各营养级能量分配公式</strong>：</p>
+<p>某营养级同化量 = 呼吸量 + 流向下一营养级量 + 流向分解者量</p>
+<p><strong>能量传递效率</strong>（林德曼效率）：</p>
+<p>$$E = \frac{\text{第}n+1\text{营养级同化量}}{\text{第}n\text{营养级同化量}} \approx 10\%\sim20\%$$</p>
+<p><strong>两个特点</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单向流动</td>
+<td>能量只能从低营养级流向高营养级，不可逆转</td>
+</tr>
+<tr>
+<td>逐营养级递减</td>
+<td>每个营养级只能截留约10%~20%，其余散失为热</td>
+</tr>
+</tbody>
+</table>
+<p><strong>能量流动分析表（以草原为例）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>营养级</th>
+<th>同化量(kJ)</th>
+<th>呼吸量</th>
+<th>流向分解者</th>
+<th>流向下营养级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>草（生产者）</td>
+<td>1000</td>
+<td>500</td>
+<td>300</td>
+<td>200（兔等）</td>
+</tr>
+<tr>
+<td>兔（初级消费者）</td>
+<td>200</td>
+<td>100</td>
+<td>60</td>
+<td>40（狐等）</td>
+</tr>
+<tr>
+<td>狐（次级消费者）</td>
+<td>40</td>
+<td>24</td>
+<td>12</td>
+<td>4（狼等）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：若人从植物性食物中获能与从动物性食物中获能之比为3:1，效率均取10%，满足人每天2000 kJ，需植物固定多少能量？</p>
+<ul>
+<li>植物性食物所需：2000 × 3/4 = 1500 kJ → 植物固定：1500 ÷ 10% = 15000 kJ</li>
+<li>动物性食物所需：2000 × 1/4 = 500 kJ → 植物固定：500 ÷ 10% ÷ 10% = 50000 kJ</li>
+<li>合计：<strong>65000 kJ</strong></li>
+</ul>
+<p><strong>调整食物结构的生态意义</strong>：减少动物性食物比例，可大幅减少对植物能量的需求，节约资源（"吃素更节能"的定量依据）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>能量不循环</strong>：物质循环，但能量单向流动且最终以热能形式散失，不可逆。</li>
+<li><strong>摄入量≠同化量</strong>：消费者摄入量 = 同化量 + 粪便量（粪便属于上一营养级的同化量范畴，归入分解者）。</li>
+<li><strong>"流向下一营养级"≠"同化量×效率"</strong>：效率是相邻营养级同化量之比，不是单纯的"流入量"。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能量流动</td>
+<td>energy flow</td>
+<td>n.</td>
+<td>单向，逐级递减</td>
+</tr>
+<tr>
+<td>同化量</td>
+<td>assimilation</td>
+<td>n.</td>
+<td>某营养级真正利用的能量</td>
+</tr>
+<tr>
+<td>净初级生产量</td>
+<td>net primary productivity (NPP)</td>
+<td>n.</td>
+<td>生产者固定量−呼吸量</td>
+</tr>
+<tr>
+<td>传递效率</td>
+<td>transfer efficiency</td>
+<td>n.</td>
+<td>相邻营养级同化量之比</td>
+</tr>
+<tr>
+<td>热力学第二定律</td>
+<td>second law of thermodynamics</td>
+<td>n.</td>
+<td>能量转化不可避免有热损</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能量在生态系统中单向流动，每经过一个营养级损失80%~90%。</td>
+<td>Energy flows unidirectionally in an ecosystem, losing 80%–90% at each trophic level.</td>
+</tr>
+<tr>
+<td>缩短食物链可提高能量利用效率，减少对生产者的需求。</td>
+<td>Shortening food chains improves energy use efficiency and reduces demand on producers.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修2 生物与环境.pdf</a> 第五章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"能量流动（生态学）"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/389-营养级.html">营养级</a></li>
+<li><a class="dead" title="未收录">能量金字塔</a></li>
+<li><a class="dead" title="未收录">食物链（高中）</a></li>
+<li><a class="dead" title="未收录">生态系统物质循环</a></li>
+<li><a class="dead" title="未收录">生产者</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-09.html">2013-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-04.html">2015-新课标Ⅱ-04</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-09.html">2015-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-05</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2021-北京-11</a></li>
+<li><a class="dead" title="未收录">2022-北京-19</a></li>
+<li><a class="dead" title="未收录">2022-湖南-08</a></li>
+<li><a href="../exam/2023-新课标-09.html">2023-新课标-09</a></li>
+<li><a href="../exam/2024-辽宁-16.html">2024-辽宁-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

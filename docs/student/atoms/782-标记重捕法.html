@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>标记重捕法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>标记重捕法</h1><div class="meta-card"><span><strong>权重</strong>13</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[种群生态学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 标记重捕法, 标志重捕法, 林可指数法, Lincoln-Petersen method</p><h1>标记重捕法</h1>
+<blockquote>
+<p><strong>一句话</strong>：标记重捕法是通过对种群中部分个体进行标记后放回，再根据重捕样本中标记个体所占比例来估算种群密度的生态学方法。
+<strong>English</strong>: A sampling technique used to estimate population size by capturing, marking, releasing, and then recapturing individuals, where the proportion of marked individuals in the second sample is used to infer the total population.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：标记重捕法基于以下核心假设——在两次捕获之间，种群内个体均匀混合，且标记个体与未标记个体的被捕概率相同（即无标记效应、无迁入迁出、无大量出生死亡）。其基本计算公式为：</p>
+<p>$$ N = \frac{M \times n}{m} $$</p>
+<p>其中，$N$ 为种群个体总数（估算值），$M$ 为第一次捕获并标记的个体数，$n$ 为第二次捕获的个体总数，$m$ 为第二次捕获中被标记的个体数。该公式的逻辑是：标记个体在种群中的比例（$M/N$）应等于重捕样本中标记个体的比例（$m/n$），由此推得 $N$。</p>
+<p><strong>关键方法</strong>：高考中常见的考查点包括：①在已知 $M$、$n$、$m$ 条件下直接套用公式计算 $N$，进而求种群密度（$N$ ÷ 面积或体积）；②当重捕前标记个体因自然死亡或迁出等导致数量变动时，需先修正 $M$ 值再代入公式计算，例如：若重捕前标记个体已死亡 $x$ 只，则实际应使用的 $M' = M - x$（待家长核对）；③对公式变形理解——若 $m$ 偏小（如标记物脱落导致重捕时未能识别），则估算 $N$ 偏大，反之偏小。</p>
+<p><strong>典型应用</strong>：高考常以具体生态调查情景设题，如调查某池塘中鲫鱼的种群密度、调查某草地中田鼠的种群数量等。题干通常给出一组数据，要求计算 $N$，再结合调查面积求出密度；或要求分析操作失误（如标记个体警惕性增高不易重捕、标记物脱落、标志导致个体更易被天敌捕食等）对估算结果的影响方向。另一常见设问是将标记重捕法与样方法进行适用对象对比——标记重捕法适用于活动能力强、活动范围大的动物，而样方法适用于植物或活动范围小的动物。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆总数估算与密度调查</strong>：标记重捕法直接估算的是种群个体总数 $N$，求种群密度必须再除以调查区域的面积或体积，不可将 $N$ 直接当作密度作答。</li>
+<li><strong>忽略适用条件判断</strong>：该方法要求标记后个体与未标记个体被重捕的概率相等。若因标记导致个体更易被天敌捕食，则 $m$ 偏小，$N$ 估算值偏大；若标记个体行动受限不易重捕，则 $m$ 偏小，$N$ 同样偏大。必须能根据条件变化正确判断估算结果的偏差方向。</li>
+<li><strong>重捕前标记个体数量已变动的处理</strong>：若两次捕获之间标记个体发生死亡或迁出，直接代入原 $M$ 值计算会导致结果错误，应先修正 $M$ 为实际存活的标记个体数。</li>
+<li><strong>适用范围混淆</strong>：标记重捕法适用于活动能力强、活动范围大的动物种群调查；对于植物、蚜虫、跳蝻等活动范围小或固着生活的生物，应采用样方法而非标记重捕法。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标记重捕法</td>
+<td>mark-recapture method</td>
+<td>通过标记与重捕估算种群数量的方法</td>
+</tr>
+<tr>
+<td>种群密度</td>
+<td>population density</td>
+<td>单位面积或单位体积中的个体数量</td>
+</tr>
+<tr>
+<td>标记个体</td>
+<td>marked individual</td>
+<td>被捕获后施加标记并放回的个体</td>
+</tr>
+<tr>
+<td>重捕</td>
+<td>recapture</td>
+<td>第二次捕获以获取标记个体比例</td>
+</tr>
+<tr>
+<td>样方法</td>
+<td>quadrat method</td>
+<td>适用于植物或活动范围小的动物的种群密度调查方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">种群密度调查方法</a></li>
+<li><a href="../atoms/366-样方法.html">样方法</a></li>
+<li><a class="dead" title="未收录">种群的数量特征</a></li>
+<li><a class="dead" title="未收录">出生率与死亡率</a></li>
+<li><a class="dead" title="未收录">种群增长模型</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-新课标-09.html">2010-新课标-09</a></li>
+<li><a href="../exam/2023-新课标-04.html">2023-新课标-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

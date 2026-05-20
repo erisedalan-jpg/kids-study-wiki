@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数概念</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 一次函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数概念, function, 函数, 映射关系</p><h1>函数概念</h1>
+<blockquote>
+<p><strong>一句话</strong>：在一个变化过程中，如果变量 $x$ 的每一个值，变量 $y$ 都有唯一确定的值与之对应，那么 $y$ 就是 $x$ 的函数。
+<strong>English</strong>: A function is a relationship between two variables where every value of $x$ corresponds to exactly one value of $y$.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>从生活理解"函数"</h3>
+<ul>
+<li>温度随时间变化：每个时刻对应一个唯一温度</li>
+<li>商品总价随数量变化：买 $n$ 个每个 3 元，总价 $y=3n$</li>
+<li>正方形面积随边长变化：$S=a^2$</li>
+</ul>
+<p><strong>共同特征</strong>：一个量（$x$）变，另一个量（$y$）随之唯一确定。</p>
+<h3>判断是否是函数</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>是否函数</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y=2x+1$</td>
+<td>✅</td>
+<td>每个 $x$ 对应唯一 $y$</td>
+</tr>
+<tr>
+<td>$x^2+y^2=1$</td>
+<td>❌（不是 $x$ 到 $y$ 的函数）</td>
+<td>$x=0$ 时 $y=\pm1$，不唯一</td>
+</tr>
+<tr>
+<td>年龄对应姓名</td>
+<td>❌</td>
+<td>同一年龄可能对应多个人</td>
+</tr>
+<tr>
+<td>姓名对应年龄</td>
+<td>✅（每人只有一个年龄）</td>
+<td>唯一对应</td>
+</tr>
+</tbody>
+</table>
+<h3>函数的三种表示方法</h3>
+<ol>
+<li><strong>解析式（公式）</strong>：$y = 2x+1$</li>
+<li><strong>表格</strong>：列出 $x$ 和 $y$ 的对应值</li>
+<li><strong>图象</strong>：在坐标系中画出对应点的集合</li>
+</ol>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>函数</strong>：设 $A$、$B$ 是两个非空数集。若对 $A$ 中的每一个元素 $x$，按照某个<strong>确定的对应关系</strong> $f$，在 $B$ 中都有唯一确定的元素 $y$ 与之对应，则称 $f: A \to B$ 为从 $A$ 到 $B$ 的函数，记作 $y=f(x)$（$x \in A$）。</p>
+<p><strong>三要素</strong>：定义域（$A$）、值域（$f$ 的值的集合 $\subseteq B$）、对应法则 $f$。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：判断下列对应是否为函数（$x \in \mathbb{R}$）：</p>
+<p>(a) $y = x^2$：✅，每个 $x$ 对应唯一 $y$（非负实数）。</p>
+<p>(b) $y^2 = x$：❌，$x=4$ 时 $y=\pm2$，不唯一。</p>
+<p><strong>例 2</strong>：函数 $f(x)=3x-1$，求 $f(0)$、$f(2)$、$f(-1)$。</p>
+<p>$$f(0)=-1,\quad f(2)=5,\quad f(-1)=-4$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 认为"$y$ 随 $x$ 变化"就是函数——关键是<strong>唯一对应</strong></li>
+<li>❌ 把函数图象中"一个 $x$ 对应多个 $y$"的曲线当函数（竖线检验法：竖线与图象最多一个交点）</li>
+<li>❌ 混淆"函数值"与"自变量值"</li>
+</ul>
+<h3>知识联系</h3>
+<p>函数概念是<a class="dead" title="未收录">自变量与因变量</a>的基础；<a href="../atoms/177-一次函数定义.html">一次函数定义</a>是函数的具体类型；函数三种表示与<a href="../atoms/187-函数图象.html">函数图象</a>衔接；高中将函数定义推广至任意集合间的映射。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>函数</td>
+<td>function</td>
+</tr>
+<tr>
+<td>自变量</td>
+<td>independent variable</td>
+</tr>
+<tr>
+<td>因变量</td>
+<td>dependent variable</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>range</td>
+</tr>
+<tr>
+<td>对应关系</td>
+<td>correspondence / mapping</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第19章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·函数</li>
+<li>拓展：<a class="dead" title="未收录">数学/一次函数定义</a> · <a class="dead" title="未收录">数学/函数图象</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">自变量与因变量</a> · <a href="../atoms/187-函数图象.html">函数图象</a> · <a href="../atoms/177-一次函数定义.html">一次函数定义</a> · <a class="dead" title="未收录">一次函数图象与性质</a> · <a href="../atoms/197-待定系数法.html">待定系数法</a> · <a href="../atoms/132-平面直角坐标系.html">坐标系</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-05.html">2008-文-05</a></li>
+<li><a href="../exam/2008-文-21.html">2008-文-21</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-06.html">2024-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

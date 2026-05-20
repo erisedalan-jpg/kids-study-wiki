@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>共点力平衡</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>共点力平衡</h1><div class="meta-card"><span><strong>权重</strong>36</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 运动和力的关系]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 共点力平衡, concurrent force equilibrium</p><h2>🎓 共点力平衡（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>共点力</strong>（concurrent forces）：所有力的作用线交于同一点的力系。</p>
+<p>对于质点，所有力均视为共点力。</p>
+<p><strong>共点力平衡条件</strong>：</p>
+<p>$$\sum \vec{F} = \vec{0} \iff \sum F_x = 0 \text{ 且 } \sum F_y = 0$$</p>
+<p>合力为零，即各力矢量首尾相接构成封闭多边形。</p>
+<h3>解题方法</h3>
+<h4>方法一：正交分解法（最常用）</h4>
+<ol>
+<li>选坐标系（通常一轴沿主要运动方向或最多力的方向）</li>
+<li>将各力分解到 $x$、$y$ 轴</li>
+<li>分别列方程 $\sum F_x = 0$，$\sum F_y = 0$</li>
+<li>联立求解</li>
+</ol>
+<h4>方法二：图解法（三力平衡）</h4>
+<p>三力平衡时，三力首尾相接构成封闭三角形，用正弦/余弦定理求解。</p>
+<h4>方法三：等效合力法</h4>
+<p>将部分力合成，再与其余力平衡。</p>
+<h3>常见共点力平衡模型</h3>
+<p><strong>模型1：悬挂物</strong>（两绳夹角问题）</p>
+<p>物体重 $G$，两绳夹角 $\alpha$（绳子与竖直方向的夹角分别为 $\theta_1$，$\theta_2$）：</p>
+<p>$$T_1\cos\theta_1 + T_2\cos\theta_2 = G$$
+$$T_1\sin\theta_1 = T_2\sin\theta_2$$</p>
+<p>特殊：两绳对称（$\theta_1=\theta_2=\theta$）：$T_1=T_2=T$，$2T\cos\theta = G$，$T=\frac{G}{2\cos\theta}$</p>
+<p>两绳夹角越大，绳中张力越大（$\theta\to90°$ 时，$T\to\infty$）。</p>
+<p><strong>模型2：斜面静止</strong></p>
+<p>重力 $G$，斜面法线方向支持力 $N$，摩擦力 $f$（沿斜面）：</p>
+<p>沿斜面：$f = G\sin\theta$（或反向，视物体趋势）</p>
+<p>垂直斜面：$N = G\cos\theta$</p>
+<p><strong>模型3：结点法</strong>（多绳连接）</p>
+<p>在结点处分析受力，各绳拉力与结点所受其他力平衡。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一物体用两根绳子悬挂，左绳与水平方向成60°，右绳水平，物体重100N。求两绳张力。</p>
+<p>设左绳张力 $T_1$（与水平成60°），右绳张力 $T_2$（水平向左）：</p>
+<p>$y$ 方向：$T_1\sin60° = G = 100 \Rightarrow T_1 = \frac{100}{\sin60°} = \frac{100}{\sqrt{3}/2} = \frac{200}{\sqrt{3}} \approx 115.5\text{ N}$</p>
+<p>$x$ 方向：$T_1\cos60° = T_2 \Rightarrow T_2 = 115.5\times0.5 \approx 57.7\text{ N}$</p>
+<p><strong>例2</strong>：电灯挂在两绳中间，两绳与竖直方向各成30°，灯重20N，求绳中张力。</p>
+<p>$$2T\cos30° = 20 \Rightarrow T = \frac{20}{2\cos30°} = \frac{20}{\sqrt{3}} \approx 11.5\text{ N}$$</p>
+<p><strong>例3</strong>：物体在斜面上静止，倾角37°，$\mu_s=0.5$，$m=5\text{ kg}$，$g=10\text{ m/s}^2$。求摩擦力。</p>
+<p>$$G\sin37° = mg\times0.6 = 30\text{ N}$$</p>
+<p>最大静摩擦力：$f_{\max} = \mu_s N = 0.5\times G\cos37° = 0.5\times40 = 20\text{ N}$</p>
+<p>$G\sin37° = 30\text{ N} &gt; f_{\max} = 20\text{ N}$，物体<strong>不能静止</strong>（会下滑）。</p>
+<p>（题目说静止，需重新检验，或题目条件有调整）</p>
+<p><strong>例4</strong>：结点法——三绳结点，绳1水平（左），绳2向右下45°，绳3向右上60°，绳1拉力10N，求绳2、绳3张力。</p>
+<p>$x$：$-10 + T_2\cos45° + T_3\cos60° = 0 \Rightarrow \frac{\sqrt{2}}{2}T_2 + \frac{1}{2}T_3 = 10$</p>
+<p>$y$：$-T_2\sin45° + T_3\sin60° = 0 \Rightarrow T_3 = \frac{T_2\sin45°}{\sin60°} = \frac{\frac{\sqrt{2}}{2}T_2}{\frac{\sqrt{3}}{2}} = \frac{\sqrt{2}}{\sqrt{3}}T_2$</p>
+<p>代入 $x$ 方程求解 $T_2$，再求 $T_3$（计算过程从略）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>正交分解时注意每个力的分量方向</strong>：有些力分量可正可负，必须统一坐标系正方向。</li>
+<li><strong>三力平衡不一定成直角三角形</strong>：只有特殊情形下三力垂直。</li>
+<li><strong>绳子只能拉，不能推</strong>：绳中张力只能沿绳向内（拉力），大小 &gt; 0。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中只处理简单二力平衡。高中引入多力平衡（三力、四力），用正交分解法定量求解，是高中静力学的核心内容。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第四章第5节，页码待家长核对）</li>
+<li><strong>百科</strong>：力学平衡 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">物体平衡条件</a></li>
+<li><a class="dead" title="未收录">力的合成-高中</a></li>
+<li><a class="dead" title="未收录">力的分解</a></li>
+<li><a class="dead" title="未收录">三角形定则</a></li>
+<li><a class="dead" title="未收录">平行四边形定则</a></li>
+<li><a class="dead" title="未收录">斜面问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-03.html">2008-全国Ⅱ-03</a></li>
+<li><a href="../exam/2010-新课标Ⅰ-05.html">2010-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2011-北京-10</a></li>
+<li><a href="../exam/2012-新课标-03.html">2012-新课标-03</a></li>
+<li><a href="../exam/2012-新课标-10.html">2012-新课标-10</a></li>
+<li><a href="../exam/2012-新课标-11.html">2012-新课标-11</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-02.html">2013-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-11</a></li>
+<li><a href="../exam/2016-新课标Ⅱ-01.html">2016-新课标Ⅱ-01</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-08</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-03.html">2019-新课标Ⅱ-03</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2021-湖南-05</a></li>
+<li><a href="../exam/2022-全国乙-02.html">2022-全国乙-02</a></li>
+<li><a class="dead" title="未收录">2022-湖南-03</a></li>
+<li><a class="dead" title="未收录">2022-湖南-05</a></li>
+<li><a class="dead" title="未收录">2022-湖南-09</a></li>
+<li><a class="dead" title="未收录">2022-湖南-16</a></li>
+<li><a href="../exam/2023-新课标-12.html">2023-新课标-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

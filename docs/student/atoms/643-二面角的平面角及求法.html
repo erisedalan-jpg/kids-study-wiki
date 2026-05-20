@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二面角的平面角及求法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二面角的平面角及求法</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二面角的平面角及求法</p><h1>二面角的平面角及求法</h1>
+<blockquote>
+<p><strong>一句话</strong>：二面角的平面角是从一条棱出发在两个半平面内分别作垂直于棱的射线所成的角，用来度量二面角的大小。
+<strong>English</strong>: The plane angle of a dihedral angle is the angle formed by two rays drawn from a point on the edge, each perpendicular to the edge and lying in one of the half-planes.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+从一条直线出发的两个半平面所组成的图形叫做二面角，这条直线叫做二面角的棱，这两个半平面叫做二面角的面。在棱上任取一点 $O$，分别在两个面内作垂直于棱的射线 $OA$ 和 $OB$，则 $\angle AOB$ 称为该二面角的平面角。二面角的大小用它的平面角来度量，范围通常为 $[0,\pi]$。<br />
+若二面角的平面角为 $90^\circ$，则称两个平面垂直。</p>
+<p><strong>关键方法</strong><br />
+高考中求解二面角的平面角主要有三种方法：</p>
+<ol>
+<li><strong>定义法</strong>：直接在棱上取点，分别在两个面内作棱的垂线，构造三角形通过解三角形求角。  </li>
+<li><strong>三垂线定理法</strong>：从一个面内一点向另一个面作垂线，再从垂足向棱作垂线，连接棱上的垂足和原来的点，利用三垂直关系得到平面角，然后解直角三角形。  </li>
+<li><strong>空间向量法（坐标法）</strong>：建立空间直角坐标系，求两个平面的法向量 $\vec{n_1}, \vec{n_2}$，利用公式 $\cos\theta = \frac{|\vec{n_1} \cdot \vec{n_2}|}{|\vec{n_1}||\vec{n_2}|}$ 计算二面角的平面角（注意判断是锐角还是钝角，或利用方向向量确定夹角的补角关系）。对于有现成垂直条件的几何体（如长方体、直棱柱、有一部分线面垂直的锥体）优先考虑向量法。</li>
+</ol>
+<p><strong>典型应用</strong><br />
+- <strong>直接求二面角</strong>：如“求二面角 $A-BC-D$ 的正弦值/余弦值/正切值”。常以三棱锥、四棱锥、直棱柱等为载体。<br />
+- <strong>利用二面角求体积或距离</strong>：已知二面角大小，反求某些线段长度或点到面的距离。<br />
+- <strong>折叠问题</strong>：平面图形沿某直线折叠后形成二面角，求折叠后的角度或线段长度。关键在于折叠前后位于折叠线两侧的点到折叠线的距离不变，且折叠后的角就是二面角的平面角。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆异面直线夹角、线面角与二面角的平面角概念</strong>：二面角的平面角必须满足“棱上一点、两边分别在两个面内且垂直于棱”；不可误把棱上任意两条射线夹角直接当作平面角。  </li>
+<li><strong>用向量法时忽略二面角的钝角情况</strong>：法向量夹角与二面角的平面角相等或互补，需根据图形判断实际二面角是锐角还是钝角。若一律取绝对值，当所求为钝角时会出错。  </li>
+<li><strong>作平面角时辅助线混乱</strong>：三垂线法需保证“一垂、二垂、三连”的顺序，不能跳步；定义法作垂线时一定要在棱上取合适的点，使得构造的三角形可解。  </li>
+<li><strong>解三角形时误用边角关系</strong>：构造出的直角三角形或一般三角形，有时会将边的关系错用为正弦、余弦，特别是在棱两侧的垂线段长度并非已知时容易计算错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二面角</td>
+<td>dihedral angle</td>
+<td>两个半平面构成的图形</td>
+</tr>
+<tr>
+<td>平面角</td>
+<td>plane angle</td>
+<td>从棱上一点向两面作垂线所成的角</td>
+</tr>
+<tr>
+<td>棱</td>
+<td>edge</td>
+<td>两个半平面的交线</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>normal vector</td>
+<td>垂直于平面的向量</td>
+</tr>
+<tr>
+<td>三垂线定理</td>
+<td>Three Perpendiculars Theorem (in space)</td>
+<td>空间垂直关系的判定定理</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直线与平面垂直的判定与性质</a></li>
+<li><a class="dead" title="未收录">空间向量与立体几何</a></li>
+<li><a class="dead" title="未收录">异面直线所成的角</a></li>
+<li><a class="dead" title="未收录">直线与平面所成的角</a></li>
+<li><a class="dead" title="未收录">平面的法向量求法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-19.html">2008-理-19</a></li>
+<li><a href="../exam/2011-理-18.html">2011-理-18</a></li>
+<li><a href="../exam/2012-理-19.html">2012-理-19</a></li>
+<li><a href="../exam/2013-理-18.html">2013-理-18</a></li>
+<li><a href="../exam/2017-理-16.html">2017-理-16</a></li>
+<li><a href="../exam/2017-理-18.html">2017-理-18</a></li>
+<li><a href="../exam/2018-理-20.html">2018-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>程序框图</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>程序框图</h1><div class="meta-card"><span><strong>权重</strong>32</span><span><strong>吉林命中</strong>12</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 程序框图, 流程图, 算法框图</p><h1>程序框图</h1>
+<blockquote>
+<p><strong>一句话</strong>：程序框图是用标准化的图形符号、流程线和文字说明来描述算法每一步骤的执行顺序与逻辑关系的图形工具。<br />
+<strong>English</strong>: A flowchart is a diagrammatic representation of an algorithm, using standardized symbols and arrows to indicate the sequence and logic of operations.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+程序框图的核心是将算法的三种基本逻辑结构——<strong>顺序结构、条件结构、循环结构</strong>——通过图形化方式表达。每个框代表一种操作：起止框（椭圆）表示算法的开始或结束；输入/输出框（平行四边形）表示数据的输入或输出；处理框（矩形）表示赋值或计算；判断框（菱形）表示条件判断，它决定程序的流向。这些框之间用带箭头的流程线连接，构成完整的算法路径。</p>
+<p>在高考中，程序框图的考查形式是：给出一段带有已知或未知结构的框图，要求读出其功能或输出结果，也可能要求补全框图内的条件或操作。其背后通常结合<strong>数列求和、累乘、求最大（小）值、辗转相除法、更相减损术、二分法求方程近似解</strong>等具体模型。</p>
+<p><strong>关键方法</strong><br />
+解答此类问题的标准方法为“<strong>列表追踪法</strong>”：
+1. 确定初始值：明确各变量（如 <code>S</code>, <code>k</code>, <code>n</code>）在进入循环前或程序开始时的值。
+2. 按步骤执行：从起点开始，按照流程线逐框运行。遇到判断框时，计算条件表达式，若为真则沿“是”分支走，否则沿“否”分支走。
+3. 循环结构处理：当进入循环时，在草稿纸上列出每一次循环前后各变量的值，直到满足跳出循环的条件为止。特别注意<strong>循环结束条件的边界</strong>：是“&gt;”还是“≥”，是“当型”循环（先判断后执行）还是“直到型”循环（先执行后判断）。
+4. 对照输出：程序运行结束后，查看输出框所指示的变量，结合追踪表得出最终结果。</p>
+<p><strong>典型应用</strong><br />
+- <strong>累加/累乘型</strong>：例如框图给出 <code>S=0, i=1</code>，循环体 <code>S=S+i, i=i+1</code>，判断条件为 <code>i&gt;100?</code> 则输出 <code>S</code>，该框图功能为计算 <code>1+2+...+100</code>。这里若误将条件写成 <code>i≥100</code> 或 <code>S=S+i</code> 与 <code>i=i+1</code> 顺序颠倒，结果便不同。
+- <strong>条件筛选型</strong>：如给定框图判断一个正整数 <code>n</code> 是否为质数。核心是循环变量 <code>i</code> 从 2 递增到 <code>n-1</code>，若 <code>n</code> 能被 <code>i</code> 整除，则输出“不是质数”并结束；若循环正常结束，说明没有任何整除，则输出“是质数”。需注意 <code>n=2</code> 时的边界情况和整除判断 <code>n mod i = 0</code> 的实现。
+- <strong>迭代求值型</strong>：如用辗转相除法求两个正整数的最大公约数，框图会反复执行“较大数替换为两数之差或余数”，直到两数相等为止。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>循环终止条件搞反</strong>：当型循环的条件如 <code>i≤100</code> 与直到型循环的条件 <code>i&gt;100</code> 易混淆，导致循环次数多一次或少一次。  </li>
+<li><strong>循环体内操作顺序错</strong>：例如在累加 <code>S=S+i</code> 之前先执行 <code>i=i+1</code>，会使累加缺失首项，或累乘时初值误设为 <code>0</code>。  </li>
+<li><strong>初始值遗漏或错误</strong>：累加变量通常初值为 <code>0</code>，累乘变量初值为 <code>1</code>，若误设会导致结果错误。对于求最大值的问题，初始值常设为第一个数或一个极值。  </li>
+<li><strong>分支结构条件遗漏</strong>：判断框的条件表达式书写模糊，例如将“<code>x&lt;5</code> 且 <code>x&gt;1</code>”简化为 <code>1&lt;x&lt;5</code>（框图通常不支持连续不等式，需拆分为逻辑与）。  </li>
+<li><strong>输出变量混淆</strong>：部分框图执行结束后输出的是循环控制变量而非累加和，学生常忽视输出框的具体变量名。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>程序框图</td>
+<td>Flowchart</td>
+<td>算法图形化表示</td>
+</tr>
+<tr>
+<td>顺序结构</td>
+<td>Sequence structure</td>
+<td>按书写顺序执行的简单结构</td>
+</tr>
+<tr>
+<td>条件结构</td>
+<td>Conditional structure</td>
+<td>根据条件选择分支</td>
+</tr>
+<tr>
+<td>循环结构</td>
+<td>Loop structure</td>
+<td>重复执行一段算法，直到条件满足</td>
+</tr>
+<tr>
+<td>算法</td>
+<td>Algorithm</td>
+<td>解决某一问题的有限步骤序列</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：🚧《普通高中数学课程标准（实验/2017年版）》“算法初步”或“算法与程序框图”模块  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">算法</a></li>
+<li><a class="dead" title="未收录">顺序结构</a></li>
+<li><a class="dead" title="未收录">条件结构</a></li>
+<li><a class="dead" title="未收录">循环结构</a></li>
+<li><a class="dead" title="未收录">辗转相除法</a></li>
+<li><a class="dead" title="未收录">数列求和</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-08.html">2010-文-08</a></li>
+<li><a href="../exam/2010-理-07.html">2010-理-07</a></li>
+<li><a href="../exam/2011-文-05.html">2011-文-05</a></li>
+<li><a href="../exam/2011-文-06.html">2011-文-06</a></li>
+<li><a href="../exam/2011-理-03.html">2011-理-03</a></li>
+<li><a href="../exam/2011-理-04.html">2011-理-04</a></li>
+<li><a href="../exam/2012-文-04.html">2012-文-04</a></li>
+<li><a href="../exam/2012-文-06.html">2012-文-06</a></li>
+<li><a href="../exam/2012-理-04.html">2012-理-04</a></li>
+<li><a href="../exam/2012-理-06.html">2012-理-06</a></li>
+<li><a href="../exam/2013-文-06.html">2013-文-06</a></li>
+<li><a href="../exam/2013-文-07.html">2013-文-07</a></li>
+<li><a href="../exam/2013-文-12.html">2013-文-12</a></li>
+<li><a href="../exam/2013-理-04.html">2013-理-04</a></li>
+<li><a href="../exam/2013-理-06.html">2013-理-06</a></li>
+<li><a href="../exam/2013-理-13.html">2013-理-13</a></li>
+<li><a href="../exam/2014-文-04.html">2014-文-04</a></li>
+<li><a href="../exam/2014-文-07.html">2014-文-07</a></li>
+<li><a href="../exam/2014-文-08.html">2014-文-08</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2014-理-06.html">2014-理-06</a></li>
+<li><a href="../exam/2014-理-07.html">2014-理-07</a></li>
+<li><a href="../exam/2015-文-05.html">2015-文-05</a></li>
+<li><a href="../exam/2015-文-08.html">2015-文-08</a></li>
+<li><a href="../exam/2015-理-03.html">2015-理-03</a></li>
+<li><a href="../exam/2015-理-08.html">2015-理-08</a></li>
+<li><a href="../exam/2016-文-03.html">2016-文-03</a></li>
+<li><a href="../exam/2016-文-09.html">2016-文-09</a></li>
+<li><a href="../exam/2016-文-10.html">2016-文-10</a></li>
+<li><a href="../exam/2016-理-03.html">2016-理-03</a></li>
+<li><a href="../exam/2016-理-08.html">2016-理-08</a></li>
+<li><a href="../exam/2017-文-03.html">2017-文-03</a></li>
+<li><a href="../exam/2017-文-10.html">2017-文-10</a></li>
+<li><a href="../exam/2017-理-03.html">2017-理-03</a></li>
+<li><a href="../exam/2017-理-08.html">2017-理-08</a></li>
+<li><a href="../exam/2018-文-03.html">2018-文-03</a></li>
+<li><a href="../exam/2018-文-08.html">2018-文-08</a></li>
+<li><a href="../exam/2018-理-03.html">2018-理-03</a></li>
+<li><a href="../exam/2018-理-07.html">2018-理-07</a></li>
+<li><a href="../exam/2019-文-04.html">2019-文-04</a></li>
+<li><a href="../exam/2019-文-09.html">2019-文-09</a></li>
+<li><a href="../exam/2019-理-02.html">2019-理-02</a></li>
+<li><a href="../exam/2019-理-08.html">2019-理-08</a></li>
+<li><a href="../exam/2020-文-07.html">2020-文-07</a></li>
+<li><a href="../exam/2020-文-09.html">2020-文-09</a></li>
+<li><a href="../exam/2022-文-07.html">2022-文-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

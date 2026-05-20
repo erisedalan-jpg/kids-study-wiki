@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中点弦</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>中点弦</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[解析几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 中点弦, Midpoint Chord</p><h1>中点弦</h1>
+<blockquote>
+<p><strong>一句话</strong>：以某定点为中点的圆锥曲线（椭圆、双曲线、抛物线）的弦，或给定弦中点求弦所在直线方程及弦长的问题。
+<strong>English</strong>: A chord of a conic section whose midpoint is a given point, or the problem of determining the equation of the chord given its midpoint.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：设圆锥曲线方程为 $F(x, y) = 0$，点 $P(x_0, y_0)$ 为曲线内部或外部的定点。若存在弦 $AB$ 使得 $P$ 为 $AB$ 的中点，则称 $AB$ 为关于点 $P$ 的<strong>中点弦</strong>。该问题的本质是利用<strong>点差法（代点作差法）</strong>——设 $A(x_1, y_1)$、$B(x_2, y_2)$ 在曲线上，满足中点条件 $x_1 + x_2 = 2x_0$，$y_1 + y_2 = 2y_0$。将 $A$、$B$ 坐标分别代入曲线方程后两式相减，利用平方差公式因式分解，可直接得到弦的斜率 $k_{AB} = \frac{y_2 - y_1}{x_2 - x_1}$ 与中点坐标的关系式，进而求出弦所在直线的方程。</p>
+<p>以椭圆 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 为例，点差法得斜率决定式：
+$$\frac{(x_1+x_2)(x_1-x_2)}{a^2} + \frac{(y_1+y_2)(y_1-y_2)}{b^2} = 0$$
+代入中点坐标 $(x_0, y_0)$，整理得 $k_{AB} = -\frac{b^2 x_0}{a^2 y_0}$（$y_0 \neq 0$）。</p>
+<p><strong>关键方法</strong>：
+1. <strong>点差法（核心）</strong>：设弦端点坐标，代入曲线方程，作差后利用中点坐标代换，直接求斜率，避免联立直线与曲线方程。
+2. <strong>韦达定理法</strong>：设弦所在直线方程，与曲线联立，利用韦达定理和判别式求解。计算量大于点差法，但必须验证判别式 $\Delta &gt; 0$ 确保弦存在。</p>
+<p><strong>典型应用</strong>：高考常以三种角度考查——
+- <strong>已知中点求弦方程</strong>：如“求椭圆 $\frac{x^2}{4} + y^2 = 1$ 内以 $(1, \frac{1}{2})$ 为中点的弦所在直线方程”；
+- <strong>已知弦方程求中点</strong>：如“求直线 $y = kx + m$ 与双曲线相交所得弦的中点轨迹”；
+- <strong>存在性判断</strong>：如判断“以某点为中点的弦是否存在”，需检验该点是否在曲线内部（椭圆）或判别式是否非负。点差法求出的斜率必须回代验证判别式（待家长核对）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>直接用点差法斜率公式，忽略斜率不存在的情况</strong>：当中点纵坐标 $y_0 = 0$ 时，弦可能垂直于 $x$ 轴（斜率不存在），需单独讨论。</li>
+<li><strong>点差法求出斜率后未验证弦的存在性</strong>：对于双曲线，以某点为中点的弦可能不存在（中点不在某支内部或间距限制），必须用判别式 $\Delta &gt; 0$ 验证，否则会得到错误答案。</li>
+<li><strong>将椭圆与双曲线的点差法斜率公式混淆</strong>：椭圆 $k = -\frac{b^2 x_0}{a^2 y_0}$，双曲线 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ 对应的点差法斜率为 $k = \frac{b^2 x_0}{a^2 y_0}$，符号相反。</li>
+<li><strong>抛物线点差法特殊处理不当</strong>：抛物线 $y^2 = 2px$ 点差得 $k = \frac{p}{y_0}$，形式与其他曲线不同，需单独记忆和推导。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中点弦</td>
+<td>Midpoint Chord</td>
+<td>以定点为中点的圆锥曲线弦</td>
+</tr>
+<tr>
+<td>点差法</td>
+<td>Point Difference Method</td>
+<td>代端点坐标后相减求斜率的方法</td>
+</tr>
+<tr>
+<td>弦所在直线</td>
+<td>Chord Line</td>
+<td>连接两交点的直线</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>Discriminant</td>
+<td>判断二次方程实根个数的 $\Delta$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">圆锥曲线</a></li>
+<li><a class="dead" title="未收录">弦长公式</a></li>
+<li><a class="dead" title="未收录">韦达定理</a></li>
+<li><a class="dead" title="未收录">直线与圆锥曲线的位置关系</a></li>
+<li><a class="dead" title="未收录">判别式与根的分布</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-12.html">2010-理-12</a></li>
+<li><a href="../exam/2015-文-20.html">2015-文-20</a></li>
+<li><a href="../exam/2015-理-20.html">2015-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

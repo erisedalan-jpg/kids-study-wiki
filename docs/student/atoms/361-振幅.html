@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>振幅</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>振幅</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械振动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 振幅, amplitude</p><h2>🎓 振幅</h2>
+<h3>定义</h3>
+<p><strong>振幅</strong>（amplitude）是振动物体偏离平衡位置的<strong>最大位移</strong>的大小。</p>
+<p>$$A = |x_{max}|$$</p>
+<ul>
+<li>$A$：振幅（m，恒为正值）</li>
+<li>$x_{max}$：最大位移（可正可负，振幅取其绝对值）</li>
+</ul>
+<p>振幅描述振动的<strong>强弱</strong>，是振动的特征量之一。</p>
+<h3>振幅的物理意义</h3>
+<p>振幅越大，振动越剧烈，能量越多：</p>
+<p>$$E = \frac{1}{2}kA^2 \quad \text{（弹簧振子总机械能）}$$</p>
+<p>系统总机械能与振幅的平方成正比，振幅翻倍则能量变为 4 倍。</p>
+<h3>振幅与能量的关系</h3>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>位移 $x$</th>
+<th>速度 $v$</th>
+<th>动能</th>
+<th>势能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平衡位置</td>
+<td>0</td>
+<td>$v_{max} = A\omega$</td>
+<td>最大 $\frac{1}{2}kA^2$</td>
+<td>0</td>
+</tr>
+<tr>
+<td>端点</td>
+<td>$\pm A$</td>
+<td>0</td>
+<td>0</td>
+<td>最大 $\frac{1}{2}kA^2$</td>
+</tr>
+<tr>
+<td>任意位置</td>
+<td>$x$</td>
+<td>$v=\omega\sqrt{A^2-x^2}$</td>
+<td>$\frac{1}{2}k(A^2-x^2)$</td>
+<td>$\frac{1}{2}kx^2$</td>
+</tr>
+</tbody>
+</table>
+<h3>振幅对周期的影响</h3>
+<p><strong>简谐运动中，振幅与周期无关</strong>（等时性）：</p>
+<ul>
+<li>弹簧振子：$T = 2\pi\sqrt{m/k}$（无 $A$）</li>
+<li>单摆（小角度）：$T = 2\pi\sqrt{L/g}$（无 $A$）</li>
+</ul>
+<p>无论振幅大小，周期相同——这就是钟摆计时的物理基础。</p>
+<h3>振幅的确定</h3>
+<p>振幅由<strong>初始条件</strong>（初始位置和速度）决定，不受后续运动影响（无阻力时）。</p>
+<ul>
+<li>从端点静止释放：$A$ = 释放点到平衡位置的距离</li>
+<li>从平衡位置以速度 $v_0$ 出发：$A = \dfrac{v_0}{\omega}$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：弹簧振子劲度系数 $k = 100\text{ N/m}$，从平衡位置向右推 0.1 m 后静止释放，求振幅及系统能量。</p>
+<p>$$A = 0.1\text{ m}$$
+$$E = \frac{1}{2}kA^2 = \frac{1}{2}\times100\times0.01 = 0.5\text{ J}$$</p>
+<p><strong>例2</strong>：若振子从平衡位置以 $v_0 = 2\text{ m/s}$ 运动，$\omega = 10\text{ rad/s}$，求振幅。</p>
+<p>$$A = \frac{v_0}{\omega} = \frac{2}{10} = 0.2\text{ m}$$</p>
+<p><strong>例3（能量比较）</strong>：振幅从 $A$ 增大到 $2A$，总能量变为原来几倍？</p>
+<p>$$\frac{E'}{E} = \frac{\frac{1}{2}k(2A)^2}{\frac{1}{2}kA^2} = 4$$</p>
+<p>能量变为 4 倍。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>振幅是最大位移的大小</strong>：始终为正值，不含方向。</li>
+<li><strong>振幅不影响简谐运动周期</strong>：两者相互独立（等时性）。</li>
+<li><strong>振幅减小 ≠ 频率改变</strong>：阻尼振动中振幅逐渐减小，但频率（近似）不变。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第二章第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：振幅 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+<li><a class="dead" title="未收录">周期与频率-振动</a></li>
+<li><a class="dead" title="未收录">相位</a></li>
+<li><a class="dead" title="未收录">回复力</a></li>
+<li><a class="dead" title="未收录">阻尼振动</a></li>
+<li><a class="dead" title="未收录">受迫振动</a></li>
+<li><a class="dead" title="未收录">共振</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2013-新课标Ⅱ-15.html">2013-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

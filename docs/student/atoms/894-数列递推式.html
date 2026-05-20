@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列递推式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列递推式</h1><div class="meta-card"><span><strong>权重</strong>26</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列递推式, sequence recurrence relation</p><h1>数列递推式</h1>
+<blockquote>
+<p><strong>一句话</strong>：数列递推式是给出初始项，并利用前若干项通过固定法则确定后续项的等式，它是定义数列的基本方式之一。
+<strong>English</strong>: A sequence recurrence relation is an equation that defines each term of a sequence using one or more previous terms, together with given initial values.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+数列递推式形如 $a_{n+1} = f(a_n, a_{n-1}, \dots, n)$，必须搭配初始项（如 $a_1$）才能唯一确定数列。高考重点考查由递推式求通项公式。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>待定系数化等比（一阶线性）</strong>：对 $a_{n+1} = pa_n + q$，若 $p \neq 1$，设 $a_{n+1} - \lambda = p(a_n - \lambda)$，解 $\lambda = \frac{q}{1-p}$，${a_n - \lambda}$ 为等比数列。<br />
+2. <strong>累加法</strong>：若 $a_{n+1} - a_n = f(n)$，则 $a_n = a_1 + \sum_{k=1}^{n-1} f(k)$。<br />
+3. <strong>累乘法</strong>：若 $\frac{a_{n+1}}{a_n} = g(n)$，则 $a_n = a_1 \prod_{k=1}^{n-1} g(k)$。<br />
+4. <strong>二阶线性递推（拓展）</strong>：$a_{n+2} = p a_{n+1} + q a_n$，用特征方程 $x^2 - p x - q = 0$ 的根构造通项。<br />
+5. <strong>分式线性递推</strong>：$a_{n+1} = \frac{A a_n + B}{C a_n + D}$，常结合不动点 $x = \frac{A x + B}{C x + D}$ 转化为等比或等差。</p>
+<p><strong>典型应用</strong><br />
+高考中常以填空题或解答题第一问出现：给出 $a_{n+1}$ 与 $a_n$ 的关系及 $a_1$，求 ${a_n}$ 通项公式；或证明 ${b_n}$（$b_n = a_n + c$ 或 $b_n = \frac{1}{a_n}$ 等代换）为等差/等比数列，进而求 $a_n$。例如，已知 $a_1 = 1$，$a_{n+1} = 2a_n + 3$，证明 ${a_n+3}$ 为等比并求通项；又如 $a_1 = 1$，$a_{n+1} = \frac{2a_n}{a_n+2}$，取倒数化等差数列。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视 $n$ 的起始范围</strong>：累加/累乘时，项数计算错误或忽略 $n \ge 2$ 的分段讨论，导致通项对 $n=1$ 不成立。</li>
+<li><strong>待定系数计算错误</strong>：解 $\lambda = \frac{q}{1-p}$ 时符号或分母弄错，忘记检验 $p \neq 1$ 的情况。</li>
+<li><strong>递推变形不等价</strong>：两边除以含 $a_n$ 的式子时未讨论其是否可能为零，致遗漏或增解。</li>
+<li><strong>特征方程使用场景混淆</strong>：将线性递推的特征方程误用于分式递推或对方程无实数根时不会处理（高考若出现，多引导用周期或构造）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>递推式</td>
+<td>recurrence relation</td>
+<td>用前项定义后项的等式</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>formula for general term</td>
+<td>表示第 $n$ 项与 $n$ 关系的解析式</td>
+</tr>
+<tr>
+<td>特征方程</td>
+<td>characteristic equation</td>
+<td>用于解二阶线性递推的二次方程 $x^2 - px - q = 0$</td>
+</tr>
+<tr>
+<td>累加法</td>
+<td>method of summation</td>
+<td>对形如 $a_{n+1} - a_n = f(n)$ 的递推求通项</td>
+</tr>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence</td>
+<td>每一项与前一项的比值为常数</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a class="dead" title="未收录">等比数列</a></li>
+<li><a class="dead" title="未收录">数列求和</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法</a></li>
+<li><a class="dead" title="未收录">数列极限（高中）</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-20.html">2008-理-20</a></li>
+<li><a href="../exam/2009-理-19.html">2009-理-19</a></li>
+<li><a href="../exam/2010-理-17.html">2010-理-17</a></li>
+<li><a href="../exam/2012-理-16.html">2012-理-16</a></li>
+<li><a href="../exam/2014-文-16.html">2014-文-16</a></li>
+<li><a href="../exam/2015-理-16.html">2015-理-16</a></li>
+<li><a href="../exam/2015-理-20.html">2015-理-20</a></li>
+<li><a href="../exam/2016-文-17.html">2016-文-17</a></li>
+<li><a href="../exam/2018-文-17.html">2018-文-17</a></li>
+<li><a href="../exam/2018-理-14.html">2018-理-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

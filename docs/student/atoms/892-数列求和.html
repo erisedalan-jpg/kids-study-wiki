@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列求和</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列求和</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列求和</p><h1>数列求和</h1>
+<blockquote>
+<p><strong>一句话</strong>：将一个数列的若干项（或所有项）按照运算规则累加，求得总和的过程，核心是灵活运用等差、等比求和公式以及转化技巧。
+<strong>English</strong>: The process of summing terms of a sequence, typically relying on arithmetic and geometric series formulas and various summation techniques.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong><br />
+  数列求和即计算 $S_n = a_1 + a_2 + \cdots + a_n$。高考中重点掌握两类基础公式：<br />
+  等差数列前 $n$ 项和：$S_n = \frac{n(a_1 + a_n)}{2} = na_1 + \frac{n(n-1)d}{2}$<br />
+  等比数列前 $n$ 项和：$q \neq 1$ 时 $S_n = \frac{a_1(1 - q^n)}{1 - q}$；$q = 1$ 时 $S_n = na_1$。<br />
+  对于无法直接套用公式的数列，本质是将其转化为基本数列（等差、等比）的可求和形式。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>公式法</strong>：直接识别等差、等比，代公式。  </li>
+<li><strong>分组求和</strong>：把通项拆成几部分，各自求和，如 $a_n = n + 2^n$，分别求等差、等比和再相加。  </li>
+<li><strong>错位相减法</strong>：用于 ${ \text{等差} \times \text{等比} }$ 型（如 $a_n = n \cdot 2^n$），写出 $S_n$ 与 $qS_n$，两式相减后用等比求和化简。  </li>
+<li><strong>裂项相消法</strong>：将一项裂为两项之差，求和中逐项抵消。常见如 $\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}$，$\frac{1}{4n^2-1} = \frac{1}{2}\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)$，注意配平系数。  </li>
+<li>
+<p><strong>倒序相加法</strong>：若 $a_1 + a_n = a_2 + a_{n-1} = \cdots$，利用 $S_n$ 正序和倒序相加求值。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考常以“求数列 ${a_n}$ 的前 $n$ 项和 $S_n$”设问，给出通项或递推关系。  </p>
+</li>
+<li>例1：已知 $a_n = (2n-1) \cdot 3^n$，求 $S_n$。需用错位相减法，乘公比 $3$ 后作差。  </li>
+<li>例2：已知 $b_n = \frac{1}{\sqrt{n+1}+\sqrt{n}}$，先分母有理化得 $b_n = \sqrt{n+1}-\sqrt{n}$，再裂项求和得 $S_n = \sqrt{n+1}-1$。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>等比数列求和时忽略 $q=1$ 的特殊情况，直接套用 $S_n = \frac{a_1(1-q^n)}{1-q}$ 导致分母为零错误。  </li>
+<li>裂项相消时未配平系数：如将 $\frac{1}{(2n-1)(2n+1)}$ 拆为 $\frac{1}{2n-1} - \frac{1}{2n+1}$，忘记乘以 $\frac{1}{2}$。  </li>
+<li>错位相减法最后一项的符号和位置经常遗漏，尤其是被减式中最后一项的系数计算易错。  </li>
+<li>分组求和时误将非等差、非等比的部分也当作等差/等比处理，未正确拆分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数列</td>
+<td>sequence</td>
+<td>按一定顺序排列的一列数</td>
+</tr>
+<tr>
+<td>等差数列</td>
+<td>arithmetic sequence</td>
+<td>从第二项起，每一项与前一项的差为常数</td>
+</tr>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence</td>
+<td>从第二项起，每一项与前一项的比为常数（$q \neq 0$）</td>
+</tr>
+<tr>
+<td>求和公式</td>
+<td>summation formula</td>
+<td>计算数列前 $n$ 项和的表达式</td>
+</tr>
+<tr>
+<td>裂项相消</td>
+<td>telescoping</td>
+<td>将一项分裂为两项差，求和时中间项互相抵消</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a class="dead" title="未收录">等比数列</a></li>
+<li><a href="../atoms/384-数列通项公式.html">数列通项公式</a></li>
+<li><a class="dead" title="未收录">错位相减法</a></li>
+<li><a class="dead" title="未收录">裂项相消法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-17.html">2010-理-17</a></li>
+<li><a href="../exam/2012-文-12.html">2012-文-12</a></li>
+<li><a href="../exam/2012-理-16.html">2012-理-16</a></li>
+<li><a href="../exam/2013-文-07.html">2013-文-07</a></li>
+<li><a href="../exam/2013-文-17.html">2013-文-17</a></li>
+<li><a href="../exam/2013-理-04.html">2013-理-04</a></li>
+<li><a href="../exam/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/2015-文-19.html">2015-文-19</a></li>
+<li><a href="../exam/2017-文-15.html">2017-文-15</a></li>
+<li><a href="../exam/2018-理-07.html">2018-理-07</a></li>
+<li><a href="../exam/2018-理-14.html">2018-理-14</a></li>
+<li><a href="../exam/2020-理-17.html">2020-理-17</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-16</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-17</a></li>
+<li><a class="dead" title="未收录">2023-北京-14</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-18.html">2023-新课标Ⅱ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

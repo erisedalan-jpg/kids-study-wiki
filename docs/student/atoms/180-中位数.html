@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中位数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>中位数</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 八下, 数据分析]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 中位数, median, 中值</p><h1>中位数</h1>
+<blockquote>
+<p><strong>一句话</strong>：将一组数据从小到大排列后，处于正中间位置的数叫中位数；若数据个数为偶数，则取中间两数的平均值。
+<strong>English</strong>: The median is the middle value of a sorted dataset; for an even number of values, it is the average of the two middle values.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>求中位数的步骤</h3>
+<ol>
+<li><strong>排序</strong>：从小到大排列所有数据</li>
+<li><strong>定位</strong>：</li>
+<li>奇数个数据：正中间那个就是中位数</li>
+<li>偶数个数据：中间两个数的平均值</li>
+</ol>
+<p><strong>奇数例</strong>：数据 3、7、2、9、5</p>
+<p>排序：2、3、<strong>5</strong>、7、9 → 中位数 = <strong>5</strong></p>
+<p><strong>偶数例</strong>：数据 4、8、1、6、3、9</p>
+<p>排序：1、3、<strong>4、6</strong>、8、9 → 中位数 = $\dfrac{4+6}{2} = 5$</p>
+<h3>中位数 vs 平均数</h3>
+<table>
+<thead>
+<tr>
+<th>对比</th>
+<th>平均数</th>
+<th>中位数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>受极端值影响</td>
+<td>大（拉高/拉低）</td>
+<td>小（位置不变）</td>
+</tr>
+<tr>
+<td>利用数据量</td>
+<td>全部</td>
+<td>仅位置</td>
+</tr>
+<tr>
+<td>适合场景</td>
+<td>数据分布较均匀</td>
+<td>有极端值/偏态分布</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例</strong>：月收入数据：3000、3500、3800、4000、50000（富豪），平均数 $\approx$ 12860（失真），中位数 = 3800（更能代表典型水平）。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>中位数（Median）</strong>：设 $n$ 个数据从小到大排列为 $x_1 \leq x_2 \leq \cdots \leq x_n$，则：</p>
+<p>$$M = \begin{cases} x_{\frac{n+1}{2}}, &amp; n \text{ 为奇数} \[6pt] \dfrac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}, &amp; n \text{ 为偶数} \end{cases}$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：数据 12、15、10、18、14、13，求中位数。</p>
+<p>排序：10、12、13、<strong>14</strong>、15、18（6 个，偶数）</p>
+<p>$$M = \frac{13+14}{2} = 13.5$$</p>
+<p><strong>例 2</strong>：已知 9 个数据从小到大排列，中位数为 25，前 4 个数据之和为 80，后 4 个数据均大于 30，求这 9 个数据的平均数范围。</p>
+<p>第 5 个（中位数）= 25，前 4 个之和 = 80，后 4 个各 &gt; 30 → 后 4 个之和 &gt; 120，总和 &gt; 80 + 25 + 120 = 225，平均数 &gt; 25。（具体上界待家长补充条件核实。）</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 未排序就找中间位置（排序是第一步！）</li>
+<li>❌ 偶数个数据时取其中一个而非两者平均</li>
+<li>❌ 混淆"第几个数据"与"数据的值"</li>
+</ul>
+<h3>知识联系</h3>
+<p>中位数与<a href="../atoms/055-平均数.html">平均数</a>、<a class="dead" title="未收录">众数</a>共同描述数据集中趋势；不受极端值影响的特点与<a href="../atoms/198-方差.html">方差</a>（衡量离散程度）互补；在<a class="dead" title="未收录">统计图选择</a>中，箱线图（高中）以中位数为核心；频数分布中可通过累积频率确定中位数。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中位数</td>
+<td>median</td>
+</tr>
+<tr>
+<td>排序</td>
+<td>sorting / ordering</td>
+</tr>
+<tr>
+<td>集中趋势</td>
+<td>central tendency</td>
+</tr>
+<tr>
+<td>极端值</td>
+<td>outlier / extreme value</td>
+</tr>
+<tr>
+<td>偏态分布</td>
+<td>skewed distribution</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第20章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·统计与概率·统计</li>
+<li>拓展：<a class="dead" title="未收录">数学/平均数</a> · <a class="dead" title="未收录">数学/众数</a> · <a class="dead" title="未收录">数学/频数分布</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/055-平均数.html">平均数</a> · <a class="dead" title="未收录">众数</a> · <a href="../atoms/198-方差.html">方差</a> · <a class="dead" title="未收录">标准差</a> · <a class="dead" title="未收录">统计图选择</a> · <a href="../atoms/143-频数分布.html">频数分布</a> · <a href="../atoms/141-统计图.html">统计图</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2014-文-19.html">2014-文-19</a></li>
+<li><a href="../exam/2019-理-05.html">2019-理-05</a></li>
+<li><a href="../exam/2022-文-04.html">2022-文-04</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-09</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-04.html">2024-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

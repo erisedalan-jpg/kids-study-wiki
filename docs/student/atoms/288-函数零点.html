@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数零点</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数零点</h1><div class="meta-card"><span><strong>权重</strong>28</span><span><strong>吉林命中</strong>7</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数零点, zero of function, 零点, 函数的零点</p><h2>🎓 函数零点</h2>
+<h3>定义</h3>
+<p>设函数 $f(x)$ 的定义域为 $D$。若存在 $x_0 \in D$ 使得 $f(x_0) = 0$，则称 $x_0$ 为函数 $f(x)$ 的<strong>零点</strong>（zero）。</p>
+<p><strong>几何意义</strong>：函数零点就是函数图象与 $x$ 轴的交点的横坐标。</p>
+<p><strong>等价关系</strong>：
+$$f(x_0) = 0 \Leftrightarrow x_0 \text{ 是方程 } f(x) = 0 \text{ 的根}$$</p>
+<p>函数零点问题与方程求根问题等价。</p>
+<h3>零点存在定理（区间定理）</h3>
+<p><strong>零点存在定理</strong>：若函数 $f(x)$ 在闭区间 $[a, b]$ 上连续，且 $f(a) \cdot f(b) &lt; 0$（即 $f(a)$ 与 $f(b)$ 异号），则在开区间 $(a, b)$ 内至少存在一个零点 $x_0$，使得 $f(x_0) = 0$。</p>
+<p>注意：
+- 这只是<strong>存在性定理</strong>，不能确定零点的个数（可能有多个）
+- 条件是 $f(a) \cdot f(b) &lt; 0$，即两端函数值异号
+- 函数必须在 $[a, b]$ 上连续</p>
+<h3>二分法（逐步逼近零点）</h3>
+<p>利用零点定理，反复将包含零点的区间二等分，逐步缩小零点所在范围：</p>
+<ol>
+<li>确认 $[a, b]$ 内有零点：$f(a) \cdot f(b) &lt; 0$</li>
+<li>取中点 $c = \dfrac{a+b}{2}$，计算 $f(c)$</li>
+<li>若 $f(c) = 0$，$c$ 即为零点；若 $f(a) \cdot f(c) &lt; 0$，零点在 $[a, c]$ 内；否则在 $[c, b]$ 内</li>
+<li>重复步骤 2-3，直到区间长度满足精度要求</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：证明方程 $x^3 - 2x - 5 = 0$ 在区间 $(2, 3)$ 内有实根。</p>
+<p>设 $f(x) = x^3 - 2x - 5$（在 $\mathbb{R}$ 上连续）。</p>
+<p>$f(2) = 8 - 4 - 5 = -1 &lt; 0$</p>
+<p>$f(3) = 27 - 6 - 5 = 16 &gt; 0$</p>
+<p>$f(2) \cdot f(3) = (-1)(16) &lt; 0$，由零点存在定理，$(2, 3)$ 内至少有一个零点，即方程至少有一个根在 $(2, 3)$ 内。$\square$</p>
+<p><strong>例2</strong>：用二分法求方程 $x^2 - 2 = 0$ 在 $(1, 2)$ 内的正根的近似值（精确到 $0.1$）。</p>
+<p>解：$f(x) = x^2 - 2$，$f(1) = -1 &lt; 0$，$f(2) = 2 &gt; 0$，零点在 $(1, 2)$ 内。</p>
+<ul>
+<li>$f(1.5) = 2.25 - 2 = 0.25 &gt; 0$，零点在 $(1, 1.5)$ 内</li>
+<li>$f(1.25) = 1.5625 - 2 = -0.4375 &lt; 0$，零点在 $(1.25, 1.5)$ 内</li>
+<li>$f(1.375) = 1.890625 - 2 = -0.109 &lt; 0$，零点在 $(1.375, 1.5)$ 内</li>
+<li>$f(1.4) = 1.96 - 2 = -0.04 &lt; 0$，零点在 $(1.4, 1.5)$ 内</li>
+</ul>
+<p>取 $x \approx 1.4$（精确到 $0.1$）。（实际上 $\sqrt{2} \approx 1.414$）</p>
+<p><strong>例3</strong>：函数 $f(x) = \log_2 x + x - 3$ 的零点个数。</p>
+<p>解：$f(1) = 0 + 1 - 3 = -2 &lt; 0$，$f(4) = 2 + 4 - 3 = 3 &gt; 0$，在 $(1, 4)$ 内有零点。</p>
+<p>$f(x)$ 是单调递增函数（$\log_2 x$ 递增，$x$ 递增，两者之和递增），故零点唯一。</p>
+<p>精确零点：$\log_2 x = 3 - x$，数值解约在 $(2, 3)$ 内（$f(2) = 1+2-3=0$！直接验证 $x = 2$ 是零点）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>异号才能保证零点存在</strong>：$f(a) \cdot f(b) &lt; 0$ 是条件，若同号（$&gt; 0$）则无法用此定理（可能有零点，也可能没有）</li>
+<li><strong>连续性要求</strong>：若 $f(x)$ 在 $(a,b)$ 有间断点，定理不适用</li>
+<li><strong>零点个数</strong>：定理只保证"至少一个"，实际可能有多个（若函数振荡）</li>
+<li><strong>零点 ≠ 极小值点</strong>：图象切 $x$ 轴的点是极值点（切点），穿过 $x$ 轴的点是零点（交点）</li>
+<li><strong>二分法的精度</strong>：每次二分后区间缩短为原来的 $1/2$，$n$ 次后区间长度为 $\dfrac{b-a}{2^n}$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了方程的根（解方程），如一元一次方程、一元二次方程的求根。高中从函数角度重新解读"根"——方程的根就是函数的零点，函数图象与 $x$ 轴的交点——建立了"方程与函数"之间的桥梁。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：零点（Zero of a function），中间值定理（Intermediate value theorem），二分法（Bisection method）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">函数的应用</a></li>
+<li><a class="dead" title="未收录">一元二次方程根与系数关系</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a class="dead" title="未收录">205-一元二次方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-文-05.html">2012-文-05</a></li>
+<li><a href="../exam/2013-文-18.html">2013-文-18</a></li>
+<li><a href="../exam/2013-理-15.html">2013-理-15</a></li>
+<li><a href="../exam/2013-理-16.html">2013-理-16</a></li>
+<li><a href="../exam/2014-文-20.html">2014-文-20</a></li>
+<li><a href="../exam/2015-文-14.html">2015-文-14</a></li>
+<li><a href="../exam/2015-理-14.html">2015-理-14</a></li>
+<li><a href="../exam/2015-理-15.html">2015-理-15</a></li>
+<li><a href="../exam/2016-文-20.html">2016-文-20</a></li>
+<li><a href="../exam/2017-理-21.html">2017-理-21</a></li>
+<li><a href="../exam/2018-理-09.html">2018-理-09</a></li>
+<li><a href="../exam/2018-理-21.html">2018-理-21</a></li>
+<li><a href="../exam/2019-理-20.html">2019-理-20</a></li>
+<li><a href="../exam/2020-文-20.html">2020-文-20</a></li>
+<li><a class="dead" title="未收录">2021-北京-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-15</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-10</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-22</a></li>
+<li><a href="../exam/2022-理-15.html">2022-理-15</a></li>
+<li><a href="../exam/2022-理-21.html">2022-理-21</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-15</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-06.html">2024-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-09.html">2024-新课标Ⅱ-09</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

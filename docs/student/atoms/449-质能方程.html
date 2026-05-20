@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质能方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>质能方程</h1><div class="meta-card"><span><strong>权重</strong>24</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 原子核与核物理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 质能方程, mass-energy equivalence, E=mc², 质量亏损</p><h2>🎓 质能方程</h2>
+<h3>公式</h3>
+<p>$$\boxed{E = mc^2}$$</p>
+<p>其中：
+- $E$：能量（J）
+- $m$：质量（kg）
+- $c = 3 \times 10^8\ \text{m/s}$：真空中光速</p>
+<blockquote>
+<p>爱因斯坦于 1905 年在狭义相对论框架下推导出质能方程，揭示了质量和能量的等价关系。</p>
+</blockquote>
+<h3>物理意义</h3>
+<p>$$\text{质量是能量的量度，能量是质量的量度（两者等价，不可截然分开）}$$</p>
+<ul>
+<li>静止物体具有静止能量：$E_0 = m_0 c^2$</li>
+<li>质量越大，对应的能量越大</li>
+<li>$c^2 \approx 9 \times 10^{16}\ \text{m}^2/\text{s}^2$ 极大，微小质量对应巨大能量</li>
+</ul>
+<h3>核物理中的应用：质量亏损</h3>
+<p><strong>质量亏损</strong>：核反应前后，反应物总质量 &gt; 生成物总质量，差值 $\Delta m$ 转化为能量：</p>
+<p>$$\Delta E = \Delta m \cdot c^2$$</p>
+<p><strong>核反应能量计算步骤</strong>：</p>
+<ol>
+<li>写出核反应方程（守恒质量数和电荷数）</li>
+<li>查出各粒子的精确质量（原子质量单位 $\text{u}$）</li>
+<li>计算质量亏损 $\Delta m$（单位 u 或 kg）</li>
+<li>代入 $\Delta E = \Delta m \cdot c^2$ 求能量</li>
+</ol>
+<p><strong>原子质量单位换算</strong>：</p>
+<p>$$1\ \text{u} = 1.6605 \times 10^{-27}\ \text{kg}$$</p>
+<p>$$1\ \text{u} \leftrightarrow 931.5\ \text{MeV} \quad (\text{即 } 1\ \text{u} \cdot c^2 = 931.5\ \text{MeV})$$</p>
+<blockquote>
+<p>高中常用：$1\ \text{u}$ 对应约 $931.5\ \text{MeV}$ 的能量（方便直接从质量亏损求释放能量）。</p>
+</blockquote>
+<h3>结合能</h3>
+<p>核子（质子、中子）结合成原子核时，质量亏损对应释放的能量称为<strong>结合能</strong>：</p>
+<p>$$E_{\text{结合}} = \Delta m \cdot c^2$$</p>
+<p><strong>比结合能</strong>（每个核子的平均结合能）：</p>
+<p>$$\varepsilon = \frac{E_{\text{结合}}}{A}$$</p>
+<ul>
+<li>比结合能越大 → 原子核越稳定</li>
+<li>中等质量核（铁附近）比结合能最大 → 最稳定</li>
+<li>重核（铀）分裂为中等核 → 释放能量（裂变）</li>
+<li>轻核（氢）合并为较重核 → 释放能量（聚变）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：氘核（${}^2_1\text{H}$，质量 $2.0141\ \text{u}$）与氚核（${}^3_1\text{H}$，质量 $3.0161\ \text{u}$）聚变为氦核（${}^4_2\text{He}$，质量 $4.0026\ \text{u}$）并放出一个中子（质量 $1.0087\ \text{u}$），求释放的能量（以 MeV 计）。</p>
+<p><strong>解</strong>：</p>
+<p>$$\Delta m = (m_{D} + m_{T}) - (m_{He} + m_n)$$</p>
+<p>$$= (2.0141 + 3.0161) - (4.0026 + 1.0087)$$</p>
+<p>$$= 5.0302 - 5.0113 = 0.0189\ \text{u}$$</p>
+<p>$$\Delta E = 0.0189 \times 931.5 \approx 17.6\ \text{MeV}$$</p>
+<p>（待家长核对质量数据精度。）</p>
+<h3>数量级感受</h3>
+<p>$$1\ \text{kg 物质完全转化能量} = 1 \times (3 \times 10^8)^2 = 9 \times 10^{16}\ \text{J}$$</p>
+<p>约等于 2000 吨 TNT 当量的能量，说明核能的来源。</p>
+<h3>价值观说明</h3>
+<p>核能技术（核电、核武器）的物理原理基于同一方程。本词条仅介绍物理原理和平和工程应用（核电站），不涉及武器相关内容的评价，任何核技术的应用受国际法律和伦理框架约束。</p>
+<h3>易错点</h3>
+<ol>
+<li>质能方程适用于<strong>任何</strong>形式的能量转化，不仅限于核能（化学反应也有，但质量变化极小，可忽略）</li>
+<li>质量亏损的"质量"减少是真实的，不是测量误差</li>
+<li>$\Delta m$ 须用 kg；若给出 $\text{u}$，需换算（或直接用 $\Delta E = \Delta m \times 931.5\ \text{MeV/u}$）</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第六章（待家长核对页码及标准质量数据）</li>
+<li>百科：<a href="https://baike.baidu.com/item/质能方程">质能方程 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">核反应</a></li>
+<li><a class="dead" title="未收录">天然放射现象</a></li>
+<li><a href="../atoms/424-半衰期.html">半衰期</a></li>
+<li><a class="dead" title="未收录">原子结构</a></li>
+<li><a class="dead" title="未收录">光子</a></li>
+<li><a class="dead" title="未收录">光的波粒二象性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-02</a></li>
+<li><a class="dead" title="未收录">2010-北京-03</a></li>
+<li><a href="../exam/2012-新课标-17.html">2012-新课标-17</a></li>
+<li><a href="../exam/2013-新课标Ⅱ-17.html">2013-新课标Ⅱ-17</a></li>
+<li><a class="dead" title="未收录">2014-北京-02</a></li>
+<li><a class="dead" title="未收录">2017-北京-11</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-04</a></li>
+<li><a href="../exam/2017-新课标Ⅱ-02.html">2017-新课标Ⅱ-02</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-05.html">2020-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2022-北京-14</a></li>
+<li><a class="dead" title="未收录">2023-湖南-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

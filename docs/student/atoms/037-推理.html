@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>推理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>推理</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[逻辑, 数学广角]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 推理, logical reasoning, 逻辑推理, 数学广角-推理, 科学推理, 逻辑</p><h1>推理</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据已知的线索，一步一步排除不可能的答案，找到唯一正确的结论——这就是推理。
+<strong>English</strong>: Logical reasoning means using known clues to eliminate impossible answers step by step, until only one correct conclusion remains.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>小明、小红、小华三个人，一个喜欢画画，一个喜欢唱歌，一个喜欢跳舞。</p>
+<p>已知：
+- 小明不喜欢画画
+- 小红不喜欢唱歌，也不喜欢跳舞</p>
+<p>那小红喜欢什么？</p>
+<p>小红不喜欢唱歌，不喜欢跳舞，就只剩下<strong>画画</strong>了！所以小红喜欢画画。</p>
+<p>小明不喜欢画画（小红在画画了），就剩唱歌和跳舞，再加一条线索就能知道。</p>
+<p><strong>这种"排除掉不可能的，剩下的就是答案"的方法，就是逻辑推理！</strong></p>
+<p><strong>共读小活动：</strong> 家长藏一个玩具在手心，告诉孩子"不在左手"，让孩子推理出在右手——体验最简单的排除推理。</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>排除法（Elimination Method）</h3>
+<p>推理最常用的方法是<strong>排除法</strong>：</p>
+<p><strong>步骤：</strong>
+1. 列出所有可能性
+2. 根据每条线索，划掉不可能的选项
+3. 剩下唯一的选项就是答案</p>
+<p><strong>例题：</strong> 小明、小红、小华分别参加数学、语文、英语比赛（每人参加一种）。</p>
+<p>已知：
+1. 小明不参加语文比赛
+2. 小华不参加数学比赛，也不参加语文比赛</p>
+<p><strong>用表格法整理：</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>数学</th>
+<th>语文</th>
+<th>英语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小明</td>
+<td>?</td>
+<td>✗（条件1）</td>
+<td>?</td>
+</tr>
+<tr>
+<td>小红</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>小华</td>
+<td>✗（条件2）</td>
+<td>✗（条件2）</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>推理过程：</strong>
+- 小华只剩英语 → 小华参加<strong>英语</strong>比赛
+- 英语被小华占了 → 小明只能在数学或语文中选，语文被排除 → 小明参加<strong>数学</strong>比赛
+- 小红参加<strong>语文</strong>比赛</p>
+<p><strong>结论：</strong> 小明数学，小红语文，小华英语。</p>
+<h3>表格法的优势</h3>
+<p>当线索多、人物多时，表格法比在脑子里记更可靠：</p>
+<ol>
+<li><strong>不漏条件</strong>：每条线索都对应表格中的一个格子</li>
+<li><strong>可追溯</strong>：每个"✗"都有对应的条件编号</li>
+<li><strong>发现矛盾</strong>：如果某行或某列全是"✗"，说明线索有冲突</li>
+</ol>
+<h3>推理的基本原则</h3>
+<p><strong>原则 1：非此即彼（Binary Elimination）</strong>
+如果只有两种可能，排除一种，另一种必然成立。</p>
+<p><strong>原则 2：连锁推导（Chain Reasoning）</strong>
+一个结论可以成为下一步推理的条件：
+"知道了 A，就知道了 B；知道了 B，就知道了 C……"</p>
+<p><strong>原则 3：反证（Proof by Contradiction）</strong>
+假设某个选项成立，看看是否导致矛盾——如果矛盾，就排除它。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>命题逻辑（Propositional Logic）</h3>
+<p>推理的数学基础是<strong>命题逻辑</strong>，用符号表示：</p>
+<table>
+<thead>
+<tr>
+<th>逻辑词</th>
+<th>符号</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>且（AND）</td>
+<td>∧</td>
+<td>两个条件同时成立</td>
+<td>"小明参加数学 ∧ 小红参加语文"</td>
+</tr>
+<tr>
+<td>或（OR）</td>
+<td>∨</td>
+<td>至少一个成立</td>
+<td>"小明参加数学 ∨ 小明参加语文"</td>
+</tr>
+<tr>
+<td>非（NOT）</td>
+<td>¬</td>
+<td>否定</td>
+<td>"¬（小明参加语文）"</td>
+</tr>
+<tr>
+<td>如果…那么</td>
+<td>→</td>
+<td>蕴含</td>
+<td>"如果 A 则 B"（A → B）</td>
+</tr>
+<tr>
+<td>当且仅当</td>
+<td>↔</td>
+<td>等价</td>
+<td>"A 成立 iff B 成立"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>德摩根定律（De Morgan's Laws）</strong>：</p>
+<blockquote>
+<p>¬(A ∧ B) = ¬A ∨ ¬B
+¬(A ∨ B) = ¬A ∧ ¬B</p>
+</blockquote>
+<p>翻译：
+- "不是（A 且 B）" = "非 A，或者非 B"
+- "不是（A 或 B）" = "非 A，且非 B"</p>
+<h3>数学证明的推理结构</h3>
+<p>数学证明本质是一连串的逻辑推理：</p>
+<p><strong>直接证明：</strong> 从已知条件直接推出结论</p>
+<blockquote>
+<p>已知：n 是偶数 → n = 2k（定义）→ n² = 4k²（代换）→ n² 是偶数（得证）</p>
+</blockquote>
+<p><strong>反证法（Proof by Contradiction）：</strong> 假设结论不成立，推出矛盾</p>
+<blockquote>
+<p>证明 √2 是无理数：假设 √2 = p/q（最简分数）→ 2 = p²/q² → p² = 2q²（p 是偶数）→ p = 2m → 4m² = 2q² → q² = 2m²（q 是偶数）→ 矛盾（p/q 不是最简分数）→ 得证</p>
+</blockquote>
+<p><strong>数学归纳法：</strong> 证明第一个成立 + 证明"若第 n 个成立则第 n+1 个也成立"
+→ 所有自然数情况都成立</p>
+<h3>人工智能与推理</h3>
+<p>现代 AI 系统（包括大语言模型）中的"推理"能力，本质上是在庞大的知识图谱中进行<strong>概率推理</strong>（probabilistic reasoning），而非严格的命题逻辑。</p>
+<p><strong>知识图谱（Knowledge Graph）</strong> 将事实表示为实体和关系的网络，机器在其中寻找推理路径。</p>
+<p><strong>不确定性推理（Bayesian Reasoning）</strong> 用概率更新信念：</p>
+<blockquote>
+<p>P(结论 | 证据) = P(证据 | 结论) × P(结论) / P(证据)</p>
+</blockquote>
+<p>这叫贝叶斯定理（Bayes' Theorem），是理性推断的数学基础，从侦探小说到医学诊断都在应用。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>推理</td>
+<td>reasoning / logical reasoning</td>
+<td>n.</td>
+<td>根据线索得出结论</td>
+</tr>
+<tr>
+<td>逻辑</td>
+<td>logic</td>
+<td>n.</td>
+<td>推理的规则体系</td>
+</tr>
+<tr>
+<td>排除法</td>
+<td>elimination method</td>
+<td>n.</td>
+<td>排除不可能的选项</td>
+</tr>
+<tr>
+<td>线索</td>
+<td>clue / condition</td>
+<td>n.</td>
+<td>帮助推理的已知信息</td>
+</tr>
+<tr>
+<td>结论</td>
+<td>conclusion</td>
+<td>n.</td>
+<td>推理得出的最终答案</td>
+</tr>
+<tr>
+<td>矛盾</td>
+<td>contradiction</td>
+<td>n.</td>
+<td>两个条件互相冲突</td>
+</tr>
+<tr>
+<td>命题</td>
+<td>proposition</td>
+<td>n.</td>
+<td>可判断真假的陈述</td>
+</tr>
+<tr>
+<td>反证法</td>
+<td>proof by contradiction</td>
+<td>n.</td>
+<td>假设反面来推导矛盾</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根据线索，我们可以推断出小华喜欢英语。</td>
+<td>Based on the clues, we can conclude that Xiao Hua likes English.</td>
+</tr>
+<tr>
+<td>用排除法，先划掉不可能的选项。</td>
+<td>Use elimination to cross out impossible options first.</td>
+</tr>
+<tr>
+<td>这两个条件互相矛盾。</td>
+<td>These two conditions contradict each other.</td>
+</tr>
+<tr>
+<td>唯一的可能性就是正确答案。</td>
+<td>The only remaining possibility must be the correct answer.</td>
+</tr>
+<tr>
+<td>如果 A 成立，那么 B 一定成立。</td>
+<td>If A is true, then B must also be true.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li><strong>《神探汪汪》系列</strong> — 侦探类绘本，通过寻找线索排除嫌疑人，自然引入推理思维。适龄：5-9 岁。（<strong>待家长核对具体版本</strong>）</li>
+<li><strong>《鸡蛋哥哥》/ 福尔摩斯少年版</strong> — 侦探故事培养逻辑推理兴趣。适龄：8-12 岁。（<strong>待家长核对适龄版本</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"怎么知道从哪条线索开始推？"</strong> → 可以说："从'信息最多'的线索开始——哪条线索最直接，就先用它。比如'小华不参加数学也不参加语文'，一下排除了两种可能，是最好的突破口。找'最确定'的那个人先入手。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"推理出来的答案一定对吗？"</strong> → 可以说："如果线索都是正确的，而且你每一步推理都遵守了逻辑规则，那结论一定对。这就是数学推理和猜谜的区别——推理是一步一步有根据的，不是靠运气。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 家长出一道简单的"三人三项"推理题，把表格画在纸上，让孩子用打√和打✗来填写，体验表格法的系统性和乐趣。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书·数学二年级下册.pdf</a> 第9单元《数学广角——推理》(p106-109)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）"综合与实践"——推理与证明（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/逻辑 ；https://zh.wikipedia.org/wiki/命题逻辑</li>
+<li><strong>拓展阅读</strong>：贝叶斯定理科普；《数学与逻辑》（Martin Gardner 谜题系列）；大语言模型的推理能力研究</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">数数</a> · <a class="dead" title="未收录">加法</a> · <a class="dead" title="未收录">混合运算</a> · <a class="dead" title="未收录">位置</a> · <a class="dead" title="未收录">大小</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-文-06.html">2012-文-06</a></li>
+<li><a href="../exam/2014-文-14.html">2014-文-14</a></li>
+<li><a href="../exam/2014-理-08.html">2014-理-08</a></li>
+<li><a href="../exam/2016-文-08.html">2016-文-08</a></li>
+<li><a href="../exam/2016-文-16.html">2016-文-16</a></li>
+<li><a href="../exam/2016-理-08.html">2016-理-08</a></li>
+<li><a href="../exam/2017-文-09.html">2017-文-09</a></li>
+<li><a href="../exam/2017-文-14.html">2017-文-14</a></li>
+<li><a href="../exam/2017-理-07.html">2017-理-07</a></li>
+<li><a href="../exam/2017-理-12.html">2017-理-12</a></li>
+<li><a href="../exam/2019-文-05.html">2019-文-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>长方体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>长方体</h1><div class="meta-card"><span><strong>权重</strong>23</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>10</span><span><strong>学段</strong>[学前, 小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 立体图形, 形状启蒙]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 长方体, cuboid, 长方形盒子, 直角平行六面体</p><h1>长方体</h1>
+<blockquote>
+<p><strong>一句话</strong>：像砖头、冰箱、书本盒——6 个面、12 条棱的立体形。
+<strong>English</strong>: A cuboid is a box-shaped 3D shape with 6 rectangular faces.</p>
+</blockquote>
+<hr />
+<h2>🧒 给 3-6 岁（共读版）</h2>
+<p>你家有没有砖头一样的东西？冰箱、书、牛奶盒、饼干盒……这些都是<strong>长方体</strong>（cuboid）！</p>
+<p>长方体摸起来有几个感觉：
+- 它有<strong>6 个平平的面</strong>（像 6 张纸拼在一起）
+- 每个面都是方方正正的（长方形或正方形）
+- 它能稳稳地<strong>站在桌子上</strong>，不会滚走</p>
+<p><strong>共读小活动：</strong> 去厨房找一个饼干盒或牛奶盒，用手摸摸它的每一个面，一边摸一边数"一、二、三、四、五、六"——正好 6 个面！</p>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>长方体的组成</h3>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>数量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面（face）</td>
+<td>6</td>
+<td>每个面都是长方形（包括正方形）</td>
+</tr>
+<tr>
+<td>棱（edge）</td>
+<td>12</td>
+<td>两个面相交的线段</td>
+</tr>
+<tr>
+<td>顶点（vertex）</td>
+<td>8</td>
+<td>三条棱相交的角落</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对面的关系：</strong> 长方体有 3 对对面，每对对面形状、大小完全相同。你可以把一个饼干盒拿起来，认认"盖子和底面"是一对，"左侧面和右侧面"是一对，"前面和后面"是一对。</p>
+<h3>长方体 vs 正方体</h3>
+<p>正方体是<strong>特殊的长方体</strong>——当长方体的长、宽、高三个尺寸都一样长时，就变成了正方体。所有正方体都是长方体，但不是所有长方体都是正方体。</p>
+<p><strong>为什么冰箱是长方体？</strong> 长方体适合贴墙放置，不浪费角落空间；多个长方体可以无缝拼在一起，没有空隙——这就是"空间利用率最高"的立体形之一。</p>
+<p>想了解更多，可以看 <a href="../atoms/019-正方体.html">正方体</a>、<a class="dead" title="未收录">圆柱</a>、<a class="dead" title="未收录">球</a>。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>体积与表面积公式</h3>
+<p>设长方体的长为 a，宽为 b，高为 c：</p>
+<pre><code>体积 V = a × b × c
+表面积 S = 2(ab + bc + ac)
+</code></pre>
+<p>表面积公式中，ab 是前后面，bc 是左右面，ac 是上下面，各有两个，所以乘以 2。</p>
+<h3>长方体的对称性</h3>
+<p>长方体有 <strong>3 个对称平面</strong>（分别平行于三对对面，过各对面中心），正方体则有 9 个对称平面（3 个平行于面的 + 6 个过对角的）。对称性分析是高中立体几何的重要工具。</p>
+<h3>几何变换与坐标系</h3>
+<p>在三维笛卡尔坐标系中，轴对齐的长方体可以用两个顶点坐标（x₁,y₁,z₁）和（x₂,y₂,z₂）完全确定，这使它成为计算机图形学（CG）和游戏引擎中最常用的包围盒（bounding box / AABB — Axis-Aligned Bounding Box），用于快速碰撞检测。</p>
+<h3>建筑学中的长方体</h3>
+<p>现代建筑大量使用长方体单元（房间、楼层、建筑体块），原因是：</p>
+<ol>
+<li><strong>施工简便</strong>：直角便于测量和对齐</li>
+<li><strong>空间拼接</strong>：长方体无缝堆叠，零浪费</li>
+<li><strong>结构力学</strong>：矩形框架受力分析成熟（<strong>待家长核对，结构力学细节</strong>）</li>
+</ol>
+<h3>包装设计与长方体</h3>
+<p>展开长方体的表面，得到<strong>展开图（net）</strong>。一个长方体有多种不同的展开方式，高中数学和竞赛题中常考"哪种展开图折叠后能得到指定长方体"。同时，包装行业用展开图计算用料（即表面积），优化裁切减少浪费。（<strong>待家长核对展开图种数</strong>）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长方体</td>
+<td>cuboid</td>
+<td>n.</td>
+<td>核心形体</td>
+</tr>
+<tr>
+<td>盒子</td>
+<td>box</td>
+<td>n.</td>
+<td>日常说法</td>
+</tr>
+<tr>
+<td>面</td>
+<td>face</td>
+<td>n.</td>
+<td>平的那一面</td>
+</tr>
+<tr>
+<td>棱</td>
+<td>edge</td>
+<td>n.</td>
+<td>两面相交的线</td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>vertex</td>
+<td>n.</td>
+<td>三面相交的角</td>
+</tr>
+<tr>
+<td>长</td>
+<td>length</td>
+<td>n.</td>
+<td>最长那条边</td>
+</tr>
+<tr>
+<td>宽</td>
+<td>width</td>
+<td>n.</td>
+<td>短边</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height</td>
+<td>n.</td>
+<td>竖起来的那条</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>volume</td>
+<td>n.</td>
+<td>占了多少空间</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牛奶盒是长方体。</td>
+<td>A milk carton is a cuboid.</td>
+</tr>
+<tr>
+<td>长方体有 6 个面。</td>
+<td>A cuboid has 6 faces.</td>
+</tr>
+<tr>
+<td>对面的形状和大小相同。</td>
+<td>Opposite faces are the same shape and size.</td>
+</tr>
+<tr>
+<td>正方体是特殊的长方体。</td>
+<td>A cube is a special kind of cuboid.</td>
+</tr>
+<tr>
+<td>体积等于长乘以宽乘以高。</td>
+<td>Volume equals length times width times height.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 立体图形科普绘本（长方体主题）请家长在书店选择，推荐包含实物照片对比的版本（如展示各种盒子形状的科普童书）。适龄：3-6 岁共读。</li>
+<li>🚧 英文形状立体绘本可查找 "3D shapes for kids" 类别，建议选择附有真实生活照片的版本。（<strong>具体书名待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"砖头是不是长方体？"</strong> → 可以说："是的！砖头有 6 个面，每个面都是长方形，这就是长方体。你摸摸砖头的角——每个角都是直直方方的，这叫直角。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"长方体的角和正方体一样吗？"</strong> → 可以说："一样！长方体和正方体的每个角都是直角——就像书的角那样方方正正。区别在于正方体的 12 条棱都一样长，长方体不一定。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"牛奶盒为什么是长方体？"</strong> → 可以说："因为长方体放在冰箱里不会滚来滚去，而且可以紧紧靠在一起，不浪费空间。工厂做盒子的时候，把一张纸板折几下就能变成长方体，很方便。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 找一个空的牛奶盒，用剪刀沿棱剪开展平——看看展开图是什么形状，数一数有几个长方形面。再把它重新折回来，感受立体和平面的转化。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第一学段"图形与几何"（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学一年级上册.pdf</a> 第 4 单元《认识图形（一）》(教材 p34-38)；高中数学立体几何（<strong>待家长核对版本</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/长方体</li>
+<li><strong>拓展阅读</strong>：展开图与表面积（小学高年级数学）；AABB 碰撞检测（计算机图形学科普）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-07，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/019-正方体.html">正方体</a> · <a class="dead" title="未收录">圆柱</a> · <a class="dead" title="未收录">球</a> · <a class="dead" title="未收录">形状-方</a> · <a href="../atoms/014-对称.html">对称</a></p>
+<hr />
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

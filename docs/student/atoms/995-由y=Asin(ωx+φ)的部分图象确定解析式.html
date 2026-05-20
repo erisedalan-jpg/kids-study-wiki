@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>由y=Asin(ωx+φ)的部分图象确定解析式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>由y=Asin(ωx+φ)的部分图象确定解析式</h1><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 由y=Asin(ωx+φ)的部分图象确定解析式, 根据图像求三角函数解析式, 由图像确定Asin(ωx+φ)</p><h1>由y=Asin(ωx+φ)的部分图象确定解析式</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据正弦型函数的部分图象提供的关键几何信息（如最值点、零点、周期长度），逆向求解振幅A、角频率ω与初相φ，从而唯一确定函数解析式。
+<strong>English</strong>: A process of reversely determining the amplitude A, angular frequency ω, and initial phase φ based on key geometric information (such as extreme points, zeros, and period length) provided in a partial graph of a sine-type function, so as to uniquely identify its analytic formula.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>本考点核心是建立函数 $y=A\sin(\omega x+\varphi)+b$ 的图像特征与参数之间的严格对应关系。高考中通常给出一个周期内的部分图像（通常包含最值点、零点或特定函数值点），要求写出解析式，题型以选择题、填空题为主，也可嵌入解答题的第一步。</p>
+<p><strong>参数确定方法（按顺序求解）</strong>：</p>
+<ol>
+<li>
+<p><strong>求 $A$ 和 $b$</strong>：由图像的最高点 $y_{\max}$ 与最低点 $y_{\min}$ 直接给出。
+   $$A = \frac{y_{\max} - y_{\min}}{2}, \quad b = \frac{y_{\max} + y_{\min}}{2}$$
+   若 $b=0$（图像关于 $x$ 轴对称），则 $A = |y_{\max}|$。注意 $A&gt;0$ 为基本要求，若需 $A&lt;0$ 可通过诱导公式转化为 $A&gt;0$ 加上 $\varphi$ 的调整。</p>
+</li>
+<li>
+<p><strong>求 $\omega$</strong>：利用周期 $T$ 或半周期、四分之一周期等信息。
+   $$\omega = \frac{2\pi}{T}$$
+   关键是准确读出 $T$：相邻最高点与最高点的横向距离、相邻最低点与最低点的横向距离、相邻零点中同方向穿越的零点间距均等于 $T$；相邻最高点与最低点的横向距离为 $\frac{T}{2}$；相邻最高点与相邻零点的横向距离为 $\frac{T}{4}$（该零点需在最高点与最低点之间）。</p>
+</li>
+<li>
+<p><strong>求 $\varphi$（初相）</strong>：代入一个已知点的坐标 $(x_0, y_0)$ 解三角方程，这是错误高发环节。</p>
+</li>
+<li><strong>优先选用最值点</strong>：若图像经过最高点 $(x_0, A+b)$，则 $\omega x_0 + \varphi = \frac{\pi}{2} + 2k\pi$（$k \in \mathbb{Z}$）；若经过最低点 $(x_0, -A+b)$，则 $\omega x_0 + \varphi = -\frac{\pi}{2} + 2k\pi$。直接解得 $\varphi$ 的一个值，通常取 $|\varphi| \leq \pi$ 或根据题设范围确定。</li>
+<li><strong>若用零点（上升型）</strong>：图像在 $x_0$ 处由负到正穿越平衡线，则 $\omega x_0 + \varphi = 2k\pi$。</li>
+<li><strong>若用零点（下降型）</strong>：图像在 $x_0$ 处由正到负穿越平衡线，则 $\omega x_0 + \varphi = \pi + 2k\pi$。
+   使用一般点 $(x_0, y_0)$ 时，由 $\sin(\omega x_0 + \varphi) = \frac{y_0-b}{A}$ 解得 $\omega x_0 + \varphi$ 的两个可能角，再结合该点处的单调性（图像走向）锁定唯一值，进而解出 $\varphi$。</li>
+</ol>
+<p><strong>高频考查角度</strong>：给定图像求完整解析式；给定部分参数（如已知 $\omega$ 范围或 $\varphi$ 范围），由图像限定其余参数；与单调区间、对称轴/对称中心、最值点的位置关系联合命题。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆周期与半周期</strong>：将相邻最高点与最低点的横向距离误当作 $T$，实际应为 $\frac{T}{2}$，导致求出的 $\omega$ 与正确答案差两倍。必须严格判断图像给出的到底是一个完整周期还是半个周期。</li>
+<li><strong>解 $\varphi$ 时忽略单调性造成增根</strong>：只依靠 $\sin(\omega x_0 + \varphi) = c$ 求出两个解，未结合该点的上升或下降趋势筛选，导致 $\varphi$ 取错值。必须检验所得解析式在代入点的邻域内增减状态与原图一致。</li>
+<li><strong>直接套用 $\frac{\text{零点横坐标}}{|\omega|}$ 求 $\varphi$</strong>：部分学生机械记忆 $\varphi = -\omega \cdot x_{\text{零点}}$，但该公式仅在 $\omega x + \varphi = 0$（即上升型零点处）成立，且需确认该零点确为 $\sin$ 的零点（平衡位置）。对其他类型零点或横向平移后的零点直接套用会出错。</li>
+<li><strong>忽视 $y$ 轴平移 $b \neq 0$ 的情况</strong>：当图像上下平移后，零点不再是 $y=0$ 的点，而是 $y=b$ 的点。误将原图中的 $x$ 轴当作平衡位置来求周期或 $\varphi$，导致全部参数连锁错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>函数值偏离平衡位置的最大距离，即 $A$</td>
+</tr>
+<tr>
+<td>角频率</td>
+<td>angular frequency</td>
+<td>单位角度变化的周期数相关量，即 $\omega$</td>
+</tr>
+<tr>
+<td>初相</td>
+<td>initial phase</td>
+<td>$x=0$ 时相位角的值，即 $\varphi$</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>图像完成一次完整波动所需的最小横向长度，$T=\frac{2\pi}{\omega}$</td>
+</tr>
+<tr>
+<td>平衡位置</td>
+<td>equilibrium position</td>
+<td>函数值摆动中心，对应 $y=b$ 的直线</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">三角函数的图象与性质</a></li>
+<li><a class="dead" title="未收录">函数y=Asin(ωx+φ)的图象变换</a></li>
+<li><a class="dead" title="未收录">由y=Asin(ωx+φ)的性质确定解析式</a></li>
+<li><a class="dead" title="未收录">五点法作图</a></li>
+<li><a class="dead" title="未收录">正弦型函数的单调性与最值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2011-理-11.html">2011-理-11</a></li>
+<li><a href="../exam/2012-理-09.html">2012-理-09</a></li>
+<li><a href="../exam/2016-文-03.html">2016-文-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

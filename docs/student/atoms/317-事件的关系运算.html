@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>事件的关系运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>事件的关系运算</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>4</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 概率, 第十章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 事件的关系运算, event operations, 互斥事件, 对立事件, 独立事件</p><h2>🎓 事件的关系与运算</h2>
+<h3>事件的关系</h3>
+<h4>包含关系</h4>
+<p>若事件 $A$ 发生必然导致事件 $B$ 发生，则称 $A$ 包含于 $B$，记作 $A \subset B$（或 $B \supset A$）。</p>
+<p><strong>推论</strong>：$P(A) \leq P(B)$（若 $A \subset B$）</p>
+<h4>相等关系</h4>
+<p>$A = B$：$A \subset B$ 且 $B \subset A$，即两事件完全相同。</p>
+<h4>互斥关系（不相容）</h4>
+<p>$A \cap B = \emptyset$：$A$ 和 $B$ 不能同时发生，称 $A$ 与 $B$ <strong>互斥</strong>。</p>
+<p><strong>加法公式</strong>（互斥）：$P(A \cup B) = P(A) + P(B)$</p>
+<p>推广：$A_1, A_2, \ldots, A_n$ 两两互斥时：$P(A_1 \cup A_2 \cup \cdots \cup A_n) = \sum_{i=1}^n P(A_i)$</p>
+<h4>对立关系（互余）</h4>
+<p>$A$ 与 $\bar{A}$ 互为<strong>对立事件</strong>（complementary events）：</p>
+<p>$$A \cup \bar{A} = \Omega, \quad A \cap \bar{A} = \emptyset$$</p>
+<p>$$P(A) + P(\bar{A}) = 1 \implies P(\bar{A}) = 1 - P(A)$$</p>
+<p><strong>对立是互斥的特殊情形</strong>（还需要两者之和为全集）。</p>
+<h3>事件的运算</h3>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>并（和）</td>
+<td>$A \cup B$</td>
+<td>$A$ 或 $B$ 至少一个发生</td>
+</tr>
+<tr>
+<td>交（积）</td>
+<td>$A \cap B$ 或 $AB$</td>
+<td>$A$ 与 $B$ 同时发生</td>
+</tr>
+<tr>
+<td>差</td>
+<td>$A - B$ 或 $A\bar{B}$</td>
+<td>$A$ 发生但 $B$ 不发生</td>
+</tr>
+<tr>
+<td>补</td>
+<td>$\bar{A}$</td>
+<td>$A$ 不发生</td>
+</tr>
+</tbody>
+</table>
+<h3>概率的加法公式（一般）</h3>
+<p>$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$</p>
+<p>三个事件：
+$$P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(AB) - P(AC) - P(BC) + P(ABC)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$P(A) = 0.3$，$P(B) = 0.4$，$P(AB) = 0.1$，求 $P(A \cup B)$。</p>
+<p><strong>解</strong>：$P(A \cup B) = 0.3 + 0.4 - 0.1 = 0.6$</p>
+<p><strong>例2</strong>：$A$ 与 $B$ 互斥，$P(A) = 0.4$，$P(B) = 0.3$，求 $P(A \cup B)$。</p>
+<p><strong>解</strong>：$P(A \cup B) = 0.4 + 0.3 = 0.7$（互斥时无需减去 $P(AB)$，因 $P(AB) = 0$）</p>
+<p><strong>例3</strong>："至少一个"类问题——求至少一人击中靶的概率。</p>
+<p><strong>策略</strong>：用对立事件，$P(\text{至少一人击中}) = 1 - P(\text{全未击中})$</p>
+<p>甲乙击中概率各为 0.8，0.7，则 $P(\text{至少一人}) = 1 - 0.2 \times 0.3 = 0.94$</p>
+<h3>关系辨析</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>互斥</th>
+<th>对立</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能同时发生？</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>两者之和为全集？</td>
+<td>不一定</td>
+<td>是</td>
+</tr>
+<tr>
+<td>概率之和</td>
+<td>$\leq 1$</td>
+<td>$= 1$</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>对立事件一定互斥，但互斥事件不一定对立（可能有第三种结果）</li>
+<li>$P(A\bar{B}) = P(A) - P(AB)$（差事件公式）</li>
+<li>"至少"类问题优先考虑<strong>对立事件</strong>法</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第十章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第十章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a class="dead" title="未收录">概率的基本性质</a></li>
+<li><a href="../atoms/320-古典概型.html">古典概型</a></li>
+<li><a href="../atoms/318-事件的独立性.html">事件的独立性</a></li>
+<li><a href="../atoms/340-条件概率初步.html">条件概率初步</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-19.html">2008-文-19</a></li>
+<li><a href="../exam/2009-文-17.html">2009-文-17</a></li>
+<li><a href="../exam/2015-理-18.html">2015-理-18</a></li>
+<li><a href="../exam/2018-文-17.html">2018-文-17</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-08</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-12.html">2023-新课标Ⅱ-12</a></li>
+<li><a href="../exam/2024-新课标Ⅱ-18.html">2024-新课标Ⅱ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

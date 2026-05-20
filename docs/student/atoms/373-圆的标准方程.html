@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的标准方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆的标准方程</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>5</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章直线和圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆的标准方程, standard equation of circle, 圆标准式, 椭圆的标准方程</p><h2>🎓 圆的标准方程</h2>
+<h3>标准方程</h3>
+<p>圆心为 $(a,b)$，半径为 $r$（$r&gt;0$）的圆的方程为：</p>
+<p>$$(x-a)^2 + (y-b)^2 = r^2$$</p>
+<p><strong>特别地</strong>，圆心在原点时：$x^2 + y^2 = r^2$</p>
+<h3>推导</h3>
+<p>圆上任意一点 $P(x,y)$ 到圆心 $(a,b)$ 的距离等于半径 $r$：</p>
+<p>$$\sqrt{(x-a)^2+(y-b)^2} = r \Rightarrow (x-a)^2+(y-b)^2=r^2$$</p>
+<h3>已知条件求圆方程</h3>
+<table>
+<thead>
+<tr>
+<th>已知条件</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆心和半径</td>
+<td>直接代入标准式</td>
+</tr>
+<tr>
+<td>圆心和圆上一点</td>
+<td>求半径 $r=$ 两点距离</td>
+</tr>
+<tr>
+<td>直径两端点</td>
+<td>圆心 = 中点，$r=$ 半径长度</td>
+</tr>
+<tr>
+<td>三点确定圆</td>
+<td>设方程代入三点，解方程组（或利用一般式）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：圆心 $(2,-3)$，半径为 $5$，写出标准方程。</p>
+<p><strong>解</strong>：$(x-2)^2+(y+3)^2=25$</p>
+<p><strong>例2</strong>：圆以 $A(1,4)$ 和 $B(3,-2)$ 为直径端点，求方程。</p>
+<p><strong>解</strong>：
+圆心 = $AB$ 中点 $= (2,1)$</p>
+<p>$r = \dfrac{|AB|}{2} = \dfrac{\sqrt{(3-1)^2+(-2-4)^2}}{2} = \dfrac{\sqrt{4+36}}{2} = \dfrac{\sqrt{40}}{2} = \sqrt{10}$</p>
+<p>方程：$(x-2)^2+(y-1)^2=10$</p>
+<p><strong>例3</strong>：圆过 $(0,0)$，$(2,0)$，$(0,2)$ 三点，求方程。</p>
+<p><strong>解</strong>：设方程 $(x-a)^2+(y-b)^2=r^2$，将三点代入：</p>
+<p>$(0-a)^2+(0-b)^2=r^2 \Rightarrow a^2+b^2=r^2$ ①</p>
+<p>$(2-a)^2+b^2=r^2$ ② </p>
+<p>$a^2+(2-b)^2=r^2$ ③</p>
+<p>②-①：$(2-a)^2-a^2=0 \Rightarrow 4-4a=0 \Rightarrow a=1$</p>
+<p>③-①：$(2-b)^2-b^2=0 \Rightarrow 4-4b=0 \Rightarrow b=1$</p>
+<p>$r^2=1+1=2$，方程：$(x-1)^2+(y-1)^2=2$</p>
+<h3>与必修二（圆的概念）的衔接</h3>
+<ul>
+<li>必修二学过圆的几何定义和性质（直径、切线等）</li>
+<li>选必一重点：<strong>解析法</strong>，用坐标和方程研究圆</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>$(x-a)^2+(y-b)^2=r^2$ 中，圆心是 $(a,b)$，注意符号（$+b$ 对应 $y-(-b)$）</li>
+<li>$r^2$ 右边必须是正数，方程有意义</li>
+<li>标准方程展开后得到一般方程，但一般方程化回标准式时需检验 $r^2&gt;0$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第二章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第二章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">圆的一般方程</a></li>
+<li><a href="../atoms/394-直线和圆位置关系-高中.html">直线和圆位置关系-高中</a></li>
+<li><a class="dead" title="未收录">圆与圆位置关系-高中</a></li>
+<li><a class="dead" title="未收录">两条直线位置关系</a></li>
+<li><a class="dead" title="未收录">轨迹方程</a></li>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-13.html">2010-文-13</a></li>
+<li><a href="../exam/2010-理-15.html">2010-理-15</a></li>
+<li><a href="../exam/2011-文-20.html">2011-文-20</a></li>
+<li><a href="../exam/2012-文-20.html">2012-文-20</a></li>
+<li><a href="../exam/2012-理-20.html">2012-理-20</a></li>
+<li><a href="../exam/2013-文-20.html">2013-文-20</a></li>
+<li><a href="../exam/2014-文-06.html">2014-文-06</a></li>
+<li><a href="../exam/2014-文-07.html">2014-文-07</a></li>
+<li><a href="../exam/2015-文-02.html">2015-文-02</a></li>
+<li><a href="../exam/2016-文-05.html">2016-文-05</a></li>
+<li><a href="../exam/2016-文-15.html">2016-文-15</a></li>
+<li><a href="../exam/2016-文-23.html">2016-文-23</a></li>
+<li><a href="../exam/2018-文-20.html">2018-文-20</a></li>
+<li><a class="dead" title="未收录">2020-北京-05</a></li>
+<li><a href="../exam/2020-文-08.html">2020-文-08</a></li>
+<li><a href="../exam/2020-理-05.html">2020-理-05</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-14</a></li>
+<li><a class="dead" title="未收录">2024-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

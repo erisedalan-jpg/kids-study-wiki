@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分类计数原理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分类计数原理</h1><div class="meta-card"><span><strong>权重</strong>20</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分类计数原理, addition principle, 加法原理, 分类加法原理</p><h2>🎓 分类计数原理</h2>
+<h3>基本定义</h3>
+<p><strong>分类计数原理</strong>（又称加法原理）：完成一件事情，有 $n$ 类方法，第 $i$ 类方法中有 $m_i$ 种，则完成这件事共有</p>
+<p>$$N = m_1 + m_2 + \cdots + m_n$$</p>
+<p>种方法。</p>
+<p><strong>关键条件</strong>：各类方法<strong>互斥</strong>（相互独立不重叠），且每种方法都能单独完成任务。</p>
+<h3>核心理解</h3>
+<ul>
+<li>分类原理对应"或"关系：选 A <strong>或</strong> 选 B</li>
+<li>各类方法中任选一种，就能完成任务</li>
+<li>与分步计数原理（乘法原理）的区别：分类用加法，分步用乘法</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1（基础）</strong>：从北京到上海，可乘飞机（5 班次）、高铁（8 班次）或轮船（2 班次），共有多少种出行方式？</p>
+<p><strong>解</strong>：三类方式互斥，$N = 5 + 8 + 2 = 15$ 种。</p>
+<p><strong>例2（数字问题）</strong>：用 0,1,2,3,4,5 组成没有重复数字的三位数，有多少个？</p>
+<p><strong>解</strong>：按首位数字分类。
+- 首位为 1,2,3,4,5（非零）共 5 种选法，后两位从剩余 5 个数中取 2 个：$5 \times A_5^2 = 5 \times 20 = 100$</p>
+<p>（此题实际需结合乘法原理，体现两原理的综合运用）</p>
+<p><strong>例3（路径问题）</strong>：如图，从 A 到 B 有 3 条路，从 B 到 C 有 2 条路，从 A 直接到 C 有 4 条路，则从 A 到 C 共有多少条路？</p>
+<p><strong>解</strong>：经过 B 的路：$3 \times 2 = 6$ 条（乘法原理）；直达：4 条。两类互斥，$N = 6 + 4 = 10$ 条。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>分类不完全</strong>：漏了某类方法，导致结果偏小</li>
+<li><strong>分类有重叠</strong>：同一方法被计入多类，导致结果偏大（需保证互斥）</li>
+<li><strong>与乘法原理混淆</strong>：分类用加法，分步用乘法；"完成任务只需一步"用加法</li>
+<li><strong>含特殊元素未单独分类</strong>：如含 0 的数字排列，需将首位含 0 的情况单独处理</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/加法原理">加法原理 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/477-分步计数原理.html">分步计数原理</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a href="../atoms/505-组合概念.html">组合概念</a></li>
+<li><a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2009-理-07.html">2009-理-07</a></li>
+<li><a href="../exam/2009-理-10.html">2009-理-10</a></li>
+<li><a href="../exam/2012-理-06.html">2012-理-06</a></li>
+<li><a href="../exam/2018-理-15.html">2018-理-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

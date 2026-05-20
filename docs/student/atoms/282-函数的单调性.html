@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的单调性</h1><div class="meta-card"><span><strong>权重</strong>18</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的单调性, monotonicity, 单调函数, 单调递增, 单调递减</p><h2>🎓 函数的单调性</h2>
+<h3>定义</h3>
+<p>设函数 $f(x)$ 在区间 $D$ 上有定义。</p>
+<p><strong>单调递增</strong>（increasing）：若对 $D$ 上任意 $x_1 &lt; x_2$，都有 $f(x_1) &lt; f(x_2)$，则称 $f(x)$ 在 $D$ 上单调递增，$D$ 称为 $f(x)$ 的一个<strong>单调递增区间</strong>。</p>
+<p><strong>单调递减</strong>（decreasing）：若对 $D$ 上任意 $x_1 &lt; x_2$，都有 $f(x_1) &gt; f(x_2)$，则称 $f(x)$ 在 $D$ 上单调递减，$D$ 称为 $f(x)$ 的一个<strong>单调递减区间</strong>。</p>
+<h3>用定义证明单调性（三步法）</h3>
+<ol>
+<li><strong>取值</strong>：设 $x_1, x_2$ 是区间 $D$ 内任意两个值，且 $x_1 &lt; x_2$（或 $x_1 \neq x_2$）</li>
+<li><strong>作差</strong>：计算 $f(x_1) - f(x_2)$，化简</li>
+<li><strong>判符</strong>：分析差的正负，下结论</li>
+</ol>
+<h3>关键性质</h3>
+<p><strong>区间特定性</strong>：单调性是函数在某个区间上的性质，不是整体性质。如 $y = x^2$ 在 $(-\infty, 0]$ 单调递减，在 $[0, +\infty)$ 单调递增，但整体不单调。</p>
+<p><strong>单调区间不合并</strong>：两个单调递增区间不能"合并"成一个（它们之间可能有下降段）。</p>
+<p><strong>复合函数单调性</strong>（同增异减）：</p>
+<p>$$f(u) \text{ 增，} g(x) \text{ 增} \Rightarrow f(g(x)) \text{ 增}$$</p>
+<p>$$f(u) \text{ 增，} g(x) \text{ 减} \Rightarrow f(g(x)) \text{ 减}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：用定义证明 $f(x) = 3x - 1$ 在 $\mathbb{R}$ 上单调递增。</p>
+<p>证：设 $x_1, x_2 \in \mathbb{R}$，$x_1 &lt; x_2$。</p>
+<p>$f(x_1) - f(x_2) = (3x_1 - 1) - (3x_2 - 1) = 3x_1 - 3x_2 = 3(x_1 - x_2)$</p>
+<p>因为 $x_1 &lt; x_2$，所以 $x_1 - x_2 &lt; 0$，故 $3(x_1-x_2) &lt; 0$，即 $f(x_1) &lt; f(x_2)$。</p>
+<p>所以 $f(x)$ 在 $\mathbb{R}$ 上单调递增。$\square$</p>
+<p><strong>例2</strong>：用定义证明 $f(x) = \dfrac{1}{x}$ 在 $(0, +\infty)$ 上单调递减。</p>
+<p>证：设 $0 &lt; x_1 &lt; x_2$。</p>
+<p>$f(x_1) - f(x_2) = \dfrac{1}{x_1} - \dfrac{1}{x_2} = \dfrac{x_2 - x_1}{x_1 x_2}$</p>
+<p>因为 $x_1 &lt; x_2$，所以 $x_2 - x_1 &gt; 0$；又 $x_1, x_2 &gt; 0$，所以 $x_1 x_2 &gt; 0$。</p>
+<p>故 $\dfrac{x_2-x_1}{x_1 x_2} &gt; 0$，即 $f(x_1) &gt; f(x_2)$，$f(x)$ 在 $(0, +\infty)$ 上单调递减。$\square$</p>
+<p><strong>例3</strong>：求函数 $f(x) = x^2 - 2x + 3$ 的单调区间。</p>
+<p>解：配方 $f(x) = (x-1)^2 + 2$，顶点 $(1, 2)$，开口向上。
+- 单调递减区间：$(-\infty, 1]$
+- 单调递增区间：$[1, +\infty)$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>"任意"两个 $x_1 &lt; x_2$</strong>：定义中强调对区间内<strong>任意</strong>两点都成立，不能只验证特殊点</li>
+<li><strong>单调区间不写整体</strong>：$y = x^2$ 不能说"在 $\mathbb{R}$ 上单调"，需分区间描述</li>
+<li><strong>单调区间用区间，不用不等式</strong>：单调递增区间写 $[1, +\infty)$，不写"当 $x &gt; 1$ 时单调递增"（后者不精确）</li>
+<li><strong>端点问题</strong>：若函数在端点有定义，单调区间通常用闭区间；若端点不在定义域，用开区间</li>
+<li><strong>复合函数同增异减</strong>：不要直接套，要先确认各函数的单调区间，再在交集上讨论</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中通过函数图象直观感受"上升""下降"，如一次函数 $y = kx+b$（$k&gt;0$ 递增，$k&lt;0$ 递减）。高中用严格的定义语言描述单调性，并引入"三步法"证明，强调"任意"而非"直觉"。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：单调函数（Monotone function），单调递增/递减</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/286-函数的最值.html">函数的最值</a></li>
+<li><a href="../atoms/296-复合函数.html">复合函数</a></li>
+<li><a class="dead" title="未收录">指数函数的性质</a></li>
+<li><a class="dead" title="未收录">对数函数的性质</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-05.html">2010-理-05</a></li>
+<li><a href="../exam/2011-文-03.html">2011-文-03</a></li>
+<li><a href="../exam/2014-文-02.html">2014-文-02</a></li>
+<li><a href="../exam/2014-文-04.html">2014-文-04</a></li>
+<li><a href="../exam/2014-理-15.html">2014-理-15</a></li>
+<li><a href="../exam/2016-理-05.html">2016-理-05</a></li>
+<li><a href="../exam/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/2017-理-11.html">2017-理-11</a></li>
+<li><a href="../exam/2018-理-13.html">2018-理-13</a></li>
+<li><a href="../exam/2019-文-03.html">2019-文-03</a></li>
+<li><a href="../exam/2020-文-10.html">2020-文-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

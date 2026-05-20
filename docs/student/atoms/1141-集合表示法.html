@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合表示法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>集合表示法</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 集合表示法, 集合的表示方法</p><h1>集合表示法</h1>
+<blockquote>
+<p><strong>一句话</strong>：集合表示法是使用列举法、描述法或图示法（Venn 图）表达集合及其元素关系的数学语言。
+<strong>English</strong>: Set notation is the mathematical language for expressing sets and their elements through roster form, set-builder form, or Venn diagrams.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：集合的表示法主要有三种。</li>
+<li><strong>列举法</strong>：将集合的元素一一列出，写在大括号内，元素之间用逗号隔开，如 ${1,2,3}$。元素无序且互异。</li>
+<li><strong>描述法</strong>：用元素满足的性质刻画集合，一般形式为 ${x \mid P(x)}$，竖线前指明代表元素及其范围，竖线后给出条件，如 ${x \in \mathbf{R} \mid x^2-1=0}$。</li>
+<li>
+<p><strong>图示法（Venn 图）</strong>：用封闭曲线内部表示集合，直观展示集合间的关系，常用于子集、交并补运算的辅助分析。
+  描述法中，竖线前的代表元素决定集合的类型：若为点 $(x,y)$ 则是点集，若为实数 $x$ 则是数集。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：求解描述法表示的集合问题，应先将代表元素和条件分离，明确集合中元素的属性（数、点、有序对等）。遇到较复杂条件时，可先求出若干元素加深理解，再转化为方程或不等式的解集。涉及参数的集合问题，务必考虑空集情况（描述法可能无解）。用 Venn 图辅助时，注意边界与集合运算的对应。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见以下设问：</p>
+</li>
+<li>给出描述法表示的集合，判断集合间的关系或进行运算。例如：已知 $A={x \mid y=\sqrt{x-1}}$，$B={y \mid y=x^2+1}$，求 $A \cap B$。需要先认清 $A$ 是定义域 $[1,+\infty)$，$B$ 是值域 $[1,+\infty)$，然后得交集。</li>
+<li>结合二次方程或不等式的解集，考查列举法与描述法的互化及参数求解。例如：若 ${1,2} \subseteq {x \mid x^2+ax+b=0}$，求 $a,b$。利用根与系数关系。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>点集与数集混淆</strong>：描述法 ${(x,y) \mid y=x+1}$ 表示直线上的点集，而 ${y \mid y=x+1}$ 表示函数值域数集，解题时必须区分代表元素。</li>
+<li><strong>忽略元素的互异性</strong>：列举法写 ${1,2,2}$ 是错误的，应写 ${1,2}$；在求参数时若解出相同元素需舍去重复值。</li>
+<li><strong>描述法格式错误</strong>：漏写竖线或代表元素，如将 ${x \mid x^2=1}$ 写成 ${x^2=1}$，导致表达式无意义。</li>
+<li><strong>空集表示混淆</strong>：$\varnothing$ 表示不含任何元素的集合；${\varnothing}$ 是以空集为元素的单元素集合，两者不等价。用描述法表示空集通常需要条件恒假，如 ${x \mid x^2&lt;0}$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>列举法</td>
+<td>roster method</td>
+<td>列出集合所有元素</td>
+</tr>
+<tr>
+<td>描述法</td>
+<td>set-builder notation</td>
+<td>用条件刻画集合元素</td>
+</tr>
+<tr>
+<td>Venn 图</td>
+<td>Venn diagram</td>
+<td>用封闭曲线表示集合及其关系</td>
+</tr>
+<tr>
+<td>空集</td>
+<td>empty set</td>
+<td>不含任何元素的集合，记作 $\varnothing$</td>
+</tr>
+<tr>
+<td>代表元素</td>
+<td>representative element</td>
+<td>描述法中竖线前的变量，决定集合类型</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">元素与集合的关系</a></li>
+<li><a class="dead" title="未收录">集合间的基本关系</a></li>
+<li><a class="dead" title="未收录">集合的基本运算</a></li>
+<li><a class="dead" title="未收录">空集</a></li>
+<li><a class="dead" title="未收录">数集与点集</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-理-01.html">2008-理-01</a></li>
+<li><a href="../exam/2010-理-01.html">2010-理-01</a></li>
+<li><a href="../exam/2013-理-01.html">2013-理-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

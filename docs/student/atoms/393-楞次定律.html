@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>楞次定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>楞次定律</h1><div class="meta-card"><span><strong>权重</strong>22</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 楞次定律, Lenz&#x27;s law</p><h2>🎓 楞次定律（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>楞次定律</strong>（Lenz's Law）：感应电流的方向，总是使感应电流产生的磁通量<strong>阻碍</strong>引起感应电流的原磁通量的变化。</p>
+<p>由俄国物理学家<strong>海因里希·楞次</strong>于 1834 年提出，是法拉第电磁感应定律在方向上的具体表述。</p>
+<h3>数学表达</h3>
+<p>楞次定律没有独立公式，通常与法拉第定律结合使用，体现在感应电动势的符号上：</p>
+<p>$$\varepsilon = -\frac{\Delta\Phi}{\Delta t}$$</p>
+<p>负号即为楞次定律的数学体现（感应量阻碍原因）。</p>
+<h3>楞次定律的三层含义</h3>
+<p><strong>第一层（磁场层面）</strong>：感应电流产生的磁场阻碍原磁通量的变化</p>
+<table>
+<thead>
+<tr>
+<th>原磁通量</th>
+<th>感应磁场方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向右增大</td>
+<td>向左（阻碍增大）</td>
+</tr>
+<tr>
+<td>向右减小</td>
+<td>向右（阻碍减小）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第二层（运动层面）</strong>：感应电流产生的安培力阻碍引起感应电流的相对运动</p>
+<ul>
+<li>磁铁插入线圈 → 安培力阻碍插入（线圈上端产生同极）</li>
+<li>磁铁拔出线圈 → 安培力阻碍拔出（线圈上端产生异极，吸引磁铁）</li>
+</ul>
+<p><strong>第三层（能量层面）</strong>：楞次定律保证了能量守恒——要维持感应电流，必须克服阻力做功（机械能 → 电能）</p>
+<h3>判断感应电流方向的完整流程</h3>
+<pre><code>原磁通量方向 → 判断增减 → 由楞次定律定感应磁场方向
+→ 由右手定则定感应电流方向
+</code></pre>
+<h3>典型例题</h3>
+<p><strong>例1（磁铁运动）</strong>：一根条形磁铁 N 极朝下插入水平线圈，判断从上方看线圈中感应电流方向。</p>
+<ul>
+<li>原磁通量：向下（N 极朝下）且增大</li>
+<li>感应磁场：向上（阻碍向下增大）</li>
+<li>右手定则：拇指向上，四指弯曲 → 从上方看为<strong>逆时针</strong></li>
+</ul>
+<p><strong>例2（线圈运动）</strong>：一矩形线圈从匀强磁场区域内向外移出（磁场垂直纸面向里），判断电流方向。</p>
+<ul>
+<li>原磁通量：向里，且在减小</li>
+<li>感应磁场：向里（阻碍减小）</li>
+<li>从正面看（纸面）：电流顺时针</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>"阻碍变化"而非"阻碍磁场"</strong>：若原磁通量增大，感应磁场与原磁场反向（阻碍增大），但此时感应磁场不是零，而是方向相反。</li>
+<li><strong>线圈静止在变化磁场中</strong>与<strong>线圈运动</strong>产生感应电流的本质相同（都是磁通量变化），楞次定律均适用。</li>
+<li><strong>感应电流产生的安培力</strong>阻碍运动，但不能使运动停止——这需要持续做功。</li>
+</ol>
+<h3>历史意义</h3>
+<p>楞次定律揭示了电磁感应的因果关系（原因-效应相互制约），是<strong>麦克斯韦电磁理论</strong>的先驱工作之一，也是后来<strong>能量守恒定律</strong>普适性的重要证据。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：楞次定律 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">感应电流方向-楞次定律</a></li>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+<li><a href="../atoms/395-法拉第电磁感应定律.html">法拉第电磁感应定律</a></li>
+<li><a href="../atoms/135-安培定则.html">右手定则</a></li>
+<li><a class="dead" title="未收录">感应电动势</a></li>
+<li><a class="dead" title="未收录">磁通量</a></li>
+<li><a class="dead" title="未收录">麦克斯韦电磁理论</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2012-北京-07</a></li>
+<li><a href="../exam/2012-新课标-07.html">2012-新课标-07</a></li>
+<li><a class="dead" title="未收录">2013-北京-05</a></li>
+<li><a href="../exam/2015-新课标Ⅱ-02.html">2015-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2016-北京-04</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-05.html">2018-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-07</a></li>
+<li><a href="../exam/2019-新课标Ⅱ-08.html">2019-新课标Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2020-北京-18</a></li>
+<li><a class="dead" title="未收录">2021-北京-11</a></li>
+<li><a class="dead" title="未收录">2022-北京-11</a></li>
+<li><a class="dead" title="未收录">2023-北京-09</a></li>
+<li><a class="dead" title="未收录">2024-北京-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

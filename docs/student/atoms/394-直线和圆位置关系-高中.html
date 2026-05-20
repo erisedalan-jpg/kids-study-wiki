@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线和圆位置关系-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线和圆位置关系-高中</h1><div class="meta-card"><span><strong>权重</strong>31</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线和圆位置关系-高中, line and circle position relationship, 直线与圆的位置关系</p><h2>🎓 直线和圆的位置关系（高中）</h2>
+<h3>判断依据</h3>
+<p>设圆 $C$：圆心 $(a,b)$，半径 $r$；直线 $l$：$Ax+By+C=0$</p>
+<p>圆心到直线的距离：</p>
+<p>$$d = \frac{|Aa+Bb+C|}{\sqrt{A^2+B^2}}$$</p>
+<table>
+<thead>
+<tr>
+<th>位置关系</th>
+<th>距离条件</th>
+<th>交点个数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相离</td>
+<td>$d &gt; r$</td>
+<td>0</td>
+</tr>
+<tr>
+<td>相切</td>
+<td>$d = r$</td>
+<td>1（切点）</td>
+</tr>
+<tr>
+<td>相交</td>
+<td>$d &lt; r$</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3>弦长公式</h3>
+<p>直线与圆相交，弦长 $l$：</p>
+<p>$$l = 2\sqrt{r^2 - d^2}$$</p>
+<p><strong>推导</strong>：圆心到弦的垂线平分弦，半弦长 $= \sqrt{r^2-d^2}$，弦长加倍。</p>
+<h3>切线的性质</h3>
+<p><strong>切点性质</strong>：切线与半径在切点处垂直（$l \perp OC$，$C$ 为切点）。</p>
+<p><strong>切线长</strong>：从外部点 $P(x_0,y_0)$ 到圆 $x^2+y^2=r^2$ 的切线长：</p>
+<p>$$PT = \sqrt{x_0^2+y_0^2-r^2} \quad (\text{需 } x_0^2+y_0^2 &gt; r^2)$$</p>
+<p><strong>过点作圆的切线方程</strong>：
+- 已知切点 $(x_1, y_1)$（在圆 $x^2+y^2=r^2$ 上），切线方程：$x_1 x + y_1 y = r^2$
+- 已知外点，联立切线条件（切线斜率未知，用距离 $=r$ 建方程）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：直线 $3x+4y-5=0$ 与圆 $x^2+y^2=4$ 的位置关系？</p>
+<p><strong>解</strong>：$d=\dfrac{|3\times0+4\times0-5|}{\sqrt{9+16}}=\dfrac{5}{5}=1$，$r=2$，$d=1&lt;r=2$，<strong>相交</strong>。</p>
+<p>弦长 $= 2\sqrt{4-1}=2\sqrt{3}$</p>
+<p><strong>例2</strong>：圆 $(x-1)^2+(y-2)^2=9$，过圆外点 $P(4,6)$ 作切线，求切线长。</p>
+<p><strong>解</strong>：$d(P,C)=\sqrt{(4-1)^2+(6-2)^2}=\sqrt{9+16}=5$，切线长 $=\sqrt{25-9}=4$</p>
+<p><strong>例3</strong>：圆 $x^2+y^2=25$，切点为 $(3,4)$，求切线方程。</p>
+<p><strong>解</strong>：切线方程 $3x+4y=25$</p>
+<p><strong>例4</strong>：直线 $y=kx+1$ 与圆 $x^2+y^2=4$ 相切，求 $k$。</p>
+<p><strong>解</strong>：圆心 $(0,0)$ 到直线 $kx-y+1=0$ 距离 $= r=2$：</p>
+<p>$\dfrac{|1|}{\sqrt{k^2+1}}=2$，$1=4(k^2+1)$，$4k^2=-3$，无实数解。</p>
+<p>说明直线 $y=kx+1$ 与此圆不相切（因直线过 $(0,1)$，$(0,1)$ 在圆内，直线必相交不相切）。</p>
+<p>修正题目：$y=kx+3$，$\dfrac{3}{\sqrt{k^2+1}}=2$，$9=4k^2+4$，$k^2=\dfrac{5}{4}$，$k=\pm\dfrac{\sqrt{5}}{2}$</p>
+<h3>与初中的联系</h3>
+<p>初中（九年级）学过直线与圆的相离/相切/相交判断；高中扩展到：
+- 利用方程（距离公式）精确计算
+- 求切线方程、切线长
+- 与圆锥曲线综合</p>
+<h3>易错点</h3>
+<ul>
+<li>相切时 $d=r$（恰好等于，不是小于）</li>
+<li>切线与半径垂直（不是与直径垂直）</li>
+<li>弦长公式 $l=2\sqrt{r^2-d^2}$，$d$ 是圆心到直线距离</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第二章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第二章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/373-圆的标准方程.html">圆的标准方程</a></li>
+<li><a class="dead" title="未收录">圆的一般方程</a></li>
+<li><a class="dead" title="未收录">圆与圆位置关系-高中</a></li>
+<li><a href="../atoms/392-点到直线距离公式.html">点到直线距离公式</a></li>
+<li><a class="dead" title="未收录">轨迹方程</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-文-13.html">2010-文-13</a></li>
+<li><a href="../exam/2010-理-15.html">2010-理-15</a></li>
+<li><a href="../exam/2012-理-09.html">2012-理-09</a></li>
+<li><a href="../exam/2014-理-16.html">2014-理-16</a></li>
+<li><a href="../exam/2015-文-09.html">2015-文-09</a></li>
+<li><a href="../exam/2015-文-13.html">2015-文-13</a></li>
+<li><a href="../exam/2016-文-06.html">2016-文-06</a></li>
+<li><a href="../exam/2016-理-04.html">2016-理-04</a></li>
+<li><a href="../exam/2016-理-11.html">2016-理-11</a></li>
+<li><a href="../exam/2017-理-22.html">2017-理-22</a></li>
+<li><a href="../exam/2018-文-15.html">2018-文-15</a></li>
+<li><a href="../exam/2018-文-22.html">2018-文-22</a></li>
+<li><a href="../exam/2020-文-06.html">2020-文-06</a></li>
+<li><a href="../exam/2020-理-11.html">2020-理-11</a></li>
+<li><a class="dead" title="未收录">2022-北京-03</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-15.html">2023-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二倍角公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二倍角公式</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二倍角公式, Double-angle formulas</p><h1>二倍角公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：二倍角公式是用单角的正弦、余弦、正切表示其二倍角的三角函数值的一组恒等式，核心形式为 $\sin 2\alpha = 2\sin\alpha\cos\alpha$，$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$，$\tan 2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha}$。
+<strong>English</strong>: The double-angle formulas are identities that express the trigonometric functions of $2\alpha$ in terms of $\sin\alpha$, $\cos\alpha$, and $\tan\alpha$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+二倍角公式是两角和公式在 $\beta=\alpha$ 时的直接推论，是三角函数中最核心的变形工具之一。公式如下：
+- $\sin 2\alpha = 2\sin\alpha\cos\alpha$
+- $\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$
+- $\tan 2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha}$（其中 $\alpha \neq k\pi + \frac{\pi}{4}$ 且 $\alpha \neq \frac{\pi}{2}+k\pi$，$k\in\mathbb{Z}$）</p>
+<p>其中 $\cos 2\alpha$ 的三种等价形式是化简与求值时灵活选用的关键；$\tan 2\alpha$ 的分母不能为零，即 $\tan\alpha \neq \pm 1$。</p>
+<p><strong>关键方法</strong><br />
+- <strong>正用</strong>：已知单角 $\alpha$ 的三角函数值，直接代入公式求 $2\alpha$ 的三角函数值。<br />
+- <strong>逆用（升、降幂）</strong>：由二倍角公式反向得到降幂公式：$\sin^2\alpha = \frac{1-\cos 2\alpha}{2}$，$\cos^2\alpha = \frac{1+\cos 2\alpha}{2}$，以及升幂变形 $1+\cos 2\alpha = 2\cos^2\alpha$，$1-\cos 2\alpha = 2\sin^2\alpha$。这些变形在化简二次三角式、处理三角不等式及积分上限型题目中极其常用。<br />
+- <strong>结构识别与统一角</strong>：遇到不同角度的三角函数组合时，通过二倍角公式将角度统一为 $\alpha$ 或 $2\alpha$，再结合辅助角公式或同角关系进一步化简。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+1. 已知 $\sin\alpha = \frac{3}{5}$，$\alpha$ 为第一象限角，求 $\sin 2\alpha$、$\cos 2\alpha$；<br />
+2. 化简 $\frac{1+\cos 2\theta}{\sin 2\theta}$ 或证明恒等式；<br />
+3. 在 $\triangle ABC$ 中，已知 $\cos B = \frac{1}{3}$，求 $\cos 2B$ 或利用二倍角公式变形边角关系。<br />
+解题时，必须根据已知条件和目标结构选择 $\cos 2\alpha$ 的恰当形式，并时刻关注角的范围对符号的决定作用。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>符号判断错误</strong>：由 $\alpha$ 的象限推导 $2\alpha$ 的范围时，极易忽略二倍角后象限的扩大，导致 $\sin 2\alpha$ 或 $\cos 2\alpha$ 的正负号出错。例如 $\alpha$ 在第二象限时，$2\alpha$ 可能在第三、四象限或轴线角上，需分情况讨论。</li>
+<li><strong>忽略正切公式分母为零的情形</strong>：当 $\tan\alpha = \pm 1$ 时，$\tan 2\alpha$ 无意义，但此时 $2\alpha$ 的终边落在 $y$ 轴上，题目往往会设置隐含条件考察分类讨论能力。</li>
+<li><strong>$\cos 2\alpha$ 形式选用不当</strong>：面对含 $\sin^2\alpha$ 的式子强行用 $2\cos^2\alpha-1$ 化简，或含 $\cos^2\alpha$ 时用 $1-2\sin^2\alpha$，都会导致运算量暴增甚至无法化简。</li>
+<li><strong>升幂与降幂公式混淆</strong>：将 $1+\cos 2\alpha$ 误记为 $2\sin^2\alpha$，或将 $1-\cos 2\alpha$ 误记为 $2\cos^2\alpha$，这是学生因机械记忆而频繁出现的错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二倍角公式</td>
+<td>Double-angle formulas</td>
+<td>用单角三角函数表示二倍角三角函数的恒等式</td>
+</tr>
+<tr>
+<td>正弦</td>
+<td>Sine</td>
+<td>$\sin$</td>
+</tr>
+<tr>
+<td>余弦</td>
+<td>Cosine</td>
+<td>$\cos$</td>
+</tr>
+<tr>
+<td>正切</td>
+<td>Tangent</td>
+<td>$\tan$</td>
+</tr>
+<tr>
+<td>升幂/降幂</td>
+<td>Power‑reducing formulas</td>
+<td>由二倍角推导的 $\sin^2\alpha$、$\cos^2\alpha$ 表达式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">两角和与差公式</a></li>
+<li><a class="dead" title="未收录">降幂公式与升幂公式</a></li>
+<li><a class="dead" title="未收录">辅助角公式</a></li>
+<li><a class="dead" title="未收录">三角函数的求值与化简</a></li>
+<li><a class="dead" title="未收录">正弦定理与余弦定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2013-理-15.html">2013-理-15</a></li>
+<li><a href="../exam/2016-文-11.html">2016-文-11</a></li>
+<li><a href="../exam/2016-理-09.html">2016-理-09</a></li>
+<li><a href="../exam/2018-文-07.html">2018-文-07</a></li>
+<li><a href="../exam/2018-理-06.html">2018-理-06</a></li>
+<li><a href="../exam/2019-文-11.html">2019-文-11</a></li>
+<li><a href="../exam/2019-文-15.html">2019-文-15</a></li>
+<li><a href="../exam/2019-理-09.html">2019-理-09</a></li>
+<li><a href="../exam/2019-理-10.html">2019-理-10</a></li>
+<li><a href="../exam/2020-理-02.html">2020-理-02</a></li>
+<li><a class="dead" title="未收录">2021-北京-07</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-18</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-07.html">2023-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

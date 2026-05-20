@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等腰三角形性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等腰三角形性质</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 轴对称]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等腰三角形性质, properties of isosceles triangle, 等腰三角形</p><h1>等腰三角形性质</h1>
+<blockquote>
+<p><strong>课本定义</strong>：等腰三角形两腰相等；等腰三角形两底角相等（"等边对等角"）；等腰三角形顶角的角平分线、底边上的中线、底边上的高互相重合（"三线合一"）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>等腰三角形的组成</h3>
+<ul>
+<li><strong>腰</strong>：相等的两条边（有两条）</li>
+<li><strong>底边</strong>：不等于腰的那条边</li>
+<li><strong>顶角</strong>：两腰之间的角</li>
+<li><strong>底角</strong>：腰与底边之间的角（有两个）</li>
+</ul>
+<h3>两大核心性质</h3>
+<p><strong>性质 1：等边对等角</strong>
+$$AB = AC \implies \angle B = \angle C \quad \text{（两底角相等）}$$</p>
+<p><strong>逆命题（等角对等边）</strong>：
+$$\angle B = \angle C \implies AB = AC \quad \text{（可用来判定等腰三角形）}$$</p>
+<p><strong>性质 2：三线合一</strong></p>
+<p>等腰三角形顶角 $A$ 的角平分线、底边 $BC$ 的中线、底边 $BC$ 上的高——三条线<strong>完全重合</strong>！</p>
+<h3>应用</h3>
+<p>已知等腰三角形底角为 50°，求顶角。</p>
+<p>解：顶角 = 180° − 50° − 50° = <strong>80°</strong></p>
+<p>已知等腰三角形顶角为 100°，求底角。</p>
+<p>解：底角 = (180° − 100°) ÷ 2 = <strong>40°</strong></p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>性质证明：等边对等角</h3>
+<p><strong>定理</strong>：在 $\triangle ABC$ 中，$AB = AC$，则 $\angle B = \angle C$。</p>
+<p><strong>证明</strong>（三线合一法）：作顶角 $A$ 的角平分线 $AD$（$D$ 在 $BC$ 上）。</p>
+<p>在 $\triangle ABD$ 和 $\triangle ACD$ 中：$AB = AC$，$\angle BAD = \angle CAD$（角平分线），$AD = AD$（公共边）</p>
+<p>由 SAS，$\triangle ABD \cong \triangle ACD$</p>
+<p>∴ $\angle B = \angle C$。$\blacksquare$</p>
+<p><strong>同时得到</strong>：$BD = CD$（$AD$ 是中线），$\angle ADB = \angle ADC = 90°$（$AD$ 是高）</p>
+<p>即证"三线合一"。</p>
+<h3>逆定理证明：等角对等边</h3>
+<p><strong>定理</strong>：在 $\triangle ABC$ 中，$\angle B = \angle C$，则 $AB = AC$。</p>
+<p><strong>证明</strong>：作顶角 $A$ 的角平分线 $AD$。</p>
+<p>在 $\triangle ABD$ 和 $\triangle ACD$ 中：$\angle ABD = \angle ACD$（已知），$\angle BAD = \angle CAD$，$AD = AD$</p>
+<p>由 AAS，$\triangle ABD \cong \triangle ACD$</p>
+<p>∴ $AB = AC$。$\blacksquare$</p>
+<h3>等腰三角形的轴对称性</h3>
+<p>等腰三角形是<strong>轴对称图形</strong>，对称轴为顶角平分线（即底边的垂直平分线）。</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：等腰三角形一个角为 36°，求其余两角的可能值。</p>
+<p>分析：36° 可能是底角或顶角。</p>
+<ul>
+<li>若 36° 是顶角：底角 = $(180° - 36°) / 2 = 72°$，三角形存在 ✓</li>
+<li>若 36° 是底角：顶角 = $180° - 72° = 108°$，三角形存在 ✓</li>
+</ul>
+<p>答：其余两角为 <strong>72°、72°</strong> 或 <strong>36°、108°</strong> 两种情况。</p>
+<p><strong>例题 2</strong>：等腰 $\triangle ABC$，$AB = AC$，$D$ 是底边 $BC$ 的中点，$\angle ADB = 90°$。求证 $AD$ 是 $BC$ 的垂直平分线。</p>
+<p>证明：$D$ 是 $BC$ 中点（已知），$AD \perp BC$（$\angle ADB = 90°$），故 $AD$ 是 $BC$ 的垂直平分线。✓</p>
+<p>（实际上这就是"三线合一"的直接体现。）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>等腰三角形讨论角时要分类</strong>：不知道某角是顶角还是底角时，要<strong>两种情况</strong>讨论。</li>
+<li>三线合一只对<strong>顶角</strong>的角平分线成立，底角的角平分线不具备此性质。</li>
+<li>"等角对等边"是逆定理，同样成立，常用于判定等腰三角形。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a class="dead" title="未收录">等边三角形</a>：等边三角形是等腰三角形的特殊情况</li>
+<li>→ <a href="../atoms/174-轴对称图形.html">轴对称图形</a>：等腰三角形具有轴对称性</li>
+<li>→ <a class="dead" title="未收录">线段垂直平分线</a>：底边的垂直平分线就是对称轴</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等腰三角形</td>
+<td>isosceles triangle</td>
+</tr>
+<tr>
+<td>腰</td>
+<td>leg</td>
+</tr>
+<tr>
+<td>底边</td>
+<td>base</td>
+</tr>
+<tr>
+<td>顶角</td>
+<td>apex angle / vertex angle</td>
+</tr>
+<tr>
+<td>底角</td>
+<td>base angle</td>
+</tr>
+<tr>
+<td>三线合一</td>
+<td>coincidence of three lines</td>
+</tr>
+<tr>
+<td>等边对等角</td>
+<td>base angles theorem</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十三章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中几何证明方法》等腰三角形专题</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">等边三角形</a></li>
+<li><a href="../atoms/174-轴对称图形.html">轴对称图形</a></li>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+<li><a class="dead" title="未收录">SAS判定</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-文-04.html">2012-文-04</a></li>
+<li><a href="../exam/2012-理-04.html">2012-理-04</a></li>
+<li><a href="../exam/2015-理-22.html">2015-理-22</a></li>
+<li><a href="../exam/2016-文-22.html">2016-文-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二项式定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二项式定理</h1><div class="meta-card"><span><strong>权重</strong>34</span><span><strong>吉林命中</strong>9</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二项式定理, binomial theorem, 牛顿二项式定理</p><h2>🎓 二项式定理</h2>
+<h3>核心公式</h3>
+<p>$$\boxed{(a+b)^n = \sum_{k=0}^{n} C_n^k a^{n-k}b^k = C_n^0 a^n + C_n^1 a^{n-1}b + C_n^2 a^{n-2}b^2 + \cdots + C_n^n b^n}$$</p>
+<p>其中 $n \in \mathbb{N}^*$，$a,b$ 为任意实数（或复数）。</p>
+<p><strong>通项公式</strong>（第 $k+1$ 项）：</p>
+<p>$$\boxed{T_{k+1} = C_n^k a^{n-k}b^k} \quad (k = 0, 1, 2, \ldots, n)$$</p>
+<h3>定理的理解</h3>
+<p>$(a+b)^n = \underbrace{(a+b)(a+b)\cdots(a+b)}_{n \text{ 个}}$</p>
+<p>展开时，每一项是从 $n$ 个括号中，每个括号选 $a$ 或 $b$ 的乘积。选 $k$ 个括号中的 $b$（其余选 $a$）的选法有 $C_n^k$ 种，对应 $a^{n-k}b^k$ 项，系数为 $C_n^k$。</p>
+<h3>各项系数之和</h3>
+<p>令 $a = b = 1$：</p>
+<p>$$\sum_{k=0}^n C_n^k = 2^n$$</p>
+<p>令 $a = 1, b = -1$：</p>
+<p>$$\sum_{k=0}^n (-1)^k C_n^k = 0 \Rightarrow C_n^0 - C_n^1 + C_n^2 - \cdots = 0$$</p>
+<p>奇偶项系数之和各为 $2^{n-1}$。</p>
+<h3>典型例题</h3>
+<p><strong>例1（展开式）</strong>：展开 $(x + y)^4$。</p>
+<p>$$= C_4^0 x^4 + C_4^1 x^3 y + C_4^2 x^2 y^2 + C_4^3 x y^3 + C_4^4 y^4$$
+$$= x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4$$</p>
+<p><strong>例2（求特定项）</strong>：$(2x - \sqrt{y})^6$ 展开式中 $x^2 y$ 项的系数。</p>
+<p><strong>解</strong>：通项 $T_{k+1} = C_6^k (2x)^{6-k}(-\sqrt{y})^k = C_6^k 2^{6-k}(-1)^k x^{6-k} y^{k/2}$</p>
+<p>令 $6-k = 2$ 且 $k/2 = 1$，解得 $k = 4$：</p>
+<p>$$T_5 = C_6^4 \cdot 2^2 \cdot (-1)^4 \cdot x^2 y = 15 \times 4 \times 1 \times x^2 y = 60 x^2 y$$</p>
+<p>系数为 $60$。</p>
+<p><strong>例3（求最大系数项）</strong>：$(1+x)^8$ 展开式中最大系数项。</p>
+<p>$$C_8^k \text{ 最大时 } k = 4, \quad T_5 = C_8^4 x^4 = 70 x^4$$</p>
+<p><strong>例4（系数和）</strong>：$(1+2x)^{10}$ 各项系数之和。</p>
+<p>令 $x=1$：$(1+2)^{10} = 3^{10} = 59049$。</p>
+<h3>帕斯卡三角（杨辉三角）</h3>
+<table>
+<thead>
+<tr>
+<th>$n$</th>
+<th>展开系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1 2 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1 3 3 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1 4 6 4 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1 5 10 10 5 1</td>
+</tr>
+</tbody>
+</table>
+<p>每行每个数 = 上方左右两数之和（帕斯卡恒等式 $C_n^m + C_n^{m+1} = C_{n+1}^{m+1}$）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$k$ 从 0 开始</strong>：通项是第 $k+1$ 项，第 $r$ 项对应 $k = r-1$</li>
+<li><strong>负号处理</strong>：若 $b$ 含负号（如 $(x-2)^n$），通项中 $(-2)^k$ 要正确处理符号</li>
+<li><strong>$a$ 和 $b$ 的幂次之和 = $n$</strong>：$(n-k) + k = n$（常用于求特定项）</li>
+<li><strong>系数 vs 二项式系数</strong>：二项式系数是 $C_n^k$，展开式各项系数含 $a,b$ 的系数（如 $(2x)^{n-k}$ 中 $2^{n-k}$）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.4，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/二项式定理">二项式定理 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">二项式系数性质</a></li>
+<li><a class="dead" title="未收录">二项展开式应用</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a class="dead" title="未收录">组合应用-分组问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-文-09.html">2008-文-09</a></li>
+<li><a href="../exam/2008-理-07.html">2008-理-07</a></li>
+<li><a href="../exam/2008-理-11.html">2008-理-11</a></li>
+<li><a href="../exam/2009-文-03.html">2009-文-03</a></li>
+<li><a href="../exam/2009-文-14.html">2009-文-14</a></li>
+<li><a href="../exam/2009-理-06.html">2009-理-06</a></li>
+<li><a href="../exam/2009-理-13.html">2009-理-13</a></li>
+<li><a href="../exam/2011-理-08.html">2011-理-08</a></li>
+<li><a href="../exam/2013-理-05.html">2013-理-05</a></li>
+<li><a href="../exam/2014-理-04.html">2014-理-04</a></li>
+<li><a href="../exam/2014-理-13.html">2014-理-13</a></li>
+<li><a href="../exam/2015-理-06.html">2015-理-06</a></li>
+<li><a href="../exam/2015-理-09.html">2015-理-09</a></li>
+<li><a href="../exam/2015-理-15.html">2015-理-15</a></li>
+<li><a href="../exam/2016-理-10.html">2016-理-10</a></li>
+<li><a href="../exam/2017-理-06.html">2017-理-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-03</a></li>
+<li><a href="../exam/2020-理-08.html">2020-理-08</a></li>
+<li><a class="dead" title="未收录">2021-北京-11</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-13</a></li>
+<li><a class="dead" title="未收录">2023-北京-05</a></li>
+<li><a class="dead" title="未收录">2024-北京-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

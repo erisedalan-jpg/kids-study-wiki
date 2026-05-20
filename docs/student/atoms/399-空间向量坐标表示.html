@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量坐标表示</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间向量坐标表示</h1><div class="meta-card"><span><strong>权重</strong>24</span><span><strong>吉林命中</strong>4</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第一章空间向量与立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间向量坐标表示, space vector coordinates, 空间直角坐标系</p><h2>🎓 空间向量坐标表示</h2>
+<h3>空间直角坐标系</h3>
+<p>在空间取一定点 $O$，作三条<strong>两两垂直</strong>的数轴 $x$ 轴、$y$ 轴、$z$ 轴，以 $O$ 为原点构成<strong>空间直角坐标系</strong> $O\text{-}xyz$。</p>
+<p><strong>右手系</strong>：伸开右手，四指从 $x$ 轴弯向 $y$ 轴，大拇指方向为 $z$ 轴正方向。</p>
+<p><strong>坐标平面</strong>：$xOy$ 面（$z=0$）、$xOz$ 面（$y=0$）、$yOz$ 面（$x=0$）</p>
+<h3>点的坐标</h3>
+<p>空间一点 $P$，从 $O$ 到 $P$ 的有向线段 $\overrightarrow{OP}$ 在三轴上的投影为 $x_0,y_0,z_0$，则 $P$ 的坐标为 $(x_0,y_0,z_0)$。</p>
+<h3>向量坐标</h3>
+<p>若 $A(x_1,y_1,z_1)$，$B(x_2,y_2,z_2)$，则：</p>
+<p>$$\overrightarrow{AB} = (x_2-x_1,\; y_2-y_1,\; z_2-z_1)$$</p>
+<p>$$|\overrightarrow{AB}| = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$$</p>
+<p><strong>中点公式</strong>：$AB$ 中点 $M$ 的坐标为 $\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}, \dfrac{z_1+z_2}{2}\right)$</p>
+<h3>建立坐标系的技巧</h3>
+<p>对于长方体、正方体等规则图形，选顶点为原点，三条棱方向为坐标轴，可使计算最简洁。</p>
+<p><strong>正方体坐标系示例</strong>：正方体 $ABCD$-$A_1B_1C_1D_1$，棱长为 $a$，以 $A$ 为原点建立坐标系：
+- $A(0,0,0)$，$B(a,0,0)$，$D(0,a,0)$，$A_1(0,0,a)$
+- $C(a,a,0)$，$B_1(a,0,a)$，$D_1(0,a,a)$，$C_1(a,a,a)$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知 $A(1,2,3)$，$B(4,0,-1)$，求 $\overrightarrow{AB}$，$|\overrightarrow{AB}|$ 及 $AB$ 中点坐标。</p>
+<p><strong>解</strong>：
+$$\overrightarrow{AB} = (4-1,0-2,-1-3) = (3,-2,-4)$$
+$$|\overrightarrow{AB}| = \sqrt{9+4+16} = \sqrt{29}$$
+$$\text{中点} M = \left(\dfrac{5}{2}, 1, 1\right)$$</p>
+<p><strong>例2</strong>：正三棱柱 $ABC$-$A_1B_1C_1$，底面边长为 2，高为 $2\sqrt{3}$，以 $A$ 为原点，$AB$ 方向为 $x$ 轴建立坐标系，求各顶点坐标。</p>
+<p><strong>解</strong>：$A(0,0,0)$，$B(2,0,0)$，$C(1,\sqrt{3},0)$（等边三角形中 $C$ 的高为 $\sqrt{3}$），$A_1(0,0,2\sqrt{3})$，$B_1(2,0,2\sqrt{3})$，$C_1(1,\sqrt{3},2\sqrt{3})$</p>
+<p><strong>例3</strong>：在空间直角坐标系中，已知 $\overrightarrow{OA}=(2,1,-1)$，$\overrightarrow{OB}=(3,-1,2)$，求 $\overrightarrow{AB}$ 和 $|AB|$。</p>
+<p><strong>解</strong>：$\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = (1,-2,3)$，$|AB|=\sqrt{1+4+9}=\sqrt{14}$</p>
+<h3>易错点</h3>
+<ul>
+<li>$\overrightarrow{AB} = B - A$（终点坐标减起点坐标），注意顺序</li>
+<li>建立坐标系时，三轴必须<strong>两两垂直</strong>；对斜棱柱等不规则图形，要先找合适的正交方向</li>
+<li>空间两点距离公式与平面类比，多加一个 $(z_2-z_1)^2$ 项</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第一章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第一章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/401-空间向量基本概念.html">空间向量基本概念</a></li>
+<li><a class="dead" title="未收录">空间向量基本定理</a></li>
+<li><a class="dead" title="未收录">空间向量运算</a></li>
+<li><a class="dead" title="未收录">空间向量数量积</a></li>
+<li><a href="../atoms/411-空间平面法向量.html">空间平面法向量</a></li>
+<li><a class="dead" title="未收录">空间向量求距离</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2010-理-18.html">2010-理-18</a></li>
+<li><a href="../exam/2013-文-08.html">2013-文-08</a></li>
+<li><a href="../exam/2013-文-09.html">2013-文-09</a></li>
+<li><a href="../exam/2013-理-07.html">2013-理-07</a></li>
+<li><a href="../exam/2014-理-07.html">2014-理-07</a></li>
+<li><a href="../exam/2018-文-09.html">2018-文-09</a></li>
+<li><a href="../exam/2018-理-09.html">2018-理-09</a></li>
+<li><a class="dead" title="未收录">2020-北京-16</a></li>
+<li><a href="../exam/2021-理-18.html">2021-理-18</a></li>
+<li><a href="../exam/2022-理-18.html">2022-理-18</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-18</a></li>
+<li><a href="../exam/2023-新课标Ⅱ-20.html">2023-新课标Ⅱ-20</a></li>
+<li><a class="dead" title="未收录">2024-北京-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离子迁移</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离子迁移</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离子迁移</p><h1>离子迁移</h1>
+<blockquote>
+<p><strong>一句话</strong>：溶液中离子在电场作用下定向移动并参与导电的宏观传质过程，其速率由离子淌度与电场梯度决定。
+<strong>English</strong>: Ion migration is the directed movement of ions in an electrolyte solution under an electric field, constituting the passage of electric current.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：离子迁移的动力学根源是电场力对带电粒子的驱动。在电解池或原电池的外电路中，电子通过导线定向移动；而在电解质溶液（或熔融电解质）中，电流由阴、阳离子的反向定向迁移共同完成。迁移数 $t_+$ 与 $t_-$ 定义为某种离子所运载的电流占总电流的分数，且 $t_+ + t_- = 1$。其与摩尔电导率的关系为：
+$$\lambda_{m,+} = t_+ \Lambda_m, \quad \lambda_{m,-} = t_- \Lambda_m$$
+离子淌度 $u$ 越大，该离子的迁移数越大。</p>
+<p><strong>关键方法</strong>：解决离子迁移相关问题，核心步骤为：
+1. <strong>判定体系电场方向</strong>：确定阴、阳极，外电路中电子从阳极流出，内电路（电解质）中阳离子向阴极迁移，阴离子向阳极迁移。
+2. <strong>分析离子浓度/电导变化</strong>：在电解过程中，电极附近离子浓度变化由“电极反应消耗/生成”与“离子迁移”共同决定。解题时需分别分析电极反应消耗的量与从溶液中迁移过来的量。
+3. <strong>迁移数计算</strong>：常结合希托夫法原理，通过电解前后某电极区离子物质的量变化求算 $t_+$ 或 $t_-$，公式为 $t_- = \frac{\Delta n_{\text{反应}} - \Delta n_{\text{浓度变化}}}{\Delta n_{\text{反应}}}$（具体形式依题设）。</p>
+<p><strong>典型应用</strong>：高考中常结合<strong>电解池</strong>考查。例如，电解 $\ce{CuSO4}$ 溶液（惰性电极）：阳极附近 $\ce{SO4^{2-}}$ 浓度比单纯由电极反应预期的更大，因为 $\ce{SO4^{2-}}$ 在电场下向阳极迁移富集；阴极附近 $\ce{Cu^{2+}}$ 浓度下降速率比单纯因沉积消耗的要慢，因为有 $\ce{Cu^{2+}}$ 从溶液中迁移补充。另一高频设问是测定离子迁移数（如界面移动法），要求根据界面移动距离、电流、时间计算离子迁移数或淌度。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“导电离子”与“反应离子”</strong>：溶液中所有离子均参与迁移导电，但并非所有离子都在电极上放电。例如电解 $\ce{Na2SO4}$ 水溶液时，$\ce{Na+}$ 与 $\ce{SO4^{2-}}$ 分别向两极迁移导电，但电极放电的是 $\ce{H+}$ 和 $\ce{OH-}$。</li>
+<li><strong>误认为离子迁移等同于电子导电</strong>：电解质溶液内部是离子的定向移动，不是电子流动；电子只在电极与外电路发生得失。</li>
+<li><strong>忽略离子淌度的差异</strong>：$\ce{H+}$ 与 $\ce{OH-}$ 因“质子跳跃”机制离子淌度远大于其他离子，导致强酸强碱溶液的导电性异常高，迁移数也受此影响。</li>
+<li><strong>迁移数计算中浓度范围取错</strong>：用希托夫法计算时，必须取“电极区”而非整体溶液的浓度变化，且需明确阳极区、阴极区还是中间区。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>迁移</td>
+<td>migration</td>
+<td>离子在电场下的定向运动</td>
+</tr>
+<tr>
+<td>迁移数</td>
+<td>transference number / transport number</td>
+<td>某离子运载电流量的分数</td>
+</tr>
+<tr>
+<td>淌度</td>
+<td>mobility</td>
+<td>单位电场强度下离子的迁移速率</td>
+</tr>
+<tr>
+<td>电解质</td>
+<td>electrolyte</td>
+<td>溶解或熔融状态下能导电的化合物</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">电解质与非电解质</a></li>
+<li><a class="dead" title="未收录">电解池工作原理</a></li>
+<li><a class="dead" title="未收录">电导与电导率</a></li>
+<li><a class="dead" title="未收录">原电池与电解池比较</a></li>
+<li><a class="dead" title="未收录">酸碱中和滴定与离子浓度变化</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-06</a></li>
+<li><a href="../exam/2020-新课标Ⅱ-06.html">2020-新课标Ⅱ-06</a></li>
+<li><a href="../exam/2022-全国乙-06.html">2022-全国乙-06</a></li>
+<li><a href="../exam/2023-新课标-04.html">2023-新课标-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

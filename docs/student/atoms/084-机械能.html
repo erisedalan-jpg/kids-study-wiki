@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>机械能</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>机械能</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八下, 第十一章功和机械能, 机械能]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 机械能, mechanical energy</p><h1>机械能</h1>
+<blockquote>
+<p><strong>一句话</strong>：机械能是动能与势能（重力势能和弹性势能）的总和：$E_{机} = E_k + E_p$。
+<strong>English</strong>: Mechanical energy is the sum of kinetic energy and potential energy (gravitational and elastic): E_mech = Ek + Ep.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>物体可以同时有几种能量：
+- 运动的物体有<strong>动能</strong>
+- 高处的物体有<strong>重力势能</strong>
+- 弹性形变的物体有<strong>弹性势能</strong></p>
+<p>这几种能量合在一起，就叫<strong>机械能</strong>：</p>
+<p>$$E_{机} = E_k + E_{重力势} + E_{弹性势}$$</p>
+<p><strong>例子：</strong>
+- 飞行中的足球：有动能（在运动），有重力势能（在高处）→ 两者之和 = 机械能
+- 压缩的弹簧静止在桌上：有弹性势能，动能为零 → 弹性势能 = 机械能
+- 自由落体：有动能（速度增大）+ 重力势能（高度减小），动能增大，势能减小，总机械能不变（见 <a href="../atoms/085-机械能守恒-初中.html">机械能守恒-初中</a>）</p>
+<p><strong>机械能的单位：</strong> 焦耳（J），和功、能量的单位相同。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p>$$E_{机} = E_k + E_{p重力} + E_{p弹}$$</p>
+<p>$$E_{机} = \frac{1}{2}mv^2 + mgh + \frac{1}{2}kx^2$$</p>
+<p>大多数初中问题只涉及动能和重力势能（无弹簧），则：</p>
+<p>$$E_{机} = \frac{1}{2}mv^2 + mgh$$</p>
+<h3>机械能守恒条件</h3>
+<p>只有重力和弹力做功（无摩擦，无空气阻力，无外力）时，机械能守恒：</p>
+<p>$$E_{机} = \text{常数} \Rightarrow \Delta E_k + \Delta E_p = 0$$</p>
+<p>动能减少 = 势能增加；动能增加 = 势能减少。</p>
+<p><strong>不守恒情况：</strong> 有摩擦力、空气阻力等耗散力做功时，机械能减小（转化为内能/热能）。</p>
+<h3>机械能与其他能量的转化</h3>
+<table>
+<thead>
+<tr>
+<th>过程</th>
+<th>机械能变化</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自由落体</td>
+<td>守恒</td>
+<td>势能 → 动能，总量不变</td>
+</tr>
+<tr>
+<td>有摩擦的滑动</td>
+<td>减小</td>
+<td>机械能 → 热能</td>
+</tr>
+<tr>
+<td>电机提升重物</td>
+<td>增大</td>
+<td>电能 → 机械能（势能）</td>
+</tr>
+<tr>
+<td>刹车停车</td>
+<td>减小</td>
+<td>动能 → 热能（摩擦）</td>
+</tr>
+<tr>
+<td>发电机工作</td>
+<td>减小</td>
+<td>动能 → 电能</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1：</strong> 质量 2 kg 的物体，以 3 m/s 速度在 5 m 高处运动，机械能是多少？（$g = 10\text{ N/kg}$）</p>
+<p>解：$E_k = \frac{1}{2} \times 2 \times 9 = 9\text{ J}$</p>
+<p>$E_p = mgh = 2 \times 10 \times 5 = 100\text{ J}$</p>
+<p>$E_{机} = 9 + 100 = 109\text{ J}$</p>
+<p><strong>例2：</strong> 从 10 m 高处自由落下的 1 kg 物体，在第 5 m 处，速度是多少？（忽略空气阻力，$g = 10\text{ N/kg}$）</p>
+<p>解：机械能守恒（忽略空气阻力）：</p>
+<p>初始：$E_{机} = mgh_0 = 1 \times 10 \times 10 = 100\text{ J}$（静止释放，$v_0 = 0$）</p>
+<p>在 5 m 处（已下落 5 m，距地 5 m）：</p>
+<p>$E_{机} = E_k + E_p = \frac{1}{2}mv^2 + mgh$</p>
+<p>$100 = \frac{1}{2} \times 1 \times v^2 + 1 \times 10 \times 5$</p>
+<p>$100 = \frac{1}{2}v^2 + 50$</p>
+<p>$v^2 = 100$，$v = 10\text{ m/s}$</p>
+<p><strong>例3：</strong> 单摆在最高点和最低点，分别有什么能量？</p>
+<p>解：
+- 最高点（速度为零）：动能 = 0，重力势能最大，机械能全部为势能
+- 最低点（速度最大）：动能最大，重力势能最小，机械能全部（或大部分）为动能
+- 两点机械能相等（忽略摩擦）</p>
+<h3>易错点</h3>
+<ul>
+<li>机械能包括动能和势能（两种），不单指动能或势能。</li>
+<li>机械能守恒只在<strong>只有重力和弹力做功</strong>的条件下成立，有摩擦则不守恒。</li>
+<li>势能的参考面影响势能绝对值，但机械能<strong>变化量</strong>与参考面无关。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育物理课程标准（2022 年版），第三学段"功和机械能"（<strong>待家长核对页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级下册.pdf</a> 第十一章（<strong>待家长核对页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/机械能</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/067-动能.html">动能</a> · <a href="../atoms/116-重力势能.html">重力势能</a> · <a class="dead" title="未收录">弹性势能</a> · <a class="dead" title="未收录">机械能转化</a> · <a href="../atoms/085-机械能守恒-初中.html">机械能守恒-初中</a> · <a class="dead" title="未收录">内能与机械能</a> · <a href="../atoms/062-功-物理.html">功-物理</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

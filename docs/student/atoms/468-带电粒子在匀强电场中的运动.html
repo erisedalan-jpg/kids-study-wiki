@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子在匀强电场中的运动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>带电粒子在匀强电场中的运动</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 带电粒子在匀强电场中的运动, Motion of a charged particle in a uniform electric field</p><h1>带电粒子在匀强电场中的运动</h1>
+<blockquote>
+<p><strong>一句话</strong>：带电粒子在匀强电场中受到恒定的电场力，从而产生恒定的加速度，其运动属于匀变速运动，常表现为匀变速直线运动或类平抛运动。
+<strong>English</strong>: The motion of a charged particle in a uniform electric field is uniformly accelerated motion caused by a constant electric force, typically analyzed as uniformly accelerated linear motion or projectile-like motion.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：<br />
+带电粒子（电荷量为 $q$，质量为 $m$）在匀强电场 $\vec{E}$ 中受到的电场力 $\vec{F}=q\vec{E}$。若粒子所受重力远小于电场力（如电子、质子等微观粒子，通常忽略重力），则合外力即为电场力，加速度 $\vec{a}=\frac{\vec{F}}{m}=\frac{q\vec{E}}{m}$，方向与 $\vec{E}$ 平行（正电荷同向、负电荷反向）。由于电场力恒定，加速度也恒定，因此粒子做匀变速运动。<br />
+当粒子的初速度 $\vec{v}_0$ 与电场方向平行时，做匀变速直线运动（加速或减速）；当 $\vec{v}_0$ 与电场方向垂直时，做类平抛运动，即沿初速度方向做匀速直线运动，沿电场力方向做初速度为零的匀加速直线运动。</p>
+<p><strong>关键方法</strong>：<br />
+- <strong>受力分析</strong>：明确电场力方向、大小，判断是否忽略重力。<br />
+- <strong>运动分解</strong>：建立直角坐标系，将运动分解为平行于电场方向和垂直于电场方向的分运动。<br />
+- <strong>公式选用</strong>：匀变速直线运动公式 $v=v_0+at$，$x=v_0t+\frac{1}{2}at^2$，$v^2-v_0^2=2ax$；类平抛运动中，侧移量 $y=\frac{1}{2}\frac{qE}{m}t^2$，速度偏转角满足 $\tan\theta=\frac{v_y}{v_x}=\frac{qEt}{mv_0}$。<br />
+- <strong>动能定理</strong>：经常结合 $qU=\frac12mv^2-\frac12mv_0^2$ 求解与电势差相关的问题。</p>
+<p><strong>典型应用</strong>：<br />
+高考中常见示波管中电子在偏转电场中的类平抛运动，要求计算侧移量、偏转电压或出射速度方向；带电粒子在平行板电容器间的加速与偏转，常结合电场强度 $E=U/d$、运动学公式和动能定理设问；有时还会结合磁场构成组合场，考查带电粒子在电场中偏转后进入磁场的衔接。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>重力是否忽略</strong>：对电子、质子、离子等微观粒子，通常忽略重力；但对带电小球、液滴、尘埃等宏观带电体，必须分析重力，若重力不可忽略则合外力为电场力与重力的合力。</li>
+<li><strong>电场力方向的判断</strong>：正电荷所受电场力方向与电场方向相同，负电荷相反；列式时容易漏掉电荷的正负号，导致加速度方向错误。</li>
+<li><strong>运动模型混淆</strong>：当粒子以某一角度斜射入电场时，仍属于匀变速曲线运动，不能简单地套用类平抛公式，而应分解初速度，运用匀变速运动规律处理。</li>
+<li><strong>离开电场后的运动</strong>：粒子离开偏转电场后，不再受电场力，将做匀速直线运动，此时速度方向为离开电场时的合速度方向，常误认为继续沿偏转方向加速。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>带电粒子</td>
+<td>charged particle</td>
+<td>带有电荷的微观或宏观粒子</td>
+</tr>
+<tr>
+<td>匀强电场</td>
+<td>uniform electric field</td>
+<td>各点场强大小和方向均相同的电场</td>
+</tr>
+<tr>
+<td>电场力</td>
+<td>electric force</td>
+<td>电荷在电场中受到的力，$F=qE$</td>
+</tr>
+<tr>
+<td>类平抛运动</td>
+<td>projectile-like motion</td>
+<td>一个方向匀速、垂直方向匀加速的曲线运动</td>
+</tr>
+<tr>
+<td>偏转电压</td>
+<td>deflection voltage</td>
+<td>使带电粒子运动方向发生偏转的电压</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧（待家长核对）普通高中物理课程标准（2017 年版 2020 年修订）中“静电场”主题相关要求</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a class="dead" title="未收录">电势差与电场强度的关系</a></li>
+<li><a href="../atoms/595-带电粒子在匀强磁场中的运动.html">带电粒子在匀强磁场中的运动</a></li>
+<li><a class="dead" title="未收录">动能定理在电场中的应用</a></li>
+<li><a href="../atoms/488-类平抛运动.html">类平抛运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a></li>
+<li><a href="../exam/2012-新课标-12.html">2012-新课标-12</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2016-北京-11</a></li>
+<li><a class="dead" title="未收录">2017-北京-10</a></li>
+<li><a href="../exam/2018-新课标Ⅱ-12.html">2018-新课标Ⅱ-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DNA连接酶</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>DNA连接酶</h1><div class="meta-card"><span><strong>权重</strong>13</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 基因工程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: DNA连接酶, DNA ligase</p><h1>DNA连接酶</h1>
+<blockquote>
+<p><strong>一句话</strong>：催化相邻DNA片段之间磷酸二酯键形成的酶，是基因工程中连接目的基因与载体的"分子针线"。
+<strong>English</strong>: An enzyme that catalyzes the formation of phosphodiester bonds between adjacent DNA fragments, serving as "molecular glue" in genetic engineering.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>DNA连接酶（DNA Ligase）是一类能催化两个DNA片段相邻的3'-OH与5'-磷酸基之间形成<strong>磷酸二酯键</strong>的酶，从而将两条DNA链"缝合"连接在一起。它是基因工程中构建重组DNA分子的关键工具酶，被称为"分子针线"。</p>
+<h3>原理 / 步骤 / 应用</h3>
+<p><strong>催化反应</strong></p>
+<p>DNA连接酶连接的是DNA双链中切口（nick）处的<strong>磷酸二酯键</strong>：</p>
+<pre><code>…—3'OH + ₅'P—…  →（DNA连接酶 + NAD⁺/ATP）→  …—3'P—5'—…
+        切口                                    连接后
+</code></pre>
+<ul>
+<li>需要<strong>能量</strong>（原核生物利用NAD⁺，真核和噬菌体利用ATP）</li>
+<li>必须是相邻的两段DNA，且末端需匹配（互补碱基对临时配对后再共价连接）</li>
+</ul>
+<p><strong>两种常用DNA连接酶比较</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>来源</th>
+<th>连接底物</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E. coli DNA连接酶</td>
+<td>大肠杆菌</td>
+<td>只能连接黏性末端</td>
+<td>特异性强</td>
+</tr>
+<tr>
+<td>T4 DNA连接酶</td>
+<td>T4噬菌体感染的大肠杆菌</td>
+<td>黏性末端和平末端均可</td>
+<td>适用范围广，基因工程最常用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在基因工程中的作用</strong></p>
+<ol>
+<li>目的基因与载体经限制酶切割产生互补黏性末端后，靠<strong>氢键</strong>临时结合</li>
+<li>DNA连接酶催化形成<strong>磷酸二酯键</strong>，使连接稳定（共价键）</li>
+<li>最终形成<strong>重组DNA分子（重组质粒）</strong></li>
+</ol>
+<p><strong>与DNA聚合酶的区别</strong></p>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>DNA连接酶</th>
+<th>DNA聚合酶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作用</td>
+<td>连接已有的DNA片段（修复切口）</td>
+<td>以模板链为基础合成新链</td>
+</tr>
+<tr>
+<td>底物</td>
+<td>两段双链DNA末端</td>
+<td>dNTP（四种脱氧核苷酸）</td>
+</tr>
+<tr>
+<td>模板需求</td>
+<td>不需要模板（修复切口）</td>
+<td>需要模板链</td>
+</tr>
+<tr>
+<td>作用时机</td>
+<td>DNA复制冈崎片段连接、基因工程</td>
+<td>DNA复制</td>
+</tr>
+</tbody>
+</table>
+<p><strong>体内功能</strong></p>
+<ul>
+<li>DNA复制时连接冈崎片段（滞后链合成产生的片段）</li>
+<li>DNA损伤修复（连接修复缺口）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例</strong>：在基因工程中，DNA连接酶的作用是什么？它连接的化学键是什么？与限制酶的关系是什么？</p>
+<p><strong>解析</strong>：DNA连接酶催化目的基因与载体之间形成磷酸二酯键，使两者共价连接形成重组DNA分子。连接的化学键是<strong>磷酸二酯键</strong>（不是氢键，氢键只是黏性末端临时配对用的）。限制酶是"剪断"磷酸二酯键，DNA连接酶是"形成"磷酸二酯键，两者功能相反，配合使用完成基因工程中的"剪切—连接"操作。</p>
+<h3>易错点</h3>
+<ul>
+<li>DNA连接酶连接的是<strong>磷酸二酯键</strong>，不是氢键（氢键在碱基配对时自动形成，不需要酶）</li>
+<li>DNA连接酶连接的是<strong>已有的两段DNA</strong>，不合成新的脱氧核苷酸链，这点与DNA聚合酶不同</li>
+<li>T4 DNA连接酶可连接<strong>平末端</strong>，而E. coli DNA连接酶只能连接黏性末端</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA连接酶</td>
+<td>DNA ligase</td>
+</tr>
+<tr>
+<td>磷酸二酯键</td>
+<td>phosphodiester bond</td>
+</tr>
+<tr>
+<td>黏性末端</td>
+<td>sticky end</td>
+</tr>
+<tr>
+<td>平末端</td>
+<td>blunt end</td>
+</tr>
+<tr>
+<td>T4 DNA连接酶</td>
+<td>T4 DNA ligase</td>
+</tr>
+<tr>
+<td>切口</td>
+<td>nick</td>
+</tr>
+<tr>
+<td>冈崎片段</td>
+<td>Okazaki fragment</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>T4 DNA ligase is widely used in molecular cloning to join DNA fragments. （T4 DNA连接酶广泛用于分子克隆中连接DNA片段。）</li>
+<li>DNA ligase seals the nick in the sugar-phosphate backbone by forming a phosphodiester bond. （DNA连接酶通过形成磷酸二酯键封闭糖磷酸骨架中的切口。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修3 生物技术与工程.pdf</a> 第3章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"DNA ligase"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/411-基因工程.html">基因工程</a> <a href="../atoms/422-限制性核酸内切酶.html">限制性核酸内切酶</a> <a class="dead" title="未收录">重组DNA分子</a> <a class="dead" title="未收录">质粒</a> <a class="dead" title="未收录">目的基因</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2012-新课标-12.html">2012-新课标-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-07</a></li>
+<li><a href="../exam/2021-全国乙-12.html">2021-全国乙-12</a></li>
+<li><a href="../exam/2023-新课标-06.html">2023-新课标-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

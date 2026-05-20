@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全称量词与存在量词</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>全称量词与存在量词</h1><div class="meta-card"><span><strong>权重</strong>15</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 集合与常用逻辑用语, 第一章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 全称量词与存在量词, universal quantifier, existential quantifier, 全称量词, 存在量词</p><h2>🎓 全称量词与存在量词</h2>
+<h3>定义</h3>
+<p><strong>全称量词</strong>（universal quantifier）：符号 $\forall$，读作"对任意"或"对所有"，表示对集合中所有元素命题成立。</p>
+<p><strong>存在量词</strong>（existential quantifier）：符号 $\exists$，读作"存在"或"至少存在一个"，表示集合中至少一个元素使命题成立。</p>
+<p><strong>全称命题</strong>：$\forall x \in M, P(x)$（对 $M$ 中所有元素 $x$，$P(x)$ 成立）</p>
+<p><strong>存在命题</strong>（特称命题）：$\exists x \in M, P(x)$（$M$ 中存在某个元素 $x$，使 $P(x)$ 成立）</p>
+<h3>量词否定（重要！）</h3>
+<table>
+<thead>
+<tr>
+<th>原命题</th>
+<th>否定命题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\forall x \in M, P(x)$（全称命题）</td>
+<td>$\exists x_0 \in M, \lnot P(x_0)$（否定为特称）</td>
+</tr>
+<tr>
+<td>$\exists x_0 \in M, P(x_0)$（特称命题）</td>
+<td>$\forall x \in M, \lnot P(x)$（否定为全称）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>口诀</strong>：全称命题的否定是特称，特称命题的否定是全称。</p>
+<h3>推导思路</h3>
+<p>量词否定的关键：否定一个"所有"命题，只需找到一个反例；否定一个"存在"命题，需证明所有情况都不成立。</p>
+<p>$$\lnot[\forall x \in M, P(x)] \equiv \exists x_0 \in M, \lnot P(x_0)$$</p>
+<p>$$\lnot[\exists x_0 \in M, P(x_0)] \equiv \forall x \in M, \lnot P(x)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：写出命题"所有实数 $x$ 满足 $x^2 \geq 0$"的否定。</p>
+<p>原命题：$\forall x \in \mathbb{R}, x^2 \geq 0$</p>
+<p>否定：$\exists x_0 \in \mathbb{R}, x_0^2 &lt; 0$</p>
+<p>（注意：原命题为真，否定为假）</p>
+<p><strong>例2</strong>：写出命题"存在实数 $x$ 使得 $x^2 + 1 = 0$"的否定。</p>
+<p>原命题：$\exists x_0 \in \mathbb{R}, x_0^2 + 1 = 0$</p>
+<p>否定：$\forall x \in \mathbb{R}, x^2 + 1 \neq 0$</p>
+<p>（原命题为假，否定为真）</p>
+<p><strong>例3</strong>：命题"所有函数都是单调函数"的否定是？</p>
+<p>否定：存在函数不是单调函数。（改"所有"为"存在某个"，改"是"为"不是"）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>否定量词时同时否定谓词</strong>：否定 $\forall x, P(x)$ 时，量词从 $\forall$ 变 $\exists$，同时 $P(x)$ 也要加否定 $\lnot P(x)$</li>
+<li><strong>命题的否定 vs 否命题</strong>：量词命题的否定（写否定命题）与构造"否命题"（互换条件结论）不同</li>
+<li><strong>"存在"的精确含义</strong>：$\exists$ 表示"至少一个"，不是"恰好一个"</li>
+<li><strong>验证全称命题为假</strong>：只需举一个反例（一个 $x_0$ 使 $P(x_0)$ 不成立）</li>
+<li><strong>验证存在命题为真</strong>：只需找到一个具体的 $x_0$ 使 $P(x_0)$ 成立</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了命题的真假和反例的概念，已隐含了量词思想。高中用 $\forall$ 和 $\exists$ 符号将这些概念形式化，是后续学习数学归纳法、极限思想的语言基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第一章，页码待家长核对）</li>
+<li>百科参考：量词（Quantifier），一阶逻辑，数理逻辑基础</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">命题及其否定</a></li>
+<li><a href="../atoms/278-充分条件必要条件.html">充分条件必要条件</a></li>
+<li><a href="../atoms/279-充要条件.html">充要条件</a></li>
+<li><a class="dead" title="未收录">集合-高中</a></li>
+<li><a class="dead" title="未收录">集合的运算</a></li>
+<li><a class="dead" title="未收录">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/2013-文-12.html">2013-文-12</a></li>
+<li><a href="../exam/2021-理-02.html">2021-理-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>
