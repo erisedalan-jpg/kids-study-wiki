@@ -6,6 +6,18 @@ aliases: [detail understanding, Detail Understanding, detail comprehension]
 主题: []
 状态: 骨架
 英文术语: Detail Understanding
+weight: 42
+weight_breakdown: {"prov_gen":{"吉林-不分":8},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 8
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 2
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 # detail understanding

@@ -8,6 +8,18 @@ aliases: [Come-what-may, come what may, 无论发生什么]
 英文术语: come what may
 首次共读:
 最近共读:
+weight: 2
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 2
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 Come what may / 无论发生什么

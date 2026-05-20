@@ -6,6 +6,18 @@ aliases: [函数y=Asin(ωx+φ)的图象变换, Transformations of the graph of y
 主题: []
 状态: 骨架
 英文术语: Transformations of the graph of y=Asin(ωx+φ)
+weight: 6
+weight_breakdown: {"prov_gen":{"湖南-文":2,"吉林-理":1,"湖南-理":1},"source":{"课标必考":0,"学习路径":0,"alias":1},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 1
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 3
+alias_count: 1
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 # 函数y=Asin(ωx+φ)的图象变换

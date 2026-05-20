@@ -8,6 +8,18 @@ aliases: [Why-do-you-like, 你为什么喜欢, why do you like, Because原因句
 英文术语: Why do you like...?
 首次共读:
 最近共读:
+weight: 0
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 3
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 你为什么喜欢……？/ Why Do You Like...?

@@ -8,6 +8,18 @@ aliases: [current-海流, current, 洋流, 电流, 当前的, 水流]
 英文术语: current
 首次共读:
 最近共读:
+weight: 11
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":3,"alias":5},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 5
+学习路径出现: 3
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 current 洋流；水流；电流；当前的

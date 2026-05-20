@@ -8,6 +8,18 @@ aliases: [flavor, 味道, 风味, flavour, flavoring, flavorful]
 英文术语: flavor
 首次共读:
 最近共读:
+weight: 5
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":5},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 5
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 Flavor 味道 / 风味

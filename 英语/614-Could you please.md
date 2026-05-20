@@ -6,6 +6,18 @@ aliases: ["Could you please...?", "Could you please", "Could you please...", 礼
 主题: [八下, 句型, 礼貌请求, 情态动词]
 状态: 全龄完成
 英文术语: Could you please...?
+weight: 0
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":5},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 5
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 # Could you please...?

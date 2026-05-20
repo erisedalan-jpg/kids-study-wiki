@@ -8,6 +8,18 @@ aliases: [Asin(ωx+φ)函数, sinusoidal function, 正弦型函数, 简谐函数
 英文术语: sinusoidal function y=Asin(ωx+φ)
 首次共读:
 最近共读:
+weight: 10
+weight_breakdown: {"prov_gen":{"吉林-理":1},"source":{"课标必考":0,"学习路径":1,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 1
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 3
+学习路径出现: 1
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 $y = A\sin(\omega x + \varphi)$ 函数

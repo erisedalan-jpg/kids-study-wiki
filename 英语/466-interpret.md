@@ -8,6 +8,18 @@ aliases: [interpret, 解读, 口译, 翻译, interpretation]
 英文术语: interpret
 首次共读:
 最近共读:
+weight: 6
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":1,"alias":4},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 4
+学习路径出现: 1
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 interpret（解读；口译）

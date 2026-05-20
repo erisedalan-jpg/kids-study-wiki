@@ -8,6 +8,18 @@ aliases: [How-do-you-go-to-school, 怎么上学, how do you go to school, 交通
 英文术语: How do you go to school?
 首次共读:
 最近共读:
+weight: 0
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 3
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 你怎么去上学？/ How Do You Go to School?

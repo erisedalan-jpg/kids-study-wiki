@@ -8,6 +8,18 @@ aliases: [关系副词-where-when-why, 关系副词, where when why定语从句]
 英文术语: Relative Adverbs (where, when, why)
 首次共读:
 最近共读:
+weight: 9
+weight_breakdown: {"prov_gen":{"吉林-不分":1},"source":{"课标必考":0,"学习路径":1,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 1
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 2
+学习路径出现: 1
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 # 关系副词 where / when / why

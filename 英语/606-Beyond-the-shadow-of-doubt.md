@@ -8,6 +8,18 @@ aliases: [Beyond-the-shadow-of-doubt, beyond the shadow of a doubt, 毫无疑问
 英文术语: beyond the shadow of a doubt
 首次共读:
 最近共读:
+weight: 3
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+吉林反链: 0
+黑龙江反链: 0
+北京反链: 0
+湖南反链: 0
+alias_count: 3
+学习路径出现: 0
+mastery: 未学
+last_review: null
+wrong_count: 0
+review_count: 0
 ---
 
 ## 🎓 Beyond the shadow of a doubt 毫无疑问；无可置疑
