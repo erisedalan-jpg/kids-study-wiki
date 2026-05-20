@@ -97,12 +97,12 @@ def fetch_katex(vendor_dir: Path) -> None:
     print(f"  KaTeX: 新下载 {n_ok} / 已存在 {n_skip}")
 
 
-def katex_head_html(current_dir: str) -> str:
+def katex_head_html_at_depth(depth: int) -> str:
     """生成 KaTeX <link>+<script> 注入；若 vendor/katex/ 不存在则返回空。"""
     katex_root = OUT_DIR / "vendor" / "katex"
     if not (katex_root / "katex.min.css").exists():
         return ""
-    prefix = ".." if current_dir != "." else "."
+    prefix = "." if depth == 0 else "/".join([".."] * depth)
     return f"""
 <link rel="stylesheet" href="{prefix}/vendor/katex/katex.min.css">
 <script defer src="{prefix}/vendor/katex/katex.min.js"></script>
@@ -136,28 +136,43 @@ def fm_get(fm: dict[str, str], key: str, default: str = "") -> str:
 
 
 def build_link_resolver(included: set[str], atom_titles: dict[str, str],
-                        exam_stems: set[str]) -> callable:
+                        exam_atom_map: dict[tuple[str, str], str]) -> callable:
     """构造 wikilink → HTML 链接转换器。
 
     - 目标在 included 学科子集 → atoms/{stem}.html
-    - 目标在 exam_stems 真题集 → exam/{stem}.html
-    - 否则 → dead link（灰色虚化，可点但跳 404 / 提示）
+    - 目标 stem 在 exam_atom_map[(current_subject, stem)] → exam/{学科}/{stem}.html
+      （按当前 atom 所属学科匹配，避免跨学科同 stem 互指；如化学词条引
+      `[[2008-全国Ⅱ-04]]` → exam/化学/2008-全国Ⅱ-04.html 而非误指物理/英语）
+    - fallback：任意学科有该 stem 时取字典序首学科
+    - 否则 → dead link
 
-    返回的函数签名：(match, current_dir) → html str
+    返回函数签名：(match, current_dir, current_subject) → html str
     """
-    def resolve(m: re.Match, current_dir: str) -> str:
+    # 反查：stem → set(学科)
+    stem_to_subjects: dict[str, set[str]] = defaultdict(set)
+    for (subj, stem) in exam_atom_map:
+        stem_to_subjects[stem].add(subj)
+
+    def resolve(m: re.Match, depth: int = 0, current_subject: str = "") -> str:
         raw_target = m.group(1).strip()
-        section = m.group(2)
         disp = m.group(3) or raw_target
-        prefix = ".." if current_dir != "." else "."
+        prefix = "." if depth == 0 else "/".join([".."] * depth)
 
         if raw_target in included:
             href = f"{prefix}/atoms/{html.escape(raw_target)}.html"
             return f'<a href="{href}">{html.escape(disp)}</a>'
-        if raw_target in exam_stems:
-            href = f"{prefix}/exam/{html.escape(raw_target)}.html"
+
+        subjects = stem_to_subjects.get(raw_target)
+        if subjects:
+            # 优先当前学科；否则字典序首
+            if current_subject in subjects:
+                pick = current_subject
+            else:
+                pick = sorted(subjects)[0]
+            href = (f"{prefix}/exam/{html.escape(pick)}/"
+                    f"{html.escape(raw_target)}.html")
             return f'<a href="{href}">{html.escape(disp)}</a>'
-        # 尝试用 atom_titles 反查（aliases / bare-name → stem）
+
         if raw_target in atom_titles:
             stem = atom_titles[raw_target]
             if stem in included:
@@ -168,12 +183,12 @@ def build_link_resolver(included: set[str], atom_titles: dict[str, str],
     return resolve
 
 
-def md_to_html(body: str, resolve: callable, current_dir: str,
-               relative_repo_prefix: str) -> str:
+def md_to_html(body: str, resolve: callable, depth: int,
+               relative_repo_prefix: str, current_subject: str = "") -> str:
     """词条 markdown 主体 → HTML。
 
     - 先剥反链段（单独渲染卡片）
-    - 替换 wikilink → <a>
+    - 替换 wikilink → <a>（按 current_subject 跨学科消歧）
     - 图片路径加 ../{..}/ 前缀（指向仓库根的 素材/）
     - markdown 库渲染剩余 markdown
     - 公式 $...$ 保留原文（套 <span class="math-source">）
@@ -182,8 +197,8 @@ def md_to_html(body: str, resolve: callable, current_dir: str,
     backlink_section = bl_m.group(1) if bl_m else ""
     main_body = BACKLINK_RE.sub("", body)
 
-    # wikilink → <a> （在 markdown 渲染前预处理，避免被识别为字面）
-    main_body = WIKILINK_RE.sub(lambda m: resolve(m, current_dir), main_body)
+    main_body = WIKILINK_RE.sub(lambda m: resolve(m, depth, current_subject),
+                                main_body)
 
     # 图片路径：源 md 内可能是 `../../素材/...`（相对源 md 位置）或
     # 裸 `素材/...`（仓库根相对）。先归一到仓库根相对，再加 HTML 位置的前缀。
@@ -206,7 +221,8 @@ def md_to_html(body: str, resolve: callable, current_dir: str,
     html_body = md.convert(main_body)
 
     if backlink_section:
-        bl_text = WIKILINK_RE.sub(lambda m: resolve(m, current_dir), backlink_section)
+        bl_text = WIKILINK_RE.sub(
+            lambda m: resolve(m, depth, current_subject), backlink_section)
         # 剥原始 `## 高考真题命中` 行（card 已有 h3 标题，避免双重）
         bl_text = re.sub(r"^##+\s*高考真题命中\s*$\n?", "", bl_text, flags=re.M)
         bl_md = markdown.Markdown(extensions=["tables", "fenced_code"])
@@ -227,12 +243,18 @@ def weight_class(w: int, thresholds: dict[str, int]) -> str:
     return "blue"
 
 
-def render_page(title: str, content_html: str, current_dir: str,
+def render_page(title: str, content_html: str, depth: int,
                 extra_head: str = "") -> str:
-    """完整 HTML 页（带 head + nav + footer）。"""
-    prefix = ".." if current_dir != "." else "."
+    """完整 HTML 页（带 head + nav + footer）。
+
+    depth = 当前页相对 docs/student/ 的目录深度：
+      0 = 根（index.html / 学科.html / 总览.html）
+      1 = atoms/ 下
+      2 = exam/{学科}/ 下
+    """
+    prefix = "." if depth == 0 else "/".join([".."] * depth)
     style_href = f"{prefix}/vendor/style.css"
-    katex_head = katex_head_html(current_dir)
+    katex_head = katex_head_html_at_depth(depth)
     nav_links = [
         ("总览", f"{prefix}/index.html"),
         ("数学", f"{prefix}/数学.html"),
@@ -288,15 +310,17 @@ def gen_atom_page(path: Path, fm: dict[str, str], body: str,
             f'<strong>aliases</strong>: {html.escape(", ".join(aliases))}</p>'
         )
 
-    body_html = md_to_html(body, resolve, "atoms", "../../../")
+    current_subject = fm_get(fm, "学科")
+    body_html = md_to_html(body, resolve, depth=1, relative_repo_prefix="../../../",
+                            current_subject=current_subject)
     content = (
         f'<h1>{html.escape(title)}</h1>{meta}{body_html}'
     )
-    return render_page(title, content, "atoms")
+    return render_page(title, content, depth=1)
 
 
 def gen_exam_page(path: Path, fm: dict[str, str], body: str,
-                  resolve: callable) -> str:
+                  resolve: callable, current_dir_depth: int = 4) -> str:
     title = fm_get(fm, "title", path.stem)
     year = fm_get(fm, "年份")
     paper = fm_get(fm, "卷别")
@@ -321,9 +345,12 @@ def gen_exam_page(path: Path, fm: dict[str, str], body: str,
         points_html = " ".join(f"<code>{html.escape(p)}</code>" for p in points)
         meta += f'<p><strong>考点</strong>：{points_html}</p>'
 
-    body_html = md_to_html(body, resolve, "exam", "../../../")
+    # 真题页路径 docs/student/exam/{学科}/{stem}.html → 仓库根需 4 级 ../
+    current_subject = fm_get(fm, "学科")
+    body_html = md_to_html(body, resolve, depth=2, relative_repo_prefix="../../../../",
+                            current_subject=current_subject)
     content = f'<h1>{html.escape(title)}</h1>{meta}{body_html}'
-    return render_page(title, content, "exam")
+    return render_page(title, content, depth=2)
 
 
 def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
@@ -360,7 +387,7 @@ def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
         '<span class="badge blue">蓝</span> 余。</p>'
         f'{search}{list_html}'
     )
-    return render_page(title, content, ".")
+    return render_page(title, content, depth=0)
 
 
 def gen_home(stats_by_sub: dict[str, int], total: int) -> str:
@@ -386,7 +413,7 @@ def gen_home(stats_by_sub: dict[str, int], total: int) -> str:
         '<li>未生成的内容：英语词条、低 weight 词条、小学/初中、非吉林真题（保留位）</li>'
         '</ul>'
     )
-    return render_page("吉林冲刺·学生 HTML", content, ".")
+    return render_page("吉林冲刺·学生 HTML", content, depth=0)
 
 
 def gen_top_overview(all_atoms: list[tuple[Path, dict, int, str]]) -> str:
@@ -409,7 +436,7 @@ def gen_top_overview(all_atoms: list[tuple[Path, dict, int, str]]) -> str:
         '<h1>总览 · 跨 4 科 top 30（吉林冲刺）</h1>'
         '<ul class="entry-list">' + "".join(items) + "</ul>"
     )
-    return render_page("总览", content, ".")
+    return render_page("总览", content, depth=0)
 
 
 def main() -> int:
@@ -458,15 +485,22 @@ def main() -> int:
                 by_subject[s].append((p, fm, w))
                 all_atoms.append((p, fm, w, s))
 
-    # 2) 扫 真题（吉林+黑龙江） stems，做反链跳转目标
-    exam_stems: set[str] = set()
+    # 2) 扫 真题（吉林+黑龙江） (subject, stem) → path，做反链跳转目标
+    #    用 (subject, stem) 复合键避免跨学科同 stem 互覆（如化学 vs 物理的
+    #    2008-全国Ⅱ-04 是不同题）；resolve 时按 atom 学科消歧。
+    exam_atom_map: dict[tuple[str, str], str] = {}
     for sub in iter_exam_dirs():
         if not (sub.name.startswith("吉林") or sub.name.startswith("黑龙江")):
             continue
+        # 目录名 `吉林-化学` → 学科 = 化学
+        parts = sub.name.split("-", 1)
+        if len(parts) != 2:
+            continue
+        prov, subject_name = parts
         for p in sub.glob("*.md"):
-            exam_stems.add(p.stem)
+            exam_atom_map[(subject_name, p.stem)] = str(p)
 
-    resolve = build_link_resolver(included, atom_titles, exam_stems)
+    resolve = build_link_resolver(included, atom_titles, exam_atom_map)
     thresholds = {"gold": 50, "red": 20}
 
     stats = {s: len(v) for s, v in by_subject.items()}
@@ -492,26 +526,36 @@ def main() -> int:
                 html_out, encoding="utf-8", newline="")
             n_atom += 1
 
-    # 4) 真题题级页（仅子集中词条反链命中的题）
-    referenced_exam: set[str] = set()
+    # 4) 真题题级页（仅子集中词条反链命中的题，按当前学科消歧 stem）
+    #    referenced_by_subject: 学科 → set(stem)，因同 stem 跨学科是不同题
+    referenced_by_subject: dict[str, set[str]] = defaultdict(set)
     for s, lst in by_subject.items():
         for p, fm, w in lst:
             text = p.read_text(encoding="utf-8")
             for m in BACKLINK_RE.finditer(text):
                 for mm in re.finditer(r"\[\[([^\[\]|]+?)(?:\|[^\]]*)?\]\]", m.group(1)):
-                    referenced_exam.add(mm.group(1).strip())
+                    referenced_by_subject[s].add(mm.group(1).strip())
     n_exam = 0
     for sub in iter_exam_dirs():
         if not sub.name.startswith("吉林"):
             continue
+        parts = sub.name.split("-", 1)
+        if len(parts) != 2:
+            continue
+        subject_name = parts[1]
+        ref_set = referenced_by_subject.get(subject_name, set())
+        if not ref_set:
+            continue
+        subj_dir = OUT_DIR / "exam" / subject_name
+        subj_dir.mkdir(parents=True, exist_ok=True)
         for p in sub.glob("*.md"):
-            if p.stem not in referenced_exam:
+            if p.stem not in ref_set:
                 continue
             text = p.read_text(encoding="utf-8")
             fm = read_frontmatter(p)
             body = FM_RE.sub("", text, count=1)
             html_out = gen_exam_page(p, fm, body, resolve)
-            (OUT_DIR / "exam" / f"{p.stem}.html").write_text(
+            (subj_dir / f"{p.stem}.html").write_text(
                 html_out, encoding="utf-8", newline="")
             n_exam += 1
 
