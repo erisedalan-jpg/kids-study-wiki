@@ -61,14 +61,19 @@ def page_text_between(doc, p0, y0, p1, y1) -> str:
     return "\n".join(out)
 
 
-def render_clip_series(doc, pages, out_dir, province, block_no, kind, dpi):
-    """pages: list[(p, y0, y1)] → 渲染 PNG 多图，返回相对路径列表。"""
+def render_clip_series(doc, pages, out_dir, province, year, paper, block_no, kind, dpi):
+    """pages: list[(p, y0, y1)] → 渲染 PNG 多图，返回相对路径列表。
+
+    命名 `{year}-{paper}-E{NN}.{kind}[.pN].png`：含年份+卷别防多年份块号互覆
+    （原裸号 `{NN}.{kind}.png` 末次写盘覆盖前次，致 md 图片无法展示）。
+    """
     rels: list[str] = []
+    paper_safe = paper.replace("/", "_").replace("\\", "_") or "未知"
     for idx, (p, y0, y1) in enumerate(pages):
         if y1 - y0 < 5:
             continue
         suffix = "" if idx == 0 else f".p{idx + 1}"
-        fname = f"{block_no:02d}.{kind}{suffix}.png"
+        fname = f"{year}-{paper_safe}-E{block_no:02d}.{kind}{suffix}.png"
         out_path = out_dir / fname
         clip = fitz.Rect(0, y0, doc[p].rect.width, y1)
         doc[p].get_pixmap(clip=clip, dpi=dpi).save(str(out_path))
@@ -124,8 +129,8 @@ def build(pdf_path: Path, province: str, year: int, dpi: int = 200) -> dict[str,
             s_pages = span_pages(a_p, a_y, s_p1, s_y1, per_h)
 
             block_no = i + 1
-            q_imgs = render_clip_series(doc, q_pages, out_dir, province, block_no, "q", dpi)
-            s_imgs = render_clip_series(doc, s_pages, out_dir, province, block_no, "a", dpi)
+            q_imgs = render_clip_series(doc, q_pages, out_dir, province, year, paper, block_no, "q", dpi)
+            s_imgs = render_clip_series(doc, s_pages, out_dir, province, year, paper, block_no, "a", dpi)
 
             # qno_range：仅取【答案】→ 块内首个【解析】前的纯聚合答案区
             # （整解析区会含下块篇章题面致题号串入，必须截断在【解析】）

@@ -13,8 +13,13 @@
 默认 dry-run；--apply 落盘。
 """
 import re, io, sys, argparse, collections
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
 from pathlib import Path
+
+def _setup_utf8():
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    except (ValueError, AttributeError):
+        pass
 
 REPO = Path(__file__).resolve().parents[2]
 SUBJ = ["数学", "物理", "化学", "生物", "英语", "语文", "生活与社会"]
@@ -44,6 +49,7 @@ def split_inner(inner: str):
 
 
 def main():
+    _setup_utf8()
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()

@@ -14,8 +14,13 @@
 4. 奇数计数文件须手清未配对定界符（输出 ⚠RESID 提醒）。
 """
 import sys, io, json, re, argparse
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
 from pathlib import Path
+
+def _setup_utf8():
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace", line_buffering=True)
+    except (ValueError, AttributeError):
+        pass
 
 REPO = Path(__file__).resolve().parents[2]
 LOG = REPO / "00-元/scripts/_llm_logs"
@@ -49,6 +54,7 @@ def manifest_titles(manifest_prefix: str, subject: str) -> set[str]:
 
 
 def main():
+    _setup_utf8()
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--manifest-prefix", default="北京缺口",
