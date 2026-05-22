@@ -69,9 +69,10 @@ def check_body_layers(text: str, grade: str = "小学") -> list[str]:
 
 
 def check_textbook_ref(text: str) -> list[str]:
-    body = _section(text, "出处与参考资料")
+    # 兼容两种出处标题：「## 📑 出处与参考资料」与精简版「## 📑 出处」
+    body = _section(text, "出处")
     if body is None:
-        return ["缺 📑 出处与参考资料 段"]
+        return ["缺 📑 出处 段"]
     m = re.search(r"-\s*\*\*教材\*\*：(.*)", body)
     if not m or not m.group(1).strip():
         return ["📑 教材引用为空"]
@@ -79,7 +80,7 @@ def check_textbook_ref(text: str) -> list[str]:
     issues = []
     if "ChinaTextbook" not in line:
         issues.append("📑 教材行未指向本地 ChinaTextbook PDF")
-    if not re.search(r"(第.+[单元章节课册讲]|[Pp]\.?\s*\d|页)", line):
+    if not re.search(r"(第.+[单元章节课册讲]|《.+》|准备课|总复习|[Pp]\.?\s*\d|页)", line):
         issues.append("📑 教材行缺具体章节/页码")
     return issues
 

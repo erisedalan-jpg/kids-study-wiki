@@ -74,6 +74,18 @@ class TestAuditChecks(unittest.TestCase):
                 "[[素材/教材/ChinaTextbook/小学/数学/人教版/x.pdf]] 第三册\n")
         self.assertEqual(self.ae.check_textbook_ref(text), [])
 
+    def test_textbook_ref_prep_lesson_and_booktitle_ok(self):
+        # 准备课《数一数》—— 非「第N单元」但有书名号/准备课，应视为有具体章节
+        text = ("## 📑 出处\n\n- **教材**："
+                "[[素材/教材/ChinaTextbook/小学/数学/人教版/x.pdf]] 准备课《数一数》\n")
+        self.assertEqual(self.ae.check_textbook_ref(text), [])
+
+    def test_textbook_ref_short_header_ok(self):
+        # 精简标题 「## 📑 出处」 也应识别
+        text = ("## 📑 出处\n\n- **教材**："
+                "[[素材/教材/ChinaTextbook/初中/数学/人教版/x.pdf]] 第一章\n")
+        self.assertEqual(self.ae.check_textbook_ref(text), [])
+
 
 if __name__ == "__main__":
     unittest.main()
