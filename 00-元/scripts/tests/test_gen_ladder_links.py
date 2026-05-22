@@ -33,6 +33,26 @@ class TestInject(unittest.TestCase):
         self.assertIn("030-乘法", recip)
         self.assertIn("016-加法", recip["030-乘法"]["前置"])
 
+    def test_inject_preserves_existing_related(self):
+        # 初中/高中词条已有相关词条列表，注入前置/延伸不得抹掉
+        text = ("# 二次函数\n\n## 🔗 相关词条\n\n"
+                "[[205-一元二次方程|一元二次方程]] · [[189-勾股定理|勾股定理]]\n\n"
+                "## 📑 出处\n\nx\n")
+        out = self.inject(text, 前置=[("212-二次函数定义", "二次函数定义")], 延伸=[])
+        self.assertIn("**前置**", out)
+        self.assertIn("[[212-二次函数定义|二次函数定义]]", out)
+        self.assertIn("[[205-一元二次方程|一元二次方程]]", out)  # 既有保留
+        self.assertIn("[[189-勾股定理|勾股定理]]", out)
+        self.assertIn("## 📑 出处", out)
+
+    def test_inject_idempotent(self):
+        text = "# X\n\n## 🔗 相关词条\n\n[[001-数数|数数]]\n\n## 📚 素材\n\n🚧\n"
+        once = self.inject(text, 前置=[("016-加法", "加法")], 延伸=[])
+        twice = self.inject(once, 前置=[("016-加法", "加法")], 延伸=[])
+        self.assertEqual(once, twice)
+        self.assertEqual(once.count("**前置**"), 1)
+        self.assertIn("[[001-数数|数数]]", once)
+
 
 if __name__ == "__main__":
     unittest.main()

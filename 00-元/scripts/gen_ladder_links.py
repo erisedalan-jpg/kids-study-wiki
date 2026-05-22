@@ -68,16 +68,47 @@ def inject_links(
     前置: list[tuple[str, str]],
     延伸: list[tuple[str, str]],
 ) -> str:
-    """替换/新建 🔗 相关词条 段。"""
-    block = _block(前置, 延伸)
+    """合并/新建 🔗 相关词条 段。
+
+    保留既有相关词条内容，只更新「前置/延伸」两行（删旧加新 + 去孤立 🚧），
+    幂等：重复运行结果稳定。段不存在则在文末新建。
+    """
+    new_pre = f"- **前置**：{_fmt(前置)}" if 前置 else None
+    new_ext = f"- **延伸**：{_fmt(延伸)}" if 延伸 else None
     m = re.search(re.escape(SECTION_HEADER), text)
-    if m:
-        rest = text[m.end():]
-        nxt = re.search(r"^##\s", rest, re.MULTILINE)
-        end = m.end() + (nxt.start() if nxt else len(rest))
-        return text[: m.start()] + block + ("\n" if not text[end:].startswith("\n") else "") + text[end:]
-    sep = "" if text.endswith("\n") else "\n"
-    return text + sep + "\n" + block
+    if not m:
+        sep = "" if text.endswith("\n") else "\n"
+        return text + sep + "\n" + _block(前置, 延伸)
+
+    rest = text[m.end():]
+    nxt = re.search(r"^##\s", rest, re.MULTILINE)
+    end = m.end() + (nxt.start() if nxt else len(rest))
+    body = text[m.end():end]
+
+    # 保留既有内容，剔除旧 前置/延伸 行与孤立 🚧 占位
+    kept = []
+    for line in body.splitlines():
+        s = line.strip()
+        if s.startswith("- **前置**") or s.startswith("- **延伸**") or s == "🚧":
+            continue
+        kept.append(line)
+    kept_text = "\n".join(kept).strip("\n")
+
+    lines = [SECTION_HEADER, ""]
+    if new_pre:
+        lines.append(new_pre)
+    if new_ext:
+        lines.append(new_ext)
+    if kept_text:
+        lines.append("")
+        lines.append(kept_text)
+    if not new_pre and not new_ext and not kept_text:
+        lines.append("🚧")
+    block = "\n".join(lines) + "\n"
+
+    tail = text[end:]
+    sep = "" if tail.startswith("\n") else "\n"
+    return text[: m.start()] + block + sep + tail
 
 
 def main() -> int:
