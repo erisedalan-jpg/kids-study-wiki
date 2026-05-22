@@ -1,6 +1,6 @@
 ---
 title: ASA-AAS-HL判定
-aliases: [ASA-AAS-HL判定, ASA AAS HL congruence, 角边角判定, 角角边判定, 斜边直角边]
+aliases: [ASA-AAS-HL判定, ASA AAS HL congruence, 角边角判定, 角角边判定, 斜边直角边, ASA, AAS]
 学科: 数学
 学段: [初中, 高中]
 主题: [几何, 八上, 全等三角形]
