@@ -33,8 +33,6 @@ def check_frontmatter(fm: dict, stem: str) -> list[str]:
     aliases = _parse_aliases(str(fm.get("aliases", "")))
     if aliases and aliases[0] != bare:
         issues.append(f"aliases 首位非 bare-name（应为 {bare}）")
-    elif not aliases:
-        issues.append("aliases 为空（缺 bare-name）")
     return issues
 
 
@@ -48,10 +46,19 @@ def _section(text: str, header_kw: str) -> str | None:
     return rest[: nxt.start()] if nxt else rest
 
 
-def check_body_layers(text: str) -> list[str]:
+def check_body_layers(text: str, grade: str = "小学") -> list[str]:
     issues = []
     if _section(text, "🧒") is not None:
         issues.append("仍含 🧒3-6 层（小学应已清，跑 strip_kid_layer.py）")
+    if "高中" in grade:
+        # 高中单层模板：仅要求存在一个 🎓 段（表头可为「考点精讲」或自由式）
+        gao = _section(text, "🎓")
+        if gao is None:
+            issues.append("缺 🎓 层")
+        elif SKELETON_MARK in gao or not gao.strip():
+            issues.append("🎓 层仍是骨架（🚧/空）")
+        return issues
+    # 小学/初中两层模板
     for kw, name in [("📚 给 6-12", "📚"), ("🎓 给 12+", "🎓")]:
         body = _section(text, kw)
         if body is None:
@@ -72,7 +79,7 @@ def check_textbook_ref(text: str) -> list[str]:
     issues = []
     if "ChinaTextbook" not in line:
         issues.append("📑 教材行未指向本地 ChinaTextbook PDF")
-    if not re.search(r"(第.+[单元章节课]|[Pp]\.?\s*\d|页)", line):
+    if not re.search(r"(第.+[单元章节课册讲]|[Pp]\.?\s*\d|页)", line):
         issues.append("📑 教材行缺具体章节/页码")
     return issues
 
@@ -98,9 +105,10 @@ def check_math_delim(text: str) -> list[str]:
 
 def audit_one(path: Path, fm: dict, text: str) -> list[str]:
     stem = path.stem
+    grade = "高中" if "高中" in str(fm.get("学段", "")) else "小学"
     return (
         check_frontmatter(fm, stem)
-        + check_body_layers(text)
+        + check_body_layers(text, grade)
         + check_textbook_ref(text)
         + check_wikilinks(text)
         + check_math_delim(text)

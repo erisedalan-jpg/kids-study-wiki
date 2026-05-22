@@ -60,6 +60,20 @@ class TestAuditChecks(unittest.TestCase):
         issues = self.ae.check_math_delim(text)
         self.assertTrue(len(issues) >= 1)
 
+    def test_body_hs_single_layer_ok(self):
+        text = "## 🎓 考点精讲\n\n动量守恒定律。\n"
+        self.assertEqual(self.ae.check_body_layers(text, "高中"), [])
+
+    def test_fm_missing_aliases_single_report(self):
+        fm = self._good_fm(); del fm["aliases"]
+        issues = self.ae.check_frontmatter(fm, "016-加法")
+        self.assertEqual(sum("aliases" in i for i in issues), 1)
+
+    def test_textbook_ref_volume_ok(self):
+        text = ("## 📑 出处与参考资料\n\n- **教材**："
+                "[[素材/教材/ChinaTextbook/小学/数学/人教版/x.pdf]] 第三册\n")
+        self.assertEqual(self.ae.check_textbook_ref(text), [])
+
 
 if __name__ == "__main__":
     unittest.main()
