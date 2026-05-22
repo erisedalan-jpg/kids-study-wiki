@@ -73,7 +73,8 @@ def check_textbook_ref(text: str) -> list[str]:
     body = _section(text, "出处")
     if body is None:
         return ["缺 📑 出处 段"]
-    m = re.search(r"-\s*\*\*教材\*\*：(.*)", body)
+    # 兼容有/无粗体标记与中英文冒号：`- **教材**：` 或 `- 教材：`
+    m = re.search(r"-\s*\*{0,2}教材\*{0,2}\s*[:：](.*)", body)
     if not m or not m.group(1).strip():
         return ["📑 教材引用为空"]
     line = m.group(1)

@@ -86,6 +86,12 @@ class TestAuditChecks(unittest.TestCase):
                 "[[素材/教材/ChinaTextbook/初中/数学/人教版/x.pdf]] 第一章\n")
         self.assertEqual(self.ae.check_textbook_ref(text), [])
 
+    def test_textbook_ref_no_bold_ok(self):
+        # 无粗体标记 `- 教材：` 也应识别（部分批次词条用此格式）
+        text = ("## 📑 出处\n\n- 教材："
+                "[[素材/教材/ChinaTextbook/初中/数学/人教版/x.pdf]] 第十七章\n")
+        self.assertEqual(self.ae.check_textbook_ref(text), [])
+
 
 if __name__ == "__main__":
     unittest.main()
