@@ -130,8 +130,8 @@ _由 `00-元/scripts/stats.py` 生成，共 5915 词条 / 7 学科。_
   - 清除 81 词条 🧒3-6 层（小学起用两层模板 `00-元/模板/词条模板-小学.md`：📚6-12 + 🎓12+）
   - **关键结论**：教材内容已基本完整落条；覆盖矩阵缺口 33→12 系别名不匹配（非知识缺失），别名回填 16 词条 + 补 3 真缺口（观察物体/数对/分类与整理，序号 1421-1423）
   - 纵向 strand 链：`strand_map_数学小学.yaml` 四领域，`gen_ladder_links.py` 注入 84 词条 前置/延伸 双向链
-  - ⏳ 残留：19 词条「📑 教材」行未指向 ChinaTextbook/缺章节，待逐条补（`audit_entries.py --dir 数学 --grade 小学` 查清单）
-  - 新工具（皆可复用六科，含单测）：`strip_kid_layer.py` / `audit_entries.py` / `coverage_matrix.py` / `gen_ladder_links.py`（全量单测 117 过）
+  - ✅ 有效性梳理收尾：26 词条教材引用补全（指向本地 ChinaTextbook PDF + 章节）+ 017 块式 aliases 转行内 + 522 裸链清理；**体检 91/0 全绿**
+  - 新工具（皆可复用六科，含单测）：`strip_kid_layer.py` / `audit_entries.py`（兼容精简出处标题 + 准备课/《》章节）/ `coverage_matrix.py` / `gen_ladder_links.py`（全量单测 119 过）
 
 ## 真题分析
 
