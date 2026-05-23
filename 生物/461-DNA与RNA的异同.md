@@ -3,7 +3,7 @@ title: DNA与RNA的异同
 aliases: [DNA与RNA的异同]
 学科: 生物
 学段: [高中]
-主题:
+主题: [遗传变异进化]
 状态: 骨架
 英文术语: Differences and Similarities between DNA and RNA
 weight: 5

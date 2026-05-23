@@ -3,7 +3,7 @@ title: 价层电子对互斥理论（VSEPR）
 aliases: [价层电子对互斥理论（VSEPR）, VSEPR, VSEPR理论]
 学科: 化学
 学段: [高中]
-主题: []
+主题: [物质结构]
 状态: 骨架
 英文术语: Valence Shell Electron Pair Repulsion (VSEPR) theory
 weight: 2
