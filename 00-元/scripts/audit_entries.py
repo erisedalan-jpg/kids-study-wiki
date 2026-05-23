@@ -19,9 +19,12 @@ SKELETON_MARK = "🚧"
 
 def _parse_aliases(raw: str) -> list[str]:
     raw = (raw or "").strip()
+    # 去每项首尾引号（YAML 合法的 ["x", "y"] 形式）
+    def _clean(x):
+        return x.strip().strip('"').strip("'").strip()
     if raw.startswith("[") and raw.endswith("]"):
-        return [x.strip() for x in raw[1:-1].split(",") if x.strip()]
-    return [raw] if raw else []
+        return [_clean(x) for x in raw[1:-1].split(",") if _clean(x)]
+    return [_clean(raw)] if raw else []
 
 
 def check_frontmatter(fm: dict, stem: str) -> list[str]:

@@ -25,6 +25,11 @@ class TestAuditChecks(unittest.TestCase):
         issues = self.ae.check_frontmatter(fm, "016-加法")
         self.assertTrue(any("英文术语" in i for i in issues))
 
+    def test_fm_quoted_bare_alias_ok(self):
+        # 带引号的 bare-name 首位应视为合规
+        fm = self._good_fm(); fm["aliases"] = '["加法", "addition"]'
+        self.assertEqual(self.ae.check_frontmatter(fm, "016-加法"), [])
+
     def test_fm_bare_not_first_alias(self):
         fm = self._good_fm(); fm["aliases"] = "[addition, 加法]"
         issues = self.ae.check_frontmatter(fm, "016-加法")

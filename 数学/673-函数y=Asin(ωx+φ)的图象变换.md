@@ -3,7 +3,7 @@ title: 函数y=Asin(ωx+φ)的图象变换
 aliases: [函数y=Asin(ωx+φ)的图象变换, Transformations of the graph of y=Asin(ωx+φ)]
 学科: 数学
 学段: [高中]
-主题: []
+主题: [函数]
 状态: 骨架
 英文术语: Transformations of the graph of y=Asin(ωx+φ)
 weight: 6
