@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体表面积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间几何体表面积</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间几何体表面积, surface area, 表面积, 几何体, 空间几何体的表面积, 几何体表面积, Surface Area of Solids</p><h2>🎓 空间几何体表面积</h2>
+<h3>核心思路</h3>
+<p><strong>表面积 = 展开图各面面积之和</strong></p>
+<p>将立体图形的侧面"展开"成平面，再计算各部分面积之和。</p>
+<h3>常用公式</h3>
+<h4>棱柱</h4>
+<p>$$S_{\text{表}} = S_{\text{侧}} + 2S_{\text{底}}$$</p>
+<ul>
+<li>直棱柱侧面积 $S_{\text{侧}} = $ 底面周长 $\times$ 高 $= ch$</li>
+<li>底面积 $S_{\text{底}}$ 根据底面形状计算</li>
+</ul>
+<h4>圆柱</h4>
+<p>$$S_{\text{侧}} = 2\pi r h, \quad S_{\text{表}} = 2\pi r h + 2\pi r^2 = 2\pi r(h + r)$$</p>
+<p>（侧面展开为宽 $2\pi r$、高 $h$ 的矩形）</p>
+<h4>棱锥</h4>
+<p>$$S_{\text{侧}} = \frac{1}{2} \times \text{底面周长} \times \text{斜高}$$</p>
+<p>（正棱锥的斜高：从顶点到底面各边中点的距离，即各侧面的高）</p>
+<p>$$S_{\text{表}} = S_{\text{侧}} + S_{\text{底}}$$</p>
+<h4>圆锥</h4>
+<p>母线长 $l$，底面半径 $r$：</p>
+<p>$$S_{\text{侧}} = \pi r l, \quad S_{\text{表}} = \pi r l + \pi r^2 = \pi r(l + r)$$</p>
+<p>（侧面展开为弧长 $= 2\pi r$、半径 $= l$ 的扇形）</p>
+<h4>圆台</h4>
+<p>上底半径 $r_1$，下底半径 $r_2$，母线 $l$：</p>
+<p>$$S_{\text{侧}} = \pi(r_1 + r_2)l, \quad S_{\text{表}} = \pi(r_1 + r_2)l + \pi r_1^2 + \pi r_2^2$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：底面边长为 $4$，高为 $3$ 的正四棱柱，求表面积。</p>
+<p><strong>解</strong>：底面积 $= 16$，侧面积 $= 4 \times 4 \times 3 = 48$，$S_{\text{表}} = 48 + 2 \times 16 = 80$</p>
+<p><strong>例2</strong>：底面半径 $r = 3$，母线 $l = 5$ 的圆锥，求表面积。</p>
+<p><strong>解</strong>：$S_{\text{表}} = \pi \times 3 \times 5 + \pi \times 9 = 15\pi + 9\pi = 24\pi$</p>
+<p><strong>例3</strong>：底面边长为 $4$，斜高为 $3$ 的正四棱锥，求全面积。</p>
+<p><strong>解</strong>：$S_{\text{侧}} = \frac{1}{2} \times 16 \times 3 = 24$，$S_{\text{底}} = 16$，$S_{\text{表}} = 40$</p>
+<h3>易错点</h3>
+<ul>
+<li>圆柱侧面展开是矩形，宽是<strong>底面周长</strong> $2\pi r$（不是直径）</li>
+<li>圆锥侧面扇形的弧长 $= 2\pi r$（底面周长），半径 $=$ 母线 $l$</li>
+<li>"斜高"是侧面上的<strong>高</strong>，不是棱锥的高（空间高度）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.2，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/346-空间几何体-多面体.html">空间几何体-多面体</a></li>
+<li><a class="dead" title="未收录">空间几何体-旋转体</a></li>
+<li><a class="dead" title="未收录">空间几何体体积</a></li>
+<li><a class="dead" title="未收录">球的表面积体积</a></li>
+<li><a class="dead" title="未收录">三视图-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-07.html">2011-理-07</a></li>
+<li><a class="dead" title="未收录">2020-北京-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@ aliases: [最高级（长词most）, most最高级, superlative adjectives long,
 状态: 完成
 英文术语: superlative adjectives (long words, the most)
 weight: 0
-weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 0
 黑龙江反链: 0
 北京反链: 0

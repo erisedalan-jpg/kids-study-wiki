@@ -6,7 +6,7 @@ aliases: [contextual inference, 语境推理, 上下文推断]
 主题: []
 英文术语: contextual inference
 weight: 7
-weight_breakdown: {"prov_gen":{"吉林-不分":1},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{"吉林-不分":1},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 1
 黑龙江反链: 0
 北京反链: 0

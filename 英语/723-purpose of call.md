@@ -7,7 +7,7 @@ aliases: [purpose of call, 推断目的, 电话意图, 听力意图]
 状态: 骨架
 英文术语: purpose of call
 weight: 8
-weight_breakdown: {"prov_gen":{"吉林-不分":1},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{"吉林-不分":1},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 1
 黑龙江反链: 0
 北京反链: 0

@@ -22,7 +22,7 @@
 <body>
 <div class="wrap">
 <div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
-<h1>同角三角函数基本关系</h1><div class="meta-card"><span><strong>权重</strong>25</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 同角三角函数基本关系</p><h1>同角三角函数基本关系</h1>
+<h1>同角三角函数基本关系</h1><div class="meta-card"><span><strong>权重</strong>27</span><span><strong>吉林命中</strong>8</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 同角三角函数基本关系, 同角三角函数的基本关系, 同角三角函数关系式</p><h1>同角三角函数基本关系</h1>
 <blockquote>
 <p><strong>一句话</strong>：对于任意一个角 α，其正弦、余弦、正切之间恒满足的平方关系与商数关系。
 <strong>English</strong>: For any angle α, the fundamental relationships among its sine, cosine, and tangent are given by the Pythagorean identity and the quotient identity.</p>
@@ -84,6 +84,71 @@
 <td>正切</td>
 <td>tangent</td>
 <td>角 α 的对边与邻边之比</td>
+</tr>
+</tbody>
+</table>
+<h2>🔁 合并补充：原《同角三角函数的基本关系》</h2>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：设 $\alpha$ 是任意角，设其终边上一点 $P(x, y)$，$|OP| = r = \sqrt{x^2 + y^2} &gt; 0$，则有定义 $\sin\alpha = \dfrac{y}{r}$，$\cos\alpha = \dfrac{x}{r}$，$\tan\alpha = \dfrac{y}{x}\,(x \neq 0)$。由这些定义可直接导出两个基本关系式：
+  $$ \sin^2\alpha + \cos^2\alpha = 1 \quad \text{(平方关系)} $$
+  $$ \tan\alpha = \frac{\sin\alpha}{\cos\alpha} \quad \text{(商数关系)} $$
+  以上关系式成立的前提是：使得函数有意义的角 $\alpha$ 均成立。其中平方关系对任意 $\alpha \in \mathbf{R}$ 成立；商数关系要求 $\cos\alpha \neq 0$，即 $\alpha \neq \frac{\pi}{2} + k\pi, k \in \mathbf{Z}$。
+  由这两个基本关系式可推导出其他常用变形，如 $\sin^2\alpha = 1 - \cos^2\alpha$，$\cos^2\alpha = 1 - \sin^2\alpha$，$\sin\alpha = \cos\alpha \cdot \tan\alpha$，以及 $1 + \tan^2\alpha = \dfrac{1}{\cos^2\alpha}$ 等。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：高考中解决同角三角函数关系题目的标准方法可归纳为“求值三步法”：</p>
+</li>
+<li><strong>定象限，判符号</strong>：由已知角的范围或函数值符号，确定所求三角函数值的正负号。</li>
+<li><strong>选关系，列方程</strong>：根据平方关系或商数关系建立方程（组）。若已知 $\sin\alpha$ 求 $\cos\alpha$，用 $\cos\alpha = \pm\sqrt{1-\sin^2\alpha}$；若已知 $\tan\alpha$ 求 $\sin\alpha$ 和 $\cos\alpha$，常结合 $\sin^2\alpha + \cos^2\alpha = 1$ 构造齐次式或解方程组。</li>
+<li>
+<p><strong>化切求值</strong>：对于形如 $\dfrac{a\sin\alpha + b\cos\alpha}{c\sin\alpha + d\cos\alpha}$ 或 $\sin^2\alpha + k\sin\alpha\cos\alpha + m\cos^2\alpha$ 的分式或齐次式，分子分母同除以 $\cos\alpha$ 的适当次幂，转化为仅含 $\tan\alpha$ 的式子再代入计算。对于 $\sin\alpha \pm \cos\alpha$ 与 $\sin\alpha\cos\alpha$ 的互求，常利用平方后与平方关系结合整体代换。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：该考点在高考中主要以选择题、填空题出现，也作为三角恒等变换或解三角形的中间步骤，常见设问方式：</p>
+</li>
+<li>给值求值：已知 $\sin\alpha = \frac{3}{5}$，且 $\alpha$ 是第二象限角，求 $\cos\alpha$ 和 $\tan\alpha$。</li>
+<li>化切求值：已知 $\tan\alpha = 2$，求 $\frac{3\sin\alpha - \cos\alpha}{\sin\alpha + 2\cos\alpha}$ 或 $\sin^2\alpha + \sin\alpha\cos\alpha$ 的值。</li>
+<li>整体求值：已知 $\sin\alpha + \cos\alpha = \frac{1}{2}$，求 $\sin\alpha\cos\alpha$ 或 $\sin^3\alpha + \cos^3\alpha$。</li>
+<li>含参讨论：结合方程思想，由 $\sin\alpha,\cos\alpha$ 的某个关系式求参数 $m$ 的取值范围，最终需代入 $\sin^2\alpha + \cos^2\alpha = 1$ 验证。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略象限导致符号错误</strong>：开方求 $\sin\alpha$ 或 $\cos\alpha$ 时，未根据角所在象限确定正负号，直接取正或漏写了“±”。</li>
+<li><strong>错用商数关系前提</strong>：在未验证 $\cos\alpha \neq 0$ 的情况下随意使用 $\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$ 或变形，产生无定义点。</li>
+<li><strong>混淆齐次式转化</strong>：对不含分式的二次齐次式（如 $\sin^2\alpha + \sin\alpha\cos\alpha$），忘记分母可看作 $\sin^2\alpha + \cos^2\alpha = 1$，从而整体转化为 $\tan\alpha$ 的表达式。</li>
+<li><strong>忽视隐含范围</strong>：已知 $\sin\alpha\cos\alpha$ 或 $\sin\alpha \pm \cos\alpha$ 的值时，未挖掘角 $\alpha$ 的范围对符号的隐含限制，导致多解或漏解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平方关系</td>
+<td>Pythagorean identity</td>
+<td>$\sin^2\alpha + \cos^2\alpha = 1$</td>
+</tr>
+<tr>
+<td>商数关系</td>
+<td>Quotient identity</td>
+<td>$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$</td>
+</tr>
+<tr>
+<td>齐次式</td>
+<td>Homogeneous expression</td>
+<td>分子分母各项次数相同的三角函数式</td>
+</tr>
+<tr>
+<td>整体代换</td>
+<td>Substitution by symmetry</td>
+<td>利用 $\sin\alpha \pm \cos\alpha$ 与乘积的互化</td>
 </tr>
 </tbody>
 </table>

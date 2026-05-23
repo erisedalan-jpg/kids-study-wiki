@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线渐近线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双曲线渐近线</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 双曲线渐近线, asymptote of hyperbola, 渐近线, 双曲线的渐近线</p><h2>🎓 双曲线渐近线</h2>
+<h3>定义</h3>
+<p><strong>渐近线</strong>：双曲线无限延伸时越来越靠近但永远不相交的直线。</p>
+<p>对于标准双曲线，渐近线是过中心的两条直线。</p>
+<h3>渐近线方程</h3>
+<p><strong>$\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$（焦点在 $x$ 轴）</strong>：</p>
+<p>$$y = \pm\frac{b}{a}x$$</p>
+<p><strong>$\dfrac{y^2}{a^2} - \dfrac{x^2}{b^2} = 1$（焦点在 $y$ 轴）</strong>：</p>
+<p>$$y = \pm\frac{a}{b}x$$</p>
+<h3>记忆方法</h3>
+<p>将标准方程右边改为 $0$，解出 $y/x$ 的比值即为渐近线斜率：</p>
+<p>$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 0 \Rightarrow \frac{x}{a} = \pm\frac{y}{b} \Rightarrow y = \pm\frac{b}{a}x$$</p>
+<h3>辅助矩形</h3>
+<p>以 $(\pm a, 0)$ 和 $(0, \pm b)$ 为边中点作矩形，矩形对角线所在直线即为渐近线。</p>
+<p>渐近线斜率 $= \pm \dfrac{b}{a}$（矩形边长比）</p>
+<h3>等轴双曲线</h3>
+<p>当 $a=b$ 时，$x^2 - y^2 = a^2$，渐近线 $y = \pm x$，两渐近线互相垂直（90°）。</p>
+<p>一般情况渐近线夹角 $\ne 90°$；两渐近线互相垂直 $\Leftrightarrow a=b$。</p>
+<h3>过焦点到渐近线的距离</h3>
+<p>右焦点 $F_2(c, 0)$ 到渐近线 $bx - ay = 0$ 的距离：</p>
+<p>$$d = \frac{|bc - 0|}{\sqrt{a^2+b^2}} = \frac{bc}{c} = b$$</p>
+<p>即<strong>焦点到渐近线的距离等于虚半轴 $b$</strong>（重要结论）。</p>
+<h3>共渐近线的双曲线族</h3>
+<p>所有与 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ 共渐近线的双曲线形如：</p>
+<p>$$\frac{x^2}{a^2} - \frac{y^2}{b^2} = \lambda \quad (\lambda \ne 0)$$</p>
+<p>当 $\lambda &gt; 0$：焦点在 $x$ 轴的双曲线族；当 $\lambda &lt; 0$：焦点在 $y$ 轴的双曲线族（共轭双曲线）。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：双曲线 $\dfrac{x^2}{4} - \dfrac{y^2}{9} = 1$，求渐近线方程。</p>
+<p><strong>解</strong>：$a=2, b=3$，渐近线 $y = \pm\dfrac{3}{2}x$</p>
+<p><strong>例2</strong>：双曲线渐近线为 $y = \pm 2x$，且过点 $(1, 0)$，求方程。</p>
+<p><strong>解</strong>：$\dfrac{b}{a}=2$，过 $(1,0)$ 代入：$\dfrac{1}{a^2}-0=1$，$a^2=1$，$b^2=4$，方程：$x^2-\dfrac{y^2}{4}=1$</p>
+<p><strong>例3</strong>：与双曲线 $\dfrac{x^2}{9}-\dfrac{y^2}{4}=1$ 共渐近线，且过点 $(3,2)$，求方程。</p>
+<p><strong>解</strong>：设方程 $\dfrac{x^2}{9}-\dfrac{y^2}{4}=\lambda$，代入 $(3,2)$：$\dfrac{9}{9}-\dfrac{4}{4}=\lambda$，$\lambda=1-1=0$，矛盾（$\lambda\ne0$）。</p>
+<p>调整：过 $(3, 4)$：$\dfrac{9}{9}-\dfrac{16}{4}=1-4=-3=\lambda$，方程 $\dfrac{x^2}{9}-\dfrac{y^2}{4}=-3$，即 $\dfrac{y^2}{12}-\dfrac{x^2}{27}=1$</p>
+<h3>易错点</h3>
+<ul>
+<li>渐近线方程是 $y=\pm\dfrac{b}{a}x$（$b$ 在分子），不是 $\dfrac{a}{b}$</li>
+<li>焦点在 $y$ 轴时渐近线是 $y=\pm\dfrac{a}{b}x$</li>
+<li>渐近线过<strong>中心</strong>（原点），斜率不为零</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">抛物线</a></p>
+</li>
+<li>
+<p><a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></p>
+</li>
+<li><a href="../atoms/367-双曲线几何性质.html">双曲线几何性质</a></li>
+<li><a class="dead" title="未收录">双曲线离心率</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+<li><a class="dead" title="未收录">轨迹方程</a></li>
+<li><a class="dead" title="未收录">两条直线位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-文-05.html">2010-文-05</a></li>
+<li><a href="../exam/数学/2011-文-10.html">2011-文-10</a></li>
+<li><a href="../exam/数学/2014-理-11.html">2014-理-11</a></li>
+<li><a href="../exam/数学/2015-文-06.html">2015-文-06</a></li>
+<li><a href="../exam/数学/2015-文-15.html">2015-文-15</a></li>
+<li><a href="../exam/数学/2016-文-12.html">2016-文-12</a></li>
+<li><a href="../exam/数学/2017-理-15.html">2017-理-15</a></li>
+<li><a href="../exam/数学/2018-文-06.html">2018-文-06</a></li>
+<li><a href="../exam/数学/2018-理-14.html">2018-理-14</a></li>
+<li><a href="../exam/数学/2019-文-10.html">2019-文-10</a></li>
+<li><a href="../exam/数学/2021-理-13.html">2021-理-13</a></li>
+<li><a class="dead" title="未收录">2022-北京-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -7,7 +7,7 @@ aliases: [Specific Information, 细节理解, 事实细节]
 状态: 骨架
 英文术语: Specific Information
 weight: 12
-weight_breakdown: {"prov_gen":{"吉林-不分":2},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{"吉林-不分":2},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 2
 黑龙江反链: 0
 北京反链: 0

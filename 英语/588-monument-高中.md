@@ -9,7 +9,7 @@ aliases: [monument-高中, monument, 纪念碑, 纪念物, 历史遗址, 历史]
 首次共读:
 最近共读:
 weight: 5
-weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":5},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":5},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 0
 黑龙江反链: 0
 北京反链: 0

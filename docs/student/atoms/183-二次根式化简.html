@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次根式化简</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次根式化简</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 二次根式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次根式化简, simplification of radicals, 最简根式, 分母有理化, 最简二次根式</p><h1>二次根式化简</h1>
+<blockquote>
+<p><strong>一句话</strong>：把根式化成"最简根式"——被开方数无完全平方因数、分母无根号、指数不能再降。
+<strong>English</strong>: To simplify a radical: remove perfect square factors from the radicand, and rationalize the denominator.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>最简根式的三个标准</h3>
+<ol>
+<li><strong>被开方数中不含完全平方因数</strong>（如 4、9、25、$x^2$）</li>
+<li><strong>被开方数中不含分母</strong>（分数不在根号下）</li>
+<li><strong>根号指数与被开方数指数互质</strong>（八下暂不涉及）</li>
+</ol>
+<h3>去掉完全平方因数</h3>
+<p>$$\sqrt{12} = \sqrt{4 \times 3} = 2\sqrt{3} \quad (\text{提出}2)$$
+$$\sqrt{75} = \sqrt{25 \times 3} = 5\sqrt{3}$$
+$$\sqrt{a^2 b} = a\sqrt{b} \quad (a \geq 0,\; b \geq 0)$$</p>
+<h3>分母有理化</h3>
+<p>分母含根号时，用"乘以 1"的技巧消去：</p>
+<p>$$\frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}} = \frac{\sqrt{2}}{2}$$</p>
+<p>$$\frac{3}{\sqrt{5}} = \frac{3\sqrt{5}}{5}$$</p>
+<p><strong>共轭有理化</strong>（分母含加减）：
+$$\frac{1}{\sqrt{3}+1} = \frac{\sqrt{3}-1}{(\sqrt{3}+1)(\sqrt{3}-1)} = \frac{\sqrt{3}-1}{2}$$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>完整化简流程</h3>
+<p><strong>步骤 1</strong>：分解被开方数，提取最大完全平方因数。</p>
+<p><strong>步骤 2</strong>：若被开方数含分母，利用 $\sqrt{\dfrac{a}{b}}=\dfrac{\sqrt{a}}{\sqrt{b}}$ 分拆，再有理化。</p>
+<p><strong>步骤 3</strong>：检验三个标准均满足。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：化简 $\sqrt{\dfrac{3}{8}}$</p>
+<p>$$\sqrt{\frac{3}{8}} = \frac{\sqrt{3}}{\sqrt{8}} = \frac{\sqrt{3}}{2\sqrt{2}} = \frac{\sqrt{3}\cdot\sqrt{2}}{2\cdot 2} = \frac{\sqrt{6}}{4}$$</p>
+<p><strong>例 2</strong>：化简 $\dfrac{2}{\sqrt{5}-\sqrt{3}}$</p>
+<p>$$= \frac{2(\sqrt{5}+\sqrt{3})}{(\sqrt{5})^2-(\sqrt{3})^2} = \frac{2(\sqrt{5}+\sqrt{3})}{2} = \sqrt{5}+\sqrt{3}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 提公因数时提不完全，如 $\sqrt{72}=\sqrt{4\cdot18}=2\sqrt{18}$（仍未最简，应继续化为 $6\sqrt{2}$）</li>
+<li>❌ 有理化时分子忘乘：$\dfrac{1}{\sqrt{2}}$ 乘以 $\dfrac{\sqrt{2}}{\sqrt{2}}$ 后分子应为 $\sqrt{2}$，不是 1</li>
+<li>❌ 共轭乘法公式记错，$(a+b)(a-b)=a^2-b^2$，根号内不再有加减</li>
+</ul>
+<h3>知识联系</h3>
+<p>分母有理化用到<a class="dead" title="未收录">二次根式乘除</a>的乘法法则和<a class="dead" title="未收录">完全平方公式</a>（$a^2-b^2$）；化简后为<a class="dead" title="未收录">二次根式加减</a>的合并做准备；有理化技巧在<a href="../atoms/061-方程.html">无理方程</a>中高频使用。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最简根式</td>
+<td>simplest radical form</td>
+</tr>
+<tr>
+<td>分母有理化</td>
+<td>rationalize the denominator</td>
+</tr>
+<tr>
+<td>完全平方因数</td>
+<td>perfect square factor</td>
+</tr>
+<tr>
+<td>共轭</td>
+<td>conjugate</td>
+</tr>
+<tr>
+<td>有理数</td>
+<td>rational number</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第16章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·实数</li>
+<li>拓展：<a class="dead" title="未收录">数学/二次根式乘除</a> · <a class="dead" title="未收录">数学/完全平方公式</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>延伸</strong>：<a href="../atoms/189-勾股定理.html">勾股定理</a></li>
+</ul>
+<p><a class="dead" title="未收录">二次根式定义</a> · <a class="dead" title="未收录">二次根式性质</a> · <a class="dead" title="未收录">二次根式乘除</a> · <a class="dead" title="未收录">二次根式加减</a> · <a class="dead" title="未收录">完全平方公式</a> · <a href="../atoms/061-方程.html">无理方程</a> · <a class="dead" title="未收录">因式分解</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数运算性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对数运算性质</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对数运算性质, logarithm laws, 对数法则, 对数运算规则, 对数运算法则</p><h2>🎓 对数运算性质</h2>
+<h3>核心运算法则</h3>
+<p>设 $a &gt; 0$，$a \neq 1$，$M &gt; 0$，$N &gt; 0$，$n \in \mathbb{R}$：</p>
+<p><strong>积的对数</strong>（对数乘法法则）：</p>
+<p>$$\log_a(MN) = \log_a M + \log_a N$$</p>
+<p><strong>商的对数</strong>（对数除法法则）：</p>
+<p>$$\log_a\frac{M}{N} = \log_a M - \log_a N$$</p>
+<p><strong>幂的对数</strong>（对数幂次法则）：</p>
+<p>$$\log_a M^n = n \cdot \log_a M$$</p>
+<p><strong>推论</strong>：</p>
+<p>$$\log_a \sqrt[n]{M} = \log_a M^{1/n} = \frac{1}{n}\log_a M$$</p>
+<p>$$\log_{a^m} M^n = \frac{n}{m}\log_a M \quad (m \neq 0)$$</p>
+<h3>推导思路</h3>
+<p>利用"指数运算与对数运算互为逆运算"推导：</p>
+<p>设 $\log_a M = p$（即 $a^p = M$），$\log_a N = q$（即 $a^q = N$），则：</p>
+<p>$$MN = a^p \cdot a^q = a^{p+q} \Rightarrow \log_a(MN) = p+q = \log_a M + \log_a N$$</p>
+<p>积的对数法则得证，其余类似。</p>
+<h3>综合运算</h3>
+<p>$$a^{\log_a M} = M \quad \text{（对数恒等式）}$$</p>
+<p>$$\log_a a = 1, \quad \log_a 1 = 0$$</p>
+<p>$$\log_a b \cdot \log_b a = 1 \quad (a &gt; 0, a \neq 1, b &gt; 0, b \neq 1)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $\log_2 8 + \log_2 4 - \log_2 16$。</p>
+<p>解：$= \log_2 8 + \log_2 4 - \log_2 16 = \log_2 \dfrac{8 \times 4}{16} = \log_2 2 = 1$</p>
+<p><strong>例2</strong>：化简 $\log_4 8$。</p>
+<p>解：$\log_4 8 = \dfrac{\log_2 8}{\log_2 4} = \dfrac{3}{2}$（换底公式）</p>
+<p>或：$\log_4 8 = \log_{2^2} 2^3 = \dfrac{3}{2} \log_2 2 = \dfrac{3}{2}$</p>
+<p><strong>例3</strong>：已知 $\lg 2 = 0.3010$，$\lg 3 = 0.4771$，计算 $\lg 24$。</p>
+<p>解：$\lg 24 = \lg(8 \times 3) = \lg 8 + \lg 3 = \lg 2^3 + \lg 3 = 3\lg 2 + \lg 3$</p>
+<p>$= 3 \times 0.3010 + 0.4771 = 0.9030 + 0.4771 = 1.3801$</p>
+<p><strong>例4</strong>：解方程 $\log_2(x+1) + \log_2(x-1) = 3$。</p>
+<p>解：先确定定义域：$x+1&gt;0$ 且 $x-1&gt;0$，即 $x &gt; 1$。</p>
+<p>$\log_2[(x+1)(x-1)] = 3 \Rightarrow (x+1)(x-1) = 2^3 = 8 \Rightarrow x^2 - 1 = 8 \Rightarrow x^2 = 9 \Rightarrow x = \pm 3$。</p>
+<p>因 $x &gt; 1$，舍去 $x = -3$，故 $x = 3$。验证：$\log_2 4 + \log_2 2 = 2+1 = 3$ ✓</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>真数必须为正</strong>：使用对数法则前，必须确认真数的范围（$M &gt; 0, N &gt; 0$），解方程后需验根</li>
+<li><strong>减法是商，不是差</strong>：$\log_a M - \log_a N = \log_a \dfrac{M}{N}$，不是 $\log_a(M-N)$</li>
+<li><strong>系数移入是幂次</strong>：$n \log_a M = \log_a M^n$，系数变幂次后须保证 $M^n$ 的真数仍为正</li>
+<li><strong>对数内不能有负数</strong>：$\log_2(-4)$ 无意义，即使 $\log_2(-4) = \log_2((-1)(4)) = \log_2(-1) + \log_2 4$ 也不成立</li>
+<li><strong>换底后分子分母</strong>：$\log_a b = \dfrac{\log_c b}{\log_c a}$，不要将分子分母的底数弄反</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了指数的乘法（$a^m \cdot a^n = a^{m+n}$）、除法、幂次运算。对数运算法则正是这些指数法则在对数世界的"翻译"：积→和，商→差，幂→乘。掌握对应关系有助于在指数与对数之间灵活转换。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：对数运算法则（Logarithm laws），对数恒等式</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">二次函数定义</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">对数概念</a></p>
+</li>
+<li><a class="dead" title="未收录">换底公式</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a class="dead" title="未收录">对数函数的性质</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-11.html">2010-理-11</a></li>
+<li><a href="../exam/数学/2013-理-08.html">2013-理-08</a></li>
+<li><a href="../exam/数学/2019-文-07.html">2019-文-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -22,7 +22,7 @@
 <body>
 <div class="wrap">
 <div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
-<h1>直线倾斜角与斜率</h1><div class="meta-card"><span><strong>权重</strong>14</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章直线和圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线倾斜角与斜率, inclination angle and slope, 倾斜角, 斜率</p><h2>🎓 直线倾斜角与斜率</h2>
+<h1>直线倾斜角与斜率</h1><div class="meta-card"><span><strong>权重</strong>16</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章直线和圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线倾斜角与斜率, inclination angle and slope, 倾斜角, 斜率, 直线的倾斜角与斜率, 斜率与倾斜角</p><h2>🎓 直线倾斜角与斜率</h2>
 <h3>倾斜角</h3>
 <p><strong>定义</strong>：直线 $l$ 与 $x$ 轴正方向所成的角 $\alpha$（规定 $\alpha \in [0°, 180°)$）称为直线的<strong>倾斜角</strong>。</p>
 <ul>
@@ -64,6 +64,68 @@ $$\alpha = \arctan\left(-\dfrac{4}{3}\right) \in (90°,180°), \quad \alpha \app
 <li>两直线平行需满足斜率相等<strong>且截距不同</strong>，否则是同一直线</li>
 </ul>
 <hr />
+<h2>🔁 合并补充：原《直线的倾斜角与斜率》</h2>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+设直线 $l$ 与 $x$ 轴相交，将 $x$ 轴绕交点按逆时针方向旋转到与 $l$ 重合时所转的最小正角 $\alpha$ 称为直线 $l$ 的倾斜角，取值范围 $\alpha \in [0, \pi)$。当 $\alpha \neq \frac{\pi}{2}$ 时，斜率 $k = \tan\alpha$；当 $\alpha = \frac{\pi}{2}$ 时，直线垂直于 $x$ 轴，斜率不存在。<br />
+若直线上有两点 $P_1(x_1, y_1), P_2(x_2, y_2)\,(x_1 \neq x_2)$，则斜率公式为<br />
+$$
+k = \frac{y_2 - y_1}{x_2 - x_1}
+$$<br />
+斜率与倾斜角的对应关系：$k&gt;0 \Leftrightarrow \alpha \in (0, \frac{\pi}{2})$；$k&lt;0 \Leftrightarrow \alpha \in (\frac{\pi}{2}, \pi)$；$k=0 \Leftrightarrow \alpha=0$。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>斜率范围与倾斜角范围互推</strong>：利用正切函数在 $[0,\frac{\pi}{2})$ 与 $(\frac{\pi}{2},\pi)$ 上的单调性，将角度范围转化为斜率范围或反之。<br />
+2. <strong>两直线位置关系的斜率判定</strong>：<br />
+   - 平行：$l_1 \parallel l_2 \Leftrightarrow k_1 = k_2$（或两直线斜率均不存在）。<br />
+   - 垂直：$l_1 \perp l_2 \Leftrightarrow k_1 \cdot k_2 = -1$（或一个斜率为 $0$，另一个斜率不存在）。<br />
+3. <strong>三点共线</strong>：$A, B, C$ 三点共线 $\Leftrightarrow k_{AB} = k_{AC}$。<br />
+4. <strong>求直线方程时的斜率确定</strong>：无论是点斜式、斜截式，都需先求出或设出斜率，注意讨论斜率不存在的情形。</p>
+<p><strong>典型应用</strong><br />
+高考中常以选择题、填空题直接考查倾斜角与斜率的计算及互推，或在解答题中作为直线方程的起点、位置关系判断的依据。常见设问如：“已知直线过两点，求倾斜角”“若直线倾斜角为 $120^\circ$，求斜率”“两直线平行，求参数值”“求过定点且与已知直线垂直的直线方程”。与导数结合时，曲线切线的斜率即为导数值，由此可写出切线方程，再与其他几何条件综合。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>遗忘倾斜角取值范围为 $[0, \pi)$，误写成 $(0, \pi]$ 或闭区间导致取到 $\pi$。  </li>
+<li>忽略斜率不存在的情况，例如讨论两直线垂直时只记 $k_1 k_2 = -1$，漏掉“一斜率为 $0$，另一斜率不存在”这一特殊情形。  </li>
+<li>利用两点求斜率时分母 $x_2 - x_1$ 为 $0$ 就直接代入公式导致无意义，应单独说明此时直线垂直于 $x$ 轴，斜率不存在。  </li>
+<li>倾斜角与斜率范围互推时，错误地认为斜率越大倾斜角越大，未注意到当倾斜角在 $(\frac{\pi}{2},\pi)$ 内，正切值为负且单调递增，斜率由 $-\infty$ 增大到 $0$ 对应角度从 $\frac{\pi}{2}$ 增大到 $\pi$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>倾斜角</td>
+<td>inclination angle</td>
+<td>直线向上方向与 x 轴正方向的最小正角</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>倾斜角的正切值，表示直线的倾斜度</td>
+</tr>
+<tr>
+<td>正切函数</td>
+<td>tangent function</td>
+<td>描述倾斜角与斜率的函数关系</td>
+</tr>
+<tr>
+<td>平行</td>
+<td>parallel</td>
+<td>两直线斜率相等或都不存在</td>
+</tr>
+<tr>
+<td>垂直</td>
+<td>perpendicular</td>
+<td>两直线斜率之积为 -1 或特殊情况</td>
+</tr>
+</tbody>
+</table>
 <h2>📑 出处</h2>
 <ul>
 <li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第二章</li>
@@ -72,10 +134,16 @@ $$\alpha = \arctan\left(-\dfrac{4}{3}\right) \in (90°,180°), \quad \alpha \app
 </ul>
 <h2>🔗 相关词条</h2>
 <ul>
-<li><a class="dead" title="未收录">直线方程-点斜式</a></li>
+<li><strong>前置</strong>：<a class="dead" title="未收录">值域</a> <a class="dead" title="未收录">直线方程-一般式</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">直线的截距</a> <a href="../atoms/782-圆的方程.html">圆的方程</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">直线方程-点斜式</a></p>
+</li>
 <li><a class="dead" title="未收录">直线方程-斜截式</a></li>
 <li><a class="dead" title="未收录">两条直线位置关系</a></li>
-<li><a href="../atoms/392-点到直线距离公式.html">点到直线距离公式</a></li>
+<li><a href="../atoms/570-点到直线的距离公式.html">点到直线距离公式</a></li>
 <li><a class="dead" title="未收录">正弦余弦正切定义</a></li>
 <li><a href="../atoms/394-直线和圆位置关系-高中.html">直线和圆位置关系-高中</a></li>
 </ul>

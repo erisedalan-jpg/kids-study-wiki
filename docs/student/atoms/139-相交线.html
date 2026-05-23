@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相交线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>相交线</h1><div class="meta-card"><span><strong>权重</strong>11</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 相交线与平行线]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 相交线, intersecting lines, 两直线相交, 同位角, 内错角, 同旁内角</p><h2>课本定义</h2>
+<p>两条直线有且只有一个公共点，这样的两条直线叫做<strong>相交线</strong>，公共点称为<strong>交点</strong>。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>生活里的"十字路口"</h3>
+<p>想象你走在街上，看到两条路交叉在一起——这就是相交线！</p>
+<p><strong>相交线是什么？</strong>
+- 两条直线（无限延伸的线）碰到一起，只在<strong>一个点</strong>相遇
+- 这个相遇的点叫<strong>交点</strong>
+- 就像剪刀的两个刀刃，合拢时只在一个点交叉</p>
+<p><strong>生活中的例子：</strong>
+| 场景 | 说明 |
+|------|------|
+| 十字路口 | 两条马路交叉 |
+| 剪刀刀刃 | 两个刃在铰接点相交 |
+| 汉字"十" | 一横一竖相交于中心 |
+| 星星射线 | 多条线交于一点 |</p>
+<p><strong>两直线相交会产生什么？</strong>
+两条直线相交，会形成<strong>4个角</strong>：
+- 邻补角（相邻的角，加起来是180°）
+- 对顶角（对面的角，大小相等）</p>
+<p><strong>动手试试：</strong>
+拿两根筷子，在桌上交叉摆放。数一数形成了几个角？移动一根筷子，角的大小变了，但对面的角是不是始终相等？</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>相交线</strong>：在同一平面内，有且仅有一个公共点的两条直线。该公共点称为<strong>交点</strong>（point of intersection）。</p>
+<h3>核心性质</h3>
+<p>两条直线相交产生<strong>4个角</strong>，设相交形成角 ∠1、∠2、∠3、∠4（按顺序排列）：</p>
+<table>
+<thead>
+<tr>
+<th>角对关系</th>
+<th>定义</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>对顶角</strong></td>
+<td>顶点相同，两边互为反向延长线</td>
+<td>对顶角相等</td>
+</tr>
+<tr>
+<td><strong>邻补角</strong></td>
+<td>有公共顶点和公共边，另一边互为反向延长线</td>
+<td>互补，和为 180°</td>
+</tr>
+</tbody>
+</table>
+<p><strong>公式：</strong>
+- 若 ∠1 = α，则 ∠3 = α（对顶角）
+- ∠1 + ∠2 = 180°，∠2 + ∠3 = 180°（邻补角）
+- 四角之和 = 360°</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 两直线相交，其中一个角为 65°，求其余三个角。</p>
+<p>解：设 ∠1 = 65°
+- ∠3 = 65°（对顶角）
+- ∠2 = 180° - 65° = 115°（邻补角）
+- ∠4 = 115°（∠2 的对顶角）</p>
+<p>答：另外三个角分别为 65°、115°、115°。</p>
+<p><strong>例题2：</strong> 两直线相交，已知一对对顶角之和为 130°，求每个对顶角的度数及另一对对顶角的度数。</p>
+<p>解：一对对顶角相等，设每个为 x，则 2x = 130°，x = 65°
+另一对对顶角：(180° - 65°) = 115°，两个均为 115°</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>相交 ≠ 垂直</strong>：两直线相交角度不限，垂直是特殊相交（成90°）</li>
+<li><strong>必须在同一平面内</strong>：空间中两直线可能是异面直线，不相交也不平行</li>
+<li><strong>恰好一个交点</strong>：平行线没有交点，重合直线有无数交点</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>相交线
+├── 特殊情况 → 垂直（交角=90°）
+├── 产生 → 对顶角（相等）
+├── 产生 → 邻补角（互补）
+└── 对立 → 平行线（无交点）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相交线</td>
+<td>intersecting lines</td>
+<td>有公共点的两直线</td>
+</tr>
+<tr>
+<td>交点</td>
+<td>point of intersection</td>
+<td>公共点</td>
+</tr>
+<tr>
+<td>对顶角</td>
+<td>vertical angles</td>
+<td>对面的角，相等</td>
+</tr>
+<tr>
+<td>邻补角</td>
+<td>supplementary adjacent angles</td>
+<td>相邻且互补</td>
+</tr>
+<tr>
+<td>直线</td>
+<td>line</td>
+<td>无限延伸</td>
+</tr>
+<tr>
+<td>角</td>
+<td>angle</td>
+<td>两射线的夹角</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第五章 相交线与平行线（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>拓展</strong>：欧几里得《几何原本》命题</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/029-角.html">角</a> <a class="dead" title="未收录">平行线性质</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">命题</a> <a class="dead" title="未收录">全等三角形性质</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">对顶角</a></p>
+</li>
+<li><a class="dead" title="未收录">邻补角</a></li>
+<li><a class="dead" title="未收录">垂线</a></li>
+<li><a href="../atoms/048-平行与垂直.html">平行线</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+<li><a class="dead" title="未收录">命题</a></li>
+<li><a class="dead" title="未收录">几何证明入门</a></li>
+</ul>
+</div>
+</body>
+</html>

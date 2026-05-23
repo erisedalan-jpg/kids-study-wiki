@@ -7,7 +7,7 @@ aliases: [CRISPR, CRISPR-Cas9, 成簇规律间隔短回文重复]
 状态: 进阶完成
 英文术语: CRISPR-Cas9
 weight: 2
-weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":2},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 0
 黑龙江反链: 0
 北京反链: 0

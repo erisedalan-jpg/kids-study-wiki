@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>角</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 角]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 角, angle, 角度, 直角, 锐角, 钝角, 平角, 周角, 平面角</p><h1>角</h1>
+<blockquote>
+<p><strong>一句话</strong>：两条线从同一个点出发，中间张开的"口"就是角——张开越大，角越大。
+<strong>English</strong>: An angle is formed by two rays sharing the same starting point — the wider they open, the bigger the angle.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>角的组成</h3>
+<p>一个角由三部分组成：</p>
+<pre><code>        射线（边）
+       /
+      / ← 角
+顶点 ·
+      \
+       \
+        射线（边）
+</code></pre>
+<ul>
+<li><strong>顶点（vertex）</strong>：两条射线的公共起点</li>
+<li><strong>边（side）</strong>：两条射线</li>
+<li><strong>角的大小</strong>：两条边张开的程度，用<strong>度（°）</strong>来表示</li>
+</ul>
+<p>角的记法：∠AOB（读作"角 AOB"，O 是顶点）或直接写 ∠1。</p>
+<h3>五类角的划分</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>英文</th>
+<th>度数范围</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>锐角</td>
+<td>acute angle</td>
+<td>0° &lt; α &lt; 90°</td>
+<td>剪刀的口；三角形的尖角</td>
+</tr>
+<tr>
+<td>直角</td>
+<td>right angle</td>
+<td>α = 90°</td>
+<td>书的角；地砖的角</td>
+</tr>
+<tr>
+<td>钝角</td>
+<td>obtuse angle</td>
+<td>90° &lt; α &lt; 180°</td>
+<td>钝角三角形中的大角</td>
+</tr>
+<tr>
+<td>平角</td>
+<td>straight angle</td>
+<td>α = 180°</td>
+<td>一条直线（两射线成一直线）</td>
+</tr>
+<tr>
+<td>周角</td>
+<td>full angle</td>
+<td>α = 360°</td>
+<td>转一整圈</td>
+</tr>
+</tbody>
+</table>
+<p><strong>记忆口诀：</strong> "锐直钝平周，0-90-180-360"</p>
+<h3>用量角器量角</h3>
+<ol>
+<li>量角器的<strong>中心</strong>对准角的<strong>顶点</strong></li>
+<li>量角器的<strong>0° 刻度线</strong>对准角的<strong>一条边</strong></li>
+<li>另一条边指向的刻度，就是角的度数</li>
+<li>注意：量角器有内外两圈刻度，要看对应的那圈（边从 0 开始就用同侧的圈）</li>
+</ol>
+<p><strong>常见错误：</strong> 中心没有对准顶点，或读错了内外圈。</p>
+<h3>用三角板画直角</h3>
+<p>三角板有一个直角（90°），还有两个角分别是 45° 和 45°（等腰直角三角板）或 30° 和 60°（30-60-90 三角板）。</p>
+<h3>教材对应</h3>
+<ul>
+<li>二年级上册第 3 单元（p38-45）：角的初步认识——角的组成、直角的识别与画法、用三角板验证直角</li>
+<li>四年级上册第 3 单元：角的分类（五类角）、量角器的使用、角的度量</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>弧度制（radian）</h3>
+<p>度（°）是历史沿用的单位，数学和物理中更常用<strong>弧度（radian, rad）</strong>：</p>
+<pre><code>1 弧度 = 圆弧长度等于半径时所对应的圆心角
+π 弧度 = 180°
+
+常用换算：
+  90°  = π/2 rad ≈ 1.571 rad
+  180° = π   rad ≈ 3.142 rad
+  360° = 2π  rad ≈ 6.283 rad
+</code></pre>
+<p>为什么用弧度？因为在弧度制下，三角函数的微积分公式最简洁：
+- sin'(x) = cos(x)（x 用弧度）
+- 如果用度，会多出一个 π/180 的系数，很麻烦</p>
+<h3>三角函数与角</h3>
+<p>角进入高中后和<strong>三角函数</strong>结合：</p>
+<ul>
+<li><strong>sin θ</strong>（正弦）= 对边 / 斜边</li>
+<li><strong>cos θ</strong>（余弦）= 邻边 / 斜边</li>
+<li><strong>tan θ</strong>（正切）= 对边 / 邻边</li>
+</ul>
+<p>直角三角形的三边关系（勾股定理）：a² + b² = c²</p>
+<p>单位圆定义让三角函数扩展到任意角（不只是三角形里的角），甚至可以处理负角和大于 360° 的角，是高中数学的重要桥梁。</p>
+<h3>欧拉公式与角</h3>
+<p>数学中最美的公式之一：</p>
+<pre><code>e^(iθ) = cos θ + i·sin θ
+</code></pre>
+<p>当 θ = π 时，得到<strong>欧拉恒等式</strong>：</p>
+<pre><code>e^(iπ) + 1 = 0
+</code></pre>
+<p>这个式子把数学中最重要的五个常数 e、i、π、1、0 联系在一起，被称为"数学中最美的公式"。（<strong>待家长核对此说法的出处</strong>）</p>
+<h3>角在物理和工程中的应用</h3>
+<ul>
+<li><strong>斜面力学</strong>：物体在 θ 角斜面上，重力沿斜面分量 = mg·sin θ</li>
+<li><strong>光的折射</strong>：Snell 定律 n₁·sin θ₁ = n₂·sin θ₂（θ 是入射角/折射角）</li>
+<li><strong>建筑设计</strong>：屋顶坡角决定排水速度和雪载荷</li>
+<li><strong>测量与导航</strong>：GPS、陀螺仪均依赖角度的精确测量</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角</td>
+<td>angle</td>
+<td>n.</td>
+<td>核心概念</td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>vertex</td>
+<td>n.</td>
+<td>两边的公共起点</td>
+</tr>
+<tr>
+<td>边</td>
+<td>side / ray</td>
+<td>n.</td>
+<td>组成角的射线</td>
+</tr>
+<tr>
+<td>度</td>
+<td>degree (°)</td>
+<td>n.</td>
+<td>角的大小单位</td>
+</tr>
+<tr>
+<td>锐角</td>
+<td>acute angle</td>
+<td>n.</td>
+<td>小于 90°</td>
+</tr>
+<tr>
+<td>直角</td>
+<td>right angle</td>
+<td>n.</td>
+<td>等于 90°</td>
+</tr>
+<tr>
+<td>钝角</td>
+<td>obtuse angle</td>
+<td>n.</td>
+<td>90°-180° 之间</td>
+</tr>
+<tr>
+<td>平角</td>
+<td>straight angle</td>
+<td>n.</td>
+<td>等于 180°</td>
+</tr>
+<tr>
+<td>周角</td>
+<td>full angle</td>
+<td>n.</td>
+<td>等于 360°</td>
+</tr>
+<tr>
+<td>量角器</td>
+<td>protractor</td>
+<td>n.</td>
+<td>测量角的工具</td>
+</tr>
+<tr>
+<td>弧度</td>
+<td>radian</td>
+<td>n.</td>
+<td>数学常用角度单位</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>这个角是直角，等于 90 度。</td>
+<td>This is a right angle; it equals 90 degrees.</td>
+</tr>
+<tr>
+<td>用量角器量出这个角的大小。</td>
+<td>Use a protractor to measure this angle.</td>
+</tr>
+<tr>
+<td>锐角比直角小。</td>
+<td>An acute angle is smaller than a right angle.</td>
+</tr>
+<tr>
+<td>书本的角是直角。</td>
+<td>The corner of a book is a right angle.</td>
+</tr>
+<tr>
+<td>两条边从顶点出发。</td>
+<td>The two sides meet at the vertex.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li><strong>《Sir Cumference and the Great Knight of Angleland》</strong>（Cindy Neuschwander 著）— 骑士冒险中学习角度知识，适合 7-10 岁共读。（<strong>待家长核对中文引进版</strong>）</li>
+<li>🚧 中文几何启蒙绘本（角的专题）请家长在书店选择，推荐含有生活中角的实物照片或互动找一找活动的版本。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"直角为什么叫'直'角？"</strong> → 可以说："'直'在这里不是'直线'的意思，而是'端正、正确'的意思——直角是最'标准'的角，像正方形的角那样。三角板上有一个专门的直角，就是用来帮你画出这种标准角的。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"角越大越好还是越小越好？"</strong> → 可以说："这得看用途！剪刀尖要锐角，才能剪进去；书本的角是直角，方便对齐；门开到最大是平角（一直线）——不同场合需要不同大小的角。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"为什么一圈是 360 度？"</strong> → 可以说："这是古巴比伦人（大概 4000 年前）定的规矩，他们用 60 进制数数，而 360 = 6 × 60，刚好一年大约 360 天，所以定下来了。这个规矩一直用到现在。（<strong>待家长核对此历史说法</strong>）"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 用两根筷子摆成各种角度，说"这是锐角""这是直角"——让孩子来判断，或者让孩子摆，家长来判断。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第一学段"图形与几何"——认识角（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学二年级上册.pdf</a> 第 3 单元《角的初步认识》(p38-45)；<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学四年级上册.pdf</a> 第 3 单元《角的度量》</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/角</li>
+<li><strong>拓展阅读</strong>：弧度制与三角函数（高中数学）；欧拉恒等式科普；角在建筑和物理中的应用</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">线段</a> <a class="dead" title="未收录">直线</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/048-平行与垂直.html">平行与垂直</a> <a href="../atoms/139-相交线.html">相交线</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

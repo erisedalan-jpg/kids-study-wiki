@@ -9,7 +9,7 @@ aliases: [doctor, 医生, physician, 大夫]
 首次共读:
 最近共读:
 weight: 0
-weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-20"}
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":0,"alias":3},"period":"未识别","config_version":"2026-05-20","computed":"2026-05-23"}
 吉林反链: 0
 黑龙江反链: 0
 北京反链: 0

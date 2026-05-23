@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASA-AAS-HL判定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>ASA-AAS-HL判定</h1><div class="meta-card"><span><strong>权重</strong>10</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 全等三角形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: ASA-AAS-HL判定, ASA AAS HL congruence, 角边角判定, 角角边判定, 斜边直角边, ASA, AAS</p><h1>ASA-AAS-HL判定</h1>
+<blockquote>
+<p><strong>课本定义</strong>：<strong>ASA</strong>：两角和它们的夹边分别相等，则两三角形全等（"角边角"）；<strong>AAS</strong>：两角和其中一角的对边分别相等，则两三角形全等（"角角边"）；<strong>HL</strong>：直角三角形斜边和一条直角边分别相等，则两直角三角形全等（"斜边直角边"）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>三种判定一览</h3>
+<table>
+<thead>
+<tr>
+<th>缩写</th>
+<th>全称</th>
+<th>条件</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ASA</strong></td>
+<td>Angle-Side-Angle</td>
+<td>两角 + 夹边</td>
+<td>边被两角夹住</td>
+</tr>
+<tr>
+<td><strong>AAS</strong></td>
+<td>Angle-Angle-Side</td>
+<td>两角 + 其中一角的对边</td>
+<td>边不在两角之间</td>
+</tr>
+<tr>
+<td><strong>HL</strong></td>
+<td>Hypotenuse-Leg</td>
+<td>斜边 + 一直角边</td>
+<td>仅限直角三角形</td>
+</tr>
+</tbody>
+</table>
+<h3>ASA（角边角）</h3>
+<p>两角和<strong>夹边</strong>相等 → 全等</p>
+<p>$$\angle A = \angle D,\quad AB = DE,\quad \angle B = \angle E \implies \triangle ABC \cong \triangle DEF \ (\text{ASA})$$</p>
+<p>夹边 $AB$ 被 $\angle A$ 和 $\angle B$ 夹住。</p>
+<h3>AAS（角角边）</h3>
+<p>两角确定后，第三个角自动确定（内角和 180°），因此 AAS 可从 ASA 推出。</p>
+<p>$$\angle A = \angle D,\quad \angle B = \angle E,\quad BC = EF \implies \triangle ABC \cong \triangle DEF \ (\text{AAS})$$</p>
+<h3>HL（斜边直角边）</h3>
+<p>专用于直角三角形！</p>
+<p>$$\angle C = \angle F = 90°,\quad AB = DE \ (\text{斜边}),\quad BC = EF \ (\text{直角边}) \implies \triangle ABC \cong \triangle DEF \ (\text{HL})$$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格证明：AAS 由 ASA 推出</h3>
+<p>已知 $\angle A = \angle D$，$\angle B = \angle E$，$BC = EF$。</p>
+<p>由内角和：$\angle C = 180° - \angle A - \angle B = 180° - \angle D - \angle E = \angle F$</p>
+<p>在 $\triangle ABC$ 和 $\triangle DEF$ 中：$\angle B = \angle E$（已知），$BC = EF$（已知），$\angle C = \angle F$（已证）</p>
+<p>由 ASA，$\triangle ABC \cong \triangle DEF$。$\blacksquare$</p>
+<h3>严格证明：HL 由 SSS 推出（利用勾股定理）</h3>
+<p>已知 $\angle C = \angle F = 90°$，$AB = DE$，$BC = EF$。</p>
+<p>由勾股定理：$AC = \sqrt{AB^2 - BC^2} = \sqrt{DE^2 - EF^2} = DF$</p>
+<p>三边均相等，由 SSS，$\triangle ABC \cong \triangle DEF$。$\blacksquare$</p>
+<h3>典型例题</h3>
+<p><strong>例题 1（ASA）</strong>：已知 $AB \parallel CD$，$AB = CD$（平行且相等），$M$ 是 $AC$ 中点，证明 $M$ 也是 $BD$ 中点。</p>
+<p>证明：在 $\triangle AMB$ 和 $\triangle CMD$ 中：</p>
+<p>$\angle MAB = \angle MCD$（内错角，$AB \parallel CD$），$AB = CD$，$\angle MBA = \angle MDC$（内错角）</p>
+<p>由 ASA，$\triangle AMB \cong \triangle CMD$</p>
+<p>∴ $MB = MD$，即 $M$ 是 $BD$ 中点。✓</p>
+<p><strong>例题 2（HL）</strong>：已知直角三角形 $\triangle ABC$（$\angle C = 90°$）和 $\triangle DEF$（$\angle F = 90°$），$AB = DE$，$AC = DF$，证明两三角形全等。</p>
+<p>证明：在直角三角形 $\triangle ABC$ 和 $\triangle DEF$ 中：</p>
+<p>$\angle C = \angle F = 90°$，$AB = DE$（斜边相等），$AC = DF$（直角边相等）</p>
+<p>由 HL，$\triangle ABC \cong \triangle DEF$。✓</p>
+<h3>判定方法总结与选择</h3>
+<table>
+<thead>
+<tr>
+<th>已知条件</th>
+<th>选用判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三边相等</td>
+<td>SSS</td>
+</tr>
+<tr>
+<td>两边夹角</td>
+<td>SAS</td>
+</tr>
+<tr>
+<td>两角夹边</td>
+<td>ASA</td>
+</tr>
+<tr>
+<td>两角一对边</td>
+<td>AAS</td>
+</tr>
+<tr>
+<td>直角三角形斜边+直角边</td>
+<td>HL</td>
+</tr>
+<tr>
+<td>两边非夹角</td>
+<td>无法直接判定（SSA 无效）</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>ASA 的"夹边"</strong>：边必须在两个角之间，不能搞错位置。</li>
+<li><strong>HL 仅限直角三角形</strong>：非直角三角形不能用 HL。</li>
+<li><strong>AAA 不是全等判定</strong>：三角相等只能说明相似，不能说明全等（大小可能不同）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a class="dead" title="未收录">SSS判定</a>、<a class="dead" title="未收录">SAS判定</a>：配套使用的全等判定</li>
+<li>→ <a class="dead" title="未收录">全等三角形性质</a>：全等后的推论</li>
+<li>→ <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a>：等腰三角形中常用 ASA 或 AAS</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角边角</td>
+<td>angle-side-angle (ASA)</td>
+</tr>
+<tr>
+<td>角角边</td>
+<td>angle-angle-side (AAS)</td>
+</tr>
+<tr>
+<td>斜边直角边</td>
+<td>hypotenuse-leg (HL)</td>
+</tr>
+<tr>
+<td>斜边</td>
+<td>hypotenuse</td>
+</tr>
+<tr>
+<td>直角边</td>
+<td>leg</td>
+</tr>
+<tr>
+<td>内错角</td>
+<td>alternate interior angles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十二章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：欧几里得《几何原本》命题 26</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">SAS判定</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">角平分线性质</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">全等图形</a></p>
+</li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+<li><a class="dead" title="未收录">SSS判定</a></li>
+<li><a class="dead" title="未收录">SAS判定</a></li>
+<li><a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a></li>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+</ul>
+</div>
+</body>
+</html>
