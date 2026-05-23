@@ -91,6 +91,18 @@ class TestAuditChecks(unittest.TestCase):
                 "[[素材/教材/ChinaTextbook/初中/数学/人教版/x.pdf]] 第一章\n")
         self.assertEqual(self.ae.check_textbook_ref(text), [])
 
+    def test_is_kaodian_exempts_textbook_and_links(self):
+        # 考点级词条（含「考点精讲」）豁免 教材/裸链 检查
+        text = ("## 🎓 考点精讲\n\n动量。见 [[裸链概念]]。\n\n"
+                "## 📑 出处\n\n- 课标：x\n")
+        from pathlib import Path
+        fm = {"title": "x", "aliases": "[x]", "学科": "数学", "学段": "[高中]",
+              "主题": "[函数]", "状态": "已完成", "英文术语": "x"}
+        issues = self.ae.audit_one(Path("265-x.md"), fm, text)
+        self.assertEqual(issues, [])  # 无教材链接 + 裸链，但考点豁免 → 全过
+        self.assertTrue(self.ae.is_kaodian(text))
+        self.assertFalse(self.ae.is_kaodian("## 🎓 给 12+\n\n普通教材概念\n"))
+
     def test_textbook_ref_no_bold_ok(self):
         # 无粗体标记 `- 教材：` 也应识别（部分批次词条用此格式）
         text = ("## 📑 出处\n\n- 教材："

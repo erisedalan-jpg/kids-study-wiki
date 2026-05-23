@@ -76,8 +76,8 @@ def check_textbook_ref(text: str) -> list[str]:
     body = _section(text, "出处")
     if body is None:
         return ["缺 📑 出处 段"]
-    # 兼容有/无粗体标记与中英文冒号：`- **教材**：` 或 `- 教材：`
-    m = re.search(r"-\s*\*{0,2}教材\*{0,2}\s*[:：](.*)", body)
+    # 兼容粗体/无粗体、中英文冒号、「本地教材」前缀：`- **教材**：`/`- 教材：`/`- 本地教材：`
+    m = re.search(r"-\s*\*{0,2}(?:本地)?教材\*{0,2}\s*[:：](.*)", body)
     if not m or not m.group(1).strip():
         return ["📑 教材引用为空"]
     line = m.group(1)
@@ -108,16 +108,24 @@ def check_math_delim(text: str) -> list[str]:
     return issues
 
 
+# 考点级词条（真题派生）标记：单层「考点精讲」体例 / 含真题命中反链 / 高频易错点
+KAODIAN_MARKERS = ("考点精讲", "高考真题命中", "高频易错点")
+
+
+def is_kaodian(text: str) -> bool:
+    """考点级词条 = 真题派生，非教材某节概念。
+    豁免「教材必引」与「裸链规范化」红线（行文引用细碎考点属知识前沿，非缺陷）。"""
+    return any(mk in text for mk in KAODIAN_MARKERS)
+
+
 def audit_one(path: Path, fm: dict, text: str) -> list[str]:
     stem = path.stem
     grade = "高中" if "高中" in str(fm.get("学段", "")) else "小学"
-    return (
-        check_frontmatter(fm, stem)
-        + check_body_layers(text, grade)
-        + check_textbook_ref(text)
-        + check_wikilinks(text)
-        + check_math_delim(text)
-    )
+    issues = check_frontmatter(fm, stem) + check_body_layers(text, grade) + check_math_delim(text)
+    if not is_kaodian(text):
+        # 仅教材概念词条受 教材必引 / 裸链规范化 约束；考点级豁免
+        issues += check_textbook_ref(text) + check_wikilinks(text)
+    return issues
 
 
 def main() -> int:
