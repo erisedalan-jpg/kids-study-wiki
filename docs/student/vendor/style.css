@@ -92,3 +92,29 @@ img { max-width: 100%; height: auto; border-radius: 4px; margin: 0.5em 0; }
   h1 { font-size: 1.35rem; }
   table { font-size: 0.85em; }
 }
+
+/* ===== 复习 UI（review.js） ===== */
+.review-mark { display: flex; gap: 8px; margin: 8px 0 14px; flex-wrap: wrap; }
+.rmark-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card); color: var(--fg); cursor: pointer; font-size: 0.95em; }
+.rmark-btn.active.rmark-ok { background: var(--blue); color: #fff; border-color: var(--blue); }
+.rmark-btn.active.rmark-fuzzy { background: var(--gold); color: #fff; border-color: var(--gold); }
+.rmark-btn.active.rmark-wrong { background: var(--red); color: #fff; border-color: var(--red); }
+
+#review-progress { margin: 10px 0; }
+.rprog-label { font-size: 0.9em; color: var(--grey); margin-bottom: 4px; }
+.rprog-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.rprog-fill { height: 100%; background: var(--blue); transition: width 0.3s; }
+
+.rdot { display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+  margin-right: 6px; vertical-align: middle; background: var(--grey); }
+.rdot-none { background: var(--border); }
+.rdot-ok { background: var(--blue); }
+.rdot-fuzzy { background: var(--gold); }
+.rdot-wrong { background: var(--red); }
+
+#review-filter { margin-left: 8px; padding: 6px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--card); color: var(--fg); }
+#review-io { margin: 12px 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.rio-btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card); color: var(--fg); cursor: pointer; }
