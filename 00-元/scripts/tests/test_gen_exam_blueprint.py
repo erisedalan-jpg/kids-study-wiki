@@ -93,33 +93,37 @@ class TestBlueprintHTML(unittest.TestCase):
         self.g = g
         self.agg = {
             "旧结构(08-22)": {("选择", 2): {"n": 40, "难度倾向": "易",
-                "考点": [("复数运算", 12), ("共轭复数", 7)]}},
+                "考点": [("复数运算", 12), ("共轭复数", 7)],
+                "树": [("复数", 19, [("复数运算", 12), ("共轭复数", 7)])]}},
             "最新(24+)": {("选择", 1): {"n": 1, "难度倾向": "易",
-                "考点": [("复数", 1), ("模长", 1)]}},
+                "考点": [("复数", 1)],
+                "树": [("复数", 1, [("复数", 1)])]}},
         }
 
-    def test_render_has_three_era_headers_and_slots(self):
+    def test_render_has_eras_and_tree_lines(self):
         page = self.g.render_html(self.agg)
         self.assertIn("旧结构(08-22)", page)
         self.assertIn("最新(24+)", page)
         self.assertIn("选择2", page)
         self.assertIn("复数运算", page)
-        self.assertIn("12", page)
+        self.assertIn("├─", page)
+        self.assertIn("(19)", page)
+        self.assertIn("★", page)
         self.assertIn("n=40", page)
 
-    def test_render_has_print_css_and_katex(self):
+    def test_render_has_print_css_katex_and_tree_css(self):
         page = self.g.render_html(self.agg)
         self.assertIn("@media print", page)
         self.assertIn("break-inside", page)
         self.assertIn("page-break-before", page)
         self.assertIn("vendor/katex/katex.min.css", page)
         self.assertIn("vendor/style.css", page)
+        self.assertIn("bp-tree", page)
+        self.assertIn("white-space: pre", page)
 
     def test_render_marks_thin_sample(self):
         page = self.g.render_html(self.agg)
-        # n=1 slot ("最新(24+)" 选择1) must carry the thin note
         self.assertIn("（样本仅 1，规律参考）", page)
-        # n=40 slot ("旧结构(08-22)" 选择2) must NOT carry the thin note
         self.assertNotIn("（样本仅 40，规律参考）", page)
 
 

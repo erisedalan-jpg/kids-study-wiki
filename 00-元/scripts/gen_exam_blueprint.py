@@ -182,6 +182,9 @@ PRINT_CSS = """
   .kp { display: inline-block; margin: 2px 8px 2px 0; padding: 1px 6px;
         background: #f0f0f0; border-radius: 4px; font-size: 0.92em; }
   .kp b { color:#000; }
+  .bp-tree { font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+    white-space: pre; font-size: 0.9em; line-height: 1.55; margin: 4px 0 0; }
+  .bp-tree .tline { margin: 0; }
   .thin { color:#a00; font-size: 0.85em; }
   .legend { color:#666; font-size: 0.85em; margin: 6px 0 14px; }
   @media print {
@@ -213,10 +216,10 @@ def render_html(agg: dict) -> str:
         rows_html = []
         for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
             d = slots[slot]
-            kp_html = "".join(
-                f'<span class="kp"><b>{html.escape(k)}</b> ×{n}</span>'
-                for k, n in d["考点"]
-            )
+            tree_lines = tree_to_lines(d["树"])
+            kp_html = '<div class="bp-tree">' + "".join(
+                f'<div class="tline">{html.escape(line)}</div>' for line in tree_lines
+            ) + '</div>'
             thin = ('<span class="thin">（样本仅 %d，规律参考）</span>' % d["n"]) \
                 if d["n"] <= 2 else ""
             rows_html.append(
