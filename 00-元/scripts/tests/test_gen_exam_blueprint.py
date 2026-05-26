@@ -61,5 +61,31 @@ class TestBlueprintCore(unittest.TestCase):
         self.assertIn(("选择", 1), agg["最新(24+)"])
 
 
+class TestBlueprintIO(unittest.TestCase):
+    def setUp(self):
+        import gen_exam_blueprint as g
+        self.g = g
+
+    def test_load_normalize_missing_returns_empty(self):
+        from pathlib import Path
+        self.assertEqual(self.g.load_normalize(Path("/no/such/file.yaml")), {})
+
+    def test_dump_kaodian_counts_distinct(self):
+        rows = [
+            {"考点": "[复数, 模长]"},
+            {"考点": "[复数]"},
+            {"考点": "集合"},
+        ]
+        d = dict(self.g.dump_kaodian(rows))
+        self.assertEqual(d["复数"], 2)
+        self.assertEqual(d["模长"], 1)
+        self.assertEqual(d["集合"], 1)
+
+    def test_read_rows_reads_real_exam_dir(self):
+        rows = self.g.read_rows()
+        self.assertGreater(len(rows), 500)
+        self.assertTrue(all("年份" in r for r in rows))
+
+
 if __name__ == "__main__":
     unittest.main()

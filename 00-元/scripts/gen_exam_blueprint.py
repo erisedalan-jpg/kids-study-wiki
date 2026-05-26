@@ -97,3 +97,68 @@ def aggregate(rows: list[dict], normalize: dict[str, str]) -> dict:
             "考点": kc.most_common(),
         }
     return out
+
+
+def read_rows() -> list[dict]:
+    return [read_frontmatter(p) for p in sorted(EXAM_DIR.glob("*.md"))]
+
+
+def load_normalize(path: Path = NORMALIZE_YAML) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    return {str(k): str(v) for k, v in data.items()}
+
+
+def dump_kaodian(rows: list[dict]) -> list[tuple[str, int]]:
+    c: collections.Counter = collections.Counter()
+    for r in rows:
+        for kp in parse_kaodian(r.get("考点", "")):
+            c[kp] += 1
+    return c.most_common()
+
+
+def render_html(agg: dict) -> str:  # Task 3 完整实现
+    return "<!doctype html><title>占位</title>"
+
+
+def main() -> int:
+    setup_utf8()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--apply", action="store_true", help="写盘 HTML")
+    ap.add_argument("--dump-考点", dest="dump", action="store_true",
+                    help="导去重考点+频次（喂归一表）")
+    args = ap.parse_args()
+
+    rows = read_rows()
+    print(f"读取 {len(rows)} 题（{EXAM_DIR.name}）", flush=True)
+
+    if args.dump:
+        for name, n in dump_kaodian(rows):
+            print(f"{n:>4}  {name}")
+        return 0
+
+    normalize = load_normalize()
+    agg = aggregate(rows, normalize)
+    for era in ERA_ORDER:
+        slots = agg.get(era, {})
+        print(f"\n=== {era} ===（{len(slots)} 题位）")
+        for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
+            d = slots[slot]
+            top = "  ".join(f"{k}×{n}" for k, n in d["考点"][:4])
+            print(f"  {slot[0]}{slot[1]:>2} (n={d['n']}, {d['难度倾向']}): {top}")
+
+    if not args.apply:
+        print("\n(dry-run) 加 --apply 写 HTML。")
+        return 0
+
+    html_out = render_html(agg)
+    OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
+    OUT_HTML.write_text(html_out, encoding="utf-8", newline="")
+    print(f"\n[APPLY] → {OUT_HTML}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
