@@ -26,6 +26,8 @@ from _utils import REPO_ROOT, read_frontmatter, setup_utf8  # noqa: E402
 EXAM_DIR = REPO_ROOT / "真题" / "吉林-数学"
 OUT_HTML = REPO_ROOT / "docs" / "student" / "数学题位速查.html"
 NORMALIZE_YAML = Path(__file__).parent / "normalize_考点_数学.yaml"
+GROUP_YAML = Path(__file__).parent / "group_考点_数学.yaml"
+OTHER = "其他"
 
 ERA_ORDER = ["旧结构(08-22)", "过渡(2023)", "最新(24+)"]
 TYPE_ORDER = {"选择": 0, "填空": 1, "解答": 2}
@@ -97,6 +99,38 @@ def aggregate(rows: list[dict], normalize: dict[str, str]) -> dict:
             "考点": kc.most_common(),
         }
     return out
+
+
+def build_tree(kp_freq: list[tuple[str, int]],
+               group: dict[str, str]) -> list[tuple[str, int, list[tuple[str, int]]]]:
+    """考点频次列表 + 分组表 → [(父主题, 父频, [(子考点,子频)...])...]。
+    父按频降序，但 OTHER 恒排末；子在父下沿用输入顺序（输入已按频降序）。"""
+    parents: dict[str, list[tuple[str, int]]] = {}
+    for name, freq in kp_freq:
+        p = group.get(name, OTHER)
+        parents.setdefault(p, []).append((name, freq))
+    tree = []
+    for p, kids in parents.items():
+        tree.append((p, sum(f for _, f in kids), kids))
+    tree.sort(key=lambda t: (t[0] == OTHER, -t[1]))
+    return tree
+
+
+def tree_to_lines(tree: list[tuple[str, int, list[tuple[str, int]]]]) -> list[str]:
+    """树 → 带 ├─└─│ 连接线的文本行；首个非 OTHER 父类加 ★。"""
+    lines: list[str] = []
+    n = len(tree)
+    for i, (parent, pfreq, kids) in enumerate(tree):
+        p_last = (i == n - 1)
+        p_branch = "└─" if p_last else "├─"
+        star = " ★" if i == 0 and parent != OTHER else ""
+        lines.append(f"{p_branch} {parent} ({pfreq}){star}")
+        cn = len(kids)
+        indent = "   " if p_last else "│  "
+        for j, (child, cfreq) in enumerate(kids):
+            c_branch = "└─" if j == cn - 1 else "├─"
+            lines.append(f"{indent}{c_branch} {child} ×{cfreq}")
+    return lines
 
 
 def read_rows() -> list[dict]:

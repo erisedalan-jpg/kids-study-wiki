@@ -123,5 +123,49 @@ class TestBlueprintHTML(unittest.TestCase):
         self.assertNotIn("（样本仅 40，规律参考）", page)
 
 
+class TestBlueprintTree(unittest.TestCase):
+    def setUp(self):
+        import gen_exam_blueprint as g
+        self.g = g
+
+    def test_build_tree_groups_sums_sorts(self):
+        kp = [("复数运算", 9), ("共轭复数", 6), ("集合运算", 7),
+              ("集合表示法", 4), ("一元二次不等式", 4)]
+        group = {"复数运算": "复数", "共轭复数": "复数",
+                 "集合运算": "集合", "集合表示法": "集合",
+                 "一元二次不等式": "不等式"}
+        tree = self.g.build_tree(kp, group)
+        self.assertEqual(tree[0][0], "复数")
+        self.assertEqual(tree[0][1], 15)
+        self.assertEqual(tree[0][2], [("复数运算", 9), ("共轭复数", 6)])
+        self.assertEqual(tree[1][0], "集合")
+        self.assertEqual(tree[1][1], 11)
+        self.assertEqual(tree[2][0], "不等式")
+        self.assertEqual(tree[2][1], 4)
+
+    def test_build_tree_ungrouped_goes_other_last(self):
+        kp = [("怪考点", 5), ("复数运算", 3)]
+        group = {"复数运算": "复数"}
+        tree = self.g.build_tree(kp, group)
+        self.assertEqual([p[0] for p in tree], ["复数", "其他"])
+        self.assertEqual(tree[-1][0], "其他")
+        self.assertEqual(tree[-1][2], [("怪考点", 5)])
+
+    def test_tree_to_lines_connectors_and_star(self):
+        tree = [("复数", 15, [("复数运算", 9), ("共轭复数", 6)]),
+                ("集合", 11, [("集合运算", 7)])]
+        lines = self.g.tree_to_lines(tree)
+        self.assertEqual(lines[0], "├─ 复数 (15) ★")
+        self.assertEqual(lines[1], "│  ├─ 复数运算 ×9")
+        self.assertEqual(lines[2], "│  └─ 共轭复数 ×6")
+        self.assertEqual(lines[3], "└─ 集合 (11)")
+        self.assertEqual(lines[4], "   └─ 集合运算 ×7")
+
+    def test_tree_to_lines_other_no_star(self):
+        tree = [("其他", 5, [("怪考点", 5)])]
+        lines = self.g.tree_to_lines(tree)
+        self.assertEqual(lines[0], "└─ 其他 (5)")
+
+
 if __name__ == "__main__":
     unittest.main()
