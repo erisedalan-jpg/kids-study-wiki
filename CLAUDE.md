@@ -2,57 +2,82 @@
 
 家庭学习 Wiki：为两个孩子（5 岁、3 岁，学前→高中）共建的知识库。Obsidian + Claude Code 协作；参考 [Karpathy LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 思想，原子化文章 + 双向链接组网 + 增量积累。
 
-## 沟通
+> **本文件是精简操作手册**（怎么干 / 规矩 / 东西在哪）。「做了什么」以 git log + 词条本身 + `stats.py` 为真相源，明细见下方各「→ 文档」指针，不在此复刻。
+
+## 沟通与环境
 
 - 始终用**简体中文**回复用户；代码、命令、术语、文件名保留原文
 - Windows 11 + Obsidian + Claude Code；bash 与 PowerShell 均可用，优先 bash（正斜杠路径）
-- Obsidian Git 插件每 30 分钟自动备份到私有 GitHub（commit message: `vault backup: ...`）
+- Obsidian Git 插件每 30 分钟自动备份到私有 GitHub（commit message: `vault backup: ...`）；一般无需手动提交
 - 5.4 GB 教材库 `素材/教材/ChinaTextbook/` 已 gitignore，不上传
+- 用户可能开启 `caveman mode`：回复必须简洁压缩，保留技术准确性
 
 ## 目录结构
 
 ```
 00-元/                    元规则：模板/命名/工作流/教材索引/学习路径
-00-元/学习路径/小学/<学科>/  10 学科 × 12 册学习路径文档（已加序号 01-12）
-00-元/scripts/            工具脚本（含 exam_* 真题管线 + 通用工具 + tests/）
-数学/ 语文/ 英语/        小学→高中三段词条，3 位序号前缀（具体计数见下方 stats 表）
-物理/ 化学/ 生物/        初中+高中两段词条，3 位序号前缀
-生活与社会/ 历史/ 地理/ 政治/   其他学科词条（部分骨架，部分已升级）
+00-元/scripts/            工具脚本（含 exam_* 真题管线 + 通用工具 + tests/）；命令速查见 COMMANDS.md
+00-元/scripts/_prompts/   提示词 + subject_build_runbook.md（学科建库标准流程）
+数学/ 语文/ 英语/        小学→高中三段词条，3 位序号前缀（计数见下方 stats 表）
+物理/ 化学/ 生物/        初中+高中两段词条
+政治/ 历史/ 地理/        初中+高中两段词条（2026-05 完成）
+科学/                     小学全程；生活与社会/ 部分骨架
 真题/{省}-{科}/          高考真题题级 md（北京/吉林/湖南 × 5 科）
-索引/                     Dataview 视图 + 真题 4 索引/省·科
-素材/讲解PPT/             家长讲解 PPT（轻量 / 精装）
-素材/教材/                本地 PDF 教材库（gitignore）
-素材/真题/                高考真题 PDF 源
-docs/superpowers/         设计稿/实施计划/working 草稿与一次性脚本
+索引/                     Dataview 视图 + 真题索引 + 各科纵向总览
+素材/教材/(gitignore) · 素材/真题/ · 素材/讲解PPT/
+docs/                     progress-log.md / 真题管线.md / 学生视图.md / superpowers(设计稿·计划·working)
 ```
 
 ## 词条创建规范
 
-**模板**：`00-元/模板/词条模板.md`
+**模板**：`00-元/模板/词条模板.md`（小学起用两层模板 `词条模板-小学.md`：📚6-12 + 🎓12+；高中单层 🎓）
 - frontmatter 7 字段：title / aliases / 学科 / 学段 / 主题 / 状态 / 英文术语
-- 三层正文：🧒 3-6 岁共读版 / 📚 6-12 岁自读版 / 🎓 12+ 进阶版
-- 中英对照（词汇表 + 例句表）
-- 相关绘本 + 家长讲解话术 + 共读小活动
-- 📺 讲解版占位（用触发短语 6/7 填充）
-- 📑 出处：课标(2022) + **本地教材 PDF 链接** + 百科 + 拓展阅读 + 生成校对
+- 三层正文：🧒 3-6 岁共读版 / 📚 6-12 岁自读版 / 🎓 12+ 进阶版（小学两层、高中单层）
+- 中英对照（词汇表 + 例句表）+ 相关绘本 + 家长讲解话术 + 共读小活动
+- 📺 讲解版占位（触发短语 6/7 填充）
+- 📑 出处：课标 + **本地教材 PDF 链接** + 百科 + 拓展阅读 + 生成校对
 
 **命名**（详见 `00-元/命名规则.md`）：
-- 学科目录词条按"首次出现学期"加 2 位序号前缀，如 `16-加法.md`、`73-圆周率.md`
-- frontmatter `aliases` 数组**首位必含 bare-name**（如 `aliases: [加法, addition, plus]`），保持 `[[加法]]` 链接通过 alias 解析有效
+- 学科目录词条按"首次出现学期"加序号前缀（≤99 两位、>99 三位），如 `16-加法.md`
+- frontmatter `aliases` 数组**首位必含 bare-name**（如 `aliases: [加法, addition, plus]`），保持 `[[加法]]` 经 alias 解析有效
 
-**工作流**（详见 `00-元/工作流.md`）：7 条触发短语（新增/升级骨架/批量/共读/找漏链/PPT 轻量/PPT 精装）+ 7 条红线：
+**工作流**（详见 `00-元/工作流.md`）：7 条触发短语（新增/升级骨架/批量/共读/找漏链/PPT 轻量/PPT 精装）。
+
+### 🚫 红线（防复发硬约束，一字不动）
+
 - 教材引用必引本地 ChinaTextbook PDF
 - 学科目录词条必加序号前缀 + bare-name alias
 - **wikilinks 必须规范化**：Obsidian `[[X]]` 只看文件名，必须写 `[[017-减法|减法]]` 形式；4 个内置生成脚本（`gen_atom_skeleton.py` / `exam_render.py` / `exam_index.py` / `backfill_author_links.py`）已自动 hook；手动编辑后跑 `python 00-元/scripts/fix_wikilinks.py --apply`
 - **数学公式必须用 Obsidian 定界符**：行内 `$...$` / 块级 `$$...$$`。DeepSeek/v4-pro 生成的二三级词条（尤数学/物理）惯用 LaTeX `\(\)\[\]`，Obsidian 默认 MathJax 不渲染（字面显示反斜杠/`^2`/`\sqrt`/`\pi`）。缺口词条已植入 `_prompts/exam_lexicon.md` 红线 8 防复发；存量批量后跑 `python 00-元/scripts/fix_latex_delim.py --apply`（按 manifest 严限范围 + 负向后顾保护 `\\[Npt]` 行距；奇数计数文件须手清未配对定界符）
 - **renumber 后必跑 `fix_stale_links.py`**：`fix_wikilinks.LINK_RE` 故意只处理无管线 `[[X]]`，跳过 `[[X|Y]]`；而 `exam_render` / `exam_index` 产出恒带管线 `[[旧号-裸名|显示]]`，renumber 后变 stale 无人修。批量改号 → `python 00-元/scripts/fix_stale_links.py --apply`（按裸名→当前号唯一映射改写；0/多候选保守不动）
 - **反链回填走 alias-aware**：`exam_index.backfill_backlinks` 已复用 `fix_wikilinks.collect_targets()`，tag 是 alias（如「余弦定理」→ `126-定理.md`）也能命中；跨省运行用并集合并（避免按省覆盖只剩末次省份）
+- **批量生成后、renumber 前必跑 `validate_gen.py`**：拦 v4-pro 5 类故障（代码围栏/提示模板吐出/缺字段/学期带括号/跨段裸名碰撞），不过不准进后处理
+
+## 工作模式 + 工具箱
+
+- **学科建库标准流程**：`00-元/scripts/_prompts/subject_build_runbook.md`（topics→gen→体检门→学期→renumber→教材/英文术语回填→链接→audit→stats；含 v4-pro 故障速查）
+- **工具箱**（`00-元/scripts/` 通用；`docs/superpowers/working/` 一次性修补）—— **不要再为每个学科一次性写脚本**：
+  - 进度/命名/链接：`stats.py`（`--write` 同步进度表）/ `renumber.py` / `analyze_links.py` / `fix_aliases.py` / `check_*.py`
+  - 链接修复：`fix_wikilinks.py` / `fix_stale_links.py` / `fix_latex_delim.py`
+  - 词条生成：`gen_atom_skeleton.py`（v4-pro 骨架）/ `validate_gen.py`（⭐体检门）/ `add_semester.py`（注入学期，空值守卫+块式感知）/ `review_dispatch.py` / `backfill_author_links.py`
+  - 真题：`exam_*.py`（5 步）+ `exam_eng_*.py`（3 步）+ `pdf_content_diff.py`（扩省份判同卷）
+- 词条与学习路径分离：路径在 `00-元/学习路径/<学段>/<学科>/`，词条在 `<学科>/`
+- 风格参考：`数学/16-加法.md`（标准全龄）、`数学/18-长方体.md`（含教材链接几何类）
+- 命令速查：`00-元/scripts/COMMANDS.md`
+
+## 多模型路由（详见 `docs/superpowers/plans/2026-05-12-multi-model-workflow-v3.md`）
+
+- **Opus 主会话** = 核心/编排/终审/古文古诗/敏感议题亲写/字符级编码审查
+- **Sonnet subagent** = 并行复检/抽 topics/字符级 OCR 判断（不做主体生成）
+- **DeepSeek v4-pro** = 批量生成（含小批量）+ 50% 自检 + lexicon 抽取；**禁用**：字符级编码审查/细粒度 OCR（噪声 > 信号）
+- **v4-flash** = OCR 抽样/短文本清洗
+- 古文/敏感议题在 topics.jsonl 打 `route: opus` 跳过 v4-pro（gen 也会自动路由敏感议题给 Opus）
 
 ## 已完成进度
 
 <!-- AUTO-PROGRESS-START -->
 
-_由 `00-元/scripts/stats.py` 生成，共 6212 词条 / 11 学科。_
+_由 `00-元/scripts/stats.py` 生成，共 6694 词条 / 11 学科。_
 
 | 学科 | 词条数 |
 |---|---:|
@@ -62,220 +87,34 @@ _由 `00-元/scripts/stats.py` 生成，共 6212 词条 / 11 学科。_
 | 物理 | 850 |
 | 化学 | 992 |
 | 生物 | 914 |
-| 政治 | 78 |
-| 地理 | 97 |
-| 历史 | 221 |
+| 政治 | 236 |
+| 地理 | 197 |
+| 历史 | 445 |
 | 科学 | 43 |
 | 生活与社会 | 26 |
-| **合计** | **6212** |
+| **合计** | **6694** |
 
 <!-- AUTO-PROGRESS-END -->
 
-（上方表格由 `00-元/scripts/stats.py --write` 自动维护；下方为人工记录的细节备注。）
+**覆盖矩阵**（✅ 完成 / ⏳ 待办）：
 
-- ✅ 60 词条骨架 + 设计稿与模板
-- ✅ Obsidian Git 自动备份到私有仓库
-- ✅ 5.4 GB ChinaTextbook 本地教材库
-- ✅ 102 学习路径文档（10 学科 × 12 册，已序号 01-12）
-- ✅ 数学 81 词条全龄完成（学前→六下，已序号 01-81）
-  - 01-14 学前 · 15-24 一上 · 25-26 一下
-  - 27-31 二上 · 32-37 二下 · 38-42 三上 · 43-45 三下
-  - 46-51 四上 · 52-56 四下 · 57-63 五上 · 64-69 五下
-  - 70-77 六上 · 78-81 六下
-- ✅ 语文 240 词条全龄完成（学前→六下，已序号 001-240，3 位前缀）
-  - 每学期内顺序：概念 → 古诗 → 课文
-  - 一上 38 (001-038)：23 概念 + 5 古诗 + 10 课文
-  - 一下 18 (039-056) · 二上 21 (057-077) · 二下 23 (078-100)
-  - 三上 23 (101-123) · 三下 19 (124-142)
-  - 四上 19 (143-161) · 四下 18 (162-179)
-  - 五上 16 (180-195) · 五下 15 (196-210)
-  - 六上 15 (211-225) · 六下 15 (226-240)
-- ✅ 英语 65 词条骨架/共读完成（已序号 01-65）
-- ✅ 初中 42 学习路径文档（9 学科 七上→九下，已序号）
-  - 政治 6 / 地理 4 / 化学 2 / 历史 6 / 生物 4
-  - 数学 6 / 物理 3 / 英语 5 / 语文 6
-- ✅ 初中 Phase 2 数学/语文/英语 完成（~610 词条，已序号化）
-  - 数学 264 词条 (001-264)：001-081 小学 + 082-264 初中（七上→九下，每学期 30）
-  - 语文 421 词条 (001-421)：001-240 小学 + 241-421 初中（七上→九下，每学期 ~30）
-  - 英语 333 词条 (001-333)：001-065 小学 + 066-333 初中（七上→九年级全一，~50/学期）
-  - 全部加 3 位前缀（小学语文 001-240 不变；其余 2 位升 3 位）+ bare-name alias 校验
-- ✅ 小学科学全程（2026-05-23，一上→六下 43 词条，Opus 精写）：四领域全覆盖，两层模板+中英+家长话术+人教鄂教版教材引用，体检 43/0 全绿；填补科学启蒙刚需缺口
-- ⏳ 小学其他学科词条补缺：~60 道法 / ~30 美术 / ~40 艺术 / ~30 音乐 / ~25 书法 / ~25 体育（科学已完成）
-- ✅ 初中政史地全程（2026-05-25，七上→九下 396 词条：历史 221 / 政治 78 / 地理 97）
-  - 学习路径派生 topics → v4-pro 批量生成 364 条骨架 + Opus 亲写 31 条敏感议题（南京大屠杀/文化大革命/马克思主义/三大宗教/西藏和平解放等，中立分龄、贴统编教材）+ Opus 重写 5 条旧缺层 stub（淮海战役/黄继光/大跃进/中国水资源/西南少数民族）
-  - 全程：注入学期→renumber 序号化 + 教材引用回填（历史/地理人教统编 + 政治道法 PDF，按学期映射）+ 英文术语 200 条 Opus 亲译 + fix_wikilinks 规范化
-  - **真缺陷全清零**（缺字段/缺层/aliases/教材）；残余 373 不合规 = 纯前沿裸链（指向未建考点级概念，同高中结论：量大建之有害，列 backlog）
-  - 工具（working/，可复用）：extract_topics_政史地 / add_semester / build_zsd_opus / build_zsd_stubs / backfill_textbook_zsd / write_eng_terms_zsd
-  - 教训：import build_zsd_opus 触发其模块级循环重写裸名 → 与已编号文件重复 31 组（已删净）；如复用须把生成逻辑收进 `if __name__=='__main__'`
-  - 初中化学/生物/物理 已全段完成（见上方 ✅ 物理 450 / 化学 520 / 生物 457）
-- ✅ 高中 33 学习路径文档（6 学科 必修 + 选择性必修，已序号）
-  - 物理 6（必修 1-3 + 选必 1-3）/ 化学 5（必修 1-2 + 选必 1-3）/ 生物 5（必修 1-2 + 选必 1-3）
-  - 数学 5（必修 1-2 + 选必 1-3，必修第一册 PDF 已从 GitHub 补齐）
-  - 英语 7（必修 1-3 + 选必 1-4）/ 语文 5（必修上下 + 选必上中下）
-- ✅ 高中 Phase 2 数学/语文/英语 完成（~692 词条，已序号化）
-  - 数学 514 词条 (001-514)：001-264 小学+初中 + 265-514 高中 250
-  - 语文 571 词条 (001-571)：001-421 小学+初中 + 422-571 高中 150（含 37 篇补齐古文/现代文学）
-  - 英语 613 词条 (001-613)：001-333 小学+初中 + 334-613 高中 280
-  - 高中按学期（必修上下/必一二三/选必上中下/选必一二三四）顺序加 3 位前缀
-  - 模板：单层正文（仅 🎓 12+ 进阶版）
-  - 语文跳过部分(必上 5 + 必下 14 + 选必中 8 + 选必下 9 = 36 篇古文/现代文学) 已由主会话直接补齐
-- ✅ 物理初中+高中 完成（450 词条，已序号化 001-450）
-  - 初中 200：八上50（001-050）+ 八下70（051-120）+ 九年级全一80（121-200）
-  - 高中 250：必一45（201-245）+ 必二45（246-290）+ 必三45（291-335）
-    + 选必一40（336-375）+ 选必二40（376-415）+ 选必三35（416-450）
-  - 模板：初中两层正文（📚 6-12 + 🎓 12+）/ 高中单层 🎓
-- ✅ 化学初中+高中 完成（520 词条，已序号化 001-520）
-  - 初中 150：九上80（001-080）+ 九下70（081-150）
-  - 高中 370：必一80（151-230）+ 必二70（231-300）+ 选必一75（301-375）
-    + 选必二70（376-445）+ 选必三75（446-520）
-  - 模板：初中两层正文（📚 6-12 + 🎓 12+）/ 高中单层 🎓
-- ✅ 生物初中+高中 完成（457 词条，已序号化 001-457）
-  - 初中 203：七上50（001-050）+ 七下53（051-103）+ 八上50（104-153）+ 八下50（154-203）
-  - 高中 254：必一60（204-263）+ 必二49（264-312）+ 选必一50（313-362）
-    + 选必二45（363-407）+ 选必三50（408-457）
-  - 模板：初中两层正文（📚 6-12 + 🎓 12+）/ 高中单层 🎓
-  - 备注：sonnet 子代理 quota 耗尽（重置 2026-05-15）后由主会话直接补齐 49 条
-- ✅ 小学数学教材覆盖重设计试点（2026-05-22，设计/计划见 `docs/superpowers/{specs,plans}/2026-05-22-primary-math-textbook-coverage*`）
-  - 以学习路径为完整性基准（Phase0 抽检 3 册：路径忠实于人教教材目录）
-  - 清除 81 词条 🧒3-6 层（小学起用两层模板 `00-元/模板/词条模板-小学.md`：📚6-12 + 🎓12+）
-  - **关键结论**：教材内容已基本完整落条；覆盖矩阵缺口 33→12 系别名不匹配（非知识缺失），别名回填 16 词条 + 补 3 真缺口（观察物体/数对/分类与整理，序号 1421-1423）
-  - 纵向 strand 链：`strand_map_数学小学.yaml` 四领域，`gen_ladder_links.py` 注入 84 词条 前置/延伸 双向链
-  - ✅ 有效性梳理收尾：26 词条教材引用补全（指向本地 ChinaTextbook PDF + 章节）+ 017 块式 aliases 转行内 + 522 裸链清理；**体检 91/0 全绿**
-  - 新工具（皆可复用六科，含单测）：`strip_kid_layer.py` / `audit_entries.py`（兼容精简出处标题 + 准备课/《》章节）/ `coverage_matrix.py` / `gen_ladder_links.py`（全量单测 119 过）
-- ✅ 数学扩至全学段（2026-05-22）：小学→初中→高中 梳理 + 纵向贯通
-  - **初中数学 266/0 全绿**：audit_entries 教材正则兼容 `- 教材：`（无粗体，清 60 误报）；520 修坏链(七下实数)+补📚 / 523 补📚 / 091·112·240 裸链 / 075 加百分比别名
-  - **高中数学 1292 词条**（远超记录的 250，真题/v4-pro 累积）：945 不合规 = 1785 前沿裸链（指向未建细概念）+ 889 缺教材引用 → **backlog**（按约定本轮不强推）
-  - **纵向贯通**：`strand_map_数学.yaml`（替代 `_数学小学.yaml`）小学全词条 + 跨学段桥接 + 初高中主干 trunk；`gen_ladder_links` 升级**合并注入**（保留既有相关词条 + 幂等）。主干：分数→实数→勾股 / 比例→相似 / 二次函数→函数(高中)→指数对数→导数 / 坐标→向量·圆锥曲线 / 可能性→概率
-  - ✅ 三段覆盖别名回填：初中缺口 36→6 / 高中 47→8（69 词条补 alias + fix_wikilinks 规范化 111 链接）；残余为无干净目标的描述词（余角/弦/弧/指数/样本等）
-  - ✅ strand 总览视图（2026-05-23）：`索引/数学纵向总览.md` —— 5 域 Mermaid `graph LR` 阶梯图 + 515 可点击节点（点概念跳词条），Obsidian 阅读模式渲染，可视化浏览小学→高中概念成长链
-  - ✅ 元数据卫生（2026-05-23）：`fix_metadata.py` 按域关键词为 **553 空主题词条**填 [函数/数与代数/图形与几何/统计与概率]（抽样30/30准确）；audit `_parse_aliases` 去引号清 14 个带引号 bare 的 alias 序误报。**小学/初中元数据全清**，高中余 11 思想方法类主题（数学建模/整体思想等）+ **68 英文术语待 v4-pro 批量翻译**
-  - ✅ 纵向覆盖扩展（2026-05-23）：`gen_strand_from_paths.py` 从初高中学习路径概念顺序派生学段内递进链（+248节点/+300边），并入 `strand_map_数学.yaml`；**纵向覆盖 113→368/1325（8%→27%）**。剩余多为真题派生的考点级细词条（不在学习路径中），按需再扩
-  - ✅ 去重合并完成（2026-05-23）：**96 组近重复全合并**（X/X的、图象/图像等命名碎片）。分三批：76 组非富内容对（保入链规范件）+ 10 组措辞冗余（差<250）+ 11 组互补内容（差≥250，重复件正文并入规范件「🔁 合并补充」段，不丢内容）。全库链接重定向（数学+真题/索引/学习路径），删 98 词条；**数学 1423→1325**，断链 6618→6440。引擎 `docs/superpowers/working/merge_dups.py`（自检 + dry-run + 全库重定向 + append-body 折叠）
-  - ✅ 高中逐条体检（2026-05-23）：体检后判明 852 "不合规" 多为**考点词条固有特征非缺陷**——裸链 1592 处中 94% 是真题派生考点的前沿/变体引用（1134 个仅引 1 次，新建即膨胀）、教材缺失 98% 是考点词条（非教材节）。**audit 新增 `is_kaodian`**（考点精讲/真题命中/高频易错标记）对考点豁免教材必引+裸链规范化；+ 兼容「本地教材：」标签。**高中 852→79 不合规（93% 合规）**，余 79 = 68 英文术语（待 v4-pro）+ 11 思想方法类主题，无内容缺陷
-  - ⏸ 高中考点前沿概念（~1280 唯一）不新建（题型措辞/变体重复，建词条有害无益）
-- 📋 **学科整理 SOP**（`docs/superpowers/specs/2026-05-23-学科整理SOP.md`）：把数学整套流程（梳理→去重→纵向→覆盖→元数据→总览→体检）标准化，可复用推广物化生等全科。含 4 个 audit 误报教训、考点豁免、去重三批策略、路径派生纵向链、起点快照。物化生工具已通用（实测高中合规 735/812·751/854·626/726）
-- ✅ SOP 推广·物化生（2026-05-23）：
-  - **纵向贯通**：`gen_strand_from_paths --subject` 派生 + 注入，物理0→201 / 化学0→196 / 生物1→214；各科 `strand_map_<科>.yaml` 已建
-  - **元数据主题**：`domain_kw.py` 配各科域关键词（物理力学/电磁/热/光/近代、化学结构/反应原理/性质/实验/计算、生物细胞/遗传/稳态/生态/技术）；`fix_metadata --subject` 填明确域跳综合兜底，物理237/化学294/生物218 词条（高中合规升 物766/化774/生669）
-  - **总览视图**：`gen_strand_overview --subject` 出 `索引/{物理,化学,生物}纵向总览.md`（各科域 Mermaid + 可点击）
-  - **去重**：物理17/化学12/生物15 组合并（dedup_plan/merge_dups 加 `--subject`），物理867→850 / 化学1004→992 / 生物929→914，断链 6440→6333
-  - **英文术语补全**：Opus 逐条翻译 170 条标准教材术语（数学68/物理30/化学47/生物25）写入 frontmatter，四科英文术语缺失归零（高中合规 数学1186/物779/化806/生677）
-  - **SOP 推广全完成**（数理化生四科：体检+纵向+元数据+总览+去重+英文术语）。剩各科高中 11-36 不合规为思想方法/综合类主题（无清晰域，留空合理）
-  - 全量单测 122 过
+| 学科 | 小学 | 初中 | 高中 |
+|---|---|---|---|
+| 数学·语文·英语 | ✅ | ✅ | ✅ |
+| 物理·化学·生物 | — | ✅ | ✅ |
+| 政治·历史·地理 | — | ✅ | ✅ |
+| 科学 | ✅ | — | — |
 
-## 真题分析
+- ⏳ **待办**：小学 道法/美术/音乐/书法/体育/艺术（~210 词条，科学已完成）；生活与社会（26 骨架待升级）
+- ⏸ **不建**：高中各科考点前沿概念（题型变体，建词条有害无益，列 backlog）
+- 📜 **完整进度史 + 踩坑教训 → `docs/progress-log.md`**
 
-<!-- EXAM-PROGRESS-START -->
+## 专题文档（按需载入）
 
-v2 架构：截图 + 摘要 + 指针 + 三层复审（L1 自动断言 / L2 看图复验 / L3 Opus 仲裁）。设计稿 `docs/superpowers/specs/2026-05-12-jilin-math-exam-v2-design.md`，实施计划 `docs/superpowers/plans/2026-05-12-jilin-math-exam-v2-plan.md`。v1 zip 备份保留于 `素材/backup/2026-05-12/exam-pre-migrate.zip`。
-
-**数理化生管线**（`00-元/scripts/exam_*.py`，62 单测全过）：
-
-1. `exam_screenshot.py` — PyMuPDF 找题号/答案锚点 + 渲染 PNG（含跨页 running counter，命名 `{year}-{paper}-{NN}.q.png`）
-2. `exam_extract_meta.py` — markitdown 抽答案/解析（最长上升序列容错表格题号）；北京公式碎片走 `split_by_answer_tag` 降级
-3. `exam_enrich.py` — DeepSeek v4-pro 抽 摘要/考点/难度（含 retry + LLMError 路径）
-4. `exam_verify.py` — L2 复验两步法（prepare 写 prompt 队列 / ingest 收 verdict）
-5. `exam_render.py` — 渲染题级 .md（frontmatter + 截图 + 摘要 + tags 反链 + PDF 指针）
-6. `exam_index.py` — 4 索引 + 反链回填学科词条（alias-aware 解析 + 跨省并集合并）
-
-**英语篇章管线**（`exam_eng_*.py`，无 enrich 步）：
-
-1. `exam_eng_screenshot.py` — 按【答案】锚分篇章块，渲染 PNG（**遗留：裸号命名 `{NN}.q.png` 跨卷碰撞，待修**）
-2. `exam_eng_extract.py` — `SUBSTANTIVE` 正向谓词 (`raw_sol` 含 `【导语】` 或 `【N题详解】`) 判要不要 render；`infer_qtype` 单字母 ≥10 = 完形填空（先于阅读理解规则）
-3. `exam_eng_render.py` — `skip_render` 跳过听力/纯版式块
-
-**全量结论**（2026-05-19）：北京/吉林/湖南 × 5 科 = 15 组全量入库；数理化生 ~1000 题，英语 45 篇章。湖南为独立卷（与吉林 ratio 0.07-0.29，非同卷）；黑龙江与吉林 ratio=1.0000 全同卷，**新增词条 = 0**，详见 `索引/真题/黑龙江-同卷说明.md`。`paper_aliases` 已加新高考Ⅰ / 全国卷Ⅰ / 湖南。
-
-**Pilot 已知问题**：
-
-已修（2026-05）：
-- ~~英语截图裸号命名跨卷碰撞~~ ✅ 2026-05-20（`exam_eng_screenshot.render_clip_series` 改 `{year}-{paper}-E{NN}.{kind}.png`；北京/湖南英语已全清重跑：55+45 md / 1123 新前缀截图 / 0 裸号残留；吉林英语是 v1 题级管线本已含年份卷别，无需重跑）
-- ~~Q14 答案字段抓 markdown 表格残片~~ ✅ `exam_extract_meta.extract_answer`（`:114-129`）已加管道符 `|` 清洗
-- ~~markitdown 多列漏题缺 solution~~ ✅ `exam_extract_meta`（`:152/311`）已加 fitz 切片兜底（漏题时切区域作 solution_text）
-- ~~`analyze_links.py` 真题路径误报缺 alias~~ ✅ `:187-193` 已加真题 bare-name 特判（实测 0 误报）
-
-待修（扩省份/年份前重测）：
-- markitdown 在多列 PDF 上仍可能漏**整题**（非仅缺 solution）；fitz 兜底只补 solution_text，纯版式题号漏需扩量回归测
-
-**扩省份规则**：必先跑 `python 00-元/scripts/pdf_content_diff.py`（fitz 提文本 → 归一化 → SequenceMatcher.ratio）判同卷，**不要看文件名**。ratio=1.0 → 不建镜像，仅写同卷说明；ratio < 0.5 → 独立卷，进 5 步管线。然后按 `00-元/scripts/_prompts/paper_aliases.md` 加 `paper_aliases` 条目（顺序敏感：长 pattern 在前，裸省名兜底在后）。
-
-<!-- EXAM-PROGRESS-END -->
-
-## 工作模式提示
-
-- **工具箱**（`00-元/scripts/` 通用；`docs/superpowers/working/` 一次性修补）—— **不要再为每个学科一次性写脚本**：
-  - 进度：`stats.py`（含 `--write` 同步 CLAUDE.md 表）
-  - 命名/链接：`renumber.py` / `check_naming_conflicts.py` / `check_missing.py` / `analyze_links.py` / `fix_aliases.py`
-  - 链接修复：`fix_wikilinks.py`（规范化 `[[X]] → [[NN-X|X]]`）/ `fix_stale_links.py`（修 renumber 致 stale 号链）/ `fix_latex_delim.py`（`\(\)\[\] → $$`）
-  - 词条生成：`gen_atom_skeleton.py`（v4-pro 批量骨架）/ `review_dispatch.py`（复检派发）/ `backfill_author_links.py`（古诗作者反链）
-  - 真题：`exam_*.py` 数理化生 5 步 + `exam_eng_*.py` 英语 3 步；`pdf_content_diff.py` 扩省份判同卷
-- 用户可能开启 `caveman mode`：进入后回复必须简洁压缩，保留技术准确性
-- 词条与学习路径分离：路径在 `00-元/学习路径/<学段>/<学科>/`，词条在 `<学科>/`
-- 风格参考：`数学/16-加法.md`（标准 A 模式全龄完成）、`数学/18-长方体.md`（含教材链接的几何类）
-
-## 学生复习视图（吉林理科高中）
-
-- **配置**：`00-元/scripts/weight_config.yaml`（多段权重：省份 × 文理 × 学段 × 来源；当前模式仅吉林+黑龙江同卷 / 理+不分 / 高中；北京/湖南/文/小学初中 = 0 保留位）
-- **核心字段**（学科词条 frontmatter）：`weight` / `吉林反链` / `黑龙江反链` / `北京反链` / `湖南反链` / `alias_count` / `学习路径出现` / `weight_breakdown`（JSON 详情） / `mastery` / `wrong_count` / `last_review` / `review_count`
-- **核心字段**（真题 frontmatter）：`我的状态` / `错次` / `首次做` / `最后做` / `模考批次` / `我的笔记`
-- **仪表盘**：`索引/吉林冲刺/` 5 张 Dataview（数学/物理/化学/生物-高频50 + 总览）。**冲刺仅 4 科**（不含英语——长期训练非词条学习）；**仅显本省命中**（其他省份未来独立 `<省>冲刺/` 各自仅显本省）
-- **重算时机**：改 yaml 配置后 / 新真题入库后 / 批量改 alias 后 → `python 00-元/scripts/compute_weight.py --apply`
-- **错题本接管**（占位）：`mock_review.py` 当前 noop，未来扫真题 `我的状态` 反写学科词条 mastery/wrong_count
-- **学生 HTML 静态站**：`docs/student/`（数物化生 4 科 weight ≥ 10 = 610 词条 + 1666 真题 + 5 索引 + 首页）。完全离线 file:// / 手机+平板 / KaTeX 公式渲染（首次 `--fetch-katex` 联网下 250KB）。生成：`python 00-元/scripts/gen_html.py --apply --threshold 10`
-
-## 常用命令
-
-```bash
-# 进度刷新（同时改 CLAUDE.md 进度表）
-python 00-元/scripts/stats.py --write
-
-# 单测（62 用例全过为基线）
-pytest 00-元/scripts/tests/
-pytest 00-元/scripts/tests/test_exam_index.py        # 单文件
-
-# 链接体检与修复
-python 00-元/scripts/analyze_links.py                # 报告漏 alias / 死链
-python 00-元/scripts/fix_wikilinks.py --apply        # 规范化无管线 [[X]]
-python 00-元/scripts/fix_stale_links.py --apply  # 修 renumber 致 stale 号链（必跑）
-python 00-元/scripts/fix_latex_delim.py --apply  # \(\)\[\] → $$
-
-# 真题数理化生（5 步串行，单 {省}-{科}）
-python 00-元/scripts/exam_screenshot.py    --province 湖南 --subject 数学
-python 00-元/scripts/exam_extract_meta.py  --province 湖南 --subject 数学
-python 00-元/scripts/exam_enrich.py        --province 湖南 --subject 数学
-python 00-元/scripts/exam_render.py        --province 湖南 --subject 数学
-python 00-元/scripts/exam_index.py         --province 湖南 --subject 数学
-
-# 真题英语（3 步，无 enrich）
-python 00-元/scripts/exam_eng_screenshot.py --province 湖南
-python 00-元/scripts/exam_eng_extract.py    --province 湖南
-python 00-元/scripts/exam_eng_render.py     --province 湖南
-
-# 扩省份前必跑：判同卷
-python 00-元/scripts/pdf_content_diff.py
-
-# 学生复习权重
-python 00-元/scripts/compute_weight.py --apply              # 全库重算
-python 00-元/scripts/compute_weight.py --subject 数学 --top 20  # 单科 top 调试
-python 00-元/scripts/init_review_fields.py --apply          # 一次性补错题本/mastery 默认字段（幂等）
-python 00-元/scripts/mock_review.py                          # 校验字段就绪（占位反写脚本）
-
-# 学生 HTML 静态站（docs/student/，离线手机/平板用）
-python 00-元/scripts/gen_html.py --fetch-katex              # 首次联网拉 KaTeX（~250KB）
-python 00-元/scripts/gen_html.py --apply --threshold 10     # 4 科 weight≥10 = 610 词条 + 1666 真题
-```
-
-## 多模型工作流 v3 路由
-
-详见 `docs/superpowers/plans/2026-05-12-multi-model-workflow-v3.md`。核心规则：
-
-- **Opus 主会话** = 核心 / 编排 / 终审 / 古文 / 古诗 / 敏感议题亲自写 / **字符级编码审查**
-- **Sonnet subagent** = 并行复检 / 抽 topics / 扩省份 checklist / **字符级 OCR 判断（替代 v4-pro 在这类任务上的噪声）**（不再做主体生成）
-- **DeepSeek v4-pro** = 批量生成（**含小批量**）+ 50% 自检 + lexicon 概念抽取（取代已弃用的 deepseek-reasoner）。**禁用场景：字符级编码审查 / 细粒度 OCR 判断**（噪声率 > 信号率）
-- **DeepSeek v4-flash** = OCR 抽样 / 短文本清洗（注意：长解答题字符审查仍噪声大，必要时升 sonnet/opus）
-- 词条生成统一走工作流 A（无批量阈值）；古文/敏感议题在 topics.jsonl 打 `route: opus` 跳过 v4-pro
-- 复检比例 `10/40/50`（Opus / Sonnet / v4-pro）；过渡期 5/12–5/15 用 `30,0,70`
-- 交叉复检按场景触发：新学科 / 新配置 10%，稳定期 5% 或 0%
+- 真题分析管线 → `docs/真题管线.md`（架构 + 6 步 + 扩省份规则；**扩省份前必跑** `pdf_content_diff.py` 判同卷，不看文件名）
+- 学生复习视图（吉林理科高中权重/仪表盘/HTML 站）→ `docs/学生视图.md`
+- 学科整理 SOP → `docs/superpowers/specs/2026-05-23-学科整理SOP.md`
+- 命令速查 → `00-元/scripts/COMMANDS.md`
 
 ## 已启用插件（来自全局 `~/.claude/CLAUDE.md`）
 
