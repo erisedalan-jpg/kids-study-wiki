@@ -35,10 +35,16 @@ README = """吉林冲刺·学生 HTML 离线包
 3. 双击 index.html（用 Chrome / Firefox / Edge 打开）
 
 【内容】
-- 4 科 weight ≥ 10 的核心词条 = 610 条
-- 吉林历年真题题级页（含截图） = 1666 题
+- 4 科 weight ≥ 3 的核心词条 = 2340 条
+- 吉林历年真题题级页（含截图） = 1427 题
 - KaTeX 离线公式渲染
 - 移动端响应式（手机/平板友好）
+- 复习功能（纯本地，数据存浏览器 localStorage）：
+  · 每条词条/真题三态标记：✅已掌握 / ⚠️模糊 / ❌错题
+  · 科目索引页进度条 + 行内状态色点
+  · 状态筛选（仅错题 / 未复习 / 今日该复习）+ 标题搜索
+  · 间隔复习（错题1天 / 模糊3天 / 已掌握7天后提醒）
+  · 首页「导出复习记录」下载 JSON，换设备可「导入」还原
 
 【不含】
 - 英语（长期训练非词条学习）
@@ -54,8 +60,13 @@ README = """吉林冲刺·学生 HTML 离线包
 【更新】
 源仓回到本机后跑：
   python 00-元/scripts/compute_weight.py --apply
-  python 00-元/scripts/gen_html.py --apply --threshold 10
+  python 00-元/scripts/gen_html.py --apply          # 默认 weight ≥ 3
   python 00-元/scripts/pack_student_zip.py
+
+【复习记录跨设备同步】
+- 复习状态存在浏览器本地（localStorage），按文件路径隔离，不随 zip 走。
+- 换电脑/换浏览器：在旧设备首页「导出复习记录」存下 JSON，
+  到新设备打开 index.html 后用「导入」选该 JSON 即可还原。
 """
 
 
