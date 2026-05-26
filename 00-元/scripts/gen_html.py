@@ -38,6 +38,7 @@ from _utils import (  # noqa: E402
 
 OUT_DIR = REPO_ROOT / "docs" / "student"
 SUBJECTS = ["数学", "物理", "化学", "生物"]
+DEFAULT_THRESHOLD = 3
 
 # KaTeX 0.16.11 离线包（首次需联网下载；之后完全离线）
 KATEX_VERSION = "0.16.11"
@@ -390,12 +391,12 @@ def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
     return render_page(title, content, depth=0)
 
 
-def gen_home(stats_by_sub: dict[str, int], total: int) -> str:
+def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_THRESHOLD) -> str:
     content = (
         '<h1>吉林冲刺 · 学生重点 HTML</h1>'
-        '<p>数物化生 4 科 weight ≥ 10 的核心词条，离线可读。'
+        f'<p>数物化生 4 科 weight ≥ {threshold} 的核心词条，离线可读。'
         '<br>配置：<code>00-元/scripts/weight_config.yaml</code>；'
-        '重生成：<code>python 00-元/scripts/gen_html.py --apply --threshold 10</code></p>'
+        f'重生成：<code>python 00-元/scripts/gen_html.py --apply --threshold {threshold}</code></p>'
         f'<p><strong>共 {total} 词条</strong></p>'
         '<ul>'
         f'<li>🔢 <a href="数学.html">数学 ({stats_by_sub["数学"]})</a></li>'
@@ -443,8 +444,8 @@ def main() -> int:
     setup_utf8()
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="写盘；否则仅扫描汇总")
-    ap.add_argument("--threshold", type=int, default=10,
-                    help="weight 阈值（默认 10）")
+    ap.add_argument("--threshold", type=int, default=DEFAULT_THRESHOLD,
+                    help="weight 阈值（默认 3）")
     ap.add_argument("--fetch-katex", action="store_true",
                     help="联网下载 KaTeX 全套到 vendor/katex/（一次性 ~250KB）")
     args = ap.parse_args()
@@ -566,7 +567,7 @@ def main() -> int:
     (OUT_DIR / "总览.html").write_text(
         gen_top_overview(all_atoms), encoding="utf-8", newline="")
     (OUT_DIR / "index.html").write_text(
-        gen_home(stats, total), encoding="utf-8", newline="")
+        gen_home(stats, total, args.threshold), encoding="utf-8", newline="")
 
     print(f"\n[APPLY] 词条 {n_atom} / 真题 {n_exam} / 索引 5 / 首页 1 → {OUT_DIR}")
     return 0
