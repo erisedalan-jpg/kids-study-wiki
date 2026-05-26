@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数y=Asin(ωx+φ)的图象变换</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数y=Asin(ωx+φ)的图象变换</h1><div class="review-mark" data-stem="673-函数y=Asin(ωx+φ)的图象变换"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数y=Asin(ωx+φ)的图象变换, Transformations of the graph of y=Asin(ωx+φ)</p><h1>函数y=Asin(ωx+φ)的图象变换</h1>
+<blockquote>
+<p><strong>一句话</strong>：由正弦曲线 $y=\sin x$ 出发，通过振幅变换、周期变换、相位变换和上下平移，得到形如 $y=A\sin(\omega x+\varphi)+k$ 的图象，其中 $A$ 影响振幅，$\omega$ 影响周期，$\varphi$ 影响左右平移，$k$ 影响上下平移。
+<strong>English</strong>: The process of transforming the basic sine curve $y=\sin x$ into $y=A\sin(\omega x+\varphi)+k$ through amplitude, period, phase shifts, and vertical translation.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+对于函数 $y=A\sin(\omega x+\varphi)$ ($A&gt;0,\omega&gt;0$)：<br />
+- <strong>振幅</strong> $A$：图象最高点与最低点的纵坐标分别为 $A$ 和 $-A$，函数值域为 $[-A, A]$。<br />
+- <strong>周期</strong> $T=\dfrac{2\pi}{|\omega|}$，频率 $f=\dfrac{1}{T}=\dfrac{|\omega|}{2\pi}$。<br />
+- <strong>相位</strong> $\omega x+\varphi$，<strong>初相</strong> $\varphi$（当 $x=0$ 时的相位）。<br />
+- <strong>图象变换</strong>可通过以下两种常见路径实现：<br />
+  1. <strong>先平移后伸缩</strong>：<br />
+     $y=\sin x \xrightarrow{\text{左}(\varphi&gt;0)\text{右}(\varphi&lt;0)\text{平移}|\varphi| \text{单位}} y=\sin(x+\varphi)$<br />
+     $\xrightarrow{\text{横坐标变为原来的} \frac{1}{\omega} \text{倍}} y=\sin(\omega x+\varphi)$<br />
+     $\xrightarrow{\text{纵坐标变为原来的} A \text{倍}} y=A\sin(\omega x+\varphi)$<br />
+  2. <strong>先伸缩后平移</strong>：<br />
+     $y=\sin x \xrightarrow{\text{横坐标变为原来的} \frac{1}{\omega} \text{倍}} y=\sin \omega x$<br />
+     $\xrightarrow{\text{左右平移} \left|\frac{\varphi}{\omega}\right| \text{单位}} y=\sin(\omega x+\varphi)$<br />
+     $\xrightarrow{\text{纵坐标变为原来的} A \text{倍}} y=A\sin(\omega x+\varphi)$  </p>
+<p><strong>关键方法</strong><br />
+- <strong>确定变换顺序</strong>：题目中若是从 $y=\sin x$ 出发，优先使用“先平移后伸缩”，避免平移量搞错。若从任意函数 $y=f(x)$ 变换到 $y=Af(\omega x+\varphi)$，通用口诀是“左加右减，伸缩倒数”，特别注意伸缩时是针对 $x$ 本身变化。<br />
+- <strong>给定图象求解析式</strong>：通常由最高、最低点确定 $A$ 和 $k$；由零点或最值点间的水平距离求周期，进而得 $\omega=\frac{2\pi}{T}$；最后代入一个点坐标求 $\varphi$（注意 $\varphi$ 的取值范围限制）。<br />
+- <strong>对称性应用</strong>：对称轴方程 $\omega x+\varphi = \frac{\pi}{2}+k\pi$，对称中心 $(\frac{k\pi-\varphi}{\omega}, k)$，可用于验证变换正确性。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+1. 给出 $y=Asin(ωx+φ)$ 的部分图象，要求写出解析式，并描述如何由 $y=\sin x$ 得到该图象。<br />
+2. 选择题中判断由 $y=\sin x$ 经过怎样的伸缩和平移得到 $y=2\sin(3x-\frac{\pi}{4})$ 等类似形式，重点考查平移的单位（$\frac{\pi}{4}$ 还是 $\frac{\pi}{12}$）。  </p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>先伸缩后平移时平移量出错</strong>：由 $y=\sin\omega x$ 得到 $y=\sin(\omega x+\varphi)$ 时，平移的是 $\left|\frac{\varphi}{\omega}\right|$ 而不是 $|\varphi|$，因为变换对象是 $x$，需将 $\varphi$ 提公因子。  </li>
+<li><strong>振幅 $A$ 与周期 $\omega$ 的符号处理</strong>：$A$ 为负数时，图象会关于 $x$ 轴翻转，周期公式中 $T=\frac{2\pi}{|\omega|}$，务必加绝对值。  </li>
+<li><strong>相位 $\varphi$ 的确定不唯一</strong>：给点求 $\varphi$ 时，常因忽视 $\varphi$ 的给定范围而多解，必须结合单调性或最值点区分。  </li>
+<li><strong>混淆平移与伸缩的先后</strong>：口诀“先平移再伸缩，平移量不变；先伸缩再平移，平移量要除以 $\omega$”，记忆不清会导致整题错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>函数偏离平衡位置的最大距离，对应 $</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>函数完成一次完整波动所需的最小正 $x$ 增量，$T=2\pi/</td>
+</tr>
+<tr>
+<td>相位</td>
+<td>phase</td>
+<td>决定正弦波在某一时刻的位置的量，$\omega x+\varphi$</td>
+</tr>
+<tr>
+<td>初相</td>
+<td>initial phase</td>
+<td>$x=0$ 时的相位值 $\varphi$</td>
+</tr>
+<tr>
+<td>平移变换</td>
+<td>translation / shift</td>
+<td>沿坐标轴方向移动图象，不改变形状</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》必修课程-主题二 函数-三角函数</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">正弦函数的图象与性质</a></li>
+<li><a class="dead" title="未收录">余弦函数的图象与性质</a></li>
+<li><a class="dead" title="未收录">函数y=Asin(ωx+φ)的图象与性质</a></li>
+<li><a class="dead" title="未收录">三角函数的周期性、奇偶性与对称性</a></li>
+<li><a class="dead" title="未收录">三角函数模型的简单应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2013-文-16.html">2013-文-16</a></li>
+<li><a href="../exam/数学/2016-文-06.html">2016-文-06</a></li>
+<li><a href="../exam/数学/2016-理-07.html">2016-理-07</a></li>
+<li><a href="../exam/数学/2017-理-09.html">2017-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

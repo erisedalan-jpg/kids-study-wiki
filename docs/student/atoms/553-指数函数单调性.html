@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指数函数单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>指数函数单调性</h1><div class="review-mark" data-stem="553-指数函数单调性"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 指数函数单调性, monotonicity of exponential function</p><h1>指数函数单调性</h1>
+<blockquote>
+<p><strong>一句话</strong>：对于指数函数 $f(x)=a^x$（$a&gt;0$ 且 $a\neq1$），当 $a&gt;1$ 时在 $\mathbb{R}$ 上严格递增；当 $0&lt;a&lt;1$ 时严格递减。
+<strong>English</strong>: The monotonicity of an exponential function $y=a^x$: if $a&gt;1$, it is strictly increasing on $\mathbb{R}$; if $0&lt;a&lt;1$, it is strictly decreasing.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong><br />
+  给定指数函数 $f(x)=a^x\ (a&gt;0, a\neq1)$，定义域为 $\mathbb{R}$。<br />
+  单调性由底数 $a$ 唯一确定：  </li>
+<li>若 $a&gt;1$，则 $f(x)$ 在 $\mathbb{R}$ 上单调递增；  </li>
+<li>
+<p>若 $0&lt;a&lt;1$，则 $f(x)$ 在 $\mathbb{R}$ 上单调递减。<br />
+  证明依据：任取 $x_1<x_2$，有 $\dfrac{a^{x_2}}{a^{x_1}}=a^{x_2-x_1}$。当 $a>1$ 时 $a^{x_2-x_1}&gt;1$，故 $f(x_2)&gt;f(x_1)$；$0&lt;a&lt;1$ 时相反。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>比较大小</strong>：同底数幂直接利用单调性；不同底数常化为同底，或借用 $0$、$1$ 等中间值。  </li>
+<li><strong>解指数不等式</strong>：对 $a^{f(x)} &gt; a^{g(x)}$，$a&gt;1$ 时等价于 $f(x)&gt;g(x)$；$0&lt;a&lt;1$ 时等价于 $f(x)&lt;g(x)$（注意不等号转向）。  </li>
+<li>
+<p><strong>复合函数单调性</strong>：$y=a^{u}$ 与 $u=g(x)$ 复合，用“同增异减”判定，且需先求定义域。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考中常见设问：  </p>
+</li>
+<li>比较如 $a=0.3^{0.2}$，$b=0.2^{0.3}$，$c=\log_{0.3}0.2$ 等数的大小；  </li>
+<li>解不等式 $2^{x^2-3} &gt; 4^x$，需先将两边化为同底 $2^{x^2-3} &gt; 2^{2x}$，再由底数 $2&gt;1$ 得 $x^2-3&gt;2x$；  </li>
+<li>已知 $f(x)=a^{2x}-a^x$ 在区间上单调，通过换元转化为二次函数并利用指数函数单调性求参数范围。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>不对底数 $a$ 进行分类讨论，误将 $0&lt;a&lt;1$ 时的递减当作递增，导致比较大小或解不等式时方向错误。</li>
+<li>解指数不等式 $a^{f(x)}&gt;a^{g(x)}$ 时忘记当 $0&lt;a&lt;1$ 时不等号要反向，直接套用 $f(x)&gt;g(x)$。</li>
+<li>研究复合函数 $y=a^{g(x)}$ 单调性时，仅分析外层指数函数的单调性，忽略内层 $g(x)$ 的单调区间及定义域限制。</li>
+<li>将指数函数 $y=a^x$ 与幂函数 $y=x^a$ 的单调性判别方法混淆，误用求导或对称性。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指数函数</td>
+<td>exponential function</td>
+<td>形如 $y=a^x$ ($a&gt;0, a\neq1$) 的函数</td>
+</tr>
+<tr>
+<td>单调递增</td>
+<td>strictly increasing</td>
+<td>自变量增大时函数值严格增大</td>
+</tr>
+<tr>
+<td>单调递减</td>
+<td>strictly decreasing</td>
+<td>自变量增大时函数值严格减小</td>
+</tr>
+<tr>
+<td>底数</td>
+<td>base</td>
+<td>指数函数中的常数 $a$</td>
+</tr>
+<tr>
+<td>指数</td>
+<td>exponent</td>
+<td>幂运算中表示重复次数的变量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">指数函数图像与性质</a></li>
+<li><a class="dead" title="未收录">对数函数单调性</a></li>
+<li><a class="dead" title="未收录">利用单调性比较大小</a></li>
+<li><a class="dead" title="未收录">指数不等式</a></li>
+<li><a class="dead" title="未收录">复合函数单调性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2015-文-10.html">2015-文-10</a></li>
+<li><a href="../exam/数学/2016-文-08.html">2016-文-08</a></li>
+<li><a href="../exam/数学/2021-理-03.html">2021-理-03</a></li>
+<li><a class="dead" title="未收录">2024-北京-07</a></li>
+<li><a class="dead" title="未收录">2024-北京-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

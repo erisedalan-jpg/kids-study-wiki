@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质点</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>质点</h1><div class="review-mark" data-stem="235-质点-高中"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 运动的描述]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 质点-高中, 质点, particle, point mass</p><h2>🎓 质点（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>质点</strong>是一种理想化的物理模型：当物体的形状和大小对所研究的问题影响可忽略不计时，可以把该物体看作一个只有质量、没有大小的点。</p>
+<p>质点不是真实存在的物体，而是<strong>科学抽象</strong>（idealization），是简化问题的工具。</p>
+<h3>能否看作质点的判断标准</h3>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>能否质点化</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>研究地球绕太阳公转</td>
+<td>✅ 能</td>
+<td>地球直径远小于日地距离</td>
+</tr>
+<tr>
+<td>研究地球自转</td>
+<td>❌ 不能</td>
+<td>自转与形状直接相关</td>
+</tr>
+<tr>
+<td>研究火车从北京到上海</td>
+<td>✅ 能</td>
+<td>车长远小于行程</td>
+</tr>
+<tr>
+<td>研究火车进站停靠</td>
+<td>❌ 不能</td>
+<td>车头位置与车尾位置不同</td>
+</tr>
+<tr>
+<td>研究跳水运动员入水姿势</td>
+<td>❌ 不能</td>
+<td>姿势（形状）是研究对象</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键</strong>：是否能质点化取决于<strong>研究目的</strong>，而非物体本身大小。</p>
+<h3>推导思路</h3>
+<p>质点概念是牛顿力学的逻辑起点。真实物体受力时，各部分运动状态不同（如转动）；若只研究平动，可将全部质量集中于一点，使运动方程 $\vec{F} = m\vec{a}$ 适用于整体。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：下列哪个物体可以看作质点？
+- A. 研究汽车超车时（车长约4m，超车距离约50m）→ <strong>可以</strong>
+- B. 研究芭蕾舞演员的旋转动作 → <strong>不可以</strong>
+- C. 研究月球绕地球公转（月球直径3476km，月地距离384400km）→ <strong>可以</strong></p>
+<p>答：A、C 可以质点化。</p>
+<p><strong>例2</strong>：一列火车长200m，以36km/h匀速通过一座长800m的大桥，求火车完全在桥上的时间。</p>
+<p>分析：火车不能整体质点化（车头过桥与车尾过桥时间不同），需考虑车长。</p>
+<p>车头刚上桥→车尾完全上桥：距离 = 200m，时间 $t_1 = \frac{200}{10} = 20\text{ s}$</p>
+<p>车头即将离桥→车尾刚离桥：完全在桥上的距离 = 800 - 200 = 600m，时间 $t = \frac{600}{10} = 60\text{ s}$</p>
+<p><strong>例3</strong>：地球半径约6400km，若研究地球绕太阳公转（日地距离1.5×10⁸km），判断能否质点化。</p>
+<p>$$\frac{R_{\text{地}}}{d_{\text{日地}}} = \frac{6400}{1.5\times10^8} \approx 4.3\times10^{-5} \ll 1$$</p>
+<p>可以质点化。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>误以为"小物体才能质点化"</strong>：质点化与物体大小无关，只与研究目的有关。一个基本粒子（极小）研究其自旋时也不能质点化。</li>
+<li><strong>忽视研究对象</strong>：同一物体在不同问题中可能一次能质点化，一次不能。</li>
+<li><strong>质点≠点</strong>：质点有质量，几何上的"点"没有质量。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中将运动物体简单视为"一个物体"，未明确质点概念。高中引入质点，是从<strong>定性→定量</strong>、从<strong>具体→抽象</strong>的重要转变，为后续位移、速度、加速度等概念奠定基础。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第一章第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/质点">质点 - 维基百科</a>（不编外链，家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/011-参照物.html">参照物</a></p>
+</li>
+<li>
+<p><a href="../atoms/216-参考系-高中.html">参考系-高中</a></p>
+</li>
+<li><a href="../atoms/132-平面直角坐标系.html">坐标系</a></li>
+<li><a class="dead" title="未收录">位移与路程</a></li>
+<li><a class="dead" title="未收录">平均速度-高中</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">惯性-高中</a></li>
+<li><a class="dead" title="未收录">力-高中</a></li>
+</ul>
+</div>
+</body>
+</html>

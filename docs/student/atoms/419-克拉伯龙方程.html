@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>克拉伯龙方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>克拉伯龙方程</h1><div class="review-mark" data-stem="419-克拉伯龙方程"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 气体]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 克拉伯龙方程, Clapeyron equation, 理想气体方程, pV=nRT</p><h2>🎓 克拉伯龙方程</h2>
+<h3>公式</h3>
+<p>$$\boxed{pV = nRT}$$</p>
+<p><strong>这就是理想气体状态方程的完整形式</strong>，高中物理中也称"克拉伯龙方程"，由法国工程师艾米尔·克拉伯龙（Émile Clapeyron）于 1834 年整合三大气体定律得出。</p>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>符号</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>压强</td>
+<td>$p$</td>
+<td>Pa</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>$V$</td>
+<td>m³</td>
+</tr>
+<tr>
+<td>物质的量</td>
+<td>$n$</td>
+<td>mol</td>
+</tr>
+<tr>
+<td>摩尔气体常数</td>
+<td>$R$</td>
+<td>$8.31\ \text{J/(mol·K)}$</td>
+</tr>
+<tr>
+<td>热力学温度</td>
+<td>$T$</td>
+<td>K</td>
+</tr>
+</tbody>
+</table>
+<h3>与高中常用形式的关系</h3>
+<p>高中对同一密闭气体（$n$ 固定）两态比较时：</p>
+<p>$$\frac{p_1 V_1}{T_1} = nR = \frac{p_2 V_2}{T_2}$$</p>
+<p>完整方程 $pV = nRT$ 额外允许计算<strong>物质的量 $n$</strong>，当题目给出压强、体积、温度求气体质量时使用：</p>
+<p>$$n = \frac{pV}{RT} \Rightarrow m = n \cdot M$$</p>
+<h3>玻尔兹曼常数形式</h3>
+<p>用分子数 $N = nN_A$ 代替物质的量 $n$：</p>
+<p>$$pV = N k_B T \quad (k_B = \frac{R}{N_A} = 1.38 \times 10^{-23}\ \text{J/K})$$</p>
+<p>或用分子数密度 $n_0 = N/V$：</p>
+<p>$$p = n_0 k_B T$$</p>
+<p>（这是统计力学中气体压强的微观推导结果，与<a href="../atoms/432-气体压强微观解释.html">气体压强微观解释</a>一致。）</p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：一氧气瓶容积 $V = 40\ \text{L}$，压强 $p = 1.5 \times 10^7\ \text{Pa}$，温度 $T = 300\ \text{K}$，氧气摩尔质量 $M = 32 \times 10^{-3}\ \text{kg/mol}$，求瓶内氧气质量。</p>
+<p><strong>解</strong>：</p>
+<p>$$n = \frac{pV}{RT} = \frac{1.5 \times 10^7 \times 40 \times 10^{-3}}{8.31 \times 300} = \frac{6 \times 10^5}{2493} \approx 240.7\ \text{mol}$$</p>
+<p>$$m = nM = 240.7 \times 32 \times 10^{-3} \approx 7.7\ \text{kg}$$</p>
+<p><strong>待家长核对</strong>：数值计算请核对。</p>
+<h3>适用范围</h3>
+<ul>
+<li>严格成立：理想气体</li>
+<li>近似成立：高温低压下的实际气体</li>
+<li>不适用：高压、低温、气体接近液化时（需范德瓦耳斯方程修正）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li>$R = 8.31\ \text{J/(mol·K)}$ 不能与玻尔兹曼常数 $k_B = 1.38 \times 10^{-23}\ \text{J/K}$ 混淆</li>
+<li>体积单位 L 必须换算为 m³（$1\ \text{L} = 10^{-3}\ \text{m}^3$）</li>
+<li>高中题"不变量"分析优先用 $p_1V_1/T_1 = p_2V_2/T_2$，需要求 $n$ 或 $m$ 时才用完整方程</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第二章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/克拉珀龙方程">克拉珀龙方程 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/446-理想气体状态方程.html">理想气体状态方程</a></li>
+<li><a class="dead" title="未收录">理想气体</a></li>
+<li><a href="../atoms/444-玻意耳定律.html">玻意耳定律</a></li>
+<li><a href="../atoms/430-查理定律.html">查理定律</a></li>
+<li><a href="../atoms/447-盖吕萨克定律.html">盖吕萨克定律</a></li>
+<li><a href="../atoms/432-气体压强微观解释.html">气体压强微观解释</a></li>
+<li><a class="dead" title="未收录">温度的微观本质</a></li>
+</ul>
+</div>
+</body>
+</html>

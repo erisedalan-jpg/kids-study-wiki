@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行四边形定则</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平行四边形定则</h1><div class="review-mark" data-stem="219-平行四边形定则"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 相互作用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平行四边形定则, parallelogram law, parallelogram rule</p><h2>🎓 平行四边形定则（高中物理）</h2>
+<h3>定律表述</h3>
+<p>两个力合成时，以这两个力为邻边作平行四边形，则<strong>对角线代表合力的大小和方向</strong>。</p>
+<p>$$|\vec{F}|^2 = F_1^2 + F_2^2 + 2F_1 F_2\cos\theta$$</p>
+<p>$$\vec{F} = \vec{F}_1 + \vec{F}_2$$</p>
+<p>这是矢量加法的基本运算法则，适用于所有矢量（力、速度、位移、加速度等）。</p>
+<h3>数学推导</h3>
+<p>设 $\vec{F}_1$ 和 $\vec{F}_2$ 夹角为 $\theta$，平行四边形对角线长度（合力大小）：</p>
+<p>由余弦定理：</p>
+<p>$$F^2 = F_1^2 + F_2^2 + 2F_1 F_2\cos\theta$$</p>
+<p>合力方向（与 $\vec{F}_1$ 夹角 $\alpha$）：</p>
+<p>$$\sin\alpha = \frac{F_2\sin\theta}{F}, \quad \tan\alpha = \frac{F_2\sin\theta}{F_1 + F_2\cos\theta}$$</p>
+<h3>特殊情形</h3>
+<table>
+<thead>
+<tr>
+<th>夹角 $\theta$</th>
+<th>合力大小</th>
+<th>合力方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0°$</td>
+<td>$F_1 + F_2$</td>
+<td>与两力相同</td>
+</tr>
+<tr>
+<td>$90°$</td>
+<td>$\sqrt{F_1^2+F_2^2}$</td>
+<td>$\arctan(F_2/F_1)$</td>
+</tr>
+<tr>
+<td>$120°$</td>
+<td>$\sqrt{F_1^2+F_2^2-F_1F_2}$</td>
+<td>视 $F_1,F_2$ 比例</td>
+</tr>
+<tr>
+<td>$180°$</td>
+<td>$</td>
+<td>F_1-F_2</td>
+</tr>
+<tr>
+<td>$F_1=F_2,\theta=60°$</td>
+<td>$F_1$</td>
+<td>两力夹角平分线</td>
+</tr>
+<tr>
+<td>$F_1=F_2,\theta=120°$</td>
+<td>$F_1$</td>
+<td>两力夹角平分线</td>
+</tr>
+</tbody>
+</table>
+<h3>实验验证</h3>
+<p><strong>橡皮筋实验</strong>：
+1. 将橡皮筋一端固定，另一端用两力 $F_1$、$F_2$ 拉到某点 $P$。
+2. 记录两力方向和大小，按平行四边形定则求合力 $F_{\text{理论}}$。
+3. 换用一个力 $F_{\text{实验}}$ 将橡皮筋拉到同一点 $P$。
+4. 比较 $F_{\text{理论}}$ 和 $F_{\text{实验}}$：大小和方向基本一致，验证定则。</p>
+<p><strong>误差来源</strong>：角度测量不精确、弹簧秤读数误差等。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$F_1=6\text{ N}$，$F_2=8\text{ N}$，夹角90°，求合力。</p>
+<p>$$F = \sqrt{6^2+8^2} = \sqrt{100} = 10\text{ N}$$</p>
+<p>方向：$\tan\alpha = \frac{8}{6} = \frac{4}{3}$，$\alpha \approx 53°$（与 $F_1$ 夹角）</p>
+<p><strong>例2</strong>：$F_1=F_2=F$，夹角120°，求合力。</p>
+<p>$$F_{\text{合}} = \sqrt{F^2+F^2+2F^2\cos120°} = \sqrt{2F^2-F^2} = F$$</p>
+<p>合力大小等于每个分力大小，方向沿两力夹角的平分线（等腰三角形）。</p>
+<p><strong>例3</strong>：合力为0的三力条件</p>
+<p>三力 $F_1=3\text{ N}$，$F_2=4\text{ N}$，$F_3=5\text{ N}$，可否平衡？</p>
+<p>验证：$3^2+4^2=25=5^2$，满足勾股定理，三力可以构成直角三角形，合力为0，<strong>可以平衡</strong>。</p>
+<h3>适用范围</h3>
+<p>平行四边形定则是<strong>所有矢量加法</strong>的通用法则：
+- 力的合成：$\vec{F} = \vec{F}_1 + \vec{F}_2$
+- 速度合成：$\vec{v} = \vec{v}_1 + \vec{v}_2$
+- 位移合成：$\vec{r} = \vec{r}_1 + \vec{r}_2$
+- 加速度合成（非惯性系）</p>
+<p><strong>标量</strong>不满足平行四边形定则（直接代数加）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>合力不是"大小之和"</strong>：$F \neq F_1 + F_2$（除非同向），矢量加法要用平行四边形。</li>
+<li><strong>合力大小范围</strong>：$|F_1-F_2| \leq F \leq F_1+F_2$，合力可以比任一分力小。</li>
+<li><strong>分解不唯一</strong>：同一力可以分解为不同的一对分力（平行四边形不唯一）。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中只处理同向/反向力（代数加减）。高中引入平行四边形定则，处理任意方向力的合成，是矢量运算的核心工具，贯穿整个高中物理。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第三章第4节，页码待家长核对）</li>
+<li><strong>百科</strong>：平行四边形定则 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/628-标量.html">标量</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/475-正交分解法.html">正交分解法</a></p>
+</li>
+<li>
+<p><a href="../atoms/212-力的合成-高中.html">力的合成-高中</a></p>
+</li>
+<li><a class="dead" title="未收录">力的分解</a></li>
+<li><a class="dead" title="未收录">三角形定则</a></li>
+<li><a href="../atoms/203-位移-矢量.html">位移-矢量</a></li>
+<li><a href="../atoms/208-共点力平衡.html">共点力平衡</a></li>
+<li><a class="dead" title="未收录">物体平衡条件</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2015-新课标Ⅱ-03.html">2015-新课标Ⅱ-03</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

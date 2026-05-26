@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同角三角函数关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>同角三角函数关系</h1><div class="review-mark" data-stem="293-同角三角函数关系"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 同角三角函数关系, Pythagorean identities, 同角关系式, 基本三角恒等式</p><h2>🎓 同角三角函数关系</h2>
+<h3>基本关系式</h3>
+<p>同一角 $\alpha$ 的三个基本三角函数之间，存在以下恒等关系（对定义域内所有 $\alpha$ 成立）：</p>
+<p><strong>商关系</strong>：</p>
+<p>$$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \quad (\cos\alpha \neq 0)$$</p>
+<p><strong>平方关系（毕达哥拉斯恒等式）</strong>：</p>
+<p>$$\sin^2\alpha + \cos^2\alpha = 1$$</p>
+<p><strong>由以上推导的变形</strong>：</p>
+<p>$$\sin^2\alpha = 1 - \cos^2\alpha$$</p>
+<p>$$\cos^2\alpha = 1 - \sin^2\alpha$$</p>
+<p>$$1 + \tan^2\alpha = \sec^2\alpha \quad (\cos\alpha \neq 0)$$</p>
+<p>$$1 + \cot^2\alpha = \csc^2\alpha \quad (\sin\alpha \neq 0)$$</p>
+<h3>推导</h3>
+<p>从单位圆定义：$P(x, y)$ 在单位圆 $x^2 + y^2 = 1$ 上，$\sin\alpha = y, \cos\alpha = x$，代入得：</p>
+<p>$$\sin^2\alpha + \cos^2\alpha = y^2 + x^2 = 1$$</p>
+<p>商关系：$\tan\alpha = \dfrac{y}{x} = \dfrac{y/1}{x/1} = \dfrac{\sin\alpha}{\cos\alpha}$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知 $\sin\alpha = \dfrac{4}{5}$，$\alpha \in (0, \pi)$，求 $\cos\alpha, \tan\alpha$。</p>
+<p>解：$\cos^2\alpha = 1 - \sin^2\alpha = 1 - \dfrac{16}{25} = \dfrac{9}{25}$，$\cos\alpha = \pm\dfrac{3}{5}$。</p>
+<p>$\alpha \in (0, \pi)$：$\sin\alpha &gt; 0$ 已知，但 $\cos\alpha$ 可正可负（$\alpha$ 可能在第一或第二象限）。</p>
+<p>由 $\sin\alpha = 4/5 &gt; 0$，$\alpha$ 在第一或第二象限（题目已给 $\alpha \in (0,\pi)$，第一或第二象限都有 $\sin &gt; 0$）。</p>
+<p>若无其他信息，$\cos\alpha = \pm\dfrac{3}{5}$ 均可能，需看 $\alpha$ 是在第一象限（$\cos &gt; 0$）还是第二象限（$\cos &lt; 0$）。题目仅给 $\alpha \in (0,\pi)$，不够确定。</p>
+<p>若题目另给 $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$（第二象限），则 $\cos\alpha = -\dfrac{3}{5}$，$\tan\alpha = \dfrac{4/5}{-3/5} = -\dfrac{4}{3}$。</p>
+<p><strong>例2</strong>：化简 $\dfrac{\sin^4\alpha - \cos^4\alpha}{\sin^2\alpha - \cos^2\alpha}$。</p>
+<p>解：分子平方差：$\sin^4\alpha - \cos^4\alpha = (\sin^2\alpha + \cos^2\alpha)(\sin^2\alpha - \cos^2\alpha) = 1 \cdot (\sin^2\alpha - \cos^2\alpha)$。</p>
+<p>故原式 $= \dfrac{\sin^2\alpha - \cos^2\alpha}{\sin^2\alpha - \cos^2\alpha} = 1$（当 $\sin^2\alpha \neq \cos^2\alpha$ 时）。</p>
+<p><strong>例3</strong>：已知 $\tan\alpha = 2$，求 $\dfrac{2\sin\alpha - \cos\alpha}{\sin\alpha + 3\cos\alpha}$。</p>
+<p>解：分子分母同除以 $\cos\alpha$：</p>
+<p>$$= \frac{2\tan\alpha - 1}{\tan\alpha + 3} = \frac{2 \times 2 - 1}{2 + 3} = \frac{3}{5}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$\sin^2\alpha$ 的写法</strong>：$(\sin\alpha)^2$ 写成 $\sin^2\alpha$，不能写成 $\sin\alpha^2$（后者表示 $\sin(\alpha^2)$，含义不同）</li>
+<li><strong>推导过程必须说明条件</strong>：用 $\sin^2+\cos^2=1$ 推 $\cos\alpha$ 时，需结合象限确定正负号</li>
+<li><strong>"同除 $\cos\alpha$" 前提</strong>：$\cos\alpha \neq 0$ 时才能除（$\tan\alpha$ 已知说明 $\cos\alpha \neq 0$，可以除）</li>
+<li><strong>$1 + \tan^2\alpha = \sec^2\alpha$ 的条件</strong>：$\cos\alpha \neq 0$，即 $\alpha \neq \pi/2 + k\pi$</li>
+<li><strong>平方恒等式变形</strong>：$(\sin\alpha + \cos\alpha)^2 = 1 + 2\sin\alpha\cos\alpha \neq 1$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了勾股定理 $a^2 + b^2 = c^2$ 以及锐角的 $\sin^2\theta + \cos^2\theta = 1$（在直角三角形中，对边和邻边的平方和等于斜边平方，除以斜边平方即得）。高中将此恒等式推广到任意角，并成为三角化简与证明的基础工具。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：毕达哥拉斯恒等式（Pythagorean identities），三角恒等式</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/309-正弦余弦正切定义.html">正弦余弦正切定义</a></li>
+<li><a class="dead" title="未收录">单位圆</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+<li><a href="../atoms/274-两角和差正余弦.html">两角和差正余弦</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a class="dead" title="未收录">262-解直角三角形</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-09.html">2009-文-09</a></li>
+<li><a href="../exam/数学/2013-文-06.html">2013-文-06</a></li>
+<li><a href="../exam/数学/2017-理-12.html">2017-理-12</a></li>
+<li><a href="../exam/数学/2017-理-14.html">2017-理-14</a></li>
+<li><a href="../exam/数学/2019-理-17.html">2019-理-17</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-04</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-15</a></li>
+<li><a href="../exam/数学/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互感</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>互感</h1><div class="review-mark" data-stem="377-互感"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 互感, mutual induction</p><h2>🎓 互感（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>互感</strong>（mutual induction）是指两个相邻线圈（或回路）之间，由于一个线圈中电流变化，引起穿过另一个线圈的磁通量变化，从而在另一个线圈中产生感应电动势的现象。</p>
+<h3>互感电动势</h3>
+<p>$$\varepsilon_2 = M\frac{\Delta I_1}{\Delta t}$$</p>
+<p>其中：
+- $M$：互感系数（H，亨利），描述两线圈耦合程度
+- $\Delta I_1$：初级线圈（线圈1）的电流变化量
+- $\Delta t$：时间间隔</p>
+<p>互感系数 $M$ 取决于两线圈的几何形状、相对位置以及铁芯等因素，与各自的自感系数有关：$M \leq \sqrt{L_1 L_2}$（等号为完全耦合时）。</p>
+<h3>与自感的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>自感</th>
+<th>互感</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>影响的线圈</td>
+<td>自身</td>
+<td>另一线圈</td>
+</tr>
+<tr>
+<td>公式</td>
+<td>$\varepsilon = L\Delta I/\Delta t$</td>
+<td>$\varepsilon_2 = M\Delta I_1/\Delta t$</td>
+</tr>
+<tr>
+<td>典型应用</td>
+<td>日光灯镇流器</td>
+<td>变压器、无线充电</td>
+</tr>
+<tr>
+<td>本质</td>
+<td>自身磁通量变化</td>
+<td>耦合磁通量变化</td>
+</tr>
+</tbody>
+</table>
+<h3>变压器的本质</h3>
+<p>变压器正是利用互感原理工作的：</p>
+<ul>
+<li>初级线圈（一次侧）通交流电 → 铁芯中产生交变磁通量</li>
+<li>铁芯将磁通量传递至次级线圈（二次侧）</li>
+<li>次级线圈中产生互感电动势（感应电压）</li>
+</ul>
+<p>$$\frac{U_1}{U_2} = \frac{N_1}{N_2}$$（理想变压器，完全耦合）</p>
+<h3>互感的应用</h3>
+<ol>
+<li><strong>变压器</strong>：最重要的互感应用，改变交流电压（升压/降压）</li>
+<li><strong>无线充电</strong>：发射线圈和接收线圈之间的互感传输电能</li>
+<li><strong>电流互感器</strong>：测量大电流（不直接接入电路，通过互感采样）</li>
+<li><strong>感应加热</strong>：工业高频加热设备</li>
+</ol>
+<h3>互感的不利影响</h3>
+<p>在电子电路中，相邻导线或线圈之间的互感会引起<strong>串扰</strong>（crosstalk），是电磁干扰（EMI）的来源之一，需要通过屏蔽、垂直布线等方式减小。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：两线圈互感系数 $M = 0.1$ H，线圈1中电流在 $\Delta t = 0.02$ s 内从 $5$ A 减小到 $1$ A，求线圈2中的互感电动势大小。</p>
+<p>$$|\Delta I_1| = 5 - 1 = 4\text{ A}$$
+$$\varepsilon_2 = M\frac{|\Delta I_1|}{\Delta t} = 0.1 \times \frac{4}{0.02} = 20\text{ V}$$</p>
+<h3>易错点</h3>
+<ol>
+<li>互感系数 $M$ 不是定值——改变两线圈的相对位置，$M$ 就改变。</li>
+<li>互感电动势的<strong>方向</strong>也需用楞次定律判断（阻碍引起感应的磁通量变化）。</li>
+<li>变压器空载（次级开路）时，次级有电动势但无电流；接负载后才有电流。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：互感 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/411-自感.html">自感</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">交变电流</a></p>
+</li>
+<li>
+<p><a href="../atoms/411-自感.html">自感</a></p>
+</li>
+<li><a href="../atoms/412-自感系数.html">自感系数</a></li>
+<li><a href="../atoms/381-变压器.html">变压器</a></li>
+<li><a class="dead" title="未收录">理想变压器</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+<li><a class="dead" title="未收录">电磁波-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2024-北京-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

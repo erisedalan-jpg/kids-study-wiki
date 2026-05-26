@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>示波管</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>示波管</h1><div class="review-mark" data-stem="326-示波管"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 静电场深化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 示波管, cathode ray tube, CRT, 阴极射线管</p><h2>🎓 示波管（Cathode Ray Tube）</h2>
+<h3>结构组成</h3>
+<p>示波管（阴极射线管）由以下部件组成：</p>
+<table>
+<thead>
+<tr>
+<th>部件</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电子枪</strong></td>
+<td>产生高速电子束（阴极加热发射电子，加速阳极加速）</td>
+</tr>
+<tr>
+<td><strong>竖直偏转板（Y 轴）</strong></td>
+<td>使电子束竖直偏转（通常接待测信号）</td>
+</tr>
+<tr>
+<td><strong>水平偏转板（X 轴）</strong></td>
+<td>使电子束水平偏转（通常接锯齿波扫描信号）</td>
+</tr>
+<tr>
+<td><strong>荧光屏</strong></td>
+<td>电子轰击后发光，显示波形</td>
+</tr>
+<tr>
+<td><strong>真空管壁</strong></td>
+<td>维持高真空，防止电子与气体分子碰撞</td>
+</tr>
+</tbody>
+</table>
+<h3>工作原理</h3>
+<ol>
+<li><strong>产生电子束</strong>：阴极加热后发射热电子，经阳极高压加速（利用 <a class="dead" title="未收录">带电粒子在电场中加速</a> 原理）。</li>
+<li><strong>竖直偏转</strong>：Y 轴偏转板加载待测电压，电子束在竖直方向产生偏转（利用 <a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中偏转</a> 原理）。</li>
+<li><strong>水平扫描</strong>：X 轴偏转板加载周期性锯齿波，使电子束在水平方向匀速扫过屏幕。</li>
+<li><strong>显示波形</strong>：两个方向运动合成，在荧光屏上描出随时间变化的电压波形。</li>
+</ol>
+<h3>加速电压与电子速度</h3>
+<p>电子（$m_e = 9.11\times10^{-31}\,\text{kg}$，$e = 1.6\times10^{-19}\,\text{C}$）经加速电压 $U_a$ 后：</p>
+<p>$$v = \sqrt{\frac{2eU_a}{m_e}}$$</p>
+<h3>偏转灵敏度</h3>
+<p>偏转灵敏度定义为：单位偏转电压产生的屏幕偏移量（mm/V）。</p>
+<p>$$S = \frac{y}{U} = \frac{Ll}{2dU_a}$$</p>
+<p>其中 $L$ 为偏转板长度，$l$ 为偏转板末端到屏的距离，$d$ 为板间距，$U_a$ 为加速电压。</p>
+<p>提高灵敏度：增大 $L$、$l$，减小 $d$ 和 $U_a$（但 $U_a$ 减小会使亮度降低）。</p>
+<h3>历史与现代替代</h3>
+<p>示波管是 20 世纪电子仪器的核心，广泛用于电视机（CRT 电视）、雷达显示器、早期计算机显示器。现已被<strong>液晶显示器（LCD）</strong>和<strong>有机发光二极管（OLED）</strong>基本取代，但示波管在物理教学和部分专业示波器中仍在使用。</p>
+<h3>易错点</h3>
+<ul>
+<li>示波管中电子做的是<strong>类平抛运动</strong>，而非圆周运动（磁偏转才是圆周运动）。</li>
+<li>加速电压 $U_a$ 越高，电子速度越大，偏转角越小（灵敏度降低，但亮度增加）。</li>
+<li>真空是必要条件，否则电子与空气分子碰撞，无法形成清晰电子束。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了运动的合成与分解、功能定理；示波管将加速（能量转换）和偏转（类平抛）两个知识点综合应用，是静电场知识的综合体现。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/阴极射线管">维基百科·阴极射线管</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">带电粒子在电场中加速</a></li>
+<li><a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中偏转</a></li>
+<li><a class="dead" title="未收录">电势差与电场强度关系</a></li>
+<li><a class="dead" title="未收录">静电屏蔽</a></li>
+<li><a class="dead" title="未收录">质谱仪</a></li>
+<li><a class="dead" title="未收录">回旋加速器</a></li>
+</ul>
+</div>
+</body>
+</html>

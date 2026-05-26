@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单位换算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>单位换算</h1><div class="review-mark" data-stem="547-单位换算"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 单位换算, unit conversion</p><h1>单位换算</h1>
+<blockquote>
+<p><strong>一句话</strong>：单位换算是将同一物理量的数值从一种单位表示变换为另一种单位表示的运算，核心是建立不同单位间的等价比例关系。
+<strong>English</strong>: Unit conversion is the process of converting the numerical value of a physical quantity from one unit of measurement to another, based on established equivalence ratios between units.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+单位换算的根据是物理量的量值不变：$n_1 [U_1] = n_2 [U_2]$，其中 $n$ 为数值，$[U]$ 为单位。若两单位关系为 $1\ \text{ U}_2 = k\ \text{ U}_1$，则 $n_2 = n_1 / k$。
+在高考物理中，所有运算都要求使用国际单位制（SI）。力学选基本量（长度、质量、时间），导出单位如 $1\ \text{N} = 1\ \text{kg·m/s}^2$；电学中 $1\ \text{V} = 1\ \text{J/C} = 1\ \text{kg·m}^2/(\text{A·s}^3)$。复合单位的换算必须对每个组成单位分别换算，例如速度 $1\ \text{km/h} = \frac{1000\ \text{m}}{3600\ \text{s}} = \frac{5}{18}\ \text{m/s}$。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>量纲检验法</strong>：利用物理量量纲判定表达式正误。如匀变速位移公式必须是$[L] = [L/T^2]\cdot[T^2]$，量纲匹配才可能正确。<br />
+2. <strong>统一单位再计算</strong>：高考计算题中，各物理量必须统一为SI单位（m、kg、s、A、K、mol、cd）。若题目中给出数据单位不统一，第一步即换算成标准单位。<br />
+3. <strong>比例换算法</strong>：熟记常见换算因子，如 $1\ \text{m/s} = 3.6\ \text{km/h}$，$1\ \text{g/cm}^3 = 1000\ \text{kg/m}^3$，$1\ \text{kWh} = 3.6\times10^6\ \text{J}$。写出换算关系，再约分数字，避免盲目乘除。</p>
+<p><strong>典型应用</strong><br />
+- <strong>选择题常见设问</strong>：给出几个用基本单位表示的导出单位表达式，判断哪一个是力的单位（$\text{kg·m/s}^2$）、功的单位（$\text{kg·m}^2/\text{s}^2$）等。<br />
+- <strong>计算题隐性考查</strong>：如电源电动势 $E=12\ \text{V}$，内阻 $r=0.5\ \Omega$，外电阻 $R=10\ \Omega$，计算电流 $I$。看似直接代入，但若题目中某量单位用了“mV”或“kΩ”，必须先换算为V和Ω。典型失分：电路功率 $P = \frac{U^2}{R}$ 中，$U$ 用 “kV” 代入却忘记换算。<br />
+- <strong>电能单位转换</strong>：$1\ \text{kWh} = 3.6\times10^6\ \text{J}$，常用于电功与热功换算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>速度换算方向错误</strong>：不少学生错误记为 $1\ \text{m/s} = 0.28\ \text{km/h}$，实际应为 $1\ \text{m/s} = 3.6\ \text{km/h}$，混淆了乘除关系。  </li>
+<li><strong>面积、体积单位幂次忽略</strong>：$1\ \text{cm}^2 = (10^{-2}\ \text{m})^2 = 10^{-4}\ \text{m}^2$，而不是 $10^{-2}\ \text{m}^2$；$1\ \text{L} = 1\ \text{dm}^3 = 10^{-3}\ \text{m}^3$。  </li>
+<li><strong>密度单位换算遗漏整体因子</strong>：$1\ \text{g/cm}^3 = 1000\ \text{kg/m}^3$，有些学生只照顾了质量单位未处理体积，得 $10^{-3}\ \text{kg/m}^3$。  </li>
+<li><strong>电学单位混用</strong>：如将电容 “μF” 误当作 “10^{-3} F”，正确为 $10^{-6}\ \text{F}$；电感 “mH” 误作 $10^3\ \text{H}$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国际单位制</td>
+<td>International System of Units (SI)</td>
+<td>七个基本单位及其导出单位体系</td>
+</tr>
+<tr>
+<td>基本单位</td>
+<td>base unit</td>
+<td>长度(m)、质量(kg)、时间(s)等</td>
+</tr>
+<tr>
+<td>导出单位</td>
+<td>derived unit</td>
+<td>由基本单位组合而成，如牛(N)=kg·m/s²</td>
+</tr>
+<tr>
+<td>量纲</td>
+<td>dimension</td>
+<td>表示物理量与基本量的指数关系，如$[v]=\text{LT}^{-1}$</td>
+</tr>
+<tr>
+<td>换算因子</td>
+<td>conversion factor</td>
+<td>单位转换时的数值比例，如1 km/h = 5/18 m/s</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/306-物理量单位制-高中.html">国际单位制</a></li>
+<li><a class="dead" title="未收录">力学单位制</a></li>
+<li><a class="dead" title="未收录">量纲分析</a></li>
+<li><a class="dead" title="未收录">物理量的测量</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-05.html">2020-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

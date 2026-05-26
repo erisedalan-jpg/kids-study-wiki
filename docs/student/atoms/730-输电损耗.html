@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>输电损耗</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>输电损耗</h1><div class="review-mark" data-stem="730-输电损耗"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 输电损耗, transmission loss</p><h1>输电损耗</h1>
+<blockquote>
+<p><strong>一句话</strong>：输电损耗是指远距离输送电能时，电流通过有电阻的输电线所产生的焦耳热功率损失，常用 $P_{\text{损}} = I^2R_{\text{线}}$ 计算。
+<strong>English</strong>: Transmission loss is the power dissipated as Joule heat when current flows through resistive power lines in long‑distance electricity transmission, commonly calculated as $P_{\text{loss}} = I^2 R_{\text{line}}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：输电线存在电阻 $R_{\text{线}}$，当电流 $I$ 流过时，根据焦耳定律，线路上单位时间发热损耗的功率为 $P_{\text{损}} = I^2 R_{\text{线}}$。在远距离输电模型中，若发电厂输送的总功率为 $P$，升压变压器副边（输电端）电压为 $U_\text{输}$，则输电电流 $I = \frac{P}{U_\text{输}}$，代入上式得 $P_{\text{损}} = \left(\frac{P}{U_\text{输}}\right)^2 R_{\text{线}}$。线路上的电压损失为 $U_{\text{损}} = I R_{\text{线}}$。功率关系满足：$P_{\text{输送}} = P_{\text{用户}} + P_{\text{损}}$，电压关系：$U_{\text{输}} = U_{\text{损}} + U_{\text{降}}$（降压变压器原边电压）。</p>
+<p><strong>关键方法</strong>：分析远距离输电问题必须画出“发电厂→升压变压器→输电线（带电阻）→降压变压器→用户”的电路示意图。解题步骤：
+1. 利用理想变压器规律 $\frac{U_1}{U_2}=\frac{n_1}{n_2}$、$I_1 n_1 = I_2 n_2$、$P_1 = P_2$，分别对升压和降压变压器建立原副线圈的电压、电流关系；
+2. 在输电线回路中，使用 $P_{\text{损}} = I_{\text{线}}^2 R_{\text{线}}$ 和 $U_{\text{损}} = I_{\text{线}} R_{\text{线}}$，注意 $I_{\text{线}}$ 即升压变压器副边电流（也是降压变压器原边电流）；
+3. 用户端功率 $P_{\text{用}} = U_{\text{用}} I_{\text{用}}$，效率 $\eta = \frac{P_{\text{用}}}{P_{\text{输送}}}$。</p>
+<p><strong>典型应用</strong>：高考题常给出升压、降压变压器的匝数比、输送功率、线路电阻，要求计算：①输电线损耗的功率；②用户得到的电压和功率；③输电效率。例如，一台发电机输出功率 100 kW，输出电压 250 V，经匝数比为 1:20 的升压变压器升压后，用总电阻为 10 Ω 的输电线送电，再经匝数比为 20:1 的降压变压器给用户供电，求用户端功率。这时必须依次求出升压后电压、线路电流、损失功率，再反推降压变压器输入功率。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误套公式 $P_{\text{损}} = U^2 / R_{\text{线}}$ 时用错电压</strong>：公式中的 $U$ 只能是线路损失的电压 $U_{\text{损}}$，绝不能直接代入输电端电压 $U_\text{输}$，否则会严重夸大损耗。</li>
+<li><strong>混淆输送功率与用户功率</strong>：将升压变压器输出功率全部当作降压变压器输入功率，忽略线路损耗，导致用户功率计算错误。</li>
+<li><strong>在动态变化时忽视电流主导</strong>：当用户端负载增加（并联用电器增多）时，降压变压器输出电流增大，输电线上电流 $I_{\text{线}}$ 随之增大，损耗会明显上升，而很多同学误以为输电电压恒定则损耗不变。</li>
+<li><strong>变压器匝数比与线路电流的对应关系搞反</strong>：升压变压器升高电压、减小电流，该减小后的电流就是输电电流；若匝数比代入错误，会错算 $I_{\text{线}}$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输电损耗</td>
+<td>transmission loss</td>
+<td>电能在输电线上的焦耳热功率损失</td>
+</tr>
+<tr>
+<td>线路电阻</td>
+<td>line resistance</td>
+<td>输电线总电阻，用 $R_{\text{线}}$ 表示</td>
+</tr>
+<tr>
+<td>功率损耗</td>
+<td>power loss</td>
+<td>线路因发热而消耗的功率</td>
+</tr>
+<tr>
+<td>远距离输电</td>
+<td>long‑distance power transmission</td>
+<td>利用高压减小输电损耗的技术</td>
+</tr>
+<tr>
+<td>升压变压器</td>
+<td>step‑up transformer</td>
+<td>升高电压、减小电流以降低线损</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/381-变压器.html">变压器</a></li>
+<li><a href="../atoms/414-远距离输电.html">远距离输电</a></li>
+<li><a href="../atoms/154-焦耳定律.html">焦耳定律</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+<li><a class="dead" title="未收录">交变电流</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-06.html">2020-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

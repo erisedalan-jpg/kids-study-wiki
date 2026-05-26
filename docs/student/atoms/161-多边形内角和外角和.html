@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多边形内角和外角和</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>多边形内角和外角和</h1><div class="review-mark" data-stem="161-多边形内角和外角和"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 三角形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 多边形内角和外角和, polygon interior and exterior angle sum, 多边形角和, 多边形内角和</p><h1>多边形内角和外角和</h1>
+<blockquote>
+<p><strong>课本定义</strong>：$n$ 边形的内角和等于 $(n-2) \times 180°$；任意凸多边形的外角和等于 360°。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>内角和公式</h3>
+<p>你知道三角形内角和是 180°，那四边形、五边形呢？</p>
+<p>秘诀：把多边形从一个顶点出发<strong>分割成三角形</strong>！</p>
+<table>
+<thead>
+<tr>
+<th>多边形</th>
+<th>能分成几个三角形</th>
+<th>内角和</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三角形（3边）</td>
+<td>1</td>
+<td>$1 \times 180° = 180°$</td>
+</tr>
+<tr>
+<td>四边形（4边）</td>
+<td>2</td>
+<td>$2 \times 180° = 360°$</td>
+</tr>
+<tr>
+<td>五边形（5边）</td>
+<td>3</td>
+<td>$3 \times 180° = 540°$</td>
+</tr>
+<tr>
+<td>六边形（6边）</td>
+<td>4</td>
+<td>$4 \times 180° = 720°$</td>
+</tr>
+<tr>
+<td>$n$ 边形</td>
+<td>$n-2$</td>
+<td>$(n-2) \times 180°$</td>
+</tr>
+</tbody>
+</table>
+<p>规律：每增加一条边，内角和增加 180°。</p>
+<h3>外角和定理</h3>
+<p>多边形每个内角旁边都有一个外角（内角 + 外角 = 180°）。</p>
+<p><strong>神奇结论</strong>：无论多边形有多少条边，所有外角之和总是 <strong>360°</strong>！</p>
+<p>想象一只蚂蚁沿多边形走一圈，每到一个顶点就转一个外角的角度，走完一圈恰好转了 360°。</p>
+<h3>特殊情况：正多边形</h3>
+<p>正 $n$ 边形（各边相等、各角相等）：
+- 每个内角 = $\dfrac{(n-2) \times 180°}{n}$
+- 每个外角 = $\dfrac{360°}{n}$</p>
+<p>正六边形每个内角 = $(6-2) \times 180° \div 6 = 120°$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>内角和公式推导</h3>
+<p><strong>方法</strong>：从 $n$ 边形内一顶点 $A_1$，向其余不相邻顶点连对角线，得到 $n-2$ 个三角形，各三角形内角之和即为多边形内角和：</p>
+<p>$$S_{\text{内}} = (n-2) \times 180°$$</p>
+<p><strong>另一方法</strong>（内部一点）：多边形内任取一点 $O$，连接各顶点得 $n$ 个三角形，内角和总计 $n \times 180°$，减去 $O$ 点处角之和（一圈 $360°$）：</p>
+<p>$$S_{\text{内}} = n \times 180° - 360° = (n-2) \times 180°$$</p>
+<h3>外角和证明</h3>
+<p>凸多边形各内角之和为 $(n-2) \times 180°$，各外角之和：</p>
+<p>$$S_{\text{外}} = n \times 180° - S_{\text{内}} = n \times 180° - (n-2) \times 180° = 360°$$</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：一个多边形的内角和为 1080°，求它是几边形。</p>
+<p>解：$(n-2) \times 180° = 1080°$，$n - 2 = 6$，$n = 8$</p>
+<p>∴ 是<strong>八边形</strong>。</p>
+<p><strong>例题 2</strong>：正多边形的每个内角为 150°，求它是几边形。</p>
+<p>解：每个外角 = $180° - 150° = 30°$</p>
+<p>边数 $n = \dfrac{360°}{30°} = 12$</p>
+<p>∴ 是<strong>正十二边形</strong>。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>公式适用于凸多边形</strong>：凹多边形内角和公式形式上相同，但"内角"定义需小心（有的内角 &gt; 180°）。</li>
+<li><strong>外角和恒为 360°</strong> 与边数无关，这是一个常被忽视的有力工具。</li>
+<li>注意"正多边形的内角"不能超过 180°，所以正多边形只有有限种可密铺平面的（3、4、6边形）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/147-三角形内角和.html">三角形内角和</a>：多边形内角和的基础</li>
+<li>→ <a href="../atoms/149-三角形外角.html">三角形外角</a>：外角和定理的推广</li>
+<li>→ <a href="../atoms/174-轴对称图形.html">轴对称图形</a>：正多边形具有多条对称轴</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多边形</td>
+<td>polygon</td>
+</tr>
+<tr>
+<td>内角</td>
+<td>interior angle</td>
+</tr>
+<tr>
+<td>外角</td>
+<td>exterior angle</td>
+</tr>
+<tr>
+<td>内角和</td>
+<td>sum of interior angles</td>
+</tr>
+<tr>
+<td>外角和</td>
+<td>sum of exterior angles</td>
+</tr>
+<tr>
+<td>正多边形</td>
+<td>regular polygon</td>
+</tr>
+<tr>
+<td>凸多边形</td>
+<td>convex polygon</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十一章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中数学知识点全梳理》图形部分</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/147-三角形内角和.html">三角形内角和</a></li>
+<li><a href="../atoms/149-三角形外角.html">三角形外角</a></li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+<li><a href="../atoms/174-轴对称图形.html">轴对称图形</a></li>
+<li><a href="../atoms/172-等边三角形.html">等边三角形</a></li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+</ul>
+</div>
+</body>
+</html>

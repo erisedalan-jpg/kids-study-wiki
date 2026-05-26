@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次根式定义</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次根式定义</h1><div class="review-mark" data-stem="184-二次根式定义"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 二次根式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次根式定义, quadratic radical, 根式, 二次根式</p><h1>二次根式定义</h1>
+<blockquote>
+<p><strong>一句话</strong>：形如 $\sqrt{a}$（$a \geq 0$）的式子叫做二次根式，其中 $a$ 称为被开方数。
+<strong>English</strong>: An expression of the form $\sqrt{a}$ ($a \geq 0$) is called a quadratic radical (square root expression).</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>从"开平方"回忆起步</h3>
+<p>你在七年级学过：$4$ 的平方根是 $\pm 2$，其中正的那个写作 $\sqrt{4}=2$。</p>
+<p><strong>二次根式</strong>就是把被开方数换成"含有字母的代数式"后得到的新式子，例如：</p>
+<table>
+<thead>
+<tr>
+<th>式子</th>
+<th>是否二次根式</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\sqrt{5}$</td>
+<td>✅</td>
+<td>被开方数 5 ≥ 0</td>
+</tr>
+<tr>
+<td>$\sqrt{x}$</td>
+<td>✅（当 $x \geq 0$ 时）</td>
+<td>被开方数含字母</td>
+</tr>
+<tr>
+<td>$\sqrt{x^2+1}$</td>
+<td>✅</td>
+<td>$x^2+1 \geq 1 &gt; 0$ 恒成立</td>
+</tr>
+<tr>
+<td>$\sqrt{-3}$</td>
+<td>❌</td>
+<td>被开方数为负，无实数意义</td>
+</tr>
+<tr>
+<td>$\sqrt[3]{a}$</td>
+<td>❌</td>
+<td>这是三次根式，不是二次根式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键记忆</strong>：二次根式有意义的前提 → <strong>被开方数 $\geq 0$</strong>。</p>
+<h3>求被开方数范围</h3>
+<p><strong>例</strong>：$\sqrt{2x-1}$ 有意义，求 $x$ 的范围。</p>
+<p>解：令 $2x - 1 \geq 0$，解得 $x \geq \dfrac{1}{2}$。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p>设 $a$ 是代数式，若 $a \geq 0$，则称 $\sqrt{a}$ 为<strong>二次根式</strong>，读作"根号 $a$"，$a$ 叫被开方数，$\sqrt{\phantom{a}}$ 叫根号。</p>
+<p><strong>非负性（最核心性质）</strong>：$\sqrt{a} \geq 0$（对一切有意义的 $a$）。</p>
+<p><strong>算术平方根</strong>：$\sqrt{a^2} = |a|$，注意不是简单地等于 $a$！</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：已知 $\sqrt{x-2} + \sqrt{3-x}$ 有意义，求 $x$ 的值。</p>
+<p>解：
+$$\begin{cases} x-2 \geq 0 \ 3-x \geq 0 \end{cases} \Rightarrow \begin{cases} x \geq 2 \ x \leq 3 \end{cases} \Rightarrow 2 \leq x \leq 3$$</p>
+<p><strong>例 2</strong>：化简 $\sqrt{(a-3)^2}$，分 $a \geq 3$ 和 $a &lt; 3$ 两种情况讨论。</p>
+<p>解：$\sqrt{(a-3)^2} = |a-3| = \begin{cases} a-3, &amp; a \geq 3 \ 3-a, &amp; a &lt; 3 \end{cases}$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 认为 $\sqrt{x^2} = x$（忘记取绝对值）</li>
+<li>❌ 忘记被开方数须 $\geq 0$ 的限制条件</li>
+<li>❌ 把 $\sqrt[3]{a}$ 也当作二次根式</li>
+</ul>
+<h3>知识联系</h3>
+<p>$\sqrt{a}$ 的非负性 → <a class="dead" title="未收录">二次根式性质</a> → <a href="../atoms/183-二次根式化简.html">二次根式化简</a>；被开方数范围 → 与<a href="../atoms/083-不等式.html">不等式</a>联动；$\sqrt{a^2}=|a|$ → 联结<a href="../atoms/078-负数.html">绝对值</a>。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二次根式</td>
+<td>quadratic radical / square root expression</td>
+</tr>
+<tr>
+<td>被开方数</td>
+<td>radicand</td>
+</tr>
+<tr>
+<td>根号</td>
+<td>radical sign</td>
+</tr>
+<tr>
+<td>算术平方根</td>
+<td>principal square root</td>
+</tr>
+<tr>
+<td>非负性</td>
+<td>non-negativity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第16章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·实数</li>
+<li>拓展：<a class="dead" title="未收录">数学/立方根</a> · <a class="dead" title="未收录">数学/绝对值</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，概念定义依据人教版八下第16章，请家长对照实体教材核实例题页码。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/198-方差.html">方差</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/182-二次根式加减.html">二次根式加减</a></li>
+</ul>
+<p><a class="dead" title="未收录">二次根式性质</a> · <a class="dead" title="未收录">二次根式乘除</a> · <a href="../atoms/182-二次根式加减.html">二次根式加减</a> · <a href="../atoms/183-二次根式化简.html">二次根式化简</a> · <a href="../atoms/078-负数.html">绝对值</a> · <a href="../atoms/140-立方根.html">立方根</a> · <a href="../atoms/083-不等式.html">不等式</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点线面体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>点线面体</h1><div class="review-mark" data-stem="103-点线面体"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七上, 几何初步]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 点线面体, point line plane solid, 几何基本元素, 点线面</p><h2>课本一句话定义</h2>
+<p><strong>点、线、面、体</strong>是几何图形的基本元素：体由面围成，面与面相交成线，线与线相交成点；点动成线，线动成面，面动成体。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>几何从最基本的"积木"开始：</p>
+<ul>
+<li><strong>点</strong>：最小的元素，只有位置，没有大小（像笔尖点一下）</li>
+<li><strong>线</strong>：点运动的轨迹，只有长度，没有宽度（像铅笔画的线）</li>
+<li><strong>面</strong>：线运动的轨迹，有面积，没有厚度（像一张纸）</li>
+<li><strong>体</strong>：面围成的空间，有长、宽、高（像一个盒子）</li>
+</ul>
+<p><strong>从小到大的关系</strong>（"运动"规律）：
+$$\text{点} \xrightarrow{\text{动}} \text{线} \xrightarrow{\text{动}} \text{面} \xrightarrow{\text{动}} \text{体}$$</p>
+<ul>
+<li>铅笔尖点一下 → <strong>点</strong></li>
+<li>铅笔滑过去 → <strong>线</strong>（点的轨迹）</li>
+<li>刷子刷过去 → <strong>面</strong>（线的轨迹）</li>
+<li>面堆叠起来 → <strong>体</strong>（面的轨迹）</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>四种基本元素</h3>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>定义</th>
+<th>维度</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点（point）</td>
+<td>没有大小，只有位置</td>
+<td>0 维</td>
+<td>用大写字母 $A$、$B$、$O$ 标记</td>
+</tr>
+<tr>
+<td>线（line/curve）</td>
+<td>没有宽度，有长度（或方向）</td>
+<td>1 维</td>
+<td>直线/线段/射线/曲线</td>
+</tr>
+<tr>
+<td>面（surface）</td>
+<td>没有厚度，有面积</td>
+<td>2 维</td>
+<td>平面/曲面</td>
+</tr>
+<tr>
+<td>体（solid）</td>
+<td>有长、宽、高，占空间</td>
+<td>3 维</td>
+<td>多面体/旋转体</td>
+</tr>
+</tbody>
+</table>
+<h3>维度递推</h3>
+<p>$$\text{点（0D）} \to \text{线（1D）} \to \text{面（2D）} \to \text{体（3D）}$$</p>
+<p>每次"运动"增加一个维度：
+- 点沿方向运动 → 线
+- 线沿垂直方向运动 → 面
+- 面沿法向量运动 → 体</p>
+<h3>相交关系</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面与面相交</td>
+<td>交线（一条直线或曲线）</td>
+</tr>
+<tr>
+<td>线与线相交</td>
+<td>交点（一个点）</td>
+</tr>
+<tr>
+<td>线与面相交</td>
+<td>交点（一个点）</td>
+</tr>
+<tr>
+<td>体的面围合</td>
+<td>封闭空间（体）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：从正方体的棱、顶点、面来理解"点线面体"。</p>
+<p><strong>解</strong>：
+- <strong>体</strong>：正方体本身（三维）
+- <strong>面</strong>：正方体的 6 个面（二维，面与面围成体）
+- <strong>棱</strong>：12 条棱（一维，面与面的交线）
+- <strong>顶点</strong>：8 个顶点（零维，棱与棱的交点）</p>
+<p><strong>例 2</strong>："点动成线"的实际例子。</p>
+<p><strong>解</strong>：① 陀螺旋转，边缘的点运动形成圆（线）；② 扫描仪逐行扫描，点列构成图像线；③ 子弹飞行轨迹，是点运动形成的线段。</p>
+<p><strong>例 3</strong>："线动成面"的实际例子。</p>
+<p><strong>解</strong>：① 雨刮器来回运动，形成扇形面；② 推门，门边线动成扇面；③ 圆规一条腿固定，另一条腿运动，铅笔末端（点）→ 圆（线），而整个运动过程"线"→ 扇面。</p>
+<h3>与欧几里得几何的联系</h3>
+<p>古希腊数学家欧几里得在《几何原本》中将"点"、"线"、"面"作为不可定义的基本概念（原始概念），通过公理体系推导所有几何结论。这种"公理化"方法影响了整个现代数学的基础。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>几何中的点和线是抽象的</strong>：没有大小和宽度，与实物点和线不同。</li>
+<li><strong>"面"包括曲面</strong>：球面是面（曲面），不只有平面。</li>
+<li><strong>0 维不是"不存在"</strong>：点有位置，只是没有延伸的维度。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：几何图形、立体图形（应用级别）</li>
+<li>后续：线段、射线、直线的区分 → 角的定义（射线）→ 平面几何</li>
+<li>高中拓展：空间中点线面的位置关系（立体几何）→ 向量（方向+长度）→ 拓扑学（更抽象的几何）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点</td>
+<td>point</td>
+<td>0 维，只有位置</td>
+</tr>
+<tr>
+<td>线</td>
+<td>line / curve</td>
+<td>1 维，有长度</td>
+</tr>
+<tr>
+<td>面</td>
+<td>plane / surface</td>
+<td>2 维，有面积</td>
+</tr>
+<tr>
+<td>体</td>
+<td>solid / body</td>
+<td>3 维，占空间</td>
+</tr>
+<tr>
+<td>维度</td>
+<td>dimension</td>
+<td>空间的扩展方向数</td>
+</tr>
+<tr>
+<td>交线</td>
+<td>intersection line</td>
+<td>两面相交形成的线</td>
+</tr>
+<tr>
+<td>交点</td>
+<td>intersection point</td>
+<td>两线相交形成的点</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点动成线，线动成面，面动成体。</td>
+<td>A moving point traces a line; a moving line traces a surface; a moving surface traces a solid.</td>
+</tr>
+<tr>
+<td>面与面的交集是一条线。</td>
+<td>The intersection of two planes is a line.</td>
+</tr>
+<tr>
+<td>几何图形由点、线、面、体构成。</td>
+<td>Geometric figures are composed of points, lines, surfaces, and solids.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"图形与几何"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第四章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Point (geometry)；Line (geometry)；Plane (mathematics)</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/085-几何图形.html">几何图形</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/028-线段.html">线段</a></p>
+</li>
+<li>
+<p><a href="../atoms/085-几何图形.html">几何图形</a></p>
+</li>
+<li><a href="../atoms/107-立体图形.html">立体图形</a></li>
+<li><a href="../atoms/028-线段.html">线段</a></li>
+<li><a href="../atoms/090-射线.html">射线</a></li>
+<li><a href="../atoms/104-直线.html">直线</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+</ul>
+</div>
+</body>
+</html>

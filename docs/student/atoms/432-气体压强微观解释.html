@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>气体压强微观解释</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>气体压强微观解释</h1><div class="review-mark" data-stem="432-气体压强微观解释"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 气体]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 气体压强微观解释, microscopic interpretation of gas pressure, 气体压强微观模型</p><h2>🎓 气体压强微观解释</h2>
+<h3>核心观点</h3>
+<p>气体压强是<strong>大量气体分子对器壁持续碰撞</strong>产生的宏观统计效果。</p>
+<ul>
+<li>单个分子碰撞器壁：施加瞬间冲量，产生微小力</li>
+<li>大量分子（$\sim 10^{23}$）的集体效果：时间上连续、空间上均匀的压力</li>
+<li>统计平均后体现为宏观压强 $p = F/A$</li>
+</ul>
+<blockquote>
+<p>气体压强是分子热运动的宏观体现，是一个<strong>统计概念</strong>。</p>
+</blockquote>
+<h3>定量分析（理想气体）</h3>
+<p>对于理想气体，设：
+- 分子数密度为 $n$（个/m³）
+- 分子质量为 $m_0$
+- 分子平均速率为 $\bar{v}$</p>
+<p>通过统计力学推导（各方向运动等概率）：</p>
+<p>$$p = \frac{1}{3} n m_0 \overline{v^2}$$</p>
+<p>由于分子平均动能 $\bar{E}_k = \frac{1}{2} m_0 \overline{v^2} = \frac{3}{2} k_B T$，代入得：</p>
+<p>$$p = n k_B T$$</p>
+<p>这与理想气体状态方程 $pV = NkT$ 完全一致（$n = N/V$）。</p>
+<h3>压强的影响因素（微观角度）</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>微观变化</th>
+<th>宏观效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>温度升高</td>
+<td>分子平均动能增大，碰撞速率和力度增大</td>
+<td>$p$ 增大</td>
+</tr>
+<tr>
+<td>体积减小</td>
+<td>分子数密度增大，碰撞频率增大</td>
+<td>$p$ 增大</td>
+</tr>
+<tr>
+<td>分子数增多</td>
+<td>碰撞总次数增多</td>
+<td>$p$ 增大</td>
+</tr>
+</tbody>
+</table>
+<h3>与三大气体定律的关联</h3>
+<table>
+<thead>
+<tr>
+<th>定律</th>
+<th>微观解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>玻意耳定律（等温 $pV=C$）</td>
+<td>$T$ 不变 → 平均动能不变；$V \downarrow$ → $n \uparrow$ → $p \uparrow$，$pV$ 守恒</td>
+</tr>
+<tr>
+<td>查理定律（等容 $p/T=C$）</td>
+<td>$V$ 不变 → $n$ 不变；$T \uparrow$ → 动能增 → 碰撞更猛 → $p \uparrow$，$p/T$ 守恒</td>
+</tr>
+<tr>
+<td>盖-吕萨克定律（等压 $V/T=C$）</td>
+<td>$T \uparrow$ → $p$ 有增大趋势 → $V \uparrow$ 使 $n \downarrow$ 补偿 → $p$ 不变，$V/T$ 守恒</td>
+</tr>
+</tbody>
+</table>
+<h3>典型问题</h3>
+<p><strong>问</strong>：在密闭容器中，气体温度升高，为什么压强增大？</p>
+<p><strong>答</strong>：温度升高 → 分子平均动能增大（分子运动更快）→ 单位时间内碰撞器壁的分子数更多，每次碰撞的冲量也更大 → 器壁受到的平均力增大 → 压强增大（体积不变时 $n$ 不变）。</p>
+<h3>易错点</h3>
+<ol>
+<li>气体压强不是靠分子的重力产生（重力远小于碰撞力，且气体充满容器各方向均受压）</li>
+<li>单个分子碰撞是瞬间的，宏观压强是大量分子统计的时间平均效果</li>
+<li>分子数密度 $n$（个/m³）与物质的量浓度（mol/L）是不同的量，注意区分</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第二章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/气体压强">气体压强 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/127-内能.html">内能</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/439-热力学温度.html">热力学温度</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">气体状态参量</a></p>
+</li>
+<li><a class="dead" title="未收录">分子热运动-高中</a></li>
+<li><a class="dead" title="未收录">温度的微观本质</a></li>
+<li><a href="../atoms/444-玻意耳定律.html">玻意耳定律</a></li>
+<li><a class="dead" title="未收录">理想气体</a></li>
+<li><a href="../atoms/419-克拉伯龙方程.html">克拉伯龙方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2013-新课标Ⅱ-13.html">2013-新课标Ⅱ-13</a></li>
+<li><a class="dead" title="未收录">2023-北京-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

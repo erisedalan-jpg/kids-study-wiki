@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电阻定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电阻定律</h1><div class="review-mark" data-stem="318-电阻定律"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电路及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电阻定律, resistance law, 电阻公式</p><h2>🎓 电阻定律（Resistance Law）</h2>
+<h3>核心公式</h3>
+<p>$$R = \rho \frac{L}{S}$$</p>
+<p>其中：
+- $R$：导体的电阻（$\Omega$）
+- $\rho$：导体材料的<strong>电阻率</strong>（$\Omega\cdot\text{m}$）
+- $L$：导体的长度（m）
+- $S$：导体的横截面积（m²）</p>
+<h3>物理意义</h3>
+<p>电阻定律说明了导体电阻由三个因素决定：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>材料（$\rho$）</td>
+<td>电阻率越大，电阻越大</td>
+</tr>
+<tr>
+<td>长度（$L$）</td>
+<td>越长，电阻越大（正比）</td>
+</tr>
+<tr>
+<td>截面积（$S$）</td>
+<td>越粗，电阻越小（反比）</td>
+</tr>
+</tbody>
+</table>
+<p>温度也影响电阻（通过改变 $\rho$），见 <a href="../atoms/319-电阻率.html">电阻率</a>。</p>
+<h3>记忆类比</h3>
+<p>想象水管：细而长的水管水流阻力大（电阻大）；粗而短的水管水流畅通（电阻小）。材料不同的水管，阻力也不同（电阻率不同）。</p>
+<h3>各因素对电阻的影响（控制变量实验）</h3>
+<p>实验装置：导线两端接电压，改变长度、截面积、材料，观察电流变化推导电阻变化。</p>
+<table>
+<thead>
+<tr>
+<th>实验变量</th>
+<th>其他条件不变</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>材料</td>
+<td>$L$、$S$ 相同</td>
+<td>材料不同，$R$ 不同（$\rho$ 不同）</td>
+</tr>
+<tr>
+<td>长度 $L$</td>
+<td>同种材料、同 $S$</td>
+<td>$L$ 越大，$R$ 越大（正比）</td>
+</tr>
+<tr>
+<td>截面积 $S$</td>
+<td>同种材料、同 $L$</td>
+<td>$S$ 越大，$R$ 越小（反比）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某铜导线（电阻率 $\rho_{Cu} = 1.7\times10^{-8}\,\Omega\cdot\text{m}$），长度 $L = 100\,\text{m}$，横截面积 $S = 1\,\text{mm}^2 = 10^{-6}\,\text{m}^2$，求其电阻。</p>
+<p>$$R = \rho\frac{L}{S} = 1.7\times10^{-8}\times\frac{100}{10^{-6}} = 1.7\,\Omega$$</p>
+<h3>拉伸与压缩</h3>
+<p>若导线被均匀拉伸 $n$ 倍：体积不变 → 长度变为 $nL$，截面积变为 $S/n$</p>
+<p>$$R' = \rho\frac{nL}{S/n} = n^2 R$$</p>
+<p>电阻变为原来的 $n^2$ 倍。</p>
+<h3>易错点</h3>
+<ul>
+<li>电阻定律中的 $R$ 是<strong>材料和几何形状</strong>决定的，与是否接在电路中、两端电压多大无关。</li>
+<li>截面积 $S$ 指<strong>横截面积</strong>，不是表面积。</li>
+<li>拉伸/压缩时体积不变，需同时考虑 $L$ 和 $S$ 的变化。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中已知电阻受材料、长度、截面积、温度影响（定性）；本节引入电阻率 $\rho$，给出定量公式，使电阻分析从定性上升到定量。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十一章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/电阻率">维基百科·电阻率</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/319-电阻率.html">电阻率</a></li>
+<li><a href="../atoms/291-内阻.html">内阻</a></li>
+<li><a href="../atoms/293-半导体.html">半导体</a></li>
+<li><a href="../atoms/328-超导体.html">超导体</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/295-多用电表.html">多用电表</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2009-全国Ⅱ-11.html">2009-全国Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-04</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2021-湖南-12</a></li>
+<li><a class="dead" title="未收录">2023-湖南-09</a></li>
+<li><a class="dead" title="未收录">2024-北京-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

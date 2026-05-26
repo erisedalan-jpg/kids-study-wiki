@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电荷数守恒</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电荷数守恒</h1><div class="review-mark" data-stem="689-电荷数守恒"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电荷数守恒, 电荷守恒, 电荷守恒定律</p><h1>电荷数守恒</h1>
+<blockquote>
+<p><strong>一句话</strong>：在任何物理过程中，系统所带电荷的代数和保持不变，电荷既不能创造也不能消灭。
+<strong>English</strong>: In any physical process, the algebraic sum of electric charges in an isolated system remains constant; charge can neither be created nor destroyed.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+电荷数守恒是自然界基本守恒定律之一。其核心表述为：一个与外界没有电荷交换的系统，电荷的代数和始终保持不变。微观上，表现为反应前后质子数（或电荷数）的代数和相等；宏观上，表现为电路节点处流入流出电流相等，即基尔霍夫电流定律：$\sum I_\text{in} = \sum I_\text{out}$。在核反应与粒子衰变中，反应前后总电荷数不变，如 $\alpha$ 衰变 $\ce{^{A}<em Z-2="Z-2">{Z}X -&gt; ^{A-4}</em>$，电荷数 $Z$ 守恒。}Y + ^{4}_{2}He</p>
+<p><strong>关键方法</strong><br />
+解决电荷数守恒问题的通用步骤：<br />
+1. 明确研究对象（系统），判断是否与外界有电荷交换。<br />
+2. 列出初、末态系统内各物体所带电荷量（带正负号）。<br />
+3. 根据守恒列方程：$Q_\text{初} = Q_\text{末}$。<br />
+4. 结合其他物理规律（如质量数守恒、能量守恒、电压关系）联立求解。<br />
+对于电路节点问题，直接列 $\sum I_\text{in} = \sum I_\text{out}$。</p>
+<p><strong>典型应用</strong><br />
+高考常见设问：<br />
+- <strong>核反应与粒子物理</strong>：给出核反应方程，要求推断未知粒子的电荷数与质量数。如 $\ce{^{14}<em 2="2">{7}N + ^{4}</em>$，由电荷守恒 $7+2=8+Z_X$ 得 $Z_X=1$，知 X 为质子。}He -&gt; ^{17}_{8}O + X<br />
+- <strong>静电平衡与电荷分配</strong>：两个完全相同的不带电金属小球接触后再分开，根据电荷均分原理求电荷分配；若不守恒情景（如接地），则需结合电荷守恒与电场分布判断。<br />
+- <strong>电容器电路</strong>：含容电路动态分析中，利用电荷守恒分析电容器极板电荷变化量，常配合节点电流关系。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆电荷数与质量数</strong>：核反应中把电荷数当质量数计算，或只考虑质量数守恒而忽略电荷数守恒，导致推断粒子错误。  </li>
+<li><strong>忽略电荷的正负</strong>：列电荷守恒方程时漏掉负电荷的符号，导致结果错误。  </li>
+<li><strong>系统选取不恰当</strong>：误把与外界有电荷交换的部分当作孤立系统，例如带电小球接触大地时系统电荷不守恒，必须明确“与外界无交换”的前提。  </li>
+<li><strong>电路节点误判</strong>：在复杂电路中，错把流入节点电流之和写成某支路电流，未严格使用 $\sum I_\text{in} = \sum I_\text{out}$ 而凭感觉列式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电荷数守恒</td>
+<td>conservation of charge number</td>
+<td>反应前后总电荷数不变</td>
+</tr>
+<tr>
+<td>电荷守恒定律</td>
+<td>law of conservation of charge</td>
+<td>电荷的代数和保持恒定</td>
+</tr>
+<tr>
+<td>基尔霍夫电流定律</td>
+<td>Kirchhoff's current law</td>
+<td>电路中节点电流代数和为零</td>
+</tr>
+<tr>
+<td>核反应方程</td>
+<td>nuclear reaction equation</td>
+<td>描述原子核变化的方程式</td>
+</tr>
+<tr>
+<td>电荷量</td>
+<td>electric charge</td>
+<td>物体所带电荷的多少</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/689-电荷数守恒.html">电荷守恒定律</a></li>
+<li><a class="dead" title="未收录">基尔霍夫电流定律</a></li>
+<li><a href="../atoms/629-核反应方程.html">核反应方程</a></li>
+<li><a class="dead" title="未收录">静电感应与电荷转移</a></li>
+<li><a class="dead" title="未收录">电容器动态分析</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/278-电场线.html">电场线</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2011-北京-01</a></li>
+<li><a href="../exam/物理/2012-新课标-17.html">2012-新课标-17</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-17</a></li>
+<li><a class="dead" title="未收录">2018-北京-01</a></li>
+<li><a href="../exam/物理/2019-新课标Ⅱ-02.html">2019-新课标Ⅱ-02</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-06</a></li>
+<li><a class="dead" title="未收录">2021-北京-01</a></li>
+<li><a class="dead" title="未收录">2023-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

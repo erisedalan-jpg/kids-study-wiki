@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平移与旋转</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平移与旋转</h1><div class="review-mark" data-stem="054-平移与旋转"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 变换]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平移与旋转, translation rotation, 平移, 旋转, 图形运动, 平移旋转</p><h1>平移与旋转</h1>
+<blockquote>
+<p><strong>一句话</strong>：平移是"往一个方向滑动"，旋转是"绕着一个点转圈"——图形的形状和大小都不变，只是位置或朝向变了。
+<strong>English</strong>: Translation means sliding a shape in a direction without turning it; rotation means spinning it around a fixed point — the shape stays the same, only its position or orientation changes.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>平移（Translation）</h3>
+<p><strong>描述平移需要两个要素：</strong>
+1. <strong>方向</strong>：向左、向右、向上、向下，或斜向
+2. <strong>距离</strong>：移动了几格（几厘米）</p>
+<p><strong>在格子图上画平移：</strong></p>
+<pre><code>原图形（三角形）：
+  ▲
+ ███
+
+向右平移 4 格：
+          ▲
+         ███
+</code></pre>
+<p>步骤：图形上每一个点，都向同一个方向移动<strong>相同的距离</strong>。</p>
+<p><strong>平移的不变量：</strong>
+- 形状不变 ✓
+- 大小不变 ✓
+- 方向/朝向不变 ✓
+- 位置变了（移动了）</p>
+<h3>旋转（Rotation）</h3>
+<p><strong>描述旋转需要三个要素：</strong>
+1. <strong>旋转中心</strong>：绕哪个点转（图形上的点，或图形外的点）
+2. <strong>旋转方向</strong>：顺时针（clockwise）或逆时针（counterclockwise）
+3. <strong>旋转角度</strong>：转了多少度（90°、180°、270°等）</p>
+<p><strong>在格子图上画旋转（90°为例）：</strong></p>
+<p>以图形右下角为旋转中心，顺时针旋转 90°：
+- 原本向上伸出的部分，转到向右边
+- 原本向右伸出的部分，转到向下</p>
+<p>技巧：先确定旋转中心，再找图形的几个关键顶点，分别计算每个顶点转动后的新位置，最后连线。</p>
+<p><strong>旋转的不变量：</strong>
+- 形状不变 ✓
+- 大小不变 ✓
+- 旋转中心到图形上每个点的距离不变 ✓
+- 方向/朝向变了（转过了角度）</p>
+<h3>平移 vs 旋转 vs 翻折对比</h3>
+<table>
+<thead>
+<tr>
+<th>变换</th>
+<th>改变什么</th>
+<th>不变什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平移</td>
+<td>位置</td>
+<td>形状、大小、朝向</td>
+</tr>
+<tr>
+<td>旋转</td>
+<td>位置、朝向</td>
+<td>形状、大小</td>
+</tr>
+<tr>
+<td>轴对称（翻折）</td>
+<td>位置、朝向（镜像）</td>
+<td>形状、大小</td>
+</tr>
+</tbody>
+</table>
+<p>这三种变换合称<strong>刚体运动（isometry）</strong>——"刚体"意味着形状不变形。</p>
+<h3>生活中的例子</h3>
+<p><strong>平移：</strong>
+- 推拉抽屉（水平平移）
+- 电梯上下（竖直平移）
+- 平移图案（地砖花纹重复）</p>
+<p><strong>旋转：</strong>
+- 时钟指针（以表盘中心为旋转中心，顺时针）
+- 风扇叶片（旋转中心在轴心）
+- 地球自转（旋转中心是地轴）
+- 旋转门（旋转中心在门轴）</p>
+<h3>图案中的对称与旋转</h3>
+<p>很多美丽的图案都是通过平移和旋转叠加生成的：
+- 地砖：平移重复基本图案
+- 雪花：六次旋转对称（每 60° 一次）
+- 风车图案：旋转对称</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>向量描述平移</h3>
+<p>在坐标系中，平移用<strong>向量</strong>（vector）精确表示：</p>
+<p>点 P(x, y) 经过向量 <strong>v</strong> = (a, b) 的平移，得到 P'(x+a, y+b)。</p>
+<p><strong>例：</strong> 三角形三个顶点 A(1,2), B(3,2), C(2,4) 向右 3、向下 1 平移后：
+- A' = (1+3, 2-1) = (4, 1)
+- B' = (3+3, 2-1) = (6, 1)
+- C' = (2+3, 4-1) = (5, 3)</p>
+<h3>旋转矩阵</h3>
+<p>在平面坐标系中，绕原点旋转角度 θ 的变换用<strong>旋转矩阵</strong>表示：</p>
+<p>$$\begin{pmatrix} x' \ y' \end{pmatrix} = \begin{pmatrix} \cos\theta &amp; -\sin\theta \ \sin\theta &amp; \cos\theta \end{pmatrix} \begin{pmatrix} x \ y \end{pmatrix}$$</p>
+<p><strong>例：点 (1, 0) 顺时针旋转 90°（θ = -90°）：</strong></p>
+<p>$$\begin{pmatrix} x' \ y' \end{pmatrix} = \begin{pmatrix} 0 &amp; 1 \ -1 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \ 0 \end{pmatrix} = \begin{pmatrix} 0 \ -1 \end{pmatrix}$$</p>
+<p>结果 (0, -1)，从正 x 轴转到负 y 轴，符合顺时针 90° 的预期。</p>
+<p>旋转矩阵是<strong>正交矩阵</strong>（满足 $R^T R = I$），行列式为 1，它是"保长度、保角度"的线性变换。</p>
+<h3>刚体运动群（等距变换群）</h3>
+<p>平移和旋转（以及反射）合在一起，构成平面上的<strong>等距变换群（Isometry Group）</strong>：</p>
+<ul>
+<li><strong>平移群</strong>：所有平移的集合，构成阿贝尔群</li>
+<li><strong>旋转群 SO(2)</strong>：绕某点的所有旋转，构成李群</li>
+<li><strong>欧氏群 E(2)</strong>：所有平移 + 旋转 + 反射，是完整的平面等距变换群</li>
+</ul>
+<p>这个结构在物理学中非常重要：<strong>经典力学的对称性</strong>（空间平移对称 → 动量守恒；旋转对称 → 角动量守恒），这就是<strong>诺特定理</strong>（Noether's theorem）的核心思想。</p>
+<h3>Python 可视化变换</h3>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+def translate(points, dx, dy):
+    &quot;&quot;&quot;平移&quot;&quot;&quot;
+    return points + np.array([dx, dy])
+
+def rotate(points, angle_deg, center=(0, 0)):
+    &quot;&quot;&quot;绕 center 旋转 angle_deg 度&quot;&quot;&quot;
+    theta = np.radians(angle_deg)
+    R = np.array([[np.cos(theta), -np.sin(theta)],
+                  [np.sin(theta),  np.cos(theta)]])
+    p = points - np.array(center)
+    return (R @ p.T).T + np.array(center)
+
+# 定义一个三角形
+triangle = np.array([[0, 0], [2, 0], [1, 2], [0, 0]])
+
+# 平移和旋转
+tri_translated = translate(triangle, 3, 1)
+tri_rotated    = rotate(triangle, 90, center=(1, 1))
+
+fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+for ax, pts, title in zip(axes,
+    [triangle, tri_translated, tri_rotated],
+    ['原图', '平移(+3,+1)', '旋转90°(中心(1,1))']):
+    ax.plot(pts[:,0], pts[:,1], 'b-o')
+    ax.set_xlim(-1, 6); ax.set_ylim(-1, 5)
+    ax.set_aspect('equal'); ax.grid(True)
+    ax.set_title(title)
+plt.tight_layout(); plt.show()
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平移</td>
+<td>translation</td>
+<td>n.</td>
+<td>滑动，方向+距离</td>
+</tr>
+<tr>
+<td>旋转</td>
+<td>rotation</td>
+<td>n.</td>
+<td>转动，中心+方向+角度</td>
+</tr>
+<tr>
+<td>旋转中心</td>
+<td>center of rotation</td>
+<td>n.</td>
+<td>绕着转的那个固定点</td>
+</tr>
+<tr>
+<td>顺时针</td>
+<td>clockwise</td>
+<td>adv./adj.</td>
+<td>和时钟转动方向相同</td>
+</tr>
+<tr>
+<td>逆时针</td>
+<td>counterclockwise</td>
+<td>adv./adj.</td>
+<td>和时钟转动方向相反</td>
+</tr>
+<tr>
+<td>旋转角度</td>
+<td>angle of rotation</td>
+<td>n.</td>
+<td>转了多少度</td>
+</tr>
+<tr>
+<td>刚体运动</td>
+<td>rigid motion / isometry</td>
+<td>n.</td>
+<td>不改变形状大小的变换</td>
+</tr>
+<tr>
+<td>旋转矩阵</td>
+<td>rotation matrix</td>
+<td>n.</td>
+<td>旋转的矩阵表示</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图形向右平移了 3 格。</td>
+<td>The shape was translated 3 units to the right.</td>
+</tr>
+<tr>
+<td>绕 A 点顺时针旋转 90°。</td>
+<td>Rotate 90° clockwise around point A.</td>
+</tr>
+<tr>
+<td>平移后形状和大小不变。</td>
+<td>After translation, the shape and size remain the same.</td>
+</tr>
+<tr>
+<td>时钟指针绕中心顺时针旋转。</td>
+<td>Clock hands rotate clockwise around the center.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 几何变换/图案主题绘本请家长选择，推荐含瓷砖图案、万花筒、雪花等视觉内容的科普读物，适龄：6-10 岁。</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"平移和旋转有什么不一样？"</strong> → 可以说："平移就像推箱子——方向和距离固定了，整体挪过去，朝向不变；旋转就像转门把手——绕着一个固定点转，朝向会变，但每个部分到旋转中心的距离不变。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"旋转要怎么确定角度？"</strong> → 可以说："想象你站在旋转中心，看着图形上某个点——它转了多少度就是旋转角度。90° 是四分之一圈，180° 是半圈（刚好翻到对面），360° 是转一整圈回到原位。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"旋转和翻折有什么区别？"</strong> → 可以说："旋转是在平面上转，不会'翻面'，就像在桌上转一个纸片；翻折是像翻书页一样翻到'镜像'——翻折后，原本写的字会变成镜像反转，而旋转不会。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 在方格纸上画一个简单的 L 形图案，然后：1) 向右平移 4 格画出新图；2) 以某个顶点为中心顺时针旋转 90° 画出新图——对比三个图形的位置和朝向。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书·数学四年级下册.pdf</a> 第7单元《图形的运动（二）》(p79-86)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第二学段"图形与几何"图形的运动（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/平移 ；https://zh.wikipedia.org/wiki/旋转</li>
+<li><strong>拓展阅读</strong>：旋转矩阵与计算机图形学（CG 变换基础）；诺特定理与对称性科普（物理学）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/014-对称.html">对称</a> <a class="dead" title="未收录">二次函数定义</a></li>
+<li><strong>延伸</strong>：<a class="dead" title="未收录">切线</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

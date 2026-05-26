@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>燃料电池</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>燃料电池</h1><div class="review-mark" data-stem="366-燃料电池"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 燃料电池, fuel cell, 氢氧燃料电池</p><h1>燃料电池</h1>
+<blockquote>
+<p><strong>一句话</strong>：持续通入燃料（如 H₂、天然气）和氧化剂（O₂、空气），将燃烧的化学能直接转化为电能的装置，效率远高于热机。
+<strong>English</strong>: A device that continuously converts chemical energy from fuel (e.g., H₂, natural gas) and oxidant (O₂, air) directly into electricity; far more efficient than heat engines.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>燃料电池</strong>（fuel cell）：一种特殊的原电池，只要持续供给燃料和氧化剂，就能连续产生电能。不同于蓄电池（内部储能），燃料电池的能量存储在外部燃料中。</p>
+<p>特点：
+- 效率高（50–70%，热机约 30–40%）
+- 几乎零排放（氢氧燃料电池只产生水）
+- 功率密度高，适合大型固定电站和汽车</p>
+<h3>公式 / 方程式</h3>
+<p><strong>氢氧燃料电池</strong>（酸性电解质，如 Nafion 膜）：</p>
+<p>$$
+\text{负极（H}_2\text{）}: 2\text{H}_2 - 4e^- \rightarrow 4\text{H}^+
+$$</p>
+<p>$$
+\text{正极（O}_2\text{）}: \text{O}_2 + 4\text{H}^+ + 4e^- \rightarrow 2\text{H}_2\text{O}
+$$</p>
+<p>$$
+\text{总反应}: 2\text{H}_2 + \text{O}_2 \rightarrow 2\text{H}_2\text{O}
+$$</p>
+<p><strong>碱性电解质</strong>（KOH 溶液）：</p>
+<p>$$
+\text{负极}: 2\text{H}_2 + 4\text{OH}^- - 4e^- \rightarrow 4\text{H}_2\text{O}
+$$</p>
+<p>$$
+\text{正极}: \text{O}_2 + 2\text{H}_2\text{O} + 4e^- \rightarrow 4\text{OH}^-
+$$</p>
+<p><strong>甲烷燃料电池</strong>（碱性）：</p>
+<p>$$
+\text{负极}: \text{CH}_4 + 10\text{OH}^- - 8e^- \rightarrow \text{CO}_3^{2-} + 7\text{H}_2\text{O}
+$$</p>
+<p>$$
+\text{正极}: 2\text{O}_2 + 4\text{H}_2\text{O} + 8e^- \rightarrow 8\text{OH}^-
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：酸性氢氧燃料电池中，若通过 0.1 mol 电子，负极消耗 H₂ 多少 mol，正极生成 H₂O 多少 mol？</p>
+<ul>
+<li>负极：每消耗 1 mol H₂，转移 2 mol e⁻</li>
+<li>$n(\text{H}_2) = 0.1/2 = 0.05\ \text{mol}$</li>
+<li>正极：每生成 1 mol H₂O，转移 2 mol e⁻</li>
+<li>由总方程式：每转移 4 mol e⁻ 生成 2 mol H₂O</li>
+<li>$n(\text{H}_2\text{O}) = 0.1/4 \times 2 = 0.05\ \text{mol}$</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>燃料电池通入燃料的一端是负极（燃料被氧化，失去电子）</li>
+<li>酸性和碱性电解质中，电极反应式不同（H⁺ vs. OH⁻ 参与）</li>
+<li>燃料电池不需要充电，只要持续供给燃料</li>
+<li>甲烷在碱性中氧化为 CO₃²⁻，在酸性中氧化为 CO₂</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>燃料电池</td>
+<td>fuel cell</td>
+</tr>
+<tr>
+<td>质子交换膜</td>
+<td>proton exchange membrane (PEM)</td>
+</tr>
+<tr>
+<td>效率</td>
+<td>efficiency</td>
+</tr>
+<tr>
+<td>电化学氧化</td>
+<td>electrochemical oxidation</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>A hydrogen fuel cell produces electricity with only water as the byproduct.（氢燃料电池发电，副产品仅为水。）</li>
+<li>Fuel cells have higher efficiency than internal combustion engines because they directly convert chemical energy to electricity.（燃料电池效率高于内燃机，因为它直接将化学能转化为电能。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"燃料电池"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/368-电解池.html">电解池</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/374-铅蓄电池.html">铅蓄电池</a></p>
+</li>
+<li>
+<p><a href="../atoms/364-原电池（高中）.html">原电池（高中）</a></p>
+</li>
+<li><a class="dead" title="未收录">原电池电极反应</a></li>
+<li><a href="../atoms/362-二次电池.html">二次电池</a></li>
+<li><a href="../atoms/375-锂电池.html">锂电池</a></li>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

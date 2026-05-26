@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热机效率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热机效率</h1><div class="review-mark" data-stem="152-热机效率"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十四章内能的利用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热机效率, thermal efficiency of heat engine, 热效率</p><h1>热机效率</h1>
+<blockquote>
+<p><strong>一句话</strong>：热机效率是热机做的有用功与燃料完全燃烧放出的总热量之比，实际热机效率永远小于100%。
+<strong>English</strong>: Thermal efficiency is the ratio of useful work done by a heat engine to the total heat released by complete combustion of fuel; it is always less than 100%.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>你有没有想过，汽车烧的油，有多少真的变成了"让车跑起来"的能量？</p>
+<p>答案是：<strong>只有约25-30%！</strong>剩下的70-75%都"白白浪费"了——通过废气排出，或者散发成热量让发动机变热。</p>
+<p><strong>热机效率</strong>就是衡量"燃料利用得有多好"的数字：</p>
+<p>$$\text{热机效率} = \frac{\text{有用功}}{\text{燃料放出的总热量}} \times 100\%$$</p>
+<p><strong>例子：</strong> 一辆汽车烧了1 L汽油（放出约3000万焦耳的热量），真正推动汽车前进的功约750万焦耳。</p>
+<p>$$\text{效率} = \frac{750\text{万J}}{3000\text{万J}} \times 100\% = 25\%$$</p>
+<p><strong>为什么会有损失？</strong>
+- 废气带走热量（排气冲程）
+- 发动机零件摩擦产生热量
+- 冷却水带走热量（防止发动机过热）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p>$$\eta = \frac{W_{有用}}{Q_{总}} \times 100\%$$</p>
+<p>其中：
+- $W_{有用}$：热机对外做的有用功（J）
+- $Q_{总} = qm$：燃料完全燃烧释放的总热量（J）
+- $q$：燃料热值（J/kg）
+- $m$：燃料质量（kg）</p>
+<h3>热机效率的理论上限</h3>
+<p>根据热力学第二定律，<strong>卡诺效率</strong>是在两个热源之间工作的热机的理论最大效率：</p>
+<p>$$\eta_{卡诺} = 1 - \frac{T_{低}}{T_{高}}$$</p>
+<p>其中 $T_{高}$、$T_{低}$ 为热源的热力学温度（K）。</p>
+<p>实际热机效率由于各种不可逆损失，远低于卡诺效率。</p>
+<h3>典型热机效率</h3>
+<table>
+<thead>
+<tr>
+<th>热机类型</th>
+<th>实际效率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蒸汽机（历史）</td>
+<td>~8-20%</td>
+</tr>
+<tr>
+<td>汽油机</td>
+<td>~25-30%</td>
+</tr>
+<tr>
+<td>柴油机</td>
+<td>~30-45%</td>
+</tr>
+<tr>
+<td>燃气轮机</td>
+<td>~35-45%</td>
+</tr>
+<tr>
+<td>联合循环电厂</td>
+<td>~55-60%</td>
+</tr>
+</tbody>
+</table>
+<h3>提高热机效率的途径</h3>
+<ol>
+<li>提高燃烧温度（提高压缩比，如柴油机）</li>
+<li>减少摩擦（精密加工、润滑油）</li>
+<li>余热利用（如汽车尾气余热发电）</li>
+<li>降低排气温度（充分利用做功冲程）</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一台柴油机消耗柴油 5 kg，做了 $9 \times 10^7$ J 的有用功。已知柴油热值 $q = 4.5 \times 10^7$ J/kg，求柴油机效率。</p>
+<p><strong>解</strong>：</p>
+<p>$$Q_{总} = qm = 4.5 \times 10^7 \times 5 = 2.25 \times 10^8 \text{ J}$$</p>
+<p>$$\eta = \frac{W_{有用}}{Q_{总}} = \frac{9 \times 10^7}{2.25 \times 10^8} = 40\%$$</p>
+<p><strong>变形</strong>：若已知效率求做功或燃料用量，同样用此公式变形：</p>
+<p>$$W_{有用} = \eta \cdot Q_{总} = \eta \cdot qm$$</p>
+<p><strong>易错点：</strong>
+- $Q_{总}$ 应该用"完全燃烧"放出的热量，即 $Q = qm$
+- 热机效率单位为百分比，不能写成小数提交
+- 效率提高 ≠ 绝对损失减少（效率提高但功率更大，绝对损失也可能更大）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热机效率</td>
+<td>thermal efficiency</td>
+<td>n.</td>
+<td>The thermal efficiency of this engine is 35%.</td>
+</tr>
+<tr>
+<td>有用功</td>
+<td>useful work</td>
+<td>n.</td>
+<td>Only useful work counts for efficiency.</td>
+</tr>
+<tr>
+<td>热值</td>
+<td>calorific value / heating value</td>
+<td>n.</td>
+<td>Diesel has a calorific value of 4.5×10⁷ J/kg.</td>
+</tr>
+<tr>
+<td>完全燃烧</td>
+<td>complete combustion</td>
+<td>n.</td>
+<td>Calculate heat based on complete combustion.</td>
+</tr>
+<tr>
+<td>卡诺效率</td>
+<td>Carnot efficiency</td>
+<td>n.</td>
+<td>Carnot efficiency sets the theoretical maximum.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十四章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 热机效率</li>
+<li><strong>百科</strong>：维基百科"热效率"；中文百科"热机效率"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/126-内燃机.html">内燃机</a> <a href="../atoms/439-热力学温度.html">热力学温度</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/279-电荷.html">电荷</a> <a href="../atoms/436-氢原子能级.html">氢原子能级</a></p>
+</li>
+<li>
+<p><a href="../atoms/151-热机.html">热机</a></p>
+</li>
+<li><a href="../atoms/126-内燃机.html">内燃机</a></li>
+<li><a href="../atoms/155-燃料热值.html">燃料热值</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+<li><a href="../atoms/197-能量守恒定律.html">能量守恒定律</a></li>
+<li><a href="../atoms/146-比热容.html">比热容</a></li>
+</ul>
+</div>
+</body>
+</html>

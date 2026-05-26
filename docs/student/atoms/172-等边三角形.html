@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等边三角形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等边三角形</h1><div class="review-mark" data-stem="172-等边三角形"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 轴对称]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等边三角形, equilateral triangle, 正三角形</p><h1>等边三角形</h1>
+<blockquote>
+<p><strong>课本定义</strong>：三条边都相等的三角形叫做<strong>等边三角形</strong>（又叫正三角形）。等边三角形三个内角都等于 60°；等边三角形是等腰三角形的特殊情况。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>等边三角形的特征</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三边</td>
+<td>全部相等：$a = b = c$</td>
+</tr>
+<tr>
+<td>三角</td>
+<td>全部相等：$\angle A = \angle B = \angle C = 60°$</td>
+</tr>
+<tr>
+<td>对称轴</td>
+<td>有 3 条（每条边的垂直平分线也是对角的角平分线）</td>
+</tr>
+<tr>
+<td>重心、外心、内心、垂心</td>
+<td>四点合一，在中心</td>
+</tr>
+</tbody>
+</table>
+<h3>等边三角形的判定方法</h3>
+<table>
+<thead>
+<tr>
+<th>判定条件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三边相等</td>
+<td>定义直接判定</td>
+</tr>
+<tr>
+<td>三角均为 60°</td>
+<td>由角判定</td>
+</tr>
+<tr>
+<td>等腰三角形 + 一角为 60°</td>
+<td>等腰 + 60° 顶角或底角均可推出等边</td>
+</tr>
+</tbody>
+</table>
+<h3>与等腰三角形的关系</h3>
+<p>等边三角形 ⊂ 等腰三角形（任意两边均可作为"腰"）</p>
+<p>等腰三角形中，顶角 = 60° → 等边三角形；底角 = 60° → 顶角 = 60° → 等边三角形</p>
+<h3>尺规作图</h3>
+<p>用圆规和直尺可以作出等边三角形：以一条线段的两端为圆心，以该线段为半径画圆，两圆交点与线段两端点构成等边三角形。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格性质推导</h3>
+<p><strong>由等边推等角</strong>：$AB = BC = CA$</p>
+<p>取 $AB = AC$，由等腰三角形性质，$\angle B = \angle C$</p>
+<p>取 $BA = BC$，由等腰三角形性质，$\angle A = \angle C$</p>
+<p>∴ $\angle A = \angle B = \angle C$，由内角和 $\angle A + \angle B + \angle C = 180°$，得 $\angle A = \angle B = \angle C = 60°$。</p>
+<p><strong>由三角均为 60° 推等边</strong>：</p>
+<p>$\angle A = \angle B$ → 由等角对等边，$BC = AC$</p>
+<p>$\angle B = \angle C$ → $AC = AB$</p>
+<p>∴ $AB = BC = CA$，即等边三角形。</p>
+<h3>等边三角形面积公式</h3>
+<p>设等边三角形边长为 $a$，高为 $h$：</p>
+<p>$$h = \frac{\sqrt{3}}{2} a \quad \text{（由勾股定理：}h^2 + \left(\frac{a}{2}\right)^2 = a^2\text{）}$$</p>
+<p>$$S = \frac{1}{2} \cdot a \cdot h = \frac{\sqrt{3}}{4} a^2$$</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：等边三角形边长为 6，求面积和高。</p>
+<p>解：$h = \dfrac{\sqrt{3}}{2} \times 6 = 3\sqrt{3}$</p>
+<p>$S = \dfrac{\sqrt{3}}{4} \times 36 = 9\sqrt{3}$</p>
+<p><strong>例题 2</strong>：等腰三角形 $\triangle ABC$，$AB = AC$，$\angle A = 60°$，证明 $\triangle ABC$ 是等边三角形。</p>
+<p>证明：$AB = AC$（等腰），$\angle A = 60°$（已知）</p>
+<p>$\angle B = \angle C = \dfrac{180° - 60°}{2} = 60°$</p>
+<p>三角均为 60°，∴ $\triangle ABC$ 是等边三角形。✓</p>
+<h3>等边三角形的密铺性质</h3>
+<p>等边三角形是可以密铺平面的三种正多边形之一（另两种是正方形和正六边形）。</p>
+<p>蜂巢由正六边形构成，每个正六边形可分成 6 个等边三角形。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>等腰三角形不一定是等边三角形</strong>：需要额外满足"一角为 60°"的条件。</li>
+<li>等边三角形的三条对称轴既是<strong>角平分线</strong>也是<strong>中线</strong>也是<strong>高</strong>——与等腰三角形的"三线合一"类似，但有 3 条这样的线。</li>
+<li>用角判定时，只需确认两个角为 60°（第三个角自动也是 60°）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a>：等边三角形是等腰三角形的特例</li>
+<li>→ <a href="../atoms/174-轴对称图形.html">轴对称图形</a>：等边三角形有 3 条对称轴</li>
+<li>→ <a class="dead" title="未收录">三角形分类</a>：等边三角形是锐角三角形的特例</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等边三角形</td>
+<td>equilateral triangle</td>
+</tr>
+<tr>
+<td>正三角形</td>
+<td>regular triangle</td>
+</tr>
+<tr>
+<td>边长</td>
+<td>side length</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height / altitude</td>
+</tr>
+<tr>
+<td>密铺</td>
+<td>tessellation</td>
+</tr>
+<tr>
+<td>对称轴</td>
+<td>axis of symmetry</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十三章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《几何画板探索》等边三角形五心</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/147-三角形内角和.html">三角形内角和</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">直角三角形</a></p>
+</li>
+<li>
+<p><a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a></p>
+</li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+<li><a href="../atoms/174-轴对称图形.html">轴对称图形</a></li>
+<li><a href="../atoms/161-多边形内角和外角和.html">多边形内角和外角和</a></li>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+<li><a href="../atoms/147-三角形内角和.html">三角形内角和</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-理-12.html">2017-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

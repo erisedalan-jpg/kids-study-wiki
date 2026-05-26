@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>晶格</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>晶格</h1><div class="review-mark" data-stem="412-晶格"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 晶格, crystal lattice, space lattice, space</p><h1>晶格</h1>
+<blockquote>
+<p><strong>一句话</strong>：描述晶体中粒子排列周期性的数学框架，由一组等价点（格点）按三维规律排列而成。
+<strong>English</strong>: A mathematical framework describing the periodic arrangement of particles in a crystal, formed by a set of equivalent points (lattice points) arranged in three-dimensional periodicity.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>晶格</strong>（Crystal Lattice / Space Lattice）是描述晶体结构周期性的<strong>数学抽象</strong>：
+- 用<strong>格点</strong>（lattice point）代表周期重复的位置（原子、分子或离子所在处）
+- 晶格 = 格点在三维空间中的规律性排列
+- 晶体 = 晶格 × 基元（Basis，每个格点处的实际原子/分子组合）</p>
+<h3>晶格与晶胞的关系</h3>
+<ul>
+<li>晶格描述<strong>周期性</strong>（数学概念）</li>
+<li>晶胞描述<strong>最小重复单元</strong>（结构单元）</li>
+<li>实际晶体 = 晶格的物理实现（将格点替换为实际原子）</li>
+</ul>
+<h3>布拉菲格（Bravais Lattice）</h3>
+<p>三维空间中只有 <strong>14 种</strong> 布拉菲格（Bravais Lattices），归属于 7 种晶系：</p>
+<table>
+<thead>
+<tr>
+<th>晶系</th>
+<th>格</th>
+<th>参数特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>立方</td>
+<td>3种（sc/bcc/fcc）</td>
+<td>a=b=c, α=β=γ=90°</td>
+</tr>
+<tr>
+<td>四方</td>
+<td>2种</td>
+<td>a=b≠c, α=β=γ=90°</td>
+</tr>
+<tr>
+<td>正交</td>
+<td>4种</td>
+<td>a≠b≠c, α=β=γ=90°</td>
+</tr>
+<tr>
+<td>六方</td>
+<td>1种</td>
+<td>a=b≠c, γ=120°</td>
+</tr>
+<tr>
+<td>三方/菱方</td>
+<td>1种</td>
+<td>a=b=c, α=β=γ≠90°</td>
+</tr>
+<tr>
+<td>单斜</td>
+<td>2种</td>
+<td>a≠b≠c, β≠90°</td>
+</tr>
+<tr>
+<td>三斜</td>
+<td>1种</td>
+<td>a≠b≠c, α≠β≠γ</td>
+</tr>
+</tbody>
+</table>
+<p>（高中阶段主要了解立方晶格）</p>
+<h3>高中常见晶格类型</h3>
+<table>
+<thead>
+<tr>
+<th>晶格类型</th>
+<th>每晶胞粒子数</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单立方（sc）</td>
+<td>1</td>
+<td>Po（钋）</td>
+</tr>
+<tr>
+<td>体心立方（bcc）</td>
+<td>2</td>
+<td>α-Fe、Cr、W</td>
+</tr>
+<tr>
+<td>面心立方（fcc）</td>
+<td>4</td>
+<td>Cu、Ag、Au、Al</td>
+</tr>
+<tr>
+<td>六方密堆积（hcp）</td>
+<td>2</td>
+<td>Mg、Zn、Ti</td>
+</tr>
+</tbody>
+</table>
+<h3>晶格常数</h3>
+<p>晶格参数（a、b、c）是晶胞的边长，由 X 射线衍射测定，是计算密度的关键数据。</p>
+<h3>典型例题</h3>
+<p><strong>题</strong>：Cu（Z=29）采用面心立方（fcc）堆积，已知 Cu 的原子半径 r=128 pm，计算晶胞边长 a。
+<strong>解</strong>：fcc 中，面对角线 = 4r（面对角线上紧挨 3 个 Cu 原子）
+$a\sqrt{2} = 4r$，即 $a = \frac{4 \times 128}{\sqrt{2}} \approx 362$ pm</p>
+<h3>易错点</h3>
+<ul>
+<li>晶格是数学概念（抽象），不是物理实体</li>
+<li>高中通常直接用"晶胞"，不深入区分晶格与晶胞</li>
+<li>布拉菲格只有 14 种，不能无限扩展</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶格</td>
+<td>crystal lattice</td>
+<td>n.</td>
+<td>The crystal lattice describes the periodic arrangement.</td>
+</tr>
+<tr>
+<td>格点</td>
+<td>lattice point</td>
+<td>n.</td>
+<td>Each lattice point represents an equivalent position in the crystal.</td>
+</tr>
+<tr>
+<td>布拉菲格</td>
+<td>Bravais lattice</td>
+<td>n.</td>
+<td>There are 14 unique Bravais lattices in 3D.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶格是晶体中粒子排列周期性的数学描述。</td>
+<td>The crystal lattice is the mathematical description of the periodic arrangement of particles in a crystal.</td>
+</tr>
+<tr>
+<td>立方晶系有三种布拉菲格：简单、体心和面心立方。</td>
+<td>The cubic system has three Bravais lattices: simple, body-centered, and face-centered cubic.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"晶格"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/409-晶体.html">晶体</a> <a href="../atoms/413-晶胞.html">晶胞</a> <a href="../atoms/411-晶体类型.html">晶体类型</a> <a href="../atoms/417-金属晶体.html">金属晶体</a> <a class="dead" title="未收录">NaCl晶体</a> <a class="dead" title="未收录">金刚石晶体</a></p>
+</div>
+</body>
+</html>

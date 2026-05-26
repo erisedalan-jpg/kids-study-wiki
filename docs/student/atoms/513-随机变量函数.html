@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机变量函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>随机变量函数</h1><div class="review-mark" data-stem="513-随机变量函数"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 随机变量函数, function of random variable, 随机变量的函数, g(X)</p><h2>🎓 随机变量函数</h2>
+<h3>定义</h3>
+<p>若 $X$ 是随机变量，$g$ 是确定的函数，则 $Y = g(X)$ 也是随机变量，称为 <strong>$X$ 的函数</strong>。</p>
+<p>$Y$ 的取值由 $X$ 的取值通过 $g$ 变换得到；$Y$ 的概率由 $X$ 的概率导出。</p>
+<h3>离散型随机变量的函数</h3>
+<p>若 $X$ 离散，取值 $x_1, x_2, \ldots$，则 $Y = g(X)$ 取值 $g(x_1), g(x_2), \ldots$</p>
+<p><strong>注意</strong>：若不同的 $x_i$ 对应相同的 $g(x_i)$，则需合并（将概率相加）。</p>
+<p><strong>例</strong>：$X$ 的分布列如下，求 $Y = X^2$ 的分布列。</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>-2</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.4</td>
+<td>0.2</td>
+<td>0.1</td>
+</tr>
+</tbody>
+</table>
+<p>$Y = X^2$ 的取值：$4, 1, 0, 1, 4$，合并得 $Y \in {0, 1, 4}$</p>
+<p>$$P(Y=0) = P(X=0) = 0.4$$
+$$P(Y=1) = P(X=-1) + P(X=1) = 0.2 + 0.2 = 0.4$$
+$$P(Y=4) = P(X=-2) + P(X=2) = 0.1 + 0.1 = 0.2$$</p>
+<table>
+<thead>
+<tr>
+<th>$Y$</th>
+<th>0</th>
+<th>1</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>0.4</td>
+<td>0.4</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p>验证：$0.4 + 0.4 + 0.2 = 1 \checkmark$</p>
+<h3>期望的变换</h3>
+<p><strong>离散型</strong>：</p>
+<p>$$E(Y) = E(g(X)) = \sum_i g(x_i) p_i \quad \text{（直接用 $X$ 的分布列）}$$</p>
+<p>无需先求 $Y$ 的分布列，可直接按 $X$ 的取值计算。</p>
+<p><strong>例</strong>：上例中，$E(Y) = E(X^2) = (-2)^2 \times 0.1 + (-1)^2 \times 0.2 + 0 \times 0.4 + 1^2 \times 0.2 + 2^2 \times 0.1$
+$= 0.4 + 0.2 + 0 + 0.2 + 0.4 = 1.2$</p>
+<h3>线性变换（最重要的函数）</h3>
+<p>若 $Y = aX + b$（线性函数），则：</p>
+<p>$$E(Y) = aE(X) + b$$</p>
+<p>$$D(Y) = a^2 D(X)$$</p>
+<p><strong>标准化变换</strong>：$Z = \dfrac{X - \mu}{\sigma}$（其中 $\mu = E(X)$，$\sigma = \sqrt{D(X)}$），则：</p>
+<p>$$E(Z) = 0, \quad D(Z) = 1$$</p>
+<p><strong>正态分布的标准化</strong>：若 $X \sim N(\mu, \sigma^2)$，$Z = \dfrac{X-\mu}{\sigma}$，则 $Z \sim N(0,1)$。</p>
+<h3>连续型随机变量的函数</h3>
+<p>若 $X$ 连续，$Y = g(X)$，则 $Y$ 的分布通过变量替换导出（高中阶段主要考查线性变换）：</p>
+<p>$$\text{若 } X \sim N(\mu, \sigma^2), \; Y = aX + b, \; \text{则 } Y \sim N(a\mu + b, a^2\sigma^2)$$</p>
+<p><strong>例</strong>：$X \sim N(10, 4)$，$Y = 2X + 3$，则 $Y \sim N(2 \times 10 + 3, 2^2 \times 4) = N(23, 16)$。</p>
+<h3>典型例题</h3>
+<p><strong>例1（离散型函数）</strong>：$X \sim B(3, 0.5)$，$Y = 2X - 1$，求 $E(Y)$ 和 $D(Y)$。</p>
+<p>$E(X) = 3 \times 0.5 = 1.5$，$D(X) = 3 \times 0.5 \times 0.5 = 0.75$</p>
+<p>$$E(Y) = 2 \times 1.5 - 1 = 2, \quad D(Y) = 4 \times 0.75 = 3$$</p>
+<p><strong>例2（标准化）</strong>：$X \sim N(5, 9)$（$\sigma = 3$），求 $P(X &gt; 8)$。</p>
+<p>$$P(X &gt; 8) = P\left(\frac{X-5}{3} &gt; 1\right) = P(Z &gt; 1) = 1 - \Phi(1) \approx 1 - 0.8413 = 0.1587$$</p>
+<p><strong>例3（绝对值函数）</strong>：$X \sim N(0,1)$，$Y = |X|$，求 $P(Y \leq 2)$。</p>
+<p>$$P(Y \leq 2) = P(|X| \leq 2) = P(-2 \leq X \leq 2) = \Phi(2) - \Phi(-2) \approx 0.9544$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>合并相同取值</strong>：$Y=g(X)$ 时，不同 $x_i$ 映射到同一 $y$ 时，概率相加</li>
+<li><strong>$E(g(X)) \neq g(E(X))$</strong>（非线性时）：$E(X^2) \neq [E(X)]^2$</li>
+<li><strong>正态分布的线性变换仍正态</strong>：但非线性变换（如 $X^2$）不再服从正态分布</li>
+<li><strong>标准化中除以 $\sigma$ 不是 $\sigma^2$</strong>：$Z = (X-\mu)/\sigma$，分母是标准差</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.5，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/随机变量">随机变量 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/499-离散型随机变量.html">离散型随机变量</a></li>
+<li><a href="../atoms/512-连续型随机变量.html">连续型随机变量</a></li>
+<li><a href="../atoms/492-期望性质.html">期望性质</a></li>
+<li><a href="../atoms/490-方差性质-高中.html">方差性质-高中</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+</ul>
+</div>
+</body>
+</html>

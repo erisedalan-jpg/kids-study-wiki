@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇偶性分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>奇偶性分析</h1><div class="review-mark" data-stem="1377-奇偶性分析"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 奇偶性分析</p><h1>奇偶性分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：奇偶性分析是指判断或利用函数满足 $f(-x)=-f(x)$（奇函数）或 $f(-x)=f(x)$（偶函数）的代数性质，进而简化图像绘制、求值、解方程等问题的过程。
+<strong>English</strong>: Parity analysis is the process of determining or leveraging whether a function satisfies $f(-x)=-f(x)$ (odd) or $f(-x)=f(x)$ (even) to simplify graphing, evaluation, and equation solving.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：
+设函数 $f(x)$ 的定义域 $D$ 关于原点对称。若对于任意 $x \in D$，恒有：
+$$f(-x) = -f(x)$$
+则称 $f(x)$ 为<strong>奇函数</strong>，其图像关于原点中心对称。若恒有：
+$$f(-x) = f(x)$$
+则称 $f(x)$ 为<strong>偶函数</strong>，其图像关于 $y$ 轴对称。</p>
+<p>若 $f(x)$ 是奇函数且在 $x=0$ 处有定义，则必有 $f(0)=0$。多项式函数中，奇函数只含奇次项，偶函数只含偶次项。</p>
+<p><strong>关键方法</strong>：
+判断函数奇偶性的标准步骤：
+1. 求定义域 $D$，<strong>必须验证 $D$ 关于原点对称</strong>，不对称则函数非奇非偶。
+2. 计算 $f(-x)$，将其表达式变形为 $\pm f(x)$ 的形式。
+3. 若 $f(-x)=-f(x)$，为奇函数；若 $f(-x)=f(x)$，为偶函数；若均不成立，为非奇非偶函数；若同时成立，则 $f(x)=0$（定义域对称前提下）。</p>
+<p>利用奇偶性解题的核心技巧：<strong>将自变量转化到已知区间</strong>。例如已知 $f(x)$ 在 $[0,+\infty)$ 上的解析式，且 $f(x)$ 为偶函数，则 $x&lt;0$ 时 $f(x)=f(-x)$，直接带入 $-x$ 到已知解析式中即可。</p>
+<p><strong>典型应用</strong>：
+- <strong>直接判断与证明</strong>：给定函数解析式（含指数、对数、三角、幂函数复合型），要求判断奇偶性或证明其为奇/偶函数。
+- <strong>求值求解析式</strong>：利用奇偶性求某点函数值（如 $f(-a)$ 由 $f(a)$ 得出），或根据部分区间解析式写出整个定义域上的分段函数。
+- <strong>性质综合</strong>：结合奇偶性与单调性求解抽象不等式，如已知偶函数在 $[0,+\infty)$ 上单调递增，比较 $f(-2)$ 与 $f(3)$ 的大小。
+- <strong>图像识别</strong>：根据奇偶性排除选项或补全函数图像。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域对称性</strong>：看到 $f(x)=x^2, x\in(0,+\infty)$ 就判定为偶函数，但该定义域不关于原点对称，实际为非奇非偶函数。必须<strong>先判定定义域，再判定 $f(-x)$ 与 $f(x)$ 关系</strong>。</li>
+<li><strong>$f(0)=0$ 误判充要条件</strong>：奇函数若在 $x=0$ 有定义则 $f(0)=0$ 成立，但逆推不成立——$f(0)=0$ 不是奇函数的充分条件（如 $f(x)=x^2$ 也满足 $f(0)=0$）。</li>
+<li><strong>混淆图像对称性</strong>：奇函数关于<strong>原点</strong>对称，偶函数关于 <strong>$y$ 轴</strong>对称，二者对称对象不同，在图像变换题中常混淆。</li>
+<li><strong>复合函数奇偶性错误</strong>：如 $f(x)=\sin x$ 是奇函数，$g(x)=\sin(x^2)$ 的定义域为 $\boldsymbol{R}$，但 $\sin((-x)^2)=\sin(x^2)$，为偶函数，直接套用外层奇偶性导致错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 $f(-x)=-f(x)$，图像关于原点对称</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 $f(-x)=f(x)$，图像关于 $y$ 轴对称</td>
+</tr>
+<tr>
+<td>奇偶性</td>
+<td>parity</td>
+<td>函数是否为奇函数或偶函数的性质</td>
+</tr>
+<tr>
+<td>关于原点对称</td>
+<td>symmetric about the origin</td>
+<td>奇函数的图像特征</td>
+</tr>
+<tr>
+<td>非奇非偶函数</td>
+<td>neither even nor odd</td>
+<td>既不满足奇函数条件也不满足偶函数条件的函数</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-18，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/687-函数的周期性.html">函数的周期性</a></li>
+<li><a class="dead" title="未收录">抽象函数</a></li>
+<li><a class="dead" title="未收录">函数图像的对称性与变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-20.html">2010-理-20</a></li>
+<li><a class="dead" title="未收录">2024-北京-21</a></li>
+</ul></div>
+</div>
+</body>
+</html>

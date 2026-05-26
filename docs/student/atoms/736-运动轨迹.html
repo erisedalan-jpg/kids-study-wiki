@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>运动轨迹</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>运动轨迹</h1><div class="review-mark" data-stem="736-运动轨迹"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 运动轨迹</p><h1>运动轨迹</h1>
+<blockquote>
+<p><strong>一句话</strong>：运动轨迹是质点在空间运动时，其位置随时间连续变化所描绘出的曲线，在直角坐标系中可用消去时间 $t$ 后的函数 $y=f(x)$ 或参数方程表示。
+<strong>English</strong>: The path or trajectory of a particle is the curve traced by its position as it moves through space over time.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+运动轨迹指质点在运动过程中各个时刻位置点连成的曲线。在二维平面中，若已知两个分运动的位移方程 $x=x(t)$、$y=y(t)$，则消去参数 $t$ 便可得到轨迹方程 $F(x,y)=0$。典型轨迹包括直线、抛物线、圆及一般曲线。轨迹由初位置、初速度和受力（加速度）共同决定：当合外力与速度共线时轨迹为直线；当合外力恒定且与速度不共线时轨迹为抛物线（如平抛 $y=\frac{g}{2v_0^2}x^2$）；当合外力大小恒定且始终垂直速度时轨迹为圆（如匀速圆周运动）。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>求轨迹方程</strong>：写出两方向的位移时间关系 $x(t)$、$y(t)$，消去 $t$ 得到 $y$ 关于 $x$ 的表达式或隐式方程。<br />
+2. <strong>判断轨迹类型</strong>：根据合外力方向与速度方向的关系，或直接由轨迹方程的形式（一次→直线，二次且系数常数→抛物线，圆方程→圆等）判定。<br />
+3. <strong>轨迹交叉与相遇</strong>：两运动物体的轨迹相交不一定相遇，还需满足同时到达同一点，即时间 $t$ 相同且坐标相等。<br />
+4. <strong>极值与曲率</strong>：在某些问题中需结合导数分析轨迹的最高点、最远点或曲率半径，如斜抛轨迹的射高 $y_{\text{max}}=\frac{v_0^2\sin^2\theta}{2g}$。</p>
+<p><strong>典型应用</strong><br />
+高考中常以“求某抛体运动的轨迹方程”“判断带电粒子在电磁场中的运动轨迹”“分析天体运动轨迹”等设问。例：一带电粒子以速度 $v_0$ 垂直射入匀强电场，其轨迹为抛物线，通过建立位移方程 $x=v_0t$，$y=\frac{1}{2}\frac{qE}{m}t^2$，消去 $t$ 得 $y=\frac{qE}{2mv_0^2}x^2$，可进一步求偏转距离。另例：分析“小船渡河”中船的轨迹取决于水流速度与船速的合成，最短航向对应的轨迹为直线与河岸成特定角度。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆位移与轨迹</strong>：轨迹是位置点形成的曲线，位移仅由初末位置决定，抛体轨迹为曲线而相同水平位移的位移是直线段。</li>
+<li><strong>误将参数方程直接当作轨迹方程</strong>：$x(t)$ 和 $y(t)$ 只是中间变量，必须消去 $t$ 才能得轨迹方程；若未消元直接代入 $x$ 求 $y$ 常致错。</li>
+<li><strong>忽视“同时性”</strong>：判断两物体是否相遇不仅要轨迹相交，还需在交点处时间 $t$ 相等，仅坐标相同不等于相遇。</li>
+<li><strong>在电磁场中忽略初始条件对轨迹的影响</strong>：例如带电粒子在匀强磁场中仅当速度垂直于磁场时才做匀速圆周运动，否则轨迹为螺旋线。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>运动轨迹</td>
+<td>trajectory/path</td>
+<td>质点运动所经过的路线</td>
+</tr>
+<tr>
+<td>参数方程</td>
+<td>parametric equations</td>
+<td>用时间 $t$ 表示坐标 $x(t)$、$y(t)$</td>
+</tr>
+<tr>
+<td>轨迹方程</td>
+<td>equation of trajectory</td>
+<td>消去 $t$ 后 $x$ 与 $y$ 的关系式</td>
+</tr>
+<tr>
+<td>平抛运动</td>
+<td>horizontal projectile motion</td>
+<td>初速度水平、加速度为 $g$ 的匀变速曲线运动</td>
+</tr>
+<tr>
+<td>匀速圆周运动</td>
+<td>uniform circular motion</td>
+<td>速率不变、轨迹为圆的运动，向心加速度指向圆心</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/288-运动的合成与分解.html">运动的合成与分解</a></li>
+<li><a href="../atoms/261-平抛运动.html">平抛运动</a></li>
+<li><a href="../atoms/253-匀速圆周运动.html">匀速圆周运动</a></li>
+<li><a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中的偏转</a></li>
+<li><a class="dead" title="未收录">小船渡河问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-04.html">2010-新课标Ⅰ-04</a></li>
+<li><a href="../exam/物理/2012-新课标-02.html">2012-新课标-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>阴离子迁移</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>阴离子迁移</h1><div class="review-mark" data-stem="864-阴离子迁移"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[物质结构]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 阴离子迁移</p><h1>阴离子迁移</h1>
+<blockquote>
+<p><strong>一句话</strong>：阴离子迁移是指在电场或浓度梯度驱动下，阴离子在溶液、熔盐或固体电解质中发生的定向移动，其迁移速率与离子淌度、外加电压及介质环境密切相关。
+<strong>English</strong>: Anion migration refers to the directional movement of anions driven by an electric field or concentration gradient in a solution, molten salt, or solid electrolyte; its migration rate is closely related to ion mobility, applied voltage, and the medium environment.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+在电化学体系中，阴离子（带负电荷的离子，如 $SO_4^{2-}$、$Cl^-$、$OH^-$）在电场力作用下向<strong>阳极</strong>定向移动。对于电解池：</p>
+<ul>
+<li><strong>阳极</strong>（与外电源正极相连）：阴离子在此失去电子，发生氧化反应</li>
+<li><strong>阴极</strong>（与外电源负极相连）：阳离子在此获得电子，发生还原反应</li>
+</ul>
+<p>核心关系式——离子迁移数 $t_-$：
+$$t_- = \frac{Q_-}{Q_{总}} = \frac{\lambda_-}{\lambda_+ + \lambda_-}$$</p>
+<p>其中 $\lambda_-$、$\lambda_+$ 分别为阴、阳离子的摩尔电导率，$Q_-$ 为阴离子输送的电荷量。迁移数反映了该离子在总导电过程中承担电流的比例。</p>
+<p>对于<strong>离子交换膜</strong>环境（高考频繁考查），阴离子交换膜仅允许阴离子透过，阳离子被截留，从而实现对离子迁移路径的精确控制。</p>
+<p><strong>关键方法</strong>
+解答阴离子迁移类试题的标准步骤：
+1. <strong>判池型</strong>：区分装置是原电池还是电解池，明确电极名称与极性
+2. <strong>定离子</strong>：确认溶液中存在的所有阴离子种类（注意水的自电离提供 $OH^-$）
+3. <strong>析膜型</strong>（若有）：判断膜是阳离子交换膜、阴离子交换膜还是质子交换膜，确定何种离子可通过
+4. <strong>写反应</strong>：阳极写出阴离子放电的氧化半反应，阴极写出阳离子放电的还原半反应
+5. <strong>断方向</strong>：阴离子穿过阴离子交换膜时，从阴极区向阳极区迁移（在电解池中）</p>
+<p>判断离子放电顺序是解题基础。常见阴离子在惰性电极上的放电顺序（阳极失电子能力）：
+$$S^{2-} &gt; I^- &gt; Br^- &gt; Cl^- &gt; OH^- &gt; 含氧酸根（SO_4^{2-}、NO_3^- 等）$$</p>
+<p><strong>典型应用</strong>
+高考中常见设问方式：
+- “通电后，$Cl^-$ 透过某膜向哪一极迁移？”——需结合膜类型与电场方向判定
+- “某离子交换膜的作用是什么？”——例如氯碱工业中阳离子交换膜阻止 $Cl^-$ 迁移至阴极区，避免与 $OH^-$ 发生副反应；又如在特定装置中阴离子交换膜引导 $SO_4^{2-}$ 定向迁移以平衡电荷
+- 双膜（阳膜+阴膜）体系中的离子迁移路径与产物分离分析</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆阴、阳离子迁移方向</strong>：在电解池中，阴离子移向阳极，阳离子移向阴极；一旦与原电池的“阴离子向负极迁移”混淆，整题判断全错</li>
+<li><strong>忽视离子交换膜的类型</strong>：题目给定“阴离子交换膜”时，若按阳离子通过来书写电极反应或判断产物，必然失分——必须锁定只有阴离子能跨膜迁移</li>
+<li><strong>误判含氧酸根的放电</strong>：阳极若用惰性电极，$SO_4^{2-}$、$NO_3^-$ 等含氧酸根极难放电，实际是 $OH^-$ 放电产生 $O_2$，学生常错误写成含氧酸根失电子</li>
+<li><strong>忽略水的自电离</strong>：在讨论阴离子迁移时，水溶液中始终存在 $OH^-$，当溶质阴离子放电顺序靠后（如 $SO_4^{2-}$），实际阳极产物来自 $OH^-$ 放电而非溶质阴离子</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阴离子迁移</td>
+<td>anion migration</td>
+<td>阴离子在电场或浓度梯度下的定向移动过程</td>
+</tr>
+<tr>
+<td>离子交换膜</td>
+<td>ion-exchange membrane</td>
+<td>选择性透过特定离子的高分子薄膜，分阴膜与阳膜</td>
+</tr>
+<tr>
+<td>迁移数</td>
+<td>transference number</td>
+<td>某离子携带的电荷占总电荷量的分数</td>
+</tr>
+<tr>
+<td>阳极</td>
+<td>anode</td>
+<td>发生氧化反应的电极，电解池中接电源正极，阴离子向此处迁移</td>
+</tr>
+<tr>
+<td>放电顺序</td>
+<td>discharge order</td>
+<td>离子在电极上得失电子的优先次序，决定电极反应产物</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+<li><a class="dead" title="未收录">离子交换膜</a></li>
+<li><a class="dead" title="未收录">电极反应式书写</a></li>
+<li><a class="dead" title="未收录">离子放电顺序</a></li>
+<li><a class="dead" title="未收录">原电池与电解池比较</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2016-新课标Ⅱ-05.html">2016-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

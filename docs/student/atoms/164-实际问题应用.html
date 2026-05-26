@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实际问题应用</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>实际问题应用</h1><div class="review-mark" data-stem="164-实际问题应用"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八上, 分式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 实际问题应用, applied problems, 八上数学应用题, 分式实际问题</p><h1>实际问题应用</h1>
+<blockquote>
+<p><strong>课本定义</strong>：用分式方程或整式方程解决实际问题，步骤为：理解题意 → 设未知数 → 列方程（或分式方程）→ 解方程 → 验根（分式方程必须验根）→ 检验答案是否符合实际 → 写出结论。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>常见实际问题类型</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>关键等量关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>行程问题</td>
+<td>路程 = 速度 × 时间，同程异速：$\dfrac{s}{v_1} + \dfrac{s}{v_2} = t$</td>
+</tr>
+<tr>
+<td>工程问题</td>
+<td>工作总量 = 1，时间 = $\dfrac{1}{\text{效率}}$</td>
+</tr>
+<tr>
+<td>比例问题</td>
+<td>浓度/比例关系</td>
+</tr>
+<tr>
+<td>数字问题</td>
+<td>设位数、和差等</td>
+</tr>
+</tbody>
+</table>
+<h3>行程问题示例</h3>
+<p><strong>例</strong>：甲步行速度 4 km/h，乙骑车速度 12 km/h，甲先出发 1 小时，乙追上甲需多少时间？</p>
+<p>设乙行驶时间为 $t$ 小时，则路程相等：</p>
+<p>$12t = 4(t + 1)$，$12t = 4t + 4$，$8t = 4$，$t = 0.5$ 小时。</p>
+<h3>工程问题示例</h3>
+<p><strong>例</strong>：一项工程，甲单独完成需 10 天，乙单独完成需 15 天，两人合作需几天？</p>
+<p>设合作需 $x$ 天，每天完成总工程的 $\dfrac{1}{x}$：</p>
+<p>$$\frac{1}{10} + \frac{1}{15} = \frac{1}{x}$$</p>
+<p>$\dfrac{3}{30} + \dfrac{2}{30} = \dfrac{1}{x}$，$\dfrac{5}{30} = \dfrac{1}{x}$，$x = 6$ 天。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>分式方程解实际问题的完整框架</h3>
+<p><strong>设元</strong>：设合适的未知数（通常设"较小的量"或"所求量"）</p>
+<p><strong>建模</strong>：找关键等量关系，建立分式方程</p>
+<p><strong>解方程</strong>：通分去分母，解整式方程</p>
+<p><strong>验根与检验</strong>：
+1. 验根：解是否使分母为零（数学检验）
+2. 实际检验：解是否满足实际约束（如正数、整数等）</p>
+<h3>典型例题</h3>
+<p><strong>例题 1（行程问题）</strong>：甲从 A 到 B 顺流行驶 2 小时，逆流返回需 3 小时，船速为 15 km/h，求水流速度。</p>
+<p>设水流速度为 $v$ km/h：</p>
+<p>路程相同：$2(15+v) = 3(15-v)$</p>
+<p>$30 + 2v = 45 - 3v$，$5v = 15$，$v = 3$ km/h</p>
+<p>验证：顺流 $18 \times 2 = 36$ km，逆流 $12 \times 3 = 36$ km ✓</p>
+<p><strong>例题 2（工程问题，含分式方程）</strong>：一项工程，甲单独需 $x$ 天，乙单独需 $(x+5)$ 天，两人合作 6 天完成，求 $x$。</p>
+<p>$$\frac{6}{x} + \frac{6}{x+5} = 1$$</p>
+<p>公分母 $x(x+5)$，去分母：</p>
+<p>$6(x+5) + 6x = x(x+5)$</p>
+<p>$6x + 30 + 6x = x^2 + 5x$</p>
+<p>$x^2 - 7x - 30 = 0$</p>
+<p>$(x-10)(x+3) = 0$，$x = 10$ 或 $x = -3$</p>
+<p>实际检验：$x$ 为天数，必须为正，故 $x = 10$，$x + 5 = 15$ 天。</p>
+<p>验根：$x = 10$ 时分母 $x = 10 \neq 0$，$x + 5 = 15 \neq 0$ ✓</p>
+<p><strong>例题 3（浓度问题）</strong>：一杯浓度 20% 的盐水 400 g，加入纯水 $x$ g 后浓度变为 10%。</p>
+<p>$$\frac{400 \times 20\%}{400 + x} = 10\%$$</p>
+<p>$\dfrac{80}{400 + x} = 0.1$，$80 = 0.1(400 + x)$，$800 = 400 + x$，$x = 400$ g</p>
+<h3>建模技巧总结</h3>
+<ol>
+<li><strong>行程问题</strong>：$t = \dfrac{s}{v}$，同路程两段行程时间之和等于总时间</li>
+<li><strong>工程问题</strong>：效率 × 时间 = 完成量，合作时效率相加</li>
+<li><strong>浓度问题</strong>：溶质总量不变，溶液量变化</li>
+<li><strong>比例问题</strong>：设一份的量，用比例关系建方程</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li><strong>实际检验不可省</strong>：解方程得负数、零等不符合实际的解要舍去。</li>
+<li>行程问题要区分：是"同时出发"还是"甲先出发"，时间表达式不同。</li>
+<li>工程问题中"完成总工程"定为 1，各分式代表完成比例。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/157-分式方程.html">分式方程</a>：实际问题建模后得到分式方程</li>
+<li>→ <a href="../atoms/158-分式运算.html">分式运算</a>：解方程需要分式运算</li>
+<li>→ <a class="dead" title="未收录">整数指数幂</a>：某些问题涉及幂运算</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>实际问题</td>
+<td>applied problems / word problems</td>
+</tr>
+<tr>
+<td>行程问题</td>
+<td>distance-rate-time problems</td>
+</tr>
+<tr>
+<td>工程问题</td>
+<td>work problems</td>
+</tr>
+<tr>
+<td>浓度问题</td>
+<td>concentration problems</td>
+</tr>
+<tr>
+<td>等量关系</td>
+<td>equation relationship</td>
+</tr>
+<tr>
+<td>验根</td>
+<td>extraneous solution check</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十五章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中数学应用题解题策略》分式方程应用</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/157-分式方程.html">分式方程</a></li>
+<li><a href="../atoms/158-分式运算.html">分式运算</a></li>
+<li><a class="dead" title="未收录">从分数到分式</a></li>
+<li><a class="dead" title="未收录">整数指数幂</a></li>
+<li><a href="../atoms/155-分式基本性质.html">分式基本性质</a></li>
+<li><a class="dead" title="未收录">多项式乘多项式</a></li>
+</ul>
+</div>
+</body>
+</html>

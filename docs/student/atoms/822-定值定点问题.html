@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定值定点问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>定值定点问题</h1><div class="review-mark" data-stem="822-定值定点问题"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 定值定点问题, Fixed Value and Fixed Point Problems</p><h1>定值定点问题</h1>
+<blockquote>
+<p><strong>一句话</strong>：在解析几何中，当动直线或动曲线的某些几何量（如斜率乘积、长度比、坐标关系）在变化过程中始终保持不变，或动直线、动曲线恒过某一定点时，这类问题统称定值定点问题。
+<strong>English</strong>: In analytic geometry, problems where a geometric quantity (e.g., product of slopes, ratio of lengths) remains invariant or a moving line/curve always passes through a fixed point under variation are collectively called fixed value and fixed point problems.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+定值定点问题常见于圆锥曲线（椭圆、双曲线、抛物线）与直线的综合题中。设动直线方程为 $y=kx+m$（或 $x=ty+n$），与曲线联立后利用韦达定理得到交点坐标的和与积。核心原理是：通过已知条件（如斜率之和为定值、向量数量积为定值、某点在定直线上等）建立关于 $k,m$（或 $t,n$）的等式，消去参数后，若得到的关系与参数无关，则命题成立。<br />
+对于定点问题，常将动直线方程写成 $y-y_0 = k(x-x_0)$ 形式，若 $x_0,y_0$ 为常数，则直线恒过定点 $(x_0, y_0)$；或通过整理成关于参数的线性方程 $A\cdot p + B = 0$，令 $A=0,B=0$ 解出定点坐标。<br />
+定值问题则需将目标量（如 $\frac{1}{k_1}+\frac{1}{k_2}$，$|PA|\cdot|QB|$ 等）用交点坐标表示，代入韦达定理化简，最终结果不含参数，即为定值。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>设而不求</strong>：设出交点坐标 $P(x_1,y_1), Q(x_2,y_2)$，但不单独解出，全程使用 $x_1+x_2, x_1x_2, y_1+y_2, y_1y_2$ 表达。<br />
+2. <strong>联立消元</strong>：联立直线与曲线方程，消去 $y$（或 $x$）得到关于 $x$（或 $y$）的一元二次方程，写出判别式 $\Delta&gt;0$ 保证有两个交点。<br />
+3. <strong>韦达定理</strong>：写出根与系数的关系，并用直线方程将 $y$ 用 $x$ 表示，统一变量。<br />
+4. <strong>参数分离</strong>：根据题设条件列出等式，分离参数。若求定点，将等式化为 $f(k)\cdot m + g(k)=0$ 的形式，令 $f(k)$ 的系数与常数项为零；若求定值，化简到结果与参数无关即可。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：“求证：直线 $AB$ 过定点”“是否存在常数 $\lambda$，使得 $k_{PA}\cdot k_{PB}$ 为定值”“证明：$\triangle OAB$ 的面积为定值”等。<br />
+例：已知椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，过右焦点 $F$ 的动直线交椭圆于 $A,B$ 两点，在 $x$ 轴上是否存在定点 $M$，使得 $MA\cdot MB$ 为定值？这类问题需要设直线方程，联立后用韦达定理表达距离乘积，分离参数求出定点坐标。<br />
+再如，过抛物线 $y^2=2px$ 上一点 $P$ 作两条斜率之和为定值的弦，证明弦所在直线过定点。需设点坐标和斜率，利用点斜式导出直线方程，消去参数得到定点。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视斜率不存在的情况</strong>：设直线为 $y=kx+m$ 时，遗漏 $k$ 不存在（即垂直于 $x$ 轴）的情形，未单独讨论或补证，导致漏解。</li>
+<li><strong>联立后忘记判别式</strong>：直接使用韦达定理，而不先验证 $\Delta&gt;0$，导致含参数的取值范围缺失，定点可能在曲线外。</li>
+<li><strong>变量代换不彻底</strong>：表达目标量时混合使用 $x_1,y_1,x_2,y_2$，未统一用 $x_1+x_2,x_1x_2$ 和直线方程全部转化为同一变量，造成化简困难或错误。</li>
+<li><strong>参数分离不严谨</strong>：在定点问题中，将方程写为关于参数 $k$ 的恒等式 $A k + B = 0$ 后，误认为只要 $B=0$，忽视 $A=0$ 也必须恒成立的条件，导致定点求错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定值</td>
+<td>fixed value (invariant)</td>
+<td>在变化过程中保持不变的量</td>
+</tr>
+<tr>
+<td>定点</td>
+<td>fixed point</td>
+<td>动直线或动曲线恒经过的固定点</td>
+</tr>
+<tr>
+<td>设而不求</td>
+<td>substituting without solving</td>
+<td>不单独解出交点坐标，只用和与积表达</td>
+</tr>
+<tr>
+<td>韦达定理</td>
+<td>Vieta's formulas</td>
+<td>建立一元二次方程根与系数的关系</td>
+</tr>
+<tr>
+<td>参数分离</td>
+<td>parameter separation</td>
+<td>将含参等式转化为恒等式，消去参数</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">韦达定理的应用</a></li>
+<li><a class="dead" title="未收录">直线与椭圆的位置关系</a></li>
+<li><a class="dead" title="未收录">直线与抛物线的位置关系</a></li>
+<li><a class="dead" title="未收录">圆锥曲线中的最值与范围问题</a></li>
+<li><a class="dead" title="未收录">向量数量积的坐标运算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2023-新课标Ⅱ-21.html">2023-新课标Ⅱ-21</a></li>
+</ul></div>
+</div>
+</body>
+</html>

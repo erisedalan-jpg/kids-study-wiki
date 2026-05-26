@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子复合场运动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>带电粒子复合场运动</h1><div class="review-mark" data-stem="302-带电粒子复合场运动"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 带电粒子在磁场中运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 带电粒子复合场运动, charged particle in combined fields, 电磁复合场, 速度选择器</p><h2>🎓 带电粒子在复合场中的运动</h2>
+<h3>定义</h3>
+<p><strong>复合场</strong>指电场和磁场同时存在的区域。带电粒子同时受到<strong>电场力</strong>（$\boldsymbol{F}_E = q\boldsymbol{E}$）和<strong>洛伦兹力</strong>（$\boldsymbol{f} = q\boldsymbol{v}\times\boldsymbol{B}$）的共同作用。</p>
+<h3>典型情形一：速度选择器</h3>
+<p><strong>结构</strong>：电场 $E$ 和磁场 $B$ 相互垂直，且两者都垂直于粒子速度方向。</p>
+<p><strong>平衡条件</strong>：当电场力和磁场力大小相等、方向相反时，粒子做匀速直线运动：</p>
+<p>$$qE = qvB \Rightarrow v = \frac{E}{B}$$</p>
+<p><strong>作用</strong>：只有速度恰好等于 $E/B$ 的粒子才能通过，其他粒子偏转被阻挡，实现速度筛选。</p>
+<blockquote>
+<p>质谱仪中常用速度选择器保证粒子以特定速度进入偏转磁场。</p>
+</blockquote>
+<h3>典型情形二：粒子做匀速圆周运动（纯磁场）</h3>
+<p>仅有磁场，洛伦兹力提供向心力，粒子做圆周运动（见 <a href="../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中圆周运动</a>）。</p>
+<h3>典型情形三：重力 + 电场 + 磁场的平衡</h3>
+<p>对于带电油滴（密立根油滴实验）或宏观带电体，重力也需考虑：</p>
+<p>$$mg = qE + qvB \quad \text{（视具体情形）}$$</p>
+<h3>典型情形四：粒子在复合场中做直线运动</h3>
+<p>若粒子做直线匀加速（$\boldsymbol{E}$ 沿运动方向，$\boldsymbol{B}$ 垂直）：</p>
+<ul>
+<li>电场提供沿运动方向的加速度</li>
+<li>洛伦兹力提供向心力（使轨迹弯曲）</li>
+<li>实际轨迹由两者合力决定</li>
+</ul>
+<h3>复合场问题分析方法</h3>
+<ol>
+<li><strong>受力分析</strong>：列出重力 $mg$、电场力 $qE$、洛伦兹力 $qvB$ 的方向和大小</li>
+<li><strong>运动状态判断</strong>：合力为零 → 匀速直线；合力垂直速度 → 圆周运动</li>
+<li><strong>利用牛顿第二定律</strong>：$\sum \boldsymbol{F} = m\boldsymbol{a}$</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：速度选择器中，电场 $E = 3\times10^4\,\text{V/m}$，磁场 $B = 0.2\,\text{T}$，求能通过的粒子速度。</p>
+<p>$$v = \frac{E}{B} = \frac{3\times10^4}{0.2} = 1.5\times10^5\,\text{m/s}$$</p>
+<p>无论粒子的质量、电荷量如何，只要速度为 $1.5\times10^5\,\text{m/s}$ 即可通过。</p>
+<p><strong>例</strong>：粒子以 $v$ 水平射入竖直电场 $E$（向上）和水平磁场 $B$（向外）的复合场，重力 $mg$，若粒子做匀速直线运动，求三力的关系。</p>
+<p>$$mg = qE + 0 \quad \text{（若仅电场平衡重力）}$$</p>
+<p>或 $mg = qvB$（若仅磁场平衡重力），具体看速度方向。</p>
+<h3>霍尔效应的复合场本质</h3>
+<p>霍尔效应稳态时，横向电场力 = 洛伦兹力（二者平衡），正是速度选择器的原理（见 <a class="dead" title="未收录">霍尔效应</a>）。</p>
+<h3>易错点</h3>
+<ul>
+<li>速度选择器中，能通过的速度 $v = E/B$ 与粒子质量和电荷量<strong>无关</strong>（这是"选速"而非"选荷质比"）。</li>
+<li>复合场中洛伦兹力仍<strong>不做功</strong>，电场力可以做功。</li>
+<li>分析受力时，洛伦兹力随速度方向变化（运动中持续更新），电场力方向不随运动变化。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了力的平衡和合力；本节将电场力和洛伦兹力同时引入受力分析，是多场叠加的典型物理问题，常见于高考压轴题。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十三章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/洛伦兹力">维基百科·洛伦兹力</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><a class="dead" title="未收录">霍尔效应</a></li>
+<li><a href="../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中圆周运动</a></li>
+<li><a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中偏转</a></li>
+<li><a class="dead" title="未收录">质谱仪</a></li>
+<li><a class="dead" title="未收录">电场电路综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2009-北京-07</a></li>
+<li><a class="dead" title="未收录">2021-北京-18</a></li>
+<li><a class="dead" title="未收录">2023-湖南-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

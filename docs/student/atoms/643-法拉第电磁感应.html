@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>法拉第电磁感应</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>法拉第电磁感应</h1><div class="review-mark" data-stem="643-法拉第电磁感应"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 法拉第电磁感应, Faraday&#x27;s law of induction</p><h1>法拉第电磁感应</h1>
+<blockquote>
+<p><strong>一句话</strong>：感应电动势的大小与穿过回路的磁通量的变化率成正比，即 $\mathcal{E} = n \frac{\Delta \Phi}{\Delta t}$。
+<strong>English</strong>: The induced electromotive force in a circuit is proportional to the rate of change of magnetic flux through the circuit.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong><br />
+  法拉第电磁感应定律：电路中感应电动势的大小，跟穿过这一电路的磁通量的变化率成正比。对于 $n$ 匝线圈，平均感应电动势<br />
+  $$\mathcal{E} = n \frac{\Delta \Phi}{\Delta t}$$<br />
+  其中 $\Phi = BS\sin\theta$（$\theta$ 为 $B$ 与面积 $S$ 的夹角），磁通量变化可源于 $B$ 变、$S$ 变或 $\theta$ 变。<br />
+  对于一段直导体垂直切割匀强磁场的磁感线，瞬时感应电动势为<br />
+  $$\mathcal{E} = Blv$$<br />
+  $B$、$l$、$v$ 必须两两垂直，$l$ 为有效切割长度。<br />
+  感应电动势的方向由楞次定律判定：感应电流的磁场总阻碍引起感应电流的磁通量的变化。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li>明确磁通量变化的原因（$B$ 变、$S$ 变还是两者都变），分清平均电动势（用 $\Delta \Phi / \Delta t$）与瞬时电动势（用 $Blv$ 或微分形式）。  </li>
+<li>选择公式：若回路固定、磁场均匀变化，用 $\mathcal{E} = n \frac{\Delta B}{\Delta t} S$；若导体切割磁感线，用 $\mathcal{E} = Blv$，注意 $v$ 是导体相对于磁场的速度。  </li>
+<li>计算有效长度：若导体非直杆或运动方向与磁场不垂直，只取在垂直于 $B$ 和 $v$ 平面内的投影长度。  </li>
+<li>
+<p>应用楞次定律（“增反减同”）或右手定则判断感应电流方向，并结合电路知识求解电学量。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考常以“导体棒+导轨”“线圈在磁场中转动”“磁场随时间变化”为模型。<br />
+<strong>例1</strong>：两平行金属导轨间距 $L$，电阻不计，匀强磁场 $B$ 垂直于导轨平面，导体棒 $ab$ 垂直放在导轨上以速度 $v$ 向右运动，求感应电动势和回路电流。<br />
+  解析：切割磁感线，$\mathcal{E} = BLv$；若回路总电阻为 $R$，$I = \frac{BLv}{R}$，方向用右手定则（掌心迎磁感线，拇指导体运动方向，四指为电流方向）。<br />
+<strong>例2</strong>：圆形线圈在匀强磁场中以角速度 $\omega$ 匀速转动，从线圈平面与磁场垂直开始计时，写出瞬时电动势表达式。<br />
+  解析：磁通量 $\Phi = BS\cos\omega t$，$\mathcal{E} = n \frac{d\Phi}{dt} = nBS\omega \sin\omega t$，可用于生成交变电流。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>磁通量 $\Phi$、磁通量的变化量 $\Delta \Phi$、磁通量的变化率 $\frac{\Delta \Phi}{\Delta t}$</strong> 相混淆。$\Phi$ 最大时（中性面），$\frac{\Delta \Phi}{\Delta t} = 0$，电动势为零；$\Phi = 0$ 时变化率最大，电动势最大。</li>
+<li><strong>公式 $\mathcal{E} = Blv$ 的适用条件</strong>忽略。必须是 $B$、$l$、$v$ 两两垂直，且 $v$ 为导体有效切割速度；若导体运动方向与磁场不垂直，需将 $v$ 分解出垂直分量。</li>
+<li><strong>平均电动势与瞬时电动势混淆</strong>。求通过导体横截面的电荷量时用平均电动势 $q = n\frac{\Delta \Phi}{R}$；求热功率、某时刻的电流则必须用瞬时值。</li>
+<li><strong>楞次定律与右手定则混用</strong>。对于闭合回路部分导体切割磁感线问题，用右手定则更快；对于磁场变化引起的感应电流，只能用楞次定律判定方向。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>磁通量</td>
+<td>magnetic flux</td>
+<td>穿过某一面积的磁感线条数，$\Phi = BS\sin\theta$</td>
+</tr>
+<tr>
+<td>感应电动势</td>
+<td>induced electromotive force (emf)</td>
+<td>由磁通量变化产生的电动势</td>
+</tr>
+<tr>
+<td>法拉第电磁感应定律</td>
+<td>Faraday's law of electromagnetic induction</td>
+<td>$\mathcal{E} = n \frac{\Delta \Phi}{\Delta t}$</td>
+</tr>
+<tr>
+<td>楞次定律</td>
+<td>Lenz's law</td>
+<td>感应电流的磁场阻碍磁通量变化，用于判断方向</td>
+</tr>
+<tr>
+<td>动生电动势</td>
+<td>motional emf</td>
+<td>导体在磁场中运动切割磁感线产生的电动势</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">自感与互感</a></li>
+<li><a href="../atoms/188-磁场对通电导体的作用.html">安培力</a></li>
+<li><a class="dead" title="未收录">交变电流的产生与描述</a></li>
+<li><a class="dead" title="未收录">电磁感应中的能量转化</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-07.html">2016-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

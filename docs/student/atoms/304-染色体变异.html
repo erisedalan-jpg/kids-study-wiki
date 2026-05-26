@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>染色体变异</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>染色体变异</h1><div class="review-mark" data-stem="304-染色体变异"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第5章基因突变及其他变异]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 染色体变异, chromosomal aberration, 染色体畸变</p><h1>染色体变异</h1>
+<blockquote>
+<p><strong>一句话</strong>：染色体结构或数目发生改变的变异，可在光学显微镜下直接观察到，包括染色体结构变异（缺失/重复/倒位/易位）和染色体数目变异（整倍体/非整倍体）。
+<strong>English</strong>: Heritable changes in chromosome structure or number, observable under a light microscope, including structural aberrations (deletion, duplication, inversion, translocation) and numerical aberrations (polyploidy, aneuploidy).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>染色体变异</strong>（chromosomal aberration）：染色体在结构或数目上发生的可遗传变化，属于大规模基因组改变，通常影响多个基因，后果往往比点突变更严重。</p>
+<h3>原理 / 规律</h3>
+<h4>染色体变异的分类</h4>
+<pre><code>染色体变异
+├── 染色体结构变异
+│   ├── 缺失（deletion）
+│   ├── 重复（duplication）
+│   ├── 倒位（inversion）
+│   └── 易位（translocation）
+└── 染色体数目变异
+    ├── 整倍体变异（整组增减）
+    │   ├── 单倍体（n）
+    │   └── 多倍体（3n, 4n...）
+    └── 非整倍体变异（个别染色体增减）
+        ├── 三体（2n+1）
+        └── 单体（2n-1）
+</code></pre>
+<h4>染色体结构变异（详见<a href="../atoms/306-染色体结构变异.html">染色体结构变异</a>）</h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>概念</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>缺失</td>
+<td>染色体丢失一段</td>
+<td>猫叫综合征（5号染色体短臂缺失）</td>
+</tr>
+<tr>
+<td>重复</td>
+<td>染色体某段重复出现</td>
+<td>棒眼果蝇（X 染色体 16A 区重复）</td>
+</tr>
+<tr>
+<td>倒位</td>
+<td>染色体某段倒转方向</td>
+<td>人类 inv(9)（常见倒位多态）</td>
+</tr>
+<tr>
+<td>易位</td>
+<td>非同源染色体之间片段转移</td>
+<td>慢性粒细胞白血病（Ph 染色体，9↔22 易位）</td>
+</tr>
+</tbody>
+</table>
+<h4>染色体数目变异（详见<a href="../atoms/305-染色体数目变异.html">染色体数目变异</a>）</h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>染色体组数</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单倍体</td>
+<td>n（含 1 个染色体组）</td>
+<td>蜜蜂雄蜂（由未受精卵发育）</td>
+</tr>
+<tr>
+<td>二倍体</td>
+<td>2n</td>
+<td>人类（2n=46）</td>
+</tr>
+<tr>
+<td>三倍体</td>
+<td>3n</td>
+<td>无子西瓜（3n=33）</td>
+</tr>
+<tr>
+<td>四倍体</td>
+<td>4n</td>
+<td>普通小麦（6n=42，异源六倍体）</td>
+</tr>
+<tr>
+<td>三体（2n+1）</td>
+<td>—</td>
+<td>唐氏综合征（21 三体，2n+1=47）</td>
+</tr>
+</tbody>
+</table>
+<h4>染色体变异 vs. 基因突变</h4>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>基因突变</th>
+<th>染色体变异</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>变化水平</td>
+<td>DNA 碱基（基因内）</td>
+<td>染色体（多基因）</td>
+</tr>
+<tr>
+<td>显微可见</td>
+<td>否</td>
+<td>是（光镜下可见）</td>
+</tr>
+<tr>
+<td>影响范围</td>
+<td>单个基因</td>
+<td>多个基因（染色体片段/整条）</td>
+</tr>
+<tr>
+<td>频率</td>
+<td>极低</td>
+<td>低，但高于基因突变的"大规模"影响</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：无子西瓜（三倍体）能否通过减数分裂产生正常配子？原因？</p>
+<p><strong>解题</strong>：三倍体（3n=33）含 3 个染色体组，减数分裂时同源染色体联会紊乱（三条同源染色体无法正常配对），不能产生正常配子（含整数染色体组），因此<strong>无子西瓜不育，不能通过有性生殖繁殖后代</strong>，需每年用二倍体×四倍体杂交制种。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>染色体结构变异改变基因的数目或排列顺序，但碱基序列不变</strong>（缺失除外——缺失的片段丢失了基因）。</li>
+<li><strong>非整倍体（三体、单体）属于染色体数目变异</strong>，不是"整倍体"。</li>
+<li><strong>秋水仙素诱导多倍体</strong>：抑制纺锤体形成，染色体不能分向两极，最终细胞不分裂，产生染色体数目加倍的细胞。秋水仙素是多倍体育种工具，不引起基因突变。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>染色体变异</td>
+<td>chromosomal aberration</td>
+</tr>
+<tr>
+<td>染色体结构变异</td>
+<td>structural chromosomal aberration</td>
+</tr>
+<tr>
+<td>染色体数目变异</td>
+<td>numerical chromosomal aberration</td>
+</tr>
+<tr>
+<td>整倍体</td>
+<td>euploid</td>
+</tr>
+<tr>
+<td>非整倍体</td>
+<td>aneuploid</td>
+</tr>
+<tr>
+<td>多倍体</td>
+<td>polyploid</td>
+</tr>
+<tr>
+<td>单倍体</td>
+<td>haploid</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>Chromosomal aberrations differ from gene mutations in scale: they affect entire segments or whole chromosomes and are detectable under a light microscope.</em>（染色体变异与基因突变在规模上不同：前者影响整段或整条染色体，可在光镜下检测到。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第5章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"染色体异常"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/302-基因重组.html">基因重组</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/311-自然选择学说.html">自然选择学说</a></p>
+</li>
+<li>
+<p><a href="../atoms/306-染色体结构变异.html">染色体结构变异</a></p>
+</li>
+<li><a href="../atoms/305-染色体数目变异.html">染色体数目变异</a></li>
+<li><a href="../atoms/300-单倍体.html">单倍体</a></li>
+<li><a href="../atoms/303-多倍体.html">多倍体</a></li>
+<li><a href="../atoms/301-基因突变.html">基因突变</a></li>
+<li><a href="../atoms/302-基因重组.html">基因重组</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

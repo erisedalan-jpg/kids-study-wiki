@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>立体图形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>立体图形</h1><div class="review-mark" data-stem="107-立体图形"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七上, 几何初步]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 立体图形, solid figure, 三维图形, 空间图形</p><h2>课本一句话定义</h2>
+<p>占有一定<strong>空间</strong>（三维）的几何图形叫做<strong>立体图形</strong>；常见立体图形包括棱柱（长方体、正方体等）、棱锥、圆柱、圆锥和球。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>立体图形就是"有厚度"的形状，你可以用手拿起来的那种：</p>
+<table>
+<thead>
+<tr>
+<th>生活中的物体</th>
+<th>对应立体图形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牛奶盒</td>
+<td>长方体（四棱柱）</td>
+</tr>
+<tr>
+<td>骰子</td>
+<td>正方体</td>
+</tr>
+<tr>
+<td>金字塔</td>
+<td>四棱锥</td>
+</tr>
+<tr>
+<td>易拉罐</td>
+<td>圆柱</td>
+</tr>
+<tr>
+<td>冰淇淋甜筒</td>
+<td>圆锥</td>
+</tr>
+<tr>
+<td>篮球</td>
+<td>球（球体）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>立体图形 vs 平面图形</strong>：
+- 立体图形：可以从各个方向看（有"面"、"棱"、"顶点"）
+- 平面图形：只能在纸上画（只有"边"和"角"）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>立体图形的分类</h3>
+<p><strong>多面体</strong>（polyhedron）：各面都是平面的立体图形。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>面</th>
+<th>棱</th>
+<th>顶点</th>
+<th>欧拉公式 $F+V-E=2$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四面体（三棱锥）</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>$4+4-6=2$ ✅</td>
+</tr>
+<tr>
+<td>正方体（六面体）</td>
+<td>6</td>
+<td>12</td>
+<td>8</td>
+<td>$6+8-12=2$ ✅</td>
+</tr>
+<tr>
+<td>三棱柱</td>
+<td>5</td>
+<td>9</td>
+<td>6</td>
+<td>$5+6-9=2$ ✅</td>
+</tr>
+<tr>
+<td>四棱柱（长方体）</td>
+<td>6</td>
+<td>12</td>
+<td>8</td>
+<td>$6+8-12=2$ ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>旋转体</strong>（solid of revolution）：由平面图形旋转生成的立体。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>生成方式</th>
+<th>面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆柱</td>
+<td>长方形绕一边旋转</td>
+<td>2 个底面圆 + 1 个侧面</td>
+</tr>
+<tr>
+<td>圆锥</td>
+<td>直角三角形绕直角边旋转</td>
+<td>1 个底面圆 + 1 个侧面</td>
+</tr>
+<tr>
+<td>球</td>
+<td>半圆绕直径旋转</td>
+<td>1 个球面</td>
+</tr>
+</tbody>
+</table>
+<h3>关键概念</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面（face）</td>
+<td>立体图形的每个平面区域</td>
+</tr>
+<tr>
+<td>棱（edge）</td>
+<td>两个面的交线（线段）</td>
+</tr>
+<tr>
+<td>顶点（vertex）</td>
+<td>三条或更多棱的交点</td>
+</tr>
+<tr>
+<td>欧拉公式</td>
+<td>$F + V - E = 2$（凸多面体）</td>
+</tr>
+</tbody>
+</table>
+<h3>展开图（平面展开图）</h3>
+<p>将立体图形的各个面"展开"到同一平面，得到<strong>展开图</strong>（net）。</p>
+<ul>
+<li>正方体展开图：共有 11 种不同形状</li>
+<li>圆柱展开图：2 个圆 + 1 个长方形（侧面）</li>
+<li>圆锥展开图：1 个圆（底面）+ 1 个扇形（侧面）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：一个三棱锥有多少个面、多少条棱、多少个顶点？</p>
+<p><strong>解</strong>：面 = 4，棱 = 6，顶点 = 4。验证欧拉公式：$4 + 4 - 6 = 2$ ✅。</p>
+<p><strong>例 2</strong>：下列展开图能折成正方体的是哪些？（判断型，需脑内旋转）</p>
+<p><strong>解</strong>：判断方法——展开图中每对相对面不能相邻，共 11 种正方体展开图，其余为干扰项。</p>
+<p><strong>例 3</strong>：圆柱的侧面展开后是什么图形？侧面面积如何计算？</p>
+<p><strong>解</strong>：圆柱侧面展开是<strong>长方形</strong>，长 = 底面圆周长 $2\pi r$，宽 = 圆柱高 $h$；侧面积 = $2\pi rh$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>棱锥和棱柱区分</strong>：棱柱有两个相同的底面；棱锥只有一个底面，顶点是"尖"的。</li>
+<li><strong>球面 ≠ 圆</strong>：球的表面是球面（二维曲面），球的截面才是圆。</li>
+<li><strong>欧拉公式只对凸多面体</strong>：有"凹陷"的多面体不适用。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：几何图形（总分类）、小学长方体体积</li>
+<li>后续：点线面体 → 空间想象力训练 → 表面积和体积计算（七下/八年级）</li>
+<li>高中拓展：空间向量（三维坐标）、球的方程</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>立体图形</td>
+<td>solid figure / 3D figure</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>多面体</td>
+<td>polyhedron</td>
+<td>面都是平面</td>
+</tr>
+<tr>
+<td>旋转体</td>
+<td>solid of revolution</td>
+<td>旋转生成</td>
+</tr>
+<tr>
+<td>展开图</td>
+<td>net</td>
+<td>展开后的平面图</td>
+</tr>
+<tr>
+<td>欧拉公式</td>
+<td>Euler's formula</td>
+<td>$F+V-E=2$</td>
+</tr>
+<tr>
+<td>棱</td>
+<td>edge</td>
+<td>面的交线</td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>vertex</td>
+<td>棱的交点</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正方体是一种常见的立体图形。</td>
+<td>A cube is a common solid figure.</td>
+</tr>
+<tr>
+<td>圆柱的侧面展开是一个长方形。</td>
+<td>The lateral surface of a cylinder unfolds into a rectangle.</td>
+</tr>
+<tr>
+<td>凸多面体满足欧拉公式 $F+V-E=2$。</td>
+<td>A convex polyhedron satisfies Euler's formula $F+V-E=2$.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"图形与几何"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第四章第 1 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Polyhedron；Solid of revolution</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，分类与人教版七上一致，欧拉公式为进阶内容，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/085-几何图形.html">几何图形</a></li>
+<li><a href="../atoms/103-点线面体.html">点线面体</a></li>
+<li><a class="dead" title="未收录">三角形</a></li>
+<li><a class="dead" title="未收录">圆</a></li>
+<li><a href="../atoms/066-体积.html">体积</a></li>
+<li><a class="dead" title="未收录">表面积</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弹簧弹性势能</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>弹簧弹性势能</h1><div class="review-mark" data-stem="607-弹簧弹性势能"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 弹簧弹性势能, elastic potential energy</p><h1>弹簧弹性势能</h1>
+<blockquote>
+<p><strong>一句话</strong>：弹簧因发生弹性形变而储存的能量，其大小由劲度系数和形变量的平方决定，公式为 $E_p = \frac{1}{2}kx^2$（$x$ 为相对原长的形变量）。
+<strong>English</strong>: Energy stored in a spring due to its elastic deformation, determined by the spring constant and the square of the displacement from equilibrium.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+弹簧弹性势能是物体因弹簧发生弹性形变而具有的势能。对于遵守胡克定律的理想弹簧，在弹性限度内，弹力 $F = -kx$。选取弹簧原长为零势能点，弹性势能的表达式为  </p>
+<p>$$
+E_p = \frac{1}{2}kx^2
+$$</p>
+<p>其中 $k$ 为弹簧的劲度系数，$x$ 为从原长起算的形变量（压缩或拉伸）。该公式的适用条件是：弹簧本身质量可忽略，形变在弹性限度内，且只涉及弹簧自身的弹性势能，通常默认取弹簧原长为势能零点。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>直接计算法</strong>：已知劲度系数 $k$ 和形变量 $x$，代入公式求某状态的弹性势能，或比较不同状态下的势能差 $\Delta E_p = \frac{1}{2}k(x_2^2 - x_1^2)$。<br />
+2. <strong>功能关系法</strong>：在包含弹簧的系统里，弹性势能的变化可以转化为其他形式的能。解题时先判断机械能是否守恒（只有重力和弹力做功）。若守恒，列出初末状态机械能相等方程；若涉及其他力做功，则用功能关系 $W_{\text{其他}} = \Delta E_{\text{机}}$。<br />
+3. <strong>注意零势能面的选取</strong>：弹性势能零点通常选在弹簧原长。当研究系统同时涉及重力和弹力时，两项势能的零势能点可独立选取，但必须在列式时保持一致。</p>
+<p><strong>典型应用</strong><br />
+高考中常见考查方式：<br />
+- <strong>滑块—弹簧模型</strong>：光滑水平面上，一滑块压缩弹簧后释放，求弹簧恢复原长时滑块的速度，或求滑块速度为零时弹簧的最大弹性势能。解题时结合机械能守恒或动能定理。<br />
+- <strong>竖直弹簧振子</strong>：物体挂在竖直弹簧上，求在平衡位置或最大位移处的弹性势能、重力势能和动能关系，常常需同时考虑弹性势能和重力势能的变化。<br />
+- <strong>综合问题</strong>：弹簧连接多个物体，分析分离条件（弹力为零时）、最大弹性势能对应的速度条件（两物体速度相等时）等，综合运用动量守恒与能量守恒。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆弹性势能公式中的 $x$</strong>：必须是从弹簧原长起算的形变量，不能误用弹簧长度或从平衡位置起算的位移。若以平衡位置为原点，弹力是重力的平衡力，此时弹性势能表达式不能简单套用 $\frac{1}{2}kx^2$（需重新定义零点）。  </li>
+<li><strong>忘记弹性势能是标量但有状态性</strong>：压缩 $x$ 和伸长 $x$ 时弹性势能相等，但弹力方向不同。列方程时注意弹力做功的正负。  </li>
+<li><strong>系统机械能守恒条件判断错误</strong>：只有重力和弹簧弹力做功时，系统机械能才守恒。若弹簧连接物体间有摩擦、外力或非弹性碰撞，则需要考虑能量耗散或用功能原理。  </li>
+<li><strong>弹簧问题中速度最大位置误判</strong>：滑块在弹簧作用下运动，当加速度为零（即合力为零）时速度最大，不一定是弹簧恢复原长时。恢复原长时弹力为零，但若受其他恒力，则合力不一定为零。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弹性势能</td>
+<td>elastic potential energy</td>
+<td>弹性形变物体储存的能量</td>
+</tr>
+<tr>
+<td>劲度系数</td>
+<td>spring constant</td>
+<td>表征弹簧刚度的物理量</td>
+</tr>
+<tr>
+<td>形变量</td>
+<td>deformation / displacement from equilibrium</td>
+<td>相对原长的压缩或拉伸量</td>
+</tr>
+<tr>
+<td>胡克定律</td>
+<td>Hooke's law</td>
+<td>$F = -kx$，弹性限度内成立</td>
+</tr>
+<tr>
+<td>机械能守恒</td>
+<td>conservation of mechanical energy</td>
+<td>只有重力或弹力做功时，动能与势能之和不变</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/233-胡克定律.html">胡克定律</a></li>
+<li><a href="../atoms/085-机械能守恒-初中.html">机械能守恒定律</a></li>
+<li><a href="../atoms/249-功能关系.html">功能关系</a></li>
+<li><a href="../atoms/251-动能定理.html">动能定理</a></li>
+<li><a class="dead" title="未收录">碰撞与动量守恒</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2022-全国乙-12.html">2022-全国乙-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

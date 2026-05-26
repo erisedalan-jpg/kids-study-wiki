@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双缝干涉实验</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双缝干涉实验</h1><div class="review-mark" data-stem="352-双缝干涉实验"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 双缝干涉实验, 杨氏双缝, double-slit experiment, Young&#x27;s double slit</p><h2>🎓 双缝干涉实验</h2>
+<h3>历史背景</h3>
+<p>1801年，托马斯·杨（Thomas Young）首次成功进行<strong>双缝干涉实验</strong>，观察到光的干涉条纹，有力证明了光的<strong>波动性</strong>，反驳了牛顿的粒子说。</p>
+<h3>实验装置</h3>
+<pre><code>光源 → 单缝S（增强相干性） → 双缝S₁S₂ → 光屏
+</code></pre>
+<ul>
+<li><strong>单缝 S</strong>：将光源变为线光源，增强相干性</li>
+<li><strong>双缝 S₁S₂</strong>：两缝间距 $d$（约 0.1~0.5 mm），起分波前作用</li>
+<li><strong>光屏</strong>：距双缝距离 $L$（约 0.5~2 m），观察干涉条纹</li>
+</ul>
+<h3>干涉条纹</h3>
+<p>实验结果：光屏上出现<strong>等间距的明暗相间</strong>竖直条纹。</p>
+<p><strong>亮条纹</strong>（加强）：$S_1$、$S_2$ 到该点的路程差 = 波长整数倍</p>
+<p>$$\delta = r_2 - r_1 = n\lambda \quad (n = 0, \pm1, \pm2, \ldots)$$</p>
+<p><strong>暗条纹</strong>（减弱）：路程差 = 半波长奇数倍</p>
+<p>$$\delta = (n + \frac{1}{2})\lambda$$</p>
+<h3>条纹间距公式</h3>
+<p>$$\boxed{\Delta y = \frac{L\lambda}{d}}$$</p>
+<ul>
+<li>$\Delta y$：相邻亮条纹（或暗条纹）间距（m）</li>
+<li>$L$：双缝到光屏的距离（m）</li>
+<li>$\lambda$：光的波长（m）</li>
+<li>$d$：双缝间距（m）</li>
+</ul>
+<h3>测量光的波长</h3>
+<p>由已知量 $L$、$d$ 和测量量 $\Delta y$，反求 $\lambda$：</p>
+<p>$$\lambda = \frac{d\cdot\Delta y}{L}$$</p>
+<p>实验中测 $n$ 条亮纹的总宽度 $\Delta Y$，则 $\Delta y = \Delta Y / (n-1)$，减小误差。</p>
+<h3>条纹特点分析</h3>
+<table>
+<thead>
+<tr>
+<th>改变量</th>
+<th>对条纹的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增大波长 $\lambda$</td>
+<td>条纹间距增大（红光比蓝光条纹宽）</td>
+</tr>
+<tr>
+<td>增大缝间距 $d$</td>
+<td>条纹间距减小（条纹变密）</td>
+</tr>
+<tr>
+<td>增大屏距 $L$</td>
+<td>条纹间距增大（条纹变宽）</td>
+</tr>
+<tr>
+<td>换白光</td>
+<td>中央白色，两侧出现彩色条纹（各色间距不同）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：双缝实验中，$d = 0.3\text{ mm}$，$L = 1.2\text{ m}$，用绿光（$\lambda = 550\text{ nm}$）照射，求条纹间距。</p>
+<p>$$\Delta y = \frac{L\lambda}{d} = \frac{1.2\times550\times10^{-9}}{0.3\times10^{-3}} = \frac{6.6\times10^{-7}}{3\times10^{-4}} = 2.2\times10^{-3}\text{ m} = 2.2\text{ mm}$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>双缝干涉是分波前法</strong>：两缝来自同一光源的不同部分，是相干光。两个独立光源不相干，不能产生稳定干涉。</li>
+<li><strong>路程差计算用几何方法</strong>：对于中央条纹，路程差为零（等程差）；越靠边，路程差越大。</li>
+<li><strong>条纹是等间距的</strong>：理论上等间距（在近似条件 $d \ll L$ 下成立）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：杨氏双缝实验 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/340-光的干涉.html">光的干涉</a></li>
+<li><a href="../atoms/342-光的衍射-高中.html">光的衍射-高中</a></li>
+<li><a href="../atoms/338-光的偏振.html">光的偏振</a></li>
+<li><a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+<li><a class="dead" title="未收录">相位</a></li>
+<li><a href="../atoms/370-波长.html">波长</a></li>
+<li><a href="../atoms/360-折射率.html">折射率</a></li>
+</ul>
+</div>
+</body>
+</html>

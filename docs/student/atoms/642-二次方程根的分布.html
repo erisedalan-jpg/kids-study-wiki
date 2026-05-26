@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次方程根的分布</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次方程根的分布</h1><div class="review-mark" data-stem="642-二次方程根的分布"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[统计与概率]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次方程根的分布</p><h1>二次方程根的分布</h1>
+<blockquote>
+<p><strong>一句话</strong>：对二次方程 $ax^2+bx+c=0\,(a\neq0)$ 的实根相对于某区间或某值的位置关系，用判别式、对称轴及端点函数值构成不等式组进行约束。
+<strong>English</strong>: The distribution of real roots of a quadratic equation $ax^2+bx+c=0\,(a\neq0)$ refers to their relative positions with respect to given intervals or numbers, constrained by the discriminant, axis of symmetry, and endpoint function values.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+设 $f(x)=ax^2+bx+c\ (a\neq 0)$，考虑方程 $f(x)=0$ 的实根分布，即研究两个实根（或重根）相对于特定常数 $k$ 或区间 $(k_1,k_2)$ 的位置。核心工具为：判别式 $\Delta=b^2-4ac$ 判定实根个数；韦达定理给出根的和与积；二次函数连续性保证在区间端点异号时必有零点。常见分布类型有：两根都大于 $k$、两根都小于 $k$、一根大于 $k$ 一根小于 $k$、两根都在区间 $(k_1,k_2)$ 内、两根分别在区间外等。</p>
+<p><strong>关键方法</strong><br />
+把文字条件等价转化为关于 $\Delta$、对称轴 $x=-\dfrac{b}{2a}$ 和 $f(k)$ 的不等式（组）。<br />
+- 两根都大于 $k$：$\Delta\ge 0$，$-\dfrac{b}{2a}&gt;k$，$a f(k)&gt;0$。<br />
+- 一根大于 $k$ 一根小于 $k$：直接有 $a f(k)&lt;0$（无需判别式，已保证异号）。<br />
+- 两根都在 $(k_1,k_2)$ 内：$\Delta\ge 0$，$k_1&lt;-\dfrac{b}{2a}<k_2$，且 $a f(k_1)>0$，$a f(k_2)&gt;0$。<br />
+注意等号是否可取由区间开闭和“在内部”的含义决定，解题时需依题意判定。</p>
+<p><strong>典型应用</strong><br />
+高考常以选择题或填空题直接给出根分布条件求参数范围，或嵌入导数、函数综合题中讨论复合形式的根分布。例如：“关于 $x$ 的方程 $x^2-2ax+4=0$ 在区间 $(1,3)$ 内有两个不相等的实根，求 $a$ 的取值范围。”设问角度固定：将条件转化为 $\Delta&gt;0$，对称轴 $a\in(1,3)$，以及 $f(1)&gt;0$，$f(3)&gt;0$（因 $a&gt;0$），联立解得 $a\in(2,2.5)$ 等具体范围。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略二次项系数 $a\neq 0$ 前提，将方程退化成一元一次方程时仍套用根分布条件，导致解集错误。</li>
+<li>在“两根都大于 $k$”的约束中遗漏 $\Delta\ge 0$，仅交代对称轴和端点符号，可能将无实根情况误判为满足。</li>
+<li>误用 $f(k)&lt;0$ 代替 $a f(k)&lt;0$ 判断一根大于 $k$ 一根小于 $k$：当 $a&lt;0$ 时符号反向，导致不等式组方向出错。</li>
+<li>区间端点处等式是否可取判断不严谨，如“在 $(1,3)$ 内有两个不等的实根”要求 $\Delta&gt;0$ 且端点 $f(1)&gt;0$、$f(3)&gt;0$，错误地使用 $\Delta\ge 0$ 或将端点写成 $f(1)\ge 0$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二次方程根的分布</td>
+<td>Distribution of roots of a quadratic equation</td>
+<td>研究实根与给定区间、数值的相对位置</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>Discriminant</td>
+<td>$\Delta = b^2-4ac$，判断实根个数</td>
+</tr>
+<tr>
+<td>对称轴</td>
+<td>Axis of symmetry</td>
+<td>$x = -\frac{b}{2a}$，抛物线对称轴</td>
+</tr>
+<tr>
+<td>韦达定理</td>
+<td>Vieta's formulas</td>
+<td>根之和 $-\frac{b}{a}$，根之积 $\frac{c}{a}$</td>
+</tr>
+<tr>
+<td>端点函数值</td>
+<td>Endpoint function value</td>
+<td>$f(k)$ 在区间端点处的符号信息</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/267-一元二次不等式.html">一元二次不等式</a></li>
+<li><a class="dead" title="未收录">二次函数图像与性质</a></li>
+<li><a class="dead" title="未收录">韦达定理及应用</a></li>
+<li><a class="dead" title="未收录">函数零点与方程根</a></li>
+<li><a class="dead" title="未收录">参数分离与分类讨论</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2023-新课标Ⅱ-11.html">2023-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电表读数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电表读数</h1><div class="review-mark" data-stem="691-电表读数"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电表读数, Reading of Electrical Meters</p><h1>电表读数</h1>
+<blockquote>
+<p><strong>一句话</strong>：电表读数指准确读出电流表、电压表或多用电表指示的物理量数值，核心是根据电表最小分度确定读数的有效数字和估读规则。
+<strong>English</strong>: Reading of electrical meters refers to accurately determining the indicated value of physical quantities (current, voltage, resistance) on ammeters, voltmeters, or multimeters, with the core being the rules for estimation and significant figures based on the least count of the scale.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：在高考物理中，电表读数遵循“<strong>最小分度原则</strong>”来确定估读位和有效数字。对于<strong>电流表和电压表</strong>，读数规则为：</li>
+<li>若最小分度是“1”的倍数（如0.1、0.01），<strong>估读到下一位</strong>（即估读到最小分度的十分位）。<ul>
+<li>例：量程0~3V的电压表，最小分度0.1V，读数应估读到0.01V，如2.15V。</li>
+<li>例：量程0~3A的电流表，最小分度0.1A，读数估读到0.01A。</li>
+</ul>
+</li>
+<li>
+<p>若最小分度是“2”或“5”的倍数（如0.02、0.5），<strong>本位估读</strong>（不估读到下一位），即读数保留到最小分度的同一位。</p>
+<ul>
+<li>例：量程0~0.6A的电流表，最小分度0.02A，读数估读到0.01A，如0.44A。</li>
+<li>例：量程0~15V的电压表，最小分度0.5V，读数估读到0.1V，如7.5V或7.6V，不可写成7.50V。
+  对于<strong>欧姆表</strong>，由于刻度不均匀，<strong>不估读</strong>，直接读出示数并乘以倍率，结果保留合适有效数字即可。</li>
+</ul>
+</li>
+<li>
+<p><strong>关键方法</strong>：</p>
+</li>
+<li>确定电表量程和对应的<strong>最小分度值</strong>。</li>
+<li>判断最小分度类型（“1”“2”“5”规律），确定估读至哪一位。</li>
+<li>视线正对指针，若表盘有反射镜，应使指针与镜中像重合以消除视差。</li>
+<li>
+<p>记录读数，注意单位与有效数字位数。对于多用电表，注意区分所选挡位是电压、电流还是电阻。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：</p>
+</li>
+<li><strong>高考设问</strong>：在“描绘小灯泡的伏安特性曲线”或“测量电源电动势和内阻”实验中，直接要求读出电压表、电流表示数；多用电表使用实验中，考察电阻挡读数及电压、电流挡估读。</li>
+<li><strong>具体场景</strong>：如图甲所示电压表量程3V，指针指在第12个刻度（最小分度0.1V），读数应为1.20V，末位的“0”是估读的，不能省略；若量程15V，指针指在7V与8V之间第4个小格（最小分度0.5V），则该位是0.1V，读作7.0V+4×0.5V=9.0V？等等，注意15V量程每大格1V，每大格分2小格，最小分度0.5V，读数时±0.1V量级估计，指针在二小格之间，可读7.3V或7.4V。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆估读规则</strong>：不清楚最小分度末尾是1、2、5时估读位的差异，导致电流表0~0.6A读数写成0.4A而不是0.40A（须估读到0.01A），或电压表15V档错误估读到0.01V。</li>
+<li><strong>忘记多用电表电阻挡不估读</strong>：误把欧姆挡按电压/电流挡规则估读，或忘记乘以倍率。</li>
+<li><strong>有效数字位数随意</strong>：量程3V、最小分度0.1V时，读数必须有两位小数（如2.10V），即使指针正对刻度线，也要用“0”占位表示估读位，否则有效数字位数减少。</li>
+<li><strong>视线未正视</strong>：因视差造成读数偏大或偏小，未利用表盘反射镜或未做到眼睛、指针、刻度连成一线。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电表</td>
+<td>Electrical meter</td>
+<td>测量电流、电压、电阻等电学量的仪表。</td>
+</tr>
+<tr>
+<td>最小分度</td>
+<td>Least count / Minimum scale division</td>
+<td>电表刻度盘上相邻两刻度线代表的物理量差值。</td>
+</tr>
+<tr>
+<td>估读</td>
+<td>Estimation / Interpolation</td>
+<td>根据指针在最小刻度之间位置读出一位不可靠数字。</td>
+</tr>
+<tr>
+<td>有效数字</td>
+<td>Significant figures</td>
+<td>测量结果中能反映被测值大小并带有一位估读不确定数字的全部数字。</td>
+</tr>
+<tr>
+<td>量程</td>
+<td>Range</td>
+<td>电表能够测量的最大值。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">电学实验基础</a></li>
+<li><a class="dead" title="未收录">多用电表的使用</a></li>
+<li><a href="../atoms/511-伏安法测电阻.html">伏安法测电阻</a></li>
+<li><a class="dead" title="未收录">游标卡尺与螺旋测微器读数</a></li>
+<li><a class="dead" title="未收录">有效数字与误差</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2011-新课标-09.html">2011-新课标-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

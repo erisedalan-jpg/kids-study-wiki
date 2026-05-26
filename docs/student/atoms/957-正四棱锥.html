@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正四棱锥</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正四棱锥</h1><div class="review-mark" data-stem="957-正四棱锥"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正四棱锥, regular quadrangular pyramid</p><h1>正四棱锥</h1>
+<blockquote>
+<p><strong>一句话</strong>：底面为正方形，且顶点在底面上的投影恰好为底面中心（正方形对角线交点）的四棱锥。
+<strong>English</strong>: A regular quadrangular pyramid is a pyramid whose base is a square and whose vertex projects orthogonally onto the center of the base.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与性质</strong><br />
+正四棱锥满足：底面 $ABCD$ 是边长为 $a$ 的正方形；顶点 $P$ 在底面的射影 $O$ 为正方形的中心。由此可直接推出所有侧棱相等，所有侧面都是全等的等腰三角形；侧棱与底面所成角相等，侧面与底面所成二面角相等。</p>
+<p>设高 $PO = h$，斜高（侧面等腰三角形底边上的高）为 $h'$，则有关系：
+$$h' = \sqrt{h^2 + \left(\frac{a}{2}\right)^2}, \quad \text{侧棱长 } l = \sqrt{h^2 + \frac{a^2}{2}}.$$</p>
+<p><strong>常用公式</strong><br />
+- 体积：$V = \frac{1}{3} S_{\text{底}} h = \frac{1}{3}a^2 h$<br />
+- 侧面积：$S_{\text{侧}} = 4 \times \frac{1}{2}a h' = 2a h'$<br />
+- 全面积：$S_{\text{全}} = a^2 + 2a h'$</p>
+<p><strong>关键方法</strong><br />
+正四棱锥的几乎所有计算最终都归结为高 $h$、底面边长 $a$、斜高 $h'$、侧棱 $l$ 四个量之间的直角三角形关系。对线面角、二面角问题，标准步骤是：在图形中标出 $P$、$O$、斜高在底边的垂足 $M$（$M$ 为 $BC$ 中点），在 $\triangle POM$ 中处理高与斜高、二面角的平面角；在 $\triangle POB$ 中处理侧棱与底面对角线的关系。</p>
+<p><strong>高考典型考查</strong><br />
+1. <strong>求体积、表面积</strong>：已知高和底面边长，直接代公式；或给出侧棱/斜高及底面边长，先用勾股定理反求高。<br />
+2. <strong>外接球</strong>：正四棱锥的外接球球心在高 $PO$ 所在的直线上，通常设球心距顶点 $P$ 为 $r$，利用 $OB=r$ 或 $OP=r$ 建立方程，常用 $R^2 = \left(h - R\right)^2 + \frac{a^2}{2}$ 求解（当球心在锥体内部）或 $R^2 = \left(R - h\right)^2 + \frac{a^2}{2}$（当球心在外部）。<br />
+3. <strong>内切球</strong>：利用体积法 $V = \frac{1}{3} S_{\text{全}} r_{\text{内}}$ 求内切球半径，前提是内切球存在（正四棱锥高度大于某个界限）。<br />
+4. <strong>角度与截面</strong>：如求侧棱与底面所成角 $\angle PBO$、侧面与底面所成二面角 $\angle PMO$，以及过顶点或平行于底的截面问题。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆侧棱与斜高</strong>：侧棱 $l$ 是指顶点到底面顶点的线段，斜高 $h'$ 是侧面等腰三角形底边上的高，二者所在的直角三角形不同。  </li>
+<li><strong>外接球心盲目放在高上</strong>：正四棱锥的外接球心一定在高所在直线上，但具体位置在高线上距离顶点为 $R$ 处，需区分球心在几何体内部还是外部，切忌直接使用 $R^2 = \left(\frac{h}{2}\right)^2 + \frac{a^2}{2}$。  </li>
+<li><strong>体积计算漏乘 $\frac{1}{3}$</strong>：锥体体积公式 $V = \frac{1}{3} Sh$，与柱体 $Sh$ 混淆是常见错误。  </li>
+<li><strong>内切球不讨论存在性</strong>：并不是所有正四棱锥都存在内切球，当 $h &lt; \frac{a}{2}$ 时侧面过“尖”无法容球，却直接套用体积法会导致错误半径。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正四棱锥</td>
+<td>regular quadrangular pyramid</td>
+<td>底面正方形、顶点投影在中心的四棱锥</td>
+</tr>
+<tr>
+<td>斜高</td>
+<td>slant height</td>
+<td>顶点到棱锥底面任一边中点的线段，即侧面三角形的高</td>
+</tr>
+<tr>
+<td>外接球</td>
+<td>circumscribed sphere</td>
+<td>使得正四棱锥所有顶点都在球面上的球</td>
+</tr>
+<tr>
+<td>内切球</td>
+<td>inscribed sphere</td>
+<td>与正四棱锥所有面都相切于内部的球</td>
+</tr>
+<tr>
+<td>二面角</td>
+<td>dihedral angle</td>
+<td>两个半平面构成的角，此处多指侧面与底面所成角</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">棱锥的体积与表面积</a></li>
+<li><a class="dead" title="未收录">正三棱锥</a></li>
+<li><a class="dead" title="未收录">简单几何体的外接球</a></li>
+<li><a class="dead" title="未收录">内切球与截面问题</a></li>
+<li><a class="dead" title="未收录">空间中的角：线面角与二面角</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2020-文-03.html">2020-文-03</a></li>
+<li><a href="../exam/数学/2020-理-03.html">2020-理-03</a></li>
+<li><a href="../exam/数学/2023-新课标Ⅱ-14.html">2023-新课标Ⅱ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

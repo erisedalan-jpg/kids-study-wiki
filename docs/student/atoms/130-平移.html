@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平移</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平移</h1><div class="review-mark" data-stem="130-平移"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 平面几何拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平移, translation, 图形平移, 平移变换, 图形的平移</p><h2>课本定义</h2>
+<p>在平面内，将一个图形沿<strong>某个方向</strong>移动<strong>一定的距离</strong>，这种图形变换叫做<strong>平移</strong>。平移后，图形的<strong>形状和大小不变</strong>，只是位置发生了变化。平移前后对应点的连线段互相平行且相等。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"整体搬家，形状不变"</h3>
+<p><strong>平移</strong>就是把一个图形"整体搬过去"：
+- 方向固定（比如向右、向上斜……）
+- 距离固定（搬多远）
+- 形状和大小<strong>完全不变</strong>（只是换了个位置）</p>
+<p><strong>生活中的平移：</strong>
+| 例子 | 说明 |
+|------|------|
+| 推拉窗 | 向一侧移动，窗的形状不变 |
+| 火车沿直线行驶 | 车厢整体平移 |
+| 打印机走纸 | 纸张整体平移 |
+| 棋子移动 | 棋子在棋盘上平移 |</p>
+<p><strong>平移的三要素：</strong>
+1. <strong>方向</strong>：朝哪个方向移？（上/下/左/右/斜方向）
+2. <strong>距离</strong>：移多远？
+3. <strong>图形本身</strong>：什么图形在移动</p>
+<p><strong>平移的性质：</strong>
+- 平移后，图形的<strong>形状</strong>和<strong>大小</strong>不变
+- 平移后，图形上<strong>每个点</strong>都移动了同样的方向和距离
+- 对应点的连线<strong>平行</strong>且<strong>相等</strong></p>
+<p><strong>和旋转、翻转的区别：</strong>
+| 变换 | 改变 | 不变 |
+|------|------|------|
+| 平移 | 位置 | 形状、大小、方向 |
+| 旋转 | 位置、方向 | 形状、大小 |
+| 翻转（轴对称）| 位置、方向 | 形状、大小 |</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>平移</strong>（translation）：将平面内的图形沿某一方向移动一定距离的变换。</p>
+<p>设平移向量为 $\vec{v} = (a, b)$，则图形上每个点 P(x, y) 平移后变为 P'(x+a, y+b)。</p>
+<p><strong>注：</strong> 七年级不要求向量，但概念上可以理解为"向右 a，向上 b"。</p>
+<h3>平移的基本性质</h3>
+<ol>
+<li><strong>全等性</strong>：平移后的图形与原图形全等（形状、大小完全相同）</li>
+<li><strong>方向性</strong>：平移方向和距离对图形所有点相同</li>
+<li><strong>对应线平行</strong>：对应点连线互相平行且相等（或共线）</li>
+<li><strong>平行线保持</strong>：平移不改变直线的方向（平行线平移后仍平行）</li>
+</ol>
+<h3>坐标中的平移</h3>
+<p>在坐标系中，将点 P(x, y) 向右平移 a 个单位，向上平移 b 个单位，得到 P'(x+a, y+b)。</p>
+<table>
+<thead>
+<tr>
+<th>平移方向</th>
+<th>变化</th>
+<th>坐标变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向右 a</td>
+<td>x 增大 a</td>
+<td>(x, y) → (x+a, y)</td>
+</tr>
+<tr>
+<td>向左 a</td>
+<td>x 减小 a</td>
+<td>(x, y) → (x-a, y)</td>
+</tr>
+<tr>
+<td>向上 b</td>
+<td>y 增大 b</td>
+<td>(x, y) → (x, y+b)</td>
+</tr>
+<tr>
+<td>向下 b</td>
+<td>y 减小 b</td>
+<td>(x, y) → (x, y-b)</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 将△ABC（A(1,2), B(3,2), C(2,4)）向右平移3个单位，求平移后各顶点坐标。</p>
+<p>解：向右平移3，x 坐标各加3，y 坐标不变。
+A' = (1+3, 2) = (4, 2)
+B' = (3+3, 2) = (6, 2)
+C' = (2+3, 4) = (5, 4)</p>
+<p><strong>例题2：</strong> 将图形向右平移2、向下平移3，点 P(-1, 4) 平移到哪里？</p>
+<p>解：x 增加 2，y 减少 3。
+P' = (-1+2, 4-3) = (1, 1)</p>
+<p><strong>例题3：</strong> △A'B'C' 是 △ABC 平移后的图形，已知 A(0, 0)，A'(3, -2)，B(2, 5)，求 B'。</p>
+<p>解：平移向量 = A' - A = (3-0, -2-0) = (3, -2)
+B' = B + 平移向量 = (2+3, 5-2) = (5, 3)</p>
+<h3>平移与对称、旋转的比较</h3>
+<table>
+<thead>
+<tr>
+<th>变换</th>
+<th>定义</th>
+<th>保持不变</th>
+<th>改变</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平移</td>
+<td>沿方向移动距离</td>
+<td>形状、大小、方向</td>
+<td>位置</td>
+</tr>
+<tr>
+<td>轴对称</td>
+<td>关于直线翻折</td>
+<td>形状、大小</td>
+<td>位置、方向</td>
+</tr>
+<tr>
+<td>旋转</td>
+<td>绕点旋转角度</td>
+<td>形状、大小</td>
+<td>位置、方向</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>平移方向和距离要对所有点一致</strong>，不能有的点移动多，有的移动少</li>
+<li><strong>平移不改变图形的朝向</strong>（区别于旋转和轴对称）</li>
+<li><strong>坐标轴上的平移</strong>：向右是加，向左是减；向上是加，向下是减（对应 x, y 轴正方向）</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平移</td>
+<td>translation</td>
+<td>图形整体位移</td>
+</tr>
+<tr>
+<td>平移方向</td>
+<td>direction of translation</td>
+<td>移动的方向</td>
+</tr>
+<tr>
+<td>平移距离</td>
+<td>distance of translation</td>
+<td>移动的距离</td>
+</tr>
+<tr>
+<td>对应点</td>
+<td>corresponding points</td>
+<td>平移前后的同名点</td>
+</tr>
+<tr>
+<td>全等</td>
+<td>congruent</td>
+<td>形状和大小完全相同</td>
+</tr>
+<tr>
+<td>平移向量</td>
+<td>translation vector</td>
+<td>方向和距离的向量</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第四章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/014-对称.html">对称</a></li>
+<li><a href="../atoms/054-平移与旋转.html">平移与旋转</a></li>
+<li><a href="../atoms/132-平面直角坐标系.html">平面直角坐标系</a></li>
+<li><a href="../atoms/137-点的坐标特征.html">点的坐标特征</a></li>
+<li><a href="../atoms/048-平行与垂直.html">平行线</a></li>
+<li><a href="../atoms/124-命题.html">命题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-04.html">2009-文-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

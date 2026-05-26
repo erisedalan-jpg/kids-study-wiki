@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凹凸性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>凹凸性</h1><div class="review-mark" data-stem="418-凹凸性"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 凹凸性, concavity, 函数凹凸性, 上凸下凸</p><h2>🎓 凹凸性</h2>
+<h3>定义</h3>
+<p>设 $f(x)$ 在区间 $I$ 上有定义：</p>
+<ul>
+<li>
+<p><strong>凹（下凸，Convex）</strong>：对 $I$ 内任意 $x_1\neq x_2$，有
+  $$f!\left(\frac{x_1+x_2}{2}\right) &lt; \frac{f(x_1)+f(x_2)}{2}$$
+  几何含义：弦（连接两点的线段）位于弧<strong>上方</strong>，曲线"向上弯"。</p>
+</li>
+<li>
+<p><strong>凸（上凸，Concave）</strong>：对 $I$ 内任意 $x_1\neq x_2$，有
+  $$f!\left(\frac{x_1+x_2}{2}\right) &gt; \frac{f(x_1)+f(x_2)}{2}$$
+  几何含义：弦位于弧<strong>下方</strong>，曲线"向下弯"。</p>
+</li>
+</ul>
+<blockquote>
+<p>注：高中教材有时将"凹"和"凸"的叫法与大学不同，以<strong>教材定义</strong>为准；本词条以弦在弧上方为"下凸/凹"，弦在弧下方为"上凸/凸"。建议家长核对教材具体用词。</p>
+</blockquote>
+<h3>二阶导数判断</h3>
+<p>若 $f(x)$ 在 $(a,b)$ 上二阶可导：</p>
+<table>
+<thead>
+<tr>
+<th>$f''(x)$</th>
+<th>凹凸性</th>
+<th>切线位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$f''(x)&gt;0$</td>
+<td>凹（下凸），曲线在切线<strong>上方</strong></td>
+<td>切线在曲线下方</td>
+</tr>
+<tr>
+<td>$f''(x)&lt;0$</td>
+<td>凸（上凸），曲线在切线<strong>下方</strong></td>
+<td>切线在曲线上方</td>
+</tr>
+</tbody>
+</table>
+<p><strong>直观</strong>：$f''&gt;0$ 意味着斜率单调递增（导函数递增），切线"越转越陡向上"，曲线开口向上（如 $y=x^2$）。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x)=x^3$，分析凹凸性。</p>
+<p>$f'(x)=3x^2$，$f''(x)=6x$</p>
+<p>$x&lt;0$ 时 $f''&lt;0$（上凸），$x&gt;0$ 时 $f''&gt;0$（下凸），$x=0$ 是拐点。</p>
+<p><strong>例 2</strong> $f(x)=e^x$，分析凹凸性。</p>
+<p>$f''(x)=e^x&gt;0$ 对所有 $x$ 成立，$f(x)$ 在 $\mathbb{R}$ 上处处下凸（凹）。</p>
+<p>几何含义：$e^x$ 的图象在任何一条切线上方。</p>
+<p><strong>例 3</strong> $f(x)=\sin x$ 在 $[0,2\pi]$ 的凹凸性。</p>
+<p>$f''(x)=-\sin x$</p>
+<p>$f''(x)&lt;0$（$x\in(0,\pi)$）：上凸；$f''(x)&gt;0$（$x\in(\pi,2\pi)$）：下凸；$x=\pi$ 是拐点。</p>
+<h3>凹凸性的应用</h3>
+<ol>
+<li><strong>估计不等式</strong>：利用 Jensen 不等式（凸函数版本），高中了解即可</li>
+<li><strong>拐点判定</strong>：凹凸性改变的点（见<a href="../atoms/451-拐点.html">拐点</a>词条）</li>
+<li><strong>判断切线与曲线的相对位置</strong>：下凸曲线在切线上方，可用于证明不等式</li>
+</ol>
+<p><strong>应用举例</strong>（$e^x$ 下凸 $\Rightarrow$ $e^x\geq x+1$）</p>
+<p>$e^x$ 在 $x=0$ 处切线为 $y=x+1$，因 $e^x$ 下凸，曲线在切线上方，即 $e^x\geq x+1$。</p>
+<h3>与必修衔接</h3>
+<p>必修阶段已学二次函数的"开口方向"（$a&gt;0$ 开口向上即下凸，$a&lt;0$ 开口向下即上凸）。凹凸性将这一直觉推广到任意可微函数，判断工具从"$a$ 的符号"升级为"$f''$ 的符号"。</p>
+<h3>易错点</h3>
+<ul>
+<li>凹、凸的叫法在不同教材中不一致（高中教材与大学教材相反），要依据<strong>所用教材</strong>确认</li>
+<li>$f''(x)=0$ 不一定是拐点（如 $f(x)=x^4$ 在 $x=0$ 处 $f''=0$ 但凹凸性不改变）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/凸函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/437-导数应用-生活实际.html">导数应用-生活实际</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/451-拐点.html">拐点</a></li>
+</ul>
+<p><a href="../atoms/451-拐点.html">拐点</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/462-渐近线-导数视角.html">渐近线-导数视角</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a></p>
+</div>
+</body>
+</html>

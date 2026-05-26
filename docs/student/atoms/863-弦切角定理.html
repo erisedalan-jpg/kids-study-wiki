@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弦切角定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>弦切角定理</h1><div class="review-mark" data-stem="863-弦切角定理"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 弦切角定理, Alternate Segment Theorem</p><h1>弦切角定理</h1>
+<blockquote>
+<p><strong>一句话</strong>：弦切角的度数等于它所夹的弧所对的圆周角的度数，也等于它所夹的弧度数的一半。
+<strong>English</strong>: The angle between a tangent and a chord through the point of contact is equal to the angle in the alternate segment.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：顶点在圆上，一边和圆相交，另一边和圆相切的角叫做<strong>弦切角</strong>。<br />
+<strong>弦切角定理</strong>：弦切角等于它所夹的弧所对的圆周角，并且弦切角的度数等于它所夹的弧的度数的一半。<br />
+设 $PT$ 切 ⊙O 于点 $A$，$AB$ 为弦，则 $\angle TAB$ 是弦切角，它所夹的弧是 $\widehat{AB}$（不含切点 $A$ 的那一段）。那么 $\angle TAB = \angle ACB$（$C$ 为弧 $AB$ 上任意一点），且 $\angle TAB = \frac{1}{2} m\widehat{AB}$。</p>
+<p><strong>关键方法</strong>：<br />
+1. <strong>识别结构</strong>：角的顶点在圆上，一边为切线，另一边为弦。<br />
+2. <strong>确定所夹弧</strong>：切线切点与弦的另一个端点在圆上截出的、不含切点的弧即为所夹弧。<br />
+3. <strong>等价转化</strong>：将弦切角转化为同弧的圆周角，进而实现角等关系的传递；证明时常结合圆周角定理、切割线定理构造相似三角形。</p>
+<p><strong>典型应用</strong>：<br />
+高考中以选填题和证明题为主，常见设问方式：
+- 证明两个角相等（如证明切线形成的角与某个圆周角相等）；
+- 结合切割线定理求线段长度或比例；
+- 在圆内接四边形中利用弦切角推出共圆新条件。</p>
+<p><strong>示例</strong>：已知 $AB$ 是 ⊙O 的直径，$C$ 是圆上一点，过 $C$ 的切线交 $AB$ 的延长线于 $D$，求证 $\angle ACD = \angle ABC$。由弦切角定理，$\angle ACD$ 等于 $\widehat{AC}$ 所对的圆周角 $\angle ABC$，直接得证。若结合直径，可进一步得出三角形相似和比例关系。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>看错所夹弧</strong>：误把切点同侧的另一段弧当作所夹弧，导致圆周角对应错误。应严格区分“切点与弦另一端点之间不含切点的弧”。</li>
+<li><strong>乱用逆命题</strong>：不能仅凭“顶点在圆上的角等于某个圆周角”就断定一边是切线，必须证明该边与圆相切，否则推理不成立。</li>
+<li><strong>混淆弦切角与圆周角</strong>：弦切角必须具备“一边与圆相切”的条件，不能将一般的圆周角当作弦切角使用。</li>
+<li><strong>忽略弧的度数所指</strong>：定理中“弧的度数”指圆心角的度数，计算时需保持角度制统一，避免把弧长带入错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>弦切角</td>
+<td>Alternate segment angle / Tangent-chord angle</td>
+<td>顶点在圆上，一边切线一边弦的角</td>
+</tr>
+<tr>
+<td>弦切角定理</td>
+<td>Alternate Segment Theorem</td>
+<td>弦切角等于所夹弧上的圆周角</td>
+</tr>
+<tr>
+<td>切线</td>
+<td>Tangent</td>
+<td>与圆只有一个公共点的直线</td>
+</tr>
+<tr>
+<td>弦</td>
+<td>Chord</td>
+<td>连接圆上两点的线段</td>
+</tr>
+<tr>
+<td>圆周角</td>
+<td>Inscribed angle</td>
+<td>顶点在圆上且两边均为弦的角</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">圆周角定理</a></li>
+<li><a class="dead" title="未收录">切线的判定与性质</a></li>
+<li><a href="../atoms/700-切割线定理.html">切割线定理</a></li>
+<li><a href="../atoms/766-四点共圆.html">四点共圆</a></li>
+<li><a class="dead" title="未收录">圆心角、弧、弦之间的关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-22.html">2010-理-22</a></li>
+<li><a href="../exam/数学/2013-理-22.html">2013-理-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

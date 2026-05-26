@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球面波传播</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>球面波传播</h1><div class="review-mark" data-stem="665-球面波传播"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 球面波传播, Spherical Wave Propagation</p><h1>球面波传播</h1>
+<blockquote>
+<p><strong>一句话</strong>：波源在均匀各向同性介质中发出的、波阵面为同心球面的波动形式，其振幅随传播距离成反比衰减。
+<strong>English</strong>: A waveform emitted from a point source in a homogeneous isotropic medium, whose wavefronts are concentric spheres and whose amplitude decays inversely with propagation distance.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：球面波是由点波源在各向同性介质中向四周对称传播形成的波。波前为球面，波线沿径向。若波源功率恒定，通过任一球面的能流相等，则某处波的强度（单位面积功率）与距离平方成反比，振幅与距离成反比，即：</p>
+<p>$$ A(r) = \frac{A_0}{r} $$</p>
+<p>式中 $A_0$ 为距波源单位距离处的振幅（待家长核对边界条件），此关系对机械波（声波）与电磁波均适用。高考中常结合惠更斯原理说明球面波的传播与子波叠加。</p>
+<p><strong>关键方法</strong>：解题时抓住两条主线 ——
+1. <strong>惠更斯原理作图</strong>：球面波波前上每一点可视为子波源，下一时刻的波前是这些子波的包络面；
+2. <strong>能量守恒推理</strong>：利用通过半径 $r$ 的球面的总功率守恒，推导 $I \propto 1/r^2$、$A \propto 1/r$。</p>
+<p><strong>典型应用</strong>：高考常见考查方式有两类：
+- <strong>波前传播判断</strong>：给定初始波前，用惠更斯原理画出下一时刻的球面波前，常与平面波进行对比；
+- <strong>振幅/强度计算</strong>：已知距声源某处的声强或振幅，求另一距离处的对应值，直接利用反比关系列比例式 $I_1 r_1^2 = I_2 r_2^2$ 或 $A_1 r_1 = A_2 r_2$。例如：距点声源 $2\;\mathrm{m}$ 处声强为 $I$，则 $4\;\mathrm{m}$ 处声强为 $I/4$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆球面波与平面波</strong>：球面波振幅随距离衰减，平面波理想情况下振幅不变；但远离波源的小区域可近似为平面波，需注意近似条件（$r \gg \lambda$ 且观察范围远小于 $r$）。</li>
+<li><strong>振幅衰减公式用错次方</strong>：振幅 $A \propto 1/r$ 而强度 $I \propto 1/r^2$，考卷常设陷阱让二者混淆，务必根据所求物理量选择正确比例关系。</li>
+<li><strong>忽视介质均匀各向同性条件</strong>：仅当介质各方向性质相同时才形成标准球面波，若波速各向异性则波前不再是球面（如晶体中的光波），此时振幅衰减规律改变。</li>
+<li><strong>惠更斯原理画图遗漏子波叠加</strong>：作图时每个子波源发出的是半圆形（二维）或半球形子波，包络线才是新波前，不得把子波本身当作波前。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>球面波</td>
+<td>Spherical Wave</td>
+<td>波前为同心球面的波</td>
+</tr>
+<tr>
+<td>波前/波阵面</td>
+<td>Wavefront</td>
+<td>波动相位相同的点组成的面</td>
+</tr>
+<tr>
+<td>惠更斯原理</td>
+<td>Huygens‘ Principle</td>
+<td>介质中波前上各点均可视为子波源，新波前是子波包络面</td>
+</tr>
+<tr>
+<td>强度</td>
+<td>Intensity</td>
+<td>单位时间通过单位面积的能量，与振幅平方成正比</td>
+</tr>
+<tr>
+<td>点波源</td>
+<td>Point Source</td>
+<td>尺寸远小于波长、向四周均匀辐射的波源</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">惠更斯原理</a></li>
+<li><a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+<li><a class="dead" title="未收录">波的衍射</a></li>
+<li><a class="dead" title="未收录">平面波与球面波比较</a></li>
+<li><a href="../atoms/552-双缝干涉.html">双缝干涉</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2022-全国乙-04.html">2022-全国乙-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

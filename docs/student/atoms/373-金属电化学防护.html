@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>金属电化学防护</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>金属电化学防护</h1><div class="review-mark" data-stem="373-金属电化学防护"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 金属电化学防护, electrochemical protection of metals, 牺牲阳极法, 外加电流法</p><h1>金属电化学防护</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用电化学原理阻止金属腐蚀的方法，分为牺牲阳极法（较活泼金属做阳极被腐蚀）和外加电流法（使被保护金属成为阴极）。
+<strong>English</strong>: Methods using electrochemical principles to prevent metal corrosion; includes the sacrificial anode method (a more active metal acts as the anode and corrodes) and the impressed current method (the protected metal is made the cathode).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>金属腐蚀的原电池原理</strong>：金属与腐蚀介质（酸、盐水等）接触时，形成原电池，活泼金属为负极（被氧化腐蚀）。</p>
+<p>电化学防护方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>原理</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牺牲阳极法</td>
+<td>连接更活泼的金属作负极（被腐蚀），保护金属作正极</td>
+<td>船舶、地下管道</td>
+</tr>
+<tr>
+<td>外加电流法</td>
+<td>将被保护金属接直流电源负极（成为阴极），不被氧化</td>
+<td>大型固定设施</td>
+</tr>
+</tbody>
+</table>
+<h3>公式 / 方程式</h3>
+<p><strong>牺牲阳极法</strong>（以锌保护铁为例）：</p>
+<p>形成原电池：
+- 负极（Zn，牺牲阳极）：$\text{Zn} - 2e^- \rightarrow \text{Zn}^{2+}$（被腐蚀）
+- 正极（Fe，被保护）：$\text{O}_2 + 2\text{H}_2\text{O} + 4e^- \rightarrow 4\text{OH}^-$（不被腐蚀，发生还原）</p>
+<p>Zn 保护 Fe 时，Zn 是负极（阳极），Fe 是正极（阴极）——与镀锌（涂层法）不同。</p>
+<p><strong>外加电流法</strong>：</p>
+<pre><code>外加直流电源（−）→ 被保护金属（阴极）
+外加直流电源（+）→ 辅助电极（阳极，可逐渐消耗）
+</code></pre>
+<p>被保护金属接负极 → 成为阴极 → 不被氧化（因为阴极只发生还原）。</p>
+<p>常见腐蚀的电极反应（以铁在盐水中腐蚀为例，吸氧腐蚀）：</p>
+<p>$$
+\text{负极（Fe）}: \text{Fe} - 2e^- \rightarrow \text{Fe}^{2+}
+$$</p>
+<p>$$
+\text{正极（C）}: \text{O}_2 + 2\text{H}_2\text{O} + 4e^- \rightarrow 4\text{OH}^-
+$$</p>
+<p>$$
+\text{进一步}: 4\text{Fe(OH)}_2 + \text{O}_2 + 2\text{H}_2\text{O} \rightarrow 4\text{Fe(OH)}_3 \rightarrow \text{Fe}_2\text{O}_3\cdot n\text{H}_2\text{O（铁锈）}
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：为保护轮船底部钢铁不被腐蚀，在船底焊接了若干锌块，解释防腐原理。</p>
+<ul>
+<li>锌块（Zn）与钢铁（Fe）及海水构成原电池</li>
+<li>Zn 更活泼，作负极（被氧化腐蚀）</li>
+<li>Fe 作正极（发生还原，不被腐蚀）</li>
+<li>Zn 块定期更换（"牺牲"自己保护铁）</li>
+</ul>
+<p><strong>例</strong>：外加电流法保护埋地管道：</p>
+<p>将管道接直流电源负极，辅助电极（废铁板）接正极，管道成为阴极，不被腐蚀，辅助电极被氧化（逐渐消耗）。</p>
+<h3>易错点</h3>
+<ul>
+<li>牺牲阳极法：活泼金属作阳极（负极），被保护金属作阴极（正极）</li>
+<li>外加电流法：被保护金属接电源负极（阴极），而非正极</li>
+<li>金属腐蚀本质是原电池反应——防护的关键是阻止形成原电池或使目标金属成为阴极</li>
+<li>镀锌铁（锌层完整时）：涂层法防护；若锌层破损，形成原电池，Zn 作负极仍保护 Fe</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牺牲阳极法</td>
+<td>sacrificial anode method</td>
+</tr>
+<tr>
+<td>外加电流法</td>
+<td>impressed current cathodic protection</td>
+</tr>
+<tr>
+<td>金属腐蚀</td>
+<td>metal corrosion</td>
+</tr>
+<tr>
+<td>吸氧腐蚀</td>
+<td>oxygen absorption corrosion</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The sacrificial anode method protects iron by connecting a more active metal (like zinc) that corrodes preferentially.（牺牲阳极法通过连接更活泼的金属（如锌）优先腐蚀来保护铁。）</li>
+<li>In the impressed current method, the protected metal is connected to the negative terminal of an external power source.（外加电流法中，被保护金属接外加电源的负极。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"阴极保护"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/368-电解池.html">电解池</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/448-官能团.html">官能团</a></p>
+</li>
+<li>
+<p><a href="../atoms/364-原电池（高中）.html">原电池（高中）</a></p>
+</li>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+<li><a class="dead" title="未收录">原电池电极反应</a></li>
+<li><a href="../atoms/370-电解精炼.html">电解精炼</a></li>
+</ul>
+</div>
+</body>
+</html>

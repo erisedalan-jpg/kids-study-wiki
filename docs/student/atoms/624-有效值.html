@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有效值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>有效值</h1><div class="review-mark" data-stem="624-有效值"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 有效值, RMS</p><h1>有效值</h1>
+<blockquote>
+<p><strong>一句话</strong>：交流电的有效值，是根据电流的热效应来规定的：让交流与恒定电流分别通过大小相同的电阻，如果在交流的一个周期内它们产生的热量相等，则这个恒定电流的电流、电压的大小叫作这一交流的电流、电压的有效值。
+<strong>English</strong>: The effective value (or RMS value) of an alternating current is equivalent to the value of a direct current that would produce the same amount of heat in an identical resistor over one complete cycle.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：有效值基于焦耳定律和等效思想。设一交流电通过阻值为 $R$ 的电阻，在一个周期 $T$ 内产生的热量为 $Q_{\text{交}}$；另一直流电 $I_{\text{有}}$ 通过相同电阻在相同时间 $T$ 内产生的热量为 $Q_{\text{直}} = I_{\text{有}}^2 R T$。当 $Q_{\text{交}} = Q_{\text{直}}$ 时，对应的 $I_{\text{有}}$、$U_{\text{有}}$ 即为有效值。
+  核心公式（热等效）：
+  $$
+Q = I_{\text{有}}^2 R T = \frac{U_{\text{有}}^2}{R} T
+$$
+  正弦式交流电的峰值与有效值关系（<strong>仅适用于按正弦/余弦规律变化</strong>）：
+  $$
+E_{\text{有}} = \frac{E_m}{\sqrt{2}},\quad U_{\text{有}} = \frac{U_m}{\sqrt{2}},\quad I_{\text{有}} = \frac{I_m}{\sqrt{2}}
+$$</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：</p>
+</li>
+<li><strong>明确定义域</strong>：必须是计算一个完整周期 $T$ 内的热效应。若只给出半个周期或非对称波形，需分段求热量再叠加。</li>
+<li><strong>非正弦交流电的处理</strong>：对于矩形波、锯齿波、半波整流等非正弦波形，<strong>切忌直接套用</strong> $\frac{E_m}{\sqrt{2}}$ 关系，必须回归定义：
+     $$
+I_{\text{有}} = \sqrt{\frac{1}{T} \int_0^T i^2(t) \, dt} \quad \text{或分段等效计算}
+$$</li>
+<li>
+<p><strong>含直流分量的处理</strong>：若电流存在直流分量 $I_0$，计算热效应时须用 $Q = (I_0^2 + i_{\text{交}}^2)R T$ 等效推导。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：</p>
+</li>
+<li><strong>高考考查角度</strong>：用电器标称值（如220V灯泡、2200W电热水器）均指有效值；交流电表（电流表、电压表）的示数均为有效值；计算电路的热功率、保险丝的熔断电流均须用有效值。</li>
+<li><strong>题景示例1</strong>：给定一个周期内分段恒流（如第1/3周期为 $2A$，后2/3周期为 $0A$），求其有效值。须用定义：$I_{\text{有}}^2 R T = (2)^2 R \times \frac{T}{3} + 0$，得 $I_{\text{有}} = \sqrt{\frac{4}{3}} A$。</li>
+<li><strong>题景示例2</strong>：正弦交流电正半周正常，负半周被二极管削去（半波整流），求该电流的有效值。因其只有半个周期发热，完整周期内等效为 $I_{\text{有}}^2 R T = \left( \frac{I_m}{\sqrt{2}} \right)^2 R \times \frac{T}{2}$，解得 $I_{\text{有}} = \frac{I_m}{2}$。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误将“有效值”等同于“平均值”</strong>：正弦交流电在一个周期内的平均值为0，但有效值为 $\frac{I_m}{\sqrt{2}}$。平均值用于计算电荷量（$q = \bar{I} \Delta t$）；有效值用于计算热量和功率，绝不可互换。</li>
+<li><strong>计算热量时误用峰值</strong>：直接用 $I_m$ 代入 $Q = I^2 R t$ 计算整个周期的热量，导致结果翻倍。必须先将峰值转换为有效值（正弦情况）或原始热等效方法。</li>
+<li><strong>不考虑周期完整性导致等效失败</strong>：在计算非对称波形或单个脉冲时，直接按脉冲时间计算热效应而忘记 “除以整个周期时间” 求得等效恒流。热量必须在一个完整周期 $T$ 内取平均。</li>
+<li><strong>忽略各物理量示数的规定</strong>：电容、电感件的“耐压值”必须对应交流电的<strong>峰值</strong>，而电表读数、用电器的额定值对应<strong>有效值</strong>。混淆会导致电气安全与解题错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有效值</td>
+<td>Effective Value / RMS</td>
+<td>基于热效应等效的恒定电流/电压值</td>
+</tr>
+<tr>
+<td>峰值</td>
+<td>Peak Value</td>
+<td>交流电在一个周期内所能达到的最大瞬时值</td>
+</tr>
+<tr>
+<td>焦耳定律</td>
+<td>Joule's Law</td>
+<td>计算导体发热量 $Q = I^2 R t$ 的定律</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>Period</td>
+<td>交流电完成一次完整变化所需的时间</td>
+</tr>
+<tr>
+<td>正弦波</td>
+<td>Sine Wave</td>
+<td>按正弦函数规律变化的交流电波形</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">峰值</a></li>
+<li><a class="dead" title="未收录">正弦式交流电</a></li>
+<li><a href="../atoms/154-焦耳定律.html">焦耳定律</a></li>
+<li><a href="../atoms/381-变压器.html">变压器</a></li>
+<li><a class="dead" title="未收录">电容与电感对交流电的影响</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/312-电容.html">电容</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2012-新课标-04.html">2012-新课标-04</a></li>
+<li><a class="dead" title="未收录">2021-北京-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

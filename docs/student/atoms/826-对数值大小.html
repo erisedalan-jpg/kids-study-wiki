@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数值大小</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对数值大小</h1><div class="review-mark" data-stem="826-对数值大小"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对数值大小</p><h1>对数值大小</h1>
+<blockquote>
+<p><strong>一句话</strong>：比较对数值大小时，若底数相同则利用单调性比较真数，若真数相同则用换底公式或图象法，若底数和真数都不同则常找中间量（如0、1、$\frac{1}{2}$等）或作差/商构造函数。
+<strong>English</strong>: Comparing the magnitude of logarithmic values involves using monotonicity when bases are identical, the change-of-base formula or graphical methods when arguments are identical, and introducing an intermediate value or constructing a function when both base and argument differ.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：
+比较对数值大小的核心依据是对数函数的单调性与换底公式。设 $y = \log_a x$ ($a&gt;0, a\neq 1$)：
+- 当 $a&gt;1$ 时，函数在 $(0,+\infty)$ 上单调递增，即 $x_1 &gt; x_2 \iff \log_a x_1 &gt; \log_a x_2$。
+- 当 $0&lt;a&lt;1$ 时，函数在 $(0,+\infty)$ 上单调递减，即 $x_1 &gt; x_2 \iff \log_a x_1 &lt; \log_a x_2$。
+换底公式 $\log_a b = \frac{\log_c b}{\log_c a}$（$c$ 为正常数且 $c\neq 1$）是统一底数或真数的桥梁，常用于将不同底对数化为同底比较，或化为同真数后利用倒数关系（$\log_a b = \frac{1}{\log_b a}$，$a,b&gt;0$ 且均不为1）判断。</p>
+<p><strong>关键方法</strong>：
+1. <strong>底同真数不同</strong>：直接应用单调性。
+2. <strong>真数同底数不同</strong>：用换底公式化为同底，或利用图象法（画 $x$ 取定值的竖线，交点越高对数值越大），或根据 $a&gt;b&gt;1$ 时 $0&lt;\log_a x &lt; \log_b x$（$x&gt;1$）等口诀判断。
+3. <strong>底和真数均不同</strong>：首选“中间值法”。常以 $0$、$\pm 1$、$\pm\frac{1}{2}$ 为界，利用 $\log_a 1=0$ 和 $\log_a a=1$ 为桥梁。若此法失效，可采用作差法：$\log_a b - \log_c d$，通过换底、通分或与0比较；或作商法：$\frac{\log_a b}{\log_c d}$，与1比较大小。对于复杂情况，可构造函数 $f(x)=\log_x M$ 或 $f(x)=\log_a x - \log_b x$，利用导数分析单调性。</p>
+<p><strong>典型应用</strong>：
+高考中常见题型为选择题或填空题，给出 $3\sim4$ 个对数式，要求排序。例如：已知 $a=\log_3 2$，$b=\ln 2$，$c=5^{-\frac{1}{2}}$，比较 $a,b,c$ 大小。先利用中间量：$a=\frac{1}{\log_2 3}$，$b=\frac{1}{\log_2 e}$，由 $e&lt;3$ 知 $\log_2 e &lt; \log_2 3$，则 $b &gt; a$，且 $0&lt;a,b&lt;1$；而 $c=5^{-\frac{1}{2}}=\frac{1}{\sqrt{5}}$，介于 $0\sim1$ 之间，具体需估算或平方比较。最终常得出 $c&lt;a&lt;b$ 或类似结论。另一高频考法是“与已知数比大小”，如判断 $\log_3 2$、$\log_{0.5} 0.6$、$\log_{\sqrt{2}} \sqrt{3}$ 与 $0$、$1$、$\frac{1}{2}$ 的关系。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忘记讨论底数</strong>：直接套用“增函数”结论比较真数，忽略底数 $0&lt;a&lt;1$ 时单调性反转。必须先分 $a&gt;1$ 和 $0&lt;a&lt;1$ 两类。</li>
+<li><strong>误用中间量“1”</strong>：认为所有对数与“1”的比较都得 $\log_a a$，但若底数与真数的大小关系不统一，如比较 $\log_2 3$ 与 $\log_3 2$，前者大于1，后者小于1，不能简单都用1衡量。</li>
+<li><strong>符号判断出错</strong>：忽视“真数&gt;1且底数&gt;1”或“真数&lt;1且底数&lt;1”时对数值为正，其余组合为负的规律。例如 $\log_{\frac{1}{2}} 3&lt;0$，$\log_3 \frac{1}{2}&lt;0$。</li>
+<li><strong>换底后运算失误</strong>：换底后取倒数时，忽略分子分母颠倒带来的不等号变化。如 $\log_2 3 &gt; \log_3 2$ 换为 $\frac{1}{\log_3 2} &gt; \log_3 2$ 后，需构造函数或配方法处理。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对数函数</td>
+<td>Logarithmic Function</td>
+<td>形如 $y=\log_a x$ 的函数</td>
+</tr>
+<tr>
+<td>底数</td>
+<td>Base</td>
+<td>对数符号 $\log$ 右下角的 $a$</td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>Monotonicity</td>
+<td>函数值随自变量增大而持续增大或减小的性质</td>
+</tr>
+<tr>
+<td>中间值</td>
+<td>Intermediate Value / Benchmark</td>
+<td>用于架桥比较的常数，如0、1</td>
+</tr>
+<tr>
+<td>换底公式</td>
+<td>Change-of-Base Formula</td>
+<td>$\log_a b = \frac{\log_c b}{\log_c a}$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧 指数函数与对数函数</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">指数与对数互化</a></li>
+<li><a class="dead" title="未收录">对数函数图像与性质</a></li>
+<li><a class="dead" title="未收录">指数与对数不等式</a></li>
+<li><a class="dead" title="未收录">比大小解题策略</a></li>
+<li><a class="dead" title="未收录">导数的构造与单调性应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-04.html">2008-理-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电势差</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电势差</h1><div class="review-mark" data-stem="275-电势差"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 静电场]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电势差, electric potential difference, voltage, 电压, 电位差</p><h2>🎓 电势差</h2>
+<h3>定义</h3>
+<p><strong>电势差</strong>（$U_{AB}$）：A、B 两点的电势之差。</p>
+<p>$$U_{AB} = V_A - V_B$$</p>
+<p><strong>电势</strong>（$V$）：电场中某点的电势，等于将单位正电荷从该点移到无穷远处电场力做的功。</p>
+<p>$$V = \frac{E_p}{q}$$</p>
+<p>单位：V（伏特），$1\ \text{V} = 1\ \text{J/C}$</p>
+<h3>电场力做功与电势差</h3>
+<p>$$W_{AB} = q(V_A - V_B) = qU_{AB}$$</p>
+<p>（$q$ 为电荷量，带符号）</p>
+<p>等价地：</p>
+<p>$$U_{AB} = \frac{W_{AB}}{q}$$</p>
+<h3>电势差与电场强度的关系</h3>
+<p>在匀强电场中，$A$、$B$ 两点沿电场方向距离为 $d$：</p>
+<p>$$U_{AB} = Ed \implies E = \frac{U_{AB}}{d}$$</p>
+<p>对一般电场：$E = -\dfrac{\Delta V}{\Delta x}$（沿场方向，电势降落最快方向）</p>
+<h3>电势和电势差的性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参考点相关</td>
+<td>电势绝对值依赖参考点选取（通常取无穷远为零）</td>
+</tr>
+<tr>
+<td>电势差与参考点无关</td>
+<td>$U_{AB} = V_A - V_B$ 不受参考点影响</td>
+</tr>
+<tr>
+<td>沿电场线方向</td>
+<td>电势降低（$V$ 减小）</td>
+</tr>
+<tr>
+<td>等势面上</td>
+<td>各点电势相等，$U = 0$，电场力不做功</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：A 点电势 $V_A = 10\ \text{V}$，B 点电势 $V_B = 4\ \text{V}$，$q = 2 \times 10^{-6}\ \text{C}$ 从 A 到 B，电场力做功？</p>
+<p>$$U_{AB} = V_A - V_B = 6\ \text{V}$$
+$$W_{AB} = qU_{AB} = 2 \times 10^{-6} \times 6 = 1.2 \times 10^{-5}\ \text{J}$$</p>
+<p><strong>例2（负电荷）</strong>：$q = -4 \times 10^{-6}\ \text{C}$，$U_{AB} = 8\ \text{V}$，电场力做功？</p>
+<p>$$W_{AB} = qU_{AB} = (-4 \times 10^{-6}) \times 8 = -3.2 \times 10^{-5}\ \text{J}$$（做负功）</p>
+<p><strong>例3（场强与电势差）</strong>：平行板间距 $d = 5\ \text{cm} = 0.05\ \text{m}$，两板间电压 $U = 100\ \text{V}$，场强？</p>
+<p>$$E = \frac{U}{d} = \frac{100}{0.05} = 2000\ \text{N/C} = 2\ \text{kN/C}$$</p>
+<p><strong>例4（移动判断）</strong>：负电荷从 C 到 D，$U_{CD} = -5\ \text{V}$，电场力做功？</p>
+<p>$$W_{CD} = qU_{CD} = (-q_0)(-5) = 5q_0 &gt; 0$$（做正功，负电荷向低电势运动，电场力做正功）</p>
+<h3>电势差 vs 电势</h3>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>符号</th>
+<th>单位</th>
+<th>与参考点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电势</td>
+<td>$V$</td>
+<td>V</td>
+<td>有关</td>
+</tr>
+<tr>
+<td>电势差</td>
+<td>$U_{AB}$</td>
+<td>V</td>
+<td>无关</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>电势差有正负</strong>：$U_{AB} = V_A - V_B$，可正可负，$U_{AB} = -U_{BA}$。</li>
+<li><strong>负电荷</strong>：$W = qU$，$q &lt; 0$ 时负电荷从高电势到低电势，$W &lt; 0$（做负功）；从低电势到高电势，$W &gt; 0$（做正功）。正好与正电荷相反。</li>
+<li><strong>$E = U/d$ 只适用匀强电场</strong>。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第九章（待家长核对章节归属）</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第九章，页码待家长核对）</li>
+<li><strong>百科</strong>：电势差 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/276-电势能.html">电势能</a></li>
+<li><a href="../atoms/282-等势面.html">等势面</a></li>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a href="../atoms/252-匀强电场.html">匀强电场</a></li>
+<li><a href="../atoms/278-电场线.html">电场线</a></li>
+<li><a href="../atoms/263-库仑定律.html">库仑定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-11</a></li>
+<li><a class="dead" title="未收录">2012-北京-12</a></li>
+<li><a class="dead" title="未收录">2013-北京-10</a></li>
+<li><a href="../exam/物理/2015-新课标Ⅱ-11.html">2015-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2024-北京-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

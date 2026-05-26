@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>椭圆的参数方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>椭圆的参数方程</h1><div class="review-mark" data-stem="565-椭圆的参数方程"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 椭圆的参数方程, 椭圆参数方程, Parametric Equation of an Ellipse</p><h1>椭圆的参数方程</h1>
+<blockquote>
+<p><strong>一句话</strong>：椭圆的参数方程是形如 $\begin{cases} x = a\cos\theta \ y = b\sin\theta \end{cases}$ ($\theta$ 为参数) 的方程，其中 $a$ 为长半轴长，$b$ 为短半轴长，参数 $\theta$ 表示离心角。
+<strong>English</strong>: Parametric equations of an ellipse express the coordinates of a point on the ellipse as $x = a\cos\theta, y = b\sin\theta$, where $\theta$ is the eccentric angle.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：对于中心在原点、焦点在坐标轴上的椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\ (a&gt;b&gt;0)$，其参数方程为 $\begin{cases} x = a\cos\theta \ y = b\sin\theta \end{cases}$，$\theta$ 为参数，通常取 $\theta\in[0,2\pi)$。这里的 $\theta$ 不是椭圆上点与原点连线的倾斜角，而是与椭圆上点对应的辅助圆的圆心角（离心角）：作半径为 $a$ 和 $b$ 的两个同心圆，过原点作射线交大圆于 $A$，交小圆于 $B$，过 $A$ 作 $y$ 轴平行线，过 $B$ 作 $x$ 轴平行线，交点即为椭圆上的点，该射线与 $x$ 轴正方向的夹角即为 $\theta$。由参数方程可直接得到点的坐标的另一种表示，在涉及距离、最值、斜率等问题中可简化计算。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：利用参数方程设点的坐标 $P(a\cos\theta, b\sin\theta)$，将二元变量问题转化为关于 $\theta$ 的三角函数问题，利用三角恒等变换、辅助角公式、三角函数的有界性等求解。常见步骤：1) 根据题意设出椭圆上点的参数坐标；2) 用参数 $\theta$ 表示目标量（距离、斜率、面积、向量数量积等）；3) 通过三角变换化成 $A\sin(\theta+\varphi)+B$ 等形式，结合 $\theta$ 的范围求最值或进行其他运算。特别注意当涉及焦点、准线等时，可结合椭圆的第二定义。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常在以下情形考查参数方程：①求椭圆上的点到直线或定点的距离的最值；②与向量、斜率、面积等结合的取值范围问题；③与直线参数方程联立求解弦长、中点等问题（选考坐标系与参数方程）。例如，已知椭圆 $\frac{x^2}{4}+y^2=1$，求其上点到直线 $x+y-3=0$ 的距离的最小值。可设点 $P(2\cos\theta,\sin\theta)$，距离 $d=\frac{|2\cos\theta+\sin\theta-3|}{\sqrt{2}}$，利用辅助角公式得 $d=\frac{|\sqrt{5}\sin(\theta+\varphi)-3|}{\sqrt{2}}$，由正弦有界性得最小值为 $\frac{3-\sqrt{5}}{\sqrt{2}}$。又如求椭圆内接矩形的最大面积，设顶点 $(\pm a\cos\theta,\pm b\sin\theta)$，面积 $S=4ab\sin\theta\cos\theta=2ab\sin2\theta$，最大值为 $2ab$。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆参数 $\theta$ 的几何意义：误将 $\theta$ 当作点与原点连线的倾斜角，或直接用于极坐标运算。实际上 $\theta$ 是离心角，椭圆的极坐标方程需另作推导。</li>
+<li>设参数点时忽略 $a,b$ 的对应关系：错误地写成 $(b\cos\theta, a\sin\theta)$，导致长、短轴互换，后续计算全部出错。</li>
+<li>求最值时忽略参数 $\theta$ 的取值范围：题目可能对点所在位置有限制（如只在第一象限、或某段弧上），此时 $\theta$ 不是 $[0,2\pi)$ 全体，需根据边界条件准确确定范围，否则会得到增根或漏掉最值。</li>
+<li>在联立直线参数方程和椭圆参数方程时，直接将 $\theta$ 与直线的参数 $t$ 混为一谈，未分清两个参数的独立含义，导致运算混乱。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参数方程</td>
+<td>parametric equations</td>
+<td>用参数表示曲线上点坐标的方程</td>
+</tr>
+<tr>
+<td>椭圆</td>
+<td>ellipse</td>
+<td>到两焦点距离之和为常数的点的轨迹</td>
+</tr>
+<tr>
+<td>参数/离心角</td>
+<td>eccentric angle</td>
+<td>椭圆参数方程中的角参数 $\theta$</td>
+</tr>
+<tr>
+<td>长半轴/短半轴</td>
+<td>semi-major axis / semi-minor axis</td>
+<td>椭圆半轴长 $a$ 和 $b$</td>
+</tr>
+<tr>
+<td>辅助角公式</td>
+<td>auxiliary angle formula</td>
+<td>将 $a\sin\theta+b\cos\theta$ 转化为单一三角函数的形式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/061-方程.html">椭圆的标准方程</a></li>
+<li><a class="dead" title="未收录">椭圆的几何性质</a></li>
+<li><a class="dead" title="未收录">直线参数方程</a></li>
+<li><a class="dead" title="未收录">三角函数的最值问题</a></li>
+<li><a class="dead" title="未收录">圆锥曲线的极坐标方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-文-23.html">2012-文-23</a></li>
+<li><a href="../exam/数学/2012-理-23.html">2012-理-23</a></li>
+</ul></div>
+</div>
+</body>
+</html>

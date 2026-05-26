@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隐零点分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>隐零点分析</h1><div class="review-mark" data-stem="1171-隐零点分析"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[导数与函数综合]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 隐零点分析, 设而不求/隐零点</p><h1>隐零点分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：导函数的零点在解析上无法精确解出,利用零点存在定理判断其存在性后"设而不求",借助隐零点的方程整体代换化简目标函数。
+<strong>English</strong>: A technique in derivative analysis where the zero of the derivative cannot be solved analytically; its existence is proved via the Intermediate Value Theorem, then it is "set but not solved", used as a whole to simplify the original function via substitution.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>核心原理</strong>：在研究函数单调性与极值/最值时,需求解导函数 $f'(x)$ 的零点。若 $f'(x)=0$ 为超越方程(例：$e^x + \ln x + 2x - 3 = 0$),其精确零点无法用初等函数表出,但该零点客观存在且唯一,此即"隐零点"。</p>
+<p><strong>处理机制</strong>：隐零点问题依赖<strong>零点存在定理</strong>与<strong>方程整体代换</strong>。设零点为 $x_0$,由零点存在定理判断所在区间(如 $x_0 \in (a,b)$),利用 $f'(x_0)=0$ 得到关系式(如 $e^{x_0} = 3 - 2x_0 - \ln x_0$),代入原函数 $f(x_0)$ 化简为无超越项形式,从而求出极值范围或证明不等式。</p>
+<p><strong>关键步骤三步走</strong>：
+1. <strong>判存在</strong>：对 $f'(x)$ 二次求导确定单调性,结合端点值用零点存在定理锁定 $x_0$ 所在区间；
+2. <strong>设坐标</strong>：设 $f'(x_0)=0$ 但不显式求解,得到等价关系 $g(x_0)=h(x_0)$；
+3. <strong>代换消</strong>：将目标表达式中的指数/对数/三角项用隐零点关系整体替换,化为有理式或多项式求范围。</p>
+<p><strong>典型高考设问</strong>：
+- 证明函数 $f(x)$ 的最小值大于某常数(需用隐零点表出最小值并估值)
+- 已知不等式恒成立求参数范围,分离参数后出现隐零点,结合隐零点处的方程简化论证
+- 极值点偏移问题中,隐零点作为中间桥梁建立偏移量与导函数的关系</p>
+<p><strong>真题简化示例</strong>：已知 $f(x)=e^x + \ln x - 2x$,求证 $f(x) &gt; 1$。$f'(x)=e^x + \frac{1}{x} - 2$,二次求导知 $f'(x)$ 在 $(0,+\infty)$ 单调递增,且 $f'(0.5)&lt;0, f'(1)&gt;0$,故存在唯一 $x_0 \in (0.5,1)$ 使 $e^{x_0} + \frac{1}{x_0} = 2$。$f_{\min} = f(x_0)=e^{x_0} + \ln x_0 - 2x_0$,用 $e^{x_0}=2 - \frac{1}{x_0}$ 代换消去指数,得 $f(x_0)=2 - \frac{1}{x_0} + \ln x_0 - 2x_0$,再借 $x_0$ 范围估出最小值大于 1。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略隐零点的范围估计</strong>：设出 $x_0$ 后不对其区间进行合理缩小,导致后续代换式无法判断符号或忘记 $x_0$ 自身的取值范围限制,使得极值表达式范围估错。</li>
+<li><strong>代换方向错误</strong>：拿到 $f'(x_0)=0$ 后,未选最优项代换。含指数 $\to$ 把 $e^{x_0}$ 换成多项式/分式；含对数 $\to$ 把 $\ln x_0$ 换成其他项,方向选反会导致表达式越代越繁。</li>
+<li><strong>忘记验证零点存在性</strong>：不验证直接设隐零点,缺失零点存在定理的端点符号运算环节,步骤扣分(高考要求严格的"一正一负"或"一零另一符号"判定)。</li>
+<li><strong>隐零点与极值点偏移混淆</strong>：极值点偏移需证明 $x_1 + x_2 &gt; 2x_0$,其中 $x_0$ 是极值点本身未必是隐零点。学生常误将隐零点直接套进偏移模板,应区分"导函数零点不可解"与"极值点偏移"两个独立考点。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隐零点</td>
+<td>Hidden Zero / Implicit Zero</td>
+<td>导函数存在但不可精确解出的零点</td>
+</tr>
+<tr>
+<td>超越方程</td>
+<td>Transcendental Equation</td>
+<td>含指数、对数、三角等超越函数的方程</td>
+</tr>
+<tr>
+<td>零点存在定理</td>
+<td>Intermediate Value Theorem</td>
+<td>连续函数在两端异号区间内必有零点</td>
+</tr>
+<tr>
+<td>整体代换</td>
+<td>Global Substitution</td>
+<td>利用零点满足的方程整体替换表达式中的复杂项</td>
+</tr>
+<tr>
+<td>设而不求</td>
+<td>Set-but-not-Solve</td>
+<td>设出零点标记但不显式解出,直接使用其满足的等式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">导数的应用——极值与最值</a></li>
+<li><a class="dead" title="未收录">函数零点存在定理与二分法</a></li>
+<li><a class="dead" title="未收录">分离参数法求解不等式恒成立问题</a></li>
+<li><a class="dead" title="未收录">极值点偏移</a></li>
+<li><a class="dead" title="未收录">同构法化简指数对数混合不等式</a></li>
+<li><a class="dead" title="未收录">超越方程与数形结合求根</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2021-理-20.html">2021-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

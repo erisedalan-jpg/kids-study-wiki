@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>翻译</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>翻译</h1><div class="review-mark" data-stem="297-翻译"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第4章基因的表达]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 翻译, translation, 蛋白质翻译</p><h1>翻译</h1>
+<blockquote>
+<p><strong>一句话</strong>：以 mRNA 为模板，在核糖体上，tRNA 携带氨基酸按密码子顺序逐个加入，通过肽键连接，合成具有特定氨基酸序列的多肽链（蛋白质）的过程。
+<strong>English</strong>: The process in which mRNA serves as a template and tRNAs deliver amino acids to the ribosome in codon order, forming peptide bonds to produce a polypeptide chain.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>翻译</strong>（translation）：基因表达的第二步，在核糖体上以 mRNA 为模板，tRNA 识别密码子并转运氨基酸，氨基酸之间形成肽键，合成多肽链，最终折叠加工为功能蛋白质。</p>
+<h3>原理 / 规律</h3>
+<h4>翻译的场所与条件</h4>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场所</td>
+<td>核糖体（细胞质基质、内质网膜上）</td>
+</tr>
+<tr>
+<td>模板</td>
+<td>mRNA（5'→3' 方向依次读取密码子）</td>
+</tr>
+<tr>
+<td>原料</td>
+<td>20 种氨基酸</td>
+</tr>
+<tr>
+<td>工具</td>
+<td>tRNA（携带氨基酸，识别密码子）</td>
+</tr>
+<tr>
+<td>酶</td>
+<td>氨酰-tRNA 合成酶（连接氨基酸与 tRNA）；核糖体大亚基 rRNA（催化肽键形成）</td>
+</tr>
+<tr>
+<td>能量</td>
+<td>ATP（氨基酸活化）、GTP（tRNA 进位）</td>
+</tr>
+</tbody>
+</table>
+<h4>翻译的过程</h4>
+<p><strong>起始</strong>：小亚基识别 mRNA 的 5' 端并滑动至起始密码子（AUG），起始 tRNA（携带 Met）进入 P 位点，大亚基结合，形成起始复合物。</p>
+<p><strong>延伸</strong>：</p>
+<pre><code>A 位点（进位）：氨酰-tRNA 与 mRNA 密码子互补配对
+    ↓ 肽酰转移（大亚基 rRNA 催化）
+肽键形成，多肽链从 P 位点 tRNA 转移到 A 位点氨基酸
+    ↓ 移位
+核糖体沿 mRNA 5'→3' 移动一个密码子
+P 位点 tRNA（现为空载）转移到 E 位点并离开
+</code></pre>
+<p><strong>终止</strong>：核糖体到达终止密码子（UAA/UAG/UGA），无对应 tRNA，释放因子进入，水解肽链，核糖体解体，多肽链释放。</p>
+<h4>重要计算关系</h4>
+<p>$$\text{氨基酸数} = \frac{\text{mRNA 碱基数}}{3} - 1 \text{（减去 1 个终止密码子；高中常简化为÷3）}$$</p>
+<p>$$\text{肽键数} = \text{氨基酸数} - \text{肽链条数}$$</p>
+<p>$$\text{脱水缩合失去水分子数} = \text{肽键数}$$</p>
+<p><strong>多聚核糖体</strong>（polysome）：一条 mRNA 同时被多个核糖体翻译，大幅提高翻译效率（氨基酸数×核糖体数的蛋白质可同时合成）。</p>
+<h4>翻译与转录的对比</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>转录</th>
+<th>翻译</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场所</td>
+<td>细胞核（真核）</td>
+<td>核糖体</td>
+</tr>
+<tr>
+<td>模板</td>
+<td>DNA 一条链</td>
+<td>mRNA</td>
+</tr>
+<tr>
+<td>原料</td>
+<td>核糖核苷酸</td>
+<td>氨基酸</td>
+</tr>
+<tr>
+<td>产物</td>
+<td>mRNA</td>
+<td>多肽链</td>
+</tr>
+<tr>
+<td>碱基互补</td>
+<td>A-U, T-A, G-C, C-G</td>
+<td>密码子-反密码子（A-U，G-C）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：一条 mRNA 有 900 个碱基，同时被 5 个核糖体翻译，每个核糖体最终合成一条多肽链，每条多肽链含多少个氨基酸？5 个核糖体共合成多少个肽键？</p>
+<p><strong>解题</strong>：
+- mRNA 碱基 900 个 → 密码子 = 900/3 = 300 个（含 1 个终止密码子）
+- 编码氨基酸的密码子 = 300 - 1 = 299 个
+- 每条多肽链氨基酸数 = <strong>299 个</strong>
+- 每条多肽链肽键数 = 299 - 1 = 298 个
+- 5 条多肽链总肽键 = 298 × 5 = <strong>1490 个</strong></p>
+<h3>易错点</h3>
+<ol>
+<li><strong>翻译从 AUG（起始密码子）开始，到终止密码子停止</strong>；AUG 编码 Met，但成熟蛋白质 N 端的 Met 常被切除。</li>
+<li><strong>终止密码子无对应 tRNA</strong>（由释放因子识别），不是"tRNA 读不了就停"。</li>
+<li><strong>肽键数 = 氨基酸数 - 肽链数</strong>（一条肽链时 = 氨基酸数 - 1；多条肽链时各自减 1）。</li>
+<li><strong>翻译发生在细胞质（核糖体），不在细胞核</strong>；转录在细胞核，翻译在细胞质。</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>翻译</td>
+<td>translation</td>
+</tr>
+<tr>
+<td>多肽链</td>
+<td>polypeptide chain</td>
+</tr>
+<tr>
+<td>肽键</td>
+<td>peptide bond</td>
+</tr>
+<tr>
+<td>核糖体</td>
+<td>ribosome</td>
+</tr>
+<tr>
+<td>A 位点 / P 位点 / E 位点</td>
+<td>A site / P site / E site</td>
+</tr>
+<tr>
+<td>释放因子</td>
+<td>release factor</td>
+</tr>
+<tr>
+<td>多聚核糖体</td>
+<td>polyribosome</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li><em>Translation proceeds 5'→3' along the mRNA; each codon is decoded by the complementary anticodon of an incoming tRNA.</em>（翻译沿 mRNA 5'→3' 方向进行；每个密码子由进入 A 位点的 tRNA 反密码子互补识别。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学必修2 遗传与进化.pdf</a> 第4章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"翻译（分子生物学）"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/298-转录.html">转录</a></li>
+<li><a class="dead" title="未收录">mRNA</a></li>
+<li><a class="dead" title="未收录">tRNA</a></li>
+<li><a class="dead" title="未收录">rRNA</a></li>
+<li><a href="../atoms/296-密码子.html">密码子</a></li>
+<li><a href="../atoms/295-中心法则.html">中心法则</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-北京-02</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-02</a></li>
+<li><a href="../exam/生物/2020-新课标Ⅱ-07.html">2020-新课标Ⅱ-07</a></li>
+<li><a class="dead" title="未收录">2021-湖南-13</a></li>
+<li><a class="dead" title="未收录">2022-湖南-14</a></li>
+<li><a class="dead" title="未收录">2023-湖南-11</a></li>
+<li><a class="dead" title="未收录">2023-湖南-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

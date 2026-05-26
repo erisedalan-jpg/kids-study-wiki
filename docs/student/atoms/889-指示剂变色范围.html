@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指示剂变色范围</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>指示剂变色范围</h1><div class="review-mark" data-stem="889-指示剂变色范围"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[水溶液中的离子平衡]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 指示剂变色范围, pH变色域, 酸碱指示剂变色范围</p><h1>指示剂变色范围</h1>
+<blockquote>
+<p><strong>一句话</strong>：指示剂发生颜色突变所对应的pH值区间，其中心值约为指示剂的$pK_{HIn}$。
+<strong>English</strong>: The pH interval over which an acid-base indicator changes its color, centered approximately around the indicator's $pK_a$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong></p>
+<p>酸碱指示剂（以弱酸型$HIn$为例）在水溶液中存在平衡：</p>
+<p>$$
+HIn \rightleftharpoons H^+ + In^-
+$$</p>
+<p>其中$HIn$为酸式色，$In^-$为碱式色。其电离常数$K_{HIn} = \frac{[H^+][In^-]}{[HIn]}$，取负对数得：</p>
+<p>$$
+pH = pK_{HIn} + \lg\frac{[In^-]}{[HIn]}
+$$</p>
+<p>理论变色范围：当$\frac{[In^-]}{[HIn]} \ge 10$时完全呈现碱式色，$\le 0.1$时完全呈现酸式色。因此变色范围为：</p>
+<p>$$
+\boxed{pH = pK_{HIn} \pm 1}
+$$</p>
+<p><strong>关键方法：终点判定与指示剂选择</strong></p>
+<ol>
+<li><strong>指示剂选择原则</strong>：指示剂的变色范围<strong>全部或部分落在滴定突跃范围内</strong>。</li>
+<li><strong>常用指示剂</strong>：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>指示剂</th>
+<th>变色范围(pH)</th>
+<th>酸色</th>
+<th>碱色</th>
+<th>$pK_{HIn}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>甲基橙</td>
+<td>3.1~4.4</td>
+<td>红</td>
+<td>黄</td>
+<td>3.4</td>
+</tr>
+<tr>
+<td>甲基红</td>
+<td>4.4~6.2</td>
+<td>红</td>
+<td>黄</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>酚酞</td>
+<td>8.2~10.0</td>
+<td>无</td>
+<td>红</td>
+<td>9.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>典型应用（高考设问角度）</strong></p>
+<ul>
+<li><strong>强碱滴强酸</strong>：突跃范围宽（pH≈4.3–9.7），甲基橙、酚酞均可选用。</li>
+<li><strong>强碱滴弱酸</strong>（如NaOH滴定HAc）：突跃碱性（pH≈7.7–10.0），<strong>只能用酚酞</strong>，不可用甲基橙（过早变色，误差极大）。</li>
+<li><strong>强酸滴弱碱</strong>：突跃酸性，选用甲基橙或甲基红。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆"理论变色范围$pK_{HIn}\pm 1$"与实际指示剂的变色范围（如酚酞8.2~10.0不对称，因其人眼对酸式色无色敏感度不同）。</li>
+<li>强碱滴弱酸误选甲基橙：突跃pH在碱性区，甲基橙尚未进入变色范围即已达终点，造成<strong>负误差极大</strong>。</li>
+<li>多组指示剂分步滴定：pH突跃分段时，每段突跃必须独立匹配对应指示剂（注意两突跃间是否相互干扰）。</li>
+<li>酚酞在浓碱中变为无色（生成三钠盐），切勿将褪色误判为酸式色。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指示剂变色范围</td>
+<td>Indicator transition range</td>
+<td>指示剂颜色发生突变的pH区间</td>
+</tr>
+<tr>
+<td>酸式色</td>
+<td>Acid color</td>
+<td>弱酸型$HIn$呈现的颜色</td>
+</tr>
+<tr>
+<td>碱式色</td>
+<td>Base color</td>
+<td>共轭碱型$In^-$呈现的颜色</td>
+</tr>
+<tr>
+<td>滴定突跃</td>
+<td>Titration jump</td>
+<td>化学计量点附近±0.1%误差内的pH陡变</td>
+</tr>
+<tr>
+<td>酸碱指示剂</td>
+<td>Acid-base indicator</td>
+<td>自身为弱酸或弱碱、颜色随pH改变的有机物</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：水溶液中的离子反应与平衡·酸碱中和滴定</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">酸碱中和滴定</a></li>
+<li><a class="dead" title="未收录">甲基橙</a></li>
+<li><a class="dead" title="未收录">酚酞</a></li>
+<li><a class="dead" title="未收录">滴定突跃</a></li>
+<li><a class="dead" title="未收录">酸碱指示剂</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2008-全国Ⅱ-02.html">2008-全国Ⅱ-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比热容</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>比热容</h1><div class="review-mark" data-stem="146-比热容"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十三章内能]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 比热容, specific heat capacity, 比热</p><h1>比热容</h1>
+<blockquote>
+<p><strong>一句话</strong>：比热容是单位质量的物质温度升高1°C所吸收的热量，符号c，单位J/(kg·℃)，是物质的特性。
+<strong>English</strong>: Specific heat capacity is the heat absorbed by 1 kg of a substance when its temperature rises by 1°C; symbol c, unit J/(kg·℃), it is a property of the material.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>为什么沙漠里白天很热、晚上很冷，但海边的温度变化没那么大？</p>
+<p>答案就是<strong>比热容</strong>！</p>
+<p><strong>水的比热容很大</strong>（$c_{水} = 4.2 \times 10^3$ J/(kg·℃)）
+- 水要吸收很多热量才能升温
+- 水散失很多热量才能降温
+- 所以海边气候温和，早晚温差小</p>
+<p><strong>沙子的比热容小</strong>（$c_{沙} \approx 0.92 \times 10^3$ J/(kg·℃)）
+- 沙子稍微吸点热就升温很快
+- 稍微散热就降温很快
+- 所以沙漠昼夜温差极大！</p>
+<p><strong>比热容公式：</strong></p>
+<p>$$Q = cm\Delta t$$</p>
+<ul>
+<li>Q：热量（J）</li>
+<li>c：比热容（J/(kg·℃)）</li>
+<li>m：质量（kg）</li>
+<li>△t：温度变化（℃）</li>
+</ul>
+<p><strong>常见物质比热容：</strong>
+- 水：$4.2 \times 10^3$ J/(kg·℃)（最大，适合暖气）
+- 铁：$0.46 \times 10^3$ J/(kg·℃)
+- 铜：$0.39 \times 10^3$ J/(kg·℃)
+- 铝：$0.88 \times 10^3$ J/(kg·℃)</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>比热容</strong>（$c$）：单位质量的某种物质，温度升高（或降低）1°C（或1K）所吸收（或放出）的热量。</p>
+<p>$$c = \frac{Q}{m \Delta t}$$</p>
+<h3>单位</h3>
+<p>$$[c] = \frac{\text{J}}{\text{kg} \cdot \text{°C}} = \frac{\text{J}}{\text{kg} \cdot \text{K}}$$</p>
+<h3>热量公式</h3>
+<p>$$Q_{吸} = cm(t_{末} - t_{初}) \quad (t_{末} &gt; t_{初})$$</p>
+<p>$$Q_{放} = cm(t_{初} - t_{末}) \quad (t_{初} &gt; t_{末})$$</p>
+<p>或统一写为：</p>
+<p>$$Q = cm|\Delta t|$$</p>
+<h3>常见物质比热容（20°C，标准大气压）</h3>
+<table>
+<thead>
+<tr>
+<th>物质</th>
+<th>$c$ / J·(kg·℃)⁻¹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水</td>
+<td>$4.2 \times 10^3$</td>
+</tr>
+<tr>
+<td>冰</td>
+<td>$2.1 \times 10^3$</td>
+</tr>
+<tr>
+<td>铝</td>
+<td>$0.88 \times 10^3$</td>
+</tr>
+<tr>
+<td>铁</td>
+<td>$0.46 \times 10^3$</td>
+</tr>
+<tr>
+<td>铜</td>
+<td>$0.39 \times 10^3$</td>
+</tr>
+<tr>
+<td>沙/泥土</td>
+<td>$\approx 0.92 \times 10^3$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律</strong>：水的比热容在常见物质中最大，这有重要的工程与自然意义。</p>
+<h3>比热容的物理意义</h3>
+<p>水的比热容 $c_{水} = 4.2 \times 10^3$ J/(kg·℃) 的含义：
+- 1 kg 的水温度升高 1°C，需要吸收 4200 J 的热量
+- 1 kg 的水温度降低 1°C，需要放出 4200 J 的热量</p>
+<h3>探究实验：比较沙和水的比热容</h3>
+<p><strong>实验目的</strong>：探究不同物质吸热能力的差异</p>
+<p><strong>实验方案</strong>：
+- 取等质量（如 0.5 kg）的水和沙，初温相同
+- 用相同功率的酒精灯加热相同时间
+- 比较两者温度升高的差异</p>
+<p><strong>结论</strong>：水升温慢（比热容大），沙升温快（比热容小）</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：用 2000 W 的电热水壶将 1 kg 水从 20°C 加热到 100°C，需要多长时间？（$c_{水} = 4.2 \times 10^3$ J/(kg·℃)，忽略热量损失）</p>
+<p><strong>解</strong>：</p>
+<p>$$Q = cm\Delta t = 4.2 \times 10^3 \times 1 \times (100-20) = 336000 \text{ J}$$</p>
+<p>$$t = \frac{Q}{P} = \frac{336000}{2000} = 168 \text{ s} = 2 \text{ min } 48 \text{ s}$$</p>
+<p><strong>易错点：</strong>
+- 比热容是物质的特性，与质量、温度无关（在一定温度范围内）
+- $\Delta t$ 的单位用°C或K均可，数值相同（因为两者温差相等）
+- 计算时注意区分"吸热"与"放热"，确保 $\Delta t$ 为正值</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比热容</td>
+<td>specific heat capacity</td>
+<td>n.</td>
+<td>Water has a very high specific heat capacity.</td>
+</tr>
+<tr>
+<td>热量</td>
+<td>heat</td>
+<td>n.</td>
+<td>Calculate the heat absorbed using Q = cmΔt.</td>
+</tr>
+<tr>
+<td>温度变化</td>
+<td>temperature change</td>
+<td>n.</td>
+<td>The temperature change is 80°C.</td>
+</tr>
+<tr>
+<td>物质特性</td>
+<td>property of material</td>
+<td>n.</td>
+<td>Specific heat capacity is a property of the material.</td>
+</tr>
+<tr>
+<td>热平衡</td>
+<td>thermal equilibrium</td>
+<td>n.</td>
+<td>At thermal equilibrium, heat released equals heat absorbed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十三章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 热量与比热容</li>
+<li><strong>百科</strong>：维基百科"比热容"；中文百科"热容"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/129-分子动理论.html">分子动理论</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/153-热量.html">热量</a></p>
+</li>
+<li>
+<p><a href="../atoms/153-热量.html">热量</a></p>
+</li>
+<li><a href="../atoms/127-内能.html">内能</a></li>
+<li><a href="../atoms/150-热传递改变内能.html">热传递改变内能</a></li>
+<li><a href="../atoms/155-燃料热值.html">燃料热值</a></li>
+<li><a href="../atoms/152-热机效率.html">热机效率</a></li>
+<li><a href="../atoms/197-能量守恒定律.html">能量守恒定律</a></li>
+</ul>
+</div>
+</body>
+</html>

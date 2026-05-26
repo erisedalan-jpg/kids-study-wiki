@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间点直线平面位置关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间点直线平面位置关系</h1><div class="review-mark" data-stem="350-空间点直线平面位置关系"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间点直线平面位置关系, spatial relationships, 空间位置关系</p><h2>🎓 空间点、直线、平面位置关系</h2>
+<h3>平面的表示</h3>
+<p>平面用大写希腊字母 $\alpha, \beta, \gamma$ 表示，或用平面上不共线三点（如平面 $ABC$）表示。</p>
+<p>点 $A$ 在平面 $\alpha$ 内：$A \in \alpha$；不在平面内：$A \notin \alpha$</p>
+<h3>直线与平面的位置关系</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>记号</th>
+<th>交点数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直线在平面内</td>
+<td>$l \subset \alpha$</td>
+<td>无数个</td>
+</tr>
+<tr>
+<td>直线与平面相交</td>
+<td>$l \cap \alpha = {A}$</td>
+<td>1 个</td>
+</tr>
+<tr>
+<td>直线与平面平行</td>
+<td>$l \parallel \alpha$</td>
+<td>0 个</td>
+</tr>
+</tbody>
+</table>
+<p><strong>线面垂直</strong>是相交的特殊情形：$l \perp \alpha$。</p>
+<h3>两平面的位置关系</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>记号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两平面平行</td>
+<td>$\alpha \parallel \beta$</td>
+</tr>
+<tr>
+<td>两平面相交</td>
+<td>$\alpha \cap \beta = l$（交线）</td>
+</tr>
+</tbody>
+</table>
+<p>两平面没有"只交于一点"的情形。</p>
+<h3>两直线的空间位置关系</h3>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相交</td>
+<td>共面，有公共点</td>
+</tr>
+<tr>
+<td>平行</td>
+<td>共面，无公共点</td>
+</tr>
+<tr>
+<td><strong>异面</strong></td>
+<td>不共面，无公共点</td>
+</tr>
+</tbody>
+</table>
+<p><strong>异面直线</strong>是空间特有的位置关系（平面中不存在）。</p>
+<h3>公理与推论</h3>
+<p><strong>公理1</strong>：两点确定一条直线。</p>
+<p><strong>公理2</strong>：两点在平面内，则两点连线在平面内。</p>
+<p><strong>公理3</strong>：不共线三点确定一个平面。</p>
+<p><strong>公理4（平行公理）</strong>：平行于同一直线的两直线互相平行。</p>
+<p><strong>推论</strong>：两平面有两个公共点，则它们的交线过这两点。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：正方体 $ABCD-A_1B_1C_1D_1$ 中，判断 $AB$ 与 $A_1D_1$ 的位置关系。</p>
+<p><strong>解</strong>：$AB$ 在平面 $ABCD$ 内，$A_1D_1$ 在平面 $A_1B_1C_1D_1$ 内，两平面平行，两线不共面。$AB \parallel A_1B_1$，$A_1B_1 \parallel A_1D_1$...实际上 $AB \parallel CD$，而 $A_1D_1 \parallel AD$，$AB \perp AD$，故 $AB$ 与 $A_1D_1$ <strong>异面</strong>。</p>
+<p><strong>例2</strong>：判断平面内外的点：在正方体中，顶点 $B$ 是否在平面 $ACD_1$ 内？</p>
+<h3>易错点</h3>
+<ul>
+<li>空间中两直线不相交不代表平行，可能是<strong>异面</strong></li>
+<li>"共面"要通过公理严格证明，不能只靠直觉</li>
+<li>直线与平面的交点是唯一的，不是线段</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.3，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/352-空间直线平面平行.html">空间直线平面平行</a></li>
+<li><a href="../atoms/351-空间直线平面垂直.html">空间直线平面垂直</a></li>
+<li><a href="../atoms/353-空间角.html">空间角</a></li>
+<li><a href="../atoms/354-空间距离.html">空间距离</a></li>
+<li><a href="../atoms/346-空间几何体-多面体.html">空间几何体-多面体</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-12.html">2008-理-12</a></li>
+<li><a href="../exam/数学/2016-文-18.html">2016-文-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

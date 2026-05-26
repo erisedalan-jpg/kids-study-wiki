@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机抽样（简单）</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>随机抽样（简单）</h1><div class="review-mark" data-stem="362-随机抽样-简单"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 统计, 第九章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 随机抽样-简单, simple random sampling, 简单随机抽样</p><h2>🎓 随机抽样（简单随机抽样）</h2>
+<h3>为什么要抽样</h3>
+<p><strong>总体</strong>（population）：研究对象的全体。<br />
+<strong>个体</strong>：总体中的每一个对象。<br />
+<strong>样本</strong>（sample）：从总体中抽取的若干个体。<br />
+<strong>样本容量</strong>：样本中个体的数目。</p>
+<p>当总体数量过大或调查有破坏性时（如灯泡寿命检测），需要用<strong>样本估计总体</strong>。</p>
+<h3>简单随机抽样</h3>
+<p><strong>定义</strong>：从有 $N$ 个个体的总体中，每次随机取一个个体，不放回地抽取 $n$ 个，使每个个体被抽到的机会相等，这种方法称为<strong>简单随机抽样</strong>（无放回抽样）。</p>
+<p>每个个体被抽到的概率 $= \dfrac{n}{N}$</p>
+<h3>抽样方法</h3>
+<h4>抽签法（lottery method）</h4>
+<p>将 $N$ 个个体编号写在纸签上，充分混合后随机抽取 $n$ 张。</p>
+<p>适用：总体数量较少时。</p>
+<h4>随机数表法</h4>
+<p>利用随机数表，从某位置开始读取数字，选取符合条件的编号。</p>
+<p>适用：总体数量较大但有限。</p>
+<h4>系统抽样（等距抽样）</h4>
+<p>将总体分为 $n$ 份，每份抽 $1$ 个，起点随机，间隔固定。</p>
+<p>$$\text{间隔} k = \left\lfloor\frac{N}{n}\right\rfloor$$</p>
+<p>适用：个体可排序，总体较大。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：某校 800 名学生，用系统抽样抽取 40 人，间隔多大？</p>
+<p><strong>解</strong>：$k = 800 \div 40 = 20$，每 20 人抽 1 人。随机确定第 1 组内的起始编号（1-20 中随机选），之后每隔 20 抽一人。</p>
+<p><strong>例2</strong>：盒中 10 个球（编号 1-10），用抽签法抽 3 个，第 1 号球被抽到的概率。</p>
+<p><strong>解</strong>：$P = \dfrac{3}{10}$</p>
+<h3>样本的代表性</h3>
+<p>良好的抽样方法要保证：
+1. <strong>随机性</strong>：每个个体有均等机会被抽到
+2. <strong>无偏性</strong>：样本能代表总体的分布特征</p>
+<h3>易错点</h3>
+<ul>
+<li>简单随机抽样是<strong>无放回</strong>的，每个个体最多被抽一次</li>
+<li>系统抽样中起始编号必须<strong>随机</strong>，不能总是从 1 开始</li>
+<li>样本容量越大，估计越精确，但成本也越高</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第九章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第九章 § 9.1，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/343-球的表面积体积.html">球的表面积体积</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/319-分层抽样.html">分层抽样</a></p>
+</li>
+<li>
+<p><a href="../atoms/319-分层抽样.html">分层抽样</a></p>
+</li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+<li><a href="../atoms/344-用样本估计总体.html">用样本估计总体</a></li>
+<li><a href="../atoms/359-统计案例.html">统计案例</a></li>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2014-理-02.html">2014-理-02</a></li>
+<li><a href="../exam/数学/2016-文-18.html">2016-文-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

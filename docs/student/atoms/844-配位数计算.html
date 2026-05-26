@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>配位数计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>配位数计算</h1><div class="review-mark" data-stem="844-配位数计算"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 配位数计算, 配位数</p><h1>配位数计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：配位数（CN）是指在晶体或配合物中，某原子或离子周围与之<strong>最近邻</strong>且<strong>等距离</strong>结合的原子、离子或配体的数目。
+<strong>English</strong>: Coordination number refers to the number of nearest-neighbor atoms, ions, or ligands that are bound to a central atom or ion at equal distances in a crystal or complex, specifying the immediate connectivity around that central species.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong></p>
+<p>在高考化学中，配位数的核心定义分为两种情况：</p>
+<ol>
+<li><strong>离子晶体 / 金属晶体</strong>：与某一微粒（原子或离子）距离最近且相等的<strong>异电性离子</strong>数（离子晶体）或<strong>原子</strong>数（金属晶体）。注意，离子晶体中配位数指的是“最近异号离子”数，而非同号离子数。</li>
+<li><strong>配合物</strong>：中心原子（或离子）实际结合的配位原子（即形成σ配键的原子）总数。对于单齿配体（如NH₃、H₂O、Cl⁻），配位数 = 配体个数；对于多齿配体（如乙二胺 en），配位数 = 配体数 × 齿数。</li>
+</ol>
+<p><strong>关键方法：晶体中配位数计算的“均摊与镜像”策略</strong></p>
+<p>高考对于晶体配位数的考查，核心难点在于三维空间想象与截距判断。标准方法如下：</p>
+<ol>
+<li><strong>确定中心与对象</strong>：明确是在计算“谁的”配位数。例如，求NaCl晶胞中Na⁺的配位数，则中心是Na⁺，对象是Cl⁻。</li>
+<li><strong>找代表位置</strong>：选取晶胞内部、面上或容易判断的体心位置作为中心微粒，避免选顶点（因配位多面体被晶胞切割严重）。</li>
+<li><strong>双向延伸与平移</strong>：画出通过该中心微粒的坐标轴截面。利用晶胞平移对称性，检查中心微粒周围所有紧邻的异号离子位置。对于体心位置，往往可直接判读；对于棱上或面心位置，需补全相邻晶胞。</li>
+<li><strong>切割补偿</strong>：若在边界处对称地缺失了微粒，需通过对称操作（镜面、旋转轴）将相邻晶胞内的微粒“平移”回来，数清总数。</li>
+</ol>
+<p><strong>典型应用</strong></p>
+<ul>
+<li><strong>典型设问</strong>：“NaCl晶胞中Na⁺的配位数是多少？”（答案：6，正八面体孔穴）；“CsCl晶胞中Cs⁺的配位数是多少？”（答案：8，立方体孔穴）；“金刚石晶胞中碳原子的配位数是多少？”（答案：4，sp³四面体）。</li>
+<li><strong>真实情境</strong>：考题常给出一段晶胞结构投影图或部分原子坐标，要求直接判断某原子的配位数。解题时立即抓住“最近且等距离”的原则。对于CaF₂晶胞，需特别小心：Ca²⁺的配位数是8，但F⁻的配位数是4。两者不相等，因为化学式中Ca:F为1:2，配位数之比恰为电荷数反比（Ca²⁺:F⁻ = 8:4 = 2:1）。这是根据化学式反推配位数的常用校验法。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误把化学式原子个数比当配位数</strong>：NaCl晶胞中，Na⁺和Cl⁻个数比为1:1，但配位数均为6，并非化学式中的1:1。绝对禁止用化学式下标直接代替配位数。</li>
+<li><strong>离子晶体中配位数搞反</strong>：设问“CaF₂中F⁻的配位数”时，学生常误答为8（将Ca²⁺的配位数张冠李戴）。务必先确认“中心离子”是谁，再找其最近的异号离子。</li>
+<li><strong>误判距离为“次近邻”</strong>：在体心立方堆积（如Na、K）中，体心原子的配位数是8（体心到8个顶点等距），而非6（体心到面心原子距离更长）。必须严格取“最近邻”的波峰。</li>
+<li><strong>配合物中忽略多齿配体</strong>：计算[Cu(en)₂]²⁺的配位数时，en为乙二胺（含2个配位N原子），配位数 = 2 × 2 = 4，而非2。单看配体数量算2是典型错误（待家长核对）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>配位数</td>
+<td>Coordination number</td>
+<td>中心原子/离子最近邻的原子/离子/配体数</td>
+</tr>
+<tr>
+<td>简单立方堆积</td>
+<td>Simple cubic packing</td>
+<td>晶胞边长为2倍原子半径，配位数为6</td>
+</tr>
+<tr>
+<td>体心立方堆积</td>
+<td>Body-centered cubic packing</td>
+<td>体对角线上原子相切，配位数为8</td>
+</tr>
+<tr>
+<td>面心立方最密堆积</td>
+<td>Face-centered cubic close packing</td>
+<td>面对角线上原子相切，配位数为12</td>
+</tr>
+<tr>
+<td>配体</td>
+<td>Ligand</td>
+<td>提供孤对电子给中心原子的分子或离子</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">晶胞密堆积模型</a></li>
+<li><a class="dead" title="未收录">离子晶体晶格能</a></li>
+<li><a class="dead" title="未收录">配合物异构现象</a></li>
+<li><a class="dead" title="未收录">原子晶体结构（金刚石与二氧化硅）</a></li>
+<li><a class="dead" title="未收录">晶体密度计算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2024-辽宁-14.html">2024-辽宁-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

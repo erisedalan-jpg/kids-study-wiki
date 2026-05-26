@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次函数图象与性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次函数图象与性质</h1><div class="review-mark" data-stem="211-二次函数图象与性质"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九上, 二次函数, 代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次函数图象与性质, properties of quadratic function, 二次函数性质, 二次函数图象, 二次函数的图像与性质, 二次函数的图象与性质</p><h1>二次函数图象与性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：二次函数 $y = ax^2+bx+c$ 的图象是抛物线，由 $a$ 的正负决定开口方向，有对称轴和顶点，函数在对称轴两侧单调性相反。
+<strong>English</strong>: The graph of $y = ax^2+bx+c$ is a parabola; $a$ determines the direction of opening, and the function has an axis of symmetry and vertex.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>抛物线长什么样？</h3>
+<p>二次函数的图象是<strong>抛物线</strong>——就像一个碗（$a&gt;0$）或扣过来的碗（$a&lt;0$）。</p>
+<p><strong>$a &gt; 0$（开口向上）</strong>：像字母 U，有最低点
+$$y = x^2 \quad \text{（最简单的例子）}$$</p>
+<p><strong>$a &lt; 0$（开口向下）</strong>：像倒扣的 U，有最高点
+$$y = -x^2$$</p>
+<h3>三个关键特征</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>对称轴</strong></td>
+<td>一条竖直的线，抛物线关于它左右对称</td>
+</tr>
+<tr>
+<td><strong>顶点</strong></td>
+<td>对称轴与抛物线的交点（最高点或最低点）</td>
+</tr>
+<tr>
+<td><strong>$y$ 轴截距</strong></td>
+<td>令 $x=0$ 得 $y=c$，即与 $y$ 轴的交点</td>
+</tr>
+</tbody>
+</table>
+<h3>描点画 $y = x^2$ 的图象</h3>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>$-3$</th>
+<th>$-2$</th>
+<th>$-1$</th>
+<th>$0$</th>
+<th>$1$</th>
+<th>$2$</th>
+<th>$3$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>$9$</td>
+<td>$4$</td>
+<td>$1$</td>
+<td>$0$</td>
+<td>$1$</td>
+<td>$4$</td>
+<td>$9$</td>
+</tr>
+</tbody>
+</table>
+<p>对称轴：$x = 0$（即 $y$ 轴）；顶点：$(0, 0)$；开口向上，最小值为 $0$。</p>
+<h3>$a$ 的绝对值与开口宽窄</h3>
+<ul>
+<li>$|a|$ 越大，抛物线越<strong>窄</strong>（陡峭）</li>
+<li>$|a|$ 越小，抛物线越<strong>宽</strong>（平缓）</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>完整性质（以 $y = ax^2+bx+c$ 为例）</h3>
+<p><strong>1. 图象形状</strong>：开口方向由 $a$ 决定
+- $a &gt; 0$：开口向上，有最小值
+- $a &lt; 0$：开口向下，有最大值</p>
+<p><strong>2. 对称轴</strong>：直线 $x = -\dfrac{b}{2a}$</p>
+<p><strong>3. 顶点</strong>：$\left(-\dfrac{b}{2a},\ c-\dfrac{b^2}{4a}\right)$（即最值点）</p>
+<p><strong>4. 顶点式</strong>（配方后）：$y = a\left(x+\dfrac{b}{2a}\right)^2 + c-\dfrac{b^2}{4a}$</p>
+<p><strong>5. $y$ 轴截距</strong>：$(0, c)$</p>
+<p><strong>6. 与 $x$ 轴的交点</strong>：由 $\Delta = b^2 - 4ac$ 决定
+- $\Delta &gt; 0$：两个交点 $(x_1, 0), (x_2, 0)$
+- $\Delta = 0$：一个交点（顶点在 $x$ 轴上）
+- $\Delta &lt; 0$：无交点</p>
+<p><strong>7. 单调性</strong>：
+- 当 $a &gt; 0$：在 $x &lt; -\dfrac{b}{2a}$ 上单调递减，在 $x &gt; -\dfrac{b}{2a}$ 上单调递增
+- 当 $a &lt; 0$：在 $x &lt; -\dfrac{b}{2a}$ 上单调递增，在 $x &gt; -\dfrac{b}{2a}$ 上单调递减</p>
+<h3>$y = a(x-h)^2+k$ 的平移规律</h3>
+<p>以 $y = ax^2$ 为基础：
+- 向右移 $h$（$h&gt;0$）→ $y = a(x-h)^2$
+- 向左移 $|h|$（$h&lt;0$）→ $y = a(x-h)^2$
+- 向上移 $k$（$k&gt;0$）→ $y = ax^2 + k$
+- 组合：$y = a(x-h)^2 + k$，顶点为 $(h, k)$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：描述 $y = -2x^2 + 4x - 1$ 的图象特征。</p>
+<p>配方：$y = -2(x-1)^2 + 1$</p>
+<ul>
+<li>开口向下（$a=-2&lt;0$），开口较窄</li>
+<li>对称轴：$x = 1$</li>
+<li>顶点：$(1, 1)$（最高点）</li>
+<li>$y$ 轴截距：$y(0) = -1$，即 $(0,-1)$</li>
+<li>$\Delta = 16 - 8 = 8 &gt; 0$，与 $x$ 轴有两个交点</li>
+</ul>
+<p><strong>例 2</strong>（综合）：已知抛物线对称轴 $x=1$，过点 $(0, 2)$ 且 $a=2$，求解析式。</p>
+<p>设 $y = 2(x-1)^2 + k$，代入 $(0, 2)$：$2 = 2(0-1)^2 + k = 2 + k$，得 $k = 0$。</p>
+<p>解析式：$y = 2(x-1)^2 = 2x^2 - 4x + 2$</p>
+<h3>性质汇总表</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>$a &gt; 0$</th>
+<th>$a &lt; 0$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开口方向</td>
+<td>向上</td>
+<td>向下</td>
+</tr>
+<tr>
+<td>顶点位置</td>
+<td>最低点（最小值）</td>
+<td>最高点（最大值）</td>
+</tr>
+<tr>
+<td>轴左侧</td>
+<td>单调递减</td>
+<td>单调递增</td>
+</tr>
+<tr>
+<td>轴右侧</td>
+<td>单调递增</td>
+<td>单调递减</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>❌ 对称轴忘记写"直线"：应写 $x=1$，而非"点 $1$"</li>
+<li>❌ 顶点纵坐标用 $b^2-4ac$（是 $c-\frac{b^2}{4a}$！）</li>
+<li>❌ 单调性写反（$a&gt;0$ 时轴左侧递减，不是递增）</li>
+<li>❌ 平移方向记错（$y=a(x-h)^2$ 向右移 $h$，容易记成向左）</li>
+</ul>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标依据</strong>：《义务教育数学课程标准（2022 年版）》第四学段"函数·二次函数"</li>
+<li><strong>教材</strong>：人教版《义务教育教科书·数学九年级上册》第二章 — <code>素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/九年级/义务教育教科书·数学九年级上册.pdf</code>（第二章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6，2026-05-09，内容需家长结合教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">二次函数定义</a></li>
+<li><a class="dead" title="未收录">二次函数顶点式</a></li>
+<li><a class="dead" title="未收录">二次函数交点式</a></li>
+<li><a class="dead" title="未收录">抛物线</a></li>
+<li><a class="dead" title="未收录">配方法</a></li>
+<li><a class="dead" title="未收录">根的判别式</a></li>
+<li><a href="../atoms/187-函数图象.html">函数图象</a></li>
+<li><a class="dead" title="未收录">二次函数实际应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-理-14.html">2017-理-14</a></li>
+<li><a class="dead" title="未收录">2021-北京-07</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

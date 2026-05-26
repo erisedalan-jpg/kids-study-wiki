@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一宇宙速度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>第一宇宙速度</h1><div class="review-mark" data-stem="281-第一宇宙速度"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 万有引力与宇宙航行]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 第一宇宙速度, first cosmic velocity, 环绕速度</p><h2>🎓 第一宇宙速度</h2>
+<h3>定义</h3>
+<p><strong>第一宇宙速度</strong>：物体在地球表面附近做圆周运动（贴地飞行）所需的最小速度，也是卫星在近地轨道（$r \approx R_{\text{地}}$）飞行的速度。</p>
+<p>$$v_1 = \sqrt{\frac{GM_{\text{地}}}{R_{\text{地}}}} = \sqrt{gR_{\text{地}}} \approx 7.9\ \text{km/s}$$</p>
+<h3>推导</h3>
+<p>在地球表面，万有引力提供向心力（忽略大气，$r = R_{\text{地}}$）：</p>
+<p>$$G\frac{M_{\text{地}}m}{R_{\text{地}}^2} = \frac{mv_1^2}{R_{\text{地}}}$$</p>
+<p>$$v_1 = \sqrt{\frac{GM_{\text{地}}}{R_{\text{地}}}}$$</p>
+<p>又因 $g = \dfrac{GM_{\text{地}}}{R_{\text{地}}^2}$，故：</p>
+<p>$$\boxed{v_1 = \sqrt{gR_{\text{地}}} = \sqrt{9.8 \times 6.4 \times 10^6} \approx 7900\ \text{m/s} = 7.9\ \text{km/s}}$$</p>
+<h3>三大宇宙速度</h3>
+<table>
+<thead>
+<tr>
+<th>宇宙速度</th>
+<th>数值</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一宇宙速度 $v_1$</td>
+<td>$7.9\ \text{km/s}$</td>
+<td>近地轨道最小环绕速度</td>
+</tr>
+<tr>
+<td>第二宇宙速度 $v_2$</td>
+<td>$11.2\ \text{km/s}$</td>
+<td>脱离地球引力所需最小速度（逃逸速度）</td>
+</tr>
+<tr>
+<td>第三宇宙速度 $v_3$</td>
+<td>$16.7\ \text{km/s}$</td>
+<td>脱离太阳系所需最小速度</td>
+</tr>
+</tbody>
+</table>
+<h3>物理意义</h3>
+<ul>
+<li>$v &lt; v_1$：物体落回地面（抛体运动）</li>
+<li>$v = v_1$：近地圆轨道卫星</li>
+<li>$v_1 &lt; v &lt; v_2$：椭圆轨道卫星（近地点速度）</li>
+<li>$v = v_2$：抛物线轨道，恰好逃离地球</li>
+<li>$v &gt; v_2$：双曲线轨道，逃离地球</li>
+</ul>
+<h3>最小发射速度</h3>
+<p>$v_1 = 7.9\ \text{km/s}$ 是<strong>最小</strong>地球卫星速度（轨道最低 = 近地），同时也是所有能绕地运行的卫星中速度<strong>最大</strong>的（轨道越高，速度越小）。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算月球表面第一宇宙速度（月球 $g_{\text{月}} = 1.6\ \text{m/s}^2$，$R_{\text{月}} = 1.74 \times 10^6\ \text{m}$）。</p>
+<p>$$v_{1,\text{月}} = \sqrt{g_{\text{月}} R_{\text{月}}} = \sqrt{1.6 \times 1.74 \times 10^6} \approx 1670\ \text{m/s} \approx 1.7\ \text{km/s}$$</p>
+<p><strong>例2</strong>：近地卫星周期？</p>
+<p>$$T = \frac{2\pi R_{\text{地}}}{v_1} = \frac{2\pi \times 6.4 \times 10^6}{7900} \approx 5090\ \text{s} \approx 85\ \text{min}$$</p>
+<p>（国际空间站绕地约90分钟一圈）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>第一宇宙速度是卫星最大速度</strong>（近地轨道最快），不是最小发射速度（实际发射需克服大气阻力，速度更大）。</li>
+<li><strong>$v_1 = \sqrt{gR}$ 中 $g$ 和 $R$ 均取地球表面值</strong>。</li>
+<li><strong>轨道越高，速度越小</strong>：$v = \sqrt{GM/r}$，$r$ 越大，$v$ 越小。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第七章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第七章 第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：第一宇宙速度 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/264-开普勒三定律.html">开普勒三定律</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">卫星环绕速度</a></p>
+</li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a class="dead" title="未收录">天体质量计算</a></li>
+<li><a href="../atoms/264-开普勒三定律.html">开普勒三定律</a></li>
+<li><a href="../atoms/256-向心力.html">向心力</a></li>
+<li><a class="dead" title="未收录">重力加速度</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2009-北京-10</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-07</a></li>
+<li><a class="dead" title="未收录">2019-北京-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-05</a></li>
+<li><a class="dead" title="未收录">2021-湖南-07</a></li>
+<li><a class="dead" title="未收录">2023-北京-12</a></li>
+<li><a class="dead" title="未收录">2023-湖南-04</a></li>
+<li><a class="dead" title="未收录">2024-湖南-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

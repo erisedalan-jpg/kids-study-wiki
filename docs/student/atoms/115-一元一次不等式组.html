@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一元一次不等式组</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>一元一次不等式组</h1><div class="review-mark" data-stem="115-一元一次不等式组"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 不等式与不等式组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 一元一次不等式组, system of linear inequalities in one variable, 不等式组</p><h2>课本定义</h2>
+<p>由含同一未知数的几个一元一次不等式组成的不等式组，叫做<strong>一元一次不等式组</strong>。不等式组的解集是<strong>各个不等式解集的公共部分</strong>（交集），在数轴上取各解集的重叠部分。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"两个条件都要同时满足"</h3>
+<p><strong>不等式组</strong>就是几个不等式<strong>同时</strong>成立。</p>
+<p><strong>生活例子：</strong> 小华参加跳绳比赛，规定年龄在8到12岁之间（含8岁和12岁）。</p>
+<p>设年龄为 x，则：
+$$\begin{cases} x \geq 8 \ x \leq 12 \end{cases}$$</p>
+<p>两个条件同时要满足：x 既要 ≥ 8，又要 ≤ 12。</p>
+<p><strong>解法——用数轴找"重叠部分"：</strong></p>
+<p>x ≥ 8 的数轴：</p>
+<pre><code>————————•—————————→
+       8
+</code></pre>
+<p>x ≤ 12 的数轴：</p>
+<pre><code>←—————————•————
+           12
+</code></pre>
+<p>两者<strong>重叠</strong>的部分：</p>
+<pre><code>————————•—————•————
+       8      12
+</code></pre>
+<p>解集就是 8 ≤ x ≤ 12（即 x 在8到12之间，含两端）。</p>
+<p><strong>口诀（找公共部分）：</strong>
+- "同大取大"：两个都是"x &gt; 某数"，取较大的那个数
+- "同小取小"：两个都是"x &lt; 某数"，取较小的那个数
+- "大小取中"：一个 x &gt; a，一个 x &lt; b（且 a &lt; b），取中间的 a &lt; x &lt; b
+- "小大无解"：一个 x &gt; b，一个 x &lt; a（且 a &lt; b），无公共部分，无解</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>一元一次不等式组</strong>：由含同一未知数 x 的多个一元一次不等式联立组成的不等式组，记作：</p>
+<p>$$\begin{cases} \text{不等式1} \ \text{不等式2} \ \vdots \end{cases}$$</p>
+<p><strong>不等式组的解集</strong> = 各不等式解集的<strong>交集</strong>（同时满足所有不等式的 x 的集合）。</p>
+<h3>解不等式组的步骤</h3>
+<ol>
+<li>分别求各不等式的解集</li>
+<li>在数轴上画出各解集</li>
+<li>找重叠（公共）部分</li>
+<li>用不等号表示公共部分（即不等式组的解集）</li>
+</ol>
+<h3>四种情形总结</h3>
+<p>设 a &lt; b，则：</p>
+<table>
+<thead>
+<tr>
+<th>不等式组</th>
+<th>数轴重叠情况</th>
+<th>解集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x &gt; a 且 x &gt; b</td>
+<td>取右边（大的）</td>
+<td>x &gt; b</td>
+</tr>
+<tr>
+<td>x &lt; a 且 x &lt; b</td>
+<td>取左边（小的）</td>
+<td>x &lt; a</td>
+</tr>
+<tr>
+<td>x &gt; a 且 x &lt; b</td>
+<td>取中间</td>
+<td>a &lt; x &lt; b</td>
+</tr>
+<tr>
+<td>x &gt; b 且 x &lt; a</td>
+<td>无重叠</td>
+<td>无解（空集）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 解不等式组</p>
+<p>$$\begin{cases} 2x - 1 &gt; 3 \quad (1)\ x + 2 &lt; 6 \quad (2) \end{cases}$$</p>
+<p>解：由 (1)：2x &gt; 4，x &gt; 2
+由 (2)：x &lt; 4</p>
+<p>数轴上：x &gt; 2 且 x &lt; 4，取中间，解集为 <strong>2 &lt; x &lt; 4</strong>。</p>
+<p><strong>例题2：</strong> 解不等式组</p>
+<p>$$\begin{cases} 3x + 1 \geq 7 \quad (1)\ 2x - 3 \geq 5 \quad (2) \end{cases}$$</p>
+<p>解：由 (1)：3x ≥ 6，x ≥ 2
+由 (2)：2x ≥ 8，x ≥ 4</p>
+<p>两个都是"x ≥"，取较大数，解集为 <strong>x ≥ 4</strong>。</p>
+<p><strong>例题3：</strong> 解不等式组，说明是否有解</p>
+<p>$$\begin{cases} x &lt; 1 \ x &gt; 3 \end{cases}$$</p>
+<p>解：x &lt; 1 且 x &gt; 3，这两个条件互相矛盾（不可能同时成立），<strong>无解（解集为空集）</strong>。</p>
+<p><strong>例题4（应用）：</strong> 某活动要求人数不少于15人且不超过30人，已报名 x 人。</p>
+<p>$$\begin{cases} x \geq 15 \ x \leq 30 \end{cases}$$</p>
+<p>解集：15 ≤ x ≤ 30（x 取整数，即 15, 16, ..., 30）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>公共部分取"交集"</strong>，不是"并集"（两者都满足，不是满足任意一个）</li>
+<li><strong>"同大取大，同小取小"要分清哪个更严格</strong></li>
+<li><strong>无解时写"空集"或"无解"</strong>，不要写成错误的不等式</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一元一次不等式组</td>
+<td>system of linear inequalities</td>
+<td>多个不等式联立</td>
+</tr>
+<tr>
+<td>解集</td>
+<td>solution set</td>
+<td>满足所有不等式的 x</td>
+</tr>
+<tr>
+<td>公共部分</td>
+<td>intersection</td>
+<td>取所有解集的交集</td>
+</tr>
+<tr>
+<td>无解</td>
+<td>no solution</td>
+<td>解集为空集</td>
+</tr>
+<tr>
+<td>数轴</td>
+<td>number line</td>
+<td>画出解集的工具</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第九章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/117-不等式性质.html">不等式性质</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">分类与整理</a></p>
+</li>
+<li>
+<p><a href="../atoms/114-一元一次不等式.html">一元一次不等式</a></p>
+</li>
+<li><a href="../atoms/117-不等式性质.html">不等式性质</a></li>
+<li><a href="../atoms/118-不等式解集.html">不等式解集</a></li>
+<li><a href="../atoms/138-用不等式解决问题.html">用不等式解决问题</a></li>
+<li><a href="../atoms/078-负数.html">数轴</a></li>
+<li><a href="../atoms/127-实数.html">实数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2013-理-08.html">2013-理-08</a></li>
+<li><a href="../exam/数学/2014-文-09.html">2014-文-09</a></li>
+<li><a href="../exam/数学/2014-理-06.html">2014-理-06</a></li>
+<li><a href="../exam/数学/2018-文-13.html">2018-文-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

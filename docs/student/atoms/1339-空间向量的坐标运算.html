@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量的坐标运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间向量的坐标运算</h1><div class="review-mark" data-stem="1339-空间向量的坐标运算"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间向量的坐标运算, Coordinate Operations of Space Vectors, 空间向量坐标运算</p><h1>空间向量的坐标运算</h1>
+<blockquote>
+<p><strong>一句话</strong>：在空间直角坐标系中，将向量的线性运算、数量积等转化为对应坐标的代数运算。
+<strong>English</strong>: The algebraic manipulation of vectors in space through their coordinates in a rectangular coordinate system, including addition, scalar multiplication, dot product, etc.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+在空间直角坐标系 $O-xyz$ 中，设向量 $\vec{a} = (x_1, y_1, z_1)$，$\vec{b} = (x_2, y_2, z_2)$，则：</p>
+<ul>
+<li>加法：$\vec{a} + \vec{b} = (x_1+x_2,\ y_1+y_2,\ z_1+z_2)$  </li>
+<li>减法：$\vec{a} - \vec{b} = (x_1-x_2,\ y_1-y_2,\ z_1-z_2)$  </li>
+<li>数乘：$\lambda \vec{a} = (\lambda x_1,\ \lambda y_1,\ \lambda z_1)$  </li>
+<li>数量积：$\vec{a} \cdot \vec{b} = x_1x_2 + y_1y_2 + z_1z_2$  </li>
+<li>模长：$|\vec{a}| = \sqrt{x_1^2 + y_1^2 + z_1^2}$  </li>
+<li>两点 $A(x_1,y_1,z_1)$，$B(x_2,y_2,z_2)$ 间的距离：$|\overrightarrow{AB}| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$  </li>
+<li>夹角 $\theta$：$\cos\theta = \dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|} = \dfrac{x_1x_2+y_1y_2+z_1z_2}{\sqrt{x_1^2+y_1^2+z_1^2}\sqrt{x_2^2+y_2^2+z_2^2}}$（$\theta \in [0,\pi]$）</li>
+</ul>
+<p><strong>关键方法</strong><br />
+利用坐标法将立体几何问题转化为代数计算，核心步骤：<br />
+1. 建立合适的空间直角坐标系（尽量让更多的点在坐标轴或坐标面上）。<br />
+2. 求出相关点的坐标，进而得到直线的方向向量、平面的法向量。<br />
+3. 利用坐标运算判断平行、垂直，或计算距离、角。<br />
+   - 线线平行：方向向量共线 $\Leftrightarrow \vec{u} = k\vec{v}$<br />
+   - 线面平行：直线的方向向量与平面的法向量垂直 $\Leftrightarrow \vec{u} \cdot \vec{n} = 0$<br />
+   - 面面平行：两个法向量共线<br />
+   - 垂直类似，利用数量积为 0。<br />
+   - 异面直线所成角 $\theta$：$\cos\theta = |\cos\langle \vec{u}, \vec{v} \rangle|$，其中 $\theta \in (0,\frac{\pi}{2}]$<br />
+   - 二面角：利用两个半平面的法向量夹角，注意结合图形判断锐角或钝角，再确定 $\cos\theta$ 的符号。</p>
+<p><strong>典型应用</strong><br />
+高考常以解答题第（2）或（3）问的形式考查：给定长方体、棱柱、棱锥等几何体，建立坐标系，证明线面位置关系或求线面角、二面角、点到平面的距离等。例如，在正方体 $ABCD-A_1B_1C_1D_1$ 中，以 $D$ 为原点，$DA,DC,DD_1$ 所在直线为坐标轴建系，设棱长为 2，求平面 $A_1BD$ 与平面 $C_1BD$ 所成二面角的余弦值，通常先求两个法向量，再利用公式计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>建系不当导致坐标复杂</strong>：坐标系选择不合理会使计算量陡增，甚至坐标写错。应优先让直角、垂直关系落在坐标轴上。  </li>
+<li><strong>混淆所求角与向量夹角的转换关系</strong>：异面直线的角取向量夹角的绝对值；线面角是直线的方向向量与平面法向量夹角的余角；二面角的值可能等于法向量夹角或其补角，需依赖图形判断。  </li>
+<li><strong>法向量方向选取失误</strong>：求二面角时，若两个法向量均指向面内或均指向面外，其夹角为二面角的补角。不少学生不加判断直接用公式导致符号错误。  </li>
+<li><strong>数量积坐标公式遗忘与计算错误</strong>：漏掉对应坐标乘积的和项，或代入时符号错误；计算距离时忘记开方。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空间直角坐标系</td>
+<td>space rectangular coordinate system</td>
+<td>确定空间点位置的三个互相垂直的坐标轴</td>
+</tr>
+<tr>
+<td>向量</td>
+<td>vector</td>
+<td>具有大小和方向的量，坐标表示为有序三元组</td>
+</tr>
+<tr>
+<td>数量积</td>
+<td>dot product (scalar product)</td>
+<td>两向量的数量积，坐标公式为对应坐标乘积之和</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>normal vector</td>
+<td>垂直于平面的非零向量</td>
+</tr>
+<tr>
+<td>模长</td>
+<td>magnitude (length)</td>
+<td>向量的大小，坐标平方和的算术平方根</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">空间向量基本定理</a></li>
+<li><a class="dead" title="未收录">立体几何中的向量方法</a></li>
+<li><a class="dead" title="未收录">空间角与距离的计算</a></li>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a class="dead" title="未收录">用向量法证明平行与垂直</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/399-空间向量坐标表示.html">空间向量坐标表示</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/411-空间平面法向量.html">空间平面法向量</a></li>
+</ul>
+</div>
+</body>
+</html>

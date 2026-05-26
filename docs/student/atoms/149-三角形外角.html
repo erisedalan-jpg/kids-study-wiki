@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角形外角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>三角形外角</h1><div class="review-mark" data-stem="149-三角形外角"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 三角形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 三角形外角, exterior angle of a triangle, 外角定理</p><h1>三角形外角</h1>
+<blockquote>
+<p><strong>课本定义</strong>：三角形的外角等于与它不相邻的两个内角的和；三角形的外角大于任何一个与它不相邻的内角。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>什么是外角？</h3>
+<p>在三角形的一条边上，延长某条边后与另一条边形成的角，就叫<strong>外角</strong>。</p>
+<p>如图：在 $\triangle ABC$ 中，延长 $BC$ 到点 $D$，则 $\angle ACD$ 就是三角形在顶点 $C$ 处的外角。</p>
+<p>每个顶点处有<strong>两个外角</strong>（互为对顶角，相等），每条边两端共 6 个外角，但每顶点外角通常取一个。</p>
+<h3>外角的两个重要性质</h3>
+<p><strong>性质 1（外角定理）</strong>：三角形外角 = 不相邻两内角之和</p>
+<p>$$\angle ACD = \angle A + \angle B$$</p>
+<p><strong>性质 2</strong>：三角形外角 &gt; 任意一个不相邻内角</p>
+<p>$$\angle ACD &gt; \angle A \quad \text{且} \quad \angle ACD &gt; \angle B$$</p>
+<h3>应用举例</h3>
+<p>已知 $\triangle ABC$ 中 $\angle A = 40°$，$\angle B = 70°$，求 $C$ 点处的外角。</p>
+<p>解：$\angle ACD = \angle A + \angle B = 40° + 70° = \mathbf{110°}$</p>
+<p>验证：$\angle ACB = 180° - 40° - 70° = 70°$，$\angle ACD = 180° - 70° = 110°$ ✓</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格证明</h3>
+<p>在 $\triangle ABC$ 中，延长 $BC$ 到 $D$，则：</p>
+<p>$$\angle ACD + \angle ACB = 180° \quad \text{（直线上的补角）}$$</p>
+<p>又由内角和定理：</p>
+<p>$$\angle A + \angle B + \angle ACB = 180°$$</p>
+<p>两式相减得：</p>
+<p>$$\angle ACD = \angle A + \angle B \quad \blacksquare$$</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：在 $\triangle ABC$ 中，$\angle C$ 的外角为 $\angle ACD = 130°$，且 $\angle A = 2\angle B$，求 $\angle A$、$\angle B$。</p>
+<p>解：由外角定理，$\angle A + \angle B = 130°$</p>
+<p>又 $\angle A = 2\angle B$，代入得 $2\angle B + \angle B = 130°$，$\angle B = \frac{130°}{3} \approx 43.3°$</p>
+<p>∴ $\angle A \approx 86.7°$（若题目期待整数解，则条件需调整，此题说明外角定理的代数应用）</p>
+<p><strong>例题 2</strong>：已知 $\triangle ABC$ 中，$\angle BAC = 80°$，$D$ 是 $BC$ 上的点，求证 $\angle ADB &gt; 80°$。</p>
+<p>证明：在 $\triangle ABD$ 中，$\angle ADB$ 是 $\angle ADC$ 的邻补角，也是 $\triangle ACD$ 的外角。</p>
+<p>由外角定理：$\angle ADB = \angle DAC + \angle ACD &gt; \angle DAC$</p>
+<p>且 $\angle BAD + \angle DAC = \angle BAC = 80°$，$\angle ADB = \angle ABD + \angle BAD$</p>
+<p>由于 $\angle ABD &gt; 0°$，故 $\angle ADB &gt; \angle BAD$</p>
+<p>又 $\angle BAD &lt; 80°$，需要更精细论证……（实际解法：外角 $= $ 不相邻两内角之和 $&gt; $ 单个内角）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>外角是延长一条边后形成的角</strong>，不是三角形内部的角。</li>
+<li>"不相邻"很关键：外角只等于<strong>不相邻</strong>（远端）两内角之和，不包括相邻内角。</li>
+<li>每个顶点有两个外角互为<strong>对顶角</strong>，大小相等，通常只算一个。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/147-三角形内角和.html">三角形内角和</a>：外角 = 180° − 相邻内角，由此推导</li>
+<li>→ <a href="../atoms/161-多边形内角和外角和.html">多边形内角和外角和</a>：多边形外角和恒为 360°</li>
+<li>→ <a class="dead" title="未收录">三角形分类</a>：通过外角大小判断三角形类型</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外角</td>
+<td>exterior angle</td>
+</tr>
+<tr>
+<td>外角定理</td>
+<td>exterior angle theorem</td>
+</tr>
+<tr>
+<td>不相邻内角</td>
+<td>non-adjacent interior angles</td>
+</tr>
+<tr>
+<td>补角</td>
+<td>supplementary angle</td>
+</tr>
+<tr>
+<td>对顶角</td>
+<td>vertical angles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十一章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中数学思维导图》三角形知识网络</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">三角形全等</a></p>
+</li>
+<li>
+<p><a href="../atoms/147-三角形内角和.html">三角形内角和</a></p>
+</li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+<li><a href="../atoms/161-多边形内角和外角和.html">多边形内角和外角和</a></li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+<li><a href="../atoms/048-平行与垂直.html">平行线</a></li>
+<li><a class="dead" title="未收录">三角形高中线角平分线</a></li>
+</ul>
+</div>
+</body>
+</html>

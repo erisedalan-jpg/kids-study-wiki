@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛体运动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>抛体运动</h1><div class="review-mark" data-stem="613-抛体运动"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 抛体运动, projectile motion</p><h1>抛体运动</h1>
+<blockquote>
+<p><strong>一句话</strong>：物体以一定的初速度抛出，忽略空气阻力时仅在重力作用下的运动。
+<strong>English</strong>: Projectile motion is the motion of an object thrown into the air, subject only to the acceleration of gravity.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>抛体运动是一种理想化的匀变速曲线运动模型，其加速度恒为重力加速度 <strong>g</strong>，方向竖直向下。处理抛体运动的核心方法是将运动分解为水平方向的匀速直线运动和竖直方向的匀变速直线运动（通常取竖直向下为正或负）。<br />
+设初速度大小为 <em>v</em>₀，与水平方向夹角为 <em>θ</em>，则：<br />
+水平方向：<em>x</em> = <em>v</em>₀cos<em>θ</em> · <em>t</em>，<em>v_x</em> = <em>v</em>₀cos<em>θ</em>；<br />
+竖直方向：<em>y</em> = <em>v</em>₀sin<em>θ</em> · <em>t</em> ± ½<em>g</em>t²，<em>v_y</em> = <em>v</em>₀sin<em>θ</em> ± <em>gt</em>（符号由坐标系方向决定）。<br />
+对于最常见的平抛运动（<em>θ</em>=0），轨迹方程为 <strong><em>y</em> = (<em>g</em>/(2<em>v</em>₀²)) <em>x</em>²</strong>，为一抛物线。  </p>
+<p><strong>关键解题步骤</strong>：<br />
+1. 确定坐标系并分解初速度。<br />
+2. 分别列出水平、竖直两个方向的位移和速度方程。<br />
+3. 利用两方向运动时间相等的“等时性”联立求解。<br />
+4. 速度偏转角 <em>α</em> 满足 tan<em>α</em> = <em>v_y</em>/<em>v_x</em>，位移偏转角 <em>β</em> 满足 tan<em>β</em> = <em>y</em>/<em>x</em>。平抛运动中总有 <strong>tan<em>α<em> = 2 tan</em>β</em></strong>。  </p>
+<p><strong>高考典型设问</strong>：<br />
+- <strong>与斜面结合</strong>：如物体从斜面顶端水平抛出并落在斜面上，已知斜面倾角 <em>φ</em>，利用位移方向角等于 <em>φ</em> 得到时间 <em>t</em> = 2<em>v</em>₀ tan<em>φ</em>/<em>g</em>；或物体垂直打在斜面上，利用速度方向与斜面垂直建立关系。<br />
+- <strong>斜抛运动的对称性</strong>：上升和下降阶段时间相等、同一高度速度大小相等，常用来求射程 <em>R</em> = (<em>v</em>₀² sin 2<em>θ</em>)/<em>g</em> 和最大高度 <em>H</em> = (<em>v</em>₀² sin²<em>θ</em>)/(2<em>g</em>)。<br />
+- <strong>临界问题</strong>：如抛体过网或击打范围，往往联系轨迹方程通过不等式求初速度范围。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忘记抛体运动的理想条件，错误地把受明显空气阻力或其他外力的运动当作抛体运动处理。  </li>
+<li>混淆位移偏转角与速度偏转角，在斜面问题中误用关系导致方程列错。  </li>
+<li>竖直方向列运动学公式时漏掉或搞错 <em>g</em> 的符号，特别是在选竖直向上为正方向时需将加速度记为 <em>–g</em>。  </li>
+<li>斜抛运动中最高点竖直分速度为零，但水平分速度仍为 <em>v</em>₀ cos<em>θ</em>，误认为最高点速度为零。  </li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抛体运动</td>
+<td>projectile motion</td>
+<td>只受重力作用的曲线运动模型</td>
+</tr>
+<tr>
+<td>平抛运动</td>
+<td>horizontal projectile motion</td>
+<td>初速度沿水平方向的抛体运动</td>
+</tr>
+<tr>
+<td>斜抛运动</td>
+<td>oblique projectile (motion)</td>
+<td>初速度与水平方向成非零角的抛体运动</td>
+</tr>
+<tr>
+<td>射程</td>
+<td>range</td>
+<td>抛出点到落地点间的水平距离</td>
+</tr>
+<tr>
+<td>最大高度</td>
+<td>maximum height</td>
+<td>抛体轨迹中距抛出点竖直方向的最大值</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订）必修课程“运动与力”模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/261-平抛运动.html">平抛运动</a></li>
+<li><a href="../atoms/288-运动的合成与分解.html">运动的合成与分解</a></li>
+<li><a href="../atoms/215-匀变速直线运动.html">匀变速直线运动</a></li>
+<li><a class="dead" title="未收录">斜抛运动</a></li>
+<li><a href="../atoms/271-曲线运动.html">曲线运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2021-全国乙-09.html">2021-全国乙-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

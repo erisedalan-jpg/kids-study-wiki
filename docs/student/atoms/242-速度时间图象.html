@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>速度时间图象</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>速度时间图象</h1><div class="review-mark" data-stem="242-速度时间图象"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 运动的描述]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 速度时间图象, v-t图, v-t graph, velocity-time graph, 速度-时间图象</p><h2>🎓 速度时间图象（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>速度时间图象</strong>（velocity-time graph，简称 $v$-$t$ 图）以时间 $t$ 为横轴、速度 $v$ 为纵轴，描绘物体速度随时间变化的图线。</p>
+<h3>读图三要素</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>物理含义</th>
+<th>如何读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图线上某点的<strong>纵坐标</strong></td>
+<td>该时刻的瞬时速度</td>
+<td>直接读 $v$ 值</td>
+</tr>
+<tr>
+<td>图线的<strong>斜率</strong></td>
+<td>加速度（$k = \Delta v / \Delta t = a$）</td>
+<td>斜率越大，加速度越大</td>
+</tr>
+<tr>
+<td>图线与<strong>时间轴围成的面积</strong></td>
+<td>该段时间内的位移</td>
+<td>面积大小=位移大小，面积正负=位移方向</td>
+</tr>
+</tbody>
+</table>
+<h3>典型图象形状</h3>
+<p><strong>匀速运动</strong>：$v = \text{常数}$，图象为<strong>平行于 $t$ 轴的水平线</strong>，斜率 = 0，$a = 0$。</p>
+<p><strong>匀加速运动</strong>：$v = v_0 + at$，图象为<strong>向右上方倾斜的直线</strong>，斜率 $= a &gt; 0$。</p>
+<p><strong>匀减速运动</strong>：$v = v_0 - at$，图象为<strong>向右下方倾斜的直线</strong>，斜率 $= -a &lt; 0$（与 $t$ 轴相交后停止）。</p>
+<p><strong>非匀变速运动</strong>：图象为曲线，各点斜率不同（即加速度随时间变化）。</p>
+<h3>面积求位移</h3>
+<p>$$\Delta x = \int_{t_1}^{t_2} v \, dt \approx \text{图象与 } t \text{ 轴围成的面积}$$</p>
+<ul>
+<li>图线<strong>在 $t$ 轴上方</strong>（$v &gt; 0$）：面积为<strong>正位移</strong>。</li>
+<li>图线<strong>在 $t$ 轴下方</strong>（$v &lt; 0$）：面积为<strong>负位移</strong>（反向）。</li>
+<li>总位移 = 各段面积<strong>代数和</strong>（正负相加）。</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一物体 $v$-$t$ 图象为过 $(0, 4)$ 和 $(6, 10)$ 的直线，求加速度和6s内的位移。</p>
+<p>$$a = \frac{10 - 4}{6 - 0} = 1\text{ m/s}^2$$</p>
+<p>位移（梯形面积）：</p>
+<p>$$\Delta x = \frac{(v_0 + v_t)}{2} \cdot t = \frac{(4+10)}{2} \times 6 = 42\text{ m}$$</p>
+<p><strong>例2</strong>：一物体 $v$-$t$ 图象：先从 $v=6\text{ m/s}$ 匀减速（斜率 $-2\text{ m/s}^2$）到 $v=0$，再以同加速度反向加速。</p>
+<ul>
+<li>减速至零时间：$t_1 = \frac{6}{2} = 3\text{ s}$</li>
+<li>前3s位移（三角形面积）：$\Delta x_1 = \frac{1}{2} \times 3 \times 6 = 9\text{ m（正向）}$</li>
+<li>3s到5s（$\Delta t = 2\text{ s}$）：$v = -2\times2 = -4\text{ m/s}$，面积 $= \frac{1}{2}\times2\times4 = 4\text{ m（负）}$</li>
+<li>总位移 $= 9 - 4 = 5\text{ m（正向）}$</li>
+</ul>
+<p><strong>例3</strong>：比较甲乙两物体 $v$-$t$ 图象斜率，甲斜率更大，说明什么？</p>
+<p>甲的加速度更大（单位时间内速度变化更多），与速度大小无关。</p>
+<h3>$v$-$t$ 图 vs $x$-$t$ 图</h3>
+<table>
+<thead>
+<tr>
+<th>图象</th>
+<th>斜率含义</th>
+<th>面积含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x$-$t$ 图</td>
+<td>速度 $v$</td>
+<td>无直接意义</td>
+</tr>
+<tr>
+<td>$v$-$t$ 图</td>
+<td>加速度 $a$</td>
+<td>位移 $\Delta x$</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>斜率≠速度，斜率=加速度</strong>：$v$-$t$ 图的斜率是加速度，纵坐标值才是速度。</li>
+<li><strong>面积可正可负</strong>：$t$ 轴下方面积对应负位移，别忘记符号。</li>
+<li><strong>折线表示加速度突变</strong>：$v$-$t$ 图的折点表示加速度在该时刻发生突变。</li>
+<li><strong>图线不能超过 $t$ 轴（物体停止后）</strong>：实际运动中，物理约束可能使速度不继续为负。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中有简单的 $v$-$t$ 图概念，高中深化：利用斜率求加速度、利用面积求位移，将图象分析发展为<strong>定量计算工具</strong>。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第一章第4节，页码待家长核对）</li>
+<li><strong>百科</strong>：速度 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/214-加速度.html">加速度</a></li>
+<li><a href="../atoms/463-瞬时变化率.html">瞬时速度</a></li>
+<li><a href="../atoms/215-匀变速直线运动.html">匀变速直线运动</a></li>
+<li><a class="dead" title="未收录">运动学图象分析</a></li>
+<li><a href="../atoms/206-位移公式-匀变速.html">位移公式-匀变速</a></li>
+<li><a class="dead" title="未收录">速度公式-匀变速</a></li>
+<li><a class="dead" title="未收录">运动学三大公式</a></li>
+</ul>
+</div>
+</body>
+</html>

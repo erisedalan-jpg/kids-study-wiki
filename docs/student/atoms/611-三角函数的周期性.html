@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数的周期性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>三角函数的周期性</h1><div class="review-mark" data-stem="611-三角函数的周期性"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 三角函数的周期性</p><h1>三角函数的周期性</h1>
+<blockquote>
+<p><strong>一句话</strong>：三角函数值随自变量呈周期性重复的性质，即存在非零常数 $T$ 使得 $f(x+T)=f(x)$ 恒成立，其中最小的正 $T$ 称为最小正周期。
+<strong>English</strong>: The property that trigonometric functions repeat their values at regular intervals; there exists a non-zero constant $T$ such that $f(x+T)=f(x)$ holds for all $x$, and the smallest positive $T$ is the fundamental period.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：对于正弦函数 $f(x)=\sin x$ 与余弦函数 $\cos x$，最小正周期为 $2\pi$；正切函数 $\tan x$ 与余切函数 $\cot x$ 的最小正周期为 $\pi$。一般地，正弦型函数 $y=A\sin(\omega x+\varphi)+k$（$A \neq 0, \omega \neq 0$）的周期为 $T = \dfrac{2\pi}{|\omega|}$；正切型函数 $y=A\tan(\omega x+\varphi)+k$ 的周期为 $T = \dfrac{\pi}{|\omega|}$。通过定义 $f(x+T)=f(x)$ 可严格验证周期。</li>
+<li><strong>关键方法</strong>：求周期先化为标准形式，提取 $\omega$ 并用公式计算；若含绝对值，如 $y=|\sin x|$、$y=\sin^2 x$，周期通常变为原来的一半，需结合图像或定义判断。对于由几个三角函数通过加减乘除组合而成的函数，一般分别求各部分的周期，再求这些周期的最小公倍数（需验证定义）。</li>
+<li><strong>典型应用</strong>：高考常直接考查求最小正周期，如“$f(x)=\sin(2x-\pi/3)$ 的最小正周期是____”。还会结合周期性进行求值，例如已知周期为 $2$ 的奇函数 $f(x)$ 在 $[0,1)$ 上的解析式，求 $f(2023.5)$，需先利用周期化简自变量，再结合对称性求值。周期性也频繁与单调区间、对称轴、图像变换等综合出题。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆不同三角函数的原始周期</strong>：$\sin x,\cos x$ 周期为 $2\pi$，$\tan x$ 周期为 $\pi$；但含绝对值或平方后周期折半，如 $|\sin x|$、$\sin^2 x$ 的周期是 $\pi$，学生常忽略变化。</li>
+<li><strong>周期公式漏掉绝对值</strong>：$T = \frac{2\pi}{|\omega|}$ 中，若 $\omega&lt;0$ 直接代入正数会算错周期或导致符号混乱。</li>
+<li><strong>求和函数的周期误判</strong>：两个周期函数相加，周期不一定是各自周期的公倍数。例如 $\sin x + \sin \pi x$ 没有周期，必须用定义 $f(x+T)=f(x)$ 验证。</li>
+<li><strong>利用周期性求值时未注意自变量的落点</strong>：如已知 $x\in[0,1)$ 的解析式，求 $f(5.3)$ 需通过周期准确化到该区间，但错误地加、减周期会导致余数段判断错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>函数值重复的最小正间隔</td>
+</tr>
+<tr>
+<td>最小正周期</td>
+<td>minimal positive period</td>
+<td>所有正周期中最小的一个</td>
+</tr>
+<tr>
+<td>周期性</td>
+<td>periodicity</td>
+<td>函数值按固定间隔重复的性质</td>
+</tr>
+<tr>
+<td>正弦函数</td>
+<td>sine function</td>
+<td>$\sin x$</td>
+</tr>
+<tr>
+<td>正切函数</td>
+<td>tangent function</td>
+<td>$\tan x$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/612-三角函数的图像与性质.html">三角函数的图像与性质</a></li>
+<li><a class="dead" title="未收录">三角函数的单调性</a></li>
+<li><a class="dead" title="未收录">三角函数的奇偶性与对称性</a></li>
+<li><a class="dead" title="未收录">由三角函数图像求解析式</a></li>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-理-15.html">2012-理-15</a></li>
+<li><a href="../exam/数学/2013-文-15.html">2013-文-15</a></li>
+<li><a href="../exam/数学/2014-文-16.html">2014-文-16</a></li>
+<li><a href="../exam/数学/2014-理-14.html">2014-理-14</a></li>
+<li><a href="../exam/数学/2015-理-15.html">2015-理-15</a></li>
+<li><a href="../exam/数学/2016-文-16.html">2016-文-16</a></li>
+<li><a href="../exam/数学/2017-文-03.html">2017-文-03</a></li>
+<li><a href="../exam/数学/2017-文-16.html">2017-文-16</a></li>
+<li><a href="../exam/数学/2018-文-08.html">2018-文-08</a></li>
+<li><a href="../exam/数学/2018-文-16.html">2018-文-16</a></li>
+<li><a href="../exam/数学/2019-理-09.html">2019-理-09</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-06</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

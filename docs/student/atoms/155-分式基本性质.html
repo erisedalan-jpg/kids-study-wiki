@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分式基本性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分式基本性质</h1><div class="review-mark" data-stem="155-分式基本性质"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八上, 分式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分式基本性质, fundamental property of algebraic fractions, 分式性质, 约分</p><h1>分式基本性质</h1>
+<blockquote>
+<p><strong>课本定义</strong>：分式的分子和分母同乘以（或同除以）同一个不等于零的整式，分式的值不变。即 $\dfrac{A}{B} = \dfrac{A \cdot C}{B \cdot C}$（$C \neq 0$）；$\dfrac{A}{B} = \dfrac{A \div C}{B \div C}$（$C \neq 0$）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>类比分数性质</h3>
+<p>分数基本性质：$\dfrac{a}{b} = \dfrac{a \times k}{b \times k}$（$k \neq 0$）</p>
+<p>分式基本性质完全类似：</p>
+<p>$$\frac{A}{B} = \frac{A \cdot C}{B \cdot C} \quad (C \neq 0)$$</p>
+<p><strong>同乘不为零的整式，分式值不变。</strong></p>
+<h3>化简分式（约分）</h3>
+<p>利用逆向（同除以公因式）可以<strong>约分</strong>，化简分式到最简形式。</p>
+<p><strong>步骤</strong>：
+1. 分子、分母分别因式分解
+2. 约去分子分母的公因式
+3. 检验结果是否最简</p>
+<p><strong>例 1</strong>：化简 $\dfrac{6x^2}{9x}$</p>
+<p>$= \dfrac{6x^2}{9x} = \dfrac{6x \cdot x}{9 \cdot x} = \dfrac{6x}{9} = \dfrac{2x}{3}$</p>
+<p><strong>例 2</strong>：化简 $\dfrac{x^2 - 4}{x + 2}$</p>
+<p>分子因式分解：$x^2 - 4 = (x+2)(x-2)$</p>
+<p>$\dfrac{(x+2)(x-2)}{x+2} = x - 2$（$x \neq -2$）</p>
+<h3>变号规则</h3>
+<p>$$-\frac{A}{B} = \frac{-A}{B} = \frac{A}{-B}$$</p>
+<p>分子或分母变号，分式整体变号；分子分母<strong>同时</strong>变号，分式不变。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格表述</h3>
+<p><strong>基本性质</strong>：$\dfrac{A}{B} = \dfrac{A \cdot C}{B \cdot C}$，其中 $A, B, C$ 均为整式，$B \neq 0$，$C \neq 0$。</p>
+<p>本质：分式是代数式在"有理数域"的推广，分式等号类似有理数相等的定义（交叉相乘）：</p>
+<p>$\dfrac{A}{B} = \dfrac{C}{D}$ 当且仅当 $AD = BC$（$B, D \neq 0$）。</p>
+<h3>约分的完整步骤</h3>
+<ol>
+<li>分子分母各自因式分解（提公因式 + 公式法）</li>
+<li>约去公因式</li>
+<li><strong>注意</strong>：约分后要标注变量的限制条件（$x \neq \ldots$）</li>
+</ol>
+<h3>最简分式</h3>
+<p><strong>最简分式</strong>：分子分母没有公因式（互质）的分式。</p>
+<p>判断方法：分子分母的最大公因式为 $1$（或常数）。</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：化简 $\dfrac{x^2 - 2x - 3}{x^2 - 9}$。</p>
+<p>解：分子 $= (x-3)(x+1)$；分母 $= (x+3)(x-3)$</p>
+<p>$\dfrac{(x-3)(x+1)}{(x+3)(x-3)} = \dfrac{x+1}{x+3}$（$x \neq 3$，$x \neq -3$）</p>
+<p><strong>例题 2</strong>：化简 $\dfrac{a^2 - 2ab + b^2}{a^2 - b^2}$。</p>
+<p>解：分子 $= (a-b)^2$；分母 $= (a+b)(a-b)$</p>
+<p>$= \dfrac{(a-b)^2}{(a+b)(a-b)} = \dfrac{a-b}{a+b}$（$a \neq b$，$a \neq -b$）</p>
+<p><strong>例题 3</strong>：化简 $\dfrac{4-x^2}{x^2-4x+4}$。</p>
+<p>分子 $= -(x^2-4) = -(x+2)(x-2)$；分母 $= (x-2)^2$</p>
+<p>$= \dfrac{-(x+2)(x-2)}{(x-2)^2} = \dfrac{-(x+2)}{x-2} = -\dfrac{x+2}{x-2}$（$x \neq 2$）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>约分时分子分母必须是乘积形式</strong>，不能直接从多项式中"消去"某些项：$\dfrac{x+1}{x+2} \neq \dfrac{1}{2}$！</li>
+<li>约分后要补充分母不为零的条件。</li>
+<li><strong>变号处理</strong>：$\dfrac{a-b}{b-a} = \dfrac{-(b-a)}{b-a} = -1$（$a \neq b$）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/156-分式定义.html">分式定义</a>：分式的基本概念</li>
+<li>→ <a href="../atoms/158-分式运算.html">分式运算</a>：通分和约分是运算的基础</li>
+<li>→ <a href="../atoms/167-提公因式法.html">提公因式法</a>、<a class="dead" title="未收录">公式法因式分解</a>：约分时需要因式分解</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分式基本性质</td>
+<td>fundamental property of fractions</td>
+</tr>
+<tr>
+<td>约分</td>
+<td>simplifying / reducing fractions</td>
+</tr>
+<tr>
+<td>通分</td>
+<td>finding common denominator</td>
+</tr>
+<tr>
+<td>最简分式</td>
+<td>fraction in lowest terms</td>
+</tr>
+<tr>
+<td>公因式</td>
+<td>common factor</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十五章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《代数运算》分式化简技巧</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/167-提公因式法.html">提公因式法</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">分数加减法</a></p>
+</li>
+<li>
+<p><a href="../atoms/156-分式定义.html">分式定义</a></p>
+</li>
+<li><a href="../atoms/158-分式运算.html">分式运算</a></li>
+<li><a href="../atoms/157-分式方程.html">分式方程</a></li>
+<li><a href="../atoms/167-提公因式法.html">提公因式法</a></li>
+<li><a class="dead" title="未收录">公式法因式分解</a></li>
+<li><a class="dead" title="未收录">从分数到分式</a></li>
+</ul>
+</div>
+</body>
+</html>

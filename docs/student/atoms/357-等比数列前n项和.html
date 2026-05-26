@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等比数列前n项和</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等比数列前n项和</h1><div class="review-mark" data-stem="357-等比数列前n项和"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 数列, 第十一章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等比数列前n项和, sum of geometric sequence, 等比数列求和, 前n项和, 等比数列的前n项和</p><h2>🎓 等比数列前 $n$ 项和</h2>
+<h3>公式推导</h3>
+<p>设等比数列首项 $a_1$，公比 $q$，前 $n$ 项和 $S_n$：</p>
+<p><strong>当 $q \neq 1$ 时</strong>（错位相减法）：</p>
+<p>$$S_n = a_1 + a_1 q + a_1 q^2 + \cdots + a_1 q^{n-1}$$</p>
+<p>$$qS_n = a_1 q + a_1 q^2 + \cdots + a_1 q^{n-1} + a_1 q^n$$</p>
+<p>两式相减：$(1-q)S_n = a_1(1 - q^n)$</p>
+<p>$$\boxed{S_n = \frac{a_1(1-q^n)}{1-q} = \frac{a_1(q^n-1)}{q-1}} \quad (q \neq 1)$$</p>
+<p><strong>当 $q = 1$ 时</strong>（等差，公差为 0）：</p>
+<p>$$S_n = na_1$$</p>
+<h3>公式的等价形式</h3>
+<p>$$S_n = \frac{a_1 - a_n q}{1-q} = \frac{a_n q - a_1}{q-1} \quad (q \neq 1)$$</p>
+<p>（利用 $a_n = a_1 q^{n-1}$，即 $a_1 q^n = a_n q$）</p>
+<h3>重要性质</h3>
+<p><strong>性质（等比分段）</strong>：$S_n, S_{2n} - S_n, S_{3n} - S_{2n}$ 成等比数列（$q \neq 1$ 时）</p>
+<p>$$\frac{S_{2n} - S_n}{S_n} = \frac{S_{3n} - S_{2n}}{S_{2n} - S_n} = q^n$$</p>
+<h3>无穷等比级数（$|q| &lt; 1$）</h3>
+<p>当 $|q| &lt; 1$ 时，$q^n \to 0$（$n \to \infty$），无穷项之和：</p>
+<p>$$S = \frac{a_1}{1-q} \quad (|q| &lt; 1)$$</p>
+<p><strong>应用</strong>：循环小数化分数——$0.\overline{3} = 0.3 + 0.03 + \cdots = \dfrac{0.3}{1-0.1} = \dfrac{1}{3}$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$a_1 = 1$，$q = 2$，求 $S_{10}$。</p>
+<p><strong>解</strong>：$S_{10} = \dfrac{1 \times (2^{10}-1)}{2-1} = 2^{10} - 1 = 1023$</p>
+<p><strong>例2</strong>：$a_1 = 8$，$q = \dfrac{1}{2}$，求 $S_n$ 趋近的极限。</p>
+<p><strong>解</strong>：$|q| = \dfrac{1}{2} &lt; 1$，$S = \dfrac{8}{1-\frac{1}{2}} = 16$</p>
+<p><strong>例3</strong>：等比数列 $a_1 = 3$，$S_3 = 21$，求公比 $q$。</p>
+<p><strong>解</strong>：$S_3 = 3(1 + q + q^2) = 21$，$1 + q + q^2 = 7$，$q^2 + q - 6 = 0$，$(q+3)(q-2) = 0$，$q = 2$ 或 $q = -3$</p>
+<p><strong>例4</strong>：已知 $S_n = 3^n - 1$，求 $a_n$。</p>
+<p><strong>解</strong>：$n \geq 2$：$a_n = S_n - S_{n-1} = (3^n-1) - (3^{n-1}-1) = 3^n - 3^{n-1} = 2 \times 3^{n-1}$</p>
+<p>$n = 1$：$a_1 = S_1 = 2 = 2 \times 3^0$ ✓，故 $a_n = 2 \times 3^{n-1}$（等比，$q = 3$）</p>
+<h3>易错点</h3>
+<ul>
+<li>$q = 1$ 时必须单独讨论（$q \neq 1$ 的公式在 $q=1$ 时分母为 0）</li>
+<li>$S_n - S_{n-1} = a_n$ 仅对 $n \geq 2$ 成立，$n=1$ 时要单独验证</li>
+<li>错位相减后要检验 $q \neq 1$ 的前提</li>
+</ul>
+<hr />
+<h2>🔁 合并补充：原《等比数列的前n项和》</h2>
+<h2>🎓 考点精讲</h2>
+<h3>定义与公式推导</h3>
+<p>对于一个等比数列 ${a_n}$，已知首项 $a_1$，公比 $q$，其前 $n$ 项和记为 $S_n = a_1 + a_2 + \dots + a_n$。</p>
+<p><strong>情形一：公比 $q = 1$</strong>
+此时数列为常数列 $a_1, a_1, a_1, \dots$，每一项都等于首项，因此 $S_n = n a_1$。</p>
+<p><strong>情形二：公比 $q \neq 1$</strong>
+采用 <strong>错位相减法</strong> 推导：
+$$
+\begin{aligned}
+S_n &amp;= a_1 + a_1 q + a_1 q^2 + \dots + a_1 q^{n-1} \quad \text{(1)} \
+q S_n &amp;= a_1 q + a_1 q^2 + a_1 q^3 + \dots + a_1 q^n \quad \text{(2)}
+\end{aligned}
+$$
+用 (1) 式减去 (2) 式：
+$$
+(1 - q) S_n = a_1 - a_1 q^n
+$$
+当 $q \neq 1$ 时，两边同时除以 $(1-q)$，得到核心公式：
+$$
+S_n = \frac{a_1(1 - q^n)}{1 - q}
+$$
+该公式也可等价变形为 $S_n = \frac{a_1 - a_n q}{1 - q}$（代入通项 $a_n = a_1 q^{n-1}$ 即得），在已知末项 $a_n$ 时使用更便捷。</p>
+<h3>关键方法</h3>
+<p>解决等比数列求和问题的标准步骤：
+1. <strong>确定首项 $a_1$ 与公比 $q$</strong>：从已知条件（递推关系、特定项的值）中解出。
+2. <strong>判断公比是否为 1</strong>：若 $q=1$，直接使用 $S_n = n a_1$；若 $q \neq 1$，代入公式 $S_n = \frac{a_1(1 - q^n)}{1 - q}$。
+3. <strong>执行计算</strong>：注意指数运算与符号处理，尤其是 $q$ 为负数或分数时。</p>
+<p><strong>判定等比数列求和的成立条件</strong>：必须验证公比 $q \neq 1$ 且数列各项均满足等比定义（即 $\frac{a_{k+1}}{a_k} = q$ 为常数），避免在非等比数列中误用公式。</p>
+<h3>典型应用</h3>
+<p><strong>高考常见设问与场景</strong>：
+- <strong>直接求值</strong>：给定等比数列的首项、公比与项数，求 $S_n$。如“已知 $a_1=3$，$q=2$，求前6项和”。
+- <strong>已知和反求参数</strong>：给出 $S_n$、$a_1$、$n$ 或 $q$ 中的部分量，解方程求未知数。例如“等比数列前3项和为 $26$，公比为 $3$，求首项”。
+- <strong>与错位相减法结合的综合题</strong>：形如 ${n \cdot 2^n}$ 的数列求和，需先用错位相减法化为等比部分再套用本公式，是高考解答题的常客。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略 $q=1$ 的分类讨论</strong>：使用公式 $S_n = \frac{a_1(1-q^n)}{1-q}$ 时，分母含 $1-q$，必须先确认 $q \neq 1$。若题目未明确公比范围而直接套用，将导致漏解或错误。</li>
+<li><strong>项数 $n$ 混淆</strong>：在复杂递推或实际情境（如年增长率问题）中，容易算错总项数。注意从首项起第 1 项指数为 $q^0$，第 $n$ 项指数为 $q^{n-1}$，求和时指数最高到 $q^{n-1}$，公式分子是 $q^n$。</li>
+<li><strong>符号计算失误</strong>：当公比 $q$ 为负数时，$(1-q)$ 和 $(1-q^n)$ 的符号尤其需要小心代值，避免正负颠倒。</li>
+<li><strong>误用于非等比数列</strong>：必须验证后项与前项的比值为常数方可使用本公式。对混合数列求和（如等差加减等比），只能对等比部分单独求和，不能整体直接代公式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence</td>
+<td>每一项与前一项的比值恒为常数 $q$ 的数列</td>
+</tr>
+<tr>
+<td>公比</td>
+<td>common ratio</td>
+<td>等比数列中相邻两项的固定比值，记为 $q$</td>
+</tr>
+<tr>
+<td>前 $n$ 项和</td>
+<td>sum of the first $n$ terms</td>
+<td>数列从第 1 项加到第 $n$ 项的结果，记为 $S_n$</td>
+</tr>
+<tr>
+<td>错位相减法</td>
+<td>method of misaligned subtraction</td>
+<td>推导等比数列求和公式的经典方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订）</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（拓展章节，待家长核对是否在本册）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1064-等比中项.html">等比中项</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/1383-数列递推关系.html">数列递推关系</a></p>
+</li>
+<li>
+<p><a href="../atoms/358-等比数列概念.html">等比数列概念</a></p>
+</li>
+<li><a href="../atoms/355-等差数列前n项和.html">等差数列前n项和</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a href="../atoms/300-对数概念.html">对数概念</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2013-理-06.html">2013-理-06</a></li>
+<li><a href="../exam/数学/2014-文-04.html">2014-文-04</a></li>
+<li><a href="../exam/数学/2018-文-15.html">2018-文-15</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-21</a></li>
+</ul></div>
+</div>
+</body>
+</html>

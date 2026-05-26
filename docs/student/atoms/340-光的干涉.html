@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光的干涉</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>光的干涉</h1><div class="review-mark" data-stem="340-光的干涉"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 光的干涉, light interference</p><h2>🎓 光的干涉</h2>
+<h3>定义</h3>
+<p><strong>光的干涉</strong>（light interference）是两列或多列相干光波叠加，在空间形成稳定的明暗相间条纹（干涉条纹）的现象。</p>
+<p>光的干涉证明了<strong>光的波动性</strong>。</p>
+<h3>相干条件</h3>
+<p>产生稳定干涉的条件（相干光）：
+1. <strong>频率相同</strong>（同色光）
+2. <strong>相位差恒定</strong>（相干光源）
+3. <strong>振动方向相同</strong>（同一偏振方向）</p>
+<p>普通光源（如两盏灯）不相干，不能产生稳定干涉。常用方法：
+- <strong>分波前法</strong>：杨氏双缝（将同一光源的光分成两束）
+- <strong>分振幅法</strong>：薄膜干涉（利用膜的前后表面反射的两束光）</p>
+<h3>加强与减弱条件</h3>
+<p>两相干光在某点的路程差 $\Delta r = r_2 - r_1$：</p>
+<p>$$\Delta r = n\lambda \quad (n = 0, \pm1, \pm2, \ldots) \implies \text{光强加强（亮条纹）}$$
+$$\Delta r = (n + \frac{1}{2})\lambda \quad \implies \text{光强减弱（暗条纹）}$$</p>
+<h3>杨氏双缝干涉</h3>
+<p><strong>条纹间距公式</strong>：</p>
+<p>$$\Delta y = \frac{L\lambda}{d}$$</p>
+<ul>
+<li>$\Delta y$：相邻亮条纹（或暗条纹）间距（m）</li>
+<li>$L$：双缝到屏的距离（m）</li>
+<li>$\lambda$：光的波长（m）</li>
+<li>$d$：双缝间距（m）</li>
+</ul>
+<p><strong>应用</strong>：精密测量光的波长（已知 $L$、$d$、$\Delta y$，反求 $\lambda$）。</p>
+<h3>薄膜干涉</h3>
+<p>光照射肥皂泡、水膜、油膜时，前后表面反射的两束光发生干涉：</p>
+<ul>
+<li>膜厚度不同 → 路程差不同 → 不同位置加强/减弱的颜色不同 → 彩色条纹</li>
+<li>竖立的肥皂膜：顶部薄，底部厚，形成水平彩色条纹</li>
+<li>增透膜/增反膜：利用薄膜干涉精密控制反射/透射</li>
+</ul>
+<p><strong>注意</strong>：薄膜干涉有半波损失（从光疏到光密界面反射有 $\pi$ 相位突变），计算时需考虑。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：双缝间距 $d = 0.2\text{ mm}$，双缝到屏距离 $L = 1\text{ m}$，测得相邻亮条纹间距 $\Delta y = 2.5\text{ mm}$，求光的波长。</p>
+<p>$$\lambda = \frac{d\cdot\Delta y}{L} = \frac{0.2\times10^{-3}\times2.5\times10^{-3}}{1} = 5\times10^{-7}\text{ m} = 500\text{ nm}$$</p>
+<p>绿光，波长约 500 nm。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>干涉需要相干光</strong>：随机相位的两束光不能产生稳定干涉条纹。</li>
+<li><strong>亮纹处光强最大，不是两倍</strong>：干涉叠加时亮处强度 = 4 倍单缝光强，暗处为零（能量守恒，只是重新分配）。</li>
+<li><strong>条纹间距与波长成正比</strong>：波长越长，条纹越宽；白光形成彩色条纹（各颜色间距不同）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：光的干涉 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/343-全反射.html">全反射</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/342-光的衍射-高中.html">光的衍射-高中</a></p>
+</li>
+<li>
+<p><a href="../atoms/352-双缝干涉实验.html">双缝干涉实验</a></p>
+</li>
+<li><a href="../atoms/342-光的衍射-高中.html">光的衍射-高中</a></li>
+<li><a href="../atoms/338-光的偏振.html">光的偏振</a></li>
+<li><a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+<li><a class="dead" title="未收录">相位</a></li>
+<li><a class="dead" title="未收录">光的折射-高中</a></li>
+<li><a href="../atoms/360-折射率.html">折射率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-01</a></li>
+<li><a class="dead" title="未收录">2018-北京-03</a></li>
+<li><a class="dead" title="未收录">2019-北京-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-01</a></li>
+<li><a class="dead" title="未收录">2023-北京-02</a></li>
+<li><a class="dead" title="未收录">2024-湖南-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

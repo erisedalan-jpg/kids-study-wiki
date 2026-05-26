@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>转动切割</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>转动切割</h1><div class="review-mark" data-stem="729-转动切割"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 转动切割, 旋转切割</p><h1>转动切割</h1>
+<blockquote>
+<p><strong>一句话</strong>：导体在匀强磁场中绕某点转动、其有效部分切割磁感线产生感应电动势的现象，核心公式为 <code>E = ½ B L² ω</code>（导体棒绕端点转动）或等效的磁通量变化率表达。
+<strong>English</strong>: A conductor rotating in a uniform magnetic field cuts magnetic flux lines, generating an induced emf; the key formula is E = ½ B L² ω for a rod rotating about one end.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义与原理</strong>：转动切割是<strong>电磁感应</strong>的一种特殊形式。当一段直导体（长度 <code>L</code>）在磁感应强度为 <code>B</code> 的匀强磁场中，绕其一端以角速度 <code>ω</code> 匀速转动，且转动平面与磁场垂直时，导体各点线速度 <code>v = ω r</code> 不同，<strong>平均切割速度</strong>取中点线速度 <code>v̅ = ω·(L/2)</code>。因此感应电动势<br />
+<code>E = B L v̅ = B L · (ω L/2) = ½ B L² ω</code>。<br />
+  若从磁通量变化角度推导，导体在 <code>Δt</code> 时间内扫过的面积 <code>ΔS = ½ L² Δθ</code>，磁通量变化 <code>ΔΦ = B ΔS</code>，由法拉第电磁感应定律 <code>E = ΔΦ/Δt = ½ B L² ω</code>，二者等价。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：解决转动切割问题的标准步骤：</p>
+</li>
+<li>确认磁场方向、转动平面、有效切割长度（是否为直导体在磁场中的投影长度）。</li>
+<li>判断是<strong>绕端点转动</strong>还是<strong>绕其他点转动</strong>：若绕中点转动，等效为两段反向串联，总电动势为零；若绕任意点，可采用微元法或等效切割长度计算。</li>
+<li>对<strong>线圈在磁场中转动</strong>（如交流发电机模型），直接应用 <code>E = N B S ω sin(ωt)</code>，其中 <code>S</code> 为线圈面积，<code>N</code> 为匝数。</li>
+<li>
+<p>计算通过电阻的电荷量时，优先使用平均电动势 <code>E̅ = N ΔΦ/Δt</code>，再利用 <code>q = I̅ Δt = N ΔΦ / R</code>。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见设问：</p>
+</li>
+<li><strong>单棒转动</strong>：如“金属棒 OA 绕 O 点在匀强磁场中匀速转动，求 OA 两端电势差”。直接代入 <code>U = ½ B L² ω</code>，注意分析哪端电势高（右手定则）。</li>
+<li><strong>圆盘发电机</strong>：法拉第圆盘可视为无数辐条并联，中心与边缘之间的电动势仍为 <code>½ B R² ω</code>，注意等效电路为内阻极小的电源。</li>
+<li><strong>交流电最大值</strong>：矩形线圈在匀强磁场中匀速转动，最大感应电动势 <code>E_m = N B S ω</code>，瞬时值 <code>e = E_m sin(ωt)</code>（从中性面开始计时），常结合有效值、变压器等综合考查。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>错用平动切割公式</strong>：将转动切割直接套用 <code>E = B L v</code> 并取端点线速度 <code>v = ω L</code>，得出 <code>E = B L² ω</code>，忽略了平均速度应为中点线速度。</li>
+<li><strong>混淆转动轴位置</strong>：导体绕端点转动才是 <code>½ B L² ω</code>；若绕棒上某点转动，必须分段处理或等效为两段转动电动势之差。部分学生误以为任何转动都可用同一公式。</li>
+<li><strong>感应电动势方向判断失误</strong>：转动切割仍满足楞次定律与右手定则（或手掌平伸，让磁感线穿手心，拇指指向导体运动方向——但转动中各点速度方向不同，应取等效切割方向，即棒整体扫过的速度方向）。建议用法拉第电磁感应定律结合楞次定律辅助判断。</li>
+<li><strong>圆盘切割误解为单棒</strong>：法拉第圆盘转动时，沿半径方向的电动势恒定，但若连接外部电路，需将圆盘视为无数辐射状导体并联，总电动势仍为 <code>½ B R² ω</code>，而内阻很小。学生常误以为圆盘上不同半径处电动势叠加或不知道如何等效电路。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>转动切割</td>
+<td>rotational cutting (of magnetic flux)</td>
+<td>导体转动切割磁感线产生感应电动势</td>
+</tr>
+<tr>
+<td>感应电动势</td>
+<td>induced electromotive force (emf)</td>
+<td>由电磁感应产生的电动势</td>
+</tr>
+<tr>
+<td>角速度</td>
+<td>angular velocity</td>
+<td>描述转动快慢的物理量，符号 ω</td>
+</tr>
+<tr>
+<td>法拉第电磁感应定律</td>
+<td>Faraday's law of electromagnetic induction</td>
+<td><code>E = N ΔΦ/Δt</code></td>
+</tr>
+<tr>
+<td>楞次定律</td>
+<td>Lenz's law</td>
+<td>判定感应电流方向的定律</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理 必修三 / 选择性必修二 电磁感应与交变电流</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/395-法拉第电磁感应定律.html">法拉第电磁感应定律</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">导体平动切割磁感线</a></li>
+<li><a class="dead" title="未收录">交变电流的产生与描述</a></li>
+<li><a class="dead" title="未收录">右手定则与左手定则的区分</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2014-新课标Ⅱ-12.html">2014-新课标Ⅱ-12</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

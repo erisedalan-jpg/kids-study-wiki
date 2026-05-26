@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能级跃迁</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>能级跃迁</h1><div class="review-mark" data-stem="719-能级跃迁"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[近代物理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 能级跃迁, Energy level transition</p><h1>能级跃迁</h1>
+<blockquote>
+<p><strong>一句话</strong>：原子从一个能级（定态）跃迁到另一个能级时，会吸收或辐射一个光子，光子能量恰好等于两能级能量差，即 $h\nu = |E_n - E_m|$。
+<strong>English</strong>: A process in which an atom transitions from one energy level to another, accompanied by the emission or absorption of a photon whose energy exactly matches the energy difference between the levels.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+根据玻尔原子模型，原子只能处于一系列不连续的能量状态（定态），能量最低的叫基态，其余叫激发态。原子从高能级 $E_n$ 跃迁到低能级 $E_m$ 时会辐射光子，从低能级跃迁到高能级时则吸收光子。光子的频率 $\nu$ 由能级差决定：
+$$
+h\nu = |E_n - E_m|
+$$
+式中 $h$ 为普朗克常量。氢原子能级公式为 $E_n = -\frac{13.6}{n^2}\ \text{eV}$（$n=1,2,3\ldots$）。</p>
+<p><strong>关键方法</strong><br />
+（1）利用能级图定性判断跃迁方向：能级降低→辐射，能级升高→吸收。<br />
+（2）定量计算光子能量、频率、波长：$E_{\text{光子}} = \Delta E$，$\lambda = \frac{hc}{\Delta E}$，若涉及可见光范围，需比较波长。<br />
+（3）电离问题：原子吸收能量 $E \ge |E_n|$（对氢原子 $E_n$ 为负值）即可电离，剩余能量转化为电子的动能；电离后电子能量不再量子化。<br />
+（4）谱线条数：一群处于量子数 $n$ 的氢原子向低能级跃迁，最多可辐射的光谱线条数为 $C_n^2 = \frac{n(n-1)}{2}$；一个原子则最多辐射 $n-1$ 条。</p>
+<p><strong>典型应用</strong><br />
+高考常以“氢原子能级图”为背景考查：<br />
+- 判断某种光能否使原子跃迁（光子能量必须严格等于能级差，不能累积）。<br />
+- 计算辐射或吸收光子的波长范围，并判断属于哪个光谱区（巴耳末系、赖曼系等）。<br />
+- 与光电效应综合：光子使原子跃迁后，获得能量的电子若再成为光电子，需结合逸出功等条件分析。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“跃迁条件”与“电离条件”</strong>：能级间跃迁要求光子能量严格等于能级差，不能多也不能少；电离则只需入射能量不小于该能级对应的电离能，多余能量成为电子动能。  </li>
+<li><strong>误认为光子能量可叠加</strong>：原子不会同时吸收两个光子完成一次跃迁，跃迁所需的能量必须由一个光子一次性提供。  </li>
+<li><strong>谱线数计算错误</strong>：一群原子跃迁用组合数 $C_n^2$，一个原子只能沿某一特定路径向下跃迁，最多产生 $n-1$ 条谱线。  </li>
+<li><strong>基态能量混淆</strong>：氢原子基态能量为 $-13.6\ \text{eV}$，计算能级差或电离能时容易丢掉负号或单位错误，导致频率、波长数量级异常。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能级跃迁</td>
+<td>energy level transition</td>
+<td>原子在不同能量定态之间的变化过程</td>
+</tr>
+<tr>
+<td>基态</td>
+<td>ground state</td>
+<td>原子能量最低的稳定状态</td>
+</tr>
+<tr>
+<td>激发态</td>
+<td>excited state</td>
+<td>原子处于高于基态的能量状态</td>
+</tr>
+<tr>
+<td>光电效应</td>
+<td>photoelectric effect</td>
+<td>光照射金属表面打出电子的现象，常与跃迁结合考查</td>
+</tr>
+<tr>
+<td>玻尔模型</td>
+<td>Bohr model</td>
+<td>解释氢原子光谱的量子化轨道模型</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理选择性必修三·原子与原子核部分</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/443-玻尔原子模型.html">玻尔原子模型</a></li>
+<li><a href="../atoms/436-氢原子能级.html">氢原子光谱</a></li>
+<li><a href="../atoms/417-光电效应.html">光电效应</a></li>
+<li><a class="dead" title="未收录">物质波</a></li>
+<li><a class="dead" title="未收录">原子核与放射性</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/436-氢原子能级.html">氢原子能级</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/416-光子.html">光子</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-01</a></li>
+<li><a href="../exam/物理/2023-新课标-03.html">2023-新课标-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

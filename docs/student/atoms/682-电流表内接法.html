@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电流表内接法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电流表内接法</h1><div class="review-mark" data-stem="682-电流表内接法"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电流表内接法, Ammeter Internal Connection</p><h1>电流表内接法</h1>
+<blockquote>
+<p><strong>一句话</strong>：电流表内接法是伏安法测电阻时，将电流表串联在待测电阻回路中，电压表并联在待测电阻与电流表串联组合两端的电路接法，测量值等于待测电阻真实值与电流表内阻之和。
+<strong>English</strong>: The ammeter internal connection method is a configuration in the volt‑ampere method for measuring resistance, where the ammeter is in series with the unknown resistor, and the voltmeter is connected across the series combination of the resistor and the ammeter.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+电流表内接法电路如图（文字描述）：电流表ⓐ与待测电阻 $R_x$ 串联，电压表ⓥ并联在 $R_x$ 和电流表两端。此时电流表读数 $I$ 等于通过 $R_x$ 的真实电流，电压表读数 $U$ 等于 $R_x$ 两端电压 $U_{R_x}$ 与电流表两端电压 $U_A$ 之和。根据部分电路欧姆定律，测量值<br />
+$$
+R_{\text{测}} = \frac{U}{I} = \frac{U_{R_x} + U_A}{I} = R_x + R_A
+$$<br />
+因此测量值大于真实值，误差来源于电流表的分压（系统误差）。相对误差 $\delta = \dfrac{R_A}{R_x}$。</p>
+<p><strong>关键方法</strong><br />
+- <strong>接法选择</strong>：当待测电阻 $R_x$ 远大于电流表内阻 $R_A$ （一般要求 $R_x \gg R_A$，定量判据常用 $R_x &gt; \sqrt{R_A R_V}$ 时选择内接法），电流表分压可忽略，测量值接近真实值。口诀：“大内偏大”——测大电阻用内接法，测量结果偏大。<br />
+- <strong>误差分析</strong>：给出 $R_A$，可用 $R_x = R_{\text{测}} - R_A$ 修正系统误差。<br />
+- <strong>实物连接</strong>：连接时注意电压表并联点必须包含电流表，不能只跨接在待测电阻两端。</p>
+<p><strong>典型应用</strong><br />
+高考主要出现在电学实验题：<br />
+- 给出电流表内阻约 0.1 Ω、待测电阻约 200 Ω，要求判断应选内接法还是外接法，并画出电路图或补全实物连线。<br />
+- 结合电表读数，计算测量值、真实值及相对误差。<br />
+- 已知电流表内阻精确值，利用内接法并修正结果提高测量精度。<br />
+- 综合考察：与滑动变阻器分压/限流接法共同出现，要求设计完整测量电路并分析系统误差。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆误差来源</strong>：把内接法的误差说成“电压表分流”，或把外接法的误差说成“电流表分压”。务必记清：内接法误差来自电流表分压使电压测量偏大；外接法误差来自电压表分流使电流测量偏大。  </li>
+<li><strong>测量值大小判断错误</strong>：认为内接法结果偏小，或忘记“大内偏大”的使用前提——只有被测电阻远大于电流表内阻时才适合。  </li>
+<li><strong>实物连线错误</strong>：将电压表直接并接在待测电阻两端，导致实际电路变为电流表外接法，实验条件与题目要求不符。  </li>
+<li><strong>忽略修正条件</strong>：题目给出电流表内阻精确值时，忘记可用 $R_x = R_{\text{测}} - R_A$ 得到准确值，而直接认定测量值偏大无法使用。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电流表内接法</td>
+<td>Ammeter Internal Connection</td>
+<td>电压表跨接电阻和电流表两端的伏安法接法</td>
+</tr>
+<tr>
+<td>伏安法测电阻</td>
+<td>Volt‑Ampere Method for Resistance Measurement</td>
+<td>通过电压、电流测量计算电阻的方法</td>
+</tr>
+<tr>
+<td>电流表内阻</td>
+<td>Internal Resistance of Ammeter</td>
+<td>电流表自身线圈的电阻，一般为小量值</td>
+</tr>
+<tr>
+<td>系统误差</td>
+<td>Systematic Error</td>
+<td>由仪器结构和测量方法引入的有规律的误差</td>
+</tr>
+<tr>
+<td>分压作用</td>
+<td>Voltage Divider Effect</td>
+<td>电流表内阻分担了一部分电压</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧 待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">电流表外接法</a></li>
+<li><a href="../atoms/511-伏安法测电阻.html">伏安法测电阻</a></li>
+<li><a class="dead" title="未收录">滑动变阻器分压与限流接法</a></li>
+<li><a class="dead" title="未收录">电表改装</a></li>
+<li><a class="dead" title="未收录">测定金属的电阻率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

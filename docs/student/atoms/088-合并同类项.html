@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>合并同类项</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>合并同类项</h1><div class="review-mark" data-stem="088-合并同类项"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 整式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 合并同类项, combining like terms, 同类项合并</p><h2>课本一句话定义</h2>
+<p><strong>同类项</strong>是含有相同字母且对应字母指数也相同的项（常数项都是同类项）；<strong>合并同类项</strong>就是把同类项的系数相加，字母及其指数保持不变。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>想象整理文具：把同类的放在一起。</p>
+<p>$3$ 支铅笔 $+ 2$ 支铅笔 $= 5$ 支铅笔</p>
+<p>用字母：$3x + 2x = 5x$（$x$ 代表"铅笔"）</p>
+<p><strong>同类项</strong> = 字母一样、字母的次数也一样的项，可以合并：
+- $3x$ 和 $5x$ 是同类项（都含 $x^1$）→ $3x + 5x = 8x$
+- $3x^2$ 和 $5x$ <strong>不是</strong>同类项（一个 $x^2$，一个 $x$）→ 不能合并
+- $3x$ 和 $3y$ <strong>不是</strong>同类项（字母不同）→ 不能合并</p>
+<p>合并规则：<strong>系数相加，字母不变</strong>。</p>
+<p>$4a^2 - 2a^2 = (4-2)a^2 = 2a^2$</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>同类项的定义</h3>
+<p>两个（或更多）单项式满足以下条件时，互为<strong>同类项</strong>：
+1. 含有<strong>相同的字母</strong>
+2. 相同字母的<strong>指数相同</strong></p>
+<p>注意：系数不影响同类项的判断；常数项（无字母）互为同类项。</p>
+<h3>合并法则</h3>
+<p>$$a \cdot x^m y^n + b \cdot x^m y^n = (a + b) \cdot x^m y^n$$</p>
+<p>法则：把系数相加（用有理数加法），字母部分保持不变。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：合并同类项：$3x^2 - 2x + 5x^2 + x - 7$。</p>
+<p><strong>解</strong>：
+- $x^2$ 类：$3x^2 + 5x^2 = 8x^2$
+- $x$ 类：$-2x + x = -x$
+- 常数类：$-7$</p>
+<p>结果：$8x^2 - x - 7$。</p>
+<p><strong>例 2</strong>：化简：$2ab - 3a^2b + 5ab - a^2b$。</p>
+<p><strong>解</strong>：
+- $a^2b$ 类：$-3a^2b - a^2b = -4a^2b$
+- $ab$ 类：$2ab + 5ab = 7ab$</p>
+<p>结果：$-4a^2b + 7ab$。</p>
+<p><strong>例 3</strong>：若 $3x^m y^2$ 与 $-2x^3 y^n$ 是同类项，求 $m$、$n$。</p>
+<p><strong>解</strong>：同类项要求对应字母指数相同，故 $m = 3$，$n = 2$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>字母顺序无关</strong>：$ab$ 和 $ba$ 是同类项（乘法交换律）。</li>
+<li><strong>指数必须完全相同</strong>：$3x^2y$ 和 $2xy^2$ 不是同类项（指数分布不同）。</li>
+<li><strong>系数相加含符号</strong>：$5x + (-3x) = 2x$，不是 $8x$。</li>
+<li><strong>不要改变字母部分</strong>：合并后字母部分不变，只改系数。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：单项式（系数、次数）、有理数加减</li>
+<li>后续：去括号 → 整式加减 → 方程（移项后合并同类项）</li>
+<li>高中拓展：多项式化简、待定系数法</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同类项</td>
+<td>like terms</td>
+<td>字母与指数完全相同</td>
+</tr>
+<tr>
+<td>合并同类项</td>
+<td>combining like terms</td>
+<td>系数相加</td>
+</tr>
+<tr>
+<td>系数</td>
+<td>coefficient</td>
+<td>项的数字部分</td>
+</tr>
+<tr>
+<td>常数项</td>
+<td>constant term</td>
+<td>不含字母的项</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$3x$ 和 $5x$ 是同类项。</td>
+<td>$3x$ and $5x$ are like terms.</td>
+</tr>
+<tr>
+<td>合并同类项时，系数相加，字母不变。</td>
+<td>When combining like terms, add the coefficients and keep the variables unchanged.</td>
+</tr>
+<tr>
+<td>$3x^2$ 和 $3x$ 不是同类项。</td>
+<td>$3x^2$ and $3x$ are not like terms.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第二章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Like terms</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/086-单项式.html">单项式</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/061-方程.html">方程</a></p>
+</li>
+<li>
+<p><a href="../atoms/086-单项式.html">单项式</a></p>
+</li>
+<li><a href="../atoms/089-多项式.html">多项式</a></li>
+<li><a href="../atoms/094-整式加减.html">整式加减</a></li>
+<li><a class="dead" title="未收录">去括号</a></li>
+<li><a href="../atoms/093-整式.html">整式</a></li>
+<li><a href="../atoms/106-移项.html">移项</a></li>
+</ul>
+</div>
+</body>
+</html>

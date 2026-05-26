@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>通电螺线管磁场</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>通电螺线管磁场</h1><div class="review-mark" data-stem="331-通电螺线管磁场"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电磁场基础]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 通电螺线管磁场, magnetic field of solenoid, 螺线管磁场, 电磁铁</p><h2>🎓 通电螺线管的磁场</h2>
+<h3>结构</h3>
+<p><strong>螺线管</strong>（solenoid）是将导线绕成螺旋形线圈的装置。通入电流后，每匝线圈产生的磁场叠加，形成较强的磁场。</p>
+<h3>磁感线形状</h3>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>磁感线特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>螺线管<strong>内部</strong></td>
+<td>平行均匀的直线，近似<strong>匀强磁场</strong></td>
+</tr>
+<tr>
+<td>螺线管<strong>外部</strong></td>
+<td>与条形磁铁外部相似，弯曲磁感线</td>
+</tr>
+</tbody>
+</table>
+<p>通电螺线管的磁场分布与<strong>条形磁铁</strong>基本相同。</p>
+<h3>右手定则（螺线管）</h3>
+<p><strong>判断通电螺线管的 N 极方向</strong>：</p>
+<blockquote>
+<p>用右手握住螺线管，<strong>四指弯曲方向与电流方向相同</strong>，大拇指所指方向就是螺线管的 <strong>N 极</strong>（磁场由内向外的一端）。</p>
+</blockquote>
+<h3>内部磁场强度（了解）</h3>
+<p>理想无限长螺线管内部：</p>
+<p>$$B = \mu_0 n I$$</p>
+<p>其中：
+- $\mu_0 = 4\pi\times10^{-7}\,\text{T·m/A}$
+- $n$：单位长度匝数（匝/m）
+- $I$：电流（A）</p>
+<p><strong>结论</strong>：
+- 匝数越多（$n$ 越大）→ $B$ 越大
+- 电流越大（$I$ 越大）→ $B$ 越大
+- 铁芯可以大幅增大 $B$（磁导率增大）</p>
+<h3>电磁铁</h3>
+<p><strong>电磁铁</strong>是绕有线圈的铁芯，利用通电螺线管的磁场磁化铁芯，产生更强的磁性。</p>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>磁性可控</td>
+<td>通电有磁，断电无磁</td>
+</tr>
+<tr>
+<td>磁性强弱可调</td>
+<td>改变电流大小控制磁性</td>
+</tr>
+<tr>
+<td>N/S 极可变</td>
+<td>改变电流方向改变极性</td>
+</tr>
+</tbody>
+</table>
+<p>应用：起重电磁铁、电铃、继电器、扬声器、MRI 超导磁铁。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一螺线管每厘米绕 20 匝，即 $n = 2000\,\text{匝/m}$，通电流 $I = 2\,\text{A}$，求管内磁感应强度。</p>
+<p>$$B = \mu_0 nI = 4\pi\times10^{-7}\times2000\times2 \approx 5.0\times10^{-3}\,\text{T} = 5.0\,\text{mT}$$</p>
+<p>若插入铁芯（相对磁导率 $\mu_r \approx 1000$），$B' \approx 5.0\,\text{T}$，增大约 1000 倍。</p>
+<h3>易错点</h3>
+<ul>
+<li>螺线管右手定则中<strong>四指</strong>弯曲方向为电流方向，大拇指指 N 极（与直导线右手定则手势相反）。</li>
+<li>螺线管内部是<strong>近似匀强</strong>磁场（理想无限长时精确成立，实际螺线管两端有边缘效应）。</li>
+<li>通电螺线管断电后磁性<strong>立即消失</strong>（区别于永磁体）；若铁芯保留剩磁，则断电后仍有弱磁性。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中学过通电螺线管的 N/S 极判断；高中引入磁感应强度 $B$ 的定量描述，分析螺线管内部匀强磁场特性，为后续电磁感应学习提供典型磁场模型。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十二章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/螺线管">维基百科·螺线管</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">通电直导线磁场</a></li>
+<li><a class="dead" title="未收录">磁场-高中</a></li>
+<li><a href="../atoms/323-磁感应强度.html">磁感应强度</a></li>
+<li><a href="../atoms/292-匀强磁场.html">匀强磁场</a></li>
+<li><a href="../atoms/188-磁场对通电导体的作用.html">安培力</a></li>
+<li><a class="dead" title="未收录">电磁场实验</a></li>
+</ul>
+</div>
+</body>
+</html>

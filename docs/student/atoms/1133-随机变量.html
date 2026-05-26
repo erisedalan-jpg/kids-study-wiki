@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机变量</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>随机变量</h1><div class="review-mark" data-stem="1133-随机变量"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[统计与概率]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 随机变量, random variable</p><h1>随机变量</h1>
+<blockquote>
+<p><strong>一句话</strong>：随机变量是将随机试验结果数量化的函数，用大写字母 $X,Y,\dots$ 表示，其取值随试验结果而定。
+<strong>English</strong>: A random variable is a variable whose possible values are numerical outcomes of a random phenomenon.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+设随机试验 $E$ 的样本空间为 $\Omega$，若对每个样本点 $\omega\in\Omega$ 都有唯一实数 $X(\omega)$ 与之对应，则称 $X$ 为<strong>随机变量</strong>。按取值情况分为两类：<br />
+- <strong>离散型随机变量</strong>：取有限个或可列无穷个值，用分布列 $P(X=x_i)=p_i$（$i=1,2,\dots$）描述，满足 $p_i\ge 0$ 且 $\sum_i p_i=1$。<br />
+- <strong>连续型随机变量</strong>：取值充满一个区间，用概率密度函数 $f(x)$ 描述，$P(a\le X\le b)=\int_a^b f(x)\,dx$，且 $\displaystyle\int_{-\infty}^{+\infty} f(x)\,dx=1$。  </p>
+<p>核心数字特征：<br />
+- 期望（均值） $E(X)=\sum_i x_i p_i$（离散）或 $E(X)=\int_{-\infty}^{+\infty} xf(x)\,dx$（连续）。<br />
+- 方差 $D(X)=E\big((X-E(X))^2\big)=E(X^2)-[E(X)]^2$，标准差 $\sigma=\sqrt{D(X)}$。  </p>
+<p>高考重点分布的模型：<br />
+- <strong>二项分布</strong> $X\sim B(n,p)$：$n$ 次独立重复试验，每次成功概率为 $p$，$P(X=k)=C_n^k p^k (1-p)^{n-k}$，$E(X)=np$，$D(X)=np(1-p)$。<br />
+- <strong>超几何分布</strong> $X\sim H(N,M,n)$：$N$ 件产品中有 $M$ 件次品，不放回抽取 $n$ 件，次品数 $X$ 的分布 $P(X=k)=\dfrac{C_M^k C_{N-M}^{n-k}}{C_N^n}$，$E(X)=n\cdot\dfrac{M}{N}$。<br />
+- <strong>正态分布</strong> $X\sim N(\mu,\sigma^2)$：密度函数 $f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$，标准化 $Z=\dfrac{X-\mu}{\sigma}\sim N(0,1)$，常利用对称性 $P(|X-\mu|&lt;\sigma)\approx 0.6826$ 等 $3\sigma$ 原则。  </p>
+<p><strong>关键方法</strong><br />
+1. <strong>求分布列</strong>：确定随机变量的所有可能取值 → 逐个计算对应概率（利用古典概型、独立事件乘法或给定分布公式）→ 列表并检验概率和是否为 1。<br />
+2. <strong>计算期望与方差</strong>：套用定义式或分布自带公式，注意先化简 $E(X)$ 再求 $D(X)$ 时用 $E(X^2)$ 公式。<br />
+3. <strong>识别模型</strong>：看到“$n$ 次独立重复”“不放回抽取”“产品合格数”等关键词，先判断属于二项分布还是超几何分布，再选用对应公式。<br />
+4. <strong>正态分布求概率</strong>：转化为标准正态，查表或用对称性求区间概率，常用 $P(\mu-\sigma&lt;X&lt;\mu+\sigma)=0.6826$，$P(\mu-2\sigma&lt;X&lt;\mu+2\sigma)=0.9544$，$P(\mu-3\sigma&lt;X&lt;\mu+3\sigma)=0.9974$。  </p>
+<p><strong>典型高考设问</strong><br />
+- 根据频率分布直方图或表格，求随机变量的分布列、期望和方差。<br />
+- 比较两种方案的期望值以做决策（例如选择甲或乙参加比赛）。<br />
+- 利用二项分布计算 $n$ 次独立试验中成功次数在一定范围内的概率。<br />
+- 正态分布背景下，由已知概率反求 $\mu$ 或 $\sigma$，或计算零件合格率、成绩等级划分等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>分布列概率和非 1</strong>：求概率时遗漏某些取值或重复计算，最后未检验总和为 1，导致后续期望方差全错。  </li>
+<li><strong>二项分布与超几何分布混淆</strong>：二项分布是<strong>有放回</strong>或总量很大时的近似，超几何分布是<strong>不放回</strong>且总体有限，两种公式不可混用，尤其 $n$ 较大时超几何概率计算要用组合数。  </li>
+<li><strong>期望与方差公式误用</strong>：用定义式时 $E(X^2)$ 取值为 $x_i^2$ 而非 $[E(X)]^2$；用二项分布自带公式时忘记乘 $p(1-p)$ 或 $np$ 弄反。  </li>
+<li><strong>正态分布对称性应用错误</strong>：非标准正态下直接查表，未先标准化；求 $P(X<a)$ 时混淆左右尾概率；忽略 $P(|X-\mu|>k\sigma)$ 的对称性，导致面积计算错误。  </li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>随机变量</td>
+<td>random variable</td>
+<td>将随机试验结果数量化的变量</td>
+</tr>
+<tr>
+<td>离散型随机变量</td>
+<td>discrete random variable</td>
+<td>取值可一一列举的随机变量</td>
+</tr>
+<tr>
+<td>分布列</td>
+<td>probability distribution</td>
+<td>离散型随机变量各取值对应的概率表</td>
+</tr>
+<tr>
+<td>期望</td>
+<td>expected value / mean</td>
+<td>随机变量取值的加权平均</td>
+</tr>
+<tr>
+<td>方差</td>
+<td>variance</td>
+<td>刻画随机变量取值偏离期望的程度</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：概率与统计 → 随机变量及其分布（新课标选修部分）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">离散型随机变量的分布列</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+<li><a class="dead" title="未收录">超几何分布</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布</a></li>
+<li><a class="dead" title="未收录">期望与方差</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1160-展开式通项.html">展开式通项</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/512-连续型随机变量.html">连续型随机变量</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-19.html">2011-理-19</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

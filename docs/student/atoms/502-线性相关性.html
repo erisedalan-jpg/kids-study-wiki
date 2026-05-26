@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线性相关性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>线性相关性</h1><div class="review-mark" data-stem="502-线性相关性"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 线性相关性, linear correlation, 线性相关, 正相关, 负相关, 相关性</p><h2>🎓 线性相关性</h2>
+<h3>定义</h3>
+<p><strong>线性相关性</strong>：两个变量 $x$ 和 $y$ 之间存在的线性趋势关系（即数据点大致落在某条直线附近）。</p>
+<ul>
+<li><strong>正线性相关</strong>：$x$ 增大时 $y$ 趋向增大（散点从左下到右上）</li>
+<li><strong>负线性相关</strong>：$x$ 增大时 $y$ 趋向减小（散点从左上到右下）</li>
+<li><strong>无线性相关</strong>：$x$ 变化时 $y$ 无明显趋势（散点随机分布）</li>
+</ul>
+<h3>相关性的强弱</h3>
+<p>| 相关系数 $|r|$ | 线性相关程度 |
+|--------------|------------|
+| 接近 1 | 强线性相关 |
+| 0.75 ≈ 临界值 | 线性相关显著（教材阈值，待家长核对） |
+| 接近 0 | 无线性相关 |</p>
+<p><strong>注意</strong>：相关系数度量线性相关强弱，不反映因果关系，也不反映非线性关系。</p>
+<h3>相关性的判断方法</h3>
+<p><strong>方法 1（定性）</strong>：散点图观察整体趋势</p>
+<p><strong>方法 2（定量）</strong>：计算相关系数 $r$（见<a href="../atoms/359-统计案例.html">相关系数</a>）</p>
+<h3>相关与因果</h3>
+<p><strong>相关 $\neq$ 因果</strong>！两个变量相关可能是因为：
+1. $x$ 是 $y$ 的原因
+2. $y$ 是 $x$ 的原因
+3. 第三个变量（混淆变量）同时影响 $x$ 和 $y$
+4. 纯属巧合（伪相关）</p>
+<p><strong>经典例子</strong>：冰淇淋销量与溺水事故数量呈正相关，但并非冰淇淋导致溺水，共同原因是夏季高温。</p>
+<h3>线性相关的实例</h3>
+<table>
+<thead>
+<tr>
+<th>$x$（自变量）</th>
+<th>$y$（因变量）</th>
+<th>相关类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>施肥量</td>
+<td>作物产量</td>
+<td>正相关（适量范围内）</td>
+</tr>
+<tr>
+<td>温度升高</td>
+<td>某化学反应速率</td>
+<td>正相关</td>
+</tr>
+<tr>
+<td>学习时间</td>
+<td>疲劳程度</td>
+<td>正相关</td>
+</tr>
+<tr>
+<td>商品价格</td>
+<td>销量</td>
+<td>负相关（一般情形）</td>
+</tr>
+<tr>
+<td>气温降低</td>
+<td>能源消耗</td>
+<td>负相关（取决于地区）</td>
+</tr>
+</tbody>
+</table>
+<h3>线性相关的假设</h3>
+<p>进行线性回归分析时，通常假设：
+1. $x$ 与 $y$ 之间存在线性关系
+2. 残差（误差）服从正态分布（高中阶段不作严格要求）
+3. 各观测相互独立</p>
+<h3>典型例题</h3>
+<p><strong>例1（判断）</strong>：以下说法正确的是？</p>
+<p>(A) 相关系数 $r = 0.8$，说明 $x$ 是 $y$ 的原因。
+(B) 相关系数 $r = -0.9$，说明两变量负相关，且线性相关显著。
+(C) 散点图中点随机散布，相关系数一定为 0。
+(D) 相关系数 $r = 1$，说明两变量完全线性相关（无误差）。</p>
+<p><strong>答</strong>：(B) 和 (D) 正确。(A) 错误（相关不等因果）；(C) 近似正确但不严格（$r$ 接近 0，但不一定恰好等于 0）。</p>
+<p><strong>例2</strong>：数据：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>2</th>
+<th>4</th>
+<th>6</th>
+<th>8</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>5</td>
+<td>9</td>
+<td>13</td>
+<td>17</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p>观察规律：$y = 2x + 1$，这是完全线性相关（$r = 1$，所有点恰好在直线上）。</p>
+<h3>非线性相关的例子</h3>
+<ul>
+<li>化肥施用量与产量：先正相关，过多后负相关（倒U形）</li>
+<li>某细菌数量随时间变化：指数增长（非线性正相关）</li>
+<li>二次函数关系：$y = x^2$（非线性，且在 $[-a, a]$ 上线性相关系数接近 0）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>相关强不等于线性强</strong>：$|r|$ 大说明线性关系强，但非线性关系更强也可能 $|r|$ 小</li>
+<li><strong>$r = 0$ 不等于无关</strong>：可能有很强的非线性关系</li>
+<li><strong>混淆自变量因变量</strong>：通常自变量在 $x$ 轴，因变量在 $y$ 轴，由实际意义确定</li>
+<li><strong>小样本的不稳定性</strong>：样本量小时，$r$ 的估计不稳定，需谨慎结论</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章 § 8.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/相关性">相关性 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1402-3σ原则.html">3σ原则</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/359-统计案例.html">统计案例</a></p>
+</li>
+<li>
+<p><a href="../atoms/488-散点图.html">散点图</a></p>
+</li>
+<li><a href="../atoms/359-统计案例.html">相关系数</a></li>
+<li><a href="../atoms/506-经验回归方程.html">经验回归方程</a></li>
+<li><a href="../atoms/481-回归直线方程.html">回归直线方程</a></li>
+<li><a href="../atoms/514-非线性回归.html">非线性回归</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-文-03.html">2012-文-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

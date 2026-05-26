@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2x2列联表</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>2x2列联表</h1><div class="review-mark" data-stem="465-2x2列联表"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 2x2列联表, 2×2 contingency table, 列联表, 交叉表, 四格表</p><h2>🎓 2×2列联表</h2>
+<h3>定义</h3>
+<p><strong>列联表</strong>（交叉表）：将两个分类变量的联合频数以表格形式展示，用于分析两变量之间是否存在关联。</p>
+<p><strong>2×2 列联表</strong>（四格表）：两个变量各有两个类别时的最简单情形。</p>
+<h3>基本结构</h3>
+<p>设两个变量分别为 $A$（取 $a_1, a_2$）和 $B$（取 $b_1, b_2$）：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$B = b_1$</th>
+<th>$B = b_2$</th>
+<th>行合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A = a_1$</td>
+<td>$n_{11}$</td>
+<td>$n_{12}$</td>
+<td>$n_{1\cdot}$</td>
+</tr>
+<tr>
+<td>$A = a_2$</td>
+<td>$n_{21}$</td>
+<td>$n_{22}$</td>
+<td>$n_{2\cdot}$</td>
+</tr>
+<tr>
+<td>列合计</td>
+<td>$n_{\cdot 1}$</td>
+<td>$n_{\cdot 2}$</td>
+<td>$n$</td>
+</tr>
+</tbody>
+</table>
+<p>其中 $n = n_{11} + n_{12} + n_{21} + n_{22}$ 为总样本量。</p>
+<h3>实际应用场景</h3>
+<ul>
+<li>性别（男/女）× 是否吸烟（是/否）：分析吸烟率与性别的关系</li>
+<li>是否服药（是/否）× 是否痊愈（是/否）：分析药物疗效</li>
+<li>是否参加培训（是/否）× 成绩合格（是/否）：分析培训效果</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1（构建列联表）</strong>：某中学抽查 100 名学生，男生 60 人中 40 人喜欢体育，20 人不喜欢；女生 40 人中 15 人喜欢体育，25 人不喜欢。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>喜欢体育</th>
+<th>不喜欢体育</th>
+<th>合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>男生</td>
+<td>40</td>
+<td>20</td>
+<td>60</td>
+</tr>
+<tr>
+<td>女生</td>
+<td>15</td>
+<td>25</td>
+<td>40</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>55</td>
+<td>45</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例2（频率分析）</strong>：从上表看：
+- 男生中喜欢体育的比例：$40/60 \approx 66.7\%$
+- 女生中喜欢体育的比例：$15/40 = 37.5\%$
+- 两者差异明显，初步判断性别与体育喜好可能有关联</p>
+<h3>条件比例与边缘比例</h3>
+<ul>
+<li><strong>边缘比例</strong>：行合计或列合计除以总量（如男生占总体的 60/100 = 60%）</li>
+<li><strong>条件比例</strong>：在某行（列）内的比例（如男生中喜欢体育的占 40/60）</li>
+</ul>
+<p>若两个变量完全独立，条件比例应等于边缘比例。若差异大，则可能存在关联。</p>
+<h3>期望频数（独立假设下）</h3>
+<p>若 $A, B$ 独立，则期望频数（理论频数）为：</p>
+<p>$$E_{ij} = \frac{n_{i\cdot} \times n_{\cdot j}}{n}$$</p>
+<p>例：在独立假设下，男生喜欢体育的期望人数：</p>
+<p>$$E_{11} = \frac{60 \times 55}{100} = 33$$</p>
+<p>实际为 40，偏差 7，提示可能存在关联。</p>
+<h3>与卡方检验的关系</h3>
+<p>通过比较实际频数与期望频数，用卡方统计量检验两变量是否独立（见<a href="../atoms/497-独立性检验.html">独立性检验</a>和<a href="../atoms/479-卡方公式.html">卡方公式</a>）。</p>
+<h3>推广：$r \times c$ 列联表</h3>
+<p>$A$ 有 $r$ 个类别，$B$ 有 $c$ 个类别时，列联表为 $r \times c$（高中阶段主要考 $2 \times 2$）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>行列合计要验算</strong>：行合计之和 = 列合计之和 = 总数 $n$</li>
+<li><strong>条件比例与独立性</strong>：条件比例差异大不等于一定有关联，需卡方检验确认</li>
+<li><strong>期望频数公式</strong>：$E_{ij} = n_{i\cdot} \times n_{\cdot j} / n$，不是 $n_{ij}$ 本身</li>
+<li><strong>样本量要求</strong>：期望频数不能过小（通常要求 $E_{ij} \geq 5$），否则卡方检验不可靠</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章 § 8.3，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/列联表">列联表 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/497-独立性检验.html">独立性检验</a></li>
+<li><a href="../atoms/479-卡方公式.html">卡方公式</a></li>
+<li><a href="../atoms/508-统计推断.html">统计推断</a></li>
+<li><a href="../atoms/488-散点图.html">散点图</a></li>
+<li><a href="../atoms/509-统计案例-高中.html">统计案例-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-文-19.html">2010-文-19</a></li>
+<li><a href="../exam/数学/2017-文-19.html">2017-文-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

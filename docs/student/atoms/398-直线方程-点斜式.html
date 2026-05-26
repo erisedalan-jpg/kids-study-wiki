@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线方程-点斜式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线方程-点斜式</h1><div class="review-mark" data-stem="398-直线方程-点斜式"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章直线和圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线方程-点斜式, point-slope form, 点斜式</p><h2>🎓 直线方程-点斜式</h2>
+<h3>点斜式方程</h3>
+<p>已知直线过点 $(x_0, y_0)$，斜率为 $k$，则直线方程为：</p>
+<p>$$y - y_0 = k(x - x_0)$$</p>
+<p><strong>适用条件</strong>：斜率存在（直线不垂直于 $x$ 轴，即 $\alpha \neq 90°$）</p>
+<h3>推导</h3>
+<p>直线过点 $P(x_0,y_0)$，斜率为 $k$，则对直线上任意另一点 $Q(x,y)$（$x\neq x_0$）有：</p>
+<p>$$\dfrac{y-y_0}{x-x_0} = k \Rightarrow y-y_0 = k(x-x_0)$$</p>
+<p>当 $x=x_0$ 时，$y=y_0$，点 $P$ 本身满足方程，故方程完整。</p>
+<h3>五种直线方程对比</h3>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>方程</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点斜式</td>
+<td>$y-y_0=k(x-x_0)$</td>
+<td>斜率存在</td>
+</tr>
+<tr>
+<td>斜截式</td>
+<td>$y=kx+b$</td>
+<td>斜率存在</td>
+</tr>
+<tr>
+<td>两点式</td>
+<td>$\dfrac{y-y_1}{y_2-y_1}=\dfrac{x-x_1}{x_2-x_1}$</td>
+<td>$x_1\neq x_2, y_1\neq y_2$</td>
+</tr>
+<tr>
+<td>截距式</td>
+<td>$\dfrac{x}{a}+\dfrac{y}{b}=1$</td>
+<td>$a\neq0, b\neq0$</td>
+</tr>
+<tr>
+<td>一般式</td>
+<td>$Ax+By+C=0$</td>
+<td>无限制</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：直线过点 $A(2,-1)$，斜率为 $3$，写出直线方程。</p>
+<p><strong>解</strong>：$y-(-1)=3(x-2) \Rightarrow y+1=3x-6 \Rightarrow y=3x-7$</p>
+<p><strong>例2</strong>：直线过点 $M(0,3)$，倾斜角为 $120°$，写出方程。</p>
+<p><strong>解</strong>：$k=\tan120°=-\sqrt{3}$，代入点斜式：$y-3=-\sqrt{3}(x-0) \Rightarrow y=-\sqrt{3}x+3$</p>
+<p><strong>例3</strong>：直线经过 $A(1,2)$ 且与直线 $y=2x+1$ 垂直，求方程。</p>
+<p><strong>解</strong>：原直线斜率为 $2$，垂直直线斜率 $k=-\dfrac{1}{2}$，代入点斜式：$y-2=-\dfrac{1}{2}(x-1) \Rightarrow 2y-4=-(x-1) \Rightarrow x+2y-5=0$</p>
+<h3>点斜式 vs 斜截式</h3>
+<ul>
+<li>斜截式 $y=kx+b$ 是点斜式在特殊点（$y$ 轴截距点 $(0,b)$）的特例</li>
+<li>点斜式更通用，<strong>任意已知点</strong>均可使用</li>
+<li>最终结果通常化为<strong>一般式</strong>或<strong>斜截式</strong>，便于比较和计算</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>点斜式不适用于竖直线（斜率不存在）；竖直线直接写 $x = x_0$</li>
+<li>$y - y_0 = k(x - x_0)$ 中，符号容易弄混，特别是 $y_0$ 为负数时</li>
+<li>化简时注意移项，不要漏项</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第二章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第二章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1026-直线方程.html">直线方程</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">点到直线距离</a></p>
+</li>
+<li>
+<p><a href="../atoms/393-直线倾斜角与斜率.html">直线倾斜角与斜率</a></p>
+</li>
+<li><a class="dead" title="未收录">直线方程-斜截式</a></li>
+<li><a class="dead" title="未收录">直线方程-两点式</a></li>
+<li><a href="../atoms/395-直线方程-一般式.html">直线方程-一般式</a></li>
+<li><a href="../atoms/366-两条直线位置关系.html">两条直线位置关系</a></li>
+<li><a href="../atoms/570-点到直线的距离公式.html">点到直线距离公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-文-04.html">2010-文-04</a></li>
+<li><a href="../exam/数学/2017-文-14.html">2017-文-14</a></li>
+<li><a href="../exam/数学/2020-文-15.html">2020-文-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

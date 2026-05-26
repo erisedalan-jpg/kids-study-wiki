@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等式性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等式性质</h1><div class="review-mark" data-stem="108-等式性质"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等式性质, properties of equality, 等式的性质</p><h2>课本一句话定义</h2>
+<p><strong>等式性质 1</strong>：等式两边都加（或减）同一个数或式子，结果仍相等；<strong>等式性质 2</strong>：等式两边都乘（或除以）同一个不为零的数，结果仍相等。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>想象一杆天平：两边现在是平衡的（等式成立）。</p>
+<p><strong>性质 1（加减）</strong>：两边同时加或减同一个量，天平仍然平衡。</p>
+<p>如果 $a = b$，那么 $a + 3 = b + 3$（两边都加 3，还是平衡）。</p>
+<p><strong>性质 2（乘除）</strong>：两边同时乘或除以同一个<strong>不为零</strong>的数，天平仍然平衡。</p>
+<p>如果 $a = b$，那么 $2a = 2b$（两边都乘 2，还是平衡）。</p>
+<p><strong>为什么不能除以 0？</strong> 因为除以 0 没有意义（0 当除数无意义）。</p>
+<p>这两条性质是解方程"合法操作"的依据——每一步都要对两边做同样的事。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>两条等式性质</h3>
+<p><strong>性质 1（加法性质）</strong>：</p>
+<p>$$a = b \Rightarrow a + c = b + c \quad (c \text{ 为任意数或代数式})$$</p>
+<p>推论：$a = b \Rightarrow a - c = b - c$（减相同量）。</p>
+<p><strong>性质 2（乘法性质）</strong>：</p>
+<p>$$a = b \Rightarrow ac = bc \quad (c \neq 0)$$</p>
+<p>推论：$a = b \Rightarrow \dfrac{a}{c} = \dfrac{b}{c}$（除以同一非零数）。</p>
+<h3>应用：变形等式的标准步骤</h3>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>依据</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两边同加/减某项</td>
+<td>等式性质 1</td>
+<td>移项</td>
+</tr>
+<tr>
+<td>两边同乘某系数</td>
+<td>等式性质 2</td>
+<td>去分母</td>
+</tr>
+<tr>
+<td>两边同除以系数</td>
+<td>等式性质 2</td>
+<td>系数化 1</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：用等式性质解 $x - 7 = 3$。</p>
+<p><strong>解</strong>：两边同加 7（等式性质 1）：$x - 7 + 7 = 3 + 7$，$x = 10$。</p>
+<p><strong>例 2</strong>：用等式性质解 $\dfrac{x}{3} = 4$。</p>
+<p><strong>解</strong>：两边同乘 3（等式性质 2）：$\dfrac{x}{3} \times 3 = 4 \times 3$，$x = 12$。</p>
+<p><strong>例 3</strong>：用等式性质解 $-2x = 8$。</p>
+<p><strong>解</strong>：两边同除以 $-2$（等式性质 2，$-2 \neq 0$）：$x = \dfrac{8}{-2} = -4$。</p>
+<h3>等式 vs 不等式</h3>
+<p>等式的两条性质在<strong>不等式</strong>中有对应版本，但有重要区别：
+- 不等式两边乘<strong>负数</strong>时，<strong>不等号方向改变</strong>（如 $3 &gt; 2$，$\times (-1)$ 得 $-3 &lt; -2$）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>性质 2 中 $c \neq 0$</strong>：除以 0 无意义，乘以 0 会使等式退化。</li>
+<li><strong>两边都要操作</strong>：只对一边加/减/乘/除，等式被破坏。</li>
+<li><strong>负数除法方向</strong>：等式两边除以负数，等号方向不变（等号无方向），但以后学不等式时方向要改变。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：方程的概念、有理数除法</li>
+<li>后续：解一元一次方程（移项本质是等式性质 1）→ 分式方程（去分母用性质 2）</li>
+<li>高中拓展：等价变形（同解变换）、不等式性质（乘负数变号）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等式</td>
+<td>equality / equation</td>
+<td>含"="的式子</td>
+</tr>
+<tr>
+<td>等式性质</td>
+<td>properties of equality</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>天平</td>
+<td>balance</td>
+<td>等式的直观模型</td>
+</tr>
+<tr>
+<td>同解变换</td>
+<td>equivalent transformation</td>
+<td>高中术语</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程两边加同一个数，等式仍成立。</td>
+<td>Adding the same number to both sides of an equation keeps it balanced.</td>
+</tr>
+<tr>
+<td>等式两边除以同一个非零数，结果不变。</td>
+<td>Dividing both sides by the same nonzero number preserves the equality.</td>
+</tr>
+<tr>
+<td>等式性质是解方程每一步的依据。</td>
+<td>The properties of equality justify each step in solving an equation.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第三章第 1 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Equation § Properties</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，两条性质与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/061-方程.html">方程</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/106-移项.html">移项</a></p>
+</li>
+<li>
+<p><a href="../atoms/061-方程.html">方程</a></p>
+</li>
+<li><a href="../atoms/082-一元一次方程.html">一元一次方程</a></li>
+<li><a href="../atoms/061-方程.html">解方程</a></li>
+<li><a href="../atoms/106-移项.html">移项</a></li>
+<li><a href="../atoms/083-不等式.html">不等式</a></li>
+<li><a href="../atoms/157-分式方程.html">分式方程</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等差数列性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等差数列性质</h1><div class="review-mark" data-stem="412-等差数列性质"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第四章数列]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等差数列性质, properties of arithmetic sequence, 等差数列, 等差数列的性质, 等差中项</p><h2>🎓 等差数列性质</h2>
+<h3>基本定义回顾</h3>
+<p><strong>等差数列</strong>：相邻两项之差为常数 $d$（公差）的数列。</p>
+<p>$$a_{n+1} - a_n = d \quad (d \in \mathbb{R})$$</p>
+<p>通项公式：$a_n = a_1 + (n-1)d$</p>
+<p>前 $n$ 项和：$S_n = na_1 + \dfrac{n(n-1)}{2}d = \dfrac{n(a_1+a_n)}{2}$</p>
+<h3>等差中项</h3>
+<p>若 $a, A, b$ 成等差数列，则 $A = \dfrac{a+b}{2}$，称 $A$ 为 $a$ 与 $b$ 的<strong>等差中项</strong>。</p>
+<p>等价条件：$A - a = b - A$，即 $2A = a + b$。</p>
+<h3>等差数列的重要性质</h3>
+<p><strong>性质1（等间距项的关系）</strong>：</p>
+<p>$$a_m + a_n = a_p + a_q \quad \Leftrightarrow \quad m + n = p + q$$</p>
+<p>特别地：$a_m + a_n = 2a_{\frac{m+n}{2}}$（$m+n$ 为偶数时）</p>
+<p><strong>性质2（等差数列的子列）</strong>：</p>
+<p>等差数列 ${a_n}$ 中，每隔 $k$ 项取一项构成新数列 $a_1, a_{k+1}, a_{2k+1}, \ldots$，新数列也是等差数列，公差为 $kd$。</p>
+<p><strong>性质3（前 $n$ 项和）</strong>：</p>
+<p>$S_n$ 是关于 $n$ 的<strong>二次函数</strong>（$d \ne 0$ 时）或线性函数（$d=0$ 时）：</p>
+<p>$$S_n = \frac{d}{2}n^2 + \left(a_1 - \frac{d}{2}\right)n$$</p>
+<p>常数项为 0！这是 $S_n$ 判断等差的依据。</p>
+<p><strong>性质4</strong>：$S_n, S_{2n}-S_n, S_{3n}-S_{2n}$ 也成等差数列（公差为 $n^2d$，待家长核对）</p>
+<h3>等差数列判断条件</h3>
+<p>三个等价条件：
+1. $a_{n+1} - a_n = d$（常数）
+2. $a_n = pn + q$（$p,q$ 为常数，$p \ne 0$，即线性通项）
+3. $2a_{n+1} = a_n + a_{n+2}$（中间项等于两端平均）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：等差数列 ${a_n}$，$a_3=7, a_8=17$，求公差和通项公式。</p>
+<p><strong>解</strong>：$a_8-a_3=5d=10$，$d=2$，$a_1=a_3-2d=3$，$a_n=3+(n-1)\times2=2n+1$</p>
+<p><strong>例2</strong>：等差数列前 10 项和为 100，前 20 项和为 300，求前 30 项和。</p>
+<p><strong>解</strong>：$S_{10}=100$，$S_{20}-S_{10}=200$，$S_{30}-S_{20}=300$（等差数列性质）</p>
+<p>$S_{30}=100+200+300=600$</p>
+<p><strong>例3</strong>：$S_n = n^2 + 3n$，判断是否等差并求公差。</p>
+<p><strong>解</strong>：$a_n = S_n - S_{n-1} = n^2+3n - (n-1)^2-3(n-1) = 2n+2$（$n\ge2$）</p>
+<p>$a_1=S_1=4=2\times1+2$ ✓，$d = a_{n+1}-a_n = 2$（等差，公差 2）</p>
+<p><strong>例4</strong>：等差数列 ${a_n}$ 中，$a_1 &gt; 0, d &lt; 0$，$S_n$ 在哪一项达最大？</p>
+<p><strong>解</strong>：$S_n = \dfrac{n(a_1+a_n)}{2}$，当 $a_n &gt; 0, a_{n+1} &lt; 0$ 时 $S_n$ 最大。</p>
+<p>令 $a_n = a_1+(n-1)d \ge 0$，$n \le 1-\dfrac{a_1}{d} = 1+\dfrac{a_1}{|d|}$，最大整数 $n$ 即为所求。</p>
+<h3>易错点</h3>
+<ul>
+<li>$S_n = An^2 + Bn$ 型（无常数项）才是等差；$S_n=An^2+Bn+C$（$C\ne0$）对应等差数列的前 $n$ 项和<strong>加了常数</strong>，不是等差</li>
+<li>等差中项公式 $A=\dfrac{a+b}{2}$，只适用于三项成等差</li>
+<li>性质 $a_m+a_n=a_p+a_q$ 要求 $m+n=p+q$，不能随意使用</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第四章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第四章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/356-等差数列概念.html">等差数列概念</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/355-等差数列前n项和.html">等差数列前n项和</a></p>
+</li>
+<li>
+<p><a href="../atoms/356-等差数列概念.html">等差数列概念</a></p>
+</li>
+<li><a href="../atoms/355-等差数列前n项和.html">等差数列前n项和</a></li>
+<li><a href="../atoms/413-等比数列性质.html">等比数列性质</a></li>
+<li><a href="../atoms/384-数列通项公式.html">数列通项公式</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法-初步</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2013-理-20.html">2013-理-20</a></li>
+<li><a href="../exam/数学/2014-文-05.html">2014-文-05</a></li>
+<li><a href="../exam/数学/2015-文-05.html">2015-文-05</a></li>
+<li><a href="../exam/数学/2016-文-17.html">2016-文-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

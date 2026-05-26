@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列极限-初步</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列极限-初步</h1><div class="review-mark" data-stem="457-数列极限-初步"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第八章数列拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列极限-初步, sequence limit, 数列极限, 收敛数列</p><h2>🎓 数列极限（初步）</h2>
+<h3>直观定义</h3>
+<p>若当 $n$ 无限增大时，$a_n$ 无限接近某个常数 $L$，则称数列 ${a_n}$ <strong>收敛</strong>于 $L$，记作：</p>
+<p>$$\lim_{n\to\infty} a_n = L \quad \text{或} \quad a_n\to L \quad (n\to\infty)$$</p>
+<p>若数列不收敛，称其<strong>发散</strong>。</p>
+<blockquote>
+<p>严格定义（$\varepsilon$-$N$ 定义）：对任意 $\varepsilon&gt;0$，存在正整数 $N$，使得 $n&gt;N$ 时 $|a_n-L|&lt;\varepsilon$。（高中了解即可）</p>
+</blockquote>
+<h3>常见极限</h3>
+<table>
+<thead>
+<tr>
+<th>数列</th>
+<th>极限</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\dfrac{1}{n}$</td>
+<td>$0$</td>
+<td></td>
+</tr>
+<tr>
+<td>$\dfrac{1}{n^k}$（$k&gt;0$）</td>
+<td>$0$</td>
+<td></td>
+</tr>
+<tr>
+<td>$q^n$</td>
+<td>$0$</td>
+<td>$</td>
+</tr>
+<tr>
+<td>$q^n$</td>
+<td>发散（$\to\infty$）</td>
+<td>$</td>
+</tr>
+<tr>
+<td>$\left(1+\dfrac{1}{n}\right)^n$</td>
+<td>$e\approx 2.718$</td>
+<td>重要极限</td>
+</tr>
+<tr>
+<td>$\dfrac{a_n}{b_n}$</td>
+<td>$\dfrac{\lim a_n}{\lim b_n}$</td>
+<td>分母极限不为 $0$</td>
+</tr>
+</tbody>
+</table>
+<h3>极限的运算法则</h3>
+<p>若 $\lim a_n=A$，$\lim b_n=B$（$A,B$ 为有限数），则：</p>
+<p>$$\lim(a_n\pm b_n)=A\pm B, \quad \lim(a_n\cdot b_n)=AB, \quad \lim\frac{a_n}{b_n}=\frac{A}{B}(B\neq 0)$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $\lim_{n\to\infty}\dfrac{3n^2+2n-1}{5n^2+n+3}$</p>
+<p>分子分母同除 $n^2$：$\lim\dfrac{3+2/n-1/n^2}{5+1/n+3/n^2}=\dfrac{3+0-0}{5+0+0}=\dfrac{3}{5}$</p>
+<p><strong>例 2</strong> $\lim_{n\to\infty}\dfrac{1+2+\cdots+n}{n^2}=\lim_{n\to\infty}\dfrac{n(n+1)/2}{n^2}=\lim_{n\to\infty}\dfrac{n+1}{2n}=\dfrac{1}{2}$</p>
+<p><strong>例 3</strong> $\lim_{n\to\infty}\left(\dfrac{2}{3}\right)^n=0$（公比 $|2/3|&lt;1$）</p>
+<p><strong>例 4</strong> 等比数列求和极限：$\sum_{k=1}^{\infty}\left(\dfrac{1}{2}\right)^k=\dfrac{1/2}{1-1/2}=1$（无穷等比级数公式 $S=\dfrac{a}{1-q}$，$|q|&lt;1$）</p>
+<p><strong>例 5</strong> $\lim_{n\to\infty}\left(1+\dfrac{1}{n}\right)^n=e$（自然常数的定义之一）</p>
+<h3>数列极限与导数的联系</h3>
+<p>导数的定义本身就是一种极限：</p>
+<p>$$f'(x_0)=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}=\lim_{n\to\infty}\frac{f!\left(x_0+\frac{1}{n}\right)-f(x_0)}{1/n}$$</p>
+<p>两种极限（连续极限 $\Delta x\to 0$ 和数列极限 $n\to\infty$）本质上是同一个思想——无穷逼近。</p>
+<h3>数列极限存在的充分条件</h3>
+<ol>
+<li><strong>单调有界定理</strong>：单调递增且有上界 → 极限存在</li>
+<li><strong>夹逼定理</strong>：若 $b_n\leq a_n\leq c_n$ 且 $\lim b_n=\lim c_n=L$ → $\lim a_n=L$</li>
+</ol>
+<p><strong>例</strong>（夹逼）$\lim_{n\to\infty}\sin\dfrac{1}{n}=0$（因 $|\sin\dfrac{1}{n}|\leq\dfrac{1}{n}\to 0$）</p>
+<h3>易错点</h3>
+<ul>
+<li>数列 ${(-1)^n}$ 发散（在 $\pm 1$ 间跳动，无极限）</li>
+<li>数列 ${n}$：$\lim n=+\infty$，记为"发散到 $+\infty$"，不是收敛</li>
+<li>极限的运算法则要求两个数列都收敛到有限值时才能拆开</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第八章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/数列极限</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">数列与函数</a> · <a href="../atoms/455-数列单调性.html">数列单调性</a> · <a href="../atoms/441-导数的概念.html">导数的概念</a> · <a href="../atoms/463-瞬时变化率.html">瞬时变化率</a> · <a href="../atoms/461-洛必达法则-初步.html">洛必达法则-初步</a> · <a class="dead" title="未收录">数列求和综合</a> · <a href="../atoms/415-Sn与an关系.html">Sn与an关系</a></p>
+</div>
+</body>
+</html>

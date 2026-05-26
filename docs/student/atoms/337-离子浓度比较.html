@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离子浓度比较</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离子浓度比较</h1><div class="review-mark" data-stem="337-离子浓度比较"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离子浓度比较, comparison of ion concentrations, 离子浓度大小比较</p><h1>离子浓度比较</h1>
+<blockquote>
+<p><strong>一句话</strong>：分析溶液中各离子浓度大小关系，需综合考虑完全电离、弱电解质电离、水解、$K_w$ 等因素。
+<strong>English</strong>: Comparing ion concentrations in solution requires considering complete ionization of strong electrolytes, partial ionization of weak ones, hydrolysis, and Kw.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>离子浓度比较</strong>是高中化学的核心难点题型，需掌握以下分析框架：</p>
+<ol>
+<li><strong>强电解质完全电离</strong>（NaCl → Na⁺ + Cl⁻）</li>
+<li><strong>弱电解质部分电离</strong>（CH₃COOH ⇌ CH₃COO⁻ + H⁺）</li>
+<li><strong>盐类水解</strong>（CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻）</li>
+<li><strong>水的电离</strong>（$[\text{H}^+][\text{OH}^-] = K_w$，任何溶液中都成立）</li>
+<li><strong>电荷守恒</strong>（所有溶液中正负离子电荷守恒）</li>
+<li><strong>质量守恒</strong>（元素守恒）</li>
+</ol>
+<h3>公式 / 方程式</h3>
+<p><strong>电荷守恒</strong>（charge balance）：溶液中正离子所带电荷总量 = 负离子所带电荷总量。</p>
+<p><strong>质量守恒</strong>（mass balance）：元素的总量（以所有形式）守恒。</p>
+<p>典型溶液分析：</p>
+<p><strong>（一）0.1 mol/L CH₃COONa（强碱弱酸盐）</strong></p>
+<p>离子浓度大小：$[\text{Na}^+] &gt; [\text{CH}_3\text{COO}^-] &gt; [\text{OH}^-] &gt; [\text{H}^+]$</p>
+<p>推理：
+- Na⁺ 完全电离，浓度 = 0.1 mol/L（最大）
+- CH₃COO⁻ 水解一部分，浓度略低于 Na⁺
+- 水解产生 OH⁻，溶液显碱性，[OH⁻] &gt; [H⁺]</p>
+<p><strong>（二）0.1 mol/L NH₄Cl（强酸弱碱盐）</strong></p>
+<p>$[\text{Cl}^-] &gt; [\text{NH}_4^+] &gt; [\text{H}^+] &gt; [\text{OH}^-]$</p>
+<p><strong>（三）0.1 mol/L CH₃COOH + 0.1 mol/L CH₃COONa（缓冲溶液）</strong></p>
+<p>$[\text{Na}^+] \approx [\text{CH}_3\text{COO}^-] &gt; [\text{CH}_3\text{COOH}] &gt; [\text{H}^+] &gt; [\text{OH}^-]$</p>
+<p><strong>（四）混合溶液特殊情况</strong></p>
+<p>NaHCO₃ 溶液（两性离子）：</p>
+<ul>
+<li>HCO₃⁻ 电离：$K_{a2} = 4.7 \times 10^{-11}$</li>
+<li>HCO₃⁻ 水解：$K_h = K_w/K_{a1} = 10^{-14}/4.3 \times 10^{-7} = 2.3 \times 10^{-8}$</li>
+<li>$K_h &gt; K_{a2}$，水解 &gt; 电离，溶液显<strong>碱性</strong></li>
+<li>离子浓度：$[\text{Na}^+] &gt; [\text{HCO}_3^-] &gt; [\text{OH}^-] &gt; [\text{CO}_3^{2-}] &gt; [\text{H}^+]$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例</strong>：将 0.1 mol/L 盐酸与 0.1 mol/L 氨水等体积混合，写出各离子浓度大小顺序。</p>
+<p>反应生成 NH₄Cl，NH₄⁺ 水解使溶液显酸性：</p>
+<p>$[\text{Cl}^-] &gt; [\text{NH}_4^+] &gt; [\text{H}^+] &gt; [\text{OH}^-]$</p>
+<p>电荷守恒验证：$[\text{Cl}^-] + [\text{OH}^-] = [\text{NH}_4^+] + [\text{H}^+]$（成立）</p>
+<h3>易错点</h3>
+<ul>
+<li>任何溶液中 $[\text{H}^+][\text{OH}^-] = K_w$，两者不可能同时为零</li>
+<li>"碱性溶液中 $[\text{H}^+] &gt; 0$"——虽小，但不为零</li>
+<li>电荷守恒中，带多个电荷的离子要乘以系数（如 SO₄²⁻ 的系数为 2）</li>
+<li>弱酸盐溶液中，弱酸根的浓度 &gt; 水解后产生的弱酸浓度（水解程度小）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>离子浓度比较</td>
+<td>comparison of ion concentrations</td>
+</tr>
+<tr>
+<td>电荷守恒</td>
+<td>charge balance</td>
+</tr>
+<tr>
+<td>质量守恒</td>
+<td>mass balance</td>
+</tr>
+<tr>
+<td>两性离子</td>
+<td>amphoteric ion</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>In any aqueous solution, the charge balance equation must hold: Σ(positive charges) = Σ(negative charges).（在任何水溶液中，电荷守恒方程必须成立：正电荷总量 = 负电荷总量。）</li>
+<li>For sodium acetate solution: [Na⁺] &gt; [CH₃COO⁻] &gt; [OH⁻] &gt; [H⁺].（醋酸钠溶液中：[Na⁺] &gt; [CH₃COO⁻] &gt; [OH⁻] &gt; [H⁺]。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"化学平衡"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/336-盐类水解.html">盐类水解</a></li>
+<li><a href="../atoms/334-电离平衡.html">电离平衡</a></li>
+<li><a href="../atoms/338-离子积常数Kw.html">离子积常数Kw</a></li>
+<li><a href="../atoms/339-缓冲溶液.html">缓冲溶液</a></li>
+<li><a class="dead" title="未收录">多元弱酸分步电离</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2014-新课标Ⅱ-05.html">2014-新课标Ⅱ-05</a></li>
+<li><a class="dead" title="未收录">2019-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2021-湖南-09</a></li>
+<li><a class="dead" title="未收录">2024-湖南-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

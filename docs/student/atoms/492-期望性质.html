@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>期望性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>期望性质</h1><div class="review-mark" data-stem="492-期望性质"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 期望性质, properties of expectation, 数学期望性质, 期望运算法则</p><h2>🎓 期望性质</h2>
+<h3>核心性质</h3>
+<p>设 $X, Y$ 为随机变量，$a, b, c$ 为常数：</p>
+<p><strong>性质 1（常数的期望）</strong>：</p>
+<p>$$E(c) = c$$</p>
+<p>（常数的期望就是常数本身）</p>
+<p><strong>性质 2（线性变换）</strong>：</p>
+<p>$$E(aX + b) = aE(X) + b$$</p>
+<p><strong>性质 3（期望的线性性）</strong>：</p>
+<p>$$E(X + Y) = E(X) + E(Y)$$</p>
+<p>（无论 $X, Y$ 是否独立，此式恒成立）</p>
+<p><strong>性质 4（独立乘积）</strong>：</p>
+<p>$$E(XY) = E(X) \cdot E(Y) \quad \text{（$X, Y$ 相互独立时）}$$</p>
+<h3>推论</h3>
+<p>$$E(aX + bY + c) = aE(X) + bE(Y) + c$$</p>
+<p>$$E\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n E(X_i)$$</p>
+<h3>性质的直观理解</h3>
+<p><strong>线性变换</strong>：若 $X$ 表示气温（℃），$Y = \frac{9X}{5} + 32$ 为华氏温度，则</p>
+<p>$$E(Y) = \frac{9}{5}E(X) + 32$$</p>
+<p>均值也做同样的线性变换，很自然。</p>
+<p><strong>期望的线性性</strong>：若今天销售额 $X$ 和明天销售额 $Y$ 各有分布，则两天总销售额 $X+Y$ 的期望就是两天期望之和——即使两天的销售额有关联（如天气影响），此式仍成立。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$E(X) = 2$，求 $E(3X - 4)$。</p>
+<p>$$E(3X - 4) = 3E(X) - 4 = 3 \times 2 - 4 = 2$$</p>
+<p><strong>例2</strong>：$X$ 的分布列如下，$Y = X^2 - 1$，求 $E(Y)$。</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.3</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解法一</strong>（先求 $E(X^2)$ 再用线性性）：</p>
+<p>$$E(X^2) = (-1)^2 \times 0.2 + 0^2 \times 0.3 + 1^2 \times 0.3 + 2^2 \times 0.2$$
+$$= 0.2 + 0 + 0.3 + 0.8 = 1.3$$</p>
+<p>$$E(Y) = E(X^2 - 1) = E(X^2) - 1 = 1.3 - 1 = 0.3$$</p>
+<p>注意：$E(X^2 - 1) = E(X^2) - 1$（$-1$ 是常数），但 $E(X^2) \neq [E(X)]^2$！</p>
+<p>验证 $E(X) = (-1)(0.2) + 0(0.3) + 1(0.3) + 2(0.2) = -0.2 + 0 + 0.3 + 0.4 = 0.5$，
+$[E(X)]^2 = 0.25 \neq 1.3 = E(X^2)$。</p>
+<p><strong>例3（独立变量之和）</strong>：$X \sim B(5, 0.3)$，$Y \sim B(3, 0.4)$，$X, Y$ 独立，求 $E(2X + Y - 1)$。</p>
+<p>$$E(X) = 5 \times 0.3 = 1.5, \quad E(Y) = 3 \times 0.4 = 1.2$$</p>
+<p>$$E(2X + Y - 1) = 2 \times 1.5 + 1.2 - 1 = 3 + 1.2 - 1 = 3.2$$</p>
+<h3>性质 3 的证明（简要）</h3>
+<p>设 $X, Y$ 取有限个值，</p>
+<p>$$E(X+Y) = \sum_{i,j}(x_i+y_j)P(X=x_i, Y=y_j)$$
+$$= \sum_{i,j}x_i P(X=x_i, Y=y_j) + \sum_{i,j}y_j P(X=x_i, Y=y_j)$$
+$$= \sum_i x_i P(X=x_i) + \sum_j y_j P(Y=y_j) = E(X) + E(Y) \; \checkmark$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$E(X^2) \neq [E(X)]^2$</strong>：二者一般不等，差值就是方差 $D(X) = E(X^2) - [E(X)]^2 \geq 0$</li>
+<li><strong>非独立时 $E(XY) \neq E(X)E(Y)$</strong>：独立是乘积期望分解的前提</li>
+<li><strong>常数的处理</strong>：$E(aX+b) = aE(X)+b$，$b$ 直接加，不乘以概率</li>
+<li><strong>符号不要丢</strong>：若 $a$ 为负，$E(aX+b) = aE(X)+b$ 中 $a$ 要保留负号</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/期望值">数学期望 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/501-离散型随机变量期望.html">离散型随机变量期望</a></li>
+<li><a href="../atoms/500-离散型随机变量方差.html">离散型随机变量方差</a></li>
+<li><a href="../atoms/490-方差性质-高中.html">方差性质-高中</a></li>
+<li><a class="dead" title="未收录">二项分布期望方差</a></li>
+<li><a href="../atoms/476-分布列.html">分布列</a></li>
+</ul>
+</div>
+</body>
+</html>

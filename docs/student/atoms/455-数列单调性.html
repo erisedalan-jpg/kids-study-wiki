@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列单调性</h1><div class="review-mark" data-stem="455-数列单调性"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第八章数列拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列单调性, monotone sequence, 数列递增递减</p><h2>🎓 数列单调性</h2>
+<h3>定义</h3>
+<p>数列 ${a_n}$：</p>
+<ul>
+<li><strong>单调递增</strong>：对所有 $n\in\mathbb{N}^*$，有 $a_{n+1}&gt;a_n$</li>
+<li><strong>单调递减</strong>：对所有 $n\in\mathbb{N}^*$，有 $a_{n+1}&lt;a_n$</li>
+<li><strong>非严格递增</strong>：$a_{n+1}\geq a_n$</li>
+<li><strong>最终单调</strong>：从某个 $N$ 项起单调</li>
+</ul>
+<h3>判断方法</h3>
+<p><strong>方法 1：差值法</strong></p>
+<p>计算 $a_{n+1}-a_n$：</p>
+<ul>
+<li>$&gt;0$ → 递增</li>
+<li>$&lt;0$ → 递减</li>
+<li>$=0$ → 常数列</li>
+</ul>
+<p><strong>方法 2：比值法</strong>（各项同号时）</p>
+<p>计算 $\dfrac{a_{n+1}}{a_n}$：</p>
+<ul>
+<li>$&gt;1$ → 递增（各项正时）</li>
+<li>$&lt;1$ → 递减（各项正时）</li>
+</ul>
+<p><strong>方法 3：函数导数法</strong></p>
+<p>若 $a_n=f(n)$（$n\in\mathbb{N}^*$），分析连续函数 $f(x)$ 的单调性：</p>
+<ul>
+<li>$f'(x)&gt;0$（$x\geq 1$）→ 数列递增</li>
+<li>$f'(x)&lt;0$（$x\geq 1$）→ 数列递减</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 判断 $a_n=\dfrac{n}{n+1}$ 的单调性。</p>
+<p>$a_{n+1}-a_n=\dfrac{n+1}{n+2}-\dfrac{n}{n+1}=\dfrac{(n+1)^2-n(n+2)}{(n+2)(n+1)}=\dfrac{n^2+2n+1-n^2-2n}{(n+2)(n+1)}=\dfrac{1}{(n+2)(n+1)}&gt;0$</p>
+<p>数列单调递增。</p>
+<p><strong>例 2</strong> 判断 $a_n=\dfrac{2^n}{n!}$ 的单调性（$n$ 足够大后）。</p>
+<p>$\dfrac{a_{n+1}}{a_n}=\dfrac{2^{n+1}/(n+1)!}{2^n/n!}=\dfrac{2}{n+1}$</p>
+<p>$n\geq 2$ 时，$\dfrac{2}{n+1}&lt;1$（$n+1\geq 3&gt;2$），故 $n\geq 2$ 时 $a_{n+1}&lt;a_n$（单调递减）。</p>
+<p>$n=1$：$a_1=2$，$a_2=2$（相等），$n=2$：$a_2=2&gt;a_3=\dfrac{4}{6}=\dfrac{2}{3}$（开始递减）。</p>
+<p><strong>例 3</strong> 含参数的单调性：$a_n=n^2-4n+c$，若数列 ${a_n}$（$n\geq 1$）单调递增，求 $c$。</p>
+<p>$a_{n+1}-a_n=(n+1)^2-4(n+1)+c-(n^2-4n+c)=2n-3$</p>
+<p>要使对所有 $n\geq 1$ 单调递增，需 $2n-3&gt;0$，即 $n&gt;\dfrac{3}{2}$，对 $n=1$：$2(1)-3=-1&lt;0$，递减！</p>
+<p>故无论 $c$ 取何值，$n=1$ 到 $n=2$ 递减。若改为从 $n\geq 2$ 起单调递增，则 $a_{n+1}-a_n=2n-3&gt;0$（$n\geq 2$ 时 $2n-3\geq 1&gt;0$），条件自动满足，$c$ 可取任意值。</p>
+<p><strong>例 4</strong>（导数法）$a_n=n\cdot\left(\dfrac{2}{3}\right)^n$，判断单调性。</p>
+<p>对应 $f(x)=x\cdot\left(\dfrac{2}{3}\right)^x=xe^{x\ln(2/3)}$</p>
+<p>$f'(x)=e^{x\ln(2/3)}+x\ln\left(\dfrac{2}{3}\right)e^{x\ln(2/3)}=\left(\dfrac{2}{3}\right)^x\left[1+x\ln\dfrac{2}{3}\right]$</p>
+<p>$f'(x)&lt;0$ 当 $1+x\ln\dfrac{2}{3}&lt;0$，即 $x&gt;\dfrac{1}{-\ln(2/3)}=\dfrac{1}{\ln(3/2)}\approx 2.47$</p>
+<p>故 $n\geq 3$ 时数列递减，$n=1,2$ 时可能递增（需检验：$a_1=2/3$，$a_2=8/9&gt;a_1$，递增；$a_2=8/9$，$a_3=3\cdot(2/3)^3=3\cdot 8/27=8/9=a_2$，相等；$a_4&lt;a_3$）。</p>
+<h3>有界单调数列必有极限</h3>
+<p>若数列单调递增且有上界，则极限存在（单调有界定理）——这是数列极限存在的重要判据。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第八章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/数列</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">数列与函数</a> · <a href="../atoms/457-数列极限-初步.html">数列极限-初步</a> · <a href="../atoms/415-Sn与an关系.html">Sn与an关系</a> · <a href="../atoms/453-数列不等式证明.html">数列不等式证明</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a class="dead" title="未收录">数列求和综合</a> · <a href="../atoms/459-数列的应用.html">数列的应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2014-理-20.html">2014-理-20</a></li>
+<li><a class="dead" title="未收录">2020-北京-08</a></li>
+<li><a class="dead" title="未收录">2022-北京-15</a></li>
+<li><a href="../exam/数学/2022-理-04.html">2022-理-04</a></li>
+<li><a class="dead" title="未收录">2023-北京-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

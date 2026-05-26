@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>组合应用-分组问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>组合应用-分组问题</h1><div class="review-mark" data-stem="503-组合应用-分组问题"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 组合应用-分组问题, grouping combination, 分组问题, 分配问题</p><h2>🎓 组合应用-分组问题</h2>
+<h3>问题类型</h3>
+<p><strong>分组问题</strong>：将 $n$ 个不同元素分成若干组，根据各组是否有标签（有序/无序）以及每组人数是否相等，方法有所不同。</p>
+<h3>四种基本情形</h3>
+<h4>情形 1：各组人数不等（有标签/有序）</h4>
+<p>各组本身有区别（如甲组、乙组），直接连续用组合数：</p>
+<p>$$N = C_n^{k_1} \times C_{n-k_1}^{k_2} \times C_{n-k_1-k_2}^{k_3} \times \cdots = \frac{n!}{k_1! k_2! k_3! \cdots}$$</p>
+<p><strong>例</strong>：8 人分为 3 组（甲组 3 人，乙组 3 人，丙组 2 人）：</p>
+<p>$$N = C_8^3 \times C_5^3 \times C_2^2 = 56 \times 10 \times 1 = 560 \text{ 种}$$</p>
+<h4>情形 2：各组人数相等（无标签/无序）</h4>
+<p>各组之间无区别（只分组不命名），需<strong>除以组数的全排列</strong>消除重复：</p>
+<p>$$N = \frac{C_n^k \times C_{n-k}^k \times \cdots}{t!}$$</p>
+<p>其中 $t$ 为等人数组的组数。</p>
+<p><strong>例</strong>：6 人均分为 3 组（无标签）：</p>
+<p>$$N = \frac{C_6^2 \times C_4^2 \times C_2^2}{3!} = \frac{15 \times 6 \times 1}{6} = 15 \text{ 种}$$</p>
+<h4>情形 3：各组人数相等（有标签/有序）</h4>
+<p>各组有区别（如三个任务组），不需要除以 $t!$：</p>
+<p>$$N = C_n^k \times C_{n-k}^k \times \cdots \quad \text{（不除 } t!\text{）}$$</p>
+<p><strong>例</strong>：6 人分配到三个任务组（每组 2 人，各组有区别）：</p>
+<p>$$N = C_6^2 \times C_4^2 \times C_2^2 = 15 \times 6 \times 1 = 90 \text{ 种}$$</p>
+<h4>情形 4：各组人数不等（无标签）</h4>
+<p>各组无区别，但人数不同，由于人数不同，自然不同，直接计算（各组人数不等时无需除以 $t!$）。</p>
+<h3>典型例题</h3>
+<p><strong>例1（不等分有序）</strong>：10 人分三组，第一组 4 人，第二组 3 人，第三组 3 人，共有多少种分法？</p>
+<p>$$N = C_{10}^4 \times C_6^3 \times C_3^3 = 210 \times 20 \times 1 = 4200 \text{ 种}$$</p>
+<p>（三组有标签，不需除以任何数）</p>
+<p><strong>例2（等分无序）</strong>：6 人均分 3 组（无组别标签），有多少种分法？</p>
+<p>$$N = \frac{C_6^2 \times C_4^2 \times C_2^2}{3!} = \frac{15 \times 6 \times 1}{6} = 15 \text{ 种}$$</p>
+<p><strong>例3（等分有序再分配）</strong>：9 人分 3 组，每组 3 人，然后每组分别派往 A、B、C 三地，有多少种方案？</p>
+<ul>
+<li>先分组（无序）：$\dfrac{C_9^3 \times C_6^3 \times C_3^3}{3!} = \dfrac{84 \times 20 \times 1}{6} = 280$</li>
+<li>再分配到三地（3 组到 3 地的全排列）：$3! = 6$</li>
+</ul>
+<p>$$N = 280 \times 6 = 1680 \text{ 种}$$</p>
+<p>（等价于直接有序分组：$C_9^3 \times C_6^3 \times C_3^3 = 1680$）</p>
+<h3>判断是否需要除以 $t!$</h3>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>各组有无标签</th>
+<th>是否除 $t!$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分组后再分配（赋予名称）</td>
+<td>有标签</td>
+<td>否</td>
+</tr>
+<tr>
+<td>纯分组（各组无区别）</td>
+<td>无标签</td>
+<td>是（等人数时）</td>
+</tr>
+<tr>
+<td>分组人数不同</td>
+<td>无论如何</td>
+<td>否（人数不同已区分）</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>忘记除以 $t!$</strong>：等人数无序分组，重复计算了各组的排列顺序</li>
+<li><strong>错误地除以 $t!$</strong>：有标签（各组有区别）时不应除</li>
+<li><strong>先分组再排列</strong>：若分组后还需排列，乘以额外的 $t!$（与无序分组再赋序等价）</li>
+<li><strong>人数不等时不需除</strong>：各组人数不同时，各组本身已通过人数区分，无需除以系数</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.3，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/组合">组合 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/505-组合概念.html">组合概念</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+<li><a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+</ul>
+</div>
+</body>
+</html>

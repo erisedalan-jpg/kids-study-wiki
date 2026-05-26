@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>临界条件分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>临界条件分析</h1><div class="review-mark" data-stem="507-临界条件分析"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 临界条件分析</p><h1>临界条件分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：临界条件分析是指寻找物理过程中某一状态参量恰好发生突变或运动形式发生质变的转折点，并利用此时“恰好满足”的特殊等量关系来求解极值或边界问题的方法。
+<strong>English</strong>: Critical condition analysis is the method of identifying the turning point at which a physical quantity abruptly changes or motion qualitatively transforms, and using the exact equality that holds at that moment to solve extreme‑value or boundary problems.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+临界条件是系统从一种物理状态向另一种物理状态过渡的边界。在临界点，某些力、加速度或速度恰好达到最大值、最小值，或恰好满足等式。核心思路是“抓住临界，列出等式”。常见临界类型包括：
+- 静摩擦力达到最大值：$f_{\text{静}} = \mu_s N$
+- 绳恰好伸直但张力为零：$T=0$
+- 接触面恰好分离：弹力 $N=0$
+- 物体在竖直平面内做圆周运动恰好过最高点：在最高点只有重力提供向心力，$mg = m\frac{v^2}{R}$
+- 两个物体恰好相对滑动：加速度相等且静摩擦力达到最大静摩擦力。</p>
+<p><strong>关键方法</strong>
+1. <strong>确定临界状态</strong>：找出系统将要发生变化却又尚未发生的那一瞬间（如“恰好”“刚好”“最大”等词语提示）。
+2. <strong>写出临界方程</strong>：在临界状态下，某些物理量满足的特殊关系式。例如分离时弹力为零；相对滑动时 $a$ 相同但静摩擦力达到 $\mu_s N$。
+3. <strong>结合运动学/动力学方程联立求解</strong>：利用牛顿第二定律或能量守恒建立联立方程，解出所求未知量。</p>
+<p><strong>典型应用</strong>
+高考常以选择题或计算题形式考查，如：
+- <strong>恰好不脱离圆轨道</strong>：求释放高度或初速度。关键是最高点 $N=0$，$mg = m v^2/R$。
+- <strong>物体在传送带上恰好不划出</strong>：分析共速时刻是否已到终点，临界为到达终点时恰好共速。
+- <strong>板块模型中的相对滑动临界</strong>：施加在滑块或木板上的力 $F$ 增大到多少时两者开始相对滑动，临界方程为 $F = \mu (M+m)g$ 或类似变形。
+- <strong>绳断临界</strong>：绳中张力等于最大承受力 $T_{\text{max}}$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“恰好分离”与“恰好相对静止”</strong>：分离的临界是弹力为零，而相对滑动的临界是静摩擦力达到最大值且加速度相等；错把相对静止当成无摩擦。</li>
+<li><strong>临界条件只写一个方程</strong>：有些问题需要同时满足受力平衡与运动学约束，例如杆转动临界既要满足力矩平衡又要满足几何条件，遗漏方程会导致错解。</li>
+<li><strong>忽视方向性</strong>：在圆周运动最高点临界，学生常忘记力的方向，错误地将“重力与弹力同向”的条件用于恰好过最高点，而实际可能是仅有重力。</li>
+<li><strong>把“刚好不发生”当作任意平衡状态</strong>：如靠摩擦力提供的向心力临界为 $\mu mg = m\omega^2 r$，但许多学生忽略此时摩擦力已达到最大值，误用普通静摩擦力进行计算。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>临界条件</td>
+<td>Critical Condition</td>
+<td>状态发生突变的转折条件</td>
+</tr>
+<tr>
+<td>恰好分离</td>
+<td>Just Separating</td>
+<td>弹力减为零的瞬间</td>
+</tr>
+<tr>
+<td>最大静摩擦力</td>
+<td>Maximum Static Friction</td>
+<td>$f_{\text{max}}=\mu_s N$</td>
+</tr>
+<tr>
+<td>临界速度</td>
+<td>Critical Velocity</td>
+<td>满足临界条件时的特定速度</td>
+</tr>
+<tr>
+<td>恰好不脱离</td>
+<td>Just Not Losing Contact</td>
+<td>轨道压力/弹力为零的临界</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订）“相互作用与运动规律”“曲线运动与万有引力定律”等主题（🚧）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">牛顿运动定律应用</a></li>
+<li><a href="../atoms/081-摩擦力.html">摩擦力</a></li>
+<li><a href="../atoms/258-圆周运动.html">圆周运动</a></li>
+<li><a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><a class="dead" title="未收录">分离条件</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-18.html">2016-新课标Ⅱ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

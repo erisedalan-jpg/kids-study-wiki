@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>漏电保护器</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>漏电保护器</h1><div class="review-mark" data-stem="149-漏电保护器"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十九章生活用电]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 漏电保护器, residual current device, RCD, 漏电开关</p><h1>漏电保护器</h1>
+<blockquote>
+<p><strong>一句话</strong>：漏电保护器检测电路漏电电流，当漏电超过30mA时在0.1秒内自动断电，防止触电事故，是保护人身安全的重要装置。
+<strong>English</strong>: A residual current device (RCD) detects leakage current; when leakage exceeds 30mA, it cuts off power within 0.1 seconds to prevent electric shock injuries.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>漏电保护器</strong>是家里最重要的安全装置！</p>
+<p><strong>它能保护什么？</strong>
+当有人触电或者电器漏电时，它能在<strong>0.1秒内</strong>切断电源，防止触电事故。</p>
+<p><strong>工作原理（简单版）：</strong>
+- 正常时：流入电器的电流 = 流出电器的电流（火线电流 = 零线电流）
+- 漏电时：有一部分电流"跑"到地里了（比如通过人体），火线电流 ≠ 零线电流
+- 漏电保护器检测到这个<strong>差值（漏电流）</strong>超过30毫安，立刻断电！</p>
+<p><strong>如何测试漏电保护器是否正常？</strong>
+按一下测试按钮（TEST）：如果保护器跳闸，说明正常；如果没反应，可能坏了，需要更换！</p>
+<p><strong>建议每月测试一次。</strong></p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>工作原理</h3>
+<p><strong>互感器原理</strong>：</p>
+<p>漏电保护器内有一个环形磁芯，火线（L）和零线（N）穿过磁芯：</p>
+<ul>
+<li>
+<p><strong>正常情况</strong>：$I_L = I_N$（大小相等，方向相反），在磁芯中产生的磁通量相互抵消，感应线圈中无感应电流。</p>
+</li>
+<li>
+<p><strong>漏电情况</strong>：$I_L \neq I_N$（差值 = 漏电电流 $I_{漏}$），磁通量不能抵消，感应线圈产生感应电流，触发脱扣机构，断路。</p>
+</li>
+</ul>
+<p>$$I_{漏} = I_L - I_N$$</p>
+<h3>技术参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>典型值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>额定动作电流（$I_{\Delta n}$）</td>
+<td>30 mA（人身安全型）；300 mA（防火型）</td>
+</tr>
+<tr>
+<td>额定不动作电流</td>
+<td>$\leq 0.5 I_{\Delta n}$（正常不跳闸）</td>
+</tr>
+<tr>
+<td>动作时间</td>
+<td>$\leq 0.1$ s（30mA时）</td>
+</tr>
+<tr>
+<td>额定电压</td>
+<td>220 V 或 380 V</td>
+</tr>
+<tr>
+<td>极数</td>
+<td>2P（单相）或 4P（三相）</td>
+</tr>
+</tbody>
+</table>
+<h3>30 mA 的依据</h3>
+<p>通过人体的电流与危险程度：
+- 1 mA：有轻微感觉
+- 10 mA：难以摆脱（安全阈值上限）
+- 30 mA：心脏可能出现纤颤（危险）
+- 100 mA：通常致命</p>
+<p>选择 <strong>30 mA</strong> 是因为：
+- 低于此值时，健康成年人能承受（但仍应避免）
+- 高于此值则有生命危险
+- 0.1 s 内断电，确保在心室纤颤发生前切断电源</p>
+<h3>安装位置</h3>
+<ol>
+<li><strong>进户总开关后</strong>（保护整个户内电路）</li>
+<li><strong>卫生间回路</strong>（潮湿环境，漏电风险高）</li>
+<li><strong>厨房回路</strong>（接触水的可能性大）</li>
+<li><strong>室外插座</strong>（雨水导致漏电）</li>
+</ol>
+<h3>漏电保护器的局限性</h3>
+<ul>
+<li>只能保护"单相触电"（一只手接触火线，脚踩大地）</li>
+<li><strong>不能保护</strong>"双线触电"（两手同时接触火线和零线，电流不经地线）</li>
+<li>不能代替接地保护（三线制仍然必要）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某人触电，通过人体的电流为 50 mA，漏电保护器动作电流为 30 mA，动作时间为 0.08 s。触电后漏电保护器会动作吗？说明理由及对人体的影响。</p>
+<p><strong>解</strong>：50 mA &gt; 30 mA（额定动作电流），漏电保护器会在 0.08 s（&lt; 0.1 s）内断电。</p>
+<p>对人体影响：50 mA 电流通过人体约 0.08 s，可能引起明显痛感和肌肉痉挛，但在漏电保护器及时切断后，一般不会造成致命伤害（比不装漏电保护器要安全得多）。</p>
+<p><strong>易错点：</strong>
+- 漏电保护器保护人身安全，空气开关保护电路（导线/电器），功能不同
+- 漏电保护器是对现有安全措施的<strong>补充</strong>，不能替代正确的接线（如地线）
+- 每月定期测试，确保其功能正常</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>漏电保护器</td>
+<td>residual current device (RCD)</td>
+<td>n.</td>
+<td>Install an RCD in bathroom circuits for safety.</td>
+</tr>
+<tr>
+<td>漏电电流</td>
+<td>leakage current / residual current</td>
+<td>n.</td>
+<td>RCD trips when residual current exceeds 30 mA.</td>
+</tr>
+<tr>
+<td>动作时间</td>
+<td>tripping time</td>
+<td>n.</td>
+<td>The RCD trips within 0.1 seconds.</td>
+</tr>
+<tr>
+<td>额定动作电流</td>
+<td>rated residual current</td>
+<td>n.</td>
+<td>The rated residual current is 30 mA.</td>
+</tr>
+<tr>
+<td>互感器</td>
+<td>current transformer</td>
+<td>n.</td>
+<td>The RCD uses a current transformer to detect leakage.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十九章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 安全用电</li>
+<li><strong>百科</strong>：维基百科"漏电断路器"；中文百科"剩余电流保护装置"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/137-家庭电路保险丝.html">家庭电路保险丝</a></li>
+<li><a href="../atoms/193-空气开关.html">空气开关</a></li>
+<li><a href="../atoms/136-家庭电路.html">家庭电路</a></li>
+<li><a href="../atoms/121-三线插头.html">三线插头</a></li>
+<li><a href="../atoms/134-安全用电.html">安全用电</a></li>
+<li><a class="dead" title="未收录">触电急救常识</a></li>
+</ul>
+</div>
+</body>
+</html>

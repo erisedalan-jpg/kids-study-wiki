@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遗传推断</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>遗传推断</h1><div class="review-mark" data-stem="716-遗传推断"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[遗传变异进化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 遗传推断, Genetic inference</p><h1>遗传推断</h1>
+<blockquote>
+<p><strong>一句话</strong>：遗传推断是根据亲代和子代的表现型、基因型及遗传规律，逆向推导未知个体的基因组成、基因位置及遗传方式的过程。
+<strong>English</strong>: Genetic inference is the process of deducing unknown genotypes, gene locations, and modes of inheritance based on parental and offspring phenotypes/genotypes and genetic principles.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：遗传推断以孟德尔分离定律和自由组合定律为基石，结合伴性遗传、连锁互换等规律，通过已知的杂交结果、系谱图或群体数据，反向确定显隐性关系、基因所在染色体类型（常染色体或性染色体）以及个体的基因型（如 AA、Aa、aa）。核心原理是基因在形成配子时的分离与组合行为，以及表现型=基因型+环境的逻辑链。</p>
+<p><strong>关键方法</strong>：
+1. <strong>判显隐性</strong>：利用“无中生有为隐性”（双亲正常生出患病子代）、“有中生无为显性”（双亲患病生出正常子代）的口诀，或通过杂交实验的子代比例（如 3:1）判断。
+2. <strong>定位基因</strong>：观察性状与性别关联性。若系谱中男性患者明显多于女性，且出现交叉遗传（外祖父→母亲→儿子）特征，优先考虑伴 X 隐性；若女性患者多于男性且世代连续，考虑伴 X 显性；若男女患病概率均等，则常染色体遗传可能性大。
+3. <strong>推导基因型</strong>：从隐性纯合突破，以隐性性状个体作为解题切入点（其基因型必为隐性纯合），再向上、向下推断亲代与子代的基因型，注意非完整写出的基因可用“A_”表示。
+4. <strong>概率计算</strong>：分别计算每对基因的传递概率，再应用乘法原理或加法原理得出最终结果，务必区分“患病男孩”与“男孩患病”概率。</p>
+<p><strong>典型应用</strong>：高考常以遗传系谱图分析题、杂交实验推断题出现。例如，给出某单基因遗传病系谱，问该病是常染色体隐性还是伴 X 隐性；或已知 F₁ 表现型及比例，让推断亲本基因型及是否符合自由组合定律。解题需写出推导过程、遗传图解（配子种类），并准确计算子代特定基因型或表现型的概率。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“男孩患病”与“患病男孩”概率</strong>：在伴性遗传计算中，“男孩患病”是在所有男孩中患病的概率，无需×1/2；“患病男孩”则是在所有子代中既患病又是男孩的概率，需考虑性别比例。</li>
+<li><strong>忽略致死效应与从性遗传</strong>：若题目隐含某些基因型不能存活（如显性纯合致死）或性状表现受性别影响，直接套用经典比例会导致全部错误。</li>
+<li><strong>基因位置判断时过度依赖口诀</strong>：如“无中生有”有时也可能出现在伴 X 隐性中（母病子必病、女病父必病），需进一步查看患者性别分布，否则会误判。</li>
+<li><strong>多对基因时未逐对分析</strong>：自由组合定律题中，直接套用 9:3:3:1 变形而未先逐对分离比判断，容易忽略基因互作（如 9:7、15:1 等），导致基因型和概率均错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基因型</td>
+<td>Genotype</td>
+<td>个体特定基因的等位组成，如 AA、Aa</td>
+</tr>
+<tr>
+<td>表现型</td>
+<td>Phenotype</td>
+<td>基因型与环境共同作用的表现性状</td>
+</tr>
+<tr>
+<td>伴性遗传</td>
+<td>Sex-linked inheritance</td>
+<td>基因位于性染色体上的遗传方式</td>
+</tr>
+<tr>
+<td>系谱图</td>
+<td>Pedigree chart</td>
+<td>表示家族各世代性状遗传的图谱</td>
+</tr>
+<tr>
+<td>隐性纯合</td>
+<td>Homozygous recessive</td>
+<td>一对隐性基因组成的个体，如 aa</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/477-基因分离定律.html">基因分离定律</a></li>
+<li><a href="../atoms/580-基因自由组合定律.html">基因自由组合定律</a></li>
+<li><a href="../atoms/276-伴性遗传.html">伴性遗传</a></li>
+<li><a href="../atoms/516-遗传系谱图分析.html">遗传系谱图分析</a></li>
+<li><a class="dead" title="未收录">遗传概率计算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/生物/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

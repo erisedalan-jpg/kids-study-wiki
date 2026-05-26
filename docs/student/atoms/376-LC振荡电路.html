@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LC振荡电路</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>LC振荡电路</h1><div class="review-mark" data-stem="376-LC振荡电路"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁振荡与电磁波]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: LC振荡电路, LC oscillation circuit, LC circuit</p><h2>🎓 LC 振荡电路（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>LC 振荡电路</strong>（LC circuit）是由电感 $L$ 和电容 $C$ 组成的闭合回路，是产生高频交变电流（电磁振荡）的基本元件。</p>
+<h3>电路结构</h3>
+<pre><code>    ┌───L（电感线圈）───┐
+    │                  │
+    └───C（电容器）────┘
+</code></pre>
+<p>实际振荡器还需配合放大器补充能量，维持等幅振荡。</p>
+<h3>核心参数</h3>
+<p><strong>固有频率（谐振频率）</strong>：</p>
+<p>$$f_0 = \frac{1}{2\pi\sqrt{LC}}$$</p>
+<p><strong>振荡周期</strong>：</p>
+<p>$$T = 2\pi\sqrt{LC}$$</p>
+<p>其中 $L$ 单位为亨利（H），$C$ 单位为法拉（F），$T$ 单位为秒（s），$f_0$ 单位为赫兹（Hz）。</p>
+<h3>能量分析</h3>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>电容</th>
+<th>电感（电流）</th>
+<th>电场能</th>
+<th>磁场能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$t=0$</td>
+<td>充满电 $Q_m$</td>
+<td>$I=0$</td>
+<td>最大</td>
+<td>0</td>
+</tr>
+<tr>
+<td>$t=T/4$</td>
+<td>$Q=0$</td>
+<td>$I=I_m$</td>
+<td>0</td>
+<td>最大</td>
+</tr>
+<tr>
+<td>$t=T/2$</td>
+<td>反向充满 $-Q_m$</td>
+<td>$I=0$</td>
+<td>最大</td>
+<td>0</td>
+</tr>
+<tr>
+<td>$t=3T/4$</td>
+<td>$Q=0$</td>
+<td>$I=-I_m$</td>
+<td>0</td>
+<td>最大</td>
+</tr>
+<tr>
+<td>$t=T$</td>
+<td>恢复初始</td>
+<td>$I=0$</td>
+<td>最大</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>能量关系：</p>
+<p>$$\frac{Q_m^2}{2C} = \frac{1}{2}LI_m^2 = W_{\text{总}}$$</p>
+<h3>谐振特性</h3>
+<p>当外加交流信号频率 = LC 电路固有频率时，发生<strong>谐振</strong>（共振），电路对该频率呈现最小阻抗（串联谐振）或最大阻抗（并联谐振）。</p>
+<p><strong>调谐原理</strong>（收音机）：改变电容 $C$（可变电容器），调节固有频率 $f_0 = 1/(2\pi\sqrt{LC})$ 与目标电台频率匹配，实现选台。</p>
+<h3>开放式 LC 回路 → 电磁波辐射</h3>
+<p>封闭 LC 回路几乎不辐射电磁波（能量局限在回路中）。将 LC 回路"展开"（电容两极板展开，电感变为直线天线），成为<strong>开放振荡回路</strong>，可高效向外辐射电磁波。</p>
+<p>赫兹（Hertz）正是通过这种开放回路首次人工产生并探测了电磁波（1888年）。</p>
+<h3>典型例题</h3>
+<p><strong>例1（求频率）</strong>：$L = 2.5\times10^{-3}$ H，$C = 10^{-8}$ F，求固有频率。</p>
+<p>$$f_0 = \frac{1}{2\pi\sqrt{LC}} = \frac{1}{2\pi\sqrt{2.5\times10^{-3}\times10^{-8}}} = \frac{1}{2\pi\times5\times10^{-6}} = \frac{10^6}{10\pi} \approx 31.8\text{ kHz}$$</p>
+<p><strong>例2（调谐问题）</strong>：某收音机 LC 回路中 $L = 4\times10^{-4}$ H，要接收 700 kHz 的电台，电容应调为多少？</p>
+<p>$$f = 700\text{ kHz} = 7\times10^5\text{ Hz}$$
+$$C = \frac{1}{(2\pi f)^2 L} = \frac{1}{(2\pi\times7\times10^5)^2\times4\times10^{-4}}$$
+$$= \frac{1}{4\pi^2\times4.9\times10^{11}\times4\times10^{-4}} \approx 1.3\times10^{-10}\text{ F} = 130\text{ pF}$$</p>
+<h3>易错点</h3>
+<ol>
+<li>$f_0 = 1/(2\pi\sqrt{LC})$ 中，$L$ 和 $C$ 的单位必须是 H 和 F，否则数值错误。</li>
+<li><strong>改变 $L$ 或 $C$ 都可以改变频率</strong>：增大 $L$ 或 $C$ → 频率减小，波长增大。</li>
+<li>振荡幅度（电压峰值、电流峰值）由<strong>初始储能</strong>决定，与 $f_0$ 无关。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第四章，页码待家长核对）</li>
+<li><strong>百科</strong>：LC 电路 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/414-远距离输电.html">远距离输电</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/176-电磁波.html">电磁波</a></p>
+</li>
+<li>
+<p><a href="../atoms/404-电磁振荡.html">电磁振荡</a></p>
+</li>
+<li><a class="dead" title="未收录">振荡周期与频率</a></li>
+<li><a href="../atoms/412-自感系数.html">自感系数</a></li>
+<li><a class="dead" title="未收录">电磁波-高中</a></li>
+<li><a class="dead" title="未收录">麦克斯韦电磁理论</a></li>
+<li><a class="dead" title="未收录">赫兹实验</a></li>
+<li><a class="dead" title="未收录">无线电通信原理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-北京-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

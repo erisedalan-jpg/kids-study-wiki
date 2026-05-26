@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数值域</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数值域</h1><div class="review-mark" data-stem="676-函数值域"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数值域, Range of a function, 函数的值域, 取值范围</p><h1>函数值域</h1>
+<blockquote>
+<p><strong>一句话</strong>：函数值域是所有自变量在定义域内取值时，对应函数值构成的集合。
+<strong>English</strong>: The range of a function is the set of all values that the function takes as the independent variable varies over its domain.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：对于函数 $f: A \to B$，值域 $R(f) = {f(x) \mid x \in A }$，它是集合 $B$ 的子集。值域由对应法则 $f$ 和定义域 $A$ 唯一确定。常见求值域问题最终要给出集合形式的答案，如 $[a,b]$、$(0,+\infty)$ 等。</p>
+<p><strong>关键方法</strong>：高考中求值域的核心思路是“由出因入”。标准方法包括：
+1. <strong>直接观察法</strong>：利用基本初等函数（一次、二次、反比例、指数、对数、三角）的固有值域，结合定义域截取。
+2. <strong>配方法</strong>：二次型函数 $f(x)=a(x-h)^2+k$，由顶点和开口得范围，特别注意给定区间上的“轴动区间定”或“轴定区间动”。
+3. <strong>分离常数/分离参数法</strong>：分式函数如 $\frac{cx+d}{ax+b}$ 化为形如 $p+\frac{q}{ax+b}$，由反比例部分求值域。
+4. <strong>换元法</strong>：含根式或复合结构时用换元简化，如 $y=ax+b+\sqrt{cx+d}$，令 $t=\sqrt{cx+d} \ge 0$，转化为二次型，<strong>必须标注新元取值范围</strong>。
+5. <strong>单调性法</strong>：判断函数在定义域上的单调性（导数工具），直接由端点值得出值域。
+6. <strong>判别式法</strong>：适用于 $y=\frac{a_1x^2+b_1x+c_1}{a_2x^2+b_2x+c_2}$ 型（分子分母至少一个二次），化关于 $x$ 的二次方程，利用 $\Delta \ge 0$ 且讨论二次项系数为零情况，<strong>必须回代检验分母不为零对应的 $y$ 值</strong>。</p>
+<p><strong>典型应用</strong>：高考常以小题或解答题第(1)问出现，设问如“求函数 $f(x)$ 的值域”“若 $f(x) \ge a$ 恒成立，求 $a$ 的取值范围”（等价于 $a \le \min f(x)$）。例如，求 $f(x)=x+\frac{1}{x}$ ($x&gt;0$) 的值域，利用基本不等式得 $[2,+\infty)$，易错在忘记验证等号成立条件 $x=1$。另一典型：$f(x)=\frac{2x+1}{x-3}$ 在 $[4,6]$ 上的值域，先用分离常数得 $f(x)=2+\frac{7}{x-3}$，由 $x-3\in[1,3]$ 得 $\frac{7}{x-3}\in[\frac73,7]$，故值域为 $[\frac{13}{3},9]$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视定义域</strong>：在变形或换元过程中忘记考虑原函数定义域对新变量的限制，例如根号下非负、分母不为零，导致值域扩大。</li>
+<li><strong>换元不标范围</strong>：令 $t=\sqrt{1-x^2}$ 时未标明 $t \in [0,1]$，使最后求出的值域涵盖负数部分。</li>
+<li><strong>使用判别式法不验证</strong>：未讨论二次项系数为零时函数退化为一次的情况；未将求出的 $y$ 值代回检验是否导致分母为零（出现增根），导致值域包含不可取值。</li>
+<li><strong>应用基本不等式不验证等号</strong>：如 $f(x)=x+\frac{4}{x}$ ($x\ge 3$) 误用基本不等式得 $[4,+\infty)$，实际上函数在 $[3,+\infty)$ 上单调递增，真实值域应为 $[\frac{13}{3},+\infty)$，忽略了等号在 $x=2$ 取到但不在定义域内。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>值域</td>
+<td>range</td>
+<td>函数所有可能的输出值集合</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>函数自变量的所有可能取值集合</td>
+</tr>
+<tr>
+<td>单调性</td>
+<td>monotonicity</td>
+<td>函数在给定区间上递增或递减的性质</td>
+</tr>
+<tr>
+<td>最值</td>
+<td>extremum (maximum/minimum)</td>
+<td>值域中的最大值或最小值</td>
+</tr>
+<tr>
+<td>换元法</td>
+<td>substitution method</td>
+<td>引入新变量简化函数结构的求值域方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">定义域</a></li>
+<li><a href="../atoms/419-函数最值-高中.html">函数最值</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">基本初等函数的值域</a></li>
+<li><a class="dead" title="未收录">不等式恒成立与存在性问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2014-文-07.html">2014-文-07</a></li>
+<li><a href="../exam/数学/2015-理-17.html">2015-理-17</a></li>
+<li><a href="../exam/数学/2016-文-10.html">2016-文-10</a></li>
+<li><a href="../exam/数学/2022-理-22.html">2022-理-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

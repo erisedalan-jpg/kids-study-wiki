@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛物线定义与方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>抛物线定义与方程</h1><div class="review-mark" data-stem="379-抛物线定义与方程"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 抛物线定义与方程, parabola definition and equation, 抛物线, 抛物线定义</p><h2>🎓 抛物线定义与方程</h2>
+<h3>定义</h3>
+<p><strong>抛物线</strong>：平面内到定点 $F$（焦点）和定直线 $l$（准线）距离<strong>相等</strong>的点的轨迹。</p>
+<p>$$|PF| = d(P, l)$$</p>
+<p>其中 $d(P, l)$ 表示点 $P$ 到直线 $l$ 的距离。</p>
+<h3>标准方程（四种）</h3>
+<p>设焦点到准线距离为 $p &gt; 0$（焦准距），则：</p>
+<table>
+<thead>
+<tr>
+<th>开口方向</th>
+<th>方程</th>
+<th>焦点</th>
+<th>准线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向右</td>
+<td>$y^2 = 2px$</td>
+<td>$\left(\dfrac{p}{2}, 0\right)$</td>
+<td>$x = -\dfrac{p}{2}$</td>
+</tr>
+<tr>
+<td>向左</td>
+<td>$y^2 = -2px$</td>
+<td>$\left(-\dfrac{p}{2}, 0\right)$</td>
+<td>$x = \dfrac{p}{2}$</td>
+</tr>
+<tr>
+<td>向上</td>
+<td>$x^2 = 2py$</td>
+<td>$\left(0, \dfrac{p}{2}\right)$</td>
+<td>$y = -\dfrac{p}{2}$</td>
+</tr>
+<tr>
+<td>向下</td>
+<td>$x^2 = -2py$</td>
+<td>$\left(0, -\dfrac{p}{2}\right)$</td>
+<td>$y = \dfrac{p}{2}$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>记忆</strong>：$y^2 = 2px$ 中，$y^2$ 表示左右开口；正号向右，负号向左。焦点横坐标 $= \dfrac{p}{2}$（准线在对面）。</p>
+<h3>参数 $p$ 的意义</h3>
+<p>$p$ 是<strong>焦点到准线的距离</strong>，也叫<strong>焦准距</strong>。</p>
+<p>通径长（过焦点垂直轴的弦） $= 2p$。</p>
+<h3>由方程识别参数</h3>
+<p>以 $y^2 = 2px$ 为例：</p>
+<ul>
+<li>将方程化为此形式，系数即为 $2p$</li>
+<li>例：$y^2 = 8x$，则 $2p = 8$，$p = 4$，焦点 $(2, 0)$，准线 $x = -2$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：抛物线 $y^2 = 12x$，求焦点和准线。</p>
+<p><strong>解</strong>：$2p=12$，$p=6$，焦点 $\left(3, 0\right)$，准线 $x=-3$</p>
+<p><strong>例2</strong>：抛物线焦点为 $(0, -2)$，求方程。</p>
+<p><strong>解</strong>：焦点在 $y$ 轴负半轴，开口向下，$\dfrac{p}{2}=2$，$p=4$，方程 $x^2=-8y$</p>
+<p><strong>例3</strong>：点 $P$ 在抛物线 $y^2=4x$ 上，$P$ 到准线距离为 $3$，求 $|PF|$。</p>
+<p><strong>解</strong>：由定义，$|PF|=d(P,l)=3$</p>
+<p><strong>例4</strong>：求抛物线 $y^2=4x$ 上横坐标为 4 的点到焦点的距离。</p>
+<p><strong>解</strong>：$p=2$，焦点 $F(1,0)$，准线 $x=-1$。点横坐标 $x_0=4$，$|PF|=x_0+\dfrac{p}{2}=4+1=5$</p>
+<h3>与椭圆、双曲线的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>椭圆</th>
+<th>双曲线</th>
+<th>抛物线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>焦点数</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>准线</td>
+<td>两条（$e&lt;1$）</td>
+<td>两条（$e&gt;1$）</td>
+<td>一条（$e=1$）</td>
+</tr>
+<tr>
+<td>离心率</td>
+<td>$e&lt;1$</td>
+<td>$e&gt;1$</td>
+<td>$e=1$</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>$y^2=2px$ 中是 $2p$，不是 $p$；焦点是 $\dfrac{p}{2}$，不是 $p$</li>
+<li>抛物线没有中心，也没有渐近线</li>
+<li>四种标准抛物线，准线在焦点对面（方向相反一侧）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/378-抛物线几何性质.html">抛物线几何性质</a></li>
+<li><a href="../atoms/380-抛物线焦点弦.html">抛物线焦点弦</a></li>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></li>
+<li><a href="../atoms/374-圆锥曲线统一定义.html">圆锥曲线统一定义</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+</ul>
+</div>
+</body>
+</html>

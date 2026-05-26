@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>频率关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>频率关系</h1><div class="review-mark" data-stem="748-频率关系"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 频率关系, frequency relationship</p><h1>频率关系</h1>
+<blockquote>
+<p><strong>一句话</strong>：波在传播过程中，频率仅由波源决定，与介质无关；波速由介质决定，波长由波速和频率共同决定，满足 $v = f\lambda$。
+<strong>English</strong>: In wave propagation, the frequency is determined solely by the source and is independent of the medium; wave speed depends on the medium, and wavelength is given by $\lambda = v/f$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+机械波与电磁波的频率 $f$ 均由波源的振动频率（或振荡频率）决定，波从一种介质进入另一种介质时频率保持不变。波速 $v$ 仅由介质的力学性质（如机械波中的弹性模量、密度）或电磁性质（如折射率）决定，与频率无关（无色散时）。波长 $\lambda$、波速 $v$、频率 $f$ 满足 $v = f\lambda$。当波从介质1进入介质2时，$f_1 = f_2$，$v_1 / v_2 = \lambda_1 / \lambda_2$。<br />
+受迫振动达到稳定时，振动系统的频率等于驱动力的频率，与系统的固有频率无关。<br />
+多普勒效应中，观察者接收到的频率 $f'$ 与波源频率 $f$ 的关系为 $f' = \dfrac{v \pm v_o}{v \mp v_s} f$（波源与观察者沿连线运动时）。</p>
+<p><strong>关键方法</strong><br />
+求解波传播中的频率、波速、波长问题，核心是<strong>先确定频率不变</strong>，再根据介质确定波速，最后用 $\lambda = v/f$ 求波长。对于波的图像问题，若已知某时刻波形和波速，可由 $v = \lambda / T = \lambda f$ 求频率或周期。处理多普勒效应时，明确观察者相对介质的速度 $v_o$ 与波源相对介质的速度 $v_s$，靠近取加号（频率变高），远离取减号。</p>
+<p><strong>典型应用</strong><br />
+- <strong>高考常见设问</strong>：给出声波在空气和水中的波速，求进入水中后的波长；或给出 $t$ 时刻与 $t+\Delta t$ 时刻的波形图，求波速、频率及传播方向。<br />
+- <strong>场景示例</strong>：一声源在空气中发出的声波频率为 500 Hz，空气中的声速为 340 m/s，水中声速为 1500 m/s。声波传入水中后频率仍为 500 Hz，波长由 $\lambda_{air} = 0.68\text{ m}$ 变为 $\lambda_{water} = 3.0\text{ m}$。<br />
+- <strong>多普勒效应设问</strong>：火车鸣笛驶近时，静止观察者听到的频率变高，利用 $f' = \dfrac{v}{v - v_s}f$ 计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误认为波从一种介质进入另一种介质时频率改变，实际上频率由波源决定，始终不变（除非波源相对介质运动引起多普勒频移）。</li>
+<li>混淆波速与介质中质点的振动速度：波速 $v$ 是振动状态传播的速度，由介质决定；质点振动速度 $v_y$ 是周期性变化的，两者完全不同。</li>
+<li>在多普勒效应中使用 $f' = \dfrac{v \pm v_o}{v \pm v_s}f$ 时，符号规则记反：观察者靠近波源时分子用加号，波源靠近观察者时分母用减号，需结合“靠近频率变高”来判断。</li>
+<li>忘记机械波传播需要介质，而电磁波不需要介质，但两者频率均由波源决定，波速分别由介质性质和光子能量（真空光速恒定）决定。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>频率</td>
+<td>frequency</td>
+<td>单位时间内完成振动的次数，决定音调高低</td>
+</tr>
+<tr>
+<td>波速</td>
+<td>wave speed</td>
+<td>振动状态在介质中传播的速率</td>
+</tr>
+<tr>
+<td>波长</td>
+<td>wavelength</td>
+<td>振动相位相同的相邻两点间的距离</td>
+</tr>
+<tr>
+<td>多普勒效应</td>
+<td>Doppler effect</td>
+<td>波源与观察者相对运动时接收频率变化的效应</td>
+</tr>
+<tr>
+<td>受迫振动</td>
+<td>forced vibration</td>
+<td>系统在周期性驱动力作用下的振动</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理 必修及选择性必修 机械振动与机械波、电磁振荡与电磁波 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">机械波的描述参数</a></li>
+<li><a class="dead" title="未收录">波长与波速</a></li>
+<li><a href="../atoms/357-多普勒效应.html">多普勒效应</a></li>
+<li><a class="dead" title="未收录">受迫振动与共振</a></li>
+<li><a class="dead" title="未收录">电磁振荡的频率公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-15.html">2010-新课标Ⅰ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

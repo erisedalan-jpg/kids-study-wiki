@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空气开关</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空气开关</h1><div class="review-mark" data-stem="193-空气开关"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十九章生活用电]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空气开关, circuit breaker, 断路器, 空气断路器</p><h1>空气开关</h1>
+<blockquote>
+<p><strong>一句话</strong>：空气开关（断路器）是可以自动断路和手动复位的保护开关，当电路过载或短路时自动跳闸，比保险丝更安全方便。
+<strong>English</strong>: A circuit breaker is a protective switch that automatically trips when a circuit is overloaded or short-circuited, and can be manually reset — safer and more convenient than fuses.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>你有没有见过家里配电箱里的那排开关？它们叫<strong>空气开关</strong>（断路器）！</p>
+<p><strong>空气开关有什么用？</strong>
+- 电流太大（过载）时：自动"跳闸"，断开电路
+- 短路时：立刻断开
+- 手动操作：可以当普通开关用（检修时关闭某一路电）</p>
+<p><strong>和保险丝的区别：</strong>
+- 保险丝：熔断了就坏了，要换新的
+- 空气开关：跳闸后，找到原因排除故障，再手动合上就可以了！（可反复使用）</p>
+<p><strong>空气开关"跳闸"后怎么办？</strong>
+1. 检查是不是插了太多电器（过载）
+2. 检查是否有短路（某插座/电器坏了）
+3. 排除原因后，把开关手动推回"合"的位置</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>空气开关的工作原理</h3>
+<p>空气开关采用两种脱扣机制：</p>
+<p><strong>热脱扣（双金属片）</strong>——用于过载保护：
+- 双金属片由两种热膨胀系数不同的金属结合
+- 电流过大→焦耳热加热双金属片→弯曲变形→触发脱扣装置→断路
+- 响应较慢（数秒到数分钟），允许短时间过载（如电机启动）</p>
+<p><strong>电磁脱扣（电磁铁）</strong>——用于短路保护：
+- 线圈产生磁场，短路时电流极大→磁力极强→立即吸合铁芯→触发脱扣
+- 响应极快（毫秒级），立即断路</p>
+<h3>空气开关的规格参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>额定电流（A）</td>
+<td>正常允许长期通过的最大电流</td>
+</tr>
+<tr>
+<td>额定电压（V）</td>
+<td>适用电路电压</td>
+</tr>
+<tr>
+<td>极数</td>
+<td>单极（1P）、双极（2P）、三极（3P）</td>
+</tr>
+<tr>
+<td>分断能力（kA）</td>
+<td>最大可安全断开的短路电流</td>
+</tr>
+</tbody>
+</table>
+<p><strong>家庭常用规格</strong>：1P（单相）或2P，额定电流 10/16/20/25/32/40/63 A</p>
+<h3>配电箱中的层级结构</h3>
+<pre><code>总开关（主断路器） → 分路断路器（各回路）
+    ↓
+  厨房回路（20A）
+  卧室回路（16A）
+  客厅回路（16A）
+  空调回路（25A）
+  热水器回路（20A）
+</code></pre>
+<h3>空气开关 vs 漏电保护器</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>空气开关</th>
+<th>漏电保护器（RCD）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保护对象</td>
+<td>导线和电器（过载/短路）</td>
+<td>人身安全（漏电）</td>
+</tr>
+<tr>
+<td>触发条件</td>
+<td>电流过大</td>
+<td>漏电电流（30mA）</td>
+</tr>
+<tr>
+<td>响应速度</td>
+<td>较快</td>
+<td>极快（＜0.1s）</td>
+</tr>
+<tr>
+<td>复位</td>
+<td>手动推合</td>
+<td>手动按测试/复位按钮</td>
+</tr>
+</tbody>
+</table>
+<p><strong>家庭电路通常同时安装两者</strong>（组合型：漏电保护断路器）。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：家庭电路中，总空气开关额定电流为 63 A，某分路（厨房）空气开关额定电流为 20 A。当厨房电路中的电热水壶（2000W）、微波炉（1000W）、电饭锅（900W）同时工作，该分路空气开关会跳闸吗？</p>
+<p><strong>解</strong>：</p>
+<p>总功率：$P = 2000 + 1000 + 900 = 3900$ W</p>
+<p>电流：$I = P/U = 3900/220 \approx 17.7$ A</p>
+<p>$17.7$ A &lt; 20 A（分路额定电流），不会跳闸。</p>
+<p>若再开一台 800 W 电烤箱：$I = 4700/220 \approx 21.4$ A &gt; 20 A，分路空气开关会跳闸。</p>
+<p><strong>易错点：</strong>
+- 空气开关跳闸后要先排除故障再复位，不能强行反复合闸
+- 漏电保护器和空气开关功能不同，不能互相替代
+- 额定电流选择：太小（频繁跳闸）；太大（保护失效）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空气开关</td>
+<td>circuit breaker</td>
+<td>n.</td>
+<td>The circuit breaker tripped due to overloading.</td>
+</tr>
+<tr>
+<td>跳闸</td>
+<td>trip</td>
+<td>v.</td>
+<td>The breaker tripped when the current exceeded 20 A.</td>
+</tr>
+<tr>
+<td>过载保护</td>
+<td>overload protection</td>
+<td>n.</td>
+<td>The bimetallic strip provides overload protection.</td>
+</tr>
+<tr>
+<td>短路保护</td>
+<td>short-circuit protection</td>
+<td>n.</td>
+<td>The electromagnetic coil provides short-circuit protection.</td>
+</tr>
+<tr>
+<td>双金属片</td>
+<td>bimetallic strip</td>
+<td>n.</td>
+<td>The bimetallic strip bends when heated by excess current.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十九章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 安全用电设备</li>
+<li><strong>百科</strong>：维基百科"断路器"；中文百科"空气断路器"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/137-家庭电路保险丝.html">家庭电路保险丝</a></li>
+<li><a href="../atoms/149-漏电保护器.html">漏电保护器</a></li>
+<li><a href="../atoms/136-家庭电路.html">家庭电路</a></li>
+<li><a href="../atoms/134-安全用电.html">安全用电</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+<li><a href="../atoms/154-焦耳定律.html">焦耳定律</a></li>
+</ul>
+</div>
+</body>
+</html>

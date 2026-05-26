@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>镜面反射与漫反射</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>镜面反射与漫反射</h1><div class="review-mark" data-stem="047-镜面反射与漫反射"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八上, 光现象]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 镜面反射与漫反射, specular and diffuse reflection, 漫反射, 镜面反射</p><h1>镜面反射与漫反射</h1>
+<blockquote>
+<p><strong>一句话</strong>：光滑表面的反射叫<strong>镜面反射</strong>（平行光保持平行），粗糙表面的反射叫<strong>漫反射</strong>（光向各方向散开）；两者都遵守反射定律。
+<strong>English</strong>: Specular reflection occurs on smooth surfaces (parallel rays remain parallel); diffuse reflection occurs on rough surfaces (rays scatter in all directions); both obey the law of reflection.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>为什么镜子里能看到你，墙壁却看不到倒影？</p>
+<p><strong>镜面反射（镜子）：</strong>
+- 镜子表面超级光滑
+- 从同一方向来的光，反射后还是整齐地往同一方向去
+- 结果：能形成清晰的像</p>
+<p><strong>漫反射（墙壁、纸张）：</strong>
+- 墙壁表面凹凸不平（微观下）
+- 同方向来的光，打到不同倾斜的小面上，反射后向四面八方散开
+- 结果：不能形成像，但能让你从各个角度都看到墙壁</p>
+<p><strong>生活中的例子：</strong></p>
+<table>
+<thead>
+<tr>
+<th>镜面反射</th>
+<th>漫反射</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>镜子、平静水面</td>
+<td>纸张、墙壁、皮肤</td>
+</tr>
+<tr>
+<td>玻璃窗在阳光下反光刺眼</td>
+<td>月光（月球表面漫反射）</td>
+</tr>
+<tr>
+<td>抛光金属表面</td>
+<td>磨砂玻璃</td>
+</tr>
+</tbody>
+</table>
+<p><strong>有趣问题</strong>：为什么黑板粉笔字用漫反射而不是镜面反射？因为漫反射让全班每个同学都能看到黑板上的字，不会只能从某个特定角度才看到！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>镜面反射</strong>（Specular Reflection）：在光滑表面上，平行光线反射后仍然平行，可以形成像的反射。</p>
+<p><strong>漫反射</strong>（Diffuse Reflection）：在粗糙表面上，入射光线被散射到各个方向，不能形成像的反射。</p>
+<p><strong>两者都遵守光的反射定律</strong>——区别在于反射面的<strong>微观形貌</strong>不同：
+- 镜面反射：微观上表面平整，各点法线方向相同
+- 漫反射：微观上表面凹凸不平，各点法线方向不同</p>
+<h3>对比</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>镜面反射</th>
+<th>漫反射</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面条件</td>
+<td>光滑（粗糙度 &lt;&lt; 光波长）</td>
+<td>粗糙（粗糙度 ≈ 或 &gt; 光波长）</td>
+</tr>
+<tr>
+<td>平行光入射</td>
+<td>反射后仍平行</td>
+<td>向各方向散射</td>
+</tr>
+<tr>
+<td>是否成像</td>
+<td>能形成清晰像</td>
+<td>不能成像</td>
+</tr>
+<tr>
+<td>例子</td>
+<td>镜子、平静湖面、抛光金属</td>
+<td>白纸、墙壁、月球表面</td>
+</tr>
+<tr>
+<td>观察方向</td>
+<td>特定方向才能看到反射光</td>
+<td>各方向均可看到反射光</td>
+</tr>
+</tbody>
+</table>
+<h3>光学意义</h3>
+<ul>
+<li><strong>漫反射是我们看到大多数物体的原因</strong>：自然界中大多数物体表面粗糙，漫反射让光向各方向散开，从而让任意方向的观察者都能看到物体</li>
+<li><strong>镜面反射用于成像</strong>：平面镜成像、望远镜反射镜等</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：黑板表面应做成哪种反射，为什么？实际生活中黑板为何有时会"反光"？</p>
+<p><strong>解</strong>：黑板应做成<strong>漫反射</strong>（粗糙表面），这样全班每个角度的同学都能看到粉笔字。当阳光直射黑板某区域时，该区域发生较强的<strong>镜面反射</strong>，反射光刺眼，看不清字——这就是"反光"现象，需要调节窗帘或移动位置。</p>
+<p><strong>例2</strong>：电影银幕为何做成粗糙的白色？</p>
+<p><strong>解</strong>：白色能反射所有颜色的光；粗糙表面发生<strong>漫反射</strong>，使坐在各个位置的观众都能看到清晰图像（而非只有某一角度才能看到）。</p>
+<p><strong>易错点：</strong>
+- 漫反射不违反反射定律，每个接触点都遵守反射定律，只是各点法线方向不同
+- 镜面反射不是"没有"漫反射成分，只是占比极小
+- 月亮之所以发光，是因为对太阳光的漫反射（月球表面粗糙）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>镜面反射</td>
+<td>specular reflection</td>
+<td>n.</td>
+<td>Mirrors produce specular reflection.</td>
+</tr>
+<tr>
+<td>漫反射</td>
+<td>diffuse reflection</td>
+<td>n.</td>
+<td>Paper produces diffuse reflection.</td>
+</tr>
+<tr>
+<td>散射</td>
+<td>scattering</td>
+<td>n./v.</td>
+<td>Light scatters in all directions off a rough surface.</td>
+</tr>
+<tr>
+<td>粗糙</td>
+<td>rough</td>
+<td>adj.</td>
+<td>The rough surface causes diffuse reflection.</td>
+</tr>
+<tr>
+<td>光滑</td>
+<td>smooth</td>
+<td>adj.</td>
+<td>The smooth surface causes specular reflection.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>镜面反射发生在光滑表面上。</td>
+<td>Specular reflection occurs on smooth surfaces.</td>
+</tr>
+<tr>
+<td>漫反射让我们从各个角度看到物体。</td>
+<td>Diffuse reflection allows us to see objects from any angle.</td>
+</tr>
+<tr>
+<td>两种反射都遵守反射定律。</td>
+<td>Both types of reflection obey the law of reflection.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级上册.pdf</a> 第4章第2节（待家长核对具体页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 光现象</li>
+<li><strong>百科</strong>：维基百科"漫反射"；中文百科"镜面反射"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/002-光的反射.html">光的反射</a></li>
+<li><a class="dead" title="未收录">反射定律</a></li>
+<li><a href="../atoms/024-平面镜成像.html">平面镜成像</a></li>
+<li><a href="../atoms/003-光的折射.html">光的折射</a></li>
+<li><a class="dead" title="未收录">光源</a></li>
+</ul>
+</div>
+</body>
+</html>

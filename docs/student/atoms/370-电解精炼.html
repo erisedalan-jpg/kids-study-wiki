@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电解精炼</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电解精炼</h1><div class="review-mark" data-stem="370-电解精炼"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电解精炼, electrolytic refining, 铜的电解精炼</p><h1>电解精炼</h1>
+<blockquote>
+<p><strong>一句话</strong>：以粗金属为阳极，纯金属为阴极，金属盐溶液为电解质，通过电解使粗金属中的目标金属纯化析出的精炼工艺。
+<strong>English</strong>: An electrolytic purification method using crude metal as the anode, pure metal as the cathode, and a metal salt solution as electrolyte; the target metal selectively dissolves and redeposits with high purity.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>电解精炼</strong>（electrolytic refining）：利用电化学原理提纯金属的工业方法。最常见的是<strong>铜的电解精炼</strong>。</p>
+<p>原理：
+- 阳极（粗金属，如粗铜）：溶解（氧化），包括杂质金属也可能溶解
+- 阴极（纯金属板，如纯铜片）：目标金属离子优先沉积（还原）
+- 结果：纯度达 99.99% 的纯铜析出；比铜活泼的杂质（Zn、Fe 等）进入溶液；比铜惰性的杂质（Au、Ag 等）以"阳极泥"形式沉降</p>
+<h3>公式 / 方程式</h3>
+<p>铜的电解精炼（CuSO₄ 溶液）：</p>
+<p>$$
+\text{阳极（粗铜）}: \text{Cu} - 2e^- \rightarrow \text{Cu}^{2+} \text{（主）}
+$$</p>
+<p>$$
+\text{杂质（Zn、Fe）}: \text{Zn} - 2e^- \rightarrow \text{Zn}^{2+}，\text{Fe} - 2e^- \rightarrow \text{Fe}^{2+}
+$$</p>
+<p>$$
+\text{阴极（纯铜）}: \text{Cu}^{2+} + 2e^- \rightarrow \text{Cu（高纯）}
+$$</p>
+<p>杂质金属的行为：</p>
+<table>
+<thead>
+<tr>
+<th>杂质</th>
+<th>与 Cu 活泼性比较</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zn、Fe</td>
+<td>比 Cu 活泼</td>
+<td>阳极溶解进入溶液，但不在阴极沉积（Cu²⁺ 先沉积）</td>
+</tr>
+<tr>
+<td>Au、Ag</td>
+<td>比 Cu 惰性</td>
+<td>阳极不溶解，沉积为"阳极泥"（电极底部）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>阳极泥</strong>的经济价值：含 Au、Ag 等贵金属，是重要的副产品资源。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某粗铜含 Cu 97%、Zn 2%、Au 1%，电解精炼后各组分去向如何？</p>
+<ul>
+<li>Cu（97%）：阳极溶解为 Cu²⁺，再在阴极沉积为高纯铜</li>
+<li>Zn（2%）：阳极溶解为 Zn²⁺，进入溶液（不在阴极沉积，因 Cu²⁺ 先还原）</li>
+<li>Au（1%）：阳极不溶解，沉降为阳极泥（回收利用）</li>
+</ul>
+<p><strong>例</strong>：电解精炼铜时，溶液中 Cu²⁺ 浓度变化如何？</p>
+<ul>
+<li>阳极：Cu（及杂质 Zn、Fe）溶解，补充 Cu²⁺</li>
+<li>阴极：Cu²⁺ 沉积，消耗 Cu²⁺</li>
+<li>理论上 Cu²⁺ 浓度基本不变（阳极溶解量 ≈ 阴极沉积量）</li>
+<li>实际上因杂质溶入，溶液中 Zn²⁺、Fe²⁺ 浓度逐渐升高，需定期更换</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>电解精炼不同于电镀：精炼阳极是粗金属，目的是提纯；电镀阳极是纯金属，目的是镀层</li>
+<li>阳极泥含贵金属，是重要副产品</li>
+<li>溶液中 Zn²⁺、Fe²⁺ 不在阴极沉积，因为 Cu²⁺ 的还原电位高于 Zn²⁺ 和 Fe²⁺</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电解精炼</td>
+<td>electrolytic refining</td>
+</tr>
+<tr>
+<td>粗铜</td>
+<td>crude copper</td>
+</tr>
+<tr>
+<td>阳极泥</td>
+<td>anode slime / anode mud</td>
+</tr>
+<tr>
+<td>纯铜</td>
+<td>refined copper</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>In electrolytic refining, the crude metal anode dissolves, and pure metal deposits at the cathode.（电解精炼中，粗金属阳极溶解，纯金属在阴极沉积。）</li>
+<li>Precious metals like gold and silver collect as anode slime during copper refining.（铜精炼时，金银等贵金属以阳极泥形式沉积。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"电解精炼"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/328-沉淀溶解平衡.html">沉淀溶解平衡</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/371-电镀.html">电镀</a></p>
+</li>
+<li>
+<p><a href="../atoms/368-电解池.html">电解池</a></p>
+</li>
+<li><a href="../atoms/367-电解原理.html">电解原理</a></li>
+<li><a href="../atoms/371-电镀.html">电镀</a></li>
+<li><a class="dead" title="未收录">电解电极反应</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2010-新课标-08.html">2010-新课标-08</a></li>
+<li><a class="dead" title="未收录">2023-湖南-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

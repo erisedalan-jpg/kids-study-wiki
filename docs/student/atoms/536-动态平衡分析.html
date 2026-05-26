@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动态平衡分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>动态平衡分析</h1><div class="review-mark" data-stem="536-动态平衡分析"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 动态平衡分析, Dynamic Equilibrium</p><h1>动态平衡分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：动态平衡是指物体在合力为零的条件下，保持静止或匀速直线运动（或匀速转动）的状态，其中运动状态表明平衡是“动态”的。
+<strong>English</strong>: Dynamic equilibrium refers to the state where an object maintains a constant velocity (which can be zero) under the action of balanced forces, highlighting the possibility of motion in equilibrium.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>动态平衡分析在高考物理中主要针对共点力平衡问题，核心原理是合力为零：$\sum F = 0$，或正交分解形式 $\sum F_x = 0$、$\sum F_y = 0$。当题目出现“缓慢”“逐渐”“始终静止”等字眼时，物体在运动或变化过程中的每个瞬时都可视为平衡态，加速度可忽略，因此可应用平衡条件求解力的大小和方向的动态变化。</p>
+<p><strong>关键方法</strong>：<br />
+- <strong>图解法（矢量三角形法）</strong>：适用于三力平衡，且其中一力为恒力（如重力），另一力方向恒定。通过将力矢量平移构成闭合三角形，直接从边长变化判断力的大小增减。<br />
+- <strong>解析法（正交分解或正弦定理）</strong>：列出平衡方程，将力表达为角度的三角函数，利用角度单调性判断变化趋势，常用于多力或精确计算。<br />
+- <strong>相似三角形法</strong>：当力的矢量三角形与题目中的几何三角形相似时，利用对应边成比例关系快速求解，常见于有固定支点或圆弧接触面的问题。</p>
+<p><strong>典型应用</strong>：高考选择题和计算题频繁考查“缓慢移动”场景。例如：一重为 $G$ 的光滑小球置于竖直挡板与倾角可变的斜面之间，缓慢增大斜面倾角，分析挡板弹力和斜面支持力的变化。解题时，以小球为对象，受重力（恒力）、挡板弹力（方向水平不变）、斜面支持力（方向始终垂直斜面但角度变化），构建力的矢量三角形，观察发现挡板弹力先减小后增大，斜面支持力一直增大。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆平衡条件适用性</strong>：误将非缓慢过程的瞬时状态当作动态平衡处理，直接套用∑F=0；实际若物体有不可忽略的加速度，必须用牛顿第二定律。</li>
+<li><strong>图解时误判力的大小变化</strong>：仅凭角度增减线性推断力的大小，忽略矢量三角形中边长可能出现的极值（如先变小后变大），导致结论反向。</li>
+<li><strong>受力分析遗漏接触力变化</strong>：动态过程中物体与其他物体的接触形式可能改变（如分离、切线变化），忘记更新支持力方向或摩擦力存在性，造成力学方程错误。</li>
+<li><strong>对称性错用</strong>：在处理绳连接体动态平衡时，忽视跨过滑轮的绳张力相等条件，错误引入额外未知量，使分析复杂化。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>动态平衡</td>
+<td>Dynamic Equilibrium</td>
+<td>物体在合力为零条件下的运动状态</td>
+</tr>
+<tr>
+<td>合力</td>
+<td>Net Force</td>
+<td>所有作用力的矢量和</td>
+</tr>
+<tr>
+<td>正交分解</td>
+<td>Orthogonal Decomposition</td>
+<td>将力沿垂直坐标轴分解的方法</td>
+</tr>
+<tr>
+<td>矢量三角形</td>
+<td>Vector Triangle</td>
+<td>用三角形表示力的合成与平衡</td>
+</tr>
+<tr>
+<td>共点力</td>
+<td>Concurrent Forces</td>
+<td>作用线交于同一点的多个力</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/208-共点力平衡.html">共点力平衡</a></li>
+<li><a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><a href="../atoms/532-力的合成与分解.html">力的合成与分解</a></li>
+<li><a href="../atoms/474-整体法与隔离法.html">整体法与隔离法</a></li>
+<li><a class="dead" title="未收录">瞬时加速度分析</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-01.html">2016-新课标Ⅱ-01</a></li>
+<li><a class="dead" title="未收录">2021-湖南-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

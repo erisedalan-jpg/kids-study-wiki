@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数四则运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>导数四则运算</h1><div class="review-mark" data-stem="435-导数四则运算"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 导数四则运算, derivative rules, 求导法则四则, 四则求导法则, 导数的四则运算, Four Arithmetic Operations of Derivatives</p><h2>🎓 导数四则运算</h2>
+<h3>四则求导法则</h3>
+<p>设 $u=u(x)$，$v=v(x)$ 均可导，则：</p>
+<table>
+<thead>
+<tr>
+<th>法则</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加减法则</td>
+<td>$(u\pm v)' = u' \pm v'$</td>
+</tr>
+<tr>
+<td>数乘法则</td>
+<td>$(cu)' = cu'$（$c$ 为常数）</td>
+</tr>
+<tr>
+<td>乘法法则</td>
+<td>$(uv)' = u'v + uv'$</td>
+</tr>
+<tr>
+<td>除法法则</td>
+<td>$\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}$（$v\neq 0$）</td>
+</tr>
+</tbody>
+</table>
+<h3>乘法法则推导</h3>
+<p>$$\frac{d}{dx}[u(x)v(x)] = \lim_{h\to 0}\frac{u(x+h)v(x+h)-u(x)v(x)}{h}$$</p>
+<p>加减同一项 $u(x)v(x+h)$：</p>
+<p>$$= \lim_{h\to 0}\left[\frac{u(x+h)-u(x)}{h}v(x+h) + u(x)\frac{v(x+h)-v(x)}{h}\right]$$</p>
+<p>$$= u'(x)\cdot v(x) + u(x)\cdot v'(x)$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 求 $f(x)=(x^2+1)(x^3-2x)$ 的导数。</p>
+<p>法一（展开）：$f(x)=x^5-2x^3+x^3-2x=x^5-x^3-2x$，$f'(x)=5x^4-3x^2-2$</p>
+<p>法二（乘法法则）：$f'(x)=2x(x^3-2x)+(x^2+1)(3x^2-2)$
+$=2x^4-4x^2+3x^4-2x^2+3x^2-2=5x^4-3x^2-2$ ✓</p>
+<p><strong>例 2</strong> 求 $f(x)=\dfrac{x^2+1}{x-1}$ 的导数。</p>
+<p>$$f'(x) = \frac{2x(x-1)-(x^2+1)\cdot 1}{(x-1)^2} = \frac{2x^2-2x-x^2-1}{(x-1)^2} = \frac{x^2-2x-1}{(x-1)^2}$$</p>
+<p><strong>例 3</strong> 求 $f(x)=x^2\sin x$ 的导数。</p>
+<p>$$f'(x) = 2x\sin x + x^2\cos x$$</p>
+<p><strong>例 4</strong> 求 $f(x)=\dfrac{e^x}{\sin x}$ 的导数（$\sin x\neq 0$）。</p>
+<p>$$f'(x) = \frac{e^x\sin x - e^x\cos x}{\sin^2 x} = \frac{e^x(\sin x - \cos x)}{\sin^2 x}$$</p>
+<h3>多项相乘的推广</h3>
+<p>三个函数乘积的求导（由乘法法则两次应用）：</p>
+<p>$$(uvw)' = u'vw + uv'w + uvw'$$</p>
+<p>一般地，$n$ 个函数乘积求导，每次对一个函数求导，其余不动，求和。</p>
+<h3>易错点</h3>
+<ul>
+<li>乘法法则：$(uv)' = u'v + uv'$，<strong>不是</strong> $u'v'$</li>
+<li>除法法则分子：<strong>分子减分母</strong>（$u'v - uv'$），顺序不能颠倒</li>
+<li>除法法则分母是 $v^2$（原分母的平方），不是 $v$</li>
+<li>数乘法则：$(cu)' = cu'$，常数提到导数外，不要对常数求导再相减</li>
+</ul>
+<hr />
+<h2>🔁 合并补充：原《导数的四则运算》</h2>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+若函数 u(x), v(x) 在点 x 处可导，则它们的和、差、积、商（分母不为零）也在该点可导，且导数满足以下法则：</p>
+<ul>
+<li>加法法则：<code>[u(x) + v(x)]′ = u′(x) + v′(x)</code>  </li>
+<li>减法法则：<code>[u(x) − v(x)]′ = u′(x) − v′(x)</code>  </li>
+<li>乘法法则：<code>[u(x)v(x)]′ = u′(x)v(x) + u(x)v′(x)</code>  </li>
+<li>除法法则：<code>[u(x)/v(x)]′ = [u′(x)v(x) − u(x)v′(x)] / [v(x)]²</code>，（v(x) ≠ 0）</li>
+</ul>
+<p>这些法则可以推广到有限个函数的和差积，以及常数因子情形：<code>[cu(x)]′ = c·u′(x)</code>（常数 c 可视为乘法法则特例）。</p>
+<p><strong>关键方法</strong><br />
+解决高考导数计算题的标准步骤：<br />
+1. 识别函数结构，确定由哪些基本初等函数（幂、指、对、三角等）通过四则运算复合而成。<br />
+2. 分别求出各部分的导数，严格套用四则运算法则，不跳步。<br />
+3. 整理结果，通常需要通分、因式分解、合并同类项以达到最简形式。<br />
+4. 若含有复合函数，先使用链式法则求内层导数，再结合四则运算。  </p>
+<p><strong>典型应用</strong><br />
+高考中，该考点常在以下设问中出现：<br />
+- <strong>显式函数求导</strong>：如 <code>f(x) = x²·ln x</code>，需用乘法法则得 <code>f′(x) = 2x·ln x + x²·(1/x) = 2x ln x + x</code>。<br />
+- <strong>切线问题</strong>：求曲线 <code>y = (sin x)/x</code> 在 <code>x=π</code> 处的切线斜率，先用除法法则求导，再代入横坐标。<br />
+- <strong>含参数导数</strong>：已知 <code>f(x) = (ax² + b)/e^x</code>，求 <code>f′(x)</code> 并讨论单调性，要求准确运用除法和乘法法则。<br />
+- <strong>导数的工具性</strong>：在求极值、最值、证明不等式时，第一步往往是利用四则运算法则求导函数。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>乘法法则漏项</strong>：误记作 <code>(uv)′ = u′v′</code>，或只写 <code>u′v</code> 而遗漏 <code>uv′</code>。此错误在乘积项较多时尤为常见。  </li>
+<li><strong>除法法则分子记反</strong>：将分子错记为 <code>u′v + uv′</code> 或 <code>u′v′ − uv</code>，正确形式是“上导下不导减上不导下导”，顺序必须严格 <code>u′v − uv′</code>，且分母恒平方。  </li>
+<li><strong>忘记分母不为零条件</strong>：使用除法法则时忽略 <code>v(x) ≠ 0</code> 的定义域限制，导致在使分母为零的点错误求导。  </li>
+<li><strong>复合函数与四则运算混淆</strong>：例如 <code>sin(x²+1)</code> 不能用乘法法则拆成 <code>sin x²</code> 和 <code>sin 1</code>，必须先用链式法则；而 <code>x²·sin x</code> 才是乘法法则。分辨函数“最后一步运算”是关键。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可导</td>
+<td>differentiable</td>
+<td>函数在某点导数存在</td>
+</tr>
+<tr>
+<td>加法法则</td>
+<td>Sum Rule</td>
+<td>导数运算的加法公式</td>
+</tr>
+<tr>
+<td>乘法法则</td>
+<td>Product Rule</td>
+<td>导数运算的乘法公式</td>
+</tr>
+<tr>
+<td>除法法则</td>
+<td>Quotient Rule</td>
+<td>导数运算的除法公式</td>
+</tr>
+<tr>
+<td>链式法则</td>
+<td>Chain Rule</td>
+<td>复合函数求导法则</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/求导法则</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/429-对数函数导数.html">对数函数导数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/795-复合函数求导.html">复合函数求导</a></li>
+</ul>
+<p><a class="dead" title="未收录">导数运算法则</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a> · <a href="../atoms/447-常见函数导数.html">常见函数导数</a> · <a class="dead" title="未收录">多项式函数导数</a> · <a href="../atoms/416-三角函数导数.html">三角函数导数</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a href="../atoms/429-对数函数导数.html">对数函数导数</a></p>
+</div>
+</body>
+</html>

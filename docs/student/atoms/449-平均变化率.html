@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均变化率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平均变化率</h1><div class="review-mark" data-stem="449-平均变化率"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平均变化率, average rate of change, 差商</p><h2>🎓 平均变化率</h2>
+<h3>定义</h3>
+<p>设函数 $y=f(x)$，自变量 $x$ 从 $x_1$ 变化到 $x_2$，函数值从 $f(x_1)$ 变化到 $f(x_2)$：</p>
+<ul>
+<li>自变量增量：$\Delta x = x_2 - x_1$</li>
+<li>函数增量：$\Delta y = f(x_2) - f(x_1) = f(x_1+\Delta x) - f(x_1)$</li>
+<li><strong>平均变化率</strong>（差商）：</li>
+</ul>
+<p>$$\frac{\Delta y}{\Delta x} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x_1+\Delta x)-f(x_1)}{\Delta x}$$</p>
+<h3>几何意义</h3>
+<p>平均变化率等于曲线 $y=f(x)$ 上两点 $(x_1, f(x_1))$ 与 $(x_2, f(x_2))$ 所确定的<strong>割线斜率</strong>。</p>
+<p>$$k_{\text{割线}} = \frac{f(x_2)-f(x_1)}{x_2-x_1}$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 函数 $f(x)=x^2+1$，求 $x$ 从 $1$ 变化到 $3$ 的平均变化率。</p>
+<p>$$\frac{\Delta y}{\Delta x} = \frac{f(3)-f(1)}{3-1} = \frac{10-2}{2} = 4$$</p>
+<p><strong>例 2</strong> 函数 $f(x)=2^x$，求 $x$ 从 $0$ 变化到 $2$ 的平均变化率，并作几何解释。</p>
+<p>$$\frac{\Delta y}{\Delta x} = \frac{2^2-2^0}{2-0} = \frac{4-1}{2} = \frac{3}{2}$$</p>
+<p>几何意义：曲线 $y=2^x$ 上点 $(0,1)$ 与点 $(2,4)$ 连成的割线斜率为 $\dfrac{3}{2}$。</p>
+<p><strong>例 3</strong>（物理背景）某物体运动方程 $s=t^2+2t$（m），求 $t=1$ 到 $t=3$ 的平均速度。</p>
+<p>$$\bar{v} = \frac{s(3)-s(1)}{3-1} = \frac{(9+6)-(1+2)}{2} = \frac{15-3}{2} = 6 \text{ m/s}$$</p>
+<h3>平均变化率与瞬时变化率的关系</h3>
+<p>$$\text{瞬时变化率} = \lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x} = f'(x_1)$$</p>
+<p>平均变化率是"粗略的"变化描述，取极限后得到精确的瞬时变化率（导数）。</p>
+<h3>与必修衔接</h3>
+<p>初中和必修一中，"变化率"主要指线性函数的斜率（常数）。平均变化率将这一概念推广到<strong>任意函数</strong>，为引入导数做铺垫。学习这一概念时，重点理解 $\Delta x$ 和 $\Delta y$ 都是增量（有正有负），而非绝对值。</p>
+<h3>易错点</h3>
+<ul>
+<li>$\Delta x = x_2 - x_1$，方向固定（终值减初值），可以为负</li>
+<li>$\Delta y$ 与 $\Delta x$ 符号不一定相同</li>
+<li>不要将"平均变化率"与"函数平均值"混淆——两者完全不同</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/差商</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/386-数学归纳法-初步.html">数学归纳法-初步</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/425-反函数导数.html">反函数导数</a></li>
+</ul>
+<p><a href="../atoms/463-瞬时变化率.html">瞬时变化率</a> · <a href="../atoms/441-导数的概念.html">导数的概念</a> · <a href="../atoms/440-导数的几何意义.html">导数的几何意义</a> · <a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/422-切线方程.html">切线方程</a> · <a href="../atoms/442-导数的物理应用.html">导数的物理应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-理-08.html">2012-理-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

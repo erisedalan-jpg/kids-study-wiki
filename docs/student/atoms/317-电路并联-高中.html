@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路并联-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电路并联-高中</h1><div class="review-mark" data-stem="317-电路并联-高中"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电路及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电路并联-高中, parallel circuit high school, 并联电路高中, 并联</p><h2>🎓 电路并联（高中版）</h2>
+<h3>基本特征</h3>
+<p><strong>并联电路</strong>：各元件<strong>两端分别相连</strong>，有多条并行电流通路。</p>
+<table>
+<thead>
+<tr>
+<th>物理量</th>
+<th>并联规律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压</td>
+<td>各支路相同：$U = U_1 = U_2 = \cdots = U_n$</td>
+</tr>
+<tr>
+<td>电流</td>
+<td>干路等于各支路之和：$I = I_1 + I_2 + \cdots + I_n$</td>
+</tr>
+<tr>
+<td>电阻</td>
+<td>等效电阻倒数等于各支路倒数之和：$\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \cdots$</td>
+</tr>
+</tbody>
+</table>
+<p>两电阻并联时的等效公式：</p>
+<p>$$R = \frac{R_1 R_2}{R_1 + R_2}$$</p>
+<h3>分流规律</h3>
+<p>各支路电流与电阻成反比：</p>
+<p>$$\frac{I_1}{I_2} = \frac{R_2}{R_1}$$</p>
+<p>具体分流：</p>
+<p>$$I_1 = I \cdot \frac{R_2}{R_1 + R_2}$$</p>
+<h3>功率分配</h3>
+<p>并联电路中电功率之比等于电阻的倒数之比：</p>
+<p>$$\frac{P_1}{P_2} = \frac{U^2/R_1}{U^2/R_2} = \frac{R_2}{R_1}$$</p>
+<p>即：<strong>电阻小的支路消耗功率大</strong>（并联时相反于串联）。</p>
+<h3>含电源的并联电路</h3>
+<p>外电路若为多支路并联，计算时先求等效外阻 $R$，再代入全路欧姆定律：</p>
+<p>$$I = \frac{\varepsilon}{R + r}$$</p>
+<p>各支路电流按分流公式计算，各支路电压均等于路端电压 $U = \varepsilon - Ir$。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：电源 $\varepsilon = 6\,\text{V}$，$r = 0.5\,\Omega$，外电路并联 $R_1 = 2\,\Omega$ 和 $R_2 = 3\,\Omega$，求各支路电流。</p>
+<p>$$R_{外} = \frac{R_1 R_2}{R_1 + R_2} = \frac{2\times3}{5} = 1.2\,\Omega$$</p>
+<p>$$I = \frac{\varepsilon}{R_{外} + r} = \frac{6}{1.2+0.5} = \frac{6}{1.7} \approx 3.53\,\text{A}$$</p>
+<p>$$U = \varepsilon - Ir = 6 - 3.53\times0.5 \approx 4.24\,\text{V}$$</p>
+<p>$$I_1 = \frac{U}{R_1} = \frac{4.24}{2} = 2.12\,\text{A},\quad I_2 = \frac{U}{R_2} = \frac{4.24}{3} \approx 1.41\,\text{A}$$</p>
+<p>（验证：$I_1 + I_2 = 3.53\,\text{A}$ ✓）</p>
+<h3>应用</h3>
+<ul>
+<li>家庭电路：所有用电器并联，保证各自独立工作，电压一致（220 V）。</li>
+<li>电流表扩程：并联<strong>分流电阻</strong>，使大部分电流绕过电流表。</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>并联中某支路断路，<strong>其他支路</strong>正常工作（与串联不同）。</li>
+<li>并联后等效电阻<strong>小于任一支路电阻</strong>。</li>
+<li>各支路功率之比等于电阻的<strong>倒数</strong>之比（与串联相反）。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中已学过并联基本规律；高中在引入内阻和全路欧姆定律后，并联电路的分析与实际电源结合，需要综合运用串并联等效、全路欧姆定律等多个知识点。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十一章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/并联">维基百科·并联电路</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/316-电路串联-高中.html">电路串联-高中</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/307-电动势.html">电动势</a></li>
+<li><a href="../atoms/291-内阻.html">内阻</a></li>
+<li><a href="../atoms/329-路端电压.html">路端电压</a></li>
+<li><a href="../atoms/295-多用电表.html">多用电表</a></li>
+</ul>
+</div>
+</body>
+</html>

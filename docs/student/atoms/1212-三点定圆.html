@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三点定圆</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>三点定圆</h1><div class="review-mark" data-stem="1212-三点定圆"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[解析几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 三点定圆, 不共线三点确定圆, Three Points Determine a Circle</p><h1>三点定圆</h1>
+<blockquote>
+<p><strong>一句话</strong>：不共线的三点唯一确定一个圆，该圆即为以这三点为顶点的三角形的外接圆。
+<strong>English</strong>: Three non-collinear points uniquely determine a circle, which is the circumcircle of the triangle formed by these points.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：平面上任意不共线的三个点 $A(x_1,y_1), B(x_2,y_2), C(x_3,y_3)$ 确定唯一一个圆。该圆的圆心是 $\triangle ABC$ 三边垂直平分线的交点，即三角形的<strong>外心</strong>；半径是外心到任一顶点的距离。从代数角度看，设圆的一般方程为<br />
+  $x^2 + y^2 + Dx + Ey + F = 0$，<br />
+  将三点坐标分别代入可得关于 $D, E, F$ 的三元一次方程组，当三点不共线时方程组有唯一解。圆的存在性和唯一性条件可通过行列式 $\begin{vmatrix} x_1 &amp; y_1 &amp; 1 \ x_2 &amp; y_2 &amp; 1 \ x_3 &amp; y_3 &amp; 1 \end{vmatrix} \neq 0$ 保证，该条件恰好与三点不共线等价。  </li>
+<li><strong>关键方法</strong>：</li>
+<li><strong>待定系数法</strong>：设一般方程（或标准方程），代入三点坐标解方程组，得到 $D, E, F$，再化为标准形式求出圆心和半径；</li>
+<li><strong>几何法</strong>：求两条边的垂直平分线方程，联立得圆心坐标，再求半径。
+  高考中常在解析几何填空题、选择题或解答题的第一步出现，要求快速求出圆的方程。</li>
+<li><strong>典型应用</strong>：  </li>
+<li>已知三角形三个顶点坐标，求其外接圆方程（或外心坐标、半径）；  </li>
+<li>在轨迹问题中，若动点满足到三个定点的某个关系，可转化为确定圆的条件；  </li>
+<li>与“点与圆的位置关系”“直线与圆的位置关系”等综合考查时，先由三点确定圆，再讨论后续问题。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略三点共线的情形：若三点共线，垂直平分线平行（或重合），无法确定唯一圆，但解题时往往直接代入解方程组，可能得到无解或多解，需养成先判定三点不共线的习惯。</li>
+<li>解方程组时的符号错误：将点的坐标代入 $x^2 + y^2 + Dx + Ey + F = 0$ 时，常数项 $F$ 的符号容易写反，或忽略 $x^2, y^2$ 项已经存在的事实。</li>
+<li>半径计算错误：求出一般方程后，化为标准方程时配方出错，导致半径 $r = \frac{\sqrt{D^2+E^2-4F}}{2}$ 漏掉分母的 2 或计算错误。</li>
+<li>忽略圆的一般方程的限制条件：忘记验证 $D^2 + E^2 - 4F &gt; 0$，虽然由三点不共线可自然满足，但在纯运算题中可能因为之前计算错误而得到不符合条件的“圆”。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三点定圆</td>
+<td>Three points determine a circle</td>
+<td>平面几何基本定理</td>
+</tr>
+<tr>
+<td>外接圆</td>
+<td>Circumcircle</td>
+<td>经过三角形三个顶点的圆</td>
+</tr>
+<tr>
+<td>外心</td>
+<td>Circumcenter</td>
+<td>三角形外接圆的圆心，垂直平分线交点</td>
+</tr>
+<tr>
+<td>垂直平分线</td>
+<td>Perpendicular bisector</td>
+<td>过线段中点且垂直于该线段的直线</td>
+</tr>
+<tr>
+<td>圆的一般方程</td>
+<td>General equation of a circle</td>
+<td>$x^2+y^2+Dx+Ey+F=0$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧 平面解析几何初步·圆与方程</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/373-圆的标准方程.html">圆的标准方程</a></li>
+<li><a href="../atoms/372-圆的一般方程.html">圆的一般方程</a></li>
+<li><a class="dead" title="未收录">两条直线的交点</a></li>
+<li><a class="dead" title="未收录">三角形五心</a></li>
+<li><a href="../atoms/626-两点间距离公式.html">两点间距离公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2022-文-15.html">2022-文-15</a></li>
+<li><a href="../exam/数学/2022-理-14.html">2022-理-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

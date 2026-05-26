@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>磁场对通电导体的作用</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>磁场对通电导体的作用</h1><div class="review-mark" data-stem="188-磁场对通电导体的作用"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第二十章电与磁]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 磁场对通电导体的作用, force on current-carrying conductor in magnetic field, 安培力</p><h1>磁场对通电导体的作用</h1>
+<blockquote>
+<p><strong>一句话</strong>：放在磁场中的通电导体会受到安培力的作用，力的方向由左手定则判断；这是电动机的工作原理。
+<strong>English</strong>: A current-carrying conductor in a magnetic field experiences an Ampere force; the force direction is determined by the left-hand rule; this is the principle behind electric motors.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>通电导线在磁场中会受到力！</strong> 这就是电动机能转起来的原因。</p>
+<p><strong>实验：</strong>
+把一根通电导线放在蹄形磁铁的磁场中——导线会向一侧弯曲！</p>
+<ul>
+<li>电流越大，力越大</li>
+<li>磁场越强，力越大</li>
+<li>改变电流方向，力的方向也改变</li>
+<li>改变磁场方向（翻转磁铁），力的方向也改变</li>
+</ul>
+<p><strong>左手定则（判断力的方向）：</strong></p>
+<p>伸开左手，让：
+- <strong>磁感线穿入手心</strong>（磁场方向垂直于手掌进入）
+- <strong>四指弯向电流方向</strong>
+- 那么<strong>大拇指的方向就是导线受力方向</strong>！</p>
+<p><strong>记忆口诀：</strong> 左手定则——F B I（力、磁、电流）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>安培力</h3>
+<p><strong>安培力</strong>：磁场对通电导体的作用力（最早由安培研究，故名）。</p>
+<p><strong>安培力公式</strong>：</p>
+<p>$$F = BIL\sin\theta$$</p>
+<ul>
+<li>$F$：安培力（N）</li>
+<li>$B$：磁感应强度（T）</li>
+<li>$I$：电流（A）</li>
+<li>$L$：导线有效长度（在磁场中的长度，m）</li>
+<li>$\theta$：电流方向与磁场方向的夹角</li>
+</ul>
+<p><strong>特例</strong>：
+- $\theta = 90°$（电流垂直于磁场）：$F = BIL$（最大）
+- $\theta = 0°$（电流平行于磁场）：$F = 0$（无安培力）</p>
+<p>初中阶段主要讨论 $\theta = 90°$ 的情况。</p>
+<h3>左手定则</h3>
+<p>伸开左手，使磁感线垂直穿入手心（手心朝向磁场来向），四指指向电流方向，则大拇指所指即为安培力方向。</p>
+<p><strong>F、B、I 三者两两垂直</strong>（当 $\theta = 90°$ 时）。</p>
+<h3>安培力的方向变化</h3>
+<table>
+<thead>
+<tr>
+<th>改变</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电流方向反向</td>
+<td>安培力反向</td>
+</tr>
+<tr>
+<td>磁场方向反向</td>
+<td>安培力反向</td>
+</tr>
+<tr>
+<td>两者都反向</td>
+<td>安培力不变</td>
+</tr>
+</tbody>
+</table>
+<h3>安培力与电动机</h3>
+<p>电动机中，通电线圈在磁场中受安培力产生力矩，使线圈转动。这就是"磁场对通电导体的作用 → 电动机"的基础。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一根导线，长 0.2 m，垂直置于磁感应强度 0.5 T 的匀强磁场中（电流与磁场垂直），通过电流 3 A，求安培力。</p>
+<p>$$F = BIL\sin\theta = 0.5 \times 3 \times 0.2 \times \sin90° = 0.3 \text{ N}$$</p>
+<p><strong>例2</strong>：用左手定则判断方向：电流向右，磁场向上，安培力朝哪？</p>
+<p>左手伸开，磁场（向上）穿入手心（手掌朝上），四指指向电流方向（向右）→ 大拇指朝前（垂直于页面向外）。</p>
+<p><strong>易错点：</strong>
+- 左手定则（力的方向）≠ 右手定则（电流磁场方向，安培定则）
+- 当电流平行于磁场时，安培力为零（$\sin 0° = 0$）
+- 安培力大小与导体的电阻无关（只与电流、磁场、长度有关）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安培力</td>
+<td>Ampere force</td>
+<td>n.</td>
+<td>The Ampere force is the force on a current in a magnetic field.</td>
+</tr>
+<tr>
+<td>左手定则</td>
+<td>left-hand rule</td>
+<td>n.</td>
+<td>Use the left-hand rule to find the force direction.</td>
+</tr>
+<tr>
+<td>通电导体</td>
+<td>current-carrying conductor</td>
+<td>n.</td>
+<td>A current-carrying conductor experiences a force in a magnetic field.</td>
+</tr>
+<tr>
+<td>磁感应强度</td>
+<td>magnetic flux density</td>
+<td>n.</td>
+<td>The force equals BIL when B is perpendicular to I.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第二十章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 磁场对通电导体的作用</li>
+<li><strong>百科</strong>：维基百科"安培力"；中文百科"左手定则"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/323-磁感应强度.html">磁感应强度</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">电动机原理</a></p>
+</li>
+<li><a href="../atoms/161-电动机.html">电动机</a></li>
+<li><a href="../atoms/171-电流的磁效应.html">电流的磁效应</a></li>
+<li><a href="../atoms/135-安培定则.html">安培定则</a></li>
+<li><a href="../atoms/187-磁场.html">磁场</a></li>
+<li><a href="../atoms/175-电磁感应.html">电磁感应</a></li>
+</ul>
+</div>
+</body>
+</html>

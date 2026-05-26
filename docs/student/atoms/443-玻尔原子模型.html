@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>玻尔原子模型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>玻尔原子模型</h1><div class="review-mark" data-stem="443-玻尔原子模型"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 原子物理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 玻尔原子模型, Bohr atomic model, 玻尔模型</p><h2>🎓 玻尔原子模型</h2>
+<h3>背景</h3>
+<p>卢瑟福核式模型无法解释原子的稳定性和线状光谱。1913 年，丹麦物理学家尼尔斯·玻尔（Niels Bohr）在普朗克量子假说的基础上，对经典模型进行量子化修正，提出玻尔原子模型。</p>
+<h3>玻尔三个假设</h3>
+<p><strong>假设一：轨道量子化（定态假设）</strong></p>
+<blockquote>
+<p>电子只能在特定的<strong>轨道</strong>上运动，每个轨道对应一个<strong>定态（稳定态）</strong>，电子在定态下不辐射能量。</p>
+</blockquote>
+<p>$$r_n = n^2 r_1 \quad (n = 1, 2, 3, \ldots)$$</p>
+<p>氢原子第一玻尔半径：$r_1 = 0.529 \times 10^{-10}\ \text{m}$（玻尔半径）</p>
+<p><strong>假设二：能量量子化（能量假设）</strong></p>
+<blockquote>
+<p>每个定态对应一定的能量（能级），能级不连续：</p>
+</blockquote>
+<p>$$E_n = \frac{E_1}{n^2} = \frac{-13.6\ \text{eV}}{n^2}$$</p>
+<p><strong>假设三：跃迁假设（频率条件）</strong></p>
+<blockquote>
+<p>电子在两个定态之间跃迁时，吸收或辐射<strong>一个光子</strong>，光子能量等于两能级之差：</p>
+</blockquote>
+<p>$$h\nu = E_n - E_m \quad (n &gt; m \text{ 时辐射，} n &lt; m \text{ 时吸收})$$</p>
+<h3>对氢原子光谱的解释</h3>
+<p>不同系列的光谱线对应电子跃迁到不同低能级：</p>
+<table>
+<thead>
+<tr>
+<th>谱线系</th>
+<th>终态 $m$</th>
+<th>频率范围</th>
+<th>区段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>莱曼系</td>
+<td>$m=1$</td>
+<td>高频</td>
+<td>紫外</td>
+</tr>
+<tr>
+<td>巴尔末系</td>
+<td>$m=2$</td>
+<td>中频</td>
+<td>可见光</td>
+</tr>
+<tr>
+<td>帕邢系</td>
+<td>$m=3$</td>
+<td>低频</td>
+<td>红外</td>
+</tr>
+</tbody>
+</table>
+<h3>轨道半径与能量的关系</h3>
+<p>$$r_n = n^2 \times 0.053\ \text{nm} \quad \Rightarrow \quad r_1 : r_2 : r_3 = 1 : 4 : 9$$</p>
+<p>$$E_n = -\frac{13.6}{n^2}\ \text{eV} \quad \Rightarrow \quad E_1 : E_2 : E_3 = 1 : \frac{1}{4} : \frac{1}{9}$$</p>
+<h3>玻尔模型的成功与局限</h3>
+<p><strong>成功</strong>：
+- 精确预言了氢原子光谱的各系谱线频率
+- 解释了原子稳定性（定态不辐射）
+- 引入量子化概念，开启量子物理时代</p>
+<p><strong>局限</strong>：
+- 只适用于氢原子和类氢离子（$\text{He}^+, \text{Li}^{2+}$ 等单电子体系）
+- 无法解释多电子原子光谱
+- 将电子视为经典粒子在轨道上运动，与量子力学（电子云）矛盾
+- 无法解释谱线强度和宽度</p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：氢原子由 $n=4$ 的激发态回到基态，最多能辐射几种频率的光子？</p>
+<p><strong>解</strong>：$n=4$ 到基态可以经过不同路径（$4\to3\to2\to1$，$4\to2\to1$，$4\to1$ 等）：</p>
+<p>不同跃迁组合数：$\frac{n(n-1)}{2} = \frac{4 \times 3}{2} = 6$ 种频率</p>
+<p>各跃迁：$4\to3$，$4\to2$，$4\to1$，$3\to2$，$3\to1$，$2\to1$，共 6 种。</p>
+<h3>易错点</h3>
+<ol>
+<li>$n$ 越大，轨道半径越大（$r_n = n^2 r_1$），能量越高（越靠近 0，绝对值越小）</li>
+<li>跃迁方向：高 $n$ → 低 $n$ 辐射光子；低 $n$ → 高 $n$ 必须吸收光子（不能吸收能量不匹配的光子）</li>
+<li>玻尔模型仅适用于氢原子（单电子体系），多电子原子需用量子力学处理</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第五章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/玻尔模型">玻尔原子模型 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/441-热力学第二定律.html">热力学第二定律</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/417-光电效应.html">光电效应</a></p>
+</li>
+<li>
+<p><a href="../atoms/436-氢原子能级.html">氢原子能级</a></p>
+</li>
+<li><a href="../atoms/426-原子结构.html">原子结构</a></li>
+<li><a href="../atoms/425-卢瑟福原子模型.html">卢瑟福原子模型</a></li>
+<li><a href="../atoms/416-光子.html">光子</a></li>
+<li><a class="dead" title="未收录">普朗克常数</a></li>
+<li><a href="../atoms/417-光电效应.html">光电效应</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2022-湖南-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

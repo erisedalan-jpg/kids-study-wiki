@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正四棱柱</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正四棱柱</h1><div class="review-mark" data-stem="1398-正四棱柱"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正四棱柱</p><h1>正四棱柱</h1>
+<blockquote>
+<p><strong>一句话</strong>：底面为正方形且侧棱垂直于底面的四棱柱。
+<strong>English</strong>: A right prism whose base is a square.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong></p>
+<p>正四棱柱必须同时满足两个条件：① 底面是正方形；② 侧棱与底面垂直（即为直棱柱）。设底面正方形边长为 $a$，高（侧棱长）为 $h$，则：</p>
+<ul>
+<li>体积：$V = a^2 h$</li>
+<li>侧面积：$S_{\text{侧}} = 4ah$</li>
+<li>全面积：$S_{\text{表}} = 2a^2 + 4ah$</li>
+<li>体对角线长：$l = \sqrt{2a^2 + h^2}$（待家长核对）</li>
+</ul>
+<p>若 $a = h$，则为<strong>正方体</strong>，是正四棱柱的特殊情况。正四棱柱的侧面是四个全等的矩形，对角面是矩形。</p>
+<p><strong>关键方法</strong></p>
+<ol>
+<li><strong>证明某四棱柱是正四棱柱</strong>：需依次证明底面为正方形、侧棱与底面垂直。常用向量法：以底面顶点为原点建系，证明底面两边垂直且模长相等，再证侧棱与底面两边点积为零。</li>
+<li><strong>求外接球半径</strong>：正四棱柱外接球半径 $R = \frac{1}{2}\sqrt{2a^2 + h^2}$（即体对角线的一半），适用于体对角线中点即为外接球球心。</li>
+<li><strong>截面问题</strong>：常考过体对角线的截面形状，或平行于底面的截面（仍为正方形），需结合相似比例计算截面边长。</li>
+</ol>
+<p><strong>典型应用</strong></p>
+<p>高考中，正四棱柱常见于以下设问：
+- <strong>体积/表面积计算</strong>：直接代公式，但常与三视图结合，需先还原为底面正方形及高的数据。
+- <strong>外接球、内切球</strong>：正四棱柱一般无内切球（仅当 $a = h = 2r$ 时才有可能），外接球考点频次极高，设问方式如“正四棱柱的各顶点都在同一球面上，已知…求表面积”。
+- <strong>线面位置关系证明</strong>：如求证体对角线与侧面的交点位置，或侧面内某线段与底面的夹角，常通过建系求法向量解决。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆正四棱柱与正方体</strong>：正方体是正四棱柱的特例（底面正方形且高等于底面边长），但正四棱柱的高 $h$ 与底面边长 $a$ 可不相等，侧面不一定是正方形。</li>
+<li><strong>体对角线公式记混</strong>：正四棱柱体对角线长为 $\sqrt{a^2 + a^2 + h^2}$，而非长方体的 $\sqrt{a^2 + b^2 + h^2}$，易漏掉底面两等边造成的系数 2。</li>
+<li><strong>外接球半径公式错用</strong>：误将体对角线长当作直径的 $2R$，实际 $2R = l = \sqrt{2a^2 + h^2}$，求 $R$ 时需除以 2。</li>
+<li><strong>建系时坐标设错</strong>：底面以正方形顶点为原点时，相邻两边坐标表示为 $(a,0,0)$ 与 $(0,a,0)$，若底面非正方形则正四棱柱不成立，这一步需先判定再建系。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正四棱柱</td>
+<td>right square prism</td>
+<td>底面为正方形的直棱柱</td>
+</tr>
+<tr>
+<td>直棱柱</td>
+<td>right prism</td>
+<td>侧棱与底面垂直的棱柱</td>
+</tr>
+<tr>
+<td>底面</td>
+<td>base</td>
+<td>棱柱的两个平行且全等的面</td>
+</tr>
+<tr>
+<td>体对角线</td>
+<td>space diagonal</td>
+<td>连接不在同一面上的两个顶点的线段</td>
+</tr>
+<tr>
+<td>外接球</td>
+<td>circumscribed sphere</td>
+<td>所有顶点均在球面上的球体</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-18，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/346-空间几何体-多面体.html">棱柱</a></li>
+<li><a href="../atoms/019-正方体.html">正方体</a></li>
+<li><a class="dead" title="未收录">直棱柱</a></li>
+<li><a class="dead" title="未收录">外接球问题</a></li>
+<li><a class="dead" title="未收录">三视图还原几何体</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-07.html">2009-文-07</a></li>
+<li><a href="../exam/数学/2009-理-04.html">2009-理-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

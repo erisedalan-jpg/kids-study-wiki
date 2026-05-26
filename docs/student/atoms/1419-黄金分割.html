@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黄金分割</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>黄金分割</h1><div class="review-mark" data-stem="1419-黄金分割"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 黄金分割, golden ratio</p><h1>黄金分割</h1>
+<blockquote>
+<p><strong>一句话</strong>：将线段分为两部分，使较长部分与全长之比等于较短部分与较长部分之比，该比值约为 $0.618$，称为黄金分割比。
+<strong>English</strong>: The division of a line segment into two parts such that the ratio of the longer part to the whole is equal to the ratio of the shorter part to the longer part; the ratio is approximately 0.618.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：设线段 $AB$ 全长 $L$，点 $P$ 为其内分点，较长段 $AP = x$，较短段 $PB = L-x$。若满足 $$\frac{x}{L} = \frac{L-x}{x}$$ 则称 $P$ 为 $AB$ 的黄金分割点。由比例式整理得 $x^2 + Lx - L^2 = 0$，解出 $$\frac{x}{L} = \frac{\sqrt{5}-1}{2} \approx 0.618$$ 该比值记作 $\varphi$，其倒数 $\Phi = \dfrac{1}{\varphi} = \dfrac{\sqrt{5}+1}{2} \approx 1.618$。代数值满足 $\varphi^2 + \varphi - 1 = 0$，即 $\varphi^2 = 1 - \varphi$。</li>
+<li><strong>关键方法</strong>：① 几何构造：以 $AB$ 为边，过 $B$ 作垂线取 $BD = \frac{1}{2}AB$；连 $AD$；在 $AD$ 上截 $DE = BD$；在 $AB$ 上截 $AP = AE$，则 $P$ 为黄金分割点（依据勾股定理与根式作图）。② 代数法：直接解二次方程求比分。③ 数列极限法：利用斐波那契数列 $F_{n+1} = F_n + F_{n-1}$，相邻两项比值的极限 $\lim_{n \to \infty} \frac{F_{n+1}}{F_n} = \Phi$（可由特征方程证明）。④ 优选法应用：单因素黄金分割法（0.618 法）在试验设计中用 $\varphi$ 确定试探点。</li>
+<li><strong>典型应用</strong>：高考中常见以数学文化为背景，给定线段求黄金分割点坐标或比值；或将黄金分割比隐藏在正五边形、黄金三角形（顶角 $36^\circ$ 的等腰三角形，底与腰之比为 $\varphi$）中，结合相似三角形求长度或证明比例；在数列题中给出递推式，要求证明或计算极限为黄金分割数；还可能结合优选法以应用题形式出现。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆两个比值</strong>：$\varphi = \frac{\sqrt{5}-1}{2} \approx 0.618$ 与 $\Phi = \frac{\sqrt{5}+1}{2} \approx 1.618$ 常被误用，解题时需看清所求是“较长段/全长”还是“全长/较长段”。</li>
+<li><strong>忽视方程的正根</strong>：所列二次方程有正负两根，比值只能为正，忽略取舍易得错误数值。</li>
+<li><strong>错用代数性质</strong>：$\varphi$ 满足 $\varphi^2 = 1 - \varphi$，而非 $\varphi^2 = 1 + \varphi$；在化简、构造等比时符号出错。</li>
+<li><strong>几何对应关系混搭</strong>：在黄金三角形或正五边形中，误将腰与底比当作 $\varphi$，实际应为底/腰 $= \varphi$（或腰/底 $= \Phi$），需要严格对应定义。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>黄金分割</td>
+<td>golden section</td>
+<td>线段的内分方式</td>
+</tr>
+<tr>
+<td>黄金分割比 / 黄金分割数</td>
+<td>golden ratio</td>
+<td>比值 $\frac{\sqrt{5}-1}{2}$</td>
+</tr>
+<tr>
+<td>斐波那契数列</td>
+<td>Fibonacci sequence</td>
+<td>递推数列，相邻项之比趋近黄金分割比</td>
+</tr>
+<tr>
+<td>黄金三角形</td>
+<td>golden triangle</td>
+<td>顶角为 $36^\circ$ 的等腰三角形</td>
+</tr>
+<tr>
+<td>黄金矩形</td>
+<td>golden rectangle</td>
+<td>两邻边之比为黄金分割比的矩形</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对教材索引</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-19，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">一元二次方程</a></li>
+<li><a class="dead" title="未收录">勾股定理与尺规作图</a></li>
+<li><a class="dead" title="未收录">相似三角形及其判定</a></li>
+<li><a class="dead" title="未收录">数列递推与极限</a></li>
+<li><a class="dead" title="未收录">优选法（0.618法）</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">平行线分线段成比例</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/179-三角形中位线.html">三角形中位线</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-文-04.html">2019-文-04</a></li>
+<li><a href="../exam/数学/2019-理-04.html">2019-理-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

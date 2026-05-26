@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列错位相减</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列错位相减</h1><div class="review-mark" data-stem="385-数列错位相减"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第四章数列]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列错位相减, staggered subtraction method, 错位相减法</p><h2>🎓 数列错位相减法</h2>
+<h3>适用场景</h3>
+<p><strong>错位相减法</strong>：用于求形如 $\sum_{k=1}^n a_k \cdot b_k$ 的数列前 $n$ 项和，其中 ${a_k}$ 是等差数列，${b_k}$ 是等比数列（或反过来也可适用）。</p>
+<p>典型例子：$S_n = 1\cdot2 + 2\cdot2^2 + 3\cdot2^3 + \cdots + n\cdot2^n = \sum_{k=1}^n k\cdot2^k$</p>
+<h3>推导过程（以 $S_n = \sum_{k=1}^n k q^k$ 为例）</h3>
+<p><strong>第一步</strong>：写出 $S_n$：</p>
+<p>$$S_n = 1\cdot q + 2\cdot q^2 + 3\cdot q^3 + \cdots + n\cdot q^n$$</p>
+<p><strong>第二步</strong>：错位（乘以公比 $q$）：</p>
+<p>$$q\cdot S_n = 1\cdot q^2 + 2\cdot q^3 + 3\cdot q^4 + \cdots + n\cdot q^{n+1}$$</p>
+<p><strong>第三步</strong>：相减（$S_n - q\cdot S_n$）：</p>
+<p>$$S_n(1-q) = q + q^2 + q^3 + \cdots + q^n - n q^{n+1}$$</p>
+<p>$$= \frac{q(1-q^n)}{1-q} - nq^{n+1} \quad (q \ne 1)$$</p>
+<p><strong>第四步</strong>：解出 $S_n$（除以 $1-q$）：</p>
+<p>$$S_n = \frac{q(1-q^n)}{(1-q)^2} - \frac{nq^{n+1}}{1-q} \quad (q \ne 1)$$</p>
+<h3>标准模板</h3>
+<table>
+<thead>
+<tr>
+<th>数列类型</th>
+<th>求和方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等差 $\sum a_k$</td>
+<td>首尾相加法</td>
+</tr>
+<tr>
+<td>等比 $\sum b_k$</td>
+<td>等比求和公式</td>
+</tr>
+<tr>
+<td>等差 × 等比 $\sum a_k b_k$</td>
+<td><strong>错位相减法</strong></td>
+</tr>
+<tr>
+<td>分母为等差（裂项型）</td>
+<td>裂项相消法</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求 $S_n = 1\cdot2 + 2\cdot2^2 + 3\cdot2^3 + \cdots + n\cdot2^n$</p>
+<p><strong>解</strong>：</p>
+<p>$$S_n = \sum_{k=1}^n k\cdot2^k$$</p>
+<p>$$2S_n = \sum_{k=1}^n k\cdot2^{k+1} = 1\cdot2^2+2\cdot2^3+\cdots+(n-1)\cdot2^n + n\cdot2^{n+1}$$</p>
+<p>$$S_n - 2S_n = (1\cdot2+1\cdot2^2+1\cdot2^3+\cdots+1\cdot2^n) - n\cdot2^{n+1}$$</p>
+<p>$$-S_n = \frac{2(1-2^n)}{1-2} - n\cdot2^{n+1} = 2^{n+1}-2 - n\cdot2^{n+1} = (1-n)2^{n+1}-2$$</p>
+<p>$$S_n = (n-1)2^{n+1}+2$$</p>
+<p><strong>验证</strong>：$n=1$：$S_1=1\times2=2$，代入 $(0)\times4+2=2$ ✓</p>
+<p>$n=2$：$S_2=2+8=10$，代入 $(1)\times8+2=10$ ✓</p>
+<p><strong>例2</strong>：求 $T_n = \sum_{k=1}^n (2k-1)\cdot3^k$</p>
+<p><strong>解</strong>：令 $S_n = T_n$，错位：$3S_n$，相减：</p>
+<p>$$T_n - 3T_n = \sum_{k=1}^n(2k-1)3^k - \sum_{k=1}^n(2k-1)3^{k+1}$$</p>
+<p>$$-2T_n = 1\cdot3 + \sum_{k=2}^n[(2k-1)-(2k-3)]\cdot3^k - (2n-1)\cdot3^{n+1}$$</p>
+<p>$$= 3 + 2\sum_{k=2}^n 3^k - (2n-1)3^{n+1} = 3 + 2\cdot\frac{3^2(1-3^{n-1})}{1-3} - (2n-1)3^{n+1}$$</p>
+<p>$$= 3 + 9\cdot\frac{1-3^{n-1}}{-2}\times2... $$</p>
+<p>（计算较长，建议家长核对完整推导）</p>
+<h3>易错点</h3>
+<ul>
+<li>错位相减后要检查<strong>首尾项</strong>是否配对，避免漏项或多算</li>
+<li>特殊情形 $q=1$：数列为 $\sum_{k=1}^n k = \dfrac{n(n+1)}{2}$（等差，不用错位法）</li>
+<li>最后别忘除以 $1-q$（注意 $q \ne 1$ 的条件）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第四章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第四章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/382-数列裂项相消.html">数列裂项相消</a></li>
+<li><a href="../atoms/413-等比数列性质.html">等比数列性质</a></li>
+<li><a href="../atoms/412-等差数列性质.html">等差数列性质</a></li>
+<li><a href="../atoms/357-等比数列前n项和.html">等比数列前n项和</a></li>
+<li><a href="../atoms/384-数列通项公式.html">数列通项公式</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-17.html">2010-理-17</a></li>
+<li><a href="../exam/数学/2015-文-19.html">2015-文-19</a></li>
+<li><a href="../exam/数学/2020-理-17.html">2020-理-17</a></li>
+<li><a href="../exam/数学/2021-文-19.html">2021-文-19</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次电池</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次电池</h1><div class="review-mark" data-stem="362-二次电池"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次电池, secondary battery, rechargeable battery, 蓄电池, 可充电电池</p><h1>二次电池</h1>
+<blockquote>
+<p><strong>一句话</strong>：放电后可通过充电恢复活性物质、反复使用的电池，充电时电极反应逆向进行，典型例子有铅蓄电池和锂离子电池。
+<strong>English</strong>: A battery that can be recharged and reused by reversing electrode reactions; typical examples include lead-acid batteries and lithium-ion batteries.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>二次电池</strong>（secondary battery / rechargeable battery）：可以反复充放电的电池。放电时化学能→电能；充电时电能→化学能（逆向氧化还原反应）。</p>
+<p>常见二次电池：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>负极</th>
+<th>正极</th>
+<th>电解质</th>
+<th>标称电压</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>铅蓄电池</td>
+<td>Pb</td>
+<td>PbO₂</td>
+<td>稀H₂SO₄</td>
+<td>2.0 V/格</td>
+<td>重，便宜</td>
+</tr>
+<tr>
+<td>镍镉（NiCd）</td>
+<td>Cd</td>
+<td>NiOOH</td>
+<td>KOH</td>
+<td>1.2 V</td>
+<td>记忆效应</td>
+</tr>
+<tr>
+<td>镍氢（NiMH）</td>
+<td>MH（储氢合金）</td>
+<td>NiOOH</td>
+<td>KOH</td>
+<td>1.2 V</td>
+<td>环保</td>
+</tr>
+<tr>
+<td>锂离子（Li-ion）</td>
+<td>石墨（Li 嵌入）</td>
+<td>LiCoO₂等</td>
+<td>有机溶剂</td>
+<td>3.6 V</td>
+<td>高能量密度</td>
+</tr>
+</tbody>
+</table>
+<h3>公式 / 方程式</h3>
+<p><strong>充放电关系</strong>（铅蓄电池为例）：</p>
+<p>$$
+\text{放电（负极）}: \text{Pb} - 2e^- + \text{SO}_4^{2-} \rightarrow \text{PbSO}_4\downarrow
+$$</p>
+<p>$$
+\text{充电（负极）}: \text{PbSO}_4 + 2e^- \rightarrow \text{Pb} + \text{SO}_4^{2-}
+$$</p>
+<p>充电时：</p>
+<ul>
+<li>放电负极（Pb）变为<strong>电解池阴极</strong>（得电子，发生还原）</li>
+<li>放电正极（PbO₂）变为<strong>电解池阳极</strong>（失电子，发生氧化）</li>
+<li>充电时电流方向与放电<strong>相反</strong></li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例</strong>：铅蓄电池充电时，两极各发生什么反应？</p>
+<p>$$
+\text{阴极（即放电负极）}: \text{PbSO}_4 + 2e^- \rightarrow \text{Pb} + \text{SO}_4^{2-}
+$$</p>
+<p>$$
+\text{阳极（即放电正极）}: \text{PbSO}_4 + 2\text{H}_2\text{O} - 2e^- \rightarrow \text{PbO}_2 + \text{SO}_4^{2-} + 4\text{H}^+
+$$</p>
+<p>充电使 PbSO₄ 转化回 Pb 和 PbO₂，H₂SO₄ 浓度恢复（放电消耗 H₂SO₄）。</p>
+<h3>易错点</h3>
+<ul>
+<li>充电时，放电的负极接充电器<strong>负极</strong>（阴极），放电正极接充电器<strong>正极</strong>（阳极）</li>
+<li>充电时阳极发生氧化，阴极发生还原（电解池规则）</li>
+<li>铅蓄电池放电时 H₂SO₄ 浓度下降（生成 PbSO₄），可用密度计判断电量</li>
+<li>锂离子电池是锂离子在两极间"摇椅式"移动，不是金属 Li 溶解析出</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二次电池</td>
+<td>secondary battery</td>
+</tr>
+<tr>
+<td>充电</td>
+<td>charging</td>
+</tr>
+<tr>
+<td>放电</td>
+<td>discharging</td>
+</tr>
+<tr>
+<td>可充电</td>
+<td>rechargeable</td>
+</tr>
+<tr>
+<td>能量密度</td>
+<td>energy density</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>Secondary batteries can be recharged by reversing the electrode reactions.（二次电池通过逆转电极反应来充电。）</li>
+<li>Lithium-ion batteries have a high energy density, making them ideal for portable devices.（锂离子电池能量密度高，适合便携设备。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"蓄电池"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/374-铅蓄电池.html">铅蓄电池</a></li>
+<li><a href="../atoms/375-锂电池.html">锂电池</a></li>
+<li><a href="../atoms/364-原电池（高中）.html">原电池（高中）</a></li>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+<li><a class="dead" title="未收录">一次电池</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2013-新课标Ⅱ-05.html">2013-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

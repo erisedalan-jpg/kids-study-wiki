@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分式方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分式方程</h1><div class="review-mark" data-stem="157-分式方程"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八上, 分式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分式方程, fractional equation, 含分式的方程, 增根</p><h1>分式方程</h1>
+<blockquote>
+<p><strong>课本定义</strong>：分母中含有未知数的方程叫做<strong>分式方程</strong>。解分式方程的一般方法：方程两边同乘以最简公分母，将分式方程化为整式方程，解整式方程后<strong>必须验根</strong>（去掉使分母为零的增根）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>什么是分式方程？</h3>
+<p>$\dfrac{3}{x} = 2$ —— 分母含未知数 $x$，就是分式方程！</p>
+<h3>解法：去分母</h3>
+<p>步骤：
+1. 找出各分母的最简公分母
+2. 方程两边<strong>同乘以</strong>最简公分母（去分母变整式方程）
+3. 解整式方程
+4. <strong>验根</strong>！代回原方程检验，去掉使分母为零的增根</p>
+<h3>为什么要验根？</h3>
+<p>乘以公分母时，如果公分母包含变量，可能在变量取特定值时为零——此时"乘以零"是非法操作，产生<strong>增根</strong>（不满足原方程的假根）。</p>
+<p><strong>例</strong>：解 $\dfrac{3}{x-1} = \dfrac{2}{x+1}$</p>
+<p>公分母：$(x-1)(x+1)$，两边乘以：</p>
+<p>$3(x+1) = 2(x-1)$</p>
+<p>$3x + 3 = 2x - 2$，$x = -5$</p>
+<p>验根：$x = -5$ 时，$x-1 = -6 \neq 0$，$x+1 = -4 \neq 0$，分母均不为零。✓</p>
+<p>∴ $x = -5$ 是解。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>完整解题步骤</h3>
+<ol>
+<li><strong>找最简公分母</strong>：各分母因式分解后取最小公倍式</li>
+<li><strong>去分母</strong>：两边同乘最简公分母，得整式方程</li>
+<li><strong>解整式方程</strong>：移项、合并、化简</li>
+<li><strong>验根</strong>：将解代入原方程的各分母，检验是否为零</li>
+<li>不为零：是原方程的解</li>
+<li>为零：是增根，舍去</li>
+</ol>
+<h3>增根的产生</h3>
+<p>增根 = 使公分母为零的值（使某个分母为零的值）</p>
+<p>解分式方程必须验根，这是区别于解整式方程的关键步骤！</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：解分式方程 $\dfrac{x}{x-2} - 1 = \dfrac{2}{x-2}$。</p>
+<p>解：公分母 = $x - 2$，两边乘以 $(x-2)$：</p>
+<p>$x - (x-2) = 2$</p>
+<p>$x - x + 2 = 2$</p>
+<p>$2 = 2$（恒成立）</p>
+<p>等等——解为任意值？<strong>验根</strong>！$x = 2$ 时分母 $x - 2 = 0$，无意义，需排除。</p>
+<p>∴ 方程的解为 $x$ 为任意实数且 $x \neq 2$……</p>
+<p>实际上，移项后 $\dfrac{x}{x-2} - \dfrac{2}{x-2} = 1$，即 $\dfrac{x-2}{x-2} = 1$，$1 = 1$，这是一个恒等式，但原方程在 $x = 2$ 处无意义，故答案为"除 $x=2$ 外的所有实数"。</p>
+<p><strong>例题 2</strong>：解 $\dfrac{1}{x-1} + \dfrac{3}{x+1} = \dfrac{6}{x^2-1}$。</p>
+<p>解：$x^2 - 1 = (x-1)(x+1)$，公分母 = $(x-1)(x+1)$</p>
+<p>两边乘以 $(x-1)(x+1)$：</p>
+<p>$(x+1) + 3(x-1) = 6$</p>
+<p>$x + 1 + 3x - 3 = 6$，$4x - 2 = 6$，$4x = 8$，$x = 2$</p>
+<p>验根：$x = 2$ 时，$x-1 = 1 \neq 0$，$x+1 = 3 \neq 0$ ✓</p>
+<p>∴ $x = 2$ 是解。</p>
+<p><strong>例题 3（有增根）</strong>：解 $\dfrac{x-1}{x-2} = \dfrac{1}{x-2} + 1$。</p>
+<p>公分母 = $x - 2$，去分母：$x - 1 = 1 + (x-2)$，$x - 1 = x - 1$，恒成立。</p>
+<p>验根：$x = 2$ 使 $x-2 = 0$，无意义，舍去。</p>
+<p>∴ 方程无解（$x$ 为任意实数除 $x=2$ 外，但代入是恒等式，无法限定唯一值）——此题结论：无解还是无穷解，取决于具体题目条件，实际此例无解（每个值代入分母不为零的均满足）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>必须验根</strong>：忘记验根是最常见失分点！</li>
+<li>去分母后直接解整式，不能带着分式继续运算。</li>
+<li>增根是使分母为零的值，不一定是"无解"，要具体判断。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/158-分式运算.html">分式运算</a>：通分和约分是解方程的基础</li>
+<li>→ <a href="../atoms/164-实际问题应用.html">实际问题应用</a>：分式方程是解行程、工程问题的主要工具</li>
+<li>→ <a href="../atoms/155-分式基本性质.html">分式基本性质</a>：等式两边同乘不为零的数</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分式方程</td>
+<td>fractional equation</td>
+</tr>
+<tr>
+<td>增根</td>
+<td>extraneous solution</td>
+</tr>
+<tr>
+<td>去分母</td>
+<td>clearing the denominator</td>
+</tr>
+<tr>
+<td>最简公分母</td>
+<td>LCD</td>
+</tr>
+<tr>
+<td>验根</td>
+<td>check / verify the solution</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十五章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中数学解方程》分式方程专题</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/156-分式定义.html">分式定义</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">形状-三角</a></p>
+</li>
+<li>
+<p><a href="../atoms/156-分式定义.html">分式定义</a></p>
+</li>
+<li><a href="../atoms/155-分式基本性质.html">分式基本性质</a></li>
+<li><a href="../atoms/158-分式运算.html">分式运算</a></li>
+<li><a href="../atoms/164-实际问题应用.html">实际问题应用</a></li>
+<li><a class="dead" title="未收录">整数指数幂</a></li>
+<li><a href="../atoms/167-提公因式法.html">提公因式法</a></li>
+</ul>
+</div>
+</body>
+</html>

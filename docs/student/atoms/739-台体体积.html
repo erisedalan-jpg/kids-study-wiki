@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>台体体积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>台体体积</h1><div class="review-mark" data-stem="739-台体体积"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 台体体积, 棱台体积, 圆台体积, frustum volume</p><h1>台体体积</h1>
+<blockquote>
+<p><strong>一句话</strong>：台体（棱台、圆台）的体积由上下两平行底面的面积与高决定，公式为 $V = \frac{1}{3}h(S_1 + S_2 + \sqrt{S_1 S_2})$。
+<strong>English</strong>: The volume of a frustum is given by $V = \frac{1}{3}h(S_1 + S_2 + \sqrt{S_1 S_2})$, where $S_1$ and $S_2$ are the areas of the two parallel bases and $h$ is the perpendicular height.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：台体是用一个平行于底面的平面去截棱锥（或圆锥），夹在截面与底面之间的部分。其体积公式为  </p>
+<p>$$
+V = \frac{1}{3} h (S_1 + S_2 + \sqrt{S_1 S_2})
+$$</p>
+<p>其中 $S_1, S_2$ 分别为上、下底面积，$h$ 为两底面间的垂直距离（高）。当上底面退缩为一个点时（$S_1 \to 0$），公式退化为锥体体积 $V = \frac{1}{3}Sh$。对于圆台，若上下底面半径分别为 $r_1, r_2$，公式可写为 $V = \frac{1}{3}\pi h (r_1^2 + r_2^2 + r_1 r_2)$。</p>
+<p><strong>关键方法</strong>：解决台体体积问题的三步骤：<br />
+1. 准确识别上下底面形状，分别计算面积（注意三角形、四边形、圆等的面积公式）；<br />
+2. 确定台体的高：一定是两底面间的垂直距离，不可误用侧棱长或斜高；<br />
+3. 代入台体体积公式，注意根号内是 $S_1 S_2$，先乘积再开平方。<br />
+若问题涉及组合体，常将台体分割为锥体、柱体进行求解。</p>
+<p><strong>典型应用</strong>：高考中常见以下设问角度：<br />
+- <strong>三视图还原</strong>：给出三视图，要求判断几何体为棱台或圆台，并计算体积；<br />
+- <strong>组合体与切割</strong>：在一个棱锥或圆锥中平行底面切割，求剩余部分的体积，或求台体与柱体、球的组合体体积；<br />
+- <strong>实际情境</strong>：如量筒形状、土方计算等，转化为圆台或棱台体积计算；<br />
+- <strong>与表面积、外接球结合</strong>：综合考查台体的体积与侧面积、外接球半径等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆高与斜高</strong>：台体的高是两底面间的垂线段，侧面的斜高不能直接代入体积公式，需先通过直角三角形关系求出真正的高。</li>
+<li><strong>上、下底面积对应错误</strong>：旋转体或对称图形中，容易将大底面和小底面弄反，导致根号内乘积出错，但公式具有对称性，不会改变结果；但若一块面积算错则全错。</li>
+<li><strong>面积计算不准确</strong>：棱台底面可能是正六边形、三角形等，需正确使用面积公式；圆台底面易误用直径代替半径。</li>
+<li><strong>忽略退化情况</strong>：某些题目给出的几何体其实是台体与锥体的组合，或上底面收缩为一个点时直接用台体公式反而不便，此时可还原成锥体体积差去计算。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>台体</td>
+<td>frustum</td>
+<td>棱台或圆台的统称</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>volume</td>
+<td>几何体所占空间的大小</td>
+</tr>
+<tr>
+<td>上底面积</td>
+<td>upper base area</td>
+<td>台体上方平行底面的面积</td>
+</tr>
+<tr>
+<td>下底面积</td>
+<td>lower base area</td>
+<td>台体下方平行底面的面积</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height</td>
+<td>两平行底面间的垂直距离</td>
+</tr>
+<tr>
+<td>圆台</td>
+<td>conical frustum</td>
+<td>圆锥被平行于底面截取后的部分</td>
+</tr>
+<tr>
+<td>棱台</td>
+<td>pyramidal frustum</td>
+<td>棱锥被平行于底面截取后的部分</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">棱锥体积</a></li>
+<li><a class="dead" title="未收录">圆柱圆锥体积</a></li>
+<li><a class="dead" title="未收录">几何体的表面积</a></li>
+<li><a class="dead" title="未收录">三视图还原几何体</a></li>
+<li><a class="dead" title="未收录">组合体体积</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2024-新课标Ⅱ-07.html">2024-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

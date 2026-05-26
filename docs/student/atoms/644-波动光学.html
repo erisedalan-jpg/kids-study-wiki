@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波动光学</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>波动光学</h1><div class="review-mark" data-stem="644-波动光学"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 波动光学, Wave Optics</p><h1>波动光学</h1>
+<blockquote>
+<p><strong>一句话</strong>：波动光学是研究光在传播过程中表现出干涉、衍射和偏振等波动现象的理论，核心是光的叠加原理与相干条件。
+<strong>English</strong>: Wave optics is the branch of optics that studies interference, diffraction, and polarization, treating light as a wave.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：波动光学以惠更斯-菲涅耳原理为基础，认为光是一种电磁波。核心公式包括双缝干涉条纹间距 $ \Delta x = \frac{L\lambda}{d} $（$L$ 为缝屏距，$d$ 为双缝间距，$\lambda$ 为波长）；薄膜干涉中光程差 $ \delta \approx 2n d \cos r$ 或近似垂直入射时 $ \delta = 2n d$，考虑半波损失后决定加强/减弱条件：加强 $ \delta = k\lambda $，减弱 $ \delta = (2k+1)\frac{\lambda}{2} $。单缝衍射暗纹条件 $ a\sin\theta = k\lambda $（$k=\pm1,\pm2,\dots$）。偏振遵循马吕斯定律 $ I = I_0 \cos^2\theta $ 及布儒斯特定律 $ \tan\theta_B = \frac{n_2}{n_1} $。</li>
+<li><strong>关键方法</strong>：<strong>条纹分析两步法</strong>：① 确定光程差光源性质（是否相干、有无半波损失）；② 将光程差与波长整数倍或半整数倍对应，直接写加强/减弱条件。<strong>干涉与衍射鉴别</strong>：干涉是有限列波的叠加，条纹等间距且强度均匀；衍射是无限子波叠加，单缝衍射中央明纹宽度为 $2\lambda L/a$，远大于其他明纹。<strong>偏振解题</strong>：抓“起偏角”反射光为完全线偏振光的条件。</li>
+<li><strong>典型应用</strong>：高考常考<strong>双缝干涉条纹间距变化</strong>（改变波长、缝距或屏距）、<strong>薄膜干涉检测平整度</strong>（根据条纹弯曲方向判断凹凸）、<strong>单缝衍射与双缝干涉的图样比较</strong>（装置对比、亮纹宽度对比）、<strong>偏振片组合求透射光强</strong>。真题设问例如：“用单色光做双缝干涉实验，屏上某点到双缝距离差为 $2.1\times10^{-6}\,\text{m}$，用波长 $700\,\text{nm}$ 的光时该点明暗情况如何？”解题时直接比路径差与半波长倍数。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>半波损失条件记混</strong>：只在光从<strong>光疏介质射向光密介质</strong>的反射界面上发生半波损失，透射光无半波损失。薄膜干涉中必须判断上下表面反射是否均发生半波损失，才能正确写出干涉条件。</li>
+<li><strong>混淆干涉与衍射条纹特征</strong>：双缝干涉条纹等间距，单缝衍射中央明纹宽度是其他明纹宽度的两倍，且光强集中分布。记错特征会导致选择装置类题目失分。</li>
+<li><strong>光程差与真空中波长不对应</strong>：在介质中传播时，光程差公式中的波长必须是<strong>真空中的波长</strong> $\lambda$，计算时不要误用介质中的波长 $\lambda'=\lambda/n$。</li>
+<li><strong>偏振光强度计算漏平方</strong>：马吕斯定律中 $ \cos\theta $ 是<strong>振幅投影</strong>，强度需平方，千万别直接写 $ I = I_0 \cos\theta $。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>干涉</td>
+<td>interference</td>
+<td>两列或多列相干光叠加产生稳定强弱分布的现象</td>
+</tr>
+<tr>
+<td>衍射</td>
+<td>diffraction</td>
+<td>光偏离直线传播绕到障碍物后的现象</td>
+</tr>
+<tr>
+<td>光程差</td>
+<td>optical path difference</td>
+<td>折射率与几何路程乘积之差，决定干涉强弱</td>
+</tr>
+<tr>
+<td>偏振</td>
+<td>polarization</td>
+<td>横波的振动方向相对于传播方向的不对称性</td>
+</tr>
+<tr>
+<td>相干光</td>
+<td>coherent light</td>
+<td>频率相同、振动方向一致、相位差恒定的光</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/455-几何光学.html">几何光学</a></li>
+<li><a href="../atoms/340-光的干涉.html">光的干涉</a></li>
+<li><a href="../atoms/342-光的衍射-高中.html">光的衍射</a></li>
+<li><a href="../atoms/338-光的偏振.html">光的偏振</a></li>
+<li><a href="../atoms/408-电磁波谱.html">电磁波谱</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2017-新课标Ⅱ-15.html">2017-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

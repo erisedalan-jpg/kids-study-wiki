@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数与形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数与形</h1><div class="review-mark" data-stem="077-数与形"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[数学广角, 规律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数与形, number and shape, 数学广角-数与形, 三角形数, 平方数, 形数</p><h1>数与形</h1>
+<blockquote>
+<p><strong>一句话</strong>：数字和图形之间有深刻的联系——把数字排成图形，你就能发现隐藏在数列背后的美丽规律。
+<strong>English</strong>: Numbers and shapes are deeply connected — arrange dots into geometric patterns, and you'll discover beautiful rules hidden inside number sequences.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>连续奇数的和等于平方数</h3>
+<p>这是"数与形"最漂亮的规律之一：</p>
+<p>$$1 = 1^2$$
+$$1 + 3 = 4 = 2^2$$
+$$1 + 3 + 5 = 9 = 3^2$$
+$$1 + 3 + 5 + 7 = 16 = 4^2$$
+$$1 + 3 + 5 + \cdots + (2n-1) = n^2$$</p>
+<p><strong>用图形理解：</strong> 把 1 个点摆成一个正方形，再在两边各加一圈点（L形）——每次新加的点数是下一个奇数，而总点数始终是完全正方形！</p>
+<pre><code>● →   ● ●   →   ● ● ●
+      ● ●       ● ● ●
+                ● ● ●
+(1)    (1+3=4)   (1+3+5=9)
+</code></pre>
+<p>每次在 L 形处加点，就是加了一个奇数！</p>
+<h3>三角形数（Triangular Numbers）</h3>
+<p>把点排成等边三角形得到的数：</p>
+<p>$$T_n = 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}$$</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>三角形数</th>
+<th>图形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>●</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>●●●</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>见图</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10</td>
+<td>保龄球排列!</td>
+</tr>
+<tr>
+<td>5</td>
+<td>15</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发现：</strong> 相邻两个三角形数之和是平方数！</p>
+<p>$$T_n + T_{n-1} = \frac{n(n+1)}{2} + \frac{n(n-1)}{2} = n^2$$</p>
+<p><strong>生活中的三角形数：</strong> 保龄球摆成 4 行（T₄ = 10 个球）；音乐会座位常用三角形排列。</p>
+<h3>平方数（Square Numbers）</h3>
+<p>完全平方数：1, 4, 9, 16, 25, 36, 49, 64, 81, 100 …</p>
+<ul>
+<li>第 n 个平方数 = n²</li>
+<li>相邻两个平方数之差 = n² − (n−1)² = 2n − 1（又是奇数！）</li>
+</ul>
+<h3>数列与图形结合</h3>
+<p>从图形中读出数列规律，是数学思维的重要能力：</p>
+<p><strong>例题：</strong> 下图中每行的点数是 1, 2, 3, 4, 5 …，前 100 行共多少点？</p>
+<p>$$\text{总点数} = 1 + 2 + 3 + \cdots + 100 = \frac{100 \times 101}{2} = 5050$$</p>
+<p><strong>高斯的故事：</strong> 传说德国数学家高斯 10 岁时，老师让全班计算 1+2+…+100，高斯几分钟就算出了 5050。他的方法：</p>
+<pre><code>1 +  2 +  3 + … + 100
+100 + 99 + 98 + … +  1
+两行相加：每对都是 101，共 100 对
+总和 = 100 × 101 ÷ 2 = 5050
+</code></pre>
+<p>这正是三角形数公式 $T_n = \dfrac{n(n+1)}{2}$ 的直觉来源！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>形数的历史：毕达哥拉斯学派</h3>
+<p><strong>形数（figurate numbers）</strong> 的研究起源于古希腊毕达哥拉斯学派（约公元前 6 世纪）。</p>
+<p>毕达哥拉斯学派认为"<strong>万物皆数</strong>"，他们系统研究了：
+- <strong>三角形数</strong>：$1, 3, 6, 10, 15, 21, \ldots$（$T_n = n(n+1)/2$）
+- <strong>平方数</strong>：$1, 4, 9, 16, 25, \ldots$（$S_n = n^2$）
+- <strong>五边形数</strong>：$1, 5, 12, 22, 35, \ldots$（$P_n = n(3n-1)/2$）
+- <strong>六边形数</strong>：$1, 6, 15, 28, 45, \ldots$（$H_n = n(2n-1)$）</p>
+<p><strong>关键等式：</strong> 每个六边形数都是三角形数（$H_n = T_{2n-1}$），每个完全平方数都可以写成两个三角形数之和。</p>
+<h3>高斯求和公式的推广</h3>
+<p>一般等差数列的求和公式：</p>
+<p>$$1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}$$</p>
+<p><strong>推广到 k 次幂之和（Bernoulli 公式）：</strong></p>
+<p>$$\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}$$</p>
+<p>$$\sum_{i=1}^{n} i^3 = \left[\frac{n(n+1)}{2}\right]^2 = T_n^2$$</p>
+<p>神奇：前 n 个自然数的三次方之和，等于前 n 个自然数之和的<strong>平方</strong>！</p>
+<h3>帕斯卡三角（Pascal's Triangle）</h3>
+<p>三角形数出现在帕斯卡三角的第三列（从 0 开始数）：</p>
+<pre><code>        1
+       1 1
+      1 2 1
+     1 3 3 1
+    1 4 6 4 1
+   1 5 10 10 5 1
+</code></pre>
+<p>第三列（粗体）：1, 3, 6, 10, 15, … 正是三角形数！</p>
+<p>帕斯卡三角还包含：斐波那契数列、二项式系数、杨辉三角（中国宋代数学家杨辉比帕斯卡早 400 年记录了这个三角形）。</p>
+<h3>费马大定理的起点</h3>
+<p>17 世纪，费马在研究形数时留下了历史上最著名的数学猜想：</p>
+<blockquote>
+<p>不存在正整数 a, b, c 满足 $a^n + b^n = c^n$（n ≥ 3）。</p>
+</blockquote>
+<p>这个"费马大定理"在 1995 年才由英国数学家安德鲁·怀尔斯证明，用了 358 年！证明过程长达 100 多页，用到了椭圆曲线和模形式等现代工具——而起点，就是小学数学里"平方数可以表示为两个三角形数之和"这样朴素的观察。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>形数</td>
+<td>figurate number</td>
+<td>n.</td>
+<td>能排成几何图形的数</td>
+</tr>
+<tr>
+<td>三角形数</td>
+<td>triangular number</td>
+<td>n.</td>
+<td>排成三角形的数</td>
+</tr>
+<tr>
+<td>平方数</td>
+<td>perfect square / square number</td>
+<td>n.</td>
+<td>n² 形式的数</td>
+</tr>
+<tr>
+<td>奇数</td>
+<td>odd number</td>
+<td>n.</td>
+<td>不能被 2 整除的数</td>
+</tr>
+<tr>
+<td>等差数列</td>
+<td>arithmetic sequence</td>
+<td>n.</td>
+<td>相邻项差相同的数列</td>
+</tr>
+<tr>
+<td>帕斯卡三角</td>
+<td>Pascal's triangle</td>
+<td>n.</td>
+<td>杨辉三角的西方名称</td>
+</tr>
+<tr>
+<td>毕达哥拉斯学派</td>
+<td>Pythagorean school</td>
+<td>n.</td>
+<td>古希腊数学学派</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1+3+5+7 等于 4 的平方 16。</td>
+<td>One plus three plus five plus seven equals four squared, which is 16.</td>
+</tr>
+<tr>
+<td>前 n 个奇数之和等于 n²。</td>
+<td>The sum of the first n odd numbers equals n².</td>
+</tr>
+<tr>
+<td>保龄球排成三角形，一共 10 个球。</td>
+<td>Bowling pins are arranged in a triangle with 10 pins total.</td>
+</tr>
+<tr>
+<td>高斯用配对法快速计算了 1 到 100 的和。</td>
+<td>Gauss used pairing to quickly calculate the sum from 1 to 100.</td>
+</tr>
+<tr>
+<td>数字和形状之间存在深刻的联系。</td>
+<td>There is a deep connection between numbers and shapes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 数学规律与数列主题科普绘本（适龄 7-12 岁）请家长在书店挑选。</li>
+<li>🚧 英文推荐 <em>The Number Devil</em> (Hans Magnus Enzensberger 著)，以梦境故事形式介绍形数等数学奇趣。（<strong>具体版本待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"为什么连续奇数加起来等于平方数？"</strong> → 可以说："用小石头摆一摆就知道——先摆 1 颗（1×1 的正方形），再在两边各加一列和一行（L 形），加了 3 颗，变成 2×2；再在外面加 L 形 5 颗，变成 3×3。每次加的 L 形正好是下一个奇数！"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"高斯真的那么厉害吗？"</strong> → 可以说："高斯（1777-1855）是历史上最伟大的数学家之一，被称为'数学王子'。关于他 10 岁算 1+100 的故事是个传说，但他确实从小就表现出天才一样的数学直觉。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"三角形数有什么用？"</strong> → 可以说："很多地方！保龄球是三角形数（10 个球），握手问题（n 个人两两握手共几次 = T_{n-1}）也是三角形数，概率里的组合数 C(n,2) = T_{n-1}。数学里到处是三角形数的影子。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 把一副扑克牌的 A 到 J（1-11）拿出来，分别排成三角形形状，数一数每次多少张——验证 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学六年级上册.pdf</a> 第 8 单元《数学广角——数与形》(p105-109)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第三学段"综合与实践——数与形的联系"</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/形数；https://zh.wikipedia.org/wiki/杨辉三角</li>
+<li><strong>拓展阅读</strong>：毕达哥拉斯学派与形数研究（数学史）；帕斯卡三角的性质（组合数学）；费马大定理（数论科普）；高斯生平（数学家传记）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">找规律</a> <a href="../atoms/042-集合.html">集合</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

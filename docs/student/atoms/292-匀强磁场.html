@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>匀强磁场</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>匀强磁场</h1><div class="review-mark" data-stem="292-匀强磁场"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电磁场基础]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 匀强磁场, uniform magnetic field, 均匀磁场</p><h2>🎓 匀强磁场（Uniform Magnetic Field）</h2>
+<h3>定义</h3>
+<p><strong>匀强磁场</strong>是空间各点<strong>磁感应强度大小相等、方向相同</strong>的磁场。</p>
+<p>在匀强磁场中，磁感线为<strong>平行等间距的直线</strong>。</p>
+<h3>产生匀强磁场的方式</h3>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两块大平行磁极之间</td>
+<td>两面积很大的磁极中间区域近似匀强（类似平行板电容器）</td>
+</tr>
+<tr>
+<td>亥姆霍兹线圈</td>
+<td>两个半径相等的同轴圆形线圈，间距等于半径，中心区域近似匀强</td>
+</tr>
+<tr>
+<td>长螺线管内部</td>
+<td>理想无限长螺线管内部为匀强磁场</td>
+</tr>
+</tbody>
+</table>
+<h3>特征</h3>
+<p>$$B = \text{常数（空间各点相同）}$$</p>
+<p>在匀强磁场中：
+- 通电导线所受安培力公式：$F = BIL\sin\theta$（$B$ 为常数）
+- 带电粒子在其中做<strong>匀速圆周运动</strong>（速度方向垂直于 $B$）</p>
+<h3>匀强磁场中的安培力计算</h3>
+<p>$$F = BIL\sin\theta$$</p>
+<p>$\theta$ 为电流方向与 $B$ 方向的夹角。</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>$\theta$</th>
+<th>安培力 $F$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电流 $\perp$ 磁场</td>
+<td>$90°$</td>
+<td>$F = BIL$（最大）</td>
+</tr>
+<tr>
+<td>电流 $\parallel$ 磁场</td>
+<td>$0°$</td>
+<td>$F = 0$</td>
+</tr>
+</tbody>
+</table>
+<h3>匀强磁场中的圆周运动</h3>
+<p>带电粒子以速度 $v$（垂直于 $B$）射入匀强磁场，洛伦兹力提供向心力：</p>
+<p>$$qvB = \frac{mv^2}{r} \Rightarrow r = \frac{mv}{qB}$$</p>
+<p>这是质谱仪、回旋加速器的工作基础（见 <a href="../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中圆周运动</a>）。</p>
+<h3>与平行板电容器类比</h3>
+<table>
+<thead>
+<tr>
+<th>类比项</th>
+<th>匀强电场（平行板电容器）</th>
+<th>匀强磁场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场线</td>
+<td>电场线：平行等距</td>
+<td>磁感线：平行等距</td>
+</tr>
+<tr>
+<td>场量</td>
+<td>电场强度 $E$（V/m）</td>
+<td>磁感应强度 $B$（T）</td>
+</tr>
+<tr>
+<td>力</td>
+<td>电场力 $F = qE$</td>
+<td>安培力/洛伦兹力</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：在匀强磁场（$B = 0.2\,\text{T}$）中，一段长 $L = 0.3\,\text{m}$ 的导线通电流 $I = 5\,\text{A}$，电流方向与磁场成 $30°$角，求安培力。</p>
+<p>$$F = BIL\sin30° = 0.2\times5\times0.3\times0.5 = 0.15\,\text{N}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>匀强磁场中 $B$ 大小和方向都不变，但安培力随电流方向变化（不同于重力始终向下）。</li>
+<li>粒子在匀强磁场中做圆周运动，<strong>速率不变</strong>（洛伦兹力不做功），<strong>方向改变</strong>。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了匀速圆周运动和向心力；本节将其应用于带电粒子在匀强磁场中的运动，是力学与电磁学的重要交叉点。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十二章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/磁场">维基百科·磁场</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">磁场-高中</a></li>
+<li><a href="../atoms/323-磁感应强度.html">磁感应强度</a></li>
+<li><a href="../atoms/188-磁场对通电导体的作用.html">安培力</a></li>
+<li><a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><a href="../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中圆周运动</a></li>
+<li><a class="dead" title="未收录">质谱仪</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2011-新课标-05.html">2011-新课标-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

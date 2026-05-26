@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>活化能</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>活化能</h1><div class="review-mark" data-stem="351-活化能"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 活化能, activation energy, Ea</p><h1>活化能</h1>
+<blockquote>
+<p><strong>一句话</strong>：反应物分子发生有效碰撞所需达到的最低能量与平均能量之差，符号 $E_a$，是决定反应速率的关键参数。
+<strong>English</strong>: The minimum energy required for reacting molecules to undergo an effective collision; denoted Ea, it is the key parameter determining reaction rate.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>活化能</strong>（activation energy，$E_a$）：在一定温度下，普通分子转变为<strong>活化分子</strong>所需的最低额外能量，即反应过渡态能量与反应物平均能量之差。</p>
+<ul>
+<li>$E_a$ 越大：活化分子百分比越小，反应越慢</li>
+<li>$E_a$ 越小：反应越容易进行，速率越快</li>
+<li>催化剂通过提供新的反应路径<strong>降低</strong> $E_a$</li>
+</ul>
+<h3>公式 / 方程式</h3>
+<p>能量示意（反应坐标图）：</p>
+<pre><code>能量
+  |         TS（过渡态）
+  |        /\
+  |       /  \    Ea（正反应）
+  |      /    \
+  | 反应物      \   ΔH
+  |              \ 
+  |               生成物
+  |_________________________ 反应坐标
+</code></pre>
+<p>正逆反应活化能之差等于反应焓变：</p>
+<p>$$
+E_{a,\text{正}} - E_{a,\text{逆}} = \Delta H
+$$</p>
+<ul>
+<li>放热反应（$\Delta H &lt; 0$）：$E_{a,\text{正}} &lt; E_{a,\text{逆}}$</li>
+<li>吸热反应（$\Delta H &gt; 0$）：$E_{a,\text{正}} &gt; E_{a,\text{逆}}$</li>
+</ul>
+<p>活化能与速率常数（阿伦尼乌斯）：</p>
+<p>$$
+k = A \cdot e^{-E_a/RT}
+$$</p>
+<p>典型活化能数量级：</p>
+<table>
+<thead>
+<tr>
+<th>反应类型</th>
+<th>$E_a$ / kJ·mol⁻¹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>极快反应（爆炸）</td>
+<td>&lt; 40</td>
+</tr>
+<tr>
+<td>一般有机反应</td>
+<td>40–150</td>
+</tr>
+<tr>
+<td>高温裂解</td>
+<td>&gt; 200</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：催化剂使某反应的活化能从 150 kJ/mol 降至 80 kJ/mol，在 300 K 下速率常数如何变化？</p>
+<p>$$
+\frac{k_{\text{催化}}}{k_{\text{无催化}}} = e^{-(80000-150000)/(8.314 \times 300)} = e^{70000/2494} = e^{28.1} \approx 1.6 \times 10^{12}
+$$</p>
+<p>速率提高约 $10^{12}$ 倍！说明催化剂降低活化能对速率影响极其显著。</p>
+<h3>易错点</h3>
+<ul>
+<li>活化能与反应热（$\Delta H$）不同：$E_a$ 是动力学参数，$\Delta H$ 是热力学参数</li>
+<li>催化剂<strong>降低</strong>活化能，不改变反应热（$\Delta H$ 不变）</li>
+<li>温度升高使活化分子<strong>百分比</strong>增大（不是绝对数量变化最关键）</li>
+<li>活化能为零的反应（如自由基复合）瞬间完成</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>活化能</td>
+<td>activation energy</td>
+</tr>
+<tr>
+<td>活化分子</td>
+<td>activated molecule</td>
+</tr>
+<tr>
+<td>过渡态</td>
+<td>transition state</td>
+</tr>
+<tr>
+<td>催化剂</td>
+<td>catalyst</td>
+</tr>
+<tr>
+<td>反应坐标</td>
+<td>reaction coordinate</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>A catalyst lowers the activation energy without changing the overall enthalpy change.（催化剂降低活化能，但不改变总焓变。）</li>
+<li>Reactions with low activation energies proceed rapidly at room temperature.（活化能低的反应在室温下迅速进行。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"活化能"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/283-化学反应速率.html">化学反应速率</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">催化剂</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">有效碰撞</a></p>
+</li>
+<li><a href="../atoms/357-过渡态.html">过渡态</a></li>
+<li><a class="dead" title="未收录">阿伦尼乌斯方程</a></li>
+<li><a class="dead" title="未收录">速率常数</a></li>
+<li><a class="dead" title="未收录">化学反应速率（高中）</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-03</a></li>
+<li><a class="dead" title="未收录">2021-湖南-14</a></li>
+<li><a class="dead" title="未收录">2022-湖南-06</a></li>
+<li><a class="dead" title="未收录">2022-湖南-12</a></li>
+<li><a class="dead" title="未收录">2023-北京-16</a></li>
+<li><a class="dead" title="未收录">2024-北京-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

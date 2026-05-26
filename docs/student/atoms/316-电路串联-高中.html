@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路串联-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电路串联-高中</h1><div class="review-mark" data-stem="316-电路串联-高中"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电路及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电路串联-高中, series circuit high school, 串联电路高中, 串联</p><h2>🎓 电路串联（高中版）</h2>
+<h3>基本特征</h3>
+<p><strong>串联电路</strong>：各元件依次首尾相连，构成<strong>唯一电流通路</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>物理量</th>
+<th>串联规律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电流</td>
+<td>各处相同：$I = I_1 = I_2 = \cdots = I_n$</td>
+</tr>
+<tr>
+<td>电压</td>
+<td>各分压之和等于总电压：$U = U_1 + U_2 + \cdots + U_n$</td>
+</tr>
+<tr>
+<td>电阻</td>
+<td>等效电阻等于各阻之和：$R = R_1 + R_2 + \cdots + R_n$</td>
+</tr>
+</tbody>
+</table>
+<h3>分压规律</h3>
+<p>各电阻两端电压与电阻成正比：</p>
+<p>$$\frac{U_1}{U_2} = \frac{R_1}{R_2}$$</p>
+<p>具体分压：</p>
+<p>$$U_1 = U \cdot \frac{R_1}{R_1 + R_2}$$</p>
+<h3>功率分配</h3>
+<p>串联电路中电功率之比等于电阻之比：</p>
+<p>$$\frac{P_1}{P_2} = \frac{I^2 R_1}{I^2 R_2} = \frac{R_1}{R_2}$$</p>
+<h3>含电源的串联电路（全路欧姆定律）</h3>
+<p>$$\varepsilon = U_R + U_r = IR + Ir$$</p>
+<p>其中 $R$ 为外电路等效电阻，$r$ 为电源内阻，两者实质上也是"串联"关系。</p>
+<h3>高中重点：含内阻的分析</h3>
+<p><strong>例</strong>：电源 $\varepsilon = 9\,\text{V}$，$r = 1\,\Omega$，外接两个电阻串联 $R_1 = 2\,\Omega$，$R_2 = 6\,\Omega$，求各量。</p>
+<p>$$I = \frac{\varepsilon}{R_1 + R_2 + r} = \frac{9}{2+6+1} = 1\,\text{A}$$</p>
+<p>$$U_{R_1} = IR_1 = 2\,\text{V},\quad U_{R_2} = IR_2 = 6\,\text{V},\quad U_r = Ir = 1\,\text{V}$$</p>
+<p>路端电压：$U = \varepsilon - Ir = 9 - 1 = 8\,\text{V}$（等于 $U_{R_1} + U_{R_2}$）</p>
+<h3>应用：分压器</h3>
+<p>利用串联电阻的分压特性，可以从较大电压中取出所需电压（分压电路），广泛用于电子仪器中。</p>
+<h3>易错点</h3>
+<ul>
+<li>串联电路中任一处断路，<strong>整个电路</strong>都断路（全部不通）。</li>
+<li>各电阻消耗的功率与电阻成<strong>正比</strong>（电流相同，$P = I^2R$）。</li>
+<li>高中含电源电路：内阻 $r$ 是与外电阻<strong>串联</strong>的，路端电压不等于电动势。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中已学过串联电路基本规律；高中在此基础上引入<strong>含内阻的电源</strong>，使串联分析更贴近真实电路，并与全路欧姆定律紧密结合。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十一章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/串联电路">维基百科·串联电路</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/317-电路并联-高中.html">电路并联-高中</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/307-电动势.html">电动势</a></li>
+<li><a href="../atoms/291-内阻.html">内阻</a></li>
+<li><a href="../atoms/329-路端电压.html">路端电压</a></li>
+<li><a href="../atoms/295-多用电表.html">多用电表</a></li>
+</ul>
+</div>
+</body>
+</html>

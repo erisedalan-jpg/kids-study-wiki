@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正态分布3σ原则</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正态分布3σ原则</h1><div class="review-mark" data-stem="494-正态分布3σ原则"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正态分布3σ原则, 3-sigma rule, 68-95-99.7法则, 三西格玛原则</p><h2>🎓 正态分布3σ原则</h2>
+<h3>核心内容</h3>
+<p>若 $X \sim N(\mu, \sigma^2)$，则：</p>
+<p>$$\boxed{P(\mu - \sigma &lt; X &lt; \mu + \sigma) \approx 0.6827}$$</p>
+<p>$$\boxed{P(\mu - 2\sigma &lt; X &lt; \mu + 2\sigma) \approx 0.9545}$$</p>
+<p>$$\boxed{P(\mu - 3\sigma &lt; X &lt; \mu + 3\sigma) \approx 0.9973}$$</p>
+<p><strong>口诀</strong>：约 68%（$1\sigma$）、95%（$2\sigma$）、99.7%（$3\sigma$）。</p>
+<p>也称为 <strong>68-95-99.7 法则</strong>。</p>
+<h3>对称区间概率</h3>
+<p>由对称性，各半侧概率：</p>
+<p>$$P(\mu &lt; X &lt; \mu + \sigma) \approx 0.3413, \quad P(\mu - \sigma &lt; X &lt; \mu) \approx 0.3413$$</p>
+<p>$$P(X &gt; \mu + \sigma) \approx \frac{1-0.6827}{2} = 0.1587$$</p>
+<p>$$P(X &gt; \mu + 2\sigma) \approx \frac{1-0.9545}{2} = 0.0228$$</p>
+<p>$$P(X &gt; \mu + 3\sigma) \approx \frac{1-0.9973}{2} = 0.0013$$</p>
+<h3>标准正态分布的对应值</h3>
+<p>查 $\Phi(x)$ 表（标准正态分布函数）：</p>
+<table>
+<thead>
+<tr>
+<th>$z$</th>
+<th>$\Phi(z)$</th>
+<th>$P(-z &lt; Z &lt; z)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.8413</td>
+<td>0.6827</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.9772</td>
+<td>0.9545</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.9987</td>
+<td>0.9973</td>
+</tr>
+</tbody>
+</table>
+<p>$$P(-z &lt; Z &lt; z) = 2\Phi(z) - 1$$</p>
+<h3>实际意义</h3>
+<p>$3\sigma$ 原则表明：
+- 正常数据几乎都落在 $(\mu - 3\sigma, \mu + 3\sigma)$ 内（99.73%）
+- 落在 $3\sigma$ 之外的概率仅约 0.27%（约 1/370）</p>
+<p><strong>质量控制</strong>：若产品尺寸服从正态分布，规格限 $\mu \pm 3\sigma$（"六西格玛"工厂进一步用 $\pm 6\sigma$ 标准）。</p>
+<p><strong>异常检测</strong>：若某数据超出 $\mu \pm 3\sigma$，可认为是"异常值"，需要进一步检查。</p>
+<h3>典型例题</h3>
+<p><strong>例1（基础）</strong>：某工厂生产的螺丝直径 $X \sim N(10, 0.04)$（$\mu = 10$ mm，$\sigma = 0.2$ mm），求：</p>
+<p>(1) $P(9.8 &lt; X &lt; 10.2)$</p>
+<p>注意 $9.8 = \mu - \sigma$，$10.2 = \mu + \sigma$，故：
+$$P(9.8 &lt; X &lt; 10.2) \approx 0.6827$$</p>
+<p>(2) $P(X &gt; 10.4)$</p>
+<p>$10.4 = \mu + 2\sigma$，故 $P(X &gt; 10.4) \approx 0.0228$</p>
+<p><strong>例2（异常判断）</strong>：某地区成年男性身高 $X \sim N(170, 36)$（$\sigma = 6$ cm），一个人身高 188 cm（$= \mu + 3\sigma$），是异常值吗？</p>
+<p>$P(X &gt; 188) \approx 0.0013$，约 1000 人中只有 1.3 人，确实很罕见，可认为偏高（但不能断言"异常"，自然界确实存在这样的人）。</p>
+<p><strong>例3（逆向）</strong>：已知 $X \sim N(\mu, \sigma^2)$，$P(\mu - k &lt; X &lt; \mu + k) = 0.9545$，求 $k$。</p>
+<p>$$0.9545 = P(\mu - 2\sigma &lt; X &lt; \mu + 2\sigma) \Rightarrow k = 2\sigma$$</p>
+<p><strong>例4（高考型）</strong>：$X \sim N(80, 100)$（$\mu = 80, \sigma = 10$），已知 $P(70 &lt; X &lt; 90) = 0.6827$，求 $P(X &gt; 90)$。</p>
+<p>$$P(X &gt; 90) = \frac{1 - 0.6827}{2} = \frac{0.3173}{2} = 0.1587$$</p>
+<h3>与统计分析的联系</h3>
+<p>$3\sigma$ 原则是统计过程控制（SPC）的基础：
+- <strong>控制图</strong>：以 $\mu \pm 3\sigma$ 为控制限，落在界外的点报警
+- <strong>假设检验</strong>：在原假设成立时，落在 $\pm 3\sigma$ 外的事件概率极小，可作为拒绝原假设的依据（待高中后深化学习）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$3\sigma$ 对应 99.7%，不是 100%</strong>：极端值仍有可能发生（约 0.3%）</li>
+<li><strong>概率查的是对称区间</strong>：$P(\mu - k\sigma &lt; X &lt; \mu + k\sigma)$，两边都要</li>
+<li><strong>单侧概率 = (1 - 中间概率)/2</strong>：由对称性计算</li>
+<li><strong>$\sigma^2$ vs $\sigma$</strong>：$N(\mu, \sigma^2)$ 中第二参数是<strong>方差</strong>，$3\sigma$ 原则用的是标准差 $\sigma$</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.5，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/68–95–99.7%E6%B3%95%E5%88%99">68–95–99.7 法则 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+<li><a href="../atoms/495-正态分布密度曲线.html">正态分布密度曲线</a></li>
+<li><a href="../atoms/512-连续型随机变量.html">连续型随机变量</a></li>
+<li><a href="../atoms/475-分布函数概念.html">分布函数概念</a></li>
+<li><a href="../atoms/508-统计推断.html">统计推断</a></li>
+</ul>
+</div>
+</body>
+</html>

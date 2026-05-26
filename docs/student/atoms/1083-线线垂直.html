@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线线垂直</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>线线垂直</h1><div class="review-mark" data-stem="1083-线线垂直"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 线线垂直, perpendicular lines in plane / perpendicularity of lines in space</p><h1>线线垂直</h1>
+<blockquote>
+<p><strong>一句话</strong>：在同一平面内相交成直角的两条直线互相垂直；在空间，若两条异面直线所成的角为 90°，也称线线垂直。
+<strong>English</strong>: Two lines are perpendicular if they intersect at a right angle in a plane, or if the angle between two skew lines in space is 90°.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong><br />
+  在平面几何中，若直线 $l_1$ 与 $l_2$ 相交且形成的邻补角相等，则 $l_1 \perp l_2$，等价于夹角为 $90^\circ$。<br />
+  在立体几何中，线线垂直包含两类：共面垂直（相交垂直）和异面垂直。异面直线 $a,b$ 垂直定义为通过平移后两条相交直线互相垂直，即所成角为 $90^\circ$。<br />
+  判定定理（线面垂直的性质）：若一条直线 $l$ 垂直于一个平面 $\alpha$，则 $l$ 垂直于平面 $\alpha$ 内的任意一条直线。这是证明异面垂直最核心的工具。<br />
+  此外，三垂线定理：平面内的一条直线，如果和这个平面的一条斜线的射影垂直，那么它也和这条斜线垂直；其逆定理同样成立。<br />
+  向量语言：设直线 $l_1$ 的方向向量为 $\mathbf{u}$，$l_2$ 的方向向量为 $\mathbf{v}$，则 $l_1 \perp l_2 \iff \mathbf{u} \cdot \mathbf{v} = 0$。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>几何法</strong>：找与其中一条直线垂直的平面（该平面包含另一条直线或其平行线），利用线面垂直的性质；或构造等腰三角形、矩形、菱形等特殊图形的垂直关系；或使用三垂线定理（需准确识别斜线、射影及平面内直线）。  </li>
+<li><strong>向量法（坐标法）</strong>：建立适当的空间直角坐标系，求出两直线的方向向量，计算数量积为零。注意坐标系原点与坐标轴的选择要尽量利用已知垂直关系，简化坐标。  </li>
+<li>
+<p><strong>几何与向量混合</strong>：先用几何推理找到关键点的坐标，再算向量点积。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考常见于立体几何解答题的第 (1) 问，要求证明某两条直线垂直（常见异面直线如侧棱与底面对角线）。例如给出直三棱柱、四棱锥等几何体，求证 $A_1B \perp AC$ 或 $BD \perp SC$。解题时通常先用几何法转化（如证明 $AC$ 垂直于某平面），再用向量法书写完整过程。在选填题中，也可能以三视图、翻折问题为背景，快速判断线线垂直的个数或位置关系。<br />
+  另外，解析几何中，两直线垂直的条件 $k_1k_2=-1$（斜率均存在时）也属于线线垂直在坐标系下的表达，常年在选择、填空、解答题中出现。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误用“线线垂直判定定理”：线线垂直没有直接的判定定理，常见错误是直接由“两条直线都和同一直线平行/垂直”就推垂直，忽略了异面情况。</li>
+<li>三垂线定理的“斜线”“射影”找错，或混淆定理与逆定理，导致逻辑颠倒。</li>
+<li>向量法中坐标系建得不当，使坐标复杂化，增加计算错误；或忘记求方向向量时要用终点坐标减起点坐标。</li>
+<li>只证明线面垂直得到线线垂直时，忽略了另一条直线必须在那个平面内（或与该平面内的直线平行），条件缺失导致丢分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线线垂直</td>
+<td>line-line perpendicularity</td>
+<td>包括共面垂直与异面垂直</td>
+</tr>
+<tr>
+<td>线面垂直</td>
+<td>line-plane perpendicularity</td>
+<td>线垂直于平面内的任意直线</td>
+</tr>
+<tr>
+<td>三垂线定理</td>
+<td>theorem of three perpendiculars</td>
+<td>在立体几何中沟通斜线、射影与平面内直线的垂直关系</td>
+</tr>
+<tr>
+<td>方向向量</td>
+<td>direction vector</td>
+<td>表示直线方向的向量</td>
+</tr>
+<tr>
+<td>数量积/点积</td>
+<td>dot product</td>
+<td>向量代数中判断垂直的工具</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/351-空间直线平面垂直.html">线面垂直</a></li>
+<li><a href="../atoms/351-空间直线平面垂直.html">面面垂直</a></li>
+<li><a href="../atoms/353-空间角.html">异面直线所成角</a></li>
+<li><a class="dead" title="未收录">向量法证明平行与垂直</a></li>
+<li><a class="dead" title="未收录">三垂线定理及其逆定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-16.html">2008-理-16</a></li>
+<li><a href="../exam/数学/2012-文-16.html">2012-文-16</a></li>
+<li><a href="../exam/数学/2016-文-19.html">2016-文-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

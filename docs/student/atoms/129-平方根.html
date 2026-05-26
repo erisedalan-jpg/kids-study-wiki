@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平方根</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平方根</h1><div class="review-mark" data-stem="129-平方根"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 实数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平方根, square root, 算术平方根, 开平方</p><h2>课本定义</h2>
+<p>如果 x² = a（a ≥ 0），那么 x 叫做 a 的<strong>平方根</strong>（也称<strong>二次方根</strong>）。正数 a 的平方根有两个，互为相反数：√a 和 -√a；零的平方根是零；负数没有平方根。其中 √a（a ≥ 0）叫做 a 的<strong>算术平方根</strong>。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"找那个'被平方'之前的数"</h3>
+<p><strong>平方</strong>是把一个数乘以自身：3² = 9，4² = 16。</p>
+<p><strong>平方根</strong>就是反过来问：<strong>什么数平方后等于9？</strong> 答案是3（或-3）。</p>
+<p><strong>规律：</strong>
+- 9 的平方根是 ±3（因为3²=9，(-3)²=9）
+- 16 的平方根是 ±4
+- 25 的平方根是 ±5
+- 0 的平方根是 0
+- <strong>负数没有平方根</strong>（任何实数的平方都 ≥ 0）</p>
+<p><strong>常用平方根表：</strong>
+| a | a 的平方根 | 算术平方根 √a |
+|---|---------|------------|
+| 0 | 0 | 0 |
+| 1 | ±1 | 1 |
+| 4 | ±2 | 2 |
+| 9 | ±3 | 3 |
+| 16 | ±4 | 4 |
+| 25 | ±5 | 5 |
+| 100 | ±10 | 10 |</p>
+<p><strong>符号说明：</strong>
+- √9 = 3（算术平方根，只取正值）
+- ±√9 = ±3（平方根，两个值）</p>
+<p><strong>开平方</strong>：求平方根的运算叫<strong>开平方</strong>，与平方互为逆运算。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p>设 a ≥ 0，若 x² = a，则 x 称为 a 的<strong>平方根</strong>（square root）。</p>
+<ul>
+<li><strong>算术平方根</strong>：a 的非负平方根，记作 √a（根号下 a），√a ≥ 0</li>
+<li><strong>负平方根</strong>：-√a</li>
+<li><strong>完整平方根</strong>：±√a</li>
+</ul>
+<p><strong>定义域</strong>：
+- a &gt; 0：两个平方根 ±√a，均为无理数（若 a 不是完全平方数）或有理数
+- a = 0：唯一平方根为 0
+- a &lt; 0：在实数范围内<strong>无平方根</strong>（复数范围内有虚数解）</p>
+<h3>完全平方数</h3>
+<p>整数 n 满足 n = k²（k 为整数），称 n 为<strong>完全平方数</strong>。
+例：0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100……</p>
+<p>对完全平方数，√n 为整数（有理数）；否则 √n 为无理数。</p>
+<h3>性质公式</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>公式</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>算术平方根非负</td>
+<td>√a ≥ 0</td>
+<td>a ≥ 0</td>
+</tr>
+<tr>
+<td>平方的平方根</td>
+<td>(√a)² = a</td>
+<td>a ≥ 0</td>
+</tr>
+<tr>
+<td>平方根的平方</td>
+<td>√(a²) = |a|</td>
+<td>任意 a</td>
+</tr>
+<tr>
+<td>乘法法则</td>
+<td>√a · √b = √(ab)</td>
+<td>a,b ≥ 0</td>
+</tr>
+<tr>
+<td>除法法则</td>
+<td>√a / √b = √(a/b)</td>
+<td>a ≥ 0, b &gt; 0</td>
+</tr>
+</tbody>
+</table>
+<p>注意：√(a²) = |a|，不是 a！若 a &lt; 0，√(a²) = -a &gt; 0。</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 求 49 的平方根和算术平方根。</p>
+<p>解：因为 7² = 49，(-7)² = 49
+49 的平方根为 ±7
+49 的算术平方根为 7（正值）</p>
+<p><strong>例题2：</strong> 化简 √(x²-2x+1)（x &lt; 1）</p>
+<p>解：x²-2x+1 = (x-1)²
+√(x-1)² = |x-1|
+因为 x &lt; 1，故 x-1 &lt; 0，|x-1| = -(x-1) = 1-x</p>
+<p>答：√(x²-2x+1) = 1-x（当 x &lt; 1 时）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>√a 只取正值</strong>：√9 = 3，不是 ±3（±√9 才是 ±3）</li>
+<li><strong>√(a²) = |a|，不是 a</strong>：√((-3)²) = √9 = 3 = |-3|</li>
+<li><strong>负数无实数平方根</strong>：√(-4) 在实数内无意义</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>平方根
+├── 逆运算 → 平方（a²）
+├── 特殊情况 → 完全平方数（整数根）
+├── 一般情况 → 无理数
+├── 类比 → 立方根（三次方根）
+└── 扩展 → 复数（负数的平方根 = 虚数）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平方根</td>
+<td>square root</td>
+<td>x² = a 的解</td>
+</tr>
+<tr>
+<td>算术平方根</td>
+<td>principal square root</td>
+<td>非负平方根 √a</td>
+</tr>
+<tr>
+<td>开平方</td>
+<td>extracting square root</td>
+<td>求平方根的运算</td>
+</tr>
+<tr>
+<td>完全平方数</td>
+<td>perfect square</td>
+<td>整数的平方</td>
+</tr>
+<tr>
+<td>根号</td>
+<td>radical sign</td>
+<td>√ 符号</td>
+</tr>
+<tr>
+<td>无理数</td>
+<td>irrational number</td>
+<td>无限不循环小数</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第六章 实数（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>拓展</strong>：复数与虚数单位 i；高次方根</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/124-命题.html">命题</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/135-无理数.html">无理数</a></p>
+</li>
+<li>
+<p><a href="../atoms/140-立方根.html">立方根</a></p>
+</li>
+<li><a href="../atoms/135-无理数.html">无理数</a></li>
+<li><a href="../atoms/127-实数.html">实数</a></li>
+<li><a href="../atoms/096-有理数.html">有理数</a></li>
+<li><a href="../atoms/078-负数.html">绝对值</a></li>
+<li><a href="../atoms/097-有理数乘方.html">有理数乘方</a></li>
+</ul>
+</div>
+</body>
+</html>

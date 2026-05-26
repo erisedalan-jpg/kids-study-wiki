@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分布函数概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分布函数概念</h1><div class="review-mark" data-stem="475-分布函数概念"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分布函数概念, cumulative distribution function, CDF, 累积分布函数, F(x)</p><h2>🎓 分布函数概念</h2>
+<h3>定义</h3>
+<p>随机变量 $X$ 的<strong>分布函数</strong>（累积分布函数，CDF）定义为：</p>
+<p>$$\boxed{F(x) = P(X \leq x)} \quad (-\infty &lt; x &lt; +\infty)$$</p>
+<p><strong>直观含义</strong>：$F(x)$ 表示随机变量 $X$ 取值不超过 $x$ 的概率。</p>
+<h3>基本性质</h3>
+<ol>
+<li><strong>单调不减</strong>：$x_1 &lt; x_2 \Rightarrow F(x_1) \leq F(x_2)$</li>
+<li><strong>取值范围</strong>：$0 \leq F(x) \leq 1$</li>
+<li><strong>极限值</strong>：$F(-\infty) = 0$，$F(+\infty) = 1$</li>
+<li><strong>右连续</strong>：$F(x^+) = F(x)$（高中阶段了解即可）</li>
+</ol>
+<h3>用分布函数计算区间概率</h3>
+<p>$$P(a &lt; X \leq b) = F(b) - F(a)$$</p>
+<p>$$P(X &gt; a) = 1 - F(a)$$</p>
+<p>$$P(X &lt; a) = F(a^-) \leq F(a)$$</p>
+<h3>离散型随机变量的分布函数</h3>
+<p>若 $X$ 的分布列为 $P(X = x_k) = p_k$，则：</p>
+<p>$$F(x) = P(X \leq x) = \sum_{x_k \leq x} p_k$$</p>
+<p>分布函数为<strong>阶梯函数</strong>（在每个 $x_k$ 处跳跃，跳跃量 = $p_k$）。</p>
+<p><strong>例</strong>：$X$ 的分布列：</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>0.2</td>
+<td>0.5</td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<p>$$F(x) = \begin{cases}
+0 &amp; x &lt; 1 \
+0.2 &amp; 1 \leq x &lt; 2 \
+0.7 &amp; 2 \leq x &lt; 3 \
+1 &amp; x \geq 3
+\end{cases}$$</p>
+<h3>连续型随机变量的分布函数</h3>
+<p>若 $X$ 有密度函数 $f(x)$，则：</p>
+<p>$$F(x) = \int_{-\infty}^x f(t) dt$$</p>
+<p>分布函数为<strong>连续函数</strong>，$F'(x) = f(x)$（在 $f$ 连续处）。</p>
+<p><strong>正态分布</strong>：$X \sim N(\mu, \sigma^2)$ 的分布函数为：</p>
+<p>$$F(x) = \Phi\left(\frac{x - \mu}{\sigma}\right)$$</p>
+<p>其中 $\Phi(z) = \int_{-\infty}^z \frac{1}{\sqrt{2\pi}}e^{-t^2/2}dt$ 为标准正态分布函数（需查表）。</p>
+<h3>标准正态分布函数 $\Phi(z)$</h3>
+<p>常用值（待家长核对查表数值）：</p>
+<table>
+<thead>
+<tr>
+<th>$z$</th>
+<th>$\Phi(z)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.8413</td>
+</tr>
+<tr>
+<td>1.645</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>1.96</td>
+<td>0.975</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.9772</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.9987</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对称性</strong>：$\Phi(-z) = 1 - \Phi(z)$</p>
+<h3>典型例题</h3>
+<p><strong>例1（离散型）</strong>：从上面离散型例子，求 $P(1.5 &lt; X \leq 2.5)$。</p>
+<p>$$P(1.5 &lt; X \leq 2.5) = F(2.5) - F(1.5) = 0.7 - 0.2 = 0.5$$</p>
+<p>（只有 $X=2$ 在区间 $(1.5, 2.5]$ 内，$P(X=2)=0.5$，验证正确。）</p>
+<p><strong>例2（正态分布查表）</strong>：$X \sim N(3, 4)$（$\mu=3, \sigma=2$），求 $P(X \leq 5)$。</p>
+<p>$$P(X \leq 5) = \Phi\left(\frac{5-3}{2}\right) = \Phi(1) = 0.8413$$</p>
+<p><strong>例3（区间概率）</strong>：$X \sim N(0,1)$，求 $P(-1.96 \leq X \leq 1.96)$。</p>
+<p>$$P(-1.96 \leq X \leq 1.96) = \Phi(1.96) - \Phi(-1.96) = 0.975 - 0.025 = 0.95$$</p>
+<p>（统计学中常用 95% 置信区间对应 $\pm 1.96\sigma$）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$F(x) = P(X \leq x)$ 含等号</strong>：分布函数包含等号（$X \leq x$）</li>
+<li><strong>离散型 $F(x)$ 是阶梯函数</strong>：在 $x_k$ 处跳跃，不连续</li>
+<li><strong>$P(a &lt; X \leq b) = F(b) - F(a)$</strong>：不是 $F(b) - F(a+1)$</li>
+<li><strong>$\Phi(-z) = 1 - \Phi(z)$</strong>：对称性，不需要查负值对应的表</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.5，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/累积分布函数">累积分布函数 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/512-连续型随机变量.html">连续型随机变量</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+<li><a href="../atoms/494-正态分布3σ原则.html">正态分布3σ原则</a></li>
+<li><a href="../atoms/476-分布列.html">分布列</a></li>
+<li><a href="../atoms/513-随机变量函数.html">随机变量函数</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一元二次方程根与系数关系</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>一元二次方程根与系数关系</h1><div class="review-mark" data-stem="268-一元二次方程根与系数关系"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 一元二次函数方程不等式, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 一元二次方程根与系数关系, Vieta&#x27;s formulas, 韦达定理, 根系数关系</p><h2>🎓 一元二次方程根与系数关系</h2>
+<h3>定义（韦达定理）</h3>
+<p>设一元二次方程 $ax^2 + bx + c = 0$（$a \neq 0$）的两根为 $x_1, x_2$，则：</p>
+<p>$$x_1 + x_2 = -\frac{b}{a} \quad \text{（根之和）}$$</p>
+<p>$$x_1 \cdot x_2 = \frac{c}{a} \quad \text{（根之积）}$$</p>
+<p>这两个公式合称<strong>韦达定理</strong>（Vieta's formulas），由法国数学家弗朗索瓦·韦达（François Viète）发现。</p>
+<h3>推导</h3>
+<p>由求根公式：</p>
+<p>$$x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</p>
+<p>则：</p>
+<p>$$x_1 + x_2 = \frac{-b + \sqrt{\Delta}}{2a} + \frac{-b - \sqrt{\Delta}}{2a} = \frac{-2b}{2a} = -\frac{b}{a}$$</p>
+<p>$$x_1 \cdot x_2 = \frac{(-b + \sqrt{\Delta})(-b - \sqrt{\Delta})}{4a^2} = \frac{b^2 - \Delta}{4a^2} = \frac{b^2 - (b^2 - 4ac)}{4a^2} = \frac{4ac}{4a^2} = \frac{c}{a}$$</p>
+<h3>常用衍生公式</h3>
+<p>$$x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2 = \left(-\frac{b}{a}\right)^2 - \frac{2c}{a}$$</p>
+<p>$$|x_1 - x_2| = \sqrt{(x_1+x_2)^2 - 4x_1 x_2} = \frac{\sqrt{\Delta}}{|a|}$$</p>
+<h3>逆定理（构造方程）</h3>
+<p>若两数之和为 $S$，之积为 $P$，则以这两数为根的一元二次方程为：</p>
+<p>$$x^2 - Sx + P = 0$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：方程 $2x^2 - 5x + 3 = 0$ 的两根 $x_1, x_2$，不解方程，求 $x_1^2 + x_2^2$ 和 $\dfrac{1}{x_1} + \dfrac{1}{x_2}$。</p>
+<p>解：$a=2, b=-5, c=3$。
+- $x_1 + x_2 = -\dfrac{-5}{2} = \dfrac{5}{2}$，$x_1 x_2 = \dfrac{3}{2}$
+- $x_1^2 + x_2^2 = \left(\dfrac{5}{2}\right)^2 - 2 \cdot \dfrac{3}{2} = \dfrac{25}{4} - 3 = \dfrac{13}{4}$
+- $\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1 + x_2}{x_1 x_2} = \dfrac{5/2}{3/2} = \dfrac{5}{3}$</p>
+<p><strong>例2</strong>：已知方程 $x^2 - kx + (k+3) = 0$ 有两个实根，且两根均大于 0，求 $k$ 的范围。</p>
+<p>解：需满足三个条件：
+1. $\Delta \geq 0$：$k^2 - 4(k+3) \geq 0 \Rightarrow k^2 - 4k - 12 \geq 0 \Rightarrow (k-6)(k+2) \geq 0 \Rightarrow k \leq -2$ 或 $k \geq 6$
+2. $x_1 + x_2 = k &gt; 0 \Rightarrow k &gt; 0$
+3. $x_1 x_2 = k+3 &gt; 0 \Rightarrow k &gt; -3$</p>
+<p>综合：$k \geq 6$。</p>
+<p><strong>例3</strong>：构造以 $3+\sqrt{2}$ 和 $3-\sqrt{2}$ 为根的二次方程。</p>
+<p>解：$S = (3+\sqrt{2}) + (3-\sqrt{2}) = 6$，$P = (3+\sqrt{2})(3-\sqrt{2}) = 9-2 = 7$。</p>
+<p>方程为 $x^2 - 6x + 7 = 0$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>系数对应</strong>：$x_1+x_2 = -b/a$ 中负号不能漏，$x_1 x_2 = c/a$ 无负号</li>
+<li><strong>必须有实根</strong>：韦达定理对复数根也成立，但高中范围内，若要求根为实数，需先确认 $\Delta \geq 0$</li>
+<li><strong>含参数时分类</strong>：参数问题往往需要同时考虑 $\Delta, x_1+x_2, x_1 x_2$ 三个条件</li>
+<li><strong>衍生公式推导</strong>：$x_1^2 + x_2^2$ 等复杂表达式，先用 $(x_1+x_2)^2 = x_1^2 + 2x_1x_2 + x_2^2$ 展开，再代入</li>
+<li><strong>逆定理符号</strong>：$x^2 - Sx + P = 0$ 中，$S$ 前有负号（$-S$），不要写成 $+S$</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了一元二次方程的求根公式和判别式，高中引入韦达定理，使得在不解方程的情况下可以获得根的信息，大大拓展了处理与根有关的代数问题的能力。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第二章，页码待家长核对）</li>
+<li>百科参考：韦达定理（Vieta's formulas），弗朗索瓦·韦达（François Viète, 1540-1603）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/267-一元二次不等式.html">一元二次不等式</a></li>
+<li><a class="dead" title="未收录">不等式性质-高中</a></li>
+<li><a href="../atoms/288-函数零点.html">函数零点</a></li>
+<li><a class="dead" title="未收录">205-一元二次方程</a></li>
+<li><a class="dead" title="未收录">229-根的判别式</a></li>
+<li><a class="dead" title="未收录">234-韦达定理-初中</a></li>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+</ul>
+</div>
+</body>
+</html>

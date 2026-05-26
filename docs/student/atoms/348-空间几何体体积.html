@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体体积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间几何体体积</h1><div class="review-mark" data-stem="348-空间几何体体积"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间几何体体积, volume, 体积, 几何体</p><h2>🎓 空间几何体体积</h2>
+<h3>基本公式汇总</h3>
+<table>
+<thead>
+<tr>
+<th>几何体</th>
+<th>体积公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长方体</td>
+<td>$V = abc$（$a,b,c$ 为三边）</td>
+</tr>
+<tr>
+<td>正方体</td>
+<td>$V = a^3$</td>
+</tr>
+<tr>
+<td>棱柱</td>
+<td>$V = S_{\text{底}} \cdot h$</td>
+</tr>
+<tr>
+<td>圆柱</td>
+<td>$V = \pi r^2 h$</td>
+</tr>
+<tr>
+<td>棱锥</td>
+<td>$V = \dfrac{1}{3} S_{\text{底}} \cdot h$</td>
+</tr>
+<tr>
+<td>圆锥</td>
+<td>$V = \dfrac{1}{3}\pi r^2 h$</td>
+</tr>
+<tr>
+<td>球</td>
+<td>$V = \dfrac{4}{3}\pi r^3$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心关系</strong>：柱体 $= 3 \times$ 同底等高锥体</p>
+<h3>棱台、圆台体积</h3>
+<p>$$V_{\text{台}} = \frac{h}{3}(S_1 + S_2 + \sqrt{S_1 S_2})$$</p>
+<p>其中 $S_1, S_2$ 为两底面面积，$h$ 为高。</p>
+<h3>祖暅原理（等积原理）</h3>
+<p><strong>祖暅原理</strong>：两个几何体被平行于底面的截面截得的截面面积恒相等，则两几何体体积相等。</p>
+<p>应用：推导圆锥体积 $= \dfrac{1}{3}$ 圆柱体积（通过与等底等高棱锥/棱柱对比）。</p>
+<h3>组合体体积</h3>
+<p>复杂几何体 = 简单几何体的<strong>叠加</strong>或<strong>挖减</strong>：</p>
+<p>$$V_{\text{组合}} = V_1 + V_2 - V_{\text{重叠部分}}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：底面半径 $r = 3$，高 $h = 4$ 的圆柱，体积？</p>
+<p><strong>解</strong>：$V = \pi \times 9 \times 4 = 36\pi$</p>
+<p><strong>例2</strong>：底面边长 $a = 6$，高 $h = 5$ 的正四棱锥，体积？</p>
+<p><strong>解</strong>：$V = \dfrac{1}{3} \times 36 \times 5 = 60$</p>
+<p><strong>例3</strong>：一个圆台，上底半径 $1$，下底半径 $3$，高 $2$，求体积。</p>
+<p><strong>解</strong>：$S_1 = \pi$，$S_2 = 9\pi$，$V = \dfrac{2}{3}(\pi + 9\pi + 3\pi) = \dfrac{2}{3} \times 13\pi = \dfrac{26\pi}{3}$</p>
+<p><strong>例4</strong>（组合体）：圆柱上方放一个圆锥，底面半径均为 $2$，圆柱高 $3$，圆锥高 $2$，求总体积。</p>
+<p><strong>解</strong>：$V = \pi \times 4 \times 3 + \dfrac{1}{3} \times \pi \times 4 \times 2 = 12\pi + \dfrac{8\pi}{3} = \dfrac{44\pi}{3}$</p>
+<h3>与初中衔接</h3>
+<p>初中学习了长方体、圆柱、圆锥体积（小学已有初步认识），高中新增：棱锥与圆锥的 $\dfrac{1}{3}$ 关系推导、圆台体积、祖暅原理等。</p>
+<h3>易错点</h3>
+<ul>
+<li>棱锥体积是 $\boldsymbol{\dfrac{1}{3}}$ 倍同底等高棱柱（不是 $\dfrac{1}{3}$ 底面积乘母线）</li>
+<li>圆台公式记不住时可用微积分思路推导</li>
+<li>组合体注意重叠部分不要重复计算</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.2，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/346-空间几何体-多面体.html">空间几何体-多面体</a></li>
+<li><a href="../atoms/347-空间几何体-旋转体.html">空间几何体-旋转体</a></li>
+<li><a href="../atoms/349-空间几何体表面积.html">空间几何体表面积</a></li>
+<li><a href="../atoms/343-球的表面积体积.html">球的表面积体积</a></li>
+<li><a href="../atoms/315-三视图-高中.html">三视图-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2015-文-06.html">2015-文-06</a></li>
+<li><a href="../exam/数学/2015-文-10.html">2015-文-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

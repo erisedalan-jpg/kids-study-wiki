@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子在电场中偏转</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>带电粒子在电场中偏转</h1><div class="review-mark" data-stem="298-带电粒子在电场中偏转"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 静电场深化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 带电粒子在电场中偏转, deflection of charged particle in electric field, 电场偏转, 带电粒子在电场中的偏转</p><h2>🎓 带电粒子在电场中偏转</h2>
+<h3>物理模型</h3>
+<p>带电粒子以初速度 $v_0$（水平方向）进入<strong>匀强电场</strong>，电场方向垂直于初速度。粒子做<strong>类平抛运动</strong>：水平方向匀速，竖直方向（沿电场力方向）匀加速。</p>
+<h3>运动分析</h3>
+<p>设极板长度为 $L$，极板间距为 $d$，极板间电压为 $U$，粒子质量 $m$，电荷量 $q$。</p>
+<p><strong>水平方向（匀速）：</strong></p>
+<p>$$x = v_0 t \Rightarrow t = \frac{L}{v_0}$$</p>
+<p><strong>竖直方向（匀加速）：</strong></p>
+<p>加速度：</p>
+<p>$$a = \frac{qE}{m} = \frac{qU}{md}$$</p>
+<p>偏转位移（在极板内）：</p>
+<p>$$y_1 = \frac{1}{2}at^2 = \frac{qUL^2}{4mdv_0^2}$$</p>
+<p>离开极板时竖直速度：</p>
+<p>$$v_y = at = \frac{qUL}{mdv_0}$$</p>
+<p><strong>偏转角（离开极板时）：</strong></p>
+<p>$$\tan\theta = \frac{v_y}{v_0} = \frac{qUL}{mdv_0^2}$$</p>
+<h3>屏上偏移量</h3>
+<p>设离开极板后再飞行距离 $l$ 到达荧光屏：</p>
+<p>$$y_2 = l\tan\theta = \frac{qULl}{mdv_0^2}$$</p>
+<p>总偏移：</p>
+<p>$$y = y_1 + y_2 = \frac{qUL^2}{4mdv_0^2} + \frac{qULl}{mdv_0^2}$$</p>
+<h3>与类平抛运动对比</h3>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>类平抛（重力场）</th>
+<th>电场偏转</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平加速度</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>竖直加速度</td>
+<td>$g$</td>
+<td>$qU/(md)$</td>
+</tr>
+<tr>
+<td>轨迹</td>
+<td>抛物线</td>
+<td>抛物线</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：示波管偏转板长 $L = 4\,\text{cm}$，板间距 $d = 1\,\text{cm}$，电压 $U = 200\,\text{V}$，电子以 $v_0 = 10^7\,\text{m/s}$ 水平射入，求极板内偏转位移 $y_1$。</p>
+<p>$$a = \frac{eU}{md} = \frac{1.6\times10^{-19}\times200}{9.1\times10^{-31}\times0.01} \approx 3.52\times10^{15}\,\text{m/s}^2$$</p>
+<p>$$t = \frac{L}{v_0} = \frac{0.04}{10^7} = 4\times10^{-9}\,\text{s}$$</p>
+<p>$$y_1 = \frac{1}{2}at^2 = \frac{1}{2}\times3.52\times10^{15}\times(4\times10^{-9})^2 \approx 0.028\,\text{m} = 2.8\,\text{cm}$$</p>
+<p>（注：此值已接近 $d/2$，实际需验证粒子不打到极板上）</p>
+<h3>易错点</h3>
+<ul>
+<li>电场偏转是<strong>类平抛</strong>，水平方向速度不变，竖直方向匀加速，两方向运动<strong>相互独立</strong>。</li>
+<li>偏转角公式 $\tan\theta = v_y/v_0$，注意分析的是<strong>离开电场时</strong>的速度方向。</li>
+<li>粒子必须从两极板正中间射入时才不会打到板上（需验证 $y_1 &lt; d/2$）。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>必修二学习了抛体运动（分运动合成）；本节将重力替换为电场力，模型完全相同，是力学运动学在电学中的典型应用。</p>
+<hr />
+<h2>🔁 合并补充：原《带电粒子在电场中的偏转》</h2>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+带电粒子（质量 $m$、电量 $q$，不计重力）以初速度 $v_0$ 垂直射入匀强电场 $E$（两极板间电压 $U$，板长 $l$，板间距 $d$），粒子受恒定电场力 $F=qE=\frac{qU}{d}$，沿电场方向产生恒定的加速度 $a=\frac{qU}{md}$。运动可分解为：垂直电场方向匀速直线运动 $x=v_0 t$；沿电场方向初速为零的匀加速直线运动 $y=\frac{1}{2}at^2$。<br />
+联立得偏转位移公式：$y=\frac{qU}{2md v_0^2}x^2$（抛物线），射出电场瞬间偏移量 $y_1=\frac{qUl^2}{2md v_0^2}$，出射速度偏转角 $\tan\theta=\frac{v_y}{v_0}=\frac{qUl}{md v_0^2}$。</p>
+<p><strong>关键方法</strong><br />
+采用类平抛运动处理：正交分解为匀速和匀变速两个独立分量；抓住时间桥梁 $t=\frac{l}{v_0}$；求解偏转量、偏转角常结合几何关系（如离开电场后匀速直线打到屏上，利用“速度反向延长线交水平位移中点”）。题目中若粒子从静止经加速电压 $U_1$ 再进入偏转电场 $U_2$，常代入 $v_0=\sqrt{\frac{2qU_1}{m}}$，得 $y_1=\frac{U_2 l^2}{4dU_1}$，$\tan\theta=\frac{U_2 l}{2dU_1}$，与粒子比荷无关（常用于示波管等）。</p>
+<p><strong>典型应用</strong><br />
+高考常考：示波管模型中电子束偏转并打在荧光屏上的位移；带电粒子能否飞离极板（临界问题：$y_1\le\frac{d}{2}$）；多个粒子（不同比荷、不同初速）偏转轨迹比较；交变电场中的偏转（需判断运动过程中电场是否恒定或视为瞬时偏转）。解题常结合动能定理与类平抛运动规律。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>未判断是否计重力：带电粒子无特殊说明不计重力，带电微粒（如油滴、小球）一般需考虑重力，错用类平抛将导致方程缺失重力项。</li>
+<li>混淆偏转位移与偏转角：直接从 $y_1$ 和 $\theta$ 的表达式错误约分或代入几何关系求屏上位移时用错相似比，忽略粒子出场后匀速直线运动的延长线规律。</li>
+<li>忽略临界条件：将板长或板间距混淆，求“能否飞出”时误用偏转位移大于板长等错误判断；正确应比较 $y_1$ 与 $\frac{d}{2}$。</li>
+<li>交变电场中误当恒定：未分析电压变化周期与粒子穿行时间的关系，直接套用恒定偏转公式；解决时应先比较 $t$ 与周期，再分段或取平均。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>匀强电场</td>
+<td>uniform electric field</td>
+<td>场强大小方向处处相同的电场</td>
+</tr>
+<tr>
+<td>偏转位移</td>
+<td>deflection displacement</td>
+<td>粒子在电场力方向上的偏移量 $y$</td>
+</tr>
+<tr>
+<td>偏转角</td>
+<td>deflection angle</td>
+<td>出射速度与初速度方向的夹角 $\theta$</td>
+</tr>
+<tr>
+<td>类平抛运动</td>
+<td>analogous projectile motion</td>
+<td>恒定外力下将运动分解为匀速和匀变速</td>
+</tr>
+<tr>
+<td>示波管</td>
+<td>cathode-ray tube (CRT)</td>
+<td>利用电场偏转电子束显示信号波形的装置</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/阴极射线管">维基百科·阴极射线管</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">带电粒子在电场中加速</a></li>
+<li><a href="../atoms/326-示波管.html">示波管</a></li>
+<li><a class="dead" title="未收录">电势差与电场强度关系</a></li>
+<li><a class="dead" title="未收录">平行板电容器电容</a></li>
+<li><a href="../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中圆周运动</a></li>
+<li><a href="../atoms/302-带电粒子复合场运动.html">带电粒子复合场运动</a></li>
+</ul>
+</div>
+</body>
+</html>

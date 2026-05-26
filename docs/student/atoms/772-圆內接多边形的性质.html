@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆內接多边形的性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆內接多边形的性质</h1><div class="review-mark" data-stem="772-圆內接多边形的性质"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆內接多边形的性质, Cyclic Polygon Properties</p><h1>圆內接多边形的性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：圆内接多边形的各顶点共圆，其核心性质体现在对角互补、外角等于内对角及托勒密定理上，是高考平面几何与解析几何中四点共圆的判定与计算基础。
+<strong>English</strong>: A cyclic polygon is a polygon whose vertices all lie on a single circle; its key properties include supplementary opposite angles, equality between an exterior angle and its interior opposite angle, and Ptolemy's theorem.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与核心原理</strong>
+若一个多边形的所有顶点都在同一个圆上，则该多边形称为<strong>圆内接多边形</strong>，该圆称为多边形的<strong>外接圆</strong>。任意三角形必有外接圆，四边形及更高边数的多边形则需满足特定条件。
+- <strong>圆内接四边形性质定理</strong>：
+  - 对角互补：$\angle A + \angle C = \angle B + \angle D = 180^\circ$。
+  - 外角等于内对角：延长任一边所得外角等于其内对角。
+  - <strong>托勒密定理</strong>：$AC \cdot BD = AB \cdot CD + AD \cdot BC$（$AC,BD$ 为对角线）。
+- <strong>一般圆内接多边形</strong>：边数 $n\geq 5$ 时，存在性由各边垂直平分线共点于圆心决定，高考极少单独考查，常转化为若干圆内接四边形的组合。</p>
+<p><strong>关键方法</strong>
+1. <strong>四点共圆的判定</strong>（高考核心）：
+   - 对角互补：若四边形一组对角之和为 $180^\circ$，则四点共圆。
+   - 外角等于内对角：若四边形一外角等于其内对角，则四点共圆。
+   - 同侧等角：若线段同侧两点对线段两端点张角相等，则四点共圆。
+   - 相交弦定理逆：若 $PA\cdot PB = PC\cdot PD$，则 $A,B,C,D$ 四点共圆（或割线定理逆）。
+   - 距离相等：若四点到某定点的距离相等，则共圆。
+2. <strong>解题步骤</strong>：先观察图形中是否存在可能的圆内接四边形，再选择恰当的判定条件证明共圆，最后利用对角互补、托勒密定理等进行角度计算或线段关系推导。</p>
+<p><strong>典型应用</strong>
+- <strong>平面几何证明</strong>：给定三角形的高、中线或角平分线产生的四点，证明它们共圆，进而导出角度、线段相等关系。例如在 $\triangle ABC$ 中，$AD \perp BC$，$DE \perp AB$，$DF \perp AC$，求证 $B,C,E,F$ 四点共圆，利用 $\angle BFC = \angle BEC$ 等。
+- <strong>长度与最值计算</strong>：利用托勒密定理将线段乘积关系转化为等式，多在固定形状的四边形中求对角线长或边长的最值。例如已知圆内接四边形四边长，求对角线长。
+- <strong>解析几何综合</strong>：在椭圆或抛物线背景下，证明某四个点共圆，或利用圆方程与圆锥曲线方程联立得到四点共圆的条件（如弦的斜率积为定值）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略“圆内接”前提直接使用性质</strong>：对角互补与托勒密定理只对圆内接四边形成立，非圆内接四边形不能套用。做题时必须先证明四点共圆，再用性质。</li>
+<li><strong>四点共圆判定混淆</strong>：学生常将“对角互补”与“一组邻角互补”混淆；或误将“同弧所对圆周角相等”当作判定时，忽略了角必须在同侧的条件。</li>
+<li><strong>托勒密定理的滥用</strong>：托勒密定理等式两端顺序易写反，或忘记是对角线乘积等于两组对边乘积之和；且当四边形退化为共线点时等式也成立（广义托勒密定理），但高考中不要求。</li>
+<li><strong>计算题中单位与比例</strong>：在利用圆内接四边形性质求线段长时，容易忽略相似比或三角函数的隐含条件，导致计算错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆内接多边形</td>
+<td>Cyclic polygon</td>
+<td>顶点共圆的多边形</td>
+</tr>
+<tr>
+<td>圆内接四边形</td>
+<td>Cyclic quadrilateral</td>
+<td>高考重点考查的内接四边形</td>
+</tr>
+<tr>
+<td>外接圆</td>
+<td>Circumcircle</td>
+<td>多边形各顶点所在的圆</td>
+</tr>
+<tr>
+<td>对角互补</td>
+<td>Opposite angles are supplementary</td>
+<td>圆内接四边形对角之和为180°</td>
+</tr>
+<tr>
+<td>托勒密定理</td>
+<td>Ptolemy’s theorem</td>
+<td>圆内接四边形对角线与边长的乘积关系</td>
+</tr>
+<tr>
+<td>外角等于内对角</td>
+<td>Exterior angle equals interior opposite angle</td>
+<td>圆内接四边形的判定与性质之一</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">四点共圆的判定</a></li>
+<li><a class="dead" title="未收录">圆周角定理</a></li>
+<li><a class="dead" title="未收录">托勒密定理</a></li>
+<li><a class="dead" title="未收录">圆幂定理</a></li>
+<li><a class="dead" title="未收录">正余弦定理与三角形外接圆</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-理-16.html">2009-理-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

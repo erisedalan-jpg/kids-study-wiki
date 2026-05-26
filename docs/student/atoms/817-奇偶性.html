@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇偶性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>奇偶性</h1><div class="review-mark" data-stem="817-奇偶性"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 奇偶性, Parity of functions</p><h1>奇偶性</h1>
+<blockquote>
+<p><strong>一句话</strong>：奇偶性是描述函数图像关于y轴或原点对称的代数性质，核心是判断f(-x)与f(x)的等量关系。
+<strong>English</strong>: Parity describes the symmetry of a function's graph about the y-axis or the origin, determined by the relationship between f(-x) and f(x).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：
+  设函数 <code>y = f(x)</code> 的定义域 <code>D</code> 关于原点对称（即若 <code>x ∈ D</code>，则 <code>-x ∈ D</code>）。</li>
+<li><strong>偶函数</strong>：若对于 <code>D</code> 内任意 <code>x</code>，都有 <code>f(-x) = f(x)</code>，则 <code>f(x)</code> 为偶函数。其图像关于 <strong>y 轴</strong>对称。</li>
+<li>
+<p><strong>奇函数</strong>：若对于 <code>D</code> 内任意 <code>x</code>，都有 <code>f(-x) = -f(x)</code>，则 <code>f(x)</code> 为奇函数。其图像关于 <strong>原点</strong>中心对称。
+  特别地，若奇函数在 <code>x=0</code> 处有定义，则必有 <code>f(0)=0</code>（令 <code>x=0</code> 代入定义即得）。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：
+  判断函数奇偶性的标准步骤是“<strong>定义域优先，再算 f(-x)</strong>”。</p>
+</li>
+<li><strong>判定定义域</strong>：写出定义域，并立刻检查它是否关于原点对称。若不对称，函数既不是奇函数也不是偶函数（即非奇非偶函数）。</li>
+<li><strong>计算 f(-x)</strong>：对解析式代入 <code>-x</code>，并利用代数变换（如三角函数诱导公式、对数运算）化简。</li>
+<li>
+<p><strong>比对关系</strong>：若 <code>f(-x) = f(x)</code> 恒成立，则为偶函数；若 <code>f(-x) = -f(x)</code> 恒成立，则为奇函数；若都不成立，则为非奇非偶函数。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：
+  高考中，奇偶性很少孤立考查，常作为分析函数整体性质的<strong>隐藏条件</strong>或<strong>简化计算工具</strong>。</p>
+</li>
+<li><strong>已知局部解析式求值</strong>：题干给出奇/偶函数在 <code>x&gt;0</code> 时的解析式，求 <code>f(-a)</code> 的值。解题关键是利用 <code>f(-a) = ±f(a)</code> 将负自变量转化到已知区间。</li>
+<li><strong>抽象函数求参/求和</strong>：结合奇偶性的特殊值（如 <code>f(0)=0</code>）列方程求参数；或利用奇函数图像关于原点对称，计算对称区间上的定积分（面积抵消）或对称点坐标之和。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域对称性</strong>：看到 <code>f(x)=x^2, x∈[1,3]</code> 直接判偶函数。正确做法：定义域不关于原点对称，是非奇非偶函数。这一步不检查，后续变形全无效。</li>
+<li><strong>运算性质混淆</strong>：误以为“奇+奇=奇，偶+偶=偶”恒成立。实际上，“奇+奇”仍为奇，“偶+偶”仍为偶，但“奇+偶”一般为非奇非偶（除非其中一个恒为零）。乘法性质常记错：<code>奇×奇=偶</code>，<code>奇×偶=奇</code>。</li>
+<li><strong>复合函数判断失误</strong>：<code>f(g(x))</code> 的奇偶性遵循“同奇则奇，有偶则偶”（内外层有一为偶则整体为偶，内外层同奇则整体为奇）。如 <code>sin(x²)</code> 中 <code>x²</code> 为偶，故整体为偶，误判为奇函数会全题皆错。</li>
+<li><strong>混淆对称性与奇偶性</strong>：见到 <code>f(1+x)=f(1-x)</code> 就判偶函数，这是错的。该等式表示函数图像关于 <code>x=1</code> 对称，是函数的<strong>自对称性</strong>，与奇偶性（关于 x=0 或原点对称）不是同一个概念。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奇偶性</td>
+<td>Parity</td>
+<td>描述函数对称性的全局性质。</td>
+</tr>
+<tr>
+<td>奇函数</td>
+<td>Odd function</td>
+<td>满足 f(-x) = -f(x)，图像关于原点对称。</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>Even function</td>
+<td>满足 f(-x) = f(x)，图像关于 y 轴对称。</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>Domain</td>
+<td>函数自变量所有可取值的集合，必须关于原点对称才有奇偶性。</td>
+</tr>
+<tr>
+<td>图像对称</td>
+<td>Symmetry of graph</td>
+<td>奇偶性的几何本质，是判断与作图的依据。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：人教A版必修第一册——函数的基本性质</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/687-函数的周期性.html">函数的周期性</a></li>
+<li><a class="dead" title="未收录">函数的对称性</a></li>
+<li><a class="dead" title="未收录">抽象函数</a></li>
+<li><a class="dead" title="未收录">函数图像的变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-13.html">2008-理-13</a></li>
+<li><a href="../exam/数学/2012-文-16.html">2012-文-16</a></li>
+<li><a href="../exam/数学/2015-理-05.html">2015-理-05</a></li>
+<li><a href="../exam/数学/2016-文-09.html">2016-文-09</a></li>
+<li><a href="../exam/数学/2017-文-05.html">2017-文-05</a></li>
+<li><a href="../exam/数学/2017-文-08.html">2017-文-08</a></li>
+<li><a href="../exam/数学/2017-理-05.html">2017-理-05</a></li>
+<li><a href="../exam/数学/2018-理-11.html">2018-理-11</a></li>
+<li><a href="../exam/数学/2020-理-09.html">2020-理-09</a></li>
+<li><a class="dead" title="未收录">2022-北京-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

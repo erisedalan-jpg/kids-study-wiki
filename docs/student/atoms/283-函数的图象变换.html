@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的图象变换</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的图象变换</h1><div class="review-mark" data-stem="283-函数的图象变换"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的图象变换, graph transformation, 图象平移, 图象伸缩, 函数图象变换, 图象变换, 函数图像变换</p><h2>🎓 函数的图象变换</h2>
+<h3>核心变换规则</h3>
+<p>设已知函数 $y = f(x)$ 的图象，对图象进行以下变换：</p>
+<p><strong>平移变换</strong>（translation）：</p>
+<table>
+<thead>
+<tr>
+<th>变换</th>
+<th>结果</th>
+<th>直观理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y = f(x+a)$（$a&gt;0$）</td>
+<td>向左平移 $a$ 个单位</td>
+<td>$x$ 替换为 $x+a$，横坐标减少</td>
+</tr>
+<tr>
+<td>$y = f(x-a)$（$a&gt;0$）</td>
+<td>向右平移 $a$ 个单位</td>
+<td>$x$ 替换为 $x-a$，横坐标增加</td>
+</tr>
+<tr>
+<td>$y = f(x) + b$（$b&gt;0$）</td>
+<td>向上平移 $b$ 个单位</td>
+<td>纵坐标增加 $b$</td>
+</tr>
+<tr>
+<td>$y = f(x) - b$（$b&gt;0$）</td>
+<td>向下平移 $b$ 个单位</td>
+<td>纵坐标减少 $b$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>伸缩变换</strong>（scaling）：</p>
+<table>
+<thead>
+<tr>
+<th>变换</th>
+<th>结果</th>
+<th>直观理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y = f(kx)$（$k&gt;1$）</td>
+<td>横坐标压缩为原来 $\dfrac{1}{k}$</td>
+<td>图象水平压缩</td>
+</tr>
+<tr>
+<td>$y = f!\left(\dfrac{x}{k}\right)$（$k&gt;1$）</td>
+<td>横坐标扩展为原来 $k$ 倍</td>
+<td>图象水平拉伸</td>
+</tr>
+<tr>
+<td>$y = kf(x)$（$k&gt;1$）</td>
+<td>纵坐标扩展为原来 $k$ 倍</td>
+<td>图象垂直拉伸</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对称变换</strong>（reflection）：</p>
+<ul>
+<li>$y = f(-x)$：关于 $y$ 轴对称</li>
+<li>$y = -f(x)$：关于 $x$ 轴对称</li>
+<li>$y = -f(-x)$：关于原点对称</li>
+</ul>
+<h3>综合变换顺序</h3>
+<p>从 $y = f(x)$ 到 $y = Af(\omega x + \varphi) + b$ 的变换顺序（$A, \omega &gt; 0$）：</p>
+<ol>
+<li><strong>水平移位</strong>：将图象向左移 $\dfrac{\varphi}{\omega}$（若 $\varphi &gt; 0$）或向右移 $\dfrac{|\varphi|}{\omega}$（若 $\varphi &lt; 0$）</li>
+<li><strong>水平伸缩</strong>：横坐标变为原来 $\dfrac{1}{\omega}$（纵坐标不变）</li>
+<li><strong>垂直伸缩</strong>：纵坐标变为原来 $A$ 倍（横坐标不变）</li>
+<li><strong>垂直移位</strong>：向上移 $b$（纵坐标加 $b$）</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知 $y = \sin x$ 的图象，作出 $y = \sin(x + \pi/3)$ 的图象。</p>
+<p>解：$y = \sin(x + \pi/3) = \sin(x - (-\pi/3))$，即 $y = f(x+\pi/3)$，$\pi/3 &gt; 0$，图象向左平移 $\pi/3$ 个单位。</p>
+<p><strong>例2</strong>：从 $y = \sin x$ 到 $y = 2\sin(2x - \pi/4)$，描述变换步骤。</p>
+<p>解：
+1. $y = \sin x \xrightarrow{\text{右移}\frac{\pi}{4}} y = \sin!\left(x - \dfrac{\pi}{4}\right)$（$\varphi/\omega = (\pi/4)/1$）</p>
+<p>实际上 $y = 2\sin(2x-\pi/4) = 2\sin!\left[2!\left(x-\dfrac{\pi}{8}\right)\right]$，所以：</p>
+<ul>
+<li>先将 $y=\sin x$ 横坐标压缩为 $\frac{1}{2}$，得 $y = \sin 2x$</li>
+<li>再向右平移 $\dfrac{\pi}{8}$，得 $y = \sin!\left(2x - \dfrac{\pi}{4}\right)$</li>
+<li>再纵坐标扩展为 $2$ 倍，得 $y = 2\sin!\left(2x-\dfrac{\pi}{4}\right)$</li>
+</ul>
+<p><strong>例3</strong>：$y = f(x)$ 上有点 $(2, 3)$，求 $y = f(2x+1)$ 上对应点的坐标。</p>
+<p>解：令 $2x+1 = 2$，解得 $x = \dfrac{1}{2}$。$y$ 值不变为 $3$。对应点为 $\left(\dfrac{1}{2}, 3\right)$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>平移方向</strong>：$f(x+a)$（$a&gt;0$）是向<strong>左</strong>移，不是向右（"加左减右"）；记忆口诀：$x$ 替换为 $x+a$，原来 $x=1$ 的点，现在 $x+a=1$ 对应 $x=1-a$，横坐标减小，即向左</li>
+<li><strong>先移后缩还是先缩后移</strong>：综合变换要注意顺序，先处理括号内（水平变换），再处理括号外（垂直变换）</li>
+<li><strong>$\omega$ 与水平伸缩</strong>：$y = f(2x)$ 的横坐标变为原来的 $\dfrac{1}{2}$（压缩），不是2倍</li>
+<li><strong>对称变换</strong>：$y = f(-x)$ 是关于 $y$ 轴对称（换 $x$ 的符号），$y = -f(x)$ 是关于 $x$ 轴对称（换 $y$ 的符号）</li>
+<li><strong>特殊点追踪</strong>：验证变换结果时，追踪原图象上的特殊点（零点、极值点）经变换后的位置</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了一次函数 $y = kx+b$ 与 $y = kx$ 的平移关系（纵向平移 $b$），以及二次函数 $y = a(x-h)^2+k$ 的顶点平移。高中将这些平移思想系统化为一般函数的图象变换理论，并推广到伸缩变换。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：图象变换（Graph transformation），平移、伸缩、对称</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/269-三角函数图象变换.html">三角函数图象变换</a></li>
+<li><a href="../atoms/265-Asin(ωx+φ)函数.html">Asin(ωx+φ)函数</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a class="dead" title="未收录">指数函数的性质</a></li>
+<li><a href="../atoms/054-平移与旋转.html">054-平移与旋转</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2016-文-06.html">2016-文-06</a></li>
+<li><a href="../exam/数学/2020-理-23.html">2020-理-23</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分子间作用力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分子间作用力</h1><div class="review-mark" data-stem="423-分子间作用力"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 分子动理论]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分子间作用力, intermolecular force, 分子力</p><h2>🎓 分子间作用力</h2>
+<h3>定义</h3>
+<p>分子间同时存在<strong>引力</strong>和<strong>斥力</strong>，两者都随分子间距的变化而变化，合力称为<strong>分子力</strong>。</p>
+<h3>分子力随距离的变化规律</h3>
+<p>设分子平衡距离为 $r_0 \approx 10^{-10}\ \text{m}$：</p>
+<table>
+<thead>
+<tr>
+<th>分子间距 $r$</th>
+<th>引力与斥力关系</th>
+<th>合力（分子力）方向</th>
+<th>宏观表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$r = r_0$</td>
+<td>引力 = 斥力</td>
+<td>合力 = 0</td>
+<td>平衡状态</td>
+</tr>
+<tr>
+<td>$r &gt; r_0$（拉开）</td>
+<td>引力 &gt; 斥力</td>
+<td><strong>引力</strong>（阻止拉开）</td>
+<td>固/液体有弹性</td>
+</tr>
+<tr>
+<td>$r &lt; r_0$（压缩）</td>
+<td>斥力 &gt; 引力</td>
+<td><strong>斥力</strong>（阻止压缩）</td>
+<td>固体难以压缩</td>
+</tr>
+<tr>
+<td>$r \gg r_0$（很远）</td>
+<td>引力、斥力均趋于 0</td>
+<td>几乎为 0</td>
+<td>气体分子间作用力可忽略</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>引力和斥力都随 $r$ 增大而减小，但<strong>斥力随 $r$ 减小比引力增加得更快</strong>。</p>
+</blockquote>
+<h3>分子力图像</h3>
+<pre><code>  F(斥力为正)
+     |
+斥   |  r₀
+力   |↗
+  ───┼──────────── r
+     |↘
+引   |
+力   |
+</code></pre>
+<ul>
+<li>$r &lt; r_0$：分子力表现为<strong>斥力</strong>，随 $r$ 减小急剧增大</li>
+<li>$r &gt; r_0$：分子力表现为<strong>引力</strong>，先增大后减小</li>
+<li>$r = r_0$：分子力为零（平衡位置）</li>
+</ul>
+<h3>与物质三态的关系</h3>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>分子间距</th>
+<th>分子力</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固体</td>
+<td>$r \approx r_0$</td>
+<td>强（既有引力也有斥力）</td>
+<td>有固定形状和体积</td>
+</tr>
+<tr>
+<td>液体</td>
+<td>$r$ 略大于 $r_0$</td>
+<td>较强（主要为引力）</td>
+<td>有固定体积，无固定形状</td>
+</tr>
+<tr>
+<td>气体</td>
+<td>$r \gg r_0$</td>
+<td>可忽略</td>
+<td>无固定形状和体积</td>
+</tr>
+</tbody>
+</table>
+<h3>分子势能</h3>
+<ul>
+<li>当 $r = r_0$ 时，分子势能最<strong>小</strong>（取极小值）</li>
+<li>$r &gt; r_0$ 增大 → 势能增大（克服引力做功）</li>
+<li>$r &lt; r_0$ 减小 → 势能增大（克服斥力做功）</li>
+<li>$r \to \infty$ 时，规定分子势能为零</li>
+</ul>
+<p>$$E_p \text{ 最小值在 } r = r_0 \text{ 处}$$</p>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：弹簧两端系着两个分子，处于平衡状态（间距 $r_0$）。若将两分子稍微拉开，分子力和分子势能如何变化？</p>
+<p><strong>解</strong>：
+- $r &gt; r_0$：合分子力为<strong>引力</strong>，大小先增大后减小（距离仅稍微增大时先增大）
+- 分子势能：克服引力做功，分子势能<strong>增大</strong></p>
+<h3>易错点</h3>
+<ol>
+<li>分子间引力和斥力<strong>同时存在</strong>，不能说"压缩时只有斥力"</li>
+<li>分子力为零时，引力 = 斥力（不是引力和斥力都等于零）</li>
+<li>气体分子间距大，分子力约为零，但<strong>不能说气体分子间没有引力和斥力</strong>（只是远距离下极小）</li>
+<li>分子势能最小 ≠ 分子势能为零</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第一章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/分子间作用力">分子间作用力 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/140-核能.html">核能</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/127-内能.html">内能</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">分子热运动-高中</a></p>
+</li>
+<li><a class="dead" title="未收录">内能-高中</a></li>
+<li><a class="dead" title="未收录">分子直径估测</a></li>
+<li><a class="dead" title="未收录">阿伏伽德罗常数</a></li>
+<li><a href="../atoms/440-热力学第一定律.html">热力学第一定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2020-北京-10</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

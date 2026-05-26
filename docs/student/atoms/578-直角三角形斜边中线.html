@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直角三角形斜边中线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直角三角形斜边中线</h1><div class="review-mark" data-stem="578-直角三角形斜边中线"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直角三角形斜边中线, median to the hypotenuse</p><h1>直角三角形斜边中线</h1>
+<blockquote>
+<p><strong>一句话</strong>：直角三角形斜边上的中线等于斜边的一半。
+<strong>English</strong>: The median to the hypotenuse of a right triangle is half the length of the hypotenuse.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+在 $\text{Rt}\triangle ABC$ 中，$\angle C = 90^\circ$，若 $M$ 为斜边 $AB$ 的中点，则<br />
+$$
+CM = \frac{1}{2} AB.
+$$<br />
+该定理的证明途径主要有两种：<br />
+- <strong>几何法（倍长中线）</strong>：延长 $CM$ 至 $D$ 使 $CM = MD$，连接 $AD, BD$。由对角线互相平分可得四边形 $ACBD$ 为平行四边形，又因 $\angle C = 90^\circ$，故为矩形。矩形对角线相等，得 $AB = CD = 2CM$，即 $CM = \frac{1}{2} AB$。<br />
+- <strong>向量法</strong>：取 $C$ 为原点，设 $\overrightarrow{CA} = \mathbf{a}$，$\overrightarrow{CB} = \mathbf{b}$，且 $\mathbf{a} \cdot \mathbf{b} = 0$。斜边中点 $M$ 满足 $\overrightarrow{CM} = \frac{\mathbf{a} + \mathbf{b}}{2}$，则<br />
+$$
+|\overrightarrow{CM}|^2 = \frac{|\mathbf{a}|^2 + |\mathbf{b}|^2}{4} = \frac{|\mathbf{a} + \mathbf{b}|^2}{4} = \frac{|\overrightarrow{AB}|^2}{4},
+$$<br />
+所以 $CM = \frac{1}{2} AB$。<br />
+其逆向命题也成立：若三角形一边上的中线等于该边的一半，则该边所对的角为直角。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>正向使用</strong>：在含直角三角形斜边中点的几何结构（或通过作中点构造）中，直接建立线段的两倍或一半关系，快速实现等量转化。<br />
+2. <strong>逆向判定</strong>：出现“一边中线等于该边一半”的线段长度数据时，可据此判断直角，进而使用勾股定理、射影定理或圆的性质解题。<br />
+3. <strong>向量与解析几何中</strong>：将斜边中点用端点坐标或向量表示，利用该性质简化求模长、角等问题。</p>
+<p><strong>典型应用</strong><br />
+高考中常见于：<br />
+- 选填中的小小综合：给出直角三角形与斜边中线，求中线的长度或角度（如 $\triangle ADC$ 的某个角）。<br />
+- 解答题的几何证明：证明某点为直角三角形斜边中点，或通过中线性质证明线段相等、共圆等。<br />
+- 折叠与剪拼问题：折叠后出现含中点与垂直的图形，运用该性质快速得出边长关系。<br />
+- 与圆结合：直径所对的圆周角为直角，此时斜边即为直径，斜边中线即半径，可快速关联圆心角与圆周角。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忘记三角形必须是直角三角形</strong>：在一般三角形中误用“斜边中线等于斜边一半”，导致线段关系错误。  </li>
+<li><strong>错将一般中线当作斜边中线使用</strong>：只有斜边上的中线才具有此数量关系，而直角边上中线的长度需用勾股定理另求。  </li>
+<li><strong>与三角形中位线混淆</strong>：中位线平行于第三边且等于一半，而斜边中线不平行于直角边，仅长度等于斜边一半。  </li>
+<li><strong>忽视直角三角形隐藏形式</strong>：当图形中存在圆的直径、等腰直角等条件时，未能识别出直角三角形及其斜边中点，导致解题路径变复杂。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜边</td>
+<td>hypotenuse</td>
+<td>直角三角形中直角的对边</td>
+</tr>
+<tr>
+<td>中线</td>
+<td>median</td>
+<td>连接三角形顶点与对边中点的线段</td>
+</tr>
+<tr>
+<td>直角三角形</td>
+<td>right triangle</td>
+<td>有一个角是直角的三角形</td>
+</tr>
+<tr>
+<td>中点</td>
+<td>midpoint</td>
+<td>线段上到两端距离相等的点</td>
+</tr>
+<tr>
+<td>性质</td>
+<td>property</td>
+<td>图形固有的特征</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直角三角形</a></li>
+<li><a href="../atoms/189-勾股定理.html">勾股定理</a></li>
+<li><a href="../atoms/617-三角形中位线定理.html">三角形中位线定理</a></li>
+<li><a class="dead" title="未收录">矩形</a></li>
+<li><a class="dead" title="未收录">射影定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-理-16.html">2009-理-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

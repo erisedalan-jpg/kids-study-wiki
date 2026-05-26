@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简谐运动的表达式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>简谐运动的表达式</h1><div class="review-mark" data-stem="715-简谐运动的表达式"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 简谐运动的表达式</p><h1>简谐运动的表达式</h1>
+<blockquote>
+<p><strong>一句话</strong>：简谐运动的表达式是描述振动物体位移随时间按正弦（或余弦）规律变化的函数 $x = A\sin(\omega t + \varphi_0)$，其中 $A$ 为振幅，$\omega$ 为角频率，$\varphi_0$ 为初相位。
+<strong>English</strong>: The expression for simple harmonic motion is a function describing the displacement of an oscillating object as a function of time following a sine (or cosine) law, typically written as $x = A\sin(\omega t + \varphi_0)$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：简谐运动是物体在跟偏离平衡位置的位移大小成正比且总指向平衡位置的回复力作用下的运动。其动力学方程为 $F = -kx$。解此微分方程得到描述其运动规律的运动学方程，即简谐运动的表达式。标准形式为：<strong>$x = A\sin(\omega t + \varphi_0)$</strong> 或 <strong>$x = A\cos(\omega t + \varphi_0')$</strong>，两者可通过调整初相位相互转换。</p>
+<p>式中各物理量含义：
+- <strong>$x$</strong>：振动质点在时刻 $t$ 相对于平衡位置的位移。
+- <strong>$A$</strong>：<strong>振幅</strong>，质点离开平衡位置的最大距离，由系统初始能量决定。
+- <strong>$\omega$</strong>：<strong>角频率</strong>（圆频率），描述振动快慢，$\omega = \frac{2\pi}{T} = 2\pi f$，$T$ 为周期，$f$ 为频率。其大小由系统自身性质决定，如弹簧振子 $\omega = \sqrt{\frac{k}{m}}$，单摆（小角度）$\omega = \sqrt{\frac{g}{l}}$。
+- <strong>$\omega t + \varphi_0$</strong>：<strong>相位</strong>，描述质点在时刻 $t$ 所处的振动状态（位移、速度方向与大小趋势）。
+- <strong>$\varphi_0$</strong>：<strong>初相位</strong>，$t=0$ 时的相位，决定了质点振动的初始状态。</p>
+<p>常见的变形表达有：
+- 速度：$v = A\omega\cos(\omega t + \varphi_0)$
+- 加速度：$a = -A\omega^2\sin(\omega t + \varphi_0) = -\omega^2 x$</p>
+<p><strong>关键方法与解题步骤</strong>：
+1. <strong>确定表达式形式</strong>：根据题意或图像选定正弦或余弦函数形式，通常优先选择与 $t=0$ 时位移状态匹配的函数（如 $t=0$ 时 $x=A$，用余弦函数较简便；若 $t=0$ 时 $x=0$ 且向正方向运动，用正弦函数较简便）。
+2. <strong>提取/求解三个特征量</strong>：
+   - <strong>振幅 $A$</strong>：从 $x-t$ 图像中读取最大位移绝对值，或由系统能量 $E = \frac{1}{2}kA^2$ 反推。
+   - <strong>角频率 $\omega$</strong>：若已知周期 $T$ 或频率 $f$，用 $\omega = \frac{2\pi}{T}$ 换算；若已知劲度系数 $k$ 和质量 $m$（弹簧振子），用 $\omega = \sqrt{\frac{k}{m}}$。
+   - <strong>初相位 $\varphi_0$</strong>：将 $t=0$ 时的已知位移 $x_0$ 及速度方向（正负）代入表达式与速度表达式，联立求解 $\varphi_0$。常使用单位圆法或直接由 $x_0$ 的特殊值（如 $0, \pm A, \pm \frac{A}{2}$）快速判定。
+3. <strong>规范书写</strong>：将求得的 $A$、$\omega$、$\varphi_0$ 代入标准式，并注明单位。注意 $\varphi_0$ 通常取 $[0, 2\pi)$ 或 $(-\pi, \pi]$ 范围内的值。</p>
+<p><strong>典型应用与高考设问</strong>：
+- <strong>由图像写表达式</strong>：给出质点振动的 $x-t$ 或 $v-t$ 图像，要求写出完整的位移或速度随时间变化的函数表达式。这是最常见的考查形式。
+- <strong>通过文字信息求表达式</strong>：题目给出特定时刻的位移、速度、受力等状态参数，要求逆向推导出简谐运动的表达式。
+- <strong>由表达式判状态</strong>：给定一个完整的简谐运动表达式，要求计算任意时刻 $t$ 的位移、速度、加速度，或判定质点正在向正/负方向运动、正在加速/减速等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆角频率 $\omega$ 与频率 $f$</strong>：错误地使用 $f$ 代替 $\omega$ 代入表达式，导致周期关系混乱。务必牢记 $\omega = 2\pi f$，表达式必用 $\omega$。</li>
+<li><strong>初相位 $\varphi_0$ 判定错误</strong>：仅根据 $t=0$ 时的位移大小判定初相，忽略速度方向（正负），导致 $\varphi_0$ 多解或选错象限。必须结合 $t=0$ 时速度的正负或下一时刻位移的增减趋势，唯一确定 $\varphi_0$。</li>
+<li><strong>忽视表达式与图像的对应关系</strong>：将 $x = A\sin(\omega t + \frac{\pi}{2})$ 与 $x = A\sin(\omega t + \frac{\pi}{2})$ 的图像混淆。不熟悉正弦图像与余弦图像之间平移 $\frac{\pi}{2}$ 相位的等价关系。</li>
+<li><strong>忽略计时起点对初相位的影响</strong>：误以为初相位总是 $0$。任何简谐运动在建立表达式前，都必须先明确计时起点（$t=0$）对应的位移与速度状态，以此为依据确定 $\varphi_0$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简谐运动</td>
+<td>Simple Harmonic Motion</td>
+<td>位移满足正余弦规律的周期性往复运动</td>
+</tr>
+<tr>
+<td>振幅</td>
+<td>Amplitude</td>
+<td>质点离开平衡位置的最大距离</td>
+</tr>
+<tr>
+<td>角频率</td>
+<td>Angular Frequency</td>
+<td>单位时间内相位的变化率，$\omega = 2\pi/T$</td>
+</tr>
+<tr>
+<td>相位</td>
+<td>Phase</td>
+<td>决定振动物体在某时刻运动状态的物理量</td>
+</tr>
+<tr>
+<td>初相位</td>
+<td>Initial Phase</td>
+<td>$t=0$ 时的相位，描述振动的初始状态</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">简谐运动的回复力与能量</a></li>
+<li>[[简谐运动的图像]</li>
+<li><a class="dead" title="未收录">单摆的周期公式</a></li>
+<li><a class="dead" title="未收录">受迫振动与共振</a></li>
+<li><a class="dead" title="未收录">机械波的表达式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-16.html">2016-新课标Ⅱ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

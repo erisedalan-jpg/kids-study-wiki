@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计图选择</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>统计图选择</h1><div class="review-mark" data-stem="202-统计图选择"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 八下, 数据分析]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 统计图选择, choosing statistical graphs, 统计图类型, 图表选择</p><h1>统计图选择</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据数据类型和分析目的，选择最合适的统计图——条形图比大小、折线图看趋势、扇形图看占比、频率直方图看分布。
+<strong>English</strong>: Choose the right graph for your data: bar charts for comparison, line charts for trends, pie charts for proportions, histograms for distributions.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>四种常见统计图对比</h3>
+<table>
+<thead>
+<tr>
+<th>图表类型</th>
+<th>用途</th>
+<th>适合数据</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>条形图</strong></td>
+<td>比较各类别数量大小</td>
+<td>分类数据</td>
+<td>各班人数比较</td>
+</tr>
+<tr>
+<td><strong>折线图</strong></td>
+<td>展示随时间变化的趋势</td>
+<td>时间序列</td>
+<td>月份气温变化</td>
+</tr>
+<tr>
+<td><strong>扇形图（饼图）</strong></td>
+<td>展示各部分占总体的比例</td>
+<td>百分比数据</td>
+<td>各科课时占比</td>
+</tr>
+<tr>
+<td><strong>频率直方图</strong></td>
+<td>展示数据的分布（频率/频数）</td>
+<td>大量数值数据</td>
+<td>成绩分布区间</td>
+</tr>
+</tbody>
+</table>
+<h3>选图思路</h3>
+<p><strong>问自己三个问题</strong>：</p>
+<ol>
+<li>我要<strong>比较</strong>大小 → 条形图</li>
+<li>我要看<strong>变化趋势</strong> → 折线图</li>
+<li>我要看<strong>占比/构成</strong> → 扇形图</li>
+<li>我要看<strong>分布规律</strong>（大量数据） → 频率直方图</li>
+</ol>
+<h3>读图要点</h3>
+<p><strong>条形图</strong>：最高的柱子最大；可水平或垂直。</p>
+<p><strong>折线图</strong>：斜率代表变化速率；上升/下降趋势一目了然。</p>
+<p><strong>扇形图</strong>：各扇形面积之和 = 360° = 100%；用圆心角换算：某类占比 $p\%$ → 圆心角 $= 360° \times p\%$。</p>
+<p><strong>频率直方图</strong>：矩形面积 = 频率（不是频数）；所有矩形面积之和 = 1；$y$ 轴为"频率/组距"。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>频率直方图的特殊之处</h3>
+<p>与普通条形图的区别：
+- $y$ 轴是<strong>频率/组距</strong>（不是频率，也不是频数）
+- 矩形<strong>面积</strong> = 该组频率（$y \times \text{组距}$）
+- 所有矩形面积之和 = 1</p>
+<p><strong>从频率直方图估计众数、中位数、平均数</strong>：</p>
+<ul>
+<li><strong>众数</strong>：频率最大的矩形对应的组中值</li>
+<li><strong>中位数</strong>：累积频率恰好达到 50% 时对应的 $x$ 值</li>
+<li><strong>平均数</strong>：$\sum (\text{组中值} \times \text{频率})$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：某班 40 人期末成绩频率分布表：</p>
+<table>
+<thead>
+<tr>
+<th>区间</th>
+<th>$[60,70)$</th>
+<th>$[70,80)$</th>
+<th>$[80,90)$</th>
+<th>$[90,100]$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>频数</td>
+<td>8</td>
+<td>16</td>
+<td>12</td>
+<td>4</td>
+</tr>
+<tr>
+<td>频率</td>
+<td>0.20</td>
+<td>0.40</td>
+<td>0.30</td>
+<td>0.10</td>
+</tr>
+</tbody>
+</table>
+<p>众数 $\approx 75$（频率最大组 $[70,80)$ 的中值）；平均数 $\approx 65\times0.20+75\times0.40+85\times0.30+95\times0.10=77$。</p>
+<p><strong>例 2</strong>：同样的数据，若用折线图展示，会误导读者以为分数是连续变化的趋势而非分布，故应选频率直方图。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 频率直方图的 $y$ 轴标的是"频率"（应为"频率/组距"）</li>
+<li>❌ 用扇形图展示时间序列数据（应用折线图）</li>
+<li>❌ 条形图各条之间有间距（分类数据），频率直方图各矩形紧密相连（连续数据）</li>
+</ul>
+<h3>知识联系</h3>
+<p>四种统计图在<a href="../atoms/141-统计图.html">统计图</a>词条中有基础介绍；<a href="../atoms/143-频数分布.html">频数分布</a>详述频率直方图的构造；<a href="../atoms/055-平均数.html">平均数</a>、<a href="../atoms/180-中位数.html">中位数</a>、<a href="../atoms/186-众数.html">众数</a>可从频率直方图中估读；<a href="../atoms/198-方差.html">方差</a>、<a href="../atoms/199-标准差.html">标准差</a>描述频率直方图的"宽窄"（分散程度）。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>条形图</td>
+<td>bar chart</td>
+</tr>
+<tr>
+<td>折线图</td>
+<td>line chart</td>
+</tr>
+<tr>
+<td>扇形图/饼图</td>
+<td>pie chart</td>
+</tr>
+<tr>
+<td>频率直方图</td>
+<td>frequency histogram</td>
+</tr>
+<tr>
+<td>组距</td>
+<td>class width / interval width</td>
+</tr>
+<tr>
+<td>频率/组距</td>
+<td>frequency density</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第20章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·统计与概率·统计</li>
+<li>拓展：<a class="dead" title="未收录">数学/频数分布</a> · <a class="dead" title="未收录">数学/统计图</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/141-统计图.html">统计图</a> · <a href="../atoms/143-频数分布.html">频数分布</a> · <a href="../atoms/055-平均数.html">平均数</a> · <a href="../atoms/180-中位数.html">中位数</a> · <a href="../atoms/186-众数.html">众数</a> · <a href="../atoms/198-方差.html">方差</a> · <a href="../atoms/199-标准差.html">标准差</a></p>
+</div>
+</body>
+</html>

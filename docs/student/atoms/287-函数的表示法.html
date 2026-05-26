@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的表示法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的表示法</h1><div class="review-mark" data-stem="287-函数的表示法"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的表示法, function representation, 解析法, 图象法, 列表法</p><h2>🎓 函数的表示法</h2>
+<h3>三种表示方法</h3>
+<p><strong>解析法</strong>（analytical method）：用数学表达式（公式）表示 $y$ 与 $x$ 的对应关系，如 $y = x^2 + 1$。
+- 优点：精确、便于计算和推导
+- 适用：有明确数学公式的函数</p>
+<p><strong>图象法</strong>（graphical method）：用坐标系中的曲线表示函数，横轴为自变量，纵轴为函数值。
+- 优点：直观呈现函数的整体行为（单调性、极值、周期等）
+- 适用：研究函数形态、函数性质</p>
+<p><strong>列表法</strong>（tabular method）：列出自变量与函数值的对照表。
+- 优点：直观、适合离散数据
+- 适用：数据量有限或实验观测数据</p>
+<h3>分段函数（特殊的解析法）</h3>
+<p><strong>分段函数</strong>（piecewise function）：在定义域的不同子区间上用不同解析式表示的函数。</p>
+<p>$$f(x) = \begin{cases} g_1(x), &amp; x \in D_1 \ g_2(x), &amp; x \in D_2 \ \vdots \end{cases}$$</p>
+<p>分段函数仍是一个函数（一个 $x$ 对应唯一 $y$），只是对应法则在不同区间上形式不同。</p>
+<h3>常见分段函数</h3>
+<p><strong>绝对值函数</strong>：</p>
+<p>$$y = |x| = \begin{cases} x, &amp; x \geq 0 \ -x, &amp; x &lt; 0 \end{cases}$$</p>
+<p><strong>符号函数</strong>（了解）：</p>
+<p>$$\text{sgn}(x) = \begin{cases} 1, &amp; x &gt; 0 \ 0, &amp; x = 0 \ -1, &amp; x &lt; 0 \end{cases}$$</p>
+<h3>推导思路</h3>
+<p>三种表示法各有侧重：解析法便于代值计算；图象法便于直观分析；列表法便于离散展示。实际问题中常综合使用——用列表法收集数据，用图象法观察趋势，用解析法建立精确模型。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：写出函数 $y = |x - 2|$ 的分段表示。</p>
+<p>解：$y = |x-2| = \begin{cases} x-2, &amp; x \geq 2 \ -(x-2) = 2-x, &amp; x &lt; 2 \end{cases}$</p>
+<p><strong>例2</strong>：已知分段函数 $f(x) = \begin{cases} x^2, &amp; x \geq 0 \ -x, &amp; x &lt; 0 \end{cases}$，求 $f(2), f(-3), f(f(-1))$。</p>
+<p>解：
+- $f(2) = 2^2 = 4$（$2 \geq 0$ 用第一段）
+- $f(-3) = -(-3) = 3$（$-3 &lt; 0$ 用第二段）
+- $f(-1) = -(-1) = 1$（$-1 &lt; 0$），$f(f(-1)) = f(1) = 1^2 = 1$</p>
+<p><strong>例3</strong>：函数 $f(x) = \begin{cases} 2x+1, &amp; x &lt; 1 \ x^2, &amp; x \geq 1 \end{cases}$，求值域。</p>
+<p>解：
+- $x &lt; 1$ 时，$y = 2x+1 &lt; 3$，且 $x \in (-\infty, 1) \Rightarrow y \in (-\infty, 3)$
+- $x \geq 1$ 时，$y = x^2 \geq 1$，$y \in [1, +\infty)$</p>
+<p>值域为 $(-\infty, 3) \cup [1, +\infty) = (-\infty, +\infty) = \mathbb{R}$（两段合并覆盖全体实数）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>分段函数的端点</strong>：每段的端点处需明确用哪个表达式（$\geq$ 还是 $&gt;$），且同一 $x$ 不能在两段都有定义</li>
+<li><strong>代值选对段</strong>：求 $f(a)$ 时，先判断 $a$ 属于哪个区间，再用对应公式</li>
+<li><strong>复合中的分段</strong>：$f(g(x))$ 中若 $f$ 是分段函数，需先求出 $g(x)$ 的值，再判断属于哪段</li>
+<li><strong>图象法的竖线测试</strong>：判断曲线是否为函数图象，用竖线（平行于 $y$ 轴）与曲线至多一交点验证</li>
+<li><strong>列表法只代表部分</strong>：列表法只能展示有限数据点，不能代表整个函数（除非定义域有限）</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中用解析式表示一次函数、二次函数，用图象直观展示，已使用前两种表示法。高中新增"分段函数"这一重要概念，是绝对值函数、取整函数等实际问题函数的核心表示工具。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：分段函数（Piecewise function），函数表示</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+<li><a href="../atoms/290-分段函数.html">分段函数</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/283-函数的图象变换.html">函数的图象变换</a></li>
+<li><a class="dead" title="未收录">212-二次函数定义</a></li>
+<li><a href="../atoms/203-自变量与因变量.html">203-自变量与因变量</a></li>
+</ul>
+</div>
+</body>
+</html>

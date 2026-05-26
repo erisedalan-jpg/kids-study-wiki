@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>开普勒第二定律</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>开普勒第二定律</h1><div class="review-mark" data-stem="267-开普勒第二定律"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 万有引力与宇宙航行]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 开普勒第二定律, Kepler&#x27;s second law, law of equal areas, 面积定律</p><h2>🎓 开普勒第二定律</h2>
+<h3>内容</h3>
+<p><strong>开普勒第二定律（面积定律）</strong>：行星与太阳的连线（矢径）在<strong>相等的时间内扫过相等的面积</strong>。</p>
+<p>$$\frac{\Delta S}{\Delta t} = \text{常数}$$</p>
+<h3>物理含义</h3>
+<ul>
+<li>近日点：矢径短，扫过面积宽 → 速度快</li>
+<li>远日点：矢径长，扫过面积窄 → 速度慢</li>
+</ul>
+<p>即：<strong>靠近太阳时速度大，远离太阳时速度小</strong>。</p>
+<h3>数学推导（本质：角动量守恒）</h3>
+<p>在极短时间 $\Delta t$ 内，行星位移近似为弧段，扫过的三角形面积：</p>
+<p>$$\Delta S = \frac{1}{2}r \cdot v\Delta t \cdot \sin\phi$$</p>
+<p>（$\phi$ 为速度与矢径夹角）</p>
+<p>面积速率（面积掠过率）：</p>
+<p>$$\frac{\Delta S}{\Delta t} = \frac{1}{2}rv\sin\phi = \frac{L}{2m} = \text{常数}$$</p>
+<p>（$L = mrv\sin\phi$ 为角动量，万有引力为有心力 → 角动量守恒）</p>
+<h3>推论：近日点与远日点关系</h3>
+<p>在近日点和远日点，速度方向垂直于矢径（$\sin\phi = 1$），因此：</p>
+<p>$$\frac{1}{2}r_{\text{近}}v_{\text{近}} = \frac{1}{2}r_{\text{远}}v_{\text{远}}$$</p>
+<p>$$r_{\text{近}}v_{\text{近}} = r_{\text{远}}v_{\text{远}} \implies \frac{v_{\text{近}}}{v_{\text{远}}} = \frac{r_{\text{远}}}{r_{\text{近}}}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：地球近日点 $r_{\min} = 1.471 \times 10^{11}\ \text{m}$，$v_{\text{近}} = 30.3\ \text{km/s}$，远日点 $r_{\max} = 1.521 \times 10^{11}\ \text{m}$，求 $v_{\text{远}}$。</p>
+<p>$$v_{\text{远}} = v_{\text{近}} \cdot \frac{r_{\min}}{r_{\max}} = 30.3 \times \frac{1.471}{1.521} \approx 29.3\ \text{km/s}$$</p>
+<p><strong>例2</strong>：行星从 A（近日点）到 B 用时 $t_1$，从 C 到 D（弧长相同但在远日点附近）用时 $t_2$，哪段时间长？</p>
+<p>解：在远日点速度慢，经过相同弧长需更多时间，故 $t_2 &gt; t_1$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>面积相等，弧长不一定相等</strong>：近日点弧长更大（速度快），远日点弧长更小。</li>
+<li><strong>第二定律适用于椭圆、圆、抛物线等所有中心力运动</strong>，不限于椭圆轨道。</li>
+<li><strong>高中物理不要求推导</strong>，但要能应用面积速率相等的结论。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第七章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第七章 第1节，页码待家长核对）</li>
+<li><strong>百科</strong>：开普勒第二定律 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/265-开普勒第一定律.html">开普勒第一定律</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/266-开普勒第三定律.html">开普勒第三定律</a></p>
+</li>
+<li>
+<p><a href="../atoms/264-开普勒三定律.html">开普勒三定律</a></p>
+</li>
+<li><a href="../atoms/265-开普勒第一定律.html">开普勒第一定律</a></li>
+<li><a href="../atoms/266-开普勒第三定律.html">开普勒第三定律</a></li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a href="../atoms/346-动量.html">角动量</a></li>
+<li><a class="dead" title="未收录">天体质量计算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2021-北京-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

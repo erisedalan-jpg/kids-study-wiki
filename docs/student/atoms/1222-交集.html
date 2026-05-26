@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>交集</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>交集</h1><div class="review-mark" data-stem="1222-交集"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[集合与常用逻辑用语]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 交集, 交运算, 集合的交, intersection</p><h1>交集</h1>
+<blockquote>
+<p><strong>一句话</strong>：由所有同时属于集合A与集合B的元素构成的集合，称为A与B的交集，记作$A \cap B$。
+<strong>English</strong>: The intersection of sets A and B, denoted $A \cap B$, is the set of all elements that belong to both A and B.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：对于给定的两个集合$A$、$B$，由既属于$A$又属于$B$的所有元素组成的集合，叫做$A$与$B$的交集。用符号表示为：</p>
+<p>$$ A \cap B = { x \mid x \in A \text{ 且 } x \in B } $$</p>
+<p>交集的本质是逻辑联结词“且”在集合运算中的体现。若$A \cap B = \varnothing$，则称$A$与$B$不相交。</p>
+<p><strong>关键方法</strong>：
+1. <strong>数轴法</strong>（适用于连续数集）：将集合在数轴上标出，取公共覆盖区域即为交集。这是解不等式交集的通用方法。
+2. <strong>韦恩图法</strong>（适用于抽象集合关系）：用封闭曲线表示集合，交集为重叠部分。
+3. <strong>列举法</strong>（适用于有限集）：直接列出所有元素，取公共元素组成新集合。</p>
+<p><strong>典型应用</strong>：高考以选择题、填空题为主，常见于第1–3题。
+- <strong>集合运算混合</strong>：已知$A={x\mid x^2-3x+2\leq 0}$，$B={x\mid 1&lt;x&lt;3}$，求$A \cap B$。解：$A=[1,2]$，$B=(1,3)$，在数轴上取公共部分得$(1,2]$。
+- <strong>含参交集问题</strong>：已知$A={x\mid x&gt;a}$，$B={x\mid -1\leq x\leq 2}$，若$A \cap B \neq \varnothing$，求$a$的范围。解：需满足$a&lt;2$，即$a\in(-\infty,2)$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>端点取舍混淆</strong>：求不等式解集的交集时，若一端在某个集合中为开区间，在另一个集合中为闭区间，交集中该端点取开。例如$(1,3]\cap[3,5)= {3}$，而$(1,3)\cap[3,5)=\varnothing$。务必逐个端点单独判断。</li>
+<li><strong>混淆“交集”与“并集”的符号和逻辑</strong>：$\cap$（交）对应“且”，要求同时满足；$\cup$（并）对应“或”，只要满足一个即可。审题时将题目中的“且”“或”与运算符号严格对应。</li>
+<li><strong>忽视空集情形</strong>：当两个集合没有公共元素时，交集为$\varnothing$，而非“不存在”或无解。讨论含参问题时，必须单独考虑交集为空的情况。</li>
+<li><strong>代表元素不清导致求错交集</strong>：如$A={y\mid y=x^2+1}$（值域），$B={(x,y)\mid y=x^2+1}$（抛物线上的点集），$A \cap B = \varnothing$，因为一个是数集，一个是点集，元素类型不同，无法求交集。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交集</td>
+<td>intersection</td>
+<td>两个集合共有的元素构成的集合</td>
+</tr>
+<tr>
+<td>交运算</td>
+<td>intersection operation</td>
+<td>求交集的运算过程</td>
+</tr>
+<tr>
+<td>空集</td>
+<td>empty set</td>
+<td>不含任何元素的集合</td>
+</tr>
+<tr>
+<td>韦恩图</td>
+<td>Venn diagram</td>
+<td>用封闭曲线表示集合及其关系的图示</td>
+</tr>
+<tr>
+<td>公共元素</td>
+<td>common element</td>
+<td>同时属于两个集合的元素</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧（课标(2022) 对应模块待核对）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/550-并集.html">并集</a></li>
+<li><a class="dead" title="未收录">补集</a></li>
+<li><a class="dead" title="未收录">集合间的基本关系</a></li>
+<li><a href="../atoms/533-充分必要条件.html">充分条件与必要条件</a></li>
+<li><a href="../atoms/267-一元二次不等式.html">一元二次不等式</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/277-元素与集合关系.html">元素与集合关系</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/550-并集.html">并集</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-文-02.html">2008-文-02</a></li>
+<li><a href="../exam/数学/2009-文-01.html">2009-文-01</a></li>
+<li><a href="../exam/数学/2011-文-01.html">2011-文-01</a></li>
+<li><a href="../exam/数学/2012-理-01.html">2012-理-01</a></li>
+<li><a href="../exam/数学/2013-文-15.html">2013-文-15</a></li>
+<li><a href="../exam/数学/2013-理-01.html">2013-理-01</a></li>
+<li><a href="../exam/数学/2015-理-01.html">2015-理-01</a></li>
+<li><a href="../exam/数学/2018-文-01.html">2018-文-01</a></li>
+<li><a href="../exam/数学/2019-文-02.html">2019-文-02</a></li>
+<li><a class="dead" title="未收录">2020-北京-01</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

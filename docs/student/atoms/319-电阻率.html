@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电阻率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电阻率</h1><div class="review-mark" data-stem="319-电阻率"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修三, 电路及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电阻率, resistivity, 比电阻</p><h2>🎓 电阻率（Resistivity）</h2>
+<h3>定义</h3>
+<p><strong>电阻率</strong>（$\rho$）是描述材料导电能力的物理量，反映材料对电流阻碍的内在属性，与导体形状和大小无关。</p>
+<p>由 <a href="../atoms/318-电阻定律.html">电阻定律</a> $R = \rho L/S$，可得：</p>
+<p>$$\rho = \frac{RS}{L}$$</p>
+<p>单位：$\Omega\cdot\text{m}$（欧姆·米）</p>
+<h3>常见材料电阻率（20°C）</h3>
+<table>
+<thead>
+<tr>
+<th>材料</th>
+<th>电阻率 $\rho$（$\Omega\cdot\text{m}$）</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>银（Ag）</td>
+<td>$1.6\times10^{-8}$</td>
+<td>导体</td>
+</tr>
+<tr>
+<td>铜（Cu）</td>
+<td>$1.7\times10^{-8}$</td>
+<td>导体</td>
+</tr>
+<tr>
+<td>铝（Al）</td>
+<td>$2.9\times10^{-8}$</td>
+<td>导体</td>
+</tr>
+<tr>
+<td>钨（W）</td>
+<td>$5.3\times10^{-8}$</td>
+<td>导体</td>
+</tr>
+<tr>
+<td>锰铜合金</td>
+<td>$4.4\times10^{-7}$</td>
+<td>导体（高电阻丝）</td>
+</tr>
+<tr>
+<td>硅（Si）</td>
+<td>$6.4\times10^{2}$</td>
+<td>半导体</td>
+</tr>
+<tr>
+<td>玻璃</td>
+<td>$10^{10} \sim 10^{14}$</td>
+<td>绝缘体</td>
+</tr>
+<tr>
+<td>橡胶</td>
+<td>$\sim 10^{13}$</td>
+<td>绝缘体</td>
+</tr>
+</tbody>
+</table>
+<p>导体 &lt; 半导体 &lt; 绝缘体（相差悬殊，相差可达 $10^{20}$ 倍以上）</p>
+<h3>电阻率与温度的关系</h3>
+<p><strong>金属（导体）</strong>：温度升高，电阻率增大（正温度系数）</p>
+<p>$$\rho = \rho_0(1 + \alpha t)$$</p>
+<p>其中 $\alpha$ 为温度系数，$t$ 为摄氏温度。金属灯丝热态电阻比冷态大许多倍。</p>
+<p><strong>半导体</strong>：温度升高，电阻率减小（负温度系数）——热敏电阻工作原理。</p>
+<p><strong>超导体</strong>：温度降至临界温度以下，电阻率变为零（见 <a href="../atoms/328-超导体.html">超导体</a>）。</p>
+<h3>电阻丝的选材依据</h3>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>选材要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输电导线</td>
+<td>低电阻率（铜、铝）、机械强度好</td>
+</tr>
+<tr>
+<td>电热元件（电炉丝）</td>
+<td>高电阻率、高熔点（镍铬合金）</td>
+</tr>
+<tr>
+<td>标准电阻</td>
+<td>电阻率与温度无关（锰铜合金）</td>
+</tr>
+<tr>
+<td>灯泡灯丝</td>
+<td>高熔点（钨，熔点 3422°C）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某电阻丝材料电阻率 $\rho = 1.1\times10^{-6}\,\Omega\cdot\text{m}$，需要制作阻值 $R = 44\,\Omega$、截面积 $S = 0.5\,\text{mm}^2 = 5\times10^{-7}\,\text{m}^2$ 的电阻丝，求所需长度。</p>
+<p>$$L = \frac{RS}{\rho} = \frac{44\times5\times10^{-7}}{1.1\times10^{-6}} = 20\,\text{m}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>电阻率是材料固有属性，与导体形状无关，但与<strong>温度</strong>有关。</li>
+<li>金属电阻率随温度升高而增大，半导体恰好相反。</li>
+<li>铜的电阻率略大于银，但铜价格低廉，工业上更常用。</li>
+</ul>
+<h3>与必修二衔接</h3>
+<p>初中定性了解电阻受材料影响；本节引入电阻率这一物理量，将材料对电阻的影响定量化，与电阻定律共同构成完整的电阻理论。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修第三册</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第三册.pdf</a> 第十一章（待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/电阻率">维基百科·电阻率</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/184-电阻.html">电阻</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/291-内阻.html">内阻</a></p>
+</li>
+<li>
+<p><a href="../atoms/318-电阻定律.html">电阻定律</a></p>
+</li>
+<li><a href="../atoms/293-半导体.html">半导体</a></li>
+<li><a href="../atoms/328-超导体.html">超导体</a></li>
+<li><a href="../atoms/291-内阻.html">内阻</a></li>
+<li><a class="dead" title="未收录">电学实验方法-高中</a></li>
+<li><a href="../atoms/306-物理量单位制-高中.html">物理量单位制-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

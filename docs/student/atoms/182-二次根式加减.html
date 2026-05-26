@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次根式加减</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二次根式加减</h1><div class="review-mark" data-stem="182-二次根式加减"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 二次根式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二次根式加减, addition and subtraction of radicals, 同类根式, 合并同类根式</p><h1>二次根式加减</h1>
+<blockquote>
+<p><strong>一句话</strong>：只有"同类根式"（被开方数相同）才能合并，系数相加减，根号部分不变——就像合并同类项。
+<strong>English</strong>: Only "like radicals" (same radicand) can be combined by adding or subtracting their coefficients.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>什么是同类根式？</h3>
+<p><strong>同类根式</strong>：被开方数完全相同的根式，例如 $3\sqrt{2}$ 和 $5\sqrt{2}$ 都含 $\sqrt{2}$，是同类根式。</p>
+<p>类比同类项：$3x + 5x = 8x$ → $3\sqrt{2}+5\sqrt{2}=8\sqrt{2}$</p>
+<p><strong>不同类不能合并</strong>：$\sqrt{2}+\sqrt{3}$ 无法化简（就像 $x+y$ 不能合并）。</p>
+<h3>加减步骤</h3>
+<ol>
+<li><strong>先化简</strong>：把每个根式化为最简根式（利用<a href="../atoms/183-二次根式化简.html">二次根式化简</a>）</li>
+<li><strong>找同类根式</strong>：对比被开方数</li>
+<li><strong>合并</strong>：系数加减，根号不变</li>
+</ol>
+<p><strong>例</strong>：计算 $\sqrt{12} + 2\sqrt{3} - \sqrt{27}$</p>
+<p>$$\sqrt{12} = 2\sqrt{3}, \quad \sqrt{27} = 3\sqrt{3}$$
+$$= 2\sqrt{3} + 2\sqrt{3} - 3\sqrt{3} = (2+2-3)\sqrt{3} = \sqrt{3}$$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格步骤</h3>
+<p><strong>第一步</strong>：化简每个根式为最简根式（被开方数不含完全平方因数）。</p>
+<p><strong>第二步</strong>：识别同类根式（被开方数相同 → 系数合并）。</p>
+<p><strong>第三步</strong>：合并，写出结果。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：计算 $3\sqrt{50} - 2\sqrt{18} + \sqrt{8}$</p>
+<p>$$3\sqrt{50} = 3\cdot5\sqrt{2} = 15\sqrt{2}$$
+$$2\sqrt{18} = 2\cdot3\sqrt{2} = 6\sqrt{2}$$
+$$\sqrt{8} = 2\sqrt{2}$$
+$$= 15\sqrt{2} - 6\sqrt{2} + 2\sqrt{2} = 11\sqrt{2}$$</p>
+<p><strong>例 2</strong>：化简 $\sqrt{3+2\sqrt{2}} + \sqrt{3-2\sqrt{2}}$</p>
+<p>注意 $3+2\sqrt{2}=(\sqrt{2}+1)^2$，$3-2\sqrt{2}=(\sqrt{2}-1)^2$，故
+$$= |\sqrt{2}+1| + |\sqrt{2}-1| = (\sqrt{2}+1)+(\sqrt{2}-1) = 2\sqrt{2}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 未先化简就直接合并，导致漏掉同类根式（如 $\sqrt{12}$ 未化为 $2\sqrt{3}$）</li>
+<li>❌ 认为 $\sqrt{2}+\sqrt{2}=\sqrt{4}=2$（应为 $2\sqrt{2}$）</li>
+<li>❌ 把加法分配到根号下：$\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$</li>
+</ul>
+<h3>知识联系</h3>
+<p>先化简（→<a href="../atoms/183-二次根式化简.html">二次根式化简</a>），再合并（类似<a href="../atoms/088-合并同类项.html">合并同类项</a>）；综合题常与<a class="dead" title="未收录">二次根式乘除</a>混合；含字母时须讨论范围（→<a href="../atoms/083-不等式.html">不等式</a>）。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同类根式</td>
+<td>like radicals</td>
+</tr>
+<tr>
+<td>合并同类根式</td>
+<td>combining like radicals</td>
+</tr>
+<tr>
+<td>最简根式</td>
+<td>simplified radical form</td>
+</tr>
+<tr>
+<td>系数</td>
+<td>coefficient</td>
+</tr>
+<tr>
+<td>被开方数</td>
+<td>radicand</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第16章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·实数</li>
+<li>拓展：<a class="dead" title="未收录">数学/二次根式化简</a> · <a class="dead" title="未收录">数学/合并同类项</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/184-二次根式定义.html">二次根式定义</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/191-勾股定理逆定理.html">勾股定理逆定理</a></li>
+</ul>
+<p><a href="../atoms/184-二次根式定义.html">二次根式定义</a> · <a class="dead" title="未收录">二次根式性质</a> · <a class="dead" title="未收录">二次根式乘除</a> · <a href="../atoms/183-二次根式化简.html">二次根式化简</a> · <a href="../atoms/088-合并同类项.html">合并同类项</a> · <a class="dead" title="未收录">实数运算</a></p>
+</div>
+</body>
+</html>

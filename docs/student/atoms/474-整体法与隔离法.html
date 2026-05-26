@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>整体法与隔离法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>整体法与隔离法</h1><div class="review-mark" data-stem="474-整体法与隔离法"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 整体法与隔离法</p><h1>整体法与隔离法</h1>
+<blockquote>
+<p><strong>一句话</strong>：整体法是视多个物体为一个系统，只分析系统外力，不分析系统内力的方法；隔离法是将单个物体从系统中分离，分别分析其受力与运动的方法。
+<strong>English</strong>: The whole-body approach treats multiple objects as a single system, analyzing only external forces; the isolation approach separates a single object from the system and analyzes its forces and motion individually.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+整体法与隔离法是解决连接体问题（多个物体通过绳、杆、弹簧或直接接触相连）的核心方法。选取研究对象后，按以下原则分析：
+- <strong>整体法</strong>：当系统内各物体具有相同的加速度（相对静止或一起运动）时，可将系统视为整体。此时内力（如物体间弹力、摩擦力）属于系统内部作用力，在列牛顿第二定律方程 $\sum F_{外} = m_{总} a$ 时不出现，从而直接求解加速度或某些外力。
+- <strong>隔离法</strong>：将单个物体从系统隔出，分析其受力（包括重力、弹力、摩擦力和可能的内力），列出 $\sum F = m_i a$，用于求解系统内力或分析加速度不同的物体。</p>
+<p><strong>关键方法</strong><br />
+高考中连接体问题的标准步骤：
+1. <strong>判断加速度关系</strong>：若各物体加速度相同，优先用整体法求加速度；若加速度不同，则必须用隔离法。
+2. <strong>交替灵活使用</strong>：先用整体法求加速度，再隔离一个受力较简单的物体求内力；或先隔离求出部分力，再整体判定外力。
+3. <strong>列方程时注意</strong>：整体法只列系统外力，不出现内力；隔离法必须按顺序分析重力、已知外力、弹力（绳、面、杆）、摩擦力，避免漏力。</p>
+<p><strong>典型应用</strong><br />
+- <strong>题型一</strong>：已知外力推拉叠放的两个木块（无相对滑动），求地面对整体的摩擦力或两木块间的弹力。先用整体法求加速度，再隔离上方木块求内力。
+- <strong>题型二</strong>：定滑轮连接的质量不同的两物块（轻绳不可伸长），求绳中张力。因加速度大小相等但方向不同，常用隔离法分别列方程联立求解。
+- <strong>设问角度</strong>：常以“求物体间相互作用力”“判断某面是否有摩擦”“比较不同情境下内力变化”等形式出现，考查整体与隔离的灵活切换。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>内力当成外力分析</strong>：在使用整体法时，误将系统内物体间的弹力、摩擦力作为外力列入方程，导致方程错误。</li>
+<li><strong>加速度相同这一条件误判</strong>：当系统中存在相对滑动或加速度大小、方向不一致时，仍勉强用整体法，忽略隔离法的必要性。</li>
+<li><strong>受力分析时漏掉内力</strong>：隔离法中忽略绳的拉力、接触面弹力或摩擦力的方向判断失误（如静摩擦力方向假设错误），导致后续计算全错。</li>
+<li><strong>忘记牛顿第三定律的配对使用</strong>：在隔离两物体时，它们之间的相互作用力应大小相等、方向相反，但不少学生只在一个物体方程中写入该力，另一物体方程遗漏。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整体法</td>
+<td>whole-body approach</td>
+<td>将多个物体视为一个系统分析外力与运动</td>
+</tr>
+<tr>
+<td>隔离法</td>
+<td>isolation approach</td>
+<td>将单个物体分离出来分析受力与运动</td>
+</tr>
+<tr>
+<td>连接体</td>
+<td>connected bodies</td>
+<td>通过绳、杆、弹簧或接触相互联系的物体系统</td>
+</tr>
+<tr>
+<td>内力</td>
+<td>internal force</td>
+<td>系统内物体间的相互作用力</td>
+</tr>
+<tr>
+<td>外力</td>
+<td>external force</td>
+<td>来自系统外部的力</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理·必修一·相互作用与运动规律（🚧 待家长核对具体模块）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">受力分析的基本步骤</a></li>
+<li><a class="dead" title="未收录">连接体问题</a></li>
+<li><a class="dead" title="未收录">静摩擦力与滑动摩擦力</a></li>
+<li><a href="../atoms/237-超重与失重.html">超重与失重</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2021-全国乙-08.html">2021-全国乙-08</a></li>
+<li><a class="dead" title="未收录">2021-湖南-05</a></li>
+<li><a class="dead" title="未收录">2023-湖南-10</a></li>
+<li><a class="dead" title="未收录">2024-湖南-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

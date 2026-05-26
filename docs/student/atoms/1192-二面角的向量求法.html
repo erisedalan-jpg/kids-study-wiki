@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二面角的向量求法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二面角的向量求法</h1><div class="review-mark" data-stem="1192-二面角的向量求法"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二面角的向量求法</p><h1>二面角的向量求法</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用两个平面的法向量夹角，通过取绝对值或判断方向来计算二面角的大小，公式为 $\cos\theta = \pm \frac{|\vec{n}_1 \cdot \vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$。
+<strong>English</strong>: The method of calculating the dihedral angle using the angle between the normal vectors of its two half-planes.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：二面角是从一条直线出发的两个半平面所组成的图形，其大小用它的平面角来度量。在空间直角坐标系中，若两个平面的法向量分别为 $\vec{n}_1 = (A_1, B_1, C_1)$ 和 $\vec{n}_2 = (A_2, B_2, C_2)$，则二面角 $\theta$（或其补角）满足：</p>
+<p>$$
+\cos\theta = \pm \frac{\vec{n}_1 \cdot \vec{n}_2}{|\vec{n}_1| \cdot |\vec{n}_2|} = \pm \frac{A_1A_2 + B_1B_2 + C_1C_2}{\sqrt{A_1^2+B_1^2+C_1^2} \cdot \sqrt{A_2^2+B_2^2+C_2^2}}
+$$</p>
+<p>其中符号取正还是取负，取决于二面角是锐角还是钝角，需结合图形或法向量方向判断。</p>
+<p><strong>关键方法</strong>：</p>
+<ol>
+<li><strong>建系</strong>：在几何体中建立恰当的空间直角坐标系，写出相关点的坐标。</li>
+<li><strong>求法向量</strong>：在两个半平面内分别找两条相交直线的方向向量，进而解方程组求出两个平面的法向量 $\vec{n}_1$ 与 $\vec{n}_2$。</li>
+<li><strong>计算夹角</strong>：代入公式计算 $\cos\langle \vec{n}_1, \vec{n}_2\rangle$。</li>
+<li><strong>定号与求角</strong>：观察图形中二面角的实际形状：若二面角为锐角，则 $\cos\theta = |\cos\langle \vec{n}_1, \vec{n}_2\rangle|$；若为钝角，则 $\cos\theta = -|\cos\langle \vec{n}_1, \vec{n}_2\rangle|$。最后利用反三角函数求出 $\theta$。</li>
+</ol>
+<p><strong>典型应用</strong>：高考题常以棱柱、棱锥等为载体，要求解二面角的正弦值、余弦值或大小。例如，在正方体 $ABCD-A_1B_1C_1D_1$ 中求平面 $A_1BD$ 与平面 $C_1BD$ 所成二面角的余弦值；或在四棱锥中已知底面边长和侧棱，求侧面与底面所成二面角。设问角度通常是“求二面角 $P-AB-C$ 的余弦值”。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>符号判断失误</strong>：直接用公式不加绝对值，或未结合图形判断锐/钝角，导致余弦值多一个负号。法向量方向指向半平面同侧或异侧直接影响符号。</li>
+<li><strong>法向量计算错误</strong>：设立法向量坐标 $(x, y, z)$ 后，由于建系或运算出错，导致求出的法向量非零但不正确，最终影响整个计算结果。</li>
+<li><strong>混淆线面角与二面角</strong>：误用法向量与方向向量的夹角公式去求二面角。二面角用两个法向量，线面角用一个法向量与线的方向向量。</li>
+<li><strong>忽略二面角的取值范围</strong>：二面角 $\theta \in [0, \pi]$，若求出的为钝角而题目要求锐二面角，需取其余角。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二面角</td>
+<td>dihedral angle</td>
+<td>空间中两个半平面所夹的角</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>normal vector</td>
+<td>垂直于一个平面的非零向量</td>
+</tr>
+<tr>
+<td>向量夹角</td>
+<td>vector angle</td>
+<td>两个向量方向之间的角度</td>
+</tr>
+<tr>
+<td>面的法向量</td>
+<td>normal vector of a plane</td>
+<td>用于确定平面方向的向量</td>
+</tr>
+<tr>
+<td>线面角</td>
+<td>angle between line and plane</td>
+<td>直线与其在平面上投影所夹锐角</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧 立体几何·空间向量与立体几何</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">用空间向量求线面角</a></li>
+<li><a class="dead" title="未收录">平面的法向量求法</a></li>
+<li><a class="dead" title="未收录">二面角的定义与平面角</a></li>
+<li><a class="dead" title="未收录">空间直角坐标系的建立</a></li>
+<li><a class="dead" title="未收录">向量点积坐标运算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2023-新课标Ⅱ-20.html">2023-新课标Ⅱ-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

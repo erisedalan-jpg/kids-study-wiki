@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>整式加减</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>整式加减</h1><div class="review-mark" data-stem="094-整式加减"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 整式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 整式加减, addition and subtraction of polynomials, 整式的加减, 字母表示数</p><h2>课本一句话定义</h2>
+<p><strong>整式加减</strong>的实质是<strong>去括号</strong>后<strong>合并同类项</strong>；把几个整式（单项式或多项式）相加减，去掉括号后，将所有同类项合并，得到最简结果。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>整式加减就是两步操作的组合：</p>
+<p><strong>第一步</strong>：<strong>去括号</strong>（注意负号前的括号要变号）</p>
+<p><strong>第二步</strong>：<strong>合并同类项</strong>（把"同一类"的项加起来）</p>
+<p>例子：$(3x + 2) + (x - 5)$</p>
+<p>去括号：$3x + 2 + x - 5$（加号括号内不变号）</p>
+<p>合并同类项：$(3x + x) + (2 - 5) = 4x - 3$</p>
+<p>再来一个：$(3x + 2) - (x - 5)$</p>
+<p>去括号：$3x + 2 - x + 5$（减号括号内<strong>变号</strong>！）</p>
+<p>合并：$(3x - x) + (2 + 5) = 2x + 7$</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>解题步骤</h3>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 去括号</td>
+<td>加括号不变号，减括号每项变号</td>
+</tr>
+<tr>
+<td>② 合并同类项</td>
+<td>系数相加，字母部分不变</td>
+</tr>
+<tr>
+<td>③ 降幂排列</td>
+<td>按次数从高到低排列结果（标准形式）</td>
+</tr>
+</tbody>
+</table>
+<h3>关键公式（特殊多项式加减）</h3>
+<p>常见的整式恒等式（为后续因式分解做准备）：</p>
+<p>$$a^2 + 2ab + b^2 = (a+b)^2$$
+$$a^2 - 2ab + b^2 = (a-b)^2$$
+$$a^2 - b^2 = (a+b)(a-b)$$</p>
+<p>（七上暂不要求，八年级正式学习，此处作为拓展认识）</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：化简 $(2a^2 - 3ab + b^2) - (a^2 - 2ab - 3b^2)$。</p>
+<p><strong>解</strong>：
+去括号：$2a^2 - 3ab + b^2 - a^2 + 2ab + 3b^2$</p>
+<p>合并 $a^2$ 项：$2a^2 - a^2 = a^2$</p>
+<p>合并 $ab$ 项：$-3ab + 2ab = -ab$</p>
+<p>合并 $b^2$ 项：$b^2 + 3b^2 = 4b^2$</p>
+<p>结果：$a^2 - ab + 4b^2$</p>
+<p><strong>例 2</strong>：若 $A = 3x^2 - 2x + 1$，$B = x^2 + x - 3$，求 $2A - B$。</p>
+<p><strong>解</strong>：
+$2A - B = 2(3x^2 - 2x + 1) - (x^2 + x - 3)$</p>
+<p>$= 6x^2 - 4x + 2 - x^2 - x + 3$</p>
+<p>$= (6x^2 - x^2) + (-4x - x) + (2 + 3)$</p>
+<p>$= 5x^2 - 5x + 5$</p>
+<p><strong>例 3</strong>：已知 $A + B = 5x^2 - 3x + 2$，$A = 2x^2 + x - 1$，求 $B$。</p>
+<p><strong>解</strong>：$B = (5x^2 - 3x + 2) - (2x^2 + x - 1)$</p>
+<p>$= 5x^2 - 3x + 2 - 2x^2 - x + 1 = 3x^2 - 4x + 3$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>减法括号内必须全部变号</strong>：$-(a - b + c) = -a + b - c$，不能只变第一项。</li>
+<li><strong>合并时不漏项</strong>：每个同类项都要参与合并，不要遗漏某项。</li>
+<li><strong>结果降幂排列</strong>：$x - 3 + 2x^2$ 写成标准形式为 $2x^2 + x - 3$。</li>
+<li><strong>系数为 0 时省略</strong>：$3x^2 - 3x^2 = 0$，这一项消失，不要写 $0x^2$。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：去括号、合并同类项、单项式、多项式</li>
+<li>后续：整式乘法（八年级）→ 因式分解 → 分式加减</li>
+<li>高中拓展：多项式的加减与函数运算（$f(x) \pm g(x)$）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整式加减</td>
+<td>addition/subtraction of polynomials</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>化简</td>
+<td>simplify</td>
+<td>整式加减的目的</td>
+</tr>
+<tr>
+<td>降幂排列</td>
+<td>descending order</td>
+<td>标准书写格式</td>
+</tr>
+<tr>
+<td>同类项</td>
+<td>like terms</td>
+<td>合并的对象</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整式加减的关键是去括号和合并同类项。</td>
+<td>The key to adding and subtracting polynomials is removing parentheses and combining like terms.</td>
+</tr>
+<tr>
+<td>减法括号前的负号会改变括号内所有项的符号。</td>
+<td>The negative sign before subtraction parentheses changes the signs of all terms inside.</td>
+</tr>
+<tr>
+<td>化简后按降幂排列写出结果。</td>
+<td>Write the simplified result in descending order of degree.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第二章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Polynomial § Addition and subtraction</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，步骤与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/100-有理数加法.html">有理数加法</a> <a class="dead" title="未收录">科学记数法</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/082-一元一次方程.html">一元一次方程</a> <a href="../atoms/086-单项式.html">单项式</a> <a class="dead" title="未收录">因式分解</a></p>
+</li>
+<li>
+<p><a href="../atoms/088-合并同类项.html">合并同类项</a></p>
+</li>
+<li><a class="dead" title="未收录">去括号</a></li>
+<li><a href="../atoms/086-单项式.html">单项式</a></li>
+<li><a href="../atoms/089-多项式.html">多项式</a></li>
+<li><a href="../atoms/093-整式.html">整式</a></li>
+<li><a href="../atoms/100-有理数加法.html">有理数加法</a></li>
+</ul>
+</div>
+</body>
+</html>

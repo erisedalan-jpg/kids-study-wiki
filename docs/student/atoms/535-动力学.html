@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动力学</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>动力学</h1><div class="review-mark" data-stem="535-动力学"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 动力学, Dynamics</p><h1>动力学</h1>
+<blockquote>
+<p><strong>一句话</strong>：研究物体运动与受力关系的物理学分支，核心是牛顿运动定律。
+<strong>English</strong>: The branch of physics that studies the relationship between the motion of objects and the forces acting upon them.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：动力学以牛顿三定律为基础，建立力与运动之间的定量关系。核心公式为牛顿第二定律：$\mathbf{F}<em>\text{合} = m\mathbf{a}$，其中 $\mathbf{F}</em>\text{合}$ 是物体所受外力的矢量和，$m$ 是质量，$\mathbf{a}$ 是加速度。对于多个物体组成的系统，常用整体法与隔离法联立求解；对非惯性系问题，需引入惯性力使牛顿定律形式成立。</p>
+<p><strong>关键方法</strong>：解决动力学问题的标准步骤为——（1）明确研究对象，受力分析画受力图；（2）建立合适坐标系（通常沿加速度方向与垂直加速度方向）；（3）正交分解，列出分量方程；（4）结合运动学方程或约束条件求解。判定依据：若已知力求运动，则先求合力→加速度→运动学量；若已知运动求力，则先由运动学得加速度→牛顿第二定律求力。</p>
+<p><strong>典型应用</strong>：高考常见设问包括——&lt;1&gt;<strong>瞬时加速度问题</strong>：剪断绳或弹簧瞬间，根据弹力是否突变判断加速度（弹簧弹力不突变，绳拉力可突变）；（2）<strong>连接体问题</strong>：两物体叠放或用绳/杆连接，已知外力求相互作用力，优先整体法求共同加速度，再隔离单个物体求内力；（3）<strong>传送带与板块模型</strong>：分析滑块与传送带或木板间的摩擦力方向，判断是否共速、共速后摩擦力是否反转，画出 $v-t$ 图分析相对位移。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>矢量性忽略</strong>：列牛顿第二定律分量式时，忘记预先规定正方向，导致加速度或力的符号错误。加速度方向应与合力方向完全一致（待家长核对）。</li>
+<li><strong>整体法与隔离法混用</strong>：对连接体直接用整体法求内力，但整体法只能求系统所受外力，内力必须隔离单个物体求解。</li>
+<li><strong>临界状态分析不当</strong>：物体“恰好脱离”指弹力为零且加速度相同；“恰好相对滑动”指静摩擦力达到最大值 $f_\text{max} = \mu_s N$。错把临界条件当成始终成立的条件。</li>
+<li><strong>受力分析顺序混乱</strong>：先分析场力（重力、电场力），再分析接触力（弹力、摩擦力），逐一检查施力物体，防止多画力或漏画力。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>牛顿第二定律</td>
+<td>Newton‘s Second Law</td>
+<td>$\mathbf{F}=m\mathbf{a}$，力与加速度的定量关系</td>
+</tr>
+<tr>
+<td>惯性参考系</td>
+<td>Inertial Reference Frame</td>
+<td>牛顿定律严格成立的参考系</td>
+</tr>
+<tr>
+<td>整体法</td>
+<td>Whole-system Method</td>
+<td>将多个物体视为一个系统，只分析外力</td>
+</tr>
+<tr>
+<td>隔离法</td>
+<td>Isolation Method</td>
+<td>单独分析系统中某个物体的受力</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">牛顿运动定律</a></li>
+<li><a href="../atoms/532-力的合成与分解.html">力的合成与分解</a></li>
+<li><a class="dead" title="未收录">运动学</a></li>
+<li><a href="../atoms/515-做功与能量变化.html">功与能</a></li>
+<li><a href="../atoms/349-动量定理.html">动量定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2017-新课标Ⅱ-11.html">2017-新课标Ⅱ-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

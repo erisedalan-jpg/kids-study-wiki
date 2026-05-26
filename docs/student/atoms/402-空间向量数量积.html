@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量数量积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间向量数量积</h1><div class="review-mark" data-stem="402-空间向量数量积"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第一章空间向量与立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间向量数量积, dot product in space, 空间点积, 空间向量内积, space</p><h2>🎓 空间向量数量积</h2>
+<h3>定义</h3>
+<p>设两非零空间向量 $\boldsymbol{a}$，$\boldsymbol{b}$，它们夹角为 $\theta$（$0° \le \theta \le 180°$），则：</p>
+<p>$$\boldsymbol{a} \cdot \boldsymbol{b} = |\boldsymbol{a}||\boldsymbol{b}|\cos\theta$$</p>
+<p>若 $\boldsymbol{a}$ 或 $\boldsymbol{b}$ 为零向量，则 $\boldsymbol{a} \cdot \boldsymbol{b} = 0$。</p>
+<p>数量积（内积、点积）的结果是<strong>实数</strong>，不是向量。</p>
+<h3>坐标计算公式</h3>
+<p>设 $\boldsymbol{a}=(a_1,a_2,a_3)$，$\boldsymbol{b}=(b_1,b_2,b_3)$：</p>
+<p>$$\boldsymbol{a} \cdot \boldsymbol{b} = a_1b_1 + a_2b_2 + a_3b_3$$</p>
+<h3>由数量积求夹角</h3>
+<p>$$\cos\theta = \dfrac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|} = \dfrac{a_1b_1+a_2b_2+a_3b_3}{\sqrt{a_1^2+a_2^2+a_3^2}\cdot\sqrt{b_1^2+b_2^2+b_3^2}}$$</p>
+<h3>垂直条件</h3>
+<p>$$\boldsymbol{a} \perp \boldsymbol{b} \Leftrightarrow \boldsymbol{a}\cdot\boldsymbol{b} = 0 \Leftrightarrow a_1b_1+a_2b_2+a_3b_3 = 0$$</p>
+<h3>运算律</h3>
+<table>
+<thead>
+<tr>
+<th>律名</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交换律</td>
+<td>$\boldsymbol{a}\cdot\boldsymbol{b}=\boldsymbol{b}\cdot\boldsymbol{a}$</td>
+</tr>
+<tr>
+<td>分配律</td>
+<td>$(\boldsymbol{a}+\boldsymbol{b})\cdot\boldsymbol{c}=\boldsymbol{a}\cdot\boldsymbol{c}+\boldsymbol{b}\cdot\boldsymbol{c}$</td>
+</tr>
+<tr>
+<td>数乘结合</td>
+<td>$(\lambda\boldsymbol{a})\cdot\boldsymbol{b}=\lambda(\boldsymbol{a}\cdot\boldsymbol{b})$</td>
+</tr>
+<tr>
+<td>自乘</td>
+<td>$\boldsymbol{a}\cdot\boldsymbol{a}=</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：$(\boldsymbol{a}\cdot\boldsymbol{b})\cdot\boldsymbol{c}$ 无意义（数乘向量，不是数量积）；数量积<strong>不满足结合律</strong>。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$\boldsymbol{a}=(1,2,-1)$，$\boldsymbol{b}=(3,-1,2)$，求 $\boldsymbol{a}\cdot\boldsymbol{b}$ 及两向量夹角。</p>
+<p><strong>解</strong>：
+$$\boldsymbol{a}\cdot\boldsymbol{b} = 1\times3+2\times(-1)+(-1)\times2 = 3-2-2=-1$$
+$$|\boldsymbol{a}|=\sqrt{1+4+1}=\sqrt{6}, \quad |\boldsymbol{b}|=\sqrt{9+1+4}=\sqrt{14}$$
+$$\cos\theta = \dfrac{-1}{\sqrt{6}\cdot\sqrt{14}} = \dfrac{-1}{\sqrt{84}} = -\dfrac{1}{2\sqrt{21}}$$</p>
+<p><strong>例2</strong>：验证 $\boldsymbol{a}=(2,1,-1)$，$\boldsymbol{b}=(1,-3,-1)$ 是否垂直。</p>
+<p><strong>解</strong>：$\boldsymbol{a}\cdot\boldsymbol{b}=2-3+1=0$，故 $\boldsymbol{a}\perp\boldsymbol{b}$。</p>
+<p><strong>例3</strong>：已知 $|\boldsymbol{a}|=2$，$|\boldsymbol{b}|=3$，$\boldsymbol{a}\cdot\boldsymbol{b}=3$，求 $|\boldsymbol{a}+\boldsymbol{b}|$。</p>
+<p><strong>解</strong>：
+$$|\boldsymbol{a}+\boldsymbol{b}|^2 = |\boldsymbol{a}|^2 + 2\boldsymbol{a}\cdot\boldsymbol{b} + |\boldsymbol{b}|^2 = 4+6+9=19$$
+$$|\boldsymbol{a}+\boldsymbol{b}| = \sqrt{19}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>数量积结果是<strong>数</strong>，不是向量；不能对数量积再做数量积</li>
+<li>$\boldsymbol{a}\cdot\boldsymbol{b}=0$ 只说明 $\boldsymbol{a}\perp\boldsymbol{b}$，若 $\boldsymbol{a}$ 或 $\boldsymbol{b}$ 为零向量，方向无定义，也满足 $\boldsymbol{a}\cdot\boldsymbol{b}=0$</li>
+<li>夹角范围 $[0°, 180°]$，$\cos\theta$ 可以为负（夹角为钝角）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第一章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第一章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/401-空间向量基本概念.html">空间向量基本概念</a></li>
+<li><a href="../atoms/410-空间向量运算.html">空间向量运算</a></li>
+<li><a href="../atoms/399-空间向量坐标表示.html">空间向量坐标表示</a></li>
+<li><a href="../atoms/411-空间平面法向量.html">空间平面法向量</a></li>
+<li><a class="dead" title="未收录">空间向量证垂直</a></li>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+</ul>
+</div>
+</body>
+</html>

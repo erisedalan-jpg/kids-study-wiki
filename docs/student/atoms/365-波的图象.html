@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波的图象</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>波的图象</h1><div class="review-mark" data-stem="365-波的图象"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械波]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 波的图象, 波形图, wave graph, wave pattern</p><h2>🎓 波的图象</h2>
+<h3>两种图象的区分</h3>
+<p>研究机械波有两种图象，必须严格区分：</p>
+<table>
+<thead>
+<tr>
+<th>图象</th>
+<th>横轴</th>
+<th>纵轴</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>波形图</strong>（$y$-$x$ 图）</td>
+<td>位置 $x$</td>
+<td>位移 $y$</td>
+<td>某时刻所有质点的位移分布</td>
+</tr>
+<tr>
+<td><strong>振动图</strong>（$y$-$t$ 图）</td>
+<td>时间 $t$</td>
+<td>位移 $y$</td>
+<td>某质点随时间的位移变化</td>
+</tr>
+</tbody>
+</table>
+<h3>波形图（$y$-$x$ 图）详解</h3>
+<p><strong>读取信息</strong>：
+- <strong>波长</strong> $\lambda$：图上两相邻波峰（或波谷）的距离
+- <strong>振幅</strong> $A$：波峰（或波谷）的最大位移值
+- <strong>质点位置</strong>：读取各质点此时的位移</p>
+<p><strong>判断质点运动方向（同侧法）</strong>：</p>
+<p>若已知波的传播方向（如向右），则：
+- 质点在<strong>波峰前方</strong>（右侧）→ 即将到达波峰 → 向<strong>上</strong>运动
+- 质点在<strong>波峰后方</strong>（左侧）→ 已过波峰 → 向<strong>下</strong>运动</p>
+<p>口诀："<strong>同侧法</strong>"——波向哪边传，质点速度方向与该侧相邻波峰同向。</p>
+<h3>振动图（$y$-$t$ 图）详解</h3>
+<p><strong>读取信息</strong>：
+- <strong>周期</strong> $T$：图上完成一次完整振动的时间
+- <strong>振幅</strong> $A$：最大位移值
+- <strong>某时刻位移</strong>：读取 $y$ 值</p>
+<h3>两种图象的联系</h3>
+<p>$$\lambda = v\cdot T$$</p>
+<ul>
+<li>波形图的"空间周期" = 波长 $\lambda$</li>
+<li>振动图的"时间周期" = 周期 $T$</li>
+<li>两者通过波速相连</li>
+</ul>
+<h3>由波形图求质点速度方向（详细步骤）</h3>
+<ol>
+<li>明确波的传播方向（题目给出）</li>
+<li>找到质点在波形图上的位置</li>
+<li>判断在该位置，若波继续传播（波形整体移动），质点下一时刻位移如何变化（增大还是减小）</li>
+<li>位移增大 → 速度向正方向；位移减小 → 速度向负方向</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一列沿 $x$ 轴正方向传播的简谐波，某时刻波形图如图（正弦波，$A = 0.2\text{ m}$，$\lambda = 4\text{ m}$），波速 $v = 2\text{ m/s}$。</p>
+<ol>
+<li>求频率：$f = v/\lambda = 2/4 = 0.5\text{ Hz}$，$T = 1/f = 2\text{ s}$</li>
+<li>$x = 1\text{ m}$ 处质点位移为 0，且在下降段（$x=0$ 处是波峰），波向右传 → 该质点下一时刻向<strong>下</strong>运动（$y$ 减小，速度为负 $y$ 方向）</li>
+<li>$t = 0.5\text{ s}$ 后，波形图向右移动 $\Delta x = v\cdot t = 2\times0.5 = 1\text{ m}$</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li><strong>波形图 ≠ 振动图</strong>：横轴不同，代表的物理意义完全不同，不能混淆。</li>
+<li><strong>波形图是"照片"</strong>：描述某一时刻所有质点状态；振动图是"视频"：描述某一质点随时间的变化。</li>
+<li><strong>不知传播方向则质点速度不确定</strong>：波形图中，若不知道波向左还是向右传播，质点速度方向有两种可能。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第三章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：机械波 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/362-机械波.html">机械波</a></li>
+<li><a href="../atoms/363-横波与纵波.html">横波与纵波</a></li>
+<li><a href="../atoms/370-波长.html">波长</a></li>
+<li><a href="../atoms/369-波速.html">波速</a></li>
+<li><a href="../atoms/355-周期与频率-振动.html">周期与频率-振动</a></li>
+<li><a href="../atoms/361-振幅.html">振幅</a></li>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2009-北京-05</a></li>
+<li><a class="dead" title="未收录">2010-北京-05</a></li>
+<li><a href="../exam/物理/2014-新课标Ⅱ-15.html">2014-新课标Ⅱ-15</a></li>
+<li><a class="dead" title="未收录">2015-北京-03</a></li>
+<li><a class="dead" title="未收录">2022-北京-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

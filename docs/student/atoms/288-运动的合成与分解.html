@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>运动的合成与分解</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>运动的合成与分解</h1><div class="review-mark" data-stem="288-运动的合成与分解"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 抛体运动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 运动的合成与分解, composition and decomposition of motion</p><h2>🎓 运动的合成与分解</h2>
+<h3>定义</h3>
+<p><strong>运动的合成</strong>：已知分运动，求合运动。<br />
+<strong>运动的分解</strong>：已知合运动，按实际效果分解为两个分运动。</p>
+<p>合运动与分运动遵循<strong>平行四边形定则</strong>（矢量叠加）：</p>
+<p>$$\vec{v} = \vec{v}_1 + \vec{v}_2$$
+$$\vec{r} = \vec{r}_1 + \vec{r}_2$$</p>
+<h3>核心原理：运动独立性</h3>
+<p>各分运动<strong>相互独立</strong>，互不干扰。合运动的位移、速度均为各分量的矢量和。</p>
+<ul>
+<li>位移合成：$\vec{r} = \vec{r}_x + \vec{r}_y$</li>
+<li>速度合成：$\vec{v} = \vec{v}_x + \vec{v}_y$</li>
+</ul>
+<h3>分解方式</h3>
+<p>按<strong>实际效果</strong>或<strong>坐标轴</strong>分解：</p>
+<p>$$v_x = v\cos\theta, \quad v_y = v\sin\theta$$
+$$v = \sqrt{v_x^2 + v_y^2}, \quad \tan\theta = \frac{v_y}{v_x}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（平抛）</strong>：水平速度 $v_0 = 10\ \text{m/s}$，竖直方向自由落体，$t = 2\ \text{s}$ 时合速度？</p>
+<p>$$v_y = gt = 10 \times 2 = 20\ \text{m/s}$$
+$$v = \sqrt{v_x^2 + v_y^2} = \sqrt{10^2 + 20^2} = 10\sqrt{5} \approx 22.4\ \text{m/s}$$</p>
+<p><strong>例2（船渡河）</strong>：船速 $v_1 = 3\ \text{m/s}$（垂直河岸），水流速 $v_2 = 4\ \text{m/s}$，合速度？</p>
+<p>$$v = \sqrt{3^2 + 4^2} = 5\ \text{m/s}$$
+$$\theta = \arctan\frac{4}{3} \approx 53°\ \text{（偏向下游）}$$</p>
+<p><strong>例3</strong>：分解一斜面上物体重力为沿斜面分量和垂直斜面分量：</p>
+<p>$$G_{\parallel} = mg\sin\theta, \quad G_{\perp} = mg\cos\theta$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>忘记矢量性</strong>：合速度不是代数相加，必须用矢量合成（平行四边形定则）。</li>
+<li><strong>分运动独立性</strong>：水平匀速不影响竖直加速，两者各自独立。</li>
+<li><strong>分解不唯一</strong>：运动可沿任意方向分解，应按实际效果或题目坐标系选取分解方向。</li>
+</ol>
+<h3>与必一衔接</h3>
+<ul>
+<li>必修一：平行四边形定则处理力的合成与分解，此处同样适用于运动（位移、速度）。</li>
+<li>本章应用：平抛运动 = 水平匀速 + 竖直自由落体的合成。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订），必修二第五章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第二册.pdf</code>（第五章 第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：运动的合成与分解 — 百度百科</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/271-曲线运动.html">曲线运动</a></li>
+<li><a href="../atoms/261-平抛运动.html">平抛运动</a></li>
+<li><a href="../atoms/219-平行四边形定则.html">平行四边形定则</a></li>
+<li><a class="dead" title="未收录">小船过河问题</a></li>
+<li><a href="../atoms/045-速度.html">速度</a></li>
+<li><a class="dead" title="未收录">平抛运动公式</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-12</a></li>
+<li><a class="dead" title="未收录">2013-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2014-新课标Ⅰ-12</a></li>
+<li><a href="../exam/物理/2015-新课标Ⅱ-11.html">2015-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-02</a></li>
+<li><a class="dead" title="未收录">2018-北京-08</a></li>
+<li><a class="dead" title="未收录">2018-新课标Ⅰ-05</a></li>
+<li><a class="dead" title="未收录">2020-北京-17</a></li>
+<li><a class="dead" title="未收录">2022-北京-17</a></li>
+<li><a class="dead" title="未收录">2023-北京-17</a></li>
+<li><a class="dead" title="未收录">2024-湖南-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

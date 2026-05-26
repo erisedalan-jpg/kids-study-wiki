@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合函数导数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复合函数导数</h1><div class="review-mark" data-stem="426-复合函数导数"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复合函数导数, chain rule, 链式法则</p><h2>🎓 复合函数导数（链式法则）</h2>
+<h3>链式法则</h3>
+<p>设 $y=f(u)$，$u=g(x)$，则复合函数 $y=f[g(x)]$ 的导数为：</p>
+<p>$$\boxed{[f(g(x))]' = f'(g(x)) \cdot g'(x)}$$</p>
+<p>用"中间变量"的语言：$\dfrac{\mathrm{d}y}{\mathrm{d}x} = \dfrac{\mathrm{d}y}{\mathrm{d}u} \cdot \dfrac{\mathrm{d}u}{\mathrm{d}x}$</p>
+<p><strong>口诀</strong>：外函数对中间变量求导，乘以中间变量对 $x$ 的导数（<strong>不要忘乘内层导数</strong>）。</p>
+<h3>分解步骤</h3>
+<ol>
+<li>识别"外层函数"$f$ 和"内层函数"$g$</li>
+<li>对外层求导，内层当成整体（$f'(g(x))$，不对 $g(x)$ 内部求导）</li>
+<li>再乘以内层对 $x$ 的导数 $g'(x)$</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x) = \sin(2x)$</p>
+<p>外层 $\sin$，内层 $2x$：$f'(x) = \cos(2x)\cdot 2 = 2\cos(2x)$</p>
+<p><strong>例 2</strong> $f(x) = (x^2+1)^5$</p>
+<p>外层幂 $(\cdot)^5$，内层 $x^2+1$：$f'(x) = 5(x^2+1)^4 \cdot 2x = 10x(x^2+1)^4$</p>
+<p><strong>例 3</strong> $f(x) = e^{x^2+1}$</p>
+<p>外层 $e^{(\cdot)}$，内层 $x^2+1$：$f'(x) = e^{x^2+1}\cdot 2x = 2xe^{x^2+1}$</p>
+<p><strong>例 4</strong> $f(x) = \ln(\sin x)$（$\sin x &gt; 0$ 时）</p>
+<p>外层 $\ln$，内层 $\sin x$：$f'(x) = \dfrac{1}{\sin x}\cdot\cos x = \dfrac{\cos x}{\sin x} = \cot x$</p>
+<p><strong>例 5</strong>（三重复合）$f(x) = \sin^2(3x)$</p>
+<p>$f(x) = [\sin(3x)]^2$。逐层剥：
+$$f'(x) = 2\sin(3x)\cdot[\sin(3x)]' = 2\sin(3x)\cdot\cos(3x)\cdot 3 = 6\sin(3x)\cos(3x) = 3\sin(6x)$$</p>
+<h3>常用复合形式</h3>
+<table>
+<thead>
+<tr>
+<th>复合函数</th>
+<th>导数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$[g(x)]^n$</td>
+<td>$n[g(x)]^{n-1}\cdot g'(x)$</td>
+</tr>
+<tr>
+<td>$e^{g(x)}$</td>
+<td>$e^{g(x)}\cdot g'(x)$</td>
+</tr>
+<tr>
+<td>$\ln g(x)$</td>
+<td>$\dfrac{g'(x)}{g(x)}$</td>
+</tr>
+<tr>
+<td>$\sin g(x)$</td>
+<td>$\cos g(x)\cdot g'(x)$</td>
+</tr>
+<tr>
+<td>$\cos g(x)$</td>
+<td>$-\sin g(x)\cdot g'(x)$</td>
+</tr>
+</tbody>
+</table>
+<h3>与必修衔接</h3>
+<p>复合函数在必修一已学（$f\circ g$），链式法则是其求导版本。链式法则是所有复杂函数求导的核心工具——几乎所有复合结构都用它处理。</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>最常见错误</strong>：只对外层求导，忘乘内层导数
+  例：$(\sin(x^2))' = \cos(x^2)$（错）→ 应为 $\cos(x^2)\cdot 2x$（对）</li>
+<li>多重复合要逐层剥，每层都要乘以对应的内层导数</li>
+<li>$\ln|g(x)|$ 的导数仍为 $\dfrac{g'(x)}{g(x)}$（高中阶段通常不涉及绝对值里的求导，知道即可）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/链式法则</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/795-复合函数求导.html">复合函数求导</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/1266-函数的单调性与导数.html">函数的单调性与导数</a></li>
+</ul>
+<p><a class="dead" title="未收录">导数运算法则</a> · <a href="../atoms/435-导数四则运算.html">导数四则运算</a> · <a href="../atoms/447-常见函数导数.html">常见函数导数</a> · <a href="../atoms/416-三角函数导数.html">三角函数导数</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a href="../atoms/429-对数函数导数.html">对数函数导数</a> · <a class="dead" title="未收录">多项式函数导数</a></p>
+</div>
+</body>
+</html>

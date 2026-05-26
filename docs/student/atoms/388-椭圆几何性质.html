@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>椭圆几何性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>椭圆几何性质</h1><div class="review-mark" data-stem="388-椭圆几何性质"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 椭圆几何性质, geometric properties of ellipse, 椭圆性质, 椭圆的几何性质</p><h2>🎓 椭圆几何性质</h2>
+<p>以标准椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a&gt;b&gt;0$，焦点在 $x$ 轴）为例。</p>
+<h3>对称性</h3>
+<ul>
+<li>关于 $x$ 轴对称</li>
+<li>关于 $y$ 轴对称</li>
+<li>关于原点（中心）对称</li>
+</ul>
+<h3>顶点</h3>
+<table>
+<thead>
+<tr>
+<th>顶点</th>
+<th>坐标</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长轴右顶点 $A_2$</td>
+<td>$(a,0)$</td>
+<td></td>
+</tr>
+<tr>
+<td>长轴左顶点 $A_1$</td>
+<td>$(-a,0)$</td>
+<td></td>
+</tr>
+<tr>
+<td>短轴上顶点 $B_2$</td>
+<td>$(0,b)$</td>
+<td></td>
+</tr>
+<tr>
+<td>短轴下顶点 $B_1$</td>
+<td>$(0,-b)$</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>范围</h3>
+<p>$$-a \le x \le a, \quad -b \le y \le b$$</p>
+<h3>焦半径公式</h3>
+<p>椭圆上点 $P(x_0,y_0)$，两焦点 $F_1(-c,0)$，$F_2(c,0)$：</p>
+<p>$$|PF_1| = a + ex_0, \quad |PF_2| = a - ex_0$$</p>
+<p>其中 $e=\dfrac{c}{a}$ 为离心率。</p>
+<p><strong>验证</strong>：$|PF_1|+|PF_2| = 2a$ ✓（椭圆定义）；$|PF_1|-|PF_2|=2ex_0$。</p>
+<p><strong>范围</strong>：$a-c \le |PF_i| \le a+c$（最近为 $a-c$，最远为 $a+c$）</p>
+<h3>焦点三角形</h3>
+<p>椭圆上点 $P$，两焦点 $F_1,F_2$ 构成 $\triangle PF_1F_2$：</p>
+<ul>
+<li>$|PF_1|+|PF_2|=2a$（周长 $= 2a+2c$）</li>
+<li>$\angle F_1PF_2$ 用余弦定理：$|F_1F_2|^2 = |PF_1|^2+|PF_2|^2-2|PF_1||PF_2|\cos\angle F_1PF_2$</li>
+<li><strong>面积</strong>：$S = \dfrac{1}{2}|PF_1||PF_2|\sin\angle F_1PF_2 = b^2\tan\dfrac{\angle F_1PF_2}{2}$（待家长核对）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：椭圆 $\dfrac{x^2}{16}+\dfrac{y^2}{9}=1$，点 $P$ 在椭圆上，$|PF_1|=3$，求 $|PF_2|$。</p>
+<p><strong>解</strong>：$|PF_1|+|PF_2|=2a=8$，故 $|PF_2|=5$。</p>
+<p><strong>例2</strong>：椭圆 $\dfrac{x^2}{25}+\dfrac{y^2}{16}=1$，求短轴端点到焦点的距离。</p>
+<p><strong>解</strong>：$a=5, b=4, c=3$，短轴端点 $(0,4)$ 到焦点 $(\pm3,0)$：</p>
+<p>$d=\sqrt{9+16}=\sqrt{25}=5=a$ ✓（短轴端点到焦点距离等于长半轴 $a$）</p>
+<p><strong>例3</strong>：椭圆焦点三角形中，$|PF_1|=3, |PF_2|=5, |F_1F_2|=4$，求椭圆方程（焦点在 $x$ 轴）。</p>
+<p><strong>解</strong>：$2a=3+5=8$，$a=4$；$2c=4$，$c=2$；$b^2=a^2-c^2=16-4=12$</p>
+<p>方程：$\dfrac{x^2}{16}+\dfrac{y^2}{12}=1$</p>
+<h3>易错点</h3>
+<ul>
+<li>焦半径公式 $|PF_2|=a-ex_0$ 中，$x_0$ 是点 $P$ 的横坐标（可以为负），且 $|PF_i|\ge a-c&gt;0$</li>
+<li>短轴端点到焦点的距离等于 $a$（长半轴），这是重要结论</li>
+<li>焦点三角形面积公式有多种，高考中常用余弦定理+面积公式结合</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a href="../atoms/391-椭圆离心率.html">椭圆离心率</a></li>
+<li><a class="dead" title="未收录">椭圆焦点弦</a></li>
+<li><a class="dead" title="未收录">椭圆光学性质</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+<li><a href="../atoms/367-双曲线几何性质.html">双曲线几何性质</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-文-04.html">2012-文-04</a></li>
+<li><a href="../exam/数学/2013-文-05.html">2013-文-05</a></li>
+<li><a href="../exam/数学/2013-理-09.html">2013-理-09</a></li>
+<li><a href="../exam/数学/2014-文-20.html">2014-文-20</a></li>
+<li><a href="../exam/数学/2016-文-05.html">2016-文-05</a></li>
+<li><a href="../exam/数学/2018-文-04.html">2018-文-04</a></li>
+<li><a href="../exam/数学/2018-文-11.html">2018-文-11</a></li>
+<li><a href="../exam/数学/2018-理-12.html">2018-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

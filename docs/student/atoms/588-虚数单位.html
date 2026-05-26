@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>虚数单位</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>虚数单位</h1><div class="review-mark" data-stem="588-虚数单位"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 虚数单位, imaginary unit</p><h1>虚数单位</h1>
+<blockquote>
+<p><strong>一句话</strong>：虚数单位是满足 $i^2 = -1$ 的数 $i$，与实数组合构成复数，是数系扩充的核心基础。
+<strong>English</strong>: The imaginary unit is the number $i$ defined by $i^2 = -1$, which combines with real numbers to form complex numbers, serving as the core foundation for extending the number system.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：虚数单位 $i$ 是一个满足 $i^2 = -1$ 的数学对象。由 $i$ 和实数 $a, b$ 组成的形如 $a+bi$ 的数称为复数，其中 $a$ 为实部，$b$ 为虚部。当 $b \neq 0$ 时，$a+bi$ 为虚数；当 $a=0, b \neq 0$ 时，$bi$ 为纯虚数。</p>
+<p><strong>$i$ 的幂的周期性</strong>（关键方法）：
+$$i^1 = i,\quad i^2 = -1,\quad i^3 = -i,\quad i^4 = 1$$
+此后每 4 次幂循环一次，即 $i^{n} = i^{n \bmod 4}$。计算高次幂时先将指数对 4 取余数，再根据结果写出对应值。例如：$i^{2025} = i^{2025 \bmod 4} = i^{1} = i$。</p>
+<p><strong>复数的运算规则</strong>：加减法对应实部与虚部分别相加减；乘法按多项式展开并代入 $i^2 = -1$ 化简；除法利用共轭复数进行分母实数化（如 $\frac{1+i}{1-i} = \frac{(1+i)^2}{(1-i)(1+i)} = \frac{2i}{2} = i$）。</p>
+<p><strong>典型高考应用</strong>：直接计算给定复数的实部、虚部或模；化简含 $i$ 的高次幂表达式；根据复数相等条件 $a+bi = c+di \Leftrightarrow a=c, b=d$ 求参数；在复平面内判断复数对应点的象限。通常以选择题或填空题形式出现，侧重考查运算准确性与对 $i$ 循环规律的理解。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆 $i^2 = -1$ 与 $i^2 = 1$</strong>：误将 $i$ 当成实数符号处理，导致后续乘除全错，尤其出现在分母实数化时忘记符号变化。</li>
+<li><strong>复数相等的条件用错</strong>：部分学生只比较实部，遗漏虚部必须同时相等，或在带参数的复数方程中错误地只列一个方程。</li>
+<li><strong>虚数比较大小的陷阱</strong>：实数可以比大小，但虚数与复数一般不能比较大小。若题目中出现 “$a+bi &gt; 0$” 此类表述，实际上隐含 $b=0$ 且 $a&gt;0$，学生常忽略这一限制。</li>
+<li><strong>$i$ 的幂余数取错</strong>：指数除以 4 时，余数为 0 时对应于 $i^4=1$，但有些学生误以为余数 0 对应 $i^0=1$ 而写错，本质是一致的但容易在负指数或不熟悉时犯错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>虚数单位</td>
+<td>imaginary unit</td>
+<td>满足 $i^2=-1$ 的数，记作 $i$</td>
+</tr>
+<tr>
+<td>复数</td>
+<td>complex number</td>
+<td>形如 $a+bi$ 的数，其中 $a,b\in\mathbb{R}$</td>
+</tr>
+<tr>
+<td>实部</td>
+<td>real part</td>
+<td>复数 $a+bi$ 中的 $a$</td>
+</tr>
+<tr>
+<td>虚部</td>
+<td>imaginary part</td>
+<td>复数 $a+bi$ 中的 $b$</td>
+</tr>
+<tr>
+<td>共轭复数</td>
+<td>complex conjugate</td>
+<td>$a+bi$ 的共轭为 $a-bi$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中数学课程标准（2017 年版 2020 年修订）必修课程主题四 “复数”</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/330-复数概念.html">复数</a></li>
+<li><a class="dead" title="未收录">复数的四则运算</a></li>
+<li><a class="dead" title="未收录">复数的模</a></li>
+<li><a href="../atoms/534-共轭复数.html">共轭复数</a></li>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/336-平面向量基本定理.html">平面向量基本定理</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/534-共轭复数.html">共轭复数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-文-02.html">2012-文-02</a></li>
+<li><a href="../exam/数学/2015-文-02.html">2015-文-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

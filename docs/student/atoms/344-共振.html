@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>共振</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>共振</h1><div class="review-mark" data-stem="344-共振"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械振动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 共振, resonance</p><h2>🎓 共振</h2>
+<h3>定义</h3>
+<p><strong>共振</strong>（resonance）是受迫振动中，当驱动力的频率等于振动体的固有频率时，振幅达到最大值的现象。</p>
+<p>$$f_{驱动} = f_0 \implies A_{最大}$$</p>
+<ul>
+<li>$f_0$：固有频率（由振动体本身的物理性质决定）</li>
+<li>共振时能量从驱动力传入振动体的效率最高</li>
+</ul>
+<h3>共振的本质</h3>
+<p>每次驱动力推动振动体，振动体都在"最合适"的时机获得推力，动能持续积累，振幅不断增大，直到阻力耗散能量与驱动力输入能量平衡为止。</p>
+<p>阻尼越小 → 共振峰越尖锐，共振振幅越大。</p>
+<h3>共振曲线</h3>
+<p>以驱动频率 $f$ 为横轴，稳态振幅 $A$ 为纵轴：</p>
+<ul>
+<li>$f \ll f_0$ 或 $f \gg f_0$：振幅小</li>
+<li>$f \to f_0$：振幅急剧增大</li>
+<li>$f = f_0$：振幅最大（共振峰）</li>
+<li>阻尼越大：共振峰越宽越低；阻尼越小：峰越窄越高</li>
+</ul>
+<h3>共振的应用（有益共振）</h3>
+<table>
+<thead>
+<tr>
+<th>应用</th>
+<th>利用的固有频率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>收音机调台</td>
+<td>调节LC电路固有频率 = 电台频率，电流共振</td>
+</tr>
+<tr>
+<td>核磁共振（MRI）</td>
+<td>氢原子核在特定频率磁场下共振</td>
+</tr>
+<tr>
+<td>乐器发声</td>
+<td>弦、管、鼓面在固有频率振动</td>
+</tr>
+<tr>
+<td>微波炉加热</td>
+<td>2.45 GHz 微波与水分子振动频率共振</td>
+</tr>
+<tr>
+<td>音叉共鸣</td>
+<td>相同频率音叉引起共振</td>
+</tr>
+</tbody>
+</table>
+<h3>共振的危害（有害共振）</h3>
+<table>
+<thead>
+<tr>
+<th>危害</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>塔科马海峡大桥（1940年）</td>
+<td>风力驱动频率接近桥的固有频率，共振导致桥梁扭曲坍塌</td>
+</tr>
+<tr>
+<td>机械振动</td>
+<td>转动机械的转速对应固有频率时共振损坏设备</td>
+</tr>
+<tr>
+<td>地震</td>
+<td>地震波频率接近建筑物固有频率时放大振幅，加剧破坏</td>
+</tr>
+<tr>
+<td>军队过桥齐步走</td>
+<td>踏步频率接近桥的固有频率引起共振（需改为便步）</td>
+</tr>
+</tbody>
+</table>
+<p>避免危害共振的方法：改变固有频率（改变结构）或增大阻尼。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：弹簧振子 $m = 1\text{ kg}$，$k = 100\text{ N/m}$，固有频率？</p>
+<p>$$f_0 = \frac{1}{2\pi}\sqrt{\frac{k}{m}} = \frac{1}{2\pi}\sqrt{100} = \frac{10}{2\pi} \approx 1.59\text{ Hz}$$</p>
+<p>若驱动力频率为 1.59 Hz，则发生共振，振幅最大。</p>
+<p><strong>例2</strong>：音叉频率 440 Hz（A音），敲击后放置在钢琴旁，寻找与之共振的钢琴弦，找到共振时该琴弦固有频率也是 440 Hz。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>共振频率 = 固有频率</strong>（近似，精确来说略有差别但高中不讨论）。</li>
+<li><strong>共振振幅取决于阻尼</strong>：无阻尼时理论上振幅趋于无穷大；有阻尼时达到有限最大值。</li>
+<li><strong>共振不一定有害</strong>：共振是物理现象，有害有益取决于应用场景。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第二章第4节，页码待家长核对）</li>
+<li><strong>百科</strong>：共振 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/354-受迫振动.html">受迫振动</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/363-横波与纵波.html">横波与纵波</a></p>
+</li>
+<li>
+<p><a href="../atoms/354-受迫振动.html">受迫振动</a></p>
+</li>
+<li><a class="dead" title="未收录">阻尼振动</a></li>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+<li><a href="../atoms/355-周期与频率-振动.html">周期与频率-振动</a></li>
+<li><a href="../atoms/361-振幅.html">振幅</a></li>
+<li><a href="../atoms/351-单摆周期公式.html">单摆周期公式</a></li>
+</ul>
+</div>
+</body>
+</html>

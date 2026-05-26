@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电场强度叠加</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电场强度叠加</h1><div class="review-mark" data-stem="674-电场强度叠加"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电场强度叠加, superposition of electric fields, 电场强度的叠加, Superposition of Electric Fields</p><h1>电场强度叠加</h1>
+<blockquote>
+<p><strong>一句话</strong>：电场强度叠加原理：空间中任意一点的总电场强度，等于各个场源电荷单独存在时在该点产生的电场强度的矢量和。<br />
+<strong>English</strong>: The principle of superposition of electric fields: the total electric field at any point in space is the vector sum of the electric fields produced by each individual source charge acting alone.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+电场强度叠加原理基于场的独立性：多个点电荷（或电荷体系）在空间同一点激发的电场互不影响。若第 $i$ 个场源电荷单独在考察点产生的场强为 $\vec{E}<em i="1">i$，则该点的合场强为<br />
+$$\vec{E} = \vec{E}_1 + \vec{E}_2 + \cdots + \vec{E}_n = \sum</em>_i$$}^{n} \vec{E<br />
+其中 $\vec{E}_i = k\frac{Q_i}{r_i^2}\hat{r}_i$（真空点电荷公式，$k$ 为静电力常量）。该原理对连续分布电荷同样适用，只需将求和改为积分。</p>
+<p><strong>关键方法</strong><br />
+解决场强叠加问题的标准步骤：<br />
+1. 确定所有场源电荷的位置、电量及符号。<br />
+2. 针对待求点，逐一画出各电荷产生的电场强度方向（正电荷背离自身，负电荷指向自身）。<br />
+3. 建立直角坐标系，将各 $\vec{E}<em ix="ix">i$ 正交分解为 $E</em>$。}$、$E_{iy<br />
+4. 分别求分量代数和：$E_x = \sum E_{ix}$，$E_y = \sum E_{iy}$。<br />
+5. 合成合场强大小 $E = \sqrt{E_x^2 + E_y^2}$，方向由 $\tan\theta = E_y/E_x$ 决定（注意象限）。</p>
+<p><strong>典型应用</strong><br />
+高考常以等量同种电荷、等量异种电荷的连线及中垂线上的场强分布为背景，要求比较或计算某点的场强大小、方向，并识别场强为零的特殊位置。另一类典型设问是三角形、正方形等几何构型的多个点电荷在某顶点或中心产生的场强叠加，常结合库仑定律与矢量合成。解题时优先利用对称性简化运算：对称位置的分量相互抵消时可直接判断零区域，避免全部硬算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>标量叠加与矢量叠加混淆</strong>：直接代数相加场强大小，忽略方向，未使用平行四边形定则或正交分解。  </li>
+<li><strong>场强方向的判断错误</strong>：忘记正电荷场强背离、负电荷场强指向自身，尤其在计算电势能或电场力时二次出错。  </li>
+<li><strong>对称性应用不当</strong>：对于具有对称性的电荷分布，只看到大小相等而忽视方向，错误地认为合场强为零或漏掉某些分量。  </li>
+<li><strong>连续带电体模型认知缺失</strong>：认为叠加仅适用于分立点电荷，不会微元取点电荷再积分（如均匀带电圆环轴线上场强计算），导致大题失分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电场强度</td>
+<td>electric field intensity</td>
+<td>描述电场强弱和方向的物理量</td>
+</tr>
+<tr>
+<td>电场强度叠加</td>
+<td>superposition of electric fields</td>
+<td>多个场源产生的场强矢量和</td>
+</tr>
+<tr>
+<td>点电荷</td>
+<td>point charge</td>
+<td>理想化带电体模型，适用于库仑定律</td>
+</tr>
+<tr>
+<td>矢量合成</td>
+<td>vector addition</td>
+<td>用平行四边形定则或正交分解求和</td>
+</tr>
+<tr>
+<td>库仑定律</td>
+<td>Coulomb's law</td>
+<td>两点电荷间静电力的定量规律</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：🚧  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a class="dead" title="未收录">点电荷的电场</a></li>
+<li><a href="../atoms/278-电场线.html">电场线</a></li>
+<li><a href="../atoms/668-电势叠加.html">电势叠加</a></li>
+<li><a href="../atoms/263-库仑定律.html">库仑定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2021-湖南-04</a></li>
+<li><a href="../exam/物理/2022-全国乙-06.html">2022-全国乙-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

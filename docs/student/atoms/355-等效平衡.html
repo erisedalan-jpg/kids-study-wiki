@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等效平衡</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等效平衡</h1><div class="review-mark" data-stem="355-等效平衡"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等效平衡, equivalent equilibrium, 等价平衡</p><h1>等效平衡</h1>
+<blockquote>
+<p><strong>一句话</strong>：在相同温度和容器条件下，从不同初始组成出发，最终达到各组分百分含量（或浓度）相同的平衡状态。
+<strong>English</strong>: Equilibrium states reached from different initial compositions under the same temperature and container conditions, resulting in identical mole fractions (or concentrations) of all components.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>等效平衡</strong>：两种或多种不同初始投料方式，在相同温度和相同容器（恒容或恒压）条件下，最终达到的平衡状态中<strong>各组分的物质的量分数（摩尔分数）完全相同</strong>。</p>
+<p>等效平衡的判断依据：<strong>将初始组成等比例换算到同一反应方向</strong>，若换算后的组成完全相同，则等效。</p>
+<h3>公式 / 方程式</h3>
+<p><strong>恒容条件</strong>下的等效平衡：</p>
+<p>对于 $\text{A}(g) + \text{B}(g) \rightleftharpoons 2\text{C}(g)$（$\Delta n_g = 0$），恒容时：</p>
+<table>
+<thead>
+<tr>
+<th>投料</th>
+<th>换算后（正向）</th>
+<th>是否等效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 1 mol + B 1 mol</td>
+<td>A 1 mol + B 1 mol</td>
+<td>基准</td>
+</tr>
+<tr>
+<td>C 2 mol</td>
+<td>等价于 A 1 mol + B 1 mol</td>
+<td>等效</td>
+</tr>
+<tr>
+<td>A 0.5 mol + C 1 mol</td>
+<td>等价于 A 1 mol + B 0.5 mol</td>
+<td>不等效</td>
+</tr>
+</tbody>
+</table>
+<p><strong>恒压条件</strong>下的等效平衡：</p>
+<ul>
+<li>若按方程式化学计量比等比例放大投料，各组分摩尔分数不变，但浓度不同（不同容积）</li>
+<li>对 $\Delta n_g = 0$ 的反应：恒压等比例放大 = 等效平衡（浓度也相同）</li>
+</ul>
+<p>等效平衡的三种典型类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>条件</th>
+<th>判断标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恒容 $\Delta n_g = 0$</td>
+<td>等物质的量换算</td>
+<td>浓度相同</td>
+</tr>
+<tr>
+<td>恒容 $\Delta n_g \neq 0$</td>
+<td>等物质的量换算</td>
+<td>摩尔分数相同，浓度不同</td>
+</tr>
+<tr>
+<td>恒压</td>
+<td>等比例换算</td>
+<td>摩尔分数相同</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：恒容 1 L 容器，$\text{N}_2(g) + 3\text{H}_2(g) \rightleftharpoons 2\text{NH}_3(g)$，下列投料与"N₂ 1 mol + H₂ 3 mol"等效的是：</p>
+<p>(A) N₂ 2 mol + H₂ 6 mol（恒容，物质的量×2，不等效）<br />
+(B) NH₃ 2 mol（换算：N₂ 1 mol + H₂ 3 mol，等效 ✓）<br />
+(C) N₂ 0.5 mol + H₂ 1.5 mol + NH₃ 1 mol（换算：N₂ 1 mol + H₂ 3 mol，等效 ✓）<br />
+(D) N₂ 1 mol + H₂ 1 mol + NH₃ 2 mol（换算：N₂ 2 mol + H₂ 4 mol，不等效）</p>
+<h3>易错点</h3>
+<ul>
+<li>恒容体系，等比例加倍投料不等效（$\Delta n_g \neq 0$ 时）</li>
+<li>换算时必须统一换算到同一方向（全部当反应物，或全部当生成物）</li>
+<li>等效平衡各组分摩尔分数相同，但物质的量或浓度不一定相同</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等效平衡</td>
+<td>equivalent equilibrium</td>
+</tr>
+<tr>
+<td>摩尔分数</td>
+<td>mole fraction</td>
+</tr>
+<tr>
+<td>恒容</td>
+<td>constant volume</td>
+</tr>
+<tr>
+<td>恒压</td>
+<td>constant pressure</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>Two different initial compositions give equivalent equilibria if they produce identical mole fractions at equilibrium.（若两种不同初始组成在平衡时产生相同的摩尔分数，则为等效平衡。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"化学平衡"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/356-转化率.html">转化率</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">pH值</a></p>
+</li>
+<li>
+<p><a href="../atoms/342-化学平衡常数.html">化学平衡常数</a></p>
+</li>
+<li><a class="dead" title="未收录">平衡浓度</a></li>
+<li><a href="../atoms/356-转化率.html">转化率</a></li>
+<li><a class="dead" title="未收录">压强对平衡影响</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2008-全国Ⅱ-08.html">2008-全国Ⅱ-08</a></li>
+<li><a class="dead" title="未收录">2009-北京-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

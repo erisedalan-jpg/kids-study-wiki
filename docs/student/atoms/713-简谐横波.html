@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简谐横波</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>简谐横波</h1><div class="review-mark" data-stem="713-简谐横波"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 简谐横波</p><h1>简谐横波</h1>
+<blockquote>
+<p><strong>一句话</strong>：介质质点的振动方向与波的传播方向垂直，且质点做简谐运动的波。
+<strong>English</strong>: A wave in which the particle displacement is perpendicular to the direction of wave propagation, and each particle undergoes simple harmonic motion.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：简谐横波中，质点的位移 $y$ 随平衡位置 $x$ 和时间 $t$ 的变化满足波动方程：
+  $$y(x,t) = A \sin\left(\omega t - \frac{2\pi}{\lambda}x + \varphi_0\right)$$
+  其中 $A$ 为振幅，$\omega = 2\pi f = \frac{2\pi}{T}$ 为角频率，$\lambda$ 为波长，$\varphi_0$ 是坐标原点处质点的初相位。波传播的是振动形式与能量，质点本身并不随波迁移，只在平衡位置附近做简谐振动。相邻的两个振动状态完全相同的质点间的距离为一个波长 $\lambda$。波速 $v = \lambda f = \frac{\lambda}{T}$，注意波速由介质决定，频率由波源决定，波长会随介质改变而改变。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：</p>
+</li>
+<li><strong>“带动法”判断质点振动方向</strong>：沿波的传播方向，后一质点总是重复前一质点的振动。若已知波的传播方向，看目标质点靠近波源一侧的相邻质点的位移，若相邻质点在它上方，它将向上振；反之向下。反之已知质点振动方向也可反推波的传播方向。</li>
+<li><strong>波形平移法</strong>：在 $\Delta t$ 时间内，波形整体沿传播方向平移 $\Delta x = v\Delta t$。常用来画出下一时刻的波形图。</li>
+<li>
+<p><strong>图像互推</strong>：高考常给出 $t$ 时刻的波形图（$y$-$x$ 图）和某质点的振动图（$y$-$t$ 图），要能从振动图读出周期 $T$、振幅，结合波形图找到该质点的位置与初相，再推断波的传播方向和其它质点的运动情况。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见题型包括：</p>
+</li>
+<li><strong>由波形图和某质点振动方向，判断波的传播方向</strong>。</li>
+<li><strong>由 $t$ 时刻波形图和 $\Delta t$ 后波形图，求波速的可能值</strong>：利用波的周期性，波传播的距离 $\Delta x = n\lambda + \Delta x_0\ (n=0,1,2\dots)$，结合 $v = \frac{\Delta x}{\Delta t}$ 得到多解结果。</li>
+<li><strong>波的多解问题</strong>：因传播方向不明或时间与周期的关系不明确，造成波长、波速、周期出现多组解。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆波动图像与振动图像</strong>：波形图（$y$-$x$）记录多个质点在<strong>同一时刻</strong>的位移，可直接读出波长；振动图（$y$-$t$）记录<strong>一个质点</strong>位移随时间的变化，可直接读出周期。两者纵坐标均为位移，但横坐标完全不同。</li>
+<li><strong>误认为质点随波“迁移”</strong>：介质质点仅在自己的平衡位置附近振动，不沿波的传播方向发生宏观位置迁移。传播的是振动形式和能量。</li>
+<li><strong>波速计算时忽略周期性带来的多解</strong>：若题目仅给出 $\Delta t$ 内波形变化，未限制波的传播方向或 $\Delta t$ 与 $T$ 的关系，波速必然存在通解 $v = \frac{n\lambda + \Delta x}{\Delta t}$，只写单一数值即失分。</li>
+<li><strong>同一列波进入不同介质时，误认为波速不变</strong>：频率 $f$ 由波源决定，进入新介质后$f$不变，波速 $v$ 改变，因此波长 $\lambda = v/f$ 随之改变。常错以为波长或波速不变。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简谐横波</td>
+<td>transverse simple harmonic wave</td>
+<td>质点振动垂直于传播方向的简谐波</td>
+</tr>
+<tr>
+<td>波长</td>
+<td>wavelength</td>
+<td>相邻同相位点间的距离，符号 $\lambda$</td>
+</tr>
+<tr>
+<td>波速</td>
+<td>wave speed</td>
+<td>波传播的速率，由介质决定</td>
+</tr>
+<tr>
+<td>波形图</td>
+<td>waveform graph</td>
+<td>$y$-$x$ 图，反映某时刻各质点位移</td>
+</tr>
+<tr>
+<td>带动法</td>
+<td>driven-particle method</td>
+<td>由相邻质点振动方向判断目标质点趋向</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：选择性必修一·机械波</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+<li><a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+<li><a class="dead" title="未收录">波的衍射</a></li>
+<li><a href="../atoms/357-多普勒效应.html">多普勒效应</a></li>
+<li><a class="dead" title="未收录">振动图像与波动图像的综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-04</a></li>
+<li><a href="../exam/物理/2014-新课标Ⅱ-15.html">2014-新课标Ⅱ-15</a></li>
+<li><a class="dead" title="未收录">2015-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

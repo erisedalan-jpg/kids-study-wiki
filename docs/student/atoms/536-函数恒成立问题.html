@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数恒成立问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数恒成立问题</h1><div class="review-mark" data-stem="536-函数恒成立问题"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数恒成立问题, 恒成立问题</p><h1>函数恒成立问题</h1>
+<blockquote>
+<p><strong>一句话</strong>：对含参数函数或不等式，在给定区间上使其恒成立的参数满足的充要条件问题。
+<strong>English</strong>: The problem of finding parameter values that ensure a given functional inequality or equation remains true for all values in a specified domain.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+设函数 $f(x;a)$ 中含有参数 $a$，$D$ 是给定区间。若 $\forall x \in D$，不等式 $f(x;a) &gt; 0$（或 $\ge 0$ 等）恒成立，则转化为参数 $a$ 必须满足的条件。核心原理是命题逻辑与函数最值的等价转化：</p>
+<ul>
+<li>$f(x) &gt; 0$ 在 $D$ 上恒成立 $\Leftrightarrow$ $\min_{x\in D} f(x) &gt; 0$  </li>
+<li>$f(x) &lt; 0$ 在 $D$ 上恒成立 $\Leftrightarrow$ $\max_{x\in D} f(x) &lt; 0$  </li>
+</ul>
+<p>将含参恒成立问题转化为求函数在区间上的最值，从而解出参数范围。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>分离参数法</strong>：将不等式变形为 $a &gt; g(x)$（或 $a &lt; g(x)$）的形式，则 $a &gt; g(x)$ 恒成立 $\Leftrightarrow$ $a &gt; g(x)<em _min="\min">{\max}$；$a &lt; g(x)$ 恒成立 $\Leftrightarrow$ $a &lt; g(x)</em>$。<br />
+2. <strong>直接构造函数法</strong>：保留参数，构造函数 $h(x) = f(x;a)$，利用导数求其在 $D$ 上的最小值（或最大值），令最值满足符号要求解参数。<br />
+3. <strong>数形结合法</strong>：将不等式两边看作两个函数，利用图像位置关系（如直线与二次曲线）列出关于参数的约束。<br />
+4. <strong>区间端点分析</strong>：当区间一端趋于无穷或函数单调性明确时，可由极限与端点值得到参数的必要条件，再验证充分性。</p>
+<p><strong>典型应用</strong><br />
+高考常以选择、填空或解答题出现，设问如：“已知 $f(x) = x^2 + ax + 1$，若 $f(x) &gt; 0$ 对任意 $x \in \mathbb{R}$ 恒成立，求 $a$ 的取值范围”。标准解法：二次函数开口向上，只需判别式 $\Delta = a^2 - 4 &lt; 0 \Rightarrow -2 &lt; a &lt; 2$。<br />
+另一常见情境为含指数、对数的超越函数，如 “已知 $e^x - ax &gt; 1$ 对 $x&gt;0$ 恒成立，求 $a$ 的取值范围”。分离参数得 $a &lt; \frac{e^x - 1}{x}$，构造函数 $g(x) = \frac{e^x - 1}{x}$，用导数求出 $x&gt;0$ 时 $g(x)_{\min}$（在 $x=1$ 处取得），从而得 $a &lt; e-1$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>定义域被忽略</strong>：分离参数后求最值时，未注意 $x$ 的取值范围是否开区间，导致最值不可达时遗漏等号。例如 $a &lt; g(x)$ 在 $[1,2)$ 上恒成立，若 $\min g(x)$ 在端点取得但端点不取到，则 $a$ 应 $\le$ 下确界而非直接取 $\min$。  </li>
+<li><strong>分离参数时不讨论系数为零</strong>：变形时将参数作为除数，未讨论该系数为 $0$ 的特殊情形，导致解集漏解或多解。  </li>
+<li><strong>混淆恒成立与存在性</strong>：将 “恒成立” 的条件误用为 “存在一个 $x$ 使不等式成立”，错误地使用 $\max$ 或 $\min$。  </li>
+<li><strong>直接构造函数后求导未讨论端点和不可导点</strong>：仅用导数为零的点判断最值，忽视区间端点处函数值或无穷趋势，造成参数范围错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>恒成立</td>
+<td>always holds / identically true</td>
+<td>对所有元素命题为真</td>
+</tr>
+<tr>
+<td>参数</td>
+<td>parameter</td>
+<td>可调节的未知常数</td>
+</tr>
+<tr>
+<td>分离参数</td>
+<td>parameter separation</td>
+<td>将参数与变量分离到不等号两侧</td>
+</tr>
+<tr>
+<td>最值转化</td>
+<td>reduction to extreme values</td>
+<td>将恒成立转化为最值比较</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>discriminant</td>
+<td>二次方程根的判定式 $b^2-4ac$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/211-二次函数图象与性质.html">二次函数性质</a></li>
+<li><a class="dead" title="未收录">分离参数法</a></li>
+<li><a class="dead" title="未收录">利用导数求函数最值</a></li>
+<li><a href="../atoms/758-含参数不等式.html">含参不等式</a></li>
+<li><a class="dead" title="未收录">函数定义域与值域</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-22.html">2008-理-22</a></li>
+<li><a href="../exam/数学/2009-文-21.html">2009-文-21</a></li>
+</ul></div>
+</div>
+</body>
+</html>

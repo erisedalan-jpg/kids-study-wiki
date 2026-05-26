@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛必达法则-初步</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>洛必达法则-初步</h1><div class="review-mark" data-stem="461-洛必达法则-初步"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 洛必达法则-初步, L&#x27;Hôpital&#x27;s rule, 洛必达法则, 不定型极限</p><h2>🎓 洛必达法则（初步）</h2>
+<h3>不定型极限</h3>
+<p>在求极限时，若直接代入出现 $\dfrac{0}{0}$ 或 $\dfrac{\infty}{\infty}$ 的形式，称为<strong>不定型</strong>。</p>
+<p><strong>洛必达法则</strong>（L'Hôpital's Rule）：若 $\lim_{x\to a}\dfrac{f(x)}{g(x)}$ 为 $\dfrac{0}{0}$ 或 $\dfrac{\infty}{\infty}$ 型，且 $f(x),g(x)$ 在 $a$ 附近可导，$g'(x)\neq 0$，则：</p>
+<p>$$\lim_{x\to a}\frac{f(x)}{g(x)} = \lim_{x\to a}\frac{f'(x)}{g'(x)}$$</p>
+<p>（前提：右边的极限存在或为 $\infty$）</p>
+<blockquote>
+<p>注：洛必达法则属于大学微积分内容，高中教材仅作选学或了解，不要求严格证明。</p>
+</blockquote>
+<h3>高中阶段常见等价极限</h3>
+<p>高中通过等价替换（而非洛必达）处理不定型极限：</p>
+<table>
+<thead>
+<tr>
+<th>等价替换（$x\to 0$）</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\sin x \sim x$</td>
+<td>$\lim_{x\to 0}\dfrac{\sin x}{x}=1$</td>
+</tr>
+<tr>
+<td>$\tan x \sim x$</td>
+<td>$\lim_{x\to 0}\dfrac{\tan x}{x}=1$</td>
+</tr>
+<tr>
+<td>$e^x-1\sim x$</td>
+<td>$\lim_{x\to 0}\dfrac{e^x-1}{x}=1$</td>
+</tr>
+<tr>
+<td>$\ln(1+x)\sim x$</td>
+<td>$\lim_{x\to 0}\dfrac{\ln(1+x)}{x}=1$</td>
+</tr>
+<tr>
+<td>$1-\cos x\sim\dfrac{x^2}{2}$</td>
+<td>$\lim_{x\to 0}\dfrac{1-\cos x}{x^2}=\dfrac{1}{2}$</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题（洛必达法则）</h3>
+<p><strong>例 1</strong>（$\dfrac{0}{0}$ 型）$\lim_{x\to 0}\dfrac{\sin x}{x}$</p>
+<p>$\dfrac{\sin 0}{0}=\dfrac{0}{0}$ 型，用洛必达：$\dfrac{(\sin x)'}{(x)'}=\dfrac{\cos x}{1}$，$x\to 0$ 时 $\cos x\to 1$。</p>
+<p>$\lim_{x\to 0}\dfrac{\sin x}{x}=1$。（与等价替换结果一致）</p>
+<p><strong>例 2</strong>（$\dfrac{\infty}{\infty}$ 型）$\lim_{x\to+\infty}\dfrac{\ln x}{x}$</p>
+<p>$\dfrac{\infty}{\infty}$ 型，洛必达：$\dfrac{(\ln x)'}{(x)'}=\dfrac{1/x}{1}=\dfrac{1}{x}\to 0$。</p>
+<p>说明 $\ln x$ 增长远慢于 $x$。</p>
+<p><strong>例 3</strong> $\lim_{x\to 0}\dfrac{e^x-1-x}{x^2}$</p>
+<p>$\dfrac{0}{0}$ 型，一次洛必达：$\dfrac{e^x-1}{2x}$，仍是 $\dfrac{0}{0}$ 型，再次洛必达：$\dfrac{e^x}{2}\to\dfrac{1}{2}$。</p>
+<h3>不定型类型转化</h3>
+<table>
+<thead>
+<tr>
+<th>原型</th>
+<th>转化方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0\cdot\infty$</td>
+<td>化为 $\dfrac{0}{1/\infty}$ 或 $\dfrac{\infty}{1/0}$</td>
+</tr>
+<tr>
+<td>$\infty-\infty$</td>
+<td>通分或乘以共轭</td>
+</tr>
+<tr>
+<td>$0^0,\infty^0,1^\infty$</td>
+<td>取对数转化</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例</strong>（$1^\infty$ 型）$\lim_{x\to 0}(1+x)^{1/x}=e$（自然数 $e$ 的定义）</p>
+<p>取对数：$\lim_{x\to 0}\dfrac{\ln(1+x)}{x}=\lim_{x\to 0}\dfrac{1/(1+x)}{1}=1$，故极限为 $e^1=e$。</p>
+<h3>与高中的衔接</h3>
+<p>高中主要用<strong>等价无穷小替换</strong>和<strong>基本极限</strong>处理不定型。洛必达法则是这些技巧的理论基础，理解其本质（分子分母各求导后再取极限）有助于深化对"无穷小阶"的理解。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》（选学内容）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/洛必达法则</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/441-导数的概念.html">导数的概念</a> · <a href="../atoms/462-渐近线-导数视角.html">渐近线-导数视角</a> · <a href="../atoms/463-瞬时变化率.html">瞬时变化率</a> · <a href="../atoms/449-平均变化率.html">平均变化率</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a> · <a href="../atoms/457-数列极限-初步.html">数列极限-初步</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-理-09.html">2009-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

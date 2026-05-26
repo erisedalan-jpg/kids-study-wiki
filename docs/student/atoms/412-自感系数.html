@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自感系数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>自感系数</h1><div class="review-mark" data-stem="412-自感系数"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 自感系数, self-inductance, inductance, 系数</p><h2>🎓 自感系数（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>自感系数</strong>（电感量，简称电感）$L$ 是描述线圈<strong>抵抗电流变化</strong>能力的物理量，定义为：</p>
+<p>$$L = \frac{\varepsilon_L}{\Delta I / \Delta t}$$</p>
+<p>即：产生单位电流变化率所需的自感电动势大小，单位为<strong>亨利</strong>（H）。</p>
+<p>$$1\text{ H} = 1\text{ V·s/A} = 1\text{ Ω·s}$$</p>
+<p>常用单位：毫亨（mH，$1\text{ mH} = 10^{-3}\text{ H}$）、微亨（μH，$1\text{ μH} = 10^{-6}\text{ H}$）</p>
+<h3>决定自感系数的因素</h3>
+<p>自感系数是线圈的<strong>固有属性</strong>，与电流大小无关，由线圈结构决定：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>匝数 $N$</td>
+<td>匝数越多，$L$ 越大（$L \propto N^2$）</td>
+</tr>
+<tr>
+<td>截面积 $S$</td>
+<td>截面积越大，$L$ 越大</td>
+</tr>
+<tr>
+<td>长度 $l$（螺线管）</td>
+<td>越短越粗，$L$ 越大</td>
+</tr>
+<tr>
+<td>铁芯</td>
+<td>有铁芯的线圈 $L$ 远大于空心线圈</td>
+</tr>
+</tbody>
+</table>
+<p>对于长螺线管（理想情形）：</p>
+<p>$$L = \mu_0 \mu_r \frac{N^2 S}{l}$$</p>
+<p>其中 $\mu_0 = 4\pi\times10^{-7}$ T·m/A（真空磁导率），$\mu_r$ 为相对磁导率。</p>
+<h3>储能公式</h3>
+<p>电感线圈中存储的磁场能（类比弹簧的弹性势能）：</p>
+<p>$$W_L = \frac{1}{2}LI^2$$</p>
+<ul>
+<li>$L$ 越大，储存相同电流所需磁场能越多</li>
+<li>与电容储能 $W_C = \frac{1}{2}CU^2$ 对比记忆</li>
+</ul>
+<h3>感抗</h3>
+<p>在交流电路中，电感对电流的阻碍作用用<strong>感抗</strong> $X_L$ 描述：</p>
+<p>$$X_L = \omega L = 2\pi f L$$</p>
+<p>$\omega$ 为角频率，$f$ 为频率。感抗单位为欧姆（Ω）。</p>
+<p><strong>"通低频阻高频"</strong>：频率越高，感抗越大，电流越小；直流（$f = 0$）时感抗为零。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：$L = 0.2$ H 的电感接在频率 $f = 50$ Hz 的交流电路中，求感抗。</p>
+<p>$$X_L = 2\pi f L = 2\pi \times 50 \times 0.2 \approx 62.8\text{ Ω}$$</p>
+<p><strong>例（储能）</strong>：$L = 0.1$ H 的线圈通有电流 $I = 4$ A，求储存的磁场能。</p>
+<p>$$W_L = \frac{1}{2}LI^2 = \frac{1}{2} \times 0.1 \times 16 = 0.8\text{ J}$$</p>
+<h3>易错点</h3>
+<ol>
+<li>自感系数 $L$ 是固有属性，不随电流变化（理想线圈）；磁化的铁磁材料可能有非线性，暂不考虑。</li>
+<li>感抗 $X_L$ 与电阻不同——电阻消耗能量，感抗<strong>不消耗能量</strong>（只是阻碍电流变化，储存/释放磁场能）。</li>
+<li>区分 $L$（自感系数，固定值）与 $\varepsilon_L = L\Delta I/\Delta t$（自感电动势，随电流变化率改变）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：电感 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/411-自感.html">自感</a></li>
+<li><a href="../atoms/377-互感.html">互感</a></li>
+<li><a href="../atoms/376-LC振荡电路.html">LC振荡电路</a></li>
+<li><a class="dead" title="未收录">振荡周期与频率</a></li>
+<li><a class="dead" title="未收录">交变电流-高中</a></li>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2017-北京-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

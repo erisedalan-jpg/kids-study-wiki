@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>完全弹性碰撞</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>完全弹性碰撞</h1><div class="review-mark" data-stem="578-完全弹性碰撞"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 完全弹性碰撞, perfectly elastic collision, 弹性碰撞</p><h1>完全弹性碰撞</h1>
+<blockquote>
+<p><strong>一句话</strong>：完全弹性碰撞是指碰撞前后系统总动能守恒的理想碰撞模型，同时满足动量守恒。
+<strong>English</strong>: A perfectly elastic collision is an idealized collision in which both momentum and kinetic energy of the system are conserved.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：<br />
+完全弹性碰撞需要同时满足两个守恒定律。设两物体质量分别为 $m_1$、$m_2$，碰前速度 $v_1$、$v_2$，碰后速度 $v_1'$、$v_2'$，则有  </p>
+<p>$$
+\begin{cases}
+m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2' \quad \text{(动量守恒)} \[4pt]
+\frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 = \frac{1}{2}m_1 {v_1'}^2 + \frac{1}{2}m_2 {v_2'}^2 \quad \text{(动能守恒)}
+\end{cases}
+$$</p>
+<p>联立可解得碰后速度的一般表达式（一维情况）：</p>
+<p>$$
+v_1' = \frac{(m_1 - m_2)v_1 + 2m_2 v_2}{m_1 + m_2}, \quad
+v_2' = \frac{(m_2 - m_1)v_2 + 2m_1 v_1}{m_1 + m_2}
+$$</p>
+<p>这一组公式是高考计算题的直接工具。由公式可推出两个重要特例：<br />
+- <strong>等质量</strong>（$m_1=m_2$）时，两球交换速度：$v_1'=v_2,\; v_2'=v_1$。<br />
+- <strong>一动一静</strong>（$v_2=0$）时，若 $m_1 = m_2$，主动球停下，被撞球以原速前进；若 $m_1 \ll m_2$，主动球以接近原速率反向弹回，大质量球几乎不动。</p>
+<p><strong>关键方法</strong>：<br />
+1. <strong>识模</strong>——看清题目是否明确“弹性碰撞”或给出碰后总动能不变的条件。<br />
+2. <strong>列式</strong>——直接写出动量守恒和动能守恒的方程；若题目要求速解，可优先使用上述推导出的速度公式。<br />
+3. <strong>检验</strong>——算完后可验算总动能是否不变，也可用恢复系数 $e=1$ 辅助验证。</p>
+<p><strong>典型应用</strong>：<br />
+- <strong>两球碰撞类</strong>：光滑水平面上两小球对心弹性碰撞，求碰后速度或分析质量大小关系。<br />
+- <strong>滑块与挡板/弹簧类</strong>：滑块撞击弹簧连接的物体，弹簧恢复原长时相当于一次完全弹性碰撞。<br />
+- <strong>撞击摆动类</strong>：子弹打木块中“子弹穿出”或“木块摆动”经常需先判定碰撞性质，再选择守恒量。</p>
+<p>高考常从“一动一静”模型切入，结合动能定理、动量定理连续设问，要求学生能灵活选用公式并区分完全弹性碰撞与非弹性碰撞的守恒差异。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆守恒条件</strong>：完全弹性碰撞必须同时满足动量守恒和动能守恒，不能只列一个方程。常见错误是误将动能守恒写出后又代入动量不守恒的情景。</li>
+<li><strong>漏判质量相等时的速度交换</strong>：等质量物体发生完全弹性碰撞后速度互换，若不能直接使用这一结论，会在多体问题中增加计算量并易出错。</li>
+<li><strong>碰后速度方向判断失误</strong>：当 $m_1 &lt; m_2$ 且 $v_2=0$ 时，$v_1'$ 为负值（反弹）；若错误代入绝对值或画错方向，后续受力分析会连锁出错。</li>
+<li><strong>误以为“黏在一起”是弹性碰撞</strong>：两物体碰后共速（完全非弹性碰撞）动能损失最大，与完全弹性碰撞的动能守恒截然相反，审题不清常导致原理用错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完全弹性碰撞</td>
+<td>perfectly elastic collision</td>
+<td>动能和动量均守恒的碰撞模型</td>
+</tr>
+<tr>
+<td>动量守恒</td>
+<td>conservation of momentum</td>
+<td>系统合外力为零时总动量不变</td>
+</tr>
+<tr>
+<td>动能守恒</td>
+<td>conservation of kinetic energy</td>
+<td>完全弹性碰撞中机械能不损失的特殊条件</td>
+</tr>
+<tr>
+<td>恢复系数</td>
+<td>coefficient of restitution</td>
+<td>用于区分碰撞类型，完全弹性碰撞时 e=1</td>
+</tr>
+<tr>
+<td>碰撞</td>
+<td>collision</td>
+<td>物体间极短时间内的相互作用过程</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理·相互作用与运动定律、动量与动量守恒（🚧 待核对具体模块）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/358-完全非弹性碰撞.html">完全非弹性碰撞</a></li>
+<li><a href="../atoms/347-动量守恒定律.html">动量守恒定律</a></li>
+<li><a href="../atoms/251-动能定理.html">动能定理</a></li>
+<li><a class="dead" title="未收录">恢复系数</a></li>
+<li><a class="dead" title="未收录">碰撞的可能性判断</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>压强</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>压强</h1><div class="review-mark" data-stem="069-压强"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八下, 第九章压强, 压强]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 压强, pressure</p><h1>压强</h1>
+<blockquote>
+<p><strong>一句话</strong>：压强是单位面积上所受到的压力，公式 $p = F/S$，单位帕斯卡（Pa）。
+<strong>English</strong>: Pressure is the force applied per unit area, p = F/S, measured in Pascals (Pa).</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>同样用力踩，光脚踩地和穿高跟鞋踩地，感受一样吗？当然不一样！高跟鞋的鞋跟面积很小，集中了很大的压力，感觉更痛——这就是<strong>压强</strong>的道理。</p>
+<p><strong>压强 = 压力 ÷ 面积</strong></p>
+<p>$$p = \frac{F}{S}$$</p>
+<ul>
+<li>$p$：压强，单位：帕斯卡（Pa），1 Pa = 1 N/m²</li>
+<li>$F$：压力，单位：N（牛顿）</li>
+<li>$S$：受力面积，单位：m²（平方米）</li>
+</ul>
+<p><strong>感受压强：</strong>
+- 同样的力（$F$ 不变），面积越小，压强越大（针尖 &gt; 手掌）
+- 同样的面积（$S$ 不变），力越大，压强越大（越重的人踩越疼）</p>
+<p><strong>生活中的压强：</strong>
+- 菜刀要磨锋利（减小面积，增大压强，更容易切菜）
+- 宽轮胎（增大面积，减小压强，不陷进沙地）
+- 雪地行走用滑雪板（增大面积，减小压强，不陷入雪中）</p>
+<p><strong>一个大气压</strong> ≈ 100,000 Pa = 10 N/cm²（相当于每平方厘米承受约 1 kg 重的力）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义与公式</h3>
+<p><strong>压强（Pressure）</strong>：物体在单位面积上受到的压力。</p>
+<p>$$p = \frac{F}{S}$$</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$p$</td>
+<td>压强</td>
+<td>Pa（帕斯卡）= N/m²</td>
+</tr>
+<tr>
+<td>$F$</td>
+<td>压力（垂直作用于表面的力）</td>
+<td>N</td>
+</tr>
+<tr>
+<td>$S$</td>
+<td>受力面积</td>
+<td>m²</td>
+</tr>
+</tbody>
+</table>
+<p><strong>帕斯卡（Pascal，Pa）</strong>：国际单位，以法国科学家布莱兹·帕斯卡命名。</p>
+<p>$$1\text{ Pa} = 1\text{ N/m}^2$$</p>
+<p>常用单位换算：
+- $1\text{ kPa} = 1000\text{ Pa}$
+- $1\text{ atm}$（标准大气压）$\approx 1.013 \times 10^5\text{ Pa}$
+- $1\text{ bar} = 10^5\text{ Pa}$</p>
+<h3>压强的三种形式</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>公式</th>
+<th>适用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固体压强</td>
+<td>$p = F/S$</td>
+<td>固体对固体的压力</td>
+</tr>
+<tr>
+<td>液体压强</td>
+<td>$p = \rho g h$</td>
+<td>液体内部任意深度</td>
+</tr>
+<tr>
+<td>气体压强</td>
+<td>用大气压计 / 气体定律计算</td>
+<td>气体</td>
+</tr>
+</tbody>
+</table>
+<h3>固体压强计算</h3>
+<p>步骤：
+1. 确定压力 $F$（垂直接触面的力）
+2. 确定受力面积 $S$（接触面积）
+3. 代入 $p = F/S$</p>
+<p><strong>注意面积单位换算：</strong>
+$1\text{ cm}^2 = 10^{-4}\text{ m}^2$，$1\text{ m}^2 = 10^4\text{ cm}^2$</p>
+<h3>典型例题</h3>
+<p><strong>例1：</strong> 一个质量为 50 kg 的人站在面积为 400 cm² 的双脚上，对地面的压强是多少？（$g = 10\text{ N/kg}$）</p>
+<p>解：$F = G = mg = 50 \times 10 = 500\text{ N}$</p>
+<p>$S = 400\text{ cm}^2 = 400 \times 10^{-4}\text{ m}^2 = 0.04\text{ m}^2$</p>
+<p>$p = F/S = 500/0.04 = 12500\text{ Pa}$</p>
+<p><strong>例2：</strong> 一块砖（长 24 cm，宽 12 cm，高 6 cm，重 30 N），平放和竖放对地面的压强各是多少？</p>
+<p>解：
+- 平放（24×12 cm²）：$S_1 = 0.24 \times 0.12 = 0.0288\text{ m}^2$，$p_1 = 30/0.0288 \approx 1042\text{ Pa}$
+- 竖放（12×6 cm²）：$S_2 = 0.12 \times 0.06 = 0.0072\text{ m}^2$，$p_2 = 30/0.0072 \approx 4167\text{ Pa}$</p>
+<p>压力不变，面积减小，压强增大。</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>面积单位必须换算为 m²</strong>：1 cm² = 10⁻⁴ m²，常见丢失 10⁻⁴ 因子导致错误。</li>
+<li><strong>压力不等于重力</strong>：斜面等情况下需重新计算压力。</li>
+<li>压强大不代表压力大（针尖压强大，但压力很小）。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育物理课程标准（2022 年版），第三学段"压强"（<strong>待家长核对页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级下册.pdf</a> 第九章（<strong>待家长核对页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/压强</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/460-受力分析.html">受力分析</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/096-液体压强.html">液体压强</a></li>
+</ul>
+<p><a class="dead" title="未收录">压力-物理</a> · <a class="dead" title="未收录">压强公式</a> · <a class="dead" title="未收录">增大减小压强</a> · <a href="../atoms/096-液体压强.html">液体压强</a> · <a href="../atoms/073-大气压强.html">大气压强</a> · <a class="dead" title="未收录">压强应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2009-全国Ⅱ-03.html">2009-全国Ⅱ-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

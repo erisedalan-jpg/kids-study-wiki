@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基本不等式求最值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>基本不等式求最值</h1><div class="review-mark" data-stem="791-基本不等式求最值"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 基本不等式求最值</p><h1>基本不等式求最值</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用基本不等式 $\frac{a+b}{2} \ge \sqrt{ab}$（$a,b&gt;0$）及其变形，在满足“一正、二定、三相等”的条件下求代数式的最值。
+<strong>English</strong>: Using the AM-GM inequality and its variants to find the maximum or minimum value of an algebraic expression under the conditions of positivity, constancy of product/sum, and equality check.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：<br />
+  基本不等式：若 $a,b&gt;0$，则 $\frac{a+b}{2} \ge \sqrt{ab}$，当且仅当 $a=b$ 时取等号。<br />
+  常见变形：$a+b \ge 2\sqrt{ab}$，$ab \le \left(\frac{a+b}{2}\right)^2$。<br />
+  推广：三元及n元均值不等式 $\frac{a_1+a_2+\cdots+a_n}{n} \ge \sqrt[n]{a_1 a_2 \cdots a_n}$（$a_i&gt;0$）。</p>
+</li>
+<li>
+<p><strong>关键方法——最值求解三步走</strong>：  </p>
+</li>
+<li><strong>正数化</strong>：确保所有用基本不等式的数（或式子）均为正数，若遇负数需先提取负号或变形。  </li>
+<li><strong>定值构造</strong>：通过配凑使和或积为定值。  <ul>
+<li>求最小值时，构造“积定”：若 $xy$ 为定值 $P$，则 $x+y \ge 2\sqrt{P}$。  </li>
+<li>求最大值时，构造“和定”：若 $x+y$ 为定值 $S$，则 $xy \le \left(\frac{S}{2}\right)^2$。<br />
+常用技巧：添项、拆项、系数配平、常值代换（如“1”的代换 $a+b=1 \implies \frac{1}{a}+\frac{1}{b}=(a+b)(\frac{1}{a}+\frac{1}{b})$）。  </li>
+</ul>
+</li>
+<li>
+<p><strong>取等验证</strong>：必须验证等号成立条件，保证自变量在定义域内能使 $a=b$ 成立，否则需调整方法。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：<br />
+  高考中常见设问：  </p>
+</li>
+<li>已知正数 $x,y$ 满足 $x+y=1$，求 $\frac{1}{x}+\frac{4}{y}$ 的最小值。  </li>
+<li>已知 $x&gt;0$，求 $y = x + \frac{k}{x}$（$k&gt;0$）的最小值。  </li>
+<li>结合二次曲线或应用题，求面积、周长或成本的最值。<br />
+<strong>解题模板</strong>：由已知条件将目标式化为积定或和定的形式，直接代入基本不等式，最后注明取等条件。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视正数条件</strong>：当变量或部分表达式可能为负时，不经变号或绝对值处理直接使用均值不等式，导致错误。  </li>
+<li><strong>等号不成立</strong>：多次使用不等式时，等号成立条件相互矛盾或自变量不在定义域内，如 $x&gt;0$ 时 $x+\frac{1}{x} \ge 2$ 在 $x=1$ 取等，若给定 $x\ge 2$，则等号取不到，需用单调性求解。  </li>
+<li><strong>非定值乱用</strong>：未配凑出定值直接套用 $a+b\ge 2\sqrt{ab}$，如 $x+\frac{2}{x+1}$，若直接对 $x$ 和 $\frac{2}{x+1}$ 使用，积非定值，正确做法是变形为 $(x+1)+\frac{2}{x+1}-1$。  </li>
+<li><strong>单纯记忆“积定和最小，和定积最大”忽略添加项的配平</strong>：在含系数或分式结构中，需要适当乘以系数或拆项以凑出定值，否则最值偏移。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本不等式 (均值不等式)</td>
+<td>AM-GM inequality (Arithmetic Mean-Geometric Mean inequality)</td>
+<td>算术平均数不小于几何平均数</td>
+</tr>
+<tr>
+<td>最值</td>
+<td>maximum / minimum value</td>
+<td>函数或代数式的最值</td>
+</tr>
+<tr>
+<td>定值</td>
+<td>constant product / constant sum</td>
+<td>积或和为固定值的前提条件</td>
+</tr>
+<tr>
+<td>一正二定三相等</td>
+<td>positivity, constancy, equality condition</td>
+<td>使用基本不等式的三个先决条件</td>
+</tr>
+<tr>
+<td>配凑法</td>
+<td>method of completing the form</td>
+<td>通过拆分项、系数调整等手段构造满足基本不等式的结构</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：🚧（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">二次函数求最值</a></li>
+<li><a class="dead" title="未收录">分式函数的值域</a></li>
+<li><a class="dead" title="未收录">不等式恒成立问题</a></li>
+<li><a class="dead" title="未收录">线性规划与最值</a></li>
+<li><a class="dead" title="未收录">对勾函数及其性质</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2024-新课标Ⅱ-08.html">2024-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

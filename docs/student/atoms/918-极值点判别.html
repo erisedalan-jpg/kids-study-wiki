@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>极值点判别</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>极值点判别</h1><div class="review-mark" data-stem="918-极值点判别"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 极值点判别</p><h1>极值点判别</h1>
+<blockquote>
+<p><strong>一句话</strong>：函数定义域内某点处的函数值比其附近点的函数值都大（或都小），且该点处导数变号，则该点为极值点。
+<strong>English</strong>: A point where a function attains a local maximum or minimum, characterized by a sign change in the first derivative.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：设函数 $y=f(x)$ 在点 $x_0$ 的某邻域内有定义，如果对于该邻域内任意 $x \neq x_0$，恒有 $f(x) &lt; f(x_0)$，则称 $f(x_0)$ 为函数的一个<strong>极大值</strong>，$x_0$ 为<strong>极大值点</strong>；若恒有 $f(x) &gt; f(x_0)$，则称 $f(x_0)$ 为<strong>极小值</strong>，$x_0$ 为<strong>极小值点</strong>。极值是局部概念，极大值未必大于极小值。</p>
+<p><strong>判定方法</strong>（导数法）：
+1.  <strong>必要条件</strong>：若 $f(x)$ 在 $x_0$ 处可导且取得极值，则 $f'(x_0)=0$。使 $f'(x)=0$ 的点称为<strong>驻点</strong>。极值点必为驻点或不可导点，反之不成立。
+2.  <strong>第一充分条件</strong>（左右导数变号）：若 $f(x)$ 在 $x_0$ 处连续，在去心邻域内可导，当 $x$ 由左至右经过 $x_0$ 时：
+    - 若 $f'(x)$ 符号由正变负，则 $f(x_0)$ 为极大值；
+    - 若 $f'(x)$ 符号由负变正，则 $f(x_0)$ 为极小值；
+    - 若 $f'(x)$ 不变号，则 $x_0$ 不是极值点。
+3.  <strong>第二充分条件</strong>（二阶导数法）：若 $f'(x_0)=0$ 且 $f''(x_0) \neq 0$，则：
+    - 当 $f''(x_0) &lt; 0$ 时，$f(x_0)$ 为极大值；
+    - 当 $f''(x_0) &gt; 0$ 时，$f(x_0)$ 为极小值。
+    注：若 $f''(x_0)=0$，此法失效，需回退至第一充分条件。</p>
+<p><strong>典型应用</strong>：
+高考中常以导数为工具，要求求解含参函数的极值、讨论极值点个数、根据极值点条件反求参数范围。例如给定 $f(x)=x^3+ax^2+bx$ 在 $x=1$ 处取得极值 $-2$，可联立 $f(1)=-2$ 且 $f'(1)=0$ 解出参数。另一重要题型是“极值点偏移”：如已知 $x_1, x_2$ 是 $f(x)$ 的两个极值点，求证 $x_1+x_2 &gt; m$ 类不等式，核心思想多为利用单调性构造对称函数。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>“导数为零”是必要不充分条件</strong>：驻点不一定是极值点，典型反例是 $f(x)=x^3$ 在 $x=0$ 处 $f'(0)=0$，但 $x=0$ 不是极值点。必须检验导数是否变号。</li>
+<li><strong>忽略不可导点</strong>：$f'(x)$ 不存在的点也可能是极值点。如 $f(x)=|x|$ 在 $x=0$ 处不可导但取得极小值。判别极值时，应将驻点与不可导点一同列为嫌疑点，进行变号检验。</li>
+<li><strong>混淆“极值点”与“最值点”</strong>：极值是局部性质，极大值可能小于极小值。求闭区间上最值时，需比较所有极值与端点值，不可默认极值即最值。</li>
+<li><strong>二阶导数法使用条件不满足时强行下结论</strong>：若 $f'(x_0)=0$ 且 $f''(x_0)=0$，二阶导数法失效，必须用一阶导数判断左右邻域内 $f'(x)$ 的符号。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>极值点</td>
+<td>Extreme Point</td>
+<td>函数局部最大或最小值点</td>
+</tr>
+<tr>
+<td>极大值</td>
+<td>Local Maximum</td>
+<td>函数在局部区域内的最大值</td>
+</tr>
+<tr>
+<td>驻点</td>
+<td>Stationary Point</td>
+<td>一阶导数为零的点</td>
+</tr>
+<tr>
+<td>极值点偏移</td>
+<td>Shifting of Extreme Points</td>
+<td>多极值点对称性偏差的证明题型</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/705-利用导数研究函数的单调性.html">导数与单调性</a></li>
+<li><a class="dead" title="未收录">函数的极值与最值</a></li>
+<li><a class="dead" title="未收录">含参函数单调性讨论</a></li>
+<li><a class="dead" title="未收录">极值点偏移</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2022-理-16.html">2022-理-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

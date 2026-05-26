@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数量积表示两个向量的夹角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数量积表示两个向量的夹角</h1><div class="review-mark" data-stem="595-数量积表示两个向量的夹角"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>&quot;&quot;</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数量积表示两个向量的夹角</p><h1>数量积表示两个向量的夹角</h1>
+<blockquote>
+<p><strong>一句话</strong>：对于两个非零向量，其夹角的余弦等于向量的数量积除以模的乘积，即 $\cos\theta = \frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}$。
+<strong>English</strong>: The angle between two non‑zero vectors can be expressed via their dot product: $\cos\theta = \frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：向量的数量积（内积）的定义为 $\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\cos\theta$，其中 $\theta\in[0,\pi]$ 是两向量的夹角。变形即得夹角公式：
+  $$
+\cos\theta = \frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}
+$$
+  当向量用坐标表示时，若 $\boldsymbol{a}=(x_1,y_1)$，$\boldsymbol{b}=(x_2,y_2)$，则 $\cos\theta = \frac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\,\sqrt{x_2^2+y_2^2}}$。该公式建立了向量运算与几何度量之间的直接联系，是高考中求解向量夹角、判断位置关系的基础工具。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：求解两向量夹角的标准化步骤：</p>
+</li>
+<li>确认两向量均为非零向量（否则夹角无定义）；</li>
+<li>计算数量积（可利用定义或坐标公式）；</li>
+<li>求两向量的模（坐标形式下用平方和开方）；</li>
+<li>代入 $\cos\theta = \frac{\boldsymbol{a}\cdot\boldsymbol{b}}{|\boldsymbol{a}||\boldsymbol{b}|}$ 得余弦值；</li>
+<li>
+<p>结合 $\theta\in[0,\pi]$ 由余弦值反推夹角。若求向量的参数，可利用夹角公式建立方程求解。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常见以下设问：</p>
+</li>
+<li>直接给出两向量的坐标，求夹角大小或余弦值；</li>
+<li>已知夹角及部分向量信息（如模长、数量积），求未知参数（如坐标分量、实数 $\lambda$）；</li>
+<li>与三角形结合，通过两边对应的向量夹角判断三角形形状（锐角/直角/钝角三角形），或求内角；</li>
+<li>求与已知向量夹角为锐角（或钝角）的向量所满足的条件，此时需处理“夹角为锐角 $\Leftrightarrow \cos\theta&gt;0$ 且排除共线同向”等细节。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略“非零向量”这一前提，导致分母为零时出错或错误地去讨论夹角；</li>
+<li>混淆数量积的符号与夹角范围：$\cos\theta&gt;0$ 得锐角（或零角），$\cos\theta=0$ 得直角，$\cos\theta&lt;0$ 得钝角，解题时易遗漏等量关系中的角取值范围；</li>
+<li>坐标运算失误：模长忘记开方，数量积将横纵坐标运算顺序写错，或在已知夹角求参数时遗漏多解讨论；</li>
+<li>在“夹角为锐角”“夹角为钝角”的条件转化中，只考虑 $\cos\theta&gt;0$ 或 $\cos\theta&lt;0$，却未剔除同向或反向共线的特殊情况（如要求锐角时须补充 $\boldsymbol{a}\cdot\boldsymbol{b}&gt;0$ 且 $\boldsymbol{a}\ne k\boldsymbol{b}\,(k&gt;0)$）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数量积 / 内积</td>
+<td>dot product / scalar product</td>
+<td>两向量乘积得标量</td>
+</tr>
+<tr>
+<td>向量夹角</td>
+<td>angle between vectors</td>
+<td>取值范围 $[0,\pi]$</td>
+</tr>
+<tr>
+<td>模（长）</td>
+<td>magnitude (length)</td>
+<td>向量的长度 $</td>
+</tr>
+<tr>
+<td>余弦定理（向量形式）</td>
+<td>cosine formula via dot product</td>
+<td>$\cos\theta=\frac{\boldsymbol{a}\cdot\boldsymbol{b}}{</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a class="dead" title="未收录">向量的坐标运算</a></li>
+<li><a href="../atoms/752-向量模长.html">向量的模</a></li>
+<li><a class="dead" title="未收录">利用向量证明垂直</a></li>
+<li><a class="dead" title="未收录">向量夹角与三角形形状判断</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-20.html">2011-理-20</a></li>
+<li><a href="../exam/数学/2016-文-09.html">2016-文-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

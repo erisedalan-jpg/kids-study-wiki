@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>螺旋测微器读数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>螺旋测微器读数</h1><div class="review-mark" data-stem="770-螺旋测微器读数"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[物理实验]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 螺旋测微器读数, 千分尺读数</p><h1>螺旋测微器读数</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用精密螺纹将微小轴向位移转化为圆周上较大的角位移，通过固定刻度与可动刻度的配合，实现对长度的精密测量，通常精度可达 0.01 mm。
+<strong>English</strong>: A method of precision length measurement using a calibrated screw mechanism, where the axial displacement is read from a fixed barrel scale and a rotating thimble scale, typically achieving 0.01 mm accuracy.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+螺旋测微器（千分尺）的核心原理是螺旋放大：精密螺纹的螺距通常为 0.5 mm，即测微螺杆随活动套筒旋转一周时，沿轴线方向前进或后退 0.5 mm。活动套筒的圆周被等分为 50 个小格，因此活动套筒每转过 1 格（即 $\frac{1}{50}$ 周），螺杆轴向移动距离为：<br />
+$$\Delta l = \frac{0.5\ \text{mm}}{50} = 0.01\ \text{mm}$$<br />
+这 0.01 mm 即为螺旋测微器的<strong>分度值</strong>（精度）。读数由两部分构成：</p>
+<ul>
+<li><strong>固定刻度</strong>：读取半毫米（0.5 mm）以上的整数倍部分，注意露出基准线上方的半毫米刻线。</li>
+<li><strong>可动刻度</strong>：读取基准线所对准的活动套筒圆周上的格数（需估读到下一位，即 0.001 mm 位）。</li>
+</ul>
+<p>最终读数公式（单位：mm）：<br />
+$$L = (\text{固定刻度整毫米数}) + (\text{半毫米刻线是否露出} \times 0.5) + (\text{可动刻度的格数} \times 0.01) + (\text{估读位} \times 0.001)$$</p>
+<p><strong>关键方法</strong><br />
+1. <strong>先读固定刻度</strong>：看清固定套筒上方的整毫米刻线和下方的半毫米刻线哪个露出基准线。若半毫米线已露出，固定刻度值加 0.5 mm。<br />
+2. <strong>后读可动刻度</strong>：找到活动套筒上与固定套筒基准线对齐的圆周刻线，读出整格数。观察是否有明显压线，若无精确对齐，则需估读一位至 0.001 mm。<br />
+3. <strong>求和与校验</strong>：按公式相加，注意是否“没过半格就多读 0.5 mm”以及“估读位”。读数结果的小数点后应有三位（例：5.515 mm 或 5.500 mm，不可省略末位的 0）。<br />
+4. <strong>零误差处理</strong>：测量前检查零点，若可动刻度零线与基准线不重合，需记下零误差 $L_0$（正或负），实际长度 $L_\text{实际} = L_\text{读数} - L_0$。</p>
+<p><strong>典型应用</strong><br />
+高考常在实验题中考查读数值，或与长度测量、体积计算、电阻率测量联合设问。<br />
+- <strong>直接读数</strong>：给出螺旋测微器示意图，要求直接读出固定刻度和可动刻度并填写正确数值。<br />
+  例：固定套筒刻度显示 6.5 mm 线露出，可动刻度第 12 格对齐且估读 0，读数为 $6.5 + 12 \times 0.01 = 6.620\ \text{mm}$（注意填写为 6.620 mm）。<br />
+- <strong>组合实验</strong>：在“测定金属的电阻率”实验中，需用螺旋测微器测量金属丝直径 $d$，然后在不同位置多次测量取平均值，代入 $S = \frac{\pi d^2}{4}$ 求截面积。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>半毫米刻线判读错误</strong>：学生经常忽略或误判半毫米刻线是否露出。判断标准是观察固定套筒上基准线的位置：若可动刻度的边缘已超过半毫米线，则固定刻度需加 0.5 mm。  </li>
+<li><strong>可动刻度估读位错位</strong>：可动刻度没有对齐整格线时，必须估读到下一位（0.001 mm）。典型错误是把 5.5 mm + 46.0 格 × 0.01 mm 写成 5.96 mm，应为 <strong>5.960 mm</strong>（保留三位小数），或忘记估读直接写 5.96 mm。  </li>
+<li><strong>单位换算引起数量级错误</strong>：螺旋测微器读数以 mm 为单位，若题目要求转换成 m 或 cm，学生常在数量级上出错（如将 0.500 mm 误转为 $5 \times 10^{-5}$ m，正确应为 $5.00 \times 10^{-4}$ m）。  </li>
+<li><strong>零误差搞错正负号</strong>：测量时若可动刻度零线在基准线下方（差几个格），零误差为正（读数偏大），最终应 <strong>减去</strong> 这个正零误差，学生经常反号。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>螺旋测微器</td>
+<td>micrometer caliper / screw gauge</td>
+<td>利用螺旋放大原理测量长度的精密仪器</td>
+</tr>
+<tr>
+<td>螺距</td>
+<td>pitch</td>
+<td>螺杆旋转一周前进的轴向距离，本题通常为 0.5 mm</td>
+</tr>
+<tr>
+<td>固定套筒</td>
+<td>barrel / sleeve</td>
+<td>刻有整毫米和半毫米刻线的静止部分</td>
+</tr>
+<tr>
+<td>可动刻度/微分筒</td>
+<td>thimble</td>
+<td>圆周上刻有 50 等分刻线的旋转部分</td>
+</tr>
+<tr>
+<td>分度值</td>
+<td>least count</td>
+<td>仪器最小刻度表示的量值，此处为 0.01 mm</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">游标卡尺读数</a></li>
+<li><a class="dead" title="未收录">测定金属的电阻率</a></li>
+<li><a class="dead" title="未收录">有效数字与误差</a></li>
+<li><a class="dead" title="未收录">长度与时间的测量</a></li>
+<li><a class="dead" title="未收录">常用物理仪器的分度值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2012-北京-09</a></li>
+<li><a href="../exam/物理/2012-新课标-09.html">2012-新课标-09</a></li>
+<li><a href="../exam/物理/2023-新课标-10.html">2023-新课标-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>液体压强</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>液体压强</h1><div class="review-mark" data-stem="096-液体压强"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八下, 第九章压强, 液体压强]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 液体压强, liquid pressure, fluid pressure</p><h1>液体压强</h1>
+<blockquote>
+<p><strong>一句话</strong>：液体在重力作用下，内部任意一点所受压强 $p = \rho g h$，只与液体密度和深度有关。
+<strong>English</strong>: Liquid pressure at any point equals p = ρgh, depending only on liquid density and depth.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>潜水员越往深处潜，身体受到的水压越大——这就是<strong>液体压强</strong>的规律。</p>
+<p><strong>液体压强的特点：</strong>
+1. <strong>越深压强越大</strong>：水下 10 m 比 5 m 压强大
+2. <strong>同一深度，各方向压强相等</strong>：液体向四面八方都有压力
+3. <strong>压强只与深度和密度有关</strong>：与容器形状、液体总量无关
+4. <strong>密度越大，同样深度压强越大</strong>：盐水比淡水压强大</p>
+<p><strong>公式：</strong>
+$$p = \rho g h$$</p>
+<ul>
+<li>$\rho$：液体密度（kg/m³），水的密度 = 1000 kg/m³</li>
+<li>$g = 10\text{ N/kg}$</li>
+<li>$h$：深度（m），从液面到该点的距离</li>
+</ul>
+<p><strong>例子：</strong>
+- 水下 3 m 处水压：$p = 1000 \times 10 \times 3 = 30000\text{ Pa}$</p>
+<p><strong>生活应用：</strong>
+- 水坝下部修得比上部厚（底部水压大，需要更坚固）
+- 水塔越高，水压越大（家里水流更有力）
+- 深海鱼与浅海鱼（适应不同水压）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>公式推导</h3>
+<p>在密度为 $\rho$ 的静止液体中，深度 $h$ 处取面积为 $S$ 的水平截面，其上方液柱：</p>
+<p>$$p = \frac{F}{S} = \frac{G}{S} = \frac{\rho V g}{S} = \frac{\rho S h g}{S} = \rho g h$$</p>
+<h3>液体压强的规律</h3>
+<table>
+<thead>
+<tr>
+<th>规律</th>
+<th>说明</th>
+<th>证明/实验</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与深度成正比</td>
+<td>$h$ 越大，$p$ 越大</td>
+<td>U 形管压强计，改变深度</td>
+</tr>
+<tr>
+<td>与密度成正比</td>
+<td>$\rho$ 越大，$p$ 越大</td>
+<td>换用盐水，压强增大</td>
+</tr>
+<tr>
+<td>各向同性</td>
+<td>同一点四面八方压强相等</td>
+<td>不同方向的小孔出水流量相同</td>
+</tr>
+<tr>
+<td>与容器形状无关</td>
+<td>只由 $h$ 和 $\rho$ 决定</td>
+<td>大肚瓶与细瓶同深度，压强相同</td>
+</tr>
+</tbody>
+</table>
+<h3>液体对侧面的压力</h3>
+<p>液体对容器侧壁有压力，该压力随深度增大而增大：</p>
+<ul>
+<li>侧面某处压强：$p = \rho g h$（$h$ 为该处深度）</li>
+<li>侧面所受总压力需积分：$F = \int_0^H \rho g h \cdot L \, dh = \frac{1}{2}\rho g H^2 L$</li>
+</ul>
+<p>（初中阶段通常只计算底部压力或某点压强）</p>
+<h3>连通器原理</h3>
+<p>见 <a class="dead" title="未收录">连通器</a>：同种液体静止时，各管液面等高（依据 $p = \rho g h$，同深度压强相等）。</p>
+<h3>典型例题</h3>
+<p><strong>例1：</strong> 某水库水深 20 m，坝底受到的水压是多少？（$\rho_{水} = 1000\text{ kg/m}^3$）</p>
+<p>解：$p = \rho g h = 1000 \times 10 \times 20 = 200000\text{ Pa} = 2 \times 10^5\text{ Pa}$</p>
+<p><strong>例2：</strong> 一个装满水的长方体容器（底面积 $S = 0.5\text{ m}^2$，高 $h = 0.4\text{ m}$），底部受到的水的压力是多少？</p>
+<p>解：底部压强：$p = \rho g h = 1000 \times 10 \times 0.4 = 4000\text{ Pa}$</p>
+<p>底部压力：$F = pS = 4000 \times 0.5 = 2000\text{ N}$</p>
+<p>验证：水的重力 $G = \rho Vg = 1000 \times (0.5 \times 0.4) \times 10 = 2000\text{ N}$（水平底面时，压力等于重力）。</p>
+<p><strong>例3：</strong> 水（$\rho = 1000\text{ kg/m}^3$）与盐水（$\rho = 1200\text{ kg/m}^3$），同样深 2 m 处，压强各是多少？</p>
+<p>解：
+- 水：$p_1 = 1000 \times 10 \times 2 = 20000\text{ Pa}$
+- 盐水：$p_2 = 1200 \times 10 \times 2 = 24000\text{ Pa}$</p>
+<p>盐水压强更大（密度更大）。</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>液体压强只与深度和密度有关</strong>，与容器形状、液体体积无关。</li>
+<li><strong>$h$ 是深度</strong>（从液面算起），不是容器高度。</li>
+<li>液体对底部的压力不一定等于液体重力（容器形状不规则时不等）；只有底面水平且为平底时才等于重力。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育物理课程标准（2022 年版），第三学段"压强"（<strong>待家长核对页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级下册.pdf</a> 第九章（<strong>待家长核对页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/压强</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/069-压强.html">压强</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/073-大气压强.html">大气压强</a></li>
+</ul>
+<p><a href="../atoms/069-压强.html">压强</a> · <a class="dead" title="未收录">压强公式</a> · <a class="dead" title="未收录">连通器</a> · <a href="../atoms/073-大气压强.html">大气压强</a> · <a href="../atoms/092-浮力.html">浮力</a> · <a class="dead" title="未收录">流体压强与流速关系</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2016-新课标Ⅰ-14</a></li>
+<li><a class="dead" title="未收录">2024-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列的应用</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列的应用</h1><div class="review-mark" data-stem="459-数列的应用"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第八章数列拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列的应用, applications of sequences, 数列实际应用</p><h2>🎓 数列的应用</h2>
+<h3>主要应用领域</h3>
+<ol>
+<li><strong>金融复利</strong>：等比数列建模</li>
+<li><strong>人口增长</strong>：等比数列或 Logistic 增长（了解）</li>
+<li><strong>物理运动</strong>：等差数列（匀变速），等比数列（衰减振动）</li>
+<li><strong>数字信号</strong>：离散时间序列</li>
+<li><strong>计算机算法</strong>：递推数列（Fibonacci、排序等）</li>
+</ol>
+<h3>等差数列应用</h3>
+<p><strong>匀变速运动</strong>：初速 $v_0$，加速度 $a$，第 $n$ 秒内的位移：</p>
+<p>$d_n=v_0+(n-1)\cdot\dfrac{a}{1}$（类等差，公差 $a$）</p>
+<p>总位移 $S=\sum_{k=1}^n d_k=nv_0+\dfrac{n(n-1)}{2}a$（等差求和）</p>
+<h3>等比数列应用</h3>
+<p><strong>复利计算</strong>：本金 $P$，年利率 $r$，$n$ 年后本利和：</p>
+<p>$$A_n = P(1+r)^n$$</p>
+<p>这是公比 $q=1+r$ 的等比数列（$A_n$ 随 $n$ 指数增长）。</p>
+<p><strong>等额贷款还款</strong>：每月还款额 $M$，贷款额 $P$，月利率 $r$，还款 $n$ 期：</p>
+<p>$$M = \frac{Pr(1+r)^n}{(1+r)^n-1}$$</p>
+<p>（由等比级数公式推导，高中了解即可）</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>（复利）某人存款 $10000$ 元，年利率 $5\%$，按复利计算，$10$ 年后本利和是多少？</p>
+<p>$A_{10}=10000\times(1.05)^{10}\approx 10000\times 1.6289=16289$ 元</p>
+<p><strong>例 2</strong>（分期付款）以月利率 $1\%$ 贷款 $120000$ 元，分 $12$ 期等额还款，每期还多少？</p>
+<p>$M=\dfrac{120000\times 0.01\times(1.01)^{12}}{(1.01)^{12}-1}=\dfrac{1200\times 1.1268}{0.1268}\approx 10645$ 元</p>
+<p><strong>例 3</strong>（人口模型）某地人口每年增长 $2\%$，现有 $100$ 万人，何时超过 $150$ 万？</p>
+<p>$100\times(1.02)^n&gt;150$，$(1.02)^n&gt;1.5$，两边取对数：</p>
+<p>$n\ln(1.02)&gt;\ln 1.5$，$n&gt;\dfrac{\ln 1.5}{\ln 1.02}=\dfrac{0.405}{0.0198}\approx 20.5$</p>
+<p>约 $21$ 年后超过 $150$ 万。</p>
+<p><strong>例 4</strong>（弹跳高度）球从 $H$ 高处落下，每次弹起高度为前次的 $\dfrac{2}{3}$，求第 $n$ 次弹起高度及总路程。</p>
+<p>第 $n$ 次弹起高度：$h_n=H\cdot\left(\dfrac{2}{3}\right)^n$</p>
+<p>总路程（含下落）：$S=H+2H\cdot\dfrac{2/3}{1-2/3}=H+4H=5H$（无穷等比级数）</p>
+<p><strong>例 5</strong>（Fibonacci 数列）$F_1=1,F_2=1,F_{n+2}=F_n+F_{n-1}$，应用于自然界中的螺旋排列、算法分析中的复杂度估计，黄金比例 $\phi=\lim_{n\to\infty}\dfrac{F_{n+1}}{F_n}=\dfrac{1+\sqrt{5}}{2}$。</p>
+<h3>对数判断增速</h3>
+<p>数列 $a_n=n^2$ 和 $b_n=2^n$，哪个增长更快？</p>
+<p>$\dfrac{b_n}{a_n}=\dfrac{2^n}{n^2}\to+\infty$（指数远快于多项式）</p>
+<p>用对数比较：$\log_2(2^n)=n$，$\log_2(n^2)=2\log_2 n$；$n$ 远大于 $2\log_2 n$，故 $2^n$ 增长快得多。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第八章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/数列</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">数列与函数</a> · <a href="../atoms/455-数列单调性.html">数列单调性</a> · <a href="../atoms/457-数列极限-初步.html">数列极限-初步</a> · <a href="../atoms/415-Sn与an关系.html">Sn与an关系</a> · <a class="dead" title="未收录">数列求和综合</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a href="../atoms/453-数列不等式证明.html">数列不等式证明</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-20.html">2011-理-20</a></li>
+<li><a href="../exam/数学/2017-理-20.html">2017-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

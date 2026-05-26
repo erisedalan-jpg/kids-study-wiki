@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子加速</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>带电粒子加速</h1><div class="review-mark" data-stem="594-带电粒子加速"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 带电粒子加速, Acceleration of charged particles</p><h1>带电粒子加速</h1>
+<blockquote>
+<p><strong>一句话</strong>：带电粒子在电场力作用下动能增加的过程，核心关系为电场力做功等于动能增量，即 $qU = \Delta E_k$。
+<strong>English</strong>: The process in which a charged particle gains kinetic energy due to work done by an electric field, governed by $qU = \Delta E_k$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+带电粒子加速指带电粒子在电场中受电场力作用而获得速度的过程。忽略重力时，电场力做功 $W = qU$（$U$ 为加速电压），根据动能定理：<br />
+$$
+qU = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2
+$$<br />
+若粒子从静止开始加速，$v_0 = 0$，则末速度 $v = \sqrt{\frac{2qU}{m}}$。该关系与电场是否匀强无关，是高考中处理加速问题的首要依据。<br />
+在回旋加速器中，粒子在 D 形盒缝隙处被电场反复加速，而磁场仅改变方向。最大速度由 D 形盒半径 $R$ 决定：由 $qvB = m\frac{v^2}{R}$ 得 $v_{\text{max}} = \frac{qBR}{m}$，最大动能 $E_{\text{km}} = \frac{(qBR)^2}{2m}$，与加速电压大小无关，但电压高低影响加速次数和总时间。</p>
+<p><strong>关键方法</strong><br />
+先明确粒子初速度与电场方向的夹角——若夹角为 0° 或 180°，做直线加速；有垂直于场强的初速度时，则加速结合偏转。直线加速场景优先选用动能定理（尤其适用于非匀强电场或仅知电势差的情形），匀强电场亦可选用牛顿第二定律与运动学公式。对于回旋加速器，关键把握交变电压周期 $T = \frac{2\pi m}{qB}$ 与速度无关，以及最大动能仅由 $R$ 和 $B$ 控制。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：给定加速电压和粒子比荷，求加速后速度；结合偏转电场或磁场，通过测偏转量反推比荷（质谱仪原理）；考查回旋加速器中最大动能的影响因素、交变电压频率的计算等。解题时需准确区分哪段是加速过程、哪段是偏转过程，并正确选用动能定理或圆周运动规律。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>误认为回旋加速器中粒子的最大动能由加速电压决定，实则受 D 形盒半径和磁感应强度限制，电压仅影响加速次数。</li>
+<li>对带负电的粒子（如电子）加速时，未注意电场力方向与电场方向相反，代公式时随意丢掉电荷符号或错误判断做功正负。</li>
+<li>在非匀强电场中盲目使用匀变速直线运动公式，正确做法是应用动能定理 $qU = \Delta E_k$。</li>
+<li>忽略粒子初速度，直接套用 $v = \sqrt{2qU/m}$，当 $v_0 \neq 0$ 时应使用完整的动能定理表达式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>带电粒子</td>
+<td>charged particle</td>
+<td>具有净电荷的微观粒子，如电子、质子、离子</td>
+</tr>
+<tr>
+<td>加速电压</td>
+<td>accelerating voltage</td>
+<td>使带电粒子动能增加的电势差 $U$</td>
+</tr>
+<tr>
+<td>动能定理</td>
+<td>work-energy theorem</td>
+<td>合外力做功等于动能的变化，此处表现为 $qU = \Delta E_k$</td>
+</tr>
+<tr>
+<td>回旋加速器</td>
+<td>cyclotron</td>
+<td>利用电场加速、磁场偏转实现多次加速的装置</td>
+</tr>
+<tr>
+<td>比荷</td>
+<td>specific charge</td>
+<td>带电粒子的电荷量与质量之比 $q/m$，决定加速和偏转特性</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中的偏转</a></li>
+<li><a href="../atoms/595-带电粒子在匀强磁场中的运动.html">带电粒子在匀强磁场中的运动</a></li>
+<li><a class="dead" title="未收录">质谱仪</a></li>
+<li><a class="dead" title="未收录">回旋加速器</a></li>
+<li><a class="dead" title="未收录">动能定理在电场中的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-04.html">2020-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

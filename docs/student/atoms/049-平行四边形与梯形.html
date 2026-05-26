@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行四边形与梯形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平行四边形与梯形</h1><div class="review-mark" data-stem="049-平行四边形与梯形"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 四边形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平行四边形与梯形, parallelogram trapezoid, 平行四边形, 梯形, 四边形分类</p><h1>平行四边形与梯形</h1>
+<blockquote>
+<p><strong>一句话</strong>：平行四边形是两组对边都平行的四边形；梯形只有一组对边平行——它们都是四边形大家族里的重要成员。
+<strong>English</strong>: A parallelogram has two pairs of parallel sides; a trapezoid has exactly one pair of parallel sides.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>四边形家族</h3>
+<p>四边形（quadrilateral）是有 4 条边、4 个角的平面图形。四边形大家族有不同成员：</p>
+<pre><code>            四边形
+           /       \
+      梯形          平行四边形
+   (一组平行)      (两组对边平行)
+                  /      |      \
+              长方形   菱形    正方形
+           (等角)   (等边)  (等角+等边)
+</code></pre>
+<h3>平行四边形（Parallelogram）</h3>
+<p><strong>定义：</strong> 两组对边分别平行的四边形。</p>
+<p><strong>特征（必背）：</strong>
+- 两组<strong>对边平行</strong>且<strong>相等</strong>（AB ∥ CD，AB = CD；AD ∥ BC，AD = BC）
+- 两组<strong>对角相等</strong>（∠A = ∠C，∠B = ∠D）
+- 对角线<strong>互相平分</strong>（两条对角线的交点把各自平分）</p>
+<p><strong>易变形性：</strong> 平行四边形不像长方形那样"稳固"——推一推就会歪斜，这叫<strong>易稳定形变</strong>，工程上常用铰链连接来固定（或利用这个特性做折叠桌椅）。</p>
+<p><strong>面积公式：</strong> 平行四边形面积 = <strong>底 × 高</strong>（底是任意一条边，高是它到对边的垂直距离）</p>
+<blockquote>
+<p>例：底 = 6 cm，高 = 4 cm → 面积 = 6 × 4 = <strong>24 cm²</strong></p>
+</blockquote>
+<p><strong>为什么是底×高？</strong> 把平行四边形"切一刀"，把左边的三角形移到右边，拼成一个长方形——长方形面积 = 长 × 宽 = 底 × 高。</p>
+<h3>梯形（Trapezoid / Trapezium）</h3>
+<p><strong>定义：</strong> <strong>只有一组</strong>对边平行的四边形。</p>
+<ul>
+<li>平行的那两条边叫<strong>上底（upper base）</strong>和<strong>下底（lower base）</strong></li>
+<li>不平行的两条边叫<strong>腰（leg）</strong></li>
+<li>高（height）是上底与下底之间的垂直距离</li>
+</ul>
+<p><strong>分类：</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通梯形</td>
+<td>两腰不等长</td>
+<td>最一般的梯形</td>
+</tr>
+<tr>
+<td>直角梯形（right trapezoid）</td>
+<td>一条腰垂直于底</td>
+<td>有一个直角</td>
+</tr>
+<tr>
+<td>等腰梯形（isosceles trapezoid）</td>
+<td>两腰等长</td>
+<td>关于中线对称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>面积公式：</strong> 梯形面积 = <strong>(上底 + 下底) × 高 ÷ 2</strong></p>
+<blockquote>
+<p>例：上底 3 cm，下底 7 cm，高 4 cm → 面积 = (3 + 7) × 4 ÷ 2 = 10 × 4 ÷ 2 = <strong>20 cm²</strong></p>
+</blockquote>
+<p><strong>为什么这个公式？</strong> 把梯形复制一份，旋转 180° 拼在一起，拼成一个平行四边形，面积是 (上底 + 下底) × 高，所以一个梯形面积就是一半。</p>
+<h3>四边形分类总结</h3>
+<table>
+<thead>
+<tr>
+<th>四边形</th>
+<th>平行对数</th>
+<th>等边</th>
+<th>等角</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通四边形</td>
+<td>0</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>梯形</td>
+<td>1组</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>平行四边形</td>
+<td>2组</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>长方形（矩形）</td>
+<td>2组</td>
+<td>否</td>
+<td>是（4个直角）</td>
+</tr>
+<tr>
+<td>菱形</td>
+<td>2组</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>正方形</td>
+<td>2组</td>
+<td>是</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关系：正方形 ⊂ 菱形（有时），正方形 ⊂ 长方形，长方形 ⊂ 平行四边形，菱形 ⊂ 平行四边形，平行四边形 ⊂ 四边形</strong></p>
+<p>（注：正方形既是长方形，也是菱形！）</p>
+<h3>生活中的例子</h3>
+<p><strong>平行四边形：</strong>
+- 可折叠晾衣架（折叠变形利用平行四边形）
+- 旗帜的斜纹图案
+- 桥梁结构中的斜撑</p>
+<p><strong>梯形：</strong>
+- 滑梯的侧面
+- 梯田（从侧面看的横截面）
+- 中国斗拱建筑中的结构件
+- 公路路基的横截面</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>平行四边形与向量加法</h3>
+<p>平行四边形有一个漂亮的物理/数学应用——<strong>向量加法的平行四边形法则（Parallelogram Law）</strong>：</p>
+<blockquote>
+<p>两个向量 $\vec{a}$ 和 $\vec{b}$ 从同一点出发，以它们为两条边构成的平行四边形，<strong>对角线</strong>就是 $\vec{a} + \vec{b}$。</p>
+</blockquote>
+<p>这是高中物理（合力）和高中数学（平面向量）的核心工具。</p>
+<p>$$|\vec{a} + \vec{b}|^2 = |\vec{a}|^2 + 2\vec{a}\cdot\vec{b} + |\vec{b}|^2$$</p>
+<h3>平行四边形的对角线性质</h3>
+<p>平行四边形对角线互相平分，可以推出一个有趣性质：</p>
+<p>$$AC^2 + BD^2 = 2(AB^2 + BC^2)$$（对角线长度与边长的关系）</p>
+<p>这在向量证明中一步完成：设 $\vec{AB} = \vec{a}$，$\vec{AD} = \vec{b}$，则 $\vec{AC} = \vec{a} + \vec{b}$，$\vec{BD} = \vec{b} - \vec{a}$，立刻得证。</p>
+<h3>等积变形</h3>
+<p>由于平行四边形面积 = 底 × 高，<strong>同底等高的平行四边形面积相等</strong>——这是"等积变形"的基础，用于简化面积计算和证明。类似地，<strong>同底等高的三角形面积相等</strong>，两者面积相差一半。</p>
+<h3>射影几何中的梯形</h3>
+<p>在射影几何（projective geometry）中，平行线"在无穷远处相交"，梯形（一组平行，另一组不平行）可以看作退化的平行四边形——两条平行边的交点移到了无穷远处。射影变换会把梯形变成一般四边形，消除了"平行"的特殊性，体现了射影几何比欧氏几何更广泛的统一性。</p>
+<h3>辛普森公式与梯形面积</h3>
+<p>数值积分中，梯形面积公式 $\frac{(f(a)+f(b))}{2} \cdot (b-a)$ 就是<strong>梯形法则（Trapezoidal Rule）</strong>——用梯形面积近似曲线下面积，是数值计算中估计定积分的基础方法之一。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行四边形</td>
+<td>parallelogram</td>
+<td>n.</td>
+<td>两组对边平行</td>
+</tr>
+<tr>
+<td>梯形</td>
+<td>trapezoid (美) / trapezium (英)</td>
+<td>n.</td>
+<td>一组对边平行</td>
+</tr>
+<tr>
+<td>上底</td>
+<td>upper base</td>
+<td>n.</td>
+<td>梯形较短的平行边</td>
+</tr>
+<tr>
+<td>下底</td>
+<td>lower base</td>
+<td>n.</td>
+<td>梯形较长的平行边</td>
+</tr>
+<tr>
+<td>腰</td>
+<td>leg</td>
+<td>n.</td>
+<td>梯形不平行的两边</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height</td>
+<td>n.</td>
+<td>两底之间的垂直距离</td>
+</tr>
+<tr>
+<td>对角线</td>
+<td>diagonal</td>
+<td>n.</td>
+<td>连接对顶点的线段</td>
+</tr>
+<tr>
+<td>等腰梯形</td>
+<td>isosceles trapezoid</td>
+<td>n.</td>
+<td>两腰相等的梯形</td>
+</tr>
+<tr>
+<td>四边形</td>
+<td>quadrilateral</td>
+<td>n.</td>
+<td>有四条边的多边形</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行四边形有两组对边平行。</td>
+<td>A parallelogram has two pairs of parallel sides.</td>
+</tr>
+<tr>
+<td>梯形只有一组对边平行。</td>
+<td>A trapezoid has exactly one pair of parallel sides.</td>
+</tr>
+<tr>
+<td>正方形是特殊的平行四边形。</td>
+<td>A square is a special parallelogram.</td>
+</tr>
+<tr>
+<td>梯形面积等于上底加下底乘以高再除以二。</td>
+<td>The area of a trapezoid equals the sum of the bases times the height divided by two.</td>
+</tr>
+<tr>
+<td>平行四边形的对角线互相平分。</td>
+<td>The diagonals of a parallelogram bisect each other.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 四边形分类主题绘本请家长在书店挑选，推荐含图形变形动画或实物对比的科普绘本。适龄：7-10 岁。</li>
+<li>🚧 英文推荐关键词："quadrilaterals shapes for kids"。（<strong>具体书名待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"平行四边形推一推就歪了，怎么知道它还是平行四边形？"</strong> → 可以说："即使歪了，两组对边还是平行的！平行四边形的定义只看'对边平行'，不管形状有多歪。这和长方形不一样——长方形要求角必须是直角，一歪角就不是直角了，就不再是长方形了，但还是平行四边形。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"长方形算不算平行四边形？"</strong> → 可以说："算！长方形有两组对边平行，满足平行四边形的条件，所以长方形是特殊的平行四边形——特殊在每个角都是直角。就像正方形是特殊的长方形，长方形是特殊的平行四边形，一层一层更特殊。"</p>
+</li>
+<li>
+<p><strong>共读小活动 1：</strong> 用四根吸管和细线做一个平行四边形——两根长的对边，两根短的对边，穿在一起。推一推，观察它的变形，感受"易变形性"。再对比用同样方法做的三角形——三角形不容易推歪，这就是"三角形的稳定性"。</p>
+</li>
+<li>
+<p><strong>共读小活动 2：</strong> 在方格纸上画一个梯形（上底 2 格，下底 4 格，高 3 格），用"数方格"的方法估算面积，再用公式算对比——验证 (2+4)×3÷2 = 9 个格。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学四年级上册.pdf</a> 第 5 单元《平行四边形和梯形》(p56-70)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第二学段"图形与几何"图形的性质（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/平行四边形；https://zh.wikipedia.org/wiki/梯形</li>
+<li><strong>拓展阅读</strong>：向量平行四边形法则（高中数学）；梯形法则数值积分（大学数值分析）；射影几何中的平行概念</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/048-平行与垂直.html">平行与垂直</a> <a href="../atoms/192-勾股数.html">勾股数</a></li>
+<li><strong>延伸</strong>：<a class="dead" title="未收录">多边形面积</a> <a href="../atoms/195-平行四边形定义性质.html">平行四边形定义性质</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-文-14.html">2011-文-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

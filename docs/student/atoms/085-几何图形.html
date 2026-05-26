@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何图形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>几何图形</h1><div class="review-mark" data-stem="085-几何图形"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七上, 几何初步]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 几何图形, geometric figure, 几何形状</p><h2>课本一句话定义</h2>
+<p>从现实世界中抽象出来的各种<strong>图形</strong>（点、线、面、体）统称为<strong>几何图形</strong>；几何图形分为<strong>立体图形</strong>（占有一定空间）和<strong>平面图形</strong>（各部分在同一平面内）。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>生活中到处都有几何图形：
+- 足球是<strong>球体</strong>（立体图形）
+- 课本的封面是<strong>长方形</strong>（平面图形）
+- 牛奶盒是<strong>长方体</strong>（立体图形）
+- 硬币是<strong>圆形</strong>（平面图形）</p>
+<p>几何图形分两大类：
+- <strong>立体图形</strong>：有"厚度"，占空间（正方体、球、圆柱……）
+- <strong>平面图形</strong>："平的"，在纸上画的（三角形、圆形、正方形……）</p>
+<p><strong>几何</strong>这门学问，就是研究这些图形的形状、大小和位置关系的数学分支。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>几何图形的分类</h3>
+<pre><code>几何图形
+├── 立体图形（三维）
+│   ├── 多面体（面都是平面）
+│   │   ├── 棱柱（三棱柱、四棱柱=长方体/正方体……）
+│   │   ├── 棱锥（三棱锥=四面体、四棱锥……）
+│   │   └── 棱台
+│   └── 旋转体（曲面）
+│       ├── 圆柱
+│       ├── 圆锥
+│       └── 球
+└── 平面图形（二维）
+    ├── 直线形（三角形、多边形……）
+    └── 曲线形（圆、椭圆……）
+</code></pre>
+<h3>几何基本元素</h3>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>描述</th>
+<th>维度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>点（point）</td>
+<td>无大小，只有位置</td>
+<td>0 维</td>
+</tr>
+<tr>
+<td>线（line）</td>
+<td>无宽度，只有长度（和方向）</td>
+<td>1 维</td>
+</tr>
+<tr>
+<td>面（surface/plane）</td>
+<td>无厚度，只有面积</td>
+<td>2 维</td>
+</tr>
+<tr>
+<td>体（solid）</td>
+<td>有长、宽、高，占空间</td>
+<td>3 维</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点动成线，线动成面，面动成体</strong>——维度的递推规律。</p>
+<h3>立体图形的展开（平面展开图）</h3>
+<p>立体图形可以沿棱剪开展平为<strong>展开图</strong>（net）：
+- 正方体展开图有 11 种
+- 圆柱展开图 = 两个圆 + 一个长方形
+- 圆锥展开图 = 一个圆 + 一个扇形</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：列举身边 3 种立体图形和 3 种平面图形。</p>
+<p><strong>解</strong>：立体：饮料罐（圆柱）、金字塔形纪念品（四棱锥）、排球（球体）；平面：硬币正面（圆）、地图（平面图）、书封面（长方形）。</p>
+<p><strong>例 2</strong>：下列图形中，哪些是平面图形？圆柱、三角形、球、正方形、圆锥。</p>
+<p><strong>解</strong>：三角形、正方形是平面图形；圆柱、球、圆锥是立体图形。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>圆是平面图形，球是立体图形</strong>：圆（circle）在平面内；球（sphere）占三维空间。</li>
+<li><strong>平面图形是截面图或展开图</strong>：圆柱的截面是圆（平面图形）。</li>
+<li><strong>几何是抽象的</strong>：几何中的点没有大小，线没有宽度，与实物不同。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：小学平面图形（三角形、圆形、长方形等）</li>
+<li>后续：立体图形（各部分定义）→ 点线面体 → 线段射线直线 → 角</li>
+<li>高中拓展：空间几何（立体几何）、解析几何（坐标法）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>几何图形</td>
+<td>geometric figure</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>立体图形</td>
+<td>solid (3D figure)</td>
+<td>三维图形</td>
+</tr>
+<tr>
+<td>平面图形</td>
+<td>plane figure (2D)</td>
+<td>二维图形</td>
+</tr>
+<tr>
+<td>展开图</td>
+<td>net</td>
+<td>立体图形展平</td>
+</tr>
+<tr>
+<td>多面体</td>
+<td>polyhedron</td>
+<td>面都是平面的立体</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>几何图形分为立体图形和平面图形。</td>
+<td>Geometric figures are classified into solid figures and plane figures.</td>
+</tr>
+<tr>
+<td>正方体是一种立体图形。</td>
+<td>A cube is a type of solid figure.</td>
+</tr>
+<tr>
+<td>圆是平面图形，球是立体图形。</td>
+<td>A circle is a plane figure, while a sphere is a solid figure.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"图形与几何"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第四章第 1 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Geometric figure</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，分类与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/091-应用题（行程工程利润）.html">应用题（行程工程利润）</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/103-点线面体.html">点线面体</a></p>
+</li>
+<li>
+<p><a href="../atoms/107-立体图形.html">立体图形</a></p>
+</li>
+<li><a href="../atoms/103-点线面体.html">点线面体</a></li>
+<li><a href="../atoms/028-线段.html">线段</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+<li><a class="dead" title="未收录">三角形</a></li>
+<li><a class="dead" title="未收录">圆</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>感应电动势</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>感应电动势</h1><div class="review-mark" data-stem="387-感应电动势"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 感应电动势, induced electromotive force, induced EMF</p><h2>🎓 感应电动势（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>感应电动势</strong>（induced EMF）是电磁感应中，由于磁通量变化在回路中产生的<strong>非静电力</strong>做功能力的量度，符号为 $\varepsilon$，单位为伏特（V）。</p>
+<p>感应电动势是"电源"的本质，是将其他形式的能量（机械能、化学能等）转化为电能的"推动力"。</p>
+<h3>两种产生情形</h3>
+<h4>情形一：变化磁场（感生电动势）</h4>
+<p>穿过固定回路的磁通量随时间变化时产生：</p>
+<p>$$\varepsilon = -\frac{\Delta\Phi}{\Delta t} = -N\frac{\Delta\Phi}{\Delta t}$$（$N$ 匝线圈）</p>
+<h4>情形二：导体运动切割磁感线（动生电动势）</h4>
+<p>导体以速度 $v$ 切割磁感线时：</p>
+<p>$$\varepsilon = BLv\sin\alpha$$</p>
+<p>其中 $\alpha$ 为导体速度与磁场方向的夹角，$L$ 为有效切割长度。</p>
+<p>当 $v \perp B$ 且 $v \perp L$ 时：</p>
+<p>$$\varepsilon = BLv$$</p>
+<h3>感应电动势与感应电流的关系</h3>
+<p>闭合回路（总电阻 $R$）中感应电流：</p>
+<p>$$I = \frac{\varepsilon}{R} = \frac{BLv}{R}$$</p>
+<p>若回路分为内阻 $r$ 和外电阻 $R_{\text{外}}$：</p>
+<p>$$I = \frac{\varepsilon}{R_{\text{外}} + r}, \quad U_{\text{外}} = \varepsilon - Ir$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（切割法）</strong>：一根长 $L = 0.5$ m 的导体棒在磁感应强度 $B = 0.4$ T 的匀强磁场中，以 $v = 3$ m/s 的速度垂直切割磁感线（$v \perp B$，$v \perp L$），求感应电动势。</p>
+<p>$$\varepsilon = BLv = 0.4 \times 0.5 \times 3 = 0.6\text{ V}$$</p>
+<p><strong>例2（通量变化法）</strong>：线圈匝数 $N = 100$，面积 $S = 0.02$ m²，磁场在 $\Delta t = 0.5$ s 内从 $B_1 = 0.1$ T 增大到 $B_2 = 0.3$ T（方向垂直线圈平面），求感应电动势。</p>
+<p>$$\Delta\Phi = (B_2 - B_1)S = 0.2 \times 0.02 = 4\times10^{-3}\text{ Wb}$$
+$$\varepsilon = N\frac{\Delta\Phi}{\Delta t} = 100 \times \frac{4\times10^{-3}}{0.5} = 0.8\text{ V}$$</p>
+<h3>感应电动势的微观理解</h3>
+<p>动生电动势：导体棒运动时，其中自由电子随棒运动，受洛伦兹力作用向一端积累，形成电位差（电动势）。洛伦兹力在此充当"非静电力"的角色。</p>
+<p>感生电动势：变化的磁场产生感应电场，感应电场对电荷做功，形成电动势（麦克斯韦电磁理论的预言）。</p>
+<h3>易错点</h3>
+<ol>
+<li>回路<strong>开路</strong>时，感应电动势仍然存在，但感应电流为零。</li>
+<li>$\varepsilon = BLv$ 中的 $L$ 是导体<strong>有效长度</strong>（垂直于 $v$ 和 $B$ 的分量），弯曲导体需投影。</li>
+<li>多匝线圈的电动势是 $N\frac{\Delta\Phi}{\Delta t}$，不要漏掉匝数 $N$。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：电动势 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/408-电磁波谱.html">电磁波谱</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/175-电磁感应.html">电磁感应</a></p>
+</li>
+<li>
+<p><a href="../atoms/395-法拉第电磁感应定律.html">法拉第电磁感应定律</a></p>
+</li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">导线切割磁感线</a></li>
+<li><a class="dead" title="未收录">感应电动势计算</a></li>
+<li><a class="dead" title="未收录">感应电流大小</a></li>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+<li><a class="dead" title="未收录">交变电流-高中</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-06</a></li>
+<li><a class="dead" title="未收录">2019-北京-10</a></li>
+<li><a class="dead" title="未收录">2021-北京-11</a></li>
+<li><a class="dead" title="未收录">2021-湖南-10</a></li>
+<li><a href="../exam/物理/2024-辽宁-09.html">2024-辽宁-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二项展开式应用</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二项展开式应用</h1><div class="review-mark" data-stem="471-二项展开式应用"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二项展开式应用, binomial expansion application, 二项展开应用, 通项公式应用</p><h2>🎓 二项展开式应用</h2>
+<h3>核心工具</h3>
+<p><strong>通项公式</strong>：$(a+b)^n$ 展开式第 $k+1$ 项：</p>
+<p>$$T_{k+1} = C_n^k a^{n-k} b^k \quad (k=0,1,\ldots,n)$$</p>
+<p><strong>应用策略</strong>：
+1. 写出通项（含 $k$ 的表达式）
+2. 根据条件列方程求 $k$
+3. 代回求具体项或系数</p>
+<h3>常见题型</h3>
+<h4>类型 1：求特定次数项</h4>
+<p><strong>例1</strong>：$(x + x^{-2})^9$ 展开式中常数项（$x^0$ 项）。</p>
+<p><strong>解</strong>：令 $a = x$，$b = x^{-2}$，通项：</p>
+<p>$$T_{k+1} = C_9^k x^{9-k}(x^{-2})^k = C_9^k x^{9-k-2k} = C_9^k x^{9-3k}$$</p>
+<p>令 $9-3k = 0$，得 $k = 3$：</p>
+<p>$$T_4 = C_9^3 = 84$$</p>
+<p><strong>例2</strong>：$(2x - \frac{1}{\sqrt{x}})^{12}$ 展开式中 $x^3$ 项的系数。</p>
+<p><strong>解</strong>：$T_{k+1} = C_{12}^k (2x)^{12-k}(-x^{-1/2})^k = C_{12}^k 2^{12-k}(-1)^k x^{12-k-k/2} = C_{12}^k 2^{12-k}(-1)^k x^{12-3k/2}$</p>
+<p>令 $12 - \frac{3k}{2} = 3$，得 $k = 6$：</p>
+<p>$$T_7 = C_{12}^6 \cdot 2^6 \cdot (-1)^6 = 924 \times 64 = 59136$$</p>
+<h4>类型 2：求系数和/特定系数</h4>
+<p><strong>例3</strong>：$(1+x+x^2)^5$ 展开式中 $x^4$ 的系数（待家长核对，此题超出标准二项式定理范围，需多项式展开方法）。</p>
+<p><strong>例4</strong>：$(1+x)^n$ 展开中各项系数之和（令 $x=1$）：$2^n$。</p>
+<p>各项系数之和（只含数字系数，不含 $x$）（令 $x=1$）：$(1+1)^n = 2^n$。</p>
+<h4>类型 3：求最大项</h4>
+<p><strong>例5</strong>：$(1+x)^{10}$（$x &gt; 0$）中哪一项最大？（二项式系数最大项）</p>
+<p>$n = 10$ 为偶数，最大系数为 $C_{10}^5 = 252$（第 6 项）。</p>
+<h4>类型 4：近似计算</h4>
+<p><strong>例6</strong>：用二项式定理估算 $1.001^{10}$。</p>
+<p>$$1.001^{10} = (1+0.001)^{10} = C_{10}^0 + C_{10}^1 \times 0.001 + \cdots$$
+$$\approx 1 + 10 \times 0.001 + 45 \times 0.000001 \approx 1.01004 \approx 1.010$$</p>
+<h4>类型 5：证明恒等式</h4>
+<p><strong>例7</strong>：证明 $C_n^1 + 2C_n^2 + 3C_n^3 + \cdots + nC_n^n = n \cdot 2^{n-1}$。</p>
+<p><strong>证明</strong>：对 $(1+x)^n = \sum_{k=0}^n C_n^k x^k$ 两边对 $x$ 求导：</p>
+<p>$$n(1+x)^{n-1} = \sum_{k=1}^n k C_n^k x^{k-1}$$</p>
+<p>令 $x = 1$：$n \cdot 2^{n-1} = \sum_{k=1}^n k C_n^k$ $\checkmark$</p>
+<h3>解题步骤总结</h3>
+<ol>
+<li>写出通项 $T_{k+1} = C_n^k a^{n-k}b^k$</li>
+<li>化简指数，设定条件（如令指数 = 目标值）</li>
+<li>解出 $k$（必须为 0 到 $n$ 的整数，否则对应项不存在）</li>
+<li>代入求结果，注意符号和系数</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li><strong>$k$ 必须为非负整数</strong>：若解出 $k$ 不是整数，则无对应项（该项系数为 0）</li>
+<li><strong>注意负号</strong>：$b$ 含负号时，$(-1)^k$ 决定符号</li>
+<li><strong>系数与二项式系数</strong>：题目问"系数"时含所有数字因子（$C_n^k \cdot 2^{n-k}$ 等）</li>
+<li><strong>近似计算取高次近似</strong>：$x$ 很小时高次项可忽略，取到 1 阶或 2 阶精度</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.4，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/二项式定理">二项式定理 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+<li><a href="../atoms/473-二项式系数性质.html">二项式系数性质</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电热</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电热</h1><div class="review-mark" data-stem="173-电热"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十八章电功率]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电热, joule heating, 焦耳热, 电阻发热</p><h1>电热</h1>
+<blockquote>
+<p><strong>一句话</strong>：电流通过导体时，因电阻的存在而产生的热量叫电热（焦耳热），Q=I²Rt，是电能转化为热能的过程。
+<strong>English</strong>: Joule heating is the heat generated when electric current passes through a resistor; Q=I²Rt; it represents conversion of electrical energy to thermal energy.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>你有没有摸过长时间使用后的手机充电器？它很热！这就是<strong>电热</strong>。</p>
+<p><strong>电热是怎么产生的？</strong>
+导线不是完美的导体，有电阻。电流通过电阻时，就像水在有摩擦的管子里流动——会产生"热量"。</p>
+<p><strong>电热的公式：</strong></p>
+<p>$$Q_{热} = I^2 Rt$$</p>
+<p><strong>电热有时有用，有时有害：</strong></p>
+<p><strong>有用的电热：</strong>
+- 电热水壶（电热丝加热水）
+- 电饭锅（利用电热煮饭）
+- 暖气（电暖器）
+- 电热毯（冬天取暖）
+- 保险丝（过热时熔断，保护电路）</p>
+<p><strong>有害的电热：</strong>
+- 输电线路损耗（电热浪费电）
+- 电子芯片发热（需要散热）
+- 电机线圈发热（降低效率）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>电热的本质</h3>
+<p><strong>微观解释</strong>：
+- 自由电子在电场中加速
+- 与金属晶格（正离子）碰撞，将动能转移给晶格
+- 晶格振动加剧 → 温度升高 → 热量产生</p>
+<p>这个过程本质上是<strong>有序动能（定向运动）→ 无序热运动</strong>的转化。</p>
+<h3>焦耳定律</h3>
+<p>$$Q = I^2Rt$$</p>
+<p>在纯电阻电路中，电热等于电功：$Q = W = UIt = Pt$</p>
+<h3>电热与功率</h3>
+<p><strong>热功率</strong>（即电热产生速率）：</p>
+<p>$$P_{热} = \frac{Q}{t} = I^2 R$$</p>
+<p>对于纯电阻，热功率 = 电功率（$P_{热} = P = I^2R = UI = U^2/R$）</p>
+<h3>串并联电路中的电热分配</h3>
+<p><strong>串联</strong>（相同电流）：</p>
+<p>$$\frac{Q_1}{Q_2} = \frac{I^2R_1t}{I^2R_2t} = \frac{R_1}{R_2}$$</p>
+<p>串联：电热正比于电阻（大阻值产生更多热量）</p>
+<p><strong>并联</strong>（相同电压）：</p>
+<p>$$\frac{Q_1}{Q_2} = \frac{U^2t/R_1}{U^2t/R_2} = \frac{R_2}{R_1}$$</p>
+<p>并联：电热反比于电阻（小阻值产生更多热量）</p>
+<h3>减少有害电热的方法</h3>
+<ol>
+<li><strong>选用低电阻材料</strong>（如铜、铝导线）</li>
+<li><strong>增大导线截面积</strong>（减小电阻）</li>
+<li><strong>高压输电</strong>（减小电流，$Q \propto I^2$，效果显著）</li>
+<li><strong>散热设计</strong>（CPU散热片、风冷水冷）</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一台电动机铭牌"220V, 500W"，线圈电阻 $R = 2$ Ω。满功率工作时，求电流和电动机每分钟产生的电热。</p>
+<p><strong>解</strong>：</p>
+<p>$$I = \frac{P}{U} = \frac{500}{220} \approx 2.27 \text{ A}$$</p>
+<p>$$Q_{热} = I^2Rt = (2.27)^2 \times 2 \times 60 \approx 619 \text{ J}$$</p>
+<p>（注意：电动机的电功 $W = Pt = 500 \times 60 = 30000$ J，其中绝大部分转化为机械能，只有约 619 J 转化为电热。$Q &lt; W$ 的差值 = 转化为机械能的部分。）</p>
+<p><strong>易错点：</strong>
+- 含电动机时，$W = UIt$（总电功）而 $Q_{热} = I^2Rt$（仅电热），$W &gt; Q_{热}$
+- 仅纯电阻时，$W = Q_{热}$
+- 电热一旦产生就散发到环境，难以回收利用</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电热</td>
+<td>joule heating / resistive heating</td>
+<td>n.</td>
+<td>Joule heating causes wires to warm up.</td>
+</tr>
+<tr>
+<td>散热</td>
+<td>heat dissipation</td>
+<td>n.</td>
+<td>Chips need efficient heat dissipation.</td>
+</tr>
+<tr>
+<td>电热丝</td>
+<td>heating element</td>
+<td>n.</td>
+<td>The heating element converts electricity to heat.</td>
+</tr>
+<tr>
+<td>输电损耗</td>
+<td>transmission loss</td>
+<td>n.</td>
+<td>High voltage reduces transmission loss.</td>
+</tr>
+<tr>
+<td>热功率</td>
+<td>thermal power</td>
+<td>n.</td>
+<td>The thermal power of the resistor is I²R.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十八章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 电热</li>
+<li><strong>百科</strong>：维基百科"焦耳热"；中文百科"电热效应"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/154-焦耳定律.html">焦耳定律</a></li>
+<li><a class="dead" title="未收录">电热应用</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+<li><a href="../atoms/158-电功.html">电功</a></li>
+<li><a class="dead" title="未收录">电阻影响因素</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2019-北京-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-10</a></li>
+<li><a class="dead" title="未收录">2023-北京-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

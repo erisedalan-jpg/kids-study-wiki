@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代数变换</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>代数变换</h1><div class="review-mark" data-stem="647-代数变换"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 代数变换, Algebraic Manipulation</p><h1>代数变换</h1>
+<blockquote>
+<p><strong>一句话</strong>：代数变换是指根据代数运算法则与恒等关系，将一个代数表达式有目的地变形为另一个与之恒等的表达式的过程。
+<strong>English</strong>: Algebraic manipulation is the process of transforming an algebraic expression into another equivalent expression according to the rules of algebra and identities.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>代数变换在高考中并非独立命题，而是渗透于各类解答题中作为核心运算工具。其本质是<strong>恒等变形</strong>，即在保持表达式值不变的条件下，通过因式分解、配方、通分、有理化、拆分、换元等手法，将原式转化为更利于求值、化简、解方程或证明的形式。</p>
+<p><strong>核心运算律与常用公式</strong>（均需熟练掌握到肌肉记忆级别）：
+- 乘法公式：$a^2 - b^2 = (a-b)(a+b)$，$(a \pm b)^2 = a^2 \pm 2ab + b^2$，$a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)$。
+- 配方法：$ax^2 + bx + c = a\left(x + \frac{b}{2a}\right)^2 + \frac{4ac - b^2}{4a}$（$a \neq 0$）。
+- 分式拆项：$\frac{1}{n(n+k)} = \frac{1}{k}\left(\frac{1}{n} - \frac{1}{n+k}\right)$（常用于数列求和）。
+- 根式有理化：$\frac{1}{\sqrt{a} \pm \sqrt{b}} = \frac{\sqrt{a} \mp \sqrt{b}}{a-b}$。</p>
+<p><strong>关键方法</strong>：
+1. <strong>目标导向变形</strong>：先观察目标结构（如导数零点表达式、数列递推待定形式、三角函数统一角度），再选择变形方向。
+2. <strong>整体代换</strong>：将复杂子式视为一个整体变量 $t$ 降次或化繁为简，常见于函数求值域、解复合方程。
+3. <strong>同构变形</strong>：将等式两边化为相同结构 $f(g(x)) = f(h(x))$，再利用函数单调性脱去外层，是近几年压轴题热门技巧。</p>
+<p><strong>典型高考设问场景</strong>：
+- 三角函数化简求值：利用诱导公式、和差角、倍角公式将 $f(x) = a\sin \omega x + b\cos \omega x$ 化为 $\sqrt{a^2+b^2}\sin(\omega x + \varphi)$，进而求周期、最值、单调区间。
+- 圆锥曲线联立消元：将直线方程代入椭圆方程后，通过代数变换整理为一元二次方程，并用韦达定理表达弦长、面积等，其中的恒等化简直接影响计算速度和准确率。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略等价性</strong>：等式两边平方、开方或乘除含变号的式子时，不讨论正负或取值范围导致增根、丢根。例如解 $\sqrt{x+2} = x$ 需添加条件 $x \ge 0$。</li>
+<li><strong>分式拆项符号错误</strong>：裂项时漏掉系数或符号，如 $\frac{1}{n(n+2)}$ 误拆为 $\frac{1}{n} - \frac{1}{n+2}$ 而漏掉 $\frac{1}{2}$。</li>
+<li><strong>配方法中提取系数失误</strong>：二次项系数不为1时，配方忘记对一次项系数除以二次项系数，导致顶点坐标、值域求错。</li>
+<li><strong>盲目展开而不因式分解</strong>：在求极值、证不等式、讨论根的分布时，对高次多项式一味展开，错过提取公因式或因式分解的最佳时机，使运算量暴增甚至无法求解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代数变换</td>
+<td>Algebraic manipulation</td>
+<td>对代数式进行恒等变形的操作</td>
+</tr>
+<tr>
+<td>因式分解</td>
+<td>Factorization</td>
+<td>将多项式写成几个整式的乘积形式</td>
+</tr>
+<tr>
+<td>有理化</td>
+<td>Rationalization</td>
+<td>消去分母或分子中的根号</td>
+</tr>
+<tr>
+<td>配方</td>
+<td>Completing the square</td>
+<td>将二次式配成完全平方加上常数的形式</td>
+</tr>
+<tr>
+<td>换元法</td>
+<td>Substitution</td>
+<td>引入新变量代替原表达式的一部分，简化结构</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：(待主会话核对对应模块) 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">因式分解</a></li>
+<li><a class="dead" title="未收录">配方法</a></li>
+<li><a class="dead" title="未收录">换元法</a></li>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+<li><a class="dead" title="未收录">数列裂项求和</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2022-理-12.html">2022-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

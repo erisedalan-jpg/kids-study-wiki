@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pH计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>pH计算</h1><div class="review-mark" data-stem="316-pH计算"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: pH计算, pH calculation, 酸碱pH计算</p><h1>pH计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：根据溶液中 [H⁺] 或 [OH⁻] 计算 pH 的系统方法，涵盖强酸强碱直接计算、弱酸弱碱近似计算、混合溶液计算。
+<strong>English</strong>: Systematic methods for calculating pH from [H⁺] or [OH⁻], covering strong acid/base direct calculation, weak acid/base approximation, and mixed solution calculations.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>pH 计算的核心公式：</p>
+<p>$$
+\text{pH} = -\lg[\text{H}^+], \quad [\text{H}^+] = 10^{-\text{pH}}
+$$</p>
+<h3>公式 / 方程式</h3>
+<p><strong>（一）强酸溶液</strong></p>
+<p>$$
+c(\text{HCl}) = c_0 \Rightarrow [\text{H}^+] = c_0 \Rightarrow \text{pH} = -\lg c_0
+$$</p>
+<p><strong>（二）强碱溶液</strong></p>
+<p>$$
+[\text{OH}^-] = c_0 \Rightarrow [\text{H}^+] = \frac{K_w}{c_0} \Rightarrow \text{pH} = 14 + \lg c_0\ \text{(25 ℃)}
+$$</p>
+<p><strong>（三）弱酸溶液</strong>（近似法）</p>
+<p>$$
+[\text{H}^+] \approx \sqrt{K_a \cdot c_0}
+$$</p>
+<p><strong>（四）弱碱溶液</strong>（近似法）</p>
+<p>$$
+[\text{OH}^-] \approx \sqrt{K_b \cdot c_0} \Rightarrow [\text{H}^+] = \frac{K_w}{[\text{OH}^-]}
+$$</p>
+<p><strong>（五）混合溶液</strong></p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>计算策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>强酸 + 强碱（酸过量）</td>
+<td>先计算剩余 [H⁺]，再求 pH</td>
+</tr>
+<tr>
+<td>强酸 + 强碱（碱过量）</td>
+<td>先计算剩余 [OH⁻]，再用 $K_w$ 求 [H⁺]</td>
+</tr>
+<tr>
+<td>恰好中和</td>
+<td>pH 取决于盐类水解</td>
+</tr>
+<tr>
+<td>混合弱酸/碱</td>
+<td>需用缓冲方程</td>
+</tr>
+</tbody>
+</table>
+<p><strong>（六）稀释规律</strong>（25 ℃）</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>规律</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>强酸稀释 10 倍</td>
+<td>pH 升高 1</td>
+</tr>
+<tr>
+<td>弱酸稀释 10 倍</td>
+<td>pH 升高 &lt; 1</td>
+</tr>
+<tr>
+<td>强酸极度稀释</td>
+<td>pH → 7（趋近，不超过 7）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：0.1 mol/L NaOH 溶液（25 ℃）的 pH。</p>
+<p>$$
+[\text{OH}^-] = 0.1\ \text{mol/L}
+$$</p>
+<p>$$
+[\text{H}^+] = \frac{10^{-14}}{0.1} = 10^{-13}\ \text{mol/L}
+$$</p>
+<p>$$
+\text{pH} = 13
+$$</p>
+<p><strong>例</strong>：50 mL pH=1 的 HCl 与 50 mL pH=13 的 NaOH 混合后的 pH？</p>
+<ul>
+<li>$[\text{H}^+] = 0.1$ mol/L，$n(\text{HCl}) = 0.005$ mol</li>
+<li>$[\text{OH}^-] = 0.1$ mol/L，$n(\text{NaOH}) = 0.005$ mol</li>
+<li>恰好中和，溶液 pH = 7</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>强酸 pH 计算：直接取对数；弱酸需先求 [H⁺]</li>
+<li>稀释强酸 pH 升高，但不超过 7</li>
+<li>酸碱混合时，先用物质的量计算，再换算浓度，再求 pH</li>
+<li>非 25 ℃ 时，不能用"pH=7 为中性"或"pH+pOH=14"</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pH 计算</td>
+<td>pH calculation</td>
+</tr>
+<tr>
+<td>强酸</td>
+<td>strong acid</td>
+</tr>
+<tr>
+<td>稀释</td>
+<td>dilution</td>
+</tr>
+<tr>
+<td>混合溶液</td>
+<td>mixed solution</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>For strong acids, pH = −log(concentration of H⁺).（对于强酸，pH = −log[H⁺]。）</li>
+<li>When diluting a strong acid ten-fold, pH increases by exactly 1 unit.（强酸稀释 10 倍时，pH 正好升高 1 个单位。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"pH"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/317-pH（高中）.html">pH（高中）</a></li>
+<li><a href="../atoms/338-离子积常数Kw.html">离子积常数Kw</a></li>
+<li><a href="../atoms/333-电离常数.html">电离常数</a></li>
+<li><a class="dead" title="未收录">酸碱中和滴定</a></li>
+<li><a href="../atoms/339-缓冲溶液.html">缓冲溶液</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-06</a></li>
+<li><a href="../exam/化学/2012-新课标-05.html">2012-新课标-05</a></li>
+<li><a href="../exam/化学/2013-新课标Ⅱ-07.html">2013-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

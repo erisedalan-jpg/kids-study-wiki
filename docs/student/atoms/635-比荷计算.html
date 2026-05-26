@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比荷计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>比荷计算</h1><div class="review-mark" data-stem="635-比荷计算"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 比荷计算, specific charge, charge-to-mass ratio</p><h1>比荷计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：比荷是带电粒子的电荷量 $q$ 与其质量 $m$ 之比，是表征粒子电磁运动特性的基本物理量。
+<strong>English</strong>: The specific charge is the ratio of a charged particle's electric charge $q$ to its mass $m$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：比荷 $\displaystyle \frac{q}{m}$ 的单位是库仑每千克（$\text{C/kg}$），其值由粒子本身决定，如电子的比荷绝对值约为 $1.76\times10^{11}\,\text{C/kg}$。在电场与磁场问题中，比荷是沟通电磁力与运动学的核心参数。常依托的两条基本规律：</li>
+<li>洛伦兹力提供向心力：$qvB = \frac{mv^2}{r} \Rightarrow \frac{q}{m} = \frac{v}{Br}$（磁场垂直入射时）。</li>
+<li>
+<p>加速电场与动能定理：$qU = \frac12 mv^2 \Rightarrow v = \sqrt{\frac{2qU}{m}}$，联立可得 $\frac{q}{m} = \frac{2U}{B^2 r^2}$，这是质谱仪等装置测定比荷的经典方程。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：求解“比荷计算”类问题的标准步骤：</p>
+</li>
+<li><strong>识别运动场景</strong>：粒子的速度 $v$ 是否由加速电场获得，或直接已知。</li>
+<li><strong>列出静电场/磁场力方程</strong>：若在匀强磁场中做匀速圆周运动，直接使用 $r = \frac{mv}{qB}$ 或其变形；若涉及电场加速，先写动能定理。</li>
+<li><strong>消去未知速度</strong>：将 $v$ 用 $U$、$B$、$r$ 等可测量表示，目标方程中仅保留 $\frac{q}{m}$ 与可直接测量的量。</li>
+<li>
+<p><strong>解出比荷</strong>：必要时用几何关系求半径（如利用轨迹的弦切角、进出磁场点间距）。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考中常结合质谱仪、回旋加速器、磁聚焦等情境考查。例：一束带电粒子经同一加速电场加速后垂直进入同一匀强磁场，若测得轨道半径 $r$，即可通过 $q/m = 2U/(B^2r^2)$ 区分同位素或未知粒子；若粒子速度直接由热发射产生，则用速度选择器使 $v=E/B$，再进入偏转磁场，得到 $q/m = E/(B_1 B_2 r)$。设问常要求：比较不同粒子的轨迹半径、求比荷的表达式、或由荷质比判断粒子种类。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>半径公式混淆</strong>：直接记 $r = qB/(mv)$ 导致分母颠倒，应牢记 $r = \frac{mv}{qB}$ 或比荷表达式 $\frac{q}{m} = \frac{v}{Br}$。</li>
+<li><strong>未区分加速电压与偏转电压</strong>：动能定理中的 $U$ 是加速电压，若题目同时给出偏转电场或磁场，需明确哪个能量转化为粒子的动能，勿把偏转电势差代入 $qU = \frac12 mv^2$。</li>
+<li><strong>轨迹半径不是磁场区域尺寸</strong>：从几何条件求解半径时，误将磁场宽度或边界长度直接作为半径代入比荷公式。必须通过作图、找圆心、用尺规找几何关系得出轨迹实际半径。</li>
+<li><strong>忽略电荷的正负与比荷的符号</strong>：比荷计算中常用 $|q|$，但在判断粒子偏转方向时电荷正负至关重要，若题目要求区分电子（$e^-$）与质子（$p^+$），需注意电子比荷为负值，但表达式多取其绝对值。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比荷</td>
+<td>specific charge (charge-to-mass ratio)</td>
+<td>带电粒子的电荷量与质量的比值</td>
+</tr>
+<tr>
+<td>电荷量</td>
+<td>electric charge</td>
+<td>粒子的带电多少，单位库仑 $(\text{C})$</td>
+</tr>
+<tr>
+<td>洛伦兹力</td>
+<td>Lorentz force</td>
+<td>运动电荷在磁场中受到的力，大小为 $qvB\sin\theta$</td>
+</tr>
+<tr>
+<td>匀强磁场</td>
+<td>uniform magnetic field</td>
+<td>磁感应强度大小、方向处处相同的磁场</td>
+</tr>
+<tr>
+<td>动能定理</td>
+<td>work-energy theorem / kinetic energy theorem</td>
+<td>合外力做功等于动能变化，常用于加速过程</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧（待家长核对：普通高中物理课程标准中“磁场”“电磁场与电磁波初步”相关条目）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/595-带电粒子在匀强磁场中的运动.html">带电粒子在匀强磁场中的运动</a></li>
+<li><a class="dead" title="未收录">质谱仪</a></li>
+<li><a class="dead" title="未收录">回旋加速器</a></li>
+<li><a href="../atoms/304-洛伦兹力.html">洛伦兹力</a></li>
+<li><a href="../atoms/251-动能定理.html">动能定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-05.html">2016-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波的干涉</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>波的干涉</h1><div class="review-mark" data-stem="366-波的干涉"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械波]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 波的干涉, wave interference</p><h2>🎓 波的干涉</h2>
+<h3>定义</h3>
+<p><strong>波的干涉</strong>（wave interference）是两列或多列相干波叠加，在空间形成<strong>稳定的加强区和减弱区</strong>的现象。</p>
+<p>叠加原理（波的独立性）：各列波在叠加处各自保持传播，叠加点的位移等于各波位移的矢量和。</p>
+<h3>相干波的条件</h3>
+<p>产生稳定干涉的两列波必须满足：
+1. <strong>频率相同</strong>
+2. <strong>相位差恒定</strong>（固定相位关系）
+3. <strong>振动方向相同</strong>（对横波）</p>
+<p>不满足相干条件的两列波，叠加后干涉条纹不稳定，只能看到平均效果。</p>
+<h3>加强与减弱的条件</h3>
+<p>设两相干波在 P 点的路程差 $\Delta r = |r_1 - r_2|$（两波源到 P 点距离差）：</p>
+<p><strong>加强区</strong>（波峰与波峰、波谷与波谷相遇）：</p>
+<p>$$\Delta r = n\lambda \quad (n = 0, 1, 2, \ldots)$$</p>
+<p><strong>减弱区</strong>（波峰与波谷相遇）：</p>
+<p>$$\Delta r = (n + \frac{1}{2})\lambda \quad (n = 0, 1, 2, \ldots)$$</p>
+<p>（以上适用于两波源同相位时）</p>
+<h3>水面波干涉</h3>
+<p>两个同频率的振动子在水面激起两列圆形波，叠加后形成稳定图案：
+- <strong>加强线</strong>：相邻两条加强线之间路程差差 $\lambda$
+- <strong>减弱线</strong>：振动始终最小，形成节线</p>
+<p>节线（减弱线）和腹线（加强线）交替排列，呈双曲线形状。</p>
+<h3>声波的干涉</h3>
+<p>两个同频率扬声器向外发声，在房间内形成干涉：
+- 站在加强点处：声音最响
+- 站在减弱点处：声音最轻（接近静音）
+- 来回走动能感受到声音忽强忽弱</p>
+<h3>干涉 vs 衍射 vs 叠加</h3>
+<table>
+<thead>
+<tr>
+<th>现象</th>
+<th>波的数量</th>
+<th>条件</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>叠加</td>
+<td>≥ 2列</td>
+<td>任意</td>
+<td>位移相加，不稳定</td>
+</tr>
+<tr>
+<td><strong>干涉</strong></td>
+<td>2列（相干）</td>
+<td>相干波</td>
+<td>稳定的加强/减弱区域</td>
+</tr>
+<tr>
+<td>衍射</td>
+<td>1列</td>
+<td>障碍物≈波长</td>
+<td>绕障碍物传播</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：两同相相干波源，波长 $\lambda = 4\text{ m}$，A 源到 P 点距离 $r_A = 10\text{ m}$，B 源到 P 点距离 $r_B = 12\text{ m}$，P 点是加强还是减弱？</p>
+<p>$$\Delta r = |r_B - r_A| = |12 - 10| = 2\text{ m}$$</p>
+<p>$$\frac{\Delta r}{\lambda} = \frac{2}{4} = 0.5 = \frac{1}{2}$$</p>
+<p>路程差为半波长奇数倍（$n=0$时 $(0+\frac{1}{2})\lambda = 2\text{ m}$）→ <strong>减弱区</strong>。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>干涉需要相干波</strong>：两个独立振源（不同频率或随机相位）不能产生稳定干涉。</li>
+<li><strong>路程差是到两波源路程的差，不是到某参考点的路程</strong>。</li>
+<li><strong>加强区不是声音最强，而是振幅最大</strong>：加强区振幅是单列波的 2 倍，能量是 4 倍。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第三章第5节，页码待家长核对）</li>
+<li><strong>百科</strong>：波的干涉 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/363-横波与纵波.html">横波与纵波</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/357-多普勒效应.html">多普勒效应</a></p>
+</li>
+<li>
+<p><a href="../atoms/362-机械波.html">机械波</a></p>
+</li>
+<li><a class="dead" title="未收录">波的反射</a></li>
+<li><a class="dead" title="未收录">波的折射</a></li>
+<li><a class="dead" title="未收录">波的衍射</a></li>
+<li><a href="../atoms/340-光的干涉.html">光的干涉</a></li>
+<li><a href="../atoms/352-双缝干涉实验.html">双缝干涉实验</a></li>
+<li><a class="dead" title="未收录">相位</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2017-北京-08</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

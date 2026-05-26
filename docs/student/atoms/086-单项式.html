@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单项式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>单项式</h1><div class="review-mark" data-stem="086-单项式"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 整式]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 单项式, monomial, 单项</p><h2>课本一句话定义</h2>
+<p><strong>单项式</strong>是数与字母的积（包括单独的一个数或一个字母），没有加减运算；单项式中所有字母指数的和叫做这个单项式的<strong>次数</strong>，数字因数叫做它的<strong>系数</strong>。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>你已经认识了数字，现在数学里出现了字母（代表未知数）。</p>
+<p><strong>单项式</strong>就是数字和字母"粘在一起"（相乘）的式子，没有加号和减号：</p>
+<ul>
+<li>$3x$：3 乘以 $x$，是单项式 ✅</li>
+<li>$-5ab$：$-5$ 乘以 $a$ 乘以 $b$，是单项式 ✅</li>
+<li>$7$：单独的数，是单项式 ✅（只不过没有字母）</li>
+<li>$x + 3$：有加号，<strong>不是</strong>单项式 ❌</li>
+</ul>
+<p>单项式的两个关键：
+- <strong>系数</strong>：前面的数字（$3x$ 的系数是 $3$）
+- <strong>次数</strong>：所有字母的指数加起来（$3x^2y$ 的次数是 $2 + 1 = 3$）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>严格定义</h3>
+<p><strong>单项式</strong>（monomial）是数、字母或数与字母的积。</p>
+<p><strong>系数</strong>（coefficient）：单项式中的数字因数。若系数为 1 或 -1，通常省略 1（但保留符号）。</p>
+<p><strong>次数</strong>（degree）：单项式中所有字母的指数之和。
+- 纯数字（非零常数）的次数为 <strong>0</strong>
+- $0$ 的次数<strong>没有意义</strong>（通常不讨论）</p>
+<h3>关键性质</h3>
+<table>
+<thead>
+<tr>
+<th>单项式</th>
+<th>系数</th>
+<th>次数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$3x^2y$</td>
+<td>$3$</td>
+<td>$3$</td>
+<td>$2+1=3$</td>
+</tr>
+<tr>
+<td>$-ab^2c$</td>
+<td>$-1$</td>
+<td>$4$</td>
+<td>$1+2+1=4$</td>
+</tr>
+<tr>
+<td>$\dfrac{1}{2}x$</td>
+<td>$\dfrac{1}{2}$</td>
+<td>$1$</td>
+<td></td>
+</tr>
+<tr>
+<td>$-5$</td>
+<td>$-5$</td>
+<td>$0$</td>
+<td>常数项</td>
+</tr>
+<tr>
+<td>$x$</td>
+<td>$1$（省略）</td>
+<td>$1$</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：指出 $-\dfrac{3}{4}x^2yz^3$ 的系数和次数。</p>
+<p><strong>解</strong>：系数为 $-\dfrac{3}{4}$；次数为 $2 + 1 + 3 = 6$。</p>
+<p><strong>例 2</strong>：下列哪些是单项式？$3a$、$x + y$、$-7$、$\dfrac{a}{3}$、$\dfrac{3}{a}$</p>
+<p><strong>解</strong>：
+- $3a$：数与字母的积，✅ 单项式
+- $x + y$：含加号，❌ 不是单项式（是多项式）
+- $-7$：单独的数，✅ 单项式（0 次）
+- $\dfrac{a}{3} = \dfrac{1}{3}a$：数与字母的积，✅ 单项式
+- $\dfrac{3}{a} = 3a^{-1}$：字母在分母（指数为 -1），❌ 七年级范围内不算单项式（负指数超出范围）</p>
+<p><strong>例 3</strong>：若单项式 $3x^m y$ 的次数为 5，求 $m$。</p>
+<p><strong>解</strong>：$m + 1 = 5$，$m = 4$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>字母在分母不是单项式</strong>：$\dfrac{1}{x}$ 不是七年级意义上的单项式。</li>
+<li><strong>系数为 1 时别忘了</strong>：$x^2$ 的系数是 $1$，不是 $0$。</li>
+<li><strong>负号属于系数</strong>：$-3x$ 的系数是 $-3$，不是 $3$。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：有理数四则运算、字母表示数</li>
+<li>后续：多项式 → 整式 → 合并同类项 → 整式加减</li>
+<li>高中拓展：多项式（高次）→ 因式分解 → 函数表达式</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单项式</td>
+<td>monomial</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>系数</td>
+<td>coefficient</td>
+<td>数字因数</td>
+</tr>
+<tr>
+<td>次数</td>
+<td>degree</td>
+<td>字母指数和</td>
+</tr>
+<tr>
+<td>常数</td>
+<td>constant</td>
+<td>0 次单项式</td>
+</tr>
+<tr>
+<td>字母</td>
+<td>variable</td>
+<td>代表未知量</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$3x^2y$ 是一个三次单项式。</td>
+<td>$3x^2y$ is a monomial of degree 3.</td>
+</tr>
+<tr>
+<td>单项式的系数是它的数字部分。</td>
+<td>The coefficient of a monomial is its numerical part.</td>
+</tr>
+<tr>
+<td>常数 7 是一个零次单项式。</td>
+<td>The constant 7 is a monomial of degree zero.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第二章第 1 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Monomial</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/094-整式加减.html">整式加减</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/088-合并同类项.html">合并同类项</a></p>
+</li>
+<li>
+<p><a href="../atoms/089-多项式.html">多项式</a></p>
+</li>
+<li><a href="../atoms/093-整式.html">整式</a></li>
+<li><a href="../atoms/088-合并同类项.html">合并同类项</a></li>
+<li><a class="dead" title="未收录">有理数乘法</a></li>
+<li><a href="../atoms/094-整式加减.html">整式加减</a></li>
+<li><a href="../atoms/197-待定系数法.html">系数</a></li>
+</ul>
+</div>
+</body>
+</html>

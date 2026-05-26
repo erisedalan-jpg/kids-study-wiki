@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>安全用电</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>安全用电</h1><div class="review-mark" data-stem="134-安全用电"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十七章欧姆定律, 第十九章生活用电]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 安全用电, electrical safety, 用电安全</p><h1>安全用电</h1>
+<blockquote>
+<p><strong>一句话</strong>：安全用电的核心是防止触电，36V以下为安全电压；不湿手触摸电器，不私拉乱接，遇故障先断电。
+<strong>English</strong>: Electrical safety focuses on preventing electric shock; voltages below 36V are considered safe; never touch electrical devices with wet hands, never rewire illegally, and disconnect power first during any fault.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>电很有用，但也很危险！</strong> 一定要学会安全用电。</p>
+<p><strong>安全电压：</strong>
+- 家用电：<strong>220 V</strong>（危险！）
+- 安全电压：<strong>36 V 以下</strong>（干燥环境）；潮湿环境安全电压为 <strong>12 V</strong>
+- 触电时，通过人体的电流超过 <strong>0.01 A（10 mA）</strong> 就有感觉；超过 <strong>0.1 A</strong> 可能致命</p>
+<p><strong>安全用电"十不要"：</strong>
+1. 不用湿手触摸开关、插座、电器
+2. 不在电线上晒衣服、挂东西
+3. 不自己修理电器（找专业人士）
+4. 不让导线裸露（磨损要及时更换）
+5. 不同时用多个大功率电器（避免过载）
+6. 不在高压线下放风筝
+7. 不攀爬变电站围栏
+8. 不私拉乱接电线
+9. 不用手去拉触电者（先切断电源）
+10. 不随便拆卸电器</p>
+<p><strong>触电急救：</strong>先切断电源（用干木棒挑开），再拨打 120！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>触电的物理原因</h3>
+<p>人体是导体（含大量电解质）。通过人体的电流由<strong>欧姆定律</strong>决定：</p>
+<p>$$I_{人体} = \frac{U}{R_{人体}}$$</p>
+<ul>
+<li>人体电阻：干燥皮肤约 $10^4$~$10^5$ Ω；潮湿皮肤约 $1000$ Ω</li>
+<li>故潮湿时更危险（电阻减小，相同电压下电流更大）</li>
+</ul>
+<h3>触电危害与安全阈值</h3>
+<table>
+<thead>
+<tr>
+<th>电流</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 1 mA</td>
+<td>无感觉</td>
+</tr>
+<tr>
+<td>1-10 mA</td>
+<td>有轻微麻感</td>
+</tr>
+<tr>
+<td>10-30 mA</td>
+<td>痛苦感，肌肉痉挛</td>
+</tr>
+<tr>
+<td>30-100 mA</td>
+<td>呼吸困难，可能心颤</td>
+</tr>
+<tr>
+<td>&gt; 100 mA</td>
+<td>可能致命（心室纤颤）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>安全电压</strong>：$U_{安全} \leq 36$ V（此时即使人体电阻仅1000Ω，电流=36/1000=36mA，尚可忍受）</p>
+<h3>触电的两种形式</h3>
+<p><strong>单线触电（最常见）</strong>：人体一手接触火线（L线），脚踩大地，构成回路。</p>
+<p>$$I = \frac{220\text{ V}}{R_{人体} + R_{地}} \approx \frac{220}{1000} = 220 \text{ mA}（危险）$$</p>
+<p><strong>双线触电</strong>：两手分别接触火线和零线，220V直接加在人体上，更危险。</p>
+<h3>家庭电路安全规则</h3>
+<ol>
+<li><strong>火线（L）、零线（N）、地线（PE）</strong>不能混接</li>
+<li><strong>插座接线</strong>："左零右火上地"（左孔接N，右孔接L，上孔接PE）</li>
+<li><strong>开关必须接在火线上</strong>（断开后确保用电器不带电）</li>
+<li><strong>保险丝/空气开关</strong>：过流保护（电流过大时断开）</li>
+<li><strong>漏电保护器</strong>：检测漏电，30mA以上断开</li>
+</ol>
+<h3>高压安全</h3>
+<ul>
+<li>高压线附近（数千伏~数十万伏）存在强电场，人体靠近可能"跨步电压触电"</li>
+<li>不得进入变电站、在高压线下放风筝、飞无人机</li>
+<li>雷雨天：不在大树下、高处、水面上避雨</li>
+</ul>
+<h3>触电急救</h3>
+<ol>
+<li><strong>立即切断电源</strong>（拉闸、拔插头）</li>
+<li><strong>不能用手拉触电者</strong>（会造成连环触电）</li>
+<li>用干燥绝缘物（木棒、橡胶手套）挑开电线</li>
+<li>拨打 120</li>
+<li>如患者无呼吸、心跳停止，进行 CPR</li>
+</ol>
+<p><strong>易错点：</strong>
+- 不能认为"零线安全"——零线通常与地电位相同，但在某些情况下可能带电
+- 绝缘体虽然不导电，但高压下可被击穿，仍需保持安全距离
+- 湿手的危险不是因为"水导电"，而是因为湿润后皮肤电阻大幅下降</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全电压</td>
+<td>safe voltage</td>
+<td>n.</td>
+<td>Voltages below 36 V are considered safe.</td>
+</tr>
+<tr>
+<td>触电</td>
+<td>electric shock</td>
+<td>n.</td>
+<td>Electric shock can be fatal at high currents.</td>
+</tr>
+<tr>
+<td>火线</td>
+<td>live wire</td>
+<td>n.</td>
+<td>The switch must be connected to the live wire.</td>
+</tr>
+<tr>
+<td>零线</td>
+<td>neutral wire</td>
+<td>n.</td>
+<td>The neutral wire completes the circuit.</td>
+</tr>
+<tr>
+<td>地线</td>
+<td>earth wire / ground wire</td>
+<td>n.</td>
+<td>The earth wire provides safety grounding.</td>
+</tr>
+<tr>
+<td>漏电保护器</td>
+<td>residual current device (RCD)</td>
+<td>n.</td>
+<td>The RCD disconnects the circuit when it detects leakage.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十九章（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 安全用电</li>
+<li><strong>百科</strong>：维基百科"触电"；中文百科"安全用电规范"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/136-家庭电路.html">家庭电路</a></li>
+<li><a href="../atoms/121-三线插头.html">三线插头</a></li>
+<li><a href="../atoms/149-漏电保护器.html">漏电保护器</a></li>
+<li><a href="../atoms/193-空气开关.html">空气开关</a></li>
+<li><a href="../atoms/137-家庭电路保险丝.html">家庭电路保险丝</a></li>
+<li><a class="dead" title="未收录">触电急救常识</a></li>
+<li><a class="dead" title="未收录">生活用电常识</a></li>
+</ul>
+</div>
+</body>
+</html>

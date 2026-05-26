@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>滑动摩擦力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>滑动摩擦力</h1><div class="review-mark" data-stem="226-滑动摩擦力-高中"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 相互作用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 滑动摩擦力-高中, 滑动摩擦力, kinetic friction, sliding friction</p><h2>🎓 滑动摩擦力（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>滑动摩擦力</strong>（kinetic friction / sliding friction）是两个相互接触的物体发生相对<strong>滑动</strong>时，接触面之间产生的阻碍相对运动的摩擦力。</p>
+<h3>计算公式</h3>
+<p>$$\boxed{f = \mu_k N}$$</p>
+<p>其中：
+- $f$：滑动摩擦力（N）
+- $\mu_k$：<strong>动摩擦因数</strong>（kinetic friction coefficient），无量纲，由接触面材料和粗糙程度决定
+- $N$：<strong>正压力</strong>（接触面之间垂直压力，N），不一定等于重力！</p>
+<p><strong>适用条件</strong>：两物体之间存在相对滑动。</p>
+<h3>滑动摩擦力的特点</h3>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大小</td>
+<td>$f = \mu_k N$（与接触面积无关！）</td>
+</tr>
+<tr>
+<td>方向</td>
+<td>沿接触面，与相对运动方向相反</td>
+</tr>
+<tr>
+<td>与速度关系</td>
+<td>大小与速度大小无关（高中近似）</td>
+</tr>
+<tr>
+<td>与面积关系</td>
+<td>与接触面积无关（在相同压力下）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>摩擦力与接触面积无关</strong>是重要结论：大轮胎不比小轮胎摩擦力大（压力相同时）；摩擦力大小只取决于 $\mu_k$ 和 $N$。</p>
+<h3>正压力 $N$ 的计算</h3>
+<p>$N$ 不一定等于重力 $G$，需根据受力分析确定：</p>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>正压力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水平面，无其他竖直力</td>
+<td>$N = G = mg$</td>
+</tr>
+<tr>
+<td>水平面，有向下额外力 $F$</td>
+<td>$N = G + F$</td>
+</tr>
+<tr>
+<td>水平面，有向上额外力 $F$</td>
+<td>$N = G - F$</td>
+</tr>
+<tr>
+<td>倾角 $\theta$ 的斜面</td>
+<td>$N = G\cos\theta = mg\cos\theta$</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：重80N的物体在水平面上运动，$\mu_k = 0.3$，求滑动摩擦力。</p>
+<p>$$N = G = 80\text{ N}$$
+$$f = \mu_k N = 0.3\times80 = 24\text{ N}$$</p>
+<p><strong>例2</strong>：同一物体，用30N的力斜向下压（与水平成37°），同时水平推动，求摩擦力。</p>
+<p>$$N = G + F\sin37° = 80 + 30\times0.6 = 80 + 18 = 98\text{ N}$$
+$$f = 0.3\times98 = 29.4\text{ N}$$</p>
+<p><strong>例3</strong>：在倾角30°的斜面上，80N的物体沿斜面下滑，$\mu_k = 0.2$，求滑动摩擦力。</p>
+<p>$$N = G\cos30° = 80\times\frac{\sqrt{3}}{2} \approx 69.3\text{ N}$$
+$$f = \mu_k N = 0.2\times69.3 \approx 13.9\text{ N}\text{（沿斜面向上）}$$</p>
+<p><strong>例4</strong>（是否运动）：倾角37°斜面，$\mu_k = 0.5$，$\mu_s \approx 0.5$（静动近似相等），物体是否下滑？</p>
+<p>平衡条件：$f = G\sin37° = 0.6G$，$N = G\cos37° = 0.8G$</p>
+<p>最大静摩擦力：$f_{\max} = 0.5\times0.8G = 0.4G &lt; 0.6G$</p>
+<p>静摩擦力不足以平衡重力沿斜面分量，物体<strong>下滑</strong>。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$N$ ≠ 重力</strong>：有其他垂直于接触面的力时，$N$ 需要重新计算。</li>
+<li><strong>摩擦力与面积无关</strong>：增大接触面积不增大摩擦力（压力相同时）。</li>
+<li><strong>滑动摩擦力方向</strong>：与相对运动方向相反，不是与绝对运动方向相反。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中学摩擦力影响因素（压力和粗糙程度），高中给出定量公式 $f=\mu_k N$，引入动摩擦因数，使摩擦力计算精确化。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第三章第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：摩擦力 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/222-摩擦力-高中.html">摩擦力-高中</a></li>
+<li><a class="dead" title="未收录">静摩擦力-高中</a></li>
+<li><a class="dead" title="未收录">摩擦因数</a></li>
+<li><a href="../atoms/220-弹力-高中.html">弹力-高中</a></li>
+<li><a class="dead" title="未收录">斜面问题</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+</ul>
+</div>
+</body>
+</html>

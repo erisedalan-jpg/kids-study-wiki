@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比较大小</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>比较大小</h1><div class="review-mark" data-stem="970-比较大小"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 比较大小, Comparison of magnitudes</p><h1>比较大小</h1>
+<blockquote>
+<p><strong>一句话</strong>：比较大小是指运用不等式性质、函数单调性或数值计算等方法，判断两个实数或代数式的大小关系。
+<strong>English</strong>: Comparison of magnitudes is the process of determining the order relation between two mathematical objects using inequality properties, function monotonicity, or numerical computation.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>比较大小的核心依据是实数公理：对于任意两个实数 $a$ 和 $b$，$a&gt;b \iff a-b&gt;0$。由此衍生出<strong>作差法</strong>和<strong>作商法</strong>。若 $a-b&gt;0$，则 $a&gt;b$；若 $a-b&lt;0$，则 $a<b$。当两数同号时，也可用作商法：若 $\frac{a}{b}>1$ 且 $b&gt;0$，则 $a&gt;b$；若商大于1但分母为负，不等号需反转。</p>
+<p>高考中，比较大小进一步结合函数性质：
+- 利用<strong>函数的单调性</strong>：若 $f(x)$ 在区间 $I$ 上单调递增，则 $\forall x_1,x_2\in I,\ x_1&lt;x_2 \iff f(x_1)&lt;f(x_2)$。此性质常用于比较幂、指、对函数值。
+- <strong>中间量法</strong>：当直接比较困难时，常引入 $0$ 或 $1$ 作为桥梁。例如比较 $a=\log_{0.5}3$ 和 $b=0.2^{0.3}$，可注意到 $a&lt;0$，$0&lt;b&lt;1$，从而 $a&lt;b$。
+- <strong>构造函数法</strong>：比较结构相似的两式，可构造辅助函数并借助导数判断单调性。如比较 $e^\pi$ 与 $\pi^e$，可两边取对数后构造函数 $f(x)=\frac{\ln x}{x}$，利用其在 $(e,+\infty)$ 上单调递减得出结论。</p>
+<p>典型高考设问：“设 $a=\log_2 3$，$b=\log_3 4$，$c=4^{-0.2}$，比较 $a,b,c$ 的大小。” 解题需综合运用对数单调性、换底公式，并与中间量 $1$ 或 $\frac{3}{2}$ 比对。又如比较 $\sin 1$ 与 $\cos 1$，需借助单位圆或正弦、余弦在 $(0,\pi/2)$ 上的单调区间。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>作差后因式符号未讨论直接定号；作商时忽略分母为零或分母为负时不等号方向反转。</li>
+<li>滥用指数、对数函数的单调性，混淆底数 $0&lt;a&lt;1$ 与 $a&gt;1$ 时增减性的区别，导致大小关系完全反向。</li>
+<li>使用中间量 $0$ 或 $1$ 时未严谨确认各数与中间量的位置，如误认为 $\log_a x$（$0&lt;a&lt;1$）恒大于 $0$。</li>
+<li>构造函数求导后，不分析定义域或忽视导数的零点，凭感觉判断原函数单调性而致错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比较大小</td>
+<td>Comparison of magnitudes</td>
+<td>判断两个数学对象的大小关系</td>
+</tr>
+<tr>
+<td>作差法</td>
+<td>Difference method</td>
+<td>通过判断差的符号确定大小</td>
+</tr>
+<tr>
+<td>作商法</td>
+<td>Quotient method</td>
+<td>通过商与 1 的比较（结合分母符号）确定大小</td>
+</tr>
+<tr>
+<td>函数单调性</td>
+<td>Function monotonicity</td>
+<td>利用函数增减性传递自变量到函数值的大小顺序</td>
+</tr>
+<tr>
+<td>中间量法</td>
+<td>Intermediate value method</td>
+<td>引入 0、1 等基准量间接比较大小</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》函数、不等式主题</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">不等式的性质</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数</a></li>
+<li><a class="dead" title="未收录">导数与函数的单调性</a></li>
+<li><a class="dead" title="未收录">幂的大小比较</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-07.html">2009-文-07</a></li>
+<li><a href="../exam/数学/2013-文-08.html">2013-文-08</a></li>
+<li><a href="../exam/数学/2019-文-03.html">2019-文-03</a></li>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-07</a></li>
+<li><a href="../exam/数学/2022-理-10.html">2022-理-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAS判定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>SAS判定</h1><div class="review-mark" data-stem="145-SAS判定"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 全等三角形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: SAS判定, SAS congruence, 两边夹角判定, side-angle-side, SAS</p><h1>SAS判定</h1>
+<blockquote>
+<p><strong>课本定义</strong>：两边和它们的夹角分别相等的两个三角形全等（简写成"边角边"或"SAS"）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>SAS 是什么？</h3>
+<p>SAS = <strong>Side-Angle-Side</strong>（边-角-边）</p>
+<p><strong>关键词</strong>："夹角"——角必须被两条边<strong>夹在中间</strong>。</p>
+<p>$$AB = DE, \quad \angle B = \angle E, \quad BC = EF \implies \triangle ABC \cong \triangle DEF \ (\text{SAS})$$</p>
+<p>图示：$\angle B$ 是边 $AB$ 和边 $BC$ 的夹角。</p>
+<h3>夹角 vs 非夹角</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两边和<strong>夹角</strong>相等</td>
+<td>可以用 SAS ✓</td>
+</tr>
+<tr>
+<td>两边和<strong>非夹角</strong>相等</td>
+<td><strong>不能</strong>用 SAS（SSA 不是全等判定！）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：SSA（两边和一个非夹角相等）无法确定三角形全等，这是常见陷阱！</p>
+<h3>使用步骤</h3>
+<ol>
+<li>找两个三角形</li>
+<li>找出两对对应边相等</li>
+<li>确认<strong>夹在这两边中间</strong>的角也相等</li>
+<li>写全等式，注明（SAS）</li>
+</ol>
+<h3>例子</h3>
+<p>已知 $OA = OC$，$OB = OD$，$O$ 是 $AC$、$BD$ 的交点。</p>
+<p>在 $\triangle AOB$ 和 $\triangle COD$ 中：$OA = OC$，$\angle AOB = \angle COD$（对顶角），$OB = OD$</p>
+<p>∴ $\triangle AOB \cong \triangle COD$（SAS）</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定理</h3>
+<p><strong>SAS 判定定理</strong>（公理）：若 $AB = DE$，$\angle ABC = \angle DEF$，$BC = EF$，则 $\triangle ABC \cong \triangle DEF$。</p>
+<p>SAS 在欧几里得体系中通常作为<strong>公理</strong>（公理 4），是最基本的全等判定。</p>
+<h3>为什么 SSA 不成立？</h3>
+<p>已知两边 $a, b$ 和非夹角 $\angle A$（$A$ 对 $a$），对应的三角形可能有<strong>两个</strong>（当 $h &lt; a &lt; b$，$h$ 为高）。这种"二义性"使 SSA 无法唯一确定三角形。</p>
+<p>例外：直角三角形的斜边和直角边（HL 判定）可以确定全等。</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：已知 $AB = AD$，$\angle BAC = \angle DAC$，$AC$ 为公共边，证明 $BC = DC$。</p>
+<p>证明：在 $\triangle ABC$ 和 $\triangle ADC$ 中：</p>
+<p>$AB = AD$（已知），$\angle BAC = \angle DAC$（已知），$AC = AC$（公共边）</p>
+<p>∴ $\triangle ABC \cong \triangle ADC$（SAS）</p>
+<p>∴ $BC = DC$（对应边相等）✓</p>
+<p><strong>例题 2</strong>：四边形 $ABCD$ 中，$AB \parallel CD$，$AB = CD$，对角线 $AC$ 和 $BD$ 交于 $O$，证明 $OA = OC$。</p>
+<p>证明：因 $AB \parallel CD$，$\angle BAC = \angle DCA$（内错角），$\angle ABD = \angle CDB$（内错角）</p>
+<p>在 $\triangle AOB$ 和 $\triangle COD$ 中：$\angle OAB = \angle OCD$，$AB = CD$，$\angle ABD = \angle CDB$</p>
+<p>由 ASA，$\triangle AOB \cong \triangle COD$（此题实际用 ASA 更直接）</p>
+<p>∴ $OA = OC$ ✓</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>SSA 不是全等判定</strong>：两边和<strong>非</strong>夹角相等，不能推出全等。</li>
+<li>SAS 中的角必须是<strong>夹角</strong>：被两条已知边夹在中间。</li>
+<li>使用对顶角时，两边要在对顶角两侧——$OA = OC$，$OB = OD$，$\angle AOB = \angle COD$ 这组组合符合 SAS。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/146-SSS判定.html">SSS判定</a>：三边判定，最直接的全等条件</li>
+<li>→ <a href="../atoms/144-ASA-AAS-HL判定.html">ASA-AAS-HL判定</a>：角边角、角角边和直角三角形判定</li>
+<li>→ <a class="dead" title="未收录">全等三角形性质</a>：全等后推导结论</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAS 判定</td>
+<td>SAS congruence criterion</td>
+</tr>
+<tr>
+<td>夹角</td>
+<td>included angle</td>
+</tr>
+<tr>
+<td>非夹角</td>
+<td>non-included angle</td>
+</tr>
+<tr>
+<td>对顶角</td>
+<td>vertical angles</td>
+</tr>
+<tr>
+<td>公共边</td>
+<td>common side</td>
+</tr>
+<tr>
+<td>SSA（无效）</td>
+<td>SSA (not a valid criterion)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十二章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：欧几里得《几何原本》公理 4</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/146-SSS判定.html">SSS判定</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/144-ASA-AAS-HL判定.html">ASA-AAS-HL判定</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">全等图形</a></p>
+</li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+<li><a href="../atoms/146-SSS判定.html">SSS判定</a></li>
+<li><a href="../atoms/144-ASA-AAS-HL判定.html">ASA-AAS-HL判定</a></li>
+<li><a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a></li>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+</ul>
+</div>
+</body>
+</html>

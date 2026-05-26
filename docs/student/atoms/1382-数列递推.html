@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列递推</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列递推</h1><div class="review-mark" data-stem="1382-数列递推"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列递推</p><h1>数列递推</h1>
+<blockquote>
+<p><strong>一句话</strong>：由数列的初始项（或前几项）及项与项之间的等量递推关系式唯一确定数列的方式，称为数列递推。
+<strong>English</strong>: A sequence defined by an initial term (or terms) and a recurrence relation that determines subsequent terms.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：给定数列 ${a_n}$，若存在函数 $f$ 使得 $a_{n}=f(a_{n-1},a_{n-2},\dots,a_{n-k})$（$n&gt;k$），且前 $k$ 项已知，则称该数列为递推数列。高考中主要研究一阶递推：$a_{n+1}=f(a_n)$，给定 $a_1$ 可唯一确定数列。  </li>
+<li><strong>关键方法</strong>：<br />
+  （1）<strong>累加法</strong>：对于 $a_{n+1}-a_n=f(n)$，得 $a_n=a_1+\sum_{k=1}^{n-1} f(k)$，注意 $n\ge2$ 时求和上限。<br />
+  （2）<strong>累乘法</strong>：对于 $\dfrac{a_{n+1}}{a_n}=f(n)$，得 $a_n=a_1\prod_{k=1}^{n-1} f(k)$，同样 $n\ge2$。<br />
+  （3）<strong>构造法</strong>：对于 $a_{n+1}=p a_n+q$（$p\neq1$），设 $a_{n+1}+\lambda=p(a_n+\lambda)$，解得 $\lambda=\dfrac{q}{p-1}$，则 ${a_n+\lambda}$ 为等比数列。<br />
+  （4）<strong>取倒数法</strong>：对于分式递推如 $a_{n+1}=\dfrac{k a_n}{m a_n+n}$ 型，取倒数化为线性递推。<br />
+  （5）<strong>特征根法</strong>：对于二阶齐次线性递推 $a_{n+2}=p a_{n+1}+q a_n$，特征方程 $r^2-p r-q=0$。不等实根时 $a_n=A\cdot r_1^n+B\cdot r_2^n$；等根时 $a_n=(A+Bn)r_0^n$，由初值定 $A,B$。  </li>
+<li><strong>典型应用</strong>：高考常以“已知递推关系求通项公式”为第一问，第二问结合数列求和或不等式证明。例如：$a_1=1$，$a_{n+1}=2a_n+3$，用构造法得 $a_n=2^{n+1}-3$；又如 $a_{n+1}=a_n+2n+1$，用累加法求得 $a_n=n^2$。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>利用 $a_n$ 与 $S_n$ 的关系时忘记验证 $n=1$，直接把 $a_n=S_n-S_{n-1}$ 得到的关系式当作递推式，导致首项不满足。  </li>
+<li>构造等比数列时，常数 $\lambda$ 计算错误（如漏掉分母 $p-1$），或未检查 $p=1$ 的特殊情形。  </li>
+<li>用特征根法处理二阶递推时，误将重根公式用于不等根情况，或忘记用初始项求出系数 $A,B$。  </li>
+<li>累加（乘）时确定项数出错，对于 $n\ge2$ 的通项忘记单独验证 $n=1$ 时的公式一致性。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>递推关系</td>
+<td>recurrence relation</td>
+<td>确定数列项与项之间等量关系的式子</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>general term formula</td>
+<td>由 $n$ 直接计算 $a_n$ 的表达式</td>
+</tr>
+<tr>
+<td>初始条件</td>
+<td>initial condition</td>
+<td>递推所需的起始项，如 $a_1$ 或 $a_1,a_2$</td>
+</tr>
+<tr>
+<td>构造法</td>
+<td>method of constructing an auxiliary sequence</td>
+<td>通过引入新数列将非等差/等比递推转化为等差/等比</td>
+</tr>
+<tr>
+<td>累加法</td>
+<td>method of summation</td>
+<td>适用于差分为关于 $n$ 的函数型递推</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-18，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a class="dead" title="未收录">等比数列</a></li>
+<li><a href="../atoms/384-数列通项公式.html">通项公式</a></li>
+<li><a class="dead" title="未收录">数列求和</a></li>
+<li><a href="../atoms/386-数学归纳法-初步.html">数学归纳法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-14.html">2008-理-14</a></li>
+<li><a href="../exam/数学/2013-文-15.html">2013-文-15</a></li>
+<li><a href="../exam/数学/2014-理-20.html">2014-理-20</a></li>
+<li><a href="../exam/数学/2015-文-19.html">2015-文-19</a></li>
+<li><a href="../exam/数学/2020-文-16.html">2020-文-16</a></li>
+<li><a class="dead" title="未收录">2023-北京-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

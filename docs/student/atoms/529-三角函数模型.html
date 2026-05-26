@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数模型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>三角函数模型</h1><div class="review-mark" data-stem="529-三角函数模型"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 三角函数模型, Trigonometric Models</p><h1>三角函数模型</h1>
+<blockquote>
+<p><strong>一句话</strong>：三角函数模型是借助正弦、余弦等三角函数，对具有周期性变化规律的实际情境进行定量描述的数学模型。<br />
+<strong>English</strong>: A trigonometric function model is a mathematical model that uses sine, cosine, or other trigonometric functions to quantitatively describe phenomena with periodic behavior.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与形式</strong><br />
+三角函数模型的标准形式为<br />
+$$
+y = A\sin(\omega x + \varphi) + b \quad \text{或} \quad y = A\cos(\omega x + \varphi) + b
+$$
+其中 $A$ 为振幅（反映波动高度），$\omega$ 为角频率，周期 $T = \frac{2\pi}{|\omega|}$，$\varphi$ 为初相（决定 $x=0$ 时的相位），$b$ 为纵向位移（平衡位置）。物理中常用的简谐振动方程 $x = A\cos(\omega t + \varphi)$ 即为此类模型。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>由数据或图像求解析式</strong>（高考核心）<br />
+   ① 求 $A$ 与 $b$：$A = \frac{f_{\max} - f_{\min}}{2}$，$b = \frac{f_{\max} + f_{\min}}{2}$。<br />
+   ② 求 $\omega$：先由图像或文字确定周期 $T$，则 $\omega = \frac{2\pi}{T}$。<br />
+   ③ 求 $\varphi$：代入已知点坐标（通常选最值点或平衡位置点），利用五点法对应关系解初相，注意 $\varphi$ 的常用范围（如 $|\varphi| \le \pi$）。<br />
+2. <strong>解决实际应用问题</strong><br />
+   建立坐标系，将几何量（高度、距离、电流等）表为时间或角度的三角函数，再通过解方程或不等式求特定时刻或区间。</p>
+<p><strong>典型应用（高考设问）</strong><br />
+- 给定一段正弦型曲线图像，求函数表达式，并讨论单调区间、对称性等；<br />
+- 实际情境类，如“摩天轮上座椅离地高度 $h$（米）与时间 $t$（秒）满足 $h = 40\sin\left(\frac{\pi}{30}t - \frac{\pi}{2}\right) + 50$，求最高点时间和高度”“当 $h \ge 70$ 时，求持续时间”；<br />
+- 结合导数考查最值（如交流电瞬时功率 $p = UI\sin\omega t \cos\omega t$ 的最值问题，简化为正弦型函数求最值）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>$A$ 的正负与振幅</strong>：振幅一般取正数 $|A|$，若明确给出 $A$ 为负，可化为 $|A|\sin(\omega x + \varphi + \pi)$，切忌直接视 $A$ 为振幅而导致最值错误。  </li>
+<li><strong>初相 $\varphi$ 的求解</strong>：直接代入点坐标解三角方程时，忽略该点处于“五点”中的具体位置（如上升零点、峰点），导致 $\varphi$ 多解或错选范围（待家长核对）。  </li>
+<li><strong>周期与角频率</strong>：常混淆 $f = \frac{1}{T}$（频率）与 $\omega = \frac{2\pi}{T}$（角频率），计算时用错倍数。  </li>
+<li><strong>实际定义域限制</strong>：应用题中 $x$（时间、角度等）有取 $x\ge 0$ 等限制，解三角不等式求区间时，未排除负值或超出周期的重复解，导致答案多出或遗漏。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>函数最大偏移平衡位置的距离，即 $</td>
+</tr>
+<tr>
+<td>角频率</td>
+<td>angular frequency</td>
+<td>参数 $\omega$，与周期关系为 $\omega = 2\pi/T$</td>
+</tr>
+<tr>
+<td>初相</td>
+<td>initial phase</td>
+<td>参数 $\varphi$，决定 $x=0$ 时的状态</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>函数值重复出现的最小正间隔，$T = 2\pi/</td>
+</tr>
+<tr>
+<td>相位</td>
+<td>phase</td>
+<td>括号内的整体 $\omega x + \varphi$，描述波动的位置</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：（待主会话核对教材索引）  </li>
+<li><strong>课标</strong>：🚧  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/612-三角函数的图像与性质.html">三角函数的图像与性质</a></li>
+<li><a class="dead" title="未收录">三角函数的最值与值域</a></li>
+<li><a href="../atoms/589-解三角形.html">解三角形</a></li>
+<li><a class="dead" title="未收录">函数模型及其应用</a></li>
+<li><a class="dead" title="未收录">导数的实际应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-04.html">2010-理-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

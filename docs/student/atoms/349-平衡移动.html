@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平衡移动</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平衡移动</h1><div class="review-mark" data-stem="349-平衡移动"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平衡移动, equilibrium shift, 勒夏特列原理, Le Chatelier&#x27;s principle</p><h1>平衡移动</h1>
+<blockquote>
+<p><strong>一句话</strong>：改变影响平衡的条件（浓度、温度、压强），平衡向能减弱该改变的方向移动（勒夏特列原理）。
+<strong>English</strong>: When conditions affecting equilibrium (concentration, temperature, pressure) are changed, the equilibrium shifts to counteract the change (Le Chatelier's principle).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>化学平衡移动</strong>：可逆反应处于平衡状态时，若某一条件改变导致 $Q \neq K$，则正逆反应速率暂时不等，反应向使 $Q \rightarrow K$ 的方向进行，直至建立新平衡的过程。</p>
+<p><strong>勒夏特列原理</strong>（Le Chatelier's principle，1884年）：若对平衡体系施加外部影响，体系会自发向<strong>减弱</strong>该影响的方向移动。</p>
+<h3>公式 / 方程式</h3>
+<p>以 $\text{N}_2(g) + 3\text{H}_2(g) \rightleftharpoons 2\text{NH}_3(g)$，$\Delta H = -92\ \text{kJ/mol}$ 为例：</p>
+<table>
+<thead>
+<tr>
+<th>改变条件</th>
+<th>Q 与 K 的关系</th>
+<th>移动方向</th>
+<th>新平衡特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>增大 [N₂]</td>
+<td>Q &lt; K</td>
+<td>正向</td>
+<td>NH₃ 增多，[N₂] 仍高于原平衡</td>
+</tr>
+<tr>
+<td>减小 [NH₃]</td>
+<td>Q &lt; K</td>
+<td>正向</td>
+<td>NH₃ 补充恢复</td>
+</tr>
+<tr>
+<td>升温</td>
+<td>K 减小，Q &gt; K</td>
+<td>逆向</td>
+<td>NH₃ 减少，K 减小</td>
+</tr>
+<tr>
+<td>增大压强</td>
+<td>Q &lt; K（气体减少方向）</td>
+<td>正向</td>
+<td>NH₃ 增多，压强仍高于原平衡</td>
+</tr>
+<tr>
+<td>加催化剂</td>
+<td>Q = K（不变）</td>
+<td>不移动</td>
+<td>更快达到相同平衡</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：对于 $\text{CO}(g) + \text{H}_2\text{O}(g) \rightleftharpoons \text{CO}_2(g) + \text{H}_2(g)$，$\Delta H &lt; 0$：</p>
+<p>(1) 升温：平衡逆向移动，CO₂ 和 H₂ 减少，$K$ 减小<br />
+(2) 增压（缩小体积）：$\Delta n_g = 0$，平衡不移动，各物质浓度等比增大，$K$ 不变<br />
+(3) 加入更多 CO：Q &lt; K，平衡正向移动，H₂O 转化率升高，CO 转化率降低</p>
+<h3>易错点</h3>
+<ul>
+<li>勒夏特列原理是"减弱"影响，不是"消除"影响——新平衡与原平衡不同</li>
+<li>催化剂不影响平衡位置（$K$ 不变），只加快达到平衡</li>
+<li>对 $\Delta n_g = 0$ 的反应，改变压强不移动平衡</li>
+<li>升温必然使 $K$ 改变（放热反应 $K$ 减小，吸热反应 $K$ 增大）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平衡移动</td>
+<td>equilibrium shift</td>
+</tr>
+<tr>
+<td>勒夏特列原理</td>
+<td>Le Chatelier's principle</td>
+</tr>
+<tr>
+<td>正向移动</td>
+<td>shift to the right / forward shift</td>
+</tr>
+<tr>
+<td>逆向移动</td>
+<td>shift to the left / reverse shift</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>According to Le Chatelier's principle, adding more reactant shifts the equilibrium to the right.（根据勒夏特列原理，增加更多反应物使平衡向右移动。）</li>
+<li>A catalyst does not shift the equilibrium; it only speeds up the rate at which equilibrium is reached.（催化剂不使平衡移动，只加快达到平衡的速率。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"勒夏特列原理"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/342-化学平衡常数.html">化学平衡常数</a></li>
+<li><a class="dead" title="未收录">浓度对平衡影响</a></li>
+<li><a class="dead" title="未收录">温度对平衡影响</a></li>
+<li><a class="dead" title="未收录">压强对平衡影响</a></li>
+<li><a href="../atoms/352-浓度商Q.html">浓度商Q</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2016-北京-05</a></li>
+<li><a href="../exam/化学/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a></li>
+<li><a class="dead" title="未收录">2020-北京-10</a></li>
+<li><a class="dead" title="未收录">2021-湖南-11</a></li>
+<li><a class="dead" title="未收录">2024-北京-10</a></li>
+<li><a class="dead" title="未收录">2024-北京-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

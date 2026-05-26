@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凝胶浓度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>凝胶浓度</h1><div class="review-mark" data-stem="470-凝胶浓度"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 凝胶浓度</p><h1>凝胶浓度</h1>
+<blockquote>
+<p><strong>一句话</strong>：凝胶浓度指聚丙烯酰胺凝胶中单体（丙烯酰胺与甲叉双丙烯酰胺）的总质量百分比（%T），它决定了凝胶的孔径大小，从而直接控制电泳分离不同分子量生物大分子（如蛋白质）的分辨范围。
+<strong>English</strong>: Gel concentration refers to the total percentage (w/v) of acrylamide and bis-acrylamide monomers in a polyacrylamide gel, which determines the pore size and thus the effective separation range of biomolecules (such as proteins) during electrophoresis.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+凝胶浓度在生物学科中特指聚丙烯酰胺凝胶电泳（PAGE）中的核心参数 %T。
+- <strong>总单体浓度 (%T)</strong>：表示丙烯酰胺 (Acr) 与交联剂甲叉双丙烯酰胺 (Bis) 的总质量体积百分比。
+  公式：<code>%T = [ (Acr (g) + Bis (g) ) / 总体积 (mL) ] × 100%</code>
+- <strong>交联度 (%C)</strong>：表示交联剂占总单体的质量百分比。
+  公式：<code>%C = [ Bis (g) / (Acr (g) + Bis (g)) ] × 100%</code>
+- <strong>孔径原理</strong>：%T 越高，凝胶孔径越小。这使得凝胶像分子筛一样，在电场下对不同分子量的蛋白质产生不同阻力：小分子蛋白跑得快，大分子蛋白跑得慢。</p>
+<p><strong>关键方法</strong>
+1.  <strong>根据目标分离范围选择浓度</strong>：这是高考中实验设计类题目的常见考点。分离高分子量蛋白质（&gt;100 kDa）需配低浓度胶（如 6%–8%），分离低分子量蛋白质（&lt;30 kDa）需配高浓度胶（如 12%–15%）。
+2.  <strong>SDS-PAGE 配合使用</strong>：在十二烷基硫酸钠 (SDS) 存在下，蛋白质变性并带上均匀负电荷，此时蛋白质的迁移率仅取决于其<strong>相对分子质量大小</strong>，而非原天然电荷或形状，凝胶浓度直接决定了分子量的线性分离区间。</p>
+<p><strong>典型应用</strong>
+- <strong>SDS-PAGE 分离特定蛋白</strong>：若实验目的是分离并检测分子量约为 50 kDa 的目标蛋白，通常配制 10% 的分离胶，因为此浓度对 30–100 kDa 区间的蛋白分辨率最佳。
+- <strong>梯度凝胶电泳</strong>：高考情境下可能出现“从 4% 到 20% 梯度凝胶”的说法。这种凝胶浓度由高到低连续变化，孔径向凝胶底部逐渐缩小，能同时分离分子量跨度极大的蛋白质混合物，适合复杂样品的整体分析。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆浓度与分离能力的关系</strong>：常误认为“凝胶浓度越大，分离效果越好”。事实上，浓度必须与目标分子量匹配。若蛋白分子量很大（如 200 kDa），使用高浓度凝胶（如 15%）会导致蛋白完全堵在加样孔无法进入分离胶，导致实验失败。</li>
+<li><strong>分不清 %T 与 %C 的功能区分</strong>：%T 主要控制<strong>孔径大小</strong>，从而决定筛分范围；%C 主要影响凝胶的<strong>机械强度和韧性</strong>（如高交联度胶脆、易碎，低交联度胶软）。考题中若出现“改变凝胶多孔性”应选调节 %T。</li>
+<li><strong>忽视浓缩胶与分离胶的浓度差异</strong>：在常规垂直电泳中，上层是低浓度（约 5%）的浓缩胶（大孔径，pH 6.8），下层是不同实验用途的分离胶（小孔径，pH 8.8）。浓缩胶的作用是堆积样品使其处于同一起跑线，而非用于分子筛分。学生易将这两种功能混淆。</li>
+<li><strong>误认为天然 PAGE 中迁移率仅由分子量决定</strong>：只有在 SDS-PAGE 中，迁移率才主要取决于亚基分子量。若题目描述的是不含 SDS 的“非变性凝胶电泳”，蛋白迁移率还受其天然<strong>电荷和形状</strong>影响，此时单纯调节凝胶浓度无法精确测出分子量。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>凝胶浓度</td>
+<td>Gel Concentration</td>
+<td>丙烯酰胺单体的总质量体积比，决定孔径</td>
+</tr>
+<tr>
+<td>SDS-聚丙烯酰胺凝胶电泳</td>
+<td>SDS-PAGE</td>
+<td>利用 SDS 消除电荷差异，仅按分子量分离蛋白质</td>
+</tr>
+<tr>
+<td>分子筛效应</td>
+<td>Molecular Sieving Effect</td>
+<td>凝胶孔径筛选不同大小分子的原理</td>
+</tr>
+<tr>
+<td>丙烯酰胺</td>
+<td>Acrylamide</td>
+<td>凝胶的单体成分，具有神经毒性（未聚合时）</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/532-SDS-聚丙烯酰胺凝胶电泳.html">SDS-聚丙烯酰胺凝胶电泳</a></li>
+<li><a class="dead" title="未收录">蛋白质的分离纯化</a></li>
+<li><a class="dead" title="未收录">蛋白质的相对分子质量测定</a></li>
+<li><a class="dead" title="未收录">电泳迁移率</a></li>
+<li><a class="dead" title="未收录">蛋白质变性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/生物/2024-辽宁-07.html">2024-辽宁-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

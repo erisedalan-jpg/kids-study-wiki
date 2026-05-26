@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球的表面积体积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>球的表面积体积</h1><div class="review-mark" data-stem="343-球的表面积体积"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 球的表面积体积, sphere surface area volume, 球体积, 球面积, 球的面积与体积</p><h2>🎓 球的表面积与体积</h2>
+<h3>球的基本概念</h3>
+<p><strong>球</strong>（sphere）：空间中到定点（<strong>球心</strong>）距离等于定值（<strong>半径</strong> $r$）的所有点的集合。</p>
+<ul>
+<li>半径：球心到球面上任意点的距离 $r$</li>
+<li>直径：$d = 2r$</li>
+<li>大圆：过球心的截面所得圆（半径等于 $r$）</li>
+</ul>
+<h3>公式</h3>
+<p>$$\text{球的表面积} \quad S = 4\pi r^2$$</p>
+<p>$$\text{球的体积} \quad V = \frac{4}{3}\pi r^3$$</p>
+<p><strong>记忆技巧</strong>：$S = 4\pi r^2$（4个大圆面积）；$V = \dfrac{4}{3}\pi r^3$（比 $S$ 多一个 $\dfrac{r}{3}$）</p>
+<h3>公式推导思路（祖暅原理）</h3>
+<p>设球半径 $r$，在高度 $h$ 处的截面圆半径 $\rho = \sqrt{r^2 - h^2}$，截面积 $\pi(r^2 - h^2)$。</p>
+<p>圆柱 $-$ 两圆锥（半径 $r$，高 $r$）在高 $h$ 处截面积 $= \pi r^2 - \pi h^2 = \pi(r^2 - h^2)$，与球截面积相同。</p>
+<p>由祖暅原理：$V_{\text{球}} = V_{\text{圆柱}} - 2V_{\text{圆锥}} = \pi r^2 \cdot 2r - 2 \times \dfrac{1}{3}\pi r^2 \cdot r = \dfrac{4}{3}\pi r^3$</p>
+<h3>球与多面体的关系</h3>
+<p><strong>外接球</strong>（circumscribed sphere）：过多面体所有顶点的球，多面体内切于球。</p>
+<p><strong>内切球</strong>（inscribed sphere）：与多面体所有面相切的球，球内切于多面体。</p>
+<p>常用关系：
+- 正方体（边长 $a$）的外接球半径：$R = \dfrac{\sqrt{3}}{2}a$（体对角线的一半）
+- 正方体内切球半径：$r = \dfrac{a}{2}$
+- 正四面体（边长 $a$）外接球半径：$R = \dfrac{\sqrt{6}}{4}a$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：半径 $r = 3$ 的球，求表面积和体积。</p>
+<p><strong>解</strong>：$S = 4\pi \times 9 = 36\pi$，$V = \dfrac{4}{3}\pi \times 27 = 36\pi$</p>
+<p>（此例中 $S = V$，$r = 3$ 的特殊情况）</p>
+<p><strong>例2</strong>：正方体边长为 $2$，求外接球半径和体积。</p>
+<p><strong>解</strong>：体对角线长 $= 2\sqrt{3}$，$R = \sqrt{3}$，$V = \dfrac{4}{3}\pi(\sqrt{3})^3 = 4\sqrt{3}\pi$</p>
+<p><strong>例3</strong>：圆柱的底面直径等于高，圆柱内切球半径为 $r$，求圆柱体积。</p>
+<p><strong>解</strong>：球半径 $= r$，圆柱半径 $= r$，高 $= 2r$，$V_{\text{柱}} = \pi r^2 \times 2r = 2\pi r^3$</p>
+<h3>易错点</h3>
+<ul>
+<li>$S = 4\pi r^2$ 是球<strong>表面积</strong>（不是截面圆的面积）</li>
+<li>外接球直径 $=$ 空间对角线，内切球直径 $=$ 边长（正方体特例）</li>
+<li>体积公式中 $r^3$，不要写成 $r^2$</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/球_(几何)">球（几何）- 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/934-棱柱的结构特征.html">棱柱的结构特征</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/362-随机抽样-简单.html">随机抽样-简单</a></p>
+</li>
+<li>
+<p><a href="../atoms/347-空间几何体-旋转体.html">空间几何体-旋转体</a></p>
+</li>
+<li><a href="../atoms/349-空间几何体表面积.html">空间几何体表面积</a></li>
+<li><a href="../atoms/348-空间几何体体积.html">空间几何体体积</a></li>
+<li><a href="../atoms/350-空间点直线平面位置关系.html">空间点直线平面位置关系</a></li>
+<li><a href="../atoms/354-空间距离.html">空间距离</a></li>
+</ul>
+</div>
+</body>
+</html>

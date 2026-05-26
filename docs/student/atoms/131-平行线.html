@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平行线</h1><div class="review-mark" data-stem="131-平行线"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 相交线与平行线]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平行线, parallel lines, 平行, parallel</p><h2>课本定义</h2>
+<p>在同一平面内，不相交的两条直线叫做<strong>平行线</strong>，记作 l₁ ∥ l₂（读作"l₁ 平行于 l₂"）。平行线有<strong>判定</strong>（怎么判断两线平行）和<strong>性质</strong>（两线平行能推出什么）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"永不相遇的两条路"</h3>
+<p><strong>平行线</strong>：在同一个平面上，两条直线无论怎么延伸，永远<strong>不相交</strong>、保持<strong>等距</strong>。</p>
+<p><strong>生活中的平行线：</strong>
+| 场景 | 说明 |
+|------|------|
+| 铁路轨道 | 两条铁轨永不相交 |
+| 五线谱 | 五条线互相平行 |
+| 跑道 | 跑道的两边线平行 |
+| 课本的横线 | 每行横线互相平行 |
+| 楼梯扶手 | 上下两根扶手平行 |</p>
+<p><strong>用截线"检验"平行</strong></p>
+<p>当第三条线（截线）切过两条平行线，会产生一些特别的角：</p>
+<pre><code>         /
+    ∠1  / ∠2
+———————/————————  l₁
+  ∠3  / ∠4
+     /
+∠5  / ∠6
+———/————————————  l₂
+∠7/ ∠8
+ /
+</code></pre>
+<ul>
+<li><strong>同位角</strong>（F形）：∠1和∠5，∠2和∠6 —— 平行时，同位角相等</li>
+<li><strong>内错角</strong>（Z形）：∠3和∠6，∠4和∠5 —— 平行时，内错角相等</li>
+<li><strong>同旁内角</strong>（U形）：∠3和∠5，∠4和∠6 —— 平行时，同旁内角互补</li>
+</ul>
+<p><strong>口诀：</strong> "同位角F形等，内错角Z形等，同旁内角U形补"</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>平行线</strong>：在同一平面内，两条直线没有公共点（不相交），称两直线互相平行，记 l₁ ∥ l₂。</p>
+<p><strong>注</strong>：必须"在同一平面内"——空间中两条不相交的直线可能是异面直线，不一定平行。</p>
+<h3>平行线的判定（由角推平行）</h3>
+<p>设截线与两直线 l₁、l₂ 相交：</p>
+<table>
+<thead>
+<tr>
+<th>判定方法</th>
+<th>条件</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同位角相等</td>
+<td>∠F = ∠F'</td>
+<td>l₁ ∥ l₂</td>
+</tr>
+<tr>
+<td>内错角相等</td>
+<td>∠Z = ∠Z'</td>
+<td>l₁ ∥ l₂</td>
+</tr>
+<tr>
+<td>同旁内角互补</td>
+<td>∠U + ∠U' = 180°</td>
+<td>l₁ ∥ l₂</td>
+</tr>
+<tr>
+<td>同一直线的垂线</td>
+<td>l₁⊥t，l₂⊥t</td>
+<td>l₁ ∥ l₂</td>
+</tr>
+</tbody>
+</table>
+<h3>平行线的性质（由平行推角）</h3>
+<p>设 l₁ ∥ l₂，截线与两线相交：</p>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同位角相等</td>
+<td>∠F = ∠F'</td>
+</tr>
+<tr>
+<td>内错角相等</td>
+<td>∠Z = ∠Z'</td>
+</tr>
+<tr>
+<td>同旁内角互补</td>
+<td>∠U + ∠U' = 180°</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判定与性质的区别</strong>：
+- <strong>判定</strong>：已知角关系 → 推出平行（条件→结论）
+- <strong>性质</strong>：已知平行 → 推出角关系（条件→结论）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 已知 l₁ ∥ l₂，截线与 l₁ 的同位角为 70°，求截线与 l₂ 所成的同位角。</p>
+<p>解：由平行线性质，同位角相等，故截线与 l₂ 的同位角 = 70°。</p>
+<p><strong>例题2：</strong> 已知两直线被截线所截，内错角分别为 (2x+10)° 和 (3x-20)°，判断两线是否平行。</p>
+<p>解：若平行，则内错角相等：2x+10 = 3x-20，x = 30。
+内错角均为 70°。代入验证：2(30)+10=70，3(30)-20=70，相等，故两线平行。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>平行必须在同一平面内</strong>，空间异面直线≠平行</li>
+<li><strong>判定和性质方向相反</strong>，不要混用</li>
+<li><strong>同旁内角补</strong>（不是相等），与同位角/内错角区别</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>平行线
+├── 判定 ← 同位角、内错角、同旁内角
+├── 性质 → 同位角、内错角、同旁内角
+├── 特殊：平行+垂直 → 两平行线间距离
+└── 三角形内角和 → 借助平行辅助线证明
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行线</td>
+<td>parallel lines</td>
+<td>不相交的两直线</td>
+</tr>
+<tr>
+<td>截线</td>
+<td>transversal</td>
+<td>切过两直线的第三条线</td>
+</tr>
+<tr>
+<td>同位角</td>
+<td>corresponding angles</td>
+<td>F形，平行时相等</td>
+</tr>
+<tr>
+<td>内错角</td>
+<td>alternate interior angles</td>
+<td>Z形，平行时相等</td>
+</tr>
+<tr>
+<td>同旁内角</td>
+<td>co-interior angles</td>
+<td>U形，平行时互补</td>
+</tr>
+<tr>
+<td>平行</td>
+<td>parallel</td>
+<td>不相交</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第五章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>拓展</strong>：欧几里得平行公设；非欧几何中平行的拓展</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/139-相交线.html">相交线</a></li>
+<li><a href="../atoms/125-垂线.html">垂线</a></li>
+<li><a href="../atoms/128-对顶角.html">对顶角</a></li>
+<li><a href="../atoms/142-邻补角.html">邻补角</a></li>
+<li><a href="../atoms/124-命题.html">命题</a></li>
+<li><a href="../atoms/126-定理.html">定理</a></li>
+<li><a href="../atoms/122-几何证明入门.html">几何证明入门</a></li>
+<li><a href="../atoms/037-推理.html">推理</a></li>
+</ul>
+</div>
+</body>
+</html>

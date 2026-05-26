@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>凸透镜</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>凸透镜</h1><div class="review-mark" data-stem="007-凸透镜"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八上, 透镜及其应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 凸透镜, convex lens, 会聚透镜</p><h1>凸透镜</h1>
+<blockquote>
+<p><strong>一句话</strong>：凸透镜是中间厚、边缘薄的透镜，能使光线<strong>会聚</strong>，也叫会聚透镜。
+<strong>English</strong>: A convex lens is thicker in the middle and thinner at the edges, and can converge light rays; it is also called a converging lens.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>放大镜你用过吗？放大镜就是一块<strong>凸透镜</strong>！中间鼓起来、边缘薄薄的，摸起来像个小山包。</p>
+<p><strong>凸透镜的神奇本领：</strong></p>
+<ol>
+<li><strong>放大</strong>：把放大镜放在文字上面，字变大了！</li>
+<li><strong>聚焦</strong>：晴天把放大镜对准太阳，光会聚集在一点——这个点叫<strong>焦点</strong>，很热，能点燃纸！</li>
+<li><strong>成像</strong>：照相机镜头就是凸透镜，能把大场景"缩小"到胶片上。</li>
+</ol>
+<p><strong>生活中的凸透镜：</strong>
+- 放大镜
+- 眼镜（远视眼镜）
+- 照相机镜头
+- 望远镜镜头（目镜）
+- 显微镜的目镜</p>
+<p><strong>试一试：</strong>把放大镜放在阳光下，调整高度，找到最小最亮的光点——那就是焦点！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>凸透镜</strong>（Convex Lens）：中间厚、边缘薄的透镜。由于折射，平行光线经过凸透镜后会聚于<strong>焦点</strong>，因此也称<strong>会聚透镜</strong>。</p>
+<h3>基本概念</h3>
+<ul>
+<li><strong>主轴</strong>：过透镜两球面球心的直线</li>
+<li><strong>光心</strong>（O）：主轴与透镜中心的交点，过光心的光线不偏折</li>
+<li><strong>焦点</strong>（F）：平行主轴的光经凸透镜折射后会聚的点（凸透镜有两个焦点，在两侧对称）</li>
+<li><strong>焦距</strong>（f）：焦点到光心的距离</li>
+</ul>
+<h3>三条特殊光线</h3>
+<table>
+<thead>
+<tr>
+<th>光线</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行主轴入射</td>
+<td>折射后过焦点</td>
+</tr>
+<tr>
+<td>过光心入射</td>
+<td>方向不变，直线通过</td>
+</tr>
+<tr>
+<td>过焦点入射</td>
+<td>折射后平行主轴</td>
+</tr>
+</tbody>
+</table>
+<h3>凸透镜成像规律</h3>
+<table>
+<thead>
+<tr>
+<th>物距 u 范围</th>
+<th>像的性质</th>
+<th>像距 v</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u &gt; 2f</td>
+<td>倒立、缩小、实像</td>
+<td>f &lt; v &lt; 2f</td>
+<td>照相机</td>
+</tr>
+<tr>
+<td>u = 2f</td>
+<td>倒立、等大、实像</td>
+<td>v = 2f</td>
+<td>—</td>
+</tr>
+<tr>
+<td>f &lt; u &lt; 2f</td>
+<td>倒立、放大、实像</td>
+<td>v &gt; 2f</td>
+<td>投影仪</td>
+</tr>
+<tr>
+<td>u = f</td>
+<td>不成像</td>
+<td>v → ∞</td>
+<td>探照灯</td>
+</tr>
+<tr>
+<td>u &lt; f</td>
+<td>正立、放大、虚像</td>
+<td>—</td>
+<td>放大镜</td>
+</tr>
+</tbody>
+</table>
+<p><strong>口诀</strong>：一倍焦距分虚实，二倍焦距分大小，实像倒立虚像正。</p>
+<h3>薄透镜公式（高中知识）</h3>
+<p>$$\frac{1}{f} = \frac{1}{u} + \frac{1}{v}$$</p>
+<p>其中：$f$ = 焦距，$u$ = 物距（物到光心），$v$ = 像距（像到光心）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：用焦距为 10 cm 的凸透镜，将物体放在距透镜 30 cm 处，成什么像？</p>
+<p>已知：$f = 10$ cm，$u = 30$ cm = 3f &gt; 2f</p>
+<p>结论：成倒立、缩小的实像（照相机原理）</p>
+<p><strong>例2</strong>：用凸透镜观察文字（作为放大镜），物距应如何放置？</p>
+<p>应使 $u &lt; f$（物距小于焦距），成正立、放大的虚像。</p>
+<p><strong>易错点：</strong>
+- 实像可以用光屏接收，虚像不能
+- 凸透镜焦距越小（透镜越弯曲），会聚能力越强
+- 实像成在光屏上，是倒立的；虚像通过透镜观看，是正立的</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>凸透镜</td>
+<td>convex lens</td>
+<td>n.</td>
+<td>A magnifying glass is a convex lens.</td>
+</tr>
+<tr>
+<td>焦点</td>
+<td>focal point / focus</td>
+<td>n.</td>
+<td>Light converges at the focal point.</td>
+</tr>
+<tr>
+<td>焦距</td>
+<td>focal length</td>
+<td>n.</td>
+<td>The focal length of this lens is 10 cm.</td>
+</tr>
+<tr>
+<td>实像</td>
+<td>real image</td>
+<td>n.</td>
+<td>A camera forms a real image on film.</td>
+</tr>
+<tr>
+<td>虚像</td>
+<td>virtual image</td>
+<td>n.</td>
+<td>A magnifying glass forms a virtual image.</td>
+</tr>
+<tr>
+<td>会聚</td>
+<td>converge</td>
+<td>v.</td>
+<td>Convex lenses converge light rays.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>凸透镜能使平行光会聚到焦点。</td>
+<td>A convex lens converges parallel light to the focal point.</td>
+</tr>
+<tr>
+<td>照相机镜头是凸透镜，成倒立缩小的实像。</td>
+<td>A camera lens is a convex lens that forms an inverted, reduced real image.</td>
+</tr>
+<tr>
+<td>物距小于焦距时，凸透镜起放大镜作用。</td>
+<td>When the object distance is less than the focal length, a convex lens acts as a magnifier.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级上册.pdf</a> 第5章第1-2节（待家长核对具体页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 透镜及其应用</li>
+<li><strong>百科</strong>：维基百科"凸透镜"；中文百科"透镜"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/024-平面镜成像.html">平面镜成像</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/037-焦点焦距.html">焦点焦距</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">凹透镜</a></p>
+</li>
+<li><a href="../atoms/037-焦点焦距.html">焦点焦距</a></li>
+<li><a class="dead" title="未收录">凸透镜成像规律</a></li>
+<li><a class="dead" title="未收录">照相机</a></li>
+<li><a class="dead" title="未收录">放大镜-物理</a></li>
+<li><a href="../atoms/044-近视眼远视眼.html">近视眼远视眼</a></li>
+<li><a class="dead" title="未收录">显微镜与望远镜</a></li>
+</ul>
+</div>
+</body>
+</html>

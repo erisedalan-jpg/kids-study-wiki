@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行四边形定义性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平行四边形定义性质</h1><div class="review-mark" data-stem="195-平行四边形定义性质"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 平行四边形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平行四边形定义性质, parallelogram properties, 平行四边形, 平行四边形性质, 平行四边形的性质</p><h1>平行四边形定义性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：两组对边分别平行的四边形叫平行四边形，它的对边相等、对角相等、对角线互相平分。
+<strong>English</strong>: A parallelogram has two pairs of parallel sides; its opposite sides are equal, opposite angles are equal, and diagonals bisect each other.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>定义</h3>
+<p>两组对边分别平行的四边形，记作 $\square ABCD$（读作"平行四边形 ABCD"）。</p>
+<h3>三条基本性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+<th>简记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对边</td>
+<td>$AB=CD$，$BC=AD$（对边相等）</td>
+<td>对边等</td>
+</tr>
+<tr>
+<td>对角</td>
+<td>$\angle A=\angle C$，$\angle B=\angle D$（对角相等）</td>
+<td>对角等</td>
+</tr>
+<tr>
+<td>对角线</td>
+<td>$OA=OC$，$OB=OD$（对角线互相平分）</td>
+<td>对角线互平分</td>
+</tr>
+</tbody>
+</table>
+<p>另外：相邻两角互补，$\angle A+\angle B=180°$。</p>
+<h3>面积公式</h3>
+<p>$$S_{\square} = \text{底} \times \text{高} = ah$$</p>
+<p>其中"高"是底边到对边的垂直距离。</p>
+<h3>形象记忆</h3>
+<p>把矩形"推斜"就变成了平行四边形——对边平行这个本质不变，直角消失了，但对边等长、对角相等、对角线互平分都保留下来。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义与性质推导</h3>
+<p><strong>定义</strong>：若四边形 $ABCD$ 中 $AB\parallel CD$ 且 $BC\parallel AD$，则称 $ABCD$ 为平行四边形。</p>
+<p><strong>性质1（对边）</strong> 证明：连对角线 $AC$，$\triangle ABC \cong \triangle CDA$（ASA：$\angle BAC=\angle DCA$，$AC$公共，$\angle BCA=\angle DAC$），故 $AB=CD$，$BC=DA$。</p>
+<p><strong>性质2（对角）</strong>：由上述全等，$\angle B=\angle D$；同理 $\angle A=\angle C$。</p>
+<p><strong>性质3（对角线互平分）</strong>：$\triangle AOB \cong \triangle COD$（AAS），故 $OA=OC$，$OB=OD$。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：$\square ABCD$ 中，$AB=6$，$\angle A=60°$，$AD=4$，求对角线 $AC$ 的长。</p>
+<p>用余弦定理（高中）或辅助线。八下：作 $AH \perp BC$（高），结合勾股定理。（具体数值待家长配合教材例题核实。）</p>
+<p><strong>例 2</strong>：$\square ABCD$ 中，对角线交于 $O$，若 $OA=3$，$OB=4$，求 $AC+BD$。</p>
+<p>$AC=2\times OA=6$，$BD=2\times OB=8$，$AC+BD=14$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 认为"有一组对边平行"就是平行四边形（需要两组对边都平行）</li>
+<li>❌ 混淆"对角线等长"与"对角线互平分"（平行四边形只有互平分，等长是矩形额外性质）</li>
+<li>❌ 忘记相邻角互补条件（常用于求角度）</li>
+</ul>
+<h3>知识联系</h3>
+<p>平行四边形是<a class="dead" title="未收录">矩形</a>、<a class="dead" title="未收录">菱形</a>、<a href="../atoms/200-正方形.html">正方形</a>的"父类"；<a href="../atoms/194-平行四边形判定.html">平行四边形判定</a>是逆方向；对角线互平分 → 与<a href="../atoms/179-三角形中位线.html">三角形中位线</a>联系（中位线平行且等于底的一半）。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行四边形</td>
+<td>parallelogram</td>
+</tr>
+<tr>
+<td>对边相等</td>
+<td>opposite sides equal</td>
+</tr>
+<tr>
+<td>对角相等</td>
+<td>opposite angles equal</td>
+</tr>
+<tr>
+<td>对角线互相平分</td>
+<td>diagonals bisect each other</td>
+</tr>
+<tr>
+<td>相邻角互补</td>
+<td>consecutive angles supplementary</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第18章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·四边形</li>
+<li>拓展：<a class="dead" title="未收录">数学/矩形</a> · <a class="dead" title="未收录">数学/菱形</a> · <a class="dead" title="未收录">数学/正方形</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/049-平行四边形与梯形.html">平行四边形与梯形</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/194-平行四边形判定.html">平行四边形判定</a></li>
+</ul>
+<p><a href="../atoms/194-平行四边形判定.html">平行四边形判定</a> · <a class="dead" title="未收录">矩形</a> · <a class="dead" title="未收录">菱形</a> · <a href="../atoms/200-正方形.html">正方形</a> · <a href="../atoms/179-三角形中位线.html">三角形中位线</a> · <a href="../atoms/196-平行四边形综合.html">平行四边形综合</a> · <a class="dead" title="未收录">四边形</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>立方根</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>立方根</h1><div class="review-mark" data-stem="140-立方根"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 实数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 立方根, cube root, 三次方根, 开立方</p><h2>课本定义</h2>
+<p>如果 x³ = a，那么 x 叫做 a 的<strong>立方根</strong>（也称<strong>三次方根</strong>）。每个实数（正数、负数、零）都有唯一一个实数立方根，记作 ∛a（三次根号 a）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"找那个'被立方'之前的数"</h3>
+<p><strong>立方</strong>是把一个数乘三次：2³ = 2×2×2 = 8。</p>
+<p><strong>立方根</strong>就是反过来问：<strong>什么数立方后等于8？</strong> 答案是2。</p>
+<p><strong>立方根的特别之处：</strong>
+- 负数也有立方根！（这和平方根不同）
+- (-2)³ = -8，所以 -8 的立方根是 -2
+- 正数的立方根是正数，负数的立方根是负数，0的立方根是0</p>
+<p><strong>常用立方根：</strong>
+| a | ∛a（立方根） |
+|---|------------|
+| -27 | -3 |
+| -8 | -2 |
+| -1 | -1 |
+| 0 | 0 |
+| 1 | 1 |
+| 8 | 2 |
+| 27 | 3 |
+| 64 | 4 |
+| 125 | 5 |</p>
+<p><strong>符号：</strong> ∛a 就是 a 的立方根</p>
+<p><strong>和平方根对比：</strong>
+| 比较 | 平方根 | 立方根 |
+|------|--------|--------|
+| 负数有根吗？ | 没有 | 有 |
+| 正数有几个根？ | 两个（±） | 一个 |
+| 零的根 | 0 | 0 |</p>
+<p><strong>开立方</strong>：求立方根的运算叫<strong>开立方</strong>，与立方互为逆运算。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p>设 a 为任意实数，若 x³ = a，则 x 称为 a 的<strong>立方根</strong>（cube root），记作 x = ∛a。</p>
+<p>对每个实数 a，有且仅有一个实数立方根（区别于平方根可能有两个或零个）。</p>
+<h3>完全立方数</h3>
+<p>整数 n 满足 n = k³（k 为整数），称 n 为<strong>完全立方数</strong>。
+例：..., -27, -8, -1, 0, 1, 8, 27, 64, 125, ...</p>
+<h3>性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>公式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>唯一性</td>
+<td>每个实数有唯一立方根</td>
+<td>含负数</td>
+</tr>
+<tr>
+<td>奇函数性</td>
+<td>∛(-a) = -∛a</td>
+<td>负数可开立方</td>
+</tr>
+<tr>
+<td>还原性</td>
+<td>(∛a)³ = a</td>
+<td>开方再立方</td>
+</tr>
+<tr>
+<td>立方再开方</td>
+<td>∛(a³) = a</td>
+<td>立方再开方</td>
+</tr>
+<tr>
+<td>乘法法则</td>
+<td>∛a · ∛b = ∛(ab)</td>
+<td></td>
+</tr>
+<tr>
+<td>除法法则</td>
+<td>∛a / ∛b = ∛(a/b)（b≠0）</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>注意：∛(a³) = a（不是|a|），因为立方根不需要取绝对值。</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 求 -125 的立方根。</p>
+<p>解：因为 (-5)³ = -125
+∴ -125 的立方根为 -5，即 ∛(-125) = -5</p>
+<p><strong>例题2：</strong> 化简 ∛(8x³)（x 为任意实数）</p>
+<p>解：∛(8x³) = ∛8 · ∛(x³) = 2 · x = 2x</p>
+<p>注意：这里 x 可以是负数，立方根不需要绝对值。</p>
+<p><strong>例题3：</strong> 比较 ∛2 与 ∛3 的大小。</p>
+<p>解：因为 2 &lt; 3，立方根函数单调递增（负数的立方根也保持顺序），所以 ∛2 &lt; ∛3。</p>
+<h3>与平方根的对比</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>平方根 √a</th>
+<th>立方根 ∛a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>要求</td>
+<td>a ≥ 0</td>
+<td>a 任意实数</td>
+</tr>
+<tr>
+<td>个数</td>
+<td>正数有2个，0有1个</td>
+<td>恒为1个</td>
+</tr>
+<tr>
+<td>正负性</td>
+<td>算术平方根 ≥ 0</td>
+<td>与 a 同号</td>
+</tr>
+<tr>
+<td>简化</td>
+<td>√(a²) =</td>
+<td>a</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>立方根只有一个</strong>，不是 ±（区别于平方根的 ±）</li>
+<li><strong>负数有立方根</strong>：∛(-8) = -2（不是"无意义"）</li>
+<li><strong>∛(a³) = a，不是|a|</strong>：∛((-2)³) = ∛(-8) = -2</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>立方根
+├── 逆运算 → 立方（a³）
+├── 类比 → 平方根（但负数有根，只有一个根）
+├── 完全立方数 → 整数根
+├── 一般情况 → 无理数
+└── n次方根 → 高次根（高中）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>立方根</td>
+<td>cube root</td>
+<td>x³ = a 的解</td>
+</tr>
+<tr>
+<td>开立方</td>
+<td>extracting cube root</td>
+<td>求立方根的运算</td>
+</tr>
+<tr>
+<td>完全立方数</td>
+<td>perfect cube</td>
+<td>整数的立方</td>
+</tr>
+<tr>
+<td>三次根号</td>
+<td>cube root radical ∛</td>
+<td>∛ 符号</td>
+</tr>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>f(-x) = -f(x)</td>
+</tr>
+<tr>
+<td>单调递增</td>
+<td>monotonically increasing</td>
+<td>保持大小顺序</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第六章 实数（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/125-垂线.html">垂线</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/127-实数.html">实数</a></p>
+</li>
+<li>
+<p><a href="../atoms/129-平方根.html">平方根</a></p>
+</li>
+<li><a href="../atoms/135-无理数.html">无理数</a></li>
+<li><a href="../atoms/127-实数.html">实数</a></li>
+<li><a href="../atoms/097-有理数乘方.html">有理数乘方</a></li>
+<li><a href="../atoms/096-有理数.html">有理数</a></li>
+<li><a href="../atoms/078-负数.html">绝对值</a></li>
+</ul>
+</div>
+</body>
+</html>

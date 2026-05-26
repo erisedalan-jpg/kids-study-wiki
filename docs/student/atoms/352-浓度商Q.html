@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>浓度商Q</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>浓度商Q</h1><div class="review-mark" data-stem="352-浓度商Q"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 浓度商Q, reaction quotient, Q值, 反应商</p><h1>浓度商Q</h1>
+<blockquote>
+<p><strong>一句话</strong>：与平衡常数表达式相同，但使用任意时刻（非平衡）浓度计算的商值，通过与 $K$ 比较判断反应方向。
+<strong>English</strong>: The reaction quotient Q has the same form as the equilibrium expression but uses concentrations at any point in time; comparing Q to K predicts the direction of reaction.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>浓度商</strong>（reaction quotient）$Q$：对于反应 $a\text{A} + b\text{B} \rightleftharpoons c\text{C} + d\text{D}$，</p>
+<p>$$
+Q = \frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}
+$$</p>
+<p>表达式与 $K$ 完全相同，但 $Q$ 使用<strong>任意时刻</strong>的浓度，而非平衡浓度。</p>
+<p>通过比较 $Q$ 与 $K$，判断反应方向：</p>
+<table>
+<thead>
+<tr>
+<th>比较</th>
+<th>含义</th>
+<th>反应方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$Q &lt; K$</td>
+<td>生成物相对不足</td>
+<td>正向进行（→）</td>
+</tr>
+<tr>
+<td>$Q = K$</td>
+<td>已达平衡</td>
+<td>无净变化</td>
+</tr>
+<tr>
+<td>$Q &gt; K$</td>
+<td>生成物相对过多</td>
+<td>逆向进行（←）</td>
+</tr>
+</tbody>
+</table>
+<h3>公式 / 方程式</h3>
+<p>$$
+Q_c = \frac{\prod [\text{产物}]^{\nu_i}}{\prod [\text{反应物}]^{\nu_j}} \quad \text{（任意时刻）}
+$$</p>
+<p>平衡判断规则：</p>
+<p>$$
+Q \begin{cases} &lt; K &amp; \rightarrow \text{正向移动} \ = K &amp; \rightarrow \text{平衡} \ &gt; K &amp; \rightarrow \text{逆向移动} \end{cases}
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：对于 $\text{N}_2 + 3\text{H}_2 \rightleftharpoons 2\text{NH}_3$，$K = 15$（某温度下）。<br />
+当前浓度：$[\text{N}_2] = 0.5$，$[\text{H}_2] = 0.5$，$[\text{NH}_3] = 0.3$ mol/L。判断反应方向。</p>
+<p>$$
+Q = \frac{(0.3)^2}{0.5 \times (0.5)^3} = \frac{0.09}{0.5 \times 0.125} = \frac{0.09}{0.0625} = 1.44
+$$</p>
+<p>$Q = 1.44 &lt; K = 15$，反应正向进行（生成更多 NH₃）。</p>
+<h3>易错点</h3>
+<ul>
+<li>$Q$ 与 $K$ 表达式相同，区别在于浓度是否为平衡值</li>
+<li>固体和纯液体同样不写入 $Q$ 表达式</li>
+<li>改变压强或体积时，需先计算新浓度，再计算新的 $Q$ 与 $K$ 比较</li>
+<li>催化剂不改变 $K$，因此加催化剂后 $Q = K$ 关系不变（平衡不移动）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浓度商/反应商</td>
+<td>reaction quotient</td>
+</tr>
+<tr>
+<td>平衡常数</td>
+<td>equilibrium constant</td>
+</tr>
+<tr>
+<td>正向反应</td>
+<td>forward reaction</td>
+</tr>
+<tr>
+<td>逆向反应</td>
+<td>reverse reaction</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>If Q &lt; K, the reaction proceeds forward to produce more products.（若 Q &lt; K，反应正向进行以生成更多产物。）</li>
+<li>The reaction quotient Q tells us how far the reaction is from equilibrium.（反应商 Q 告诉我们反应距平衡有多远。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"反应商"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/342-化学平衡常数.html">化学平衡常数</a></li>
+<li><a class="dead" title="未收录">平衡浓度</a></li>
+<li><a href="../atoms/349-平衡移动.html">平衡移动</a></li>
+<li><a class="dead" title="未收录">化学平衡的特征</a></li>
+</ul>
+</div>
+</body>
+</html>

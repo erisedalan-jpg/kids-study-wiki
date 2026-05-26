@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量的期望与方差</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离散型随机变量的期望与方差</h1><div class="review-mark" data-stem="1331-离散型随机变量的期望与方差"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[统计与概率]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离散型随机变量的期望与方差, 期望与方差, Discrete Random Variable: Expectation and Variance</p><h1>离散型随机变量的期望与方差</h1>
+<blockquote>
+<p><strong>一句话</strong>：期望刻画随机变量的平均水平或中心位置；方差刻画随机变量取值的离散程度或波动大小。
+<strong>English</strong>: Expectation measures the central tendency of a discrete random variable, while variance quantifies the spread or dispersion of its probability distribution.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义与公式</strong><br />
+  若离散型随机变量 $X$ 的分布列为 $P(X = x_i) = p_i,\ i=1,2,\dots$，则其 <strong>数学期望（均值）</strong> 为<br />
+  $$E(X) = \sum_{i} x_i p_i.$$<br />
+<strong>方差</strong> 定义为 $X$ 与其期望离差平方的期望：<br />
+  $$D(X) = E[(X - E(X))^2] = \sum_i (x_i - E(X))^2 p_i.$$<br />
+  计算方差常用简化公式：$D(X) = E(X^2) - [E(X)]^2$。<br />
+  若 $Y = aX + b$（$a,b$ 为常数），则 $E(Y) = aE(X) + b$，$D(Y) = a^2 D(X)$。</p>
+</li>
+<li>
+<p><strong>关键方法与步骤</strong>  </p>
+</li>
+<li><strong>列分布列</strong>：确定 $X$ 的可能取值 $x_i$ 及对应概率 $p_i$，检验 $\sum p_i = 1$。  </li>
+<li><strong>求期望</strong>：直接套用加权求和公式。  </li>
+<li><strong>求方差</strong>：先求 $E(X)$，再计算 $E(X^2) = \sum x_i^2 p_i$，最后代入 $D(X) = E(X^2) - [E(X)]^2$。  </li>
+<li>
+<p><strong>决策判断</strong>：比较不同方案的期望与方差。若期望相近，选择方差较小的方案（更稳定）；若期望悬殊，优先考虑期望值。</p>
+</li>
+<li>
+<p><strong>高考典型设问</strong>  </p>
+</li>
+<li>给出频数分布表或随机试验背景，求随机变量的期望与方差，并说明实际意义。  </li>
+<li>二项分布、超几何分布等情境下的期望与方差直接套用公式（如 $X \sim B(n,p)$ 时期望 $np$、方差 $np(1-p)$）。  </li>
+<li>决策问题：根据期望值和方差对两个投资方案或比赛策略进行评价，需在解题时明确“期望大且方差小”为优选。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>离散型随机变量的方差公式常误用为 $D(X) = E(X^2) - E(X)^2$，导致漏掉平方或符号错误，应严格区分 $E(X)^2$ 与 $E(X^2)$。  </li>
+<li>求分布列时忽略概率的归一性（所有 $p_i$ 之和不为1），或错误理解“等可能”条件直接套用古典概型。  </li>
+<li>使用方差性质 $D(aX+b) = a^2 D(X)$ 时，易将系数 $a$ 的平方漏写或误写成 $|a|$。  </li>
+<li>二项分布的期望与方差公式只适用于明确独立重复试验，若题目中不是二项分布模型却直接代入 $np$、$np(1-p)$，会导致全盘皆错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>离散型随机变量</td>
+<td>discrete random variable</td>
+<td>取值可一一列举的随机变量</td>
+</tr>
+<tr>
+<td>期望（数学期望）</td>
+<td>expected value / expectation</td>
+<td>随机变量加权平均值</td>
+</tr>
+<tr>
+<td>方差</td>
+<td>variance</td>
+<td>度量取值偏离期望的程度</td>
+</tr>
+<tr>
+<td>分布列</td>
+<td>probability mass function</td>
+<td>每个取值对应概率的列表</td>
+</tr>
+<tr>
+<td>二项分布</td>
+<td>binomial distribution</td>
+<td>$B(n,p)$，独立重复试验模型</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：概率与统计 — 随机变量及其分布（必修+选择性必修）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">随机变量及其分布列</a></li>
+<li><a href="../atoms/469-二项分布.html">二项分布</a></li>
+<li><a class="dead" title="未收录">超几何分布</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布</a></li>
+<li><a class="dead" title="未收录">均值与方差的估计</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-17.html">2010-理-17</a></li>
+<li><a href="../exam/数学/2014-理-16.html">2014-理-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

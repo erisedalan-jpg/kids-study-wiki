@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等比数列求和公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等比数列求和公式</h1><div class="review-mark" data-stem="1065-等比数列求和公式"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等比数列求和公式</p><h1>等比数列求和公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：等比数列的前 $n$ 项和等于首项乘上 $(1-q^n)/(1-q)$，其中 $q$ 为公比且 $q \neq 1$。<br />
+<strong>English</strong>: The sum of the first $n$ terms of a geometric sequence equals the first term times $(1-q^n)/(1-q)$, where $q$ is the common ratio and $q \neq 1$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+若数列 ${a_n}$ 从第二项起每一项与前一项的比等于同一个常数 $q$（$q \neq 0$），则称为等比数列。其前 $n$ 项和公式为：<br />
+当 $q \neq 1$ 时，<br />
+$$
+S_n = \frac{a_1(1-q^n)}{1-q} = \frac{a_1(q^n-1)}{q-1}
+$$<br />
+当 $q=1$ 时，数列为常数列 $a_1, a_1, a_1, \dots$，此时 $S_n = na_1$。<br />
+推导基于错位相减法：写出 $S_n = a_1 + a_1q + \dots + a_1q^{n-1}$，两边同乘 $q$ 得 $qS_n = a_1q + \dots + a_1q^n$，两式相减即得。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>识别公比 $q$</strong>：确认数列的相邻项比值恒定。若已知 $a_{n}, a_{n+1}$，则 $q = a_{n+1}/a_n$。<br />
+2. <strong>分类讨论</strong>：优先判断 $q$ 是否为 1，避免公式分母为零。<br />
+3. <strong>灵活选用形式</strong>：已知 $a_1, q, n$ 直接用 $S_n$ 公式；已知多项时注意提取公因式或利用 $S_n$ 与 $a_n$ 的关系解题。<br />
+4. <strong>处理参数</strong>：含字母公比时，必须讨论 $q=1$ 和 $q\neq 1$ 两种情形。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+- 直接计算：给出 $a_1, q, n$ 求 $S_n$，或给出 $S_n$ 反求 $q$、$n$ 或首项。<br />
+- 数列综合：在等差与等比混合问题、数列递推式（如 $a_{n+1}=3a_n+2$）中，构造等比数列后求和。<br />
+- 实际背景：分期付款、复利增长、几何级数增长模型等，建立等比数列模型后求总金额或总次数。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>忽略 $q=1$ 的情形：含参数 $q$ 的求和问题未分情况讨论，直接套用 $S_n = \frac{a_1(1-q^n)}{1-q}$ 导致丢解或分母为零。  </li>
+<li>项数弄错：求和时误将项数记为 $n+1$ 或 $n-1$，尤其当首项下标不是 1 时，需核对通项 $a_k = a_1q^{k-1}$ 的指数。  </li>
+<li>公式混淆：等比求和与等差求和公式混淆，或将 $1-q^n$ 误写为 $q^n-1$ 且未对应调整分母符号。  </li>
+<li>提取公因式错误：在错位相减法中，相减后未正确提取 $a_1$ 或漏掉末尾项。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence</td>
+<td>相邻两项比值为常数的数列</td>
+</tr>
+<tr>
+<td>公比</td>
+<td>common ratio</td>
+<td>任意相邻两项的比值，记作 $q$</td>
+</tr>
+<tr>
+<td>等比数列求和公式</td>
+<td>sum formula for geometric sequences</td>
+<td>计算前 $n$ 项和的核心公式</td>
+</tr>
+<tr>
+<td>错位相减法</td>
+<td>method of dislocation subtraction</td>
+<td>推导等比数列求和公式的代数方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：🚧  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">等差数列求和公式</a>  </li>
+<li><a class="dead" title="未收录">等比数列通项公式</a>  </li>
+<li><a class="dead" title="未收录">错位相减法求和</a>  </li>
+<li><a class="dead" title="未收录">数列递推与构造等比数列</a>  </li>
+<li><a class="dead" title="未收录">数列应用题——复利与分期付款</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-文-14.html">2019-文-14</a></li>
+<li><a href="../exam/数学/2022-理-08.html">2022-理-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

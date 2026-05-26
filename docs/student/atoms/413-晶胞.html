@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>晶胞</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>晶胞</h1><div class="review-mark" data-stem="413-晶胞"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 晶胞, unit cell</p><h1>晶胞</h1>
+<blockquote>
+<p><strong>一句话</strong>：晶体中能反映晶体结构周期性的最小重复结构单元，无限堆积形成整个晶体。
+<strong>English</strong>: The smallest repeating structural unit that reflects the periodicity of a crystal; infinite replication of the unit cell generates the entire crystal.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>晶胞</strong>（Unit Cell）：晶体结构中<strong>最小的重复单元</strong>，通过平移操作（沿三个方向）可以重建整个晶体。</p>
+<p>晶胞特征：
+- 具有与整个晶体相同的化学组成（计量比）
+- 代表晶体的对称性（7 种晶系：立方、四方、正交、单斜、三斜、六方、三方）
+- 由<strong>晶格参数</strong>（a、b、c 及角度α、β、γ）完全描述</p>
+<h3>晶胞中粒子的计数方法</h3>
+<p>不同位置的粒子归属：</p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>属于该晶胞的份额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顶点（8个）</td>
+<td>1/8 × 8 = 1</td>
+</tr>
+<tr>
+<td>棱中心（12个）</td>
+<td>1/4 × 12 = 3</td>
+</tr>
+<tr>
+<td>面中心（6个）</td>
+<td>1/2 × 6 = 3</td>
+</tr>
+<tr>
+<td>体心（1个）</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3>常见晶胞类型（立方晶系）</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>简称</th>
+<th>粒子位置</th>
+<th>每晶胞粒子数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单立方</td>
+<td>sc</td>
+<td>仅顶点</td>
+<td>1</td>
+</tr>
+<tr>
+<td>体心立方</td>
+<td>bcc</td>
+<td>顶点+体心</td>
+<td>2</td>
+</tr>
+<tr>
+<td>面心立方</td>
+<td>fcc</td>
+<td>顶点+面心</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h3>NaCl 晶胞示例</h3>
+<p>NaCl 为面心立方型：
+- Na⁺：12×(1/4) + 1 = 4（棱中心12个 + 体心1个）
+- Cl⁻：8×(1/8) + 6×(1/2) = 4（顶点8个 + 面心6个）
+- Na⁺:Cl⁻ = 4:4 = 1:1，符合化学式</p>
+<h3>利用晶胞计算密度</h3>
+<p>$$\rho = \frac{n \cdot M}{N_A \cdot V_{\text{晶胞}}}$$</p>
+<p>其中 n 为每晶胞中粒子数，M 为摩尔质量，NA 为阿伏加德罗常数，V 为晶胞体积。</p>
+<h3>典型例题</h3>
+<p><strong>题</strong>：NaCl 晶胞（面心立方）中，Na⁺ 和 Cl⁻ 各有多少个？化学式如何由此得出？
+<strong>解</strong>：
+- Cl⁻：顶点 8×(1/8) + 面心 6×(1/2) = 1 + 3 = <strong>4 个</strong>
+- Na⁺：棱心 12×(1/4) + 体心 1 = 3 + 1 = <strong>4 个</strong>
+- Na⁺:Cl⁻ = 4:4 = <strong>1:1</strong> → 化学式 NaCl ✓</p>
+<h3>易错点</h3>
+<ul>
+<li>晶胞中粒子计数必须按位置分类（顶点/棱/面/体）再求和</li>
+<li>晶胞代表整个晶体的组成比，不是孤立存在的</li>
+<li>晶胞边长（a）与原子/离子半径的关系因晶胞类型而异</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶胞</td>
+<td>unit cell</td>
+<td>n.</td>
+<td>The unit cell is the basic repeating unit of a crystal.</td>
+</tr>
+<tr>
+<td>面心立方</td>
+<td>face-centered cubic (fcc)</td>
+<td>adj.</td>
+<td>NaCl adopts a face-centered cubic structure.</td>
+</tr>
+<tr>
+<td>体心立方</td>
+<td>body-centered cubic (bcc)</td>
+<td>adj.</td>
+<td>Iron (α-Fe) has a body-centered cubic structure.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晶胞是晶体结构中最小的重复单元。</td>
+<td>The unit cell is the smallest repeating unit of a crystal structure.</td>
+</tr>
+<tr>
+<td>NaCl 面心立方晶胞中含有 4 个 Na⁺ 和 4 个 Cl⁻。</td>
+<td>The fcc unit cell of NaCl contains 4 Na⁺ and 4 Cl⁻ ions.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"晶胞"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/441-配合物.html">配合物</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/881-均摊法.html">均摊法</a></li>
+</ul>
+<p><a href="../atoms/409-晶体.html">晶体</a> <a href="../atoms/412-晶格.html">晶格</a> <a class="dead" title="未收录">NaCl晶体</a> <a class="dead" title="未收录">CsCl晶体</a> <a class="dead" title="未收录">金刚石晶体</a> <a href="../atoms/417-金属晶体.html">金属晶体</a> <a href="../atoms/414-离子晶体.html">离子晶体</a></p>
+</div>
+</body>
+</html>

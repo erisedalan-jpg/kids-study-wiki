@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>回归直线方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>回归直线方程</h1><div class="review-mark" data-stem="481-回归直线方程"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 回归直线方程, linear regression equation, 线性回归方程, 回归直线</p><h2>🎓 回归直线方程</h2>
+<h3>核心公式</h3>
+<p>线性回归方程（最小二乘直线）：</p>
+<p>$$\boxed{\hat{y} = \hat{b}x + \hat{a}}$$</p>
+<p>$$\hat{b} = \frac{\displaystyle\sum_{i=1}^n x_i y_i - n\bar{x}\bar{y}}{\displaystyle\sum_{i=1}^n x_i^2 - n\bar{x}^2}, \quad \hat{a} = \bar{y} - \hat{b}\bar{x}$$</p>
+<p><strong>等价形式</strong>：</p>
+<p>$$\hat{b} = \frac{\displaystyle\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\displaystyle\sum_{i=1}^n (x_i - \bar{x})^2}$$</p>
+<h3>回归方程的三要素</h3>
+<ol>
+<li><strong>斜率 $\hat{b}$</strong>：$x$ 每增加 1，$y$ 预测增加/减少 $|\hat{b}|$（$\hat{b} &gt; 0$ 正相关，$\hat{b} &lt; 0$ 负相关）</li>
+<li><strong>截距 $\hat{a}$</strong>：$x = 0$ 时的预测值（有时无物理意义）</li>
+<li><strong>过样本中心点 $(\bar{x}, \bar{y})$</strong>：必然通过，可验算</li>
+</ol>
+<h3>完整解题流程</h3>
+<ol>
+<li>计算 $\bar{x}$，$\bar{y}$</li>
+<li>列辅助表，计算 $\sum x_iy_i$，$\sum x_i^2$</li>
+<li>代公式求 $\hat{b}$</li>
+<li>代公式求 $\hat{a}$</li>
+<li>写出回归方程 $\hat{y} = \hat{b}x + \hat{a}$</li>
+<li>用 $(\bar{x}, \bar{y})$ 验算（将 $\bar{x}$ 代入应得 $\bar{y}$）</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1（标准题）</strong>：某地月均气温 $x$（℃）和某作物月均产量 $y$（百公斤）数据如下：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>10</th>
+<th>14</th>
+<th>16</th>
+<th>18</th>
+<th>20</th>
+<th>22</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>20</td>
+<td>25</td>
+<td>30</td>
+<td>35</td>
+<td>38</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>求线性回归方程。</p>
+<p>$n = 6$，$\sum x_i = 100$，$\sum y_i = 188$，$\bar{x} = \frac{100}{6} \approx 16.67$，$\bar{y} = \frac{188}{6} \approx 31.33$</p>
+<p>$\sum x_iy_i = 10\times20 + 14\times25 + 16\times30 + 18\times35 + 20\times38 + 22\times40$
+$= 200 + 350 + 480 + 630 + 760 + 880 = 3300$</p>
+<p>$\sum x_i^2 = 100 + 196 + 256 + 324 + 400 + 484 = 1760$</p>
+<p>$$\hat{b} = \frac{3300 - 6 \times \frac{100}{6} \times \frac{188}{6}}{1760 - 6 \times \left(\frac{100}{6}\right)^2} = \frac{3300 - \frac{18800}{6}}{1760 - \frac{10000}{6}}$$</p>
+<p>$$= \frac{3300 - 3133.33}{1760 - 1666.67} = \frac{166.67}{93.33} \approx 1.786 \approx 1.8$$</p>
+<p>$$\hat{a} = 31.33 - 1.8 \times 16.67 = 31.33 - 30 = 1.33 \approx 1.3$$</p>
+<p>回归方程：$\hat{y} \approx 1.8x + 1.3$</p>
+<p>验算：$x = 16.67$ 时，$\hat{y} = 1.8 \times 16.67 + 1.3 \approx 31.3 \approx \bar{y} \checkmark$</p>
+<p><strong>例2（预测）</strong>：利用上例，预测月均气温为 25℃ 时的产量。</p>
+<p>$$\hat{y} = 1.8 \times 25 + 1.3 = 45 + 1.3 = 46.3 \text{ 百公斤}$$</p>
+<p>（注意 $x = 25$ 略超出样本范围 $[10, 22]$，预测结果需谨慎使用）</p>
+<h3>回归方程的意义与限制</h3>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用范围</td>
+<td>样本 $x$ 的范围内预测较可靠</td>
+</tr>
+<tr>
+<td>外推风险</td>
+<td>超出范围的预测误差大</td>
+</tr>
+<tr>
+<td>因果关系</td>
+<td>回归方程不代表因果关系</td>
+</tr>
+<tr>
+<td>方程唯一性</td>
+<td>给定样本，最小二乘直线唯一</td>
+</tr>
+</tbody>
+</table>
+<h3>斜率的经济/物理解释</h3>
+<p><strong>例</strong>：$\hat{y} = 0.8x + 5$（$x$：广告费万元，$y$：销售额万元）</p>
+<ul>
+<li>斜率 $\hat{b} = 0.8$：广告费每增加 1 万元，销售额预计增加 0.8 万元</li>
+<li>截距 $\hat{a} = 5$：不投广告时，销售额的预测基准为 5 万元（需判断实际意义是否合理）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>计算精度</strong>：$\bar{x}$、$\bar{y}$ 保留足够小数位，中间过程不要过早四舍五入</li>
+<li><strong>先求 $\hat{b}$</strong>：$\hat{a}$ 依赖 $\hat{b}$，顺序不要错</li>
+<li><strong>过中心点验算</strong>：不做验算容易漏算错误</li>
+<li><strong>外推的限制</strong>：不要用回归方程进行大幅外推预测</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章 § 8.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/线性回归">线性回归 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/491-最小二乘法.html">最小二乘法</a></li>
+<li><a href="../atoms/506-经验回归方程.html">经验回归方程</a></li>
+<li><a href="../atoms/359-统计案例.html">相关系数</a></li>
+<li><a href="../atoms/514-非线性回归.html">非线性回归</a></li>
+<li><a href="../atoms/480-回归分析综合.html">回归分析综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2018-文-18.html">2018-文-18</a></li>
+<li><a href="../exam/数学/2018-理-18.html">2018-理-18</a></li>
+<li><a href="../exam/数学/2022-文-19.html">2022-文-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

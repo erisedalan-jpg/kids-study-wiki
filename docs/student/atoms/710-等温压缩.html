@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等温压缩</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等温压缩</h1><div class="review-mark" data-stem="710-等温压缩"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等温压缩, Isothermal Compression</p><h1>等温压缩</h1>
+<blockquote>
+<p><strong>一句话</strong>：等温压缩是气体在温度保持恒定的条件下进行的压缩过程，过程中一定质量理想气体的压强与体积成反比（玻意耳定律）。
+<strong>English</strong>: Isothermal compression is a compression process in which the temperature of a gas remains constant, and for a given mass of ideal gas, pressure is inversely proportional to volume (Boyle's law).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：对于一定质量的理想气体，在温度 $T$ 不变的前提下，其压强 $p$ 与体积 $V$ 满足玻意耳定律：</p>
+<p>$$
+pV = \text{常量}\quad (\text{或 } p_1V_1 = p_2V_2)
+$$</p>
+<p>在 $p\text{-}V$ 图上，等温线为双曲线的一支，且温度越高，等温线离原点越远。等温压缩时体积减小，压强增大，气体对外做负功（外界对气体做功）。</p>
+<p>从热力学第一定律 $\Delta U = Q + W$ 出发：理想气体内能仅由温度决定，等温过程中 $\Delta U = 0$，因此外界对气体做的功全部以热量形式放出，即 $Q = -W &lt; 0$。</p>
+<p><strong>关键方法</strong>：处理等温压缩问题，首先要明确研究对象为一定质量的理想气体，确认温度不变。解题步骤一般为：
+1. 确定初、末状态参量 $(p_1,V_1,T)$ 与 $(p_2,V_2,T)$；
+2. 用 $p_1V_1 = p_2V_2$ 直接求解压强或体积；
+3. 结合力学条件（如活塞受力平衡 $pS = p_0S + mg + \dots$）建立方程；
+4. 计算功 $W = -\int_{V_1}^{V_2} p\,dV$ 时，可用 $p = nRT/V$ 代入积分，或借助 $p\text{-}V$ 图面积；
+5. 应用热力学第一定律判断热量传递方向与大小。</p>
+<p><strong>典型应用</strong>：高考常见考查方式有：① 结合气缸与活塞模型，缓慢压缩气体，判断压强变化、做功及热量传递；② 在 $p\text{-}V$ 图上识别等温线与其它过程（等压、等容、绝热），比较不同过程的物理量大小；③ 与理想气体状态方程综合，分析多过程循环中某一等温段的能量转换。例如：气缸内气体缓慢等温压缩，活塞下压距离 $d$，求外界做功及气体放出的热量，需同步使用 $p_1V_1 = p_2V_2$ 和热力学第一定律。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误认为等温压缩由于内能不变，气体不吸放热</strong>：实际上外界对气体做功，$\Delta U=0$，则 $Q = -W &lt; 0$，气体必须放热，否则温度会升高。</li>
+<li><strong>混淆等温线与绝热线</strong>：$p\text{-}V$ 图上绝热线比等温线更陡，因为绝热压缩时温度同时升高，压强增加更快。</li>
+<li><strong>错误直接使用 $W = p\Delta V$ 计算功</strong>：等温过程中压强变化，功需由 $W = -\int p\,dV = -nRT \ln(V_2/V_1)$ 计算，不能简单用恒压功公式。</li>
+<li><strong>将等温压缩与等压压缩混淆</strong>：等温压缩压强增大，等压压缩则体积减小但压强不变，适用公式和图像完全不同。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等温压缩</td>
+<td>Isothermal Compression</td>
+<td>温度保持不变的气体压缩过程</td>
+</tr>
+<tr>
+<td>玻意耳定律</td>
+<td>Boyle's Law</td>
+<td>温度不变时，一定质量气体压强与体积成反比</td>
+</tr>
+<tr>
+<td>理想气体</td>
+<td>Ideal Gas</td>
+<td>严格遵循气态方程且内能仅与温度有关的气体模型</td>
+</tr>
+<tr>
+<td>内能</td>
+<td>Internal Energy</td>
+<td>系统内部所有分子动能与势能的总和，理想气体内能只取决于温度</td>
+</tr>
+<tr>
+<td>热力学第一定律</td>
+<td>First Law of Thermodynamics</td>
+<td>$\Delta U = Q + W$，能量守恒在热学中的表述</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/444-玻意耳定律.html">玻意耳定律</a></li>
+<li><a href="../atoms/440-热力学第一定律.html">热力学第一定律</a></li>
+<li><a class="dead" title="未收录">理想气体内能</a></li>
+<li><a class="dead" title="未收录">绝热过程</a></li>
+<li><a class="dead" title="未收录">p-V 图像</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2021-全国乙-14.html">2021-全国乙-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

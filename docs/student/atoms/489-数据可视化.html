@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数据可视化</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数据可视化</h1><div class="review-mark" data-stem="489-数据可视化"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数据可视化, data visualization, 数据图形化, 可视化分析</p><h2>🎓 数据可视化</h2>
+<h3>定义</h3>
+<p><strong>数据可视化</strong>：将数据转化为图形、图表等可视形式，帮助人们更快速、直观地理解数据中的规律、趋势和异常。</p>
+<h3>为什么需要数据可视化</h3>
+<ul>
+<li>人脑对图形的处理远快于对数字的处理</li>
+<li>图形能展示数值表格无法直观呈现的模式</li>
+<li>有助于发现异常值、趋势和关联</li>
+<li>便于向他人传递信息</li>
+</ul>
+<p><strong>安斯科姆四重奏（Anscombe's Quartet）</strong>：四组几乎相同均值、方差和相关系数的数据集，但散点图完全不同。说明数值统计不能替代图形展示（待家长核对此例教材是否涉及）。</p>
+<h3>高中阶段的数据可视化工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+<th>关键特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>频率分布直方图</td>
+<td>连续数据的分布</td>
+<td>纵轴：频率/组距；面积=频率</td>
+</tr>
+<tr>
+<td>茎叶图</td>
+<td>小样本数据分布</td>
+<td>保留原始数据，便于两组比较</td>
+</tr>
+<tr>
+<td>散点图</td>
+<td>两变量关系</td>
+<td>判断相关方向和强弱</td>
+</tr>
+<tr>
+<td>折线图</td>
+<td>时间序列趋势</td>
+<td>强调变化过程</td>
+</tr>
+<tr>
+<td>条形图</td>
+<td>类别频数比较</td>
+<td>各类别高度=频数/频率</td>
+</tr>
+<tr>
+<td>饼图</td>
+<td>比例构成</td>
+<td>扇形面积=比例</td>
+</tr>
+<tr>
+<td>箱线图</td>
+<td>分布和离散程度</td>
+<td>五数概括（最小值、Q1、中位数、Q3、最大值）</td>
+</tr>
+</tbody>
+</table>
+<h3>良好数据可视化的原则</h3>
+<ol>
+<li><strong>清晰</strong>：图表能独立理解，有标题、轴标签、单位</li>
+<li><strong>准确</strong>：不扭曲数据（如纵轴不从非零开始误导读者）</li>
+<li><strong>简洁</strong>：去除不必要的装饰（"墨水"最少化原则）</li>
+<li><strong>完整</strong>：标注数据来源和样本量</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例1（读图分析）</strong>：某频率分布直方图（$x$ 轴为成绩，$y$ 轴为频率/组距，组距 10），其中 $[60,70)$ 对应的矩形高为 0.03，则该区间的频率和频数（共 100 人）各为？</p>
+<p>频率：$0.03 \times 10 = 0.3$（30%）</p>
+<p>频数：$100 \times 0.3 = 30$ 人</p>
+<p><strong>例2（设计图表）</strong>：某班 40 名学生三次模拟考试的平均成绩随时间变化，应选用哪种图表？描述什么？</p>
+<p><strong>应选</strong>：折线图（三次考试是时间序列，展示趋势）</p>
+<p>折线图能展示：平均成绩是否整体上升/下降，有无剧烈波动。</p>
+<p><strong>例3（散点图与回归）</strong>：已建立回归方程 $\hat{y} = 2x + 5$，如何在散点图上画出回归直线？</p>
+<p>取两点（如 $x=0 \Rightarrow y=5$，$x=10 \Rightarrow y=25$），连线即为回归直线，并标注方程。</p>
+<p><strong>例4（可视化选择对比）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>研究问题</th>
+<th>数据类型</th>
+<th>最适合图表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>各学科平均分比较</td>
+<td>分类×数值</td>
+<td>条形图</td>
+</tr>
+<tr>
+<td>学生身高的分布</td>
+<td>连续数值</td>
+<td>频率分布直方图</td>
+</tr>
+<tr>
+<td>降雨量与产量关系</td>
+<td>两变量</td>
+<td>散点图</td>
+</tr>
+<tr>
+<td>全国人口年龄构成</td>
+<td>分类比例</td>
+<td>饼图或条形图</td>
+</tr>
+<tr>
+<td>近5年学生人数变化</td>
+<td>时间序列</td>
+<td>折线图</td>
+</tr>
+</tbody>
+</table>
+<h3>数据可视化与统计分析的关系</h3>
+<ul>
+<li><strong>探索性分析（EDA）</strong>：用图形发现数据规律（先可视化，再建模）</li>
+<li><strong>验证性分析</strong>：用图形展示回归拟合效果、残差分析</li>
+<li><strong>沟通报告</strong>：用图形向他人呈现分析结论</li>
+</ul>
+<h3>数字时代的数据可视化</h3>
+<p>现代数据可视化工具（Excel、Python matplotlib、Tableau 等）能制作交互式图表，但核心原则不变：<strong>选对图表类型、确保准确传达信息</strong>。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>频率分布直方图纵轴是"频率/组距"</strong>：不是频率本身，面积才是频率</li>
+<li><strong>散点图不连线</strong>：不要把散点图的点连成折线</li>
+<li><strong>纵轴起点</strong>：若纵轴不从 0 开始，会夸大变化幅度（需标注）</li>
+<li><strong>图表与数据的一致性</strong>：图形呈现的关系应与数值计算一致</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/数据可视化">数据可视化 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/507-统计图表选择.html">统计图表选择</a></li>
+<li><a href="../atoms/488-散点图.html">散点图</a></li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+<li><a href="../atoms/509-统计案例-高中.html">统计案例-高中</a></li>
+<li><a href="../atoms/480-回归分析综合.html">回归分析综合</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2018-文-19.html">2018-文-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

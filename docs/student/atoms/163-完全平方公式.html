@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>完全平方公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>完全平方公式</h1><div class="review-mark" data-stem="163-完全平方公式"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八上, 整式乘除与因式分解]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 完全平方公式, perfect square formula, 完全平方式</p><h1>完全平方公式</h1>
+<blockquote>
+<p><strong>课本定义</strong>：两数之和（差）的平方，等于这两数的平方和加上（减去）这两数乘积的 2 倍：$(a+b)^2 = a^2 + 2ab + b^2$；$(a-b)^2 = a^2 - 2ab + b^2$。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>图形理解</h3>
+<p>把 $(a+b)^2$ 想象成边长为 $(a+b)$ 的正方形面积：</p>
+<pre><code>        a         b
+  ┌──────────┬────────┐
+a │   a²     │   ab   │
+  ├──────────┼────────┤
+b │   ab     │   b²   │
+  └──────────┴────────┘
+总面积 = a² + ab + ab + b² = a² + 2ab + b²
+</code></pre>
+<h3>公式</h3>
+<p>$$\boxed{(a+b)^2 = a^2 + 2ab + b^2}$$
+$$\boxed{(a-b)^2 = a^2 - 2ab + b^2}$$</p>
+<p>记忆口诀：<strong>首平方，尾平方，首尾两倍放中央。</strong></p>
+<ul>
+<li>$(a+b)^2$：中间项是 $+2ab$</li>
+<li>$(a-b)^2$：中间项是 $-2ab$</li>
+</ul>
+<h3>正向使用（展开）</h3>
+<table>
+<thead>
+<tr>
+<th>计算</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$(x+3)^2$</td>
+<td>$x^2 + 6x + 9$</td>
+</tr>
+<tr>
+<td>$(x-4)^2$</td>
+<td>$x^2 - 8x + 16$</td>
+</tr>
+<tr>
+<td>$(2a+b)^2$</td>
+<td>$4a^2 + 4ab + b^2$</td>
+</tr>
+<tr>
+<td>$(3x - 2y)^2$</td>
+<td>$9x^2 - 12xy + 4y^2$</td>
+</tr>
+</tbody>
+</table>
+<h3>逆向使用（因式分解）</h3>
+<table>
+<thead>
+<tr>
+<th>分解</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x^2 + 6x + 9$</td>
+<td>$(x+3)^2$</td>
+</tr>
+<tr>
+<td>$4a^2 - 4ab + b^2$</td>
+<td>$(2a-b)^2$</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格推导</h3>
+<p>$$(a+b)^2 = (a+b)(a+b) = a(a+b) + b(a+b) = a^2 + ab + ab + b^2 = a^2 + 2ab + b^2 \quad \blacksquare$$</p>
+<p>$$(a-b)^2 = (a-b)(a-b) = a^2 - ab - ab + b^2 = a^2 - 2ab + b^2 \quad \blacksquare$$</p>
+<p>注意：$(a-b)^2 = [a+(-b)]^2 = a^2 + 2a(-b) + (-b)^2 = a^2 - 2ab + b^2$，与 $(a+b)^2$ 公式的关系。</p>
+<h3>推广：三项完全平方</h3>
+<p>$$(a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$$</p>
+<p>推广规律：每两个不同项之积乘以 2，加上每项的平方。</p>
+<h3>配方法（完全平方公式的逆用）</h3>
+<p>将二次式 $x^2 + px + q$ 变形为完全平方式：</p>
+<p>$$x^2 + px + q = \left(x + \frac{p}{2}\right)^2 - \frac{p^2}{4} + q$$</p>
+<p>配方法是解一元二次方程和讨论二次函数的重要工具（九年级使用）。</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：已知 $a + b = 5$，$ab = 6$，求 $a^2 + b^2$。</p>
+<p>解：$(a+b)^2 = a^2 + 2ab + b^2$</p>
+<p>$25 = a^2 + b^2 + 12$，∴ $a^2 + b^2 = 13$</p>
+<p><strong>例题 2</strong>：分解因式 $x^2 - 10x + 25$。</p>
+<p>解：$x^2 - 10x + 25 = x^2 - 2 \cdot x \cdot 5 + 5^2 = (x-5)^2$</p>
+<p><strong>例题 3</strong>：不计算，直接写出 $101^2$ 的值。</p>
+<p>解：$101^2 = (100+1)^2 = 10000 + 200 + 1 = 10201$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>中间项系数是 2</strong>：$(a+b)^2 \neq a^2 + b^2$（漏掉 $2ab$ 是最常见错误！）</li>
+<li><strong>$(a-b)^2 \geq 0$</strong>：任何实数的平方非负，等号当 $a = b$ 时成立。</li>
+<li>识别完全平方式：$a^2 \pm 2ab + b^2$ 的特征是"首末项是完全平方数，中间项是首末平方根乘积的 2 倍"。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a href="../atoms/166-平方差公式.html">平方差公式</a>：另一个乘法公式，常与完全平方公式配合</li>
+<li>→ <a class="dead" title="未收录">多项式乘多项式</a>：完全平方公式的来源</li>
+<li>→ <a class="dead" title="未收录">公式法因式分解</a>：完全平方公式的逆用</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>完全平方公式</td>
+<td>perfect square formula</td>
+</tr>
+<tr>
+<td>完全平方式</td>
+<td>perfect square trinomial</td>
+</tr>
+<tr>
+<td>配方</td>
+<td>completing the square</td>
+</tr>
+<tr>
+<td>展开</td>
+<td>expand</td>
+</tr>
+<tr>
+<td>因式分解</td>
+<td>factorization</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十四章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：《初中代数》完全平方式与配方法</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/166-平方差公式.html">平方差公式</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/167-提公因式法.html">提公因式法</a></p>
+</li>
+<li>
+<p><a href="../atoms/166-平方差公式.html">平方差公式</a></p>
+</li>
+<li><a class="dead" title="未收录">多项式乘多项式</a></li>
+<li><a class="dead" title="未收录">公式法因式分解</a></li>
+<li><a href="../atoms/167-提公因式法.html">提公因式法</a></li>
+<li><a href="../atoms/158-分式运算.html">分式运算</a></li>
+<li><a class="dead" title="未收录">整数指数幂</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2023-北京-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电源效率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电源效率</h1><div class="review-mark" data-stem="685-电源效率"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电源效率, 电源的功率效率</p><h1>电源效率</h1>
+<blockquote>
+<p><strong>一句话</strong>：电源效率是指电源将其他形式能转化为电能时，外电路得到的功率（输出功率）与电源总功率的比值，纯电阻电路中 η = R/(R+r)。
+<strong>English</strong>: Power efficiency of a source is the ratio of the output power delivered to the external circuit to the total power supplied by the source; for a purely resistive circuit, η = R/(R+r).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+对一个电动势为 <em>E</em>、内阻为 <em>r</em> 的电源，闭合电路中：<br />
+总功率 <em>P</em><sub>总</sub> = <em>EI</em>，<br />
+内电阻发热功率 <em>P</em><sub>内</sub> = <em>I</em><sup>2</sup><em>r</em>，<br />
+输出功率（外电路消耗的功率）<em>P</em><sub>出</sub> = <em>UI</em> = <em>I</em><sup>2</sup><em>R</em>（纯电阻），<br />
+电源效率<br />
+$$
+\eta=\frac{P_{\text{出}}}{P_{\text{总}}}=\frac{UI}{EI}=\frac{U}{E}=\frac{R}{R+r}
+$$<br />
+式中 <em>U</em> 为路端电压，<em>R</em> 为外电阻（仅适用于外电路为纯电阻）。对非纯电阻电路，效率仍用 η = <em>UI</em>/(<em>EI</em>)，但 <em>U</em> 与 <em>R</em> 不满足欧姆定律形式。</p>
+<p><strong>关键方法与考查方式</strong><br />
+高考主要围绕两种设问角度：<br />
+1. <strong>与外电阻的关系</strong>：给定电源 <em>E</em>、<em>r</em> 不变，随外阻 <em>R</em> 增大，η 增大且趋近于1，但输出功率先增后减。当 <em>R</em>=<em>r</em>（最大输出功率）时，η = 50%。<br />
+2. <strong>与路端电压的关系</strong>：从 η = <em>U</em>/<em>E</em> 出发，通过 U‑I 图像或电路动态变化求效率。解题步骤：①明确内外电路；②选择 η = <em>U</em>/<em>E</em>、<em>R</em>/(<em>R</em>+<em>r</em>) 或 η = <em>P</em><sub>出</sub>/<em>P</em><sub>总</sub>；③注意纯电阻与非纯电阻的区别。</p>
+<p><strong>典型情境</strong><br />
+- 测电源电动势和内阻实验中，结合 U‑I 图线求某一工作点的效率。<br />
+- 闭合电路动态分析中，判断滑动变阻器阻值变化时电源效率的增减。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆效率最高与输出功率最大</strong>：η 随 <em>R</em> 增大而增大，当 <em>R</em>→∞ 时 η→100%（断路状态下的极限效率），但输出功率趋于0；最大输出功率对应 <em>R</em>=<em>r</em>，此时 η 仅为 50%，学生常以为效率最大时功率也最大。  </li>
+<li><strong>忽视非纯电阻电路的效率计算</strong>：对含电动机的电路，电机两端电压 <em>U</em> 与电流 <em>I</em> 不满足 <em>U</em>=<em>IR</em>，直接用 η = <em>R</em>/(<em>R</em>+<em>r</em>) 会导致错误，必须用 η = <em>UI</em>/(<em>EI</em>)。  </li>
+<li><strong>混淆外电阻与等效电阻</strong>：当外电路包含混联支路时，错误地用某一段电阻代替总外阻 <em>R</em><sub>外</sub> 代入 η = <em>R</em><sub>外</sub>/(<em>R</em><sub>外</sub>+<em>r</em>)。  </li>
+<li><strong>路端电压与电动势比值使用不当</strong>：部分学生记混 η = <em>E</em>/<em>U</em> 或 η = <em>r</em>/(<em>R</em>+<em>r</em>)，造成计算结果错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电源电动势</td>
+<td>electromotive force (emf)</td>
+<td>电源将单位正电荷从负极移到正极所做的功</td>
+</tr>
+<tr>
+<td>内阻</td>
+<td>internal resistance</td>
+<td>电源内部对电流的阻碍作用，导致内电压 Ir</td>
+</tr>
+<tr>
+<td>输出功率</td>
+<td>output power</td>
+<td>外电路消耗的功率，P<sub>出</sub> = UI</td>
+</tr>
+<tr>
+<td>总功率</td>
+<td>total power</td>
+<td>电源内部非静电力做功的功率，P<sub>总</sub> = EI</td>
+</tr>
+<tr>
+<td>效率</td>
+<td>efficiency</td>
+<td>输出功率与总功率的百分比，η = P<sub>出</sub>/P<sub>总</sub>×100%</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">电源的最大输出功率</a></li>
+<li><a href="../atoms/154-焦耳定律.html">焦耳定律</a></li>
+<li><a href="../atoms/159-电功率.html">电功率</a></li>
+<li><a class="dead" title="未收录">非纯电阻电路</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-06.html">2010-新课标Ⅰ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

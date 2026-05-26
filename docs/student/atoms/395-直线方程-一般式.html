@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线方程-一般式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线方程-一般式</h1><div class="review-mark" data-stem="395-直线方程-一般式"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第二章直线和圆的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线方程-一般式, general form of line, 一般式</p><h2>🎓 直线方程-一般式</h2>
+<h3>一般式方程</h3>
+<p>$$Ax + By + C = 0$$</p>
+<p>其中 $A,B$ 不全为零（$A^2+B^2\neq0$）。</p>
+<p><strong>适用条件</strong>：表示平面内<strong>任意直线</strong>（包括竖直线和水平线）。</p>
+<h3>参数的几何意义</h3>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>直线形状</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$B = 0$（$A\neq0$）</td>
+<td>竖直线 $x = -\dfrac{C}{A}$</td>
+</tr>
+<tr>
+<td>$A = 0$（$B\neq0$）</td>
+<td>水平线 $y = -\dfrac{C}{B}$</td>
+</tr>
+<tr>
+<td>$A\neq0, B\neq0$</td>
+<td>斜线，斜率 $k = -\dfrac{A}{B}$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>截距</strong>（$A,B,C$ 均不为零时）：
+- 横截距：令 $y=0$，$x = -\dfrac{C}{A}$
+- 纵截距：令 $x=0$，$y = -\dfrac{C}{B}$</p>
+<h3>点在直线上的判断</h3>
+<p>点 $P(x_0,y_0)$ 在直线 $Ax+By+C=0$ 上 $\Leftrightarrow Ax_0+By_0+C=0$</p>
+<h3>各形式互化</h3>
+<table>
+<thead>
+<tr>
+<th>从</th>
+<th>到一般式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜截式 $y=kx+b$</td>
+<td>$kx-y+b=0$（即 $A=k, B=-1, C=b$）</td>
+</tr>
+<tr>
+<td>点斜式 $y-y_0=k(x-x_0)$</td>
+<td>$kx-y+(y_0-kx_0)=0$</td>
+</tr>
+<tr>
+<td>两点式</td>
+<td>展开合并后得 $Ax+By+C=0$</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：将 $3x-2y+6=0$ 化为斜截式，并求截距。</p>
+<p><strong>解</strong>：$2y=3x+6 \Rightarrow y=\dfrac{3}{2}x+3$（斜截式）</p>
+<p>横截距：令 $y=0$：$x=-2$；纵截距：$y=3$</p>
+<p><strong>例2</strong>：直线 $l$ 过点 $P(2,-1)$，且与直线 $3x+y-2=0$ 垂直，求 $l$ 的一般式方程。</p>
+<p><strong>解</strong>：$3x+y-2=0$ 斜率为 $-3$，垂直直线斜率为 $\dfrac{1}{3}$</p>
+<p>$y-(-1)=\dfrac{1}{3}(x-2) \Rightarrow 3y+3=x-2 \Rightarrow x-3y-5=0$</p>
+<p><strong>例3</strong>：判断 $A=2, B=-1, C=-4$，即 $2x-y-4=0$ 对应的直线，求斜率、截距。</p>
+<p><strong>解</strong>：斜率 $k=-\dfrac{A}{B}=-\dfrac{2}{-1}=2$；横截距 $x_0=-\dfrac{C}{A}=2$；纵截距 $y_0=-\dfrac{C}{B}=-4$</p>
+<h3>一般式的优点</h3>
+<ul>
+<li>能表示所有直线（包括竖直线 $x=c$，令 $B=0$ 即可）</li>
+<li>点到直线距离公式直接用一般式：$d=\dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$</li>
+<li>方程比较大小（系数比较）更方便</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>$A, B$ 不全为零，否则方程无意义</li>
+<li>斜率 $k=-\dfrac{A}{B}$（注意负号）；$B=0$ 时无斜率</li>
+<li>化为一般式后，通常约分到<strong>互质整数系数</strong>，且 $A&gt;0$（或首系数正）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第二章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第二章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/393-直线倾斜角与斜率.html">直线倾斜角与斜率</a></p>
+</li>
+<li>
+<p><a href="../atoms/398-直线方程-点斜式.html">直线方程-点斜式</a></p>
+</li>
+<li><a class="dead" title="未收录">直线方程-斜截式</a></li>
+<li><a class="dead" title="未收录">直线方程-两点式</a></li>
+<li><a href="../atoms/570-点到直线的距离公式.html">点到直线距离公式</a></li>
+<li><a href="../atoms/366-两条直线位置关系.html">两条直线位置关系</a></li>
+<li><a href="../atoms/372-圆的一般方程.html">圆的一般方程</a></li>
+</ul>
+</div>
+</body>
+</html>

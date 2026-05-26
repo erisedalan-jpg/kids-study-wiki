@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计图表选择</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>统计图表选择</h1><div class="review-mark" data-stem="507-统计图表选择"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 统计图表选择, statistical chart selection, 统计图选择, 图表类型</p><h2>🎓 统计图表选择</h2>
+<h3>常用统计图表概览</h3>
+<table>
+<thead>
+<tr>
+<th>图表类型</th>
+<th>适用场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>条形图（柱状图）</td>
+<td>比较不同类别的数量</td>
+<td>各类别间有间距，类别无顺序</td>
+</tr>
+<tr>
+<td>折线图</td>
+<td>展示随时间变化的趋势</td>
+<td>连续时间序列，强调变化趋势</td>
+</tr>
+<tr>
+<td>饼图（扇形图）</td>
+<td>展示各部分占总体的比例</td>
+<td>强调比例关系，类别数不多</td>
+</tr>
+<tr>
+<td>散点图</td>
+<td>展示两变量的相关关系</td>
+<td>成对数据，判断相关性</td>
+</tr>
+<tr>
+<td>频率分布直方图</td>
+<td>展示连续数据的分布形态</td>
+<td>各矩形面积 = 频率，组距相等</td>
+</tr>
+<tr>
+<td>茎叶图</td>
+<td>展示少量数据的分布和原始值</td>
+<td>保留原始数据，适合小样本</td>
+</tr>
+<tr>
+<td>箱线图</td>
+<td>展示数据的五数概括和离散程度</td>
+<td>中位数、四分位数、极值</td>
+</tr>
+</tbody>
+</table>
+<h3>选择图表的原则</h3>
+<p><strong>原则 1：数据类型</strong>
+- <strong>分类数据</strong>（类别变量）：条形图、饼图
+- <strong>连续数据</strong>（数值变量）：频率分布直方图、茎叶图
+- <strong>成对数据</strong>（两个变量）：散点图
+- <strong>时间序列数据</strong>：折线图</p>
+<p><strong>原则 2：分析目的</strong>
+- <strong>比较</strong>：条形图
+- <strong>趋势</strong>：折线图
+- <strong>构成</strong>：饼图（类别 $\leq 6$ 为佳）
+- <strong>分布形态</strong>：直方图、茎叶图
+- <strong>相关关系</strong>：散点图
+- <strong>集中趋势与离散</strong>：箱线图</p>
+<p><strong>原则 3：样本量</strong>
+- 小样本（$n \leq 30$）：茎叶图（保留原始值）
+- 大样本：频率分布直方图（分组处理）</p>
+<h3>高中重点图表</h3>
+<h4>频率分布直方图</h4>
+<ul>
+<li>横轴：数据区间（各组）</li>
+<li>纵轴：频率/组距（不是频率本身）</li>
+<li>各矩形面积 = 频率，所有矩形面积之和 = 1</li>
+<li>大量数据时，组距缩小趋向概率密度曲线</li>
+</ul>
+<h4>散点图</h4>
+<ul>
+<li>横轴：自变量 $x$，纵轴：因变量 $y$</li>
+<li>用于判断相关性方向和强弱</li>
+<li>是回归分析的第一步</li>
+</ul>
+<h4>茎叶图（茎叶图）</h4>
+<ul>
+<li>保留数据原始值，适合比较两组数据</li>
+<li>茎：十位数（或更高位），叶：个位数</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1（选择图表）</strong>：以下各题应选用什么图表？</p>
+<p>(1) 某班学生期末成绩（1-100 分整数）：<strong>频率分布直方图</strong>或<strong>茎叶图</strong>（看样本大小）</p>
+<p>(2) 2010-2025 年我国 GDP 增长趋势：<strong>折线图</strong>（时间序列）</p>
+<p>(3) 不同类型交通事故的占比：<strong>饼图</strong>（各类别比例）</p>
+<p>(4) 某城市每月降雨量（mm）与农作物产量（万吨）：<strong>散点图</strong>（两变量关系）</p>
+<p>(5) 某超市各类商品的月销售额比较：<strong>条形图</strong>（类别比较）</p>
+<p><strong>例2（读图）</strong>：频率分布直方图中，某矩形的高为 0.04，组距为 5，则该组的频率为？</p>
+<p>$$\text{频率} = \text{频率/组距} \times \text{组距} = 0.04 \times 5 = 0.2 = 20\%$$</p>
+<p><strong>例3（茎叶图）</strong>：两组学生成绩：</p>
+<pre><code>组A茎叶图    茎    组B茎叶图
+    9 8 7 |  6 | 2 5 8
+  5 4 3 2 |  7 | 1 3 6 9
+    8 7 6 |  8 | 0 4 7
+      9 8 |  9 | 1 5
+</code></pre>
+<p>从茎叶图直接读出：组B的中位数（从小到大排列后的中间值）约为 76.5。</p>
+<h3>常见错误图表选择</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>错误选择</th>
+<th>正确选择</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>两变量相关性</td>
+<td>折线图</td>
+<td>散点图</td>
+<td>折线图用于时间序列</td>
+</tr>
+<tr>
+<td>类别比例（类别多）</td>
+<td>饼图</td>
+<td>条形图</td>
+<td>类别超过 6 个时饼图难读</td>
+</tr>
+<tr>
+<td>连续数据分布</td>
+<td>条形图</td>
+<td>直方图</td>
+<td>条形图用于离散分类数据</td>
+</tr>
+<tr>
+<td>比较两组分布</td>
+<td>两张直方图</td>
+<td>茎叶图（背靠背）</td>
+<td>茎叶图更直观比较两组</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>直方图的纵轴</strong>：是"频率/组距"，不是"频率"，矩形面积 = 频率</li>
+<li><strong>条形图与直方图的区别</strong>：条形图各矩形有间距（离散数据），直方图无间距（连续数据）</li>
+<li><strong>饼图的局限</strong>：类别太多时难以辨别各扇形，改用条形图</li>
+<li><strong>散点图无连线</strong>：散点图只描点，不连线（连线会误导为时间序列）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/图表">统计图表 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/488-散点图.html">散点图</a></li>
+<li><a href="../atoms/141-统计图.html">数据可视化</a></li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+<li><a href="../atoms/509-统计案例-高中.html">统计案例-高中</a></li>
+<li><a href="../atoms/480-回归分析综合.html">回归分析综合</a></li>
+</ul>
+</div>
+</body>
+</html>

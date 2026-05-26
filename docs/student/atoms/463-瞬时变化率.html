@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>瞬时变化率</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>瞬时变化率</h1><div class="review-mark" data-stem="463-瞬时变化率"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 瞬时变化率, instantaneous rate of change, 瞬时速度</p><h2>🎓 瞬时变化率</h2>
+<h3>定义</h3>
+<p>设 $y=f(x)$，当 $x$ 从 $x_0$ 变化到 $x_0+\Delta x$ 时，若极限</p>
+<p>$$\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$$</p>
+<p>存在，则称此极限为 $f(x)$ 在 $x_0$ 处的<strong>瞬时变化率</strong>，即 $f(x)$ 在 $x_0$ 处的<strong>导数</strong> $f'(x_0)$。</p>
+<h3>从平均到瞬时</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>表达式</th>
+<th>物理含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均变化率</td>
+<td>$\dfrac{\Delta y}{\Delta x}$</td>
+<td>时间段内的平均速度</td>
+</tr>
+<tr>
+<td>瞬时变化率</td>
+<td>$\lim_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}=f'(x_0)$</td>
+<td>某一时刻的瞬时速度</td>
+</tr>
+</tbody>
+</table>
+<h3>物理背景</h3>
+<p>设物体做直线运动，位移函数 $s=s(t)$：</p>
+<ul>
+<li>从 $t_0$ 到 $t_0+\Delta t$ 的<strong>平均速度</strong>：$\bar{v} = \dfrac{\Delta s}{\Delta t} = \dfrac{s(t_0+\Delta t)-s(t_0)}{\Delta t}$</li>
+<li>$t_0$ 时刻的<strong>瞬时速度</strong>：$v(t_0) = \lim_{\Delta t\to 0}\dfrac{\Delta s}{\Delta t} = s'(t_0)$</li>
+<li>$t_0$ 时刻的<strong>瞬时加速度</strong>：$a(t_0) = v'(t_0) = s''(t_0)$</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 自由落体 $s=\dfrac{1}{2}gt^2$（$g\approx 9.8\text{ m/s}^2$），求 $t=2\text{ s}$ 时的瞬时速度。</p>
+<p>$$v(2) = s'(2) = \lim_{\Delta t\to 0}\frac{\frac{1}{2}g(2+\Delta t)^2 - \frac{1}{2}g\cdot 4}{\Delta t} = \lim_{\Delta t\to 0}\frac{g(2\Delta t + \Delta t^2)/2}{\Delta t} = \lim_{\Delta t\to 0}\frac{g(2+\Delta t)}{2} = g = 9.8\text{ m/s}$$</p>
+<p><strong>例 2</strong> 已知 $f(x)=x^2+1$，求 $f'(3)$ 并解释其意义。</p>
+<p>$$f'(3) = \lim_{h\to 0}\frac{(3+h)^2+1-(9+1)}{h} = \lim_{h\to 0}(6+h) = 6$$</p>
+<p>含义：$x=3$ 时，$x$ 每增加 $1$ 个单位，$y$ 瞬时增加约 $6$ 个单位。</p>
+<p><strong>例 3</strong> 某城市人口 $P(t)=10\cdot 1.03^t$（万人，$t$ 为年份）。求 $t=0$ 时的瞬时增长率。</p>
+<p>$$P'(0) = \lim_{h\to 0}\frac{10\cdot 1.03^h - 10}{h} = 10\ln 1.03 \approx 0.296 \text{（万人/年）}$$</p>
+<h3>与必修衔接</h3>
+<p>必修一中学过的"函数增量"$\Delta y$ 和"自变量增量"$\Delta x$ 是计算平均变化率的基础。瞬时变化率是对这一概念取极限，引入了"无穷小"的思想——这是微积分与初中代数的本质区别。</p>
+<h3>易错点</h3>
+<ul>
+<li>瞬时变化率是<strong>极限值</strong>，计算时必须取 $\Delta x\to 0$，不能用 $\Delta x$ 的某个具体值代替</li>
+<li>物理中"瞬时速度"的正负代表方向，不代表快慢；速率是速度的绝对值</li>
+<li>区分"平均变化率"（斜率的割线意义）和"瞬时变化率"（斜率的切线意义）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/导数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>延伸</strong>：<a href="../atoms/420-函数极值定义.html">函数极值定义</a></li>
+</ul>
+<p><a href="../atoms/449-平均变化率.html">平均变化率</a> · <a href="../atoms/441-导数的概念.html">导数的概念</a> · <a href="../atoms/440-导数的几何意义.html">导数的几何意义</a> · <a href="../atoms/442-导数的物理应用.html">导数的物理应用</a> · <a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a></p>
+</div>
+</body>
+</html>

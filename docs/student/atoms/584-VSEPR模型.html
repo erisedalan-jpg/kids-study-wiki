@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VSEPR模型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>VSEPR模型</h1><div class="review-mark" data-stem="584-VSEPR模型"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: VSEPR模型, 价层电子对互斥理论</p><h1>VSEPR模型</h1>
+<blockquote>
+<p><strong>一句话</strong>：VSEPR模型通过计算中心原子的价层电子对数（σ键电子对 + 孤电子对）来预测共价分子或离子的空间构型，核心原理是价层电子对间因库仑排斥会趋向尽可能远离。
+<strong>English</strong>: The Valence Shell Electron Pair Repulsion (VSEPR) model predicts molecular geometry by assuming that electron pairs in the valence shell of a central atom arrange themselves to minimize Coulombic repulsion.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：对于中心原子为A的分子或离子（ABm型），其价层电子对数n决定电子对的空间排布方式。计算公式为：n = (中心原子的价电子数 + 配位原子提供的单电子数) / 2（对于离子，需在分子总电子数上加减电荷数）。当n = 2/3/4时，电子对分别呈直线形/平面三角形/正四面体形分布。实际分子的空间构型仅由σ键电子对占据的位置决定，孤电子对虽然占据电子对几何构型的位置，但不计入分子构型。</p>
+<p><strong>关键方法</strong>：推断分子构型的标准步骤为：①确定中心原子A的价电子数（主族元素等于族序数）；②计算配位原子提供的电子数（H与卤素各提供1个电子，O族原子作为配位原子时提供的电子数为0）；③对阳离子减去电荷数，阴离子加上电荷数，求和后除以2得总价层电子对数n；④由n确定VSEPR理想模型；⑤用n减去配位原子数m得孤电子对数，移除孤电子对占据位置后得出实际分子空间构型。</p>
+<p><strong>典型应用</strong>：高考常见设问包括“用VSEPR模型推断H₂O、NH₃、CH₄等分子的空间构型”“比较键角大小并解释原因”。例如H₂O中氧的n = (6+2)/2 = 4，VSEPR模型为四面体形，但有2对孤电子对，实际分子构型为V形；NH₃中N的n = (5+3)/2 = 4，VSEPR模型为四面体形，1对孤电子对，分子构型为三角锥形。键角比较：CH₄(109.5°) &gt; NH₃(107°) &gt; H₂O(104.5°)，因孤电子对排斥力大于成键电子对，孤电子对数越多，键角被压缩越小。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆“VSEPR模型”与“分子空间构型”</strong>：VSEPR模型包含孤电子对占据的位置，如水为四面体形模型但分子为V形，二者不完全等同。</li>
+<li><strong>价层电子对数计算错误</strong>：忽略阴离子需加电荷数、阳离子需减电荷数；或误将氧族原子作配位原子时提供的电子数记为2（正确为0，例如CO₂中配位原子O提供的电子数为0，C的n = (4+0)/2 = 2）。</li>
+<li><strong>键角大小比较只记结论不记原理</strong>：需明确孤电子对排斥力 &gt; 孤电子对-成键电子对排斥力 &gt; 成键电子对间排斥力，且多重键的排斥力大于单键。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VSEPR模型</td>
+<td>VSEPR Theory</td>
+<td>价层电子对互斥理论</td>
+</tr>
+<tr>
+<td>价层电子对</td>
+<td>Valence Shell Electron Pair</td>
+<td>包括σ键电子对和孤电子对</td>
+</tr>
+<tr>
+<td>孤电子对</td>
+<td>Lone Pair</td>
+<td>不参与成键的价层电子对</td>
+</tr>
+<tr>
+<td>σ键电子对</td>
+<td>Sigma Bond Pair</td>
+<td>形成σ键的共用电子对</td>
+</tr>
+<tr>
+<td>分子空间构型</td>
+<td>Molecular Geometry</td>
+<td>原子在三维空间的实际排布</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：物质结构与性质 → 分子空间结构 → 价层电子对互斥理论</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/433-杂化轨道理论.html">杂化轨道理论</a></li>
+<li><a class="dead" title="未收录">分子极性</a></li>
+<li><a class="dead" title="未收录">等电子体原理</a></li>
+<li><a class="dead" title="未收录">配位键与配合物</a></li>
+<li><a class="dead" title="未收录">化学键类型</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/720-杂化轨道.html">杂化轨道</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/435-氢键.html">氢键</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2023-北京-02</a></li>
+<li><a class="dead" title="未收录">2023-湖南-02</a></li>
+<li><a class="dead" title="未收录">2024-北京-14</a></li>
+<li><a href="../exam/化学/2024-辽宁-02.html">2024-辽宁-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

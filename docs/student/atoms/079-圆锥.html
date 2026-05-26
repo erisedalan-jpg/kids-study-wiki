@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆锥</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆锥</h1><div class="review-mark" data-stem="079-圆锥"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 立体图形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆锥, cone, 圆锥体, 圆锥体积</p><h1>圆锥</h1>
+<blockquote>
+<p><strong>一句话</strong>：底面是圆、顶上尖尖的立体图形，体积是同底同高圆柱的三分之一。
+<strong>English</strong>: A cone has a circular base and a pointed top (apex); its volume is one-third that of a cylinder with the same base and height.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>圆锥的三要素</h3>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>底面半径</td>
+<td>r</td>
+<td>底面圆的半径</td>
+</tr>
+<tr>
+<td>高</td>
+<td>h</td>
+<td>从顶点垂直到底面的距离</td>
+</tr>
+<tr>
+<td>母线</td>
+<td>l</td>
+<td>从顶点到底面圆边缘的线段</td>
+</tr>
+</tbody>
+</table>
+<p>三者关系（勾股定理）：<strong>l² = r² + h²</strong>，即 l = √(r² + h²)</p>
+<h3>圆锥的面</h3>
+<table>
+<thead>
+<tr>
+<th>面</th>
+<th>数量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>底面（圆形）</td>
+<td>1</td>
+<td>圆，面积 = πr²</td>
+</tr>
+<tr>
+<td>侧面（弯曲）</td>
+<td>1</td>
+<td>展开后是<strong>扇形</strong></td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>1</td>
+<td>一个尖角</td>
+</tr>
+</tbody>
+</table>
+<p><strong>侧面展开图</strong>：把圆锥的侧面剪开展平，得到一个扇形。
+- 扇形的半径 = 圆锥的母线 l
+- 扇形的弧长 = 底面圆的周长 = 2πr</p>
+<h3>体积公式</h3>
+<p>$$V_{\text{圆锥}} = \frac{1}{3} \pi r^2 h$$</p>
+<p>也可以写成：<strong>圆锥体积 = 底面积 × 高 ÷ 3</strong></p>
+<p><strong>⚠️ 最常见易错点</strong>：做题时忘记除以 3！记忆口诀：<strong>"锥体体积要除三"</strong></p>
+<h3>圆锥与圆柱的关系</h3>
+<p>当圆锥和圆柱<strong>底面相同、高相同</strong>（等底等高）时：</p>
+<pre><code>圆柱体积 = πr²h
+圆锥体积 = (1/3)πr²h
+
+圆柱体积 = 3 × 圆锥体积
+</code></pre>
+<p><strong>实验验证</strong>：用同底同高的圆锥形杯和圆柱形杯，把沙子或水倒 3 次从圆锥杯到圆柱杯，恰好装满——这就是 3 倍关系的直观证明！</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：已知圆锥底面半径 r = 3 cm，高 h = 4 cm，求体积。</p>
+<blockquote>
+<p>V = (1/3) × π × 3² × 4 = (1/3) × π × 9 × 4 = 12π ≈ 37.7 cm³</p>
+</blockquote>
+<p><strong>例 2</strong>：一个等底等高的圆柱体积为 60 cm³，圆锥体积是多少？</p>
+<blockquote>
+<p>圆锥体积 = 60 ÷ 3 = <strong>20 cm³</strong></p>
+</blockquote>
+<p><strong>例 3</strong>：求上题圆锥的母线长（r = 3, h = 4）：</p>
+<blockquote>
+<p>l = √(3² + 4²) = √(9 + 16) = √25 = <strong>5 cm</strong></p>
+</blockquote>
+<h3>生活中的圆锥</h3>
+<table>
+<thead>
+<tr>
+<th>实物</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冰激凌甜筒</td>
+<td>经典圆锥容器</td>
+</tr>
+<tr>
+<td>生日尖帽</td>
+<td>侧面是扇形</td>
+</tr>
+<tr>
+<td>陀螺</td>
+<td>旋转时稳定，利用圆锥形状</td>
+</tr>
+<tr>
+<td>路障锥（雪糕桶）</td>
+<td>橙色圆锥路障</td>
+</tr>
+<tr>
+<td>圣诞树</td>
+<td>近似圆锥形</td>
+</tr>
+<tr>
+<td>火山</td>
+<td>火山锥是自然界的圆锥</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>旋转体：直角三角形绕直角边旋转</h3>
+<p>圆锥是<strong>旋转体（solid of revolution）</strong>：将一个直角三角形绕其一条直角边旋转 360°，另一条直角边扫出的圆就是底面，斜边扫出的面就是侧面。</p>
+<p>圆锥体积公式的积分推导：</p>
+<pre><code>V = ∫₀ʰ π [r(x)]² dx
+
+其中 r(x) = (r/h)·x（半径从顶点到底面线性增加）
+
+V = π(r/h)² ∫₀ʰ x² dx
+  = π(r/h)² · [x³/3]₀ʰ
+  = π(r/h)² · h³/3
+  = πr²h/3
+</code></pre>
+<p>这正是小学学的公式的微积分证明。</p>
+<h3>圆锥曲线（Conic Sections）</h3>
+<p>用平面截圆锥，根据截面与轴的角度不同，得到四种截面：</p>
+<table>
+<thead>
+<tr>
+<th>截面方式</th>
+<th>截面形状</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平行底面</td>
+<td>圆 (circle)</td>
+<td>circle</td>
+</tr>
+<tr>
+<td>斜切但不平行母线</td>
+<td>椭圆 (ellipse)</td>
+<td>ellipse</td>
+</tr>
+<tr>
+<td>平行一条母线</td>
+<td>抛物线 (parabola)</td>
+<td>parabola</td>
+</tr>
+<tr>
+<td>与轴平行（或更陡）</td>
+<td>双曲线 (hyperbola)</td>
+<td>hyperbola</td>
+</tr>
+</tbody>
+</table>
+<p>这四种曲线统称<strong>圆锥曲线（conic sections）</strong>，是高中数学和大学解析几何的核心内容。</p>
+<table>
+<thead>
+<tr>
+<th>曲线</th>
+<th>方程</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆</td>
+<td>x² + y² = r²</td>
+<td>车轮、轨道</td>
+</tr>
+<tr>
+<td>椭圆</td>
+<td>x²/a² + y²/b² = 1</td>
+<td>行星轨道（开普勒第一定律）</td>
+</tr>
+<tr>
+<td>抛物线</td>
+<td>y = ax²</td>
+<td>卫星天线、汽车头灯反射</td>
+</tr>
+<tr>
+<td>双曲线</td>
+<td>x²/a² − y²/b² = 1</td>
+<td>GPS 定位、声呐</td>
+</tr>
+</tbody>
+</table>
+<h3>表面积与优化</h3>
+<p>圆锥全面积（含底面）：</p>
+<pre><code>S = πrl + πr²
+  = πr(l + r)
+</code></pre>
+<p><strong>优化问题</strong>：给定圆锥体积 V，如何选择 r 和 h 使表面积最小？这是微积分优化的经典题目，答案是 h/r = √2（半开角 = arctan(1/√2) ≈ 35.26°）。</p>
+<h3>工程与自然中的圆锥</h3>
+<ul>
+<li><strong>声音聚焦</strong>：抛物面（圆锥曲线之一）能把声音或光汇聚到一点，用于卫星天线、望远镜镜面</li>
+<li><strong>纸杯设计</strong>：圆锥形纸杯（饮水机旁边的尖底杯）比圆柱形纸杯省材料，且不能放置，迫使人一次用完</li>
+<li><strong>火箭鼻锥</strong>：火箭顶部圆锥形设计，减少空气阻力（圆锥的曲面分流气体最优）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆锥</td>
+<td>cone</td>
+<td>n.</td>
+<td>核心立体图形</td>
+</tr>
+<tr>
+<td>底面</td>
+<td>base</td>
+<td>n.</td>
+<td>底部的圆</td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>apex / vertex</td>
+<td>n.</td>
+<td>最高的尖点</td>
+</tr>
+<tr>
+<td>母线</td>
+<td>slant height / generatrix</td>
+<td>n.</td>
+<td>顶点到底面边缘的线段</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height</td>
+<td>n.</td>
+<td>顶点到底面的垂直距离</td>
+</tr>
+<tr>
+<td>侧面</td>
+<td>lateral surface</td>
+<td>n.</td>
+<td>弯曲的侧面</td>
+</tr>
+<tr>
+<td>扇形</td>
+<td>sector</td>
+<td>n.</td>
+<td>侧面展开后的形状</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>volume</td>
+<td>n.</td>
+<td>三维空间占用大小</td>
+</tr>
+<tr>
+<td>旋转体</td>
+<td>solid of revolution</td>
+<td>n.</td>
+<td>由平面图形旋转而成的立体</td>
+</tr>
+<tr>
+<td>圆锥曲线</td>
+<td>conic section</td>
+<td>n.</td>
+<td>平面截圆锥得到的曲线</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆锥有一个圆形底面和一个顶点。</td>
+<td>A cone has a circular base and one apex.</td>
+</tr>
+<tr>
+<td>圆锥的侧面展开是扇形。</td>
+<td>The lateral surface of a cone unfolds into a sector.</td>
+</tr>
+<tr>
+<td>等底等高时，圆柱体积是圆锥的三倍。</td>
+<td>With the same base and height, a cylinder holds three times as much as a cone.</td>
+</tr>
+<tr>
+<td>这个圆锥的体积是 12π 立方厘米。</td>
+<td>The volume of this cone is 12π cubic centimetres.</td>
+</tr>
+<tr>
+<td>冰激凌甜筒是圆锥形的。</td>
+<td>An ice cream cone is cone-shaped.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li><strong>《Shape by Shape》</strong> — Suse MacDonald 著，拼图风格认识各种形状，包含立体形状概念引导。适龄：3-6 岁。（<strong>待家长核对</strong>）</li>
+<li>🚧 专门讲圆锥的幼儿绘本较少，建议以实物（甜筒、路障）为引导，配合本词条 3-6 岁章节共读。</li>
+<li>🚧 英文立体形状科普绘本可查找 "3D shapes cone" 类别，多数包含 cone 章节。（<strong>具体书名待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"圆锥和圆柱有什么不同？"</strong> → 可以说："圆柱上下一样大，像易拉罐；圆锥下面是圆、上面是尖，像冰激凌甜筒。最大的区别是：同样大小的底面和高，圆柱装的东西是圆锥的 3 倍——所以吃冰激凌要选圆柱桶不选甜筒！"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"为什么圆锥体积是圆柱的三分之一？"</strong> → 可以说："这个需要实验来感受——把同底同高的圆锥形杯装满沙子，往圆柱形杯里倒，倒 3 次恰好装满。这是古希腊人发现的，阿基米德证明了它。（高中学积分后你会看到数学证明）"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"母线是什么？"</strong> → 可以说："母线是从顶点沿着圆锥表面连到底面圆边缘的线——就像你用手指从冰激凌尖尖沿边划到底部圆圈的那条线。母线、高、底面半径形成一个直角三角形，可以用勾股定理算。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 用纸做一个圆锥：剪一个扇形，卷成圆锥形并粘好，再剪一个圆形做底面。量一量扇形的半径（就是圆锥的母线）和扇形的弧长（就是底面的周长），验证 弧长 = 2πr。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书·数学六年级下册.pdf</a> 第3单元《圆柱与圆锥》(p16-37)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第三学段"图形与几何"——圆锥体积（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/圆锥</li>
+<li><strong>拓展阅读</strong>：圆锥曲线（高中解析几何）；旋转体积分（微积分）；阿基米德《论球与圆柱》</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/066-体积.html">体积</a> <a href="../atoms/074-圆的周长与面积.html">圆的周长与面积</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-文-16.html">2011-文-16</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-03</a></li>
+<li><a href="../exam/数学/2023-新课标Ⅱ-09.html">2023-新课标Ⅱ-09</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的应用</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的应用</h1><div class="review-mark" data-stem="285-函数的应用"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的应用, function applications, 函数建模, 实际问题函数化</p><h2>🎓 函数的应用</h2>
+<h3>核心思想</h3>
+<p>将实际问题转化为函数问题，通过研究函数的性质（定义域、值域、单调性、最值等）来解决实际问题。建模步骤：</p>
+<ol>
+<li><strong>读题</strong>：理清变量关系，确定自变量和因变量</li>
+<li><strong>建模</strong>：用数学公式表达关系，写出函数解析式</li>
+<li><strong>定域</strong>：根据实际意义确定定义域（实际约束往往比数学约束更严格）</li>
+<li><strong>求解</strong>：分析函数性质（单调性、最值），求出问题的答案</li>
+<li><strong>验证</strong>：将结果代回实际问题，检验合理性</li>
+</ol>
+<h3>常见应用类型</h3>
+<p><strong>最值问题</strong>：在约束条件下求函数的最大值或最小值（用料最省、利润最大、时间最短等）。</p>
+<p><strong>方程/不等式问题</strong>：将实际条件转化为方程或不等式，函数零点对应方程的解。</p>
+<p><strong>增长/衰减模型</strong>：指数函数 $y = a \cdot b^x$ 用于人口增长、放射性衰变等。</p>
+<p><strong>周期现象</strong>：三角函数用于描述潮汐、振动、声波等周期性现象。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>（优化问题）：某工厂生产某商品，日产量为 $x$ 件时，总成本 $C(x) = 0.1x^2 + 100x + 500$（元），单价为 $200$ 元/件。求使利润最大的日产量和最大利润。</p>
+<p>解：设日利润 $L(x) = 200x - C(x) = 200x - 0.1x^2 - 100x - 500 = -0.1x^2 + 100x - 500$</p>
+<p>$L(x) = -0.1(x^2 - 1000x) - 500 = -0.1(x-500)^2 + 0.1 \times 250000 - 500 = -0.1(x-500)^2 + 24500$</p>
+<p>$x = 500$ 时 $L$ 最大，最大利润为 $24500$ 元（前提：$x \in \mathbb{N}^*$ 且符合实际产量限制）。</p>
+<p><strong>例2</strong>（函数零点/方程）：某商品销售价格 $p$（元/件）与销量 $q$（件）的关系为 $q = 100 - 2p$（$p \in [10, 40]$），求使销售额 $W = pq$ 最大的价格 $p$。</p>
+<p>解：$W(p) = p(100-2p) = -2p^2 + 100p = -2(p-25)^2 + 1250$。</p>
+<p>$p = 25 \in [10, 40]$，最大销售额为 $W(25) = 1250$ 元。</p>
+<p><strong>例3</strong>（增长模型）：某细菌数量每小时增加一倍，初始数量为 $N_0$，求 $t$ 小时后的数量 $N(t)$，并求数量超过 $1000 N_0$ 所需时间。</p>
+<p>解：$N(t) = N_0 \cdot 2^t$（指数函数）。</p>
+<p>$N(t) &gt; 1000 N_0 \Rightarrow 2^t &gt; 1000 \Rightarrow t &gt; \log_2 1000 = \dfrac{\ln 1000}{\ln 2} \approx 9.97$</p>
+<p>故约 $10$ 小时后数量超过 $1000 N_0$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>定义域遗漏实际约束</strong>：数学上解析式有意义的范围，不等于实际问题允许的范围（如日产量不能为负，也不能超过产能）</li>
+<li><strong>单位换算</strong>：建模时注意变量的单位统一，避免混用</li>
+<li><strong>最值的实际意义</strong>：数学最值是否在实际定义域内，若顶点不在实际范围内，需在端点处取最值</li>
+<li><strong>线性化处理</strong>：实际问题常见"销量与价格成反比"等线性关系，但此关系仅在一定范围内成立</li>
+<li><strong>"利润=收入-成本"</strong>：利润函数建立要清楚收入和成本的构成，不要遗漏固定成本</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中用一次函数和二次函数解决路程、工程、利润等问题。高中将问题范围拓展到指数/对数/三角函数，并系统化"建模 → 求解 → 验证"的思路，培养用数学工具解决实际问题的能力。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：数学建模（Mathematical modeling），应用数学</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+<li><a href="../atoms/286-函数的最值.html">函数的最值</a></li>
+<li><a href="../atoms/288-函数零点.html">函数零点</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a href="../atoms/270-三角函数应用.html">三角函数应用</a></li>
+<li><a href="../atoms/295-基本不等式.html">基本不等式</a></li>
+<li><a href="../atoms/091-应用题（行程工程利润）.html">091-应用题（行程工程利润）</a></li>
+</ul>
+</div>
+</body>
+</html>

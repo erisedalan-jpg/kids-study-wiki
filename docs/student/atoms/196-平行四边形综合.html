@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行四边形综合</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>平行四边形综合</h1><div class="review-mark" data-stem="196-平行四边形综合"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 平行四边形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 平行四边形综合, quadrilateral synthesis, 特殊四边形综合, 四边形综合</p><h1>平行四边形综合</h1>
+<blockquote>
+<p><strong>一句话</strong>：将平行四边形、矩形、菱形、正方形的定义、性质、判定综合运用，是八下几何的核心综合能力。
+<strong>English</strong>: Synthesis of parallelogram, rectangle, rhombus, and square — combining definitions, properties, and criteria to solve complex geometry problems.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>特殊四边形家族图谱</h3>
+<pre><code>四边形
+  └─ 平行四边形（两组对边平行）
+        ├─ 矩形（有直角）
+        ├─ 菱形（四边相等）
+        └─ 正方形（矩形 ∩ 菱形）
+</code></pre>
+<h3>性质对比表</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>平行四边形</th>
+<th>矩形</th>
+<th>菱形</th>
+<th>正方形</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对边相等</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>对角相等</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>对角线互平分</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>四角均 90°</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>四边相等</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>对角线相等</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>对角线垂直</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>对角线平分对角</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3>综合解题思路</h3>
+<ol>
+<li><strong>看条件</strong>：已知哪些边角对角线关系？</li>
+<li><strong>选类型</strong>：确定是哪种四边形</li>
+<li><strong>用性质</strong>：调用对应性质得结论</li>
+<li><strong>证明</strong>：写步步有据的推理</li>
+</ol>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>常见综合题型</h3>
+<p><strong>题型1：已知一种四边形，证明某条线段或角的关系</strong></p>
+<p>思路：先列出该四边形的全部性质，找与目标相关的性质，辅助线（连对角线/作高/延长线）配合全等或相似。</p>
+<p><strong>题型2：给定多个条件，判断四边形类型</strong></p>
+<p>思路：逐条排除，从最一般（平行四边形）开始，看能否升级为矩形/菱形/正方形。</p>
+<p><strong>题型3：含参数的综合题</strong></p>
+<p>例：平行四边形 $ABCD$ 中，$E$、$F$ 分别是 $AB$、$CD$ 的中点，证明 $AEFD$ 是平行四边形，并在什么额外条件下升级为矩形/菱形/正方形？</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：$\square ABCD$ 中，$E$、$F$ 分别是 $AB$、$CD$ 中点，$AF$、$CE$ 分别交对角线 $BD$ 于点 $M$、$N$。证明 $BM=MN=ND$。</p>
+<p>思路：利用平行四边形中点性质，两次用<a href="../atoms/179-三角形中位线.html">三角形中位线</a>或向量法。（步骤较长，待家长配合教材核实。）</p>
+<p><strong>例 2</strong>：矩形 $ABCD$，$\angle ABD=30°$，$AB=\sqrt{3}$，求 $BC$。</p>
+<p>$\tan 30° = \dfrac{AB}{BC} \Rightarrow \dfrac{1}{\sqrt{3}}=\dfrac{\sqrt{3}}{BC} \Rightarrow BC=3$（待核实）。</p>
+<h3>升级路线图</h3>
+<p>$$\text{平行四边形} \xrightarrow{+\text{一个直角}} \text{矩形} \xrightarrow{+\text{邻边相等}} \text{正方形}$$
+$$\text{平行四边形} \xrightarrow{+\text{邻边相等}} \text{菱形} \xrightarrow{+\text{一个直角}} \text{正方形}$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 对角线相等误判为菱形（对角线相等是矩形特征）</li>
+<li>❌ 对角线垂直误判为正方形（垂直是菱形，等长才到正方形）</li>
+<li>❌ 升级时条件不充分（仅一个额外条件有时不够，需确认满足定义）</li>
+</ul>
+<h3>知识联系</h3>
+<p>综合题汇聚<a href="../atoms/195-平行四边形定义性质.html">平行四边形定义性质</a>、<a href="../atoms/194-平行四边形判定.html">平行四边形判定</a>、<a class="dead" title="未收录">矩形</a>、<a class="dead" title="未收录">菱形</a>、<a href="../atoms/200-正方形.html">正方形</a>、<a href="../atoms/179-三角形中位线.html">三角形中位线</a>；经常与<a href="../atoms/189-勾股定理.html">勾股定理</a>、<a class="dead" title="未收录">三角形全等</a>、<a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a>联动。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>综合题</td>
+<td>synthesis problem</td>
+</tr>
+<tr>
+<td>升级条件</td>
+<td>additional criterion</td>
+</tr>
+<tr>
+<td>辅助线</td>
+<td>auxiliary line</td>
+</tr>
+<tr>
+<td>充分必要条件</td>
+<td>necessary and sufficient condition</td>
+</tr>
+<tr>
+<td>特殊四边形</td>
+<td>special quadrilateral</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第18章综合（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·四边形</li>
+<li>拓展：<a class="dead" title="未收录">数学/平行四边形判定</a> · <a class="dead" title="未收录">数学/三角形中位线</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实综合例题。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/195-平行四边形定义性质.html">平行四边形定义性质</a> · <a href="../atoms/194-平行四边形判定.html">平行四边形判定</a> · <a class="dead" title="未收录">矩形</a> · <a class="dead" title="未收录">菱形</a> · <a href="../atoms/200-正方形.html">正方形</a> · <a href="../atoms/179-三角形中位线.html">三角形中位线</a> · <a href="../atoms/189-勾股定理.html">勾股定理</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正方体展开图</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正方体展开图</h1><div class="review-mark" data-stem="966-正方体展开图"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正方体展开图, Cube net</p><h1>正方体展开图</h1>
+<blockquote>
+<p><strong>一句话</strong>：正方体展开图是由六个全等的正方形按特定连接方式组成的平面图形，经折叠可恰好围成一个正方体。
+<strong>English</strong>: A cube net is a two-dimensional arrangement of six congruent squares that can be folded to form a cube.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+正方体展开图是将正方体的六个面沿某些棱剪开并平铺在同一个平面内的图形。高中阶段需掌握：<br />
+- 正方体共有 <strong>11种</strong> 不同的展开图，可归纳为四类结构：1‑4‑1型（6种）、2‑3‑1型（3种）、2‑2‑2型（1种）、3‑3型（1种）。<br />
+- 任意一种展开图必须满足“<strong>相对面不相邻</strong>”原则：在平面展开图中，相对的两个面不会共用一条边，且展开后至少间隔一个正方形。<br />
+- 常见的排除口诀：“<strong>一线不过四</strong>”（一行中连续的正方形不超过四个）、“<strong>田凹应弃之</strong>”（含有“田”字形或“凹”字形的结构不能围成正方体）。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>相对面判定法</strong>：在展开图中，每隔一个正方形的两个面互为相对面；若展开图可以放置为三行，则“同行隔一个，异行隔两个”是相对面。<br />
+2. <strong>邻面还原法</strong>：选定一个面为底面，利用“相邻面必共棱”逐面折叠还原，检验是否存在面重叠或缺少面。<br />
+3. <strong>标点还原法</strong>：在展开图的各顶点标上字母，折叠后重合的点必须满足到已定点的路径与正方体棱长关系一致；常用于处理“折叠后某两点重合”的最值问题。</p>
+<p><strong>典型应用</strong><br />
+高考中常见设问：<br />
+- <strong>选择题</strong>：给出四个展开图，判断哪个能围成正方体；或给出正方体及其表面上的点、线，选择正确的展开图。<br />
+- <strong>判断题</strong>：在展开图上标出正方体各面的字母，问折叠后哪两个面相对。<br />
+- <strong>最值问题</strong>：在展开图上，求正方体表面上两点间的最短路径（如沿表面从顶点到对角顶点的最短距离），需将相关面展开到同一平面，利用“两点之间线段最短”求解。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆相对面的判定规则</strong>：错以为紧邻的两个面可能是相对面，未严格遵循“同行相隔一个，异行相隔两个”的规律。  </li>
+<li><strong>忽略“旋转等同”</strong>：同一个展开图通过旋转或翻转得到的图形视为同一种，但学生常误判为不同种或认为其不能折叠。  </li>
+<li><strong>标点还原时顶点对应错误</strong>：还原折叠过程中，多个顶点在立体图中重合，学生未注意到这些顶点在展开图中应满足特定的邻接关系，导致重合点判断失误。  </li>
+<li><strong>最值问题未正确展开</strong>：在计算正方体表面最短路径时，未将行径的两个面摊平在同一平面，或摊平方式并非最短路径对应的情况（需比较多种可能的摊平方式）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正方体</td>
+<td>cube</td>
+<td>六个面都是全等正方形的正六面体。</td>
+</tr>
+<tr>
+<td>展开图</td>
+<td>net</td>
+<td>可折叠成立体的平面图形。</td>
+</tr>
+<tr>
+<td>相对面</td>
+<td>opposite faces</td>
+<td>正方体中没有公共棱的两个面。</td>
+</tr>
+<tr>
+<td>棱</td>
+<td>edge</td>
+<td>相邻两个面的公共边。</td>
+</tr>
+<tr>
+<td>最短路径</td>
+<td>shortest path</td>
+<td>沿正方体表面连接两点的最短连线。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">空间几何体的结构特征</a></li>
+<li><a class="dead" title="未收录">三视图与直观图</a></li>
+<li><a class="dead" title="未收录">柱、锥、台、球的表面积与体积</a></li>
+<li><a class="dead" title="未收录">空间中点、直线、平面之间的位置关系</a></li>
+<li><a class="dead" title="未收录">异面直线所成的角</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-12.html">2009-文-12</a></li>
+<li><a href="../exam/数学/2009-理-12.html">2009-理-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

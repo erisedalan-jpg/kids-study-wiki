@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>射线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>射线</h1><div class="review-mark" data-stem="090-射线"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七上, 几何初步]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 射线, ray, 半直线</p><h2>课本一句话定义</h2>
+<p><strong>射线</strong>是从一个端点出发，向一个方向无限延伸的直线的一部分；射线有一个<strong>端点</strong>（起点），没有终点，长度无限，<strong>不能度量</strong>。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>射线就像光从手电筒射出去：
+- 手电筒 = <strong>端点</strong>（有起点）
+- 光向外无限延伸 = <strong>无终点</strong></p>
+<p>日常例子：
+- 太阳光线（从太阳出发，向地球方向延伸）
+- 激光笔射出的光束</p>
+<p><strong>三种线的对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>线段</th>
+<th>射线</th>
+<th>直线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>端点</td>
+<td>两个</td>
+<td>一个</td>
+<td>没有</td>
+</tr>
+<tr>
+<td>长度</td>
+<td>有限（可测量）</td>
+<td>无限</td>
+<td>无限</td>
+</tr>
+<tr>
+<td>画法</td>
+<td>两端封闭</td>
+<td>一端封闭，一端箭头</td>
+<td>两端箭头</td>
+</tr>
+</tbody>
+</table>
+<p>射线记作 $OA$（$O$ 是端点，$A$ 是射线上另一点，方向：从 $O$ 向 $A$ 延伸）。</p>
+<p><strong>注意</strong>：$OA$ 和 $AO$ 是不同的射线（端点不同，方向相反）！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>射线</strong>（ray）$OA$：从点 $O$（端点）出发，经过点 $A$，向 $A$ 方向无限延伸的图形。</p>
+<p>数学符号：通常记作 $\overrightarrow{OA}$（有时与向量混淆，注意上下文）。</p>
+<p><strong>射线的有向性</strong>：射线有方向，$\overrightarrow{OA}$ 和 $\overrightarrow{AO}$ 是完全不同的两条射线（方向相反，端点不同）。</p>
+<h3>关键性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一个端点</td>
+<td>只有起点，没有终点</td>
+</tr>
+<tr>
+<td>无限延伸</td>
+<td>长度无限，无法度量</td>
+</tr>
+<tr>
+<td>方向确定</td>
+<td>有唯一的方向</td>
+</tr>
+<tr>
+<td>包含线段</td>
+<td>射线上任意两点之间是线段</td>
+</tr>
+<tr>
+<td>射线数量</td>
+<td>过一点可作无数条射线（方向可任意）</td>
+</tr>
+</tbody>
+</table>
+<h3>与角的关系</h3>
+<p><strong>角</strong>是由两条有<strong>公共端点</strong>的射线构成的图形——这是角的定义基础。</p>
+<p>$$\angle AOB: \text{两条射线 } OA \text{ 和 } OB \text{，共享端点 } O$$</p>
+<p>角的顶点 = 射线的公共端点；角的两边 = 两条射线。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：直线 $l$ 上有一点 $O$，把直线 $l$ 分成几条射线？各是什么？</p>
+<p><strong>解</strong>：$O$ 将直线 $l$ 分成 <strong>2 条</strong>射线：$\overrightarrow{OA}$（$O$ 向左）和 $\overrightarrow{OB}$（$O$ 向右）。</p>
+<p><strong>例 2</strong>：平面内有点 $O$，从 $O$ 出发能画多少条射线？</p>
+<p><strong>解</strong>：可以画<strong>无数条</strong>射线（每个方向对应一条）。</p>
+<p><strong>例 3</strong>：射线 $OA$ 上有一点 $B$（$B$ 在 $O$ 和 $A$ 之间），$OB = 3$，$OA = 7$，求 $BA$。</p>
+<p><strong>解</strong>：$BA = OA - OB = 7 - 3 = 4$（$B, A$ 在同一射线上，故 $OA = OB + BA$）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>射线的名称有顺序</strong>：$\overrightarrow{OA}$ 以 $O$ 为端点，$\overrightarrow{AO}$ 以 $A$ 为端点——是两条不同的射线。</li>
+<li><strong>射线无法度量长度</strong>：只有线段才有长度（射线是"半无限"的）。</li>
+<li><strong>射线 ≠ 箭头</strong>：射线图示中的箭头只表示"无限延伸"，本身不是终点。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：线段（有两端点）、点线面体</li>
+<li>后续：直线（两端无限）→ 角（两射线夹角）→ 角的度量</li>
+<li>高中拓展：向量（有方向和大小，从射线概念延伸）→ 极坐标（角度 + 射线）</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>射线</td>
+<td>ray</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>端点（起点）</td>
+<td>endpoint / origin</td>
+<td>射线的起始点</td>
+</tr>
+<tr>
+<td>无限延伸</td>
+<td>extends infinitely</td>
+<td>没有终点</td>
+</tr>
+<tr>
+<td>方向</td>
+<td>direction</td>
+<td>射线的有向性</td>
+</tr>
+<tr>
+<td>半直线</td>
+<td>half-line</td>
+<td>射线的另一说法</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>射线有一个端点，向一个方向无限延伸。</td>
+<td>A ray has one endpoint and extends infinitely in one direction.</td>
+</tr>
+<tr>
+<td>射线 $OA$ 和射线 $AO$ 是不同的射线。</td>
+<td>Ray $OA$ and ray $AO$ are different rays.</td>
+</tr>
+<tr>
+<td>角是由两条射线构成的几何图形。</td>
+<td>An angle is formed by two rays with a common endpoint.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"图形与几何"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第四章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Ray (geometry)</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/028-线段.html">线段</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/104-直线.html">直线</a></p>
+</li>
+<li>
+<p><a href="../atoms/028-线段.html">线段</a></p>
+</li>
+<li><a href="../atoms/104-直线.html">直线</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+<li><a href="../atoms/103-点线面体.html">点线面体</a></li>
+<li><a href="../atoms/112-角的度量.html">角的度量</a></li>
+<li><a href="../atoms/085-几何图形.html">几何图形</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-05.html">2010-理-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

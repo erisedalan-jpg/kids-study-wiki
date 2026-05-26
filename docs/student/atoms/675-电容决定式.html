@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电容决定式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电容决定式</h1><div class="review-mark" data-stem="675-电容决定式"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电容决定式, 平行板电容决定式</p><h1>电容决定式</h1>
+<blockquote>
+<p><strong>一句话</strong>：平行板电容器的电容由两极板的正对面积、板间距离以及极板间电介质的相对介电常数共同决定，表达式为 $C = \frac{\varepsilon_r S}{4\pi k d}$。
+<strong>English</strong>: The capacitance of a parallel-plate capacitor is determined by the plate area, the separation distance, and the permittivity of the dielectric material between the plates.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+平行板电容器的电容决定式是定量描述电容器电容由自身结构因素决定的规律。忽略边缘效应时，其电容 $C$ 与两极板正对面积 $S$、极板间电介质的相对介电常数 $\varepsilon_r$ 成正比，与极板间距离 $d$ 成反比。<br />
+常用形式：<br />
+$$
+C = \frac{\varepsilon_r S}{4\pi k d}
+$$<br />
+式中 $k$ 为静电力常量（$k \approx 9.0 \times 10^9 \ \mathrm{N \cdot m^2 / C^2}$）。<br />
+使用真空介电常数 $\varepsilon_0$ 时，关系为 $C = \frac{\varepsilon_0 \varepsilon_r S}{d}$，其中 $\varepsilon_0 = \frac{1}{4\pi k}$。当真空间隙时 $\varepsilon_r = 1$。</p>
+<p><strong>关键方法</strong><br />
+解决电容器动态分析问题的标准步骤：<br />
+1. <strong>确定不变量</strong>——电容器始终与电源相连则两极板间电势差 $U$ 不变；充电后断开电源则极板所带电荷量 $Q$ 不变。<br />
+2. <strong>用决定式判断电容变化</strong>——根据 $C = \frac{\varepsilon_r S}{4\pi k d}$ 分析改变 $d$、$S$ 或 $\varepsilon_r$ 时 $C$ 如何变化。<br />
+3. <strong>结合定义式推理</strong>——利用 $C = \frac{Q}{U}$ 和 $E = \frac{U}{d}$ 判断 $Q$、$U$、$E$ 的变化。特别注意：若 $Q$ 不变时，场强 $E$ 与 $d$ 无关（$E = \frac{4\pi k Q}{\varepsilon_r S}$），这是常见考察重点。</p>
+<p><strong>典型应用</strong><br />
+高考常以电容器动态变化情景设问，例如：<br />
+- <strong>改变板间距离</strong>：如图，平行板电容器充电后断开电源，将两极板靠近。判断电容 $C$、电势差 $U$、场强 $E$ 的变化。由决定式 $d$ 减小 $C$ 增大，而 $Q$ 不变，由 $C=Q/U$ 得 $U$ 减小；由 $E=U/d$ 或 $E = \frac{4\pi k Q}{\varepsilon_r S}$ 得 $E$ 不变。<br />
+- <strong>改变正对面积或介质</strong>：电容式传感器中，转动动片改变正对面积，或插入电介质改变 $\varepsilon_r$，结合电路特征分析电容变化引起的充放电电流方向。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆定义式与决定式</strong>：错误地认为电容 $C$ 与 $Q$ 成正比、与 $U$ 成反比。电容由电容器本身结构（$S, d, \varepsilon_r$）决定，定义式 $C = Q/U$ 是量度关系，不是决定关系。  </li>
+<li><strong>动态分析中场强判断失误</strong>：在电荷量 $Q$ 不变的情况下，误用 $E = U/d$ 直接判断 $d$ 变化导致 $E$ 变化，忽略了此时 $U$ 也会变化。应优先用导出式 $E = \frac{4\pi k Q}{\varepsilon_r S}$ 判断 $E$ 是否改变。  </li>
+<li><strong>介质影响记忆混淆</strong>：把相对介电常数 $\varepsilon_r$ 与电阻率、磁导率等其他材料属性混淆；或忘记真空（空气近似）的 $\varepsilon_r = 1$，插入介质后电容一定增大。  </li>
+<li><strong>计算常数代入错误</strong>：使用决定式 $C = \frac{\varepsilon_r S}{4\pi k d}$ 时，忘记 $k$ 的取值，或面积、距离单位换算不清（如 $S$ 需用 $\mathrm{m^2}$，$d$ 用 $\mathrm{m}$）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电容</td>
+<td>capacitance</td>
+<td>描述电容器容纳电荷本领的物理量</td>
+</tr>
+<tr>
+<td>平行板电容器</td>
+<td>parallel-plate capacitor</td>
+<td>由两块平行金属板组成的电容器</td>
+</tr>
+<tr>
+<td>决定式</td>
+<td>determining formula</td>
+<td>由电容器自身结构因素表达电容的公式</td>
+</tr>
+<tr>
+<td>相对介电常数</td>
+<td>relative permittivity (dielectric constant)</td>
+<td>表征电介质对电场削弱程度的无量纲常数</td>
+</tr>
+<tr>
+<td>极板正对面积</td>
+<td>facing area / plate area</td>
+<td>两板重叠的有效面积</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/678-电容定义式.html">电容定义式</a></li>
+<li><a class="dead" title="未收录">电容器动态分析</a></li>
+<li><a href="../atoms/298-带电粒子在电场中偏转.html">带电粒子在电场中的偏转</a></li>
+<li><a class="dead" title="未收录">电场强度与电势差的关系</a></li>
+<li><a class="dead" title="未收录">静电屏蔽与电容式传感器</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2024-辽宁-05.html">2024-辽宁-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

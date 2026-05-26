@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指数函数导数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>指数函数导数</h1><div class="review-mark" data-stem="452-指数函数导数"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 指数函数导数, exponential derivative, 指数求导</p><h2>🎓 指数函数导数</h2>
+<h3>基本公式</h3>
+<p>$$\boxed{(e^x)' = e^x} \qquad \boxed{(a^x)' = a^x\ln a \quad (a&gt;0,a\neq 1)}$$</p>
+<p><strong>关键特性</strong>：$e^x$ 是唯一满足"导数等于自身"的函数（在 $f(0)=1$ 约束下），这正是自然底数 $e$ 的来源。</p>
+<h3>公式推导</h3>
+<p>$$(e^x)' = \lim_{h\to 0}\frac{e^{x+h}-e^x}{h} = e^x\lim_{h\to 0}\frac{e^h-1}{h}$$</p>
+<p>利用重要极限 $\lim_{h\to 0}\dfrac{e^h-1}{h}=1$（等价于 $\lim_{n\to\infty}(1+\frac{1}{n})^n=e$），得 $(e^x)'=e^x$。</p>
+<p>$$(a^x)' = (e^{x\ln a})' = e^{x\ln a}\cdot\ln a = a^x\ln a$$</p>
+<p>（利用 $a^x=e^{x\ln a}$ 和链式法则）</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x) = 3e^x - 2^x$</p>
+<p>$$f'(x) = 3e^x - 2^x\ln 2$$</p>
+<p><strong>例 2</strong> $f(x) = x^2 e^x$（乘法法则）</p>
+<p>$$f'(x) = 2xe^x + x^2 e^x = xe^x(2+x)$$</p>
+<p><strong>例 3</strong> $f(x) = e^{2x+1}$（链式法则）</p>
+<p>$$f'(x) = e^{2x+1}\cdot 2 = 2e^{2x+1}$$</p>
+<p><strong>例 4</strong> $f(x) = e^{\sin x}$（链式法则）</p>
+<p>$$f'(x) = e^{\sin x}\cdot\cos x$$</p>
+<p><strong>例 5</strong>（导数应用）证明 $e^x\geq x+1$（$x\in\mathbb{R}$）。</p>
+<p>令 $g(x)=e^x-x-1$，$g'(x)=e^x-1$。</p>
+<p>当 $x&lt;0$ 时 $g'(x)&lt;0$（递减），当 $x&gt;0$ 时 $g'(x)&gt;0$（递增），故 $g(0)=0$ 是最小值。</p>
+<p>因此 $g(x)\geq 0$，即 $e^x\geq x+1$，等号当 $x=0$ 时成立。</p>
+<h3>$e$ 的特殊地位</h3>
+<p>$e=2.71828\cdots$ 是自然常数（Euler 数），其特殊性：
+- $(e^x)'=e^x$：导数最简单的超越函数
+- $\ln e=1$：对数公式最简洁
+- $e=\lim_{n\to\infty}(1+\frac{1}{n})^n$：复利极限</p>
+<h3>易错点</h3>
+<ul>
+<li>$(a^x)' = a^x\ln a$，不是 $xa^{x-1}$（幂函数法则对<strong>指数</strong>中含 $x$ 的不适用）</li>
+<li>$e^x$ 求导仍是 $e^x$，链式法则时不要忘乘内层导数：$(e^{f(x)})'=e^{f(x)}\cdot f'(x)$</li>
+<li>$a^x\ln a$ 中 $\ln a$ 是常数（$a$ 是底数），不是对 $x$ 求对数</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/指数函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/416-三角函数导数.html">三角函数导数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/429-对数函数导数.html">对数函数导数</a></li>
+</ul>
+<p><a href="../atoms/429-对数函数导数.html">对数函数导数</a> · <a href="../atoms/447-常见函数导数.html">常见函数导数</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a> · <a class="dead" title="未收录">导数运算法则</a> · <a class="dead" title="未收录">导数证明不等式</a> · <a href="../atoms/439-导数构造函数法.html">导数构造函数法</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热敏电阻特性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热敏电阻特性</h1><div class="review-mark" data-stem="481-热敏电阻特性"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热敏电阻特性, thermistor characteristics</p><h1>热敏电阻特性</h1>
+<blockquote>
+<p><strong>一句话</strong>：热敏电阻是电阻值对温度敏感的非线性半导体元件，其电阻-温度特性（R-T）或伏安特性（V-I）是高考电学实验与动态电路分析的核心对象。
+<strong>English</strong>: A thermistor is a nonlinear semiconductor device whose resistance strongly depends on temperature, often characterized by its R-T or V-I curves.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>热敏电阻分为负温度系数（NTC）和正温度系数（PTC）两类，高考以NTC为主：温度升高时电阻减小。其电阻-温度关系通常由实验数据图线给出，或近似用经验公式 $R = R_0 e^{B(\frac{1}{T} - \frac{1}{T_0})}$ 表达，其中 $B$ 为材料常数（不需定量计算，用于理解变化的非线性）。  </p>
+<p><strong>关键方法</strong>：<br />
+1. <strong>电阻定义</strong>：热敏电阻作为非线性元件，在某工作点 $(U,I)$ 的电阻为 $R = \frac{U}{I}$，等于该点与原点连线的斜率倒数，<strong>不是</strong>伏安特性曲线切线的斜率倒数。<br />
+2. <strong>动态分析</strong>：改变温度（或通过电流自热）→电阻变化→电流/电压重新分布。解题时应先根据温度变化确定电阻增减，再对电路应用闭合电路欧姆定律或部分电路欧姆定律进行分析。  </p>
+<p><strong>典型应用（高考常见设问）</strong>：<br />
+- 给出热敏电阻的 $R!-!t$ 图线，结合分压或限流电路，求特定温度下的电表示数或输出状态（如报警器阈值）。<br />
+- 提供热敏电阻的 $I!-!U$ 数据，画出伏安特性曲线，要求判断元件类型（线性或非线性，是否为热敏电阻），并解释曲线弯曲方向与温度效应的关系。<br />
+- 设计温控电路：将热敏电阻与继电器或比较器结合，实现温度报警或自动控制，考查电路原理分析。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆NTC与PTC</strong>：题目若未明确类型，需从图线或数据趋势判定（NTC的电阻随温度升高而减小），误判会导致电路分析全部反向。  </li>
+<li><strong>错用切线斜率求电阻</strong>：对非线性元件，电阻严格为 $R = U/I$，只有线性元件的伏安曲线切线斜率才等于其倒数。考生常误用切线斜率，尤其在曲线弯曲时计算错误。  </li>
+<li><strong>忽略自热效应与动态平衡</strong>：热敏电阻通电后自身发热会改变电阻，电路中的电流和电压并非立即稳定，分析时需考虑热平衡后的稳态值，误作定值电阻处理会得出错误结论。  </li>
+<li><strong>混淆伏安特性曲线与电阻-温度曲线</strong>：I-U 图反映电流随电压的变化，隐含温度影响；R-T 图直接给出电阻与温度的关系，两者不可直接代换。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热敏电阻</td>
+<td>Thermistor</td>
+<td>电阻对温度敏感的半导体元件</td>
+</tr>
+<tr>
+<td>负温度系数</td>
+<td>Negative Temperature Coefficient (NTC)</td>
+<td>温度升高电阻减小</td>
+</tr>
+<tr>
+<td>正温度系数</td>
+<td>Positive Temperature Coefficient (PTC)</td>
+<td>温度升高电阻增大</td>
+</tr>
+<tr>
+<td>电阻-温度特性</td>
+<td>Resistance-temperature characteristic</td>
+<td>电阻随温度变化的曲线或公式</td>
+</tr>
+<tr>
+<td>伏安特性曲线</td>
+<td>Voltage-current characteristic</td>
+<td>元件两端电压与通过电流的关系曲线</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/141-欧姆定律-初中.html">欧姆定律</a></li>
+<li><a href="../atoms/512-伏安特性曲线.html">伏安特性曲线</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">传感器</a></li>
+<li><a href="../atoms/318-电阻定律.html">电阻定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-10.html">2010-新课标Ⅰ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

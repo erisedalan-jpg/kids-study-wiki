@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>垂直条件</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>垂直条件</h1><div class="review-mark" data-stem="790-垂直条件"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 垂直条件, Perpendicular condition</p><h1>垂直条件</h1>
+<blockquote>
+<p><strong>一句话</strong>：垂直条件指在平面或空间几何中,两条直线(或向量)互相垂直时所必须满足的数量关系,核心包括平面直线垂直的 $A_1A_2+B_1B_2=0$ 与向量点积为零的判定。
+<strong>English</strong>: The relations that must hold for two lines (or vectors) to be perpendicular, typically $A_1A_2+B_1B_2=0$ for lines in general form and zero dot product for vectors.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong></p>
+<p>垂直条件可用多种方式刻画：
+- <strong>平面直线一般式</strong>：直线 $l_1:A_1x+B_1y+C_1=0$ 与 $l_2:A_2x+B_2y+C_2=0$ 垂直的充要条件是 $A_1A_2+B_1B_2=0$（不依赖斜率是否存在）。
+- <strong>斜截式（斜率存在时）</strong>：若两直线的斜率分别为 $k_1,k_2$，则 $l_1 \perp l_2 \iff k_1k_2=-1$。
+- <strong>向量垂直</strong>：对非零向量 $\vec{a}=(x_1,y_1),\ \vec{b}=(x_2,y_2)$，$\vec{a}\perp\vec{b} \iff \vec{a}\cdot\vec{b}=x_1x_2+y_1y_2=0$（平面）；空间向量同理满足点积为零。
+- <strong>立体几何判定</strong>：线面垂直的判定定理——若一条直线垂直于平面内两条相交直线，则线面垂直；面面垂直的判定定理——若一平面过另一平面的垂线，则两平面垂直。</p>
+<p><strong>关键方法</strong></p>
+<p>解决垂直问题的标准步骤：
+1. <strong>坐标化</strong>：将几何对象用方程或向量坐标表示。
+2. <strong>选择判定形式</strong>：已知直线方程优先用系数乘积和 $A_1A_2+B_1B_2$；已知斜率用 $k_1k_2=-1$；涉及方向或法向量时用点积为零。
+3. <strong>列方程求解参数</strong>：如已知直线 $l_1:x+2y-1=0$，求与其垂直且过 $(3,4)$ 的直线，可设 $2x-y+m=0$ 代入点坐标得到 $m$。
+4. <strong>立体几何</strong>中，先找交线或垂足，用判定定理转化为平面内线线垂直，再建立空间直角坐标系用向量点积验证。</p>
+<p><strong>典型应用</strong></p>
+<p>高考中常以以下形式考查：
+- <strong>求与已知直线垂直的直线方程</strong>（选择题/填空题）：快速写出垂直系数的方程，再代入点求参数。
+- <strong>三角形中的垂直条件</strong>（解析几何大题）：如证明或利用 $AB\perp AC$ 得到 $k_{AB}\cdot k_{AC}=-1$ 或向量点积为零，进而求顶点坐标、面积等。
+- <strong>立体几何证明与计算</strong>：证明线面垂直或面面垂直，常配合建系找到法向量，利用垂直条件建立方程求二面角或距离。
+- <strong>圆锥曲线综合</strong>：如给定椭圆上一点处的切线，求证某连线与切线垂直，转化为向量点积判断。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>使用 $k_1k_2=-1$ 时忽略了斜率不存在的情形：对于垂直于 $x$ 轴的直线，应直接使用一般式系数关系或数形结合判断。</li>
+<li>向量点积为零时混入零向量：判定垂直时必须确保两向量均为非零向量，否则点积为零不能推出垂直。</li>
+<li>立体几何线面垂直判定中误用“垂直于两条平行直线”：必须垂直于平面内的<strong>两条相交直线</strong>。</li>
+<li>混淆直线方程系数对应：$A_1x+B_1y+C_1=0$ 与 $A_2x+B_2y+C_2=0$ 垂直时 $A_1A_2+B_1B_2=0$，而非 $A_1B_2+A_2B_1=0$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>垂直条件</td>
+<td>perpendicular condition</td>
+<td>刻画两线或两面垂直的数量关系</td>
+</tr>
+<tr>
+<td>点积/数量积</td>
+<td>dot product / scalar product</td>
+<td>向量垂直判定工具</td>
+</tr>
+<tr>
+<td>斜率乘积为 −1</td>
+<td>product of slopes equals −1</td>
+<td>斜截式直线垂直的条件</td>
+</tr>
+<tr>
+<td>线面垂直</td>
+<td>line perpendicular to plane</td>
+<td>直线与平面内任意直线都垂直</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直线的方程</a></li>
+<li><a href="../atoms/328-向量的数量积.html">向量的数量积</a></li>
+<li><a href="../atoms/1087-线面垂直的判定定理.html">直线与平面垂直的判定</a></li>
+<li><a href="../atoms/1149-面面垂直的判定.html">平面与平面垂直的判定</a></li>
+<li><a class="dead" title="未收录">两直线的位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2016-理-20.html">2016-理-20</a></li>
+<li><a href="../exam/数学/2019-文-20.html">2019-文-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

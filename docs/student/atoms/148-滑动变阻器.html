@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>滑动变阻器</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>滑动变阻器</h1><div class="review-mark" data-stem="148-滑动变阻器"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十六章电压电阻]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 滑动变阻器, rheostat, 变阻器, 滑变</p><h1>滑动变阻器</h1>
+<blockquote>
+<p><strong>一句话</strong>：滑动变阻器通过移动滑片改变接入电路的电阻丝长度，从而改变电路中的电阻，用于控制电流和电压。
+<strong>English</strong>: A sliding rheostat changes resistance in a circuit by moving a slider to vary the length of resistance wire connected; used to control current and voltage.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>你有没有见过台灯上的"调光旋钮"？旋转它能让灯变亮或变暗——这就是<strong>变阻器</strong>在起作用！</p>
+<p><strong>滑动变阻器的结构：</strong>
+- 一根电阻丝绕在绝缘管上
+- 一个可以沿管滑动的<strong>滑片</strong>
+- 通过选择不同的接线柱，改变接入电路的电阻丝长度</p>
+<p><strong>如何改变电阻：</strong>
+- 滑片往左移→接入的电阻丝变短→电阻变小→电流变大
+- 滑片往右移→接入的电阻丝变长→电阻变大→电流变小</p>
+<p><strong>接线方式（重要！）：</strong>
+- 必须使用"上面一个接线柱 + 下面一个接线柱"（上下各一个）
+- 不能只用上面两个或只用下面两个（那样电阻不会变化）</p>
+<p><strong>生活中的应用：</strong>
+- 台灯调光旋钮
+- 风扇调速
+- 电子实验室调节电流</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>结构和原理</h3>
+<p><strong>组成</strong>：
+- 电阻丝（通常为镍铬合金）绕在绝缘陶瓷管上
+- 滑动触头（滑片），可沿管轴滑动
+- 4个接线柱：A、B（两端，与电阻丝全段相连）；C、D（与滑片相连）</p>
+<p><strong>有效接法</strong>（4种等效方式）：
+使用一个端点接线柱（A或B）+ 一个滑片接线柱（C或D）</p>
+<p>正确接法示例：A + C，或 A + D，或 B + C，或 B + D</p>
+<p><strong>无效接法</strong>：
+- A + B：全部电阻丝接入，阻值固定，无法调节
+- C + D：两接线柱等电位，阻值为零，短路！</p>
+<h3>滑动变阻器在电路中的作用</h3>
+<ol>
+<li><strong>分压器接法（并联分压）</strong>：可以获得 0~最大电压 的任意电压输出，适合精细调节</li>
+<li><strong>限流器接法（串联限流）</strong>：简单控制电流大小，调节范围受限</li>
+</ol>
+<p><strong>限流接法</strong>（常见）：</p>
+<p>$$I = \frac{U}{R_{固定} + R_{变阻器}}$$</p>
+<p>移动滑片→改变 $R_{变阻器}$→改变 $I$</p>
+<h3>规格参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最大阻值</td>
+<td>滑片在最大位置时的全程阻值</td>
+</tr>
+<tr>
+<td>额定电流</td>
+<td>允许通过的最大电流</td>
+</tr>
+</tbody>
+</table>
+<p>例如：标注"50 Ω，2 A"表示最大阻值50 Ω，允许电流最大2 A。</p>
+<h3>典型实验——伏安法测电阻</h3>
+<p><strong>目的</strong>：通过测量不同电压下的电流，计算待测电阻 $R_x$。</p>
+<p><strong>分压接法</strong>（推荐）：
+- 滑动变阻器并联后再接电路（分压器）
+- 可以让电压从0开始调节，适合精确控制</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一个滑动变阻器最大阻值为 40 Ω，与一个 10 Ω 的固定电阻串联，接在 10 V 电源上。当变阻器调到 40 Ω 时，电路中的电流和固定电阻两端的电压分别是多少？</p>
+<p><strong>解</strong>：</p>
+<p>$$I = \frac{U}{R_{变} + R_{固}} = \frac{10}{40 + 10} = 0.2 \text{ A}$$</p>
+<p>$$U_{固} = IR_{固} = 0.2 \times 10 = 2 \text{ V}$$</p>
+<p><strong>易错点：</strong>
+- 必须使用上下各一个接线柱，两个相同侧接线柱无法调节或短路
+- 滑动变阻器本身有额定电流限制，不能超过
+- 实验中需要"先断开开关，再调节变阻器至最大阻值，再闭合开关"保护电路</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>滑动变阻器</td>
+<td>sliding rheostat</td>
+<td>n.</td>
+<td>Adjust the rheostat to control the current.</td>
+</tr>
+<tr>
+<td>变阻器</td>
+<td>rheostat / variable resistor</td>
+<td>n.</td>
+<td>A rheostat changes resistance by moving a slider.</td>
+</tr>
+<tr>
+<td>分压接法</td>
+<td>voltage divider connection</td>
+<td>n.</td>
+<td>The voltage divider connection gives more control.</td>
+</tr>
+<tr>
+<td>限流接法</td>
+<td>current limiting connection</td>
+<td>n.</td>
+<td>The current limiting connection is simpler.</td>
+</tr>
+<tr>
+<td>额定电流</td>
+<td>rated current</td>
+<td>n.</td>
+<td>Do not exceed the rated current of the rheostat.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十六章第三节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 滑动变阻器</li>
+<li><strong>百科</strong>：维基百科"变阻器"；中文百科"滑动变阻器"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/184-电阻.html">电阻</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/512-伏安特性曲线.html">伏安特性曲线</a></p>
+</li>
+<li>
+<p><a href="../atoms/184-电阻.html">电阻</a></p>
+</li>
+<li><a class="dead" title="未收录">电阻影响因素</a></li>
+<li><a href="../atoms/141-欧姆定律-初中.html">欧姆定律-初中</a></li>
+<li><a href="../atoms/186-电阻测量-伏安法.html">电阻测量-伏安法</a></li>
+<li><a class="dead" title="未收录">电流与电压关系</a></li>
+<li><a class="dead" title="未收录">电流与电阻关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2018-北京-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

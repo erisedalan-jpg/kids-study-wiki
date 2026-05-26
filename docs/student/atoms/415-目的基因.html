@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>目的基因</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>目的基因</h1><div class="review-mark" data-stem="415-目的基因"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 基因工程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 目的基因, gene of interest, target gene</p><h1>目的基因</h1>
+<blockquote>
+<p><strong>一句话</strong>：基因工程中需要转移并在受体生物中表达的特定基因，是基因工程操作的核心对象。
+<strong>English</strong>: The specific gene of interest that is transferred and expressed in a host organism during genetic engineering.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>目的基因（Gene of Interest）是指在基因工程中，研究者希望导入受体细胞并使其表达的特定基因，通常编码具有重要价值的蛋白质或RNA。目的基因是基因工程中被"搬运"的基因，也称<strong>外源基因</strong>或<strong>目标基因</strong>。</p>
+<h3>原理 / 步骤 / 应用</h3>
+<p><strong>获取目的基因的方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>原理</th>
+<th>适用情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>从基因组中直接分离</td>
+<td>限制酶切割基因组DNA，获得含目的基因的片段</td>
+<td>原核生物基因（无内含子）</td>
+</tr>
+<tr>
+<td>逆转录法（cDNA法）</td>
+<td>mRNA → 逆转录酶 → cDNA（互补DNA）</td>
+<td>真核生物基因（去除内含子）</td>
+</tr>
+<tr>
+<td>化学合成法</td>
+<td>已知蛋白质氨基酸序列→推测密码子→合成DNA</td>
+<td>短基因 / 特殊密码子优化</td>
+</tr>
+<tr>
+<td>PCR扩增</td>
+<td>以模板DNA为基础，引物定向扩增目的片段</td>
+<td>已知序列的快速大量获取</td>
+</tr>
+</tbody>
+</table>
+<p><strong>为什么真核生物目的基因常用cDNA法？</strong></p>
+<p>真核生物基因含有<strong>内含子</strong>（非编码序列），而大肠杆菌等原核受体细胞缺乏剪接体，不能正常加工含内含子的前mRNA。用成熟mRNA逆转录得到的cDNA不含内含子，可在原核细胞中正常翻译。</p>
+<p><strong>cDNA获取流程</strong></p>
+<pre><code>目标细胞（高表达目的蛋白）
+↓ 提取成熟mRNA
+mRNA
+↓ 逆转录酶（需dNTP）
+单链cDNA（RNA-DNA杂合链）
+↓ 水解RNA模板 + DNA聚合酶
+双链cDNA（互补DNA）
+↓ 连接载体
+重组DNA
+</code></pre>
+<p><strong>目的基因的结构要求</strong></p>
+<p>目的基因在载体中要正确表达，需要：
+- 编码序列（CDS）完整
+- 与载体上的<strong>启动子、终止子</strong>方向一致
+- 若在原核细胞表达，需使用原核启动子；在真核细胞表达，需使用真核启动子</p>
+<p><strong>应用举例</strong></p>
+<table>
+<thead>
+<tr>
+<th>目的基因</th>
+<th>来源</th>
+<th>应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人胰岛素基因</td>
+<td>人基因组（cDNA）</td>
+<td>大肠杆菌生产胰岛素</td>
+</tr>
+<tr>
+<td>Bt毒蛋白基因</td>
+<td>苏云金芽孢杆菌</td>
+<td>转基因抗虫棉</td>
+</tr>
+<tr>
+<td>荧光素酶基因</td>
+<td>萤火虫</td>
+<td>基因表达报告系统</td>
+</tr>
+<tr>
+<td>生长激素基因</td>
+<td>人/牛</td>
+<td>转基因动物快速生长</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：为什么用大肠杆菌表达人的基因时，需要通过mRNA逆转录得到cDNA，而不是直接使用从人基因组中切割的基因？</p>
+<p><strong>解析</strong>：人的基因含有<strong>内含子</strong>（非编码序列），转录产生的前mRNA经剪接加工（切除内含子）才成为成熟mRNA。大肠杆菌缺乏与真核细胞相同的mRNA剪接机制，直接导入含内含子的基因后，转录产物不能正确加工，无法翻译出正确的蛋白质。而用成熟mRNA逆转录得到的cDNA不含内含子，可被大肠杆菌直接转录翻译，获得正确蛋白质。</p>
+<h3>易错点</h3>
+<ul>
+<li>cDNA不等于基因组DNA片段，cDNA<strong>没有内含子</strong>，是成熟mRNA的DNA拷贝</li>
+<li>目的基因插入载体后，还需与载体上的<strong>启动子、终止子</strong>共同构成完整的表达单元才能表达</li>
+<li>目的基因在受体细胞中的表达不仅是"翻译产物存在"，还需确保翻译产物<strong>正确折叠并具有活性</strong></li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目的基因</td>
+<td>gene of interest / target gene</td>
+</tr>
+<tr>
+<td>互补DNA</td>
+<td>complementary DNA (cDNA)</td>
+</tr>
+<tr>
+<td>逆转录酶</td>
+<td>reverse transcriptase</td>
+</tr>
+<tr>
+<td>内含子</td>
+<td>intron</td>
+</tr>
+<tr>
+<td>外显子</td>
+<td>exon</td>
+</tr>
+<tr>
+<td>成熟mRNA</td>
+<td>mature mRNA</td>
+</tr>
+<tr>
+<td>启动子</td>
+<td>promoter</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The gene of interest must be free of introns when expressed in bacterial cells. （目的基因在细菌细胞中表达时必须不含内含子。）</li>
+<li>cDNA is synthesized from mature mRNA using reverse transcriptase. （cDNA由逆转录酶以成熟mRNA为模板合成。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修3 生物技术与工程.pdf</a> 第3章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"Complementary DNA"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/551-农杆菌转化法.html">农杆菌转化法</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/419-转基因生物.html">转基因生物</a></li>
+</ul>
+<p><a href="../atoms/411-基因工程.html">基因工程</a> <a href="../atoms/410-PCR.html">PCR</a> <a class="dead" title="未收录">重组DNA分子</a> <a class="dead" title="未收录">载体</a> <a href="../atoms/419-转基因生物.html">转基因生物</a></p>
+</div>
+</body>
+</html>

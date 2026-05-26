@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间向量运算</h1><div class="review-mark" data-stem="410-空间向量运算"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第一章空间向量与立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间向量运算, space vector operations, 空间向量加减数乘</p><h2>🎓 空间向量运算</h2>
+<h3>加法与减法</h3>
+<p>设 $\boldsymbol{a} = (a_1, a_2, a_3)$，$\boldsymbol{b} = (b_1, b_2, b_3)$：</p>
+<p>$$\boldsymbol{a} + \boldsymbol{b} = (a_1+b_1,\; a_2+b_2,\; a_3+b_3)$$</p>
+<p>$$\boldsymbol{a} - \boldsymbol{b} = (a_1-b_1,\; a_2-b_2,\; a_3-b_3)$$</p>
+<p><strong>几何意义</strong>：
+- 加法：<strong>平行四边形法则</strong>（以 $\boldsymbol{a},\boldsymbol{b}$ 为邻边，对角线为 $\boldsymbol{a}+\boldsymbol{b}$）
+- 减法：同一起点，$\boldsymbol{b}$ 指向 $\boldsymbol{a}$ 为 $\boldsymbol{a}-\boldsymbol{b}$</p>
+<h3>数乘运算</h3>
+<p>$$\lambda\boldsymbol{a} = (\lambda a_1,\; \lambda a_2,\; \lambda a_3)$$</p>
+<p><strong>性质</strong>：
+- $|\lambda\boldsymbol{a}| = |\lambda| \cdot |\boldsymbol{a}|$
+- $\lambda &gt; 0$：方向与 $\boldsymbol{a}$ 相同；$\lambda &lt; 0$：方向相反；$\lambda = 0$：结果为零向量</p>
+<h3>运算律</h3>
+<table>
+<thead>
+<tr>
+<th>律名</th>
+<th>表达式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交换律</td>
+<td>$\boldsymbol{a}+\boldsymbol{b}=\boldsymbol{b}+\boldsymbol{a}$</td>
+</tr>
+<tr>
+<td>结合律</td>
+<td>$(\boldsymbol{a}+\boldsymbol{b})+\boldsymbol{c}=\boldsymbol{a}+(\boldsymbol{b}+\boldsymbol{c})$</td>
+</tr>
+<tr>
+<td>数乘分配律</td>
+<td>$\lambda(\boldsymbol{a}+\boldsymbol{b})=\lambda\boldsymbol{a}+\lambda\boldsymbol{b}$</td>
+</tr>
+<tr>
+<td>数乘结合律</td>
+<td>$(\lambda\mu)\boldsymbol{a}=\lambda(\mu\boldsymbol{a})$</td>
+</tr>
+</tbody>
+</table>
+<h3>模（长度）</h3>
+<p>$$|\boldsymbol{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}$$</p>
+<p><strong>单位向量</strong>：$\hat{\boldsymbol{a}} = \dfrac{\boldsymbol{a}}{|\boldsymbol{a}|}$（方向与 $\boldsymbol{a}$ 相同，长度为 1）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：设 $\boldsymbol{a}=(2,-1,3)$，$\boldsymbol{b}=(-1,2,1)$，求 $2\boldsymbol{a}-3\boldsymbol{b}$。</p>
+<p><strong>解</strong>：
+$$2\boldsymbol{a}-3\boldsymbol{b} = (4,-2,6)-(-3,6,3) = (7,-8,3)$$</p>
+<p><strong>例2</strong>：求向量 $\boldsymbol{a}=(1,2,-2)$ 的长度和单位向量。</p>
+<p><strong>解</strong>：
+$$|\boldsymbol{a}| = \sqrt{1^2+2^2+(-2)^2} = \sqrt{9} = 3$$</p>
+<p>$$\hat{\boldsymbol{a}} = \dfrac{1}{3}(1,2,-2) = \left(\dfrac{1}{3},\dfrac{2}{3},-\dfrac{2}{3}\right)$$</p>
+<p><strong>例3</strong>（几何应用）：设 $\overrightarrow{OA}=\boldsymbol{a}$，$\overrightarrow{OB}=\boldsymbol{b}$，$\overrightarrow{OC}=\boldsymbol{c}$，$M$ 为 $\triangle ABC$ 重心，求 $\overrightarrow{OM}$。</p>
+<p><strong>解</strong>：重心 $M$ 坐标为三顶点平均，故 $\overrightarrow{OM} = \dfrac{\boldsymbol{a}+\boldsymbol{b}+\boldsymbol{c}}{3}$</p>
+<h3>易错点</h3>
+<ul>
+<li>空间向量加减法与平面向量完全类似，只是多了第三分量</li>
+<li>计算模时不要漏算第三分量</li>
+<li>$-\boldsymbol{a}=(-1)\boldsymbol{a}$，方向相反，大小不变</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第一章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第一章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/401-空间向量基本概念.html">空间向量基本概念</a></li>
+<li><a href="../atoms/402-空间向量数量积.html">空间向量数量积</a></li>
+<li><a href="../atoms/399-空间向量坐标表示.html">空间向量坐标表示</a></li>
+<li><a class="dead" title="未收录">空间向量基本定理</a></li>
+<li><a class="dead" title="未收录">向量的加法与减法</a></li>
+<li><a href="../atoms/327-向量的数乘.html">向量数乘</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-10.html">2008-理-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

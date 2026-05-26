@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方程联立</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>方程联立</h1><div class="review-mark" data-stem="907-方程联立"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 方程联立</p><h1>方程联立</h1>
+<blockquote>
+<p><strong>一句话</strong>：方程联立是指将两个或多个方程组合成方程组，求取同时满足所有方程的公共解（解集）的过程。
+<strong>English</strong>: The process of combining two or more equations into a system and solving for the common solutions that satisfy all equations simultaneously.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+方程联立的本质是探寻多个约束条件的公共交集。在高中数学范畴内，主要聚焦<strong>二元方程组的联立</strong>，其理论基础是：将两个关于 $x, y$ 的方程 $F(x,y)=0$ 与 $G(x,y)=0$ 组成方程组 $\begin{cases} F(x,y)=0 \ G(x,y)=0 \end{cases}$，该方程组的解 $(x,y)$ 既在曲线 $F$ 上又在曲线 $G$ 上，因而就是两条曲线的交点坐标。</p>
+<p><strong>关键方法</strong>
+最核心的求解思想是<strong>消元</strong>，将二元问题化归为一元问题。
+1. <strong>代入/加减消元</strong>：将 $y=kx+b$（或类似形式）代入另一方程，得到一个只含 $x$ 的方程，最常见的情形是得到一元二次方程 $Ax^2+Bx+C=0$（$A$ 可能含参数）。
+2. <strong>判别式判定</strong>：联立后的一元二次方程的判别式 $\Delta = B^2-4AC$ 直接决定了二元方程组的实数解个数，即曲线交点的个数（$\Delta&gt;0$ 有两个不同交点；$\Delta=0$ 相切或交于一点；$\Delta&lt;0$ 无交点）。
+3. <strong>设而不求</strong>：利用<strong>韦达定理</strong> $x_1+x_2=-\frac{B}{A},\; x_1x_2=\frac{C}{A}$，在不具体解出 $x_1,x_2$ 的情况下进行弦长、中点坐标、斜率关系等整体运算。弦长公式为 $|AB|=\sqrt{1+k^2}\cdot\frac{\sqrt{\Delta}}{|A|}$。</p>
+<p><strong>典型应用</strong>
+在高考解析几何解答题中，方程联立是必用步骤。常见设问如：求直线与椭圆/抛物线的弦长、证明直线与圆锥曲线相交形成的定点定值问题、求解中点弦方程、计算三角形面积等。例如，“已知椭圆 $\frac{x^2}{4}+y^2=1$ 与直线 $y=kx+m$ 相交于两点，求某向量内积为定值时 $k,m$ 的关系”，需要先联立方程，写出 $x_1+x_2$ 与 $x_1x_2$，再代入条件运算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略二次项系数为零的情形</strong>：联立消元后若 $A$ （二次项系数）含参数，须先讨论 $A=0$（此时方程退化为一次，不能直接使用韦达定理），否则会漏解或过程错误。</li>
+<li><strong>忘记判别式 $\Delta&gt;0$ 的检验</strong>：在用到韦达定理进行弦长或中点运算时，必须首先保证直线与曲线有两个交点，即必须计算并注明 $\Delta&gt;0$，否则可能将相离的情况误认为相交。</li>
+<li><strong>消元时未讨论变量系数的存在性</strong>：如消去 $y$ 时除以了某表达式，需保证该表达式不为零；使用直线的点斜式时，需单独讨论斜率不存在的情形。</li>
+<li><strong>混淆方程组的解与方程的根</strong>：联立后的 $x$ 值必须同时满足原方程组，代入求出对应的 $y$ 后才是有效交点；仅解一元方程可能产生增解或不完整。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程组</td>
+<td>system of equations</td>
+<td>多个方程联立组成的整体</td>
+</tr>
+<tr>
+<td>消元法</td>
+<td>elimination method</td>
+<td>通过代入或加减消去一个变量的方法</td>
+</tr>
+<tr>
+<td>判别式</td>
+<td>discriminant</td>
+<td>$\Delta = b^2-4ac$，判定一元二次方程根的情况</td>
+</tr>
+<tr>
+<td>韦达定理</td>
+<td>Vieta's formulas</td>
+<td>描述多项式根与系数关系的定理</td>
+</tr>
+<tr>
+<td>解集</td>
+<td>solution set</td>
+<td>同时满足所有方程的解的全体</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直线与圆锥曲线位置关系</a></li>
+<li><a class="dead" title="未收录">韦达定理</a></li>
+<li><a class="dead" title="未收录">弦长公式</a></li>
+<li><a class="dead" title="未收录">点差法</a></li>
+<li><a class="dead" title="未收录">函数与方程思想</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-理-08.html">2012-理-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

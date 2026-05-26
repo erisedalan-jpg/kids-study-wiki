@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分类讨论思想</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分类讨论思想</h1><div class="review-mark" data-stem="1182-分类讨论思想"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数学思想方法]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分类讨论思想, categorical discussion, classification discussion</p><h1>分类讨论思想</h1>
+<blockquote>
+<p><strong>一句话</strong>：分类讨论思想是将所研究的问题根据数学对象的本质属性划分为若干不同情形，再逐类求解最后归纳整合的一种严谨的逻辑方法。
+<strong>English</strong>: A rigorous logical approach that divides a mathematical problem into distinct cases based on essential properties, solves each case individually, and then synthesizes the results.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+分类讨论的核心在于找到一个统一的标准，使得所有可能的情况“不重不漏”。通常出现在含有参数、绝对值、分段定义的函数、排列组合、等比数列求和、含参不等式等问题中。其数学基础是集合的划分：设全集为 $U$，若 $A_1, A_2, \dots, A_n$ 满足 $A_i \cap A_j = \varnothing$ ($i \neq j$) 且 $\bigcup_{i=1}^n A_i = U$，则按 $A_i$ 分类是完备的。</p>
+<p><strong>关键方法</strong><br />
+1. 确定分类标准——通常是参数取值、定义域分段、符号变化、位置关系等。<br />
+2. 逐类讨论——在每一类中将问题转化为确定的子问题，严格求解（如解方程、求最值、判断单调性）。<br />
+3. 归纳总结——将各类结果合并，注意取舍和范围限制，最终给出完整的答案。<br />
+例如解不等式 $|x-a| &lt; 2x$ 时，需按零点 $a$ 与定义域分段讨论绝对值内部符号；求含参对数函数 $f(x)=\log_a(x^2-ax)$ 的定义域时，需对底数 $a&gt;0$ 且 $a\neq 1$ 以及真数大于零进行分类处理。</p>
+<p><strong>典型应用</strong><br />
+高考中常见题型：含参数的函数单调性讨论（如 $f(x)=x^3+ax^2$ 求极值）、数列求和问题（如公比 $q$ 是否等于 $1$）、直线与圆锥曲线位置关系（斜率存在与否）、排列组合中的分类计数、解含绝对值方程或不等式等。通常以解答题形式出现，考查思维的严密性。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>分类标准不明确或交叉重复</strong>：未找到统一的划分依据，导致某些情况被遗漏或重复计算，例如只按 $a&gt;0$ 和 $a&lt;0$ 分类而忽略 $a=0$ 的情形。</li>
+<li><strong>讨论后未合并结论或未检验区间端点</strong>：在各段得到解集后不加“并集”处理，或在边界处等号成立与否判断错误，致使最终答案区间开闭出错。</li>
+<li><strong>忽视参数隐含限制导致分类不全</strong>：如对数函数底数 $a&gt;0$ 且 $a\neq 1$，真数必须大于零，遗漏这些前提条件会导致后续分类无效。</li>
+<li><strong>用“可能情形”代替严格分类</strong>：例如解三角形时凭直觉给出解的个数而未用正弦定理进行严谨的多解讨论，导致漏解或增解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分类讨论思想</td>
+<td>categorical thinking / classification discussion</td>
+<td>将问题按标准划分类别分别求解的方法论</td>
+</tr>
+<tr>
+<td>不重不漏</td>
+<td>mutually exclusive and collectively exhaustive</td>
+<td>分类的基本原则，即既无重复又无遗漏</td>
+</tr>
+<tr>
+<td>参数讨论</td>
+<td>parametric discussion</td>
+<td>对含有可变参数的问题依参数取值分类讨论</td>
+</tr>
+<tr>
+<td>综合归纳</td>
+<td>synthesis</td>
+<td>将各类结果归纳成完整答案的过程</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">函数与方程思想</a></li>
+<li><a class="dead" title="未收录">数形结合思想</a></li>
+<li><a class="dead" title="未收录">转化与化归思想</a></li>
+<li><a class="dead" title="未收录">含参不等式的解法</a></li>
+<li><a class="dead" title="未收录">排列组合基本计数原理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-文-20.html">2019-文-20</a></li>
+<li><a href="../exam/数学/2022-文-21.html">2022-文-21</a></li>
+<li><a href="../exam/数学/2022-理-20.html">2022-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

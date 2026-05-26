@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>锂电池</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>锂电池</h1><div class="review-mark" data-stem="375-锂电池"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 锂电池, lithium battery, lithium-ion battery, 锂离子电池</p><h1>锂电池</h1>
+<blockquote>
+<p><strong>一句话</strong>：以锂或锂离子为活性物质的高能量密度电池，广泛用于手机、电动汽车等，锂离子在正负极间"摇椅式"嵌入脱出。
+<strong>English</strong>: A high-energy-density battery using lithium or lithium ions; widely used in phones and EVs; lithium ions shuttle between electrodes in a "rocking chair" mechanism.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>锂电池</strong>分两类：
+1. <strong>锂一次电池</strong>：负极为金属 Li，正极为 MnO₂ 等，不可充电，电压约 3V
+2. <strong>锂离子二次电池</strong>（Li-ion）：负极为石墨（储锂），正极为 LiCoO₂ 等，可充电，是目前主流</p>
+<p><strong>锂离子电池</strong>工作原理（"摇椅电池"）：
+- 放电时：Li⁺ 从负极（石墨）脱出，通过电解质，嵌入正极（LiCoO₂）
+- 充电时：Li⁺ 从正极脱出，嵌入负极</p>
+<h3>公式 / 方程式</h3>
+<p><strong>锂离子电池</strong>（LiCoO₂/石墨体系）电极反应：</p>
+<p>放电：</p>
+<p>$$
+\text{负极（石墨）}: \text{Li}_x\text{C}_6 - xe^- \rightarrow x\text{Li}^+ + \text{C}_6
+$$</p>
+<p>$$
+\text{正极（LiCoO}<em 1-x="1-x">2\text{）}: \text{Li}</em>_2
+$$}\text{CoO}_2 + x\text{Li}^+ + xe^- \rightarrow \text{LiCoO</p>
+<p>充电（逆过程）：</p>
+<p>$$
+\text{阳极（正极）}: \text{LiCoO}<em 1-x="1-x">2 - xe^- \rightarrow \text{Li}</em>^+
+$$}\text{CoO}_2 + x\text{Li</p>
+<p>$$
+\text{阴极（负极）}: x\text{Li}^+ + xe^- + \text{C}_6 \rightarrow \text{Li}_x\text{C}_6
+$$</p>
+<p>锂离子电池与铅蓄电池的比较：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>锂离子</th>
+<th>铅蓄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压</td>
+<td>3.6–3.7 V</td>
+<td>2.0 V/格</td>
+</tr>
+<tr>
+<td>能量密度（质量）</td>
+<td>150–250 Wh/kg</td>
+<td>30–50 Wh/kg</td>
+</tr>
+<tr>
+<td>循环寿命</td>
+<td>500–2000 次</td>
+<td>200–400 次</td>
+</tr>
+<tr>
+<td>重量</td>
+<td>轻</td>
+<td>重</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>高</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：为什么锂离子电池不使用水溶液电解质？</p>
+<ul>
+<li>金属 Li 极活泼，与水剧烈反应：$2\text{Li} + 2\text{H}_2\text{O} \rightarrow 2\text{LiOH} + \text{H}_2\uparrow$</li>
+<li>锂离子电池工作电压（3.6 V）远超水的分解电位（1.23 V），水溶液中会电解水</li>
+<li>因此必须使用<strong>有机溶剂</strong>（如碳酸乙烯酯等）或固态电解质</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>锂离子电池负极是石墨（Li⁺ 嵌入石墨层间），不是金属 Li</li>
+<li>放电时 Li⁺ 从负极流向正极（正离子与电流方向一致）</li>
+<li>锂电池（金属 Li 负极）和锂离子电池（石墨负极）是两种不同类型</li>
+<li>过充、过放、短路会导致锂离子电池热失控，有安全风险</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>锂电池</td>
+<td>lithium battery</td>
+</tr>
+<tr>
+<td>锂离子电池</td>
+<td>lithium-ion battery</td>
+</tr>
+<tr>
+<td>摇椅电池</td>
+<td>rocking chair battery</td>
+</tr>
+<tr>
+<td>能量密度</td>
+<td>energy density</td>
+</tr>
+<tr>
+<td>嵌入/脱出</td>
+<td>intercalation/deintercalation</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>In a lithium-ion battery, Li⁺ ions shuttle between the graphite anode and the LiCoO₂ cathode.（锂离子电池中，Li⁺ 在石墨负极和 LiCoO₂ 正极间来回嵌入脱出。）</li>
+<li>Organic electrolytes are used because water would react with lithium and be electrolyzed at the operating voltage.（使用有机电解质，因为水会与锂反应，且在工作电压下会被电解。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"锂离子电池"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/362-二次电池.html">二次电池</a></li>
+<li><a href="../atoms/374-铅蓄电池.html">铅蓄电池</a></li>
+<li><a href="../atoms/366-燃料电池.html">燃料电池</a></li>
+<li><a href="../atoms/364-原电池（高中）.html">原电池（高中）</a></li>
+</ul>
+</div>
+</body>
+</html>

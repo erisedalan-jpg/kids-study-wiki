@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角速度与轨道半径</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>角速度与轨道半径</h1><div class="review-mark" data-stem="723-角速度与轨道半径"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 角速度与轨道半径, Angular velocity and orbital radius</p><h1>角速度与轨道半径</h1>
+<blockquote>
+<p><strong>一句话</strong>：描述在匀速圆周运动或天体运动中，角速度 ω 与轨道半径 r 之间由线速度或向心力约束决定的定量关系（常见反比或平方反比）。
+<strong>English</strong>: The quantitative relationship between angular velocity ω and orbital radius r in uniform circular motion or celestial mechanics, governed by constraints such as linear velocity or centripetal force.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：匀速圆周运动中，角速度 ω 与线速度 v、轨道半径 r 满足 $v = \omega r$。当约束条件不同时，ω 与 r 呈不同关系：
+- 若<strong>线速度 v 恒定</strong>，则 $\omega \propto r^{-1}$（角速度与半径成反比）。典型场景：同一链条带动的大小齿轮、皮带传动（无滑动）。
+- 若<strong>向心力 F 恒定</strong>，由 $F = m\omega^2 r$ 得 $\omega \propto r^{-1/2}$（角速度与半径的平方根成反比）。
+- 若<strong>向心加速度 a 恒定</strong>，由 $a = \omega^2 r$ 得 $\omega \propto r^{-1/2}$，与上一情况形式相同但物理条件不同。常见考题要求区分约束是 v 不变还是 a/F 不变，进而推导半径改变时 ω 如何变化。</p>
+<p><strong>天体运动特例</strong>：在万有引力提供向心力时，$G\frac{Mm}{r^2}=m\omega^2 r$，化简得 $\omega^2 = \frac{GM}{r^3}$，即 $\omega \propto r^{-3/2}$（开普勒第三定律的另一种形式：轨道半径越大，角速度越小）。此处 ω 与 r 的三次方程反比是高考计算与定性比较的高频点，尤其结合双星、三星或多星系统时，需明确 r 是等效轨道半径还是质心距。</p>
+<p><strong>关键方法与步骤</strong>：
+1. 确定约束条件：是线速度恒定（传动类）、向心力恒定（特定装置），还是万有引力提供向心力（天体环境）。
+2. 列出核心方程：$v = \omega r$、$F_\text{向} = m\omega^2 r = m\frac{v^2}{r}$ 或 $G\frac{Mm}{r^2} = m\omega^2 r$。
+3. 消元推导 ω 与 r 的关系式，注意区分“比值”与“变化量”两种设问。
+4. 多星系统需区分轨道半径 r 轨道 与星体间距 L，利用几何关系转换。</p>
+<p><strong>典型设问与场景</strong>：
+- <strong>传动问题</strong>：两轮通过皮带或齿轮传动，边缘线速度相同，比较 ω 与 r 关系（ω 与 r 成反比）。如半径之比 2:1，则角速度之比 1:2。
+- <strong>天体变轨定性分析</strong>：同一中心天体下，高轨道卫星 ω 更小。不同中心天体（质量 M 不同）时需代入 $\omega \propto \sqrt{M}/r^{3/2}$ 综合判断。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>盲目套用反比关系</strong>：不分辨约束条件是 v 恒定还是 F 恒定，直接认为 ω 与 r 始终成反比。传动问题中边缘共速才成反比；同轴同盘各处 ω 相等则与 r 无关。</li>
+<li><strong>混淆轨道半径与星体间距</strong>：双星问题中，二者向心力相等，角速度相同，轨道半径与各自质量成反比，但引力中的 r 为两星间距而非单一星体轨道半径。</li>
+<li><strong>开普勒第三定律形式误用</strong>：部分学生将 $\frac{r^3}{T^2}=k$ 转化为 ω 关系时出错，实际有 $\omega = \frac{2\pi}{T}$，代入得 $\omega \propto r^{-3/2}$，而非线性反比。</li>
+<li><strong>忽略r变化时联动效应</strong>：在万有引力问题中，r 升高导致 ω 与 v 同时减小、T 增加，学生常孤立判断一个量而忽略其他物理量联动。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角速度</td>
+<td>angular velocity</td>
+<td>单位时间转过的角度，符号 ω</td>
+</tr>
+<tr>
+<td>轨道半径</td>
+<td>orbital radius</td>
+<td>圆周运动中心到质点的距离，符号 r</td>
+</tr>
+<tr>
+<td>线速度</td>
+<td>linear velocity</td>
+<td>质点沿圆周切向的瞬时速率，符号 v</td>
+</tr>
+<tr>
+<td>向心加速度</td>
+<td>centripetal acceleration</td>
+<td>指向圆心的加速度，$a = \omega^2 r$</td>
+</tr>
+<tr>
+<td>匀速圆周运动</td>
+<td>uniform circular motion</td>
+<td>速率不变、加速度始终指向圆心的圆周运动</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">线速度与轨道半径</a></li>
+<li><a class="dead" title="未收录">匀速圆周运动条件</a></li>
+<li><a class="dead" title="未收录">万有引力与向心力</a></li>
+<li><a href="../atoms/266-开普勒第三定律.html">开普勒第三定律</a></li>
+<li><a class="dead" title="未收录">传动装置中的物理量关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2023-新课标-04.html">2023-新课标-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

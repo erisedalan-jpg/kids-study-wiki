@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分数指数幂</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>分数指数幂</h1><div class="review-mark" data-stem="289-分数指数幂"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 分数指数幂, fractional exponent, 有理数指数幂, 分数幂</p><h2>🎓 分数指数幂</h2>
+<h3>定义</h3>
+<p>为将整数指数幂的运算法则推广到有理数指数，定义（$a &gt; 0$，$m, n \in \mathbb{Z}$，$n \geq 2$）：</p>
+<p>$$a^{\frac{m}{n}} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m$$</p>
+<p>特别地：</p>
+<p>$$a^{\frac{1}{n}} = \sqrt[n]{a} \quad (a &gt; 0)$$</p>
+<p><strong>负有理数指数幂</strong>：</p>
+<p>$$a^{-\frac{m}{n}} = \frac{1}{a^{\frac{m}{n}}} = \frac{1}{\sqrt[n]{a^m}} \quad (a &gt; 0)$$</p>
+<h3>运算法则（与整数指数幂统一）</h3>
+<p>对任意 $a &gt; 0$，$b &gt; 0$，以及有理数 $p, q$：</p>
+<p>$$a^p \cdot a^q = a^{p+q}$$</p>
+<p>$$(a^p)^q = a^{pq}$$</p>
+<p>$$(ab)^p = a^p \cdot b^p$$</p>
+<p>$$\frac{a^p}{a^q} = a^{p-q}$$</p>
+<p>$$a^0 = 1 \quad (a \neq 0)$$</p>
+<h3>推导思路</h3>
+<p>分数指数幂的定义源于保持运算法则的需求：若 $a^{1/n}$ 要满足 $(a^{1/n})^n = a^{1/n \cdot n} = a^1 = a$，则 $a^{1/n}$ 恰好是 $a$ 的 $n$ 次方根 $\sqrt[n]{a}$。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $8^{2/3}$，$27^{-1/3}$，$(-32)^{1/5}$。</p>
+<p>解：
+- $8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4$
+- $27^{-1/3} = \dfrac{1}{27^{1/3}} = \dfrac{1}{\sqrt[3]{27}} = \dfrac{1}{3}$
+- $(-32)^{1/5} = \sqrt[5]{-32} = -2$（奇次根，与被开方数同号）</p>
+<p><strong>例2</strong>：化简 $\dfrac{a^{3/4} \cdot a^{1/2}}{a^{1/4}}$（$a &gt; 0$）。</p>
+<p>解：$\dfrac{a^{3/4} \cdot a^{1/2}}{a^{1/4}} = a^{3/4 + 1/2 - 1/4} = a^{3/4 + 2/4 - 1/4} = a^{4/4} = a^1 = a$</p>
+<p><strong>例3</strong>：比较 $\left(\dfrac{1}{2}\right)^{0.7}$ 与 $\left(\dfrac{1}{2}\right)^{0.8}$。</p>
+<p>解：$y = \left(\dfrac{1}{2}\right)^x$ 是底数 $0 &lt; \frac{1}{2} &lt; 1$ 的指数函数，单调递减。
+$0.7 &lt; 0.8$，故 $\left(\dfrac{1}{2}\right)^{0.7} &gt; \left(\dfrac{1}{2}\right)^{0.8}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>分母为奇偶的差异</strong>：$(-8)^{1/3} = -2$（奇次根允许负数），$(-4)^{1/2}$ 无实数意义（偶次根不允许负数）</li>
+<li><strong>先约分再计算</strong>：$8^{2/6} = 8^{1/3} = 2$，先约分 $2/6 = 1/3$，避免 $\sqrt[6]{8^2} = \sqrt[6]{64}$ 的繁琐</li>
+<li><strong>负指数幂取倒数</strong>：$a^{-p} = \dfrac{1}{a^p}$，不能误认为变负数</li>
+<li><strong>基底要求正数</strong>：分数指数幂的运算规则严格要求 $a &gt; 0$（或 $a \geq 0$ 且分母为奇数），负底数需谨慎</li>
+<li><strong>混合运算顺序</strong>：$(ab)^p = a^p b^p$，但 $(a+b)^p \neq a^p + b^p$，不能随意拆分</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了整数指数幂（正整数、零、负整数指数），以及平方根、立方根的开方运算。高中将两者统一：$\sqrt[n]{a} = a^{1/n}$，所有指数（包括分数和无理数）的运算都纳入同一框架，为学习指数函数奠定基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：有理数指数（Rational exponent），幂运算</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/266-n次方根.html">n次方根</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a class="dead" title="未收录">幂函数</a></li>
+<li><a href="../atoms/300-对数概念.html">对数概念</a></li>
+<li><a href="../atoms/097-有理数乘方.html">097-有理数乘方</a></li>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+<li><a class="dead" title="未收录">指数函数的性质</a></li>
+</ul>
+</div>
+</body>
+</html>

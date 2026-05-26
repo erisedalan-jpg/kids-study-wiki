@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电镀</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电镀</h1><div class="review-mark" data-stem="371-电镀"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电镀, electroplating, 电化学镀层</p><h1>电镀</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用电解原理，在镀件（阴极）表面沉积一层金属或合金的工艺，以增强耐腐蚀性、导电性或美观性。
+<strong>English</strong>: The use of electrolysis to deposit a layer of metal or alloy onto a workpiece (cathode), to improve corrosion resistance, conductivity, or appearance.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>电镀</strong>（electroplating）：以被镀件（工件）为阴极，镀层金属（或合金）为阳极，含镀层金属离子的溶液为电解质，通电后金属离子在阴极（工件）上还原沉积，阳极（镀层金属）溶解补充离子。</p>
+<p>装置示意：</p>
+<pre><code>直流电源
+  +     −
+  |     |
+阳极   阴极
+（Ni）（镀件）
+  |_____|
+  NiSO₄ 溶液
+</code></pre>
+<h3>公式 / 方程式</h3>
+<p>以镀镍为例：</p>
+<p>$$
+\text{阳极（Ni）}: \text{Ni} - 2e^- \rightarrow \text{Ni}^{2+} \quad (\text{补充溶液中 Ni}^{2+})
+$$</p>
+<p>$$
+\text{阴极（镀件）}: \text{Ni}^{2+} + 2e^- \rightarrow \text{Ni} \quad (\text{沉积在工件表面})
+$$</p>
+<p>$$
+\text{溶液中 NiSO}_4 \text{ 浓度近似不变（阳极溶解 = 阴极沉积）}
+$$</p>
+<p>电镀的工艺要点：</p>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>优化策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电流密度</td>
+<td>适中（过大导致镀层粗糙，过小沉积慢）</td>
+</tr>
+<tr>
+<td>电解液 pH</td>
+<td>需精确控制（影响镀层质量）</td>
+</tr>
+<tr>
+<td>温度</td>
+<td>适温（提高沉积速率，但过高影响质量）</td>
+</tr>
+<tr>
+<td>电解液添加剂</td>
+<td>光亮剂、平整剂（改善镀层光泽）</td>
+</tr>
+</tbody>
+</table>
+<p>法拉第定律计算镀层厚度：</p>
+<p>$$
+m = \frac{M \cdot I \cdot t}{n \cdot F}
+$$</p>
+<p>若工件面积为 $S$，镀层密度为 $\rho$，则厚度：</p>
+<p>$$
+d = \frac{m}{\rho \cdot S}
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：将铁制品镀铜，以铜为阳极，CuSO₄ 溶液为电解液，通电 1 h，电流 2 A，计算镀铜层质量。</p>
+<p>$$
+m = \frac{M \cdot I \cdot t}{n \cdot F} = \frac{64 \times 2 \times 3600}{2 \times 96500} \approx 2.39\ \text{g}
+$$</p>
+<h3>易错点</h3>
+<ul>
+<li>电镀中阳极为镀层金属（活性极，会溶解），阴极为镀件（工件）</li>
+<li>电镀液浓度保持不变（阳极溶解 = 阴极沉积，理论上）</li>
+<li>电镀前工件需除油、除锈（预处理），保证结合力</li>
+<li>惰性阳极电镀（如镀 Cr，铬层难以作阳极）使用铬酸电解液，阳极为 Pb</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电镀</td>
+<td>electroplating</td>
+</tr>
+<tr>
+<td>阴极（镀件）</td>
+<td>cathode (workpiece)</td>
+</tr>
+<tr>
+<td>阳极（镀层金属）</td>
+<td>anode (plating metal)</td>
+</tr>
+<tr>
+<td>镀层</td>
+<td>plating layer / coating</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>In electroplating, the workpiece serves as the cathode and the plating metal as the anode.（电镀中，工件作阴极，镀层金属作阳极。）</li>
+<li>The mass of metal deposited can be calculated using Faraday's law.（沉积的金属质量可用法拉第定律计算。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"电镀"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li>
+<p><strong>前置</strong>：<a href="../atoms/370-电解精炼.html">电解精炼</a></p>
+</li>
+<li>
+<p><a href="../atoms/368-电解池.html">电解池</a></p>
+</li>
+<li><a href="../atoms/367-电解原理.html">电解原理</a></li>
+<li><a href="../atoms/370-电解精炼.html">电解精炼</a></li>
+<li><a class="dead" title="未收录">电解电极反应</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2009-北京-02</a></li>
+<li><a class="dead" title="未收录">2022-北京-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

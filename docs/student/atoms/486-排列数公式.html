@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>排列数公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>排列数公式</h1><div class="review-mark" data-stem="486-排列数公式"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 排列数公式, permutation formula, 排列数, A_n^m</p><h2>🎓 排列数公式</h2>
+<h3>核心公式</h3>
+<p>从 $n$ 个不同元素中取出 $m$ 个元素的排列数：</p>
+<p>$$\boxed{A_n^m = \frac{n!}{(n-m)!} = n(n-1)(n-2)\cdots(n-m+1)}$$</p>
+<p>其中 $1 \leq m \leq n$，$n,m \in \mathbb{N}^*$。</p>
+<p><strong>全排列</strong>（$m = n$ 时）：</p>
+<p>$$A_n^n = n! = n(n-1)\cdots 2 \cdot 1$$</p>
+<p>规定 $0! = 1$，$A_n^0 = 1$。</p>
+<h3>公式推导</h3>
+<p>利用分步计数原理：
+- 第 1 个位置：$n$ 种
+- 第 2 个位置：$n-1$ 种（用过 1 个）
+- 第 3 个位置：$n-2$ 种
+- ……
+- 第 $m$ 个位置：$n-m+1$ 种</p>
+<p>连乘得：$A_n^m = n(n-1)\cdots(n-m+1) = \dfrac{n!}{(n-m)!}$</p>
+<h3>阶乘的计算</h3>
+<p>$$n! = 1 \times 2 \times 3 \times \cdots \times n$$</p>
+<p>常用值：$0!=1,\; 1!=1,\; 2!=2,\; 3!=6,\; 4!=24,\; 5!=120,\; 6!=720,\; 7!=5040$</p>
+<p><strong>化简技巧</strong>：</p>
+<p>$$\frac{n!}{(n-m)!} = n(n-1)\cdots(n-m+1) \quad \text{（不必展开再约分）}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $A_8^3$。</p>
+<p>$$A_8^3 = 8 \times 7 \times 6 = 336$$</p>
+<p><strong>例2</strong>：计算 $\dfrac{A_{10}^4}{A_8^2}$。</p>
+<p>$$\frac{A_{10}^4}{A_8^2} = \frac{10 \times 9 \times 8 \times 7}{8 \times 7} = 10 \times 9 = 90$$</p>
+<p><strong>例3</strong>：解方程 $A_n^2 = 30$。</p>
+<p>$$n(n-1) = 30 \Rightarrow n^2 - n - 30 = 0 \Rightarrow (n-6)(n+5) = 0$$</p>
+<p>$n = 6$（$n &gt; 0$ 且 $n \geq 2$，故取正值）。</p>
+<p><strong>例4</strong>：6 人参加演讲比赛，共有多少种出场顺序？</p>
+<p>$$A_6^6 = 6! = 720 \text{ 种}$$</p>
+<h3>与组合数公式的关系</h3>
+<p>$$A_n^m = C_n^m \cdot m!$$</p>
+<p>排列数 = 组合数 × 内部排列数（有序 = 无序 × 顺序数）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>阶乘计算错误</strong>：注意 $(n-m)!$ 不等于 $n! - m!$</li>
+<li><strong>$m &gt; n$ 无意义</strong>：排列数要求 $m \leq n$</li>
+<li><strong>与组合数混淆</strong>：$A_n^m \neq C_n^m$，排列数更大</li>
+<li><strong>首项与末项</strong>：$n(n-1)\cdots(n-m+1)$ 共 $m$ 个因数，末项是 $n-m+1$，不是 $n-m$</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/排列">排列 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+<li><a href="../atoms/477-分步计数原理.html">分步计数原理</a></li>
+<li><a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+</ul>
+</div>
+</body>
+</html>

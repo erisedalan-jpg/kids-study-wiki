@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>四点共圆</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>四点共圆</h1><div class="review-mark" data-stem="766-四点共圆"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 四点共圆, Concyclic Points, 共圆</p><h1>四点共圆</h1>
+<blockquote>
+<p><strong>一句话</strong>：如果平面上四个点位于同一个圆上，则称这四点共圆。
+<strong>English</strong>: Four points are concyclic if they all lie on the same circle.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+四点共圆是指平面上四个点 <code>A, B, C, D</code> 到某一定点 <code>O</code> 的距离相等，即 <code>OA = OB = OC = OD = r</code>，等价于存在一个圆能同时经过这四个点。  </p>
+<p><strong>关键判定方法</strong><br />
+1. <strong>对角互补</strong>：若四边形 <code>ABCD</code> 中，<code>∠A + ∠C = 180°</code> 或 <code>∠B + ∠D = 180°</code>，则 <code>A, B, C, D</code> 四点共圆。<br />
+2. <strong>外角等于内对角</strong>：若 <code>∠CBE = ∠D</code>（<code>E</code> 在 <code>AB</code> 延长线上），则 <code>A, B, C, D</code> 共圆。<br />
+3. <strong>同弧所对圆周角相等</strong>：若 <code>∠ADB = ∠ACB</code>，且 <code>A, B</code> 同侧，则 <code>A, B, C, D</code> 共圆。<br />
+4. <strong>托勒密定理</strong>：对于凸四边形 <code>ABCD</code>，若 <code>AB·CD + AD·BC = AC·BD</code>，则 <code>A, B, C, D</code> 共圆（充要条件）。<br />
+5. <strong>两点连线的同侧张角相等</strong>：若线段 <code>AB</code> 同侧的两点 <code>C, D</code>，满足 <code>∠ACB = ∠ADB</code>，则 <code>A, B, C, D</code> 共圆。  </p>
+<p><strong>典型应用</strong><br />
+高考中常在以下两类问题中出现：<br />
+- <strong>几何证明</strong>：给出几个角的条件，要求证明四个点共圆，进而导出新的角相等或线段比例关系。例如，已知 <code>△ABC</code> 的高 <code>AD, BE</code> 交于 <code>H</code>，证明 <code>D, C, E, H</code> 四点共圆，并求某个角。<br />
+- <strong>轨迹与最值</strong>：在动点问题中，利用四点共圆将角的关系转化为圆的性质，简化轨迹方程或求最值。解题关键是将角度相等或互补关系快速转化为共圆判定，再结合圆周角定理、相似等继续推理。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆判定方向</strong>：把“对角互补”当成唯一判定，忽略“外角等于内对角”或“同弧所对圆周角相等”的等价形式，导致无法识别隐蔽的共圆条件。  </li>
+<li><strong>忽视点的顺序与同侧</strong>：使用“同弧所对圆周角相等”时，未确认两点在弦的同侧，从而错误判定共圆。  </li>
+<li><strong>误用托勒密定理</strong>：托勒密定理为充要条件，但只有凸四边形时才直接等价于共圆；对于四点不按正确顺序连接，公式形式会不同，易出错。  </li>
+<li><strong>遗漏退化情况</strong>：当四点中有三点共线时，仍强行套用共圆判定，实际上共线情况不是常规意义上的四点共圆，需说明特殊性。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四点共圆</td>
+<td>Concyclic points</td>
+<td>同一圆上的四个点</td>
+</tr>
+<tr>
+<td>圆内接四边形</td>
+<td>Cyclic quadrilateral</td>
+<td>四个顶点共圆的四边形</td>
+</tr>
+<tr>
+<td>对角互补</td>
+<td>Opposite angles sum to 180°</td>
+<td>共圆的必要条件之一</td>
+</tr>
+<tr>
+<td>外角等于内对角</td>
+<td>Exterior angle equals interior opposite angle</td>
+<td>判定共圆的一种形式</td>
+</tr>
+<tr>
+<td>托勒密定理</td>
+<td>Ptolemy's theorem</td>
+<td>共圆四边形的边长关系充要条件</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">圆内接四边形</a></li>
+<li><a class="dead" title="未收录">圆周角定理</a></li>
+<li><a class="dead" title="未收录">圆幂定理</a></li>
+<li><a class="dead" title="未收录">托勒密定理</a></li>
+<li><a class="dead" title="未收录">相似三角形</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-文-22.html">2011-文-22</a></li>
+<li><a href="../exam/数学/2013-文-22.html">2013-文-22</a></li>
+<li><a href="../exam/数学/2013-理-22.html">2013-理-22</a></li>
+<li><a href="../exam/数学/2016-文-22.html">2016-文-22</a></li>
+<li><a href="../exam/数学/2016-理-22.html">2016-理-22</a></li>
+<li><a href="../exam/数学/2020-理-11.html">2020-理-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线面平行的判定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>线面平行的判定</h1><div class="review-mark" data-stem="1400-线面平行的判定"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 线面平行的判定, 线面平行判定定理, 直线与平面平行的判定, 线面平行判定, criterion for line-plane parallelism</p><h1>线面平行的判定</h1>
+<blockquote>
+<p><strong>一句话</strong>：如果平面外的一条直线平行于平面内的一条直线，则该直线平行于该平面。
+<strong>English</strong>: If a line outside a plane is parallel to a line inside the plane, then the line is parallel to the plane.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：
+线面平行的判定定理是立体几何的基本定理，其严格表述为：</p>
+<blockquote>
+<p>若 $l \not\subset \alpha$（直线 $l$ 不在平面 $\alpha$ 内），且 $m \subset \alpha$（直线 $m$ 在平面 $\alpha$ 内），且 $l \parallel m$（$l$ 与 $m$ 平行），则 $l \parallel \alpha$。</p>
+</blockquote>
+<p>符号化表示：$l \not\subset \alpha, \, m \subset \alpha, \, l \parallel m \implies l \parallel \alpha$。</p>
+<p>此定理将空间中的线面平行关系转化为平面内的线线平行关系，是判定线面平行的唯一直接依据。</p>
+<p><strong>关键方法</strong>：
+解决线面平行判定问题的核心策略是“降维转化”——在平面内找（或作）出一条与已知直线平行的直线。具体步骤：
+1. <strong>确定目标直线</strong> $l$ 与<strong>目标平面</strong> $\alpha$，并确认 $l \not\subset \alpha$。
+2. 在 $\alpha$ 内确定一条直线 $m$，寻找或构造 $l \parallel m$。
+3. 通常借助<strong>三角形的中位线</strong>、<strong>平行四边形的对边</strong>、<strong>对应线段成比例</strong>等平面几何工具来证明 $l \parallel m$。
+4. 完整写出判定定理的三个条件：“$l \not\subset \alpha$，$m \subset \alpha$，$l \parallel m$”，得出结论 $l \parallel \alpha$。</p>
+<p><strong>典型应用</strong>：
+该考点在高考中通常出现在立体几何解答题的第（1）问，或选择填空题中，设问形式常为：
+- “证明：$EF \parallel$ 平面 $ABCD$”（如棱柱、棱锥中的中点连线问题）。
+- “在棱 $PC$ 上是否存在点 $F$，使直线 $BF \parallel$ 平面 $AEC$？若存在，确定点 $F$ 的位置。”</p>
+<p>典型场景 1（棱柱背景）：在直三棱柱 $ABC-A_1B_1C_1$ 中，$D$、$E$ 分别为 $AB$、$BC$ 中点，证明 $DE \parallel$ 平面 $A_1B_1C_1$。此时利用中位线得 $DE \parallel AC$，再结合直棱柱侧棱平行及对应关系，在平面 $A_1B_1C_1$ 内找到 $A_1C_1 \parallel AC$，从而完成证明。</p>
+<p>典型场景 2（棱锥背景）：在四棱锥 $P-ABCD$ 底面 $ABCD$ 为平行四边形，$E$ 为 $PD$ 中点，证明 $PB \parallel$ 平面 $AEC$。需连接 $BD$ 交 $AC$ 于 $O$，在 $\triangle PBD$ 中利用 $O$ 为中点、$E$ 为中点得中位线 $OE \parallel PB$，$OE \subset$ 平面 $AEC$，即证。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略“线不在面内”的条件</strong>：判定定理要求直线必须在平面外。若使用向量法求平面的法向量 $\vec{n}$，通过 $\vec{n} \cdot \text{方向向量} = 0$ 得出线面平行的结论时，必须额外验证直线不在该平面内（如直线上某点坐标不满足平面方程），否则可能误判为线在面内。</li>
+<li><strong>直接在面内找线“看起来平行”</strong>：必须通过中位线、平行四边形等严格的平面几何推理得出线线平行，严禁使用“由图可知”这类不严格的直观判断作为解题步骤。</li>
+<li><strong>混淆判定定理与性质定理</strong>：判定定理用于由“线线平行”推“线面平行”；性质定理（若 $l \parallel \alpha$，则过 $l$ 的平面与 $\alpha$ 的交线与 $l$ 平行）用于由“线面平行”推“线线平行”。解题时需厘清逻辑方向，避免张冠李戴。</li>
+<li><strong>辅助线构造顺序错误</strong>：在棱锥中证明线面平行时，常需先连接对角线找交点（中点），再连接中位线。若辅助线作错或顺序颠倒，会导致找不到面内的平行线。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线面平行</td>
+<td>line parallel to plane</td>
+<td>直线与平面无公共点</td>
+</tr>
+<tr>
+<td>判定定理</td>
+<td>determination theorem</td>
+<td>由条件判断位置关系的定理</td>
+</tr>
+<tr>
+<td>中位线定理</td>
+<td>Midline Theorem</td>
+<td>三角形两边中点连线平行且等于第三边的一半</td>
+</tr>
+<tr>
+<td>线线平行</td>
+<td>line-line parallelism</td>
+<td>同一平面内两条不相交的直线</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧 高中数学课标——立体几何初步</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-18，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">线面平行的性质</a></li>
+<li><a class="dead" title="未收录">面面平行的判定</a></li>
+<li><a class="dead" title="未收录">线面垂直的判定</a></li>
+<li><a class="dead" title="未收录">空间向量与线面平行</a></li>
+<li><a class="dead" title="未收录">线线平行的方法（中位线）</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-文-13.html">2019-文-13</a></li>
+<li><a href="../exam/数学/2019-文-18.html">2019-文-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

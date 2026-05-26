@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双缝干涉条纹间距</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>双缝干涉条纹间距</h1><div class="review-mark" data-stem="553-双缝干涉条纹间距"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[光学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 双缝干涉条纹间距, double-slit interference fringe spacing</p><h1>双缝干涉条纹间距</h1>
+<blockquote>
+<p><strong>一句话</strong>：双缝干涉中，相邻明（或暗）条纹中心间的距离，由公式 $\Delta x = \frac{L}{d}\lambda$ 决定，其中 $d$ 为双缝间距，$L$ 为缝到屏距离，$\lambda$ 为光的波长。<br />
+<strong>English</strong>: The distance between two adjacent bright (or dark) fringes in Young's double-slit interference pattern, given by the formula $\Delta x = \frac{L}{d}\lambda$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+双缝干涉条纹间距 $\Delta x$ 指干涉图样中相邻两条明条纹（或暗条纹）中心之间的垂直距离。当两束相干光通过间距为 $d$ 的双缝后在距离为 $L$ 的屏上相遇时，光程差 $\delta = d\sin\theta \approx d\frac{x}{L}$（在 $\theta$ 很小时）。<br />
+- <strong>明纹条件</strong>：$\delta = k\lambda$ （$k=0,\pm1,\pm2,\cdots$），对应明纹位置 $x_k = k\frac{L}{d}\lambda$<br />
+- <strong>暗纹条件</strong>：$\delta = (2k+1)\frac{\lambda}{2}$ （$k=0,\pm1,\pm2,\cdots$），对应暗纹位置 $x_k = (2k+1)\frac{L}{2d}\lambda$<br />
+因此相邻明纹（或暗纹）间距为：  </p>
+<p>$$\Delta x = x_{k+1} - x_k = \frac{L}{d}\lambda$$</p>
+<p><strong>适用条件</strong>：双缝间距 $d$ 远小于缝到屏距离 $L$；仅使用单色光或准单色光，且两束光为相干光（来自同一光源的同一波列）。  </p>
+<p><strong>关键方法</strong><br />
+在高考中解决此类问题通常分两步：<br />
+1. 判断干涉装置是否满足近似条件（$L \gg d$，$\theta$ 很小），再选用 $\Delta x = \frac{L}{d}\lambda$ 或其变形。<br />
+2. 分析条纹间距与波长、缝间距、屏距的定性关系（$d$ 增大 → $\Delta x$ 减小；$L$ 增大 → $\Delta x$ 增大；波长越长 → $\Delta x$ 越大）。如遇到白光干涉，需注意中央为白色明纹，两侧出现内紫外红的彩色条纹，条纹间距因波长不同而不再均匀。  </p>
+<p><strong>典型应用</strong><br />
+高考常见题型包括：<br />
+- <strong>定量计算</strong>：已知 $L$、$d$、光波长 $\lambda$，求 $\Delta x$ 或某级条纹位置；已知 $\Delta x$ 和 $L$、$d$，反求波长。<br />
+- <strong>实验分析</strong>：在“用双缝干涉测光的波长”实验中，利用测微目镜测量多条条纹间距求平均值，再计算波长，常结合误差分析（如未调共轴、测量的是非相邻条纹间距等）。<br />
+例如：用绿光（$\lambda=5.0\times10^{-7}\,\text{m}$）做双缝干涉实验，$d=0.20\,\text{mm}$，$L=1.0\,\text{m}$，则 $\Delta x = \frac{1.0}{0.20\times10^{-3}} \times 5.0\times10^{-7} = 2.5\times10^{-3}\,\text{m}=2.5\,\text{mm}$。若改用红光，波长更大，条纹间距变大，条纹变疏。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆条纹间距与条纹宽度</strong>：$\Delta x$ 是亮条纹中心到相邻亮条纹中心的距离，不是单个明纹的宽度（明纹宽度通常指从明纹中心到相邻暗纹中心的距离，数值上等于 $\Delta x/2$）。题目中“条纹间距”即指 $\Delta x$。  </li>
+<li><strong>忽略单位换算</strong>：题目中 $d$ 常以 mm 或 μm 给出，计算时必须统一到米（m），否则数量级出错。  </li>
+<li><strong>错用公式</strong>：公式 $\Delta x = \frac{L}{d}\lambda$ 仅适用于 $L \gg d$ 且观察屏上 $x \ll L$ 的傍轴区域，若装置倾斜或双缝间距不满足远小于屏距，不能直接使用。  </li>
+<li><strong>白光干涉误区</strong>：使用白光时，只有 $k=0$ 的中央明纹是白色，其他级次中各种波长的条纹位置不同，紫色靠内、红色靠外，因此高级次条纹会重叠，看不到完整的彩色条纹，并不是等间距的七色光带。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>双缝干涉</td>
+<td>double-slit interference</td>
+<td>两束相干光通过双缝产生明暗相间的干涉图样</td>
+</tr>
+<tr>
+<td>条纹间距</td>
+<td>fringe spacing</td>
+<td>相邻明纹（或暗纹）中心之间的距离</td>
+</tr>
+<tr>
+<td>相干光</td>
+<td>coherent light</td>
+<td>频率相同、相位差恒定、振动方向相同的光</td>
+</tr>
+<tr>
+<td>光程差</td>
+<td>optical path difference</td>
+<td>两列光波在相遇点经过的路程差，决定加强或减弱</td>
+</tr>
+<tr>
+<td>明纹</td>
+<td>bright fringe</td>
+<td>干涉加强形成的光亮条纹</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：（待主会话核对教材索引）</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/340-光的干涉.html">光的干涉</a></li>
+<li><a class="dead" title="未收录">杨氏双缝实验</a></li>
+<li><a class="dead" title="未收录">相干光源</a></li>
+<li><a class="dead" title="未收录">光的波长测量</a></li>
+<li><a class="dead" title="未收录">光程差</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2015-新课标Ⅱ-15.html">2015-新课标Ⅱ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

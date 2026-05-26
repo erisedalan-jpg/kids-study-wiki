@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>象限</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>象限</h1><div class="review-mark" data-stem="590-象限"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 象限, Quadrant</p><h1>象限</h1>
+<blockquote>
+<p><strong>一句话</strong>：平面直角坐标系中，被横轴和纵轴分成的四个区域，每个区域内点的坐标符号有确定的规律。
+<strong>English</strong>: The four regions into which the Cartesian plane is divided by the x-axis and y-axis, each with a distinct pattern of signs for the coordinates of points.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+在平面直角坐标系中，x 轴与 y 轴将平面分成四个部分，从右上角开始按逆时针方向依次为：第一象限（<code>x&gt;0, y&gt;0</code>）、第二象限（<code>x&lt;0, y&gt;0</code>）、第三象限（<code>x&lt;0, y&lt;0</code>）、第四象限（<code>x&gt;0, y&lt;0</code>）。坐标轴上的点不属于任何象限。<br />
+象限的核心价值在于将点的位置与坐标的符号严格对应，进而沟通三角函数值、复数、解析几何等内容的符号特征。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>由坐标判象限</strong>：直接看横、纵坐标的正负。<br />
+2. <strong>由条件判象限</strong>：给出不等式条件（如 <code>m&lt;0, n&gt;0</code>）直接对应象限；若给出和、积等条件（如 <code>xy&gt;0</code> 且 <code>x+y&lt;0</code>），需分情况推出符号再定象限。<br />
+3. <strong>三角与象限</strong>：已知三角函数值的符号，推断角终边所在象限。例如 <code>sinθ&gt;0 且 cosθ&lt;0</code> ⇒ θ 的终边在第二象限。<br />
+4. <strong>复数几何意义</strong>：复数 <code>a+bi</code> 对应点 <code>(a,b)</code>，可由实部、虚部符号确定其在复平面内的象限。</p>
+<p><strong>典型高考设问</strong><br />
+- 已知角的终边上一点的坐标符号，判断角的象限；<br />
+- 给出参数取值范围（如 <code>a&lt;0, b&gt;0</code>），判断点 <code>P(a, -b)</code> 所在象限；<br />
+- 结合解析几何，求点关于坐标轴对称后所在象限的变化；<br />
+- 程序框图中输出点的象限。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>坐标轴上的点</strong>：点 <code>(0, y)</code> 或 <code>(x, 0)</code> 不属于任何象限，但学生常错误归入某一象限。  </li>
+<li><strong>象限顺序混淆</strong>：逆时针编号，右上为第一象限，而非左上。  </li>
+<li><strong>三角函数符号与象限对应不熟</strong>：尤其中 <code>tanθ&gt;0</code> 可能对应一、三象限，学生易漏解。  </li>
+<li><strong>含参数时讨论不全</strong>：例如点 <code>(a, -a)</code>，当 <code>a&gt;0</code> 时在第四象限，<code>a&lt;0</code> 时在第二象限，<code>a=0</code> 时在原点（不在象限内），缺讨论则出错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>象限</td>
+<td>quadrant</td>
+<td>坐标平面的四个划分区域</td>
+</tr>
+<tr>
+<td>第一象限</td>
+<td>first quadrant</td>
+<td>横纵坐标均为正的区域</td>
+</tr>
+<tr>
+<td>坐标轴</td>
+<td>axis (axes)</td>
+<td>确定象限的分界线，含 x 轴、y 轴</td>
+</tr>
+<tr>
+<td>直角坐标系</td>
+<td>Cartesian coordinate system</td>
+<td>象限所在的几何框架</td>
+</tr>
+<tr>
+<td>符号</td>
+<td>sign</td>
+<td>决定点属于哪个象限的关键特征</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/275-任意角.html">任意角的定义</a></li>
+<li><a href="../atoms/271-三角函数线.html">三角函数线</a></li>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a href="../atoms/132-平面直角坐标系.html">平面直角坐标系</a></li>
+<li><a class="dead" title="未收录">对称与坐标变换</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/135-无理数.html">无理数</a></li>
+<li><strong>延伸</strong>：<a class="dead" title="未收录">数对</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-文-01.html">2008-文-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

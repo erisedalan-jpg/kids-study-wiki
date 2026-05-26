@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点的坐标特征</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>点的坐标特征</h1><div class="review-mark" data-stem="137-点的坐标特征"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 平面直角坐标系]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 点的坐标特征, coordinate characteristics of points, 坐标特征, 象限点坐标</p><h2>课本定义</h2>
+<p>在平面直角坐标系中，不同位置的点，其坐标 (x, y) 的符号有固定规律：各象限内点的坐标符号、坐标轴上点的坐标特征各有不同。利用坐标特征，可以由位置判断坐标符号，也可由坐标符号判断位置。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"坐标里藏着位置信息"</h3>
+<p>知道了坐标系，现在来总结：不同位置的点，坐标有什么规律？</p>
+<p><strong>四个象限的坐标特征：</strong></p>
+<pre><code>      y轴
+      ↑
+第二象限  |  第一象限
+(-,+)  |  (+,+)
+       |
+———————O———————→ x轴
+       |
+(-,-)  |  (+,-)
+第三象限  |  第四象限
+      ↓
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>x（横坐标）</th>
+<th>y（纵坐标）</th>
+<th>记忆法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一象限</td>
+<td>+</td>
+<td>+</td>
+<td>右上，都正</td>
+</tr>
+<tr>
+<td>第二象限</td>
+<td>-</td>
+<td>+</td>
+<td>左上，x负y正</td>
+</tr>
+<tr>
+<td>第三象限</td>
+<td>-</td>
+<td>-</td>
+<td>左下，都负</td>
+</tr>
+<tr>
+<td>第四象限</td>
+<td>+</td>
+<td>-</td>
+<td>右下，x正y负</td>
+</tr>
+</tbody>
+</table>
+<p><strong>坐标轴上的特征：</strong>
+- <strong>x 轴上的点</strong>：y = 0（不偏上也不偏下）
+- <strong>y 轴上的点</strong>：x = 0（不偏左也不偏右）
+- <strong>原点 O</strong>：x = 0，y = 0</p>
+<p><strong>快速记忆：</strong>
+- 横坐标 x：在 y 轴右边是正，左边是负
+- 纵坐标 y：在 x 轴上方是正，下方是负</p>
+<p><strong>用坐标判断位置（反过来用）：</strong>
+- 已知点 P(3, -2)：x=3&gt;0（右），y=-2&lt;0（下）→ 第四象限
+- 已知点 Q(-1, 0)：x=-1&lt;0，y=0 → 在 x 轴上（y轴左侧）</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>各位置点的坐标完整总结</h3>
+<p><strong>象限内的点：</strong></p>
+<table>
+<thead>
+<tr>
+<th>象限</th>
+<th>坐标条件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一象限</td>
+<td>x &gt; 0 且 y &gt; 0</td>
+<td></td>
+</tr>
+<tr>
+<td>第二象限</td>
+<td>x &lt; 0 且 y &gt; 0</td>
+<td></td>
+</tr>
+<tr>
+<td>第三象限</td>
+<td>x &lt; 0 且 y &lt; 0</td>
+<td></td>
+</tr>
+<tr>
+<td>第四象限</td>
+<td>x &gt; 0 且 y &lt; 0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>坐标轴上的点：</strong></p>
+<table>
+<thead>
+<tr>
+<th>位置</th>
+<th>坐标条件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x 轴正半轴</td>
+<td>x &gt; 0，y = 0</td>
+<td></td>
+</tr>
+<tr>
+<td>x 轴负半轴</td>
+<td>x &lt; 0，y = 0</td>
+<td></td>
+</tr>
+<tr>
+<td>y 轴正半轴</td>
+<td>x = 0，y &gt; 0</td>
+<td></td>
+</tr>
+<tr>
+<td>y 轴负半轴</td>
+<td>x = 0，y &lt; 0</td>
+<td></td>
+</tr>
+<tr>
+<td>原点 O</td>
+<td>x = 0，y = 0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：坐标轴上的点<strong>不属于任何象限</strong>。</p>
+<h3>关于对称点的坐标特征</h3>
+<table>
+<thead>
+<tr>
+<th>对称关系</th>
+<th>点 P(a, b) 的对称点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关于 x 轴对称</td>
+<td>P'(a, -b)</td>
+</tr>
+<tr>
+<td>关于 y 轴对称</td>
+<td>P'(-a, b)</td>
+</tr>
+<tr>
+<td>关于原点对称</td>
+<td>P'(-a, -b)</td>
+</tr>
+<tr>
+<td>关于直线 y=x 对称</td>
+<td>P'(b, a)</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 判断下列各点所在位置：
+A(3, -5)，B(-2, -4)，C(0, 3)，D(-1, 0)，E(0, 0)，F(2, 7)</p>
+<p>解：
+- A(3, -5)：x&gt;0, y&lt;0 → 第四象限
+- B(-2, -4)：x&lt;0, y&lt;0 → 第三象限
+- C(0, 3)：x=0, y&gt;0 → y轴正半轴
+- D(-1, 0)：y=0, x&lt;0 → x轴负半轴
+- E(0, 0) → 原点
+- F(2, 7)：x&gt;0, y&gt;0 → 第一象限</p>
+<p><strong>例题2：</strong> 点 P(a, b) 在第二象限，求点 Q(-a, -b) 在哪个象限？</p>
+<p>解：P 在第二象限 → a &lt; 0，b &gt; 0
+Q 的坐标为 (-a, -b)
+-a = -（负数）= 正数 &gt; 0
+-b = -（正数）= 负数 &lt; 0
+Q(-a, -b) 的 x &gt; 0，y &lt; 0 → 第四象限</p>
+<p><strong>例题3：</strong> 点 P(2a-1, a+2) 在 y 轴上，求 a 及点的坐标。</p>
+<p>解：在 y 轴上 → x 坐标 = 0
+2a - 1 = 0
+a = 1/2
+y 坐标 = a + 2 = 1/2 + 2 = 5/2
+点的坐标为 (0, 5/2)，在 y 轴正半轴上。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>坐标轴上的点不属于任何象限</strong></li>
+<li><strong>x 轴上 y = 0，y 轴上 x = 0</strong>（容易搞混哪个是0）</li>
+<li><strong>原点 O(0, 0) 既不在象限，也不在轴的正/负半轴</strong></li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>点的坐标特征
+├── 基于 → 平面直角坐标系
+├── 应用 → 由坐标判断点的位置
+├── 应用 → 对称点的坐标计算
+└── 深化 → 函数图像的象限分析
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>象限</td>
+<td>quadrant</td>
+<td>坐标系的四个区域</td>
+</tr>
+<tr>
+<td>横坐标</td>
+<td>x-coordinate</td>
+<td>x 的值</td>
+</tr>
+<tr>
+<td>纵坐标</td>
+<td>y-coordinate</td>
+<td>y 的值</td>
+</tr>
+<tr>
+<td>原点</td>
+<td>origin</td>
+<td>(0,0)</td>
+</tr>
+<tr>
+<td>坐标轴</td>
+<td>coordinate axis</td>
+<td>x轴和y轴</td>
+</tr>
+<tr>
+<td>对称点</td>
+<td>symmetric point</td>
+<td>关于某直线或点的对称</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第七章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/132-平面直角坐标系.html">平面直角坐标系</a></li>
+<li><a class="dead" title="未收录">有序数对</a></li>
+<li><a href="../atoms/078-负数.html">数轴</a></li>
+<li><a href="../atoms/127-实数.html">实数</a></li>
+<li><a href="../atoms/054-平移与旋转.html">平移</a></li>
+<li><a href="../atoms/014-对称.html">对称</a></li>
+</ul>
+</div>
+</body>
+</html>

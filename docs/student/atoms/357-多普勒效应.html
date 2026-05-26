@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多普勒效应</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>多普勒效应</h1><div class="review-mark" data-stem="357-多普勒效应"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械波]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 多普勒效应, Doppler effect</p><h2>🎓 多普勒效应</h2>
+<h3>定义</h3>
+<p><strong>多普勒效应</strong>（Doppler effect）是波源和观察者之间有相对运动时，观察者接收到的波的频率与波源实际频率不同的现象。</p>
+<p><strong>核心规律</strong>：
+- 波源与观察者<strong>相互靠近</strong>→ 观察者接收频率<strong>增大</strong>（音调升高，光变蓝）
+- 波源与观察者<strong>相互远离</strong>→ 观察者接收频率<strong>减小</strong>（音调降低，光变红）</p>
+<h3>物理解释</h3>
+<p>以声源向观察者运动为例：</p>
+<p>波源向前运动时，前方声波被"压缩"（相邻波峰距离缩短），观察者在前方每秒接收更多波峰，即频率增大；后方声波被"拉伸"，频率减小。</p>
+<p>$$f_{观} = f_0\cdot\frac{v \pm v_0}{v \mp v_s}$$</p>
+<ul>
+<li>$f_{观}$：观察者接收频率</li>
+<li>$f_0$：波源固有频率</li>
+<li>$v$：波速</li>
+<li>$v_0$：观察者速度（靠近波源取正）</li>
+<li>$v_s$：波源速度（靠近观察者取正）</li>
+</ul>
+<p><strong>高中仅需理解定性规律，无需记忆完整公式。</strong></p>
+<h3>与频率的关系（定性）</h3>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>接收频率 $f_{观}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>静止（无相对运动）</td>
+<td>$f_{观} = f_0$</td>
+</tr>
+<tr>
+<td>靠近（任一方运动）</td>
+<td>$f_{观} &gt; f_0$</td>
+</tr>
+<tr>
+<td>远离（任一方运动）</td>
+<td>$f_{观} &lt; f_0$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：多普勒效应改变的是<strong>频率</strong>（音调/颜色），不改变振幅（响度）。</p>
+<h3>多普勒效应的应用</h3>
+<table>
+<thead>
+<tr>
+<th>应用</th>
+<th>领域</th>
+<th>原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测速雷达</td>
+<td>交通执法</td>
+<td>发射微波，接收反射波，频率差→车速</td>
+</tr>
+<tr>
+<td>医用超声多普勒</td>
+<td>医学</td>
+<td>检测血流速度，心脏瓣膜运动</td>
+</tr>
+<tr>
+<td>天体红移</td>
+<td>天文学</td>
+<td>星系退行→光红移→宇宙膨胀证据</td>
+</tr>
+<tr>
+<td>蝙蝠回声定位</td>
+<td>生物学</td>
+<td>超声波频率变化判断目标运动</td>
+</tr>
+<tr>
+<td>气象多普勒雷达</td>
+<td>气象</td>
+<td>测量雨云的移动速度和方向</td>
+</tr>
+</tbody>
+</table>
+<h3>天文学中的多普勒效应</h3>
+<p><strong>哈勃红移</strong>：远方星系发出的光谱线相对于静止光源向红端（低频）移动，说明星系在退行（远离地球），支持宇宙膨胀理论。</p>
+<p><strong>蓝移</strong>：少数靠近地球的星系（如仙女座星系）光谱蓝移，表明正在靠近。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：一辆救护车以 $v_s = 30\text{ m/s}$ 向你靠近，鸣笛频率 $f_0 = 1000\text{ Hz}$，声速 $v = 340\text{ m/s}$，你听到的频率约？</p>
+<p>$$f_{观} = f_0\cdot\frac{v}{v - v_s} = 1000\times\frac{340}{340-30} = 1000\times\frac{340}{310} \approx 1097\text{ Hz}$$</p>
+<p>音调升高约 10%。</p>
+<p>救护车驶离时：$f_{观} = 1000\times\frac{340}{340+30} \approx 919\text{ Hz}$</p>
+<p><strong>例2（测速雷达）</strong>：雷达发射频率 $f = 10\text{ GHz}$，接收到反射波频率 $f' = 10.002\text{ GHz}$，则目标（汽车）在靠近，频率增大。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>多普勒效应改变频率，不改变波速</strong>：声波在空气中速度由介质决定，不受波源运动影响。</li>
+<li><strong>靠近不一定是波源运动</strong>：观察者靠近波源同样产生多普勒效应（但公式不同）。</li>
+<li><strong>光的多普勒效应（红移/蓝移）</strong>：光无需介质，只要有相对运动就产生多普勒效应（相对论修正）。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第三章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第三章第6节，页码待家长核对）</li>
+<li><strong>百科</strong>：多普勒效应 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/360-折射率.html">折射率</a></p>
+</li>
+<li>
+<p><a href="../atoms/362-机械波.html">机械波</a></p>
+</li>
+<li><a href="../atoms/369-波速.html">波速</a></li>
+<li><a href="../atoms/370-波长.html">波长</a></li>
+<li><a href="../atoms/355-周期与频率-振动.html">周期与频率-振动</a></li>
+<li><a href="../atoms/363-横波与纵波.html">横波与纵波</a></li>
+<li><a class="dead" title="未收录">声速</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

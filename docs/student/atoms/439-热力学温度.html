@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热力学温度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热力学温度</h1><div class="review-mark" data-stem="439-热力学温度"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 分子动理论]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热力学温度, thermodynamic temperature, 开尔文温标, 绝对温度</p><h2>🎓 热力学温度</h2>
+<h3>定义</h3>
+<p><strong>热力学温度</strong>（又称<strong>绝对温度</strong>）是国际单位制（SI）中温度的基本量，单位为<strong>开尔文</strong>（K）。它以<strong>绝对零度</strong>（$-273.15\ °C$）为零点，与摄氏温度的换算关系为：</p>
+<p>$$T = t + 273.15 \approx t + 273 \quad (\text{K})$$</p>
+<p>$$t = T - 273.15 \quad (°C)$$</p>
+<blockquote>
+<p>气体定律中温度<strong>必须使用热力学温度 $T$（K）</strong>，不能用摄氏度 $t$（°C）。</p>
+</blockquote>
+<h3>为何引入热力学温度</h3>
+<p>摄氏温度以水的冰点（$0\ °C$）为零点，是人为规定，不反映温度的物理本质。</p>
+<p><strong>物理本质</strong>：温度反映分子热运动的激烈程度（平均动能）。当温度降至 $-273.15\ °C$ 时，分子热运动动能趋于最小（经典极限），称为<strong>绝对零度</strong>。以此为零点建立的温标更具物理意义。</p>
+<h3>热力学温度与摄氏温度对照</h3>
+<table>
+<thead>
+<tr>
+<th>参考点</th>
+<th>摄氏温度 $t$</th>
+<th>热力学温度 $T$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝对零度</td>
+<td>$-273.15\ °C$</td>
+<td>$0\ \text{K}$</td>
+</tr>
+<tr>
+<td>水的冰点</td>
+<td>$0\ °C$</td>
+<td>$273.15\ \text{K}$</td>
+</tr>
+<tr>
+<td>室温（约）</td>
+<td>$25\ °C$</td>
+<td>$298\ \text{K}$</td>
+</tr>
+<tr>
+<td>水的沸点</td>
+<td>$100\ °C$</td>
+<td>$373.15\ \text{K}$</td>
+</tr>
+</tbody>
+</table>
+<h3>温度差的等价性</h3>
+<p>$$\Delta T = \Delta t$$</p>
+<p>即热力学温度的<strong>变化量</strong>与摄氏温度的变化量数值相同。例如温度升高 $10\ °C$，也就是升高 $10\ \text{K}$。</p>
+<h3>气体定律中的应用</h3>
+<p>三大气体定律中，$T$ 均为热力学温度：</p>
+<p>$$pV = nRT \quad (R = 8.31\ \text{J/(mol·K)}, \quad T \text{ 单位为 K})$$</p>
+<blockquote>
+<p>高考常见错误：直接代入摄氏度，导致结果错误。</p>
+</blockquote>
+<h3>典型例题</h3>
+<p><strong>例题</strong>：$27\ °C$ 的气体被加热到 $127\ °C$，体积不变，压强如何变化（比值）？</p>
+<p><strong>解</strong>：</p>
+<p>$$T_1 = 273 + 27 = 300\ \text{K}, \quad T_2 = 273 + 127 = 400\ \text{K}$$</p>
+<p>等容过程（查理定律）：$\frac{p_1}{T_1} = \frac{p_2}{T_2}$</p>
+<p>$$\frac{p_2}{p_1} = \frac{T_2}{T_1} = \frac{400}{300} = \frac{4}{3}$$</p>
+<p>若用摄氏度计算（错误）：$127/27 \approx 4.7$，结果完全不同。</p>
+<h3>易错点</h3>
+<ol>
+<li>$0\ \text{K}$ 时分子热运动动能趋于零，但绝对零度<strong>不可达到</strong></li>
+<li>$\Delta T = \Delta t$，但 $T \neq t$，不能直接用摄氏度代入比例计算</li>
+<li>开尔文温度不能为负数（没有负的热力学温度）</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第一章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/热力学温标">热力学温标 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/432-气体压强微观解释.html">气体压强微观解释</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/152-热机效率.html">热机效率</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">温度的微观本质</a></p>
+</li>
+<li><a class="dead" title="未收录">气体状态参量</a></li>
+<li><a href="../atoms/444-玻意耳定律.html">玻意耳定律</a></li>
+<li><a href="../atoms/430-查理定律.html">查理定律</a></li>
+<li><a href="../atoms/447-盖吕萨克定律.html">盖吕萨克定律</a></li>
+<li><a href="../atoms/446-理想气体状态方程.html">理想气体状态方程</a></li>
+</ul>
+</div>
+</body>
+</html>

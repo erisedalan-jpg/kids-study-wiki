@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光导纤维</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>光导纤维</h1><div class="review-mark" data-stem="337-光导纤维"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 光]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 光导纤维, 光纤, optical fiber</p><h2>🎓 光导纤维</h2>
+<h3>定义</h3>
+<p><strong>光导纤维</strong>（optical fiber，简称光纤）是利用<strong>全反射</strong>原理，使光在细玻璃纤维或塑料纤维中沿弯曲路径传播的光学元件。</p>
+<h3>基本结构</h3>
+<p>光纤由同心圆柱层构成：</p>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>名称</th>
+<th>折射率</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内层</td>
+<td>纤芯（core）</td>
+<td>较大（$n_1$）</td>
+<td>光线传播通道</td>
+</tr>
+<tr>
+<td>外层</td>
+<td>包层（cladding）</td>
+<td>较小（$n_2$）</td>
+<td>提供全反射界面</td>
+</tr>
+</tbody>
+</table>
+<p>$n_1 &gt; n_2$，确保光从纤芯射向包层时满足全反射条件。</p>
+<h3>工作原理</h3>
+<p>光线以大于临界角的角度射入纤芯：</p>
+<ol>
+<li>光射到纤芯-包层界面（$n_1 &gt; n_2$）</li>
+<li>入射角 &gt; 临界角 $C$（$\sin C = n_2/n_1$）</li>
+<li>发生<strong>全反射</strong>，光线被完全反射回纤芯</li>
+<li>在纤芯中不断全反射，沿弯曲路径传播，几乎无损耗</li>
+</ol>
+<p>$$\sin C = \frac{n_2}{n_1} &lt; 1 \implies \text{全反射条件满足}$$</p>
+<h3>光纤的应用</h3>
+<table>
+<thead>
+<tr>
+<th>应用领域</th>
+<th>具体用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>通信</strong></td>
+<td>光纤通信（互联网骨干网）：传输速率高、损耗小、抗干扰</td>
+</tr>
+<tr>
+<td><strong>医学</strong></td>
+<td>内窥镜（胃镜、肠镜）：将图像导出体外，无需手术</td>
+</tr>
+<tr>
+<td><strong>工业</strong></td>
+<td>光纤传感器：测温、测压</td>
+</tr>
+<tr>
+<td><strong>装饰</strong></td>
+<td>光纤灯：将光导引到任意位置</td>
+</tr>
+</tbody>
+</table>
+<h3>光纤通信的优势</h3>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>电缆通信</th>
+<th>光纤通信</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>传输容量</td>
+<td>有限</td>
+<td>极大（载波频率高）</td>
+</tr>
+<tr>
+<td>损耗</td>
+<td>较大</td>
+<td>极小</td>
+</tr>
+<tr>
+<td>抗干扰</td>
+<td>受电磁干扰</td>
+<td>不受电磁干扰</td>
+</tr>
+<tr>
+<td>保密性</td>
+<td>较差</td>
+<td>较好</td>
+</tr>
+<tr>
+<td>材料</td>
+<td>铜</td>
+<td>玻璃/塑料（廉价）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：光纤纤芯折射率 $n_1 = 1.5$，包层折射率 $n_2 = 1.4$，求全反射临界角。</p>
+<p>$$\sin C = \frac{n_2}{n_1} = \frac{1.4}{1.5} = 0.933$$</p>
+<p>$$C = \arcsin(0.933) \approx 69°$$</p>
+<p>只要光线在纤芯中以大于 69° 的角度（与法线的夹角，即接近平行于纤芯轴线方向）射到界面，就发生全反射。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>光纤利用全反射，不是折射</strong>：光在光纤中传播靠全反射，不是折射引导。</li>
+<li><strong>纤芯折射率必须大于包层</strong>：方向不能反，否则不能全反射。</li>
+<li><strong>光纤弯曲有限制</strong>：过度弯曲会使光线入射角小于临界角，导致光泄露。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第四章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：光导纤维 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/336-临界角.html">临界角</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/552-双缝干涉.html">双缝干涉</a></p>
+</li>
+<li>
+<p><a href="../atoms/343-全反射.html">全反射</a></p>
+</li>
+<li><a href="../atoms/336-临界角.html">临界角</a></li>
+<li><a href="../atoms/360-折射率.html">折射率</a></li>
+<li><a class="dead" title="未收录">光的折射-高中</a></li>
+<li><a class="dead" title="未收录">光的反射-高中</a></li>
+</ul>
+</div>
+</body>
+</html>

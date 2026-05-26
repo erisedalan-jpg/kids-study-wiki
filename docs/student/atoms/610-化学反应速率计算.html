@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学反应速率计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>化学反应速率计算</h1><div class="review-mark" data-stem="610-化学反应速率计算"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[反应原理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 化学反应速率计算, Reaction Rate Calculation</p><h1>化学反应速率计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：化学反应速率是用单位时间内反应物浓度减少或生成物浓度增加来表示的快慢程度，常用公式为 $v = \frac{\Delta c}{\Delta t}$。
+<strong>English</strong>: Reaction rate is the change in concentration of a reactant or product per unit time, commonly expressed as $v = \frac{\Delta c}{\Delta t}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与公式</strong>
+化学反应速率指化学反应进行的快慢，通常用 <strong>单位时间内反应物或生成物浓度的变化</strong> 表示。对于反应 $aA + bB \rightarrow cC + dD$，定义式为：
+$$v = \frac{\Delta c}{\Delta t}$$
+单位常为 $mol \cdot L^{-1} \cdot s^{-1}$ 或 $mol \cdot L^{-1} \cdot min^{-1}$。高考强调两点：一是 <strong>默认算平均速率</strong>（瞬时速率需图像切线）；二是 <strong>必须以正值表示</strong>。</p>
+<p><strong>同一反应中不同物质的速率关系</strong>
+对同一反应，用不同物质表述的速率数值虽可能不同，但速率比等于方程式计量数之比：
+$$\frac{v(A)}{a} = \frac{v(B)}{b} = \frac{v(C)}{c} = \frac{v(D)}{d}$$
+例如对 $N_2 + 3H_2 \rightleftharpoons 2NH_3$，任何时候 $v(N_2):v(H_2):v(NH_3) = 1:3:2$，这是 <strong>判断是否达到平衡</strong> 和 <strong>速率比较换算</strong> 的核心依据。</p>
+<p><strong>三段式计算法</strong>
+高考计算题的核心工具。设反应 $mA + nB \rightleftharpoons pC$，步骤：
+1. 列出初始浓度/物质的量
+2. 列出转化浓度/物质的量（设为 $x$，按计量比书写）
+3. 列出某一时刻的浓度或平衡浓度。
+结合定义式 $v = \frac{\Delta c}{\Delta t}$ 求算。</p>
+<p><strong>典型高考设问</strong>
+- <strong>速率比较</strong>：给出一组实验数据表，要求换算为同一物质的速率后比较快慢。
+- <strong>速率常数关联</strong>：部分新高考题引入速率方程 $v = k \cdot c^m(A) \cdot c^n(B)$，要求利用数据求算速率常数 $k$ 和反应级数。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆单位与公式</strong>：用物质的量变化代替浓度变化计算速率，忽视体积变化，把 $\Delta n$ 直接代入公式。需牢记 $c = \frac{n}{V}$，体积恒定时才可用浓度直接代换。</li>
+<li><strong>忽视系数换算直接比数值</strong>：看到 $v(A)=0.1$，$v(B)=0.2$ 就判断 B 表示的反应快，必须都除以自身计量系数后比较绝对值。</li>
+<li><strong>混淆平均速率与瞬时速率</strong>：图表题中误将某时间段的平均速率作为平衡瞬间速率，或反之。</li>
+<li><strong>误判速率与平衡关系</strong>：$v_{正}=v_{逆}$ 时反应即达平衡，但常将正反应速率与生成物浓度单一变化混淆。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>化学反应速率</td>
+<td>Reaction rate</td>
+<td>单位时间内反应物或生成物浓度的变化量</td>
+</tr>
+<tr>
+<td>平均速率</td>
+<td>Average rate</td>
+<td>某时间段内的速率 $\Delta c/\Delta t$</td>
+</tr>
+<tr>
+<td>浓度</td>
+<td>Concentration</td>
+<td>单位体积溶液中溶质的物质的量</td>
+</tr>
+<tr>
+<td>化学计量系数</td>
+<td>Stoichiometric coefficient</td>
+<td>方程式中各物质前的配平数</td>
+</tr>
+<tr>
+<td>速率方程</td>
+<td>Rate equation</td>
+<td>描述速率与浓度关系的方程 $v=k\cdot c^m$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/974-化学反应速率影响因素.html">化学反应速率影响因素</a></li>
+<li><a class="dead" title="未收录">化学平衡状态判断</a></li>
+<li><a class="dead" title="未收录">化学平衡常数计算</a></li>
+<li><a class="dead" title="未收录">速率方程与速率常数</a></li>
+<li><a class="dead" title="未收录">活化能与反应历程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2014-新课标Ⅱ-08.html">2014-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

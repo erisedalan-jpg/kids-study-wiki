@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两角和差正余弦</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>两角和差正余弦</h1><div class="review-mark" data-stem="274-两角和差正余弦"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 两角和差正余弦, sum and difference formulas, 和差化积, 两角和差公式</p><h2>🎓 两角和差正余弦</h2>
+<h3>核心公式</h3>
+<p><strong>正弦和差公式</strong>：</p>
+<p>$$\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$$</p>
+<p>$$\sin(\alpha - \beta) = \sin\alpha\cos\beta - \cos\alpha\sin\beta$$</p>
+<p><strong>余弦和差公式</strong>：</p>
+<p>$$\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$$</p>
+<p>$$\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$$</p>
+<p><strong>正切和差公式</strong>：</p>
+<p>$$\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta}$$</p>
+<p>$$\tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}$$</p>
+<p>（正切公式在 $\alpha, \beta, \alpha\pm\beta \neq \pi/2 + k\pi$ 时有效）</p>
+<h3>推导思路（余弦加法公式）</h3>
+<p>以向量/距离法推导（简述）：设单位圆上 $P_1 = (\cos\alpha, \sin\alpha)$，$P_2 = (\cos\beta, \sin\beta)$，则：</p>
+<p>$|P_1P_2|^2 = (\cos\alpha - \cos\beta)^2 + (\sin\alpha - \sin\beta)^2 = 2 - 2(\cos\alpha\cos\beta + \sin\alpha\sin\beta)$</p>
+<p>另一方面，$P_1$ 与 $P_2$ 对应角度差为 $\alpha - \beta$，所以 $P_0 = (\cos(\alpha-\beta), \sin(\alpha-\beta))$ 与 $(1, 0)$ 的距离相同：</p>
+<p>$|P_0O_1|^2 = (\cos(\alpha-\beta) - 1)^2 + \sin^2(\alpha-\beta) = 2 - 2\cos(\alpha-\beta)$</p>
+<p>两式相等，得 $\cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$。其他公式由此推导。</p>
+<h3>重要推论（二倍角公式）</h3>
+<p>令 $\beta = \alpha$：</p>
+<p>$$\sin 2\alpha = 2\sin\alpha\cos\alpha$$</p>
+<p>$$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 1 - 2\sin^2\alpha = 2\cos^2\alpha - 1$$</p>
+<p>$$\tan 2\alpha = \frac{2\tan\alpha}{1-\tan^2\alpha}$$</p>
+<h3>诱导公式的特殊情形</h3>
+<p>和差公式是诱导公式的一般化：</p>
+<p>$$\sin(\pi - \alpha) = \sin\pi\cos\alpha - \cos\pi\sin\alpha = 0 \cdot \cos\alpha - (-1)\sin\alpha = \sin\alpha$$ ✓</p>
+<p>$$\cos!\left(\frac{\pi}{2} - \alpha\right) = \cos\dfrac{\pi}{2}\cos\alpha + \sin\dfrac{\pi}{2}\sin\alpha = 0 + \sin\alpha = \sin\alpha$$ ✓</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $\sin 75°$。</p>
+<p>解：$\sin 75° = \sin(45° + 30°) = \sin 45°\cos 30° + \cos 45°\sin 30°$</p>
+<p>$= \dfrac{\sqrt{2}}{2} \cdot \dfrac{\sqrt{3}}{2} + \dfrac{\sqrt{2}}{2} \cdot \dfrac{1}{2} = \dfrac{\sqrt{6}}{4} + \dfrac{\sqrt{2}}{4} = \dfrac{\sqrt{6}+\sqrt{2}}{4}$</p>
+<p><strong>例2</strong>：已知 $\sin\alpha = \dfrac{1}{3}$，$\alpha \in (0, \pi/2)$，$\cos\beta = -\dfrac{1}{4}$，$\beta \in (\pi/2, \pi)$，求 $\cos(\alpha - \beta)$。</p>
+<p>解：$\cos\alpha = \dfrac{2\sqrt{2}}{3}$（第一象限正值，$\cos\alpha = \sqrt{1-1/9} = \sqrt{8/9}$）</p>
+<p>$\sin\beta = \dfrac{\sqrt{15}}{4}$（第二象限正值，$\sin\beta = \sqrt{1-1/16} = \sqrt{15/16}$）</p>
+<p>$\cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$</p>
+<p>$= \dfrac{2\sqrt{2}}{3} \cdot \left(-\dfrac{1}{4}\right) + \dfrac{1}{3} \cdot \dfrac{\sqrt{15}}{4}$</p>
+<p>$= -\dfrac{2\sqrt{2}}{12} + \dfrac{\sqrt{15}}{12} = \dfrac{\sqrt{15} - 2\sqrt{2}}{12}$</p>
+<p><strong>例3</strong>：化简 $\sin!\left(x+\dfrac{\pi}{6}\right) + \cos!\left(x+\dfrac{\pi}{3}\right)$。</p>
+<p>解：$\cos!\left(x+\dfrac{\pi}{3}\right) = \cos!\left(x+\dfrac{\pi}{6}+\dfrac{\pi}{6}\right) = \sin!\left(\dfrac{\pi}{2}-x-\dfrac{\pi}{3}\right)$</p>
+<p>更直接地：</p>
+<p>$\cos!\left(x+\dfrac{\pi}{3}\right) = \cos!\left(x+\dfrac{\pi}{3}\right)$，展开：$= \cos x \cos\dfrac{\pi}{3} - \sin x \sin\dfrac{\pi}{3} = \dfrac{1}{2}\cos x - \dfrac{\sqrt{3}}{2}\sin x$</p>
+<p>$\sin!\left(x+\dfrac{\pi}{6}\right) = \sin x\cos\dfrac{\pi}{6} + \cos x\sin\dfrac{\pi}{6} = \dfrac{\sqrt{3}}{2}\sin x + \dfrac{1}{2}\cos x$</p>
+<p>两者相加：$\dfrac{\sqrt{3}}{2}\sin x + \dfrac{1}{2}\cos x + \dfrac{1}{2}\cos x - \dfrac{\sqrt{3}}{2}\sin x = \cos x$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>正弦加法中交叉项</strong>：$\sin(\alpha+\beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$（注意"交叉"，不是 $\sin\alpha\sin\beta$）</li>
+<li><strong>余弦加法中有减号</strong>：$\cos(\alpha+\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$（同项相积取差）</li>
+<li><strong>正切公式的分母</strong>：$\tan(\alpha+\beta)$ 分母是 $1 - \tan\alpha\tan\beta$（减），$\tan(\alpha-\beta)$ 分母是 $1 + \tan\alpha\tan\beta$（加）</li>
+<li><strong>代入前确认象限</strong>：使用公式前，需先确定各角所在象限以确定函数值的符号</li>
+<li><strong>化简路径多样</strong>：三角恒等变换通常有多种路径，找最短路径需要经验积累</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中只计算特殊角（$30°, 45°, 60°, 90°$）的三角函数值，无法计算 $75°, 15°$ 等角。高中的两角和差公式提供了将任意角的三角函数化为特殊角的工具，是三角计算能力质的飞跃。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：和差化积公式（Sum-to-product formulas），积化和差（Product-to-sum formulas），François Viète（两角和差公式历史）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+<li><a href="../atoms/293-同角三角函数关系.html">同角三角函数关系</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a href="../atoms/265-Asin(ωx+φ)函数.html">Asin(ωx+φ)函数</a></li>
+<li><a href="../atoms/310-正弦函数图象与性质.html">正弦函数图象与性质</a></li>
+<li><a href="../atoms/276-余弦函数图象与性质.html">余弦函数图象与性质</a></li>
+<li><a href="../atoms/253-特殊角三角函数值.html">253-特殊角三角函数值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-18.html">2009-文-18</a></li>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

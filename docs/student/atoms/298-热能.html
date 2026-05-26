@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热能</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热能</h1><div class="review-mark" data-stem="298-热能"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热能, thermal energy, 热量, 内能</p><h1>热能</h1>
+<blockquote>
+<p><strong>一句话</strong>：热能是物质微观粒子（分子、原子）热运动动能的总和，化学反应中常伴随热能的吸收或释放，通过热量传递来体现。
+<strong>English</strong>: Thermal energy is the total kinetic energy of microscopic particles (molecules, atoms) due to thermal motion; chemical reactions often involve absorption or release of thermal energy through heat transfer.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>定义</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热能</td>
+<td>物体内部所有微观粒子热运动动能的总和</td>
+<td>J或kJ</td>
+</tr>
+<tr>
+<td>热量(Q)</td>
+<td>物体之间因温度差而传递的能量</td>
+<td>J或kJ</td>
+</tr>
+<tr>
+<td>温度(T)</td>
+<td>物体冷热程度的量度，反映分子平均动能</td>
+<td>K或℃</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：热量是热能转移的量度，不是物体"含有"的热量。</p>
+<h3>热能与化学反应</h3>
+<p>化学反应过程中，体系与环境的热量交换：</p>
+<table>
+<thead>
+<tr>
+<th>反应类型</th>
+<th>体系变化</th>
+<th>热量流向</th>
+<th>环境变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>放热反应</td>
+<td>化学能→热能</td>
+<td>体系→环境</td>
+<td>温度升高</td>
+</tr>
+<tr>
+<td>吸热反应</td>
+<td>热能→化学能</td>
+<td>环境→体系</td>
+<td>温度降低</td>
+</tr>
+</tbody>
+</table>
+<h3>热化学方程式中的热量</h3>
+<p>反应热（ΔH）的计算：</p>
+<p>$$Q = n \times |\Delta H|$$</p>
+<p>其中：
+- Q：实际释放或吸收的热量（kJ）
+- n：反应物或生成物的物质的量（mol）
+- |ΔH|：摩尔反应热的绝对值（kJ/mol）</p>
+<p><strong>示例</strong>：2H₂(g) + O₂(g) → 2H₂O(l)，ΔH = -571.6 kJ/mol（以H₂计）</p>
+<p>若燃烧2 mol H₂，释放热量Q = 2 × 285.8 = 571.6 kJ</p>
+<h3>比热容</h3>
+<p>比热容（c）：单位质量物质温度升高1°C（或1K）所吸收的热量：</p>
+<p>$$Q = mc\Delta T$$</p>
+<ul>
+<li>水：c = 4.18 J/(g·℃)（比热容大，工业冷却剂）</li>
+<li>铝：c = 0.90 J/(g·℃)</li>
+</ul>
+<h3>热能的测量（量热法）</h3>
+<p>用<strong>量热计</strong>（calorimeter）测定反应热：</p>
+<p>$$Q_{\text{反应}} = -Q_{\text{溶液}} = -mc\Delta T$$</p>
+<p>（量热计内的溶液温度变化反映反应释放/吸收的热量）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：在量热实验中，50 mL 1 mol/L的NaOH溶液与50 mL 1 mol/L的盐酸混合，温度升高3.4℃，计算中和反应热。</p>
+<p><strong>分析</strong>：
+- 溶液总质量约为100 g，c≈4.18 J/(g·℃)
+- Q = 100 × 4.18 × 3.4 = 1421.2 J ≈ 1.42 kJ
+- 物质的量n(NaOH) = 0.05 L × 1 mol/L = 0.05 mol
+- 摩尔反应热 = 1.42/0.05 = 28.4 kJ/mol（实验值偏小，热量有散失）
+- 理论值：中和热约为57.3 kJ/mol（per mol H₂O）</p>
+<p><strong>例2</strong>：铝的比热容（0.90 J/g·℃）比铁（0.46 J/g·℃）大，说明相同质量的铝和铁吸收相同热量后，谁的温度升高更多？</p>
+<p><strong>分析</strong>：Q=mc∆T，ΔT = Q/(mc)，比热容大的升温少。
+相同Q和m时，铁（c小）的ΔT &gt; 铝（c大）的ΔT，即铁升温更多。</p>
+<h3>易错点</h3>
+<ul>
+<li>"热量"是传递的能量，不能说"物体含有热量"（只能说"物体含有热能"）</li>
+<li>放热反应≠温度一定升高（还与体积等条件有关，如气体膨胀做功会降温）</li>
+<li>热化学方程式中的ΔH对应方程式中化学计量数对应的反应，不是每个分子</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热能</td>
+<td>Thermal energy</td>
+</tr>
+<tr>
+<td>热量</td>
+<td>Heat (Q)</td>
+</tr>
+<tr>
+<td>温度</td>
+<td>Temperature</td>
+</tr>
+<tr>
+<td>比热容</td>
+<td>Specific heat capacity</td>
+</tr>
+<tr>
+<td>量热计</td>
+<td>Calorimeter</td>
+</tr>
+<tr>
+<td>中和热</td>
+<td>Heat of neutralization</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>放热反应将化学能转化为热能，使环境温度升高。</td>
+<td>Exothermic reactions convert chemical energy to thermal energy, raising the surrounding temperature.</td>
+</tr>
+<tr>
+<td>水的比热容大，是良好的冷却剂。</td>
+<td>Water's high specific heat capacity makes it an excellent coolant.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学必修 第二册.pdf</a> 第六章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"热量"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">化学能</a> · <a href="../atoms/294-放热反应.html">放热反应</a> · <a href="../atoms/290-吸热反应.html">吸热反应</a> · <a href="../atoms/288-反应热.html">反应热</a> · <a href="../atoms/299-焓变.html">焓变</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角平分线定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>角平分线定理</h1><div class="review-mark" data-stem="1103-角平分线定理"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 角平分线定理, 三角形内角平分线定理, 外角平分线定理, 角的平分线</p><h1>角平分线定理</h1>
+<blockquote>
+<p><strong>一句话</strong>：三角形一个内角的平分线分其对边所得的两条线段，与这个角的两边对应成比例。
+<strong>English</strong>: In a triangle, the internal angle bisector divides the opposite side into segments proportional to the two adjacent sides.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+在 $\triangle ABC$ 中，$AD$ 平分 $\angle BAC$ 交 $BC$ 于点 $D$，则有<br />
+$$ \frac{BD}{DC} = \frac{AB}{AC} $$<br />
+该定理的证明常用面积法（等角对等积比）或正弦定理。若设 $AB=c$，$AC=b$，$BC=a$，可得线段长 $BD = \frac{ac}{b+c}$，$DC = \frac{ab}{b+c}$。与之相关的逆定理亦成立：若 $D$ 在 $BC$ 上且满足以上比例，则 $AD$ 平分 $\angle BAC$。  </p>
+<p><strong>外角平分线定理</strong><br />
+若 $AD$ 平分 $\angle BAC$ 的外角，且与外角对边的延长线交于点 $D$，则有<br />
+$$ \frac{BD}{DC} = \frac{AB}{AC} $$<br />
+但此时 $D$ 外分 $BC$，符号上常需注意线段的有向性，高考主要考查内角平分线定理及其应用。</p>
+<p><strong>关键方法</strong><br />
+在解三角形或平面几何计算与证明中，遇“角平分线”条件，直接转化为边长比例关系；与正弦定理、余弦定理、向量共线条件结合，求线段长、坐标或比值。<br />
+典型步骤：<br />
+1. 标注已知边与分割线段，列出比例式 $\frac{BD}{DC} = \frac{AB}{AC}$；<br />
+2. 设未知量，利用合比或分比性质建立方程；<br />
+3. 结合题目其他条件（如周长、面积、线段和差）求解。</p>
+<p><strong>典型应用</strong><br />
+- <strong>求线段比</strong>：已知三角形两边长及角平分线所分一边的两段长度之一，求另一段或第三边。<br />
+- <strong>证明比例与共线</strong>：在复杂图形中利用角平分线定理证明点共线或线段成比例，如内心性质、欧拉线相关题。<br />
+- <strong>与向量结合</strong>：用向量表示角平分线上的点，利用定比分点公式确定位置。<br />
+- <strong>实际模拟</strong>：已知三角形地块两边界长，修一条通向对边的角平分路，求路将第三边分成的两段比值——直接代入定理。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆内角平分线定理与外角平分线定理的适用情形，尤其当图形需延长线时误用内分比例。</li>
+<li>比例对应关系错位：记成 $\frac{BD}{DC} = \frac{AC}{AB}$ 或误将对边线段与第三边成比例。</li>
+<li>忽视定理的逆用：需要证明角平分线时，未能将边长比例转化为角相等。</li>
+<li>在涉及角平分线长度的计算中，错用斯特瓦尔特定理或角平分线长公式（$l_a^2 = bc\left[1-\left(\frac{a}{b+c}\right)^2 \right]$ 待家长核对），符号或边长代入出错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角平分线</td>
+<td>angle bisector</td>
+<td>从角顶点出发将其分成两个相等角的射线</td>
+</tr>
+<tr>
+<td>内角平分线定理</td>
+<td>interior angle bisector theorem</td>
+<td>三角形内角平分线分对边成比例</td>
+</tr>
+<tr>
+<td>外角平分线定理</td>
+<td>exterior angle bisector theorem</td>
+<td>三角形外角平分线分对边延伸段成比例</td>
+</tr>
+<tr>
+<td>比例线段</td>
+<td>proportional segments</td>
+<td>长度成比例的线段</td>
+</tr>
+<tr>
+<td>相邻边</td>
+<td>adjacent sides</td>
+<td>构成角的两条边</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/126-定理.html">正弦定理</a></li>
+<li><a href="../atoms/126-定理.html">余弦定理</a></li>
+<li><a class="dead" title="未收录">相似三角形</a></li>
+<li><a class="dead" title="未收录">三角形的中线</a></li>
+<li><a class="dead" title="未收录">三角形的垂线</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/082-一元一次方程.html">一元一次方程</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/096-有理数.html">有理数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2015-文-17.html">2015-文-17</a></li>
+</ul></div>
+</div>
+</body>
+</html>

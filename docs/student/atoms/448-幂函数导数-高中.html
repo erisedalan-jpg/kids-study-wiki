@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>幂函数导数-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>幂函数导数-高中</h1><div class="review-mark" data-stem="448-幂函数导数-高中"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 幂函数导数-高中, power rule, 幂函数求导, 幂法则, 幂函数导数</p><h2>🎓 幂函数导数（高中版）</h2>
+<h3>幂法则（Power Rule）</h3>
+<p>$$\boxed{(x^n)' = nx^{n-1} \quad (n\in\mathbb{R})}$$</p>
+<p>高中阶段将 $n$ 从正整数推广到<strong>全体实数</strong>（包括负数、分数、无理数）。</p>
+<h3>各类指数情形</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>例子</th>
+<th>导数</th>
+<th>化简</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正整数</td>
+<td>$x^3$</td>
+<td>$3x^2$</td>
+<td></td>
+</tr>
+<tr>
+<td>负整数</td>
+<td>$x^{-2}=\dfrac{1}{x^2}$</td>
+<td>$-2x^{-3}$</td>
+<td>$-\dfrac{2}{x^3}$</td>
+</tr>
+<tr>
+<td>正分数</td>
+<td>$x^{1/2}=\sqrt{x}$</td>
+<td>$\dfrac{1}{2}x^{-1/2}$</td>
+<td>$\dfrac{1}{2\sqrt{x}}$</td>
+</tr>
+<tr>
+<td>负分数</td>
+<td>$x^{-1/2}=\dfrac{1}{\sqrt{x}}$</td>
+<td>$-\dfrac{1}{2}x^{-3/2}$</td>
+<td>$-\dfrac{1}{2x\sqrt{x}}$</td>
+</tr>
+<tr>
+<td>分数</td>
+<td>$x^{2/3}=\sqrt[3]{x^2}$</td>
+<td>$\dfrac{2}{3}x^{-1/3}$</td>
+<td>$\dfrac{2}{3\sqrt[3]{x}}$</td>
+</tr>
+</tbody>
+</table>
+<h3>正整数情形推导（归纳思路）</h3>
+<p>$n=1$：$(x)' = 1$</p>
+<p>乘法法则推广：若 $(x^k)'=kx^{k-1}$，则</p>
+<p>$$(x^{k+1})' = (x\cdot x^k)' = x^k + x\cdot kx^{k-1} = x^k + kx^k = (k+1)x^k$$</p>
+<p>一般情形（$n\in\mathbb{R}$）：利用 $x^n = e^{n\ln x}$ 和链式法则：</p>
+<p>$$(x^n)' = (e^{n\ln x})' = e^{n\ln x}\cdot\frac{n}{x} = x^n\cdot\frac{n}{x} = nx^{n-1}$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 求下列函数的导数：</p>
+<p>(1) $f(x)=x^{-3}$：$f'(x)=-3x^{-4}=-\dfrac{3}{x^4}$</p>
+<p>(2) $f(x)=\sqrt[3]{x}=x^{1/3}$：$f'(x)=\dfrac{1}{3}x^{-2/3}=\dfrac{1}{3x^{2/3}}=\dfrac{1}{3\sqrt[3]{x^2}}$</p>
+<p>(3) $f(x)=\dfrac{1}{\sqrt{x}}=x^{-1/2}$：$f'(x)=-\dfrac{1}{2}x^{-3/2}=-\dfrac{1}{2x\sqrt{x}}$</p>
+<p><strong>例 2</strong> 化简后求导：$f(x) = \dfrac{x^3 - x}{\sqrt{x}}$</p>
+<p>$$f(x) = x^{3-1/2} - x^{1-1/2} = x^{5/2} - x^{1/2}$$</p>
+<p>$$f'(x) = \frac{5}{2}x^{3/2} - \frac{1}{2}x^{-1/2} = \frac{5\sqrt{x^3}}{2} - \frac{1}{2\sqrt{x}}$$</p>
+<p><strong>例 3</strong> 切线问题：求 $y=x^{2/3}$ 在 $x=1$ 处的切线方程。</p>
+<p>$y'=\dfrac{2}{3}x^{-1/3}$，$y'(1)=\dfrac{2}{3}$，切点 $(1,1)$，切线：$y-1=\dfrac{2}{3}(x-1)$</p>
+<h3>与必修衔接</h3>
+<p>初中学过正整数指数，高中在此基础上推广到分数和负数。分数指数源自根式：$x^{p/q}=(\sqrt[q]{x})^p$，掌握这一转换是使用幂法则的前提。</p>
+<h3>易错点</h3>
+<ul>
+<li>$x^n$ 的导数是 $nx^{n-1}$，<strong>不是</strong> $nx^n$（指数要减 $1$）</li>
+<li>分数指数：$\sqrt{x}=x^{1/2}$，求导得 $\dfrac{1}{2}x^{-1/2}$，不是 $\dfrac{1}{2}x^{1/2}$</li>
+<li>幂法则<strong>不适用</strong>于 $a^x$（底是常数，指数是变量）——那是指数函数求导</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/幂函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/447-常见函数导数.html">常见函数导数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/416-三角函数导数.html">三角函数导数</a></li>
+</ul>
+<p><a href="../atoms/447-常见函数导数.html">常见函数导数</a> · <a class="dead" title="未收录">多项式函数导数</a> · <a href="../atoms/435-导数四则运算.html">导数四则运算</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a class="dead" title="未收录">导数运算法则</a> · <a href="../atoms/422-切线方程.html">切线方程</a></p>
+</div>
+</body>
+</html>

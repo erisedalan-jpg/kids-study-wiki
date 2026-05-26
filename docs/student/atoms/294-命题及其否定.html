@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命题及其否定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>命题及其否定</h1><div class="review-mark" data-stem="294-命题及其否定"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 集合与常用逻辑用语, 第一章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 命题及其否定, proposition, negation, 命题, 否命题, 逆命题</p><h2>🎓 命题及其否定</h2>
+<h3>定义</h3>
+<p><strong>命题</strong>（proposition）：能判断真假的语句（陈述句）。真命题（true proposition）和假命题（false proposition）统称为命题，不能判断真假的语句（如疑问句、感叹句）不是命题。</p>
+<p><strong>条件命题</strong>：形如"若 $p$，则 $q$"（$p \Rightarrow q$），其中 $p$ 称为条件（前件），$q$ 称为结论（后件）。</p>
+<h3>四种命题</h3>
+<p>设命题为"若 $p$，则 $q$"，则：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>形式</th>
+<th>与原命题关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原命题</td>
+<td>若 $p$，则 $q$</td>
+<td>—</td>
+</tr>
+<tr>
+<td>逆命题</td>
+<td>若 $q$，则 $p$</td>
+<td>互为逆命题</td>
+</tr>
+<tr>
+<td>否命题</td>
+<td>若 $\lnot p$，则 $\lnot q$</td>
+<td>互为否命题</td>
+</tr>
+<tr>
+<td>逆否命题</td>
+<td>若 $\lnot q$，则 $\lnot p$</td>
+<td>互为逆否命题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键等价关系</strong>：
+$$\text{原命题} \Leftrightarrow \text{逆否命题}$$
+$$\text{逆命题} \Leftrightarrow \text{否命题}$$</p>
+<h3>命题的否定</h3>
+<p><strong>"命题 $p$ 的否定"</strong>（记作 $\lnot p$）：对 $p$ 直接加否定，不改变条件与结论的对应关系。</p>
+<p>区别：
+- <strong>否命题</strong>：交换条件与结论，并各自加否定（同时否定条件和结论）
+- <strong>命题的否定</strong>：对整个命题（包括量词）加否定，用于全称/存在量词命题</p>
+<h3>推导思路</h3>
+<p>逆否命题与原命题等价的本质：$p \Rightarrow q$ 等价于"$q$ 不成立则 $p$ 不成立"（反证/排除法的逻辑基础）。</p>
+<p><strong>真假关系</strong>：
+- 原命题与逆否命题：同真同假
+- 逆命题与否命题：同真同假
+- 原命题与逆命题（或原命题与否命题）：真假无必然联系</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：写出"若 $x &gt; 1$，则 $x &gt; 0$"的逆命题、否命题、逆否命题，并判断各命题真假。</p>
+<ul>
+<li>原命题：若 $x &gt; 1$，则 $x &gt; 0$。<strong>真</strong>（$x&gt;1$ 必有 $x&gt;0$）</li>
+<li>逆命题：若 $x &gt; 0$，则 $x &gt; 1$。<strong>假</strong>（反例：$x = 0.5$）</li>
+<li>否命题：若 $x \leq 1$，则 $x \leq 0$。<strong>假</strong>（反例：$x = 0.5$，$x \leq 1$ 但 $x &gt; 0$）</li>
+<li>逆否命题：若 $x \leq 0$，则 $x \leq 1$。<strong>真</strong>（与原命题等价）</li>
+</ul>
+<p><strong>例2</strong>：用逆否命题证明"若 $n^2$ 为奇数，则 $n$ 为奇数"。</p>
+<p>逆否命题：若 $n$ 为偶数，则 $n^2$ 为偶数。
+证：若 $n$ 为偶数，设 $n = 2k$，则 $n^2 = 4k^2 = 2(2k^2)$，是偶数。逆否命题为真，故原命题为真。$\square$</p>
+<p><strong>例3</strong>：写出命题"所有正数的平方仍是正数"的否定。</p>
+<p>原命题：$\forall x &gt; 0, x^2 &gt; 0$</p>
+<p>否定：$\exists x_0 &gt; 0, x_0^2 \leq 0$（全称量词变存在量词，结论加否定）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>否命题 ≠ 命题的否定</strong>：否命题是"若 $\lnot p$ 则 $\lnot q$"（条件结论都变），命题的否定只是对整体加 $\lnot$，量词命题的否定还要改变量词</li>
+<li><strong>逆命题与逆否命题混淆</strong>："逆"指交换条件结论，"否"指加否定，"逆否"是两者同时做</li>
+<li><strong>等价关系记忆</strong>：原命题和逆否命题同真同假（对角线等价）；逆命题和否命题同真同假（另一对角线）</li>
+<li><strong>"假命题"也是命题</strong>：命题的定义是能判断真假，假命题仍是命题</li>
+<li><strong>量词命题的四种形式</strong>：含量词的命题，逆命题/否命题等变换需特别注意量词的处理</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了命题、逆命题的概念（如勾股定理及其逆定理），知道原命题和逆命题不一定等价。高中系统化地引入四种命题及其真假关系，并加入量词命题的否定，为严格的数学推理打下基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第一章，页码待家长核对）</li>
+<li>百科参考：命题逻辑（Propositional logic），逆否命题（Contrapositive）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/278-充分条件必要条件.html">充分条件必要条件</a></li>
+<li><a href="../atoms/279-充要条件.html">充要条件</a></li>
+<li><a href="../atoms/280-全称量词与存在量词.html">全称量词与存在量词</a></li>
+<li><a class="dead" title="未收录">集合-高中</a></li>
+<li><a href="../atoms/297-子集与真子集.html">子集与真子集</a></li>
+<li><a href="../atoms/281-函数概念-高中.html">函数概念-高中</a></li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+</ul>
+</div>
+</body>
+</html>

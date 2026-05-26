@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电子转移守恒</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电子转移守恒</h1><div class="review-mark" data-stem="791-电子转移守恒"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[物质结构]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电子转移守恒</p><h1>电子转移守恒</h1>
+<blockquote>
+<p><strong>一句话</strong>：在氧化还原反应中，氧化剂得到的电子总数等于还原剂失去的电子总数，宏观上体现为化合价升降总数相等。
+<strong>English</strong>: In a redox reaction, the total number of electrons gained by the oxidizing agent equals the total number of electrons lost by the reducing agent.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+电子转移守恒是氧化还原反应配平与计算的核心依据。其本质是<strong>氧化剂得电子数 = 还原剂失电子数</strong>。由于电子无法独立存在，反应中一种物质失去电子（化合价升高）的同时，必有另一种物质得到电子（化合价降低），且得失电子总数严格相等。写成定量关系式：$n(氧化剂) \times 变价原子数 \times 化合价降幅 = n(还原剂) \times 变价原子数 \times 化合价升幅$。</p>
+<p><strong>关键方法</strong>
+高考中应用电子转移守恒的标准解题步骤：
+1. <strong>标化合价</strong>：准确标出反应前后所有变价元素的化合价，常考变价元素如 $\ce{Mn}$(+7→+2)、$\ce{Cr}$(+6→+3)、$\ce{Fe}$(+3→+2)、$\ce{S}$(-2→0/+4/+6)、$\ce{N}$(+5→+2/+4) 等。
+2. <strong>列守恒式</strong>：设未知数表示相关物质的量，套用 $n(\text{得电子}) = n(\text{失电子})$ 列等式。若涉及离子反应，可结合<strong>电荷守恒</strong>联立求解。
+3. <strong>计算目标量</strong>：求解方程式配平系数、反应物或产物的物质的量、电子转移数目等。</p>
+<p><strong>典型应用</strong>
+- <strong>方程式配平</strong>：给出 $\ce{KMnO4}$ 与 $\ce{H2C2O4}$ 在酸性条件下的反应。$\ce{Mn}$ 由 +7 降为 +2（得 $5e^-$），$\ce{C}$ 由 +3 升为 +4（两个 $\ce{C}$ 共失 $2e^-$），电子转移最小公倍数为 10，故 $\ce{KMnO4}$ 系数为 2，$\ce{H2C2O4}$ 系数为 5，由此推开全式系数。
+- <strong>定量计算</strong>：题给“将 $a\text{ g}$ 铁粉投入含 $\ce{HNO3}$ 的溶液中，生成气体为 $\ce{NO}$ 与 $\ce{NO2}$ 的混合物共 $b\text{ mol}$”，设生成 $\ce{Fe^{3+}}$ 与 $\ce{Fe^{2+}}$ 的物质的量分别为 $x$、$y$，由铁原子守恒和电子转移守恒列方程组，即可求解混合价态离子的比例。此处电子转移守恒将气体产物中 $\ce{N}$ 的得电子总数与 $\ce{Fe}$ 的失电子总数直接关联，无需逐一分析气体组分。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>先配平变价原子，再算电子转移</strong>：许多学生忽略“变价原子数”，如在 $\ce{Na2S2O3}$ 中两个 $\ce{S}$ 平均化合价为 +2，反应时常被氧化为 $\ce{SO4^{2-}}$(+6)，每个 $\ce{S}$ 升 4 价，1 mol $\ce{Na2S2O3}$ 失 $8\text{ mol } e^-$，而非 4 mol。必须乘以变价原子个数后再代入守恒式。</li>
+<li><strong>歧化反应与归中反应</strong>：歧化反应中同一元素既升又降，电子得失在同一物质内部完成，计算时需将升高部分与降低部分拆开分别算电子数，再令二者相等。归中反应同理，得失电子来自同一元素的不同价态，守恒式不体现“外部”电子交换，但本质不变。</li>
+<li><strong>离子方程式中漏用电荷守恒</strong>：当电子转移守恒无法唯一确定系数时（如未参与氧化还原的酸根离子数不确定），需联用"电子守恒 + 电荷守恒 + 原子守恒"三大守恒配平。仅用电子转移守恒可能导致系数错误。</li>
+<li><strong>有机物氧化数计算混淆</strong>：有机反应常以加氧去氢为氧化、加氢去氧为还原，但定量计算时仍需回归到碳元素氧化数的变化。习惯用无机物化合价的学生容易在此处错误判断电子转移数。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>氧化还原反应</td>
+<td>Redox reaction</td>
+<td>有电子转移的化学反应</td>
+</tr>
+<tr>
+<td>氧化数</td>
+<td>Oxidation number</td>
+<td>衡量原子氧化程度的表观电荷值</td>
+</tr>
+<tr>
+<td>半反应</td>
+<td>Half-reaction</td>
+<td>单独表示氧化或还原过程的反应式</td>
+</tr>
+<tr>
+<td>离子-电子法</td>
+<td>Ion-electron method</td>
+<td>用半反应配平氧化还原反应的方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">氧化还原反应基本概念</a></li>
+<li><a class="dead" title="未收录">氧化还原反应方程式配平</a></li>
+<li><a class="dead" title="未收录">电化学中的电子转移</a></li>
+<li><a class="dead" title="未收录">离子方程式书写与正误判断</a></li>
+<li><a class="dead" title="未收录">化学方程式计算技巧</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2010-新课标-07.html">2010-新课标-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

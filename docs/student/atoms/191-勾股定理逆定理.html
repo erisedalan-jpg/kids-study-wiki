@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>勾股定理逆定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>勾股定理逆定理</h1><div class="review-mark" data-stem="191-勾股定理逆定理"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 勾股定理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 勾股定理逆定理, converse of the Pythagorean theorem, 判断直角三角形</p><h1>勾股定理逆定理</h1>
+<blockquote>
+<p><strong>一句话</strong>：若三角形三边满足 $a^2+b^2=c^2$，则该三角形是以 $c$ 为斜边的直角三角形。
+<strong>English</strong>: If $a^2+b^2=c^2$ holds for the sides of a triangle, then the triangle is a right triangle with hypotenuse $c$.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>正定理 vs 逆定理</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>已知</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>勾股定理（正）</td>
+<td>$\angle C=90°$</td>
+<td>$a^2+b^2=c^2$</td>
+</tr>
+<tr>
+<td>勾股定理逆定理</td>
+<td>$a^2+b^2=c^2$</td>
+<td>$\angle C=90°$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>逆定理</strong>：反过来用，从"三边关系"推"角度信息"。</p>
+<h3>判断步骤</h3>
+<ol>
+<li>找出三边中<strong>最长的边</strong>（设为 $c$）</li>
+<li>计算 $a^2+b^2$ 与 $c^2$</li>
+<li>若相等 → 直角三角形；若不等 → 不是直角三角形</li>
+</ol>
+<p><strong>例1</strong>：边长 6、8、10 的三角形是直角三角形吗？</p>
+<p>$$6^2+8^2 = 36+64 = 100 = 10^2 \checkmark \Rightarrow \text{是直角三角形}$$</p>
+<p><strong>例2</strong>：边长 5、7、9？</p>
+<p>$$5^2+7^2 = 25+49 = 74 \neq 81 = 9^2 \Rightarrow \text{不是直角三角形}$$</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格表述</h3>
+<p><strong>逆定理</strong>：若三角形三边长 $a$、$b$、$c$ 满足 $a^2+b^2=c^2$，则以 $a$、$b$ 为两边的夹角为 $90°$，$c$ 为斜边。</p>
+<p><strong>注意</strong>：$c$ 必须是最长边才有意义。若 $a^2+b^2=c^2$ 而 $c$ 不是最长边，这与三角不等式矛盾，不可能成立。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：已知三角形三边为 $\sqrt{3}$、$\sqrt{5}$、$\sqrt{8}$，判断类型。</p>
+<p>最长边 $\sqrt{8}$，$(\sqrt{3})^2+(\sqrt{5})^2=3+5=8=(\sqrt{8})^2$，是直角三角形。</p>
+<p><strong>例 2</strong>：已知三角形三边为 $a$、$a+1$、$a+2$（$a&gt;0$），何时为直角三角形？</p>
+<p>最长边 $a+2$，令 $a^2+(a+1)^2=(a+2)^2$：
+$$a^2+a^2+2a+1=a^2+4a+4$$
+$$a^2-2a-3=0 \Rightarrow (a-3)(a+1)=0$$
+$$a=3 \; (\text{取正值}) \Rightarrow \text{三边为 } 3,4,5$$</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 未先找最长边就套公式，选错了 $c$</li>
+<li>❌ 把逆定理与正定理搞反：逆定理是"已知三边关系，推角度"</li>
+<li>❌ 认为 $a^2+b^2&gt;c^2$ → 锐角三角形，$a^2+b^2&lt;c^2$ → 钝角三角形（这是正确的，但八下不要求；注意不要混淆）</li>
+</ul>
+<h3>知识联系</h3>
+<p>逆定理是<a href="../atoms/189-勾股定理.html">勾股定理</a>的逆命题（不是所有命题的逆命题都成立，但这个成立）；综合判断三角形类型时联用<a href="../atoms/147-三角形内角和.html">三角形内角和</a>；坐标系中可用两点距离公式验证直角。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>逆定理</td>
+<td>converse theorem</td>
+</tr>
+<tr>
+<td>直角三角形判定</td>
+<td>identifying right triangles</td>
+</tr>
+<tr>
+<td>斜边</td>
+<td>hypotenuse</td>
+</tr>
+<tr>
+<td>最长边</td>
+<td>longest side</td>
+</tr>
+<tr>
+<td>充分条件</td>
+<td>sufficient condition</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第17章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·勾股定理</li>
+<li>拓展：<a class="dead" title="未收录">数学/勾股数</a> · 逆命题与逆定理的区别（高中数学）</li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/182-二次根式加减.html">二次根式加减</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/192-勾股数.html">勾股数</a></li>
+</ul>
+<p><a href="../atoms/189-勾股定理.html">勾股定理</a> · <a href="../atoms/192-勾股数.html">勾股数</a> · <a class="dead" title="未收录">勾股定理应用</a> · <a href="../atoms/147-三角形内角和.html">三角形内角和</a> · <a class="dead" title="未收录">直角三角形</a> · <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a></p>
+</div>
+</body>
+</html>

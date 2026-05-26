@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焓变</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>焓变</h1><div class="review-mark" data-stem="299-焓变"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 焓变, enthalpy change, ΔH, 反应焓变</p><h1>焓变</h1>
+<blockquote>
+<p><strong>一句话</strong>：焓变（ΔH）是恒压条件下化学反应的热量变化，等于生成物焓（H）减去反应物焓，ΔH&lt;0为放热，ΔH&gt;0为吸热。
+<strong>English</strong>: Enthalpy change (ΔH) is the heat change of a chemical reaction at constant pressure, equal to the enthalpy of products minus that of reactants; ΔH &lt; 0 means exothermic, ΔH &gt; 0 means endothermic.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>焓（H）</strong>：热力学状态函数，代表物质在恒压条件下的热含量（内能+压力体积乘积）。</p>
+<p><strong>焓变（ΔH）</strong>：
+$$\Delta H = H_\text{生成物} - H_\text{反应物}$$</p>
+<ul>
+<li><strong>ΔH &lt; 0</strong>：生成物焓 &lt; 反应物焓，反应<strong>放热</strong></li>
+<li><strong>ΔH &gt; 0</strong>：生成物焓 &gt; 反应物焓，反应<strong>吸热</strong></li>
+<li>单位：<strong>kJ/mol</strong>（千焦每摩尔）</li>
+</ul>
+<h3>热化学方程式书写规范</h3>
+<p>热化学方程式 = 化学方程式 + ΔH</p>
+<p><strong>规范要求</strong>：
+1. 各物质注明状态：(g)气态、(l)液态、(s)固态、(aq)溶液
+2. 化学计量数可以是分数
+3. ΔH的值对应方程式中的计量数
+4. ΔH写在方程式末尾，带正负号和单位</p>
+<p><strong>示例</strong>：</p>
+<p>$$\text{H}_2(g) + \frac{1}{2}\text{O}_2(g) \rightarrow \text{H}_2\text{O}(l) \quad \Delta H = -285.8 \text{ kJ/mol}$$</p>
+<p>$$\text{CaCO}_3(s) \rightarrow \text{CaO}(s) + \text{CO}_2(g) \quad \Delta H = +178.2 \text{ kJ/mol}$$</p>
+<h3>焓变的计算方法</h3>
+<p><strong>方法1：键能计算</strong>
+$$\Delta H = \sum(\text{反应物键能}) - \sum(\text{生成物键能})$$</p>
+<p><strong>方法2：盖斯定律（间接计算）</strong></p>
+<p>$$\Delta H_\text{总} = \Delta H_1 + \Delta H_2 + \cdots$$</p>
+<p><strong>方法3：生成焓法</strong>
+$$\Delta H = \sum \Delta H_f(\text{生成物}) - \sum \Delta H_f(\text{反应物})$$</p>
+<h3>标准生成焓（部分数据）</h3>
+<table>
+<thead>
+<tr>
+<th>物质</th>
+<th>标准生成焓 ΔHf° (kJ/mol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂O(l)</td>
+<td>-285.8</td>
+</tr>
+<tr>
+<td>CO₂(g)</td>
+<td>-393.5</td>
+</tr>
+<tr>
+<td>CH₄(g)</td>
+<td>-74.8</td>
+</tr>
+<tr>
+<td>NH₃(g)</td>
+<td>-46.1</td>
+</tr>
+<tr>
+<td>HCl(g)</td>
+<td>-92.3</td>
+</tr>
+</tbody>
+</table>
+<h3>ΔH与温度、压力</h3>
+<p>在高中阶段，焓变的温度和压力依赖性较小，通常视为不变（标准条件下讨论）。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：已知：
+- ① H₂(g) + ½O₂(g) → H₂O(g), ΔH₁ = -241.8 kJ/mol
+- ② H₂O(g) → H₂O(l), ΔH₂ = -44.0 kJ/mol</p>
+<p>求：H₂(g) + ½O₂(g) → H₂O(l)，ΔH = ?</p>
+<p><strong>分析</strong>（盖斯定律）：目标 = ① + ②：
+ΔH = ΔH₁ + ΔH₂ = -241.8 + (-44.0) = <strong>-285.8 kJ/mol</strong>（正确值）</p>
+<p><strong>例2</strong>：2H₂(g) + O₂(g) → 2H₂O(l), ΔH = -571.6 kJ/mol
+与H₂(g) + ½O₂(g) → H₂O(l), ΔH = -285.8 kJ/mol
+两者有什么关系？</p>
+<p><strong>分析</strong>：前者是后者计量数的2倍，所以ΔH也是2倍关系。
+-571.6 = 2×(-285.8)，完全一致。</p>
+<h3>易错点</h3>
+<ul>
+<li>焓变ΔH与化学计量数有关，同一反应方程式计量数×2，ΔH也×2</li>
+<li>热化学方程式中<strong>必须</strong>标注物质状态，H₂O(g)与H₂O(l)的ΔH不同</li>
+<li>ΔH &lt; 0是放热（不是负焓），不要因为负号而搞混</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>焓变</td>
+<td>Enthalpy change</td>
+</tr>
+<tr>
+<td>标准生成焓</td>
+<td>Standard enthalpy of formation</td>
+</tr>
+<tr>
+<td>热化学方程式</td>
+<td>Thermochemical equation</td>
+</tr>
+<tr>
+<td>盖斯定律</td>
+<td>Hess's Law</td>
+</tr>
+<tr>
+<td>恒压</td>
+<td>Constant pressure</td>
+</tr>
+<tr>
+<td>状态函数</td>
+<td>State function</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热化学方程式必须注明各物质的状态。</td>
+<td>Thermochemical equations must specify the state of each substance.</td>
+</tr>
+<tr>
+<td>焓变是反应系统在恒压条件下与环境交换的热量。</td>
+<td>Enthalpy change is the heat exchanged between the reaction system and its surroundings at constant pressure.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学必修 第二册.pdf</a> 第六章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"焓"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>延伸</strong>：<a href="../atoms/288-反应热.html">反应热</a></li>
+</ul>
+<p><a href="../atoms/288-反应热.html">反应热</a> · <a href="../atoms/294-放热反应.html">放热反应</a> · <a href="../atoms/290-吸热反应.html">吸热反应</a> · <a class="dead" title="未收录">化学能</a> · <a href="../atoms/284-化学平衡.html">化学平衡</a></p>
+</div>
+</body>
+</html>

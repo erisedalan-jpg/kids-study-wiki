@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>形变量</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>形变量</h1><div class="review-mark" data-stem="609-形变量"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 形变量, spring deformation, 形变大小</p><h1>形变量</h1>
+<blockquote>
+<p><strong>一句话</strong>：形变量是物体受力后形状或体积的改变量，在高中物理中通常指弹簧的伸长量或压缩量，用 Δx 表示。
+<strong>English</strong>: The amount of deformation, typically the change in length Δx of a spring from its natural length under a force.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：形变量是描述弹性体形变程度的物理量，常用小写 x 或 Δx 表示。对于弹簧，形变量 = 当前长度 − 原长(自由长度)。在弹性限度内，弹簧的弹力与形变量成正比，即胡克定律：</p>
+<p>$$
+F = -k x
+$$</p>
+<p>或取大小时 $F = k|x|$，其中 k 为劲度系数（N/m），x 为形变量（m），负号表示弹力方向与形变方向相反。伸长时 x &gt; 0，弹力指向收缩方向；压缩时 x &lt; 0，弹力指向恢复方向。</p>
+<p>弹簧的弹性势能同样取决于形变量的平方：</p>
+<p>$$
+E_p = \frac{1}{2} k x^2
+$$</p>
+<p><strong>关键方法</strong>：解决弹簧类问题的核心是明确“原长”和“形变量”的区别。
+1. 确定弹簧原长 $l_0$，根据题意辨析弹簧是伸长还是压缩，写出形变量 $x = l - l_0$（伸长）或 $x = l_0 - l$（压缩）。
+2. 应用胡克定律求弹力大小，注意方向判断。
+3. 若涉及多个弹簧或连接体，优先使用整体法与隔离法分析受力，结合平衡条件或牛顿第二定律列方程。
+4. 在能量问题中，直接用 $E_p = \frac{1}{2}kx^2$ 计算弹性势能变化，注意零势能面的选取。</p>
+<p><strong>典型应用</strong>：高考中常见以下几种考查方式：
+- <strong>瞬时性与临界问题</strong>：弹簧弹力不能突变，撤去外力瞬间形变量不变，瞬时加速度由其他主动力与当前弹力决定；分离临界条件常为两物体间压力为零且加速度相等。
+- <strong>动态平衡与振动</strong>：弹簧振子周期 $T=2\pi\sqrt{m/k}$，水平/竖直放置均适用，振幅即为最大形变量。
+- <strong>能量守恒综合</strong>：弹簧将动能、重力势能与弹性势能相互转化，如“小球压弹簧”模型、滑块—弹簧系统等，常要求求最大压缩量（形变量最大处）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆弹簧长度与形变量</strong>：直接把题目给的弹簧长度代入胡克定律，而忘记减去原长。形变量必须是相对于原长的变化量。</li>
+<li><strong>忽视弹性限度</strong>：胡克定律只在弹性限度内成立，题目若暗示发生塑性形变或超出限度，则不可直接使用 $F = kx$。</li>
+<li><strong>弹力方向与做功符号误判</strong>：弹簧伸长时弹力指向收缩方向，压缩时指向伸长方向；计算做功时，若形变量增大则弹性势能增加，弹力做负功，反之亦然。</li>
+<li><strong>弹簧串联与并联的劲度系数错误推导</strong>：串联时 $\frac{1}{k}=\frac{1}{k_1}+\frac{1}{k_2}$，并联时 $k=k_1+k_2$，易记反或忽略原长相等的前提。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>形变量</td>
+<td>deformation / spring deformation</td>
+<td>弹簧相对原长的伸长或压缩量</td>
+</tr>
+<tr>
+<td>胡克定律</td>
+<td>Hooke's Law</td>
+<td>弹性限度内弹力与形变量成正比</td>
+</tr>
+<tr>
+<td>劲度系数</td>
+<td>spring constant (stiffness)</td>
+<td>弹簧的刚度，符号 k，单位 N/m</td>
+</tr>
+<tr>
+<td>弹性限度</td>
+<td>elastic limit</td>
+<td>发生永久形变的最大应力</td>
+</tr>
+<tr>
+<td>弹性势能</td>
+<td>elastic potential energy</td>
+<td>弹簧因形变储存的能量 $E_p=\frac12 kx^2$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/233-胡克定律.html">胡克定律</a></li>
+<li><a href="../atoms/078-弹力.html">弹力</a></li>
+<li><a class="dead" title="未收录">弹性势能</a></li>
+<li><a class="dead" title="未收录">牛顿第二定律的应用</a></li>
+<li><a class="dead" title="未收录">临界问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-02.html">2010-新课标Ⅰ-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

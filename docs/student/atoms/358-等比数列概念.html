@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等比数列概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>等比数列概念</h1><div class="review-mark" data-stem="358-等比数列概念"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 数列, 第十一章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 等比数列概念, geometric sequence, 等比数列, 公比</p><h2>🎓 等比数列概念</h2>
+<h3>定义</h3>
+<p>如果一个数列 ${a_n}$ 从第二项起，每一项与前一项的<strong>比</strong>都等于同一常数 $q$（$q \neq 0$），则称这个数列为<strong>等比数列</strong>（geometric sequence），常数 $q$ 称为<strong>公比</strong>（common ratio）。</p>
+<p>$$\frac{a_n}{a_{n-1}} = q \quad (n \geq 2,\ q \neq 0,\ a_n \neq 0)$$</p>
+<h3>通项公式</h3>
+<p>$$a_n = a_1 \cdot q^{n-1}$$</p>
+<p><strong>变形</strong>：$a_n = a_m \cdot q^{n-m}$（以任意项 $a_m$ 为基准）</p>
+<h3>等比数列的性质</h3>
+<p><strong>性质1（等比中项）</strong>：若 $G^2 = ab$（$ab &gt; 0$），则 $a, G, b$ 成等比，$G$ 称为 $a$ 与 $b$ 的<strong>等比中项</strong>。</p>
+<p><strong>性质2</strong>：若 $m + n = p + q$，则 $a_m \cdot a_n = a_p \cdot a_q$。</p>
+<p><strong>性质3</strong>：等比数列每一项（不为零）是其相邻项的<strong>几何平均数</strong>：</p>
+<p>$$a_n^2 = a_{n-1} \cdot a_{n+1}$$</p>
+<p><strong>性质4（指数性质）</strong>：以 $n$ 为横轴，$\lg a_n$ 为纵轴，各点在一条<strong>直线</strong>上（等比数列取对数变等差）。</p>
+<h3>等比数列的单调性</h3>
+<ul>
+<li>$a_1 &gt; 0$，$q &gt; 1$：递增</li>
+<li>$a_1 &gt; 0$，$0 &lt; q &lt; 1$：递减</li>
+<li>$a_1 &lt; 0$，$q &gt; 1$：递减（各项均为负）</li>
+<li>$q &lt; 0$：各项正负交替（非单调）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：等比数列 $a_1 = 2$，$q = 3$，求 $a_5$。</p>
+<p><strong>解</strong>：$a_5 = 2 \times 3^4 = 2 \times 81 = 162$</p>
+<p><strong>例2</strong>：等比数列中，$a_2 = 6$，$a_5 = 48$，求公比 $q$。</p>
+<p><strong>解</strong>：$\dfrac{a_5}{a_2} = q^3 = 8$，故 $q = 2$</p>
+<p><strong>例3</strong>：$a, b, c$ 成等比数列，$b^2 = ac = 9$，$a + c = 6$，求 $a, c$。</p>
+<p><strong>解</strong>：$a + c = 6$，$ac = 9$，由韦达定理，$a, c$ 是 $x^2 - 6x + 9 = 0$ 的根，$(x-3)^2 = 0$，故 $a = c = 3$。</p>
+<p><strong>例4</strong>：细菌每 20 分钟分裂一次，初始 100 个，2 小时后多少个？</p>
+<p><strong>解</strong>：$q = 2$，$n = 6$（分裂 6 次），数量 $= 100 \times 2^6 = 6400$ 个</p>
+<h3>与等差数列的对比</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>等差数列</th>
+<th>等比数列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>递推关系</td>
+<td>$a_n - a_{n-1} = d$</td>
+<td>$a_n / a_{n-1} = q$</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>$a_1 + (n-1)d$</td>
+<td>$a_1 \cdot q^{n-1}$</td>
+</tr>
+<tr>
+<td>中间项</td>
+<td>算术平均数</td>
+<td>几何平均数</td>
+</tr>
+<tr>
+<td>图像</td>
+<td>直线</td>
+<td>指数曲线</td>
+</tr>
+<tr>
+<td>求和</td>
+<td>$\frac{n(a_1+a_n)}{2}$</td>
+<td>见<a href="../atoms/357-等比数列前n项和.html">等比数列前n项和</a></td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ul>
+<li>公比 $q \neq 0$，且各项 $a_n \neq 0$</li>
+<li>$q &lt; 0$ 时数列正负交替，不是单调的</li>
+<li>等比中项：$G^2 = ab$，注意 $G$ 可以是正值也可以是负值（$G = \pm\sqrt{ab}$，$ab &gt; 0$）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订）</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（拓展章节，待家长核对是否在本册）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/等比数列">等比数列 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/355-等差数列前n项和.html">等差数列前n项和</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/1064-等比中项.html">等比中项</a></p>
+</li>
+<li>
+<p><a href="../atoms/356-等差数列概念.html">等差数列概念</a></p>
+</li>
+<li><a href="../atoms/357-等比数列前n项和.html">等比数列前n项和</a></li>
+<li><a class="dead" title="未收录">数列综合应用</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a href="../atoms/300-对数概念.html">对数概念</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-文-12.html">2011-文-12</a></li>
+<li><a href="../exam/数学/2020-文-10.html">2020-文-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

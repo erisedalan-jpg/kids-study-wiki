@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>排列应用-顺序问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>排列应用-顺序问题</h1><div class="review-mark" data-stem="485-排列应用-顺序问题"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 排列应用-顺序问题, order-restricted permutation, 顺序问题, 固定顺序排列</p><h2>🎓 排列应用-顺序问题</h2>
+<h3>问题类型</h3>
+<p><strong>顺序问题</strong>：某些元素之间的<strong>相对顺序</strong>有限制，但不要求相邻。例如：
+- 甲必须排在乙的前面（不一定紧邻）
+- 某些元素必须按升序/降序排列
+- 圆排列中的顺序限制</p>
+<h3>核心方法</h3>
+<p><strong>方法一：除以对称倍数</strong></p>
+<p>若 $k$ 个元素之间的相对顺序只有一种合法（如 $k$ 个人必须按某固定顺序出现），则先做无限制全排列，再除以 $k!$（因为 $k$ 个元素的 $k!$ 种相对顺序中只有 1 种合法）：</p>
+<p>$$N = \frac{A_n^m}{k!}$$</p>
+<p><strong>方法二：先选位置再确定元素</strong></p>
+<p>先从所有位置中选出 $k$ 个给受限元素（选好后顺序自动确定），再排其余元素。</p>
+<h3>典型例题</h3>
+<p><strong>例1（甲在乙前面）</strong>：5 人站一排，甲必须在乙的左边（不一定相邻），有多少种排法？</p>
+<p><strong>解（对称法）</strong>：
+- 不加限制：$5! = 120$ 种
+- 甲在乙左边与甲在乙右边各占一半：$N = \frac{5!}{2} = 60$ 种</p>
+<p><strong>例2（三人固定顺序）</strong>：6 人站一排，甲乙丙必须按甲→乙→丙的顺序出现（从左到右），有多少种排法？</p>
+<p><strong>解</strong>：
+- 不加限制：$6! = 720$ 种
+- 甲乙丙的相对顺序有 $3! = 6$ 种，只有 1 种满足条件：$N = \frac{6!}{3!} = \frac{720}{6} = 120$ 种</p>
+<p><strong>例3（用选位方法）</strong>：6 人中，甲必须排在乙的前面，有多少种排法？</p>
+<p><strong>解（选位法）</strong>：
+- 先从 6 个位置中选 2 个分配给甲乙（甲的编号 &lt; 乙的编号）：$C_6^2 = 15$ 种
+- 其余 4 人全排列：$4! = 24$ 种</p>
+<p>$$N = C_6^2 \times 4! = 15 \times 24 = 360 \text{ 种}$$</p>
+<p>（与对称法结果相同：$\frac{6!}{2} = 360$）</p>
+<p><strong>例4（含 0 的数字顺序）</strong>：0,1,2,3,4 组成 5 位无重复数字，最高位不为 0，有多少个？</p>
+<p><strong>解</strong>：
+- 首位不能为 0：首位 4 种，其余 4 位从剩余 4 个数取全排列 $4! = 24$：$N = 4 \times 4! = 96$ 个</p>
+<p>（若用间接法：$5! - 4! = 120 - 24 = 96$）</p>
+<h3>常见顺序限制类型</h3>
+<table>
+<thead>
+<tr>
+<th>限制</th>
+<th>方法</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>甲必须在乙前</td>
+<td>对称法</td>
+<td>总排列 ÷ 2</td>
+</tr>
+<tr>
+<td>$k$ 人固定相对顺序</td>
+<td>对称法</td>
+<td>总排列 ÷ $k!$</td>
+</tr>
+<tr>
+<td>某元素在某位置之前</td>
+<td>选位法 + 其余全排列</td>
+<td>$C_n^k \times \cdots$</td>
+</tr>
+<tr>
+<td>某元素在最前/最后</td>
+<td>先定位，再排其余</td>
+<td>$1 \times (n-1)!$</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>混淆"甲在乙前面"与"甲乙相邻且甲在乙左边"</strong>：前者不要求相邻，方法不同</li>
+<li><strong>对称法的前提</strong>：只有当两种情形（如甲前和乙前）数量完全相等时，才能直接除以 2</li>
+<li><strong>多重限制叠加</strong>：多个顺序限制同时存在时，需逐步分析，不能直接叠加</li>
+<li><strong>圆排列的顺序</strong>：圆排列中固定一人后，其余 $(n-1)!$，再讨论相对顺序</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/排列">排列 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a href="../atoms/486-排列数公式.html">排列数公式</a></li>
+<li><a href="../atoms/484-排列应用-相邻问题.html">排列应用-相邻问题</a></li>
+<li><a href="../atoms/483-排列应用-不相邻问题.html">排列应用-不相邻问题</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆锥曲线统一定义</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆锥曲线统一定义</h1><div class="review-mark" data-stem="374-圆锥曲线统一定义"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修一, 第三章圆锥曲线的方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆锥曲线统一定义, unified definition of conic sections, 焦点-准线定义, 圆锥曲线的统一定义, Unified Definition of Conic Sections</p><h2>🎓 圆锥曲线统一定义</h2>
+<h3>统一定义（焦点-准线定义）</h3>
+<p><strong>圆锥曲线的统一定义</strong>：平面内，到定点 $F$（焦点）的距离与到定直线 $l$（准线）的距离之比为常数 $e$（离心率）的点的轨迹。</p>
+<p>$$\frac{|PF|}{d(P,l)} = e$$</p>
+<ul>
+<li>$0 &lt; e &lt; 1$：椭圆</li>
+<li>$e = 1$：抛物线</li>
+<li>$e &gt; 1$：双曲线</li>
+<li>$e = 0$：圆（特殊情况，准线在无穷远处）</li>
+</ul>
+<h3>几何来源：截圆锥</h3>
+<p>"圆锥曲线"（conic sections）：用平面截正圆锥面所得曲线。</p>
+<table>
+<thead>
+<tr>
+<th>截法</th>
+<th>曲线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与底面平行</td>
+<td>圆</td>
+</tr>
+<tr>
+<td>与侧面斜截（不平行母线）</td>
+<td>椭圆</td>
+</tr>
+<tr>
+<td>与一条母线平行</td>
+<td>抛物线</td>
+</tr>
+<tr>
+<td>与两条母线平行（截两叶）</td>
+<td>双曲线</td>
+</tr>
+</tbody>
+</table>
+<p>（此为几何直觉，高中重点是代数定义）</p>
+<h3>椭圆的焦点-准线关系</h3>
+<p>椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（焦点在 $x$ 轴），右焦点 $F_2(c,0)$，对应右准线 $x=\dfrac{a^2}{c}=\dfrac{a}{e}$：</p>
+<p>$$\frac{|PF_2|}{d(P, \text{右准线})} = e = \frac{c}{a}$$</p>
+<p>两准线 $x=\pm\dfrac{a}{e}$（在顶点外侧，因 $\dfrac{a}{e}=\dfrac{a^2}{c}&gt;a$）。</p>
+<h3>双曲线的焦点-准线关系</h3>
+<p>双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$，右焦点 $F_2(c,0)$，对应右准线 $x=\dfrac{a^2}{c}=\dfrac{a}{e}$：</p>
+<p>$$\frac{|PF_2|}{d(P, \text{右准线})} = e = \frac{c}{a} &gt; 1$$</p>
+<p>双曲线准线在顶点<strong>内侧</strong>（因 $\dfrac{a}{e}=\dfrac{a^2}{c}<a$，$c>a$）。</p>
+<h3>抛物线的统一定义</h3>
+<p>抛物线本身就是用焦点-准线定义的（$e=1$），其方程直接导出 $|PF|=d(P,l)$。</p>
+<h3>极坐标形式（以焦点为极点）</h3>
+<p>以右焦点为极点，极轴沿 $x$ 轴正方向：</p>
+<p>$$r = \frac{l}{1 - e\cos\theta}$$</p>
+<p>其中 $l=\dfrac{b^2}{a}$（椭圆）、$l=\dfrac{b^2}{a}$（双曲线）、$l=\dfrac{p}{2}$（抛物线通径的一半）——即半通径。</p>
+<table>
+<thead>
+<tr>
+<th>$e$</th>
+<th>曲线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0&lt;e&lt;1$</td>
+<td>椭圆</td>
+</tr>
+<tr>
+<td>$e=1$</td>
+<td>抛物线，$r=\dfrac{p/2}{1-\cos\theta}$</td>
+</tr>
+<tr>
+<td>$e&gt;1$</td>
+<td>双曲线（$\cos\theta$ 取值需在合法范围）</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：离心率 $e=\dfrac{1}{2}$，对应焦点-准线距离比，判断曲线类型。</p>
+<p><strong>解</strong>：$0&lt;\dfrac{1}{2}&lt;1$，椭圆。</p>
+<p><strong>例2</strong>：某曲线 $\dfrac{|PF|}{d(P,l)}=\dfrac{2}{3}$，$|F|$... 直接结论：$e=\dfrac{2}{3}$，椭圆。</p>
+<p><strong>例3</strong>：椭圆 $\dfrac{x^2}{25}+\dfrac{y^2}{16}=1$，求右准线方程。</p>
+<p><strong>解</strong>：$a=5, c=3, e=\dfrac{3}{5}$，右准线 $x=\dfrac{a}{e}=\dfrac{5}{3/5}=\dfrac{25}{3}$</p>
+<h3>易错点</h3>
+<ul>
+<li>准线方程：椭圆/双曲线的准线是 $x=\pm\dfrac{a^2}{c}$（不是 $x=\pm c$）</li>
+<li>椭圆准线在顶点<strong>外侧</strong>，双曲线准线在顶点<strong>内侧</strong></li>
+<li>统一定义中每个焦点对应一条准线（左焦点对应左准线）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第一册第三章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第一册.pdf</a>（第三章，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/389-椭圆定义与方程.html">椭圆定义与方程</a></li>
+<li><a href="../atoms/368-双曲线定义与方程.html">双曲线定义与方程</a></li>
+<li><a href="../atoms/379-抛物线定义与方程.html">抛物线定义与方程</a></li>
+<li><a href="../atoms/391-椭圆离心率.html">椭圆离心率</a></li>
+<li><a href="../atoms/736-双曲线的离心率.html">双曲线离心率</a></li>
+<li><a class="dead" title="未收录">圆锥曲线综合应用</a></li>
+</ul>
+</div>
+</body>
+</html>

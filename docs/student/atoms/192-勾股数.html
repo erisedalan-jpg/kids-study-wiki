@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>勾股数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>勾股数</h1><div class="review-mark" data-stem="192-勾股数"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 勾股定理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 勾股数, Pythagorean triple, 勾股数组</p><h1>勾股数</h1>
+<blockquote>
+<p><strong>一句话</strong>：三个正整数 $a$、$b$、$c$ 满足 $a^2+b^2=c^2$，就叫一组勾股数。
+<strong>English</strong>: A Pythagorean triple is a set of three positive integers $a$, $b$, $c$ satisfying $a^2+b^2=c^2$.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>常见勾股数表</h3>
+<table>
+<thead>
+<tr>
+<th>勾（$a$）</th>
+<th>股（$b$）</th>
+<th>弦（$c$）</th>
+<th>验证</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>$9+16=25$ ✅</td>
+</tr>
+<tr>
+<td>5</td>
+<td>12</td>
+<td>13</td>
+<td>$25+144=169$ ✅</td>
+</tr>
+<tr>
+<td>8</td>
+<td>15</td>
+<td>17</td>
+<td>$64+225=289$ ✅</td>
+</tr>
+<tr>
+<td>7</td>
+<td>24</td>
+<td>25</td>
+<td>$49+576=625$ ✅</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+<td>（3-4-5 的2倍组）</td>
+</tr>
+<tr>
+<td>9</td>
+<td>12</td>
+<td>15</td>
+<td>（3-4-5 的3倍组）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>规律</strong>：若 $(a,b,c)$ 是勾股数，则 $(ka, kb, kc)$（$k$ 为正整数）也是勾股数。</p>
+<h3>用勾股数快速判断</h3>
+<p>题目中一旦出现 3、4、5 或 5、12、13，可直接利用勾股数结论，无需开根号计算。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>勾股数的生成公式</h3>
+<p>若 $m &gt; n &gt; 0$ 且 $m$、$n$ 互质，一奇一偶，则：</p>
+<p>$$a = m^2 - n^2, \quad b = 2mn, \quad c = m^2 + n^2$$</p>
+<p>构成一组<strong>本原勾股数</strong>（三数互质）。</p>
+<table>
+<thead>
+<tr>
+<th>$m$</th>
+<th>$n$</th>
+<th>$a$</th>
+<th>$b$</th>
+<th>$c$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+<td>12</td>
+<td>13</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>15</td>
+<td>8</td>
+<td>17</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>7</td>
+<td>24</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：已知直角三角形斜边为 25，一直角边为 7，求另一直角边。</p>
+<p>$$b = \sqrt{25^2-7^2} = \sqrt{625-49} = \sqrt{576} = 24$$</p>
+<p>认出 7-24-25 是勾股数 → 直接得 $b=24$。</p>
+<p><strong>例 2</strong>：在以 $(0,0)$、$(5,0)$、$(0,12)$ 为顶点的三角形中，斜边长为？</p>
+<p>$$c = \sqrt{5^2+12^2} = \sqrt{169} = 13$$（5-12-13 勾股数）</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 认为所有满足 $a^2+b^2=c^2$ 的实数都是"勾股数"（勾股数要求正整数）</li>
+<li>❌ 只记住 3-4-5，忘记其倍数组和其他组合</li>
+<li>❌ 在计算时仍开根，没有识别出已知的勾股数组</li>
+</ul>
+<h3>知识联系</h3>
+<p>勾股数来自<a href="../atoms/189-勾股定理.html">勾股定理</a>和<a href="../atoms/191-勾股定理逆定理.html">勾股定理逆定理</a>；生成公式涉及数论（高中数论选修）；在坐标几何中快速计算距离；与<a class="dead" title="未收录">因式分解</a>结合理解 $m^2-n^2=(m+n)(m-n)$。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>勾股数</td>
+<td>Pythagorean triple</td>
+</tr>
+<tr>
+<td>本原勾股数</td>
+<td>primitive Pythagorean triple</td>
+</tr>
+<tr>
+<td>正整数</td>
+<td>positive integer</td>
+</tr>
+<tr>
+<td>互质</td>
+<td>coprime / relatively prime</td>
+</tr>
+<tr>
+<td>生成公式</td>
+<td>generating formula</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第17章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·勾股定理</li>
+<li>拓展：《九章算术》；费马大定理（勾股数的高维推广）</li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/191-勾股定理逆定理.html">勾股定理逆定理</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/049-平行四边形与梯形.html">平行四边形与梯形</a></li>
+</ul>
+<p><a href="../atoms/189-勾股定理.html">勾股定理</a> · <a href="../atoms/191-勾股定理逆定理.html">勾股定理逆定理</a> · <a class="dead" title="未收录">勾股定理应用</a> · <a class="dead" title="未收录">因式分解</a> · <a class="dead" title="未收录">整数</a> · <a class="dead" title="未收录">直角三角形</a></p>
+</div>
+</body>
+</html>

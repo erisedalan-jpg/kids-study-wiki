@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>众数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>众数</h1><div class="review-mark" data-stem="186-众数"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 八下, 数据分析]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 众数, mode, 最高频数</p><h1>众数</h1>
+<blockquote>
+<p><strong>一句话</strong>：在一组数据中，出现次数最多的数叫众数。
+<strong>English</strong>: The mode is the value that appears most frequently in a dataset.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>定义与特点</h3>
+<p><strong>众数</strong>：一组数据中出现次数（频数）最多的那个数。</p>
+<table>
+<thead>
+<tr>
+<th>数据</th>
+<th>各值频数</th>
+<th>众数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1,2,2,3,3,3,4</td>
+<td>1→1次，2→2次，3→3次，4→1次</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>5,5,7,7,9</td>
+<td>5→2次，7→2次，9→1次</td>
+<td><strong>5 和 7</strong>（两个众数）</td>
+</tr>
+<tr>
+<td>1,2,3,4,5</td>
+<td>各出现1次</td>
+<td>无众数（每个数出现次数相同）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>特点</strong>：
+- 可以有多个众数（双峰/多峰）
+- 可以没有众数（均匀分布时）
+- 不受极端值影响
+- 可用于分类数据（如最受欢迎的颜色）</p>
+<h3>与平均数、中位数的区别</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>含义</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均数</td>
+<td>数据总和÷个数</td>
+<td>利用全部数据</td>
+<td>受极端值影响</td>
+</tr>
+<tr>
+<td>中位数</td>
+<td>排序后中间值</td>
+<td>不受极端值影响</td>
+<td>不利用全部数据</td>
+</tr>
+<tr>
+<td>众数</td>
+<td>出现最多的值</td>
+<td>直观、可用于分类</td>
+<td>可能不存在或有多个</td>
+</tr>
+</tbody>
+</table>
+<h3>生活场景</h3>
+<ul>
+<li>鞋厂生产最畅销码数（用众数）</li>
+<li>百货公司统计最热卖的颜色（用众数）</li>
+<li>评优时"多数同学选择"（用众数思想）</li>
+</ul>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>众数（Mode）</strong>：频率分布中，频率最大的那个数据值（或频率最大的那个组的组中值）。</p>
+<p><strong>频率分布表中的众数</strong>：频率最大的那一组的<strong>组中值</strong>（中点值）近似作为众数。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：数据：23、25、25、28、28、28、30、32，求众数。</p>
+<p>28 出现 3 次（最多），众数 = <strong>28</strong>。</p>
+<p><strong>例 2</strong>：频率分布表中，$[60,70)$ 频率 0.20，$[70,80)$ 频率 0.40，$[80,90)$ 频率 0.30，$[90,100]$ 频率 0.10，求众数。</p>
+<p>频率最大为 $[70,80)$，组中值 = 75，众数 $\approx$ <strong>75</strong>。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 认为众数只有一个（可以有多个）</li>
+<li>❌ 在频率分布中用"频率最大的组的上限或下限"代替组中值</li>
+<li>❌ 把众数和"最大值"搞混（众数是出现最多的值，不是最大的值）</li>
+</ul>
+<h3>知识联系</h3>
+<p>众数与<a href="../atoms/055-平均数.html">平均数</a>、<a href="../atoms/180-中位数.html">中位数</a>共同构成数据集中趋势三大指标；在<a href="../atoms/143-频数分布.html">频数分布</a>的频率直方图中，最高矩形对应众数区间；与<a href="../atoms/202-统计图选择.html">统计图选择</a>结合，选择合适的集中趋势指标描述数据。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>众数</td>
+<td>mode</td>
+</tr>
+<tr>
+<td>频数</td>
+<td>frequency</td>
+</tr>
+<tr>
+<td>频率</td>
+<td>relative frequency</td>
+</tr>
+<tr>
+<td>双峰分布</td>
+<td>bimodal distribution</td>
+</tr>
+<tr>
+<td>集中趋势</td>
+<td>central tendency</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第20章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·统计与概率·统计</li>
+<li>拓展：<a class="dead" title="未收录">数学/平均数</a> · <a class="dead" title="未收录">数学/中位数</a> · <a class="dead" title="未收录">数学/频数分布</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/180-中位数.html">中位数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/198-方差.html">方差</a> <a href="../atoms/199-标准差.html">标准差</a></li>
+</ul>
+<p><a href="../atoms/055-平均数.html">平均数</a> · <a href="../atoms/180-中位数.html">中位数</a> · <a href="../atoms/198-方差.html">方差</a> · <a href="../atoms/202-统计图选择.html">统计图选择</a> · <a href="../atoms/143-频数分布.html">频数分布</a> · <a href="../atoms/141-统计图.html">统计图</a></p>
+</div>
+</body>
+</html>

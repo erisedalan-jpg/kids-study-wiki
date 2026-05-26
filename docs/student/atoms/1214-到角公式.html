@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>到角公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>到角公式</h1><div class="review-mark" data-stem="1214-到角公式"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[解析几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 到角公式</p><h1>到角公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：到角公式用于计算平面内一条直线按逆时针方向旋转到与另一条直线重合时所转过的最小正角的正切值。
+<strong>English</strong>: The "angle-to" formula computes the tangent of the directed angle from one line to another, measured counter‑clockwise.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：<br />
+已知两条不垂直的直线 $l_1: y = k_1 x + b_1$ 与 $l_2: y = k_2 x + b_2$，$l_1$ 到 $l_2$ 的角记为 $\theta$（逆时针方向，$\theta \in (0, \pi)$），其正切值为：</p>
+<p>$$
+\tan\theta = \frac{k_2 - k_1}{1 + k_1 k_2}
+$$</p>
+<p>若 $1 + k_1 k_2 = 0$，则两直线垂直，$\theta = \frac{\pi}{2}$，公式分母为零不适用。公式本质源于两直线倾斜角之差的正切展开。</p>
+<p><strong>关键方法</strong>：
+- <strong>确定“从哪条到哪条”</strong>：分子始终是“终点直线的斜率减去起点直线的斜率”（$k_{\text{到}} - k_{\text{从}}$），分母为 $1 + k_{\text{从}} k_{\text{到}}$。
+- <strong>斜率不存在时的处理</strong>：若 $l_1$ 斜率不存在（倾斜角 $\frac{\pi}{2}$），则 $l_1$ 到 $l_2$ 的角为 $\frac{\pi}{2} - \alpha_2$（$\alpha_2$ 为 $l_2$ 倾斜角），直接由图形几何关系求解，不可套公式。
+- <strong>与夹角公式区分</strong>：两条直线的夹角 $\phi$ 取锐角或直角，$\tan\phi = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right|$；到角则带有方向，不取绝对值。</p>
+<p><strong>典型应用</strong>：<br />
+高考中常在以下场景直接考查或隐性应用：
+1. <strong>已知两条直线方程，求一条直线到另一条直线的角</strong>：直接代公式，注意分母为零的排除。
+2. <strong>已知一条直线及到另一条直线的角，求参数或直线方程</strong>：设未知斜率代入到角公式，解方程后检验是否满足方向要求。
+3. <strong>三角形内角计算</strong>：三角形某一内角等于两边所在直线的夹角（不是到角），需先判断是取到角还是夹角，通常结合图形确定。
+4. <strong>角平分线问题</strong>：角平分线上任一点到两边的到角大小相等，可据此建立方程。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>分子分母写反</strong>：将“$l_1$ 到 $l_2$ 的角”错误写成 $\frac{k_1 - k_2}{1 + k_1 k_2}$，导致结果出现符号错误。牢记“终点斜率减起点斜率”。</li>
+<li><strong>忽略斜率不存在的情形</strong>：直接套公式而导致分母为零或计算无意义。遇到 $x = a$ 类型直线，必须单独画图处理。</li>
+<li><strong>到角与夹角混淆</strong>：求“两直线夹角”时用了不带绝对值的到角公式，结果可能得到钝角的正切值而被扣分；反之，求“到角”时误取绝对值丢失方向信息。</li>
+<li><strong>忽视角的取值范围</strong>：到角 $\theta \in (0, \pi)$，若计算结果 $\tan\theta$ 为负，对应 $\theta$ 为钝角，不可强行取锐角。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>到角</td>
+<td>directed angle between lines</td>
+<td>一条直线到另一条直线的有向角，逆时针为正</td>
+</tr>
+<tr>
+<td>夹角</td>
+<td>angle between lines</td>
+<td>两条直线所成的不大于直角的角</td>
+</tr>
+<tr>
+<td>倾斜角</td>
+<td>inclination angle</td>
+<td>直线与 $x$ 轴正方向所成的角</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>直线倾斜角的正切值</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">夹角公式</a></li>
+<li><a class="dead" title="未收录">直线的斜率与倾斜角</a></li>
+<li><a class="dead" title="未收录">两直线的位置关系</a></li>
+<li><a class="dead" title="未收录">三角形中的角平分线方程</a></li>
+<li><a class="dead" title="未收录">点关于直线的对称问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-理-11.html">2008-理-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

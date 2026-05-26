@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>用样本估计总体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>用样本估计总体</h1><div class="review-mark" data-stem="344-用样本估计总体"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 统计, 第九章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 用样本估计总体, estimating population from sample, 样本估计, 总体, 总体与样本</p><h2>🎓 用样本估计总体</h2>
+<h3>核心思想</h3>
+<p>统计学的基本思路：<strong>用样本的特征（统计量）来估计总体的特征（参数）</strong>。</p>
+<ul>
+<li>样本均值 $\bar{x}$ 估计总体均值 $\mu$</li>
+<li>样本方差 $s^2$ 估计总体方差 $\sigma^2$</li>
+<li>样本频率估计总体概率</li>
+</ul>
+<p><strong>大数定律</strong>：样本容量越大，样本统计量越接近总体参数。</p>
+<h3>用样本频率估计总体比例</h3>
+<p>若样本中某事件发生的频率为 $\hat{p}$，则估计总体中该事件的概率（比例）约为 $\hat{p}$。</p>
+<p><strong>例</strong>：抽查 200 件产品，8 件次品，则次品率估计为 $\dfrac{8}{200} = 4\%$。</p>
+<h3>用样本分布估计总体分布</h3>
+<p><strong>方法</strong>：
+1. 绘制样本的频率分布直方图
+2. 用各区间的频率估计总体在该区间的概率
+3. 由样本均值、方差估计总体的均值、方差</p>
+<h3>估计总体百分位数</h3>
+<p><strong>中位数估计</strong>：从频率分布直方图中，找频率累计达到 50% 的数值。</p>
+<p><strong>四分位数</strong>（$Q_1, Q_3$）：将数据四等分的三个数，常用于构造箱线图（box plot）。</p>
+<p>$$\text{四分位距} = Q_3 - Q_1$$</p>
+<h3>箱线图（Box Plot）</h3>
+<p>用五个统计量描述数据分布：最小值、$Q_1$、中位数、$Q_3$、最大值。</p>
+<pre><code>|---[====|====]---|
+Min Q1  Med Q3 Max
+</code></pre>
+<p>箱线图可直观比较两组数据的分布。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：某工厂一天生产 10000 件产品，随机检测 200 件，其中不合格品 6 件。估计这一天的不合格品数量。</p>
+<p><strong>解</strong>：不合格率 $\approx \dfrac{6}{200} = 3\%$，估计不合格品约 $10000 \times 3\% = 300$ 件。</p>
+<p><strong>例2</strong>：某市居民月收入样本（$n=100$），$\bar{x} = 6000$ 元，$s = 1200$ 元。据此估计该市居民月收入的均值和标准差。</p>
+<p><strong>解</strong>：估计总体均值 $\approx 6000$ 元，总体标准差 $\approx 1200$ 元。</p>
+<p><strong>例3</strong>：用频率估计概率——投硬币 100 次，正面 53 次，估计正面朝上的概率。</p>
+<p><strong>解</strong>：$P(\text{正面}) \approx \dfrac{53}{100} = 0.53$（理论值 0.5，样本估计存在偏差）</p>
+<h3>估计的精度</h3>
+<p>影响估计精度的因素：
+1. <strong>样本容量</strong>：越大越精确
+2. <strong>抽样方法</strong>：随机性、代表性
+3. <strong>总体的分散程度</strong>：方差越大，估计越难精确</p>
+<h3>易错点</h3>
+<ul>
+<li>用样本估计总体是"估计"，有误差，不是精确值</li>
+<li>频率不等于概率，只是概率的近似（随样本容量增大趋于概率）</li>
+<li>样本必须随机抽取，否则估计有偏差（选择偏差）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第九章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第九章 § 9.2，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">抽样方法</a></p>
+</li>
+<li>
+<p><a href="../atoms/362-随机抽样-简单.html">随机抽样-简单</a></p>
+</li>
+<li><a href="../atoms/319-分层抽样.html">分层抽样</a></li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+<li><a href="../atoms/316-中位数众数平均数.html">中位数众数平均数</a></li>
+<li><a href="../atoms/339-方差与标准差-高中.html">方差与标准差-高中</a></li>
+<li><a href="../atoms/363-频率与概率.html">频率与概率</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-理-18.html">2017-理-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

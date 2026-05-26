@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二项式系数性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>二项式系数性质</h1><div class="review-mark" data-stem="473-二项式系数性质"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 二项式系数性质, binomial coefficient properties, 二项式系数, 帕斯卡三角</p><h2>🎓 二项式系数性质</h2>
+<h3>二项式系数的定义</h3>
+<p>$(a+b)^n$ 展开式中第 $k+1$ 项的系数 $C_n^k$ 称为<strong>二项式系数</strong>（$k = 0,1,\ldots,n$）。</p>
+<p>注意区分：
+- <strong>二项式系数</strong>：$C_n^k$（只含组合数）
+- <strong>展开式各项系数</strong>：包含 $a,b$ 本身的系数，如 $(2x+3)^n$ 中含 $2^{n-k}\cdot3^k$</p>
+<h3>核心性质</h3>
+<p><strong>性质 1（对称性）</strong>：</p>
+<p>$$C_n^k = C_n^{n-k}$$</p>
+<p>第 $k+1$ 项与第 $n-k+1$ 项的二项式系数相等（关于中间对称）。</p>
+<p><strong>性质 2（各系数之和）</strong>：</p>
+<p>$$\sum_{k=0}^n C_n^k = C_n^0 + C_n^1 + \cdots + C_n^n = 2^n$$</p>
+<p>（令 $a=b=1$ 代入二项式定理）</p>
+<p><strong>性质 3（奇偶项系数之和相等）</strong>：</p>
+<p>$$C_n^0 + C_n^2 + C_n^4 + \cdots = C_n^1 + C_n^3 + \cdots = 2^{n-1}$$</p>
+<p>（令 $a=1,b=-1$ 得奇偶项系数和之差为 0，结合性质 2）</p>
+<p><strong>性质 4（帕斯卡恒等式/递推）</strong>：</p>
+<p>$$C_n^k + C_n^{k+1} = C_{n+1}^{k+1}$$</p>
+<p><strong>性质 5（最大二项式系数）</strong>：
+- $n$ 为偶数时，最大系数为 $C_n^{n/2}$（中间一项）
+- $n$ 为奇数时，最大系数为 $C_n^{(n-1)/2} = C_n^{(n+1)/2}$（中间两项相等）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$(1+x)^{10}$ 的二项式系数之和。</p>
+<p>$$\sum_{k=0}^{10} C_{10}^k = 2^{10} = 1024$$</p>
+<p><strong>例2</strong>：$(1+x)^{10}$ 奇数项系数之和（第1,3,5,…项的二项式系数之和）。</p>
+<p>$$C_{10}^0 + C_{10}^2 + C_{10}^4 + C_{10}^6 + C_{10}^8 + C_{10}^{10} = 2^9 = 512$$</p>
+<p><strong>例3</strong>：$(1+x)^n$ 中最大二项式系数为 $C_n^4 = 70$，求 $n$。</p>
+<p>$C_n^4 = 70$ 且 $4 = n/2$，故 $n = 8$，验证：$C_8^4 = 70$。</p>
+<p><strong>例4（利用对称性）</strong>：若 $(1+x)^n$ 展开式第 4 项系数 = 第 8 项系数，求 $n$。</p>
+<p>第 4 项：$C_n^3$，第 8 项：$C_n^7$，由 $C_n^3 = C_n^7$ 和对称性 $C_n^k = C_n^{n-k}$ 得 $3 + 7 = n$，$n = 10$。</p>
+<p><strong>例5（综合）</strong>：$(2x - \frac{1}{x})^6$ 展开式中各项二项式系数之和为 $2^6 = 64$；各项系数之和（令 $x=1$）为 $(2-1)^6 = 1$。</p>
+<h3>帕斯卡三角的规律</h3>
+<ul>
+<li>每行对称（性质 1）</li>
+<li>每行之和为 $2^n$（性质 2）</li>
+<li>行间递推：$C_n^k = C_{n-1}^{k-1} + C_{n-1}^k$（性质 4 的等价形式）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>区分二项式系数与各项系数</strong>：二项式系数是 $C_n^k$，各项系数可能含其他因子</li>
+<li><strong>对称性的应用</strong>：$3+7=10 \Rightarrow n=10$，注意下标之和等于 $n$</li>
+<li><strong>最大系数项</strong>：需判断 $n$ 的奇偶性，奇数时有两个最大值</li>
+<li><strong>令 $x=1$ 求各项系数和</strong>：只有当 $a=b=1$ 时，二项式系数才等于展开式系数</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.4，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/二项式系数">二项式系数 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/472-二项式定理.html">二项式定理</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/1160-展开式通项.html">展开式通项</a></p>
+</li>
+<li>
+<p><a href="../atoms/472-二项式定理.html">二项式定理</a></p>
+</li>
+<li><a href="../atoms/471-二项展开式应用.html">二项展开式应用</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a href="../atoms/504-组合数公式.html">组合数公式</a></li>
+<li><a class="dead" title="未收录">排列与组合关系</a></li>
+</ul>
+</div>
+</body>
+</html>

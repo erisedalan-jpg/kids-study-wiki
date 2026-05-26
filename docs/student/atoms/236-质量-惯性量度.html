@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质量（惯性量度）</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>质量（惯性量度）</h1><div class="review-mark" data-stem="236-质量-惯性量度"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 运动和力的关系]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 质量-惯性量度, 质量, mass, inertial mass</p><h2>🎓 质量（惯性量度）（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>质量</strong>（mass）是物体惯性大小的量度，也是物体所含物质多少的量度。</p>
+<ul>
+<li>质量是<strong>标量</strong>，无方向。</li>
+<li>单位：千克（kg），国际单位制基本量之一。</li>
+<li>质量是物体的<strong>固有属性</strong>，不随位置、运动状态、环境变化而改变。</li>
+</ul>
+<h3>惯性质量 vs 引力质量</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>定义</th>
+<th>出现场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>惯性质量</strong> $m_i$</td>
+<td>$F = m_i a$ 中的 $m$，描述物体抵抗加速的能力</td>
+<td>牛顿第二定律</td>
+</tr>
+<tr>
+<td><strong>引力质量</strong> $m_g$</td>
+<td>$G = m_g g$ 中的 $m$，描述物体受引力的能力</td>
+<td>万有引力，重力</td>
+</tr>
+</tbody>
+</table>
+<p>实验证明 $m_i = m_g$（等效原理，爱因斯坦广义相对论的基础）。高中不作区分，统称质量 $m$。</p>
+<h3>质量与重力的关系</h3>
+<p>$$G = mg$$</p>
+<ul>
+<li>重力 $G$ 随地点变化（不同纬度/高度 $g$ 不同）</li>
+<li>质量 $m$ 不随地点变化</li>
+</ul>
+<p><strong>例</strong>：60kg的人在地球 $G=588\text{ N}$，在月球 $G=96\text{ N}$，但质量始终60kg。</p>
+<h3>质量的测量</h3>
+<p><strong>天平</strong>：利用引力质量，比较两物体重力（等臂天平），与地点无关（$G_1=G_2 \Rightarrow m_1=m_2$），在月球上天平也能正确测质量。</p>
+<p><strong>弹簧秤</strong>：测重力（与地点有关），在月球上读数不同。</p>
+<h3>质量与惯性的关系</h3>
+<p>由 $F = ma$ 得 $m = \frac{F}{a}$：</p>
+<ul>
+<li>相同合力下，质量越大，加速度越小（越难改变运动状态）→ 惯性越大</li>
+<li>质量是唯一决定惯性大小的量（与速度、位置等无关）</li>
+</ul>
+<p>$$\text{质量} m \uparrow \Rightarrow \text{惯性} \uparrow \Rightarrow \text{同样的力改变运动状态越难}$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：用弹簧秤测得物体重力为98N，求质量。（$g=9.8\text{ m/s}^2$）</p>
+<p>$$m = \frac{G}{g} = \frac{98}{9.8} = 10\text{ kg}$$</p>
+<p><strong>例2</strong>：两辆车A（$m_A=1000\text{ kg}$）和B（$m_B=2000\text{ kg}$），施相同制动力，各自加速度之比？</p>
+<p>$$\frac{a_A}{a_B} = \frac{m_B}{m_A} = \frac{2000}{1000} = 2$$</p>
+<p>A的加速度是B的两倍（B惯性更大，更难停下）。</p>
+<p><strong>例3</strong>：在太空失重环境中，如何测定物体的质量？</p>
+<p>不能用天平（无重力）。可以用弹簧和牛顿第二定律：施加已知力 $F$，测加速度 $a$，则 $m = F/a$（惯性质量）。</p>
+<p><strong>例4</strong>：质量能否为零？</p>
+<p>不能（在牛顿力学中）。质量为零的物体会在任何力作用下产生无穷大加速度，物理上无意义。（光子质量为零，但需用相对论处理）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>质量与重力不同</strong>：质量是固有属性，重力因地点而变。</li>
+<li><strong>质量与体积不同</strong>：密度不同的物体，体积大的质量不一定大。</li>
+<li><strong>质量不是"有多重"</strong>：重量（重力）才描述"有多重"，质量描述"有多少物质/惯性多大"。</li>
+</ol>
+<h3>与初中物理衔接</h3>
+<p>初中学质量是"物质多少的量度"，用天平测量。高中深化：质量是惯性量度（牛顿第二定律），区分惯性质量和引力质量（高中不要求），理解质量的物理本质。</p>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》必修课程·必修第一册·第四章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理必修 第一册.pdf</code>（第四章第2节，页码待家长核对）</li>
+<li><strong>百科</strong>：质量 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">惯性-高中</a></li>
+<li><a href="../atoms/229-牛顿第二定律.html">牛顿第二定律</a></li>
+<li><a class="dead" title="未收录">力的国际单位</a></li>
+<li><a href="../atoms/243-重力-高中.html">重力-高中</a></li>
+<li><a class="dead" title="未收录">重力加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

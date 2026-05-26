@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VSEPR</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>VSEPR</h1><div class="review-mark" data-stem="419-VSEPR"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: VSEPR, valence shell electron pair repulsion, 价层电子对互斥理论</p><h1>VSEPR</h1>
+<blockquote>
+<p><strong>一句话</strong>：VSEPR 即价层电子对互斥理论，是预测分子/离子空间构型的经验规则，核心是最小化价层电子对之间的排斥。
+<strong>English</strong>: VSEPR (Valence Shell Electron Pair Repulsion) is an empirical model for predicting molecular and ion geometry by minimizing repulsion among valence electron pairs around the central atom.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>VSEPR 理论的核心原则</h3>
+<ol>
+<li>价层电子对（含成键对和孤对）尽可能远离彼此以减小排斥</li>
+<li>排斥力大小：孤对–孤对 &gt; 孤对–成键 &gt; 成键–成键</li>
+<li>孤对电子不在"分子构型"中显示，但影响键角</li>
+</ol>
+<h3>VSEPR 符号系统：AXₙEₘ</h3>
+<ul>
+<li><strong>A</strong>：中心原子</li>
+<li><strong>X</strong>：配位原子（成键对）</li>
+<li><strong>E</strong>：孤对电子对</li>
+<li>n：配位原子数；m：孤对数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>电子几何</th>
+<th>分子几何</th>
+<th>键角</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AX₂</td>
+<td>直线形</td>
+<td>直线形</td>
+<td>180°</td>
+<td>CO₂、BeCl₂</td>
+</tr>
+<tr>
+<td>AX₃</td>
+<td>平面三角</td>
+<td>平面三角</td>
+<td>120°</td>
+<td>BF₃、AlCl₃</td>
+</tr>
+<tr>
+<td>AX₂E</td>
+<td>平面三角</td>
+<td>V形</td>
+<td>&lt;120°</td>
+<td>SO₂</td>
+</tr>
+<tr>
+<td>AX₄</td>
+<td>四面体</td>
+<td>四面体</td>
+<td>109.5°</td>
+<td>CH₄</td>
+</tr>
+<tr>
+<td>AX₃E</td>
+<td>四面体</td>
+<td>三角锥</td>
+<td>&lt;109.5°</td>
+<td>NH₃</td>
+</tr>
+<tr>
+<td>AX₂E₂</td>
+<td>四面体</td>
+<td>V形</td>
+<td>&lt;109.5°</td>
+<td>H₂O</td>
+</tr>
+<tr>
+<td>AX₅</td>
+<td>三角双锥</td>
+<td>三角双锥</td>
+<td>90°/120°</td>
+<td>PCl₅</td>
+</tr>
+<tr>
+<td>AX₄E</td>
+<td>三角双锥</td>
+<td>跷跷板形</td>
+<td>—</td>
+<td>SF₄</td>
+</tr>
+<tr>
+<td>AX₆</td>
+<td>八面体</td>
+<td>八面体</td>
+<td>90°</td>
+<td>SF₆</td>
+</tr>
+<tr>
+<td>AX₅E</td>
+<td>八面体</td>
+<td>四方锥</td>
+<td>—</td>
+<td>ClF₅</td>
+</tr>
+</tbody>
+</table>
+<h3>计算中心原子电子对数</h3>
+<p>$$n(\text{电子对}) = \frac{中心原子价电子数 + \sum 配位原子贡献 \pm 离子电荷}{2}$$</p>
+<p>规定：H 贡献 1，卤素贡献 1（用于填满中心原子），O/S 通常不贡献。</p>
+<h3>与杂化理论的关系</h3>
+<table>
+<thead>
+<tr>
+<th>电子对数</th>
+<th>VSEPR 构型</th>
+<th>对应杂化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>直线形</td>
+<td>sp</td>
+</tr>
+<tr>
+<td>3</td>
+<td>平面三角</td>
+<td>sp²</td>
+</tr>
+<tr>
+<td>4</td>
+<td>四面体</td>
+<td>sp³</td>
+</tr>
+<tr>
+<td>5</td>
+<td>三角双锥</td>
+<td>sp³d</td>
+</tr>
+<tr>
+<td>6</td>
+<td>八面体</td>
+<td>sp³d²</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>题</strong>：预测 NO₂⁻（亚硝酸根）的空间构型。
+<strong>解</strong>：N 的价电子 = 5；结合 2 个 O，离子带 −1 电荷
+电子对数 = (5 + 2×0 + 1) / 2 = 3 → AX₂E₁
+电子几何：平面三角；<strong>分子几何：V形</strong>（弯曲形），键角约 115°</p>
+<h3>易错点</h3>
+<ul>
+<li>VSEPR 中双键、三键均视为"1 对"电子域</li>
+<li>要分清"电子几何"和"分子几何"（孤对不参与分子形状描述）</li>
+<li>AXₙEₘ 符号中 E 越多，键角越小</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VSEPR</td>
+<td>VSEPR</td>
+<td>abbr.</td>
+<td>VSEPR predicts that H₂O has a bent shape.</td>
+</tr>
+<tr>
+<td>电子几何</td>
+<td>electron geometry</td>
+<td>n.</td>
+<td>The electron geometry of NH₃ is tetrahedral.</td>
+</tr>
+<tr>
+<td>分子几何</td>
+<td>molecular geometry</td>
+<td>n.</td>
+<td>The molecular geometry of NH₃ is trigonal pyramidal.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VSEPR 模型通过电子对排斥预测分子空间构型。</td>
+<td>VSEPR predicts molecular geometry based on minimizing electron pair repulsion.</td>
+</tr>
+<tr>
+<td>H₂O 属于 AX₂E₂，分子几何为 V 形。</td>
+<td>H₂O is AX₂E₂, giving a bent molecular geometry.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修2 物质结构与性质.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"VSEPR理论"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">价层电子对互斥模型</a> <a href="../atoms/443-键角.html">键角</a> <a href="../atoms/433-杂化轨道理论.html">杂化轨道理论</a> <a href="../atoms/430-分子空间构型.html">分子空间构型</a> <a class="dead" title="未收录">直线形分子</a> <a class="dead" title="未收录">三角形分子</a> <a class="dead" title="未收录">四面体形分子</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2018-新课标Ⅱ-11.html">2018-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2023-北京-15</a></li>
+<li><a class="dead" title="未收录">2024-湖南-12</a></li>
+</ul></div>
+</div>
+</body>
+</html>

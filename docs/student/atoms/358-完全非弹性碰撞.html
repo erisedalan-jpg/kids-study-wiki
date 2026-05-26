@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>完全非弹性碰撞</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>完全非弹性碰撞</h1><div class="review-mark" data-stem="358-完全非弹性碰撞"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 动量守恒定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 完全非弹性碰撞, perfectly inelastic collision</p><h2>🎓 完全非弹性碰撞</h2>
+<h3>定义</h3>
+<p><strong>完全非弹性碰撞</strong>（perfectly inelastic collision）是两物体碰后<strong>粘合在一起</strong>，以<strong>相同速度</strong>运动的碰撞。</p>
+<p>动能损失<strong>最大</strong>（在动量守恒约束下）。</p>
+<h3>方程</h3>
+<p>$$m_1\vec{v_1} + m_2\vec{v_2} = (m_1 + m_2)\vec{v'}$$</p>
+<p>$$\vec{v'} = \frac{m_1\vec{v_1} + m_2\vec{v_2}}{m_1 + m_2}$$</p>
+<p>只需一个方程（动量守恒），因为碰后速度相同，未知量减少。</p>
+<h3>动能损失公式</h3>
+<p>$$\Delta E_k = \frac{m_1m_2(v_1-v_2)^2}{2(m_1+m_2)}$$</p>
+<p>动能损失为正，且是所有碰撞类型中<strong>最大</strong>的（动量守恒前提下动能损失上限）。</p>
+<h3>为什么动能损失最大？</h3>
+<p>在动量守恒约束下，碰后两物体分开时，各有独立速度，有部分相对运动动能；
+碰后粘合时，相对运动动能<strong>全部</strong>转化为内能，没有任何动能"保留"在相对运动中。</p>
+<h3>典型例题</h3>
+<p><strong>例1（基本计算）</strong>：子弹 $m_1 = 0.01\text{ kg}$，$v_1 = 300\text{ m/s}$，射入静止木块 $m_2 = 1.99\text{ kg}$ 并嵌入，求共同速度。</p>
+<p>$$v' = \frac{m_1v_1}{m_1 + m_2} = \frac{0.01\times300}{2} = 1.5\text{ m/s}$$</p>
+<p>动能损失：</p>
+<p>$$\Delta E_k = \frac{1}{2}\times0.01\times300^2 - \frac{1}{2}\times2\times1.5^2 = 450 - 2.25 = 447.75\text{ J}$$</p>
+<p>绝大部分动能转化为热量（木块变热、弹孔）。</p>
+<p><strong>例2（爆炸的逆过程）</strong>：静止炸弹爆炸是完全非弹性碰撞的逆过程——合并变分离，动能增加。</p>
+<p>注意：完全非弹性碰撞动能减少，爆炸动能增加（化学能转化）。</p>
+<h3>完全非弹性碰撞的应用</h3>
+<ul>
+<li><strong>弹道摆</strong>：子弹射入悬挂的沙袋，测量动量（进而反求子弹初速度）</li>
+<li><strong>车辆碰撞测试</strong>：碰后变形粘合，分析冲击力</li>
+<li><strong>中子减速</strong>：核反应堆中中子与重水氢核碰撞（质量接近时转移能量最多）</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>"完全"不是动量完全守恒</strong>（动量总是守恒），而是动能损失最多、碰后速度相同。</li>
+<li><strong>碰后速度相同不等于速度为零</strong>：若两物体同向碰撞，共同速度不为零。</li>
+<li><strong>不能用动能守恒</strong>：完全非弹性碰撞不满足动能守恒，只有动量守恒。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第一章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第一章第4节，页码待家长核对）</li>
+<li><strong>百科</strong>：完全非弹性碰撞 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/375-非弹性碰撞.html">非弹性碰撞</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/353-反冲运动.html">反冲运动</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">碰撞</a></p>
+</li>
+<li><a href="../atoms/359-弹性碰撞.html">弹性碰撞</a></li>
+<li><a href="../atoms/375-非弹性碰撞.html">非弹性碰撞</a></li>
+<li><a href="../atoms/347-动量守恒定律.html">动量守恒定律</a></li>
+<li><a href="../atoms/346-动量.html">动量</a></li>
+<li><a href="../atoms/197-能量守恒定律.html">能量守恒定律</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2010-北京-12</a></li>
+<li><a class="dead" title="未收录">2020-北京-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

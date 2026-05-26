@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>液体表面张力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>液体表面张力</h1><div class="review-mark" data-stem="653-液体表面张力"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 液体表面张力</p><h1>液体表面张力</h1>
+<blockquote>
+<p><strong>一句话</strong>：液体表面张力是作用于液体表面、使表面具有收缩趋势的力，源于表面层分子间距较大而产生的分子引力占优。
+<strong>English</strong>: Surface tension is the force acting on the surface of a liquid that tends to minimize the surface area, arising from the imbalance of intermolecular forces at the interface.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+从微观看，液体表面层分子间距大于内部（约 $10^{-9}\,\text{m}$ 量级），分子间作用力表现为引力；宏观上，表面张力使液面像一张绷紧的弹性膜，有收缩到最小面积的趋势。<br />
+表面张力的大小可表示为 $F = \sigma L$，其中 $\sigma$ 为表面张力系数（单位 $\text{N/m}$），$L$ 为液面上任意分界线的长度。<strong>方向</strong>：与液面相切，垂直于分界线。对于弯曲液面，可导出一个重要的附加压强公式（拉普拉斯公式）：球形液面内外压强差 $\Delta p = \frac{2\sigma}{R}$（凸液面取正，凹液面取负）。</p>
+<p><strong>关键方法与解题步骤</strong><br />
+1. <strong>受力分析法</strong>：在考查水黾、回形针等物体浮于液面时，对表面张力的竖直分力进行受力平衡分析，力的计算用 $F = \sigma L$，注意 $L$ 是指接触液面的有效边界长度。<br />
+2. <strong>毛细现象公式</strong>：毛细管中液柱上升（或下降）高度 $h = \frac{2\sigma \cos\theta}{\rho g r}$，$\theta$ 为接触角，$r$ 为毛细管半径。解题需先判断浸润（$\theta&lt;90^\circ$，上升）或不浸润（$\theta&gt;90^\circ$，下降），再代入公式。<br />
+3. <strong>能量法</strong>：表面张力做功等于表面能的增量 $\Delta E = \sigma \Delta S$，用于外拉液膜等问题。</p>
+<p><strong>典型高考应用</strong><br />
+- 解释现象类：如“小虫在水面行走”“露珠呈球形”“肥皂泡内外压强差”等，需调用表面张力收缩趋势与附加压强原理。<br />
+- 计算类：给出毛细管半径、液体密度和上升高度，求表面张力系数；或计算拉脱液膜时的最大拉力，此时 $F_{\max} = 2\sigma l$（注意有两个液面）。<br />
+- 实验题：如“用毛细管法或拉脱法测量表面张力系数”，常结合游标卡尺读数、受力分析并处理数据。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>方向判断错误</strong>：误认为表面张力垂直液面向里或向外，实际是沿液面切线方向且垂直于分界线。  </li>
+<li><strong>混淆表面张力与表面张力系数</strong>：把 $F = \sigma L$ 中的 $\sigma$ 当作力，题目中常要求区分力的单位和系数的单位。  </li>
+<li><strong>忽略接触角</strong>：使用毛细公式时直接丢掉 $\cos\theta$，对于不浸润情形（水银-玻璃）会导致高度计算正负和大小全错。  </li>
+<li><strong>弯曲液面附加压强方向颠倒</strong>：凸液面（如液滴）附加压强指向液体内部，凹液面（如气泡内）指向液体外部，在平衡方程中符号用错导致压强关系错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表面张力</td>
+<td>surface tension</td>
+<td>作用于液体表面使其收缩的力</td>
+</tr>
+<tr>
+<td>表面张力系数</td>
+<td>coefficient of surface tension</td>
+<td>单位长度上的表面张力，表征液体表面特性</td>
+</tr>
+<tr>
+<td>毛细现象</td>
+<td>capillarity</td>
+<td>液体在细管中上升或下降的现象</td>
+</tr>
+<tr>
+<td>浸润</td>
+<td>wetting</td>
+<td>液体与固体接触时沿固体表面扩展的现象</td>
+</tr>
+<tr>
+<td>接触角</td>
+<td>contact angle</td>
+<td>气-液-固三相交界处的液面切角，判定浸润与否</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订）·选择性必修·热学与近代物理初步·固体、液体与气体</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/129-分子动理论.html">分子动理论</a></li>
+<li><a class="dead" title="未收录">浸润与不浸润</a></li>
+<li><a class="dead" title="未收录">毛细现象</a></li>
+<li><a href="../atoms/637-气体压强微观意义.html">气体压强的微观解释</a></li>
+<li><a class="dead" title="未收录">热力学第一定律与液面能量</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2014-新课标Ⅱ-13.html">2014-新课标Ⅱ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

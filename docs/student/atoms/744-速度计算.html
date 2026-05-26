@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>速度计算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>速度计算</h1><div class="review-mark" data-stem="744-速度计算"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 速度计算, Speed Calculation</p><h1>速度计算</h1>
+<blockquote>
+<p><strong>一句话</strong>：速度是描述质点位置变化快慢和方向的矢量，其大小由位移对时间的导数或平均变化率给出，国际单位为 $m/s$。
+<strong>English</strong>: Speed calculation involves determining the rate of change of an object’s displacement over time, expressed as a scalar (speed) or vector (velocity).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+速度计算在高考物理中主要涉及<strong>平均速度</strong>、<strong>瞬时速度</strong>以及<strong>匀变速直线运动的速度公式</strong>。
+- <strong>基本定义</strong>：平均速度 $\vec{v}<em 0="0" _Delta="\Delta" _to="\to" t="t">{\text{avg}} = \frac{\Delta \vec{x}}{\Delta t}$ （位移矢量与时间之比）；瞬时速度 $\vec{v} = \lim</em>$。
+- } \frac{\Delta \vec{x}}{\Delta t<strong>匀变速核心公式</strong>：$v = v_0 + at$（求某时刻瞬时速度）；$\bar{v} = \frac{v_0 + v}{2} = \frac{s}{t}$（此公式<strong>仅对匀变速直线运动成立</strong>）。
+- <strong>矢量性</strong>：速度的方向与位移方向一致，计算时必须明确正方向，与正方向相反的速度为负值。</p>
+<p><strong>关键方法</strong>
+1. <strong>分段拼接运动</strong>：若物体经历多段不同加速度的运动，需分段计算各阶段末速度作为下一阶段初速度，注意衔接点速度相同（如高铁减速进站、斜面多段摩擦）。
+2. <strong>涉及图像的速度提取</strong>：在 $v-t$ 图像中，纵坐标直接读出瞬时速度，斜率代表加速度，图线与横轴围成的面积代表位移。
+3. <strong>刹车类陷阱问题</strong>：必须先利用 $0 = v_0 + at$ 计算刹车时间，判断物体在给定时间内是否已静止，避免直接将几秒代入公式求解已停止后的位移而导致速度方向错误。</p>
+<p><strong>高考常见设问</strong>
+- <strong>交通场景应用题</strong>：计算沙尘暴入侵速度、两车是否会相撞（由速度相等时位移关系判定）。
+- <strong>打点计时器/光电门实验</strong>：利用纸带上的计数点求某点的瞬时速度（通常用该点相邻两点间的平均速度近似替代）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆平均速度与速度平均值</strong>：<strong>平均速度</strong>等于位移除以时间（矢量），而<strong>速度平均值</strong>等于各段速度矢量之和除以段数，两者在折返运动中计算结果截然不同。</li>
+<li><strong>公式适用条件错配</strong>：将匀变速直线运动的专用公式 $\bar{v} = \frac{v_0 + v}{2}$ 用于圆周运动、非匀变速（如机车恒定功率启动）的速度计算。</li>
+<li><strong>忽略加速度的方向</strong>：在竖直上抛或含摩擦力减速的计算中，取竖直向上为正方向时，重力加速度 $g$ 应取负值（$a = -g$），漏掉负号会导致速度大小和方向计算错误。</li>
+<li><strong>依赖凭感觉式解题</strong>：面对复杂多过程运动缺乏画过程草图、标速度方向的习惯，导致分段计算初末速度代入混乱。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平均速度</td>
+<td>Average Velocity</td>
+<td>矢量，位移与时间的比值</td>
+</tr>
+<tr>
+<td>瞬时速度</td>
+<td>Instantaneous Velocity</td>
+<td>物体在某时刻或某位置的速度</td>
+</tr>
+<tr>
+<td>速率</td>
+<td>Speed</td>
+<td>标量，瞬时速度的大小</td>
+</tr>
+<tr>
+<td>匀变速直线运动</td>
+<td>Uniformly Accelerated Linear Motion</td>
+<td>加速度恒定不变的直线运动</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">匀变速直线运动规律</a></li>
+<li><a class="dead" title="未收录">位移与路程</a></li>
+<li><a class="dead" title="未收录">运动图像（x-t与v-t）</a></li>
+<li><a class="dead" title="未收录">加速度概念</a></li>
+<li><a class="dead" title="未收录">相对运动与参考系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2014-新课标Ⅱ-18.html">2014-新课标Ⅱ-18</a></li>
+</ul></div>
+</div>
+</body>
+</html>

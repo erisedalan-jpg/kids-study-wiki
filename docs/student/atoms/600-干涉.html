@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>干涉</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>干涉</h1><div class="review-mark" data-stem="600-干涉"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[光学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 干涉, interference</p><h1>干涉</h1>
+<blockquote>
+<p><strong>一句话</strong>：干涉是两列或两列以上频率相同、振动方向相同、相位差恒定的波在空间相遇时，某些区域振动始终加强、某些区域振动始终减弱的现象。
+<strong>English</strong>: Interference is the phenomenon that occurs when two or more coherent waves superpose to form a resultant wave of greater, lower, or the same amplitude, producing a stable pattern of reinforcement and cancellation in space.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>1. 定义与核心原理</strong><br />
+干涉是波的叠加结果，产生稳定干涉图样的必要条件为：两波源必须满足<strong>相干条件</strong>，即频率相同、振动方向相同（或存在相同方向的分量）、相位差恒定。满足此条件的波称为相干波。光波的干涉还要求光程差不能太大（不超过波列长度）。<br />
+核心公式为振动叠加：两列波在相遇点引起的振动位移分别为<br />
+$y_1 = A \sin(2\pi ft - \frac{2\pi}{\lambda} r_1 + \varphi_1)$<br />
+$y_2 = A \sin(2\pi ft - \frac{2\pi}{\lambda} r_2 + \varphi_2)$<br />
+则合成振幅加强（亮条纹/振动加强点）的条件为波程差<br />
+$\Delta r = r_2 - r_1 = k\lambda$ （$k$为整数），<br />
+减弱（暗条纹/振动减弱点）条件为<br />
+$\Delta r = (2k+1)\frac{\lambda}{2}$。</p>
+<p><strong>2. 关键方法</strong><br />
+解决双缝干涉、薄膜干涉等问题的标准步骤：<br />
+- 确定两列相干波源的位置与波长；<br />
+- 计算某点与两波源的波程差 $\delta$；<br />
+- 代入加强/减弱条件判断条纹明暗；<br />
+- 对于光波，还需注意是否有半波损失（如薄膜干涉中从光疏到光密介质反射）。<br />
+条纹间距公式（杨氏双缝干涉）$\Delta x = \frac{L}{d}\lambda$ 常用于测量波长，其中 $d$ 为双缝间距，$L$ 为缝到屏距离。</p>
+<p><strong>3. 典型高考设问与场景</strong><br />
+- <strong>杨氏双缝干涉</strong>：给定 $\lambda$、$d$、$L$，求条纹间距、移动条纹对应的波长变化，或判断某点明暗。<br />
+- <strong>薄膜干涉</strong>：镜头增透膜、劈尖干涉、牛顿环，着重考查半波损失的影响，常问空气层厚度变化导致条纹移动方向。<br />
+- <strong>波的干涉（机械波、水波）</strong>：给两个相干波源位置和波长，判断空间某点是加强点还是减弱点，或求振动加强点的个数（范围问题）。<br />
+- <strong>干涉与衍射的区别</strong>：考题中常将其并列，需明确干涉是有限束相干光的叠加（离散源），衍射是波阵面上无穷多次波叠加（连续源）。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆相干条件：误认为只要两列波相遇就能干涉，忽略<strong>频率相同</strong>和<strong>相位差恒定</strong>。白光照射双缝时因不同频率光干涉条纹间距不同而出现彩色条纹，但非单色光不满足严格的相干条件，中央明纹仍为白色，易错理解为没有干涉。  </li>
+<li>半波损失处理不当：计算薄膜干涉的光程差时，忘记反射光有无半波损失需看上下界面折射率关系，导致加强/减弱条件用反。例如照相机镜头增透膜应使反射光干涉相消，若误判半波损失则会得出错误膜厚。  </li>
+<li>波程差与光程差混淆：光在介质中波长变为 $\lambda/n$，干涉条件必须用<strong>光程差</strong>而非几何路程差，直接用真空波长代入会算错明暗条件。  </li>
+<li>振动加强点与位移始终最大混淆：加强点指振幅为两波振幅之和，但该点位移仍在做简谐振动，瞬时位移可能为零，误认为加强点始终位移最大。减弱点同理。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>干涉</td>
+<td>interference</td>
+<td>两列相干波叠加形成稳定强弱分布</td>
+</tr>
+<tr>
+<td>相干条件</td>
+<td>coherent conditions</td>
+<td>频率相同、振动方向相同、相位差恒定</td>
+</tr>
+<tr>
+<td>光程差</td>
+<td>optical path difference</td>
+<td>折射率与几何路径乘积之差，决定干涉结果</td>
+</tr>
+<tr>
+<td>半波损失</td>
+<td>half-wave loss</td>
+<td>光从光疏到光密介质反射时相位突变π</td>
+</tr>
+<tr>
+<td>杨氏双缝干涉</td>
+<td>Young's double-slit interference</td>
+<td>典型的分波前干涉实验</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：课标(2022) 选择性必修 · 机械振动与机械波、光及其应用 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/645-波的叠加.html">波的叠加</a></li>
+<li><a href="../atoms/342-光的衍射-高中.html">光的衍射</a></li>
+<li><a href="../atoms/552-双缝干涉.html">双缝干涉</a></li>
+<li><a class="dead" title="未收录">薄膜干涉</a></li>
+<li><a href="../atoms/366-波的干涉.html">波的干涉</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2022-全国乙-15.html">2022-全国乙-15</a></li>
+</ul></div>
+</div>
+</body>
+</html>

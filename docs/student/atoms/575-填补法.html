@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>填补法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>填补法</h1><div class="review-mark" data-stem="575-填补法"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 填补法, Fill‑in method, 补偿法</p><h1>填补法</h1>
+<blockquote>
+<p><strong>一句话</strong>：填补法是一种基于叠加原理，将不规则缺失物体等效为“完整规则物体 + 负源（负质量/负电荷/负电流等）”的组合，从而把复杂问题转化为规则形状叠加求解的物理方法。
+<strong>English</strong>: A method based on the superposition principle, which treats an irregular object with a missing part as the combination of a complete regular object and a negative source (negative mass/charge/current), thereby transforming a complex problem into the superposition of regular shapes.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+填补法（也称补偿法）的核心是<strong>叠加原理</strong>。对于一个均匀且具有规则缺失部分的物体（如挖去一个小球的均匀球体），可先设想把缺失部分填补完整，得到一个规则物体；再将填补上去的那部分视为具有<strong>相反物理量</strong>的“负源”（如负质量 $-m$ ）。原不规则物体的作用效果 = 完整规则物体的作用效果 + 负源的作用效果。<br />
+通用计算形式（以重心为例）：<br />
+$$
+\vec{x}<em _text_整="\text{整">c = \frac{M</em>}} \vec{x<em _text_挖="\text{挖">{\text{整}} + (-m</em>}}) \vec{x<em _text_整="\text{整">{\text{挖}}}{M</em>
+$$
+其中 $M_{\text{整}}$ 为完整物体质量， $\vec{x}}} - m_{\text{挖}}<em _text_挖="\text{挖">{\text{整}}$ 为其重心坐标， $m</em>$ 为该部分单独存在时的重心坐标。负号来自负源。}}$ 为挖去部分的质量， $\vec{x}_{\text{挖}</p>
+<p><strong>关键方法</strong><br />
+1. 确定填补目标：缺失部分的形状必须规则，且与完整物体密度均匀一致。<br />
+2. 填补完整：先计算完整规则物体的物理量（重心位置、引力场、电场强度等）。<br />
+3. 添加负源：计算挖去部分作为独立规则物体时在所求位置的物理量，并赋以相反符号。<br />
+4. 矢量叠加：若物理量是矢量（如场强、引力），必须按矢量运算求和；若为标量（如电势能、质量），则直接代数相加。</p>
+<p><strong>典型应用</strong><br />
+高考中常以<strong>重心确定、万有引力计算、电场强度求解</strong>等方式考查。<br />
+- <strong>场景1</strong>：一质量为 $M$、半径为 $R$ 的均匀圆盘，从其上挖去一个半径为 $r$ 的同心小圆盘（ $r &lt; R$ ），求剩余部分的重心（仍在圆心）。若挖去的是偏心小圆盘，则可根据填补法求出重心偏离圆心的大小与方向。<br />
+- <strong>场景2</strong>：质量均匀分布的实心球内挖去一个切于大球内壁的小球，求剩余部分对球外一质点的万有引力。解法：先计算大球完整的引力，再减去小球单独存在时的引力（方向指向小球原球心），矢量相减（即加上负引力）得到结果。常见设问：“求挖球后剩余部分在过球心轴线上某点的场强或引力”。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>负号遗漏或方向错误</strong>：将挖去部分的物理量直接减去，却忘了它是“负源”，或在矢量叠加时忽略了方向，导致符号反向。  </li>
+<li><strong>误用标量叠加处理矢量问题</strong>：在计算电场强度、引力等矢量时，直接用质量相减的标量思路处理场强大小，未进行矢量合成。  </li>
+<li><strong>将填补后的几何中心误认为重心</strong>：填补后物体的实际重心不一定与剩余部分的几何对称中心重合，必须按公式计算，尤其当挖去部分不位于对称中心时。  </li>
+<li><strong>填补对象不满足均匀、规则条件</strong>：填补法要求完整物体和挖去部分均为均匀且形状规则的物体，非均匀或外形任意的不适用。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>填补法</td>
+<td>Fill‑in method / compensation method</td>
+<td>用负源将不规则缺失转化为规则叠加</td>
+</tr>
+<tr>
+<td>负质量</td>
+<td>Negative mass</td>
+<td>填补时赋予挖去部分的等效质量</td>
+</tr>
+<tr>
+<td>重心</td>
+<td>Center of gravity</td>
+<td>物体各部分所受重力的合力作用点</td>
+</tr>
+<tr>
+<td>叠加原理</td>
+<td>Superposition principle</td>
+<td>多个独立源的合效果等于各自效果的矢量和</td>
+</tr>
+<tr>
+<td>等效替代</td>
+<td>Equivalent substitution</td>
+<td>用易于计算的模型替代复杂对象</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">质心</a></li>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a class="dead" title="未收录">电场强度的叠加</a></li>
+<li><a class="dead" title="未收录">对称法</a></li>
+<li><a class="dead" title="未收录">等效替代法</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2009-全国Ⅱ-13.html">2009-全国Ⅱ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

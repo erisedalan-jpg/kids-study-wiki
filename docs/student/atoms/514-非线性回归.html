@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>非线性回归</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>非线性回归</h1><div class="review-mark" data-stem="514-非线性回归"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 非线性回归, nonlinear regression, 曲线回归, 变量替换线性化</p><h2>🎓 非线性回归</h2>
+<h3>为什么需要非线性回归</h3>
+<p>散点图显示数据<strong>不成直线关系</strong>时，线性回归方程拟合效果差。常见的非线性关系有：
+- 指数关系：$y = a e^{bx}$
+- 幂函数关系：$y = ax^b$
+- 对数关系：$y = a + b\ln x$</p>
+<h3>线性化方法（变量替换）</h3>
+<p>将非线性关系通过<strong>变量替换</strong>转化为线性关系，再用线性回归方法求解。</p>
+<h4>情形 1：指数关系 $y = a e^{bx}$</h4>
+<p>两边取自然对数：$\ln y = \ln a + bx$</p>
+<p>令 $Y = \ln y$，$A = \ln a$，则 $Y = bx + A$（线性！）</p>
+<p>用 $(x_i, \ln y_i)$ 的线性回归方程，求出 $b$ 和 $A$，再还原 $a = e^A$。</p>
+<h4>情形 2：幂函数关系 $y = ax^b$</h4>
+<p>两边取对数：$\lg y = \lg a + b \lg x$</p>
+<p>令 $Y = \lg y$，$X = \lg x$，$A = \lg a$，则 $Y = bX + A$（线性！）</p>
+<p>用 $(\lg x_i, \lg y_i)$ 的线性回归方程求 $b$ 和 $A$，再还原 $a = 10^A$。</p>
+<h4>情形 3：对数关系 $y = a + b\ln x$</h4>
+<p>令 $X = \ln x$，则 $y = bX + a$（线性！）</p>
+<p>用 $(\ln x_i, y_i)$ 的线性回归方程即可。</p>
+<h3>典型例题</h3>
+<p><strong>例1（指数回归）</strong>：数据：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>2.7</td>
+<td>7.4</td>
+<td>20.1</td>
+<td>54.6</td>
+<td>148.4</td>
+</tr>
+</tbody>
+</table>
+<p>散点图呈指数增长趋势，令 $Y = \ln y$：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$Y = \ln y$</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>$Y = x$（斜率 1，截距 0），即 $\ln y = x$，还原：$y = e^x$。</p>
+<p><strong>例2（幂函数回归）</strong>：数据：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>3</td>
+<td>12</td>
+<td>48</td>
+<td>192</td>
+</tr>
+</tbody>
+</table>
+<p>取对数：$(\lg x, \lg y) = (0, 0.477), (0.301, 1.079), (0.602, 1.681), (0.903, 2.283)$</p>
+<p>线性回归斜率约为 $\frac{2.283-0.477}{0.903} = 2$，截距约 0.477。</p>
+<p>$\lg y = 2\lg x + 0.477 = \lg x^2 + \lg 3 = \lg(3x^2)$</p>
+<p>故 $y = 3x^2$（幂函数关系）。</p>
+<p><strong>例3（选择合适模型）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>散点图形态</th>
+<th>建议模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直线</td>
+<td>线性回归 $y = bx + a$</td>
+</tr>
+<tr>
+<td>向上弯曲（凸上）</td>
+<td>对数/幂函数/指数</td>
+</tr>
+<tr>
+<td>向下弯曲（凸下）</td>
+<td>幂函数/平方根</td>
+</tr>
+<tr>
+<td>S 形曲线</td>
+<td>Logistic 模型（超纲）</td>
+</tr>
+</tbody>
+</table>
+<h3>选择合适回归模型的步骤</h3>
+<ol>
+<li><strong>画散点图</strong>，观察整体趋势</li>
+<li><strong>猜测函数类型</strong>（指数、幂函数、对数等）</li>
+<li><strong>变量替换</strong>，转化为线性问题</li>
+<li><strong>建立线性回归方程</strong>，计算相关系数 $r$</li>
+<li><strong>比较不同模型的 $|r|$</strong>，选择 $|r|$ 最大的模型</li>
+<li><strong>还原为原变量的回归方程</strong></li>
+</ol>
+<h3>与线性回归的比较</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>线性回归</th>
+<th>非线性回归（变量替换法）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>适用</td>
+<td>数据近似成直线</td>
+<td>数据成曲线关系</td>
+</tr>
+<tr>
+<td>方法</td>
+<td>直接最小二乘</td>
+<td>变量替换后最小二乘</td>
+</tr>
+<tr>
+<td>还原</td>
+<td>不需要</td>
+<td>需要反变换</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>变量替换后要还原</strong>：求出 $Y = bX + A$ 的参数后，还要反变换回原变量</li>
+<li><strong>对数的底数</strong>：根据题目选 $\ln$（自然对数）或 $\lg$（常用对数），保持一致</li>
+<li><strong>散点图误判</strong>：曲线趋势也可能接近直线（当范围窄时），需综合判断</li>
+<li><strong>$r$ 越大越好</strong>：在合理范围内，选择相关系数绝对值最大的模型</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章 § 8.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/回归分析">回归分析 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/481-回归直线方程.html">回归直线方程</a></li>
+<li><a href="../atoms/491-最小二乘法.html">最小二乘法</a></li>
+<li><a href="../atoms/488-散点图.html">散点图</a></li>
+<li><a href="../atoms/502-线性相关性.html">线性相关性</a></li>
+<li><a href="../atoms/480-回归分析综合.html">回归分析综合</a></li>
+</ul>
+</div>
+</body>
+</html>

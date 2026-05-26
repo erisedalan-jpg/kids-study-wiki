@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数判断单调性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>导数判断单调性</h1><div class="review-mark" data-stem="433-导数判断单调性"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 导数判断单调性, monotonicity via derivative, 单调区间求法, 单调区间</p><h2>🎓 导数判断单调性</h2>
+<h3>判断准则</h3>
+<p>$$f'(x)&gt;0 \text{ 在 } (a,b) \text{ 上} \Longrightarrow f(x) \text{ 在 } (a,b) \text{ 上单调递增}$$</p>
+<p>$$f'(x)&lt;0 \text{ 在 } (a,b) \text{ 上} \Longrightarrow f(x) \text{ 在 } (a,b) \text{ 上单调递减}$$</p>
+<h3>求单调区间的完整步骤</h3>
+<p><strong>步骤</strong>：
+1. 确定定义域（分母 $\neq 0$，根号下 $\geq 0$，对数真数 $&gt; 0$）
+2. 求 $f'(x)$
+3. 解 $f'(x)=0$ 找驻点，结合定义域和 $f'(x)$ 不存在的点，将定义域分段
+4. 在每段上判断 $f'(x)$ 的符号（用数轴符号分析或取样点）
+5. 写出单调区间</p>
+<h3>符号分析法（数轴法）</h3>
+<p>在数轴上标出驻点和不连续点，在各区间内取一个点代入 $f'(x)$ 判断符号（比完整分解更高效）。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x) = 2x^3 - 9x^2 + 12x - 3$，求单调区间。</p>
+<p>$f'(x) = 6x^2 - 18x + 12 = 6(x-1)(x-2)$</p>
+<p>驻点 $x=1$，$x=2$。取样：$f'(0)=12&gt;0$，$f'(1.5)=6(0.5)(-0.5)&lt;0$，$f'(3)=6&gt;0$。</p>
+<p>单调递增：$(-\infty,1)$ 和 $(2,+\infty)$；单调递减：$(1,2)$。</p>
+<p><strong>例 2</strong> $f(x) = \dfrac{x}{1+x^2}$，求单调区间。</p>
+<p>$f'(x) = \dfrac{(1+x^2)-x\cdot 2x}{(1+x^2)^2} = \dfrac{1-x^2}{(1+x^2)^2}$</p>
+<p>$f'(x)=0$：$x=\pm 1$；$f'(x)$ 分母恒正，所以 $f'(x)$ 的符号由 $1-x^2$ 决定。</p>
+<ul>
+<li>$1-x^2&gt;0$ 即 $-1&lt;x&lt;1$：递增</li>
+<li>$1-x^2&lt;0$ 即 $x&lt;-1$ 或 $x&gt;1$：递减</li>
+</ul>
+<p><strong>例 3</strong> $f(x) = x - \ln x$（$x&gt;0$），求单调区间。</p>
+<p>$f'(x) = 1 - \dfrac{1}{x} = \dfrac{x-1}{x}$</p>
+<p>$x&gt;0$ 时分母正，分子符号：$x&gt;1$ 时 $f'&gt;0$（递增），$0&lt;x&lt;1$ 时 $f'&lt;0$（递减）。</p>
+<p>极小值 $f(1)=1$，函数在 $x=1$ 处有最小值 $1$。</p>
+<p><strong>例 4</strong> 含参数的单调性：$f(x)=\ln x + \dfrac{a}{x}$ 在 $(0,+\infty)$ 上单调递增，求 $a$ 范围。</p>
+<p>$f'(x)=\dfrac{1}{x}-\dfrac{a}{x^2}=\dfrac{x-a}{x^2}\geq 0$ 对所有 $x&gt;0$ 成立。</p>
+<p>因分母 $x^2&gt;0$，需 $x-a\geq 0$ 对所有 $x&gt;0$ 成立，即 $a\leq\inf_{x&gt;0} x=0$。</p>
+<p>故 $a\leq 0$。</p>
+<h3>注意事项</h3>
+<ul>
+<li>单调区间用<strong>区间</strong>表示，不用不等式</li>
+<li>定义域的限制可能使驻点不在考察范围内</li>
+<li>复杂函数可先化简（有理化、换底、展开）再求导，降低计算复杂度</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>忘记分析<strong>定义域</strong>就直接令 $f'=0$</li>
+<li>分段函数在分界点处需检验左右导数</li>
+<li>写单调区间时不能将两个区间合并（如不能把递增区间 $(-\infty,1)$ 和 $(2,+\infty)$ 写成一个）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/单调函数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a href="../atoms/441-导数的概念.html">导数的概念</a> · <a class="dead" title="未收录">导数与不等式恒成立</a> · <a href="../atoms/450-恒成立问题.html">恒成立问题</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2022-文-11.html">2022-文-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

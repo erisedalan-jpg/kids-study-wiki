@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数概念（高中）</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数概念（高中）</h1><div class="review-mark" data-stem="281-函数概念-高中"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 函数概念与性质, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数概念-高中, function concept, 函数, 映射</p><h2>🎓 函数概念（高中）</h2>
+<h3>定义</h3>
+<p><strong>函数</strong>（function）：设 $A, B$ 是两个非空数集，若存在对应关系 $f$，使得集合 $A$ 中每一个元素 $x$，在集合 $B$ 中都有<strong>唯一确定</strong>的元素 $y$ 与之对应，则称 $f$ 是从 $A$ 到 $B$ 的函数，记作：</p>
+<p>$$f: A \to B \quad \text{或} \quad y = f(x), \quad x \in A$$</p>
+<ul>
+<li><strong>定义域</strong>（domain）：集合 $A$，即自变量 $x$ 的取值范围</li>
+<li><strong>值域</strong>（range）：$f(A) = {f(x) \mid x \in A} \subseteq B$，即因变量 $y$ 的实际取值集合</li>
+<li><strong>对应法则</strong>（rule）：$f$，将 $A$ 中每个元素映射到 $B$ 中的唯一元素</li>
+</ul>
+<p><strong>函数的三要素</strong>：定义域、对应法则、值域（值域由前两者唯一确定）。</p>
+<h3>映射概念</h3>
+<p><strong>映射</strong>（mapping）：设 $A, B$ 是两个非空集合，若存在对应关系 $f$，使得 $A$ 中每个元素在 $B$ 中有唯一的像，则称 $f$ 是从 $A$ 到 $B$ 的映射。</p>
+<p>函数是特殊的映射（定义域和值域都是数集）。</p>
+<p><strong>一一映射</strong>（单射 + 满射）：$A$ 中不同元素对应 $B$ 中不同元素，且 $B$ 中每个元素都有原像。</p>
+<h3>函数相等的条件</h3>
+<p>两个函数 $f$ 和 $g$ 相等，当且仅当：
+1. 定义域相同
+2. 对相同定义域内每一 $x$，$f(x) = g(x)$</p>
+<h3>定义域的确定</h3>
+<p>自然定义域（未指定时）：使表达式有意义的最大范围。</p>
+<p>常见限制：
+- 分式：分母 $\neq 0$
+- 偶次根：被开方数 $\geq 0$
+- 对数：真数 $&gt; 0$，底数 $&gt; 0$ 且 $\neq 1$
+- 三角：$\tan x$ 要求 $\cos x \neq 0$，即 $x \neq \dfrac{\pi}{2} + k\pi$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：求函数 $f(x) = \dfrac{\sqrt{x+2}}{x-1}$ 的定义域。</p>
+<p>解：需 $x+2 \geq 0$ 且 $x-1 \neq 0$，即 $x \geq -2$ 且 $x \neq 1$。
+定义域：$[-2, 1) \cup (1, +\infty)$。</p>
+<p><strong>例2</strong>：判断 $f(x) = x$ 与 $g(x) = \dfrac{x^2}{x}$ 是否为同一函数。</p>
+<p>解：$g(x) = \dfrac{x^2}{x} = x$（$x \neq 0$），定义域为 $\mathbb{R} \setminus {0}$；$f(x) = x$ 定义域为 $\mathbb{R}$。定义域不同，故<strong>不是</strong>同一函数。</p>
+<p><strong>例3</strong>：已知 $f(x+1) = x^2 - 2x$，求 $f(x)$。</p>
+<p>解：令 $t = x+1$，则 $x = t-1$，代入：
+$f(t) = (t-1)^2 - 2(t-1) = t^2 - 2t + 1 - 2t + 2 = t^2 - 4t + 3$。
+故 $f(x) = x^2 - 4x + 3$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>值域 ≠ $B$</strong>：函数 $f: A \to B$ 中，$B$ 是"陪域"，值域 $f(A)$ 是 $B$ 的子集，不一定相等</li>
+<li><strong>"唯一确定"是关键</strong>：一个 $x$ 只能对应一个 $y$（但一个 $y$ 可对应多个 $x$，如 $y = x^2$）</li>
+<li><strong>定义域优先</strong>：比较或化简函数时，必须先核对定义域，$x$ 和 $\dfrac{x^2}{x}$ 不同</li>
+<li><strong>$f(x+1)$ 换元</strong>：求 $f(x)$ 时，先令整体为 $t$ 换元，不能直接"把 $+1$ 去掉"</li>
+<li><strong>复合函数的定义域</strong>：$f(g(x))$ 的定义域由"$g(x)$ 在 $f$ 的定义域内"决定，需联立不等式组求解</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中接触过"正比例函数""一次函数""反比例函数""二次函数"，有函数的直观感受。高中用集合语言重新定义函数，强调"三要素"，引入映射概念，为抽象函数、复合函数等做铺垫。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第三章，页码待家长核对）</li>
+<li>百科参考：函数（Function），映射（Mapping），集合论</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">二次函数定义</a> <a class="dead" title="未收录">集合的含义与表示</a> <a class="dead" title="未收录">韦达定理-初中</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/282-函数的单调性.html">函数的单调性</a> <a href="../atoms/300-对数概念.html">对数概念</a> <a class="dead" title="未收录">指数函数的性质</a> <a href="../atoms/441-导数的概念.html">导数的概念</a></p>
+</li>
+<li>
+<p><a href="../atoms/287-函数的表示法.html">函数的表示法</a></p>
+</li>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/296-复合函数.html">复合函数</a></li>
+<li><a href="../atoms/292-反函数.html">反函数</a></li>
+<li><a class="dead" title="未收录">集合-高中</a></li>
+<li><a class="dead" title="未收录">212-二次函数定义</a></li>
+</ul>
+</div>
+</body>
+</html>

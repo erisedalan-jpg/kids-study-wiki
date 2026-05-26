@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>伏安特性曲线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>伏安特性曲线</h1><div class="review-mark" data-stem="512-伏安特性曲线"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 伏安特性曲线</p><h1>伏安特性曲线</h1>
+<blockquote>
+<p><strong>一句话</strong>：伏安特性曲线是描述导体两端电压 $U$ 与通过导体的电流 $I$ 之间关系的图像，反映元件的导电特性。
+<strong>English</strong>: A volt-ampere characteristic curve is a graph showing the relationship between the voltage across a conductor and the current through it, reflecting the conductive properties of the component.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+以电压 $U$ 为横坐标、电流 $I$ 为纵坐标作出的 $I-U$ 曲线，或以 $U$ 为纵坐标、$I$ 为横坐标作出的 $U-I$ 曲线，称为伏安特性曲线。<br />
+对于 <strong>线性元件</strong>（如定值电阻、金属导体在温度不变时），曲线为过原点的直线，满足欧姆定律：
+$$
+R = \frac{U}{I} = \text{常数}
+$$
+对于 <strong>非线性元件</strong>（如小灯泡灯丝、半导体二极管），曲线不再是直线，电阻随电压或电流变化。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>电阻的读取</strong>：无论是否为线性元件，某工作点 $P$ 的电阻值均由定义式 $R = \frac{U_P}{I_P}$ 计算，即该点与原点连线的斜率（或斜率的倒数，取决于坐标轴选取）。切忌直接取切线斜率。<br />
+2. <strong>图线识别</strong>：认清横纵坐标是 $I-U$ 还是 $U-I$。$I-U$ 图斜率越大电阻越小；$U-I$ 图斜率越大电阻越大。<br />
+3. <strong>实验描绘小灯泡的伏安特性曲线</strong>：必须使用 <strong>分压式接法</strong> 供电，电压从零开始连续可调；同时考虑电流表的内外接误差控制（小灯泡电阻较小，通常采用电流表外接法）。高考常在此处设问电路设计与连接。</p>
+<p><strong>典型应用</strong><br />
+- <strong>比较电阻大小</strong>：给出若干元件的 $I-U$ 图线，比较同一电压下电流大小或同一电流下电压大小，判断电阻关系。<br />
+- <strong>工作点问题</strong>：将非线性元件与线性电阻、电源串联，利用图像交点法求实际工作电压与电流。这是高考计算类题目的常见角度。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆斜率的意义</strong>：计算某状态的电阻必须用该点坐标之比 $U/I$，而非切线的 $\Delta U/\Delta I$。切线斜率仅反映动态电阻，高考不作要求。  </li>
+<li><strong>坐标轴倒置的疏忽</strong>：$I-U$ 图与 $U-I$ 图电阻大小判断相反，读题时未看清横纵坐标直接比较斜率导致结论颠倒。  </li>
+<li><strong>线性元件条件遗忘</strong>：误以为所有导体的伏安特性曲线都是直线，忽视温度变化对电阻的影响（如灯丝升温电阻增大，曲线向 $U$ 轴弯曲）。  </li>
+<li><strong>实验接法混淆</strong>：描绘小灯泡伏安特性曲线时，误接成限流式电路，导致无法获得零电压起点的数据，或未说明滑动变阻器初始位置，导致电路安全问题。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>伏安特性曲线</td>
+<td>volt-ampere characteristic curve</td>
+<td>反映元件电压‑电流关系的图线</td>
+</tr>
+<tr>
+<td>欧姆定律</td>
+<td>Ohm's law</td>
+<td>线性元件满足 $I \propto U$</td>
+</tr>
+<tr>
+<td>线性元件</td>
+<td>linear element</td>
+<td>电阻为常数，$I-U$ 图为直线</td>
+</tr>
+<tr>
+<td>非线性元件</td>
+<td>nonlinear element</td>
+<td>电阻随电压、电流变化</td>
+</tr>
+<tr>
+<td>分压式接法</td>
+<td>voltage divider connection</td>
+<td>使负载电压从零连续可调的供电方式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准(2017 年版 2020 年修订) 必修 3 “电路及其应用”</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/141-欧姆定律-初中.html">欧姆定律</a></li>
+<li><a href="../atoms/318-电阻定律.html">电阻定律</a></li>
+<li><a class="dead" title="未收录">描绘小灯泡的伏安特性曲线</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">滑动变阻器的分压与限流接法</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/148-滑动变阻器.html">滑动变阻器</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/158-电功.html">电功</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2017-新课标Ⅰ-10</a></li>
+<li><a href="../exam/物理/2020-新课标Ⅱ-10.html">2020-新课标Ⅱ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

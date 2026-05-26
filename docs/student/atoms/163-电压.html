@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电压</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电压</h1><div class="review-mark" data-stem="163-电压"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十六章电压电阻]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电压, voltage, 电位差, 电势差</p><h1>电压</h1>
+<blockquote>
+<p><strong>一句话</strong>：电压是推动电荷定向移动的"动力"，是电路两端的电位差，符号U，单位伏特（V）。
+<strong>English</strong>: Voltage (potential difference) is the driving force that pushes charges to move in a circuit; symbol U, measured in volts (V).</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>为什么电池能让灯泡发光？因为电池的两端有<strong>电压</strong>！</p>
+<p><strong>电压的比喻：</strong>
+把电路比作水路：
+- 水压（高处水→低处水）→ 电压（高电位→低电位）
+- 没有水压，水不会流动；没有电压，电流也不会流动</p>
+<p><strong>生活中的电压：</strong></p>
+<table>
+<thead>
+<tr>
+<th>设备/场合</th>
+<th>电压</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>干电池（1节）</td>
+<td>1.5 V</td>
+</tr>
+<tr>
+<td>手机电池</td>
+<td>3.7 V</td>
+</tr>
+<tr>
+<td>汽车电瓶</td>
+<td>12 V</td>
+</tr>
+<tr>
+<td>家用插座（中国）</td>
+<td>220 V</td>
+</tr>
+<tr>
+<td>高压输电线</td>
+<td>数万 V~数十万 V</td>
+</tr>
+<tr>
+<td>静电（摩擦）</td>
+<td>数千 V（但电流极小，通常无害）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>安全知识：</strong>
+- 36 V 以下是安全电压（潮湿环境为 12 V）
+- 220 V 家用电对人体危险！</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>电压</strong>（$U$）：电路中两点之间的电位差，也叫<strong>电势差</strong>。</p>
+<p>$$U_{AB} = \varphi_A - \varphi_B$$</p>
+<p>其中 $\varphi_A$、$\varphi_B$ 分别为 A、B 两点的电位。</p>
+<h3>单位</h3>
+<p>$$[U] = \text{V（伏特，Volt）}$$</p>
+<ul>
+<li>1 V = 1 J/C（1焦耳/库仑）</li>
+<li>1 kV = 1000 V（千伏）</li>
+<li>1 mV = 0.001 V（毫伏）</li>
+</ul>
+<h3>电压的物理意义</h3>
+<p>电压 $U_{AB} = 1$ V 表示：将 1 C 的正电荷从 A 点移动到 B 点，电场力做功 1 J。</p>
+<p>$$W = qU$$</p>
+<p>其中 $W$ 为电场力做的功，$q$ 为电荷量。</p>
+<h3>电动势（EMF）</h3>
+<p><strong>电动势</strong> $\varepsilon$：电源将其他形式的能转化为电能的能力，单位也是 V。</p>
+<p>$$\varepsilon = \frac{W_{非电场力}}{q}$$</p>
+<p>对于理想电源：$U_{端} = \varepsilon - Ir$（$r$ 为内阻，$I$ 为电流）</p>
+<p>初中阶段简化理解：$U_{端} \approx \varepsilon$（内阻忽略不计）</p>
+<h3>电压与做功的关系</h3>
+<p>$$W = UIt = Pt$$</p>
+<p>（$W$：电功，$U$：电压，$I$：电流，$t$：时间）</p>
+<h3>常见电压参考值</h3>
+<table>
+<thead>
+<tr>
+<th>场合</th>
+<th>电压（伏特）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>植物细胞膜电位</td>
+<td>~0.1 V</td>
+</tr>
+<tr>
+<td>干电池</td>
+<td>1.5 V</td>
+</tr>
+<tr>
+<td>铅酸蓄电池（单格）</td>
+<td>2 V</td>
+</tr>
+<tr>
+<td>手机锂电池</td>
+<td>3.7 V</td>
+</tr>
+<tr>
+<td>汽车电瓶</td>
+<td>12 V</td>
+</tr>
+<tr>
+<td>安全电压</td>
+<td>≤36 V</td>
+</tr>
+<tr>
+<td>中国家用电</td>
+<td>220 V</td>
+</tr>
+<tr>
+<td>高铁供电</td>
+<td>25000 V</td>
+</tr>
+<tr>
+<td>超高压输电线</td>
+<td>500000 V</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一段导线两端电压为 12 V，通过 0.5 A 的电流，在 10 s 内电流做了多少功？</p>
+<p><strong>解</strong>：</p>
+<p>$$W = UIt = 12 \times 0.5 \times 10 = 60 \text{ J}$$</p>
+<p><strong>易错点：</strong>
+- 电压是两点之间的量，必须指明"哪两点之间"
+- 电压的正负取决于参考方向：$U_{AB} &gt; 0$ 表示 A 电位高于 B
+- 中性物体两端没有电压；电压不为零才能驱动电流</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电压</td>
+<td>voltage / potential difference</td>
+<td>n.</td>
+<td>The voltage across the battery is 1.5 V.</td>
+</tr>
+<tr>
+<td>伏特</td>
+<td>volt (V)</td>
+<td>n.</td>
+<td>One volt equals one joule per coulomb.</td>
+</tr>
+<tr>
+<td>电位</td>
+<td>electric potential</td>
+<td>n.</td>
+<td>Current flows from higher to lower potential.</td>
+</tr>
+<tr>
+<td>电动势</td>
+<td>electromotive force (EMF)</td>
+<td>n.</td>
+<td>The EMF of the battery is 9 V.</td>
+</tr>
+<tr>
+<td>安全电压</td>
+<td>safe voltage</td>
+<td>n.</td>
+<td>Voltages below 36 V are considered safe.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十六章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 电压</li>
+<li><strong>百科</strong>：维基百科"电压"；中文百科"电位差"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/308-电势.html">电势</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/282-等势面.html">等势面</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">电流</a></p>
+</li>
+<li><a href="../atoms/164-电压测量.html">电压测量</a></li>
+<li><a class="dead" title="未收录">电压规律-串并联</a></li>
+<li><a href="../atoms/184-电阻.html">电阻</a></li>
+<li><a href="../atoms/141-欧姆定律-初中.html">欧姆定律-初中</a></li>
+<li><a href="../atoms/158-电功.html">电功</a></li>
+<li><a href="../atoms/134-安全用电.html">安全用电</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2018-北京-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

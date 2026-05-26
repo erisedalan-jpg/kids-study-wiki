@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>溶度积Ksp</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>溶度积Ksp</h1><div class="review-mark" data-stem="331-溶度积Ksp"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第三章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 溶度积Ksp, solubility product, Ksp, 溶积常数</p><h1>溶度积Ksp</h1>
+<blockquote>
+<p><strong>一句话</strong>：难溶电解质饱和溶液中，各离子浓度幂之积，是沉淀溶解平衡的平衡常数，只与温度有关。
+<strong>English</strong>: The product of ion concentrations raised to their stoichiometric powers in a saturated solution of a sparingly soluble electrolyte; a temperature-dependent equilibrium constant.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>溶度积</strong>（solubility product，$K_{sp}$）：难溶电解质溶解平衡的平衡常数。</p>
+<p>对于 $\text{M}_m\text{A}_n(s) \rightleftharpoons m\text{M}^{n+}(aq) + n\text{A}^{m-}(aq)$：</p>
+<p>$$
+K_{sp} = [\text{M}^{n+}]^m [\text{A}^{m-}]^n
+$$</p>
+<h3>公式 / 方程式</h3>
+<p>常见难溶盐的 $K_{sp}$（25 ℃）：</p>
+<table>
+<thead>
+<tr>
+<th>难溶盐</th>
+<th>$K_{sp}$</th>
+<th>溶解度（mol/L）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AgCl</td>
+<td>$1.8 \times 10^{-10}$</td>
+<td>$1.34 \times 10^{-5}$</td>
+</tr>
+<tr>
+<td>AgBr</td>
+<td>$5.4 \times 10^{-13}$</td>
+<td>$7.3 \times 10^{-7}$</td>
+</tr>
+<tr>
+<td>AgI</td>
+<td>$8.5 \times 10^{-17}$</td>
+<td>$9.2 \times 10^{-9}$</td>
+</tr>
+<tr>
+<td>BaSO₄</td>
+<td>$1.1 \times 10^{-10}$</td>
+<td>$1.0 \times 10^{-5}$</td>
+</tr>
+<tr>
+<td>CaCO₃</td>
+<td>$3.3 \times 10^{-9}$</td>
+<td>$5.7 \times 10^{-5}$</td>
+</tr>
+<tr>
+<td>Fe(OH)₃</td>
+<td>$2.8 \times 10^{-39}$</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>$K_{sp}$ 与溶解度 $s$ 的换算（AB 型，$K_{sp} = s^2$）：</p>
+<p>$$
+s = \sqrt{K_{sp}}
+$$</p>
+<p>利用 $K_{sp}$ 判断沉淀状态（引入浓度商 $Q_{ip}$）：</p>
+<p>$$
+Q_{ip} = [\text{M}^{n+}]^m [\text{A}^{m-}]^n
+$$</p>
+<table>
+<thead>
+<tr>
+<th>$Q_{ip}$ 与 $K_{sp}$</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$Q_{ip} &lt; K_{sp}$</td>
+<td>不饱和，无沉淀（或沉淀溶解）</td>
+</tr>
+<tr>
+<td>$Q_{ip} = K_{sp}$</td>
+<td>恰好饱和，平衡</td>
+</tr>
+<tr>
+<td>$Q_{ip} &gt; K_{sp}$</td>
+<td>过饱和，有沉淀生成</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：将 0.001 mol/L AgNO₃ 与 0.001 mol/L NaCl 等体积混合，判断是否有 AgCl 沉淀生成。</p>
+<p>混合后：$[\text{Ag}^+] = 5 \times 10^{-4}$ mol/L，$[\text{Cl}^-] = 5 \times 10^{-4}$ mol/L</p>
+<p>$$
+Q_{ip} = (5 \times 10^{-4})^2 = 2.5 \times 10^{-7}
+$$</p>
+<p>$$
+Q_{ip} = 2.5 \times 10^{-7} &gt; K_{sp}(\text{AgCl}) = 1.8 \times 10^{-10}
+$$</p>
+<p>$Q_{ip} &gt; K_{sp}$，有 AgCl 沉淀生成。</p>
+<h3>易错点</h3>
+<ul>
+<li>同名离子效应：加入 NaCl 使 $[\text{Cl}^-]$ 增大，$[\text{Ag}^+]$ 减小（AgCl 溶解度降低），但 $K_{sp}$ 不变</li>
+<li>不同类型盐（AB vs. AB₂）不能直接用 $K_{sp}$ 大小比较溶解度，需计算</li>
+<li>$K_{sp}$ 随温度升高通常增大（溶解是吸热过程，大多数情况下）</li>
+<li>难溶盐不等于不溶，只是溶解极少量</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>溶度积</td>
+<td>solubility product</td>
+</tr>
+<tr>
+<td>溶解度</td>
+<td>solubility</td>
+</tr>
+<tr>
+<td>同名离子效应</td>
+<td>common ion effect</td>
+</tr>
+<tr>
+<td>过饱和</td>
+<td>supersaturated</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The solubility product Ksp of AgCl is 1.8 × 10⁻¹⁰ at 25°C.（25 ℃ 时 AgCl 的溶度积为 1.8 × 10⁻¹⁰。）</li>
+<li>If the ion product Q &gt; Ksp, precipitation occurs.（若离子积 Q &gt; Ksp，则产生沉淀。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"溶度积"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/762-溶度积.html">溶度积</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/287-原电池.html">原电池</a></p>
+</li>
+<li>
+<p><a href="../atoms/328-沉淀溶解平衡.html">沉淀溶解平衡</a></p>
+</li>
+<li><a href="../atoms/329-沉淀生成.html">沉淀生成</a></li>
+<li><a class="dead" title="未收录">沉淀溶解</a></li>
+<li><a href="../atoms/330-沉淀转化.html">沉淀转化</a></li>
+<li><a href="../atoms/337-离子浓度比较.html">离子浓度比较</a></li>
+</ul>
+</div>
+</body>
+</html>

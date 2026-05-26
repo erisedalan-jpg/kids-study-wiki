@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单摆</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>单摆</h1><div class="review-mark" data-stem="350-单摆"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 机械振动]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 单摆, simple pendulum</p><h2>🎓 单摆</h2>
+<h3>定义</h3>
+<p><strong>单摆</strong>（simple pendulum）是由不可伸长的细线悬挂一个质点（摆球）构成的理想化振动模型。</p>
+<p>条件：
+- 悬线质量不计，不可伸长
+- 摆球视为质点
+- 摆角很小（$\theta &lt; 5°$，约 0.087 rad）</p>
+<h3>单摆的运动分析</h3>
+<p>摆球在最低点附近做近似简谐运动，回复力来自重力的切向分量：</p>
+<p>$$F = -mg\sin\theta \approx -mg\cdot\frac{x}{L} = -\frac{mg}{L}x$$</p>
+<p>（小角度近似：$\sin\theta \approx \theta \approx x/L$）</p>
+<p>对比弹簧振子 $F = -kx$，等效"弹簧系数" $k_{等效} = \dfrac{mg}{L}$</p>
+<h3>单摆周期公式</h3>
+<p>$$\boxed{T = 2\pi\sqrt{\frac{L}{g}}}$$</p>
+<ul>
+<li>$T$：周期（s）</li>
+<li>$L$：<strong>摆长</strong>（悬点到摆球质心的距离，m）</li>
+<li>$g$：当地重力加速度（m/s²）</li>
+</ul>
+<p><strong>等时性</strong>：在小角度范围内，周期与振幅、摆球质量无关，只与摆长和重力加速度有关。</p>
+<h3>影响因素分析</h3>
+<table>
+<thead>
+<tr>
+<th>因素</th>
+<th>对周期的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>摆长 $L$ 增大</td>
+<td>$T$ 增大（$T \propto \sqrt{L}$）</td>
+</tr>
+<tr>
+<td>重力加速度 $g$ 增大</td>
+<td>$T$ 减小（高山上 $g$ 小，摆走慢）</td>
+</tr>
+<tr>
+<td>摆球质量</td>
+<td>无影响</td>
+</tr>
+<tr>
+<td>振幅（小角度内）</td>
+<td>无影响（等时性）</td>
+</tr>
+</tbody>
+</table>
+<h3>利用单摆测重力加速度</h3>
+<p>$$g = \frac{4\pi^2 L}{T^2}$$</p>
+<p>实验方法：测量摆长 $L$，记录摆动 $n$ 次的总时间 $t$，则 $T = t/n$，代入公式求 $g$。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某地单摆摆长 $L = 1\text{ m}$，测得周期 $T = 2.01\text{ s}$，求该地重力加速度。</p>
+<p>$$g = \frac{4\pi^2 L}{T^2} = \frac{4\times9.87\times1}{2.01^2} = \frac{39.48}{4.04} \approx 9.77\text{ m/s}^2$$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>摆长是到质心的距离</strong>：若摆球有半径，摆长 = 线长 + 摆球半径。</li>
+<li><strong>等时性的条件</strong>：仅限小角度（$\theta &lt; 5°$），大角度摆动不遵循简单公式。</li>
+<li><strong>月球上单摆变慢</strong>：$g_{月} &lt; g_{地}$，所以 $T_{月} &gt; T_{地}$，摆钟在月球上走慢。</li>
+<li><strong>升降电梯中单摆</strong>：电梯加速上升时等效 $g$ 增大，$T$ 减小；减速上升时 $T$ 增大。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修·第一册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第一册.pdf</code>（第二章第3节，页码待家长核对）</li>
+<li><strong>百科</strong>：单摆 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">弹簧振子</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/354-受迫振动.html">受迫振动</a></p>
+</li>
+<li>
+<p><a href="../atoms/351-单摆周期公式.html">单摆周期公式</a></p>
+</li>
+<li><a href="../atoms/373-简谐运动.html">简谐运动</a></li>
+<li><a href="../atoms/361-振幅.html">振幅</a></li>
+<li><a href="../atoms/355-周期与频率-振动.html">周期与频率-振动</a></li>
+<li><a class="dead" title="未收录">回复力</a></li>
+<li><a class="dead" title="未收录">重力加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

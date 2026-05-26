@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆柱</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆柱</h1><div class="review-mark" data-stem="020-圆柱"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[学前, 小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 立体图形, 形状启蒙]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆柱, cylinder, 柱体</p><h1>圆柱</h1>
+<blockquote>
+<p><strong>一句话</strong>：像易拉罐、笔筒——上下两个圆面、中间能滚动。
+<strong>English</strong>: A cylinder has two circular faces and can roll on its side.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>圆柱的组成</h3>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>数量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆面（circular face）</td>
+<td>2</td>
+<td>上下两个圆，大小相同</td>
+</tr>
+<tr>
+<td>侧面（curved surface）</td>
+<td>1</td>
+<td>弯曲的面，不是平的</td>
+</tr>
+<tr>
+<td>棱</td>
+<td>0</td>
+<td>圆柱没有棱（没有直的边）</td>
+</tr>
+<tr>
+<td>顶点</td>
+<td>0</td>
+<td>圆柱没有顶点</td>
+</tr>
+</tbody>
+</table>
+<h3>立着稳，倒着滚</h3>
+<p>圆柱立起来重心低，底面是圆，接触面稳定，不会乱滚；倒下来以后，曲面接触地面，沿一个固定方向顺畅滚动。这和球不同——球能向任何方向滚，圆柱只能朝侧面垂直方向滚。</p>
+<p><strong>为什么用圆柱？</strong>
+- 易拉罐：侧面无棱角，省材料（同等容积下，圆柱比长方体侧面积更小，<strong>待家长核对</strong>）；而且好握，开口方便
+- 电池：圆柱形方便放入圆形槽，接触面积稳定
+- 树干：自然生长的植物茎干接近圆柱，与力学和运输水分有关</p>
+<p>想了解更多，可以看 <a href="../atoms/018-长方体.html">长方体</a>、<a href="../atoms/019-正方体.html">正方体</a>、<a href="../atoms/021-球.html">球</a>。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>体积与表面积公式</h3>
+<p>设圆柱的底面半径为 r，高为 h：</p>
+<pre><code>体积 V = π r² h
+表面积 S = 2πr² + 2πrh
+         = 2πr(r + h)
+</code></pre>
+<p>展开侧面得到一个<strong>长方形</strong>，宽是 h，长是底面周长 2πr，故侧面积 = 2πrh。加上上下两个圆面（各 πr²），总表面积如上。</p>
+<h3>旋转体：矩形绕轴旋转</h3>
+<p>圆柱是<strong>旋转体（solid of revolution）</strong>——将一个矩形绕其一条边旋转 360°，扫出的立体就是圆柱。这个视角在高中数学和微积分中非常重要：</p>
+<ul>
+<li>一般旋转体的体积用<strong>积分（圆盘法 / 圆柱壳法）</strong>计算</li>
+<li>圆柱是最简单的旋转体，体积公式 V = πr²h 正是积分结果的特例</li>
+</ul>
+<h3>工程与物理中的圆柱</h3>
+<ul>
+<li><strong>管道流体力学</strong>：水管、血管近似圆柱，流体在圆形截面管道中的流速分布（泊肃叶流 Poiseuille flow）呈抛物线形，中心快、边缘慢。（<strong>待家长核对，此为简化描述</strong>）</li>
+<li><strong>圆柱坐标系</strong>：物理学和工程中对具有轴对称结构的问题（如圆形线圈、旋转机械），使用<strong>圆柱坐标（r, θ, z）</strong>代替直角坐标，使方程大为简化。</li>
+<li><strong>欧拉屈曲（Euler buckling）</strong>：细长圆柱形柱子受压时的失稳分析是工程力学经典课题，柱子越细越高越容易弯折，设计建筑柱子时必须考虑。（<strong>待家长核对</strong>）</li>
+</ul>
+<h3>六年级：圆柱体积在课标中的位置</h3>
+<p>人教版六年级下册正式引入圆柱和圆锥的体积公式，是小学阶段第一次接触 π 在三维计算中的应用。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆柱</td>
+<td>cylinder</td>
+<td>n.</td>
+<td>核心形体</td>
+</tr>
+<tr>
+<td>圆面</td>
+<td>circular face</td>
+<td>n.</td>
+<td>上下两个圆</td>
+</tr>
+<tr>
+<td>侧面（曲面）</td>
+<td>curved surface</td>
+<td>n.</td>
+<td>弯曲的中间面</td>
+</tr>
+<tr>
+<td>滚动</td>
+<td>roll</td>
+<td>v.</td>
+<td>倒下时能滚</td>
+</tr>
+<tr>
+<td>易拉罐</td>
+<td>can / tin can</td>
+<td>n.</td>
+<td>经典圆柱实物</td>
+</tr>
+<tr>
+<td>半径</td>
+<td>radius</td>
+<td>n.</td>
+<td>圆面的半径 r</td>
+</tr>
+<tr>
+<td>高</td>
+<td>height</td>
+<td>n.</td>
+<td>圆柱的高 h</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>易拉罐是圆柱形的。</td>
+<td>A soda can is shaped like a cylinder.</td>
+</tr>
+<tr>
+<td>圆柱有两个圆形的面。</td>
+<td>A cylinder has two circular faces.</td>
+</tr>
+<tr>
+<td>侧面是弯曲的，不是平的。</td>
+<td>The curved surface is not flat.</td>
+</tr>
+<tr>
+<td>圆柱倒下来会滚动。</td>
+<td>A cylinder rolls when it lies on its side.</td>
+</tr>
+<tr>
+<td>圆柱的体积等于底面积乘以高。</td>
+<td>The volume of a cylinder equals the base area times the height.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 圆柱主题绘本难以单独找到，建议家长寻找涵盖多种 3D 形状（含圆柱）的形状认知绘本，以实物照片（罐子、杯子）为主的版本更直观。适龄：3-6 岁。</li>
+<li>🚧 英文立体形状科普绘本可查找 "3D shapes" 类别，多数会包含 cylinder 一章。（<strong>具体书名待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"易拉罐为什么是圆柱？"</strong> → 可以说："圆柱侧面光滑，没有角，握起来舒服；而且同样能装多少饮料的情况下，圆柱用的铝皮比长方体少——这样省钱省料。不信，你把一张纸卷成圆筒，是不是比折成方盒更省纸？"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"圆柱能滚但不会乱跑吗？"</strong> → 可以说："对！圆柱倒下来只能朝一个方向滚——就是垂直于它身体的方向。这和球不一样，球可以向任何方向滚。所以圆柱不会在地上乱跑，只会直直地滚走。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"树干是圆柱吗？"</strong> → 可以说："差不多！真正的树干不是完美的圆柱，有点粗细不均，但数学上我们把它近似看作圆柱。树干长成这个形状，是因为圆形截面在各个方向承受风力的能力相同——非常结实。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 把一张 A4 纸卷成圆筒（圆柱侧面），再用两个圆形硬纸片封上两端，做一个纸圆柱。测量一下它能装多少糖果，和同样纸张折成的长方体盒子比一比——感受形状与容积的关系。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第一学段"图形与几何"；第三学段圆柱体积（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学一年级上册.pdf</a> 第 4 单元《认识图形（一）》(教材 p34-38)；人教版数学六年级下册《圆柱与圆锥》；高中数学立体几何（<strong>待家长核对版本</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书·数学六年级下册.pdf</a> 第3单元《圆柱与圆锥》(p16-37)</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/圆柱体</li>
+<li><strong>拓展阅读</strong>：旋转体与积分（高中数学 / 微积分入门）；泊肃叶流简介</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-07，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/018-长方体.html">长方体</a> <a href="../atoms/019-正方体.html">正方体</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/021-球.html">球</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

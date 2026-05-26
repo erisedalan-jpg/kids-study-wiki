@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量法求空间角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向量法求空间角</h1><div class="review-mark" data-stem="755-向量法求空间角"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向量法求空间角</p><h1>向量法求空间角</h1>
+<blockquote>
+<p><strong>一句话</strong>：利用直线的方向向量与平面的法向量，通过向量夹角公式计算空间中线线角、线面角与二面角。
+<strong>English</strong>: A method that uses direction vectors of lines and normal vectors of planes to calculate angles between lines, between lines and planes, and between planes in space via vector formulas.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：向量法求空间角的核心在于将几何角转化为向量夹角。设两直线的方向向量分别为 $\mathbf{u}, \mathbf{v}$，两个平面的法向量分别为 $\mathbf{n}_1, \mathbf{n}_2$，则三类空间角的计算公式为：</p>
+<ol>
+<li>
+<p><strong>异面直线所成角</strong> $\theta \in (0^\circ, 90^\circ]$：
+   $$\cos\theta = |\cos\langle\mathbf{u}, \mathbf{v}\rangle| = \frac{|\mathbf{u} \cdot \mathbf{v}|}{|\mathbf{u}||\mathbf{v}|}$$</p>
+</li>
+<li>
+<p><strong>线面角</strong> $\theta \in [0^\circ, 90^\circ]$（直线方向向量 $\mathbf{u}$，平面法向量 $\mathbf{n}$）：
+   $$\sin\theta = |\cos\langle\mathbf{u}, \mathbf{n}\rangle| = \frac{|\mathbf{u} \cdot \mathbf{n}|}{|\mathbf{u}||\mathbf{n}|}$$</p>
+</li>
+<li>
+<p><strong>二面角</strong> $\theta \in [0^\circ, 180^\circ]$（两平面法向量 $\mathbf{n}_1, \mathbf{n}_2$）：
+   先计算 $\cos\langle\mathbf{n}_1, \mathbf{n}_2\rangle = \frac{\mathbf{n}_1 \cdot \mathbf{n}_2}{|\mathbf{n}_1||\mathbf{n}_2|}$，再依据图形判定二面角是锐角还是钝角：若为锐二面角，$\cos\theta = |\cos\langle\mathbf{n}_1, \mathbf{n}_2\rangle|$；若为钝二面角，$\cos\theta = -|\cos\langle\mathbf{n}_1, \mathbf{n}_2\rangle|$。或直接通过观察法向量指向（同进同出则互补，一进一出则相等）来确定二面角的余弦符号。</p>
+</li>
+</ol>
+<p><strong>关键方法</strong>：
+- <strong>建系</strong>：选择共点且两两垂直的三条直线为坐标轴，建立空间直角坐标系，写出各关键点坐标。
+- <strong>求向量</strong>：写出所涉直线的方向向量或平面的法向量。平面法向量可通过待定系数法，由平面内两不共线向量联立方程组解出。
+- <strong>代公式</strong>：根据所求角类型，选择正确的公式计算向量夹角，再转化为空间角。</p>
+<p><strong>典型应用</strong>：高考中以棱柱、棱锥等几何体为背景，问法常为“求异面直线 $AB$ 与 $CD$ 所成角的余弦值”“求直线 $PC$ 与底面 $ABCD$ 所成角的正弦值”“求平面 $PAB$ 与平面 $ABCD$ 夹角的余弦值”。解题时直接建立空间直角坐标系，将几何问题完全代数化。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>异面直线所成角取绝对值</strong>：异面直线所成角必为锐角或直角，若直接使用 $\cos\langle\mathbf{u}, \mathbf{v}\rangle$ 未取绝对值，可能得到钝角的余弦值而导致错误。</li>
+<li><strong>线面角混淆公式</strong>：线面角由法向量与方向向量夹角的正弦值求得，<strong>不是余弦值</strong>。若误用 $\cos\theta = |\cos\langle\mathbf{u}, \mathbf{n}\rangle|$ 则求出的是余角。</li>
+<li><strong>二面角的钝锐判定</strong>：仅算出法向量夹角余弦就填答案，极易忽略二面角是钝角还是锐角的几何判断。必须根据法向量指向或直观图形确认符号。</li>
+<li><strong>法向量求解出错</strong>：解方程组求法向量时计算错误，或联立不正交的向量，导致全程失分。求完后应验算法向量与原平面内向量的点积是否为 $0$。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方向向量</td>
+<td>direction vector</td>
+<td>表示直线方向的有向线段所在向量</td>
+</tr>
+<tr>
+<td>法向量</td>
+<td>normal vector</td>
+<td>垂直于平面的非零向量</td>
+</tr>
+<tr>
+<td>异面直线所成角</td>
+<td>angle between skew lines</td>
+<td>范围 $(0^\circ, 90^\circ]$</td>
+</tr>
+<tr>
+<td>线面角</td>
+<td>angle between line and plane</td>
+<td>范围 $[0^\circ, 90^\circ]$</td>
+</tr>
+<tr>
+<td>二面角</td>
+<td>dihedral angle</td>
+<td>范围 $[0^\circ, 180^\circ]$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">空间几何体结构特征</a></li>
+<li><a class="dead" title="未收录">空间向量基本定理</a></li>
+<li><a class="dead" title="未收录">空间向量的坐标运算</a></li>
+<li><a class="dead" title="未收录">空间点线面位置关系</a></li>
+<li><a class="dead" title="未收录">几何法求空间角</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2016-理-17.html">2016-理-17</a></li>
+<li><a href="../exam/数学/2018-文-09.html">2018-文-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

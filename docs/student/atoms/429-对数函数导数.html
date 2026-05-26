@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数导数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>对数函数导数</h1><div class="review-mark" data-stem="429-对数函数导数"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 对数函数导数, logarithmic derivative, 对数求导</p><h2>🎓 对数函数导数</h2>
+<h3>基本公式</h3>
+<p>$$\boxed{(\ln x)' = \frac{1}{x} \quad (x&gt;0)} \qquad \boxed{(\log_a x)' = \frac{1}{x\ln a} \quad (a&gt;0,a\neq 1,x&gt;0)}$$</p>
+<h3>公式推导</h3>
+<p><strong>推导 $(\ln x)' = \dfrac{1}{x}$</strong>（利用 $e^x$ 的反函数关系）：</p>
+<p>设 $y=\ln x$，则 $x=e^y$。对 $x$ 求导：</p>
+<p>$$\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{e^y} = \frac{1}{x}$$</p>
+<p><strong>$\log_a x$ 换底</strong>：</p>
+<p>$$\log_a x = \frac{\ln x}{\ln a}$$，故 $(\log_a x)' = \frac{1}{\ln a}\cdot(\ln x)' = \frac{1}{x\ln a}$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x) = \ln x + \log_2 x$</p>
+<p>$$f'(x) = \frac{1}{x} + \frac{1}{x\ln 2}$$</p>
+<p><strong>例 2</strong> $f(x) = x\ln x$（乘法法则）</p>
+<p>$$f'(x) = \ln x + x\cdot\frac{1}{x} = \ln x + 1$$</p>
+<p><strong>例 3</strong> $f(x) = \ln(x^2+1)$（链式法则）</p>
+<p>$$f'(x) = \frac{2x}{x^2+1}$$</p>
+<p><strong>例 4</strong> $f(x) = \ln\dfrac{x+1}{x-1}$（化简再求导）</p>
+<p>$$f(x) = \ln(x+1)-\ln(x-1), \quad f'(x) = \frac{1}{x+1}-\frac{1}{x-1} = \frac{-2}{x^2-1}$$</p>
+<p><strong>例 5</strong>（对数求导法）求 $f(x) = x^x$ 的导数（$x&gt;0$）。</p>
+<p>$$f(x) = e^{x\ln x}, \quad f'(x) = e^{x\ln x}\cdot(\ln x+1) = x^x(\ln x+1)$$</p>
+<h3>$\ln x$ 的特殊意义</h3>
+<p>$\ln x$ 是面积函数：$\ln t = \int_1^t \dfrac{1}{x}dx$（积分的初步理解，高中可选）。</p>
+<p>$\ln x$ 和 $e^x$ 互为反函数，导数互成倒数关系（反函数求导）：若 $f=e^x$，$f^{-1}=\ln x$，则 $(f^{-1})'(x) = \dfrac{1}{f'(f^{-1}(x))} = \dfrac{1}{e^{\ln x}} = \dfrac{1}{x}$。</p>
+<h3>易错点</h3>
+<ul>
+<li>$(\ln x)'=\dfrac{1}{x}$，不是 $\dfrac{1}{x}\cdot\ln e=\dfrac{1}{x}$（这倒是对的，但不能写成 $\dfrac{\ln e}{x}$）</li>
+<li>链式法则：$[\ln g(x)]' = \dfrac{g'(x)}{g(x)}$，分子是 $g'(x)$，不是 $1$</li>
+<li>对数函数要求<strong>真数大于 $0$</strong>，定义域问题不可忽视</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/对数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/452-指数函数导数.html">指数函数导数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/435-导数四则运算.html">导数四则运算</a></li>
+</ul>
+<p><a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a href="../atoms/447-常见函数导数.html">常见函数导数</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a> · <a href="../atoms/425-反函数导数.html">反函数导数</a> · <a href="../atoms/435-导数四则运算.html">导数四则运算</a> · <a href="../atoms/439-导数构造函数法.html">导数构造函数法</a> · <a class="dead" title="未收录">导数证明不等式</a></p>
+</div>
+</body>
+</html>

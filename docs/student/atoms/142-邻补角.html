@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>邻补角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>邻补角</h1><div class="review-mark" data-stem="142-邻补角"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七下, 相交线与平行线]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 邻补角, supplementary adjacent angles, 互补邻角</p><h2>课本定义</h2>
+<p>两个角有公共顶点和一条公共边，且另一边互为反向延长线，这样的两个角叫做<strong>邻补角</strong>。邻补角互补（和为 180°）。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"挨着的，加起来是180°"</h3>
+<p><strong>邻补角 = 邻居角 + 补充到180°</strong></p>
+<p>当两条直线相交，会产生两种角对：
+- <strong>对顶角</strong>：对面的两个角（相等）
+- <strong>邻补角</strong>：紧挨着的两个角（加起来等于180°）</p>
+<p><strong>怎么认识邻补角？</strong></p>
+<pre><code>   A
+   |  ∠2
+C——O——————D
+   |  ∠1
+   B
+</code></pre>
+<ul>
+<li>∠1（在B方向）和∠2（在A方向）是<strong>邻补角</strong></li>
+<li>它们共用顶点O，共用射线OC</li>
+<li>∠1 + ∠2 = 180°（因为AOB是一条直线）</li>
+</ul>
+<p><strong>生活例子：</strong>
+- 时针和分针：当时针指向3点，分针指向6点，两根针形成的两个角就是邻补角（一个90°，一个270°……不对，要在一条线上才行）
+- 门开了一半：门边和门框形成两个角，加起来是180°（因为门框是直线）
+- 折纸：沿一条线折，折线两侧的角是邻补角</p>
+<p><strong>口诀：</strong> "有公共边，在一条线，两角加，等180°"</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>邻补角</strong>：两个角满足以下条件：
+1. 有<strong>公共顶点</strong>
+2. 有<strong>一条公共边</strong>
+3. 另外两条边互为<strong>反向延长线</strong>（构成一条直线）</p>
+<p>因第3条，邻补角之和恒为 <strong>180°</strong>（互补）。</p>
+<h3>性质</h3>
+<ul>
+<li>∠α + ∠β = 180°（邻补角互补）</li>
+<li>若已知 ∠α，则 ∠β = 180° - ∠α</li>
+<li>邻补角必定相邻（有公共边），但互补角不一定相邻</li>
+</ul>
+<p><strong>区别：互补 vs 邻补</strong></p>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>条件</th>
+<th>角的关系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>互补角</td>
+<td>两角之和=180°</td>
+<td>不要求相邻</td>
+</tr>
+<tr>
+<td>邻补角</td>
+<td>互补且相邻（公共顶点、公共边、另边共线）</td>
+<td>特殊的互补角</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> ∠α 与 ∠β 是邻补角，∠α = 2∠β，求两角度数。</p>
+<p>解：∠α + ∠β = 180°
+2∠β + ∠β = 180°
+3∠β = 180°
+∠β = 60°，∠α = 120°</p>
+<p><strong>例题2：</strong> 如图，直线AB与直线CD交于O，∠AOC = 40°，求∠AOD、∠BOC、∠BOD。</p>
+<p>解：
+- ∠AOD = 180° - 40° = 140°（邻补角，COD为直线）
+- ∠BOC = ∠AOD = 140°（对顶角）
+- ∠BOD = 40°（∠AOC 的对顶角）</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>互补 ≠ 邻补</strong>：互补只要求和为180°，邻补还要求有公共顶点和公共边</li>
+<li><strong>邻补角一定在同一条直线的两侧</strong>，不是随便两个相邻角</li>
+<li>邻补角中，"邻"说位置，"补"说数量（互补），两个条件缺一不可</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>邻补角
+├── 特殊的互补角
+├── 与对顶角配合 → 角度计算
+├── 是平行线证明的基础
+└── 由两直线相交产生
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>邻补角</td>
+<td>supplementary adjacent angles</td>
+<td>相邻且互补的角</td>
+</tr>
+<tr>
+<td>互补</td>
+<td>supplementary</td>
+<td>两角和为180°</td>
+</tr>
+<tr>
+<td>公共顶点</td>
+<td>common vertex</td>
+<td>共享的顶点</td>
+</tr>
+<tr>
+<td>公共边</td>
+<td>common side/ray</td>
+<td>共享的边</td>
+</tr>
+<tr>
+<td>反向延长线</td>
+<td>opposite rays</td>
+<td>互为反方向</td>
+</tr>
+<tr>
+<td>对顶角</td>
+<td>vertical angles</td>
+<td>对面相等的角</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第五章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）图形与几何领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/128-对顶角.html">对顶角</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/048-平行与垂直.html">平行与垂直</a></p>
+</li>
+<li>
+<p><a href="../atoms/139-相交线.html">相交线</a></p>
+</li>
+<li><a href="../atoms/128-对顶角.html">对顶角</a></li>
+<li><a href="../atoms/125-垂线.html">垂线</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+<li><a href="../atoms/048-平行与垂直.html">平行线</a></li>
+<li><a href="../atoms/124-命题.html">命题</a></li>
+<li><a href="../atoms/126-定理.html">定理</a></li>
+</ul>
+</div>
+</body>
+</html>

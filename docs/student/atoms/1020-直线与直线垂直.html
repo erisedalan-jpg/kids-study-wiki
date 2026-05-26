@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与直线垂直</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线与直线垂直</h1><div class="review-mark" data-stem="1020-直线与直线垂直"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线与直线垂直, Perpendicular Lines</p><h1>直线与直线垂直</h1>
+<blockquote>
+<p><strong>一句话</strong>：两条直线相交且夹角为直角（90°），则称这两条直线互相垂直，其解析几何的核心代数特征是斜率之积为 -1（当斜率均存在时）。
+<strong>English</strong>: Two lines are perpendicular if they intersect at a right angle (90°); algebraically, the product of their slopes is -1 (when both slopes exist).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>：在平面解析几何中，设直线 $l_1: y = k_1 x + b_1$，$l_2: y = k_2 x + b_2$。若 $l_1 \perp l_2$，则 $k_1 \cdot k_2 = -1$；反之亦成立。当一条直线斜率不存在（与 $x$ 轴垂直）时，与之垂直的直线斜率为 0（与 $y$ 轴垂直）。在空间直角坐标系中，两条直线垂直的充要条件是它们的方向向量 $\vec{s}_1, \vec{s}_2$ 满足 $\vec{s}_1 \cdot \vec{s}_2 = 0$。</p>
+<p><strong>关键方法</strong>：高考中此类问题的标准解法有二。其一，<strong>斜率法</strong>：直接利用 $k_1 k_2 = -1$ 建立方程求参，需先讨论斜率不存在的情况。其二，<strong>向量法</strong>：在平面或空间中写出直线的方向向量，利用数量积为零判定垂直，此方法可避开斜率不存在的讨论，通用性更强。常见解题步骤为：设关键点坐标 → 联立直线与曲线方程 → 利用韦达定理表达斜率或向量 → 代入垂直条件 $k_1 k_2 = -1$ 或 $\vec{s}_1 \cdot \vec{s}_2 = 0$ → 解出待定参数或证明结论。</p>
+<p><strong>典型应用</strong>：本考点在高考中常出现在圆锥曲线综合大题中，作为几何条件的代数化工具。典型设问如“是否存在实数 $m$，使得直线 $l_1$ 与 $l_2$ 垂直？若存在，求出 $m$ 的值”；或“证明以 $AB$ 为直径的圆过原点（即 $OA \perp OB$）”。例如，给定椭圆 $C: \frac{x^2}{2} + y^2 = 1$ 与过定点 $(0,2)$ 的直线 $l: y = kx + 2$，交于 $A, B$ 两点，若以 $AB$ 为直径的圆过原点，求 $k$ 值。解题时需设点联立，利用 $x_1 x_2 + y_1 y_2 = 0$ 将垂直条件转化为韦达定理可解的方程。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视斜率不存在的情形</strong>：直接使用 $k_1 k_2 = -1$ 解题，忽略对 $k$ 不存在（直线垂直于 $x$ 轴）的讨论，导致漏解。任何涉及斜率公式的垂直判定，第一步必须讨论特殊情形。</li>
+<li><strong>混淆向量垂直与平行的代数条件</strong>：向量垂直是 $\vec{s}_1 \cdot \vec{s}_2 = 0$，向量平行是 $\vec{s}_1 = \lambda \vec{s}_2$（对应坐标成比例），部分学生在空间直线的判定中容易套错公式。</li>
+<li><strong>坐标系转换中的垂直判定失误</strong>：在极坐标系或参数方程中，未能将几何条件“垂直”正确转化为代数等式，如极坐标中处理 $\rho_1 \rho_1$ 与极角关系时生搬硬套直角坐标的 $k_1 k_2 = -1$。</li>
+<li><strong>空间直线垂直误判</strong>：直接使用“斜率之积为 -1”来判定空间中的两条直线，忘记了该结论仅适用于同一平面内的直线。空间中必须使用方向向量数量积为零。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>垂直</td>
+<td>Perpendicular / Orthogonal</td>
+<td>两线夹角为 90° 的关系</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>Slope / Gradient</td>
+<td>平面直线倾斜程度，导数 $k = \tan \theta$</td>
+</tr>
+<tr>
+<td>方向向量</td>
+<td>Direction Vector</td>
+<td>沿直线方向的向量，用于空间垂直判定</td>
+</tr>
+<tr>
+<td>数量积</td>
+<td>Dot Product / Scalar Product</td>
+<td>向量坐标对应相乘再求和，为零则垂直</td>
+</tr>
+<tr>
+<td>90° 角</td>
+<td>Right Angle</td>
+<td>垂直所定义的夹角大小</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">直线的斜率与倾斜角</a></li>
+<li><a class="dead" title="未收录">直线的方程（点斜式/一般式）</a></li>
+<li><a class="dead" title="未收录">直线与直线平行</a></li>
+<li><a class="dead" title="未收录">圆的标准方程与一般方程</a></li>
+<li><a class="dead" title="未收录">空间向量及其坐标运算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-理-19.html">2012-理-19</a></li>
+</ul></div>
+</div>
+</body>
+</html>

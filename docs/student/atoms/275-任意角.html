@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>任意角</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>任意角</h1><div class="review-mark" data-stem="275-任意角"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 三角函数, 第五章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 任意角, angle in standard position, 任意角的定义, 有向角</p><h2>🎓 任意角</h2>
+<h3>定义</h3>
+<p><strong>任意角</strong>：在初中"角是两条射线由公共端点出发形成的图形"的基础上，高中将角的概念推广，允许角的大小为任意实数（包括负数和大于 $360°$ 的角）。</p>
+<p><strong>角的生成</strong>：由一条射线（<strong>始边</strong> initial side）绕其端点（<strong>顶点</strong>）旋转到另一位置（<strong>终边</strong> terminal side）所形成的图形。</p>
+<ul>
+<li><strong>正角</strong>：按逆时针方向旋转所成的角（如 $30°, 90°, 270°$）</li>
+<li><strong>负角</strong>：按顺时针方向旋转所成的角（如 $-30°, -90°$）</li>
+<li><strong>零角</strong>：始边与终边重合，旋转量为 $0$</li>
+</ul>
+<h3>标准位置角</h3>
+<p>角的<strong>标准位置</strong>：顶点在原点，始边沿 $x$ 轴正半轴方向放置。</p>
+<p><strong>终边在各象限</strong>：</p>
+<ul>
+<li>第一象限角：终边在第一象限（$0° + k \cdot 360° &lt; \alpha &lt; 90° + k \cdot 360°$，$k \in \mathbb{Z}$）</li>
+<li>类似定义第二、三、四象限角</li>
+</ul>
+<p><strong>终边在坐标轴上的角</strong>（轴线角）：$\alpha = k \cdot 90°$（$k \in \mathbb{Z}$），这类角不属于任何象限。</p>
+<h3>终边相同的角</h3>
+<p>与角 $\alpha$ 终边相同的所有角构成的集合：</p>
+<p>$${\beta \mid \beta = \alpha + k \cdot 360°, \, k \in \mathbb{Z}}$$</p>
+<p>（弧度制下为 $\beta = \alpha + 2k\pi$，$k \in \mathbb{Z}$）</p>
+<p>例：与 $60°$ 终边相同的角为 $60° + k \cdot 360°$（$k \in \mathbb{Z}$），包括 $420°, 780°, -300°$ 等。</p>
+<h3>推导思路</h3>
+<p>任意角的引入，是为了描述旋转运动（如轮子转动、三角函数的周期性）而必要的扩展。日常中"方向角""时针转过的角度"都用到了任意角概念。</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：与 $-30°$ 终边相同的角的集合。</p>
+<p>解：${-30° + k \cdot 360° \mid k \in \mathbb{Z}} = {\ldots, -390°, -30°, 330°, 690°, \ldots}$</p>
+<p><strong>例2</strong>：判断 $-210°$ 是第几象限的角。</p>
+<p>解：$-210° = -210° + 360° = 150°$，$150°$ 在 $90°$ 与 $180°$ 之间，终边在第二象限。故 $-210°$ 是第二象限角。</p>
+<p><strong>例3</strong>：终边在 $y$ 轴负半轴上的角的集合。</p>
+<p>解：$y$ 轴负半轴对应 $270°$（或 $-90°$），终边相同的角为 ${270° + k \cdot 360° \mid k \in \mathbb{Z}}$，也可写为 ${-90° + k \cdot 360° \mid k \in \mathbb{Z}}$，统一为 ${90° + 2k \cdot 180° \mid k \in \mathbb{Z}}$ 即 ${k \cdot 180° + 90° \mid k \in \mathbb{Z}}$（奇数倍 $90°$ 在 $y$ 轴上）。</p>
+<p>更精确：$y$ 轴负半轴 $= {-90° + k \cdot 360° \mid k \in \mathbb{Z}}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>旋转方向</strong>：逆时针为正角，顺时针为负角——这与右手定则一致，不能搞反</li>
+<li><strong>终边相同 ≠ 角相等</strong>：$60°$ 和 $420°$ 终边相同但不是同一个角（旋转量不同）</li>
+<li><strong>象限角判断</strong>：先将角化为 $[0°, 360°)$ 范围内的等价角，再判断象限</li>
+<li><strong>轴线角不属于任何象限</strong>：$0°, 90°, 180°, 270°, 360°$ 等终边在坐标轴上的角，既不属于第一象限也不属于其他象限</li>
+<li><strong>负角的象限</strong>：$-30°$ 的终边在第四象限（顺时针转 $30°$），不要误以为是第二象限</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中学习了角的分类（锐角、直角、钝角）和旋转变换，角的大小限制在 $0°$ 到 $180°$。高中将角推广到任意实数，引入负角和大于 $360°$ 的角，为三角函数的周期性和弧度制奠定基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第五章，页码待家长核对）</li>
+<li>百科参考：有向角（Directed angle），标准位置角（Standard position angle）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/303-弧度制.html">弧度制</a></p>
+</li>
+<li>
+<p><a href="../atoms/303-弧度制.html">弧度制</a></p>
+</li>
+<li><a class="dead" title="未收录">单位圆</a></li>
+<li><a href="../atoms/309-正弦余弦正切定义.html">正弦余弦正切定义</a></li>
+<li><a href="../atoms/312-诱导公式.html">诱导公式</a></li>
+<li><a href="../atoms/271-三角函数线.html">三角函数线</a></li>
+<li><a href="../atoms/029-角.html">029-角</a></li>
+<li><a href="../atoms/054-平移与旋转.html">054-平移与旋转</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2023-北京-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

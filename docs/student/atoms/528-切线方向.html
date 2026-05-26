@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切线方向</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>切线方向</h1><div class="review-mark" data-stem="528-切线方向"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 切线方向, tangential direction</p><h1>切线方向</h1>
+<blockquote>
+<p><strong>一句话</strong>：质点做曲线运动时，任一时刻的速度方向沿轨迹在该点的切线方向；在变速圆周运动中，切向加速度沿切线方向，改变速度的大小。
+<strong>English</strong>: The direction of the tangent line at a point on a curve; in curvilinear motion, the instantaneous velocity of a particle is directed along the tangent, and the tangential component of acceleration changes the speed.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：<br />
+  在曲线运动中，质点在某一点的速度方向就是该点轨迹的<strong>切线方向</strong>。若用位置矢量 $\vec{r}(t)$ 描述运动，速度矢量 $\vec{v} = \frac{d\vec{r}}{dt}$ 总沿轨迹切线，可表示为 $\vec{v}=v\,\hat{\tau}$，其中 $\hat{\tau}$ 是切线方向的单位矢量。<br />
+  对于一般的曲线运动，加速度可沿切线和法线分解：<br />
+  $$ \vec{a} = a_t \,\hat{\tau} + a_n \,\hat{n} $$<br />
+  其中 $a_t = \frac{dv}{dt}$ 为<strong>切向加速度</strong>，反映速度大小的变化快慢；$a_n = \frac{v^2}{\rho}$ 为<strong>法向加速度</strong>（$\rho$ 为曲率半径），反映速度方向的变化快慢。<br />
+  在匀速圆周运动中，$a_t = 0$，加速度全部为法向加速度，方向指向圆心，速度方向沿切线且与半径垂直。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：  </p>
+</li>
+<li><strong>判断速度方向</strong>：做曲线运动的物体，速度方向沿轨迹切线。画图时，过轨迹上的点作切线即可得到速度的方向。  </li>
+<li><strong>切向、法向分解</strong>：遇到变速率曲线运动，可将合外力或加速度沿切线方向和法线方向分解。切向分力改变速度大小，法向分力改变速度方向。  </li>
+<li>
+<p><strong>圆周运动的临界问题</strong>：在竖直平面内的圆周运动中，最高点和最低点的切线方向水平，速度方向沿切线，结合向心力公式 $F_n = m\frac{v^2}{R}$ 求解。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：<br />
+  高考中常以下面两种方式考查：  </p>
+</li>
+<li><strong>速度方向判定</strong>：给定一段曲线轨迹，要求标出物体在某一位置的速度方向或比较不同位置的速度方向变化。例如平抛运动中，某点的速度方向为该点抛物线的切线方向，而非水平或竖直方向。  </li>
+<li><strong>切向与法向加速度分析</strong>：在“绳—球”或“杆—球”模型中，分析物体在不同位置的速率变化，需列切向动力学方程 $F_t = m a_t$。如单摆从最高点向最低点运动时，切向加速度大小 $a_t = g\sin\theta$，方向沿切线向下；法向加速度 $a_n = \frac{v^2}{l}$，沿绳指向悬点。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误把轨迹弧长方向当作速度方向</strong>：速度方向是轨迹的切线方向，不是沿着曲线本身。曲线本身并不能指示速度方向，必须画出切线。  </li>
+<li><strong>混淆切向与法向的作用</strong>：常错误地认为向心力（法向力）能改变速度大小，或切向力能改变速度方向。切向力只改变速率大小，法向力只改变速度方向。  </li>
+<li><strong>匀速圆周运动中误认为存在切向加速度</strong>：匀速圆周运动速率不变，$a_t = 0$，加速度只有法向分量。如果题目给定“速率均匀增加的圆周运动”，则同时有切向和法向加速度。  </li>
+<li><strong>受力分解方向混乱</strong>：在曲线运动问题中分解力时，不清楚应该沿切线和法线方向分解，而错误地采用水平和竖直分解，导致方程复杂或错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切线方向</td>
+<td>tangential direction</td>
+<td>过曲线上某点切线的指向，速度方向与之平行</td>
+</tr>
+<tr>
+<td>切向加速度</td>
+<td>tangential acceleration</td>
+<td>沿切线方向的加速度分量，改变速率</td>
+</tr>
+<tr>
+<td>法向加速度</td>
+<td>normal acceleration</td>
+<td>垂直于切线方向的加速度分量，改变速度方向</td>
+</tr>
+<tr>
+<td>曲率半径</td>
+<td>radius of curvature</td>
+<td>描述曲线弯曲程度的量，法向加速度公式中的参数</td>
+</tr>
+<tr>
+<td>向心力</td>
+<td>centripetal force</td>
+<td>指向曲率中心的力，提供法向加速度</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/271-曲线运动.html">曲线运动</a></li>
+<li><a href="../atoms/258-圆周运动.html">圆周运动</a></li>
+<li><a href="../atoms/256-向心力.html">向心力</a></li>
+<li><a href="../atoms/261-平抛运动.html">平抛运动</a></li>
+<li><a class="dead" title="未收录">切向加速度与法向加速度</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2011-新课标-07.html">2011-新课标-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

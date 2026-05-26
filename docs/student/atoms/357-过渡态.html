@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>过渡态</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>过渡态</h1><div class="review-mark" data-stem="357-过渡态"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第二章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 过渡态, transition state, 活化络合物, activated complex</p><h1>过渡态</h1>
+<blockquote>
+<p><strong>一句话</strong>：反应过程中能量最高的中间构型，处于反应物转化为生成物的能量"山顶"，寿命极短（~10⁻¹³ s）。
+<strong>English</strong>: The highest-energy intermediate structure along the reaction pathway, at the "top of the energy hill" between reactants and products, with an extremely short lifetime (~10⁻¹³ s).</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>过渡态</strong>（transition state）又称<strong>活化络合物</strong>（activated complex）：反应物分子在有效碰撞过程中，旧键部分断裂、新键部分形成时形成的高能中间态。</p>
+<p>特点：
+- 能量最高（位于势能面的鞍点）
+- 不稳定，寿命极短，无法分离
+- 既可向前形成产物，也可逆向恢复反应物</p>
+<h3>公式 / 方程式</h3>
+<p>反应坐标（势能图）：</p>
+<pre><code>势能
+  |
+  |        [过渡态 TS]
+  |       *
+  |      / \
+  |     /   \
+E_a→  /     \  ← E_a(逆)
+  |  /       \
+  | /         \
+  |/  反应物   \ 生成物
+  |_________________________ 反应坐标
+</code></pre>
+<p>$$
+E_a(\text{正}) = E(\text{TS}) - E(\text{反应物})
+$$</p>
+<p>$$
+E_a(\text{逆}) = E(\text{TS}) - E(\text{生成物})
+$$</p>
+<p>$$
+\Delta H = E_a(\text{正}) - E_a(\text{逆})
+$$</p>
+<p>催化剂提供新路径，形成新的过渡态（能量更低）：</p>
+<p>$$
+E_a(\text{催化}) &lt; E_a(\text{无催化})
+$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某反应 A → B 的势能图数据：反应物势能 200 kJ/mol，过渡态势能 280 kJ/mol，生成物势能 170 kJ/mol。求：</p>
+<ol>
+<li>正反应活化能：$E_a(\text{正}) = 280 - 200 = 80\ \text{kJ·mol}^{-1}$</li>
+<li>逆反应活化能：$E_a(\text{逆}) = 280 - 170 = 110\ \text{kJ·mol}^{-1}$</li>
+<li>反应焓变：$\Delta H = 170 - 200 = -30\ \text{kJ·mol}^{-1}$（放热）</li>
+<li>验证：$\Delta H = E_a(\text{正}) - E_a(\text{逆}) = 80 - 110 = -30\ \text{kJ·mol}^{-1}$ ✓</li>
+</ol>
+<h3>易错点</h3>
+<ul>
+<li>过渡态不是中间体（intermediate）；中间体位于能量低谷，可相对稳定存在</li>
+<li>催化剂不改变反应物和生成物的能量，只改变过渡态能量</li>
+<li>$\Delta H$ 与 $E_a$ 无直接大小关系：可能 $\Delta H &lt; 0$ 但 $E_a$ 很大</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>过渡态</td>
+<td>transition state</td>
+</tr>
+<tr>
+<td>活化络合物</td>
+<td>activated complex</td>
+</tr>
+<tr>
+<td>势能图</td>
+<td>potential energy diagram</td>
+</tr>
+<tr>
+<td>反应坐标</td>
+<td>reaction coordinate</td>
+</tr>
+<tr>
+<td>鞍点</td>
+<td>saddle point</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>The transition state is the highest-energy point along the reaction pathway.（过渡态是反应路径上能量最高的点。）</li>
+<li>A catalyst stabilizes the transition state, lowering the activation energy.（催化剂稳定过渡态，从而降低活化能。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第二章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"过渡态"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/351-活化能.html">活化能</a></li>
+<li><a class="dead" title="未收录">有效碰撞</a></li>
+<li><a class="dead" title="未收录">阿伦尼乌斯方程</a></li>
+<li><a class="dead" title="未收录">化学反应速率（高中）</a></li>
+</ul>
+</div>
+</body>
+</html>

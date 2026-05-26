@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-I图像</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>U-I图像</h1><div class="review-mark" data-stem="496-U-I图像"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: U-I图像</p><h1>U-I图像</h1>
+<blockquote>
+<p><strong>一句话</strong>：描述电路中元件两端电压U与通过电流I之间函数关系的图像，是分析线性元件电阻、电源电动势和内阻的核心工具。
+<strong>English</strong>: A graph depicting the relationship between voltage U across a circuit component and the current I flowing through it.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>在直流电路中，U-I图像（伏安特性曲线）主要分两类：</p>
+<ul>
+<li><strong>定值电阻的U-I线</strong>：过原点的直线，满足 $U = IR$。当U为纵轴、I为横轴时，斜率 $k = R$，直接给出电阻值。若图线为曲线，该元件为非线性元件，某工作点的电阻用该点坐标比值 $R = U/I$ 计算，不能用切线斜率。</li>
+<li><strong>电源的U-I线</strong>：根据闭合电路欧姆定律 $U = E - Ir$，路端电压U与干路电流I成线性关系。图线与纵轴交点（$I=0$）为电动势 $E$，与横轴交点（$U=0$）为短路电流 $I_{\text{短}} = E/r$，图线斜率的绝对值 $|k| = r$ 为电源内阻。</li>
+</ul>
+<p><strong>解题关键方法</strong>：
+1. 确定坐标轴：通常横轴为I、纵轴为U；若坐标互换，斜率意义相反，需谨慎换算。
+2. 识别图线类型：电阻线过原点，电源线纵轴截距为E、斜率为负。
+3. 找电路工作点：将电阻的U-I线与电源的U-I线画在同一坐标系中，两条图线的交点即为电路稳定工作时的电压U和工作电流I，该点同时满足元件伏安特性和闭合电路电压关系。
+4. 利用工作点求功率：输出功率 $P_{\text{出}} = UI$，内耗功率 $P_{\text{内}} = I^2 r$，电源总功率 $P_{\text{总}} = EI$，并易得效率 $\eta = U/E$。</p>
+<p><strong>高考典型设问</strong>：给出某电源的U-I图线和若干电阻的U-I图线，要求读取电动势、内阻，判断工作点的电压与电流，计算输出功率、效率；或给出实验数据点，要求连线作图并求解E、r。也会结合小灯泡等非线性元件的U-I曲线，分析工作点和功率变化。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆斜率含义</strong>：电源U-I线斜率的绝对值为内阻r，电阻U-I线斜率为电阻R。若题目将I作纵轴、U作横轴，斜率代表1/R或1/r，极易误算。</li>
+<li><strong>非线性元件工作点电阻错误</strong>：对小灯泡等非线性曲线，必须用交点坐标的比值 $R=U/I$ 求实际工作电阻，不可用交点处切线斜率替代。</li>
+<li><strong>短路电流与电动势混用</strong>：误将横轴截距直接当作电动势；短路电流 $I_{\text{短}} = E/r$，只有已知内阻时才能反推电动势。</li>
+<li><strong>图线交点意义不清</strong>：只有电源线与电阻线（或等效电阻）的交点才表示真实电路中的电压和电流；两条电阻线相交的点没有实际电路工作意义。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U-I图像</td>
+<td>U-I characteristic curve</td>
+<td>电压-电流特性曲线</td>
+</tr>
+<tr>
+<td>电动势</td>
+<td>electromotive force (emf)</td>
+<td>电源将非电能转化为电能的本领，单位V</td>
+</tr>
+<tr>
+<td>内阻</td>
+<td>internal resistance</td>
+<td>电源内部阻碍电流的因素，图线斜率绝对值</td>
+</tr>
+<tr>
+<td>工作点</td>
+<td>operating point</td>
+<td>电源线与电阻线交点对应的电压和电流</td>
+</tr>
+<tr>
+<td>短路电流</td>
+<td>short-circuit current</td>
+<td>路端电压为零时的电流，$I_{\text{sc}} = E/r$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订）必修第三册“电路及其应用”及“电能与能量守恒定律”主题 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/318-电阻定律.html">电阻定律</a></li>
+<li><a class="dead" title="未收录">电功率与焦耳定律</a></li>
+<li><a href="../atoms/512-伏安特性曲线.html">伏安特性曲线</a></li>
+<li><a class="dead" title="未收录">实验：测定电源电动势和内阻</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-06.html">2010-新课标Ⅰ-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一次函数图象与性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>一次函数图象与性质</h1><div class="review-mark" data-stem="176-一次函数图象与性质"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 八下, 一次函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 一次函数图象与性质, graph and properties of linear functions, 一次函数性质, 斜率截距</p><h1>一次函数图象与性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：$y=kx+b$ 的图象是直线，$k&gt;0$ 时递增，$k&lt;0$ 时递减；平行直线斜率相等，过纵轴交点纵截距为 $b$。
+<strong>English</strong>: The graph of $y=kx+b$ is a line. It increases when $k&gt;0$, decreases when $k&lt;0$; parallel lines have equal slopes.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>图象是直线</h3>
+<p>一次函数 $y=kx+b$ 的图象是一条<strong>直线</strong>，只需找<strong>两个点</strong>就能画出（通常取 $x$ 轴截距和 $y$ 轴截距最方便）。</p>
+<h3>$k$ 决定方向（单调性）</h3>
+<table>
+<thead>
+<tr>
+<th>$k$ 的值</th>
+<th>图象方向</th>
+<th>函数单调性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$k &gt; 0$</td>
+<td>左下 → 右上</td>
+<td>增函数</td>
+</tr>
+<tr>
+<td>$k &lt; 0$</td>
+<td>左上 → 右下</td>
+<td>减函数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>口诀</strong>：$k$ 大往上走，$k$ 小往下走。</p>
+<h3>$b$ 决定位置（截距）</h3>
+<ul>
+<li>$b &gt; 0$：直线与 $y$ 轴交于正半轴（$(0,b)$）</li>
+<li>$b = 0$：过原点（正比例函数）</li>
+<li>$b &lt; 0$：与 $y$ 轴交于负半轴</li>
+</ul>
+<h3>象限判断</h3>
+<table>
+<thead>
+<tr>
+<th>$k&gt;0,b&gt;0$</th>
+<th>一、二、三象限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$k&gt;0,b&lt;0$</td>
+<td>一、三、四象限</td>
+</tr>
+<tr>
+<td>$k&lt;0,b&gt;0$</td>
+<td>一、二、四象限</td>
+</tr>
+<tr>
+<td>$k&lt;0,b&lt;0$</td>
+<td>二、三、四象限</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>斜率的精确含义</h3>
+<p>$$k = \frac{y_2 - y_1}{x_2 - x_1}$$</p>
+<p>斜率 $k$ 表示 $x$ 每增加 1，$y$ 增加（或减少）$|k|$ 个单位。</p>
+<p><strong>平行与交叉</strong>：
+- $k_1 = k_2$（且 $b_1 \neq b_2$）：两直线平行
+- $k_1 = k_2$（且 $b_1 = b_2$）：两直线重合
+- $k_1 \neq k_2$：两直线相交（交点即联立方程的解）</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：直线 $y=2x-3$ 的单调性与象限？</p>
+<p>$k=2&gt;0$ → 递增；$b=-3&lt;0$ → 经过一、三、四象限（$y$ 轴截距在负轴，故不过二象限）。</p>
+<p><strong>例 2</strong>：一次函数 $y=kx+b$，过 $A(1,3)$ 和 $B(-1,-1)$，求 $k$、$b$。</p>
+<p>$$k = \frac{3-(-1)}{1-(-1)} = \frac{4}{2} = 2$$
+$$3 = 2\times1+b \Rightarrow b=1$$
+故 $y=2x+1$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 象限判断时没有结合 $k$、$b$ 的正负分类讨论</li>
+<li>❌ 认为"斜率大则增长快"而忽视 $k$ 的方向（$k=-5$ 斜率绝对值大但是减函数）</li>
+<li>❌ 画图时取点算错，导致直线位置偏移</li>
+</ul>
+<h3>知识联系</h3>
+<p>截距与<a class="dead" title="未收录">一次函数与方程不等式</a>直接相关；两直线交点用<a href="../atoms/061-方程.html">解方程</a>（联立）；<a href="../atoms/197-待定系数法.html">待定系数法</a>用于求 $k$、$b$；坐标方向参考<a href="../atoms/132-平面直角坐标系.html">坐标系</a>；进入高中后斜率联结解析几何。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+</tr>
+<tr>
+<td>纵截距</td>
+<td>y-intercept</td>
+</tr>
+<tr>
+<td>横截距</td>
+<td>x-intercept</td>
+</tr>
+<tr>
+<td>增函数</td>
+<td>increasing function</td>
+</tr>
+<tr>
+<td>减函数</td>
+<td>decreasing function</td>
+</tr>
+<tr>
+<td>平行线</td>
+<td>parallel lines</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第19章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·数与代数·函数·一次函数</li>
+<li>拓展：<a class="dead" title="未收录">数学/待定系数法</a> · <a class="dead" title="未收录">数学/一次函数与方程不等式</a></li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/177-一次函数定义.html">一次函数定义</a> · <a href="../atoms/187-函数图象.html">函数图象</a> · <a href="../atoms/197-待定系数法.html">待定系数法</a> · <a class="dead" title="未收录">一次函数与方程不等式</a> · <a class="dead" title="未收录">一次函数实际应用</a> · <a href="../atoms/132-平面直角坐标系.html">坐标系</a> · <a href="../atoms/061-方程.html">解方程</a></p>
+</div>
+</body>
+</html>

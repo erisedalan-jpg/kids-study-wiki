@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>换底公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>换底公式</h1><div class="review-mark" data-stem="307-换底公式"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修一, 指数函数与对数函数, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 换底公式, change of base formula, 换底定理</p><h2>🎓 换底公式</h2>
+<h3>公式</h3>
+<p>设 $a &gt; 0, a \neq 1$，$b &gt; 0, b \neq 1$，$M &gt; 0$，则：</p>
+<p>$$\log_a M = \frac{\log_b M}{\log_b a}$$</p>
+<p>最常用形式（换为 $\ln$ 或 $\lg$）：</p>
+<p>$$\log_a M = \frac{\ln M}{\ln a} = \frac{\lg M}{\lg a}$$</p>
+<h3>推导</h3>
+<p>设 $\log_a M = t$，则 $a^t = M$。</p>
+<p>对两边取以 $b$ 为底的对数：$\log_b(a^t) = \log_b M$，即 $t \cdot \log_b a = \log_b M$。</p>
+<p>故 $t = \dfrac{\log_b M}{\log_b a}$，即 $\log_a M = \dfrac{\log_b M}{\log_b a}$。$\square$</p>
+<h3>重要推论</h3>
+<p><strong>倒数关系</strong>（$M = a$ 时）：</p>
+<p>$$\log_a b = \frac{1}{\log_b a}$$</p>
+<p><strong>积公式</strong>：</p>
+<p>$$\log_a b \cdot \log_b c = \log_a c \quad \text{（链式法则）}$$</p>
+<p>证：$\log_a b \cdot \log_b c = \dfrac{\log c}{\log a} \cdot \log_b b \cdot \ldots$（可用换底直接验证）</p>
+<p>实际上：$\log_a b \cdot \log_b c = \dfrac{\ln b}{\ln a} \cdot \dfrac{\ln c}{\ln b} = \dfrac{\ln c}{\ln a} = \log_a c$</p>
+<p><strong>特殊情形</strong>：$\log_a b \cdot \log_b a = 1$（令 $c = a$）</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：计算 $\log_4 8$。</p>
+<p>解：$\log_4 8 = \dfrac{\log_2 8}{\log_2 4} = \dfrac{3}{2}$</p>
+<p>或：$\log_4 8 = \dfrac{\lg 8}{\lg 4} = \dfrac{3\lg 2}{2\lg 2} = \dfrac{3}{2}$</p>
+<p><strong>例2</strong>：计算 $\log_3 5 \cdot \log_5 9$。</p>
+<p>解：$\log_3 5 \cdot \log_5 9 = \log_3 5 \cdot \log_5 3^2 = \log_3 5 \cdot 2\log_5 3 = 2 \cdot \log_3 5 \cdot \log_5 3 = 2 \times 1 = 2$</p>
+<p>（利用 $\log_a b \cdot \log_b a = 1$）</p>
+<p><strong>例3</strong>：已知 $\lg 2 = a$，$\lg 3 = b$，用 $a, b$ 表示 $\log_6 5$。</p>
+<p>解：$\log_6 5 = \dfrac{\lg 5}{\lg 6} = \dfrac{\lg(10/2)}{\lg(2 \times 3)} = \dfrac{\lg 10 - \lg 2}{\lg 2 + \lg 3} = \dfrac{1 - a}{a + b}$</p>
+<p><strong>例4</strong>：证明 $\log_{a^m} b^n = \dfrac{n}{m}\log_a b$（$a &gt; 0, a \neq 1, b &gt; 0, m \neq 0$）。</p>
+<p>证：$\log_{a^m} b^n = \dfrac{\log_a b^n}{\log_a a^m} = \dfrac{n\log_a b}{m\log_a a} = \dfrac{n\log_a b}{m \cdot 1} = \dfrac{n}{m}\log_a b$ $\square$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>分子分母位置</strong>：$\log_a M = \dfrac{\log_b M}{\log_b a}$，分子是要求的对数（$M$），分母是底数（$a$），位置不能互换</li>
+<li><strong>链式积的方向</strong>：$\log_a b \cdot \log_b c = \log_a c$，中间底数"消去"，注意消去方向</li>
+<li><strong>换底时底数一致</strong>：分子分母必须用同一个 $b$，如都用 $\lg$（底数 $10$）或都用 $\ln$</li>
+<li><strong>$\log_a b \cdot \log_b a = 1$</strong>：这是换底公式的特例，常用于含对数积的化简</li>
+<li><strong>避免不必要换底</strong>：简单对数（如 $\log_2 8 = 3$）直接计算即可，不需要换底</li>
+</ol>
+<h3>与初中知识的衔接</h3>
+<p>初中没有换底公式，但接触了不同单位换算（如长度单位转换）的思想。高中换底公式将任意底的对数统一为以 $10$（$\lg$）或 $e$（$\ln$）为底的对数，是计算器计算任意底对数的理论基础。</p>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li>课标依据：《普通高中数学课程标准（2017年版2020年修订）》必修内容 A 类</li>
+<li>本地教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第一册.pdf</a>（第四章，页码待家长核对）</li>
+<li>百科参考：对数换底公式（Change of base formula），对数恒等式</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/300-对数概念.html">对数概念</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/298-对数函数.html">对数函数</a></p>
+</li>
+<li>
+<p><a href="../atoms/300-对数概念.html">对数概念</a></p>
+</li>
+<li><a href="../atoms/301-对数运算性质.html">对数运算性质</a></li>
+<li><a href="../atoms/298-对数函数.html">对数函数</a></li>
+<li><a class="dead" title="未收录">对数函数的性质</a></li>
+<li><a class="dead" title="未收录">指数函数与对数函数关系</a></li>
+<li><a href="../atoms/304-指数函数.html">指数函数</a></li>
+<li><a class="dead" title="未收录">幂函数</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2013-文-08.html">2013-文-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

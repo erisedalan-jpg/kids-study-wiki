@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>常见函数导数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>常见函数导数</h1><div class="review-mark" data-stem="447-常见函数导数"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 常见函数导数, basic derivative formulas, 基本导数公式, 常数函数导数</p><h2>🎓 常见函数导数</h2>
+<h3>基本导数公式表（必须熟记）</h3>
+<table>
+<thead>
+<tr>
+<th>原函数 $f(x)$</th>
+<th>导函数 $f'(x)$</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$C$</td>
+<td>$0$</td>
+<td>$C$ 为常数</td>
+</tr>
+<tr>
+<td>$x^n$</td>
+<td>$nx^{n-1}$</td>
+<td>$n\in\mathbb{R}$</td>
+</tr>
+<tr>
+<td>$\sin x$</td>
+<td>$\cos x$</td>
+<td>$x$ 单位：弧度</td>
+</tr>
+<tr>
+<td>$\cos x$</td>
+<td>$-\sin x$</td>
+<td>$x$ 单位：弧度</td>
+</tr>
+<tr>
+<td>$\tan x$</td>
+<td>$\dfrac{1}{\cos^2 x}=\sec^2 x$</td>
+<td>$x\neq\dfrac{\pi}{2}+k\pi$</td>
+</tr>
+<tr>
+<td>$e^x$</td>
+<td>$e^x$</td>
+<td>自然指数，自身导数仍为自身</td>
+</tr>
+<tr>
+<td>$a^x$</td>
+<td>$a^x\ln a$</td>
+<td>$a&gt;0,a\neq 1$</td>
+</tr>
+<tr>
+<td>$\ln x$</td>
+<td>$\dfrac{1}{x}$</td>
+<td>$x&gt;0$</td>
+</tr>
+<tr>
+<td>$\log_a x$</td>
+<td>$\dfrac{1}{x\ln a}$</td>
+<td>$a&gt;0,a\neq 1,x&gt;0$</td>
+</tr>
+</tbody>
+</table>
+<h3>典型公式推导</h3>
+<p><strong>$(\sin x)' = \cos x$ 的推导</strong>（利用和差化积）：</p>
+<p>$$(\sin x)' = \lim_{h\to 0}\frac{\sin(x+h)-\sin x}{h} = \lim_{h\to 0}\frac{2\cos\left(x+\frac{h}{2}\right)\sin\frac{h}{2}}{h}$$</p>
+<p>$$= \lim_{h\to 0}\cos\left(x+\frac{h}{2}\right)\cdot\frac{\sin\frac{h}{2}}{\frac{h}{2}} = \cos x \cdot 1 = \cos x$$</p>
+<p>其中用到重要极限 $\lim_{\theta\to 0}\dfrac{\sin\theta}{\theta}=1$。</p>
+<p><strong>$(e^x)' = e^x$ 的推导</strong>：</p>
+<p>$$\lim_{h\to 0}\frac{e^{x+h}-e^x}{h} = e^x\lim_{h\to 0}\frac{e^h-1}{h} = e^x \cdot 1 = e^x$$</p>
+<p>其中用到 $\lim_{h\to 0}\dfrac{e^h-1}{h}=1$（$e^x$ 自然指数的特征极限）。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 求下列函数的导数：</p>
+<p>(1) $f(x) = x^5$ → $f'(x) = 5x^4$</p>
+<p>(2) $f(x) = \dfrac{1}{x^2} = x^{-2}$ → $f'(x) = -2x^{-3} = -\dfrac{2}{x^3}$</p>
+<p>(3) $f(x) = \sqrt{x} = x^{1/2}$ → $f'(x) = \dfrac{1}{2}x^{-1/2} = \dfrac{1}{2\sqrt{x}}$</p>
+<p>(4) $f(x) = e^x + \ln x$ → $f'(x) = e^x + \dfrac{1}{x}$</p>
+<p><strong>例 2</strong> 验证 $f(x)=e^x$ 满足 $f'(x)=f(x)$。</p>
+<p>$f'(x) = e^x = f(x)$，满足。这是 $e^x$ 的独特性质，也是 $e$ 这一底数的来源。</p>
+<p><strong>例 3</strong> 已知 $f(x) = \log_2 x$，求 $f'(4)$。</p>
+<p>$$f'(x) = \frac{1}{x\ln 2}, \quad f'(4) = \frac{1}{4\ln 2}$$</p>
+<h3>记忆技巧</h3>
+<ul>
+<li><strong>幂函数</strong>：指数下移做系数，指数减 $1$</li>
+<li><strong>三角函数</strong>：$\sin\leftrightarrow\cos$，求导 $\cos$ 不变号，$\sin$ 变号（$\cos$ 求导加负号）</li>
+<li><strong>指数</strong>：$e^x$ 求导不变，$a^x$ 求导乘 $\ln a$</li>
+<li><strong>对数</strong>：$\ln x$ 求导得 $\dfrac{1}{x}$，换底则多除一个 $\ln a$</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>$\sqrt{x}$ 求导：$(x^{1/2})' = \dfrac{1}{2}x^{-1/2} = \dfrac{1}{2\sqrt{x}}$，不是 $\dfrac{1}{\sqrt{x}}$</li>
+<li>$\ln x$ 求导是 $\dfrac{1}{x}$，不是 $\dfrac{1}{x\ln e}$（因为 $\ln e=1$）</li>
+<li>$a^x$ 求导后多了因子 $\ln a$，忘记会导致错误</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/导数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/440-导数的几何意义.html">导数的几何意义</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/448-幂函数导数-高中.html">幂函数导数-高中</a></li>
+</ul>
+<p><a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/448-幂函数导数-高中.html">幂函数导数-高中</a> · <a href="../atoms/416-三角函数导数.html">三角函数导数</a> · <a href="../atoms/452-指数函数导数.html">指数函数导数</a> · <a href="../atoms/429-对数函数导数.html">对数函数导数</a> · <a href="../atoms/435-导数四则运算.html">导数四则运算</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a></p>
+</div>
+</body>
+</html>

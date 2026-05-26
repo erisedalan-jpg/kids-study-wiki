@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有理数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>有理数</h1><div class="review-mark" data-stem="096-有理数"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 数论]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 有理数, rational number, 分数形式的数</p><h2>课本一句话定义</h2>
+<p>整数和分数统称为<strong>有理数</strong>，即所有可以写成两个整数之比（分母不为零）的数，包括正整数、负整数、0、正分数、负分数。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>你已经学过：
+- <strong>自然数</strong>：0、1、2、3……（数东西用的）
+- <strong>整数</strong>：……-3、-2、-1、0、1、2、3……（包括负整数）
+- <strong>分数</strong>：$\dfrac{1}{2}$、$\dfrac{3}{4}$……</p>
+<p>把这三类全部合起来，就叫<strong>有理数</strong>！</p>
+<p>判断一个数是不是有理数，就问自己：<strong>它能写成"一个整数除以另一个非零整数"的形式吗？</strong></p>
+<ul>
+<li>$0.5 = \dfrac{1}{2}$ ✅ 是有理数</li>
+<li>$-3 = \dfrac{-3}{1}$ ✅ 是有理数</li>
+<li>$\sqrt{2} = 1.41421\ldots$（无限不循环）❌ 不是有理数，是无理数</li>
+</ul>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>严格定义</h3>
+<p><strong>有理数</strong>（rational number）是能够表示为 $\dfrac{p}{q}$ 的数，其中 $p, q$ 均为整数且 $q \neq 0$。</p>
+<p>有理数集合记作 $\mathbb{Q}$：</p>
+<p>$$\mathbb{Q} = \left{ \frac{p}{q} \mid p, q \in \mathbb{Z},\ q \neq 0 \right}$$</p>
+<h3>有理数的分类</h3>
+<pre><code>有理数
+├── 整数
+│   ├── 正整数（1, 2, 3, …）
+│   ├── 0
+│   └── 负整数（-1, -2, -3, …）
+└── 分数
+    ├── 正分数（1/2, 3/4, …）
+    └── 负分数（-1/2, -3/4, …）
+</code></pre>
+<h3>关键性质</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有理数的十进制展开是有限小数或无限循环小数</td>
+<td>$\frac{1}{3} = 0.\overline{3}$</td>
+</tr>
+<tr>
+<td>有理数对加减乘封闭</td>
+<td>两有理数之和/差/积仍是有理数</td>
+</tr>
+<tr>
+<td>有理数对除法（除数非零）封闭</td>
+<td>两有理数之商（除数≠0）仍是有理数</td>
+</tr>
+<tr>
+<td>有理数在数轴上稠密</td>
+<td>任意两个有理数之间还有有理数</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：下列各数哪些是有理数？$\dfrac{22}{7}$、$\pi$、$\sqrt{4}$、$-0.\overline{6}$、$\sqrt{3}$</p>
+<p><strong>解</strong>：
+- $\dfrac{22}{7}$：整数比，<strong>是有理数</strong>（但不等于 $\pi$）
+- $\pi = 3.14159\ldots$：无限不循环，<strong>不是有理数</strong>（无理数）
+- $\sqrt{4} = 2$：整数，<strong>是有理数</strong>
+- $-0.\overline{6} = -\dfrac{2}{3}$：循环小数可化分数，<strong>是有理数</strong>
+- $\sqrt{3} = 1.732\ldots$：无限不循环，<strong>不是有理数</strong></p>
+<p><strong>例 2</strong>：将 $0.\overline{36}$ 化为分数。</p>
+<p><strong>解</strong>：设 $x = 0.\overline{36}$，则 $100x = 36.\overline{36}$，两式相减：$99x = 36$，$x = \dfrac{36}{99} = \dfrac{4}{11}$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>$\dfrac{22}{7} \neq \pi$</strong>：$\dfrac{22}{7}$ 是有理数，$\pi$ 是无理数。</li>
+<li><strong>循环小数都是有理数</strong>：$0.\overline{9} = 1$（整数！）。</li>
+<li><strong>有理数的稠密性不代表覆盖整个数轴</strong>：有理数之间还有无理数。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：整数、分数、正负数</li>
+<li>后续：数轴、绝对值、有理数四则运算</li>
+<li>高中拓展：实数 = 有理数 ∪ 无理数；复数 = 实数 ∪ 虚数</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有理数</td>
+<td>rational number</td>
+<td>可写成 p/q 形式</td>
+</tr>
+<tr>
+<td>无理数</td>
+<td>irrational number</td>
+<td>无限不循环小数</td>
+</tr>
+<tr>
+<td>整数</td>
+<td>integer</td>
+<td>无小数部分</td>
+</tr>
+<tr>
+<td>分数</td>
+<td>fraction</td>
+<td>比的形式</td>
+</tr>
+<tr>
+<td>有理数集</td>
+<td>rational number set</td>
+<td>记作 ℚ</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所有整数都是有理数。</td>
+<td>All integers are rational numbers.</td>
+</tr>
+<tr>
+<td>π 不是有理数。</td>
+<td>π is not a rational number.</td>
+</tr>
+<tr>
+<td>循环小数可以化为分数。</td>
+<td>A repeating decimal can be converted to a fraction.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第一章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Rational number</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，分类树与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1103-角平分线定理.html">角平分线定理</a></li>
+<li>
+<p><strong>延伸</strong>：<a class="dead" title="未收录">整数</a></p>
+</li>
+<li>
+<p><a href="../atoms/102-正数与负数.html">正数与负数</a></p>
+</li>
+<li><a href="../atoms/078-负数.html">数轴</a></li>
+<li><a class="dead" title="未收录">整数</a></li>
+<li><a href="../atoms/078-负数.html">绝对值</a></li>
+<li><a href="../atoms/100-有理数加法.html">有理数加法</a></li>
+<li><a class="dead" title="未收录">有理数乘法</a></li>
+</ul>
+</div>
+</body>
+</html>

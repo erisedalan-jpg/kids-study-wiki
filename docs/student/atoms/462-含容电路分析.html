@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>含容电路分析</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>含容电路分析</h1><div class="review-mark" data-stem="462-含容电路分析"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 含容电路分析</p><h1>含容电路分析</h1>
+<blockquote>
+<p><strong>一句话</strong>：含容电路分析是研究含有电容器的直流或交流电路在充放电过程和稳态下，电压、电荷量、电流及能量变化的物理分析方法。
+<strong>English</strong>: The analysis of circuits containing capacitors focuses on the charging/discharging processes and steady‑state behaviors, including voltage, charge, current, and energy changes.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：<br />
+含容电路指包含电容器的电路。在直流电路中，核心是电容器的充放电规律和稳态特性：
+- 充电时，电容电压 $u_C(t) = E (1 - e^{-t/RC})$，电流 $i(t) = \frac{E}{R} e^{-t/RC}$；
+- 放电时，$u_C(t) = U_0 e^{-t/RC}$，$i(t) = -\frac{U_0}{R} e^{-t/RC}$；
+- 时间常数 $\tau = RC$ 决定充放电快慢。
+- 直流稳态下，电容器相当于<strong>断路</strong>，其两端电压等于与之并联的支路电压，所带电荷量 $Q = CU$。</p>
+<p>若电路中有多个电容器串并联，需先求等效电容：串联 $\frac{1}{C_{\text{eq}}} = \sum \frac{1}{C_i}$，并联 $C_{\text{eq}} = \sum C_i$。含容电路也常结合电场能 $E = \frac{1}{2}CU^2$ 与能量守恒进行考查。</p>
+<p><strong>关键方法</strong>：<br />
+1. <strong>确定电路状态</strong>：弄清是暂态过程还是稳态，或是开关通断瞬间的电容器电压不能突变的特性。<br />
+2. <strong>稳态处理</strong>：电容器视为断路，用闭合电路欧姆定律或节点电位法求出电容器两极板间的电势差，进而得 $Q=CU$。<br />
+3. <strong>动态变化</strong>：当电路参数改变（如电阻变化、电容器板间距变化）时，电容器会充电或放电，结合 $u_C$ 不突变和 $i = \frac{\Delta Q}{\Delta t}$ 判断电流方向，用微元或充放电公式分析。<br />
+4. <strong>能量问题</strong>：电容器储能变化及电阻上的焦耳热，注意充电时电源提供能量一部分储存于电容器，一部分消耗在内阻和导线电阻上。</p>
+<p><strong>典型应用</strong>：<br />
+高考常以选择或计算题出现，例如：给出直流电路，当开关闭合达到稳定后，求电容器两极板间的电压、所带电荷量；改变滑动变阻器或板间距离，判断电容器是充电还是放电，并分析电流方向、极板电量变化；结合带电粒子在电容器中的运动，综合电场、电势能等。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆电容器的“电压不能突变”与“电流可以突变”</strong>：在充放电瞬间，电容电压保持不变（除非有冲击电流），但电流可以跳变，易忽略电感或纯电阻情况下的这一特性。  </li>
+<li><strong>直流稳态误认为电容器的电流不为零</strong>：有些学生误把电容器当作电阻处理，忘了稳态下电容器支路电流为零，导致并联部分电压计算错误。  </li>
+<li><strong>极板电荷量计算时未注意极性</strong>：电容器两极板间电势差应取两点电位差，易忽略电源正负极性，将 $Q=CU$ 中的 $U$ 取绝对值但不带正负导致方向判断错误。  </li>
+<li><strong>含源电容器网络的电荷守恒应用失误</strong>：当电路结构变化导致电容器重新分配电荷时，忽略某些节点电荷守恒，错误套用串联分压公式。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电容器</td>
+<td>Capacitor</td>
+<td>储存电荷和电能的器件</td>
+</tr>
+<tr>
+<td>充放电</td>
+<td>Charge and discharge</td>
+<td>电容器积累或释放电荷的过程</td>
+</tr>
+<tr>
+<td>时间常数</td>
+<td>Time constant</td>
+<td>$\tau = RC$，决定充放电快慢</td>
+</tr>
+<tr>
+<td>稳态</td>
+<td>Steady state</td>
+<td>直流电路中电容相当于断路的状态</td>
+</tr>
+<tr>
+<td>等效电容</td>
+<td>Equivalent capacitance</td>
+<td>多个电容器串并联后的总电容</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：🚧  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">电容器动态分析</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">直流电路动态分析</a></li>
+<li><a class="dead" title="未收录">带电粒子在电场中的运动</a></li>
+<li><a class="dead" title="未收录">电场能与能量守恒</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-04.html">2016-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

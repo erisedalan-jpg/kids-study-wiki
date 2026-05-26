@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数定义域</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数定义域</h1><div class="review-mark" data-stem="680-函数定义域"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数定义域, Domain of a Function, 函数的定义域, domain of a function</p><h1>函数定义域</h1>
+<blockquote>
+<p><strong>一句话</strong>：使函数解析式有意义的自变量 $x$ 的全体取值集合（或实际问题限定的自变量范围）。
+<strong>English</strong>: A set of all input values for which a function is defined.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义/原理</strong>：函数 $y=f(x)$ 的<strong>自然定义域</strong>，是指在没有指定实际背景时，使解析式运算有效的所有实数 $x$。数学上即 $D={x\mid f(x) \text{ 有意义},\ x\in\mathbb{R}}$。若为复合函数 $y=f(g(x))$，则要求 $x$ 在 $g$ 的定义域内，且 $g(x)$ 的值落在 $f$ 的定义域内。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：求定义域的标准步骤为<strong>逐条列出约束条件 → 解不等式（组）→ 求交集</strong>。常见约束包括：</p>
+</li>
+<li>分式中分母 $\neq 0$；</li>
+<li>偶次根式（如 $\sqrt{}$， $\sqrt[4]{}$）中被开方数 $\geq 0$；</li>
+<li>对数式 $\log_a u$ 中真数 $u&gt;0$ 且底数 $a&gt;0,\ a\neq 1$；</li>
+<li>零指数、负指数幂的底数 $\neq 0$；</li>
+<li>
+<p>正切 $\tan x$ 中 $x\neq k\pi+\frac{\pi}{2},\ k\in\mathbb{Z}$。
+  复合函数 $f[g(x)]$ 需由外层 $f$ 的定义域反解内层 $g(x)$ 的范围，再与 $g(x)$ 自身定义域取交集。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考常以选择题、填空题直接考查“求下列函数的定义域”，或渗透在函数单调性、奇偶性判断、解不等式等综合题中。例如：</p>
+</li>
+<li>求 $f(x)=\frac{\sqrt{x^2-4}}{\ln(x-1)}$ 的定义域：需满足 $x^2-4\geq 0$， $x-1&gt;0$ 且 $\ln(x-1)\neq 0$，解得 $[2,+\infty)$。</li>
+<li>已知 $f(x)$ 定义域为 $[-1,3]$，求 $f(2x+1)$ 的定义域：由 $-1\leq 2x+1\leq 3$ 得 $x\in[-1,1]$。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域的“集合”要求</strong>：结果必须写成<strong>集合或区间</strong>形式（如 ${x\mid x&gt;1}$ 或 $(1,+\infty)$），不能只写不等式。</li>
+<li><strong>复合函数定义域混淆</strong>：误把中间变量范围当自变量范围。例如已知 $f(x+1)$ 的定义域为 $[0,2]$，指的是 $x\in[0,2]$，而非 $x+1\in[0,2]$（此时应推得 $x+1\in[1,3]$，即 $f$ 的定义域为 $[1,3]$，待家长核对）。</li>
+<li><strong>“或”与“且”误用</strong>：多条约束必须同时满足（求交集），不能取并集。</li>
+<li><strong>实际情境限制忽略</strong>：应用题中自变量常受几何度量（如线段长度&gt;0）、物理量（如时间非负）等隐含条件约束。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td>Domain</td>
+<td>函数自变量所有可能取值的集合</td>
+</tr>
+<tr>
+<td>自然定义域</td>
+<td>Natural Domain</td>
+<td>仅由解析式本身数学意义确定的定义域</td>
+</tr>
+<tr>
+<td>区间</td>
+<td>Interval</td>
+<td>用端点表示的一段连续实数集，如 $(a,b)$， $[a,b]$</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>Range</td>
+<td>函数所有可能输出值的集合</td>
+</tr>
+<tr>
+<td>约束条件</td>
+<td>Constraint</td>
+<td>使解析式各部分有意义的限制不等式</td>
+</tr>
+</tbody>
+</table>
+<h2>🔁 合并补充：原《函数的定义域》</h2>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong></p>
+<p>在函数 $y = f(x), x \in A$ 中，$x$ 叫作自变量，$x$ 的取值范围 $A$ 叫作函数的定义域。在高考的纯数学背景下，求定义域的核心依据是：使得解析式中的每一部分都有意义的自变量的取值集合的交集。
+常见的有意义条件包括：
+1. 分式：分母不为零，即 $\frac{1}{g(x)}$ 要求 $g(x) \neq 0$
+2. 偶次根式：被开方数非负，即 $\sqrt[2n]{g(x)}$ 要求 $g(x) \ge 0$
+3. 对数式：真数大于零，底数大于零且不等于 $1$，即 $\log_{a}{g(x)} \ (a&gt;0, a\neq1)$ 要求 $g(x) &gt; 0$
+4. 零指数幂：底数不为零，即 $[g(x)]^0$ 要求 $g(x) \neq 0$</p>
+<p>若函数由实际问题给出，定义域还需满足实际意义的约束，如长度、人数需为非负整数等。</p>
+<p><strong>关键方法</strong></p>
+<p>求函数定义域的标准步骤：
+1. <strong>列约束条件</strong>：将解析式中涉及的所有限制条件（分式、根式、对数等）全部列出为不等式或不等式组。
+2. <strong>解不等式组</strong>：求解所有不等式的交集。
+3. <strong>规范表示</strong>：最终结果须写成集合或区间的形式，单一区间使用 $(a,b), [a,b]$ 等；多个区间的并集用 $\cup$ 连接。</p>
+<p><strong>典型应用</strong></p>
+<p>高考对定义域的考查通常不单独成题，而是渗透于选填小题、解答题的求解基础步骤或参数讨论中。
+- <strong>具体函数求值</strong>：设问“求函数 $y = \frac{\sqrt{4-x^2}}{\ln(x+1)}$ 的定义域”。解题需联立不等式组 $\begin{cases} 4-x^2 \ge 0 \ x+1 &gt; 0 \ \ln(x+1) \neq 0 \end{cases}$，解出 $x \in (-1, 0) \cup (0, 2]$。
+- <strong>复合函数定义域</strong>：设问“已知 $f(x)$ 的定义域为 $[0,4]$，求 $f(2x-1)$ 的定义域”。关键理解“对应法则 $f$ 的作用范围不变”，即令 $0 \le 2x-1 \le 4$，解出 $x \in [\frac{1}{2}, \frac{5}{2}]$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忘记对数真数必须严格大于零</strong>：遇到 $\log_a{x}$ 时，误将 $x \ge 0$ 当作有意义的条件，导致定义域端点错误。</li>
+<li><strong>忽略分母不为零与根式内非负的联立</strong>：对于 $y = \frac{\sqrt{x}}{x-1}$ 这类同时含根式和分式的函数，解 $x \ge 0$ 后忘记剔除 $x = 1$，错写成 $[0, +\infty)$。</li>
+<li><strong>复合函数定义域混淆</strong>：混淆“$f(x)$ 的定义域”与“$f(g(x))$ 的定义域”。前者指 $x$ 的范围，后者在求解时令 $g(x)$ 落在前者范围内，解出的仍是新自变量 $x$ 的范围，而非原 $x$ 或 $g(x)$ 的范围。</li>
+<li><strong>结果表示不规范</strong>：运算正确但最终未写为集合或区间，或并集符号误用为逗号、交集符号，或端点开闭取错。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>自变量的取值范围</td>
+</tr>
+<tr>
+<td>自变量</td>
+<td>independent variable</td>
+<td>函数中主动变化的量，常用 $x$</td>
+</tr>
+<tr>
+<td>区间表示法</td>
+<td>interval notation</td>
+<td>用 $(, ), [, ]$ 表达数集的形式</td>
+</tr>
+<tr>
+<td>真数</td>
+<td>argument (of logarithm)</td>
+<td>对数运算中的输入值</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/676-函数值域.html">函数值域</a></li>
+<li><a href="../atoms/693-函数解析式.html">函数解析式</a></li>
+<li><a href="../atoms/432-导数与函数单调性.html">函数单调性</a></li>
+<li><a href="../atoms/284-函数的奇偶性.html">函数奇偶性</a></li>
+<li><a class="dead" title="未收录">指数与对数运算</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2016-文-10.html">2016-文-10</a></li>
+<li><a class="dead" title="未收录">2020-北京-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

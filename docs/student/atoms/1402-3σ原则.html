@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3σ原则</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>3σ原则</h1><div class="review-mark" data-stem="1402-3σ原则"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 3σ原则, 68-95-99.7 rule</p><h1>3σ原则</h1>
+<blockquote>
+<p><strong>一句话</strong>：服从正态分布 $N(\mu,\sigma^2)$ 的数据，落在 $(\mu-\sigma,\mu+\sigma)$、$(\mu-2\sigma,\mu+2\sigma)$、$(\mu-3\sigma,\mu+3\sigma)$ 内的概率分别约为 68.27%、95.45%、99.73%，这一经验规律称为 “3σ原则”。
+<strong>English</strong>: The three-sigma rule states that for a normal distribution, approximately 68.27% of values fall within one standard deviation of the mean, 95.45% within two, and 99.73% within three.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+若随机变量 $X \sim N(\mu,\sigma^2)$，则<br />
+$$P(\mu-\sigma &lt; X &lt; \mu+\sigma) \approx 0.6827,$$<br />
+$$P(\mu-2\sigma &lt; X &lt; \mu+2\sigma) \approx 0.9545,$$<br />
+$$P(\mu-3\sigma &lt; X &lt; \mu+3\sigma) \approx 0.9973.$$<br />
+直观理解：正态分布的数据绝大部分集中在均值附近，超出 $\mu \pm 3\sigma$ 的概率不足 0.3%，可视为小概率事件。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>区间概率求法</strong>：将待求区间标准化 $Z=\frac{X-\mu}{\sigma}$，转化为标准正态分布后查表，或直接利用 3σ 原则记忆常用概率值快速估算。<br />
+2. <strong>对称性应用</strong>：正态曲线关于 $x=\mu$ 对称，如 $P(X&lt;\mu-\sigma)=P(X&gt;\mu+\sigma)=\frac{1-0.6827}{2}=0.15865$。<br />
+3. <strong>逆向求解</strong>：已知概率确定所需参数 $\mu$ 或 $\sigma$ 时，对照 3σ 区间边界建立方程。</p>
+<p><strong>典型应用</strong><br />
+高考中常以实际情境出现，如产品规格限、考试成绩分布、身高体重等正态近似的背景下：<br />
+- “合格品”范围常设为 $\mu \pm 3\sigma$，求不合格率；<br />
+- 给出样本均值和标准差，判断某数据是否为异常值（落在 $\mu \pm 3\sigma$ 外即异常）；<br />
+- 结合正态分布对称性，求某一侧的概率或数量。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆 $\sigma$ 与 $\sigma^2$</strong>：题目给出方差时需开方得到标准差，直接代入 3σ 公式会算错区间。  </li>
+<li><strong>忽略对称性半区间概率</strong>：如求 $P(X&gt;\mu+2\sigma)$，未用 $\frac{1-0.9545}{2}$ 而是误用 0.9545/2 等。  </li>
+<li><strong>将 3σ 原则绝对化</strong>：认为 $(\mu-3\sigma,\mu+3\sigma)$ 以外的数据100%不存在，实际上概率约为 0.27%，极少但不是零，小概率事件仍可能发生。  </li>
+<li><strong>误用于非正态分布</strong>：3σ 原则成立的前提是数据近似正态分布，对严重偏态或厚尾分布不适用，直接套用会导致错误推断。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正态分布</td>
+<td>normal distribution</td>
+<td>一种连续型概率分布，曲线呈钟形</td>
+</tr>
+<tr>
+<td>标准差</td>
+<td>standard deviation</td>
+<td>衡量数据离散程度，记为 $\sigma$</td>
+</tr>
+<tr>
+<td>3σ原则</td>
+<td>three-sigma rule / 68-95-99.7 rule</td>
+<td>正态分布下均值附近 ±σ, ±2σ, ±3σ 内的概率经验值</td>
+</tr>
+<tr>
+<td>概率密度函数</td>
+<td>probability density function</td>
+<td>描述连续随机变量在某个确定的取值点附近的可能性的函数</td>
+</tr>
+<tr>
+<td>小概率事件</td>
+<td>low-probability event</td>
+<td>发生概率很小（如 &lt; 5% 或 &lt; 0.3%）的事件</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-19，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/496-正态分布概念.html">正态分布</a></li>
+<li><a href="../atoms/496-正态分布概念.html">标准正态分布</a></li>
+<li><a class="dead" title="未收录">数学期望与方差</a></li>
+<li><a class="dead" title="未收录">概率密度函数</a></li>
+<li><a class="dead" title="未收录">抽样分布</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/502-线性相关性.html">线性相关性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-理-19.html">2017-理-19</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

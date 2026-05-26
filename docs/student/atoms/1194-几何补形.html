@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何补形</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>几何补形</h1><div class="review-mark" data-stem="1194-几何补形"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[立体几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 几何补形</p><h1>几何补形</h1>
+<blockquote>
+<p><strong>一句话</strong>：将不规则的、难以直接计算或证明的几何体，通过添加辅助元素（点、线、面）补成一个规则的、性质已知的几何体（如棱柱、棱锥、正方体、长方体），从而将原问题转化为规则几何体中的问题来解决的方法。
+<strong>English</strong>: A method of adding auxiliary elements to an irregular geometric solid to form a regular one, thereby transforming the problem into one within the context of the regular solid.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>几何补形，或称“补形法”，是解决立体几何问题的一种核心构造性方法。其思想基于“完形”原理，通过构建一个包含原几何体的、更大的、具有完美对称性或已知公式定理的规则几何体，使原本分散、无直接关系的几何元素（如异面直线、线面角）在新的规则体中获得明确的相对位置和数量关系。</p>
+<p><strong>定义/原理</strong>：在给定的几何体基础上，作（或补出）若干点、线段、面，使补形后的新几何体为一个整体规则的几何体，且原几何体是其一部分。常见的补形策略包括：
+- <strong>将三棱锥补成三棱柱</strong>：处理三棱锥的截面、体积或高的问题。
+- <strong>将特殊的三棱锥补成长方体或正方体</strong>：此为核心技巧。若一个三棱锥的三条侧棱两两垂直（“墙角”模型），或对棱分别相等，则可将其补形为一个长方体，三棱锥的顶点即长方体的顶点。
+- <strong>将不规则棱柱补成平行六面体</strong>：用于寻找体对角线或面之间的关系。</p>
+<p><strong>关键方法</strong>：对于三棱锥 $P-ABC$，若 $PA$, $PB$, $PC$ 两两垂直，则以它们为共顶点的三条棱，可将该三棱锥补成一个以 $P$ 为一个顶点的长方体 $P-...$。此时：
+- 三棱锥的外接球即为长方体的外接球，球心为长方体体对角线的中点，半径 $R = \frac{\sqrt{PA^2 + PB^2 + PC^2}}{2}$。
+- 异面直线 $PA$ 与 $BC$ 的夹角即为长方体一面内对角线与棱的夹角。
+- 线面角、二面角也可通过寻找其在长方体各面上的投影来解决。</p>
+<p><strong>典型应用</strong>：在高考中，补形法常见于选择题和填空题的压轴题，用于快速求解外接球、最值距离、以及异面直线夹角等问题。例如，已知一个三棱锥的三条侧棱长分别为 $1$, $\sqrt{2}$, $\sqrt{3}$ 且两两垂直，求其外接球的表面积。直接计算较为复杂，但补为长方体后，可直接用公式求得半径 $R = \frac{\sqrt{1+2+3}}{2} = \frac{\sqrt{6}}{2}$，从而快速得解。解答题中，补形法也常用于构建空间直角坐标系，使坐标的表示更加简洁明了。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>错用补形条件</strong>：最常见的是误将任意三棱锥都补为长方体。只有满足“三条侧棱两两垂直”或“三组对棱分别相等”的特殊三棱锥，补为长方体才具有完美的对称性和计算便利性。任意三棱锥一般补成三棱柱。</li>
+<li><strong>混淆外接球与内切球</strong>：将三棱锥补为长方体后，得到的外接球是<strong>原三棱锥</strong>的外接球，但长方体的内切球与原三棱锥无关。在计算时，务必分清是外接还是内切问题。</li>
+<li><strong>补形后点的位置关系失准</strong>：在补出新的点和面后，必须仔细核对原几何体的点、线在新图形中的对应位置，尤其是面对角线与体对角线的区分，避免将所求异面直线夹角错认成补形后面内的相交线夹角。</li>
+<li><strong>忽略二面角大小的转换</strong>：补形后求出的二面角可能为原二面角的平面角或其补角，求解完成后需根据几何关系检验其锐钝，否则会导致余弦值正负号错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>几何补形</td>
+<td>Geometric Complement / Auxiliary Completion</td>
+<td>将不规则图形补为规则图形的方法</td>
+</tr>
+<tr>
+<td>长方体</td>
+<td>Cuboid / Rectangular Prism</td>
+<td>最常补形得到的目标规则体之一</td>
+</tr>
+<tr>
+<td>正方体</td>
+<td>Cube</td>
+<td>长宽高相等的特殊长方体补形结果</td>
+</tr>
+<tr>
+<td>外接球</td>
+<td>Circumscribed Sphere</td>
+<td>补形法常用于求解此类问题的半径</td>
+</tr>
+<tr>
+<td>异面直线</td>
+<td>Skew Lines</td>
+<td>补形后可转化为长方体面内直线角的问题</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">外接球与内切球问题</a></li>
+<li><a class="dead" title="未收录">空间向量与立体几何</a></li>
+<li><a class="dead" title="未收录">异面直线夹角</a></li>
+<li><a class="dead" title="未收录">三棱锥的体积与高</a></li>
+<li><a class="dead" title="未收录">空间中的距离问题</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2024-新课标Ⅱ-07.html">2024-新课标Ⅱ-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

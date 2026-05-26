@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合的表示法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>集合的表示法</h1><div class="review-mark" data-stem="1140-集合的表示法"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 集合的表示法, 集合表示法, 集合的表示方法</p><h1>集合的表示法</h1>
+<blockquote>
+<p><strong>一句话</strong>：用确定的方式把集合中的元素及其特征写出来或画出来的数学表达方法。
+<strong>English</strong>: Methods for explicitly describing the elements or properties that define a set.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong></p>
+<p>集合的表示法主要有三种：</p>
+<ol>
+<li><strong>列举法</strong>：把集合中的所有元素一一列出，写在大括号内，元素之间用逗号隔开。</li>
+<li>格式：{元素1, 元素2, ... , 元素n} 或 {元素1, 元素2, 元素3, ...}</li>
+<li>
+<p>例：大于3且小于10的偶数组成的集合表示为 {4, 6, 8}</p>
+</li>
+<li>
+<p><strong>描述法</strong>：用集合所含元素的共同特征来表示集合，格式为 {x | P(x)} 或 {x : P(x)}，其中竖线或冒号前是代表元素，后面是该元素满足的条件。</p>
+</li>
+<li>
+<p>例：{x | x &gt; 3 且 x &lt; 10, x ∈ Z} 表示大于3且小于10的整数集合</p>
+</li>
+<li>
+<p><strong>图示法（韦恩图）</strong>：用封闭曲线内部表示集合，主要用于直观展示集合间关系，高考中常在解决交、并、补运算时辅助使用。</p>
+</li>
+</ol>
+<p><strong>关键方法</strong></p>
+<p>高考中考查集合表示法的核心是“根据元素特征选择合适表示法”及“不同表示法之间的转化”：
+- 元素个数有限且较少时优先用列举法；元素个数无限或较多时优先用描述法；元素间关系复杂时借助韦恩图分析。
+- 从描述法转化到列举法：解出所有满足条件的元素，注意元素的互异性和范围限制。
+- 从列举法转化到描述法：抽象出元素的公共属性，准确写出代表元素和约束条件。</p>
+<p><strong>典型应用</strong></p>
+<ol>
+<li><strong>基础题</strong>：直接考查给定集合的表示法识别与书写。如用列举法表示集合 {x | x² - 3x + 2 = 0}，需先解方程得 x = 1 或 2，再写成 {1, 2}。</li>
+<li><strong>综合题</strong>：结合集合运算（交、并、补）考查表示法转化。例：已知全集 U = {x | x ≤ 8, x ∈ N<em>}，A = {2, 4, 6}，求 ∁U A 并用描述法表示。需先列出 U = {1, 2, 3, 4, 5, 6, 7, 8}，得 ∁U A = {1, 3, 5, 7, 8}，再寻找元素公共特征写成 {x | x ∈ U 且 x 为奇数，或 x = 8}（待家长核对表述规范），或更精确为 {x | x ≤ 8, x ∈ N</em>, x ∉ A}。</li>
+</ol>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>列举法中的互异性</strong>：列举元素时出现重复项（如 {1, 2, 2, 3}），违反集合元素的互异性，必须写成 {1, 2, 3}；从描述法转化时也常忽略互异，如 {x | x² = 4} 应写为 {-2, 2} 而非 {-2, 2, -2}。</li>
+<li><strong>描述法中代表元素的混淆</strong>：误将 {x | y = x²}（定义域）与 {y | y = x²}（值域）或 {(x, y) | y = x²}（点集）混为一谈，代表元素不同导致集合含义截然不同。</li>
+<li><strong>无限集的列举法滥用</strong>：对元素无限的集合仍强行用例举法（如 {1, 2, 3, ...}），需确保规律明确无歧义，且高考中更倾向描述法；含省略号的列举法必须保证前几项已足以唯一确定通项。</li>
+<li><strong>描述法中条件不完整</strong>：如用描述法表示“大于1且小于5的实数”时漏写 x ∈ R，或误写为 {x | 1 &lt; x &lt; 5, x ∈ Z}（错误限定了整数范围），应注意数集范围的准确注明。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合</td>
+<td>set</td>
+<td>某些确定的对象汇集的整体</td>
+</tr>
+<tr>
+<td>元素</td>
+<td>element</td>
+<td>构成集合的每个对象</td>
+</tr>
+<tr>
+<td>列举法</td>
+<td>roster method / enumeration</td>
+<td>直接把元素全部列出</td>
+</tr>
+<tr>
+<td>描述法</td>
+<td>set-builder notation</td>
+<td>用条件描述元素特征</td>
+</tr>
+<tr>
+<td>韦恩图</td>
+<td>Venn diagram</td>
+<td>用封闭曲线表示集合的图示法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">集合的含义与元素的特征</a></li>
+<li><a class="dead" title="未收录">集合间的基本关系</a></li>
+<li><a class="dead" title="未收录">集合的基本运算</a></li>
+<li><a class="dead" title="未收录">子集与真子集的个数计算</a></li>
+<li><a class="dead" title="未收录">充要条件与集合关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2012-文-01.html">2012-文-01</a></li>
+<li><a href="../exam/数学/2012-理-01.html">2012-理-01</a></li>
+<li><a href="../exam/数学/2016-文-01.html">2016-文-01</a></li>
+<li><a href="../exam/数学/2016-理-02.html">2016-理-02</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

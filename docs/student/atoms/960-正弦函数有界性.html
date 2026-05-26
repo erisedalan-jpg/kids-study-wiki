@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数有界性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正弦函数有界性</h1><div class="review-mark" data-stem="960-正弦函数有界性"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正弦函数有界性, Boundedness of Sine Function</p><h1>正弦函数有界性</h1>
+<blockquote>
+<p><strong>一句话</strong>：正弦函数 $y=\sin x$ 的值域为 $[-1,1]$，即对任意实数 $x$ 恒有 $|\sin x| \le 1$，这一性质称为正弦函数的有界性。
+<strong>English</strong>: The sine function is bounded such that $|\sin x| \le 1$ for all real $x$, with its range exactly $[-1,1]$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+设 $f(x)=\sin x$，定义域为 $\mathbb{R}$，则存在正常数 $M$（可取 $M\ge 1$）使得 $|f(x)| \le M$ 恒成立。更精确地，正弦函数的值域是闭区间 $[-1,1]$，其最大值 $1$、最小值 $-1$ 在 $x=\dfrac{\pi}{2}+2k\pi$ 和 $x=-\dfrac{\pi}{2}+2k\pi$（$k\in\mathbb{Z}$）处取得。对于一般正弦型函数 $y=A\sin(\omega x+\varphi)+b$（$A\neq 0$），其值域为 $[b-|A|,\;b+|A|]$，即 $|y-b| \le |A|$。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>直接放缩</strong>：利用 $|\sin x|\le 1$ 对含 $\sin x$ 的表达式进行不等式放缩，常用于求参数范围或证明不等式。<br />
+2. <strong>整体有界性</strong>：对于 $A\sin(\omega x+\varphi)+b$，直接写出值域 $[b-|A|,\;b+|A|]$，注意 $A$ 的正负不影响范围上下界差，仅影响内部符号。<br />
+3. <strong>复合函数处理</strong>：若出现 $g(\sin x)$，将 $\sin x$ 视为整体变量 $t\in[-1,1]$，转化为 $g(t)$ 在闭区间上的值域或最值问题。<br />
+4. <strong>恒成立与存在性问题</strong>：“$\sin x \le m$ 恒成立”等价于 $m\ge 1$；“$\sin x \ge m$ 有解”等价于 $m\le 1$ 等。</p>
+<p><strong>典型应用</strong><br />
+高考中常见以下设问：<br />
+- 已知 $f(x)=\sin x + a$ 的值域为 $[0,2]$，求 $a$。由 $[-1+a,\,1+a]=[0,2]$ 得 $a=1$。<br />
+- 若不等式 $\sin x + \frac{1}{2}\ge k$ 对 $x\in\mathbb{R}$ 恒成立，求 $k$ 的最大值。由 $\sin x\ge k-\frac12$ 需恒成立，须 $k-\frac12 \le -1$，即 $k\le -\frac12$，最大值 $-\frac12$。<br />
+- 求 $y=\cos^2 x+2\sin x$ 的值域：设 $t=\sin x\in[-1,1]$，化为 $y=1-t^2+2t = -(t-1)^2+2$，在 $t\in[-1,1]$ 上求二次函数值域得 $[-2,2]$。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略局部有界性</strong>：当 $x$ 受限时，$\sin x$ 的取值范围可能仅是 $[-1,1]$ 的真子集。如 $x\in\left[0,\frac{\pi}{6}\right]$，$\sin x\in\left[0,\frac12\right]$，误用全局有界导致错解。  </li>
+<li><strong>忘记加绝对值</strong>：对于 $A\sin(\omega x+\varphi)$，值域是 $[-|A|,|A|]$，若直接写作 $[-A,A]$ 而 $A$ 为负时会颠倒上下界。  </li>
+<li><strong>换元后范围错误</strong>：将 $\sin x$ 换成 $t$ 时未同步将 $t$ 限制在 $[-1,1]$，导致最值出错。  </li>
+<li><strong>混淆恒成立与有解</strong>：如“$\sin x &gt; m$ 有解”只需 $m &lt; 1$，而“$\sin x &gt; m$ 恒成立”需 $m &lt; -1$，两者条件极易混淆。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正弦函数</td>
+<td>sine function</td>
+<td>基本三角函数 $y=\sin x$</td>
+</tr>
+<tr>
+<td>有界性</td>
+<td>boundedness</td>
+<td>函数值整体被限制在某一范围内</td>
+</tr>
+<tr>
+<td>值域</td>
+<td>range</td>
+<td>函数所有可能输出值的集合</td>
+</tr>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>$</td>
+</tr>
+<tr>
+<td>恒成立</td>
+<td>hold for all</td>
+<td>对所有自变量某个不等式都成立</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：待主会话核对</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/612-三角函数的图像与性质.html">三角函数的图像与性质</a></li>
+<li><a href="../atoms/265-Asin(ωx+φ)函数.html">正弦型函数</a></li>
+<li><a class="dead" title="未收录">三角函数的值域与最值</a></li>
+<li><a class="dead" title="未收录">恒成立与存在性问题</a></li>
+<li><a class="dead" title="未收录">换元法求函数值域</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-文-13.html">2017-文-13</a></li>
+<li><a href="../exam/数学/2021-理-03.html">2021-理-03</a></li>
+</ul></div>
+</div>
+</body>
+</html>

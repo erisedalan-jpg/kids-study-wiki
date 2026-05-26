@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>性状分离</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>性状分离</h1><div class="review-mark" data-stem="600-性状分离"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[遗传变异进化]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 性状分离, segregation of characters</p><h1>性状分离</h1>
+<blockquote>
+<p><strong>一句话</strong>：在杂种后代中，同时显现出显性性状和隐性性状的现象，称为性状分离。
+<strong>English</strong>: The reappearance of both dominant and recessive traits in the offspring of heterozygous parents is called segregation of characters.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong>
+性状分离的本质是<strong>等位基因的分离</strong>。在杂合子（如F₁代基因型为Dd）进行减数分裂形成配子时，位于同源染色体上的等位基因D与d会随着同源染色体的分开而分离，分别进入不同的配子中，产生含有D和d且比例相等的两种配子。雌雄配子随机结合后，在F₂代中基因型重新组合为DD、Dd、dd，比例约为1:2:1，从而使得在F₁代中“隐藏”的隐性性状（如高茎豌豆杂交后出现的矮茎）在子二代中重新出现，形成性状分离现象，表型比例通常为3:1。这一过程遵循<strong>孟德尔分离定律</strong>，其细胞学基础是减数第一次分裂后期同源染色体的分离。</p>
+<p><strong>关键方法与判定依据</strong>
+1.  <strong>验证性状分离的方法</strong>：
+    *   <strong>测交法</strong>：将待测个体（如显性性状个体，基因型可能为DD或Dd）与隐性纯合子（dd）杂交。若后代出现两种性状且比例接近1:1，则可判定该个体为杂合子，其自交后代会发生性状分离。
+    *   <strong>自交法</strong>：对雌雄同体植物，令其自花传粉，观察后代是否出现性状分离。若出现不同性状，则亲本为杂合子。这是最简便的判定方法。
+2.  <strong>性状分离比的模拟实验</strong>：通过从两个小桶中随机抓取分别标记有D和d的彩球，模拟配子的随机结合。统计大量抓取后DD:Dd:dd的组合数，应接近1:2:1，从而理解性状分离比的产生条件。</p>
+<p><strong>高考典型应用</strong>
+高考试题常以遗传系谱图、杂交实验结果数据表或遗传图解的形式考查。
+*   <strong>典型设问</strong>：给出某对相对性状的杂交实验结果（如F₂中红果:黄果≈3:1），要求判断显隐性关系、推断亲本基因型并计算后代出现某一性状或基因型的概率。
+*   <strong>解题步骤</strong>：①先根据性状分离现象（“无中生有”或“有中生无”）判断显隐性；②确定亲本基因型；③根据分离定律推算配子类型及比例；④利用配子法或棋盘格计算子代基因型和表型的种类与概率。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆概念</strong>：误认为性状分离只能在F₂代出现。实际上，只要亲本为杂合子，其自交或杂交后代（如F₁代自交后代、回交后代）均可能出现性状分离。</li>
+<li><strong>忽略前提条件</strong>：机械套用3:1的分离比，而忽略了该比例成立的前提——必须是在<strong>完全显性</strong>、<strong>统计子代数量足够多</strong>、<strong>子代全部存活</strong>且<strong>雌雄配子结合机会均等</strong>的条件下。若出现不完全显性（如红花×白花→粉红花，自交后代红:粉:白≈1:2:1）或存在致死基因，分离比会发生改变。</li>
+<li><strong>错误理解“分离”</strong>：将性状分离理解为控制性状的基因本身发生分离。其实质是<strong>等位基因的分离</strong>，非等位基因之间不遵循分离定律。基因型为AaBb的个体在产生配子时，A与a分离，B与b分离，这是性状分离的遗传基础。</li>
+<li><strong>隐性性状判定失误</strong>：对于自交后代出现性状分离的情况，误认为新出现的性状就是隐性性状。正确判断应为：<strong>杂种后代中分离出来的隐性性状，是能在该代中稳定遗传的性状</strong>；若不能稳定遗传（如某些共显性或剂量效应），则需根据具体比例重新判断显隐性关系。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性状分离</td>
+<td>Segregation of characters</td>
+<td>杂种后代出现不同亲本性状的现象</td>
+</tr>
+<tr>
+<td>显性性状</td>
+<td>Dominant trait</td>
+<td>杂合子中表现出来的性状</td>
+</tr>
+<tr>
+<td>隐性性状</td>
+<td>Recessive trait</td>
+<td>杂合子中未表现，但在后代中可重新出现的性状</td>
+</tr>
+<tr>
+<td>杂合子</td>
+<td>Heterozygote</td>
+<td>含有不同等位基因的个体（如Dd）</td>
+</tr>
+<tr>
+<td>测交</td>
+<td>Test cross</td>
+<td>与隐性纯合子杂交，用于测定待测个体的基因型</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-16，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/266-分离定律.html">分离定律</a></li>
+<li><a href="../atoms/272-自由组合定律.html">自由组合定律</a></li>
+<li><a class="dead" title="未收录">显隐性关系判断</a></li>
+<li><a class="dead" title="未收录">基因型与表型</a></li>
+<li><a href="../atoms/516-遗传系谱图分析.html">遗传系谱图分析</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2008-北京-04</a></li>
+<li><a href="../exam/生物/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

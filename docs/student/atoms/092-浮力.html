@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>浮力</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>浮力</h1><div class="review-mark" data-stem="092-浮力"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八下, 第十章浮力, 浮力]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 浮力, buoyancy, buoyant force</p><h1>浮力</h1>
+<blockquote>
+<p><strong>一句话</strong>：浮力是液体（或气体）对浸入其中物体的向上托力，由物体上下表面所受液体压力之差产生。
+<strong>English</strong>: Buoyancy is the upward force exerted by a fluid on an immersed object, arising from the pressure difference between its bottom and top surfaces.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>把一块石头放进水里，你会感觉石头变"轻"了——在水中提石头比在空气中省力。这是因为水对石头产生了一个向上的力——<strong>浮力</strong>。</p>
+<p><strong>浮力的方向：</strong> 竖直向上（永远如此！）</p>
+<p><strong>浮力的产生：</strong> 液体中，物体下方压强比上方压强大（深度更大），因此下方受到的液体压力比上方大，合力向上，就是浮力。</p>
+<p><strong>如何测量浮力？（称重法）</strong></p>
+<p>$$F_{浮} = G - F_{示}$$</p>
+<ul>
+<li>$G$：物体在空气中的重力（弹簧测力计读数）</li>
+<li>$F_{示}$：物体浸入液体后的弹簧测力计示数（视重）</li>
+<li>$F_{浮}$：两者之差就是浮力</li>
+</ul>
+<p><strong>例子：</strong> 一块石头空气中称重 5 N，水中称重 3 N，则浮力 = 5 - 3 = 2 N。</p>
+<p><strong>气体也有浮力！</strong> 热气球飘起来，是因为热空气密度小，周围冷空气给热气球一个向上的浮力。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>浮力的产生原理</h3>
+<p>设一个长方体（底面积 $S$，高 $h$）浸没在密度为 $\rho_{液}$ 的液体中，上表面深度为 $h_1$，下表面深度为 $h_2 = h_1 + h$：</p>
+<ul>
+<li>上表面压力（向下）：$F_{上} = p_1 S = \rho_{液} g h_1 S$</li>
+<li>下表面压力（向上）：$F_{下} = p_2 S = \rho_{液} g h_2 S$</li>
+<li>浮力：$F_{浮} = F_{下} - F_{上} = \rho_{液} g (h_2 - h_1) S = \rho_{液} g h S = \rho_{液} g V_{排}$</li>
+</ul>
+<p>这正是阿基米德原理（见 <a href="../atoms/119-阿基米德原理.html">阿基米德原理</a>）。</p>
+<h3>称重法测浮力</h3>
+<p>$$F_{浮} = G - F_{示}$$</p>
+<p>实验步骤：
+1. 弹簧测力计测出物体在空气中的重力 $G$
+2. 物体浸入液体，记录示数 $F_{示}$（"视重"）
+3. 浮力 = $G - F_{示}$</p>
+<h3>浮力的三种情况</h3>
+<table>
+<thead>
+<tr>
+<th>物体状态</th>
+<th>浮力</th>
+<th>特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>漂浮</td>
+<td>$F_{浮} = G$</td>
+<td>合力为零，静止在液面</td>
+</tr>
+<tr>
+<td>悬浮</td>
+<td>$F_{浮} = G$</td>
+<td>合力为零，静止在液体内</td>
+</tr>
+<tr>
+<td>下沉</td>
+<td>$F_{浮} &lt; G$</td>
+<td>继续下沉，接触底部后有支持力</td>
+</tr>
+<tr>
+<td>上浮</td>
+<td>$F_{浮} &gt; G$</td>
+<td>向上加速，直至漂浮</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1：</strong> 一物体重 10 N，浸没水中时弹簧测力计示数 6 N，求浮力和物体密度。（$g = 10\text{ N/kg}$）</p>
+<p>解：$F_{浮} = G - F_{示} = 10 - 6 = 4\text{ N}$</p>
+<p>排开水的体积：$V_{排} = F_{浮}/(\rho_{水} g) = 4/(1000 \times 10) = 4 \times 10^{-4}\text{ m}^3$</p>
+<p>物体体积（浸没时）= $V_{排} = 4 \times 10^{-4}\text{ m}^3$</p>
+<p>物体质量：$m = G/g = 10/10 = 1\text{ kg}$</p>
+<p>物体密度：$\rho = m/V = 1/(4 \times 10^{-4}) = 2500\text{ kg/m}^3$</p>
+<p><strong>例2：</strong> 为什么死海中人可以漂浮？</p>
+<p>解：死海盐水密度约 1240 kg/m³，远大于人体平均密度（约 1000-1050 kg/m³）。人体产生的浮力大于重力，所以漂浮。</p>
+<h3>易错点</h3>
+<ul>
+<li><strong>浮力方向永远竖直向上</strong>，不是垂直表面（在斜面上的物体，浮力仍然竖直向上）。</li>
+<li><strong>浮力不等于重力</strong>：漂浮时等于重力，但下沉时小于重力，不能混淆。</li>
+<li><strong>气体中也有浮力</strong>：氢气球、热气球受空气浮力（空气浮力 = 排开空气的重力）。</li>
+<li>物体在液体中所受的合力方向取决于浮力与重力的大小关系，而不是始终向上。</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育物理课程标准（2022 年版），第三学段"浮力"（<strong>待家长核对页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级下册.pdf</a> 第十章（<strong>待家长核对页码</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/浮力</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">连通器</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/119-阿基米德原理.html">阿基米德原理</a></li>
+</ul>
+<p><a href="../atoms/119-阿基米德原理.html">阿基米德原理</a> · <a class="dead" title="未收录">物体浮沉条件</a> · <a class="dead" title="未收录">浮力计算</a> · <a href="../atoms/096-液体压强.html">液体压强</a> · <a class="dead" title="未收录">轮船</a> · <a class="dead" title="未收录">潜水艇</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2017-新课标Ⅱ-14.html">2017-新课标Ⅱ-14</a></li>
+<li><a class="dead" title="未收录">2022-湖南-17</a></li>
+<li><a class="dead" title="未收录">2024-湖南-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

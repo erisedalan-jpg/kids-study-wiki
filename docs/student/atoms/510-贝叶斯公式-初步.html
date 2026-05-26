@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>贝叶斯公式-初步</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>贝叶斯公式-初步</h1><div class="review-mark" data-stem="510-贝叶斯公式-初步"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 贝叶斯公式-初步, Bayes formula, 贝叶斯定理, 逆概公式</p><h2>🎓 贝叶斯公式-初步</h2>
+<h3>定义</h3>
+<p>设 ${B_1, B_2, \ldots, B_n}$ 为样本空间的完备事件组（$P(B_i) &gt; 0$），$A$ 为任意事件（$P(A) &gt; 0$），则：</p>
+<p>$$\boxed{P(B_j|A) = \frac{P(B_j)P(A|B_j)}{\sum_{i=1}^n P(B_i)P(A|B_i)} = \frac{P(B_j)P(A|B_j)}{P(A)}}$$</p>
+<h3>含义："由果求因"</h3>
+<ul>
+<li><strong>全概率公式</strong>："知道原因 $B_i$ 的概率，求结果 $A$ 的概率"（由因求果）</li>
+<li><strong>贝叶斯公式</strong>："已知结果 $A$ 发生，反推原因 $B_j$ 的概率"（由果求因）</li>
+</ul>
+<p><strong>贝叶斯思想</strong>：根据新的观测（$A$ 发生），更新对各"假设"（$B_j$）概率的判断。
+- <strong>先验概率</strong>：$P(B_j)$（未观测 $A$ 前的判断）
+- <strong>后验概率</strong>：$P(B_j|A)$（观测到 $A$ 后的更新判断）</p>
+<h3>推导</h3>
+<p>由条件概率定义和乘法公式：</p>
+<p>$$P(B_j|A) = \frac{P(AB_j)}{P(A)} = \frac{P(B_j)P(A|B_j)}{P(A)}$$</p>
+<p>将 $P(A)$ 用全概率公式展开即得贝叶斯公式。</p>
+<h3>典型例题</h3>
+<p><strong>例1（质检问题）</strong>：甲厂产 60%，乙厂产 40%；甲厂次品率 2%，乙厂次品率 5%。随机取一件发现是次品，问来自甲厂的概率。</p>
+<p><strong>解</strong>：已知 $P(\text{甲}) = 0.6$，$P(\text{乙}) = 0.4$；$P(A|\text{甲}) = 0.02$，$P(A|\text{乙}) = 0.05$。</p>
+<p>$$P(A) = 0.6 \times 0.02 + 0.4 \times 0.05 = 0.032 \text{（全概率公式）}$$</p>
+<p>$$P(\text{甲}|A) = \frac{0.6 \times 0.02}{0.032} = \frac{0.012}{0.032} = \frac{3}{8} = 0.375$$</p>
+<p><strong>解读</strong>：虽然甲厂次品率低，但它产量大，实际贡献的次品比例（3/8 = 37.5%）小于其产量比例（60%）。</p>
+<p><strong>例2（医疗检测）</strong>：某疾病发病率 0.1%，检测阳性的灵敏度（患病检阳性）= 99%，特异度（健康检阴性）= 95%（即健康检出假阳性率 = 5%）。已知检测结果为阳性，求真的患病概率。</p>
+<p>设 $B_1$ = 患病，$B_2$ = 健康；$A$ = 检测阳性。</p>
+<p>$$P(A) = 0.001 \times 0.99 + 0.999 \times 0.05 \approx 0.00099 + 0.04995 = 0.05094$$</p>
+<p>$$P(B_1|A) = \frac{0.001 \times 0.99}{0.05094} \approx \frac{0.00099}{0.05094} \approx 0.0194 \approx 1.94\%$$</p>
+<p><strong>解读</strong>：即使检测阳性，实际患病概率仍只有约 2%！这反直觉的结果源于疾病发病率极低。此例说明"假阳性"问题在罕见病检测中非常重要。</p>
+<p><strong>例3（两事件简化）</strong>：$P(B) = 0.3$，$P(A|B) = 0.6$，$P(A|\bar{B}) = 0.1$，已知 $A$ 发生，求 $P(B|A)$。</p>
+<p>$$P(A) = 0.3 \times 0.6 + 0.7 \times 0.1 = 0.18 + 0.07 = 0.25$$</p>
+<p>$$P(B|A) = \frac{0.3 \times 0.6}{0.25} = \frac{0.18}{0.25} = 0.72$$</p>
+<h3>高中考试要点</h3>
+<p>高中阶段贝叶斯公式主要考查 $n = 2$ 或 $n = 3$ 的简单情形，步骤：
+1. 列出各 $B_i$ 的先验概率和条件概率
+2. 用全概率公式求 $P(A)$
+3. 代入贝叶斯公式求 $P(B_j|A)$</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>混淆 $P(A|B)$ 和 $P(B|A)$</strong>：两者通常不相等，不能互换</li>
+<li><strong>先验概率与后验概率的关系</strong>：后验 = 先验 × 似然 / 全概率</li>
+<li><strong>忘记用全概率公式计算 $P(A)$</strong>：分母必须用全概率公式</li>
+<li><strong>条件概率的方向</strong>：$P(A|B_j)$ 是"已知 $B_j$ 发生时 $A$ 的概率"，不是反过来</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.4，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/贝叶斯定理">贝叶斯定理 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/493-条件概率-高中.html">条件概率-高中</a></li>
+<li><a href="../atoms/340-条件概率初步.html">全概率公式</a></li>
+<li><a href="../atoms/468-事件相互独立性-高中.html">事件相互独立性-高中</a></li>
+<li><a href="../atoms/361-随机事件概率.html">随机事件概率</a></li>
+<li><a href="../atoms/508-统计推断.html">统计推断</a></li>
+</ul>
+</div>
+</body>
+</html>

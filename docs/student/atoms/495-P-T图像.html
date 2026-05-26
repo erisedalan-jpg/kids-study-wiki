@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P-T图像</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>P-T图像</h1><div class="review-mark" data-stem="495-P-T图像"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: P-T图像, P-T diagram</p><h1>P-T图像</h1>
+<blockquote>
+<p><strong>一句话</strong>：描述一定质量理想气体在压强与温度变化关系中的物理图像，常用于直观分析等容变化（查理定律）和比较不同体积下的等容线。
+<strong>English</strong>: A graph depicting the relationship between pressure and temperature for a given mass of ideal gas, commonly used to analyze isochoric processes (Charles’s law).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：对一定质量的理想气体，状态参量遵从 $pV = nRT$。在 $p$–$T$ 坐标平面内：</li>
+<li><strong>等容线</strong>：当体积 $V$ 不变时，$p = \dfrac{nR}{V} T$，为过坐标原点（热力学温标）的倾斜直线，斜率为 $k = \dfrac{nR}{V}$。体积不同，等容线斜率不同，斜率越大体积越小。</li>
+<li><strong>等压线</strong>：压强不变时，$p$–$T$ 图为平行于 $T$ 轴的水平直线；若用摄氏温标 $t$，等压线仍为水平线，等容线不过原点而交 $t$ 轴于 $-273.15^\circ\text{C}$。</li>
+<li>
+<p>通常命题中 $p$–$T$ 图像的核心是等容线的识别与斜率比较。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：</p>
+</li>
+<li><strong>判断变化过程</strong>：在 $p$–$T$ 图上，若图线为倾斜直线且通过原点（热力学温标），则为等容变化；若为水平线，则为等压变化。</li>
+<li><strong>比较体积大小</strong>：在同一 $p$–$T$ 图中作一条等温辅助线（垂直于 $T$ 轴），根据 $pV$ 乘积 $= nRT$，等温条件下 $p \propto \dfrac{1}{V}$，或直接用等容线斜率 $k = \dfrac{nR}{V}$，斜率越大对应的体积 $V$ 越小。</li>
+<li>
+<p><strong>综合热力学定律</strong>：结合热力学第一定律 $\Delta U = Q + W$，判断某过程的做功（$W$ 由 $p$–$V$ 图或 $p$–$T$ 图结合 $V$ 变化分析）、内能变化（理想气体内能只取决于温度）和吸放热。</p>
+</li>
+<li>
+<p><strong>典型应用</strong>：高考常出现等容线比较题——给出 $1$、$2$ 两条等容线，要求判断 $V_1$ 与 $V_2$ 的大小关系；或者给出一段由 $A$ 到 $B$ 的倾斜直线（可能不通过原点），要求判断该过程是否为等容、压强与温度如何变化、外界对气体做功情况等。例如，$A \rightarrow B$ 为等容升压升温过程，可结合热力学定律判断吸热。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆温标：用摄氏温标 $t$ 时，等容线方程变为 $p = \dfrac{nR}{V}(t + 273.15)$，直线不过原点，但仍满足 $p \propto (t+273.15)$，斜率不变。常错误地认为该直线不遵守查理定律。</li>
+<li>斜率与体积关系记反：误认为等容线斜率越大体积越大。应以 $p = \dfrac{nR}{V}T$ 为准，$k = \dfrac{nR}{V}$，斜率与体积成反比。</li>
+<li>把等压线误绘为倾斜线，或将等容线画成水平线。</li>
+<li>忽略气体质量变化：当气体发生泄漏或充气时，$n$ 改变，等容线斜率不再仅由 $V$ 决定，不能简单比较体积。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>压强</td>
+<td>pressure</td>
+<td>气体对单位面积器壁的压力，符号 $p$</td>
+</tr>
+<tr>
+<td>温度</td>
+<td>temperature</td>
+<td>热力学温度 $T$（K）或摄氏温度 $t$（℃）</td>
+</tr>
+<tr>
+<td>等容线</td>
+<td>isochore</td>
+<td>体积不变时 $p$–$T$ 关系曲线</td>
+</tr>
+<tr>
+<td>查理定律</td>
+<td>Charles’s law</td>
+<td>一定质量气体，体积不变时 $p \propto T$</td>
+</tr>
+<tr>
+<td>绝对零度</td>
+<td>absolute zero</td>
+<td>热力学温标的零点，约 $-273.15^\circ\text{C}$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理 · 热学 · 气体实验定律与理想气体状态方程</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/446-理想气体状态方程.html">理想气体状态方程</a></li>
+<li><a href="../atoms/430-查理定律.html">查理定律</a></li>
+<li><a href="../atoms/447-盖吕萨克定律.html">盖-吕萨克定律</a></li>
+<li><a class="dead" title="未收录">p-V图像</a></li>
+<li><a class="dead" title="未收录">热力学第一定律在气体中的应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2016-新课标Ⅱ-13.html">2016-新课标Ⅱ-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

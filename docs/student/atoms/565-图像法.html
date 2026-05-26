@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>图像法</h1><div class="review-mark" data-stem="565-图像法"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 图像法</p><h1>图像法</h1>
+<blockquote>
+<p><strong>一句话</strong>：图像法是通过分析物理量间的函数图像，利用图线的斜率、截距、面积、交点等几何特征，直接求解或推断物理量、物理规律的方法。
+<strong>English</strong>: A method of analyzing the functional graphs of physical quantities to extract information such as slope, intercept, area, and intersection points for solving or inferring physical quantities and laws.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+图像法的基础是物理量之间的函数关系。将自变量与因变量的对应数据描绘在坐标平面上，形成图线。其核心物理意义体现在：
+- <strong>斜率</strong>：表示因变量对自变量的变化率。如 $v\text{-}t$ 图斜率代表加速度 $a = \frac{\Delta v}{\Delta t}$；$U\text{-}I$ 图斜率（对于线性元件）表示电阻 $R = \frac{U}{I}$，但要注意只有过原点的直线斜率才等于电阻，一般曲线切线斜率表示动态电阻。
+- <strong>面积</strong>：图线与坐标轴围成的面积常代表某一累积量。如 $v\text{-}t$ 图中面积表示位移 $x = \int v\, dt$；$F\text{-}x$ 图中面积表示力做的功 $W = \int F\, dx$。
+- <strong>截距</strong>：图线与坐标轴的交点常对应临界条件或初始值。如 $U\text{-}I$ 图纵轴截距为电源电动势 $E$，横轴截距为短路电流 $I_0 = E/r$。
+- <strong>交点</strong>：多条图线的交点代表该坐标值下各量具有相同状态，常用于追及问题、电路匹配等。</p>
+<p><strong>关键方法</strong><br />
+解题时遵循「识图→析图→用图」三步：
+1. <strong>识图</strong>：看清横、纵坐标代表的物理量及单位，明确图像类型（如 $x\text{-}t$、$v\text{-}t$、$F\text{-}a$ 等），注意坐标原点是否从零开始。
+2. <strong>析图</strong>：结合物理公式，写出图线所满足的函数关系，推导斜率和截距的物理表达式，判断面积是否有物理意义。
+3. <strong>用图</strong>：根据问题需求，提取图像的几何信息，代入对应物理公式求解。例如通过 $v\text{-}t$ 图像比较两车的位移差，或由 $P\text{-}V$ 图像比较气体做功大小。</p>
+<p><strong>典型应用</strong><br />
+- <strong>运动学</strong>：给出质点的 $v\text{-}t$ 图像，要求判断速度方向、加速度大小变化、计算某段时间内的位移或路程，或根据两物体的 $v\text{-}t$ 图像分析追及相遇问题。<br />
+- <strong>恒定电流</strong>：根据电阻的 $U\text{-}I$ 曲线或电源的 $U\text{-}I$ 图线，求电阻值、电源电动势和内阻，或通过两图线的交点求工作点。<br />
+- <strong>功能关系</strong>：在 $F\text{-}x$（力-位移）图中，通过曲线下面积计算变力做功，并结合动能定理求解末速度。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆图像类型</strong>：将 $x\text{-}t$ 图线误当作物体运动轨迹，或将 $v\text{-}t$ 图线的交点误认为物体相遇，实际 $v\text{-}t$ 图交点仅表示速度相等，而 $x\text{-}t$ 图交点才表示位置相同。</li>
+<li><strong>斜率误读</strong>：在 $U\text{-}I$ 曲线中，若图线为过原点的曲线，切线的斜率不代表电阻，而应取该点与原点连线的斜率（静态电阻）或切线斜率（动态电阻），需根据题目要求区分。</li>
+<li><strong>面积计算错误</strong>：只有当图线与横轴围成的面积具有物理意义时（如 $v\text{-}t$ 的面积），才能用面积求解。不可盲目对所有图像使用面积法。同时，要注意面积在横轴上方为正、下方为负，如 $v\text{-}t$ 图面积的正负表示位移方向。</li>
+<li><strong>忽视坐标轴物理含义</strong>：不注意横纵坐标是否从零开始、单位是否统一，导致截距和斜率的数值计算错误。例如，$U\text{-}I$ 图象中，纵轴起点不为零时，图线与横轴的交点不是短路电流。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图像法</td>
+<td>graphical method</td>
+<td>利用物理量之间的函数图像分析问题</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>表示一个物理量对另一个物理量的变化率</td>
+</tr>
+<tr>
+<td>截距</td>
+<td>intercept</td>
+<td>图线与坐标轴的交点值，常表示初值或临界值</td>
+</tr>
+<tr>
+<td>面积（图下面积）</td>
+<td>area under graph</td>
+<td>图线与坐标轴围成的面积，常代表累积量</td>
+</tr>
+<tr>
+<td>交点</td>
+<td>intersection point</td>
+<td>多条图线的交点，表示该坐标下各物理量相等</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017年版2020年修订）必修课程“机械运动与物理模型”及“电路及其应用”等相关内容 🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">运动图像(x-t、v-t)</a></li>
+<li><a class="dead" title="未收录">追及与相遇问题</a></li>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/515-做功与能量变化.html">功与能</a></li>
+<li><a class="dead" title="未收录">实验：测定电源的电动势和内阻</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2020-北京-15</a></li>
+<li><a href="../exam/物理/2021-全国乙-10.html">2021-全国乙-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

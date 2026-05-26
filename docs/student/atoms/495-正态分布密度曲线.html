@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正态分布密度曲线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>正态分布密度曲线</h1><div class="review-mark" data-stem="495-正态分布密度曲线"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 正态分布密度曲线, normal density curve, 正态曲线, 钟形曲线, 高斯曲线</p><h2>🎓 正态分布密度曲线</h2>
+<h3>密度函数</h3>
+<p>$X \sim N(\mu, \sigma^2)$ 的概率密度函数（概率密度曲线）：</p>
+<p>$$f(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$</p>
+<h3>曲线的几何特征</h3>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>形状</td>
+<td>钟形，关于 $x = \mu$ 对称</td>
+</tr>
+<tr>
+<td>最高点</td>
+<td>$x = \mu$ 处，$f(\mu) = \dfrac{1}{\sqrt{2\pi}\sigma}$</td>
+</tr>
+<tr>
+<td>拐点</td>
+<td>$x = \mu \pm \sigma$ 处（凸凹转折）</td>
+</tr>
+<tr>
+<td>渐近线</td>
+<td>以 $x$ 轴为渐近线（$f(x) \to 0$ 当 $</td>
+</tr>
+<tr>
+<td>面积</td>
+<td>曲线下总面积 = 1</td>
+</tr>
+</tbody>
+</table>
+<h3>$\mu$ 和 $\sigma$ 对曲线的影响</h3>
+<p><strong>改变 $\mu$（位移）</strong>：
+- $\mu$ 增大 → 曲线整体右移
+- $\mu$ 减小 → 曲线整体左移
+- 形状不变，只是水平平移</p>
+<p><strong>改变 $\sigma$（缩放）</strong>：
+- $\sigma$ 增大 → 曲线变宽变矮（数据更分散）
+- $\sigma$ 减小 → 曲线变窄变高（数据更集中）
+- 对称轴不变</p>
+<p><strong>最高点高度 = $\dfrac{1}{\sqrt{2\pi}\sigma}$</strong>：$\sigma$ 越大，峰值越低。</p>
+<h3>面积与概率的关系</h3>
+<p>密度曲线下 $[a, b]$ 上的面积 = $P(a \leq X \leq b)$。</p>
+<p><strong>关键区间的面积</strong>（$3\sigma$ 原则）：</p>
+<p>$$P(\mu - \sigma &lt; X &lt; \mu + \sigma) \approx 0.6827$$
+$$P(\mu - 2\sigma &lt; X &lt; \mu + 2\sigma) \approx 0.9545$$
+$$P(\mu - 3\sigma &lt; X &lt; \mu + 3\sigma) \approx 0.9973$$</p>
+<h3>标准正态分布曲线</h3>
+<p>$\varphi(x) = \dfrac{1}{\sqrt{2\pi}}e^{-x^2/2}$（$\mu = 0, \sigma = 1$）</p>
+<ul>
+<li>关于 $y$ 轴对称</li>
+<li>最高点在 $(0, \frac{1}{\sqrt{2\pi}}) \approx (0, 0.399)$</li>
+<li>拐点在 $x = \pm 1$</li>
+</ul>
+<p><strong>标准化</strong>：$P(a &lt; X &lt; b) = P\left(\frac{a-\mu}{\sigma} &lt; Z &lt; \frac{b-\mu}{\sigma}\right) = \Phi\left(\frac{b-\mu}{\sigma}\right) - \Phi\left(\frac{a-\mu}{\sigma}\right)$</p>
+<h3>典型例题</h3>
+<p><strong>例1（读图）</strong>：已知 $X \sim N(\mu_1, \sigma_1^2)$ 和 $Y \sim N(\mu_2, \sigma_2^2)$，两曲线中 A 曲线较高较窄，B 曲线较矮较宽，则：</p>
+<ul>
+<li>若 A、B 轴对称位置相同：$\mu_1 = \mu_2$，$\sigma_1 &lt; \sigma_2$（A 更集中）</li>
+<li>若 A 的对称轴在 B 左边：$\mu_1 &lt; \mu_2$</li>
+</ul>
+<p><strong>例2（概率计算）</strong>：$X \sim N(5, 1)$（$\sigma = 1$），已知 $P(4 &lt; X &lt; 6) = 0.6827$，求 $P(X &gt; 6)$。</p>
+<p>$$P(X &gt; 6) = P(X &gt; \mu + \sigma) = \frac{1 - 0.6827}{2} = \frac{0.3173}{2} \approx 0.1587$$</p>
+<p>（利用对称性，两侧各占一半）</p>
+<p><strong>例3（参数估计）</strong>：某种灯泡寿命 $X \sim N(1000, 100^2)$，概率密度曲线在什么点最高？拐点在哪里？</p>
+<ul>
+<li>最高点：$x = \mu = 1000$（小时）</li>
+<li>拐点：$x = \mu \pm \sigma = 1000 \pm 100$，即 $x = 900$ 和 $x = 1100$</li>
+</ul>
+<h3>与频率分布直方图的关系</h3>
+<ul>
+<li>频率分布直方图是样本数据的"离散"表示</li>
+<li>当样本量 $n$ 增大，组距缩小，频率分布直方图趋向<strong>概率密度曲线</strong></li>
+<li>正态曲线是大样本数据的理论极限</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>密度 $f(x) \neq$ 概率</strong>：$f(x)$ 是密度，不是点概率；概率 = 曲线下面积</li>
+<li><strong>$f(x) &gt; 1$ 是可能的</strong>：密度函数值可以大于 1（只要积分 = 1 即合法）</li>
+<li><strong>拐点 $\neq$ 最大值点</strong>：拐点在 $\mu \pm \sigma$，最大值点在 $\mu$</li>
+<li><strong>改变 $\sigma$ 同时改变高度和宽度</strong>：$\sigma$ 增大，峰值降低，宽度增加（面积守恒）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.5，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/正态分布">正态分布 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+<li><a href="../atoms/494-正态分布3σ原则.html">正态分布3σ原则</a></li>
+<li><a href="../atoms/512-连续型随机变量.html">连续型随机变量</a></li>
+<li><a href="../atoms/475-分布函数概念.html">分布函数概念</a></li>
+<li><a href="../atoms/364-频率分布直方图.html">频率分布直方图</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>与圆有关的比例线段</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>与圆有关的比例线段</h1><div class="review-mark" data-stem="1176-与圆有关的比例线段"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[平面几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 与圆有关的比例线段, 圆幂定理, Power of a Point Theorems</p><h1>与圆有关的比例线段</h1>
+<blockquote>
+<p><strong>一句话</strong>：在圆中，由弦、割线、切线所形成的线段满足等积式或等比关系，即相交弦定理、割线定理、切割线定理和切线长定理，统称为圆幂定理。
+<strong>English</strong>: The proportional line segments related to a circle refer to the equal-product or proportional relationships among chords, secants, and tangents, collectively known as the power of a point theorems.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong><br />
+  给定圆 $O$ 及其所在平面内一点 $P$，过 $P$ 作直线与圆相交于两点（或相切于一点）。这些交点的连线被 $P$ 分成的两条线段的乘积为定值，这个定值称为点 $P$ 关于圆 $O$ 的<strong>幂</strong>。<br />
+  具体定理如下（$PA$、$PB$ 等表示相应线段的长）：  </li>
+<li><strong>相交弦定理</strong>（点 $P$ 在圆内）：若弦 $AB$、$CD$ 交于点 $P$，则 $PA \cdot PB = PC \cdot PD$。  </li>
+<li><strong>割线定理</strong>（点 $P$ 在圆外）：若割线 $PAB$、$PCD$ 分别交圆于 $A$、$B$ 和 $C$、$D$（字母顺序由近及远），则 $PA \cdot PB = PC \cdot PD$。  </li>
+<li><strong>切割线定理</strong>（点 $P$ 在圆外）：若 $PT$ 为切线（$T$ 为切点），$PAB$ 为割线，则 $PT^2 = PA \cdot PB$。  </li>
+<li>
+<p><strong>切线长定理</strong>（推论）：从圆外一点引圆的两条切线，它们的切线长相等，且等于该点到割线与圆交点的两条线段的比例中项。  </p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>判断点的位置</strong>：先确定点 $P$ 在圆内、圆上还是圆外，匹配对应定理。  </li>
+<li><strong>设未知量列方程</strong>：通常将待求线段长设为未知数，利用等积式建立方程求解。  </li>
+<li>
+<p><strong>辅助线构造</strong>：连接圆心与切点、连接弦的端点或构造相似三角形（利用弦切角、同弧圆周角相等），是证明定理和解决综合题的核心手段。  </p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考常在选考几何证明、解三角形或解析几何中考查。常见设问：①直接求线段长；②证明线段比例或等积式；③与相似三角形、圆的内接四边形综合求值。<br />
+<strong>场景1</strong>：圆内两弦 $AB$、$CD$ 交于点 $P$，已知 $AP=4$，$BP=6$，$CD=11$，求 $PC$。设 $PC=x$，则 $PD=11-x$，由相交弦定理得 $4\times6 = x(11-x)$，解得 $x=3$ 或 $8$，对应两种情况。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>位置关系误判</strong>：将点在圆内的相交弦定理公式直接用于圆外的割线，忘记“由近及远”的线段选取顺序，导致乘错线段。  </li>
+<li><strong>切割线定理的线段起点</strong>：误把从圆外点到割线较远交点的线段长当作切线平方的对应线段，正确应为 $PA \cdot PB$（$A$ 为较近交点，$B$ 为较远交点）。  </li>
+<li><strong>辅助线方向错误</strong>：在证明切割线定理时，若未准确构造“切点与割线两端点”构成的三角形或错用圆周角对应，会使相似关系无法建立。  </li>
+<li><strong>忽略切线长相等</strong>：涉及两条切线的问题中，往往需先利用切线长相等建立等量关系，再进行代数变形，学生容易忽视而陷入复杂计算。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相交弦定理</td>
+<td>Intersecting Chords Theorem</td>
+<td>圆内两弦交点分线段成等积</td>
+</tr>
+<tr>
+<td>割线定理</td>
+<td>Secant-Secant Theorem</td>
+<td>圆外一点引两割线，外段之积相等</td>
+</tr>
+<tr>
+<td>切割线定理</td>
+<td>Secant-Tangent Theorem</td>
+<td>切线长的平方等于割线外段与全长的乘积</td>
+</tr>
+<tr>
+<td>切线长定理</td>
+<td>Tangent-Segment Theorem</td>
+<td>圆外一点的两条切线长相等</td>
+</tr>
+<tr>
+<td>圆幂</td>
+<td>Power of a Point</td>
+<td>点到圆的线段乘积定值</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：高中平面几何·圆 （需进一步确认模块，当前为 🚧）  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">圆幂定理</a></li>
+<li><a class="dead" title="未收录">圆的切线性质与判定</a></li>
+<li><a class="dead" title="未收录">相似三角形在圆中的应用</a></li>
+<li><a class="dead" title="未收录">弦切角定理</a></li>
+<li><a href="../atoms/766-四点共圆.html">四点共圆</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-22.html">2011-理-22</a></li>
+<li><a href="../exam/数学/2014-理-22.html">2014-理-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

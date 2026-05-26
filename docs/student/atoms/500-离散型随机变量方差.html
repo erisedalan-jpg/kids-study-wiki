@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量方差</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>离散型随机变量方差</h1><div class="review-mark" data-stem="500-离散型随机变量方差"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 离散型随机变量方差, variance of discrete random variable, 方差, D(X), 方差（随机变量）, 标准差（随机变量）</p><h2>🎓 离散型随机变量方差</h2>
+<h3>定义</h3>
+<p>设离散型随机变量 $X$ 的期望为 $E(X) = \mu$，则 $X$ 的<strong>方差</strong>定义为：</p>
+<p>$$\boxed{D(X) = E\left[(X - E(X))^2\right] = \sum_{i=1}^n (x_i - \mu)^2 p_i}$$</p>
+<p><strong>等价计算公式</strong>（常用）：</p>
+<p>$$\boxed{D(X) = E(X^2) - [E(X)]^2}$$</p>
+<p><strong>标准差</strong>：</p>
+<p>$$\sigma(X) = \sqrt{D(X)}$$</p>
+<h3>直观含义</h3>
+<p>方差衡量随机变量<strong>取值的分散程度</strong>（与期望的偏差的平方的平均）：
+- $D(X) = 0$：$X$ 是常数，无波动
+- $D(X)$ 大：取值分散，波动大
+- $D(X)$ 小：取值集中，稳定</p>
+<h3>推导等价公式</h3>
+<p>$$D(X) = E[(X-\mu)^2] = E(X^2 - 2\mu X + \mu^2)$$
+$$= E(X^2) - 2\mu E(X) + \mu^2$$
+$$= E(X^2) - 2\mu^2 + \mu^2 = E(X^2) - \mu^2 = E(X^2) - [E(X)]^2$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（直接计算）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>$\frac{1}{5}$</td>
+<td>$\frac{3}{5}$</td>
+<td>$\frac{1}{5}$</td>
+</tr>
+</tbody>
+</table>
+<p>$E(X) = 1 \times \frac{1}{5} + 2 \times \frac{3}{5} + 3 \times \frac{1}{5} = 2$</p>
+<p><strong>方法一（定义法）</strong>：</p>
+<p>$$D(X) = (1-2)^2 \times \frac{1}{5} + (2-2)^2 \times \frac{3}{5} + (3-2)^2 \times \frac{1}{5}$$
+$$= 1 \times \frac{1}{5} + 0 + 1 \times \frac{1}{5} = \frac{2}{5}$$</p>
+<p><strong>方法二（$E(X^2)$ 法）</strong>：</p>
+<p>$$E(X^2) = 1^2 \times \frac{1}{5} + 2^2 \times \frac{3}{5} + 3^2 \times \frac{1}{5} = \frac{1+12+9}{5} = \frac{22}{5}$$</p>
+<p>$$D(X) = E(X^2) - [E(X)]^2 = \frac{22}{5} - 4 = \frac{2}{5} \; \checkmark$$</p>
+<p><strong>例2（应用）</strong>：两人各独立射击一次，甲命中率 0.8，乙命中率 0.7，设 $X$ = 总命中数，求 $D(X)$。</p>
+<p><strong>解</strong>：设 $X_1$（甲的命中数），$X_2$（乙的命中数），均为两点分布，且独立：</p>
+<p>$$D(X_1) = 0.8 \times 0.2 = 0.16, \quad D(X_2) = 0.7 \times 0.3 = 0.21$$</p>
+<p>$$D(X) = D(X_1 + X_2) = D(X_1) + D(X_2) = 0.37 \quad \text{（独立时方差可加）}$$</p>
+<h3>方差 = 0 的情形</h3>
+<p>若 $D(X) = 0$，则 $X$ 以概率 1 取某个确定值（退化分布）。</p>
+<h3>与统计方差的关系</h3>
+<ul>
+<li><strong>样本方差</strong>（统计）：$s^2 = \frac{1}{n}\sum(x_i - \bar{x})^2$（或除以 $n-1$）</li>
+<li><strong>总体方差</strong> $D(X)$：理论方差，样本方差是它的估计</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>$D(X) = E(X^2) - [E(X)]^2$</strong>：第二项是<strong>期望的平方</strong>，不是期望的期望</li>
+<li><strong>$D(X) \geq 0$ 恒成立</strong>：若算出负值，必有计算错误</li>
+<li><strong>独立时方差可加</strong>：$D(X+Y) = D(X)+D(Y)$ 仅在 $X,Y$ 独立时成立</li>
+<li><strong>方差与标准差单位</strong>：方差是原数据单位的平方，标准差与原数据同单位</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/方差">方差 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/501-离散型随机变量期望.html">离散型随机变量期望</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/469-二项分布.html">二项分布</a></p>
+</li>
+<li>
+<p><a href="../atoms/501-离散型随机变量期望.html">离散型随机变量期望</a></p>
+</li>
+<li><a href="../atoms/492-期望性质.html">期望性质</a></li>
+<li><a href="../atoms/490-方差性质-高中.html">方差性质-高中</a></li>
+<li><a href="../atoms/476-分布列.html">分布列</a></li>
+<li><a class="dead" title="未收录">二项分布期望方差</a></li>
+</ul>
+</div>
+</body>
+</html>

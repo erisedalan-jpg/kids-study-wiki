@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切割线定理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>切割线定理</h1><div class="review-mark" data-stem="700-切割线定理"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 切割线定理, 切线割线定理, Tangent-Secant Theorem</p><h1>切割线定理</h1>
+<blockquote>
+<p><strong>一句话</strong>：从圆外一点引圆的切线和割线，切线长是这点到割线与圆交点的两条线段长的比例中项。<br />
+<strong>English</strong>: The tangent-secant theorem states that if a tangent and a secant intersect at an external point, the square of the tangent’s length equals the product of the secant’s whole length and its external segment.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+设 $P$ 为圆外一点，$PT$ 切圆于 $T$，$PAB$ 为割线交圆于 $A$、$B$（$A$ 离 $P$ 较近），则<br />
+$$PT^2 = PA \cdot PB$$<br />
+此即为切割线定理，是圆幂定理的一种形式。<br />
+该定理的本质源于相似三角形（$\triangle PTA \sim \triangle PBT$），并通过比例式 $PT/PA = PB/PT$ 推出。<br />
+与切割线定理伴生的还有割线定理：若从同一点 $P$ 引两条割线 $PAB$ 与 $PCD$，则 $PA\cdot PB=PC\cdot PD$；以及切线长定理：圆外一点到圆的两条切线长相等。</p>
+<p><strong>关键方法</strong><br />
+在高考解答题或选择填空中，见到圆外一点既有切线又有割线时：<br />
+1. 优先设出切线长 $PT$ 与割线段 $PA$、$PB$；<br />
+2. 使用切割线定理建立二次方程，或用比例中项的形式化简；<br />
+3. 结合勾股定理、相似三角形或圆内接四边形等条件，进一步求解线段长度或证明等积式。  </p>
+<p><strong>典型应用</strong><br />
+- 求线段长度：已知 $PT=4$，$PA=2$，求 $PB$，由 $16=2\cdot PB$ 得 $PB=8$。<br />
+- 证明等积式：证明 $PA \cdot PB = PC \cdot PD$ 时，若题目中出现切线和割线，可先通过切割线定理将切线平方转化为积，再结合割线定理完成。<br />
+- 综合题：在坐标系圆与直线位置关系的设问中，利用切割线定理将几何条件代数化，简化计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆切线与割线段的对应关系</strong>：误记 $PT^2 = PA^2$ 或 $PT^2 = PB^2$，必须记住切线长是割线两段的 <strong>比例中项</strong>，不是相等关系。  </li>
+<li><strong>线段角色错位</strong>： $PB$ 必须是割线全长，$PA$ 是割线圆外部分，不能颠倒；若把 $PA$ 当作全长会直接导致方程出错。  </li>
+<li><strong>误用定理条件</strong>：只有从同一点引出的切线和割线才满足切割线定理；若图中切线来自不同点或割线不经过那个点，贸然使用会导致错误。  </li>
+<li><strong>忽略切线长定理配合</strong>：很多题中 $PT$ 并非直接给出，需先利用“两条切线长相等”将已知转移到目标三角形中，再套用切割线定理。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切割线定理</td>
+<td>Tangent-Secant Theorem</td>
+<td>圆外一点引切线与割线的线段长度关系</td>
+</tr>
+<tr>
+<td>割线定理</td>
+<td>Intersecting Secants Theorem</td>
+<td>圆外一点引两条割线的线段长度关系</td>
+</tr>
+<tr>
+<td>切线长定理</td>
+<td>Two Tangent Theorem</td>
+<td>圆外一点到圆的两条切线长度相等</td>
+</tr>
+<tr>
+<td>圆幂定理</td>
+<td>Power of a Point Theorem</td>
+<td>统一切割线、割线、相交弦的幂关系</td>
+</tr>
+<tr>
+<td>比例中项</td>
+<td>geometric mean</td>
+<td>满足 $a/x = x/b$ 的 $x$</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">相交弦定理</a></li>
+<li><a class="dead" title="未收录">圆周角定理</a></li>
+<li><a class="dead" title="未收录">圆幂定理</a></li>
+<li><a class="dead" title="未收录">相似三角形判定</a></li>
+<li><a class="dead" title="未收录">切线长定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-05.html">2011-理-05</a></li>
+<li><a href="../exam/数学/2013-理-11.html">2013-理-11</a></li>
+<li><a href="../exam/数学/2013-理-22.html">2013-理-22</a></li>
+<li><a href="../exam/数学/2014-文-22.html">2014-文-22</a></li>
+</ul></div>
+</div>
+</body>
+</html>

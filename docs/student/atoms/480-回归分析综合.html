@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>回归分析综合</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>回归分析综合</h1><div class="review-mark" data-stem="480-回归分析综合"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 回归分析综合, comprehensive regression analysis, 回归分析, 综合回归, 残差</p><h2>🎓 回归分析综合</h2>
+<h3>回归分析的完整流程</h3>
+<pre><code>散点图 → 判断相关性 → 计算相关系数 → 选择模型 → 建立回归方程 → 预测与应用
+</code></pre>
+<h3>各步骤要点</h3>
+<p><strong>步骤 1：散点图</strong>
+- 描绘数据点，直观判断相关方向和类型
+- 判断是线性还是非线性关系</p>
+<p><strong>步骤 2：计算相关系数 $r$</strong></p>
+<p>$$r = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2 \sum(y_i-\bar{y})^2}}$$</p>
+<ul>
+<li>$|r| \geq 0.75$（或教材规定值）：线性相关显著，可建立线性回归</li>
+<li>$|r| &lt; 0.75$：线性相关不显著，考虑其他模型或放弃</li>
+</ul>
+<p><strong>步骤 3：建立回归方程</strong></p>
+<p>$$\hat{y} = \hat{b}x + \hat{a}, \quad \hat{b} = \frac{\sum x_iy_i - n\bar{x}\bar{y}}{\sum x_i^2 - n\bar{x}^2}, \quad \hat{a} = \bar{y} - \hat{b}\bar{x}$$</p>
+<p><strong>步骤 4：解读与预测</strong>
+- 解读斜率和截距的实际含义
+- 在样本范围内预测
+- 注意外推风险</p>
+<h3>综合例题</h3>
+<p><strong>例（完整解题）</strong>：某地广告投入 $x$（万元）和销售额 $y$（万元）的 6 组数据：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>4</td>
+<td>5</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解</strong>：</p>
+<p>$n=6$，$\bar{x} = 3.5$，$\bar{y} = \frac{49}{6} \approx 8.17$</p>
+<p>$\sum x_iy_i = 1\times4 + 2\times5 + 3\times8 + 4\times9 + 5\times10 + 6\times13 = 4+10+24+36+50+78 = 202$</p>
+<p>$\sum x_i^2 = 1+4+9+16+25+36 = 91$</p>
+<p>$\sum y_i^2 = 16+25+64+81+100+169 = 455$</p>
+<p>$\sum(x_i-\bar{x})(y_i-\bar{y}) = \sum x_iy_i - n\bar{x}\bar{y} = 202 - 6\times3.5\times\frac{49}{6} = 202 - 3.5\times49 = 202 - 171.5 = 30.5$</p>
+<p>$\sum(x_i-\bar{x})^2 = \sum x_i^2 - n\bar{x}^2 = 91 - 6\times12.25 = 91 - 73.5 = 17.5$</p>
+<p>$\sum(y_i-\bar{y})^2 = 455 - 6\times\bar{y}^2 = 455 - 6\times\frac{49^2}{36} = 455 - \frac{2401}{6} \approx 455 - 400.17 = 54.83$</p>
+<p><strong>相关系数</strong>：</p>
+<p>$$r = \frac{30.5}{\sqrt{17.5 \times 54.83}} = \frac{30.5}{\sqrt{959.5}} \approx \frac{30.5}{30.98} \approx 0.984$$</p>
+<p>$|r| = 0.984 &gt; 0.75$，线性相关显著。</p>
+<p><strong>回归方程</strong>：</p>
+<p>$$\hat{b} = \frac{30.5}{17.5} \approx 1.743 \approx 1.7$$</p>
+<p>$$\hat{a} = 8.17 - 1.7 \times 3.5 = 8.17 - 5.95 = 2.22 \approx 2.2$$</p>
+<p>$\hat{y} = 1.7x + 2.2$</p>
+<p><strong>预测</strong>：当广告投入 $x = 7$ 万元时：</p>
+<p>$$\hat{y} = 1.7 \times 7 + 2.2 = 11.9 + 2.2 = 14.1 \text{ 万元}$$</p>
+<p>（$x=7$ 略超出样本范围，预测结果仅供参考）</p>
+<p><strong>解读</strong>：广告投入每增加 1 万元，销售额预期增加约 1.7 万元。</p>
+<h3>回归分析的限制</h3>
+<table>
+<thead>
+<tr>
+<th>限制</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>外推风险</td>
+<td>超出样本 $x$ 范围，预测不可靠</td>
+</tr>
+<tr>
+<td>因果关系</td>
+<td>回归不证明因果，仅表示关联</td>
+</tr>
+<tr>
+<td>模型适用性</td>
+<td>线性模型不一定最优，需结合散点图</td>
+</tr>
+<tr>
+<td>异常值影响</td>
+<td>少数极端值可显著改变回归方程</td>
+</tr>
+<tr>
+<td>遗漏变量</td>
+<td>可能存在未考虑的影响因素</td>
+</tr>
+</tbody>
+</table>
+<h3>高考常见题型</h3>
+<ol>
+<li><strong>给数据求回归方程</strong>：完整计算流程（计算量大，需熟练）</li>
+<li><strong>给回归方程求预测</strong>：直接代入 $x$，注意单位</li>
+<li><strong>解读回归系数</strong>：$\hat{b}$ 的实际含义（$x$ 每增加 1 单位，$y$ 增加 $\hat{b}$）</li>
+<li><strong>验证回归直线过中心点</strong>：$(\bar{x}, \bar{y})$ 是否在方程上</li>
+<li><strong>判断模型是否合适</strong>：结合 $|r|$ 值</li>
+</ol>
+<h3>易错点</h3>
+<ol>
+<li><strong>中间保留精度</strong>：$\bar{x}$、$\bar{y}$ 至少保留 2-3 位小数</li>
+<li><strong>回归方程用 $\hat{y}$</strong>：预测值用 $\hat{y}$，不是 $y$（$y$ 是实际值）</li>
+<li><strong>先验证相关性</strong>：若 $|r|$ 小，不应建立线性回归方程</li>
+<li><strong>中心点验算</strong>：代入 $\bar{x}$ 应得 $\bar{y}$，偏差大说明计算有误</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/回归分析">回归分析 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/491-最小二乘法.html">最小二乘法</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/341-概率应用.html">概率应用</a></p>
+</li>
+<li>
+<p><a href="../atoms/488-散点图.html">散点图</a></p>
+</li>
+<li><a href="../atoms/359-统计案例.html">相关系数</a></li>
+<li><a href="../atoms/491-最小二乘法.html">最小二乘法</a></li>
+<li><a href="../atoms/481-回归直线方程.html">回归直线方程</a></li>
+<li><a href="../atoms/514-非线性回归.html">非线性回归</a></li>
+<li><a href="../atoms/508-统计推断.html">统计推断</a></li>
+</ul>
+</div>
+</body>
+</html>

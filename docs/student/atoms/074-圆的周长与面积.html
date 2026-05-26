@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的周长与面积</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>圆的周长与面积</h1><div class="review-mark" data-stem="074-圆的周长与面积"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 圆]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 圆的周长与面积, circle perimeter area, 圆周长, 圆面积</p><h1>圆的周长与面积</h1>
+<blockquote>
+<p><strong>一句话</strong>：圆的周长 C = 2πr，面积 S = πr²——两个公式都靠"π"把圆的弯弯曲曲的边界转化成可以计算的数字。
+<strong>English</strong>: A circle's circumference is C = 2πr and its area is S = πr² — both formulas use π to turn a curved boundary into something we can calculate.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>圆的基本元素</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆心</td>
+<td>O</td>
+<td>圆的中心点</td>
+</tr>
+<tr>
+<td>半径</td>
+<td>r</td>
+<td>圆心到圆上任意一点的距离（每条都等长）</td>
+</tr>
+<tr>
+<td>直径</td>
+<td>d</td>
+<td>过圆心的最长弦，d = 2r</td>
+</tr>
+<tr>
+<td>弧</td>
+<td>—</td>
+<td>圆上两点之间的曲线部分</td>
+</tr>
+<tr>
+<td>弦</td>
+<td>—</td>
+<td>圆上两点之间的线段（不一定过圆心）</td>
+</tr>
+</tbody>
+</table>
+<h3>圆的周长公式</h3>
+<p>$$C = \pi d = 2\pi r$$</p>
+<p><strong>推导思路：</strong> 由圆周率的定义 π = C/d，可得 C = πd。因为 d = 2r，所以 C = 2πr。</p>
+<blockquote>
+<p><strong>例 1</strong>：一个圆的半径 r = 5 cm，求周长。
+C = 2 × 3.14 × 5 = <strong>31.4 cm</strong></p>
+<p><strong>例 2</strong>：一个圆的直径 d = 8 m，求周长。
+C = 3.14 × 8 = <strong>25.12 m</strong></p>
+</blockquote>
+<p><strong>逆用公式：</strong>
+- 已知周长求半径：$r = \dfrac{C}{2\pi}$
+- 已知周长求直径：$d = \dfrac{C}{\pi}$</p>
+<h3>圆的面积公式</h3>
+<p>$$S = \pi r^2$$</p>
+<p><strong>推导方法——化圆为长方形：</strong></p>
+<p>把圆剪成许多小扇形（比如 16 个），把这些扇形交错拼接起来，会得到一个近似的<strong>长方形</strong>：</p>
+<ul>
+<li><strong>长</strong> ≈ 圆周长的一半 = πr</li>
+<li><strong>宽</strong> = r（半径）</li>
+<li>面积 = 长 × 宽 = πr × r = <strong>πr²</strong></li>
+</ul>
+<p>扇形越多，拼出来的形状越接近长方形，面积公式也越精确。</p>
+<blockquote>
+<p><strong>例 3</strong>：一个圆的半径 r = 3 cm，求面积。
+S = 3.14 × 3² = 3.14 × 9 = <strong>28.26 cm²</strong></p>
+<p><strong>例 4</strong>：已知直径 d = 10 cm，求面积。
+r = d/2 = 5 cm，S = 3.14 × 5² = <strong>78.5 cm²</strong>
+⚠️ 注意：公式中的 r 是<strong>半径</strong>，给出直径要先除以 2！</p>
+</blockquote>
+<h3>常见组合图形</h3>
+<p><strong>半圆：</strong> 周长 = 直径 + 半个圆周 = $2r + \pi r$；面积 = $\dfrac{\pi r^2}{2}$</p>
+<p><strong>圆环：</strong> 面积 = 大圆面积 − 小圆面积 = $\pi R^2 - \pi r^2 = \pi(R^2 - r^2)$</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>积分推导圆面积</h3>
+<p>用积分，可以精确证明 $S = \pi r^2$：</p>
+<p>将半径为 r 的圆分成无数个同心环，每个环的半径为 x（0 ≤ x ≤ r），宽度为 dx，面积约为 $2\pi x \cdot dx$：</p>
+<p>$$S = \int_0^r 2\pi x \, dx = 2\pi \cdot \frac{x^2}{2} \bigg|_0^r = \pi r^2$$</p>
+<p>这正是初中化圆为长方形方法的极限形式——把无穷多个极细的环展开，铺成一个直角三角形，底为 $2\pi r$，高为 r，面积 $= \dfrac{1}{2} \cdot 2\pi r \cdot r = \pi r^2$。</p>
+<h3>球、圆柱、圆锥的关系</h3>
+<p>设半径均为 r，高为 2r（圆柱高 = 直径）：</p>
+<table>
+<thead>
+<tr>
+<th>图形</th>
+<th>体积</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆柱</td>
+<td>$\pi r^2 \cdot 2r = 2\pi r^3$</td>
+</tr>
+<tr>
+<td>球</td>
+<td>$\dfrac{4}{3}\pi r^3$</td>
+</tr>
+<tr>
+<td>圆锥（高=2r）</td>
+<td>$\dfrac{1}{3}\pi r^2 \cdot 2r = \dfrac{2}{3}\pi r^3$</td>
+</tr>
+</tbody>
+</table>
+<p><strong>阿基米德发现</strong>：等高等底时，圆柱 : 球 : 圆锥 = 3 : 2 : 1！这是他最引以为豪的发现，甚至刻在了他的墓碑上。</p>
+<h3>等周不等积（等周问题）</h3>
+<p><strong>等周定理（Isoperimetric Theorem）</strong>：在所有周长相同的平面图形中，<strong>圆的面积最大</strong>。</p>
+<p>数学上：对任意平面封闭曲线，若周长为 L，面积为 A，则：</p>
+<p>$$4\pi A \leq L^2$$</p>
+<p>等号当且仅当图形为圆时成立。这解释了为什么肥皂泡是球形（在相同的体积下，球的表面积最小——三维版的等周定理）。</p>
+<h3>欧拉恒等式与圆</h3>
+<p>复数 $e^{i\theta} = \cos\theta + i\sin\theta$（欧拉公式）描述了单位圆上的点：</p>
+<p>当 θ 从 0 变化到 2π，$e^{i\theta}$ 绕单位圆转一圈，"绕行"的弧长正是 $2\pi r = 2\pi$（r=1）。</p>
+<p>圆不只是几何图形，更是复数指数函数的几何化身。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆</td>
+<td>circle</td>
+<td>n.</td>
+<td>平面图形</td>
+</tr>
+<tr>
+<td>圆心</td>
+<td>center</td>
+<td>n.</td>
+<td>中心点</td>
+</tr>
+<tr>
+<td>半径</td>
+<td>radius</td>
+<td>n.</td>
+<td>圆心到边的距离</td>
+</tr>
+<tr>
+<td>直径</td>
+<td>diameter</td>
+<td>n.</td>
+<td>过圆心的弦，d=2r</td>
+</tr>
+<tr>
+<td>周长</td>
+<td>circumference</td>
+<td>n.</td>
+<td>圆的一圈长度</td>
+</tr>
+<tr>
+<td>面积</td>
+<td>area</td>
+<td>n.</td>
+<td>圆所围的区域大小</td>
+</tr>
+<tr>
+<td>弧</td>
+<td>arc</td>
+<td>n.</td>
+<td>圆上一段曲线</td>
+</tr>
+<tr>
+<td>弦</td>
+<td>chord</td>
+<td>n.</td>
+<td>圆上两点的线段</td>
+</tr>
+<tr>
+<td>扇形</td>
+<td>sector</td>
+<td>n.</td>
+<td>两条半径夹住的"饼形"</td>
+</tr>
+<tr>
+<td>半圆</td>
+<td>semicircle</td>
+<td>n.</td>
+<td>圆的一半</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>圆的周长等于 2πr。</td>
+<td>The circumference of a circle equals 2πr.</td>
+</tr>
+<tr>
+<td>圆的面积等于 πr²。</td>
+<td>The area of a circle equals πr².</td>
+</tr>
+<tr>
+<td>直径是半径的 2 倍。</td>
+<td>The diameter is twice the radius.</td>
+</tr>
+<tr>
+<td>给出直径，先除以 2 再代入公式。</td>
+<td>When given the diameter, divide by 2 first before using the formula.</td>
+</tr>
+<tr>
+<td>这个圆的半径是 5 厘米，面积是多少？</td>
+<td>The radius of this circle is 5 cm. What is its area?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 圆形与几何科普绘本（适龄 5-9 岁）请家长在书店挑选，推荐含实物图片对比的版本。</li>
+<li>🚧 英文推荐 <em>Sir Cumference and the First Round Table</em> (Cindy Neuschwander 著)，用骑士故事介绍圆的概念。（<strong>具体版本待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"为什么圆面积公式是 πr²？"</strong> → 可以说："我们可以把圆切成很多细细的扇形，像花瓣一样交错拼起来，就变成了一个长方形：长是半个周长（πr），宽是半径（r），面积就是 πr × r = πr²！"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"算面积时为什么要用半径不是直径？"</strong> → 可以说："公式 S=πr² 里用的是 r（半径）。如果题目给的是直径，要先把直径除以 2 变成半径，这是最常见的错误！"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"圆有无穷多条半径吗？"</strong> → 可以说："是的！从圆心出发，朝任何方向画线到圆上都是一条半径，可以画无穷多条，而且每条长度都相同——这正是圆最特别的地方。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 用圆规画一个半径 3 cm 的圆，让孩子量量周长（用线绕一圈再量直线长度），算算 3.14×6，和实测比较误差。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学六年级上册.pdf</a> 第 5 单元《圆》(p55-77)</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第三学段"图形与几何——圆的认识、周长与面积"</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/圆</li>
+<li><strong>拓展阅读</strong>：积分推导圆面积（高中微积分）；等周定理（几何优化）；阿基米德与球体积（数学史）；欧拉公式（复分析）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/073-圆周率.html">圆周率</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/079-圆锥.html">圆锥</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+</div>
+</body>
+</html>

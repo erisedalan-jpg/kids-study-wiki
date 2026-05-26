@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>球</h1><div class="review-mark" data-stem="021-球"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[学前, 小学, 初中, 高中]</span><span><strong>主题</strong>[几何, 立体图形, 形状启蒙]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 球, sphere, 球体, 圆球</p><h1>球</h1>
+<blockquote>
+<p><strong>一句话</strong>：像皮球、地球仪——表面光滑、能向各方向滚。
+<strong>English</strong>: A sphere has a perfectly round surface and can roll in any direction.</p>
+</blockquote>
+<hr />
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<h3>球的定义</h3>
+<p>球（sphere）是这样的立体：<strong>空间中到一个固定点（球心）距离相等的所有点的集合。</strong> 这个固定距离叫<strong>半径（radius）</strong>。</p>
+<p>因为每一点到球心距离都一样，球就没有"哪面更近、哪面更远"的区别——表面处处对称，没有角，没有棱。</p>
+<h3>球 vs 圆柱的滚动</h3>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>球</th>
+<th>圆柱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能向哪个方向滚？</td>
+<td><strong>任何方向</strong></td>
+<td>只能沿一个方向（垂直于轴）</td>
+</tr>
+<tr>
+<td>表面</td>
+<td>完全光滑曲面，无棱无角</td>
+<td>有两个圆面边缘（棱）</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>放在平面上会动</td>
+<td>立起来很稳，倒下来才滚</td>
+</tr>
+</tbody>
+</table>
+<h3>生活中的球形</h3>
+<ul>
+<li>皮球、篮球、乒乓球、台球——运动中要求能向任何方向运动</li>
+<li>肥皂泡——表面张力使其自然形成球形（<strong>最省表面积的形状</strong>）</li>
+<li>地球仪——地球近似球形</li>
+</ul>
+<p><strong>为什么肥皂泡是球形？</strong> 表面张力让液膜尽量缩小，而同样体积的形状中，球的表面积最小。这叫<strong>等周问题</strong>——数学上可以严格证明，球是"最省材料"的容器。（<strong>待家长核对，此为简化描述</strong>）</p>
+<p>想了解更多，可以看 <a href="../atoms/020-圆柱.html">圆柱</a>、<a href="../atoms/018-长方体.html">长方体</a>、<a href="../atoms/019-正方体.html">正方体</a>。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>体积与表面积公式</h3>
+<p>设球的半径为 r：</p>
+<pre><code>体积 V = (4/3)πr³
+表面积 S = 4πr²
+</code></pre>
+<p>这两个公式由阿基米德（Archimedes）最早推导（约公元前 250 年）。阿基米德发现，球的体积正好是其<strong>外切圆柱体积的 2/3</strong>，他非常珍视这个发现，据说要求在墓碑上刻上球与圆柱图样。（<strong>待家长核对历史细节</strong>）</p>
+<h3>球面几何：非欧几何的入门</h3>
+<p>在球面上，"直线"变成了<strong>大圆弧</strong>（great circle，如赤道、经线），球面几何与平面几何有显著不同：</p>
+<ul>
+<li>球面三角形的内角和 <strong>&gt; 180°</strong>（平面是恰好 180°）</li>
+<li>球面上两点之间的最短路径是大圆弧，这正是飞机的最优航线原理</li>
+</ul>
+<p>球面几何是<strong>非欧几里得几何</strong>的一个实例，19 世纪数学家高斯、黎曼等人发展了这门学问，后来成为广义相对论（弯曲时空）的数学基础。</p>
+<h3>地球不是完美的球</h3>
+<p>地球因自转产生的离心力，赤道略向外鼓，是一个<strong>椭球体（oblate spheroid）</strong>：赤道半径约 6378 km，极半径约 6357 km，差约 21 km（相对差约 0.3%）。在大多数计算和地图中，近似为球形引入的误差是可以接受的。</p>
+<h3>球谐函数与量子力学</h3>
+<p>在量子力学中，氢原子电子的轨道概率分布由<strong>球谐函数（spherical harmonics）</strong>描述——这是一族定义在球面上的特殊函数，是数学物理中最优美的函数系之一。化学中 s/p/d/f 轨道的形状，正来自不同阶次的球谐函数。（<strong>待家长核对，此为简化科普</strong>）</p>
+<h3>行星趋向球形的物理原因</h3>
+<p>引力是各向同性的（各方向一样强），大质量天体在引力作用下会把物质往质量中心拉。当天体质量足够大，引力强到能克服固体强度时，各个方向受力相同使天体趋向球形。这被称为<strong>流体静力平衡（hydrostatic equilibrium）</strong>，是行星和恒星为球形的物理根源。（<strong>待家长核对</strong>）</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>球</td>
+<td>sphere</td>
+<td>n.</td>
+<td>数学名称</td>
+</tr>
+<tr>
+<td>皮球 / 球体</td>
+<td>ball</td>
+<td>n.</td>
+<td>日常用语</td>
+</tr>
+<tr>
+<td>圆的 / 球形的</td>
+<td>round / spherical</td>
+<td>adj.</td>
+<td>形容球形</td>
+</tr>
+<tr>
+<td>光滑</td>
+<td>smooth</td>
+<td>adj.</td>
+<td>无棱无角</td>
+</tr>
+<tr>
+<td>滚动</td>
+<td>roll</td>
+<td>v.</td>
+<td>球的运动</td>
+</tr>
+<tr>
+<td>半径</td>
+<td>radius</td>
+<td>n.</td>
+<td>球心到表面</td>
+</tr>
+<tr>
+<td>球心</td>
+<td>center</td>
+<td>n.</td>
+<td>球的中心点</td>
+</tr>
+<tr>
+<td>大圆</td>
+<td>great circle</td>
+<td>n.</td>
+<td>球面最短路径</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地球的形状接近球形。</td>
+<td>The shape of the Earth is close to a sphere.</td>
+</tr>
+<tr>
+<td>球可以向任何方向滚动。</td>
+<td>A ball can roll in any direction.</td>
+</tr>
+<tr>
+<td>肥皂泡是球形的。</td>
+<td>A soap bubble is spherical.</td>
+</tr>
+<tr>
+<td>球没有棱，也没有角。</td>
+<td>A sphere has no edges and no corners.</td>
+</tr>
+<tr>
+<td>球的表面积等于 4πr²。</td>
+<td>The surface area of a sphere equals 4πr².</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📖 相关绘本</h2>
+<ul>
+<li>🚧 专门以球形（sphere）为主题的绘本较少，家长可寻找以"各种球类运动"或"地球/宇宙"为主题的科普童书，自然带出球形概念。适龄：3-6 岁。</li>
+<li>🚧 英文绘本可查找 "round" 或 "ball" 主题低幼认知书；《Round Is a Mooncake》(Roseanne Thong) 也涵盖圆/球形物体，可配合使用。（<strong>具体球体专项绘本待家长核实</strong>）</li>
+</ul>
+<hr />
+<h2>🗣️ 家长讲解话术</h2>
+<ul>
+<li>
+<p>孩子可能问 <strong>"地球是球吗？"</strong> → 可以说："差不多！地球非常接近球形，但因为自转，赤道那一圈稍微鼓出来一点点，准确叫'椭球体'。不过这个差别很小，从太空看地球，就是一个漂亮的蓝色球。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"球为什么能向任何方向滚？"</strong> → 可以说："因为球的表面处处一样圆——不管哪面朝下，球接触地面的感觉都是一样的，所以推哪边它就往哪边滚。圆柱不行，因为圆柱两端是平的，侧面是弯的，两种感觉不一样。"</p>
+</li>
+<li>
+<p>孩子可能问 <strong>"鸡蛋是球吗？"</strong> → 可以说："不完全是。鸡蛋是'卵形'，一头大一头小，不是所有地方都一样圆。数学上，完美的球是每个点到中心距离都完全相同；鸡蛋做不到这一点。不过鸡蛋的形状很特别，既坚固又省材料，鸟类演化出这个形状是有原因的。"</p>
+</li>
+<li>
+<p><strong>共读小活动：</strong> 把皮球、圆柱形水瓶、积木方块各一个放在稍微倾斜的木板上，看哪个先滚下去，哪个滚得最顺——比较球、圆柱、长方体滚动能力的差异，直观感受形状的不同。</p>
+</li>
+</ul>
+<hr />
+<h2>📺 讲解版（开屏对孩子讲时用）</h2>
+<p>🚧 占位。需要时用触发短语 6️⃣（轻量）或 7️⃣（精装）让 Claude 填充。</p>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第一学段"图形与几何"；高中立体几何（<strong>待家长核对具体页码</strong>）</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/小学/数学/人教版/义务教育教科书 · 数学一年级上册.pdf</a> 第 4 单元《认识图形（一）》(教材 p34-38)；高中数学立体几何；高中地理（地球形状）（<strong>待家长核对版本</strong>）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/球</li>
+<li><strong>拓展阅读</strong>：阿基米德球与圆柱关系证明（数学史）；球面几何与非欧几何科普；流体静力平衡（天文科普）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-07，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/020-圆柱.html">圆柱</a></li>
+<li><strong>延伸</strong>：<a class="dead" title="未收录">观察物体</a></li>
+</ul>
+<h2>📚 素材</h2>
+<p>🚧</p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-文-16.html">2011-文-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

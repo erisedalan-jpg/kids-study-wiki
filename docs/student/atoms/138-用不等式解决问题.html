@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>用不等式解决问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>用不等式解决问题</h1><div class="review-mark" data-stem="138-用不等式解决问题"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 不等式与不等式组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 用不等式解决问题, solving problems with inequalities, 不等式应用, 不等式解题</p><h2>课本定义</h2>
+<p>用不等式解决实际问题的步骤：设未知数 → 依题意列不等式（或不等式组）→ 解不等式 → 检验解的合理性 → 得出结论。核心是将实际问题中的"范围、至少、至多、不超过"等转化为不等式。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"把生活里的'够不够'变成数学"</h3>
+<p><strong>什么时候用不等式？</strong></p>
+<p>生活中很多问题不是"等于多少"，而是"至少""至多""不超过""不低于"这样的范围问题，就需要用不等式！</p>
+<p><strong>关键词翻译：</strong>
+| 生活用语 | 数学不等式 |
+|---------|-----------|
+| 至少 a | ≥ a |
+| 至多 a | ≤ a |
+| 不超过 a | ≤ a |
+| 不低于 a | ≥ a |
+| 大于 a | &gt; a |
+| 小于 a | &lt; a |
+| 在 a 到 b 之间 | a ≤ x ≤ b |</p>
+<p><strong>解题步骤（和方程类似）：</strong>
+1. 设未知数（设 x 为……）
+2. 找出不等关系，列不等式
+3. 解不等式
+4. 看答案是否符合实际（如人数要是整数、不能为负数等）
+5. 写结论</p>
+<p><strong>例子：</strong> 小明去买铅笔，每支 1.5 元，他手里有 20 元，最多能买几支？</p>
+<p>设买 x 支，1.5x ≤ 20，x ≤ 20/1.5 ≈ 13.3</p>
+<p>因为 x 是整数，所以最多买 <strong>13 支</strong>。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>用不等式解实际问题的模型</h3>
+<p><strong>常见问题类型：</strong></p>
+<table>
+<thead>
+<tr>
+<th>问题类型</th>
+<th>建立不等式的思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>费用/价格</td>
+<td>总价 ≤ 预算，或 总价 ≥ 最低要求</td>
+</tr>
+<tr>
+<td>路程/时间</td>
+<td>路程/速度的约束</td>
+</tr>
+<tr>
+<td>生产/利润</td>
+<td>利润/收益的范围</td>
+</tr>
+<tr>
+<td>数量/计数</td>
+<td>人数/个数的整数约束</td>
+</tr>
+<tr>
+<td>温度/参数</td>
+<td>工业/生活中的参数范围</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例题1（费用问题）：</strong> 某同学有 50 元，要买单价 3 元的钢笔和单价 2 元的铅笔，计划至少买 20 支，且钢笔不超过 10 支，最多能买钢笔几支？</p>
+<p>设买钢笔 x 支，则铅笔 (20-x) 支（至少20支取边界）。</p>
+<p>条件：钢笔不超过10支，x ≤ 10
+费用：3x + 2(20-x) ≤ 50
+3x + 40 - 2x ≤ 50
+x ≤ 10</p>
+<p>两个条件均给出 x ≤ 10，结合铅笔数 ≥ 0：20 - x ≥ 0，x ≤ 20。</p>
+<p>综合：x ≤ 10，且 x 为非负整数。最多买 <strong>10 支</strong>钢笔。</p>
+<p><strong>例题2（路程问题）：</strong> 甲步行速度 5 km/h，乙骑车速度 15 km/h，同时从同地出发同方向走，乙至少需要多少时间才能领先甲 20 km？</p>
+<p>设经过 t 小时：
+乙领先甲 ≥ 20 km：15t - 5t ≥ 20
+10t ≥ 20
+t ≥ 2</p>
+<p>答：至少需要 <strong>2 小时</strong>。</p>
+<p><strong>例题3（利润问题）：</strong> 某商店进货价 60 元/件，为保证利润率不低于 25%，售价应定在多少元以上？</p>
+<p>设售价 x 元，利润率 = (x-60)/60 ≥ 25%
+x - 60 ≥ 15
+x ≥ 75</p>
+<p>答：售价至少定 <strong>75 元</strong>。</p>
+<p><strong>例题4（整数范围问题）：</strong> n 是整数，且满足 -3 &lt; 2n-1 &lt; 5，求所有满足条件的 n。</p>
+<p>解：-3 &lt; 2n-1 &lt; 5
+加1各处：-2 &lt; 2n &lt; 6
+除2：-1 &lt; n &lt; 3</p>
+<p>n 为整数，则 n ∈ {0, 1, 2}。</p>
+<h3>解题注意事项</h3>
+<ol>
+<li><strong>检验实际约束</strong>：个数必须为整数、人数不能为负、长度不能为0等</li>
+<li><strong>不等式端点的取舍</strong>：≥ 包含等号，如最小是整数时可取到端点</li>
+<li><strong>多条件联立</strong>：多个约束用不等式组，取公共解集</li>
+<li><strong>单位一致</strong>：时间、路程、价格的单位要统一</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>至少</td>
+<td>at least</td>
+<td>≥</td>
+</tr>
+<tr>
+<td>至多</td>
+<td>at most</td>
+<td>≤</td>
+</tr>
+<tr>
+<td>不超过</td>
+<td>no more than</td>
+<td>≤</td>
+</tr>
+<tr>
+<td>不低于</td>
+<td>no less than</td>
+<td>≥</td>
+</tr>
+<tr>
+<td>利润率</td>
+<td>profit rate</td>
+<td>(售价-成本)/成本</td>
+</tr>
+<tr>
+<td>约束条件</td>
+<td>constraint</td>
+<td>实际问题的限制条件</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第九章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/114-一元一次不等式.html">一元一次不等式</a></li>
+<li><a href="../atoms/115-一元一次不等式组.html">一元一次不等式组</a></li>
+<li><a href="../atoms/117-不等式性质.html">不等式性质</a></li>
+<li><a href="../atoms/118-不等式解集.html">不等式解集</a></li>
+<li><a href="../atoms/082-一元一次方程.html">一元一次方程</a></li>
+<li><a href="../atoms/047-速度路程时间.html">速度路程时间</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2017-文-11.html">2017-文-11</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>串联电路</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>串联电路</h1><div class="review-mark" data-stem="123-串联电路"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>3</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十五章电流和电路, 第十七章欧姆定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 串联电路, series circuit, 串联</p><h1>串联电路</h1>
+<blockquote>
+<p><strong>一句话</strong>：串联电路中各元件依次连接，只有一条电流路径；各处电流相等，电压之和等于总电压，等效电阻等于各电阻之和。
+<strong>English</strong>: In a series circuit, components are connected end-to-end with only one current path; current is the same everywhere, voltages add up to total voltage, and total resistance equals the sum of individual resistances.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>串联</strong>就是把元件一个接一个地"串"在一起，像穿珠子一样。</p>
+<p><strong>特点：</strong>
+- 只有<strong>一条路</strong>让电流流动
+- 其中一个断了，全部都断（比如老式圣诞树彩灯，一个坏了全灭！）</p>
+<p><strong>串联电路的三个规律：</strong></p>
+<ol>
+<li>
+<p><strong>电流处处相等</strong>：$I_1 = I_2 = I$
+   （一条路，所以每个地方通过的电流一样多）</p>
+</li>
+<li>
+<p><strong>电压分配</strong>：$U = U_1 + U_2$
+   （总电压等于各部分电压之和；电阻大的分得的电压多）</p>
+</li>
+<li>
+<p><strong>等效电阻</strong>：$R = R_1 + R_2$
+   （串联后总电阻变大，比任何一个单独的电阻都大）</p>
+</li>
+</ol>
+<p><strong>生活例子：</strong>
+- 老式节日彩灯（串联，一断全灭）
+- 控制全部灯的总开关串联在干路上</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>串联电路的基本规律</h3>
+<p>设有 $n$ 个元件串联，总电压为 $U$，总电流为 $I$：</p>
+<p><strong>电流规律（串联电流处处相等）：</strong></p>
+<p>$$I = I_1 = I_2 = \cdots = I_n$$</p>
+<p><strong>电压规律（串联电压分配）：</strong></p>
+<p>$$U = U_1 + U_2 + \cdots + U_n$$</p>
+<p><strong>等效电阻（串联）：</strong></p>
+<p>$$R = R_1 + R_2 + \cdots + R_n$$</p>
+<p>串联电路总电阻大于任何一个分电阻。</p>
+<h3>串联电路的电压分配</h3>
+<p>由欧姆定律：$U_i = I \cdot R_i$</p>
+<p>因为 $I$ 相同，所以：</p>
+<p>$$\frac{U_1}{U_2} = \frac{R_1}{R_2}$$</p>
+<p><strong>串联电路按电阻大小分配电压（阻值大，分压多）。</strong></p>
+<h3>串联电路的功率</h3>
+<p>各元件功率：$P_i = I^2 R_i$（电流相同）</p>
+<p>$$\frac{P_1}{P_2} = \frac{R_1}{R_2}$$</p>
+<p>串联时阻值大的元件功率更大（消耗电能更多，发热更多）。</p>
+<h3>分压器原理</h3>
+<p>串联两个电阻，在其中一个两端取得低于总电压的输出——<strong>分压电路</strong>：</p>
+<p>$$U_{输出} = U \cdot \frac{R_2}{R_1 + R_2}$$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：将 $R_1 = 10$ Ω 和 $R_2 = 20$ Ω 串联，接在 12 V 电源上。求：①总电阻；②电路中的电流；③各电阻两端的电压。</p>
+<p><strong>解</strong>：</p>
+<p>① $R = R_1 + R_2 = 10 + 20 = 30$ Ω</p>
+<p>② $I = \frac{U}{R} = \frac{12}{30} = 0.4$ A</p>
+<p>③ $U_1 = IR_1 = 0.4 \times 10 = 4$ V</p>
+<p>$U_2 = IR_2 = 0.4 \times 20 = 8$ V</p>
+<p>验证：$U_1 + U_2 = 4 + 8 = 12$ V ✓</p>
+<p><strong>易错点：</strong>
+- 串联中任何一处断路，整个电路都断路
+- 串联总电阻一定大于每个分电阻（不会减小）
+- 新增一个元件到串联电路，总电阻增大，电流减小</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>串联</td>
+<td>series connection</td>
+<td>n.</td>
+<td>Resistors in series share the same current.</td>
+</tr>
+<tr>
+<td>串联电路</td>
+<td>series circuit</td>
+<td>n.</td>
+<td>Christmas lights are often connected in series.</td>
+</tr>
+<tr>
+<td>等效电阻</td>
+<td>equivalent resistance</td>
+<td>n.</td>
+<td>The equivalent resistance of a series circuit is the sum.</td>
+</tr>
+<tr>
+<td>分压</td>
+<td>voltage dividing</td>
+<td>n.</td>
+<td>Series resistors divide voltage proportionally.</td>
+</tr>
+<tr>
+<td>断路</td>
+<td>open circuit</td>
+<td>n.</td>
+<td>One broken component opens the entire series circuit.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十五章第四节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 串联与并联电路</li>
+<li><strong>百科</strong>：维基百科"串联电路"；中文百科"串联"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/279-电荷.html">电荷</a> <a href="../atoms/141-欧姆定律-初中.html">欧姆定律-初中</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/139-并联电路.html">并联电路</a></p>
+</li>
+<li>
+<p><a href="../atoms/139-并联电路.html">并联电路</a></p>
+</li>
+<li><a class="dead" title="未收录">电流规律-串并联</a></li>
+<li><a class="dead" title="未收录">电压规律-串并联</a></li>
+<li><a class="dead" title="未收录">欧姆定律串联电路</a></li>
+<li><a href="../atoms/184-电阻.html">电阻</a></li>
+<li><a href="../atoms/170-电流测量.html">电流测量</a></li>
+<li><a href="../atoms/164-电压测量.html">电压测量</a></li>
+</ul>
+</div>
+</body>
+</html>

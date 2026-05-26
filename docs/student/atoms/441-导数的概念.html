@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数的概念</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>导数的概念</h1><div class="review-mark" data-stem="441-导数的概念"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第六章导数概念与运算]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 导数的概念, derivative, 导数定义, 导数, 可导</p><h2>🎓 导数的概念</h2>
+<h3>定义</h3>
+<p>设函数 $f(x)$ 在点 $x_0$ 的某邻域内有定义，若极限</p>
+<p>$$f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$</p>
+<p>存在，则称 $f(x)$ 在 $x_0$ 处<strong>可导</strong>，该极限值称为 $f(x)$ 在 $x_0$ 处的<strong>导数</strong>，记作 $f'(x_0)$、$y'\big|<em x="x_0">{x=x_0}$ 或 $\dfrac{\mathrm{d}y}{\mathrm{d}x}\big|</em>$。</p>
+<h3>直观理解</h3>
+<p>导数本质是<strong>瞬时变化率</strong>：当 $x$ 的变化量 $\Delta x$ 趋近于 $0$ 时，函数值变化量 $\Delta y = f(x_0+\Delta x)-f(x_0)$ 与 $\Delta x$ 之比的极限。</p>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\Delta x$</td>
+<td>$x$ 的增量（自变量变化量）</td>
+</tr>
+<tr>
+<td>$\Delta y = f(x_0+\Delta x)-f(x_0)$</td>
+<td>函数的增量</td>
+</tr>
+<tr>
+<td>$\dfrac{\Delta y}{\Delta x}$</td>
+<td>平均变化率</td>
+</tr>
+<tr>
+<td>$\lim_{\Delta x\to 0}\dfrac{\Delta y}{\Delta x}$</td>
+<td>瞬时变化率，即导数</td>
+</tr>
+</tbody>
+</table>
+<h3>等价写法</h3>
+<p>令 $h = \Delta x$，导数定义等价于：</p>
+<p>$$f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$</p>
+<p>令 $x = x_0 + \Delta x$，则 $\Delta x \to 0$ 等价于 $x \to x_0$，因此：</p>
+<p>$$f'(x_0) = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 用定义求 $f(x)=x^2$ 在 $x_0=1$ 处的导数。</p>
+<p>$$f'(1) = \lim_{h\to 0}\frac{(1+h)^2 - 1^2}{h} = \lim_{h\to 0}\frac{2h+h^2}{h} = \lim_{h\to 0}(2+h) = 2$$</p>
+<p><strong>例 2</strong> 用定义求 $f(x)=\sqrt{x}$ 在 $x_0=4$ 处的导数。</p>
+<p>$$f'(4) = \lim_{h\to 0}\frac{\sqrt{4+h}-2}{h} = \lim_{h\to 0}\frac{(\sqrt{4+h}-2)(\sqrt{4+h}+2)}{h(\sqrt{4+h}+2)} = \lim_{h\to 0}\frac{1}{\sqrt{4+h}+2} = \frac{1}{4}$$</p>
+<p><strong>例 3</strong> 用定义证明 $f(x)=C$（常数）的导数为 $0$。</p>
+<p>$$f'(x_0) = \lim_{h\to 0}\frac{C - C}{h} = \lim_{h\to 0} 0 = 0$$</p>
+<h3>与必修衔接</h3>
+<p>必修阶段已学<strong>平均速度</strong>（路程差÷时间差），导数是它的极限版本——"瞬时速度"。导数概念将高中分析的重心从"代数运算"转向"极限思想"，是微积分的核心入口。</p>
+<h3>易错点</h3>
+<ul>
+<li>导数是<strong>极限值</strong>，不是 $\dfrac{\Delta y}{\Delta x}$ 本身（分母不为 $0$）</li>
+<li>$f'(x_0)$ 存在的前提：极限必须存在且左右极限相等（高中阶段不细分，知道即可）</li>
+<li>"可导"一定"连续"，但"连续"不一定"可导"（如 $f(x)=|x|$ 在 $x=0$ 处连续但不可导）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》"导数与积分"模块</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第六章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/导数</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/281-函数概念-高中.html">函数概念-高中</a> <a class="dead" title="未收录">指数函数的性质</a> <a href="../atoms/300-对数概念.html">对数概念</a> <a href="../atoms/430-导函数.html">导函数</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/1292-导数的应用.html">导数的应用</a> <a href="../atoms/440-导数的几何意义.html">导数的几何意义</a></li>
+</ul>
+<p><a href="../atoms/449-平均变化率.html">平均变化率</a> · <a href="../atoms/463-瞬时变化率.html">瞬时变化率</a> · <a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/440-导数的几何意义.html">导数的几何意义</a> · <a href="../atoms/435-导数四则运算.html">导数四则运算</a> · <a href="../atoms/426-复合函数导数.html">复合函数导数</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a></p>
+</div>
+</body>
+</html>

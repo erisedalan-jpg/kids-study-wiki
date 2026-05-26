@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体的结构特征</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间几何体的结构特征</h1><div class="review-mark" data-stem="1047-空间几何体的结构特征"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间几何体的结构特征</p><h1>空间几何体的结构特征</h1>
+<blockquote>
+<p><strong>一句话</strong>：空间几何体的结构特征是指构成多面体（棱柱、棱锥、棱台）与旋转体（圆柱、圆锥、圆台、球）的底面、侧面、侧棱、轴截面等基本元素间的形状、平行、垂直、全等及数量关系。
+<strong>English</strong>: Structural features of geometric solids refer to the shape, parallelism, perpendicularity, congruence, and quantitative relationships among fundamental elements—such as bases, lateral faces, lateral edges, and axial cross-sections—of polyhedra (prisms, pyramids, truncated pyramids) and solids of revolution (cylinders, cones, truncated cones, spheres).</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：
+- <strong>多面体</strong>：由若干个平面多边形围成的几何体。
+  - <strong>棱柱</strong>：两个底面是全等且平行的多边形，侧棱平行且相等，侧面均为平行四边形。特别地，正棱柱底面为正多边形，侧棱垂直于底面。
+  - <strong>棱锥</strong>：一个底面是多边形，侧面是有一个公共顶点的三角形。正棱锥底面为中心对称正多边形，顶点在底面的投影是底面的中心。
+  - <strong>棱台</strong>：用平行于棱锥底面的平面截棱锥，截面与底面之间的部分。正棱台由正棱锥截得，上下底面中心连线垂直于底面。
+- <strong>旋转体</strong>：由一个平面图形绕其所在平面内的一条定直线旋转一周形成的几何体。
+  - <strong>圆柱</strong>：以矩形一边所在直线为旋转轴，其余三边旋转一周形成。轴截面是全等的矩形。
+  - <strong>圆锥</strong>：以直角三角形一直角边所在直线为旋转轴旋转形成。轴截面是等腰三角形。
+  - <strong>圆台</strong>：用平行于圆锥底面的平面截圆锥形成。轴截面是等腰梯形。
+  - <strong>球</strong>：半圆以其直径为旋转轴旋转一周形成。球面上任意一点到球心的距离等于半径 $R$。</p>
+<p><strong>关键方法</strong>：处理结构特征问题，核心是<strong>将空间关系降维到截面或侧面展开图</strong>。判定多面体类型，严格依据“底面形状与关系＋侧棱特征”；解决与球相关的切接问题，抓球心到各顶点或各面的距离等于半径 $R$；关于最短路径，常将曲面展开为平面图形，利用两点之间线段最短求解。</p>
+<p><strong>典型应用</strong>：
+高考常以选填题考查概念辨析与球的切接问题，或在大题第一问要求证明线面平行/垂直（其依据直接源于几何体的结构特征）。
+- 例1：已知正四棱柱底面边长为 $a$，侧棱长为 $b$，求其体对角线长。（由结构特征可直接得 $\sqrt{a^2+a^2+b^2}=\sqrt{2a^2+b^2}$）
+- 例2：正方体内切球半径 $r_{\text{内}}=\frac{a}{2}$，外接球半径 $R_{\text{外}}=\frac{\sqrt{3}}{2}a$。（均由球心与各面的距离、球心与顶点的距离从结构特征直接推出）</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆棱柱/棱锥/棱台定义细节</strong>：如误认为“有两个面互相平行，其余各面都是平行四边形”就是棱柱（须满足侧棱平行且相等）；或误认为棱台的侧棱延长后必交于一点（只有棱台满足，一般的台体未必）（待家长核对）。</li>
+<li><strong>球与多面体的切接问题图形想象错误</strong>：常将球心位置定错。如正四面体的内切球半径与外接球半径代入时正负号混淆，正确的半径关系为 $R_{\text{外}}=3r_{\text{内}}$（待家长核对）。</li>
+<li><strong>截面形状判断不准确</strong>：例如过圆锥顶点的截面是等腰三角形而非任意三角形；平行于底面的截面是圆且与底面相似；用平面截正方体，截面形状可为三角形、四边形、五边形、六边形，但不可为直角三角形或正五边形。</li>
+<li><strong>将直观图斜二测画法还原时数量关系出错</strong>：直观图中与 $y$ 轴平行的线段长度变为原长的一半，且角度关系发生变化，面积还原公式 $S_{\text{原}}=2\sqrt{2} S_{\text{直}}$ 常被忽略。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>棱柱</td>
+<td>Prism</td>
+<td>两底面为全等多边形且平行，侧面为平行四边形</td>
+</tr>
+<tr>
+<td>棱锥</td>
+<td>Pyramid</td>
+<td>一个底面是多边形，侧面为共享顶点的三角形</td>
+</tr>
+<tr>
+<td>圆柱</td>
+<td>Cylinder</td>
+<td>以矩形一边为轴旋转而成的旋转体</td>
+</tr>
+<tr>
+<td>球</td>
+<td>Sphere</td>
+<td>空间中到定点距离等于定长的所有点的集合</td>
+</tr>
+<tr>
+<td>轴截面</td>
+<td>Axial Cross-Section</td>
+<td>过旋转体轴的截面，反映母线、高、半径关系</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">空间几何体的表面积与体积</a></li>
+<li><a class="dead" title="未收录">三视图与直观图</a></li>
+<li><a class="dead" title="未收录">空间中点线面的位置关系</a></li>
+<li><a class="dead" title="未收录">立体几何中的向量方法</a></li>
+<li><a class="dead" title="未收录">空间中的平行与垂直判定</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-理-05.html">2009-理-05</a></li>
+</ul></div>
+</div>
+</body>
+</html>

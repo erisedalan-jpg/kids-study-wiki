@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方差性质-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>方差性质-高中</h1><div class="review-mark" data-stem="490-方差性质-高中"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 随机变量与分布, 第七章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 方差性质-高中, properties of variance, 方差性质, 方差运算法则</p><h2>🎓 方差性质-高中</h2>
+<h3>核心性质</h3>
+<p>设 $X, Y$ 为随机变量，$a, b$ 为常数：</p>
+<p><strong>性质 1（常数方差为零）</strong>：</p>
+<p>$$D(c) = 0$$</p>
+<p><strong>性质 2（线性变换）</strong>：</p>
+<p>$$D(aX + b) = a^2 D(X)$$</p>
+<p>注意：加减常数 $b$ 不影响方差（平移不改变分散程度），乘以 $a$ 使方差变为 $a^2$ 倍。</p>
+<p><strong>性质 3（独立变量之和）</strong>：</p>
+<p>$$D(X + Y) = D(X) + D(Y) \quad \text{（$X, Y$ 相互独立时）}$$</p>
+<p><strong>性质 4（独立变量之差）</strong>：</p>
+<p>$$D(X - Y) = D(X) + D(Y) \quad \text{（$X, Y$ 相互独立时）}$$</p>
+<p>（减法不等于差，因为方差衡量分散度，符号不影响）</p>
+<p><strong>推论</strong>：</p>
+<p>$$D\left(\sum_{i=1}^n X_i\right) = \sum_{i=1}^n D(X_i) \quad \text{（各 $X_i$ 相互独立时）}$$</p>
+<h3>等价公式（复习）</h3>
+<p>$$D(X) = E(X^2) - [E(X)]^2$$</p>
+<h3>性质 2 的推导</h3>
+<p>$$D(aX+b) = E[(aX+b - E(aX+b))^2] = E[(aX+b - aE(X)-b)^2]$$
+$$= E[a^2(X-E(X))^2] = a^2 E[(X-E(X))^2] = a^2 D(X)$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：$D(X) = 4$，求 $D(3X - 2)$。</p>
+<p>$$D(3X-2) = 3^2 D(X) = 9 \times 4 = 36$$</p>
+<p><strong>例2</strong>：$D(X) = 2$，$D(Y) = 3$，$X, Y$ 独立，求 $D(2X - Y + 1)$。</p>
+<p>$$D(2X - Y + 1) = D(2X) + D(-Y) + D(1)$$
+$$= 4D(X) + 1 \cdot D(Y) + 0 = 4 \times 2 + 3 = 11$$</p>
+<p>（注意：$D(2X - Y + 1) = D(2X - Y)$，常数不影响方差）</p>
+<p><strong>例3（标准化变量）</strong>：设 $E(X) = \mu$，$D(X) = \sigma^2$，令 $Z = \frac{X-\mu}{\sigma}$，求 $E(Z)$ 和 $D(Z)$。</p>
+<p>$$E(Z) = E\left(\frac{X-\mu}{\sigma}\right) = \frac{E(X)-\mu}{\sigma} = 0$$</p>
+<p>$$D(Z) = D\left(\frac{X-\mu}{\sigma}\right) = \frac{1}{\sigma^2}D(X-\mu) = \frac{1}{\sigma^2} \cdot \sigma^2 = 1$$</p>
+<p>结论：标准化变量 $Z = \frac{X-\mu}{\sigma}$ 满足 $E(Z)=0$，$D(Z)=1$（标准正态分布的基础）。</p>
+<p><strong>例4</strong>：$X \sim B(n,p)$，$n$ 个独立 $B(1,p)$ 分布随机变量之和，$D(X) = np(1-p)$（见<a class="dead" title="未收录">二项分布期望方差</a>）。</p>
+<h3>方差性质汇总表</h3>
+<table>
+<thead>
+<tr>
+<th>运算</th>
+<th>对期望的影响</th>
+<th>对方差的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$aX$</td>
+<td>$E(aX) = aE(X)$</td>
+<td>$D(aX) = a^2D(X)$</td>
+</tr>
+<tr>
+<td>$X + b$</td>
+<td>$E(X+b) = E(X)+b$</td>
+<td>$D(X+b) = D(X)$</td>
+</tr>
+<tr>
+<td>$X + Y$（独立）</td>
+<td>$E(X+Y) = E(X)+E(Y)$</td>
+<td>$D(X+Y) = D(X)+D(Y)$</td>
+</tr>
+<tr>
+<td>$X - Y$（独立）</td>
+<td>$E(X-Y) = E(X)-E(Y)$</td>
+<td>$D(X-Y) = D(X)+D(Y)$</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>$D(X+b) = D(X)$</strong>：加常数不改变方差，忘记这点会误算</li>
+<li><strong>$D(X-Y) = D(X)+D(Y)$</strong>：减法使方差相加，不是相减</li>
+<li><strong>$D(aX) = a^2D(X)$</strong>：系数要平方，不是 $aD(X)$</li>
+<li><strong>非独立时不可加</strong>：$D(X+Y) = D(X)+D(Y)+2\text{Cov}(X,Y)$（高中阶段不考协方差，但需知道非独立时不能直接加）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第七章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第七章 § 7.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/方差">方差 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/500-离散型随机变量方差.html">离散型随机变量方差</a></li>
+<li><a href="../atoms/492-期望性质.html">期望性质</a></li>
+<li><a class="dead" title="未收录">二项分布期望方差</a></li>
+<li><a href="../atoms/496-正态分布概念.html">正态分布概念</a></li>
+<li><a href="../atoms/501-离散型随机变量期望.html">离散型随机变量期望</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2021-新高考Ⅰ-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

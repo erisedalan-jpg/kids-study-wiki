@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PCR</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>PCR</h1><div class="review-mark" data-stem="410-PCR"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 基因工程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: PCR, 聚合酶链反应, polymerase chain reaction</p><h1>PCR</h1>
+<blockquote>
+<p><strong>一句话</strong>：在体外用耐高温DNA聚合酶和特异引物，通过反复变性—退火—延伸循环，将特定DNA片段指数级扩增的技术。
+<strong>English</strong>: A technique that exponentially amplifies a specific DNA segment in vitro by repeated cycles of denaturation, annealing, and extension using thermostable DNA polymerase.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p>聚合酶链反应（Polymerase Chain Reaction, PCR）是一种在体外快速大量扩增特定DNA片段的分子生物学技术。通过反复循环"<strong>变性—退火—延伸</strong>"三个步骤，以指数级速度复制目标DNA片段，无需生物体即可在试管中完成。</p>
+<p>PCR技术由美国科学家穆里斯（Kary Mullis）于1983年发明，1993年因此获诺贝尔化学奖。</p>
+<h3>原理 / 步骤 / 应用</h3>
+<p><strong>基本原理</strong></p>
+<p>模拟体内DNA复制过程，在体外：
+- <strong>变性（Denaturation）</strong>：高温（94–98 °C）使双链DNA解开为单链
+- <strong>退火（Annealing）</strong>：降温（50–65 °C）使引物与模板单链互补配对
+- <strong>延伸（Extension）</strong>：适宜温度（72 °C）下，耐热DNA聚合酶（Taq酶）以引物为起点，按5'→3'方向合成新链</p>
+<p><strong>PCR反应体系</strong></p>
+<table>
+<thead>
+<tr>
+<th>组分</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模板DNA</td>
+<td>含目的基因的DNA片段</td>
+</tr>
+<tr>
+<td>引物（一对）</td>
+<td>特异性识别目的片段两端，提供3'-OH起点</td>
+</tr>
+<tr>
+<td>耐高温DNA聚合酶（Taq酶）</td>
+<td>在高温循环中保持活性，延伸新链</td>
+</tr>
+<tr>
+<td>四种dNTP</td>
+<td>原料（dATP、dTTP、dGTP、dCTP）</td>
+</tr>
+<tr>
+<td>缓冲液（含Mg²⁺）</td>
+<td>维持pH和酶的活性</td>
+</tr>
+</tbody>
+</table>
+<p><strong>循环过程（以30次循环为例）</strong></p>
+<pre><code>初始变性
+↓ 第1循环：94°C变性 → 55°C退火 → 72°C延伸
+↓ 第2循环：...
+↓ 第n循环：...
+（约30次循环后，目的片段数量 = 2³⁰ ≈ 10⁹ 倍）
+</code></pre>
+<p>理论上n次循环后，目的片段数量约为<strong>2ⁿ</strong>（指数增长）。</p>
+<p><strong>引物的关键作用</strong></p>
+<ul>
+<li>引物是与目的基因两端互补的短链DNA（约18–25个碱基）</li>
+<li>一对引物分别与目的基因两条链的末端互补，确保只扩增目的片段</li>
+<li>引物的特异性决定PCR的特异性</li>
+</ul>
+<p><strong>Taq酶的重要性</strong></p>
+<p>普通DNA聚合酶在高温下失活，无法用于循环扩增。耐热DNA聚合酶（Taq酶，来源于热泉细菌<em>Thermus aquaticus</em>）在95 °C高温下仍保持活性，使PCR自动化循环成为可能。</p>
+<p><strong>应用领域</strong></p>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基因工程</td>
+<td>获取/扩增目的基因</td>
+</tr>
+<tr>
+<td>疾病诊断</td>
+<td>检测病毒/细菌DNA（如PCR新冠检测、结核病检测）</td>
+</tr>
+<tr>
+<td>法医鉴定</td>
+<td>DNA指纹分析（STR分型）</td>
+</tr>
+<tr>
+<td>考古遗传学</td>
+<td>扩增古DNA（化石样品）</td>
+</tr>
+<tr>
+<td>基因测序</td>
+<td>测序前的模板制备</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：PCR反应需要两条引物，这两条引物与模板的关系是什么？为什么需要耐高温的DNA聚合酶而不用普通聚合酶？</p>
+<p><strong>解析</strong>：两条引物分别与目的基因两条链的<strong>3'端</strong>（方向相反）互补，确保两条新链都从目的基因的端点开始延伸，从而扩增中间的目的片段。需要耐高温聚合酶是因为PCR每次循环都需在约94 °C高温下变性解链，普通DNA聚合酶在此温度下会失活，而Taq酶能耐受高温，在整个循环过程中保持活性，无需每次循环后重新加酶。</p>
+<h3>易错点</h3>
+<ul>
+<li>PCR需要<strong>一对引物</strong>（正向+反向），不是一条；引物是DNA（不是RNA）</li>
+<li>PCR的模板是<strong>单链DNA</strong>（变性后），延伸的方向是<strong>5'→3'</strong></li>
+<li>PCR属于<strong>体外</strong>扩增，不需要活细胞；不是转基因，扩增的只是DNA片段，不涉及导入生物体</li>
+<li>每次循环产物不一定都是精确的目的片段，前几个循环产生的是"长片段"，约第10次循环后目的片段比例才成为主体</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>聚合酶链反应</td>
+<td>polymerase chain reaction (PCR)</td>
+</tr>
+<tr>
+<td>变性</td>
+<td>denaturation</td>
+</tr>
+<tr>
+<td>退火</td>
+<td>annealing</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>extension</td>
+</tr>
+<tr>
+<td>引物</td>
+<td>primer</td>
+</tr>
+<tr>
+<td>耐热DNA聚合酶</td>
+<td>thermostable DNA polymerase / Taq polymerase</td>
+</tr>
+<tr>
+<td>脱氧核苷酸</td>
+<td>deoxyribonucleotide (dNTP)</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>PCR can amplify a single DNA molecule to billions of copies within a few hours. （PCR可在数小时内将单个DNA分子扩增到数十亿个拷贝。）</li>
+<li>The thermostable Taq polymerase is essential for PCR because it withstands the high temperatures needed for DNA denaturation. （耐热Taq聚合酶对PCR至关重要，因为它能承受DNA变性所需的高温。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/生物学/人教版-人民教育出版社/普通高中教科书·生物学选择性必修3 生物技术与工程.pdf</a> 第3章</li>
+<li><strong>课标</strong>：普通高中生物学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"Polymerase chain reaction"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-10</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/411-基因工程.html">基因工程</a> <a href="../atoms/415-目的基因.html">目的基因</a> <a class="dead" title="未收录">重组DNA分子</a> <a href="../atoms/414-基因诊断.html">基因诊断</a> <a href="../atoms/409-DNA连接酶.html">DNA连接酶</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2021-北京-19</a></li>
+<li><a class="dead" title="未收录">2021-北京-20</a></li>
+<li><a class="dead" title="未收录">2022-湖南-21</a></li>
+<li><a class="dead" title="未收录">2024-北京-18</a></li>
+<li><a class="dead" title="未收录">2024-湖南-15</a></li>
+<li><a href="../exam/生物/2024-辽宁-25.html">2024-辽宁-25</a></li>
+</ul></div>
+</div>
+</body>
+</html>

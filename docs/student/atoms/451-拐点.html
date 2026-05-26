@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>拐点</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>拐点</h1><div class="review-mark" data-stem="451-拐点"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 拐点, inflection point, 凹凸性转变点</p><h2>🎓 拐点</h2>
+<h3>定义</h3>
+<p>曲线 $y=f(x)$ 上<strong>凹凸性发生改变</strong>的点称为<strong>拐点</strong>（inflection point）。</p>
+<p>即：在 $x_0$ 的两侧，$f''(x)$ 变号（一侧正一侧负），则 $(x_0, f(x_0))$ 是拐点。</p>
+<h3>拐点的必要条件</h3>
+<p>若 $(x_0, f(x_0))$ 是拐点，且 $f''(x_0)$ 存在，则 $f''(x_0)=0$。</p>
+<p><strong>注意</strong>：$f''(x_0)=0$ 只是必要条件，不是充分条件（$f''=0$ 不一定是拐点）。</p>
+<h3>寻找拐点的步骤</h3>
+<ol>
+<li>求 $f''(x)$</li>
+<li>令 $f''(x)=0$，找候选点（也包括 $f''$ 不存在的点）</li>
+<li>判断候选点两侧 $f''(x)$ 是否变号</li>
+<li>变号者为拐点，将 $x_0$ 代入得拐点坐标 $(x_0, f(x_0))$</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> $f(x)=x^3-6x^2+9x+1$，求拐点。</p>
+<p>$f'(x)=3x^2-12x+9$，$f''(x)=6x-12=6(x-2)$</p>
+<p>令 $f''=0$：$x=2$</p>
+<p>$x&lt;2$ 时 $f''&lt;0$（上凸），$x&gt;2$ 时 $f''&gt;0$（下凸），故 $x=2$ 是拐点。</p>
+<p>拐点：$(2, f(2))=(2,2-24+18+1)=(2,-3)$ （$f(2)=8-24+18+1=3$，修正：$f(2)=8-24+18+1=3$）</p>
+<p>拐点 $(2, 3)$。</p>
+<p><strong>例 2</strong> $f(x)=x^4-6x^2$，求拐点。</p>
+<p>$f'(x)=4x^3-12x$，$f''(x)=12x^2-12=12(x^2-1)=12(x-1)(x+1)$</p>
+<p>令 $f''=0$：$x=\pm 1$</p>
+<table>
+<thead>
+<tr>
+<th>区间</th>
+<th>$f''$</th>
+<th>凹凸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$(-\infty,-1)$</td>
+<td>$+$</td>
+<td>下凸</td>
+</tr>
+<tr>
+<td>$(-1,1)$</td>
+<td>$-$</td>
+<td>上凸</td>
+</tr>
+<tr>
+<td>$(1,+\infty)$</td>
+<td>$+$</td>
+<td>下凸</td>
+</tr>
+</tbody>
+</table>
+<p>$x=-1$ 和 $x=1$ 都是凹凸性转变点，故均是拐点。</p>
+<p>拐点：$(-1,-5)$ 和 $(1,-5)$（$f(\pm 1)=1-6=-5$）。</p>
+<p><strong>例 3</strong>（反例）$f(x)=x^4$，$f''=12x^2$，$f''(0)=0$，但 $x&lt;0$ 和 $x&gt;0$ 时 $f''&gt;0$ 不变号，故 $x=0$ <strong>不是</strong>拐点。</p>
+<h3>拐点与极值点的区别</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>极值点</th>
+<th>拐点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与 $f'$ 的关系</td>
+<td>$f'(x_0)=0$（或不存在）且 $f'$ 变号</td>
+<td>$f'$ 可以不为 $0$</td>
+</tr>
+<tr>
+<td>与 $f''$ 的关系</td>
+<td>$f''(x_0)&lt;0$（极大）或 $&gt;0$（极小）</td>
+<td>$f''(x_0)=0$ 且变号</td>
+</tr>
+<tr>
+<td>几何意义</td>
+<td>函数升降的转折点</td>
+<td>凹凸的转折点</td>
+</tr>
+</tbody>
+</table>
+<p>同一点可以既是极值点又与拐点相近，但通常不重合。</p>
+<h3>高中范围说明</h3>
+<p>拐点和二阶导数属于<strong>选做或进阶内容</strong>，高考主要考一阶导数的应用。了解拐点有助于分析函数图象的完整形态（S 形曲线等）。</p>
+<h3>易错点</h3>
+<ul>
+<li>拐点是<strong>曲线上的点</strong>（坐标对），不是 $x$ 值</li>
+<li>$f''(x_0)=0$ 必须验证两侧 $f''$ 变号，否则不是拐点</li>
+<li>拐点处 $f'(x_0)$ 不一定为 $0$（切线不一定水平）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/拐点</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/418-凹凸性.html">凹凸性</a></li>
+<li><strong>延伸</strong>：<a href="../atoms/885-换元思想.html">换元思想</a></li>
+</ul>
+<p><a href="../atoms/418-凹凸性.html">凹凸性</a> · <a href="../atoms/420-函数极值定义.html">函数极值定义</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a href="../atoms/462-渐近线-导数视角.html">渐近线-导数视角</a> · <a href="../atoms/430-导函数.html">导函数</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a></p>
+</div>
+</body>
+</html>

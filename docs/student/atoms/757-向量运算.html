@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量运算</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>向量运算</h1><div class="review-mark" data-stem="757-向量运算"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 向量运算, 向量线性运算</p><h1>向量运算</h1>
+<blockquote>
+<p><strong>一句话</strong>：向量运算是研究既有大小又有方向的量的加法、减法、数乘和数量积，以及用坐标表示这些运算的方法，是连接代数与几何的核心工具。<br />
+<strong>English</strong>: Vector operations refer to the methods of addition, subtraction, scalar multiplication, dot product, and coordinate representation of quantities with both magnitude and direction.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+向量运算主要包括线性运算和数量积。<br />
+- 加法：三角形法则或平行四边形法则，满足交换律与结合律。<br />
+- 减法：$a - b = a + (-b)$，几何上是指向被减向量的有向线段。<br />
+- 数乘：$\lambda \mathbf{a}$，模长为 $|\lambda||\mathbf{a}|$，方向由 $\lambda$ 的正负决定。<br />
+- 数量积（内积）：$\mathbf{a}\cdot\mathbf{b} = |\mathbf{a}||\mathbf{b}|\cos\theta$，坐标形式下若 $\mathbf{a}=(x_1,y_1), \mathbf{b}=(x_2,y_2)$，则 $\mathbf{a}\cdot\mathbf{b}=x_1x_2+y_1y_2$。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>基底法</strong>：选定两个不共线向量 $\mathbf{e}_1,\mathbf{e}_2$ 作为基底，将所有相关向量用它们表示，再通过运算求解。<br />
+2. <strong>坐标法</strong>：合理建立直角坐标系，把点、向量坐标化，利用坐标运算（加减、数量积、模长公式 $|\mathbf{a}|=\sqrt{x^2+y^2}$）解决问题。<br />
+3. 数量积的应用：求两向量夹角 $\cos\theta=\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{a}||\mathbf{b}|}$；证明或利用垂直 $\mathbf{a}\perp\mathbf{b} \Leftrightarrow \mathbf{a}\cdot\mathbf{b}=0$；求投影 $\frac{\mathbf{a}\cdot\mathbf{b}}{|\mathbf{b}|}$。</p>
+<p><strong>典型应用</strong><br />
+高考常以选填或解答题形式出现，常见考法：<br />
+- 在三角形中，用向量法推导余弦定理或判断形状（如 $\overrightarrow{AB}\cdot\overrightarrow{AC}&gt;0$ 得 $\angle A$ 为锐角）。<br />
+- 解析几何中，将几何条件转化为向量等式，如 $|\overrightarrow{MA}|=|\overrightarrow{MB}|$ 表示 M 在 AB 的垂直平分线上。<br />
+- 结合正余弦定理、三角恒等变换，求线段的长度、角度或向量模的最值。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>夹角起点不一致</strong>：计算 $\mathbf{a}\cdot\mathbf{b}$ 时，必须将两向量平移到同一起点，否则得到的 $\theta$ 可能是其补角，导致数量积符号错误。  </li>
+<li><strong>向量平行与直线平行的混淆</strong>：$\mathbf{a}\parallel\mathbf{b}$ 只要求方向相同或相反，而直线平行需排除重合；另外，零向量与任意向量平行但不能作为基底。  </li>
+<li><strong>数量积不满足结合律</strong>：$(\mathbf{a}\cdot\mathbf{b})\mathbf{c} \neq \mathbf{a}(\mathbf{b}\cdot\mathbf{c})$，因为左边是数量与 $\mathbf{c}$ 的数乘，右边是数量与 $\mathbf{a}$ 的数乘，结果一般不等。  </li>
+<li><strong>坐标运算公式混淆</strong>：向量的模长公式为 $\sqrt{x^2+y^2}$，容易忘记开方，或与两点间距离公式 $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$ 混淆（后者本质相同，但求向量模时直接用坐标即可）。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>向量</td>
+<td>vector</td>
+<td>既有大小又有方向的量</td>
+</tr>
+<tr>
+<td>向量的模</td>
+<td>magnitude / length</td>
+<td>向量的大小</td>
+</tr>
+<tr>
+<td>数量积</td>
+<td>dot product / scalar product</td>
+<td>两向量的数量积，结果为数量</td>
+</tr>
+<tr>
+<td>基底</td>
+<td>basis</td>
+<td>用于表示其他向量的不共线向量组</td>
+</tr>
+<tr>
+<td>坐标表示</td>
+<td>coordinate representation</td>
+<td>用有序实数对表示向量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订）必修课程“平面向量及其应用”</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">向量的概念与表示</a></li>
+<li><a href="../atoms/543-向量的线性运算.html">向量的线性运算</a></li>
+<li><a class="dead" title="未收录">向量的数量积与夹角</a></li>
+<li><a class="dead" title="未收录">向量的坐标运算</a></li>
+<li><a href="../atoms/336-平面向量基本定理.html">平面向量基本定理</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-22.html">2009-文-22</a></li>
+<li><a href="../exam/数学/2009-理-06.html">2009-理-06</a></li>
+<li><a href="../exam/数学/2013-文-08.html">2013-文-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

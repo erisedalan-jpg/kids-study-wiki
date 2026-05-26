@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SSS判定</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>SSS判定</h1><div class="review-mark" data-stem="146-SSS判定"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八上, 全等三角形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: SSS判定, SSS congruence, 三边判定, side-side-side, 全等判定, SSS</p><h1>SSS判定</h1>
+<blockquote>
+<p><strong>课本定义</strong>：三组对应边分别相等的两个三角形全等（简写成"边边边"或"SSS"）。</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁（回溯版）</h2>
+<h3>什么是 SSS？</h3>
+<p>SSS 是 <strong>Side-Side-Side</strong>（边-边-边）的缩写。</p>
+<p><strong>结论</strong>：如果两个三角形的三条边分别对应相等，那么这两个三角形全等。</p>
+<p>$$AB = DE, \quad BC = EF, \quad CA = FD \implies \triangle ABC \cong \triangle DEF \ (\text{SSS})$$</p>
+<h3>为什么三边确定三角形？</h3>
+<p>三根木棒，长度固定后，只能拼成<strong>一种形状</strong>的三角形（硬三角形）——这就是三角形的稳定性！</p>
+<p>相比之下，四边形可以变形（菱形可以压扁），所以四边形没有类似的"SSS"判定。</p>
+<h3>使用步骤</h3>
+<ol>
+<li>找出两个三角形</li>
+<li>验证三对边分别相等（找公共边、已知相等的边、计算得出的相等边）</li>
+<li>写出全等式，注明（SSS）</li>
+<li>利用对应元素相等得出结论</li>
+</ol>
+<h3>例子</h3>
+<p>已知四边形 $ABCD$ 中，$AB = CD$，$AD = CB$，对角线 $BD$。</p>
+<p>在 $\triangle ABD$ 和 $\triangle CDB$ 中：$AB = CD$，$AD = CB$，$BD = BD$（公共边）</p>
+<p>∴ $\triangle ABD \cong \triangle CDB$（SSS）</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定理</h3>
+<p><strong>SSS 判定定理</strong>：若 $AB = DE$，$BC = EF$，$CA = FD$，则 $\triangle ABC \cong \triangle DEF$。</p>
+<h3>证明思路（构造法）</h3>
+<p>以 $EF$ 为底，构造 $\triangle D'EF$ 使得 $D'E = AB = DE$，$D'F = CA = DF$，$D'EF = \triangle ABC$（SSS 公理）。</p>
+<p>再证 $\triangle D'EF \cong \triangle DEF$（$ED' = ED$，$FD' = FD$，$EF = EF$，由 SSS 公理）</p>
+<p>∴ $D'$ 与 $D$ 重合，即 $\triangle ABC \cong \triangle DEF$。</p>
+<p>（在公理体系中，SSS 通常作为公理或通过尺规作图的唯一性得到保证。）</p>
+<h3>典型例题</h3>
+<p><strong>例题 1</strong>：已知 $O$ 是 $AC$ 和 $BD$ 的交点，$OA = OC$，$OB = OD$，用 SSS 证明 $\triangle AOB \cong \triangle COD$。</p>
+<p>证明：在 $\triangle AOB$ 和 $\triangle COD$ 中：</p>
+<p>$OA = OC$（已知），$OB = OD$（已知），$AB = CD$？</p>
+<p>注意：此题三边中 $AB$ 和 $CD$ 不一定相等，不能直接用 SSS，应改用 SAS（∠AOB = ∠COD，对顶角）。</p>
+<p><strong>说明</strong>：此例说明使用 SSS 前必须确认<strong>三对边</strong>都相等，少一对就要换其他判定。</p>
+<p><strong>例题 2</strong>：如图，$PA = PB$，$QA = QB$，用 SSS 证明 $\angle APQ = \angle BPQ$。</p>
+<p>证明：在 $\triangle PAQ$ 和 $\triangle PBQ$ 中：</p>
+<p>$PA = PB$（已知），$QA = QB$（已知），$PQ = PQ$（公共边）</p>
+<p>∴ $\triangle PAQ \cong \triangle PBQ$（SSS）</p>
+<p>∴ $\angle APQ = \angle BPQ$（对应角相等）✓</p>
+<h3>易错点</h3>
+<ol>
+<li>SSS 要求<strong>三对</strong>边相等，只有两对边相等不能用 SSS（可能需要 SAS 或其他条件）。</li>
+<li>公共边也是"已知相等"的一对边，是 SSS 证明中的常用条件。</li>
+<li>SSS 只适用于<strong>三角形</strong>，多边形没有 SSS 全等判定。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>→ <a class="dead" title="未收录">全等三角形性质</a>：全等后利用对应元素</li>
+<li>→ <a href="../atoms/145-SAS判定.html">SAS判定</a>：两边夹角判定，与 SSS 配合使用</li>
+<li>→ <a class="dead" title="未收录">三角形高中线角平分线</a>：全等证明三线重合</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSS 判定</td>
+<td>SSS congruence criterion</td>
+</tr>
+<tr>
+<td>三边</td>
+<td>three sides</td>
+</tr>
+<tr>
+<td>公共边</td>
+<td>common side</td>
+</tr>
+<tr>
+<td>三角形稳定性</td>
+<td>rigidity of triangle</td>
+</tr>
+<tr>
+<td>全等</td>
+<td>congruent</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级上册.pdf</a> 第十二章 — 待家长核对具体页码</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）</li>
+<li><strong>拓展</strong>：欧几里得《几何原本》命题 8</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a class="dead" title="未收录">直角三角形</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/145-SAS判定.html">SAS判定</a></p>
+</li>
+<li>
+<p><a class="dead" title="未收录">全等图形</a></p>
+</li>
+<li><a class="dead" title="未收录">全等三角形性质</a></li>
+<li><a href="../atoms/145-SAS判定.html">SAS判定</a></li>
+<li><a href="../atoms/144-ASA-AAS-HL判定.html">ASA-AAS-HL判定</a></li>
+<li><a class="dead" title="未收录">三角形分类</a></li>
+<li><a class="dead" title="未收录">线段垂直平分线</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电势判断</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电势判断</h1><div class="review-mark" data-stem="667-电势判断"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电势判断, 电势高低的判定</p><h1>电势判断</h1>
+<blockquote>
+<p><strong>一句话</strong>：电势是描述电场能的性质的物理量，其高低判断主要依据电场线方向、场源电荷分布以及电势能与电荷的关系。
+<strong>English</strong>: Electric potential is a scalar quantity representing the electric potential energy per unit charge; its relative magnitude can be judged by the direction of electric field lines, the distribution of source charges, and the relationship between potential energy and charge sign.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+电势 $\varphi$ 是描述电场能的性质的物理量，定义为检验电荷在电场中某点的电势能 $E_p$ 与其电荷量 $q$ 的比值：<br />
+$$\varphi = \frac{E_p}{q}$$<br />
+电势是标量，其高低具有相对性，与电势零点的选取有关，但两点间的电势差不变。电势由电场本身决定，与试探电荷无关。</p>
+<p><strong>关键方法——电势高低的判断依据</strong><br />
+1. <strong>沿电场线方向电势降低</strong>：这是最基本、最常用的方法。电场线不但能表示场强方向，其走向还对应电势降低的方向。<br />
+2. <strong>场源电荷法</strong>：正点电荷周围，离场源越近电势越高；负点电荷周围，离场源越近电势越低。<br />
+3. <strong>电势能与电荷关系法</strong>：由 $\varphi = E_p / q$，正电荷在电势能越大的地方电势越高；负电荷在电势能越小的地方电势越高。<br />
+4. <strong>电场力做功法</strong>：电场力对正电荷做正功，正电荷的电势能减小，由 $\varphi = E_p / +q$ 知电势降低；对负电荷做正功，电势能减小，由 $\varphi = E_p / -q$ 知电势升高。<br />
+5. <strong>等势面法</strong>：沿电场线方向等势面电势降低，等势面密集处场强大。</p>
+<p><strong>典型应用</strong><br />
+在高考中，该考点常以电场线分布图、等势面图或点电荷系统为背景，设问如：比较 $A、B$ 两点电势高低；判断电荷从 $A$ 移至 $B$ 时电势能的变化；结合电场力做功分析电势升降等。<br />
+<strong>示例</strong>：如图所示，正点电荷 $Q$ 位于 $M$ 点，$A、B$ 是以 $M$ 为圆心的圆周上两点，$C$ 点在圆外较远处。学生需根据电场线辐射状特点，判断 $\varphi_A = \varphi_B &gt; \varphi_C$；若带负电的试探电荷从 $A$ 移至 $C$，电场力做负功，电势能增加，且由 $\varphi = E_p / -q$ 知 $C$ 点电势高于 $A$ 点？此时需注意电荷符号的影响，实际上移动负电荷从高电势到低电势，电势能增加，电场力做负功，反之亦然。多种方法交叉验证，防止出错。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>误认为电势与试探电荷有关</strong>：电势是电场本身属性，定义式 $\varphi = E_p/q$ 用了试探电荷，但电势大小并不由试探电荷决定，只与场源和位置有关。  </li>
+<li><strong>混淆电势高低与电势能大小的关系</strong>：对正电荷，电势高处电势能大；对负电荷，电势低处电势能反而大。不区分电荷符号直接套用结论极易出错。  </li>
+<li><strong>认为电势为零处场强一定为零</strong>：电势零点可人为选取（如无穷远或大地），场强则由电势的空间变化率决定，电势为零处场强可以不为零（如两等量异种电荷中垂面电势为零，但场强垂直该面不为零）。  </li>
+<li><strong>在电势叠加问题中忽略符号</strong>：多个点电荷产生的电势是标量代数和，负电荷贡献的电势为负值，计算时丢负号会导致结果完全相反。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电势</td>
+<td>electric potential</td>
+<td>描述电场能的性质的物理量，单位伏特(V)。</td>
+</tr>
+<tr>
+<td>电势差</td>
+<td>potential difference (voltage)</td>
+<td>两点间电势的差值，又称电压。</td>
+</tr>
+<tr>
+<td>等势面</td>
+<td>equipotential surface</td>
+<td>由电势相等的点构成的面，与电场线垂直。</td>
+</tr>
+<tr>
+<td>电势能</td>
+<td>electric potential energy</td>
+<td>电荷在电场中由于位置而具有的能量。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/277-电场强度.html">电场强度</a></li>
+<li><a href="../atoms/276-电势能.html">电势能</a></li>
+<li><a href="../atoms/282-等势面.html">等势面</a></li>
+<li><a class="dead" title="未收录">电场力做功与电势差</a></li>
+<li><a class="dead" title="未收录">静电平衡与等势体</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-04.html">2020-新课标Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

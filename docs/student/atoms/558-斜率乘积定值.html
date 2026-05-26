@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>斜率乘积定值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>斜率乘积定值</h1><div class="review-mark" data-stem="558-斜率乘积定值"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong></span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 斜率乘积定值</p><h1>斜率乘积定值</h1>
+<blockquote>
+<p><strong>一句话</strong>：在圆锥曲线中，与某直径端点相连的曲线上任一点的连线斜率乘积为常数，椭圆为 $-\frac{b^2}{a^2}$，双曲线为 $\frac{b^2}{a^2}$。
+<strong>English</strong>: For an ellipse, the product of slopes of lines from any point on the curve to the endpoints of a diameter is the constant $-\frac{b^2}{a^2}$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与核心原理</strong><br />
+椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\;(a&gt;b&gt;0)$ 上任意一点 $P$（非长轴端点）与椭圆上关于原点对称的两点 $A$、$B$ 连线，其斜率乘积恒为定值：
+$$k_{PA}\cdot k_{PB} = -\frac{b^2}{a^2}.$$
+该结论常称为“椭圆的第三定义”或“垂径定理的圆锥曲线推广”。对于双曲线 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，类似可得 $k_{PA}\cdot k_{PB} = \frac{b^2}{a^2}$。进一步推广，若直线与圆锥曲线交于两点，且这两点与曲线上一定点连线斜率乘积为已知常数，则动直线过定点（或动点在定曲线上）。高考常以此为背景命制定点、定值问题。</p>
+<p><strong>关键方法</strong><br />
+- <strong>坐标法</strong>：设 $P(x_0,y_0)$，$A(x_1,y_1)$，$B(-x_1,-y_1)$，利用点在曲线上满足方程，代入斜率公式 $k = \frac{y_2-y_1}{x_2-x_1}$ 并化简，即得定值。<br />
+- <strong>联立方程与韦达定理</strong>：已知动直线 $y=kx+m$ 与圆锥曲线相交，设交点 $C,D$，结合定点 $Q$ 表达 $k_{QC}\cdot k_{QD}$ 为常数，通过韦达定理转化为关于 $k,m$ 的关系，进而解得直线过定点。<br />
+- <strong>参数方程</strong>：椭圆 $x=a\cos\theta,\;y=b\sin\theta$ 可使斜率表达式化为三角函数运算，简化定值证明。</p>
+<p><strong>典型应用</strong><br />
+高考常见设问：<br />
+1. 给定椭圆方程和一条过原点的弦，求证椭圆上另一点与弦端点连线的斜率乘积为定值；<br />
+2. 已知椭圆上两点关于原点对称，探求满足 $k_{PA}\cdot k_{PB} = \lambda$ 的点 $P$ 的轨迹；<br />
+3. 已知斜率乘积为常数，证明动弦过定点（如 $k_1k_2 = -\frac{b^2}{a^2}$ 时直线过定点 $(0,\frac{b^2}{a^2}\cdot x_0 - y_0$ 等，具体需推导）。解题时重在将几何条件代数化，并注意讨论斜率不存在的情形。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略斜率不存在的分类讨论</strong>：当 $P$ 取在椭圆左右顶点或动直线垂直 $x$ 轴时，斜率不存在，需单独验证，防止遗漏情形。  </li>
+<li><strong>混淆椭圆与双曲线的定值符号</strong>：椭圆为 $-\frac{b^2}{a^2}$（负号），双曲线为 $\frac{b^2}{a^2}$（正号），记忆不清导致推导反号。  </li>
+<li><strong>误用点差法</strong>：在处理弦中点问题时滥套点差法，将弦中点坐标直接代入斜率乘积公式，忽视了弦端点与曲线上固定点的对应关系。  </li>
+<li><strong>定点结论推导不全</strong>：由 $k_1k_2 = \lambda$ 证直线过定点时，仅考虑一般情况，遗漏斜率为 $0$ 或 $k$ 不存在时直线也符合条件，导致定点范围不全。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率乘积</td>
+<td>product of slopes</td>
+<td>两条直线斜率的乘积</td>
+</tr>
+<tr>
+<td>椭圆</td>
+<td>ellipse</td>
+<td>平面内到两定点距离和为常数的点的轨迹</td>
+</tr>
+<tr>
+<td>双曲线</td>
+<td>hyperbola</td>
+<td>平面内到两定点距离差的绝对值为常数的点的轨迹</td>
+</tr>
+<tr>
+<td>定值</td>
+<td>constant value</td>
+<td>不随变量变化而改变的数值</td>
+</tr>
+<tr>
+<td>韦达定理</td>
+<td>Vieta's formulas</td>
+<td>描述多项式根与系数关系的定理</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">椭圆的第三定义</a></li>
+<li><a class="dead" title="未收录">弦中点问题（点差法）</a></li>
+<li><a href="../atoms/377-定点定值问题.html">定点定值问题</a></li>
+<li><a class="dead" title="未收录">双曲线的渐近线与斜率</a></li>
+<li><a class="dead" title="未收录">直线与圆锥曲线位置关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2015-理-20.html">2015-理-20</a></li>
+</ul></div>
+</div>
+</body>
+</html>

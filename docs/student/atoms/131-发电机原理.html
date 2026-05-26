@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>发电机原理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>发电机原理</h1><div class="review-mark" data-stem="131-发电机原理"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第二十一章信息传递]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 发电机原理, principle of electric generator, 发电机</p><h1>发电机原理</h1>
+<blockquote>
+<p><strong>一句话</strong>：发电机利用线圈在磁场中旋转切割磁感线产生感应电流，将机械能转化为电能，是现代电力系统的核心。
+<strong>English</strong>: A generator produces electrical current by rotating a coil in a magnetic field to cut magnetic field lines, converting mechanical energy into electrical energy — the core of modern power systems.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>发电机是电动机的"反过来"！</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>电动机</th>
+<th>发电机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入</td>
+<td>电能</td>
+<td>机械能（转动）</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>机械能（转动）</td>
+<td>电能</td>
+</tr>
+<tr>
+<td>原理</td>
+<td>安培力让线圈转动</td>
+<td>线圈转动产生电流</td>
+</tr>
+</tbody>
+</table>
+<p><strong>发电机如何工作？</strong></p>
+<ol>
+<li>用外力（水力、风力、蒸汽）让线圈在磁场中旋转</li>
+<li>线圈不断切割磁感线</li>
+<li>线圈中就产生了电流——<strong>发电了！</strong></li>
+</ol>
+<p><strong>生活中的发电机：</strong>
+- 水力发电站（水轮机带动发电机）
+- 风力发电机（风叶带动）
+- 火力发电站（烧煤→蒸汽→蒸汽轮机→发电机）
+- 核电站（核反应→蒸汽→蒸汽轮机→发电机）
+- 自行车前灯发电机（车轮带动）</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>发电机的工作原理</h3>
+<p><strong>基本原理</strong>：电磁感应——线圈在磁场中旋转，不断切割磁感线，产生交变电动势。</p>
+<p><strong>结构（交流发电机）：</strong>
+- <strong>转子（线圈）</strong>：在磁场中旋转的线圈（或磁极）
+- <strong>定子（磁铁/线圈）</strong>：提供磁场（可以是永磁体或电磁铁）
+- <strong>集流环（滑环）</strong>：导出交流电（区别于直流电动机的换向器）
+- <strong>电刷</strong>：与滑环接触，将电流引出外电路</p>
+<p><strong>注意</strong>：发电机用<strong>集流环（滑环）</strong>，电动机用<strong>换向器</strong>。</p>
+<h3>交变电流（AC）的产生</h3>
+<p>线圈从平行磁场位置开始转动，电动势随时间按正弦规律变化：</p>
+<p>$$e = E_0 \sin\omega t$$</p>
+<ul>
+<li>$E_0$：峰值电动势（最大值）</li>
+<li>$\omega$：角速度（rad/s）</li>
+<li>$t$：时间（s）</li>
+</ul>
+<p>线圈转一周，电流方向改变两次，得到<strong>交变电流</strong>（AC）。</p>
+<h3>能量转化</h3>
+<p>$$\text{机械能} \xrightarrow{\text{发电机}} \text{电能（+ 少量热能损耗）}$$</p>
+<p>$$\eta = \frac{P_{电}}{P_{机}} \times 100\%$$</p>
+<p>现代大型发电机效率可达 98% 以上。</p>
+<h3>发电机与电动机的对比</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>发电机</th>
+<th>电动机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能量转化</td>
+<td>机械能→电能</td>
+<td>电能→机械能</td>
+</tr>
+<tr>
+<td>原理</td>
+<td>电磁感应（法拉第）</td>
+<td>安培力（左手定则）</td>
+</tr>
+<tr>
+<td>电刷装置</td>
+<td>集流环（滑环）</td>
+<td>换向器</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>交变电流（AC）</td>
+<td>旋转（机械功）</td>
+</tr>
+</tbody>
+</table>
+<h3>各类发电方式比较</h3>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>能量来源</th>
+<th>中间转换</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>水力</td>
+<td>水的重力势能</td>
+<td>水轮机→发电机</td>
+<td>可再生，无污染</td>
+</tr>
+<tr>
+<td>火力</td>
+<td>化石燃料热能</td>
+<td>蒸汽轮机→发电机</td>
+<td>稳定，有碳排放</td>
+</tr>
+<tr>
+<td>核能</td>
+<td>核裂变热能</td>
+<td>蒸汽轮机→发电机</td>
+<td>高效，有核废料问题</td>
+</tr>
+<tr>
+<td>风力</td>
+<td>风的动能</td>
+<td>风叶→发电机</td>
+<td>可再生，受风速影响</td>
+</tr>
+<tr>
+<td>太阳能光伏</td>
+<td>光能</td>
+<td>直接→电能</td>
+<td>无中间旋转机械</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一台发电机，线圈在 0.4 T 的匀强磁场中转动，线圈面积 0.05 m²，匝数 100 匝，以 50 Hz 转速转动，求峰值电动势。</p>
+<p>$$E_0 = NBA\omega = NBA \times 2\pi f$$
+$$= 100 \times 0.4 \times 0.05 \times 2\pi \times 50$$
+$$= 100 \times 0.4 \times 0.05 \times 314 \approx 628 \text{ V}$$</p>
+<p><strong>易错点：</strong>
+- 发电机输出的是<strong>交流电</strong>（不是直流电），除非有专门的整流装置
+- 发电机转速越快，频率越高，电动势越大（但不同电器需要固定频率，如50 Hz）
+- 发电机本身不"创造"能量，只是转换能量形式</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发电机</td>
+<td>electric generator</td>
+<td>n.</td>
+<td>The generator converts mechanical energy into electricity.</td>
+</tr>
+<tr>
+<td>集流环/滑环</td>
+<td>slip ring</td>
+<td>n.</td>
+<td>Slip rings allow current to flow from the rotating coil.</td>
+</tr>
+<tr>
+<td>峰值电动势</td>
+<td>peak EMF</td>
+<td>n.</td>
+<td>The peak EMF equals NBAω.</td>
+</tr>
+<tr>
+<td>交变电流</td>
+<td>alternating current (AC)</td>
+<td>n.</td>
+<td>Generators produce alternating current.</td>
+</tr>
+<tr>
+<td>电磁感应</td>
+<td>electromagnetic induction</td>
+<td>n.</td>
+<td>Generators work on the principle of electromagnetic induction.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第二十一章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 发电机原理</li>
+<li><strong>百科</strong>：维基百科"发电机"；中文百科"交流发电机"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/175-电磁感应.html">电磁感应</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/176-电磁波.html">电磁波</a></p>
+</li>
+<li>
+<p><a href="../atoms/175-电磁感应.html">电磁感应</a></p>
+</li>
+<li><a class="dead" title="未收录">电动机原理</a></li>
+<li><a href="../atoms/124-交流电与直流电.html">交流电与直流电</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+<li><a href="../atoms/140-核能.html">核能</a></li>
+<li><a href="../atoms/133-太阳能.html">太阳能</a></li>
+</ul>
+</div>
+</body>
+</html>

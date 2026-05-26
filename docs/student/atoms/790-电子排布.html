@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电子排布</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电子排布</h1><div class="review-mark" data-stem="790-电子排布"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[物质结构]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电子排布, 电子构型</p><h1>电子排布</h1>
+<blockquote>
+<p><strong>一句话</strong>：电子排布指原子核外电子在各原子轨道（能级）上的分布方式，遵循构造原理、泡利不相容原理与洪特规则。
+<strong>English</strong>: Electron configuration describes how electrons are distributed among atomic orbitals (energy levels) in an atom, governed by the Aufbau principle, Pauli exclusion principle, and Hund's rule.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<h3>定义与核心原理</h3>
+<p>电子排布决定了元素的化学性质，其书写必须同时满足三条基本规则：</p>
+<p><strong>1. 构造原理（Aufbau Principle）</strong></p>
+<p>核外电子总是优先占据能量最低的轨道。多电子原子中，能级顺序由 $(n+0.7l)$ 规则近似判断（$n$ 为主量子数，$l$ 为角量子数），或直接记忆填充顺序图（1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p）。注意<strong>能级交错</strong>：$E_{4s}&lt;E_{3d}$、$E_{5s}&lt;E_{4d}$ 等，这是书写 3d 过渡金属排布时的关键陷阱。</p>
+<p><strong>2. 泡利不相容原理</strong></p>
+<p>每个原子轨道最多容纳 2 个电子，且自旋方向相反（用 $\uparrow \downarrow$ 表示）。同一原子内不可能有四个量子数完全相同的两个电子。</p>
+<p><strong>3. 洪特规则</strong></p>
+<p>基态原子中，电子在简并轨道（如 $2p_x, 2p_y, 2p_z$）上分布时，优先以自旋平行的方式单独占据不同轨道，使体系总自旋最大（能量最低）。<strong>洪特规则特例</strong>：等价轨道处于全充满（$p^6, d^{10}, f^{14}$）、半充满（$p^3, d^5, f^7$）或全空（$p^0, d^0, f^0$）时体系较稳定。实例：$\text{Cr}$ 的基态价电子排布为 $3d^5 4s^1$ 而非 $3d^4 4s^2$；$\text{Cu}$ 为 $3d^{10} 4s^1$ 而非 $3d^9 4s^2$。</p>
+<h3>书写电子排布式的标准步骤</h3>
+<ol>
+<li><strong>确定原子序数</strong>，即核外电子总数 $Z$。</li>
+<li><strong>按能级顺序</strong>逐个填充电子，每个轨道最多 2 个电子。</li>
+<li><strong>写成电子排布式</strong>，将同一主层（$n$ 相同）的能级合并书写，如 $\text{Fe},\ Z=26:\ 1s^2 2s^2 2p^6 3s^2 3p^6 3d^6 4s^2$（按 $n$ 值升序写，而非填充顺序）。</li>
+<li><strong>简化写法</strong>：用前一周期的稀有气体符号表示内层电子（原子实），如 $\text{Fe}:\ [\text{Ar}] 3d^6 4s^2$。</li>
+<li><strong>价层电子排布式</strong>与<strong>轨道表示式（电子排布图）</strong> 必须体现洪特规则的方向：用小方框表示轨道，箭号表示自旋，先单独后配对。</li>
+</ol>
+<h3>高考典型考查方式</h3>
+<ul>
+<li><strong>书写与正误判断</strong>：给出原子或离子（如 $\text{Fe}^{2+}$、$\text{Mn}^{2+}$、$\text{Cu}^+$），要求写出基态电子排布式或价层电子排布（注意失电子顺序：先失去最外层 $4s$ 电子，再失去内层 $3d$ 电子）。</li>
+<li><strong>洪特规则特例判断</strong>：识别 $\text{Cr}$ 族与 $\text{Cu}$ 族的特殊排布，及能级交错引起的常见错误排布。</li>
+<li><strong>元素推断</strong>：结合电离能、电负性等数据反向推断原子序数或元素种类。</li>
+<li><strong>微粒磁性判断</strong>：根据是否存在未成对电子判断顺磁性（有）或抗磁性（无）。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>能级顺序混淆</strong>：错误地将 $3d$ 填在 $4s$ 之前（应按 $4s$ 后 $3d$ 填充，但书写时按 $n$ 值写回先 $3d$ 后 $4s$）。</li>
+<li><strong>失电子顺序与填充顺序混淆</strong>：基态原子书写先 $4s$ 后 $3d$，但形成阳离子时<strong>先失去最外层 $4s$ 电子</strong>。如 $\text{Fe}^{2+}$ 的价层排布是 $3d^6$，而非 $3d^4 4s^2$。</li>
+<li><strong>洪特规则画图错误</strong>：轨道式书写中，$p^3$ 应画为 $\uparrow\ \uparrow\ \uparrow$（三个轨道各一个自旋相同），而非先配对。</li>
+<li><strong>忽略洪特规则特例</strong>：$\text{Cr}$、$\text{Cu}$、$\text{Mo}$、$\text{Ag}$、$\text{Au}$ 等存在 $d^4s^2 \to d^5s^1$ 或 $d^9s^2 \to d^{10}s^1$ 的稳定化，22Ti~30Zn 周期常作为区分题命题。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电子排布</td>
+<td>Electron Configuration</td>
+<td>电子在原子轨道中的分布方式</td>
+</tr>
+<tr>
+<td>轨道</td>
+<td>Orbital</td>
+<td>电子出现概率最高的空间区域</td>
+</tr>
+<tr>
+<td>泡利不相容原理</td>
+<td>Pauli Exclusion Principle</td>
+<td>每轨道最多两电子，自旋相反</td>
+</tr>
+<tr>
+<td>洪特规则</td>
+<td>Hund's Rule</td>
+<td>电子优先单独占据简并轨道且自旋平行</td>
+</tr>
+<tr>
+<td>电子排布式</td>
+<td>Electron Configuration Notation</td>
+<td>用 $nl^x$ 形式书写电子分布的式子</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">能层与能级</a></li>
+<li><a class="dead" title="未收录">构造原理</a></li>
+<li><a href="../atoms/384-原子轨道.html">原子轨道</a></li>
+<li><a href="../atoms/253-元素周期表.html">元素周期表</a></li>
+<li><a href="../atoms/393-第一电离能.html">第一电离能</a></li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>延伸</strong>：<a href="../atoms/387-洪特规则.html">洪特规则</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2017-新课标Ⅱ-11.html">2017-新课标Ⅱ-11</a></li>
+<li><a class="dead" title="未收录">2020-新课标Ⅰ-11</a></li>
+<li><a class="dead" title="未收录">2023-湖南-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

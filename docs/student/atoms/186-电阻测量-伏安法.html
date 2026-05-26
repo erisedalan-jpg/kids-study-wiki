@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电阻测量-伏安法</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电阻测量-伏安法</h1><div class="review-mark" data-stem="186-电阻测量-伏安法"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十七章欧姆定律]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电阻测量-伏安法, resistance measurement by voltammetry, 伏安法, 安培表电压表法</p><h1>电阻测量-伏安法</h1>
+<blockquote>
+<p><strong>一句话</strong>：伏安法用电流表和电压表同时测量待测电阻两端的电压和通过的电流，再由R=U/I计算电阻。
+<strong>English</strong>: The volt-ammeter method measures voltage across and current through a resistor simultaneously, then calculates resistance using R=U/I.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p><strong>如何测量一个未知电阻的阻值？</strong></p>
+<p>用<strong>伏安法</strong>：同时用电压表和电流表测量，再用欧姆定律计算！</p>
+<p><strong>实验步骤：</strong>
+1. 按电路图连接：待测电阻 $R_x$ 串联电流表，两端并联电压表，再串联滑动变阻器和开关
+2. 闭合开关，调节滑动变阻器，读取电压表和电流表的示数（多次测量）
+3. 用公式计算：$R_x = U/I$
+4. 多次测量取平均值，减小误差</p>
+<p><strong>为什么要多次测量？</strong>
+减少测量误差，结果更准确。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>实验原理</h3>
+<p>$$R_x = \frac{U}{I}$$</p>
+<p>通过测量 $R_x$ 两端电压 $U$ 和通过电流 $I$，由欧姆定律求 $R_x$。</p>
+<h3>实验电路（两种接法）</h3>
+<p><strong>安培表外接法（适合大电阻）：</strong>
+- 电流表在电压表外侧
+- 电压表测的是 $R_x$ 两端的真实电压
+- 电流表测的是 $R_x$ 和电压表的总电流（偏大）
+- 测量值：$R_{测} = U / I_{总} &lt; R_x$（偏小）
+- 适用于 $R_x &gt;&gt; R_V$ 的情况（$R_V$ 为电压表内阻）</p>
+<p><strong>安培表内接法（适合小电阻）：</strong>
+- 电流表在电压表内侧
+- 电流表测的是 $R_x$ 的真实电流
+- 电压表测的是 $R_x$ 和电流表的总电压（偏大）
+- 测量值：$R_{测} = U_{总} / I &gt; R_x$（偏大）
+- 适用于 $R_x &lt;&lt; R_A$ 的情况（$R_A$ 为电流表内阻）</p>
+<p><strong>接法选择口诀</strong>：
+- $R_x &gt; \sqrt{R_A R_V}$：外接法（大电阻外接）
+- $R_x &lt; \sqrt{R_A R_V}$：内接法（小电阻内接）</p>
+<p>初中阶段通常用<strong>外接法</strong>，定性了解误差来源即可。</p>
+<h3>实验器材</h3>
+<ul>
+<li>待测电阻 $R_x$</li>
+<li>电流表（安培表）</li>
+<li>电压表（伏特表）</li>
+<li>滑动变阻器（用于调节电压）</li>
+<li>电源（电池组）</li>
+<li>开关</li>
+<li>导线</li>
+</ul>
+<h3>实验步骤</h3>
+<ol>
+<li>按电路图连接，开关断开，滑动变阻器调到最大阻值</li>
+<li>检查接线（尤其是电流表和电压表的正负极）</li>
+<li>闭合开关，调节滑动变阻器，记录多组（$U, I$）数据</li>
+<li>计算各次 $R = U/I$，取平均值</li>
+<li>作 $U$-$I$ 图像，图线斜率 = $R$（更准确）</li>
+</ol>
+<h3>数据处理</h3>
+<p><strong>逐次计算</strong>：$R_i = U_i / I_i$，再取平均 $\bar{R} = \frac{1}{n}\sum R_i$</p>
+<p><strong>图像法</strong>：在坐标纸上画 $I$-$U$ 图像（或 $U$-$I$ 图像），拟合直线：
+- $I$-$U$ 图：斜率 = $1/R$
+- $U$-$I$ 图：斜率 = $R$</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：用伏安法测量电阻，得到如下数据：</p>
+<table>
+<thead>
+<tr>
+<th>次数</th>
+<th>U（V）</th>
+<th>I（A）</th>
+<th>R（Ω）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2.0</td>
+<td>0.20</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3.0</td>
+<td>0.29</td>
+<td>10.3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4.0</td>
+<td>0.40</td>
+<td>10.0</td>
+</tr>
+</tbody>
+</table>
+<p>$$\bar{R} = \frac{10.0 + 10.3 + 10.0}{3} \approx 10.1 \text{ Ω}$$</p>
+<p><strong>易错点：</strong>
+- 电流表必须串联，电压表必须并联（接法绝对不能弄反）
+- 实验开始前滑动变阻器要调到最大阻值（保护电路）
+- 读数要在指针稳定后再读，记录数据要加单位</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>伏安法</td>
+<td>volt-ammeter method</td>
+<td>n.</td>
+<td>The volt-ammeter method measures both voltage and current.</td>
+</tr>
+<tr>
+<td>外接法</td>
+<td>external connection</td>
+<td>n.</td>
+<td>Use external connection for large resistances.</td>
+</tr>
+<tr>
+<td>内接法</td>
+<td>internal connection</td>
+<td>n.</td>
+<td>Use internal connection for small resistances.</td>
+</tr>
+<tr>
+<td>系统误差</td>
+<td>systematic error</td>
+<td>n.</td>
+<td>Both connection methods have systematic errors.</td>
+</tr>
+<tr>
+<td>图像法</td>
+<td>graphical method</td>
+<td>n.</td>
+<td>The graphical method gives more accurate results.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十七章（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 测量电阻</li>
+<li><strong>百科</strong>：维基百科"欧姆表"；中文百科"伏安法"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/141-欧姆定律-初中.html">欧姆定律-初中</a></li>
+<li><a href="../atoms/170-电流测量.html">电流测量</a></li>
+<li><a href="../atoms/164-电压测量.html">电压测量</a></li>
+<li><a href="../atoms/148-滑动变阻器.html">滑动变阻器</a></li>
+<li><a class="dead" title="未收录">电流与电压关系</a></li>
+<li><a class="dead" title="未收录">电流与电阻关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2010-新课标Ⅰ-10.html">2010-新课标Ⅰ-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

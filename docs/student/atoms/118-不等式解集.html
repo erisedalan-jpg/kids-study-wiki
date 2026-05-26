@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式解集</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>不等式解集</h1><div class="review-mark" data-stem="118-不等式解集"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 不等式与不等式组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 不等式解集, solution set of inequality, 解集, 不等式的解</p><h2>课本定义</h2>
+<p>能使不等式成立的未知数的值，叫做<strong>不等式的解</strong>；所有解的集合，叫做不等式的<strong>解集</strong>。求不等式解集的过程，叫做<strong>解不等式</strong>。解集通常在<strong>数轴</strong>上表示。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"满足不等式的所有答案"</h3>
+<p><strong>不等式的"解"和方程的"解"有什么不同？</strong></p>
+<ul>
+<li>方程 x + 1 = 5 的解：x = 4（只有一个值）</li>
+<li>不等式 x + 1 &gt; 5 的解：x &gt; 4（所有大于4的数）</li>
+</ul>
+<p>不等式的解<strong>不是一个值，而是一片数值</strong>，这片数值叫<strong>解集</strong>。</p>
+<p><strong>在数轴上表示解集：</strong></p>
+<p>x &gt; 4 的数轴表示：</p>
+<pre><code>———————————o——————————→
+          4    5    6
+（4右边，空心圆，表示不含4）
+</code></pre>
+<p>x ≤ 2 的数轴表示：</p>
+<pre><code>←——————————•————————
+   0   1   2
+（2左边，实心圆，表示含2）
+</code></pre>
+<p><strong>空心圆 vs 实心圆：</strong>
+- <strong>空心圆</strong>：端点不在解集里（严格不等式 &gt;, &lt;）
+- <strong>实心圆</strong>：端点在解集里（≥, ≤）</p>
+<p><strong>解集的常见形式：</strong>
+| 解集 | 数轴 | 意思 |
+|------|------|------|
+| x &gt; a | a 右，空心圆 | a 右边所有数 |
+| x ≥ a | a 右，实心圆 | a 及 a 右边所有数 |
+| x &lt; a | a 左，空心圆 | a 左边所有数 |
+| x ≤ a | a 左，实心圆 | a 及 a 左边所有数 |</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>不等式的解</strong>：使不等式成立的未知数的值。</p>
+<p><strong>不等式的解集</strong>：不等式所有解的集合。</p>
+<p><strong>解不等式</strong>：求不等式解集的过程（用变换等价不等式的方法）。</p>
+<h3>解集的表示方式</h3>
+<p><strong>数轴表示：</strong>
+在数轴上，满足条件的 x 的范围用粗线段（或射线）表示：
+- 端点为 &gt; 或 &lt; 时：空心圆（开区间端点）
+- 端点为 ≥ 或 ≤ 时：实心圆（闭区间端点）</p>
+<p><strong>区间表示（初中了解，高中用）：</strong>
+| 解集 | 区间记号 | 含义 |
+|------|---------|------|
+| x &gt; a | (a, +∞) | 开区间 |
+| x ≥ a | [a, +∞) | 闭区间 |
+| x &lt; a | (-∞, a) | 开区间 |
+| x ≤ a | (-∞, a] | 闭区间 |
+| a &lt; x &lt; b | (a, b) | 开区间 |
+| a ≤ x ≤ b | [a, b] | 闭区间 |</p>
+<h3>解集的性质</h3>
+<p><strong>等价变换</strong>：对不等式进行合法操作（两边同加减、同乘除正数、同乘除负数且翻转），得到等价不等式，解集不变。</p>
+<p><strong>解集可以是：</strong>
+- 射线（x &gt; a 或 x &lt; a）：无穷解
+- 有限区间（a &lt; x &lt; b）：有限范围的无穷解
+- 全体实数（如 x² ≥ 0）
+- 空集（如 x &gt; x + 1，无解）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 解不等式 4x - 3 &gt; 2x + 1，并在数轴上表示解集。</p>
+<p>解：4x - 2x &gt; 1 + 3
+2x &gt; 4
+x &gt; 2</p>
+<p>数轴：在 2 右边画空心圆，向右延伸的射线。</p>
+<p><strong>例题2：</strong> 解不等式 2(x+1) ≤ 3(x-2)，并用区间记号表示。</p>
+<p>解：2x + 2 ≤ 3x - 6
+2x - 3x ≤ -6 - 2
+-x ≤ -8
+x ≥ 8（除以-1，翻转）</p>
+<p>解集：x ≥ 8，区间记号 [8, +∞)。</p>
+<p><strong>例题3：</strong> 对解集 x &lt; -1，举出3个属于解集的数和2个不属于解集的数。</p>
+<p>属于解集：-2, -100, -1.5（均小于-1）
+不属于解集：-1（等于，不满足严格小于），0（大于-1）</p>
+<h3>判断解是否在解集中</h3>
+<p>将值代入不等式，若不等式成立，则该值在解集中；否则不在。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>严格不等式（&lt;, &gt;）端点不在解集，用空心圆</strong></li>
+<li><strong>空集也是解集</strong>（当不等式无解时，解集为空集 ∅）</li>
+<li><strong>解集是一个集合，用花括号或数轴表示</strong>，不是单个值</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不等式的解</td>
+<td>solution of inequality</td>
+<td>使不等式成立的值</td>
+</tr>
+<tr>
+<td>解集</td>
+<td>solution set</td>
+<td>所有解的集合</td>
+</tr>
+<tr>
+<td>解不等式</td>
+<td>solve the inequality</td>
+<td>求解集的过程</td>
+</tr>
+<tr>
+<td>数轴</td>
+<td>number line</td>
+<td>表示解集的图形工具</td>
+</tr>
+<tr>
+<td>空心圆</td>
+<td>open circle</td>
+<td>不含端点（&lt; 或 &gt;）</td>
+</tr>
+<tr>
+<td>实心圆</td>
+<td>filled/closed circle</td>
+<td>含端点（≤ 或 ≥）</td>
+</tr>
+<tr>
+<td>区间</td>
+<td>interval</td>
+<td>解集的区间记号</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第九章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/114-一元一次不等式.html">一元一次不等式</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/121-全面调查.html">全面调查</a></p>
+</li>
+<li>
+<p><a href="../atoms/114-一元一次不等式.html">一元一次不等式</a></p>
+</li>
+<li><a href="../atoms/117-不等式性质.html">不等式性质</a></li>
+<li><a href="../atoms/115-一元一次不等式组.html">一元一次不等式组</a></li>
+<li><a href="../atoms/078-负数.html">数轴</a></li>
+<li><a href="../atoms/127-实数.html">实数</a></li>
+<li><a href="../atoms/082-一元一次方程.html">一元一次方程</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2022-新高考Ⅰ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

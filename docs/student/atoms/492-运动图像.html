@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>运动图像</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>运动图像</h1><div class="review-mark" data-stem="492-运动图像"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 运动图像, motion graphs</p><h1>运动图像</h1>
+<blockquote>
+<p><strong>一句话</strong>：运动图像是用平面直角坐标系展示物体位移、速度或加速度随时间变化规律的图表，常见的有 x-t 图、v-t 图和 a-t 图。
+<strong>English</strong>: Motion graphs are graphical representations that show how a moving object’s position, velocity, or acceleration changes over time, typically including position-time (x-t), velocity-time (v-t), and acceleration-time (a-t) graphs.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+运动图像的核心是利用函数图像分析直线运动。高考中主要考查三种图像：<br />
+- <strong>位移－时间图 (x-t)</strong>：纵轴表示位置坐标 x（或位移），横轴表示时间 t。<strong>斜率</strong>代表瞬时速度（$v = \frac{\Delta x}{\Delta t}$），斜率为正表示速度沿正方向，斜率为负表示速度沿负方向；图线为水平直线则物体静止；图线为倾斜直线则物体做匀速直线运动；图线为抛物线则表示匀变速直线运动。<br />
+- <strong>速度－时间图 (v-t)</strong>：纵轴表示速度 v，横轴表示时间 t。<strong>斜率</strong>代表加速度（$a = \frac{\Delta v}{\Delta t}$），图线与时间轴围成的<strong>面积</strong>代表位移（$\Delta x = \int_{t_1}^{t_2} v \, dt$，在高中用代数面积计算：时间轴上方面积为正位移，下方面积为负位移，总位移为代数和）。匀速运动：水平直线；匀变速运动：倾斜直线。<br />
+- <strong>加速度－时间图 (a-t)</strong>：纵轴表示加速度 a，横轴表示时间 t。图线与时间轴围成的<strong>面积</strong>代表速度变化量（$\Delta v = \int_{t_1}^{t_2} a \, dt$），匀变速运动对应水平直线。</p>
+<p><strong>关键方法</strong><br />
+解答运动图像题的标准化步骤：<br />
+1. <strong>看轴</strong>：确认横纵坐标代表的物理量及单位。<br />
+2. <strong>看点</strong>：抓住起点、拐点、交点、终点，分析对应时刻的运动状态变化。例如 v-t 图中交点表示速度相等，x-t 图中交点表示相遇。<br />
+3. <strong>看斜率</strong>：v-t 图斜率是加速度，x-t 图斜率是速度。斜率大小反映变化快慢，正负反映方向。<br />
+4. <strong>看面积</strong>：v-t 图面积对应位移，a-t 图面积对应速度变化量。<br />
+5. <strong>图像转换</strong>：由已知图像结合运动学公式推导出另一种图像，例如由 v-t 图画出 a-t 图或 x-t 图，常结合匀变速运动公式。</p>
+<p><strong>典型应用</strong><br />
+高考常从以下角度设问：<br />
+- <strong>读图直接判断</strong>：给出 x-t 或 v-t 图，判断物体的运动方向、速度大小变化、加速度正负、位移大小等。例如：某物体 v-t 图是一条先上升后下降的倾斜直线，则物体先做匀加速、后做匀减速，总位移为梯形面积。<br />
+- <strong>多过程与追及相遇</strong>：利用 v-t 图像分析复杂运动的位移关系和相遇条件。例如：两车同向行驶，通过 v-t 图中两图线围成面积差值判断是否追上、何时最远或最近。<br />
+- <strong>图像变形与综合计算</strong>：将图像与 $x = v_0 t + \frac12 a t^2$、$v = v_0 + a t$ 结合，从图像截距、斜率反推初速度、加速度等物理量，再代入情景计算。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆图像与实际轨迹</strong>：x-t 图、v-t 图不是物体运动的轨迹，仅在直线运动中反映位置或速度随时间的变化。例如 x-t 图是一条抛物线只能说明做匀变速直线运动，不代表物体做曲线运动。</li>
+<li><strong>误判 x-t 图的斜率与加速度的关系</strong>：x-t 图的斜率是速度，斜率的正负是速度方向，斜率的陡缓变化（凹凸性）才与加速度方向有关（切线斜率增大则 $a$ 与 $v$ 同向，减小则 $a$ 与 $v$ 反向），但直接由斜率计算加速度是错误观念。</li>
+<li><strong>v-t 图中面积正负的理解错误</strong>：时间轴以上的面积为正位移，以下为负位移。若图线跨越 t 轴，总位移为上下面积代数相加，而非简单相加绝对值。有时还会误将面积当作路程（仅当速度方向不变时面积绝对值之和才是路程）。</li>
+<li><strong>忽视截距的物理意义</strong>：x-t 图的纵截距表示初始位置，v-t 图的纵截距表示初速度，a-t 图的纵截距表示初加速度，这些往往直接参与公式计算，漏看截距会导致结果错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>运动图像</td>
+<td>motion graph</td>
+<td>描述运动量随时间变化的图表</td>
+</tr>
+<tr>
+<td>位移-时间图</td>
+<td>displacement-time graph</td>
+<td>纵轴位移，斜率表示速度</td>
+</tr>
+<tr>
+<td>速度-时间图</td>
+<td>velocity-time graph</td>
+<td>纵轴速度，斜率表示加速度，面积表示位移</td>
+</tr>
+<tr>
+<td>斜率</td>
+<td>slope</td>
+<td>表示物理量的变化率</td>
+</tr>
+<tr>
+<td>面积（图下面积）</td>
+<td>area under graph</td>
+<td>在 v-t 图中代表位移，a-t 图中代表速度变化量</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017 年版 2020 年修订）——必修课程“机械运动与物理模型”内容要求</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">位移与路程</a></li>
+<li><a class="dead" title="未收录">速度与加速度</a></li>
+<li><a class="dead" title="未收录">匀变速直线运动公式</a></li>
+<li><a class="dead" title="未收录">追及相遇问题</a></li>
+<li><a class="dead" title="未收录">自由落体运动</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2019-新课标Ⅱ-12.html">2019-新课标Ⅱ-12</a></li>
+<li><a class="dead" title="未收录">2021-湖南-02</a></li>
+</ul></div>
+</div>
+</body>
+</html>

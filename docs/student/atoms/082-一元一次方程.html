@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一元一次方程</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>一元一次方程</h1><div class="review-mark" data-stem="082-一元一次方程"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七上, 方程]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 一元一次方程, linear equation in one variable, 一次方程</p><h2>课本一句话定义</h2>
+<p><strong>一元一次方程</strong>是只含有<strong>一个未知数</strong>（元），且未知数的次数为 <strong>1</strong>（一次），并且最高次项系数不为 0 的方程；标准形式为 $ax = b$（$a \neq 0$）。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>"一元一次"的含义：
+- <strong>一元</strong>：只有 1 个未知数（如只有 $x$，没有 $y$）
+- <strong>一次</strong>：未知数的最高次方是 1（$x$，不是 $x^2$）</p>
+<p>常见的一元一次方程：
+- $x + 5 = 12$（解：$x = 7$）
+- $2x - 3 = 7$（解：$x = 5$）
+- $3(x - 1) = 9$（需要先去括号）</p>
+<p><strong>判断是不是一元一次方程</strong>：
+1. 只有一个字母吗？
+2. 这个字母的最高次是 1 吗？
+3. 是等式吗（有 = 号）？</p>
+<p>三个"是"才是一元一次方程。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>一元一次方程</strong>：只含一个未知数，且未知数的最高次数为 1，整理后可写成：</p>
+<p>$$ax + b = 0 \quad (a \neq 0, a, b \in \mathbb{Q})$$</p>
+<p>或等价形式 $ax = c$，解为 $x = \dfrac{c}{a}$。</p>
+<h3>标准解题步骤</h3>
+<ol>
+<li><strong>去分母</strong>：方程两边同乘各分数分母的最小公倍数（LCM）</li>
+<li><strong>去括号</strong>：用分配律展开括号</li>
+<li><strong>移项</strong>：含未知数的项移到左边，常数项移到右边</li>
+<li><strong>合并同类项</strong>：左边合并 $x$ 项，右边合并常数</li>
+<li><strong>系数化为 1</strong>：两边除以未知数系数</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：解方程 $2x - 3 = x + 5$。</p>
+<p><strong>解</strong>：
+移项：$2x - x = 5 + 3$
+合并：$x = 8$
+验证：左边 $= 2 \times 8 - 3 = 13$；右边 $= 8 + 5 = 13$ ✅</p>
+<p><strong>例 2</strong>：解方程 $\dfrac{x-1}{2} - \dfrac{x+2}{3} = 1$。</p>
+<p><strong>解</strong>：
+去分母（×6）：$3(x-1) - 2(x+2) = 6$
+去括号：$3x - 3 - 2x - 4 = 6$
+合并：$x - 7 = 6$
+移项：$x = 13$</p>
+<p><strong>例 3</strong>：若 $3(x - 1) - 2(x + a) = 0$ 的解为 $x = 5$，求 $a$。</p>
+<p><strong>解</strong>：将 $x = 5$ 代入：$3(5-1) - 2(5+a) = 0$，$12 - 10 - 2a = 0$，$2 - 2a = 0$，$a = 1$。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>系数不为 0</strong>：$0 \cdot x = 0$ 不是方程，$0x = 3$ 无解。</li>
+<li><strong>去分母后分子要加括号</strong>：$\dfrac{x-1}{2}$ 两边乘 2 得 $x - 1$，整体在括号里。</li>
+<li><strong>移项必须变号</strong>：从左移到右，正变负，负变正。</li>
+<li><strong>验证</strong>：解完一定代入原方程验证。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：方程（含义）、等式性质、有理数四则运算</li>
+<li>后续：一元一次方程应用题 → 二元一次方程组（八年级）→ 一元二次方程（九年级）</li>
+<li>高中拓展：函数零点，直线 $y = kx + b$ 中令 $y = 0$</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一元一次方程</td>
+<td>linear equation in one variable</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>一元</td>
+<td>one variable</td>
+<td>只有一个未知数</td>
+</tr>
+<tr>
+<td>一次</td>
+<td>linear / first degree</td>
+<td>最高次为 1</td>
+</tr>
+<tr>
+<td>解</td>
+<td>solution</td>
+<td>满足方程的未知数值</td>
+</tr>
+<tr>
+<td>验证</td>
+<td>verification / check</td>
+<td>代入验证解是否正确</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$2x + 3 = 7$ 是一个一元一次方程。</td>
+<td>$2x + 3 = 7$ is a linear equation in one variable.</td>
+</tr>
+<tr>
+<td>解方程的最终目的是求出 $x$ 的值。</td>
+<td>The goal of solving an equation is to find the value of $x$.</td>
+</tr>
+<tr>
+<td>解完方程后要代入原式验证。</td>
+<td>After solving the equation, substitute back to verify.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"数与代数"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第三章（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Linear equation</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/061-方程.html">方程</a> <a href="../atoms/094-整式加减.html">整式加减</a> <a href="../atoms/093-整式.html">整式</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/084-二元一次方程组.html">二元一次方程组</a> <a href="../atoms/1103-角平分线定理.html">角平分线定理</a></p>
+</li>
+<li>
+<p><a href="../atoms/061-方程.html">方程</a></p>
+</li>
+<li><a href="../atoms/108-等式性质.html">等式性质</a></li>
+<li><a href="../atoms/061-方程.html">解方程</a></li>
+<li><a href="../atoms/106-移项.html">移项</a></li>
+<li><a href="../atoms/091-应用题（行程工程利润）.html">应用题（行程工程利润）</a></li>
+<li><a href="../atoms/084-二元一次方程组.html">二元一次方程组</a></li>
+</ul>
+</div>
+</body>
+</html>

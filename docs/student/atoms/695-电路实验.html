@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路实验</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电路实验</h1><div class="review-mark" data-stem="695-电路实验"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电路实验</p><h1>电路实验</h1>
+<blockquote>
+<p><strong>一句话</strong>：电路实验是利用电学仪器，基于欧姆定律、闭合电路欧姆定律等原理，通过电路搭建与测量，探究元件伏安特性或测量电阻、电源电动势与内阻等物理量的实验集合。
+<strong>English</strong>: A circuit experiment is a set of experimental procedures using electrical instruments to investigate the V-I characteristics of components or measure quantities such as resistance, electromotive force, and internal resistance, based on Ohm's law and closed-circuit Ohm's law.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：核心原理为部分电路欧姆定律 $I=U/R$、闭合电路欧姆定律 $E=U+Ir$（或 $I=E/(R+r)$），以及电阻定律 $R=\rho l/S$。实验设计围绕“测 $U$、$I$，算 $R$、$E$、$r$、$\rho$”展开。例如，伏安法测电阻的依据是 $R=U/I$；测电源电动势和内阻的依据是对闭合回路改变外电阻，记录多组 $(U,I)$，由 $U=E-Ir$ 拟合直线，斜率绝对值为 $r$，纵截距为 $E$。</li>
+<li><strong>关键方法</strong>：</li>
+<li><strong>电流表接法选择</strong>：当 $R_x \gg R_A$ 时内接（测量值偏大）；当 $R_x \ll R_V$ 时外接（测量值偏小）；可用比值法 $\begin{cases} R_x/\sqrt{R_A R_V} &gt; 1 \text{ 内接} \ &lt; 1 \text{ 外接} \end{cases}$ 或试触法。</li>
+<li><strong>滑动变阻器接法</strong>：要求电压从零开始调节、多测几组或负载电阻远大于变阻器最大阻值时用分压式；节能、电路简单且负载电阻与变阻器阻值相近时用限流式。</li>
+<li><strong>数据处理</strong>：多用图像法，如 $U-I$ 图像、$R-l$ 图像。注意纵轴截距、斜率、横轴截距的物理意义，以及坐标原点是否从零开始对结果的影响。</li>
+<li><strong>典型应用</strong>：高考常考“测定金属的电阻率”（需测量 $U,I,l,d$，注意螺旋测微器读数）、“描绘小灯泡的伏安特性曲线”（需分压接法，曲线弯曲说明电阻随温度升高而增大）、“测定电源的电动势和内阻”（注意电流表相对于电源的内外接带来的系统误差：若电流表内接在电源支路，则 $E_{\text{测}}=E$，$r_{\text{测}}=r+R_A$，偏大；若电压表外接在电源两端，则 $E_{\text{测}}&lt;E$，$r_{\text{测}}&lt;r$）以及“练习使用多用电表”（欧姆调零、读数、红进黑出）。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>电流表内外接混淆</strong>：不理解误差来源，错误记忆“大内偏大、小外偏小”，却未将 $R_x$ 与 $\sqrt{R_A R_V}$ 比较，或忘记测量对象是哪个电阻，导致实验设计错误。</li>
+<li><strong>分压与限流接法选择失误</strong>：需要电压从零开始连续变化的实验（如描绘伏安特性曲线）误用限流接法，导致无法获得低电压数据点；或对低阻值负载误用分压接法导致电源耗能大但电路调节无必要。</li>
+<li><strong>电源 $E$、$r$ 测量实验的系统误差分析漏掉电表内阻影响</strong>：用 $U-I$ 图像法时常忽略电流表的分压或电压表的分流，尤其在连接实物图时无法正确判断电流表是“相对电源外接”还是“内接”，进而不能准确判断测量值偏大或偏小。</li>
+<li><strong>多用电表读数与欧姆调零遗忘</strong>：测电阻每次换挡后必须重新欧姆调零，且读数时忘记乘倍率；用欧姆表测电阻时，待测电阻必须与电源断开，不能用两手同时捏住表笔金属部分。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>伏安法</td>
+<td>voltammetry</td>
+<td>通过测量电压和电流间接测量电阻或其他电学量的方法</td>
+</tr>
+<tr>
+<td>闭合电路欧姆定律</td>
+<td>closed-circuit Ohm's law</td>
+<td>$E=U+Ir$，用于测电源电动势和内阻的基本方程</td>
+</tr>
+<tr>
+<td>分压式接法</td>
+<td>voltage divider connection</td>
+<td>滑动变阻器作分压器用，输出电压可在零到电源电压间连续调节</td>
+</tr>
+<tr>
+<td>螺旋测微器</td>
+<td>micrometer screw gauge</td>
+<td>测量金属丝直径的精密仪器，需读到千分位（0.001 mm）</td>
+</tr>
+<tr>
+<td>欧姆调零</td>
+<td>ohmic zero adjustment</td>
+<td>使用多用电表欧姆挡前，短接两表笔调节使指针指向零欧姆</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a href="../atoms/511-伏安法测电阻.html">伏安法测电阻</a></li>
+<li><a class="dead" title="未收录">测定电源电动势和内阻</a></li>
+<li><a class="dead" title="未收录">电学实验仪器的选择与电路设计</a></li>
+<li><a class="dead" title="未收录">多用电表的使用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a></li>
+<li><a class="dead" title="未收录">2021-北京-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

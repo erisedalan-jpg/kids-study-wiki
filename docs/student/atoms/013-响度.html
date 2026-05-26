@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>响度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>响度</h1><div class="review-mark" data-stem="013-响度"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[八上, 声现象]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 响度, loudness, 音量</p><h1>响度</h1>
+<blockquote>
+<p><strong>一句话</strong>：响度是声音的强弱（大小），由声源振动的<strong>振幅</strong>决定，振幅越大，响度越大。
+<strong>English</strong>: Loudness is the perceived intensity of sound, determined by the amplitude of vibration; greater amplitude means greater loudness.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>轻轻敲鼓 vs. 用力敲鼓，哪个声音更大？——用力敲的！这就是<strong>响度</strong>的区别！</p>
+<p><strong>响度由振幅决定：</strong>
+- 振幅 = 振动的幅度（振动的最大位移）
+- 振幅越大 → 响度越大（声音越响）
+- 振幅越小 → 响度越小（声音越轻）</p>
+<p><strong>生活例子：</strong>
+- 轻拨吉他弦：振幅小，声音轻
+- 用力拨吉他弦：振幅大，声音响
+- 远处说话听不清：距离远，声音弱（响度小）</p>
+<p><strong>响度还与距离有关：</strong>
+- 距声源越近 → 响度越大
+- 距声源越远 → 响度越小</p>
+<p><strong>响度的单位：分贝（dB）</strong></p>
+<table>
+<thead>
+<tr>
+<th>声音</th>
+<th>分贝值（dB）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安静的图书馆</td>
+<td>30 dB</td>
+</tr>
+<tr>
+<td>正常说话</td>
+<td>60 dB</td>
+</tr>
+<tr>
+<td>嘈杂街道</td>
+<td>80 dB</td>
+</tr>
+<tr>
+<td>超过 90 dB</td>
+<td>可能损害听力</td>
+</tr>
+<tr>
+<td>摇滚音乐会</td>
+<td>110 dB</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>响度</strong>（Loudness）：人耳感受到的声音强弱，主观感觉量。</p>
+<p>客观物理量对应的是<strong>声强（Sound Intensity，I）</strong>，单位 W/m²。</p>
+<p><strong>振幅（Amplitude，A）</strong>：振动物体偏离平衡位置的最大位移，决定声波的能量大小。</p>
+<p>$$I \propto A^2$$</p>
+<p>（声强与振幅的平方成正比）</p>
+<h3>影响响度的因素</h3>
+<ol>
+<li><strong>振幅</strong>：振幅越大，响度越大（最主要因素）</li>
+<li><strong>距声源的距离</strong>：距离越远，响度越小（声能扩散）</li>
+<li><strong>声音的传播介质</strong>：固体中声音衰减慢（响度保持更远）</li>
+</ol>
+<h3>分贝（dB）</h3>
+<p><strong>声音强度级</strong>（Sound Level，L）：</p>
+<p>$$L = 10 \lg \frac{I}{I_0} \text{ (dB)}$$</p>
+<p>（$I_0 = 10^{-12}$ W/m²，听觉阈值）</p>
+<table>
+<thead>
+<tr>
+<th>dB 值</th>
+<th>声音强度</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>可听阈</td>
+<td>刚好能听到</td>
+</tr>
+<tr>
+<td>30</td>
+<td>安静</td>
+<td>图书馆</td>
+</tr>
+<tr>
+<td>60</td>
+<td>正常</td>
+<td>对话</td>
+</tr>
+<tr>
+<td>85</td>
+<td>嘈杂</td>
+<td>繁忙街道</td>
+</tr>
+<tr>
+<td>120</td>
+<td>痛阈</td>
+<td>飞机起飞附近</td>
+</tr>
+<tr>
+<td>&gt;140</td>
+<td>危险</td>
+<td>爆炸</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>：分贝是对数尺度，增加 10 dB = 声强增大 10 倍！</p>
+<h3>响度与音调的区别</h3>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>决定因素</th>
+<th>感受</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>音调（Pitch）</td>
+<td>频率</td>
+<td>高低</td>
+</tr>
+<tr>
+<td>响度（Loudness）</td>
+<td>振幅</td>
+<td>大小</td>
+</tr>
+<tr>
+<td>音色（Timbre）</td>
+<td>波形</td>
+<td>音质</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：用力敲鼓和轻轻敲鼓，哪个音调高？哪个响度大？</p>
+<p><strong>解</strong>：
+- 两者音调相同（频率由鼓的材料和张力决定，敲击力度不影响频率）
+- 用力敲振幅更大，<strong>响度更大</strong></p>
+<p><strong>例2</strong>：同一声源，响度随距离变化，这说明响度与什么有关？</p>
+<p><strong>解</strong>：说明响度与<strong>距声源的距离</strong>有关，距离越远，声能扩散，响度越小。</p>
+<p><strong>易错点：</strong>
+- 响度（大小）≠ 音调（高低）：大声说话音调可以很低
+- 分贝是对数单位，60 dB 不是 30 dB 的两倍（而是 1000 倍！）
+- 长期暴露在 85 dB 以上环境中会损害听力</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>响度</td>
+<td>loudness</td>
+<td>n.</td>
+<td>The loudness depends on the amplitude.</td>
+</tr>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>n.</td>
+<td>Larger amplitude means greater loudness.</td>
+</tr>
+<tr>
+<td>分贝</td>
+<td>decibel (dB)</td>
+<td>n.</td>
+<td>Sounds above 85 dB can damage hearing.</td>
+</tr>
+<tr>
+<td>声强</td>
+<td>sound intensity</td>
+<td>n.</td>
+<td>Sound intensity decreases with distance.</td>
+</tr>
+</tbody>
+</table>
+<h3>例句（可朗读对照）</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>振幅越大，响度越大。</td>
+<td>The greater the amplitude, the louder the sound.</td>
+</tr>
+<tr>
+<td>正常说话的响度约为 60 分贝。</td>
+<td>Normal speech is about 60 decibels.</td>
+</tr>
+<tr>
+<td>距声源越远，响度越小。</td>
+<td>The farther from the sound source, the lower the loudness.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理八年级上册.pdf</a> 第2章第2节（待家长核对具体页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 声现象</li>
+<li><strong>百科</strong>：维基百科"响度"；中文百科"分贝"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/050-音调.html">音调</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/049-音色.html">音色</a></p>
+</li>
+<li>
+<p><a href="../atoms/050-音调.html">音调</a></p>
+</li>
+<li><a href="../atoms/049-音色.html">音色</a></li>
+<li><a class="dead" title="未收录">声音的产生</a></li>
+<li><a class="dead" title="未收录">声速</a></li>
+<li><a class="dead" title="未收录">回声</a></li>
+</ul>
+</div>
+</body>
+</html>

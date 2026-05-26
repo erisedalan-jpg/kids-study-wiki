@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卢瑟福原子模型</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>卢瑟福原子模型</h1><div class="review-mark" data-stem="425-卢瑟福原子模型"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必三, 原子物理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 卢瑟福原子模型, Rutherford atomic model, 核式模型, α粒子散射实验</p><h2>🎓 卢瑟福原子模型</h2>
+<h3>实验背景</h3>
+<p>1909-1911 年，欧内斯特·卢瑟福（Ernest Rutherford）与盖革、马斯登合作，进行了著名的 <strong>α 粒子散射实验</strong>（金箔实验）。</p>
+<p><strong>实验设置</strong>：
+- α 粒子源（放射性物质）发出 α 粒子（氦核 ${}^4_2\text{He}$，带 $+2e$）
+- α 粒子束轰击极薄金箔（约 400 个原子厚）
+- 用闪光探测器在各角度统计散射粒子数</p>
+<h3>实验结果</h3>
+<table>
+<thead>
+<tr>
+<th>观测</th>
+<th>比例</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝大多数 α 粒子直线穿过</td>
+<td>&gt;99%</td>
+<td>原子内部基本空旷</td>
+</tr>
+<tr>
+<td>小角度偏转</td>
+<td>少数</td>
+<td>受到分散的微弱正电荷作用</td>
+</tr>
+<tr>
+<td>大角度偏转（&gt;90°）</td>
+<td>极少</td>
+<td>遇到了集中的强正电荷区域</td>
+</tr>
+<tr>
+<td>反弹（接近 180°）</td>
+<td>极少数</td>
+<td>几乎正面碰到原子核</td>
+</tr>
+</tbody>
+</table>
+<h3>与汤姆森模型的矛盾</h3>
+<p><strong>汤姆森枣糕模型</strong>预测：α 粒子穿过分散正电荷，应该几乎不偏转，大角度散射不可能。</p>
+<p><strong>实验事实</strong>：存在大角度散射，推翻了枣糕模型，说明正电荷必须高度集中。</p>
+<h3>卢瑟福核式模型（1911）</h3>
+<p><strong>核心结论</strong>：</p>
+<ol>
+<li>原子中心有一个<strong>很小、很重的原子核</strong>，集中了原子几乎全部质量和全部正电荷</li>
+<li>核外电子在核周围<strong>大范围内运动</strong>，原子内部大部分是空旷的</li>
+<li>原子核的大小约为 $10^{-15}\ \text{m}$，而整个原子约 $10^{-10}\ \text{m}$</li>
+</ol>
+<p>$$\frac{r_{\text{原子核}}}{r_{\text{原子}}} \approx \frac{10^{-15}}{10^{-10}} = 10^{-5}$$</p>
+<h3>核式模型的成功与局限</h3>
+<p><strong>成功</strong>：正确描述了原子的核-电子结构，解释了 α 粒子大角度散射。</p>
+<p><strong>局限（经典电动力学的困境）</strong>：
+- 电子绕核做圆周运动（加速运动），按经典电动力学应持续辐射能量
+- 能量减少 → 电子螺旋落入原子核（时间约 $10^{-8}\ \text{s}$）
+- 原子应该不稳定，且辐射应为连续谱</p>
+<p>这与实际相矛盾（原子稳定存在，氢原子线状谱），由<strong>玻尔模型</strong>解决。</p>
+<h3>最近邻距离计算（α 粒子正碰）</h3>
+<p>α 粒子正对原子核运动时，在最近点动能全部转化为电势能：</p>
+<p>$$\frac{1}{2}mv^2 = k \frac{2e \cdot Ze}{r_{\min}}$$</p>
+<p>$$r_{\min} = \frac{4kZe^2}{mv^2}$$</p>
+<p>由此可估算原子核半径的上限。</p>
+<h3>易错点</h3>
+<ol>
+<li>卢瑟福模型解释了大角度散射，但本身不能解释原子的稳定性</li>
+<li>核式模型是"行星模型"的雏形，但经典物理中轨道电子应辐射并坍缩</li>
+<li>汤姆森（Thomson）发现了电子；卢瑟福（Rutherford）发现了原子核，两人均为英国物理学家</li>
+</ol>
+<h2>📑 出处</h2>
+<ul>
+<li>课标依据：《普通高中物理课程标准（2017 年版 2020 年修订）》选择性必修模块</li>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第三册.pdf</a> 第五章（待家长核对页码）</li>
+<li>百科：<a href="https://baike.baidu.com/item/卢瑟福原子模型">卢瑟福原子模型 - 百度百科</a>（不确定，待家长核对）</li>
+<li>生成校对：Claude Sonnet 4.6，2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/426-原子结构.html">原子结构</a></li>
+<li><a href="../atoms/443-玻尔原子模型.html">玻尔原子模型</a></li>
+<li><a href="../atoms/436-氢原子能级.html">氢原子能级</a></li>
+<li><a href="../atoms/427-天然放射现象.html">天然放射现象</a></li>
+<li><a href="../atoms/431-核反应.html">核反应</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>七下-二元一次方程组</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>七下-二元一次方程组</h1><div class="review-mark" data-stem="116-七下-二元一次方程组"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[代数, 七下, 二元一次方程组]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 七下-二元一次方程组, 二元一次方程组, system of linear equations in two variables, 方程组, 联立方程</p><h2>课本定义</h2>
+<p>把两个含相同未知数的二元一次方程合在一起，就组成了一个<strong>二元一次方程组</strong>。使方程组中每个方程都成立的一组未知数的值，叫做这个方程组的<strong>解</strong>。解方程组用<strong>代入消元法</strong>或<strong>加减消元法</strong>，将"二元"化为"一元"。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"两个条件，确定两个未知数"</h3>
+<p><strong>为什么需要方程组？</strong></p>
+<p>一个二元一次方程（如 x + y = 10）有无数个解。
+但如果再加一个条件（如 x - y = 2），就能确定唯一答案！</p>
+<p><strong>生活例子：鸡兔同笼变体</strong>
+"小华和小明共有20张贴纸，小华比小明多4张，各有多少张？"</p>
+<p>设小华有 x 张，小明有 y 张：
+- 条件1：x + y = 20
+- 条件2：x - y = 4</p>
+<p>这就是一个二元一次方程组！</p>
+<p><strong>求解（直觉法）：</strong>
+两式相加：2x = 24，x = 12
+代回：12 + y = 20，y = 8</p>
+<p>答：小华12张，小明8张。</p>
+<p><strong>方程组的写法：</strong>
+$$\begin{cases} x + y = 20 \ x - y = 4 \end{cases}$$</p>
+<p>用大括号"{"连在一起，表示两个方程<strong>同时</strong>成立。</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>二元一次方程组</strong>：由两个含相同两个未知数（x, y）的二元一次方程组成的方程组。</p>
+<p>$$\begin{cases} a_1x + b_1y = c_1 \ a_2x + b_2y = c_2 \end{cases}$$</p>
+<p><strong>解</strong>：使两个方程<strong>同时</strong>成立的有序数对 (x₀, y₀)。</p>
+<h3>解的情况</h3>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>条件（系数关系）</th>
+<th>解的个数</th>
+<th>几何意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有唯一解</td>
+<td>a₁/a₂ ≠ b₁/b₂</td>
+<td>1个</td>
+<td>两直线相交</td>
+</tr>
+<tr>
+<td>无穷多解</td>
+<td>a₁/a₂ = b₁/b₂ = c₁/c₂</td>
+<td>无穷多</td>
+<td>两直线重合</td>
+</tr>
+<tr>
+<td>无解</td>
+<td>a₁/a₂ = b₁/b₂ ≠ c₁/c₂</td>
+<td>0个</td>
+<td>两直线平行</td>
+</tr>
+</tbody>
+</table>
+<p>（七年级一般只研究有唯一解的情形）</p>
+<h3>解方程组的方法概述</h3>
+<p><strong>代入消元法</strong>：从一个方程中解出一个未知数，代入另一个方程，化二元为一元。</p>
+<p><strong>加减消元法</strong>：将两方程适当乘以系数后相加或相减，消去一个未知数。</p>
+<p>（详见 <a href="../atoms/120-代入消元法.html">代入消元法</a> 和 <a href="../atoms/123-加减消元法.html">加减消元法</a> 词条）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 解方程组</p>
+<p>$$\begin{cases} 2x + y = 7 \quad (1)\ x - y = 2 \quad (2) \end{cases}$$</p>
+<p>解（加减法）：(1) + (2)：3x = 9，x = 3
+代入 (2)：3 - y = 2，y = 1
+答：x = 3，y = 1（即解为 (3, 1)）</p>
+<p>验证：(1) 2(3)+1=7✓，(2) 3-1=2✓</p>
+<p><strong>例题2：</strong> 解方程组</p>
+<p>$$\begin{cases} x + 2y = 8 \quad (1)\ 3x - y = 3 \quad (2) \end{cases}$$</p>
+<p>解（代入法）：由 (1) 得 x = 8 - 2y，代入 (2)：
+3(8-2y) - y = 3
+24 - 6y - y = 3
+-7y = -21
+y = 3
+x = 8 - 2(3) = 2
+答：x = 2，y = 3</p>
+<p><strong>例题3（应用题）：</strong> 商店有苹果和橙子共50斤，苹果每斤3元，橙子每斤5元，共收款190元。各有多少斤？</p>
+<p>设苹果 x 斤，橙子 y 斤：
+$$\begin{cases} x + y = 50 \ 3x + 5y = 190 \end{cases}$$
+由第一式 x = 50 - y，代入第二式：
+3(50-y) + 5y = 190
+150 - 3y + 5y = 190
+2y = 40，y = 20，x = 30</p>
+<p>答：苹果30斤，橙子20斤。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>验证解时，必须代入方程组中每个方程</strong>，只代一个不算完全验证</li>
+<li><strong>解是有序数对 (x, y)</strong>，不能只写 x 或只写 y</li>
+<li><strong>消元时注意符号</strong>：加减时不要漏乘</li>
+</ol>
+<h3>知识联系</h3>
+<pre><code>二元一次方程组
+├── 基础 → 二元一次方程
+├── 方法 → 代入消元法（替换）
+├── 方法 → 加减消元法（合并）
+├── 几何 → 两直线的交点（坐标）
+└── 扩展 → 三元一次方程组（初三/高中）
+</code></pre>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>二元一次方程组</td>
+<td>system of linear equations in two variables</td>
+<td>联立方程组</td>
+</tr>
+<tr>
+<td>解（方程组）</td>
+<td>solution</td>
+<td>满足所有方程的 (x,y)</td>
+</tr>
+<tr>
+<td>消元</td>
+<td>elimination</td>
+<td>减少未知数的数量</td>
+</tr>
+<tr>
+<td>代入</td>
+<td>substitution</td>
+<td>将一个变量用另一个表示</td>
+</tr>
+<tr>
+<td>加减</td>
+<td>addition / subtraction</td>
+<td>相加或相减消去变量</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第八章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）数与代数领域</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/119-二元一次方程.html">二元一次方程</a></li>
+<li><a href="../atoms/120-代入消元法.html">代入消元法</a></li>
+<li><a href="../atoms/123-加减消元法.html">加减消元法</a></li>
+<li><a href="../atoms/082-一元一次方程.html">一元一次方程</a></li>
+<li><a href="../atoms/132-平面直角坐标系.html">平面直角坐标系</a></li>
+<li><a class="dead" title="未收录">鸡兔同笼</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2014-理-03.html">2014-理-03</a></li>
+<li><a href="../exam/数学/2018-理-09.html">2018-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>天体表面重力加速度</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>天体表面重力加速度</h1><div class="review-mark" data-stem="467-天体表面重力加速度"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 天体表面重力加速度, 星球表面重力加速度, Gravitational acceleration on celestial surface</p><h1>天体表面重力加速度</h1>
+<blockquote>
+<p><strong>一句话</strong>：天体表面重力加速度是指忽略天体自转时，天体对其表面附近物体的万有引力产生的加速度，其大小由天体质量与半径决定，即 $$g = \frac{GM}{R^2}$$。
+<strong>English</strong>: The gravitational acceleration on the surface of a celestial body is the acceleration due to gravity experienced by an object near its surface, given by $g = GM/R^2$, where $M$ is the mass and $R$ is the radius of the body.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+天体表面重力加速度 $g$ 源于万有引力定律。当物体在天体表面附近且天体自转影响可忽略时，物体所受重力等于天体对它的万有引力：
+$$
+mg = G\frac{Mm}{R^2} \quad \Rightarrow \quad g = \frac{GM}{R^2}
+$$
+其中 $G$ 为引力常量，$M$ 为天体质量，$R$ 为天体半径。这一关系可导出黄金代换式 $GM = gR^2$，用于在不直接给出 $G$ 和 $M$ 时快速进行定量分析。<br />
+若天体密度 $\rho$ 均匀且为球体，则 $M = \frac{4}{3}\pi R^3\rho$，代入得 $g = \frac{4}{3}\pi G\rho R$，表明表面重力加速度与天体平均密度和半径的乘积成正比。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>公式选取</strong>：题中已知天体质量与半径，直接用 $g = \frac{GM}{R^2}$；若涉及密度或半径比例，转化为 $g \propto \rho R$。<br />
+2. <strong>黄金代换</strong>：当题给天体表面重力加速度 $g$ 和半径 $R$ 时，用 $GM = gR^2$ 替换未知的 $GM$，是处理卫星运动、宇宙速度等问题的核心步骤。<br />
+3. <strong>比例计算</strong>：比较不同天体表面的重力加速度，注意半径与质量的对应关系，避免错将轨道半径当作天体半径。</p>
+<p><strong>典型高考设问</strong><br />
+- <strong>直接计算</strong>：给出某行星的质量和半径，求其表面重力加速度，或与地球表面重力加速度比较。<br />
+- <strong>结合运动学</strong>：在星球表面用平抛、竖直上抛或弹簧秤测“当地重力加速度”，要求间接求天体质量或密度。<br />
+- <strong>关联第一宇宙速度</strong>：利用 $v_1 = \sqrt{gR}$，将表面重力加速度与发射速度挂钩。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆天体半径与轨道半径</strong>：$g=GM/R^2$ 中的 $R$ 是天体自身的半径，不是卫星或物体的离地高度。计算离地高 $h$ 处的重力加速度需用 $g'=GM/(R+h)^2$。</li>
+<li><strong>乱用黄金代换式</strong>：$GM=gR^2$ 中的 $g$ 和 $R$ 必须对应同一星球的表面重力加速度和半径，不能将该星球的 $g$ 与其他星球的 $R$ 混搭。</li>
+<li><strong>忽略自转的适用条件</strong>：上述理论视重力等于万有引力，仅在天体自转较慢（或题目明确忽略自转）时成立。若在赤道处考虑自转，重力会小于万有引力，此时 $g$ 非纯由 $GM/R^2$ 给出。</li>
+<li><strong>比例计算时半径平方与立方混淆</strong>：由 $g \propto M/R^2$ 和 $M \propto \rho R^3$ 导出 $g \propto \rho R$，部分学生直接在 $M$ 不变时认为 $g$ 与 $R^2$ 成反比，却误将密度固定时的比例关系套用，导致错解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>天体表面重力加速度</td>
+<td>Gravitational acceleration on celestial surface</td>
+<td>星球表面由引力产生的加速度</td>
+</tr>
+<tr>
+<td>万有引力常量</td>
+<td>Gravitational constant</td>
+<td>$G = 6.67\times10^{-11}\,\mathrm{N\cdot m^2/kg^2}$</td>
+</tr>
+<tr>
+<td>黄金代换</td>
+<td>Golden rule / substitution</td>
+<td>$GM = gR^2$，用于替换天体质量与半径关系</td>
+</tr>
+<tr>
+<td>天体半径</td>
+<td>Radius of celestial body</td>
+<td>星球自身的半径，区别于轨道半径</td>
+</tr>
+<tr>
+<td>平均密度</td>
+<td>Average density</td>
+<td>$\rho = \frac{M}{\frac{4}{3}\pi R^3}$，影响表面重力加速度</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：课标(2022) 必修2 万有引力与宇宙航行 模块</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/246-万有引力定律.html">万有引力定律</a></li>
+<li><a class="dead" title="未收录">天体质量和密度的计算</a></li>
+<li><a href="../atoms/281-第一宇宙速度.html">第一宇宙速度</a></li>
+<li><a class="dead" title="未收录">卫星变轨问题</a></li>
+<li><a class="dead" title="未收录">重力与万有引力的关系</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2024-辽宁-07.html">2024-辽宁-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

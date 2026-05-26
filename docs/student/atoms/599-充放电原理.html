@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>充放电原理</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>充放电原理</h1><div class="review-mark" data-stem="599-充放电原理"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 充放电原理</p><h1>充放电原理</h1>
+<blockquote>
+<p><strong>一句话</strong>：充电是利用外加电源使电池内部发生非自发的氧化还原反应以储存电能，放电是电池内部自发的氧化还原反应向外电路输出电能。
+<strong>English</strong>: Charging drives a non-spontaneous redox reaction to store energy via an external power source, while discharging releases energy through a spontaneous redox reaction.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>
+充放电原理的核心是<strong>可逆氧化还原反应</strong>在不同条件下的方向控制。放电时，电池作为<strong>原电池</strong>：负极发生氧化反应（失去电子），正极发生还原反应（得到电子），电子由负极经外电路流向正极，化学能转化为电能。充电时，电池作为<strong>电解池</strong>：外加直流电源强制电子反向流动，原负极变为阴极（发生还原反应），原正极变为阳极（发生氧化反应），电能转化为化学能储存。以铅蓄电池为例：
+- 放电总反应：$\ce{Pb + PbO2 + 2H2SO4 -&gt; 2PbSO4 + 2H2O}$
+- 充电总反应：$\ce{2PbSO4 + 2H2O -&gt; Pb + PbO2 + 2H2SO4}$</p>
+<p><strong>关键方法</strong>
+解决充放电问题的标准步骤：① 先区分装置处于放电（原电池）还是充电（电解池）状态；② 确定电极名称：放电时负极为氧化极、正极为还原极；充电时阴极为还原极、阳极为氧化极——放电时的负极在充电时变为阴极，正极变为阳极；③ 写出电极反应式，注意电解质环境是否参与反应（如铅蓄电池中 $\ce{H2SO4}$ 参与电极过程）；④ 分析电子、离子流向：电子在外电路从负极流向正极（放电）或从阳极流向阴极（充电）；离子在电解质内迁移以维持电荷平衡（阳离子向正极/阴极移动，阴离子向负极/阳极移动）。</p>
+<p><strong>典型应用</strong>
+高考中常见设问：① 给出二次电池的充放电总反应，判断放电时的正负极反应或充电时的阴阳极反应，如锂离子电池 $\ce{Li_{1-x}CoO2 + Li_xC6 &lt;=&gt; C6 + LiCoO2}$；② 结合电解池应用，如判断电极质量变化、溶液的pH变化等；③ 书写陌生二次电池的电极反应式，需根据化合价变化确定氧化/还原过程，并用电解质离子平衡电荷。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆电极名称</strong>：放电时是“负极氧化、正极还原”，充电时“阴极还原、阳极氧化”。放电时的负极在充电时变为阴极，名称不可混用。</li>
+<li><strong>电解液作用误判</strong>：以为电解液只起导电作用，实际上在铅蓄电池等体系中，$\ce{H2SO4}$ 直接参与电极反应，其浓度变化可作为充放电程度的指示。</li>
+<li><strong>电极反应式电荷配平错误</strong>：在酸性介质中用 $\ce{H+}$ 和 $\ce{H2O}$ 配平，碱性介质中用 $\ce{OH-}$ 和 $\ce{H2O}$ 配平，切忌随意混用。</li>
+<li><strong>锂离子电池中的误区</strong>：锂离子电池工作时 $\ce{Li+}$ 在电解质中迁移，但 $\ce{Li}$ 本身不直接与水溶液接触（通常用有机电解质），电极反应不是 $\ce{Li+ + e- -&gt; Li}$ 的简单沉积。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原电池</td>
+<td>galvanic cell</td>
+<td>将化学能自发转化为电能的装置</td>
+</tr>
+<tr>
+<td>电解池</td>
+<td>electrolytic cell</td>
+<td>利用外加电源驱动非自发化学反应的装置</td>
+</tr>
+<tr>
+<td>放电</td>
+<td>discharge</td>
+<td>电池向外输出电能的过程</td>
+</tr>
+<tr>
+<td>充电</td>
+<td>charge</td>
+<td>外加电源使电池恢复化学能的过程</td>
+</tr>
+<tr>
+<td>电极</td>
+<td>electrode</td>
+<td>发生氧化或还原反应的导电介质</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">原电池原理</a></li>
+<li><a class="dead" title="未收录">电解池原理</a></li>
+<li><a class="dead" title="未收录">电极反应式书写</a></li>
+<li><a href="../atoms/362-二次电池.html">二次电池</a></li>
+<li><a class="dead" title="未收录">金属的腐蚀与防护</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/化学/2022-全国乙-06.html">2022-全国乙-06</a></li>
+</ul></div>
+</div>
+</body>
+</html>

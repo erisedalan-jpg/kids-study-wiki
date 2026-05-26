@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角形中位线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>三角形中位线</h1><div class="review-mark" data-stem="179-三角形中位线"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 八下, 平行四边形]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 三角形中位线, midsegment of a triangle, 中位线定理</p><h1>三角形中位线</h1>
+<blockquote>
+<p><strong>一句话</strong>：连接三角形两边中点的线段叫中位线，它平行于第三边且等于第三边的一半。
+<strong>English</strong>: The midsegment of a triangle connects the midpoints of two sides; it is parallel to the third side and half its length.</p>
+</blockquote>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>定义</h3>
+<p>连接三角形<strong>两边中点</strong>的线段，叫这个三角形的<strong>中位线</strong>。</p>
+<p>每个三角形有 3 条中位线。</p>
+<h3>中位线定理</h3>
+<p>$$\text{中位线} \parallel \text{第三边}, \quad \text{中位线} = \frac{1}{2} \times \text{第三边}$$</p>
+<p><strong>例</strong>：$\triangle ABC$ 中，$M$ 是 $AB$ 中点，$N$ 是 $AC$ 中点，则：
+- $MN \parallel BC$
+- $MN = \dfrac{1}{2}BC$</p>
+<h3>直观理解</h3>
+<p>把三角形"缩小一半"，中位线就是小三角形的底边，与原来的底边平行、长度为一半。</p>
+<h3>应用</h3>
+<ul>
+<li>已知底边求中位线：$MN = \dfrac{1}{2}BC$</li>
+<li>已知中位线反推底边：$BC = 2MN$</li>
+<li>证明线段平行或等长</li>
+</ul>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>中位线定理的证明（利用平行四边形）</h3>
+<p>设 $M$、$N$ 分别是 $\triangle ABC$ 的 $AB$、$AC$ 中点。延长 $MN$ 到 $D$，使 $ND=MN$。</p>
+<p>在 $\triangle MBN'$（构造辅助图）——更简单的方法：</p>
+<p>过 $C$ 作 $CM' \parallel AB$ 交 $MN$ 延长线于 $D$，则四边形 $MBDC$ 是平行四边形（待家长配合图示核实），因而 $MN = \dfrac{1}{2}BC$ 且 $MN \parallel BC$。</p>
+<p><strong>标准证明</strong>：延长 $MN$ 到 $D$ 使 $ND = MN$，连 $CD$，则 $\triangle ANC \cong \triangle DNC$（SAS），$DC \parallel AB$，$DC = AB/2 \cdot 2$（待家长核实与教材一致）。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：$\triangle ABC$ 中，$BC=10$，$M$、$N$ 分别是 $AB$、$AC$ 中点，求 $MN$。</p>
+<p>$$MN = \frac{1}{2}\times 10 = 5$$</p>
+<p><strong>例 2</strong>：梯形 $ABCD$ 中（$AB \parallel CD$），$M$、$N$ 分别是腰 $AD$、$BC$ 的中点，$MN$ 为中位线，$MN = \dfrac{AB+CD}{2}$。（梯形中位线定理，区别三角形中位线。）</p>
+<p><strong>例 3</strong>：$\triangle ABC$ 三条中位线围成的小三角形面积是 $\triangle ABC$ 面积的多少？</p>
+<p>三条中位线把三角形分成 4 个全等的小三角形，中间那个面积 $= \dfrac{1}{4}S_{\triangle ABC}$。</p>
+<h3>易错点</h3>
+<ul>
+<li>❌ 混淆"三角形中位线"（连两边中点）与"梯形中位线"（连两腰中点）——两个定理结论不同</li>
+<li>❌ 定理要求是两边的<strong>中点</strong>，不是任意点</li>
+<li>❌ 只记"平行"忘记"等于一半"，或只记"一半"忘记"平行"</li>
+</ul>
+<h3>知识联系</h3>
+<p>中位线定理的证明用到<a href="../atoms/194-平行四边形判定.html">平行四边形判定</a>（判定3：一组对边平行且相等）；与<a href="../atoms/196-平行四边形综合.html">平行四边形综合</a>综合题常考；四边形各边中点依次相连构成平行四边形（利用中位线证明）。</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中位线</td>
+<td>midsegment / midline</td>
+</tr>
+<tr>
+<td>中点</td>
+<td>midpoint</td>
+</tr>
+<tr>
+<td>中位线定理</td>
+<td>midsegment theorem</td>
+</tr>
+<tr>
+<td>梯形中位线</td>
+<td>median of a trapezoid</td>
+</tr>
+<tr>
+<td>全等三角形</td>
+<td>congruent triangles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li>教材：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/八年级/义务教育教科书·数学八年级下册.pdf</a> 第18章（页码待家长核对）</li>
+<li>课标：义务教育数学课程标准(2022)·图形与几何·四边形</li>
+<li>拓展：<a class="dead" title="未收录">数学/平行四边形判定</a> · 梯形中位线定理</li>
+<li>生成校对：Claude 生成于 2026-05-08，请家长对照实体教材核实证明步骤。</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/1419-黄金分割.html">黄金分割</a></li>
+<li><strong>延伸</strong>：<a class="dead" title="未收录">锐角三角函数应用</a></li>
+</ul>
+<p><a href="../atoms/195-平行四边形定义性质.html">平行四边形定义性质</a> · <a href="../atoms/194-平行四边形判定.html">平行四边形判定</a> · <a href="../atoms/196-平行四边形综合.html">平行四边形综合</a> · <a class="dead" title="未收录">三角形全等</a> · <a href="../atoms/171-等腰三角形性质.html">等腰三角形性质</a> · <a class="dead" title="未收录">矩形</a> · <a class="dead" title="未收录">菱形</a></p>
+</div>
+</body>
+</html>

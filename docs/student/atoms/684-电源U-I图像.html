@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电源U-I图像</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>电源U-I图像</h1><div class="review-mark" data-stem="684-电源U-I图像"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 电源U-I图像, 电源伏安特性曲线, source U-I characteristic</p><h1>电源U-I图像</h1>
+<blockquote>
+<p><strong>一句话</strong>：电源的路端电压 $U$ 随电流 $I$ 变化的线性关系图线，表达式为 $U = E - Ir$，其中 $E$ 为纵轴截距、内阻 $r$ 决定斜率大小。
+<strong>English</strong>: The graph of terminal voltage $U$ versus current $I$ for a power source, given by $U = E - Ir$, whose intercept and slope reveal the electromotive force and internal resistance.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+对具有一定内阻 $r$ 的电源，其路端电压（外电压）$U$ 与电流 $I$ 满足<br />
+$$
+U = E - Ir
+$$<br />
+在 $U$-$I$ 直角坐标系中，这是一条<strong>斜向下的直线</strong>。<br />
+- <strong>纵轴截距</strong>：电流 $I = 0$（断路）时，$U = E$，即电动势。<br />
+- <strong>横轴截距</strong>：$U = 0$（短路）时，$I_{\text{短}} = \dfrac{E}{r}$。<br />
+- <strong>斜率大小</strong>：$|k| = r$（注意斜率本身是 $-r$），因此图线越陡表示内阻越大。<br />
+- <strong>图线上任意一点</strong>的坐标乘积 $UI$ 为电源对外的输出功率。</p>
+<p><strong>关键方法</strong><br />
+- <strong>从图像读取电源参数</strong>：直接读出纵截距为 $E$，再根据斜率绝对值或结合横截距求出 $r$。<br />
+- <strong>电源与电阻图线的组合分析</strong>：将电源 $U$-$I$ 线（外特性）与定值电阻 $U = IR$（过原点的直线）或可变电阻的图线画在同一坐标系中，<strong>交点</strong>即为该电阻接在此电源上时的实际工作电压与电流。由交点可进一步求输出功率、电源效率等。<br />
+- <strong>功率极值判断</strong>：输出功率 $P_{\text{出}} = UI$，在 $U$-$I$ 图上对应矩形面积。当外电阻 $R = r$ 时输出功率最大，最大值为 $\dfrac{E^2}{4r}$。</p>
+<p><strong>典型应用</strong><br />
+高考中常见以下设问方式：<br />
+1. <strong>直接读取电动势和内阻</strong>：给一条实验得到的 $U$-$I$ 直线，要求得出 $E$ 和 $r$。<br />
+2. <strong>比较不同电源的特性</strong>：在同一坐标系中画出两条斜率不同的直线，判断哪个电源内阻大、哪个电动势大，或比较短路电流。<br />
+3. <strong>与电阻图线结合求工作点</strong>：如给出定值电阻的 $I$-$U$ 曲线，求接入电源后的实际电流、电压和功率，或求电源效率 $\eta = \dfrac{U}{E} \times 100\%$。<br />
+4. <strong>输出功率随 $R$ 变化的图像转化</strong>：要求由电源 $U$-$I$ 图分析输出功率与外电阻的关系，或判断电源的最大输出功率。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>斜率取值错误</strong>：直接将斜率读作内阻而忘记取绝对值（斜率自身为 $-r$），或在图线非直线段时误用该段斜率。  </li>
+<li><strong>混淆电源 $U$-$I$ 图像与电阻 $U$-$I$ 图像</strong>：电源图线是斜向下且不过原点，电阻图线（$U = IR$）是过原点的斜向上直线。将二者交点误读为电源短路状态是典型错误。  </li>
+<li><strong>误判输出功率最大的工作点</strong>：输出功率最大时对应 $R = r$，在图线上并不是横纵截距的中点，而是 $U = \frac{E}{2}$、$I = \frac{I_{\text{短}}}{2}$ 所对应的点，学生常混淆该点与短路点或断路点。  </li>
+<li><strong>认为路端电压随电流增大而增大</strong>：实际上 $U = E - Ir$，电流越大内压降越大，路端电压越小，需结合物理情境避免直觉错误。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电源电动势</td>
+<td>electromotive force (emf)</td>
+<td>电源把其他形式能转化为电能的本领，数值等于断路时的路端电压。</td>
+</tr>
+<tr>
+<td>内阻</td>
+<td>internal resistance</td>
+<td>电源内部对电流的阻碍作用，直接影响 $U$-$I$ 图线的斜率。</td>
+</tr>
+<tr>
+<td>路端电压</td>
+<td>terminal voltage</td>
+<td>电源两极间的电压，即外电路两端的电压 $U$。</td>
+</tr>
+<tr>
+<td>短路电流</td>
+<td>short-circuit current</td>
+<td>外电阻为零时的电流，$I_{\text{短}} = E/r$。</td>
+</tr>
+<tr>
+<td>输出功率</td>
+<td>output power</td>
+<td>电源对外部电路提供的功率，$P_{\text{出}} = UI$。</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中物理必修第三册 “电路及其应用” / “闭合电路欧姆定律” 对应内容</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/332-闭合电路欧姆定律.html">闭合电路欧姆定律</a></li>
+<li><a class="dead" title="未收录">电源电动势和内阻的测量</a></li>
+<li><a class="dead" title="未收录">电阻U-I图像与伏安特性曲线</a></li>
+<li><a class="dead" title="未收录">电源输出功率与外电阻的关系</a></li>
+<li><a class="dead" title="未收录">电路动态分析</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2009-全国Ⅱ-04.html">2009-全国Ⅱ-04</a></li>
+</ul></div>
+</div>
+</body>
+</html>

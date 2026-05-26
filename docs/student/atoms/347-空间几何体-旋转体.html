@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体-旋转体</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间几何体-旋转体</h1><div class="review-mark" data-stem="347-空间几何体-旋转体"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间几何体-旋转体, solid of revolution, 旋转体, 圆柱, 圆锥, 圆台</p><h2>🎓 空间几何体——旋转体</h2>
+<h3>定义</h3>
+<p>由一个平面图形绕该平面内<strong>一条轴</strong>旋转一周所得的空间图形称为<strong>旋转体</strong>（solid of revolution）。</p>
+<h3>三种基本旋转体</h3>
+<h4>圆柱（Cylinder）</h4>
+<p>矩形绕其一条边旋转一周所得：</p>
+<ul>
+<li>两个底面：半径为 $r$ 的圆</li>
+<li>侧面：弯曲的曲面（展开为矩形）</li>
+<li>高：$h$（两底面间距离）</li>
+<li>轴：连接两底面圆心的线段</li>
+</ul>
+<h4>圆锥（Cone）</h4>
+<p>直角三角形绕其一条直角边旋转一周所得：</p>
+<ul>
+<li>底面：半径为 $r$ 的圆</li>
+<li>侧面：锥形曲面</li>
+<li>顶点：旋转轴上方的顶点</li>
+<li>母线：$l = \sqrt{r^2 + h^2}$（侧面上从顶点到底面圆的线段）</li>
+</ul>
+<h4>圆台（Frustum of cone）</h4>
+<p>圆台是圆锥被平行于底面的截面截得的几何体（圆锥截去小圆锥后的部分）：</p>
+<ul>
+<li>两个底面：半径 $r_1, r_2$（$r_1 &lt; r_2$）</li>
+<li>母线：$l = \sqrt{(r_2-r_1)^2 + h^2}$</li>
+</ul>
+<h4>球（Sphere）</h4>
+<p>半圆绕其直径旋转一周所得（见词条<a href="../atoms/343-球的表面积体积.html">球的表面积体积</a>）。</p>
+<h3>关系总结</h3>
+<p>$$\text{圆锥} \xrightarrow{\text{截面}} \text{圆台} \xleftarrow{\text{截面}} \text{圆柱（}r_1=r_2\text{特例）}$$</p>
+<h3>旋转体的截面</h3>
+<ul>
+<li>过轴的截面：圆柱→矩形；圆锥→等腰三角形；球→大圆</li>
+<li>垂直轴的截面：均为圆形（半径随位置变化）</li>
+</ul>
+<h3>典型例题</h3>
+<p><strong>例1</strong>：边长为 $a$ 的正方形绕一边旋转一周，所得旋转体是？</p>
+<p><strong>解</strong>：圆柱，底面半径 $r = a$，高 $h = a$。</p>
+<p><strong>例2</strong>：直角三角形两直角边分别为 $3, 4$，绕长度为 $4$ 的直角边旋转，求母线长。</p>
+<p><strong>解</strong>：底面半径 $r = 3$，高 $h = 4$，母线 $l = \sqrt{9 + 16} = 5$。</p>
+<p><strong>例3</strong>：一个圆台，上底半径 $1$，下底半径 $3$，高 $2$，求母线长。</p>
+<p><strong>解</strong>：$l = \sqrt{(3-1)^2 + 2^2} = \sqrt{4+4} = 2\sqrt{2}$</p>
+<h3>易错点</h3>
+<ul>
+<li>圆柱侧面展开是<strong>矩形</strong>（宽 = 底面周长 $2\pi r$，高 = $h$）</li>
+<li>圆锥侧面展开是<strong>扇形</strong>（弧长 = 底面周长 $2\pi r$，半径 = 母线 $l$）</li>
+<li>圆台不是圆锥的截面本身，而是截下来的台形部分</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.1，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/旋转体">旋转体 - 维基百科</a></li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/346-空间几何体-多面体.html">空间几何体-多面体</a></li>
+<li><a href="../atoms/315-三视图-高中.html">三视图-高中</a></li>
+<li><a href="../atoms/349-空间几何体表面积.html">空间几何体表面积</a></li>
+<li><a href="../atoms/348-空间几何体体积.html">空间几何体体积</a></li>
+<li><a href="../atoms/343-球的表面积体积.html">球的表面积体积</a></li>
+<li><a href="../atoms/345-直观图斜二测画法.html">直观图斜二测画法</a></li>
+</ul>
+</div>
+</body>
+</html>

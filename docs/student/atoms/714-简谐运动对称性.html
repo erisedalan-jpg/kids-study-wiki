@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简谐运动对称性</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>简谐运动对称性</h1><div class="review-mark" data-stem="714-简谐运动对称性"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[力学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 简谐运动对称性, Symmetry in Simple Harmonic Motion</p><h1>简谐运动对称性</h1>
+<blockquote>
+<p><strong>一句话</strong>：简谐运动中，位移、回复力、加速度、速度等物理量关于平衡位置在空间和时间上均具有对称性，利用这些对称性可高效求解振动时间、位置及能量问题。
+<strong>English</strong>: In simple harmonic motion, physical quantities such as displacement, restoring force, acceleration, and velocity exhibit spatial and temporal symmetry about the equilibrium position, which can be used to efficiently solve problems involving time, position, and energy.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong><br />
+  简谐运动的对称性包含<strong>空间对称</strong>和<strong>时间对称</strong>。从振动方程 $x = A\cos(\omega t + \varphi)$ 出发：  </li>
+<li><strong>空间对称</strong>：关于平衡位置对称的两点，位移大小相等、方向相反；回复力 $F = -kx$ 与加速度 $a = -\frac{k}{m}x$ 亦大小相等、方向相反。速度大小相等，但方向可能相同也可能相反；动能 $E_k$ 与势能 $E_p$ 分别相等。  </li>
+<li>
+<p><strong>时间对称</strong>：从平衡位置运动到正向最大位移的时间与从正向最大位移返回平衡位置的时间均为 $\frac{T}{4}$；物体从某位置运动到对称位置的时间满足 $t = \frac{2}{\omega}\arcsin\frac{|x|}{A}$ 或通过相位差 $\Delta\varphi = 2\arcsin\frac{|x|}{A}$ 计算，即 $t = \frac{\Delta\varphi}{\omega}$。在弹簧振子、单摆（小角度）中均适用。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>  </p>
+</li>
+<li><strong>画振动图像或参考圆</strong>：将实际振动映射为匀速圆周运动的投影，利用相位角判断对称性。  </li>
+<li><strong>对称点时间计算</strong>：若求从正向位移 $x_1$ 到负向位移 $-x_1$ 的最短时间，对应相位变化 $\pi - 2\arcsin\frac{|x_1|}{A}$，时间 $t = \frac{T(\pi - 2\arcsin\frac{|x_1|}{A})}{2\pi}$。  </li>
+<li>
+<p><strong>多解性处理</strong>：结合振动方向（正向/负向运动）和周期性确定全部可能时间。</p>
+</li>
+<li>
+<p><strong>典型应用</strong><br />
+  高考中常通过振动图像或文字描述考查：  </p>
+</li>
+<li>已知物体从某位置第一次到达另一位置的时间，求振动周期或振幅。例如，“弹簧振子从平衡位置向右运动到距平衡位置 $\frac{A}{2}$ 处的最短时间为 $t$，求周期”。利用对称性可推导出 $t = \frac{T}{12}$ 等关系。  </li>
+<li>计算某段时间内通过的路程：若时间 $\Delta t = n\cdot\frac{T}{2} + \Delta t'$，利用对称性补全不足半个周期的路程。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>混淆对称位置的速度方向：大小相等，但方向不一定相反，具体取决于振子从哪一侧经过该点。</li>
+<li>忽视周期性导致漏解：简谐运动具有周期性，所求时间须加上 $kT$（$k$ 为整数）。</li>
+<li>错误套用时间对称公式：只有从平衡位置或最大位移处开始计时，某些对称时间关系才直接成立，一般情形必须用相位差计算。</li>
+<li>将单摆的对称性无条件推广到大角度摆动：单摆只有在小角度（$\theta &lt; 5^\circ$）时才近似为简谐运动，对称性才成立。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简谐运动</td>
+<td>simple harmonic motion</td>
+<td>物体受力与位移成正比且方向相反的周期性运动</td>
+</tr>
+<tr>
+<td>平衡位置</td>
+<td>equilibrium position</td>
+<td>回复力为零的位置</td>
+</tr>
+<tr>
+<td>振幅</td>
+<td>amplitude</td>
+<td>最大位移的绝对值</td>
+</tr>
+<tr>
+<td>回复力</td>
+<td>restoring force</td>
+<td>总是指向平衡位置的力</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>period</td>
+<td>完成一次全振动所需的时间</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：普通高中物理课程标准（2017 年版 2020 年修订） 选择性必修 1 主题 2 机械振动与机械波 · 2.2 简谐运动</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">简谐运动的描述</a></li>
+<li><a class="dead" title="未收录">简谐运动的回复力和能量</a></li>
+<li><a href="../atoms/350-单摆.html">单摆</a></li>
+<li><a class="dead" title="未收录">弹簧振子</a></li>
+<li><a class="dead" title="未收录">机械振动图像</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2022-湖南-17</a></li>
+<li><a href="../exam/物理/2024-辽宁-07.html">2024-辽宁-07</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>直线</h1><div class="review-mark" data-stem="104-直线"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[几何, 七上, 几何初步]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 直线, straight line, 无限直线, 直线与椭圆的位置关系</p><h2>课本一句话定义</h2>
+<p><strong>直线</strong>向两个方向无限延伸，没有端点，不能度量长度；过两点有且只有<strong>一条直线</strong>（两点确定一条直线）；直线在图中用两端带箭头的线表示。</p>
+<hr />
+<h2>📚 给 6-12 岁（小学高年级回溯版）</h2>
+<p>直线就像数轴——向左右两个方向无限延伸，没有起点，也没有终点。</p>
+<p><strong>三种线的完整对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>线段</th>
+<th>射线</th>
+<th>直线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>端点</td>
+<td>两个</td>
+<td>一个</td>
+<td>没有</td>
+</tr>
+<tr>
+<td>长度</td>
+<td>有限</td>
+<td>无限</td>
+<td>无限</td>
+</tr>
+<tr>
+<td>方向</td>
+<td>无（两端对称）</td>
+<td>一个方向</td>
+<td>两个方向</td>
+</tr>
+<tr>
+<td>画法</td>
+<td>$A$——$B$</td>
+<td>$O$————→</td>
+<td>←————→</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最重要的一句话</strong>：过两个点，可以也只能画一条直线。</p>
+<p>试试看：用铅笔和直尺连接两个点，无论怎么画，结果都是同一条直线（位置固定）。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>直线</strong>（straight line）：向两个方向无限延伸，无端点，无法度量长度的几何图形。</p>
+<p>记法：
+- 用两个点命名：直线 $AB$（或 $l_{AB}$）
+- 用小写字母命名：直线 $l$、直线 $m$</p>
+<h3>公理：两点确定一条直线</h3>
+<p><strong>公理</strong>：过两点有且只有一条直线（记作"两点确定一直线"）。</p>
+<p>$$\forall A \neq B,\ \exists! \text{ 直线 } l \ni A, B$$</p>
+<p>推论：
+- 如果两条直线有<strong>两个</strong>公共点，则这两条直线重合（是同一条直线）
+- 两条不同直线最多有<strong>一个</strong>公共点</p>
+<h3>直线的位置关系</h3>
+<p><strong>平面内两条直线的关系</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>关系</th>
+<th>公共点数</th>
+<th>图示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>相交</td>
+<td>1 个</td>
+<td>有交点</td>
+</tr>
+<tr>
+<td>平行（$l_1 \parallel l_2$）</td>
+<td>0 个</td>
+<td>无公共点，不相交</td>
+</tr>
+<tr>
+<td>重合</td>
+<td>无数个</td>
+<td>同一条直线</td>
+</tr>
+</tbody>
+</table>
+<p><strong>平行公理</strong>（欧几里得第五公设等价形式）：过直线外一点，有且只有一条直线与已知直线平行。</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>：平面内有 3 个不共线的点，最多能确定几条直线？</p>
+<p><strong>解</strong>：每两点确定一条直线，$\binom{3}{2} = 3$ 条（$AB$、$AC$、$BC$）。</p>
+<p><strong>例 2</strong>：平面内 4 个点，其中 3 个共线，最多能确定几条直线？</p>
+<p><strong>解</strong>：3 个共线点确定 1 条直线（不是 3 条），另 1 点与 3 点各确定 1 条，共 $1 + 3 = 4$ 条直线。</p>
+<p><strong>例 3</strong>：直线 $AB$ 和直线 $BA$ 是同一条直线吗？</p>
+<p><strong>解</strong>：是同一条直线。直线由经过的两点确定，$A$、$B$ 两点无论哪个写在前面，确定的是同一条直线（直线无方向）。</p>
+<h3>与射线/线段的转化</h3>
+<p>$$\text{直线} \xrightarrow{\text{截去一端}} \text{射线} \xrightarrow{\text{截去另一端}} \text{线段}$$</p>
+<ul>
+<li>直线上取一点 $O$ → 分成两条射线（相反方向）</li>
+<li>射线上取两点 $A, B$ 之间 → 线段 $AB$</li>
+</ul>
+<h3>易错点</h3>
+<ol>
+<li><strong>直线不可度量长度</strong>：直线无限，无"长度"概念。</li>
+<li><strong>直线 $AB$ = 直线 $BA$</strong>：直线无方向，顺序无关。</li>
+<li><strong>经过一点可作无数条直线</strong>：但经过两点只有一条。</li>
+<li><strong>平行与"不相交"的关系</strong>：平行一定不相交，但在三维空间中不相交不一定平行（异面直线）。</li>
+</ol>
+<h3>知识联系</h3>
+<ul>
+<li>前置：线段、射线、点线面体</li>
+<li>后续：角（两射线）→ 平行与垂直 → 三角形（三条线段围成）</li>
+<li>高中拓展：解析几何直线方程（$y = kx + b$）→ 直线与圆的位置关系</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇表</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直线</td>
+<td>straight line</td>
+<td>本词条主题</td>
+</tr>
+<tr>
+<td>平行</td>
+<td>parallel</td>
+<td>$l_1 \parallel l_2$</td>
+</tr>
+<tr>
+<td>相交</td>
+<td>intersect</td>
+<td>有公共点</td>
+</tr>
+<tr>
+<td>公理</td>
+<td>axiom</td>
+<td>不证自明的基本假设</td>
+</tr>
+<tr>
+<td>共线</td>
+<td>collinear</td>
+<td>多点在同一直线上</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>过两点有且只有一条直线。</td>
+<td>Through any two points, there is exactly one straight line.</td>
+</tr>
+<tr>
+<td>两条不同直线最多有一个公共点。</td>
+<td>Two distinct lines have at most one point in common.</td>
+</tr>
+<tr>
+<td>平行线是同一平面内不相交的两条直线。</td>
+<td>Parallel lines are two lines in the same plane that do not intersect.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：义务教育数学课程标准（2022 年版）第四学段"图形与几何"</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级上册.pdf</a> 第四章第 2 节（待家长核对页码）</li>
+<li><strong>百科</strong>：Wikipedia — Line (geometry)</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，定义与人教版七上一致，页码请家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/090-射线.html">射线</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/029-角.html">角</a></p>
+</li>
+<li>
+<p><a href="../atoms/028-线段.html">线段</a></p>
+</li>
+<li><a href="../atoms/090-射线.html">射线</a></li>
+<li><a href="../atoms/029-角.html">角</a></li>
+<li><a href="../atoms/048-平行与垂直.html">平行线</a></li>
+<li><a href="../atoms/125-垂线.html">垂线</a></li>
+<li><a href="../atoms/103-点线面体.html">点线面体</a></li>
+</ul>
+</div>
+</body>
+</html>

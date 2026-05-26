@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>积分上限函数</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>积分上限函数</h1><div class="review-mark" data-stem="1178-积分上限函数"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[微积分初步, 导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 积分上限函数, integral upper limit function</p><h1>积分上限函数</h1>
+<blockquote>
+<p><strong>一句话</strong>：积分上限函数（也称变上限积分）是指积分上限为自变量 $x$ 的定积分 $\Phi(x) = \int_a^x f(t) \, dt$，其导数恰好等于被积函数在上限处的值。
+<strong>English</strong>: An integral upper limit function is a definite integral whose upper limit is a variable, and its derivative is exactly the integrand evaluated at that upper limit.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+设函数 $f(t)$ 在区间 $[a,b]$ 上可积，对于任意 $x \in [a,b]$，定义<br />
+$$\Phi(x) = \int_a^x f(t)\, dt$$<br />
+称 $\Phi(x)$ 为 $f(t)$ 在 $[a,b]$ 上的<strong>积分上限函数</strong>（变上限积分）。<br />
+若 $f(t)$ 在 $[a,b]$ 上连续，则 $\Phi(x)$ 在 $[a,b]$ 上可导，且<br />
+$$\Phi'(x) = f(x)$$<br />
+即<strong>微积分基本定理</strong>：求导运算与积分上限函数互为逆运算。  </p>
+<p>若上限是复合函数 $u(x)$，即 $\Phi(x) = \int_a^{u(x)} f(t)\, dt$，由链式法则可得<br />
+$$\Phi'(x) = f(u(x)) \cdot u'(x)$$<br />
+类似地，对于下限为变量或上下限均为变量的情形，可利用区间可加性化为标准形式后求导。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>求导三步走</strong>：将被积函数中的积分变量 $t$ 换为上限，再乘以上限的导数；若下限是变量，则需对下限部分加负号。<br />
+2. <strong>极限与导数结合</strong>：形如 $\lim_{x\to 0} \frac{\int_a^{g(x)} f(t)\,dt}{h(x)}$ 的极限式，常用洛必达法则并配合变上限求导求解。<br />
+3. <strong>被积函数含 $x$ 的处理</strong>：若被积函数同时依赖 $x$ 和积分变量 $t$，需先将 $x$ 提出积分号（若可分离）或采用换元，将 $x$ 完全移至积分限后再求导。</p>
+<p><strong>典型应用</strong><br />
+- <strong>高考考法</strong>：选择题或填空题直接考查变上限积分的求导公式，解答题中常作为函数表达式的一部分，要求讨论其单调性、极值或结合零点存在定理分析。<br />
+- <strong>典型情境</strong>：已知 $\Phi(x) = \int_0^x (t^2-3t+2)\,dt$，求 $\Phi(x)$ 的极值点。由 $\Phi'(x)=x^2-3x+2=(x-1)(x-2)$ 判断单调区间，结合原函数在积分下限处的值即可确定极值。<br />
+- <strong>综合题型</strong>：与不等式、恒成立问题联用，如给出 $F(x) = \int_1^x \frac{\ln t}{t}\, dt$，讨论 $F(x)$ 的零点个数或将 $F(x)$ 与另一函数比较大小。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆积分变量与求导变量</strong>：被积函数中的 $t$ 是哑元，求导时直接将被积函数里的 $t$ 替换为上限 $x$，<strong>不是</strong>对 $x$ 导后再换，忽略这一步极易写错。  </li>
+<li><strong>忘记乘以上限的导数</strong>：当上限是 $x$ 的函数（如 $x^2,\sin x$）时，必须应用链式法则；只替换为 $f(u(x))$ 而不乘 $u'(x)$，是丢分重灾区。  </li>
+<li><strong>下限为变量时符号错误</strong>：$\frac{d}{dx} \int_x^a f(t)\, dt = -f(x)$，常因忘记负号导致结果差一个符号。  </li>
+<li><strong>误认为积分上限函数恒大于零</strong>：$\Phi(x)$ 的值取决于积分区间与被积函数的正负，不因上限形式而必然为正。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>积分上限函数</td>
+<td>integral upper limit function</td>
+<td>上限为自变量的定积分</td>
+</tr>
+<tr>
+<td>微积分基本定理</td>
+<td>Fundamental Theorem of Calculus</td>
+<td>揭示微分与积分的互逆关系</td>
+</tr>
+<tr>
+<td>变上限积分</td>
+<td>variable upper limit integral</td>
+<td>积分上限函数的另一常见称呼</td>
+</tr>
+<tr>
+<td>可积性</td>
+<td>integrability</td>
+<td>函数在区间上定积分存在的性质</td>
+</tr>
+<tr>
+<td>链式法则</td>
+<td>chain rule</td>
+<td>复合函数求导法则，用于上限为函数的情形</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">定积分的定义与性质</a></li>
+<li><a class="dead" title="未收录">微积分基本定理</a></li>
+<li><a class="dead" title="未收录">原函数与不定积分</a></li>
+<li><a class="dead" title="未收录">利用导数研究函数的单调性与极值</a></li>
+<li><a class="dead" title="未收录">含参变限积分的求导</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2011-理-09.html">2011-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

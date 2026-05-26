@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>铅蓄电池</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>铅蓄电池</h1><div class="review-mark" data-stem="374-铅蓄电池"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必一, 第四章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 铅蓄电池, lead-acid battery, 铅酸蓄电池</p><h1>铅蓄电池</h1>
+<blockquote>
+<p><strong>一句话</strong>：以铅（负极）、二氧化铅（正极）和稀硫酸（电解质）为核心的二次电池，是汽车启动电源的主流选择。
+<strong>English</strong>: A secondary battery using lead (negative), lead dioxide (positive), and dilute sulfuric acid (electrolyte); the dominant choice for automotive starter batteries.</p>
+</blockquote>
+<hr />
+<h2>🎓 高中进阶</h2>
+<h3>定义</h3>
+<p><strong>铅蓄电池</strong>（lead-acid battery）：最早实用化的二次电池（1859年，普兰特发明），由多格（通常 6 格串联，每格 2V，总计 12V）组成，广泛用于汽车、UPS 等。</p>
+<h3>公式 / 方程式</h3>
+<p><strong>放电</strong>（原电池模式）：</p>
+<p>$$
+\text{负极（Pb）}: \text{Pb} - 2e^- + \text{SO}_4^{2-} \rightarrow \text{PbSO}_4\downarrow
+$$</p>
+<p>$$
+\text{正极（PbO}_2\text{）}: \text{PbO}_2 + 2e^- + \text{SO}_4^{2-} + 4\text{H}^+ \rightarrow \text{PbSO}_4\downarrow + 2\text{H}_2\text{O}
+$$</p>
+<p>$$
+\text{总反应（放电）}: \text{Pb} + \text{PbO}_2 + 2\text{H}_2\text{SO}_4 \rightarrow 2\text{PbSO}_4 + 2\text{H}_2\text{O}
+$$</p>
+<p><strong>充电</strong>（电解池模式）：</p>
+<p>$$
+\text{阴极（Pb 极）}: \text{PbSO}_4 + 2e^- \rightarrow \text{Pb} + \text{SO}_4^{2-}
+$$</p>
+<p>$$
+\text{阳极（PbO}_2\text{ 极）}: \text{PbSO}_4 + 2\text{H}_2\text{O} - 2e^- \rightarrow \text{PbO}_2 + \text{SO}_4^{2-} + 4\text{H}^+
+$$</p>
+<p>$$
+\text{总反应（充电）}: 2\text{PbSO}_4 + 2\text{H}_2\text{O} \rightarrow \text{Pb} + \text{PbO}_2 + 2\text{H}_2\text{SO}_4
+$$</p>
+<p>放电与充电互为逆反应，符合二次电池可逆充放电原理。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>放电</th>
+<th>充电</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H₂SO₄</td>
+<td>浓度降低</td>
+<td>浓度升高</td>
+</tr>
+<tr>
+<td>PbSO₄</td>
+<td>生成</td>
+<td>消耗</td>
+</tr>
+<tr>
+<td>Pb</td>
+<td>消耗</td>
+<td>生成</td>
+</tr>
+<tr>
+<td>溶液密度</td>
+<td>降低</td>
+<td>升高</td>
+</tr>
+</tbody>
+</table>
+<h3>典型例题</h3>
+<p><strong>例</strong>：某铅蓄电池以 5 A 放电 2 h，计算 Pb 极消耗的质量。</p>
+<ul>
+<li>电量：$Q = I \times t = 5 \times 2 \times 3600 = 36000\ \text{C}$</li>
+<li>转移电子：$n(e^-) = Q/F = 36000/96500 \approx 0.373\ \text{mol}$</li>
+<li>消耗 Pb：$n(\text{Pb}) = 0.373/2 \approx 0.187\ \text{mol}$</li>
+<li>质量：$m(\text{Pb}) = 0.187 \times 207 \approx 38.6\ \text{g}$</li>
+</ul>
+<h3>易错点</h3>
+<ul>
+<li>放电时两极均生成 PbSO₄（不只一极）</li>
+<li>放电消耗 H₂SO₄，充电恢复 H₂SO₄——可通过测电解液密度判断电量</li>
+<li>铅蓄电池含有铅，废弃时必须回收，不能随意丢弃（铅污染）</li>
+<li>充电时接线：放电负极（Pb）接充电器负极</li>
+</ul>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>铅蓄电池</td>
+<td>lead-acid battery</td>
+</tr>
+<tr>
+<td>放电</td>
+<td>discharge</td>
+</tr>
+<tr>
+<td>充电</td>
+<td>charge</td>
+</tr>
+<tr>
+<td>电解液密度</td>
+<td>electrolyte density</td>
+</tr>
+<tr>
+<td>法拉第常数</td>
+<td>Faraday constant (F = 96500 C/mol)</td>
+</tr>
+</tbody>
+</table>
+<h3>例句</h3>
+<ul>
+<li>During discharge, both electrodes of a lead-acid battery produce PbSO₄.（放电时，铅蓄电池两极均生成 PbSO₄。）</li>
+<li>The concentration of H₂SO₄ decreases during discharge and recovers during charging.（H₂SO₄ 浓度在放电时降低，充电时恢复。）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/化学/人教版-人民教育出版社/普通高中教科书·化学选择性必修1 化学反应原理.pdf</a> 第四章（待家长核对页码）</li>
+<li><strong>课标</strong>：普通高中化学课程标准(2017年版2020年修订)</li>
+<li><strong>百科</strong>：维基百科"铅酸蓄电池"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/366-燃料电池.html">燃料电池</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/309-热化学方程式.html">热化学方程式</a></p>
+</li>
+<li>
+<p><a href="../atoms/362-二次电池.html">二次电池</a></p>
+</li>
+<li><a href="../atoms/364-原电池（高中）.html">原电池（高中）</a></li>
+<li><a href="../atoms/368-电解池.html">电解池</a></li>
+<li><a href="../atoms/375-锂电池.html">锂电池</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>面积比</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>面积比</h1><div class="review-mark" data-stem="1145-面积比"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[图形与几何]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 面积比</p><h1>面积比</h1>
+<blockquote>
+<p><strong>一句话</strong>：面积比是指两个平面图形面积的比值，常通过相似性质、等积变换或坐标法求解，是几何度量的基本运算。
+<strong>English</strong>: Area ratio is the quotient of the areas of two planar figures, often determined by similarity, equal-area transformations, or coordinate methods.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+对平面图形 $\mathcal{F}<em ABC="ABC" _triangle="\triangle">1, \mathcal{F}_2$，面积比即为 $S_1:S_2$ 或 $\frac{S_1}{S_2}$。核心原理：<br />
+- <strong>相似图形</strong>：若相似比为 $k$，则面积比 $= k^2$。例如 $\triangle ABC\sim\triangle DEF$ 且相似比 $=2$，则 $S</em>=4:1$。}:S_{\triangle DEF<br />
+- <strong>共高（或共底）三角形</strong>：等底等高时面积相等；等高的三角形面积比等于底边之比；等底三角形面积比等于高之比。<br />
+- <strong>坐标法</strong>：多边形面积可用坐标行列式，面积比转化为向量模长或坐标表达式的比值。<br />
+- <strong>圆锥曲线中的面积比</strong>：直线与椭圆、抛物线围成的三角形或四边形面积，可借助弦长公式与点到直线距离表达面积，再求比。</p>
+<p><strong>关键方法</strong><br />
+1. <strong>相似与转化</strong>：先判断图形是否相似，若相似直接用平方比；不相似则拆分或等积转化。<br />
+2. <strong>等积变换法</strong>：利用平行线、共底或等高构造等积图形，把不易直接计算的比例转化为易求的线段比或坐标比。<br />
+3. <strong>向量与坐标运算</strong>：用向量叉积模长计算三角形面积，面积比直接化为向量模的比值或坐标代数式。<br />
+4. <strong>定积分/分割法</strong>：对曲边梯形或复杂区域，通过定积分表达面积，再求比值（常用于与函数图像相关的面积比问题）。  </p>
+<p><strong>典型应用</strong><br />
+- 高考常见设问：“求△PAB与△PCD的面积之比”，通常给出共边或共角关系，需找高或相似。<br />
+- 在抛物线中，过焦点弦与抛物线围成的三角形面积比是定值问题，如 $y^2=2px$ 中，过焦点的弦与原点形成的三角形面积比等。<br />
+- 选填题常考：利用中位线、重心、平行线分线段成比例直接得出面积比。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆相似比与面积比</strong>：忘记面积比是相似比的平方，直接用相似比当作面积比。  </li>
+<li><strong>误用等积条件</strong>：未确认是否等高或等底，随意写下面积比等于底之比，导致错误。  </li>
+<li><strong>坐标法时叉积取错方向</strong>：三角形用向量叉积时忘记加绝对值，造成正负出错，但在比值中需保持一致。  </li>
+<li><strong>复杂图形不拆分</strong>：面对不规则四边形或多边形，没有分割成三角形，盲目用相似，得出错误比值。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面积比</td>
+<td>Area ratio</td>
+<td>两个图形面积的比</td>
+</tr>
+<tr>
+<td>相似比</td>
+<td>Similarity ratio</td>
+<td>对应边长的比</td>
+</tr>
+<tr>
+<td>等高三角形</td>
+<td>Triangles with equal altitude</td>
+<td>高相等的三角形</td>
+</tr>
+<tr>
+<td>等积变换</td>
+<td>Equal-area transformation</td>
+<td>保持面积不变的图形变换</td>
+</tr>
+<tr>
+<td>叉积</td>
+<td>Cross product</td>
+<td>向量计算平行四边形面积的工具</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">相似三角形</a></li>
+<li><a href="../atoms/619-三角形面积公式.html">三角形的面积公式</a></li>
+<li><a class="dead" title="未收录">向量在几何中的应用</a></li>
+<li><a class="dead" title="未收录">直线与圆锥曲线的位置关系</a></li>
+<li><a class="dead" title="未收录">定积分与面积</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2016-理-10.html">2016-理-10</a></li>
+</ul></div>
+</div>
+</body>
+</html>

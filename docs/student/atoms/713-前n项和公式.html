@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>前n项和公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>前n项和公式</h1><div class="review-mark" data-stem="713-前n项和公式"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>3</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 前n项和公式</p><h1>前n项和公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：数列 ${a_n}$ 的前 $n$ 项和 $S_n$ 定义为 $S_n = a_1 + a_2 + \cdots + a_n$，等差数列和等比数列的前 $n$ 项和有统一的公式。
+<strong>English</strong>: The sum of the first $n$ terms of a sequence ${a_n}$ is $S_n = a_1 + a_2 + \cdots + a_n$, with closed-form formulas for arithmetic and geometric sequences.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong>：<br />
+对于任意数列 ${a_n}$，前 $n$ 项和 $S_n = \sum_{k=1}^n a_k$。高考重点考查以下两类可公式化的求和：</p>
+<ul>
+<li>
+<p><strong>等差数列</strong>：首项 $a_1$，公差 $d$。<br />
+  $$
+S_n = \frac{n(a_1 + a_n)}{2} = na_1 + \frac{n(n-1)}{2}d
+$$
+  （推导：倒序相加法）</p>
+</li>
+<li>
+<p><strong>等比数列</strong>：首项 $a_1$，公比 $q$（$q \neq 1$）。<br />
+  $$
+S_n = \frac{a_1(1 - q^n)}{1 - q}
+$$
+  当 $q = 1$ 时，$S_n = na_1$。<br />
+  （推导：错位相减法）</p>
+</li>
+</ul>
+<p><strong>关键方法</strong>：<br />
+高考中解决前 $n$ 项和问题的核心方法包括：
+1. <strong>直接套用公式</strong>：识别等差或等比数列后，代入相应公式；注意公比是否为 1。
+2. <strong>由 $S_n$ 求通项 $a_n$</strong>：利用关系<br />
+   $$
+a_n = \begin{cases}
+   S_1, &amp; n = 1 \
+   S_n - S_{n-1}, &amp; n \ge 2
+   \end{cases}
+$$
+   并检验 $n=1$ 时是否满足 $S_n - S_{n-1}$ 的通项，否则需分段表示。
+3. <strong>数列求和技巧</strong>：对于非等差等比数列，常使用分组求和、裂项相消、错位相减（如 ${n \cdot q^n}$ 型）等方法，最终转化为等差或等比的前 $n$ 项和。</p>
+<p><strong>典型应用</strong>：<br />
+在高考中，常见设问为：
+- “求数列 ${a_n}$ 的前 $n$ 项和 $S_n$”，需先判断数列类型。
+- 给出 $S_n$ 与 $n$ 或 $a_n$ 的关系式，要求求通项 $a_n$ 或证明数列是等差/等比数列。
+- 实际情境题：如分期付款、增长模型等，最终归结为等比数列求和。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li>等比数列前 $n$ 项和公式中，<strong>忽略讨论公比 $q=1$ 的特殊情况</strong>，导致公式分母为零的错误。</li>
+<li>由 $S_n$ 求 $a_n$ 时，<strong>未检验 $n=1$ 的情况</strong>，错误地认为对所有 $n$ 都有 $a_n = S_n - S_{n-1}$，当首项不满足该式时未分段表示。</li>
+<li>错位相减法求和时，<strong>项数计算错误</strong>，尤其是乘公比后对应项对齐错位，导致最后一项的指数出现偏差。</li>
+<li>等差、等比数列性质混淆，例如用等差数列的前 $n$ 项和二次函数形式判断等比数列，或者误以为等比数列和也具有类似等差中项的性质。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前 $n$ 项和</td>
+<td>sum of the first $n$ terms</td>
+<td>从第一项累加到第 $n$ 项的结果</td>
+</tr>
+<tr>
+<td>等差数列</td>
+<td>arithmetic sequence</td>
+<td>相邻项差为常数的数列</td>
+</tr>
+<tr>
+<td>等比数列</td>
+<td>geometric sequence</td>
+<td>相邻项比为常数的数列</td>
+</tr>
+<tr>
+<td>通项公式</td>
+<td>general term formula</td>
+<td>用 $n$ 表示第 $n$ 项 $a_n$ 的表达式</td>
+</tr>
+<tr>
+<td>错位相减法</td>
+<td>method of dislocation subtraction</td>
+<td>用于等比与等差数列乘积型求和的方法</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/356-等差数列概念.html">等差数列</a></li>
+<li><a href="../atoms/358-等比数列概念.html">等比数列</a></li>
+<li><a href="../atoms/384-数列通项公式.html">数列通项公式</a></li>
+<li><a class="dead" title="未收录">数列求和</a></li>
+<li><a class="dead" title="未收录">递推数列</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-文-10.html">2009-文-10</a></li>
+<li><a href="../exam/数学/2012-文-14.html">2012-文-14</a></li>
+<li><a href="../exam/数学/2020-文-06.html">2020-文-06</a></li>
+<li><a href="../exam/数学/2023-新课标Ⅱ-08.html">2023-新课标Ⅱ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数代数形式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>复数代数形式</h1><div class="review-mark" data-stem="801-复数代数形式"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[数与代数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 复数代数形式, 复数代数式, 复数的代数形式</p><h1>复数代数形式</h1>
+<blockquote>
+<p><strong>一句话</strong>：形如 $a + bi\;(a,b \in \mathbb{R})$ 的表达式称为复数的代数形式，其中 $i$ 是虚数单位，满足 $i^2 = -1$。
+<strong>English</strong>: An expression of the form $a + bi\;(a,b \in \mathbb{R})$ is called the algebraic form of a complex number, where $i$ is the imaginary unit with $i^2 = -1$.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p>复数的代数形式 $z = a + bi$ 是表示复数最基本的工具。其中 $a$ 称为实部，记作 $\operatorname{Re}(z)$；$b$ 称为虚部，记作 $\operatorname{Im}(z)$。当 $b = 0$ 时 $z$ 为实数；$b \neq 0$ 时 $z$ 为虚数；特别地，$a = 0,\ b \neq 0$ 时称为纯虚数。</p>
+<p><strong>关键方法</strong>：<br />
+1. <strong>复数相等</strong>：$a+bi = c+di \iff a=c \text{ 且 } b=d$，可将复数等式转化为实数方程组。<br />
+2. <strong>四则运算</strong>：加减法直接合并实部与虚部；乘法按多项式展开并利用 $i^2=-1$；除法分母实数化，即分子分母同乘分母的共轭复数 $\dfrac{a+bi}{c+di} = \dfrac{(a+bi)(c-di)}{c^2+d^2}$。<br />
+3. <strong>共轭与模</strong>：共轭复数 $\overline{z}=a-bi$；模 $|z|=\sqrt{a^2+b^2}$，且 $z\overline{z}=|z|^2$。</p>
+<p><strong>典型应用</strong>：高考常在选择题、填空题中考查复数的代数运算与性质。常见设问：给出复数满足方程（如 $(1+i)z=2$），求 $z$ 的代数形式、模或虚部；或给出两个复数相等，求实参数 $a,b$ 的值。解题步骤：先对方程变形，利用复数运算法则化简为 $z=a+bi$，再按所求提取实部、虚部或计算模。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>虚部概念混淆</strong>：复数 $a+bi$ 的虚部是实数 $b$，不是 $bi$，填空时必须写 $b$ 而非 $bi$。</li>
+<li><strong>分母实数化漏项</strong>：除法运算时，分子乘共轭复数后忘记将乘积展开至标准代数形式，或忽略 $i^2=-1$ 而导致实部、虚部符号错误。</li>
+<li><strong>$i$ 的周期性误用</strong>：记错 $i^n$ 的周期为 $4$（$i^4=1$），在处理高次幂时未将指数除以 $4$ 求余数，导致代值错误。</li>
+<li><strong>实部虚部参数漏取范围</strong>：已知形如 $z=a+bi$ 的复数为纯虚数，只写 $a=0$ 而遗漏 $b \neq 0$，导致参数取值不全。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复数</td>
+<td>Complex Number</td>
+<td>形如 a+bi 的数</td>
+</tr>
+<tr>
+<td>代数形式</td>
+<td>Algebraic Form</td>
+<td>实部+虚部乘 i 的表示</td>
+</tr>
+<tr>
+<td>实部</td>
+<td>Real Part</td>
+<td>Re(z)=a</td>
+</tr>
+<tr>
+<td>虚部</td>
+<td>Imaginary Part</td>
+<td>Im(z)=b (实数)</td>
+</tr>
+<tr>
+<td>虚数单位</td>
+<td>Imaginary Unit</td>
+<td>i, i²=-1</td>
+</tr>
+<tr>
+<td>共轭复数</td>
+<td>Complex Conjugate</td>
+<td>实部相同，虚部相反</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/333-复数的几何意义.html">复数的几何意义</a></li>
+<li><a class="dead" title="未收录">复数运算</a></li>
+<li><a class="dead" title="未收录">复数的三角形式</a></li>
+<li><a class="dead" title="未收录">复数与方程</a></li>
+<li><a class="dead" title="未收录">复数的模</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-文-02.html">2019-文-02</a></li>
+<li><a href="../exam/数学/2021-理-01.html">2021-理-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

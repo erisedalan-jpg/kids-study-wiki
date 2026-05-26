@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>涡电流</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>涡电流</h1><div class="review-mark" data-stem="651-涡电流"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[电磁学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 涡电流, 涡流, eddy current</p><h1>涡电流</h1>
+<blockquote>
+<p><strong>一句话</strong>：涡电流是块状金属在变化的磁场中或在磁场中运动时，因电磁感应而在金属块内部产生的自成闭合回路的感应电流。
+<strong>English</strong>: Eddy currents are loops of electric current induced within conductors by a changing magnetic field in the conductor, according to Faraday's law of induction.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li><strong>定义/原理</strong>：当整块导体处于<strong>变化的磁场</strong>中，或导体在非匀强磁场中<strong>运动</strong>时，穿过导体的磁通量发生变化。根据法拉第电磁感应定律，导体内部会产生感应电动势，进而形成感应电流。由于整块导体电阻很小，电流可以在导体内部沿各种路径流动，形成<strong>类似水中漩涡的闭合电流</strong>，故称涡电流（涡流）。其感应电动势的大小满足：$E = \frac{\Delta \Phi}{\Delta t}$，涡流强度 $I = \frac{E}{R}$，与磁场变化率及导体电阻率、形状有关。</li>
+<li><strong>关键方法</strong>：分析涡电流问题，首先明确<strong>原磁场的变化情况</strong>或<strong>导体相对磁场的运动</strong>，用<strong>楞次定律</strong>判断涡流的方向（感应电流的磁场总是阻碍引起感应电流的磁通量变化）；再用左手定则判断涡流所在部分在磁场中受到的<strong>安培力方向</strong>，进而分析物体的运动或阻尼现象。计算涡流损耗时，常用 $P = \frac{E^2}{R}$ 或 $P = I^2 R$，其中 $R$ 为与涡流路径相关的等效电阻。</li>
+<li><strong>典型应用</strong>：高考常以<strong>电磁阻尼、电磁驱动、涡流热效应</strong>为背景命题。  </li>
+<li><strong>电磁阻尼</strong>：导体在磁场中运动时产生的涡流受到的安培力总与运动方向相反，阻碍运动（如磁电式仪表中用铝框产生阻尼，使指针快速稳定）。  </li>
+<li><strong>电磁炉</strong>：利用高频交变电流产生高频交变磁场，使铁锅底部产生强大的涡流，利用电流热效应加热食物。设问常要求判断锅具材质（需铁磁材料且电阻率较低）、锅底变热而灶台不热的原因等。</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>涡流与普通感应电流混淆</strong>：涡流专指在<strong>块状导体内部</strong>自行闭合的电流，路径不规则；而导线框中的感应电流是沿明确回路的电流。两者产生机理相同，但涡流的路由和能量耗散更复杂。</li>
+<li><strong>楞次定律与安培力方向判断脱节</strong>：容易只判断出“阻碍磁通量变化”的感应电流方向，导至安培力方向错误。必须将导体中的涡流等效为无数个小电流元，再用左手定则逐个分析受力，最终合力方向确实与相对运动方向相反。</li>
+<li><strong>涡流热效应的有弊与有利混淆</strong>：在电机、变压器的铁芯中，涡流产生额外热损耗（涡流损耗），需要采用<strong>叠压的硅钢片</strong>并涂绝缘漆来增大电阻、减小涡流；而在电磁炉、感应加热中，涡流热效应是被主动利用的。高考常在选择题中要求区分“减弱有害涡流的方法”与“利用涡流工作的实例”。</li>
+<li><strong>认为所有金属材料都能产生理想涡流</strong>：非铁磁性金属（如铝、铜）涡流热效应弱，电磁炉无法对其有效加热；而铁磁材料磁导率高、电阻率适当，涡流强，才能高效发热。此点在解释电磁炉选锅原理时常设干扰项。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>涡电流</td>
+<td>eddy current</td>
+<td>块状导体中由变化磁场产生的自成回路的感应电流</td>
+</tr>
+<tr>
+<td>电磁感应</td>
+<td>electromagnetic induction</td>
+<td>磁通量变化产生感应电动势的现象</td>
+</tr>
+<tr>
+<td>楞次定律</td>
+<td>Lenz's law</td>
+<td>感应电流的磁场总是阻碍引起感应的磁通量变化</td>
+</tr>
+<tr>
+<td>法拉第电磁感应定律</td>
+<td>Faraday's law of induction</td>
+<td>$E = \frac{\Delta \Phi}{\Delta t}$，给出感应电动势大小</td>
+</tr>
+<tr>
+<td>电磁阻尼</td>
+<td>electromagnetic damping</td>
+<td>涡流受到的安培力阻碍导体运动的现象</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/395-法拉第电磁感应定律.html">法拉第电磁感应定律</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a class="dead" title="未收录">自感与互感</a></li>
+<li><a class="dead" title="未收录">电磁感应中的能量转化</a></li>
+<li><a class="dead" title="未收录">变压器与远距离输电</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-06</a></li>
+<li><a href="../exam/物理/2020-新课标Ⅱ-01.html">2020-新课标Ⅱ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>

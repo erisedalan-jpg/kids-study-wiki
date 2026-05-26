@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列不等式证明</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>数列不等式证明</h1><div class="review-mark" data-stem="453-数列不等式证明"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第八章数列拓展]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 数列不等式证明, sequence inequality proof, 数列放缩法, 放缩法</p><h2>🎓 数列不等式证明</h2>
+<h3>常用方法</h3>
+<ol>
+<li><strong>放缩法</strong>：将每一项替换为更大或更小的量，得到易求和的上界/下界</li>
+<li><strong>数学归纳法</strong>：逐步验证</li>
+<li><strong>导数辅助</strong>：对对应连续函数用导数证明不等式，再利用结果</li>
+<li><strong>单调性分析</strong>：证明差数列 $a_{n+1}-a_n$ 的符号</li>
+</ol>
+<h3>放缩法</h3>
+<p><strong>关键技巧</strong>：将复杂项"放大"（求上界）或"缩小"（求下界）为等比数列或等差数列。</p>
+<p>常用放缩：</p>
+<p>$$\frac{1}{n^2}\leq\frac{1}{n(n-1)}=\frac{1}{n-1}-\frac{1}{n} \quad (n\geq 2)$$</p>
+<p>$$\frac{1}{n^2}\geq\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}$$</p>
+<h3>典型例题</h3>
+<p><strong>例 1</strong> 证明：$\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{n}&lt;\ln n$（$n\geq 2$）</p>
+<p>利用 $\ln x\leq x-1$ 的等价形式 $\ln k-\ln(k-1)&gt;\dfrac{1}{k}$（对每个 $k\geq 2$）：</p>
+<p>实际上 $\ln(k)-\ln(k-1)=\ln\dfrac{k}{k-1}&gt;\dfrac{1}{k}$（需验证：$\ln(1+\frac{1}{k-1})&gt;\frac{1}{k}$，用 $\ln(1+t)&gt;t/(1+t)$ 对 $t=\frac{1}{k-1}$）</p>
+<p>所以 $\sum_{k=2}^n\dfrac{1}{k}&lt;\sum_{k=2}^n[\ln k-\ln(k-1)]=\ln n$，即 $\dfrac{1}{2}+\cdots+\dfrac{1}{n}&lt;\ln n$。</p>
+<p><strong>例 2</strong> 证明：$1+\dfrac{1}{4}+\dfrac{1}{9}+\cdots+\dfrac{1}{n^2}&lt;2$（$n\geq 1$）</p>
+<p>放缩：$\dfrac{1}{k^2}&lt;\dfrac{1}{(k-1)k}=\dfrac{1}{k-1}-\dfrac{1}{k}$（$k\geq 2$）</p>
+<p>$S_n = 1+\sum_{k=2}^n\dfrac{1}{k^2}&lt;1+\sum_{k=2}^n\left(\dfrac{1}{k-1}-\dfrac{1}{k}\right)=1+\left(1-\dfrac{1}{n}\right)=2-\dfrac{1}{n}&lt;2$</p>
+<p><strong>例 3</strong> 证明：$2(\sqrt{n+1}-1)&lt;1+\dfrac{1}{\sqrt{2}}+\cdots+\dfrac{1}{\sqrt{n}}&lt;2\sqrt{n}$（$n\geq 1$）</p>
+<p>放缩：$2(\sqrt{k+1}-\sqrt{k})=\dfrac{2}{\sqrt{k+1}+\sqrt{k}}&lt;\dfrac{1}{\sqrt{k}}&lt;\dfrac{2}{\sqrt{k}+\sqrt{k-1}}=2(\sqrt{k}-\sqrt{k-1})$（$k\geq 1$）</p>
+<p>求和：右侧 $\sum\dfrac{1}{\sqrt{k}}&lt;2\sum(\sqrt{k}-\sqrt{k-1})=2\sqrt{n}$</p>
+<p>左侧 $\sum\dfrac{1}{\sqrt{k}}&gt;2\sum(\sqrt{k+1}-\sqrt{k})=2(\sqrt{n+1}-1)$</p>
+<p><strong>例 4</strong>（归纳法）证明：$a_n=\left(1+\dfrac{1}{n}\right)^n&lt;3$（$n\in\mathbb{N}^*$）</p>
+<p>由二项式展开：</p>
+<p>$\left(1+\dfrac{1}{n}\right)^n = \sum_{k=0}^n\binom{n}{k}\dfrac{1}{n^k}&lt;\sum_{k=0}^n\dfrac{1}{k!}&lt;1+1+\dfrac{1}{2}+\dfrac{1}{4}+\cdots&lt;1+\dfrac{1}{1-1/2}=3$</p>
+<h3>数学归纳法与数列不等式</h3>
+<p><strong>步骤</strong>：① 验证 $n=1$（或起始值）；② 假设 $n=k$ 时成立，证 $n=k+1$ 时成立。</p>
+<p><strong>例 5</strong> 用归纳法证明 $2^n&gt;n^2$（$n\geq 5$）</p>
+<p>$n=5$：$2^5=32&gt;25=5^2$ ✓</p>
+<p>假设 $n=k$（$k\geq 5$）时 $2^k&gt;k^2$，则：</p>
+<p>$2^{k+1}=2\cdot 2^k&gt;2k^2$，需证 $2k^2\geq(k+1)^2=k^2+2k+1$，即 $k^2\geq 2k+1=(k+1)^2-k^2$，即 $k^2-2k-1\geq 0$，$k\geq 1+\sqrt{2}\approx 2.41$，对 $k\geq 3$ 成立 ✓</p>
+<h3>易错点</h3>
+<ul>
+<li>放缩方向要正确（证上界时每步放大，证下界时每步缩小）</li>
+<li>数学归纳法的归纳步必须明确使用归纳假设</li>
+<li>放缩后的求和公式要正确（等比/等差/裂项）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第八章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/数学归纳法</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a class="dead" title="未收录">导数证明不等式</a> · <a class="dead" title="未收录">数列求和综合</a> · <a href="../atoms/421-分组求和.html">分组求和</a> · <a class="dead" title="未收录">倒序相加法</a> · <a href="../atoms/415-Sn与an关系.html">Sn与an关系</a> · <a href="../atoms/457-数列极限-初步.html">数列极限-初步</a> · <a href="../atoms/450-恒成立问题.html">恒成立问题</a></p>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2014-理-17.html">2014-理-17</a></li>
+<li><a href="../exam/数学/2022-文-08.html">2022-文-08</a></li>
+<li><a class="dead" title="未收录">2023-新课标Ⅰ-22</a></li>
+<li><a class="dead" title="未收录">2024-新课标Ⅰ-08</a></li>
+</ul></div>
+</div>
+</body>
+</html>

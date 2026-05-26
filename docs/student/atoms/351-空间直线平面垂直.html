@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间直线平面垂直</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>空间直线平面垂直</h1><div class="review-mark" data-stem="351-空间直线平面垂直"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>2</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[必修二, 立体几何初步, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 空间直线平面垂直, perpendicularity in space, 线面垂直, 面面垂直</p><h2>🎓 空间直线与平面的垂直</h2>
+<h3>线面垂直的定义</h3>
+<p>若直线 $l$ 与平面 $\alpha$ 内的<strong>任意一条</strong>直线都垂直，则称 $l$ 垂直于平面 $\alpha$，记作 $l \perp \alpha$。</p>
+<p>直线 $l$ 与平面 $\alpha$ 的交点称为<strong>垂足</strong>。</p>
+<h3>线面垂直的判定定理</h3>
+<p><strong>定理</strong>：若一条直线与平面内<strong>两条相交直线</strong>都垂直，则该直线垂直于此平面。</p>
+<p>$$m \subset \alpha,\quad n \subset \alpha,\quad m \cap n = A,\quad l \perp m,\quad l \perp n \implies l \perp \alpha$$</p>
+<p><strong>助记</strong>："垂直面内两相交线 $\Rightarrow$ 线面垂直"</p>
+<h3>线面垂直的性质</h3>
+<p><strong>定理1</strong>：若 $l \perp \alpha$，则 $l$ 垂直于平面 $\alpha$ 内的<strong>所有</strong>直线。</p>
+<p><strong>定理2</strong>（三垂线定理）：设 $PA \perp \alpha$，$O$ 是 $A$ 的射影（即垂足），$BO \subset \alpha$，$PB \perp BO$，则 $AB \perp BO$。</p>
+<p>反之（三垂线定理逆定理）：$AB \perp BO,\quad PA \perp \alpha \implies PB \perp BO$。</p>
+<h3>面面垂直的判定</h3>
+<p><strong>定义</strong>：两平面所成的二面角为 $90°$，则称两平面垂直，记 $\alpha \perp \beta$。</p>
+<p><strong>判定定理</strong>：若一平面内有一条直线垂直于另一平面，则两平面垂直。</p>
+<p>$$l \subset \alpha,\quad l \perp \beta \implies \alpha \perp \beta$$</p>
+<h3>面面垂直的性质</h3>
+<p><strong>定理</strong>：若两平面垂直，则在一个平面内垂直于交线的直线垂直于另一个平面。</p>
+<p>$$\alpha \perp \beta,\quad \alpha \cap \beta = l,\quad m \subset \alpha,\quad m \perp l \implies m \perp \beta$$</p>
+<h3>典型例题</h3>
+<p><strong>例1</strong>（判定线面垂直）：正方体 $ABCD-A_1B_1C_1D_1$ 中，证明 $AA_1 \perp$ 平面 $ABCD$。</p>
+<p><strong>证</strong>：$AA_1 \perp AB$，$AA_1 \perp AD$（正方体相邻边垂直），$AB \cap AD = A$，由线面垂直判定定理，$AA_1 \perp$ 平面 $ABCD$。</p>
+<p><strong>例2</strong>（三垂线定理）：$PA \perp$ 底面 $ABC$，$O$ 为 $BC$ 中点，则 $AO \perp BC$，由此可知 $PO \perp BC$。</p>
+<h3>易错点</h3>
+<ul>
+<li>线面垂直判定需要两条相交直线（不能是两条平行线）</li>
+<li>三垂线定理中：$PA \perp$ 平面、$OA \perp PQ$ 在平面内，才能推出 $PA' \perp PQ$（方向别搞混）</li>
+<li>面面垂直只是二面角为 $90°$，不代表一个面内所有线垂直另一平面</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），必修第二册第八章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）必修 第二册.pdf</code>（第八章 § 8.4，待家长核对页码）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/352-空间直线平面平行.html">空间直线平面平行</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/934-棱柱的结构特征.html">棱柱的结构特征</a></p>
+</li>
+<li>
+<p><a href="../atoms/350-空间点直线平面位置关系.html">空间点直线平面位置关系</a></p>
+</li>
+<li><a href="../atoms/352-空间直线平面平行.html">空间直线平面平行</a></li>
+<li><a href="../atoms/353-空间角.html">空间角</a></li>
+<li><a href="../atoms/354-空间距离.html">空间距离</a></li>
+<li><a href="../atoms/343-球的表面积体积.html">球的表面积体积</a></li>
+</ul>
+</div>
+</body>
+</html>

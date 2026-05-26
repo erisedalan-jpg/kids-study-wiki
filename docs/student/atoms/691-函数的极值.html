@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的极值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>函数的极值</h1><div class="review-mark" data-stem="691-函数的极值"></div><div class="meta-card"><span><strong>权重</strong>9</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 函数的极值, 极值, 函数极值点, 函数极值, Extremum of a Function</p><h1>函数的极值</h1>
+<blockquote>
+<p><strong>一句话</strong>：设函数 $y=f(x)$ 在 $x_0$ 附近有定义，若对附近所有 $x$ 均有 $f(x) \le f(x_0)$（或 $f(x) \ge f(x_0)$），则 $f(x_0)$ 为极大值（或极小值），$x_0$ 为极值点。<br />
+<strong>English</strong>: An extremum of a function $f$ is a point $x_0$ where $f(x_0)$ is a local maximum or local minimum.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义</strong>：对于函数 $y=f(x)$，若存在 $\delta&gt;0$ 使得当 $0&lt;|x-x_0|&lt;\delta$ 时，恒有 $f(x)<f(x_0)$，则称 $f(x_0)$ 为函数的一个**极大值**；若恒有 $f(x)>f(x_0)$，则称 $f(x_0)$ 为<strong>极小值</strong>。极值点一定是函数定义域的内点，端点不取极值。可导函数在极值点处导数必为零（费马引理），即 $f'(x_0)=0$，但导数为零的点不一定是极值点（如 $y=x^3$ 在 $x=0$）。</p>
+<p><strong>判定方法</strong>（针对可导函数）：
+1. 求导数 $f'(x)$，解方程 $f'(x)=0$ 得到驻点。
+2. 检查 $f'(x)$ 在驻点两侧的符号（第一充分条件）：若左正右负，则 $f$ 在该点取极大值；若左负右正，则取极小值；若同号，则不是极值点。
+3. 也可以利用二阶导数判定（第二充分条件）：若 $f'(x_0)=0$ 且 $f''(x_0)\neq0$，则 $f''(x_0)&lt;0$ 时 $f(x_0)$ 为极大值；$f''(x_0)&gt;0$ 时为极小值。</p>
+<p><strong>高考考查方式</strong>：①求给定函数（不含参数）的单调区间与极值；②含参数的函数单调性讨论，据此求极值或极值点个数；③已知极值条件反求参数；④极值点偏移问题（证明与极值点有关的不等式）。解题关键步骤是准确求导、列表分析导数符号、结合定义域限制。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>混淆极值与最值</strong>：极值只是局部概念，一个函数可以有多个极大（小）值，而最值是全局概念，极值不一定是最值，也不一定唯一。</li>
+<li><strong>认为“导数为零的点就是极值点”</strong>：$f'(x_0)=0$ 只是可导函数取极值的必要条件，不是充分条件。例如 $y=x^3$ 在 $x=0$ 处导数为零却不是极值点。必须验证两侧导数符号变化。</li>
+<li><strong>忽略不可导点</strong>：极值也可能出现在导数不存在的点，如 $y=|x|$ 在 $x=0$ 处取极小值但不可导。因此解题时需考察导数不存在的点以及区间的端点（端点不取极值，但影响最值）。</li>
+<li><strong>含参讨论时遗漏定义域限制或参数范围临界值</strong>：如指数、对数型函数要特别注意定义域，讨论导数的根与定义域的关系，避免漏解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>极值</td>
+<td>extremum</td>
+<td>局部最值，分极大值和极小值</td>
+</tr>
+<tr>
+<td>极大值</td>
+<td>local maximum</td>
+<td>局部最高点对应的函数值</td>
+</tr>
+<tr>
+<td>极小值</td>
+<td>local minimum</td>
+<td>局部最低点对应的函数值</td>
+</tr>
+<tr>
+<td>极值点</td>
+<td>extremum point</td>
+<td>使函数取得极值的自变量的点</td>
+</tr>
+<tr>
+<td>驻点</td>
+<td>stationary point</td>
+<td>导数为零的点，可能是极值点也可能不是</td>
+</tr>
+<tr>
+<td>临界点</td>
+<td>critical point</td>
+<td>导数为零或导数不存在的点，都可能是极值点的候选</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)  </li>
+<li><strong>课标</strong>：函数与导数，导数在研究函数中的应用  </li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/282-函数的单调性.html">函数的单调性</a></li>
+<li><a href="../atoms/286-函数的最值.html">函数的最值</a></li>
+<li><a class="dead" title="未收录">导数与函数零点</a></li>
+<li><a class="dead" title="未收录">极值点偏移</a></li>
+<li><a class="dead" title="未收录">含参函数的单调性与极值</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2019-理-20.html">2019-理-20</a></li>
+<li><a href="../exam/数学/2024-新课标Ⅱ-16.html">2024-新课标Ⅱ-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

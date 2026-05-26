@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热机</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>热机</h1><div class="review-mark" data-stem="151-热机"></div><div class="meta-card"><span><strong>权重</strong>4</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[九年级全一, 第十四章内能的利用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 热机, heat engine, 热力发动机</p><h1>热机</h1>
+<blockquote>
+<p><strong>一句话</strong>：热机是将燃料燃烧释放的内能转化为机械能的机器，包括蒸汽机、内燃机、喷气发动机等。
+<strong>English</strong>: A heat engine is a machine that converts the internal energy released by burning fuel into mechanical energy, including steam engines, internal combustion engines, and jet engines.</p>
+</blockquote>
+<hr />
+<h2>📚 给 6-12 岁（自读版）</h2>
+<p>汽车为什么能跑？飞机为什么能飞？因为它们都有<strong>热机</strong>！</p>
+<p>热机就是"烧燃料→产生热→变成动力"的机器。</p>
+<p><strong>热机工作原理（简单版）：</strong>
+1. 燃料（汽油、柴油、煤）燃烧，释放大量热量
+2. 热量使气体膨胀
+3. 膨胀的气体推动活塞运动
+4. 活塞运动带动机器转动 → <strong>机械能</strong>产生了！</p>
+<p><strong>常见热机：</strong>
+- <strong>蒸汽机</strong>：烧煤→水变水蒸气→蒸汽推动活塞（老火车、蒸汽船用过）
+- <strong>内燃机</strong>：燃料直接在气缸里燃烧（汽车、摩托车）
+- <strong>喷气发动机</strong>：燃料燃烧→喷出高速气体→飞机前进</p>
+<p><strong>热机的"浪费"：</strong>
+热机不能把所有热量都变成有用功，一部分热量会"浪费"掉（排气带走热量），这就是<strong>热机效率</strong>问题。</p>
+<hr />
+<h2>🎓 给 12+（进阶版）</h2>
+<h3>定义</h3>
+<p><strong>热机</strong>：利用燃料燃烧产生的内能，将内能转化为机械能的装置。</p>
+<p>$$\text{内能} \xrightarrow{\text{热机}} \text{机械能}$$</p>
+<h3>热机的能量流向</h3>
+<p>$$Q_{燃料} = W_{有用} + Q_{散失}$$</p>
+<p><strong>热机效率</strong>：</p>
+<p>$$\eta = \frac{W_{有用}}{Q_{燃料}} \times 100\%$$</p>
+<h3>热机的工作条件（热力学）</h3>
+<p>根据热力学第二定律，热机必须在<strong>高温热源</strong>和<strong>低温热源</strong>之间工作：
+- 从高温热源吸热 $Q_1$
+- 对外做功 $W$
+- 向低温热源放热 $Q_2$</p>
+<p>$$W = Q_1 - Q_2$$</p>
+<p>$$\eta = \frac{W}{Q_1} = 1 - \frac{Q_2}{Q_1} &lt; 100\%$$</p>
+<p>热机效率永远小于100%（热力学第二定律）。</p>
+<h3>主要热机类型对比</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>工质</th>
+<th>燃烧位置</th>
+<th>典型应用</th>
+<th>效率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蒸汽机</td>
+<td>水蒸气</td>
+<td>气缸外</td>
+<td>早期火车、轮船</td>
+<td>~15-20%</td>
+</tr>
+<tr>
+<td>汽油机</td>
+<td>汽油+空气混合气</td>
+<td>气缸内</td>
+<td>小汽车、摩托</td>
+<td>~25-30%</td>
+</tr>
+<tr>
+<td>柴油机</td>
+<td>柴油+空气</td>
+<td>气缸内</td>
+<td>卡车、轮船</td>
+<td>~30-45%</td>
+</tr>
+<tr>
+<td>喷气发动机</td>
+<td>航空燃油</td>
+<td>燃烧室</td>
+<td>飞机</td>
+<td>~30-40%</td>
+</tr>
+</tbody>
+</table>
+<h3>热机与能量守恒</h3>
+<p>热机工作时：
+- 燃料化学能 → 内能（燃烧）
+- 内能 → 机械能（做功）
+- 未利用内能 → 环境（排气、散热）</p>
+<p>整个过程能量守恒，但部分能量"降质"（从高品质的功→低品质的热）。</p>
+<h3>典型例题</h3>
+<p><strong>例</strong>：一台热机燃烧 1 kg 柴油（热值 $q = 4.5 \times 10^7$ J/kg），对外做了 $1.35 \times 10^7$ J 的功，求热机效率。</p>
+<p><strong>解</strong>：</p>
+<p>$$Q_{燃料} = qm = 4.5 \times 10^7 \times 1 = 4.5 \times 10^7 \text{ J}$$</p>
+<p>$$\eta = \frac{W}{Q_{燃料}} = \frac{1.35 \times 10^7}{4.5 \times 10^7} = 30\%$$</p>
+<p><strong>易错点：</strong>
+- 热机效率 &lt; 100% 是必然的，不是设计缺陷
+- 燃料热值是燃料完全燃烧放出的热量，实际中燃烧往往不完全
+- 做功冲程才对外做功，其余三个冲程（吸气、压缩、排气）由飞轮带动</p>
+<hr />
+<h2>🌐 中英对照</h2>
+<h3>词汇</h3>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>词性</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>热机</td>
+<td>heat engine</td>
+<td>n.</td>
+<td>A car engine is a type of heat engine.</td>
+</tr>
+<tr>
+<td>内能</td>
+<td>internal energy</td>
+<td>n.</td>
+<td>Heat engines convert internal energy to mechanical energy.</td>
+</tr>
+<tr>
+<td>机械能</td>
+<td>mechanical energy</td>
+<td>n.</td>
+<td>The engine produces mechanical energy to drive the car.</td>
+</tr>
+<tr>
+<td>热机效率</td>
+<td>thermal efficiency</td>
+<td>n.</td>
+<td>The thermal efficiency of diesel engines is about 40%.</td>
+</tr>
+<tr>
+<td>热源</td>
+<td>heat source</td>
+<td>n.</td>
+<td>The burning fuel is the high-temperature heat source.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/物理/人教版-人民教育出版社/义务教育教科书·物理九年级全一册.pdf</a> 第十四章第一节（待家长核对页码）</li>
+<li><strong>课标</strong>：义务教育物理课程标准(2022年版) — 内能的利用、热机</li>
+<li><strong>百科</strong>：维基百科"热机"；中文百科"内燃机"</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/150-热传递改变内能.html">热传递改变内能</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/126-内燃机.html">内燃机</a></p>
+</li>
+<li>
+<p><a href="../atoms/126-内燃机.html">内燃机</a></p>
+</li>
+<li><a href="../atoms/147-汽油机与柴油机.html">汽油机与柴油机</a></li>
+<li><a href="../atoms/152-热机效率.html">热机效率</a></li>
+<li><a href="../atoms/155-燃料热值.html">燃料热值</a></li>
+<li><a class="dead" title="未收录">能量转化与守恒</a></li>
+<li><a class="dead" title="未收录">做功改变内能</a></li>
+</ul>
+</div>
+</body>
+</html>

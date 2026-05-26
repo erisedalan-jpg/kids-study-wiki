@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抽样调查</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>抽样调查</h1><div class="review-mark" data-stem="133-抽样调查"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>1</span><span><strong>学段</strong>[初中, 高中]</span><span><strong>主题</strong>[统计, 七下, 数据收集整理]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 抽样调查, sampling survey, 抽样, 样本调查</p><h2>课本定义</h2>
+<p>从<strong>总体</strong>中抽取<strong>部分个体</strong>进行调查，用样本的结果来估计总体，这种调查方式叫做<strong>抽样调查</strong>。被抽到的部分个体叫做<strong>样本</strong>，样本中个体的数目叫做<strong>样本容量</strong>。</p>
+<hr />
+<h2>📚 6-12 岁回溯版</h2>
+<h3>"问一部分人，猜全体的情况"</h3>
+<p><strong>全面调查</strong>：问所有人（费时费力）
+<strong>抽样调查</strong>：只问其中一部分人，用这部分人的情况来推测所有人</p>
+<p><strong>生活例子：</strong>
+- 医生验血：只抽一管血（不是抽光你所有血），就能了解全身血液的情况
+- 民意调查：不可能问遍全国14亿人，随机问几千人，用结果代表全体意见
+- 食品安全检验：不能把所有饼干都吃完测试，只抽几袋检验</p>
+<p><strong>关键词：</strong>
+- <strong>总体</strong>：全部研究对象（如全国消费者）
+- <strong>个体</strong>：总体中的每一个（如每个消费者）
+- <strong>样本</strong>：被抽取的部分个体（如抽到的1000个消费者）
+- <strong>样本容量</strong>：样本中个体的数量（如 n = 1000）</p>
+<p><strong>一个好的样本要满足什么？</strong></p>
+<p><strong>随机性</strong>——每个个体被抽到的机会要相等，不能专门挑或者只选方便的。</p>
+<p>好的例子：摇号、随机抽签
+不好的例子：只问班里坐在前排的同学（前排的同学可能坐得近，被老师提问多，和全班不一样）</p>
+<hr />
+<h2>🎓 12+ 进阶版</h2>
+<h3>严格定义</h3>
+<p><strong>抽样调查</strong>：从总体中按照一定规则抽取一部分个体（样本），通过对样本的调查分析来推断总体特征的方法。</p>
+<p><strong>核心概念：</strong>
+| 概念 | 定义 |
+|------|------|
+| 总体（population）| 研究对象的全体 |
+| 个体（individual）| 总体中的每一个元素 |
+| 样本（sample）| 从总体中抽取的部分个体 |
+| 样本容量（sample size n）| 样本中个体的数目 |
+| 抽样误差 | 样本结果与总体真值的差异 |</p>
+<h3>常见抽样方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单随机抽样</td>
+<td>每个个体被选中概率相等</td>
+<td>总体规模不太大</td>
+</tr>
+<tr>
+<td>系统抽样（等距抽样）</td>
+<td>按固定间隔抽取</td>
+<td>总体按顺序排列</td>
+</tr>
+<tr>
+<td>分层抽样</td>
+<td>按比例从各子群体中抽</td>
+<td>总体有明显分层</td>
+</tr>
+</tbody>
+</table>
+<h3>抽样调查的优缺点</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽样调查</td>
+<td>节省时间和成本；必要时唯一可行方法</td>
+<td>有抽样误差，结果是估计值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>减少误差的方法：</strong>
+- 增大样本容量（n 越大，误差越小）
+- 保证样本的随机性（避免选择性偏差）
+- 分层抽样（保证各子群体都有代表）</p>
+<h3>典型例题</h3>
+<p><strong>例题1：</strong> 某市有初中生 50000 人，从中随机抽取 1000 人调查视力，其中近视 650 人，估计该市初中生近视人数。</p>
+<p>解：样本中近视比例 = 650/1000 = 65%
+估计总体近视人数 = 50000 × 65% = <strong>32500 人</strong></p>
+<p>（注：这是估计值，实际可能有误差）</p>
+<p><strong>例题2：</strong> 抽样调查时，以下哪种做法更科学？
+(A) 只调查放学时在门口碰到的同学
+(B) 用班级花名册随机抽取编号</p>
+<p>解：(B) 更科学。(A) 只调查特定时间特定地点的同学，有选择性偏差，不能代表全体。(B) 随机抽取保证了随机性。</p>
+<p><strong>例题3：</strong> 工厂生产了10000个零件，用系统抽样（等距）抽取100个检验，间隔是多少？</p>
+<p>解：间隔 = 10000 / 100 = <strong>100 个</strong>
+每隔100个取1个，从前100个中随机选一个起始位置。</p>
+<h3>样本估计总体</h3>
+<p>抽样调查的核心应用：<strong>用样本数据估计总体</strong></p>
+<p>若样本中某特征的频率为 f，则估计总体中该特征的比例约为 f。</p>
+<p>适用条件：样本必须具有代表性（随机、足量）。</p>
+<h3>易错点</h3>
+<ol>
+<li><strong>样本容量不是样本的个数，是样本中个体的数目</strong></li>
+<li><strong>抽样结果是估计，不是精确值</strong></li>
+<li><strong>样本要有随机性</strong>，非随机样本不能代表总体</li>
+</ol>
+<hr />
+<h2>🌐 中英对照</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>抽样调查</td>
+<td>sampling survey</td>
+<td>调查部分代表全体</td>
+</tr>
+<tr>
+<td>总体</td>
+<td>population</td>
+<td>全部研究对象</td>
+</tr>
+<tr>
+<td>样本</td>
+<td>sample</td>
+<td>被抽取的部分</td>
+</tr>
+<tr>
+<td>样本容量</td>
+<td>sample size</td>
+<td>样本中个体数</td>
+</tr>
+<tr>
+<td>抽样误差</td>
+<td>sampling error</td>
+<td>样本与总体的偏差</td>
+</tr>
+<tr>
+<td>随机抽样</td>
+<td>random sampling</td>
+<td>等概率抽取</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/初中/数学/人教版-人民教育出版社/七年级/义务教育教科书·数学七年级下册.pdf</a> 第十章（页码待家长核对）</li>
+<li><strong>课标</strong>：义务教育数学课程标准（2022年版）统计与概率领域</li>
+<li><strong>拓展</strong>：统计学中的大样本定律；民调的科学性讨论</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-08，内容待家长与教材核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<ul>
+<li><strong>前置</strong>：<a href="../atoms/121-全面调查.html">全面调查</a></li>
+<li>
+<p><strong>延伸</strong>：<a href="../atoms/143-频数分布.html">频数分布</a></p>
+</li>
+<li>
+<p><a href="../atoms/121-全面调查.html">全面调查</a></p>
+</li>
+<li><a href="../atoms/143-频数分布.html">频数分布</a></li>
+<li><a href="../atoms/141-统计图.html">统计图</a></li>
+<li><a href="../atoms/055-平均数.html">平均数</a></li>
+<li><a href="../atoms/060-可能性.html">可能性</a></li>
+</ul>
+</div>
+</body>
+</html>

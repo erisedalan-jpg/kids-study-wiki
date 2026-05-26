@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何比例</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>几何比例</h1><div class="review-mark" data-stem="668-几何比例"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 几何比例</p><h1>几何比例</h1>
+<blockquote>
+<p><strong>一句话</strong>：几何比例是指在几何图形中，线段长度、面积等量之间的比值关系，常用于研究相似形、平行截割与面积分配。
+<strong>English</strong>: Geometric proportion refers to the ratio relationships between quantities such as lengths of line segments or areas in geometric figures, commonly used in studying similarity, parallel sectioning, and area distribution.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<h3>定义与核心原理</h3>
+<p>几何比例的核心基础是<strong>线段的比</strong>：若线段 $a$ 与 $b$ 的长度比为 $k$（即 $\frac{a}{b}=k$），则 $k$ 称为比例系数。在高考中，几何比例主要依托以下核心定理展开：</p>
+<p><strong>1. 黄金分割（比例中项）</strong>
+点 $C$ 将线段 $AB$ 分为两部分，若 $\frac{AC}{AB} = \frac{CB}{AC}$，则称 $C$ 为线段 $AB$ 的黄金分割点，该比值为 $\frac{\sqrt{5}-1}{2} \approx 0.618$。</p>
+<p><strong>2. 平行线分线段成比例定理</strong>
+三条平行线截两条直线，所得对应线段成比例。如图，若 $l_1 \parallel l_2 \parallel l_3$，分别交直线 $m, n$ 于点 $A_1, A_2, A_3$ 和 $B_1, B_2, B_3$，则有：
+$$\frac{A_1A_2}{A_2A_3} = \frac{B_1B_2}{B_2B_3}, \quad \frac{A_1A_2}{A_1A_3} = \frac{B_1B_2}{B_1B_3}$$</p>
+<p>推论：平行于三角形一边的直线截其他两边，所得对应线段成比例。</p>
+<p><strong>3. 相似三角形的性质</strong>
+若 $\triangle ABC \sim \triangle A'B'C'$，相似比为 $k$，则：
+- 对应边成比例：$\frac{AB}{A'B'} = \frac{BC}{B'C'} = \frac{AC}{A'C'} = k$
+- 对应高、中线、角平分线之比也为 $k$
+- <strong>面积比</strong>等于相似比的平方：$S_{\triangle ABC} : S_{\triangle A'B'C'} = k^2$</p>
+<p><strong>4. 角平分线定理</strong>
+三角形中，一个角的平分线分对边所成的两条线段与这个角的两邻边对应成比例。即：在 $\triangle ABC$ 中，$AD$ 为 $\angle BAC$ 的平分线，则 $\frac{BD}{DC} = \frac{AB}{AC}$。</p>
+<h3>关键方法</h3>
+<p>解决几何比例问题的标准步骤：</p>
+<ol>
+<li>
+<p><strong>识别平行结构</strong>：寻找图形中的平行线（如平行四边形、梯形、中位线等），直接应用平行线分线段成比例定理及其推论。</p>
+</li>
+<li>
+<p><strong>构造相似三角形</strong>：通过添加辅助线（常作平行线或垂线）构造相似形，利用对应边成比例建立方程。</p>
+</li>
+<li>
+<p><strong>等积代换</strong>：对于面积比例问题，利用同底或等高三角形的面积比转化为线段比。例如，两三角形同底时面积比等于高之比；同高时面积比等于底之比。</p>
+</li>
+<li>
+<p><strong>向量法与坐标法</strong>：在坐标系中，线段比例可直接由端点坐标之差表示。</p>
+</li>
+</ol>
+<h3>典型应用（高考设问方式）</h3>
+<p><strong>设问类型一：求线段比或证明线段比例关系</strong>
+例：在 $\triangle ABC$ 中，$DE \parallel BC$，交 $AB, AC$ 于 $D, E$，已知 $AD:DB = 2:3$，求 $DE:BC$。
+解：由平行得相似，$\triangle ADE \sim \triangle ABC$，相似比 $k = AD:(AD+DB) = 2:5$，因此 $DE:BC = 2:5$。</p>
+<p><strong>设问类型二：利用比例确定点的位置（选填题常见）</strong>
+例：在四边形 $ABCD$ 中，$E, F$ 分别在 $AD, BC$ 上，$AE:ED = BF:FC = 1:2$，证明线段 $EF$ 与底边有特定位置关系或求长度比。</p>
+<p><strong>设问类型三：面积比例问题</strong>
+多结合三角形重心、相似多边形的面积比性质进行考查，常要求通过线段比推导面积比，或反之。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>对应线段混淆</strong>：在平行线分线段成比例中，学生常将不同截线上的线段盲目列比。必须注意“对应”是指被同一组平行线所截得的线段。</li>
+<li><strong>面积比误用</strong>：由相似比 $k$ 求面积比时，忘记平方运算，直接将面积比等同于 $k$。正确关系是面积比 $= k^2$。</li>
+<li><strong>黄金分割比例记错</strong>：混淆 $\frac{\sqrt{5}-1}{2}$ 与 $\frac{\sqrt{5}+1}{2}$，前者是分割比（约0.618），后者是整段与较长段之比（约1.618）。</li>
+<li><strong>角平分线定理适用条件忽略</strong>：只有<strong>内角平分线</strong>分对边成比例符合边比公式，外角平分线也有定理，但比例形式不同，不能混淆使用。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比例</td>
+<td>proportion</td>
+<td>两个比相等的式子</td>
+</tr>
+<tr>
+<td>黄金分割</td>
+<td>golden section</td>
+<td>线段分割中较大部分与整体之比等于较小部分与较大部分之比</td>
+</tr>
+<tr>
+<td>相似比</td>
+<td>similarity ratio</td>
+<td>两个相似图形对应边的比值</td>
+</tr>
+<tr>
+<td>平行线分线段成比例</td>
+<td>parallel lines divide segments proportionally</td>
+<td>三条及以上平行线截两条直线所得对应线段成比例</td>
+</tr>
+<tr>
+<td>面积比</td>
+<td>area ratio</td>
+<td>两个图形面积之比，相似形面积比为相似比的平方</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">相似三角形</a></li>
+<li><a class="dead" title="未收录">平行线的性质与判定</a></li>
+<li><a class="dead" title="未收录">比例的性质</a></li>
+<li><a class="dead" title="未收录">三角形的面积</a></li>
+<li><a class="dead" title="未收录">角平分线的性质</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2009-理-09.html">2009-理-09</a></li>
+</ul></div>
+</div>
+</body>
+</html>

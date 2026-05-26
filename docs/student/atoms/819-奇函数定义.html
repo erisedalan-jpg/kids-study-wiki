@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇函数定义</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>奇函数定义</h1><div class="review-mark" data-stem="819-奇函数定义"></div><div class="meta-card"><span><strong>权重</strong>6</span><span><strong>吉林命中</strong>2</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 奇函数定义, odd function</p><h1>奇函数定义</h1>
+<blockquote>
+<p><strong>一句话</strong>：设函数 $y=f(x)$ 的定义域 $D$ 关于原点对称，若对任意 $x\in D$ 都有 $f(-x)=-f(x)$，则称 $f(x)$ 为奇函数。
+<strong>English</strong>: A function $f$ is called an odd function if its domain is symmetric about the origin and $f(-x) = -f(x)$ for all $x$ in its domain.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义与原理</strong><br />
+奇函数的严格数学定义为：对于函数 $f(x)$，若其定义域 $D$ 满足 $\forall x\in D\Rightarrow -x\in D$（即定义域关于原点对称），且恒有  </p>
+<p>$$
+f(-x) = -f(x)
+$$</p>
+<p>则 $f(x)$ 是奇函数。该等式是代数的核心，其几何意义为函数图像关于原点成中心对称。一个直接推论是：若 $0\in D$，则 $f(0)=0$（令 $x=0$ 代入定义式可得 $f(0)=-f(0)$，故 $f(0)=0$）。另一常见性质是：奇函数在关于原点对称的区间上单调性相同。</p>
+<p><strong>关键方法</strong><br />
+判断与运用奇函数的标准步骤：
+1. <strong>检查定义域</strong>：先确认定义域是否关于原点对称，若不对称则直接判定为非奇非偶函数。
+2. <strong>验证恒等式</strong>：计算 $f(-x)$，化简后与 $-f(x)$ 比较。对于分段函数，需在每一段对应的对称区间上分别验证。
+3. <strong>性质应用</strong>：在选填题中常利用奇函数的图像对称性、特殊点（如原点处的值为零）快速求参；在解答题中常通过奇偶性将不对称区间的问题转化到对称区间求解，或借助奇函数构造恒等式求解析式。</p>
+<p><strong>典型应用</strong><br />
+高考对该考点的设问主要有三类：<br />
+- <strong>判断与证明</strong>：直接给出具体函数或抽象函数关系，要求判断奇偶性并证明。如“判断 $f(x)=\ln(\sqrt{x^2+1}+x)$ 的奇偶性”，需通过分子有理化计算 $f(-x)$ 得到 $-f(x)$。<br />
+- <strong>求参数值</strong>：已知函数为奇函数，利用定义式或特殊值（如 $f(0)=0$，注意前提是 $0$ 在定义域内）列方程求参数。例如“若 $f(x)=\dfrac{x+a}{x^2+b}$ 是奇函数，求 $a,b$”，需代入 $f(-x)=-f(x)$ 恒成立求解。<br />
+- <strong>函数性质综合</strong>：给出奇函数在 $x&gt;0$ 的解析式或单调性，要求解不等式 $f(m)+f(n)&gt;0$ 等。此时需将不等式转化为 $f(m)&gt;-f(n)=f(-n)$，再利用单调性脱去 $f$ 求解。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽视定义域的对称性</strong>：看到 $f(-x)=-f(x)$ 就判定为奇函数，忘记先验证定义域是否关于原点对称。例如 $f(x)=x^3,\;x\in[-2,3]$ 不满足对称条件，为非奇非偶函数。</li>
+<li><strong>误将 $f(0)=0$ 当作奇函数的必然条件</strong>：仅当 $0$ 在定义域内时才有 $f(0)=0$；若定义域不含 $0$（如 $f(x)=\frac{1}{x}$），奇函数仍然成立。同样，不能仅凭 $f(0)=0$ 就断言函数为奇函数。</li>
+<li><strong>分段函数验证不完整</strong>：只验证了部分区间，忽略负半数区间的对称段。正确的做法是必须对每一段都计算 $f(-x)$ 并与该段的 $-f(x)$ 比较。</li>
+<li><strong>与偶函数性质混淆</strong>：奇函数图像关于原点对称，但在处理单调性时易错误地认为对称区间单调性相反，而实际上奇函数在对称区间单调性相同（偶函数才相反）。例如由 $f(x)$ 在 $(0,+\infty)$ 递增推导 $(-\infty,0)$ 上的单调性时应为递增而非递减。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 $f(-x)=-f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 $f(-x)=f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>自变量 $x$ 所有可取值的集合</td>
+</tr>
+<tr>
+<td>原点对称</td>
+<td>symmetry about the origin</td>
+<td>图形或集合关于点 $(0,0)$ 中心对称</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：函数概念与性质，必修课程主题二（函数）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a class="dead" title="未收录">偶函数定义</a></li>
+<li><a href="../atoms/432-导数与函数单调性.html">函数单调性</a></li>
+<li><a class="dead" title="未收录">函数周期性</a></li>
+<li><a class="dead" title="未收录">抽象函数问题</a></li>
+<li><a href="../atoms/283-函数的图象变换.html">函数图像变换</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2021-理-04.html">2021-理-04</a></li>
+<li><a href="../exam/数学/2022-文-16.html">2022-文-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>

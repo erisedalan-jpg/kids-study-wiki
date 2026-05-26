@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>排列应用-不相邻问题</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>排列应用-不相邻问题</h1><div class="review-mark" data-stem="483-排列应用-不相邻问题"></div><div class="meta-card"><span><strong>权重</strong>8</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 计数原理, 第六章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 排列应用-不相邻问题, non-adjacent permutation, 不相邻问题, 插空法</p><h2>🎓 排列应用-不相邻问题</h2>
+<h3>问题类型</h3>
+<p><strong>不相邻问题</strong>：要求某些特定元素<strong>互不相邻</strong>（任意两个之间至少隔一个其他元素）。</p>
+<h3>核心方法：插空法</h3>
+<p><strong>步骤</strong>：
+1. 先排<strong>不受限制</strong>的元素（其余元素）的全排列
+2. 计算排好后形成的<strong>空隙数</strong>（元素两两之间及两端，共 $n_0 + 1$ 个空隙，$n_0$ 为已排元素数）
+3. 将受限元素<strong>插入</strong>这些空隙（每个空隙至多插一个）</p>
+<p><strong>公式</strong>：若 $n$ 个元素中 $k$ 个必须互不相邻（$k \leq n-k+1$），其余 $(n-k)$ 个先全排：</p>
+<p>$$N = A_{n-k}^{n-k} \times A_{n-k+1}^k = (n-k)! \times A_{n-k+1}^k$$</p>
+<h3>典型例题</h3>
+<p><strong>例1（两人不相邻）</strong>：5 人站成一排，甲乙不相邻，共有多少种排法？</p>
+<p><strong>解（插空法）</strong>：
+- 先排其余 3 人：$3! = 6$ 种
+- 3 人形成 4 个空隙（<em> A _ B _ C </em>）
+- 从 4 个空隙中选 2 个插入甲乙（有序）：$A_4^2 = 4 \times 3 = 12$</p>
+<p>$$N = 3! \times A_4^2 = 6 \times 12 = 72 \text{ 种}$$</p>
+<p><strong>验证（间接法）</strong>：总排列 $5! = 120$，甲乙相邻 $4! \times 2! = 48$，
+$$N = 120 - 48 = 72 \text{ 种}（\checkmark）$$</p>
+<p><strong>例2（三人两两不相邻）</strong>：6 人中，甲乙丙两两不相邻，有多少种排法？</p>
+<p><strong>解</strong>：
+- 先排其余 3 人：$3! = 6$ 种
+- 形成 4 个空隙
+- 从 4 个空隙选 3 个插入甲乙丙（有序）：$A_4^3 = 24$</p>
+<p>$$N = 3! \times A_4^3 = 6 \times 24 = 144 \text{ 种}$$</p>
+<p><strong>例3（男女相间）</strong>：3 男 3 女站一排，男女相间，有多少种排法？</p>
+<p><strong>解</strong>：
+- 先排 3 名男生（或女生），$3! = 6$ 种
+- 形成 4 个空位，从中选 3 个插入女生（有序），有 $A_4^3 = 24$ 种</p>
+<p>但注意"男女相间"两种安排（男生在奇数位或偶数位）：实际上只需两种位置安排，共 $2 \times 3! \times 3! = 2 \times 6 \times 6 = 72$ 种。</p>
+<p>（更直接：男生 3 个位置确定后，女生填剩余 3 位：$3! \times 3! \times 2 = 72$，其中 2 表示男先女后或女先男后两种整体格局，待家长核对）</p>
+<h3>插空法与捆绑法对比</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>适用</th>
+<th>核心思路</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>捆绑法</td>
+<td>相邻问题</td>
+<td>先捆绑，再排整体</td>
+</tr>
+<tr>
+<td>插空法</td>
+<td>不相邻问题</td>
+<td>先排其余，再插入</td>
+</tr>
+</tbody>
+</table>
+<h3>易错点</h3>
+<ol>
+<li><strong>空隙数计算错误</strong>：$n_0$ 个元素排好后有 $n_0 + 1$ 个空隙（包含两端）</li>
+<li><strong>插入有序</strong>：将受限元素插入空隙时，顺序不同算不同（用排列数而非组合数）</li>
+<li><strong>可行性验证</strong>：插入的元素数不能超过空隙数，否则无解</li>
+<li><strong>"不相邻"与"相间"的区别</strong>：相间是更严格的不相邻（交替出现）</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第六章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第六章 § 6.2，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/排列">排列 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/487-排列概念.html">排列概念</a></li>
+<li><a href="../atoms/486-排列数公式.html">排列数公式</a></li>
+<li><a href="../atoms/484-排列应用-相邻问题.html">排列应用-相邻问题</a></li>
+<li><a href="../atoms/485-排列应用-顺序问题.html">排列应用-顺序问题</a></li>
+<li><a class="dead" title="未收录">两个原理综合应用</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2010-理-04.html">2010-理-04</a></li>
+<li><a href="../exam/数学/2014-理-13.html">2014-理-13</a></li>
+</ul></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>液体压强公式</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>液体压强公式</h1><div class="review-mark" data-stem="652-液体压强公式"></div><div class="meta-card"><span><strong>权重</strong>5</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[热学]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 液体压强公式</p><h1>液体压强公式</h1>
+<blockquote>
+<p><strong>一句话</strong>：液体内部压强随深度增加而增大，同一深度向各个方向的压强相等，大小由公式 $p=\rho g h$ 计算，其中 $\rho$ 为液体密度，$g$ 为重力加速度，$h$ 为从液面向下的竖直深度。
+<strong>English</strong>: The pressure in a static liquid at a given depth is given by $p = \rho g h$, where $\rho$ is the liquid density, $g$ is the acceleration due to gravity, and $h$ is the vertical depth below the free surface.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<p><strong>定义/原理</strong><br />
+液体压强源于液体所受重力和流动性。静止液体中，深度为 $h$ 处的压强为 $p = \rho g h$。该公式表明：液体内部压强只与液体密度 $\rho$、重力加速度 $g$ 和深度 $h$ 有关，与容器的形状、液体的总质量无关。推导基于假想液柱的受力平衡，即 $pS = \rho S h g$，约去横截面积 $S$ 即得公式。对于敞口容器，计算某点实际压强时需加上液面大气压 $p_0$，即 $p = p_0 + \rho g h$，此为液体中绝对压强；若只考虑液体自身产生的压强，则用 $\rho g h$ 表示相对压强（计示压强）。</p>
+<p><strong>关键方法</strong><br />
+- <strong>液体内两点压强差</strong>：同种静止液体中，等深点压强相等；不同深度两点压强差 $\Delta p = \rho g \Delta h$。<br />
+- <strong>复杂容器或连通器中液面问题</strong>：取等压面——在同种静止液体中，同一水平面上压强相等；若连通器内装不同液体，则根据分界面处压强相等列方程。<br />
+- <strong>液体压强与固体压力的综合</strong>：计算液体对容器底的压力时，先求压强 $p=\rho g h$，再乘以底面积 $F = pS$，不能直接用液体重力。计算容器对桌面的压强则属于固体压强问题，压力等于总重力。</p>
+<p><strong>典型应用</strong><br />
+高考中该考点常见三种设问：<br />
+1. <strong>直接计算液体内部压强或压力</strong>：给出液体的密度、深度，利用 $p = \rho g h$ 求解，注意深度 $h$ 是竖直距离。<br />
+2. <strong>连通器与液柱平衡问题</strong>：如 U 形管中装有不相混的两种液体，求密度比或液面高度差，需选取等压面列压强平衡方程。<br />
+3. <strong>压强变化与液面升降</strong>：结合浮力、物体排开液体体积等分析容器底部压强变化，如漂浮物增减或注入液体时，需判断液面高度的变化进而用 $p=\rho g h$ 分析压强变化。</p>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>深度 $h$ 取错</strong>：误用倾斜长度或从物体底部算起，正确取法是研究点距自由液面的竖直距离，若液面封闭则要根据已知条件间接求出等效自由液面。</li>
+<li><strong>混淆液体压力与液体重力</strong>：非柱形容器中，液体对容器底的压力不一定等于液体重力，必须先用 $p=\rho g h$ 求压强，再用 $F=pS$ 计算压力。</li>
+<li><strong>忽略大气压</strong>：题目明确要求计算容器底部所受液体压强时，通常只求液体产生的压强 $\rho g h$；但若问“某点的实际压强”或“气压计原理”等，则需要考虑大气压 $p_0$。</li>
+<li><strong>连通器内不同液体分界面选取错误</strong>：未选在两种液体交界面的最低稳定水平面作为等压面，导致方程列错。应选在密度较大液体的最低界面处。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>液体压强</td>
+<td>liquid pressure / hydrostatic pressure</td>
+<td>静止液体内部由重力产生的压强</td>
+</tr>
+<tr>
+<td>深度</td>
+<td>depth</td>
+<td>从自由液面竖直向下的距离，符号 $h$</td>
+</tr>
+<tr>
+<td>密度</td>
+<td>density</td>
+<td>单位体积质量，符号 $\rho$</td>
+</tr>
+<tr>
+<td>连通器</td>
+<td>communicating vessels</td>
+<td>底部连通的容器，原理基于液体压强相等</td>
+</tr>
+<tr>
+<td>等压面</td>
+<td>isobaric surface</td>
+<td>同种静止液体中压强相等的水平面</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：🚧</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/096-液体压强.html">液体压强</a>  </li>
+<li><a class="dead" title="未收录">帕斯卡原理</a>  </li>
+<li><a class="dead" title="未收录">连通器</a>  </li>
+<li><a href="../atoms/073-大气压强.html">大气压强</a>  </li>
+<li><a href="../atoms/092-浮力.html">浮力</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/物理/2020-新课标Ⅱ-14.html">2020-新课标Ⅱ-14</a></li>
+</ul></div>
+</div>
+</body>
+</html>

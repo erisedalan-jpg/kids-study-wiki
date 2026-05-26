@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数应用-几何最值</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>导数应用-几何最值</h1><div class="review-mark" data-stem="436-导数应用-几何最值"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修二, 第七章导数应用]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 导数应用-几何最值, geometric optimization, 几何最值问题, 导数应用</p><h2>🎓 导数应用——几何最值问题</h2>
+<h3>常见几何最值类型</h3>
+<ol>
+<li><strong>周长固定，面积最大</strong>（等周问题简化版）</li>
+<li><strong>面积固定，周长最小</strong></li>
+<li><strong>体积固定，表面积最小</strong>（最省材料）</li>
+<li><strong>内接/外切图形的极值</strong>（如矩形内接于椭圆）</li>
+<li><strong>最短距离</strong>（点到曲线的距离）</li>
+</ol>
+<h3>典型例题</h3>
+<p><strong>例 1</strong>（矩形内接于半圆）半径为 $R$ 的半圆内接矩形，求面积最大时的尺寸。</p>
+<p>设矩形半宽为 $x$（$0&lt;x&lt;R$），则高 $y=\sqrt{R^2-x^2}$，面积：</p>
+<p>$S(x)=2x\sqrt{R^2-x^2}$</p>
+<p>$S'(x)=2\sqrt{R^2-x^2}+2x\cdot\dfrac{-x}{\sqrt{R^2-x^2}}=\dfrac{2(R^2-2x^2)}{\sqrt{R^2-x^2}}$</p>
+<p>令 $S'=0$：$x=\dfrac{R}{\sqrt{2}}$，面积 $S=2\cdot\dfrac{R}{\sqrt{2}}\cdot\dfrac{R}{\sqrt{2}}=R^2$。</p>
+<p>（最大面积为 $R^2$，矩形为宽 $R\sqrt{2}$，高 $\dfrac{R}{\sqrt{2}}=\dfrac{R\sqrt{2}}{2}$ 的矩形）</p>
+<p><strong>例 2</strong>（圆柱内接于球）球半径 $R$，圆柱内接其中，求体积最大的圆柱。</p>
+<p>设圆柱高为 $2h$，底面半径 $r=\sqrt{R^2-h^2}$（$0&lt;h&lt;R$）。</p>
+<p>$V(h)=\pi r^2\cdot 2h=2\pi(R^2-h^2)h=2\pi(R^2 h-h^3)$</p>
+<p>$V'=2\pi(R^2-3h^2)$，令 $V'=0$：$h=\dfrac{R}{\sqrt{3}}$</p>
+<p>$r=\sqrt{R^2-\dfrac{R^2}{3}}=R\sqrt{\dfrac{2}{3}}$，$V=\dfrac{4\pi R^3}{3\sqrt{3}}=\dfrac{4\sqrt{3}\pi R^3}{9}$</p>
+<p><strong>例 3</strong>（点到曲线最短距离）求点 $(3,0)$ 到曲线 $y=\sqrt{x}$ 的最短距离。</p>
+<p>设曲线上点 $(t,\sqrt{t})$，距离平方：$d^2=f(t)=(t-3)^2+t$（$t\geq 0$）</p>
+<p>$f'(t)=2(t-3)+1=2t-5$，令 $f'=0$：$t=\dfrac{5}{2}$</p>
+<p>$f\left(\dfrac{5}{2}\right)=\left(\dfrac{5}{2}-3\right)^2+\dfrac{5}{2}=\dfrac{1}{4}+\dfrac{5}{2}=\dfrac{11}{4}$</p>
+<p>最短距离 $d=\dfrac{\sqrt{11}}{2}$</p>
+<p><strong>例 4</strong>（等面积最小周长）面积为 $S$ 的矩形，周长最小时长宽之比。</p>
+<p>设长 $a$，宽 $b=\dfrac{S}{a}$，周长 $C=2\left(a+\dfrac{S}{a}\right)$</p>
+<p>$C'=2\left(1-\dfrac{S}{a^2}\right)=0$，$a=\sqrt{S}$，$b=\sqrt{S}$，即正方形。</p>
+<p>结论：面积固定时，正方形周长最小。</p>
+<h3>解题技巧</h3>
+<ul>
+<li>距离问题：通常对<strong>距离的平方</strong>取极值（避免根号），结果相同</li>
+<li>含根号的表达式：考虑换元简化（令 $u=\sqrt{x}$ 等）</li>
+<li>参数约束：几何量必须满足实际约束（长度正，面积正，不超过界限）</li>
+</ul>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中数学课程标准（2017年版2020年修订）》</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第二册.pdf</a>（第七章，章节页码待家长核对）</li>
+<li><strong>百科</strong>：https://zh.wikipedia.org/wiki/最优化</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<hr />
+<h2>🔗 相关词条</h2>
+<p><a href="../atoms/438-导数应用-面积最值.html">导数应用-面积最值</a> · <a href="../atoms/437-导数应用-生活实际.html">导数应用-生活实际</a> · <a href="../atoms/419-函数最值-高中.html">函数最值-高中</a> · <a href="../atoms/464-闭区间最值.html">闭区间最值</a> · <a href="../atoms/432-导数与函数单调性.html">导数与函数单调性</a> · <a class="dead" title="未收录">求函数极值方法</a> · <a href="../atoms/443-导数综合应用.html">导数综合应用</a></p>
+</div>
+</body>
+</html>

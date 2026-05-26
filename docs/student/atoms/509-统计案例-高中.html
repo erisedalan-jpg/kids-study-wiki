@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计案例-高中</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>统计案例-高中</h1><div class="review-mark" data-stem="509-统计案例-高中"></div><div class="meta-card"><span><strong>权重</strong>3</span><span><strong>吉林命中</strong>0</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选择性必修三, 成对数据统计分析, 第八章]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 统计案例-高中, statistical case study, 统计案例, 数据分析案例</p><h2>🎓 统计案例-高中</h2>
+<h3>概述</h3>
+<p><strong>统计案例</strong>：将统计方法（回归分析、独立性检验、概率分布等）应用于真实或情境化数据，完整展示数据分析的全过程。</p>
+<p>选修三第八章的案例综合运用：散点图、相关系数、回归方程、列联表、卡方检验等工具。</p>
+<h3>案例一：农业产量分析（回归类）</h3>
+<p><strong>背景</strong>：某地小麦施肥量 $x$（kg/亩）与亩产量 $y$（kg）的关系。</p>
+<p><strong>数据</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>$x$</th>
+<th>10</th>
+<th>20</th>
+<th>30</th>
+<th>40</th>
+<th>50</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$y$</td>
+<td>250</td>
+<td>310</td>
+<td>360</td>
+<td>400</td>
+<td>430</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分析流程</strong>：</p>
+<ol>
+<li><strong>散点图</strong>：大致呈线性增长趋势（但增速趋缓，可能非线性）</li>
+<li><strong>线性回归</strong>：计算得 $\hat{y} \approx 4.5x + 207$，$r \approx 0.99$，线性相关显著</li>
+<li><strong>预测</strong>：$x = 35$ 时，$\hat{y} \approx 4.5 \times 35 + 207 = 364.5$ kg</li>
+<li><strong>解读</strong>：施肥量每增加 1 kg/亩，亩产量约增加 4.5 kg（在合理范围内）</li>
+<li><strong>局限</strong>：施肥过多会导致产量下降（倒 U 形），此模型超出适用范围时预测失效</li>
+</ol>
+<h3>案例二：吸烟与疾病关联（独立性检验类）</h3>
+<p><strong>背景</strong>：某医院调查 1000 名成年人，记录是否吸烟与是否患某病。</p>
+<p><strong>数据</strong>：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>患病</th>
+<th>未患病</th>
+<th>合计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吸烟</td>
+<td>120</td>
+<td>380</td>
+<td>500</td>
+</tr>
+<tr>
+<td>不吸烟</td>
+<td>60</td>
+<td>440</td>
+<td>500</td>
+</tr>
+<tr>
+<td>合计</td>
+<td>180</td>
+<td>820</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>卡方检验</strong>（$\alpha = 0.01$）：</p>
+<p>$a=120, b=380, c=60, d=440, n=1000$</p>
+<p>$$ad - bc = 120 \times 440 - 380 \times 60 = 52800 - 22800 = 30000$$</p>
+<p>$$\chi^2 = \frac{1000 \times 30000^2}{500 \times 500 \times 180 \times 820} = \frac{9 \times 10^{11}}{3.69 \times 10^{10}} \approx 24.4$$</p>
+<p>$\chi^2 \approx 24.4 &gt; 6.635$，在显著性水平 0.01 下，有 99% 把握认为吸烟与该病有显著关联。</p>
+<p><strong>注意</strong>：此结论说明"有关联"，不代表"吸烟导致该病"（相关 ≠ 因果）。</p>
+<h3>案例三：质量控制（正态分布类）</h3>
+<p><strong>背景</strong>：某工厂生产零件，直径 $X \sim N(50, 0.04)$（$\mu = 50$ mm，$\sigma = 0.2$ mm），规格为 $[49.4, 50.6]$。</p>
+<p><strong>问题</strong>：(1) 求合格率；(2) 若日产 10000 件，期望次品数。</p>
+<p><strong>解</strong>：</p>
+<p>$P(\text{合格}) = P(49.4 \leq X \leq 50.6) = P\left(\frac{49.4-50}{0.2} \leq Z \leq \frac{50.6-50}{0.2}\right)$</p>
+<p>$= P(-3 \leq Z \leq 3) \approx 0.9973$</p>
+<p>合格率约 99.73%，期望次品数：$10000 \times (1-0.9973) = 27$ 件。</p>
+<h3>案例分析的通用框架</h3>
+<pre><code>1. 问题描述：数据来源、研究目的
+2. 数据探索：描述统计（均值、方差、散点图）
+3. 方法选择：回归/检验/概率分布
+4. 计算分析：具体计算过程
+5. 结论与解读：用通俗语言解释结论
+6. 局限性分析：模型的限制和注意事项
+</code></pre>
+<h3>易错点</h3>
+<ol>
+<li><strong>混淆因果与关联</strong>：统计分析发现的是关联，因果需要实验设计（对照组等）验证</li>
+<li><strong>外推预测</strong>：使用回归方程预测时，$x$ 不能超出样本范围太远</li>
+<li><strong>忽略局限性</strong>：不谈模型局限，结论过于绝对</li>
+<li><strong>计算粗糙</strong>：中间量保留位数不足，影响最终结果</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：普通高中数学课程标准（2017年版2020年修订），选择性必修第三册第八章</li>
+<li><strong>教材</strong>：<a class="dead" title="未收录">素材/教材/ChinaTextbook/高中/数学/人教版（A版）（主编：章建跃&amp;李增沪）-人民教育出版社/普通高中教科书·数学（A版）选择性必修 第三册.pdf</a>（第八章，待家长核对页码）</li>
+<li><strong>百科</strong>：<a href="https://zh.wikipedia.org/wiki/统计学">统计学 - 维基百科</a>（待家长核对 URL）</li>
+<li><strong>生成校对</strong>：Claude 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a href="../atoms/480-回归分析综合.html">回归分析综合</a></li>
+<li><a href="../atoms/497-独立性检验.html">独立性检验</a></li>
+<li><a href="../atoms/479-卡方公式.html">卡方公式</a></li>
+<li><a href="../atoms/494-正态分布3σ原则.html">正态分布3σ原则</a></li>
+<li><a href="../atoms/507-统计图表选择.html">统计图表选择</a></li>
+</ul>
+</div>
+</body>
+</html>
