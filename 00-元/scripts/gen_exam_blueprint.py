@@ -145,6 +145,21 @@ def load_normalize(path: Path = NORMALIZE_YAML) -> dict[str, str]:
     return {str(k): str(v) for k, v in data.items()}
 
 
+def load_group(path: Path = GROUP_YAML) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    return {str(k): str(v) for k, v in data.items()}
+
+
+def attach_trees(agg: dict, group: dict[str, str]) -> None:
+    """给每题位就地加 '树' 字段（build_tree(考点, group)）。"""
+    for slots in agg.values():
+        for d in slots.values():
+            d["树"] = build_tree(d["考点"], group)
+
+
 def dump_kaodian(rows: list[dict]) -> list[tuple[str, int]]:
     c: collections.Counter = collections.Counter()
     for r in rows:
@@ -245,13 +260,15 @@ def main() -> int:
 
     normalize = load_normalize()
     agg = aggregate(rows, normalize)
+    group = load_group()
+    attach_trees(agg, group)
     for era in ERA_ORDER:
         slots = agg.get(era, {})
         print(f"\n=== {era} ===（{len(slots)} 题位）")
         for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
             d = slots[slot]
-            top = "  ".join(f"{k}×{n}" for k, n in d["考点"][:4])
-            print(f"  {slot[0]}{slot[1]:>2} (n={d['n']}, {d['难度倾向']}): {top}")
+            roots = "  ".join(f"{p}({pf})" for p, pf, _ in d["树"][:4])
+            print(f"  {slot[0]}{slot[1]:>2} (n={d['n']}, {d['难度倾向']}): {roots}")
 
     if not args.apply:
         print("\n(dry-run) 加 --apply 写 HTML。")

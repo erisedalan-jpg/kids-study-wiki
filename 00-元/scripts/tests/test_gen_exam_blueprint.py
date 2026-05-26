@@ -167,5 +167,25 @@ class TestBlueprintTree(unittest.TestCase):
         self.assertEqual(lines[0], "└─ 其他 (5)")
 
 
+class TestBlueprintGroup(unittest.TestCase):
+    def setUp(self):
+        import gen_exam_blueprint as g
+        self.g = g
+
+    def test_load_group_missing_returns_empty(self):
+        from pathlib import Path
+        self.assertEqual(self.g.load_group(Path("/no/such.yaml")), {})
+
+    def test_attach_trees_populates_tree_field(self):
+        agg = {"旧结构(08-22)": {("选择", 1): {
+            "n": 40, "难度倾向": "易",
+            "考点": [("复数运算", 9), ("集合运算", 7)]}}}
+        group = {"复数运算": "复数", "集合运算": "集合"}
+        self.g.attach_trees(agg, group)
+        slot = agg["旧结构(08-22)"][("选择", 1)]
+        self.assertIn("树", slot)
+        self.assertEqual(slot["树"][0][0], "复数")
+
+
 if __name__ == "__main__":
     unittest.main()
