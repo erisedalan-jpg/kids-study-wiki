@@ -119,8 +119,78 @@ def dump_kaodian(rows: list[dict]) -> list[tuple[str, int]]:
     return c.most_common()
 
 
-def render_html(agg: dict) -> str:  # Task 3 完整实现
-    return "<!doctype html><title>占位</title>"
+PRINT_CSS = """
+<style>
+  body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color:#222; margin:0; }
+  .bp-wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.5em; margin: 8px 0; }
+  .era { margin-top: 18px; }
+  .era > h2 { border-bottom: 2px solid #333; padding-bottom: 4px; }
+  .slot { border: 1px solid #ccc; border-radius: 6px; padding: 8px 10px; margin: 8px 0;
+          break-inside: avoid; page-break-inside: avoid; }
+  .slot-h { font-weight: bold; margin-bottom: 4px; }
+  .slot-meta { color:#666; font-weight: normal; font-size: 0.85em; }
+  .kp { display: inline-block; margin: 2px 8px 2px 0; padding: 1px 6px;
+        background: #f0f0f0; border-radius: 4px; font-size: 0.92em; }
+  .kp b { color:#000; }
+  .thin { color:#a00; font-size: 0.85em; }
+  .legend { color:#666; font-size: 0.85em; margin: 6px 0 14px; }
+  @media print {
+    .bp-wrap { max-width: none; padding: 0; }
+    .era { page-break-before: always; }
+    .era:first-of-type { page-break-before: avoid; }
+    .slot { break-inside: avoid; page-break-inside: avoid; }
+    a { color:#000; text-decoration: none; }
+  }
+</style>
+"""
+
+KATEX_HEAD = """
+<link rel="stylesheet" href="./vendor/katex/katex.min.css">
+<script defer src="./vendor/katex/katex.min.js"></script>
+<script defer src="./vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[
+    {left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+    throwOnError:false});"></script>
+"""
+
+
+def render_html(agg: dict) -> str:
+    parts = []
+    for era in ERA_ORDER:
+        slots = agg.get(era, {})
+        if not slots:
+            continue
+        rows_html = []
+        for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
+            d = slots[slot]
+            kp_html = "".join(
+                f'<span class="kp"><b>{html.escape(k)}</b> ×{n}</span>'
+                for k, n in d["考点"]
+            )
+            thin = ('<span class="thin">（样本仅 %d，规律参考）</span>' % d["n"]) \
+                if d["n"] <= 2 else ""
+            rows_html.append(
+                f'<div class="slot"><div class="slot-h">{html.escape(slot[0])}{slot[1]}'
+                f'<span class="slot-meta"> · 样本 n={d["n"]} · 难度{html.escape(d["难度倾向"])}</span>'
+                f'{thin}</div>{kp_html}</div>'
+            )
+        parts.append(
+            f'<div class="era"><h2>{html.escape(era)}</h2>' + "".join(rows_html) + "</div>"
+        )
+    body = "".join(parts)
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数学题位考点速查（吉林）</title>
+<link rel="stylesheet" href="./vendor/style.css">
+{PRINT_CSS}{KATEX_HEAD}</head>
+<body><div class="bp-wrap">
+<h1>数学题位考点速查 · 吉林高考</h1>
+<p class="legend">按卷型三段 × 逐题位，考点按真题频次降序。旧结构按理科卷统计；
+样本 ≤2 标「规律参考」。Ctrl+P 可存 A4 PDF。</p>
+{body}
+</div></body></html>"""
 
 
 def main() -> int:

@@ -87,5 +87,38 @@ class TestBlueprintIO(unittest.TestCase):
         self.assertTrue(all("年份" in r for r in rows))
 
 
+class TestBlueprintHTML(unittest.TestCase):
+    def setUp(self):
+        import gen_exam_blueprint as g
+        self.g = g
+        self.agg = {
+            "旧结构(08-22)": {("选择", 2): {"n": 40, "难度倾向": "易",
+                "考点": [("复数运算", 12), ("共轭复数", 7)]}},
+            "最新(24+)": {("选择", 1): {"n": 1, "难度倾向": "易",
+                "考点": [("复数", 1), ("模长", 1)]}},
+        }
+
+    def test_render_has_three_era_headers_and_slots(self):
+        page = self.g.render_html(self.agg)
+        self.assertIn("旧结构(08-22)", page)
+        self.assertIn("最新(24+)", page)
+        self.assertIn("选择2", page)
+        self.assertIn("复数运算", page)
+        self.assertIn("12", page)
+        self.assertIn("n=40", page)
+
+    def test_render_has_print_css_and_katex(self):
+        page = self.g.render_html(self.agg)
+        self.assertIn("@media print", page)
+        self.assertIn("break-inside", page)
+        self.assertIn("page-break-before", page)
+        self.assertIn("vendor/katex/katex.min.css", page)
+        self.assertIn("vendor/style.css", page)
+
+    def test_render_marks_thin_sample(self):
+        page = self.g.render_html(self.agg)
+        self.assertIn("样本", page)
+
+
 if __name__ == "__main__":
     unittest.main()
