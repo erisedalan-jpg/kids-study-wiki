@@ -14,7 +14,7 @@
 - weight 着色：top15% 金 / 16-40% 红 / 余蓝
 
 CLI：
-  python 00-元/scripts/gen_html.py --apply --threshold 10
+  python 00-元/scripts/gen_html.py --apply [--threshold N]   # 默认 3
 """
 from __future__ import annotations
 
@@ -256,6 +256,7 @@ def render_page(title: str, content_html: str, depth: int,
     prefix = "." if depth == 0 else "/".join([".."] * depth)
     style_href = f"{prefix}/vendor/style.css"
     katex_head = katex_head_html_at_depth(depth)
+    review_js = f'<script src="{prefix}/vendor/review.js" defer></script>'
     nav_links = [
         ("总览", f"{prefix}/index.html"),
         ("数学", f"{prefix}/数学.html"),
@@ -274,6 +275,7 @@ def render_page(title: str, content_html: str, depth: int,
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="{style_href}">
 {katex_head}
+{review_js}
 {extra_head}
 </head>
 <body>
@@ -314,9 +316,8 @@ def gen_atom_page(path: Path, fm: dict[str, str], body: str,
     current_subject = fm_get(fm, "学科")
     body_html = md_to_html(body, resolve, depth=1, relative_repo_prefix="../../../",
                             current_subject=current_subject)
-    content = (
-        f'<h1>{html.escape(title)}</h1>{meta}{body_html}'
-    )
+    mark_hook = f'<div class="review-mark" data-stem="{html.escape(path.stem)}"></div>'
+    content = f'<h1>{html.escape(title)}</h1>{mark_hook}{meta}{body_html}'
     return render_page(title, content, depth=1)
 
 
@@ -350,7 +351,8 @@ def gen_exam_page(path: Path, fm: dict[str, str], body: str,
     current_subject = fm_get(fm, "学科")
     body_html = md_to_html(body, resolve, depth=2, relative_repo_prefix="../../../../",
                             current_subject=current_subject)
-    content = f'<h1>{html.escape(title)}</h1>{meta}{body_html}'
+    mark_hook = f'<div class="review-mark" data-stem="{html.escape(path.stem)}"></div>'
+    content = f'<h1>{html.escape(title)}</h1>{mark_hook}{meta}{body_html}'
     return render_page(title, content, depth=2)
 
 
@@ -364,21 +366,23 @@ def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
         jl = fm_get(fm, "吉林反链", "0")
         href = f"atoms/{html.escape(p.stem)}.html"
         items.append(
-            f'<li class="{cls}" data-title="{html.escape(atom_title.lower())}">'
+            f'<li class="{cls}" data-stem="{html.escape(p.stem)}" data-title="{html.escape(atom_title.lower())}">'
             f'<span class="badge {cls}">{w}</span>'
             f'<span class="title"><a href="{href}">{html.escape(atom_title)}</a></span>'
             f'<span class="meta">吉{jl}</span>'
             '</li>'
         )
     list_html = '<ul class="entry-list">' + "".join(items) + "</ul>"
-    search = (
-        '<input class="search" placeholder="筛词条标题（前端 JS 即时过滤）" '
-        'oninput="filterEntries(this.value)">'
-        '<script>function filterEntries(q){'
-        'q=q.trim().toLowerCase();'
-        'document.querySelectorAll(".entry-list li").forEach(li=>{'
-        'li.style.display=q===""||li.dataset.title.includes(q)?"":"none";});}'
-        '</script>'
+    progress_div = f'<div id="review-progress" data-subject="{html.escape(subject)}"></div>'
+    controls = (
+        '<input id="review-search" class="search" placeholder="筛词条标题">'
+        '<select id="review-filter">'
+        '<option value="all">全部</option>'
+        '<option value="wrong">仅错题</option>'
+        '<option value="fuzzy">仅模糊</option>'
+        '<option value="unmarked">未复习</option>'
+        '<option value="due">今日该复习</option>'
+        '</select>'
     )
     content = (
         f'<h1>{html.escape(title)}</h1>'
@@ -386,7 +390,7 @@ def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
         '<span class="badge gold">金</span> top15%，'
         '<span class="badge red">红</span> 16-40%，'
         '<span class="badge blue">蓝</span> 余。</p>'
-        f'{search}{list_html}'
+        f'{progress_div}{controls}{list_html}'
     )
     return render_page(title, content, depth=0)
 
@@ -398,6 +402,7 @@ def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_
         '<br>配置：<code>00-元/scripts/weight_config.yaml</code>；'
         f'重生成：<code>python 00-元/scripts/gen_html.py --apply --threshold {threshold}</code></p>'
         f'<p><strong>共 {total} 词条</strong></p>'
+        '<div id="review-io"></div>'
         '<ul>'
         f'<li>🔢 <a href="数学.html">数学 ({stats_by_sub["数学"]})</a></li>'
         f'<li>⚛️ <a href="物理.html">物理 ({stats_by_sub["物理"]})</a></li>'
