@@ -139,6 +139,7 @@
     var f = document.getElementById("review-filter");
     if (s) s.addEventListener("input", applyFilter);
     if (f) f.addEventListener("change", applyFilter);
+    applyFilter();
   }
 
   var Review = {
