@@ -15,6 +15,12 @@ class TestBlueprintCore(unittest.TestCase):
         self.assertEqual(self.g.parse_kaodian("集合"), ["集合"])
         self.assertEqual(self.g.parse_kaodian(""), [])
 
+    def test_parse_kaodian_chinese_punctuation(self):
+        # 中文逗号/顿号也应拆分（防 LLM/手录脏数据污染频次）
+        self.assertEqual(self.g.parse_kaodian("[函数，导数]"), ["函数", "导数"])
+        self.assertEqual(self.g.parse_kaodian("[向量、数量积]"), ["向量", "数量积"])
+        self.assertEqual(self.g.parse_kaodian("[复数, 模长，共轭]"), ["复数", "模长", "共轭"])
+
     def test_era_of(self):
         self.assertEqual(self.g.era_of(2008), "旧结构(08-22)")
         self.assertEqual(self.g.era_of(2022), "旧结构(08-22)")

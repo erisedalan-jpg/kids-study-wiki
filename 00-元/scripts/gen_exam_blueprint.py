@@ -35,7 +35,8 @@ DIFF_RANK = {"易": 0, "中": 1, "难": 2}
 def parse_kaodian(v: str) -> list[str]:
     v = (v or "").strip()
     if v.startswith("[") and v.endswith("]"):
-        return [x.strip() for x in v[1:-1].split(",") if x.strip()]
+        inner = v[1:-1].replace("，", ",").replace("、", ",")
+        return [x.strip() for x in inner.split(",") if x.strip()]
     return [v] if v else []
 
 
