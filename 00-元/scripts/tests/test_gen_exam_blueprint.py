@@ -117,7 +117,10 @@ class TestBlueprintHTML(unittest.TestCase):
 
     def test_render_marks_thin_sample(self):
         page = self.g.render_html(self.agg)
-        self.assertIn("样本", page)
+        # n=1 slot ("最新(24+)" 选择1) must carry the thin note
+        self.assertIn("（样本仅 1，规律参考）", page)
+        # n=40 slot ("旧结构(08-22)" 选择2) must NOT carry the thin note
+        self.assertNotIn("（样本仅 40，规律参考）", page)
 
 
 if __name__ == "__main__":
