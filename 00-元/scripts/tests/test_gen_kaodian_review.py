@@ -59,5 +59,19 @@ class TestResolveConcept(unittest.TestCase):
         self.assertEqual(weight, 0)
 
 
+class TestParseKaodian(unittest.TestCase):
+    def test_parses_string_list(self):
+        import gen_kaodian_review as g
+        self.assertEqual(g._parse_kaodian("[复数, 模长, 代数运算]"), ["复数", "模长", "代数运算"])
+    def test_passthrough_real_list(self):
+        import gen_kaodian_review as g
+        self.assertEqual(g._parse_kaodian(["复数", "模长"]), ["复数", "模长"])
+    def test_chinese_comma_and_empty(self):
+        import gen_kaodian_review as g
+        self.assertEqual(g._parse_kaodian("复数，模长"), ["复数", "模长"])
+        self.assertEqual(g._parse_kaodian(""), [])
+        self.assertEqual(g._parse_kaodian(None), [])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -66,6 +66,16 @@ def _safe_name(s: str) -> str:
     return re.sub(r'[\\/:*?"<>|]', "_", s)
 
 
+def _parse_kaodian(v) -> list[str]:
+    """考点 字段 → list[str]；兼容 read_frontmatter 返回的字符串 "[a, b]" 或已是 list。"""
+    if isinstance(v, list):
+        return [str(x).strip() for x in v if str(x).strip()]
+    s = (v or "").strip()
+    if s.startswith("[") and s.endswith("]"):
+        s = s[1:-1]
+    return [x.strip() for x in re.split(r"[,，、]", s) if x.strip()]
+
+
 def render_md(subject: str, kaodian: str, info: dict, *, llm_body: str,
               weight: int, concept_link: str) -> str:
     y0, y1 = info["年份跨度"]
@@ -102,6 +112,7 @@ def main() -> int:
     for p in sorted(exam_dir.glob("*.md")):
         fm = read_frontmatter(p)
         fm["_bare"] = p.stem
+        fm["考点"] = _parse_kaodian(fm.get("考点"))
         body = p.read_text(encoding="utf-8")
         for tag in ("题干文本", "解析文本"):
             m = re.search(rf"## {tag}\n(.*?)(?:\n<!--|\n## |\Z)", body, re.S)
