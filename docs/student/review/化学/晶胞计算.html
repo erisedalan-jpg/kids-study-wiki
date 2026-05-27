@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>晶胞计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>晶胞计算</h1><div class="review-mark" data-stem="晶胞计算"></div><div class="meta-card"><span><strong>考点</strong>晶胞计算</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>晶体结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：晶体结构</li>
+<li>权重 weight：15</li>
+<li>真题数：3；年份跨度：2015–2022</li>
+<li>出现题位：填空12 选择11</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>晶胞与晶体结构</strong>：描述晶体中微粒（原子、离子、分子）周期性排列的最小重复单元。常见堆积方式包括简单立方、体心立方、面心立方、六方最密等。</li>
+<li><strong>空间占有率</strong>：晶胞中原子（或离子）体积占总体积的百分比。对于金属或等径球体，需结合半径 $r$ 与边长 $a$ 的关系求解。体心立方：$\sqrt{3}a=4r$；面心立方：$\sqrt{2}a=4r$。</li>
+<li><strong>密度计算核心公式</strong>：
+  $$ \rho = \frac{Z \times M}{N_A \times a^3} $$</li>
+<li>$\rho$：晶体密度（单位 $\text{g} \cdot \text{cm}^{-3}$）</li>
+<li>$Z$：晶胞内“粒子”的个数（化学式单位数，注意化学式的原子/离子配比）</li>
+<li>$M$：该粒子（化学式）的摩尔质量（$\text{g} \cdot \text{mol}^{-1}$）</li>
+<li>$N_A$：阿伏加德罗常数（$6.02 \times 10^{23} \text{mol}^{-1}$）</li>
+<li>$a$：晶胞边长（注意单位为 $\text{cm}$，常需从 $\text{nm}$ 或 $\text{pm}$ 换算：$1\text{nm}=10^{-7}\text{cm}$，$1\text{pm}=10^{-10}\text{cm}$）</li>
+<li><strong>配位数与填隙模型</strong>：离子晶体中，阳离子填充在阴离子构成的四面体或八面体空隙中。Na₂O 型反萤石结构中，$O^{2-}$ 作面心立方堆积，$Na^+$ 填入全部 8 个四面体空隙，$O^{2-}$ 的配位数为 8。</li>
+<li><strong>均摊法</strong>：计算 $Z$ 时，顶点粒子占 $1/8$，棱上占 $1/4$，面上占 $1/2$，体内占 $1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定化学式及 $Z$ 值</strong>：利用“均摊法”计算晶胞中各类原子的个数，写出最简化学式（即晶胞代表的化学式单元）。确定该化学式对应的粒子数 $Z$。</li>
+<li><strong>挖掘边长 $a$ 与半径 $r$ 的关系</strong>：若已知原子半径且为等径球紧密堆积，根据堆积类型列出几何关系式（如体心立方的面对角线或体对角线方程）。若直接给出边长，则跳过此步；若涉及空间占有率，将 $r$ 用 $a$ 表示代入体积公式。</li>
+<li><strong>统一单位，代公式求解</strong>：</li>
+<li>将晶体边长 $a$ 换算成 $\text{cm}$。</li>
+<li>将化学式的摩尔质量 $M$ 代入。</li>
+<li>利用 $\rho = \frac{ZM}{N_A a^3}$ 解决相关问题。注意，如果是空间占有率，分子换为 $Z$ 个原子球总体积 $\frac{4}{3}\pi r^3$。</li>
+<li><strong>参数逆推</strong>：有时题目要求反推半径、边长或阿伏加德罗常数，公式变形后代入已知的数据密度求解即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位换算错误</strong>：密度公式要求 $a$ 单位为 $\text{cm}$，而题干常给 $\text{nm}$ 或 $\text{pm}$。常犯错误：$1\text{nm}=10^{-7}\text{cm}$，$1\text{pm}=10^{-10}\text{cm}$（例如 $0.566\text{nm}=5.66\times10^{-8}\text{cm}$）。</li>
+<li><strong>均摊法计错粒子数</strong>：忽略该晶胞是否为平行六面体；计算 $Z$ 时未将晶胞内粒子按最简化学式分组。如 Na₂O 晶胞虽然计算得出 8 个 Na 和 4 个 O，但化学式是 Na₂O，故 $Z$ 取 4 而不是直接代入 8 或 12。</li>
+<li><strong>混淆配位数定义</strong>：问“A 原子的配位数”是指距离 A 原子最近且等距的 B 原子（或 A 原子）的数目，而非晶胞含有的个数。</li>
+<li><strong>忽视堆积空隙与填隙率</strong>：在 $\alpha$-AgI 等离子导体中，离子并非恰好相切，不能用简单的体对角线公式，必须关注题目描述的“体心立方堆积的碘离子”对应的 $a$ 与 $I^-$ 半径的关系。</li>
+<li><strong>摩尔质量代入有误</strong>：$M$ 必须是晶胞内化学式对应的摩尔质量（g/mol），而非原子量之和除以其他系数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2015-新课标Ⅱ-12</h3>
+<p>A（O）、B（Na）组成化合物 F，晶胞中小球为 $O^{2-}$，大球为 $Na^+$，晶胞边长 $a=0.566\text{nm}$，求化学式、O 的配位数及密度（保留两位小数）。
+<strong>思路</strong>：先均摊法求化学式确定 $Z$，再根据反萤石结构知配位数，最后代入密度的计算式。
+<strong>步骤</strong>：
+1. <strong>$Z$ 与化学式</strong>：O 原子在顶点及面心（$8\times\frac{1}{8} + 6\times\frac{1}{2} = 4$），Na 原子全在晶胞体内（8个）。化学式 $Na_2O$。将晶胞看作 4 个 $Na_2O$，$Z=4$。
+2. <strong>配位数</strong>：$O^{2-}$ 在面心立方格点，$Na^+$ 占据全部的 8 个四面体空隙，每个 $O^{2-}$ 周围有 8 个 $Na^+$，因此配位数为 8。
+3. <strong>计算密度</strong>：$a=0.566\text{nm}=5.66\times10^{-8}\text{cm}$。$M(Na_2O)=62\text{g/mol}$。
+   $$ \rho = \frac{4 \times 62}{6.02\times 10^{23} \times (5.66\times 10^{-8})^3} \approx 2.27 \text{g} \cdot \text{cm}^{-3} $$
+<strong>点评/变式</strong>：此题是典型的“已知边长求密度”题。关键在于对非 1:1 型化合物的 $Z$ 赋值，必须以最简化学式为单位。若将 $Z$ 取为 12，结果必然出错。</p>
+<h3><strong>题目</strong>：2021-全国乙-11</h3>
+<p>图示 $AlCr_2$ 体心四方结构，顶角为 Al，体心为 Cr。知 $Cr$ 半径 $r_{Cr}$ 和 $Al$ 半径 $r_{Al}$，求金属原子空间占有率 $\%$ 的表达式。
+<strong>思路</strong>：空间占有率 = （晶胞内原子总体积 / 晶胞体积） × 100%。需要找到原子总体积与晶胞参数的关系。
+<strong>步骤</strong>：
+1. <strong>均摊</strong>：顶角 Al：$8 \times \frac{1}{8} = 1$ 个；体心 Cr：1 个。晶胞含 1 个 Al、1 个 Cr，即化学式 $AlCr$。
+2. <strong>体积关系</strong>：体心四方结构，体对角线的原子相切。设晶胞底边长为 $a$，高为 $c$。相切关系为体心四方 <strong>并非</strong> 立方体，但若如图（通常考题图示为原子沿体对角线接触），体对角线长为 $2(r_{Al} + r_{Cr})$。则有：$\sqrt{2a^2 + c^2} = 2(r_{Al} + r_{Cr})$。因顶角原子半径与体心原子半径不同，需用此条件；常规解题往往假设顶角原子与体心原子在体对角线方向相切。
+3. <strong>空间占有率</strong>：
+   $$ \text{空间占有率} = \frac{\frac{4}{3}\pi r_{Al}^3 + \frac{4}{3}\pi r_{Cr}^3}{a^2 c} \times 100\% $$
+   根据相切方程表达出 $a$、$c$ 与 $r$ 的关系，由于 $a$ 与 $c$ 可能独立（四方晶系），通常需要题目额外给定 $a$、$c$ 关系或数值。在此类表达式中，保留 $a^2c$ 或利用对角线方程替换均可（若 $a=c$，退化为体心立方）。最终答案应呈现为：
+   $$ \frac{\frac{4}{3}\pi (r_{Al}^3 + r_{Cr}^3)}{a^2 c} \times 100\% $$
+   或带入相切条件化简。
+<strong>点评/变式</strong>：此题陷阱在于背离了“立方体”的等径圆球模型，增加了不等径原子与四方晶胞参数。不要盲目套用 $\sqrt{3}a=4r$，必须看清“体心四方”结构和图示中的相切位置。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2022-全国乙-11.html">2022-全国乙-11</a>（2022 · 中） 考查氟原子激发态能量、C-Cl键长比较、晶体类型与熔点判断及晶胞摩尔体积计算。</li>
+<li><a href="../../exam/化学/2021-全国乙-11.html">2021-全国乙-11</a>（2021 · 中） 考查基态Cr原子电子排布、配位化合物结构、分子性质比较及晶体空间占有率计算。</li>
+<li><a href="../../exam/化学/2015-新课标Ⅱ-12.html">2015-新课标Ⅱ-12</a>（2015 · 中） 本题考查元素推断、物质结构与性质的综合应用，涉及电负性、电子排布、晶体类型、分子构型、杂化方式及晶胞密度计算等。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/702-晶胞计算.html">晶胞计算</a></li>
+</ul>
+</div>
+</body>
+</html>

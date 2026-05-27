@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>差量法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>差量法</h1><div class="review-mark" data-stem="差量法"></div><div class="meta-card"><span><strong>考点</strong>差量法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：差量法是根据化学反应前后物质的状态、质量、气体体积或物质的量等物理量产生的“差值”（$\Delta m$、$\Delta V$、$\Delta n$），利用化学方程式中各物质与“理论差量”的正比例关系，列比例式求解的一种定量计算技巧。</li>
+<li><strong>基本原理</strong>：任一化学反应中，反应物与生成物的变化量严格遵循方程式的化学计量数之比，因此反应前后体系某种可测量物理量的实际差值与方程式对应的理论差值成正比：
+  $$\frac{\text{实际差量}}{\text{理论差量}} = \frac{\text{某物质的实际变化量}}{\text{该物质在方程式中的对应量}}$$</li>
+<li><strong>适用条件</strong>：反应必须存在可准确测量或判断的“差量”，且该差量仅由目标反应引起（无副反应干扰）；固体差量常用于反应前后固体质量的增减判断，气体差量常用于有气体参与或生成且体积可测的密闭体系。</li>
+<li><strong>常见类型</strong>：</li>
+<li><strong>固体质量差量</strong>：如 $2\text{Na}_2\text{O}_2 + 2\text{CO}_2 \rightarrow 2\text{Na}_2\text{CO}_3 + \text{O}_2$，固体质量增加；$\text{CuO} + \text{H}_2 \rightarrow \text{Cu} + \text{H}_2\text{O}$，固体质量减少。</li>
+<li><strong>气体体积差量</strong>：如 $2\text{CO} + \text{O}_2 \rightarrow 2\text{CO}_2$，反应前后气体体积减小（等温等压）。</li>
+<li><strong>溶液质量差量</strong>：金属与盐溶液置换反应，溶液质量随金属溶解与析出而改变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定型定态</strong>：写出正确的化学方程式，明确反应物和生成物在题设条件下的聚集状态（固、液、气、溶液）。凡脱离反应体系的部分（如生成气体逸出、沉淀析出、固体转化为溶液离子）均会导致体系质量变化。</li>
+<li><strong>锁定差量对象</strong>：审清题意要求判断或计算哪一对象的差量（固体质量、气体体积、溶液质量等），将关注对象在反应前后的质量或体积作对比，确定实际差量 $\Delta x_{\text{实}}$。</li>
+<li><strong>建立理论差量</strong>：根据方程式，计算与关注对象相关的反应物和生成物的式量总和之差，得出“理论差量” $\Delta x_{\text{理}}$。计算方法：用产物的总相关量减去反应物的总相关量。</li>
+<li>固体差量：只计固体物质。</li>
+<li>气体体积差量：同温同压下气体计量数代数和之差。</li>
+<li>溶液质量差量：进入溶液的溶质质量减去析出沉淀或气体的质量。</li>
+<li><strong>列比例求解</strong>：将实际差量与理论差量、所求物质的变化量按化学计量数列出正比例式：
+   $$\frac{\Delta x_{\text{实}}}{\Delta x_{\text{理}}} = \frac{\text{所求物质的实际变化量}}{\text{该物质在方程式中的式量} \times \mathrm{系数}}$$
+   解比例即可得到未知量。若仅为质量增重判断，则直接比较反应前固体总质量与反应后固体总质量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错判固体范围</strong>：忽视反应体系中固体物料的组成。如铝热反应 $2\text{Al} + \text{Fe}_2\text{O}_3 \rightarrow \text{Al}_2\text{O}_3 + 2\text{Fe}$，反应前 $\text{Al}$ 和 $\text{Fe}_2\text{O}_3$ 均为固体，反应后 $\text{Al}_2\text{O}_3$ 与 $\text{Fe}$ 亦为固体，体系总质量守恒，固体质量不变；若只盯单一反应物，会误判为增重。</li>
+<li><strong>遗漏逸出气体或水蒸气</strong>：$\text{H}_2$ 还原 $\text{CuO}$ 生成 $\text{Cu}$ 和 $\mathrm{H_2O(g)}$，水蒸气脱离使固体质量减少；$\text{Na}_2\text{O}_2$ 吸收 $\text{CO}_2$ 放出 $\text{O}_2$，看似气体“进去又出来”，但固体增加的质量恰为 $\text{CO}$ 部分组分的质量，写成式量计算一目了然：$1\ \mathrm{mol\ Na_2O_2}\ (78\ \mathrm{g})$ 变为 $1\ \mathrm{mol\ Na_2CO_3}\ (106\ \mathrm{g})$，增重 $28\ \mathrm{g}$ 对应 $1\ \mathrm{mol\ CO}$ 的式量。</li>
+<li><strong>差量单位不统一</strong>：质量差量用克，气体体积差量必须注明同温同压，用 $\mathrm{L}$ 或 $\mathrm{mL}$。列比例时理论差量与实际差量单位必须一致。</li>
+<li><strong>过量问题未判断</strong>：差量法计算隐含反应物完全按方程式比例进行。若有物质过量，实际差量会小于理论最大差量，必须先进行过量判断，以不足量物质为基准计算。</li>
+<li><strong>将差量法滥用于全无关联的物理量变化</strong>：只有与化学方程式计量数严格成正比的量方可使用。颜色变化、溶解性变化等非定量变化不可直接套用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2014·新课标Ⅱ·3）判断下列反应中反应后固体物质增重的是哪一个选项：A. 氢气通过灼热 $\mathrm{CuO}$ 粉末；B. 二氧化碳通过 $\mathrm{Na_2O_2}$ 粉末；C. 铝与 $\mathrm{Fe_2O_3}$ 发生铝热反应；D. 将锌粒投入 $\mathrm{Cu(NO_3)_2}$ 溶液。</p>
+<p><strong>思路</strong>：固体增重即反应后剩余固体物质的总质量大于反应前固体物质的总质量。需写出各反应化学方程式，逐一比较反应前固体反应物与反应后固体产物的总式量。注意气体逸出或固体溶解进入溶液会带走质量。</p>
+<p><strong>步骤</strong>：
+- <strong>A选项</strong>：$\mathrm{CuO + H_2 \xrightarrow{\Delta} Cu + H_2O}$。反应前固体为 $\mathrm{CuO}$，式量 $80$；反应后固体为 $\mathrm{Cu}$，式量 $64$；$\mathrm{H_2O}$ 以气态逸出。固体由 $80 \rightarrow 64$，减重。不符合。
+- <strong>B选项</strong>：$2\mathrm{Na_2O_2} + 2\mathrm{CO_2} \longrightarrow 2\mathrm{Na_2CO_3} + \mathrm{O_2}$。反应前固体为 $2\mathrm{Na_2O_2}$，总式量 $2 \times 78 = 156$；反应后固体为 $2\mathrm{Na_2CO_3}$，总式量 $2 \times 106 = 212$。$\mathrm{O_2}$ 逸出。固体由 $156 \rightarrow 212$，增重。符合。
+- <strong>C选项</strong>：$2\mathrm{Al} + \mathrm{Fe_2O_3} \xrightarrow{\text{高温}} \mathrm{Al_2O_3} + 2\mathrm{Fe}$。反应前固体：$2\mathrm{Al} + \mathrm{Fe_2O_3}$，总式量 $2 \times 27 + 160 = 214$；反应后固体：$\mathrm{Al_2O_3} + 2\mathrm{Fe}$，总式量 $102 + 2 \times 56 = 214$。无气体参与或脱离体系，固体总质量不变。不符合。
+- <strong>D选项</strong>：$\mathrm{Zn} + \mathrm{Cu(NO_3)_2} \longrightarrow \mathrm{Zn(NO_3)_2} + \mathrm{Cu}$。反应前固体为投入的 $\mathrm{Zn}$ 粒；反应后，$\mathrm{Zn}$ 溶解进入溶液，固体仅为析出的 $\mathrm{Cu}$。$1\ \mathrm{mol\ Zn}$（$65\ \mathrm{g}$）溶解置换出 $1\ \mathrm{mol\ Cu}$（$64\ \mathrm{g}$），固体质量由 $65 \rightarrow 64$，减重。不符合。
+- 因此，固体物质增重的是B。</p>
+<p><strong>点评/变式</strong>：本题直接用化学方程式的质量加减即可判断，是“差量法”思想在最基础层面的体现。解题关键是将反应前后“固体”作为一个整体考查其总质量，切忌片面只看某一种物质。变式角度：可将选项换成“反应后气体质量增重”“反应后溶液质量增重”等，需重新定义差量主体。例如 $\mathrm{CO_2}$ 通过 $\mathrm{Na_2O_2}$，气体质量减小；$\mathrm{Zn}$ 投入 $\mathrm{CuSO_4}$ 溶液，溶液质量增加（$65$ 进 $64$ 出，溶液净增 $1\ \mathrm{g}$）。考试中若将这种判断与差量法计算结合，只需承接线<strong>思路</strong>，将式量值替换为具体质量数据列比例即可求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-03.html">2014-新课标Ⅱ-03</a>（2014 · 易） 本题通过分析固体物质在化学反应前后的质量变化判断增重情况。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/681-差量法.html">差量法</a></li>
+</ul>
+</div>
+</body>
+</html>

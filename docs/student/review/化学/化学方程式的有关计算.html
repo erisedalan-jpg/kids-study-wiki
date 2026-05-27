@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学方程式的有关计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>化学方程式的有关计算</h1><div class="review-mark" data-stem="化学方程式的有关计算"></div><div class="meta-card"><span><strong>考点</strong>化学方程式的有关计算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>守恒法是化学计算的核心</strong>：主要包括质量守恒、原子守恒和电荷守恒。在定量计算中，它们是将已知量和未知量关联起来的桥梁。</li>
+<li><strong>离子交换法的本质</strong>：利用离子交换树脂中的特定离子（如 $OH^-$）与待测液中的目标离子（如 $Cl^-$）进行等电荷的交换。核心关系为：释放出的离子电荷量 = 被交换的离子电荷量。</li>
+<li><strong>固定组成与化合价规则</strong>：在化合物 $FeCl_x$ 中，$n(Cl^-)=x \cdot n(Fe^{x+})$，且化合物整体化合价代数和为零。这是计算化学式中下标 $x$ 和推断变价金属化合价的基础。</li>
+<li><strong>混合物成分计算</strong>：采用“十字交叉法”或“设一法”。设总物质的量（或总质量）为1，利用平均组成（如 $n(Fe):n(Cl)=1:2.1$）建立方程组求解。</li>
+<li><strong>氧化还原反应中的守恒</strong>：</li>
+<li><strong>电子守恒</strong>：氧化剂得电子总数 = 还原剂失电子总数。用于配平方程式、电化学计算。</li>
+<li><strong>电荷守恒</strong>：离子反应方程式中，反应物总电荷 = 生成物总电荷。用于书写离子方程式和电极反应式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>利用守恒关系建立等量联系</strong></li>
+<li><strong>步骤一</strong>：厘清过程。明确化学反应或物理交换（如离子交换）中，哪种“量”是守恒的。</li>
+<li><strong>步骤二</strong>：建立等式。利用原子守恒（如 $n(Cl)$ 在反应前后不变）、电荷守恒或电子守恒，直接建立待求物与已知物的物质的量关系。</li>
+<li>
+<p><strong>步骤三</strong>：代入计算。规避复杂的分步方程式书写，直接用 $n = c \times V$、$n = \frac{m}{M}$ 等基本公式求解。</p>
+</li>
+<li>
+<p><strong>确定化合物化学式的计算</strong></p>
+</li>
+<li><strong>步骤一</strong>：计算已知离子的物质的量。如通过滴定，由 $n(H^+)=n(OH^-)=n(Cl^-)$ 算出 $n(Cl^-)$。</li>
+<li><strong>步骤二</strong>：计算中心原子的物质的量。利用总质量减去所有已知离子的质量，得到中心原子质量，再算出其物质的量：$n(Fe)=\frac{m(总) - m(Cl)}{M(Fe)}$。</li>
+<li>
+<p><strong>步骤三</strong>：求最简整数比。计算 $x = \frac{n(Cl)}{n(Fe)}$，即得化学式中的下标 $x$。</p>
+</li>
+<li>
+<p><strong>混合物组成的计算</strong></p>
+</li>
+<li><strong>步骤一</strong>：确定平均组成。根据题意，找到混合体系的平均化学式或平均比值（如 $n(Fe):n(Cl)=1:2.1$）。</li>
+<li>
+<p><strong>步骤二</strong>：应用“十字交叉法”或“二元一次方程组”。对于 $FeCl_2$ 和 $FeCl_3$ 的混合物，可设 $FeCl_2$ 的物质的量分数为 $a$，则 $Cl$ 的平均下标 $=2a + 3(1-a) = 2.1$，解出 $a$，进而得到各组分的物质的量分数。</p>
+</li>
+<li>
+<p><strong>氧化还原反应方程式的书写与配平</strong></p>
+</li>
+<li><strong>步骤一</strong>：判产物。根据化合价升降，判断核心的氧化产物和还原产物。</li>
+<li><strong>步骤二</strong>：平电子。用最小公倍数法使得失电子数相等。</li>
+<li><strong>步骤三</strong>：补电荷、配介质。在碱性条件下，用 $OH^-$ 配平电荷，另一边生成水；在酸性条件下，用 $H^+$ 配平电荷，另一边生成水。务必最后用原子守恒检查。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>离子交换柱计算中混淆概念</strong>：误认为消耗盐酸的量直接等于待测离子的量。必须牢记“等量替代”关系：在这个流程中，$n(H^+)<em _text_流出="\text{流出">{\text{滴定}} = n(OH^-)</em>$。若交换不完全或后续处理有损失，此等式不成立。}} = n(Cl^-)_{\text{原样}</li>
+<li><strong>质量与物质的量相互换算时忽略核心元素</strong>：在计算 $FeCl_x$ 的 $x$ 时，算完 $n(Cl)$ 后，直接用 $0.54g$ 除以 $FeCl_3$ 的摩尔质量，这是主观臆断。必须用差量法先算铁的质量 $m(Fe) = m(总) - n(Cl) \times 35.5g/mol$，再算 $n(Fe)$。</li>
+<li><strong>混合物计算中将质量分数与物质的量分数混淆</strong>：审题不清，题目要求“物质的量分数”，输出却按“质量分数”计算。对于 $FeCl_2$ 和 $FeCl_3$，两者的摩尔质量不同，物质的量分数 $10\%$ 不等于质量分数 $10\%$。</li>
+<li><strong>氧化还原反应方程式配平中遗漏介质条件</strong>：</li>
+<li>碱性条件生成 $H_2O$，酸性条件消耗 $H_2O$，记反则导致电荷和原子均不平。</li>
+<li>书写电极反应式时，只关注核心物质的电子得失，忘记添加环境中的 $H^+$、$OH^-$ 或 $H_2O$ 来配平电荷和原子。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2012-新课标-26（节选）</h3>
+<ul>
+<li><strong>题目</strong>：称取 $0.54g$ $FeCl_x$ 样品，通过阴离子交换柱使 $Cl^-$ 全部转化为 $OH^-$，用 $0.40mol \cdot L^{-1}$ 盐酸滴定流出液，消耗 $25.0mL$。求 $x$ 值。</li>
+<li><strong>思路</strong>：运用电荷守恒，将未知的 $n(Cl)$ 与可测的 $n(H^+)$ 建立联系。首先通过滴定算出与 $OH^-$ 反应的 $n(H^+)$，再根据离子交换的等电荷原则得到 $n(Cl)$，最后利用总质量通过差量法求得 $n(Fe)$，计算两者比值。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>算氯的物质的量</strong>：$n(Cl^-)=n(OH^-)<em _text_滴定="\text{滴定">{\text{交换}}=n(H^+)</em> = 0.40mol/L \times 0.0250L = 0.010mol$。}</li>
+<li><strong>算铁的质量与物质的量</strong>：$m(Cl) = 0.010mol \times 35.5g/mol = 0.355g$；$m(Fe)=0.54g-0.355g=0.185g$；$n(Fe)=\frac{0.185g}{56g/mol} \approx 0.0033mol$。</li>
+<li><strong>求x值</strong>：$x=\frac{n(Cl)}{n(Fe)} = \frac{0.010}{0.0033} \approx 3$。样品为 $FeCl_3$。</li>
+<li><strong>点评/变式</strong>：此题核心在于理解“等量替代”逻辑。<em>变式</em>：若交换反应为 $R-SO_3H + M^+ \rightleftharpoons R-SO_3M + H^+$，则改为阳离子交换树脂，滴定流出液的酸即可直接测金属离子电荷总量。</li>
+</ul>
+<h3>2012-新课标-26（节选）</h3>
+<ul>
+<li><strong>题目</strong>：$FeCl_2$ 和 $FeCl_3$ 混合物，测得 $n(Fe):n(Cl)=1:2.1$，求 $FeCl_3$ 的物质的量分数。</li>
+<li><strong>思路</strong>：将混合物视为一个整体，其“平均化学式”为 $FeCl_{2.1}$。应用变形后的“十字交叉法”或设未知数列方程，将平均比值与两种纯组分的特征比值（$n(Fe):n(Cl)$ 分别为 $1:2$ 和 $1:3$）关联。</li>
+<li><strong>步骤</strong>：（设混合物中 $n(Fe)$ 总量为 $1mol$）</li>
+<li><strong>设未知数</strong>：设 $n(FeCl_3)$ 为 $a$ $mol$，则 $n(FeCl_2)$ 为 $(1-a)$ $mol$。</li>
+<li><strong>列氯原子守恒方程</strong>：总 $n(Cl) = 3a + 2(1-a) = 2 + a$。</li>
+<li><strong>代入求解</strong>：由已知比例得 $\frac{n(Cl)}{n(Fe)} = \frac{2+a}{1} = 2.1$，解得 $a=0.1 mol$。</li>
+<li><strong>计算分数</strong>：$FeCl_3$ 的物质的量分数 $= \frac{0.1}{1} \times 100\% = 10\%$。</li>
+<li><strong>点评/变式</strong>：牢记对混合体系可设总量为 $1mol$ 的方法。<em>变式</em>：若测得 $m(Fe):m(Cl)=1:2.1$，则需先换算成物质的量之比，再进行十字交叉或列方程。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2012-新课标-08.html">2012-新课标-08</a>（2012 · 中） 考查铁及其化合物的计算、制备、离子反应与电化学综合应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">化学方程式的有关计算</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物质的量浓度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>物质的量浓度</h1><div class="review-mark" data-stem="物质的量浓度"></div><div class="meta-card"><span><strong>考点</strong>物质的量浓度</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2008–2010</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：溶质B的物质的量除以溶液的体积，符号 $c_B$，单位 $\mathrm{mol \cdot L^{-1}}$。<br />
+  $$c_B = \frac{n_B}{V_{溶液}}$$</li>
+<li><strong>核心极限</strong>：$V_{溶液}$ 是溶液总体积（不是溶剂体积），单位常用升（L）。溶液分成若干等份后，每一份的浓度不变，但溶质的物质的量与体积成正比。</li>
+<li><strong>稀释定律</strong>：稀释前后溶质的物质的量不变。<br />
+  $$c_1V_1 = c_2V_2$$</li>
+<li><strong>离子浓度关系</strong>：<br />
+  强电解质溶液中 $c(\text{离子}) = (\text{化学式中该离子个数}) \times c(\text{溶质})$。<br />
+  如 $c(\mathrm{Cl^-}) = 2c(\mathrm{BaCl_2})$。</li>
+<li><strong>守恒思想（高频计算工具）</strong>：  </li>
+<li><strong>物料守恒</strong>：溶液中某元素的总物质的量等于各来源贡献之和。<br />
+    $$n(\mathrm{Cl^-}) = 2n(\mathrm{BaCl_2}) + n(\mathrm{KCl})$$</li>
+<li><strong>电荷守恒</strong>：阳离子所带正电荷总量 = 阴离子所带负电荷总量。  </li>
+<li><strong>沉淀反应计量</strong>：$n(\mathrm{Ba^{2+}}) = n(\mathrm{SO_4^{2-}})$，$n(\mathrm{Ag^+}) = n(\mathrm{Cl^-})$。</li>
+<li><strong>pH与浓度换算</strong>（25℃）：<br />
+  $$c(\mathrm{H^+}) = 10^{-\mathrm{pH}},\quad c(\mathrm{OH^-}) = 10^{-(14-\mathrm{pH})}$$
+  混合后需先求剩余 $c(\mathrm{H^+})$ 或 $c(\mathrm{OH^-})$，再除以总体积反推原浓度。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>拆解体积与份数</strong>：看清原溶液体积、分成几份、取哪一份用。每份体积 = 原体积 ÷ 份数，单位转化为 L。  </li>
+<li><strong>写离子反应找计量关系</strong>：明确“完全沉淀”对应的等量关系，如 $n(\mathrm{Ba^{2+}}) = a\ \mathrm{mol}$，$n(\mathrm{Cl^-}) = b\ \mathrm{mol}$。  </li>
+<li><strong>建物料守恒方程</strong>：用已知离子的物质的量表达未知离子。如 $n(\mathrm{Cl^-}) = 2n(\mathrm{Ba^{2+}}) + n(\mathrm{K^+})$，解出 $n(\mathrm{K^+})$。  </li>
+<li><strong>求浓度</strong>：$c = \dfrac{n}{V_{该份溶液}}$。注意 $V$ 是取用的一份溶液的体积，不是原总体积。  </li>
+<li><strong>酸碱混合求原浓度</strong>：  </li>
+<li>由 pH 得到过量离子的 $c$；  </li>
+<li>设原浓度为 $c_0$，根据体积比列出剩余物质的量表达式；  </li>
+<li>用剩余物质的量 ÷ 混合总体积 = 已知的过量离子浓度，解 $c_0$。  </li>
+<li><strong>检验代数式</strong>：答案常为含 $a,b$ 的表达式，计算后与选项比对。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>体积陷阱</strong>：忘记将原溶液的分份倍数计入。如“500mL 分成5等份”→取一份 $V=0.1\ \mathrm{L}$。直接用 0.5 L 计算浓度会错选 0.2 $(b-2a)$ 之类的干扰项。  </li>
+<li><strong>离子来源漏项</strong>：$n(\mathrm{Cl^-})$ 既来自 $\mathrm{BaCl_2}$ 又来自 $\mathrm{KCl}$，必须写成 $b = 2a + n(\mathrm{K^+})$，误写成 $b - a$ 导致错选 C。  </li>
+<li><strong>酸碱混合不除以总体积</strong>：直接用 $n(\mathrm{OH^-})_{\text{剩}}$ 等于 0.01 求解，漏掉除以混合后总体积（$(3+2)V$），会得到 $c = 0.01\ \mathrm{mol \cdot L^{-1}}$ 错选 A。  </li>
+<li><strong>单位忽略</strong>：pH 计算中 $c(\mathrm{OH^-})$ 的单位是 $\mathrm{mol \cdot L^{-1}}$，余下的物质的量必须对应混合后的总体积，不能忽略体积的倍数 $V$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2010 全国新课标·04</h3>
+<p><strong>题目</strong>：含 $\mathrm{BaCl_2}$ 和 $\mathrm{KCl}$ 的混合溶液 500 mL，分成 5 等份。一份加入 $a$ mol $\mathrm{Na_2SO_4}$，恰好使 $\mathrm{Ba^{2+}}$ 完全沉淀；另一份加入 $b$ mol $\mathrm{AgNO_3}$，恰好使 $\mathrm{Cl^-}$ 完全沉淀。求原混合溶液中 $c(\mathrm{K^+})$。<br />
+<strong>思路</strong>：每份体积为 $\frac{500}{5}=100\ \mathrm{mL}=0.1\ \mathrm{L}$。由沉淀反应得 $n(\mathrm{Ba^{2+}})=a$，$n(\mathrm{Cl^-})=b$。根据氯离子物料守恒求出每份中 $n(\mathrm{K^+})$，再除以 0.1 L 得浓度。<br />
+<strong>步骤</strong>：<br />
+1. 每份溶液体积 $V_1 = 0.1\ \mathrm{L}$。<br />
+2. $n(\mathrm{Ba^{2+}}) = n(\mathrm{Na_2SO_4}) = a\ \mathrm{mol}$。<br />
+3. $n(\mathrm{Cl^-}) = n(\mathrm{AgNO_3}) = b\ \mathrm{mol}$。<br />
+4. 由 $\mathrm{Cl^-}$ 来源：$n(\mathrm{Cl^-}) = 2n(\mathrm{Ba^{2+}}) + n(\mathrm{K^+})$，得 $b = 2a + n(\mathrm{K^+})$。<br />
+5. $n(\mathrm{K^+}) = b - 2a\ \mathrm{mol}$。<br />
+6. $c(\mathrm{K^+}) = \frac{n(\mathrm{K^+})}{V_1} = \frac{b-2a}{0.1} = 10(b-2a)\ \mathrm{mol \cdot L^{-1}}$。<br />
+<strong>点评</strong>：典型的“离子守恒+体积等分”考题。变式可将 $\mathrm{Na_2SO_4}$ 换成 $\mathrm{H_2SO_4}$，或改变份数，核心都是先求一份中离子的物质的量，再求浓度。</p>
+<h3>2. 2008 全国Ⅱ·04</h3>
+<p><strong>题目</strong>：物质的量浓度相同的 $\mathrm{NaOH}$ 和 $\mathrm{HCl}$ 溶液，以 3:2 体积比混合，所得溶液 pH=12。求原溶液的物质的量浓度。<br />
+<strong>思路</strong>：pH=12 → $c(\mathrm{OH^-})<em _text_总="\text{总">{\text{剩}} = 0.01\ \mathrm{mol \cdot L^{-1}}$，碱过量。设原浓度为 $c$，根据体积比计算剩余 $\mathrm{OH^-}$ 浓度，解出 $c$。<br />
+<strong>步骤</strong>：<br />
+1. 常温下，$\mathrm{pH}=12 \Rightarrow c(\mathrm{H^+})=10^{-12}$，$c(\mathrm{OH^-}) = 10^{-2} = 0.01\ \mathrm{mol \cdot L^{-1}}$。<br />
+2. 设原浓度均为 $c\ \mathrm{mol \cdot L^{-1}}$，取体积 $3V$、$2V$，混合后总体积约为 $5V$。<br />
+3. $n(\mathrm{OH^-})</em>) = 3cV - 2cV = cV$。}} = 3cV$，$n(\mathrm{H^+}) = 2cV$，反应后剩余 $n(\mathrm{OH^-<br />
+4. $c(\mathrm{OH^-})_{\text{剩}} = \frac{cV}{5V} = \frac{c}{5} = 0.01$。<br />
+5. 解得 $c = 0.05\ \mathrm{mol \cdot L^{-1}}$。<br />
+<strong>点评</strong>：抓住“过量的碱”是解题关键，易错点在于忘记除以总体积 $5V$。变式可改为求混合后 pH，或改为弱酸/弱碱，同样用过量物质浓度列式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2010-新课标-04.html">2010-新课标-04</a>（2010 · 中） 无机综合计算，运用电荷守恒求K⁺物质的量浓度。</li>
+<li><a href="../../exam/化学/2008-全国Ⅱ-04.html">2008-全国Ⅱ-04</a>（2008 · 中） 酸碱混合pH计算，利用过量碱的浓度反推原溶液物质的量浓度</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/781-物质的量浓度.html">物质的量浓度</a></li>
+</ul>
+</div>
+</body>
+</html>

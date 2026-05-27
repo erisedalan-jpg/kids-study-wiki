@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>压强计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>压强计算</h1><div class="review-mark" data-stem="压强计算"></div><div class="meta-card"><span><strong>考点</strong>压强计算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>理想气体状态方程：$pV=nRT$。在恒温、恒容条件下，气体的物质的量 $n$ 与压强 $p$ 成正比，即 $\dfrac{p_1}{p_2}=\dfrac{n_1}{n_2}$。这是压强计算的核心桥梁。</li>
+<li>转化率 $\alpha(\mathrm{A})$ 的定义：$\alpha(\mathrm{A})=\dfrac{\Delta n(\mathrm{A})}{n_0(\mathrm{A})}\times100\%$，其中 $\Delta n(\mathrm{A})$ 为已反应的 A 的物质的量，$n_0(\mathrm{A})$ 为起始投入的物质的量。</li>
+<li>对于气体分子数变化的反应：$\mathrm{A(g)}\rightleftharpoons\mathrm{B(g)}+\mathrm{C(g)}$，反应前气体总物质的量为 $n_0$，反应后气体总物质的量增加，且增加量等于反应掉的 A 的物质的量（因为每消耗 1 mol A 生成 2 mol 气体，净增 1 mol）。有 $n_{\text{总}}=n_0+n_0\cdot\alpha=n_0(1+\alpha)$。</li>
+<li>结合压强比：$\dfrac{p}{p_0}=\dfrac{n_{\text{总}}}{n_0}=1+\alpha$，因此 $\alpha=\dfrac{p}{p_0}-1$。此式仅适用于恒温恒容、且反应前后气体分子数增加且生成物系数和与反应物系数之差为 1 的反应（需按具体反应配平后的系数比修正）。</li>
+<li>平衡常数 $K$ 的计算：可用平衡时分压或浓度。在恒容容器中，$c_i=\dfrac{n_i}{V}$，可直接用三段式计算平衡浓度；也可用分压 $p_i=p_{\text{总}}\cdot\dfrac{n_i}{n_{\text{总}}}$，借助 $K_p=\dfrac{p_{\mathrm{B}}\cdot p_{\mathrm{C}}}{p_{\mathrm{A}}}$，再必要时通过 $K_p=K_c(RT)^{\Delta n}$ 换算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确容器特征</strong>：首先确认是否为<strong>恒温恒容</strong>（密闭容器、体积不变）。只有恒温恒容时，压强比才等于总物质的量比。</li>
+<li><strong>写出反应方程式并标出气体分子数变化</strong>：计算 $\Delta n_{\text{气体}}$（生成物气体系数和 － 反应物气体系数和）。$\Delta n_{\text{气体}}&gt;0$ 时压强随反应进行而增大。</li>
+<li><strong>建立“三段式”</strong>（起始量、变化量、某时刻或平衡量），并用未知数表示各组分物质的量或浓度。</li>
+<li><strong>将压强与物质的量关联</strong>：  </li>
+<li>已知起始压强 $p_0$ 和某时刻（或平衡）总压 $p$，利用 $\dfrac{n_{\text{总}}}{n_0}=\dfrac{p}{p_0}$ 求出总物质的量倍数关系。  </li>
+<li>若反应物只有 A 初始为 $n_0$，反应前后系数变化为 $\Delta n=1$（如 A→B+C），则 $n_{\text{总}}=n_0(1+\alpha)$，得 $\alpha=\dfrac{p}{p_0}-1$。  </li>
+<li>若系数变化不为 1，应代入一般式：$n_{\text{总}}=n_0 + \Delta n \cdot n_0\alpha$，从而 $\alpha=\dfrac{1}{\Delta n}\left(\dfrac{p}{p_0}-1\right)$。</li>
+<li><strong>求平衡常数</strong>：先由转化率或压强比求平衡时各组分物质的量，进而计算平衡浓度或平衡分压，再代入 $K_c$ 或 $K_p$ 表达式。</li>
+<li><strong>平衡移动措施</strong>：根据勒夏特列原理结合 $\Delta H$ 和 $\Delta n_{\text{气体}}$ 分析温度、压强的影响。吸热反应升温有利；气体分子数增加，降压/增大体积有利。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略恒温条件</strong>：只有温度不变，$p\propto n$。若温度改变，压强变化不能直接对应物质的量变化。</li>
+<li><strong>混淆起始压强 $p_0$ 与某时刻总压强 $p$</strong>：特别是容器中原有非反应气体的情形，需要扣除起始无关气体的分压，否则计算错误。</li>
+<li><strong>直接用分压比代替物质的量比</strong>：在恒容容器中，分压比等于物质的量比，但必须保证是同一组分。总压比对应总物质的量比，使用时注意公式 $\dfrac{p}{p_0} = \dfrac{n_{\text{总}}}{n_0}$ 的 $n_0$ 为起始总物质的量（可能包含惰性气体），需明确定义。</li>
+<li><strong>转化率表达式机械套用</strong>：$\alpha = \dfrac{p}{p_0} - 1$ 仅适用于反应物单一且 $\Delta n_{\text{气体}} = 1$（如 A(g) → B(g) + C(g)）。若反应如 2A(g) → B(g) + C(g)，则 $n_{\text{总}} = n_0 - \frac{1}{2}n_0\alpha$，表达式将变为 $\alpha = 2\left(1 - \dfrac{p}{p_0}\right)$。必须结合具体化学计量数推导。</li>
+<li><strong>单位与有效数字</strong>：压强单位注意换算统一，如题中 100 kPa 为表头数据，代入时需按实际数量级处理。平衡常数表达式用浓度时体积不能遗漏，尤其是容器体积给定为 1.0 L 时可直接用物质的量数值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+在 1.0 L 密闭容器中放入 0.10 mol A(g)，恒温下进行反应：<br />
+$$\mathrm{A(g) \rightleftharpoons B(g) + C(g)} \qquad \Delta H = +85.1\ \mathrm{kJ \cdot mol^{-1}}$$<br />
+不同时间测得容器内总压强 $p$（见下表），起始压强 $p_0 = 4.91 \times 100\ \mathrm{kPa}$。</p>
+<p>| 时间 $t$/h | 0 | 1 | 2 | 4 | 8 | 16 | 20 | 25 | 30 |
+|-------------|---|---|---|---|---|---|----|----|----|----|
+| $p$/100 kPa | 4.91 | 5.58 | 6.32 | 7.31 | 8.54 | 9.50 | 9.52 | 9.53 | 9.53 |</p>
+<p>(1) 欲提高 A 的平衡转化率，可采取什么措施？<br />
+(2) 由总压强 $p$ 和起始压强 $p_0$ 表示反应物 A 的转化率 $\alpha(\mathrm{A})$ 的表达式。<br />
+(3) 计算该反应在此温度下的平衡常数 $K$。</p>
+<hr />
+<p><strong>思路</strong><br />
+- (1) 反应吸热、气体分子数增加，依据勒夏特列原理：升温、降压均使平衡正向移动，转化率提高。<br />
+- (2) 恒温恒容，压强比等于总物质的量比。结合反应式，每消耗 1 mol A 总气体净增 1 mol，建立 $\alpha$ 与 $p/p_0$ 的关系。<br />
+- (3) 由平衡时的总压，先求平衡转化率，再构建三段式得到平衡浓度，代入平衡常数表达式。</p>
+<hr />
+<p><strong>步骤</strong><br />
+<strong>(1) 措施</strong><br />
+反应 $\Delta H &gt;0$（吸热），升高温度平衡右移；正反应气体分子数增加（$\Delta n_{\text{气体}}=1$），降低压强（或增大容器体积）平衡右移。<br />
+答案：<strong>升高温度、降低压强</strong>。</p>
+<p><strong>(2) 表达式推导</strong><br />
+设起始 $n_0(\mathrm{A}) = 0.10\ \mathrm{mol}$，转化率 $\alpha$。  </p>
+<p>反应三段式（物质的量/mol）：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$\mathrm{A}$</th>
+<th>$\mathrm{B}$</th>
+<th>$\mathrm{C}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>起始</td>
+<td>0.10</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>变化</td>
+<td>$-0.10\alpha$</td>
+<td>$+0.10\alpha$</td>
+<td>$+0.10\alpha$</td>
+</tr>
+<tr>
+<td>某时刻</td>
+<td>$0.10(1-\alpha)$</td>
+<td>$0.10\alpha$</td>
+<td>$0.10\alpha$</td>
+</tr>
+</tbody>
+</table>
+<p>某时刻气体总物质的量：$n_{\text{总}} = 0.10(1+\alpha)\ \mathrm{mol}$。<br />
+恒温恒容下：$\dfrac{p}{p_0} = \dfrac{n_{\text{总}}}{n_0} = \dfrac{0.10(1+\alpha)}{0.10} = 1+\alpha$<br />
+因此 $\alpha = \dfrac{p}{p_0} - 1$。<br />
+上式即为转化率的表达式。</p>
+<p><strong>(3) 平衡常数计算</strong><br />
+由表中数据知，$t \geq 25\ \mathrm{h}$ 时压强不变，反应已达到平衡。取平衡总压 $p_{\text{平}} = 9.53 \times 100\ \mathrm{kPa}$，$p_0 = 4.91 \times 100\ \mathrm{kPa}$。  </p>
+<p>平衡转化率 $\alpha = \dfrac{9.53}{4.91} - 1 \approx 0.942$。  </p>
+<p>平衡时各组分物质的量：<br />
+$n(\mathrm{A}) = 0.10(1-0.942) = 0.0058\ \mathrm{mol}$<br />
+$n(\mathrm{B}) = n(\mathrm{C}) = 0.10 \times 0.942 = 0.0942\ \mathrm{mol}$  </p>
+<p>因容器体积 $V=1.0\ \mathrm{L}$，平衡浓度即为其物质的量数值：<br />
+$c(\mathrm{A}) = 0.0058\ \mathrm{mol \cdot L^{-1}}$，$c(\mathrm{B})=c(\mathrm{C})=0.0942\ \mathrm{mol \cdot L^{-1}}$</p>
+<p>平衡常数 $K_c = \dfrac{c(\mathrm{B}) \cdot c(\mathrm{C})}{c(\mathrm{A})} = \dfrac{(0.0942)^2}{0.0058} \approx 1.53$。  </p>
+<p>注意：因 $\Delta n_{\text{气体}} = 1$，此处求 $K_c$ 无需再进行 $K_p$ 转换，直接使用浓度即可。</p>
+<hr />
+<p><strong>点评/变式</strong><br />
+- 本题通过压强数据直接推算转化率与平衡常数，核心是建立 $p$ 与 $n$ 的比例关系。表中压强由 4.91 到 9.53，接近翻倍，可快速心算验证：若 100% 转化，理论总压为 $2 \times 4.91 = 9.82$，实际 9.53，转化率约 94%，与精确计算吻合。<br />
+- 变式：若起始投入不是纯 A，而是 A 与惰性气体混合，则起始 $n_0$ 应包含惰性气体，表达式需修正。或反应为 $2\mathrm{A(g)} \rightleftharpoons \mathrm{B(g)} + 2\mathrm{C(g)}$，系数变化不同，需重新推导 $\alpha-p$ 关系。<br />
+- 易错：直接用总压 9.53/4.91 得到 1.94 即认为是 $\alpha$，忘记减去 1；或误用分压关系计算 $K_p$ 时错把总压当分压。务必在三段式框架下逐一代入。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-10.html">2013-新课标Ⅱ-10</a>（2013 · 中） 化学平衡计算题，涉及转化率表达式推导及平衡移动影响因素分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/550-压强计算.html">压强计算</a></li>
+</ul>
+</div>
+</body>
+</html>

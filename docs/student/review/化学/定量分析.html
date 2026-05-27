@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定量分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>定量分析</h1><div class="review-mark" data-stem="定量分析"></div><div class="meta-card"><span><strong>考点</strong>定量分析</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定量分析的核心原理</strong>：基于化学反应中物质间的<strong>化学计量关系</strong>（守恒），通过测量反应中某种物质的消耗量或生成量，推算待测组分的含量。</li>
+<li><strong>常用方法</strong><ul>
+<li><strong>直接滴定法</strong>：标准溶液直接与待测物反应，关系式简单。适用条件：反应定量、快速、有合适指示剂。</li>
+<li><strong>返滴定法（回滴法）</strong>：先加入<strong>定量过量</strong>的标准溶液A与待测物反应，再用标准溶液B滴定<strong>剩余</strong>的A。适用于反应慢、固体样品难溶、无直接指示剂等情形。关系式：$n_{\text{待}} \cdot \nu_{\text{待}} = n_{\text{A(总)}}\nu_{\text{A}} - n_{\text{B}}\nu_{\text{B}}$，需配平。</li>
+<li><strong>质量分数计算</strong>：$w(X)=\frac{m_X}{m_{\text{样}}}\times 100\%$。其中 $m_X$ 由测得的物质的量 $n_X$ 及其摩尔质量 $M_X$ 算出。</li>
+</ul>
+</li>
+<li><strong>本题核心知识</strong>：<ul>
+<li>蒸馏‑中和返滴定测氨（氮）含量：样品中 $NH_4^+$ 加碱蒸馏出 $NH_3$，用过量的 HCl 吸收，再用 NaOH 标准溶液回滴。</li>
+<li>关系式：$NH_3 \sim HCl$。$n_{NH_3} = c_1 V_1\times 10^{-3} - c_2 V_2\times 10^{-3}$（单位：mol）。</li>
+<li>氨的质量分数：$w(NH_3)=\frac{(c_1 V_1 - c_2 V_2)\times 10^{-3}\times 17.0}{w}\times 100\%$。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确反应体系</strong>：写出每一步的化学方程式或离子方程式，找出计量比（1:1 常见于酸碱中和、沉淀、配位）。</li>
+<li><strong>构建物质守恒关系</strong>：对于返滴定，公式化为 $n_{\text{待测物}} = n_{\text{过量试剂(总)}} - n_{\text{滴定剂}}$（确保系数归一）。</li>
+<li><strong>规范物理量计算</strong>：</li>
+<li>体积（mL）须换算为 L：$V_{\text{mL}} \times 10^{-3}$。</li>
+<li>质量 $m = n \times M$，质量分数 $w = m_{\text{组分}}/m_{\text{样}}$。</li>
+<li>若题目要求代数式，直接用字母组合，无需代入具体数据。</li>
+<li><strong>防止干扰</strong>：若试样中有其他耗酸/耗碱组分，需预先分离（如蒸馏、沉淀）或设置空白实验校正。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位混乱</strong>：滴定管读数单位为 mL，直接与浓度 $c(\text{mol/L})$ 相乘必须乘 $10^{-3}$，考生常忘记，导致数值差千倍。</li>
+<li><strong>返滴定比例误用</strong>：NaOH 滴定过剩 HCl，反应为 $NaOH + HCl = NaCl + H_2O$，为 1:1。直接相减即得 HCl 剩余量，无需乘其他系数。但若反应不是 1:1（如 $Cr_2O_7^{2-}$ 与 $Fe^{2+}$ 返滴定时），必须按计量比折算。</li>
+<li><strong>指示剂与终点误判</strong>：本实验用强碱滴强酸（剩余 HCl），宜选用甲基红或酚酞，注意终点颜色变化及操作规范性（半滴）。</li>
+<li><strong>装置与操作失误</strong>：蒸馏不彻底、冷凝效果差、接收液未完全浸没导管口均会导致氨损失，使结果偏低。</li>
+<li><strong>有效数字与表达式</strong>：若要求用给定物理量表示，须保留所有物理量符号，莫随意省略或整理小数；质量分数表达式分子分母量纲要一致。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题</strong> 2014·新课标Ⅱ·10 改编</h3>
+<p><strong>题目</strong>：测定样品 X 中氨的质量分数。精确称取 $w$ g 样品，按题给装置蒸出全部氨，用 $V_1$ mL $c_1$ mol·L⁻¹ HCl 标准溶液吸收。用 $c_2$ mol·L⁻¹ NaOH 标准溶液滴定过剩 HCl，终点消耗 $V_2$ mL。用给定物理量表示 $w(NH_3)$。</p>
+<p><strong>思路</strong>：属典型的蒸馏‑返滴定定量分析。氨与 HCl 1:1 反应，剩余 HCl 被 NaOH 按 1:1 滴定。先求与 NH₃ 反应的 HCl 的物质的量，再求 NH₃ 的质量分数。</p>
+<p><strong>步骤</strong>：
+1. 吸收反应：$HCl + NH_3 = NH_4Cl$ （1:1）
+   滴定反应：$HCl + NaOH = NaCl + H_2O$ （1:1）
+2. 过量的 HCl 总物质的量：$n_{HCl(\text{总})} = c_1 V_1 \times 10^{-3}$ mol
+3. 被 NaOH 中和的剩余 HCl 的物质的量：$n_{\text{剩}} = c_2 V_2 \times 10^{-3}$ mol
+4. 与 NH₃ 反应的 HCl 的物质的量即 $n_{NH_3}$：
+   $$n_{NH_3} = (c_1 V_1 - c_2 V_2) \times 10^{-3} \; \text{mol}$$
+5. 氨的质量：$m_{NH_3} = n_{NH_3} \times M_{NH_3}$，其中 $M_{NH_3}=17.0$ g·mol⁻¹
+6. 质量分数：
+   $$w(NH_3)=\frac{(c_1 V_1 - c_2 V_2) \times 10^{-3} \times 17.0}{w} \times 100\%$$</p>
+<p><strong>点评/变式</strong>：
+- <strong>关键点</strong>：返滴定计算直接是“总酸量减剩余酸量”，切勿再加乘系数。所有体积须换算为升。
+- <strong>变式</strong>：若测定氯含量用莫尔法（沉淀滴定）或配位滴定测金属，原理相同，仅换成相应计量关系。
+- <strong>应试提醒</strong>：读题注意“V₁ mL”“c₁ mol/L”，写表达式时务必带 $ \times 10^{-3}$，否则失分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-10.html">2014-新课标Ⅱ-10</a>（2014 · 中） 以蒸馏和酸碱滴定法测定钴氨配合物中氨含量，涉及定量实验与计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/539-定量分析.html">定量分析</a></li>
+</ul>
+</div>
+</body>
+</html>

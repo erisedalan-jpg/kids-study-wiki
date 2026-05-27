@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>沉淀pH控制</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>沉淀pH控制</h1><div class="review-mark" data-stem="沉淀pH控制"></div><div class="meta-card"><span><strong>考点</strong>沉淀pH控制</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>沉淀pH控制基本原理</strong><br />
+  利用金属氢氧化物（或氧化物水合物）的溶度积（$K_{sp}$）差异，通过调节溶液pH使杂质离子生成沉淀而目标离子保留在溶液中。</li>
+<li>沉淀开始：$c(M^{n+}) \cdot c(OH^-)^n = K_{sp}$，$c(OH^-) = \sqrt[n]{K_{sp}/c_0(M^{n+})}$。</li>
+<li>沉淀完全：通常认为$c(M^{n+}) \le 1\times10^{-5}\ \text{mol·L}^{-1}$时沉淀完全，此时所需$c(OH^-) = \sqrt[n]{K_{sp}/1\times10^{-5}}$。</li>
+<li>
+<p>pH区间：目标离子开始沉淀的pH &gt; 杂质离子沉淀完全的pH，才能实现选择性分离。</p>
+</li>
+<li>
+<p><strong>常见氢氧化物的沉淀pH（25℃，起始浓度约0.1 mol·L$^{-1}$）</strong><br />
+  | 氢氧化物 | 开始沉淀pH | 沉淀完全pH | $K_{sp}$（近似） |
+  |--------|----------|----------|----------------|
+  | $Fe(OH)_3$ | 2.2 | 3.5 | $1\times10^{-39}$ |
+  | $Al(OH)_3$ | 3.7 | 4.7 | $1\times10^{-33}$ |
+  | $Cr(OH)_3$ | 4.0 | 5.2 | $6\times10^{-31}$ |
+  | $Cu(OH)_2$ | 4.4 | 6.4 | $2\times10^{-20}$ |
+  | $Zn(OH)_2$ | 6.0 | 8.0 | $1\times10^{-17}$ |
+  | $Fe(OH)_2$ | 6.5 | 9.7 | $8\times10^{-16}$ |
+  | $Ni(OH)_2$ | 7.0 | 9.0 | $2\times10^{-15}$ |
+  | $Mn(OH)_2$ | 7.8 | 10.4 | $4\times10^{-14}$ |
+  | $Mg(OH)_2$ | 9.4 | 11.4 | $1\times10^{-11}$ |</p>
+</li>
+<li>
+<p><strong>调节pH的常用试剂选择</strong>  </p>
+</li>
+<li><strong>原则</strong>：不引入新杂质，尽量不减少目标产物。</li>
+<li>试剂：对应金属的氧化物（如ZnO、CuO）、氢氧化物、碳酸盐或碱式碳酸盐（如$Zn(OH)_2$、$ZnCO_3$），必要时可用稀氨水（需注意配合物生成）。</li>
+<li>
+<p><strong>不宜使用</strong>强碱（NaOH、KOH）或固体碳酸钠，以免引入Na$^+$、K$^+$等离子杂质。</p>
+</li>
+<li>
+<p><strong>氧化预处理的重要性</strong><br />
+  $Fe^{2+}$、$Mn^{2+}$等低价离子氢氧化物沉淀pH偏高且与$Zn^{2+}$、$Ni^{2+}$接近，常需先将其氧化为高价态（$Fe^{3+}$、$MnO_2$等），使沉淀pH显著降低，实现选择性分离。常用氧化剂：$H_2O_2$、$KMnO_4$、$NaClO$等。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题定位</strong>：明确流程中谁是待除杂质，谁是目标产物；识别所有阳离子种类及价态。</li>
+<li><strong>价态判断与预处理</strong>：若含$Fe^{2+}$、$Mn^{2+}$等不易直接沉淀的离子，结合题干提供的氧化剂信息，明确氧化产物（$Fe^{3+}$、$MnO_2$等）。$MnO_4^-$还原产物常为$MnO_2$（不引入新阳离子）。</li>
+<li><strong>查Ksp定区间</strong>：列出所有金属氢氧化物（或氧化物）开始沉淀与完全沉淀的pH。若题目给Ksp，需计算；若没给，调用常见数据估算。</li>
+<li><strong>选取pH窗口</strong>：确保所有杂质离子沉淀完全（pH大于其完全沉淀pH），且目标离子不沉淀或刚刚开始沉淀（pH小于其开始沉淀pH）。若有多个杂质，取pH交集，且窗口必须存在。</li>
+<li><strong>选择调pH试剂</strong>：依据产物类型，选对应的氧化物/碳酸盐/氢氧化物（例如制ZnO选用ZnO或ZnCO$_3$调pH），不引入杂质阳离子。</li>
+<li><strong>关联后续操作</strong>：调pH后往往是过滤，滤渣成分需写全（如$Fe(OH)_3$、$MnO_2$等），滤液继续除其他杂质（如$Ni^{2+}$可能用置换法）。</li>
+<li><strong>表述规范</strong>：“调节pH至约4～5”“使$Fe^{3+}$完全沉淀而$Zn^{2+}$不沉淀”等。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“开始沉淀”与“沉淀完全”的浓度标准</strong><br />
+  计算pH时误用起始浓度0.1 mol·L$^{-1}$当作沉淀完全的浓度，导致pH区间错误。沉淀完全必须用$c \le 1\times10^{-5}\ \text{mol·L}^{-1}$。</li>
+<li><strong>忽略氧化步骤对沉淀pH的影响</strong><br />
+  直接拿$Fe^{2+}$的Ksp去调pH，导致pH过高，使$Zn^{2+}$也沉淀，无法分离。必须先氧化为$Fe^{3+}$。</li>
+<li><strong>选错调pH试剂</strong><br />
+  在制备ZnO流程中直接用NaOH或氨水，引入了Na$^+$或可能使Zn$^{2+}$生成$[Zn(NH_3)_4]^{2+}$而损失。</li>
+<li><strong>忽略$Ni^{2+}$、$Co^{2+}$等离子的沉淀行为</strong><br />
+  若流程中有$Ni^{2+}$，其完全沉淀pH约在9.0，与$Zn^{2+}$相近，仅靠调pH无法分离，需后续用置换等方法。</li>
+<li><strong>漏写$MnO_2$等非氢氧化物沉淀</strong><br />
+  若氧化剂如$KMnO_4$还原产物为$MnO_2$，调pH过滤后滤渣中除了$Fe(OH)_3$还必须包含$MnO_2$，很多考生遗漏该成分。</li>
+<li><strong>pH区间不取交集</strong><br />
+  若含多种杂质（如$Fe^{3+}$、$Al^{3+}$、$Cu^{2+}$），需找一个pH同时使三者沉淀完全且目标离子不沉淀，有时不可行，需结合其他方法。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2013-新课标Ⅱ-09 纯化工业级氧化锌</h3>
+<p><strong>题目</strong><br />
+工业级氧化锌含$Fe(II)$、$Mn(II)$、$Ni(II)$等杂质，经稀硫酸溶解、加$KMnO_4$氧化、调pH、过滤、加锌粉置换等步骤获得纯$ZnO$。已知本实验条件下$Ni(II)$不能被$KMnO_4$氧化，高锰酸钾还原产物为$MnO_2$。回答相关问题。</p>
+<p><strong>思路</strong><br />
+酸溶后溶液含$Zn^{2+}$、$Fe^{2+}$、$Mn^{2+}$、$Ni^{2+}$。加$KMnO_4$目的：将$Fe^{2+}$氧化为$Fe^{3+}$，同时氧化$Mn^{2+}$为$MnO_2$沉淀除去，自身被还原为$MnO_2$一并沉淀。$Ni^{2+}$不反应留在溶液。随后调pH使$Fe^{3+}$变为$Fe(OH)_3$沉淀，$MnO_2$在过滤时一并除去。滤液中$Zn^{2+}$和$Ni^{2+}$，加锌粉置换$Ni^{2+}$，再过滤，滤液经处理得$ZnO$。</p>
+<p><strong>步骤</strong><br />
+1. 酸溶：$ZnO + 2H^+ = Zn^{2+} + H_2O$，$FeO + 2H^+ = Fe^{2+} + H_2O$等。<br />
+2. 氧化：$MnO_4^- + 3Fe^{2+} + 7H_2O = 3Fe(OH)_3\downarrow + MnO_2\downarrow + 5H^+$（或先氧化后水解），同时$2MnO_4^- + 3Mn^{2+} + 2H_2O = 5MnO_2\downarrow + 4H^+$。<br />
+3. 调pH：加入$ZnO$或$Zn(OH)_2$，调节pH≈4～5，使$Fe^{3+}$完全沉淀（$Fe(OH)_3$）而$Zn^{2+}$不沉淀。反应：$Fe^{3+} + 3H_2O \rightleftharpoons Fe(OH)_3\downarrow + 3H^+$，加$ZnO$消耗$H^+$促进水解。<br />
+4. 过滤：滤渣为$Fe(OH)_3$和$MnO_2$；滤液含$Zn^{2+}$、$Ni^{2+}$。<br />
+5. 除镍：加入锌粉，$Zn + Ni^{2+} = Zn^{2+} + Ni\downarrow$，过滤。<br />
+6. 提取：将纯$Zn^{2+}$溶液经蒸发、冷却结晶或与碳酸盐反应后灼烧，得到纯$ZnO$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题典型体现了“氧化预处理+pH控制”联合除杂：先用$KMnO_4$巧妙地将$Fe^{2+}$、$Mn^{2+}$转化为易沉淀的$Fe^{3+}$和$MnO_2$，再借助调节pH使$Fe^{3+}$沉淀完全，一步过滤即除去铁、锰杂质。<br />
+- 调pH试剂选用$ZnO$，源于产物为$ZnO$，不引入杂质，且能消耗$H^+$，这正是工业流程“以产物调pH”的经典设计。<br />
+- 变式：若杂质为$Fe^{3+}$、$Cu^{2+}$，目标产物$ZnO$，则无需氧化，直接调pH≈5～6，使$Fe^{3+}$沉淀，而$Cu^{2+}$不能沉淀完全（此时需在调pH后加锌粉置换$Cu^{2+}$）；若有用$H_2O_2$作氧化剂，则还原产物为水，优势是不引入新杂质，调pH形式类似。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-09.html">2013-新课标Ⅱ-09</a>（2013 · 中） 工业流程题，考查利用高锰酸钾氧化除杂及沉淀分离的原理与操作。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/743-沉淀pH控制.html">沉淀pH控制</a></li>
+</ul>
+</div>
+</body>
+</html>

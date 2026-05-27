@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质量数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质量数</h1><div class="review-mark" data-stem="质量数"></div><div class="meta-card"><span><strong>考点</strong>质量数</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择6</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>质量数（$A$）</strong>：原子核内质子数（$Z$）与中子数（$N$）之和，即 $A = Z + N$。质量数取整数，近似等于核素的相对原子质量。</li>
+<li><strong>质子数（$Z$）</strong>：等于原子序数，决定元素种类。对中性原子，质子数＝电子数。</li>
+<li><strong>中子数（$N$）</strong>：$N = A - Z$。同位素即同 $Z$ 不同 $N$（同 $A$ 也可能不同）的原子。</li>
+<li><strong>一个微粒内的质子总数</strong>：将微粒中所有原子的质子数相加。如 $^A_Z\mathrm{X}$ 与 $^1_1\mathrm{H}$ 形成的分子 $\mathrm{H}_m\mathrm{X}$，一个分子含质子数 $m \times 1 + Z = m + (A - N)$。</li>
+<li><strong>物质的量相关转化</strong>：</li>
+<li>分子物质的量 $n = \dfrac{m}{M}$（$m$ 为质量，$M$ 为摩尔质量，数值上可用质量数近似求和）。</li>
+<li>质子总物质的量 $n_{\text{质子}} = n_{\text{分子}} \times (\text{一个分子中的质子数})$。</li>
+<li><strong>近似处理</strong>：题目中若仅给出质量数，摩尔质量（g·mol⁻¹）在数值上常直接取各原子的质量数之和（忽略电子质量与核结合能差异），即 $M(\mathrm{H}_m\mathrm{X}) \approx (m + A)\ \mathrm{g\cdot mol^{-1}}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求质子数</strong>：从“质量数 $A$、中子数 $N$”快速得到质子数 $Z = A - N$。若是同位素符号 $^A_Z\mathrm{X}$，则 $Z$ 直接给出。</li>
+<li><strong>写出分子组成</strong>：看清氢同位素种类（如 $^1_1\mathrm{H}$、$^2_1\mathrm{H}$ 等），正确写出一个分子所含质子总数。对 $\mathrm{H}_m\mathrm{X}$ 型分子：总质子数 $= m \times (\text{H的质子数}) + Z$。</li>
+<li><strong>求分子的摩尔质量</strong>：利用质量数累加得到近似摩尔质量 $M \approx m \times A_{\mathrm{H}} + A$，注意 $A_{\mathrm{H}}$ 是氢核素的质量数（$^1\mathrm{H}$ 为 $1$，$^2\mathrm{H}$ 为 $2$）。</li>
+<li><strong>计算分子物质的量</strong>：$n = \dfrac{a}{M}$（$a$ 为题目给定的质量）。</li>
+<li><strong>计算质子总物质的量</strong>：$n_{\text{质子}} = n \times (\text{分子总质子数}) = \dfrac{a}{M} \times (m + Z)$。</li>
+<li><strong>代入化简</strong>：将 $Z = A-N$、$M$ 的表达式代入，整理得出选项形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆质量数、质子数、中子数关系</strong>：误将中子数当作质子数直接使用。务必记牢 $Z = A - N$。</li>
+<li><strong>忽略氢原子的质子数</strong>：仅计算了中心原子 $\mathrm{X}$ 的质子，遗漏 $m$ 个 $\mathrm{H}$ 原子的质子贡献。</li>
+<li><strong>氢同位素种类判断失误</strong>：题目若给出 $^2_1\mathrm{H}$（氘）而非 $^1_1\mathrm{H}$，质子数相同（均为 $1$）但质量数不同，会影响摩尔质量计算。须根据题干标注判断。</li>
+<li><strong>摩尔质量近似错误</strong>：用实际原子量替代质量数进行计算，增加无谓复杂度。此类习题直接用 $M \approx (m + A)\ \mathrm{g\cdot mol^{-1}}$。</li>
+<li><strong>单位遗漏</strong>：“物质的量”单位为 mol，所得表达式必须带有 mol 量纲，选择答案时应留意。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2008·全国Ⅱ，6）某元素的一种同位素 $\mathrm{X}$ 的质量数为 $A$，含 $N$ 个中子，它与 $^1_1\mathrm{H}$ 原子组成 $\mathrm{H}_m\mathrm{X}$ 分子。在 $a\ \mathrm{g}\ \mathrm{H}_m\mathrm{X}$ 中所含质子的物质的量是多少？</p>
+<p><strong>思路</strong><br />
+先由质量数与中子数求 $\mathrm{X}$ 的质子数 $Z = A - N$。一个 $\mathrm{H}_m\mathrm{X}$ 分子的质子数为 $m \times 1 + Z = m + A - N$。近似摩尔质量 $M \approx (m + A)\ \mathrm{g\cdot mol^{-1}}$。由 $n = \dfrac{a}{M}$ 得分子物质的量，再乘单个分子质子数即得质子总物质的量。</p>
+<p><strong>步骤</strong><br />
+1. $\mathrm{X}$ 的质子数：$Z = A - N$。<br />
+2. 一个 $\mathrm{H}<em _text_质子="\text{质子">m\mathrm{X}$ 分子含质子数：$m\ (\text{来自}\ ^1_1\mathrm{H}) + Z = m + A - N$。<br />
+3. $\mathrm{H}_m\mathrm{X}$ 的摩尔质量近似为 $M = m \times 1 + A = m + A\ \mathrm{g\cdot mol^{-1}}$。<br />
+4. $a\ \mathrm{g}$ 样品的物质的量：$n = \dfrac{a}{M} = \dfrac{a}{m+A}\ \mathrm{mol}$。<br />
+5. 质子的总物质的量：$n</em>$。}} = n \times (m + A - N) = \dfrac{a}{m+A} \times (m + A - N)\ \mathrm{mol<br />
+6. 整理即得选项为 $\dfrac{a}{A+m}(A - N + m)\ \mathrm{mol}$，对应 $\dfrac{a}{A+m}(A - N + m)\ \mathrm{mol}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题属“核素组成+物质的量”简单综合，核心是一步乘除，切勿跳步丢因子。<br />
+- 变式：若氢为 $^2_1\mathrm{H}$，则质子数不变（仍为 $m$），但摩尔质量变为 $M \approx 2m + A$，答案需调整分母。<br />
+- 延伸：若求电子物质的量，对中性分子，电子数等于质子数，方法相同；对离子须额外加减电荷。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a>（2008 · 易） 考查质量数、中子数、质子数关系及物质的量计算，求一定质量分子中所含质子的物质的量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/840-质量数.html">质量数</a></li>
+</ul>
+</div>
+</body>
+</html>

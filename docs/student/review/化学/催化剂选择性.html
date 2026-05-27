@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>催化剂选择性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>催化剂选择性</h1><div class="review-mark" data-stem="催化剂选择性"></div><div class="meta-card"><span><strong>考点</strong>催化剂选择性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>催化剂选择性定义</strong>：催化剂在能同时加快多个热力学可能反应的体系中，对<strong>目标反应速率</strong>的加速程度显著高于副反应的能力。它决定了原料定向转化为目标产物的比例。</li>
+<li><strong>核心作用机制</strong>：催化剂通过降低反应活化能来加速反应，但<strong>不同催化剂</strong>对主反应和副反应活化能的降低程度存在差异。
+  $$ \text{选择性} \propto \frac{k_{\text{主}}}{k_{\text{副}}} = \frac{A_{\text{主}} e^{-E_{a,\text{主}}/RT}}{A_{\text{副}} e^{-E_{a,\text{副}}/RT}} $$
+  选择性高的催化剂对主反应 $E_a$ 降低更多，使生成主产物速率常数 $k_{\text{主}}$ 远大于副产物速率常数 $k_{\text{副}}$。</li>
+<li><strong>与热力学、动力学的区别</strong>：</li>
+<li><strong>热力学</strong>判定反应能否进行及平衡产率（由 $\Delta H, \Delta S, \Delta G$ 决定），不影响催化剂选择性。</li>
+<li><strong>动力学</strong>关注反应速率，而<strong>催化剂选择性</strong>是动力学范畴的核心概念，控制反应<strong>历程和方向</strong>。</li>
+<li><strong>调控逻辑</strong>：当主反应和副反应在热力学上趋势都很大（均为强放热反应）时，平衡产率受温度、压强等热力学参数调控；但在<strong>动力学竞争体系</strong>中，提高目标产物比例的关键决定因素是<strong>催化剂的选择性</strong>。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别反应体系</strong>：明确题干给定的<strong>目标产物</strong>与<strong>副产物</strong>，写出对应化学方程式。</li>
+<li><strong>分析热力学倾向</strong>：</li>
+<li>若反应 $\Delta H &lt; 0$ 且绝对值大，则二者“热力学趋势均很大”。</li>
+<li>根据勒夏特列原理，单独分析如何提高<strong>目标产物平衡产率</strong>（放热主反应：降温；气体分子数增加：减压等）。</li>
+<li><strong>区分调控手段</strong>：</li>
+<li>若问题指向“提高<strong>平衡产率</strong>”，应从改变温度、压强、浓度等热力学条件入手。</li>
+<li>若问题指向“提高<strong>反应选择性</strong>”“抑制副反应”或“在副反应严重时提高<strong>主产物产率</strong>”，必须指向<strong>催化剂的选择</strong>。这是一个“认知模型”类答案，而非计算数值。</li>
+<li><strong>精准表述</strong>：应试时，“提高选择性”的关键因素直接指向“<strong>催化剂</strong>”或“研制/采用高选择性催化剂”，切忌错答温度、压强等热力学条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“平衡产率”与“选择性”</strong>：这是最核心的陷阱。题目常先问“提高平衡产率”的条件，再问“提高选择性”的因素。前者考验勒夏特列原理，后者只与催化剂的本质特性有关。见到“选择性”字样，条件反射就是催化剂。</li>
+<li><strong>误答反应物配比</strong>：增大廉价反应物浓度可提高另一反应物转化率或主产物平衡产率，但它<strong>不改变催化剂的固有选择性</strong>，因此“增大氨/氧的量”不是“提高选择性”的关键因素。</li>
+<li><strong>忽略催化剂的前提条件</strong>：催化剂只能改变速率（动力学）和反应路径，不能改变平衡转化率（热力学）。尽管其目的是提高主产物的实际所得量，但若题目问“平衡产率”，仍不可填入催化剂。</li>
+<li><strong>归因于压强、温度等热力学因素</strong>：当主副反应均为强放热、热力学趋势都很大时，调节温度或压强只能按平行反应的平衡移动规律影响总产物分布，而非动力学选择性的本质原因。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2016-新课标Ⅱ-09</h3>
+<p><strong>题目</strong>：工业丙烯氨氧化法生产丙烯腈（主产物），同时副产丙烯醛和乙腈。给出两个热化学方程式，均为强放热反应。设问：① 为何两个反应热力学趋势都很大？② 提高丙烯腈<strong>平衡产率</strong>的条件？③ 提高丙烯腈反应<strong>选择性</strong>的关键因素？</p>
+<p><strong>思路</strong>：
+- <strong>第一问</strong>需调用热力学判据：反应自发进行趋势大，通常源于 $\Delta G \ll 0$，又因两反应熵变不大，主要驱动力是显著的负焓变。
+- <strong>第二问</strong>“平衡产率”是热力学问题，须用勒夏特列原理分析主反应特征：放热、气体分子数增多（$1+1+1 \to 1+3$）。
+- <strong>第三问</strong>“选择性”是动力学竞争问题，当热力学通路都敞开时，要定向走主反应路径，只能靠催化剂的选择性控制。</p>
+<p><strong>步骤</strong>：
+1. <strong>分析热力学趋势</strong>：反应① $\Delta H = -515 \,\text{kJ} \cdot \text{mol}^{-1}$，反应② $\Delta H = -353 \,\text{kJ} \cdot \text{mol}^{-1}$，均为大量放热的反应。放热是热力学趋势大的根本动力，故原因为：<strong>两个反应均为放热量大的反应</strong>。
+2. <strong>调控平衡产率</strong>：主反应①是放热反应，降温利于平衡正向移动；它又是气体分子数增加的反应（$1+1+1 \to 1+3$），低压利于平衡正向移动。故条件为：<strong>低温、低压</strong>。
+3. <strong>锁定选择性关键</strong>：在主、副反应热力学竞争激烈的体系中，要定向加速主反应而抑制副反应，这完全取决于催化剂的表面结构、活性位点对主反应过渡态的专属稳定作用。故关键因素是：<strong>催化剂</strong>。</p>
+<p><strong>点评/变式</strong>：
+此题是“催化剂选择性”考点的经典建模题。它清晰框定了“热力学”与“动力学/选择性”的答题边界，考生务必熟记这对关系。变式训练中，若将副反应设计为吸热反应或气体分子数减少的反应，则“提高平衡产率”的条件会相应改变，但“提高选择性”的答案永远是“研发高选择性催化剂”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2016-新课标Ⅱ-09.html">2016-新课标Ⅱ-09</a>（2016 · 中） 丙烯氨氧化法制丙烯腈的热化学与反应条件分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/594-催化剂选择性.html">催化剂选择性</a></li>
+</ul>
+</div>
+</body>
+</html>

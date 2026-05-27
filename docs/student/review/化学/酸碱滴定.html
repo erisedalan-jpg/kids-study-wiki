@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>酸碱滴定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>酸碱滴定</h1><div class="review-mark" data-stem="酸碱滴定"></div><div class="meta-card"><span><strong>考点</strong>酸碱滴定</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2008–2020</li>
+<li>出现题位：选择2 选择9 选择10</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>酸碱中和滴定的本质：$n(H^+)=n(OH^-)$，即 $c_{\text{酸}}V_{\text{酸}} \cdot x = c_{\text{碱}}V_{\text{碱}} \cdot y$（$x,y$为一元酸碱计）。</li>
+<li>滴定终点判断：滴入最后半滴标准液，溶液颜色突变且半分钟内不恢复。</li>
+<li>指示剂的选择依据：滴定曲线突跃范围与指示剂变色范围一致，强酸滴强碱可用甲基橙或酚酞；强碱滴弱酸生成强碱弱酸盐（碱性），选酚酞；强酸滴弱碱生成强酸弱碱盐（酸性），选甲基橙。</li>
+<li>返滴定（回滴）法：先加过量标准液与被测物反应，再用另一种标准液滴定剩余的第一种标准液。关系式：$n_{\text{被测}} = n_{\text{标准1}} - n_{\text{标准2}}$。</li>
+<li>误差分析：操作导致的$V_{\text{标}}$偏差，$c_{\text{待测}} = \frac{c_{\text{标}}V_{\text{标}}}{V_{\text{待测}}}$，$V_{\text{标}}$偏大则结果偏高，反之偏低。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>读取实验步骤，明确被测物与标准液，写出滴定反应方程式，确定计量关系。</li>
+<li>直接滴定计算：由多次滴定体积取平均值（舍去离群值），代入$c_{\text{待}}V_{\text{待}} = a \cdot c_{\text{标}}V_{\text{标}}$，注意单位以及取用体积的稀释倍数。</li>
+<li>返滴定计算：找出两步反应，设被测物的物质的量为$x$，写出“加入量－剩余量＝消耗量”的物料守恒式，解出$x$，再求纯度或含量。</li>
+<li>指示剂选择：看滴定终点溶液酸碱性→定指示剂。弱酸与强碱滴定，终点呈碱性，选酚酞；弱碱与强酸滴定，终点呈酸性，选甲基橙。</li>
+<li>纯度或质量分数计算：由物质的量求被测组分的质量，$w = \frac{m_{\text{被测}}}{m_{\text{样品}}} \times 100\%$，注意样品是否分取。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>滴定管未用标准液润洗，导致$V_{\text{标}}$偏大，结果偏高；锥形瓶用待测液润洗，导致$n_{\text{待}}$偏大，消耗$V_{\text{标}}$偏大，结果同样偏高。</li>
+<li>指示剂选择不当：如强碱滴醋酸选甲基橙（变色点pH=4.4附近为酸性，与终点碱性不符），造成较大误差。</li>
+<li>返滴定计算混淆“量”的对应关系，错误地直接用$c_1V_1 = c_2V_2$计算待测组分的量，忽略第一步反应消耗的标准液。</li>
+<li>读数不规范：滴定管读前有气泡，滴定后气泡消失，导致$V_{\text{标}}$偏大；俯视或仰视读数引起体积偏差。</li>
+<li>忽略取样比例：样品溶解定容后仅取部分进行滴定，计算时必须乘以稀释倍数$n = \frac{V_{\text{总}}}{V_{\text{取}}}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2020-新课标Ⅱ-09）</h3>
+<p>苯甲酸粗品纯度测定：称取0.122 g粗品，配成100 mL乙醇溶液，每次取25.00 mL用0.01000 mol·L⁻¹ KOH标准液滴定，三次平均消耗21.50 mL。问纯度和必要操作。
+<strong>思路</strong>：弱酸与强碱直接滴定，化学计量比为1:1。由消耗KOH的量和取样比例求出粗品中苯甲酸的质量，除以粗品质量得纯度。
+<strong>步骤</strong>：
+- 25.00 mL待测液中$n(\text{KOH}) = 0.01000 \times 21.50 \times 10^{-3} = 2.150 \times 10^{-4}\ \text{mol}$。
+- 则100 mL含苯甲酸：$2.150 \times 10^{-4} \times \frac{100}{25.00} = 8.600 \times 10^{-4}\ \text{mol}$。
+- $m(\text{苯甲酸}) = 8.600 \times 10^{-4} \times 122 \approx 0.1049\ \text{g}$。
+- 纯度 $=\frac{0.1049}{0.122} \times 100\% \approx 86.0\%$。
+<strong>点评/变式</strong>：指示剂应选酚酞，因滴定终点溶液呈碱性（苯甲酸钾）。若误用甲基橙，终点提前，结果偏低。变式可扩展为强酸滴弱碱（如碳酸钠），注意两级计量关系。</p>
+<h3><strong>题目2</strong>（2014-新课标Ⅱ-10 氨的测定）</h3>
+<p>晶体 X 中氨的测定：样品加碱蒸出氨，用 $V_1$ mL $c_1$ mol·L⁻¹ HCl 标准液吸收，再用 $c_2$ mol·L⁻¹ NaOH 滴定剩余 HCl，消耗 $V_2$ mL。求氨的物质的量分数。
+<strong>思路</strong>：返滴定，氨被过量 HCl 吸收：$n(\text{HCl})<em _text_总="\text{总">{\text{总}} = c_1V_1\times 10^{-3}$，剩余 HCl 的物质的量为 $c_2V_2\times 10^{-3}$，则 $n(\text{NH}_3)=n(\text{HCl})</em>)$。
+}} - n(\text{NaOH<strong>步骤</strong>：
+- $n(\text{HCl})_{\text{总}} = c_1 V_1 \times 10^{-3} \ \text{mol}$。
+- 剩余 $n(\text{HCl}) = c_2 V_2 \times 10^{-3} \ \text{mol}$。
+- $n(\text{NH}_3) = (c_1 V_1 - c_2 V_2) \times 10^{-3} \ \text{mol}$。
+- 结合样品质量 $w$ g，可得氨的质量分数：$w(\text{NH}_3) = \frac{17(c_1 V_1 - c_2 V_2)}{1000w} \times 100\%$。
+<strong>点评/变式</strong>：吸收液必须使用酸式滴定管，吸收瓶要防止倒吸。变式：凯氏定氮法测蛋白质，原理相同。</p>
+<h3><strong>题目3</strong>（2008-全国Ⅱ-02 指示剂选择）</h3>
+<p>实验室用 0.1000 mol·L⁻¹ NaOH 滴定未知酸，给出三种指示剂变色范围，选择合适指示剂。
+<strong>思路</strong>：根据被滴定的酸强弱预估终点 pH。若为强酸，终点 pH≈7，可选酚酞（8.2~10.0）或甲基橙（3.1~4.4），但突跃范围大，两者皆可；若为弱酸（如醋酸），终点呈碱性（pH&gt;7），必选酚酞。题干提到酚酞变色范围 8.2~10.0，故弱酸选酚酞。
+<strong>步骤</strong>：
+- 判断酸性质：若酸无明确说明，考虑常见情况，弱酸选酚酞。
+- 指示剂变色范围应完全或部分落在滴定突跃范围内，且颜色变化明显。
+<strong>点评/变式</strong>：切忌用石蕊作滴定指示剂，其变色宽泛不敏锐。辨析甲基橙遇碱变色为红变黄，酚酞遇碱变红。强酸滴弱碱（如氨水）选用甲基橙。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-09.html">2020-新课标Ⅱ-09</a>（2020 · 中） 实验室制备苯甲酸及纯度测定的综合实验题，涵盖氧化、分离提纯和滴定分析。</li>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-10.html">2014-新课标Ⅱ-10</a>（2014 · 中） 以蒸馏和酸碱滴定法测定钴氨配合物中氨含量，涉及定量实验与计算。</li>
+<li><a href="../../exam/化学/2008-全国Ⅱ-02.html">2008-全国Ⅱ-02</a>（2008 · 易） 考查酸碱中和滴定中指示剂的选择与变色范围判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/854-酸碱滴定.html">酸碱滴定</a></li>
+</ul>
+</div>
+</body>
+</html>

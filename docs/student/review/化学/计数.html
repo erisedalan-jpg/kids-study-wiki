@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>计数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>计数</h1><div class="review-mark" data-stem="计数"></div><div class="meta-card"><span><strong>考点</strong>计数</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择2</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>化学中的“计数”问题主要围绕微粒数目、化学键数目及同分异构体数目展开，核心工具为阿伏加德罗常数（$N_A$）以及有序的结构推导方法。关键知识如下：</p>
+<ul>
+<li>
+<p><strong>以物质的量为中心的微粒数计算</strong><br />
+  粒子数 $N = n \times N_A$。求 $n$ 的常见途径：<br />
+  $$n = \frac{m}{M} = \frac{V}{V_m} = c_B V_{aq} \quad (\text{气体、溶液})$$<br />
+  注意 $V_m = 22.4 \, \text{L·mol}^{-1}$ 仅适用于 <strong>标准状况（0 ℃、101 kPa）气体</strong>。</p>
+</li>
+<li>
+<p><strong>物质结构中的微粒与共价键计数</strong>  </p>
+</li>
+<li>1 mol 分子含有的原子、质子、中子、电子数 = 分子中对应总数 $\times N_A$。  </li>
+<li>有机物共价键（碳链、环、官能团）可用“总成键数/2”或碳四价原则计算。  </li>
+<li>
+<p>金刚石、二氧化硅等原子晶体的共价键需通过均摊法计算。</p>
+</li>
+<li>
+<p><strong>溶液中的粒子数</strong>  </p>
+</li>
+<li>$n = cV$，缺体积 $V$ 则无法计算离子数。  </li>
+<li>弱电解质部分电离，盐类水解导致离子数变化。  </li>
+<li>
+<p>胶体粒子是聚集体，数目远小于 $nN_A$。</p>
+</li>
+<li>
+<p><strong>氧化还原反应中的电子转移数</strong><br />
+  根据化合价变化守恒：1 mol 氧化剂或还原剂得失电子数 = 化合价变化值 $\times$ 物质的量。</p>
+</li>
+<li>
+<p><strong>同分异构体数目判断</strong>  </p>
+</li>
+<li>烷基一取代物数目 = 对应烷烃等效氢种类数（对称性）。  </li>
+<li>卤代烃、醇等碳骨架异构→位置异构→官能团异构的顺序推导。  </li>
+<li>等效氢判断原则：连在同碳上的甲基氢等效；处于镜面对称位置的氢等效。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>$N_A$ 类正误判断题——五步拆雷法</strong>  </li>
+<li>① 看物质状态：是否为气体，能否用 $22.4\,\text{L/mol}$；  </li>
+<li>② 看条件：是否是标准状况；$V$ 是气体还是液体；  </li>
+<li>③ 看组成：分子是单原子、双原子还是多原子；有无特殊结构（如白磷 P₄、臭氧 O₃）；  </li>
+<li>④ 看溶液中微粒存在形式：弱酸弱碱的电离、水解，给出 $c$ 无 $V$ 不能求 $n$；  </li>
+<li>
+<p>⑤ 看电子转移：反应是否可逆，是否完全，产物中元素化合价明确。</p>
+</li>
+<li>
+<p><strong>同分异构体数目判断——有序书写三步法</strong>  </p>
+</li>
+<li>步骤一：碳链异构。先写最长的直链，再依次缩短主链、移动支链，注意避免重复。  </li>
+<li>步骤二：位置异构。在每种碳骨架上，按“等效氢”取代，确定官能团或取代基的位置种类。  </li>
+<li>步骤三：官能团异构。检查是否还有类别异构（如醇与醚、醛与酮、酸与酯、烯烃与环烷烃等），补充计数。  </li>
+<li>
+<p>口诀：碳链由长到短，支链由整到散，位置由心到边。</p>
+</li>
+<li>
+<p><strong>烷基/一卤代物数目的快速记忆法</strong>  </p>
+</li>
+<li>甲基 1 种，乙基 1 种，丙基 2 种，丁基 4 种，戊基 8 种。  </li>
+<li>戊烷三种异构体的等效氢数：正戊烷 3 种，异戊烷 4 种，新戊烷 1 种，共 8 种，对应一氯代物。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>“22.4 L”等同“1 mol”</strong> —— 必须同时满足“标准状况”+“气体”。常见陷阱：水、SO₃、HF、苯、CCl₄、酒精等在标况下为液态或固态。  </li>
+<li><strong>未给出溶液体积</strong> —— 看到 $c(\text{mol/L})$ 没有 $V$ 直接判定无法计算粒子数。  </li>
+<li><strong>混合物看成纯净物</strong> —— 如乙烯与丙烯混合物，碳氢比恒定可用最简式，但不能直接以某一组分的分子式计原子数。  </li>
+<li><strong>同分异构体重复计数或遗漏</strong>  </li>
+<li>错误判断等效氢，将已计数的位置异构重复计算；  </li>
+<li>忽略甲基、乙基等无位置异构的情形，用“减碳法”时主链取代基位置变化未穷尽；  </li>
+<li>忘记考虑官能团异构，例如二烯烃与炔烃、醇与醚，尤其遇到分子式 $C_nH_{2n}$ 等不饱和场合。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：阿伏加德罗常数正误判断（2011·新课标 第2题 改编再现）</h3>
+<p><strong>题目</strong> 设 $N_A$ 为阿伏加德罗常数的值，下列叙述正确的是（ ）<br />
+A. 1 mol 羟基（-OH）所含电子数为 $9N_A$<br />
+B. 常温常压下，2.4 L Cl₂ 与足量 NaOH 溶液反应转移电子数为 $0.1N_A$<br />
+C. pH=1 的盐酸中 $H^+$ 数目为 $0.1N_A$<br />
+D. 1 L 0.1 mol·L⁻¹ Na₂CO₃ 溶液中 $CO_3^{2-}$ 数为 $0.1N_A$</p>
+<p><strong>思路</strong> 紧扣 $N_A$ 题“五步法”：看状态（B）、缺体积（C）、水解（D），再核算电子数（A）。</p>
+<p><strong>步骤</strong><br />
+- A 项：羟基 -OH 电子数 = 8(O) + 1(H) = 9，不带电，1 mol 为 $9N_A$，正确。<br />
+- B 项：“常温常压”不是标况，2.4 L Cl₂ 的物质的量无法套用 22.4 L/mol，直接判断错误。<br />
+- C 项：pH=1 知 $c(H^+)=0.1$ mol/L，但溶液体积未知，无法算数目，错误。<br />
+- D 项：$CO_3^{2-}$ 水解生成 $HCO_3^-$ 和 $OH^-$，数目小于 $0.1N_A$，错误。  </p>
+<p><strong>点评/变式</strong> 该题集中体现 $N_A$ 类题的典型“雷区”：非标况气体、无体积的氢离子、水解消耗。复习时可将各选项相互替换，如 B 改为“标准状况下 2.24 L Cl₂”，则转移电子数为 $0.1N_A$ 变为正确（Cl₂+2NaOH→NaCl+NaClO+H₂O，1 mol Cl₂ 转移 1 mol e⁻）。A 项若改为“1 mol 氢氧根 OH⁻”则电子数为 $10N_A$。</p>
+<h3>代表题 2：分子式为 C₅H₁₁Cl 的同分异构体数目（2011·新课标 第8题 再现）</h3>
+<p><strong>题目</strong> 分子式为 C₅H₁₁Cl 的同分异构体共有（不考虑立体异构）（ ）<br />
+A. 6 种  B. 7 种  C. 8 种  D. 9 种</p>
+<p><strong>思路</strong> C₅H₁₁Cl 可看成戊烷（C₅H₁₂）的一氯代物。先写出戊烷所有碳链异构，再用等效氢法确定一氯取代物数目。</p>
+<p><strong>步骤</strong><br />
+- 戊烷碳链异构有三种：正戊烷（直链）、异戊烷（2-甲基丁烷）、新戊烷（2,2-二甲基丙烷）。<br />
+- 正戊烷：碳链对称，有 3 种等效氢（1位、2位、3位），一氯代物 3 种。<br />
+- 异戊烷：(CH₃)₂CHCH₂CH₃，4 种等效氢（支链两个甲基上的氢等效为一种，2位氢，3位亚甲基，4位甲基），一氯代物 4 种。<br />
+- 新戊烷：C(CH₃)₄，四个甲基完全对称，只有 1 种等效氢，一氯代物 1 种。<br />
+- 合计 $3 + 4 + 1 = 8$ 种，应选 C。</p>
+<p><strong>点评/变式</strong> 本题是单一官能团的典型计数，关键是戊烷异构体的正确书写和对称性判断。推广：若改为 C₅H₁₁Br 数目相同；若进一步加不饱和，需考虑烯烃的多取代位次；醇与醚互为官能团异构，C₄H₁₀O 则醇类 4 种 + 醚类 3 种 = 7 种。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2011-新课标-02.html">2011-新课标-02</a>（2011 · 中） 考查戊基氯代物的同分异构体数目分析，涉及碳链异构和位置异构的计数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/836-计数.html">计数</a></li>
+</ul>
+</div>
+</body>
+</html>

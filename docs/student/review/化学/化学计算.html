@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>化学计算</h1><div class="review-mark" data-stem="化学计算"></div><div class="meta-card"><span><strong>考点</strong>化学计算</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2014–2020</li>
+<li>出现题位：选择8 选择9</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>化学计算的核心——守恒思想</strong></li>
+<li><strong>质量守恒</strong>：反应前后各元素原子总数不变，可据此列关系式或由质量变化求未知量。</li>
+<li><strong>得失电子守恒</strong>：氧化还原反应中，氧化剂得电子总数 = 还原剂失电子总数。可直接建立物质的量关系，避免配平复杂方程式。</li>
+<li><strong>电荷守恒</strong>：溶液或离子反应中，阳离子所带正电荷总数 = 阴离子所带负电荷总数。常用于离子方程式的缺项配平及定量计算。</li>
+<li><strong>原子守恒</strong>（物料守恒）：某一元素在反应前后总原子数不变，多步反应中可由初始原料直接确定目标产物的物质的量。</li>
+<li><strong>定量计算的核心公式</strong></li>
+<li>物质的量：$n = \frac{m}{M} = \frac{V}{V_m}$（气体，标准状况 $V_m = 22.4\ \mathrm{L\cdot mol^{-1}}$）。</li>
+<li>电解中电量与物质的量关系：$Q = It$，电子物质的量 $n(\mathrm{e}^-) = \frac{Q}{F}$ （$F \approx 96500\ \mathrm{C\cdot mol^{-1}}$）。</li>
+<li>弱酸电离常数：$K_a = \frac{[\mathrm{H}^+][\mathrm{A}^-]}{[\mathrm{HA}]}$，当 $[\mathrm{HA}] = [\mathrm{A}^-]$ 时，$K_a = [\mathrm{H}^+]$，可由分布分数曲线交点处的 pH 求 $K_a = 10^{-\mathrm{pH}}$。</li>
+<li>固体分解产物组成计算：由失重率（样品失重百分比）推断化学式，常设平均化学式 $MO_x$ 或混合物比例 $m:n$，利用质量守恒列方程求解。</li>
+<li>歧化反应：同一元素部分升高、部分降低化合价，可用电子守恒或总反应方程式快速确定各物质的计量比。</li>
+<li><strong>常见换算关系</strong></li>
+<li>$1\ \mathrm{mol}$ 电子对应电量 $96500\ \mathrm{C}$；电流 $I(\mathrm{A})$ 与时间 $t(\mathrm{s})$ 乘积为电量 $Q(\mathrm{C})$。</li>
+<li>质量分数与溶液总质量的转换：溶质质量 = 溶液总质量 × 质量分数。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审清数据，明确求解目标</strong>
+   标出已知量（质量/物质的量/质量分数/电流大小及时间/pH/失重率等）和待求量（纯量/化学式指数/比值/产率等），统一单位。</li>
+<li><strong>写出核心反应，建立定量关系</strong>
+   书写化学方程式、离子方程式或电极反应式，注意配平。对多步连续反应，优先尝试找起始反应物与最终产物的<strong>关系式</strong>。</li>
+<li><strong>选用守恒法简化计算</strong></li>
+<li>氧化还原反应优先用<strong>电子守恒</strong>：由变化元素化合价升降值直接列出电子守恒式，求物质的量。</li>
+<li>涉及溶液或电解时，考虑<strong>电荷守恒</strong>配平或求离子浓度。</li>
+<li>分解过程或失重曲线用<strong>原子守恒</strong>和<strong>质量守恒</strong>：设化学式未知数，由质量变化列方程。</li>
+<li><strong>借助公式直接计算</strong></li>
+<li>求 $K_a$：找到 $[\mathrm{HA}]=[\mathrm{A}^-]$ 的 pH 条件，$K_a = [\mathrm{H}^+]$。</li>
+<li>电解计算：$n(\mathrm{e}^-) = \frac{It}{F}$，再结合电极反应式中电子与金属的计量关系求质量。</li>
+<li>质量分数相关：整体质量 × 某组分质量分数 = 该组分质量，常用于混合物组成计算。</li>
+<li><strong>检查单位与数据保留</strong>
+   注意单位是否统一（g 与 kg，A 与 s，mol 与 mmol），最终结果按题目要求保留有效数字或取整。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位未统一</strong>：电解质计算中 $Q=It$，电流常用安培（A），时间常用秒（s），若时间给分钟需换算；质量给 kg 时与 g 混用。</li>
+<li><strong>法拉第常数 $F=96500\ \mathrm{C\cdot mol^{-1}}$ 被遗忘或错用</strong>：电解计算中忘记除以 $F$ 或乘以 $F$，导致数量级错误。</li>
+<li><strong>歧化反应得失电子判断错误</strong>：如 $\mathrm{ClO_2^-}$ 歧化生成 $\mathrm{ClO_2}$ 和 $\mathrm{Cl^-}$ 时，氯元素化合价从 +3 变为 +4 和 −1，每生成 1 mol $\mathrm{ClO_2}$ 对应消耗 $\mathrm{NaClO_2}$ 1.25 mol，易忽略氯元素另一还原分支。</li>
+<li><strong>忽略副反应和过量物质</strong>：如 $\mathrm{Cl_2}$ 通入 $\mathrm{NaOH}$ 溶液制备 $\mathrm{NaClO}$，产物同时有 $\mathrm{NaCl}$；计算时只考虑主产物导致原料氯气量偏低。</li>
+<li><strong>弱酸分布曲线读图错误</strong>：分布分数 $\delta$ 交点处两种型体浓度相等，可直接读出 $K_a$，若将 pH 换算为 $[\mathrm{H}^+]$ 时算错 10 的指数。</li>
+<li><strong>失重曲线计算设未知数不当</strong>：如 $\mathrm{PbO_2}$ 分解产物设 $\mathrm{PbO}_x$，由 Pb 原子守恒和氧原子变化列方程，误将失重率直接当成失去氧的百分比而忘记总质量变化，或未考虑生成多种固体的可能性。</li>
+<li><strong>有效数字取舍不当</strong>：题目无明确说明时，一般与给定数据的有效数字位数一致，或按要求保留整数、小数点后一位等，随意四舍五入结果不符答案。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>例1 （2020·新课标Ⅱ·8）—— 歧化反应计算与工业制备的定量分析</h3>
+<p><strong>题目</strong>（计算部分）：“二氧化氯泡腾片”有效成分为 $\mathrm{NaClO_2}$、$\mathrm{NaHSO_4}$、$\mathrm{NaHCO_3}$，生成 $\mathrm{ClO_2}$ 的反应属于歧化反应，每生成 $1\ \mathrm{mol}\ \mathrm{ClO_2}$ 消耗 $\mathrm{NaClO_2}$ 的量为 <strong><em>_</em></strong>；工业上将氯气通入 30% 的 $\mathrm{NaOH}$ 溶液制备 $\mathrm{NaClO}$，若所得溶液中 $\mathrm{NaOH}$ 的质量分数为 1%，则生产 $1000\ \mathrm{kg}$ 该溶液需消耗氯气的质量为 <strong><em>_</em></strong> kg（保留整数）。</p>
+<p><strong>思路</strong>
+- 第一空：写出 $\mathrm{ClO_2^-}$ 歧化的离子方程式，明确 $\mathrm{Cl}$ 的化合价变化：由 +3 变为 +4（$\mathrm{ClO_2}$）和 −1（$\mathrm{Cl^-}$）。用电子守恒得出反应物料比；或直接配平方程 $\mathrm{5ClO_2^- + 4H^+ = 4ClO_2\uparrow + Cl^- + 2H_2O}$，由计量数知生成 $4\ \mathrm{mol}\ \mathrm{ClO_2}$ 消耗 $5\ \mathrm{mol}\ \mathrm{NaClO_2}$，则 1 mol 消耗 $5/4=1.25\ \mathrm{mol}$。
+- 第二空：制备反应为 $\mathrm{Cl_2 + 2NaOH = NaCl + NaClO + H_2O}$。溶液总质量 $1000\ \mathrm{kg}$ 含 $\mathrm{NaOH}$ 1%，即 $10\ \mathrm{kg}$ $\mathrm{NaOH}$ 残余；初始 $\mathrm{NaOH}$ 溶液浓度为 30%，设参与反应的 $\mathrm{Cl_2}$ 质量为 $m$，则消耗的 $\mathrm{NaOH}$ 质量通过反应计量可求，利用初始 $\mathrm{NaOH}$ 总质量等于消耗量加残余量，解方程求出 $m$。</p>
+<p><strong>步骤</strong>
+- 第一空：配平歧化反应
+  $$5\mathrm{ClO_2^-} + 4\mathrm{H^+} = 4\mathrm{ClO_2}\uparrow + \mathrm{Cl^-} + 2\mathrm{H_2O}$$
+  $n(\mathrm{ClO_2}) : n(\mathrm{NaClO_2}) = 4:5$，故生成 $1\ \mathrm{mol}\ \mathrm{ClO_2}$ 需 $\frac{5}{4} = 1.25\ \mathrm{mol}\ \mathrm{NaClO_2}$。
+- 第二空：设消耗氯气 $m\ \mathrm{kg}$，$n(\mathrm{Cl_2}) = \frac{m\times10^3}{71}\ \mathrm{mol}$，
+  由反应 $\mathrm{Cl_2 + 2NaOH = NaCl + NaClO + H_2O}$，消耗 $\mathrm{NaOH}$ 物质的量 $2\times n(\mathrm{Cl_2})$，质量 $m(\mathrm{NaOH})_{\text{消耗}} = 2\times\frac{1000m}{71}\times 40\ \mathrm{g} = \frac{80000m}{71}\ \mathrm{g} = \frac{80m}{71}\ \mathrm{kg}$。
+  初始加入的 $\mathrm{NaOH}$ 溶液为 30%，设其质量为 $M\ \mathrm{kg}$，则 $\mathrm{NaOH}$ 总质量为 $0.3M$；
+  反应后溶液总质量 $1000\ \mathrm{kg}$，其中残余 $\mathrm{NaOH}$ $10\ \mathrm{kg}$，故 $0.3M = \frac{80m}{71} + 10$。
+  又根据总质量关系：$M + m = 1000\ \mathrm{kg}$（通入 $\mathrm{Cl_2}$ 全部留在溶液中，忽略气体逸出），联立解得 $m \approx 203\ \mathrm{kg}$。</p>
+<p><strong>点评/变式</strong>
+- 歧化反应可利用电子守恒快速确定系数，避免盲目配平。
+- 工业流程计算常需结合质量守恒（进出物料总量），应注意溶液总质量变化由加入物质导致。
+- 变式：若尾气中含有 $\mathrm{Cl_2}$ 回收，需重新做质量衡算。</p>
+<h3>例2 （2015·新课标Ⅱ·8）—— 电解电量与电极产物的定量计算</h3>
+<p><strong>题目</strong>：酸性锌锰干电池放电，正极 $\mathrm{MnO_2 + H^+ + e^- = MnOOH}$，持续电流 $0.5\ \mathrm{A}$，工作 $5\ \mathrm{min}$，理论消耗锌的质量为 <strong><em>_</em></strong> g（$F=96500\ \mathrm{C\cdot mol^{-1}}$）。</p>
+<p><strong>思路</strong>
+利用 $Q = It$ 计算总电量，再由 $n(\mathrm{e}^-) = \frac{Q}{F}$ 求出转移电子物质的量。锌在负极放电：$\mathrm{Zn - 2e^- = Zn^{2+}}$，由电子守恒知消耗 $n(\mathrm{Zn}) = n(\mathrm{e}^-)/2$，再换算为质量。</p>
+<p><strong>步骤</strong>
+- 时间 $t = 5\ \mathrm{min} = 300\ \mathrm{s}$，电流 $I = 0.5\ \mathrm{A}$，电量 $Q = 0.5 \times 300 = 150\ \mathrm{C}$。
+- 电子物质的量 $n(\mathrm{e}^-) = \frac{150}{96500}\ \mathrm{mol}$。
+- 由 $\mathrm{Zn \sim 2e^-}$，$n(\mathrm{Zn}) = \frac{1}{2} \times \frac{150}{96500} = \frac{75}{96500}\ \mathrm{mol}$。
+- $m(\mathrm{Zn}) = \frac{75}{96500} \times 65\ \mathrm{g} \approx 0.05\ \mathrm{g}$。</p>
+<p><strong>点评/变式</strong>
+- 法拉第常数数值较大，避免计算错误，可先保留分数，最后求数值。
+- 注意将时间换算为秒，单位统一是关键。
+- 变式：若给出电池电压或能量，需综合 $W = QU$ 等公式。</p>
+<h3>例3 （2014·新课标Ⅱ·9）—— 失重曲线推算固体产物组成</h3>
+<p><strong>题目</strong>：$\mathrm{PbO_2}$ 加热分解，失重曲线 a 点样品失重 4.0%，残留固体组成可表示为 $\mathrm{PbO}_x$ 或 $m\mathrm{PbO_2}\cdot n\mathrm{PbO}$，列式计算 $x$ 值和 $m:n$。</p>
+<p><strong>思路</strong>
+设初始 $\mathrm{PbO_2}$ 为 1 mol，质量为 $239\ \mathrm{g}$（$\mathrm{Pb}$ 207，$\mathrm{O}$ 16）。失重 4.0% 即固体质量减少 $239\times 4.0\% = 9.56\ \mathrm{g}$，对应于失去氧的质量。剩余</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a>（2020 · 中） 本题以氯的化合物为背景，考查电解原理、电离常数、歧化反应及化学计算。</li>
+<li><a href="../../exam/化学/2015-新课标Ⅱ-08.html">2015-新课标Ⅱ-08</a>（2015 · 中） 第8题考查酸性锌锰干电池原理、电极反应书写及废料回收分离操作与简单计算。</li>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a>（2014 · 中） 铅及其化合物的性质与应用，涵盖周期表位置、酸性比较、氧化还原反应、电解及热分解计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/626-化学计算.html">化学计算</a></li>
+</ul>
+</div>
+</body>
+</html>

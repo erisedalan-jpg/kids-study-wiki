@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反应物质量计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>反应物质量计算</h1><div class="review-mark" data-stem="反应物质量计算"></div><div class="meta-card"><span><strong>考点</strong>反应物质量计算</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>固体质量变化的本质</strong>：比较反应前固体物质总质量与反应后固体物质总质量的差值，即 $\Delta m = m_{\text{固后}} - m_{\text{固前}}$。</li>
+<li><strong>化学方程式定量关系</strong>：依据化学方程式，各物质的化学计量数与摩尔质量对应，固体质量的变化通过反应物和生成物中固体物质的相对分子质量总和比较得出。</li>
+<li><strong>关键反应类型</strong>：</li>
+<li>气体与固体反应（如 $H_2 + CuO \xrightarrow{\Delta} Cu + H_2O$），固体通常失氧而减重。</li>
+<li>气体与固体生成固体和气体（如 $2Na_2O_2 + 2CO_2 = 2Na_2CO_3 + O_2$），固体吸收气体中的部分原子（相当于吸收 $CO$ 部分），固体增重。</li>
+<li>固体间的置换反应（如铝热反应 $2Al + Fe_2O_3 \xrightarrow{\text{高温}} Al_2O_3 + 2Fe$），所有反应物和生成物均为固体，固体总质量不变。</li>
+<li>金属与溶液中的置换反应（如 $Zn + Cu(NO_3)_2 = Zn(NO_3)_2 + Cu$），固体反应物溶解，固体生成物析出，比较反应前后固体金属的摩尔质量，大的减重、小的增重。</li>
+<li><strong>差量法原理</strong>：固体的质量变化等于参与反应的气体的质量差（增重即结合气体部分的净质量，减重即释放出气体的净质量）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出并配平化学方程式</strong>：确定所有物质的状态（$s$, $l$, $g$, $aq$），标出其中的固体反应物和固体生成物。</li>
+<li><strong>比较固体总质量</strong>：</li>
+<li>若反应物中气体 + 固体 → 固体 + 气体，计算固体反应物与固体生成物的摩尔质量差。例如 $2Na_2O_2$（$156\,\mathrm{g \cdot mol^{-1}}$）变为 $2Na_2CO_3$（$212\,\mathrm{g \cdot mol^{-1}}$），每 $2\,\mathrm{mol}$ 固体增重 $56\,\mathrm{g}$，相当于吸收了 $2\,\mathrm{mol\ CO}$ 的质量。</li>
+<li>若全部为固体间的反应（如铝热反应），固体总质量守恒，不变。</li>
+<li>若为金属置换反应，比较反应掉的固体金属与析出的固体金属的摩尔质量：溶解 $1\,\mathrm{mol\ Zn}$（$65\,\mathrm{g}$）析出 $1\,\mathrm{mol\ Cu}$（$64\,\mathrm{g}$），固体减重 $1\,\mathrm{g}$。</li>
+<li><strong>巧用差量关系</strong>：依据气体的摩尔质量差快速判断。如 $CO_2$ 与 $Na_2O_2$ 的反应，固体增重相当于 $CO$ 质量；$H_2O(g)$ 与 $Na_2O_2$ 反应，固体增重相当于 $H_2$ 质量。</li>
+<li><strong>排除气体或溶质干扰</strong>：只关注固体成分的变化，不把生成或消耗的气体、溶液离子的质量纳入固体质量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略固体混合物总质量</strong>：铝热反应中 $Al$ 和 $Fe_2O_3$ 都是固体，生成物 $Al_2O_3$ 和 $Fe$ 也是固体，无气体参与或生成，固体总质量不变，常误判为增重或减重。</li>
+<li><strong>错误套用过氧化钠增重</strong>：$Na_2O_2$ 与 $CO_2$ 反应，气体 $CO_2$ 进入固体 $Na_2CO_3$ 中，释放 $O_2$，增重部分是 $2CO_2 - O_2$ 即 $2CO$，非简单的 $CO_2$ 全部吸收。</li>
+<li><strong>混淆金属与溶液反应中的固体变化</strong>：认为产生氢气或析出金属就增重错误。如 $Zn$ 与 $Cu(NO_3)_2$ 溶液反应，$Zn$ 溶解进入溶液，固体从 $Zn$ 变为 $Cu$，由于 $M(Zn) &gt; M(Cu)$，固体质量减小。</li>
+<li><strong>忽视状态标记</strong>：未区分反应前后的固体物质状态，将溶液中的离子或生成的液体当成固体参与质量比较。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014·新课标Ⅱ）下列反应中，反应后固体物质增重的是：<br />
+A. 氢气通过灼热的CuO粉末<br />
+B. 二氧化碳通过Na₂O₂粉末<br />
+C. 铝与Fe₂O₃发生铝热反应<br />
+D. 将锌粒投入Cu(NO₃)₂溶液</p>
+<p><strong>思路</strong><br />
+逐一分析每个选项的化学方程式，锁定反应前后的固体物质，计算或比较其摩尔质量总和，判断 $\Delta m$ 的正负。注意反应类型及气体是否参与。</p>
+<p><strong>步骤</strong><br />
+- <strong>A 选项</strong>：$H_2 + CuO \xrightarrow{\Delta} Cu + H_2O$，反应前固体只有 $CuO$（$80\,\mathrm{g \cdot mol^{-1}}$），反应后固体为 $Cu$（$64\,\mathrm{g \cdot mol^{-1}}$），固体减重 $16\,\mathrm{g}$。<br />
+- <strong>B 选项</strong>：$2CO_2 + 2Na_2O_2 = 2Na_2CO_3 + O_2$，反应前固体 $2Na_2O_2$（$156\,\mathrm{g}$），反应后固体 $2Na_2CO_3$（$212\,\mathrm{g}$），固体增重 $56\,\mathrm{g}$，相当于每 $1\,\mathrm{mol\ CO_2}$ 反应，固体增重 $28\,\mathrm{g\ (CO)!}$，固体增重。<br />
+- <strong>C 选项</strong>：$2Al + Fe_2O_3 \xrightarrow{\text{高温}} Al_2O_3 + 2Fe$，反应物 $Al$ 和 $Fe_2O_3$ 皆为固体，生成物 $Al_2O_3$ 和 $Fe$ 也是固体，根据质量守恒定律，固体总质量不变，不增重也不减重。<br />
+- <strong>D 选项</strong>：$Zn + Cu(NO_3)_2 = Zn(NO_3)_2 + Cu$，反应前固体 $Zn$（$65\,\mathrm{g \cdot mol^{-1}}$），反应后固体 $Cu$（$64\,\mathrm{g \cdot mol^{-1}}$），$1\,\mathrm{mol}$ 反应固体减重 $1\,\mathrm{g}$。<br />
+故反应后固体物质增重的是 B。</p>
+<p><strong>点评/变式</strong><br />
+此题为典型的质量变化判别，核心是准确写出方程式并明确固体成分。变式可改为“反应后固体质量减小的是”或“固体质量不变的是”，可扩展至 $Na_2O_2$ 与水蒸气、$Fe$ 与 $CuSO_4$ 溶液等反应，均可依据同样的比较策略快速作答。注意铝热反应易错判为增重，务必抓住固体总质量守恒的关键点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-03.html">2014-新课标Ⅱ-03</a>（2014 · 易） 本题通过分析固体物质在化学反应前后的质量变化判断增重情况。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/645-反应物质量计算.html">反应物质量计算</a></li>
+</ul>
+</div>
+</body>
+</html>

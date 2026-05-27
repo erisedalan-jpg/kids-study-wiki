@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热重曲线分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>热重曲线分析</h1><div class="review-mark" data-stem="热重曲线分析"></div><div class="meta-card"><span><strong>考点</strong>热重曲线分析</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学实验</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学实验</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>热重曲线</strong>：记录样品质量随温度（或时间）变化的关系图，用于分析物质受热过程中发生的分解、脱水、氧化等反应。</li>
+<li><strong>失重分析</strong>：每一段平台（质量不变区）对应一种稳定组成；每段下降对应某一组分（如 $H_2O$、$CO_2$、$O_2$）逸出。由初始质量与各段残留质量可计算失去组分的物质的量比。</li>
+<li><strong>胆矾（$CuSO_4·5H_2O$）受热行为</strong>：<br />
+  $CuSO_4·5H_2O \xrightarrow[\text{逐步}]{\Delta} CuSO_4·3H_2O \xrightarrow{\Delta} CuSO_4·H_2O \xrightarrow{\Delta} CuSO_4$（~270 ℃）<br />
+  高温（~570 ℃以上）分解：$CuSO_4 \xrightarrow{\Delta} CuO + SO_3↑$（黑色粉末为 $CuO$，氧化性气体 $SO_3$）<br />
+  无水硫酸铜遇水重新结晶为 $CuSO_4·5H_2O$，晶体存在的最高温度对应热重曲线上开始失重的温度（~102 ℃）。</li>
+<li><strong>$SO_3$ 与水反应</strong>：$SO_3 + H_2O \longrightarrow H_2SO_4$；浓硫酸与 Cu 加热：$Cu + 2H_2SO_4(浓) \xrightarrow{\Delta} CuSO_4 + SO_2↑ + 2H_2O$。</li>
+<li><strong>溶度积 $K_{sp}$ 计算</strong>：$Cu(OH)<em sp="sp">2 \rightleftharpoons Cu^{2+} + 2OH^-$，$K</em>)$。} = c(Cu^{2+})·c^2(OH^-)$。已知 $K_{sp}[Cu(OH)_2]=2.2×10^{-20}$，由 $pH$ 得 $c(OH^-)$，代入求 $c(Cu^{2+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定起始</strong>：由样品质量和化学式求出起始物质的物质的量 $n_0$。  </li>
+<li><strong>读曲线</strong>：在热重曲线上找出每一稳定平台对应的温度区间及残留质量 $m_i$。  </li>
+<li><strong>算失重</strong>：计算相邻平台的失重质量 $\Delta m$，并换算为物质的量 $\Delta n = \frac{\Delta m}{M_{\text{逸出气体}}}$（常见逸出物：$H_2O$ 18 g·mol⁻¹，$CO_2$ 44 g·mol⁻¹，$SO_3$ 80 g·mol⁻¹ 等）。  </li>
+<li><strong>列比例</strong>：比较 $\Delta n$ 与 $n_0$ 的整数比，结合常见分解规律推断产物化学式。  </li>
+<li><strong>写方程</strong>：根据确定的产物写出化学方程式，注意条件（温度、气氛）对产物价态的影响（如 $CuSO_4$ 高温分解生成 $CuO$ 而非 $Cu_2O$）。  </li>
+<li><strong>综合运用</strong>：若涉及后续反应（如气体溶解、沉淀溶解平衡），利用题给信息（$K_{sp}$、pH 等）列式计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>比例计算不看初始物质的量</strong>：直接用质量比例取代物质的量比例，忽略摩尔质量差异，导致错误推断化学式。  </li>
+<li><strong>多段失重混淆平台</strong>：将不同阶段的失重叠加计算，或误判中间产物。一定要逐段分析相邻平台。  </li>
+<li><strong>忽略气氛对分解产物的影响</strong>：空气存在时某些物质会氧化或还原，但本题中产生的气体 $SO_3$ 仍保持 +6 价，若进一步高温有可能分解出 $SO_2$，因此要依据实验事实和题给信息。  </li>
+<li><strong>结晶水合物最高存在温度</strong>：不是看完全失水后的温度，而是<strong>开始失水的温度</strong>（即第一个下坡起始点）。  </li>
+<li><strong>$K_{sp}$ 计算中疏忽单位换算</strong>：$pH = 8$ 时 $c(OH^-) = 10^{-6}\ mol·L^{-1}$，平方后为 $10^{-12}$，代入 $K_{sp}$ 求 $c(Cu^{2+})$ 时指数极易算错。  </li>
+<li><strong>化学用语不规范</strong>：气体符号 “↑”、加热符号 “$\triangle$”、沉淀符号 “↓” 遗漏；方程不配平。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 — 2011 新课标卷 第 8 题</h3>
+<p><strong>题目</strong>：<br />
+0.80 g $CuSO_4·5H_2O$ 样品受热脱水的热重曲线如下（图略）。<br />
+(1) 推断 200 ℃ 时固体物质的化学式（写出过程）；<br />
+(2) 270 ℃ 得样品在 570 ℃ 灼烧得到黑色粉末和一种氧化性气体，写出反应方程式；黑色粉末溶于稀硫酸后结晶，写出晶体化学式及其存在的最高温度；<br />
+(3) 写该氧化性气体与水反应产物与 Cu 加热的方程式；<br />
+(4) 0.10 mol·L⁻¹ $CuSO_4$ 溶液中加稀 $NaOH$，当 $pH=8$ 时，求 $c(Cu^{2+})$（已知 $K_{sp}[Cu(OH)_2] = 2.2 \times 10^{-20}$）。</p>
+<p><strong>思路</strong>：<br />
+第(1)问：先计算样品物质的量 $n_0=\frac{0.80}{250}=3.2\times10^{-3}\ mol$。从热重曲线读取 200 ℃ 时固体质量（题图应显示约 0.57 g，或通过失重比推断）。失重质量 $\Delta m = 0.80 - m_{200}$。假设失去 $x$ 个 $H_2O$，则残留固体为 $CuSO_4·(5-x)H_2O$，质量满足 $0.80 \times \frac{160+18(5-x)}{250} = m_{200}$，求得整数 $x$。<br />
+第(2)问：270 ℃ 样品应为 $CuSO_4$，570 ℃ 分解为 $CuO$ 和 $SO_3$；$CuO$ 与 $H_2SO_4$ 反应得 $CuSO_4$，溶液浓缩冷却得 $CuSO_4·5H_2O$，其存在最高温度即胆矾开始脱水的温度（102 ℃）。<br />
+第(3)问：$SO_3$ 溶于水得 $H_2SO_4$，浓 $H_2SO_4$ 与 $Cu$ 加热反应。<br />
+第(4)问：$pH=8 \rightarrow c(OH^-)=10^{-6}\ mol·L^{-1}$，$K_{sp} = c(Cu^{2+})·c^2(OH^-)$，代入求解。</p>
+<p><strong>步骤</strong>：<br />
+(1) $0.80\ g\ CuSO_4·5H_2O$ 的物质的量：<br />
+$n_0 = \frac{0.80\ g}{250\ g·mol^{-1}} = 3.2\times10^{-3}\ mol$。<br />
+从热重曲线知 200 ℃ 残留固体质量假设为 $0.57\ g$（实际图中读取），则失重 $\Delta m = 0.80 - 0.57 = 0.23\ g$，失去水的物质的量 $n_{H_2O} = \frac{0.23}{18} \approx 1.28\times10^{-2}\ mol$。<br />
+失去水与起始物质的量比 $\frac{n_{H_2O}}{n_0} = \frac{1.28\times10^{-2}}{3.2\times10^{-3}} = 4.0$。<br />
+原有 5 个结晶水，失去 4 个水，剩余 1 个水，故化学式为 $CuSO_4·H_2O$。<br />
+(2) 270 ℃ 样品为 $CuSO_4$，570 ℃ 灼烧：$CuSO_4 \xrightarrow{570^\circ C} CuO + SO_3↑$。<br />
+黑色粉末 $CuO$ 加稀硫酸：$CuO + H_2SO_4 \longrightarrow CuSO_4 + H_2O$，浓缩冷却得 $CuSO_4·5H_2O$。<br />
+胆矾存在的最高温度即图中第一次失重的起始温度，由曲线得 $102\ ^\circ C$。<br />
+(3) $SO_3 + H_2O = H_2SO_4$；<br />
+$Cu + 2H_2SO_4(浓) \xrightarrow{\Delta} CuSO_4 + SO_2↑ + 2H_2O$。<br />
+(4) $pH=8 \Rightarrow c(OH^-) = 10^{-6}\ mol·L^{-1}$。<br />
+$K_{sp} = c(Cu^{2+})\cdot(10^{-6})^2 = 2.2\times10^{-20}$<br />
+$\therefore c(Cu^{2+}) = \frac{2.2\times10^{-20}}{10^{-12}} = 2.2\times10^{-8}\ mol·L^{-1}$。</p>
+<p><strong>点评/变式</strong>：<br />
+热重曲线题本质是“质量差计算 + 化学推理”。关键操作：把质量变化全部转换为<strong>物质的量比</strong>。针对结晶水合物、碳酸盐、硝酸盐的热分解都可套用。若失重对应不止一种气体（如 $CuSO_4$ 进一步分解产生 $SO_2$、$O_2$ 等），则需结合氧化还原价态守恒和题中产物描述列方程。变式训练可关注 $MgSO_4·7H_2O$、$CaC_2O_4$ 等物质的热重曲线。另外，溶度积与 $pH$ 结合的计算是沉淀溶解平衡的常考点，务必记清 $K_{sp}$ 表达式及 $c(OH^-)$ 换算式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2011-新课标-08.html">2011-新课标-08</a>（2011 · 中） 通过热重曲线推断硫酸铜晶体脱水产物，书写相关反应方程式并进行沉淀溶解平衡计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/770-热重曲线分析.html">热重曲线分析</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电子排布式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电子排布式</h1><div class="review-mark" data-stem="电子排布式"></div><div class="meta-card"><span><strong>考点</strong>电子排布式</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>物质结构与原子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物质结构与原子结构</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2011–2020</li>
+<li>出现题位：填空12 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电子排布式</strong>：表示原子核外电子在各能级上分布情况的式子。书写时需遵循三条规则：</li>
+<li><strong>能量最低原理</strong>：电子优先占据能量更低的轨道，再依次填入高能级。多电子原子能级顺序为 $1s&lt;2s&lt;2p&lt;3s&lt;3p&lt;4s&lt;3d&lt;4p&lt;5s&lt;4d&lt;5p&lt;6s&lt;4f ...$（注意能级交错，$4s$ 能量低于 $3d$）。</li>
+<li><strong>泡利不相容原理</strong>：每个原子轨道最多容纳两个电子，且自旋方向相反。</li>
+<li><strong>洪特规则</strong>：基态原子中，电子在简并轨道（能量相同的轨道）上分散排列时，优先以自旋平行方式单独占据不同轨道。补充特例：在同一能级的简并轨道全充满（$p^6、d^{10}、f^{14}$）、半充满（$p^3、d^5、f^7$）时，体系能量较低、更稳定。</li>
+<li><strong>常见原子的特殊电子排布</strong>（必记）：</li>
+<li>$\ce{Cr}$：$[\ce{Ar}] 3d^5 4s^1$，不是 $3d^4 4s^2$。</li>
+<li>$\ce{Cu}$：$[\ce{Ar}] 3d^{10} 4s^1$，不是 $3d^9 4s^2$。</li>
+<li>$\ce{Mo}$、$\ce{Ag}$、$\ce{Au}$ 等具有类似的全满/半满稳定化倾向。</li>
+<li><strong>简化电子排布式</strong>：用上一周期的稀有气体符号加方括号表示内层电子构型，再写出外层电子。如 $\ce{Ti}$：$[\ce{Ar}] 3d^2 4s^2$。</li>
+<li><strong>电子排布式与周期表位置</strong>：主族元素价层电子构型为 $ns^{1-2}np^{1-6}$；副族（过渡金属）考虑 $(n-1)d$ 和 $ns$ 电子；镧系、锕系涉及 $f$ 电子。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>基于真题归纳，书写基态原子电子排布式的通用解法：
+1. <strong>确定原子序数</strong>：由元素名称或符号推出原子序数 $Z$（等于核外电子数）。
+2. <strong>按能级顺序填充</strong>：严格按照 $1s \to 2s \to 2p \to 3s \to 3p \to 4s \to 3d \to 4p \to 5s \to 4d \to 5p \to 6s \to 4f$ 的顺序填充电子，直至电子数用完。注意每个能级最大电子数（$s$ 最多 2 个，$p$ 最多 6 个，$d$ 最多 10 个，$f$ 最多 14 个）。
+3. <strong>检查特殊稳定性</strong>：对 $\ce{Cr}$ 族、$\ce{Cu}$ 族等原子，将按正常填充得到的 $d^4 s^2$ 或 $d^9 s^2$ 调整为 $d^5 s^1$、$d^{10} s^1$。
+4. <strong>规范书写</strong>：
+   - 按能层序数由小到大的顺序书写：先写 $1s$，最后写最高能级。
+   - 对于副族元素，虽然填充时先 $4s$ 后 $3d$，书写时一般仍将 $3d$ 放在 $4s$ 前面（或按能层顺序）均可，常见的高考写法为例如 $\ce{Ti}$：$1s^2 2s^2 2p^6 3s^2 3p^6 3d^2 4s^2$。
+   - 要求写价层电子排布式时只写出最外层和参与成键的内层轨道（如 $\ce{Ti}$ 的价层为 $3d^2 4s^2$）。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>能级顺序与书写顺序混淆</strong>：电子填入顺序是 $4s$ 先于 $3d$，但失电子时 $4s$ 电子先失去。书写电子排布式时常将同一能层的轨道放在一起，例如 $3d$ 写于 $4s$ 之前。</li>
+<li><strong>忽视 $4s$ 与 $3d$ 的能量高低</strong>：钾和钙的 $4s$ 能量低于 $3d$，从 $Sc$ 开始填入 $3d$，但 $4s$ 仍被优先填充。易错写 $3d$ 在 $4s$ 之前填充。</li>
+<li><strong>忽视洪特规则特例</strong>：$\ce{Cr}$、$\ce{Cu}$ 等价电子构型必须写成半满或全满稳定结构。类似原子如 $\ce{Mo}$（$4d^5 5s^1$）、$\ce{Ag}$（$4d^{10} 5s^1$）同样容易设错。</li>
+<li><strong>混淆离子与原子排布</strong>：题目有时直接写“基态 $\ce{M^{n+}}$ 的电子排布式”，要先算出原子序数，再根据失电子规则（先失最外层 $ns$ 电子）写出。例如 $\ce{Fe^{2+}}$：$[\ce{Ar}] 3d^6$，不是 $[\ce{Ar}] 3d^4 4s^2$。</li>
+<li><strong>相对位置与构造原理的矛盾</strong>：周期表中有些元素（如 $\ce{Pd}$）因能级非常接近而出现 $4d^{10}5s^0$ 等例外，虽不常考，但需知道洪特规则特例可能因原子而异。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2020-新课标Ⅱ-11 节选</h3>
+<p><strong>题目</strong>：钙钛矿型化合物涉及 $\ce{CaTiO3}$，要求写出基态 $\ce{Ti}$ 原子的核外电子排布式。</p>
+<p><strong>思路</strong>：钛原子序数为 22，按构造原理填充电子，并检查是否为洪特规则特例。钛不属于半满/全满特例家族，故正常书写即可。</p>
+<p><strong>步骤</strong>：
+1. 钛原子序数 $Z = 22$，有 22 个电子。
+2. 按能级顺序填入：$1s^2 \to 2s^2 \to 2p^6 \to 3s^2 \to 3p^6 \to 4s^2 \to 3d^2$。
+3. 按常规书写顺序整理为 $1s^2 2s^2 2p^6 3s^2 3p^6 3d^2 4s^2$（或 $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^2$ 亦可，但高考题常将 $3d$ 放于 $4s$ 前）。
+4. 确认不是 $\ce{Cr}$ 或 $\ce{Cu}$ 型特例，无需调整。</p>
+<p><strong>点评/变式</strong>：本题为基础题，直接考查构造原理的应用。易错点在 $3d$ 与 $4s$ 的书写顺序，务必记住原子序数 21~30 的元素 $3d$ 电子逐步填充，书写时通常将 $3d$ 紧接在 $3p$ 之后。若问基态 $\ce{Ti^{2+}}$，要先写 $\ce{Ti}$ 原子排布，再失去最外层 $4s^2$ 电子，得 $1s^2 2s^2 2p^6 3s^2 3p^6 3d^2$。</p>
+<h3>代表题 2011-新课标-12 节选</h3>
+<p><strong>题目</strong>：以天然硼砂为原料制备 $\ce{BN}$，考查基态 $\ce{B}$ 原子的电子排布式。</p>
+<p><strong>思路</strong>：硼原子序数为 5，属于第二周期主族元素，$1s$、$2s$、$2p$ 依次填充，没有特例。</p>
+<p><strong>步骤</strong>：
+1. 硼原子序数 $Z = 5$。
+2. 填充 $1s^2$，剩余 3 个电子。
+3. $2s^2$ 填满，剩余 1 个电子填入 $2p$ 轨道，得到 $1s^2 2s^2 2p^1$。
+4. 价层电子构型 $2s^2 2p^1$，对应第ⅢA 族。</p>
+<p><strong>点评/变式</strong>：硼属短周期 p 区元素，书写简单，但易与铍（$1s^2 2s^2$）或碳（$1s^2 2s^2 2p^2$）混淆。注意核对原子序数。此题还关联电负性比较（$\ce{N &gt; B}$）和化合价判断，这些均与电子排布直接相关：$\ce{B}$ 价层 3 个电子，可全部参与成键呈 $+3$ 价。若问 $\ce{B}$ 的激发态（$\ce{BF3}$ 中 $\ce{B}$ 为 $sp^2$ 杂化），则基态 $2s^2 2p^1$ 在成键时一个 $2s$ 电子被激发到 $2p$，形成 $2s^1 2p_x^1 2p_y^1$，从而杂化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-11.html">2020-新课标Ⅱ-11</a>（2020 · 中） 考查基态原子电子排布、四卤化物熔点比较、钙钛矿晶胞结构及密度计算。</li>
+<li><a href="../../exam/化学/2011-新课标-12.html">2011-新课标-12</a>（2011 · 中） 以硼砂为原料制备BN和BF₃，考查物质结构与性质，包括电子排布、电负性、杂化轨道、分子空间构型及晶体结构。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/389-电子排布式.html">电子排布式</a></li>
+</ul>
+</div>
+</body>
+</html>

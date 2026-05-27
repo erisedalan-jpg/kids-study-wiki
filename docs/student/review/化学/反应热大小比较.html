@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反应热大小比较</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>反应热大小比较</h1><div class="review-mark" data-stem="反应热大小比较"></div><div class="meta-card"><span><strong>考点</strong>反应热大小比较</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>反应热（焓变 $\Delta H$）：符号正负规定——吸热反应 $\Delta H&gt;0$，放热反应 $\Delta H&lt;0$。宏观现象上，溶解后溶液温度降低为吸热，温度升高为放热。</li>
+<li>盖斯定律：反应热仅取决于始态和终态，与途径无关。可以将几个已知反应热的热化学方程式像代数式一样进行线性组合，得到目标反应的 $\Delta H$。叠加时须注意物质状态一致。</li>
+<li>溶解热：物质溶解于水包含晶格破坏（吸热）和离子/分子水合（放热）等过程，总效应可能吸热或放热。如 $\ce{CuSO4·5H2O(s)}$ 溶于水吸热，$\ce{CuSO4(s)}$ 溶于水放热。</li>
+<li>结晶水合物的分解与溶解：通过设计循环（如 $\ce{CuSO4·5H2O(s)}$ 溶解 → 先分解再溶解无水物），可利用盖斯定律建立热效应关系 $\Delta H_1 = \Delta H_3 + \Delta H_2$。</li>
+<li>反应热大小比较务必带符号比较，并充分运用叠加关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判符号</strong>：根据题干描述的温度变化确定各过程的吸放热符号（升温→放热 $\Delta H&lt;0$，降温→吸热 $\Delta H&gt;0$）。</li>
+<li><strong>写方程</strong>：准确写出各过程的热化学方程式，标明每种物质的状态（s、l、g、aq）和计量数，确保终态一致以便叠加。</li>
+<li><strong>用盖斯</strong>：分析已知反应与目标反应的关系，通过“反应叠加”得出热效应的代数等式。常见叠加模式：<br />
+   若 $ \text{Reaction}_1 = \text{Reaction}_3 + \text{Reaction}_2 $，则 $ \Delta H_1 = \Delta H_3 + \Delta H_2 $。</li>
+<li><strong>比大小</strong>：将选项涉及的 $\Delta H$ 用已知的等式和符号进行转换，判断关系正误。要利用放热 $\Delta H&lt;0$，吸热 $\Delta H&gt;0$ 以及等式进行推理。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>温度变化与吸放热混淆</strong>：温度降低是体系向环境吸热，$\Delta H&gt;0$；温度升高是体系放热，$\Delta H&lt;0$。容易想反。</li>
+<li><strong>忽略状态叠加错误</strong>：仅凭借模糊的印象直接比较大小，而没有用盖斯定律写出严谨的叠加关系，导致错选。</li>
+<li><strong>符号错误</strong>：比较 $\Delta H$ 时不带符号，只比绝对值，或者错误认为放热的 $\Delta H$ 值比吸热的大。必须是带正负号的数值比较。</li>
+<li><strong>漏写或错写状态</strong>：热化学方程式中的水是液态还是气态，CuSO₄是固体、溶液还是水合物，都会影响盖斯定律的应用，不可忽视。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2014-新课标Ⅱ-07</h3>
+<p><strong>题目</strong>：室温下将 1 mol $\ce{CuSO4·5H2O(s)}$ 溶于水使溶液温度降低，热效应 $\Delta H_1$；将 1 mol $\ce{CuSO4(s)}$ 溶于水使溶液温度升高，热效应 $\Delta H_2$；$\ce{CuSO4·5H2O(s)}$ 受热分解：$\ce{CuSO4·5H2O(s) ═ CuSO4(s) + 5H2O(l)}$，热效应 $\Delta H_3$。判断下列哪个选项正确（A. $\Delta H_2 &gt; \Delta H_3$ B. $\Delta H_1 &gt; \Delta H_3$ C. $\Delta H_1 = \Delta H_2 + \Delta H_3$ D. $\Delta H_1 + \Delta H_2 &gt; \Delta H_3$）。</p>
+<p><strong>思路</strong>：先由温度变化定吸放热符号，再根据终态都是 $\ce{Cu^{2+}(aq) + SO4^{2-}(aq) + 5H2O(l)}$ 写出溶解过程，利用盖斯定律叠加得到 $\Delta H_1, \Delta H_2, \Delta H_3$ 的关系，进而验证选项。</p>
+<p><strong>步骤</strong>：
+1. 胆矾溶解降温 → 吸热，$\Delta H_1 &gt; 0$；无水硫酸铜溶解升温 → 放热，$\Delta H_2 &lt; 0$。
+2. 热化学方程式：
+   - ① $\ce{CuSO4·5H2O(s) -&gt; Cu^{2+}(aq) + SO4^{2-}(aq) + 5H2O(l)}$，$\Delta H_1$
+   - ② $\ce{CuSO4(s) -&gt; Cu^{2+}(aq) + SO4^{2-}(aq)}$，$\Delta H_2$
+   - ③ $\ce{CuSO4·5H2O(s) -&gt; CuSO4(s) + 5H2O(l)}$，$\Delta H_3$
+  观察可知：反应① = 反应③ + 反应②（先分解为无水物再溶解）。因此 $\Delta H_1 = \Delta H_3 + \Delta H_2$。
+3. 核对选项：C 项 $\Delta H_1 = \Delta H_2 + \Delta H_3$ 正确。
+   - 由 $\Delta H_3 = \Delta H_1 - \Delta H_2$，$\Delta H_2&lt;0$，所以 $\Delta H_3 = \Delta H_1 + |\Delta H_2| &gt; \Delta H_1$，B 错误。
+   - $\Delta H_2&lt;0$，$\Delta H_3&gt;0$，显然 $\Delta H_2 &gt; \Delta H_3$ 不成立，A 错。
+   - $\Delta H_1 + \Delta H_2 = \Delta H_3 + 2\Delta H_2$，由于 $\Delta H_2&lt;0$，$2\Delta H_2&lt;0$，故 $\Delta H_1 + \Delta H_2 &lt; \Delta H_3$，D 错。</p>
+<p><strong>点评/变式</strong>：本题通过溶解过程的终态相同，巧妙搭建了盖斯定律的循环，将分解热与两种水合程度的溶解热联系起来。解题关键在于准确写出变化终态，并利用“反应相加”导出等式。变式可拓展为给出不同结晶水合物的溶解热，求脱水过程或某步水合热的比较；也可画出能量循环图，直接读数判断。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a>（2014 · 中） 该题通过胆矾溶解、无水硫酸铜溶解及胆矾分解的热效应，利用盖斯定律比较反应热大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/876-反应热大小比较.html">反应热大小比较</a></li>
+</ul>
+</div>
+</body>
+</html>

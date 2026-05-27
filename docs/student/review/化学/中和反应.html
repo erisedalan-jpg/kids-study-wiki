@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中和反应</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>中和反应</h1><div class="review-mark" data-stem="中和反应"></div><div class="meta-card"><span><strong>考点</strong>中和反应</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>反应类型与基本反应</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：反应类型与基本反应</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>中和反应</strong>：酸与碱反应生成盐和水的反应，实质是酸电离出的 $H^+$ 与碱电离出的 $OH^-$ 结合生成弱电解质 $H_2O$：$H^+ + OH^- = H_2O$。</li>
+<li><strong>完全中和</strong>：酸和碱恰好按化学计量数完全反应，即 $n(H^+)=n(OH^-)$，此时溶液不一定呈中性（取决于盐的水解）。</li>
+<li><strong>中和热</strong>：在稀溶液中，酸与碱发生中和反应生成 $1\ \text{mol} \ H_2O$ 时所放出的热量。强酸强碱的稀溶液中和热约为 $57.3\ \text{kJ/mol}$；弱酸弱碱中和热偏低（因电离吸热）。</li>
+<li><strong>中和滴定</strong>：利用已知浓度的酸（或碱）测定未知浓度的碱（或酸）的定量分析方法。关键关系：$c_a V_a / a = c_b V_b / b$（$a,b$ 为酸、碱的元数）；指示剂选择原则：终点变色范围与滴定突跃重合，强酸强碱用甲基橙或酚酞均可，强酸滴弱碱用甲基橙，强碱滴弱酸用酚酞。</li>
+<li><strong>水的硬度与中和</strong>：水的硬度通常用 $CaO$ 或 $MgO$ 的质量表示（如 $1^\circ=10\ \text{mg} \ CaO/L$）。碱性氧化物 $CaO、MgO$ 能与酸发生中和反应：$CaO+2H^+ = Ca^{2+}+H_2O$，因此可通过酸标准液滴定水样中的碱性物质来间接测定硬度。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断反应是否恰好完全中和</strong><br />
+   计算时比较 $n(H^+)$ 与 $n(OH^-)$，注意多元酸/碱的元数，以及与金属氧化物、难溶性碱的中和（如 $CaO$ 与盐酸）。恰好中和时酸、碱的物质的量满足化学方程式中的比例。</li>
+<li><strong>离子方程式正误判断</strong><br />
+   明确“拆”与“不拆”：强酸、强碱、可溶盐拆为离子；弱酸、弱碱、难溶物质、气体、氧化物保留化学式。中和反应的实质是 $H^+ + OH^- = H_2O$，但当有沉淀或气体生成时，离子方程式应反映实际变化（如 $MgO+2H^+ = Mg^{2+}+H_2O$）。</li>
+<li><strong>中和滴定与相关计算</strong>  </li>
+<li>核心公式：$ \frac{c_1V_1}{n_1} = \frac{c_2V_2}{n_2} $，其中 $n$ 为每一分子酸或碱提供 $H^+$ 或 $OH^-$ 的数目。  </li>
+<li>由消耗酸体积及浓度求碱的量，再折算为质量、硬度等。如将 $Ca^{2+}、Mg^{2+}$ 先折算为相当于 $CaO$ 的质量，再利用 $CaO \sim 2H^+$ 等关系设计滴定计算。  </li>
+<li>指示剂选择：若滴定终点溶液呈酸性选甲基橙，呈碱性选酚酞（强酸强碱互滴两者均可）。</li>
+<li><strong>硬度的换算与中和的关联</strong><br />
+   利用定义 $1^\circ=10\ \text{mg} \ CaO/L$ 或 $7.1\ \text{mg} \ MgO/L$，把已知的 $c(Ca^{2+})、c(Mg^{2+})$ 换算为 $CaO$ 的质量：
+   $$ m(CaO) = c \cdot M \cdot V, \quad 硬度 = \frac{m(CaO)}{\pu{10 mg/^\circ}} $$
+   若由中和滴定测硬度，则：$n(CaO)=\frac{1}{2}n(H^+)$，结合取样体积与硬度定义计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>中和与中性混淆</strong>：酸碱恰好完全中和（$n(H^+)=n(OH^-)$）时溶液不一定为中性，如醋酸与氢氧化钠中和后因醋酸根水解而呈碱性。判断溶液呈中性的条件是 $c(H^+)=c(OH^-)$，不一定等于恰好中和点。</li>
+<li><strong>离子方程式中过量/少量问题</strong>：多元酸与碱的中和常因相对用量不同生成酸式盐或正盐，书写离子方程式需按量的比例配平。例如少量 $NaOH$ 与 $H_2S$ 反应：$H_2S + OH^- = HS^- + H_2O$；过量则继续中和。</li>
+<li><strong>中和热计算中的“陷阱”</strong>  </li>
+<li>弱酸或弱碱参与时，因电离吸热，$\Delta H$ 绝对值小于 $57.3\ \text{kJ/mol}$。  </li>
+<li>浓酸或浓碱稀释时伴有热效应，也会引起偏差。  </li>
+<li>计算中和热的 $\Delta H$ 时，必须以生成 $1\ \text{mol} \ H_2O$ 为基准进行折算。</li>
+<li><strong>水的硬度计算</strong>  </li>
+<li>把 $Mg^{2+}$ 折算为 $CaO$ 质量时，需用比例关系：$7.1\ \text{mg} \ MgO$ 相当于 $10\ \text{mg} \ CaO$，换算时注意物质的量之比：$n(CaO) : n(MgO) = 1:1$。  </li>
+<li>结果常以度（$^\circ$）表示，容易漏除每升水样或误乘水的体积。</li>
+<li><strong>滴定实验中操作与误差分析</strong><br />
+  滴定管未润洗、锥形瓶润洗、气泡未赶出、读数仰视/俯视等对 $c_{测} = \frac{c_{标}V_{标}}{V_{测}}$ 的影响，注意各变量变化导致的偏高或偏低判断。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2010新课标·11(4)</h3>
+<p>天然水硬度定义为每升水含 $10\ \text{mg} \ CaO$ 为 $1^\circ$，也可折算为 $7.1\ \text{mg} \ MgO$。某天然水中 $c(Ca^{2+}) = 1.2 \times 10^{-3}\ \text{mol/L}$，$c(Mg^{2+}) = 6 \times 10^{-4}\ \text{mol/L}$，求该水的硬度。</p>
+<p><strong>思路</strong><br />
+水的硬度源自钙镁离子，其定量本质是将所有硬度离子折算为相当于 $CaO$ 的质量。本题可直接用定义计算：分别由两种离子的浓度求出对应 $CaO$ 的质量再求和，最后除以每度的标准即可。此处虽未直接出现中和滴定，但体现了硬度定义与碱性氧化物 $CaO$ 的定量关系，而碱性氧化物的含量常通过中和反应测定，为后续滴定测硬度留下伏笔。</p>
+<p><strong>步骤</strong><br />
+1. 计算 $1\ \text{L}$ 水中 $Ca^{2+}$ 相当于 $CaO$ 的质量。<br />
+   $n(Ca^{2+}) = 1.2\times10^{-3} \ \text{mol}$，由 $CaO \sim Ca$ 得<br />
+   $m_1(CaO) = 1.2\times10^{-3} \ \text{mol} \times 56 \ \text{g/mol} = 0.0672 \ \text{g} = 67.2 \ \text{mg}$。
+2. 计算 $1\ \text{L}$ 水中 $Mg^{2+}$ 相当于 $CaO$ 的质量。<br />
+   由等价关系 $10\ \text{mg} \ CaO \leftrightarrow 7.1 \ \text{mg} \ MgO$，即相同物质的量时 $M(CaO):M(MgO)=56:40$。先求 $Mg^{2+}$ 对应 $MgO$ 质量：<br />
+   $n(Mg^{2+}) = 6\times10^{-4} \ \text{mol}$，$m(MgO) = 6\times10^{-4} \times 40 = 0.024 \ \text{g} = 24 \ \text{mg}$。<br />
+   再折算为 $CaO$ 质量：$m_2(CaO) = 24 \ \text{mg} \times \frac{56}{40} = 33.6 \ \text{mg}$（或直接用 $24 \ \text{mg} \times \frac{10}{7.1} \approx 33.8\ \text{mg}$，取精确值用摩尔质量比）。
+3. 总 $CaO$ 质量 $ = 67.2\ \text{mg} + 33.6\ \text{mg} = 100.8\ \text{mg}$。<br />
+   硬度 $= \frac{100.8\ \text{mg}}{10\ \text{mg/^\circ}} = 10.08^\circ \approx 10.1^\circ$。</p>
+<p><strong>点评/变式</strong><br />
+本题直接运用硬度定义进行折算，关键在于理解“相当于 $CaO$”的换算本质。变式训练：若采用 $0.0100\ \text{mol/L}$ 盐酸滴定 $100.0\ \text{mL}$ 该水样，以测定其硬度，消耗盐酸 $20.16\ \text{mL}$，验证所得硬度是否一致。（提示：$2HCl \sim CaO$，由消耗酸求 $n(CaO)$，再质量、硬度定义，结果应与计算相同$10.1^\circ$）。此题表明实际水硬度的测定可依托酸碱中和反应，将中和反应的知识与真实情境结合，是命题热点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2010-新课标-11.html">2010-新课标-11</a>（2010 · 中） 考查净水原理、水的硬度概念与计算，以及软化水的化学反应与定量计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">中和反应</a></li>
+</ul>
+</div>
+</body>
+</html>

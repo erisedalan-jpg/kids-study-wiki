@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>酸碱中和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>酸碱中和</h1><div class="review-mark" data-stem="酸碱中和"></div><div class="meta-card"><span><strong>考点</strong>酸碱中和</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>酸碱中和本质</strong>：$ \mathrm{H^+ + OH^- \rightleftharpoons H_2O} $，强酸强碱之间完全电离，反应实质是 $ \mathrm{H^+} $ 与 $ \mathrm{OH^-} $ 按物质的量 1∶1 结合。</li>
+<li><strong>pH 与浓度的关系</strong>：$ \mathrm{pH = -\lg c(H^+)} $，$ \mathrm{pOH = -\lg c(OH^-)} $，常温下 $ \mathrm{pH + pOH = 14} $。若溶液 $ \mathrm{pH}=12 $，则 $ \mathrm{c(H^+)=10^{-12}\,mol/L} $，$ \mathrm{c(OH^-)=10^{-2}\,mol/L} $。</li>
+<li><strong>混合后酸碱过量的判断</strong>：先分别求出 $ n(\mathrm{H^+}) $ 和 $ n(\mathrm{OH^-}) $，比较大小。若 $ n(\mathrm{OH^-}) &gt; n(\mathrm{H^+}) $，则碱过量，剩余 $ \mathrm{c(OH^-)} = \dfrac{n(\mathrm{OH^-}) - n(\mathrm{H^+})}{V_{\text{总}}} $；若酸过量，则用 $ \mathrm{c(H^+)} $ 计算。</li>
+<li><strong>物质的量浓度计算通式</strong>：$ c = \dfrac{n}{V} $，混合过程中 $ n $ 守恒，$ V_{\text{总}} $ 为混和后总体积（忽略体积变化时直接相加）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判过量</strong>：由混合后 $ \mathrm{pH}=12&gt;7 $ 可知碱过量，溶液显碱性，需用 $ \mathrm{c(OH^-)} $ 表征。</li>
+<li><strong>设未知</strong>：设原溶液物质的量浓度为 $ c\,\mathrm{mol/L} $，$ \mathrm{NaOH} $ 体积为 $ 3V $，$ \mathrm{HCl} $ 体积为 $ 2V $。</li>
+<li><strong>算剩余</strong>：<br />
+   $ n(\mathrm{OH^-})<em _text_始="\text{始">{\text{始}} = c \times 3V $，$ n(\mathrm{H^+})</em> = c \times 2V $，}<br />
+   剩余 $ n(\mathrm{OH^-}) = 3cV - 2cV = cV $，<br />
+   总体积 $ V_{\text{总}} = 3V + 2V = 5V $。</li>
+<li><strong>列等式</strong>：<br />
+   $ \mathrm{c(OH^-)}_{\text{余}} = \dfrac{cV}{5V} = \dfrac{c}{5} $。<br />
+   由 $ \mathrm{pH}=12 \Rightarrow \mathrm{c(OH^-)}=0.01\,\mathrm{mol/L} $，有 $ \dfrac{c}{5}=0.01 $，解得 $ c=0.05\,\mathrm{mol/L} $。</li>
+<li><strong>验选项</strong>：对照选项，$ 0.05\,\mathrm{mol/L} $ 对应 C 项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>未判过量直接用 $ \mathrm{pH} $ 反推浓度</strong>：看到 $ \mathrm{pH}=12 $ 就误以为 $ \mathrm{c(H^+)}=10^{-12}\,\mathrm{mol/L} $，再用反应掉的 $ \mathrm{H^+} $ 列式，导致错误。必须先明确过量离子。</li>
+<li><strong>体积叠加遗漏</strong>：计算剩余离子浓度时，忘记反应后溶液总体积已变为两溶液体积之和，仍用某单一原体积做分母。</li>
+<li><strong>$ \mathrm{pH} $ 与 $ \mathrm{pOH} $ 换算混乱</strong>：给 $ \mathrm{pH}=12 $ 时，$ \mathrm{c(OH^-)} $ 应为 $ 10^{-2}\,\mathrm{mol/L} $，而非 $ 10^{-12} $。常温下牢记 $ \mathrm{pH + pOH = 14} $。</li>
+<li><strong>单位忽视</strong>：$ \mathrm{pH}=12 $ 对应 $ 0.01\,\mathrm{mol/L} $，代入时直接写 $ 10^{-12} $ 会导致结果差 $ 10^{10} $ 倍。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>物质的量浓度相同的 $ \mathrm{NaOH} $ 和 $ \mathrm{HCl} $ 溶液以 3∶2 体积比相混合，所得溶液的 $ \mathrm{pH}=12 $。则原溶液的物质的量浓度为（ ）<br />
+A．0.01 mol·L⁻¹　B．0.017 mol·L⁻¹　C．0.05 mol·L⁻¹　D．0.50 mol·L⁻¹</p>
+<p><strong>思路</strong><br />
+$ \mathrm{pH}=12 $ 说明混合后碱过量，先转换为 $ \mathrm{c(OH^-)}=0.01\,\mathrm{mol/L} $。设原浓度为 $ c $，体积用比值代替，计算剩余 $ \mathrm{OH^-} $ 的量和总体积，建立方程求解 $ c $。</p>
+<p><strong>步骤</strong><br />
+设原溶液浓度为 $ c\,\mathrm{mol/L} $，取 $ \mathrm{NaOH} $ 体积 $ 3V $，$ \mathrm{HCl} $ 体积 $ 2V $。<br />
+$ n(\mathrm{NaOH}) = 3cV $，$ n(\mathrm{HCl}) = 2cV $。<br />
+发生中和 $ \mathrm{NaOH + HCl = NaCl + H_2O} $，碱剩余：<br />
+$ n(\mathrm{OH^-})<em _text_总="\text{总">{\text{余}} = 3cV - 2cV = cV $。<br />
+混合后总体积 $ V</em> = 5V $，}<br />
+$ \mathrm{c(OH^-)}_{\text{余}} = \dfrac{cV}{5V} = \dfrac{c}{5} $。<br />
+已知 $ \mathrm{pH}=12 \Rightarrow \mathrm{pOH}=2 \Rightarrow \mathrm{c(OH^-)}=0.01\,\mathrm{mol/L} $，<br />
+所以 $ \dfrac{c}{5} = 0.01 $，解得 $ c = 0.05\,\mathrm{mol/L} $，选 C。</p>
+<p><strong>点评/变式</strong><br />
+本题用“体积比”代替具体体积，巧妙消去 $ V $，是酸碱中和计算中的经典模式。<br />
+- <strong>变式 1</strong>：同浓度 $ \mathrm{H_2SO_4} $ 与 $ \mathrm{NaOH} $ 混合，需注意二元酸提供 $ 2 $ 倍 $ \mathrm{H^+} $。<br />
+- <strong>变式 2</strong>：已知混合后 $ \mathrm{pH}=2 $（酸过量），思路对称，改用剩余 $ \mathrm{c(H^+)} $ 列式。<br />
+- <strong>变式 3</strong>：由已知浓度反推体积比，只需将 $ c $ 视为已知，设体积比 $ x:y $ 列方程。<br />
+核心口诀：<strong>判过量→算余量→加总体→定浓度</strong>。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2008-全国Ⅱ-04.html">2008-全国Ⅱ-04</a>（2008 · 中） 酸碱混合pH计算，利用过量碱的浓度反推原溶液物质的量浓度</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">酸碱中和</a></li>
+</ul>
+</div>
+</body>
+</html>

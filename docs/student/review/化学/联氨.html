@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>联氨</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>联氨</h1><div class="review-mark" data-stem="联氨"></div><div class="meta-card"><span><strong>考点</strong>联氨</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>元素化合物</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：元素化合物</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分子结构与物理性质</strong><br />
+  联氨（肼）分子式 $N_2H_4$，结构简式 $H_2N-NH_2$，每个 $N$ 原子采取 $sp^3$ 杂化，分子中 $N-N$ 单键可旋转，存在孤对电子，为极性分子。常温下为无色油状液体，能与水、乙醇混溶，分子间氢键作用强，沸点（$113.5\ ^\circ\text{C}$）高于 $NH_3$。</li>
+<li><strong>弱碱性</strong><br />
+  联氨为二元弱碱，分步结合水中的 $H^+$：<br />
+  $$
+  \begin{aligned}
+  N_2H_4 + H_2O &amp;\rightleftharpoons N_2H_5^+ + OH^-,\quad K_{\text{b1}} \approx 8.7\times 10^{-7} \
+  N_2H_5^+ + H_2O &amp;\rightleftharpoons N_2H_6^{2+} + OH^-,\quad K_{\text{b2}} \ll K_{\text{b1}}
+  \end{aligned}
+  $$
+  碱性弱于氨。其盐类如 $N_2H_6SO_4$、$N_2H_5Cl$ 等常见。</li>
+<li><strong>还原性与火箭燃料</strong><br />
+  联氨有强还原性，被 $O_2$、$H_2O_2$、$N_2O_4$、卤素等氧化，产物通常为 $N_2$ 和水，大量放热：<br />
+  $$ N_2H_4(l) + O_2(g) \rightarrow N_2(g) + 2H_2O(g),\quad \Delta H &lt;0 $$
+  与 $N_2O_4$ 的反应常用于火箭推进剂：<br />
+  $$ 2N_2H_4(l) + N_2O_4(l) \rightarrow 3N_2(g) + 4H_2O(g) $$</li>
+<li><strong>制备方法</strong><br />
+  实验室及工业常用拉希法：用 $NaClO$ 氧化 $NH_3$：<br />
+  $$ 2NH_3 + NaClO \rightarrow N_2H_4 + NaCl + H_2O $$
+  该过程需控制条件防过度氧化。</li>
+<li><strong>用途与燃料电池</strong><br />
+  锅炉除氧剂（还原性）、火箭燃料、药物原料等。在碱性燃料电池中：<br />
+  负极（燃料极）：$ N_2H_4 + 4OH^- - 4e^- \rightarrow N_2\uparrow + 4H_2O $<br />
+  正极（空气极）：$ O_2 + 2H_2O + 4e^- \rightarrow 4OH^- $<br />
+  总反应：$ N_2H_4 + O_2 \rightarrow N_2 + 2H_2O $</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>热化学方程式与盖斯定律</strong>  </li>
+<li>利用已知反应的 $\Delta H$，通过加减、翻倍等方式构造目标反应，注意各物质计量数、状态一致。  </li>
+<li>联氨与 $N_2O_4$ 的反应常设计成由 $N_2$、$H_2O$、$O_2$ 等的生成焓组合而得。</li>
+<li><strong>燃料电池电极反应书写</strong>  </li>
+<li>确定介质（酸性/碱性/熔融）。联氨电池常见碱性介质。  </li>
+<li>负极：燃料失电子，碱中用 $OH^-$ 平衡电荷，酸性用 $H^+$，产物为 $N_2$，不要误写成 $NH_3$ 或 $NO_x$。  </li>
+<li>正极：$O_2$ 得电子，碱中水配平出 $OH^-$，酸中 $H^+$ 配平出水。  </li>
+<li>总反应合并时电子守恒，中间活性粒子抵消。</li>
+<li><strong>弱电解质电离平衡与 $pH$ 计算</strong>  </li>
+<li>联氨二元弱碱，第一步电离为主。已知 $K_{\text{b1}}$ 和浓度，可用近似公式 $[OH^-] \approx \sqrt{K_{\text{b1}}\cdot c}$ 计算，再求 $pH$。  </li>
+<li>注意温度影响：水离子积 $K_w$ 随温度变化，$25\ ^\circ\text{C}$ 时 $K_w=1\times 10^{-14}$，其他温度需换算。</li>
+<li><strong>氧化还原反应分析</strong>  </li>
+<li>判断联氨作还原剂时被氧化的程度：通常被氧化为 $N_2$（0价），有时被弱氧化剂氧化为 $NH_3$（-3价）或 $HN_3$ 等。  </li>
+<li>配平时利用电子守恒、电荷守恒，介质不同补 $H^+/OH^-/H_2O$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>联氨碱性比氨弱，但分子间氢键更强，沸点更高，答“氨的沸点更高”是常见错误。</li>
+<li>燃料电池负极产物写成 $NO_2$、$HNO_3$ 等，未注意到联氨被完全氧化到 $N_2$。</li>
+<li>写电离平衡时误以为 $N_2H_4$ 一元碱，或忽略第二步电离极弱，$N_2H_6^{2+}$ 只存在于强酸性条件。</li>
+<li>盖斯定律计算时忽略物质状态（$l$，$g$）导致 $\Delta H$ 偏差。</li>
+<li>碱性介质中电极方程错用 $H^+$ 配平，或漏写 $OH^-$ 导致电荷不守恒。</li>
+<li>联氨与 $N_2O_4$ 反应的热化学方程不配平或漏写 $\Delta H$ 符号、单位。</li>
+<li>书写电子式时 $N$ 未满足八电子，或忘记孤对电子。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题</strong> 2016-新课标Ⅱ-08</h3>
+<p><strong>题目</strong> 简述：联氨（$N_2H_4$）的性质与反应原理考查，包含电子式、沸点比较、热化学、燃料电池、电离平衡计算。<br />
+<strong>思路</strong><br />
+1. 电子式由原子连接方式确定，注意 $N$、$H$ 孤对电子和共用电子对；沸点比较从氢键和分子间作用力切入。<br />
+2. 目标热化学方程由已知热化学方程组合，使用盖斯定律。<br />
+3. 燃料电池电极反应先判断介质，根据氧化还原规则书写。<br />
+4. 电离平衡计算联氨溶液 $pH$，运用 $K_{\text{b1}}$ 近似。<br />
+<strong>步骤</strong><br />
+1. <strong>电子式与沸点</strong>：电子式为  </p>
+<p>$$
+   H!:!\underset{\displaystyle\cdot\cdot}{N}!:!\underset{\displaystyle\cdot\cdot}{N}!:!H \
+   \ \ \ \ H\ \ \ \ \ H
+   $$
+   联氨分子间氢键数目多于氨（两 $-NH_2$），故沸点 $113.5\ ^\circ\text{C} &gt; -33.5\ ^\circ\text{C}$。<br />
+2. <strong>热化学方程式</strong>：已知① $N_2(g)+2O_2(g)=2NO_2(g)$  $\Delta H_1=+67.7\ \text{kJ}\cdot\text{mol}^{-1}$<br />
+   ② $N_2H_4(l)+O_2(g)=N_2(g)+2H_2O(g)$  $\Delta H_2=-534\ \text{kJ}\cdot\text{mol}^{-1}$<br />
+   目标：$2N_2H_4(l)+N_2O_4(g)=3N_2(g)+4H_2O(g)$<br />
+   由 $2\times$② $-$ ① 消去 $O_2$ 和 $NO_2$，注意 $N_2O_4 \rightleftharpoons 2NO_2$，可得 $\Delta H = 2\times(-534) - 67.7 = -1135.7\ \text{kJ}\cdot\text{mol}^{-1}$。<br />
+3. <strong>碱性燃料电池</strong>：负极 $N_2H_4 + 4OH^- - 4e^- = N_2 + 4H_2O$；正极 $O_2 + 2H_2O + 4e^- = 4OH^-$。放电过程中负极区 $OH^-$ 消耗，$pH$ 降低。<br />
+4. <strong>电离与 $pH$</strong>：联氨第一步电离 $N_2H_4+H_2O\rightleftharpoons N_2H_5^+ + OH^-$，$K_{\text{b1}} = 8.7\times 10^{-7}$。$0.01\ \text{mol}\cdot\text{L}^{-1}$ 溶液，$[OH^-]\approx \sqrt{8.7\times 10^{-7}\times 0.01} \approx 9.3\times 10^{-5}\ \text{mol}\cdot\text{L}^{-1}$。$pOH = -\lg(9.3\times 10^{-5})\approx 4.03$，$pH = 14 - 4.03 = 9.97$（若温度非25℃，需用对应 $K_w$ 修正）。<br />
+<strong>点评/变式</strong><br />
+- 典题综合性强，覆盖结构、原理、反应热、电化学和平衡计算。易错点：盖斯定律中 $N_2O_4$ 与 $NO_2$ 转化关系；电极方程错写为酸性介质；电离平衡忽略二元弱碱仅一步近似。<br />
+- 变式可考联氨与 $H_2O_2$ 的反应、联氨除氧的热化学、电解法制备联氨等，核心方法不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2016-新课标Ⅱ-08.html">2016-新课标Ⅱ-08</a>（2016 · 中） 考查联氨作为火箭燃料的化工原料应用及相关性质。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/823-联氨.html">联氨</a></li>
+</ul>
+</div>
+</body>
+</html>

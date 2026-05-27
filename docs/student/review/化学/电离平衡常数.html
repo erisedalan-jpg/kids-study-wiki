@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电离平衡常数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电离平衡常数</h1><div class="review-mark" data-stem="电离平衡常数"></div><div class="meta-card"><span><strong>考点</strong>电离平衡常数</span><span><strong>权重</strong>31</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：31</li>
+<li>真题数：2；年份跨度：2011–2022</li>
+<li>出现题位：选择4 选择7</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电离平衡常数（$K_a$）</strong>：对一元弱酸HA $ \rightleftharpoons $ H$^+$+A$^-$，$K_a=\frac{c(\text{H}^+) \cdot c(\text{A}^-)}{c(\text{HA})}$。$K_a$只与<strong>温度</strong>有关，温度不变，$K_a$不变；其大小反映弱酸的相对强弱，$K_a$越大，酸性越强。</li>
+<li><strong>稀释对弱酸电离的影响</strong>：加水稀释，弱酸电离平衡<strong>正向移动</strong>，电离度$\alpha$增大，$n(\text{H}^+)$与$n(\text{A}^-)$增大，但溶液体积增大为主效应，$c(\text{H}^+)$降低（例外：极稀时接近纯水的$10^{-7} \text{mol} \cdot \text{L}^{-1}$）；$c(\text{HA})$、$c(\text{A}^-)$均减小。稀释过程中$K_a$不变。</li>
+<li><strong>分布分数与定量关系</strong>：$\alpha = \sqrt{K_a/c}$（近似，当$c/K_a\ge 500$）；精确由$K_a=\frac{c\alpha^2}{1-\alpha}$联立求解。比值$ \frac{c(\text{H}^+)}{c(\text{HA})} = \frac{K_a}{c(\text{A}^-)}$，稀释时$c(\text{A}^-)$下降，故该比值增大。</li>
+<li><strong>涉及隔膜的平衡体系</strong>：若半透膜只允许<strong>未电离的HA分子</strong>通过，不允许离子通过，则平衡时膜两侧<strong>未电离的HA的浓度相等</strong>，电离产生的离子浓度受各自的$K_a$和物料守恒约束，两侧pH可能不等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断弱酸稀释各量变化</strong>  </li>
+<li>第一步：明确变量——$n(\text{H}^+)$、$c(\text{H}^+)$、$n(\text{HA})$、$c(\text{HA})$、电离度$\alpha$等。  </li>
+<li>第二步：列出稀释过程中“正向移动”带来的$n$变化趋势，再结合体积变化判断$c$的变化。  </li>
+<li>
+<p>第三步：对于比值型选项，转化为$K_a$表达或$n$的比值：如$\frac{c(\text{H}^+)}{c(\text{HA})} = \frac{n(\text{H}^+)}{n(\text{HA})}$，由平衡正向移动知$n(\text{H}^+)\uparrow$、$n(\text{HA})\downarrow$，比值必增大。</p>
+</li>
+<li>
+<p><strong>利用$K_a$进行浓度计算</strong>  </p>
+</li>
+<li>写出电离方程式，设未知数（如$c\alpha$为电离部分），建“三段式”；  </li>
+<li>代入$K_a$表达式，解一元二次方程或合理近似（当$c/K_a\ge 500$时用最简式）；  </li>
+<li>
+<p>检验近似条件，结果合理。</p>
+</li>
+<li>
+<p><strong>隔膜‑平衡模型</strong>  </p>
+</li>
+<li>关键点：达平衡时，膜两侧<strong>分子态HA浓度相等</strong>（因HA可自由透过）。  </li>
+<li>分别对两侧列出电离平衡：$c_{\text{HA}}$已知或可求，再由$K_a = \frac{c(\text{H}^+)\cdot c(\text{A}^-)}{c_{\text{HA}}}$及电荷守恒$c(\text{H}^+)=c(\text{A}^-)$，求出两侧$c(\text{H}^+)$。  </li>
+<li>若一侧初始只有水，则另一侧HA净迁移，最终两侧电离出的离子浓度不同，但分子HA浓度相同。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为加水稀释弱酸溶液时$c(\text{H}^+)$增大</strong>。事实上电离度虽然增大，但体积稀释效应更显著，$c(\text{H}^+)$下降。  </li>
+<li><strong>混淆$K_a$与浓度、稀释的关系</strong>：$K_a$只与温度有关，稀释时不变。选项中若出现“稀释时$K_a$增大”可直接排除。  </li>
+<li><strong>错用电荷守恒或物料守恒</strong>：对于一元弱酸，$c(\text{H}^+)=c(\text{A}^-)+c(\text{OH}^-)$，当酸性不太弱（pH&lt;6）时$c(\text{OH}^-)$可忽略，得$c(\text{H}^+)\approx c(\text{A}^-)$。若不满足条件而忽略，会导致计算错误。  </li>
+<li><strong>隔膜题误以为两侧离子浓度相等</strong>：膜不允许离子透过，离子只在该侧溶液中产生和积累，故两侧$c(\text{H}^+)$一般不等，是通过分子HA的等浓度来耦合。  </li>
+<li><strong>将$K_a$近似式无条件运用</strong>：当$c/K_a &lt; 500$时不能忽略已电离部分，必须解一元二次方程。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022全国乙卷7，节选）</h3>
+<p>常温下，一元酸HA的$K_a(\text{HA})=1.0\times10^{-3}$。某体系中，H$^+$与A$^-$不能穿过隔膜，未电离的HA可自由穿过该膜。初始时膜左侧为0.10 mol·L$^{-1}$ HA溶液，右侧为等体积纯水，恒温下达到平衡。判断平衡时左右两侧$c(\text{H}^+)$大小关系，并求右侧$c(\text{H}^+)$。  </p>
+<p><strong>思路</strong><br />
+膜允许HA分子自由通过，平衡时两侧$c(\text{HA})$必然相等。设平衡时膜两侧HA分子浓度均为$x$。左侧：初始HA总浓度0.10 mol·L$^{-1}$部分电离，部分以分子态$x$存在；右侧：从左侧迁移过来的HA分子在纯水中电离，浓度为$x$。两侧各自满足电离平衡$K_a = \frac{c(\text{H}^+)c(\text{A}^-)}{c(\text{HA})}$和电荷守恒$c(\text{H}^+)=c(\text{A}^-)$（忽略水的电离）。联立求解。</p>
+<p><strong>步骤</strong><br />
+1. 设平衡时膜两侧$c(\text{HA})=x$。对左侧：初始$c_0(\text{HA})=0.10$，电离产生$c(\text{H}^+)=c(\text{A}^-)=y$，则物料守恒：$x+y=0.10$；电离平衡：$\frac{y^2}{x}=1.0\times10^{-3}$。<br />
+2. 将$x=0.10-y$代入得$y^2 = 1.0\times10^{-3}(0.10-y)$，即$y^2 + 1.0\times10^{-3}y -1.0\times10^{-4}=0$，解得$y\approx9.5\times10^{-3}$ mol·L$^{-1}$（取正根），则$x=0.10-0.0095\approx0.0905$ mol·L$^{-1}$。<br />
+3. 右侧：$c(\text{HA})=x=0.0905$，设$c(\text{H}^+)=c(\text{A}^-)=z$，则$\frac{z^2}{0.0905}=1.0\times10^{-3}$，解得$z=\sqrt{9.05\times10^{-5}}\approx9.5\times10^{-3}$ mol·L$^{-1}$。<br />
+4. 比较：左侧$c(\text{H}^+)=y\approx9.5\times10^{-3}$，右侧$c(\text{H}^+)=z\approx9.5\times10^{-3}$，两者近似相等（精确计算会略有差异，但在此$K_a$与浓度下两侧几乎相等）。若左右初始不对称，则不等。</p>
+<p><strong>点评/变式</strong><br />
+核心是抓住“分子态HA自由穿透”带来的等浓度条件。变式：右侧若为一定浓度的NaA溶液，则需结合同离子效应，右侧$c(\text{A}^-)$初值不为零，平衡时$c(\text{H}^+)$会受抑制，解题时联立物料守恒与平衡式。</p>
+<h3><strong>题目</strong>（2011新课标卷4）</h3>
+<p>将浓度为0.1 mol·L$^{-1}$ HF溶液加水不断稀释，下列各量始终保持增大的是<br />
+A. $c(\text{H}^+)$　　 B. $K_a(\text{HF})$　　 C. $\frac{c(\text{F}^-)}{c(\text{H}^+)}$　　 D. $\frac{c(\text{H}^+)}{c(\text{HF})}$  </p>
+<p><strong>思路</strong><br />
+HF为弱酸，稀释时电离平衡正向移动，$n(\text{H}^+)$增大但$c(\text{H}^+)$减小；$K_a$只与温度有关，不变；选项C的比值由电荷守恒$c(\text{F}^-)\approx c(\text{H}^+)$知约为1且基本不变；选项D可转化为$\frac{n(\text{H}^+)}{n(\text{HF})}$，稀释时分子增大、分母减小，比值一定增大。</p>
+<p><strong>步骤</strong><br />
+- A项：稀释促进电离，但体积增大更显著，$c(\text{H}^+)$下降，故不选。<br />
+- B项：$K_a$仅受温度影响，温度不变$K_a$恒定，不选。<br />
+- C项：在HF溶液中，电荷守恒$c(\text{F}^-)+c(\text{OH}^-)=c(\text{H}^+)$。酸性条件下$c(\text{OH}^-)$可忽略，$c(\text{F}^-)\approx c(\text{H}^+)$，比值为1；随稀释酸性减弱，$c(\text{OH}^-)$略有贡献，比值略小于1，并非持续增大，不选。<br />
+- D项：$\frac{c(\text{H}^+)}{c(\text{HF})} = \frac{n(\text{H}^+)/V}{n(\text{HF})/V} = \frac{n(\text{H}^+)}{n(\text{HF})}$。稀释时平衡右移，$n(\text{H}^+)$增大、$n(\text{HF})$减小，比值始终增大，正确。</p>
+<p><strong>点评/变式</strong><br />
+该题巧用$n$与$c$的转化避开了体积干扰。类似方法用于处理$\frac{c(\text{H}^+)}{c(\text{总酸})}$等比值变化：稀释时弱酸的电离度增大，未电离分子占比减小，离子占比增加，因此$\frac{\alpha}{1-\alpha}$增大，选项D即为该思想的体现。变式：将酸换为一元弱碱（如NH₃·H₂O）稀释，类比判断$\frac{c(\text{OH}^-)}{c(\text{NH}_3\cdot\text{H}_2\text{O})}$的变化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2022-全国乙-07.html">2022-全国乙-07</a>（2022 · 中） 考查弱酸电离平衡与隔膜扩散条件下溶液pH和粒子浓度关系的判断</li>
+<li><a href="../../exam/化学/2011-新课标-04.html">2011-新课标-04</a>（2011 · 中） 弱电解质稀释时离子浓度与平衡常数的变化分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/334-电离平衡.html">电离平衡常数</a></li>
+</ul>
+</div>
+</body>
+</html>

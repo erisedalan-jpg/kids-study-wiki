@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质子数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质子数</h1><div class="review-mark" data-stem="质子数"></div><div class="meta-card"><span><strong>考点</strong>质子数</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择6</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>质量数（A）</strong> = 质子数（Z） + 中子数（N）</li>
+<li><strong>质子数决定元素种类</strong>，对于中性原子：质子数 = 核电荷数 = 原子序数 = 核外电子数</li>
+<li><strong>同位素</strong>：质子数相同而中子数不同的同种元素的不同原子。同位素的化学性质几乎相同，物理性质有差异。</li>
+<li><strong>分子的质子数</strong> = 组成原子的质子数之和。例如 $^1_1\mathrm{H}$（氕）质子数为1，则 $\mathrm{H}_m\mathrm{X}$ 的质子总数 = $m\times 1+Z(\mathrm{X})$。</li>
+<li><strong>物质的量计算</strong>：</li>
+<li>$n=\dfrac{m}{M}$，其中 $M$ 在数值上近似等于粒子的相对质量之和（忽略电子质量，取质量数求和）。</li>
+<li>对分子 $\mathrm{H}_m\mathrm{X}$，若氢均为 $^1_1\mathrm{H}$，则摩尔质量 $M \approx (m + A)\ \mathrm{g\cdot mol^{-1}}$。</li>
+<li><strong>特定微粒的物质的量</strong>：所求微粒物质的量 = 分子的物质的量 × 每分子含该微粒的个数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由质量数和中子数求质子数</strong><br />
+   $Z = A - N$。对$\mathrm{H}$，若为氕（$^1_1\mathrm{H}$），其质子数为1，质量数为1，中子数为0。</li>
+<li><strong>写出分子的质子数表达式</strong><br />
+   对 $\mathrm{H}_m\mathrm{X}$，质子总数 = $m\times 1 + (A-N) = A - N + m$。</li>
+<li><strong>求分子的物质的量</strong><br />
+   摩尔质量 $M = m\times M(\mathrm{H}) + M(\mathrm{X}) \approx m + A$（单位 $\mathrm{g\cdot mol^{-1}}$）。<br />
+   则 $n(\mathrm{H}_m\mathrm{X}) = \dfrac{a}{A+m}\ \mathrm{mol}$。</li>
+<li><strong>乘系数得所求质子的物质的量</strong><br />
+   质子的物质的量 = $\dfrac{a}{A+m} \times (A-N+m)\ \mathrm{mol}$。</li>
+<li><strong>核对选项</strong>，注意分母是分子的摩尔质量（含所有原子的质量数之和），分子是所求微粒的总个数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误把质量数直接当质子数</strong>：质量数是 $A$，质子数是 $A-N$，忘记减去中子数。</li>
+<li><strong>忽略氢原子的质子贡献</strong>：$^1_1\mathrm{H}$ 也有 1 个质子，计算分子总质子数时漏加 $m$。</li>
+<li><strong>分子式与摩尔质量不对应</strong>：计算物质的量时分母用的是 $A$ 或 $A-N$，而不是 $m+A$。分子摩尔质量必须包含所有原子的质量数之和。</li>
+<li><strong>公式混淆</strong>：“含质子的物质的量”与“含中子的物质的量”混淆。若问中子，则分子中中子总数 = $N(\mathrm{X}) + 0\cdot m$（氕无中子），切忌思维定势直接套用质子公式。</li>
+<li><strong>忽略同位素差异</strong>：题目明确氢为 $^1_1\mathrm{H}$，不能用氘（$^2_1\mathrm{H}$）或氚（$^3_1\mathrm{H}$）的质量数与质子数代入。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2008·全国Ⅱ，11）<br />
+某元素的一种同位素 $\mathrm{X}$ 的质量数为 $A$，含 $N$ 个中子，它与 $^1_1\mathrm{H}$ 原子组成 $\mathrm{H}_m\mathrm{X}$ 分子。在 $a\ \mathrm{g\ H}_m\mathrm{X}$ 中所含质子的物质的量是（ ）</p>
+<p><strong>思路</strong><br />
+所求 = $\dfrac{a}{M(\mathrm{H}_m\mathrm{X})} \times \text{每分子质子数}$。先求 $\mathrm{X}$ 的质子数，再求分子摩尔质量，最后代入计算。</p>
+<p><strong>步骤</strong><br />
+1. $\mathrm{X}$ 的质子数 = $A - N$。<br />
+2. $\mathrm{H}_m\mathrm{X}$ 每分子含质子数：氢贡献 $m$ 个，$\mathrm{X}$ 贡献 $A-N$ 个，合计 $m+A-N$。<br />
+3. $\mathrm{H}_m\mathrm{X}$ 摩尔质量 $M = m\times1 + A = m+A\ \mathrm{g\cdot mol^{-1}}$。<br />
+4. 质子的物质的量 = $\dfrac{a}{A+m} \times (A-N+m)\ \mathrm{mol}$。</p>
+<p><strong>点评/变式</strong><br />
+该题为典型的“由宏观质量求微观粒子数目”题型，核心是建立三个等量关系：质量数 = 质子数+中子数，分子质子数=原子质子数之和，摩尔质量=各原子质量数之和。难点在于学生容易把“分子摩尔质量”的分母错写成 $A$ 或 $A-N$，而忘记加上 $m$ 个氢的质量数。变式可把氢换成 $^2_1\mathrm{H}$（氘），或改求中子、电子的物质的量，以检验对微观粒子计数的精准掌握。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a>（2008 · 易） 考查质量数、中子数、质子数关系及物质的量计算，求一定质量分子中所含质子的物质的量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/570-质子数.html">质子数</a></li>
+</ul>
+</div>
+</body>
+</html>

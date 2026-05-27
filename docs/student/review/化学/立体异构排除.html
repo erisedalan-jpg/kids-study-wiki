@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>立体异构排除</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>立体异构排除</h1><div class="review-mark" data-stem="立体异构排除"></div><div class="meta-card"><span><strong>考点</strong>立体异构排除</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>官能团与性质对应</strong>：能与金属钠反应放出氢气的有机物必含活泼氢，常见为羟基（—OH），则分子式 $C_5H_{12}O$ 符合饱和一元醇或醚，放氢气则锁定为饱和一元醇。</li>
+<li><strong>同分异构体书写核心</strong>：碳链异构→位置异构→官能团异构（本题官能团固定为醇羟基）。<br />
+  戊烷碳链异构有三种：正戊烷（直链）、异戊烷（2-甲基丁烷）、新戊烷（2,2-二甲基丙烷）。<br />
+  醇的异构体数为各类碳链上不等效氢原子的种数之和。</li>
+<li><strong>等效氢原则</strong>：同一碳原子上的氢等效；连在同一个碳上的相同取代基上的氢等效；处于镜面对称位置的氢等效。<br />
+  正戊烷：$C_1—C_2—C_3—C_4—C_5$，对称面过 $C_3$，等效氢有3种（1，2，3位，取代基—OH位置可依次编号）。<br />
+  异戊烷：$(CH_3)_2CH—CH_2—CH_3$，碳链编号后，不等效氢有4种。<br />
+  新戊烷：$C(CH_3)_4$，四个甲基等效，只有1种等效氢。</li>
+<li><strong>计数结果</strong>：戊醇（$C_5H_{11}OH$）异构体数目 = $3+4+1 = 8$ 种。题目排除立体异构，故仅考虑构造异构。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定官能团</strong>：根据特征性质（与钠放 $H_2$）推断分子中含有羟基，确定有机物类别为饱和一元醇。</li>
+<li><strong>碳骨架穷举</strong>：写出对应烷烃的所有碳链异构体（本题对应戊烷的三种碳架）。</li>
+<li><strong>确定羟基位置</strong>：对每个碳架，找出所有不等效氢的位置（即羟基可连接的非等效碳原子），注意碳链对称性，避免重复计数。</li>
+<li><strong>求和与验证</strong>：将各碳架的不等效位置数相加，得到饱和一元醇的异构体总数。必要时可用主链法或取代法快速检查。</li>
+<li><strong>警惕限定语</strong>：“不考虑立体异构”表示不用计入对映异构、顺反异构等，只需计算构造异构的数目。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略官能团定位</strong>：未先由“与钠反应”确认—OH，误将醚类纳入了计数范围，会多算异构体。</li>
+<li><strong>等效氢漏判或重判</strong>：正戊烷中间碳上有氢易被忽略；异戊烷中碳链端基两个甲基若未识别其等效性，会重复计算羟基位置。</li>
+<li><strong>碳链划分不规范</strong>：错误写出不存在的碳骨架（如过长支链），或遗漏新戊烷这类高度对称的骨架，导致异构体数偏少。</li>
+<li><strong>立体异构干扰</strong>：题目已声明“不考虑立体异构”，若考生过度小心把含手性碳的结构数成多份，会得出错误的总数。</li>
+<li><strong>计算粗心</strong>：直接背记戊基有8种异构而未联系具体官能团，未确认羟基与戊基连接的一一对应关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：分子式为 $C_5H_{12}O$ 且可与金属钠反应放出氢气的有机物有（不考虑立体异构） （　　）<br />
+A．5种　B．6种　C．7种　D．8种  </p>
+<p><strong>思路</strong>：由“与钠反应放氢气”推知分子必须含有羟基，则有机物是饱和一元醇，其碳干为戊基。通过穷举戊烷的碳链异构，并找出各碳架上—OH可能的位置数（即不等效氢的种类）即可求和得到醇的异构体总数。</p>
+<p><strong>步骤</strong>：<br />
+（1）写出戊烷的三种碳架：正戊烷 $CH_3CH_2CH_2CH_2CH_3$、异戊烷 $(CH_3)_2CHCH_2CH_3$、新戊烷 $C(CH_3)_4$。<br />
+（2）标出每种碳架的等效氢：正戊烷有3种等效氢（1,2,3号碳），—OH可接3种位置；异戊烷碳原子编号后有4种不等效氢，—OH接4种位置；新戊烷所有甲基等效，1种位置。<br />
+（3）总醇异构体数 = $3+4+1 = 8$ 种，对应选项D。</p>
+<p><strong>点评/变式</strong>：<br />
+- 本题本质为“一价基（戊基）异构数”，可直接调用结论：丙基2种、丁基4种、戊基8种，加快选择。<br />
+- 变式可考察：若改为“能与氢溴酸反应生成溴代烃”，仍为醇；若改为“能发生消去反应生成烯烃”，则—OH所连碳的邻位碳上必须有H，异构体数减少（新戊醇不能消去）。<br />
+- 注意对比“不考虑立体异构”与“考虑立体异构”时的结果差异，例如2-戊醇含有手性碳，考虑立体异构会额外增加对映体，总数目将大于8。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2012-新课标-04.html">2012-新课标-04</a>（2012 · 中） 分子式为C5H12O的醇类同分异构体数目判断，涉及碳链异构与羟基位置异构。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">立体异构排除</a></li>
+</ul>
+</div>
+</body>
+</html>

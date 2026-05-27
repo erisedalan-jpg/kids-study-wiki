@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>物质的量变化计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>物质的量变化计算</h1><div class="review-mark" data-stem="物质的量变化计算"></div><div class="meta-card"><span><strong>考点</strong>物质的量变化计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>反应物与生成物判断</strong>：随反应进行物质的量减少的为反应物，增加的为生成物。</li>
+<li><strong>化学计量数的确定</strong>：各物质的变化量之比等于化学方程式中对应物质的化学计量数之比（变化量 $\Delta n$ 取绝对值）。<br />
+  $\Delta n(\text{A}) : \Delta n(\text{B}) : \Delta n(\text{C}) = a : b : c$</li>
+<li><strong>化学反应速率</strong>：$v = \dfrac{\Delta c}{\Delta t} = \dfrac{\Delta n}{V \cdot \Delta t}$，单位通常为 $\text{mol}!\cdot!\text{L}^{-1}!\cdot!\text{min}^{-1}$ 或 $\text{mol}!\cdot!\text{L}^{-1}!\cdot!\text{s}^{-1}$。同一反应各物质速率之比等于化学计量数之比。</li>
+<li><strong>转化率</strong>：$\alpha = \dfrac{\text{该物质的变化量}}{\text{该物质的起始量}} \times 100\%$。</li>
+<li><strong>化学平衡状态的标志</strong>：各组分物质的量（浓度）不再随时间改变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读表识变</strong>：观察表格数据，找出随时间进行物质的量不再变化的时刻（平衡点），并区分反应物与生成物。</li>
+<li><strong>计算变化量</strong>：选取从起始到平衡（或某一段反应完全进行）的数据，计算各物质物质的量的变化量 $\Delta n$。注意必须取同一时间段的差值。</li>
+<li><strong>确定计量数</strong>：将各物质的 $\Delta n$ 化为最简整数比，即得化学方程式的化学计量数。可逆反应写“$\rightleftharpoons$”，若题目表明完全反应则写“$=$”。</li>
+<li><strong>求速率与转化率</strong>：代入 $V$（容器体积）和 $\Delta t$ 求速率；用起始量和变化量求转化率。</li>
+<li><strong>验证与延伸</strong>：利用平衡数据验证方程式是否正确，或根据问题要求计算某时刻的瞬时速率（需用相邻数据近似）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略体积</strong>：直接用物质的量变化代替浓度变化计算速率，忘记除以体积 $V$。</li>
+<li><strong>时间段选取错误</strong>：计算速率时没有用对应时间段的变化量，或误用累计时间。</li>
+<li><strong>变化量比值未化简</strong>：直接将变化量当作计量数，未化成最简整数比导致方程式错误。</li>
+<li><strong>反应物/生成物混淆</strong>：未注意减少的是反应物、增加的是生成物，将计量数写反。</li>
+<li><strong>有效数据选择</strong>：反应可能未达到平衡或数据有波动，必须选取浓度（物质的量）不再变化的稳定区间作为平衡状态。</li>
+<li><strong>单位换算出错</strong>：时间单位（min / s）、体积单位（L / mL）必须一致。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009·全国Ⅱ·9）<br />
+在 2 L 密闭容器中，X 与 Y 反应生成 Z，测得不同时间各物质的量如表所示，请据此分析反应并完成相关计算。  </p>
+<table>
+<thead>
+<tr>
+<th>t/min</th>
+<th>X/mol</th>
+<th>Y/mol</th>
+<th>Z/mol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.90</td>
+<td>0.80</td>
+<td>0.20</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.75</td>
+<td>0.50</td>
+<td>0.50</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.65</td>
+<td>0.30</td>
+<td>0.70</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0.55</td>
+<td>0.10</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0.55</td>
+<td>0.10</td>
+<td>0.90</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0.55</td>
+<td>0.10</td>
+<td>0.90</td>
+</tr>
+</tbody>
+</table>
+<p><strong>思路</strong><br />
+从表格看到 X、Y 的物质的量随时间减少，Z 增加，X、Y 为反应物，Z 为生成物。9 min 后各物质量不变，说明已达平衡。取起始（0 min）与平衡（9 min）数据计算变化量。</p>
+<p><strong>步骤</strong><br />
+1. 变化量：$\Delta n(\text{X}) = 1.00 - 0.55 = 0.45\ \text{mol}$<br />
+   $\Delta n(\text{Y}) = 1.00 - 0.10 = 0.90\ \text{mol}$<br />
+   $\Delta n(\text{Z}) = 0.90 - 0.00 = 0.90\ \text{mol}$<br />
+2. 化为最简整数比：$\Delta n(\text{X}):\Delta n(\text{Y}):\Delta n(\text{Z}) = 0.45:0.90:0.90 = 1:2:2$<br />
+   化学方程式：$\text{X} + 2\text{Y} \rightleftharpoons 2\text{Z}$（因达到平衡，用可逆号）<br />
+3. 若计算 0~1 min 内 X 的反应速率：$v(\text{X}) = \dfrac{1.00-0.90}{2 \times 1} = 0.05\ \text{mol}!\cdot!\text{L}^{-1}!\cdot!\text{min}^{-1}$<br />
+   或用计量数关系求 $v(\text{Y})$、$v(\text{Z})$。<br />
+4. X 的平衡转化率：$\alpha(\text{X}) = \dfrac{0.45}{1.00} \times 100\% = 45\%$  </p>
+<p><strong>点评/变式</strong><br />
+本题以表格形式考查“三段式”基础，关键在于选准起、止状态。变式可要求计算不同时间段的平均速率，或比较达到平衡的时间；也可将数据绘成曲线图考查读图能力。无论形式如何，核心都是变化量求算与计量数关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2009-全国Ⅱ-09.html">2009-全国Ⅱ-09</a>（2009 · 中） 本题考查根据反应物和生成物的物质的量变化数据推断化学反应方程式及反应速率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/780-物质的量变化计算.html">物质的量变化计算</a></li>
+</ul>
+</div>
+</body>
+</html>

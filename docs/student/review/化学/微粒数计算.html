@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>微粒数计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>微粒数计算</h1><div class="review-mark" data-stem="微粒数计算"></div><div class="meta-card"><span><strong>考点</strong>微粒数计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>物质结构与原子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物质结构与原子结构</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择3</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>阿伏加德罗常数类计算的本质是沟通宏观量（$m$、$V$、$c$）与微观粒子数（$N$）的桥梁，核心公式为 $N = n \cdot N_{!A}$，其中 $n = \frac{m}{M} = \frac{V}{V_m} = cV$。<br />
+- <strong>物质结构分摊法</strong>：石墨烯（及石墨）每个六元环由 $6$ 个碳原子组成，但每个碳原子被 $3$ 个六元环共用，因此每个六元环实际占有 $\dfrac{6}{3}=2$ 个碳原子。$12\,{\rm g}$（$1\,{\rm mol}$）石墨烯含环数为 $\dfrac{1\,{\rm mol}}{2}=0.5N_{!A}$。类似地，金刚石每个碳被 $4$ 个六元环共用，${\rm SiO_2}$ 晶体中每个 ${\rm Si}$ 连接 $4$ 个 ${\rm O}$；白磷 ${\rm P_4}$ 分子中 $6$ 个 ${\rm P-P}$ 键等，均需用分摊思想。<br />
+- <strong>溶液中的微粒数</strong>：水溶液中除溶质外，溶剂水本身提供大量 ${\rm H}$、${\rm O}$ 原子（或 ${\rm H_2O}$ 分子），计算氧原子、氢原子时必须考虑水的贡献。此外，${\rm pH}$ 只给出 $c({\rm H^+})$ 或 $c({\rm OH^-})$，若未给出溶液体积，无法求算离子数目。<br />
+- <strong>基团与离子的电子数差异</strong>：羟基（${\rm -OH}$，电中性基团）电子数为 $8+1=9$；氢氧根（${\rm OH^-}$，带一个负电荷）电子数为 $8+1+1=10$。类似区别还有 ${\rm -CH_3}$（$9$ 电子）与 ${\rm CH_3^+}$（$8$ 电子）等。<br />
+- <strong>隐含条件</strong>：$25\,^\circ{\rm C}$、${\rm pH}=13$ 的 ${\rm NaOH}$ 溶液 $c({\rm OH^-})=0.1\,{\rm mol \cdot L^{-1}}$，但未知体积，数目无法确定。  </p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定目标粒子</strong>：看清题干要求计算的是分子数、原子数、离子数、电子数、质子数还是化学键数。  </li>
+<li><strong>先算物质的量</strong>：根据题给质量、标况体积、溶液浓度与体积等求出相关纯净物的 $n$。若出现浓度缺体积、气体缺温度和压强，直接判定无法计算数目。  </li>
+<li><strong>挖掘结构倍数关系</strong>：通过化学式、晶体结构模型，找出目标粒子与已知物质量之间的定量关系。例如：  </li>
+<li>单原子分子（稀有气体）无共价键；  </li>
+<li>${\rm O_2}$、${\rm N_2}$ 等双原子分子，原子数 $=2n$；  </li>
+<li>特殊结构（石墨、${\rm SiO_2}$、${\rm Si}$、${\rm P_4}$）需用分摊法或成键分析。  </li>
+<li><strong>审慎对待溶液体系</strong>：  </li>
+<li>计算溶质粒子数时，勿忘弱电解质的电离平衡、盐类水解；  </li>
+<li>要求溶剂原子数时，必须加算水的贡献（$1\,{\rm L}$ 水约含 $55.6\,{\rm mol}$ ${\rm O}$ 原子）。  </li>
+<li><strong>辨析“相似”微粒</strong>：比较电中性基团与对应离子时，电子数相差所带电荷数（阴离子多电子，阳离子少电子）。  </li>
+<li><strong>逐一排除</strong>：四个选项依次按上述思路验证，注意绝对化词语（“均为”“一定”常是陷阱）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>水溶液中的氧/氢原子数</strong>：看到“水溶液中含氧原子数”，常只算溶质，忽略水分子。如 $1.0\,{\rm L\,NaAlO_2}$ 溶液，溶质只提供 $2N_{!A}$ 个氧，但水的氧原子数远大于此。  </li>
+<li><strong>${\rm pH}$ 缺体积</strong>：由 ${\rm pH}$ 可求 $c({\rm OH^-})$ 或 $c({\rm H^+})$，但无体积则无法算数目。将浓度与数目混淆是典型失分点。  </li>
+<li><strong>石墨烯六元环计数</strong>：错误地认为 $1\,{\rm mol}$ 碳形成 $1/6\,{\rm mol}$ 环，或认为每个环含 $6$ 个碳原子得出环数 $=1/6\,{\rm mol}$。必须理解分摊原理。  </li>
+<li><strong>羟基与氢氧根电子数混淆</strong>：忽略离子所带电荷对电子数的影响，直接将二者等同为 $9N_{!A}$。  </li>
+<li><strong>忽视可逆与平衡</strong>：计算溶液中离子数目时，若溶质是弱电解质或能水解，粒子数目并不等于完全电离的数值，本题虽未深入，但常为同类题干扰项。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：设 $N_{!A}$ 为阿伏加德罗常数的值，判断下列关于微粒数的叙述是否正确（2013·新课标Ⅱ，改编自选项）。<br />
+A．$1.0\,{\rm L}\,1.0\,{\rm mol \cdot L^{-1}}$ 的 ${\rm NaAlO_2}$ 水溶液中含有的氧原子数为 $2N_{!A}$<br />
+B．$12\,{\rm g}$ 石墨烯（单层石墨）中含有六元环的个数为 $0.5N_{!A}$<br />
+C．$25\,^\circ{\rm C}$ 时 ${\rm pH}=13$ 的 ${\rm NaOH}$ 溶液中含有 ${\rm OH^-}$ 的数目为 $0.1N_{!A}$<br />
+D．$1\,{\rm mol}$ 的羟基与 $1\,{\rm mol}$ 的氢氧根离子所含电子数均为 $9N_{!A}$  </p>
+<p><strong>思路</strong>：<br />
+- A项，关键词“水溶液”，氧原子来源有 ${\rm NaAlO_2}$ 和水分子。<br />
+- B项，石墨烯六元环需用分摊法确定环与碳原子数的关系。<br />
+- C项，给出 ${\rm pH}$ 但无体积，离子数目不可求。<br />
+- D项，羟基是基团，氢氧根是离子，两者电子数是否相同？  </p>
+<p><strong>步骤</strong>：<br />
+1. <strong>选项A</strong>：溶质 ${\rm NaAlO_2}$ 的物质的量为 $1.0\,{\rm mol}$，可提供 $2\,{\rm mol}$ 氧原子。但溶剂水也会电离并大量存在 ${\rm H_2O}$ 分子，其氧原子数远大于 $2\,{\rm mol}$。故溶液中氧原子总数 $&gt;2N_{!A}$，A错误。<br />
+2. <strong>选项B</strong>：$12\,{\rm g}$ 石墨烯含 $1\,{\rm mol}$ 碳原子。石墨烯中每个六元环由 $6$ 个碳原子共用，每个碳原子属于 $3$ 个环，故平均每个环占有 $2$ 个碳原子。因此环的物质的量为 $\dfrac{1}{2}\,{\rm mol}$，环数目为 $0.5N_{!A}$，B正确。<br />
+3. <strong>选项C</strong>：$25\,^\circ{\rm C}$、${\rm pH}=13$ 的 ${\rm NaOH}$ 溶液中 $c({\rm OH^-})=0.1\,{\rm mol \cdot L^{-1}}$，但溶液体积未知，无法计算 ${\rm OH^-}$ 数目。C错误。<br />
+4. <strong>选项D</strong>：羟基 ${\rm -OH}$ 核外电子总数 $=8+1=9$，$1\,{\rm mol}\ {\rm -OH}$ 含电子 $9N_{!A}$。氢氧根 ${\rm OH^-}$ 比羟基多一个电子，电子总数为 $10$，因此 $1\,{\rm mol}\ {\rm OH^-}$ 含电子 $10N_{!A}$。D错误。  </p>
+<p><strong>点评/变式</strong>：<br />
+本题全面考查阿伏加德罗常数在结构、溶液、微粒组成中的应用。考生务必建立“水溶液中氧/氢原子数必须考虑水”的警觉性，同时掌握石墨烯分摊法这一经典考点。变式训练可延伸至金刚石中 ${\rm C-C}$ 键数（$1\,{\rm mol}$ 金刚石含 $2N_{!A}$ ${\rm C-C}$ 键）、${\rm SiO_2}$ 中 ${\rm Si-O}$ 键数、${\rm P_4}$ 中 ${\rm P-P}$ 键数等，解题思路同为分摊法，务必熟练。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-03.html">2013-新课标Ⅱ-03</a>（2013 · 中） 本题考查阿伏加德罗常数的应用，涉及溶液中微粒数、石墨结构、pH计算及粒子组成判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/689-微粒数计算.html">微粒数计算</a></li>
+</ul>
+</div>
+</body>
+</html>

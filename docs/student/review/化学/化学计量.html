@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>化学计量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>化学计量</h1><div class="review-mark" data-stem="化学计量"></div><div class="meta-card"><span><strong>考点</strong>化学计量</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：10</li>
+<li>真题数：2；年份跨度：2013–2017</li>
+<li>出现题位：选择4 选择10</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心物理量</strong><br />
+  $n$（物质的量，单位 mol），$m$（质量，单位 g），$M$（摩尔质量，$M = m/n$），$V_m$（气体摩尔体积，标准状况 22.4 L·mol⁻¹），$c$（物质的量浓度，$c = n/V_{aq}$，单位 mol·L⁻¹），$N_A$（阿伏加德罗常数）。</li>
+<li><strong>化学方程式计算基础</strong><br />
+  计量数之比 $=$ 物质的量之比（同温同压下，气体体积比 $=$ 计量数比）。<br />
+  关键等量关系：质量守恒、原子守恒、电荷守恒、氧化还原中得失电子守恒（电子守恒是复杂计算的捷径）。</li>
+<li><strong>关系式法</strong><br />
+  对于多步连续反应（如滴定、工业流程），抓住起始反应物与最终产物间的确定计量关系，建立“关系式”，省略中间物。<br />
+  示例（碘量法测溶解氧）：$O_2 \sim 2\text{MnO(OH)}_2 \sim 2I_2 \sim 4\text{Na}_2\text{S}_2\text{O}_3$。</li>
+<li><strong>滴定计算通式</strong><br />
+  若滴定反应为 $a\text{A} + b\text{B} \rightarrow$，则 $c_A V_A \cdot \frac{b}{a} = c_B V_B$。<br />
+  待测组分含量常化为质量浓度（mg·L⁻¹）或质量分数，需注意单位换算（1 L = 1000 mL，1 g = 1000 mg）。</li>
+<li><strong>误差分析原理</strong><br />
+  计算公式中直接读取量与待测量成正比/反比。操作导致测量值（如标准液体积）偏大，则待测结果偏高；反之偏低。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题抓计量关系</strong><br />
+   通读流程，标出所有化学（离子）方程式，配平。找出已知量（体积、浓度、质量等）与待求量所在物质，通过方程式叠加或原子守恒建立直接关系式。</li>
+<li><strong>建立关系式（最简整数比）</strong><br />
+   由多步反应中同一元素的去向（或电子转移）列比例。氧化还原滴定优先使用电子守恒：$n(\text{氧化剂})\times\Delta\text{价态} = n(\text{还原剂})\times\Delta\text{价态}$。</li>
+<li><strong>列计算式，统一单位</strong><br />
+   将 $n = cV$、$m = nM$ 等代入，设待求量为 $x$。体积单位化为 L，质量必要时化为 mg。浓度结果常以 mg·L⁻¹ 表示，计算式要体现换算因子 $10^3$。</li>
+<li><strong>滴定终点与误差判断</strong><br />
+   终点现象依指示剂（如淀粉遇碘变蓝，终点蓝→无色）。误差分析直接看标准液体积变化：尖嘴留有气泡 → 读数体积偏小 → 代入公式导致结果偏低。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>气体摩尔体积使用条件</strong><br />
+  22.4 L·mol⁻¹ 仅限标准状况（0 ℃，101 kPa），非标准状况或液体、固体均不适用。</li>
+<li><strong>关系式比例倒置</strong><br />
+  直接写方程式时系数易错。建议先写出完整的分步方程式，再找待测物与滴定剂的物质的量之比。</li>
+<li><strong>单位换算出错</strong><br />
+  滴定体积常用 mL，浓度常用 mol·L⁻¹，最终含量要求 mg·L⁻¹ 或 g·L⁻¹，忘乘或漏乘 $10^{-3}$、$10^3$ 是致命错。</li>
+<li><strong>离子方程式书写中的守恒漏项</strong><br />
+  电荷不守恒、氧化还原得失电子不平、难溶物/弱电解质拆错，是离子方程式正误判断中最常见的失分点。</li>
+<li><strong>滴定专属陷阱</strong><br />
+  淀粉指示剂过早加入（碘-淀粉包合物不易解离，终点滞后）；滴定结束立即读数，半分钟无变化才为终点；尖嘴气泡、管壁挂液导致测量体积偏差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目一</strong>（2017·新课标Ⅱ·10）</h3>
+<p><strong>题目简述</strong>：碘量法测定河水中溶解氧。先使 $O_2$ 与 $Mn(OH)_2$ 碱性悬浊液（含 $KI$）反应固定为 $MnO(OH)_2$，酸化后 $MnO(OH)_2$ 被 $I^-$ 还原为 $Mn^{2+}$ 并生成 $I_2$，再用 $Na_2S_2O_3$ 标准液滴定 $I_2$。给定 $Na_2S_2O_3$ 浓度 $a$ mol·L⁻¹、体积 $b$ mL，水样 100.00 mL，求溶解氧含量（mg·L⁻¹）。</p>
+<p><strong>思路</strong><br />
+1. 理清三步反应：固定 $2Mn(OH)_2 + O_2 = 2MnO(OH)_2$；酸化 $MnO(OH)_2 + 2I^- + 4H^+ = Mn^{2+} + I_2 + 3H_2O$；滴定 $I_2 + 2S_2O_3^{2-} = 2I^- + S_4O_6^{2-}$。<br />
+2. 建立 $O_2$ 与 $Na_2S_2O_3$ 的关系：$O_2 \sim 2MnO(OH)_2 \sim 2I_2 \sim 4S_2O_3^{2-}$。<br />
+3. 由 $n(S_2O_3^{2-}) = a \times (b \times 10^{-3})$ mol，得 $n(O_2) = \frac{1}{4} n(S_2O_3^{2-})$。$m(O_2) = n(O_2) \times 32$ g，化为 mg（×1000），除以水样体积 0.1 L，得 mg·L⁻¹。</p>
+<p><strong>步骤</strong><br />
+- $n(S_2O_3^{2-}) = a \times b \times 10^{-3}$ mol<br />
+- $n(O_2) = \frac{ab}{4000}$ mol<br />
+- $m(O_2) = \frac{ab}{4000} \times 32 \, \text{g} = \frac{32ab}{4000} \, \text{g} = \frac{8ab}{1000} \, \text{g} = 8ab$ mg<br />
+- 水样体积 $V = 100.00\,\text{mL} = 0.1\,\text{L}$<br />
+- 溶解氧 $= \frac{8ab}{0.1} = 80ab$ mg·L⁻¹  </p>
+<p><strong>点评/变式</strong><br />
+此题全面考查了陌生方程式书写、关系式法、滴定计算及误差分析。易错点：关系式中系数 4 易写成 2；单位从 g 到 mg 换算与体积 L 的配合。变式：若改用已知浓度的 $KMnO_4$ 返滴定过量的 $I_2$，电子守恒法同样高效。滴定管尖嘴留气泡使读出的 $V(S_2O_3^{2-})$ 偏小，导致结果偏低，这是实验误差必考点。</p>
+<h3><strong>题目二</strong>（2013·新课标Ⅱ·4）</h3>
+<p><strong>题目简述</strong>：判断给定各选项的离子方程式正误（选项略）。常见错误涉及电荷不守恒、原子不守恒、拆写规则违反、氧化还原得失电子不平、与量相关产物错误等。</p>
+<p><strong>思路</strong><br />
+离子方程式正误遵循“三守恒一规则”：质量守恒（原子个数齐）、电荷守恒（左右总电荷等）、电子守恒（氧化还原中得失电子数等），以及符合物质拆分规则（强酸、强碱、可溶盐拆；弱电解质、氧化物、沉淀、气体、单质不拆）。若涉及与量有关的反应（如 $NaOH$ 少量/过量与 $Ca(HCO_3)_2$ 反应），需按“以少定多”原则检查产物。</p>
+<p><strong>步骤</strong><br />
+1. 看拆写：该拆的物质是否拆开，不该拆的是否保留化学式。<br />
+2. 查原子个数：每种元素左右总原子数是否相等。<br />
+3. 查电荷总数：离子方程式两侧净电荷数是否一致。<br />
+4. 若为氧化还原反应，标化合价，验证电子转移数目相等。<br />
+5. 对涉及“少量”“过量”的反应，代入具体物质的量检验产物合理性。</p>
+<p><strong>点评/变式</strong><br />
+离子方程式判断是高考必考题型，错误率极高。记忆易错点：$Ca(OH)_2$ 悬浊液（石灰乳）不拆，石灰水（澄清）拆写；浓硫酸不拆；$HCO_3^-$ 不拆等。守恒是化学计量的灵魂，所有不合格选项均可通过严谨的“三守恒”快速排除。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a>（2017 · 中） 碘量法测定水中溶解氧的原理、操作及误差分析。</li>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-04.html">2013-新课标Ⅱ-04</a>（2013 · 中） 本题考查离子方程式的书写正误判断与反应原理分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/627-化学计量.html">化学计量</a></li>
+</ul>
+</div>
+</body>
+</html>

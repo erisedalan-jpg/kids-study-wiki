@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>石墨烯结构</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>石墨烯结构</h1><div class="review-mark" data-stem="石墨烯结构"></div><div class="meta-card"><span><strong>考点</strong>石墨烯结构</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>晶体结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：晶体结构</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择3</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>石墨烯结构</strong>：石墨烯是单层石墨，碳原子呈 $sp^2$ 杂化，形成平面六边形蜂窝状网络。每个碳原子与周围3个碳原子形成 $\sigma$ 键。</li>
+<li><strong>六元环的均摊计算（核心）</strong>：</li>
+<li><strong>均摊模型</strong>：在石墨烯的无限平面网络中，每一个碳原子被3个六元环共用。</li>
+<li><strong>计算公式</strong>：每个六元环含有碳原子数 $=6 \times \frac{1}{3} = 2$ 个 $C$ 原子。</li>
+<li><strong>与阿伏加德罗常数的关联</strong>：含 $1\ \text{mol}$ 碳原子的石墨烯（$12\ \text{g}$），所含六元环数目 $= \frac{1\ \text{mol}}{2} \times N_A = 0.5 N_A$。</li>
+<li><strong>微粒电子数辨析</strong>：</li>
+<li><strong>羟基</strong> $(-OH)$：电中性基团，质子数等于电子数。$e^- = 8(\text{O}) + 1(\text{H}) = 9$。</li>
+<li><strong>氢氧根离子</strong> $(OH^-)$：带一个单位负电荷，电子数比质子数多1。$e^- = 9 + 1 = 10$。</li>
+<li><strong>水溶液粒子计算</strong>：不能忽略溶剂水分子($H_2O$)本身含有的原子或分子数。涉及阿伏加德罗常数判断时，溶液中除溶质外，水也是重要的粒子来源。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>原子/价键均摊法（针对晶体或重复网络结构）</strong>：<ul>
+<li><strong>找最小重复单元</strong>：如石墨烯中的六元环。</li>
+<li><strong>统计占用比例</strong>：分析该单元边界上的原子被多少个单元共用（石墨烯中C原子被3个环共用，占比 $\frac{1}{3}$）。</li>
+<li><strong>折算计数量</strong>：用总原子数除以单元均摊原子数，得出单元总数。</li>
+</ul>
+</li>
+<li><strong>溶液中粒子数目判断题的通用排查顺序</strong>：<ul>
+<li><strong>看体积</strong>：选项是否给出明确的溶液体积？未给体积无法计算物质的量，直接判错。</li>
+<li><strong>看溶剂</strong>：选项计算原子/分子总数时，是否仅考虑了溶质？通常情况下水溶液必须计入水的贡献，否则大概率错误。</li>
+<li><strong>看平衡</strong>：是否存在弱电解质电离、盐类水解等可逆过程？涉及此类过程的离子数目本身就不是定值，选项若给出绝对数目需警惕。</li>
+</ul>
+</li>
+<li><strong>微粒组成辨析法</strong>：<ul>
+<li>处理微粒（分子、原子、离子、基团）的电子数、质子数计算时，须严格区分是“电中性粒子”还是“带电离子”。离子电子数 = 质子数总和 - 所带电荷（注意正负号）。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>石墨烯环数计算易直接除以 6</strong>：错误认为一个环含 6 个碳原子，从而误算为 $1 N_A$。务必牢记均摊规则，每个 C 被 3 个环共用，平均每个环只摊到 2 个 $C$。</li>
+<li><strong>混淆 $-OH$ 与 $OH^-$ 的电子数</strong>：两者化学符号仅差一个电荷标记，但电子数刚好相差 1。不经细致区分极易掉入陷阱，尤其是在同一选项或连续选项中对比出现时。</li>
+<li><strong>计算溶液氧原子数时遗忘水</strong>：例如 $NaAlO_2$ 溶液，极易只算溶质中的 $O$ 原子，得出 $2 N_A$ 的错误结论。凡水溶液体系，看到统计“原子总数”或“氧原子数”，必须下意识想到“水分子里有大量氧/氢原子”。</li>
+<li><strong>忽视物理量缺项</strong>：pH 值或浓度已知，但<strong>无体积</strong>数据时，无法求出微粒的具体数目，此类选项逻辑不成立。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2013 新课标Ⅱ，改编）设 $N_A$ 为阿伏加德罗常数的值，判断下列说法正误。</p>
+<p><strong>选项 B</strong>：$12\text{g}$ 石墨烯（单层石墨）中含有六元环的个数为 $0.5 N_A$。</p>
+<ul>
+<li><strong>思路</strong>：石墨烯是碳原子构成的平面网状结构。要求六元环数，必须建立碳原子数与环数的换算关系，采用“均摊法”是解题关键。</li>
+<li><strong>步骤</strong>：</li>
+<li>计算碳原子总量：$n(C) = \frac{12\text{g}}{12\text{g}\cdot \text{mol}^{-1}} = 1\ \text{mol}$，原子数为 $N_A$。</li>
+<li>分析六元环结构：每个六元环有 6 个顶点（即 6 个碳原子），但每个顶点碳原子同时被 3 个相邻的六元环共用。</li>
+<li>均摊计算环数：每个六元环均摊的碳原子数为 $6 \times \frac{1}{3} = 2$ 个。</li>
+<li>换算得出结果：六元环数 $= \frac{1\ \text{mol}}{2} \times N_A = 0.5 N_A$。说法正确。</li>
+<li><strong>点评/变式</strong>：本题为石墨烯结构的经典计算方法，考查从宏观质量到微观结构单元的换算能力。<strong>变式陷阱</strong>：若将题干改为“$12\text{g}$ 石墨烯含有碳碳单键的数目”，每一个碳原子连有 3 条键，每条键被 2 个原子共用，键数 $= 1\ \text{mol} \times 3 \times \frac{1}{2} \times N_A = 1.5 N_A$。均摊法同样适用于计算硅氧四面体、金刚石、碳纳米管等原子晶体或空间网状结构。</li>
+</ul>
+<p><strong>选项 D</strong>：$1\ \text{mol}$ 的羟基与 $1\ \text{mol}$ 的氢氧根离子所含电子数均为 $9 N_A$。</p>
+<ul>
+<li><strong>思路</strong>：本题直接考查微粒电子数的速算。基团与离子最本质的区别在于是否带有净电荷，带电荷必然导致质子数与电子数不相等。</li>
+<li><strong>步骤</strong>：</li>
+<li>计算羟基 $(-OH)$：质子数（或电子数） $= 8(\text{O}) + 1(\text{H}) = 9$。微粒不带电，所以 $1\ \text{mol}\ -OH$ 含电子 $9\ \text{mol}$，即 $9 N_A$。</li>
+<li>计算氢氧根 $(OH^-)$：质子数 $= 8 + 1 = 9$。带一个单位负电荷，意味着电子数比质子数多 1，电子数 $= 9 + 1 = 10$。</li>
+<li>判断：$1\ \text{mol}\ OH^-$ 含电子 $10\ \text{mol}$，即为 $10 N_A$。原表述认为都是 $9 N_A$，混淆了基团与离子的电子数，说法错误。</li>
+<li><strong>点评/变式</strong>：此类题眼在于“电荷”。<strong>变式辨析</strong>：$-\text{CH}_3$ （9电子）与 $\text{CH}_3^+$（8电子）、 $-\text{NH}_2$（9+7=16电子）与 $\text{NH}_2^-$（16+1=17电子）等，均遵循“阴加阳减”的电子数计算原则。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-03.html">2013-新课标Ⅱ-03</a>（2013 · 中） 本题考查阿伏加德罗常数的应用，涉及溶液中微粒数、石墨结构、pH计算及粒子组成判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/798-石墨烯结构.html">石墨烯结构</a></li>
+</ul>
+</div>
+</body>
+</html>

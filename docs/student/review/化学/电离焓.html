@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电离焓</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电离焓</h1><div class="review-mark" data-stem="电离焓"></div><div class="meta-card"><span><strong>考点</strong>电离焓</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>物质结构与原子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物质结构与原子结构</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电离焓</strong>：弱电解质在水溶液中电离过程的热效应，符号 $\Delta H_{\text{电离}}$。对弱酸 HCN，$\mathrm{HCN(aq) \rightleftharpoons H^+(aq) + CN^-(aq)}$。</li>
+<li><strong>盖斯定律</strong>：一个反应不管是一步完成还是分步完成，其反应热相同。可以利用已知反应焓变的代数加减求目标反应的 $\Delta H$。</li>
+<li><strong>中和热</strong>：强酸与强碱的稀溶液发生中和反应生成 $1\text{ mol } \mathrm{H_2O}$ 时放出的热量。$\mathrm{H^+(aq) + OH^-(aq) = H_2O(l)}$，$\Delta H_{\text{中和}} = -55.6\text{ kJ}\cdot\text{mol}^{-1}$（25℃）。</li>
+<li><strong>弱酸反应热的拆解</strong>：弱酸与强碱反应的热效应 = 弱酸电离焓 + 强酸强碱中和焓。由于弱酸电离需要破坏共价键，电离焓通常 <strong>大于0（吸热）</strong>。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出目标反应</strong>：明确待求的 $\Delta H$ 对应哪种物质变化（如 HCN 电离：$\mathrm{HCN \rightarrow H^+ + CN^-}$）。</li>
+<li><strong>写出已知反应</strong>：整理题目给出的热化学方程式，特别注意反应物和生成物的状态（aq）。</li>
+<li><strong>构建热力学循环</strong>：利用盖斯定律“设计路径”。以本题为例：</li>
+<li>路径一：HCN + OH⁻ → CN⁻ + H₂O，$\Delta H_1$</li>
+<li>路径二：HCN → H⁺ + CN⁻（$\Delta H_{\text{电离}}$）→ H⁺ + OH⁻ → H₂O（$\Delta H_{\text{中和}}$），总 $\Delta H = \Delta H_{\text{电离}} + \Delta H_{\text{中和}}$</li>
+<li><strong>列方程求解</strong>：令两路径总焓变相等，代入数值解出 $\Delta H_{\text{电离}}$。注意焓变正负号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>直接用反应热相减</strong>：误将 “弱酸中和热”与“强酸中和热”之差当作电离焓，错选 -43.5 kJ/mol。正确的是用盖斯定律构造循环，注意吸热为正。</li>
+<li><strong>混淆中和热定义</strong>：认为 HCl 与 NaOH 反应的 $\Delta H = -55.6\text{ kJ/mol}$ 不是标准中和热，实际上强酸强碱反应的本质就是 $\mathrm{H^+ + OH^-}$ 生成水，该值即为中和热。</li>
+<li><strong>忽略电离吸热本质</strong>：弱酸电离需要断裂 H—CN 键，电离焓为正值。若算出负值，可立刻判断错误。</li>
+<li><strong>状态标记忽视</strong>：题目中均为水溶液(aq)，计算时不需要额外考虑溶解热或稀释热，直接使用反应焓。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2010全国新课标·第5题——已知 $\mathrm{HCN(aq)}$ 与 $\mathrm{NaOH(aq)}$ 反应的 $\Delta H = -12.1\text{ kJ}\cdot\text{mol}^{-1}$；$\mathrm{HCl(aq)}$ 与 $\mathrm{NaOH(aq)}$ 反应的 $\Delta H = -55.6\text{ kJ}\cdot\text{mol}^{-1}$。则 $\mathrm{HCN}$ 在水溶液中电离的 $\Delta H$ 等于（ ）<br />
+A. $-67.7$ kJ·mol⁻¹  B. $-43.5$ kJ·mol⁻¹  C. $+43.5$ kJ·mol⁻¹  D. $+67.7$ kJ·mol⁻¹</p>
+<p><strong>思路</strong><br />
+把 HCN 与 NaOH 的反应拆解为两步：① HCN 电离为 H⁺ 和 CN⁻；② 电离出的 H⁺ 与 NaOH 提供的 OH⁻ 发生中和生成水。根据盖斯定律，实际反应热等于这两步反应热之和。HCl 和 NaOH 反应的热效应就是第②步的中和热，代入即可求出第①步的电离焓。</p>
+<p><strong>步骤</strong><br />
+1. 目标反应（电离）： $\mathrm{HCN(aq) \rightarrow H^+(aq) + CN^-(aq)}$  $\Delta H_{\text{电离}}$（待求）<br />
+2. 酸碱中和： $\mathrm{H^+(aq) + OH^-(aq) \rightarrow H_2O(l)}$  $\Delta H_{\text{中和}} = -55.6\text{ kJ}\cdot\text{mol}^{-1}$（即 HCl 与 NaOH 反应的本质）<br />
+3. HCN 与 NaOH 总反应： $\mathrm{HCN(aq) + OH^-(aq) \rightarrow CN^-(aq) + H_2O(l)}$  $\Delta H_1 = -12.1\text{ kJ}\cdot\text{mol}^{-1}$<br />
+4. 根据盖斯定律： $\Delta H_1 = \Delta H_{\text{电离}} + \Delta H_{\text{中和}}$<br />
+   即 $-12.1 = \Delta H_{\text{电离}} + (-55.6)$<br />
+   解得 $\Delta H_{\text{电离}} = +43.5\text{ kJ}\cdot\text{mol}^{-1}$<br />
+5. 对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+- 本题巧妙利用盖斯定律，将弱酸反应热设计为电离与中和两步，考查电离焓本质。牢记弱酸电离吸热（$\Delta H &gt; 0$）可直接排除 A、B。
+- 变式1：若将 HCN 换成 HF、CH₃COOH 等弱酸，思路完全一致，只替换数据。
+- 变式2：可延伸至弱碱电离（如 NH₃·H₂O 与 HCl 反应求 NH₃·H₂O 电离焓），同样设计“弱碱电离 + 中和”的循环路径求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2010-新课标-05.html">2010-新课标-05</a>（2010 · 中） 本题通过盖斯定律计算弱酸电离的反应热。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/896-电离焓.html">电离焓</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有机物分子组成通式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>有机物分子组成通式</h1><div class="review-mark" data-stem="有机物分子组成通式"></div><div class="meta-card"><span><strong>考点</strong>有机物分子组成通式</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>有机化学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：有机化学</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>烷烃通式</strong>：$C_nH_{2n+2}$（$n \ge 1$）。</li>
+<li><strong>单烯烃通式</strong>：$C_nH_{2n}$（$n \ge 2$，只含一个碳碳双键）。</li>
+<li><strong>饱和一元醇通式</strong>：$C_nH_{2n+2}O$（$n \ge 1$，与醚互为同分异构）。</li>
+<li><strong>饱和二元醇通式</strong>：$C_nH_{2n+2}O_2$（$n \ge 2$）。</li>
+<li><strong>同系物规律</strong>：每一类有机物均随碳原子数递增而构成系列；同一系列内，每增加一个 $CH_2$，分子式递变 $CH_2$。</li>
+<li><strong>题目常见组合模式</strong>：将多种通式的有机物按固定顺序（如烯烃→烷烃→饱和一元醇→饱和二元醇）排列成周期循环，且碳原子数随周期递增。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>辨认通式类别</strong><br />
+   根据给出的分子式，判断分别属于哪类有机物（烯烃、烷烃、饱和一元醇、饱和二元醇等），抓住特征氢氧原子数。</li>
+<li><strong>确定排列周期</strong><br />
+   观察排布规律，把每一组循环内的排列顺序固定下来。若出现 $m$ 个一组，则循环长度为 $m$。</li>
+<li><strong>计算目标项的位置</strong><br />
+   设总项数为 $N$，每 $m$ 项为一循环，则  </li>
+<li>循环组数：$k = \lfloor (N-1)/m \rfloor$（从第 $0$ 组起）或直接 $N = m \cdot q + r$（$0&lt;r\le m$），第 $N$ 项位于第 $(q+1)$ 组的第 $r$ 项。<br />
+   例如 $26 = 4 \times 6 + 2$，表示在第 $7$ 组第 $2$ 位。</li>
+<li><strong>确定碳原子数</strong><br />
+   弄清首组起始碳原子数 $n_0$，相邻组碳原子数差一般为 $1$。目标组碳原子数为 $n_0 + (\text{组号}-1) \times 1$（或直接读取组内相应位置）。</li>
+<li><strong>套用通式写出答案</strong><br />
+   结合目标物所属类别通式，代入碳原子数得到分子式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>通式记忆混淆</strong>：醇与醚、烷烃与环烷烃的通式易混，需明确题目所指类别。本题每组的醇特指饱和醇，不是醚。</li>
+<li><strong>碳原子数起算错误</strong>：首项 $C$ 原子数可能不是 $1$，务必从表格第一项直接读出。本题首组（1~4项）烯烃 $C_2H_4$，碳数起始 $2$。</li>
+<li><strong>循环分组边界错误</strong>：如项数除以组长的余数处理不当，$26 \div 4 = 6$ 余 $2$，对应第 $7$ 组第 $2$ 位烷烃，部分考生误算成第 $6$ 组。</li>
+<li><strong>氧原子数遗漏</strong>：饱和多元醇通式中氧原子数等于羟基数，需准确套用 $C_nH_{2n+2}O_x$，不要落掉 $O$。</li>
+<li><strong>用数学规律代替化学本质</strong>：虽表象是数列找规律，但本质考核有机物分类和通式，只顾计算而忽略通式类别会直接导致选项错选。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2012·新课标·6题）</h3>
+<p>表中按规律排列分子式：<br />
+1 $C_2H_4$ 2 $C_2H_6$ 3 $C_2H_6O$ 4 $C_2H_6O_2$ 5 $C_3H_6$ 6 $C_3H_8$ 7 $C_3H_8O$ 8 $C_3H_8O_2$ 9 $C_4H_8$ 10 $C_4H_{10}$ ……<br />
+按此规律，第 26 项应为（　　）<br />
+A. $C_7H_{16}$ B. $C_7H_{14}O_2$ C. $C_8H_{18}$ D. $C_8H_{18}O$</p>
+<p><strong>思路</strong><br />
+先观察序列类别：每 4 个一组，依次为单烯烃、烷烃、饱和一元醇、饱和二元醇。碳原子数每过一组（4 项）增加 1。利用周期性将第 26 项转化为组数+组内位置，再推导碳数和通式。</p>
+<p><strong>步骤</strong><br />
+1. 确定循环结构：$[C_nH_{2n},\ C_nH_{2n+2},\ C_nH_{2n+2}O,\ C_nH_{2n+2}O_2]$，$n$ 从 2 开始，组间 $n$ 增 1。
+2. 计算位置：$26 = 4 \times 6 + 2$，即第 $7$ 组（$6+1$）的第 $2$ 项。
+3. 求碳数：首组 $n=2$，第 $7$ 组 $n = 2 + (7-1) \times 1 = 8$。
+4. 类别对应：第 2 项为烷烃，通式 $C_nH_{2n+2}$，代入 $n=8$ 得 $C_8H_{18}$。
+5. 对照选项，C 正确。</p>
+<p><strong>点评/变式</strong><br />
+本题表面考数学找规律，实质必须准确识别每类有机物的通式。易错点在于把第 2 项错认为醇或烯烃，或碳数算成 $7$。<br />
+<strong>变式</strong>：若将排列顺序改为“醇→烯烃→烷烃→二元醇”，其他不变，第 26 项应是什么？需重新定位组内对应类别，计算思路一致，答案为 $C_8H_{18}O$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2012-新课标-06.html">2012-新课标-06</a>（2012 · 中） 通过分析烯烃、烷烃、醇的循环排布规律，推断第26项有机物分子式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">有机物分子组成通式</a></li>
+</ul>
+</div>
+</body>
+</html>

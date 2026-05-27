@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>转化率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>转化率</h1><div class="review-mark" data-stem="转化率"></div><div class="meta-card"><span><strong>考点</strong>转化率</span><span><strong>权重</strong>20</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：20</li>
+<li>真题数：3；年份跨度：2008–2019</li>
+<li>出现题位：选择9 选择10</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<p>转化率（$\alpha$）是衡量可逆反应进行程度的核心量度，其本质是反应物消耗的物质的量占起始物质的量的分数。</p>
+<ul>
+<li>
+<p><strong>定义式（通式）</strong>:
+  对于反应物 $A$，恒容条件下：
+  $$\alpha(A) = \frac{\text{A的转化浓度}}{\text{A的起始浓度}} \times 100\% = \frac{n_{\text{转}}(A)}{n_{\text{始}}(A)} \times 100\%$$</p>
+</li>
+<li>
+<p><strong>压强关联式（刚性容器，有体积变化反应）</strong>:
+  对于反应前后气体分子数改变的可逆反应（如 $A(g) \rightleftharpoons B(g) + C(g)$ 或 $A(g) + B(g) \rightleftharpoons 2C(g)$），在刚性容器中，压强之比等于物质的量之比。
+  若起始只有反应物，可用<strong>差量法</strong>关联转化率与总压变化：
+  $$\text{压强变化量} \propto \text{转化的物质的量}$$
+  例如，对于反应 $A(g) \rightleftharpoons B(g) + C(g)$，若起始仅有 $A$：$\Delta n = n_{\text{转}}$，则 $p_{\text{总}} = p_{0} \times (1 + \alpha)$，即 $\alpha = \frac{p_{\text{总}} - p_{0}}{p_{0}}$。
+  更复杂的计量数关系可通过“三段式”建立 $\alpha$ 与 $p_{\text{总}}$ 的函数表达式。</p>
+</li>
+<li>
+<p><strong>影响平衡转化率的因素</strong>:</p>
+</li>
+<li><strong>温度</strong>: 升高温度，平衡向<strong>吸热</strong>方向移动。若正向吸热 ($\Delta H &gt; 0$)，升高温度会提高反应物的平衡转化率。</li>
+<li><strong>压强</strong>: 增大压强，平衡向气体分子数<strong>减小</strong>的方向移动。</li>
+<li><strong>浓度</strong>: 增大某一反应物的浓度，会提高<strong>其他</strong>反应物的转化率，但自身的转化率降低。</li>
+<li>
+<p><strong>注意</strong>: 催化剂不影响平衡转化率。通入不参与反应的“惰性气体”，在恒容条件下不影响分压，不影响平衡移动；在恒压条件下会稀释反应物，相当于减压，影响平衡。</p>
+</li>
+<li>
+<p><strong>平衡常数 $K_p$ 与转化率计算</strong>:
+  在“三段式”中求得平衡时的物质的量分数，结合分压定律 $p_i = p_{\text{总}} \times x_i$，即可将转化率与 $K_p$ 关联起来。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p><strong>通用流程：三步锁定转化率</strong>
+1. <strong>审题定性</strong>:
+   明确反应方程式、容器特征（刚性/恒容、恒压）、初始投料（单一物质或多种物质）、反应的热效应 ($\Delta H$ 的正负)及气体分子数变化 ($\Delta V_g$)。
+2. <strong>建立三段式模型</strong>:
+   设反应物的转化量为 $x$，利用化学计量数之比列出各组分起始量、转化量、平衡量的代数式（物质的量或浓度）。
+3. <strong>依据条件列方程求解</strong>:
+   - <strong>已知平衡浓度/物质的量</strong>: 直接代入定义式 $\alpha = x / n_{\text{始}}$。
+   - <strong>已知压强变化</strong>: 对于 $\Delta V_g \neq 0$ 的反应，利用“平衡总物质的量 = 起始总物质的量 + 压强变化对应物质的量”建立等式。压强比等于物质的量比：$p_{\text{平}} / p_{\text{始}} = n_{\text{平}} / n_{\text{始}}$。
+   - <strong>已知 $K_c$ 或 $K_p$</strong>: 将三段式中平衡浓度的表达式代入平衡常数公式，解方程求出 $x$，再计算 $\alpha$。
+   - <strong>图像分析</strong>: 如浓度-时间图，直接读出平衡浓度，计算转化率；若为速率问题，用“先拐先平数值大”判断温度压强大小。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“转化率”与“反应物剩余量”</strong>: 转化率 $\alpha \neq$ 反应物剩余的百分数。$\text{剩余百分数} = 1 - \alpha$。计算时务必小心审题。</li>
+<li><strong>三段式初始量代错</strong>: 若为“等物质的量”投料，需设初始量均为 $n_0$；若为“起始总压”描述，需将总压分解为各组分的初始分压后再用三段式。</li>
+<li><strong>压强关联时，忽略气体计量数</strong>: 转化率 $\alpha = \frac{\Delta p}{p_0}$ 仅适用于反应前后气体分子数增加1（$A \to 2$ 个分子）的特定情况。通用方法必须是 <strong>$n_{\text{平}}/n_{\text{始}} = p_{\text{平}}/p_{\text{始}}$</strong>，由 $n_{\text{平}}$ 反解 $\alpha$。</li>
+<li><strong>条件改变对转化率的误判</strong>:</li>
+<li><strong>致命错误</strong>: 认为增加反应物浓度，其自身转化率一定增大。事实是，增加某反应物浓度，<strong>自身的转化率降低，其他反应物的转化率升高</strong>。</li>
+<li><strong>恒容下加惰气</strong>: 对等效于“减压”的错误理解。恒容下充入惰性气体，反应物分压不变，平衡不移动，转化率不变。</li>
+<li><strong>平衡图像中的速率陷阱</strong>:
+  比较反应速率必须明确是“正反应速率”还是“逆反应速率”，以及对应的浓度与温度条件。a, b, c 不同点只有在同一温度下的正逆反应速率才能用浓度直接比较。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2019-新课标Ⅱ-09</h3>
+<p><strong>题目</strong>：刚性容器中，等物质的量的碘和环戊烯（$C_5H_6$）发生反应③（$C_5H_6(g) + I_2(g) \rightleftharpoons C_5H_6(g) + 2HI(g)$，$\Delta H_3=+89.3 \text{kJ/mol}$），起始总压 $10^5 \text{Pa}$，平衡时总压增加 20%。求环戊烯的转化率、$K_p$ 及提高转化率的措施。</p>
+<p><strong>思路</strong>：
+这是典型的利用刚性容器压强变化求转化率的题。关键点：$\Delta V_g = 0$（反应物2体积，生成物2体积），因此总压增加<strong>不是</strong>由气体分子数变化引起的？再读题：反应是“（g）+ I₂（g）⇌ （g）+ 2HI（g）”，反应前气体计量数为 $1+1=2$，反应后气体计量数为 $1+2=3$。这是一个分子数增加1的反应 ($\Delta n&gt;0$)。设转化量为 $x$，则总物质的量增加量等于 $x$。利用压强比等于物质的量比求解。</p>
+<p><strong>步骤</strong>：
+1. <strong>设未知数</strong>: 设起始 $\text{I}<em A_0="A,0">2$ 和环戊烯均为 $y$ mol，总物质的量 $n_0=2y$。因等物质的量，初始分压 $p</em>$。
+   用物质的量计算更直观：设反应掉的环戊烯为 $x$ mol。
+   三段式：
+   起始: $n(C_5H_6)=y$, $n(I_2)=y$, $n(C_5H_8)=0$, $n(HI)=0$， $n_{\text{总}}=2y$
+   转化: $-x$, $-x$, $+x$, $+2x$
+   平衡: $y-x$, $y-x$, $x$, $2x$， $n_{\text{总,平}} = 2y + x$
+2. } = p_{B,0} = 5 \times 10^4 \text{Pa<strong>列方程</strong>:
+   利用恒温恒容条件: $\frac{p_{\text{平}}}{p_{\text{始}}} = \frac{n_{\text{总,平}}}{n_{\text{总,始}}}$
+   已知 $p_{\text{平}} = 1.2 \times 10^5 \text{Pa}$，$p_{\text{始}} = 1.0 \times 10^5 \text{Pa}$。
+   则 $\frac{2y+x}{2y} = 1.2$。
+   解得: $x = 0.4y$。
+   所以转化率 $\alpha = \frac{x}{y} \times 100\% = 40\%$。
+3. <strong>求 $K_p$</strong>:
+   平衡时总物质的量 $n_{\text{平}} = 2y + 0.4y = 2.4y$。
+   各组分的物质的量分数：
+   $x(C_5H_6) = \frac{y-0.4y}{2.4y} = \frac{0.6}{2.4} = 0.25$
+   $x(I_2) = 0.25$
+   $x(C_5H_8) = \frac{0.4}{2.4} = \frac{1}{6}$
+   $x(HI) = \frac{0.8}{2.4} = \frac{1}{3}$
+   分压：$p(C_5H_6) = p(I_2) = 0.25 \times 1.2 \times 10^5 = 0.3 \times 10^5 \text{Pa}$； $p(C_5H_8) = \frac{1}{6} \times 1.2 \times 10^5 = 0.2 \times 10^5 \text{Pa}$； $p(HI) = \frac{1}{3} \times 1.2 \times 10^5 = 0.4 \times 10^5 \text{Pa}$。
+   $$K_p = \frac{p(C_5H_8) \times p^2(HI)}{p(C_5H_6) \times p(I_2)} = \frac{0.2 \times 10^5 \times (0.4 \times 10^5)^2}{(0.3 \times 10^5) \times (0.3 \times 10^5)} \approx 3.56 \times 10^4 \text{Pa}$$
+4. <strong>措施判断</strong>:
+   反应正向吸热 ($\Delta H &gt; 0$)。
+   A. 通入惰性气体 (恒容)：分压不变，平衡不移动，转化率不变。错。
+   B. 提高温度：向吸热方向（正向）移动，转化率增大。对。
+   C. 增加环戊烯浓度：自身转化率降低。错。
+   D. 增加碘浓度：提高另一种反应物环戊烯的转化率。对。</p>
+<p><strong>点评/变式</strong>：
+本题核心是“刚性容器，有压差，求转化率”。必须牢记<strong>压强比等于物质的量比</strong>，通过“三段式+差量法”快速求解。易错点在于审题不清，误以为反应前后分子数不变。变式训练可尝试给出 $K_p$ 值反求转化率。</p>
+<h3>【代表题】2013-新课标Ⅱ-10</h3>
+<p><strong>题目</strong>：$A(g) \rightleftharpoons B(g) + C(g)$，$\Delta H=+85.1 \text{kJ/mol}$。在1.0 L刚性容器中放入 0.10 mol A，测得不同时间总压 $p$。求 $A$ 转化率的表达式及提高转化率的措施。</p>
+<p><strong>思路</strong>：
+题给数据为随时间变化的压强，且最终压强不变说明达到平衡。要求推导 $\alpha(A)$ 关于 $p$ 和起始压强 $p_0$ 的通用表达式。这是一个 $1 \to 2$ 分子数增加的反应，可以用差量法直接推导。</p>
+<p><strong>步骤</strong>：
+1. <strong>推导表达式</strong>:
+   设起始 $A$ 的物质的量为 $n_0 = 0.10 \text{ mol}$。起始总压为 $p_0$。
+   反应: $A(g) \rightleftharpoons B(g) + C(g)$
+   设平衡时 $A$ 的转化量为 $x \text{ mol}$。
+   起始: $n_0$, $0$, $0$ ； $n_{\text{总}}=n_0$
+   平衡: $n_0-x$, $x$, $x$ ； $n_{\text{总}}=n_0+x$
+   恒温恒容，$\frac{p}{p_0} = \frac{n_0+x}{n_0}$。
+   解得: $x = n_0(\frac{p}{p_0} - 1)$。
+   所以 $\alpha(A) = \frac{x}{n_0} = \frac{p}{p_0} - 1$。  (注意：有些教材写为 $\frac{p-p_0}{p_0}$)
+2. <strong>提高转化率的措施</strong>:
+   反应正向吸热 ($\Delta H&gt;0$)，气体分子数增加 ($1 \to 2$)。
+   - 升高温度，平衡正移，$\alpha$ 提高。
+   - 降低压强，平衡向气体分子数增大的方向（正向）移动，$\alpha$ 提高。</p>
+<p><strong>点评/变式</strong>：
+此题是转化率测定的经典模型。它的表达式 $\alpha = \frac{p}{p_0} - 1$ 仅适用于 $A \to 2$ 气体分子的反应。若反应为 $2A(g) \rightleftharpoons B(g)$，则需重新推导。必须避免死记硬背公式，掌握 $n$ 与 $p$ 的比例推导才是万全之策。此外，表格数据最后几组压强不变（9.52, 9.53），暗示已达平衡，计算时应用最后的平衡压强代入。</p>
+<h3>【代表题】2008-全国Ⅱ-09</h3>
+<p><strong>题目</strong>：温度 $T_1$ 时，密闭容器加入 0.80 mol $PCl_5$，平衡时剩 0.60 mol。求分解率 $\alpha_1$；若升温至 $T_2$，分解率为 $\alpha_2$，比较大小并说明。</p>
+<p><strong>思路</strong>：
+这是转化率定义式的直接应用。只需从题干中提取“反应物起始量”和“平衡时剩余量”，即可口算转化率。第二问用温度对平衡移动的影响规律判断。</p>
+<p><strong>步骤</strong>：
+1. <strong>求分解率 $\alpha_1$</strong>:
+   $PCl_5(g) \rightleftharpoons PCl_3(g) + Cl_2(g)$  (由题干信息推断)
+   起始: $n_{\text{始}}(PCl_5) = 0.80 \text{ mol}$
+   平衡: $n_{\text{平}}(PCl_5) = 0.60 \text{ mol}$
+   消耗: $\Delta n = 0.80 - 0.60 = 0.20 \text{ mol}$
+   $\alpha_1 = \frac{0.20}{0.80} \times 100\% = 25\%$
+2. <strong>比较 $\alpha_1$ 与 $\alpha_2$</strong>:
+   由题给能量关系图可知，$PCl_5$ 分解为吸热反应 ($\Delta H = +93 \text{ kJ/mol}$，对应题干信息)。升高温度，化学平衡向吸热方向（即分解方向）移动。
+   因此，$T_2 &gt; T_1$ 时，分解率会增大，$\alpha_2$ 大于 $\alpha_1$。</p>
+<p><strong>点评/变式</strong>：
+本题是基础送分题，但两种问法必须熟练掌握：
+- 已知“剩下的量”，转化率 $= \frac{\text{起始} - \text{剩余}}{\text{起始}}$。
+- 已知“百分含量”，如平衡时 $PCl_5$ 体积分数为 $a\%</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a>（2019 · 中） 本题为化学热力学与化学平衡综合题，涉及盖斯定律、转化率与平衡常数计算、反应速率与条件判断。</li>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-10.html">2013-新课标Ⅱ-10</a>（2013 · 中） 化学平衡计算题，涉及转化率表达式推导及平衡移动影响因素分析。</li>
+<li><a href="../../exam/化学/2008-全国Ⅱ-09.html">2008-全国Ⅱ-09</a>（2008 · 中） 该题考查化学反应热效应、热化学方程式书写、可逆反应转化率计算及影响因素。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/356-转化率.html">转化率</a></li>
+</ul>
+</div>
+</body>
+</html>

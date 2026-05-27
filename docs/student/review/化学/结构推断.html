@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>结构推断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>结构推断</h1><div class="review-mark" data-stem="结构推断"></div><div class="meta-card"><span><strong>考点</strong>结构推断</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>有机化学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：有机化学</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2013–2024</li>
+<li>出现题位：填空12 填空13 解答19</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>1. 核心定义</strong>
+结构推断是有机化学的核心能力，要求基于分子式、官能团特征反应、合成路线信息(反应条件、试剂)及同分异构现象，逆向推导或正向验证未知有机物的碳骨架与官能团位置。</p>
+<p><strong>2. 必备知识体系</strong>
+- <strong>不饱和度(Ω)计算</strong>：分子式为 $C_xH_yO_zN_wX_v$ 时($X$为卤素，视为H)，$\Omega = \frac{2x + 2 - y - v + w}{2}$。每个双键(烯、醛酮、羧酸酯等)贡献1个 $\Omega$，三键贡献2个，环贡献1个，苯环贡献4个。
+- <strong>特征反应条件与官能团对应</strong>：醇的消去、卤代烃消去、酯化、肽键形成等均有特征条件。
+- <strong>官能团保护与转化顺序</strong>：易被氧化的基团(如酚羟基、氨基)在强氧化步骤前需保护；基团引入需考虑定位效应。
+- <strong>基团添加法(碳骨架连接)</strong>：在复杂分子合成中，常将目标分子在官能团(酯基、醚键、酰胺键等)处切割，倒推合成原料。
+- <strong>同分异构体限制</strong>：题目给出的“一氯代物只有一种”、“核磁共振氢谱峰面积比”用于确定结构对称性。</p>
+<h2>解题方法与套路</h2>
+<p><strong>1. 倒推法(逆向合成分析)</strong>
+- 从目标产物出发，对比原料，识别新形成的价键(通常是酯基、醚键、酰胺键)。将目标分子在特征连接处切断，回推中间体，再与已知路线对接。</p>
+<p><strong>2. 不饱和度与分子式联合推断</strong>
+- 对未知中间体，先算不饱和度。若 $\Omega \ge 4$，优先考虑苯环；剩余不饱和度结合反应条件判断碳碳双键、羰基、羧基或酯基数量。</p>
+<p><strong>3. 反应条件“翻译”法</strong>
+- <strong>$H_2$/Ni, $\Delta$</strong>：醛/酮/烯烃/炔烃/硝基还原。
+- <strong>NaOH/水, $\Delta$</strong>：卤代烃水解或酯类水解。
+- <strong>NaOH/醇, $\Delta$</strong>：卤代烃消去。
+- <strong>$O_2$/催化剂, $\Delta$</strong>：醇氧化成醛或酮；烯烃 α-H 氧化等。
+- <strong>浓 $H_2SO_4$, $\Delta$</strong>：醇消去或酯化；醇分子间脱水成醚。</p>
+<p><strong>4. “特征试剂”定量推断</strong>
+- <strong>1 mol 某物与 $Na$ 反应生成 1 mol $H_2$</strong>：含 2 mol 活泼氢(如 2 个 -OH 或 2 个 -COOH)。
+- <strong>与 $NaHCO_3$ 反应放出 $CO_2$</strong>：含 -COOH。
+- <strong>银镜反应或与新制 $Cu(OH)_2$ 反应产生砖红色沉淀</strong>：含 -CHO。</p>
+<p><strong>5. 对比验证法</strong>
+- 推断出结构后，将其代入全路线，验证每一步反应条件是否匹配、产物的分子式及氢谱特征是否符合题述。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>不饱和度计算陷阱</strong>：分子中含有 N 原子时，氢原子数需调整为 $y+w$，公式错用会导致苯环或羰基个数判断错误。</li>
+<li><strong>反应条件混淆</strong>：NaOH 水溶液(水解)与 NaOH 醇溶液(消去)极易混淆，尤其在多步合成中，错判将导致整个碳骨架推断错误。</li>
+<li><strong>官能团保护缺失，导致推断矛盾</strong>：例如，欲氧化侧链甲基为羧基($KMnO_4$)，但苯环上连有易被氧化的酚羟基或氨基，而路线中未保护，说明你的官能团位置推断一定有误(该位置不能被强氧化剂氧化)。</li>
+<li><strong>忽视对称性与氢谱</strong>：依据氢谱峰面积比推算氢原子数目时，将不对称结构误判为对称结构，或漏算等效氢，导致异构体书写错误。应记住连在同一饱和碳上的甲基(-\text{C(CH}_3\text{)}_2, -\text{C(CH}_3\text{)}_3$)等效氢数分别是6、9。</li>
+<li><strong>成环反应的遗漏</strong>：看到分子内同时存在 -OH 和 -COOH，或双烯等结构，需警惕分子内酯化成环或狄尔斯-阿尔德反应成环的可能性。</li>
+<li><strong>酯化反应脱水方式</strong>：酸脱羟基醇脱氢，在利用同位素示踪或推断连接位点时，必须准确应用此规则，否则醚键和酯键的切断位置会颠倒。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目 1 (2024-辽宁-19 片段)</strong></h3>
+<p><strong>题目</strong>：特戈拉赞(化合物K)合成中，已知A的分子式为 $C_7H_6O_3$，与过量甲醇在浓硫酸催化下反应生成B($C_9H_{10}O_4$)，B 经硝化等步骤……推断 A 和 B 的结构简式。
+<strong>思路</strong>：
+1. 由 A($C_7H_6O_3$) 算出高不饱和度，推测含苯环。结合反应(A→B)是与甲醇在浓硫酸下的酯化(形成新 C-O 键)，确定 A 含有 -COOH。
+2. B 的分子式 $C_9H_{10}O_4$ 比 A 多 $C_2H_4$，对比反应物甲醇($CH_3OH$)，可知消耗了几分子甲醇。利用“分子式差值法”确定酯化位点个数，进而反推 A 的官能团总数与位置。
+<strong>步骤</strong>：
+1. <strong>A 的推断</strong>：A 不饱和度 $\Omega = \frac{2 \times 7 + 2 - 6}{2} = 5$。苯环占 4，剩下 1 个不饱和度，表明还有一个双键，羧基 -COOH 恰好符合(含 1 个 $\pi$ 键和 1 个 $\sigma$ O-H)。A 有三种 O，结合后续硝化，推测 A 既含羧基又含酚羟基，即水杨酸类结构：邻羟基苯甲酸。
+2. <strong>B 的推断</strong>：A 与“过量”甲醇酯化。羧基必然酯化；酚羟基在浓 $H_2SO_4$ 催化下难以与醇直接酯化，但这里条件剧烈且甲醇过量，通常只发生羧基酯化。A 有 3 个 O，酯化后 B 有 4 个 O，符合“羧酸 + 醇 → 酯 + $H_2O$”的 O 原子数变化。分子式差值 $C_2H_4 = 2 \times CH_2$，但消耗的是 1 分子甲醇($CH_4O$)，产物质谱增量应为 $C_1H_2$... 准确对比 A($C_7H_6O_3$) $\to$ B($C_9H_{10}O_4$)，差值为 $C_2H_4O_1$，正是 2 分子甲醇(共 $C_2H_8O_2$)参与反应，脱水 2 分子($H_4O_2$)的结果。故酚羟基与羧基均被酯化。B 为邻甲氧羰基苯甲醚或合理对应结构。
+<strong>点评/变式</strong>：
+用“分子式差值法”准确计算参与反应的小分子数量是解此类题的关键。变式常考察只酯化羧基的情况，此时差值仅为 $C_1H_2$ (增加一个碳，去掉脱水影响)。</p>
+<h3><strong>题目 2 (2019-新课标Ⅱ-12 片段)</strong></h3>
+<p><strong>题目</strong>：已知环氧树脂 G 由双酚 A 和环氧氯丙烷合成。合成路线中，双酚 A 的合成：苯酚 + 丙酮($\text{CH}<em 15="15">3\text{COCH}_3$) 在酸催化下生成 C($C</em>O_2$)，推断 C 的结构。
+}H_{16<strong>思路</strong>：
+1. 注意反应物为两分子苯酚($C_6H_6O$)与一分子丙酮($C_3H_6O$)，产物 C 为 $C_{15}H_{16}O_2$。
+2. 反应特征：苯酚与酮在酸催化下发生羟醛缩合型反应(酚羟基对位活化，进攻羰基碳，脱水)，形成连接两个酚环的季碳结构。
+<strong>步骤</strong>：
+1. <strong>碳/氧原子守恒</strong>：反应物总原子为 $2 \times C_6 + C_3 = C_{15}$，氢原子 $2 \times 6 + 6 = 18$，O 原子 $2 \times 1 + 1 = 3$。产物 C 为 $C_{15}H_{16}O_2$，说明反应脱去 2 个 H 和 1 个 O，即脱去一个 $H_2O$。
+2. <strong>结构拼接</strong>：苯酚与丙酮反应，丙酮的羰基氧脱去，两个苯酚在羟基的对位与中心丙酮的碳原子连接。中心碳连有两个甲基。生成物为 2,2-双(4-羟苯基)丙烷，即“双酚 A”。
+<strong>点评/变式</strong>：
+牢记苯酚邻对位的高活性。酮与酚的缩合总是发生在酚羟基的对位(若对位被占则在邻位)。脱水缩合后形成四面体中心的季碳原子是此类物质的结构标志，高考中反复考查。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-19.html">2024-辽宁-19</a>（2024 · 中） 有机合成路线推断，涉及结构简式、官能团、反应类型、同分异构体和方程式书写</li>
+<li><a href="../../exam/化学/2019-新课标Ⅱ-12.html">2019-新课标Ⅱ-12</a>（2019 · 中） 分析新型环氧树脂G的有机合成路线，推断中间产物结构。</li>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-13.html">2013-新课标Ⅱ-13</a>（2013 · 中） 已知醛基和酯基的有机中间体合成路线，需要推断结构并设计合成步骤。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/816-结构推断.html">结构推断</a></li>
+</ul>
+</div>
+</body>
+</html>

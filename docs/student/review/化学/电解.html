@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电解</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电解</h1><div class="review-mark" data-stem="电解"></div><div class="meta-card"><span><strong>考点</strong>电解</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2011–2020</li>
+<li>出现题位：选择1 选择8</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电解原理</strong>：使直流电通过电解质溶液或熔融电解质，在阴阳两极引起氧化还原反应。电源负极接阴极（发生还原反应），正极接阳极（发生氧化反应）。</li>
+<li><strong>电极反应顺序（无特别说明时）</strong><br />
+  阳极（阴离子放电）：活泼电极（除铂、金、石墨外）优先溶解 $$M-ne^- \rightarrow M^{n+}$$；惰性电极时，$$S^{2-}&gt;I^-&gt;Br^-&gt;Cl^-&gt;OH^- &gt;$$ 含氧酸根。<br />
+  阴极（阳离子放电）：$$Ag^+&gt;Fe^{3+}&gt;Cu^{2+}&gt;H^+(酸)&gt;Fe^{2+}&gt;Zn^{2+}&gt;H^+(水)&gt;Al^{3+}&gt;Mg^{2+}&gt;Na^+&gt;Ca^{2+}&gt;K^+$$。</li>
+<li><strong>电解饱和食盐水（氯碱工业）</strong><br />
+  阳极（惰性）：$$2Cl^- -2e^- \rightarrow Cl_2↑$$<br />
+  阴极（惰性）：$$2H_2O+2e^- \rightarrow H_2↑+2OH^-$$<br />
+  总反应：$$2NaCl+2H_2O \xrightarrow{通电} 2NaOH+H_2↑+Cl_2↑$$<br />
+  离子交换膜：常为阳离子交换膜，只允许阳离子（如 $$\text{Na}^+$$）通过，阻止气体混合及副反应。</li>
+<li><strong>电解熔融氯化钠</strong><br />
+  阳极：$$2Cl^- -2e^- \rightarrow Cl_2↑$$<br />
+  阴极：$$2Na^+ +2e^- \rightarrow 2Na$$<br />
+  总反应：$$2NaCl(\text{熔融}) \xrightarrow{通电} 2Na + Cl_2↑$$<br />
+  定量关系：每电解 $$1\ \text{mol}\ NaCl$$，转移 $$1\ \text{mol}\ e^-$$，生成 $$0.5\ \text{mol}\ Cl_2$$、$$1\ \text{mol}\ Na$$。</li>
+<li><strong>相关计算</strong>：遵循电子守恒，所有电极得失电子总数相等。$$n(e^-)=\frac{m}{M}\times \text{化合价变化}$$，气体体积计算需注明标准状况。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断装置类型与电极</strong>：明确外接电源正负极→确定阴、阳极；或根据反应自发性判断是否电解池。</li>
+<li><strong>看电解质状态与电极活性</strong>：熔融态只含离子，无水电离干扰；溶液中有 $$H^+$$、$$OH^-$$ 参与放电；阳极若为活泼金属，优先氧化。</li>
+<li><strong>书写电极反应式</strong>：先标化合物中元素化合价，确定得（失）电子数；酸性环境用 $$H^+$$ 及 $$H_2O$$ 配平电荷与原子守恒，碱性环境用 $$OH^-$$ 及 $$H_2O$$。</li>
+<li><strong>关注离子交换膜</strong>：明确膜类型（阳膜/阴膜/质子交换膜）→判断允许通过的离子→解释其阻止副反应、防止产物混合、营造特定酸碱环境的作用。</li>
+<li><strong>定量计算</strong>：以电子转移守恒为核心，建立已知物、待求物与电子物质的量的关系：$$n(e^-) = n(\text{生成物}) \times \Delta\text{化合价（每分子）}$$ 或利用 $$n(e^-) = \frac{I\cdot t}{F}$$（题目给电流时）；注意换算质量、气体体积（标准状况 $$22.4\ \text{L/mol}$$）、溶液浓度等。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆熔融电解与溶液电解产物</strong>：电解熔融 $$NaCl$$ 得到 $$Na$$ 和 $$Cl_2$$；电解 $$NaCl$$ 水溶液得到 $$NaOH$$、$$H_2$$ 和 $$Cl_2$$。错误认为两者产物相同。</li>
+<li><strong>忽视离子交换膜的作用</strong>：题目中若出现离子膜，则离子移动受限，计算转移电子数或某极产物时需结合膜的选择性。</li>
+<li><strong>电解产物计算忘记状态限制</strong>：如用 $$22.4\ \text{L/mol}$$ 算气体体积，必须确认是标准状况；电解熔融 $$NaCl$$ 制得 $$Na$$ 为液态，但仍按质量计算。</li>
+<li><strong>阳极材料干扰</strong>：若阳极为铜、银等活泼金属，则阳极失电子是金属溶解而非溶液中阴离子放电，电极反应完全不同。</li>
+<li><strong>离子方程式书写 pH 环境</strong>：电解 $$NaCl$$ 溶液阴极生成 $$OH^-$$，写总反应离子方程式勿漏写 $$H_2O$$。</li>
+<li><strong>歧化反应判断失误</strong>：涉及 $$Cl_2$$、$$ClO_2$$ 等制备时，注意氧化还原反应中同一物质既是氧化剂又是还原剂，计算转移电子数要按化合价升降分开算，不能简单认为全部被氧化或全部被还原。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2020-新课标Ⅱ-08（1）——电解法制氯气装置</h3>
+<p><strong>题目</strong>：电解精制盐水制氯气，装置如图（阳离子交换膜只允许 $$Na^+$$ 通过）。判断氯气的逸出口。</p>
+<p><strong>思路</strong>：阳极发生氧化反应，阴离子 $$Cl^-$$ 放电生成 $$Cl_2$$；阴极发生还原反应，$$H_2O$$ 得电子生成 $$H_2$$ 和 $$OH^-$$。结合离子移动方向（$$Na^+$$ 向阴极迁移）判断电极区域。</p>
+<p><strong>步骤</strong>：
+- 电解饱和食盐水，阳极：$$2Cl^- -2e^- \rightarrow Cl_2↑$$，故氯气在阳极生成。
+- 由外接电源极性确定阳极（接电源正极），结合装置导管位置，阳极所在区域逸出 $$Cl_2$$，答“a”。
+- 同时阴极产生 $$H_2$$ 和 $$NaOH$$，$$Na^+$$ 透过阳离子交换膜从阳极区进入阴极区，既保证电荷平衡，又避免 $$Cl_2$$ 与 $$NaOH$$ 反应。</p>
+<p><strong>点评/变式</strong>：离子膜电解池要明确“两出气一出液”：阳极出 $$Cl_2$$，阴极出 $$H_2$$，浓碱液从阴极区流出。若膜破损，$$Cl_2$$ 与 $$NaOH$$ 反应生成 $$NaClO$$，导致产品不纯。</p>
+<h3>代表题二：2011-新课标-01（D选项）——电解熔融 NaCl 的产物与量</h3>
+<p><strong>题目</strong>：电解 58.5 g 熔融 NaCl，判断说法：能产生 22.4 L 氯气（标准状况）、23.0 g 金属钠。</p>
+<p><strong>思路</strong>：计算 NaCl 物质的量，根据电解方程式确定产物及其定量关系，注意熔融状态无氢氧根参与。</p>
+<p><strong>步骤</strong>：
+- $$n(NaCl)=\frac{58.5\ \text{g}}{58.5\ \text{g·mol}^{-1}}=1\ \text{mol}$$。
+- 电解熔融 $$NaCl$$：$$2NaCl \xrightarrow{通电} 2Na + Cl_2↑$$，电子转移关系：$$2\ \text{mol}\ NaCl \rightarrow 2\ \text{mol}\ e^- \rightarrow 1\ \text{mol}\ Cl_2$$、$$2\ \text{mol}\ Na$$。
+- 则 $$1\ \text{mol}\ NaCl$$ 完全电解生成 $$0.5\ \text{mol}\ Cl_2$$，标准状况体积为 $$0.5\ \text{mol}\times 22.4\ \text{L·mol}^{-1}=11.2\ \text{L}$$，不是 22.4 L。
+- 生成 $$1\ \text{mol}\ Na$$，质量为 $$23.0\ \text{g}$$，该部分正确。原 D 选项因氯气体积错误而错误。</p>
+<p><strong>点评/变式</strong>：此类题常结合阿伏伽德罗常数和气体摩尔体积，易错点是将电解方程式的计量关系直接用于气体体积，忘记钠与氯气的系数比 2:1。若电解 NaCl 水溶液，相同物质的量 NaCl 生成的氯气依然为 0.5 mol，但另外产生 0.5 mol $$H_2$$，且阴极产物是 $$NaOH$$ 而非金属钠。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a>（2020 · 中） 本题以氯的化合物为背景，考查电解原理、电离常数、歧化反应及化学计算。</li>
+<li><a href="../../exam/化学/2011-新课标-01.html">2011-新课标-01</a>（2011 · 易） 本题考查物质的量相关概念辨析与计算，涉及电解质结构、溶液配制、电解产物计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/796-电解.html">电解</a></li>
+</ul>
+</div>
+</body>
+</html>

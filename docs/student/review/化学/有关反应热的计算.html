@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有关反应热的计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>有关反应热的计算</h1><div class="review-mark" data-stem="有关反应热的计算"></div><div class="meta-card"><span><strong>考点</strong>有关反应热的计算</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>反应热（$\Delta H$）</strong>：化学反应在一定条件下放出或吸收的热量。放热为负（$\Delta H &lt; 0$），吸热为正（$\Delta H &gt; 0$）。</li>
+<li><strong>热化学方程式意义</strong>：既表示物质转化，又表示反应的热效应。$\Delta H$ 与化学计量数成比例，因此必须注明状态。</li>
+<li><strong>燃烧热</strong>：101 kPa 时，1 mol 纯物质完全燃烧生成稳定氧化物时所放出的热量（单位：kJ·mol⁻¹）。计算时务必统一基准：若热化学方程式中可燃物的化学计量数不为 1，需先将 $\Delta H$ 换算成 <strong>1 mol 可燃物</strong> 对应的放热量。</li>
+<li><strong>热量与物质的量的关系</strong>：对于已知热化学方程式 $a\text{A} \rightarrow ... \;\; \Delta H$，若参加反应的 A 为 $n(\text{A})$ mol，则反应热 $Q = \dfrac{n(\text{A})}{a} \times \Delta H$（直接代数的负值）。若仅关心放热量（正值），则体系放热 $Q_{\text{放}} = \dfrac{n(\text{A})}{a} \times |\Delta H|$。</li>
+<li><strong>混合气体的总放热量</strong>：$Q_{\text{总}} = Q_1 + Q_2 = |\Delta H_1'| \cdot n_1 + |\Delta H_2'| \cdot n_2$，其中 $\Delta H'$ 为折算成 <strong>1 mol 对应组分</strong> 的摩尔反应热。</li>
+<li><strong>标况转化</strong>：标准状况（0 ℃、101 kPa）下，气体摩尔体积 $V_m = 22.4 \, \text{L} \cdot \text{mol}^{-1}$，$n = \dfrac{V}{22.4}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求总物质的量</strong><br />
+   若给气体体积（标况），先用 $n_{\text{总}} = \dfrac{V}{22.4 \, \text{L} \cdot \text{mol}^{-1}}$ 换算。</li>
+<li><strong>单位统一与放热量换算</strong><br />
+   将已知热化学方程式的 $\Delta H$ 换算成 <strong>1 mol 目标物质完全燃烧</strong> 所对应的放热量（绝对值）。即：若方程式为 $2\text{H}_2 + \text{O}_2 \rightarrow 2\text{H}_2\text{O} \quad \Delta H = -571.6\,\text{kJ}$，则 $1\,\text{mol}\,\text{H}_2$ 放热 $|\Delta H|/2 = 285.8\,\text{kJ}$。</li>
+<li><strong>设未知数并列热量守恒方程</strong><br />
+   设组分物质的量为 $x$ mol 和 $y$ mol，由总量关系得 $x + y = n_{\text{总}}$。<br />
+   由总放热量得：$Q_1 \cdot x + Q_2 \cdot y = Q_{\text{实测}}$（其中 $Q_i$ 为对应 1 mol 组分的放热量）。</li>
+<li><strong>解方程组求比值</strong><br />
+   联立求解 $x$、$y$，最后求物质的量之比 $x:y$。注意化简、检验。</li>
+<li><strong>核对 ΔH 正负与热量符号</strong><br />
+   全程使用放热绝对值进行计算最为稳妥，避开正负号错误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>热化学方程式的计量数与 ΔH 不对应</strong><br />
+  直接拿方程式的 $\Delta H$ 当作 1 mol 反应物的热量进行计算。例如误以为 $2\text{H}_2$ 的 $\Delta H = -571.6$ 是 1 mol $\text{H}_2$ 的放热量。</li>
+<li><strong>混淆放热量 Q 与 ΔH 的正负</strong><br />
+  实测放热 3695 kJ 是正值，若直接用负数 $\Delta H$ 代入方程极易出现符号混乱。应统一用 $Q_{\text{放}} = - \Delta H \times n_{\text{对应}}/\nu$。</li>
+<li><strong>忽略标况的适用条件</strong><br />
+  不是标准状况不得使用 22.4 L·mol⁻¹，题目明确“标准状况”才可使用。</li>
+<li><strong>单位与数量级错误</strong><br />
+  热化学数据常以 kJ 给出，而计算中易忘将体积换算成 mol，或把 L 和 mL 混淆。</li>
+<li><strong>混合物总物质的量算错</strong><br />
+  多组分混合气体体积直接相加即为总体积，总物质的量直接由总体积求得，不要分别求再相加（虽等效但增加步骤）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>已知：<br />
+$2\text{H}_2(\text{g}) + \text{O}_2(\text{g}) \rightarrow 2\text{H}_2\text{O}(\text{l}) \quad \Delta H = -571.6\,\text{kJ} \cdot \text{mol}^{-1}$<br />
+$\text{CH}_4(\text{g}) + 2\text{O}_2(\text{g}) \rightarrow \text{CO}_2(\text{g}) + 2\text{H}_2\text{O}(\text{l}) \quad \Delta H = -890\,\text{kJ} \cdot \text{mol}^{-1}$<br />
+现有 $\text{H}_2$ 与 $\text{CH}_4$ 的混合气体 112 L（标准状况），完全燃烧生成 $\text{CO}_2$ 和 $\text{H}_2\text{O}(\text{l})$，测得放热 3695 kJ，求原混合气体中 $\text{H}_2$ 与 $\text{CH}_4$ 的物质的量之比。</p>
+<h3><strong>思路</strong></h3>
+<p>标况下先由总体积求出混合气体总物质的量。再根据两个热化学方程式，折算出 1 mol $\text{H}_2$ 和 1 mol $\text{CH}_4$ 完全燃烧的放热量。设两者的物质的量分别为 $x$ 和 $y$，利用总物质的量和总放热量建立二元一次方程组，解出 $x$ 与 $y$ 的比值。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>总物质的量</strong>：<br />
+   标况下 $n_{\text{总}} = \dfrac{112 \, \text{L}}{22.4 \, \text{L} \cdot \text{mol}^{-1}} = 5.0 \, \text{mol}$。  </li>
+<li><strong>折算 1 mol 燃料的放热量</strong>：<br />
+   由 $2\text{H}<em _text_H="\text{H">2$ 放热 571.6 kJ $\Rightarrow$ 1 mol $\text{H}_2$ 放热 $Q</em><em _text_CH="\text{CH">2} = \dfrac{571.6}{2} = 285.8 \, \text{kJ}$。<br />
+   由 $1\text{CH}_4$ 放热 890 kJ $\Rightarrow$ 1 mol $\text{CH}_4$ 放热 $Q</em>$。  }_4} = 890 \, \text{kJ</li>
+<li><strong>设未知数</strong>：<br />
+   设 $n(\text{H}_2) = x$ mol，$n(\text{CH}_4) = y$ mol。<br />
+   则 $$x + y = 5 \quad \text{(1)}$$<br />
+   总放热量：$$285.8x + 890y = 3695 \quad \text{(2)}$$  </li>
+<li><strong>解方程组</strong>：<br />
+   由(1)得 $x = 5 - y$，代入(2)：<br />
+   $285.8(5 - y) + 890y = 3695$<br />
+   $1429 - 285.8y + 890y = 3695$<br />
+   $604.2y = 2266$<br />
+   $y = 3.75 \,\text{mol}$，$x = 1.25 \,\text{mol}$。  </li>
+<li><strong>求比值</strong>：<br />
+   $x : y = 1.25 : 3.75 = 1 : 3$。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题的核心陷阱在于热化学方程式中 $\text{H}_2$ 的化学计量数为 2，必须将 $\Delta H$ 折算为 <strong>1 mol $\text{H}_2$</strong> 后再参与热量守恒计算，否则会直接得出错误热量。<br />
+<strong>变式训练</strong>：若题干给出的不是完整热化学方程式，而是物质的燃烧热（单位 kJ·mol⁻¹），则可直接以 $Q = \text{燃烧热} \times n$ 计算，省去折算步骤。另可变形为：已知物质的量比，反求总放热量；或者混入 $\text{CO}$ 等更多组分，建立三元方程组并运用极限法或十字交叉法快速求解比例。解题核心始终是 <strong>将热效应与 1 mol 反应物准确对应</strong>。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2009-全国Ⅱ-06.html">2009-全国Ⅱ-06</a>（2009 · 中） 本题考查热化学方程式与反应热的计算，通过混合气体燃烧放热数据求物质的量之比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/704-有关反应热的计算.html">有关反应热的计算</a></li>
+</ul>
+</div>
+</body>
+</html>
