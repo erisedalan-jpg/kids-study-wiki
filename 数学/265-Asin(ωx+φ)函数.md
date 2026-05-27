@@ -116,7 +116,6 @@ $y = A\sin(\omega t + \varphi)$ 描述**简谐运动**（simple harmonic motion�
 - [[272-三角恒等变换|三角恒等变换]]
 
 <!-- exam-backlinks-start -->
-
 ## 高考真题命中
 - [[2016-理-15]]
 <!-- exam-backlinks-end -->
