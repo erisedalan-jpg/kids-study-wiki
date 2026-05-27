@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>探究弹力和弹簧伸长的关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>探究弹力和弹簧伸长的关系</h1><div class="review-mark" data-stem="探究弹力和弹簧伸长的关系"></div><div class="meta-card"><span><strong>考点</strong>探究弹力和弹簧伸长的关系</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>实验目的</strong>：探究弹簧弹力 $F$ 与形变量 $x$ 的关系，验证胡克定律 $F=kx$；利用功能关系间接探究弹性势能 $E_p=\frac12 kx^2$。</li>
+<li><strong>核心原理</strong>：</li>
+<li><strong>胡克定律</strong>：在弹性限度内，弹簧弹力的大小与形变量成正比，$F=kx$，$k$ 为劲度系数，由弹簧自身决定。</li>
+<li><strong>功能转化</strong>（拓展）：水平光滑面上，压缩弹簧释放后，弹性势能全部转化为物块动能 $E_p=\frac12 mv^2$。通过纸带测出物体脱离弹簧时的速度 $v$，即可比较弹性势能大小。</li>
+<li><strong>实验装置与条件</strong>：</li>
+<li>弹簧一端固定，另一端与物块接触但不连接，水平桌面必须光滑（忽略摩擦），以保证弹性势能完全转化为动能。</li>
+<li>打点计时器使用交流电源，一般是 $50\text{Hz}$，打点间隔 $T=0.02\text{s}$。</li>
+<li><strong>数据测量与处理</strong>：</li>
+<li><strong>形变量测量</strong>：刻度尺测量弹簧原长与被压缩（或拉伸）后的长度差。</li>
+<li><strong>脱离速度测量</strong>：物块脱离弹簧后在水平面上做匀速直线运动，纸带上点迹均匀。取一段位移 $\Delta x$ 及对应时间 $\Delta t=nT$，则 $v=\frac{\Delta x}{\Delta t}$。</li>
+<li><strong>劲度系数求法</strong>：作 $F-x$ 图线，斜率为 $k$；也可用逐差法处理数据。</li>
+<li><strong>实验操作顺序</strong>（针对打点计时器）：先安装、测量，再固定纸带，<strong>先接通电源，后释放物块</strong>。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>步骤排序类填空题</strong><br />
+   牢记打点计时器实验的黄金顺序：<br />
+<strong>安装与测量 → 穿纸带 → 接通电源 → 释放物体 → 数据处理</strong>。<br />
+   凡是涉及“接通打点计时器电源”与“释放物块”的步骤，一定是“先通电，后释放”。</li>
+<li><strong>从纸带求某点瞬时速度</strong>  </li>
+<li>若物体脱离弹簧后做<strong>匀速运动</strong>，找出点迹间距均匀的一段，用任意一段位移除以时间即得脱离速度。  </li>
+<li>若需测匀变速某点速度，利用“中间时刻的瞬时速度等于该段平均速度”：$v_m=\frac{x_{n}+x_{n+1}}{2T}$。</li>
+<li><strong>比较弹性势能大小</strong><br />
+   在质量不变的前提下，比较物体脱离弹簧时的速度：速度越大，动能越大，弹簧被压缩后的弹性势能越大。直接看纸带上匀速段的点间距：间距越大，$v$ 越大，$E_p$ 越大。</li>
+<li><strong>处理 $F-x$ 图像</strong><br />
+   描点作图，用一条过原点的直线拟合。劲度系数 $k=\frac{\Delta F}{\Delta x}$，取图中相距较远的两个点计算斜率，不可用单一实验点直接求 $k$。弹簧原长处的弹力必须为零。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>操作顺序错误</strong>：先释放物块后接通电源，导致纸带起始段点迹缺失或混乱，无法正确分析。</li>
+<li><strong>速度求解误区</strong>：误将纸带上变速阶段的点迹当作求脱离速度的区间。必须明确：物体脱离弹簧后才开始匀速，应取间距均匀的部分。</li>
+<li><strong>能量比较的隐含条件</strong>：两纸带对应的物块必须质量相同，题目未特殊说明则默认为同一物块（质量相同）。若质量不同，需计算动能再比较。</li>
+<li><strong>弹簧原长与压缩量混淆</strong>：胡克定律中 $x$ 是形变量（伸长量或压缩量），不是弹簧长度；用 $F=k(l_0-l)$ 时注意符号。</li>
+<li><strong>弹性限度忽视</strong>：必须在弹簧弹性限度内操作，否则胡克定律不成立。</li>
+<li><strong>有效数字与单位</strong>：用刻度尺读数时要估读到最小分度下一位；速度计算注意单位换算（$\text{cm}\to\text{m}$）和结果保留合适有效数字。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2016-新课标Ⅱ-09</h3>
+<p><strong>题目</strong><br />
+某物理小组用光滑水平桌面、轻弹簧、物块、打点计时器与纸带探究弹性势能。实验过程：推物块压缩弹簧后由静止释放，通过纸带计算弹性势能。<br />
+（1）将步骤 ①把纸带向左拉直、②松手释放物块、③接通打点计时器电源、④向左推物块并测量压缩量，按正确顺序排列。<br />
+（2）交流电频率 $50\text{Hz}$，由 M 纸带数据求物块脱离弹簧时的速度，并判断 M、L 两纸带对应实验中哪个弹性势能大。</p>
+<p><strong>思路</strong><br />
+（1）打点计时器实验通用顺序：先进行器材安装与初始测量（$④$），再穿纸带（$①$），然后通电（$③$），最后释放（$②$）。<br />
+（2）脱离弹簧后物块匀速，纸带点迹均匀。从 M 纸带读出匀速段相邻计数点间距和计时点数，用 $v=\frac{\Delta x}{\Delta t}$ 求速度；速度越大则弹性势能越大，直接比较两纸带匀速段间距即可。</p>
+<p><strong>步骤</strong><br />
+（1）正确操作顺序为 <strong>④①③②</strong>。<br />
+（2）M 纸带右侧部分点迹均匀，取连续两点间距，例如 $2.58\text{cm}$，相邻两点时间 $T=0.02\text{s}$（$50\text{Hz}$），速度<br />
+$$v=\frac{2.58\times 10^{-2}}{0.02}=1.29 \text{m/s}$$<br />
+比较 M 与 L 纸带，M 的均匀点间距较大，脱离速度大，弹性势能大，故填 <strong>M</strong>。</p>
+<p><strong>点评/变式</strong><br />
+本题把“探究弹力与弹簧伸长关系”的功能端——弹性势能作为考点，隐含了胡克定律的结论 $E_p\propto x^2$。若题中已知弹簧劲度系数 $k$，可进一步求压缩量。变式常见于：给出不同压缩量下的纸带，要求计算 $k$ 或验证 $E_p\propto x^2$，此时需先求速度，再根据 $\frac12 mv^2=\frac12 kx^2$ 处理数据。注意质量 $m$ 的测量可能用天平，并注意纸带求速度的有效数字与单位转换。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-09.html">2016-新课标Ⅱ-09</a>（2016 · 中） 利用打点计时器探究弹簧弹性势能，涉及实验步骤排序、纸带速度计算与弹性势能大小比较</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/615-探究弹力和弹簧伸长的关系.html">探究弹力和弹簧伸长的关系</a></li>
+</ul>
+</div>
+</body>
+</html>

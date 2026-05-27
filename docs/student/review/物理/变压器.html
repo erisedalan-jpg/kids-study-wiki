@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>变压器</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>变压器</h1><div class="review-mark" data-stem="变压器"></div><div class="meta-card"><span><strong>考点</strong>变压器</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>交流电 与 变压器</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：交流电 与 变压器</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择11</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦交变电流的有效值与峰值</strong>：$U = \frac{U_m}{\sqrt{2}}$，$I = \frac{I_m}{\sqrt{2}}$（仅适用于正弦式交变电流）。计算功率、热量时必须用有效值。</li>
+<li><strong>理想变压器的基本规律</strong>：</li>
+<li>电压与匝数关系：$\frac{U_1}{U_2} = \frac{n_1}{n_2}$（一个副线圈）；</li>
+<li>输入功率等于输出功率：$P_1 = P_2$，即 $U_1 I_1 = U_2 I_2$；</li>
+<li>副线圈可视为一个内阻为零的交流电源，其负载功率 $P_2 = \frac{U_2^2}{R}$（纯电阻）。</li>
+<li><strong>理想气体实验定律——查理定律</strong>：一定质量的理想气体在体积不变时，压强与热力学温度成正比：$\frac{p_1}{T_1} = \frac{p_2}{T_2}$。</li>
+<li><strong>热力学第一定律与电热</strong>：电热丝产生的热量 $Q = Pt$（纯电阻且不计其他能量损耗），若全部被气体吸收，则 $Q = C \Delta T$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>变压器输出功率计算的三步走</strong>：</li>
+<li>① 由原线圈电压峰值 $U_m$ 求出有效值 $U_1 = \frac{U_m}{\sqrt{2}}$；</li>
+<li>② 利用匝数比 $\frac{U_1}{U_2} = \frac{n_1}{n_2}$ 求出副线圈电压 $U_2$；</li>
+<li>
+<p>③ 在纯电阻回路中，$P = P_2 = \frac{U_2^2}{R}$。</p>
+</li>
+<li>
+<p><strong>变压器与热学综合的时间求解套路</strong>：</p>
+</li>
+<li>① 明确气体变化过程特征（如“绝热容器”“密封”常暗示等容过程），由初末状态关系结合气体定律（如查理定律）求出温度变化量 $\Delta T$；</li>
+<li>② 由题给吸热关系 $Q = C\Delta T$ 得出所需总热量；</li>
+<li>
+<p>③ 利用能量守恒 $Q = Pt$（产生的热量全部吸收），代入已求出的输出功率 $P$，解出时间 $t$。</p>
+</li>
+<li>
+<p><strong>关键桥梁</strong>：能量守恒与功率定义——电热丝功率等于变压器输出功率，且 $Q = Pt$。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>有效值与峰值混淆</strong>：直接用峰值 $U_m$ 代替有效值代入功率或电压比公式，导致结果错误。计算任何涉及能量/功率的交流电问题必须先用峰值除以 $\sqrt{2}$。</li>
+<li><strong>忽略理想变压器的功率等量关系</strong>：误认为原线圈输入功率不等于副线圈输出功率，或试图直接从原线圈回路求功率而绕了弯路。记住 $P_1 = P_2$，一般先求出 $U_2$ 再算 $P_2$ 最直接。</li>
+<li><strong>气体状态变化过程判断失误</strong>：容器“密封”且无活塞移动的暗示通常表示等容变化，需选用查理定律。若误用等压或等温变化公式会导致 $\Delta T$ 求错。</li>
+<li><strong>比例系数误用</strong>：二极管、电容器等元件不改变电压有效值的理想变压关系，但本题无此陷阱。需注意能量传递效率是否为100%（本题为“全部被气体吸收”）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2024-辽宁-11</h3>
+<p><strong>题目</strong>：理想变压器匝数比 $n_1 : n_2 = 5 : 1$，原线圈接电压峰值为 $U_m$ 的正弦交流电源，副线圈接阻值为 $R$ 的电热丝，电热丝密封于绝热容器中加热理想气体。加热前气体温度为 $T_0$。已知气体吸收的热量 $Q = C\Delta T$，电热丝产生的热量全部被气体吸收。求：（1）变压器输出功率 $P$；（2）使容器内气体压强变为加热前2倍所需的通电时间 $t$。</p>
+<p><strong>思路</strong>：本题分两部分。第一部分为纯变压器计算，按“原线圈有效值→副线圈电压→输出功率”递推；第二部分需通过查理定律找到末态温度，从而得到 $\Delta T$，再利用吸热公式和能量守恒求出时间。</p>
+<p><strong>步骤</strong>：
+（1）变压器原线圈输入电压有效值：
+$$U_1 = \frac{U_m}{\sqrt{2}}$$
+由理想变压器电压比：
+$$\frac{U_1}{U_2} = \frac{n_1}{n_2} \Rightarrow U_2 = \frac{n_2}{n_1} U_1 = \frac{1}{5} \cdot \frac{U_m}{\sqrt{2}} = \frac{U_m}{5\sqrt{2}}$$
+输出功率 $P$ 等于负载电阻 $R$ 上的功率：
+$$P = \frac{U_2^2}{R} = \frac{\left(\frac{U_m}{5\sqrt{2}}\right)^2}{R} = \frac{U_m^2}{50R}$$</p>
+<p>（2）气体做等容变化，由查理定律：
+$$\frac{p_0}{T_0} = \frac{2p_0}{T_2} \Rightarrow T_2 = 2T_0$$
+温度变化量：
+$$\Delta T = T_2 - T_0 = T_0$$
+气体吸收的热量：
+$$Q = C\Delta T = C T_0$$
+电热丝在时间 $t$ 内产生的热量：
+$$Q = Pt = \frac{U_m^2}{50R} t$$
+由能量守恒：
+$$\frac{U_m^2}{50R} t = C T_0 \Rightarrow t = \frac{50 C T_0 R}{U_m^2}$$</p>
+<p><strong>点评/变式</strong>：
+- 本题是典型的“电—热”综合题，关键在于区分交流电的峰值与有效值，且需准确识别气体的等容变化条件。
+- 若将加热对象改为有摩擦活塞的容器（等压变化），则需改用盖-吕萨克定律，但本题压强变为2倍，体积不变，适合用查理定律。
+- 变式中电热丝热量若只有部分被吸收（效率 $\eta$），则 $Q = \eta Pt$，相应调整即可。
+- 当原线圈含内阻或副线圈有二极管时，不能直接套用匝数比，需注意只有理想变压器才能使用上述公式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-11.html">2024-辽宁-11</a>（2024 · 难） 理想变压器副线圈接电热丝加热绝热容器内理想气体，求变压器输出功率和气体压强达到2倍所需通电时间。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/381-变压器.html">变压器</a></li>
+</ul>
+</div>
+</body>
+</html>

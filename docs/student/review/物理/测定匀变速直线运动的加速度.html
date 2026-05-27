@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>测定匀变速直线运动的加速度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>测定匀变速直线运动的加速度</h1><div class="review-mark" data-stem="测定匀变速直线运动的加速度"></div><div class="meta-card"><span><strong>考点</strong>测定匀变速直线运动的加速度</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2011–2015</li>
+<li>出现题位：选择9 选择10</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>打点计时器测加速度</strong>：使用交变电源（频率50 Hz，周期 $T=0.02\,\mathrm{s}$），相邻计数点时间间隔常取 $5T=0.1\,\mathrm{s}$。逐差法求加速度：将纸带分成时间相等的两段（如 $x_1\sim x_3$ 与 $x_4\sim x_6$），则加速度 $a=\frac{(x_4+x_5+x_6)-(x_1+x_2+x_3)}{(3T)^2}$，可减小偶然误差。若只给连续相等时间内的位移差 $\Delta x$，可用 $\Delta x = aT^2$ 直接计算。</li>
+<li><strong>瞬时速度计算</strong>：某计数点的瞬时速度等于该点前后相邻两点间的平均速度，$v_C=\frac{x_{BD}}{2T}$（中间时刻速度公式，严格成立的条件是匀变速直线运动）。</li>
+<li><strong>光电门测加速度（s‑t图线法）</strong>：滑块从乙到甲做匀减速可视为反向匀加速。位移 $s$、经过光电门乙的速度 $v_1$、加速度 $a$、时间 $t$ 满足 $s=v_1 t-\frac12 at^2$，变形为 $\frac{s}{t}=v_1-\frac12 a t$，$\frac{s}{t}$‑$t$ 图线为直线，斜率 $k=-\frac{a}{2}$，纵轴截距为 $v_1$。</li>
+<li><strong>牛顿第二定律与实验结合</strong>：测出加速度后，结合受力分析可求动摩擦因数、斜面倾角等物理量。斜面模型中，由 $mg\sin\theta-\mu mg\cos\theta=ma$ 可得 $\mu=\tan\theta-\frac{a}{g\cos\theta}$，不需要质量但必须知道斜面倾角。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题与数据提取</strong>：明确实验装置（打点计时器或光电门）、电源频率（确定 $T$）、已知位移和时间数据。</li>
+<li><strong>加速度与速度计算</strong>  </li>
+<li>打点计时器：  <ul>
+<li>若给出若干连续点间距离，优先采用逐差法求 $a$，使用 $a=\frac{(x_{后段})-(x_{前段})}{n^2 T^2}$（$n$ 为每段的间隔数）。  </li>
+<li>瞬时速度：用 $v=\frac{x_{左}+x_{右}}{2T}$ 或 $v=\frac{x_{邻总}}{2T}$。  </li>
+</ul>
+</li>
+<li>光电门与 $s$‑$t$ 数据：  <ul>
+<li>写出运动学方程并线性化（如 $s=v_1t-\frac12at^2 \Rightarrow \frac{s}{t}=v_1-\frac{a}{2}t$）。  </li>
+<li>计算 $\frac{s}{t}$，描点作图，拟合直线求斜率 $k$，则 $a=-2k$。  </li>
+<li>注意单位换算（题干中 $t$ 常用 ms，需化成 s）。  </li>
+</ul>
+</li>
+<li><strong>外延测量与物理量转换</strong>：若实验需测量动摩擦因数、倾角等，依据牛顿第二定律列出表达式，确定还必须测量的物理量。常需测量长度、角度等，质量通常可约去。</li>
+<li><strong>有效数字与作图规范</strong>：结果按题目要求保留有效数字；作图时选合适标度，描点准确，直线两侧点均匀分布。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>逐差法时间间隔错用</strong>：分段后的分母中 $T$ 应为“每段内的时间间隔总数”的平方。例如将 $x_1$‑$x_4$ 位移分成前后两段，若相邻计数点间有 4 个间隔，$T_{\text{段}}=4T$，分母为 $(4T)^2$。务必看清是“连续点”还是“每隔4个点取的计数点”。</li>
+<li><strong>光电门变形公式斜率错误</strong>：$s=v_1t-\frac12at^2$ 除以 $t$ 后，斜率是 $-\frac{a}{2}$ 而非 $-a$。常忘记 $t$ 前面的系数 $\frac12$，导致加速度算错。</li>
+<li><strong>单位未统一</strong>：表格中时间给出“ms”，直接代入公式作图会出错，必须转换为秒；位移常用 cm，需化成 m 或保留为 cm 并在最终换算。</li>
+<li><strong>有效数字丢失</strong>：计算中间过程保留过多或最终结果有效位数不符，如图线法求 $a$ 时斜率估值精度不高，答案按 2 位有效数字给出。</li>
+<li><strong>测量物理量遗漏</strong>：由牛顿第二定律求 $\mu$ 时，常误认为必须测质量，实际上若只有 $a$ 和已知 $g$ 并不能求出 $\mu$，还需斜面的倾角 $\theta$。若实验条件摩擦忽略，则仅测 $a$ 与 $g$ 可求倾角。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2015·新课标Ⅱ·09）<br />
+用打点计时器（50 Hz）测量物块沿斜面下滑的加速度，纸带示出5个连续点间距（单位 cm）：$x_{AB},x_{BC},x_{CD},x_{DE}$（具体数值略，计算已知）。求：（1）加速度 $a$，打 C 点速度 $v_C$；（2）已知 $g$，若要测出动摩擦因数还需测量哪个物理量？选项：A.物块质量 B.斜面高度 C.斜面倾角。</p>
+<p><strong>思路</strong>：由逐差法求 $a$，由瞬时速度公式求 $v_C$；对斜面滑块应用牛顿第二定律，导出 $\mu$ 表达式，判断必需测量量。</p>
+<p><strong>步骤</strong><br />
+1. 电源频率 $f=50\,\mathrm{Hz}$，相邻点时间间隔 $T=0.02\,\mathrm{s}$。纸带数据为连续点，故可用逐差法公式 $a=\frac{(x_{CD}+x_{DE})-(x_{AB}+x_{BC})}{(2T)^2}$，代入数值计算得 $a=3.25\,\mathrm{m/s^2}$。<br />
+2. C 点速度：$v_C=\frac{x_{BC}+x_{CD}}{2T}$，代入得 $1.79\,\mathrm{m/s}$。<br />
+3. 物块受力：$mg\sin\theta-\mu mg\cos\theta=ma$，解得 $\mu=\tan\theta-\frac{a}{g\cos\theta}$，式中不含质量 $m$，必须已知斜面倾角 $\theta$，故选 C。</p>
+<p><strong>点评/变式</strong>：纸带测加速度是基础实验，有时会与牛顿运动定律结合。若纸带数据以“计数点”给出（每5个点取1个），注意时间间隔变为 $0.1\,\mathrm{s}$。求 $\mu$ 时易错选 B（斜面高度），因仅有高度无法确定倾角还需斜面长度。倾角可直接测量或用三角函数关系间接得到。</p>
+<hr />
+<p><strong>题目</strong> （2011·新课标·10）<br />
+利用光电门测滑块在斜面上的加速度。光电门乙固定，光电门甲可移动，滑块从同一点由静止下滑，改变甲位置测得系列 $s$（甲、乙间距离）及对应时间 $t$，并计算出 $s/t$。给出 $s$‑$t$ 表格，要求：（1）写出 $s$、$v_1$（通过乙的瞬时速度）、$a$、$t$ 的关系式；（2）画 $\frac{s}{t}$‑$t$ 图线；（3）由图线求 $a$（保留2位有效数字）。</p>
+<p><strong>思路</strong>：将滑块看成从乙向甲做反向匀加速，位移公式 $s=v_1t-\frac12 a t^2$，变形为线性关系 $\frac{s}{t}=v_1-\frac{a}{2}t$，描点拟合直线，斜率与加速度关联。</p>
+<p><strong>步骤</strong><br />
+1. 关系式：$s=v_1t-\frac{1}{2}at^2$。<br />
+2. 将表中时间单位 ms 化为 s，算出 $\frac{s}{t}$ 已有。在坐标纸上以 $t$ 为横轴、$\frac{s}{t}$ 为纵轴描点，拟合为一直线。<br />
+3. 在直线上取较远两点求斜率 $k$（如：$k=\frac{1.22-1.71}{(0.7764-0.2929)}\approx -1.02\,\mathrm{m/s^2}$），注意单位。由 $k=-\frac{a}{2}$ 得 $a=-2k\approx 2.1\,\mathrm{m/s^2}$（取正，表示加速度大小，方向沿斜面向下）。</p>
+<p><strong>点评/变式</strong>：本题用图像法处理实验数据是核心考点。变形公式要准确推导，斜率关系不能漏掉 $\frac12$。作图时点必须分布拟合直线两侧，不强制过原点。若改用光电门测甲、乙各自通过时间的速度 $v_甲$、$v_乙$，则可用 $v_乙^2-v_甲^2=2as$ 求 $a$，这也是常见变体。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-09.html">2015-新课标Ⅱ-09</a>（2015 · 中） 考查匀变速直线运动实验数据处理及测量动摩擦因数方法</li>
+<li><a href="../../exam/物理/2011-新课标-10.html">2011-新课标-10</a>（2011 · 中） 通过光电门测量数据，利用匀变速运动公式和图像法求滑块加速度的实验题</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/650-测定匀变速直线运动的加速度.html">测定匀变速直线运动的加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

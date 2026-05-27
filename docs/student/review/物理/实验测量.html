@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实验测量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>实验测量</h1><div class="review-mark" data-stem="实验测量"></div><div class="meta-card"><span><strong>考点</strong>实验测量</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择9</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>实验原理</strong></li>
+<li>运动学测加速度：物体从静止开始匀加速直线运动，位移与时间满足 $h = \frac{1}{2} a t^2$，即 $a = \frac{2h}{t^2}$。实验中常测量某段下落高度与所用时间。</li>
+<li>动力学理论加速度：对跨过轻滑轮的两小球整体，由牛顿第二定律 $m_B g - m_A g = (m_A + m_B) a'$，得理论值 $a' = \frac{m_B - m_A}{m_A + m_B} g$。</li>
+<li><strong>误差来源</strong></li>
+<li>系统误差：滑轮有质量、存在摩擦阻力、细绳有质量、空气阻力、释放时初速度不为零等，这些会使测量加速度普遍偏小或偏大。</li>
+<li>偶然误差：长度、时间、质量的测量读数误差。</li>
+<li><strong>有效数字</strong>：计算过程中保留的位数应与题目给出的测量值有效数字位数匹配，最终结果按要求保留一定位数，运算时采用四舍五入。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确实验目的与原理</strong><br />
+   先判断是单纯用运动学公式测加速度，还是同时需用牛顿第二定律算理论值。大多数此类题两部分都要处理。</li>
+<li><strong>选择合适的运动学公式</strong><br />
+   若从静止释放，已知时间 $T$ 和下落距离 $s$，直接用 $s = \frac{1}{2} a T^2$ 求 $a$；若给出了多个距离和时间，可考虑用逐差法。</li>
+<li><strong>代入数据计算</strong><br />
+   注意单位统一（通常用国际单位：m、s、kg），将 $h$ 看作下落的总高度差，而非某单一高度。计算时先写公式，再代入数据，最后得出结果并按要求保留有效数字。</li>
+<li><strong>理论加速度的推导</strong><br />
+   应用整体法列牛顿第二定律，注意两物体用轻绳连接，加速度大小相等。列式时重力差为合外力，总质量是两物体质量之和。</li>
+<li><strong>误差对比与原因分析</strong><br />
+   比较实验值 $a$ 与理论值 $a'$ 的大小关系（通常 $a &lt; a'$），从装置并非理想入手，具体指出：滑轮摩擦、空气阻力未计，或滑轮、绳有质量等。表述要具体，避免“测量误差”等空洞说法。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>位移代入错误</strong>：题目给出释放时高度 $h_0$ 和末高度 $h$，下落高度应为 $s = h_0 - h$，误用 $h_0$ 或 $h$ 直接代入 $h = \frac{1}{2} a t^2$。</li>
+<li><strong>有效数字出错</strong>：题中原始数据多为三位有效数字，结果也常要求保留三位，计算时注意不要擅自多保留或少保留。例如 $1.60$ 不能写成 $1.6$。</li>
+<li><strong>整体法列式时质量搞错</strong>：理论加速度表达式往往易写成 $a' = \frac{m_B - m_A}{m_B} g$ 或漏掉滑轮质量（若滑轮有质量并非轻滑轮则要考虑转动惯量，但高中阶段大多只要求指出影响）。</li>
+<li><strong>误差原因表述笼统</strong>：失分点常在于只写“有误差”或“读数不准”，应明确指出系统误差来源：“滑轮存在摩擦”“空气阻力”“细绳有质量”等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2020·新课标Ⅱ·09）<br />
+用跨过定滑轮的两小球 A、B 测量加速度。释放后测出小球 B 下落高度变化 $h_0 - h = 0.590 m - 0.100 m = 0.490 m$，用时 $T = 0.730 s$。A、 B 质量分别为 $100.0 g$ 和 $150.0 g$，$g = 9.80 m/s^2$。求实测加速度 $a$、理论加速度 $a'$（保留3位有效数字），并分析差异的主要原因。</p>
+<p><strong>思路</strong><br />
+实测加速度通过匀加速位移公式求得；理论加速度由轻绳连接体的牛顿第二定律得出；比较两者大小，从非理想条件找出具体原因。</p>
+<p><strong>步骤</strong>
+1. 下落高度 $s = h_0 - h = 0.490 m$，由 $s = \frac{1}{2} a T^2$ 得<br />
+   $$a = \frac{2s}{T^2} = \frac{2 \times 0.490}{0.730^2} \approx 1.84 m/s^2$$
+   保留三位有效数字为 $1.84 m/s^2$。<br />
+2. 理论加速度：对整体 $m_B g - m_A g = (m_A + m_B) a'$<br />
+   $$a' = \frac{m_B - m_A}{m_A + m_B} g = \frac{0.1500 - 0.1000}{0.1500 + 0.1000} \times 9.80 = \frac{0.0500}{0.2500} \times 9.80 = 1.96 m/s^2$$
+   保留三位有效数字为 $1.96 m/s^2$。<br />
+3. 对比发现实测 $a &lt; a'$，系统误差主要原因：滑轮与轴之间存在摩擦、细绳与滑轮之间有摩擦、空气阻力、滑轮有质量使一部分力用于使其转动等，写出其中一条即可。</p>
+<p><strong>点评/变式</strong><br />
+- 数据计算需细心，先查高度变化量，再代公式。<br />
+- 理论值推导务必用整体法，避免隔离法出错。<br />
+- 误差分析是此类实验题的必考点，回答时需从“理想条件忽略的因素”切入，如绳重、滑轮质量、各种阻力，切忌只说“人为误差”或“仪器不准”。变式可改为用光电门测瞬时速度计算加速度，原理类似。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-09.html">2020-新课标Ⅱ-09</a>（2020 · 易） 测量小球B运动的加速度的实验题，涉及细绳悬挂释放小球模型</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/584-实验测量.html">实验测量</a></li>
+</ul>
+</div>
+</body>
+</html>

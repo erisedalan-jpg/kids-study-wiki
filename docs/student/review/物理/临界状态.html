@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>临界状态</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>临界状态</h1><div class="review-mark" data-stem="临界状态"></div><div class="meta-card"><span><strong>考点</strong>临界状态</span><span><strong>权重</strong>32</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：32</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>临界状态</strong>：物体由一种物理过程突变到另一种过程的转折瞬间，通常对应某个力（如弹力、摩擦力）恰好达到极值或零值。</li>
+<li><strong>板块相对滑动临界条件</strong>：两物体间静摩擦力达到最大静摩擦力 $f_{\rm max}=\mu F_N$，且两者加速度仍相等（相对静止的最后一刻）。</li>
+<li><strong>关键公式</strong>（本题核心）：
+  整体一起加速时：$a_{\rm 共}=\dfrac{F}{m_1+m_2}$，隔离 $m_2$ 有 $f=m_2 a_{\rm 共}$；
+  临界加速度 $a_0=\mu g$（由 $\mu m_2 g=m_2 a_0$ 得出）；
+  临界外力 $F_0=\mu(m_1+m_2)g$（或临界时刻 $t_0=\dfrac{\mu(m_1+m_2)g}{k}$）。</li>
+<li><strong>适用条件</strong>：光滑水平面，最大静摩擦力等于滑动摩擦力，外力随时间线性增大 $F=kt$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确过程阶段</strong>：先假设两物体保持相对静止，整体列牛顿第二定律求出加速度和静摩擦力表达式。  </li>
+<li><strong>寻找临界点</strong>：令静摩擦力等于最大静摩擦力，解出临界加速度、临界外力或临界时刻。  </li>
+<li><strong>分段列式</strong>：  </li>
+<li>$F&lt;F_0$（相对静止）：$a_1=a_2=\dfrac{F}{m_1+m_2}$；  </li>
+<li>$F \ge F_0$（相对滑动）：对 $m_2$ 有 $a_2=\mu g$ 恒定，对 $m_1$ 有 $a_1=\dfrac{F-\mu m_2 g}{m_1}$。  </li>
+<li><strong>绘制或判断图像</strong>：注意临界点处加速度连续，比较前后斜率，结合线性关系确定正确图线。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>临界条件错判</strong>：误以为外力 $F=\mu m_2 g$ 时即相对滑动，实际上此时整体加速度为 $\dfrac{\mu m_2 g}{m_1+m_2}&lt;\mu g$，木块未达到最大静摩擦，两者仍相对静止。  </li>
+<li><strong>滑动后木块加速度</strong>：认为 $m_2$ 加速度会随 $F$ 增加而变化，实际滑动后 $a_2=\mu g$ 为恒定值。  </li>
+<li><strong>图像连续性</strong>：误认为 $a_1$ 图线在临界点会有跳跃，正确应是 $a_1$ 连续（将 $F_0$ 代入两段表达式均得 $a_1=\mu g$）。  </li>
+<li><strong>斜率混淆</strong>：相对静止段斜率 $\dfrac{k}{m_1+m_2}$，相对滑动段斜率 $\dfrac{k}{m_1}$，后者更大，图像分叉后 $a_1$ 更陡。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2011-新课标-08 （临界状态——板块模型与变力）</h3>
+<p><strong>题目</strong><br />
+光滑水平面上，足够长的木板 $m_1$ 上叠放木块 $m_2$，最大静摩擦力等于滑动摩擦力。给木板施加随时间均匀增大的水平力 $F=kt$（$k$ 常量）。能正确反映木板加速度 $a_1$ 和木块加速度 $a_2$ 变化规律的图线是（　　）。</p>
+<p><strong>思路</strong><br />
+外力从零开始线性增大，初始两物体无相对滑动，一起加速；当两者间静摩擦力达到最大值后，木块开始相对木板滑动，此后各自加速度变化规律不同。关键在于求出临界时刻，并分段写出 $a_1$、$a_2$ 关于 $t$ 的函数，据此判断图像特征。</p>
+<p><strong>步骤</strong><br />
+设两物体间动摩擦因数为 $\mu$，最大静摩擦力 $f_{\rm max}=\mu m_2 g$。<br />
+1. <strong>相对静止阶段</strong>（$0&lt;t\le t_0$）<br />
+   整体加速度 $a_1=a_2=a=\dfrac{F}{m_1+m_2}=\dfrac{k}{m_1+m_2}t$。<br />
+   隔离 $m_2$，所受静摩擦力 $f=m_2 a=\dfrac{m_2 k}{m_1+m_2}t$。<br />
+   临界时 $f=f_{\rm max}$，得 $t_0=\dfrac{\mu(m_1+m_2)g}{k}$，此时 $a_0=\mu g$。  </p>
+<ol>
+<li>
+<p><strong>相对滑动阶段</strong>（$t&gt;t_0$）<br />
+   $m_2$ 受滑动摩擦力 $f=\mu m_2 g$，故 $a_2=\mu g$，保持不变。<br />
+   对 $m_1$：$F-\mu m_2 g=m_1 a_1 \ \Rightarrow\ a_1=\dfrac{kt-\mu m_2 g}{m_1}=\dfrac{k}{m_1}t-\dfrac{\mu m_2 g}{m_1}$。  </p>
+</li>
+<li>
+<p><strong>图像特征对比</strong>  </p>
+</li>
+<li>$a_1$、$a_2$ 在 $0&lt;t\le t_0$ 段重合为过原点、斜率 $k/(m_1+m_2)$ 的直线。  </li>
+<li>$t&gt;t_0$ 时，$a_2$ 水平，$a_1$ 为直线且斜率 $k/m_1&gt;k/(m_1+m_2)$，在 $t_0$ 处连续。<br />
+   正确图线应为两线先重合上升，到某点后 $a_2$ 走平，$a_1$ 以更大斜率继续上升。</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+本题是典型的“板块临界”与变力结合的图像题。解题核心是抓住静摩擦力达到最大的那一刻作为分段依据，并保证加速度图线在临界点连续。变式常见：力作用在木块 $m_2$ 上、地面粗糙、改变 $m_1$ 与 $m_2$ 大小关系等，但分析思路完全相同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-08.html">2011-新课标-08</a>（2011 · 中） 木块叠放于木板上，在随时间线性增大的外力作用下，分析两物体加速度随外力变化的图像。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/506-临界条件.html">临界状态</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电流与匝数成反比</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电流与匝数成反比</h1><div class="review-mark" data-stem="电流与匝数成反比"></div><div class="meta-card"><span><strong>考点</strong>电流与匝数成反比</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>交流电 与 变压器</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：交流电 与 变压器</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>理想变压器模型</strong>：无漏磁、无铜损铁损，输入功率等于输出功率。  </li>
+<li>电压关系：$ \frac{U_1}{U_2} = \frac{n_1}{n_2} $ （与匝数成正比，适用于任意线圈之间）。  </li>
+<li>电流关系：$ \frac{I_1}{I_2} = \frac{n_2}{n_1} $ （与匝数成反比，<strong>适用条件</strong>：只有一个副线圈）。  </li>
+<li>功率关系：$ P_1 = P_2 $，即 $ U_1 I_1 = U_2 I_2 $ （普适，用于多副线圈时求原线圈电流）。  </li>
+<li><strong>交流电表的读数</strong>：均为有效值。原、副线圈的电压与电流均指有效值，与额定值一致。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由负载确立副线圈参量</strong>：若用电器正常工作（如灯泡正常发光），则副线圈电压 $U_2$ 等于额定电压，副线圈电流 $I_2$ 可由 $ I_2 = \frac{P_{\text{额}}}{U_{\text{额}}} $ 求出。</li>
+<li><strong>用电压比求原线圈电压</strong>：$ U_1 = \frac{n_1}{n_2} U_2 $。</li>
+<li><strong>用电流比求原线圈电流</strong>（仅一个副线圈时）：$ I_1 = \frac{n_2}{n_1} I_2 $。<br />
+   若有多组副线圈，则改用功率关系：$ I_1 = \frac{P_2 + P_3 + \dots}{U_1} $。</li>
+<li><strong>校验功率守恒</strong>：验证 $ U_1 I_1 = U_2 I_2 $，可快速排查计算错误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>电流反比关系的适用条件</strong>：必须只有一个副线圈。出现多个副线圈时，只能用功率关系 $ U_1 I_1 = U_2 I_2 + U_3 I_3 + \dots $ 求 $ I_1 $，谨防直接套用匝数反比。</li>
+<li><strong>匝数比前后对应</strong>：电压比 $ \frac{U_1}{U_2} = \frac{n_1}{n_2} $，电流比 $ \frac{I_1}{I_2} = \frac{n_2}{n_1} $，易写颠倒。记住“电压跟匝数同序，电流反序”。</li>
+<li><strong>有效值的理解</strong>：交流电表读数均为有效值。铭牌额定电压220V、额定功率22W均指有效值，直接参与计算，不要误带入峰值 $ \sqrt{2} $ 关系。</li>
+<li><strong>混淆与等效电阻</strong>：原线圈电压 $U_1$ 是加在原线圈两端的电压（电压表示数），并非恒等于输入电源电压，尤其当原线圈串有电阻或电表有内阻时需仔细分析（本题为理想情况，可直接用）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2011-新课标-04</h3>
+<p><strong>题目</strong>：如图，理想变压器原副线圈匝数比 $ n_1 : n_2 = 1 : 2 $；副线圈灯泡额定电压220V、额定功率22W。闭合开关，灯泡正常发光。用 $U$ 和 $I$ 分别表示此时原线圈电压表和电流表的读数，则正确的是（ ）<br />
+A．$U=110\text{V},\ I=0.2\text{A}$　B．$U=110\text{V},\ I=0.05\text{A}$<br />
+C．$U=110\sqrt{2}\text{V},\ I=0.2\text{A}$　D．$U=110\sqrt{2}\text{V},\ I=0.2\text{A}$</p>
+<p><strong>思路</strong>：灯泡正常发光 → $U_2=220\text{V}$，$ I_2=\frac{P}{U_2} $；再用电压比求 $U$，用电流反比求 $I$。</p>
+<p><strong>步骤</strong>：<br />
+- 副线圈电压 $U_2 = 220\text{V}$（额定值）。<br />
+- 副线圈电流 $ I_2 = \frac{P}{U_2} = \frac{22}{220} = 0.1\text{A} $。<br />
+- 由电压比：$ \frac{U}{U_2} = \frac{n_1}{n_2} = \frac12 \Rightarrow U = \frac12 \times 220 = 110\text{V}$。<br />
+- 由一个副线圈电流反比：$ \frac{I}{I_2} = \frac{n_2}{n_1} = \frac21 \Rightarrow I = 2 \times 0.1 = 0.2\text{A}$。<br />
+答案A，注意易错选项B是将电压比错误套用到电流上（$I=\frac12 I_2=0.05\text{A}$），C和D混入了峰值。</p>
+<p><strong>点评/变式</strong>：<br />
+- 本题直接考查理想变压器的两个基本比例关系，属于基础题。<br />
+- 若原线圈串联电阻或电表内阻，则 $U$ 不再直接由匝数比决定，需结合闭合电路欧姆定律。<br />
+- 变式：副线圈接有滑动变阻器，调节时原线圈电流如何变？由 $ I_1 = \frac{n_2}{n_1} I_2 = \frac{n_2}{n_1} \cdot \frac{U_2}{R}$，$U_2$ 恒定，则 $I_1 \propto \frac1R$，可轻松判断。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-04.html">2011-新课标-04</a>（2011 · 易） 该题通过理想变压器灯泡正常发光条件，考查原副线圈电压、电流与匝数的关系及电功率计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/680-电流与匝数成反比.html">电流与匝数成反比</a></li>
+</ul>
+</div>
+</body>
+</html>

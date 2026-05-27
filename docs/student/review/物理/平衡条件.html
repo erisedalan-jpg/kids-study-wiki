@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平衡条件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平衡条件</h1><div class="review-mark" data-stem="平衡条件"></div><div class="meta-card"><span><strong>考点</strong>平衡条件</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2008–2014</li>
+<li>出现题位：选择6 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平衡状态</strong>：物体处于静止或匀速直线运动状态，即加速度 $a=0$。</li>
+<li><strong>平衡条件</strong>：物体所受合外力为零，$\sum \vec{F}=0$。正交分解后满足 $\sum F_x=0$，$\sum F_y=0$。</li>
+<li><strong>动态平衡</strong>：当物体在运动过程中保持匀速时，所受合力必为零，常用于求解阻力、电场力等。</li>
+<li><strong>典型受力</strong>：</li>
+<li>重力 $mg$（竖直向下）</li>
+<li>弹力、摩擦力</li>
+<li>电场力 $F=qE$（匀强电场中 $E=U/d$，方向由电荷正负决定）</li>
+<li>空气阻力：常见模型 $f=kv$（与速率成正比）或 $f=kv^2$（与速率二次方有关），<strong>方向始终与速度方向相反</strong>。</li>
+<li><strong>极限速度（收尾速度）</strong>：物体在变力作用下加速，当阻力随速度增大至与驱动力平衡时，速度达到最大（或恒定），此后匀速运动。求解该临界状态常直接使用平衡条件。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定研究对象</strong>：单个物体（如运动员、油滴），若连接体可隔离分析。</li>
+<li><strong>明确运动状态</strong>：题干中“匀速下降”“匀速上升”“达到最大速度”等关键描述均直接指向 $a=0$，合力为零。</li>
+<li><strong>受力分析</strong>：</li>
+<li>画受力示意图，标出所有力（重力、电场力、阻力、拉力等）。</li>
+<li><strong>特别注意阻力方向</strong>：与物体相对运动方向相反，上升时阻力向下，下降时阻力向上。</li>
+<li><strong>建立平衡方程</strong>：</li>
+<li>一般沿加速度为零的方向直列平衡方程：$F_{\text{合}}=0$。</li>
+<li>若力分布在同一直线上，直接规定正方向，将各力带符号相加为零。</li>
+<li>若力不在同一直线上，常按运动方向和垂直运动方向正交分解，分别列平衡方程。</li>
+<li><strong>代入物理关系</strong>：如 $f=kv$ 或 $f=kv^2$，电场力 $F=q\frac{U}{d}$，结合已知条件代入方程。</li>
+<li><strong>求解并检验</strong>：解方程得出所求物理量，注意单位统一、有效数字要求及矢量方向。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>阻力方向误判</strong>：物体向上运动时阻力向下，向下运动时阻力向上。在电压反向后，电场力反向，油滴运动方向可能改变，必须重新判断阻力方向。</li>
+<li><strong>平衡与静止混淆</strong>：平衡条件是合力为零，速度可以不为零（匀速）；误把速度为零当作平衡（如竖直上抛最高点不是平衡态）。</li>
+<li><strong>阻力表达式混淆</strong>：题中 $f=kv$ 与 $f=kv^2$ 不同，必须严格按题干给定模型代入，不可自行记忆公式。</li>
+<li><strong>矢量表达式疏漏</strong>：列平衡方程时，注意区分正方向，符号错误导致结果反向或大小出错。例如 $mg=kv$ 与 $kv=mg$ 实际一致，但需确保受力方向对应。</li>
+<li><strong>隐含条件忽视</strong>：如“经一段时间后”暗示已达到稳定匀速，可直接用平衡条件。</li>
+<li><strong>估算与有效数字</strong>：题干要求“保留1位有效数字”，计算过程中需合理近似，结果表达符合要求。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2014-新课标Ⅱ-11</h3>
+<p><strong>题目</strong>：运动员从39km高空跳下，忽略空气阻力时求下落至1.5km高处的时间与速度；考虑空气阻力 $f=kv^2$，由v-t图知最大速度约 $v_m≈ \text{？}$（图中读完），求阻力系数 $k$。</p>
+<p><strong>思路</strong><br />
+(1) 忽略空气阻力，运动员做自由落体运动，下落高度 $h=39\,\text{km}-1.5\,\text{km}=37.5\,\text{km}=37500\,\text{m}$。利用 $h=\frac{1}{2}gt^2$ 和 $v=gt$ 求解。<br />
+(2) 达到最大速度时，加速度为零，重力与空气阻力平衡：$mg=kv_m^2$，由图读出 $v_m$ 即可解得 $k$，注意有效数字。</p>
+<p><strong>步骤</strong><br />
+1. <strong>自由落体阶段</strong>：<br />
+   $h = 37.5×10^3 \,\text{m}$，$g=10\,\text{m/s}^2$<br />
+   由 $h=\frac{1}{2}gt^2$ 得 $t=\sqrt{\frac{2h}{g}}=\sqrt{\frac{2×37.5×10^3}{10}}=\sqrt{7500}≈86.6\,\text{s}$<br />
+   速度 $v=gt=10×86.6=866\,\text{m/s}$。<br />
+   （若精确计算 $\sqrt{7500}=86.6025…$）<br />
+2. <strong>平衡求阻力系数</strong>：<br />
+   由图线可知最大速度约为 $v_m≈100\,\text{m/s}$（题干附图读取），当 $a=0$ 时：<br />
+   $mg=k v_m^2$<br />
+   $k=\frac{mg}{v_m^2}=\frac{100×10}{100^2}=\frac{1000}{10000}=0.1\,\text{kg/m}$<br />
+   保留1位有效数字：$k≈0.1\,\text{kg/m}$。</p>
+<p><strong>点评/变式</strong><br />
+- 易错：下落高度计算易漏减1.5km；平方阻力模型中平衡方程直接得系数，但必须确认速度是最大速度。<br />
+- 变式：若阻力改为 $f=kv$，平衡条件变为 $mg=k v_m$，解答类似；或给出 $k$ 反求最大速度。</p>
+<h3>代表题2：2008-全国Ⅱ-06</h3>
+<p><strong>题目</strong>：油滴在平行板电容器中，无电压时以速率 $v$ 匀速下降；加电压 $U$ 时以速率 $v$ 匀速上升；求加电压 $-U$ 时匀速运动的速度大小和方向。</p>
+<p><strong>思路</strong><br />
+三种状态下油滴均匀速，合力为零。阻力 $f=kv$，方向与运动方向相反。设油滴质量 $m$，带电量 $q$，板间距 $d$。<br />
+- 无电压：只受重力向下、阻力向上，平衡得 $mg=kv$。<br />
+- 加 $U$（上正下负？题干未明，但由上升可判电场力向上）：匀速上升，重力向下，阻力向下，电场力向上，平衡得 $q\frac{U}{d}=mg+kv$。<br />
+- 加 $-U$：电场力反向（向下），需重新判断运动方向及阻力方向。设最终速度大小为 $v_x$，方向假设向下，则重力向下，电场力向下，阻力向上（与运动方向相反），平衡得 $mg+q\frac{U}{d}=k v_x$。联立求解。</p>
+<p><strong>步骤</strong><br />
+1. 设油滴重力 $mg$，阻力 $f=kv$，电场力 $F_E=q\frac{U}{d}$。<br />
+2. 情况一：电压为零，向下匀速 $v$。<br />
+   受力：重力向下，阻力向上。<br />
+   $mg=k v \quad\text{①}$<br />
+3. 情况二：电压 $U$，向上匀速 $v$（与情况一同大小）。<br />
+   电场力向上。受力：重力向下，阻力向下（因向上运动）。<br />
+   $q\frac{U}{d}=mg+k v \quad\text{②}$<br />
+4. 情况三：电压 $-U$，电场力向下。设匀速速度为 $v_x$，方向向下。<br />
+   受力：重力向下，电场力向下，阻力向上。<br />
+   $mg+q\frac{U}{d}=k v_x \quad\text{③}$<br />
+5. 联立①、②：<br />
+   由① $k v=mg$，代入②得 $q\frac{U}{d}=2mg$。<br />
+   将上述代入③：$mg+2mg=k v_x$，即 $3mg=k v_x$。<br />
+   结合① $mg=kv$，得 $k v_x=3k v \Rightarrow v_x=3v$。方向向下。<br />
+   故选C。</p>
+<p><strong>点评/变式</strong><br />
+- 关键：每种情境独立分析受力，阻力方向严格与速度反向。<br />
+- 陷阱：电压反向时不要想当然认为油滴反向运动速度与原大小相同；必须重列平衡方程。<br />
+- 变式：若已知电场力和速度比例系数，可反求电压；或改为阻力与速度平方成正比，需解二次方程。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-11.html">2014-新课标Ⅱ-11</a>（2014 · 中） 通过自由落体运动求时间和速度，结合v-t图象与受力平衡估算阻力系数</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a>（2008 · 中） 油滴在平行板电容器电场、重力与空气阻力作用下多次匀速运动，分析平衡条件求速度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/604-平衡条件.html">平衡条件</a></li>
+</ul>
+</div>
+</body>
+</html>

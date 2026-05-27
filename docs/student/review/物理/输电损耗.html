@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>输电损耗</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>输电损耗</h1><div class="review-mark" data-stem="输电损耗"></div><div class="meta-card"><span><strong>考点</strong>输电损耗</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>交流电 与 变压器</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：交流电 与 变压器</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>输送模型</strong>：远距离输电通常采用高压输电，从发电站经升压变压器→输电线→降压变压器到用户。忽略变压器自身损耗，<strong>输送功率</strong> $P$ 由电源端决定保持不变。</li>
+<li><strong>输电线上的电流</strong>：<br />
+  $$I = \frac{P}{U}$$<br />
+  其中 $U$ 为输电电压（升压变压器副线圈电压），$P$ 为输送的总功率（视在功率或有功功率，在纯电阻简化模型中即为输电线首端功率）。</li>
+<li><strong>输电线功率损耗（线损）</strong>：<br />
+  $$\Delta P = I^2 R_{\text{线}} = \left(\frac{P}{U}\right)^2 R_{\text{线}} \propto \frac{1}{U^2}$$<br />
+  即在 $P$ 与 $R_{\text{线}}$ 一定时，$\Delta P$ 与输电电压的平方成反比。</li>
+<li><strong>输电线上电压损失（压降）</strong>：<br />
+  $$\Delta U = I R_{\text{线}} = \frac{P}{U} R_{\text{线}} \propto \frac{1}{U}$$<br />
+  即 $\Delta U$ 与输电电压成反比。</li>
+<li><strong>用户端电压</strong>：$U_{\text{用}} = U - \Delta U$，降压变压器进一步调整电压供用户使用。</li>
+<li>适用范围：理想变压器配合输电线路，忽略电抗与导纳，视为纯电阻线路。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确不变物理量</strong>：抓死输送功率 $P$、输电线电阻 $R_{\text{线}}$ 不变。  </li>
+<li><strong>写出电流表达式</strong>：$I = \frac{P}{U}$，新电压下的电流直接用比例求。  </li>
+<li><strong>代入损失公式</strong>：<br />
+   功率损失 $\Delta P = I^2 R_{\text{线}} = \frac{P^2 R_{\text{线}}}{U^2}$；<br />
+   电压损失 $\Delta U = I R_{\text{线}} = \frac{P R_{\text{线}}}{U}$。  </li>
+<li><strong>比例法求新值</strong>：电压变为原来的 $k$ 倍，</li>
+<li>电流变为原来的 $\frac{1}{k}$；</li>
+<li>$\Delta P' = \frac{1}{k^2} \Delta P$；</li>
+<li>$\Delta U' = \frac{1}{k} \Delta U$。<br />
+   直接用比例系数比较，避免重复计算。</li>
+<li><strong>多选题验证</strong>：分别判断每个选项，注意正反比关系，排除概念混淆的干扰项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>将输送电压 $U$ 与输电线两端电压混淆</strong>：损失公式中用到的是输电电压 $U$（首端线电压），不可用 $\Delta U$ 或用户端电压代入。</li>
+<li><strong>误认为 $\Delta P$ 与 $U$ 成反比</strong>：由于 $P=UI$，有学生错误地认为损失功率 $\Delta P = \frac{U^2}{R}$，实为 $\Delta P = I^2 R$，导致比例关系错乱。</li>
+<li><strong>忽略 $P$ 恒定的前提</strong>：若题目改为“保持输电电流不变”或“保持用户端电压不变”，规律完全不同，必须重新推导，不可盲目套用平方反比结论。</li>
+<li><strong>功率损失和电压损失的计算混淆</strong>：<br />
+  $\Delta P$ 与 $U^2$ 成反比，而 $\Delta U$ 与 $U$ 成反比，一个平方关系，一个线性关系，选题时易张冠李戴。</li>
+<li><strong>单位与数量级</strong>：特高压题中 kiloVolt（kV）直接用于比例计算即可，但要注意最终比例不带单位。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>（2020·新课标Ⅱ·06）特高压输电，从A处用550 kV向B处输电，输电线损失功率 $\Delta P$，到达B处电压下降 $\Delta U$。保持A处输送功率和输电线电阻不变，改用1100 kV特高压，损失功率变 $\Delta P'$，电压下降变 $\Delta U'$。判断正确选项。</p>
+<p><strong>思路</strong>：<br />
+明确 $P$、$R_{\text{线}}$ 恒定，电压从 550 kV → 1100 kV，变为前者的 2 倍。用比例法直接导出 $\Delta P'$ 与 $\Delta P$、$\Delta U'$ 与 $\Delta U$ 的关系。</p>
+<p><strong>步骤</strong>：<br />
+1. 设原电压 $U_1 = 550 \, \text{kV}$，新电压 $U_2 = 1100 \, \text{kV}$，则倍率 $k = U_2/U_1 = 2$。<br />
+2. 输电线电流：$I_1 = P/U_1$，$I_2 = P/U_2 = I_1/2$。<br />
+3. 功率损失：<br />
+   $\Delta P = I_1^2 R_{\text{线}}$，<br />
+   $\Delta P' = I_2^2 R_{\text{线}} = \left(\frac{I_1}{2}\right)^2 R_{\text{线}} = \frac{1}{4} \Delta P$。 对应选项 A（$\Delta P' = \frac{1}{4}\Delta P$）。<br />
+4. 电压损失：<br />
+   $\Delta U = I_1 R_{\text{线}}$，<br />
+   $\Delta U' = I_2 R_{\text{线}} = \frac{I_1}{2} R_{\text{线}} = \frac{1}{2} \Delta U$。 对应选项 D（$\Delta U' = \frac{1}{2} \Delta U$）。<br />
+5. 综上，A、D 正确。</p>
+<p><strong>点评</strong>：<br />
+本题属基础多选题，核心就在抓住输送功率不变的条件下推导输送电流，然后分别用 $I^2 R$ 和 $I R$ 求损失。利用比例法避开具体数值，速度和准确率俱佳。<br />
+<strong>变式</strong>：若题目问“保持输送电流不变，电压升高到2倍，损失如何？”此时 $P = UI$，$P$ 会变，损失功率 $\Delta P = I^2 R$ 恒定，电压损失 $\Delta U = I R$ 也恒定。可见抓住不变物理量是解题灵魂。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-06.html">2020-新课标Ⅱ-06</a>（2020 · 中） 特高压输电中，输电线上功率损耗和电压降与输电电压的关系判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/730-输电损耗.html">输电损耗</a></li>
+</ul>
+</div>
+</body>
+</html>

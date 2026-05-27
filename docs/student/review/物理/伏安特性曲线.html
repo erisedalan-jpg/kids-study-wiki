@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>伏安特性曲线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>伏安特性曲线</h1><div class="review-mark" data-stem="伏安特性曲线"></div><div class="meta-card"><span><strong>考点</strong>伏安特性曲线</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>实验原理</strong>：小灯泡在不同电压下，灯丝温度不同，电阻随之变化，其电压 $U$ 与电流 $I$ 的关系是非线性的。用电压表、电流表测出不同工作电压下的电流值，即可在 $I-U$ 坐标系中描绘出伏安特性曲线。某状态下灯丝的电阻用 $R=\frac{U}{I}$ （静态电阻）计算，不能用切线斜率。</li>
+<li><strong>实验电路</strong>：必须采用<strong>滑动变阻器分压式接法</strong>，使灯泡两端电压能从零开始连续调节。电流表一般<strong>外接</strong>（因为小灯泡正常工作时的电阻 $R_{\rm L} \approx \frac{3.6}{0.30}=12\,\Omega$ 远小于电压表内阻，电流表外接的分压误差小）。若电压表量程小于灯泡额定电压，需串联<strong>定值电阻</strong>改装扩大量程。</li>
+<li><strong>核心器材与参数</strong>：</li>
+<li>小灯泡额定值（如 $3.6\ {\rm V}, 0.30\ {\rm A}$）。</li>
+<li>电压表量程可能不够，需改装（串联电阻使量程扩大）。</li>
+<li>滑动变阻器采用分压接法，阻值不宜太大。</li>
+<li>电源电动势一般略大于灯泡额定电压。</li>
+<li><strong>数据处理</strong>：</li>
+<li>在坐标纸上合理标度坐标轴，描点后连成<strong>平滑曲线</strong>（不是折线）。</li>
+<li>求某工作点电阻：由该点坐标按 $R=\frac{U}{I}$ 计算。</li>
+<li>分析曲线弯曲原因：随着电压、电流增大，灯丝温度升高，电阻率增大，电阻增大。</li>
+<li><strong>注意事项</strong>：</li>
+<li>闭合开关前，滑动变阻器滑片应置于使灯泡两端电压为零的一端（分压电路输出端短路侧）。</li>
+<li>电表读数注意量程与有效数字。</li>
+<li>必须通过实验获得多组数据（至少6~8组），且在额定电压附近多测几组。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分析器材，确定电路结构</strong></li>
+<li>若题目要求“电压从零开始”或“画完整伏安特性曲线”，则控制电路必选<strong>分压式</strong>。</li>
+<li>比较待测电阻 $R_x$、电流表内阻 $R_A$、电压表内阻 $R_V$ 的大小关系：<ul>
+<li>$R_x \ll R_V$ 且 $R_x \gg R_A$ 时，电流表内接或外接均可；</li>
+<li>$R_x \ll R_V$ 而 $R_x$ 与 $R_A$ 可比时，电流表<strong>外接</strong>（小电阻外接）；</li>
+<li>本题小灯泡电阻约 $12\,\Omega$，$R_V$ 通常 $3\,\mathrm{k\Omega}$ 以上，故用外接法。</li>
+</ul>
+</li>
+<li>
+<p>若电表量程不匹配，应用改装方法：电压表串联定值电阻扩大量程，或电流表并联分流电阻。</p>
+</li>
+<li>
+<p><strong>设计电路图并连线</strong></p>
+</li>
+<li>分压电路：滑动变阻器三个接线柱接入，电阻丝两端接电源，一固定端与滑片端并联到负载。</li>
+<li>
+<p>实物连线遵循“先串后并、由正到负”的顺序，注意电表正负接线柱。</p>
+</li>
+<li>
+<p><strong>处理实验数据</strong></p>
+</li>
+<li>建立坐标系，横轴通常为 $U$，纵轴为 $I$（也有 $I-U$ 形式，按题目要求）。</li>
+<li>选适当标度，让数据点分散开；描点后，用平滑曲线连接。</li>
+<li>
+<p>计算电阻：$R=\frac{U}{I}$，不是该点切线的斜率。</p>
+</li>
+<li>
+<p><strong>回答问题与误差分析</strong></p>
+</li>
+<li>解释伏安特性曲线非线性的原因：灯丝电阻率随温度升高而增大。</li>
+<li>误差来源：电流表外接时电压表分流，导致测量值 $R_{\rm 测} &lt; R_{\rm 真}$；读数误差。</li>
+<li>
+<p>若考查电表改装，需写出量程扩大后的电压表读数换算关系。</p>
+</li>
+<li>
+<p><strong>注意事项变通</strong><br />
+   有时题目给出 $U-I$ 图或 $I-U$ 图，注意不同坐标系下电阻的几何含义：  </p>
+</li>
+<li>若横轴为 $U$、纵轴为 $I$，则某点电阻 $R=\frac{U}{I}$，数值上等于该点与原点连线斜率的倒数；切线斜率对应动态电阻 $\frac{{\rm d}U}{{\rm d}I}$。  </li>
+<li>若横轴为 $I$、纵轴为 $U$，则电阻等于该点与原点连线的斜率。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分压、限流接法选择错误</strong>：看到“描绘伏安特性曲线”不立即反应出必须用分压接法，错误设计成限流式导致电压不能从零开始。</li>
+<li><strong>电流表内外接混淆</strong>：不分析小灯泡电阻与电表内阻的大小关系，误用内接法使误差变大。</li>
+<li><strong>滑动变阻器滑片初始位置错误</strong>：闭合开关前未将滑片置于使分压输出为零的一端，可能烧毁灯泡。</li>
+<li><strong>改装电压表量程</strong>：当电压表量程小于灯泡额定电压时，忘记串联定值电阻扩大量程，或串联后计算量程错误（如新量程 $U_m' = U_g + \frac{U_g}{R_V} R_0$）。</li>
+<li><strong>坐标轴描点与连线</strong>：用折线连接各数据点，或未剔除明显错误点，失去“平滑曲线”的本质。</li>
+<li><strong>求电阻用错斜率</strong>：在 $I-U$ 曲线上，将某点切线斜率的倒数当作该点电阻，正确应取该点坐标的 $U/I$ 值。</li>
+<li><strong>有效数字与读数</strong>：不注意电表的分度值和估读规则，导致有效数字位数不对。</li>
+<li><strong>实物连线细节</strong>：分压接法中滑动变阻器下两个接线柱接电源时极性忽略，或电表正负接反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2020年新课标Ⅱ卷第23题（部分复原）</h3>
+<p><strong>题目</strong><br />
+某同学要研究小灯泡 ${\rm L}(3.6\ {\rm V}, 0.30\ {\rm A})$ 的伏安特性。提供的器材有：电流表（量程 $0.6\ {\rm A}$，内阻 $0.5\ \Omega$）、电压表（量程 $3\ {\rm V}$，内阻 $3\ {\rm k\Omega}$）、定值电阻 $R_0 = 1\ {\rm k\Omega}$、滑动变阻器（$0\sim 10\ \Omega$）、电源（电动势 $4\ {\rm V}$，内阻不计）、开关、导线若干。要求电压的调节范围从 $0$ 开始，且测量尽量精确。</p>
+<p>（1）画出实验电路图；<br />
+（2）连接实物图（已给出部分连线）；<br />
+（3）在 $I-U$ 坐标系中画出测得的伏安特性曲线，并由曲线求出小灯泡在 $2.5\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-10.html">2020-新课标Ⅱ-10</a>（2020 · 中） 研究小灯泡伏安特性曲线的实验电路设计与操作</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/512-伏安特性曲线.html">伏安特性曲线</a></li>
+</ul>
+</div>
+</body>
+</html>

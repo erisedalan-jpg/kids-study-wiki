@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>完全弹性碰撞</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>完全弹性碰撞</h1><div class="review-mark" data-stem="完全弹性碰撞"></div><div class="meta-card"><span><strong>考点</strong>完全弹性碰撞</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>动量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：动量</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>完全弹性碰撞</strong>  </li>
+<li>动量守恒：$m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'$。  </li>
+<li>动能守恒：$\frac12 m_1v_1^2 + \frac12 m_2v_2^2 = \frac12 m_1v_1'^2 + \frac12 m_2v_2'^2$。  </li>
+<li>恢复系数 $e=1$，碰后分离相对速度等于碰前接近相对速度：$v_2' - v_1' = v_1 - v_2$。  </li>
+<li>若一物体碰固定挡板，速度等大反向（如题中物块与挡板弹性碰撞）。</li>
+<li><strong>动量守恒定律的适用条件</strong>：系统不受外力或合外力为零（本题冰面光滑，系统水平方向动量守恒）。</li>
+<li><strong>多次作用的递推与归纳</strong>：对重复的相互作用，可逐次列方程，利用累加或归纳得到第 $n$ 次作用后的速度通项。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确系统与研究过程</strong>  </li>
+<li>确定每次“推”的过程为一次相互作用；系统为运动员与物块（挡板除外），水平面光滑，动量守恒。</li>
+<li><strong>规定正方向</strong>  </li>
+<li>通常取人最终运动方向为正方向（如本题取人退行方向为正），便于后续不等式比较。</li>
+<li><strong>逐次列动量守恒方程</strong>  </li>
+<li>第一次：$0 = Mv_1 - mv$（物块推向挡板，物块速度沿负方向）。  </li>
+<li>第 $n$ 次（$n\geq 2$）：推前人的速度为 $v_{n-1}$，物块经挡板反弹后速度变为 $+v$（与正方向相同），追上人后又被反向推出，速度变为 $-v$。  </li>
+<li>方程：$Mv_{n-1} + mv = Mv_n - mv$。</li>
+<li><strong>数学归纳求通项</strong>  </li>
+<li>将 $n$ 次方程累加，得 $Mv_n = (2n-1)mv$，即 $v_n = \frac{(2n-1)mv}{M}$。</li>
+<li><strong>根据临界条件列不等式</strong>  </li>
+<li>反弹物块能追上运动员的条件：$v_{\text{人}} &lt; v_{\text{物块返回速度}}=v$。  </li>
+<li>第 $n$ 次推出后不能追上：$v_n \ge v$；能推下一次：$v_{n-1} &lt; v$。  </li>
+<li>代入通项解质量范围，注意不等号含等号的物理意义（恰不能追上时取等号）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>物块与挡板碰撞后的速度方向判断错误</strong>：弹性碰撞后速度等大反向，返回时方向与反弹前人推物块的方向相反，在正方向规定下要认准其正负。</li>
+<li><strong>第二次及后续推前物块速度的取值</strong>：很多同学误认为物块追上人时已与运动员共速，实际上冰面光滑，人一直匀速，物块返回后相对人运动。</li>
+<li><strong>方程中符号混乱</strong>：列动量守恒时，务必使各速度的符号与正方向一致，尤其是物块每次被推出时速度为 $-v$，返回时速度为 $+v$。</li>
+<li><strong>累加方程时漏项或错项</strong>：注意第一次方程与后续方程形式不同，应单独写出第一次，从第二次开始归纳，或将第一次也写成统一形式 $Mv_0 + mv = Mv_1 - mv$（其中 $v_0=0$）再进行累加。</li>
+<li><strong>不等号边界处理失误</strong>：“第7次推出后还能再推”意味着 $v_7 &lt; v$（$M&gt;52\ \text{kg}$，不含52）；“第8次推出后反弹的物块不能再追上”意味着 $v_8 \ge v$（$M \le 60\ \text{kg}$，含60）。临界质量取舍常出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+水平冰面上一运动员面对固定竖直挡板静止，把质量 $m=4.0\ \text{kg}$ 的静止物块以 $v=5.0\ \text{m/s}$ 沿垂直挡板方向推出，人获得退行速度。物块与挡板弹性碰撞后反向追人，运动员再次将物块以 $5.0\ \text{m/s}$ 推向挡板。经8次推块后运动员退行速度大于 $5.0\ \text{m/s}$，反弹物块不能再追上。不计摩擦，求运动员质量可能值。</p>
+<p><strong>思路</strong><br />
+人与物块系统每次推出过程动量守恒，推前物块速度均为反弹回来的 $+v$，推出后均为 $-v$。选人退行方向为正，列出第1次、第2次、……、第 $n$ 次的动量守恒方程，累加得到第 $n$ 次推后人的速度 $v_n$。利用“第7次后能追、第8次后不能追”建立速度不等式，解运动员质量 $M$ 的范围。</p>
+<p><strong>步骤</strong><br />
+1. 设运动员质量 $M$，正方向为人退行方向。<br />
+2. 第一次推出：$0 = Mv_1 - mv \quad\Rightarrow\quad Mv_1 = mv$。<br />
+   第二次推出前，物块以 $+v$ 返回，推出后速度为 $-v$：<br />
+   $Mv_1 + mv = Mv_2 - mv$。<br />
+   第 $n$ 次推出：$Mv_{n-1} + mv = Mv_n - mv$。<br />
+3. 将 $n$ 个式子相加：<br />
+   $0 + (Mv_1+mv)+\dots+(Mv_{n-1}+mv) = (Mv_1 - mv) + (Mv_2 - mv) + \dots + (Mv_n - mv)$<br />
+   化简得：$Mv_n = (2n-1)mv$，即 $v_n = \dfrac{(2n-1)mv}{M}$。<br />
+4. 物块能追上人的条件：人速小于物块返回速度 $v$。<br />
+   第7次推出后还能再推（即第7次后物块可追上）：$v_7 &lt; v$<br />
+   $\Rightarrow \dfrac{13mv}{M} &lt; v \Rightarrow M &gt; 13m = 52\ \text{kg}$。<br />
+   第8次推出后不能再追上：$v_8 \ge v$<br />
+   $\Rightarrow \dfrac{15mv}{M} \ge v \Rightarrow M \le 15m = 60\ \text{kg}$。<br />
+5. 综上，$52\ \text{kg} &lt; M \le 60\ \text{kg}$。选项 B（53 kg）、C（58 kg）正确。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是将多次重复的“弹性碰撞＋动量守恒”转化为数列归纳，临界条件需理清“追上”的速度大小关系。常见变式：改变推出速度或物块质量；或改为已知质量求推出次数；或挡板换成另一可动物体，需联立弹性碰撞方程。解题通法不变：逐次列式，找通项，据情景列不等式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-08.html">2020-新课标Ⅱ-08</a>（2020 · 中） 多次推物块与挡板弹性碰撞，利用动量守恒求运动员质量范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/578-完全弹性碰撞.html">完全弹性碰撞</a></li>
+</ul>
+</div>
+</body>
+</html>

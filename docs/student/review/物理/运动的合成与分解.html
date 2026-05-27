@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>运动的合成与分解</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>运动的合成与分解</h1><div class="review-mark" data-stem="运动的合成与分解"></div><div class="meta-card"><span><strong>考点</strong>运动的合成与分解</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：21</li>
+<li>真题数：4；年份跨度：2009–2021</li>
+<li>出现题位：选择3 选择9 选择10 选择11</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>运动的合成与分解</strong>：实际发生的运动为合运动；将合运动按效果或计算便利性（通常为正交分解）分解后，各分运动具有独立性、等时性，遵循矢量叠加原理。</li>
+<li><strong>核心关系</strong>：</li>
+<li>位移：$\vec{s}=\vec{s}_x+\vec{s}_y$</li>
+<li>速度：$\vec{v}=\vec{v}_x+\vec{v}_y$</li>
+<li>加速度：$\vec{a}=\vec{a}_x+\vec{a}_y$</li>
+<li><strong>平抛运动（及其推论）</strong> ：</li>
+<li>条件：初速度水平($v_0$)，仅受重力($a=g$)。</li>
+<li>分解：水平方向匀速直线($v_x=v_0,\ x=v_0t$)；竖直方向自由落体($v_y=gt,\ y=\frac12gt^2$)。</li>
+<li>轨迹方程：$y=\frac{g}{2v_0^2}x^2$。</li>
+<li><strong>类平抛运动</strong>：将合力（如电场力）类比为等效重力，方向恒定的恒定合力代替 $mg$ 或 $ma$，分解方法完全相同，运动学公式保持抛物线特征。</li>
+<li><strong>适用条件</strong>：① 各分运动沿直线或已知曲线；② 矢量合成遵守平行四边形/三角形定则；③ 分解时优先考虑沿受力方向和垂直受力方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定合运动与分解方向</strong>：明确研究对象的实际轨迹，选择正交分解方向。一般情况下，沿合力方向（或恒定加速度方向）及与其垂直的方向进行分解。</li>
+<li><strong>独立列方程</strong>：</li>
+<li>匀速/受力平衡方向：$x=v_{x}t$（速度恒定）。</li>
+<li>匀变速方向（牛顿第二定律+运动学）：$v_y=v_{y0}+at$，$y=v_{y0}t+\frac12 at^2$，$v_y^2-v_{y0}^2=2ay$。</li>
+<li><strong>寻找分运动间的关联</strong>：</li>
+<li>等时性（$t$ 相同）：用共同的时间 $t$ 联系两方向的位移/速度。</li>
+<li>速度/位移的几何关系：速度夹角正切 $\tan\theta=v_y/v_x$；位移夹角正切 $\tan\alpha=y/x$。平抛中 $\tan\theta=2\tan\alpha$。</li>
+<li><strong>结合能量與已知条件</strong>：若涉及动能、电势差等标量，优先用动能定理：$\sum W=\Delta E_k$，借此架起初末状态速度大小（即合速度）的桥梁。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平抛初始动能与初速度区分</strong>：动能 $E_k=\frac12 mv_0^2$，两状态初速度之比等于动能比值的平方根，勿直接令动能比等于水平位移平方比。</li>
+<li><strong>平抛实验中“高度差”与“时间”关系</strong>：竖直方向 $\Delta y=gT^2$ 仅适用于连续相等时间间隔的位移差，该 $T$ 是频闪周期或等时间间隔，不是总运动时间。</li>
+<li><strong>类平抛中分运动混淆</strong>：带电粒子在匀强电场中，垂直于电场方向速度不变；沿电场方向做匀变速运动。列速度分解方程时，切勿将夹角关系错位（如把 $v_B\sin30°$ 误写为 $v_B\cos30°$）。</li>
+<li><strong>矢量分解的夹角误用</strong>：注意题目中给出的角度是速度与哪个方向的夹角（与水平、与电场、与竖直），建立速度三角形时务必准确定位邻边和对边。</li>
+<li><strong>轨迹残缺实验数据处理</strong>：给出的 $P_1, P_2, P_3$ 水平间距相等，暗示相邻两点时间间隔 $T$ 相同，只能从竖直方向 $\Delta y=gT^2$ 求 $T$，不可随意假设某点为起点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1（2020-新课标Ⅱ-03）</h3>
+<p><strong>题目</strong>：摩托车越过水平宽 $3h$、高差 $0.5h$ 的坑。从左侧 $a$ 点飞出，一次动能 $E_1$ 落到与 $a$ 同水平位移 $h$、低 $h$ 的 $c$ 点；另一次动能 $E_2$ 恰好越过 $b$ 点。求 $E_2/E_1$。</p>
+<p><strong>思路</strong>：两次均为平抛运动，竖直位移不同。由竖直方向求时间，再通过水平位移求水平初速度，最后将初速度平方比转为动能比。</p>
+<p><strong>步骤</strong>：
+1. 设 $a$ 点速度分别为 $v_{01}$ 和 $v_{02}$。
+2. 对第一次落到 $c$ 点：竖直位移 $y_1=h$，由 $h=\frac12 gt_1^2$ 得 $t_1=\sqrt{\frac{2h}{g}}$；水平位移 $x_1=h=v_{01}t_1$，故 $v_{01}^2=\frac{gh}{2}$。则 $E_1=\frac12 mv_{01}^2=\frac{mgh}{4}$。
+3. 对第二次过 $b$ 点：竖直位移 $y_2=0.5h$，得 $t_2=\sqrt{\frac{h}{g}}$；水平位移 $x_2=3h=v_{02}t_2$，得 $v_{02}^2=9gh$。则 $E_2=\frac92 mgh$。
+4. 因此 $\frac{E_2}{E_1}= \frac{\frac92 mgh}{\frac14 mgh}=18$。</p>
+<p><strong>点评/变式</strong>：
+- 动能比直接正比于 $v_0^2$ 的比值，必须分别求出初速度平方，切勿由位移比直接猜测动能比。
+- 变式：若坑的形状改为斜面或圆弧面，需联立轨迹方程与几何边界方程求解。</p>
+<h3>代表题 2（2015-新课标Ⅱ-11）</h3>
+<p><strong>题目</strong>：质量为 $m$、电荷 $q&gt;0$ 的粒子在匀强电场中运动。$A$ 点速度 $v_0$ 与电场方向成 $60°$；$B$ 点速度方向与电场方向成 $30°$。不计重力，求 $A$、$B$ 两点间电势差 $U_{AB}$。</p>
+<p><strong>思路</strong>：类平抛运动，垂直电场方向（等效为平抛的水平方向）速度不变。由速度的矢量分解求出 $B$ 点合速度，再结合动能定理求电势差。</p>
+<p><strong>步骤</strong>：
+1. 分解：垂直电场分速度不变，有 $v_{B}\sin30°=v_0\sin60°$。解得 $v_B=\sqrt{3}v_0$。
+2. 过程仅电场力做功，动能定理：$qU_{AB}=\frac12 mv_B^2 - \frac12 mv_0^2$。
+3. 代入 $v_B$ 得：$qU_{AB}=\frac12 m(3v_0^2) - \frac12 mv_0^2 = mv_0^2$。
+4. 所以 $U_{AB}=\frac{mv_0^2}{q}$。</p>
+<p><strong>点评/变式</strong>：
+- 直接利用“垂直于恒定合力方向的分速度不变”是解类平抛速度关联的捷径，无需引入时间 $t$。
+- 变式：若运动区域有重力，需将重力和电场力合成等效重力，等效加速度方向为合力方向。</p>
+<h3>代表题 3（2021-全国乙-09）</h3>
+<p><strong>题目</strong>：平抛运动实验，频闪周期 $T=0.05\,\text{s}$，方格边长 $5\,\text{cm}$。图中标注了若干影像间高度差，求平抛初速度、某点速度等。（结合所缺图的高度差数据）
+<strong>思路</strong>：利用竖直方向相邻相等时间间隔的位移差 $\Delta y = gT^2$ 求时间或验算，再由水平匀速求 $v_0$。对某点速度需合成水平和竖直分量。</p>
+<p><strong>步骤</strong>（结合频闪实验通法）：
+1. 竖直方向：任意连续两个相邻 $T$ 内下落高度差满足 $h_2-h_1=gT^2$。由题给数据可求 $g$ 或验证。
+2. 水平方向：方格的边长乘以格数除以 $T$ 即为初速度 $v_0 = \frac{\Delta x}{T}$。
+3. 求某点瞬时速度竖直分量：用匀变速平均速度公式 $v_{y中}=\frac{h_上+h_下}{2T}$，再与该点 $v_0$ 合成合速度。</p>
+<p><strong>点评/变式</strong>：
+- 坐标纸破损或轨迹不完整时，$P_1$、$P_2$、$P_3$ 之间水平间距相等意味着它们之间时间间隔相等，这是用 $\Delta y=gT^2$ 的前提。
+- 变式：若方格纸倾斜，需先利用竖直方向匀变速规律求重力方向后再校正坐标系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-09.html">2021-全国乙-09</a>（2021 · 中） 平抛运动分解为水平匀速和竖直自由落体计算速度与重力加速度</li>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-03.html">2020-新课标Ⅱ-03</a>（2020 · 中） 该题考查平抛运动中水平与竖直分运动的规律及动能计算，结合几何关系求解动能之比。</li>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-11.html">2015-新课标Ⅱ-11</a>（2015 · 中） 带电粒子在匀强电场中运动，已知初末速度方向，求两点间电势差。</li>
+<li><a href="../../exam/物理/2009-全国Ⅱ-10.html">2009-全国Ⅱ-10</a>（2009 · 中） 通过分析平抛运动轨迹的坐标纸残图，利用水平与竖直方向分运动规律进行相关计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/288-运动的合成与分解.html">运动的合成与分解</a></li>
+</ul>
+</div>
+</body>
+</html>

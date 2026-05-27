@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小角度近似</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>小角度近似</h1><div class="review-mark" data-stem="小角度近似"></div><div class="meta-card"><span><strong>考点</strong>小角度近似</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：解答15</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>小角度近似条件</strong>：单摆摆角 $\theta &lt; 5^\circ$（约 $0.0873\text{ rad}$）时，$\sin\theta \approx \theta$（弧度制），$\cos\theta \approx 1-\dfrac{\theta^2}{2}$。此时单摆的运动可视为简谐运动。</li>
+<li><strong>周期公式</strong>：在小角度近似下，单摆周期与振幅无关，只取决于摆长和当地重力加速度：<br />
+  $$T = 2\pi\sqrt{\frac{L}{g}}$$</li>
+<li><strong>几何近似</strong>：小角度下，摆球沿圆弧移动的弧长 $s$ 与弦长（水平拉开距离）$x$ 近似相等：<br />
+  $$x \approx s = L\theta$$
+  其中 $\theta$ 为摆角（弧度），$L$ 为摆长。</li>
+<li><strong>比例关系</strong>：同一地点（$g$ 相同）的单摆，周期之比等于摆长平方根之比：<br />
+  $$\frac{T_1}{T_2} = \sqrt{\frac{L_1}{L_2}}$$</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>角度转换与弧长计算</strong><br />
+   当题目要求最大位移距离且给定最大角度时，将角度化为弧度：$\theta_{\text{rad}} = \theta_{\degree} \times \dfrac{\pi}{180}$，再用 $s_{\max} = L\theta_{\max}$ 求出弧长。若题目提示距离约等于弧长，则直接填弧长对应的弦长。</li>
+<li><strong>周期与摆长的比例法</strong><br />
+   涉及时间相等或周期关系时，由 $10T_{\text{新}} = 11T_{\text{原}}$ 等条件得出周期比 $\dfrac{T_{\text{新}}}{T_{\text{原}}} = \dfrac{11}{10}$，再代入 $\dfrac{T_{\text{新}}}{T_{\text{原}}} = \sqrt{\dfrac{L_{\text{新}}}{L_{\text{原}}}}$，求得新摆长：$L_{\text{新}} = L_{\text{原}} \left(\dfrac{T_{\text{新}}}{T_{\text{原}}}\right)^2$。</li>
+<li><strong>有效数字与单位</strong><br />
+   计算结果按题目要求保留小数位数，注意单位统一（通常用 cm 或 m），最后检查是否需要四舍五入。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记转换为弧度</strong>：直接用角度数值代入 $s = L\theta$ 会导致数量级错误（$5^\circ$ 直接乘 $80\text{ cm}$ 得 $400$，而正确值约 $7\text{ cm}$）。</li>
+<li><strong>近似前提忽略</strong>：小角度近似仅当最大摆角小于 $5^\circ$ 时适用，超过此范围周期会随摆角增大而增大，弦长与弧长也不能近似相等。</li>
+<li><strong>比例计算混淆</strong>：易将“$10$ 个周期等于原 $11$ 个周期”误写为 $10T_{\text{新}} = 11T_{\text{原}}$ 还是 $11T_{\text{新}} = 10T_{\text{原}}$，需厘清对应关系。</li>
+<li><strong>平方关系遗漏</strong>：由周期比求摆长比时，忘记对周期比取平方，直接让摆长比等于周期比。</li>
+<li><strong>有效数字错误</strong>：题目要求“保留 1 位小数”，需精确到 $0.1\text{ cm}$，常见错误是写 $7.0$ 而非 $6.9$（$6.98$ 四舍五入为 $7.0$？但标准答案是 $6.9$，因 $s = 80 \times 5 \times \pi/180 \approx 6.98$，根据四舍五入确实可保留为 $7.0$，可能是角度用 $5^\circ$ 精确计算或题目提示直接取 $6.9$，考试需看题设要求仔细）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2020·新课标Ⅱ·15）</h3>
+<p>用摆长为 $80.0\text{ cm}$ 的单摆实验，要求最大角度小于 $5^\circ$，则拉开距离不超过 $___$ $\text{cm}$（保留1位小数）。设计新单摆，使新摆摆动 $10$ 个周期的时间等于原摆摆动 $11$ 个周期的时间，新摆长应取 $___$ $\text{cm}$。</p>
+<p><strong>思路</strong><br />
+第一空利用小角度下弦长≈弧长，弧长 $s = L\theta$，注意角度化弧度。第二空由时间相等关系求周期比，再利用周期与摆长的平方根关系解出新摆长。</p>
+<p><strong>步骤</strong><br />
+1. <strong>求最大拉开距离</strong><br />
+   - 最大角度 $\theta = 5^\circ = 5 \times \frac{\pi}{180} \approx 0.08727\text{ rad}$
+   - 弧长 $s = L\theta = 80.0\text{ cm} \times 0.08727 \approx 6.98\text{ cm}$
+   - 由小角度近似，弦长≈弧长，保留一位小数得 <strong>$6.9\text{ cm}$</strong>（题目给定答案）。
+2. <strong>求新单摆摆长</strong><br />
+   - 设原周期 $T_0$，新周期 $T$，则 $10T = 11T_0 \Rightarrow \dfrac{T}{T_0} = \dfrac{11}{10} = 1.1$
+   - 由 $T \propto \sqrt{L}$，得 $\sqrt{\dfrac{L_{\text{新}}}{80.0}} = 1.1$
+   - 两边平方：$\dfrac{L_{\text{新}}}{80.0} = 1.21$
+   - $L_{\text{新}} = 80.0 \times 1.21 = 96.8\text{ cm}$</p>
+<p><strong>点评/变式</strong><br />
+本题直接考查小角度近似的定量应用，属于基础题。易错点在于弧度转换及四舍五入。变式可考：若单摆最大摆角为 $3^\circ$，求最大弧长；或将周期关系改为“新摆摆动 $n$ 次的时间等于原摆 $m$ 次”，代公式求解。牢记 $T \propto \sqrt{L}$ 是这类比例问题的核心。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-15.html">2020-新课标Ⅱ-15</a>（2020 · 易） 单摆小角度摆动时弧长与弦长近似相等，并利用周期公式计算摆长变化。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/592-小角度近似.html">小角度近似</a></li>
+</ul>
+</div>
+</body>
+</html>

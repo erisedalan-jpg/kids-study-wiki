@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像法处理数据</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像法处理数据</h1><div class="review-mark" data-stem="图像法处理数据"></div><div class="meta-card"><span><strong>考点</strong>图像法处理数据</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图像法核心思想</strong>：将物理量间的非线性关系通过代数变换转化为<strong>线性关系</strong>（$y=kx+b$），利用图线的斜率、截距求取待测物理量，减小偶然误差。</li>
+<li><strong>匀变速直线运动的线性化关系</strong>：</li>
+<li>位移公式 $s=v_0t+\frac12at^2$，两边同除以 $t$ 得 $\dfrac{s}{t}=v_0+\dfrac{a}{2}t$，作 $\dfrac{s}{t}-t$ 图线，斜率 $k=\dfrac{a}{2}$，纵截距 $b=v_0$。</li>
+<li>逆向思维：若已知末速度 $v_1$，运动可视为反向匀减速，$s=v_1t-\frac12at^2$，变形得 $\dfrac{s}{t}=v_1-\dfrac{a}{2}t$，斜率 $k=-\dfrac{a}{2}$，截距 $b=v_1$。</li>
+<li><strong>图像法的实验步骤</strong>：推导函数关系→线性化→列表计算所需变量→描点→拟合直线（使点均匀分布在直线两侧）→取两个较远点计算斜率 $k=\dfrac{\Delta y}{\Delta x}$→结合截距求目标量。</li>
+<li><strong>注意事项</strong>：必须明确坐标轴的<strong>物理量</strong>与<strong>单位</strong>；描点时选用恰当标度充分利用坐标纸；计算斜率时两点不宜太近；注意<strong>单位换算</strong>（如 $\text{ms}$ 转 $\text{s}$）和<strong>有效数字</strong>。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建立原始关系式</strong>：根据实验情景写出相关物理量间的方程（如位移 $s$、时间 $t$、加速度 $a$、初/末速度$v_0$ 或 $v_1$）。</li>
+<li><strong>线性化变形</strong>：将方程整理成 $y=kx+b$ 的形式，明确 $x$、$y$ 分别代表什么变量组合。</li>
+<li><strong>数据处理与列表</strong>：根据实验数据计算所需的 $x$、$y$ 值，并换算单位，填入表格。</li>
+<li><strong>描点与作图</strong>：选择合适坐标轴范围与分度，描出数据点，用直尺画一条拟合直线（使点尽量靠近直线且两侧分布大致均匀）。</li>
+<li><strong>求斜率与截距</strong>：在所画直线上取两个尽量远离的非数据点，读出坐标，计算斜率 $k=\frac{y_2-y_1}{x_2-x_1}$；可直接从图线读出截距 $b$。</li>
+<li><strong>反求物理量</strong>：利用斜率、截距与原物理量的代数关系解出待测量（如由 $k=-\frac{a}{2}$ 得 $a=-2k$）。</li>
+<li><strong>结果规范</strong>：注意单位正确、按要求保留有效数字。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位陷阱</strong>：时间 $t$ 常以 $\text{ms}$ 给出，必须换算成 $\text{s}$（$\times10^{-3}$），否则斜率计算结果会严重偏离。</li>
+<li><strong>符号错误</strong>：变形时正负号易混。若使用 $s=v_1t-\frac12at^2$，得到的线性形式为 $\frac{s}{t}=v_1-\frac{a}{2}t$，斜率为<strong>负</strong>，$a$ 应为 $-2k$。不要漏掉负号。</li>
+<li><strong>取点不当</strong>：直接从原始数据点取点计算斜率易放大偶然误差；应在<strong>拟合后的整条直线</strong>上取两个远点，坐标可非原始数据。</li>
+<li><strong>坐标轴遗漏物理量/单位</strong>：作图时必须标清横轴、纵轴代表的物理量符号及单位，如 $t/\text{s}$、$\frac{s}{t}/(\text{m}\cdot\text{s}^{-1})$。</li>
+<li><strong>有效数字</strong>：最终结果严格按照要求保留有效数字，中间计算过程可多保留一位，避免累积误差。</li>
+<li><strong>图线类型误判</strong>：若误将原始数据直接作 $s-t$ 图（抛物线），不仅无法线性拟合求加速度，还会因曲线难以精确求导导致失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2011·新课标·10</h3>
+<p><strong>题目</strong>：利用可移动光电门甲和固定光电门乙测量滑块在斜面上运动的加速度。滑块从同一点静止释放，改变甲的位置，测出甲乙间距 $s$ 和遮光片从甲到乙的时间 $t$，记录 $s$、$t$ 及计算出的 $\dfrac{s}{t}$ 于表格。要求：(1)写出 $s$、经过乙时的速度 $v_1$、加速度 $a$、时间 $t$ 的关系式；(2)作 $\dfrac{s}{t}-t$ 图线；(3)由图线求 $a$（保留2位有效数字）。</p>
+<p><strong>思路</strong>：将滑块从甲到乙的运动逆看成初速为 $v_1$、加速度大小为 $a$ 的匀减速直线运动，得 $s=v_1t-\frac12at^2$，化线性为 $\dfrac{s}{t}=v_1-\dfrac{a}{2}t$，因此 $\dfrac{s}{t}-t$ 图为直线，斜率绝对值即 $\dfrac{a}{2}$，由斜率可得 $a$。</p>
+<p><strong>步骤</strong>：
+1. 逆运动写关系：$s = v_1 t - \frac12 a t^2$，两边同除以 $t$ 得 $\frac{s}{t}=v_1-\frac{a}{2}t$。<br />
+2. 转换单位并准备数据：将表格中 $t$ 从 $\text{ms}$ 化为 $\text{s}$（如 $292.9\ \text{ms}=0.2929\ \text{s}$），$\dfrac{s}{t}$ 已直接给出，单位为 $\text{m/s}$。<br />
+3. 作图：以 $t/\text{s}$ 为横轴，$\dfrac{s}{t}/(\text{m}!\cdot!\text{s}^{-1})$ 为纵轴，合理选定标度，描出6个点，用直尺画拟合直线。<br />
+4. 求斜率：在直线上取两点，如 $P_1(0.30, 1.68)$、$P_2(0.78, 1.22)$，得斜率 $k=\frac{1.22-1.68}{0.78-0.30} \approx -0.96\ \text{m/s}^2$。<br />
+5. 解加速度：由 $k=-\frac{a}{2}$ 得 $a=-2k=1.9\ \text{m/s}^2$（保留两位有效数字）。注：真题标准答案基于更精确取点给出 $a=2.1\ \text{m/s}^2$，实际考试中依据所画直线取点计算，在合理范围内均给分。<br />
+6. 答案：(1) $s=v_1t-\frac12at^2$；(3) $a=2.0\ \text{m/s}^2$ 左右（保留2位有效数字）。</p>
+<p><strong>点评/变式</strong>：本题利用“化曲为直”将二次函数转化为线性关系，是测量加速度的经典图像方法。若实验中滑块从静止开始运动且已知初速度为零，可直接作 $\dfrac{s}{t}-t$（斜率为 $\dfrac{a}{2}$）或作 $s - t^2$ 图线（斜率为 $\dfrac{a}{2}$）。变式训练：测重力加速度时用滴水法，记录水滴下落高度 $h$ 和时间 $t$，可作 $\dfrac{h}{t}-t$ 图线求 $g$。核心能力是将物理规律转化为线性方程并利用图像斜率、截距求目标量。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-10.html">2011-新课标-10</a>（2011 · 中） 通过光电门测量数据，利用匀变速运动公式和图像法求滑块加速度的实验题</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/861-图像法处理数据.html">图像法处理数据</a></li>
+</ul>
+</div>
+</body>
+</html>

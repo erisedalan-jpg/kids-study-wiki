@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波的叠加</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>波的叠加</h1><div class="review-mark" data-stem="波的叠加"></div><div class="meta-card"><span><strong>考点</strong>波的叠加</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：填空14</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>波的叠加原理</strong>：几列波相遇时能保持各自特性（频率、波长、振动方向等）继续传播，在相遇区域内任一质点的振动位移为各列波单独存在时在该点引起位移的矢量和。</li>
+<li><strong>波的干涉</strong>  </li>
+<li>产生条件：两列波频率相同、相位差恒定、振动方向相同。  </li>
+<li>干涉加强（振幅最大）：波程差 $\Delta r = n\lambda\;(n=0,\pm1,\pm2,\dots)$；相位差 $\Delta\varphi = 2n\pi$。  </li>
+<li>干涉减弱（振幅最小）：波程差 $\Delta r = (2n+1)\dfrac{\lambda}{2}\;(n=0,\pm1,\pm2,\dots)$；相位差 $\Delta\varphi = (2n+1)\pi$。  </li>
+<li>若两波源初相相同，波程差完全决定振动加强或减弱；若初相不同，需将初相差折算成波程差或直接利用相位差条件。  </li>
+<li>波速公式：$v = \lambda f$，$\lambda = \dfrac{v}{f}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求波长</strong>：利用 $v=\lambda f$，由已知波速和频率算出 $\lambda$。  </li>
+<li><strong>建立坐标系</strong>：沿波传播方向或两波源连线设坐标轴，明确波源位置。  </li>
+<li><strong>设点写波程</strong>：在求解区域内任取一点，用坐标表示两列波从波源到该点的传播距离。  </li>
+<li><strong>列波程差</strong>：$\Delta r = |r_2 - r_1|$ 或根据方向带符号，注意两列波是否同向传播还是相向传播。  </li>
+<li><strong>套用干涉条件</strong>：  </li>
+<li>振幅最小（减弱）：$\Delta r = (2k+1)\dfrac{\lambda}{2}$。  </li>
+<li>振幅最大（加强）：$\Delta r = k\lambda$。  </li>
+<li><strong>解出坐标并限制范围</strong>：由方程解出点位坐标关于 $k$ 的表达式，结合几何边界（如 $0 \le x \le L$）取整数值，得到所有可能位置。  </li>
+<li><strong>若初相不同</strong>：可将初相差 $\Delta\varphi_0$ 转换为附加波程差 $\dfrac{\Delta\varphi_0}{2\pi}\lambda$，或直接用相位差条件 $\Delta\varphi = \dfrac{2\pi}{\lambda}\Delta r + \Delta\varphi_0$ 列式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>波程差计算</strong>：误将两波源到点的距离相加或未注意相向传播时波程差为 $(L-x)-x$ 等形式。  </li>
+<li><strong>坐标范围限制</strong>：解出含 $k$ 的通解后忘记代入实际长度范围筛选，导致多解或漏解。  </li>
+<li><strong>波长求解</strong>：$v=\lambda f$ 中频率 $f$ 与角频率 $\omega$ 混淆，误用 $\omega = 2\pi f$。  </li>
+<li><strong>加强减弱条件混淆</strong>：记反 $\Delta r$ 的奇偶倍数关系，误将 $\Delta r = (2k+1)\lambda/2$ 当作加强。  </li>
+<li><strong>初相差忽略</strong>：当题目给出“初始相位相同”时可直接用波程差；若未说明或给出不同初相，必须计入初相差的影响。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>（2010新课标Ⅰ-14（2））波源 $S_1$ 和 $S_2$ 振动方向相同、频率均为 $4\,\text{Hz}$，分别置于均匀介质中 $x$ 轴上的 $O$ 点和 $A$ 点，$OA=2\,\text{m}$。两波源产生的简谐横波沿 $x$ 轴相向传播，波速为 $4\,\text{m/s}$。两波源振动的初始相位相同。求：<br />
+（i）简谐横波的波长；<br />
+（ii）$OA$ 间合振动振幅最小的点的位置。</p>
+<h3><strong>思路</strong></h3>
+<p>由波速公式求波长；在 $OA$ 连线上设点，写出两波到该点的波程，求波程差；根据干涉减弱条件 $\Delta r = (2k+1)\lambda/2$ 列方程，解之并限定坐标范围。</p>
+<h3><strong>步骤</strong></h3>
+<p>（i）由 $v=\lambda f$ 得<br />
+$$\lambda = \frac{v}{f} = \frac{4}{4}\,\text{m}=1\,\text{m}.$$  </p>
+<p>（ii）设 $OA$ 间一点 $P$，坐标为 $x$（$0 \le x \le 2$），令波源 $S_1$ 在 $O$（$x=0$），$S_2$ 在 $A$（$x=2\,\text{m}$）。<br />
+$S_1$ 发出的波传到 $P$ 的路程 $r_1 = x$；$S_2$ 发出的波传到 $P$ 的路程 $r_2 = 2-x$。<br />
+两列波相向传播，波程差<br />
+$$\Delta r = r_2 - r_1 = (2-x)-x = 2-2x.$$<br />
+合振动振幅最小的条件为<br />
+$$\Delta r = (2k+1)\frac{\lambda}{2},\quad k=0,\pm1,\pm2,\dots$$<br />
+代入 $\lambda=1\,\text{m}$：<br />
+$$2-2x = (2k+1)\times\frac{1}{2} \;\Longrightarrow\; x = 1 - \frac{2k+1}{4}.$$<br />
+由 $0 \le x \le 2$，分别取 $k=-1,0,1,2$：<br />
+- $k=-1$：$x = 1 - \frac{-1}{4} = 1.25\,\text{m}$；<br />
+- $k=0$：$x = 1 - \frac{1}{4} = 0.75\,\text{m}$；<br />
+- $k=1$：$x = 1 - \frac{3}{4} = 0.25\,\text{m}$；<br />
+- $k=2$：$x = 1 - \frac{5}{4} = -0.25\,\text{m}$（舍去）。<br />
+故振幅最小的点的位置为 $x=0.25\,\text{m}$、$0.75\,\text{m}$、$1.25\,\text{m}$。</p>
+<h3><strong>点评/变式</strong></h3>
+<p>基础干涉定位题，抓住波程差公式和范围筛选是关键。若两波源初相不同，应先将相位差转换为等效波程差。变式：同向传播或不在同一直线上的波源，仍需先正确表达波程差，再套用条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-14.html">2010-新课标Ⅰ-14</a>（2010 · 难） 通过三棱镜全反射求折射率，并结合波的叠加计算波长和振幅最小点位置</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/645-波的叠加.html">波的叠加</a></li>
+</ul>
+</div>
+</body>
+</html>

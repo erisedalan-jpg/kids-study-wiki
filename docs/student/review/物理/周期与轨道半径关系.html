@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期与轨道半径关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>周期与轨道半径关系</h1><div class="review-mark" data-stem="周期与轨道半径关系"></div><div class="meta-card"><span><strong>考点</strong>周期与轨道半径关系</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>开普勒第三定律</strong>：所有绕同一中心天体运行的天体，其轨道半长轴 $r$ 的三次方与公转周期 $T$ 的二次方成正比，即
+  $$\frac{r^3}{T^2}=k$$
+  式中 $k$ 仅与中心天体质量有关。若将天体近似为圆轨道，该式同样成立。</li>
+<li><strong>万有引力提供向心力</strong>：对质量为 $m$ 的天体绕质量为 $M$ 的中心天体做匀速圆周运动，有
+  $$G\frac{Mm}{r^2}=m\frac{4\pi^2}{T^2}r$$
+  消去 $m$ 可得
+  $$r^3=\frac{GMT^2}{4\pi^2}$$
+  由此直接导出周期与轨道半径的定量关系 $r \propto T^{2/3}$，即 $T \propto r^{3/2}$。</li>
+<li><strong>同步卫星特征</strong>：相对地面静止，轨道平面与赤道平面重合，周期等于地球自转周期 $T_0=1\text{天}$（$24\text{h}=86400\text{s}$），轨道半径约为 $4.2\times10^4\text{km}$，距地面高度约 $3.6\times10^4\text{km}$。</li>
+<li><strong>最短通信时间模型</strong>：卫星电话信号通过同步卫星中转，信号传播最短路径为“地面 → 卫星 → 地面”，距离 $s=2h$（$h$ 为卫星离地高度）。由 $t=\frac{s}{c}$ 计算时间，其中 $c=3\times10^8\text{m/s}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别同一天体系统</strong>：锁定题目中绕同一中心天体的多个环绕天体（如月球、同步卫星均绕地球），它们的 $r^3/T^2$ 相等。</li>
+<li><strong>建立比例关系</strong>：由 $r^3 \propto T^2$ 得
+   $$\frac{r_1}{r_2}=\left(\frac{T_1}{T_2}\right)^{2/3}$$
+   代入已知天体的周期比值，直接求出轨道半径之比。如月球周期 $T_月=27\text{天}$，同步卫星周期 $T_同=1\text{天}$，比值为 $27:1$，则半径比为 $27^{2/3}=9:1$。</li>
+<li><strong>求出目标轨道半径或高度</strong>：利用已知天体的具体轨道半径数值，按比例算出待求半径。同步卫星高度 $h=r_同-R_地$（$R_地\approx6400\text{km}$）。</li>
+<li><strong>计算信号传播时间</strong>：明确信号路径为“上—下”往返，取 $s=2h$，再用 $t=s/c$ 计算。注意单位统一，最终结果通常保留两位有效数字。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆卫星周期</strong>：同步卫星周期是 $1\text{天}$（24h），不是 $27\text{天}$，也不是“一个月”。题目直接给出月球周期 $27\text{天}$，须先求出比值。</li>
+<li><strong>轨道半径与高度不分</strong>：开普勒定律中的 $r$ 是轨道半径（从地心到卫星），而信号传播距离涉及高度 $h=r-R_地$。常漏减地球半径，直接用轨道半径代入时间公式。</li>
+<li><strong>信号路径只算单程</strong>：卫星电话至少需要一次“地面→卫星→对方地面”的转发，最短距离是两倍高度，忘记乘 $2$ 会导致结果减半。</li>
+<li><strong>单位混乱</strong>：题目数据常用 $\text{km}$，光速用 $\text{m/s}$，计算时务必统一为 $\text{m}$ 或 $\text{km}$，否则数量级易错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>卫星电话信号需要通过地球卫星传送。若两人在地面通话，从发出信号到对方接收到信号的最短时间最接近（已知月球轨道半径 $3.8\times10^5\text{km}$，周期约 $27\text{天}$，地球半径约 $6400\text{km}$，无线电信号速度 $3\times10^8\text{m/s}$）<br />
+A. 0.1s  B. 0.25s  C. 0.5s  D. 1s</p>
+<p><strong>思路</strong><br />
+信号传输时间取决于卫星高度，卫星高度由其轨道半径决定。而所用卫星为静止轨道通信卫星（同步卫星），其周期与月球周期均已知，均绕地球运转，可利用开普勒第三定律由月球轨道半径推得同步卫星轨道半径，进而求高度，最后算时间。</p>
+<p><strong>步骤</strong><br />
+1. 确定周期比：月球 $T_月=27\text{天}$，同步卫星 $T_同=1\text{天}$，故 $\frac{T_月}{T_同}=27$。<br />
+2. 由 $\frac{r_同^3}{r_月^3}=\frac{T_同^2}{T_月^2}$ 得轨道半径比 $\frac{r_同}{r_月}=\left(\frac{1}{27}\right)^{2/3}=\frac{1}{9}$。<br />
+3. 同步卫星轨道半径 $r_同=\frac{1}{9}\times3.8\times10^5\text{km}\approx4.22\times10^4\text{km}$。<br />
+4. 卫星地面高度 $h=r_同-R_地\approx4.22\times10^4\text{km}-6.4\times10^3\text{km}=3.58\times10^4\text{km}=3.58\times10^7\text{m}$。<br />
+5. 最短信号路径为往返，距离 $s=2h\approx7.16\times10^7\text{m}$。<br />
+6. 时间 $t=\frac{s}{c}\approx\frac{7.16\times10^7}{3\times10^8}\text{s}\approx0.239\text{s}\approx0.25\text{s}$。  </p>
+<p><strong>点评/变式</strong><br />
+- 此题未直接告知同步卫星周期，需从常识推断（静止轨道周期=1天）。若改为已知同步卫星高度求月球轨道半径，解法一致，比例方向相反。<br />
+- 常见变式：把月球换成其他已知 $T$ 和 $r$ 的天体（如近地卫星），用同样的周期‑半径比例关系快速求解。注意信号传输时间有时会问“至少”时间，即卫星处于天顶时的极限情况。<br />
+- 强调两点：① $r^3/T^2$ 对同中心天体所有环绕天体不变；② 计算时间必须减地球半径且路程乘2。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-06.html">2011-新课标-06</a>（2011 · 中） 本题利用万有引力定律求同步卫星轨道半径，进而计算信号传播最短时间。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/562-周期与轨道半径关系.html">周期与轨道半径关系</a></li>
+</ul>
+</div>
+</body>
+</html>

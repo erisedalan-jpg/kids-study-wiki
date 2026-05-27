@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>斜率与加速度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>斜率与加速度</h1><div class="review-mark" data-stem="斜率与加速度"></div><div class="meta-card"><span><strong>考点</strong>斜率与加速度</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>$v-t$ 图象的物理意义</strong>  </li>
+<li>纵坐标：瞬时速度 $v$（正负表示方向，在竖直方向问题中常以向下为正）  </li>
+<li>斜率 $k = \frac{\Delta v}{\Delta t}$：<strong>加速度</strong> $a$，斜率恒定则加速度恒定，斜率变化则加速度变化  </li>
+<li>图线与 $t$ 轴围成的面积：<strong>位移</strong>大小（仅大小，无方向积分时为路程的引申）  </li>
+<li>纵截距：初速度 $v_0$  </li>
+<li><strong>牛顿第二定律的矢量性</strong><br />
+  $F_{\text{合}} = ma$，在竖直方向：$mg - f = ma$ 或 $mg + f = ma$（视正方向及阻力方向而定）<br />
+  可得阻力 $f = m(g - a)$ 或 $f = m(a - g)$，由此判断阻力随加速度的变化  </li>
+<li><strong>平均加速度与瞬时加速度</strong>  </li>
+<li>平均加速度 $\bar{a} = \frac{\Delta v}{\Delta t}$，对应割线斜率  </li>
+<li>瞬时加速度 $a = \frac{dv}{dt}$，对应切线斜率  </li>
+<li><strong>运动时间与位移的关系</strong><br />
+  在抛体类问题中，落地时刻的纵坐标对应雪道几何约束；运动时间越长，往往水平位移也越大（需结合姿态对水平速度的影响）</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确定义，看轴识理</strong><br />
+   看清横轴（$t$）、纵轴（$v$）及其单位，确认正方向。曲线上的点、斜率、面积各对应什么物理量。  </li>
+<li><strong>斜率比较定加速度</strong><br />
+   同一横坐标（同一时刻）看切线倾斜程度；不同曲线同一纵坐标（相同速度）看各自切线斜率；全程平均加速度看始末点连线的斜率。  </li>
+<li><strong>面积比较定位移</strong><br />
+   图线与 $t$ 轴围成的面积表示位移的大小，可直接比较同一时间内的位移或全程总位移，得出竖直方向位移的大小关系。  </li>
+<li><strong>受力分析搭桥</strong><br />
+   由加速度 $a$ 结合牛顿第二定律列式，将运动学信息转化为力（如阻力）的比较。注意阻力方向：若加速度 $a &lt; g$，则阻力向上，大小为 $f = m(g-a)$。  </li>
+<li><strong>多维推断（水平方向）</strong><br />
+   竖直信息可间接推断水平情况：落地时间越长，在保持或增大水平速度的情况下，水平位移越大（需结合题设“姿态影响速度与距离”）。  </li>
+<li><strong>多过程或多曲线对比</strong><br />
+   先分别独立分析每条图线对应的过程，再逐一对比位移、加速度、受力等，注意选项往往要求选出“一定”或“可能”的结论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把斜率当速度</strong>：斜率是加速度，切线陡峭程度表示速度变化快慢，不是速度大小  </li>
+<li><strong>面积理解有误</strong>：$v-t$ 图象面积是位移，不是路程；若速度有正有负，面积代数和才是位移  </li>
+<li><strong>忽略正方向设定</strong>：竖直速度图象中，建立正方向后，加速度方向通过斜率的正负判断，不要想当然认为 $a=g$  </li>
+<li><strong>阻力方向判断草率</strong>：当 $a<g$ 时，阻力方向与重力方向相反；当 $a>g$ 时，阻力方向与重力方向相同，需根据具体加速度值判断，切忌直接套用 $a=g$  </li>
+<li><strong>平均加速度与瞬时加速度混淆</strong>：比较“过程中的平均阻力”需用全程平均加速度，比较“某速度时的阻力”需用该点切线斜率对应的瞬时加速度  </li>
+<li><strong>漏用题设递进信息</strong>：例如“姿态影响下落速度和滑翔距离”暗示水平方向可能有差异，要结合已得出的竖直结论综合推理水平位移关系</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2019·新课标Ⅱ卷·19）<br />
+跳台滑雪中，运动员从同一跳台起跳，两次不同姿态下的竖直方向速度 $v-t$ 图象如图（b）所示，$t_1$、$t_2$ 分别对应两次落在倾斜雪道上的时刻。据此判断关于两次滑翔的正确说法。</p>
+<p><strong>思路</strong><br />
+从 $v-t$ 图象切入：先比较两次竖直位移（面积）、竖直加速度（斜率），再利用牛顿第二定律将加速度差异转化为阻力差异，最后结合落地时间推断水平位移。</p>
+<p><strong>步骤</strong><br />
+1. <strong>比较竖直位移</strong>：图线下方至 $t$ 轴面积，第二次（$0\sim t_2$）明显大于第一次（$0\sim t_1$），故第二次竖直位移更大。<br />
+2. <strong>比较加速度</strong>：任意相同时刻，实线（第一次）切线的斜率绝对值大于虚线（第二次），说明第一次竖直加速度 $a_1$ 的绝对值大于第二次 $a_2$（或斜率更陡）；全程平均加速度也是第一次更大。<br />
+3. <strong>借助牛顿第二定律比阻力</strong>：取向下为正，$mg - f = ma \Rightarrow f = m(g-a)$。因 $a_2 &lt; a_1$，故 $f_2 &gt; f_1$，即第二次在竖直方向上所受平均阻力更大；某速度 $v_1$ 时，由切线斜率知 $a_{v_1,2} &lt; a_{v_1,1}$，则 $f_{v_1,2} &gt; f_{v_1,1}$。<br />
+4. <strong>推断水平位移</strong>：第二次落地时刻 $t_2 &gt; t_1$，运动时间更长，且姿态调整利于滑翔距离，因此第二次水平位移更大。</p>
+<p><strong>点评/变式</strong><br />
+- 本题典型地将图象斜率、面积与牛顿运动定律、多过程对比相结合，是“斜率→加速度→力”链条的经典考查。<br />
+- 变式方向：将纵轴改为 $v_x$ 或 $v_y$ 单独分析，或给出 $a-t$ 图象反推 $v-t$；也可结合动量和动能定理，进一步考查某段时间内的冲量、做功比较。解题核心不变——<strong>图象特征 $\to$ 运动参量 $\to$ 受力分析</strong>。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a>（2019 · 中） 本题考查根据v-t图象分析竖直方向速度变化与运动过程的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/620-斜率与加速度.html">斜率与加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均功率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平均功率</h1><div class="review-mark" data-stem="平均功率"></div><div class="meta-card"><span><strong>考点</strong>平均功率</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>功率定义</strong>：功 $W$ 与完成这些功所用时间 $t$ 的比值，即 $P=\frac{W}{t}$，标量。</li>
+<li><strong>平均功率</strong>：$\bar P = \frac{W}{t}$ 或 $\bar P = F \bar v \cos\theta$（$\bar v$ 为平均速度，仅当 $F$ 恒定时成立）。</li>
+<li><strong>瞬时功率</strong>：$P = F v \cos\theta$，式中 $v$ 是瞬时速度，$\theta$ 是力 $F$ 与速度 $v$ 的夹角。机车牵引力与速度同向时 $P=Fv$。</li>
+<li><strong>机车启动模型</strong>：</li>
+<li>恒定功率启动：$P$ 不变，由 $F=\frac{P}{v}$ 知 $F$ 随 $v$ 增大而减小，由 $F-f=ma$ 得加速度 $a$ 减小，机车做加速度减小的加速运动，当 $F=f$ 时 $a=0$，达到最大速度 $v_m=\frac{P}{f}$。</li>
+<li>恒定加速度启动：先匀加速，$P=Fv$ 随 $v$ 增大而增大，当 $P$ 达到额定功率后，转为恒定功率加速直至匀速。</li>
+<li><strong>适用条件</strong>：$P=Fv$ 中的 $F$ 为牵引力，仅用于计算牵引力的瞬时功率；平均功率用功的定义或 $F\bar v$（$F$ 恒定）计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别功率类型</strong>：分清题给功率是平均功率还是瞬时功率，题目中出现“某时刻的功率”“功率–时间图像”通常涉及瞬时功率。</li>
+<li><strong>图像信息转化</strong>：由 $P-t$ 图像获取功率变化规律，结合 $P=Fv$ 导出牵引力 $F$ 的变化，再通过牛顿第二定律 $F-f=ma$ 或 $F-f=0$ 判断加速度变化。</li>
+<li><strong>运动情景建模</strong>：</li>
+<li>若 $P$ 恒为某值且汽车由静止或低速开始，则加速度减小的加速运动。</li>
+<li>若 $P$ 从某值突增后不变，则 $v$ 不能突变，$F$ 突增，$a$ 突增，之后 $v$ 增大过程中 $F$ 减小，加速度减小，直到再次平衡。</li>
+<li>若 $P$ 减小，通常对应 $F$ 减小，汽车减速，若阻力 $f$ 不变，可能出现新的平衡速度。</li>
+<li><strong>绘制 $v-t$ 图</strong>：抓住初速度、最终匀速的速度、曲线斜率（加速度）的变化趋势——恒定功率加速段斜率逐渐减小，恒定加速度段斜率不变，匀速段斜率为零。</li>
+<li><strong>列式求解未知量</strong>：匀速时 $F=f$，$P=f v_m$；加速过程利用 $F=\frac{P}{v}$，$a=\frac{F-f}{m}$ 定性分析或定量计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆平均功率与瞬时功率</strong>：用 $P=Fv$ 计算平均功率时，必须取平均速度且 $F$ 恒定，否则只能用 $W/t$。</li>
+<li><strong>误认为 $v$ 与 $P$ 成正比</strong>：实际上 $P=Fv$，$F$ 可以是变量，$P$ 增大瞬间 $v$ 不变，$F$ 突增导致加速度突增，随后速度才改变。</li>
+<li><strong>忽略阻力恒定的条件</strong>：若阻力不是恒力，$F-f=ma$ 关系失效，加速度分析更复杂。题目明确 $f$ 恒定方可直接用牛顿第二定律。</li>
+<li><strong>$v-t$ 图线形状误判</strong>：恒定功率加速时速度增加越来越慢，图线是上凸且逐渐趋于水平的曲线，不是直线；功率突变时速度不可突变，$v-t$ 图线连续，但加速度可以突变，图线出现拐点。</li>
+<li><strong>漏掉匀速段</strong>：当加速度减小到零时，速度达到最大并保持匀速，$v-t$ 图末端为水平线。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2015-新课标Ⅱ-04</h3>
+<p><strong>题目</strong>：汽车在平直公路上行驶，阻力大小 $f$ 恒定。从某时刻开始计时，发动机功率 $P$ 随时间 $t$ 变化图线如图所示。可能正确的速度 $v$ 随时间 $t$ 的变化图线是（ ）（选项为四个 $v-t$ 示意）</p>
+<p><strong>思路</strong>：由 $P-t$ 图得知，$0 \sim t_1$ 内功率恒定，$t_1 \sim t_2$ 内功率线性增大，$t_2$ 后功率又恒定但更大。关键从 $P=Fv$ 和 $F-f=ma$ 推导 $v$ 的变化趋势。注意 $v$ 不能突变，加速度可能突变。</p>
+<p><strong>步骤</strong>：
+1. 分析 $0 \sim t_1$：功率 $P_1$ 不变。
+   - 若初速度 $v_0$ 恰好满足 $F_1 = \frac{P_1}{v_0} = f$，则汽车匀速，$v-t$ 为水平线。
+   - 若初速度较小，$F_1 &gt; f$，汽车加速。随着 $v \uparrow$，$F = \frac{P_1}{v} \downarrow$，加速度 $a = \frac{F-f}{m} \downarrow$，做加速度减小的加速运动，$v-t$ 曲线斜率递减，上凸形状。
+2. 分析 $t_1 \sim t_2$：功率从 $P_1$ 线性增大到 $P_2$。
+   - 在 $t_1$ 时刻，$v$ 未突变，$F_1' = \frac{P_1}{v_{t1}}$，功率增大使 $F$ 突然增大，加速度 $a$ 突然向上跳跃，$v-t$ 曲线出现拐点（斜率陡增）。
+   - 此后 $P$ 继续增大，若 $P$ 增速大于 $v$ 的增速，$F$ 可能继续增大，$a$ 增大；若 $P$ 线性增长而 $v$ 非线性增长，一般 $F$ 先增后可能变，但满足 $P=Fv$。通常此阶段加速度不一定再减小，需具体分析（对于选项中合理曲线，可能加速拐折后仍加速，斜率变化）。
+3. 分析 $t_2$ 以后：功率 $P_2$ 恒定且 $P_2 &gt; P_1$。
+   - $t_2$ 时 $v$ 连续，$F_2 = \frac{P_2}{v_{t2}}$ 可能仍大于 $f$，汽车继续加速，但 $F$ 随 $v$ 增大而减小，加速度再次减小，曲线斜率逐渐变小，最终当 $F_2 = f$ 时达到新的最大速度 $v_{m2} = \frac{P_2}{f}$，此后匀速。
+4. 综合：整个过程中，速度只能连续增大，$v-t$ 图可能先斜率递减，中间斜率跳跃性增大，然后斜率再次递减，最后趋于水平。匀速段可能出现两段水平（若 $0 \sim t_1$ 已匀速则开始水平，否则为曲线）。
+5. 对照选项中图线：只有满足上述连续性、加速度变化趋势、最终速度 $v_{m2} &gt; v_{m1}$（若之前匀速）或速度不断增大趋势的图线才是正确的。本题正确选项为一条先呈上凸、中间斜率变陡、再上凸最后水平的曲线。</p>
+<p><strong>点评/变式</strong>：此题综合了恒定功率启动和功率变化过程中的动态分析。核心是抓住 $v$ 的连续性和 $a \propto \frac{P}{v} - f$。易错在认为功率线性增大时速度也线性增大，而忽略了 $F$ 随 $v$ 的影响。变式可改为功率阶跃变化或给出 $F-v$ 图等，解题方法一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-04.html">2015-新课标Ⅱ-04</a>（2015 · 中） 汽车以恒定阻力在不同功率下行驶，通过P=Fv和牛顿第二定律分析速度图像变化趋势。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/601-平均功率.html">平均功率</a></li>
+</ul>
+</div>
+</body>
+</html>

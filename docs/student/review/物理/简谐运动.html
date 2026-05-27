@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简谐运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>简谐运动</h1><div class="review-mark" data-stem="简谐运动"></div><div class="meta-card"><span><strong>考点</strong>简谐运动</span><span><strong>权重</strong>36</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：36</li>
+<li>真题数：6；年份跨度：2009–2020</li>
+<li>出现题位：解答15 选择1 选择3</li>
+<li>难度分布：易1 中4 难1</li>
+</ul>
+<h2>知识精要</h2>
+<p>简谐运动是机械振动的基础模型，其核心特征为回复力与位移成正比且方向相反：$F=-kx$。</p>
+<p><strong>一、核心模型对比</strong>
+| 模型 | 回复力/加速度 | 周期公式 | 能量 |
+| :--- | :--- | :--- | :--- |
+| <strong>弹簧振子</strong> | $F=-kx$，$a=-\frac{k}{m}x$ | $T=2\pi\sqrt{\frac{m}{k}}$（$k$为劲度系数） | 动能与弹性势能相互转化，总量守恒 |
+| <strong>单摆</strong>（$\theta&lt;5°$） | $F = - \frac{mg}{l}x$，$a=-\frac{g}{l}x$ | $T=2\pi\sqrt{\frac{l}{g}}$（$l$为摆长，$g$为重力加速度） | 动能与重力势能相互转化，总量守恒 |</p>
+<p><strong>二、描述物理量</strong>
+- <strong>振幅 $A$</strong>：振动物体离开平衡位置的<strong>最大距离</strong>，标量。
+- <strong>周期 $T$ / 频率 $f$</strong>：由系统本身性质决定，称为<strong>固有周期/频率</strong>，与振幅无关。
+- <strong>位移 $x$</strong>：由平衡位置指向质点所在位置的有向线段，矢量。
+- <strong>振动图像</strong>：描述某一质点位移随时间的变化关系（$x-t$图），形状为正弦或余弦曲线。</p>
+<p><strong>三、横波与振动的关系</strong>
+- 介质中各质点均在各自平衡位置附近做<strong>受迫振动</strong>。
+- 各质点的<strong>周期 $T$、振幅 $A$、起振方向</strong>均与波源相同。
+- 质点振动速度与波的传播速度（波速）是两回事，无直接定量关联。
+- 对于横波，波峰与波谷在振动方向上的距离等于 $2A$（振幅的两倍）。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>模型辨识与周期公式选用</strong></li>
+<li>见到“弹簧”或“弹性绳”，优先使用 $T=2\pi\sqrt{\frac{m}{k}}$。</li>
+<li>见到“单摆”“细绳”“摆角小于5°”，使用 $T=2\pi\sqrt{\frac{l}{g}}$。特别注意，摆长 $l$ 是悬点到<strong>球心</strong>的距离。若绳被钉挡，要判断$l$是否发生突变。</li>
+<li>
+<p>已知两个情境的周期关系，直接建立比例式求解未知量：$\frac{T_{1}}{T_{2}} = \sqrt{\frac{l_{1}}{l_{2}}}$。</p>
+</li>
+<li>
+<p><strong>振动图像的分析与绘制</strong></p>
+</li>
+<li>此类问题可分解为四步：<strong>找结构→分段→画图→看选项</strong>。</li>
+<li>第一步要迅速辨认模型的“拼接”结构（如被铁钉阻挡的单摆，其周期由两段不同摆长决定）。</li>
+<li>
+<p>根据位移（$x$）的初态、正负、最大位移出现的时间点，分段判定图像的斜率（速度）、极值与周期。</p>
+</li>
+<li>
+<p><strong>单摆中小角度的代数近似</strong></p>
+</li>
+<li>题干若提示“所求距离约等于摆球沿圆弧移动的路程”，则构建数学模型：拉开距离 $x \approx s = l\theta_m$（$s$为弧长，$\theta_m$为最大摆角，单位弧度）。</li>
+<li>
+<p>利用周期公式 $T=2\pi\sqrt{\frac{l}{g}}$ 和 $x \approx l\theta_m$ 建立等式求解。</p>
+</li>
+<li>
+<p><strong>弹簧振子的“突变”问题</strong></p>
+</li>
+<li>核心原则：质量发生突变（如脱胶）的瞬间，<strong>速度 $v$ 不变</strong>，<strong>加速度 $a$ 瞬间变化</strong>。</li>
+<li>
+<p>在平衡位置分离，分离前总能量为 $\frac{1}{2}(m_a+m_b)v^2$，分离后新振子的能量为 $\frac{1}{2}m_a v^2$。利用能量与振幅平方成正比（$E=\frac{1}{2}kA^2$）来求新振幅：$A' = A_0\sqrt{\frac{m_a}{m_a+m_b}}$。</p>
+</li>
+<li>
+<p><strong>波与振动的关系对应</strong></p>
+</li>
+<li>记住“三确定”：<strong>周期确定、振幅确定、起振方向确定</strong>。</li>
+<li>谨记“两无关”：质点振动速度大小与波速无关，质点振动方向与波传播方向的关系需区分横/纵波。</li>
+<li>距离为波长整数倍（$s=n\lambda = nvT$）的质点在任意时刻，其位移、速度等运动状态完全相同。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波速与质点振动速度</strong>：简谐波中的质点在自己的平衡位置附近做往复运动，其最大速度与振幅和周期有关，而波速是振动状态的传播速度，仅由介质决定。两者数值大小无必然联系，绝不能混为一谈。</li>
+<li><strong>振幅理解不到位</strong>：振幅是标量，指最大位移的绝对值。在波的传播中，只要无能量损失，各质点的振幅理论上等于波源的振幅。横波中，波峰与波谷的距离是 $2A$，而非 $A$。</li>
+<li><strong>单摆周期的决定因素</strong>：误以为摆角变大、摆球质量增大或振幅增大会改变周期。必须牢记，在小角度下，单摆周期仅由摆长 $l$ 和当地重力加速度 $g$ 决定，与其它因素无关。</li>
+<li><strong>振动图像中的干扰辨识</strong>：在分析被钉子阻挡的单摆等变周期运动时，容易在“周期切换点”的位移方向、速度方向上出错。周期变了，但位移$x$是连续的，不可能出现跳跃。</li>
+<li><strong>平衡位置物理量的突变</strong>：在弹簧振子“脱胶”问题中，若分离发生在平衡位置，$v$不变，$a$从$0$变为$0$（因为新、旧系统在平衡位置回复力均为$0$）；但若分离发生在其它位置，$a$会在瞬间改变。能量、振幅等均会发生突变。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2019-新课标Ⅱ-15（挡位单摆图像题）</h3>
+<ul>
+<li><strong>题目</strong>：单摆被铁钉挡住导致摆长突变。求小球在开始一个周期内的 $x-t$ 关系图。</li>
+<li><strong>思路</strong>：这是一个“拼接”式的简谐运动。先判定左右两侧运动的摆长不同，导致周期不同。再分析位移$x$的初始状态和方向，即可锁定答案。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>拆解结构</strong>：未碰钉时，摆长为 $l$；碰钉后，以 $O'$ 为悬点，摆长变为 $\frac{1}{4}l$。</li>
+<li><strong>判断周期</strong>：由 $T=2\pi\sqrt{\frac{l}{g}}$ 知，碰钉后摆长变短，周期变为原来的 $\frac{1}{2}$。因此，$x-t$图应表现为“右半振动慢，左半振动快”。</li>
+<li><strong>判断位移</strong>：初始释放时，位移为正且最大。向右振动后，位移减小。碰钉后向左振动，位移为负。因此，一个周期内，图像应从正的最大值，经历慢速的正半周，再经历快速的负半周。</li>
+<li><strong>看图说话</strong>：符合“右侧周期长、左侧周期短”且“起点在正的最大位移”的，即正确选项。</li>
+<li><strong>点评/变式</strong>：此类题考的是对物理过程的时空拆解能力。变式可改为分析 $v-t$图或 $a-t$ 图，同样要抓住不同阶段的周期和对称轴发生变化这一关键。</li>
+</ul>
+<h3>代表题2：2013-新课标Ⅱ-15（脱胶弹簧振子突变题）</h3>
+<ul>
+<li><strong>题目</strong>：物块 $a$、$b$ 粘连构成振子，在通过平衡位置时脱开。分析以后物块 $a$ 的振幅与周期变化。</li>
+<li><strong>思路</strong>：这是一个质量突变导致的“稳”态切换题。需从速度、能量、周期公式三个维度分析。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>速度分析</strong>：脱开瞬间通过平衡位置，速度 $v$ 最大。由于分离，$a$、$b$ 间无作用力，物块 $a$ 的速度 $v$ 在脱开后瞬间保持不变。</li>
+<li><strong>能量与振幅分析</strong>：分离前总能量为 $\frac{1}{2}(m_a+m_b)v^2$，分离后 $a$ 单独振动，其能量变为 $\frac{1}{2}m_av^2$。能量变小了。对弹簧振子有 $E=\frac{1}{2}kA^2$，故新振幅 $A' = A_0\sqrt{\frac{m_a}{m_a+m_b}}$，振幅减小。</li>
+<li><strong>周期分析</strong>：由 $T=2\pi\sqrt{\frac{m}{k}}$ 知，振子质量 $m=m_a+m_b$ 减小为 $m_a$，劲度系数 $k$ 不变，新周期 $T' = T_0\sqrt{\frac{m_a}{m_a+m_b}}$，周期变小。</li>
+<li><strong>点评/变式</strong>：本题关键点是分离位置的妙用——平衡位置处速度不变，能量分配清晰。若分离发生在最大位移处（$v=0$），则振幅不变，周期仍变小。不同分离位置，结论完全不同，务必审清题意。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-15.html">2020-新课标Ⅱ-15</a>（2020 · 易） 单摆小角度摆动时弧长与弦长近似相等，并利用周期公式计算摆长变化。</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-15.html">2019-新课标Ⅱ-15</a>（2019 · 中） 单摆运动在摆长突变时的位移-时间关系图像判断</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-15.html">2013-新课标Ⅱ-15</a>（2013 · 中） 本题考查弹簧振子模型中物块分离前后的周期和振幅变化分析。</li>
+<li><a href="../../exam/物理/2011-新课标-15.html">2011-新课标-15</a>（2011 · 难） 考查简谐横波传播中质点振动的振幅、周期、起振方向与波源的关系。</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-03.html">2010-新课标Ⅰ-03</a>（2010 · 中） 根据质点做简谐运动的v-t图象，判断外力做功的正负及功率大小变化情况。</li>
+<li><a href="../../exam/物理/2009-全国Ⅱ-01.html">2009-全国Ⅱ-01</a>（2009 · 中） 简谐振动与简谐波中周期、波速、传播方向及振幅关系的概念辨析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/373-简谐运动.html">简谐运动</a></li>
+</ul>
+</div>
+</body>
+</html>

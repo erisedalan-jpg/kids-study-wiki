@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能量转化</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>能量转化</h1><div class="review-mark" data-stem="能量转化"></div><div class="meta-card"><span><strong>考点</strong>能量转化</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>机械能守恒条件</strong>：系统内只有重力或弹力做功，无其他外力（如摩擦力、爆炸、碰撞内力等非保守力）做功时系统机械能守恒。</li>
+<li><strong>能量转化与守恒定律</strong>：能量既不会凭空产生，也不会凭空消失，它只能从一种形式转化为另一种形式，或从一个物体转移到另一个物体，在转化或转移过程中，能量的总量不变。</li>
+<li><strong>碰撞中的能量转化</strong>：<br />
+  子弹打木块（或穿透）过程中，子弹与物块构成的系统水平方向不受外力（桌面光滑），动量守恒。<br />
+  但子弹穿透时，系统内部存在摩擦生热，机械能不守恒，损失的机械能转化为内能。<br />
+  损失机械能 $\Delta E = E_{k初} - E_{k末} = \left( \frac{1}{2} m v_{0}^{2} \right) - \left( \frac{1}{2} m v_{1}^{2} + \frac{1}{2} M v_{M}^{2} \right)$。  </li>
+<li><strong>关联运动</strong>：物块获得速度后做平抛运动，平抛过程仅重力做功，物块机械能守恒（处理平抛只需将水平速度与竖直下落高度结合即可）。  </li>
+<li>平抛时间 $t = \sqrt{\frac{2h}{g}}$  </li>
+<li>水平距离 $x = v_{M} t$</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选系统与过程分段</strong>：  </li>
+<li>第一阶段：子弹与物块相互作用（碰撞/穿透），系统水平方向动量守恒，机械能不守恒。  </li>
+<li>第二阶段：物块平抛运动，机械能守恒（或直接用平抛规律）。</li>
+<li><strong>写动量守恒方程</strong>：<br />
+   $m v_{0} = m v_{1} + M v_{M}$ （注意速度方向，水平同向取正）</li>
+<li><strong>求系统动能损失（机械能损失）</strong>：<br />
+   $\Delta E = \frac{1}{2} m v_{0}^{2} - \left( \frac{1}{2} m v_{1}^{2} + \frac{1}{2} M v_{M}^{2} \right)$<br />
+   此即转化为内能的机械能。</li>
+<li><strong>平抛计算</strong>：<br />
+   由竖直高度求时间 $t = \sqrt{\frac{2h}{g}}$；水平位移 $x = v_{M} t$。</li>
+<li><strong>能量视角统一</strong>：任何过程中若涉及摩擦生热、爆炸等，优先考虑动量守恒结合能量转化，损失机械能即为初末动能差。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>动量守恒方向忽略</strong>：子弹穿透后与物块速度方向原本一致（水平），若题目未特指反向，默认同向；若反向需加负号。</li>
+<li><strong>误将子弹动能减少量当作总损失机械能</strong>：必须减去物块获得的那部分动能，$\Delta E \neq \frac{1}{2}m v_{0}^{2} - \frac{1}{2}m v_{1}^{2}$。</li>
+<li><strong>平抛时间乱用速度合成</strong>：平抛落地时间仅由高度 $h$ 决定，与水平速度无关，切勿用 $v_{M}$ 参与时间计算。</li>
+<li><strong>机械能损失计算遗漏</strong>：若子弹嵌入物块（完全非弹性碰撞），动能损失最大，但本类穿透情形仍损失部分动能，常见符号 $\Delta E$ 或 $Q$。</li>
+<li><strong>公式误用</strong>：在计算后续平抛水平距离时忘记开方或错用 $h = \frac{1}{2}gt$ 关系，正确的 $t = \sqrt{\frac{2h}{g}}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2008-全国Ⅱ-11</h3>
+<p><strong>题目</strong>：质量为 $M$ 的物块静止在桌面边缘，桌面离地高 $h$。质量为 $m$ 的子弹以水平速度 $v_{0}$ 射入物块后，以 $\frac{v_{0}}{2}$ 的水平速度射出。重力加速度为 $g$。求：<br />
+（1）此过程中系统损失的机械能；<br />
+（2）物块落地点离桌面边缘的水平距离。</p>
+<p><strong>思路</strong>：分两阶段：子弹穿透（动量守恒 + 能量计算）→ 物块平抛（运动学）。水平方向无外力，动量守恒求出物块末速度，再代动能公式求损失；平抛水平距离由 $v_{M}$ 和下落时间决定。</p>
+<p><strong>步骤</strong>：<br />
+（1）取子弹和物块为系统，穿透过程动量守恒：<br />
+$$m v_{0} = m \cdot \frac{v_{0}}{2} + M v_{M}$$<br />
+解得物块速度：<br />
+$$v_{M} = \frac{m v_{0}}{2M}$$<br />
+系统初动能： $E_{k0} = \frac{1}{2} m v_{0}^{2}$<br />
+系统末动能：<br />
+$$E_{k} = \frac{1}{2} m \left( \frac{v_{0}}{2} \right)^{2} + \frac{1}{2} M \left( \frac{m v_{0}}{2M} \right)^{2} = \frac{1}{8} m v_{0}^{2} + \frac{m^{2} v_{0}^{2}}{8M}$$<br />
+损失机械能：<br />
+$$\Delta E = E_{k0} - E_{k} = \frac{1}{2} m v_{0}^{2} - \left( \frac{1}{8} m v_{0}^{2} + \frac{m^{2} v_{0}^{2}}{8M} \right) = \frac{3}{8} m v_{0}^{2} - \frac{m^{2} v_{0}^{2}}{8M}$$<br />
+或整理为 $\Delta E = \frac{m v_{0}^{2}}{8} \left( 3 - \frac{m}{M} \right)$。</p>
+<p>（2）物块离开桌面后平抛：<br />
+竖直方向 $h = \frac{1}{2} g t^{2} \Rightarrow t = \sqrt{\frac{2h}{g}}$<br />
+水平距离<br />
+$$x = v_{M} t = \frac{m v_{0}}{2M} \sqrt{\frac{2h}{g}}$$</p>
+<p><strong>点评/变式</strong>：本题为典型的“子弹穿木块+平抛”模型，考查动量守恒与能量转化相结合的列式能力。常见变式：①桌面粗糙（增加摩擦力做功计算）；②子弹嵌在物块中（未速度相同，动能损失最大）；③改问产生的内能 $Q$ 或系统损失的机械能百分比。注意能量转化中必须用系统初末动能差，不能只算子弹动能差。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2008-全国Ⅱ-11.html">2008-全国Ⅱ-11</a>（2008 · 中） 该题为物理题，考查子弹击中物块过程中的动量守恒、能量损失以及物块平抛运动的水平位移。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/720-能量转化.html">能量转化</a></li>
+</ul>
+</div>
+</body>
+</html>

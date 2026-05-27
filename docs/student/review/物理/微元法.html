@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>微元法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>微元法</h1><div class="review-mark" data-stem="微元法"></div><div class="meta-card"><span><strong>考点</strong>微元法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空13</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>微元法思想</strong>：将连续分布的物体（质量、电荷、电流等）分割为无穷多个微元，每个微元可视为质点（或点电荷），写出它在所求点的贡献（力、场强等），再利用积分累加得到总量。这是处理“变”与“不均匀”问题的核心方法。</li>
+<li><strong>引力场中的微元</strong>：对连续质量体，任取质量元 ${\rm d}m$，其在空间某点产生的引力加速度为 ${\rm d}\vec{g} = -\dfrac{G\,{\rm d}m}{r^2}\hat{r}$（方向指向质量元）。总引力加速度为各微元贡献的矢量积分 $\vec{g} = \int {\rm d}\vec{g}$。</li>
+<li><strong>常见结论（可直接使用）</strong>：</li>
+<li>均匀球壳内部任何一点所受球壳引力为零。</li>
+<li>均匀球体在外部产生的引力等效于质量全部集中在球心的质点引力。</li>
+<li>“空腔”等效为同密度负质量填充（填补法），结合上述球体结论可避免复杂积分。</li>
+<li><strong>填补法与等效负质量</strong>：真实情况 = 完整均匀物体（正常情况）+ 空腔处填充密度相反的物质（负密度）产生的附加效应。这一技巧本质上是通过微元思想将复杂边界问题转化为简单对称体的叠加。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确待求量与微元选择</strong></li>
+<li>确定需要叠加的物理量（如重力加速度反常、电场强度等）。</li>
+<li>按几何形状和对称性选取合适的微元：线元 ${\rm d}l$、面元 ${\rm d}S$、体元 ${\rm d}V$。</li>
+<li><strong>写出微元的贡献</strong></li>
+<li>表示微元的物性：${\rm d}m = \rho\,{\rm d}V$，${\rm d}q = \lambda\,{\rm d}l$ 等。</li>
+<li>计算微元在所求点产生的物理量元 ${\rm d}A$（力、场等），正确写出方向分量。</li>
+<li><strong>利用对称性降维</strong></li>
+<li>分析系统对称性（球对称、轴对称等），将矢量积分转化为某一方向上的标量积分，其余方向互相抵消。</li>
+<li><strong>建立积分并计算</strong></li>
+<li>统一变量（角度、长度等），确定积分限，计算定积分得出解析式。</li>
+<li>若积分复杂，考虑使用已知结论（如均匀球体、球壳的引力公式）直接写出结果。</li>
+<li><strong>等效替代（特殊情况）</strong></li>
+<li>对于“空腔”“空洞”等问题，采用填补法：先分析无空腔的正常背景，再叠加上与空腔同形、反密度物质产生的效应，利用对称性的已知公式避开微元积分。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>矢量方向处理不当</strong>：引力、电场强度均为矢量，微元贡献的方向必须准确分解。写反某个分量的正负，全盘皆错。</li>
+<li><strong>忽略“负质量”的引力方向</strong>：填补法中，等效负质量产生的引力方向是背离该负质量的（与正质量相反），计算投影时容易搞反符号。</li>
+<li><strong>对引力反常的定义理解偏差</strong>：如本题“重力加速度反常”特指竖直方向投影与正常值的偏离，而不是总加速度的改变量。务必仔细读题，确定所求的是哪个分量。</li>
+<li><strong>积分变量混淆</strong>：将球坐标下的体积元 ${\rm d}V = r^2\sin\theta\,{\rm d}r\,{\rm d}\theta\,{\rm d}\varphi$ 写错，或忘记 Jacobian 式，导致积分结果错误。</li>
+<li><strong>对称性误判</strong>：非对称分布时，不能随意假定正交方向抵消。需严格分析是否存在对称面或对称轴。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2009·全国Ⅱ·26（重力加速度反常与微元等效）</h3>
+<p><strong>题目</strong> 如图，P、Q为某地区水平地面上的两点，P点正下方有一球形储油空腔，周围岩石密度为 $\rho$，石油密度远小于 $\rho$ 可视为空腔。无空腔时重力加速度竖直向下为正常值；有空腔时重力加速度的大小和方向会有微小偏离，其在竖直方向（PO方向）上的投影与正常值的偏离叫做“重力加速度反常”。已知引力常数 $G$，球形空腔体积 $V$，球心深度 $d$（远小于地球半径），$PQ = x$。求空腔引起的 Q 点处的重力加速度反常。</p>
+<p><strong>思路</strong><br />
+采用<strong>填补等效法</strong>：设想空腔处同时填满密度为 $\rho$（正常岩石）和 $-\rho$（负质量）的球体。密度为 $\rho$ 的完整球体与周围岩石共同构成无空腔的正常大地，产生的重力加速度为正常值 $\vec{g}_0$；密度为 $-\rho$ 的球体单独在 Q 点产生附加引力加速度 $\vec{g}'$。则实际重力加速度为 $\vec{g} = \vec{g}_0 + \vec{g}'$，重力加速度反常即为 $\vec{g}'$ 在竖直方向的分量。由于 $d$ 远大于空腔半径，空腔可视为球形且 $V$ 很小，可将负质量球体对外部 Q 点的引力等效为位于球心的质点。</p>
+<p><strong>步骤</strong><br />
+1. 等效负质量球体的质量：$M_{\text{负}} = -\rho V$。<br />
+2. 该球心位于 P 点正下方深度 $d$ 处。Q 点在地面，与 P 水平距离 $x$。Q 到球心的距离 $r = \sqrt{d^2 + x^2}$。<br />
+3. 将 $M_{\text{负}}$ 视为位于球心的质点，它在 Q 点产生的引力加速度 $a = \dfrac{G|M_{\text{负}}|}{r^2} = \dfrac{G \rho V}{d^2 + x^2}$。对于负质量，引力方向背离球心，即从球心指向 Q（沿径向向外）。<br />
+4. 求该加速度在竖直方向（向下为正）的投影：$a$ 的方向与竖直向下方向的夹角为 $\theta$，其中 $\cos\theta = \dfrac{d}{\sqrt{d^2 + x^2}}$。背离球心意味着加速度有向上的分量，竖直投影向上，即与正常方向相反，故反常值 $\Delta g = -a \cos\theta$。<br />
+5. 代入得：
+   $$
+   \Delta g = - \frac{G\rho V}{d^2+x^2</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-13.html">2009-全国Ⅱ-13</a>（2009 · 难） 球形空腔引起重力加速度反常的引力计算模型</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/610-微元法.html">微元法</a></li>
+</ul>
+</div>
+</body>
+</html>

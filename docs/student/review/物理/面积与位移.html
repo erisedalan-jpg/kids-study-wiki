@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>面积与位移</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>面积与位移</h1><div class="review-mark" data-stem="面积与位移"></div><div class="meta-card"><span><strong>考点</strong>面积与位移</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>v-t图像的面积意义</strong>：在速度—时间图像中，图线与时间轴所围成的<strong>面积</strong>表示物体在该时间段内的<strong>位移</strong>。<ul>
+<li>时间轴上方：面积为正，表示正向位移。</li>
+<li>时间轴下方：面积为负，表示反向位移（通常需规定正方向，本考点以单向运动为主，只考虑面积大小）。</li>
+</ul>
+</li>
+<li><strong>面积与位移的对应关系</strong>：对于曲线运动或复杂运动，若只考察某一方向（如竖直方向）的分运动，则该方向v-t图像的面积表示该方向上的<strong>分位移</strong>大小（如本题中的竖直位移/下落高度）。</li>
+<li><strong>图像几何比较法</strong>：在相同时间区间内，直接比较两条v-t图线包围的“面积”大小，即可定性判断位移大小。无需精确计算，尤其当时间尺度不均匀（如存在非均匀变化轨迹）时，面积大小直接对应位移大小。</li>
+<li><strong>斜率与加速度</strong>：v-t图像的切线斜率代表该方向的<strong>加速度</strong>分量。两条曲线斜率的变化反映了合力（或分力）的变化，从而影响运动的轨迹与姿态。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>对于涉及“v-t图像中面积与位移比较”的问题，可遵循以下通用步骤：
+1. <strong>明确坐标轴含义</strong>：确认纵轴是哪个方向的速度（如竖直分速度 $v_y$），横轴是时间 $t$。明确图像描述的是<strong>分运动</strong>还是<strong>合运动</strong>。
+2. <strong>定性/定量判断面积</strong>：
+    - 若需比较位移大小：直接比较指定时间段内图线与横轴包围的<strong>面积大小</strong>。不规则图形可借助“割补法”或大致目测。
+    - 注意时间节点：通常落地时刻（$t_1$、$t_2$）对应面积即为该方向发生位移的全部时间段。无需额外考虑其他时段。
+3. <strong>关联其他运动参数</strong>：
+    - 通过<strong>斜率</strong>比较加速度 $a_y$ 大小：斜率越大，该方向加速度分量越大。
+    - 结合受力（如空气阻力）分析图像斜率变化的原因。
+4. <strong>输出结论</strong>：根据面积定大小、斜率定加速度，结合动力学条件筛选正确选项。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把斜率当位移</strong>：速度—时间图像中，<strong>面积才是位移</strong>，斜率是加速度。切勿混淆。</li>
+<li><strong>忽略时间轴的起始点</strong>：位移是从 $t=0$（起跳离开跳台）开始累计到落地时刻（$t_1$ 或 $t_2$）的完整面积。不同运动轨迹即使在空中时间不同，只要图像在0到落地时间内围成面积更大，该方向的位移就更大。</li>
+<li><strong>误以为形状相近则位移相等</strong>：两条v-t图线即使起点、终点速度值接近，但若过程中速度大小随时间变化不同，包围的面积必然不同，位移大小必不相等。务必看整体面积，不能只看终点速度。</li>
+<li><strong>混淆分位移与实际轨迹</strong>：本题v-t图仅给<strong>竖直方向分速度</strong>，包围面积仅代表<strong>竖直位移（下落高度）</strong>，并非滑翔的实际空间距离。必须注意问题指向的是哪个物理量（常考查竖直下落高度、水平位移或合位移的区别）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2019-新课标Ⅱ-06</h3>
+<p><strong>题目</strong>：跳台滑雪中，运动员从同一跳台先后两次起跳，图(b)为其竖直方向速度 $v$ 随时间 $t$ 变化的图线，$t_1$ 和 $t_2$ 分别为两次落在倾斜雪道上的时刻。比较两次运动的相关物理量。</p>
+<p><strong>思路</strong>：
+1. 明确图像纵轴为竖直速度 $v_y$，图线与横轴间的面积等于竖直方向位移（即两次下落的高度差）。
+2. 观察两条图线：从同一跳台出发（初始竖直位移相同），落地时刻不同，通过面积比较落地时竖直方向的下落高度大小。
+3. 根据面积大小推导下落高度关系，再利用斜率判断竖直方向平均加速度的大小，进而结合题设情景得出运动员姿态等物理信息。</p>
+<p><strong>步骤</strong>：
+1. <strong>比较竖直位移</strong>：第一次对应的 $v$–$t$ 图线在 $0 \to t_1$ 内包围的<strong>面积</strong>，与第二次在 $0 \to t_2$ 内包围的面积比较。由图像可见，第一次图线整体更靠上且时间跨度内面积更大，故第一次竖直下落距离更大。但实际落在同一倾斜雪道上，因此需配合倾斜角度判断合位移等。这里可直接判断两次落在雪道上的位置高低、先后等。
+2. <strong>比较加速度</strong>：$v$–$t$ 图斜率即为竖直加速度 $a_y$。第一次图线斜率逐渐减小且比第二次小，表明第一次竖直方向平均加速度（或瞬时加速度）较小。结合空气阻力等因素分析受力。
+3. <strong>综合得出结论</strong>：面积大的一方竖直位移大；斜率大的一方竖直方向加速明显。进而推导出两次空中姿态对下落速度、滑翔距离的影响等具体选项。</p>
+<p><strong>点评/变式</strong>：
+- <strong>核心思想</strong>：本题不用计算具体位移数值，全靠<strong>图像面积</strong>和<strong>斜率</strong>进行定性分析。凡是涉及v-t图像的运动比较类选择题，面积比较是首选方法。
+- <strong>延伸变式</strong>：若图像换成两个方向（如 $v_x$、$v_y$）叠加，则须分别用各自图线面积求出水平与竖直位移，再进行勾股定理合成得合位移。注意考试中常设陷阱：非直线的运动轨迹，其“路程”往往大于位移，v-t图像面积仅对应位移而非路程。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a>（2019 · 中） 本题考查根据v-t图象分析竖直方向速度变化与运动过程的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/493-面积与位移.html">面积与位移</a></li>
+</ul>
+</div>
+</body>
+</html>

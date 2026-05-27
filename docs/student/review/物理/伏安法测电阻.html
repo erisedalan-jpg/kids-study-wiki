@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>伏安法测电阻</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>伏安法测电阻</h1><div class="review-mark" data-stem="伏安法测电阻"></div><div class="meta-card"><span><strong>考点</strong>伏安法测电阻</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2008–2014</li>
+<li>出现题位：选择9 选择10</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>伏安法原理</strong>：由欧姆定律 $R_x = \dfrac{U}{I}$ 求电阻。实验中电压表、电流表存在内阻，需按一定方式接入电路。</li>
+<li><strong>电流表接法的选择</strong>：
+  当 $R_x \gg R_A$（或 $R_x \gt \sqrt{R_A R_V}$）时，电流表内接；
+  当 $R_V \gg R_x$（或 $R_x \lt \sqrt{R_A R_V}$）时，电流表外接。
+  口诀：<strong>大内偏大，小外偏小</strong>——待测电阻较大时内接，测量值偏大；待测电阻较小时外接，测量值偏小。</li>
+<li><strong>测量值与真实值的关系</strong>：
+  内接：$R_{测} = R_x + R_A \gt R_x$；
+  外接：$R_{测} = \dfrac{R_x R_V}{R_x + R_V} \lt R_x$。</li>
+<li><strong>替代法与比较法</strong>：
+  没有电流表时，可用已知电阻和电压表（如串联分压）；没有电压表时，可用已知电阻和电流表（如并联分流）。注意电表内阻的影响，能写出计入内阻时的精确表达式。</li>
+<li><strong>数据获取</strong>：滑动变阻器多采用分压接法，使电压从 $0$ 起连续可调，多次测量求平均值或作 $U!-!I$ 图像处理。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>内外接的定量判断</strong><br />
+   比较 $R_x$ 与 $\sqrt{R_A R_V}$（临界电阻）。若 $R_x \gt \sqrt{R_A R_V}$，电流表内接；$R_x \lt \sqrt{R_A R_V}$，电流表外接。<br />
+   也可比较两个比值：$\dfrac{R_V}{R_x}$ 与 $\dfrac{R_x}{R_A}$，比值大者对应的接法误差更小。</li>
+<li><strong>缺表时的设计思路</strong>  </li>
+<li>缺电流表：待测电阻与已知电阻串联，用电压表分别测其两端电压，由串联电流相等列式。</li>
+<li>缺电压表：待测电阻与已知电阻并联，用电流表分别测各支路电流，由并联电压相等列式。</li>
+<li>若电表内阻不能忽略，须将电表视为电阻，按串并联规律写出包含 $r_V$ 或 $r_A$ 的方程，联立求解 $R_x$。</li>
+<li><strong>实物图 → 电路原理图</strong><br />
+   沿电流走向确定串并联关系，将电表、电阻用规定符号表示，滑动变阻器注意分压接法的三端连线。</li>
+<li><strong>数据处理与误差分析</strong>  </li>
+<li>多次测量求平均。  </li>
+<li>已知电表内阻时，应对测量公式进行修正，得到更准确的结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>内外接条件混淆</strong>：错误认为只要 $R_V \gg R_x$ 就外接，忽略了 $R_A$ 与 $R_x$ 的相对大小。本例 $R_x=200\Omega$，$R_V=2k\Omega$，$R_A=10\Omega$，$\dfrac{R_x}{R_A}=20$，$\dfrac{R_V}{R_x}=10$，应选内接。</li>
+<li><strong>测量值偏大/偏小判断反</strong>：内接测量值包含电流表分压，故 $R_{测}&gt; R_x$；外接测量值包含电压表分流，故 $R_{测}&lt; R_x$。对应答案时注意不要张冠李戴。</li>
+<li><strong>忽略电表内阻的修正</strong>：考题明确要求“不计电压表内阻的影响”和“考虑电压表内阻的影响”时，后者常是得分关键，须写出精确表达式。很多同学在推导时漏掉某一电表的分流或分压。</li>
+<li><strong>滑动变阻器接法错误</strong>：测电阻实验中为方便调节和获得多组数据，通常选择分压接法，而非限流接法。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2014·新课标Ⅱ）</h3>
+<p>待测电阻 $R_x\approx 200\,\Omega$，电压表内阻 $R_V\approx 2\,\text{k}\Omega$，电流表内阻 $R_A\approx 10\,\Omega$。图(a)、图(b)分别为电流表内接、外接电路，对应测量值 $R_{x1}$、$R_{x2}$。判断哪个更接近真实值，并说明测量值与真实值的大小关系。</p>
+<p><strong>思路</strong><br />
+计算出比值 $\frac{R_x}{R_A}=20$，$\frac{R_V}{R_x}=10$，前者较大，应选用电流表内接，即图(a)。内接时 $R_{测}=R_x+R_A$，所以 $R_{x1}&gt;R_x$；外接时 $R_{x2}&lt;R_x$。</p>
+<p><strong>步骤</strong><br />
+1. 比较 $\dfrac{R_x}{R_A}=20$ 和 $\dfrac{R_V}{R_x}=10$，$20&gt;10$，宜内接。<br />
+2. 内接对应图(a)，得 $R_{x1}$ 更接近真实值。<br />
+3. 内接：$R_{x1}=R_x+R_A &gt; R_x$，填“大于”。<br />
+4. 外接：$R_{x2}=\dfrac{R_x R_V}{R_x+R_V} &lt; R_x$，填“小于”。</p>
+<p><strong>点评/变式</strong><br />
+试题直接考察“大内偏大，小外偏小”的结论。若给出临界电阻 $\sqrt{R_A R_V}=\sqrt{10\times 2000}\approx141\Omega$，因 $200\Omega&gt;141\Omega$，也可得出内接的结论。掌握多种判据可快速应对不同数据呈现方式。</p>
+<hr />
+<h3><strong>题目2</strong>（2008·全国Ⅱ）</h3>
+<p>用两个内阻很大的电压表、电阻箱和滑动变阻器测量 $R_x\approx 500\,\Omega$。步骤：调整电阻箱 $R_0$ 与 $R_x$ 接近；合上开关，移动滑片使两电压表有明显偏转；记下示数 $U_1$、$U_2$；多次测量求平均值。<br />
+（Ⅰ）画出电路原理图；<br />
+（Ⅱ）不计电压表内阻，用 $U_1$、$U_2$、$R_0$ 表示 $R_x$；<br />
+（Ⅲ）考虑电压表内阻 $r_1$、$r_2$，求 $R_x$ 表达式。</p>
+<p><strong>思路</strong><br />
+由实物图可知，$R_0$ 与 $R_x$ 串联，滑动变阻器作分压接法，电压表分别并接在 $R_0$ 和 $R_x$ 两端。不计内阻时，串联电流相等；计内阻时，流过电压表的电流不可忽略，需用基尔霍夫电流定律列式。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）电路原理图：电阻箱 $R_0$ 与待测电阻 $R_x$ 串联，串联部分再与滑动变阻器的两个固定端并联？分压接法：变阻器滑片一端接电源，另两端分别接串联组合，滑动端接电源另一端，输出电压接在 $R_0$ 与 $R_x$ 串联段两端。电压表 $\text{V}<em R0="R0">1$ 并 $R_0$，$\text{V}_2$ 并 $R_x$。<br />
+（Ⅱ）不计内阻：$I=\dfrac{U_1}{R_0}=\dfrac{U_2}{R_x}$，得 $R_x=\dfrac{U_2}{U_1}R_0$。<br />
+（Ⅲ）考虑内阻：流过 $R_0$ 的电流 $I</em>}=\dfrac{U_1}{R_0}$，流过 $\text{V<em V1="V1">1$ 的电流 $I</em>}=\dfrac{U_1}{r_1}$，总电流 $I=\dfrac{U_1}{R_0}+\dfrac{U_1}{r_1}$；同样，流过 $R_x$ 的电流 $I_{Rx}=\dfrac{U_2}{R_x}$，流过 $\text{V<em V2="V2">2$ 的电流 $I</em>$。}=\dfrac{U_2}{r_2}$，总电流也为 $I=\dfrac{U_2}{R_x}+\dfrac{U_2}{r_2<br />
+令两总电流相等：$\dfrac{U_1}{R_0}+\dfrac{U_1}{r_1}=\dfrac{U_2}{R_x}+\dfrac{U_2}{r_2}$<br />
+解出 $R_x=\dfrac{U_2}{\dfrac{U_1}{R_0}+\dfrac{U_1}{r_1}-\dfrac{U_2}{r_2}}$ 或化为整式 $R_x=\dfrac{U_2 R_0 r_1 r_2}{U_1 r_2(R_0+r_1)-U_2 R_0 r_1}$。</p>
+<p><strong>点评/变式</strong><br />
+此题将“缺电流表”的情况与电表内阻修正结合，是高考实验题中的经典考法。答题时务必区分“不计内阻”与“考虑内阻”两个层次，规范书写公式。类似地，若给电流表而无电压表，可令已知电阻与待测电阻并联，用电流表测各支路电流，再结合内阻修正。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a>（2014 · 中） 伏安法测电阻实验中电流表内外接法的选择与误差分析</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-10.html">2008-全国Ⅱ-10</a>（2008 · 中） 该题考查电学实验测量电阻，要求画电路原理图并推导含电压表内阻影响的电阻计算公式</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/511-伏安法测电阻.html">伏安法测电阻</a></li>
+</ul>
+</div>
+</body>
+</html>

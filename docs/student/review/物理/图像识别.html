@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像识别</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像识别</h1><div class="review-mark" data-stem="图像识别"></div><div class="meta-card"><span><strong>考点</strong>图像识别</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图像识别本质</strong>：根据物理规律，找出变量间的函数关系，与图像的特征（斜率、截距、面积、交点、渐近线等）匹配。</li>
+<li><strong>对数坐标图（lg‑lg图）的判读</strong>：若两个物理量存在幂函数关系 $y=kx^n$，两边取常用对数得 $\lg y = n \lg x + \lg k$。在以 $\lg x$ 为横轴、$\lg y$ 为纵轴的坐标系中，图像是一条直线，斜率为指数 $n$，截距为 $\lg k$。</li>
+<li><strong>开普勒第三定律的对数化</strong>：行星圆轨道半径 $r$ 与周期 $T$ 满足 $\dfrac{r^3}{T^2}=k$（同一中心天体）。化幂函数：$r \propto T^{2/3}$。令 $x=\lg (T/T_0)$，$y=\lg (r/T_0$ 中某一参考半径，通常用水星)，则 $y=\frac{2}{3}x$，图像为过原点的直线，斜率 $\frac{2}{3}$。</li>
+<li><strong>适用条件</strong>：同一中心天体的不同行星（或卫星），圆轨道近似。图像识别须先写出明确函数式，再进行坐标变换。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写物理规律表达式</strong>：从题目情景直接得出物理量间的原始关系，如 $r^3/T^2=k$。</li>
+<li><strong>化为目标坐标形式</strong>：若给定横轴是 $\lg f$、纵轴是 $\lg g$，则将规律变形为 $g = C \cdot f^n$ 的形式，两边取对数得 $\lg g = n \lg f + \lg C$。</li>
+<li><strong>匹配图像特征</strong>：  </li>
+<li>斜率 = $n$（正负、大小）；  </li>
+<li>截距 = $\lg C$，判断是否过原点（$C=1$ 时过原点）；  </li>
+<li>线性关系还是曲线关系（幂函数在对数坐标下必为直线，指数函数、倒数关系等则为曲线）。  </li>
+<li><strong>结合具体数据或选项</strong>：若 $n$ 为简单分数（如 $2/3$），直接对照选项斜率；还要注意坐标轴的标度是否等距、有无平移。</li>
+<li><strong>检验特殊点</strong>：令 $T=T_0$（即横轴 $\lg(T/T_0)=0$），则 $r=r_0$（纵轴 $\lg(r/r_0)=0$），图像应过原点 $(0,0)$，可作为快判依据。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>幂函数与对数函数关系混淆</strong>：$y \propto x^a$ 在对数坐标下是直线，斜率 $a$；而形如 $y \propto a^x$ 或 $y \propto \ln x$ 的则不是直线。</li>
+<li><strong>未注意参考量 $T_0$、$r_0$ 的归一化作用</strong>：题目使用比值 $\frac{T}{T_0}$、$\frac{r}{r_0}$ 作为对数真数，使其过原点 $(\lg 1=0,\lg 1=0)$。若直接使用 $T$、$r$ 带单位取对数，截距不为零，会误判图像。</li>
+<li><strong>斜率分数值错误</strong>：将 $r^3 \propto T^2$ 写成 $r \propto T^{2/3}$ 时指数弄反（误写为 $3/2$），导致斜率错选。</li>
+<li><strong>指标等距误判</strong>：对数坐标纸外观与普通坐标纸不同，但题目通常给出示意直线，重点看斜率和截距，不要被非等分刻度迷惑。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2010·新课标Ⅰ·07）</h3>
+<p>太阳系八大行星的轨道可近似为圆。用 $T$、$r$ 表示行星公转周期和轨道半径，$T_0$、$r_0$ 分别为水星的周期和半径。横轴为 $\lg(T/T_0)$，纵轴为 $\lg(r/r_0)$ 的图中，能正确反映行星运动规律的是哪一幅？（选项为过原点斜率不同的直线图）</p>
+<p><strong>思路</strong><br />
+由开普勒第三定律 $(r/r_0)^3 = (T/T_0)^2$，两边取对数可化成 $\lg(r/r_0) = \frac{2}{3}\lg(T/T_0)$，即 $y=\frac{2}{3}x$，是一条过原点、斜率为 $\frac{2}{3}$ 的直线。</p>
+<p><strong>步骤</strong><br />
+1. 写出开普勒第三定律：$\frac{r^3}{T^2} = \frac{r_0^3}{T_0^2}$ $\Rightarrow$ $\left(\frac{r}{r_0}\right)^3 = \left(\frac{T}{T_0}\right)^2$。<br />
+2. 等式两边取常用对数：$3\lg(r/r_0) = 2\lg(T/T_0)$。<br />
+3. 整理得 $\lg(r/r_0) = \frac{2}{3}\lg(T/T_0)$，即纵轴量 $y$，横轴量 $x$，关系为 $y = \frac{2}{3}x$。<br />
+4. 图像特征：过原点 $(0,0)$，斜率 $\frac{2}{3} \approx 0.667$ 的正比例直线。<br />
+5. 对比选项，排除斜率不为 $\frac{2}{3}$ 或不通过原点的图。</p>
+<p><strong>点评/变式</strong><br />
+本题将经典的比例关系“隐藏”到对数坐标系中，考查函数图像识别能力。<br />
+- 变式1：若横轴改为 $\lg r$、纵轴为 $\lg T$，则得到 $y=\frac{3}{2}x$，斜率变为 $3/2$。<br />
+- 变式2：若图像为 $T^2 - r^3$ 图，则是一条过原点的直线，斜率反映 $k$ 值；若 $r - T$ 图则是抛物线。<br />
+无论何种坐标，核心都是先写出函数解析式再对应图像特征。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-07.html">2010-新课标Ⅰ-07</a>（2010 · 中） 考查行星运动规律的对数坐标图分析，涉及物理量线性化处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/464-图像识别.html">图像识别</a></li>
+</ul>
+</div>
+</body>
+</html>

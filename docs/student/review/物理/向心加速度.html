@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向心加速度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向心加速度</h1><div class="review-mark" data-stem="向心加速度"></div><div class="meta-card"><span><strong>考点</strong>向心加速度</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：15</li>
+<li>真题数：2；年份跨度：2015–2024</li>
+<li>出现题位：选择2 选择6</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向心加速度</strong>：描述线速度<strong>方向变化快慢</strong>的物理量，方向始终指向圆心，是变量。匀速圆周运动中，向心加速度大小不变，但方向时刻改变，是变加速曲线运动。</li>
+<li><strong>核心公式</strong>：
+  $$a_n = \frac{v^2}{r} = \omega^2 r = \frac{4\pi^2}{T^2}r = \omega v$$
+  （$v$线速度，$\omega$角速度，$T$周期，$r$半径）</li>
+<li><strong>传动模型中的比较</strong>：</li>
+<li><strong>同轴转动</strong>（共轴）：$\omega$ 相同，$v \propto r$，$a_n \propto r$（$a_n=\omega^2 r$）。</li>
+<li><strong>皮带/齿轮传动</strong>（边缘相切）：$v$ 相同，$\omega \propto \frac{1}{r}$，$a_n \propto \frac{1}{r}$（$a_n=v^2/r$）。</li>
+<li><strong>带电粒子在匀强磁场中的圆周运动</strong>（洛伦兹力提供向心力）：
+  $$qvB = m\frac{v^2}{r} \Rightarrow r = \frac{mv}{qB},\quad T = \frac{2\pi m}{qB} \ (\text{与}v\text{无关})$$
+  向心加速度 $a_n = \frac{qvB}{m}$，角速度 $\omega = \frac{qB}{m}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定传动关系</strong>：首先看清是“同轴转动”还是“皮带/齿轮传动”（或线速度相等），明确不变的物理量（$\omega$ 或 $v$）。</li>
+<li><strong>选择公式</strong>：根据不变量选择向心加速度表达式——同轴用 $a_n=\omega^2 r$，线速度相等用 $a_n=v^2/r$；或综合使用 $a_n=\omega v$。</li>
+<li><strong>控制变量比较</strong>：由不变量的关系得出待求量与半径的比例关系，注意正比还是反比，切勿死记。</li>
+<li><strong>带电粒子场景</strong>：紧抓 $r=\frac{mv}{qB}$、$T=\frac{2\pi m}{qB}$、$a_n=\frac{qvB}{m}$，结合题目给定的不变量（如同速率、同质量等）进行比例推导。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>同轴转动中 $a_n$ 与 $r$ 正比，非反比</strong>：部分学生习惯 $a_n=v^2/r$，认为半径大加速度小，忘记此时 $v$ 不同，必须用 $\omega$ 不变量对应的 $a_n=\omega^2 r$。</li>
+<li><strong>皮带模型中 $a_n$ 与 $r$ 反比</strong>：线速度相等时半径越大角速度越小，$a_n=v^2/r$ 随 $r$ 增大而减小，易误判为正比。</li>
+<li><strong>周期与速度无关</strong>：带电粒子在磁场中 $T=\frac{2\pi m}{qB}$，与 $v$、$r$ 无关；但在圆周运动一般公式 $T=2\pi r/v$ 中受半径影响，混淆不同情境。</li>
+<li><strong>加速度与力的瞬时对应</strong>：$a_n=F_n/m$，在磁场问题中 $a_n=qvB/m$，与 $v$ 成正比，切忌不看公式直接乱猜。</li>
+<li><strong>混淆角速度与线速度</strong>：同轴转动 $\omega$ 相等，但 $v$ 不等；皮带传动 $v$ 相等，但 $\omega$ 不等，切忌凭直觉认为“转得快”都一样。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题1】2024辽宁卷第2题（篮球同轴转动）</h3>
+<p><strong>题目</strong>：篮球绕指尖转动，球面上 P、Q 两点做圆周运动，比较半径、线速度、向心加速度、角速度。
+<strong>思路</strong>：识别“共轴转动”→角速度 $\omega$ 相等。由图知 $r_P &lt; r_Q$。用 $v=\omega r$，$a_n=\omega^2 r$ 比较。
+<strong>步骤</strong>：
+- $\omega_P = \omega_Q$（同轴），D 正确。
+- 半径：$r_P &lt; r_Q$，A 错误。
+- 线速度：$v \propto r$，故 $v_P &lt; v_Q$，B 错误。
+- 向心加速度：$a_n \propto r$，故 $a_{nP} &lt; a_{nQ}$，C 错误。
+<strong>点评/变式</strong>：同轴转动模型，核心点 $\omega$ 不变，向心加速度与半径成正比。若将篮球换为地球上不同纬度的点（同轴转动），亦用此规律；若变为皮带传动，则切换为 $v$ 不变、$a_n \propto 1/r$。</p>
+<h3>【代表题2】2015新课标Ⅱ卷第6题（电子在磁场中圆周运动）</h3>
+<p><strong>题目</strong>：两个匀强磁场区域，Ⅰ中磁感应强度是Ⅱ中的 $k$ 倍，相同速率电子分别做圆周运动。比较Ⅰ与Ⅱ中的半径、加速度、周期、角速度。
+<strong>思路</strong>：带电粒子在磁场中圆周运动，洛伦兹力提供向心力，利用 $r=\frac{mv}{qB}$，$a_n=\frac{qvB}{m}$，$T=\frac{2\pi m}{qB}$，$\omega=\frac{qB}{m}$，控制 $v$ 相同，比较 $B$ 变化。
+<strong>步骤</strong>：
+- 设Ⅱ中 $B$，Ⅰ中 $kB$。
+- 半径：$r \propto 1/B$，故 $r_Ⅰ = \frac{mv}{q(kB)}$，$r_Ⅱ = \frac{mv}{qB}$，$r_Ⅱ = k r_Ⅰ$，A 正确。
+- 加速度：$a_n = qvB/m \propto B$，故 $a_Ⅰ = k a_Ⅱ$，即Ⅱ中加速度是Ⅰ中的 $1/k$ 倍，B 错误（题说Ⅱ是Ⅰ的 $k$ 倍，误）。
+- 周期：$T \propto 1/B$，$T_Ⅱ = k T_Ⅰ$，C 正确。
+- 角速度：$\omega \propto B$，$\omega_Ⅱ = \omega_Ⅰ / k$，D 错误。
+<strong>点评/变式</strong>：核心公式推导是基础，注意“与Ⅰ相比”的主客体。本题易错选 B 或 D，主要是未抓住 $a_n$、$\omega$ 与 $B$ 的正比关系，或混淆周期、角速度的比例。可变形为比荷相同、速度不同等条件，强化控制变量思维。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-02.html">2024-辽宁-02</a>（2024 · 易） 同轴转动的两点角速度相等，结合半径大小比较线速度和向心加速度。</li>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-06.html">2015-新课标Ⅱ-06</a>（2015 · 中） 电子在不同磁感应强度匀强磁场中做匀速圆周运动的半径、加速度、周期、角速度比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/257-向心加速度.html">向心加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

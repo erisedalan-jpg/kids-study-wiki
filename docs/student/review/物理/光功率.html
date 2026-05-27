@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光功率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光功率</h1><div class="review-mark" data-stem="光功率"></div><div class="meta-card"><span><strong>考点</strong>光功率</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光子能量</strong>：$E = h\nu = \dfrac{hc}{\lambda}$，其中 $h=6.63\times10^{-34}\,\text{J·s}$，$c=3\times10^8\,\text{m/s}$。</li>
+<li><strong>光功率与光子数的关系</strong>：若光源功率为 $P$，则单位时间内辐射的总光子数 $N_{\text{总}} = \dfrac{P}{E}$。</li>
+<li><strong>点光源的球面辐射模型</strong>：点光源向空间均匀辐射，在距离 $R$ 处形成半径为 $R$ 的球面，球面积 $S = 4\pi R^2$。<br />
+  若该处每秒垂直通过单位面积的光子数为 $n$（单位：$\text{m}^{-2}\cdot\text{s}^{-1}$），则穿过整个球面的光子总功率为：
+  $$P = n \cdot E \cdot 4\pi R^2$$</li>
+<li><strong>核心公式变形</strong>：
+  $$R = \sqrt{\frac{P}{4\pi n E}} = \sqrt{\frac{P\lambda}{4\pi n hc}}$$
+  直接用于由 $P$、$n$、$\lambda$ 估算距离 $R$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确模型</strong>：判断光源属于“点光源均匀辐射”，立刻联想球面模型，面积 $4\pi R^2$。</li>
+<li><strong>写出能量等式</strong>：光源功率 $P$ 等于单位时间穿过整个球面的光子总能量。<br />
+   即 $P = (\text{单位面积光子数 } n) \times (\text{单光子能量 } E) \times (\text{球面积 } 4\pi R^2)$。</li>
+<li><strong>代入光子能量</strong>：$E = \dfrac{hc}{\lambda}$，注意波长单位换算（题目常给 nm 或 $10^{-7}$m 级）。</li>
+<li><strong>解算 $R$</strong>：移项得 $R = \sqrt{\dfrac{P}{4\pi n E}}$。计算时先求 $E$ 数量级，再整体估算，避免复杂运算。</li>
+<li><strong>数量级检验</strong>：得到 $R$ 后与常见尺度对比，验证合理性（如本题 $10^2$ m 量级）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“光子数”含义</strong>：题中“每秒垂直通过每平方米的光子数”已是单位时间、单位面积的光子数（即 $n$），直接用 $n$ 乘球面积即可，不要再乘时间。</li>
+<li><strong>球面积代错</strong>：点光源辐射是整个球面，不是半球面或圆面积，必须是 $4\pi R^2$，而非 $\pi R^2$ 或 $2\pi R^2$。</li>
+<li><strong>单位与数量级</strong>：光子能量 $E$ 数量级小（约 $10^{-19}\,\text{J}$），计算 $P$ 时容易出现数量级错位，建议先单独估算 $E$ 的数量级，再代入。</li>
+<li><strong>波长未化到米</strong>：若波长给的是纳米，必须转为米（$1\,\text{nm}=10^{-9}\,\text{m}$），否则结果悬殊。</li>
+<li><strong>忽视普朗克常量数值</strong>：$h$ 常以 $6.63\times10^{-34}\,\text{J·s}$ 出现，计算时小心指数运算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022·全国乙·04）</h3>
+<p>一点光源以 $113\,\text{W}$ 的功率向周围所有方向均匀辐射波长约为 $6\times10^{-7}\,\text{m}$ 的光。在离点光源距离为 $R$ 处每秒垂直通过每平方米的光子数为 $3\times10^{14}$ 个。普朗克常量 $h = 6.63\times10^{-34}\,\text{J·s}$。$R$ 约为（  ）</p>
+<h3><strong>思路</strong></h3>
+<p>点光源均匀辐射 → 球面模型。光子数密度 $n$ 已知，单光子能量 $E = hc/\lambda$，总功率 $P = n \cdot E \cdot 4\pi R^2$，解出 $R$。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>计算单光子能量：
+   $$E = \frac{hc}{\lambda} = \frac{6.63\times10^{-34} \times 3\times10^8}{6\times10^{-7}} = 3.315\times10^{-19}\,\text{J}$$</li>
+<li>建立功率等式：
+   $$P = n \cdot E \cdot 4\pi R^2$$
+   代入 $P=113\,\text{W}$，$n=3\times10^{14}\,\text{m}^{-2}\cdot\text{s}^{-1}$，$E=3.315\times10^{-19}\,\text{J}$。</li>
+<li>化简估算：
+   $$nE = 3\times10^{14} \times 3.315\times10^{-19} \approx 9.95\times10^{-5}\,\text{W/m}^2$$
+   $$4\pi \approx 12.56$$
+   右边系数 $= 9.95\times10^{-5} \times 12.56 \approx 1.25\times10^{-3}\,\text{W/m}^2$。
+   故 $113 = 1.25\times10^{-3} R^2$ ⇒ $R^2 \approx 9.04\times10^4$ ⇒ $R \approx 3.0\times10^2\,\text{m}$。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题核心是将宏观功率 $P$ 与微观光子数密度 $n$ 通过球面几何联系起来。解题关键一步是正确写出 $P = nE\cdot 4\pi R^2$。</li>
+<li><strong>变式</strong>：若已知 $R$ 求 $n$，或改变波长求 $P$，只需灵活变形。如问“距光源 $2R$ 处的光子数密度”，则变为 $n' = \dfrac{P}{E\cdot 4\pi (2R)^2} = \dfrac{n}{4}$，体现平方反比规律。</li>
+<li>计算时务必先单算 $E$ 的数量级，再结合 $n$ 和 $4\pi$ 估算，避免硬算出错。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-04.html">2022-全国乙-04</a>（2022 · 中） 该题考查光源功率与光子数的关系，结合球面波传播模型估算距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/517-光功率.html">光功率</a></li>
+</ul>
+</div>
+</body>
+</html>

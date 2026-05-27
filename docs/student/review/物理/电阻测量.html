@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电阻测量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电阻测量</h1><div class="review-mark" data-stem="电阻测量"></div><div class="meta-card"><span><strong>考点</strong>电阻测量</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>替代法测电阻的核心原理</strong>：用已知电阻替代未知电阻，保持电路其余部分电流（或电压）相同，则已知电阻值等于待测电阻值。</li>
+<li><strong>电路结构</strong>：待测电阻与标准电流表、保护电阻或滑动变阻器串联，待测电阻两端并联一个可由开关切换的已知电阻箱支路。</li>
+<li><strong>适用条件</strong>：电源电动势稳定，标准电表内阻不影响替代等效；替代过程中其他参数不变。</li>
+<li><strong>实验要点</strong>：先接入待测电阻，调节限流器（$R_0$）使标准表指在合适刻度，记录读数 $I$；再切换到已知电阻箱，仅调节电阻箱 $R_N$ 使标准表示数恢复为同一 $I$，此时电阻箱示数即为待测电阻测量值。</li>
+<li><strong>误差减小方法</strong>：多次重复取平均值；电阻箱精度应较高；电源不可在内阻显著变化的情况下长时间放电。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>看电路图识别方法</strong>：若存在双掷开关或切换开关，在标准表支路不动的前提下能分别接入待测电阻和电阻箱，即为替代法。</li>
+<li><strong>确定不变量</strong>：明确整个实验维持不变的电学量——通常为标准电流表的读数 $I$（或电压表的读数 $U$）。</li>
+<li><strong>分解操作步骤</strong>：</li>
+<li>第一步：开关掷向待测电阻侧，接通电路，调节限流保护电阻或滑动变阻器，使标准表示数在一个适宜的整数刻度，记录示值。</li>
+<li>第二步：开关掷向电阻箱侧，<strong>保持第一步中已调好的其他电阻不变</strong>，仅调节电阻箱，使标准表示数精确恢复到第一步的记录值，记录电阻箱阻值。</li>
+<li><strong>数据处理</strong>：多次测量取平均值，该平均值即为待测电阻的测量值。若要求评估误差，需分析电表内阻、电阻箱精度、接触电阻等影响因素。</li>
+<li><strong>填空类实验题答题规范</strong>：紧扣原理关键词，如“调节 $R_0$ 使指针偏转到适当位置”“调节 $R_N$ 使电流表读数仍为 $I$”“多次测量求平均值”。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆调节对象</strong>：第一步调节的是保护/限流电阻 $R_0$（或滑动变阻器），第二步调节的是电阻箱 $R_N$。若步骤填反，则原理失效。</li>
+<li><strong>错记不变量</strong>：误以为两次需要保持待测表头读数相同，实际上应保持标准表的读数相同。</li>
+<li><strong>忽视“使电流仍为I”的调节手段</strong>：有些考生误填“调节 $R_0$”，但此时 $R_0$ 一旦确定就不可再动，必须通过调节电阻箱实现电流恢复。</li>
+<li><strong>忽略平均值</strong>：回答最终测量值时只写单次读数而忘记取平均值，导致步骤缺失。</li>
+<li><strong>对单刀双掷开关功能理解不清</strong>：不清楚开关拨向不同接点切换的是待测元件，误以为切换电源或电表，从而导致整个思路混乱。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2011年新课标卷第9题。电路含微安表头A、标准电流表A0、滑动变阻器R0、电阻箱RN、单刀双掷开关S、单刀开关S1及电池。要求补充实验步骤填空。</p>
+<p><strong>思路</strong>：属于典型的电流替代法测微安表内阻。通过开关切换，将待测表头替换为电阻箱，保持干路标准电流表示数不变，即电流替代等效，电阻箱示数等于表头内阻。</p>
+<p><strong>步骤</strong>：
+1. S拨向1，闭合S1，此时微安表头A接入电路，调节R0使待测表头指针适当偏转，记录此时标准电流表A0的读数I。
+2. S拨向2，微安表头被替换为电阻箱RN，保持R0不变，调节RN，使标准电流表A0的读数再次达到I，记录此时RN的阻值。
+3. 重复上述过程多次，计算RN读数的平均值，即为待测微安表头内阻测量值。</p>
+<p><strong>点评/变式</strong>：
+- 本题关键是理解和区分两次调节的不同对象。R0为粗调限定工作电流，RN为精调使替代等效。
+- 变式：若将标准电流表换成标准电压表，并接在干路两端类似位置，可设计电压替代法测电阻，步骤逻辑相同——切换待测电阻与电阻箱，保持标准电压表示数不变。考生应对比记忆，做到“换表不换理”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-09.html">2011-新课标-09</a>（2011 · 中） 利用等效替代法测量微安表内阻的实验步骤和原理</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/772-电阻测量.html">电阻测量</a></li>
+</ul>
+</div>
+</body>
+</html>

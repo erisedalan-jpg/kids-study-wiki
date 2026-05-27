@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数</h1><div class="review-mark" data-stem="三角函数"></div><div class="meta-card"><span><strong>考点</strong>三角函数</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2008–2013</li>
+<li>出现题位：选择2 选择5</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>锐角三角函数定义</strong>：在直角三角形中，
+  $$\sin \theta = \frac{\text{对边}}{\text{斜边}},\ \cos \theta = \frac{\text{邻边}}{\text{斜边}},\ \tan \theta = \frac{\text{对边}}{\text{邻边}}$$</li>
+<li><strong>常用特殊角的正弦/余弦值</strong>：$\sin 30^\circ=\frac12$，$\cos 30^\circ=\frac{\sqrt3}{2}$；$\sin 45^\circ=\frac{\sqrt2}{2}$；$\sin 60^\circ=\frac{\sqrt3}{2}$，$\cos 60^\circ=\frac12$；
+  在力的合成、几何光学中频繁使用。</li>
+<li><strong>正弦定理</strong>（任意三角形）：
+  $$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}$$
+  常用于矢量三角形中求力或角度。</li>
+<li><strong>余弦定理</strong>：
+  $$c^2=a^2+b^2-2ab\cos C$$
+  常用于已知两边及其夹角求合力大小，或已知三边求夹角。</li>
+<li><strong>力的合成与分解</strong>：</li>
+<li>正交分解：$F_x=F\cos\theta$，$F_y=F\sin\theta$；</li>
+<li>二力夹角为 $\alpha$ 时，合力大小 $F_\text{合}=\sqrt{F_1^2+F_2^2+2F_1F_2\cos\alpha}$，方向可用 $\tan\phi$ 表达。</li>
+<li><strong>库仑定律结合几何</strong>：点电荷间库仑力 $F=k\frac{q_1q_2}{r^2}$，当多个共面力平衡时，常利用正三角形、正方形等几何特征，借助 $30^\circ$、$60^\circ$、$45^\circ$ 的三角函数关系直接写出合力表达式。</li>
+<li><strong>光的折射定律</strong>：$n_1\sin i = n_2\sin r$。通过三角函数联系入射角、折射角与介质厚度的几何关系，求解侧移量、视深等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别几何模型，标注角度</strong>：画出受力图或光路图，将已知物理量转化为三角形的边角关系，特别注意等边三角形、平行线、法线等隐含的角度（如 $30^\circ$、$60^\circ$、内错角相等）。</li>
+<li><strong>三角函数化合力</strong>：当物体受多个非正交力处于平衡时，选取力合成方向，利用平行四边形定则转为三角形，直接应用余弦定理或特殊角的对称性。例如正三角形顶点上两等大库仑力的合力为 $2F\cos 30^\circ=\sqrt3F$，方向沿角平分线。</li>
+<li><strong>正交分解列平衡方程</strong>：在较复杂的共点力平衡中，先建立直角坐标系，将各力投影：$F_x = F\cos\theta$，$F_y = F\sin\theta$，再由 $\sum F_x=0$、$\sum F_y=0$ 求解。</li>
+<li><strong>几何光学中的三角函数化</strong>：单一界面的折射使用 $n_1\sin i=n_2\sin r$；平行平板侧重“侧移量”的计算：先由折射定律求出折射角 $r$，玻璃中光线长度 $l=\frac{d}{\cos r}$，侧移量 $x = l\sin(i-r) = \frac{d\sin(i-r)}{\cos r}$，再借助三角恒等式化简为只含 $i$ 和折射率 $n$ 的形式。</li>
+<li><strong>整体与隔离结合</strong>：多物体平衡问题，先用整体法快速获得系统的外部力关系，再用隔离法针对某一物体进行受力分析，运用三角函数求出未知量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>特殊角三角函数值记忆混淆</strong>：$\sin30^\circ=\frac12$，$\cos30^\circ=\frac{\sqrt3}{2}$，切忌写成相反。合力大小公式中系数错误常导致整题丢分。</li>
+<li><strong>平行四边形定则中夹角取错</strong>：两个力夹角为 $\theta$，用余弦定理求合力时夹角就是 $\theta$，而不是它的补角；合力公式为 $\sqrt{F_1^2+F_2^2+2F_1F_2\cos\theta}$，当 $\theta=60^\circ$ 时 $\cos60^\circ=0.5$。</li>
+<li><strong>力的分解盲目使用正弦/余弦</strong>：斜面上物体重力分解，一定要明确角度（斜面倾角 $\theta$）：沿斜面分量为 $mg\sin\theta$，垂直斜面为 $mg\cos\theta$。错位书写直接导致方程全错。</li>
+<li><strong>折射定律角度标注错误</strong>：入射角、折射角都是与法线的夹角，不是与界面的夹角；光从空气进入玻璃时，折射角小于入射角，若误标为界面夹角会导致 $\sin$ 函数关系完全颠倒。</li>
+<li><strong>忽略几何关系的隐含条件</strong>：如正三角形每个内角 $60^\circ$，两等大库仑力合力与其中任一分力夹角为 $30^\circ$；平行平板出射光平行于入射光，但侧移量计算中角度减法 $(i-r)$ 易写成加法。</li>
+<li><strong>多物体平衡中库仑力方向与电场力方向混淆</strong>：同号电荷相斥、异号相吸的判断错误，导致合力方向反向，三角函数的正负号或平衡等式符号错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2013新课标Ⅱ-05）</h3>
+<p>在光滑绝缘水平面上，三个带电小球a、b、c位于边长为 $l$ 的正三角形顶点，a、b带正电 $q$，c带负电，系统置于方向水平的匀强电场中。三个小球均静止，求匀强电场场强大小。</p>
+<p><strong>思路</strong><br />
+a、b带等量同号电荷，对c的库仑力大小相等、夹角 $60^\circ$；c还受水平匀强电场力。c静止说明这三力平衡，电场力应与a、b对c的库仑力合力等大反向。运用库仑定律和特殊角度力的合成可快速求解。</p>
+<p><strong>步骤</strong><br />
+1. 对c受力分析：a、b对c的库仑力 $F_a,F_b$，大小均为 $F=k\frac{q|Q|}{l^2}$（设c电荷量为 $Q$），方向分别沿ac、bc连线，两力夹角 $60^\circ$。<br />
+2. 合力 $F_\text{合}=2F\cos 30^\circ = \sqrt{3}F$，方向沿角平分线（即垂直于ab连线）。<br />
+3. 匀强电场对c的力 $F_E = E|Q|$，方向与 $F_\text{合}$ 相反。由平衡：$E|Q| = \sqrt{3} k\frac{q|Q|}{l^2}$，消去 $|Q|$ 得 $E = \frac{\sqrt{3}kq}{l^2}$。  </p>
+<p><strong>点评/变式</strong><br />
+题不需已知c的电荷量，平衡条件自动消去，体现“对称性+三角函数”快速求解的优势。若电场方向不是水平，或a、b电荷量不等，则应改用正交分解或余弦定理列一般方程。</p>
+<hr />
+<h3><strong>题目</strong>（2008全国Ⅱ-02）</h3>
+<p>一束单色光以入射角 $i$ 斜射到厚度为 $d$ 的平板玻璃上表面，经两次折射后从下表面射出。玻璃折射率为 $n$（$n&gt;1$），求侧移量 $x$。</p>
+<p><strong>思路</strong><br />
+画出光路：光从空气进入玻璃，折射角为 $r$，满足 $\sin i = n\sin r$；玻璃中光线与法线夹角为 $r$，水平方向位移即为侧移量 $x$。利用几何关系在直角三角形中找 $x$ 与 $d$、$i$、$r$ 的关系。</p>
+<p><strong>步骤</strong><br />
+1. 由折射定律求折射角：$\sin r = \frac{\sin i}{n}$，进而求得 $\cos r = \sqrt{1-\frac{\sin^2 i}{n^2}}$。<br />
+2. 玻璃中光线长度 $l = \frac{d}{\cos r}$。<br />
+3. 侧移量 $x$ 为光线在水平方向的偏移，由几何关系有 $x = l\sin(i-r)$。<br />
+4. 展开 $\sin(i-r)=\sin i\cos r - \cos i\sin r$，代入 $\sin r$、$\cos r$，整理得
+   $$x = d\sin i\left(1 - \frac{\cos i}{\sqrt{n^2 - \sin^2 i}}\right)$$
+   此即任意入射角下的侧移公式。</p>
+<p><strong>点评/变式</strong><br />
+该题核心在于三角函数关系的灵活转化与折射定律的结合。若改为求入射角或玻璃折射率，可将侧移量公式逆用；注意 $i-r$ 的正弦分解不要出错，最终表达式常可用于估算或定性判断侧移随角度、厚度的变化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-05.html">2013-新课标Ⅱ-05</a>（2013 · 中） 三个点电荷在匀强电场中平衡，通过受力分析与库仑定律求解场强大小</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-02.html">2008-全国Ⅱ-02</a>（2008 · 易） 该题考查光通过平板玻璃的折射现象，涉及折射定律和几何角度关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/270-三角函数应用.html">三角函数</a></li>
+</ul>
+</div>
+</body>
+</html>

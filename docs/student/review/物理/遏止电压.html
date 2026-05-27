@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遏止电压</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>遏止电压</h1><div class="review-mark" data-stem="遏止电压"></div><div class="meta-card"><span><strong>考点</strong>遏止电压</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答17</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>光电效应与截止频率</strong><br />
+  金属中的电子吸收光子能量后逸出，所需的最小能量为逸出功 $W_0$。恰好能发生光电效应的入射光频率称为截止频率 $\nu_0$，对应的波长 $\lambda_0 = \frac{c}{\nu_0}$。逸出功公式：<br />
+  $$W_0 = h\nu_0 = h\frac{c}{\lambda_0}$$<br />
+  式中 $h$ 为普朗克常量，$c$ 为真空光速。</p>
+</li>
+<li>
+<p><strong>爱因斯坦光电效应方程</strong><br />
+  光子能量 $h\nu$ 一部分用于克服逸出功 $W_0$，剩余部分转化为光电子的最大初动能 $E_{km}$：<br />
+  $$E_{km} = h\nu - W_0 \quad (\nu \ge \nu_0)$$</p>
+</li>
+<li>
+<p><strong>遏止电压 $U_c$</strong><br />
+  在光电管两端施加反向电压，当光电流恰好为零时，电场力做功等于最大初动能：<br />
+  $$eU_c = E_{km}$$<br />
+  从而得到遏止电压表达式：<br />
+  $$U_c = \frac{h\nu - W_0}{e} = \frac{hc}{e}\left(\frac{1}{\lambda} - \frac{1}{\lambda_0}\right)$$<br />
+  注意：$U_c$ 仅与入射光频率（或波长）和金属的逸出功有关，与入射光强度无关。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确已知量与所求量</strong><br />
+   从题目中找出金属的截止波长 $\lambda_0$（或截止频率 $\nu_0$）、入射光波长 $\lambda$（或频率 $\nu$）、电子电量 $e$、光速 $c$、普朗克常量 $h$ 等。</li>
+<li><strong>先求逸出功</strong><br />
+   若题目未直接给出 $W_0$，利用 $W_0 = \frac{hc}{\lambda_0}$ 或 $W_0 = h\nu_0$ 计算。</li>
+<li><strong>写出光电效应方程</strong><br />
+   根据 $E_{km} = h\frac{c}{\lambda} - W_0$（或 $h\nu - W_0$）求最大初动能。</li>
+<li><strong>联系遏止电压</strong><br />
+   利用 $eU_c = E_{km}$ 解得 $U_c = \frac{E_{km}}{e}$，代入整理成题目要求的表达式。</li>
+<li><strong>化简结果</strong><br />
+   必要时将表达式统一用已知物理量表示（如 $U_c = \frac{hc}{e}(\frac{1}{\lambda} - \frac{1}{\lambda_0})$），并注意单位。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆截止频率与入射光频率</strong><br />
+  截止频率（或截止波长）是金属自身的属性，与入射光无关。计算逸出功时必须使用截止频率对应的 $\lambda_0$，而非入射波长 $\lambda$。</li>
+<li><strong>误用 $E_{km} = \frac{1}{2}mv^2$ 与 $eU_c$ 的关系</strong><br />
+  遏止电压对应的电场力做功 $eU_c$ 等于最大初动能，不是光子的全部能量，注意不要写成 $eU_c = h\nu$。</li>
+<li><strong>波长与频率的换算错误</strong><br />
+  牢记 $c = \lambda \nu$，从波长推导遏止电压时，正确代入 $\nu = \frac{c}{\lambda}$，避免分子分母颠倒。</li>
+<li><strong>忽略条件 $\lambda &lt; \lambda_0$</strong><br />
+  只有入射光波长小于截止波长（频率大于截止频率）时，才会发生光电效应，从而有遏止电压，否则无光电子逸出。</li>
+<li><strong>表达式书写不规范</strong><br />
+  部分题目要求用给定字母表示结果，注意答案中不得出现未定义的符号，且需化为最简形式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2011·新课标·17）</h3>
+<p>某金属的截止频率对应波长为 $\lambda_0$，其逸出功为<strong><em>_</em>_；若用波长为 $\lambda$（$\lambda &lt; \lambda_0$）的单色光照射，则该金属的遏止电压为</strong>____。（已知电子电量 $e$、真空光速 $c$、普朗克常量 $h$）</p>
+<p><strong>思路</strong><br />
+第一空直接由逸出功与截止波长的关系得出；第二空利用光电效应方程求出最大初动能，再通过 $eU_c = E_{km}$ 求遏止电压。</p>
+<p><strong>步骤</strong><br />
+1. 逸出功 $W_0 = h\nu_0 = h\frac{c}{\lambda_0}$，所以第一空填 $\frac{hc}{\lambda_0}$。<br />
+2. 入射光光子的能量 $E = h\nu = h\frac{c}{\lambda}$。<br />
+3. 由光电效应方程得最大初动能：$E_{km} = h\frac{c}{\lambda} - \frac{hc}{\lambda_0}$。<br />
+4. 根据遏止电压关系：$eU_c = E_{km}$，解得<br />
+   $$U_c = \frac{hc}{e}\left(\frac{1}{\lambda} - \frac{1}{\lambda_0}\right)$$<br />
+   第二空即为该表达式。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接考查爱因斯坦光电效应方程的两大核心结论，是基础中的基础，必须熟练掌握波长-频率转换与最大初动能的表示。<br />
+- <strong>变式1：</strong> 若给出遏止电压与入射光频率的关系曲线（$U_c$–$\nu$ 图），则图线与横轴交点为截止频率 $\nu_0$，斜率 $k = \frac{h}{e}$，可由此求普朗克常量或逸出功。<br />
+- <strong>变式2：</strong> 当入射光频率变为原来的 2 倍时，遏止电压并不简单地加倍，需由 $U_c = \frac{h}{e}\nu - \frac{W_0}{e}$ 分析，注意截距的影响。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-17.html">2011-新课标-17</a>（2011 · 难） 考查爱因斯坦光电效应方程，计算金属逸出功和遏止电压。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/781-遏止电压.html">遏止电压</a></li>
+</ul>
+</div>
+</body>
+</html>

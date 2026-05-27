@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灵敏度计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>灵敏度计算</h1><div class="review-mark" data-stem="灵敏度计算"></div><div class="meta-card"><span><strong>考点</strong>灵敏度计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>灵敏度的定义</strong>：在传感器或测量仪器中，灵敏度 $S$ 表示输出量的变化量 $\Delta y$ 与引起该变化的输入量变化量 $\Delta x$ 的比值。对于线性关系或某点处的切线，有
+  $$S = \frac{\Delta y}{\Delta x} \quad\text{或}\quad S = \left| \frac{\mathrm{d}y}{\mathrm{d}x} \right|$$</li>
+<li><strong>测温灵敏度</strong>：当传感器输出电压 $U$ 随温度 $t$ 变化时，测温灵敏度为 $| \Delta U / \Delta t |$ 或 $|\mathrm{d}U/\mathrm{d}t|$。若 $U\text{-}t$ 图线为直线，灵敏度的量值等于图线斜率的绝对值 $|k|$。</li>
+<li><strong>斜率的计算</strong>：在图线上取两个便于读数的点 $(t_1, U_1)$、$(t_2, U_2)$，斜率
+  $$k = \frac{U_2 - U_1}{t_2 - t_1}$$
+  其绝对值即灵敏度。注意有效数字和单位（常用 $V/{}^\circ\text{C}$ 或 $mV/{}^\circ\text{C}$）。</li>
+<li><strong>实验电路中的灵敏度相关分析</strong>：在恒定电流条件下，通过定值电阻两端电压 $U_1 = I R_0$ 监控电流。二极管正向电压 $U$ 随温度变化，会引起电路分压关系变化，需调节滑动变阻器维持电流恒定。这一调节过程本质上体现了被测量（温度）引起电路电学量变化，进而被电压表感知，也为灵敏度测量提供了依据。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别灵敏度的表达式</strong>：根据题干明确“灵敏度”指的是什么对什么的比值。常见测温灵敏度为 $|\Delta U / \Delta t|$。</li>
+<li><strong>从图线求斜率</strong>：</li>
+<li>确认图线坐标物理量及单位（横轴 $t$，纵轴 $U$）。</li>
+<li>在直线段两端足够远处选取两个易读点，读数时注意坐标分度值。</li>
+<li>利用斜率公式 $k = (U_2 - U_1)/(t_2 - t_1)$ 计算，结果取绝对值。</li>
+<li><strong>数据读取与运算规则</strong>：</li>
+<li>减法运算保留到精读位的下一位，乘除运算结果按有效数字位数最少者决定。</li>
+<li>斜率保留正确有效数字（通常2或3位），并带单位。</li>
+<li><strong>结合电路分析灵敏度相关的调节问题</strong>：</li>
+<li>利用欧姆定律求监控电压：$U_1 = I R_0$，注意单位换算（$\mu\text{A}$ 与 $mV$）。</li>
+<li>根据 $U\text{-}t$ 曲线判断二极管正向电阻变化趋势：$t$ 升高，$U$ 减小 $\Rightarrow$ 二极管正向电阻变小。</li>
+<li>当二极管分压减小时，为保证电流不变，需调节滑动变阻器使总电阻改变。运用串联分压规律确定滑片移动方向。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆灵敏度的定义</strong>：把纵轴变化量 $\Delta U$ 与横轴变化量 $\Delta t$ 的比值颠倒，误算成 $\Delta t / \Delta U$。务必注意比值中分母为输入量变化、分子为输出量变化。</li>
+<li><strong>直线取点不规范</strong>：取点过于靠近，导致斜率误差大；或读数时未看清坐标起点与分度值。建议取图线上两端的整数格点。</li>
+<li><strong>有效数字处理出错</strong>：斜率计算时，直接将减法的原始相减结果作为最终有效位数，未考虑两个相减数据有效数字末位的对齐。斜率有效数字通常应与原数据的有效位数相匹配，真题中常要求保留2位有效数字。</li>
+<li><strong>忘记单位或单位换算出错</strong>：计算灵敏度时若横纵坐标单位不一致（如 $U$ 用 $V$，$t$ 用 ${}^\circ\text{C}$），结果单位应为 $V/{}^\circ\text{C}$。若用 $mV$ 计算需尤其小心。</li>
+<li><strong>电路调节方向判断错误</strong>：温度升高，二极管正向电压变小，总串联电压分配变化，弄错滑动变阻器应增大还是减小接入电阻才能维持电流不变。应抓住“定值电阻电压恒为 $U_1$”这一条件，分析总电阻需求变化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2019-新课标Ⅱ-10</h3>
+<p><strong>题目</strong>（简述）：研究硅二极管在恒定电流 $50.0\,\mu\text{A}$ 下的正向电压 $U$ 与温度 $t$ 的关系，电路含理想电压表、定值电阻 $R_0=100\,\Omega$、滑动变阻器、电源、控温炉。图(b)给出了 $U\text{-}t$ 关系曲线。<br />
+（1）为保证电流恒定，电压表 $\text{V}_1$ 示数 $U_1$ 应为多大？当温度升高时，二极管正向电阻如何变化？电压表 $\text{V}_2$ 示数如何变化？滑片应向哪端移动？<br />
+（2）若 $U\text{-}t$ 为线性关系，求该硅二极管的测温灵敏度（保留2位有效数字）。</p>
+<p><strong>思路</strong>：<br />
+（1）利用欧姆定律求 $U_1 = I R_0 = 50.0\times10^{-6}\times100\,\text{V}=5.00\times10^{-3}\,\text{V}=5.00\,\text{mV}$。从图线看，$t$ 升高时 $U$ 减小，而电流不变，由 $R = U/I$ 知正向电阻变小。$\text{V}_2$ 测二极管电压 $U$，故示数减小。欲使 $\text{V}_1$ 示数恢复 $U_1$，因二极管电阻减小，总电阻减小，需增大滑动变阻器接入电阻，滑片应向使电阻增大的方向移动。<br />
+（2）测温灵敏度即为 $|\Delta U/\Delta t|$，图(b)为直线（近似），在直线上取点，用两点法求斜率绝对值。</p>
+<p><strong>步骤</strong>：<br />
+1. <strong>电路定量计算</strong>：<br />
+   $$U_1 = I R_0 = 50.0\times10^{-6}\times100 = 5.00\times10^{-3}\,\text{V} = 5.00\,\text{mV}.$$<br />
+2. <strong>温度变化时参数定性判断</strong>：由图(b)，$t$ 升高，$U$ 减小。电流 $I$ 不变，由 $R = U/I$ 得 $R$ 变小，故二极管正向电阻变小。$\text{V}_2$ 示数即 $U$，所以减小。此时总电阻变小，为使电流保持 $50.0\,\mu\text{A}$（即 $\text{V}_1$ 示数回到 $5.00\,\text{mV}$），需增大滑动变阻器阻值，因此滑片向 $B$ 端移动。<br />
+3. <strong>求灵敏度</strong>：<br />
+   在图线上取较远的两个易读点，例如 $(t_1=30^\circ\text{C}, U_1\approx0.435\,\text{V})$，$(t_2=80^\circ\text{C}, U_2\approx0.295\,\text{V})$。<br />
+   $$\Delta U = 0.295 - 0.435 = -0.140\,\text{V}, \quad \Delta t = 80 - 30 = 50\,^\circ\text{C}.$$<br />
+   则斜率 $k = \frac{\Delta U}{\Delta t} = \frac{-0.140}{50} = -2.8\times10^{-3}\,\text{V/}^\circ\text{C}$。<br />
+   测温灵敏度取绝对值：<br />
+   $$\left|\frac{\Delta U}{\Delta t}\right| = 2.8\times10^{-3}\,\text{V/}^\circ\text{C}.$$<br />
+   符合2位有效数字要求。</p>
+<p><strong>点评/变式</strong>：<br />
+本题融合了恒定电流实验操作与传感器灵敏度的计算，属于《实验与测量》中典型的数据处理与原理分析题。灵敏度的计算本质是求图线斜率，需注意有效数字和单位。常见变式包括：给出热敏电阻 $R\text{-}t$ 曲线求电阻温度系数；或给出 $U\text{-}I$ 曲线求动态电阻；或要求由实验数据表格描点作图后求灵敏度。无论何种形式，核心都是抓住“变化率”这一概念，规范读取数据和进行有效数字运算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-10.html">2019-新课标Ⅱ-10</a>（2019 · 中） 研究硅二极管在恒定电流下正向电压与温度的关系，涉及欧姆定律及数据处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/657-灵敏度计算.html">灵敏度计算</a></li>
+</ul>
+</div>
+</body>
+</html>

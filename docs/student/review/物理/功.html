@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>功</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>功</h1><div class="review-mark" data-stem="功"></div><div class="meta-card"><span><strong>考点</strong>功</span><span><strong>权重</strong>49</span><span><strong>真题数</strong>8</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：49</li>
+<li>真题数：8；年份跨度：2010–2023</li>
+<li>出现题位：选择1 选择2 选择3 选择6 选择7 选择8 选择11</li>
+<li>难度分布：易2 中6</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>功的定义</strong>：力对物体做的功等于力的大小、位移大小、力与位移夹角余弦的乘积。公式：$W = Fl\cos\theta$。</li>
+<li>$\theta \in [0, \frac{\pi}{2})$，力做正功。</li>
+<li>$\theta = \frac{\pi}{2}$，力不做功。</li>
+<li>$\theta \in (\frac{\pi}{2}, \pi]$，力做负功，也称物体克服此力做功。</li>
+<li><strong>恒力功计算</strong>：直接利用 $W = Fl\cos\theta$ 或 $W = Fx$（当力与位移同向时）。</li>
+<li><strong>变力功计算</strong>：</li>
+<li>利用动能定理：$W_{\text{合}} = \Delta E_k$。</li>
+<li>利用 $W - x$ 图像的面积求功。</li>
+<li>微元法或能量守恒（高考中多以前两者为主）。</li>
+<li><strong>功率</strong>：</li>
+<li>平均功率：$\bar{P} = \frac{W}{t}$ 或 $\bar{P} = F\bar{v}\cos\theta$。</li>
+<li>瞬时功率：$P = Fv\cos\theta$。</li>
+<li><strong>一对相互作用力的功</strong>：作用力与反作用力做功的代数和不一定为零，其正负取决于两物体的相对位移方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确研究对象与过程</strong>：准确选取单个物体或系统，确定运动的初、末位置和经历的过程。</li>
+<li><strong>受力分析求总功</strong>：</li>
+<li>分析各力是否做功、做正功还是负功。</li>
+<li>恒力总功优先使用 $W_{\text{合}} = F_{\text{合}}l \cos\theta$；变力或曲线运动中，常先求各力做的功再求代数和，或直接使用动能定理。</li>
+<li><strong>动能定理是利器</strong>：在涉及变力做功（如空气阻力、拉力等）、多过程复杂运动或仅需知道初末速度变化时，优先选用 $W_{\text{总}} = \Delta E_k = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$ 来架起力与运动的桥梁。</li>
+<li><strong>分析功率变化</strong>：判断某力瞬时功率的变化，需紧扣 $P = Fv$，分析 $F$ 或 $v$ 是否恒定，以及它们的变化趋势。</li>
+<li><strong>巧用图像法</strong>：遇到 $W-x$ 图，图线的斜率代表力 $F$，图线与 $x$ 轴围成的面积代表该段位移内拉力所做的功。</li>
+<li><strong>系统机械能守恒与功的关系</strong>：在只有系统内重力或弹力做功的条件下，系统内一个物体机械能的减少量，等于另一个物体机械能的增加量。杆、绳等连接体问题中，弹力可能对单个物体做功，但其对系统做的总功为零。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>摩擦力做功的重复计算</strong>：不要将滑动摩擦力产生的热量 $Q = f \cdot s_{\text{相对}}$ 与摩擦力对单个物体的做功 $W_f = f \cdot s_{\text{对地}}$ 混淆。2014年真题明确展示了 $W_f$ 正比于对地位移，与动能定理结合求解其他力做功的套路。</li>
+<li><strong>错误判断弹力不做功的情形</strong>：光滑面、不可伸长的绳、刚性杆对物体做的功虽总功为零，但对单个物体可以做正功或负功。如2015年真题，杆对 $b$ 先做正功后做负功；2017年真题，圆环弹力始终垂直速度方向不做功。</li>
+<li><strong>误认为“速度为0时合力必为0”</strong>：在物体运动的瞬时静止点（如单摆最高点），速度为零但加速度不为零，合力不为零。2015年真题 $a$ 落地前瞬间加速度大小可以大于 $g$，并非始终不大于 $g$。</li>
+<li><strong>错误使用功率公式</strong>：求瞬时功率，<strong>必须</strong>用该时刻的瞬时速度和该时刻作用力的乘积。求平均功率，用功除以时间。由 $F-t$ 图或 $v-t$ 图求功率时，要注意对应时刻的点对点关系。</li>
+<li><strong>混淆“克服某力做功”与“该力做功”</strong>：克服阻力做功等于阻力做功的负值，即正值。在动能定理方程中，若设克服阻力做功为 $W$，则表达式为 $W_{\text{其他}} - W = \Delta E_k$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2023-新课标-02</h3>
+<ul>
+<li><strong>题目</strong>：雨滴以恒定速率竖直下落 $h$ 高度，求克服空气阻力做的功（已知质量 $m$、重力加速度 $g$）。</li>
+<li><strong>思路</strong>：核心信息是“恒定速率”下落，隐含雨滴处于二力平衡状态，且动能不变。可直接应用动能定理或将功与能的变化联系起来。</li>
+<li><strong>步骤</strong>：</li>
+<li>明确过程：雨滴下落高度 $h$，初末速度均为 $v$，故 $\Delta E_k = 0$。</li>
+<li>受力分析并应用动能定理：该过程有重力做正功 $mgh$，空气阻力做负功，设其做功为 $W_f$。则 $mgh + W_f = 0$。</li>
+<li>求解：解得 $W_f = -mgh$。故克服空气阻力做功为 $mgh$。</li>
+<li><strong>点评/变式</strong>： <strong>“匀速”是动能定理的快捷键</strong>，直接给出总功为零。变式中，若下落时受恒定水平风力，问题变为求合外力或某个变力做功，此时用动能定理分析复杂路径上合力做功依然是首选。</li>
+</ul>
+<h3>代表题二：2021-全国乙-11</h3>
+<ul>
+<li><strong>题目</strong>：篮球从 $h_1$ 自由下落反弹至 $h_2$，已知碰撞前后动能比值恒定。现从 $h_3$ 下落，要求反弹同为 $h_3$，需在开始下落时向下拍球，作用时间 $t$ 恒定。求(1)拍球做功；(2)拍球作用力大小。</li>
+<li><strong>思路</strong>：利用自由下落和反弹高度求出篮球与地面碰撞过程的动能损耗比例。第二次下落过程包含“人拍球”和“重力做功”两部分使球获得初始动能，利用该比例建立方程求解功。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>求动能比值</strong>：设碰前动能为 $E_k$，碰后动能为 $E_k'$。第一次过程有 $E_k = mgh_1$，$E_k' = mgh_2$。则比值 $k = \frac{E_k}{E_k'} = \frac{mgh_1}{mgh_2} = \frac{1.8}{1.2}= 1.5$。即每次碰撞后动能变为碰前的 $\frac{1}{1.5} = \frac{2}{3}$。</li>
+<li><strong>求拍球做功 $W$</strong>：第二次，设球刚脱离手时的动能为 $E_{k0}$。下落碰地前动能 $E_{k1} = mgh_3 + E_{k0}$。碰后动能 $E_{k2} = \frac{2}{3}E_{k1}$。反弹至 $h_3$ 高处，由动能定理 $-mgh_3 = 0 - E_{k2}$，得 $\frac{2}{3}(mgh_3 + E_{k0}) = mgh_3$。代入数据解得 $E_{k0} = \frac{1}{2}mgh_3 = 4.5 \text{J}$。即人拍球做功 $W = 4.5\text{J}$。</li>
+<li><strong>求作用力 $F$</strong>：拍球过程，球在恒力 $F$ 和重力 $mg$ 作用下向下加速，由动能定理 $(F+mg)x = W = \frac{1}{2}mv^2$。再结合动量定理 $(F+mg)t = mv$，或由匀变速规律 $\frac{v}{2}t = x$，联立求解。由 $W = \bar{F}x$ 和动量定理 $(F+mg)t = m v$，且 $W = \frac{1}{2}mv^2$，可得 $(F+mg)t = \sqrt{2mW}$ 。代入数据解得 $F = 9\text{N}$。</li>
+<li><strong>点评/变式</strong>： <strong>连接多过程的桥梁是“碰撞前后动能比值不变”</strong>，这是功能关系中的典型条件。求功时，动能定理比牛顿定律更直接。求作用力时，需联合动量定理或运动学公式。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-02.html">2023-新课标-02</a>（2023 · 易） 雨滴匀速下落时，利用动能定理求克服空气阻力做功的大小。</li>
+<li><a href="../../exam/物理/2023-新课标-07.html">2023-新课标-07</a>（2023 · 中） 通过W-x图像分析拉力做功、动能、速度、功率和动量变化。</li>
+<li><a href="../../exam/物理/2021-全国乙-06.html">2021-全国乙-06</a>（2021 · 中） 该题考查牛顿运动定律与运动学公式结合求解力、功和冲量，涉及多过程运动分析。</li>
+<li><a href="../../exam/物理/2021-全国乙-11.html">2021-全国乙-11</a>（2021 · 中） 本题通过动能定理和牛顿定律分析篮球下落反弹过程，涉及恒力做功与比例关系。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-01.html">2017-新课标Ⅱ-01</a>（2017 · 易） 小环在大圆环上下滑过程中，大环对其作用力的做功情况及方向判断</li>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-08.html">2015-新课标Ⅱ-08</a>（2015 · 中） a、b通过轻杆连接的系统，分析轻杆做功情况与机械能守恒定律的综合应用。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-03.html">2014-新课标Ⅱ-03</a>（2014 · 中） 考查动能定理与功的计算，比较不同拉力下做功与克服摩擦力做功的关系。</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-03.html">2010-新课标Ⅰ-03</a>（2010 · 中） 根据质点做简谐运动的v-t图象，判断外力做功的正负及功率大小变化情况。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/062-功-物理.html">功</a></li>
+</ul>
+</div>
+</body>
+</html>

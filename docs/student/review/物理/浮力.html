@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>浮力</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>浮力</h1><div class="review-mark" data-stem="浮力"></div><div class="meta-card"><span><strong>考点</strong>浮力</span><span><strong>权重</strong>9</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：9</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>浮力定律（阿基米德原理）</strong>：物体在流体中所受浮力 $F_{\text{浮}} = \rho_{\text{外}} g V_{\text{排}}$，其中 $\rho_{\text{外}}$ 为外部流体的密度，$V_{\text{排}}$ 为排开流体的体积。对于完全浸没在空气中的热气球，$V_{\text{排}} = V_{\text{球}}$。</li>
+<li><strong>空气密度的温度关系</strong>：在压强不变的条件下，空气可视为理想气体，由状态方程 $pV = nRT$ 或 $p = \rho \frac{R}{M}T$ 得 $\rho \propto \frac{1}{T}$。因此在同一大气压 $p_0$ 下，密度与热力学温度成反比：$\rho = \dfrac{p_0 M}{R T}$。若已知 $T_0$ 时的密度 $\rho_0$，则任一温度 $T$ 下的密度 $\rho = \rho_0 \dfrac{T_0}{T}$。</li>
+<li><strong>重力表达式</strong>：热气球内部热空气重力 $G_{\text{内}} = \rho_{\text{内}} g V_{\text{球}}$。</li>
+<li><strong>悬浮条件</strong>：忽略空气阻力时，气球连同悬挂物体在空气中悬浮，合力为零：$F_{\text{浮}} = G_{\text{内}} + mg$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>辨明内外气体参数</strong>：标注气球外部冷空气温度 $T_b$ 和内部热空气温度 $T_a$；明确内外气压均为标准大气压 $p_0$。</li>
+<li><strong>求外部空气密度</strong>：利用等压条件下 $\rho \propto 1/T$，由已知 $\rho_0$（对应 $T_0$）求出 $\rho_b = \rho_0 \dfrac{T_0}{T_b}$。</li>
+<li><strong>根据阿基米德原理写浮力</strong>：$F_{\text{浮}} = \rho_b g V$，代入外部密度即可。</li>
+<li><strong>求内部空气重力</strong>：同理求内部空气密度 $\rho_a = \rho_0 \dfrac{T_0}{T_a}$，则 $G_{\text{内}} = \rho_a g V$。</li>
+<li><strong>对悬浮状态列平衡方程</strong>：$F_{\text{浮}} = G_{\text{内}} + mg$，代入 $F_{\text{浮}}$ 和 $G_{\text{内}}$ 的表达式，解出未知量（通常为 $T_a$）。若题目要求其他物理量（如 $m$ 或 $T_b$），同样由方程变形求解。</li>
+<li><strong>检查结果合理性</strong>：温度必须使用热力学温度（单位 K），若题目给摄氏温度则先换算。结果中如有开方或分式，注意分母不为零，温度 $T_a$ 应高于 $T_b$ 才可能产生浮力差。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆内外空气温度对应的密度</strong>：浮力取决于外部冷空气的密度 $\rho_b$，而非内部热空气密度。部分学生误用内部密度求浮力。</li>
+<li><strong>密度反比关系的适用条件</strong>：必须强调“内外气压相同且为定值”。忽略此条件或错误使用 $pV=nRT$ 推导密度与温度关系时遗忘压强恒定。</li>
+<li><strong>受力分析不完整</strong>：只考虑气球内部气体重力而忽略悬挂重物的重力，或错误地将浮力与内部气体重力直接相等当作悬浮条件。</li>
+<li><strong>温度不加区分直接代入摄氏温标</strong>：理想气体状态方程中 $T$ 必须用热力学温度（K）。若只给摄氏温度需先换算为 $t+273$，否则比例关系不成立。</li>
+<li><strong>物理量符号混淆</strong>：题目中 $T_a$、$T_b$、$T_0$ 以及对应的 $\rho$ 下标多，解题时容易代错数据，建议先写出各符号对应关系再代入。</li>
+<li><strong>误认为气球壳体有重力</strong>：题目未明确给出气球自身质量时，通常忽略球皮重力，若考虑会导致多余未知量。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017-新课标Ⅱ-14）</h3>
+<p>一热气球体积为 $V$，内部充有温度为 $T_a$ 的热空气，气球外冷空气的温度为 $T_b$。已知空气在 1 个大气压、温度为 $T_0$ 时的密度为 $\rho_0$，该气球内、外气压始终都为 1 个大气压，重力加速度大小为 $g$。求：
+（1）该热气球所受浮力的大小；
+（2）热气球内空气所受的重力；
+（3）若有一质量为 $m$ 的物体悬挂于气球下方，设气球所受空气阻力可忽略不计，求气球连同物体悬浮在空气中时气球内空气的温度 $T_a$。</p>
+<h3><strong>思路</strong></h3>
+<p>本题以热气球悬浮为背景，综合考查理想气体等压变化下的密度规律、阿基米德浮力原理及共点力平衡。关键点是利用 $\rho \propto 1/T$ 分别求出外部冷空气密度 $\rho_b$ 和内部热空气密度 $\rho_a$，然后对完整系统列平衡方程，进而解出热空气温度。</p>
+<h3><strong>步骤</strong></h3>
+<p><strong>（1）求浮力</strong>
+外部冷空气温度 $T_b$，气压为 $1\,\text{atm}$，则其密度
+$$\rho_b = \rho_0 \frac{T_0}{T_b}$$
+气球排开空气的体积为 $V$，故浮力
+$$F_{\text{浮}} = \rho_b g V = \rho_0 g V \frac{T_0}{T_b}$$</p>
+<p><strong>（2）求内部空气重力</strong>
+内部热空气温度 $T_a$，密度
+$$\rho_a = \rho_0 \frac{T_0}{T_a}$$
+内部空气所受重力
+$$G_{\text{内}} = \rho_a g V = \rho_0 g V \frac{T_0}{T_a}$$</p>
+<p><strong>（3）求悬浮时的 $T_a$</strong>
+气球与重物整体受力平衡：
+$$F_{\text{浮}} = G_{\text{内}} + mg$$
+代入 $F_{\text{浮}}$ 和 $G_{\text{内}}$ 得
+$$\rho_0 g V \frac{T_0}{T_b} = \rho_0 g V \frac{T_0}{T_a} + mg$$
+两边同除以 $\rho_0 g V T_0$（均为正数）：
+$$\frac{1}{T_b} = \frac{1}{T_a} + \frac{m}{\rho_0 V T_0}$$
+整理得
+$$\frac{1}{T_a} = \frac{1}{T_b} - \frac{m}{\rho_0 V T_0}$$
+因此
+$$T_a = \frac{1}{\frac{1}{T_b} - \frac{m}{\rho_0 V T_0}} = \frac{T_b}{1 - \frac{m T_b}{\rho_0 V T_0}}$$
+或者化为
+$$T_a = \frac{\rho_0 V T_0 T_b}{\rho_0 V T_0 - m T_b}$$</p>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题浮力表达式不直接依赖 $T_a$，只与外部温度 $T_b$ 有关，这说明浮力由排开的外部流体决定，与内部气体状态无关。</li>
+<li>从结果可看出，要产生足够的浮力以承载重物 $m$，内部温度 $T_a$ 必须高于外部温度 $T_b$，且当 $m$ 增大时 $T_a$ 随之增大。若 $m$ 达到 $\frac{\rho_0 V T_0}{T_b}$，$T_a \to \infty$，理论上无法实现悬浮，这对应浮力刚好等于内部气体重力的极限状态。</li>
+<li><strong>变式</strong>：若已知悬浮时的内部温度 $T_a$，欲求最大载重 $m_{\max}$，则可将平衡方程变形为 $m = \rho_0 V T_0\left(\frac{1}{T_b} - \frac{1}{T_a}\right)$；若气球变为飞艇，部分体积充氦气，则需分别计算氦气和空气的重力，但浮力原理相同。</li>
+<li>解答时注意区分“热气球内空气重力”与“所载物体重力”不要混为一谈，受力分析画出整体受力图可有效避免遗漏或重复。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-14.html">2017-新课标Ⅱ-14</a>（2017 · 中） 热气球内充有高温空气，利用气体状态方程求热气球所受浮力、内部气体重力和充气后可托起的最大质量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/092-浮力.html">浮力</a></li>
+</ul>
+</div>
+</body>
+</html>

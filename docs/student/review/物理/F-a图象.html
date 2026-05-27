@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F-a图象</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>F-a图象</h1><div class="review-mark" data-stem="F-a图象"></div><div class="meta-card"><span><strong>考点</strong>F-a图象</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心公式</strong>：物块在水平粗糙面上受水平拉力 $F$，竖直方向平衡 $N=mg$，滑动摩擦力 $f=\mu N=\mu mg$。由牛顿第二定律：$F - \mu mg = ma$，变形得<br />
+  $$F = ma + \mu mg$$</li>
+<li><strong>图象特征</strong>：以 $F$ 为纵轴、$a$ 为横轴，上式表示一条倾斜直线。  </li>
+<li>斜率：$m$（物块质量）  </li>
+<li>纵截距：$\mu mg$（滑动摩擦力大小）  </li>
+<li>横截距：$-\mu g$（无实际物理意义，因为 $a \ge 0$ 才有运动）  </li>
+<li><strong>适用条件</strong>：水平拉力方向不变；最大静摩擦力等于滑动摩擦力；物块从静止开始运动。  </li>
+<li><strong>关键区别</strong>：若作 $a-F$ 图象，则 $a=\dfrac{1}{m}F - \mu g$，横截距为 $\mu mg$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确横纵轴</strong>：看清题目要求的是 $F-a$ 图还是 $a-F$ 图，防止反向思考。  </li>
+<li><strong>受力分析与方程</strong>：画受力示意图，列出牛顿第二定律方程，整理成纵轴物理量关于横轴物理量的函数形式（如 $F=ma+f$）。  </li>
+<li><strong>抓线性特征</strong>：若方程为一次函数，直接判断图象为直线，排除曲线选项。  </li>
+<li><strong>定截距</strong>：令横轴变量为零，求纵截距符号与大小；或令纵轴为零判断横截距。对照选项找符合截距特征的直线。  </li>
+<li><strong>验证起点</strong>：若物体从静止受拉力，起始 $a=0$ 且 $F$ 从 $0$ 增到 $f$ 的过程对应纵轴上一段垂直线段，正规选项常只画 $F\ge f$ 后的斜线段，起点 $(0,f)$ 不在原点。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>截距方向弄反</strong>：将 $F=ma+\mu mg$ 误认为 $F=ma-\mu mg$，导致选纵截距为负的图。  </li>
+<li><strong>忽视静摩擦阶段</strong>：认为一有拉力就有加速度，错选过原点的直线。实际上 $F\le \mu mg$ 时 $a=0$，图象不经过原点。  </li>
+<li><strong>横纵轴混淆</strong>：遇到 $a-F$ 图仍套用 $F=ma+\mu mg$，导致截距位置判断出错（$a-F$ 图中纵截距为 $-\mu g$，横截距为 $\mu mg$）。  </li>
+<li><strong>将质量与斜率对应错误</strong>：误认为 $F-a$ 图斜率是 $\frac{1}{m}$，实际斜率是 $m$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2013-新课标Ⅱ-01</h3>
+<p><strong>题目</strong><br />
+一物块静止在粗糙水平桌面上，受到方向不变的水平拉力。最大静摩擦力等于滑动摩擦力，以 $a$ 表示加速度大小，$F$ 表示拉力大小。能正确描述 $F$ 与 $a$ 关系的图象是（选项略，正确答案为一次函数直线，纵轴正截距）。</p>
+<p><strong>思路</strong><br />
+由牛顿第二定律导出 $F$ 与 $a$ 的线性关系，确定斜率与截距的物理意义，同时考虑物块从静止启动时 $F$ 必须超过最大静摩擦力才会产生加速度，图象只能取 $a\ge0$ 的射线部分，其延长线交纵轴于正值。</p>
+<p><strong>步骤</strong><br />
+1. 受力分析：重力 $mg$、支持力 $N$、水平拉力 $F$、滑动摩擦力 $f$。竖直方向 $N=mg$，水平方向当 $F&gt;f_{\rm max}= \mu mg$ 时 $F-\mu mg=ma$。<br />
+2. 整理方程：$F=ma+\mu mg$。<br />
+3. 判断图象：斜率 $m&gt;0$，纵截距 $\mu mg&gt;0$——应为一条向上倾斜的直线，且延长线与纵轴交于正半轴。<br />
+4. 甄别选项：过原点直线（截距 $0$）错；纵截距为负的直线错；曲线错。正确选项应是不过原点、纵截距为正的倾斜直线。<br />
+5. 注意起点：实际运动段从 $a=0$，$F=\mu mg$ 开始，图象只是该直线在第一象限内的射线。</p>
+<p><strong>点评/变式</strong><br />
+- 此题易错点在“拉力从零开始增大”与“图象是否过原点”的关联。物块受拉力未超最大静摩擦时 $a=0$，拉力这一段变化在 $F$ 轴对应一个竖直线段，正规简化图象常略去此段，直接给出 $a&gt;0$ 后的直线。<br />
+- 变式：若桌面光滑，则 $f=0$，$F=ma$，$F-a$ 图为过原点直线。若给 $a-F$ 图，方程 $a=\frac{F}{m}-\mu g$，图象纵截距为负，横截距为正，务必根据轴变量灵活处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-01.html">2013-新课标Ⅱ-01</a>（2013 · 易） 物块在粗糙水平面受水平拉力，考查F与a关系图象及牛顿第二定律的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/494-F-a图象.html">F-a图象</a></li>
+</ul>
+</div>
+</body>
+</html>

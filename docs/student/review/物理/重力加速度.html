@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>重力加速度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>重力加速度</h1><div class="review-mark" data-stem="重力加速度"></div><div class="meta-card"><span><strong>考点</strong>重力加速度</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2009–2012</li>
+<li>出现题位：填空13 选择8</li>
+<li>难度分布：难2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>重力加速度</strong>：地球表面附近物体所受重力 $mg$ 对应的加速度 $g = \dfrac{GM}{R^2}$，$M$ 为地球质量，$R$ 为地球半径。</li>
+<li><strong>均匀球壳定理</strong>：质量分布均匀的球壳对壳内任意质点的万有引力合力为零；对壳外质点，引力等效于质量全部集中在球心。</li>
+<li><strong>均匀球体内部重力加速度</strong>：距球心 $r$ （$r&lt;R$）处，仅半径 $r$ 的球体质量 $M_r = \rho\cdot\frac{4}{3}\pi r^3 = M\dfrac{r^3}{R^3}$ 产生引力，外部球壳贡献为零。<br />
+  $$g_r = \dfrac{GM_r}{r^2} = \dfrac{GM}{R^3}r = g\dfrac{r}{R}$$<br />
+  即内部重力加速度与到球心的距离 $r$ 成正比，呈线性衰减。</li>
+<li><strong>重力加速度反常（等效法）</strong>：当存在密度缺失（如空腔）时，可将空腔等效为密度为 $-\rho$ 的球体，利用叠加原理计算附加引力加速度，再求其在指定方向（通常为竖直方向）的投影，即为偏离正常值的部分。</li>
+<li><strong>矢量叠加</strong>：实际重力加速度 $\vec{g}<em _text_正常="\text{正常">{\text{实际}} = \vec{g}</em>$ 为附加引力加速度。}} + \Delta\vec{g}$，其中 $\Delta\vec{g</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>均匀球内外 $g$ 的比例问题</strong>  </li>
+<li>明确位置：地表 $r=R$ 得 $g$；内部深 $d$ 处 $r=R-d$。  </li>
+<li>应用 $g_r \propto r$，快速得出 $g'/g = (R-d)/R$。  </li>
+<li>
+<p>注意：外层球壳恒无贡献，切忌直接用 $GM/r^2$ 代入总质量。</p>
+</li>
+<li>
+<p><strong>密度缺失（空腔）类问题——负质量法</strong>  </p>
+</li>
+<li>步骤一：“填平补齐”：设想空腔填满正常密度物质，构成完整均匀体。  </li>
+<li>步骤二：“反向叠加”：真实情况 = 完整均匀体 + 密度为 $-\rho$ 的等效球体。  </li>
+<li>步骤三：分别计算两部分对目标点的引力加速度，然后矢量合成。  </li>
+<li>
+<p>步骤四：若求在某一方向（如竖直 $PO$）上的投影，需将附加加速度沿该方向分解，利用几何关系 $\cos\theta = \dfrac{d}{\sqrt{d^2+x^2}}$ 等。</p>
+</li>
+<li>
+<p><strong>竖直投影偏离量的计算通式</strong><br />
+   对于球形空腔（球心深度 $d$，水平距离 $x$，体积 $V$，围岩密度 $\rho$）：</p>
+</li>
+<li>等效负质量 $m = -\rho V$，距目标点 $r = \sqrt{d^2+x^2}$。</li>
+<li>附加加速度大小 $\Delta a = \dfrac{G\rho V}{d^2+x^2}$，方向背离空腔球心。</li>
+<li>竖直投影偏离大小（重力加速度反常）：
+     $$\delta g = \Delta a \cdot \frac{d}{\sqrt{d^2+x^2}} = \frac{G\rho V d}{(d^2+x^2)^{3/2}}$$</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆内部质量比例关系</strong>：内部 $g$ 正比于 $r$ 而非 $r^2$。错误根源在于忽略质量也随 $r^3$ 变化，约分后得一次方。</li>
+<li><strong>忽视球壳定理的适用条件</strong>：球壳定理要求球壳“质量均匀分布”，且物体必须在壳“内”才引力为零；若在矿井口或地表过渡区，不能随意套用。</li>
+<li><strong>等效法中方向判定错误</strong>：负质量产生的引力加速度方向与正常质量相反——背向负质量球心。求竖直投影时，需根据空腔相对目标点的方位确定分量的正负（向上或向下），避免符号反号。</li>
+<li><strong>距离 $r$ 计算错误</strong>：空腔球心深度 $d$，水平距离 $x$，连接距离应为 $r = \sqrt{d^2 + x^2}$，切勿忽略勾股定理直接使用 $d$ 或 $x$。</li>
+<li><strong>“反常”定义理解不清</strong>：题目常将“算出的偏离值大小”作为答案，若表述为“相对于正常值的偏离”，一般取绝对值；若要求矢量，需标明方向。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题1】2012新课标·8</h3>
+<p><strong>题目</strong>：地球是半径为 $R$ 的均匀球体，一矿井深度为 $d$。已知质量分布均匀的球壳对壳内物体的引力为零，求矿井底部和地面处的重力加速度大小之比。</p>
+<p><strong>思路</strong>：地面 $g=\dfrac{GM}{R^2}$。矿井底部到球心的距离 $r=R-d$。根据球壳定理，外部厚度为 $d$ 的球壳引力为零，底部仅受半径为 $r$ 的内部球体引力，且内部质量比例于 $r^3$。利用 $g_r \propto r$ 即得比值。</p>
+<p><strong>步骤</strong>：
+1. 地球质量设为 $M$，地表重力加速度 $g = \dfrac{GM}{R^2}$。
+2. 矿井底部所在球面半径 $r = R-d$，有效质量 $M' = \rho\cdot\frac{4}{3}\pi r^3 = M\dfrac{r^3}{R^3}$。
+3. 底部重力加速度 $g' = \dfrac{GM'}{r^2} = \dfrac{GM}{R^2}\cdot\dfrac{r}{R}</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2012-新课标-08.html">2012-新课标-08</a>（2012 · 难） 考察质量分布均匀的球体内部重力加速度与距球心距离的关系，利用球壳对内部物体引力为零的性质求比值。</li>
+<li><a href="../../exam/物理/2009-全国Ⅱ-13.html">2009-全国Ⅱ-13</a>（2009 · 难） 球形空腔引起重力加速度反常的引力计算模型</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">重力加速度</a></li>
+</ul>
+</div>
+</body>
+</html>

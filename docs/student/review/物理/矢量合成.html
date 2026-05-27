@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>矢量合成</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>矢量合成</h1><div class="review-mark" data-stem="矢量合成"></div><div class="meta-card"><span><strong>考点</strong>矢量合成</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2013–2022</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>矢量是既有大小又有方向的物理量，如位移、速度、加速度、力、电场强度、磁感应强度等。矢量合成遵循<strong>平行四边形定则</strong>与<strong>三角形定则</strong>，其实质是“等效替代”。若多个矢量首尾相接构成闭合图形，则合矢量为零。常用方法有：</p>
+<ul>
+<li><strong>作图法</strong>：画平行四边形或三角形，利用几何关系求合力/合场强的大小和方向。</li>
+<li><strong>公式法</strong>：两个互成 $\theta$ 角的矢量 $F_1,F_2$ 的合力大小为 $F=\sqrt{F_1^2+F_2^2+2F_1F_2\cos\theta}$，方向用 $\tan\varphi=\frac{F_2\sin\theta}{F_1+F_2\cos\theta}$ 计算。</li>
+<li><strong>正交分解法</strong>：将各矢量向相互垂直的 $x,y$（必要时含 $z$）轴分解，得 $F_x=\sum F_{ix},F_y=\sum F_{iy}$，则合矢量大小 $F=\sqrt{F_x^2+F_y^2}$，方向由 $\tan\theta=F_y/F_x$ 决定。适用于多力、多场的合成。</li>
+<li><strong>平衡条件</strong>：物体或点电荷处于静止或匀速直线运动时，合矢量必为零，即 $\sum\vec{F}=0$ 或 $\vec{B}_{\text{合}}=0$ 等。分量形式为 $\sum F_x=0,\sum F_y=0,\sum F_z=0$。</li>
+</ul>
+<p><strong>适用条件</strong>：所有共点矢量（作用线或作用点可平移至同一点）。复杂三维合成须明确各轴正向定义，注意分量正负的物理意义。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定对象</strong>：明确研究哪一个物体或哪一个空间点的场矢量（力、电场、磁场等）。</li>
+<li><strong>画矢图</strong>：将对象所受全部矢量（力、场强等）画出示意图，标出已知方向和未知方向，注意各矢量的起点或作用点可平移。</li>
+<li><strong>选方法</strong>：</li>
+<li>若只有两个矢量且夹角已知，优先使用平行四边形法则加几何关系（菱形、等边三角形等）快速计算合矢量。</li>
+<li>若矢量≥3个或涉及三维空间，统一采用<strong>正交分解法</strong>：以作用点为原点建立合理坐标系（使尽量多矢量落在坐标轴上），将每个矢量投影到各坐标轴，写出分量代数式。</li>
+<li><strong>列方程</strong>：根据平衡条件（$\sum F_x=0$ 等）或合矢量的目标表达式（如合磁感应强度 $\vec{B}=\vec{B}_1+\vec{B}_2+\cdots$）列出标量方程。</li>
+<li><strong>解方程，定方向</strong>：求解未知量的大小，再依分量符号或几何关系指明合矢量的方向（如与 $x$ 轴夹角、指向北偏东等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>矢量符号与正负混淆</strong>：正交分解后，分量的正负必须严格依据所设坐标轴正方向。如竖直向上为 $+z$，则 $B_z&lt;0$ 表示竖直向下。</li>
+<li><strong>库仑力方向判断失误</strong>：同种电荷相斥，异种相吸，力的方向一定沿两点电荷连线。多电荷系统务必逐个画力，再合成。</li>
+<li><strong>角度取错</strong>：平行四边形合成时，合力与分力的夹角关系容易弄反；三角形定则中，注意“首尾相接”的顺序。</li>
+<li><strong>三维空间合成遗漏分量</strong>：如地磁场测量中，误将水平分量 $B_x,B_y$ 直接相加，忘记竖直分量 $B_z$，导致总磁场大小或方向判断错误。</li>
+<li><strong>盲目套用整体法</strong>：三个小球均静止，整体合外力为零可以求某些关联量，但涉及内部相互作用时仍须隔离分析，不可混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2022 全国乙卷第 5 题（利用智能手机磁传感器测地磁场）</h3>
+<p><strong>思路</strong>：手机坐标系 $z$ 轴正向竖直向上，四次测量 $B_z$ 均约 $-45\mu\text{T}$，说明地磁场竖直分量必向下；再通过改变 $y$ 轴指向，观察水平分量在 $B_x,B_y$ 上的分布，由矢量合成原理反推地磁场水平分量的方向和大小。</p>
+<p><strong>步骤</strong>：
+1. 由表知 $B_z\approx -45\mu\text{T}$，表明地磁场竖直分量大小为 $45\mu\text{T}$，方向竖直向下。
+2. 从四次测量看水平面内合成：测量1 $(0,21)$，测量2 $(0,-20)$，测量3 $(21,0)$，测量4 $(-21,0)$。$B_x$ 和 $B_y$ 的大小均为 $21\mu\text{T}$ 左右，说明地磁场水平分量固定，大小为 $B_h\approx 21\mu\text{T}$。
+3. 当 $y$ 轴指地磁场水平分量方向时，$B_y=21,\,B_x=0$；当 $y$ 轴垂直该方向时，磁场全部分在 $x$ 轴上。由此可确定水平分量方向（例如北向或南向，依选项判断）。
+4. 合成总磁场 $B=\sqrt{B_h^2+B_z^2}\approx\sqrt{21^2+45^2}\mu\text{T}\approx 50\mu\text{T}$，并可推知地磁场方向（磁倾角等）。</p>
+<p><strong>点评/变式</strong>：本题将三维矢量合成嵌入真实情境，关键是把每次测量视为对同一矢量在不同坐标系下的分量记录，用正交分解思想逆向合成。变式可改为测电场、测风速等，核心仍是“分→合”的思维。</p>
+<h3><strong>题目</strong>：2013 新课标Ⅱ卷第 5 题（三带电小球静止，求匀强电场场强）</h3>
+<p><strong>思路</strong>：选带负电的 $c$ 球为研究对象，它受 $a,b$ 两个正电荷的库仑引力以及匀强电场力。三力共面共点，合力为零，可通过平行四边形法则合成二库仑力，由平衡条件求电场力，进而得场强。</p>
+<p><strong>步骤</strong>：
+1. 分析 $c$ 受力：$a,\,b$ 对 $c$ 的库仑引力大小均为 $F=k\frac{qQ}{l^2}$（设 $c$ 电荷量为 $Q$），两力夹角为 $60^\circ$，方向分别沿 $ca$ 和 $cb$ 连线。
+2. 合成二库仑力：由平行四边形定则，合力 $F_{\text{库}}$ 沿角平分线（即垂直 $ab$ 连线向外），大小为 $F_{\text{库}}=2F\cos30^\circ=\sqrt{3}k\frac{qQ}{l^2}$。
+3. 匀强电场对 $c$ 的电场力 $F_E=Q E$，方向与电场方向相反（$c$ 带负电）。由三力平衡：$Q E = F_{\text{库}}$。
+4. 解得 $E = \sqrt{3}k\frac{q}{l^2}$，方向与 $F_{\text{库}}$ 反向，即沿 $c$ 指向正三角形中心的方向。</p>
+<p><strong>点评/变式</strong>：合成时将对称分布的二力找到几何关系是快速解题关键。若改变电荷正负或位置，库仑合力方向会变化，需重新画图分析。也可对整体列平衡方程求 $Q$，再求 $E$，同样体现矢量合成的思想。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-05.html">2022-全国乙-05</a>（2022 · 中） 本题通过地磁场数据表考查空间矢量分析及地理方位判断。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-05.html">2013-新课标Ⅱ-05</a>（2013 · 中） 三个点电荷在匀强电场中平衡，通过受力分析与库仑定律求解场强大小</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/701-矢量合成.html">矢量合成</a></li>
+</ul>
+</div>
+</body>
+</html>

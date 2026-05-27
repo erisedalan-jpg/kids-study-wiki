@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质能方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质能方程</h1><div class="review-mark" data-stem="质能方程"></div><div class="meta-card"><span><strong>考点</strong>质能方程</span><span><strong>权重</strong>29</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：29</li>
+<li>真题数：3；年份跨度：2008–2020</li>
+<li>出现题位：解答17 选择5 选择7</li>
+<li>难度分布：中2 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>质能方程</strong>：$E=mc^2$。该方程指出物体的能量与其质量成正比，比例系数为真空中光速 $c$ 的平方。</li>
+<li><strong>质量亏损</strong>：原子核的质量小于其全部核子（质子和中子）单独存在时的总质量之和，这部分质量的差值称为质量亏损 $\Delta m$。</li>
+<li><strong>结合能</strong>：将原子核分解成单个核子时所需的最小能量，或单个核子结合成原子核时所释放的能量。结合能 $\Delta E = \Delta m c^2$。</li>
+<li><strong>核反应中的能量计算</strong>：核反应（如裂变、聚变）释放的能量来源于反应前后的质量亏损。释放的能量 $\Delta E = (m_{前} - m_{后}) c^2$，计算时需使用原子质量单位 $u$ 或 $kg$。</li>
+<li><strong>实用换算关系</strong>：做题时牢记以下两个核心换算，可大幅提升估算速度。</li>
+<li>$1\text{u}$ 的质量亏损对应 $931.5 \text{MeV}$ 的能量：即 $1\text{u} \cdot c^2 = 931.5 \text{MeV}$。</li>
+<li>能量单位换算：$1 \text{MeV} = 1.6 \times 10^{-13} \text{J}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题辨型，锁定目标</strong>：</li>
+<li>
+<p>题目要求计算“释放的总能量”、“结合能”还是“相当于多少标准燃料”？这决定了需要处理的物理量是总能量还是单个粒子能量。</p>
+</li>
+<li>
+<p><strong>巧用守恒，补全方程</strong>：</p>
+</li>
+<li>
+<p>对于未知粒子的核反应方程，利用<strong>质量数守恒</strong>和<strong>电荷数守恒</strong>推断粒子类型。这是求解质量亏损的前提。</p>
+</li>
+<li>
+<p><strong>精算亏损，选对路径</strong>：</p>
+</li>
+<li><strong>路径一（质量直接给出）</strong>：若题干给出反应前后各原子核（或核子）的质量（单位 $u$ 或 $kg$），直接求差 $\Delta m$，代入 $\Delta E = \Delta m c^2$ 计算能量。</li>
+<li>
+<p><strong>路径二（总能量/平均能量给出）</strong>：若题干直接给出某次反应的总释放能量 $E_{总}$（如 $43.15\text{MeV}$），优先计算单个核心粒子对应的平均能量。例如：$E_{平均} = \frac{\text{总能量}}{\text{核心粒子数}}$。</p>
+</li>
+<li>
+<p><strong>单位换算，规避坑点</strong>：</p>
+</li>
+<li>严格区分 $u$、$\text{MeV}$、$\text{J}$、$\text{kg}$ 等不同维度的单位。</li>
+<li>
+<p>当题目涉及宏观量（如 $1\text{kg}$ 物质、标准煤热量）与微观量（单个粒子能量）的转换时，务必先求出一个粒子的能量，再乘以总粒子数，最后与宏观总热量进行等量代换。</p>
+</li>
+<li>
+<p><strong>极端条件，能量守恒</strong>：</p>
+</li>
+<li>考查“光子照射分解原子核”类问题时，核心是能量守恒。光子能量<strong>恰好等于</strong>结合能是反应发生的最小阈值；若光子能量<strong>大于</strong>结合能，多余的能量将转化为生成粒子的动能。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“结合能”与“核反应释放能”</strong>：结合能特指将原子核分解为单个自由核子所需能量；而核反应释放能是反应后新核结余的能量，计算时都是 $\Delta m c^2$，但 $\Delta m$ 的取法不同。</li>
+<li><strong>能量转化过程不清</strong>：在光子分解氘核问题中，误以为能量等于结合能的光子照射时，产物一定静止（动能为零）。实际上，即便能量相等，若要过程发生，产物也需具备分离速度，且严格能量等于结合能时反应截面极低；若光子能量大于结合能，多余能量必然转化为产物动能，不可能动能为零。</li>
+<li><strong>单位换算与数量级错误</strong>：直接使用 $1\text{u} = 931.5 \text{MeV}$ 时，忘记这是 $1\text{u} \times c^2$ 的结果；遇到 $\text{J}$ 和 $\text{MeV}$ 混算时，$1 \text{MeV} = 1.6 \times 10^{-13} \text{J}$ 指数容易算错，尤其是数量级在 $10^{22}$ 以上时。</li>
+<li><strong>反应物份数计算错误</strong>：如给出总反应式“$6\text{H} \rightarrow \dots + 43.15\text{MeV}$”，计算单个氘核放能时，必须用总能量除以系数 6，而不是 1。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2012-新课标-17（核心填空）</h3>
+<ul>
+<li><strong>题目</strong>：给出聚变方程及 $^2_1\text{H}$、$^3_1\text{H}$、$^4_2\text{He}$ 和粒子 $x$ 的质量，已知 $1\text{u}=931.5\text{MeV}/c^2$。判断 $x$ 为何种粒子，并计算释放能量（保留 3 位有效数字）。</li>
+<li><strong>思路</strong>：这是一道典型的补全方程 + 质能方程计算题。先由质量数、电荷数守恒定出 $x$，再利用“反应物总质量 - 生成物总质量”求亏损，最后换算能量。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>补全方程</strong>：反应前质量数 $2+3=5$，电荷数 $1+1=2$；反应后 He 为 4 和 2，则 $x$ 的质量数必为 $5-4=1$，电荷数必为 $2-2=0$。故 $x$ 为中子 $^1_0\text{n}$。</li>
+<li><strong>计算质量亏损</strong>：
+     $$\Delta m = (2.0141 + 3.0161) - (4.0026 + 1.0087) = 5.0302 - 5.0113 = 0.0189\text{u}$$</li>
+<li><strong>换算能量</strong>：
+     $$\Delta E = 0.0189 \times 931.5 \approx 17.605 \text{MeV}$$
+     保留三位有效数字，结果为 $17.6 \text{MeV}$。</li>
+<li><strong>点评/变式</strong>：务必注意“保留有效数字”要求，答案 $17.6\text{MeV}$ 不能写成 $17.60$。变式中若题干直接给“电子伏特”单位，直接用 $1\text{u}$ 换算即可，无需硬套 $E=mc^2$ 再换算焦耳。</li>
+</ul>
+<h3>代表题 2：2020-新课标Ⅱ-05（宏观估算）</h3>
+<ul>
+<li><strong>题目</strong>：给出总聚变方程 $6^2_1\text{H} \rightarrow \dots + 43.15\text{MeV}$，已知 $1\text{kg}$ 海水约含 $1.0\times10^{22}$ 个氘核，标准煤热值为 $2.9\times10^7 \text{J/kg}$，求释放能量相当于多少千克标准煤。</li>
+<li><strong>思路</strong>：这是一道微观粒子能量与宏观燃料热当量的换算题。必须分两步走：“单个粒子能量 → 粒子总数总能量 → 等效燃烧质量”。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>求单个氘核平均放能</strong>：
+     $$E_1 = \frac{43.15 \text{MeV}}{6} \approx 7.19 \text{MeV}$$</li>
+<li><strong>求1kg海水含有的氘核全聚变释放的总能量</strong>：
+     $$E_{总} = 1.0 \times 10^{22} \times 7.19 \text{MeV} = 7.19 \times 10^{22} \text{MeV}$$</li>
+<li><strong>将能量单位从 MeV 换为 J</strong>：
+     $$E_{总} = 7.19 \times 10^{22} \times 1.6 \times 10^{-13} \text{J} \approx 1.15 \times 10^{10} \text{J}$$</li>
+<li><strong>求等效标准煤质量 $M$</strong>：
+     $$M = \frac{1.15 \times 10^{10} \text{J}}{2.9 \times 10^7 \text{J/kg}} \approx 396 \text{kg}$$
+     最接近的选项为 C 选项 $400\text{kg}$。</li>
+<li><strong>点评/变式</strong>：估算题不必过于拘泥中间量精度，如 $43.15/6$ 可取 $7.19$，$7.19\times1.6$ 可取 $11.5$。易错点是将 6 个氘核的总释放能量直接当作单个能量去乘粒子数，导致结果差 6 倍而错选。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-05.html">2020-新课标Ⅱ-05</a>（2020 · 中） 计算海水氘核聚变释放能量与标准煤燃烧热量的等效质量。</li>
+<li><a href="../../exam/物理/2012-新课标-17.html">2012-新课标-17</a>（2012 · 中） 核反应方程粒子推断及利用质能方程计算聚变释放能量</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-07.html">2008-全国Ⅱ-07</a>（2008 · 难） 氘核结合能及光子能量与核分解条件的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/449-质能方程.html">质能方程</a></li>
+</ul>
+</div>
+</body>
+</html>

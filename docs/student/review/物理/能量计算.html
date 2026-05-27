@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能量计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>能量计算</h1><div class="review-mark" data-stem="能量计算"></div><div class="meta-card"><span><strong>考点</strong>能量计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核能的计算</strong>：根据核反应方程释放的总能量与参与反应的核子个数，可求平均每个核子（或核）释放的能量 $E_0 = \frac{E_{\text{总}}}{N_{\text{反应物}}}$。对于聚变，若给出 $n$ 个氘核聚变释放 $E$ 的能量，则单个氘核贡献 $\frac{E}{n}$。</li>
+<li><strong>能量与粒子数的关系</strong>：$E_{\text{总}} = N \cdot E_0$，其中 $N$ 为发生反应的粒子总数，可由质量、物质的量、阿伏伽德罗常数等求得，或题目直接给出。</li>
+<li><strong>能量单位换算</strong>：微观能量常用 MeV，宏观常用 J。$1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J}$。</li>
+<li><strong>热值定义</strong>：$q = \frac{Q}{m}$，单位为 $\text{J/kg}$。燃料燃烧放热 $Q = mq$。利用能量相等列式：$E_{\text{核总}} = M q_{\text{煤}}$，可求等效燃烧质量。</li>
+<li><strong>适用条件</strong>：反应式系数对应的是原子核个数比，计算时须按比例折算平均能量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定反应、算平均</strong>：从核反应方程中找出释放的总能量及对应的反应物核个数，计算单个反应物核释放的平均能量。</li>
+<li><strong>求总数、算总能量</strong>：根据已知条件（如给定质量、粒子个数）确定发生反应的该种核的总个数 $N$，则总能量 $E_{\text{总}} = N \cdot E_{\text{平均}}$。注意单位：若 $E_{\text{平均}}$ 为 MeV，则 $E_{\text{总}}$ 初始单位也是 MeV。</li>
+<li><strong>做换算、统一单位</strong>：将 $E_{\text{总}}$ 从 MeV 换算为 J，使用 $1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J}$。</li>
+<li><strong>用热值、求等效</strong>：当题目要求“释放的能量相当于多少质量的标准煤”时，利用热值 $q$，列式 $E_{\text{总}}(J) = M q$，解出 $M = \frac{E_{\text{总}}}{q}$。注意结果的数量级，必要时可近似估算。</li>
+<li><strong>核验选项</strong>：若为选择题，计算过程中可适当保留有效数字，结合选项差距判断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>未按反应系数取平均</strong>：直接使用总能量除以反应物总个数时，忽略方程系数的分母。如本题 $6\ \text{H} \to \dots + 43.15\ \text{MeV}$，易误认为每个氘核释放 $43.15\ \text{MeV}$，正确应为 $\frac{43.15}{6}\ \text{MeV}$。</li>
+<li><strong>单位换算漏洞</strong>：MeV 与 J 的换算系数记错（$1\ \text{MeV}=1.6\times10^{-19}\ \text{J}$ 是电子伏特，MeV 是 $10^6\ \text{eV}$，所以是 $1.6\times10^{-13}\ \text{J}$），导致数量级完全错误。</li>
+<li><strong>混淆“总粒子数”与“发生反应的粒子数”</strong>：在计算总能量时，误将题目给的某元素总原子数全部当作反应物，而有些核反应可能只需要其中一部分，要看清题设“若全都发生反应”。</li>
+<li><strong>热值使用错误</strong>：给出 $1\ \text{kg}$ 煤的燃烧热，直接当作 $M\ \text{kg}$ 的总能量，计算时等式应为 $E_{\text{总}} = M \times (2.9 \times 10^7)$，而非除以或错位。</li>
+<li><strong>估算忽略选项差距</strong>：本题选项为 $40,\ 100,\ 400,\ 1000\ \text{kg}$，差距较大，但若计算过程中 $\frac{43.15}{6}$ 近似成 $7.2$，乘以 $1.0\times10^{22}$ 再乘 $1.6\times10^{-13}$ 除以 $2.9\times10^7$ 时，仍可得到接近 $400$ 的结果，不必过分纠结小数点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·新课标Ⅱ卷·第5题）<br />
+氘核可通过聚变释放能量，总效果可用 $6\ ^{2}<em 2="2">{1}\text{H} \to 2\ ^{4}</em>}\text{He} + 2\ ^{1<em 0="0">{1}\text{H} + 2\ ^{1}</em>$，则 $M$ 约为}\text{n} + 43.15\ \text{MeV}$ 表示。已知 $1\ \text{kg}$ 海水中含有的氘核约为 $1.0 \times 10^{22}$ 个，若全部聚变，释放的能量与质量为 $M$ 的标准煤完全燃烧释放的热量相等。已知 $1\ \text{kg}$ 标准煤燃烧放热约为 $2.9 \times 10^{7}\ \text{J}$，$1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J<br />
+A．40 kg　B．100 kg　C．400 kg　D．1000 kg</p>
+<p><strong>思路</strong><br />
+由反应式求单个氘核释放的平均能量；乘以 $1\ \text{kg}$ 海水中的氘核总数，得总核能（MeV）；将 MeV 换算为 J；用总能量除以单位质量煤的热值，即得等效煤的质量 $M$。</p>
+<p><strong>步骤</strong><br />
+1. 平均每个氘核释放能量：$E_1 = \frac{43.15\ \text{MeV}}{6} \approx 7.19\ \text{MeV}$。<br />
+2. $1\ \text{kg}$ 海水总氘核数 $N = 1.0 \times 10^{22}$，总核能 $E_{\text{总}} = N E_1 = 7.19 \times 10^{22}\ \text{MeV}$。<br />
+3. 换算为焦耳：$E_{\text{总}} = 7.19 \times 10^{22} \times 1.6 \times 10^{-13}\ \text{J} = 1.1504 \times 10^{10}\ \text{J}$。<br />
+4. 由 $E_{\text{总}} = M \times 2.9 \times 10^7\ \text{J/kg}$，得 $M = \frac{1.1504 \times 10^{10}}{2.9 \times 10^7}\ \text{kg} \approx 3.97 \times 10^2\ \text{kg} \approx 400\ \text{kg}$，对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是“按比例求平均能量”和“能量单位换算”，是核能计算与常规能量结合的代表题。即使计算中 $\frac{43.15}{6}\approx 7.2$，最终结果仍在 $400\ \text{kg}$ 附近，因选项差距大，估算即可。<br />
+变式：若换成 $1\ \text{g}$ 海水，或求释放的能量相当于多少 $TNT$ 当量（已知 $1\ \text{t} TNT$ 释放 $4.2\times10^9\ \text{J}$），仍可沿用相同思路。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-05.html">2020-新课标Ⅱ-05</a>（2020 · 中） 计算海水氘核聚变释放能量与标准煤燃烧热量的等效质量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/490-能量计算.html">能量计算</a></li>
+</ul>
+</div>
+</body>
+</html>

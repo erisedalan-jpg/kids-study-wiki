@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电势差</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电势差</h1><div class="review-mark" data-stem="电势差"></div><div class="meta-card"><span><strong>考点</strong>电势差</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电势差（电压）</strong>：电场中两点间电势的差值，$U_{AB} = \varphi_A - \varphi_B$。</li>
+<li><strong>静电力做功与电势差的关系</strong>：$W_{AB} = qU_{AB}$，适用于任何电场。</li>
+<li><strong>匀强电场中电势差与场强的关系</strong>：$U = Ed\cos\theta$ 或沿场强方向 $U=Ed$，其中 $d$ 是沿场强方向的投影距离。</li>
+<li><strong>动能定理</strong>：$W_{\text{合}} = \Delta E_k$。在仅受电场力（忽略重力）时，$qU_{AB} = \frac{1}{2}mv_B^2 - \frac{1}{2}mv_A^2$。</li>
+<li><strong>运动合成与分解</strong>：在匀强电场中，带电粒子垂直电场方向不受力，做匀速直线运动；沿电场方向受恒力，做匀变速运动。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分析受力与运动</strong>：明确粒子是否只受电场力（若不计重力，则为恒力），判断运动性质（匀变速曲线运动）。</li>
+<li><strong>正交分解速度</strong>：将速度沿电场方向和垂直电场方向分解，利用垂直场强方向的分速度不变（$v_\perp$ 守恒）建立初末速度的几何关系。</li>
+<li><strong>求末速度</strong>：通过几何关系解出未知速度的大小，若涉及角度，常用 $v_1\sin\theta_1 = v_2\sin\theta_2$ 或 $v_1\cos\theta_1 = v_2\cos\theta_2$，注意角度的起算基准。</li>
+<li><strong>列动能定理</strong>：$qU_{AB} = \frac{1}{2}mv_B^2 - \frac{1}{2}mv_A^2$，将求得的速度代入求解电势差 $U_{AB}$。</li>
+<li><strong>注意符号</strong>：$U_{AB}$ 的正负可由动能变化判断，也可默认用绝对值后结合功能关系确定两点电势高低。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>角度基准混淆</strong>：题目中速度与电场方向的夹角，可能相对于电场线正向或负向，必须正确投射到平行和垂直分量，垂直分量不变是解题钥匙。</li>
+<li><strong>误用运动学公式直接求位移</strong>：在非直线运动中，常试图直接计算水平位移再乘场强求电势差，容易因位移分解错误而失分。应优先使用动能定理，避开位移矢量。</li>
+<li><strong>忘记动能定理中的 $q$ 的正负</strong>：本题 $q&gt;0$，但若粒子带负电，$U_{AB}$ 表达式不变，只是后续判断电势高低时需注意。</li>
+<li><strong>误将 $U=Ed$ 直接用于曲线运动</strong>：$U=Ed$ 仅适用于匀强电场中沿场强方向的直线投影，若路径弯曲，不可直接乘以路径长度。</li>
+<li><strong>混淆 $U_{AB}$ 与 $U_{BA}$</strong>：求 $A$、$B$ 两点间电势差需明确初末位置，动能定理默认从 $A$ 到 $B$ 列式，求出的是 $U_{AB}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2015-新课标Ⅱ-11）</h3>
+<p>质量为 $m$、电荷量为 $q$（$q&gt;0$）的粒子在匀强电场中运动，$A$、$B$ 为轨迹上两点。$A$ 点速度大小为 $v_0$，方向与电场方向夹角 $60^\circ$；$B$ 点速度方向与电场方向夹角 $30^\circ$。不计重力，求 $A$、$B$ 两点间电势差。</p>
+<p><strong>思路</strong><br />
+粒子只受恒定的电场力，垂直电场方向匀速，平行电场方向匀加速。利用垂直方向分速度不变，求出 $B$ 点速度大小，再对 $A$ 到 $B$ 过程用动能定理，列式解出电势差。</p>
+<p><strong>步骤</strong><br />
+设 $B$ 点速度大小为 $v_B$，场强方向设为水平。<br />
+垂直场强方向（竖直）分速度守恒：<br />
+$$v_B \sin 30^\circ = v_0 \sin 60^\circ$$
+$$\Rightarrow v_B \cdot \frac{1}{2} = v_0 \cdot \frac{\sqrt{3}}{2} \quad \Rightarrow \quad v_B = \sqrt{3}\, v_0$$
+从 $A$ 到 $B$，由动能定理（电场力做功 $W = qU_{AB}$）：<br />
+$$qU_{AB} = \frac{1}{2} m v_B^2 - \frac{1}{2} m v_0^2$$
+代入 $v_B$：<br />
+$$qU_{AB} = \frac{1}{2} m (3v_0^2) - \frac{1}{2} m v_0^2 = m v_0^2$$
+解得：<br />
+$$U_{AB} = \frac{m v_0^2}{q}$$</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是“垂直电场方向分速度不变”，这是所有匀强电场中带电粒子类平抛、类斜抛运动的突破口。
+- 若给出 $A$、$B$ 位移或时间，也可用运动学公式求场强 $E$ 和沿场强位移，再用 $U=Ed$，但动能定理更简洁。
+- 变式：若电场方向未知，但给出粒子动能变化和速度偏转角，同样可先分解速度，由动能变化求电势差；若粒子带负电或重力不可忽略，只需相应修改合外力做功。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-11.html">2015-新课标Ⅱ-11</a>（2015 · 中） 带电粒子在匀强电场中运动，已知初末速度方向，求两点间电势差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/163-电压.html">电势差</a></li>
+</ul>
+</div>
+</body>
+</html>

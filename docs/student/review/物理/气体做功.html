@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>气体做功</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>气体做功</h1><div class="review-mark" data-stem="气体做功"></div><div class="meta-card"><span><strong>考点</strong>气体做功</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>热学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：热学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：填空13</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>理想气体状态方程</strong>：$pV = nRT$（或 $pV = CT$，$C$ 为常数）。在 $T$-$V$ 图（或 $p$-$V$ 图、$p$-$T$ 图）中，一个点代表一个平衡态，一条线段代表一个准静态过程。</li>
+<li><strong>气体做功</strong>：系统对外界做功 $W_{\text{外}} = \int p \, dV$（准静态过程）。  </li>
+<li>$V$ 增大（膨胀）：气体对外做正功（$W_{\text{外}}&gt;0$），系统内能可能减少。  </li>
+<li>$V$ 减小（压缩）：气体对外做负功（外界对气体做正功，$W_{\text{外}}&lt;0$）。  </li>
+<li>$V$ 不变（等容过程）：$W_{\text{外}}=0$。</li>
+<li><strong>热力学第一定律</strong>：$\Delta U = W + Q$（外界对系统做功 $W$ 与系统吸热 $Q$ 之和等于内能增量）。常见约定：气体对外做功记为 $W'=-W$，则 $\Delta U = -W' + Q$，即 $Q = \Delta U + W'$。</li>
+<li>理想气体内能只与温度有关：$\Delta U = n C_V \Delta T$（$C_V$ 为定容摩尔热容）。$T$ 升高则 $\Delta U &gt; 0$，反之 $\Delta U &lt; 0$。</li>
+<li><strong>$T$-$V$ 图中的关键线</strong>：</li>
+<li>过原点的倾斜直线：由 $T \propto V$ 及 $pV = nRT$ 得 $p = \text{常数}$，即 <strong>等压过程</strong>。  </li>
+<li>平行于 $V$ 轴的直线：等容过程（$V$ 不変）。  </li>
+<li>平行于 $T$ 轴的直线：等温过程（$T$ 不变）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>对于 $T$-$V$、$p$-$V$、$p$-$T$ 图像与热力学第一定律的综合题，通用解法如下：</p>
+<ol>
+<li><strong>识图定过程</strong>：根据图像中线段的变化，判断是等压、等容、等温还是绝热等特殊过程，必要时利用状态方程换算出 $p$-$V$ 关系。  </li>
+<li><strong>判做功</strong>：由体积变化直接判断气体对外做功的正负。体积增大 → 对外做正功；体积减小 → 对外做负功；体积不变 → 不做功。  </li>
+<li><strong>判内能变化</strong>：理想气体内能仅由温度决定。从图中读出 $T$ 的变化方向，$T$ 升 → $\Delta U&gt;0$；$T$ 降 → $\Delta U&lt;0$。  </li>
+<li><strong>用第一定律定热量</strong>：根据 $\Delta U = W + Q$（或 $Q = \Delta U + W_{\text{外}}$）定量或半定量判断吸、放热。当 $\Delta U$ 与 $W$（或 $W_{\text{外}}$）已知符号后，可确定 $Q$ 的正负。  </li>
+<li><strong>特殊比例与计算</strong>：若涉及定量功、热量计算，需结合等压功 $W_{\text{外}} = p\Delta V$、等容热 $Q = nC_V\Delta T$、等压热 $Q = nC_p\Delta T$ 等。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆 $T$-$V$ 图与 $p$-$V$ 图</strong>：$T$-$V$ 图中过原点的直线代表等压过程，而非等温过程；等温过程在 $T$-$V$ 图中是平行于 $V$ 轴的竖直线。 </li>
+<li><strong>做功符号混乱</strong>：题目常“气体对外做功”与“外界对气体做功”换用，列第一定律 $ \Delta U = W + Q$ 时需明确 $W$ 是外界对系统做的功。习惯用 $Q = \Delta U + W_{\text{气体对外}}$ 更直接。</li>
+<li><strong>只看体积不看温度</strong>：做功只看体积变化，内能只看温度变化，两者独立判断后再综合热学第一定律；切忌不经内能分析，直接由做功推断热量。</li>
+<li><strong>等容不做功但温度可变化</strong>：体积不变时 $W_{\text{外}}=0$，但温度变化可引起内能变，此时 $Q = \Delta U$，吸放热直接由温度升降决定。</li>
+<li><strong>多过程连续性判断</strong>：综合问题常涉及多段过程，必须分段分析做功、内能变化，再判断各段的吸放热情况，不可混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022·全国乙卷·13 改编回顾）</h3>
+<p>一定量的理想气体从状态 $a$ 经状态 $b$ 变化到状态 $c$，其过程如 $T$-$V$ 图上的两条线段所示：$a \to b$ 为过原点的倾斜直线，$b \to c$ 为平行于 $T$ 轴的竖直线（即等容过程）。则在此过程中（多选）：<br />
+A. $ab$ 过程中气体对外界做功<br />
+B. $bc$ 过程中气体对外界做功<br />
+C. $ab$ 过程中气体从外界吸热<br />
+D. $bc$ 过程中气体从外界吸热</p>
+<h3><strong>思路</strong></h3>
+<p>先由 $T$-$V$ 图识别两个过程的特征：$ab$ 过原点 → 等压过程；$bc$ 是等容过程。再分别分析各过程体积变化 → 判定做功；温度变化 → 判定内能变化；最后用热力学第一定律推断热量传递方向。</p>
+<h3><strong>步骤</strong></h3>
+<ul>
+<li><strong>$a \to b$ 过程</strong>：  </li>
+<li>图线过原点 → 等压。由图知温度降低、体积减小。  </li>
+<li>体积减小 → 气体对外做负功（$W' &lt; 0$），A 项错。  </li>
+<li>温度降低 → 内能减少（$\Delta U &lt; 0$）。  </li>
+<li>由 $Q = \Delta U + W'$（$W'$ 为对外做功，符号已负）得 $Q$ 为负，即气体放热。C 项错。</li>
+<li><strong>$b \to c$ 过程</strong>：  </li>
+<li>图线平行于 $T$ 轴（$V$ 不变）→ 等容过程。  </li>
+<li>体积不变 → 气体对外不做功（$W'=0$），B 项错。  </li>
+<li>由图知温度升高 → 内能增加（$\Delta U &gt; 0$）。  </li>
+<li>由 $Q = \Delta U$ 得 $Q &gt; 0$，气体从外界吸热，D 项正确。</li>
+</ul>
+<p>综上，正确选项为 <strong>D</strong>（原卷若为多选可能同时选 C 和 D 需视选项原设，按此分析 $ab$ 放热，$bc$ 吸热；若 C 为“ab 气体放热”则 C 也正确）。</p>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>核心能力：从 $T$-$V$ 图像直接提取 $V$、$T$ 变化，并快速关联到等压、等容等过程。  </li>
+<li>变式 1：将图像改为 $p$-$V$ 图，$a \to b$ 为水平线（等压），$b \to c$ 为垂直线（等容），则做功分析类似，但需重新判断温度变化。  </li>
+<li>变式 2：增加过程 $c \to a$ 形成循环，求整个循环中气体对外做功、吸收净热量等，需结合循环面积（$p$-$V$ 图）或分段计算。  </li>
+<li>应试提醒：遇到 $T$-$V$ 图，第一时间标注出特殊线（过原点等压，竖线等容），再分段列出 $V$、$T$、$W'$、$\Delta U$、$Q$ 的符号，答案一目了然。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-13.html">2022-全国乙-13</a>（2022 · 中） 本题通过理想气体状态方程和热力学第一定律分析气体状态变化过程中各物理量的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/636-气体做功.html">气体做功</a></li>
+</ul>
+</div>
+</body>
+</html>

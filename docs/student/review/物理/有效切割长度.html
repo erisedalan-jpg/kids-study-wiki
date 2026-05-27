@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有效切割长度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>有效切割长度</h1><div class="review-mark" data-stem="有效切割长度"></div><div class="meta-card"><span><strong>考点</strong>有效切割长度</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>电磁感应</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：电磁感应</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>感应电动势公式（平动切割）</strong>：当导体棒在匀强磁场中做切割磁感线运动，且磁感应强度 $B$、棒长 $L$、速度 $v$ 两两垂直时，感应电动势的大小为 $E=BLv$。</li>
+<li><strong>有效切割长度</strong>：公式中的 $L$ 并非一定是导体棒的实际总长度，而是指导体棒<strong>处在磁场中的、且与速度方向垂直的那部分长度</strong>。若磁场区域有限，则 $L$ 由导体的位置和磁场边界的几何关系决定。</li>
+<li><strong>典型磁场边界</strong>：圆形匀强磁场区域，当直导体棒水平穿过，速度竖直时，有效切割长度等于导体棒在圆形磁场内的弦长 $L=2\sqrt{R^2-d^2}$，其中 $R$ 为磁场区域半径，$d$ 为棒到圆心的垂直距离。</li>
+<li><strong>运动学结合</strong>：自由下落（或匀变速）问题中 $v$ 需用运动学公式表达（如 $v=\sqrt{2gy}$），再代入 $E=BLv$；变化过程中的电动势比较常转化为函数极值或比值问题。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审清“三垂直”关系</strong>：先明确 $\vec{B}$ 方向、导体棒的取向及速度 $\vec{v}$ 方向，确认是否满足 $B\perp L\perp v$，若不垂直需投影处理。</li>
+<li><strong>写出有效切割长度 $L$ 的表达式</strong>：</li>
+<li>确定磁场边界形状（圆形、矩形、三角形等）。</li>
+<li>以导体棒的位置为变量，用几何关系（弦长、相似三角形等）表示 $L$。</li>
+<li><strong>写出速度 $v$ 的表达式</strong>：根据运动类型（自由落体、匀加速等）得到 $v$ 与位置或时间的函数。</li>
+<li><strong>代入 $E=BLv$ 计算</strong>：</li>
+<li>求特定位置的电动势直接代入；</li>
+<li>比较不同位置电动势大小，可作比 $E_1/E_2$ 或构造函数求极值。</li>
+<li><strong>注意适用条件</strong>：整个过程中导体棒必须始终有部分在磁场内，且磁场为匀强、忽略边缘效应。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误把导体全长当成切割长度</strong>：磁场区域有限时，棒实际切割磁感线的只是处在磁场内的那一段，必须按几何关系求解弦长或投影长度。</li>
+<li><strong>几何关系求错</strong>：圆形磁场中弦长公式容易漏掉系数 $2$，写为 $L=\sqrt{R^2-d^2}$；或圆心距 $d$ 的起点取错（是否从圆心算起）。</li>
+<li><strong>速度表达式错误</strong>：自由下落 $v=\sqrt{2gy}$ 中的 $y$ 必须是相对释放点的下落距离，若题目给出的是距某参考点的距离，需转换。</li>
+<li><strong>忽视有效长度与速度均随位置变化</strong>：比较 $E$ 大小时，不能只比较 $L$ 或只比较 $v$，必须将两者乘积作为整体分析。</li>
+<li><strong>磁场方向判断失误</strong>：缝隙中的匀强磁场方向通常沿圆柱轴向（由绕线方式决定），需确保 $B$ 与棒和速度均垂直，否则需加 $\sin\theta$ 项。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2010-新课标Ⅰ-08）<br />
+两同轴圆柱铁芯端面半径均为 $R$，缝隙中有匀强磁场。铜质细直棒 $ab$ 水平置于缝隙中，与圆柱轴线等高、垂直。铜棒由静止自由下落，求下落距离为 $0.2R$ 和 $0.8R$ 时的电动势 $E_1$、$E_2$ 的大小关系。</p>
+<p><strong>思路</strong><br />
+铜棒水平下落，速度竖直，磁场方向沿轴向（与棒垂直），因此 $E=BLv$ 适用。关键在有效切割长度 $L$：缝隙中的磁场区域是半径为 $R$ 的圆形，棒在不同高度时，处在磁场内的长度为对应弦长 $L=2\sqrt{R^2-d^2}$，其中 $d$ 为棒到圆心的竖直距离。初始棒与圆心等高，故下落距离 $y$ 即为 $d$。速度 $v=\sqrt{2gy}$。将 $y_1=0.2R$、$y_2=0.8R$ 代入作比即可判断。</p>
+<p><strong>步骤</strong><br />
+设磁感应强度为 $B$，铜棒下落距离为 $y$ 时：<br />
+有效切割长度 $$L(y)=2\sqrt{R^2-y^2}$$<br />
+下落速度 $$v(y)=\sqrt{2gy}$$<br />
+电动势 $$E(y)=B\cdot 2\sqrt{R^2-y^2}\cdot \sqrt{2gy}=2B\sqrt{2g}\sqrt{(R^2-y^2)y}$$<br />
+比较 $E_1$ 与 $E_2$：<br />
+$$\frac{E_1}{E_2}=\frac{\sqrt{(R^2-y_1^2)y_1}}{\sqrt{(R^2-y_2^2)y_2}}$$<br />
+代入 $y_1=0.2R$，$y_2=0.8R$：<br />
+$R^2-y_1^2=R^2-0.04R^2=0.96R^2$，$R^2-y_2^2=R^2-0.64R^2=0.36R^2$。<br />
+$$\frac{E_1}{E_2}=\frac{\sqrt{0.96R^2\cdot0.2R}}{\sqrt{0.36R^2\cdot0.8R}}=\frac{\sqrt{0.192R^3}}{\sqrt{0.288R^3}}=\sqrt{\frac{0.192}{0.288}}=\sqrt{\frac{2}{3}}\approx 0.816&lt;1$$<br />
+故 $E_1&lt;E_2$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是将变化的有效切割长度与变化的速率同步纳入计算，切忌忽略其一。常见变式有：① 磁场区域为矩形或三角形，导体棒倾斜切割；② 棒由静止释放改为匀速运动，求外力的功率；③ 改为转动切割，有效长度变为半径。无论哪种，<strong>先定几何关系写 $L$，再写速度，最后代入 $E=BLv$</strong> 是通用解法。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-08.html">2010-新课标Ⅰ-08</a>（2010 · 中） 铜棒在匀强磁场中下落切割磁感线，根据几何关系求有效切割长度再比较感应电动势大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/773-有效切割长度.html">有效切割长度</a></li>
+</ul>
+</div>
+</body>
+</html>

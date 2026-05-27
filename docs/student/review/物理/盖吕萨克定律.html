@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>盖吕萨克定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>盖吕萨克定律</h1><div class="review-mark" data-stem="盖吕萨克定律"></div><div class="meta-card"><span><strong>考点</strong>盖吕萨克定律</span><span><strong>权重</strong>27</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>热学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：热学</li>
+<li>权重 weight：27</li>
+<li>真题数：2；年份跨度：2013–2014</li>
+<li>出现题位：填空13 填空14</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>盖–吕萨克定律</strong>：一定质量的理想气体，在压强保持不变时，其体积与热力学温度成正比。
+  $$ \frac{V_1}{T_1} = \frac{V_2}{T_2} \quad \text{或} \quad V = CT \quad (p,m\ \text{不变}) $$</li>
+<li><strong>适用条件</strong>：质量一定、压强不变、理想气体。定律与分子动理论一致：温度升高，分子平均动能增大，若压强不变，则单位体积内分子数必须减小，宏观表现为体积膨胀。</li>
+<li><strong>温度必须是热力学温度</strong>（单位：K，$T = t + 273$）。任何摄氏温度必须换算后代入。</li>
+<li><strong>等压过程的判定</strong>：① 活塞自由滑动且一侧与大气连通或受力平衡不发生移动；② 连通器底部连通且上端与大气相通；③ 气体直接与恒定外压接触并且缓慢变化（准静态）。关键词：“缓慢加热”“活塞缓慢上升”且外部压强恒定。</li>
+<li><strong>与状态方程的联系</strong>：盖–吕萨克定律可由理想气体状态方程 $\frac{pV}{T}=C$ 在 $p$ 不变时直接退化为 $V/T=C$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定研究对象</strong>：明确哪部分气体经历等压变化（审题时圈出“与大气连通”“绝热轻活塞”“压强不变”等标志）。</li>
+<li><strong>判断压强是否恒定</strong>：分析活塞受力平衡，确定目标气体压强始终等于已知恒定值（如大气压 $p_0$ 或外力产生的恒定压强）。</li>
+<li><strong>找出初、末态参量</strong>：</li>
+<li>初态体积 $V_1$ 与温度 $T_1$（必须换算成开尔文）；</li>
+<li>末态体积 $V_2$ 与待求温度 $T_2$。</li>
+<li>对于涉及多部分、多气缸的连通体，利用几何关系（截面积之比、高度比）写出体积表达式，统一设为同一气缸的容积或借助辅助量约分。</li>
+<li><strong>列方程求解</strong>：将 $V_1, T_1, V_2$ 代入 $\frac{V_1}{T_1}=\frac{V_2}{T_2}$，得出 $T_2$。若求摄氏温度，再换算回 $t_2 = T_2 - 273$。</li>
+<li><strong>交叉验证</strong>：结合热力学第一定律或玻意耳定律等检验结果是否合理（如温度变化趋势是否与“加热”“膨胀”一致）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>温度未换算为开尔文</strong>：直接用摄氏温度代入 $V/T = C$ 会得出完全错误的倍数关系。7 ℃不是 $T=7$ K，而是 $T_1=280$ K。</li>
+<li><strong>忽视等压条件的变化</strong>：多阶段加热时，第一阶段活塞不动可能等容，第二阶段活塞移动才变为等压；错误地将全过程视为等压。</li>
+<li><strong>体积计算遗漏截面积差异</strong>：连接体气缸粗细不同时，体积计算要带截面积系数（如 $S_A=4S_B$），若只用高度相加会严重失真。</li>
+<li><strong>混淆不同气体</strong>：如本题中活塞上下分别为氧气和氮气，各自经历不同过程（等温或等压），误把氧气的温度代入氮气的等压公式。</li>
+<li><strong>压强分析错误</strong>：轻活塞下方气体压强不一定等于大气压，必须重新对活塞列平衡方程（考虑重力、额外作用力等），不能直接套用 $p=p_0$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2014·新课标Ⅱ·14</h3>
+<p><strong>题目</strong> 两气缸AB粗细均匀、等高且内壁光滑，下部由体积可忽略的细管连通；A的直径为B的2倍（$S_A=4S_B$），A上端封闭，B上端与大气连通；除A顶部导热外其余部分绝热。内部有绝热轻活塞a、b，下方充氮气，a上方充氧气。初始时外界温度7 ℃，大气压 $p_0$，活塞a离缸顶为气缸高度的 $\frac14$，活塞b在气缸正中央。求：(ⅰ)通过电阻丝缓慢加热氮气，当活塞b升至顶部时氮气的温度；(ⅱ)继续缓慢加热使活塞a上升，当a上升距离为气缸高度的 $\frac1{16}$ 时氧气的压强。</p>
+<p><strong>思路</strong><br />
+(ⅰ) 缓慢加热时，b活塞上方与大气连通且为轻活塞，因此氮气压强始终保持为 $p_0$，属于等压膨胀过程。找出氮气初、末态体积，代入盖–吕萨克定律求末温。<br />
+(ⅱ) 继续加热时，a开始上升，上方氧气被压缩。因A顶部导热且过程缓慢，氧气经历等温变化，用玻意耳定律求解压强。</p>
+<p><strong>步骤</strong><br />
+设气缸A总容积为 $V_0$，高度为 $h$；B的截面积 $S_B = S$，则 $S_A = 4S$，B的总容积 $V_B = Sh = \frac14 V_0$ (因为A容积 $V_0 = 4S h$)。<br />
+初态：氮气体积 $V_1 = V_A\text{下方} + V_B\text{下方}$。<br />
+a下方高度 $\frac34 h$，体积 $V_{A1}=4S \cdot \frac34 h = 3Sh = \frac34 V_0$；<br />
+b在正中央，下方高度 $\frac12 h$，体积 $V_{B1}=S \cdot \frac12 h = \frac12 Sh = \frac18 V_0$。<br />
+$V_1 = \frac34 V_0 + \frac18 V_0 = \frac78 V_0$。温度 $T_1 = 7+273 = 280\,\text K$。<br />
+末态：b升至顶部，a仍不动。此时b下方充满B全部容积，$V_{B2}=Sh = \frac14 V_0$，a下方体积不变仍为 $\frac34 V_0$，$V_2 = \frac34 V_0 + \frac14 V_0 = V_0$。<br />
+由盖–吕萨克定律 $\frac{V_1}{T_1}=\frac{V_2}{T_2}$，代入得 $\frac{\frac78 V_0}{280} = \frac{V_0}{T_2}$，解得 $T_2 = 320\,\text K$，即 $47\,\text{℃}$。<br />
+(ⅱ) 活塞a上升距离 $\frac{1}{16}h$ 时，a上方氧气体积从初始 $V_{\text{O}<em _text_O="\text{O">2,1}=4S \cdot \frac14 h = Sh$ 变为 $V</em>\right)h = \frac34 Sh$。初始氧气压强也为 $p_0$ (a轻活塞平衡)，等温过程：$p_0 \cdot Sh = p \cdot \frac34 Sh$，得氧气末压强 $p = \frac43 p_0$。}_2,2}=4S \cdot \left(\frac14 - \frac1{16</p>
+<p><strong>点评/变式</strong><br />
+此题是等压与等温过程的经典组合。要善于把气缸容积用同一基准表示，巧妙约去未知量。变式练习：若b活塞上方封闭有一段空气柱而非与大气连通，则氮气压强不再恒定，需重新分析。</p>
+<h3>代表题2：2013·新课标Ⅱ·13</h3>
+<p><strong>题目</strong> 关于一定量的气体，下列说法正确的是（　）<br />
+A．气体的体积是该气体分子所能到达的空间体积，而非所有分子体积之和<br />
+B．减弱气体分子热运动的剧烈程度，气体温度可降低<br />
+C．完全失重时气体对容器壁压强为零<br />
+D．气体从外界吸热，其内能一定增加<br />
+E．气体在等压膨胀过程中温度一定升高</p>
+<p><strong>思路</strong> 逐项辨析分子动理论、热力学第一定律及盖–吕萨克定律的结论。</p>
+<p><strong>步骤</strong><br />
+A正确：气体分子间距离极大，体积指容器容积。 B正确：温度是分子平均动能的标志，减弱热运动→平均动能减小→温度降低。 C错误：压强源于分子碰撞器壁，与重力无关，失重时仍有压强。 D错误：热力学第一定律 $\Delta U = Q + W$，吸热但若气体同时对外做功，内能可能不变或减小。 E正确：盖–吕萨克定律表明，压强一定时 $V \propto T$，等压膨胀则体积增大，热力学温度必升高。<br />
+故正确选项为A、B、E。</p>
+<p><strong>点评/变式</strong><br />
+此题以盖–吕萨克定律的定性结论为落脚点，考查定律与温度本质的理解。强调“等压膨胀”一定伴随温度升高（理想气体），避免与“等温膨胀”混淆。类似考法：等容升压则温度必升高（查理定律）。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-14.html">2014-新课标Ⅱ-14</a>（2014 · 中） 本题通过加热氮气及活塞移动过程，考查理想气体状态方程与等压、等温变化的应用。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-13.html">2013-新课标Ⅱ-13</a>（2013 · 中） 该题考查气体体积的微观含义、温度与分子热运动、气体压强产生条件、热力学第一定律及等压膨胀中的温度变化。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/447-盖吕萨克定律.html">盖吕萨克定律</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能级差</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>能级差</h1><div class="review-mark" data-stem="能级差"></div><div class="meta-card"><span><strong>考点</strong>能级差</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>氢原子能级公式</strong>：$E_n = \frac{E_1}{n^2}$，基态能量 $E_1 = -13.6\,\text{eV}$。  </li>
+<li><strong>能级跃迁</strong>：电子从高能级 $m$ 向低能级 $n$ 跃迁，辐射光子能量 $h\nu = |E_m - E_n|$；吸收光子时从低能级向高能级跃迁，吸收光子能量同样等于能级差。  </li>
+<li><strong>可见光光子能量范围</strong>：约 $1.62\,\text{eV} \sim 3.11\,\text{eV}$。  </li>
+<li><strong>常见氢原子能级的能量</strong>（$n=1,2,3,4$）：<br />
+  $E_1=-13.60\,\text{eV}$，$E_2=-3.40\,\text{eV}$，$E_3=-1.51\,\text{eV}$，$E_4=-0.85\,\text{eV}$。  </li>
+<li><strong>推论</strong>：向 $n=1$ 跃迁放出的光子能量在 $10.2\,\text{eV}$ 以上（紫外线）；向 $n=2$ 跃迁（巴尔末系）放出的光子部分落在可见光区；向 $n=3$ 跃迁放出的光子能量低于 $1.51\,\text{eV}$（红外线）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标定各能级能量</strong>：利用 $E_n = \frac{-13.6}{n^2}\,\text{eV}$ 计算或用能级图直接读取 $n=1,2,3,\dots$ 的能量值。  </li>
+<li><strong>写出可能的跃迁</strong>：按题意找出所有初、末能级组合，注意区分辐射跃迁（$m \to n$，$m&gt;n$）和吸收跃迁（$n \to m$）。  </li>
+<li><strong>计算能级差</strong>：$\Delta E = |E_m - E_n|$，注意负号处理，差值为正值。  </li>
+<li><strong>与可见光区间比较</strong>：  </li>
+<li>$\Delta E \in [1.62\,\text{eV}, 3.11\,\text{eV}]$ $\Rightarrow$ 可能对应可见光；  </li>
+<li>$\Delta E &gt; 3.11\,\text{eV}$ $\Rightarrow$ 紫外线；  </li>
+<li>$\Delta E &lt; 1.62\,\text{eV}$ $\Rightarrow$ 红外线。  </li>
+<li><strong>综合判断选项</strong>：对照选项的说法，确定波长、频率、可见光归属是否正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>能级能量为负值</strong>：计算 $\Delta E$ 时直接用高能级减低能级的代数值即可得到正值，切忌颠倒顺序使结果为负。  </li>
+<li><strong>“可见光”等同“任何跃迁”</strong>：向 $n=1$ 跃迁能量很大，属于紫外线，不可误认为可见光。  </li>
+<li><strong>巴尔末系不是全部可见</strong>：只有当跃迁末态为 $n=2$ 且 $\Delta E$ 落在 $1.62\,\text{eV}\sim 3.11\,\text{eV}$ 内才是可见光，$n=4\to 2$ 等跃迁能量约 $2.55\,\text{eV}$ 在可见区，而 $n=\infty \to 2$ 的能量为 $3.40\,\text{eV}$ 已超出可见光上限。  </li>
+<li><strong>混淆波长与频率关系</strong>：能量 $E$ 大，频率 $\nu$ 高，波长 $\lambda$ 短。若问“波长比可见光短”，等价于“光子能量比可见光大”。  </li>
+<li><strong>记错可见光能量范围</strong>：记住典型数值 $1.62\,\text{eV} \sim 3.11\,\text{eV}$，或记住红、紫光能量边界。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>氢原子的部分能级如图所示（$E_1=-13.6\,\text{eV}$，$E_2=-3.4\,\text{eV}$，$E_3=-1.51\,\text{eV}$，$E_4=-0.85\,\text{eV}$）。已知可见光的光子能量在 $1.62\,\text{eV}$ 到 $3.11\,\text{eV}$ 之间。由此可推知，氢原子（ ）<br />
+A. 从高能级向 $n=1$ 能级跃迁时发出的光的波长比可见光的短<br />
+B. 从高能级向 $n=2$ 能级跃迁时发出的光均为可见光<br />
+C. 从高能级向 $n=3$ 能级跃迁时发出的光的频率比可见光的高<br />
+D. 从 $n=3$ 能级向 $n=2$ 能级跃迁时发出的光为可见光  </p>
+<h3>思路</h3>
+<p>计算各区间跃迁的能量差范围，与可见光光子能量范围对比。高能级向 $n=1$ 最低能量为 $10.2\,\text{eV} &gt; 3.11\,\text{eV}$，在紫外区；高能级向 $n=2$ 的能量区间为 $1.89\,\text{eV}\sim 3.40\,\text{eV}$，部分超出可见光上限；高能级向 $n=3$ 最大能量为 $1.51\,\text{eV} &lt; 1.62\,\text{eV}$，全在红外区；$n=3 \to n=2$ 的能级差为 $1.89\,\text{eV}$，落在可见光范围内。</p>
+<h3>步骤</h3>
+<ol>
+<li>写出各能级能量：$E_1=-13.6\,\text{eV}$，$E_2=-3.4\,\text{eV}$，$E_3=-1.51\,\text{eV}$，$E_4=-0.85\,\text{eV}$。  </li>
+<li>分析四个选项对应的跃迁区间与能量：  </li>
+<li><strong>A</strong>：向 $n=1$ 跃迁，最小能级差为 $E_2 - E_1 = 10.2\,\text{eV}$，均大于 $3.11\,\text{eV}$，属于紫外线，波长比可见光短，说法正确但注意题目核心是“推知”，需看组合选项；  </li>
+<li><strong>B</strong>：向 $n=2$ 跃迁，能级差范围 $E_3 - E_2 = 1.89\,\text{eV}$ 到 $E_\infty - E_2 = 3.40\,\text{eV}$，其中 $3.40\,\text{eV}$ 大于 $3.11\,\text{eV}$，并非所有跃迁都为可见光，错；  </li>
+<li><strong>C</strong>：向 $n=3$ 跃迁，最大能级差 $E_\infty - E_3 = 1.51\,\text{eV}$，小于 $1.62\,\text{eV}$，频率比可见光低，错；  </li>
+<li><strong>D</strong>：$n=3 \to 2$ 能级差 $E_2 - E_3 = 1.89\,\text{eV}$，在 $1.62\,\text{eV}\sim 3.11\,\text{eV}$ 内，为可见光，正确。  </li>
+<li>题目为单选，最直接正确的为 D。  </li>
+</ol>
+<h3>点评/变式</h3>
+<p>本题通过能级图与可见光能量区间的对比，考查跃迁光子能量的定量判断。关键是把高能级向某低能级区间的最值算准。变式可改为判断各种跃迁属于电磁波谱的哪一波段（红外、可见、紫外），或结合光电效应询问哪些跃迁发出的光子能使某金属发生光电效应。注意：$n=3 \to 2$ 的 $1.89\,\text{eV}$ 对应红、橙光，属可见光。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-05.html">2009-全国Ⅱ-05</a>（2009 · 中） 该题考查氢原子能级跃迁时辐射光子能量与可见光范围的对应关系，需结合能级差与光子能量公式进行推断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/757-能级差.html">能级差</a></li>
+</ul>
+</div>
+</body>
+</html>

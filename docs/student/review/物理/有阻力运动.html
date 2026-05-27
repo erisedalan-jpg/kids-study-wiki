@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有阻力运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>有阻力运动</h1><div class="review-mark" data-stem="有阻力运动"></div><div class="meta-card"><span><strong>考点</strong>有阻力运动</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择7</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>有阻力竖直上抛运动的核心是<strong>分段受力分析</strong>，利用牛顿第二定律求加速度。</li>
+<li>上升阶段：重力 $mg$ 向下，空气阻力 $f$ 向下（与速度反向）。合力 $F_{\text{合}}=mg+f$，加速度大小 $a_{\text{上}}=g+\dfrac{f}{m}$，方向竖直向下。</li>
+<li>下降阶段：重力 $mg$ 向下，空气阻力 $f$ 向上。合力 $F_{\text{合}}=mg-f$，加速度大小 $a_{\text{下}}=g-\dfrac{f}{m}$，方向竖直向下。</li>
+<li>最大高度由上升过程决定，可用速度–位移公式：$v_0^2=2a_{\text{上}}H$，得 $H=\dfrac{v_0^2}{2(g+\frac{f}{m})}=\dfrac{mv_0^2}{2(mg+f)}$。</li>
+<li>落回抛出点速率由下降过程决定：$v_{\text{落}}=\sqrt{2a_{\text{下}}H}$，代入 $H$ 得 $v_{\text{落}}=v_0\sqrt{\dfrac{mg-f}{mg+f}}$。</li>
+<li>阻力恒定且始终与速度反向，上升与下降不对称：$H&lt; \dfrac{v_0^2}{2g}$，落回速度 $v_{\text{落}}&lt;v_0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画运动草图</strong>：标出初速度方向、阻力方向（上升时向下，下降时向上）、重力方向。</li>
+<li><strong>分段列牛顿第二定律</strong>：上升 $mg+f=ma_1$，下降 $mg-f=ma_2$，求出各自加速度。</li>
+<li><strong>选运动学公式</strong>：求最大高度用 $v_0^2=2a_{\text{上}}H$；求落回速度用 $v_{\text{落}}^2=2a_{\text{下}}H$（也可用动能定理，注意阻力始终做负功）。</li>
+<li><strong>联立求解</strong>：消去 $H$ 得到落回速度关于 $v_0,m,g,f$ 的表达式。</li>
+<li><strong>检查物理意义</strong>：当 $f\to0$ 时，结果应退化回无阻力竖直上抛的 $H=v_0^2/(2g)$，$v_{\text{落}}=v_0$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>上升、下降加速度混淆，忘记阻力方向改变，错误地全程统一处理。</li>
+<li>求最大高度时，直接套用 $H=v_0^2/(2g)$，忽略阻力的影响。</li>
+<li>求落回速度时，误以为整个过程机械能守恒或动能定理中阻力做功写错符号。阻力全程做负功：$W_f=-f\cdot 2H$。</li>
+<li>含参代数运算时，混淆质量 $m$ 与阻力 $f$ 的位置，推导出 $v_{\text{落}}=v_0\sqrt{\dfrac{mg+f}{mg-f}}$ 等错误形式。</li>
+<li>忘记检验无阻力极限情形，导致符号错误而失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009·全国Ⅱ·7）<br />
+以初速度 $v_0$ 竖直向上抛出一质量为 $m$ 的小物体，假定物块所受的空气阻力 $f$ 大小不变，重力加速度为 $g$，则物体上升的最大高度和返回到原抛出点的速率分别为（用 $v_0,m,g,f$ 表示）。</p>
+<p><strong>思路</strong><br />
+上升和下降阻力方向不同，必须分段处理。先对上抛过程用牛顿第二定律求加速度，再用运动学公式求高度；下降过程同理求加速度，再由高度反推出落回速率，最后联立消元。</p>
+<p><strong>步骤</strong><br />
+1. 设向上为正方向。上升：$mg+f=ma_1$，得 $a_1=g+\dfrac{f}{m}$。<br />
+2. 由 $0-v_0^2=-2a_1H$，得最大高度 $H=\dfrac{v_0^2}{2a_1}=\dfrac{v_0^2}{2(g+\frac{f}{m})}=\dfrac{mv_0^2}{2(mg+f)}$。<br />
+3. 下降：$mg-f=ma_2$，得 $a_2=g-\dfrac{f}{m}$。<br />
+4. 落回过程从静止下落 $H$，$v^2-0=2a_2H$，得 $v^2=2a_2H$，代入 $H$：
+   $$v^2=2\left(g-\frac{f}{m}\right)\cdot\frac{v_0^2}{2(g+\frac{f}{m})}=v_0^2\frac{mg-f}{mg+f}$$
+   所以 $v=v_0\sqrt{\dfrac{mg-f}{mg+f}}$。<br />
+5. 综上，最大高度为 $\dfrac{mv_0^2}{2(mg+f)}$，返回速率为 $v_0\sqrt{\dfrac{mg-f}{mg+f}}$。</p>
+<p><strong>点评/变式</strong><br />
+- 此题可变形为选择题选项式，需快速辨认等价表达式，如 $H=\dfrac{v_0^2}{2g(1+\frac{f}{mg})}$。<br />
+- 变式：若空气阻力与速度成正比，则不可用匀变速公式，常用微元法或能量积分，高考不作定量要求，但需注意阻力方向始终反向。<br />
+- 检验：当 $f=0$，$H=\dfrac{v_0^2}{2g}$，$v=v_0$，结果回归基础模型，可验算选项正误。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-07.html">2009-全国Ⅱ-07</a>（2009 · 难） 竖直上抛运动中考虑空气阻力，求解物体上升最大高度和落回原处速率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/626-有阻力运动.html">有阻力运动</a></li>
+</ul>
+</div>
+</body>
+</html>

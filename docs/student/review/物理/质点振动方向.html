@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质点振动方向</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质点振动方向</h1><div class="review-mark" data-stem="质点振动方向"></div><div class="meta-card"><span><strong>考点</strong>质点振动方向</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：解答15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>波长公式</strong>：机械波波长 $\lambda = vT$，其中 $v$ 为波速，$T$ 为周期。</li>
+<li><strong>波的干涉条件</strong>：两波源频率相同、振动方向相同、相位差恒定。</li>
+<li><strong>振动加强与削弱的判断</strong>：</li>
+<li>若两波源振动步调一致（同时向同方向振动），则波程差 $\Delta r = n\lambda$（$n = 0,1,2,\dots$）处质点振动加强；$\Delta r = (2n+1)\frac{\lambda}{2}$ 处质点振动削弱。</li>
+<li>若两波源振动步调相反，则加强、削弱的波程差条件互换。</li>
+<li><strong>质点振动方向的判断（波源带动法）</strong>：介质中质点重复波源的振动，但时间上落后。若质点与波源距离为 $\Delta x$，则振动状态比波源落后时间 $\Delta t = \frac{\Delta x}{v}$。特别地，当 $\Delta x = (n+\frac{1}{2})\lambda$（$n$ 为整数）时，质点振动方向与波源相反；若 $\Delta x = n\lambda$，则振动方向相同。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求基本物理量</strong>：根据 $v = \frac{\lambda}{T}$ 或 $\lambda = vT$，由已知波速和周期求波长，或由波长、波速求周期。</li>
+<li><strong>判振动加强/削弱</strong>：</li>
+<li>明确两波源的振动步调（同向还是反向）。</li>
+<li>计算目标点到两波源的波程差 $\Delta r = |r_1 - r_2|$。</li>
+<li>将 $\Delta r$ 与波长比较：$\Delta r$ 等于半波长的偶数倍（或波长的整数倍），且步调一致时，加强；等于半波长的奇数倍，且步调一致时，削弱。若步调相反则对调结论。</li>
+<li><strong>判质点某时刻振动方向</strong>（无波形图时）：</li>
+<li>从参考波源出发，算出波传播到目标质点需要的时间或周期数。</li>
+<li>确定目标质点振动比波源落后的相位。最简单做法：计算距离 $\Delta x$ 包含几个波长 $\lambda$，若距离为 $(n + \frac{1}{2})\lambda$，则质点与波源振动方向相反；若为 $n\lambda$，则相同。</li>
+<li>结合参考波源此时的振动方向，给出目标质点的方向。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波源步调与加强/削弱条件</strong>：两波源步调一致时，波程差为 0 或 $\lambda$ 的整数倍振动加强；若波源步调相反，波程差为 0 处却是削弱。务必先确认波源振动是否同相。</li>
+<li><strong>错误使用“同侧法”直接判断方向</strong>：在没有给出波形图，仅给出波源振动与传播距离时，直接套用波形图方法容易出错，应使用“波源带动法”或画出整个波形。</li>
+<li><strong>忽略传播时间造成的相位差</strong>：看到波源向上就认为所有质点都向上，忽略了波传播需要时间。当距离为半波长的奇数倍时，质点的振动方向与波源相反。</li>
+<li><strong>振动加强点并不始终在最大位移</strong>：加强点是指振幅最大（$A_1+A_2$），其位移仍随时间做简谐运动，可正可负可为零，不能误认为加强点永远停在最大位移处。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2022·全国乙卷·15</h3>
+<p><strong>题目简述</strong><br />
+两点波源 $S_1$ 和 $S_2$ 振幅相等、周期 $0.8\,\text{s}$，振动步调一致（同时过平衡位置向上）。波速 $5\,\text{m/s}$。求：（1）波长；（2）$P$ 点与 $S_1,S_2$ 距离均为 $10\,\text{m}$，两波引起的振动是加强还是削弱；（3）当 $S_1$ 在平衡位置向上运动时，$P$ 处质点向哪运动。</p>
+<p><strong>思路</strong><br />
+第（1）问直接用 $\lambda = vT$；第（2）问利用波源步调一致，波程差 $\Delta r = 0$，快速判定加强；第（3）问由 $S_1P = 10\,\text{m}$ 折算为波长的倍数，$10 = 2.5\lambda$，距离差半波长奇数倍，$P$ 点振动方向与 $S_1$ 相反。</p>
+<p><strong>步骤</strong><br />
+1. 求波长：<br />
+   $\lambda = vT = 5 \times 0.8 = 4\,\text{m}$。
+2. 判断加强/削弱：<br />
+   两波源振动步调相同；$P$ 到 $S_1$、$S_2$ 的距离差 $\Delta r = |10 - 10| = 0$，满足 $\Delta r = 0 = 0 \cdot \lambda$，故振动加强。
+3. 判断 $P$ 点运动方向：<br />
+   $S_1P = 10\,\text{m} = 2.5\lambda$，即 $(2+\frac{1}{2})\lambda$。根据波源带动法，距离为半波长的奇数倍时，质点振动方向与波源相反。此刻 $S_1$ 在平衡位置向上运动，所以 $P$ 处质点向下运动。</p>
+<p><strong>点评/变式</strong><br />
+- 本题是波的干涉与质点振动方向判断的典型结合题。第（3）空常见错误是直接答“向上”，忽略了 $2.5\lambda$ 带来的半周期延迟。<br />
+- <strong>变式</strong>：若 $S_1$、$S_2$ 振动步调相反（一个向上时另一个向下），其他条件不变，则 $P$ 点振动削弱，且 $S_1$ 在平衡位置向上时，$P$ 点振动方向变为向上。考生可自行推导加深理解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-15.html">2022-全国乙-15</a>（2022 · 中） 考查机械波波长计算与波的干涉现象，判断质点振动方向及振动加强条件。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/764-质点振动方向.html">质点振动方向</a></li>
+</ul>
+</div>
+</body>
+</html>

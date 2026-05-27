@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二极管反向电阻测量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二极管反向电阻测量</h1><div class="review-mark" data-stem="二极管反向电阻测量"></div><div class="meta-card"><span><strong>考点</strong>二极管反向电阻测量</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择9</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>多用电表欧姆挡原理</strong>：内置电源，红表笔接内部电源负极，黑表笔接内部电源正极。测电阻时电流从黑表笔流出，经外电阻从红表笔流入。</li>
+<li><strong>二极管单向导电性</strong>：正向偏置（正极接高电位、负极接低电位）时电阻很小，反向偏置时电阻极大，理想情况下反向电阻可视为 $\infty$。</li>
+<li><strong>反向电阻测量</strong>：应使二极管处于反向截止状态，即给二极管加反向电压。因此红表笔（内接电源负极）必须接二极管正极，黑表笔（内接电源正极）接二极管负极，此时二极管反向偏置，欧姆表示数反映反向电阻。</li>
+<li><strong>欧姆调零</strong>：换挡后必须将红、黑表笔短接，调节欧姆调零旋钮使指针指在右端 $0\ \Omega$ 刻度处。</li>
+<li><strong>读数准确性</strong>：欧姆表刻度不均匀，指针在表盘中央附近时读数误差最小，应合理选择量程使指针尽量指向中央区域。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>机械调零</strong>：观察指针是否停在左端无穷大刻度处，否则用机械调零螺丝调零。</li>
+<li><strong>选挡与欧姆调零</strong>：将选择开关旋至电阻挡的适当量程，短接红黑表笔，调节欧姆调零旋钮使指针指 $0$。</li>
+<li><strong>确定表笔接法</strong>：根据二极管极性判断——测<strong>反向电阻</strong>时，红笔接二极管<strong>正极</strong>，黑笔接<strong>负极</strong>；测正向电阻时接法则相反。</li>
+<li><strong>读数并记录</strong>：待指针稳定后读数，若指针偏角过大（示数小）或过小（示数大），应重新选择合适量程并重新欧姆调零后再测。</li>
+<li><strong>使用后归位</strong>：测量完毕将选择开关旋至 OFF 档或交流电压最高档。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>红黑表笔接反</strong>：混淆欧姆挡内部电源极性与普通电压/电流挡的接线习惯，误以为红笔永远接高电位。必须牢记测反向电阻时红笔接二极管正极。</li>
+<li><strong>忘记欧姆调零</strong>：每次换挡后未短接表笔并调零即直接测量，导致系统误差。</li>
+<li><strong>量程选择不当</strong>：未根据阻值范围合理选挡，指针偏向两端导致读数误差过大。</li>
+<li><strong>二极管极性判断错误</strong>：未识别出二极管的正负极标记，导致测试时加正向电压而误测为反向电阻。</li>
+<li><strong>短接与机械调零混淆</strong>：将检查机械零位与欧姆调零步骤混淆，不知道短接后才可调零。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2009-全国Ⅱ-09</h3>
+<p><strong>题目</strong>：某同学利用多用电表测量二极管的反向电阻。完成下列测量步骤：检查机械调零；将红、黑表笔插入插孔并选择电阻挡适当量程；（3）将红、黑表笔<strong><em>_</em>_，进行欧姆调零；（4）测反向电阻时，将</strong><strong><em>_表笔接二极管正极，将</em></strong><strong><em>表笔接二极管负极，读出电表示数；（5）为得到准确结果，应让电表指针尽量指向表盘</em></strong>___。</p>
+<p><strong>思路</strong>：
+- 欧姆挡使用规则：选择量程后必须短接表笔进行欧姆调零。
+- 反向电阻测量：二极管反向偏置，需根据欧姆表内部电源极性确定表笔接法。内部电源正极接黑表笔，要使二极管反偏，正极必须接低电位，故红表笔（负极）接二极管正极，黑表笔（正极）接二极管负极。
+- 指针最佳读数区域：欧姆表刻度中央附近最精确，故应指向中央。</p>
+<p><strong>步骤</strong>：
+1. 空（3）：机械调零并选挡后，将红黑表笔<strong>短接</strong>，调节欧姆调零旋钮使指针指 $0\ \Omega$。
+2. 空（4）：测反向电阻，红表笔接二极管<strong>正</strong>极，黑表笔接二极管<strong>负</strong>极，此时二极管反向截止，示数很大。
+3. 空（5）：为减小估读误差，指针应尽量指向表盘<strong>中央</strong>。</p>
+<p><strong>点评</strong>：此题严格按欧姆表操作规程设空，核心易错点是表笔接法。应试中可快速记忆：测反向电阻时“红正黑负”，正向则反之。同时强调换挡必调零、指针优选中央两大原则。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-09.html">2009-全国Ⅱ-09</a>（2009 · 易） 考查多用电表欧姆调零及测量二极管反向电阻的操作步骤</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/509-二极管反向电阻测量.html">二极管反向电阻测量</a></li>
+</ul>
+</div>
+</body>
+</html>

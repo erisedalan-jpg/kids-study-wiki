@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>验证机械能守恒定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>验证机械能守恒定律</h1><div class="review-mark" data-stem="验证机械能守恒定律"></div><div class="meta-card"><span><strong>考点</strong>验证机械能守恒定律</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>实验目的</strong>：用自由落体运动验证机械能守恒定律。</li>
+<li><strong>实验原理</strong>：在只有重力做功的自由落体运动中，物体的重力势能和动能互相转化，总机械能守恒。即 $mgh = \frac{1}{2}mv^2$，等式两边质量 $m$ 可消去，故只需验证 $gh = \frac{1}{2}v^2$，无需测量质量。</li>
+<li><strong>速度测量</strong>：利用打点计时器在纸带上记录下落过程，通过测量相邻计数点间的位移和时间间隔求瞬时速度，常用公式 $v_n = \frac{h_{n+1} - h_{n-1}}{2T}$。</li>
+<li><strong>高度测量</strong>：用米尺（刻度尺）测量纸带上从起点到各计数点的下落距离。</li>
+<li><strong>实验器材</strong>：铁架台（带铁夹）、打点计时器（电磁打点计时器需 $0\sim 12\,\text{V}$ 交流电源，电火花计时器需 $220\,\text{V}$ 交流电源）、纸带、重锤、米尺（刻度尺）。不需要天平（质量可消去），不需要秒表（打点计时器自带计时功能），不能使用直流电源。</li>
+<li><strong>误差分析</strong>：</li>
+<li>系统误差：纸带与打点计时器限位孔间的摩擦、空气阻力，导致重力势能减少量略大于动能增加量。</li>
+<li>偶然误差：用米尺测量纸带上点迹位置时的读数误差。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>器材选择类</strong>：</li>
+<li>明确打点计时器必须使用交流电源（电磁式低压交流，电火花式220V交流）。</li>
+<li>测量长度必选刻度尺（或米尺），不选秒表（打点周期即为计时单位）。</li>
+<li>验证 $mgh = \frac{1}{2}mv^2$ 的实验，<strong>绝对不选天平</strong>（已给重锤的质量无需测量）。</li>
+<li><strong>实验步骤排序/纠错</strong>：</li>
+<li>先接通打点计时器电源，后释放纸带；实验结束先关闭电源。</li>
+<li>重物应靠近打点计时器释放。</li>
+<li>选取纸带时，应选点迹清晰且第1、2两点间距接近 $2\,\text{mm}$ 的纸带（由 $h = \frac{1}{2}gT^2$，当 $T=0.02\,\text{s}$ 时，$h\approx 2\,\text{mm}$），保证初速接近零。</li>
+<li><strong>数据处理</strong>：</li>
+<li>从纸带选点，测出下落高度 $h_n$，算出该点瞬时速度 $v_n$，计算 $gh_n$ 与 $\frac{1}{2}v_n^2$，比较二者是否在误差范围内相等。</li>
+<li>或以 $\frac{v^2}{2}$ 为纵轴、$h$ 为横轴作图，若为过原点倾斜直线，斜率 $g$ 近似当地重力加速度，则守恒。</li>
+<li><strong>误差分析题</strong>：从“系统误差”与“偶然误差”两方面作答。系统误差必答摩擦与空气阻力；偶然误差必答长度测量的读数误差。注意“计算时 $g$ 取 $9.8\,\text{m/s}^2$”不算误差原因，属于数据处理。</li>
+<li><strong>注意审题</strong>：已给器材中若有天平，不能认为它是必用器材，验证实验中重锤质量不需具体数值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>误选<strong>秒表</strong>：打点计时器 $0.02\,\text{s}$ 打一个点，本身就是计时仪器，无需额外秒表。</li>
+<li>误选<strong>直流电源</strong>：电磁打点计时器靠交变电流产生周期性振动，只能用交流电源。</li>
+<li>误选或保留<strong>天平</strong>：部分考生习惯性认为实验必测质量，但本实验通过消除 $m$ 来验证，质量无需测量，天平多余。</li>
+<li>第1、2点间距是否必须为 $2\,\text{mm}$：若实验要求初速为零，应尽量选取；若实验不要求初速为零（利用某段初末状态验证），则不必拘泥。</li>
+<li>误差原因只答“有误差”不具体：必须明确指出“纸带与打点计时器之间的摩擦”“用米尺测量点位置时读数有误差”等具体来源。</li>
+<li>误答“重锤质量不准确”造成误差：质量在等式两边消去，质量误差不影响验证结果。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2010·新课标Ⅰ·09）</h3>
+<p><strong>题目</strong>：图为验证机械能守恒定律的实验装置示意图。现有的器材为：带铁夹的铁架台、电磁打点计时器、纸带、带铁夹的重锤、天平。回答：（1）为完成此实验，除了所给的器材，还需要的器材有（填入正确选项前的字母）A．米尺  B．秒表  C．0～12V的直流电源  D．0～12V的交流电源；（2）实验中误差产生的原因有（写出两个原因）。</p>
+<p><strong>思路</strong>：
+- 第（1）问为器材补充选择，需紧扣实验原理。已有电磁打点计时器，必须配低压交流电源；测量纸带上点迹间距需用米尺；无需秒表计时，无需天平（已给但实验用不上）。
+- 第（2）问误差分析，从系统与偶然误差角度列举具体原因。</p>
+<p><strong>步骤</strong>：
+1. 明确所需器材：电磁打点计时器工作电源为 $0\sim 12\,\text{V}$ 交流电，故选 <strong>D</strong>；测量下落高度需 <strong>A</strong> 米尺。
+2. 写出答案：（1）AD。
+3. 列举误差原因：主要原因有①纸带与打点计时器限位孔之间存在摩擦，造成机械能损失；②用米尺测量纸带上点迹位置时存在读数误差。此外空气阻力也可作为补充原因。</p>
+<p><strong>点评/变式</strong>：
+- 易错：许多考生见“天平”即认为必用，未领悟到验证 $gh = \frac{1}{2}v^2$ 中质量可消去的精髓，从而漏选或误判。
+- 若将打点计时器更换为电火花计时器，则交流电源应为 $220\,\text{V}$，此时对应的正确选项会发生变化，需随机应变。
+- 变式训练：若题中问“不必要的器材是”，则应答“天平、秒表”；若给出纸带数据计算某点速度，需用“中间时刻瞬时速度等于平均速度”公式精确求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-09.html">2010-新课标Ⅰ-09</a>（2010 · 中） 考查验证机械能守恒定律实验的器材选择和误差分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/751-验证机械能守恒定律.html">验证机械能守恒定律</a></li>
+</ul>
+</div>
+</body>
+</html>

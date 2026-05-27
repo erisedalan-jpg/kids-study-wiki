@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子在匀强电场中的运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>带电粒子在匀强电场中的运动</h1><div class="review-mark" data-stem="带电粒子在匀强电场中的运动"></div><div class="meta-card"><span><strong>考点</strong>带电粒子在匀强电场中的运动</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2008–2018</li>
+<li>出现题位：填空12 选择6</li>
+<li>难度分布：难2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心运动形式</strong>：带电粒子在匀强电场中的运动本质是匀变速曲线运动（$v_0$ 与 $E$ 有夹角）或匀变速直线运动。中学阶段核心模型为<strong>类平抛运动</strong>。</li>
+<li><strong>受力与能量</strong>：</li>
+<li>仅受恒定电场力 $F = qE$，方向由 $q$ 正负与 $E$ 方向决定，与粒子运动状态无关。</li>
+<li>重力是否忽略：对电子、质子、离子等微观粒子，通常不计重力；对油滴、小球等宏观带电体，若无特别说明，需考虑重力。</li>
+<li><strong>类平抛运动分解</strong>：</li>
+<li>垂直电场方向（匀速）：$x = v_0 t$，$v_x = v_0$</li>
+<li>平行电场方向（匀加速）：加速度 $a = \frac{qE}{m}$ 或 $\frac{qU}{md}$（极板间），速度 $v_y = at$，位移 $y = \frac{1}{2} a t^2$</li>
+<li><strong>功能关系</strong>：</li>
+<li>电场力做功 $W = qU$（与路径无关）。</li>
+<li>动能定理（王道公式）：$qU = \frac{1}{2}mv_t^2 - \frac{1}{2}mv_0^2$，常可避开复杂运动过程直接求解速度。</li>
+<li><strong>组合场衔接</strong>：粒子在不同区域依次运动（如电场→磁场→电场），“速度”是联系各段运动的关键物理量（大小和方向）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确场区与过程</strong>：</li>
+<li>画出示意草图，标出各区域场强 $E$ 的方向、宽度等已知量。</li>
+<li>将粒子运动按场区划分为若干段，逐段分析受力与运动性质。</li>
+<li><strong>首选动能定理求速度</strong>：</li>
+<li>若题目仅涉及初、末位置的速率，且中间过程复杂（尤其是涉及磁场偏转或往复运动），优先对整个电场过程或单段电场过程列动能定理：$qEd = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2$。</li>
+<li>注意功的正负：电场力做正功，动能增加；做负功，动能减少。</li>
+<li><strong>类平抛运动“三斧头”</strong>：</li>
+<li><strong>轴分解</strong>：垂直电场方向 $x = v_0 t$，沿电场方向 $y = \frac{1}{2}at^2$。</li>
+<li><strong>速度合成</strong>：$v = \sqrt{v_x^2 + v_y^2}$，$\tan \theta = \frac{v_y}{v_x}$。</li>
+<li><strong>轨迹方程</strong>：联立消去 $t$，得 $y = \frac{qE}{2mv_0^2}x^2$，利用几何约束（如射入、射出位置）建立方程。</li>
+<li><strong>力电综合平衡法</strong>：</li>
+<li>涉及匀速运动（如油滴问题），直接列出受力平衡方程：$F_{电} + f_阻 + mg = 0$（矢量和为零）。</li>
+<li>紧扣不同条件下的平衡方程，通过联立比值求解未知数。</li>
+<li><strong>组合场连接点——速度</strong>：</li>
+<li>粒子从电场进入磁场时，其合速度 $v$ 和方向 $\theta$ 是磁场中圆周运动的初始条件。</li>
+<li>题干中“恰好以入射速度出射”等信息，往往暗示电场中的往返类平抛运动具有对称性，或存在特定速度偏转角（如 $90^\circ$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>运动性质误判</strong>：粒子垂直电场线射入电场，若仅受电场力，必做匀变速曲线运动（类平抛），轨迹为抛物线，绝非圆周运动。进入磁场后才做匀速圆周运动。</li>
+<li><strong>时间求解依赖错误</strong>：在类平抛运动中，求时间应利用垂直于电场方向的匀速直线运动分位移 $t = x / v_0$，切忌用匀变速直线运动公式套整个曲线运动的时间。</li>
+<li><strong>场力方向矢量性</strong>：电场力是矢量，涉及多力平衡时，必须分析大小和方向。尤其当电压反向（$U$ 变 $-U$）时，电场力瞬间反向，需重新进行受力分析。</li>
+<li><strong>下落/上升判据混乱</strong>：对宏观油滴，空气阻力 $f = kv$，方向总与速度方向相反。需根据运动方向确定阻力方向，再与恒定电场力、重力合成。</li>
+<li><strong>功能关系使用条件不清</strong>：只有在纯电场力做功（或仅涉及首末状态速率）时，动能定理才最简。若中段有磁场，磁场力不做功，全程动能定理依然成立；但磁场力会改变动量，不可混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2018-新课标Ⅱ-12</h3>
+<ul>
+<li><strong>题目</strong>：在由磁场（宽 $l$）、两侧电场（各宽 $l'$，场强 $E$）构成的无限长条形区域内，正粒子从M点以某一速度入射电场，最后从N点以相同速度射出，不计重力。求其轨迹、入射速度和比荷、总时间。</li>
+<li><strong>思路</strong>：粒子经历“电场加速（类平抛）→磁场偏转（圆周）→电场减速（类平抛逆过程）”三个对称过程。<strong>速度</strong>是场区连接的桥梁，<strong>轨迹对称性</strong>是解题关键。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>轨迹</strong>：定性画出在左侧电场中抛物线向下弯曲，进入磁场后做一段圆弧（圆心在磁场区），出磁场后进入右侧电场，抛物线向上弯曲，最终水平从N点射出，整体轨迹关于磁场中心线对称。</li>
+<li><strong>求入射速度 $v_0$</strong>：粒子进入左侧电场，$v_0$ 是垂直电场方向的分速度。设进入磁场的合速度为 $v$，速度偏向角为 $\theta$。在电场中，由动能定理：$qEl' = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2$。在磁场中，轨迹圆心角等于 $2\theta$，由几何关系：$r\sin\theta = l/2$，且 $r = \frac{mv}{qB}$。联立并利用 $\sin\theta = v_0/v$，最终解得 $v_0 = \frac{E l}{2 B l'}$。</li>
+<li><strong>求比荷和时间</strong>：若速度方向与x轴夹角为 $\frac{\pi}{6}$，则 $\theta = \frac{\pi}{6}$，即 $\sin\theta = \frac{1}{2}$，$v_0 = v/2$。代入前述方程可得 $\frac{q}{m} = \frac{\sqrt{3}E}{2B^2 l'}$。总时间为三段之和：$t = 2t_{电} + t_{磁}$。电场中时间由垂直电场方向分运动得 $t_{电} = \frac{l'}{v_0}$；磁场中圆心角为 $2\theta = \frac{\pi}{3}$，时间 $t_{磁} = \frac{\pi m}{3 q B}$。代入比荷即可得出总时间表达式。</li>
+<li><strong>点评/变式</strong>：本题是经典对称组合场模型。核心突破点是利用“速度偏转角 $\theta$”沟通类平抛和圆周运动。变式可改变电场宽度或磁场分布，对称性可能被打破，需重新建立几何关系。</li>
+</ul>
+<h3>2012-新课标-12</h3>
+<ul>
+<li><strong>题目</strong>：在圆形区域中，同一粒子先后以相同速度 $v$ 射入，一次加匀强磁场，一次加匀强电场，都能使粒子从 $a$ 点射入，从 $b$ 点以垂直于原方向射出。已知磁感应强度 $B$，求电场强度 $E$。</li>
+<li><strong>思路</strong>：<strong>对比运动模型，建立相同的几何位移约束</strong>。磁场中是圆周运动，利用“出射速度垂直入射速度”找圆心和半径；电场中是类平抛，利用“位移垂直速度”列位移方程。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>磁场模型</strong>：粒子做匀速圆周运动。画出速度垂线定圆心 $O'$，连接 $a$、$b$ 两点。由题意，$ab$ 弦对应圆心角为 $90^\circ$，故轨迹半径 $r$ 与弦心距构成等腰直角三角形，求得 $r = R$（R为圆形区域半径）。由 $qvB = m v^2 / r$ 得 $r = \frac{mv}{qB} = R$。</li>
+<li><strong>电场模型</strong>：粒子做类平抛。初速度 $v$ 沿 $x$ 方向，电场 $E$ 沿 $-y$ 方向。粒子在 $x$ 方向匀速 $R = vt$，在 $y$ 方向匀加速 $R = \frac{1}{2}at^2$，其中 $a = \frac{qE}{m}$。</li>
+<li><strong>联立求解</strong>：由两方向位移方程消去 $t$，得 $R = \frac{qE}{2m} \cdot (\frac{R}{v})^2$ 化简得 $\frac{qE R}{m v^2} = 2$。结合磁场结论 $\frac{qB R}{m v} = 1$，两式相除消去 $\frac{q}{mv}$，最终得到 $E = 2vB$。</li>
+<li><strong>点评/变式</strong>：此题本质是用“位移的几何约束”代替“速度偏向角”，搭建起圆周和类平抛两个运动模型的桥梁。变式可改变出射点的位置（如出射速度方向仍为切线但夹角非 90°），则需用更一般的几何关系求解半径。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-12.html">2018-新课标Ⅱ-12</a>（2018 · 难） 带电粒子在匀强电场和磁场组合场中的运动，涉及轨迹分析、速度求解及比荷与时间计算。</li>
+<li><a href="../../exam/物理/2012-新课标-12.html">2012-新课标-12</a>（2012 · 难） 带电粒子在磁场中做圆周运动、在电场中做类平抛运动，比较两场中运动求电场强度</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-06.html">2008-全国Ⅱ-06</a>（2008 · 中） 油滴在平行板电容器电场、重力与空气阻力作用下多次匀速运动，分析平衡条件求速度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/468-带电粒子在匀强电场中的运动.html">带电粒子在匀强电场中的运动</a></li>
+</ul>
+</div>
+</body>
+</html>

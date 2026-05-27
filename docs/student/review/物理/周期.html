@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>周期</h1><div class="review-mark" data-stem="周期"></div><div class="meta-card"><span><strong>考点</strong>周期</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：0</li>
+<li>真题数：4；年份跨度：2013–2023</li>
+<li>出现题位：解答15 选择1 选择2</li>
+<li>难度分布：易2 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>周期 $T$</strong>：物体完成一次全振动所需的时间，单位秒(s)；频率 $f=\frac{1}{T}$，单位赫兹(Hz)。  </li>
+<li><strong>机械振动</strong>  </li>
+<li>弹簧振子：$T=2\pi\sqrt{\frac{m}{k}}$（$m$为振子质量，$k$为劲度系数），周期由系统本身性质决定，与振幅无关。  </li>
+<li>单摆（摆角$&lt;5^\circ$）：$T=2\pi\sqrt{\frac{l}{g}}$（$l$为摆长，$g$为重力加速度）。  </li>
+<li><strong>机械波</strong>  </li>
+<li>波速 $v=\frac{\lambda}{T}=\lambda f$，其中 $\lambda$ 为波长。  </li>
+<li>周期（频率）仅由波源决定，与介质无关；波速由介质决定。  </li>
+<li>同一列波在不同介质中传播时，频率不变，波速和波长改变。  </li>
+<li><strong>天体运动</strong>  </li>
+<li>卫星环绕中心天体：$G\frac{Mm}{r^2}=m\frac{4\pi^2}{T^2}r \Rightarrow T=2\pi\sqrt{\frac{r^3}{GM}}$。  </li>
+<li>中心天体密度 $\rho=\frac{M}{\frac{4}{3}\pi R^3}$，对近地卫星（$r\approx R$）有 $T=\sqrt{\frac{3\pi}{G\rho}}$，周期仅与密度有关。  </li>
+<li><strong>波的周期多解</strong>：波形在时间间隔 $\Delta t$ 内传播距离 $x=v\Delta t$，若 $\Delta t&lt;T$，可由波形平移量直接确定速度和周期；若传播方向未知，需分正、负方向讨论，出现多解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断周期（频率）的决定因素</strong>  </li>
+<li>声波、水波等从一种介质进入另一种介质：频率不变，波速变，波长变。  </li>
+<li>振动系统（弹簧振子、单摆）周期只与系统固有属性（$m,k$ 或 $l,g$）有关，与振幅、振动状态无关。  </li>
+<li><strong>由波形图求周期和波速</strong>（已知 $\Delta t&lt;T$）  </li>
+<li>根据波的传播方向，确定波形在 $\Delta t$ 内移动的水平距离 $\Delta x$（正方向移动的波形部分与负方向不同）。  </li>
+<li>波速 $v=\frac{\Delta x}{\Delta t}$，波长 $\lambda$ 由图读出，周期 $T=\frac{\lambda}{v}$（或直接按比例 $T=\frac{\lambda}{\Delta x}\Delta t$）。  </li>
+<li>若不明确传播方向，需分“正方向”和“负方向”两种情况讨论，分别算出对应的速度、周期。  </li>
+<li><strong>天体周期计算</strong>  </li>
+<li>列万有引力提供向心力：$G\frac{Mm}{r^2}=m\frac{4\pi^2}{T^2}r$，消去 $m$ 得 $T$ 表达式。  </li>
+<li>配合密度定义 $\rho=\frac{M}{V}$（球体 $V=\frac{4}{3}\pi R^3$），当 $r=R$ 时消去 $R$ 得到 $T$ 与 $\rho$ 的关系。  </li>
+<li>注意题目是否暗示“表面附近”，即轨道半径等于星球半径。  </li>
+<li><strong>弹簧振子质量变化问题</strong>  </li>
+<li>粘合体分开，振子质量改变，利用 $T=2\pi\sqrt{\frac{m}{k}}$ 分析周期变化。  </li>
+<li>在平衡位置分离，分离后振幅可能变化，但新周期只由剩余质量决定。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>声波/电磁波跨介质传播</strong>：误以为波速和频率同时变。实则频率（周期）由波源决定，不变；波速、波长改变。  </li>
+<li><strong>波形图求周期</strong>：直接使用 $\Delta t$ 代替周期，忽略波传播方向导致实际移动距离可能小于一个波长。必须结合波形具体移动量计算。  </li>
+<li><strong>波速混淆</strong>：分不清机械波波速由介质决定，而频率由波源决定。  </li>
+<li><strong>卫星周期与密度</strong>：死记公式却未注意“表面附近”条件（$r=R$），导致无法带入密度公式。  </li>
+<li><strong>弹簧振子分离后周期</strong>：误以为周期不变（仍用原总质量代入），或误认为振幅不变所以周期不变。正确：周期只与剩余振子质量有关，$m$ 减小，$T$ 变小。  </li>
+<li><strong>周期与振幅</strong>：错误认为振幅越大周期越长，弹簧振子和单摆的小振幅条件下周期与振幅无关。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2023-新课标-01</h3>
+<p><strong>题目</strong> 船上的人和水下的潜水员都能听见轮船的鸣笛声。声波在空气中和在水中传播时的（ ）<br />
+A. 波速和波长均不同  B. 频率和波速均不同  C. 波长和周期均不同  D. 周期和频率均不同  </p>
+<p><strong>思路</strong> 同一振源（轮船鸣笛）发出的声波，频率$f$（或周期$T$）由振源决定，在空气和水中频率相同；但波速$v$由介质决定，水中声速大于空气中声速；再由$v=\lambda f$知波长$\lambda$也随波速变化。  </p>
+<p><strong>步骤</strong><br />
+1. 确定频率（周期）不变：声源相同，$f_空 = f_水$，$T$不变。排除涉及频率或周期改变的选项。<br />
+2. 确定波速不同：声波在水中传播速度比空气中大，$v_水 &gt; v_空$。<br />
+3. 推导波长：由$\lambda = v/f$，$v$不同，$f$相同，故$\lambda$不同。<br />
+4. 结论：波速和波长均不同，选A。  </p>
+<p><strong>点评/变式</strong> 本题关键抓住“频率由波源决定，波速由介质决定”。若变式为同一列电磁波（如光）从空气进入水，同样频率不变，波速和波长改变。</p>
+<h3>【代表题】2021-全国乙-15</h3>
+<p><strong>题目</strong> 图中实线为一列简谐横波某时刻波形，经 $t=0.3\,\text{s}$ 后波形如图中虚线。已知波周期 $T&gt;0.3\,\text{s}$。若波沿 $x$ 轴正方向传播，求波速和周期；若沿 $x$ 轴负方向传播，求周期。  </p>
+<p><strong>思路</strong> 由题图可知波长 $\lambda=0.2\,\text{m}$。因为 $\Delta t&lt;T$，波形在 $\Delta t$ 时间内移动的距离小于一个波长，直接读出波形实线到虚线平移的距离 $\Delta x$，利用 $v=\Delta x/\Delta t$ 求波速，再求周期。  </p>
+<p><strong>步骤</strong><br />
+1. 从波形图读出波长 $\lambda=0.2\,\text{m}$。<br />
+2. 正方向传播：实线到虚线，波形向右移动了 $15\,\text{cm}=0.15\,\text{m}$，则 $v_1=\frac{0.15}{0.3}=0.5\,\text{m/s}$，$T_1=\frac{\lambda}{v_1}=\frac{0.2}{0.5}=0.4\,\text{s}$。<br />
+3. 负方向传播：波形向左移动了 $5\,\text{cm}=0.05\,\text{m}$，$v_2=\frac{0.05}{0.3}=\frac{1}{6}\,\text{m/s}$，$T_2=\frac{\lambda}{v_2}=\frac{0.2}{1/6}=1.2\,\text{s}$。<br />
+4. 两空分别填：正方向 $0.5\,\text{m/s}$、$0.4\,\text{s}$；负方向周期 $1.2\,\text{s}$。  </p>
+<p><strong>点评/变式</strong> 注意条件“$T&gt;0.3\,\text{s}$”保证 $\Delta t&lt;T$，避免多解。若去掉该条件，则需写出周期通解：$T=\frac{\lambda}{\Delta x}\Delta t$，但 $\Delta x$ 可能为 $n\lambda+\Delta x_0$，对应多组解。</p>
+<h3>【代表题】2020-新课标Ⅱ-02</h3>
+<p><strong>题目</strong> 均匀球形星体密度 $\rho$，引力常量 $G$，求在该星体表面附近沿圆轨道绕其运动的卫星周期。  </p>
+<p><strong>思路</strong> 表面附近，轨道半径 $r$ 等于星体半径 $R$。卫星所受万有引力提供向心力，消去质量，用密度代换 $M$，推导出周期表达式。  </p>
+<p><strong>步骤</strong><br />
+1. 设星体质量 $M$、半径 $R$，卫星质量 $m$，则 $G\frac{Mm}{R^2}=m\frac{4\pi^2}{T^2}R$。<br />
+2. 化简得 $T^2=\frac{4\pi^2 R^3}{GM}$。<br />
+3. 由密度 $\rho=\frac{M}{\frac{4}{3}\pi R^3}$，得 $M=\frac{4}{3}\pi R^3\rho$，代入上式：<br />
+   $$T^2=\frac{4\pi^2 R^3}{G\cdot\frac{4}{3}\pi R^3\rho}=\frac{3\pi}{G\rho}$$<br />
+4. 故 $T=\sqrt{\frac{3\pi}{G\rho}}$。  </p>
+<p><strong>点评/变式</strong> 最终周期表达式与星体半径无关，仅由密度和引力常量决定。这一结论常用于快速判断：同密度天体，表面卫星周期相同；密度越大，周期越小。若卫星轨道不在表面，需保留 $r$，周期与 $\sqrt{r^3}$ 成正比。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-01.html">2023-新课标-01</a>（2023 · 易） 声波在不同介质中传播时频率和周期不变，波速和波长不同</li>
+<li><a href="../../exam/物理/2021-全国乙-15.html">2021-全国乙-15</a>（2021 · 中） 根据波的传播方向，通过波形移动距离和时间求波速与周期。</li>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-02.html">2020-新课标Ⅱ-02</a>（2020 · 易） 该题通过万有引力提供向心力并结合密度公式，求解均匀球体表面附近卫星的环绕周期。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-15.html">2013-新课标Ⅱ-15</a>（2013 · 中） 本题考查弹簧振子模型中物块分离前后的周期和振幅变化分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/261-周期.html">周期</a></li>
+</ul>
+</div>
+</body>
+</html>

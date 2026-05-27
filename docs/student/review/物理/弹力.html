@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弹力</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>弹力</h1><div class="review-mark" data-stem="弹力"></div><div class="meta-card"><span><strong>考点</strong>弹力</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：13</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>弹力</strong>：发生弹性形变的物体，由于要恢复原状，对与它接触的物体产生力的作用。</li>
+<li><strong>胡克定律</strong>：在弹性限度内，弹簧的弹力大小 $F$ 与弹簧的形变量 $x$ 成正比，即 $F = kx$。  </li>
+<li>$k$：劲度系数（单位 N/m），由弹簧本身性质决定。  </li>
+<li>$x$：形变量，为弹簧现长与原长之差的绝对值（压缩时 $x = l_0 - l$，拉伸时 $x = l - l_0$）。  </li>
+<li><strong>方向</strong>：弹力方向与弹簧形变方向相反（拉伸时指向收缩方向，压缩时指向伸长方向）。</li>
+<li><strong>适用条件</strong>：弹性限度内，弹簧自身重力不计（轻质弹簧），且弹簧各处弹力大小相等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选对象，设原长</strong>：对轻弹簧，可直接将其弹力与外力平衡；设弹簧原长为 $l_0$。  </li>
+<li><strong>列形变表达式</strong>：根据压缩或拉伸状态，写出形变量 $x$：</li>
+<li>压缩：$x = l_0 - l$  </li>
+<li>拉伸：$x = l - l_0$  </li>
+<li><strong>代胡克定律建方程</strong>：用平衡时的外力等于弹簧弹力，列 $F_1 = kx_1$，$F_2 = kx_2$。  </li>
+<li><strong>解方程组</strong>：消去 $l_0$，求出 $k$；若需原长也可一并解出。  </li>
+<li><strong>验证与统一</strong>：若力方向不同，注意仅用大小列式，形变方向已体现在 $x$ 表达式中。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆弹簧长度与形变量</strong>：直接将题给长度 $l_1$、$l_2$ 代入 $F = kl$，而忽略原长 $l_0$。  </li>
+<li><strong>压、拉形变方向弄反</strong>：压缩时 $l_0 - l_1$，不可写成 $l_1 - l_0$；拉伸时 $l_2 - l_0$，不可颠倒。  </li>
+<li><strong>忽略“轻质弹簧”条件</strong>：若不考虑弹簧质量，两端弹力必相等且等于外力，否则需用牛顿第二定律分析。  </li>
+<li><strong>单位不注意</strong>：题中若给 cm 需化为 m，劲度系数单位用 N/m 进行计算。  </li>
+<li><strong>联立求解失误</strong>：在两个方程中准确消元，切忌把 $l_0$ 代错，导致 $k$ 的表达式错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>一根轻质弹簧一端固定，用大小为 $F_1$ 的力压弹簧另一端时，平衡长度为 $l_1$；改用大小为 $F_2$ 的力拉弹簧，平衡长度为 $l_2$。弹簧在弹性限度内，求劲度系数。</p>
+<p><strong>思路</strong><br />
+弹簧压缩和拉伸分别对应两种形变状态，引入原长 $l_0$，分别用胡克定律写出弹力与形变量的关系，利用平衡时弹力等于外力，联立解出 $k$。</p>
+<p><strong>步骤</strong><br />
+1. 设弹簧原长为 $l_0$，劲度系数为 $k$。<br />
+2. 压弹簧：形变量 $x_1 = l_0 - l_1$，由平衡得 $F_1 = k(l_0 - l_1)$。<br />
+3. 拉弹簧：形变量 $x_2 = l_2 - l_0$，由平衡得 $F_2 = k(l_2 - l_0)$。<br />
+4. 两式相加得 $F_1 + F_2 = k(l_2 - l_1)$，解得 $k = \frac{F_1 + F_2}{l_2 - l_1}$。<br />
+5. 选项匹配即可（本题对应选项 C）。</p>
+<p><strong>点评/变式</strong><br />
+- 此题必记结论：<strong>压、拉两种状态下，劲度系数 $k = \frac{F_1+F_2}{l_2-l_1}$</strong>，不依赖原长。<br />
+- 变式：若再增加原长求解，可任选一式代回求出 $l_0$。<br />
+- 易错警惕：若题给单位是 cm，务必先化成 m 以保证 $k$ 单位为 N/m，除非选项直接以 N/cm 呈现。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-02.html">2010-新课标Ⅰ-02</a>（2010 · 易） 弹簧劲度系数计算，考查胡克定律中弹力与形变量的关系</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/078-弹力.html">弹力</a></li>
+</ul>
+</div>
+</body>
+</html>

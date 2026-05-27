@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>变压器原理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>变压器原理</h1><div class="review-mark" data-stem="变压器原理"></div><div class="meta-card"><span><strong>考点</strong>变压器原理</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>交流电 与 变压器</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：交流电 与 变压器</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>理想变压器模型</strong>：无漏磁（磁通量全部约束在铁芯中）、原副线圈电阻不计（无铜损）、铁芯无涡流（无铁损）、励磁电流可忽略。</li>
+<li><strong>核心公式</strong>：</li>
+<li>电压与匝数关系：$\frac{U_1}{U_2} = \frac{n_1}{n_2}$（适用于一个原线圈和一个副线圈，或自耦变压器当原副线圈有公共部分时，同样按各自接入电路的匝数比计算）。</li>
+<li>功率关系：$P_1 = P_2$，即 $U_1 I_1 = U_2 I_2$。</li>
+<li>电流与匝数关系：$\frac{I_1}{I_2} = \frac{n_2}{n_1}$（单一副线圈、理想条件下成立）。</li>
+<li><strong>适用条件</strong>：上述简化公式直接适用于理想变压器在正弦交流电下稳态工作的情况。对自耦变压器，原、副线圈的匝数必须严格按其各自端点间所绕的线圈匝数计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别变压器类型</strong>：看清是普通双绕组变压器还是自耦变压器。自耦变压器的关键特征为原、副线圈共用一部分绕组。</li>
+<li><strong>确定匝数对应关系</strong>：</li>
+<li>普通变压器：原线圈匝数 $n_1$、副线圈匝数 $n_2$ 彼此独立。</li>
+<li>升压自耦变压器：原线圈匝数为公共端与输入抽头间的匝数，副线圈匝数为公共端与输出抽头间的匝数（通常等于总匝数或更大比例的匝数，以达到升压）。</li>
+<li><strong>套用电压关系式求解未知电压/匝数</strong>：由 $\frac{U_1}{U_2} = \frac{n_1}{n_2}$ 直接计算。</li>
+<li><strong>利用功率守恒求解电流</strong>：在已知功率 $P$ 与电压 $U$ 的情况下，直接用 $I = \frac{P}{U}$ 求解电流。对理想变压器，输入功率等于输出功率，即 $U_1 I_1 = P_2$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆自耦变压器匝数</strong>：对自耦变压器，误将总匝数当作原线圈匝数，或忽略了原、副线圈共用的部分。升压式自耦变压器，副线圈匝数等于总匝数，原线圈匝数是总匝数的一部分。</li>
+<li><strong>乱套用电流比公式</strong>：在自耦变压器或已知功率求电流的场景下，优先使用 $P_1 = P_2$ 推得 $I_1 = P_2 / U_1$，直接使用 $\frac{I_1}{I_2} = \frac{n_2}{n_1}$ 容易因匝数对应关系不清而出错，但验证可得一致结果。</li>
+<li><strong>电压比计算对象错误</strong>：在含多抽头的题目中，必须找准“谁与谁是原边”“谁与谁是副边”，严格按照接入交流电源的部分为原线圈、接负载的部分为副线圈的原则确定匝数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2012-新课标-04</h3>
+<p><strong>题目</strong>：一升压式自耦调压变压器，总匝数1900匝，原线圈1100匝，输入电压220V。当副线圈输出电压调至最大时，负载功率2.0kW。求此时原线圈电流 $I_1$ 和负载电压 $U_2$。</p>
+<p><strong>思路</strong>：本题的关键物理过程是，在升压自耦变压器中，输出电压最大时，副线圈匝数等于总线圈匝数。突破口是先由电压比公式求出 $U_2$，再由输入功率等于输出功率求出 $I_1$。</p>
+<p><strong>步骤</strong>：
+1. 找匝数关系：原线圈 $n_1 = 1100$ 匝，当输出电压调至最大时，副线圈匝数等于总匝数 $n_2 = 1900$ 匝。
+2. 用电压比公式求 $U_2$：
+   $$ \frac{U_1}{U_2} = \frac{n_1}{n_2} \Rightarrow \frac{220V}{U_2} = \frac{1100}{1900} \Rightarrow U_2 = 220V \times \frac{1900}{1100} = 380V $$
+3. 用功率守恒求 $I_1$：
+   理想变压器输入功率 $P_1$ 等于输出功率 $P_2 = 2.0kW$。
+   $$ P_1 = U_1 I_1 = P_2 \Rightarrow 220V \times I_1 = 2000W \Rightarrow I_1 \approx 9.1A $$</p>
+<p><strong>点评/变式</strong>：
+- 自耦变压器同样严格遵从法拉第电磁感应定律，电压比等于原副边的匝数比，任何“共用部分绕组的电流抵消”等复杂思考在解电压问题时可直接跨过，抓牢匝数比即可。
+- 变式：若同一自耦变压器改为降压使用（原边接1900匝，副边接1100匝），则电压比关系反转，输出电压会变为 $220V \times 1100/1900 \approx 127V$。解题流程完全一致，先辨匝数，再代公式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2012-新课标-04.html">2012-新课标-04</a>（2012 · 中） 该题考查理想变压器电压、电流与匝数关系及电功率计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">变压器原理</a></li>
+</ul>
+</div>
+</body>
+</html>

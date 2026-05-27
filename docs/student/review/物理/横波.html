@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>横波</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>横波</h1><div class="review-mark" data-stem="横波"></div><div class="meta-card"><span><strong>考点</strong>横波</span><span><strong>权重</strong>17</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：17</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>机械波的形成：波源的受迫振动带动相邻质点做受迫振动，振动状态（周期、振幅、起振方向）沿介质传播，形成机械波。</li>
+<li>横波传播的核心特征：</li>
+<li>各质点的振动周期 $T$ 与波源周期相同，与质点位置无关。</li>
+<li>各质点的振幅 $A$ 均等于波源振幅（无能量损失时）。</li>
+<li>各质点的起振方向与波源起振方向完全相同，不因传播距离而改变。</li>
+<li>质点的振动速度 $v_{\text{振}}$ 随时间周期性变化，最大值为 $v_{\text{振 max}} = \omega A = \frac{2\pi}{T}A$，与波速 $v$（振动状态传播速度）是两个完全不同的物理量，不可混淆。</li>
+<li>波长 $\lambda$、频率 $f = \frac{1}{T}$ 与波速 $v$ 的关系：$v = \lambda f = \frac{\lambda}{T}$，即 $\lambda = vT$。</li>
+<li>质点 $P$ 与波源距离 $s$ 满足 $s = n\lambda \ (n=0,1,2,\dots)$ 时，$P$ 点振动步调与波源完全相同，任意时刻位移均相同。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>面对“波源振动引起介质质点振动”类选择题，按以下步骤快速判断：
+1. <strong>锁定波源信息</strong>：明确波源的振幅 $A$、周期 $T$、起振方向（从平衡位置向哪个方向开始运动）。
+2. <strong>确认传播条件</strong>：题干是否有“无能量损失”“均匀介质”等条件。若无能量损失，各质点振幅均等于波源振幅 $A$。
+3. <strong>逐项应用三大不变性质</strong>：
+   - 各质点振动周期与波源相同 $\rightarrow$ 选项涉及周期一般为正确。
+   - 各质点振幅与波源相同 $\rightarrow$ 选项涉及振幅一般为正确（注意条件）。
+   - 各质点起振方向与波源起振方向相同 $\rightarrow$ 选项说“取决于距离”一定错误。
+4. <strong>区分波速与振动速度</strong>：看到“速度最大值为 $v$（波速）”的表述，直接判错。波速 $v$ 是传播速度，振动速度最大值 $\omega A$ 与波速无关。
+5. <strong>处理位移关系</strong>：计算 $P$ 点到波源的距离 $s$ 与波长 $\lambda = vT$ 的比值。若 $s = n\lambda$（$n$ 为整数），则 $P$ 点与波源位移时刻相同；若 $s = (2n+1)\frac{\lambda}{2}$，则位移时刻相反。用此判断位移同步性。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波速与质点振动速度</strong>：误以为质点振动速度的最大值就是波的传播速度 $v$，实际上 $v$ 是波形平移速度，而质点本身只在平衡位置附近振动，两者毫无相等关系。</li>
+<li><strong>误判起振方向</strong>：认为质点起振方向与到波源的距离有关，如“向上或向下取决于距离”，实际上所有质点的起振方向均模仿波源，与距离无关。</li>
+<li><strong>忽视波长整数倍条件</strong>：看到 $s = vT$ 就直接认为任意时刻位移相同，但必须确认 $s = vT$ 即是 $s = \lambda$，为一倍波长，因此满足同相条件。若 $s$ 不是波长整数倍，则位移不一定相同，易错用此规律。</li>
+<li><strong>忽略“无能量损失”前提</strong>：振幅不变仅适用于理想情况，若题目隐含阻尼，振幅会随传播距离衰减，做题时需看清条件。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·新课标·15）：一振动周期为 $T$、振幅为 $A$、位于 $x=0$ 的波源从平衡位置沿 $y$ 轴正向开始简谐运动，形成沿 $x$ 轴正向传播的一维简谐横波，波速为 $v$，无能量损失。关于质点 $P$ 的振动说法正确的是（　　）<br />
+A．振幅一定为 $A$<br />
+B．周期一定为 $T$<br />
+C．速度的最大值一定为 $v$<br />
+D．开始振动的方向沿 $y$ 轴向上或向下取决于它离波源的距离<br />
+E．若 $P$ 点与波源距离 $s=vT$，则质点 $P$ 的位移与波源的相同  </p>
+<p><strong>思路</strong>：本题直接考查波的形成与传播中质点振动的三大不变性和波速与振动速度的区别。利用波源参数和 $s$ 与 $\lambda$ 的关系逐项分析即可。</p>
+<p><strong>步骤</strong>：
+- 分析 A：波源振幅为 $A$，传播无能量损失，各质点振幅均与波源相同，故 A 正确。
+- 分析 B：各质点受迫振动的周期等于驱动源（波源）的周期，与位置无关，故 B 正确。
+- 分析 C：波速 $v$ 是振动状态的传播速度，质点振动速度的最大值为 $\omega A = \frac{2\pi}{T}A$，与 $v$ 无关，C 错误。
+- 分析 D：所有质点的起振方向均与波源起振方向相同，波源是从平衡位置沿 $y$ 轴正向开始振动，因此所有质点起振方向均沿 $y$ 轴正向，与距离无关，D 错误。
+- 分析 E：波长 $\lambda = vT$，$s = vT = \lambda$，恰为一个波长，故 $P$ 点与波源的振动相位差为 $2\pi$，位移时刻相同，E 正确。</p>
+<p><strong>点评/变式</strong>：该题为波传播中“同步性”判断的经典母题。选项 C 是最高频失分点，务必牢记波速与振动速度无关。选项 D 变式可能改为“起振方向与波源相反”或“与介质有关”，皆错。选项 E 可扩展：若 $s = \frac{n\lambda}{2}$，位移可能等大反向；仅当 $s = n\lambda$ 时位移完全相同。复习时建议自己画出 $t$ 时刻波形图，验证质点振动与波源的关系，强化数形结合。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-15.html">2011-新课标-15</a>（2011 · 难） 考查简谐横波传播中质点振动的振幅、周期、起振方向与波源的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/363-横波与纵波.html">横波</a></li>
+</ul>
+</div>
+</body>
+</html>

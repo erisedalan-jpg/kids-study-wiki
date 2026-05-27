@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>万有引力定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>万有引力定律</h1><div class="review-mark" data-stem="万有引力定律"></div><div class="meta-card"><span><strong>考点</strong>万有引力定律</span><span><strong>权重</strong>71</span><span><strong>真题数</strong>14</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：71</li>
+<li>真题数：14；年份跨度：2008–2024</li>
+<li>出现题位：填空13 选择1 选择2 选择3 选择4 选择5 选择6 选择7 选择8</li>
+<li>难度分布：中8 易3 难3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>万有引力定律</strong>：$F=G\frac{m_1m_2}{r^2}$，适用于质点或均匀球体（此时 $r$ 为两球心距离）。</li>
+<li><strong>重力与万有引力的关系</strong>：<ol>
+<li>两极（无自转）：$mg_0 = G\frac{Mm}{R^2}$。</li>
+<li>赤道（考虑自转）：$G\frac{Mm}{R^2} - mg = m\omega^2 R = m\frac{4\pi^2}{T^2}R$。</li>
+<li>一般位置：重力是万有引力的一个分力，另一个分力提供随地球自转的向心力。</li>
+<li>天体表面（忽略自转）：$mg = G\frac{Mm}{R^2} \Rightarrow GM=gR^2$（黄金代换）。</li>
+</ol>
+</li>
+<li><strong>天体运动核心方程</strong>：$G\frac{Mm}{r^2} = m\frac{v^2}{r} = m\omega^2 r = m\frac{4\pi^2}{T^2}r = ma_n$。</li>
+<li><strong>开普勒定律</strong>：<ol>
+<li>轨道定律：轨道为椭圆，太阳位于焦点。</li>
+<li>面积定律：$v_P &gt; v_Q$，$t_{近\to远} &gt; t_{远\to近}$，引力做功改变速率，机械能守恒。</li>
+<li>周期定律：$\frac{a^3}{T^2} = k$ （$a$ 为半长轴，中心天体决定 $k$）。</li>
+</ol>
+</li>
+<li><strong>天体密度推导</strong>：<ul>
+<li>近地卫星：$\rho = \frac{3\pi}{GT^2}$。</li>
+<li>稳定自转不瓦解的临界条件：$G\frac{Mm}{R^2} = m\frac{4\pi^2}{T^2}R$，结合 $\rho = \frac{M}{\frac{4}{3}\pi R^3}$，得最小密度 $\rho = \frac{3\pi}{GT^2}$。</li>
+<li>地表重力加速度法求密度：$g_0 = G\frac{M}{R^2}$，结合体积公式。</li>
+</ul>
+</li>
+<li><strong>引力势能</strong>：相对无穷远为负值，随距离增大而增大。引力做正功，势能减小；引力做负功，势能增大。</li>
+<li><strong>同步卫星</strong>：周期等于地球自转周期，轨道半径约 $4.2 \times 10^4$ km（距地面约36000 km），角速度等于地球自转角速度。</li>
+<li><strong>质量均匀球壳</strong>：对壳内物体引力为零。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>天体质量密度求解</strong>：</li>
+<li><strong>“地表法”</strong>：利用 $mg = G\frac{Mm}{R^2}$，得 $M=\frac{gR^2}{G}$，再由 $\rho=\frac{M}{V}$ 求密度。</li>
+<li><strong>“环绕法”</strong>：利用 $G\frac{Mm}{r^2} = m\frac{4\pi^2}{T^2}r$，得 $M=\frac{4\pi^2 r^3}{GT^2}$，结合体积求密度。若为近地（$r\approx R$），则 $\rho=\frac{3\pi}{GT^2}$。</li>
+<li><strong>“临界自转法”</strong>：处于“瓦解”临界时，赤道物体引力全部提供向心力，联立 $G\frac{Mm}{R^2}=m\frac{4\pi^2}{T^2}R$ 与密度公式求极值。</li>
+<li>
+<p><strong>常用比例</strong>：由 $g = G\frac{M}{R^2}$ 和 $\rho = \frac{M}{\frac{4}{3}\pi R^3}$，得 $g \propto \rho R$。</p>
+</li>
+<li>
+<p><strong>轨道参量比较与运算</strong>：</p>
+</li>
+<li>牢记“越高越慢”原则：轨道半径 $r$ 越大，$v$ 越小，$\omega$ 越小，$a_n$ 越小，$T$ 越大。</li>
+<li>宇宙速度：$v_1=7.9$ km/s（最大环绕/最小发射），$v_2=11.2$ km/s，$v_3=16.7$ km/s。</li>
+<li>赤道物体、近地、同步卫星区分：轨道半径排序 $r_{赤道物体}=R_{地} &lt; r_{近地} \ll r_{同步}$。</li>
+<li>
+<p>利用开普勒第三定律进行周期/半径的比例计算，注意是同一天体系统。</p>
+</li>
+<li>
+<p><strong>变轨与能量问题</strong>：</p>
+</li>
+<li>椭变圆：在远日点（远地点）加速变高轨圆，在近日点（近地点）减速变低轨圆。</li>
+<li>$E_{机械能} = E_k + E_p$，高轨道总机械能更大（$E_p$ 增大超过 $E_k$ 减小）。</li>
+<li>
+<p>稀薄大气阻力使卫星 $r$ 缓慢减小，引力做正功导致动能增加（速度变大），但机械能减少。</p>
+</li>
+<li>
+<p><strong>特殊物理模型处理</strong>：</p>
+</li>
+<li><strong>弹簧振子结合</strong>：注意简谐运动的平衡位置在受力平衡点（弹簧弹力=重力），而不是弹簧原长。利用对称性（$k\Delta x = mg$ 等）分析加速度、形变量。</li>
+<li><strong>星体遮挡信号</strong>：化为几何问题，利用切线、圆心角、弧长，结合运动周期求解时间。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“距离”与“半径”</strong>：万有引力公式 $F=G\frac{Mm}{r^2}$ 中的 $r$ 是<strong>球心距</strong>。若题干给的是距地面高度 $h$，必须用 $r=R+h$ 代入，切忌直接代入 $h$。</li>
+<li><strong>误判“完全失重”为“不受引力”</strong>：空间站中的物体完全失重，是指引力全部提供向心力，$F_引 = m\omega^2 r$，<strong>引力本身并不为零</strong>，且远大于地面上的向心力。</li>
+<li><strong>地表与高空引力大小比较</strong>：同一物体，$F_引 \propto \frac{1}{r^2}$，地表离地心近，所受引力大于高轨道处引力。</li>
+<li><strong>卫星受阻力动态误区</strong>：大气阻力使卫星减速，并非直接导致动能减小。因为阻力做负功，轨道半径变小，引力势能转化为动能，结果<strong>动能反而增大</strong>，但总机械能减小。</li>
+<li><strong>质量不随位置改变</strong>：经典力学中，质量是物体的固有属性，不随重力加速度变化。</li>
+<li><strong>同步卫星高度估算</strong>：同步卫星轨道半径约 4.2 万公里，是地球半径（6400 km）的约 6.6 倍，地月距离（38 万公里）约为其半径的 9 倍，可据此比例进行快速估算。</li>
+<li><strong>开普勒定律误用</strong>：椭-圆轨道混合命题中，$Q\to N$ 运动是先远离近日点，速率减小，引力做负功，经历的时间与速率有关，不能简单认为是四分之一周期。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题1</strong>：2024-辽宁-07（弹簧振子测密度）</h3>
+<p><strong>题目</strong>：将小球从弹簧原长处由静止释放，分别在地球与某天体表面简谐运动。图像显示平衡位置弹簧伸长量关系。地球半径是天体半径的 n 倍，求二者平均密度之比 $r_1/r_2$。</p>
+<p><strong>思路</strong>：核心在于建立简谐运动平衡位置与表面重力加速度的关系，再由 $g$ 引入天体密度。根据图像信息找到两星球下平衡位置弹簧伸长量的数量关系，结合黄金代换 $GM=gR^2$ 和密度定义求解。</p>
+<p><strong>步骤</strong>：
+1. 设地球表面重力加速度为 $g$，天体表面为 $g'$。根据简谐运动受力平衡，有 $k x_0 = mg$，故 $\frac{g}{g'} = \frac{x_0}{x_0'}$。
+2. 由黄金代换 $GM = gR^2$，代入 $M = \rho \cdot \frac{4}{3}\pi R^3$ 得：
+   $G\rho \cdot \frac{4}{3}\pi R^3 = g R^2 \Rightarrow g \propto \rho R$。
+3. 因此有：$\frac{g}{g'} = \frac{r_1 R}{r_2 R'} = \frac{r_1}{r_2} \cdot n$。
+4. 联立两式：$\frac{r_1}{r_2} \cdot n = \frac{x_0}{x_0'}$。
+   由题干图像（a）可知，弹簧原长时释放，地球表面振幅 $A = 4dx_1$，平衡位置形变量 $x_0=2dx_1$；天体表面振幅 $A'=2dx_2$，平衡位置形变量 $x_0'=dx_2$。
+   根据图像纵坐标比例可推得 $dx_1$ 与 $dx_2$ 的关系，或直接由图读出 $x_0$ 与 $x_0'$ 的比例。关键信息：图像显示天平平衡伸长量为地球的 1/2，即 $x_0 / x_0' = 2$。
+5. 所以 $\frac{r_1}{r_2} \cdot n = 2 \Rightarrow \frac{r_1}{r_2} = \frac{2}{n}$。</p>
+<p><strong>点评</strong>：此题巧妙结合力学与天体，关键是<strong>平衡位置对应重力</strong>，勿混淆原长。变式可考察双星系统、不同行星表面弹簧振子周期之比。</p>
+<h3><strong>代表题2</strong>：2023-新课标-04（近地轨道物资）</h3>
+<p><strong>题目</strong>：天舟六号携带物资对接空间站后，轨道高度约400 km（小于同步卫星高度），物资与静止地面时对比：
+A.质量；B.合力；C.引力；D.角速度。</p>
+<p><strong>思路</strong>：逐个选项物理本质分析。质量是标量；合力看状态（地面静止合力为0，太空做圆周运动合力为向心力）；引力由位置决定；角速度可用高低轨道的运动参量比较。</p>
+<p><strong>步骤</strong>：
+1. A错：质量在低速宏观下不变。
+2. B错：地面合力为零；太空受引力全部作为向心力，合力不为零且不为小（$F_{合} = \frac{GMm}{(R+h)^2}$）。
+3. C错：由 $F_{引}=G\frac{Mm}{r^2}$，$r_{地} &lt; r_{太空}$，故地面引力大于太空引力。
+4. D对：由 $G\frac{Mm}{r^2}=m\omega^2 r \Rightarrow \omega = \sqrt{\frac{GM}{r^3}}$，太空轨道 $r$ 小于同步卫星轨道 $r_{同}$，则 $\omega_{太空} &gt; \omega_{同} = \omega_{自转}$。</p>
+<p><strong>点评</strong>：本题针对考生“认为失重就是不受力”的典型迷思精准打击。牢记<strong>完全失重是指视重为零，合力（万有引力）不为零</strong>。</p>
+<h3><strong>代表题3</strong>：2022-全国乙-01（空间站漂浮）</h3>
+<p><strong>题目</strong>：近地圆轨道空间站中，航天员自由漂浮，表明（ ）
+A.引力近似为零；B.飞船作用力平衡引力；C.引力约等于向心力；D.地面引力小于太空向心力。</p>
+<p><strong>思路</strong>：考察完全失重的动力成因。空间站及内部物体均只受引力，且完全用于提供绕地飞行的向心力。$F_{引} = m a_n$，故相互挤压的作用力消失。</p>
+<p><strong>步骤</strong>：
+1. A错：航天员在空间站受地球引力（设该处重力加速度 $g'$），$F_{引}=mg'$，不可忽略。
+2. B错：飞船对航天员作用力（弹力）几乎为零，不是平衡引力的合力。
+3. C对：引力全部提供向心力，二者大小相等。
+4. D错：地面引力 $F_1=\frac{GMm}{R^2}$，太空向心力 $F_2=\frac{GMm}{(R+h)^2}$，有 $F_2 &lt; F_1$。</p>
+<p><strong>点评</strong>：完全失重环境的第一特征就是 $F_{引}=F_{向}$，其余接触力为零。注意区分地面与高空引力大小。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-07.html">2024-辽宁-07</a>（2024 · 中） 考查简谐运动对称性与天体表面重力加速度的综合应用，求天体密度比。</li>
+<li><a href="../../exam/物理/2023-新课标-04.html">2023-新课标-04</a>（2023 · 中） 该题辨析物体在空间站与地面的质量、引力及圆周运动角速度大小关系。</li>
+<li><a href="../../exam/物理/2022-全国乙-01.html">2022-全国乙-01</a>（2022 · 易） 航天员在空间站中万有引力提供向心力，飞船对其作用力为零。</li>
+<li><a href="../../exam/物理/2021-全国乙-05.html">2021-全国乙-05</a>（2021 · 中） 通过万有引力提供向心力计算中心天体质量，比较地球与S2的运动参数</li>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-02.html">2020-新课标Ⅱ-02</a>（2020 · 易） 该题通过万有引力提供向心力并结合密度公式，求解均匀球体表面附近卫星的环绕周期。</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-01.html">2019-新课标Ⅱ-01</a>（2019 · 易） 该题考查万有引力定律中探测器所受引力F与离地高度h的非线性关系及图像识别。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-03.html">2018-新课标Ⅱ-03</a>（2018 · 中） 通过万有引力提供向心力计算稳定自转星体的最小密度。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a>（2017 · 中） 海王星沿椭圆轨道绕太阳运动，考查从近日点经短轴端到远日点过程中的时间、速率、机械能和万有引力做功。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-05.html">2014-新课标Ⅱ-05</a>（2014 · 中） 该题利用地球两极和赤道重力加速度差异，结合自转周期和引力常量求地球密度。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-07.html">2013-新课标Ⅱ-07</a>（2013 · 中） 卫星在稀薄气体阻力下轨道半径减小时，动能和引力势能的变化判断。</li>
+<li><a href="../../exam/物理/2012-新课标-08.html">2012-新课标-08</a>（2012 · 难） 考察质量分布均匀的球体内部重力加速度与距球心距离的关系，利用球壳对内部物体引力为零的性质求比值。</li>
+<li><a href="../../exam/物理/2011-新课标-06.html">2011-新课标-06</a>（2011 · 中） 本题利用万有引力定律求同步卫星轨道半径，进而计算信号传播最短时间。</li>
+<li><a href="../../exam/物理/2009-全国Ⅱ-13.html">2009-全国Ⅱ-13</a>（2009 · 难） 球形空腔引起重力加速度反常的引力计算模型</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-13.html">2008-全国Ⅱ-13</a>（2008 · 难） 本题通过万有引力定律和几何关系求解卫星信号被月球遮挡的时间，涉及圆周运动与空间遮挡模型。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/246-万有引力定律.html">万有引力定律</a></li>
+</ul>
+</div>
+</body>
+</html>

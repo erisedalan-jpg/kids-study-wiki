@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何中点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何中点</h1><div class="review-mark" data-stem="几何中点"></div><div class="meta-card"><span><strong>考点</strong>几何中点</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>电场力做功与电势能变化：$W_{AB} = E_{pA} - E_{pB} = qU_{AB}$。正电荷电势能减小，电场力做正功。</li>
+<li>匀强电场中电势分布特征：沿任意直线，电势均匀变化。任意两点连线的中点电势等于两点电势的平均值：$\varphi_M = \frac{\varphi_A + \varphi_C}{2}$（$M$ 为 $AC$ 中点）。</li>
+<li>推论：若 $M$、$N$ 分别为 $a$–$c$、$b$–$d$ 的中点，则 $U_{MN} = \frac{1}{2}(U_{ab} + U_{cd})$? 需谨慎。正确关系：$\varphi_M = \frac{\varphi_a+\varphi_c}{2}$，$\varphi_N = \frac{\varphi_b+\varphi_d}{2}$，故 $U_{MN} = \varphi_M - \varphi_N = \frac{1}{2}[(\varphi_a-\varphi_b) + (\varphi_c-\varphi_d)] = \frac{U_{ab}+U_{cd}}{2}$。由此可得 $W_{MN} = qU_{MN} = \frac{W_{ab}+W_{cd}}{2}$。</li>
+<li>匀强电场场强与电势差关系：$E = \frac{U}{d}$，$d$ 必须是沿电场线方向的距离。仅靠任意两点距离无法直接确定场强大小。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别中点条件</strong>：题目给出中点，立刻联想到匀强电场中“中点电势等于两端点电势的平均值”。</li>
+<li><strong>转化已知做功为电势差</strong>：由 $W = qU$，将电势能变化量转化为两点间电势差，注意正负号（正电荷 $W$ 为正表示 $U&gt;0$，沿着电场力方向电势降低）。</li>
+<li><strong>应用中点电势关系列式</strong>：设未知电势（或直接表达 $U_{MN}$），利用 $\varphi_M = \frac{\varphi_a+\varphi_c}{2}$，$\varphi_N = \frac{\varphi_b+\varphi_d}{2}$，求出目标电势差 $U_{MN} = \frac{U_{ab}+U_{cd}}{2}$。</li>
+<li><strong>检验场强相关选项</strong>：看到直接由 $E = W/(qL)$ 的表述，务必检查 $L$ 是否沿场强方向；若不明确，选项一般错误。场强方向判定需要等势面信息，仅凭一对点做功不能唯一确定场强方向。</li>
+<li><strong>匀强电场中平行四边形/任意四边形中点</strong>：可将图形置于坐标系中，利用电势与位置坐标的线性关系 $\varphi = Ex + Fy + G$，中点坐标对应函数值求平均，快速验证做功关系。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误判场强方向</strong>：由 $a \to b$ 电场力做功只能给出 $a$、$b$ 电势高低，不能推断场强方向与 $ab$ 连线平行。场强方向可能沿任意方向，只要 $a$、$b$ 在电场方向上的投影距离合适。</li>
+<li><strong>错用场强公式</strong>：认为 $E = \frac{W}{qL}$ 普遍成立，忽略公式 $E = \frac{U}{d}$ 中 $d$ 是沿场强方向的有效距离。题中所给 $L$ 若非 $c$、$d$ 沿场强方向距离，则该表达式错误。</li>
+<li><strong>忽略电荷符号</strong>：题干指定 $q&gt;0$ 时较简单；若电荷符号不定，需分析不同电荷下做功与电势能变化的符号关系。</li>
+<li><strong>电势能“减小”理解偏差</strong>：电势能减小 $W_1$ 意味着电场力做功 $W_1$（正功），即 $W_{ab} = W_1$，$U_{ab} = W_1/q$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2018-新课标Ⅱ-08</h3>
+<p><strong>题目</strong>：$a$、$b$、$c$、$d$ 四点处于与平面平行的匀强电场中，$M$ 为 $a$、$c$ 连线中点，$N$ 为 $b$、$d$ 连线中点。正电荷 $q$ 从 $a$ 到 $b$ 电势能减小 $W_1$，从 $c$ 到 $d$ 电势能减小 $W_2$。判断：
+- A．场强方向一定与 $a$、$b$ 连线平行
+- B．粒子从 $M$ 到 $N$，电场力做功一定为 $\frac{W_1+W_2}{2}$
+- C．若 $c$、$d$ 间距为 $L$，则场强大小一定为 $\frac{W_2}{qL}$</p>
+<p><strong>思路</strong>：利用匀强电场中电势线性分布特性，构建中点电势关系，再将功转化为电势差进行运算。</p>
+<p><strong>步骤</strong>：
+1. 由正电荷电势能减少知 $W_{ab}=W_1$，$W_{cd}=W_2$，故 $U_{ab}=W_1/q$，$U_{cd}=W_2/q$。
+2. $M$ 为 $ac$ 中点 $\Rightarrow$ $\varphi_M = (\varphi_a+\varphi_c)/2$；$N$ 为 $bd$ 中点 $\Rightarrow$ $\varphi_N = (\varphi_b+\varphi_d)/2$。
+3. $U_{MN}=\varphi_M-\varphi_N = \frac{1}{2}[(\varphi_a-\varphi_b)+(\varphi_c-\varphi_d)] = \frac{1}{2}(U_{ab}+U_{cd})$。
+4. 故 $W_{MN}=qU_{MN}=\frac{W_1+W_2}{2}$，B 对。
+5. A 错：$a$、$b$ 连线方向不一定是场强方向，做功仅反映沿场强方向投影的移动。
+6. C 错：$L$ 若不沿场强方向，不能直接用 $E=\frac{U_{cd}}{L}=\frac{W_2}{qL}$，缺少有效距离条件。</p>
+<p><strong>点评/变式</strong>：本题核心是“匀强电场中两点连线中点电势等于两端电势平均值”，任意四边形中连接对边中点得到的线段，其两端电势差等于另外两组对边电势差的平均值。变式可改为已知某三点电势，求第四点或中点电势，或结合几何图形求电场强度方向。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-08.html">2018-新课标Ⅱ-08</a>（2018 · 中） 考查匀强电场中电势能与电场力做功的关系，涉及几何中点与等势面分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/777-几何中点.html">几何中点</a></li>
+</ul>
+</div>
+</body>
+</html>

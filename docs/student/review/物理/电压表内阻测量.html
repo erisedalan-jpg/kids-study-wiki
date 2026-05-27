@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电压表内阻测量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电压表内阻测量</h1><div class="review-mark" data-stem="电压表内阻测量"></div><div class="meta-card"><span><strong>考点</strong>电压表内阻测量</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>半偏法测电压表内阻原理</strong>：电压表满偏电流 $I_g$ 是半偏电流的两倍。利用分压电路，先使电压表满偏，再串联电阻箱使电压表半偏，此时认为串联电阻箱上的电压与电压表半偏电压相等（均为 $\frac{U_g}{2}$），故电压表内阻 $R_V = R_0$（电阻箱读数）。</li>
+<li><strong>电路结构</strong>：滑动变阻器 $R_1$（小阻值）接成分压式电路，电压表与电阻箱 $R_0$ 串联后再与滑动变阻器输出端并联，两个开关分别控制电压表所在支路的通断与电阻箱的短路。</li>
+<li><strong>实验步骤要点</strong><br />
+  ① 将滑动变阻器滑片移至分压最小端，闭合 $S_1$、$S_2$，调节 $R_1$ 使电压表满偏。<br />
+  ② 保持 $R_1$ 滑片位置不变，断开 $S_2$，调节 $R_0$ 使电压表半偏，则 $R_V = R_0$。</li>
+<li><strong>误差分析</strong>：<br />
+  实际电路中，断开 $S_2$ 后支路总电阻增大，分压增大，电压表半偏时 $R_0$ 两端实际电压 $&gt; \frac{U_g}{2}$，故 $R_{\text{测}} &gt; R_{V\text{真}}$，测量值偏大。减小误差要求 $R_1 \ll R_V$，使分压电路输出电压受负载变化影响极小。</li>
+<li><strong>适用条件</strong>：电源电动势约 $2U_g$，滑动变阻器阻值远小于电压表内阻，电阻箱调节范围足够。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>电路设计</strong>  </li>
+<li>若要求补充电路图：必须采用分压式接法（滑动变阻器阻值远小于待测电阻），电压表与电阻箱串联，并设置开关可短接电阻箱。</li>
+<li>
+<p>注意开关位置：$S_2$ 并联在电阻箱两端，闭合时短接电阻箱，电压表直接接分压输出；断开后电阻箱与电压表串联。</p>
+</li>
+<li>
+<p><strong>实验步骤规范表述</strong>  </p>
+</li>
+<li>先保安全：滑片置于分压最小端（通常为靠近电源负极的固定端）。  </li>
+<li>满偏调节：闭合全部开关，调 $R_1$ 使电压表满偏。  </li>
+<li>
+<p>半偏读数：保持 $R_1$ 不变，断开 $S_2$，调 $R_0$ 使电压表半偏，此时电阻箱读数即内阻测量值。</p>
+</li>
+<li>
+<p><strong>误差判断与解释</strong>  </p>
+</li>
+<li>比较 $R_{\text{测}}$ 与 $R_{V\text{真}}$：记住测量值<strong>偏大</strong>。  </li>
+<li>解释模板：“断开 $S_2$ 后支路总电阻增大，分压变大，$R_0$ 两端实际电压大于满偏电压的一半，故电阻箱接入阻值大于真实内阻。”  </li>
+<li>减小误差方法：选用远小于 $R_V$ 的滑动变阻器，尽量使分压输出接近恒压。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>开关作用混淆</strong>：$S_2$ 必须与电阻箱<strong>并联</strong>才能短接，若画成串联则半偏时电阻箱不在回路。  </li>
+<li><strong>滑片初始位置错误</strong>：必须确保闭合开关前分压为零或最小，保护电表。  </li>
+<li><strong>半偏操作顺序错误</strong>：必须先满偏再半偏，且两次过程中滑动变阻器触头位置<strong>严禁变动</strong>，否则条件不成立。  </li>
+<li><strong>误差方向记反</strong>：不少考生误认为半偏法测电压表内阻测量值偏小。实际因支路电压升高导致电阻箱分压偏大，测量值偏大。  </li>
+<li><strong>理由表述不严谨</strong>：只说“电压变大”不够，需点明“该支路总电阻增大，分压增大，电阻箱电压大于半偏电压”。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2015·新课标Ⅱ·10</h3>
+<p><strong>题目</strong><br />
+利用半偏法测量电压表内阻（量程3V，内阻约3000Ω），提供电阻箱 $R_0$（最大99999.9Ω）、滑动变阻器 $R_1$（最大100Ω）、电动势6V内阻不计电源、两个开关、导线若干。要求：（1）补全电路图；（2）写出实验步骤；（3）比较测量值与真实值大小并说明理由。</p>
+<p><strong>思路</strong><br />
+待测电压表内阻约3000Ω，滑动变阻器最大100Ω，满足 $R_1 \ll R_V$，可用分压式实现近似恒压。将电压表与电阻箱串联，通过开关 $S_2$ 短接电阻箱实现满偏，断开后调节电阻箱实现半偏，由串联分压关系得到 $R_V$。</p>
+<p><strong>步骤</strong><br />
+（1）电路设计：滑动变阻器接成分压式，电压表和电阻箱串联后并联在分压输出端，开关 $S_2$ 并联在电阻箱两端。<br />
+（2）实验步骤：①将滑动变阻器滑片移至最左端（分压最小），闭合 $S_1$、$S_2$，调节 $R_1$ 使电压表满偏；②保持 $R_1$ 滑片不动，断开 $S_2$，调节 $R_0$ 使电压表半偏，记录此时电阻箱阻值 $R_0$，即得 $R_V＝R_0$。<br />
+（3）对比真实值：$R_V' &gt; R_V$。理由：断开 $S_2$ 后，电压表与电阻箱串联支路总电阻增大，分压增大，电压表半偏时电阻箱两端实际电压大于满偏电压的一半，故电阻箱接入阻值比真实内阻大。</p>
+<p><strong>点评/变式</strong><br />
+- 本题是半偏法测电压表内阻的典型模板，电路图、步骤和误差分析需完整记忆。<br />
+- 变式：若电源电动势较低（比如仅4V），需验证能否使电压表满偏；若滑动变阻器阻值不够小，误差会更大，需在理由中强调。<br />
+- 易错：部分考生误将 $S_2$ 画成与电压表并联，导致半偏时电压表被短路，完全错误。强调“短接电阻箱”是核心。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-10.html">2015-新课标Ⅱ-10</a>（2015 · 中） 半偏法测电压表内阻的电路设计、实验步骤及误差分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/669-电压表内阻测量.html">电压表内阻测量</a></li>
+</ul>
+</div>
+</body>
+</html>

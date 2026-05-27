@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>引力势能</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>引力势能</h1><div class="review-mark" data-stem="引力势能"></div><div class="meta-card"><span><strong>考点</strong>引力势能</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>引力势能定义</strong>：取无穷远处为零势能点，质量为 $m$ 的物体在距质量为 $M$ 的中心天体球心 $r$ 处具有的引力势能
+  $$E_p = -\frac{GMm}{r}$$
+  其中 $G$ 为引力常量。</li>
+<li><strong>引力做功与势能变化</strong>：引力做功 $W_{引} = -\Delta E_p = E_{p1} - E_{p2}$。<br />
+  引力做正功，引力势能一定减小；克服引力做功，引力势能一定增大。</li>
+<li><strong>圆轨道运动特征</strong>：卫星绕中心天体做匀速圆周运动时，
+  $$G\frac{Mm}{r^2} = m\frac{v^2}{r} \quad\Rightarrow\quad v=\sqrt{\frac{GM}{r}},\; E_k=\frac{1}{2}mv^2=\frac{GMm}{2r}$$
+  轨道半径 $r$ 越小，线速度 $v$ 和动能 $E_k$ 越大；同时引力势能 $E_p = -\frac{GMm}{r}$ 随 $r$ 减小而减小（更负）。</li>
+<li><strong>机械能</strong>：圆轨道卫星的总机械能
+  $$E = E_k + E_p = -\frac{GMm}{2r}$$
+  $r$ 减小时，总机械能减小（更负）。稀薄气体阻力做负功使机械能减少，轨道收缩。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>这类“天体变轨/轨道变化中的能量判断”题，通用解法步骤：
+1. <strong>锁定关键信息</strong>：明确轨道半径 $r$ 如何变化（变大/变小），明确受力情况（除引力外有无阻力、推力做功）。
+2. <strong>速度与动能判断</strong>：<br />
+   - 圆轨道：$v=\sqrt{\dfrac{GM}{r}}$，$r$ 减小则 $v$ 增大，动能 $E_k$ 增大；反之相反。<br />
+   - 若题目存在阻力，注意不是由阻力单独决定动能变化，引力做正功可能超过阻力做的负功。
+3. <strong>引力势能判断</strong>：利用 $E_p = -\dfrac{GMm}{r}$，$r$ 减小→$E_p$ 减小；同时依据“引力做正功，引力势能减小”定性判断。
+4. <strong>机械能判断</strong>：有外力（如稀薄气体阻力）做负功，则机械能减少；对应总机械能 $E = -\dfrac{GMm}{2r}$ 随 $r$ 减小而减小。
+5. <strong>选项组合判断</strong>：逐项代入步骤2—4的结论，排除错误说法，选出正确选项。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>将阻力作用与动能变化直接挂钩</strong>：看到“稀薄气体阻力”就想当然认为动能减小。实际上，轨道半径变小时引力做正功，动能反而增大。必须比较引力做功与阻力做功的净效果（此处由轨道速度公式直接得动能增大）。</li>
+<li><strong>混淆引力势能的零势能点</strong>：默认地面为零势能面，错误使用 $mgh$。天体问题中引力势能一般取无穷远为零势能点，公式为 $E_p = -\frac{GMm}{r}$。</li>
+<li><strong>忽略引力势能的负号</strong>：$r$ 减小，$-\frac{GMm}{r}$ 的值更负，所以是减小（不是增大）。误判势能变化方向会导致错选。</li>
+<li><strong>对“引力做正功”与“势能减小”的对应关系不熟练</strong>：在任何保守力系统中，保守力做正功对应势能减少。要养成定性判断习惯，避免死套公式时符号出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2013·新课标Ⅱ）<br />
+卫星轨道近似为圆，轨道半径逐渐变小，只受地球引力和稀薄气体阻力作用。判断正确的是：<br />
+A．卫星的动能逐渐减小<br />
+B．由于地球引力做正功，引力势能一定减小  </p>
+<p><strong>思路</strong><br />
+轨道半径 $r$ 减小，仅受地球引力（保守力）和稀薄气体阻力（非保守力，做负功）。分析动能看轨道速度变化，分析引力势能看引力做功或 $E_p$ 公式，分析机械能看阻力做功导致机械能损失。</p>
+<p><strong>步骤</strong><br />
+1. 由圆轨道动力学：$v=\sqrt{\frac{GM}{r}}$，$r$ 减小 ⇒ $v$ 增大，故动能 $E_k = \frac{1}{2}mv^2$ 增大。A 错误。<br />
+2. 轨道半径变小过程中，卫星靠近地球，地球引力方向与位移方向夹角为锐角，引力做正功。保守力做正功 ⇒ 引力势能一定减小。也可由 $E_p = -\frac{GMm}{r}$，$r$ 减小使 $E_p$ 变负得更多，故势能减小。B 正确。<br />
+3. （补充验证）稀薄气体阻力始终做负功，消耗机械能，总机械能 $E = -\frac{GMm}{2r}$ 减小，与本题正确选项无矛盾。</p>
+<p><strong>点评/变式</strong><br />
+- 该题本质考查保守力做功与势能变化的关系，结合圆轨道速率公式进行动能判断。<br />
+- 易错点：受阻力干扰误选动能减小。解题时应区分“阻力做负功”与“卫星速率变化”的不同决定机制——速率由轨道半径决定，不是由阻力单独决定。<br />
+- 变式：若题中给的是“卫星受推力缓慢增大轨道半径”，则动能减小、引力势能增大（引力做负功）、机械能增大，可类比分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-07.html">2013-新课标Ⅱ-07</a>（2013 · 中） 卫星在稀薄气体阻力下轨道半径减小时，动能和引力势能的变化判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/470-引力势能.html">引力势能</a></li>
+</ul>
+</div>
+</body>
+</html>

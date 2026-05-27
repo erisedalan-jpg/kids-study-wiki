@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电源效率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电源效率</h1><div class="review-mark" data-stem="电源效率"></div><div class="meta-card"><span><strong>考点</strong>电源效率</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电源效率定义</strong>：电源的效率 $\eta$ 为外电路消耗的功率（输出功率 $P_{\text{出}}$）与电源总功率 $P_{\text{总}}$ 之比。<br />
+  $$\eta = \frac{P_{\text{出}}}{P_{\text{总}}} \times 100\%$$</li>
+<li><strong>通用表达式</strong>：对于任何电路，$P_{\text{出}} = UI$（$U$ 为路端电压，$I$ 为干路电流），$P_{\text{总}} = EI$（$E$ 为电源电动势）。由此可得<br />
+  $$\eta = \frac{UI}{EI} = \frac{U}{E}$$
+  即电源效率在数值上等于<strong>路端电压与电动势的比值</strong>。这一表达式与负载是否为纯电阻无关，具有普适性。</li>
+<li><strong>纯电阻电路中的特殊形式</strong>：若外电路为纯电阻 $R$，内阻为 $r$，则 $U = \frac{E R}{R + r}$，代入可得<br />
+  $$\eta = \frac{R}{R + r} = \frac{1}{1 + \frac{r}{R}}$$
+  效率随外电阻 $R$ 的增大而增大，当 $R = r$ 时输出功率最大，但此时效率仅为 $50\%$。</li>
+<li><strong>$U$–$I$ 图像中的效率获取</strong>：在路端电压 $U$ 随电流 $I$ 变化的实验图线中，纵轴截距即为电动势 $E$。图线上任一点对应的效率 $\eta = \frac{U_{\text{点}}}{E}$，直接从坐标刻度读出对应纵坐标之比即可，无需知道内阻 $r$ 的具体数值。</li>
+<li><strong>适用条件</strong>：$\eta = U/E$ 适用于所有电路；$\eta = R/(R+r)$ 仅适用于纯电阻电路。遇到含有电动机、电解槽等非纯电阻元件时，必须使用 $\eta = U/E$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>此类试题通常围绕“从 $U$–$I$ 图像读取效率”或“由电阻关系求效率”，通用解法如下：</p>
+<ol>
+<li><strong>明确效率的本质</strong>：无论题目给出何种场景，优先写出 $\eta = \frac{P_{\text{出}}}{P_{\text{总}}}$。</li>
+<li><strong>推导普适公式</strong>：利用 $P_{\text{出}} = UI$，$P_{\text{总}} = EI$，立即得到 $\eta = \frac{U}{E}$。这一步是化解图像题或复杂电路题的关键。</li>
+<li><strong>提取电动势 $E$</strong>：  </li>
+<li>若有 $U$–$I$ 图线，$E$ 为纵轴截距（$I=0$ 时的 $U$）。  </li>
+<li>若已知若干组 $(U,I)$ 数据，可通过闭合电路欧姆定律 $U = E - Ir$ 求解 $E$。  </li>
+<li><strong>确定目标状态的路端电压 $U$</strong>：  </li>
+<li>对于图像题，直接从图线上读取指定点对应的纵坐标 $U_a$、$U_b$ 等。  </li>
+<li>对于纯电阻电路，可由 $U = \frac{E R}{R+r}$ 计算，或由串联分压比例关系得出。  </li>
+<li><strong>代入比值计算</strong>：$\eta = U/E$，必要时化为百分数。多个状态逐一计算再比对。</li>
+<li><strong>关注隐含条件</strong>：若题述“电源输出功率最大”，则隐含 $R=r$，此时 $\eta=50\%$；但效率自身可继续随 $R$ 增大而提升，注意区分。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆效率与输出功率</strong>：输出功率最大时效率仅为 $50\%$，并非最大；效率最高时（$R \to \infty$，断路）输出功率趋于零。两者无单调对应关系，切忌将“功率大”等同于“效率高”。</li>
+<li><strong>滥用电阻比公式</strong>：$\eta = R/(R+r)$ <strong>仅适用于纯电阻电路</strong>。只要电路中出现电动机、电解池等元件，必须回到 $\eta = U/E$ 进行计算，否则必然出错。</li>
+<li><strong>忽略纵轴刻度偏移</strong>：部分 $U$–$I$ 图像纵轴起点不为零，此时纵轴“截距”仍是电动势 $E$，但读取电压差值时需对照实际坐标刻度，不可直接用几何长度估算比值。</li>
+<li><strong>混淆内、外电压</strong>：效率公式中分子是路端电压 $U$，不是内电压 $U_r$。有些题目给出内电压图像或内电压数据，若不注意区分就会把 $\eta$ 算成 $U_r/E$ 而丢分。</li>
+<li><strong>图像中的效率比较</strong>：在同一 $U$–$I$ 图线上，越靠近纵轴（电流越小）的点，其路端电压越接近 $E$，效率越高；不可误认为图线上斜率变化直接对应效率变化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2010·新课标Ⅰ·06</h3>
+<p><strong>题目</strong>：<br />
+电源效率 $\eta$ 定义为外电路电阻消耗的功率与电源总功率之比。在测电源电动势和内阻的实验中得到的 $U$–$I$ 图线如图所示，图中 $U$ 为路端电压，$I$ 为干路电流，$a$、$b$ 为图线上的两点，相应状态下电源的效率分别为 $\eta_a$、$\eta_b$。由图可知 $\eta_a$、$\eta_b$ 的值分别为（   ）<br />
+A. $\frac{3}{4}$、$\frac{1}{4}$　B. $\frac{1}{3}$、$\frac{2}{3}$　C. $\frac{1}{2}$、$\frac{1}{2}$　D. $\frac{2}{3}$、$\frac{1}{3}$<br />
+（图线特征：纵轴截距为 $E$，$a$ 点纵坐标为 $\frac{2}{3}E$，$b$ 点纵坐标为 $\frac{1}{3}E$）</p>
+<p><strong>思路</strong>：<br />
+直接利用效率的通用表达式 $\eta = \frac{U}{E}$。从 $U$–$I$ 图像读出 $a$、$b$ 两点对应的路端电压与电动势的比例关系，代入计算即可，无需涉及内阻或电流值。</p>
+<p><strong>步骤</strong>：<br />
+1. 写出效率表达式：$\eta = \frac{UI}{EI} = \frac{U}{E}$。<br />
+2. 观察 $U$–$I$ 图线，纵轴截距表示电动势 $E$。<br />
+3. 图中 $a$ 点对应的路端电压 $U_a = \frac{2}{3}E$，故 $\eta_a = \frac{U_a}{E} = \frac{2}{3}$。<br />
+4. $b$ 点对应的路端电压 $U_b = \frac{1}{3}E$，故 $\eta_b = \frac{U_b}{E} = \frac{1}{3}$。<br />
+5. 比对选项，答案为 D。</p>
+<p><strong>点评/变式</strong>：<br />
+- 本题核心在于认识到电源效率等于路端电压与电动势之比，这一结论直接绕开了对内阻和电流的处理，使图像题瞬间简化。<br />
+- 变式一：若图像给出 $a$、$b$ 两点电流值，求此时电源内阻消耗的功率之比，仍可借助 $\eta$ 与内外电压关系快速求解。<br />
+- 变式二：将条件改为“输出功率相等”的两点，则需结合 $U$–$I$ 图线的矩形面积关系，此时两点效率一般不相等，效率高低由对应电压高低决定。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-06.html">2010-新课标Ⅰ-06</a>（2010 · 中） 本题考查通过U-I图像计算电源效率，结合外电压与电动势之比进行求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/685-电源效率.html">电源效率</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光强</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光强</h1><div class="review-mark" data-stem="光强"></div><div class="meta-card"><span><strong>考点</strong>光强</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光强的微观本质</strong>：单色光的光强 $I$ 由光子数密度和光子能量共同决定，$I = N \cdot h\nu$，其中 $N$ 为单位时间垂直照射到单位面积上的光子数。  </li>
+<li><strong>光子能量</strong>：$\varepsilon = h\nu$，仅由光的频率 $\nu$ 决定，与光强无关。  </li>
+<li><strong>金属的逸出功</strong>：$W_0$ 是金属的固有属性，只与金属种类和表面状态有关，与入射光的频率、强度均无关。  </li>
+<li><strong>爱因斯坦光电效应方程</strong>：$E_{km} = h\nu - W_0$。光电子最大初动能仅取决于入射光频率和金属逸出功，与光强无关。  </li>
+<li><strong>光强变化的核心影响</strong>（在能够发生光电效应，即 $\nu&gt;\nu_c$ 的前提下）：  </li>
+<li>饱和光电流 $I_s$ 与光强成正比：光强越大，单位时间照射到金属表面的光子数越多，单位时间逸出的光电子数越多，饱和光电流越大。  </li>
+<li>遏止电压 $U_c$ 和截止频率 $\nu_c$ 均不随光强变化。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ul>
+<li><strong>步骤一 锁定“变”与“不变”</strong>：题目若仅改变“光强”而不改变“频率”，立刻确定三个不变量——光子能量、逸出功、最大初动能。  </li>
+<li><strong>步骤二 判断光子数效应</strong>：光强增大，必然导致单位时间打在金属表面的光子数 $N$ 变大，进而单位时间逸出的光电子数增多，饱和光电流增大。  </li>
+<li><strong>步骤三 辨析干扰项</strong>：凡是涉及“初动能”“遏止电压”“光子能量”随光强增大的选项均为错误；“逸出功随光强变化”是陷阱，逸出功只与金属有关。  </li>
+<li><strong>步骤四 综合方程</strong>：必要时写出 $E_{km}=h\nu-W_0$，并说明等式右边与光强无关，给判断提供定量依据。</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li>误认为光强增大时<strong>光子能量变大</strong>：光子能量 $h\nu$ 只由频率决定，光强只影响光子数目。  </li>
+<li><strong>逸出功与入射光混淆</strong>：逸出功是金属的固有特征量，不能由增大光强来改变；题中常见的“逸出功增大”为强烈干扰项。  </li>
+<li><strong>最大初动能误随光强增大</strong>：$E_{km}=h\nu-W_0$ 无光强项，只有频率和逸出功起作用。  </li>
+<li>忽略“能够发生光电效应”这一前提条件：若光频率小于截止频率，无论光强多大都无法产生光电子；但在已发生光电效应的前提下，光强才决定饱和光电流的大小。  </li>
+<li>混淆<strong>饱和光电流</strong>与<strong>瞬时电流</strong>：饱和光电流取决于单位时间逸出光电子总数，与光强成正比；而光电流的瞬时值还与所加电压有关。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一（2024·辽宁·08）</h3>
+<p><strong>题目</strong>：用某一频率 X 光照射金属表面，逸出了光电子。仅增加此 X 光的强度，判断逸出功、光子能量、最大初动能及单位时间逸出光电子数的变化。</p>
+<p><strong>思路</strong>：题目只改变光强，频率固定。抓住“三不变”（逸出功、光子能量、最大初动能）与“一变”（光子数增多导致光电子数增多），逐项排除。</p>
+<p><strong>步骤</strong>：<br />
+1. 逸出功为金属固有属性，与入射光强无关 → A 错误。<br />
+2. 光子能量 $\varepsilon = h\nu$，频率不变则光子能量不变 → B 正确。<br />
+3. 由 $E_{km}=h\nu-W_0$，右侧不含光强，最大初动能不变 → C 错误。<br />
+4. 光强增大，单位时间到达金属表面的光子数 $N$ 增多，逸出光电子数随之增多 → D 正确。</p>
+<p><strong>点评/变式</strong>：该题几乎覆盖了光强在光电效应中的全部核心结论，属于典型考法。<br />
+<strong>变式</strong>：若在实验中保持频率不变，增大光强，光电流随电压变化的曲线将如何变化？饱和光电流增大，遏止电压不变，曲线形状整体上移但顶点右移量不变。</p>
+<h3>代表题二（基于考纲经典设问）</h3>
+<p><strong>题目</strong>：研究光电效应的实验中，用同一频率的单色光照射阴极，增大光强。简述饱和光电流如何变化，并说明理由。</p>
+<p><strong>思路</strong>：光电效应中，一个光电子对应一个被吸收的光子（在 $\nu &gt; \nu_c$ 前提下）。光强增大意味着光子数密度增大，被吸收的光子数增多，单位时间逸出的光电子数增多。</p>
+<p><strong>步骤</strong>：<br />
+1. 单色光频率不变，每个光子能量固定。<br />
+2. 增大光强 $I$ 意味着单位时间照射的光子总数 $N$ 增大。<br />
+3. 阴极在单位时间内吸收的光子数增加，激发出的光电子数 $n$ 成正比增多。<br />
+4. 当正向电压达到使所有逸出光电子均被阳极收集时，饱和光电流 $I_s = n e$ 与 $n$ 成正比，因此 $I_s$ 随光强增大而线性增大。<br />
+5. 结论：饱和光电流随光强增大而增大，且成正比关系。</p>
+<p><strong>点评/变式</strong>：该命题将光强与宏观可测量（饱和光电流）直接联系，是实验题与选择题的高频方向。若将“增大光强”改为“换用频率更高但光强相同的单色光”，则饱和光电流不一定增大，因单个光子能量虽然更高，但光子数可能减少，需结合实验曲线的定量分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-08.html">2024-辽宁-08</a>（2024 · 易） 本题考查光电效应中光强对逸出功、光子能量、最大初动能和光电子数的影响。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/454-光强.html">光强</a></li>
+</ul>
+</div>
+</body>
+</html>

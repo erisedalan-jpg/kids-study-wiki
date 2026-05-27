@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定滑轮</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>定滑轮</h1><div class="review-mark" data-stem="定滑轮"></div><div class="meta-card"><span><strong>考点</strong>定滑轮</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定滑轮模型</strong>：轻绳跨过光滑定滑轮，绳与轮无相对滑动，绳不可伸长。</li>
+<li>绳上张力处处相等（滑轮光滑不计转动惯量）。</li>
+<li>连接体沿绳方向的速度、加速度大小始终相等。</li>
+<li><strong>机械能守恒定律（系统）</strong>：若只有重力或弹力做功，系统机械能守恒。<br />
+  对本题系统（a 球、b 球、地球）：<br />
+  $$\Delta E_k + \Delta E_p = 0$$<br />
+  或<br />
+  $$E_{初} = E_{末}$$</li>
+<li><strong>运动分段分析</strong>：当一侧物体触地或碰撞后，绳可能松弛，需分过程求解。  </li>
+<li>阶段一：绳绷紧，两球共同运动，系统机械能守恒（或联合牛顿第二定律+运动学）。  </li>
+<li>阶段二：绳松后，剩余物体独立运动（如竖直上抛），可用机械能守恒或运动学公式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理定滑轮连接体问题的标准流程：</p>
+<ol>
+<li><strong>确界过程</strong>：判断物体接触地面、绳松紧变化等临界点，把运动划分为不同阶段。  </li>
+<li><strong>速度关联</strong>：同一根不可伸长的绳连接的两个物体，沿绳方向速度大小始终相等（此处滑轮光滑，两球速度大小相等）。  </li>
+<li><strong>阶段一求解</strong>（绳拉紧且有共同运动）：  </li>
+<li>方法一：对系统用机械能守恒（无摩擦、无外力做功）。<br />
+     列式：系统减少的重力势能 = 系统增加的动能 + 系统增加的重力势能（若某一物体升高）。  </li>
+<li>方法二：隔离法用牛顿第二定律求加速度，再结合运动学求末速度。  </li>
+<li><strong>阶段二求解</strong>（绳松后）：  </li>
+<li>绳松弛瞬间，物体仅受重力，以此为初速度做竖直上抛或自由落体，可用机械能守恒或运动学公式求上升高度。  </li>
+<li><strong>叠加高度</strong>：总高度 = 阶段一位移 + 阶段二竖直上抛最大位移。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记分段</strong>：认为 b 球落地瞬间 a 球立即停止，忽略 a 球仍具有速度继续上升，错选 A（h）或仅算出上升至 h 的位移。  </li>
+<li><strong>机械能守恒写错</strong>：  </li>
+<li>漏算 a 球重力势能增加（如写 $3mgh = \frac12 (3m+m)v^2$，没减 $mgh$）。  </li>
+<li>动能项质量计算错误：系统总动能应为 $\frac12 (m+M)v^2$，不能只写单个物体动能。  </li>
+<li><strong>速度关联错误</strong>：误认为 a、b 速度不同，或加速度不同。  </li>
+<li><strong>能量范围混淆</strong>：b 落地时认为动能完全转化为 a 的重力势能，即 $\frac12 m v^2 = mgh_2$，但忽略了 b 落地阶段系统动能与势能转化的整体性（阶段一系统动能是二者共有，阶段二才是 a 单独动能转化）。  </li>
+<li><strong>符号与高度基准混淆</strong>：未明确参考面，导致势能计算差符号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2008-全国Ⅱ-05</h3>
+<p><strong>题目</strong>：如图，光滑定滑轮，柔软不可伸长细绳，a 球质量 $m$ 静置于地面，b 球质量 $3m$ 用手托住高度 $h$，绳刚好拉紧。释放 b 后，a 可能到达的最大高度是？  </p>
+<p><strong>思路</strong>：分两阶段。阶段一：b 从 $h$ 高处下落至地面，绳拉紧带动 a 上升，系统机械能守恒求 b 落地瞬间二者共同速度 $v$。阶段二：b 落地绳松弛，a 以速度 $v$ 做竖直上抛，机械能守恒求再上升高度 $h'$。总高度 $H = h + h'$。  </p>
+<p><strong>步骤</strong>：<br />
+1. 选地面为零势能面。<br />
+2. 阶段一系统机械能守恒：<br />
+   $$3mgh = mgh + \frac12 (m+3m)v^2$$<br />
+   $$\Rightarrow 2mgh = 2m v^2 \Rightarrow v^2 = gh$$<br />
+3. 阶段二 a 球竖直上抛，机械能守恒（或运动学）：<br />
+   $$\frac12 m v^2 = mg h'$$<br />
+   $$h' = \frac{v^2}{2g} = \frac{gh}{2g} = 0.5h$$<br />
+4. 最大高度：$H = h + h' = 1.5h$，故选 B。  </p>
+<p><strong>点评/变式</strong>：<br />
+- 典型“绳连体+临界脱离”问题，核心在于 b 触地后绳松，a 不是立即停而是继续上抛。<br />
+- 若将 b 质量改为 $m$，则 $v=0$，$a$ 不上升，$H=h$？但 $a$ 本来在地面，初始无法释放？需不平衡。<br />
+- 若 b 质量小于 $m$，则 a 下沉，b 上升，考察另一侧脱离。务必找准系统与过程的边界。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2008-全国Ⅱ-05.html">2008-全国Ⅱ-05</a>（2008 · 中） 一轻绳跨过定滑轮连接两球，b 球释放后通过机械能守恒定律分析 a 球能上升的最大高度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">定滑轮</a></li>
+</ul>
+</div>
+</body>
+</html>

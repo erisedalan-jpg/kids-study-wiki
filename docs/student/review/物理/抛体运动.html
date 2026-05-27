@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛体运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>抛体运动</h1><div class="review-mark" data-stem="抛体运动"></div><div class="meta-card"><span><strong>考点</strong>抛体运动</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平抛运动定义</strong>：将物体以一定的初速度沿水平方向抛出，只受重力作用的运动。</li>
+<li><strong>运动性质</strong>：匀变速曲线运动，加速度恒为 $g$，轨迹为抛物线。</li>
+<li><strong>分解与公式</strong>（沿水平方向建立 $x$ 轴，竖直向下建立 $y$ 轴，抛出点为原点）：</li>
+<li>水平方向：匀速直线运动<br />
+    $v_x = v_0$，$x = v_0 t$</li>
+<li>竖直方向：自由落体运动<br />
+    $v_y = gt$，$y = \frac{1}{2}gt^2$</li>
+<li>合速度：$v = \sqrt{v_0^2 + (gt)^2}$，速度偏角 $\tan\theta = \frac{v_y}{v_x} = \frac{gt}{v_0}$</li>
+<li>合位移：$s = \sqrt{x^2 + y^2}$，位移偏角 $\tan\alpha = \frac{y}{x} = \frac{gt}{2v_0}$</li>
+<li>轨迹方程：消去 $t$ 得 $y = \frac{g}{2v_0^2}x^2$</li>
+<li><strong>重要推论</strong>：</li>
+<li>任意时刻的速度反向延长线交于该段时间内水平位移的中点。</li>
+<li><strong>相等时间间隔内的竖直位移差</strong> $\Delta y = gT^2$（匀变速直线运动的判别式），常用于频闪照片数据处理。</li>
+<li><strong>实验：研究平抛运动</strong>（频闪照相/方格描迹）</li>
+<li>装置保证水平抛出（轨道末端切线水平）和竖直面内运动。</li>
+<li>频闪周期 $T$ 已知时，直接利用 $v_0 = \frac{\Delta x}{T}$ 求初速度。</li>
+<li>若 $T$ 未知，利用竖直方向 $\Delta y = gT^2$ 求出 $T$，再求 $v_0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建立坐标系与分解</strong>：水平为 $x$ 轴正方向，竖直向下为 $y$ 轴正方向，将平抛运动分解为直线运动。</li>
+<li><strong>判断已知时间条件</strong>：若频闪（或打点）周期 $T$ 已知，则无需再利用 $g$ 求 $T$，直接进入第3步；若 $T$ 未知，则从竖直方向的位移差出发。</li>
+<li><strong>利用竖直方向运动求时间</strong>（常规方法）：</li>
+<li>读出一系列连续相等时间间隔的竖直位移 $y_1, y_2, y_3, \dots$</li>
+<li>计算位移差 $\Delta y_1 = y_2 - y_1$，$\Delta y_2 = y_3 - y_2$，取平均值 $\overline{\Delta y} = \frac{\Delta y_1 + \Delta y_2 + \dots}{n}$</li>
+<li>由 $\overline{\Delta y} = gT^2$ 求出 $T$（已知 $g=9.8\,\text{m/s}^2$ 或 $10\,\text{m/s}^2$ 视题目而定）。</li>
+<li><strong>求初速度</strong>：测量任意两点间的水平距离 $\Delta x$，则 $v_0 = \frac{\Delta x}{T}$；若有多段水平位移，取平均值减小误差。</li>
+<li><strong>求某点瞬时速度</strong>：  </li>
+<li>水平分速度恒为 $v_0$。</li>
+<li>竖直分速度可用“中间时刻的瞬时速度等于平均速度”：$v_{By} = \frac{y_1 + y_2}{2T}$（$y_1, y_2$ 为该点前后两段相等时间内的竖直位移）。</li>
+<li>合速度 $v = \sqrt{v_0^2 + v_{By}^2}$，方向 $\tan\theta = \frac{v_{By}}{v_0}$。</li>
+<li><strong>验证平抛性质</strong>：检验 $\Delta y$ 是否恒定，可判断竖直方向是否为匀变速；若 $\Delta y \approx gT^2$，则说明竖直方向为自由落体。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>乱用抛出点条件</strong>：实验照片中的“第一个点”往往不是抛出点，不可直接用 $y=\frac{1}{2}gt^2$ 求时间，必须使用匀变速推论 $\Delta y = gT^2$。</li>
+<li><strong>位移差的计算混乱</strong>：$\Delta y$ 必须是相邻相等时间间隔内的位移之差，不能跨段相减。若给出的是连续高度差记号，注意下标对应。</li>
+<li><strong>单位换算遗漏</strong>：题中常给方格边长（如 5cm）或高度差单位为 cm，务必化为国际单位（m）再代入 $g=9.8\,\text{m/s}^2$ 计算。</li>
+<li><strong>水平位移测量不对应</strong>：测量 $\Delta x$ 时，必须是从同一起点开始的相等时间段内的水平位移，且格子可能未与轨迹对齐，需用刻度尺准确读取或借助比例。</li>
+<li><strong>速度方向混淆</strong>：速度偏角正切 $\tan\theta = gt/v_0$，位移偏角正切 $\tan\alpha = gt/(2v_0)$，两者并非相等；题目若问“经过某点时的速度方向”不能代成位移方向。</li>
+<li><strong>频闪周期与打点周期混淆</strong>：频闪仪每隔 0.05s 闪光一次，意味着相邻影像时间间隔 $T=0.05\text{s}$；若照片同时给出高度差，可能用于验证 $g$ 而非求 $T$，要看清题目要求。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021-全国乙-09（研究平抛运动实验）</h3>
+<p><strong>题目</strong><br />
+用图（a）装置研究平抛运动，频闪仪每隔 $0.05\text{s}$ 闪光一次，拍摄得到照片如图（b）。背景为竖直平面内的方格纸板，每个方格边长 $5\text{cm}$，测得的小球影像的高度差已标于图中（具体数据如图，例如竖直方向 $y_1, y_2, y_3$ 等），要求完成相关计算或分析。</p>
+<p><strong>思路</strong><br />
+频闪周期 $T=0.05\text{s}$ 已知，可直接用于水平方向求初速度。高度差数据可用来验证竖直方向是否为匀变速（自由落体），或求当地重力加速度。注意第一个影像不是抛出点，不能用初速为零的公式。利用匀变速推论处理竖直方向数据，水平方向用匀速直线运动处理。</p>
+<p><strong>步骤</strong><br />
+1. <strong>确定时间间隔</strong>：由频闪仪知 $T = 0.05\,\text{s}$。<br />
+2. <strong>计算水平初速度</strong>：在照片中选取清晰的两个像点，读出水平方向的距离（或利用方格数出水平格子数）。例如，若相邻像点水平距离 $x_1 = 5.00\,\text{cm} = 0.0500\,\text{m}$，则<br />
+   $$v_0 = \frac{x_1}{T} = \frac{0.0500}{0.05} = 1.00\,\text{m/s}$$<br />
+   若有多段水平位移，取平均值。<br />
+3. <strong>验证竖直方向运动</strong>：从图（b）竖直标出的高度差，如第1段 $y_1$，第2段 $y_2$，计算位移差 $\Delta y = y_2 - y_1$。理论上 $\Delta y_{\text{理}} = gT^2 = 9.8×(0.05)^2 = 0.0245\,\text{m}=2.45\,\text{cm}$。若实测 $\Delta y$ 接近该值，则竖直方向为自由落体，同时可求出实验测得的 $g$ 值。<br />
+4. <strong>求某点瞬时速度</strong>：例如求第2个像点的速度。水平分速 $v_x=v_0$；竖直分速用中间时刻法：<br />
+   $$v_{2y} = \frac{y_1 + y_2}{2T}$$<br />
+   代入数据，合成得 $v_2 = \sqrt{v_0^2 + v_{2y}^2}$，方向用 $\tan\theta = v_{2y}/v_0$ 表示。</p>
+<p><strong>点评/变式</strong><br />
+- <strong>核心方法</strong>：频闪照片处理中，<strong>水平用匀速、竖直用匀变速推论</strong>是统一解法。已知 $T$ 时省去求 $T$ 环节，但要警惕题目可能反过来要求利用 $\Delta y$ 和 $T$ 求 $g$。<br />
+- <strong>变式1</strong>：若未给 $T$，只给方格边长和高度差，则必先由 $\Delta y = gT^2$ 求 $T$。注意此时必须有准确的 $g$ 值（通常取 $9.8\text{m/s}^2$）。<br />
+- <strong>变式2</strong>：若方格纸未给出完整格子，甚至像点落在格线上方，需用直尺估计读数，此时应强调“估读到分度值下一位”的读数规则。<br />
+- <strong>失分点警示</strong>：将第一个像点默认为抛出点直接用 $y=\frac12 gt^2$，必错；忘记单位换算导致数量级错误；混淆 $\Delta y$ 与 $y$。<br />
+- <strong>题源套路</strong>：全国卷常将平抛实验与匀变速直线运动推论绑定，结合刻度尺读数、有效数字考查，复习时务必熟练处理“不完全起点的匀变速纸带”问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-09.html">2021-全国乙-09</a>（2021 · 中） 平抛运动分解为水平匀速和竖直自由落体计算速度与重力加速度</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/613-抛体运动.html">抛体运动</a></li>
+</ul>
+</div>
+</body>
+</html>

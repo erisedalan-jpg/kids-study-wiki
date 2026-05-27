@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>瞬时功率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>瞬时功率</h1><div class="review-mark" data-stem="瞬时功率"></div><div class="meta-card"><span><strong>考点</strong>瞬时功率</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>功 与 能</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：功 与 能</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>瞬时功率</strong>： $P = Fv$ ，其中 $F$ 为牵引力（方向与速度同向）， $v$ 为瞬时速度。该式适用于 $F$ 与 $v$ 同向的情况，功率 $P$ 可随时间变化，反映某一时刻力做功的快慢。</li>
+<li><strong>机车启动的核心关系</strong>：  </li>
+<li>牛顿第二定律： $F - f = ma$ （平直路面，阻力 $f$ 恒定）。  </li>
+<li>功率与牵引力、速度的瞬时关系： $P = Fv$ 。</li>
+<li><strong>两种典型启动方式的特征</strong>（阻力 $f$ 恒定）：  </li>
+<li><strong>恒定功率启动</strong>： $P$ 不变， $v \uparrow \Rightarrow F = P/v \downarrow \Rightarrow a = (F-f)/m \downarrow$ ，做加速度减小的加速运动；当 $F=f$ 时 $a=0$ ，速度达到最大值 $v_m = P/f$ 。 $v!-!t$ 图像为斜率逐渐减小的上凸曲线，最终趋于水平。  </li>
+<li><strong>恒定加速度启动</strong>： $a$ 不变 $\Rightarrow F$ 不变， $v \uparrow \Rightarrow P = Fv \uparrow$ ，匀加速阶段 $P$ 线性增大；当 $P$ 达到额定功率后，转为恒定功率启动，最终匀速。</li>
+<li><strong>功率突变时的运动特征</strong>：功率发生突变的瞬间，由于速度不能突变，由 $F = P/v$ 可知牵引力发生突变，进而加速度突变，在 $v!-!t$ 图像上表现为切线斜率发生跃变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分阶段分析功率</strong>：根据给定的 $P!-!t$ 图像，明确各时间段功率是恒定值还是变化值，注意突变时刻。  </li>
+<li><strong>假设初始状态</strong>：由题设条件（如“从某时刻开始计时”）判断初始时刻车辆是否处于匀速或加速状态。若未明确，多数情况下先假设可能的状态（匀速、加速等）。  </li>
+<li><strong>逐段使用 $P=Fv$ 与牛顿第二定律</strong>：  </li>
+<li>若 $P$ 恒定， $v \uparrow \Rightarrow F \downarrow \Rightarrow a \downarrow$ ， $v$ 增加得越来越慢， $v!-!t$ 图像为斜率逐渐减小的上凸曲线，当 $F=f$ 时 $v$ 达到最大，之后匀速。  </li>
+<li>若初始已处于最大速度，则 $v$ 不变， $v!-!t$ 图像为水平直线。  </li>
+<li><strong>处理功率突变点</strong>：  </li>
+<li>速度连续（不能跃变），牵引力 $F$ 按 $F = P_{\text{新}}/v_{\text{原}}$ 突变。  </li>
+<li>若 $P$ 增大， $F$ 突然增大， $a$ 突变为正值， $v!-!t$ 图像在突变时刻斜率突然增大，之后随 $v$ 增加斜率逐渐减小。  </li>
+<li>若 $P$ 减小，牵引力突然减小， $a$ 可能向下突变甚至为负，图像斜率突然减小。  </li>
+<li><strong>对照选项筛图</strong>：找出与上述运动特征相符的 $v!-!t$ 图像。注意题干中“可能正确”意味着有多种合理情况时，与任何一种相符的选项均正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误以为功率突变会导致速度突变</strong>：速度是连续量，功率跃变时，牵引力瞬间变化，加速度突变，但速度本身在该时刻是连续的。  </li>
+<li><strong>混淆斜率与加速度的关系</strong>： $v!-!t$ 图像的切线斜率代表加速度；当牵引力减小时斜率减小，当牵引力跳变时斜率跳变。  </li>
+<li><strong>忽视“可能”两字</strong>：若初始条件不确定（如本题0～ $t_1$ 既可以匀速也可以加速），只需找出一种合理的图线组合即可，不必要求所有情况都符合同一图像。  </li>
+<li><strong>恒定功率启动与恒定牵引力启动的图像混淆</strong>：前者 $v!-!t$ 斜率一直减小；后者在匀加速段斜率不变，达到额定功率后斜率再逐渐减小。本题为恒定功率阶段，应呈现上凸形态。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015·新课标Ⅱ·04）<br />
+一汽车在平直公路上行驶，从某时刻开始计时，发动机的功率 $P$ 随时间 $t$ 的变化图线为： $0!\sim!t_1$ 内功率为某值 $P_1$ ， $t_1$ 之后功率跃变为另一恒定值 $P_2$ （ $P_2&gt;P_1$ ）。汽车所受阻力 $f$ 恒定不变。问图（a）（b）（c）（d）所示的 $v!-!t$ 图线中，可能正确的是哪一个？</p>
+<p><strong>思路</strong><br />
+汽车受恒定阻力 $f$ ，功率分段恒定，属于先以功率 $P_1$ 运动，后在 $t_1$ 时刻功率突变为 $P_2$ 的典型问题。需要分析 $0!\sim!t_1$ 和 $t_1$ 之后两段的加速度变化，以及 $t_1$ 时刻的斜率跃变，再与选项图像对比。</p>
+<p><strong>步骤</strong><br />
+1. <strong>$0!\sim!t_1$ 段（功率 $P_1$ ）</strong>：<br />
+   - 计时开始时刻，汽车可能已经匀速（ $v_{m1}=P_1/f$ ），也可能处于加速过程中。<br />
+   - 若匀速，则 $v!-!t$ 为水平直线；若加速，则 $P_1$ 恒定， $v \uparrow \Rightarrow F=P_1/v \downarrow \Rightarrow a=(F-f)/m \downarrow$ ，速度增加得越来越慢， $v!-!t$ 图像为斜率逐渐减小的上凸曲线，最终也会趋于 $v_{m1}$ 。<br />
+2. <strong>$t_1$ 时刻（功率由 $P_1$ 突变为 $P_2&gt;P_1$ ）</strong>：<br />
+   - 速度 $v$ 在 $t_1$ 瞬间不变，牵引力突变为 $F' = P_2 / v &gt; P_1 / v = F$ ，导致加速度由 $(F-f)/m$ 突变为 $(F'-f)/m$ ，显然加速度突然增大。<br />
+   - 反映在 $v!-!t$ 图像上， $t_1$ 处切线斜率发生一个向上的跃变（图像变陡）。<br />
+3. <strong>$t_1$ 之后（功率 $P_2$ ）</strong>：<br />
+   - 功率 $P_2$ 恒定， $v$ 继续增大 $\Rightarrow F=P_2/v \downarrow$ ，加速度从刚突变后的较大值开始逐渐减小， $v!-!t$ 图像为斜率逐渐减小的上凸曲线，最终当 $F=f$ 时达到新的最大速度 $v_{m2}=P_2/f &gt; v_{m1}$ ，匀速。<br />
+4. <strong>对照选项</strong>：<br />
+   - 满足上述特征的图像必须包含： $0!\sim!t_1$ 段是水平直线或斜率递减的上凸曲线； $t_1$ 时刻斜率突然增大，然后斜率再逐渐减小，最后趋于水平。选项中有一幅图正好是先水平（可能匀速）、 $t_1$ 后斜率跃增再逐渐减小趋于水平的曲线，这属于合理情况，因此正确。</p>
+<p><strong>点评/变式</strong><br />
+本题的巧妙之处在于“可能正确”的设问——起始状态不必唯一确定，只要有一种符合物理规律的情形出现在选项中即正确。这告诫我们不要先入为主地假设汽车一开始一定在加速或一定匀速。<br />
+<strong>变式</strong>：若题干限制“汽车在计时起点由静止开始运动”，则 $0!\sim!t_1$ 段只能是加速度减小的加速， $t_1$ 时刻斜率也要跃变，但0时刻速度为零，对应图像从原点出发且初始斜率为某一正值，之后一直保持上凸。此时就应选择符合该严格条件的单一图像。同理，若功率是减小（ $P_2 &lt; P_1$ ），则 $t_1$ 时刻牵引力突减，加速度突减甚至可能变负， $v!-!t$ 图像斜率跃降，可能出现减速至新的低速匀速阶段。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-04.html">2015-新课标Ⅱ-04</a>（2015 · 中） 汽车以恒定阻力在不同功率下行驶，通过P=Fv和牛顿第二定律分析速度图像变化趋势。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/699-瞬时功率.html">瞬时功率</a></li>
+</ul>
+</div>
+</body>
+</html>

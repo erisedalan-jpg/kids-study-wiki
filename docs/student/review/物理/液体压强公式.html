@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>液体压强公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>液体压强公式</h1><div class="review-mark" data-stem="液体压强公式"></div><div class="meta-card"><span><strong>考点</strong>液体压强公式</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>液体压强公式</strong>：静止液体内部某点压强 $p = p_0 + \rho g h$（$h$ 为该点距液面的竖直深度，$p_0$ 为液面气压；若液面与大气接触，$p_0$ 为大气压）。仅适用于同种连续静止液体，且密度 $\rho$ 为常数。</li>
+<li><strong>气体实验定律（玻意耳定律）</strong>：一定质量理想气体，温度不变时，$pV = \text{恒量}$ 或 $p_1V_1 = p_2V_2$。使用条件：质量不变、温度不变。</li>
+<li><strong>潜水钟模型</strong>：底部开口的容器，内部气体与外部液体接触，稳定时气-液界面处内外压强相等。</li>
+<li><strong>体积计算</strong>：圆筒截面积 $S$，空气柱高度 $h'$，则气体体积 $V = S h'$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定研究对象与过程</strong>：明确哪部分气体为研究对象（通常是钟内原有空气，或压入的空气），分析其状态变化（等温过程，初始态与末态）。</li>
+<li><strong>写压强关系式</strong>：在气-液分界面，气体压强 $p_{\text{气}} = $ 液体在界面处的压强。界面位于水面下深度 $H$ 处时，外部液体压强 $p_{\text{外}} = p_0 + \rho g H$；若界面在钟内液面，此处液体来自钟底开口连通，该处深度为 $H$（若界面距液面深度仍为 $H$，因为钟内液面与钟外液面同高时才是静止平衡，但一般简化为同一水平面压强相等）。<ul>
+<li>关键：钟内液面上方气体压强 $p = p_0 + \rho g (H - l)$，这里 $l$ 为进入钟内水柱高度。</li>
+</ul>
+</li>
+<li><strong>列玻意耳定律方程</strong>：</li>
+<li>初态：未入水时，气体压强 $p_0$，体积 $V_0 = Sh$（钟初始空气柱高 $h$）。</li>
+<li>末态：进入 $l$ 水后，气体压强 $p = p_0 + \rho g (H - l)$，体积 $V = S(h - l)$。</li>
+<li>方程：$p_0 \cdot Sh = \left[ p_0 + \rho g (H - l) \right] \cdot S(h - l)$，解出 $l$。</li>
+<li><strong>多气体问题</strong>：若压入空气，将原有气体与压入气体分别或整体处理。最常见方法：以“原钟内气体+压入气体（统一到某参考态）”为研究对象，末态总体积 $V_{\text{总}}$、总压强 $p_{\text{末}}$，初态各部分独立，由 $p_0 V_{\text{压}} = p_{\text{末}} V_{\text{压后部分}}$ 等关系求解。利用“总摩尔数守恒”或等效体积法。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>深度 $h$ 代错</strong>：液体压强公式中的 $h$ 是距自由液面的竖直距离，不是容器高度。潜水钟题目中，气-液界面在钟内液面，其深度应为 $H - l$，而不是 $H$ 或 $h$。</li>
+<li><strong>忽略大气压 $p_0$</strong>：直接用 $\rho g H$ 计算液体压强而忘加 $p_0$。除非题目明确用表压，一般液体内部压强必须包含液面气压。</li>
+<li><strong>体积与高度关系混淆</strong>：气体体积 $V = S \times \text{气柱高度}$，切勿将容器总高 $h$ 直接当作末态气柱高；有水进入后气柱高为 $h - l$。</li>
+<li><strong>压强平衡写错对象</strong>：钟内气体压强等于钟内液面处液体压强，该处与钟外同一水平面压强相等，要准确找到界面位置。</li>
+<li><strong>压入气体计算</strong>：很多学生在第（ii）问中错误地直接使用末态压强乘体积求压入空气体积，忘记压入的空气是经历了一个先被压缩的过程，应回到压强 $p_0$ 的状态计算体积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：潜水钟简化为截面积 $S$、高度 $h$、开口向下的圆筒，吊放至深度 $H$ （$H \gg h$）的水下。已知水密度 $\rho$，重力加速度 $g$，大气压 $p_0$，忽略温度变化。求（i）进入圆筒内水的高度 $l$；（ii）保持 $H$ 不变，压入空气使筒内水全部排出，求压入的空气在压强为 $p_0$ 时的体积。</p>
+<p><strong>思路</strong>：
+(i) 等温压缩过程，初态筒内空气压强 $p_0$、体积 $Sh$；末态进入水高 $l$，气柱高 $h-l$，体积 $S(h-l)$，压强等于筒内液面处液体压强 $p_0 + \rho g(H - l)$。由玻意耳定律列式求解 $l$。
+(ii) 排出全部水后，筒内空气体积 $Sh$，压强 $p' = p_0 + \rho g H$。这股空气由两部分组成：原有的那部分（初态$p_0, Sh$）和压入的那部分（要求的在 $p_0$ 下的体积 $V$），总摩尔数等于末态摩尔数。可利用玻意耳定律整体处理：将末态气体等温变化到压强 $p_0$ 时，总体积为 $V_{\text{总}} = \frac{p'}{p_0} Sh$，这个总体积减去原有空气在 $p_0$ 下的体积 $Sh$，即为压入空气在 $p_0$ 下的体积：$V = V_{\text{总}} - Sh$。</p>
+<p><strong>步骤</strong>：
+(i) 末态气体压强：$p = p_0 + \rho g (H - l)$<br />
+体积：$V = S(h - l)$<br />
+等温：$p_0 \cdot Sh = \left[ p_0 + \rho g (H - l) \right] \cdot S(h - l)$<br />
+因 $H \gg h \ge l$，$\rho g(H - l) \gg p_0$，可作近似简化，但本题不要求近似，解得<br />
+$$ p_0 h = \left[ p_0 + \rho g (H - l) \right] (h - l) $$<br />
+展开整理得关于 $l$ 的二次方程，利用 $H \gg h$ 得<br />
+$$ l = \frac{\rho g H h}{p_0 + \rho g H} $$<br />
+（具体求解时保留精确形式，若深度极大也可写 $l \approx \frac{\rho g H h}{p_0 + \rho g H}$）</p>
+<p>(ii) 排出水后，筒内气体压强 $p' = p_0 + \rho g H$，体积 $V' = Sh$。<br />
+设想将此气体降温变到压强 $p_0$，体积为 $V_{\text{总}} = \frac{p'}{p_0} Sh = \left(1 + \frac{\rho g H}{p_0}\right) Sh$。<br />
+初始原有气体在 $p_0$ 下体积 $Sh$，故压入空气在 $p_0$ 下的体积<br />
+$$ V = V_{\text{总}} - Sh = \frac{\rho g H}{p_0} Sh $$<br />
+注意，若第（i）问中考虑了$l$的精确值而没近似，这里仍直接导出压入空气体积不依赖于 $l$。</p>
+<p><strong>点评/变式</strong>：
+- 此题核心是等温过程的压强分析，液体压强公式 $p = p_0 + \rho g h$ 必须用到界面同高同压原理。
+- 变式：若 $H$ 与 $h$ 相当时，不能丢项，解二次方程求 $l$，注意舍去不合理解。
+- 易错点：第（ii）问许多考生误将压入空气体积直接写作 $\frac{p'}{p_0} Sh$，忘记减去原来气体贡献；牢记“分态求和”或“同压相减”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-14.html">2020-新课标Ⅱ-14</a>（2020 · 中） 利用玻意耳定律和液体压强公式，求解水下圆筒内进水高度及排出水所需压入空气的体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/652-液体压强公式.html">液体压强公式</a></li>
+</ul>
+</div>
+</body>
+</html>

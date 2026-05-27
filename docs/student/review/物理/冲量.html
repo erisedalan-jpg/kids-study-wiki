@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>冲量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>冲量</h1><div class="review-mark" data-stem="冲量"></div><div class="meta-card"><span><strong>考点</strong>冲量</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>动量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：动量</li>
+<li>权重 weight：15</li>
+<li>真题数：2；年份跨度：2018–2021</li>
+<li>出现题位：选择2 选择6</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>冲量（$I$）</strong>：力对时间的累积效应，定义 $I = F t$（恒力）。矢量，方向与力 $F$ 相同，单位 $\mathrm{N \cdot s}$。  </li>
+<li><strong>动量定理</strong>：合外力的冲量等于物体动量的变化量，即<br />
+  $$I_\text{合} = \Delta p = p' - p = m v' - m v$$<br />
+  其中 $p=mv$ 为动量。  </li>
+<li><strong>适用条件</strong>：惯性参考系，宏观低速运动。对碰撞、打击等短时过程，常用该定理估算平均作用力。  </li>
+<li><strong>变力冲量</strong>：力 $F$ 随时间 $t$ 变化时，可用 $F-t$ 图像下的面积求冲量，或直接由动量定理反求冲量。  </li>
+<li><strong>重要说明</strong>：冲量与动量的关系是过程量（冲量）决定状态变化量（动量变化），解题时需严格规定正方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定对象与过程</strong>：明确研究对象（单个物体或系统），选取所研究的运动阶段（如从开始到某个状态）。  </li>
+<li><strong>受力分析求冲量</strong>：分析各力（恒力、变力）及作用时间，求出每个力的冲量（注意方向），合冲量为各力冲量的矢量和。  </li>
+<li><strong>明确初末动量</strong>：确定初、末状态的速度大小及方向，写出 $p_\text{初}$ 和 $p_\text{末}$。  </li>
+<li><strong>列动量定理方程</strong>：沿正方向将合冲量与动量变化量列式。如为一维，正方向确定后用“$+$”“$-$”表示方向。  </li>
+<li><strong>结合运动学/能量</strong>：若题目涉及位移、加速度、时间等，可先用运动学公式或动能定理求出所需物理量（如碰撞时间、速度变化），再代回动量定理。  </li>
+<li><strong>估算问题</strong>：碰撞时间极短（毫秒级）时，重力等恒力冲量往往远小于冲击力冲量，可近似忽略，使计算简化。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>冲量方向忽视</strong>：非共线力冲量直接加减，未按矢量处理；或在竖直方向问题中漏掉重力冲量。  </li>
+<li><strong>混淆力与合外力</strong>：动量定理必须用<strong>合外力</strong>的冲量，而非某个单项力（除非其他力可忽略）。  </li>
+<li><strong>时间单位</strong>：碰撞时间常以毫秒（$\mathrm{ms}$）给出，计算时未化为秒，导致数量级错误。  </li>
+<li><strong>变力误用恒力公式</strong>：直接 $I=Ft$ 用于锤击、缓冲等变力过程，正确做法是利用动量定理求平均力 $\bar{F} = \frac{\Delta p}{\Delta t}$。  </li>
+<li><strong>未统一正方向</strong>：初末速度、冲量方向与规定正方向不一致时符号出错。  </li>
+<li><strong>忽略次要力判定</strong>：如鸡蛋坠地，若重力与冲击力可比时不能随意忽略，应先估算比较。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题 1</strong>：2018-新课标Ⅱ-02（高空坠蛋冲击力估算）</h3>
+<p><strong>题目</strong>：一个 $50\,\mathrm{g}$ 的鸡蛋从 25 层楼坠下，与地面碰撞时间约为 $2\,\mathrm{ms}$，则鸡蛋对地面产生的冲击力约为（ ）<br />
+A. $10\,\mathrm{N}$ 　 B. $10^2\,\mathrm{N}$ 　 C. $10^3\,\mathrm{N}$ 　 D. $10^4\,\mathrm{N}$  </p>
+<p><strong>思路</strong>：估算类问题，先求落地速度，再用动量定理求平均冲击力。碰撞时间极短，可先忽略重力冲量与冲击力冲量的比较，最后验证。  </p>
+<p><strong>步骤</strong>：<br />
+1. 每层楼高约 $3\,\mathrm{m}$，25 层共高 $h \approx 25 \times 3 = 75\,\mathrm{m}$。<br />
+2. 不计空气阻力，落地速度 $v = \sqrt{2gh} = \sqrt{2 \times 10 \times 75} \approx \sqrt{1500} \approx 38.7\,\mathrm{m/s}$。<br />
+3. 碰撞时鸡蛋速度由 $v$ 减为 0，取向上为正，动量变化 $\Delta p = 0 - (-mv) = mv = 0.05 \times 38.7 \approx 1.94\,\mathrm{kg \cdot m/s}$。<br />
+4. 由动量定理，地面对鸡蛋的平均作用力 $\bar{F}$ 满足 $(\bar{F} - mg) \Delta t = \Delta p$。因 $\Delta t = 2 \times 10^{-3}\,\mathrm{s}$ 极短，先试算忽略 $mg$：$\bar{F} \approx \frac{\Delta p}{\Delta t} = \frac{1.94}{2\times10^{-3}} = 970\,\mathrm{N}$。而 $mg = 0.5\,\mathrm{N}$，确实远小于冲击力，可忽略。故 $\bar{F} \approx 10^3\,\mathrm{N}$。<br />
+5. 根据牛顿第三定律，鸡蛋对地面的冲击力大小也为 $10^3\,\mathrm{N}$。  </p>
+<p><strong>点评/变式</strong>：此题关键在数量级估算，并验证重力是否可以忽略。变式可改变碰撞时间或物体质量（如从不同高度落下），或比较不同软硬地面（缓冲时间变化）的平均力，均用动量定理处理。</p>
+<h3><strong>代表题 2</strong>：2021-全国乙-06（恒力拉动物体求冲量）</h3>
+<p><strong>题目</strong>（题干缺失，据真题回忆还原）：水平桌面上，一质量为 $m$ 的物体在水平恒力 $F$ 拉动下从静止开始运动，通过路程 $s_0$ 时速度为 $v_0$，之后撤去 $F$，物体继续滑行 $2s_0$ 后停止。求在拉力 $F$ 作用的过程中，$F$ 的冲量大小。  </p>
+<p><strong>思路</strong>：因拉力恒定，其冲量 $I_F = F t$，需先求 $t$ 和 $F$。可由运动学结合牛顿第二定律或动能定理求加速度，再求时间及拉力。  </p>
+<p><strong>步骤</strong>：<br />
+1. 撤去拉力后，由动能定理得 $- \mu m g \cdot 2s_0 = 0 - \frac12 m v_0^2$，解出动摩擦因数 $\mu = \frac{v_0^2}{4g s_0}$。<br />
+2. 有拉力阶段，用动能定理：$F s_0 - \mu m g s_0 = \frac12 m v_0^2$。代入 $\mu$ 得 $F s_0 - \frac{v_0^2}{4g s_0} m g s_0 = \frac12 m v_0^2$，化简得 $F s_0 = \frac34 m v_0^2$，故 $F = \frac{3m v_0^2}{4 s_0}$。<br />
+3. 有拉力阶段为匀加速，平均速度 $\bar{v} = \frac{v_0}{2}$，时间 $t = \frac{s_0}{\bar{v}} = \frac{2 s_0}{v_0}$。<br />
+4. 拉力 $F$ 的冲量 $I_F = F t = \frac{3m v_0^2}{4 s_0} \cdot \frac{2 s_0}{v_0} = \frac{3}{2} m v_0$。<br />
+（也可直接用动量定理：合外力冲量 $(F - \mu m g) t = m v_0$，结合已求得量同样可得。）  </p>
+<p><strong>点评/变式</strong>：该题综合了运动学、动能定理与冲量计算，体现了“力和运动”与“动量”知识的交叉。变式可改为求合外力冲量或摩擦力冲量，或把位移条件改为时间条件，需灵活选取定理。</p>
+<hr />
+<p><strong>说明</strong>：以上代表题精讲依据真题考点和典型设问重构，真实考场中应优先选用动量定理或动能定理最优路径，注意矢量方向与近似取舍。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-06.html">2021-全国乙-06</a>（2021 · 中） 该题考查牛顿运动定律与运动学公式结合求解力、功和冲量，涉及多过程运动分析。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-02.html">2018-新课标Ⅱ-02</a>（2018 · 易） 估算鸡蛋坠落冲击力，涉及运动学与动量定理的近似计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/345-冲量.html">冲量</a></li>
+</ul>
+</div>
+</body>
+</html>

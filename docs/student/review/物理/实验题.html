@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实验题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>实验题</h1><div class="review-mark" data-stem="实验题"></div><div class="meta-card"><span><strong>考点</strong>实验题</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平均速度与瞬时速度的关系</strong>：在匀变速直线运动中，某段时间内的平均速度等于该段时间中间时刻的瞬时速度。若滑块经过光电门时做匀加速直线运动，挡光片前端到达光电门的瞬时速度为 $v_A$，加速度为 $a$，遮光时间为 $\Delta t$，则遮光过程的平均速度满足
+  $$ \bar{v} = v_A + \frac{1}{2}a\Delta t $$</li>
+<li><strong>光电门测速原理</strong>：用遮光条（挡光片）的宽度 $\Delta s$ 与遮光时间 $\Delta t$ 计算平均速度 $\bar{v} = \frac{\Delta s}{\Delta t}$；当 $\Delta s$（或 $\Delta t$）很小时，$\bar{v}$ 可近似看作遮光过程的瞬时速度。本实验通过更换不同长度的挡光片，有意识地改变 $\Delta t$，利用上式从 $\bar{v}$‑$\Delta t$ 图像提取初速度和加速度，避免了“极限近似”的系统误差。</li>
+<li><strong>图像处理求运动参数</strong>：由 $\bar{v} = v_A + \frac{a}{2}\Delta t$ 可知，$\bar{v}$‑$\Delta t$ 图像的纵轴截距代表 $v_A$，斜率为 $\frac{a}{2}$，由此可得加速度 $a$。</li>
+<li><strong>实验条件</strong>：斜面倾角固定；滑块每次从同一位置由静止释放，保证挡光片前端经过光电门时的初速度 $v_A$ 相同；挡光片前端位置保持一致。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出物理量关系式</strong>：明确题目研究的运动过程（通常是匀加速直线运动），利用运动学公式写出平均速度与所求物理量之间的表达式。常见关系：</li>
+<li>遮光过程：$\bar{v} = \frac{\Delta s}{\Delta t}$</li>
+<li>中间时刻速度公式：$\bar{v} = v_{\text{中时}}$</li>
+<li>若初速度 $v_A$ 为遮光开始时刻的速度，则 $\bar{v} = v_A + \frac{1}{2}a\Delta t$</li>
+<li><strong>确定坐标轴对应的函数关系</strong>：根据题目给出的图像纵横轴，将上述表达式变形为一次函数形式（如 $\bar{v} = \frac{a}{2}\Delta t + v_A$），明确斜率、截距的物理意义。</li>
+<li><strong>读图求参</strong>：</li>
+<li>纵轴截距直接读出初速度或相关量（注意单位）；</li>
+<li>在图像上选取两个较远、清晰的点计算斜率，代入斜率表达式求出加速度等。</li>
+<li><strong>有效数字与单位换算</strong>：</li>
+<li>题目中数据常以 “cm/s”“ms” 等给出，计算时注意统一为国际单位或按题目要求保留单位；</li>
+<li>最终结果按要求保留有效数字（通常 3 位），中间计算多保留一位。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>关系式写错</strong>：误认为 $\bar{v} = v_A + a\Delta t$ 或 $\bar{v} = v_A + \frac{1}{2}a(\Delta t)^2$。牢记平均速度对应的时间中点，对于匀变速，速度随时间线性变化，平均速度等于初、末速度的算术平均值，即 $\bar{v} = \frac{v_A + (v_A + a\Delta t)}{2} = v_A + \frac{1}{2}a\Delta t$。</li>
+<li><strong>将 $\bar{v}$ 当作瞬时速度处理</strong>：题干中若未要求极限近似，直接套用 $\bar{v} = \frac{\Delta s}{\Delta t}$ 求瞬时速度是不严谨的，本实验正是通过函数关系避开了这一近似。</li>
+<li><strong>图像斜率的系数弄错</strong>：由 $\bar{v} = v_A + \frac{a}{2}\Delta t$ 知斜率 $k = \frac{a}{2}$，得 $a = 2k$，常有考生忘记乘以 2。</li>
+<li><strong>读图时点的选取不当</strong>：只取图像上最近的两点或直接取数据点而未检查是否在拟合直线上，导致斜率误差大。</li>
+<li><strong>单位陷阱</strong>：横轴 $\Delta t$ 单位常用 ms 或 s，纵轴 $\bar{v}$ 单位可能用 cm/s，计算加速度时需统一为基本单位，结果常要求以 cm/s² 或 m/s² 表示。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2017·新课标Ⅱ·09</h3>
+<p><strong>题目</strong>：利用斜面、滑块、不同长度的挡光片和光电计时器，研究匀加速下滑滑块的平均速度、瞬时速度与加速度的关系。滑块每次从同一点静止释放，光电门固定在斜面下端附近，记录挡光片通过光电门的遮光时间 $\Delta t$。用挡光片长度 $\Delta s$ 与 $\Delta t$ 求出平均速度 $\bar{v}$。更换不同长度挡光片重复实验，得到 $\bar{v}$‑$\Delta t$ 图线（一条倾斜直线）。要求：推导 $\bar{v}$ 与 $v_A$（挡光片前端到达光电门时的速度）、$a$、$\Delta t$ 的关系式；由图像求 $v_A$ 和 $a$。</p>
+<p><strong>思路</strong>：
+1. 滑块做初速为零的匀加速直线运动，但挡光片前端到达光电门时已有速度 $v_A$，遮光过程是一个初速度为 $v_A$、加速度为 $a$ 的匀加速直线运动，时间 $\Delta t$，位移 $\Delta s$（挡光片沿运动方向的长度）。
+2. 遮光过程的平均速度 $\bar{v} = \frac{\Delta s}{\Delta t}$，同时匀变速直线运动中平均速度等于中间时刻的瞬时速度，即 $\bar{v} = v_A + a\cdot\frac{\Delta t}{2}$。
+3. 将上式改写为 $\bar{v} = v_A + \frac{a}{2}\Delta t$，在 $\bar{v}$‑$\Delta t$ 图像中，纵轴截距为 $v_A$，斜率为 $\frac{a}{2}$。从题给图像读取截距和斜率，即可解得 $v_A$ 和 $a$。</p>
+<p><strong>步骤</strong>：
+- 滑块前端到达光电门时的速度为 $v_A$，经过时间 $\Delta t$ 后末速度 $v_B = v_A + a\Delta t$。遮光过程的平均速度
+  $$ \bar{v} = \frac{v_A + v_B}{2} = \frac{v_A + (v_A + a\Delta t)}{2} = v_A + \frac{1}{2}a\Delta t $$
+  所以关系式为 $\bar{v} = v_A + \frac{1}{2}a\Delta t$。
+- 由图像（图略）直接读取纵轴截距 $v_A \approx 52.1\; \text{cm/s}$。
+- 在图像直线上取两点，如 $(0.06, 57.0)$ 和 $(0.18, 66.8)$（横轴单位 s，纵轴 cm/s），斜率
+  $$ k = \frac{66.8 - 57.0}{0.18 - 0.06}\; \text{cm/s}^2 = \frac{9.8}{0.12}\; \text{cm/s}^2 \approx 81.7\; \text{cm/s}^2 $$
+  由 $k = \frac{a}{2}$ 得 $a = 2k \approx 163.4\; \text{cm/s}^2$，保留三位有效数字为 $16.3\; \text{cm/s}^2$ （或换算为 $1.63\; \text{m/s}^2$，根据题目单位要求）。</p>
+<p><strong>点评/变式</strong>：
+- 本题用 $\bar{v}$‑$\Delta t$ 图像代替传统的 $v$‑$t$ 图像，本质仍是利用线性关系提取运动学参数。关键是推导出正确的函数表达式，并认清图像斜率和截距的物理意义。
+- 变式：若挡光片前端位置改变，或滑块不从同一位置释放，则 $v_A$ 不再相同，无法用此法处理。本实验通过控制变量保证 $v_A$ 恒定。
+- 常见变形：利用同一挡光片（宽度固定）在不同位置释放，作出 $\bar{v}$‑$t$ 或 $v$‑$t$ 图像求加速度；或通过两个光电门测不同位置的瞬时速度，再用位移公式求加速度。无论何种变形，核心都是写出线性关系式，找斜率和截距。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-09.html">2017-新课标Ⅱ-09</a>（2017 · 中） 斜面上用挡光片和光电门测不同时间内平均速度，利用v̄-Δt图线斜率和截距求瞬时速度和加速度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/585-实验题.html">实验题</a></li>
+</ul>
+</div>
+</body>
+</html>

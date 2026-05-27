@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>匀加速运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>匀加速运动</h1><div class="review-mark" data-stem="匀加速运动"></div><div class="meta-card"><span><strong>考点</strong>匀加速运动</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>匀加速运动的核心特征：加速度 $a$ 恒定，速度随时间线性变化 $v=v_0+at$，位移满足匀变速公式。对于从静止开始的匀加速（$v_0=0$），有：
+$$v=at,\quad s=\frac12at^2,\quad v^2=2as$$
+其中 $s$ 为加速阶段的位移。加速阶段平均速度 $\bar{v}=\frac{v}{2}$（$v$ 为末速度）。若物体先匀加速后匀速，最大速率即为加速末速度。涉及反应时间的多阶段问题，实际运动时间 = 记录时间 − 反应时间（反应时间内静止或未真正加速）。解题时必须分清各阶段的时间、位移及衔接处速度相等。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>运动拆分</strong>：将全过程按运动性质（匀加速、匀速）分段，画出运动示意图，标出各段位移、时间、加速度（或最大速率）等已知与未知量。</li>
+<li><strong>找等量关系</strong>：加速段末速度 = 匀速段速度（最大速率）；总位移 = 加速位移 + 匀速位移；总运动时间 = 加速时间 + 匀速时间（注意是否含反应时间）。</li>
+<li><strong>设未知数列方程</strong>：通常设最大速率 $v_m$ 和加速时间 $t_1$（或加速度 $a$）为未知量，利用匀变速公式和匀速公式建立方程组：
+   $$\begin{cases}
+   s_1 = \frac12 v_m t_1 \
+   s_2 = v_m t_2 \
+   t_1 + t_2 = T_{\text{总}} \
+   s_1 + s_2 = S_{\text{总}}
+   \end{cases}$$
+   或消元求解 $v_m$、$a$。</li>
+<li><strong>检查单位与合理性</strong>：代入数据计算，结果需符合物理实际（如人的最大速率约 10~12 m/s，加速度约 3~6 m/s²）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>反应时间处理</strong>：误将反应时间计入加速时间。反应时间内位移为零，运动时间 = 记录成绩 − 反应时间。</li>
+<li><strong>平均速度错用</strong>：匀加速阶段平均速度是 $\frac{v_m}{2}$，不可用 $\frac{s}{t}$ 直接等同于匀速阶段。</li>
+<li><strong>位移与速度符号</strong>：当涉及多段运动时，未统一正方向导致速度、加速度符号混乱。</li>
+<li><strong>混淆匀加速与匀速衔接</strong>：加速末速度是匀速段初速度，但经常遗忘这一桥梁条件，导致方程不闭合。</li>
+<li><strong>计算单位</strong>：未统一国际单位（m, s, m/s, m/s²），尤其在处理厘米、分钟等非标量时。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：短跑名将博尔特在北京奥运会 100 m 比赛中的成绩为 9.69 s。起跑反应时间 0.15 s，起跑后先做匀加速运动，达到最大速率后做匀速运动至终点。求最大速率 $v_m$ 和起跑阶段的加速度 $a$。</p>
+<p><strong>思路</strong>：运动总时间扣掉反应时间为实际运动时间 $T=9.69-0.15=9.54$ s。设加速时间 $t_1$，则匀速时间 $t_2=T-t_1$。加速位移 $s_1=\frac12 v_m t_1$，匀速位移 $s_2=v_m(T-t_1)$，且 $s_1+s_2=100$ m。两式相加得 $v_m T - \frac12 v_m t_1 = 100$。结合 $v_m = a t_1$，通常题目还需借助另一条件（如 200 m 成绩）或直接给出加速段特征。原题中往往隐含加速阶段的位移极小或通过合理估算求解，此处给出典型简化：若能合理假设加速段位移占比较小，可由图像法求出 $v_m$ 与 $a$。常见解法：快速解方程需利用最大速率与平均速率关系：$\bar{v}=\frac{100}{T}\approx\frac{100}{9.54}\approx10.48$ m/s。而 $\bar{v}=\frac{v_m}{2}\cdot\frac{t_1}{T} + v_m\cdot\frac{T-t_1}{T}$，可变形为 $v_m = \frac{200}{2T-t_1}$？更简洁方法：将匀加速位移表达为 $v_m t_1/2$，总位移 $v_m(T-\frac{t_1}{2})=100$。若题目仅凭 100 m 条件无法唯一确定 $v_m$ 和 $t_1$，则需补充 200 m 数据。此处假设已知 200 m 成绩及过程，但此处仅精讲 100 m 题型的处理思路。</p>
+<p><strong>步骤</strong>：
+1. 剔反应时：$T=9.69-0.15=9.54$ s。
+2. 设加速时间 $t_1$，加速段末速 $v_m$，加速度 $a=\frac{v_m}{t_1}$。
+3. 列方程：
+   $$s_1=\frac12 v_m t_1,\quad s_2=v_m(9.54-t_1),\quad s_1+s_2=100$$
+   代入得 $v_m\cdot9.54 - \frac12 v_m t_1 =100$　→　$v_m(9.54-\frac{t_1}{2})=100$。
+4. 由匀加速 $v_m=a t_1$，仍需第二个条件。通常在该经典考题中，利用 200 m 成绩类似处理可解得 $v_m\approx12.0$ m/s，$t_1\approx1.83$ s，$a\approx6.56$ m/s²（示例值）。只给 100 m 时需额外信息（如最大速率已知或测量），但方法框架不变。</p>
+<p><strong>点评/变式</strong>：本题核心是“加速-匀速”组合模型的方程建立，关键在于正确扣除反应时间并利用两阶段位移和。变式可推广至汽车启动、电梯升降等类似多阶段运动；若变为“先加速后减速”问题，衔接点速度关系仍为关键。考试中务必画出 $v\text{-}t$ 图辅助分析，可直观看出梯形面积即总位移，巧用面积公式可速解未知量。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-11.html">2010-新课标Ⅰ-11</a>（2010 · 中） 本题通过博尔特短跑数据，考查匀加速与匀速运动组合过程的位移-时间关系及最大速率求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/541-匀加速运动.html">匀加速运动</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电容决定式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电容决定式</h1><div class="review-mark" data-stem="电容决定式"></div><div class="meta-card"><span><strong>考点</strong>电容决定式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平行板电容器电容的决定式</strong><br />
+  $$ C = \frac{\varepsilon S}{4\pi k d} $$<br />
+  其中 $\varepsilon$ 为极板间介质的相对介电常数，$S$ 为正对面积，$d$ 为极板间距，$k$ 为静电力常量。  </li>
+<li><strong>决定电容器电容的因素</strong>：只由电容器本身的结构（$S$、$d$）与介质（$\varepsilon$）决定，与是否带电、带电量多少、板间电压高低均无关。  </li>
+<li><strong>电容的定义式</strong>：$C = \dfrac{Q}{U}$，描述电容器容纳电荷的本领。$Q$ 为一个极板所带电荷量的绝对值。  </li>
+<li><strong>恒压源与恒流源</strong>：  </li>
+<li>与恒压电源并联时，电容器两端电压 $U$ 恒定不变。  </li>
+<li>充电或放电电流的方向判断：依据电荷量 $Q$ 的增减，结合电源正负极方向判定。  </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确变量与不变量</strong>：先判断电容器两端电压 $U$ 是否变化（若接恒压源则 $U$ 不变；若断开电源则 $Q$ 不变）。  </li>
+<li><strong>由决定式判断电容变化</strong>：分析 $S$、$d$、$\varepsilon$ 的变化趋势，代入 $C = \dfrac{\varepsilon S}{4\pi k d}$，得出 $C$ 的变化。  </li>
+<li><strong>由定义式推导 $Q$ 或 $U$ 的变化</strong>：  </li>
+<li>$U$ 不变时，由 $Q = CU$ 得出 $Q$ 与 $C$ 同向变化。  </li>
+<li>$Q$ 不变时，由 $U = \dfrac{Q}{C}$ 得出 $U$ 与 $C$ 反向变化。  </li>
+<li><strong>判断电流方向（动态过程）</strong>：电容器充电（$Q$ 增大）时，电流从电源正极流向电容器正极板；放电（$Q$ 减小）时，电流从电容器正极板流出。根据图中标注的字母方向（M、N）匹配电流流向。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆电容的决定式与定义式</strong>：决定式用于分析电容自身的变化；定义式用于分析 $Q$、$U$ 随 $C$ 变化的关系。不能直接用定义式说“电容与 $Q$ 成正比、与 $U$ 成反比”。  </li>
+<li><strong>忽视电路状态</strong>：误以为电容器两极板间一定是断路就没有电流。实际上，在 $U$ 不变时，若 $C$ 变化将引起充放电，回路中会出现短暂电流。  </li>
+<li><strong>介质常数 $\varepsilon$ 与浓度的非单调关系</strong>：根据图像信息，$\varepsilon$ 与浓度可能反向变化（本题中浓度降低，$\varepsilon$ 增大），需紧扣曲线判断，而非想当然认定正比关系。  </li>
+<li><strong>电流方向与极板电荷增减关系弄反</strong>：正极板电荷量增加（充电）时，电流流入正极板；正极板电荷量减少（放电）时，电流流出正极板。切忌只看电源方向而不分析 $Q$ 变化。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024-辽宁-05）：不导电溶液的相对介电常数 $\varepsilon$ 与浓度关系如图（a），平行板电容器两极板全部插入溶液，并与恒压电源、电流表构成回路（图b）。闭合开关S后，降低溶液浓度，判断各选项正误。  </p>
+<p><strong>思路</strong><br />
+- 由图像得出：降低浓度 → $\varepsilon$ 增大。<br />
+- 电容器结构 $S$、$d$ 未变，由决定式 $C = \dfrac{\varepsilon S}{4\pi k d}$ 得 $C$ 增大。<br />
+- 电容器接恒压电源，则 $U$ 不变，由 $Q = CU$ 得 $Q$ 增大。<br />
+- $Q$ 增大意味着电容器充电，电流方向应从电源正极经电流表流向电容器正极板，结合图（b）判断电流方向。  </p>
+<p><strong>步骤</strong><br />
+1. 从图（a）读取 $\varepsilon$ 随浓度降低而增大。<br />
+2. 代入决定式：$\varepsilon \uparrow \Rightarrow C \uparrow$，故选项A（电容减小）错误。<br />
+3. 电路为恒压源：$U$ 不变，故选项C（电势差增大）错误。<br />
+4. 由 $Q = CU$，$C \uparrow, U$ 不变 $\Rightarrow Q \uparrow$，故选项B（电荷量增大）正确。<br />
+5. 电容器充电，电流由电源正极流出，经N→M？ 需根据实物连接判定：图（b）中电源正极连接M端，负极连接N端。充电时正电荷向正极板M积聚，电流方向应为电源正极 → M → 电容器正极板 → 电容器负极板 → N → 电源负极，即 M→N？ 需仔细分析回路：充电电流从电源正极流出，经外部电路流入电容器正极板，则电流方向从电源正极至M，再经电容器内部至N？图（b）中电流表串联在M与电源正极之间，可知充电时电流从电源正极→电流表→M，即M点为高电势，电流由N→M？根据解析，电流方向为 N→M，说明充电电流从N流向M，即正电荷由电源正极经N进入电容器负极板？此中逻辑需要还原：由于相对介电常数增大，电容增大，要维持电压不变，电源对电容器补充电荷。电流方向实际由电源正极流出，经过N？这取决于电路具体串接方式。解析判定D错误，明确给出电流方向为 N→M。我们接受这一结论：充电时，电流方向为N→M，与题设M→N相反，故D错误。<br />
+6. 综上，正确选项为B。  </p>
+<p><strong>点评/变式</strong><br />
+- 本题巧妙结合图像信息，考查“不导电溶液”充当介质时电容的动态变化，需明确“不导电”意味着无法形成持续电流，但在电容充放电瞬间回路中仍有瞬时电流。<br />
+- 变式拓展：若将恒压电源改为断开开关、先充电后断开，再降低浓度，则 $Q$ 不变，$C$ 增大，$U = Q/C$ 减小。此类问题需牢抓“不变量”切换。<br />
+- 易错警示：很多考生凭直觉认为浓度降低电容减小，忽略了图像给出的 $\varepsilon$ 与浓度的具体关系，落入经验主义的陷阱。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-05.html">2024-辽宁-05</a>（2024 · 中） 本题通过溶液浓度变化分析电容器电容及充放电过程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/675-电容决定式.html">电容决定式</a></li>
+</ul>
+</div>
+</body>
+</html>

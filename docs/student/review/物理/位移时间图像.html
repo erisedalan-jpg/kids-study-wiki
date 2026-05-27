@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>位移时间图像</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>位移时间图像</h1><div class="review-mark" data-stem="位移时间图像"></div><div class="meta-card"><span><strong>考点</strong>位移时间图像</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：解答15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>位移 $x$ 与时间 $t$ 图像</strong>：描述质点沿直线运动时，位移（相对于参考点）随时间变化的规律。</li>
+<li>图像上某点的 <strong>纵坐标</strong> 表示该时刻质点的位置（位移），<strong>切线斜率</strong> 表示瞬时速度 $v = \frac{\Delta x}{\Delta t}$。</li>
+<li>斜率正负对应速度方向：斜率为正→速度沿正方向；斜率为负→速度沿负方向。</li>
+<li><strong>简谐运动的 $x-t$ 图像</strong>：当物体做简谐运动时，$x-t$ 图线为正弦（或余弦）曲线。</li>
+<li>振幅 $A$ 为最大位移绝对值，周期 $T$ 为完成一次全振动的时间。</li>
+<li>单摆小角度摆动可视为简谐运动，其周期 $T = 2\pi \sqrt{\frac{L}{g}}$（$L$ 为摆长）。</li>
+<li><strong>变摆长振动的 $x-t$ 图像</strong>：若振动过程中摆长发生突变（如绳子被钉子挡住），则周期、振幅均会分段变化。</li>
+<li>周期由各段的摆长决定，$T \propto \sqrt{L}$。</li>
+<li>振幅由机械能守恒决定：最低点速度相同，最大水平位移 $x_{\text{max}} \approx L\theta_{\text{max}}$，摆长缩短时最大摆角增大，但水平振幅可能减小。</li>
+<li>图像由不同频率、不同振幅的正弦段拼接而成，$t=0$ 时振子的初位置决定曲线的初相。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确参考系与正方向</strong>：判定位移零点（通常选平衡位置）及正方向，确定 $t=0$ 时质点所在位置及初速度方向。</li>
+<li><strong>分段分析运动过程</strong>：</li>
+<li>找出运动状态发生突变的时刻（如摆长变化、碰撞等）。</li>
+<li>分段确定各段的运动性质（匀速、匀变速、简谐运动等）。</li>
+<li>对简谐运动段，写出摆长、振幅、周期，并确定初相。</li>
+<li><strong>定性描绘 $x-t$ 草图</strong>：</li>
+<li>先标出关键点（起点、转折点、平衡位置、端点）的 $(t,x)$。</li>
+<li>根据各段的周期长短、曲线凹凸（斜率变化）和振幅大小，分段画出正弦形曲线。</li>
+<li>简谐运动位移曲线在平衡位置处最陡（速度最大），在最大位移处切线水平（速度为零）。</li>
+<li><strong>对比选项排除</strong>：检查选项的振幅对称性、时间轴比例（疏密）、起点位置和方向，排除错误项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>把位移与路程混淆</strong>：$x-t$ 图纵坐标是位移，不是路程。向左摆动时位移为负，向下或向左运动中位移数值不一定减小。</li>
+<li><strong>忽略摆长变化对周期和振幅的双重影响</strong>：钉子挡绳后摆长变短，周期必定变小；同时因为机械能守恒，水平振幅往往也变小（需定量比较），不能想当然地认为振幅不变。</li>
+<li><strong>误判平衡位置</strong>：悬点改变（从 $O$ 到 $O'$），但只要最低点的空间位置不变，位移零点就仍在原处，不必重新定义。</li>
+<li><strong>时间分配判断失误</strong>：一个周期内长摆段和短摆段各占两次，但时间轴上各段长度不等：$\frac{T_{\text{长}}}{4} &gt; \frac{T_{\text{短}}}{4}$，导致位移图像在正负半周的“胖瘦”不同。</li>
+<li><strong>忽略初始条件</strong>：小球从右侧最大位移释放，初速度为0，$t=0$ 处切线水平，对应余弦曲线的波峰，若错判成正弦零点则选错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> （2019·新课标Ⅱ·15）</h3>
+<p>细绳长 $l$ 悬挂小球，悬点正下方 $\frac{3}{4}l$ 处有铁钉。将小球向右拉开约 $2^\circ$ 后静止释放，向右为正。小球摆至最低点时绳被钉子挡住，描述开始一个周期内 $x-t$ 关系的图像是哪一个？</p>
+<p><strong>思路</strong>：
+释放时小球在右侧最大位移（$x&gt;0$，$v=0$）。一个周期分四段：
+- ① 右侧最大 → 平衡位置：摆长 $l$，用时 $\frac{T_l}{4}$，$T_l = 2\pi\sqrt{\frac{l}{g}}$。
+- ② 平衡位置 → 左侧最大：摆长 $l' = \frac{l}{4}$，用时 $\frac{T_{l'}}{4}$。
+- ③ 左侧最大 → 平衡位置：摆长 $l'$，用时 $\frac{T_{l'}}{4}$。
+- ④ 平衡位置 → 右侧最大：摆长 $l$，用时 $\frac{T_l}{4}$。
+周期 $T = \frac{T_l + T_{l'}}{2} = \pi\sqrt{\frac{l}{g}}\left(1+\frac{1}{2}\right)$。
+振幅比较：初始右侧振幅 $A_{\text{右}} \approx l\theta_0$。碰钉后左侧振幅 $A_{\text{左}} \approx \frac{l}{4}\theta'$，由机械能守恒得 $\theta' \approx 2\theta_0$，故 $A_{\text{左}} \approx \frac{l}{2}\theta_0$，即左侧振幅小于右侧。
+综上，$x-t$ 图像特征：正半周振幅大、周期段稀疏（平缓）；负半周振幅小、周期段密集（陡峭），且 $t=0$ 从正最大位移开始（余弦形）。</p>
+<p><strong>步骤</strong>：
+1. 确定初态：$t=0$，$x=+A_{\text{右}}$， $v=0$ → 曲线在正峰值处切线水平。
+2. 画第一段：从 $+A_{\text{右}}$ 降为 $0$，形状为余弦下降沿，时间轴长 $\frac{T_l}{4}$。
+3. 画第二段：从 $0$ 下降到 $-A_{\text{左}}$，形状为负正弦下降沿，时间轴较短 $\frac{T_{l'}}{4}$。
+4. 画第三段：从 $-A_{\text{左}}$ 回升到 $0$，时间轴同样较短。
+5. 画第四段：从 $0$ 回升到 $+A_{\text{右}}$，时间轴较长。
+6. 连接成光滑周期曲线，与选项比对：应选正半周“宽大”、负半周“窄小”且均从正峰值开始的图。</p>
+<p><strong>点评/变式</strong>：
+- 本题本质是考查简谐运动 $x-t$ 图像的拼接及机械能守恒。历次高考中类似模型还可换为“弹簧振子中间固定挡板”“斜面单摆碰钉”等。
+- 变式：若钉子不在正下方而对悬线挡在不同位置，需重新分析平衡位置是否偏移，从而影响位移零点，进而改变 $x-t$ 图像对称性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-15.html">2019-新课标Ⅱ-15</a>（2019 · 中） 单摆运动在摆长突变时的位移-时间关系图像判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：（暂无对应词条）</li>
+</ul>
+</div>
+</body>
+</html>

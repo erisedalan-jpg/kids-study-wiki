@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>串并联电路电阻计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>串并联电路电阻计算</h1><div class="review-mark" data-stem="串并联电路电阻计算"></div><div class="meta-card"><span><strong>考点</strong>串并联电路电阻计算</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>串联电路电阻</strong><br />
+  总电阻等于各部分电阻之和：<br />
+  $$R_{\text{串}} = R_1 + R_2 + \cdots + R_n$$</p>
+</li>
+<li>
+<p><strong>并联电路电阻</strong><br />
+  总电阻的倒数等于各支路电阻倒数之和：<br />
+  $$\frac{1}{R_{\text{并}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}$$<br />
+  两个电阻并联的常用表达式：<br />
+  $$R_{\text{并}} = \frac{R_1 R_2}{R_1 + R_2}$$</p>
+</li>
+<li>
+<p><strong>混联电路</strong><br />
+  先判断电阻间的串、并联关系，再用等效替代法逐级简化，最终算出总电阻。</p>
+</li>
+<li>
+<p><strong>闭合电路欧姆定律</strong><br />
+  $$E = U_{\text{外}} + Ir$$<br />
+  其中电源电动势 $E$ 和内阻 $r$ 可由 $U$–$I$ 图线得到：  </p>
+</li>
+<li>纵轴截距为 $E$  </li>
+<li>
+<p>斜率的绝对值为 $r = \left|\frac{\Delta U}{\Delta I}\right|$</p>
+</li>
+<li>
+<p><strong>路端电压、总电流与外电阻的关系</strong><br />
+  $$U_{\text{外}} = IR_{\text{外}}$$<br />
+  结合 $I = \frac{E - U_{\text{外}}}{r}$ 可推出：<br />
+  $$R_{\text{外}} = \frac{U_{\text{外}}}{I} = \frac{U_{\text{外}} r}{E - U_{\text{外}}}$$</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>涉及电源和电阻网络的电路匹配问题，通用步骤：</p>
+<ol>
+<li>
+<p><strong>读图求电源参数</strong><br />
+   从给出的 $U$–$I$ 图线直接获取：电动势 $E = U_{\text{截}}$，内阻 $r = \left|\frac{\Delta U}{\Delta I}\right|$。注意单位是否统一（如 V、A、Ω）。</p>
+</li>
+<li>
+<p><strong>由路端电压求总电流</strong><br />
+   利用闭合电路欧姆定律 $E = U + Ir$，已知 $U$（路端电压）时解出：<br />
+   $$I = \frac{E - U}{r}$$</p>
+</li>
+<li>
+<p><strong>计算外电路总电阻</strong><br />
+   外电路的总电阻：<br />
+   $$R_{\text{外}} = \frac{U}{I}$$</p>
+</li>
+<li>
+<p><strong>反推电阻连接方式</strong><br />
+   将所得 $R_{\text{外}}$ 与给定单个电阻值比较，通过串并联组合公式（乘积/加和、倒数关系等）验算选项中每一组连接方式的等效电阻，找出符合 $R_{\text{外}}$ 的方案。若为选择题，可直接排除不符项；若为计算题，则需写出可能的拓扑。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>混淆电动势与路端电压</strong><br />
+  不能直接用路端电压 $U$ 除以内阻 $r$ 计算电流，必须用 $I = (E-U)/r$。</p>
+</li>
+<li>
+<p><strong>$U$–$I$ 图线斜率误读</strong><br />
+  斜率 $\frac{\Delta U}{\Delta I}$ 是负值，内阻取其绝对值。若坐标轴起点非零，应取直线两点的差值计算，避免直接用某一点的坐标比求斜率。</p>
+</li>
+<li>
+<p><strong>并联电阻计算错误</strong><br />
+  并联公式是倒数关系，两个电阻并联常见错误为 $R_{\text{并}} = \frac{R_1R_2}{R_1+R_2}$，但超过两个电阻时学生容易直接相乘相加，必须坚持“倒数和再倒数”的流程。</p>
+</li>
+<li>
+<p><strong>混联结构识别不清</strong><br />
+  未准确判断电阻之间的节点连接关系，导致等效电阻算错。遇到等势点可以用抹去或合并法简化电路。</p>
+</li>
+<li>
+<p><strong>单位不统一</strong><br />
+  内阻与电阻单位通常为 Ω，电压为 V，电流为 A，计算前后注意换算（如 mV 与 V），避免数量级错误。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2009·全国Ⅱ·04</h3>
+<p><strong>题目</strong><br />
+某电源的 $U$–$I$ 图线如图所示，由图可得电动势 $E = 6.0\ \text{V}$，内阻 $r = 0.5\ \Omega$。用此电源与三个阻值均为 $3\ \Omega$ 的电阻连接成电路，测得路端电压为 $4.8\ \text{V}$。则三个电阻的可能连接方式是下列选项中的哪一个？（选项为四组由三个 $3\ \Omega$ 电阻构成的不同混联电路图）</p>
+<p><strong>思路</strong><br />
+由路端电压和电源参数求出总电流，进而求出外电路所需的总电阻；再逐一计算选项中各电路的等效电阻，与计算值 $2\ \Omega$ 吻合者即为正确答案。</p>
+<p><strong>步骤</strong>  </p>
+<ol>
+<li>
+<p>算总电流<br />
+   $$I = \frac{E - U}{r} = \frac{6.0 - 4.8}{0.5} = \frac{1.2}{0.5} = 2.4\ \text{A}$$</p>
+</li>
+<li>
+<p>算外电路总电阻<br />
+   $$R_{\text{外}} = \frac{U}{I} = \frac{4.8}{2.4} = 2.0\ \Omega$$</p>
+</li>
+<li>
+<p>分析电阻组合<br />
+   三个 $3\ \Omega$ 电阻所有可能的等效电阻值：</p>
+</li>
+<li>三个串联：$3+3+3 = 9\ \Omega$</li>
+<li>三个并联：$\frac{3}{3} = 1\ \Omega$</li>
+<li>两串一并：先串联两个得 $6\ \Omega$，再与第三个并联<br />
+     $$R = \frac{6 \times 3}{6 + 3} = 2\ \Omega$$</li>
+<li>两并一串：先并联两个得 $1.5\ \Omega$，再串联第三个<br />
+     $$R = 1.5 + 3 = 4.5\ \Omega$$</li>
+</ol>
+<p>只有“两个串联后与第三个并联”的组合得到 $2\ \Omega$，与计算结果一致。</p>
+<ol>
+<li>结论<br />
+   该电路为两个 $3\ \Omega$ 电阻串联后，再与第三个 $3\ \Omega$ 电阻并联。</li>
+</ol>
+<p><strong>点评与变式</strong><br />
+- 本题将恒定电流中的两大核心考点——闭合电路欧姆定律和电阻串并联结合，通过 $U$–$I$ 图线同时考查学生读图与计算能力。<br />
+- 若题目改为“路端电压增大为 5.4 V”，则总电流 $I = (6-5.4)/0.5 = 1.2\ \text{A}$，外电阻 $R_{\text{外}} = 5.4/1.2 = 4.5\ \Omega$，对应“两个并联再串联一个”的连接方式。<br />
+- 复习时可自行变换电源参数和电阻值，练习不同组合的快速等效电阻计算，做到在考场上无需逐个复杂推导，直接套用两电阻并联的乘积/加和公式快速排除错误选项。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-04.html">2009-全国Ⅱ-04</a>（2009 · 中） 根据电源U-I图线求出电动势和内阻，再结合闭合电路欧姆定律判断外电路电阻连接方式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/451-串并联电路电阻计算.html">串并联电路电阻计算</a></li>
+</ul>
+</div>
+</body>
+</html>

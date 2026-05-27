@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何角度关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何角度关系</h1><div class="review-mark" data-stem="几何角度关系"></div><div class="meta-card"><span><strong>考点</strong>几何角度关系</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：15</li>
+<li>真题数：3；年份跨度：2008–2020</li>
+<li>出现题位：解答16 选择2 选择5</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>几何角度关系是物理问题中构建方程的关键桥梁，常见于光学折射/全反射与带电粒子在磁场中的圆周运动。核心知识点：
+- <strong>折射定律</strong>：$n_1 \sin\theta_1 = n_2 \sin\theta_2$，所有角度均指与法线的夹角。
+- <strong>全反射条件</strong>：光从光密介质射向光疏介质，入射角 $\theta \ge \theta_C$，其中临界角 $\sin\theta_C = \frac{n_小}{n_大}$。
+- <strong>反射定律</strong>：反射角等于入射角，常用于光路方向的几何转换。
+- <strong>平行平板折射侧移</strong>：出射光线与人射光线平行，侧移量由入射角、厚度及折射率决定，几何关系为 $d = \frac{t \sin(i - r)}{\cos r}$（$t$ 为板厚，$i$ 为人射角，$r$ 为折射角）。
+- <strong>带电粒子在匀强磁场中的圆周运动</strong>：洛伦兹力提供向心力 $qvB = m\frac{v^2}{R}$，半径 $R = \frac{mv}{qB}$，周期 $T = \frac{2\pi m}{qB}$。几何关系上，速度方向偏转角等于轨迹圆心角 $\alpha$，弦切角 $\theta$ 满足圆心角 $\alpha = 2\theta$（弦切角定理）。利用几何关系求解半径或比荷时，需将已知长度、角度在三角形中转化为半径关系。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图标注角度</strong>：光学题画出法线与光线，标明入射角、折射角、反射角；磁场题画出粒子轨迹圆弧、圆心、半径，标注速度方向与弦的夹角。</li>
+<li><strong>寻找几何守恒与角度等量关系</strong>：通常通过三角形内角和、平行线性质、反射等效翻转等将所求角与已知角挂钩。光学中常用“光线与界面夹角”转法线角；磁场中利用弦切角等于圆心角一半。</li>
+<li><strong>结合物理定律列方程</strong>：折射定律 $n\sin\theta = const$、全反射条件、带电粒子半径公式 $R = \frac{mv}{qB}$ 及几何半径 $R = \frac{d}{2\sin\theta}$（或正弦定理）。</li>
+<li><strong>联立求解</strong>：将几何关系式代入物理方程，解出目标量（角度、折射率、比荷等）。若涉及动态过程，注意角度与时间的关联（如匀速圆周运动中 $\theta = \omega t$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆光线与法线的夹角和光线与界面的夹角</strong>：折射定律中的入射角、折射角都是与法线的夹角，若题目给出“与界面夹角”，需用 $90^\circ$ 减之。</li>
+<li><strong>全反射判断忽略光疏/光密顺序</strong>：必须满足从大 $n$ 到小 $n$ 传播，否则不会发生全反射。</li>
+<li><strong>带电粒子磁场偏转的圆心角判定错误</strong>：误将弦切角直接当圆心角，忽略 $\alpha = 2\theta$；或方向偏转角与轨道圆心角不匹配（偏转角确实等于圆心角，但弦切角为其一半）。</li>
+<li><strong>平行玻璃板侧移方向误判</strong>：光线经两次折射后方向不变但侧移，计算侧移量时角度错位，未区分人射点与出射点的间距。</li>
+<li><strong>多过程的几何连锁关系遗漏</strong>：如真题中光在棱镜内多次反射/折射时，忽略前一段的出射角即后一段的入射角，导致角度递推错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2020-新课标Ⅱ-16 直角棱镜全反射与出射角</h3>
+<p><strong>题目</strong>：直角棱镜 $n=1.5$，$\angle C = 90^\circ$，$\angle A = 30^\circ$。细束光平行 BC 边从 AB 边 D 点射人，经折射射向 BC 边。（i）判断 BC 边是否发生全反射；（ii）求从 AC 边射出的光线与最初入射光线夹角的正弦值（不考虑多次反射）。</p>
+<p><strong>思路</strong>：作出光路图，利用平行条件求出 AB 面的入射角，折射后射向 BC 边，计算该处入射角并与临界角比较；对 AC 面再次使用折射定律，利用几何关系将出射角与初始方向关联。</p>
+<p><strong>步骤</strong>：
+- AB 面：光线平行 BC，AB 面法线方向如何？由 $\angle A=30^\circ$，BC 边与底边可推得 AB 与 BC 垂直，光线与 BC 平行，故人射光线与 AB 法线夹角即等于 $\angle A = 30^\circ$（人射角 $i_1=30^\circ$）。
+- 折射进入棱镜：$n\sin r_1 = \sin 30^\circ$，得 $\sin r_1 = \frac{0.5}{1.5} = \frac{1}{3}$，$r_1$ 可求。
+- 射至 BC 边：由棱镜角关系，从 AB 面折射至 BC 边上点 E 的入射角 $i_2$ 通过角度补齐得 $i_2 = 60^\circ - r_1$（或利用三角形内角和）。临界角 $\sin C = \frac{1}{1.5} \approx 0.667$，而 $\sin i_2$ 需计算，若 $i_2 &gt; C$ 则发生全反射，经计算确能全反射（题中直接说明理由）。
+- 全反射后射向 AC 边：反射角等于入射角，再结合几何关系得到达 AC 边的入射角 $i_3$，再次折射到空气，出射角 $i_4$ 满足 $1.5 \sin i_3 = \sin i_4$，最终所求夹角的正弦值即 $\sin i_4$。</p>
+<p><strong>点评/变式</strong>：本题关键在准确运用角度传递，熟悉棱镜中光线经多次反射/折射的角度递推。变式可将平行条件改为特定入射角，或要求画出全部光路并标出各角。</p>
+<h3>2. 2008-全国Ⅱ-02 平行玻璃板的侧移</h3>
+<p><strong>题目</strong>：单色光斜射至厚平板玻璃上表面，经两次折射从下表面射出。求侧移或分析角度关系。</p>
+<p><strong>思路</strong>：上下表面平行，光路对称：下表面入射角等于上表面折射角 $r$，出射角等于原入射角 $i$。侧移量由板厚及角度差决定。</p>
+<p><strong>步骤</strong>：
+- 设入射角 $i$，折射角 $r$，满足 $\sin i = n \sin r$。
+- 在下表面，入射角为 $r$，折射角为 $i$，出射光线与人射光线平行。
+- 侧移距离 $d = \frac{t \sin(i - r)}{\cos r}$（$t$ 为板厚），通过几何三角关系推导。
+- 若给定具体数值，直接代入求侧移；若讨论影响因素，可知 $i$ 越大、$t$ 越大、$n$ 越大侧移越大。</p>
+<p><strong>点评/变式</strong>：本题为纯几何光学典型题，易与光的色散结合考查不同色光的侧移差异，或求光通过多层介质的整体侧移。</p>
+<h3>3. 2016-新课标Ⅱ-05 磁场中带电粒子的角度关系求比荷</h3>
+<p><strong>题目</strong>：圆筒在匀强磁场中绕轴以 $\omega$ 转动，粒子从 M 孔沿与 MN 成 $30^\circ$ 方向射入，恰在筒转过 $90^\circ$ 时从 N 孔射出，未与筒壁碰撞，求比荷 $\frac{q}{m}$。</p>
+<p><strong>思路</strong>：粒子在筒内做圆弧运动，轨迹圆心角由人射方向和出射点的几何关系确定。筒转过 $90^\circ$ 的时间内粒子走完这段圆弧，两段时间相等。</p>
+<p><strong>步骤</strong>：
+- 作出圆筒截面图，M、N 为直径两端点。粒子从 M 射人，方向与 MN 成 $30^\circ$，故弦切角为 $30^\circ$，轨迹圆弧所对圆心角 $\alpha = 2 \times 30^\circ = 60^\circ$。
+- 粒子恰好在筒转过 $90^\circ$ 时到 N，粒子运动时间 $t = \frac{\alpha}{2\pi} T = \frac{60^\circ}{360^\circ} \cdot \frac{2\pi m}{qB} = \frac{\pi m}{3 qB}$。
+- 圆筒转过 $90^\circ$ 的时间 $t' = \frac{\pi/2}{\omega}$，令 $t = t'$，解得 $\frac{q}{m} = \frac{2\omega}{3B}$（需结合正确的半径关系，圆筒半径 $R$ 实际会被消去）。
+- 注意粒子轨迹半径 $r$ 由几何得 $r = \frac{R}{\sqrt{3}}$（或类似），但不需 $R$ 即能消元求比荷。</p>
+<p><strong>点评/变式</strong>：此题将圆周运动几何与时间同步关联，核心在弦切角到圆心角的转换。变式可改变人射角或筒转角度，推广为一般表达式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-16.html">2020-新课标Ⅱ-16</a>（2020 · 中） 光线折射与全反射判断，结合几何关系求解出射光线与入射光线夹角的正弦值</li>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-05.html">2016-新课标Ⅱ-05</a>（2016 · 中） 带电粒子在匀强磁场与旋转圆筒中运动，通过几何关系与周期公式求比荷。</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-02.html">2008-全国Ⅱ-02</a>（2008 · 易） 该题考查光通过平板玻璃的折射现象，涉及折射定律和几何角度关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/525-几何角度关系.html">几何角度关系</a></li>
+</ul>
+</div>
+</body>
+</html>

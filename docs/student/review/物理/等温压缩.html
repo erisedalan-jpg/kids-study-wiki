@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等温压缩</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等温压缩</h1><div class="review-mark" data-stem="等温压缩"></div><div class="meta-card"><span><strong>考点</strong>等温压缩</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>热学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：热学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>玻意耳定律</strong>：一定质量的理想气体，温度不变时，压强与体积成反比。
+  $$p_1V_1 = p_2V_2$$
+  适用于质量一定、温度不变、理想气体（或实际气体在压强不太大、温度不太低时）。</li>
+<li><strong>玻璃管–水银柱模型常用形式</strong>：管径均匀时，体积可用空气柱长度代替：
+  $$p_1 l_1 = p_2 l_2$$</li>
+<li><strong>静止流体压强关系</strong>：</li>
+<li>同一水平液面压强相等（连通器原理）。</li>
+<li>封闭气体压强 $p = p_0 \pm \rho g h$（液柱高度差 $h$ 产生的压强差）。水银柱的压强常以“cmHg”计，$p_0$ 用 cmHg 数值直接参与运算。</li>
+<li><strong>封闭气体压强的分析与表达</strong>：
+  遵从“沿液柱逐层加减”：顺着液柱向下压强增大，向上压强减小；从已知压强点（如与大气相通处）出发，推至封闭气柱。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>拆研究对象</strong>：识别哪部分气体是封闭且质量不变的，单一气体还是多部分气体。该考点常涉及两段（或多段）被水银分隔的封闭气柱。</li>
+<li><strong>画初、末状态图</strong>：标注已知管长、初始气柱长度和水银柱高度，末态注入水银后的水银面位置、空气柱长度等。</li>
+<li><strong>设未知数，表出状态参量</strong>：</li>
+<li>对每段气体设末态空气柱长度（或水银柱高度）。</li>
+<li>利用初态条件（通常与大气压连通，气体压强等于大气压 $p_0$）确定初态 $p$、$V$。</li>
+<li>末态压强用液柱高度差表示（通过连通器下端压强相等建立关系）。</li>
+<li><strong>列玻意耳定律方程</strong>：对每一段封闭气体，列出 $p_{\text{初}} l_{\text{初}} = p_{\text{末}} l_{\text{末}}$。</li>
+<li><strong>补几何关系</strong>：总长度约束、水银柱高度差与气柱长度的关联、连通器底端压强的等式。</li>
+<li><strong>联立求解，舍去负根或超几何范围的解</strong>，得到所求高度差或长度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>初态压强误判</strong>：初始装置未注入水银时，若封闭端与大气不相通，易错认为初态压强不是 $p_0$。必须从开口端开始推压：初态 A、B 内气压等于大气压的条件是它们与大气通过连通部分无液柱高度差。</li>
+<li><strong>压强加减方向</strong>：$p_{\text{内}} = p_0 \pm \rho g h$ 取决于液面高低。开口端液面高，封闭端气压大；反之则小。慎用“向上减、向下加”原则。</li>
+<li><strong>连通器压强传递遗漏</strong>：同一水平面压强相等只适用于静止同种液体连续部分。务必找到“下端连通”处，写出各方气柱与液柱对该水平面贡献的压强等式。</li>
+<li><strong>混淆管长与气柱长</strong>：管长通常是固定值，气柱长度会变。不可直接把管长代入玻意耳定律的末态体积。</li>
+<li><strong>单位不统一或数值计算误差</strong>：大气压用 cmHg 时，长度用 cm，计算简便。乘积与展开时注意小数点（如 $75 \times 13.5$），避免计算错误导致无理解或错解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021-全国乙-14</h3>
+<p><strong>题目</strong><br />
+竖直玻璃管 A、B、C 粗细均匀，下端在同一水平面且相互连通。A、B 上端封闭，长度分别为 $l_1=13.5\,\text{cm}$、$l_2=32\,\text{cm}$；C 管上端开口。从 C 管缓慢注入水银，直至 B、C 两管内水银柱高度差 $h=5\,\text{cm}$。外界大气压 $p_0=75\,\text{cmHg}$。求 A、B 两管内水银柱的高度差。</p>
+<p><strong>思路</strong><br />
+将 A、B 内气体分别视为等温变化的研究对象。初态压强均为 $p_0$，体积对应各管长度。末态：由 B、C 高度差先求出 B 末态压强和 B 内水银柱高度；利用三管下端连通处的压强相等，表达出 A 末态压强与 A 内水银柱高度的关系；对 A 用玻意耳定律列式，解出 A 内水银柱高度，再与 B 水银柱高度作差。</p>
+<p><strong>步骤</strong><br />
+1. 对 B 内气体：初态 $p_{B0}=75\,\text{cmHg}$，$l_{B0}=32\,\text{cm}$。<br />
+   末态 $p_B = p_0 + h = 75+5=80\,\text{cmHg}$。<br />
+   由 $p_{B0} l_2 = p_B l_B'$，得<br />
+   $$l_B' = \frac{75 \times 32}{80} = 30\,\text{cm}.$$<br />
+   B 管内进入的水银柱高度为 $32 - 30 = 2\,\text{cm}$。<br />
+2. 取三管下端水平面为参考面。C 管水银柱高度比 B 管高 5 cm，且 B 内已有 2 cm 水银，故 C 管水银柱下端到该水银面高度为 $2 + 5 = 7\,\text{cm}$。<br />
+   下端压强（用 cmHg 单位）：<br />
+   $p_{\text{下端}} = p_0 + 7 = 82\,\text{cmHg}$。<br />
+   （验证：从 B 侧计算，$p_{\text{下端}}=p_B + 2 = 80+2=82\,\text{cmHg}$，一致。）<br />
+3. 设 A 管内进入水银柱高度为 $h_A$，则 A 内气柱长度 $l_A' = 13.5 - h_A$。<br />
+   A 下端压强等于 $p_{\text{下端}}$，故 $p_A + h_A = 82$，即 $p_A = 82 - h_A$（单位 cmHg）。<br />
+4. 对 A 内气体用玻意耳定律：<br />
+   $$75 \times 13.5 = (82 - h_A)(13.5 - h_A).$$<br />
+   左边 $1012.5$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-14.html">2021-全国乙-14</a>（2021 · 中） 本题通过水银柱平衡分析两封闭气体等温压缩后的高度差计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/710-等温压缩.html">等温压缩</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆周运动半径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆周运动半径</h1><div class="review-mark" data-stem="圆周运动半径"></div><div class="meta-card"><span><strong>考点</strong>圆周运动半径</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>带电粒子在匀强磁场中做匀速圆周运动的动力学核心：洛伦兹力提供向心力<br />
+  $$qvB = m\frac{v^2}{r}$$</li>
+<li>半径公式：$r = \dfrac{mv}{qB}$（$v \perp B$）。<br />
+  理解每一物理量的含义，并掌握比例关系：$r \propto \dfrac{mv}{qB}$。</li>
+<li>周期公式：$T = \dfrac{2\pi r}{v} = \dfrac{2\pi m}{qB}$。<br />
+  特点：周期与速度大小无关，由磁场、粒子的比荷决定。</li>
+<li>角速度：$\omega = \dfrac{v}{r} = \dfrac{qB}{m}$；加速度大小：$a = \dfrac{v^2}{r} = \dfrac{qvB}{m}$。</li>
+<li>适用条件：匀强磁场 $B$，粒子速度垂直于磁场（$v \perp B$），忽略重力。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确不变量</strong>：先找出题目中给定的相等量（如本题中电子速率 $v$ 相同，电荷 $q$、质量 $m$ 相同，仅 $B$ 不同）。</li>
+<li><strong>写出基本公式</strong>：将半径、周期、角速度、加速度的决定式列出：<br />
+   $r=\dfrac{mv}{qB},\; a=\dfrac{qvB}{m},\; T=\dfrac{2\pi m}{qB},\; \omega=\dfrac{qB}{m}$。</li>
+<li><strong>建立比例关系</strong>：依据公式判断所求量与变化量的正、反比关系。<br />
+   例：$r \propto \frac{1}{B}$，$a \propto B$，$T \propto \frac{1}{B}$，$\omega \propto B$。</li>
+<li><strong>代入倍数计算</strong>：将磁感应强度的倍数关系代入比例，得出结果。<br />
+   如 $B_{Ⅰ}=kB_{Ⅱ}$，则 $r_{Ⅱ}=k\,r_{Ⅰ}$，$T_{Ⅱ}=k\,T_{Ⅰ}$，$a_{Ⅱ}=a_{Ⅰ}/k$，$\omega_{Ⅱ}=\omega_{Ⅰ}/k$。</li>
+<li><strong>逐项验证</strong>：对选择题每个选项都按比例验证，避免漏选。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>周期与速度无关</strong>：错认为$T \propto v$或$T \propto r$，应牢记 $T=\frac{2\pi m}{qB}$ 为定式。</li>
+<li><strong>比例反向了</strong>：由$B_Ⅰ=kB_Ⅱ$，误把$r_Ⅱ$算成$r_Ⅰ/k$。记住$r \propto 1/B$，B小的区域半径大。</li>
+<li><strong>直接套用圆周运动无磁场公式</strong>：忽略洛伦兹力，单纯用机械运动向心力公式，未涉及$qB$。</li>
+<li><strong>忽略粒子性质</strong>：题干中“电子”带负电，但半径、周期、角速度大小只与$|q|$有关，方向变化不影响大小。看到“电子”直接套半径公式即可。</li>
+<li><strong>多选题漏选</strong>：如本题$r$和$T$均与$B$成反比，应同时选A、C；若思维定势只求半径，易漏掉周期。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2015·新课标Ⅱ·06）</h3>
+<p>有两匀强磁场区域Ⅰ和Ⅱ，Ⅰ中的磁感应强度是Ⅱ中的 $k$ 倍。两个速率相同的电子分别在两磁场中做圆周运动。与Ⅰ中电子相比，Ⅱ中的电子（　　）<br />
+A. 运动轨迹的半径是Ⅰ中的 $k$ 倍<br />
+B. 加速度的大小是Ⅰ中的 $k$ 倍<br />
+C. 做圆周运动的周期是Ⅰ中的 $k$ 倍<br />
+D. 做圆周运动的角速度是Ⅰ中的 $k$ 倍  </p>
+<p><strong>思路</strong><br />
+电子速率$v$相同，质量$m$、电量$q$相同，仅磁感应强度不同（$B_Ⅰ=kB_Ⅱ$）。根据洛伦兹力提供向心力推导出各物理量与$B$的关系，用比例法快速判断。</p>
+<p><strong>步骤</strong><br />
+1. 设Ⅱ中磁感应强度为$B$，则Ⅰ中为$kB$。<br />
+2. 半径：$r=\dfrac{mv}{qB}$ → $r \propto 1/B$ → $r_Ⅱ = k\,r_Ⅰ$，A 正确。<br />
+3. 加速度：$a=\dfrac{qvB}{m}$ → $a \propto B$ → $a_Ⅱ = a_Ⅰ/k$，B 错误。<br />
+4. 周期：$T=\dfrac{2\pi m}{qB}$ → $T \propto 1/B$ → $T_Ⅱ = k\,T_Ⅰ$，C 正确。<br />
+5. 角速度：$\omega=\dfrac{qB}{m}$ → $\omega \propto B$ → $\omega_Ⅱ = \omega_Ⅰ/k$，D 错误。<br />
+答案：<strong>A、C</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 本题易遗漏C选项，误以为周期与半径同时变化而不知比例相同。牢记$T$只与$B$、比荷有关。<br />
+- 变式：若将电子换成质子，或速率不同、磁场相同，同样利用比例法处理。例如，两质子速率之比为$v_1:v_2=1:2$，在同一磁场中比较半径和周期。此时 $r \propto v$，$T$ 不变，可迅速得解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-06.html">2015-新课标Ⅱ-06</a>（2015 · 中） 电子在不同磁感应强度匀强磁场中做匀速圆周运动的半径、加速度、周期、角速度比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/571-圆周运动半径.html">圆周运动半径</a></li>
+</ul>
+</div>
+</body>
+</html>

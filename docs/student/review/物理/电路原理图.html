@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路原理图</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电路原理图</h1><div class="review-mark" data-stem="电路原理图"></div><div class="meta-card"><span><strong>考点</strong>电路原理图</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电路原理图</strong>：用统一规定的图形符号表示电路元件，用连线反映实际连接的电路图。画图时导线应横平竖直，尽量减少交叉；元件符号要规范；必须准确反映串、并联关系与电表测量对象。</li>
+<li><strong>伏安法测电阻</strong>：$R_x = \frac{U_x}{I_x}$，若电流表外接则测量值偏小，内接则测量值偏大。本实验未直接使用电流表，而是通过与已知电阻 $R_0$ 串联，利用电压表分别测两端电压间接求流：$I_0 = \frac{U_1}{R_0}$，由串联 $I_x = I_0$ 得 $R_x = \frac{U_2}{I_0} = \frac{U_2}{U_1}R_0$。</li>
+<li><strong>电压表内阻影响</strong>：电压表内阻并非无穷大，会引入分流。考虑内阻时，通过 $R_0$ 所在支路的总电流 $I = \frac{U_1}{R_0} + \frac{U_1}{r_1}$，$R_x$ 所在支路的总电流 $I = \frac{U_2}{R_x} + \frac{U_2}{r_2}$，由串联电流相等可解出真实 $R_x$。</li>
+<li><strong>滑动变阻器接法</strong>：分压式接法（一上两下或一上一下的动端与两端形成分压）可从 $0$ 开始连续调节电压，适合要求电压从零起调或大范围调节的实验；限流式接法仅串入一部分电阻。本实验采用分压式接法，初始时应使滑动头置于输出电压最小的位置（最右端）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定元件、理路径</strong><br />
+   从电源正极出发，沿导线依次识别经过的开关、滑动变阻器、电阻箱、待测电阻等，分清干路与支路。电压表最后补在待测元件两端。</li>
+<li><strong>明测量、画框架</strong><br />
+   确定各表测量的物理量：如电压表 $\text{V}_1$ 并联在电阻箱 $R_0$ 两端，电压表 $\text{V}_2$ 并联在 $R_x$ 两端。先串联部分、再并联部分，画出主体串联回路。</li>
+<li><strong>规范符号、平直布线</strong><br />
+   滑动变阻器按分压接法画出三个接线柱：下两接线柱接电源，动端接线柱接负载。电阻箱用规定符号，一般元件用通用符号。导线避免斜线和多余交叉。</li>
+<li><strong>推公式、分两态</strong>  </li>
+<li>不计电压表内阻：$R_x = \frac{U_2}{U_1}R_0$（纯串联电流相等）。</li>
+<li>计及电压表内阻：由 $\frac{U_1}{R_0}+\frac{U_1}{r_1}=\frac{U_2}{R_x}+\frac{U_2}{r_2}$ 导出 $R_x = \frac{U_2R_0r_1r_2}{U_1r_2(r_1+R_0)-U_2R_0r_1}$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分压接法的初始安全位置</strong>：闭合开关前，分压器滑动触头应置于负载分压最小的一端（本题“最右端”），防止电压表过载。不能随意放在中点。</li>
+<li><strong>电压表分流勿遗漏</strong>：题目明示“电压表内阻都很大”，但第（Ⅲ）问明确要求考虑内阻，必须用并联分流处理，误认为电压表完全理想会导致失分。</li>
+<li><strong>张冠李戴</strong>：$U_1$ 与 $U_2$ 必须一一对应到 $R_0$ 和 $R_x$ 两端电压，若在实物图中读错电压表编号，表达式会写反。</li>
+<li><strong>原理图与实物接线不一致</strong>：实物图中导线在接线柱上的实际连接方式必须原样平移为原理图的电气连接，尤其分压器的上下接线柱不能混淆。</li>
+<li><strong>公式变形错漏</strong>：推导计及内阻的 $R_x$ 时，代数整理步骤易出错，最好先写出等式再移项，最后整体表达成 $R_x=\cdots$，避免正负号或分母遗漏项。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2008·全国Ⅱ·10）</h3>
+<p>利用两个内阻很大的相同量程电压表、电阻箱 $R_0$（初始值与待测电阻 $R_x\approx500\Omega$ 接近）和分压式滑动变阻器测 $R_x$。按给定实物连线，操作步骤：滑变置最右端→合开关→左移使两表明显偏转→记示数 $U_1$、$U_2$→多次测量。要求画出电路原理图、写出不计和计及电压表内阻时 $R_x$ 的表达式。</p>
+<h3><strong>思路</strong></h3>
+<p>根据实物连线确定电流路径：电源正极→开关→滑动变阻器（一上一下和另一固定端），分压输出端分别接 $R_0$ 和 $R_x$ 的串联组合。电压表 $\text{V}_1$ 并接在 $R_0$ 两端，$\text{V}_2$ 并接在 $R_x$ 两端。不计内阻时，串联电流 $I = U_1/R_0 = U_2/R_x$。计及内阻时，电压表相当于在 $R_0$、$R_x$ 上各并联了一个分流电阻 $r_1,r_2$，利用两支路总电流相等列式。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>画原理图</strong>：先绘出电源、开关、滑动变阻器分压接法（下端两接线柱全接电源，上端一接线柱接负载）。再将电阻箱 $R_0$ 和 $R_x$ 串联后接在分压输出端与电源负极之间。最后补充电压表 $\text{V}_1$ 并联在 $R_0$ 两端、$\text{V}_2$ 并联在 $R_x$ 两端。</li>
+<li><strong>不计电压表内阻</strong>：<br />
+   串联电流 $I = \frac{U_1}{R_0}$，且 $R_x$ 两端电压为 $U_2$，故<br />
+   $$R_x = \frac{U_2}{I} = \frac{U_2}{U_1}R_0.$$</li>
+<li><strong>计及电压表内阻</strong>：<br />
+   通过 $R_0$ 所在并联部分的总电流<br />
+   $$I = \frac{U_1}{R_0} + \frac{U_1}{r_1},$$<br />
+   通过 $R_x$ 所在并联部分的总电流<br />
+   $$I = \frac{U_2}{R_x} + \frac{U_2}{r_2}.$$<br />
+   二者相等，联立<br />
+   $$\frac{U_1}{R_0} + \frac{U_1}{r_1} = \frac{U_2}{R_x} + \frac{U_2}{r_2},$$<br />
+   移项解出<br />
+   $$\frac{U_2}{R_x} = \frac{U_1}{R_0} + \frac{U_1}{r_1} - \frac{U_2}{r_2},$$<br />
+   取倒数并整理得<br />
+   $$R_x = \frac{U_2 R_0 r_1 r_2}{U_1 r_2 (r_1 + R_0) - U_2 R_0 r_1}.$$</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>该题核心在于将实物接线转换为原理图，并利用串联分压和并联分流原理建立方程。计及内阻的推导中，很多考生误用 $U_1/R_0 = U_2/R_x$ 直接修正，而忽略电压表分流路径，导致错误。<br />
+<strong>变式</strong>：若将电压表换成电流表，并已知电流表内阻，可由 $U=I_1(R_0+R_A)$ 测电压，同样可推 $R_x$。或者将电阻箱与待测电阻并联，电流表测总电流和一支路电流，依据分流关系求解，原理相通。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2008-全国Ⅱ-10.html">2008-全国Ⅱ-10</a>（2008 · 中） 该题考查电学实验测量电阻，要求画电路原理图并推导含电压表内阻影响的电阻计算公式</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/694-电路原理图.html">电路原理图</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>静摩擦力</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>静摩擦力</h1><div class="review-mark" data-stem="静摩擦力"></div><div class="meta-card"><span><strong>考点</strong>静摩擦力</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>静摩擦力定义</strong>：两个相互接触且具有相对运动趋势的物体之间，在接触面上产生的阻碍相对运动趋势的力。它是被动力，随沿接触面方向的其他外力变化而变化，具有“顺应性”。</li>
+<li><strong>最大静摩擦力</strong>：静摩擦力的极限值。当沿接触面方向的外力达到某一数值时，物体即将开始相对滑动，此时的静摩擦力即为最大静摩擦力 $f_{\rm max}$。一般公式 $f_{\rm max} = \mu_s N$，$\mu_s$ 为静摩擦因数，$N$ 为正压力。题目中常设最大静摩擦力等于滑动摩擦力。</li>
+<li><strong>滑动摩擦力</strong>：物体间发生相对滑动后，接触面上产生的阻碍相对运动的力。公式 $f = \mu N$，$\mu$ 为动摩擦因数，方向与相对运动方向相反。大小一般恒定（与速度无关）。</li>
+<li><strong>摩擦力突变临界条件</strong>：当外力（或加速度）增大到使静摩擦力达到 $f_{\rm max}$ 时，物体间即将发生相对滑动，此时为“临界状态”。超过临界状态后，静摩擦力突变为滑动摩擦力（大小通常不变，方向不变）。</li>
+<li><strong>板块模型中的临界加速度</strong>：在光滑水平面上，$m_2$ 叠放于 $m_1$ 上，给 $m_1$ 施加水平力 $F$，则两者相对静止的临界条件为 $m_2$ 所受静摩擦力达到最大值：对 $m_2$ 有 $f_{\rm max} = m_2 a$，对整体有 $F_c = (m_1+m_2) a$。由此推出临界加速度 $a_c = \frac{f_{\rm max}}{m_2}$，临界外力 $F_c = \frac{m_1+m_2}{m_2} f_{\rm max}$。若 $m_2$ 与 $m_1$ 间的最大静摩擦力与滑动摩擦力相等，则此后 $m_2$ 将以加速度 $a_2 = \frac{f_{\rm max}}{m_2} = a_c$ 维持匀加速。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建模与受力分析</strong>：明确研究对象（板、块或整体），画出受力图。注意区分光滑与粗糙面，准确标出摩擦力的种类（静或滑动）及方向。</li>
+<li><strong>假设无相对滑动（整体法）</strong>：先假设二者以相同加速度运动，用整体法列式：$F_{\text{合}} = (m_1+m_2)a$，求出加速度。再隔离受力简单的物体（通常是上面的物体），求其所需静摩擦力 $f = m a$，并检验 $f \le f_{\rm max}$。</li>
+<li><strong>求临界点</strong>：令 $f = f_{\rm max}$，解出临界外力 $F_c$、临界加速度 $a_c$ 或临界时刻 $t_c$。对于变力 $F=kt$，可由 $F_c = k t_c$ 得到临界时刻。</li>
+<li><strong>分段应用牛顿第二定律</strong>：</li>
+<li>当 $F \le F_c$（或 $t \le t_c$）：静摩擦力阶段，$a_1 = a_2 = a$，可由整体或隔离求出含参表达式。</li>
+<li>当 $F &gt; F_c$（或 $t &gt; t_c$）：相对滑动阶段，摩擦力突变为滑动摩擦力 $f$，分别隔离：对 $m_1$ 有 $F - f = m_1 a_1$，对 $m_2$ 有 $f = m_2 a_2$，其中 $f$ 为恒值，由此得到 $a_1$ 与 $F$ 的线性关系，$a_2$ 恒定。</li>
+<li><strong>画图与判断</strong>：结合分段表达式，判断 $a!-!t$、$a!-!F$、$v!-!t$ 等图线的斜率、截距、拐点特征。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记检验相对静止条件</strong>：直接默认两物体始终共同运动，未判断静摩擦力是否超限，导致全程错误。</li>
+<li><strong>混淆静摩擦与滑动摩擦的突变</strong>：临界点后摩擦力由“变化的 $f$”突变为“恒定的 $f_{\rm max}$”，若仍沿用静摩擦力公式或误认为摩擦力继续增大，会导致 $a_2$ 图线继续上升。</li>
+<li><strong>误判滑动摩擦力方向</strong>：相对滑动时，滑动摩擦力方向与相对运动方向相反。注意本题中 $m_1$ 加速过程中，$m_2$ 相对 $m_1$ 向后滑动，故 $m_2$ 受向前（与整体运动方向相同）的滑动摩擦力，加速度依然向前。</li>
+<li><strong>临界点之后 $a_2$ 的取值</strong>：若题目明确最大静摩擦力等于滑动摩擦力，则 $m_2$ 的加速度在临界点前后瞬间不变，图线表现为 $a_2$ 从倾斜段末端的值直接水平延伸，无跳跃。</li>
+<li><strong>隔离时研究对象混淆</strong>：在 $F$ 作用于 $m_1$ 的情况下，$m_2$ 的加速度仅由摩擦力提供，$F$ 并不直接作用于 $m_2$，切忌将 $F$ 直接代入 $m_2$ 的牛顿方程。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2011·新课标·08</h3>
+<p><strong>题目</strong><br />
+光滑水平面上，质量为 $m_1$ 的足够长木板上叠放一质量为 $m_2$ 的木块。两者之间的最大静摩擦力与滑动摩擦力相等。现给木板施加水平力 $F=kt$（$k$ 为常数，$t$ 为时间），木板与木块的加速度大小分别为 $a_1$ 和 $a_2$。下列反映 $a_1$ 和 $a_2$ 随时间变化的图线中正确的是（　　）（选项略）</p>
+<p><strong>思路</strong><br />
+本题是经典的板块模型与变力结合问题。由于 $F$ 从零线性增大，初始阶段静摩擦力足以使二者共同加速；当 $F$ 增大到使静摩擦力达到最大值时，二者出现相对滑动。之后木块受恒定的滑动摩擦力作匀加速运动，木板受变化的 $F$ 和恒定的滑动摩擦力，加速度继续线性增大但斜率改变。抓住临界点分段求解，并注意图线的斜率与平直特征。</p>
+<p><strong>步骤</strong>
+1. <strong>确定临界状态</strong>：设最大静摩擦力（等于滑动摩擦力）为 $f$。当二者即将相对滑动时，对 $m_2$：$f = m_2 a$；对整体：$F = (m_1+m_2) a$。得临界加速度 $a_c = \dfrac{f}{m_2}$，临界外力 $F_c = \dfrac{m_1+m_2}{m_2} f$。由 $F=kt$ 得临界时刻 $t_0 = \dfrac{F_c}{k}$。
+2. <strong>$0 \le t \le t_0$ 阶段</strong>（相对静止）：整体加速度 $a_1 = a_2 = \dfrac{F}{m_1+m_2} = \dfrac{kt}{m_1+m_2}$，随 $t$ 线性增大，图线为过原点的倾斜直线。
+3. <strong>$t &gt; t_0$ 阶段</strong>（相对滑动）：<br />
+   - 对木块 $m_2$：$f = m_2 a_2 \Rightarrow a_2 = \dfrac{f}{m_2} = a_c$，为定值，图线变为水平线。<br />
+   - 对木板 $m_1$：$F - f = m_1 a_1 \Rightarrow a_1 = \dfrac{kt - f}{m_1} = \dfrac{k}{m_1} t - \dfrac{f}{m_1}$。由于 $m_1 &lt; m_1+m_2$，$\dfrac{k}{m_1} &gt; \dfrac{k}{m_1+m_2}$，此阶段 $a_1$ 斜率比共同加速时更大，仍为直线但不通过原点。
+4. <strong>对比图线特征</strong>：$a_2$ 先斜升后水平；$a_1$ 先斜升（小斜率），后斜升（大斜率），在 $t_0$ 处与 $a_2$ 分叉。只有符合此特征的图线正确。</p>
+<p><strong>点评/变式</strong><br />
+- <strong>点评</strong>：本题易错点在于认为 $a_2$ 从零开始突变为水平，或者认为 $a_1$ 斜率不变。抓住临界点的连续性（$a_2$ 无突变）和 $a_1$ 两类受力阶段的方程是解题关键。<br />
+- <strong>变式</strong>：若水平力 $F$ 作用在木块 $m_2$ 上，则临界条件变为 $f = m_1 a$，$a_c = \dfrac{f}{m_1}$；临界后木板 $m_1$ 的加速度保持 $a_c$ 不变，而木块 $m_2$ 加速度斜率取决于净力 $F-f$。图线中水平段与斜升段的对象互换，分析方法完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-08.html">2011-新课标-08</a>（2011 · 中） 木块叠放于木板上，在随时间线性增大的外力作用下，分析两物体加速度随外力变化的图像。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">静摩擦力</a></li>
+</ul>
+</div>
+</body>
+</html>

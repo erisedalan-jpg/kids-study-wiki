@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>竖直上抛运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>竖直上抛运动</h1><div class="review-mark" data-stem="竖直上抛运动"></div><div class="meta-card"><span><strong>考点</strong>竖直上抛运动</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择7</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：将物体以一定的初速度 $v_0$ 沿竖直方向向上抛出，只在重力作用下（或受恒定重力与恒定阻力共同作用）所做的运动。</li>
+<li><strong>基本模型（无阻力）</strong>：</li>
+<li>加速度：$a = g$，方向始终竖直向下。</li>
+<li>上升时间：$t_{\text{上}} = \frac{v_0}{g}$；从最高点落回抛出点时间 $t_{\text{下}} = \frac{v_0}{g}$，总时间 $t_{\text{总}} = \frac{2v_0}{g}$。</li>
+<li>最大高度：$H = \frac{v_0^2}{2g}$。</li>
+<li>对称性：上升与下降过程通过同一位置的速度大小相等、方向相反；上升时间等于下降时间。</li>
+<li><strong>有恒定阻力 $f$ 的竖直上抛（阻力方向总与速度反向）</strong>：</li>
+<li>上升过程：加速度大小 $a_1 = g + \frac{f}{m}$，方向竖直向下。最大高度 $H = \frac{v_0^2}{2a_1} = \frac{v_0^2}{2(g + \frac{f}{m})}$。</li>
+<li>下降过程：加速度大小 $a_2 = g - \frac{f}{m}$，方向竖直向下。落回原抛出点的速率 $v = \sqrt{2a_2 H} = v_0 \sqrt{\frac{g - \frac{f}{m}}{g + \frac{f}{m}}}$。</li>
+<li>注意：有阻力时，上升时间 $t_{\text{上}} = \frac{v_0}{a_1}$ 小于下降时间 $t_{\text{下}} = \sqrt{\frac{2H}{a_2}}$，不对称。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画过程草图</strong>：标出初速度方向、位移参考点；明确物体处于上升阶段还是下降阶段。</li>
+<li><strong>受力分析定加速度</strong>：</li>
+<li>无阻力：全程 $a = g$，向下。</li>
+<li>有恒定阻力：阻力方向始终与速度方向相反。上升时阻力向下，$mg+f=ma_1$；下降时阻力向上，$mg-f=ma_2$。求得 $a_1$、$a_2$ 大小。</li>
+<li><strong>选择运动学公式</strong>：</li>
+<li>涉及的物理量通常有 $v_0$、$v$、$H$、$t$、$a$。</li>
+<li>常用关系：$v^2 - v_0^2 = -2a x$（以向上为正方向时，加速度取负值）；或直接使用标量式 $x = \frac{v_0^2 - v^2}{2a}$（$a$ 为加速度大小）。</li>
+<li>最高点处速度为零。</li>
+<li><strong>分段求解</strong>：上升过程用上升加速度、上升位移（正方向向上）；下降过程用下降加速度、下降位移大小等于上升最大高度（初速度为零的匀加速）。</li>
+<li><strong>检验合理性</strong>：有阻力时，返回速率必小于 $v_0$，上升高度小于无阻力时。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视阻力的矢量性</strong>：有阻力时上升、下降阶段的加速度大小不同，切忌直接用 $g$ 代入全程。</li>
+<li><strong>误用对称性</strong>：只有无阻力（只受重力）时上升与下降过程才具有严格的时间对称和同高度速率对称；存在阻力时对称性不再成立。</li>
+<li><strong>位移与路程混淆</strong>：求返回原抛出点的速度时，下降位移大小等于上升高度，但此位移是有方向的，公式代入时需注意正负号。</li>
+<li><strong>最高点状态误判</strong>：即便在最高点速度为零，加速度仍为 $g$（或 $g-\frac{f}{m}$，若阻力存在则阻力瞬间为零需过渡，但通常认为最高点加速度由重力决定或按下降加速度处理），物体并非处于平衡状态。</li>
+<li><strong>符号体系混乱</strong>：全程统一正方向（通常取向上为正），则上升阶段加速度为负值（$-a_1$），下降阶段加速度仍为负值（因下降加速度向下，也为负，但由于速度向下，计算时用标量式更安全）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2009·全国Ⅱ·07）</h3>
+<p><strong>题目</strong>：以初速度 $v_0$ 竖直向上抛出一质量为 $m$ 的小物体，假定物块所受的空气阻力 $f$ 大小不变。已知重力加速度为 $g$，求物体上升的最大高度和返回到原抛出点的速率。</p>
+<p><strong>思路</strong>：由于存在恒定阻力，必须分上升和下降两个过程，分别求出加速度，再利用运动学公式导出最大高度和返回速度的表达式。</p>
+<p><strong>步骤</strong>：
+1. 上升过程：物体向上运动，阻力 $f$ 向下，重力 $mg$ 向下。由牛顿第二定律 $mg+f = m a_1$，得 $a_1 = g + \frac{f}{m}$（大小）。取向上为正，则加速度 $=-a_1$。由 $0 - v_0^2 = -2a_1 H$，得最大高度 $H = \frac{v_0^2}{2a_1} = \frac{v_0^2}{2(g + \frac{f}{m})}$。
+2. 下降过程：从最高点落回，阻力 $f$ 向上，重力 $mg$ 向下，合力 $mg - f = m a_2$，得 $a_2 = g - \frac{f}{m}$（大小）。位移大小等于 $H$。由 $v^2 - 0 = 2a_2 H$，得返回速率 $v = \sqrt{2a_2 H} = \sqrt{2(g - \frac{f}{m}) \cdot \frac{v_0^2}{2(g + \frac{f}{m})}} = v_0 \sqrt{\frac{g - \frac{f}{m}}{g + \frac{f}{m}}}$。
+3. 选项匹配：表达式中若出现 $mg \pm f$ 形式，可分子分母同乘 $m$，写作 $v = v_0 \sqrt{\frac{mg - f}{mg + f}}$。</p>
+<p><strong>点评/变式</strong>：本题是无具体数值的符号推导题，考查有恒定阻力的竖直上抛核心模型。若阻力大小 $f$ 与速度成正比（$f = kv$），则运动变为变加速，通常需借助积分或动量定理，但高中阶段主要掌握恒定阻力模型。务必牢记：有阻力时返回速度一定小于初速度，可用此快速排除错误选项。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-07.html">2009-全国Ⅱ-07</a>（2009 · 难） 竖直上抛运动中考虑空气阻力，求解物体上升最大高度和落回原处速率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/706-竖直上抛运动.html">竖直上抛运动</a></li>
+</ul>
+</div>
+</body>
+</html>

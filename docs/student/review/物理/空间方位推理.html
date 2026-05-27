@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间方位推理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间方位推理</h1><div class="review-mark" data-stem="空间方位推理"></div><div class="meta-card"><span><strong>考点</strong>空间方位推理</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>地磁场特征</strong>：地球本身是一个大磁体，地磁北极在地理南极附近，地磁南极在地理北极附近。</li>
+<li><strong>地磁场的分解</strong>：</li>
+<li>水平分量 $B_{\parallel}$：在地表附近，除赤道外，地磁场方向与水平面有一定夹角。水平分量大致由南指向北（地理南极指向地理北极）。</li>
+<li>竖直分量 $B_{z}$：北半球竖直向下（取竖直向上为正时，$B_z&lt;0$），南半球竖直向上（$B_z&gt;0$）。赤道上竖直分量为零。</li>
+<li><strong>空间矢量测量</strong>：智能手机内置磁传感器可测得磁感应强度在手机自身坐标系中的三个分量 $(B_x, B_y, B_z)$。</li>
+<li><strong>坐标变换</strong>：当传感器绕某一固定轴旋转时，地磁场矢量在传感器动轴上的投影按正弦或余弦规律变化，而在固定轴上的投影保持不变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确坐标系与姿态</strong>：先确定题目给出的固定轴方向和可变的轴。本题中手机 $z$ 轴始终竖直向上，手机可绕竖直轴旋转，即 $xOy$ 平面始终在水平面内。</li>
+<li><strong>竖直分量的快速判断</strong>：</li>
+<li>观察 $B_z$ 数据是否恒定。若恒定，则该值为地磁场竖直分量。</li>
+<li>结合 $B_z$ 的正负判断竖直分量方向：规定向上为正，则 $B_z&lt;0$ 表示竖直分量向下，测量地点在北半球；反之在南半球。</li>
+<li><strong>水平分量的获取</strong>：</li>
+<li>找出某轴分量为零、另一轴分量非零的测量组。</li>
+<li>此时非零分量的绝对值即地磁场水平分量的大小 $B_{\parallel}$，该轴方向即水平分量的方向（正值同向，负值反向）。</li>
+<li><strong>空间合成</strong>：需要计算总磁感应强度时，利用 $B=\sqrt{B_x^2+B_y^2+B_z^2}$ 或 $B=\sqrt{B_{\parallel}^2+B_z^2}$。</li>
+<li><strong>方向推断</strong>：若题目给出地理方位（如 $y$ 轴正向朝北等），可进一步确定地磁场方向的绝对指向。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把竖直分量当成总磁场</strong>：看到 $B_z$ 绝对值最大就认为总磁场竖直，忽略水平分量，导致方向或大小判断错误。</li>
+<li><strong>竖直方向正负与南北半球混清</strong>：题目规定 $z$ 轴正向竖直向上，测得 $B_z$ 为负说明竖直分量向下，对应北半球。易误记成向上为北半球。</li>
+<li><strong>忽略旋转时坐标轴联动</strong>：“$y$ 轴指向不同方向，$z$ 轴保持竖直向上”意味着手机绕 $z$ 轴旋转，$x$ 轴必然随 $y$ 轴同步转动。测量中当 $B_x=0$ 时，水平分量恰好沿 $y$ 轴（或反方向），而非水平分量为零。</li>
+<li><strong>直接取某次数据的 $B_x$、$B_y$ 平方和开根</strong>：若不判断该次是否恰为水平分量完全投影在轴上，直接用单次数据 $\sqrt{B_x^2+B_y^2}$ 求水平分量大小可能偏小，必须选用分量为零的那组数据，此时另一分量体现完整的水平分量大小。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：智能手机磁传感器测量地磁场。手机显示屏为 $xOy$ 平面，$z$ 轴正向竖直向上。四次测量中$y$轴指向不同方向、$z$轴保持竖直向上，测得数据如下表。由表中数据可推断出地磁场的相关特征。</p>
+<table>
+<thead>
+<tr>
+<th>测量序号</th>
+<th>$B_x$/μT</th>
+<th>$B_y$/μT</th>
+<th>$B_z$/μT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>21</td>
+<td>-45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>-20</td>
+<td>-46</td>
+</tr>
+<tr>
+<td>3</td>
+<td>21</td>
+<td>0</td>
+<td>-45</td>
+</tr>
+<tr>
+<td>4</td>
+<td>-21</td>
+<td>0</td>
+<td>-45</td>
+</tr>
+</tbody>
+</table>
+<p><strong>思路</strong>：$z$轴始终竖直向上，$B_z$ 不变且为负值，据此可判断竖直分量方向和测量地所在的半球。观察$B_x$、$B_y$ 为零的数据组，可直接提取水平分量的大小与方向。结合竖直分量和水平分量即可得到地磁场的倾角和总磁感应强度。</p>
+<p><strong>步骤</strong>：
+1. 竖直分量分析：四次测量中 $B_z \approx -45\ \mu\text{T}$，大小 $45\ \mu\text{T}$，方向竖直向下（负值），故测量地点在北半球。
+2. 水平分量大小：第1、2次测量中 $B_x=0$，$|B_y|$ 分别为 $21\ \mu\text{T}$ 和 $20\ \mu\text{T}$；第3、4次测量中 $B_y=0$，$|B_x|$ 均为 $21\ \mu\text{T}$。取典型值，水平分量大小 $B_{\parallel} \approx 21\ \mu\text{T}$。
+3. 水平分量方向：由第1次测量 $B_x=0,\ B_y&gt;0$ 知，水平分量沿当时 $y$ 轴正方向。若结合方位（如$y$轴指北），即可确定水平分量指向北。
+4. 总磁感应强度：$B = \sqrt{B_{\parallel}^2 + B_z^2} \approx \sqrt{21^2 + 45^2}\ \mu\text{T} \approx 50\ \mu\text{T}$。
+5. 磁倾角：$\tan\theta = \dfrac{|B_z|}{B_{\parallel}} \approx \dfrac{45}{21} \approx 2.14$，$\theta \approx 65^\circ$（与水平面夹角）。</p>
+<p><strong>点评/变式</strong>：本题核心在于利用传感器坐标系旋转时分量变化的规律，提取出地磁场的两个正交分量。变式可改变手机姿态，例如 $y$ 轴保持水平但 $z$ 轴倾斜，或直接给出地理方位要求判断各个分量正负，解题逻辑不变——优先锁定恒定的竖直分量，再寻找分量为零的特殊取向获取水平分量。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-05.html">2022-全国乙-05</a>（2022 · 中） 本题通过地磁场数据表考查空间矢量分析及地理方位判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/705-空间方位推理.html">空间方位推理</a></li>
+</ul>
+</div>
+</body>
+</html>

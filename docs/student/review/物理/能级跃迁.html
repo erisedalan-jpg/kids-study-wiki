@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>能级跃迁</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>能级跃迁</h1><div class="review-mark" data-stem="能级跃迁"></div><div class="meta-card"><span><strong>考点</strong>能级跃迁</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择3</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>能级跃迁</strong>：原子从一个能量状态（能级）跃迁到另一个能量状态时，会吸收或放出能量。跃迁时辐射或吸收的光子能量 $h\nu$ 等于两能级能量差：<br />
+  $$h\nu = |E_{\text{初}} - E_{\text{末}}|$$</li>
+<li><strong>光子能量公式</strong>：$\varepsilon = h\nu$，$h$ 为普朗克常量，$h = 6.63 \times 10^{-34}\,\text{J·s}$。</li>
+<li><strong>波长与频率的关系</strong>：$c = \lambda\nu$，光子能量也可写为 $\varepsilon = h\dfrac{c}{\lambda}$，其中 $c = 3.00\times 10^8\,\text{m/s}$。</li>
+<li><strong>能量单位换算</strong>：$1\,\text{eV} = 1.60\times 10^{-19}\,\text{J}$。计算时常需将题目给出的eV转换为J，再代入 $h\nu$ 公式。</li>
+<li><strong>数量级估算</strong>：高考常考查直接利用 $h\nu$ 与 $\Delta E$ 的数量级关系快速判断频率或波长量级，不要求精确数值，但需注意单位统一和指数运算。</li>
+<li><strong>氢原子能级公式（拓展）</strong>：$E_n = \dfrac{E_1}{n^2}$（$n=1,2,3,\dots$），其中 $E_1 = -13.6\,\text{eV}$。跃迁发射或吸收光子种类数可由组合数确定。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确能量差</strong>：从题干提取跃迁对应的能量差 $\Delta E$，注意是“能量差量级”还是具体值。</li>
+<li><strong>统一单位</strong>：若 $\Delta E$ 以 eV 给出，必须利用 $1\,\text{eV} = 1.6\times 10^{-19}\,\text{J}$ 换算为焦耳（J），以保证与 $h$ 单位一致。</li>
+<li><strong>式选主元</strong>：求频率用 $\nu = \dfrac{\Delta E}{h}$；求波长用 $\lambda = \dfrac{hc}{\Delta E}$。</li>
+<li><strong>数量级运算</strong>：</li>
+<li>将数值写成科学记数法（$a \times 10^b$），系数相乘除，指数相加减。</li>
+<li>关注系数部分是否会影响数量级（如 $1.6 / 6.63 \approx 0.24$，使指数降一档）。</li>
+<li>答案往往只需判断频率/波长落在哪一个数量级区间（如 $10^9\,\text{Hz}$）。</li>
+<li><strong>多能级跃迁（辐射种类）</strong>：一群处于量子数 $n$ 的氢原子向低能级跃迁，可能辐射的光子种类数为 $N = C_n^2 = \dfrac{n(n-1)}{2}$。一个原子从高能级 $n$ 向低能级跃迁，最多辐射 $(n-1)$ 种频率的光子。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>eV 直接除以 $h$</strong>：忘将 eV 换为 J，直接用 $10^{-5} / (6.63\times 10^{-34})$，得到完全错误的数量级。</li>
+<li><strong>指数加减出错</strong>：$\Delta E = 10^{-5}\,\text{eV} \approx 1.6\times 10^{-24}\,\text{J}$，计算 $\nu = \frac{1.6\times 10^{-24}}{6.63\times 10^{-34}} \approx 2.4\times 10^9\,\text{Hz}$，指数为 $10^{-24+34}=10^{10}$，但系数约 0.24，使最终为 $10^9$，粗心直接定 $10^{10}$ 则错。</li>
+<li><strong>混淆“能量差”与“光子能量”</strong>：跃迁能量差等于光子能量，这是核心，但有时图中有多个能级，需正确找出发生跃迁的两个能级。若题目说“从 $E_m$ 跃迁到 $E_n$”，光子能量一定是正的，用绝对值。</li>
+<li><strong>记错 $h$ 的值</strong>：$h = 6.63\times 10^{-34}\,\text{J·s}$，有时误记为 $6.63\times 10^{-34}\,\text{eV·s}$ 或不带负号。</li>
+<li><strong>波长与频率倒置</strong>：当 $\Delta E$ 很小时频率很小、波长很大，反之亦然。求量级时用 $\Delta E = \frac{hc}{\lambda}$，计算易颠倒分子分母。</li>
+<li><strong>原子跃迁数的陷阱</strong>：注意题中是“一个原子”还是“一群原子”，辐射种类算法不同。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023新课标卷03）</h3>
+<p>铯原子基态的两个超精细能级之间跃迁发射的光子具有稳定的频率，铯原子钟利用的两能级的能量差量级为 $10^{-5}\,\text{eV}$，跃迁发射的光子的频率量级为（普朗克常量 $h = 6.63\times 10^{-34}\,\text{J·s}$，元电荷 $e = 1.60\times 10^{-19}\,\text{C}$）（  ）<br />
+A. $10^3\,\text{Hz}$　　 B. $10^6\,\text{Hz}$　　 C. $10^9\,\text{Hz}$　　 D. $10^{12}\,\text{Hz}$</p>
+<h3><strong>思路</strong></h3>
+<p>直接利用跃迁公式 $h\nu = \Delta E$ 求频率 $\nu$。注意 $\Delta E$ 以 eV 为单位，需转换为焦耳。题目只求数量级，核心是算准单位换算和指数运算。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>能量差换算：<br />
+   $$\Delta E = 10^{-5}\,\text{eV} = 10^{-5} \times 1.6 \times 10^{-19}\,\text{J} = 1.6\times 10^{-24}\,\text{J}$$  </li>
+<li>由 $h\nu = \Delta E$ 得：<br />
+   $$\nu = \frac{\Delta E}{h} = \frac{1.6\times 10^{-24}}{6.63\times 10^{-34}}\,\text{Hz}$$  </li>
+<li>计算数量级：<br />
+   $$\nu \approx \frac{1.6}{6.63} \times 10^{-24+34} \approx 0.24 \times 10^{10} = 2.4\times 10^9\,\text{Hz}$$<br />
+   频率量级为 $10^9\,\text{Hz}$，故选项 C 正确。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li><strong>点评</strong>：本题表面考能级跃迁，实考单位换算与数量级估算。许多考生因忘记将 eV 化为 J 而误选。计算时注意系数 $1.6/6.63\approx0.24$ 导致量级从 $10^{10}$ 变为 $10^9$。</li>
+<li><strong>变式1</strong>：若该跃迁发射光子的波长量级为多少？<br />
+  由 $\lambda = \frac{c}{\nu} \approx \frac{3\times10^8}{2.4\times10^9} \approx 0.125\,\text{m}$，属于无线电波（微波）波段，量级 $10^{-1}\,\text{m}$。</li>
+<li><strong>变式2</strong>：若已知两能级能量差为 $2.0\times10^{-5}\,\text{eV}$，则频率约为 $4.8\times10^9\,\text{Hz}$，仍为 $10^9$ 量级，再次印证估算中系数很少跃升量级，除非系数乘积跨越 10 的界限。</li>
+<li><strong>应试提醒</strong>：考场上对 $h$ 和 $e$ 的数值要记准，指数运算一步一步写，避免正负号错误。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-03.html">2023-新课标-03</a>（2023 · 中） 通过铯原子能级能量差计算跃迁光子频率的数量级。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/719-能级跃迁.html">能级跃迁</a></li>
+</ul>
+</div>
+</body>
+</html>

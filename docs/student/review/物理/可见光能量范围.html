@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>可见光能量范围</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>可见光能量范围</h1><div class="review-mark" data-stem="可见光能量范围"></div><div class="meta-card"><span><strong>考点</strong>可见光能量范围</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>可见光光子能量范围</strong>：$1.62\,\text{eV} \leq E_{\text{光子}} \leq 3.11\,\text{eV}$。这是本次判断和计算的基础标尺，所有可能的跃迁能量必须落在此区间内才能产生可见光。</li>
+<li><strong>氢原子能级公式</strong>：$E_n = \frac{E_1}{n^2} = -\frac{13.6}{n^2}\text{ eV}$ (其中 $n=1,2,3,\dots$)。高能级向低能级跃迁时，辐射光子的能量为 $h\nu = E_{\text{高}} - E_{\text{低}}$。</li>
+<li><strong>跃迁谱系与可见光区的对应关系</strong>：<ul>
+<li>跃迁至 $n=1$ (莱曼系)：光子能量极大（$&gt;10.2\text{ eV}$），全部位于紫外线区。</li>
+<li>跃迁至 $n=2$ (巴尔末系)：$n \geq 3 \to n=2$ 的跃迁能量大部分落在可见光区，是最重要的可见光来源。</li>
+<li>跃迁至 $n \geq 3$ (帕邢系等)：光子能量较小（$&lt;1.51\text{ eV}$），全部位于红外线区。</li>
+</ul>
+</li>
+<li><strong>吸收与电离的条件</strong>：<ul>
+<li>吸收光子发生跃迁：光子能量必须<strong>恰好等于</strong>两个能级差。</li>
+<li>电离：光子能量 <strong>$\geq$</strong> 该能级电离能的绝对值 $|E_n|$。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锚定目标能级</strong>：拿到原子能级图，首先回忆基础规律。若要判断能否产生可见光，直接聚焦于<strong>从高能级向 $n=2$ 能级（巴尔末系）跃迁</strong>的计算。其他谱系基本可直接排除。</li>
+<li><strong>计算关键跃迁能</strong>：快速计算 $n=3 \to 2$、$n=4 \to 2$、$n=5 \to 2$、$n=6 \to 2$ 的能量差。具体可计算 $E_3=-1.51\text{eV}$，$E_2=-3.4\text{eV}$ 等，则 $\Delta E_{3\to2}=1.89\text{eV}$，$\Delta E_{4\to2}=2.55\text{eV}$，依此类推。</li>
+<li><strong>区间比对筛选</strong>：将上一步算出的能量差与可见光能量范围 $1.62\text{--}3.11\text{eV}$ 逐项比对。落在此区间内的，即对应能产生可见光的跃迁。</li>
+<li><strong>辨析易混过程</strong>：<ul>
+<li>电离判断：直接看光子能量是否大于能级能量的绝对值。</li>
+<li>吸收判断：逐一验证光子能量是否能恰好激发某两个能级差，无法对应的则不能吸收。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错抓谱系</strong>：一看到辐射可见光，不加思考地去计算所有能级差，甚至率先计算 $n=2 \to 1$，导致时间浪费且结论错误。<strong>高能级向 $n=1$ 的跃迁全在紫外区。</strong></li>
+<li><strong>范围边界失分</strong>：记不准可见光的光子能量范围 $1.62\text{ eV} \sim 3.11\text{ eV}$，尤其是对 $n=3 \to 2$ 的 $1.89\text{ eV}$ 很确信，但对 $n=4 \to 2$ 的 $2.55\text{ eV}$ 或 $n=\infty \to 2$ 的 $3.4\text{ eV}$ 是否能落入可见光区发生混淆。需明确，巴尔末系的极限是 $3.4\text{ eV}$，但落在可见光区的只是其中能量合适的几条。</li>
+<li><strong>吸收条件绝对化</strong>：误以为只要光子能量大于某能级差就可以被吸收。实际上，自由氢原子吸收光子发生能级跃迁，要求光子能量必须<strong>精确匹配</strong>两能级差（$h\nu = \Delta E$），多余或不足均不可。电离则不同，大于等于即可。</li>
+<li><strong>能级负值计算错误</strong>：在计算能级差 $\Delta E = E_{\text{高}} - E_{\text{低}}$ 时，忘记 $E_n$ 均是负值，导致能量差算错。如 $E_3=-1.51\text{ eV}$，$E_2=-3.4\text{ eV}$，则 $\Delta E = (-1.51) - (-3.4) = 1.89\text{ eV}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2009-全国Ⅱ-05</h3>
+<p><strong>题目</strong>：
+氢原子部分能级如图所示。已知可见光光子能量在 $1.62\text{ eV}$ 到 $3.11\text{ eV}$ 之间。由此可推知，氢原子（　　）
+A. 从高能级向 $n=1$ 能级跃迁时，发出的光为可见光
+B. 从高能级向 $n=2$ 能级跃迁时，发出的光均为可见光
+C. 从 $n=2$ 能级向 $n=1$ 能级跃迁时，发出的光为可见光
+D. 从 $n=3$ 能级向 $n=2$ 能级跃迁时，发出的光为可见光</p>
+<p><strong>思路</strong>：
+本题考察能级差的计算及其与可见光能量区间的匹配。核心是快速锁定可见光来源于巴尔末系（末态 $n=2$）中的特定跃迁。我们只需调取能级图中数据，算出各选项对应的光子能量，与 $1.62\text{--}3.11\text{ eV}$ 比对即可。</p>
+<p><strong>步骤</strong>：
+1. <strong>审题定位</strong>：明确可见光能量范围 $1.62 \sim 3.11\text{ eV}$。选项中提到了向 $n=1$ 和 $n=2$ 的跃迁。
+2. <strong>排查 A、C 选项（末态为 $n=1$）</strong>：
+   - 选项 A：任意高能级向 $n=1$ 跃迁，最小能量为 $n=2 \to 1$。计算 $\Delta E_{2\to1} = E_2 - E_1 = -3.4 - (-13.6) = 10.2\text{ eV}$。该值 $&gt;3.11\text{ eV}$，属紫外光。A 错。
+   - 选项 C 即 $2\to1$ 跃迁，能量为 $10.2\text{ eV}$，非可见光。C 错。
+3. <strong>审查 B 选项（末态为 $n=2$）</strong>：
+   - 向 $n=2$ 跃迁的能量范围：最小为 $n=3\to2$，计算 $\Delta E_{3\to2}=E_3-E_2=-1.51-(-3.4)=1.89\text{ eV}$。最大为 $n=\infty\to2$，此时 $E_\infty=0$，$\Delta E_{\infty\to2}=0-(-3.4)=3.4\text{ eV}$。
+   - 可见光范围上限为 $3.11\text{ eV}$，而部分向 $n=2$ 的跃迁（如 $\infty\to2$ 或某些高激发态跃迁）能量大于 $3.11\text{ eV}$，将落在紫外线区。故“均为可见光”是错误的。B 错。
+4. <strong>确认 D 选项</strong>：
+   - 由步骤 3 已知 $\Delta E_{3\to2} = 1.89\text{ eV}$。该值满足 $1.62 &lt; 1.89 &lt; 3.11$，恰好落在可见光能量区间内。D 正确。</p>
+<p><strong>点评/变式</strong>：
+- <strong>点评</strong>：本题是经典考法，关键在于精准记忆或快速推导可见光对应的巴尔末系。一旦理解“向 $n=2$ 跃迁”这一家族与可见光强相关，即可直接排除 A、C，排除 B 中的“均为”二字带来的绝对化陷阱，几乎可以秒选 D。
+- <strong>变式</strong>：若题目改问“用具有连续光谱的光照射一群处于 $n=2$ 的氢原子，能观察到几条可见光谱线？”，则需将思路切换为<strong>吸收</strong>。氢原子从 $n=2$ 吸收光子向高能级（$n\geq3$）跃迁，对应吸收光谱也落在巴尔末系。此时只需考察 $n=2\to3, 2\to4, 2\to5, 2\to6$ 等跃迁所需的精确能量，看有哪些落在了 $1.62\text{--}3.11\text{ eV}$ 内。例如 $2\to3$ 吸收能量 $1.89\text{ eV}$（可见），$2\to4$ 吸收 $2.55\text{ eV}$（可见），依此类推。思维方式完全相同，只是从辐射转为吸收。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-05.html">2009-全国Ⅱ-05</a>（2009 · 中） 该题考查氢原子能级跃迁时辐射光子能量与可见光范围的对应关系，需结合能级差与光子能量公式进行推断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/558-可见光能量范围.html">可见光能量范围</a></li>
+</ul>
+</div>
+</body>
+</html>

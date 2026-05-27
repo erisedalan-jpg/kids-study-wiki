@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>核聚变</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>核聚变</h1><div class="review-mark" data-stem="核聚变"></div><div class="meta-card"><span><strong>考点</strong>核聚变</span><span><strong>权重</strong>19</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：19</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>核聚变</strong>是两个轻核结合成质量较大的核，并释放出巨大能量的核反应过程。</p>
+<ul>
+<li><strong>典型反应</strong>：氘核聚变，如 $6 ^2_1\text{H} \rightarrow 2 ^4_2\text{He} + 2 ^1_1\text{H} + 2 ^1_0\text{n} + 43.15\ \text{MeV}$。</li>
+<li><strong>质能方程</strong>：$\Delta E = \Delta m \cdot c^2$，其中 $\Delta m$ 是反应前后的质量亏损，$c$ 为真空中光速。</li>
+<li><strong>能量单位</strong>：$1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J}$；$1\ \text{u}$ 对应 $931.5\ \text{MeV}$ 的能量（常作为换算桥梁）。</li>
+<li><strong>结合能</strong>：原子核分解为单独核子时所需吸收的能量，或核子结合成核时释放的能量。比结合能越大，原子核越稳定。</li>
+<li><strong>发生条件</strong>：反应物必须具有足够大的动能来克服库仑斥力，故聚变需在超高温下进行（热核反应）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>聚变类计算题的通用解题步骤：</p>
+<ol>
+<li><strong>明确核反应方程式</strong>：看清给定了多少个反应物核、生成多少个产物，以及总释放能量或每个核子的平均释放能量。</li>
+<li><strong>确定“每个核子”的释放能</strong>：若给出的是多个核反应释放的总能量，需用总能量除以参与反应的核子总数，得到平均每个核的释放能量。</li>
+<li><strong>计算总核子数</strong>：从题干的物质总质量（或总个数）出发，结合已知浓度/含量，算出参与反应的总核子个数。</li>
+<li><strong>算总能量</strong>：总能量 $=$ 每个核子释放能量 $\times$ 总核子个数。注意此时能量单位通常为 $\text{MeV}$。</li>
+<li><strong>换算与比较</strong>：将算出的总能量换算为焦耳（$\text{J}$），最后用比例法求出等效的燃烧质量或对应的其他物理量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位混淆</strong>：直接用 $\text{MeV}$ 与焦耳（$\text{J}$）进行等号相连而未换算。务必牢记 $1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J}$ 并使用它。</li>
+<li><strong>未除反应核子数</strong>：题目常给出“6个氘核释放43.15 MeV”之类表述，若直接当成每个氘核释放43.15 MeV 则严重失分。必须看清方程式系数。</li>
+<li><strong>数量级失准</strong>：在诸如 $1.0 \times 10^{22}$ 这种大数乘除时，指数运算易出错。建议分步写好数量级，最后核对结果是否合理。</li>
+<li><strong>混淆总释放能与平均结合能</strong>：聚变问题中所给能量通常是“这几个核反应的净释放能”，直接用它做平均即可，不必再引入每个核子的比结合能差异。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·新课标Ⅱ·05）：已知聚变总效应 $6\ ^2_1\text{H} \rightarrow 2\ ^4_2\text{He} + 2\ ^1_1\text{H} + 2\ ^1_0\text{n} + 43.15\ \text{MeV}$。1 kg 海水含氘核约 $1.0 \times 10^{22}$ 个，若全部聚变，释放能量等于质量为 $M$ 的标准煤完全燃烧释放的热量。1 kg 标准煤燃烧释热约 $2.9 \times 10^7\ \text{J}$，$1\ \text{MeV} = 1.6 \times 10^{-13}\ \text{J}$，求 $M$ 约为多少。</p>
+<p><strong>思路</strong>：先由反应式求出平均每个氘核释放的能量；再用海水氘核总数求出聚变总能量（MeV）；换算为焦耳后与标准煤热值相比，得到等效煤的质量。</p>
+<p><strong>步骤</strong>：
+1. 6个氘核释放 $43.15\ \text{MeV}$，则平均 1 个氘核释放能量为：
+   $$E_0 = \frac{43.15}{6} \approx 7.19\ \text{MeV}$$
+2. 1 kg 海水含 $N = 1.0 \times 10^{22}$ 个氘核，全聚变释放总能量：
+   $$E_{\text{总}} = N \cdot E_0 = 7.19 \times 10^{22}\ \text{MeV}$$
+3. 换算成焦耳：
+   $$E_{\text{总}} = 7.19 \times 10^{22} \times 1.6 \times 10^{-13} \approx 1.15 \times 10^{10}\ \text{J}$$
+4. 由 $M \times (2.9 \times 10^7) = 1.15 \times 10^{10}$，得：
+   $$M = \frac{1.15 \times 10^{10}}{2.9 \times 10^7} \approx 3.97 \times 10^2\ \text{kg} \approx 400\ \text{kg}$$</p>
+<p>故选 C。</p>
+<p><strong>点评/变式</strong>：本题是典型的“核反应能量→宏观燃烧热量等价”模型。核心在于两步：先由反应方程式正确求单个核的平均释放能，再进行大数数量级的乘除与单位转换。变式可改为已知标准煤质量反求海水体积，或换成铀核裂变的等效计算，方法完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-05.html">2020-新课标Ⅱ-05</a>（2020 · 中） 计算海水氘核聚变释放能量与标准煤燃烧热量的等效质量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/140-核能.html">核聚变</a></li>
+</ul>
+</div>
+</body>
+</html>

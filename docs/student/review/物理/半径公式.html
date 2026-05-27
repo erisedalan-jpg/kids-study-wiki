@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>半径公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>半径公式</h1><div class="review-mark" data-stem="半径公式"></div><div class="meta-card"><span><strong>考点</strong>半径公式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>半径公式</strong>：带电粒子垂直射入匀强磁场时，在洛伦兹力作用下做匀速圆周运动。由 $qvB = m\dfrac{v^{2}}{r}$ 得轨迹半径<br />
+  $$r = \frac{mv}{qB}$$
+  其中 $m$、$q$ 为粒子的质量和电荷量，$v$ 为速度大小，$B$ 为磁感应强度。</li>
+<li><strong>公式变形</strong>（便于快速比较）：</li>
+<li>用动量表示为 $r = \dfrac{p}{qB}$（$p=mv$）</li>
+<li>用动能表示为 $r = \dfrac{\sqrt{2mE_k}}{qB}$</li>
+<li><strong>适用条件</strong>：粒子垂直进入匀强磁场，仅受洛伦兹力（重力不计）；$B$ 恒定，$v \ll c$（非相对论情形）。</li>
+<li><strong>决定因素</strong>：同一磁场中，半径与粒子的质量 $m$、速度 $v$（或动量、动能）成正比，与电荷量 $q$ 成反比。比较不同粒子的半径时必须控制变量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定偏转方向</strong>：用左手定则（磁场穿掌心，四指指向正电荷运动方向或负电荷运动反方向，拇指即洛伦兹力方向）判定偏转方向。电性相反，偏转方向一定相反。  </li>
+<li><strong>比半径大小</strong>：写出目标粒子的半径表达式 $r = \dfrac{mv}{qB}$ 或 $r = \dfrac{\sqrt{2mE_k}}{qB}$，明确题目给出的相同量与不同量：  </li>
+<li>若 $B$、$v$ 相同，则 $r \propto \dfrac{m}{q}$；  </li>
+<li>若 $B$、$E_k$ 相同，则 $r \propto \dfrac{\sqrt{m}}{q}$。<br />
+   切勿默认速度相同。  </li>
+<li><strong>判粒子种类</strong>：仅由轨迹半径一般不能唯一确定粒子种类。因为半径取决于 $m$、$q$、$v$ 的组合，若速度未知，不同粒子可能产生相同的半径。通常还需结合偏转方向（定电性）、磁场中运动时间或其它信息才能识别。  </li>
+<li><strong>审题要抓“一定”“可能”</strong>：选项中含“一定”时，需寻找反例；含“可能”或“无法判断”时，可从多种合理性入手。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为正、负电子速度相同</strong>：题干只说“这些粒子从上部垂直进入磁场”，未提及速度大小关系，不能默认速度相等。电子与正电子若速度不同，半径可以不同。  </li>
+<li><strong>混淆动能与速度对半径的影响</strong>：粒子的动能 $E_k = \frac{1}{2}mv^2$，代入半径公式得 $r = \dfrac{\sqrt{2mE_k}}{qB}$。对相同粒子，$E_k$ 越大，$r$ 越大；对质量不同的粒子，$E_k$ 相同时 $r \propto \sqrt{m}$。切莫看到“动能大”就认为半径小。  </li>
+<li><strong>仅凭轨迹半径就断定粒子种类</strong>：质子与正电子质量不同、电荷量相同（$q=+e$）。若速度未知，半径相等时可能质子速度小而正电子速度大，不能断定种类。需结合偏转方向、径迹特点等综合判断。  </li>
+<li><strong>左手定则用错对象</strong>：对负电荷（电子），四指指向运动反方向，拇指所指为洛伦兹力方向，与正电荷相反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2014·新课标Ⅱ·18 改编）</h3>
+<p>磁谱仪部分构件如图，永磁铁提供匀强磁场，硅微条径迹探测器可记录粒子轨迹。宇宙射线中有大量电子、正电子和质子，当它们从上部垂直进入磁场时，下列说法正确的是：
+A．电子与正电子的偏转方向一定不同<br />
+B．电子与正电子在磁场中运动轨迹的半径一定相同<br />
+C．仅依据粒子运动轨迹无法判断该粒子是质子还是正电子<br />
+D．粒子的动能越大，它在磁场中的运动轨迹的半径越小  </p>
+<p><strong>思路</strong>：本题重点考查左手定则及半径公式 $r = \dfrac{mv}{qB}$ 的综合理解。先用电性差异判断偏转，再结合半径公式逐项分析“一定”“无法判断”“越…越…”型结论是否成立。</p>
+<p><strong>步骤</strong><br />
+1. <strong>A项</strong>：电子带负电，正电子带正电，它们以相同方向进入磁场，由左手定则，所受洛伦兹力方向相反，偏转方向一定不同。A 正确。<br />
+2. <strong>B项</strong>：半径 $r = \dfrac{mv}{qB}$。电子与正电子质量 $m$ 相等、电荷量 $q$ 大小相等，但速度 $v$ 的大小关系未知，半径不一定相同。B 错误。<br />
+3. <strong>C项</strong>：质子和正电子均带正电（$q=+e$），质量不同。轨迹半径由 $r = \dfrac{mv}{eB}$ 决定。仅凭一条轨迹的半径无法反推出 $m$ 和 $v$ 的之值，不同组合可给出相同半径，因此无法判断是质子还是正电子。C 正确。<br />
+4. <strong>D项</strong>：由 $r = \dfrac{\sqrt{2mE_k}}{qB}$，对同一粒子（$m$、$q$ 不变），$r \propto \sqrt{E_k}$，动能越大半径越大。D 错误。<br />
+综上，正确选项为 A、C。</p>
+<p><strong>点评/变式</strong><br />
+- 本题是“半径公式”在选择题中的典型运用，核心在于区分决定半径的多个变量，并识别题干中的隐含条件（如速度不一定相同）。<br />
+- 变式拓展：若进入磁场前粒子经过同一加速电场，则 $\dfrac{1}{2}mv^{2} = qU$，可得 $r = \dfrac{1}{B} \sqrt{\dfrac{2mU}{q}}$，此时半径与 $\sqrt{m/q}$ 成正比，可用于质谱仪中区分同位素。注意与本题直接给出“从上部垂直进入”的初始条件不同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a>（2014 · 中） 带电粒子在垂直磁场中的偏转方向及运动轨迹半径的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/761-半径公式.html">半径公式</a></li>
+</ul>
+</div>
+</body>
+</html>

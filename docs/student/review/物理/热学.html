@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热学</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>热学</h1><div class="review-mark" data-stem="热学"></div><div class="meta-card"><span><strong>考点</strong>热学</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>热学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：热学</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2017–2024</li>
+<li>出现题位：填空13 填空14 选择11</li>
+<li>难度分布：难1 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>理想气体状态方程</strong>：$pV = nRT = \frac{m}{M}RT$，常用形式 $\frac{pV}{T} = C$（质量一定）。</li>
+<li><strong>气体实验定律</strong>：</li>
+<li>等容变化（查理定律）：$p \propto T$，即 $\frac{p_1}{T_1} = \frac{p_2}{T_2}$。</li>
+<li>等压变化（盖-吕萨克定律）：$V \propto T$，即 $\frac{V_1}{T_1} = \frac{V_2}{T_2}$。由此可导出密度与温度关系：同种气体在等压条件下 $\rho \propto \frac{1}{T}$。</li>
+<li>自由扩散（向真空膨胀）：气体不对外做功（$W = 0$）。</li>
+<li><strong>热力学第一定律</strong>：$\Delta U = Q + W$。注意符号规定：系统吸热 $Q&gt;0$，外界对系统做功 $W&gt;0$，理想气体内能只与温度有关（$\Delta U$ 由温度变化决定）。</li>
+<li><strong>理想气体内能与分子动理论</strong>：分子平均动能 $\overline{E_k} \propto T$，气体内能 $U$ 仅取决于温度（对一定质量理想气体）。温度不变化，$\Delta U = 0$；温度升高，$\Delta U &gt; 0$。</li>
+<li><strong>绝热过程</strong>：$Q=0$，则 $\Delta U = W$。</li>
+<li><strong>变压器与电热</strong>：理想变压器 $\frac{U_1}{U_2} = \frac{n_1}{n_2}$，输出功率 $P = \frac{U_2^2}{R}$；电热丝产热 $Q = Pt$（热量全部吸收）。</li>
+<li><strong>常压下的气体密度</strong>：在1个大气压下，温度为 $T$ 时空气密度 $\rho = \rho_0 \frac{T_0}{T}$（$\rho_0$ 为 $T_0$ 时的已知密度）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>“状态”与“过程”双分析</strong><br />
+   明确初、末态的状态参量（$p, V, T$），判断变化过程的类型（等容、等压、等温、自由扩散、绝热压缩等），选用对应的气体实验定律或状态方程。</li>
+<li><strong>内能变化与热力学第一定律的关联</strong><br />
+   先分析是否绝热（$Q=0$），再分析气体体积变化确定做功情况：体积膨胀对外做功（$W&lt;0$），体积缩小外界对气体做功（$W&gt;0$），向真空膨胀则 $W=0$。最后由 $\Delta U = Q + W$ 求解内能变化或温度变化。</li>
+<li><strong>电热与热学综合的解题链条</strong><br />
+   交变电流/变压器 $\to$ 有效值 $\to$ 功率 $P$ $\to$ 电流热效应 $Q = Pt$ $\to$ 热学过程求出 $\Delta T$ 或所需热量 $Q$ $\to$ 联立求解时间、温度等。</li>
+<li><strong>浮力与热学综合</strong><br />
+   等压条件下利用密度反比关系式 $\rho \propto 1/T$，求出热空气与外部冷空气的密度，再计算重力、浮力，结合阿基米德原理与平衡条件求解质量或载荷。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>自由扩散不做功</strong>：隔板抽出、右侧为真空时气体扩散不对外做功，不能误认为“气体体积膨胀就对外做功”。</li>
+<li><strong>理想气体内能仅看温度</strong>：不论气体经历何种过程，只要初末态温度相同，内能变化为零；温度升高内能必增大，反之减小。</li>
+<li><strong>符号混乱</strong>：热力学第一定律 $\Delta U = Q + W$ 中，需牢记外界对气体做功为正，气体对外做功为负；吸热为正，放热为负。</li>
+<li><strong>等容变化误用其他定律</strong>：容器密封的加热过程必为等容变化，不能用等压或等温规律处理。</li>
+<li><strong>峰值与有效值混淆</strong>：处理与功率、热量相关的计算时，交流电的电压、电流必须使用有效值，变压器输入端 $U_1$ 应为正弦交流电的峰值除以 $\sqrt{2}$。</li>
+<li><strong>温度与压强的单位与符号</strong>：使用气体实验定律时，必须用热力学温度 $T$（单位 K），不能直接用摄氏温度代入比例式。</li>
+<li><strong>密度公式忽视等压前提</strong>：$\rho \propto 1/T$ 仅在压强不变的条件下成立（如热气球内外气压均为大气压），不可无条件使用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题1（2024·辽宁·11）</h3>
+<p><strong>题目</strong> 理想变压器原副线圈匝数比 $5:1$，原线圈接峰值为 $U_m$ 的正弦交变电源，副线圈接阻值 $R$ 的电热丝，电热丝置于绝热容器内对一定质量理想气体加热（等容）。加热前温度 $T_0$，气体吸收热量 $Q=C\Delta T$（$C$ 已知），热量全部被吸收。求：(1)变压器输出功率 $P$；(2)使气体压强变为加热前 2 倍所需的通电时间 $t$。</p>
+<p><strong>思路</strong> (1)利用变压器电压关系求出副线圈电压有效值，再用 $P = U_2^2/R$ 求功率；(2)由查理定律得到升温幅度 $\Delta T$，再通过 $Q = C\Delta T$ 与 $Q = Pt$ 求出时间。</p>
+<p><strong>步骤</strong><br />
+1. 原线圈电压有效值：$U_1 = \frac{U_m}{\sqrt{2}}$<br />
+2. 副线圈电压有效值：$U_2 = \frac{n_2}{n_1}U_1 = \frac{1}{5} \frac{U_m}{\sqrt{2}} = \frac{U_m}{5\sqrt{2}}$<br />
+3. 输出功率：$$P = \frac{U_2^2}{R} = \frac{U_m^2}{50R}$$<br />
+4. 气体做等容变化，由查理定律：$\frac{p_0}{T_0} = \frac{2p_0}{T_2} \implies T_2 = 2T_0$，故 $\Delta T = T_2 - T_0 = T_0$。<br />
+5. 吸收的热量 $Q = C\Delta T = C T_0$，且 $Q = Pt$<br />
+   $$t = \frac{Q}{P} = \frac{C T_0}{\frac{U_m^2}{50R}} = \frac{50 C T_0 R}{U_m^2}$$</p>
+<p><strong>点评/变式</strong><br />
+本题是交变电流与热学的跨模块综合，套路清晰：电学先求功率，热学求温差，用热平衡方程架桥。注意：等容容器内气体体积不变，勿套用体积变化做功；热力学第一定律在此题背景中也成立（$\Delta U = Q$，$W=0$），但解题只需抓住 $Q=Pt$ 与查理定律即可。若加热过程中电热丝未绝热或气体漏气，则需重新建立能量方程。</p>
+<h3>题2（2017·新课标Ⅱ·13）</h3>
+<p><strong>题目</strong> 如图所示，隔板将绝热气缸分成两部分，左侧为理想气体，右侧为真空。抽开隔板，气体向真空扩散至稳定后，缓慢推压活塞将气体压回原体积。判断说法正误。选项涉及：自发扩散前后内能、气体压缩过程内能与做功、分子平均动能变化等。</p>
+<p><strong>思路</strong> 分两个过程：(1)抽开隔板气体向真空扩散——自由扩散，不推动任何活塞，无热传递，故 $Q=0, W=0$，内能不变；(2)缓慢推活塞压缩气体——外界对气体做功 $W&gt;0$，绝热 $Q=0$，根据热力学第一定律 $\Delta U = W &gt;0$，内能增大，温度升高，平均动能增大。</p>
+<p><strong>步骤</strong><br />
+- A选项：气体自发扩散前后 $Q=0, W=0 \Rightarrow \Delta U=0$，内能相同，正确。<br />
+- B选项：气体被压缩时外界做功，$Q=0 \Rightarrow \Delta U&gt;0$ 内能增大，正确。<br />
+- C选项：自发扩散过程中右侧真空，气体不推动任何物体，不对外做功，错误。<br />
+- D选项：压缩时外界对气体做功，正确。<br />
+- E选项：压缩过程中气体内能增大，温度升高，分子平均动能增大，错误。<br />
+综上，选 ABD。</p>
+<p><strong>点评/变式</strong><br />
+本题关键陷阱：气体体积膨胀不等于对外做功（只有在克服外界压强移动活塞或边界时才做功）。绝热+自由扩散 $\Rightarrow$ 内能不变；绝热+压缩 $\Rightarrow$ 内能增大，温度升高。注意区分“气体对外做功”“外界对气体做功”以及 $\Delta U$ 的方向。变式：若右侧不是真空而有一定气压，则扩散过程 $W \neq 0$，内能要结合做功计算。</p>
+<h3>题3（2017·新课标Ⅱ·14 热气球问题）</h3>
+<p><strong>题目</strong> 热气球体积 $V$，内部充有温度为 $T_a$ 的热空气，外部冷空气温度为 $T_b$。已知 $1\ {\rm atm}$、温度 $T_0$ 下空气密度为 $\rho_0$，气球内外压强均等于大气压。求热气球的最大升力或相关物理量（常见设问：内空气质量、能够吊起的重物质量等）。</p>
+<p><strong>思路</strong> 气球内外压强相等，均可视为等压变化，密度与热力学温度成反比。分别求出内部热空气密度 $\rho_a = \rho_0 T_0/T_a$ 和外部空气密度 $\rho_b = \rho_0 T_0/T_b$；内空气质量 $m_a = \rho_a V$；浮力 $F = \rho_b g V$；最大吊起质量 $M$ 满足 $F = (m_a + M)g$。</p>
+<p><strong>步骤</strong><br />
+1. 内部空气密度：$\rho_a = \rho_0 \frac{T_0}{T_a}$ （等压条件）<br />
+2. 内空气质量：$m_a = \rho_a V = \rho_0 V \frac{T_0}{T_a}$<br />
+3. 外部空气密度：$\rho_b = \rho_0 \frac{T_0}{T_b}$<br />
+4. 浮力：$F = \rho_b V g = \rho_0 V g \frac{T_0}{T_b}$<br />
+5. 设最大吊起质量为 $M$，由平衡：$F = (m_a + M)g \implies M = \frac{F}{g} - m_a = \rho_0 V T_0\left( \frac{1}{T_b} - \frac{1}{T_a} \right)$<br />
+由此可得时间、温度等满足的临界条件。</p>
+<p><strong>点评/变式</strong><br />
+需明确“等压”前提（气球开口或弹性球皮使内外压力一致），密度公式 $\rho \propto 1/T$ 才能使用；易错点在直接用 $\rho_0$ 当作 $T_a$ 或 $T_b$ 下的密度，而忘记温度修正。变式：热气球上升过程中大气压减小，不再等压，需结合压强与高度关系综合求解，此时密度与状态方程的运用更加复杂，但思路仍是理想气体状态方程配合力学平衡。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-11.html">2024-辽宁-11</a>（2024 · 难） 理想变压器副线圈接电热丝加热绝热容器内理想气体，求变压器输出功率和气体压强达到2倍所需通电时间。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-13.html">2017-新课标Ⅱ-13</a>（2017 · 中） 理想气体自由膨胀后再被等温压缩回原体积，判断各阶段内能、功和分子平均动能的变化。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-14.html">2017-新课标Ⅱ-14</a>（2017 · 中） 热气球内充有高温空气，利用气体状态方程求热气球所受浮力、内部气体重力和充气后可托起的最大质量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/658-热学.html">热学</a></li>
+</ul>
+</div>
+</body>
+</html>

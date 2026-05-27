@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光电效应</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光电效应</h1><div class="review-mark" data-stem="光电效应"></div><div class="meta-card"><span><strong>考点</strong>光电效应</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：16</li>
+<li>真题数：2；年份跨度：2018–2024</li>
+<li>出现题位：选择4 选择8</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光电效应</strong>：金属在光的照射下发射电子的现象，发射出的电子称为光电子。</li>
+<li><strong>实验规律</strong>：</li>
+<li>每种金属都存在一个<strong>截止频率（极限频率）$\nu_c$</strong>，入射光频率低于此值，无论光强多大，都不发生光电效应。</li>
+<li>光电子的<strong>最大初动能</strong>$E_k$随入射光频率$\nu$线性增大，与入射光<strong>强度无关</strong>。</li>
+<li>光电效应具有<strong>瞬时性</strong>（$\lt 10^{-9}\,\text{s}$）。</li>
+<li>当入射光频率$\nu \gt \nu_c$时，<strong>饱和光电流</strong>与入射光强成正比（反映了单位时间内逸出的光电子数）。</li>
+<li><strong>光子说与方程</strong>：
+  光子能量：$\varepsilon = h\nu$（$h$为普朗克常量，$\nu$为频率）。
+  爱因斯坦光电效应方程：$E_k = h\nu - W_0$。
+  其中 $W_0$ 为金属的<strong>逸出功</strong>，$W_0 = h\nu_c$（$\nu_c$为截止频率）。
+  $E_k$可用反向遏止电压$U_c$测量：$E_k = eU_c$。</li>
+<li><strong>光的强度</strong>：在频率不变时，光强与单位时间照射到单位面积上的<strong>光子数</strong>成正比。光强增大，光子数增多，逸出的光电子数增多，但单个光电子最大初动能不变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>概念辨析题</strong>：抓住“三个只与”：</li>
+<li>逸出功$W_0$只与金属材料有关。</li>
+<li>光子能量$\varepsilon$只与光的频率$\nu$有关。</li>
+<li>最大初动能$E_k$只与入射光频率$\nu$和金属$W_0$有关。
+   光强（频率一定时）只影响光子数和光电子数，不改变$E_k$。</li>
+<li><strong>定量计算题</strong>：以方程 $E_k = h\nu - W_0$ 为核心。</li>
+<li>已知最大初动能和频率（或波长），求逸出功或截止频率：$W_0 = h\nu - E_k$，$\nu_c = \dfrac{W_0}{h}$。</li>
+<li>已知遏止电压$U_c$，先求$E_k = eU_c$，再代入方程。</li>
+<li>已知光速$c$与波长$\lambda$，换频率：$\nu = \dfrac{c}{\lambda}$（注意波长单位换算：$1\,\text{nm} = 10^{-9}\,\text{m}$）。</li>
+<li><strong>典型陷阱应对</strong>：题干中出现“增加光强”“频率不变”时，立即锁定光子数增多、$E_k$不变；出现“频率增大”时，锁定$E_k$增大，再结合光强变化判断光子数变化。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>强度越大，光子能量越大？</strong> 错！光子能量只由频率决定，光强在频率一定时只代表光子数多少。</li>
+<li><strong>光强增大，最大初动能增大？</strong> 错！最大初动能只与频率有关，与光强无关。</li>
+<li><strong>金属逸出功随入射光频率变化？</strong> 错！逸出功是金属自身的固有属性，不随入射光变化。</li>
+<li><strong>混淆遏止电压与入射光频率</strong>：遏止电压反映的是最大初动能，与光强无关。若不加分析直接套用$U_c \propto \nu$的错误关系会失分。</li>
+<li><strong>单位换算失误</strong>：波长常以纳米（$\text{nm}$）给出，计算频率时必须换成米（$\times 10^{-9}$），普朗克常量常为$6.63\times10^{-34}\,\text{J·s}$，极易因数量级算错而丢分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2024-辽宁-08</h3>
+<p><strong>题目</strong>：用某一频率的X光照射金属表面逸出光电子，增加此X光的强度，则（　）<br />
+A. 金属逸出功增大 B. X光的光子能量不变 C. 逸出的光电子最大初动能增大 D. 单位时间逸出的光电子数增多</p>
+<p><strong>思路</strong>：抓住核心条件——<strong>频率不变，强度增加</strong>。光子能量看频率，逸出功看金属，最大初动能看频率和逸出功，光电子数看光子数（强度）。</p>
+<p><strong>步骤</strong>：
+- 入射光频率未变，由$\varepsilon = h\nu$知光子能量不变，故B正确。
+- 金属逸出功是自身固有属性，与光照无关，故A错误。
+- 由$E_k = h\nu - W_0$，$\nu$不变、$W_0$不变，$E_k$不变，故C错误。
+- 增加光强意味着单位时间照射到金属表面的光子数增多，单位时间逸出的光电子数增多，故D正确。</p>
+<p><strong>点评/变式</strong>：本题考查对光电效应规律的基本理解，属于基础辨析题。<strong>变式</strong>：若把“增加强度”改为“增大频率，强度不变”，则光子能量增大，$E_k$增大，但由于光强不变，光子数可能减少（因每个光子能量大了），单位时间逸出电子数一般减少。</p>
+<h3>代表题2：2018-新课标Ⅱ-04</h3>
+<p><strong>题目</strong>：用波长为$300\,\text{nm}$的光照射锌板，电子逸出时的最大初动能为$1.28\times10^{-19}\,\text{J}$，已知$h=6.63\times10^{-34}\,\text{J·s}$，$c=3.00\times10^8\,\text{m/s}$，求能使锌产生光电效应的单色光的最低频率。</p>
+<p><strong>思路</strong>：最低频率即截止频率$\nu_c$。需先由光电效应方程求出锌的逸出功$W_0$，再由$W_0 = h\nu_c$求$\nu_c$。</p>
+<p><strong>步骤</strong>：
+- 波长换算：$\lambda = 300\,\text{nm} = 3.00\times10^{-7}\,\text{m}$。
+- 求入射光频率：$\nu = \dfrac{c}{\lambda} = \dfrac{3.00\times10^8}{3.00\times10^{-7}} = 1.00\times10^{15}\,\text{Hz}$。
+- 根据爱因斯坦方程求逸出功：$W_0 = h\nu - E_k = (6.63\times10^{-34} \times 1.00\times10^{15}) - 1.28\times10^{-19} = 6.63\times10^{-19} - 1.28\times10^{-19} = 5.35\times10^{-19}\,\text{J}$。
+- 求截止频率：$\nu_c = \dfrac{W_0}{h} = \dfrac{5.35\times10^{-19}}{6.63\times10^{-34}} \approx 8.07\times10^{14}\,\text{Hz}$。
+选项合理近似为$8\times10^{14}\,\text{Hz}$，选B。</p>
+<p><strong>点评/变式</strong>：本题是$E_k = h\nu - W_0$与$W_0 = h\nu_c$的典型应用。失分点主要集中在$\lambda$单位忘记换算、指数运算错误。<strong>变式</strong>：若给出遏止电压$U_c$，则先通过$E_k = eU_c$得到最大初动能，其余步骤完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-08.html">2024-辽宁-08</a>（2024 · 易） 本题考查光电效应中光强对逸出功、光子能量、最大初动能和光电子数的影响。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-04.html">2018-新课标Ⅱ-04</a>（2018 · 中） 本题考查光电效应现象及爱因斯坦方程的应用，通过求解逸出功和极限频率计算最低频率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/417-光电效应.html">光电效应</a></li>
+</ul>
+</div>
+</body>
+</html>

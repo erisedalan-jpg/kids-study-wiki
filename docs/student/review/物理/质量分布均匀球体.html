@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质量分布均匀球体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质量分布均匀球体</h1><div class="review-mark" data-stem="质量分布均匀球体"></div><div class="meta-card"><span><strong>考点</strong>质量分布均匀球体</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择8</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>万有引力定律</strong>：$F = G\dfrac{Mm}{r^{2}}$，对均匀球体外部的质点，引力等效于质量集中于球心。</li>
+<li><strong>均匀球壳引力定理</strong>：质量分布均匀的球壳，其对壳内任意质点的引力之和为零（壳外则等效为质量集中于球心）。</li>
+<li><strong>均匀球体内部的重力加速度</strong>（忽略自转）：<br />
+  设密度均匀的球体半径为 $R$、总质量为 $M$。在距球心 $r\;(r \le R)$ 处，只有半径为 $r$ 的内部球体产生引力。<br />
+  内部等效质量 $M_r = \dfrac{r^{3}}{R^{3}}M$，该处的重力加速度<br />
+  $$g_r = \dfrac{GM_r}{r^{2}} = \dfrac{GM}{R^{2}} \cdot \dfrac{r}{R} = g_0 \cdot \dfrac{r}{R}$$<br />
+  其中地面重力加速度 $g_0 = \dfrac{GM}{R^{2}}$。<br />
+  可见 $g_r \propto r$，即从地心到地表成线性增大。</li>
+<li><strong>矿井深度问题</strong>：深度 $d$ 处 $$r = R - d \quad\Rightarrow\quad g = g_0\left(1 - \dfrac{d}{R}\right)$$<br />
+  矿井底部与地面重力加速度之比为 $1 - \dfrac{d}{R}$。</li>
+<li><strong>适用条件</strong>：地球/天体严格均匀、忽略自转（引力即重力）；$d &lt; R$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定到球心的距离</strong>：深度 $d$ → 距球心 $r = R-d$；高度 $h$ 处（地面上空）$r = R+h$。</li>
+<li><strong>应用均匀球壳定理</strong>：壳内物体不受外壳引力，仅由半径 $r$ 内的质量产生引力。</li>
+<li><strong>计算内部等效质量</strong>：由均匀密度 $\rho = \dfrac{M}{\frac{4}{3}\pi R^{3}}$，得 $M_r = \rho \cdot \dfrac{4}{3}\pi r^{3} = M \cdot \dfrac{r^{3}}{R^{3}}$。</li>
+<li><strong>列重力加速度表达式</strong>：$g = \dfrac{GM_r}{r^{2}} = G \cdot \dfrac{M r^{3}/R^{3}}{r^{2}} = \dfrac{GM}{R^{2}} \cdot \dfrac{r}{R}$。</li>
+<li><strong>化简比值</strong>：所需位置的重力加速度与地面 $g_0 = \dfrac{GM}{R^{2}}$ 比较：$\dfrac{g}{g_0} = \dfrac{r}{R}$。</li>
+<li>矿井底部（$r=R-d$）：$\dfrac{g}{g_0} = 1 - \dfrac{d}{R}$</li>
+<li>地心（$r=0$）：$g=0$</li>
+<li>内部某点（$r&lt;R$）：线性关系</li>
+<li><strong>注意区分</strong>：地面上空 $r&gt;R$ 时，直接用 $g = \dfrac{GM}{r^{2}}$（全部质量有效），$\dfrac{g}{g_0} = \left(\dfrac{R}{r}\right)^{2}$，与内部线性规律完全不同。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将内部重力加速度按全部质量计算</strong>：直接用 $g = \dfrac{GM}{(R-d)^{2}}$，导致得出 $g/g_0 = \left(\dfrac{R}{R-d}\right)^{2}$ 的错误结论，错选含平方的选项。</li>
+<li><strong>忘记球壳引力为零</strong>：以为越深重力越小是因为距离减小引力增大，忽略外壳质量贡献消失的效应，导致判断错误。</li>
+<li><strong>混淆内部线性与外部平方反比</strong>：内部 $g \propto r$；外部 $g \propto 1/r^{2}$。二者规律截然不同，不可混用。</li>
+<li><strong>在深度问题中错用到地心距离的负方向</strong>：深度 $d$ 必须从地表算起，$r=R-d$ 为正值且 $&gt;0$，不可出现 $r = d$ 或 $r = R+d$。</li>
+<li><strong>质量计算错误</strong>：随意用 $M_r = M \cdot \dfrac{r}{R}$ 或 $M \cdot \dfrac{r^{2}}{R^{2}}$ 而非立方关系，导致最终比值错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2012·新课标·08</h3>
+<p><strong>题目</strong><br />
+假设地球是一半径为 $R$、质量分布均匀的球体。一矿井深度为 $d$。已知质量分布均匀的球壳对壳内物体的引力为零。矿井底部和地面处的重力加速度大小之比为（　　）<br />
+A. $1-\dfrac{d}{R}$　B. $1+\dfrac{d}{R}$　C. $\left(\dfrac{R-d}{R}\right)^{2}$　D. $\left(\dfrac{R}{R-d}\right)^{2}$</p>
+<p><strong>思路</strong><br />
+矿井底部位于地球内部，需用均匀球壳定理：外壳不产生引力，仅半径为 $R-d$ 的内部球体产生重力。通过内部质量正比于半径立方，结合万有引力定律，即可求得重力加速度与地面值之比。</p>
+<p><strong>步骤</strong><br />
+1. 设地球总质量 $M$，密度 $\rho = \dfrac{M}{\frac{4}{3}\pi R^{3}}$。<br />
+2. 矿井底部距球心 $r = R - d$。该点以内球体质量<br />
+   $$M_r = \rho \cdot \frac{4}{3}\pi r^{3} = M \cdot \frac{r^{3}}{R^{3}}.$$<br />
+3. 矿井底部的重力加速度由内部质量 $M_r$ 产生：<br />
+   $$g = \dfrac{GM_r}{r^{2}} = \dfrac{GM \cdot r^{3}/R^{3}}{r^{2}} = \dfrac{GM}{R^{2}} \cdot \dfrac{r}{R}.$$<br />
+4. 地面重力加速度 $g_0 = \dfrac{GM}{R^{2}}$。因此<br />
+   $$\dfrac{g}{g_0} = \dfrac{r}{R} = \dfrac{R-d}{R} = 1 - \dfrac{d}{R}.$$<br />
+5. 对应选项 A。</p>
+<p><strong>点评/变式</strong><br />
+本题为均匀球体内部引力的经典应用，关键在于“质量均匀分布球壳对内引力为零”和“内部等效质量与半径立方成正比”。结论 $g/g_0 = 1 - d/R$ 极易与外部高度的平方反比选项混淆，考试时需冷静区分。<br />
+<strong>变式1</strong>：若问距地面高度为 $h$ 处的重力加速度与地面之比，应使用外部公式 $\dfrac{g}{g_0} = \left(\dfrac{R}{R+h}\right)^{2}$。<br />
+<strong>变式2</strong>：若问深度 $d = R/2$ 时的比值，代入即得 $1 - 1/2 = 1/2$，而非平方关系。注意线性规律检验。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2012-新课标-08.html">2012-新课标-08</a>（2012 · 难） 考察质量分布均匀的球体内部重力加速度与距球心距离的关系，利用球壳对内部物体引力为零的性质求比值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">质量分布均匀球体</a></li>
+</ul>
+</div>
+</body>
+</html>

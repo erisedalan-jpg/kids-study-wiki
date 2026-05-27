@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>矢量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>矢量</h1><div class="review-mark" data-stem="矢量"></div><div class="meta-card"><span><strong>考点</strong>矢量</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>矢量</strong>：既有大小又有方向的物理量。其运算遵循平行四边形定则或三角形定则。高中阶段常见矢量：位移、速度、加速度、力、动量、电场强度、磁感应强度等。</li>
+<li><strong>标量</strong>：只有大小没有方向的物理量。其运算遵循代数加减法则。常见标量：质量、速率、路程、时间、功、动能、势能、温度等。</li>
+<li>判断一个物理量是矢量还是标量，关键看它是否具有<strong>方向性</strong>以及合成时是否满足<strong>矢量运算法则</strong>（并非所有带“方向”的物理量都是矢量，例如电流虽有方向但是标量，因其合成不满足平行四边形定则）。</li>
+<li>动量 $ \mathbf{p} = m\mathbf{v} $，方向与速度方向相同，是矢量；动能 $ E_k = \frac{1}{2}mv^2 $ 由速率决定，是标量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义法</strong>：直接根据物理量的定义判断是否具有方向。若有明确的方向性且合成时不能用简单代数加减，基本可判定为矢量。</li>
+<li><strong>公式审视法</strong>：看物理量是否由矢量运算（如叉乘、点乘结果若为标量则非矢）得出。例如动量 $ \mathbf{p}=m\mathbf{v} $，质量为标量，速度是矢量，标量与矢量的乘积仍是矢量。</li>
+<li><strong>排除法</strong>：牢记常见标量表（质量、时间、长度、路程、速率、功、能、功率、温度、电流等），在选项中优先排除明显标量，缩小范围。</li>
+<li><strong>注意特殊“伪装”</strong>：电流有方向但为标量，磁通量有正负但为标量。这类要用运算规则进一步确认。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误以为所有带方向的量都是矢量</strong>：典型反例——电流（$I$）有方向，但其合成直接代数相加，是标量；磁通量（$\Phi$）有正负表示穿入穿出，但是标量。</li>
+<li><strong>动能与动量的混淆</strong>：两者均与运动有关，但动能是标量，动量是矢量。题目中常将“动能”与“动量”并列作为选项干扰。</li>
+<li><strong>速度与速率的混淆</strong>：速度是矢量，速率是标量。遇到带有“率”字的物理量多数为标量（速率、功率、频率等），但加速度不是“率”字尾，是矢量。</li>
+<li><strong>矢量符号忽略</strong>：解题时只比较大小，忘记回答方向导致在矢量选择题或填空题中失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024辽宁卷·1）长征五号遥八运载火箭升空过程中，以下描述的物理量属于矢量的是（　　）<br />
+A. 质量　B. 速率　C. 动量　D. 动能  </p>
+<p><strong>思路</strong><br />
+直接应用矢量与标量的定义，逐个判断选项中的物理量是否同时具备大小和方向，并且运算遵循平行四边形定则。  </p>
+<p><strong>步骤</strong><br />
+1. 质量（A）：描述物体所含物质的多少，只有大小，无方向，是标量。<br />
+2. 速率（B）：速度的大小，只有大小，无方向，是标量。<br />
+3. 动量（C）：$ \mathbf{p} = m\mathbf{v} $，质量 $m$ 是标量，速度 $\mathbf{v}$ 是矢量，故动量有大小和方向，是矢量。<br />
+4. 动能（D）：$ E_k = \frac{1}{2}mv^2 $，式中速率为标量，平方后仍为标量，动能只有大小无方向，是标量。<br />
+故选C。</p>
+<p><strong>点评与变式</strong><br />
+本题直接考查矢量标量的辨别，属于简单送分题，但常因概念混淆丢分。<br />
+- <strong>变式训练</strong>：下列各组物理量中，全部为矢量的一组是（ ）<br />
+A. 位移、时间、速度　B. 速度、加速度、力<br />
+C. 路程、动能、动量　D. 电势、电场强度、电流<br />
+（答案：B。提示：电流是标量；电势是标量；时间是标量。）<br />
+牢记常见矢量和标量清单，养成见到“动量”立刻反应是矢量的条件反射，能快速得分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-01.html">2024-辽宁-01</a>（2024 · 易） 该题通过辨析物理量属性，考查矢量和标量的概念区分。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/700-矢量.html">矢量</a></li>
+</ul>
+</div>
+</body>
+</html>

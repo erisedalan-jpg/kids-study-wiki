@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电磁感应与图像结合</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电磁感应与图像结合</h1><div class="review-mark" data-stem="电磁感应与图像结合"></div><div class="meta-card"><span><strong>考点</strong>电磁感应与图像结合</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>电磁感应</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：电磁感应</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心物理量图像关系</strong>：电磁感应中的图像问题常涉及 $B!-!t$、$\Phi!-!t$、$E!-!t$、$i!-!t$ 等，关键建立 <strong>运动过程→磁通量变化→电动势/电流</strong> 的因果链。</li>
+<li><strong>感应电动势大小</strong>：</li>
+<li>平动切割：$E = BLv$（$L$ 为有效切割长度，$B$、$L$、$v$ 两两垂直）。</li>
+<li>在交替磁场中，两边同时切割时电动势可能叠加或抵消，总电动势为各有效边电动势的代数和（同向相加，反向相减）。</li>
+<li><strong>感应电流大小</strong>：$i = \frac{E}{R}$（闭合电路欧姆定律），$R$ 为回路总电阻。</li>
+<li><strong>感应电流方向</strong>：楞次定律（增反减同）或右手定则（用于单边切割）。在图像上常规定正方向，电流正负由线圈回路方向与磁场方向共同确定。</li>
+<li><strong>适用条件</strong>：匀强磁场、导体匀速运动、回路电阻不变、忽略其他电磁影响。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分阶段：</strong> 按关键位置（边界、中点等）将线框运动全程分段，每段内有效切割情况不变。</li>
+<li><strong>判大小：</strong> 对每一段分析切割磁感线的有效边的条数、各边所处磁场的方向与磁感应强度，计算每边的 $E_i = BLv$，叠加得到总电动势 $E_\text{总}$，再由 $i = E_\text{总}/R$ 得电流大小。</li>
+<li><strong>定方向：</strong> 用楞次定律（看穿过回路的磁通量增减）或右手定则判断每一段的感应电流方向，与正方向对比得 $i$ 的正负。</li>
+<li><strong>抓转折：</strong> 找出 $i=0$ 的时刻（磁通量不变或总电动势为零）、$i$ 发生突变的位置，对应图像中的断续与拐点。</li>
+<li><strong>绘图像：</strong> 综合以上信息，画出分段恒定的 $i!-!t$ 图线或按规律变化的曲线，对比选项选择符合的图线。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>有效边遗漏或重复</strong>：线框左右两边同时切割不同磁场时，只算单边电动势，或错误认为两边总抵消。</li>
+<li><strong>方向叠加弄反</strong>：两边所在磁场方向相反时，两电动势是同向串联还是反向串联？必须用楞次定律或磁通量变化严格判断，不能凭直觉。</li>
+<li><strong>零电流段失察</strong>：当整个线框完全处于同一匀强磁场中匀速运动时，磁通量不变，感应电流为零，图像中必有一段 $i=0$ 的区间，不可忽略。</li>
+<li><strong>正负号与选项不一致</strong>：擅自规定正方向而不参考题目图像，导致自己判断的“正”与选项中的“正”错位。应优先根据题目描述的初始状态或图像原点匹配正方向。</li>
+<li><strong>时间比例算错</strong>：线框边长与磁场宽度相等时，跨越边界产生电流的时间与零电流时间之比为 $1:1$，若线框边长 $l$，磁场宽 $l$，一个周期为 $2l/v$，各段时长需准确对应。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2018·新课标Ⅱ卷）</h3>
+<p>在同一水平面内的两根平行长导轨间，有宽度均为 $l$、磁感应强度大小相等且方向交替向上向下的依次相邻矩形匀强磁场区域。一边长为 $l$ 的正方形金属线框在导轨上向左匀速运动。线框中感应电流 $i$ 随时间变化的正确图线可能是（    ）</p>
+<p><strong>思路</strong><br />
+线框边长等于磁场区域宽度，运动过程分为两类状态：① 线框完全处于某一匀强磁场中，磁通量不变，无感应电流；② 线框跨越相邻磁场的边界，左右两边分别在方向相反的磁场中切割磁感线。先判断产生电流时电动势大小和方向，再分析其持续时间和变化规律。</p>
+<p><strong>步骤</strong><br />
+1. <strong>设物理量</strong>：磁感应强度大小 $B$，线框匀速速度 $v$，总电阻 $R$。<br />
+2. <strong>划分阶段</strong>：以线框左边到达某边界为计时起点，运动 $l/v$ 时间内，框内一直存在向上和向下两部分磁场；接着再经 $l/v$ 时间，整个框完全进入下一均匀磁场，磁通量恒定。<br />
+3. <strong>求跨越边界的电流</strong>：<br />
+   - 跨越时，左边与右边所处磁场方向相反，两有效边切割产生的感应电动势大小均为 $BLv$，且它们的方向在回路中为 <strong>同向串联</strong>（可由楞次定律验证：穿过回路的磁通量在增大或减小，感生电动势阻碍变化，两边的电动势推动电流朝同一方向）。<br />
+   - 总电动势 $E = 2BLv$，电流大小 $i = \frac{2BLv}{R}$，方向恒定。<br />
+4. <strong>完全在区内时</strong>：磁通量不变，$E=0$，$i=0$。<br />
+5. <strong>进入下一边界</strong>：电流大小仍为 $i = \frac{2BLv}{R}$，但方向与上一段跨越时相反，形成反向矩形脉冲。<br />
+6. <strong>画图</strong>：得到一个等宽的正、零、负、零交替的方波，占空比 $50\%$。对照选项，选出具有此特征的图线。</p>
+<p><strong>点评/变式</strong><br />
+- 本题的陷阱在于将“两边都切割”误认为电动势抵消，从而选错。必须通过磁通量变化或等效电路分析两电动势的连接关系。<br />
+- 常见变式：磁场宽度与线框边长不等，或线框形状变化（如矩形框长宽不同），导致电流为零的时段变化或出现梯形波。解题核心仍是分段分析有效切割与磁通量变化率。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-05.html">2018-新课标Ⅱ-05</a>（2018 · 中） 金属线框在交替磁场中匀速运动，根据电动势和楞次定律判断感应电流图像。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/686-电磁感应与图像结合.html">电磁感应与图像结合</a></li>
+</ul>
+</div>
+</body>
+</html>

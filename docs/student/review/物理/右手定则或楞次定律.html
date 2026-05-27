@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>右手定则或楞次定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>右手定则或楞次定律</h1><div class="review-mark" data-stem="右手定则或楞次定律"></div><div class="meta-card"><span><strong>考点</strong>右手定则或楞次定律</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>右手定则</strong>（用于导体切割磁感线产生感应电动势方向的判断）</li>
+<li>内容：伸开右手，使拇指与其余四指垂直，并且都与手掌在同一个平面内；让磁感线垂直（或斜向）穿入手心，拇指指向导体运动的方向，其余四指所指的方向就是感应电流（或感应电动势）的方向。</li>
+<li>适用条件：一段直导体在磁场中做切割磁感线运动。若导体不动、磁场变化，则必须用楞次定律。</li>
+<li><strong>楞次定律</strong>（用于判断感应电流方向的普遍规律）</li>
+<li>内容：感应电流的磁场总是要阻碍引起感应电流的磁通量的变化。</li>
+<li>应用步骤：①明确原磁场方向及磁通量是增还是减；②根据“增反减同”确定感应电流的磁场方向；③由安培定则（右手螺旋）确定感应电流方向。在导体切割磁感线问题中，楞次定律与右手定则结论一致。</li>
+<li><strong>动生电动势公式</strong></li>
+<li>公式：$E = Blv\sin\theta$，当$B$、$l$、$v$两两垂直时简化为 $E = Blv$。</li>
+<li>适用条件：$l$为导体切割磁感线的<strong>有效长度</strong>（即导体在垂直于$v$方向上投影到与$B$垂直平面内的长度），$v$为导体相对磁场的垂直切割速度。若导体为曲线或部分在磁场中，需按几何关系确定实际切割部分的等效长度。</li>
+<li><strong>能量转化</strong>：动生电动势对应的非静电力是洛伦兹力沿导体方向的分力，机械能转化为电能。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定磁场与运动</strong>：明确磁场方向、导体运动方向及二者夹角，画平面示意图。</li>
+<li><strong>判方向（右手定则/楞次定律）</strong></li>
+<li>若为单棒切割磁感线，优先用右手定则（掌心对$B$，拇指指$v$，四指指电动势方向，电源内部电流由负极→正极）。</li>
+<li>若电路闭合，可进一步用右手定则或楞次定律判断外电路电流走向。</li>
+<li><strong>找有效长度 $l$</strong>：根据导体在磁场区域的几何投影确定实际切割磁感线的长度。常见情形：</li>
+<li>匀强磁场区域为矩形：$l$ 为导体横跨磁场部分的长度。</li>
+<li>磁场区域为圆形、三角形等：$l$ 为导体在磁场内截得的弦长或有效截线长。</li>
+<li><strong>求瞬时速度 $v$</strong>：结合运动学（如自由落体、匀加速、匀速圆周等）计算导体在给定位置的速度大小，注意若 $v$ 与 $B$ 不垂直，需取切割速度分量 $v_\perp = v\sin\theta$。</li>
+<li><strong>算电动势大小</strong>：代入 $E = Blv_\perp$，必要时利用比例法比较不同位置的$E$大小，可约去$B$及常数。</li>
+<li><strong>关联电路与力学</strong>（拓展）：若有外电路，求电流 $I = E/R_总$；若求安培力方向，用左手定则；能量问题用功能关系。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>右手定则与左手定则混淆</strong>：判断力（安培力、洛伦兹力）用<strong>左手</strong>，判断电动势/电流方向用<strong>右手</strong>（或楞次定律）。</li>
+<li><strong>有效长度 $l$ 取错</strong>：误以为$l$总是导体总长度。当导体只有一部分处在磁场中，或磁场边界不规则（如圆形区域），有效切割长度为导体在磁场内且与运动方向垂直的投影长度，常需结合几何关系（弦长、弦高）。</li>
+<li><strong>速度 $v$ 使用不当</strong>：直接代入平均速度或初速度。在变速运动中，电动势对应<strong>瞬时速度</strong>；自由落体下落距离$h$时，$v=\sqrt{2gh}$，而不是$gt$（题干未给$t$时需转化）。</li>
+<li><strong>忽略 $B$、$l$、$v$ 的空间方位</strong>：三者不垂直时，必须分解速度或长度，常见错误是直接套用$E=Blv$而不考虑夹角。</li>
+<li><strong>下落类问题中未区分下落距离与导体在磁场中的偏移距离</strong>：如导体从磁场中心等高位置开始运动，其竖直偏移量直接影响有效弦长和速度，计算时易混淆几何参数。</li>
+<li><strong>结果比较未考虑多变量变化趋势</strong>：当$E$同时依赖$l$和$v$，且两者均随位置改变，应写出完整表达式再比较，避免凭单变量大小武断结论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> (2010-新课标Ⅰ-08)</h3>
+<p>两个端面半径均为$R$的圆柱形铁芯同轴水平放置，相对的端面间有一缝隙，缝隙中形成匀强磁场。一铜质细直棒$ab$水平置于缝隙中，与圆柱轴线等高、垂直。让铜棒从静止自由下落，下落距离为$0.2R$时电动势大小为$E_1$，下落$0.8R$时为$E_2$，忽略涡流损耗和边缘效应。比较$E_1$、$E_2$的大小。</p>
+<p><strong>思路</strong>
+铜棒保持水平自由下落，切割缝隙中的匀强磁场。磁场区域端面为圆形（半径$R$），初始时铜棒位于磁场区域的水平直径位置。随着下落，铜棒在圆形区域内的有效切割长度$l$等于此高度对应的弦长，速度$v$由自由落体决定。写出$E = Blv$的表达式，比较$y=0.2R$和$y=0.8R$时的$E$。</p>
+<p><strong>步骤</strong>
+1. 建立坐标：以圆柱轴线高度为$y=0$，竖直向下为正。铜棒初始在$y=0$，下落距离即$y$。
+2. 有效长度：铜棒水平，在半径为$R$的圆形磁场区域内截得弦长<br />
+   $$ l = 2\sqrt{R^2 - y^2} $$
+3. 瞬时速度：自由下落 $v = \sqrt{2gy}$<br />
+4. 动生电动势大小：<br />
+   $$ E = B l v = B \cdot 2\sqrt{R^2 - y^2} \cdot \sqrt{2gy} \propto \sqrt{y(R^2 - y^2)} $$
+5. 分别代入 $y_1 = 0.2R$，$y_2 = 0.8R$：<br />
+   - $y_1=0.2R$： $\sqrt{0.2R(R^2 - 0.04R^2)} = R^{3/2}\sqrt{0.2 \times 0.96} \approx 0.438 R^{3/2}$<br />
+   - $y_2=0.8R$： $\sqrt{0.8R(R^2 - 0.64R^2)} = R^{3/2}\sqrt{0.8 \times 0.36} \approx 0.537 R^{3/2}$<br />
+   因为 $0.537 &gt; 0.438$，所以 $E_2 &gt; E_1$。</p>
+<p><strong>点评/变式</strong>
+- 本题表面只问大小，但完整解答可结合右手定则判断电势高低：磁场方向沿轴向水平，铜棒下落速度竖直向下，右手掌心迎磁感线，拇指向下，四指指向水平沿棒方向（如从$a$到$b$），可知$b$端电势高于$a$端。
+- <strong>变式1</strong>：若缝隙磁场方向改为竖直，则铜棒不切割磁感线，始终无电动势。
+- <strong>变式2</strong>：若铜棒从轴线等高处由静止释放后绕一端转动，则须用$E=\frac{1}{2}B\omega l^2$，且有效长度随角位置变化。
+- <strong>核心提醒</strong>：处理磁场区域为几何形状的切割问题时，务必根据边界写出有效长度随位移变化的函数关系，再结合运动学速度，方可正确比较或求解极值。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-08.html">2010-新课标Ⅰ-08</a>（2010 · 中） 铜棒在匀强磁场中下落切割磁感线，根据几何关系求有效切割长度再比较感应电动势大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/559-右手定则或楞次定律.html">右手定则或楞次定律</a></li>
+</ul>
+</div>
+</body>
+</html>

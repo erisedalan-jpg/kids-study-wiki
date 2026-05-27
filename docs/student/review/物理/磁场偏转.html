@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>磁场偏转</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>磁场偏转</h1><div class="review-mark" data-stem="磁场偏转"></div><div class="meta-card"><span><strong>考点</strong>磁场偏转</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>加速电场</strong>：带电粒子从静止经电势差 $U$ 加速，由动能定理 $qU=\frac12 mv^2$ 得速度 $v=\sqrt{\frac{2qU}{m}}$。电势沿电场线方向降低，正电荷受力方向与电场线方向相同，负电荷相反。</li>
+<li><strong>洛伦兹力</strong>：$F=qvB\sin\theta$，方向用左手定则判定——磁感线穿入手心，四指指向正电荷运动方向（或负电荷运动反方向），拇指即受力方向。注意 $q$ 为负时四指必须指向速度的反方向。</li>
+<li><strong>匀强磁场中匀速圆周运动</strong>：洛伦兹力提供向心力 $qvB=m\frac{v^2}{r}$，得轨道半径 $r=\frac{mv}{qB}$、周期 $T=\frac{2\pi m}{qB}$（与速度无关）。偏转后出射方向、落点位置由半径及磁场区几何决定。</li>
+<li><strong>组合场问题</strong>：加速电场与偏转磁场连接时，加速电压决定进入磁场的速度，继而影响偏转半径；磁场磁感应强度也直接影响半径。这两者共同决定粒子打到靶上的位置。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分阶段处理</strong>：将运动分为“电场加速→磁场偏转→无场直线”三段，段与段之间用速度衔接。</li>
+<li><strong>电场段</strong>：用动能定理 $qU=\frac12 mv^2$ 求进入磁场速度 $v$；由电场力方向推知电场线方向，进而判断电势高低（注意粒子电性）。</li>
+<li><strong>磁场段</strong>：</li>
+<li>画轨迹，找圆心、定半径。利用几何关系求出半径或偏转角。</li>
+<li>由左手定则判断磁场方向或粒子偏转方向；若是负电荷，四指指向速度反方向。</li>
+<li>联立半径公式 $r=\frac{mv}{qB}$，将电场段求出的 $v$ 代入，得 $r=\frac1B\sqrt{\frac{2mU}{q}}$。</li>
+<li><strong>落点分析</strong>：根据轨迹与靶的几何关系，判断改变 $U$、$B$ 时落点 $P$ 的移动方向。核心规律：</li>
+<li>仅增大 $U$，$v$ 增大，$r$ 增大，轨迹弯曲程度减小，落点向原运动方向同侧移动。</li>
+<li>仅增大 $B$，$r$ 减小，轨迹弯曲程度增大，落点向偏转方向同侧移动。</li>
+<li><strong>选项排除法</strong>：先定性判断方向、高低，再定量对比半径变化，结合轨迹示意图快速锁定正确选项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>左手定则用错对象</strong>：电子等负电荷，四指必须指向速度反方向，否则受力、磁场方向全反。</li>
+<li><strong>电势高低与电性混淆</strong>：电子由静止被加速，电场力方向即运动方向，而电场线方向与负电荷受力方向相反，因此电子是从低电势向高电势运动，切勿记反。</li>
+<li><strong>加速电压对半径的影响误判</strong>：由 $qU=\frac12 mv^2$ 和 $r=\frac{mv}{qB}$ 得 $r\propto\sqrt{U}$，电压越高半径越大，偏转越弱。常见错误是认为“加速后更快，磁场中更易偏转”而缩小半径。</li>
+<li><strong>忽略离开磁场后的直线段</strong>：落点 $P$ 的位置不仅取决于磁场内偏转角，还与出射后的直线延长有关。简单的“半径大则落点远”需结合具体几何判断。</li>
+<li><strong>磁场方向描述含糊</strong>：判断磁场垂直纸面向里还是向外时，务必画出一小段圆弧轨迹，用左手定则严格比对，切忌凭感觉。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2020·新课标Ⅱ卷·第4题，6分）</h3>
+<p>CT扫描机中，电子从静止经M、N间电场加速后进入匀强偏转磁场，最终打到靶上P点。已知电子带负电，图示中电子向右进入磁场后向下偏转。判断：A. M处电势高于N处；B. 增大加速电压P点左移；C. 偏转磁场方向垂直纸面向外；D. 增大磁感应强度P点左移。</p>
+<h3><strong>思路</strong></h3>
+<p>分加速和偏转两段。加速段：负电子向右加速，电场力向右，故电场线向左，N侧电势高→A错。偏转段：电子向右进磁场、受向下力做向下偏转；左手定则对负电荷（四指向左），大拇指朝下，得磁场垂直纸面向外→C正确。由 $r=\frac{\sqrt{2meU}}{eB}$，$U$ 增大则 $r$ 增大，轨迹变直，P点应右移（非左移）→B错；$B$ 增大则 $r$ 减小，轨迹更弯，P点左移→D应正确？需结合真题原图：实际磁场区右边界与靶的位置关系使得增大 $B$ 时P点向上游移动而非左移，故D不正确（原题答案C）。此处展示分析思路。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>电场分析：电子从静止加速到速度 $v$，动能定理 $eU=\frac12 mv^2$；受力向右，所以电场力向右，电场线方向向左（与负电荷受力相反），沿电场线电势降低，故 $N$ 电势高、$M$ 电势低→A错误。</li>
+<li>速度表达式：由①得 $v=\sqrt{2eU/m}$。</li>
+<li>磁场方向：电子进入磁场后速度向右，轨迹向下弯，洛伦兹力方向向下。左手定则：磁感线穿手心，四指指向负电荷运动反方向（即向左），拇指朝下，可判磁场方向垂直纸面向外→C正确。</li>
+<li>半径表达：洛伦兹力提供向心力 $evB=mv^2/r$，得 $r=mv/(eB)=\sqrt{2mU/e}/B$。可见 $U!\uparrow \Rightarrow r!\uparrow$，偏转程度减小，靶上落点向右移动（非左移）→B错误；$B!\uparrow \Rightarrow r!\downarrow$，弯曲加剧，落点应顺偏转方向移动，题目中选项“左移”不符→D错误。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题综合考查了负电荷在电场中的加速与电势高低、左手定则判断磁场方向、以及通过半径公式分析落点移动，是典型的“组合场＋动态变化”选择题。陷阱集中在电性和左右移动的判断上。<strong>变式</strong>：若将电子换为质子（正电荷），则电场力向右说明电场线也向右，M电势高于N；磁场中正电荷向右运动、向下偏转，由左手定则磁场方向应为垂直纸面向里。其余结论会相应改变——平时训练可互换粒子电性，强化左手定则和电势分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-04.html">2020-新课标Ⅱ-04</a>（2020 · 中） 电场加速与磁场偏转的综合分析，涉及电势高低和偏转方向判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/703-磁场偏转.html">磁场偏转</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波长频率和波速的关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>波长频率和波速的关系</h1><div class="review-mark" data-stem="波长频率和波速的关系"></div><div class="meta-card"><span><strong>考点</strong>波长频率和波速的关系</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>波长、频率、波速关系</strong>：$v = \lambda f = \frac{\lambda}{T}$。其中 $v$ 由介质决定，$f$（或 $T$）由波源决定，$\lambda$ 由介质和波源共同决定。</li>
+<li><strong>波的传播与质点振动</strong>：波沿传播方向，质点依次做受迫振动，后一质点的振动总落后于前一质点。两点振动的时间差 $\Delta t = \frac{\Delta x}{v}$，相位差 $\Delta \varphi = \frac{2\pi}{\lambda}\Delta x$。</li>
+<li><strong>简谐波的振动方程</strong>：波线上某质点 P（平衡位置 $x$）的位移随时间变化可表示为<br />
+  $$y = A\sin(\omega t + \varphi_0) \quad \text{或} \quad y = A\cos(\omega t + \varphi_0')$$
+  其中 $\omega = \frac{2\pi}{T}$，初相 $\varphi_0$ 由 $t=0$ 时的位移和速度方向决定。</li>
+<li><strong>特殊点的时间规律</strong>：</li>
+<li>从平衡位置到最大位移（或反向）历时 $\frac{T}{4}$。</li>
+<li>从任意位移到平衡位置（或最大位移）的时间，需结合振动方程和相位变化精确求解。</li>
+<li><strong>适用条件</strong>：本专题适用于已知波上若干质点的时空信息，求解波的周期、波速、波长及振动方程的问题，常结合波动图像或文字描述。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>从特殊状态求周期</strong>：找出质点处于波峰、波谷、平衡位置等特殊状态的时刻，利用“相邻两次经过平衡位置的时间间隔为 $\frac{T}{2}$”“从最大位移到平衡位置的最短时间为 $\frac{T}{4}$”等规律，直接求出周期 $T$。</li>
+<li><strong>提振动信息定振幅与初相</strong>：</li>
+<li>写出质点振动方程 $y = A\sin(\omega t + \varphi_0)$（或余弦形式），$\omega = \frac{2\pi}{T}$。</li>
+<li>代入 $t=0$ 时的位移 $y_0$ 和速度方向（判断 $\sin\varphi_0$、$\cos\varphi_0$ 的符号），得初相 $\varphi_0$。</li>
+<li>结合另一时刻（如第一次回平衡位置）的位移和历时，联立解得振幅 $A$ 和 $\varphi_0$ 的确定值。</li>
+<li><strong>用波程差与相位差关系求波速或波长</strong>：</li>
+<li>根据两质点的平衡位置距离 $\Delta x$ 和同一时刻它们的状态（如位移、相位），利用 $\Delta \varphi = \frac{2\pi}{\lambda}\Delta x$（注意传播方向，超前或落后）。</li>
+<li>若题目给了波长范围，可限制多解情况（通常取 $k=0$ 或最小正整数解）。</li>
+<li>最后由 $v = \lambda f = \frac{\lambda}{T}$ 求出波速。</li>
+<li><strong>回代检验</strong>：将求得的 $T$、$v$、$\lambda$、振动方程代入原题条件验证是否自洽，尤其注意“第一次”“不小于”等限制。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>“第一次回到平衡位置”的相位误判</strong>：质点从正位移回平衡位置，若向上振动（向正最大位移），则不会立刻回平衡；只有速度方向指向平衡位置时，才会第一次回到平衡。需结合正弦函数相位区间（如第二象限 $\sin&gt;0,\cos&lt;0$）判定。</li>
+<li><strong>波长多解遗漏或错选</strong>：公式 $\Delta \varphi = 2k\pi + \frac{2\pi}{\lambda}\Delta x$ 中 $k$ 的取值受波长范围约束，切忌直接默认为 $k=0$。必须用“波长不小于某值”等条件确定 $k$ 的唯一性。</li>
+<li><strong>传播方向导致的超前/落后混淆</strong>：波沿 $+x$ 传播时，右侧质点振动落后于左侧。列相位关系时，若以左侧质点 $O$ 为参考，右侧 $A$ 的相位比 $O$ <strong>小</strong> $\frac{2\pi}{\lambda}\Delta x$，反之若以 $A$ 为参考，$O$ 的相位比 $A$ <strong>大</strong> 同样的量。切勿将加减符号弄反。</li>
+<li><strong>单位统一问题</strong>：题目中距离常用 $\text{cm}$，时间用 $\text{s}$，波速单位可能是 $\text{cm/s}$ 或 $\text{m/s}$，计算时先统一为国际单位制或保持题给单位一致，最后按需转换。</li>
+<li><strong>振动方程形式选择</strong>：正弦或余弦均可，但初相对应不同。选取后全程保持一致，代入 $t=0$ 条件求初相时注意对应关系（如正弦形式 $y=A\sin(\omega t+\varphi_0)$ 中 $t=0$ 位移为 $A\sin\varphi_0$）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2016-新课标Ⅱ-16</h3>
+<p><strong>题目</strong>：一列简谐横波沿 $x$ 轴正向传播，波长不小于 $10\,\text{cm}$。$O$、$A$ 两质点平衡位置分别在 $x=0$ 和 $x=5\,\text{cm}$。$t=0$ 时 $O$ 位移 $y_O=4\,\text{cm}$，$A$ 处于波峰；$t=\frac{1}{3}\,\text{s}$ 时 $O$ 第一次回到平衡位置，$t=1\,\text{s}$ 时 $A$ 第一次回到平衡位置。求：
+（ⅰ）周期、波速和波长；
+（ⅱ）质点 $O$ 的位移随时间变化的关系式。</p>
+<p><strong>思路</strong>：
+- 利用 $A$ 从波峰第一次到平衡位置的时间是四分之一周期，直接得 $T$。
+- 根据 $t=0$ 时 $O$ 与 $A$ 的状态及波沿 $+x$ 传播，列出 $O$、$A$ 的相位关系，结合 $O$ 第一次回平衡位置的过程求出 $O$ 的初相和振幅，同时利用两点距离与波长的关系（波长限制）解得波速和波长。
+- 由 $O$ 的周期和初相、振幅写出振动方程。</p>
+<p><strong>步骤</strong>：
+1. <strong>求周期 $T$</strong>：<br />
+   $A$ 在 $t=0$ 处于<strong>波峰</strong>，$t=1\,\text{s}$ 第一次回到<strong>平衡位置</strong>，经历时间 $\Delta</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-16.html">2016-新课标Ⅱ-16</a>（2016 · 中） 已知波传播中两质点的位置和时间，求周期、波速、波长及质点振动方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/648-波长频率和波速的关系.html">波长频率和波速的关系</a></li>
+</ul>
+</div>
+</body>
+</html>

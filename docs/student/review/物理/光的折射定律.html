@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光的折射定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光的折射定律</h1><div class="review-mark" data-stem="光的折射定律"></div><div class="meta-card"><span><strong>考点</strong>光的折射定律</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：16</li>
+<li>真题数：4；年份跨度：2009–2015</li>
+<li>出现题位：解答15 解答16 选择8</li>
+<li>难度分布：中2 难2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>折射定律</strong>：折射光线与入射光线、法线处在同一平面内，折射光线与入射光线分别位于法线两侧；入射角的正弦与折射角的正弦成正比，即 $n_1\sin\theta_1 = n_2\sin\theta_2$，其中 $n_1$、$n_2$ 为介质相对真空的绝对折射率。常用形式：光从真空（或空气）射入介质时，有 $\sin i = n\sin r$。</li>
+<li><strong>折射率</strong>：$n = \dfrac{c}{v}$，$c$ 为真空中光速，$v$ 为介质中光速。同一介质中，频率越高的光，折射率越大，传播速度越小。</li>
+<li><strong>光的频率、波长与波速的关系</strong>：光从一种介质进入另一种介质时，频率不变，波速和波长改变。真空中 $c = \lambda_0 f$，介质中 $v = \lambda f$，因此 $\lambda = \dfrac{\lambda_0}{n}$。同一介质中，折射率越大，波长越短。</li>
+<li><strong>全反射</strong>：光从光密介质射向光疏介质，入射角大于等于临界角 $C$（$\sin C = \dfrac{1}{n}$）时，折射光消失，全部光线被反射回光密介质。常用于透光、镀膜等边界判断。</li>
+<li><strong>双缝干涉条纹间距</strong>：$\Delta x = \dfrac{L}{d}\lambda$，光的波长越长，条纹间距越大。适用于真空中波长的比较。</li>
+<li><strong>平行玻璃砖与棱镜的光路特点</strong>：要结合几何关系（如对称性、三角形内外角、圆弧等）确定入射角、折射角、全反射临界条件。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画出规范光路图</strong>：标注关键界面、入射点、法线，标明已知角度和未知角度。善于利用对称性（如圆弧、球心、立方体中心）、辅助线（如平行线、垂线）建立几何关系。</li>
+<li><strong>确定入射角与折射角</strong>：分清“在介质中的角”与“真空（空气）中的角”。通常真空侧角较大。利用三角形内角和、平行线性质、圆周角等几何定理求解未知角。</li>
+<li><strong>列折射定律方程</strong>：用 $\sin\theta_{\text{真空}} = n \sin\theta_{\text{介质}}$（或 $n_1\sin\theta_1 = n_2\sin\theta_2$）。当光从介质射向空气时，注意论证是否发生全反射。</li>
+<li><strong>关联其他光学量</strong>：比较不同色光的频率、折射率、波速、波长、临界角、干涉条纹间距等，口诀：“频率高，折射率大，速度小，波长短，临界角小”。</li>
+<li><strong>处理全反射边界问题</strong>：首先计算临界角 $C = \arcsin\dfrac{1}{n}$，再根据几何条件判断哪些区域发生全反射，结合光路可逆性分析透光（或镀膜）范围。</li>
+<li><strong>综合运算</strong>：对于复杂几何问题（如2012年立方体镀膜最小面积），可将临界条件转化为三角函数条件，再用几何关系求对应面或弧长比例。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>入射角与折射角的位置混淆</strong>：误将介质中的角当作真空中的角代入折射定律，导致折射率计算错误。牢记：真空（空气）中角的正弦等于 $n$ 乘以介质中角的正弦。</li>
+<li><strong>全反射条件理解不透</strong>：只有光从光密射向光疏且入射角大于等于临界角才发生全反射。在分析透射与遮光区域时，忽视“只经过一次折射不能透出”涵盖既有折射又有全反射的情况。</li>
+<li><strong>折射率与波长、速度的关系记反</strong>：误认为折射率大的光在介质中速度大、波长长。正确关系：$n \uparrow \ \rightarrow\ v \downarrow,\ \lambda \downarrow$。</li>
+<li><strong>双缝干涉条纹间距公式中波长的含义</strong>：$\Delta x = \dfrac{L}{d}\lambda$ 中的 $\lambda$ 是光在该实验装置所处介质中的波长（通常为真空或空气），因此比较不同色光干涉条纹间距时，看真空中波长即可，折射率大的光真空中波长小，条纹间距小。</li>
+<li><strong>几何角度关系分析失误</strong>：如2011年题中，$\angle PNO = \angle PQO = r$ 的对称性分析和 $\alpha + r = \beta,\ \beta + r = 60^\circ$ 的联立出错，导致折射角求错。</li>
+<li><strong>忽略“最小面积”等极值条件</strong>：如2012年镀膜面积最小值，临界状态对应恰好在镀膜边缘发生全反射（折射角为90°），漏掉此条件会无法建立方程。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2015-新课标Ⅱ-15</h3>
+<p><strong>题目</strong>：半圆柱玻璃砖，光沿半径方向入射，经折射后分成a、b两束。判断速度、波长、折射率、全反射先后、干涉条纹间距等。</p>
+<p><strong>思路</strong>：由偏折程度判断折射率大小：同入射角下偏折越厉害（折射角越小）的光，折射率越大。然后利用 $v = c/n$、$\lambda_0$ 与 $n$ 关系、$\sin C = 1/n$、$\Delta x \propto \lambda_0$ 逐项分析。</p>
+<p><strong>步骤</strong>：
+- 从题图看，a光比b光更靠近法线，即折射角更小，故 $n_a &gt; n_b$，C选项错误。
+- 由 $v = c/n$，知 $v_a &lt; v_b$，A正确。
+- 频率 $\nu_a &gt; \nu_b$，真空中 $\lambda_0 = c/\nu$，故 $\lambda_{0a} &lt; \lambda_{0b}$，B正确。
+- 临界角 $\sin C = 1/n$，$C_a &lt; C_b$，增大 $\theta$ 时a光先达到临界角而全反射消失，D正确。
+- 双缝干涉条纹间距 $\Delta x \propto \lambda_0$，$\lambda_{0a} &lt; \lambda_{0b}$，故 $\Delta x_a &lt; \Delta x_b$，E错误。</p>
+<p><strong>点评/变式</strong>：本题常见陷阱是误以为折射角小的光折射率小。可概括口诀：“偏折大，折射率大，频率高，速度小，临界角小，干涉条纹窄”。涉及同入射条件直接比较角度即可。</p>
+<h3>2012-新课标-16</h3>
+<p><strong>题目</strong>：玻璃立方体中心点光源，折射率 $n$，要使只经一次折射的光线都不能透出，求镀膜面积与表面积之比的最小值。</p>
+<p><strong>思路</strong>：临界情形是入射角等于临界角时，折射角为90°，折射光线恰好沿着表面。确定该入射角对应的入射点集合，即为不镀膜的边界，其余部分需镀膜。利用立体几何计算面积比。</p>
+<p><strong>步骤</strong>：
+- 设临界角为 $C$，$\sin C = \dfrac{1}{n}$。设立方体边长为 $a$，中心O到表面距离为 $a/2$。
+- 考虑上表面：从O发出的光线射到上表面某点，入射角 $\theta$，当 $\theta = C$ 时，该点到垂足的距离为 $d = \dfrac{a}{2}\tan C$。以垂足为圆心，半径为 $d$ 的圆形区域内的入射角小于临界角，光线能透出；圆外入射角大于等于临界角，发生全反射不能透出。因此上表面需全部镀膜，而能透光的圆面积应不镀膜？题目要求“发出的光线只经过一次折射不能透出”，即所有能透出的区域都需要遮挡（镀膜），因此要使所有可能折射透出的光都被挡住，需要镀膜覆盖所有可能透光的区域。欲使镀膜面积最小，则仅覆盖恰好发生全反射的临界情形对应的不镀膜区？仔细审题：“以致从光源发出的光线只经过一次折射不能透出立方体”，即所有原先能透出的光都要被挡住，所以镀膜要覆盖所有可能透出的区域，计算必须遮挡的最小面积。
+- 从光源看，每个面中间有一个圆形区域（半径为 $\frac{a}{2}\tan C$）的光可以折射透出，其余部分入射角大于临界角会自动全反射。因此只需把这6个透光圆区域镀膜即可挡住所有原本能折射出去的光。镀膜面积 $S_{\text{膜}} = 6 \times \pi \left(\frac{a}{2}\tan C\right)^2$。
+- 立方体表面积 $S_{\text{总}} = 6a^2$。比值 $\dfrac{S_{\text{膜}}}{S_{\text{总}}} = \dfrac{\pi \tan^2 C}{4}$。
+- 由 $\sin C = 1/n$，得 $\tan C = \dfrac{1}{\sqrt{n^2-1}}$，代入得比值 $\dfrac{\pi}{4(n^2-1)}$。题目已知 $n$ 为某一数值（原题干为给出了 $n$），直接代入即可得最小值。</p>
+<p><strong>点评/变式</strong>：本题关键是理解“只经过一次折射不能透出”蕴含了全反射区域的自动屏蔽，需要我们镀膜遮挡的是那些可以透出的区域。常见错解是以为镀膜要覆盖全反射区域。立方体到球的对称性简化了计算。若光源不在中心，需用积分或对称性分析。</p>
+<h3>2011-新课标-16</h3>
+<p><strong>题目</strong>：半圆柱形透明物体，底面AOB镀银（反射面），光线从M点入射（入射角30°），已知∠MOA=60°，∠NOB=30°，求折射角和折射率。</p>
+<p><strong>思路</strong>：作出光路图，光在M点折射进入介质，射到底面反射，再到N点射出。利用反射对称性和圆形几何关系找出折射角r与已知角度的关系。</p>
+<p><strong>步骤</strong>：
+- 设入射角 $i=30^\circ$，折射角为 $r$。底面反射相当于将光线路径关于底面反射面对称，M和Q对称，Q、P、N三点共线。
+- 由几何：$\angle OMQ = \alpha = 30^\circ$。在圆中，半径相等，$\angle PNO = \angle PQO = r$。
+- 在$\triangle$有关角中，由对顶角、三角形外角等得：$\beta + r = 60^\circ$，且 $\alpha + r = \beta$。
+- 联立：$r + (30^\circ + r) = 60^\circ \Rightarrow 2r = 30^\circ \Rightarrow r = 15^\circ$。
+- 折射定律：$\sin i = n \sin r \Rightarrow n = \dfrac{\sin 30^\circ}{\sin 15^\circ} = \dfrac{0.5}{\sin 15^\circ} \approx 1.93$。（或保留根式）</p>
+<p><strong>点评/变式</strong>：本题关键是将镀银底面看作平面镜，利用对称性使光路可等效为直线。圆中半径构成的等腰三角形常常提供等角关系。解答中“Q、P、N三点共线”的证明是难点，可借助反射定律的几何等效。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-15.html">2015-新课标Ⅱ-15</a>（2015 · 中） 该题考查光的折射定律、全反射条件及双缝干涉条纹间距与波长的关系。</li>
+<li><a href="../../exam/物理/2012-新课标-16.html">2012-新课标-16</a>（2012 · 难） 光学折射与全反射在立方体内求最小镀膜面积比</li>
+<li><a href="../../exam/物理/2011-新课标-16.html">2011-新课标-16</a>（2011 · 难） 考查光的折射定律，通过几何关系求折射角并计算透明物体的折射率。</li>
+<li><a href="../../exam/物理/2009-全国Ⅱ-08.html">2009-全国Ⅱ-08</a>（2009 · 中） 一束平行光垂直射入玻璃砖，经全反射和折射后在屏上形成亮区，分析亮区宽度及移动变化</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/520-光的折射定律.html">光的折射定律</a></li>
+</ul>
+</div>
+</body>
+</html>

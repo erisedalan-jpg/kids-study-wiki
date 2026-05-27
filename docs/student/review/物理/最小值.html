@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最小值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>最小值</h1><div class="review-mark" data-stem="最小值"></div><div class="meta-card"><span><strong>考点</strong>最小值</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平抛运动基本规律</strong>：水平方向匀速 $x=v_0 t$，竖直方向自由落体 $v_y=gt$，$y=\frac12 gt^2$。速度合成 $v=\sqrt{v_0^2+v_y^2}$，速度偏转角 $\alpha$ 满足 $\tan\alpha=\frac{v_y}{v_0}$。</li>
+<li><strong>落水条件临界</strong>：石子从高度 $h$ 水平抛出，接触水面时竖直分速度固定 $v_y=\sqrt{2gh}$；要求速度方向与水面夹角 $\alpha\le\theta$，即 $\tan\alpha\le\tan\theta$。</li>
+<li><strong>最小值原理</strong>：由 $\tan\alpha=\frac{\sqrt{2gh}}{v_0}$ 得 $v_0=\frac{\sqrt{2gh}}{\tan\alpha}$，$\alpha$ 需满足 $\alpha\le\theta$。为求 $v_0$ 的最小值，取允许的最大偏角 $\alpha=\theta$，此时 $v_{0\min}=\frac{\sqrt{2gh}}{\tan\theta}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定固定量与约束量</strong>：分析运动中哪些量由题设固定（如高度 $h$ 决定的落地竖直速度 $v_y$），哪些量受条件约束（如速度方向与水面夹角 $\alpha\le\theta$）。</li>
+<li><strong>建立目标函数</strong>：将待求量（如初速度 $v_0$）表为约束量 $\alpha$ 的函数 $v_0(\alpha)$。平抛中常用 $\tan\alpha=\frac{v_y}{v_0}$ 或 $\sin\alpha$ 等，依据几何定义选择。</li>
+<li><strong>利用不等式求极值</strong>：由约束范围 $\alpha\le\theta$，结合函数单调性（如 $v_0$ 随 $\alpha$ 增大而减小），直接取边界 $\alpha=\theta$ 得到最小或最大值。</li>
+<li><strong>统一条件表达</strong>：最终表达式多用已知量 $h,g,\theta$ 表示，注意区分角度正切与正弦、余弦的适用场景，避免误用。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把夹角当位移角</strong>：速度与水平面夹角 $\alpha$ 不是位移与水平面夹角，不能直接套用 $\tan\alpha=\frac{h}{x}$。</li>
+<li><strong>忽略“不大于”的极值方向</strong>：看到“最小速度”，误认为应取 $\alpha$ 最小。实则 $\alpha$ 越小，$\tan\alpha$ 越小，$v_0=\frac{\sqrt{2gh}}{\tan\alpha}$ 越大；应取允许的最大偏角 $\alpha=\theta$ 才能得到最小速度。</li>
+<li><strong>角度定义不清</strong>：题中“石子接触水面时的速度方向与水面的夹角”即速度与水平方向夹角，若误当作与竖直方向夹角会导致表达式颠倒。</li>
+<li><strong>忘记竖直速度的固定性</strong>：竖直末速度 $v_y$ 仅由高度 $h$ 决定，与水平初速度无关。若误认为 $v_y$ 与初速度有关，则无法正确建立函数关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2023新课标11）打水漂：扁平石子从距水面高度 $h$ 处水平抛出，石子接触水面时的速度方向与水面夹角不能大于 $\theta$，求观察到“水漂”时抛出速度的最小值。不计空气阻力，重力加速度为 $g$。<br />
+<strong>思路</strong>：平抛运动，落地时竖直分速度固定为 $v_y=\sqrt{2gh}$。设初速度 $v_0$，接触水面时速度偏角 $\alpha$ 满足 $\tan\alpha=\frac{v_y}{v_0}$。由条件 $\alpha\le\theta$，则 $\tan\alpha\le\tan\theta$，得到 $v_0\ge\frac{\sqrt{2gh}}{\tan\theta}$，故最小值为 $\frac{\sqrt{2gh}}{\tan\theta}$。<br />
+<strong>步骤</strong>：<br />
+- 竖直方向：$h=\frac12 gt^2 \Rightarrow t=\sqrt{\frac{2h}{g}}$，$v_y=gt=\sqrt{2gh}$。<br />
+- 速度方向角 $\alpha$：$\tan\alpha=\frac{v_y}{v_0}$，所以 $v_0=\frac{v_y}{\tan\alpha}$。<br />
+- 由题 $\alpha\le\theta$，函数 $v_0(\alpha)$ 在 $(0,\frac{\pi}{2})$ 单调递减，取 $\alpha=\theta$ 得最小值 $v_{0\min}=\frac{\sqrt{2gh}}{\tan\theta}$。<br />
+<strong>点评/变式</strong>：本题的核心陷阱在于“速度方向与水面的夹角”即“速度与水平方向夹角”，考生常与位移角混淆，或误以为夹角是指与竖直方向夹角。变式：若要求石子入水时速度最小，则为 $v_{\min}=\sqrt{2gh}$（此时 $\alpha=90^\circ$ 但不符合条件）；或变为求水平位移范围、抛出速度最大值（$\alpha\to0$ 时 $v_0\to\infty$）等，均可体现极值边界的应用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-11.html">2023-新课标-11</a>（2023 · 中） 本题考查平抛运动中速度方向与斜面夹角限制下求最小抛出速度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/286-函数的最值.html">最小值</a></li>
+</ul>
+</div>
+</body>
+</html>

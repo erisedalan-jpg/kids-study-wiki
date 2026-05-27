@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子在磁场中的圆周运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>带电粒子在磁场中的圆周运动</h1><div class="review-mark" data-stem="带电粒子在磁场中的圆周运动"></div><div class="meta-card"><span><strong>考点</strong>带电粒子在磁场中的圆周运动</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：18</li>
+<li>真题数：3；年份跨度：2019–2024</li>
+<li>出现题位：填空13 选择3 选择4</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>核心公式</strong><br />
+  洛伦兹力提供向心力：$qvB = m\dfrac{v^2}{r}$<br />
+  轨道半径：$r = \dfrac{mv}{qB}$<br />
+  周期：$T = \dfrac{2\pi m}{qB}$（与速度无关）<br />
+  运动时间：$t = \dfrac{\theta}{2\pi}T = \dfrac{\theta m}{qB}$（$\theta$为轨迹圆心角，弧度制）</p>
+</li>
+<li>
+<p><strong>基本解题框架</strong>  </p>
+</li>
+<li>定圆心：已知入射、出射方向时，作速度垂线交点；已知入射方向与出射点时，中垂线与速度垂线交点。  </li>
+<li>定半径：公式计算或几何关系（弦切角、对称性等）。  </li>
+<li>画轨迹：补全圆周，标出角度与弦长。  </li>
+<li>
+<p>用几何：常用结论——弦切角等于圆心角的一半；速度偏转角等于轨迹圆心角；入射方向所在的弦与半径构成关系。</p>
+</li>
+<li>
+<p><strong>常见边界磁场几何规律</strong>  </p>
+</li>
+<li>直线边界：进、出对称，偏转角等于圆心角。  </li>
+<li>圆形边界：径向射入必径向射出；公共弦、公共半径相等。  </li>
+<li>
+<p>矩形/三角形边界：需考虑临界的相切或恰好从某点射出。</p>
+</li>
+<li>
+<p><strong>比荷与电磁场综合</strong><br />
+  已知比荷 $\dfrac{q}{m}=k$ 时，半径 $r = \dfrac{v}{kB}$，可避开质量求解。<br />
+  电场与磁场衔接时，速度关系常由电场加速或偏转得到，再代入磁场圆周运动公式。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>规范画图，定圆心</strong><br />
+   画出初、末速度方向的垂线，交点即圆心；若仅知起点和出射点，作出射点与起点的中垂线，与某一速度垂线相交。</p>
+</li>
+<li>
+<p><strong>构建几何三角形</strong><br />
+   在速度偏转角明确时，连接圆形轨迹的弦，构建半径与边界构成的直角三角形或等腰三角形，用三角函数或勾股定理求半径。</p>
+</li>
+<li>
+<p><strong>半径关联速度</strong><br />
+   由 $r = \dfrac{mv}{qB}$ 可知，同一粒子、同一磁场中 $r \propto v$；速度比常直接化成半径比。若为不同粒子，需用比荷 $k$ 变形为 $r=\dfrac{v}{kB}$。</p>
+</li>
+<li>
+<p><strong>利用偏转角与圆心角相等</strong><br />
+   速度偏转角 $\theta$ 等于轨迹圆心角。由几何可知：偏转角越大，所需圆弧越长，对应弦长或半径可通过 $r \sin\frac{\theta}{2}$ 等关联。</p>
+</li>
+<li>
+<p><strong>多过程与多粒子问题</strong><br />
+   抓住各阶段的运动时间、几何约束，联立时间相等或位置关系列方程。磁场区切换时，注意磁感应强度方向变化导致洛伦兹力反向，轨迹反转或对称。</p>
+</li>
+<li>
+<p><strong>矩形/正方形边界临界射出的处理</strong><br />
+   从某点射出意味着该点在圆周上，利用边长、半边长作几何约束，求出轨迹半径或速度。常见临界：与某边相切或恰过某点。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>偏转角≠入射/出射与界面的夹角</strong>：偏转角是两速度矢量的夹角，不等于入射角，尤其在非直线边界（如圆形磁场）中容易混淆。</li>
+<li><strong>圆心角单位</strong>：计算时间 $t=\frac{\theta m}{qB}$，$\theta$ 必须用弧度制，若给角度制需先转换。</li>
+<li><strong>半径公式的矢量性</strong>：$r=\frac{mv}{qB}$ 只在速度与磁场垂直时成立，题目默认磁场垂直于纸面，速度在纸面内，可直接用。</li>
+<li><strong>对称性滥用</strong>：直线边界磁场中，若垂直入射则原路返回；斜入射则对称出射，但速度大小不变。圆形磁场斜入射时未必对称，需依据几何判断。</li>
+<li><strong>多粒子比较时忽略质量或比荷差异</strong>：同种粒子质量相等，速度比直接导致半径比；若比荷给出需使用 $k$，切忌直接套 $v$ 比。</li>
+<li><strong>忽略磁场方向变化</strong>：反向磁场导致粒子偏转方向相反，轨迹拼接时需正确判断圆心位置和圆弧方向，否则几何关系全错。</li>
+<li><strong>时间计算误区</strong>：时间由弧长决定，不是弦长；弧长对应圆心角占比。误用 $t = \frac{\text{弦长}}{v}$ 是典型错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2024·辽宁·13）</h3>
+<p><strong>题目</strong><br />
+粒子甲、乙先后射入等大反向的匀强磁场Ⅰ、Ⅱ区，宽度均为$L$。乙在Ⅰ区偏转$30^\circ$，甲到$O$点时乙恰好到$P$点。Ⅲ区有$+x$方向电场。求磁感应强度$B$。</p>
+<p><strong>思路</strong><br />
+乙在Ⅰ区运动为圆周运动，已知偏转角$30^\circ$，可求其轨迹半径与磁场宽度的几何关系。甲、乙的速度关系已知$v_{甲0} = \frac{3}{2}v_0, v_{乙0}=v_0$。通过时间相等条件，结合甲、乙在磁场中的轨迹与在无磁场区的匀速运动，建立方程求解$B$。</p>
+<p><strong>步骤</strong><br />
+1. 对乙在Ⅰ区：设其轨道半径$r_乙$，偏转角$\theta_乙=30^\circ$。弦切角等于$30^\circ$，对应的弦长为$L$（因乙从Ⅰ区左边界到P点，磁场宽度$L$为垂直于边界方向的距离）。由几何：$L = r_乙 \sin 30^\circ$，得$r_乙 = 2L$。<br />
+2. 由$r_乙 = \frac{m v_0}{qB}$，得$B = \frac{m v_0}{2qL}$。<br />
+3. 验证甲的运动：甲速度$v_{甲0}=\frac{3}{2}v_0$，Ⅰ区半径$r_甲 = \frac{3}{2} \times 2L = 3L$，偏转角满足$\sin \theta_甲 = \frac{L}{3L} = \frac{1}{3}$。乙从Ⅰ区出射后到P点，甲恰从P点到O点，时间关系可用于求解其它量，但求$B$只需乙的运动即可。</p>
+<p><strong>点评/变式</strong><br />
+本题关键是从乙的偏转角和磁场宽度直接求得半径，抓住“弦长等于磁场宽度”的几何条件。变式中可将偏转角换为其他值，或给出不同粒子的射入位置，训练几何建模能力。特别注意等大反向磁场的轨迹对称性，易出多过程问题。</p>
+<h3>代表题2（2021·全国乙·3）</h3>
+<p><strong>题目</strong><br />
+圆形磁场，粒子从$M$点沿直径$MON$射入，若速度$v_1$时偏转$90^\circ$，速度$v_2$时偏转$60^\circ$，求$\dfrac{v_1}{v_2}$。</p>
+<p><strong>思路</strong><br />
+粒子沿径向射入圆形磁场，必沿径向射出，故出射点与圆心$O$的连线也为半径方向。画出两情况轨迹：圆心分别为$O_1$, $O_2$，均落在过$O$点的某直线上。由几何关系求出半径与磁场圆半径$R$的关系，再通过半径比得出速度比。</p>
+<p><strong>步骤</strong><br />
+1. 设磁场圆半径为$R$。情况1：偏转$90^\circ$，即出射速度垂直于入射方向，轨迹圆心角$90^\circ$。此时轨迹半径$r_1$与$R$的关系：$r_1 = R$（出射点与入射点$M$的连线为直径），由等腰直角三角形得。<br />
+2. 情况2：偏转$60^\circ$，圆心角$60^\circ$。对应轨迹半径$r_2$满足几何关系：$\tan 30^\circ = \frac{R}{r_2}$，得$r_2 = \sqrt{3}R$。<br />
+3. 同一粒子，$r \propto v$，故$\dfrac{v_1}{v_2} = \dfrac{r_1}{r_2} = \dfrac{1}{\sqrt{3}}$。</p>
+<p><strong>点评/变式</strong><br />
+经典题，核心是“沿径向入则沿径向出”的结论，以及利用公共弦或半径构建几何直角三角形。变式中可将偏转角改为$120^\circ$、同时有两个粒子从不同点射入等，强化这个结论。注意速度偏转角等于圆心角，作出轨迹圆心后，找其与磁场圆圆心的连线。</p>
+<h3>代表题3（2019·新课标Ⅱ·4）</h3>
+<p><strong>题目</strong><br />
+边长为$l$的正方形磁场，方向垂直纸面向外，比荷$k$的电子从$ab$边中点$O$沿垂直于$ab$方向射入。求从$a$、$d$两点射出的速度大小。</p>
+<p><strong>思路</strong><br />
+粒子轨迹半径决定出射点。分别画出恰好从$a$和$d$射出的临界轨迹，构建几何关系。求半径后利用$r=\dfrac{mv}{qB}$和比荷$k=\dfrac{q}{m}$，得$v = kBr$。</p>
+<p><strong>步骤</strong><br />
+1. <strong>从$a$点射出</strong>：圆心在$Oa$的垂直平分线上，因入射方向垂直$ab$，圆心在$ab$的垂线上。作图得直角三角形，由几何：$(r_a - \frac{l}{2})^2 + l^2 = r_a^2$，解得$r_a = \frac{5}{4}l$。<br />
+2. <strong>从$d$点射出</strong>：轨迹过$d$，圆心在$ab$垂线上，由几何：$(r_d - \frac{l}{2})^2 + (2l)^2 = r_d^2$，解得$r_d = \frac{17}{4}l$。<br />
+3. 速度公式：$v = \frac{qBr}{m} = kBr$，则$v_a = \frac{5}{4}kBl$, $v_d = \frac{17}{4}kBl$。</p>
+<p><strong>点评/变式</strong><br />
+正方形边界问题，关键是以发射点为原点建立坐标系，利用圆轨迹方程或勾股定理列半径关系。注意从$d$射出时弦长是$Od$的水平、竖直投影长度。变式可改成从$bc$边射出，或求从各边射出的速度范围，训练临界相切条件的判断。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-13.html">2024-辽宁-13</a>（2024 · 中） 粒子在电磁场中的偏转与运动规律分析，求解磁感应强度大小</li>
+<li><a href="../../exam/物理/2021-全国乙-03.html">2021-全国乙-03</a>（2021 · 中） 带电粒子在圆形磁场区域运动，结合几何关系求速度比</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-04.html">2019-新课标Ⅱ-04</a>（2019 · 中） 求解电子在匀强磁场中做圆周运动从a、d点射出的速度大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/301-带电粒子在磁场中圆周运动.html">带电粒子在磁场中的圆周运动</a></li>
+</ul>
+</div>
+</body>
+</html>

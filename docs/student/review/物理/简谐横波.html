@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简谐横波</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>简谐横波</h1><div class="review-mark" data-stem="简谐横波"></div><div class="meta-card"><span><strong>考点</strong>简谐横波</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>简谐横波</strong>：质点振动方向与波的传播方向垂直,各质点仅在平衡位置附近做简谐振动,并不随波迁移。</li>
+<li><strong>波长 $\lambda$、频率 $f$、周期 $T$、波速 $v$</strong>：满足 $v=\frac{\lambda}{T}= \lambda f$。波速由介质决定,频率由波源决定,进入不同介质时 $f$ 不变,$v$ 和 $\lambda$ 同时变化。</li>
+<li><strong>波动图象（$y$–$x$ 图）与振动图象（$y$–$t$ 图）的物理意义</strong>：</li>
+<li>$y$–$x$ 图：描述某一时刻所有质点在各自平衡位置附近的位移,相当于“瞬间集体照”。</li>
+<li>$y$–$t$ 图：描述某一质点在不同时刻的位移,相当于“个人录像”。</li>
+<li><strong>质点振动方向与波传播方向的判定（同侧法/上下坡法）</strong>：在波动图象上,沿波的传播方向看去,处于“上坡”部分的质点振动方向向下,处于“下坡”部分的质点振动方向向上。或利用△t微平移△x判定位移方向。</li>
+<li><strong>由振动图象读出 $T$ 和 $t$ 时刻的 $y,v_t$ 方向</strong>：振动图象上切线斜率正负代表振动速度方向（正斜率为正方向,反之为负）。</li>
+<li><strong>波的多解性与周期性</strong>：波动在空间上具有周期性（$\Delta x = n\lambda + \Delta x_0$）,时间上具有周期性（$\Delta t = nT + \Delta t_0$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分清图象类型</strong>：先看坐标轴——$y$–$x$ 是波动图,$y$–$t$ 是振动图。提取 $\lambda$（从 $y$–$x$ 图）和 $T$（从 $y$–$t$ 图）。</li>
+<li><strong>由信息求波速</strong>：$v = \lambda / T$。若介质不变,波速不变。</li>
+<li><strong>确定传播方向或质点振动方向</strong>：</li>
+<li>若已知波传播方向和波形,用“同侧法”判断任一质点的瞬时振动方向。</li>
+<li>若已知某质点的振动图象和对应时刻的波形,由该质点在波形图上的位置,结合其振动方向,反推出波的传播方向（微平移法：在该质点处,下一时刻的位移方向即为质点振动方向,整体波形沿该方向平移）。</li>
+<li><strong>质点在某时刻的振动状态分析</strong>：将该时刻 $t$ 代入振动图,读出该质点的 $y$ 及振动方向。对于波动图中其他质点,可通过 $t$ 时刻的波形结合波速和传播方向推得 $t+\Delta t$ 时的波形或某质点的振动状态。</li>
+<li><strong>处理周期性、双向传播问题</strong>：涉及“某一时刻”“某一段距离”未明确时,要设波沿正向或反向传播,写出通式 $\Delta x = n\lambda + \Delta x_0$ 或 $\Delta t = nT + \Delta t_0$,根据限制条件确定整数 $n$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆两类图象</strong>：把波动图象当作振动质点轨迹,或把振动图当作波形图。质点只做上下直线振动,波动图象是某一时刻全体质点的位移分布。</li>
+<li><strong>方向判断错误</strong>：用“上坡下,下坡上”时,必须先明确波的传播方向；若未知传播方向,需结合振动图象信息双向判断,切忌单凭波形图主观猜测。</li>
+<li><strong>直接套 $v=\Delta x/\Delta t$ 而忽略波周期性</strong>：波形中两个相似状态点间的距离可能对应$n\lambda$而非一个波长,时间差可能对应$nT$而非一个周期,不说明$n$时会漏解。</li>
+<li><strong>认为所有质点同时起振、同时到最大位移</strong>：波传播过程中,离波源远的质点起振时刻滞后,波前的质点还未振动。</li>
+<li><strong>振动速度与波速概念混淆</strong>：质点振动速度是变化的,大小方向均周期变化；波速是传播速度,均匀介质中恒定。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2014年新课标Ⅱ卷第15题,给出一列简谐横波在 $t=0.10\,\mathrm{s}$ 的波形图（图a）及质点 $Q$（$x=4.0\,\mathrm{m}$）的振动图象（图b）,判断正确选项。</p>
+<p><strong>思路</strong>：先明确图a给出 $t=0.10\,\mathrm{s}$ 时所有质点的位移分布,可读出波长 $\lambda=8\,\mathrm{m}$；图b给出质点 $Q$ 的振动,可读出周期 $T=0.20\,\mathrm{s}$（由相邻峰值间距）及 $t=0.10\,\mathrm{s}$ 时 $Q$ 在平衡位置向负方向振动。由此求出波速 $v=\lambda/T=40\,\mathrm{m/s}$。根据同一时刻质点 $Q$ 的方向,结合波形,用同侧法可推出波沿 $x$ 轴负方向传播。进而判断质点 $P$ 在 $t=0.10\,\mathrm{s}$ 时位于正向位移某处,振动方向向上或向下,并能推其他时刻的状态。</p>
+<p><strong>步骤</strong>：
+1. 读图得 $\lambda=8\,\mathrm{m}$, $T=0.20\,\mathrm{s}$, $v = \frac{8}{0.20}=40\,\mathrm{m/s}$。
+2. 由图b知 $t=0.10\,\mathrm{s}$ 时质点 $Q$ 位于平衡位置 ($y=0$) 且下一时刻向负方向移动（振动图切线斜率为负）,说明此时 $Q$ 振动方向垂直向下。
+3. 在图a波形上,质点 $Q$（$x=4\,\mathrm{m}$）处于平衡位置。若波向右传,该处质点应处于“下坡”向上振动,与向下矛盾；若波向左传,在平衡位置的质点处于“上坡”向下振动,符合情况。故波沿 $x$ 轴负方向传播。
+4. 质点 $P$ ($x=1.0\,\mathrm{m}$) 在 $t=0.10\,\mathrm{s}$ 时位于位移正最大附近。波向左传播时,$P$ 处于“下坡”,振动方向向上。经 $\Delta t=T/4=0.05\,\mathrm{s}$,波形左移 $\lambda/4=2\,\mathrm{m}$,可判断 $P$ 到达平衡位置或反向最大等,结合选项逐一排除。</p>
+<p><strong>点评/变式</strong>：该题经典考查两类图象的关联,务必用同一个时刻“连接”二者。若题目将给出质点换为未知传播方向,也可由振动图象上某点的振动情况反推波的传播方向。变式可让求 $t=0$ 时的波形,或求波前位置,解法核心是微平移和周期性理解,注意不要漏掉多解情形。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-15.html">2014-新课标Ⅱ-15</a>（2014 · 中） 波形图与振动图象结合，判断质点振动和波的传播方向。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/713-简谐横波.html">简谐横波</a></li>
+</ul>
+</div>
+</body>
+</html>

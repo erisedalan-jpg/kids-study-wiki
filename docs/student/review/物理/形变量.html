@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>形变量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>形变量</h1><div class="review-mark" data-stem="形变量"></div><div class="meta-card"><span><strong>考点</strong>形变量</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>形变量</strong>：物体受力后长度的变化量，即 $x = |l - l_0|$，其中 $l_0$ 为原长，$l$ 为形变后的长度。</li>
+<li><strong>胡克定律</strong>：在弹性限度内，弹簧的弹力 $F$ 与形变量 $x$ 成正比。<br />
+  公式：$F = kx$<br />
+  方向：弹力方向与形变方向相反（指向恢复原长的方向）。</li>
+<li><strong>适用条件</strong>：弹性限度内，轻质弹簧（不计质量），仅考虑一维拉伸或压缩。</li>
+<li><strong>关键区分</strong>：弹簧长度 ≠ 形变量。压缩时 $x = l_0 - l$；拉伸时 $x = l - l_0$。</li>
+<li><strong>由真题提炼</strong>：已知两次不同力（压和拉）及对应弹簧长度，可联立方程求劲度系数 $k$ 或原长 $l_0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设未知原长</strong>：弹簧原长 $l_0$ 是连接不同受力状态的桥梁，必设。</li>
+<li><strong>写形变量表达式</strong>：  </li>
+<li>压缩：$x_1 = l_0 - l_1$  </li>
+<li>拉伸：$x_2 = l_2 - l_0$<br />
+   （注意 $l_1$、$l_2$ 是实验测得的长度）</li>
+<li><strong>列胡克定律方程</strong>：<br />
+   $F_1 = k(l_0 - l_1)$<br />
+   $F_2 = k(l_2 - l_0)$</li>
+<li><strong>联立消元</strong>：消去 $l_0$（或先求 $l_0$），解得 $k = \frac{F_1 + F_2}{l_2 - l_1}$。</li>
+<li><strong>验证结果</strong>：检查量纲，确认 $l_2 &gt; l_1$ 且 $k&gt;0$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>将弹簧长度直接当作形变量</strong>：不设原长，直接用 $F_1 = k l_1$ 等导致错误。</li>
+<li><strong>正负号混乱</strong>：弹力公式 $F = kx$ 中 $x$ 为绝对值，但建立方程时常通过几何关系确定 $x$，丢负号或大小关系错位。</li>
+<li><strong>混淆弹力与外力</strong>：题干给的是施加在弹簧上的外力，平衡时外力大小等于弹力，方向无关，直接用绝对值列式即可。</li>
+<li><strong>未注意到“轻质弹簧”</strong>：轻质意味着弹簧两端受力相等，可直接用胡克定律，不考虑质量惯性。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2010-新课标Ⅰ-02</h3>
+<p><strong>题目</strong><br />
+一根轻质弹簧一端固定，用 $F_1$ 的力压弹簧另一端，平衡时长 $l_1$；改用 $F_2$ 的力拉弹簧，平衡时长 $l_2$。在弹性限度内，求弹簧劲度系数。</p>
+<p><strong>思路</strong><br />
+两次受力下弹簧的长度已知，但原长未知，属于典型的“知力知长求 $k$”模型。通过设原长，分别用压缩和拉伸的形变量表达胡克定律，联立消去原长即得 $k$。</p>
+<p><strong>步骤</strong><br />
+设原长为 $l_0$。<br />
+压缩状态：形变量 $x_1 = l_0 - l_1$，由胡克定律 $F_1 = k (l_0 - l_1)$　　……①<br />
+拉伸状态：形变量 $x_2 = l_2 - l_0$，由胡克定律 $F_2 = k (l_2 - l_0)$　　……②<br />
+①+②得 $F_1 + F_2 = k (l_2 - l_1)$<br />
+解得 $$\displaystyle k = \frac{F_1 + F_2}{l_2 - l_1}$$</p>
+<p><strong>点评/变式</strong><br />
+- 本题陷阱在于直接用 $l_1$ 或 $l_2$ 当作形变量，错误得到 $k = F_1/l_1$ 或类似结果。必须牢记：弹簧长度本身不是形变量。<br />
+- 若题目变为已知 $k$ 和一次受力长度，求原长或另一长度，解法同理，用 $l_0 = \frac{F_1 l_2 + F_2 l_1}{F_1 + F_2}$ 可直接写出。<br />
+- 变式：若两次均是拉伸（或均是压缩），则形变量为同向差值，表达式变为 $k = \frac{|F_2 - F_1|}{|l_2 - l_1|}$，需结合物理情景分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-02.html">2010-新课标Ⅰ-02</a>（2010 · 易） 弹簧劲度系数计算，考查胡克定律中弹力与形变量的关系</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/609-形变量.html">形变量</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电流表内接法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电流表内接法</h1><div class="review-mark" data-stem="电流表内接法"></div><div class="meta-card"><span><strong>考点</strong>电流表内接法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电流表两种接法</strong><br />
+  伏安法测电阻 $R_x = \frac{U}{I}$ 的电路分为 <strong>内接法</strong>（电流表接在电压表内侧，图a）与 <strong>外接法</strong>（电流表接在电压表外侧，图b）。</li>
+<li><strong>内接法误差</strong><br />
+  电压表测量的是 $R_x$ 与电流表串联的总电压：$U = U_{R_x} + U_A$，$I$ 为通过 $R_x$ 的电流，故<br />
+  $$R_{x1} = \frac{U}{I} = R_x + R_A &gt; R_x \quad (\text{测量值偏大})$$<br />
+  误差源于电流表的分压。</li>
+<li><strong>外接法误差</strong><br />
+  电流表测量的是 $R_x$ 与电压表并联的总电流：$I = I_{R_x} + I_V$，$U$ 为 $R_x$ 两端电压，故<br />
+  $$R_{x2} = \frac{U}{I} = \frac{R_x R_V}{R_x + R_V} &lt; R_x \quad (\text{测量值偏小})$$<br />
+  误差源于电压表的分流。</li>
+<li><strong>接法选择准则</strong><br />
+  比较 $R_x$、$R_A$、$R_V$ 的相对大小：  </li>
+<li>当 $R_x \gg R_A$ 或 $R_x &gt; \sqrt{R_A R_V}$ 时，选用<strong>内接法</strong>（大电阻内接，偏大）；  </li>
+<li>当 $R_x \ll R_V$ 或 $R_x &lt; \sqrt{R_A R_V}$ 时，选用<strong>外接法</strong>（小电阻外接，偏小）。<br />
+  本题中 $R_x = 200\,\Omega$，$R_A = 10\,\Omega$，$R_V = 2000\,\Omega$，因 $R_x &gt; \sqrt{R_A R_V} \approx 141\,\Omega$，内接法更接近真实值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确器材参数</strong><br />
+   从题中提取 $R_x$ 的约值、电压表内阻 $R_V$、电流表内阻 $R_A$。</li>
+<li><strong>计算临界比较值</strong><br />
+   计算 $\sqrt{R_A R_V}$（或直接比较 $R_x/R_A$ 与 $R_V/R_x$）：<br />
+   若 $R_x &gt; \sqrt{R_A R_V}$，属“大电阻”，用内接；否则用外接。</li>
+<li><strong>判断哪个测量值更接近真实值</strong><br />
+   按上述准则确定应选的接法，对应测量值即为更接近真实值的数据。</li>
+<li><strong>定性比大小</strong><br />
+   内接法测量值必大于真实值（$R_{测} = R_x + R_A$）；外接法测量值必小于真实值（$R_{测} = \frac{R_x R_V}{R_x + R_V}$）。可直接套用“内大外小”口诀填空。</li>
+<li><strong>书写结论</strong><br />
+   需同时指出哪个接法更准确以及测量值与真实值的大小关系，两空必须对应一致。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用“内小外大”记忆</strong><br />
+  混淆误差方向：内接法测得电阻偏<strong>大</strong>（多分了电流表的电压），外接法测得电阻偏<strong>小</strong>（多分了电压表的电流）。口诀“内大外小”。</li>
+<li><strong>选错比较判据</strong><br />
+  不是简单地比较 $R_x$ 与 $R_A$ 或 $R_x$ 与 $R_V$，而是比较 $R_x$ 与 $\sqrt{R_A R_V}$（或比较 $R_x/R_A$ 与 $R_V/R_x$）。若仅看 $R_x$ 与 $R_V$ 接近则不选外接，本题 $R_x=200\ \Omega$，$R_V=2\ \text{k}\Omega$，乍看不满足 $R_x \ll R_V$，但实际内接更优，考生容易误判。</li>
+<li><strong>测量值填反</strong><br />
+  填“Rx1”时未确认电路图(a)(b)与内外接法的对应关系。须牢记：电流表在电压表并联圈内部即为内接法，测量值偏大；在外部则为外接法，偏小。</li>
+<li><strong>忽略定量推导导致定性混淆</strong><br />
+  内接法 $R_{测}=R_x+R_A$，外接法 $R_{测}=\frac{R_x R_V}{R_x+R_V}$，忽视推导易在真实值比大小时失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+（2014·新课标Ⅱ-09）用伏安法测电阻 $R_x \approx 200\,\Omega$，电压表内阻 $R_V \approx 2\,\text{k}\Omega$，电流表内阻 $R_A \approx 10\,\Omega$，电路如图(a)（电流表内接）和图(b)（电流表外接）。测量值分别记为 $R_{x1}$ 和 $R_{x2}$。判断哪个更接近真实值，并比较 $R_{x1}$、$R_{x2}$ 与真实值的大小。</p>
+<p><strong>思路</strong><br />
+本质是伏安法的内外接选择与误差方向判断。先确定 $R_x$ 属于“大电阻”还是“小电阻”，再调用结论：内接适用于大电阻，测量值偏大；外接适用于小电阻，测量值偏小。</p>
+<p><strong>步骤</strong><br />
+1. 计算临界值：$\sqrt{R_A R_V} = \sqrt{10 \times 2000} = \sqrt{20000} \approx 141\,\Omega$。<br />
+2. 比较：$R_x = 200\,\Omega &gt; 141\,\Omega$，属大电阻，应选内接法，即图(a)电路，因此 $R_{x1}$ 更接近真实值。<br />
+3. 定性比大小：内接法测量值 $R_{x1} = R_x + R_A &gt; R_x$；外接法测量值 $R_{x2} = \dfrac{R_x R_V}{R_x + R_V} &lt; R_x$。<br />
+4. 填答：$R_{x1}$ 更接近真实值；$R_{x1}$ 大于真实值；$R_{x2}$ 小于真实值。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接用“大内偏大，小外偏小”快速秒杀，考场无需重复推导，但须确认比较准则无误。<br />
+- 变式：若给出的 $R_x$ 约几十欧，$R_V$ 几千欧，$R_A$ 零点几欧，需先算 $\sqrt{R_A R_V}$，避免凭感觉误选。<br />
+- 延伸：若题中要求画出电路或实物连线，务必按内接/外接规则连接，并在作答时标注“内接法”或“外接法”以展示判断依据。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-09.html">2014-新课标Ⅱ-09</a>（2014 · 中） 伏安法测电阻实验中电流表内外接法的选择与误差分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/682-电流表内接法.html">电流表内接法</a></li>
+</ul>
+</div>
+</body>
+</html>

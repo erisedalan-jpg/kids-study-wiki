@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>折射率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>折射率</h1><div class="review-mark" data-stem="折射率"></div><div class="meta-card"><span><strong>考点</strong>折射率</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：21</li>
+<li>真题数：3；年份跨度：2010–2021</li>
+<li>出现题位：填空14 解答16</li>
+<li>难度分布：中1 难2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>绝对折射率</strong>：光从真空射入某种介质发生折射时，入射角 $i$ 的正弦与折射角 $r$ 的正弦之比，叫这种介质的绝对折射率，简称折射率。公式：$n = \frac{\sin i}{\sin r}$。</li>
+<li><strong>相对折射率</strong>：光从介质1射入介质2时，入射角 $i$ 与折射角 $r$ 的正弦之比，等于介质2相对介质1的折射率，即 $n_{21} = \frac{\sin i}{\sin r} = \frac{n_2}{n_1}$。</li>
+<li><strong>实验测定（插针法）</strong>：利用光路可逆与几何关系，通过测量入射点、出射点以及辅助点的空间距离，结合折射定律求解介质的折射率。核心是正确构建入射角与折射角的几何联系。</li>
+<li><strong>全反射条件</strong>：① 光从光密介质射向光疏介质；② 入射角大于或等于临界角 $C$。临界角公式：$\sin C = \frac{1}{n}$ （或 $\sin C = \frac{n_{\text{疏}}}{n_{\text{密}}}$）。</li>
+<li><strong>光路几何</strong>：解决几何光学问题的关键在于准确作出光路图。利用几何定理（如三角形内角和、等腰三角形性质、对称性、相似三角形等）建立角度之间的定量关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题作图，理清光路</strong></li>
+<li>根据题干描述，准确画出光线从一种介质射向另一种介质的路径。</li>
+<li>特别注意光学元件边界、对称轴以及镀银/反射面的位置。存在反射面时，先利用对称性或镜像法转换光路，再处理折射。</li>
+<li><strong>寻找几何角关系</strong></li>
+<li>在入射点、折射点、反射点处，过该点作法线（通常是界面垂线或半径线）。</li>
+<li>将题给的已知角度（如30°、60°）和距离，利用直角三角形边角关系、平行线性质、三角形内角和等，转化为入射角 $i$、折射角 $r$ 及其互余或互补关系。</li>
+<li>对于复杂的多角度关系，可设未知角、列出方程求解。</li>
+<li><strong>建立折射与全反射方程</strong></li>
+<li>对每个折射点，列折射定律 $n_1 \sin\theta_1 = n_2 \sin\theta_2$。</li>
+<li>若涉及全反射，在刚好发生全反射的界面处列临界条件 $\sin C = \frac{n_{\text{疏}}}{n_{\text{密}}}$，并注意 $C$ 与局部入射角的几何转换。</li>
+<li><strong>联立方程求解</strong></li>
+<li>整合几何角关系方程与折射定律、全反射条件，求解出折射率 $n$ 或相关角度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆入射角折射角的定义</strong>：法线是唯一的参照。入射角和折射角是光线与<strong>法线</strong>的夹角，而非与界面的夹角。在圆弧界面或棱镜中，务必找准法线（圆弧的半径方向即为法线）。</li>
+<li><strong>几何找角思维定势</strong>：只会找简单的互余关系，忽略了利用三角形外角等于不相邻两内角和、对顶角相等、平行四边形对角相等等关系进行角度传递。</li>
+<li><strong>全反射条件漏判介质疏密</strong>：只列了 $\sin C = 1/n$，却忽略了全反射必须从光密到光疏。例如光从真空射向棱镜，即使入射角为90°，在介质内射向边界时也要检查角度关系。</li>
+<li><strong>实验题几何换算粗心</strong>：在用插针法或坐标纸数据计算折射率时，将空间距离（对边/邻边）的正切关系直接当作正弦关系 $\sin\theta \approx \tan\theta$ 使用，这在角度较大时会引入较大误差。务必严格转化为正弦值，或利用严格的几何关系求解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 半圆柱反射组合（2011-新课标-16）</h3>
+<ul>
+<li><strong>题目</strong>：半圆柱形透明物，底面AOB镀银。光线从M点入射（$i=30^\circ$），经底面反射后从N点射出。已知 ∠MOA=60°，∠NOB=30°。求折射角与折射率。</li>
+<li><strong>思路</strong>：镀银底面相当于全反射镜。核心是利用“镜像对称法”将折返光路拉直，再用几何关系建立入射角的等量联系，最后套用折射定律。</li>
+<li><strong>步骤</strong>：<ol>
+<li>作M关于底面的对称点Q，由于镜面反射，出射光线MP与PN在P点遵从反射定律，P、N、Q三点共线。</li>
+<li>在M点，设入射角 $i=30^\circ$，折射角为 $r$。由几何知 $\angle OMQ = \alpha = 30^\circ$。</li>
+<li>在Q点（或N点），由于对称，$\angle PNO = \angle PQO = r$。观察几何可知 $\beta + r = 60^\circ$（因为∠NOB=30°，∠NOB'=60°），且 $\alpha + r = \beta$。</li>
+<li>联立解得 $r = 15^\circ$。</li>
+<li>代入折射定律 $n = \frac{\sin 30^\circ}{\sin 15^\circ}$，计算得 $n = \frac{\sqrt{6}+\sqrt{2}}{2}$。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：<strong>对称简化</strong>是关键。凡遇镜面反射或对称结构，优先考虑将反射后的光路作镜像，使光路“拉直”，这样可将反射角的问题统一为单一介质中的几何共线问题，大大简化角度计算。</li>
+</ul>
+<h3>2. 平行玻璃砖插针法（2021-全国乙-16）</h3>
+<ul>
+<li><strong>题目</strong>：用插针法测上、下表面平行的玻璃砖折射率。大头针A、B确定入射光路，C、D确定出射光路。入射点O，出射点O'。已知 $h=15.0\text{mm}$，A到过O点法线OM距离 $AM=10.0\text{mm}$，M到O点距离 $MO=20.0\text{mm}$。求折射率。</li>
+<li><strong>思路</strong>：需将实测的距离数据转化为入射角与折射角的正弦或正切，进而代入折射定律。虽是平行砖，但因出射光与入射光平行，可利用两直角三角形建立几何联系。</li>
+<li><strong>步骤</strong>：<ol>
+<li>在入射点O处，法线为OM方向。由A、M、O三点几何关系，$\tan i = \frac{AM}{MO} = \frac{10.0}{20.0} = 0.5$，据此可得 $\sin i$。</li>
+<li>光线在砖内折射角为 $r$，由于出射点O'的对称性及砖厚度 $h=15.0\text{mm}$，在O'处折射光路平移。需联立O与O'之间的水平偏移量与 $h$、$r$ 的关系求出 $\sin r$。</li>
+<li>最终根据 $n = \frac{\sin i}{\sin r}$ 计算出结果。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：<strong>距离转角度</strong>是光学实验题的必杀技。牢记 $\tan\theta = \frac{\text{对边}}{\text{邻边}}$，当角度较小时可近似 $\sin\theta \approx \tan\theta$，但严谨求解应严格换算。平行玻璃砖不改变光的方向，只产生侧移，这是验证光路是否正确的隐含条件。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-16.html">2021-全国乙-16</a>（2021 · 中） 考查光的折射定律与全反射，计算玻璃砖折射率及上下表面夹角</li>
+<li><a href="../../exam/物理/2011-新课标-16.html">2011-新课标-16</a>（2011 · 难） 考查光的折射定律，通过几何关系求折射角并计算透明物体的折射率。</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-14.html">2010-新课标Ⅰ-14</a>（2010 · 难） 通过三棱镜全反射求折射率，并结合波的叠加计算波长和振幅最小点位置</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/360-折射率.html">折射率</a></li>
+</ul>
+</div>
+</body>
+</html>

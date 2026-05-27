@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>恒力</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>恒力</h1><div class="review-mark" data-stem="恒力"></div><div class="meta-card"><span><strong>考点</strong>恒力</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择2</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>恒力</strong>：大小和方向均保持不变的力。质点受到恒力作用时，产生的加速度恒定（$a=F/m$），物体做匀变速运动，轨迹可以是直线（$v_0$与$F$共线）或曲线（$v_0$与$F$不共线，如类平抛）。</li>
+<li><strong>初始条件</strong>：质点从匀速直线运动状态开始受恒力，说明此前合力为零；该恒力即为质点此后所受的合力。</li>
+<li><strong>动能变化与合力做功</strong>：动能定理 $W_合 = \Delta E_k$，恒力做功的正负和大小直接决定动能增减。</li>
+<li><strong>恒力方向与初速度方向的关系决定动能变化情况</strong>：</li>
+<li><strong>同向（夹角$0^\circ$）</strong>：恒力做正功，物体做匀加速直线运动，动能一直增大。</li>
+<li><strong>反向（夹角$180^\circ$）</strong>：恒力先做负功后做正功，物体先匀减速到零再反向匀加速，动能先减小至零再增大。</li>
+<li><strong>成锐角（$0^\circ&lt;\theta&lt;90^\circ$）</strong>：恒力与初速度不共线，物体做曲线运动。将速度分解到沿力方向和垂直力方向，沿力方向分速度增加，垂直力方向分速度不变，合速度一直增大，动能一直增大。</li>
+<li><strong>成钝角（$90^\circ&lt;\theta&lt;180^\circ$）</strong>：物体做曲线运动。沿力方向分速度先减小至零再反向增大，垂直力方向分速度不变，合速度先减小后增大。当沿力方向分速度减为零时，合速度等于垂直方向分速度（不为零），动能达到一个非零的最小值，而后再增大。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>分析恒力作用下物体动能变化的通用步骤：
+1. <strong>明确恒力即为合力</strong>，找出恒力方向与初速度方向的夹角$\theta$。
+2. <strong>按夹角分类讨论</strong>：
+   - 若 $\theta = 0^\circ$：恒力一直做正功 $\Rightarrow$ 动能一直增大。
+   - 若 $\theta = 180^\circ$：恒力先做负功后做正功 $\Rightarrow$ 动能先减至零再增大。
+   - 若 $0^\circ &lt; \theta &lt; 90^\circ$：将速度沿力方向和垂直力方向分解，沿力方向分速度增大，垂直方向分速度不变 $\Rightarrow$ 合速度一直增大，动能一直增大。
+   - 若 $90^\circ &lt; \theta &lt; 180^\circ$：沿力方向分速度先减至零再反向增大，垂直方向分速度不变 $\Rightarrow$ 合速度先减后增，动能先减至某一非零最小值再增大。
+3. <strong>快速判断技巧</strong>：恒力方向若与初速度方向成钝角，则动能一定出现先减小后增大的过程，且最小值一定大于零（因为垂直方向的分速度始终存在）。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆锐角与钝角的影响</strong>：误以为只要恒力与速度方向不共线，动能就会先减小后增大。实际上，锐角情况下动能一直增大，只有钝角时才会出现先减小。</li>
+<li><strong>认为速度可以减到零</strong>：物体在恒力作用下做曲线运动（成钝角）时，垂直于恒力方向的分速度始终不变且不为零，因此合速度绝不会减到零，动能的最小值也不为零。只有直线减速运动（反向）速度才会减到零。</li>
+<li><strong>错误类比“先增大后减小”选项</strong>：恒力方向固定，合力做功不可能出现“先正后负”的自动反转（除非力本身方向变化），所以不可能出现动能先增大到某一最大值再减小的情形（对应C选项错误）。</li>
+<li><strong>受力分析不到位</strong>：没有意识到质点“从匀速直线运动”开始受恒力，意味着该恒力就是唯一的合力，不需要再考虑其他力（如摩擦力、重力等）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+质点开始时做匀速直线运动，从某时刻起受到一恒力作用。此后，该质点的动能可能（　　）<br />
+A．一直增大<br />
+B．先逐渐减小至零，再逐渐增大<br />
+C．先逐渐增大至某一最大值，再逐渐减小<br />
+D．先逐渐减小至某一非零的最小值，再逐渐增大  </p>
+<p><strong>思路</strong><br />
+恒力即为合力，质点做匀变速运动。根据恒力方向与初速度方向的夹角，分同向、反向、成锐角、成钝角四种情况，用速度分解法或动能定理判断动能变化。</p>
+<p><strong>步骤</strong><br />
+1. 设初速度为$v_0$，恒力为$F$，二者夹角为$\theta$。<br />
+2. 若 $\theta = 0^\circ$（同向）：$F$做正功，$v$一直增大 $\Rightarrow E_k$ 一直增大，A正确。<br />
+3. 若 $\theta = 180^\circ$（反向）：物体匀减速至零后反向匀加速，$v$先减到零再增大 $\Rightarrow E_k$ 先减至零再增大，B正确。<br />
+4. 若 $0^\circ &lt; \theta &lt; 90^\circ$：将$v_0$分解为$v_\parallel = v_0 \cos\theta$（沿力方向）和$v_\perp = v_0 \sin\theta$（垂直力方向）。$v_\perp$不变，$v_\parallel$一直增大，合速度$v = \sqrt{v_\parallel^2 + v_\perp^2}$一直增大，动能一直增大。<br />
+5. 若 $90^\circ &lt; \theta &lt; 180^\circ$：此时$\cos\theta &lt; 0$，$v_\parallel$先减至零再反向增大，$v_\perp$不变。合速度先减小后增大，最小值出现在$v_\parallel = 0$时，$v_{\min} = v_\perp &gt; 0$，所以动能先减至一个非零最小值再增大，D正确。C所述的“先增大后减小”在任何夹角下均不可能发生。<br />
+6. 综上，选项A、B、D正确。</p>
+<p><strong>点评/变式</strong><br />
+本题是运用运动合成与分解处理恒力曲线运动的经典题目。核心要点是“垂直恒力方向的分速度不变”，由此确定合速度的极小值必大于零。变式可考查：若恒力是重力，物体从水平面斜向上抛出，其动能变化是否符合D项描述？答案为符合（斜上抛物体达最高点时速度水平分量不为零，动能最小但不为零）。还可联系“合力做功等于动能变化”这一功能关系进行多角度验证，强化对恒力作用下运动规律的整体把握。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2011-新课标-02.html">2011-新课标-02</a>（2011 · 中） 该题考查恒力作用下质点动能的变化，需根据力与速度的方向关系分析不同运动情况。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/611-恒力.html">恒力</a></li>
+</ul>
+</div>
+</body>
+</html>

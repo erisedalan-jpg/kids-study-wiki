@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>读数方法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>读数方法</h1><div class="review-mark" data-stem="读数方法"></div><div class="meta-card"><span><strong>考点</strong>读数方法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择9</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>螺旋测微器（千分尺）的结构与原理</strong>
+  精密螺旋的螺距为 $0.5\,\text{mm}$，即测微螺杆每旋转一周，测杆前进或后退 $0.5\,\text{mm}$。可动刻度筒一周均分为 $50$ 个小格，因此可动刻度每转动一小格，测杆移动 $0.01\,\text{mm}$。</li>
+<li><strong>读数规则与公式</strong>
+  最终读数（单位 mm）由三部分相加：
+  $$L = L_{\text{整}} + L_{0.5} + n\cdot 0.01$$
+  其中：$L_{\text{整}}$ 为固定刻度上完整毫米数；$L_{0.5}$ 为半毫米刻度露出时取 $0.5$，未露出取 $0$；$n$ 为可动刻度上对齐固定刻度水平线的格数（含一位估读，即读到 $0.001\,\text{mm}$）。</li>
+<li><strong>估读要求</strong>
+  螺旋测微器属于需要<strong>估读</strong>的仪器，必须估读至 $0.001\,\text{mm}$（千分位）。当可动刻度线恰好与水平线对齐时，也应补一位零。<br />
+<em>对比：游标卡尺不需估读，读数精确到游标分度值。</em></li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定固定刻度</strong><br />
+   看清固定刻度套管上露出的整毫米数 $L_{\text{整}}$，并立刻判断<strong>半毫米刻度线是否露出</strong>。半毫米线清晰可见则记 $0.5\,\text{mm}$，否则记 $0$。注意不可漏加、不可重加。</li>
+<li><strong>读可动刻度</strong><br />
+   找出可动微分筒上与固定套管水平线<strong>正对</strong>的刻度线。先读为整格数，然后根据对齐情况估读一位，得到格数 $n$（读作几位小数，通常为 $<em>.</em>$ 格）。将该格数乘以 $0.01$ 得到 $n \times 0.01\,\text{mm}$。</li>
+<li><strong>求和并核查单位</strong><br />
+   $$L = L_{\text{整}} + L_{0.5} + n \times 0.01\,\text{mm}$$<br />
+   最终结果保留三位小数，单位统一为 mm。检查千分位是否为估读位。</li>
+<li><strong>特殊边界处理</strong><br />
+   若可动刻度的“0”与水平线对齐且半毫米线可见，需仔细判定固定刻度的整数；当整毫米线与水平线边缘重合时，可借助可动刻度位置修正误判。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>半毫米线漏看或误判</strong><br />
+  半毫米刻度线在固定刻度的上方（部分螺旋测微器），若已露出却忽略，就会少加 $0.5\,\text{mm}$；若未露出却误加，会多读 $0.5\,\text{mm}$。典型表现：读数尾数在 $0.4\text{--}0.5\,\text{mm}$ 附近时极易出错。</li>
+<li><strong>可动刻度忘记估读</strong><br />
+  很多考生将可动刻度的格数直接读成整数，乘以 $0.01$ 后仅保留两位小数，丢失了千分位的估读，导致有效位数不足（必须读到 $0.001\,\text{mm}$）。</li>
+<li><strong>对齐线判断失误</strong><br />
+  眼睛视角不正会造成视差，误判“对齐”的格数。应正对仪器，使视线垂直于水平线。</li>
+<li><strong>计算结果单位与保留位数混乱</strong><br />
+  有时固定刻度读成厘米、或结果以 $\text{mm}$ 为单位却写了四位小数、或忘记写单位。牢记螺旋测微器读数单位为 $\text{mm}$，且统一保留三位小数（千分位）。</li>
+<li><strong>零误差未修正</strong><br />
+  若螺旋测微器存在零点误差（可动刻度零线与水平线不重合），需在最终结果中减去（或加上）零点读数，但此题暂无体现，仍须知悉。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> (2008·全国Ⅱ·09)</h3>
+<p>用螺旋测微器测铜丝直径，图示可动刻度显示固定刻度 $4.5\,\text{mm}$ 露出，可动刻度对齐 $9.3$ 格，则铜丝直径应为 $______$ mm。</p>
+<p><strong>思路</strong><br />
+本题直接考查螺旋测微器的读数流程。先观察固定刻度上的半毫米线是否露出（已给出固定读数为 $4.5\,\text{mm}$，说明包含半毫米线），再读取可动刻度对齐的格数并估读，最后相加。</p>
+<p><strong>步骤</strong><br />
+1. 固定刻度：整毫米 $4\,\text{mm}$，半毫米线露出，故 $L_{\text{整}} + L_{0.5} = 4.5\,\text{mm}$。<br />
+2. 可动刻度：水平线对准可动刻度 $9.3$ 格（$9$ 整格外加估读 $0.3$ 格），$n = 9.3$。<br />
+   可动刻度贡献 $= 9.3 \times 0.01\,\text{mm} = 0.093\,\text{mm}$。<br />
+3. 求和：$4.5\,\text{mm} + 0.093\,\text{mm} = 4.593\,\text{mm}$。</p>
+<p><strong>答案</strong>：$4.593$</p>
+<p><strong>点评/变式</strong><br />
+- 本题体现了螺旋测微器“一估、二加、三保留”的规范：估读至 $0.001\,\text{mm}$，固定与可动分别相加，结果保留三位小数。
+- <strong>变式警示</strong>：若固定刻度看起来为 $4\,\text{mm}$，半毫米线未露出，可动刻度对齐 $43.2$ 格，则读数应为 $4\,\text{mm} + 0 \,\text{mm} + 0.432\,\text{mm} = 4.432\,\text{mm}$。若误判半毫米线露出，会错误读成 $4.932\,\text{mm}$。
+- <strong>延伸</strong>：同类读数问题（如游标卡尺）需区分是否需要估读，游标卡尺无需估读，其读数为 $L_0 + k \cdot \Delta x$（$\Delta x$ 为分度值，$k$ 为对齐游标线序数，不估读）。务必针对性审题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2008-全国Ⅱ-09.html">2008-全国Ⅱ-09</a>（2008 · 易） 考查螺旋测微器的读数方法，包括固定刻度与可动刻度的读取及估读。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/725-读数方法.html">读数方法</a></li>
+</ul>
+</div>
+</body>
+</html>

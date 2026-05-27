@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>库仑定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>库仑定律</h1><div class="review-mark" data-stem="库仑定律"></div><div class="meta-card"><span><strong>考点</strong>库仑定律</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：21</li>
+<li>真题数：3；年份跨度：2010–2016</li>
+<li>出现题位：选择1 选择2 选择5</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>库仑定律</strong>：真空中两个静止点电荷之间的相互作用力，与电荷量的乘积成正比，与距离的平方成反比，方向沿连线。<br />
+  公式：$$F=k\frac{|q_1q_2|}{r^2}$$ 方向依据“同性相斥、异性相吸”判定。<br />
+  静电力常量 $k=9.0\times10^9\,\text{N·m}^2/\text{C}^2$。  </li>
+<li><strong>适用条件</strong>：真空（或空气中近似）、点电荷（带电体间距远大于自身尺寸）。  </li>
+<li><strong>矢量叠加</strong>：多个点电荷对某电荷的作用力满足矢量叠加，遵循平行四边形定则。  </li>
+<li><strong>与电场强度的关系</strong>：点电荷电场 $$E=k\frac{Q}{r^2}$$，检验电荷受力 $\vec{F}=q\vec{E}$。  </li>
+<li><strong>平衡条件</strong>：共点力平衡（合力为零）；三个自由点电荷平衡时满足“两同夹异、两大夹小、近小远大”。</li>
+</ul>
+<hr />
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定性比较加速度</strong>：在点电荷电场中，加速度 $a=\frac{F}{m}=\frac{kQq}{mr^2}\propto\frac{1}{r^2}$（仅受电场力），直接比较到场源的距离即可比较 $a$ 大小。  </li>
+<li><strong>定性比较速度</strong>：利用功能关系——带电粒子仅受电场力时，动能与电势能之和守恒；或根据电场力做功正负判断速率增减（靠近同种电荷减速，靠近异种电荷加速等）。  </li>
+<li><strong>三电荷平衡问题</strong>（含外电场）：  </li>
+<li>选受力个数少的电荷为研究对象（通常为c）。  </li>
+<li>受力分析：库仑力 $F=k\frac{qq'}{l^2}$、匀强电场力 $F=qE$。  </li>
+<li>利用平衡条件列式，注意方向与合成（库仑力合成常用几何关系，如正三角形中用 $2F\cos30^\circ$）。  </li>
+<li><strong>物理学史类</strong>：准确识记关键人物及其贡献，注意易混淆配对（如“赫兹证实电磁波”而非楞次；洛伦兹力与安培力的区分）。</li>
+</ol>
+<hr />
+<h2>高频易错</h2>
+<ul>
+<li><strong>电荷正负处理</strong>：计算库仑力大小时代入绝对值，方向另作判断；平衡方程中若出现电荷量需保留符号，避免漏写“正负号”导致方向错误。  </li>
+<li><strong>点电荷条件</strong>：距离过小或带电体不能视为点电荷时库仑定律不适用。  </li>
+<li><strong>矢量合成</strong>：多个库仑力合成时忘记夹角，尤其正三角形中 $60^\circ$ 或 $120^\circ$ 的补角关系。  </li>
+<li><strong>功能关系混淆</strong>：仅凭电场力方向定性判断加速减速时，忽视初速度方向与受力方向的夹角，误判速率增减。  </li>
+<li><strong>物理学史张冠李戴</strong>：赫兹证实电磁波（非楞次），洛伦兹研究运动电荷受力、安培研究电流受力（易颠倒）。</li>
+</ul>
+<hr />
+<h2>代表题精讲</h2>
+<h3>代表题一：2016-新课标Ⅱ-02</h3>
+<p><strong>题目</strong>：固定点电荷P电场中，带电粒子Q运动轨迹与以P为心的两个圆相交于a、b、c三点，比较 $a_a,a_b,a_c$ 及 $v_a,v_b,v_c$ 大小。  </p>
+<p><strong>思路</strong>：加速度由库仑力决定，比较三点到P的距离；速度采用能量守恒或做功分析，轨迹弯曲方向反映受力情况，结合点电荷电场中势能变化判断速率。  </p>
+<p><strong>步骤</strong>：<br />
+1. 由图可知 $r_a<r_c\<r_b$，由 $a=\frac{kQq}{mr^2}$ 得 $a_a>a_c>a_b$。<br />
+2. Q与P电性未知，但轨迹可以反映：Q向P靠近又远离，说明受斥力或引力。若为斥力，靠近时减速、远离时加速，c点内圈对应速率较小；若为引力，反之。具体选项需结合示意图确定，典型结论为 $v_a&lt;v_c&lt;v_b$（对应斥力情况）。实际评卷需根据图定向判断。  </p>
+<p><strong>点评/变式</strong>：本题纯定性，只需基础概念；若改为定量求速度比，可结合动能定理或电势能公式求解。</p>
+<h3>代表题二：2013-新课标Ⅱ-05</h3>
+<p><strong>题目</strong>：光滑绝缘水平面上，正三角形三顶点各放带电小球，a、b带正电量为 $q$，c带负电电量为 $Q$，系统外加水平匀强电场后三个小球均静止。求匀强电场场强大小。  </p>
+<p><strong>思路</strong>：以c为研究对象最简（受力个数少），a、b对c的库仑力合力与匀强电场对c的力等大反向，列出平衡方程即可。  </p>
+<p><strong>步骤</strong>：<br />
+1. a、b对c的库仑力大小均为 $F=k\frac{qQ}{l^2}$，方向分别由a指向c和b指向c，夹角 $60^\circ$。<br />
+2. 合力 $F_\text{合}=2F\cos30^\circ=\sqrt{3}\,k\frac{qQ}{l^2}$，方向垂直平分ab指向c。<br />
+3. 匀强电场对c的力 $F_E=QE$，与 $F_\text{合}$ 等大反向，因此 $E=\frac{F_\text{合}}{Q}=\frac{\sqrt{3}kq}{l^2}$。  </p>
+<p><strong>点评/变式</strong>：若未知c的电荷量，须用整体法或隔离a、b求 $Q$，再带回求 $E$。务必注意 $Q$ 可以在列式时消去，避免死算。</p>
+<h3>代表题三：2010-新课标Ⅰ-01</h3>
+<p><strong>题目</strong>：电磁学发展史中科学家贡献的说法正确判断。选项涉及奥斯特、法拉第、麦克斯韦、赫兹、楞次、库仑、密立根、安培、洛伦兹。  </p>
+<p><strong>思路</strong>：记忆关键科学家与发现的一一对应，运用排除法。  </p>
+<p><strong>步骤</strong>：<br />
+- A：奥斯特发现电流磁效应，法拉第发现电磁感应，正确。<br />
+- B：麦克斯韦预言电磁波，赫兹实验证实，楞次发现感应电流方向规律，因此B错误。<br />
+- C：库仑发现点电荷相互作用规律，密立根油滴实验测定元电荷，正确。<br />
+- D：洛伦兹发现磁场对运动电荷的作用力，安培发现磁场对电流的作用力，所以D错误。<br />
+正确答案：AC。  </p>
+<p><strong>点评/变式</strong>：本题为史实题，常将人物贡献互换制造干扰，复习时需建立“贡献—人物”的精准映射。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-02.html">2016-新课标Ⅱ-02</a>（2016 · 中） 本题考查带电粒子在点电荷电场中的加速度与速度变化关系。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-05.html">2013-新课标Ⅱ-05</a>（2013 · 中） 三个点电荷在匀强电场中平衡，通过受力分析与库仑定律求解场强大小</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-01.html">2010-新课标Ⅰ-01</a>（2010 · 易） 本题考查电磁学发展史中科学家的贡献，需判断关于物理学家及其发现的正确说法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/263-库仑定律.html">库仑定律</a></li>
+</ul>
+</div>
+</body>
+</html>

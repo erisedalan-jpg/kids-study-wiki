@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卫星运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>卫星运动</h1><div class="review-mark" data-stem="卫星运动"></div><div class="meta-card"><span><strong>考点</strong>卫星运动</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>卫星绕行规律</strong>
+  圆轨道卫星，地球引力提供向心力：
+  $$
+  G\frac{Mm}{r^2} = m\frac{v^2}{r} \quad\Rightarrow\quad v = \sqrt{\frac{GM}{r}},\; \omega = \sqrt{\frac{GM}{r^3}},\; T = 2\pi\sqrt{\frac{r^3}{GM}}
+  $$
+  轨道半径 $r$ 越大，线速度 $v$ 越小，角速度 $\omega$ 越小，周期 $T$ 越大。</p>
+</li>
+<li>
+<p><strong>能量关系</strong></p>
+</li>
+<li>卫星动能：$E_k = \frac{1}{2}mv^2 = \frac{GMm}{2r}$（随 $r$ 增大而减小）。</li>
+<li>取无穷远为零势能点，引力势能：$E_p = -\dfrac{GMm}{r}$（随 $r$ 增大而增大）。</li>
+<li>卫星机械能：$E = E_k + E_p = -\dfrac{GMm}{2r}$（$r$ 越大，机械能越大）。</li>
+<li>
+<p>变轨原理：卫星从低轨到高轨需点火加速，机械能增大；从高轨到低轨需减速（或受阻力），机械能减小。</p>
+</li>
+<li>
+<p><strong>功能关系</strong></p>
+</li>
+<li>引力做功与引力势能变化：$W_{\text{引}} = -\Delta E_p$，引力做正功，引力势能减小；引力做负功，引力势能增加。</li>
+<li>除引力外其他力（如稀薄气体阻力）做功等于机械能的变化：$W_{\text{其他}} = \Delta E$。</li>
+<li>
+<p>轨道半径缓慢减小时，阻力做负功，卫星机械能减小，但引力做正功，动能反而增加。</p>
+</li>
+<li>
+<p><strong>适用条件</strong>
+  中心天体质量 $M$ 远大于卫星质量，卫星轨道为圆或可近似为圆；缓慢变化时仍可在每一小段用圆轨道规律分析。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>定轨分析</strong><br />
+   明确当前轨道半径 $r$ 的变化趋势（增大/减小），直接套用 $v\propto 1/\sqrt{r}$、$T\propto \sqrt{r^3}$ 等判断速度、周期变化。</p>
+</li>
+<li>
+<p><strong>能量升降判据</strong><br />
+   轨道半径增大 → 机械能增大，需加速（除重力外其他力做正功）；轨道半径减小 → 机械能减小，需减速或受阻力（其他力做负功）。</p>
+</li>
+<li>
+<p><strong>引力做功与势能</strong><br />
+   引力方向指向地心，物体靠近地球时引力做正功，引力势能减小；远离地球时引力做负功，引力势能增大。记住势能公式 $E_p = -GMm/r$ 可帮助判断。</p>
+</li>
+<li>
+<p><strong>综合功能关系</strong><br />
+   当有阻力（稀薄气体）、推力等非引力做功时，机械能不守恒。由动能定理和引力势能变化联立，可推得动能 $E_k = -E$（仅引力作用时成立），注意该式在圆轨道上恒成立，轨道变化前后均适用。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>错把速度变化等同于动能变化直接由阻力判断</strong><br />
+  受阻力不会简单导致速度减小，因为轨道半径也在变化。实际中，轨道半径减小，引力做正功增加的动能可能超过阻力做的负功，导致总动能反而增加。切忌凭直觉“阻力减速”。</p>
+</li>
+<li>
+<p><strong>混淆引力势能与重力势能变化</strong><br />
+  卫星靠近地球，引力做正功，引力势能必定减小；但有的同学误认为靠近地面势能减小，远离增大，虽结论正确却需注意是取无穷远为零势能点时 $E_p$ 为负值，越远越大。</p>
+</li>
+<li>
+<p><strong>误认为机械能守恒</strong><br />
+  只要题目提到“稀薄气体阻力”“空气阻力”“发动机工作”等，卫星机械能一定不守恒。需根据阻力做负功 → 机械能减小；推力做正功 → 机械能增加来分析。</p>
+</li>
+<li>
+<p><strong>忽视公式适用条件</strong><br />
+  $v = \sqrt{GM/r}$、$E = -GMm/(2r)$ 等仅适用于圆轨道或轨道缓慢调整时的瞬时状态，不适用于椭圆轨道的一般位置。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2013-新课标Ⅱ-07（多选，6分）</h3>
+<p><strong>题目</strong><br />
+目前，在地球周围有许多人造地球卫星绕着它运转，其中一些卫星的轨道可近似为圆，且轨道半径逐渐变小。若卫星在轨道半径逐渐变小的过程中，只受到地球引力和稀薄气体阻力的作用，则下列判断正确的是（　　）<br />
+A．卫星的动能逐渐减小<br />
+B．由于地球引力做正功，引力势能一定减小<br />
+C．由于气体阻力做负功，地球引力做正功，机械能保持不变<br />
+D．卫星克服气体阻力做的功小于引力势能的减小  </p>
+<p><strong>思路</strong><br />
+轨道半径 $r$ 缓慢减小 → 利用圆轨道速度公式 $v=\sqrt{GM/r}$ 得 $v$ 增大 → 动能增大，A错。引力指向地心，轨道降低引力做正功 → 引力势能减小，B对。阻力做负功，机械能减小，C错。由动能定理和功能关系，引力做功与阻力做功之和等于动能增量；引力做功等于势能减少量。两式对比可得选项 D 正确。</p>
+<p><strong>步骤</strong><br />
+1. 由 $v=\sqrt{\dfrac{GM}{r}}$，$r$ 减小 → $v$ 增大，动能 $E_k = \frac{1}{2}mv^2$ 增大，故 A 错误。<br />
+2. 卫星沿轨道半径逐渐变小，相对地球位置降低，引力方向与位移方向夹角为锐角，引力做正功，由 $W_{\text{引}} = -\Delta E_p$ 知引力势能一定减小，B 正确。<br />
+3. 稀薄气体阻力与运动方向相反，阻力做负功，由功能关系：除重力（引力）外其他力做功等于机械能变化，即 $W_{\text{阻}} = \Delta E$。阻力做负功，$\Delta E &lt; 0$，机械能减小，C 错误。<br />
+4. 设动能变化 $\Delta E_k$，引力势能变化 $\Delta E_p$（减小，$\Delta E_p &lt; 0$），由动能定理：<br />
+   $$W_{\text{引}} + W_{\text{阻}} = \Delta E_k$$<br />
+   又 $W_{\text{引}} = -\Delta E_p$，代入得：<br />
+   $$-\Delta E_p + W_{\text{阻}} = \Delta E_k$$<br />
+   变形得 $W_{\text{阻}} = \Delta E_k + \Delta E_p = \Delta E$<br />
+   因 $\Delta E_k &gt; 0$，$\Delta E_p &lt; 0$，且 $|\Delta E_p| &gt; \Delta E_k$（因为机械能减小），所以 $|W_{\text{阻}}| = -\Delta E_p - \Delta E_k &lt; -\Delta E_p$，即克服阻力做功小于引力势能的减少量，D 正确。<br />
+5. 正确选项为 B、D。</p>
+<p><strong>点评/变式</strong><br />
+该题典型考查了轨道衰减过程中的能量与运动变化。要警惕“受阻力则动能减小”的思维定势，记住卫星“降轨加速”。此外，$|\Delta E_p| &gt; \Delta E_k$ 的深层原因是机械能减小，必须从功能关系定量推导。变式可问：卫星在此过程中与地球连线单位时间扫过的面积如何变化？（开普勒第二定律适用于只受中心引力情况，此处有阻力，不满足，扫面面积会减小）。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-07.html">2013-新课标Ⅱ-07</a>（2013 · 中） 卫星在稀薄气体阻力下轨道半径减小时，动能和引力势能的变化判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/548-卫星运动.html">卫星运动</a></li>
+</ul>
+</div>
+</body>
+</html>

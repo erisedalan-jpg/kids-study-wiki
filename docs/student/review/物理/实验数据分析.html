@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实验数据分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>实验数据分析</h1><div class="review-mark" data-stem="实验数据分析"></div><div class="meta-card"><span><strong>考点</strong>实验数据分析</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>欧姆定律（部分电路）</strong>：$U = IR$，适用于纯电阻元件或已知恒定电流的回路。在实验中，若保持通过某元件的电流恒定，其两端电压的变化直接反映其电阻变化：$R = \frac{U}{I}$，$I$ 一定时，$U \propto R$。</li>
+<li><strong>线性关系的处理</strong>：若两个物理量成线性关系，图像为一条倾斜直线，斜率（或斜率的绝对值）常代表特定物理量。在分析传感器特性时，灵敏度通常定义为 $|k| = \left| \frac{\Delta y}{\Delta x} \right|$ (输出量对输入量的变化率)。</li>
+<li><strong>图像数据的读取与计算</strong>：从图线上取点计算斜率时，应选取尽量远且便于读数的两点，利用 $k = \frac{y_2 - y_1}{x_2 - x_1}$ 求解，注意有效数字的保留规则。</li>
+<li><strong>电路动态调节</strong>：在分压或限流电路中，为保证某支路电流恒定，当负载电阻变化时，需反向调节滑动变阻器。判断滑动变阻器滑片移动方向的关键：分析总电阻变化对电压分配的影响，使目标电压或电流恢复原值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>恒定电流电路的分析</strong>：首先明确“恒定电流”是控制条件，利用 $U = I R$ 将元件两端电压与电阻直接关联。例如已知电流 $I_0$ 和定值电阻 $R_0$，则 $R_0$ 上的电压 $U_1 = I_0 R_0$ 必须恒定，以此作为调节目标。</li>
+<li><strong>图像判断电阻/电压趋势</strong>：题干给出 $U!-!t$ 图线，若电流恒定，电阻 $R = U/I$ 的变化趋势与 $U$ 一致。温度升高时从图线看出电压 $U$ 减小，则电阻减小。</li>
+<li><strong>动态调节滑片方向的推理</strong>：外围元件电阻变化 → 导致总电流或电压重新分配 → 需要调节滑片改变电路电阻，使待稳量恢复。例如负载电阻减小、两端电压下降时，若要从滑变重新获得目标电压，通常需减小串联部分电阻（或增大并联部分的分压），据此判断滑片向哪端移动。</li>
+<li><strong>灵敏度/斜率的计算</strong>：在 $U!-!t$ 线性图像上，任选两点 $(t_1, U_1)$、$(t_2, U_2)$，计算斜率绝对值 $|\Delta U / \Delta t|$。单位用 $\text{V/}^\circ\text{C}$，结果按题目要求的有效数字保留（如保留2位有效数字）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把图像斜率当作电阻变化率</strong>：题目中灵敏度定义是 $|\Delta U / \Delta t|$，而不是 $\Delta R / \Delta t$。由于电流恒定，两者仅差常数倍 $I$，但需按题目明确指出的定义计算。</li>
+<li><strong>读数与有效数字处理不当</strong>：从坐标纸上读取点的坐标时，容易估读错误或计算斜率后有效数字保留错误。必须注意题目要求“保留2位有效数字”，并检查计算器结果。</li>
+<li><strong>滑片移动方向判断逻辑混乱</strong>：未分清电路结构（分压式还是限流式），误将“要使 $U_1$ 恢复原值”等同于“增大总电压”或“减小总电阻”，没有结合具体电路节点电位变化分析。</li>
+<li><strong>忘记温度升高电压减小的深层含义</strong>：误认为二极管正向电阻随温度变化是“变大”，或因看到电压减小而错误判断电阻不变。实际上恒定电流下 $U \propto R$，必须结合图线走势判断。</li>
+<li><strong>单位转换遗漏</strong>：题中电压单位 $\text{mV}$ 与 $\text{V}$ 的换算易被忽略，导致结果差1000倍。计算灵敏度时，务必统一单位（通常最终用 $\text{V}$），并注意毫伏与伏的转换。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题</strong> 2019-新课标Ⅱ-10</h3>
+<p><strong>题目</strong><br />
+研究硅二极管在恒定电流 $50.0\,\mu\text{A}$ 下的正向电压 $U$ 与温度 $t$ 的关系。电路图中 $R_0=100\,\Omega$，$\text{V}_1$ 和 $\text{V}_2$ 为理想电压表。已知 $U!-!t$ 关系曲线（线性）如图所示。回答：<br />
+（1）为保证电流 $50.0\,\mu\text{A}$，应调节滑变使 $\text{V}_1$ 示数 $U_1=$ <strong><em>_</em>_；温度升高时，二极管正向电阻变</strong><strong><em>_，$\text{V}</em>1$ 示数变</strong><strong><em>_，应将滑片向</em></strong>___端移动使 $\text{V}_1$ 恢复原值。<br />
+（2）硅二极管作为测温传感器，灵敏度 $|\Delta U / \Delta t|$ 为多少？保留2位有效数字。</p>
+<p><strong>思路</strong><br />
+（1）$\text{V}<em _text_D="\text{D">1$ 测 $R_0$ 两端电压，用欧姆定律求 $U_1$。由 $U!-!t$ 图像看趋势：$t$ 升高 $U$ 减小，又电流恒定，则电阻 $R</em>$ 减小，为保持 $U_1$ 不变，需改变滑变分压，判断滑片移动方向。}} = U/I$ 减小。由于 $U_{\text{D}<br />
+（2）灵敏度即 $U!-!t$ 线性关系的斜率绝对值，取图像上相距较远的两个点计算斜率并取绝对值。</p>
+<p><strong>步骤</strong><br />
+- <strong>第（1）问</strong><br />
+  $R_0=100\,\Omega$，$I=50.0\,\mu\text{A} = 5.00\times10^{-5}\,\text{A}$。<br />
+  由 $U_1 = I R_0 = 5.00\times10^{-5} \times 100 = 5.00\times10^{-3}\,\text{V} = 5.00\,\text{mV}$。<br />
+  从 $U!-!t$ 图线看，温度升高时 $U$（二极管正向电压）减小。因为 $I$ 恒定，由 $R_{\text{D}} = U/I$ 知正向电阻变小；二极管电压减小导致支路总电压下降，要保持 $U_1$ 不变，需提高加在 $R_0$ 上的分压比例。结合电路，滑片向 $B$ 端移动可使与二极管串联部分的电阻减小，从而提升 $U_1$ 使其恢复原值。<br />
+  答案：$5.00$；变小；增大；$B$。<br />
+- <strong>第（2）问</strong><br />
+  在 $U!-!t$ 图线上选点：$t_1=10\,^\circ\text{C}$ 时 $U_1\approx 0.43\,\text{V}$，$t_2=60\,^\circ\text{C}$ 时 $U_2\approx 0.29\,\text{V}$。<br />
+  斜率绝对值 $|\Delta U / \Delta t| = |0.29-0.43| / |60-10| = 0.14 / 50 = 2.8\times10^{-3}\,\text{V/}^\circ\text{C}$。<br />
+  保留2位有效数字：$2.8\times10^{-3}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是理解“恒定电流”下电压表读数与电阻的等价性。<br />
+- 滑片移动方向是常见失分点，可简记：当二极管电阻减小、其分压减小时，若要维持定值电阻电压不变（即电流不变），应让滑变额外给予更多分压，通常需将滑片向使与二极管串联电阻减小的方向调节。<br />
+- 灵敏度计算实质是求斜率，注意坐标读出时无须从零开始，只需差值准确。类似题可变换为热敏电阻的 $R!-!t$ 线性关系，并计算 $|\Delta R / \Delta t|$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-10.html">2019-新课标Ⅱ-10</a>（2019 · 中） 研究硅二极管在恒定电流下正向电压与温度的关系，涉及欧姆定律及数据处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/581-实验数据分析.html">实验数据分析</a></li>
+</ul>
+</div>
+</body>
+</html>

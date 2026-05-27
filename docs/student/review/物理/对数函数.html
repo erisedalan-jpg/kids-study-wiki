@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数函数</h1><div class="review-mark" data-stem="对数函数"></div><div class="meta-card"><span><strong>考点</strong>对数函数</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>对数运算核心公式（$a&gt;0, b&gt;0, c&gt;0$）：</li>
+<li>$\lg(ab) = \lg a + \lg b$，$\lg\frac{a}{b} = \lg a - \lg b$</li>
+<li>$\lg a^n = n\lg a$（$n$为任意实数）</li>
+<li>$\lg 1 = 0$，$\lg 10 = 1$</li>
+<li>物理量间的<strong>幂函数关系</strong>可通过取对数转化为线性关系：
+  若 $y = k x^\alpha$（$k&gt;0, x&gt;0$），则 $\lg y = \alpha \lg x + \lg k$。
+  图像为一条直线，斜率 $=\alpha$，截距 $=\lg k$。</li>
+<li>适用条件：所有变量必须取正值，否则不能直接取对数；常选用相同量纲的比值作为对数的真数以消除量纲（即无量纲化），如 $\lg(\frac{T}{T_0})$。</li>
+<li>常见物理规律的对数形式：</li>
+<li>开普勒第三定律 $R^3 / T^2 = k$ $\Rightarrow$ $3\lg R - 2\lg T = \lg k$</li>
+<li>对同一天体系统，不同行星满足 $3\lg(R/R_0) = 2\lg(T/T_0)$，即 $\lg(R/R_0) = \frac{2}{3}\lg(T/T_0)$ 或 $\lg(T/T_0) = \frac{3}{2}\lg(R/R_0)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出原始物理规律</strong>，找出相关物理量间的幂函数关系式（通常为比例式 $y \propto x^n$）。  </li>
+<li><strong>无量纲化</strong>：引入恰当的参考量（如题目给定的 $T_0, R_0$），将各物理量写成比值形式，确保对数的真数为纯数。  </li>
+<li><strong>两边取常用对数</strong>（或自然对数，视题目坐标系底数而定），利用对数运算法则展开。  </li>
+<li><strong>整理成 $Y = mX + b$ 的线性形式</strong>，明确哪个量作纵坐标、哪个作横坐标。  </li>
+<li><strong>由斜率 $m$、截距 $b$ 及是否过原点</strong>，匹配图像特征（如斜率正负、数值大小、有无截距等）。  </li>
+<li>若选项为图像选择题，可直接通过<strong>特殊点验证</strong>（取 $T=T_0$ 时 $R=R_0$ 对应点）辅助判断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对数运算法则混淆</strong>：误以为 $\lg(a+b)$ 可拆开，或记错 $\lg a^n = (\lg a)^n$。牢记仅乘除运算与幂运算可拆。  </li>
+<li><strong>忽略真数为正的条件</strong>：物理量（周期、半径等）均大于零，但若坐标轴直接标以 $\lg T$ 而非 $\lg(T/T_0)$，需警惕 $T$ 的数值可能因单位选取而小于 1 导致对数为负，但仍成立。  </li>
+<li><strong>比例系数 $k$ 处理不当</strong>：取对数时容易丢掉 $\lg k$，导致误以为图线必过原点。只有经过合适比值变换（如 $R/R_0, T/T_0$）且常数抵消时，图线才过原点。  </li>
+<li><strong>斜率的倒数关系</strong>：横纵坐标互换时斜率互为倒数。例如 $y= \frac{2}{3}x$ 与 $x= \frac{3}{2}y$ 对应不同图像，需严格按题目给定的坐标轴判断。  </li>
+<li><strong>误把指数当斜率</strong>：对 $R^3 \propto T^2$，直接写成 $\lg R = \frac{3}{2}\lg T$ 是错误的；正确为 $3\lg R = 2\lg T + \text{const}$，若横轴为 $\lg T$、纵轴为 $\lg R$，则斜率为 $2/3$，而非 $3/2$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2010-新课标Ⅰ-07（6分）</h3>
+<p><strong>题目</strong>：太阳系八大行星的轨道均可近似为圆轨道。用 $T$ 和 $R$ 分别表示行星绕太阳运行的周期和轨道半径，$T_0$ 和 $R_0$ 分别是水星绕太阳运行的周期和轨道半径。下列4幅图中，横轴为 $\lg(T/T_0)$，纵轴为 $\lg(R/R_0)$，正确的是（ ）</p>
+<p><strong>思路</strong>：由开普勒第三定律建立 $R$ 与 $T$ 的关系，将比值代入后取对数，导出 $\lg(R/R_0)$ 关于 $\lg(T/T_0)$ 的表达式，根据斜率和截距选择图像。</p>
+<p><strong>步骤</strong>：
+1. 行星绕太阳做圆周运动，开普勒第三定律：$\frac{R^3}{T^2} = k$，其中 $k$ 对同一中心天体为常数。<br />
+2. 对水星同样有 $\frac{R_0^3}{T_0^2} = k$，两式相除得：
+   $$\frac{R^3}{R_0^3} = \frac{T^2}{T_0^2} \quad \Rightarrow \quad \left(\frac{R}{R_0}\right)^3 = \left(\frac{T}{T_0}\right)^2$$
+3. 两边取常用对数：
+   $$3\lg\left(\frac{R}{R_0}\right) = 2\lg\left(\frac{T}{T_0}\right)$$
+4. 整理为纵轴关于横轴的函数：
+   $$\lg\left(\frac{R}{R_0}\right) = \frac{2}{3}\lg\left(\frac{T}{T_0}\right)$$
+5. 这是一条过原点的直线，斜率 $= \frac{2}{3} &gt; 0$，故选相应的过原点且斜率为正、小于1的直线图像。</p>
+<p><strong>点评/变式</strong>：
+- 本质是将幂函数关系 $y \propto x^{n}$ 经取对数后线性化。本题利用比值消去常数 $k$，使得图像必过原点。
+- 若横纵坐标互换（横轴 $\lg(R/R_0)$，纵轴 $\lg(T/T_0)$），则关系变为 $\lg(T/T_0) = \frac{3}{2}\lg(R/R_0)$，斜率为 $1.5$，图像仍过原点但“更陡”。
+- 应试时，快速验证特殊点：当 $T=T_0$ 时 $R=R_0$，则横纵坐标均为 $\lg 1 = 0$，图像必过 $(0,0)$，排除不过原点的选项；再结合斜率大小即可锁定答案。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-07.html">2010-新课标Ⅰ-07</a>（2010 · 中） 考查行星运动规律的对数坐标图分析，涉及物理量线性化处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/298-对数函数.html">对数函数</a></li>
+</ul>
+</div>
+</body>
+</html>

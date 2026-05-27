@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电动势</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电动势</h1><div class="review-mark" data-stem="电动势"></div><div class="meta-card"><span><strong>考点</strong>电动势</span><span><strong>权重</strong>17</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：17</li>
+<li>真题数：2；年份跨度：2010–2017</li>
+<li>出现题位：选择6 选择10</li>
+<li>难度分布：难1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电动势（E）</strong>：电源内部非静电力移送单位正电荷所做的功，表征电源将其他形式能转化为电能的本领。数值上等于电源未接入电路时两极间的电压。</li>
+<li><strong>闭合电路欧姆定律</strong>：$E = U + I r$（$U$为路端电压，$I$为干路电流，$r$为内阻）。外电路为纯电阻时，$I = \frac{E}{R+r}$。</li>
+<li><strong>路端电压与外电流的关系</strong>：$U = E - I r$，$U!-!I$图象是一条倾斜直线。纵轴截距等于电动势$E$，横轴截距等于短路电流$I_0 = \frac{E}{r}$，图线斜率的绝对值等于内阻$r = \left| \frac{\Delta U}{\Delta I} \right|$。</li>
+<li><strong>电源的功率与效率</strong>：
+  总功率 $P_总 = E I$，输出功率 $P_出 = U I$，内耗功率 $P_内 = I^2 r$。
+  电源效率 $\eta = \frac{P_出}{P_总} = \frac{U}{E}$（普遍适用）；纯电阻电路也满足 $\eta = \frac{R}{R+r}$。</li>
+<li><strong>电桥平衡与电源电动势</strong>：惠斯通电桥平衡时，桥臂电阻满足 $\frac{R_1}{R_2} = \frac{R_3}{R_4}$，此时桥两端电势相等，检流计示数为零。平衡条件与电动势大小无关，但需要电源提供稳定电压，且调节分压可改变电桥灵敏度。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>$U!-!I$图象信息的提取</strong>  </li>
+<li>首先明确横轴、纵轴的物理量，注意坐标原点是否为（0,0）。  </li>
+<li>纵轴截距即为电动势$E$；若横轴起点为零，横轴截距即为短路电流$I_0$；若起点不为零，需通过延长图线读取或计算。  </li>
+<li>求内阻时，在直线上取两点，由$r = \left| \frac{\Delta U}{\Delta I} \right|$计算；也可用$r = \frac{E}{I_0}$（仅当截距准确时适用）。  </li>
+<li>
+<p>求任一工作点的路端电压$U$和干路电流$I$，可进一步计算输出功率、效率等。</p>
+</li>
+<li>
+<p><strong>电源效率的快速求解</strong>  </p>
+</li>
+<li>优先使用$\eta = \frac{U}{E}$，直接从图象或已知条件读出该状态下的路端电压与电动势，即可求比值。  </li>
+<li>
+<p>若外电路为纯电阻，且已知内外电阻关系，也可用$\eta = \frac{R}{R+r}$，但图象法用电压比更直接，不易出错。</p>
+</li>
+<li>
+<p><strong>电桥法测电阻的思维流程</strong>  </p>
+</li>
+<li>搭建电桥：电源、滑动变阻器（分压或限流）、已知电阻（电阻箱）、待测电阻、桥路灵敏电表。  </li>
+<li>调平衡：调节桥臂比例，直至接通桥路开关前后电表示数不变，说明桥两端电势相等，流过电表的电流为零。  </li>
+<li>列式求解：根据电势相等建立比例关系。若进行元件对调后再次平衡，列两个方程联立，可消去比例臂电阻等中间量，准确求得待测电阻。  </li>
+<li>提高精度：适当增大电源电动势或调节分压，使平衡接近时电表偏转灵敏；多次测量取平均；使用电阻箱时注意最大阻值的选取。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>$U!-!I$图象横轴起点不明确</strong>：很多图线横轴并非从零开始，误将某点的横坐标直接当作短路电流会导致内阻、电动势计算错误。务必找纵轴截距和斜率。</li>
+<li><strong>效率公式混淆</strong>：经常有考生错记为$\eta = \frac{I}{E}$、$\eta = \frac{R}{r}$或$\eta = \frac{U}{I}$。必须牢记$\eta = \frac{U}{E}$，它既适用于纯电阻也适用于非纯电阻电路。</li>
+<li><strong>电桥平衡判断的理解偏差</strong>：“接通$S_2$前后微安表示数不变”反映的是桥两端电势相等，并非直接表示电阻箱阻值等于待测电阻。必须依据平衡方程求解，若只做一次平衡就代入相等，必然错误。</li>
+<li><strong>分压电路的操作不规范</strong>：闭合电源开关前，分压器滑片应置于使输出电压为零的一端（通常为与电源负极端相接的一端）。若误按限流接法将滑片置于阻值最大端，会导致微安表上承受较大电压而被损坏。</li>
+<li><strong>读数与有效数字</strong>：电阻箱读数要符合仪器精度要求，计算最终结果时注意题目对保留位数的要求（如“保留到个位”），不可随意省略或添加小数部分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2017新课标Ⅱ-10（电桥法测微安表内阻）</h3>
+<p><strong>题目</strong>：利用如图</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a>（2017 · 难） 设计并连接用微安表和滑动变阻器测电源电动势及内阻的电路，完成填空并分析测量精度。</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-06.html">2010-新课标Ⅰ-06</a>（2010 · 中） 本题考查通过U-I图像计算电源效率，结合外电压与电动势之比进行求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/307-电动势.html">电动势</a></li>
+</ul>
+</div>
+</body>
+</html>

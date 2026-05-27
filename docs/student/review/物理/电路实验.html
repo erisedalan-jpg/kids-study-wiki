@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电路实验</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电路实验</h1><div class="review-mark" data-stem="电路实验"></div><div class="meta-card"><span><strong>考点</strong>电路实验</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择10</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电桥法测电阻原理</strong>：当电桥平衡（检流计中无电流）时，桥臂两结点电势相等，则有 $\displaystyle \frac{R_x}{R_0} = \frac{R_1}{R_2}$ （惠斯通电桥）。若将待测电阻与标准电阻交换位置再次平衡，可消除比例臂阻值不准确引入的误差，此时 $R_x = \sqrt{R_0 R_0'}$。</li>
+<li><strong>分压电路</strong>：滑动变阻器以分压接法接入时，应选择阻值较小的变阻器（如 $20\,\Omega$），以便均匀调节输出电压；保护电表时，初始滑片应置于使输出电压为零的一端。</li>
+<li><strong>电表保护</strong>：实验开始时，应使加在微安表两端的电压最小，避免冲击电流。分压器滑片置于分压为零的一端。</li>
+<li><strong>平衡判断</strong>：接通与断开 $S_2$，微安表读数不变，表明 $B$、$D$ 两点电势相等（无电流流过 $S_2$ 支路）。</li>
+<li><strong>对调法数据处理</strong>：设第一次平衡时电阻箱值为 $R_{z1}$，交换微安表与电阻箱位置后第二次平衡时电阻箱值为 $R_{z2}$，则微安表内阻 $R_g = \sqrt{R_{z1}R_{z2}}$ （推导依据电桥臂的比例关系）。</li>
+<li><strong>提高测量精度的措施</strong>：调节分压使微安表指针接近满偏，增大电桥灵敏度；多次测量取平均值；确保接触良好等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分析电路结构</strong>：区分分压器、限流器；找出电桥的四臂和桥支路。本题中 $R_1$ 构成分压器，$R_2$ 为精密调节电位器，微安表与电阻箱串联后与 $R_2$ 部分构成电桥。</li>
+<li><strong>选择器材阻值</strong>：分压器通常选小阻值（如 $20\,\Omega$），限流器选大阻值；根据“$R_2$ 阻值 $2000\,\Omega$”、“调节精细”可判断。</li>
+<li><strong>确定初始保护位置</strong>：分压器滑片置于输出电压为零的一端（本题为左端）；限流器滑片置于阻值最大端。</li>
+<li><strong>判断电桥平衡</strong>：若接通 $S_2$ 前后检流计（微安表）示数不变，说明 $B$、$D$ 等电势。</li>
+<li><strong>推导待测电阻</strong>：利用电桥平衡比例关系，结合交换位置后两次数据，得到 $R_g = \sqrt{R_{z1}R_{z2}}$ 并代入数值计算（注意单位及有效数字要求，本题保留到个位）。</li>
+<li><strong>提出改进建议</strong>：从增大灵敏度（如使表头接近满偏）、多次测量、减少接触电阻等角度作答。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>** $R_1$ 阻值选错**：误选 $2000\,\Omega$。实际上 $R_1$ 为分压接法，应选小阻值 $20\,\Omega$，以便输出电压从零开始平滑调节；$R_2$ 阻值 $2000\,\Omega$ 用于精细平衡。</li>
+<li><strong>滑片初始位置放反</strong>：为保护微安表，分压器滑片 $C$ 应置于左端，使输出分压为零；若置于右端，接通瞬间电压全部加在表上可能烧坏表头。</li>
+<li><strong>平衡条件理解错误</strong>：误认为 “接通 $S_2$ 前后微安表示数不变” 表示 $B$、$D$ 电流相等，实则是电势相等，无电流流过开关支路。</li>
+<li><strong>对调后计算错误</strong>：未利用两次平衡的比例关系求解，或直接取平均/差值。正确为 $R_g = \sqrt{2500.0 \times 2601.0} \approx 2550\,\Omega$，注意结果保留到个位（$\sqrt{6502500}=2550.0$）。</li>
+<li><strong>改进建议空泛</strong>：仅答“多次测量”而不结合具体电路（如未提及使微安表接近满量程以提高电桥灵敏度），致使失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017·新课标Ⅱ·10）</h3>
+<p>利用如图电路（分压器 $R_1$ + 电位器 $R_2$ + 电阻箱 $R_z$ + 微安表等）测量微安表内阻（量程 $100\,\mu\text{A}$，内阻约 $2500\,\Omega$）。已知两滑变阻值一个 $20\,\Omega$、另一个 $2000\,\Omega$。要求完成实物连线，填空选择阻值、滑片位置、判断电势，以及由两次平衡数据（$2500.0\,\Omega$ 和 $2601.0\,\Omega$）计算内阻并提出改进建议。</p>
+<h3><strong>思路</strong></h3>
+<p>先识别 $R_1$ 为分压器应选小阻值，滑片初始置左端保护仪表；再根据接通 $S_2$ 前后表示数不变断定 $B$、$D$ 等电势；结合电桥平衡及对调法得出 $R_g = \sqrt{R_{z1}R_{z2}}$，代入计算并关注有效数字；最后从提高灵敏度角度建议让微安表满偏附近读数。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>实物连线</strong>：按原理图将电源、开关、滑变、电阻箱、微安表依次连接，确保分压器滑片与电路正确。</li>
+<li><strong>① $R_1$ 选阻值</strong>：分压用，选 $20\,\Omega$；$R_2$ 为 $2000\,\Omega$。</li>
+<li><strong>② 滑片初始位置</strong>：保护表头，$C$ 滑至左端，使分压输出为零。</li>
+<li><strong>③ 平衡判断</strong>：调节 $R_2$ 滑片 $D$，使接通 $S_2$ 前后微安表示数不变，说明 $B$、$D$ 电势相等。</li>
+<li><strong>④ 计算内阻</strong>：两次平衡有 $\frac{R_g}{2500.0} = \frac{R_{\text{左}}}{R_{\text{右}}}$ 及 $\frac{2601.0}{R_g} = \frac{R_{\text{左}}}{R_{\text{右}}}$（交换后），联立得 $R_g = \sqrt{2500.0 \times 2601.0} = 2550\,\Omega$。</li>
+<li><strong>⑤ 改进建议</strong>：调节 $R_1$ 使微安表接近满量程，提高电桥平衡点判断的灵敏度；或多次测量取平均值。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>此题将电桥法与分压电路巧妙融合，考查实验操作细节和数据处理能力。核心是理解“接通 $S_2$ 前后示数不变”与电桥平衡的对应关系，以及对调法消除比例臂误差的公式。变式可考查电流表半偏法测内阻、等效替代法等，均需关注系统误差来源与减小措施。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a>（2017 · 难） 设计并连接用微安表和滑动变阻器测电源电动势及内阻的电路，完成填空并分析测量精度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/695-电路实验.html">电路实验</a></li>
+</ul>
+</div>
+</body>
+</html>

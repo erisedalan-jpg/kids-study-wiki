@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均速度法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平均速度法</h1><div class="review-mark" data-stem="平均速度法"></div><div class="meta-card"><span><strong>考点</strong>平均速度法</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2021–2022</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>匀变速直线运动的平均速度公式</strong><br />
+  做匀变速直线运动的物体，在某段时间 $t$ 内的平均速度 $\bar{v}=\frac{x}{t}$，等于该段时间中间时刻的瞬时速度 $v_\frac{t}{2}$。<br />
+  $$v_\frac{t}{2} = \bar{v} = \frac{v_0+v}{2}$$<br />
+  常用于纸带类、频闪照片类问题中求某点的瞬时速度。</li>
+<li><strong>位移差与逐差法</strong>  </li>
+<li>任意两个连续相等时间 $T$ 内的位移之差为一恒量：$\Delta x = x_{n+1} - x_n = aT^2$。  </li>
+<li>若已知 $6$ 段或更多等时间位移，可用逐差法减小误差：<br />
+    $$a = \frac{(x_4+x_5+x_6)-(x_1+x_2+x_3)}{(3T)^2 \cdot 3} = \frac{(x_4-x_1)+(x_5-x_2)+(x_6-x_3)}{9T^2}$$</li>
+<li><strong>匀变速直线运动的判断</strong><br />
+  若在实验误差允许范围内，相邻相等时间的位移之差近似恒定，即可判断物体做匀变速直线运动。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断运动性质</strong><br />
+   计算相邻相等时间的位移差 $\Delta x$，若稳定接近某一常数，则为匀变速运动；若 $\Delta x=0$ 则为匀速。</li>
+<li><strong>求瞬时速度——平均速度法</strong>  </li>
+<li>确定待求点对应的时刻 $t$，围绕该时刻取对称的时间段 $[t-\Delta t, t+\Delta t]$，计算该段的平均速度 $\bar{v}=\frac{\Delta s}{2\Delta t}$，即为 $t$ 时刻的瞬时速度。  </li>
+<li>在纸带问题中，常用“相邻两点间的平均速度表示中间时刻的瞬时速度”。</li>
+<li><strong>求加速度——逐差法</strong>  </li>
+<li>利用 $\Delta x = aT^2$ 先求多个 $\Delta x$，再取平均值求 $a$。  </li>
+<li>数据较多时优先使用逐差法，将位移分成前后两大段，按公式计算，以减小偶然误差。</li>
+<li><strong>平抛运动竖直分量的处理</strong><br />
+   竖直方向为自由落体，满足 $\Delta y = gT^2$。求某点竖直分速度 $v_{y}$ 时，同样使用平均速度法：$v_y = \frac{y_{后}-y_{前}}{2T}$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>时间对应错误</strong>：平均速度对应的时刻是所选时间段的<strong>中间时刻</strong>，不是初时刻或末时刻。如用 $0$~$2\,\text{s}$ 的位移求平均速度，得到的是 $t=1\,\text{s}$ 的瞬时速度。</li>
+<li><strong>位移与位置混淆</strong>：表格或照片中给出的是<strong>坐标</strong>还是<strong>每段时间内的位移</strong>，计算位移差时需先求出实际位移。</li>
+<li><strong>逐差法分母用错</strong>：使用 $x_4-x_1$ 时，对应的时间间隔是 $3T$，加速度 $a=\frac{x_4-x_1}{3T^2}$，再对多组取平均时注意系数。</li>
+<li><strong>有效数字与单位</strong>：最终结果保留要求位数时，中间计算不要过早舍入；注意单位统一为国际单位制。</li>
+<li><strong>平抛中的方向混合</strong>：用平均速度法求竖直分速度时，竖直位移必须单独提取，不能混入水平位移。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目 1</strong>（2022全国乙·9）飞行器雷达定位，数据表格见题干。</h3>
+<p><strong>思路</strong>：识别出飞行器做匀加速直线运动；用平均速度法求 $x=507\,\text{m}$（$t=1\,\text{s}$）时刻的速度；用位移差或逐差法求加速度。<br />
+<strong>步骤</strong><br />
+1. 由坐标表计算每秒位移：$x_1=507$，$x_2=587$，$x_3=665$，$x_4=746$，$x_5=824$，$x_6=904$（单位 m）。位移差：$80,78,81,78,80$，近似恒量，故为匀加速。<br />
+2. 当 $x=507\,\text{m}$ 时，时刻 $t=1\,\text{s}$，是 $0$~$2\,\text{s}$ 的中间时刻。速度 $v=\frac{1094-0}{2}=547\,\text{m/s}$。<br />
+3. 位移差平均值 $\bar{\Delta x}\approx 79.4\,\text{m}$，$T=1\,\text{s}$，$a=\frac{\bar{\Delta x}}{T^2}\approx 79\,\text{m/s}^2$（2位有效数字）。<br />
+<strong>点评/变式</strong>：本题直接考查平均速度法的本质：中间时刻速度等于该段平均速度。若求其他时刻的速度，选对时间区间即可。加速度也可用逐差法：$a=\frac{(x_4+x_5+x_6)-(x_1+x_2+x_3)}{9T^2}$，结果一致。</p>
+<h3><strong>题目 2</strong>（2021全国乙·9）频闪照相研究平抛运动，方格边长 $5\,\text{cm}$，频闪间隔 $0.05\,\text{s}$，照片标有高度差。</h3>
+<p><strong>思路</strong>：竖直方向用 $\Delta y=gT^2$ 求重力加速度，用平均速度法求某点竖直分速度，再结合水平匀速运动求初速度。<br />
+<strong>步骤</strong><br />
+1. 选出竖直方向连续相等时间的位移差：例如 $\Delta y_1 = y_2-y_1$，$\Delta y_2 = y_3-y_2$，计算 $\Delta y$ 平均值。设相邻两点竖直位移差为 $\Delta h$（已知数值），则 $g=\frac{\Delta h}{T^2}$。<br />
+2. 求某点（如 2 号点）的竖直分速度：$v_{y2}=\frac{y_3-y_1}{2T}$（ $y_1,y_3$ 为竖直坐标）。<br />
+3. 水平方向位移差恒定，初速度 $v_0=\frac{\Delta x}{T}$。若需求该点合速度，$v=\sqrt{v_0^2+v_{y2}^2}$，方向 $\tan\theta=\frac{v_{y2}}{v_0}$。<br />
+<strong>点评/变式</strong>：平抛运动中，平均速度法仅用于竖直分运动，水平分运动为匀速，不能混淆。该法也适用于斜面上的类平抛、带电粒子在匀强电场中的偏转等，核心仍是“分方向、选时段、取平均”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-09.html">2022-全国乙-09</a>（2022 · 中） 根据位移差判断匀加速运动，并利用平均速度求瞬时速度及逐差法计算加速度。</li>
+<li><a href="../../exam/物理/2021-全国乙-09.html">2021-全国乙-09</a>（2021 · 中） 平抛运动分解为水平匀速和竖直自由落体计算速度与重力加速度</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/602-平均速度法.html">平均速度法</a></li>
+</ul>
+</div>
+</body>
+</html>

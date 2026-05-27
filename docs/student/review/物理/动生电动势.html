@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动生电动势</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>动生电动势</h1><div class="review-mark" data-stem="动生电动势"></div><div class="meta-card"><span><strong>考点</strong>动生电动势</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>电磁感应</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：电磁感应</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2010–2016</li>
+<li>出现题位：选择8 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>动生电动势</strong>：由于导体在磁场中做切割磁感线运动而产生的感应电动势。当磁感应强度 $B$、导体有效长度 $l$、速度 $v$ 三者两两垂直时，大小 $E=Blv$。</li>
+<li><strong>有效切割长度</strong>：导体两端连线在垂直于速度方向上的投影长度，不一定是导体的实际长度（如棒在圆形磁场区域中切割时，有效长度为弦长）。</li>
+<li><strong>闭合电路欧姆定律</strong>：动生电动势作为电源，若外电路为纯电阻 $R$、内阻不计，电流 $I=\frac{E}{R}$。</li>
+<li><strong>安培力</strong>：通电导体在磁场中受到的力，大小 $F_A=BIl$（$B$、$I$、$l$ 两两垂直），方向由左手定则判定，常起阻力作用。</li>
+<li><strong>动力与运动</strong>：导体棒在恒定外力、摩擦力、安培力共同作用下运动，遵循牛顿第二定律。匀速时合力为零，匀变速时 $F_合=ma$。</li>
+<li><strong>能量转化</strong>：外力做功一部分克服安培力做功转化为电能（再通过电阻转化为焦耳热），另一部分克服摩擦力转化为内能。匀速切割时，外力的机械功率等于回路电功率与摩擦热功率之和。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>场景拆解</strong>：明确磁场区域边界，分析导体在不同阶段的受力与运动（进入磁场前、后）。画出磁感线与导体运动方向，确认有效切割长度 $l$ 及其变化。</li>
+<li><strong>求电动势</strong>：写出瞬时速度 $v$ 的表达式（由运动学或能量得出），使用 $E=Blv$（$l$ 为有效切割长度）。若 $l$ 随位置变化，需用几何关系给出 $l(x)$。</li>
+<li><strong>链接电路</strong>：根据“杆 + 导轨 + 电阻”结构，画出等效电路。若杆和导轨电阻不计，电源内阻为零，回路的电流 $I=\frac{E}{R_外}$。</li>
+<li><strong>力学建模</strong>：对导体棒进行受力分析（外力 $F$、摩擦力 $f=\mu mg$、安培力 $F_A=BIl$），列平衡方程（匀速）或牛顿第二定律方程。注意安培力与速度的联动：$F_A=\frac{B^2 l^2 v}{R}$。</li>
+<li><strong>求解目标</strong>：从力学方程解出未知量（速度、电阻、外力等）。若涉及两位置比较，可列出函数表达式，代入几何条件求比例或极值。</li>
+<li><strong>能量视角（备用）</strong>：过程复杂的题目可考虑动能定理或能量守恒。克服安培力的总功等于回路产生的总焦耳热。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>有效长度并非导体总长</strong>：在非平行边界磁场中（如圆形磁场），切割长度随位置变化，需根据几何关系求弦长，而非直接用直径。</li>
+<li><strong>速度的瞬时性</strong>：公式 $E=Blv$ 中的 $v$ 是瞬时速度，若匀加速则 $v$ 与时间或位移有关，勿用平均速度代替。</li>
+<li><strong>受力分析的遗漏</strong>：题目中常有“动摩擦因数为 $\mu$”，务必将摩擦力 $\mu mg$ 纳入合力。进入磁场后匀速，意味着 $F_合=0$，安培力必须与 $F-\mu mg$ 平衡，而非仅与 $F$ 平衡。</li>
+<li><strong>进入磁场前后的运动衔接</strong>：进入磁场瞬间速度可由前一阶段的运动学公式求得，该速度是磁场内阶段的初速度。若磁场中匀速，则进入时的速度即为匀速运动的速度。</li>
+<li><strong>安培力方向的误判</strong>：动生电动势产生的感应电流使导体棒受到与原运动方向相反的安培力（楞次定律的力学体现），做负功，不能用错左手定则。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2016-新课标Ⅱ-11</h3>
+<p><strong>题目</strong>：水平平行导轨间距 $l$，电阻 $R$，金属杆质量 $m$、长 $l$。$t=0$ 时杆在恒力 $F$ 下从静止开始运动，$t_0$ 时刻进入垂直纸面向里的匀强磁场 $B$ 后恰好匀速。动摩擦因数 $\mu$。求（1）磁场内电动势大小；（2）电阻 $R$。</p>
+<p><strong>思路</strong>：杆的运动分两段：进入磁场前，仅受恒力 $F$ 和滑动摩擦力 $\mu mg$，匀加速直线运动；进入后受 $F$、摩擦力、安培力，三力平衡匀速。由运动学求进入磁场时的速度 $v_0$，即为匀速切割速度。由 $E=Blv_0$ 得电动势，再通过安培力平衡求出 $R$。</p>
+<p><strong>步骤</strong>：
+1. 进入磁场前的加速度：$a = \frac{F - \mu mg}{m}$。<br />
+   进入磁场时刻速度：$v_0 = a t_0 = \frac{F - \mu mg}{m} t_0$。<br />
+2. 金属杆在磁场中匀速，产生电动势 $E = Blv_0 = \frac{Bl(F - \mu mg) t_0}{m}$。<br />
+3. 匀速时合力为零：$F = \mu mg + F_A$。其中安培力 $F_A = B I l = B \cdot \frac{E}{R} \cdot l$。<br />
+   代入得：$F - \mu mg = \frac{B^2 l^2 v_0}{R}$。<br />
+4. 解得电阻：$R = \frac{B^2 l^2 v_0}{F - \mu mg} = \frac{B^2 l^2 \frac{F - \mu mg}{m} t_0}{F - \mu mg} = \frac{B^2 l^2 t_0}{m}$。</p>
+<p><strong>点评/变式</strong>：本题陷阱在“恰好匀速”意味着摩擦力不可忽略。若杆与导轨光滑，则 $F_A = F$，$R$ 表达式相同但 $v_0$ 会变为 $\frac{F}{m}t_0$。变式可改为 $t_0$ 未知而给定位移求 $R$，或磁场有边界使杆做减速运动等。</p>
+<h3>2010-新课标Ⅰ-08</h3>
+<p><strong>题目</strong>：两圆柱形铁芯同轴放置，端面半径 $R$，缝隙中有匀强磁场 $B$。铜质细棒 $ab$ 水平置于缝隙中，与圆柱轴线等高且垂直。铜棒由静止自由下落，下落距离 $0.2R$ 时电动势 $E_1$，$0.8R$ 时 $E_2$。忽略涡流与边缘效应，比较 $E_1$ 与 $E_2$ 大小。</p>
+<p><strong>思路</strong>：铜棒自由下落切割磁场，有效切割长度为棒在圆截面内的弦长 $l$，下落 $h$ 时 $l = 2\sqrt{R^2 - (R-h)^2} = 2\sqrt{2Rh - h^2}$。瞬时速度 $v = \sqrt{2gh}$。电动势 $E = B l v$，将 $h$ 分别代入比较即可。</p>
+<p><strong>步骤</strong>：
+1. 下落 $h$ 时，速度 $v = \sqrt{2gh}$。有效长度 $l = 2\sqrt{2Rh - h^2}$。<br />
+2. 电动势函数 $E(h) = B \cdot 2\sqrt{2Rh - h^2} \cdot \sqrt{2gh} = 2B\sqrt{2g} \cdot \sqrt{(2Rh - h^2)h}$。<br />
+3. 令 $y = (2Rh - h^2)h = 2Rh^2 - h^3$。比较 $h=0.2R$ 与 $h=0.8R$ 时的 $y$ 值：<br />
+   $h_1=0.2R$，$y_1 = 2R(0.04R^2) - 0.008R^3 = (0.08 - 0.008)R^3 = 0.072R^3$；<br />
+   $h_2=0.8R$，$y_2 = 2R(0.64R^2) - 0.512R^3 = (1.28 - 0.512)R^3 = 0.768R^3$。<br />
+   显然 $y_2 &gt; y_1$，故 $E_2 &gt; E_1$。<br />
+4. 具体比值 $\frac{E_1}{E_2} = \sqrt{\frac{y_1}{y_2}} = \sqrt{\frac{0.072}{0.768}} = \sqrt{\frac{3}{32}} \approx 0.306$。</p>
+<p><strong>点评/变式</strong>：典型错误是直接代入 $l=2R$（直径），忽略了有效切割长度随下落位置变化，从而导致结论错误。该题还可求电动势最大的下落位置：对 $f(h) = (2Rh - h^2)h$ 求导得 $h = \frac{2}{3}R$ 时 $E$ 最大。该类几何约束切割问题在圆形、三角形磁场中反复出现，核心是建立 $l$ 与 $h$ 的函数关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-11.html">2016-新课标Ⅱ-11</a>（2016 · 中） 金属杆在恒定拉力和摩擦力作用下先匀加速后进入磁场匀速运动，考查电磁感应与电路综合。</li>
+<li><a href="../../exam/物理/2010-新课标Ⅰ-08.html">2010-新课标Ⅰ-08</a>（2010 · 中） 铜棒在匀强磁场中下落切割磁感线，根据几何关系求有效切割长度再比较感应电动势大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/538-动生电动势.html">动生电动势</a></li>
+</ul>
+</div>
+</body>
+</html>

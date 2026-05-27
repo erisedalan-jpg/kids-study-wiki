@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电压表内阻</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电压表内阻</h1><div class="review-mark" data-stem="电压表内阻"></div><div class="meta-card"><span><strong>考点</strong>电压表内阻</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电压表内阻测量原理</strong>：利用串联分压或半偏法，核心方程 $I = \frac{U}{R_V + R}$，结合电源与滑动变阻器构成的供电电路，通过已知电阻箱阻值推算电压表内阻 $R_V$。</li>
+<li><strong>半偏法（恒压半偏）适用条件</strong>：滑动变阻器采用分压接法，其总阻值 $R_{\text{滑}}$ 远小于电压表内阻 $R_V$，以保证调节电阻箱时并联部分电压近似不变。</li>
+<li><strong>核心关系式</strong>：当电阻箱与电压表串联，保持并联电路两端电压 $U_0$ 恒定，电压表满偏 $U_g$，再调节电阻箱至 $R$ 使电压表示数为 $U$，则有：
+  $$\frac{U}{R_V} = \frac{U_0 - U}{R} \quad\Rightarrow\quad R_V = \frac{U}{U_0 - U}R$$
+  若 $U_0 = U_g$（满偏时并联电压等于电压表量程），且 $U = \frac{4}{5}U_g$，则 $R_V=4R$。</li>
+<li><strong>器材选取原则</strong>：在分压电路中，为减小实验误差，滑动变阻器阻值应远小于待测电阻（$R_{\text{滑}} \ll R_V$），使分压输出接近理想电压源；电阻箱阻值应精细可调且最大值足够。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审清电路结构</strong>：识别是限流还是分压接法，明确滑动变阻器、电阻箱与电压表的串并联关系。本题中，滑动变阻器分压，电阻箱与电压表串联后再与滑动变阻器部分并联。</li>
+<li><strong>关键条件锁定</strong>：“电阻箱调为零，电压表满偏”用以确定初始并联电压 $U_{\text{并}}=U_g$（通常等于电压表量程）；“保持滑片不动，调节电阻箱”保证并联电压几乎不变。抓住“电压不变”这一核心。</li>
+<li><strong>列串联分压方程</strong>：设此时电阻箱阻值为 $R$，电压表示数为 $U$，则电阻箱分压为 $U_{\text{并}}-U$，由串联电流相等 $\frac{U}{R_V}=\frac{U_{\text{并}}-U}{R}$，直接解出 $R_V$。</li>
+<li><strong>器材选择逆向验证</strong>：根据 $R_V$ 约数千欧，判断滑动变阻器应选小阻值（如$50\,\Omega$），而不选 $5\,\text{k}\Omega$，理由是大阻值滑动变阻器与电压表并联后的总电阻变化会明显影响分压，破坏“电压不变”的假设。</li>
+<li><strong>误差分析套路</strong>：接入电阻箱后，并联部分总电阻增大，分得电压会略大于 $U_g$，导致测得的 $R_V$ 偏大。若要求精确，必须知道具体偏差方向。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>滑动变阻器选错</strong>：认为测数千欧电阻就该用大阻值滑动变阻器，错选 $R_2(5\,\text{k}\Omega)$，致使分压电路中并联部分电压随电阻箱调节明显变化，不再满足“半偏”条件，导致测量原理失效。</li>
+<li><strong>误将电源电动势等同满偏电压</strong>：电源电动势 $3\,\text{V}$，而电压表满偏 $2.5\,\text{V}$，滑动变阻器分压输出不是电源电动势，不能直接用 $E$ 代入计算。</li>
+<li><strong>未意识到电压表读数的意义</strong>：满偏 $2.5\,\text{V}$ 既表明电压表量程，也代表此时并联部分电压。调节后示数 $2.00\,\text{V}$ 是电压表自身两端电压，电阻箱分压为 $0.5\,\text{V}$，若误认为电阻箱分压等于满偏电压减读数，则会错用关系式。</li>
+<li><strong>忽略实验操作顺序</strong>：必须先将电阻箱调零、滑片置于安全位置（分压电路滑片初始置电压最小端，本题图a最左端对应分压为零），再闭合开关调节满偏。顺序颠倒可能烧毁电压表或无法实现满偏。</li>
+<li><strong>单位与有效数字</strong>：电阻箱阻值读数为多位有效数字，计算 $R_V$ 时注意结果的有效数字保留及单位换算（数千欧姆）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016-新课标Ⅱ-10）：利用图（a）电路测量程 $2.5\,\text{V}$ 的电压表内阻（约数千欧）。器材：电阻箱 $R$（最大 $99999.9\,\Omega$），滑动变阻器 $R_1(50\,\Omega)$、$R_2(5\,\text{k}\Omega)$，电源 $E=3\,\text{V}$，开关、导线。步骤：①按图连接，滑片置最左端；②电阻箱调零，闭合开关，调滑片使电压表满偏；③保持滑片不动，调电阻箱使电压表示数为 $2.00\,\text{V}$，记下电阻箱阻值 $R$。
+回答：滑动变阻器应选<strong><em>_</em></strong><em>；电压表内阻为<strong><em>_</em></strong></em>（用 $R$ 表示）。</p>
+<p><strong>思路</strong>：由步骤②满偏可知此时并联电压 $U_0=2.5\,\text{V}$；步骤③电压表读数 $2.00\,\text{V}$，电阻箱分压 $0.5\,\text{V}$，由串联分压比得 $R_V=4R$。选择滑动变阻器时，因电压表内阻数千欧，需 $R_{\text{滑}}\ll R_V$ 以减小并联电压变化，故选 $R_1$。</p>
+<p><strong>步骤</strong>：
+1. 确定满偏电压：初始并联部分电压等于电压表量程 $U_g=2.5\,\text{V}$。
+2. 根据串联分压：调节电阻箱后，电压表支路电流 $I=\frac{2.00}{R_V}=\frac{0.5}{R}$，解得 $R_V=4R$。
+3. 滑动变阻器选择：若选 $R_2(5\,\text{k}\Omega)$，与 $R_V(\text{数千欧})$ 并联后总电阻调节时变化大，$U_g$ 偏移显著；选 $R_1(50\,\Omega)\ll R_V$ 则并联部分电压几乎不变，符合实验原理，故填 $R_1$。</p>
+<p><strong>点评/变式</strong>：
+- 本题属经典的“恒压半偏法”测电压表内阻，核心是利用小电阻滑动变阻器分压提供近似恒压源。若将电阻箱与电压表并联，再串联一个电流表或利用电源自身，则为测电流表内阻的“恒流半偏法”，注意区分。
+- 变式：若电压表量程未知，但电源电动势已知且可精确给定，可通过调节滑动变阻器使电阻箱为0时电压表满偏，再调电阻箱使电压表半偏，此时 $R_V=R$（需电源内阻不计且分压恒定）。
+- 误差来源：接入电阻箱后实际并联电压 $U_0'&gt;U_0$，因此所得 $R_V$ 测量值偏大（$R_{V\text{测}}=4R&gt;4R_{\text{真}}$ 若按 $U_0$ 不变计算）。若题目要求分析误差方向，需注意。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-10.html">2016-新课标Ⅱ-10</a>（2016 · 中） 利用半偏法测量电压表内阻，考查分压电路与闭合电路欧姆定律的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/771-电压表内阻.html">电压表内阻</a></li>
+</ul>
+</div>
+</body>
+</html>

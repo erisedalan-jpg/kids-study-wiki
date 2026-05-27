@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电场</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电场</h1><div class="review-mark" data-stem="电场"></div><div class="meta-card"><span><strong>考点</strong>电场</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：填空12</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电场强度</strong> $E=\frac{F}{q}$（定义式），点电荷电场 $E=k\frac{Q}{r^2}$，匀强电场 $E=\frac{U}{d}$。方向：正电荷受力方向。</li>
+<li><strong>电场力</strong> $F=qE$，正电荷受力与 $E$ 同向，负电荷反向。做功与路径无关，电势能变化 $\Delta E_p = -W_{\text{电}}$。</li>
+<li><strong>带电粒子在匀强电场中的运动</strong></li>
+<li>仅受电场力：类平抛运动。垂直电场方向匀速，沿电场方向匀加速 $a=\frac{qE}{m}$。</li>
+<li>同时受重力：按矢量叠加 $F_{\text{合}}=mg+qE$（注意方向），可用运动的独立性或动能定理。</li>
+<li><strong>动能定理</strong> $W_{\text{合}}=\Delta E_k$，其中 $W_{\text{合}}$ 包括重力功 $mgh$ 和电场力功 $qEd$（$d$ 为沿电场线方向位移）。</li>
+<li><strong>运动的合成与分解</strong>：水平、竖直方向独立分析位移、速度、加速度；合速度 $v=\sqrt{v_x^2+v_y^2}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定研究对象与过程</strong>：明确带电小球（$+q$ 或 $-q$）从进入电场到离开电场的全过程，必要时分段。</li>
+<li><strong>受力分析与运动性质判断</strong>：竖直方向恒受重力 $mg$；水平方向在电场外不受力（匀速），电场内受 $qE$（匀加速/减速）。若合力与初速度共线则直线运动，否则为曲线运动。</li>
+<li><strong>选择分解方向</strong>：常规取水平（沿电场）和竖直方向。写出各方向的位移、速度、加速度：</li>
+<li>竖直：$a_y=g$，$v_y=v_{y0}+gt$，$y=v_{y0}t+\frac12 gt^2$。</li>
+<li>水平（电场内）：$a_x=\frac{qE}{m}$，$v_x=v_{x0}+a_x t$，$x=v_{x0}t+\frac12 a_x t^2$。</li>
+<li><strong>利用题给条件建立方程</strong>：</li>
+<li>速度方向条件（如“竖直向下”意味着离开电场时水平速度为零）。</li>
+<li>动能关系用 $E_k=\frac12 m(v_x^2+v_y^2)$ 表达。</li>
+<li>位移关系（如水平位移之比、竖直下落高度）。</li>
+<li><strong>联立求解</strong>：优先消去时间 $t$ 或利用速度位移公式 $v_x^2-v_{x0}^2=2a_x x$ 等，减少未知量。</li>
+<li><strong>验证方向</strong>：负电荷所受电场力与电场方向相反，注意 $a_x$ 的符号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略重力</strong>：题目若未说明“不计重力”且出现竖直方向运动，重力必须考虑。</li>
+<li><strong>电场力方向弄反</strong>：对 $-q$，$F_e$ 与 $E$ 反向，加速度方向相反，水平位移方向可能不同。</li>
+<li><strong>分解混乱</strong>：水平位移与竖直位移所用时间相同，但水平位移仅存在于电场区域内（高度 $H$），进入电场前水平匀速。</li>
+<li><strong>动能定理使用不当</strong>：动能的 $v$ 是合速度大小，需用 $v_x^2+v_y^2$，不可漏掉分量。</li>
+<li><strong>条件“直线运动”的理解</strong>：合力方向与速度方向共线；在有重力与电场力的复合场中，可由速度分量比例等于合力分量比例建立等式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017新课标Ⅱ·12）</h3>
+<p>两水平虚线间距 $H$，其间存在水平向右的匀强电场。上方 A 点将质量 $m$、电荷量 $+q$ 的小球 M 和 $-q$ 的小球 N 以相同初速度沿平行电场方向水平射出。两球在重力作用下进入电场，从下边界离开。已知 N 离开电场时速度竖直向下；M 在电场中做直线运动，且 M 刚离开电场的动能为 N 刚离开电场动能的 $1.5$ 倍。不计空气阻力。求：(1) M 与 N 在电场中水平位移之比；(2) A 距电场上边界高度；(3) 电场强度大小。</p>
+<p><strong>思路</strong>
+- 竖直方向两球均做自由落体（初速水平，竖直初速为零），下降 $h+H$（$h$ 为 A 到电场上边界高度）。$N$ 离开电场时水平速度减为零，由此求电场内水平加速度和时间关系。$M$ 直线运动说明合力与速度方向共线，且 $M$ 带正电，电场力向右与初速同向。利用动能倍数关系和位移公式求解。</p>
+<p><strong>步骤</strong>
+1. 设初速度 $v_0$（水平向右），A 距电场上边界高度 $h$。电场内竖直位移 $H$，下落总时间由 $h+H=\frac12 gt^2$ 给出总时间 $t$，但需分段：进入电场前时间 $t_1$，$h=\frac12 gt_1^2$；电场内时间 $t_2$，有 $H=v_{y1}t_2+\frac12 gt_2^2$ 且 $v_{y1}=gt_1$。
+2. 对 N（$-q$，电场力向左）：水平方向在电场内做匀减速，加速度 $a_N = -\frac{qE}{m}$（取右为正），离开电场时 $v_{xN}=0$，故 $v_0 + a_N t_2 = 0 \Rightarrow v_0 = \frac{qE}{m}t_2$。
+3. N 的水平位移 $x_N = v_0 t_2 + \frac12 a_N t_2^2 = v_0 t_2 - \frac12 v_0 t_2 = \frac12 v_0 t_2$（或用平均速度）。
+4. 对 M（$+q$，电场力向右）：水平加速度 $a_M = \frac{qE}{m}$。M 在电场中直线运动，合力方向即速度方向，有 $\frac{v_y}{v_x} = \frac{mg}{qE}$，且在电场内任意时刻成立。取刚入电场时：$v_{y1}=gt_1$，$v_{x1}=v_0$，则有 $\frac{gt_1}{v_0} = \frac{mg}{qE} \Rightarrow t_1 = \frac{m v_0}{qE}$。
+5. 联立 $v_0 = \frac{qE}{m}t_2$ 与 $t_1 = \frac{m v_0}{qE}$ 得 $t_1 = \frac{m}{qE}\cdot \frac{qE}{m}t_2 = t_2$，故 $t_1 = t_2$。
+6. 水平位移：$x_M = v_0 t_2 + \frac12 a_M t_2^2 = v_0 t_2 + \frac12 v_0 t_2 = \frac32 v_0 t_2$。故 $x_M : x_N = \frac32 : \frac12 = 3:1$。（第一问）
+7. 利用竖直位移：$h = \frac12 g t_1^2$，$H = v_{y1}t_2 + \frac12 g t_2^2 = (gt_1)t_2 + \frac12 g t_2^2$。因 $t_1=t_2$，得 $H = g t_1^2 + \frac12 g t_1^2 = \frac32 g t_1^2$。而 $h=\frac12 g t_1^2$，故 $H = 3h \Rightarrow h=\frac13 H$。（第二问）
+8. 动能：$E_{kN} = \frac12 m v_{y}^2$（离开时水平速度0），$v_{y} = gt_1 + g t_2 = 2gt_1$，所以 $E_{kN}=2mg^2 t_1^2$。$E_{kM} = \frac12 m(v_{xM}^2+v_{y}^2)$，$v_{xM}=v_0 + a_M t_2 = 2v_0$，$v_{y}=2gt_1$，故 $E_{kM}= \frac12 m(4v_0^2+4g^2 t_1^2)$。由 $E_{kM}=1.5E_{kN}$，得 $4v_0^2+4g^2 t_1^2 = 6 g^2 t_1^2 \Rightarrow v_0^2 = \frac12 g^2 t_1^2$。
+9. 由 $v_0 = \frac{qE}{m}t_2 = \frac{qE}{m}t_1$，代入得 $(\frac{qE}{m}t_1)^2 = \frac12 g^2 t_1^2 \Rightarrow E = \frac{mg}{\sqrt{2}q}$。（第三问）</p>
+<p><strong>点评/变式</strong>
+- 本题核心是抓住等时性（$t_1=t_2$），通过 N 的速度条件和 M 的直线运动条件联立求得时间关系。该关系是破题关键，考生常卡在无法直接求出时间比。
+- 变式：若电场方向改为竖直、或小球带同种电荷、初速度方向不沿电场，分析方法类似，务必重新受力分析并正确分解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-12.html">2017-新课标Ⅱ-12</a>（2017 · 难） 正负电荷小球从同一点以相同初速度射入匀强电场，一做直线运动一做曲线运动，求水平位移比、入射高度和电场强度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/671-电场.html">电场</a></li>
+</ul>
+</div>
+</body>
+</html>

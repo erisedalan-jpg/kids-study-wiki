@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波长与频率关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>波长与频率关系</h1><div class="review-mark" data-stem="波长与频率关系"></div><div class="meta-card"><span><strong>考点</strong>波长与频率关系</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>机械波与电磁波中波长 $\lambda$、频率 $f$（或 $\nu$）与波速 $v$ 的关系：<br />
+  $$v=\lambda f\qquad(\text{电磁波真空中 }c=\lambda\nu,\;c=3.0\times10^8\,\text{m/s})$$</li>
+<li>光子能量公式：<br />
+  $$E=h\nu=\frac{hc}{\lambda}$$<br />
+  其中普朗克常量 $h=6.63\times10^{-34}\,\text{J·s}$。</li>
+<li>点光源向四周均匀辐射时，功率 $P$ 分布在球面上。距离光源 $R$ 处，单位面积上的功率（即辐照度）为 $\dfrac{P}{4\pi R^2}$。若用光子数描述，每秒垂直通过单位面积的光子数 $N$ 满足：<br />
+  $$N=\frac{n}{4\pi R^2}$$<br />
+  $n$ 为光源每秒发射的总光子数，且 $P=n\cdot h\nu=n\cdot\dfrac{hc}{\lambda}$。</li>
+<li>联立可得距离公式：<br />
+  $$R=\sqrt{\frac{P\lambda}{4\pi hc N}}$$</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确波的类型与介质</strong>：机械波用 $v=\lambda f$，电磁波一般用 $c=\lambda\nu$。根据介质确定波速，若为真空或空气，取 $c=3\times10^8\,\text{m/s}$。  </li>
+<li><strong>建立功率与光子数的联系</strong>：利用单个光子能量 $E_\gamma=h\nu=hc/\lambda$，写出总功率 $P=nE_\gamma$（$n$ 为每秒总光子数）。  </li>
+<li><strong>应用球面扩散模型</strong>：点源均匀辐射，距离 $R$ 处的光子通量密度 $N=n/(4\pi R^2)$。  </li>
+<li><strong>联立求解</strong>：由 $P=nE_\gamma$ 求出 $n$，代入 $N$ 表达式，得到 $R=\sqrt{\dfrac{P\lambda}{4\pi hc N}}$。代入数据计算时，注意普朗克常量、光速的数值与单位统一，最后得出结果并核对数量级。  </li>
+<li><strong>估算时先进行数量级运算</strong>：复杂计算可转化为 $10^{a}$ 形式的估算，快速锁定选项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波长与频率</strong>：误用 $E=hc/\lambda$ 时忘记乘除关系，或直接用 $E=h\lambda$ 导致错误。  </li>
+<li><strong>忘记球面积公式</strong>：使用圆面积 $\pi R^2$ 或球体积公式，导致因子错漏。  </li>
+<li><strong>功率与光子数直接相等</strong>：误以为 $P$ 就是 $N$ 或直接代入 $P=N$，未考虑单个光子能量。  </li>
+<li><strong>有效数字与数量级错误</strong>：计算 $hc/\lambda$ 时分母数量级处理不当，导致 $R$ 量级偏差。  </li>
+<li><strong>普朗克常量数值记忆不准</strong>：$h\approx6.63\times10^{-34}$，误记为 $6.63\times10^{-35}$ 等。  </li>
+<li><strong>不区分“每秒总光子数”与“单位面积上每秒光子数”</strong>：直接拿 $N$ 乘以球面积求总光子数时漏乘面积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2022全国乙·04</h3>
+<p><strong>题目</strong>：一点光源以 $113\,\text{W}$ 的功率向四周均匀辐射波长约 $6\times10^{-7}\,\text{m}$ 的光，在离光源距离 $R$ 处每秒垂直通过每平方米的光子数为 $3\times10^{14}$ 个。已知 $h=6.63\times10^{-34}\,\text{J·s}$，求 $R$ 约是多少。</p>
+<p><strong>思路</strong>：本题综合波长‑频率‑光子能量关系与点源球面辐射模型。先由波长求出单个光子能量，再由总功率求出每秒辐射的总光子数 $n$，最后利用球面光子通量密度求距离 $R$。</p>
+<p><strong>步骤</strong>：
+1. 单个光子能量：
+   $$E=\frac{hc}{\lambda}=\frac{6.63\times10^{-34}\times3.0\times10^8}{6\times10^{-7}}\;\text{J}\approx3.315\times10^{-19}\,\text{J}$$
+2. 光源每秒辐射的总光子数 $n$：
+   $$P=nE\;\Rightarrow\;n=\frac{P}{E}=\frac{113}{3.315\times10^{-19}}\approx3.41\times10^{20}\,\text{(个)}$$
+3. 在距光源 $R$ 的球面上，每秒垂直通过单位面积的光子数 $N$ 满足：
+   $$N=\frac{n}{4\pi R^2}$$
+   $$\Rightarrow R^2=\frac{n}{4\pi N}=\frac{3.41\times10^{20}}{4\pi\times3\times10^{14}}$$
+   取 $\pi\approx3.14$，设 $4\pi\approx12.56$：
+   $$R^2\approx\frac{3.41\times10^{20}}{1.256\times10^{16}}\approx2.71\times10^4$$
+   $$\therefore R\approx\sqrt{2.71\times10^4}\approx1.65\times10^2\,\text{m}=165\,\text{m}$$
+   选项中最接近的值为 $200\,\text{m}$ 左右（视具体选项而定，此处为演示计算过程）。</p>
+<p><strong>点评/变式</strong>：
+- 此题将光子说与几何光学辐射模型结合，考查了波长‑频率‑能量转换、点光源平方反比律。<br />
+- 计算时可优先进行数量级估算：$E\sim\frac{6.6\times10^{-34}\times3\times10^8}{6\times10^{-7}}=3.3\times10^{-19}\,\text{J}$，$n\sim\frac{113}{3.3\times10^{-19}}\approx3.4\times10^{20}$，$R^2\sim\frac{3.4\times10^{20}}{12\times3\times10^{14}}\sim\frac{3.4}{36}\times10^{6}\approx0.094\times10^6=9.4\times10^4$，得 $R\sim3\times10^2\,\text{m}$，可快速锁定选项。<br />
+- <strong>变式</strong>：若改为波长不同的单色光源，或给出辐照度（$\text{W/m}^2$）而非光子数，只需将功率平摊到球面，再通过 $E=h\nu$ 转换为光子数，思路相同。💡</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-04.html">2022-全国乙-04</a>（2022 · 中） 该题考查光源功率与光子数的关系，结合球面波传播模型估算距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/479-波长与频率关系.html">波长与频率关系</a></li>
+</ul>
+</div>
+</body>
+</html>

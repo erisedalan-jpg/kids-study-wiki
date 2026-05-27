@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>内阻</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>内阻</h1><div class="review-mark" data-stem="内阻"></div><div class="meta-card"><span><strong>考点</strong>内阻</span><span><strong>权重</strong>9</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：9</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择10</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<p>内阻是实际电源或电表等效模型中的重要参数。在恒定电流实验中，测量内阻的常用方法有：
+- <strong>伏安法</strong>：利用电压表、电流表测量电源或电表两端电压与电流，由 $R = U/I$ 计算内阻，需注意电表内接、外接带来的系统误差。
+- <strong>替代法</strong>：用电阻箱替代待测元件，保持电路其他部分状态不变，电阻箱示数即为待测内阻。
+- <strong>半偏法</strong>：常用于测量电流表内阻，通过调节电阻使电流表先后满偏与半偏，利用并联分流关系求解内阻。
+- <strong>电桥平衡法（惠斯通电桥）</strong>：利用电桥平衡时检流计支路无电流、两端等电势的特点，由桥臂电阻比例关系求待测内阻。若电桥为等臂或可对调结构，可得 $R_x = \sqrt{R_1 R_2}$（几何平均）。</p>
+<p>本题采用自组电桥测量微安表内阻，平衡时 $B$、$D$ 等电势，两次平衡电阻箱阻值 $R_{z1}$、$R_{z2}$ 满足：
+$$R_g = \sqrt{R_{z1} \cdot R_{z2}}$$</p>
+<h2>解题方法与套路</h2>
+<p><strong>电桥法测电表内阻类实验通用步骤：</strong></p>
+<ol>
+<li>
+<p><strong>器材辨识与选择</strong><br />
+   区分分压器与比例臂：阻值较小的滑动变阻器（如 $20\,\Omega$）作分压器 $R_1$，便于精细调节输出；阻值较大的（如 $2000\,\Omega$）作电桥比例臂 $R_2$，提高电桥灵敏度。</p>
+</li>
+<li>
+<p><strong>安全保护措施</strong><br />
+   闭合开关前，将分压器滑片置于使输出电压为零（或最小）的一端，如本题滑片滑至最左端，保护微安表免受过电流冲击。</p>
+</li>
+<li>
+<p><strong>初态调节与平衡</strong>  </p>
+</li>
+<li>置电阻箱阻值为待测内阻估计值附近（如 $2500.0\,\Omega$）。  </li>
+<li>接通 $S_1$，调节 $R_1$ 滑片使微安表有适当示数。  </li>
+<li>
+<p>反复调节 $R_2$ 滑片 $D$，直至 $S_2$ 闭合与断开时微安表示数不变，此时 $B$、$D$ 等电势，电桥平衡，记录 $R_{z1}$。</p>
+</li>
+<li>
+<p><strong>对调操作与二次平衡</strong><br />
+   保持滑片 $D$ 位置不变，交换电阻箱与微安表的位置，重新调节电阻箱阻值使电桥再次平衡，记录 $R_{z2}$。</p>
+</li>
+<li>
+<p><strong>计算内阻</strong><br />
+   利用桥臂比例关系推导出 $R_g = \sqrt{R_{z1} \cdot R_{z2}}$，代入数据并保留至题目要求的精度（个位）。</p>
+</li>
+<li>
+<p><strong>提高测量精度</strong>  </p>
+</li>
+<li>调节分压器使微安表在平衡时接近满偏，以提高对电流变化的判断灵敏度。  </li>
+<li>多次测量求平均值，或使用精确度更高的电阻箱。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>器材选反</strong>：误将 $R_1$ 选为 $2000\,\Omega$、$R_2$ 选为 $20\,\Omega$，导致分压调节粗糙，电桥比例臂阻值过小，影响平衡判断与安全。</li>
+<li><strong>初始滑片位置错误</strong>：闭合 $S_1$ 前未将 $R_1$ 滑片置于输出电压最小端（本题为左端），可能导致微安表瞬间过载烧毁。</li>
+<li><strong>平衡条件判断失误</strong>：仅靠微安表有示数或指零来判定平衡，未按要求检验“接通 $S_2$ 前后示数不变”，错失电桥平衡的准确判据。</li>
+<li><strong>对调后操作不当</strong>：交换电阻箱与微安表后，重新调节电阻箱阻值但改变了 $D$ 触点位置，破坏比例关系，导致 $R_g$ 计算错误。</li>
+<li><strong>内阻计算误用算术平均</strong>：将两次电阻箱读数直接取平均 $(R_{z1}+R_{z2})/2$，正确的电桥关系应为几何平均 $R_g = \sqrt{R_{z1} \cdot R_{z2}}$。</li>
+<li><strong>有效数字失分</strong>：计算结果 $2550$ 正好为整数，多写小数点后数字或四舍五入错误会丢分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目 2017-新课标Ⅱ-10</h3>
+<p><strong>题目简述</strong>：用图（a）所示电路测微安表内阻（量程 $100\,\mu\text{A}$，内阻约 $2500\,\Omega$）。可选滑动变阻器 $R_1$、$R_2$（阻值 $20\,\Omega$ 和 $2000\,\Omega$），电阻箱 $R_z$，电源 $E$。要求完成实物连线、选择 $R_1$ 阻值、判断滑片初始位置、填充平衡现象、计算微安表内阻并提出提高精度的建议。</p>
+<p><strong>思路</strong><br />
+电路基于电桥平衡原理。$R_1$ 构成分压器，$R_2$ 作为滑线变阻器桥臂，微安表与电阻箱构成另一桥臂。接通 $S_2$ 前后微安表示数不变 ⇒ $B$、$D$ 等电势 ⇒ 电桥平衡。对调微安表与电阻箱位置，再次平衡时可利用 $R_g = \sqrt{R_{z1} R_{z2}}$ 求解。</p>
+<p><strong>步骤</strong><br />
+1. <strong>实物连线</strong>：按原理图连接，注意滑动变阻器接线柱正确选择、微安表正负极性。<br />
+2. <strong>选择 $R_1$ 阻值</strong>：$R_1$ 用于分压、调压，为使微安表两端电压从零可调，选 $20\,\Omega$（小阻值）。<br />
+3. <strong>保护微安表</strong>：闭合 $S_1$ 前，将 $R_1$ 滑片 $C$ 滑到最左端，使分压输出为零。<br />
+4. <strong>第一次平衡</strong>：$R_z = 2500.0\,\Omega$，调节 $D$ 使 $S_2$ 通断时微安表示数不变，此时 $B$、$D$ 电势相等。<br />
+5. <strong>对调后第二次平衡</strong>：保持 $D$ 不动，交换 $R_z$ 与微安表，调节 $R_z$ 至 $2601.0\,\Omega$ 使再次平衡。<br />
+6. <strong>计算 $R_g$</strong>：由电桥关系得 $R_g = \sqrt{2500.0 \times 2601.0} \approx 2550\,\Omega$（保留个位）。<br />
+7. <strong>提高精度建议</strong>：调节 $R_1$，使微安表在平衡时接近满量程 $100\,\mu\text{A}$，提高判断平衡的灵敏度。</p>
+<p><strong>点评/变式</strong><br />
+该题的关键在于理解“接通 $S_2$ 前后示数不变”等价于检流计支路无电流，进而得出电桥平衡。几何平均 $R_g = \sqrt{R_{z1}R_{z2}}$ 源于电桥对调后的比例互换，可推广至其他电桥法测电阻的实验。<br />
+变式：若电桥非对调操作，而是固定比例臂，可利用 $R_x = (R_1/R_2) \cdot R_z$ 直接计算，需明确桥臂阻值关系。实验中务必明晰分压器与比例臂的功能区分，保证操作安全与测量精度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a>（2017 · 难） 设计并连接用微安表和滑动变阻器测电源电动势及内阻的电路，完成填空并分析测量精度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/291-内阻.html">内阻</a></li>
+</ul>
+</div>
+</body>
+</html>

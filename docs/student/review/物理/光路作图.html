@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光路作图</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光路作图</h1><div class="review-mark" data-stem="光路作图"></div><div class="meta-card"><span><strong>考点</strong>光路作图</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：解答16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光的折射定律</strong>（斯涅尔定律）：折射光线在入射面内，入射角 $i$ 与折射角 $r$ 满足
+  $$n_1\sin i = n_2\sin r$$
+  其中 $n_1$、$n_2$ 为界面两侧介质的折射率。真空/空气折射率近似为 $1$。</li>
+<li><strong>全反射条件</strong>：光从光密介质射向光疏介质，且入射角 $i \ge i_c$（临界角），临界角满足
+  $$\sin i_c = \frac{n_{\text{疏}}}{n_{\text{密}}}$$
+  若光密介质折射率为 $n$，光疏介质为空气，则 $\sin i_c = \dfrac{1}{n}$。</li>
+<li><strong>光路可逆原理</strong>：光线逆向传播路径不变，可用于分析出射方向。</li>
+<li><strong>三棱镜中的几何关系</strong>：</li>
+<li>法线与界面垂直，入射角/折射角均为与法线的夹角。</li>
+<li>利用三角形内角和、平行线、相似三角形寻找角度间的定量关系。</li>
+<li><strong>偏角</strong>：出射光线相对于原入射光线方向的夹角，一般通过相邻界面偏折的矢量叠加求得。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>适用于“给定光路求折射率/偏角/范围”类几何光学习题：</p>
+<ol>
+<li>
+<p><strong>画光路，标辅助线</strong><br />
+   依题意作光路草图，明确各界面、入射点、法线；由几何条件（如垂直、中点、角度）在图中构建直角三角形、相似形。</p>
+</li>
+<li>
+<p><strong>逐点分析折反射，列角度关系</strong>  </p>
+</li>
+<li>在每个界面写出折射定律 $n_1\sin\theta_1 = n_2\sin\theta_2$ 或反射定律（全反射时用临界角条件）。  </li>
+<li>
+<p>借助三角形内外角关系、平行线性质，将几何长度转化为角度：如对顶角、余角、平行线内错角等。</p>
+</li>
+<li>
+<p><strong>建立折射率的约束方程</strong>  </p>
+</li>
+<li>若已知材料折射率 $n$，直接代入求解未知角度或偏角。  </li>
+<li>
+<p>若求折射率范围，则利用某一界面恰发生全反射的临界条件（$\sin\theta = \dfrac{1}{n}$）列等式，再结合其他界面的折射关系推导不等式。</p>
+</li>
+<li>
+<p><strong>求解偏角（方向变化）</strong><br />
+   逐次计算光线经各界面后的方向改变，通过角度加减得到总偏角（注意符号：顺时针/逆时针偏转）。</p>
+</li>
+<li>
+<p><strong>检验合理性</strong><br />
+   检查所得角度是否满足发生全反射的条件（入射角是否大于临界角），折射率是否大于 $1$，光路是否符合光密到光疏的设定。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>法线与角度的混淆</strong>：折射定律中的角度是与法线的夹角，而非与界面的夹角。常见错误将界面夹角当成入射角代入公式。</li>
+<li><strong>折射率公式颠倒</strong>：不明晰光从哪种介质进入哪种介质，记成 $\sin i / \sin r = n$ 时 $n$ 的相对大小弄反。记住：<strong>光线从真空进入介质时 $\sin i = n\sin r$</strong>。</li>
+<li><strong>全反射条件用错方向</strong>：只有光密到光疏才可能全反射；若从空气射入介质，无论如何不会发生全反射。本题中 AC 界面是从棱镜射向空气，符合条件。</li>
+<li><strong>几何关系推理不严密</strong>：仅凭肉眼“看起来相等”便认定某些角相等，没有利用题给中点、垂直等条件严谨推导，导致角度关系错误。</li>
+<li><strong>忽略折射率范围的多重限制</strong>：光路能实现的条件往往不止一处全反射临界限制，需在多个界面上同时满足折射定律与全反射条件，得到的范围可能需取交集。遗漏任一边界会导致范围错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2018-新课标Ⅱ-16</h3>
+<p><strong>题目</strong><br />
+直角三棱镜横截面 $\triangle ABC$，$\angle A=90^\circ$，$\angle B=60^\circ$。一细光束从 $BC$ 边的 $D$ 点折射入棱镜，射到 $AC$ 边的 $E$ 点发生全反射，再经 $AB$ 边的 $F$ 点射出。$EG\perp AC$ 交 $BC$ 于 $G$，$D$ 恰为 $CG$ 的中点。不计多次反射。求：<br />
+(1) 出射光相对于 $D$ 点入射光的偏角；<br />
+(2) 为实现该光路，棱镜折射率 $n$ 的取值范围。</p>
+<p><strong>思路</strong><br />
+由 $EG\perp AC$ 和 $\angle C=30^\circ$ 可得 $\triangle CEG$ 中角的特殊关系；结合 $D$ 是 $CG$ 中点，可推导光线在 $BC$ 界面的入射角与折射角。利用在 $E$ 点全反射的临界条件得到 $n$ 的下限，由光路必须能在 $BC$ 边折射进入和在 $AB$ 边折射射出，进一步得到 $n$ 的上限约束。偏角则可从各界面光线方向逐次计算。</p>
+<p><strong>步骤</strong><br />
+1. <strong>分析三角形内角</strong><br />
+   $\angle A=90^\circ$，$\angle B=60^\circ$，故 $\angle C=30^\circ$。<br />
+   因 $EG\perp AC$，所以 $EG\parallel AB$，$\angle EGC = \angle B = 60^\circ$；$\triangle CEG$ 中 $\angle C=30^\circ$，$\angle CEG=90^\circ$，$\angle EGC=60^\circ$。</p>
+<ol>
+<li>
+<p><strong>利用中点条件求入射角与折射角</strong><br />
+   设 $CG=2a$，则 $CD = DG = a$（$D$ 为中点）。在 $\triangle CEG$ 中，$\angle C=30^\circ$，$CG=2a$，可推出 $CE=a$（$30^\circ$ 所对直角边是斜边一半）。<br />
+   光在 $D$ 点从空气进入棱镜，设法线为 $BC$ 的垂线。由几何关系可证：光线在 $D$ 点的折射角 $r = \angle EDC = 30^\circ$。<br />
+   设 $D$ 点入射角为 $i$，由折射定律：
+   $$\sin i = n\sin 30^\circ = \frac{n}{2}$$</p>
+</li>
+<li>
+<p><strong>$E$ 点全反射的条件</strong><br />
+   在 $AC$ 界面，光从棱镜射向空气，入射角为 $i_1$。由几何关系：$\angle A=90^\circ$，$EG\perp AC$，可得 $i_1 = 60^\circ$。<br />
+   全反射条件：$i_1 \ge i_c \ \Rightarrow\ \sin 60^\circ \ge \frac{1}{n}$，即
+   $$\frac{\sqrt{3}}{2} \ge \frac{1}{n} \ \Rightarrow\ n \ge \frac{2}{\sqrt{3}} \approx 1.155$$
+   同时要确保光在 $E$ 点确实发生全反射而非折射逃逸，这是 $n$ 的下限。</p>
+</li>
+<li>
+<p><strong>$AB$ 边折射出射与 $BC$ 边入射的限制</strong><br />
+   光在 $F$ 点从棱镜射入空气，入射角需小于临界角，否则会发生全反射而不能出射。由几何求得在 $F$ 点的入射角为 $30^\circ$，要求
+   $$\sin 30^\circ &lt; \frac{1}{n} \ \Rightarrow\ n &lt; 2$$
+   此外，$D$ 点入射角 $i$ 需为实数，由 $\sin i = n/2 \le 1$，得 $n \le 2$，自然满足。<br />
+   综上，$n$ 的取值范围为：
+   $$\frac{2}{\sqrt{3}} \le n &lt; 2$$</p>
+</li>
+<li>
+<p><strong>求偏角</strong><br />
+   入射光在 $D$ 点折射偏折，之后在全反射和出射中继续偏转。通过各界面角度矢量合成，可得总偏角为 $60^\circ$（具体过程见教材解析）。</p>
+</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+本题的难点在于将“中点”“垂直”等几何条件转化为角度关系，切忌跳跃推理。全反射条件既给出了 $n$ 的下限，又通过与出射界面的折射共同限定上限，缺一不可。<br />
+<strong>变式</strong>：若棱镜折射率固定为 $n=1.5$，问能否在该光路下实现全反射？或改变入射角使光路成立，求入射角范围。此类问题解法一致，关键在于画准光线、找对角。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-16.html">2018-新课标Ⅱ-16</a>（2018 · 中） 光束在三棱镜中经折射、全反射后射出的光路分析</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/753-光路作图.html">光路作图</a></li>
+</ul>
+</div>
+</body>
+</html>

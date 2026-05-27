@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向心运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向心运动</h1><div class="review-mark" data-stem="向心运动"></div><div class="meta-card"><span><strong>考点</strong>向心运动</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向心运动的条件</strong>：质点所受合力（或合力在指向圆心的分力）恰好等于所需向心力 $m\frac{v^2}{r}$ 时，做匀速圆周运动；若合力小于所需向心力，做离心运动；若合力大于所需向心力，做向心运动（运动半径减小）。</li>
+<li><strong>电场力与向心力结合</strong>：本题极板间电场强度大小 $E \propto \frac{1}{r}$，方向指向 $O$ 点。设 $E = \frac{k}{r}$，正电荷 $q$ 所受电场力 $F = qE = \frac{kq}{r}$，方向指向 $O$。若粒子做半径为 $r$ 的匀速圆周运动，由 $F = m\frac{v^2}{r}$ 得 $\frac{kq}{r} = m\frac{v^2}{r}$，即 $v^2 = \frac{kq}{m}$，速度大小与半径无关，动能 $E_k = \frac12 mv^2 = \frac{kq}{2}$ 为定值。</li>
+<li><strong>动能变化判断</strong>：仅电场力做功，电场力指向 $O$ 点。粒子向 $O$ 点运动（$r$ 减小）时，电场力做正功，动能增加；远离 $O$ 点运动（$r$ 增大）时，电场力做负功，动能减小。</li>
+<li><strong>轨迹与受力分析</strong>：已知入射、出射位置的半径，可判断粒子的运动方向（$r$ 变大或变小），进而推断动能变化。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建立电场力表达式</strong>：根据题设“电场强度大小与到 $O$ 点距离成反比”，设 $E = \frac{k}{r}$，则电场力 $F = qE = \frac{kq}{r}$，方向始终指向 $O$。</li>
+<li><strong>匀速圆周运动的条件应用</strong>：若粒子做圆周运动（如粒子1、2），由 $F = m\frac{v^2}{r}$ 导出 $v^2 = \frac{kq}{m}$，得出速度、动能与半径无关的结论。</li>
+<li><strong>非圆周运动的动能比较</strong>：</li>
+<li>确定粒子的运动方向（轨迹上的箭头或始末位置半径大小）。</li>
+<li>根据电场力方向与位移方向的夹角判断做功正负：向 $O$ 运动，力与位移同向，正功，动能增加；远离 $O$ 运动，负功，动能减小。</li>
+<li>比较入射与出射的动能：粒子3从 $r_2$ 到 $r_1$（$r_2 &gt; r_1$），靠近 $O$，动能增加，故出射动能大；粒子4从 $r_1$ 到 $r_2$，远离 $O$，动能减小，故入射动能大。</li>
+<li><strong>不同粒子的动能对比</strong>：</li>
+<li>若粒子均做匀速圆周运动（粒子1、2），动能相等，与半径无关。</li>
+<li>比较圆周运动粒子与非圆周运动粒子：圆周运动粒子动能恒为 $\frac{kq}{2}$；对于粒子3，其入射动能小于出射动能，但具体值未定，可借助半定量分析：粒子3在 $r_2$ 处入射，若此时速度不足以做圆周运动，则会向 $O$ 靠近，故入射动能小于该处圆周运动所需动能（即 $\frac{kq}{2}$），而出射动能大于 $\frac{kq}{2}$；粒子4反之。进而得出粒子1的动能大于粒子3的入射动能等结论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为向心运动中速度与半径成反比或用 $v = \omega r$ 判断</strong>：本题电场力并非与 $r^2$ 成反比，而是与 $r$ 成反比，导致匀速圆周运动时线速度大小与半径无关，这是易错点。</li>
+<li><strong>电场力方向判断错误</strong>：题中明确“方向指向 $O$ 点”，若误判电场方向，会颠倒做功正负及动能变化结论。</li>
+<li><strong>粒子运动方向辨认不清</strong>：需仔细看图（b）中轨迹和箭头，或根据入射/出射半径大小推断运动方向，方向搞反则动能增减结论全错。</li>
+<li><strong>将圆周运动动能直接推广到非圆周运动</strong>：粒子1、2的动能相等是建立在恰好做匀速圆周运动的前提下，粒子3、4并非圆周运动，不能直接用该结论，必须通过做功分析。</li>
+<li><strong>混淆入射动能与出射动能</strong>：选项问“入射时的动能比出射时的大/小”，需对应具体的粒子轨迹方向，切忌想当然。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022全国乙卷08）</h3>
+<p>一种带电粒子探测装置，两同轴半圆柱形极板半径 $R$ 和 $R+d$，截面内极板间电场强度大小与到 $O$ 点距离成反比，方向指向 $O$。四个带正电同种粒子从极板间通过。粒子1、2做圆心在 $O$、半径分别为 $r_1$、$r_2$（$R &lt; r_1 &lt; r_2 &lt; R+d$）的圆周运动；粒子3从距 $O$ 点 $r_2$ 入射，从 $r_1$ 出射；粒子4从距 $O$ 点 $r_1$ 入射，从 $r_2$ 出射。轨迹如图中虚线所示。判断各粒子动能关系。</p>
+<p><strong>思路</strong>：
+1. 写出电场力表达式，结合圆周运动求粒子1、2的动能特征。
+2. 对粒子3、4，由径矢变化判断电场力做功，得到入射与出射动能的大小关系。
+3. 将粒子3、4的动能与匀速圆周运动“标准动能”比较，再与粒子1、2对比。</p>
+<p><strong>步骤</strong>：
+- 设 $E = \frac{k}{r}$，正电荷受电场力 $F = \frac{kq}{r}$ 指向 $O$。
+- 粒子1在 $r_1$ 做匀速圆周运动：$\frac{kq}{r_1} = m\frac{v_1^2}{r_1} \Rightarrow \frac12 m v_1^2 = \frac{kq}{2}$。同理，粒子2动能 $E_{k2} = \frac{kq}{2}$。故 $E_{k1} = E_{k2}$，C错。
+- 粒子3：从 $r_2$ 到 $r_1$，靠近 $O$，电场力做正功，动能增加，出射动能 &gt; 入射动能，A错。
+- 粒子4：从 $r_1$ 到 $r_2$，远离 $O$，电场力做负功，动能减小，入射动能 &gt; 出射动能，B对。
+- 比较粒子1与粒子3的入射动能：粒子3在 $r_2$ 处入射，若其动能等于 $\frac{kq}{2}$，则会做匀速圆周运动；实际轨迹向 $O$ 弯曲（向心运动），说明所需向心力 $m\frac{v^2}{r_2}$ 小于电场力，即入射速度 $v &lt; \sqrt{\frac{kq}{m}}$，所以入射动能 $&lt; \frac{kq}{2}$。而粒子1动能恰为 $\frac{kq}{2}$，故粒子1入射动能大于粒子3入射动能，D对。
+答案：BD。</p>
+<p><strong>点评/变式</strong>：
+- 本题本质是“辐向电场”中的类天体运动，电场力公式与距离一次方成反比，使得圆周运动的动能成为常数。熟悉“力与距离成反比”的向心运动特征可秒杀部分选项。
+- 变式：若电场强度与距离平方成反比（点电荷电场），则圆周运动速度与半径平方根成反比，动能与半径成反比，结论完全不同。提醒考生切忌思维定势，必须基于题目给定条件推导。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-08.html">2022-全国乙-08</a>（2022 · 中） 带电粒子在辐向电场中的匀速圆周运动与向心、离心运动分析，比较动能大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/461-向心运动.html">向心运动</a></li>
+</ul>
+</div>
+</body>
+</html>

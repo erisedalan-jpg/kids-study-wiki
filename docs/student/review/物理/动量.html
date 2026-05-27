@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>动量</h1><div class="review-mark" data-stem="动量"></div><div class="meta-card"><span><strong>考点</strong>动量</span><span><strong>权重</strong>22</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>动量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：动量</li>
+<li>权重 weight：22</li>
+<li>真题数：3；年份跨度：2018–2024</li>
+<li>出现题位：选择1 选择2 选择7</li>
+<li>难度分布：易2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>动量</strong>：$p=mv$，<strong>矢量</strong>，方向与速度 $v$ 同向。单位：$\text{kg·m/s}$。</li>
+<li><strong>冲量</strong>：$I=Ft$，<strong>矢量</strong>，方向由力 $F$ 的方向决定，是过程量。单位：$\text{N·s}$。</li>
+<li><strong>动量定理</strong>：合外力的冲量等于物体动量的变化量，即
+  $$
+  I_合 = \Delta p = p' - p
+  $$
+  或写成 $F_合 t = mv' - mv$。适用于恒力、变力（此时 $F_合$ 为平均力），解题时须规定正方向。</li>
+<li><strong>动量与动能</strong>：</li>
+<li>动量 $p$ 是矢量，动能 $E_k$ 是标量。</li>
+<li>关系式：$E_k = \dfrac{p^2}{2m}$，$p = \sqrt{2mE_k}$。动量变化，动能不一定变化（如匀速圆周运动）；动能变化，动量大小一定变化。</li>
+<li><strong>动量守恒条件</strong>：系统不受外力或合外力为零；系统内力远大于外力（如碰撞、爆炸）；在某一方向合外力为零，则该方向动量守恒。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>矢量与标量的判定</strong><br />
+   看物理量是否遵从平行四边形定则，即有无方向性。力、速度、动量、冲量、电场强度等为矢量；质量、速率、动能、功、长度等为标量。</p>
+</li>
+<li>
+<p><strong>动量定理的一般步骤</strong><br />
+   ① 明确研究对象和所研究的过程（通常取碰撞、打击的短暂过程）。<br />
+   ② 受力分析，确定合外力。若冲击力远大于重力（如锤子敲钉子、鸡蛋坠地），可忽略重力。<br />
+   ③ 选定正方向，写初末状态的动量 $p_1$、$p_2$（注意符号）。<br />
+   ④ 计算合外力的冲量或平均冲击力：$F t = \Delta p$，求解未知量。</p>
+</li>
+<li>
+<p><strong>动量定理与动能定理联合</strong><br />
+   由 $W$–$x$ 图、$F$–$x$ 图等，利用动能定理求速度变化，再结合动量定理求解时间、冲量或平均力。</p>
+</li>
+<li>
+<p><strong>冲击力的估算</strong><br />
+   ① 将质量统一为 $\text{kg}$，时间统一为 $\text{s}$。<br />
+   ② 忽略重力时 $F = \dfrac{m\Delta v}{\Delta t}$；若不能忽略，按 $F_合 = F - mg = m\dfrac{\Delta v}{\Delta t}$ 计算。<br />
+   ③ 数量级估算可取 $g=10\text{ m/s}^2$，注意有效数字。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>矢量与标量混淆</strong>：误以为速率、动能是矢量，或认为动量没有方向。速度变化动量必变，但动量变化动能不一定变。</li>
+<li><strong>正方向不规定</strong>：动量定理列式时，初速度、末速度、力需带符号，缺少正方向直接代数计算极易错号。</li>
+<li><strong>忽略重力条件误判</strong>：碰撞时间极短，冲击力远大于重力时，方可忽略重力；若不能忽略，必须用合外力冲量。</li>
+<li><strong>单位转换失误</strong>：质量单位 $\text{g}$ 未换为 $\text{kg}$（$50\text{ g}=0.05\text{ kg}$）；时间 $\text{ms}$ 未换为 $\text{s}$（$2\text{ ms}=0.002\text{ s}$）。</li>
+<li><strong>动量变化量计算错</strong>：$\Delta p$ 是末动量减初动量，不是动量大小之差，方向不同时须用矢量减法或规定正方向后代数相减。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题1（2024-辽宁-01）</h3>
+<p><strong>题目</strong><br />
+判断火箭升空过程中，质量、速率、动量、动能中哪个是矢量。<br />
+<strong>思路</strong><br />
+矢量具有方向，只有动量同时有大小和方向。<br />
+<strong>步骤</strong><br />
+1. 质量、速率、动能均只有大小，无方向，是标量。<br />
+2. 动量 $p=mv$，方向与速度方向一致，是矢量。<br />
+<strong>点评/变式</strong><br />
+此类题直击“物理量矢标性”考点。常见矢标易混项：速度（矢）与速率（标）、位移（矢）与路程（标）、动量（矢）与动能（标）、电场强度（矢）与电势（标）。秒杀法：看是否由平行四边形定则合成。</p>
+<h3>题2（2018-新课标Ⅱ-02）</h3>
+<p><strong>题目</strong><br />
+$50\text{ g}$ 鸡蛋从第 25 层楼落下，与地面碰撞时间约 $2\text{ ms}$，估算鸡蛋对地面的冲击力约为多少？<br />
+<strong>思路</strong><br />
+由自由落体求碰前速度，再用动量定理求平均冲击力，估算时忽略碰撞过程中的重力。<br />
+<strong>步骤</strong><br />
+1. <strong>求碰前速度</strong>：取 $g=10\text{ m/s}^2$，一层楼高约 $3\text{ m}$，25 层总高 $h=75\text{ m}$。由 $v^2 = 2gh$ 得 $v=\sqrt{2 \times 10 \times 75}= \sqrt{1500}\approx 38.7\text{ m/s}$。<br />
+2. <strong>统一单位</strong>：质量 $m=50\text{ g}=0.05\text{ kg}$；时间 $\Delta t=2\text{ ms}=0.002\text{ s}$。<br />
+3. <strong>应用动量定理</strong>：设竖直向上为正，碰前速度向下为 $-38.7\text{ m/s}$，碰后末速度 $0$。碰撞过程中鸡蛋受地面向上的平均冲击力 $F$ 和自身重力 $mg$。因 $F \gg mg$，可忽略重力。<br />
+   $$
+   F \Delta t = m \cdot 0 - m(-v) = mv
+   $$
+   $$
+   F = \frac{mv}{\Delta t} = \frac{0.05 \times 38.7}{0.002} \approx 967.5\text{ N} \approx 10^3\text{ N}
+   $$
+4. 由牛顿第三定律，鸡蛋对地面的冲击力大小也为 $10^3\text{ N}$ 量级，对应选项 C。<br />
+<strong>点评/变式</strong><br />
+- 关键点：数量级估算、单位换算、忽略重力条件（$F \gg mg$ 才可忽略）。<br />
+- 变式：若碰撞时间给出 $0.1\text{ s}$，则重力不能忽略，须用 $(F-mg)\Delta t = \Delta p$ 求解。<br />
+- 通用口诀：高空坠物冲击力，先算速度再冲量，正方向定符号，单位转换莫遗忘。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-01.html">2024-辽宁-01</a>（2024 · 易） 该题通过辨析物理量属性，考查矢量和标量的概念区分。</li>
+<li><a href="../../exam/物理/2023-新课标-07.html">2023-新课标-07</a>（2023 · 中） 通过W-x图像分析拉力做功、动能、速度、功率和动量变化。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-02.html">2018-新课标Ⅱ-02</a>（2018 · 易） 估算鸡蛋坠落冲击力，涉及运动学与动量定理的近似计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/346-动量.html">动量</a></li>
+</ul>
+</div>
+</body>
+</html>

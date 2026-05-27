@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>玻意耳定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>玻意耳定律</h1><div class="review-mark" data-stem="玻意耳定律"></div><div class="meta-card"><span><strong>考点</strong>玻意耳定律</span><span><strong>权重</strong>46</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>热学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：热学</li>
+<li>权重 weight：46</li>
+<li>真题数：6；年份跨度：2011–2020</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中5 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>玻意耳定律</strong>：一定质量的理想气体，在温度保持不变时，其压强与体积成反比。公式为：
+  $$p_1V_1 = p_2V_2 \quad \text{或} \quad pV = C(\text{常量})$$</li>
+<li><strong>适用条件</strong>：① 理想气体（或实际气体在压强不太大、温度不太低时）；② <strong>质量不变</strong>（研究对象封闭且无泄漏）；③ <strong>温度不变</strong>（等温过程）。</li>
+<li><strong>关键辅助知识</strong>：</li>
+<li>液体压强公式：$p = p_0 \pm \rho g h$。计算时注意连通器原理、液面高度差以及参考面的选取。</li>
+<li>静力学平衡：对于与气体接触的活塞、液柱等，常通过力的平衡（或压强平衡）建立方程，将力学量与气体压强关联起来。</li>
+<li><strong>变质量问题处理</strong>：对于打气、抽气、用气等涉及气体质量变化的问题，核心思路是<strong>化变质量为定质量</strong>。通常将不同状态的气体，统一折算到同一压强下的体积来列总量守恒方程。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>三步法确定气体状态参量</strong>：</li>
+<li><strong>明确研究对象</strong>：区分是哪一部分气体，用封闭容器（或液柱、活塞）划界，确保质量不变。</li>
+<li><strong>分析初末状态</strong>：依次写出气体在初态和末态的压强 $(p_1, p_2)$、体积 $(V_1, V_2)$。</li>
+<li><strong>建立辅助方程</strong>：<ul>
+<li>压强：通过液面高度差（$\Delta p = \rho g \Delta h$）、活塞受力平衡等关系求得。</li>
+<li>体积：利用容器几何尺寸关系、活塞移动距离等确定。</li>
+</ul>
+</li>
+<li><strong>等温变化直接列式</strong>：在温度不变条件下，直接应用 $p_1V_1 = p_2V_2$ 求解未知量。</li>
+<li><strong>处理关联气体</strong>：对于相互接触或通过活塞、液滴隔开的多部分气体，需对<strong>每一部分气体</strong>分别应用玻意耳定律，并结合它们之间的<strong>压强关系</strong>（如 $p_A = p_B$ 或 $p_A = p_B + \rho g h$）和<strong>体积关系</strong>（如 $V_A + V_B = V_{\text{总}}$）联立求解。</li>
+<li><strong>处理多对象/多过程</strong>：理清气体经历了哪几个等温过程（或状态变化），分阶段应用玻意耳定律，前后状态参量要对应无误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>研究对象不清晰</strong>：在充气、抽气、用气等问题中，容易混淆气体的初始占有状态。务必把变质量问题分解为几部分恒定质量的气体，或选取最终容器内原有气体作为研究对象。</li>
+<li><strong>压强的计算基准</strong>：压强计算极易出错。必须熟练掌握 $p = p_0 \pm \rho g h$ 中正负号的含义（较液面低的一侧压强大），对于U形管、气缸活塞，一定要从已知压强（如大气压）逐步推算到待求压强。</li>
+<li><strong>体积的等效变换</strong>：将气体在不同容器或状态下的体积，通过几何关系正确地联系起来。特别是气缸有不同横截面积时，体积 $V = S \cdot h$ 的对应关系切勿搞错。</li>
+<li><strong>忽略隐含量</strong>：如“$H \gg h$”“缓慢移动”分别暗示着深水区大气压强可看作恒量和热平衡等过程，是使用玻意耳定律的关键条件，解题时必须注意审题。</li>
+<li><strong>漏算几何约束</strong>：多活塞或多液柱联动的问题中，两侧体积变化量受刚性连接（或液体总长度不变）约束，若漏列此方程将无法求解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2020-新课标Ⅱ-14（潜水钟）</h3>
+<ul>
+<li><strong>题目</strong>：简化圆筒钟（截面积 $S$，高 $h$）从水面开口向下吊放至深度 $H$。已知大气压 $p_0$，水的密度 $\rho$，求进入圆筒内水的高度 $l$ 和排尽水需压入的外部空气在 $p_0$ 下的体积。</li>
+<li><strong>思路</strong>：这是典型的变质量问题处理。第（i）问，以封闭在钟内的空气为研究对象，经历水下等温压缩。第（ii）问，将“压入空气使水排尽”的过程，转化为“最终钟内气体 = 原有气体 + 压入气体”，将所有气体折算到压强 $p_0$ 下，用总体积守恒求解。</li>
+<li><strong>步骤</strong>：
+  （i）设水下时钟内气体压强为 $p_1 = p_0 + \rho g H$，体积 $V_1 = (h - l)S$。由玻意耳定律：$p_0 (hS) = p_1 (h - l)S$，解得 $l = \frac{\rho g H}{p_0 + \rho g H} h$。
+  （ii）排尽水后，钟内气体压强为 $p_2 = p_0 + \rho g H$，体积为 $V_2 = hS$。该部分气体由“钟内原有气体”和“压入气体”两部分贡献。设压入空气在 $p_0$ 下的体积为 $\Delta V$，则其等效为在压强 $p_2$ 下的体积满足 $p_0 \Delta V = p_2 V_{\text{压}}$。最终有：$p_2 V_2 = p_0 V_1 + p_0 \Delta V$。代入已知量可解得 $\Delta V = \frac{\rho g H h S}{p_0}$。</li>
+<li><strong>点评/变式</strong>：<strong>化变质量为定质量</strong>是此题的精髓，通过将不同来源的气体统一折算到同一压强（通常是大气压）下，然后建立总体积（或总质量）守恒方程。变式：若问须压入多少质量的气体，可进一步乘以密度。</li>
+</ul>
+<h3>2019-新课标Ⅱ-14（双活塞三部分气体）</h3>
+<ul>
+<li><strong>题目</strong>：横截面积 $2S$ 和 $S$ 的连通气缸，刚性杆连接两活塞分隔出氢气、空气、氮气。已知初始状态，缓慢抽尽空气后求氢气的压强和体积。</li>
+<li><strong>思路</strong>：本题研究对象为抽气<strong>前</strong>的空气、氢气和<strong>后</strong>的氢气、氮气（分属两个独立过程）。关键是利用<strong>活塞的整体平衡</strong>（刚性杆）找到压强关系，利用<strong>刚性杆长度不变</strong>找到体积关联。</li>
+<li><strong>步骤</strong>：
+  (i) <strong>抽气前</strong>：对两活塞整体受力分析（空气压强 $p$ 对两活塞的压力差相消）：$(p_{\text{氢}} - p_0) \cdot 2S = (p_0 - p) S$，解得 $p_{\text{氢}} = \frac{1}{2}(p_0 + p)$。
+  (ii) <strong>抽气后</strong>：对活塞列平衡方程 $p_1 \cdot 2S = p_2 S$（$p_1, p_2$ 为氢气、氮气的压强）。对氢气和氮气分别列玻意耳定律：$p_1 V_1 = p_{\text{氢}} \cdot (2V_0)$，$p_2 V_2 = p_0 V_0$。再由体积关联：两活塞位移量一致，故体积变化量成比例：$\frac{V_1 - 2V_0}{2S} = \frac{V_0 - V_2}{S}$。联立以上四式求解。</li>
+<li><strong>点评/变式</strong>：<strong>连接体问题</strong>的核心是“力”和“几何”的双重约束。压强关系由隔离或整体受力分析得出，体积关系由刚性连接下的位移同步性得出。变式可换为液体连接，约束则变为液柱总长度不变。</li>
+</ul>
+<h3>2016-新课标Ⅱ-14（氧气瓶使用天数）</h3>
+<ul>
+<li><strong>题目</strong>：氧气瓶容积 $V_1=0.08m^3$，初压强 $20p_0$，重新充气压强为 $2p_0$，每日消耗量相当于 $1p_0$ 下的体积 $0.36m^3$，求使用天数。</li>
+<li><strong>思路</strong>：将“用气”看作变质量问题。把瓶内从 $20p_0 \to 2p_0$ 可供使用的部分气体，用玻意耳定律换算成 $1p_0$ 下的总体积，再除以日消耗量。</li>
+<li><strong>步骤</strong>：设瓶内原气体在 $2p_0$ 下体积为 $V_x$，由 $20p_0 \cdot V_1 = 2p_0 \cdot V_x$，得 $V_x = 10V_1 = 0.8m^3$。在 $2p_0$ 压强下可供使用的气体体积为 $V_x - V_1 = 0.72m^3$。再将其折合为 $1p_0$ 下的体积 $V_0$：$2p_0 \times 0.72 = 1p_0 \times V_0$，得 $V_0=1.44m^3$。天数 $n = \frac{1.44}{0.36} = 4$ 天。</li>
+<li><strong>点评/变式</strong>：<strong>等效计算法</strong>非常高效：设想把瓶内始终不可动用的“残气”（$2p_0$ 下占满瓶体积）隔离出来，只让等温膨胀出的“超额体积”供使用。这是处理“气体分装”或“持续供气”类问题的通用技巧。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-14.html">2020-新课标Ⅱ-14</a>（2020 · 中） 利用玻意耳定律和液体压强公式，求解水下圆筒内进水高度及排出水所需压入空气的体积。</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-14.html">2019-新课标Ⅱ-14</a>（2019 · 中） 利用平衡条件与玻意耳定律求解气体压强与体积。</li>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-14.html">2016-新课标Ⅱ-14</a>（2016 · 中） 利用玻意耳定律计算氧气瓶在等温条件下重新充气前可供使用的天数。</li>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-14.html">2015-新课标Ⅱ-14</a>（2015 · 中） 考查玻意耳定律在U形管问题中的应用，根据压强与体积关系求解空气柱长度及注入水银量。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-14.html">2014-新课标Ⅱ-14</a>（2014 · 中） 本题通过加热氮气及活塞移动过程，考查理想气体状态方程与等压、等温变化的应用。</li>
+<li><a href="../../exam/物理/2011-新课标-14.html">2011-新课标-14</a>（2011 · 难） 玻璃管转动过程中理想气体状态变化及压强平衡问题</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/444-玻意耳定律.html">玻意耳定律</a></li>
+</ul>
+</div>
+</body>
+</html>

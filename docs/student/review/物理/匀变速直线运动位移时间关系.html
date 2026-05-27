@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>匀变速直线运动位移时间关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>匀变速直线运动位移时间关系</h1><div class="review-mark" data-stem="匀变速直线运动位移时间关系"></div><div class="meta-card"><span><strong>考点</strong>匀变速直线运动位移时间关系</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2011–2014</li>
+<li>出现题位：选择10 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>匀变速直线运动基本公式</strong><br />
+  速度与时间：$v=v_0+at$<br />
+  位移与时间：$x=v_0t+\dfrac{1}{2}at^2$<br />
+  速度与位移：$v^2-v_0^2=2ax$<br />
+  平均速度：$\bar{v}=\dfrac{v_0+v}{2}=\dfrac{x}{t}$（仅匀变速成立）</p>
+</li>
+<li>
+<p><strong>自由落体与竖直下抛</strong><br />
+  自由落体：$v_0=0$，$a=g$，$h=\dfrac{1}{2}gt^2$，$v=gt$，$v^2=2gh$。<br />
+  忽略空气阻力时，所有物体竖直下落均满足以上规律，与质量无关。</p>
+</li>
+<li>
+<p><strong>运动学实验中的逆向思维</strong><br />
+  匀减速直线运动可逆向视为反方向的初速度为零的匀加速运动，常用以建立物理量关系。例如光电门实验中：$s=v_1t-\dfrac{1}{2}at^2$（$v_1$为末速度，$s$为位移）。</p>
+</li>
+<li>
+<p><strong>图像信息的应用</strong><br />
+  $v-t$图像：斜率代表加速度，图线与时间轴围成的面积代表位移。对变速运动，可依据图像读取最大速度、判断运动性质，并用于受力分析与牛顿第二定律结合求解。</p>
+</li>
+<li>
+<p><strong>平衡条件与空气阻力模型</strong><br />
+  物体达到最大速度（收尾速度）时，加速度为零，所受阻力与重力平衡：$mg=f$。若阻力形式为 $f=kv^2$，则 $mg=kv_m^2$，可直接求出阻力系数 $k$。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>审题定模型</strong><br />
+   先明确题目属于哪种运动：自由落体、匀加速直线运动、还是变加速运动（含图像或阻力分析）。忽略空气阻力则默认匀变速，给出$v-t$图像则需从图像提取最大速度等信息。</p>
+</li>
+<li>
+<p><strong>匀变速直线运动问题的标准步骤</strong>  </p>
+</li>
+<li>选定正方向，标出已知量（$v_0$、$a$、$t$、$x$、$v$ 中的三个及以上）。  </li>
+<li>选用不含未知量的公式联立求解。自由落体可直接代入 $a=g$。  </li>
+<li>
+<p>对于多过程问题，分段利用公式，注意各阶段物理量的衔接。</p>
+</li>
+<li>
+<p><strong>实验题中运动学公式的变形与线性化</strong><br />
+   若已知含 $s$ 与 $t$ 的二次关系 $s=v_1t-\frac{1}{2}at^2$，可将其转化为线性关系：$\dfrac{s}{t}=v_1-\dfrac{1}{2}at$。通过测量多组 $(t, s/t)$ 描点作图，图线斜率的绝对值 $|k|=\dfrac{1}{2}a$，从而求得加速度。注意有效数字保留。</p>
+</li>
+<li>
+<p><strong>结合牛顿第二定律解决阻力问题</strong><br />
+   当运动达到最大速度时，合力为零，由平衡条件列方程，直接解出阻力系数等未知量。若题目要求估算，注意结果保留规定有效数字。</p>
+</li>
+<li>
+<p><strong>图像信息的挖掘</strong><br />
+   分析 $v-t$ 图，读取最大速度，观察运动趋势（加速→趋于匀速），为平衡条件提供依据。必要时由图像斜率的变化定性判断加速度变化。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>位移公式符号错误</strong><br />
+  使用 $s=v_1t-\frac{1}{2}at^2$ 时，容易将加速度前的符号写错。该式源于逆向匀减速（末速度$v_1$，加速度$a$与运动方向相反），务必与正向公式 $s=v_0t+\frac{1}{2}at^2$ 区分清楚。</p>
+</li>
+<li>
+<p><strong>忽略自由落体的隐含条件</strong><br />
+  题干中“忽略空气阻力”“从静止开始下落”等字眼明确暗示 $v_0=0$、$a=g$，但考生常误用一般匀变速公式而不代入 $g$ 或错选其他加速度。</p>
+</li>
+<li>
+<p><strong>线性化处理时函数关系混淆</strong><br />
+  由 $s=v_1t-\frac{1}{2}at^2$ 得到 $\frac{s}{t}=v_1-\frac{1}{2}at$，作 $\frac{s}{t}-t$ 图时，纵轴截距为 $v_1$，斜率大小为 $\frac{1}{2}a$。有些同学会将斜率直接当成加速度 $a$，导致计算结果错误。</p>
+</li>
+<li>
+<p><strong>实验结果有效数字和单位换算</strong><br />
+  题目表格中时间常以毫秒(ms)给出，必须换算为秒(s)后再代入计算，否则加速度数量级会严重错误。保留有效数字时需根据题目要求（如保留2位有效数字）正确记录。</p>
+</li>
+<li>
+<p><strong>误用平均速度公式</strong><br />
+  $\bar{v}=\dfrac{s}{t}$ 适用于任何运动，但 $\bar{v}=\dfrac{v_0+v}{2}$ 仅适用于匀变速直线运动。在非匀变速情形下（如含阻力变加速段），切勿用此式求瞬时速度或加速度。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2014新课标Ⅱ-11）</h3>
+<p>极限运动员从约39km高空跳下，经历4分20秒后打开降落伞，取 $g=10\text{m/s}^2$。<br />
+（1）忽略空气阻力，求从静止下落到距地面1.5km处所需时间及此时速度；<br />
+（2）已知高速下落时阻力 $f=kv^2$，由所给 $v-t$ 图像得到最大速度，估算阻力系数 $k$（保留1位有效数字），总质量 $m=100\text{kg}$。</p>
+<p><strong>思路</strong><br />
+（1）忽略空气阻力即为自由落体，下落高度 $h=39\text{km}-1.5\text{km}=37.5\text{km}=37500\text{m}$。由 $h=\frac{1}{2}gt^2$ 求时间，由 $v=gt$ 求速度。<br />
+（2）由图像读出最大速度 $v_m$，达到最大速度时 $mg=kv_m^2$，直接解出 $k$。</p>
+<p><strong>步骤</strong><br />
+（1）设下落高度 $h=37500\text{m}$，由 $h=\frac{1}{2}gt^2$ 得<br />
+$$t=\sqrt{\frac{2h}{g}}=\sqrt{\frac{2\times37500}{10}}=\sqrt{7500}\approx86.6\text{s}$$<br />
+（或 $t=87\text{s}$，视保留要求）<br />
+此时速度 $v=gt=10\times86.6=866\text{m/s}$。<br />
+（注：实际用时更长，因空气阻力不可忽略，但题设忽略阻力故以此计算。）</p>
+<p>（2）从 $v-t$ 图读出最大速度约为 $v_m\approx100\text{m/s}$（根据题干所附图像典型值，此处按常见解答给出估计），由平衡条件：<br />
+$$mg=kv_m^2$$<br />
+$$k=\frac{mg}{v_m^2}=\frac{100\times10}{100^2}=\frac{1000}{10000}=0.1\text{kg/m}$$<br />
+保留1位有效数字，结果为 $k\approx0.1\text{kg/m}$。（注意：若读图得到 $v_m=40\text{m/s}$ 等，答案会相应变化，重在方法）</p>
+<p><strong>点评/变式</strong><br />
+自由落体与阻力平衡的组合，考查运动学与牛顿第二定律的衔接。注意单位换算为国际单位制，从图像读取信息时需谨慎估读。变式：若给出 $f=kv$ 或 $f=kv^3$，平衡方程为 $mg=kv_m$ 或 $mg=kv_m^3$，解题思路一致。</p>
+<h3><strong>题目2</strong>（2011新课标-10）</h3>
+<p>利用光电门测量滑块在斜面上的加速度。滑块从同一点静止释放，改变光电门甲的位置，记录两光电门间距离 $s$ 及遮光时间 $t$，数据表格已给出。<br />
+（1）推导 $s$、$t$、滑块经乙的瞬时速度 $v_1$、加速度 $a$ 的关系式；<br />
+（2）作 $\frac{s}{t}-t$ 图线；<br />
+（3）由图线求 $a$（保留2位有效数字）。</p>
+<p><strong>思路</strong><br />
+滑块从甲到乙做匀加速直线运动，可将此过程逆向看成从乙到甲的匀减速直线运动（初速度 $v_1$，加速度大小 $a$，位移 $s$），则有 $s=v_1t-\frac{1}{2}at^2$。变形为 $\frac{s}{t}=v_1-\frac{1}{2}at$，作 $\frac{s}{t}-t$ 图应为一条直线，斜率的绝对值为 $\frac{a}{2}$。</p>
+<p><strong>步骤</strong><br />
+（1）关系式：$s=v_1t-\frac{1}{2}at^2$。<br />
+（2）根据表格数据计算 $\frac{s}{t}$，在坐标纸上描点并拟合成直线。<br />
+（3）在直线上取相距较远的两点，计算斜率 $k=\frac{\Delta(s/t)}{\Delta t}$，则 $a=2|k|$。例如，若求得斜率 $k\approx -1.05\text{m/s}^2$（注意单位转换，时间用秒），则 $a=2.1\text{m/s}^2$（保留两位有效数字）。解答中给出的典型值为 $a=2.1\text{m/s}^2$。</p>
+<p><strong>点评/变式</strong><br />
+本题为用线性化处理非线性关系的典型实验题。关键在于逆向运动的公式变形，以及准确作图和求斜率。注意时间要从毫秒换算为秒，否则斜率数量级错误。变式：若测量的是滑块经过甲的速度 $v_0$，则关系式为 $s=v_0t+\frac{1}{2}at^2$，线性化可得 $\frac{s}{t}=v_0+\frac{1}{2}at$，斜率为 $\frac{a}{2}$ 但正负不同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-11.html">2014-新课标Ⅱ-11</a>（2014 · 中） 通过自由落体运动求时间和速度，结合v-t图象与受力平衡估算阻力系数</li>
+<li><a href="../../exam/物理/2011-新课标-10.html">2011-新课标-10</a>（2011 · 中） 通过光电门测量数据，利用匀变速运动公式和图像法求滑块加速度的实验题</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：（暂无对应词条）</li>
+</ul>
+</div>
+</body>
+</html>

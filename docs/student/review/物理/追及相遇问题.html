@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>追及相遇问题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>追及相遇问题</h1><div class="review-mark" data-stem="追及相遇问题"></div><div class="meta-card"><span><strong>考点</strong>追及相遇问题</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>运动学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：运动学</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择2</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>追及与相遇的本质</strong>：两物体在同一时刻到达同一位置（位移相等）。分析时关注速度关系与位移关系。</li>
+<li><strong>核心方程</strong>  </li>
+<li>位移关系：$x_{\text{前}} + x_0 = x_{\text{后}}$（$x_0$ 为初始间距，前物在前、后物在后）  </li>
+<li>速度关系：追及过程中若后物速度小于前物，间距增大；后物速度大于前物，间距减小。<strong>速度相等</strong>是间距出现极值（最远/最近）的临界条件。</li>
+<li><strong>$v-t$ 图象中的关键量</strong>  </li>
+<li>图线与 $t$ 轴围成的<strong>面积</strong>表示位移。  </li>
+<li><strong>交点</strong>（速度相等）对应距离极值时刻；<strong>位移相等</strong>对应面积之差等于初始间距。  </li>
+<li>图象斜率表示加速度：$a = \frac{\Delta v}{\Delta t}$。</li>
+<li><strong>相互作用型追及</strong>：若仅两物体间存在相互作用力，由牛顿第三定律知 $F$ 等大反向，则加速度与质量成反比：$\frac{a_1}{a_2} = \frac{m_2}{m_1}$（光滑或忽略其他外力时）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题与建图</strong><br />
+   明确两物体的初始位置关系（谁前谁后、间距 $d$），画出运动草图或直接利用题给的 $v-t$ 图象。</li>
+<li><strong>抓住关键节点</strong>  </li>
+<li>速度相等的时刻 $t_0$：此时若未相遇，则距离为最值。  </li>
+<li>位移相等的时刻 $t_1$：对应相遇时刻，由 $v-t$ 图象中面积差等于初始间距或面积相等得出。</li>
+<li><strong>利用图象面积、斜率解题</strong>  </li>
+<li>追及问题优先用 $v-t$ 图象：位移 = 面积；相遇条件 = 面积关系。  </li>
+<li>涉及加速度的用斜率；涉及力与运动的用牛顿第二定律结合加速度比。</li>
+<li><strong>列方程求解</strong>  </li>
+<li>若求时间或位移，直接对面积关系列一次方程。  </li>
+<li>若求质量比、力等物理量，先由图象斜率求加速度，再与牛顿定律结合。</li>
+<li><strong>检验结果的合理性</strong><br />
+   相遇次数是否符合实际（如已追上后是否会再次拉开），所求时间是否在图象定义域内。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆速度相等与位移相等</strong>：速度相等时间距最远或最近，不一定相遇；相遇必须位移相等（或面积满足关系）。  </li>
+<li><strong>无视初始间距</strong>：两物体不从同一位置出发时，直接比较面积大小会误判相遇时刻，必须加上初始位移差。  </li>
+<li><strong>误认图象交点就是相遇点</strong>：$v-t$ 图象中曲线交点仅表示该时刻速度相同，不代表位移相同。  </li>
+<li><strong>相互作用力分析不完整</strong>：仅在两物体间有相互作用时，合外力为 $0$（或系统所受合力为 $0$），可用动量守恒；若仅知相互作用力，切勿错误引入外力。  </li>
+<li><strong>加减速方向混淆</strong>：减速运动的位移仍在增加，直到速度减为零后反向时才可能减小，处理匀减速时注意停止时间。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2009-全国Ⅱ-02（利用 $v-t$ 图象分析相互作用追及与质量比）</h3>
+<p><strong>题目</strong><br />
+两物体甲和乙在同一直线上运动，$0\sim0.4\,\text{s}$ 内的 $v-t$ 图象如图所示。若仅在两物体之间存在相互作用，且已知图中 $t_1$ 时刻两物体速度相同（均为 $1\,\text{m/s}$），乙的初速度为 $4\,\text{m/s}$，在 $t=0.4\,\text{s}$ 时乙的速度恰好减为零。求甲、乙的质量比及 $t_1$ 的值。</p>
+<p><strong>思路</strong><br />
+本题为相互作用力下的追及过程。只需从图象斜率获取加速度大小，再利用牛顿第二、三定律即可得质量比；$t_1$ 由乙的匀减速运动规律求出。追及中的速度相等时刻为已知临界条件。</p>
+<p><strong>步骤</strong><br />
+1. <strong>求乙的加速度</strong>：乙从 $v_{\text{乙0}}=4\,\text{m/s}$ 匀减速到 $0$ 历时 $0.4\,\text{s}$，加速度<br />
+   $$a_{\text{乙}} = \frac{0-4}{0.4}\,\text{m/s}^2 = -10\,\text{m/s}^2$$（大小为 $10\,\text{m/s}^2$）。<br />
+2. <strong>求时间 $t_1$</strong>：乙在 $t_1$ 时刻速度 $v=1\,\text{m/s}$，由 $v = v_{\text{乙0}} + a_{\text{乙}}t_1$，<br />
+   $$1 = 4 - 10 t_1 \quad\Rightarrow\quad t_1 = 0.30\,\text{s}.$$<br />
+3. <strong>求甲的加速度</strong>：甲从静止匀加速，$t_1$ 时刻速度也为 $1\,\text{m/s}$，故<br />
+   $$a_{\text{甲}} = \frac{1-0}{0.30}\,\text{m/s}^2 = \frac{10}{3}\,\text{m/s}^2.$$<br />
+4. <strong>求质量比</strong>：两物体仅受彼此间的相互作用力，由牛顿第三定律力大小相等，因此加速度与质量成反比：<br />
+   $$\frac{a_{\text{甲}}}{a_{\text{乙}}} = \frac{m_{\text{乙}}}{m_{\text{甲}}} \quad\Rightarrow\quad \frac{m_{\text{甲}}}{m_{\text{乙}}} = \frac{a_{\text{乙}}}{a_{\text{甲}}} = \frac{10}{\frac{10}{3}} = 3.$$<br />
+   即甲、乙质量比为 $3:1$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题看似求质量比，实则完全依托于追及过程中速度相等的临界信息。$v-t$ 图象的斜率直接给出加速度，而速度相等的时刻往往是解题的突破口。<br />
+- 变式：若给出初始间距，要求判断 $t_1$ 时刻两物体是否相遇或相距最值，则需比较面积差。例如：若甲在乙后方 $d$，$t_1$ 时刻两物体速度相等，此时面积差为某值，可求最远距离或相遇条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-02.html">2009-全国Ⅱ-02</a>（2009 · 中） 两物体v-t图象的分析，考查图象斜率、面积及交点的物理意义。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/822-追及相遇问题.html">追及相遇问题</a></li>
+</ul>
+</div>
+</body>
+</html>

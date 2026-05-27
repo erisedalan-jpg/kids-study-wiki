@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球面波传播</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球面波传播</h1><div class="review-mark" data-stem="球面波传播"></div><div class="meta-card"><span><strong>考点</strong>球面波传播</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球面波</strong>：点波源在各向同性均匀介质中发出的波，波阵面为同心球面。无吸收时，波源的总功率（或总能量）均匀分布在各个球面上。</li>
+<li><strong>能流密度（波的强度）</strong>：单位时间内通过垂直于传播方向的单位面积的能量。对于球面波，强度 $I$ 与距离 $r$ 的平方成反比：<br />
+  $$I = \frac{P}{4\pi r^2}$$<br />
+  其中 $P$ 为波源的总辐射功率。</li>
+<li><strong>光子流密度</strong>：若波以光子形式传播，每秒通过单位面积的光子数 $n$ 同样满足：<br />
+  $$n = \frac{N_{\text{总}}}{4\pi r^2}$$<br />
+  $N_{\text{总}}$ 为波源每秒发出的总光子数，$N_{\text{总}} = \dfrac{P}{\varepsilon}$，$\varepsilon = h\nu = \dfrac{hc}{\lambda}$。</li>
+<li><strong>振幅与距离关系</strong>（机械波）：强度正比于振幅平方，因此振幅 $A \propto \dfrac{1}{r}$。</li>
+<li><strong>适用条件</strong>：点波源、各向同性、均匀无吸收介质、波长远小于传播距离（几何近似成立）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定波源的总输出</strong>：依据功率 $P$、总光子发射率或总能量随时间的变化，明确每秒辐射的总能量或总粒子数。  </li>
+<li><strong>建立球面扩散模型</strong>：距离 $R$ 处波前面积 $S = 4\pi R^2$。  </li>
+<li><strong>列能量守恒或粒子数守恒方程</strong>：总功率 $P = I \cdot 4\pi R^2$，或总光子数率 $N = n \cdot 4\pi R^2$（$n$ 为已知能流密度或光子数密度）。  </li>
+<li><strong>代入已知条件求解未知距离、功率或密度</strong>：若涉及光子数，先由 $E_{\text{总}} = Pt$ 和 $\varepsilon = hc/\lambda$ 求总光子数。  </li>
+<li><strong>合理保留有效数字</strong>：结合题目数据的有效位数给出结果，注意数量级估算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>面积公式误用</strong>：球面面积是 $4\pi R^2$，不是 $\pi R^2$ 或 $2\pi R^2$。</li>
+<li><strong>“垂直通过”的含义</strong>：直接对应能流密度定义，无需乘以 $\cos\theta$ 等方向因子。</li>
+<li><strong>单位换算</strong>：波长常用 nm（$1\text{nm}=10^{-9}\text{m}$），光子能量 $\varepsilon = hc/\lambda$ 需将波长化为米。普朗克常量 $h$ 单位 $\text{J}\cdot\text{s}$，光速 $c$ 单位 $\text{m/s}$ 需统一。</li>
+<li><strong>光子数与能量的对应</strong>：每秒通过单位面积的光子数 $n$ 乘以面积得到每秒总光子数，再乘以单光子能量得到能流密度 $I$，避免漏乘 $h\nu$。</li>
+<li><strong>区分总功率与强度</strong>：题目给出光源功率 $P$ 是总功率，不是某处的强度。距离 $R$ 处的强度为 $P/(4\pi R^2)$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2022·全国乙卷·04）<br />
+一点光源以 $113\,\text{W}$ 的功率向所有方向均匀辐射波长约 $6\times10^{-7}\,\text{m}$ 的光，在离点光源距离为 $R$ 处每秒垂直通过每平方米的光子数为 $3\times10^{14}$ 个。普朗克常量 $h=6.63\times10^{-34}\,\text{J}\cdot\text{s}$，光速 $c=3.0\times10^{8}\,\text{m/s}$。求 $R$ 约为（ ）。</p>
+<p><strong>思路</strong><br />
+光源每秒辐射总能量 $E=Pt$，除以单光子能量得每秒发射总光子数 $N$。在距离 $R$ 处，这些光子均匀分布在半径为 $R$ 的球面上，单位面积光子数 $n = N/(4\pi R^2)$。代入已知 $n$ 反解 $R$。</p>
+<p><strong>步骤</strong><br />
+1. 单光子能量<br />
+   $$\varepsilon = \frac{hc}{\lambda} = \frac{6.63\times10^{-34} \times 3.0\times10^{8}}{6\times10^{-7}} = 3.315\times10^{-19}\,\text{J}$$<br />
+2. 每秒总光子数<br />
+   $$N = \frac{P}{\varepsilon} = \frac{113}{3.315\times10^{-19}} \approx 3.41\times10^{20}\,\text{个}$$<br />
+3. 由 $n = \dfrac{N}{4\pi R^2}$ 得<br />
+   $$R = \sqrt{\frac{N}{4\pi n}} = \sqrt{\frac{3.41\times10^{20}}{4\times3.14\times3\times10^{14}}} \approx \sqrt{9.05\times10^{4}} \approx 301\,\text{m}$$<br />
+   最接近的选项约为 $3\times10^2\,\text{m}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将光子流视为球面波，核心是光子数密度的平方反比律。计算时注意数量级和有效数字，$\pi$ 可取 $3.14$ 进行估算。<br />
+- 变式：若将光源换成声源，已知功率和某处声强，同样可用 $I = P/(4\pi R^2)$ 求距离。若介质有吸收，则需引入衰减因子，不适用此简单球面模型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-04.html">2022-全国乙-04</a>（2022 · 中） 该题考查光源功率与光子数的关系，结合球面波传播模型估算距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/665-球面波传播.html">球面波传播</a></li>
+</ul>
+</div>
+</body>
+</html>

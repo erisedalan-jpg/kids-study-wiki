@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代数运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>代数运算</h1><div class="review-mark" data-stem="代数运算"></div><div class="meta-card"><span><strong>考点</strong>代数运算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>玻意耳定律</strong>：一定质量的理想气体在温度不变时，压强与体积成反比，即 $pV = \text{常量}$ 或 $p_1 V_1 = p_2 V_2$。  </li>
+<li><strong>液体压强公式</strong>：静止液体中深度为 $h$ 处的压强 $p = p_0 + \rho g h$（$p_0$ 为液面气压，$\rho$ 为液体密度）。当容器高度 $h \ll H$ 时，可认为容器内各处水深近似为 $H$，压强恒定。  </li>
+<li><strong>等温变质量问题（分态式）</strong>：温度不变时，各部分气体的 $pV$ 之和守恒。对初、末态各气体分别写出 $pV$，再求和相等：$\sum (p_i V_i)<em _text_末="\text{末">{\text{初}} = \sum (p_j V_j)</em>$。常用“整体法”避开中间过程。  }</li>
+<li><strong>代数运算核心</strong>：合理设未知量，用几何关系表达体积，用液体压强表达气体压强，列出方程后先作符号化简（约去公因子 $S$、合并同类项），再代入或求出表达式，最后代入数据或保留代数结果。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读题建模</strong>：明确气体经历等温变化，确定研究对象（一段气体或整体气体）。注意条件 $H \gg h$ 提示可作压强近似。  </li>
+<li><strong>设未知数</strong>：针对进入液柱高度、需加入的气体体积等设未知字母，用已知量表示气柱长度、体积。  </li>
+<li><strong>写压强</strong>：依据液体压强规律写出各状态下气体的压强。注意参考面（一般取气‑液交界处）。若近似条件成立，说明理由后简化为恒定水深 $H$。  </li>
+<li><strong>列方程</strong>：  </li>
+<li>质量一定：$p_1 V_1 = p_2 V_2$。  </li>
+<li>质量变化（充气、放气）：选末态全部气体为研究对象，列初态各部分的 $pV$ 之和 = 末态 $pV$。  </li>
+<li><strong>代数化简</strong>：消去几何因子 $S$，将压强表达式代入，整理成所求量的代数式。优先符号运算，避免中间数值计算。  </li>
+<li><strong>回代求解</strong>：若有多问，可将前问结果代入后问方程，继续化简得最终表达式。  </li>
+<li><strong>检验</strong>：检查量纲合理性，确认是否已体现 $H \gg h$ 等近似。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>压强近似缺说明</strong>：直接用 $p_0 + \rho g H$ 作为筒内气体压强，而不说明因 $H \gg h$ 忽略了筒内气柱高度引起的微小压差，会被扣分。正确写法：“由于 $H \gg h$，筒内各点水深近似为 $H$，气体压强为 $p_0 + \rho g H$。”  </li>
+<li><strong>体积表达错误</strong>：进水高度 $l$，空气柱高度是 $h - l$，误写成 $l$ 或 $h + l$。  </li>
+<li><strong>变质量对象混乱</strong>：压入空气时，误将原有气体仍按初态（大气压 $p_0$）处理，导致方程漏项。应意识到原有气体已被压缩至 $p_0+\rho g H$。  </li>
+<li><strong>代数运算粗心</strong>：代入 $l$ 表达式时未提取公因式，分式通分、约分出错。建议先得 $V = \frac{(p_0+\rho g H)S l}{p_0}$，再将 $l$ 代入得 $V = \frac{\rho g H h S}{p_0}$，避免繁琐分式运算。  </li>
+<li><strong>混淆压强参考态</strong>：第二问所求为压入空气“在其压强为 $p_0$ 时的体积”，若不留意结尾要求，可能误答成其他压强下的体积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·新课标Ⅱ·14 节选）：潜水钟简化为截面积 $S$、高 $h$ 的开口向下圆筒。从水面吊放至水深 $H$（$H \gg h$），水密度 $\rho$，大气压 $p_0$，等温变化。<br />
+（i）求筒内水的高度 $l$；<br />
+（ii）保持 $H$ 不变，压</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-14.html">2020-新课标Ⅱ-14</a>（2020 · 中） 利用玻意耳定律和液体压强公式，求解水下圆筒内进水高度及排出水所需压入空气的体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/649-代数运算.html">代数运算</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相对误差</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相对误差</h1><div class="review-mark" data-stem="相对误差"></div><div class="meta-card"><span><strong>考点</strong>相对误差</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>相对误差定义</strong>：测量值的绝对误差与被测量的真实值（或约定真值）之比。常用百分比形式表示：
+  $$|\delta| = \left|\frac{\text{测量值}-\text{真实值}}{\text{真实值}}\right| \times 100\%$$
+  在动量守恒验证中，若碰撞前后系统总动量的相对误差不超过给定的允许值（如 $5\%$），则可认为在误差允许范围内动量守恒成立。</li>
+<li><strong>实验原理——验证一维动量守恒定律</strong>：在气垫导轨上，两滑块碰撞系统合外力可视为零，满足动量守恒条件。设碰前总动量 $p_{\text{前}}=m_1v_{10}+m_2v_{20}$，碰后总动量 $p_{\text{后}}=m_1v_1+m_2v_2$。若 $p_{\text{前}} = p_{\text{后}}$ 在允许误差内成立，则定律得证。</li>
+<li><strong>速度测量方法</strong>：</li>
+<li><strong>打点计时器测速</strong>：利用纸带上点间距离 $\Delta x$ 和打点周期 $T=1/f$，求得平均速度作瞬时速度 $v=\dfrac{\Delta x}{nT}$（通常 $n$ 取整数个间隔）。</li>
+<li><strong>光电门测速</strong>：用遮光片宽度 $d$ 和挡光时间 $\Delta t$ 求瞬时速度 $v=\dfrac{d}{\Delta t}$。</li>
+<li><strong>实验条件</strong>：气垫导轨需调水平；遮光片宽度适中；碰前纸带需保留一段匀速运动的点迹；碰撞为对心碰撞。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>梳理已知数据</strong>：确定两滑块质量 $m_1$、$m_2$，遮光片宽度 $d$，打点周期 $T=1/f$，光电门挡光时间 $\Delta t_B$，及纸带上有效距离。</li>
+<li><strong>计算碰前速度</strong>：</li>
+<li>选取纸带上碰前一段点距清晰的匀速段，量出两点间距离 $s_1$，根据 $v_0 = \dfrac{s_1}{T}$ 得出碰前 $A$ 的速度（$B$ 静止时 $v_{B0}=0$）。</li>
+<li>若碰前 $B$ 有初速度，同理求出。</li>
+<li><strong>计算碰后速度</strong>：</li>
+<li>碰后 $A$ 的速度 $v_1$：选取碰后纸带上距离 $s_2$，$v_1=\dfrac{s_2}{T}$。</li>
+<li>碰后 $B$ 的速度 $v_2$：$v_2 = \dfrac{d}{\Delta t_B}$。</li>
+<li><strong>计算碰前、碰后总动量</strong>：$p_{\text{前}} = m_1v_{10} + m_2v_{20}$，$p_{\text{后}}= m_1v_1 + m_2v_2$。</li>
+<li><strong>求相对误差并判断</strong>：
+   $$|\delta| = \left| \frac{p_{\text{前}} - p_{\text{后}}}{p_{\text{前}}} \right| \times 100\%$$
+   将 $|\delta|$ 与题目所给允许的最大相对误差比较，得出结论。</li>
+<li><strong>有效数字与单位</strong>：注意所有物理量单位统一为国际单位，运算结果保留合理有效数字。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>遮光片宽度单位</strong>：$d$ 常以 $\text{cm}$ 给出，计算速度时必须换算为 $\text{m}$，如 $1.00\,\text{cm}=0.0100\,\text{m}$。</li>
+<li><strong>光电门时间单位</strong>：挡光时间 $\Delta t$ 常以 $\text{ms}$ 给出，需换算为 $\text{s}$，如 $3.500\,\text{ms}=3.500\times10^{-3}\,\text{s}$。</li>
+<li><strong>纸带计数弄错</strong>：打点周期 $T=1/f$，相邻点间时间间隔为一个 $T$，误将多个间隔当成一个周期会导致速度错误。</li>
+<li><strong>相对误差公式分母</strong>：规范中分母应为“真值”，即碰前总动量 $p_{\text{前}}$，不能用碰后动量作分母。</li>
+<li><strong>忽略误差允许范围</strong>：最后必须明确比较 $|\delta|$ 与给定的最大相对误差（如 $5\%$），得出结论，否则失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> 利用气垫导轨验证动量守恒定律。实验装置如图，测得滑块 $A$ 质量 $m_1=0.310\,\text{kg}$，滑块 $B$ 质量 $m_2=0.108\,\text{kg}$，遮光片宽度 $d=1.00\,\text{cm}$；打点计时器频率 $f=50\,\text{Hz}$，碰后光电计时器显示时间 $\Delta t_B=3.500\,\text{ms}$。碰撞前后打出的纸带如图（b）所示（碰前选取 $4.00\,\text{cm}$，碰后选取 $2.00\,\text{cm}$）。若实验允许的相对误差绝对值最大为 $5\%$，判断是否在误差范围内验证了动量守恒定律并写出运算过程。</p>
+<p><strong>思路</strong> 分别从纸带和光电门求出碰前碰后速度，计算碰撞前后系统总动量，代入相对误差公式，与 $5\%$ 比较。</p>
+<p><strong>步骤</strong>
+1. 单位换算：$d=1.00\,\text{cm}=0.0100\,\text{m}$，$\Delta t_B = 3.500\,\text{ms}=3.500\times10^{-3}\,\text{s}$，打点周期 $T=1/f=0.02\,\text{s}$。
+2. 碰前 $A$ 的速度：$v_0 = \dfrac{4.00\times10^{-2}}{0.02}=2.00\,\text{m/s}$，$B$ 静止，$v_{B0}=0$。
+   碰前总动量 $p_{\text{前}} = m_1v_0 =0.310\times2.00=0.620\,\text{kg·m/s}$。
+3. 碰后 $A$ 的速度：$v_1 = \dfrac{2.00\times10^{-2}}{0.02}=1.00\,\text{m/s}$。
+   碰后 $B$ 的速度：$v_2 = \dfrac{d}{\Delta t_B} = \dfrac{0.0100}{3.500\times10^{-3}} \approx 2.857\,\text{m/s}$。
+   碰后总动量 $p_{\text{后}} = m_1v_1 + m_2v_2 = 0.310\times1.00 + 0.108\times2.857 \approx 0.310 + 0.3086 = 0.6186\,\text{kg·m/s}$。
+4. 计算相对误差：
+   $$|\delta| = \left|\frac{0.620 - 0.6186}{0.620}\right| \times 100\% \approx 0.23\%$$
+5. 因为 $0.23\% &lt; 5\%$，所以在实验允许的误差范围内验证了动量守恒定律。</p>
+<p><strong>点评/变式</strong> 本题核心是将速度测量转化为纸带和光电门的数据提取，相对误差只要求最终比较。变式可拓展为碰撞前后 $B$ 也有初速度，或光电门记录的是碰前速度，需灵活运用动量守恒式。注意速度方向的判断，正负号必须包含在动量表达式中。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-18.html">2014-新课标Ⅱ-18</a>（2014 · 中） 通过纸带信息计算碰撞前后速度，验证动量守恒并分析相对误差是否在5%内。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/487-相对误差.html">相对误差</a></li>
+</ul>
+</div>
+</body>
+</html>

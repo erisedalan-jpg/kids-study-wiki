@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像法</h1><div class="review-mark" data-stem="图像法"></div><div class="meta-card"><span><strong>考点</strong>图像法</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图像法的核心</strong>：将物理量间的非线性关系通过坐标变换转为线性关系（“化曲为直”），利用图线的斜率、截距等几何特征求解物理量。</li>
+<li><strong>通用步骤</strong>：</li>
+<li>导出所研究的两个物理量间的函数关系 $y = f(x)$；</li>
+<li>通过代数变形写成 $Y = kX + b$ 的形式，其中 $Y$、$X$ 只含测量数据，$k$、$b$ 含待求量；</li>
+<li>确定纵轴 $Y$、横轴 $X$，描点作图；</li>
+<li>在拟合直线上取两较远点计算斜率 $k$，延长图线读取截距 $b$（注意单位与起点）；</li>
+<li>代入 $k$、$b$ 表达式解出待求物理量。</li>
+<li><strong>典型应用——伏阻法测电源 $E$、$r$</strong>（电压表内阻 $R_V$、并联定值电阻 $R_0$ 扩大测量范围）：<br />
+  闭合电路欧姆定律
+  $$E = U + \left( \frac{U}{R_V} + \frac{U}{R_0} \right)(R + r)$$
+  变形得
+  $$\frac{1}{U} = \frac{1}{E} \left( 1 + \frac{r}{R_{\text{并}}} \right) + \frac{1}{E R_{\text{并}}} \cdot R$$
+  其中 $R_{\text{并}} = \dfrac{R_V R_0}{R_V + R_0}$，图线 $\dfrac{1}{U} - R$ 为直线。<br />
+  斜率 $k = \dfrac{1}{E R_{\text{并}}}$，截距 $b = \dfrac{1}{E} \left( 1 + \dfrac{r}{R_{\text{并}}} \right)$，联立解得
+  $$E = \frac{1}{k R_{\text{并}}}, \quad r = \frac{b}{k} - R_{\text{并}}$$</li>
+<li><strong>适用条件</strong>：两轴均为线性坐标；所用数据点应均匀分布在拟合直线两侧；计算斜率时不得使用原始实验数据点代入公式直接求平均，必须从图线上取值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写原始方程</strong>：根据电路结构，由闭合电路欧姆定律或部分电路欧姆定律列出 $E$ 与测量量 $U$、$I$（或 $R$）的关系式。注意电表内阻影响不可忽略时，应按实际电流路径写。</li>
+<li><strong>线性化变形</strong>：把方程整理为 $\displaystyle \frac{1}{U} = A \cdot R + B$ 或 $\displaystyle \frac{1}{I} = A \cdot R + B$ 等形式，明确斜率和截距中包含的已知量（如 $R_V$、$R_0$）与待求量（$E$、$r$）。</li>
+<li><strong>保护措施判据</strong>：闭合开关前电阻箱应处于<strong>阻值最大</strong>位置，以减小电流、保护电压表（防止超量程）。</li>
+<li><strong>图像信息读取</strong>：</li>
+<li>看清坐标起点（是否从零开始），截距 $b$ 直接读取纵轴交点的值；</li>
+<li>斜率 $k = \dfrac{\Delta Y}{\Delta X}$，选取点应标注在拟合直线上，不能直接用原始数据点且两取点距离尽量远；</li>
+<li>单位换算：电阻常用 $\Omega$ 或 $k\Omega$，电压用 $V$ 或 $mV$，计算时统一为国际单位。</li>
+<li><strong>联立求解</strong>：把 $k$、$b$ 的表达式联立，解出 $E$、$r$。注意有效数字与题目给的数据匹配。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>保护电阻阻值选小</strong>：为防止电压表超量程，闭合开关前电阻箱 $R$ 必须取较大值，若错选小阻值，回路电流大，电压表分压可能超过量程损坏表头。</li>
+<li><strong>$\frac{1}{U}$ 表达式漏项或错并</strong>：电压表与定值电阻 $R_0$ 并联时，总电流 $I = U/R_V + U/R_0$，易漏掉任一分支；若 $R_0$ 与电压表串联扩程，则 $I = U/R_V$，路端电压变成 $U_V + U_{R0}$，两种情况不可混淆。</li>
+<li><strong>斜率和截距代反</strong>：变形后直线常为 $y = kx + b$，将 $y$ 对应于 $\frac{1}{U}$，$x$ 对应于 $R$，计算 $E$、$r$ 时代入关系易倒置。</li>
+<li><strong>图像坐标非齐次</strong>：如图线纵轴起点不为零，截距 $b$ 不能用直接目视读取值代入零点的纵坐标，应由延长线在纵轴上的交点确定（线性坐标下读取原始坐标值）。</li>
+<li><strong>忘记等效并联电阻</strong>：当电压表和定值电阻并联时，流过它们的总电流由并联总电阻 $R_{\text{并}} = R_V R_0/(R_V+R_0)$ 决定，若仍用 $R_V$ 或 $R_0$ 单独计算会出错。</li>
+<li><strong>有效数字错误</strong>：$E$ 和 $r$ 的最终结果应与题目所给测量值的最小位数保持一致或合理保留，避免多写或少写。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021年全国乙卷·第10题（伏阻法测 $E$、$r$）</h3>
+<p><strong>题目简述</strong><br />
+利用电压表（量程 $1\,\text{V}$，内阻 $R_V = 380.0\,\Omega$）、定值电阻 $R_0 = 20.0\,\Omega$、电阻箱 $R$（$0\sim 999.9\,\Omega$）、开关及导线，测量一节电动势约 $1.5\,\text{V}$、内阻小于 $2\,\Omega$ 的电池的 $E$ 和 $r$。电压表与 $R_0$ 并联后与电阻箱串联接入电源。完成：(1)闭合开关前选择电阻箱阻值；(3)写出 $\frac{1}{U}$ 关于 $R$、$R_0$、$R_V$、$E$、$r$ 的表达式；(4)利用得到的 $\frac{1}{U} - R$ 图线求 $E$、$r$。</p>
+<p><strong>思路</strong><br />
+- 保护电压表：开关闭合前回路电流应最小，因此 $R$ 取最大给定值 $15.0\,\Omega$。<br />
+- 推导 $\frac{1}{U}$：电压表读数 $U$，通过其电流 $I_V = U/R_V$，通过 $R_0$ 的电流 $I_0 = U/R_0$，干路总电流 $I = I_V + I_0$。路端电压 $U_{\text{端}} = U + IR$（电阻箱分压）。由闭合电路欧姆定律 $E = U_{\text{端}} + Ir$，消去 $I$ 和 $U_{\text{端}}$，变形即可得线性关系。<br />
+- 利用图像：$\frac{1}{U} - R$ 图线得斜率 $k$ 和截距 $b$，代入表达式联立求出 $E$、$r$。</p>
+<p><strong>步骤</strong><br />
+1. （1）为保护电压表（量程 $1\,\text{V}$），$R$ 应选大阻值，填 $15.0$。
+2. （3）由电路：并联部分电压 $U$，总电流
+   $$I = \frac{U}{R_V} + \frac{U}{R_0} = U\left( \frac{1}{R_V} + \frac{1}{R_0} \right)$$
+   路端电压 $U_{\text{端}} = U + IR$。代入 $E = U_{\text{端}} + Ir$：
+   $$E = U + U\left(\frac{1}{R_V} + \frac{1}{R_0}\right)R + U\left(\frac{1}{R_V} + \frac{1}{R_0}\right)r$$
+   提取 $U$，并移项得
+   $$\frac{1}{U} = \frac{1}{E} + \frac{1}{E}\left(\frac{1}{R_V} + \frac{1}{R_0}\right)(R+r)$$
+   令 $R_{\text{并}} = \dfrac{R_V R_0}{R_V + R_0} = \dfrac{380.0 \times 20.0}{380.0 + 20.0}\,\Omega = 19.0\,\Omega$，则
+   $$\frac{1}{U} = \frac{1}{E}\left(1 + \frac{r}{R_{\text{并}}}\right) + \frac{1</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-10.html">2021-全国乙-10</a>（2021 · 中） 测量电源电动势和内阻实验,涉及电表保护、闭合电路欧姆定律及图像法数据处理</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/565-图像法.html">图像法</a></li>
+</ul>
+</div>
+</body>
+</html>

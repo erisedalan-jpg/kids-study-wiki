@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>远距离输电</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>远距离输电</h1><div class="review-mark" data-stem="远距离输电"></div><div class="meta-card"><span><strong>考点</strong>远距离输电</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>交流电 与 变压器</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：交流电 与 变压器</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>远距离输电核心关系（忽略电抗，纯电阻线路）：</li>
+<li>输送功率 $P_{\text{送}} = UI$（$U$ 为送端电压，$I$ 为线路电流）。</li>
+<li>输电线电阻 $R$ 上的功率损失：$$\Delta P = I^2 R = \left(\frac{P_{\text{送}}}{U}\right)^2 R$$ 在 $P_{\text{送}}$、$R$ 不变时，$\Delta P \propto \frac{1}{U^2}$。</li>
+<li>输电线上的电压损失：$$\Delta U = IR = \frac{P_{\text{送}}}{U}R$$ 在 $P_{\text{送}}$、$R$ 不变时，$\Delta U \propto \frac{1}{U}$。</li>
+<li>用户端得到的电压：$U_{\text{用}} = U - \Delta U$；用户得到的功率：$P_{\text{用}} = P_{\text{送}} - \Delta P$。</li>
+<li>适用条件：单相交流、忽略线路容抗感抗、变压器视为理想、负载适应。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>抓不变量</strong>：明确题目中输送功率、输电线电阻、送端电压等哪些量保持恒定。</li>
+<li><strong>写出比例式</strong>：利用 $\Delta P = \dfrac{P_{\text{送}}^2 R}{U^2}$、$\Delta U = \dfrac{P_{\text{送}} R}{U}$，直接得到 $\Delta P$ 与 $U^2$ 成反比、$\Delta U$ 与 $U$ 成反比。</li>
+<li><strong>代入倍数关系</strong>：当送端电压变为原来的 $k$ 倍时，$\Delta P$ 变为 $\frac{1}{k^2}$ 倍，$\Delta U$ 变为 $\frac{1}{k}$ 倍。</li>
+<li><strong>判定选项</strong>：根据变化后的表达式直接选出正确选项，避免死记硬背。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>混淆 $\Delta P$ 和 $\Delta U$ 的依赖关系：把 $\Delta P \propto 1/U$ 或 $\Delta U \propto 1/U^2$ 记反。</li>
+<li>直接对 $\Delta P = I^2 R$ 中 $I$ 与 $U$ 的关系判断错误，忽略 $P_{\text{送}}$ 恒定条件下 $I = P_{\text{送}}/U$。</li>
+<li>忽略“输送功率不变”这一前提，错误使用 $P=U^2/R$（该式仅在 $U$ 全部加在 $R$ 上时成立，此处 $U$ 为送端电压，并非 $R$ 两端电压）。</li>
+<li>忘记输电线路电阻 $R$ 是定值，错误认为 $R$ 会随电压改变。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2020-新课标Ⅱ-06</h3>
+<p><strong>题目</strong>：从 A 处用 550 kV 超高压向 B 处输电，输电线损耗功率为 $\Delta P$，电压下降 $\Delta U$。保持 A 处输送功率和输电线电阻不变，改用 1100 kV 特高压，求新的 $\Delta P'$ 与 $\Delta U'$ 的关系。</p>
+<p><strong>思路</strong>：
+- 确定不变量：输送功率 $P_{\text{送}}$、输电线电阻 $R$。
+- 电压 $U$ 从 550 kV 升为 1100 kV，变为原来的 2 倍。
+- 利用比例式直接求 $\Delta P'$ 和 $\Delta U'$。</p>
+<p><strong>步骤</strong>：
+1. 输电线电流 $I = \frac{P_{\text{送}}}{U}$，当 $U' = 2U$ 时，$I' = \frac{I}{2}$。
+2. 功率损失 $\Delta P = I^2 R = \left(\frac{P_{\text{送}}}{U}\right)^2R$，因此 $\Delta P' = \Delta P \times \left(\frac{U}{U'}\right)^2 = \frac{1}{4}\Delta P$。
+3. 电压损失 $\Delta U = I R = \frac{P_{\text{送}}}{U}R$，因此 $\Delta U' = \Delta U \times \frac{U}{U'} = \frac{1}{2}\Delta U$。
+4. 对照选项：A ($\Delta P' = \frac{1}{4}\Delta P$) 正确；D ($\Delta U' = \frac{1}{2}\Delta U$) 正确。</p>
+<p><strong>点评/变式</strong>：本题直接用比例法，避开了具体数值计算，是远距离输电的经典考法。常见变式：保持升压变压器匝数比改变，或加入用户端功率变化的情景，需注意不变量是否改变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-06.html">2020-新课标Ⅱ-06</a>（2020 · 中） 特高压输电中，输电线上功率损耗和电压降与输电电压的关系判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/414-远距离输电.html">远距离输电</a></li>
+</ul>
+</div>
+</body>
+</html>

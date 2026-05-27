@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>周期公式</h1><div class="review-mark" data-stem="周期公式"></div><div class="meta-card"><span><strong>考点</strong>周期公式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>带电粒子在匀强磁场中的基本运动</strong>
+   质量为 $m$、电荷量为 $q$ 的粒子以速度 $v$ 垂直射入磁感应强度为 $B$ 的匀强磁场，只受洛伦兹力作用，做匀速圆周运动。</p>
+</li>
+<li>
+<p><strong>核心公式</strong></p>
+</li>
+<li>洛伦兹力提供向心力：$qvB = m\frac{v^{2}}{r}$</li>
+<li>轨道半径：$r = \frac{mv}{qB}$</li>
+<li>周期（与速度无关）：$T = \frac{2\pi r}{v} = \frac{2\pi m}{qB}$</li>
+<li>角速度：$\omega = \frac{2\pi}{T} = \frac{qB}{m}$</li>
+<li>
+<p>向心加速度：$a = \frac{qvB}{m}$ 或 $a = \frac{v^{2}}{r} = \omega^{2}r$</p>
+</li>
+<li>
+<p><strong>适用条件</strong></p>
+</li>
+<li>粒子速度方向与磁场方向垂直（$v \perp B$）</li>
+<li>
+<p>忽略重力影响（洛伦兹力远大于重力等其他力）</p>
+</li>
+<li>
+<p><strong>比例关系（$v$ 相同，$m,q$ 不变时）</strong></p>
+</li>
+<li>$r \propto \frac{1}{B}$</li>
+<li>$a \propto B$</li>
+<li>$T \propto \frac{1}{B}$</li>
+<li>$\omega \propto B$</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>确定不变量的思维起点</strong>
+   题目出现“速率相同”的同一带电粒子，立即锁定不变量：$v$、$m$、$q$。
+   变量仅来自不同区域的磁感应强度 $B$。</p>
+</li>
+<li>
+<p><strong>建立公式比例链</strong>
+   将所求物理量（$r$、$a$、$T$、$\omega$）用题目中的不变量和变量表达，写出正反比关系：</p>
+</li>
+<li>$r = \frac{mv}{qB} \implies r \propto \frac{1}{B}$</li>
+<li>$a = \frac{qvB}{m} \implies a \propto B$</li>
+<li>$T = \frac{2\pi m}{qB} \implies T \propto \frac{1}{B}$</li>
+<li>
+<p>$\omega = \frac{qB}{m} \implies \omega \propto B$</p>
+</li>
+<li>
+<p><strong>套用比例快速对照</strong>
+   设基准区域参数（如Ⅰ区 $B_Ⅰ = kB$，Ⅱ区 $B_Ⅱ = B$），将各物理量的倍数关系逐项写出，直接匹配选项。</p>
+</li>
+<li>
+<p><strong>排除陷阱选项</strong>
+   特别注意方向性：$T$ 与 $\omega$ 互为倒数，若 $B$ 变为 $k$ 倍，周期变为 $1/k$ 倍而非 $k$ 倍；加速度、角速度与 $B$ 成正比。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>周期与速度/半径关联性误判</strong>
+  中学阶段常见错误：从 $T=\frac{2\pi r}{v}$ 看，认为 $r$ 变了周期就变。实际上 $r$ 与 $v$ 同步变化，当 $v$ 不变、$B$ 改变时，$r$ 变但 $v$ 不变，则 $T$ 可由 $T=\frac{2\pi m}{qB}$ 直接判断，与速度无关。</p>
+</li>
+<li>
+<p><strong>比例颠倒</strong>
+  未明确Ⅰ、Ⅱ区 $B$ 大小关系，直接主观推测。题干“Ⅰ中的磁感应强度是Ⅱ中的k倍”，应严格赋值：$B_Ⅰ = kB$，$B_Ⅱ = B$。很多考生将 $k$ 倍关系弄反，导致全题错误。</p>
+</li>
+<li>
+<p><strong>混淆角速度与周期的倒数关系</strong>
+  周期与角速度互为倒数，当 $B$ 变为 $k$ 倍时，$\omega$ 变为 $k$ 倍，$T$ 变为 $1/k$ 倍。部分考生会错误地认为周期也变为 $k$ 倍。</p>
+</li>
+<li>
+<p><strong>加速度表达式混乱</strong>
+  加速度既可用 $a=\frac{qvB}{m}$，也可用 $a=\frac{v^2}{r}$。若用后者且错误地认为 $r$ 不变或代入错误比例，则会得出相反的结论。最稳妥的方法是用 $a \propto B$ 直接判断。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2015-新课标Ⅱ-06</h3>
+<p><strong>题目</strong>：两个匀强磁场区域Ⅰ和Ⅱ，Ⅰ中的磁感应强度是Ⅱ中的 $k$ 倍。两个速率相同的电子分别在两磁场区域做圆周运动。与Ⅰ中运动的电子相比，Ⅱ中的电子（ ）<br />
+A. 运动轨迹的半径是Ⅰ中的 $k$ 倍<br />
+B. 加速度的大小是Ⅰ中的 $k$ 倍<br />
+C. 做圆周运动的周期是Ⅰ中的 $k$ 倍<br />
+D. 做圆周运动的角速度是Ⅰ中的 $k$ 倍  </p>
+<p><strong>思路</strong>：<br />
+电子速率 $v$ 相同，质量 $m$、电荷量 $e$ 均保持不变。设Ⅱ区磁感应强度为 $B$，则Ⅰ区为 $kB$。写出半径、加速度、周期、角速度的表达式，比较Ⅱ区与Ⅰ区物理量的比值。</p>
+<p><strong>步骤</strong>：<br />
+1. 半径：$r = \frac{mv}{eB}$，则 $r_Ⅰ = \frac{mv}{ekB}$，$r_Ⅱ = \frac{mv}{eB}$，$\frac{r_Ⅱ}{r_Ⅰ} = k$，即Ⅱ中半径是Ⅰ中的 $k$ 倍。A正确。
+2. 加速度：$a = \frac{evB}{m}$，$a_Ⅰ = \frac{ev \cdot kB}{m}$，$a_Ⅱ = \frac{evB}{m}$，$\frac{a_Ⅱ}{a_Ⅰ} = \frac{1}{k}$，即Ⅱ中加速度是Ⅰ中的 $\frac{1}{k}$ 倍。B错误。
+3. 周期：$T = \frac{2\pi m}{eB}$，$T_Ⅰ = \frac{2\pi m}{ekB}$，$T_Ⅱ = \frac{2\pi m}{eB}$，$\frac{T_Ⅱ}{T_Ⅰ} = k$，即Ⅱ中周期是Ⅰ中的 $k$ 倍。C正确。
+4. 角速度：$\omega = \frac{eB}{m}$，$\omega_Ⅰ = \frac{ekB}{m}$，$\omega_Ⅱ = \frac{eB}{m}$，$\frac{\omega_Ⅱ}{\omega_Ⅰ} = \frac{1}{k}$，即Ⅱ中角速度是Ⅰ中的 $\frac{1}{k}$ 倍。D错误。</p>
+<p><strong>答案</strong>：AC</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是抓住“相同速率”同一粒子，直接利用与 $B$ 的比例关系得出结论。<br />
+- 变式训练：若将“速率相同”改为“动量大小相同”或“动能相同”，则比例关系会发生变化，需重新推导。例如动能相同，$v \propto \frac{1}{\sqrt{m}}$（若 $m$ 可变），此时周期仍与速度无关，但半径表达式要调整。务必强化不变量意识。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-06.html">2015-新课标Ⅱ-06</a>（2015 · 中） 电子在不同磁感应强度匀强磁场中做匀速圆周运动的半径、加速度、周期、角速度比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">周期公式</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>波速</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>波速</h1><div class="review-mark" data-stem="波速"></div><div class="meta-card"><span><strong>考点</strong>波速</span><span><strong>权重</strong>19</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：19</li>
+<li>真题数：3；年份跨度：2018–2023</li>
+<li>出现题位：解答15 选择1</li>
+<li>难度分布：易1 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>波的形成与传播</strong>：机械振动在介质中的传播形成机械波。波传播的是振动形式和能量，介质中各质点仅在平衡位置附近振动，并不随波迁移。</li>
+<li><strong>描述波的三个物理量</strong>：</li>
+<li>波速 $v$：振动形式在介质中传播的速度。<strong>波速由介质本身的性质决定</strong>，同一列波在不同介质中传播时波速不同。</li>
+<li>频率 $f$（或周期 $T$）：波的频率等于波源振动的频率。<strong>频率由波源决定</strong>，与介质无关。波从一种介质进入另一种介质时，频率（或周期）保持不变。</li>
+<li>波长 $\lambda$：一个周期内波传播的距离，或振动相位总是相同的两个相邻质点间的距离。$\lambda$ 由介质和波源频率共同决定。</li>
+<li><strong>基本关系</strong>：
+  $$v = \lambda f = \frac{\lambda}{T}$$
+  该公式对一切波均适用。使用时注意“同种介质比波速，同种波源比频率，波长跟着两者变”。</li>
+<li><strong>波形图与波速求解</strong>：</li>
+<li>已知波形曲线随时间的变化，可通过波形移动的距离 $\Delta x$ 与对应时间 $\Delta t$ 求波速：$v = \dfrac{\Delta x}{\Delta t}$。</li>
+<li>注意传播方向的不确定性：若未明确方向，需讨论沿 $x$ 轴正、负方向传播两种情况，波形移动距离不同。</li>
+<li>时间与周期的约束：若已知 $\Delta t&lt;T$，则 $\Delta x&lt;\lambda$，可唯一确定传播距离；若 $\Delta t$ 无此限制，则出现多解：$\Delta x = n\lambda + \Delta x_0$（$n=0,1,2,\dots$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断波从一种介质进入另一种介质时各物理量的变化</strong>：</li>
+<li>先锁定不变量：频率（周期）由波源决定，不变。</li>
+<li>再根据介质判断波速：不同介质波速一般不同（如声波在固体中波速大于液体、气体）。</li>
+<li>最后由 $v=\lambda f$ 得出波长的变化：$v$ 变 $f$ 不变 $\Rightarrow \lambda$ 同比例变化。</li>
+<li>可记忆“波速看介质，频率看波源，波长二者兼看”。</li>
+<li><strong>由波形图和时间求波速、周期的一般步骤</strong>：</li>
+<li>明确波的传播方向（若未指定则需分正、负方向讨论）。</li>
+<li>从波形对比中找出在时间 $\Delta t$ 内波形平移的距离 $\Delta x$（注意单位一致，通常将 cm 换算为 m）。若已知 $\Delta t&lt;T$，则 $\Delta x&lt;\lambda$，移动距离只有一种最短的情境。</li>
+<li>计算波速：$v = \dfrac{\Delta x}{\Delta t}$。</li>
+<li>利用 $T = \dfrac{\lambda}{v}$ 求周期，或直接由比例关系求 $T$。</li>
+<li>若波沿反方向传播，重复上述过程。</li>
+<li><strong>涉及声波在不同介质中传播时间差的问题</strong>：</li>
+<li>设共同传播距离为 $L$（如桥长）。</li>
+<li>由 $t = \dfrac{L}{v}$ 分别表示两种介质中的传播时间。</li>
+<li>利用时间差 $\Delta t = t_1 - t_2$（注意慢的减快的）列方程解出 $L$。</li>
+<li>若再求波长比，利用频率不变：$\dfrac{\lambda_2}{\lambda_1} = \dfrac{v_2}{v_1}$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误以为波从一种介质进入另一种介质时频率会改变</strong>。牢记：频率仅由波源决定，与介质无关。真题“声波在空气中和水中”考查点即在于此。</li>
+<li><strong>混淆波速的决定因素</strong>：波速由介质决定，而非波源振幅或频率。同一介质中不同频率的波（如声波）波速相同，光波除外（色散时略有不同，但中学阶段通常视为相同）。</li>
+<li><strong>处理波形平移问题时忘记传播方向的多解性</strong>：只看图盲目给出一种移动距离，导致漏解。必须严格按方向分情况计算。</li>
+<li><strong>忽略“周期 $T&gt;\Delta t$”这一限制条件</strong>：若题设明确指出该条件，则可唯一确定平移距离小于一个波长；若没有此条件，则应考虑周期性多解（一般通过 $n\lambda$ 叠加），但真题中往往附加条件以简化。</li>
+<li><strong>单位换算错误</strong>：波形图横坐标常以 cm 给出，而时间可能以 s 给出，求波速时要统一为国际单位制（m/s），避免计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2023-新课标-01</h3>
+<p><strong>题目</strong>：船上人和水下潜水员都能听见轮船鸣笛声。声波在空气中和水中传播时的物理量比较，选择正确的选项。</p>
+<p><strong>思路</strong>：抓住核心——频率由声源决定，两种介质中频率相同；波速由介质决定，水和空气不同；再由 $v=\lambda f$ 推出波长不同。</p>
+<p><strong>步骤</strong>：
+- 频率 $f$ 和周期 $T$ 由振源（轮船汽笛）决定，同一声音在空气和水中传播时 $f$、$T$ 均相同，排除 B、C、D。
+- 声波在空气和水中波速 $v$ 不同（水中声速约 1500 m/s，空气中约 340 m/s）。
+- 由 $\lambda = v/f$ 知，频率相同时，波速不同导致波长不同。
+- 正确答案：A（波速和波长均不同）。</p>
+<p><strong>点评/变式</strong>：本题属于基础概念辨析，常考点为“频率由波源决定、波速由介质决定”。变式：若声波由空气进入水中，波速变大，则波长也变大。</p>
+<h3>2. 2021-全国乙-15</h3>
+<p><strong>题目</strong>：给出某一时刻实线波形和经 0.3 s 后的虚线波形，已知周期 $T&gt;0.3$ s，分别求波沿 $x$ 轴正、负方向传播时的波速大小、周期（正方向）和周期（负方向）。</p>
+<p><strong>思路</strong>：由波形对比确定两个可能的平移距离（正方向移动 15 cm，负方向移动 5 cm），利用 $T&gt;\Delta t$ 知移动距离小于一个波长，可直接算出波速，再根据波长 $\lambda=0.2$ m（由图读出）求周期。</p>
+<p><strong>步骤</strong>：
+- 读图：波长 $\lambda = 0.2$ m，实线与虚线在相邻波峰（或波谷）间距即为 $\lambda$。
+- 正方向传播：波形在 0.3 s 内向右平移 15 cm = 0.15 m。
+  $$\text{波速 } v_1 = \frac{0.15\ \text{m}}{0.3\ \text{s}} = 0.5\ \text{m/s}$$
+  $$\text{周期 } T_1 = \frac{\lambda}{v_1} = \frac{0.2}{0.5}\ \text{s} = 0.4\ \text{s}$$
+- 负方向传播：波形向左平移 5 cm = 0.05 m。
+  $$\text{波速 } v_2 = \frac{0.05}{0.3}\ \text{m/s} = \frac{1}{6}\ \text{m/s} \approx 0.167\ \text{m/s}$$
+  周期 $T_2 = \dfrac{0.2}{1/6}\ \text{s} = 1.2\ \text{s}$。
+- 答案：0.5 m/s；0.4 s；1.2 s。</p>
+<p><strong>点评/变式</strong>：本题关键点在“$T&gt;0.3$ s”限制，确保波形移动不到一个波长。若无此限制，正方向移动距离需写为 $(0.15 + n\times0.2)$ m，出现多解。考试需仔细审题，利用限制条件简化。</p>
+<h3>3. 2018-新课标Ⅱ-15</h3>
+<p><strong>题目</strong>：声波在空气中速度 340 m/s，钢铁中 4900 m/s。桥长未知，敲击一端，听到空气和钢铁中传来的声音时间差 1.00 s。求桥长；若空气中波长为 $\lambda$，求钢铁中波长是 $\lambda$ 的多少倍。</p>
+<p><strong>思路</strong>：利用时间差列方程求桥长；利用频率不变，波长比等于波速比。</p>
+<p><strong>步骤</strong>：
+- 设桥长 $L$，空气传播时间 $t_1 = \dfrac{L}{v_\text{空}}$，钢铁传播时间 $t_2 = \dfrac{L}{v_\text{钢}}$。
+- 时间差 $t_1 - t_2 = 1.00$ s，即：
+  $$\frac{L}{340} - \frac{L}{4900} = 1$$
+  通分：$\dfrac{4900L - 340L}{340\times4900} = 1 \Rightarrow \dfrac{4560L}{340\times4900} = 1$。
+  解得 $L \approx 365$ m（精确值 $\dfrac{340\times4900}{4560}\approx 365.35$ m，答案 365 m）。
+- 同一声音频率 $f$ 不变，由 $v = \lambda f$ 得 $\dfrac{\lambda_\text{钢}}{\lambda_\text{空}} = \dfrac{v_\text{钢}}{v_\text{空}} = \dfrac{4900}{340} = \dfrac{245}{17} \approx 14.4$。
+- 答案：365 m；$\dfrac{245}{17}$（或14.4）。</p>
+<p><strong>点评/变式</strong>：典型“敲桥”问题，抓住时间差和速度差即可。波长倍数计算再次印证“波速由介质决定、频率不变”的核心规律。变式可改为已知桥长和两种波速，求时间差；或已知时间差和一种波速、桥长，求另一波速等。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-01.html">2023-新课标-01</a>（2023 · 易） 声波在不同介质中传播时频率和周期不变，波速和波长不同</li>
+<li><a href="../../exam/物理/2021-全国乙-15.html">2021-全国乙-15</a>（2021 · 中） 根据波的传播方向，通过波形移动距离和时间求波速与周期。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-15.html">2018-新课标Ⅱ-15</a>（2018 · 中） 该题考查声波在不同介质中传播的速度、时间差、波长与频率的关系及计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/369-波速.html">波速</a></li>
+</ul>
+</div>
+</body>
+</html>

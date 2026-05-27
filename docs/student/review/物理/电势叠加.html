@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电势叠加</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电势叠加</h1><div class="review-mark" data-stem="电势叠加"></div><div class="meta-card"><span><strong>考点</strong>电势叠加</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电势叠加原理</strong>：电势是标量，空间某点电势等于各场源电荷在该点产生电势的代数和。<br />
+  $$\varphi = \varphi_1 + \varphi_2 + \cdots + \varphi_n$$</li>
+<li><strong>点电荷电势</strong>：取无穷远处电势为零，点电荷 $Q$ 在距离 $r$ 处产生的电势 $\varphi = k\dfrac{Q}{r}$（$k$ 为静电力常量）。正电荷电势为正，负电荷电势为负。</li>
+<li><strong>电场强度叠加</strong>：电场强度是矢量，遵循平行四边形定则。多个点电荷在某点产生的合场强等于各场源电荷单独存在时场强的矢量和。</li>
+<li><strong>对称性与电势、电场的关系</strong></li>
+<li><strong>电荷分布关于某平面镜像对称且电荷等量同号</strong>：对称点电势相等；场强垂直于对称面时分量对称，平行于对称面时分量反向。</li>
+<li><strong>电荷分布关于某平面镜像对称且电荷等量异号</strong>：对称点的电势互为相反数（奇对称），电势叠加后该对称面上总电势为零；电场强度的垂直于该面的分量同向（偶对称），平行于该面的分量反向。</li>
+<li>均匀带电圆环轴线上的场强 $E = k\dfrac{Qx}{(R^2+x^2)^{3/2}}$，方向沿轴线；轴线上的电势 $\varphi = k\dfrac{Q}{\sqrt{R^2+x^2}}$。非轴线上的点一般用微元对称抵消法分析。</li>
+<li><strong>常见特殊结论</strong>：等量异种电荷连线的中垂面为等势面且电势为零；中垂面上各点场强方向均垂直于中垂面。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确定位</strong>：看清带电体的形状、电荷分布、所求点的空间方位，标注电荷的正负、分布区域。  </li>
+<li><strong>判断对称类型</strong>  </li>
+<li>若有平面对称且电荷异号，优先使用奇偶对称分析电势、场的对称性。  </li>
+<li>水平、竖直直径往往是判断对称面的关键参考线。  </li>
+<li><strong>电势对标量叠加</strong>：比较两点电势时，可将带电体分割为对称微元，一对等量异号微元在对称面上产生的电势之和为零；对称点电势直接根据奇对称关系得到。  </li>
+<li><strong>电场对矢量叠加</strong>：将场强沿对称轴和垂直对称轴方向分解，利用对称性判断哪些分量抵消、哪些叠加，从而确定场强的大小和方向是否相同。  </li>
+<li><strong>利用已知模型结论</strong>：等量异种电荷中垂面电势为零、场强方向垂直于中垂面；均匀半球壳/半圆环可等效为无数点电荷的组合叠加。  </li>
+<li><strong>逐选项验证</strong>：用①②③…分步验证各选项，先判断电势再判断场强，或相反，谨防混用标量与矢量规则。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>将电势当作矢量</strong>：直接套用场强对称结论判断电势是否相等，对等量异种对称情形误以为对称点电势相等，忽视电势奇对称特性。  </li>
+<li><strong>混淆“等量同种”与“等量异种”的对称规律</strong>：等量同种对称面上电势不为零且两侧对称点电势相等；等量异种对称面上电势为零，两侧对称点电势互为相反数。  </li>
+<li><strong>场强“相同”判据不全</strong>：场强相同要求大小相等且方向相同。只判断大小相等就认为场强相同，忽略方向差异。  </li>
+<li><strong>对竖直直径上点的电场方向误判</strong>：均匀带电半圆环在轴线上各点产生的场强方向不是简单的径向，需利用微元对称性得出总场强方向。常错误认为上、下对称点场强方向相反。  </li>
+<li><strong>电势为零点与电场为零点混淆</strong>：电势为零处电场强度可以不为零（如等量异种电荷中垂面上），反之亦然。不可以用“电势相等则电场必相同”或“电场为零则电势为零”进行推理。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2020-新课标Ⅱ-07</h3>
+<p><strong>题目</strong><br />
+竖直面内，一绝缘细圆环的上半圆均匀分布正电荷，下半圆均匀分布等量负电荷。$a$、$b$ 为圆环水平直径上的两个点，$c$、$d$ 为竖直直径上的两个点，四点与圆心的距离均相等。下列说法正确的是（　）<br />
+A. $a$、$b$ 两点的场强大小相等、方向相同<br />
+B. $a$、$b$ 两点的电势相等<br />
+C. $c$、$d$ 两点的场强大小相等、方向相同<br />
+D. $c$、$d$ 两点的电势相等  </p>
+<p><strong>思路</strong><br />
+- 电荷分布关于水平直径镜像对称且上下电荷等量异号 → 水平直径所在平面为零势面，电势奇对称；电场竖直分量偶对称，水平分量抵消。<br />
+- $a$、$b$ 均在水平直径上，距心等距，对称性完全相同 → 场强必相同，电势均为零。<br />
+- $c$、$d$ 关于水平直径对称，应用奇偶对称直接得场强同向、等大，电势互为相反数。</p>
+<p><strong>步骤</strong><br />
+1. <strong>分析水平直径（$a$、$b$ 点）</strong>：<br />
+   取上半圆正电荷微元与下半圆对称处带等量负电荷的微元构成一对。在 $a$ 点，这对微元产生的电势一正一负大小相等，总和为零。所有微元对的贡献叠加，可得水平直径上各点总电势 $\varphi = 0$。$a$、$b$ 均在此直径上，所以 $\varphi_a = \varphi_b = 0$，B 正确。<br />
+   电场：这一对微元在 $a$ 点产生的场强水平分量等大反向抵消，竖直分量等大同向（竖直向下）。所有微元对的竖直分量共同叠加，方向均竖直向下，且 $a$、$b$ 距离圆心相等，由对称性知场强大小相等、方向相同，故 A 正确。<br />
+2. <strong>分析竖直直径（$c$、$d$ 点）</strong>：<br />
+   电荷分布关于水平直径呈反对称（上正下负）。由此推出电势关于水平直径 <strong>奇对称</strong>：$\varphi(y) = -\varphi(-y)$。$c$ 在上方，$d$ 在下方且与 $c$ 对称，所以 $\varphi_c = -\varphi_d \neq 0$，D 错误。<br />
+   场强为电势的负梯度，竖直分量 $E_y = -\dfrac{d\varphi}{dy}$，由奇对称得 $E_y(-y) = E_y(y)$，即场强竖直分量关于水平直径 <strong>偶对称</strong>。水平分量为零（所有水平分量的微元贡献因对称而抵消）。故 $c$、$d$ 两点场强均沿竖直方向，大小相等且方向相同（均指向下方），C 正确。<br />
+3. <strong>结论</strong>：正确选项为 A、B、C。</p>
+<p><strong>点评与变式</strong><br />
+- 本题核心是“等量异号＋镜像对称”产生的奇偶场特征，不需进行定量积分。掌握这一对称分析方法能快速破解类似带电圆环、半球壳、双点电荷配对等问题。<br />
+- 变式：若把下半圆也改为正电荷（全环等量同种），则 $a$、$b$ 场强均为零（圆心处场强为零，但 $a$、$b$ 不在圆心，场强不为零？需重新分析，但对称性改变），电势 $a$、$b$ 相等且为正，$c$、$d$ 场强反向、电势相等。模型变化后要用对应对称规律，切忌生搬硬套。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-07.html">2020-新课标Ⅱ-07</a>（2020 · 中） 该题考查绝缘圆环上等量异种电荷在直径上各点的电场分布与电势比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/668-电势叠加.html">电势叠加</a></li>
+</ul>
+</div>
+</body>
+</html>

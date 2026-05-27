@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆周运动临界条件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆周运动临界条件</h1><div class="review-mark" data-stem="圆周运动临界条件"></div><div class="meta-card"><span><strong>考点</strong>圆周运动临界条件</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：填空12</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向心力公式</strong>：$F_n=m\frac{v^2}{r}=m\omega^2r$，方向始终指向圆心，改变线速度方向。</li>
+<li><strong>竖直面内圆周运动临界条件（无支撑绳模型）</strong><br />
+  ① 恰好通过最高点：$mg=m\frac{v_{\min}^2}{r}\;\Rightarrow\;v_{\min}=\sqrt{gr}$。<br />
+  ② 不脱离轨道但上升高度不超过圆心等高点：在圆心等高处速度减为零即返回，临界满足 $\frac12mv^2=mg r$，对应最低点速度 $v_0\le\sqrt{2gr}$。<br />
+  ③ 若 $v_0&gt;\sqrt{5gr}$，能做完整圆周运动；$\sqrt{2gr}&lt;v_0&lt;\sqrt{5gr}$ 时物块在未到最高点前即脱离轨道做斜抛。</li>
+<li><strong>有支撑杆模型</strong>：最高点最小速度为零，$v=0$ 时杆提供支持力 $F_N=mg$；当 $v&gt;\sqrt{gr}$ 时变为拉力。</li>
+<li><strong>平抛运动</strong>：水平匀速 $x=v_0t$，竖直自由落体 $y=\frac12gt^2$，合速度 $v=\sqrt{v_x^2+v_y^2}$，位移偏向角与速度偏向角满足 $\tan\theta=2\tan\alpha$。</li>
+<li><strong>能量守恒与动能定理</strong>：系统弹性势能 $E_p=\frac12k\Delta x^2$，弹簧压缩量相同则 $E_p$ 相同；摩擦生热 $Q=\mu mg x$；关联过程列能量方程。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题并拆解运动阶段</strong>：理清直线、圆周、平抛等各段运动，明确衔接点的速度关系。</li>
+<li><strong>按阶段选用规律</strong>  </li>
+<li>直线+摩擦：动能定理或能量守恒，$W_{\text{弹}}+\sum W_f=\Delta E_k$。  </li>
+<li>圆周运动：一般机械能守恒（光滑轨道），结合临界条件求速度范围。  </li>
+<li>脱离后的抛体运动：利用平抛规律求位移或落点。</li>
+<li><strong>找准圆周运动的临界状态</strong>  </li>
+<li>若要求“不脱离且能滑下”，临界为恰好到达圆心等高处（速度为零）或恰好过最高点（$v=\sqrt{gr}$），依题意判断。  </li>
+<li>列方程：对最低点→临界点用机械能守恒，代入临界速度求解物理量。</li>
+<li><strong>处理弹簧弹性势能</strong>：抓住“相同压缩量→相同弹性势能”，由已知条件求出 $E_p$，再用于其他过程。</li>
+<li><strong>求解取值范围</strong>：由临界方程得到不等式，联立解得待求量的区间，注意边界能否取等。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆绳模型与杆模型</strong>：无支撑的圆轨道（如本题半圆内侧）属绳模型，最高点必须有速度；有支撑（杆、管道内侧）最高点速度可为零。</li>
+<li><strong>随意使用 $\sqrt{gr}$ 作为“不脱离”的唯一条件</strong>：若只要求不脱离且能返回，上升高度不超过圆心等高（速度为零）也是临界，需根据题意“仍能沿圆轨道滑下”区分。</li>
+<li><strong>忽略弹簧弹性势能由压缩量决定</strong>：同一弹簧相同压缩量，无论水平竖直，$E_p$ 相同，不要误认为与重力有关。</li>
+<li><strong>在能量等式里漏掉摩擦生热</strong>：有摩擦的水平段必须计入 $Q=\mu m g x$，且注意能量分配方向。</li>
+<li><strong>平抛落点计算</strong>：将圆周轨道末速度直接当平抛初速度时，需注意速度方向（切线水平），若从圆轨道顶端水平飞出则初速度水平；若在非顶端脱离，需分解速度。</li>
+<li><strong>质量出现时符号混淆</strong>：本题中竖直时物体质量为 $5m$，水平滑动物块质量为 $m_P$，推导时避免将 $m$ 与 $m_P$ 等同。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2016·新课标Ⅱ·12）</h3>
+<p>轻质弹簧竖直放置时，顶端释放 $5m$ 物体，压缩至最短时弹簧长度由 $2l$ 变为 $l$。将该弹簧水平放置，一端固定，另一端接触物块 P（不连接）。水平轨道 AB 长 $5l$，动摩擦因数 $\mu=0.5$，B 端与半径 $l$ 的光滑半圆轨道 BCD 相切，直径 BD 竖直。弹簧压缩至 $l$ 后释放 P。<br />
+（1）P 质量 $m$，求 P 到 B 点的速度和离开圆轨道后落回 AB 上的位置与 B 点距离；<br />
+（2）P 能滑上圆轨道且仍能沿圆轨道滑下，求 P 质量 $m_P$ 的取值范围。</p>
+<h3><strong>思路</strong></h3>
+<p>（1）先利用竖直情形求出弹簧最大弹性势能 $E_p=5mgl$；水平释放时该弹性势能转化为 P 的动能和 AB 段摩擦生热，可求 $v_B$；接着判断 P 在圆轨道上的运动形式——能量是否足够过最高点？经计算 $v_B$ 不足以到达圆心等高以上，会从某点脱离？但第一问要求“离开圆轨道后落回 AB”，暗示会脱离，需先上升到某高度脱离，然后作斜抛落到 AB 上。可用动能定理求脱离点速度，结合圆周临界脱离条件（支持力为零）求出脱离位置，再处理斜抛运动求水平位移。<br />
+（2）“能滑上圆轨道且仍能沿圆</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-12.html">2016-新课标Ⅱ-12</a>（2016 · 难） 该题考查弹簧弹性势能与圆周运动、平抛运动结合的综合问题，涉及临界条件分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/465-圆周运动临界条件.html">圆周运动临界条件</a></li>
+</ul>
+</div>
+</body>
+</html>

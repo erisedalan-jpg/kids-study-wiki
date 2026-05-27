@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像面积分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像面积分析</h1><div class="review-mark" data-stem="图像面积分析"></div><div class="meta-card"><span><strong>考点</strong>图像面积分析</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：填空13</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图像面积的物理本质</strong>：在物理图像中，图线与坐标轴围成的“面积”往往具有明确物理意义，是图像法解题的核心工具。常见的有：</li>
+<li><strong>P-V 图（压强-体积图）</strong>：过程曲线与横轴（体积轴）所围面积表示<strong>气体对外做功</strong>（或外界对气体做功）的绝对值。当气体体积增大（$\Delta V&gt;0$），气体对外做正功，面积取正；体积减小（$\Delta V&lt;0$），外界对气体做正功，面积取负。循环过程中，<strong>闭合曲线围成的面积</strong>表示一个循环中气体对外所做的净功（或外界对气体做的净功），顺时针循环净功为正，逆时针为负。</li>
+<li><strong>v-t 图（速度-时间图）</strong>：图线与时间轴围成的面积表示<strong>位移</strong>。时间轴上方面积为正位移，下方为负位移。</li>
+<li><strong>F-x 图（力-位移图）</strong>：图线与位移轴围成的面积表示<strong>力做的功</strong>。</li>
+<li><strong>a-t 图（加速度-时间图）</strong>：面积表示<strong>速度变化量</strong>。</li>
+<li><strong>F-t 图（力-时间图）</strong>：面积表示<strong>冲量</strong>。</li>
+<li><strong>理想气体热力学循环核心公式</strong>：</li>
+<li>热力学第一定律：$\Delta U = Q + W$（或 $Q = \Delta U - W$，视符号规定）。绝热过程 $Q=0$；等温过程 $\Delta U=0$；等容过程 $W=0$，$\Delta U = Q$；等压过程 $W = -p\Delta V$。</li>
+<li>理想气体内能仅由温度决定：$T$ 变则 $\Delta U \neq 0$。</li>
+<li><strong>P-V 图功的判定</strong>：过程线与 $V$ 轴围成的面积直接对应 $|W|$，比较不同过程做功大小，只需比较面积大小。若过程方向使 $V$ 增大，气体对外做功，$W&lt;0$（系统对外为正，外界对系统为负，依热力学第一定律的常见符号：$\Delta U = Q + W$，$W$ 为外界对气体做功，气体膨胀 $W&lt;0$，气体被压缩 $W&gt;0$）；反之则为正功。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ul>
+<li><strong>步骤一：明确图像类型及坐标轴含义</strong><br />
+  迅速判断是 P-V、v-t、F-x 等哪类图像，确认横、纵坐标代表的物理量及其单位。</li>
+<li><strong>步骤二：确定“面积”的物理量</strong><br />
+  P-V 图→功；v-t 图→位移；F-x 图→功；a-t 图→速度变化等。并明确“正面积”与“负面积”的物理含义（方向、正负功、吸放热等）。</li>
+<li><strong>步骤三：分段分析“面积”对应的物理过程</strong><br />
+  在 P-V 图中，体积变化趋势（$\Delta V$ 的正负）决定功的正负；曲线斜率的含义（如绝热线比等温线陡）辅助判断过程性质；结合气态方程 $pV/T = C$ 判断温度变化，进而确定 $\Delta U$ 的正负。</li>
+<li><strong>步骤四：关联核心定律进行推理判断</strong><br />
+  在热力学问题中，运用热力学第一定律 $\Delta U = Q + W$（或别的符号版本）进行 $Q$（吸放热）的推断：</li>
+<li>若 $\Delta U$ 和 $W$ 均可由图像直接或间接得出，则 $Q$ 可求；</li>
+<li>循环过程：$\Delta U_{\text{循环}}=0$，故 $Q_{\text{总}} = -W_{\text{总}}$，即净吸热等于对外净功（顺时针循环）。</li>
+<li><strong>步骤五：对比与汇总</strong><br />
+  对于多过程循环，列表比较各阶段 $W$、$\Delta U$、$Q$ 的正负与大小，尤其注意闭合路径总面积代表净功。</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li><strong>面积符号判断失误</strong>：在 P-V 图中，习惯规定 $V$ 增大过程气体对外做功 $W&lt;0$（或取正功但符号处理混乱），导致热力学第一定律计算吸放热时符号颠倒。须先统一符号定则：一般取 $\Delta U = Q + W$，$W$ 为外界对气体做的功，气体膨胀 $W&lt;0$，气体压缩 $W&gt;0$。</li>
+<li><strong>误把任意“面积”当功</strong>：只有 P-V 图中的面积才直接代表功，其他图像的面积各有含义（如 v-t 面积是位移），切不可混淆。</li>
+<li><strong>忽视体积不变过程</strong>：等容过程中 $\Delta V=0$，图线为竖直直线，面积为零，$W=0$，但内能仍可变化，此时 $\Delta U = Q$。考生常误认为只要有压强变化就有做功。</li>
+<li><strong>循环方向导致功的正负混淆</strong>：在 P-V 图中，顺时针循环的闭合面积为正，表示气体对外做净功，$W_{\text{总}}&lt;0$（外界对系统做负功，即系统对外做正功）；逆时针循环反之。记反会导致吸放热总量判断错误。</li>
+<li><strong>绝热与等温线比较错误</strong>：P-V 图中绝热线比等温线更陡，利用面积比较做功大小时，若过程性质判断错误，直接导致热力学第一定律分析全错。</li>
+<li><strong>忽略内能变化仅看面积</strong>：判断吸放热时，不能仅凭做功 $W$，必须同时分析 $\Delta U$（由 $T$ 变化定），否则易误认为“对外做功就一定要吸热”（若内能同时大幅降低，也可能放热）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2021-全国乙-13</h3>
+<p><strong>题目</strong>：一定量的理想气体从状态 $a(p_0,V_0,T_0)$ 经历 $ab$、$bc$、$ca$ 三个热力学过程回到状态 $a$，各过程在 P-V 图中的图线如图所示。下列说法正确的是（多选，原图略，此处以常见循环为例：$ab$ 为等温膨胀，$bc$ 为等容降压，$ca$ 为绝热压缩，顺时针循环）<br />
+<strong>思路</strong>：<br />
+1. 明确 P-V 图面积代表做功，循环方向决定总功正负；<br />
+2. 逐段利用气体状态方程判定 $\Delta T$（内能变化）；<br />
+3. 联合热力学第一定律分析 $Q$。<br />
+<strong>步骤</strong>：<br />
+- $ab$ 过程：等温膨胀，$\Delta U_{ab}=0$，$V$ 增大，气体对外做功 $W_{ab}&lt;0$（外界对气体做负功）。由 $\Delta U = Q + W$，得 $Q_{ab} = -W_{ab} &gt; 0$，气体从外界吸热。图线下方面积代表功的大小。<br />
+- $bc$ 过程：等容降压，$V$ 不变，$W_{bc}=0$。由 $pV/T=C$，$p$ 降低则 $T$ 降低，$\Delta U_{bc}&lt;0$。由 $\Delta U = Q$，得 $Q_{bc}&lt;0$，气体对外放热。<br />
+- $ca$ 过程：绝热压缩，$Q_{ca}=0$，$V$ 减小，外界对气体做功 $W_{ca}&gt;0$。由热力学第一定律 $\Delta U_{ca}=W_{ca}&gt;0$，内能增大，温度升高。图线下方面积代表外界对气体做功的大小。<br />
+- 循环总效果：顺时针一回，$\Delta U_{\text{总}}=0$，$W_{\text{总}}&lt;0$（净功为负，气体对外做净功），总 $Q_{\text{总}} = -W_{\text{总}} &gt; 0$，即整个循环净吸热并对外做功（热机循环）。<br />
+<strong>点评/变式</strong>：<br />
+- 此类题考法固定：给出 P-V 循环，判断各过程及全程的 $W$、$\Delta U$、$Q$ 的正负或大小关系。核心是“抓面积、看温度、用第一定律”。<br />
+- 变式常见：将循环方向改为逆时针（制冷循环），则净功 $W_{\text{总}}&gt;0$（外界对气体做功），总放热；或改变某过程为等压过程，需结合 $W = -p\Delta V$ 计算。<br />
+- 特别注意：绝热过程中虽然 $Q=0$，但温度可以变化，内能改变量等于外界做的功。等温过程 $\Delta U=0$，吸收的热量全部用于对外做功。等容过程不做功，内能变化量等于吸放热量。牢牢抓住这些特例，就能应对任意循环。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-13.html">2021-全国乙-13</a>（2021 · 中） 本题通过理想气体 p-V 图分析热力学过程，判断气体吸放热与温度变化</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/759-图像面积分析.html">图像面积分析</a></li>
+</ul>
+</div>
+</body>
+</html>

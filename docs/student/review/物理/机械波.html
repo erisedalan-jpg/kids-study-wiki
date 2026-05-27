@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>机械波</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>机械波</h1><div class="review-mark" data-stem="机械波"></div><div class="meta-card"><span><strong>考点</strong>机械波</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2008–2021</li>
+<li>出现题位：解答15 选择4</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>简谐横波基本关系</strong>：波速 $v$、波长 $\lambda$、周期 $T$（频率 $f$）满足 $v = \frac{\lambda}{T} = \lambda f$。波传播一个波长距离所需时间等于一个周期。</li>
+<li><strong>波形平移法</strong>：将波形沿传播方向平移 $x = vt$ 即可得到 $t$ 时刻后的波形。经 $\Delta t$ 时间，波形传播距离 $\Delta x = v\Delta t$。当 $\Delta t&lt;T$ 时，$\Delta x&lt;\lambda$，波形移动距离唯一确定。</li>
+<li><strong>振动与波动的关系</strong>：波的传播方向与质点振动方向遵循“上下坡法”、“同侧法”等。已知质点位置与振动方向可推断该时刻波形和传播方向。</li>
+<li><strong>波动多解性来源</strong>：</li>
+<li>空间周期性：相距 $\Delta x$ 的两质点振动状态相同，则 $\Delta x = n\lambda + \Delta x_0$（$n$为整数），$\Delta x_0$ 为小于一个波长的最小波程差。</li>
+<li>时间周期性：经 $\Delta t$ 时间，质点振动状态复原满足 $\Delta t = nT + \Delta t_0$。</li>
+<li>传播方向不确定性：同一波形变化可对应不同传播方向。</li>
+<li><strong>“$T&gt;\Delta t$”的约束</strong>：此条件排除时间周期性多解，即 $\Delta t$ 内传播距离小于一个波长，波形移动唯一（但方向不定时仍有两种可能）。对应波速 $v=\frac{\Delta x}{\Delta t}$，再由 $T=\frac{\lambda}{v}$ 求周期。</li>
+<li><strong>由质点的位置和振动方向求波长</strong>：沿波传播方向，两质点平衡位置间距为 $\Delta x$，若知道它们的振动相位差（同相、反相或具体振动方向），可列方程 $\Delta x = k\lambda + \Delta x_\text{相}$（$k$ 为非负整数），再解波长可能值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>波形求波速/周期（给定时间小于周期）</strong>  </li>
+<li>步骤一：由传播方向确定波形平移距离 $\Delta x$（可从实线波形某特征点平移到虚线波形对应点读出）。  </li>
+<li>步骤二：由 $v=\frac{\Delta x}{\Delta t}$ 求波速。  </li>
+<li>步骤三：明确波长 $\lambda$（从波形图上直接读取），由 $T=\frac{\lambda}{v}$ 求周期。</li>
+<li><strong>由两质点振动状态求波长（多解）</strong>  </li>
+<li>步骤一：根据波传播方向，画出两质点位置示意图，确定它们之间的位相差或振动方向关系。  </li>
+<li>步骤二：写出波程差满足的相位条件。例如，若一质点在平衡位置向负向运动，另一在正向最大位移处，则两点间距可能为 $(n+\frac{3}{4})\lambda$ 或 $(n+\frac{1}{4})\lambda$（视方向）。  </li>
+<li>步骤三：列方程 $\Delta x = (n+\text{特定分数})\lambda$，解出波长的可能表达式，结合选项或取值范围确定 $n$ 及 $\lambda$。</li>
+<li><strong>应对传播方向不确定性</strong>  </li>
+<li>分别假设沿 $x$ 轴正、负方向传播，独立求解。每个方向对应不同的 $\Delta x$ 或相位关系，分别计算求值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>看错波形平移量</strong>：平移的距离是波形特征点（如波峰、波谷、平衡位置点）移动的水平位移，不是两波形任意点的最短间距。移动方向必须与传播方向一致。</li>
+<li><strong>忽略周期限制条件</strong>：“$T&gt;\Delta t$”明确排除周期性多解，只需考虑小于一个波长的最短移动距离。若未注意该条件，误加 $n\lambda$ 将导致错误。</li>
+<li><strong>方向不同移动距离搞反</strong>：沿正方向传播与负方向传播，波形移动方向相反，平移量读出时容易镜像错误。建议用箭头标注传播方向辅助判断。</li>
+<li><strong>误用质点振动方向判断波程差</strong>：由质点的振动方向和位置推导波长时，需要准确对应两点间的相位差。例如，$y=0$ 处向负向运动与 $y=A$ 处，两者相位差为 $\frac{\pi}{2}+2k\pi$ 或 $\frac{3\pi}{2}+2k\pi$ 取决于波传播方向，常漏解。</li>
+<li><strong>单位换算与计算错误</strong>：波形图中横轴坐标常以 cm 给出，而问题可能要求 m 单位；周期计算涉及分数，易算错倒数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目1（2021全国乙-15）</h3>
+<p><strong>题目</strong>：一列简谐横波某时刻波形如图实线，经 0.3s 后波形如图虚线。已知周期 $T&gt;0.3\,\text{s}$。若波沿 $x$ 轴正方向传播，求波速大小和周期；若沿负方向传播，求周期。</p>
+<p><strong>思路</strong>：利用“$T&gt;\Delta t$”条件限制，波形平移距离小于波长。分别对两个可能传播方向，从图上读取平移距离（将实线波峰与虚线波峰对应位移），计算波速 $v=\frac{\Delta x}{\Delta t}$，再通过波长 $\lambda=0.2\,\text{m}$（由图读出）求 $T=\frac{\lambda}{v}$。</p>
+<p><strong>步骤</strong>：
+1. 由图得出波长 $\lambda=0.2\,\text{m}$。
+2. <strong>(正方向传播)</strong> 波形沿正方向平移，实线波峰在 $x=0.05\,\text{m}$ 移至虚线波峰 $x=0.20\,\text{m}$ 附近，平移距离 $\Delta x_1=0.15\,\text{m}$。计算波速 $v_1=\frac{0.15}{0.3}=0.5\,\text{m/s}$，周期 $T_1=\frac{0.2}{0.5}=0.4\,\text{s}$。
+3. <strong>(负方向传播)</strong> 波形沿负方向平移，实线波峰移至虚线波峰 $x=-0.05\,\text{m}$ 处（注意坐标），平移距离 $\Delta x_2=0.05\,\text{m}$。计算 $v_2=\frac{0.05}{0.3}=\frac{1}{6}\,\text{m/s}$，周期 $T_2=\frac{0.2}{1/6}=1.2\,\text{s}$。</p>
+<p><strong>点评/变式</strong>：本题关键在波峰对齐平移。常见变式：给出两个时刻波形，不限定周期范围，则需考虑 $nT+\Delta t$，导致多组解。牢记“$T&gt;\Delta t$”直接锁定唯一平移量。</p>
+<h3>题目2（2008全国Ⅱ-04）</h3>
+<p><strong>题目</strong>：简谐横沿 $x$ 轴正方向传播，振幅为 $A$。$t=0$ 时，$x=0$ 处质元位于 $y=0$ 且向 $y$ 轴负向运动；$x=0.15\,\text{m}$ 处质元位于 $y=A$（正向最大位移）。该波的波长可能等于多少？（选项 0.60m, 0.20m, 0.12m, 0.086m）</p>
+<p><strong>思路</strong>：已知波沿正方向传播，用“同侧法”画出此时刻波形草图：$x=0$ 处质点在平衡位置向下振，$x=0.15\,\text{m}$ 处质点在波峰。两点间距离 $\Delta x = 0.15\,\text{m}$ 必满足特定相位差的奇数倍，即 $\Delta x = \left(n+\frac{3}{4}\right)\lambda$ 或检查具体方向后确认正是 $n\lambda + \frac{3}{4}\lambda$。</p>
+<p><strong>步骤</strong>：
+1. 依传播方向和振动方向画出满足条件的最近波形：从 $x=0$ 向下运动，经过四分之一周期到负向最大，再四分之一周期回平衡，再四分之一周期到正向最大。$x=0.15\,\text{m}$ 在波峰，两者之间最小的波程差为 $\frac{3}{4}\lambda$（波沿正方向，右侧先振动，$x=0$ 比 $x=0.15$ 的相位滞后，符合 $0$ 处向下而 $0.15$ 处已到正最大）。
+2. 列方程：$0.15\,\text{m} = n\lambda + \frac{3}{4}\lambda = (n+\frac{3}{4})\lambda$，其中 $n=0,1,2,\dots$
+3. 解得 $\lambda = \frac{0.15}{n+0.75}$。列表检验：$n=0$ 时 $\lambda=0.20\,\text{m}$；$n=1$ 时 $\lambda=0.0857\approx 0.086\,\text{m}$；$n=2$ 时 $\lambda=0.0545\,\text{m}$（选项无）。因此正确选项为 B ($0.20\,\text{m}$) 和 D ($0.086\,\text{m}$)。</p>
+<p><strong>点评/变式</strong>：若波沿负方向传播，则 $x=0$ 处波应比 $x=0.15\,\text{m}$ 处相位超前，此时两点距离为 $n\lambda + \frac{1}{4}\lambda$，答案不同。本题易漏高频多解 $n$ 导致少选，务必先写出通式再逐一代入验证。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-15.html">2021-全国乙-15</a>（2021 · 中） 根据波的传播方向，通过波形移动距离和时间求波速与周期。</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-04.html">2008-全国Ⅱ-04</a>（2008 · 中） 根据波传播方向和两质元的振动状态，求解简谐横波的可能波长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/362-机械波.html">机械波</a></li>
+</ul>
+</div>
+</body>
+</html>

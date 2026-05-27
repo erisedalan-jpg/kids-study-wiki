@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>填补法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>填补法</h1><div class="review-mark" data-stem="填补法"></div><div class="meta-card"><span><strong>考点</strong>填补法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空13</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>填补法</strong>（又称补偿法、挖补法）是处理均匀介质中存在空腔、缺损或密度不均匀区域时计算引力场（或电场）的等效方法。<br />
+- <strong>核心思想</strong>：将实际有缺损的物体等效为<strong>完整均匀物体</strong>与一个<strong>“负质量”</strong>（或负电荷/负密度）缺损体的叠加。即“填充 + 扣除”。<br />
+- <strong>物理模型</strong>：设缺损区域体积为 $V$，周围介质密度为 $\rho$，则填补后完整物体的效果减去一质量为 $m = -\rho V$ 的质点（或球体）产生的效果。<br />
+- <strong>空腔引起的附加引力加速度</strong>：<br />
+  将空腔视为位于其球心、质量为 $-\rho V$ 的质点。根据万有引力定律，其在外部某点产生的加速度大小为 $a = \dfrac{G\rho V}{r^2}$，方向<strong>背离空腔中心</strong>（负质量产生排斥效果）。<br />
+- <strong>重力加速度反常</strong>：实际重力加速度 $\vec{g}$ 与无空腔时的正常重力加速度 $\vec{g}<em _parallel="\parallel">0$（竖直向下）之差在竖直方向上的投影，即 $\Delta g</em>$ 为竖直向下单位矢量。} = (\vec{g} - \vec{g}_0)\cdot \hat{k}$，其中 $\hat{k<br />
+- <strong>适用条件</strong>：空腔尺度远小于其到观测点的距离（$d \gg$ 空腔线度），可将空腔视为质点；观测点在地面附近，正常重力加速度视为恒矢量竖直向下。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>确定正常背景场</strong><br />
+   假设不存在空腔，均匀岩石充满地下，求出观测点的正常重力加速度 $\vec{g}_0$（一般为大小 $g$，方向竖直向下）。</p>
+</li>
+<li>
+<p><strong>构建填补模型</strong><br />
+   将空腔区域“补”上密度为 $\rho$ 的岩石，使地下成为完整均匀物体；同时在该位置叠加一个质量为 $-\rho V$ 的质点（负质量体），代表挖去的部分。</p>
+</li>
+<li>
+<p><strong>计算附加场</strong><br />
+   对负质量质点，用万有引力公式计算其在观测点产生的附加引力加速度 $\vec{a}$，注意方向特性：  </p>
+</li>
+<li>大小：$a = G\rho V / r^2$；  </li>
+<li>
+<p>方向：从空腔中心指向观测点（背离空腔，对应排斥力）。</p>
+</li>
+<li>
+<p><strong>矢量合成求反常</strong><br />
+   实际重力加速度 $\vec{g} = \vec{g}<em _parallel="\parallel">0 + \vec{a}$，所求反常值为投影 $\Delta g</em>$。} = \vec{a} \cdot \hat{k<br />
+   设空腔中心在正下方深度 $d$，观测点与正上方地面点的水平距离为 $x$，则 $r = \sqrt{d^2 + x^2}$。$\vec{a}$ 与竖直向下夹角 $\theta$ 满足 $\cos\theta = \dfrac{d}{r}$，反常大小为 $\Delta g = \dfrac{G\rho V d}{(d^2 + x^2)^{3/2}}$。注意符号：若 $x&gt;0$，附加场有向上的竖直分量，反常为负值（使总重力减小）。</p>
+</li>
+<li>
+<p><strong>特殊点与近似处理</strong>  </p>
+</li>
+<li>正上方点（$x=0$）：反常大小为 $\dfrac{G\rho V}{d^2}$，方向竖直向上。  </li>
+<li>$d \gg x$ 时，可做泰勒展开简化。  </li>
+<li>需要多个反差点求解空腔参数时，联立方程并利用对称性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>负质量方向判断失误</strong>：填补法中的负质量产生的引力是<strong>排斥</strong>的，附加加速度方向从空腔指向观测点，与正常物质产生的吸引方向相反。  </li>
+<li><strong>误把“反常”当大小直接写</strong>：重力加速度反常是<strong>代数量</strong>，必须将 $\vec{a}$ 投影到竖直方向，漏掉投影或弄错投影的符号是常见失分点。  </li>
+<li><strong>混淆空腔中心深度与距离</strong>：计算 $r$ 时直接用深度 $d$，忽略水平距离 $x$；或误将 $r$ 当成水平距离。  </li>
+<li><strong>忽略正常重力加速度的方向设定</strong>：题干一般定义正常值竖直向下，所有矢量分解必须统一坐标系，不能随意假设。  </li>
+<li><strong>数值计算单位与数量级</strong>：$G$ 很小，密度 $\rho$ 数量级为 $10^3\,\mathrm{kg/m^3}$，反常值在 $\mathrm{μm/s^2}$ 量级，注意合理近似及科学计数法表达。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2009-全国Ⅱ-13</h3>
+<p><strong>题目</strong><br />
+如图，水平地面上 $P$、$Q$ 两点，$P$ 点正下方有一球形储油空腔（体积 $V$，球心深度 $d\ll$ 地球半径），周围岩石均匀密度 $\rho$，石油密度远小于 $\rho$ 可视作空腔。无空腔时重力加速度竖直向下为正常值。空腔引起的重力加速度在原竖直方向（$PO$）上的投影相对于正常值的偏离叫“重力加速度反常”。已知引力常数 $G$，$PQ = x$。求空腔在 $</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2009-全国Ⅱ-13.html">2009-全国Ⅱ-13</a>（2009 · 难） 球形空腔引起重力加速度反常的引力计算模型</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/575-填补法.html">填补法</a></li>
+</ul>
+</div>
+</body>
+</html>

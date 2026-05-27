@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质量数守恒</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质量数守恒</h1><div class="review-mark" data-stem="质量数守恒"></div><div class="meta-card"><span><strong>考点</strong>质量数守恒</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核反应四大守恒</strong>：</li>
+<li>质量数守恒：反应前后总质量数 $A$ 不变。</li>
+<li>电荷数守恒：反应前后总电荷数 $Z$ 不变。</li>
+<li>能量守恒：释放的核能来源于质量亏损，$\Delta E = \Delta m c^2$。</li>
+<li>动量守恒：常用于衰变或人工核反应中粒子运动分析。</li>
+<li><strong>质量亏损与核能计算</strong>：
+  质量亏损 $\Delta m = \text{反应前各核子(或核)总质量} - \text{反应后各核子(或核)总质量}$。
+  核能 $\Delta E = \Delta m \, c^2$。常用单位的换算：取原子质量单位 $\text{u}$ 时，$1\,\text{u}\,c^2 \approx 931.5\,\text{MeV}$。</li>
+<li><strong>核反应方程书写规范</strong>：
+  左下标为电荷数 $Z$，左上标为质量数 $A$。粒子符号必须正确，如质子 $^1_1\text{H}$、氦核 $^4_2\text{He}$、正电子 $^0_1\text{e}$、中微子 $\nu$（质量数与电荷数均为 $0$）。</li>
+<li><strong>适用条件</strong>：质量数守恒对一切核反应、衰变均成立，而电荷数守恒在强、电磁反应中成立，弱相互作用中也可能涉及轻子数等，但中学阶段主要用质量数和电荷数守恒配平核反应方程、计算质量亏损。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确反应前后的粒子组成</strong><br />
+   在方程中完整写出所有反应物、生成物（包括中微子这类不带电且质量可忽略的粒子），避免漏算。</li>
+<li><strong>核对质量数与电荷数</strong><br />
+   配平方程：反应前后左上标总和相等，左下标总和相等。若不平衡，说明粒子种类或数目有误。</li>
+<li><strong>构建质量亏损表达式</strong><br />
+   $\Delta m = m_{\text{前}} - m_{\text{后}}$。注意：</li>
+<li>若给出的是原子质量，需要考虑电子数目自动抵消或额外增减电子质量。</li>
+<li>反应中出现的正、负电子质量不可忽略，中微子质量可视为零。</li>
+<li>多个同类粒子需乘以个数。</li>
+<li><strong>代入选定单位计算</strong><br />
+   若以 $\text{MeV}$ 为单位，常用 $931.5\,\text{MeV/u}$ 换算；若用 $\text{kg}\cdot\text{m}^2/\text{s}^2$ 则直接 $\Delta E = \Delta m \, c^2$。常用结果保留两位有效数字。</li>
+<li><strong>检查结果的合理性</strong><br />
+   核能通常为 $\text{MeV}$ 量级，数量级明显错误时应复查质量亏损的式子。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>遗漏电子质量</strong>：反应中出现 $\beta^+$ 衰变（放出正电子）或电子俘获时，正负电子的质量在质量亏损中不可省略，必须与核质量区分。</li>
+<li><strong>混淆原子质量与核质量</strong>：题目常给出原子质量，其中已包含核外电子。书写质量亏损时，需自动匹配电子数目，否则会多减或少减电子质量。</li>
+<li><strong>忽视中微子</strong>：中微子质量近似为零，但若题目特别说明，则按其说明处理。</li>
+<li><strong>正电子符号混淆</strong>：正电子写为 $^0_1\text{e}$，左下标 $+1$，表示带一个正电荷，质量数与电子相同。它与电子 $^0_{-1}\text{e}$ 在质量亏损中均视为 $m_e$。</li>
+<li><strong>核能正负号错误</strong>：$\Delta m$ 是反应前减反应后，释放的核能取正值。若计算得负值，则方程或质量顺序写反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2019·新课标Ⅱ·15，改编）</h3>
+<p>太阳内部核反应的主要模式之一是质子﹣质子循环，循环结果可表示为<br />
+$$4^1_1\text{H} \rightarrow ^4_2\text{He} + 2^0_1\text{e} + 2\nu$$<br />
+已知质子质量 $m_p$、氦核质量 $m_{\text{He}}$、正电子质量 $m_e$，中微子 $\nu$ 质量可忽略，光速为 $c$。该循环释放的核能 $\Delta E$ 等于<br />
+A. $(4m_p - m_{\text{He}})c^2$<br />
+B. $(4m_p - m_{\text{He}} - 2m_e)c^2$<br />
+C. $(4m_p - m_{\text{He}} + 2m_e)c^2$<br />
+D. $(4m_p - m_{\text{He}} - 4m_e)c^2$</p>
+<h3><strong>思路</strong></h3>
+<ul>
+<li>写出反应前后总质量（均指粒子的质量，非原子质量）：前 $4m_p$，后 $m_{\text{He}} + 2m_e + 0$。</li>
+<li>质量亏损 $\Delta m = 4m_p - (m_{\text{He}} + 2m_e)$。</li>
+<li>代入 $\Delta E = \Delta m c^2$，选择对应表达式。</li>
+</ul>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>反应物只有质子 $4^1_1\text{H}$，总质量为 $4m_p$。  </li>
+<li>生成物：氦核 $^4_2\text{He}$ 质量 $m_{\text{He}}$，两个正电子 $2m_e$，两个中微子质量忽略。  </li>
+<li>质量亏损 $\Delta m = 4m_p - m_{\text{He}} - 2m_e$。  </li>
+<li>释放核能 $\Delta E = (4m_p - m_{\text{He}} - 2m_e)c^2$，对应选项 B。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题直接考查质量亏损的准确书写，陷阱在于生成物中两个正电子容易被遗漏，从而误选 A。  </li>
+<li>若题干给出的质量是氢原子（$m_{\text H}$）和氦原子（$m_{\text He}$）质量，则需注意氢原子含一个电子，氦原子含两个电子。此时反应前 $4m_{\text H}$ 含 4 个电子，反应后 $m_{\text He}$ 含 2 个电子，再加 2 个正电子，总电子数 4 不变，电子质量自动抵消，$\Delta m = 4m_{\text H} - m_{\text He} - 2m_e$ 的表达式会因数据形式而调整（常见变式：若给出原子质量而忽略正电子质量则易错）。  </li>
+<li>引申：核反应方程配平与能量计算在衰变、聚变、裂变中模式一致，关键在于不重不漏地列出所有参与粒子的质量。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-02.html">2019-新课标Ⅱ-02</a>（2019 · 易） 该题考查核反应方程中质量数与电荷数守恒的简单计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/728-质量数守恒.html">质量数守恒</a></li>
+</ul>
+</div>
+</body>
+</html>

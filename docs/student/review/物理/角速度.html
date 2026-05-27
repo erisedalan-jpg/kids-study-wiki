@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角速度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>角速度</h1><div class="review-mark" data-stem="角速度"></div><div class="meta-card"><span><strong>考点</strong>角速度</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：15</li>
+<li>真题数：2；年份跨度：2015–2024</li>
+<li>出现题位：选择2 选择6</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>角速度定义</strong>：$\omega = \dfrac{\Delta \theta}{\Delta t}$，单位 $\mathrm{rad/s}$，描述物体绕圆心转动的快慢。</li>
+<li><strong>基本关系</strong>（匀速圆周运动）：</li>
+<li>线速度与角速度：$v = \omega r$</li>
+<li>周期、频率与角速度：$\omega = \dfrac{2\pi}{T} = 2\pi f$</li>
+<li>向心加速度：$a_n = \omega^2 r = \dfrac{v^2}{r}$</li>
+<li><strong>同轴转动</strong>：绕同一转轴转动的各点，任意时刻<strong>角速度 $\omega$ 相等</strong>。此时 $v \propto r$，$a_n \propto r$。</li>
+<li><strong>带电粒子在匀强磁场中的圆周运动</strong>（不计重力）：洛伦兹力提供向心力 $qvB = m\dfrac{v^2}{r}$，可得：</li>
+<li>轨道半径：$r = \dfrac{mv}{qB}$</li>
+<li>角速度：$\omega = \dfrac{v}{r} = \dfrac{qB}{m}$（<strong>与速度 $v$、半径 $r$ 无关</strong>）</li>
+<li>周期：$T = \dfrac{2\pi}{\omega} = \dfrac{2\pi m}{qB}$</li>
+<li><strong>适用条件</strong>：质点做圆周运动；磁场中粒子仅受洛伦兹力且 $v \perp B$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确转动模型</strong>：先判断是“同轴转动”（$\omega$ 相同）还是“皮带/齿轮传动”（不打滑时 $v$ 大小相等）。同一个转动物体上的各点一般为同轴转动；靠摩擦或啮合传动的两轮边缘点线速度大小相等，$\omega$ 与半径成反比。</li>
+<li><strong>抓不变量，选公式</strong>：根据题设确定不变量（如 $\omega$、$v$、$B$ 等），再选择合适的关系式比较其他物理量。例如：</li>
+<li>$\omega$ 相同，用 $v = \omega r$，$a_n = \omega^2 r$；</li>
+<li>$v$ 相同，用 $\omega = v/r$，$a_n = v^2/r$；</li>
+<li>带电粒子磁场中，优先写出 $r$、$\omega$、$T$ 的决定式，结合 $q$、$m$、$B$、$v$ 的倍率关系判断。</li>
+<li><strong>比例法快速求解</strong>：当题目给出倍数关系（如 $B_Ⅰ = k B_Ⅱ$）时，直接将表达式中的相关量替换为倍数，约去相同物理量，快速得到结果，避免繁琐计算。</li>
+<li><strong>注意矢量性与标量性</strong>：角速度通常是标量（中学阶段考虑大小），但涉及方向时（如电子负电导致旋转方向相反）需留心；大小比较仍用上述公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆同轴转动与皮带传动</strong>：看到两个点在不同位置就误以为 $v$ 相等或 $\omega$ 相等。牢记：同一轮/球上的点必为同轴 $\omega$ 相同；皮带连接的两轮边缘 $v$ 大小相等。</li>
+<li><strong>盲目套用 $v = \omega r$ 比较线速度</strong>：当 $\omega$ 不相等时，不能直接说 $r$ 大则 $v$ 大，必须先明确不变量。</li>
+<li><strong>带电粒子在磁场中运动时，误认为半径越大角速度越大</strong>：由 $\omega = \dfrac{qB}{m}$ 可知，角速度与半径和速度均无关，只与比荷和磁感应强度有关。半径大，可能只是速度大，$\omega$ 不变。</li>
+<li><strong>周期与角速度关系混淆</strong>：$T = \frac{2\pi}{\omega}$，磁场中 $\omega \propto B$，故 $T \propto 1/B$；倍率比较时容易写反。</li>
+<li><strong>计算向心加速度时用错公式</strong>：同一个圆周运动问题中，$a_n = \omega^2 r = v^2/r$，当 $\omega$ 相同用前者简单；当 $v$ 相同用后者简单，切忌混用后直接比较。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2024·辽宁·02）</h3>
+<p><strong>题目</strong>：篮球在指尖绕轴转动，球面上 $P$、$Q$ 两点做圆周运动，比较半径、线速度、向心加速度和角速度的大小。<br />
+<strong>思路</strong>：球面随球一起绕竖直轴转动，属于典型的同轴转动模型，所有点角速度相同。根据 $v = \omega r$ 和 $a_n = \omega^2 r$，比较量的大小只需比较半径。<br />
+<strong>步骤</strong>：<br />
+- 模型识别：$P$、$Q$ 同在一球面上绕同一轴转动 ⇒ $\omega_P = \omega_Q$，D 正确。<br />
+- 由图知 $r_P &lt; r_Q$。<br />
+- 由 $v = \omega r$ 得 $v_P &lt; v_Q$，B 错误。<br />
+- 由 $a_n = \omega^2 r$ 得 $a_{nP} &lt; a_{nQ}$，C 错误。半径不等，A 错误。<br />
+<strong>点评/变式</strong>：本题直接考查同轴转动的核心结论——角速度处处相等。变式可联系“地球表面不同纬度点的圆周运动”，也是同轴（地轴），角速度相同，半径随纬度增大而减小，线速度、向心加速度也随之变化。</p>
+<h3><strong>题目2</strong>（2015·新课标Ⅱ·06）</h3>
+<p><strong>题目</strong>：两个匀强磁场区域Ⅰ和Ⅱ，Ⅰ中磁感应强度是Ⅱ的 $k$ 倍。两个速率相同的电子分别在两磁场中做圆周运动。与Ⅰ比较，Ⅱ中电子的运动轨迹半径、加速度大小、周期和角速度的倍数关系。<br />
+<strong>思路</strong>：电子仅受洛伦兹力作用，做匀速圆周运动。抓住速率 $v$ 相同、磁感应强度关系 $B_Ⅰ = k B_Ⅱ$，直接套用磁场中圆周运动的半径、加速度、周期、角速度决定式进行比较。<br />
+<strong>步骤</strong>：<br />
+- 设Ⅱ中磁感应强度为 $B$，则Ⅰ中为 $kB$。电子电荷量 $e$、质量 $m$、速率 $v$ 均相同。<br />
+- 半径 $r = \dfrac{mv}{eB}$：$r_Ⅰ = \dfrac{mv}{e \cdot kB}$，$r_Ⅱ = \dfrac{mv}{eB}$ ⇒ $r_Ⅱ = k r_Ⅰ$，A 正确。<br />
+- 加速度（洛伦兹力提供）：$a = \dfrac{evB}{m}$ ⇒ $a_Ⅱ = \dfrac{1}{k} a_Ⅰ$，B 错误。<br />
+- 周期 $T = \dfrac{2\pi m}{eB}$ ⇒ $T_Ⅱ = k T_Ⅰ$，C 错误。<br />
+- 角速度 $\omega = \dfrac{eB}{m}$ ⇒ $\omega_Ⅱ = \dfrac{1}{k} \omega_Ⅰ$，D 错误。<br />
+<strong>点评/变式</strong>：本题涉及磁场圆周运动各物理量的比较，核心是牢记 $\omega = \frac{qB}{m}$ 与 $v$ 无关。常见错误是将半径的倍数关系误推到角速度上。变式：若题干改为“两个比荷相同的粒子以不同速度进入同一磁场”，则 $\omega$、$T$ 仍相同，半径与速度成正比。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-02.html">2024-辽宁-02</a>（2024 · 易） 同轴转动的两点角速度相等，结合半径大小比较线速度和向心加速度。</li>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-06.html">2015-新课标Ⅱ-06</a>（2015 · 中） 电子在不同磁感应强度匀强磁场中做匀速圆周运动的半径、加速度、周期、角速度比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/286-角速度.html">角速度</a></li>
+</ul>
+</div>
+</body>
+</html>

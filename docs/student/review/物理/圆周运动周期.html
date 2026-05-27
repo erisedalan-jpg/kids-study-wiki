@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆周运动周期</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆周运动周期</h1><div class="review-mark" data-stem="圆周运动周期"></div><div class="meta-card"><span><strong>考点</strong>圆周运动周期</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>匀速圆周运动基本关系</strong>：线速度 $v$、角速度 $\omega$、周期 $T$ 满足<br />
+  $$v = \omega r,\quad \omega = \frac{2\pi}{T},\quad T = \frac{2\pi r}{v}.$$</li>
+<li><strong>带电粒子在匀强磁场中的圆周运动</strong>（不计重力）：
+  洛伦兹力提供向心力 $qvB = m\frac{v^2}{r}$，解得轨道半径 $r = \frac{mv}{qB}$，<br />
+  周期 $T = \frac{2\pi m}{qB}$（与速度大小无关），比荷 $\frac{q}{m} = \frac{2\pi}{TB}$.</li>
+<li><strong>运动时间与圆心角</strong>：粒子在磁场中做圆周运动的时间<br />
+  $$t = \frac{\theta}{2\pi}T = \frac{\theta m}{qB},$$<br />
+  其中 $\theta$ 为轨迹圆弧所对的圆心角（弧度制）。</li>
+<li><strong>相对运动关联</strong>：当粒子在磁场中运动时，若存在绕轴转动的圆筒等场景，通常利用“粒子运动时间 = 圆筒转过一定角度的时间”建立等时关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画定轨迹圆</strong>：根据入射方向、出射点及磁场边界（本题中为圆筒截面），确定粒子做圆周运动的圆心位置，画出圆弧轨迹。</li>
+<li><strong>找几何关系求圆心角</strong>：通过入射点、出射点、圆心构成的几何图形（结合已知角度、半径关系），求出轨迹圆弧对应的圆心角 $\theta$。</li>
+<li><strong>建立等时方程</strong>：粒子运动时间 $t = \frac{\theta}{2\pi}T_{\text{粒}}$，圆筒转过一定角度的时间 $t' = \frac{\Delta\alpha}{\omega}$（或 $t' = \frac{\Delta\alpha}{2\pi}T_{\text{筒}}$）。令 $t = t'$。</li>
+<li><strong>联立周期公式求解</strong>：代入 $T_{\text{粒}} = \frac{2\pi m}{qB}$，消去时间 $t$，解出所求物理量（如比荷 $\frac{q}{m}$、磁感应强度 $B$、角速度 $\omega$ 等）。</li>
+<li><strong>检验合理性</strong>：确保轨迹圆在筒内且未与筒壁碰撞，符合题设条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>圆心角找错</strong>：轨迹圆弧的圆心角并非简单地等于入射方向与某直径的夹角。必须通过完整的几何分析（如弦切角、圆周角、对称性）确定，避免将 $30^\circ$ 直接当作圆心角或其补角。</li>
+<li><strong>混淆两种周期</strong>：粒子圆周运动的周期 $T = \frac{2\pi m}{qB}$ 与圆筒转动的周期 $T_{\text{筒}} = \frac{2\pi}{\omega}$ 分别使用，等时关系中不能互相代换。</li>
+<li><strong>角度单位不统一</strong>：在 $t = \frac{\theta}{2\pi}T$ 中，$\theta$ 必须用弧度（rad）。若题给角度为度（$^\circ$），需转化为弧度再代入。</li>
+<li><strong>忽略“未与筒壁碰撞”条件</strong>：这一条件隐含轨迹圆半径小于筒半径，且轨迹不触碰筒内壁，用来确认几何关系的唯一性和合理性，解题时必须验证。</li>
+<li><strong>粒子比荷符号</strong>：比荷为 $\frac{q}{m}$，本题磁场方向确定，粒子偏转方向隐含电性，但比荷大小计算与电性无关，最终只需得到大小。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2016-新课标Ⅱ-05</h3>
+<p><strong>题目</strong>：圆筒在磁感应强度大小为 $B$ 的匀强磁场中，磁场与筒轴平行。直径 $MN$ 两端开有小孔，圆筒绕中心轴以角速度 $\omega$ 顺时针转动。一带电粒子从 $M$ 孔射入，入射方向与 $MN$ 成 $30^\circ$ 角。筒转过 $90^\circ$ 时，粒子恰好从 $N$ 孔飞出，不计重力，且未与筒壁碰撞。求粒子的比荷 $\frac{q}{m}$。</p>
+<p><strong>思路</strong>：粒子在筒内匀强磁场中做匀速圆周运动，轨迹圆弧过 $M$、$N$ 两点，且 $MN$ 为轨迹圆的一条弦。利用几何关系求出轨迹圆半径 $r$ 与筒半径 $R$ 的关系，进而求出轨迹圆弧所对圆心角 $\theta$。粒子运动时间与筒转过 $90^\circ$ 的时间相等，即 $\frac{\theta}{2\pi}\cdot\frac{2\pi m}{qB} = \frac{\pi/2}{\omega}$，解出比荷。</p>
+<p><strong>步骤</strong>：
+1. 设圆筒半径为 $R$。以筒截面圆心 $O$ 为参照，$M$、$N$ 为直径两端，$MN = 2R$。粒子轨迹圆圆心记为 $O'$，半径为 $r$。
+2. 粒子入射方向过 $M$，与 $MN$ 成 $30^\circ$。作 $MN$ 的弦切角分析：弦 $MN$ 对应的圆周角或圆心角可由几何确定。因粒子从 $M$ 到 $N$，轨迹圆的弦 $MN$ 所对圆心角 $2\alpha$（其中 $\alpha$ 为弦切角）。此处入射方向与弦 $MN$ 夹角为 $30^\circ$，即弦切角为 $30^\circ$，因此轨迹圆弧所对圆心角 $\theta = 2 \times 30^\circ = 60^\circ$（或 $\frac{\pi}{3}$），且 $MN = 2r\sin\frac{\theta}{2} = 2r\sin 30^\circ = r$。故 $r = MN = 2R$。
+   （注：更严谨的几何：圆心 $O'$ 在弦 $MN$ 垂直平分线上，结合入射角与出射对称性，得到 $r = 2R$。）
+3. 粒子在磁场中运动时间：$t = \frac{\theta}{2\pi}T_{\text{粒}} = \frac{\pi/3}{2\pi}\cdot\frac{2\pi m}{qB} = \frac{\pi m}{3qB}$。
+4. 圆筒转过 $90^\circ$（$\frac{\pi}{2}$）的时间：$t' = \frac{\pi/2}{\omega}$。
+5. 由 $t = t'$ 得 $\frac{\pi m}{3qB} = \frac{\pi}{2\omega}$，解得 $\frac{q}{m} = \frac{2\omega}{3B}$。</p>
+<p><strong>点评/变式</strong>：本题核心是挖掘几何条件得出圆弧圆心角，而非直接用筒半径。常见变式有：改变入射角（如 $45^\circ$、$60^\circ$）、筒转动角度（如 $180^\circ$）、或将磁场改为电场复合场。处理时牢记“粒子圆”与“筒圆”的几何关系，等时方程的建立始终不变。比荷结果中指数 $\frac{\omega}{B}$ 的系数由角度关系决定，考试中必须画好轨迹图，避免角度误判。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-05.html">2016-新课标Ⅱ-05</a>（2016 · 中） 带电粒子在匀强磁场与旋转圆筒中运动，通过几何关系与周期公式求比荷。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/573-圆周运动周期.html">圆周运动周期</a></li>
+</ul>
+</div>
+</body>
+</html>

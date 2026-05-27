@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地磁场方向</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>地磁场方向</h1><div class="review-mark" data-stem="地磁场方向"></div><div class="meta-card"><span><strong>考点</strong>地磁场方向</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>地磁场等效条形磁铁模型</strong>：地磁南极在地理北极附近，地磁北极在地理南极附近。磁感线从地磁南极（地理南极附近）发出，回到地磁北极（地理北极附近）。</li>
+<li><strong>地磁场的三维分布</strong>：<ul>
+<li>在地理北极附近，地磁场方向接近竖直向下。</li>
+<li>在地理南极附近，地磁场方向接近竖直向上。</li>
+<li>在赤道上方，地磁场方向水平向北。</li>
+<li>在北半球，地磁场方向斜向下指向北方（有竖直向下的分量 $B_z&lt;0$，按向上为正）。</li>
+<li>在南半球，地磁场方向斜向上指向北方（有竖直向上的分量 $B_z&gt;0$）。</li>
+</ul>
+</li>
+<li><strong>地磁场分量的特点</strong>：<ul>
+<li>水平分量 $B_\parallel$ 总是指向地理北（严格讲是磁北，高中认为指向地理北）。</li>
+<li>竖直分量 $B_z$ 在北半球为负（向下），南半球为正（向上），赤道为零。</li>
+</ul>
+</li>
+<li><strong>适用条件</strong>：题目中通常默认 $z$ 轴正向竖直向上，$B_z$ 正负直接反映竖直分量的方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定竖直分量，判半球</strong><br />
+   看 $B_z$ 的正负号（规定 $+z$ 向上）：  </li>
+<li>$B_z&lt;0$（竖直向下）→ 测量点在北半球。  </li>
+<li>$B_z&gt;0$（竖直向上）→ 测量点在南半球。  </li>
+<li>
+<p>$B_z\approx0$ → 测量点在赤道附近。</p>
+</li>
+<li>
+<p><strong>定水平分量，找北向</strong><br />
+   手机 $xOy$ 平面内测得的分量 $B_x$、$B_y$ 合成水平磁场 $\vec{B}_\parallel$。  </p>
+</li>
+<li>$\vec{B}_\parallel$ 的方向即为地磁水平分量的方向，地理北方在此方向（或其反方向，需结合基本信息判断）。  </li>
+<li>
+<p>通过比较不同次测量中 $B_x$、$B_y$ 的变化，可推知手机坐标轴指向的改变，唯一不变的是地磁场本身的方向。</p>
+</li>
+<li>
+<p><strong>合成完整地磁场</strong><br />
+   由水平分量大小 $B_\parallel=\sqrt{B_x^2+B_y^2}$ 和竖直分量 $B_z$ 可得地磁场的大小和倾角（磁倾角）：<br />
+   $$B=\sqrt{B_\parallel^2+B_z^2},\quad \tan\theta=\frac{|B_z|}{B_\parallel}$$
+   其中 $\theta$ 为磁感线与水平面的夹角（北半球下倾，南半球上倾）。</p>
+</li>
+<li>
+<p><strong>应对旋转坐标系测量题</strong>  </p>
+</li>
+<li>固定不变的是地磁场矢量（包括方向和大小）。  </li>
+<li>手机绕竖直轴旋转，仅仅改变 $x$、$y$ 轴的空间指向。  </li>
+<li>只要某次测量中某个水平轴测到的分量最大（另一轴为零），则该轴当时正好指向地磁场水平分量的方向（即指向磁北或磁南）。  </li>
+<li>综合多次数据判断北方，以及与器件坐标轴的对应关系。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆地磁极与地理极</strong>：磁针北极（N极）指向地理北，是因为地理北附近是地磁南极。在受力分析中，地磁场对磁针或运动电荷的作用必须按实际的磁场方向判断。</li>
+<li><strong>竖直分量正负号搞反</strong>：默认 $z$ 轴向上为正。北半球地磁场竖直分量向下，应为负值；南半球向上，应为正值。若读题时不注意 $B_z$ 的符号意义，会误判南北半球。</li>
+<li><strong>把磁场分量当成独立磁场</strong>：$B_x$、$B_y$、$B_z$ 是同一个地磁矢量在手机坐标系下的投影，不能将他们理解为三个独立的磁场源。分析方向时务必合成。</li>
+<li><strong>误以为手机测量的是自身磁场</strong>：手机磁传感器测得的是环境磁场，包括地磁场。测量值中不含手机自身产生的磁场（前提是软件已校正或自身影响可忽略）。</li>
+<li><strong>坐标系旋转分析不清</strong>：每次测量时 $y$ 轴指向不同，但地磁场不变。学生容易将数据的变化归因于地磁场方向变化，或固定某一轴指向强行解释，导致错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2022-全国乙-05</h3>
+<p><strong>题目</strong><br />
+在手机上建立直角坐标系，显示屏所在平面为 $xOy$ 面。某地地磁场四次测量结果如表（$z$ 轴正向竖直向上），每次测量时 $y$ 轴指向不同方向。根据数据可推知（ ）</p>
+<table>
+<thead>
+<tr>
+<th>测量序号</th>
+<th>$B_x$/μT</th>
+<th>$B_y$/μT</th>
+<th>$B_z$/μT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>21</td>
+<td>–45</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>–20</td>
+<td>–46</td>
+</tr>
+<tr>
+<td>3</td>
+<td>21</td>
+<td>0</td>
+<td>–45</td>
+</tr>
+<tr>
+<td>4</td>
+<td>–21</td>
+<td>0</td>
+<td>–45</td>
+</tr>
+</tbody>
+</table>
+<p>（选项略，此处以思路解析呈现）</p>
+<p><strong>思路</strong><br />
+先看竖直分量 $B_z$，四次均约为 $–45\, \mu\mathrm{T}$，负值表示竖直分量向下，故测量地点在北半球。再看水平分量：测量1中 $B_x=0$，$B_y=21$，说明此时水平磁场完全沿 $+y$ 方向；测量2中 $B_y$ 变为负值且 $B_x$ 仍为0，说明手机旋转后 $y$ 轴反向对上了地磁水平分量方向；测量3、4中 $B_y=0$，水平分量完全出现在 $x$ 轴。四次测量最合理的解释是：地磁场水平分量大小约 $21\,\mu\mathrm{T}$，方向固定指北。前两次 $y$ 轴分别对向北方和南方；后两次 $x$ 轴对向北方和南方。这验证了地磁场水平分量指向不变，仅因手机绕竖直轴旋转，导致投影到不同的水平轴上。结合 $B_z&lt;0$ 可推知当地在北半球，地磁场斜向下指北。</p>
+<p><strong>步骤</strong><br />
+1. 读 $B_z$：四次测量均 $B_z&lt;0$ → 竖直分量向下 → 北半球。<br />
+2. 分析水平分量大小：四次中非零的水平分量绝对值均约为 $21\,\mu\mathrm{T}$，且每次只有一个轴有读数，另一轴为零。说明每次测量时，地磁水平分量恰好沿该有读数的坐标轴方向。<br />
+3. 判断方向：测量1中 $B_y=+21$，此时 $+y$ 方向与水平磁场同向，即 $+y$ 指向北。测量2中 $B_y=-20\approx-21$，此时 $+y$ 指向南。测量3中 $B_x=+21$，$+x$ 指向北；测量4中 $B_x=-21$，$+x$ 指向南。无论手机如何旋转，地磁场水平分量始终指北，大小恒定。<br />
+4. 综合结论：当地地磁场斜向下指北，该地处于北半球，地磁场水平分量约 $21\,\mu\mathrm{T}$，竖直分量约 $45\,\mu\mathrm{T}$ 向下。由此可判断相关选项中关于半球、方向、大小的描述是否正确。</p>
+<p><strong>点评/变式</strong><br />
+本题用智能手机传感器为背景，实则考查地磁场空间分布和矢量投影。需抓住“坐标系旋转但地磁场矢量不变”的核心。易错点在于：看到 $B_z$ 为负就认为方向向上，或不能由水平分量的变化把手机旋转和恒定磁场统一起来。<br />
+<strong>变式思考</strong>：若某次测量 $B_x=15\,\mu\mathrm{T}$，$B_y=15\,\mu\mathrm{T}$，$B_z=-40\,\mu\mathrm{T}$，则水平分量大小 $B_\parallel\approx21.2\,\mu\mathrm{T}$，方向与 $x$、$y$ 轴均成 $45^\circ$。这说明当时手机坐标轴没有对准地磁场的水平方向。解题时仍然要先求 $B_\parallel$，再结合 $B_z$ 判断半球和总磁感应强度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2022-全国乙-05.html">2022-全国乙-05</a>（2022 · 中） 本题通过地磁场数据表考查空间矢量分析及地理方位判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/574-地磁场方向.html">地磁场方向</a></li>
+</ul>
+</div>
+</body>
+</html>

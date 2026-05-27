@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电性判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电性判断</h1><div class="review-mark" data-stem="电性判断"></div><div class="meta-card"><span><strong>考点</strong>电性判断</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>左手定则</strong>：伸开左手，使拇指与其余四指垂直且共面；让磁感线垂直穿入手心，四指指向<strong>正电荷运动方向</strong>（或<strong>负电荷运动的反方向</strong>），拇指所指即为洛伦兹力方向。  </li>
+<li><strong>电性判断核心逻辑</strong>：已知磁场方向与粒子运动方向，通过<strong>实际偏转方向（轨迹弯曲方向）反推洛伦兹力方向</strong>，再用左手定则判定粒子的电性。  </li>
+<li><strong>圆周运动半径与周期</strong>（匀强磁场，$v \perp B$）：<br />
+  $$r = \frac{mv}{qB}, \quad T = \frac{2\pi m}{qB}$$<br />
+  半径与电荷量 $q$、质量 $m$、速度 $v$ 均有关；同一粒子动能 $E_k = \frac{1}{2}mv^2$ 越大，<strong>半径越大</strong>（$r = \frac{\sqrt{2mE_k}}{qB}$）。  </li>
+<li><strong>电场中电性判断</strong>：正电荷所受电场力方向与电场强度方向相同，负电荷相反；结合运动轨迹弯曲方向（合力指向轨迹凹侧）可判断电场力方向，进而确定电性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定磁场方向与入射方向</strong>：明确题目给出的永磁铁(或其他磁场源)产生的磁场方向，以及粒子进入磁场时的速度方向（一般垂直进入）。  </li>
+<li><strong>看偏转定受力方向</strong>：观察轨迹向哪一侧弯曲，洛伦兹力提供向心力，其方向必指向轨迹的凹侧。  </li>
+<li><strong>用左手判电性</strong>：让磁感线穿入手心，四指指向粒子运动方向（注意：若粒子带负电，则四指应指向运动的反方向），若拇指指向恰好与步骤2所得受力方向一致，则假设的电性正确，否则相反。  </li>
+<li><strong>比较半径区分粒子</strong>：若速度相同（如从同一电场加速），由 $r = \frac{mv}{qB}$ 比较 $\frac{m}{q}$ 大小；若动能相同，由 $r = \frac{\sqrt{2mE_k}}{qB}$ 比较 $\frac{\sqrt{m}}{q}$。质子($\frac{m}{e}$)与正电子($\frac{m_e}{e}$)质量不同，在速度不确定时<strong>仅凭单一轨迹无法唯一确定粒子种类</strong>。  </li>
+<li><strong>电磁场混合问题</strong>：先通过电偏转（类平抛）或磁偏转（圆周）中粒子的偏转方向依次判断电性，再利用半径、偏转距离等定量关系求解比荷 $q/m$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“电性判断”与“电流方向”</strong>：左手定则中，四指始终指<strong>正电荷运动方向</strong>或<strong>负电荷运动反方向</strong>；电子带负电，其运动方向与电流方向相反。  </li>
+<li><strong>误以为半径只与电性有关</strong>：$r = \frac{mv}{qB}$ 中半径取决于多个物理量；电子与正电子质量相同、电荷量大小相同，若速度不同则半径不同，反之速度相同时半径才相同。  </li>
+<li><strong>忽视速度对半径的制约</strong>：仅根据 “动能越大，半径越小” 是错误的；由 $r = \frac{\sqrt{2mE_k}}{qB}$ 知，同一粒子动能越大半径越大。  </li>
+<li><strong>混淆质子与正电子</strong>：二者均带正电，电性相同，偏转方向相同，但质量相差悬殊（$m_p \gg m_e$），只有控制速度变量才可通过半径大小区分。  </li>
+<li><strong>死记“正电左偏、负电右偏”</strong>：偏转方向依赖于磁场方向和入射方向，必须用左手定则具体分析，不可脱离磁场方向直接记结论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2014·新课标Ⅱ·07 （磁谱仪中电子、正电子、质子的偏转判断）</h3>
+<p><strong>题目</strong><br />
+磁谱仪中，永磁铁提供匀强磁场，宇宙射线中的电子、正电子、质子从上部垂直进入磁场。关于这些粒子的运动，下列说法正确的是（多选）<br />
+A．电子与正电子的偏转方向一定不同<br />
+B．电子与正电子在磁场中运动轨迹的半径一定相同<br />
+C．仅依据粒子运动轨迹无法判断该粒子是质子还是正电子<br />
+D．粒子的动能越大，它在磁场中的运动轨迹的半径越小  </p>
+<p><strong>思路</strong><br />
+本题直接考查左手定则和半径公式的综合运用。需逐项分析：A项利用电性相反→洛伦兹力方向相反判断；B项考虑半径依赖速度；C项抓住质子与正电子电性相同、质量不同，在未知速度时轨迹的不可分辨性；D项利用动能与半径的定量关系。</p>
+<p><strong>步骤</strong><br />
+1. <strong>选项A</strong>：电子带负电，正电子带正电，两者电性相反。以相同方向射入同一匀强磁场时，所受洛伦兹力方向必然相反，因此偏转方向一定不同 → A正确。<br />
+2. <strong>选项B</strong>：由 $r = \frac{mv}{eB}$，电子与正电子质量 $m$ 相同，电量大小相同，但题目未给定二者进入磁场时的速度关系，半径不一定相同 → B错误。<br />
+3. <strong>选项C</strong>：质子和正电子均带正电，在同一磁场中偏转方向相同；轨迹半径 $r = \frac{mv}{eB}$，两者质量 $m$ 不同，但速度 $v$ 未知，单从轨迹圆弧无法逆向唯一确定粒子种类 → C正确。<br />
+4. <strong>选项D</strong>：由 $E_k = \frac12 mv^2$ 得 $v = \sqrt{2E_k/m}$，代入半径公式 $r = \frac{mv}{qB} = \frac{\sqrt{2mE_k}}{qB}$。对于同一粒子，$m,q$ 不变，动能 $E_k$ 越大，半径 $r$ 越大 → D错误。<br />
+综上，正确选项为 A、C。</p>
+<p><strong>点评/变式</strong><br />
+- <strong>核心方法提炼</strong>：电性判断用左手定则；半径比较必须控制速度变量。<br />
+- <strong>变式</strong>：一带电粒子以水平初速度 $v_0$ 射入竖直向下的匀强电场，轨迹向下方弯曲（如图）。因合力指向轨迹凹侧，故电场力向下；电场方向向下，电荷受力与场强同向，因此粒子带<strong>正电</strong>。若轨迹向上弯曲，则带负电。此即电场中的电性判断方法。<br />
+- <strong>拓展</strong>：若题中粒子先经同一电场加速再进入磁场，则速度可由 $qU = \frac12 mv^2$ 确定，此时半径 $r = \frac{1}{B}\sqrt{\frac{2mU}{q}}$，可据此通过半径大小区分质子和正电子（$r_p \gg r_{e^+}$），判断将变为可能。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a>（2014 · 中） 带电粒子在垂直磁场中的偏转方向及运动轨迹半径的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/679-电性判断.html">电性判断</a></li>
+</ul>
+</div>
+</body>
+</html>

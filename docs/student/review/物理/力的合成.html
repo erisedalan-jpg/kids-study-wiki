@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>力的合成</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>力的合成</h1><div class="review-mark" data-stem="力的合成"></div><div class="meta-card"><span><strong>考点</strong>力的合成</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择1</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>力的合成定义</strong>：求几个力的合力的过程叫作力的合成。合力是几个力的共同作用效果的等效力。</li>
+<li><strong>平行四边形定则</strong>：两个力合成时，以表示这两个力的线段为邻边作平行四边形，这两个邻边之间的对角线就代表合力的大小和方向。该定则是矢量合成的普适法则。</li>
+<li><strong>合力范围</strong>：对于互成角度 $\theta$ 的两个共点力 $F_1$、$F_2$，其合力 $F$ 满足 $|F_1 - F_2| \le F \le F_1 + F_2$。</li>
+<li><strong>平衡条件</strong>：物体处于静止或匀速直线运动状态时，所受合外力为零。二力平衡必等大、反向、共线。</li>
+<li><strong>核心推论</strong>：当两分力大小相等且夹角 $&gt; 90^\circ$ 时，合力小于分力；当夹角 $&lt; 90^\circ$ 时，合力大于分力。夹角为 $135^\circ$ 时，两等大力合成的合力方向在角平分线上。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>受力分析与状态判定</strong>：先明确研究对象初始时刻的受力情况，判断其所处状态（平衡/不平衡）。若平衡，则列出合外力为零的方程。</li>
+<li><strong>识别恒力与变力</strong>：区分系统中哪些力的大小和方向在条件变化前后保持不变。例如，本题中微粒重力 $mg$ 大小方向均不变；极板旋转前后，电场强度大小不变，仅方向随极板共同旋转。</li>
+<li><strong>确定力的新方向与夹角</strong>：根据题干描述，准确画出变化后各力的方向，并计算力与力之间的夹角。如极板旋转 $45^\circ$，则电场力方向也随之旋转 $45^\circ$。</li>
+<li><strong>应用平行四边形定则求合力</strong>：以变化后的两力为邻边作平行四边形，根据几何关系（如力的等大性、特定夹角）直接确定合力方向与大小。</li>
+<li><strong>根据合力判断运动性质</strong>：</li>
+<li>若初速度为零，合力恒定，则物体沿合力方向做匀加速直线运动。</li>
+<li>若初速度不为零，则需分析合力与速度的夹角，判断是直线还是曲线运动。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为电场力方向随板转动后，与重力的夹角是 $45^\circ$</strong>：实际上，原电场力竖直向上，逆时针旋转 $45^\circ$ 后，与竖直向下的重力夹角为 $180^\circ - 45^\circ = 135^\circ$。必须准确计算新的夹角。</li>
+<li><strong>凭直觉误判运动方向为“向左”或“向下”的纯分力方向</strong>：合力是矢量和，方向必在两分力夹角之间。等大的重力和电场力成 $135^\circ$，合力方向在其角平分线上，即与竖直方向夹角为 $67.5^\circ$ 的左下方，而非纯水平或纯竖直方向。</li>
+<li><strong>静止释放点的位置误解</strong>：题干中微粒从“两板中间a点”释放，极板绕a点旋转，该点空间位置未变，微粒初速度为零，这是匀加速直线运动的初始条件。</li>
+<li><strong>错误套用平衡条件</strong>：极板旋转后，力的大小虽未变，但方向不再共线反向，平衡被打破，不能继续按静止状态分析。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>2015-新课标Ⅱ-01</strong> 极板旋转后带电微粒的运动</h3>
+<p><strong>【题目】</strong>
+两平行带电金属板水平放置，板间a点从静止释放一带电微粒，恰好静止。现将两板绕过a点的轴（垂直于纸面）逆时针旋转 $45^\circ$，再由a点从静止释放同样的微粒，判断其运动状态。</p>
+<p><strong>【思路】</strong>
+初始静止 $\rightarrow$ 二力平衡 ($mg$ 竖直向下，$F_{电}$ 竖直向上)。极板旋转 $45^\circ$ $\rightarrow$ 电场力 $F_{电}$ 大小不变，方向逆时针转 $45^\circ$。对微粒施加静止释放条件，求重力和新电场力的合力方向，即可知运动情况。</p>
+<p><strong>【步骤】</strong>
+1. <strong>初态平衡分析</strong>：微粒静止，有 $F_{电} = mg$，方向竖直向上。
+2. <strong>变化后受力重画</strong>：将两板绕a点逆时针旋转 $45^\circ$，板间电场强度 $E$ 的大小不变，方向始终垂直于板面，故也逆时针旋转 $45^\circ$。电场力 $F_{电}'$ 大小仍为 $mg$，方向偏移竖直向上 $45^\circ$ 角。重力 $mg$ 保持不变，竖直向下。
+3. <strong>计算合力</strong>：此时重力与电场力大小相等，均为 $mg$。两力方向夹角为 $180^\circ - 45^\circ = 135^\circ$。利用平行四边形定则，合力大小 $F = \sqrt{(mg)^2 + (mg)^2 + 2(mg)(mg)\cos 135^\circ}$。方向指向左下方，且在两力角平分线上。
+4. <strong>判断运动</strong>：微粒从静止释放，初速度为零，受恒定合力作用，将沿合力方向即左下方做匀加速直线运动。</p>
+<p><strong>【点评/变式】</strong>
+本题核心是力的合成思想在复合场中的应用，无需计算具体场强和电荷量，仅通过力的矢量性即可解题。
+- <strong>变式1</strong>：若极板旋转角度为 $90^\circ$，则电场力水平，两力等大垂直，合力大小为 $\sqrt{2}mg$，方向为左下 $45^\circ$。
+- <strong>变式2</strong>：若旋转后微粒不是静止释放，而是具有某一初速度，则需比较初速度方向与合力方向是否共线，以判断是匀变速直线运动还是匀变速曲线运动（类抛体运动）。本题静止释放是特例，确保了直线运动。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-01.html">2015-新课标Ⅱ-01</a>（2015 · 中） 微粒在电容器中受重力和电场力平衡，极板旋转后合力方向改变，微粒做匀加速直线运动。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">力的合成</a></li>
+</ul>
+</div>
+</body>
+</html>

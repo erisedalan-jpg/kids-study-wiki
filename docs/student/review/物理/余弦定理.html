@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>余弦定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>余弦定理</h1><div class="review-mark" data-stem="余弦定理"></div><div class="meta-card"><span><strong>考点</strong>余弦定理</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择3</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>余弦定理</strong>：任意三角形 $ABC$ 中，边 $a,b,c$ 对角 $A,B,C$ ，有
+  $$a^2 = b^2 + c^2 - 2bc\cos A$$
+  $$b^2 = a^2 + c^2 - 2ac\cos B$$
+  $$c^2 = a^2 + b^2 - 2ab\cos C$$</li>
+<li><strong>变形求角</strong>：$\cos A = \frac{b^2+c^2-a^2}{2bc}$ ，其余类推。</li>
+<li><strong>适用条件</strong>：已知两边及其夹角求第三边；已知三边求角。</li>
+<li><strong>在物理矢量合成中的角色</strong>：当合矢量与两个分矢量构成封闭三角形时，已知其中两边及其夹角（两分矢量首尾相接时的夹角，或合矢量与一分矢量的夹角），可求第三边的大小，或求方向角。本质是矢量三角形（或平行四边形的一半）的几何计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ul>
+<li><strong>矢量三角形作图法</strong>：</li>
+<li>明确合矢量与分矢量的矢量关系：$\vec{v}=\vec{v}_1+\vec{v}_2$（平行四边形法则），将其画为首尾相接的三角形。</li>
+<li>在三角形中标出已知量：两边的长度（速率）、它们之间的夹角（注意：两分矢量首尾相接时夹角为 $\theta$，平行四边形中则是 $180^\circ-\theta$，需根据题意确定）。</li>
+<li>选取含有所求量的边（未知第三边），写出余弦定理表达式：$v_2^2 = v^2 + v_1^2 - 2 v v_1 \cos\alpha$，其中 $\alpha$ 是合矢量与已知分矢量 $v_1$ 的夹角。</li>
+<li>计算数值并依据几何关系判定方向（结合方位形容词如东偏南、西偏北等）。</li>
+<li><strong>方向判定搭配</strong>：若还需求方向角，可用正弦定理 $\frac{v_2}{\sin\alpha} = \frac{v_1}{\sin\beta}$ 求未知角，或直接根据三角形边角大小定性判断。</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li><strong>夹角代错</strong>：矢量三角形的夹角与平行四边形中两分矢量间夹角不同。若分矢量间夹角为 $\varphi$，则矢量三角形中对应角为 $180^\circ-\varphi$，代入公式时容易直接用 $\varphi$ 导致符号反。</li>
+<li><strong>余弦定理符号</strong>：公式 $a^2 = b^2 + c^2 - 2bc\cos A$ 中，当 $A&gt;90^\circ$ 时 $\cos A&lt;0$，项变为加；死记“减”会错。</li>
+<li><strong>混淆已知边与未知边</strong>：例如题目给出合速度与一分速度，求另一分速度，误用 $v_2 = \sqrt{v^2 + v_1^2}$（勾股定理）而忽略夹角。</li>
+<li><strong>方向表述不规范</strong>：判断“东偏南”“西偏北”等方位时未对应好几何角的起始方向。</li>
+<li><strong>单位换算遗漏</strong>：题目给的数值常带数量级 $10^3\,\text{m/s}$，提取公因数再计算可减少计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2015·新课标Ⅱ·03）</h3>
+<p>同步卫星转移轨道与同步轨道夹角 $30^\circ$，同步轨道环绕速度约 $3.1\times10^3\,\text{m/s}$，卫星飞经赤道上空时速度 $1.55\times10^3\,\text{m/s}$，高度与同步轨道相同。求发动机附加速度的方向和大小。</p>
+<p><strong>思路</strong>：卫星由转移轨道进入同步轨道，发动机点火提供附加速度 $\vec{v}_2$，使合速度变成同步轨道速度 $\vec{v}$。已知合速度大小 $v=3.1\times10^3\,\text{m/s}$，一分速度 $v_1=1.55\times10^3\,\text{m/s}$，$\vec{v}$ 与 $\vec{v}_1$ 夹角 $30^\circ$。矢量关系 $\vec{v} = \vec{v}_1 + \vec{v}_2$，作封闭三角形，利用余弦定理求 $v_2$，再由几何关系判方向。</p>
+<p><strong>步骤</strong>：
+1. 作矢量三角形：从 $\vec{v}_1$ 末端画 $\vec{v}_2$，使首尾相接得到合矢量 $\vec{v}$，标注已知：$v_1$、$v$，夹角 $\alpha=30^\circ$（为 $\vec{v}$ 与 $\vec{v}_1$ 的夹角）。
+2. 由余弦定理：$v_2^2 = v^2 + v_1^2 - 2 v v_1 \cos30^\circ$。
+   - 提公因子 $(1\times10^3)^2$，代入：$v_2^2 = 3.1^2 + 1.55^2 - 2\times3.1\times1.55\times\frac{\sqrt{3}}{2}$
+   - $3.1^2=9.61$，$1.55^2\approx2.4025$，乘积项：$2\times3.1\times1.55\times0.866\approx2\times3.1\times1.3423\approx8.322$。
+   - $v_2^2 \approx 9.61+2.40-8.32 = 3.69$，$v_2 \approx 1.92 \times 10^3\,\text{m/s}$，接近 $1.9\times10^3\,\text{m/s}$。
+3. 方向判断：$\vec{v}$ 为同步轨道速度（向东），$\vec{v}_1$ 在转移轨道，夹角 $30^\circ$ 在赤道平面内；由平行四边形可知 $\vec{v}_2$ 大致偏向东南方向（东偏南）。</p>
+<p><strong>点评/变式</strong>：本题是余弦定理在矢量合成中的典型应用，关键在于正确构建速度三角形并识别夹角。变式：若已知两分速度及其夹角，求合速度大小，同样用余弦定理（此时夹角用两分矢量夹角，注意首尾相接的补角关系）。注意数量级提取简化计算，避免繁琐小数运算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2015-新课标Ⅱ-03.html">2015-新课标Ⅱ-03</a>（2015 · 中） 该题考查速度矢量合成，利用平行四边形定则和余弦定理求解分速度大小和方向。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/126-定理.html">余弦定理</a></li>
+</ul>
+</div>
+</body>
+</html>

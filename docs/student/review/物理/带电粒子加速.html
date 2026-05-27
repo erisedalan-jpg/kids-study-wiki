@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>带电粒子加速</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>带电粒子加速</h1><div class="review-mark" data-stem="带电粒子加速"></div><div class="meta-card"><span><strong>考点</strong>带电粒子加速</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>带电粒子在电场中的加速</strong>（不计重力）：粒子从静止开始经电势差为 $U$ 的电场加速，由动能定理
+  $$qU = \frac{1}{2}mv^2$$
+  得加速后速度 $v = \sqrt{\frac{2qU}{m}}$。对电子，$q=-e$，但动能定理中通常取电势差绝对值 $|U|$，速度大小 $v = \sqrt{\frac{2e|U|}{m}}$。</li>
+<li><strong>带电粒子在匀强磁场中的偏转</strong>：粒子以速度 $v$ 垂直进入磁感应强度为 $B$ 的匀强磁场，受洛伦兹力 $f = qvB$（$q$ 带符号，计算大小常用 $|q|vB$），做匀速圆周运动。洛伦兹力提供向心力：
+  $$|q|vB = m\frac{v^2}{r}$$
+  得轨道半径 $r = \frac{mv}{|q|B}$。</li>
+<li><strong>加速与偏转的组合</strong>：将 $v$ 代入半径公式，得 $r = \frac{1}{B}\sqrt{\frac{2mU}{|q|}}$。可见：</li>
+<li>增大加速电压 $U$，半径 $r$ 变大；</li>
+<li>增大磁感应强度 $B$，半径 $r$ 变小。</li>
+<li><strong>电势高低的判断</strong>：电场线由高电势指向低电势；正电荷受力沿电场线方向，负电荷受力逆电场线方向。</li>
+<li><strong>左手定则</strong>（判定洛伦兹力方向）：磁感线穿入手心，四指指向正电荷运动方向（或负电荷运动的反方向），拇指指向洛伦兹力方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>区分粒子电性</strong>：明确是正电荷（如质子、α粒子）还是负电荷（如电子），这决定电场力方向、电势高低判断和左手定则中四指指向。</li>
+<li><strong>加速过程列动能定理</strong>：通常电场力做功 $W = qU$（注意 $q$ 有符号，计算速度大小时取绝对值），由 $qU = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2$ 求出入磁场速度 $v$。</li>
+<li><strong>偏转过程列半径公式</strong>：在匀强磁场中 $r = \frac{mv}{|q|B}$，消去 $v$ 可得 $r \propto \frac{\sqrt{U}}{B}$。</li>
+<li><strong>几何关系定落点</strong>：画出粒子轨迹圆弧，找出圆心、半径和偏转角，结合题中靶点、边界等几何条件确定 $P$ 点移动与 $r$ 变化的关系。</li>
+<li><strong>选项判定</strong>：</li>
+<li>电势：由电场力方向推电场线方向，再判电势高低。</li>
+<li>磁场方向：由粒子偏转方向和电性，用左手定则反推。</li>
+<li>落点移动：分析 $U$、$B$ 改变对 $r$ 的影响，再推出 $P$ 点左移或右移。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆电子受力方向与电场方向</strong>：电子带负电，在电场中所受电场力方向与电场线方向相反。如题中电子向右加速，则电场力向右，电场线应向左，故 $N$ 侧电势高，$M$ 侧电势低。易错判为 $M$ 电势高。</li>
+<li><strong>左手定则应用错误</strong>：判断磁场方向时，若粒子带负电，四指须指向运动方向的反方向。忽略电性会直接得到反方向的错误结论。</li>
+<li><strong>半径公式记忆不清</strong>：写成 $r = \frac{mv^2}{qB}$ 或 $r = \frac{qB}{mv}$ 等。正确为 $r = \frac{mv}{qB}$（带绝对值）。</li>
+<li><strong>加速电压对半径的影响</strong>：将 $r \propto \frac{\sqrt{U}}{B}$ 记反，误认为电压增大、半径减小，导致“增大 $U$ 可使 $P$ 左移”这类错误。</li>
+<li><strong>落点移动方向判断不准</strong>：未结合具体轨迹几何。通常半径变大，偏转程度变小，电子打到靶上的位置会向原方向更远处移动；半径变小则向入射方向回缩。需画草图确认“左移”“右移”对应半径增大还是减小。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·新课标Ⅱ·04）CT扫描机中，电子束从静止开始经 $M$、$N$ 间加速电场加速，进入虚线框内匀强偏转磁场，沿图示路径打到靶上 $P$ 点。判断：A. $M$ 与 $N$ 电势高低；B. 增大加速电压 $P$ 点移动；C. 偏转磁场方向；D. 增大磁感应强度 $P$ 点移动。</p>
+<p><strong>思路</strong>：本题为“电场加速+磁场偏转”组合场问题。先由电子加速方向判断电场力和电场线方向，得出电势高低；由左手定则和电子偏转方向判断磁场方向；由半径公式 $r=\frac{mv}{eB}$ 结合 $v=\sqrt{\frac{2eU}{m}}$ 得出 $r \propto \frac{\sqrt{U}}{B}$，再根据图示轨迹判断半径变化如何影响 $P$ 点左右移动。</p>
+<p><strong>步骤</strong>
+1. <strong>电势判断</strong>：电子向右加速，电场力向右。电子带负电，故电场线方向向左（从 $N$ 指向 $M$）。沿电场线方向电势降低，$N$ 电势高、$M$ 电势低。A 错误。
+2. <strong>加速电压影响</strong>：由 $eU = \frac{1}{2}mv^2$，$v = \sqrt{\frac{2eU}{m}}$。半径 $r = \frac{mv}{eB} = \frac{\sqrt{2emU}}{eB}$，$U$ 增大则 $r$ 增大。轨迹半径变大，电子偏转程度变小，落点 $P$ 会沿靶面向远离入射方向移动，结合图示应为右移而非左移。B 错误。
+3. <strong>磁场方向判断</strong>：电子进入磁场时速度方向水平向右；在磁场中向下偏转，洛伦兹力向下。电子负电，左手定则四指指向速度反方向（向左），拇指指向洛伦兹力方向（向下），磁感线穿过手心，得磁场方向垂直纸面向里（×）。C“垂直于纸面向外”错误。
+4. <strong>磁感应强度影响</strong>：半径 $r \propto \frac{1}{B}$，$B$ 增大则 $r$ 减小。半径变小，电子偏转更快，落点 $P$ 向入射方向回缩（左移）。D 正确。
+<strong>答案</strong>：D</p>
+<p><strong>点评/变式</strong>
+- 本题综合考查电场加速、磁场偏转、左手定则、电势判断四个知识点，是典型组合场问题，解题核心在于 $r = \frac{1}{B}\sqrt{\frac{2mU}{e}}$。
+- 变式：若将电子改为质子（正电），则电场力方向相反，电势高低结论相反；磁场方向判断中四指指向运动同向，偏转方向变化可能导致磁场方向判断结果改变。考生应养成先标出粒子电性再分析的习惯。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-04.html">2020-新课标Ⅱ-04</a>（2020 · 中） 电场加速与磁场偏转的综合分析，涉及电势高低和偏转方向判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/594-带电粒子加速.html">带电粒子加速</a></li>
+</ul>
+</div>
+</body>
+</html>

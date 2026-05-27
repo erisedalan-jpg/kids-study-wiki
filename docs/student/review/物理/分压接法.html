@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分压接法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分压接法</h1><div class="review-mark" data-stem="分压接法"></div><div class="meta-card"><span><strong>考点</strong>分压接法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>恒定电流</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：恒定电流</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>分压接法是指滑动变阻器采用分压式连线，使其作为分压器向负载提供可调电压。基本连接方式为：滑动变阻器两个固定端接电源两极，滑片和一个固定端接负载。负载两端电压 $U_{\text{load}}$ 与滑片位置有关，忽略电源内阻时有：
+$$U_{\text{load}} = \frac{R_{\text{并}}}{R_{\text{ab}}} \cdot E$$
+其中 $R_{\text{ab}}$ 为变阻器总电阻，$R_{\text{并}}$ 为滑片与一固定端之间的电阻与负载并联后的等效电阻。该接法的电压调节范围大，可从零连续调到路端电压（接近电源电动势 $E$）。<br />
+适用条件：需要电压从零开始调节；负载电阻远大于变阻器全部电阻时，电压调节的线性度更优。在测量电表内阻等实验中常配合“恒压输出固定滑片”的思想，通过先后两次电压读数与串联电阻的变化间接计算未知电阻。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别电路</strong>——观察滑动变阻器的三个接线端：若一固定端与滑片作为输出接负载，另一固定端接电源，则为分压接法。  </li>
+<li><strong>初始安全位置</strong>——闭合开关前，滑片应滑至使负载两端电压为零的位置（通常是将负载短路的那一端）。  </li>
+<li><strong>分步操作</strong>——先调节滑片使负载获得目标电压（如满偏），然后保持滑片位置不变，改变负载回路中的元件（如串联电阻箱）并读取新读数。  </li>
+<li><strong>恒压假设</strong>——滑片位置固定后，分压器输出端电压 $U_o$ 视为不变，这是建立方程的关键前提。  </li>
+<li><strong>列式求解</strong>——利用串联分压（或并联分流）及欧姆定律，写出两次状态下的关系式，消去中间量并解出待求电阻。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>混淆分压与限流接法：限流接法的负载电压最小值不是零，而是 $\frac{R_L}{R_L+R_{\text{变}}}E$；分压接法则可从零起调。  </li>
+<li>滑片初始位置错误：分压接法中，闭合开关前滑片应使负载两端被短路，不是使变阻器总阻值最大。  </li>
+<li>滑片固定后误认为路端电压恒定：滑片固定仅保证分压器输出的空载电压恒定，若有电源内阻或线路变化，该电压仍可能变动。  </li>
+<li>物理量代换不清：满偏电压 $U_0$、调节后的电压 $U$、串联电阻箱阻值 $R$ 以及待测内阻 $R_V$ 带入公式时，易混淆分子分母关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2016-新课标Ⅱ-10</h3>
+<p><strong>题目</strong><br />
+利用图（a）所示分压电路测量量程为2.5 V的电压表内阻（约数千欧），可选择电阻箱（最大99999.9 Ω）、滑动变阻器 $R_1$（50 Ω）、$R_2$（5 kΩ）、3 V直流电源等。主要步骤：①连接电路；②将电阻箱调0，滑片移至最左端，闭合开关；③调节滑片使电压表满偏；④保持滑片不动，调节电阻箱使电压表示数为2.00 V，记下电阻箱阻值 $R$。</p>
+<p><strong>思路</strong><br />
+滑动变阻器构成分压器；滑片位置固定后，其输出电压 $U_o$ 保持恒定。第一次电压表满偏时 $U_o=2.5$ V；第二次电压表与电阻箱串联接于同一输出端，利用串联分压关系建立方程，即可算出电压表内阻 $R_V$。</p>
+<p><strong>步骤</strong><br />
+1. 按原理图连线，电阻箱先置零，滑片移至最左端（输出电压为零）。<br />
+2. 闭合开关，缓慢调节滑片，使电压表指针刚好指在满偏刻度（2.5 V），此时分压器输出电压 $U_o=2.5$ V。<br />
+3. 保持滑片绝对不动，向电压表支路串联电阻箱，增大其阻值 $R$，直至电压表示数降为2.00 V。<br />
+4. 对此时回路列串联方程：流过电压表与电阻箱的电流相等<br />
+   $$\frac{U}{R_V} = \frac{U_o - U}{R}$$<br />
+   其中 $U=2.00$ V，$U_o=2.50$ V。解得<br />
+   $$R_V = \frac{U}{U_o - U}R = \frac{2.00}{0.50}R = 4R$$<br />
+5. 将记录的电阻箱阻值 $R$ 代入，即得电压表内阻。</p>
+<p><strong>点评/变式</strong><br />
+本题最大陷阱在于辨析分压与限流——若误用限流思路，会错认为滑片位置改变后总电压仍不变。分压接法配合“恒压点”可巧妙避开直接测电流的困难，广泛适用于高内阻电表的测量。变式1：将电阻箱与电压表并联，需用到分流关系 $R_V = \frac{U}{I_g - I}$。变式2：若电源有不可忽略的内阻，可在滑片固定后测量两次负载电压，利用闭合电路欧姆定律求解电表内阻。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-10.html">2016-新课标Ⅱ-10</a>（2016 · 中） 利用半偏法测量电压表内阻，考查分压电路与闭合电路欧姆定律的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/762-分压接法.html">分压接法</a></li>
+</ul>
+</div>
+</body>
+</html>

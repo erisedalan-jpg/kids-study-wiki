@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何光学</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何光学</h1><div class="review-mark" data-stem="几何光学"></div><div class="meta-card"><span><strong>考点</strong>几何光学</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：16</li>
+<li>真题数：4；年份跨度：2011–2017</li>
+<li>出现题位：解答16</li>
+<li>难度分布：难3 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光的折射定律</strong>：折射光线在入射光线与法线决定的平面内；折射角 $\gamma$ 与入射角 $i$ 满足 $n_1\sin i = n_2\sin \gamma$（$n_1$、$n_2$ 为两边介质折射率）。光从真空（$n=1$）入射至折射率为 $n$ 的介质时有 $\sin i = n\sin\gamma$。</li>
+<li><strong>折射率</strong>：$n = \frac{\sin i}{\sin\gamma}$，由介质本身性质和光频率决定。折射率越大，光线偏折越厉害。</li>
+<li><strong>光路可逆原理</strong>：光线反向传播时路径不变，是作光路图与镜面对称处理的基础。</li>
+<li><strong>全反射与临界角</strong>：光从光密介质射向光疏介质，入射角增大使折射角达到 $90^\circ$ 时的入射角称为临界角 $C$，满足 $\sin C = \frac{1}{n}$。入射角 $\ge C$ 时发生全反射，无折射光。</li>
+<li>几何光学的核心是 <strong>光路图＋几何关系＋折射/全反射公式</strong>，审题重点在于区分“一次折射后不能射出”或“恰好完全遮挡”对应的临界条件。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>作出光路图</strong>：依题意画清入射点、折射/反射点、法线，标注已知角度和几何长度。若涉及反射面，利用镜面对称法画出等效路径。</li>
+<li><strong>判断临界情况</strong>：  </li>
+<li>“恰好不能射出”“完全挡住” → 对应全反射临界角 $C$ 或边界光线。  </li>
+<li>已知两束出射光相互垂直等特殊条件 → 建立角度关系式。</li>
+<li><strong>结合几何挖角度</strong>：用三角形内角和、对称性、平行垂直关系将入射角、折射角、反射角与已知边角联系起来。</li>
+<li><strong>列方程求解</strong>：  </li>
+<li>折射（或全反射）公式结合几何关系建立等式。  </li>
+<li>多个光路联立消元，解出未知折射率或几何量。</li>
+<li><strong>检验取舍</strong>：核查解得的角度或长度是否符合物理可能（如 $\sin\theta \le 1$，距离非负）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误把“不能射出”当成单一条件</strong>：题目中“只经过一次折射不能透出”的真正含义是：光线射向各个表面时，在不镀膜部分应发生全反射。需考虑从中心出发向各方向的最临界光线。</li>
+<li><strong>混淆折射角与入射角</strong>：牢记公式 $\sin i_{\text{真空}} = n\sin r_{\text{介质}}$，切勿将角标对调。</li>
+<li><strong>忽略反射面的对称等效</strong>：如镜面或镀银面，用镜像法可以简化光路，不画镜像光路容易错算角度或漏掉贡献。</li>
+<li><strong>几何关系推导错误</strong>：光线路径中的三角形边长关系、角度互余/互补关系易算反，建议多标注、慢推导。</li>
+<li><strong>将“恰好挡住”直接等同于半径相等</strong>：实际要考虑光线斜射引起的光斑扩展 $\Delta r = h \tan C$，圆纸片半径应为发光面半径加扩展量。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题1：2017-新课标Ⅱ-16（折射与反射复合光路）</h3>
+<p><strong>题目</strong>：高 $2l$ 的方形容器装满透明液体，右侧内壁涂反光材料。剖面左下角点光源发出的光，从上表面 $D$ 点射出两束光相互垂直，求折射率。
+<strong>思路</strong>：两束光分别为直射光与经右侧反射后的光，利用反射对称性作出等效光源点，分别列折射定律，并由垂直条件得出折射角的关系。
+<strong>步骤</strong>：
+- 设直射光入射角 $i_1$、折射角 $\gamma_1$；反射光的入射角 $i_2$、折射角 $\gamma_2$。
+- 由几何及镜面对称可求出 $i_1$、$i_2$ 与边长 $l$ 的三角函数关系。
+- 列 $n\sin i_1 = \sin\gamma_1$，$n\sin i_2 = \sin\gamma_2$，结合 $\gamma_1+\gamma_2=90^\circ$ 联立解 $n$。
+<strong>点评/变式</strong>：题型核心：反射面引入的多光束问题 → 用对称法化曲为直。若改变光源位置或反射面角度，解法思路不变，几何关系相应调整。</p>
+<h3>题2：2014-新课标Ⅱ-16（全反射遮挡）</h3>
+<p><strong>题目</strong>：厚 $h$ 的平板玻璃，下表面有半径 $r$ 的圆形发光面。上表面放纸片完全挡住出射光，求折射率。
+<strong>思路</strong>：“完全挡住”对应发光面边缘的光线在上表面恰好发生全反射，由此找到临界光线与法线的夹角即临界角 $C$，结合几何求纸片最小半径 $R = r + h\tan C$。
+<strong>步骤</strong>：
+- 画出发光边缘 $S$ 点射向纸片边缘 $A$ 的光路，该光线入射角等于临界角 $C$。
+- 列出 $\sin C = \frac{1}{n}$，$\tan C = \frac{\sin C}{\sqrt{1-\sin^2 C}}$。
+- 由几何得扩展量 $\Delta r = h\tan C$，$R = r + \Delta r$，代入已知即可求 $n$。
+<strong>点评/变式</strong>：障碍物遮光问题必须抓“边界光线全反射”这一临界点。若发光面换成点光源且观察点在有限远，则需按实际光路重新取边界。</p>
+<h3>题3：2012-新课标-16（立方体全反射遮挡）</h3>
+<p><strong>题目</strong>：玻璃立方体中心有点光源，折射率 $\sqrt{2}$，部分表面镀不透明膜，使光线仅经过一次折射不能射出。求镀膜面积与表面积之比的最小值。
+<strong>思路</strong>：“仅一次折射不能射出” → 光线射向不镀膜区域会发生全反射。用临界情况确定上表面一个最小圆形不镀膜区域的半径，继而推广至六个面，求面积比。
+<strong>步骤</strong>：
+- 从中心引一条光线射向镀膜边缘，在该处折射角为 $90^\circ$（入射角为临界角 $C$），得 $\sin C = 1/n$。
+- 通过几何求出此临界光线的出射位置与中心轴线的距离 $r'$。
+- 不镀膜区域最小为以中心投影为圆心的圆，总镀膜面积 $= 6 \times (\text{面面积} - \text{不镀膜面积})$，求与总表面积之比。
+<strong>点评/变式</strong>：立体光学问题必须找最易射出（入射角最小）的临界方向作为全反射判据。折射率、形状改变时，临界几何对应改变，但“一次折射即全反射”的线索不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-16.html">2017-新课标Ⅱ-16</a>（2017 · 难） 桶状透明液体容器中，从底部点光源出发经反光右壁后由上表面D点射出两束相互垂直的光线，求液体折射率。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-16.html">2014-新课标Ⅱ-16</a>（2014 · 中） 此题考查全反射临界角、折射定律及几何光学，需结合光路图求折射率。</li>
+<li><a href="../../exam/物理/2012-新课标-16.html">2012-新课标-16</a>（2012 · 难） 光学折射与全反射在立方体内求最小镀膜面积比</li>
+<li><a href="../../exam/物理/2011-新课标-16.html">2011-新课标-16</a>（2011 · 难） 考查光的折射定律，通过几何关系求折射角并计算透明物体的折射率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/455-几何光学.html">几何光学</a></li>
+</ul>
+</div>
+</body>
+</html>

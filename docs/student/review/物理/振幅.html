@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>振幅</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>振幅</h1><div class="review-mark" data-stem="振幅"></div><div class="meta-card"><span><strong>考点</strong>振幅</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>机械振动 与 机械波</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：机械振动 与 机械波</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：解答15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>振幅定义</strong>：振动物体离开平衡位置的最大距离，标量，恒正。对简谐运动，振幅由系统初始能量决定，与周期（或频率）无关。</li>
+<li><strong>简谐运动的振幅</strong><br />
+  位移公式：$x = A\sin(\omega t + \varphi)$ 或 $x = A\cos(\omega t + \varphi)$，$A$ 为振幅。<br />
+  速度幅值：$v_m = \omega A$；加速度幅值：$a_m = \omega^2 A$。</li>
+<li><strong>弹簧振子的能量与振幅</strong><br />
+  总机械能 $E = \frac{1}{2}kA^2$（水平弹簧振子在光滑面上，$k$ 为劲度系数）。<br />
+  任意位置：$\frac{1}{2}mv^2 + \frac{1}{2}kx^2 = \frac{1}{2}kA^2$。<br />
+  最大速度 $v_{\max} = \omega A = \sqrt{\frac{k}{m}}A$。</li>
+<li><strong>振幅变化的决定性因素</strong><br />
+  振幅的变化取决于<strong>系统总能量是否改变</strong>以及<strong>振子质量、劲度系数是否突变</strong>。<br />
+  若在平衡位置处质量突变（如分离、脱落），速度不变，动能重新分配，新振幅由新质量的动能等于 $\frac{1}{2}kA'^2$ 求得。</li>
+<li><strong>简谐运动的周期</strong><br />
+  $T = 2\pi\sqrt{\frac{m}{k}}$，仅由系统本身性质（$m,k$）决定，与振幅无关（等时性）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定振动系统所处的位置</strong><br />
+   明确质量变化发生在何处：平衡位置（$x=0$，速度最大）还是最大位移处（$x=\pm A$，速度为零）。这是分析能量和动量是否守恒的关键。</li>
+<li><strong>分析分离前后瞬时速度关系</strong>  </li>
+<li>在平衡位置分离：分离瞬间各部分速度相同，等于原振子通过平衡位置的速度。  </li>
+<li>在最大位移处分离：分离瞬间各部分速度均为零。</li>
+<li><strong>建立能量（或动量）关联求新振幅</strong>  </li>
+<li>若在平衡位置分离，分离后剩余部分振子的动能已知，由 $\frac{1}{2}mv^2 = \frac{1}{2}kA'^2$ 直接求 $A'$。  </li>
+<li>若在最大位移处分离，分离时势能未变，新振子的振幅可能不变（但需注意质量改变是否影响平衡位置，若弹簧连接情况不变，势能 $\frac{1}{2}kA^2$ 全部留给剩余振子，振幅不变）。</li>
+<li><strong>求新周期</strong><br />
+   直接应用 $T' = 2\pi\sqrt{\frac{m'}{k}}$，注意 $k$ 是否发生变化（同一弹簧 $k$ 不变）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为振幅与周期关联变化</strong><br />
+  振幅由能量决定，周期由 $m,k$ 决定，两者相互独立。质量突变时，二者可能同时变化，但因果关系不同。</li>
+<li><strong>混淆平衡位置与最大位移处的分离后果</strong><br />
+  平衡位置分离：速度不变，动能按质量分配，新振幅一定改变。<br />
+  最大位移处分离：速度为零，分离不改变势能分配，若弹簧仍连在剩余物体上，振幅不变；若弹簧同时脱离，则需重新判断。</li>
+<li><strong>错用动量守恒求振幅</strong><br />
+  分离过程若涉及外力（弹簧弹力）作用，系统动量一般不守恒。在平衡位置分离，分离瞬间弹力为零，可视为内力远大于外力，但更稳妥的方法是用速度相同 + 能量关系，不要盲目列动量守恒。</li>
+<li><strong>忘记振幅是标量正值</strong><br />
+  计算时 $A = \sqrt{\frac{m}{k}}v$，开方后取正值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2013·新课标Ⅱ·15</h3>
+<p><strong>题目</strong><br />
+一轻弹簧一端固定，另一端连接由 a、b 粘合而成的物块构成弹簧振子，置于光滑水平面。振幅为 $A_0$，周期为 $T_0$。当物块向右通过平衡位置时，a、b 间的粘胶脱开，b 脱落，a 继续振动。求此后 a 的振幅 $A$ 和周期 $T$。</p>
+<p><strong>思路</strong><br />
+分离发生在平衡位置，此时速度最大。分离前后 a、b 速度相同。分离后 b 离开，a 以该速度继续运动，其动能作为新振子的最大动能，据此求新振幅。新周期由 a 的质量决定。</p>
+<p><strong>步骤</strong><br />
+设 a、b 质量分别为 $m_a$、$m_b$，总质量 $M = m_a + m_b$。<br />
+原振幅 $A_0$ 满足：$\frac{1}{2}kA_0^2 = \frac{1}{2}Mv_0^2$，得平衡位置速度 $v_0 = \sqrt{\frac{k}{M}}A_0$。<br />
+分离瞬间 a 的速度仍为 $v_0$，其动能 $E_k' = \frac{1}{2}m_a v_0^2$。<br />
+对 a 的新振动，有 $\frac{1}{2}kA^2 = \frac{1}{2}m_a v_0^2$。<br />
+$$
+A = \sqrt{\frac{m_a}{k}} v_0 = \sqrt{\frac{m_a}{k}} \cdot \sqrt{\frac{k}{M}} A_0 = \sqrt{\frac{m_a}{M}} A_0.
+$$
+新周期 $T = 2\pi\sqrt{\frac{m_a}{k}}$，而原周期 $T_0 = 2\pi\sqrt{\frac{M}{k}}$，故<br />
+$$
+T = \sqrt{\frac{m_a}{M}} T_0.
+$$</p>
+<p><strong>点评/变式</strong><br />
+- 若粘胶在最大位移处脱开，则分离时速度为零，a、b 分离不改变弹簧储存的势能，a 的振幅仍为 $A_0$（因为 $\frac{1}{2}kA_0^2$ 全部留给 a），周期仍变为 $\sqrt{\frac{m_a}{M}}T_0$。<br />
+- 注意题目中 $m_a$ 与 $M$ 的关系：若 a、b 质量相等，则 $A = \frac{\sqrt{2}}{2}A_0$，$T = \frac{\sqrt{2}}{2}T_0$。<br />
+- 此类问题核心：<strong>在何处分离</strong>决定速度是否连续，进而决定能量如何分配。振幅与周期的求解务必分开，切勿混淆物理机制。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-15.html">2013-新课标Ⅱ-15</a>（2013 · 中） 本题考查弹簧振子模型中物块分离前后的周期和振幅变化分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/361-振幅.html">振幅</a></li>
+</ul>
+</div>
+</body>
+</html>

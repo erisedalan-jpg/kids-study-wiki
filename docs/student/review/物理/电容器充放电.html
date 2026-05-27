@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电容器充放电</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电容器充放电</h1><div class="review-mark" data-stem="电容器充放电"></div><div class="meta-card"><span><strong>考点</strong>电容器充放电</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电容器充放电特性</strong>：电容器充电时，电压 $u_C$ 逐渐升高，电流 $i$ 从最大值 $I_0 = \frac{E}{R}$ 按指数规律衰减至零；放电时，电容相当于电源，$u_C$ 逐渐下降，电流反向且从最大值衰减至零。</li>
+<li><strong>充放电电流规律</strong>：充电电流 $i = \frac{E}{R} e^{-\frac{t}{RC}}$，放电电流 $i = -\frac{U_0}{R} e^{-\frac{t}{RC}}$。$R$ 为充放电回路总电阻，$C$ 为电容。</li>
+<li><strong>时间常数</strong> $\tau = RC$：反映充放电快慢，$\tau$ 越大，充放电越慢。当 $t = \tau$ 时，电压或电流变化量为最大值的 $63.2\%$；经过 $3\tau \sim 5\tau$ 可认为过程结束。</li>
+<li><strong>$i-t$ 曲线面积</strong>：充（放）电过程中，$i-t$ 图线与时间轴围成的面积等于电容器充（放）电的电荷量 $\Delta q$，即 $\Delta q = C \Delta U$。</li>
+<li><strong>多用电表的使用</strong>：测直流电压时，红表笔接高电位（正极），黑表笔接低电位（负极）。</li>
+<li><strong>实验电路分析</strong>：单刀双掷开关与“1”接通构成充电回路，与“2”接通构成放电回路。放电时外接用电器（如灯泡）的亮度变化由放电电流决定。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别回路性质</strong>：根据开关位置判断电容器处于充电还是放电，确定电路中电流方向及初末状态。</li>
+<li><strong>初始值与最终值</strong>：充电回路刚接通的瞬间，电容器相当于“短路”（$u_C=0$），电流最大 $I_0 = \frac{E}{R}$；稳定后相当于“断路”，电流为零。放电瞬间，电容电压等于充电结束时的电压，电流 $I_0 = \frac{U_0}{R}$。</li>
+<li><strong>比较不同参数下的曲线</strong>：对同一电源、不同电阻的充电，$R$ 越大初始电流越小，时间常数越大，曲线更“平缓”。$i-t$ 曲线下的面积始终等于充入的总电荷量 $Q = CE$。</li>
+<li><strong>面积法求电量</strong>：在 $i-t$ 图像中，无论充放电，图线与时间轴所围面积均等于该过程中通过回路的电荷量。通过面积可间接比较电容或电压。</li>
+<li><strong>仪表接法检验</strong>：多用电表测电压时“红入黑出”（电流从红表笔流入电表），测直流必须红接正、黑接负。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆初始电流条件</strong>：误认为充电开始时电流最小或为零。充电之初，电容电压为零，回路电动势全部加在电阻上，电流最大。</li>
+<li><strong>$R$ 对曲线形状的影响</strong>：误认为电阻越大，$i-t$ 曲线与坐标轴围成面积越大。实际上，充满后的电荷量 $Q = CE$ 与 $R$ 无关，面积相等，只是时间常数不同导致曲线“胖瘦”不同。</li>
+<li><strong>红黑表笔接反</strong>：用多用电表电压挡测直流电压时，若红表笔接正极、黑表笔接负极，可以防止指针反偏（模拟表）或数据为负（数字表），高考填空常设此陷阱。</li>
+<li><strong>放电时灯泡亮度判断错误</strong>：放电开始时电压最高，电流最大，灯泡瞬间最亮，随后亮度逐渐减小直至熄灭，并非逐渐变亮或趋于稳定。</li>
+<li><strong>面积含义混淆</strong>：$i-t$ 图像面积表示电量，不是能量或电压。部分考生误用 $U-t$ 或 $Q-t$ 的关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2023新课标卷·9）：实验“观察电容器的充、放电现象”，给定电池、电阻箱（$R_1$和$R_2&gt;R_1$）、单刀双掷开关、灯泡等。要求：（1）多用电表红表笔应接电池的哪一极？（2）充电完成后开关接“2”端，灯泡亮度变化情况？（3）两次不同电阻值的充电 $i-t$ 曲线如图，实线对应哪个电阻？曲线与坐标轴所围面积等于什么物理量？</p>
+<p><strong>思路</strong><br />
+(1) 多用电表测直流电压，红表笔应接高电位，即电池正极。(2) 放电时电容相当于电源，初始电压等于充电电压，回路电流最大，灯泡瞬间最亮，随后电流指数衰减，亮度逐渐减小至熄灭。(3) 电阻越大，充电初始电流越小，但稳定后充入总电荷量相同。观察两条曲线，实线初始电流较小，故实线对应阻值大的 $R_2$；面积 $S = \int i \, dt$ 代表电量的变化，因从零充至电源电压，面积等于电容器最终所带电荷量 $Q$ 或 $CE$。</p>
+<p><strong>步骤</strong><br />
+(1) 红表笔与电池<strong>正极</strong>接触。<br />
+(2) 放电瞬间灯最亮，随后指数衰减至熄灭，选择<strong>C</strong>：迅速变亮，然后亮度逐渐减小至熄灭。<br />
+(3) 由 $i-t$ 图，实线起始电流小且衰减慢，符合 $R$ 较大特征。$R_2&gt;R_1$，故实线对应 $R_2$。曲线与坐标轴所围面积表示充电过程中通过回路的电荷量，即该次充电完成后电容器上的<strong>电荷量</strong>（或电量）。</p>
+<p><strong>点评/变式</strong><br />
+本题全面覆盖了电容器充放电实验的核心：仪表使用、充放电现象与 $i-t$ 图分析。容易出错的是第（3）空“面积”的含义，必须明确该面积对应 $q=\int i dt$，是电量而非电压或能量。变式可改为让考生判断放电时灯泡亮暗变化的微观解释，或结合 $RC$ 时间常数进行定量估算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2023-新课标-09.html">2023-新课标-09</a>（2023 · 中） 本题通过多用电表原理和电容器充放电实验，考查电路分析及电流-时间图像的面积意义。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/676-电容器充放电.html">电容器充放电</a></li>
+</ul>
+</div>
+</body>
+</html>

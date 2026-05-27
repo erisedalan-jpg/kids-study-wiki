@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>光电效应方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>光电效应方程</h1><div class="review-mark" data-stem="光电效应方程"></div><div class="meta-card"><span><strong>考点</strong>光电效应方程</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>近代物理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：近代物理</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2011–2018</li>
+<li>出现题位：解答17 选择4</li>
+<li>难度分布：中1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>光子能量</strong>：$E=h\nu=h\frac{c}{\lambda}$，其中 $h$ 为普朗克常量（$6.63\times10^{-34}\,\text{J·s}$），$c$ 为真空中光速（$3.00\times10^{8}\,\text{m/s}$）。</li>
+<li><strong>爱因斯坦光电效应方程</strong>：$E_k = h\nu - W_0$ 或 $E_k = h\frac{c}{\lambda} - W_0$，$E_k$ 为光电子的最大初动能。</li>
+<li><strong>逸出功</strong>：$W_0 = h\nu_0 = h\frac{c}{\lambda_0}$，$\nu_0$ 为截止频率（极限频率），$\lambda_0$ 为截止波长（红限波长）。仅当入射光频率 $\nu &gt; \nu_0$（或 $\lambda &lt; \lambda_0$）时才能发生光电效应。</li>
+<li><strong>遏止电压</strong>：$eU_c = E_k$，其中 $e$ 为元电荷，$U_c$ 为遏止电压。最大初动能等于电场力对光电子所做的功。</li>
+<li><strong>适用条件</strong>：单个光子与单个电子相互作用；光子能量必须大于金属逸出功；与光强无关（光强影响饱和光电流）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确已知量与所求量</strong>：提取题目中的波长 $\lambda$、频率 $\nu$、最大初动能 $E_k$、截止频率/波长、遏止电压等。</li>
+<li><strong>选择核心方程</strong>：</li>
+<li>涉及最大初动能与入射光频率/波长：$E_k = h\nu - W_0$。</li>
+<li>涉及逸出功与截止频率/波长：$W_0 = h\nu_0 = h\frac{c}{\lambda_0}$。</li>
+<li>涉及遏止电压：$eU_c = E_k$。</li>
+<li><strong>统一单位</strong>：波长通常换算为米（$\text{nm}\to\text{m}$，$1\,\text{nm}=10^{-9}\,\text{m}$）；能量单位用焦耳（$\text{J}$）或电子伏特（$\text{eV}$，$1\,\text{eV}=1.6\times10^{-19}\,\text{J}$）；频率单位为 $\text{Hz}$。</li>
+<li><strong>联立代数运算</strong>：将已知数据代入方程，注意指数运算与有效数字，解出未知量。</li>
+<li><strong>验证结果合理性</strong>：检查求得频率/波长是否满足发生光电效应的条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波长与频率</strong>：忘记用 $c=\lambda\nu$ 进行转换，或直接用波长套用频率公式。</li>
+<li><strong>单位不统一</strong>：未将纳米转换为米，直接与光速（$\text{m/s}$）运算导致数量级错误。</li>
+<li><strong>误用最大初动能与频率的正比关系</strong>：最大初动能与频率是 <strong>线性关系</strong> $E_k = h\nu - W_0$，并非正比，图线不过原点。</li>
+<li><strong>遏止电压方向与符号</strong>：牢记 $eU_c = E_k$ 中的 $U_c$ 为绝对值，遏止电压对应光电子恰被反向电场截止。</li>
+<li><strong>计算指数失误</strong>：普朗克常量、光速、波长数值均含 $10$ 的幂次，运算时易因指数加减出错，建议分步处理系数与幂指数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2018-新课标Ⅱ-04）</h3>
+<p><strong>简述</strong>：波长为 $300\,\text{nm}$ 的光照射锌板，电子最大初动能为 $1.28\times10^{-19}\,\text{J}$，求能使锌产生光电效应的单色光最低频率。<br />
+<strong>思路</strong>：最低频率即截止频率 $\nu_0$。先由光电效应方程求逸出功 $W_0$，再由 $W_0=h\nu_0$ 求 $\nu_0$。<br />
+<strong>步骤</strong>：<br />
+1. 将波长换算为米：$\lambda = 300\,\text{nm}=3.00\times10^{-7}\,\text{m}$。<br />
+2. 由 $E_k = h\frac{c}{\lambda} - W_0$，得 $W_0 = h\frac{c}{\lambda} - E_k$。<br />
+   计算 $h\frac{c}{\lambda} = \frac{6.63\times10^{-34} \times 3.00\times10^{8}}{3.00\times10^{-7}} = 6.63\times10^{-19}\,\text{J}$。<br />
+   则 $W_0 = 6.63\times10^{-19} - 1.28\times10^{-19} = 5.35\times10^{-19}\,\text{J}$。<br />
+3. 由 $W_0 = h\nu_0$ 得 $\nu_0 = \frac{W_0}{h} = \frac{5.35\times10^{-19}}{6.63\times10^{-34}} \approx 8.07\times10^{14}\,\text{Hz}$。<br />
+   最接近选项为 $8\times10^{14}\,\text{Hz}$。<br />
+<strong>点评/变式</strong>：本题属于直接套用公式的基础题，核心是 $\frac{hc}{\lambda}$ 的计算与指数处理。变式可改为已知逸出功和入射波长，求遏止电压，只需多一步 $eU_c=E_k$。</p>
+<h3><strong>题目2</strong>（2011-新课标-17）</h3>
+<p><strong>简述</strong>：某金属截止频率对应的波长为 $\lambda_0$，求金属逸出功；用波长为 $\lambda$（$\lambda&lt;\lambda_0$）的光照射，求遏止电压。（用 $e$、$c$、$h$ 和 $\lambda_0$、$\lambda$ 表示）<br />
+<strong>思路</strong>：先用截止波长表示逸出功 $W_0 = h\frac{c}{\lambda_0}$；再由光电效应方程与 $eU_c=E_k$ 求遏止电压的表达式。<br />
+<strong>步骤</strong>：<br />
+1. 逸出功：$W_0 = h\nu_0 = h\frac{c}{\lambda_0}$。<br />
+2. 波长为 $\lambda$ 的光子能量 $E = h\frac{c}{\lambda}$。最大初动能 $E_k = h\frac{c}{\lambda} - h\frac{c}{\lambda_0}$。<br />
+3. 由 $eU_c = E_k$，得遏止电压 $U_c = \frac{E_k}{e} = \frac{hc}{e}\left(\frac{1}{\lambda} - \frac{1}{\lambda_0}\right)$。<br />
+<strong>点评/变式</strong>：该类符号推导题强调物理表达式的规范书写。注意 $\lambda&lt;\lambda_0$ 的条件保证括号内为正值。常考变形：给出遏止电压与波长关系图像，通过斜率与截距求 $h$ 和 $\lambda_0$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-04.html">2018-新课标Ⅱ-04</a>（2018 · 中） 本题考查光电效应现象及爱因斯坦方程的应用，通过求解逸出功和极限频率计算最低频率。</li>
+<li><a href="../../exam/物理/2011-新课标-17.html">2011-新课标-17</a>（2011 · 难） 考查爱因斯坦光电效应方程，计算金属逸出功和遏止电压。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/838-光电效应方程.html">光电效应方程</a></li>
+</ul>
+</div>
+</body>
+</html>

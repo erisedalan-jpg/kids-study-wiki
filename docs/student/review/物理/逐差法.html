@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>逐差法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>逐差法</h1><div class="review-mark" data-stem="逐差法"></div><div class="meta-card"><span><strong>考点</strong>逐差法</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>实验 与 测量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验 与 测量</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2019–2021</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>逐差法</strong>是处理匀变速直线运动实验数据的基本方法。<br />
+  原理：在匀变速直线运动中，连续相等时间 $T$ 内的位移之差为恒量，$\Delta x = aT^2$。<br />
+  将偶数段位移数据等分成前后两组，对应项相减后取平均，可充分利用数据、减小偶然误差。</li>
+<li><strong>核心公式</strong>（纸带或频闪照片）：<br />
+  四段位移 $x_1,x_2,x_3,x_4$：<br />
+  $$a = \frac{(x_3+x_4)-(x_1+x_2)}{4T^2}$$<br />
+  六段位移 $x_1\sim x_6$：<br />
+  $$a = \frac{(x_4+x_5+x_6)-(x_1+x_2+x_3)}{9T^2}$$</li>
+<li><strong>适用条件</strong>：物体做匀变速直线运动；已知相等时间间隔 $T$；位移测量有效数字正确。<br />
+  平抛运动的竖直分运动满足匀变速直线运动，同样可用逐差法求 $g$。</li>
+<li><strong>$T$ 的确定</strong>：打点计时器频率 $50\,\text{Hz}$ 时，打点周期 $0.02\,\text{s}$。若“每相邻计数点间还有 $4$ 个点未画出”，则 $T=5\times0.02\,\text{s}=0.1\,\text{s}$。频闪仪拍摄时 $T$ 直接为频闪间隔。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确时间间隔 $T$</strong>：根据题目给出的打点周期、未画出点数或频闪时间，准确计算相邻计数点（或影像）之间的时间。</li>
+<li><strong>读准各段位移</strong>：用刻度尺（或题给方格坐标）读出连续相等时间内的位移 $x_1,x_2,x_3,\dots$，注意估读和单位换算（$\text{cm}\to\text{m}$）。</li>
+<li><strong>选择逐差法公式</strong>：</li>
+<li>位移段数为偶数（4段或6段）：直接分组，用对应公式计算加速度。</li>
+<li>位移段数为奇数：通常舍去最小的一段或第一段，保留偶数段处理。</li>
+<li><strong>代入数据计算</strong>：代入公式求出加速度。结果的有效数字应与题目要求或位移测量精度匹配。</li>
+<li><strong>关联物理量求解</strong>：若求动摩擦因数、重力加速度验证、初速度等，再结合牛顿第二定律或运动学公式（如平抛的水平匀速运动）进一步计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>时间间隔算错</strong>：误将计数点间隔直接当作 $0.02\,\text{s}$，忽视“还有若干点未画出”的条件。务必数清实际含有的原始打点间隔数。</li>
+<li><strong>逐差法使用不规范</strong>：逐段采用 $\Delta x = aT^2$ 求多个 $a$ 再取平均值，误差较大且未充分利用所有数据，高考解答中会失分。必须使用分组逐差法。</li>
+<li><strong>位移读数与单位</strong>：未估读到分度值下一位导致有效数字错误；忘记将 $\text{cm}$ 化为 $\text{m}$ 直接代入，带来数量级错误。</li>
+<li><strong>表达式推导错误</strong>：由牛顿第二定律导出含 $a$ 的物理量时（如 $\mu$），容易出现三角函数、符号等错误。建议先用字母推导，再代入数据。</li>
+<li><strong>平抛竖直方向起点混淆</strong>：频闪照片第一个点不一定是抛出点，但竖直分运动的加速度仍可用逐差法求，只要使用的各段均属于匀变速段且时间间隔相等即可。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2021·全国乙卷·09（平抛运动实验）</h3>
+<p><strong>题目</strong></p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-09.html">2021-全国乙-09</a>（2021 · 中） 平抛运动分解为水平匀速和竖直自由落体计算速度与重力加速度</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a>（2019 · 中） 用牛顿第二定律推导动摩擦因数表达式，并通过纸带逐差法计算加速度求得动摩擦因数</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/740-逐差法.html">逐差法</a></li>
+</ul>
+</div>
+</body>
+</html>

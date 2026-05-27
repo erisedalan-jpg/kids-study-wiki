@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平抛运动</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平抛运动</h1><div class="review-mark" data-stem="平抛运动"></div><div class="meta-card"><span><strong>考点</strong>平抛运动</span><span><strong>权重</strong>46</span><span><strong>真题数</strong>9</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>曲线运动 与 抛体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：曲线运动 与 抛体</li>
+<li>权重 weight：46</li>
+<li>真题数：9；年份跨度：2008–2024</li>
+<li>出现题位：填空12 选择2 选择3 选择4 选择9 选择11</li>
+<li>难度分布：中6 难2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义与条件</strong>：物体以一定的初速度沿水平方向抛出，仅受重力作用的运动。  </li>
+<li><strong>基本规律</strong><br />
+  水平方向：匀速直线运动，$x = v_0 t$。<br />
+  竖直方向：自由落体运动，$v_y = gt$，$y = \frac{1}{2}gt^2$。  </li>
+<li><strong>合运动</strong><br />
+  合速度 $v = \sqrt{v_0^2 + v_y^2}$，方向 $\tan \theta = \dfrac{v_y}{v_0}$。<br />
+  合位移 $s = \sqrt{x^2 + y^2}$，方向 $\tan \alpha = \dfrac{y}{x}$。  </li>
+<li><strong>轨迹方程</strong>：$y = \dfrac{g}{2v_0^2}x^2$（抛物线）。  </li>
+<li><strong>飞行时间</strong>：由下落高度 $h$ 唯一决定，$t = \sqrt{\frac{2h}{g}}$，与水平初速度无关。  </li>
+<li><strong>速度偏向角与位移偏向角关系</strong>：$\tan \theta = 2\tan \alpha$。  </li>
+<li><strong>能量特征</strong>：只有重力做功，机械能守恒。$mgh + \frac12 mv_0^2 = \frac12 mv^2$。  </li>
+<li><strong>常见关联模型</strong>  </li>
+<li>与弹簧结合：弹性势能转化为动能，随后物体平抛，注意分离时弹簧是否完全恢复原长。  </li>
+<li>与圆周运动结合：物体从圆轨道滑出后做平抛，关键为脱离点速度方向（若恰好到最高点，速度水平）。  </li>
+<li>与动量守恒结合：碰撞后物体获得初速度进入平抛，动量守恒求速度。  </li>
+<li><strong>临界夹角问题</strong>：落地速度与水平面夹角 $\theta$ 满足 $\tan \theta = \dfrac{\sqrt{2gh}}{v_0}$。若要求 $\theta \le \theta_0$，则 $v_0 \ge \dfrac{\sqrt{2gh}}{\tan \theta_0}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建立坐标系，分解运动</strong>：以抛出点为原点，水平方向为 $x$ 轴，竖直向下为正方向。分别列出 $x = v_0t$、$y = \frac12 gt^2$、$v_y = gt$。  </li>
+<li><strong>确定关键物理量</strong>：若已知下落高度 $h$，先由 $t = \sqrt{2h/g}$ 求时间；已知水平位移 $x$ 即可求 $v_0$。  </li>
+<li><strong>处理速度方向约束</strong>：利用 $\tan \theta = v_y / v_0$，将角度条件转化为竖直分速度与水平分速度的关系，再结合高度求 $v_y$。  </li>
+<li><strong>能量转化与守恒</strong>：在同一平抛过程中，若已知初机械能或末动能，优先使用机械能守恒。结合弹簧、摩擦等因素时，用能量守恒或动能定理求初速度。  </li>
+<li><strong>多过程衔接</strong>：前一段运动（圆周、直线加速等）的末速度是平抛的初速度，分析衔接点速度大小和方向。  </li>
+<li><strong>求位移或速度比</strong>：分别对两个平抛过程写出水平位移表达式 $x = v_0\sqrt{2h/g}$，动能 $E_k \propto v_0^2$，建立比例求解。  </li>
+<li><strong>解临界极值</strong>：联系题干几何约束（如恰好越过坑、角度不超过某值），列出临界方程，解出最小初速度或最大射程。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆两个角</strong>：速度偏向角 $\theta$ 与位移偏向角 $\alpha$，错误使用 $\tan \theta = y/x$ 等。务必牢记 $\tan \theta = v_y/v_0$。  </li>
+<li><strong>平抛时间公式漏掉或错用</strong>：时间 $t = \sqrt{2h/g}$，常见错误为 $t = h/v_0$ 或 $t = \sqrt{h/g}$。  </li>
+<li><strong>机械能守恒与动能定理混用</strong>：平抛中重力势能减少量转化为动能增量，列式时注意初末状态。  </li>
+<li><strong>弹簧弹性势能分配不当</strong>：轻弹簧恢复原长时，若两端连接物体，弹性势能转化为两个物体的动能之和，而非单个物体。  </li>
+<li><strong>斜抛与平抛混淆</strong>：从圆轨道脱离后，若脱离点不是最高点，速度不水平，此后做斜抛运动，不能直接套用平抛公式。  </li>
+<li><strong>临界条件理解偏差</strong>：“速度方向与水面的夹角不大于 $\theta$”是指速度与水平面夹角 $\le \theta$，而非与水面法线或其他。  </li>
+<li><strong>坑或台阶的高度差方向</strong>：注意抛出点与落点的高度关系，$y$ 是竖直下落高度，若落点高于抛出点则不能单纯用自由落体公式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2024-辽宁-12（弹簧关联，平抛与动能定理）</h3>
+<p><strong>题目</strong>：桌面高 $h=0.8\text{m}$，物块 A、B 质量均为 $0.1\text{kg}$，中间夹一压缩量 $\Delta x=0.1\text{m}$ 的轻弹簧。释放后 A 水平飞出，射程 $x_A=0.4\text{m}$；B 滑行 $x_B=0.25\text{m}$ 停止。求脱离弹簧时 $v_A$、$v_B$；动摩擦因数 $\mu$；弹簧释放的弹性势能 $E_p$。  </p>
+<p><strong>思路</strong>：A 做平抛运动，由高度和射程反求初速度；B 在桌面上匀减速，用动能定理关联 $\mu$；弹性势能等于 A、B 脱离时的总动能。  </p>
+<p><strong>步骤</strong>：<br />
+- 对 A 平抛：下落高度 $h$，$t = \sqrt{\frac{2h}{g}} = \sqrt{\frac{1.6}{10}} = 0.4\text{s}$。水平射程 $x_A = v_A t$，则 $v_A = 0.4/0.4 = 1\text{m/s}$。<br />
+- 弹簧与 A、B 不栓接，脱离时二者速度大小相等？题目未明，但系统动量守恒可证 $v_A=v_B=1\text{m/s}$。对 B：动能定理 $-\mu m g x_B = 0 - \frac12 m v_B^2$，代入得 $\mu = \frac{v_B^2}{2g x_B} = \frac{1}{2\times 10\times 0.25} = 0.2$。<br />
+- 弹簧释放的弹性势能 $E_p = \frac12 m v_A^2 + \frac12 m v_B^2 = 2\times\frac12\times0.1\times1^2 = 0.12\text{J}$。  </p>
+<p><strong>点评/变式</strong>：此题型将平抛与能量、摩擦力等直线运动结合。注意弹簧连接问题时，弹性势能转化为系统动能，若两物块质量不等需用动量守恒分配速度。平抛部分求初速度是常规操作，但需警惕桌面高度与平抛下落高度的关系。</p>
+<h3>2. 2023-新课标-11（“打水漂”临界夹角）</h3>
+<p><strong>题目</strong>：要使石子接触水面时速度方向与水面的夹角不大于 $\theta$，从高度 $h$ 处水平抛出，求抛出速度的最小值。  </p>
+<p><strong>思路</strong>：石子平抛，触水面瞬间竖直分速度由高度决定；由夹角限制确定水平分速度的下限。  </p>
+<p><strong>步骤</strong>：<br />
+- 设抛出初速度 $v_0$，触水时竖直分速度 $v_y = \sqrt{2gh}$。<br />
+- 速度与水面夹角 $\alpha$ 满足 $\tan \alpha = \dfrac{v_y}{v_0} \le \tan \theta$。<br />
+- 因此 $v_0 \ge \dfrac{v_y}{\tan\theta} = \dfrac{\sqrt{2gh}}{\tan\theta}$，最小值为 $\dfrac{\sqrt{2gh}}{\tan\theta}$。  </p>
+<p><strong>点评/变式</strong>：本题陷阱在于“速度方向与水面夹角”即速度与水平方向夹角，很多学生误认为是与竖直方向夹角。极值条件转换为正切不等式即可。变式可改为速度方向与水面夹角等于某值求射程，或给定初速度求撞击角度。</p>
+<h3>3. 2020-新课标Ⅱ-03（坑的平抛比较，求动能比）</h3>
+<p><strong>题目</strong>：水平路段前方有坑，宽 $3h$，左边缘 $a$ 比右边缘 $b$ 高 $0.5h$。以动能 $E_1$ 经过 $a$ 点落到坑内 $c$ 点（$c$ 与 $a$ 水平距离和</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-12.html">2024-辽宁-12</a>（2024 · 中） 该题通过弹簧弹射双物块模型，结合平抛运动与匀减速直线运动，考查动量守恒和能量守恒的应用。</li>
+<li><a href="../../exam/物理/2023-新课标-11.html">2023-新课标-11</a>（2023 · 中） 本题考查平抛运动中速度方向与斜面夹角限制下求最小抛出速度。</li>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-03.html">2020-新课标Ⅱ-03</a>（2020 · 中） 该题考查平抛运动中水平与竖直分运动的规律及动能计算，结合几何关系求解动能之比。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-04.html">2017-新课标Ⅱ-04</a>（2017 · 难） 物块沿半圆形竖直光滑轨道从底端滑入从顶端飞出，用能量守恒与平抛运动求落点距离最大时对应轨道半径。</li>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-12.html">2016-新课标Ⅱ-12</a>（2016 · 难） 该题考查弹簧弹性势能与圆周运动、平抛运动结合的综合问题，涉及临界条件分析。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-02.html">2014-新课标Ⅱ-02</a>（2014 · 中） 一物块水平抛出时动能与重力势能相等，根据机械能守恒求落地速度方向与水平方向的夹角。</li>
+<li><a href="../../exam/物理/2013-新课标Ⅱ-09.html">2013-新课标Ⅱ-09</a>（2013 · 中） 通过弹簧释放小球做平抛运动测弹性势能，考查能量转化与平抛规律。</li>
+<li><a href="../../exam/物理/2012-新课标-02.html">2012-新课标-02</a>（2012 · 易） 考查平抛运动轨迹与水平位移、竖直高度的关系，分析抛出速度大小比较。</li>
+<li><a href="../../exam/物理/2008-全国Ⅱ-11.html">2008-全国Ⅱ-11</a>（2008 · 中） 该题为物理题，考查子弹击中物块过程中的动量守恒、能量损失以及物块平抛运动的水平位移。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/261-平抛运动.html">平抛运动</a></li>
+</ul>
+</div>
+</body>
+</html>

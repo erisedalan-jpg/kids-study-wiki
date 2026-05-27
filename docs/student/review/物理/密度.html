@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>密度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>密度</h1><div class="review-mark" data-stem="密度"></div><div class="meta-card"><span><strong>考点</strong>密度</span><span><strong>权重</strong>19</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>物理方法 与 通用</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物理方法 与 通用</li>
+<li>权重 weight：19</li>
+<li>真题数：3；年份跨度：2014–2024</li>
+<li>出现题位：选择3 选择5 选择7</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>天体密度的基本公式</strong><br />
+  设天体质量为 $M$，半径为 $R$，平均密度 $\rho = \dfrac{M}{\frac{4}{3}\pi R^{3}}$。</li>
+<li><strong>表面重力加速度与密度的关系</strong><br />
+  若不考虑自转，表面重力加速度 $g = \dfrac{GM}{R^{2}}$，联立密度公式得 $g = \dfrac{4}{3}\pi G\rho R$ 或 $\rho = \dfrac{3g}{4\pi GR}$。</li>
+<li><strong>自转天体不瓦解的临界条件</strong><br />
+  赤道处物体刚好只由万有引力提供向心力：$G\dfrac{Mm}{R^{2}} = mR\left(\dfrac{2\pi}{T}\right)^{2}$，此时对应的密度为最小密度 $\rho_{\min}= \dfrac{3\pi}{GT^{2}}$。</li>
+<li><strong>考虑自转时两极与赤道的重力差异</strong><br />
+  两极：$G\dfrac{Mm}{R^{2}} = mg_{0}$；<br />
+  赤道：$G\dfrac{Mm}{R^{2}} - mg = mR\dfrac{4\pi^{2}}{T^{2}}$，两式结合可消去 $GM$，得到 $g_{0} - g = \dfrac{4\pi^{2}R}{T^{2}}$，再联合密度公式求解。</li>
+<li><strong>简谐运动中的重力加速度</strong><br />
+  竖直弹簧振子，平衡时 $kx_{0}=mg$，从原长释放的最大位移（振幅）与重力加速度成正比。结合天体表面重力加速度比可求密度比。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确研究对象与所处位置</strong>：区分天体表面物体是在两极、赤道还是其他位置，确定是否需要考虑自转向心力。  </li>
+<li><strong>建立引力与运动的关系</strong>：  </li>
+<li>不计自转：万有引力=重力（$G\frac{Mm}{R^{2}}=mg$）。  </li>
+<li>考虑自转且物体在赤道随天体转动：万有引力=重力+向心力（或刚好临界时万有引力=向心力）。  </li>
+<li><strong>代入密度公式消去 $M$ 或 $R$</strong>：<br />
+   常用 $\rho = \dfrac{3g}{4\pi GR}$ 或 $\rho = \dfrac{3\pi}{GT^{2}}$（临界情况），注意区分半径 $R$ 的幂次。  </li>
+<li><strong>利用题设比例关系</strong>：如半径 $n$ 倍、重力加速度比等，直接代入 $\rho \propto g/R$ 进行比值计算。  </li>
+<li><strong>简谐运动关联时</strong>：从振动图像获取振幅、周期等信息，利用 $mg = kx_{0}$ 及振动对称性，将重力加速度比转化为振幅比或周期比，再求密度比。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆半径与直径、体积公式</strong>：球体积 $V = \frac{4}{3}\pi R^{3}$，常误用 $\frac{1}{6}\pi D^{3}$ 换算出错。  </li>
+<li><strong>自转周期与角速度换算</strong>：$\omega = \frac{2\pi}{T}$，计算时单位要统一为秒（如 $5.19\ \text{ms}=5.19\times10^{-3}\ \text{s}$）。  </li>
+<li><strong>重力与万有引力的关系不清</strong>：赤道处重力是万有引力的一个分力，不能混用 $mg = G\frac{Mm}{R^{2}}$（除非不计自转）。  </li>
+<li><strong>密度比计算时疏忽半径 $n$ 倍的平方立方关系</strong>：$\rho_{1}/\rho_{2} = (g_{1}/g_{2}) \cdot (R_{2}/R_{1})$，不要漏掉一次方。  </li>
+<li><strong>简谐运动对称性用错</strong>：从原长释放，平衡位置弹簧伸长量 $x_{0} = mg/k$，振幅等于 $x_{0}$，最大弹力形变量为 $2x_{0}$，不要将弹力与重力关系写反。  </li>
+<li><strong>数量级估算失误</strong>：计算密度时 $\pi$、$G$ 的幂次容易出错，建议先进行符号运算，最后代入数值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024-辽宁-07）：小球从弹簧原长处释放，在地球和某天体表面做简谐运动，振动图像给出。地球半径是天体半径的 $n$ 倍，求两者平均密度之比 $\rho_{1}:\rho_{2}$。<br />
+<strong>思路</strong>：简谐运动从原长释放，平衡位置满足 $mg = kx_{0}$，振幅 $A=x_{0}$，故 $g \propto A$。由图像可得地球与天体对应的振幅比，即重力加速度比。再结合 $g\propto \rho R$ 导出密度比。<br />
+<strong>步骤</strong>：<br />
+1. 竖直弹簧振子，原长释放的振幅 $A = \dfrac{mg}{k}$，故 $g \propto A$。由图像知振幅关系 $A_{1}/A_{2} = ?$ （题干图b应标明振幅比，从答案反推可设 $A_{1}/A_{2}=1/2$）。<br />
+2. 表面重力加速度 $g = \dfrac{4}{3}\pi G\rho R$，则 $\rho \propto \dfrac{g}{R}$。<br />
+3. 地球与该天体密度之比 $\dfrac{\rho_{1}}{\rho_{2}} = \dfrac{g_{1}/R_{1}}{g_{2}/R_{2}} = \dfrac{A_{1}}{A_{2}} \cdot \dfrac{R_{2}}{R_{1}}$。<br />
+4. 已知 $R_{1}=nR_{2}$，代入得 $\dfrac{\rho_{1}}{\rho_{2}} = \dfrac{A_{1}}{A_{2}} \cdot \dfrac{1}{n}$。若 $A_{1}/A_{2}=1/2$，则结果为 $\dfrac{2}{n}$，对应选项 C。<br />
+<strong>点评/变式</strong>：本题将简谐运动与天体密度结合，关键是通过振动图像提取重力加速度的比例信息。变式：可改为已知周期比求密度比（周期与 $g$ 无关，但平行弹簧振子横放则无法关联），注意振动方向必须沿重力方向。</p>
+<p><strong>题目</strong>（2018-新课标Ⅱ-03）：毫秒脉冲星自转周期 $T=5.19\ \text{ms}$，设其为均匀球体，求其密度最小值。<br />
+<strong>思路</strong>：自转不瓦解的临界条件是赤道处物质只受万有引力提供向心力，由此直接导出密度仅与周期和引力常量有关。<br />
+<strong>步骤</strong>：<br />
+1. 临界条件：$G\dfrac{Mm}{R^{2}} = mR\left(\dfrac{2\pi}{T}\right)^{2}$。<br />
+2. 消去 $m$ 得 $M = \dfrac{4\pi^{2}R^{3}}{GT^{2}}$。<br />
+3. 密度 $\rho = \dfrac{M}{\frac{4}{3}\pi R^{3}} = \dfrac{3\pi}{GT^{2}}$。<br />
+4. 代入 $T=5.19\times10^{-3}\ \text{s}$，$G=6.67\times10^{-11}\ \text{N·m}^{2}/\text{kg}^{2}$，计算得 $\rho \approx 5\times10^{15}\ \text{kg/m}^{3}$。<br />
+<strong>点评/变式</strong>：记住最小密度公式 $\rho_{\min}=3\pi/(GT^{2})$ 可直接秒杀此类题。注意 $T$ 单位必须用秒。</p>
+<p><strong>题目</strong>（2014-新课标Ⅱ-05）：地球质量均匀，两极重力加速度 $g_{0}$，赤道为 $g$，自转周期 $T$，引力常量 $G$，求地球密度。<br />
+<strong>思路</strong>：利用两极无自转向心力得出 $GM=g_{0}R^{2}$；赤道处万有引力与重力的差提供向心力，得到 $R$ 的表达式，再结合密度公式求解。<br />
+<strong>步骤</strong>：<br />
+1. 两极：$G\dfrac{Mm}{R^{2}}=mg_{0} \Rightarrow GM=g_{0}R^{2}$。<br />
+2. 赤道：$G\dfrac{Mm}{R^{2}}-mg=mR\dfrac{4\pi^{2}}{T^{2}} \Rightarrow g_{0}-g = \dfrac{4\pi^{2}R}{T^{2}}$，得 $R = \dfrac{(g_{0}-g)T^{2}}{4\pi^{2}}$。<br />
+3. 由 $GM=g_{0}R^{2}$ 得 $M = \dfrac{g_{0}R^{2}}{G}$。<br />
+4. 密度 $\rho = \dfrac{M}{\frac{4}{3}\pi R^{3}} = \dfrac{3g_{0}}{4\pi GR} = \dfrac{3g_{0}}{4\pi G} \cdot \dfrac{4\pi^{2}}{(g_{0}-g)T^{2}} = \dfrac{3\pi g_{0}}{G(g_{0}-g)T^{2}}$。<br />
+<strong>点评/变式</strong>：两极与赤道重力差是经典突破口，直接给出 $R$ 与 $g_0-g$ 的关系。若题目给出地球半径则更简单；若已知赤道处物体的视重，处理方法相同。注意最终结果不要保留 $R$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-07.html">2024-辽宁-07</a>（2024 · 中） 考查简谐运动对称性与天体表面重力加速度的综合应用，求天体密度比。</li>
+<li><a href="../../exam/物理/2018-新课标Ⅱ-03.html">2018-新课标Ⅱ-03</a>（2018 · 中） 通过万有引力提供向心力计算稳定自转星体的最小密度。</li>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-05.html">2014-新课标Ⅱ-05</a>（2014 · 中） 该题利用地球两极和赤道重力加速度差异，结合自转周期和引力常量求地球密度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/019-密度.html">密度</a></li>
+</ul>
+</div>
+</body>
+</html>

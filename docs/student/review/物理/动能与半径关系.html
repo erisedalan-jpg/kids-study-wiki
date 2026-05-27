@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动能与半径关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>动能与半径关系</h1><div class="review-mark" data-stem="动能与半径关系"></div><div class="meta-card"><span><strong>考点</strong>动能与半径关系</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>万有引力 与 天体</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：万有引力 与 天体</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>带电粒子在匀强磁场中的圆周运动半径</strong><br />
+  $$r = \frac{mv}{qB}$$<br />
+  其中 $m$ 为粒子质量，$v$ 为速度，$q$ 为电荷量大小，$B$ 为磁感应强度。<br />
+  推导依据：洛伦兹力提供向心力 $qvB = m\dfrac{v^{2}}{r}$。</li>
+<li><strong>半径与动能的关系</strong><br />
+  动能 $E_{k} = \dfrac{1}{2}mv^{2}$，得 $v = \sqrt{\dfrac{2E_{k}}{m}}$，代入半径公式：<br />
+  $$r = \frac{\sqrt{2mE_{k}}}{qB}$$<br />
+  对同一磁场 $B$，粒子的轨道半径由 <strong>质量、电荷量、动能</strong> 共同决定。</li>
+<li><strong>偏转方向判断</strong><br />
+  使用左手定则：磁感线穿掌心，四指指向<strong>正电荷</strong>运动方向（或负电荷运动的反方向），拇指即洛伦兹力方向。电子与正电子带异号电荷，以相同方向射入磁场时偏转方向一定相反。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先定性判方向</strong><br />
+   明确入射粒子的电性，正电荷四指同速度方向，负电荷四指反速度方向，用左手定则比划出洛伦兹力，确定偏转圆弧的弯曲方向。</li>
+<li><strong>再定量比半径</strong>  </li>
+<li>写半径通式 $r = \dfrac{mv}{qB}$ 或用动能形式 $r = \dfrac{\sqrt{2mE_{k}}}{qB}$。  </li>
+<li>若比不同粒子：固定 $B$，比较 $\dfrac{\sqrt{m}}{q}$ 或 $\dfrac{mv}{q}$。  </li>
+<li>若比同一粒子不同动能：动能 $E_k \uparrow$，则 $v \uparrow$，故 $r \uparrow$；动能越大半径越大，反之越小。</li>
+<li><strong>结合选项逐一验证</strong><br />
+   重点关注“一定”“相同”“无法判断”等绝对化表述，需检查是否有未给定条件（如速度、动能是否相等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>把正电子当负电子</strong>：正电子带正电，电子带负电，偏转方向必然相反，记错电性直接选错。  </li>
+<li><strong>忽略速度或动能条件</strong>：选项说“电子与正电子半径一定相同”，忘记半径还与速度有关，若无“速度相等”前提则无法确定半径相等，落入绝对化陷阱。  </li>
+<li><strong>混淆动能与半径的增减关系</strong>：由 $r = \dfrac{mv}{qB}$ 知 $r \propto v$，又 $E_{k} \propto v^{2}$，所以动能越大，$v$ 越大，半径越大，而非越小。  </li>
+<li><strong>仅凭轨迹判断粒子种类</strong>：当场中存在质子（$+e$）与正电子（$+e$）时，若未给出动能或速度关系，仅靠偏转半径无法区分二者，因为半径还取决于质量和动能。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2014·新课标Ⅱ·07 改编）<br />
+磁谱仪永磁铁提供匀强磁场，硅微条探测器记录粒子轨迹。宇宙射线中的电子、正电子和质子从上部垂直进入磁场，问下列说法正确的是（多选）：<br />
+A. 电子与正电子的偏转方向一定不同<br />
+B. 电子与正电子在磁场中运动轨迹的半径一定相同<br />
+C. 仅依据粒子运动轨迹无法判断该粒子是质子还是正电子<br />
+D. 粒子的动能越大，它在磁场中的运动轨迹半径越小</p>
+<p><strong>思路</strong><br />
+先根据电性用左手定则判断偏转方向，排除方向选项；再利用半径公式的动能表达式分析半径与各因素的关系，逐一核对剩余选项。</p>
+<p><strong>步骤</strong><br />
+1. <strong>分析A选项</strong>：电子带负电，正电子带正电，都以相同方向射入磁场时，洛伦兹力方向相反，偏转方向一定不同。A正确。<br />
+2. <strong>分析B选项</strong>：半径 $r = \dfrac{\sqrt{2mE_{k}}}{qB}$，电子与正电子质量相等、电荷量大小相等，但未告知动能是否相等，速度可能不同，半径未必相同，“一定相同”错误。B错误。<br />
+3. <strong>分析C选项</strong>：质子和正电子均带 $+e$，但质子质量远大于正电子质量，由 $r = \dfrac{\sqrt{2mE_{k}}}{qB}$，若仅凭轨迹半径，无法唯一确定粒子种类，因为可能通过不同动能组合得到相同半径，所以单凭轨迹无法可靠区分。C正确。<br />
+4. <strong>分析D选项</strong>：动能 $E_{k} \uparrow \Rightarrow v \uparrow$，$r = \dfrac{mv}{qB} \uparrow$，半径变大而非变小，D错误。<br />
+综上，正确选项为A、C。</p>
+<p><strong>点评/变式</strong><br />
+- 本题考查对带电粒子在匀强磁场中运动半径和偏转的灵活理解。关键是把动能关系代入半径公式，切忌死记“半径与速度成正比”却忘反向对应动能。<br />
+- 变式：若将质子换成α粒子，要求比较相同动能下α粒子与质子的半径比，可由 $r \propto \sqrt{m}/q$ 计算：α粒子 $m_\alpha=4m_p$，$q_\alpha=2e$，则半径比 $r_\alpha/r_p = (\sqrt{4}/2) / (\sqrt{1}/1) =1$，即相同动能时半径相等，适于设置“一定相同”陷阱。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2014-新课标Ⅱ-07.html">2014-新课标Ⅱ-07</a>（2014 · 中） 带电粒子在垂直磁场中的偏转方向及运动轨迹半径的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/459-动能与半径关系.html">动能与半径关系</a></li>
+</ul>
+</div>
+</body>
+</html>

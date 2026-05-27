@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双缝干涉</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>双缝干涉</h1><div class="review-mark" data-stem="双缝干涉"></div><div class="meta-card"><span><strong>考点</strong>双缝干涉</span><span><strong>权重</strong>17</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>几何光学 与 物理光学</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：几何光学 与 物理光学</li>
+<li>权重 weight：17</li>
+<li>真题数：3；年份跨度：2017–2024</li>
+<li>出现题位：解答15 解答16 选择4</li>
+<li>难度分布：易2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>双缝干涉是利用分波阵面法获得相干光源的典型实验，核心是光程差决定明暗条纹位置。在近轴近似下，相邻两条亮纹（或暗纹）中心间距由下式决定：
+$$
+\Delta x = \frac{l}{d}\lambda
+$$
+- $d$：双缝间距（如两狭缝中心距离，或头发丝与缝边沿构成的等效双缝间距）
+- $l$：双缝所在平面到光屏（墙面）的距离
+- $\lambda$：单色光在真空（或空气）中的波长</p>
+<p><strong>明暗纹条件</strong>（光程差 $\delta = d\sin\theta \approx d\frac{x}{l}$，$x$ 为屏上位置）：
+- $\delta = \pm k\lambda$（$k=0,1,2,\dots$）出现<strong>亮纹</strong>
+- $\delta = \pm(2k-1)\frac{\lambda}{2}$（$k=1,2,\dots$）出现<strong>暗纹</strong></p>
+<p><strong>测量波长方法</strong>：利用暗纹（或亮纹）间距间接测量。若测得第 $1$ 条到第 $n$ 条暗条纹（或亮条纹）的距离为 $\Delta x$，共有 $(n-1)$ 个间隔，则有：
+$$
+\Delta x = (n-1)\frac{l}{d}\lambda \quad\Rightarrow\quad \lambda = \frac{d\,\Delta x}{(n-1)l}
+$$</p>
+<p><strong>重要条件</strong>：
+- 必须用相干光（同一光源分出的两束光），激光相干性极好，直接照射双缝即可。
+- 单缝的作用是获得线光源，增加相干性，其位置变化（靠近或远离双缝）只改变条纹亮度，不改变条纹间距。
+- 光源到双缝的距离变化亦不改变条纹间距。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>条纹间距变化分析题（调参问题）</strong>  </li>
+<li>
+<p>步骤：<br />
+     （1）明确研究的是相邻亮（暗）纹中心间距 $\Delta x$。<br />
+     （2）写出公式 $\Delta x = \dfrac{l\lambda}{d}$。<br />
+     （3）逐一分析选项操作对 $l$（屏到双缝距离）、$d$（双缝间距）、$\lambda$（波长）的影响。<br />
+     （4）若想<strong>增大</strong>条纹间距→增大 $l$、减小 $d$、改用波长更长的光；若想<strong>减小</strong>条纹间距→减小 $l$、增大 $d$、改用波长更短的光。<br />
+     （5）注意无关因素：单缝位置变化、光源到双缝的距离变化不影响间距。</p>
+</li>
+<li>
+<p><strong>利用干涉条纹测量波长题</strong>  </p>
+</li>
+<li>
+<p>步骤：<br />
+     （1）认清测量量：双缝间距 $d$，屏到双缝距离 $l$，$N$ 条暗纹（或亮纹）的总距离 $L$。<br />
+     （2）计算间隔数：若从第 $1$ 条到第 $n$ 条，间隔数为 $(n-1)$，得相邻条纹间距 $\Delta x = \dfrac{L}{n-1}$。<br />
+     （3）代入公式 $\lambda = \dfrac{d\,\Delta x}{l}$ 求得波长。<br />
+     （4）进行单位换算，常用 mm→m，结果常用 nm（$1\,\text{nm}=10^{-9}\,\text{m}$）。注意有效数字要求。</p>
+</li>
+<li>
+<p><strong>条纹数目变化问题</strong>  </p>
+</li>
+<li>视场中观察到的条纹个数取决于条纹间距和视场大小。通常视场固定时，条纹间距越小，可观察到的条纹个数越多。  </li>
+<li>因此增加条纹个数等价于减小 $\Delta x$：可减小 $l$、增大 $d$、减小 $\lambda$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆波长与条纹间距的正反比关系</strong>：$\Delta x \propto \lambda$，波长越大间距越大；<strong>红光</strong>波长大于<strong>绿光</strong>波长，<strong>蓝光</strong>波长小于绿光。改红色条纹变宽，改蓝色条纹变窄。</li>
+<li><strong>误以为移动单缝或光源可改变条纹间距</strong>：光源或单缝的位置变动不影响 $l$、$d$、$\lambda$，因此不改变条纹间距，只能改变条纹亮度（光强）。</li>
+<li><strong>双缝间距 $d$ 变化判断失误</strong>：在自制双缝（如头发丝）实验中，头发丝越粗→缝与丝边缘间距 $d$ 越大；头发丝越细→$d$ 越小。</li>
+<li><strong>间隔数计算错误</strong>：第 $1$ 条暗纹到第 $n$ 条暗纹之间的距离包含 $(n-1)$ 个条纹间隔，而不是 $n$ 个。直接用总距离除以 $(n-1)$ 得到 $\Delta x$。</li>
+<li><strong>单位换算与有效数字疏忽</strong>：毫米（mm）与纳米（nm）含有 $10^6$ 倍关系，计算时最好统一使用国际单位（m），最后再换算成 nm，避免数量级错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目1</strong>（2024·辽宁·04）：<br />
+某同学用纸板割窄缝并在中央固定头发丝形成双缝，用绿色激光照射，墙面上呈现干涉条纹。要使相邻两条亮纹中央间距变小，可采取的措施是（　）<br />
+<strong>思路</strong>：亮纹间距 $\Delta x = \dfrac{l\lambda}{d}$。欲使间距变小，应减小 $l$ 或 $\lambda$，或增大 $d$。<br />
+<strong>步骤</strong>：<br />
+1. 明确波长：绿色激光波长固定；改红色会增大波长（间距变大），改蓝色会减小波长（间距变小）。<br />
+2. 减小纸板到墙面的距离 $l$ 可使间距变小。<br />
+3. 换用更粗的头发丝（增大 $d$）可使间距变小；反之换用更细的头发丝会变大。<br />
+4. 筛选符合的选项（通常有改用蓝色激光、减小纸板与墙面距离、用更粗头发丝等）。<br />
+<strong>点评/变式</strong>：此题以生活器材构建双缝，考公式中各物理量的实际体现。注意头发丝粗细直接影响 $d$，切勿误认为头发丝是缝，它是分隔物，缝宽为丝与纸板边缘间距。</p>
+<p><strong>题目2</strong>（2019·新课标Ⅱ·16）：<br />
+用双缝干涉测单色光波长。<br />
+（ⅰ）要增加目镜中观察到的条纹个数，可行操作是：<br />
+A. 将单缝向双缝靠近<br />
+B. 将屏向靠近双缝方向移动<br />
+C. 将屏向远离双缝方向移动<br />
+D. 使用间距更小的双缝<br />
+<strong>思路</strong>：增加条纹个数即减小条纹间距 $\Delta x$，由 $\Delta x = \dfrac{l\lambda}{d}$，需减小 $l$ 或增大 $d$（或减小 $\lambda$，但单色光波长不可变）。<br />
+<strong>步骤</strong>：<br />
+- A 单缝移动不影响间距，错。<br />
+- B 屏靠近双缝→$l$ 变小→$\Delta x$ 变小→条纹个数增加，正解。<br />
+- C 屏远离→$l$ 变大→间距变大个数减少，错。<br />
+- D 双缝间距 $d$ 更小→间距变大个数减少，错。<br />
+故（ⅰ）选 B。  </p>
+<p>（ⅱ）若双缝间距 $d$，屏与双缝距离 $l$，测得第1条到第 $n$ 条暗纹距离为 $\Delta x$，则波长 $\lambda = ?$<br />
+<strong>思路</strong>：暗纹间距与亮纹间距相同，$n$ 条暗纹有 $(n-1)$ 个间隔。<br />
+<strong>步骤</strong>：相邻暗纹间距 $\Delta x' = \dfrac{\Delta x}{n-1}$，代入 $\Delta x' = \dfrac{l\lambda}{d}$，得 $\lambda = \dfrac{d\,\Delta x}{(n-1)l}$。  </p>
+<p>（ⅲ）代入数据 $d=0.300\,\text{mm}=3.00\times10^{-4}\,\text{m}$，$l=1.20\,\text{m}$，第1到第4暗纹距离 $7.56\,\text{mm}=7.56\times10^{-3}\,\text{m}$，$n=4$。<br />
+相邻暗纹间距 $\Delta x' = \dfrac{7.56\times10^{-3}}{3}=2.52\times10^{-3}\,\text{m}$。<br />
+波长 $\lambda = \dfrac{3.00\times10^{-4} \times 2.52\times10^{-3}}{1.20}=6.30\times10^{-7}\,\text{m}=630\,\text{nm}$。<br />
+<strong>点评/变式</strong>：此题全面覆盖条纹间距公式的理解、变量控制及实验数据处理。暗纹计数间隔是常见设错点，务必深刻理解“第一条到第 $n$ 条”意含 $(n-1)$ 个 $\Delta x$。</p>
+<p><strong>题目3</strong>（2017·新课标Ⅱ·15）：<br />
+在双缝干涉实验中，用绿色激光照射，要增大相邻亮条纹的间距，可采用（　）<br />
+A. 改用红色激光<br />
+B. 改用蓝色激光<br />
+C. 减小双缝间距<br />
+D. 将屏幕向远离双缝的位置移动<br />
+E. 将光源向远离双缝的位置移动<br />
+<strong>思路</strong>：增大 $\Delta x$ 需增大 $\lambda$、增大 $l$、减小 $d$。<br />
+<strong>步骤</strong>：<br />
+- A 红光波长大于绿光→$\lambda$ 变大→间距变大，正确。<br />
+- B 蓝光波长小于绿光→间距变小，错。<br />
+- C 减小 $d$→间距变大，正确。<br />
+- D 屏远离→$l$ 变大→间距变大，正确。<br />
+- E 光源移动不影响 $l$、$d$、$\lambda$，错。<br />
+故正确选项为 A、C、D。<br />
+<strong>点评/变式</strong>：该题为多项选择，需熟练掌握各物理量变化对条纹间距的影响，尤其不能混淆光源移动与屏移动的不同作用。光颜色的波长顺序是基础：红 &gt; 绿 &gt; 蓝。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2024-辽宁-04.html">2024-辽宁-04</a>（2024 · 易） 该题考查双缝干涉实验中条纹间距公式的应用，通过改变实验条件判断条纹间距的变化。</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-16.html">2019-新课标Ⅱ-16</a>（2019 · 中） 该题考查双缝干涉实验操作、条纹数量变化分析及波长计算。</li>
+<li><a href="../../exam/物理/2017-新课标Ⅱ-15.html">2017-新课标Ⅱ-15</a>（2017 · 易） 双缝干涉实验中，分析改变激光颜色、缝间距、屏距等操作对相邻亮纹间距的影响。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/552-双缝干涉.html">双缝干涉</a></li>
+</ul>
+</div>
+</body>
+</html>

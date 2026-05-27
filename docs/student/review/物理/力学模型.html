@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>力学模型</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>力学模型</h1><div class="review-mark" data-stem="力学模型"></div><div class="meta-card"><span><strong>考点</strong>力学模型</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>力 与 牛顿运动定律</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：力 与 牛顿运动定律</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择9</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>阿特伍德机模型</strong>：轻绳跨过光滑定滑轮，两端悬挂质量不等的物体。不计绳与滑轮质量、无摩擦时，两物体加速度大小相等，方向相反，绳中张力处处相等。</li>
+<li><strong>牛顿第二定律</strong>：整体法——系统所受合外力 $F_合 = (m_B - m_A)g$，总质量 $M = m_A + m_B$，加速度 $$a = \frac{m_B - m_A}{m_A + m_B}g.$$隔离法——对 A：$T - m_Ag = m_A a$；对 B：$m_Bg - T = m_B a$。解得绳拉力 $$T = \frac{2m_A m_B}{m_A + m_B}g.$$</li>
+<li><strong>运动学关联</strong>：释放后物体从静止开始做匀加速直线运动，测量位移 $h$ 和时间 $t$，则 $$a = \frac{2h}{t^2}.$$</li>
+<li><strong>适用条件</strong>：绳不可伸长（加速度关联严格成立）；滑轮光滑且质量不计（绳中张力处处相等）；只在竖直方向运动；系统初速度为零。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定研究对象与加速度关系</strong>：先判断连接体是否满足“一动俱动，加速度大小相等”。对细绳连接，沿绳方向加速度大小相同。</li>
+<li><strong>优先整体法求加速度</strong>：将整个系统视为研究对象，合力等于动力减阻力（如 $m_Bg - m_Ag$），总质量即各物体质量之和，由 $\sum F = M a$ 直接求 $a$。无需考虑绳拉力。</li>
+<li><strong>隔离法求绳拉力或其他内力</strong>：若要计算绳的拉力或校验某物体受力，任选一物体隔离。规定加速度正方向（常令重物下降方向为正），列出牛顿第二定律方程，代入已知的 $a$ 求解。</li>
+<li><strong>结合运动学公式</strong>：当题中给出位移、时间等运动信息时，先用 $h = v_0 t + \frac12 a t^2$（释放时 $v_0=0$）求出 $a$，再代入牛顿方程求质量、拉力；或由质量比通过牛顿方程求 $a$，再预测运动时间、末速度等。</li>
+<li><strong>实验数据处理</strong>：若为实验题，测量多组 $h$、$t$，可用逐差法或 $h!-!t^2$ 图像斜率求 $a$，再与理论值对比，进行误差分析。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错误认为绳拉力等于重物的重力</strong>：加速下落时，重物“失重”，绳拉力必小于其重力；加速上升时，绳拉力大于重力。切忌用平衡思维处理非平衡问题。</li>
+<li><strong>整体法合力表达式符号错乱</strong>：合力应写为 $m_Bg - m_Ag$（假设 $m_B&gt;m_A$），不可写成总重力 $(m_A+m_B)g$。注意力是矢量，系统内物体所受重力方向不同。</li>
+<li><strong>忽略“初速度为零”的条件</strong>：运动学公式 $h=\frac12 a t^2$ 仅当从静止释放时成立；若初速不为零，必须使用一般式。</li>
+<li><strong>隔离时正方向规定不一致</strong>：对 A、B 隔离时，各自加速度方向应统一用系统加速度方向表达。如 B 下降为正，则 A 加速度向上为正，方程不可混用。</li>
+<li><strong>认为绳拉力对 A 和 B 做功为零</strong>：本题不涉及功，但易误判。绳拉力是内力，对系统做功代数和为零，但隔离物体时拉力做功不为零。</li>
+<li><strong>测量时间时起止不准确</strong>：释放瞬间开始计时易有反应误差；实验计时通常用光电门或频闪照片，读取数据注意估读。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·新课标Ⅱ卷9题，简录）：细绳跨过定滑轮，两端分别系小球 A 和 B。释放后，使两球由静止开始运动，测出小球 B 下落高度 $h$ 所需时间 $t$。不计摩擦和滑轮质量。<br />
+(1)求小球 B 的加速度 $a$；<br />
+(2)若两球质量比 $\frac{m_A}{m_B}=k$，求绳的拉力与小球 B 重力之比。</p>
+<p><strong>思路</strong>：先由匀变速直线运动规律求出 $a$；再利用牛顿第二定律结合质量比，列出整体方程或隔离方程，求得拉力比值。</p>
+<p><strong>步骤</strong>：<br />
+(1) B 球从静止下落，满足 $h = \frac12 a t^2$，解得加速度 $$a = \frac{2h}{t^2}.$$<br />
+(2) 设 A、B 质量分别为 $m_A$、$m_B$，$m_A=km_B$。方法一（整体法）：系统合力 $F_合 = m_Bg - m_Ag = (1-k)m_Bg$，总质量 $M = m_A+m_B = (1+k)m_B$，由牛顿第二定律 $$a = \frac{F_合}{M} = \frac{1-k}{1+k}g.$$ 再隔离 B：$m_Bg - T = m_B a$，得 $$T = m_B(g-a) = m_B\left(g - \frac{1-k}{1+k}g\right) = m_B\frac{2k}{1+k}g.$$ 故拉力与 B 重力比值 $\frac{T}{m_Bg} = \frac{2k}{1+k}$.<br />
+方法二（纯隔离）：对 B：$m_Bg - T = m_B a$；对 A：$T - km_Bg = km_B a$。两式相加消去 $T$，仍得 $a$ 表达式，回代求 $T$。</p>
+<p><strong>点评/变式</strong>：本题以教材经典模型“阿特伍德机”为载体，兼顾运动学与动力学，是连接体问题的核心示例。备考可变式如下：①已知 $h$、$t$ 和质量比，反过来求重力加速度 $g$；②若滑轮有摩擦或质量不可忽略，需附加力矩平衡方程；③将竖直面改为光滑斜面连接，运动情形不同但整体法思路相通。考生务必练熟整体法与隔离法的无缝切换。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2020-新课标Ⅱ-09.html">2020-新课标Ⅱ-09</a>（2020 · 易） 测量小球B运动的加速度的实验题，涉及细绳悬挂释放小球模型</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/531-力学模型.html">力学模型</a></li>
+</ul>
+</div>
+</body>
+</html>
