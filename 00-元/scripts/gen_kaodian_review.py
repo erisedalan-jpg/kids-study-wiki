@@ -10,6 +10,13 @@ import yaml
 
 _PROMPT = Path(__file__).parent / "_prompts" / "kaodian_review.md"
 
+_REQUIRED_BLOCKS = ("## 知识精要", "## 解题方法与套路", "## 高频易错", "## 代表题精讲")
+
+
+def body_is_complete(body: str) -> bool:
+    """LLM 正文是否非空且含全部必需区块。"""
+    return bool(body.strip()) and all(b in body for b in _REQUIRED_BLOCKS)
+
 
 def _load_template() -> str:
     return _PROMPT.read_text(encoding="utf-8")
@@ -117,6 +124,8 @@ def main() -> int:
         for tag in ("题干文本", "解析文本"):
             m = re.search(rf"## {tag}\n(.*?)(?:\n<!--|\n## |\Z)", body, re.S)
             fm[tag] = m.group(1).strip() if m else ""
+        m_zy = re.search(r"## 摘要\n(.*?)(?:\n## |\n<!--|\Z)", body, re.S)
+        fm["摘要"] = m_zy.group(1).strip() if m_zy else ""
         atoms.append(fm)
 
     group_file = GROUP(args.subject)
@@ -164,6 +173,10 @@ def main() -> int:
                         system=f"你是高考{args.subject}复习资料编辑，输出知识密集的应试复习正文。").text
         except Exception as ex:  # noqa: BLE001
             print(f"  ⚠ {kp}: LLM 失败 {ex}")
+            continue
+        if not body_is_complete(body):
+            missing = [b for b in _REQUIRED_BLOCKS if b not in body]
+            print(f"  ⚠ {kp}: LLM 输出空或缺区块 {missing or '(空)'}，跳过不写（可重跑补）")
             continue
         concept_link, weight = resolve_concept(kp, alias_lookup, weights)
         md = render_md(args.subject, kp, info, llm_body=body, weight=weight,

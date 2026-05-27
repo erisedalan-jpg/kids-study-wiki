@@ -73,5 +73,20 @@ class TestParseKaodian(unittest.TestCase):
         self.assertEqual(g._parse_kaodian(None), [])
 
 
+class TestBodyComplete(unittest.TestCase):
+    def test_complete(self):
+        import gen_kaodian_review as g
+        b = "## 知识精要\nx\n## 解题方法与套路\nx\n## 高频易错\nx\n## 代表题精讲\nx"
+        self.assertTrue(g.body_is_complete(b))
+
+    def test_empty(self):
+        import gen_kaodian_review as g
+        self.assertFalse(g.body_is_complete("   "))
+
+    def test_missing_block(self):
+        import gen_kaodian_review as g
+        self.assertFalse(g.body_is_complete("## 知识精要\nx\n## 高频易错\nx"))
+
+
 if __name__ == "__main__":
     unittest.main()
