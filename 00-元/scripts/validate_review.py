@@ -15,7 +15,7 @@ from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 _REQ_FIELDS = ("考点:", "父主题:", "学科:", "状态:")
 _REQ_BLOCKS = ("## 考点定位", "## 知识精要", "## 解题方法与套路",
                "## 高频易错", "## 代表题精讲", "## 全部真题清单", "## 关联")
-_LATEX = re.compile(r"\\\(|\\\)|\\\[|\\\]")
+_LATEX = re.compile(r"\\\(|\\\)|(?<!\\)\\\[(?!\d)|(?<!\\)\\\]")
 
 
 def check(md: str) -> list[str]:

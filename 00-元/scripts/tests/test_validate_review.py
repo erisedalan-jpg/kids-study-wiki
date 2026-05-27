@@ -22,6 +22,16 @@ class TestValidateReview(unittest.TestCase):
         self.assertTrue(any("LaTeX 定界符" in e for e in errs))
         self.assertTrue(any("缺区块" in e and "解题方法与套路" in e for e in errs))
 
+    def test_does_not_flag_cases_and_spacing(self):
+        md = ("---\n考点: x\n父主题: y\n学科: 数学\n状态: 草稿\n---\n"
+              "## 考点定位\nx\n## 知识精要\n"
+              r"$$a_n = \begin{cases} S_1, & n=1,\\ S_n-S_{n-1}, & n\geq 2 \end{cases}$$" "\n"
+              r"$$x \\[4pt] y$$" "\n"
+              "## 解题方法与套路\nx\n## 高频易错\nx\n## 代表题精讲\nx\n"
+              "## 全部真题清单\nx\n## 关联\nx\n")
+        errs = self.v.check(md)
+        self.assertFalse(any("LaTeX" in e for e in errs), f"误报: {errs}")
+
     def test_flags_code_fence(self):
         md = ("---\n考点: x\n父主题: y\n学科: 数学\n状态: 草稿\n---\n"
               "## 考点定位\n```\n围栏\n```\n## 知识精要\nx\n## 解题方法与套路\nx\n"
