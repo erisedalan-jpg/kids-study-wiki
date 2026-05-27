@@ -62,7 +62,7 @@ def main() -> int:
 
     exam_dir = REPO_ROOT / "真题" / f"{args.province}-{args.subject}"
     paths = sorted(exam_dir.glob("*.md"))
-    done = fail = skip = 0
+    done = fail = skip = warn = 0
     fails: list[str] = []
     for p in paths:
         text = p.read_text(encoding="utf-8")
@@ -77,18 +77,19 @@ def main() -> int:
             continue
         try:
             page_text = read_pdf_page(str(pdf_rel), int(page))
-        except (OSError, ValueError, pypdf.errors.PdfReadError) as ex:
+        except (OSError, ValueError, pypdf.errors.PyPdfError) as ex:
             fail += 1
             fails.append(f"{p.name}: PDF 读取失败 {ex}")
             continue
         seg = segment_by_qno(page_text, int(qno))
         if seg["fallback"]:
+            warn += 1
             fails.append(f"{p.name}: 切分回退（整页入解析）")
         new = upsert_text_sections(text, stem=seg["题干"], sol=seg["解析"])
         if args.apply and new != text:
             p.write_text(new, encoding="utf-8")
         done += 1
-    print(f"{'[APPLY]' if args.apply else '[dry-run]'} 处理 {done} / 跳过 {skip} / 失败 {fail}"
+    print(f"{'[APPLY]' if args.apply else '[dry-run]'} 处理 {done} / 跳过 {skip} / 失败 {fail} / 切分回退 {warn}"
           f"（{exam_dir.name}）")
     for f in fails[:40]:
         print("  ⚠", f)
