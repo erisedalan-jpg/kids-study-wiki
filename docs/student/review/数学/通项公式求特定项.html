@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>通项公式求特定项</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>通项公式求特定项</h1><div class="review-mark" data-stem="通项公式求特定项"></div><div class="meta-card"><span><strong>考点</strong>通项公式求特定项</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>二项式定理：$(a+b)^n$ 的展开式的通项为 $T_{r+1}=C_n^r a^{n-r} b^r$（$r=0,1,\dots,n$），其中 $C_n^r$ 为二项式系数，该项的系数需连同 $a,b$ 中的常数因子一同计算。</li>
+<li>特定项的求法：令通项中变量的指数等于目标指数（如求常数项则指数为0），解出整数 $r$，代回得该项的系数。</li>
+<li>赋值法：求展开式中各项系数和（或部分系数和）时，令变量取特定值（通常令变量为1）代入展开式两端。</li>
+<li>乘积型展开式：若待展开式为两个因式的乘积，可分别考虑每个因式取哪一项，组合后产生目标项，通常转化为求一个二项展开式中不同次幂的项的系数再求和。</li>
+<li>二项式系数与项的系数：前者仅指组合数 $C_n^r$；后者包含符号和常数因子，如 $(2x-1/x)^5$ 的通项系数为 $C_5^r \cdot 2^{5-r} \cdot (-1)^r$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求未知参数</strong>：若已知展开式的各项系数和，直接令表达式中的字母（如 $x$）为 1，建立方程解出参数值。</li>
+<li><strong>拆分成标准二项展开式</strong>：将含参数的展开式写成若干部分之和，每一部分为“单项式 $\times$ 某个二项式幂”的形式。</li>
+<li><strong>写出通项并设定指数条件</strong>：对于每个二项式幂，写出其通项公式 $T_{r+1}$，明确变量部分的指数；根据要凑出的整体项的次数（如常数项对应变量总指数0），建立方程求出相应的 $r$。</li>
+<li><strong>求系数并求和</strong>：代回通项求出每个满足条件的系数，乘以对应单项式的系数，将各部分结果相加（注意符号）。</li>
+<li><strong>验证</strong>：检查 $r$ 是否为 0 到 $n$ 间的整数，组合数计算和符号是否正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>混淆“各项系数和”与“二项式系数和”：前者需将变量赋值为 1 求得，后者仅指 $2^n$；题目常明确区分，务必审清。</li>
+<li>通项中符号遗漏：$(a-b)^n$ 的通项含有 $(-1)^r$，直接套用 $(a+b)^n$ 公式会丢掉符号。</li>
+<li>两个因式组合时漏项：如 $(x+\frac{a}{x})(\cdots)^5$ 的常数项需考虑 $x$ 与含 $x^{-1}$ 的项相乘，以及 $\frac{a}{x}$ 与含 $x$ 的项相乘，两种情形缺一不可。</li>
+<li>指数计算失误：通项中变量指数为整数，合并时易出现算错常数项次数的情况，应逐步写出并核对。</li>
+<li>计算组合数或幂的数值错误：尤其是带负号、分数的情形，细致计算后再代入。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2011·理8）$(x+\frac{a}{x})(2x-\frac{1}{x})^5$ 的展开式中各项系数的和为2，则该展开式中常数项为（ ）<br />
+A. –40 B. –20 C. 20 D. 40</p>
+<p><strong>思路</strong><br />
+先用赋值法求 $a$，再将原式拆成 $x\cdot(2x-\frac1x)^5$ 与 $\frac{a}{x}\cdot(2x-\frac1x)^5$ 两部分。常数项由第一部分取 $x$ 乘以 $(2x-\frac1x)^5$ 中 $x^{-1}$ 的项，以及第二部分取 $\frac{1}{x}$（因为 $a=1$）乘以 $(2x-\frac1x)^5$ 中 $x$ 的项构成。利用通项公式分别求出对应系数，相加即得。</p>
+<p><strong>步骤</strong><br />
+1. 令 $x=1$，得各项系数和为 $(1+a)(2-1)^5 = 1+a = 2$，解得 $a=1$。<br />
+2. 原式变为 $(x+\frac{1}{x})(2x-\frac{1}{x})^5$。<br />
+3. 写出 $(2x-\frac{1}{x})^5$ 的通项：<br />
+   $T_{r+1}=C_5^r (2x)^{5-r} (-\frac{1}{x})^r = C_5^r \cdot 2^{5-r} \cdot (-1)^r \cdot x^{5-2r}$。<br />
+4. 求 $x^{-1}$ 的项：令 $5-2r = -1 \Rightarrow r=3$，系数为 $C_5^3 \cdot 2^{2} \cdot (-1)^3 = 10 \cdot 4 \cdot (-1)= -40$。<br />
+   则第一部分贡献常数项 $x \cdot (-40 x^{-1}) = -40$。<br />
+5. 求 $x$ 的项：令 $5-2r = 1 \Rightarrow r=2$，系数为 $C_5^2 \cdot 2^{3} \cdot (-1)^2 = 10 \cdot 8 \cdot 1 = 80$。<br />
+   则第二部分贡献常数项 $\frac{1}{x} \cdot (80 x) = 80$。<br />
+6. 常数项总额：$-40 + 80 = 40$，选 D。</p>
+<p><strong>点评/变式</strong><br />
+本题将赋值法与二项展开式特定项问题综合，并在多项式乘积背景下考查组合搭配思维。变式训练可改为求含 $x^2$ 的项的系数，或将常数项改为含 $a$ 的表达式并已知常数项求 $a$，强化通项指数设定与方程思想的灵活运用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-08.html">2011-理-08</a>（2011 · 中） 本题考查二项式定理中求展开式各项系数和及特定常数项，涉及赋值法和通项公式的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1129-通项公式求特定项.html">通项公式求特定项</a></li>
+</ul>
+</div>
+</body>
+</html>

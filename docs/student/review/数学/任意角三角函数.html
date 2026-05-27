@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>任意角三角函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>任意角三角函数</h1><div class="review-mark" data-stem="任意角三角函数"></div><div class="meta-card"><span><strong>考点</strong>任意角三角函数</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>任意角与象限角</strong></li>
+<li>角可以看成平面内一条射线绕端点旋转而成，按逆时针为正角，顺时针为负角。</li>
+<li>终边落在第几象限，即为第几象限角。终边在坐标轴上不属于任何象限（轴线角）。</li>
+<li><strong>终边相同的角</strong></li>
+<li>与角 $\alpha$ 终边相同的角的集合：${\beta \mid \beta = \alpha + k \cdot 360^\circ, k \in \mathbb{Z} }$（弧度制：$\beta = \alpha + 2k\pi, k \in \mathbb{Z}$）。</li>
+<li><strong>任意角的三角函数定义</strong></li>
+<li>设角 $\alpha$ 终边上任意一点 $P(x, y)$（$P$ 不与原点重合），$|OP| = r = \sqrt{x^2 + y^2} &gt; 0$。</li>
+<li>正弦：$\sin \alpha = \frac{y}{r}$；余弦：$\cos \alpha = \frac{x}{r}$；正切：$\tan \alpha = \frac{y}{x} (x \neq 0)$。</li>
+<li><strong>核心推论</strong>：三角函数值仅由终边位置决定，与所选点 $P$ 在终边上的位置无关。</li>
+<li><strong>三角函数线</strong></li>
+<li>单位圆中，有向线段 $MP$（正弦线）、$OM$（余弦线）、$AT$（正切线）。$AT$ 的正负与 $y/x$ 一致，直观反映三角函数的符号与变化趋势。</li>
+<li><strong>符号规律</strong></li>
+<li>一全正，二正弦，三正切，四余弦（可借助单位圆或定义中 $x, y$ 的符号快速判断）。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由终边位置求三角函数值</strong></li>
+<li><strong>步骤1</strong>：若终边在直线上，需分象限讨论（终边所在的两条射线可能分属不同象限）。</li>
+<li><strong>步骤2</strong>：在终边上任取一点 $P(x_0, y_0)$，为简化计算通常令 $|x_0|$ 或 $|y_0|$ 为简单整数。</li>
+<li><strong>步骤3</strong>：计算 $r = \sqrt{x_0^2 + y_0^2}$。</li>
+<li><strong>步骤4</strong>：代入定义式 $\sin\theta = y_0/r$，$\cos\theta = x_0/r$，$\tan\theta = y_0/x_0$。</li>
+<li><strong>由三角函数值求角或参数</strong></li>
+<li>利用定义式列出 $y/r$ 或 $x/r$ 的方程，结合终边所在象限确定符号，解出未知数。</li>
+<li><strong>齐次式求值（若涉及弦化切）</strong></li>
+<li>若题目后续涉及分式或可化为关于 $\sin\theta, \cos\theta$ 的齐次式，可分子分母同除以 $\cos\theta$ 的幂次，转化为 $\tan\theta$ 的式子求解。此法在该考点定义题中为延伸应用。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>忽视参数的符号</strong></li>
+<li>终边上点的坐标含有参数时，计算 $r$ 必须带绝对值 $\sqrt{x^2+y^2}$，不可直接将参数值当作正数，否则会导致 $r$ 算错，进而 $\sin, \cos$ 全错。</li>
+<li><strong>忽略多解情况</strong></li>
+<li>终边落在一条直线上，对应的角可能有两个终边方向（互为反向延长线），三角值可能不同。若不分类讨论，极易丢解。</li>
+<li><strong>定义域遗漏</strong></li>
+<li>计算 $\tan\alpha$ 时，务必检验 $x \neq 0$。若终边在 $y$ 轴上，正切不存在。</li>
+<li><strong>混淆三角函数定义与初中锐角三角函数</strong></li>
+<li>高中定义基于终边上任意点坐标与距离 $r$ 的比值，引入了符号（正负），初中仅针对锐角且为边长比（正）。直接用边长比去思考任意角易导致符号错误。</li>
+</ol>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知角 $\theta$ 的顶点与原点重合，始边与 $x$ 轴的正半轴重合，终边在直线 $y = 2x$ 上，则 $\cos 2\theta =$ ( )
+   A. $-\frac{4}{5}$   B. $-\frac{3}{5}$   C. $\frac{3}{5}$   D. $\frac{4}{5}$</p>
+<p><strong>思路</strong>：终边在直线 $y=2x$ 需考虑 $\theta$ 在第一或第三象限两种情况。先利用定义求 $\cos\theta$ 或直接得 $\tan\theta$ 的值，再代入二倍角公式或弦切转化公式 $\cos 2\theta = \frac{1-\tan^2\theta}{1+\tan^2\theta}$ 求解。</p>
+<p><strong>步骤</strong>：
+1. 由终边在 $y=2x$，得 $\tan\theta = 2$（无论终边在第一还是第三象限，比值 $y/x=2$ 不变，且 $\cos 2\theta$ 的值通常两种情况下一致，亦可取点验证）。
+2. 利用万能公式或直接法：
+   - 取终边第一象限上一点 $(1, 2)$，则 $r = \sqrt{1^2+2^2} = \sqrt{5}$。
+   - $\cos\theta = \frac{1}{\sqrt{5}}$。
+3. 由二倍角公式：
+   $\cos 2\theta = 2\cos^2\theta - 1 = 2 \times \left(\frac{1}{\sqrt{5}}\right)^2 - 1 = 2 \times \frac{1}{5} - 1 = -\frac{3}{5}$。
+   或由 $\tan\theta=2$ 直接代入 $\cos 2\theta = \frac{1-2^2}{1+2^2} = -\frac{3}{5}$。
+4. 对应选项 B。</p>
+<p><strong>点评</strong>：
+- 此题核心考查由终边直线方程提取三角函数值。关键在于理解 $y=2x$ 等价于 $\tan\theta=2$，直接越过 $r$ 跳入齐次式转化是更快的套路。若先求 $\cos\theta$，注意开方符号选择不影响最终平方结果。
+- <strong>变式</strong>：若终边在直线 $y = -2x$（$x&lt;0$ 部分），则需注意 $\tan\theta = -2$，但最终 $\cos 2\theta$ 仍可使用 $\frac{1-\tan^2\theta}{1+\tan^2\theta}$ 计算，结果相同，体现了二倍角余弦仅依赖于正切的平方这一特性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-05.html">2011-理-05</a>（2011 · 中） 根据角终边在直线上求三角函数值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/650-任意角三角函数.html">任意角三角函数</a></li>
+</ul>
+</div>
+</body>
+</html>

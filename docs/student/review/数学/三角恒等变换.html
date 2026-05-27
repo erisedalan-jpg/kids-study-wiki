@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角恒等变换</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角恒等变换</h1><div class="review-mark" data-stem="三角恒等变换"></div><div class="meta-card"><span><strong>考点</strong>三角恒等变换</span><span><strong>权重</strong>37</span><span><strong>真题数</strong>10</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：37</li>
+<li>真题数：10；年份跨度：2009–2022</li>
+<li>出现题位：填空15 解答17 选择9</li>
+<li>难度分布：中9 易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>三角恒等变换是高考核心工具，贯穿三角函数与解三角形。核心知识体系如下：</p>
+<ol>
+<li>
+<p><strong>核心公式体系</strong></p>
+<ul>
+<li><strong>两角和差公式（核心基石）</strong>：<ul>
+<li>正弦：$\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta$</li>
+<li>余弦：$\cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta$</li>
+<li>正切：$\tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}$</li>
+</ul>
+</li>
+<li><strong>倍角公式（高频考点）</strong>：<ul>
+<li>正弦：$\sin2\alpha = 2\sin\alpha\cos\alpha$</li>
+<li>余弦：$\cos2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$</li>
+<li>（余弦倍角公式的变形是升降幂的关键）</li>
+</ul>
+</li>
+<li><strong>辅助角公式</strong>：$a\sin x + b\cos x = \sqrt{a^2+b^2}\sin(x+\varphi)$，其中 $\tan\varphi = \frac{b}{a}$，用于合一变形。</li>
+<li><strong>诱导公式</strong>：口诀“奇变偶不变，符号看象限”，用于任意角向锐角转化。</li>
+</ul>
+</li>
+<li>
+<p><strong>解三角形中的恒等变换定理</strong></p>
+<ul>
+<li><strong>正弦定理</strong>：$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$（$R$为外接圆半径）。用于边角互化，如 $a=2R\sin A$。</li>
+<li><strong>余弦定理</strong>：$a^2 = b^2 + c^2 - 2bc\cos A$ 及其变式 $\cos A = \frac{b^2 + c^2 - a^2}{2bc}$。用于已知三边求角或已知两边夹角求对边。</li>
+<li><strong>三角形内角和定理</strong>：$A + B + C = \pi$，可导出 $\sin(A+C) = \sin B$，$\cos(A+C) = -\cos B$。</li>
+</ul>
+</li>
+<li>
+<p><strong>关键恒等关系与适用条件</strong></p>
+<ul>
+<li>齐次式边角互化：条件中含边的齐次式或正弦的齐次式时，常用正弦定理将边化为角的正弦，或反之。</li>
+<li>形如 $\sin A\cos C + \sin A\sin C = \sin B + \sin C$ 的式子，利用 $\sin B = \sin(A+C)$ 展开化简。</li>
+<li>三角形内角范围：$A, B, C \in (0, \pi)$，因此 $\sin A &gt; 0$，这常用于同除正弦项时保证非零。</li>
+</ul>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>针对三角恒等变换及其在解三角形中的应用，归纳通用解法步骤如下：</p>
+<ol>
+<li>
+<p><strong>观察与角化——目标统一</strong></p>
+<ul>
+<li>分析已知条件和所求目标中的角，是否统一。</li>
+<li>若含有多种角形式（如 $A, B, C, 2B, \alpha-\frac{\pi}{4}$），优先利用 $C=\pi-(A+B)$ 或诱导公式，将不同角转化为统一的角，或朝着目标角转化。</li>
+<li>常见消角策略：$\sin(A+C) = \sin B$，$\sin C = \sin(A+B)$。</li>
+</ul>
+</li>
+<li>
+<p><strong>观察与结构——边角互化</strong></p>
+<ul>
+<li>判断条件是边的等式还是角的等式，还是混合型。</li>
+<li><strong>纯角等式</strong>：直接使用三角恒等变换公式（和差角、倍角等）进行化简即可求解角或函数值。</li>
+<li><strong>混合等式（边角共存）</strong>：实施“边角互化”。<ul>
+<li><strong>化边为角</strong>：利用正弦定理 $a=2R\sin A$，将边长代换为角的正弦。此法普适性强，常用于存在正弦齐次项或 $b+c$ 等线性组合时。</li>
+<li><strong>化角为边</strong>：利用正弦定理 $\sin A = \frac{a}{2R}$、余弦定理 $\cos A = \frac{b^2+c^2-a^2}{2bc}$，将角的三角函数代换为边的关系。此法常用于构造出 $b^2+c^2-a^2$ 等结构以求角或证明边的关系式，如将 $\sin C \sin A \cos B$ 化为边。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>化简与求值——公式选用</strong></p>
+<ul>
+<li><strong>含 $b^2, c^2, bc$ 的齐次等式</strong>：常化边为角或用余弦定理，如 $\sin^2A - \sin^2B - \sin^2C = \sin B\sin C$ 直接对应 $a^2 - b^2 - c^2 = bc$，进而求得 $\cos A = -\frac{1}{2}$。</li>
+<li><strong>含 $\sin A\cos C + \sin A\sin C$ 等形式</strong>：将右边的 $\sin B$ 用 $\sin(A+C)$ 展开，合并同类项，往往能消去公共因子 $\sin A$（注意 $\sin A \neq 0$），得到 $\sin C$ 与 $\cos A$ 的关系式。</li>
+<li><strong>已知 $\tan(\alpha-\frac{\pi}{4})$ 求 $\tan\alpha$</strong>：将 $\alpha$ 视为 $(\alpha-\frac{\pi}{4})+\frac{\pi}{4}$，直接套用两角和正切公式。</li>
+<li><strong>已知 $\cos(\frac{\pi}{4}-\alpha)$ 求 $\sin2\alpha$</strong>：利用诱导公式与倍角公式的联合，$\sin2\alpha = \cos(\frac{\pi}{2}-2\alpha) = \cos[2(\frac{\pi}{4}-\alpha)] = 2\cos^2(\frac{\pi}{4}-\alpha) - 1$。</li>
+</ul>
+</li>
+<li>
+<p><strong>最值与范围问题——函数与不等式的介入</strong></p>
+<ul>
+<li>解三角形中的最值问题，通常先利用余弦定理列方程，再利用基本不等式 $b^2 + c^2 \ge 2bc$ 或 $(b+c)^2 = b^2+c^2+2bc$ 等构造关于 $b+c$ 或 $bc$ 的不等关系。</li>
+<li>最终整理得到关于目标式的不等式，解出其最大值。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<p>这些是真题训练中反复暴露的失分陷阱，务必警惕：</p>
+<ul>
+<li><strong>忽视三角形内角约束</strong>：对三角形内角 $A, B, C$，其范围是 $(0, \pi)$，所以 $\sin A &gt; 0$ 恒成立。在等式两边同除 $\sin A$ 时，必须强调此条件，否则会导致逻辑失分。同时，由三角函数值求角时，必须结合角的范围限制，避免出现 $\frac{3\pi}{4}$ 与 $\frac{\pi}{4}$ 混淆等多解情况。</li>
+<li><strong>公式记忆与应用错误</strong>：<ul>
+<li>两角和余弦公式符号：$\cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$，极易与正弦公式符号混淆。</li>
+<li>余弦倍角公式的升降幂形式：$\cos2\alpha = 1-2\sin^2\alpha = 2\cos^2\alpha-1$，在已知 $\cos\alpha$ 求 $\sin2\alpha$ 时，需要明确中间的转化步骤，符号取决于 $2\alpha$ 的象限。</li>
+</ul>
+</li>
+<li><strong>边角互化中的等价性</strong>：正弦定理化边为角时，必须将边长整体替换为 $2R\sin A$，而不能只将乘积式中的部分边替换，否则会破坏等式的一致性。例如 $a \cos C + a \sin C = b+c$，两边各项都需化角，得到 $\sin A\cos C + \sin A\sin C = \sin B + \sin C$。</li>
+<li><strong>正切公式的适用条件</strong>：使用正切公式时，需确保分母不为零且角的正切值本身有意义。例如 $\tan(\alpha+\beta) = \frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$，需满足 $\tan\alpha\tan\beta \neq 1$。</li>
+<li><strong>化简不彻底导致计算复杂</strong>：在证明或求解复杂关系时，盲目套用公式展开而不注意整体结构，会导致式子冗长难算。应优先观察能否整体代换（如 $\sin B = \sin(A+C)$）或利用对称性简化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目一</strong>：2022-文-17（节选自高考原题）
+已知 $\triangle ABC$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$，已知 $\sin C\sin(A-B) = \sin B\sin(C-A)$。
+（1）若 $A=2B$，求 $C$；
+（2）证明：$2a^2 = b^2 + c^2$。</p>
+<ul>
+<li>
+<p><strong>思路</strong>：
+    （1）由已知等式和 $A=2B$，利用 $C = \pi - (A+B)$ 消去 $C$，解关于 $B$ 的方程。注意 $B$ 的范围约束。
+    （2）证明边的关系，需将已知的角的关系式化边。将等式两边展开，利用正弦、余弦定理将 $\sin$ 和 $\cos$ 的乘积形式全部转化为边的表达，然后化简。</p>
+</li>
+<li>
+<p><strong>步骤</strong>：
+    （1）将 $A=2B$ 及 $C = \pi-3B$ 代入条件式。
+    左边：$\sin C \sin(A-B) = \sin(\pi-3B)\sin(2B-B) = \sin 3B \sin B$。
+    右边：$\sin B \sin(C-A) = \sin B \sin((\pi-3B)-2B) = \sin B \sin(\pi-5B) = \sin B \sin 5B$。
+    由 $\sin C \sin(A-B) = \sin B \sin(C-A)$ 得：$\sin 3B \sin B = \sin B \sin 5B$。
+    由于 $B \in (0, \pi)$，故 $\sin B \neq 0$，两边约去，得 $\sin 3B = \sin 5B$。
+    由 $5B = 3B + 2k\pi$ 或 $5B = \pi - 3B + 2k\pi$。$A=2B$ 且 $A+B+C=\pi$，得 $C=\pi-3B &gt; 0$，故 $0 &lt; B &lt; \frac{\pi}{3}$。
+    $5B=3B$ 推出 $B=0$，舍去。
+    $5B = \pi - 3B$ 推出 $B = \frac{\pi}{8}$。则 $C = \pi - 3B = \frac{5\pi}{8}$。
+    （2）证明：将条件式 $\sin C\sin(A-B) = \sin B\sin(C-A)$ 两边展开：
+    左 = $\sin C(\sin A\cos B - \cos A\sin B)$，右 = $\sin B(\sin C\cos A - \cos C\sin A)$。
+    整理得：$\sin C\sin A\cos B + \sin B\cos C\sin A = \cos A\sin B\sin C + \cos A\sin B\sin C$。
+    即 $\sin A(\sin C\cos B + \cos C\sin B) = 2\sin B\sin C\cos A$。
+    即 $\sin A\sin(C+B) = 2\sin B\sin C\cos A$。而 $\sin(C+B) = \sin A$。
+    所以 $\sin^2 A = 2\sin B\sin C\cos A$。
+    由正、余弦定理进行边角互化：
+    正弦定理化 $\sin$ 为边：$a^2 = 2bc\cos A$。
+    余弦定理化 $\cos A = \frac{b^2+c^2-a^2}{2bc}$。
+    代入得：$a^2 = 2bc \cdot \frac{b^2+c^2-a^2}{2bc} = b^2+c^2-a^2$。
+    移项即证得：$2a^2 = b^2 + c^2$。</p>
+</li>
+<li>
+<p><strong>点评/变式</strong>：
+    本题难点在于（2）问。关键在于利用“三角形内角和”将多角问题转化为单角或双角，最终得到 $\sin A$ 与 $\cos A$ 的关系式。边角互化的方向明确：出现 $\sin^2 A$ 和 $\sin B \sin C$，结合 $a, b, c$ 的整体结构，显然化边用余弦定理处理 $\cos A$ 最直接。注意，每一步的等价推导（如 $\sin A \neq 0$）要心中有数。</p>
+</li>
+</ul>
+<p><strong>题目二</strong>：2022-理-17（节选自高考原题）
+记 $\triangle ABC$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$，已知 $\sin C\sin(A-B) = \sin B\sin(C-A)$。
+（1）证明：$2a^2 = b^2 + c^2$；
+（2）若 $a=5, \cos A = \frac{25}{31}$，求 $\triangle ABC$ 的周长。</p>
+<ul>
+<li>
+<p><strong>思路</strong>：
+    （1）证明同代表题一，这里略去。
+    （2）已知 $a$ 和 $\cos A$，以及（1）中的边的关系 $2a^2 = b^2 + c^2$，可求得 $b^2+c^2$。再利用余弦定理 $a^2 = b^2 + c^2 - 2bc\cos A$，即可求出 $bc$。有了 $b^2+c^2$ 和 $bc$，可求得 $(b+c)^2$，从而得到 $b+c$，周长即 $a+b+c$。</p>
+</li>
+<li>
+<p><strong>步骤</strong>：
+    （1）证明略。
+    （2）由（1）知 $2a^2 = b^2 + c^2$，代入 $a=5$，得 $b^2 + c^2 = 2 \times 25 = 50$。
+    由余弦定理得：$a^2 = b^2 + c^2 - 2bc\cos A$。
+    代入数据得：$25 = 50 - 2bc \cdot \frac{25}{31}$。
+    整理得：$2bc \cdot \frac{25}{31} = 25$。
+    解得：$bc = \frac{31}{2}$。
+    因为 $(b+c)^2 = b^2 + c^2 + 2bc = 50 + 31 = 81$。
+    所以 $b+c = 9$（负值舍去）。
+    故 $\triangle ABC$ 的周长 $l = a + b + c = 5 + 9 = 14$。</p>
+</li>
+<li>
+<p><strong>点评/变式</strong>：
+    本题是典型的多问递进式解三角形题。第（1）问</p>
+</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-17.html">2022-文-17</a>（2022 · 中） 本题结合三角形内角和与正弦余弦定理，求解角（C）并证明边关系。</li>
+<li><a href="../../exam/数学/2022-理-17.html">2022-理-17</a>（2022 · 中） 本题考查利用正弦定理、余弦定理进行三角形边角互化证明与计算。</li>
+<li><a href="../../exam/数学/2020-理-17.html">2020-理-17</a>（2020 · 中） △ABC中sin²A-sin²B-sin²C=sinBsinC，用正弦定理转化求角A=2π/3，再求BC=3时周长最大值。</li>
+<li><a href="../../exam/数学/2019-文-15.html">2019-文-15</a>（2019 · 中） 利用正弦定理将边角关系转化为三角方程求解三角形内角。</li>
+<li><a href="../../exam/数学/2018-文-15.html">2018-文-15</a>（2018 · 中） 本题给出 tan(α-π/4) 的值，利用两角和的正切公式间接求 tanα。</li>
+<li><a href="../../exam/数学/2017-理-17.html">2017-理-17</a>（2017 · 中） 该题考查三角形内角关系与三角恒等变换求角，再利用余弦定理及面积公式求边长。</li>
+<li><a href="../../exam/数学/2016-理-09.html">2016-理-09</a>（2016 · 易） 本题给出 cos(π/4 – α) 的值，求 sin2α，考查诱导公式与二倍角公式的应用。</li>
+<li><a href="../../exam/数学/2012-理-17.html">2012-理-17</a>（2012 · 中） 利用正弦定理和三角恒等变换求三角形内角A，结合余弦定理与面积公式求边长b,c。</li>
+<li><a href="../../exam/数学/2010-理-09.html">2010-理-09</a>（2010 · 中） 本题考查利用三角恒等变换与半角公式进行化简求值，涉及象限角符号判断。</li>
+<li><a href="../../exam/数学/2009-理-17.html">2009-理-17</a>（2009 · 中） 考查利用三角形内角关系及余弦公式求解边长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/272-三角恒等变换.html">三角恒等变换</a></li>
+</ul>
+</div>
+</body>
+</html>

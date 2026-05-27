@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对称中心</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对称中心</h1><div class="review-mark" data-stem="对称中心"></div><div class="meta-card"><span><strong>考点</strong>对称中心</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择11</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对称中心的定义</strong><br />
+  若函数 $y=f(x)$ 满足 $f(a+x)+f(a-x)=2b$（或 $f(x)+f(2a-x)=2b$）恒成立，则点 $(a,b)$ 为函数图像的对称中心。特别地，奇函数的对称中心为原点。</li>
+<li><strong>三次函数必有对称中心</strong><br />
+  三次函数 $f(x)=px^{3}+qx^{2}+rx+s\ (p\neq 0)$ 的图像是中心对称图形，其对称中心恰为唯一拐点。<br />
+  拐点横坐标由二阶导数为零解得：$f''(x)=6px+2q=0\implies x=-\dfrac{q}{3p}$，纵坐标为 $f!\left(-\dfrac{q}{3p}\right)$。该点即为对称中心。</li>
+<li><strong>零点与对称中心的关系</strong><br />
+  若三次函数的对称中心落在 $x$ 轴上（即纵坐标为 $0$），则三个零点关于该点中心对称，并满足 $x_1+x_2+x_3=3x_0$。</li>
+<li><strong>适用条件</strong><br />
+  对称中心的定义适用于任意函数；三次函数的对称中心源于其图像固有的中心对称性质，可直接用上述公式求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判定对称性类型</strong><br />
+   区分“轴对称”与“中心对称”。三次函数只具有中心对称性，不存在垂直于 $x$ 轴的对称轴（选项 C 的陷阱）。</li>
+<li><strong>求三次函数对称中心的通法</strong>  </li>
+<li><strong>方法一（二阶导数法）</strong>：$f'(x)=3px^{2}+2qx+r$，$f''(x)=6px+2q$，令 $f''(x)=0$ 得 $x_0=-\dfrac{q}{3p}$，代入得 $y_0=f(x_0)$，中心 $(x_0,y_0)$。  </li>
+<li><strong>方法二（配凑平移法）</strong>：将 $f(x)$ 改写为 $p(x-x_0)^{3}+k(x-x_0)+y_0$，则 $(x_0,y_0)$ 为对称中心。</li>
+<li><strong>对称中心的验证</strong><br />
+   若题目指定某点 $(a,f(a))$ 为对称中心，只需令 $x_0=a$ 反解参数，再检验是否满足 $f(x)+f(2a-x)=2f(a)$。</li>
+<li><strong>结合极值与零点</strong><br />
+   三次函数有两个极值点 $x_1,x_2$（$\Delta&gt;0$ 时），对称中心的横坐标恰为两极值点的中点：$x_0=\dfrac{x_1+x_2}{2}$。利用对称中心位置可快速判断零点个数和分布。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆对称轴与对称中心</strong><br />
+  三次函数不存在平行于 $y$ 轴的对称轴。看到“存在 $b$ 使 $x=b$ 为对称轴”的选项可直接排除，除非函数退化成非三次的奇函数平移。</li>
+<li><strong>忽略定义域与对称恒成立</strong><br />
+  对称中心必须对定义域内任意 $x$ 满足等式。若仅凭某几个点相等就断定对称中心，极易出错，必须利用恒等式或拐点验证。</li>
+<li><strong>导数极值点与对称中心的关系误用</strong><br />
+  极值点 $x=0$ 和 $x=a$ 的中点是 $\dfrac{a}{2}$，这个中点恰是拐点横坐标。若错误认为极值点就是对称点，会直接丢掉正确选项。</li>
+<li><strong>对称中心不在曲线上</strong><br />
+  注意：对称中心是曲线上的点，必须满足横坐标对应的纵坐标在曲线上。若求出拐点 $(x_0,y_0)$，该点一定在三次函数图像上。</li>
+<li><strong>参数范围对对称性的影响</strong><br />
+  对称中心存在性与参数 $a$ 无关，三次函数一定有对称中心；但题目常要求“存在 $a$ 使对称中心为指定点”，此时只需解方程判定是否有解，而不需要讨论 $a$ 的范围约束其他性质。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2024-新课标Ⅱ-11</h3>
+<p>已知 $f(x)=2x^{3}-3ax^{2}+1$，判断选项正误：<br />
+A. 当 $a&gt;1$ 时，$f(x)$ 有三个零点<br />
+B. 当 $a&lt;0$ 时，$x=0$ 是 $f(x)$ 的极大值点<br />
+C. 存在 $a,b$，使得 $x=b$ 为曲线 $y=f(x)$ 的对称轴<br />
+D. 存在 $a$，使得点 $(1,f(1))$ 为曲线 $y=f(x)$ 的对称中心  </p>
+<h3><strong>思路</strong></h3>
+<p>题给函数是三次函数，核心考察性质为极值、零点、对称中心。求解时需结合导数工具。对称中心的判断直接用拐点公式 $x_0=-\dfrac{q}{3p}$；对称轴选项可依据三次函数知识直接定性排除；极值与零点结合图像和参数讨论。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>求导：$f'(x)=6x^{2}-6ax=6x(x-a)$。极值点为 $x=0$ 和 $x=a$。  </li>
+<li><strong>选项 A（$a&gt;1$）</strong>：$f(0)=1&gt;0$（极大值或极小值），$f(a)=2a^{3}-3a^{3}+1=1-a^{3}&lt;0$。又 $\lim\limits_{x\to -\infty}f(x)=-\infty$，$\lim\limits_{x\to +\infty}f(x)=+\infty$，画草图知 $f(x)$ 在 $(-\infty,0)$、$(0,a)$、$(a,+\infty)$ 各有一个零点，共三个零点。A 正确。  </li>
+<li><strong>选项 B（$a&lt;0$）</strong>：此时 $x=a&lt;0$ 为极大值点，$x=0$ 为极小值点。故 $x=0$ 是极小值点，B 错误。  </li>
+<li><strong>选项 C</strong>：三次函数图像不存在垂直于 $x$ 轴的对称轴。即便含参也不会变成轴对称图形。C 错误。  </li>
+<li><strong>选项 D</strong>：三次函数对称中心横坐标 $x_0=-\dfrac{-3a}{3\times 2}=\dfrac{a}{2}$。令 $x_0=1$ 得 $a=2$。当 $a=2$ 时，$f(1)=2-6+1=-3$，中心为 $(1,-3)$。验证：$f(1+x)+f(1-x)=[2(1+x)^{3}-6(1+x)^{2}+1]+[2(1-x)^{3}-6(1-x)^{2}+1]$ 化简得 $-6$，满足 $2f(1)=-6$，恒成立。故存在 $a=2$ 满足条件，D 正确。<br />
+<strong>答案</strong>：AD</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>该题将极值与对称中心融合，选项 A 与 B 依赖极值符号讨论，属于常规零点问题；选项 C 考查基本对称性认知；选项 D 是直接应用三次函数对称中心公式。<br />
+变式方向：可改变三次项系数，或将对称中心设在 $y$ 轴上求参数；也可结合“过对称中心的直线与三次函数相交，另两交点中心即为该对称中心”的性质，考察割线中点轨迹问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a>（2024 · 难） f(x)=2x³-3ax²+1，综合判断关于零点个数、极值点、对称轴和对称中心的四个命题真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/833-对称中心.html">对称中心</a></li>
+</ul>
+</div>
+</body>
+</html>

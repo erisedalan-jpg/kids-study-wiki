@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数值域</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数值域</h1><div class="review-mark" data-stem="正弦函数值域"></div><div class="meta-card"><span><strong>考点</strong>正弦函数值域</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>正弦函数 $y=\sin x$（$x\in\mathbf{R}$）的值域为 $[-1,1]$，即 $-1\le\sin x\le1$。其中，$\sin x=1$ 当且仅当 $x=\frac{\pi}{2}+2k\pi$（$k\in\mathbf{Z}$）时取得，$\sin x=-1$ 当且仅当 $x=-\frac{\pi}{2}+2k\pi$（$k\in\mathbf{Z}$）时取得。<br />
+由此可得：存在 $x\in\mathbf{R}$ 使 $\sin x&lt;1$ 成立（如 $x=0$），但不存在 $x$ 使 $\sin x&gt;1$ 或 $\sin x&lt;-1$。任意 $x\in\mathbf{R}$ 恒有 $\sin x\le1$ 成立，但不恒有 $\sin x&lt;1$。<br />
+在逻辑命题判断中，抓住值域及其端点取等情况，是判断含有正弦函数不等式的全称/存在命题真假的核心依据。类似地，函数 $y=e^{|x|}$ 满足 $|x|\ge0$，故 $e^{|x|}\ge e^0=1$，等号当且仅当 $x=0$ 时成立，这在逻辑命题中常与三角函数联合考查。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确定义域与值域</strong>：先写出所涉函数的标准值域（如正弦函数 $[-1,1]$，指数型函数 $e^{|x|}\ge1$）。  </li>
+<li><strong>检查等号成立条件</strong>：对于含有不等式的命题，要分清是严格不等式还是非严格不等式，并确认等号能否取到、在哪里取到。  </li>
+<li><strong>量词真值判断</strong>：  </li>
+<li>存在性命题 $\exists x\in D, P(x)$ 为真，只需找到一个 $x_0\in D$ 使 $P(x_0)$ 成立。  </li>
+<li>全称性命题 $\forall x\in D, P(x)$ 为真，必须保证对 $D$ 中的每一个 $x$ 都有 $P(x)$ 成立。  </li>
+<li><strong>复合命题定真</strong>：优先判断简单命题的真假，再依据逻辑联结词（且、或、非）的运算规则得出结论，避免在复合结构上直接猜测。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>值域端点开闭混淆</strong>：把 $[-1,1]$ 误记为 $(-1,1)$，导致错误地认为“$\sin x&lt;1$”是恒成立的全称命题，或错误否定存在性命题。  </li>
+<li><strong>等号条件遗忘</strong>：忽略 $\sin x=1$ 可以在 $x=\frac{\pi}{2}+2k\pi$ 取得，从而误判含有“$\le$”与“$&lt;$”的命题真假。  </li>
+<li><strong>量词含义不清</strong>：误将“存在”当成“任意”验证，或反之。例如判断 $p:\exists x\in\mathbf{R},\sin x&lt;1$ 时，试图证明对所有 $x$ 成立，导致错误。  </li>
+<li><strong>复合命题否定规则生疏</strong>：如 $\lnot(p\land q)$ 等价于 $(\lnot p)\lor(\lnot q)$，$\lnot(\forall x P(x))$ 等价于 $\exists x\lnot P(x)$，判断时易直接套错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-文-03）<br />
+已知命题 $p:\exists x\in\mathbf{R},\sin x&lt;1$；命题 $q:\forall x\in\mathbf{R},e^{|x|}\ge1$，则下列命题中为真命题的是（ ）<br />
+A. $p\land q$ B. $\lnot p\land q$ C. $p\land\lnot q$ D. $\lnot(p\lor q)$  </p>
+<p><strong>思路</strong><br />
+分别判断 $p$ 和 $q$ 的真值，再利用真值表判定复合命题的真假。本题表面考查逻辑联结词，实则考查正弦函数与指数型函数的值域是否有界、等号能否成立。</p>
+<p><strong>步骤</strong><br />
+1. 判断 $p$：由正弦函数值域 $[-1,1]$ 知 $\sin x\le1$ 恒成立，且 $\sin x=1$ 在 $x=\frac{\pi}{2}+2k\pi$ 时取得。取 $x=0$，有 $\sin0=0&lt;1$，故存在实数 $x$ 使得 $\sin x&lt;1$。所以 $p$ 为<strong>真命题</strong>。<br />
+2. 判断 $q$：对任意实数 $x$，$|x|\ge0$，指数函数 $y=e^t$ 在 $\mathbf{R}$ 上递增，故 $e^{|x|}\ge e^0=1$，等号仅当 $x=0$ 时成立，但不等式本身对一切 $x$ 恒成立。因此 $q$ 为<strong>真命题</strong>。<br />
+3. 分析选项：<br />
+   - $p$ 真、$q$ 真 $\Rightarrow p\land q$ 真，A 正确。<br />
+   - $\lnot p$ 假 $\Rightarrow\lnot p\land q$ 假。<br />
+   - $\lnot q$ 假 $\Rightarrow p\land\lnot q$ 假。<br />
+   - $p\lor q$ 真 $\Rightarrow\lnot(p\lor q)$ 假。<br />
+故正确选项为 <strong>A</strong>。</p>
+<p><strong>点评/变式</strong><br />
+本题的关键是把逻辑真值归约到基本初等函数的值域判断。值得注意：若将 $p$ 改为全称命题“$\forall x\in\mathbf{R},\sin x&lt;1$”，则因存在 $\sin x=1$ 的情况，命题为假；若 $q$ 改为存在命题“$\exists x\in\mathbf{R},e^{|x|}&lt;1$”，则因 $e^{|x|}\ge1$ 恒成立，命题为假。此类题常通过改变量词或不等号（$&lt;$ 变 $\le$）制造陷阱，务必紧扣函数的值域端点和等号成立条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-03.html">2021-文-03</a>（2021 · 易） 本题考查正弦函数值域和指数函数性质在命题真假判断中的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正弦函数值域</a></li>
+</ul>
+</div>
+</body>
+</html>

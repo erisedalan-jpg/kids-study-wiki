@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数相等</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数相等</h1><div class="review-mark" data-stem="复数相等"></div><div class="meta-card"><span><strong>考点</strong>复数相等</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：6</li>
+<li>真题数：4；年份跨度：2015–2022</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数相等的充要条件</strong>：设 $a,b,c,d \in \mathbb{R}$，则 $a+bi = c+di \iff a=c$ 且 $b=d$。</li>
+<li><strong>核心依据</strong>：复数问题实数化。只有将等式两边完全整理成标准的代数形式 $x+yi$ 后，才能利用“实部等于实部，虚部等于虚部”建立方程组。</li>
+<li><strong>特殊情形</strong>：$a+bi = 0 \iff a=0$ 且 $b=0$。</li>
+<li><strong>运算基础</strong>：必须准确进行复数的四则运算，尤其是乘法 $(a+bi)(c+di)=(ac-bd)+(ad+bc)i$ 以及共轭复数的运算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准化归</strong>：对给定等式进行展开、合并、分母实数化等运算，将等式两边或整个等式化为“实部 $+$ 虚部 $i$”的标准结构。</li>
+<li><strong>列方程组</strong>：根据复数相等的充要条件，令实部系数相等，虚部系数相等，列出关于参数的实数方程组。</li>
+<li><strong>求解验证</strong>：解出实数参数值，建议代回原式验证等式平衡，确保运算无误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略实数化前提</strong>：看到等式直接让看似对应的部分相等，而未将表达式完全整理成 $A+Bi$ 形式。例如等式两边混杂实数和带 $i$ 的项就去强行对应。</li>
+<li><strong>共轭复数计算失误</strong>：看到 $z$ 的共轭复数 $\bar{z}$，代入时只虚部变号，却忽略了 $z$ 结构，或对 $\bar{z}$ 进行乘法时符号算错。</li>
+<li><strong>虚部系数遗漏</strong>：在整理过程中，一定要明确虚部的<strong>系数</strong>是哪个实数，列方程时只能让系数相等，不要把 $i$ 带进方程。</li>
+<li><strong>实部虚部捆绑错误</strong>：如遇到 $a+bi+2a$ 时，忘记合并同类项直接将 $a$ 当成实部、$b$ 当虚部，忽略了后面还带有实数项。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2022-理-02）：已知 $z=1-2i$，且 $z+a\bar{z}+b=0$，其中 $a,b$ 为实数，求 $a,b$。
+<strong>思路</strong>：先求出 $\bar{z}$，代入等式并整理成实部与虚部分离的形式，利用“等于0”即实部虚部均为0，建立方程组解 $a,b$。
+<strong>步骤</strong>：
+1. 由 $z=1-2i$ 得 $\bar{z}=1+2i$。
+2. 代入等式：$(1-2i)+a(1+2i)+b=0$。
+3. 整理标准式：$(1+a+b)+(2a-2)i=0$。
+4. 列方程组：$\begin{cases} 1+a+b=0 \ 2a-2=0 \end{cases}$。
+5. 解得：$a=1$，代入得 $b=-2$。
+<strong>点评/变式</strong>：此题核心陷阱在于必须先算 $\bar{z}$ 再参与运算。若直接对 $z$ 运算必错。变式可改为 $z\bar{z}+az+b=0$，同样先计算模长（实数）再整理。</p>
+<p><strong>题目</strong>（2015-文-02）：若 $a$ 为实数，且 $\frac{2+ai}{1+i}=3+i$，求 $a$。
+<strong>思路</strong>：分母实数化，将等式左边化为标准代数形式，再利用复数相等求解。
+<strong>步骤</strong>：
+1. 去分母：$2+ai=(3+i)(1+i)$。
+2. 右边展开：$(3+i)(1+i)=3+3i+i+i^2=2+4i$。
+3. 得到：$2+ai=2+4i$。
+4. 由复数相等：实部已经相等，虚部系数 $a=4$。
+<strong>点评/变式</strong>：本题也可用模长或除法直接算左边，但乘以分母是最不易错的通用套路。注意右侧展开时 $i^2=-1$ 不可遗漏。</p>
+<p><strong>题目</strong>（2015-理-02）：若 $a$ 为实数，且 $(2+ai)(a-2i)=-4i$，求 $a$。
+<strong>思路</strong>：直接展开左边，令实部等于0，虚部系数等于-4，解方程组得 $a$。
+<strong>步骤</strong>：
+1. 展开左边：$2 \cdot a + 2 \cdot (-2i) + ai \cdot a + ai \cdot (-2i)$
+   $= 2a - 4i + a^2i - 2ai^2$。
+2. 利用 $i^2=-1$ 化简：$= (2a+2a) + (a^2 - 4)i = 4a + (a^2-4)i$。
+3. 已知等于 $-4i$，即实部为0：$\begin{cases} 4a=0 \ a^2-4=-4 \end{cases}$。
+4. 解得：$a=0$。
+<strong>点评/变式</strong>：此题极易在乘法展开时漏乘或 $i^2$ 未变号。牢记 $ai \cdot (-2i) = -2a i^2 = +2a$，做到实部归实部，虚部归虚部。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-02.html">2022-文-02</a>（2022 · 易） 考查复数代数形式的运算法则及复数相等的条件。</li>
+<li><a href="../../exam/数学/2022-理-02.html">2022-理-02</a>（2022 · 易） 本题通过已知复数及其共轭，利用复数相等条件求解实参数</li>
+<li><a href="../../exam/数学/2015-文-02.html">2015-文-02</a>（2015 · 易） 该题考查复数的基本运算和复数相等的条件应用。</li>
+<li><a href="../../exam/数学/2015-理-02.html">2015-理-02</a>（2015 · 易） 该题考查复数的乘法运算及复数相等的条件，通过实部与虚部分别相等求参数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/809-复数相等.html">复数相等</a></li>
+</ul>
+</div>
+</body>
+</html>

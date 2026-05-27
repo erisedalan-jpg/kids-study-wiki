@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>换元法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>换元法</h1><div class="review-mark" data-stem="换元法"></div><div class="meta-card"><span><strong>考点</strong>换元法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2016–2017</li>
+<li>出现题位：填空14 选择11</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>换元法（又称变量代换）是将一个复杂数学表达式中的某一部分用一个新的变量代替，从而简化问题结构的方法。核心在于：
+- <strong>整体代换</strong>：识别并提取相同的子式、三角函数名、指数/对数底数等，设为新元 $t$。
+- <strong>范围跟踪</strong>：换元后必须同步确定新变量的取值范围（定义域），这是解题成败的关键。
+- <strong>函数转化</strong>：将原函数转化为关于 $t$ 的常见函数（如二次函数、对勾函数等），利用熟知的函数性质求解最值、解方程等。
+- <strong>常见适用场景</strong>：三角函数齐次/非齐次转化、含根式/分式的方程与不等式、指数型/对数型复合函数、高次多项式等。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察结构，选定换元对象</strong>：寻找反复出现的“块”，如 $\sin x$、$\cos x$、$a^x$、$\sqrt{ax+b}$ 等，尤其是可通过同角关系、诱导公式、二倍角公式等统一表达式的部分。</li>
+<li><strong>实现统一，完成换元</strong>：利用恒等变换将原式全部用所选对象表示，比如将 $\sin^2x$ 写成 $1-\cos^2x$，将 $\cos2x$ 用 $\sin x$（或 $\cos x$）表示。</li>
+<li><strong>精确锁定新变量范围</strong>：由原变量 $x$ 的取值范围，结合三角函数有界性、指数范围、根式非负等，求出新变量 $t$ 的取值范围 $D$。</li>
+<li><strong>建立新函数</strong>：写出 $y = f(t)$，明确 $t \in D$。</li>
+<li><strong>求解新函数问题</strong>：在 $D$ 上求二次函数最值（常用配方或对称轴分析）、单调性求解等。</li>
+<li><strong>回代结论</strong>：将关于 $t$ 的结果对应回原变量或直接写出最终答案，注意单位及表达形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视新变量的范围</strong>：换元后忘记标注 $t$ 的取值范围，导致求最值时取了定义域外的值，这是最常见的失分原因。</li>
+<li><strong>范围转换错误</strong>：由 $x$ 范围推导 $t$ 范围时出错，例如 $\cos x$ 在给定区间并非单调时，应正确求出值域（如 $x\in[0,\frac{\pi}{3}]$ 时 $\cos x\in[\frac12,1]$）。</li>
+<li><strong>化归不彻底</strong>：没有将原表达式全部统一为同一个三角函数，导致无法换元或换元后残留原变量。</li>
+<li><strong>配方与对称轴分析失误</strong>：二次项系数为负时开口向下，对称轴是否落在定义域内对最大值位置影响不同，计算对称轴坐标及端点值易错。</li>
+<li><strong>混淆新旧变量</strong>：最终答案写成关于 $t$ 的形式，或代回时计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017·理·14） 函数 $f(x)=\sin^2x+\cos x-\frac{1}{4}$（$x\in[0,\frac{\pi}{3}]$）的最大值是<em _max="\max"><strong>_</strong>。
+<strong>思路</strong> 同角公式化异名为同名：$\sin^2x=1-\cos^2x$，令 $t=\cos x$，转化为关于 $t$ 的二次函数在闭区间的最值。
+<strong>步骤</strong>
+1. 化简：$f(x)=1-\cos^2x+\cos x-\frac14=-\cos^2x+\cos x+\frac34$。
+2. 换元：令 $t=\cos x$。由 $x\in[0,\frac{\pi}{3}]$，得 $t\in[\frac12,1]$。
+3. 转化函数：$y=-t^2+t+\frac34$，配方得 $y=-(t-\frac12)^2+1$。
+4. 求最值：开口向下，对称轴 $t=\frac12$ 在区间 $[\frac12,1]$ 内。当 $t=\frac12$ 时，$y</em>=1$。
+5. 最大值即为 $1$。</p>
+<p><strong>点评/变式</strong> 必须精准求出 $t$ 的范围，不可默认 $t\in[-1,1]$。若 $x$ 区间变化，对称轴可能落在区间外，此时最值在端点取到。</p>
+<p><strong>题目</strong>（2016·文·11） 函数 $f(x)=\cos2x+6\cos(\frac{\pi}{2}-x)$ 的最大值为（ ）
+A.4 B.5 C.6 D.7
+<strong>思路</strong> 二倍角公式将 $\cos2x$ 化为 $1-2\sin^2x$，诱导公式将 $\cos(\frac{\pi}{2}-x)$ 化为 $\sin x$，全部用 $\sin x$ 表示，再换元。
+<strong>步骤</strong>
+1. 化简：$\cos2x=1-2\sin^2x$，$\cos(\frac{\pi}{2}-x)=\sin x$，故 $f(x)=1-2\sin^2x+6\sin x$。
+2. 换元：令 $t=\sin x$，由于没有给出 $x$ 的范围，默认 $t\in[-1,1]$。
+3. 转化函数：$y=-2t^2+6t+1$，配方得 $y=-2(t-\frac32)^2+\frac{11}{2}$。
+4. 求最值：对称轴 $t=\frac32$，开口向下，对称轴在区间 $[-1,1]$ 右侧，函数在 $[-1,1]$ 上单调递增。当 $t=1$ 时取得最大值，$y_{\max}=-2+6+1=5$。
+5. 对应选项 B。</p>
+<p><strong>点评/变式</strong> 该题无 $x$ 限制，$t\in[-1,1]$ 为默认范围。易错点在于未看清对称轴是否在区间内，直接用顶点纵坐标会误选其他选项。二次函数在闭区间上的最值务必考虑单调性和端点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-14.html">2017-理-14</a>（2017 · 易） 考查利用同角三角函数关系转化为二次函数求最值。</li>
+<li><a href="../../exam/数学/2016-文-11.html">2016-文-11</a>（2016 · 中） 运用二倍角公式与诱导公式化简三角函数为二次函数，通过换元求最值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/885-换元思想.html">换元法</a></li>
+</ul>
+</div>
+</body>
+</html>

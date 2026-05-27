@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平面几何</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平面几何</h1><div class="review-mark" data-stem="平面几何"></div><div class="meta-card"><span><strong>考点</strong>平面几何</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正方体的截面与表面展开</strong>：当半正多面体的所有顶点都在正方体表面上时，可在正方体的一个面或对角面上作出含所求棱长的平面图形，从而将空间关系转化为平面几何问题。</li>
+<li><strong>等腰直角三角形</strong>：若直角边长为 $a$，则斜边长为 $\sqrt{2}a$；反之，若斜边长为 $c$，则直角边长为 $\frac{\sqrt{2}}{2}c$。本题中 $BG=GE$ 且 $\angle BGE=90^\circ$，直接应用于正方体表面的八边形转角处。</li>
+<li><strong>对称性与相等关系</strong>：半正多面体具有高度对称性，正方体表面的截口图形关于正方体面对角线对称，由此得出线段相等的关键条件（如 $BG=GE=CH$），避免额外设元。</li>
+<li><strong>方程建模</strong>：利用正方体棱长等于组成棱的几段线段之和（如 $CH+HG+CH=1$），结合几何关系列出关于未知棱长 $x$ 的方程，最终解出 $x=\sqrt{2}-1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识图并分层计数</strong>：对于多面体的面数，按特征层（如上、中、下）分别统计正多边形的个数，注意对称性以避免重复或遗漏。</li>
+<li><strong>空间定位，锁定关键截面</strong>：抓住“所有顶点都在正方体表面上”这一条件，将半正多面体的棱映射到正方体的面上，找到能同时包含正方体棱和所求棱长的平面图形。</li>
+<li><strong>抽象线段，设未知数</strong>：把半正多面体的棱长设为 $x$，在截面图中标出与 $x$ 相关的线段。</li>
+<li><strong>化归平面几何模型</strong>：通过做延长线、连接关键点，构造典型的平面图形（如等腰直角三角形、矩形），利用对称性得出线段相等关系和角度信息。</li>
+<li><strong>建立方程求解</strong>：用 $x$ 表示正方体棱长，根据“正方体棱长=1”列出等式，求解并化简（如分母有理化得到 $\sqrt{2}-1$）。</li>
+<li><strong>答案回代验证</strong>：检查所得棱长是否符合图形实际（正值且小于正方体棱长），并确认与面数无矛盾。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>面数漏数或重数</strong>：未注意分层结构，错把同一层旋转对称的面算作同一面，或忽略中层侧面的正多边形。</li>
+<li><strong>未能正确分离平面图形</strong>：空间想象不足，没有从正视、俯视或侧视角度提取出有效截面，误以为必须使用立体几何公式。</li>
+<li><strong>等腰直角三角形的直角边与斜边混淆</strong>：把 $BE=x$ 当作直角边，导致 $BG$ 错误表示为 $\sqrt{2}x$；正确应为 $BG=GE=\frac{\sqrt{2}}{2}x$。</li>
+<li><strong>忽略正方体棱上截口的对称分布</strong>：未能推出 $CH=BG$，漏掉一端或两端对称的截去部分，从而在列方程“正方体棱长=1”时丢项。</li>
+<li><strong>只知公式不会迁移</strong>：对“$1= \sqrt{2}x + x$”这类线段和等式感到陌生，根源在于缺乏将多面体棱长与正方体棱长通过平面图形搭桥的意识。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2019-文-16</h3>
+<p>半正多面体由两种或以上的正多边形围成，图2中的半正多面体棱数为48，所有顶点都在棱长为1的正方体表面上。求该半正多面体共有多少个面，及其棱长。</p>
+<h3><strong>思路</strong></h3>
+<ul>
+<li>面数：由对称性分层计数（上下层+中间层）。</li>
+<li>棱长：把半正多面体棱投射到正方体表面，构造等腰直角三角形，利用正方体棱长等于截断的各段之和列出方程。</li>
+</ul>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>
+<p><strong>计算面数</strong><br />
+   观察图形对称性：第一层与第三层各有9个面（含正三角形与正八边形），共18个面；第二层（侧面一圈）共有8个面，总计 $18+8=26$ 个面。</p>
+</li>
+<li>
+<p><strong>几何情景转化</strong><br />
+   在正方体的一个面上，半正多面体的顶点和棱形成正八边形。设半正多面体的棱长为 $x$，正方体棱长为 $1$。<br />
+   如图，延长线段 $BC$ 与 $FE$ 交于 $G$，延长 $BC$ 交正方体棱于点 $H$。由对称性知 $\triangle BGE$ 为等腰直角三角形，且 $AB=BE=x$，$BG=GE=CH$。</p>
+</li>
+<li>
+<p><strong>求关键线段长</strong><br />
+   在 $\triangle BGE$ 中，斜边 $BE=x$，直角边 $BG=GE=\frac{\sqrt{2}}{2}x$，故 $CH=\frac{\sqrt{2}}{2}x$。<br />
+   又正八边形的边长等于半正多面体的棱长，即 $HG=x$。</p>
+</li>
+<li>
+<p><strong>建立并解方程</strong><br />
+   正方体棱长由三部分组成：$CH+HG+CH=1$，即
+   $$\frac{\sqrt{2}}{2}x + x + \frac{\sqrt{2}}{2}x = 1$$
+   合并得 $(\sqrt{2}+1)x=1$，解得
+   $$x=\frac{1}{\sqrt{2}+1}=\sqrt{2}-1$$</p>
+</li>
+<li>
+<p><strong>答案</strong><br />
+   共 $26$ 个面，棱长为 $\sqrt{2}-1$。</p>
+</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题核心在于将看似复杂的半正多面体结构“降维”到正方体表面的平面图形，运用等腰直角三角形和线段和建立方程。这种“空间问题平面化”是高考立体几何与平面几何交汇的经典考法。</li>
+<li>变式训练：若将正方体棱长改为 $a$，该半正多面体棱长如何表示？（答案：$(\sqrt{2}-1)a$）若将半正多面体改为由正方形和正三角形围成的另一类半正多面体（如截角立方体），同样的方法是否适用？需关注对称性和截面正多边形的种类变化。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-16.html">2019-文-16</a>（2019 · 中） 该题考查半正多面体的面数计数与借助正方体对称性求棱长，体现空间想象与平面几何转化。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">平面几何</a></li>
+</ul>
+</div>
+</body>
+</html>

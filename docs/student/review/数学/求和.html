@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>求和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>求和</h1><div class="review-mark" data-stem="求和"></div><div class="meta-card"><span><strong>考点</strong>求和</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>等差数列核心公式：设首项为 $a_1$，公差为 $d$，则通项 $a_n = a_1 + (n-1)d$，前 $n$ 项和 $S_n = \frac{n(a_1 + a_n)}{2} = n a_1 + \frac{n(n-1)}{2}d$。</li>
+<li>等比数列核心公式：设首项为 $b_1$，公比为 $q$，则通项 $b_n = b_1 q^{n-1}$，前 $n$ 项和 $T_n = \begin{cases} n b_1, &amp; q=1 \ \frac{b_1(1-q^n)}{1-q}, &amp; q \neq 1 \end{cases}$。</li>
+<li>基本量思想：等差、等比数列的五个基本量 $(a_1, d, n, a_n, S_n)$ 或 $(b_1, q, n, b_n, T_n)$ 中，知三可求二。两个数列混合时，通过设出各自的公差 $d$ 与公比 $q$，将条件统一为关于 $d, q$ 的方程是通用突破口。</li>
+<li>方程联立时，注意限制条件：$d \in \mathbb{R}$，$q$ 通常 $q \neq 0$，题目若无特殊说明 $q$ 可取正也可取负，解出后均需回代验证合理性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设基本量</strong>：等差数列设公差 $d$，等比数列设公比 $q$，并写出相关项或和的表达式（如 $a_2 = a_1 + d$，$b_2 = b_1 q$，$S_3 = 3a_1 + 3d$，$T_3 = b_1 + b_1 q + b_1 q^2$ 等）。</li>
+<li><strong>翻译条件</strong>：将题干中的等式条件用 $a_1, b_1, d, q$ 表示，得到关于 $d$ 和 $q$ 的方程（组）。</li>
+<li><strong>解方程</strong>：求解方程组，得出 $d$ 和 $q$ 的所有可能取值。注意二次方程可能产生多解，必须全部保留并分别讨论。</li>
+<li><strong>代入求目标</strong>：根据所求问题（通项、前 $n$ 项和等），将解出的 $d$ 和 $q$ 分别代入公式进行计算。</li>
+<li><strong>分类表述</strong>：当出现多解时，最终答案应分段或用“或”明确写出所有可能结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>公式混淆：等差数列 $S_n$ 公式中 $n(n-1)/2$ 容易与 $n(n+1)/2$ 混淆；等比数列 $T_n$ 忘记讨论 $q=1$ 的情况（本题虽未涉及，但潜意识要警觉）。</li>
+<li>符号计算失误：首项为负数（如 $a_1 = -1$）时，代入 $S_n = n a_1 + \cdots$ 容易算错正负号。</li>
+<li>漏解：由 $T_3 = 21$ 得 $1+q+q^2=21$，是一元二次方程，解得 $q=4$ 或 $q=-5$，两个解都对应不同的 $d$ 和 $S_3$，漏掉一个会导致失分。</li>
+<li>直接套用求和公式而不代入具体项：例题中求 $S_3$ 时直接用 $3a_1 + 3d$ 比死记求和公式更快且不易错，应根据项数选择简化的表达式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知等差数列 ${a_n}$ 前 $n$ 项和为 $S_n$，等比数列 ${b_n}$ 前 $n$ 项和为 $T_n$，$a_1=-1$，$b_1=1$，$a_2+b_2=2$.<br />
+（1）若 $a_3+b_3=5$，求 ${b_n}$ 的通项公式；<br />
+（2）若 $T_3=21$，求 $S_3$.</p>
+<p><strong>思路</strong>：<br />
+设等差数列公差为 $d$，等比数列公比为 $q$。利用 $a_2, b_2, a_3, b_3$ 的表达式将两个条件转化为关于 $d, q$ 的方程组，解出 $d, q$ 后，第（1）问直接写出 $b_n$；第（2）问由 $T_3$ 先解 $q$，再结合 $a_2+b_2=2$ 定 $d$，最后代入 $S_3$ 公式。</p>
+<p><strong>步骤</strong>：<br />
+（1）由 $a_1=-1$，$b_1=1$ 得<br />
+$a_2 = -1 + d,\ b_2 = q$，则 $(-1+d) + q = 2 \Rightarrow d + q = 3$.<br />
+$a_3 = -1 + 2d,\ b_3 = q^2$，又 $(-1+2d) + q^2 = 5 \Rightarrow 2d + q^2 = 6$.<br />
+联立得 $\begin{cases} d+q=3 \ 2d+q^2=6 \end{cases}$，代入 $d=3-q$ 得 $2(3-q)+q^2=6 \Rightarrow q^2-2q=0 \Rightarrow q(q-2)=0$.<br />
+当 $q=0$ 时 ${b_n}$ 非等比（舍去）；当 $q=2$ 时 $d=1$，故 $b_n = 1 \cdot 2^{n-1} = 2^{n-1}$，即为 ${b_n}$ 的通项公式。</p>
+<p>（2）$T_3 = b_1 + b_2 + b_3 = 1 + q + q^2 = 21 \Rightarrow q^2 + q - 20 = 0$，解得 $q=4$ 或 $q=-5$.<br />
+由 $a_2+b_2=2$ 有 $-1+d+q=2 \Rightarrow d = 3 - q$.<br />
+若 $q=4$，则 $d=-1$，$S_3 = 3a_1 + 3d = -3 -3 = -6$；<br />
+若 $q=-5$，则 $d=8$，$S_3 = -3 + 24 = 21$.<br />
+所以 $S_3 = -6$ 或 $21$.</p>
+<p><strong>点评/变式</strong>：<br />
+本题是等差、等比数列基本量运算的典型题，通过“设基本量→列方程→解多解→回代求和”的流程，训练方程思想与分类讨论能力。变式可改为给定 $S_3$ 反求 $T_3$，或引入 $a_n$ 与 $b_n$ 的等量关系，核心仍是消元解基本量。注意等比数列中公比 $q$ 不能为 $0$，多解必须逐一验证。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-17.html">2017-文-17</a>（2017 · 中） 本题考查等差数列与等比数列的通项公式及求和公式，通过条件列方程求解参数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">求和</a></li>
+</ul>
+</div>
+</body>
+</html>

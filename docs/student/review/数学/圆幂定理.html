@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆幂定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆幂定理</h1><div class="review-mark" data-stem="圆幂定理"></div><div class="meta-card"><span><strong>考点</strong>圆幂定理</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆幂定理</strong>：过平面上一个定点 $P$ 作任意一条直线与定圆 $O$（半径为 $R$）交于两点 $A,B$，则 $PA \cdot PB$ 为定值，称为点 $P$ 对圆 $O$ 的幂。其值为 $|PO^2 - R^2|$。</li>
+<li><strong>相交弦定理</strong>（点在圆内）：弦 $AB$ 与 $CD$ 交于 $P$，则 $PA \cdot PB = PC \cdot PD$。</li>
+<li><strong>割线定理</strong>（点在圆外）：两条割线 $PAB$ 与 $PCD$ 分别交圆于 $A,B$ 和 $C,D$，则 $PA \cdot PB = PC \cdot PD$。</li>
+<li><strong>切割线定理</strong>（点在圆外，含切线）：$PA$ 切圆于 $A$，$PBC$ 为割线，则 $PA^2 = PB \cdot PC$。</li>
+<li><strong>切线长定理</strong>（属于切割线特例）：从圆外一点引圆的两条切线，切线长相等。</li>
+<li><strong>关键适用条件</strong>：点与圆的位置关系；必须明确交点顺序（从定点出发依次为近点、远点）；在比例中项问题中优先考虑切割线定理。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别模型</strong>：题目中出现圆外/圆内定点、切线、割线、弦，联系到圆幂定理。</li>
+<li><strong>确定点对圆的幂</strong>：找出定点 $P$，以及过 $P$ 的直线与圆的交点。</li>
+<li><strong>列等量关系</strong>：</li>
+<li>若为相交弦：$PA \cdot PB = PC \cdot PD$。</li>
+<li>若为割线：$PA \cdot PB = PC \cdot PD$（注意 $A,B$ 和 $C,D$ 均含远近点）。</li>
+<li>若出现切线：$PT^2 = PA \cdot PB$，其中 $T$ 为切点。</li>
+<li><strong>结合代数运算</strong>：设未知线段长度为 $x$，利用乘积相等列方程；常与相似三角形（如 $\triangle PAT \sim \triangle PTB$）联用，但可直接用幂的乘积式避开证明相似。</li>
+<li><strong>求线段长度或比值</strong>：代入已知长度，解方程或直接得出比例。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>交点顺序混淆</strong>：割线定理中，$PA \cdot PB$ 是从定点 $P$ 出发到两个交点的线段长之积，不可用 $AB$ 或部分线段代替。如 $PAB$ 是割线，则乘的是 $PA$ 与 $PB$（$A$ 近 $P$，$B$ 远 $P$），而非 $PA$ 与 $AB$。</li>
+<li><strong>切割线定理误用为乘积相等</strong>：切线长平方等于割线段乘积，切勿写成 $PA = PB \cdot PC$ 或漏掉平方。</li>
+<li><strong>点在圆内/外混淆</strong>：相交弦定理用于点在圆内，割线/切割线定理用于点在圆外，条件不同不可乱用。</li>
+<li><strong>忽略切线长亦可视为幂</strong>：切线长是点对圆的幂的算术平方根，可用于求点到圆心的距离等。</li>
+<li><strong>只记二级结论而忘本</strong>：所有圆幂定理本质是相似三角形（圆周角定理配合公共角），遇到复杂图形时若无法直接套公式，需回归相似推导。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014 新课标全国Ⅱ卷文 22）：如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交于 $B,C$，已知 $PA=6$，$PB=4$，求 $BC$ 的长。</p>
+<p><strong>思路</strong><br />
+由切割线定理直接建立切线长与割线段的等量关系，先求出 $PC$，再减去 $PB$ 得 $BC$。</p>
+<p><strong>步骤</strong><br />
+根据切割线定理：<br />
+$$PA^2 = PB \cdot PC$$<br />
+代入 $PA=6$，$PB=4$，得：<br />
+$$36 = 4 \cdot PC \Rightarrow PC = 9$$<br />
+又因为 $PB + BC = PC$，所以<br />
+$$BC = PC - PB = 9 - 4 = 5$$</p>
+<p><strong>点评/变式</strong><br />
+该题直接应用切割线定理，属于基础分值必须拿到。注意顺序：勿将 $PB \cdot PC$ 写成 $PB \cdot BC$。<br />
+变式：若给出 $BC=5$，$PB=4$，求切线长，则 $PA=\sqrt{4\times 9}=6$。也可延伸为证明 $\triangle PAB \sim \triangle PCA$，进而得 $PA^2=PB\cdot PC$（即切割线定理的证明思路）。在综合题中，常需先用圆幂定理求出一段长度，再结合勾股定理或面积公式完成最终计算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-22.html">2014-文-22</a>（2014 · 中） 根据切线及割线关系求线段长度或角度，考查切割线定理的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1176-与圆有关的比例线段.html">圆幂定理</a></li>
+</ul>
+</div>
+</body>
+</html>

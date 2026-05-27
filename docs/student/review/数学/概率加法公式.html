@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>概率加法公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>概率加法公式</h1><div class="review-mark" data-stem="概率加法公式"></div><div class="meta-card"><span><strong>考点</strong>概率加法公式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>概率的加法公式</strong>（互斥事件）<br />
+  若事件 $A$ 与 $B$ 互斥（$A \cap B = \varnothing$），则<br />
+  $$P(A \cup B) = P(A) + P(B)$$<br />
+  推广：若 $A_1,A_2,\dots,A_n$ 两两互斥，则<br />
+  $$P\left(\bigcup_{i=1}^n A_i\right) = \sum_{i=1}^n P(A_i)$$</li>
+<li><strong>一般加法公式</strong>（任意事件）<br />
+  $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$<br />
+  当 $A,B$ 互斥时 $P(A \cap B)=0$，退化为互斥加法公式。</li>
+<li><strong>相互独立事件与乘法公式</strong><br />
+  若 $A$ 与 $B$ 相互独立，则 $P(A \cap B) = P(A)P(B)$。<br />
+  多个事件相互独立时，积事件的概率等于各概率之积。这是拆分复杂事件为“先独立相乘，再互斥相加”的基础。</li>
+<li><strong>复杂事件分解</strong><br />
+  利用互斥事件的和事件与独立事件的积事件，将所求事件表示为若干互斥的基本积事件之并，分别用乘法公式算概率，再用加法公式求和。常见于“译码正确”等需分类计数的场景。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确试验结构与参数</strong>：标出单次发送/接收正确的概率及错误概率，弄清信号传输是否独立。  </li>
+<li><strong>翻译事件</strong>：将自然语言描述的“译码正确”“依次收到…”等转换为事件的交（积）与并（和）。  </li>
+<li><strong>拆分为互斥积事件</strong>：对“译码为某值”等事件，按不同路径（如出现2个1和1个0的三种排列）拆分为若干两两互斥的积事件。  </li>
+<li><strong>计算每个积事件的概率</strong>：利用独立性，将积事件概率写成各次发送接收概率的乘积。  </li>
+<li><strong>用加法公式求和</strong>：将各互斥积事件的概率直接相加，得到最终概率。  </li>
+<li><strong>比较概率大小</strong>：若需比较两种方案概率，分别求出概率后作差（或作商）并利用参数范围判断正负。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视互斥与独立的区别</strong>：乘法用于独立事件的积，加法用于互斥事件的并，不可混淆。  </li>
+<li><strong>重复计数或漏算</strong>：拆分事件时易漏掉某些排列（如三次传输中收到1,1,0、1,0,1、0,1,1三种情形），或未验证事件间是否互斥导致重复。  </li>
+<li><strong>误用加法公式</strong>：非互斥事件直接相加导致概率大于1，必须使用一般加法公式或转化为互斥事件之和。  </li>
+<li><strong>独立性误判</strong>：题设“传输相互独立”意味着多次发送、接收结果彼此独立，但同一信号的单次正确与错误概率不是独立的（它们是互斥的）。  </li>
+<li><strong>审题不清</strong>：将“发送1，译码为1”混淆为“发送1，收到1”；或因混淆 $\alpha,\beta$ 的位置而导致乘错概率。</li>
+<li><strong>比较概率时忘记范围</strong>：选项D中利用 $\alpha&lt;0.5$ 作差后需结合 $\alpha$ 范围判断符号，忽视范围会得错误结论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023·新课标Ⅱ·12）</h3>
+<p>信道传输0,1信号，发送0时收到1的概率为 $\alpha\ (0&lt;\alpha&lt;1)$，收到0的概率为 $1-\alpha$；发送1时收到0的概率为 $\beta\ (0&lt;\beta&lt;1)$，收到1的概率为 $1-\beta$。传输相互独立。单次传输：发送一次直接译码；三次传输：重复发送3次，按收到次数多的译码（如收到1,0,1则译码为1）。判断四个选项正误。</p>
+<p><strong>思路</strong>：将各选项描述的事件拆分为一系列“发送某信号、收到某信号”的独立事件的积，再用加法公式求概率。对比较概率的选项，先分别求概率表达式，再作差判断。</p>
+<p><strong>步骤</strong><br />
+- <strong>选项A</strong>：依次发送1,0,1，依次收到1,0,1，即三个独立的事件：发1收1（概率 $1-\beta$）、发0收0（概率 $1-\alpha$）、发1收1（概率 $1-\beta$）同时发生。概率 $(1-\beta)(1-\alpha)(1-\beta)=(1-\alpha)(1-\beta)^2$，A正确。<br />
+- <strong>选项B</strong>：三次传输，发送1（相当于发三次1），依次收到1,0,1。事件为：第一次发1收1、第二次发1收0、第三次发1收1，概率 $(1-\beta)\cdot\beta\cdot(1-\beta)=\beta(1-\beta)^2$，B正确。<br />
+- <strong>选项C</strong>：发送1，译码为1。接收3次中出现1的次数≥2。分为互斥的两类：
+  1. 3个1：概率 $(1-\beta)^3$；<br />
+  2. 恰有2个1，1个0：有三种排列（1,1,0)、(1,0,1)、(0,1,1)，每种概率 $(1-\beta)^2\beta$，共 $3\beta(1-\beta)^2$。<br />
+  总概率 $= 3\beta(1-\beta)^2 + (1-\beta)^3$。选项C给出 $\beta(1-\beta)^2 + (1-\beta)^3$，缺少系数3，故错。<br />
+- <strong>选项D</strong>：$0&lt;\alpha&lt;0.5$，发送0，比较三次传输译码为0的概率与单次传输译码为0的概率。<br />
+  单次传输译码为0即发0收0，概率 $P_{\text{单}} = 1-\alpha$。<br />
+  三次传输译码为0：类似于C，将 $\beta$ 换成 $\alpha$，成功收0的情形是收到0的次数≥2。概率 $P_{\text{三}} = C_3^2 \alpha (1-\alpha)^2 + (1-\alpha)^3 = 3\alpha(1-\alpha)^2 + (1-\alpha)^3$。<br />
+  作差：$P_{\text{三}} - P_{\text{单}} = (1-\alpha)^3+3\alpha(1-\alpha)^2 - (1-\alpha) = (1-\alpha)\left[(1-\alpha)^2+3\alpha(1-\alpha)-1\right]$<br />
+  $= (1-\alpha)\left[1-2\alpha+\alpha^2+3\alpha-3\alpha^2-1\right] = (1-\alpha)(\alpha - 2\alpha^2) = \alpha(1-\alpha)(1-2\alpha)$。<br />
+  由于 $0&lt;\alpha&lt;0.5$，有 $\alpha&gt;0$，$1-\alpha&gt;0$，$1-2\alpha&gt;0$，故差 $&gt;0$，三次传输概率更大，D正确。</p>
+<p><strong>点评/变式</strong><br />
+- 本题考查核心为互斥事件加法公式与独立事件乘法公式的综合应用。C选项是典型易错点，遗漏“2个1，1个0”的三种排列，根源在于忘记三类情况互斥且概率相等。<br />
+- 变式训练：改变译码规则，如“按第三次收到的信号译码”或“三中取二多数，若2条相同则按该信号，否则重传”，计算正确概率并与原方案比较，进一步巩固分类与求和。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-12.html">2023-新课标Ⅱ-12</a>（2023 · 中） 考查相互独立事件与互斥事件的概率计算，以及传输方案译码正确率的比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/947-概率加法公式.html">概率加法公式</a></li>
+</ul>
+</div>
+</body>
+</html>

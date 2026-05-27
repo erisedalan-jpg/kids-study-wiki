@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>解不等式组</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>解不等式组</h1><div class="review-mark" data-stem="解不等式组"></div><div class="meta-card"><span><strong>考点</strong>解不等式组</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>一元一次不等式组</strong>：由若干个含有相同未知数的一元一次不等式组成的不等式组，其解集为各个不等式解集的公共部分（交集）。</li>
+<li><strong>解不等式组的基本步骤</strong>：①分别求出组内每一个不等式的解集；②在数轴上表示各解集；③找出所有解集的公共部分，写成区间或集合形式。</li>
+<li><strong>复数 $z=a+bi$ 对应复平面内的点 $(a,b)$ 的象限判定</strong>：</li>
+<li>第一象限：$a&gt;0$ 且 $b&gt;0$；</li>
+<li>第二象限：$a&lt;0$ 且 $b&gt;0$；</li>
+<li>第三象限：$a&lt;0$ 且 $b&lt;0$；</li>
+<li>第四象限：$a&gt;0$ 且 $b&lt;0$。</li>
+<li><strong>参数取值范围问题</strong>：将已知几何条件转化为关于参数的不等式（组），再解不等式（组）即得参数范围。此处需要准确使用象限对实部与虚部的符号要求。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>翻译几何条件</strong>：将题目中“复数对应点在某象限”等几何语言，翻译为关于实部与虚部正负的不等式（组）。  </li>
+<li>点在第四象限 $\Rightarrow$ 实部 $&gt;0$，虚部 $&lt;0$。</li>
+<li><strong>列出不等式组</strong>：依据上一步写出含有参数的不等式组，注意分清每个不等式是大于 0 还是小于 0。</li>
+<li><strong>解不等式组</strong>：分别解出每个一元一次不等式，再求交集，得到参数的范围。</li>
+<li><strong>写出结果</strong>：将求得的范围用区间、集合或不等式形式表示，对照选项选答。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>象限符号记反</strong>：第四象限记为“实部负、虚部正”会导致列出错误不等式（应为实部正、虚部负）。建议复述一遍坐标系各象限的坐标符号特征。</li>
+<li><strong>解不等式时忘记变号</strong>：当未知数系数为负时，两边同除以负数未将不等号反向，导致解集错误。</li>
+<li><strong>交集求法出错</strong>：例如由 $m+3&gt;0$ 得 $m&gt;-3$，由 $m-1&lt;0$ 得 $m&lt;1$，部分同学误取并集或错写成 $m&gt;-3$ 或 $m&lt;1$ 的分离形式，正确交集为 $-3&lt;m&lt;1$。</li>
+<li><strong>忽略实部、虚部表达式中的常数项</strong>：容易把 $m+3$ 与 $m-1$ 直接套用成 $m&gt;0$ 或 $m&lt;0$，忘记了常数偏移。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016·理·01）：已知 $z=(m+3)+(m-1)i$ 在复平面内对应的点在第四象限，则实数 $m$ 的取值范围是（ ）<br />
+A．$(-3,1)$　B．$(-1,3)$　C．$(1,+\infty)$　D．$(-\infty,-3)$  </p>
+<p><strong>思路</strong><br />
+利用复数对应点的象限决定实部和虚部的符号，第四象限要求实部 $&gt;0$ 且虚部 $&lt;0$，由此写出关于 $m$ 的两个不等式，组成不等式组并求解。  </p>
+<p><strong>步骤</strong><br />
+1. $z$ 对应的点为 $(m+3,\,m-1)$，该点位于第四象限，故有<br />
+   $$ \begin{cases} m+3 &gt; 0 \ m-1 &lt; 0 \end{cases} $$
+2. 解第一个不等式：$m+3&gt;0 \Rightarrow m&gt;-3$。<br />
+3. 解第二个不等式：$m-1&lt;0 \Rightarrow m&lt;1$。<br />
+4. 取交集：$m&gt;-3$ 且 $m&lt;1$ 得 $-3&lt;m&lt;1$，即 $m\in(-3,1)$。<br />
+5. 对应选项 A。  </p>
+<p><strong>点评/变式</strong><br />
+- 本题虽标为复数题，但核心得分点是解一元一次不等式组，复数只起背景作用。<br />
+- 若条件改为“第一象限”，则列 $\begin{cases} m+3&gt;0 \ m-1&gt;0 \end{cases}$，解集为 $(1,+\infty)$；若为“第二象限”，则解集为 $(-\infty,-3)$；若为“第三象限”，则无解，可体会参数几何意义的灵活转化。<br />
+- 复习时建议将此类“几何条件 $\to$ 不等式组”的题归入“不等式组应用”专题，强化列式和解集的准确性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-01.html">2016-理-01</a>（2016 · 易） 已知复数代数形式，根据其在复平面内对应点所在象限求参数取值范围，涉及象限符号和解不等式组。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1109-解不等式组.html">解不等式组</a></li>
+</ul>
+</div>
+</body>
+</html>

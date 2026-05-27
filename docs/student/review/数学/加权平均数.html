@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>加权平均数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>加权平均数</h1><div class="review-mark" data-stem="加权平均数"></div><div class="meta-card"><span><strong>考点</strong>加权平均数</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：21</li>
+<li>真题数：3；年份跨度：2016–2019</li>
+<li>出现题位：填空13 填空14 解答18</li>
+<li>难度分布：易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>加权平均数定义</strong>：在 $n$ 个数据中，若 $x_1$ 出现 $f_1$ 次，$x_2$ 出现 $f_2$ 次，$\dots$，$x_k$ 出现 $f_k$ 次，且 $f_1+f_2+\cdots+f_k=n$，则称<br />
+  $$ \bar{x} = \frac{x_1 f_1 + x_2 f_2 + \cdots + x_k f_k}{n} $$<br />
+  为这组数据的加权平均数，其中 $f_i$ 称为权（频数），也可用频率 $p_i=\dfrac{f_i}{n}$ 表示成 $\bar{x} = \sum_{i=1}^k x_i p_i$。</li>
+<li><strong>适用条件</strong>：数据以分组或分布的形式给出，各组数值 $x_i$ 及其频数 $f_i$（或频率 $p_i$）已知，需要求总体平均水平的估计值。概率统计问题中的“平均…”通常都是加权平均。</li>
+<li><strong>概率估计中的加权平均数</strong>：  </li>
+<li>用频率估计概率时，总体平均数的估计值 = 各组代表值与其频率乘积之和。  </li>
+<li>若变量 $X$ 取值 $x_i$，对应的频数为 $n_i$，总次数 $N=\sum n_i$，则 $X$ 的平均值估计为 $\dfrac{1}{N}\sum x_i n_i$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别权数和变量值</strong>：从题干表格或文字中明确变量的各个取值 $x_i$，以及每个取值对应的频数 $f_i$（或频率）。有时权数隐含在“车次数”“人数”等词汇中。  </li>
+<li><strong>计算总频数</strong>：求 $\sum f_i = n$，确认分母。  </li>
+<li><strong>计算加权和</strong>：求 $\sum (x_i \cdot f_i)$，注意数值与权数的一一对应，防止错位。  </li>
+<li><strong>求平均值估计值</strong>：代入公式 $\bar{x}=\dfrac{\sum x_i f_i}{n}$，化简得结果。若题目要求估计值，通常保留合适的小数或分数。  </li>
+<li><strong>检验合理性</strong>：检查结果是否落在各组数据的最小值与最大值之间，避免严重失准。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆简单平均与加权平均</strong>：直接对所有 $x_i$ 求算术平均 $\dfrac{x_1+\cdots+x_k}{k}$，忽略各数据出现次数不同。高铁正点率若直接算 $(0.97+0.98+0.99)/3=0.98$ 虽本题碰巧相等，但权数不等时必错。  </li>
+<li><strong>权数对应错位</strong>：将频数 $f_i$ 与错误的 $x_i$ 相乘，尤其在表格横向纵向读取时易串行。  </li>
+<li><strong>忽视分母</strong>：只算加权和而忘记除以总频数，或将总频数算错。  </li>
+<li><strong>估算值误作精确值</strong>：题目中“估计值”是基于样本的统计量，不可当作理论概率值，表述时保留与原始数据一致的有效数字或分数形式。  </li>
+<li><strong>单位遗忘与错用</strong>：如保费题中平均保费带有 $a$，必须保留单位，不能只写数字。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2019 文/理）</h3>
+<p>经停某站的高铁列车中，10个车次正点率0.97，20个车次正点率0.98，10个车次正点率0.99，求所有车次平均正点率的估计值。</p>
+<p><strong>思路</strong><br />
+直接应用加权平均数公式，以正点率为变量 $x_i$，车次数为权 $f_i$，计算加权和除以总车次。</p>
+<p><strong>步骤</strong><br />
+1. 列出数据：<br />
+   | 正点率 $x_i$ | 车次数 $f_i$ |<br />
+   |---|---|<br />
+   | 0.97 | 10 |<br />
+   | 0.98 | 20 |<br />
+   | 0.99 | 10 |<br />
+2. 总车次 $N=10+20+10=40$。<br />
+3. 加权和：$0.97\times10+0.98\times20+0.99\times10 = 9.7+19.6+9.9=39.2$。<br />
+4. 平均正点率估计值 $\bar{x}=\dfrac{39.2}{40}=0.98$。</p>
+<p><strong>点评/变式</strong><br />
+本题权数不同，但碰巧与简单平均结果一致，极易让人忽略加权概念。变式：若车次变为10、30、10，则加权平均为0.98，简单平均仍0.98？再变：正点率取值不对称时加权结果明显偏离简单平均，务必按权计算。<br />
+此外，“估计值”三个字提醒结果来源于统计样本，而非理论全量。</p>
+<hr />
+<h3><strong>题目</strong>（2016 文 18）</h3>
+<p>某险种基本保费为 $a$ 元，保费与上年度出险次数的关系及200名续保人出险次数频数分布如表。<br />
+（Ⅰ）求保费不高于基本保费的概率估计值 $P(A)$；<br />
+（Ⅱ）求保费高于基本保费但不高于基本保费 $160\%$ 的概率估计值 $P(B)$；<br />
+（Ⅲ）求续保人本年度平均保费估计值。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）（Ⅱ）用频率估计概率，计数后除以200。（Ⅲ）用出险次数对应的保费 $x_i$ 乘以频数，加权平均得平均保费。</p>
+<p><strong>步骤</strong><br />
+1. 从条件翻译保费取值与频数：<br />
+   | 出险次数 | 保费 $(x_i)$ | 频数 $(f_i)$ |<br />
+   |---|---|---|<br />
+   | 0 | $0.85a$ | 60 |<br />
+   | 1 | $a$ | 50 |<br />
+   | 2 | $1.25a$ | 30 |<br />
+   | 3 | $1.5a$ | 30 |<br />
+   | 4 | $1.75a$ | 20 |<br />
+   | $\geq5$ | $2a$ | 10 |<br />
+   总人数 $N=200$。<br />
+2. （Ⅰ）保费不高于基本保费即 $x_i \leq a$，对应出险0和1次，人数 $60+50=110$，$P(A)=\dfrac{110}{200}=0.55$。<br />
+3. （Ⅱ）保费高于基本保费但不高于基本保费的 $160\%$ 即 $a &lt; x_i \leq 1.6a$，对应 $1.25a$ 和 $1.5a$，人数 $30+30=60$，$P(B)=\dfrac{60}{200}=0.3$。<br />
+4. （Ⅲ）平均保费估计值 $= \dfrac{1}{200}(0.85a\times60 + a\times50 + 1.25a\times30 + 1.5a\times30 + 1.75a\times20 + 2a\times10)$<br />
+   $= \dfrac{a}{200}(51+50+37.5+45+35+20) = \dfrac{238.5a}{200}=1.1925a$。</p>
+<p><strong>点评/变式</strong><br />
+在加权平均数计算中，当某些组是区间（如“$\geq5$”）时，用组中值或代表值代替（本题明确给出保费值）。第（Ⅲ）问本质上就是计算离散统计数据的加权均值，可从保费=基本保费×系数角度，直接对系数求加权平均再乘以$a$：<br />
+系数：0.85,1,1.25,1.5,1.75,2，频数同前，系数平均 $=\frac{238.5}{200}=1.1925$，再乘 $a$。<br />
+注意：单位 $a$ 必须保留在答案中，缺失会失分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-14.html">2019-文-14</a>（2019 · 易） 已知高铁列车各正点率及对应车次数，求所有车次平均正点率的估计值（加权平均数）。</li>
+<li><a href="../../exam/数学/2019-理-13.html">2019-理-13</a>（2019 · 易） 高铁某站各正点率及对应车次统计，求所有车次平均正点率的估计值（加权平均数）。</li>
+<li><a href="../../exam/数学/2016-文-18.html">2016-文-18</a>（2016 · 易） 根据出险频数表估计保费概率及加权平均保费</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/055-平均数.html">加权平均数</a></li>
+</ul>
+</div>
+</body>
+</html>

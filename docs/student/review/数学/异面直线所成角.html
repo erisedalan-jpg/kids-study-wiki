@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>异面直线所成角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>异面直线所成角</h1><div class="review-mark" data-stem="异面直线所成角"></div><div class="meta-card"><span><strong>考点</strong>异面直线所成角</span><span><strong>权重</strong>78</span><span><strong>真题数</strong>9</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：78</li>
+<li>真题数：9；年份跨度：2008–2021</li>
+<li>出现题位：选择5 选择9 选择10 选择11</li>
+<li>难度分布：中9</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>异面直线所成的角</strong>：过空间任意一点，分别作两条异面直线的平行线，这两条相交直线所成的锐角或直角，即为异面直线所成的角。范围是 $(0,\frac{\pi}{2}]$。</li>
+<li><strong>核心方法</strong>：</li>
+<li><strong>平移法</strong>：利用中位线、平行四边形等，将其中一条或两条直线平移到同一平面内，构成相交直线，再解三角形求角。</li>
+<li><strong>向量法</strong>：建立空间直角坐标系，求出两条异面直线的方向向量 $\vec{a},\vec{b}$，利用 $\cos\theta = |\cos\langle\vec{a},\vec{b}\rangle| = \frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}$ 求解，注意 $\theta\in(0,\frac{\pi}{2}]$，故余弦值必须取绝对值。</li>
+<li><strong>适用条件</strong>：求角问题多以正方体、长方体、正棱柱、正棱锥为背景。平移法在图形规则时快捷；向量法在垂直关系明显、易于建系时通用性强。</li>
+<li><strong>必备公式</strong>：余弦定理 $c^2=a^2+b^2-2ab\cos C$，向量坐标运算，线段长度公式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>平移构造三角形法</strong>  </li>
+<li>观察图形，利用已知平行关系（如正方形对边、中位线、平行六面体棱）平移一条直线，使其与另一条直线相交。  </li>
+<li>连线构造出包含该相交角的三角形（常为直角三角形或一般三角形）。  </li>
+<li>利用勾股定理、三角函数定义或余弦定理，直接求出角或角的三角函数值。  </li>
+<li>
+<p>若求出的角为钝角，取其余角作为异面直线所成角；若用余弦定理得出负值，取其绝对值对应的锐角。</p>
+</li>
+<li>
+<p><strong>空间向量坐标法</strong>  </p>
+</li>
+<li>找到三条两两垂直的棱，以交点为原点建立空间直角坐标系。  </li>
+<li>写出直线上各点坐标，求得两异面直线的方向向量。  </li>
+<li>用向量夹角余弦公式计算 $\cos\langle\vec{a},\vec{b}\rangle =\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$，再取绝对值，即 $\cos\theta = |\cos\langle\vec{a},\vec{b}\rangle|$。  </li>
+<li>
+<p>若题目要求正切值等，先由余弦求正弦 $\sin\theta=\sqrt{1-\cos^2\theta}$，再求 $\tan\theta=\frac{\sin\theta}{\cos\theta}$。</p>
+</li>
+<li>
+<p><strong>补形技巧</strong><br />
+   将原几何体补成更规则的几何体（如直三棱柱补成直四棱柱），使异面直线变为可平移相交的直线，简化平移过程。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>角度范围混乱</strong>：异面直线所成角的范围是 $(0,\frac{\pi}{2}]$，但平移后两相交直线所成角可能是锐角或钝角。若算出钝角，必须取其补角；使用余弦定理时，若 $\cos$ 为负，应取其绝对值对应的锐角。  </li>
+<li><strong>向量法忘记取绝对值</strong>：直接用 $\cos\langle\vec{a},\vec{b}\rangle$ 而未加绝对值，当两向量夹角为钝角时导致错误。  </li>
+<li><strong>建系坐标求错</strong>：正方体、长方体棱长赋值不一致；中点、端点坐标计算失误；忽略不同坐标轴方向导致的符号错误。  </li>
+<li><strong>平移后三角形误判</strong>：构造的三角形不一定是直角三角形，盲目使用勾股定理；需先判断形状再选用解三角形方法。  </li>
+<li><strong>正切值求解遗漏分母有理化</strong>，或误将邻边比对边。  </li>
+<li><strong>忽略隐含垂直关系</strong>：如正方体对角线中线面垂直、线线垂直，导致无法简化计算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2021年全国卷文/理）</h3>
+<p>在正方体 $ABCD-A_1B_1C_1D_1$ 中，$P$ 为 $B_1D_1$ 的中点，求直线 $PB$ 与 $AD_1$ 所成的角。</p>
+<p><strong>思路</strong><br />
+$AD_1 \parallel BC_1$，将所求角转化为 $PB$ 与 $BC_1$ 的夹角，即 $\angle PBC_1$。连接 $PC_1$，证明 $PC_1 \perp PB$，从而在 $\text{Rt}\triangle PBC_1$ 中用正弦或边长比求角。</p>
+<p><strong>步骤</strong><br />
+1. 连接 $BC_1, PC_1, PB$，由 $AD_1\parallel BC_1$ 知 $\angle PBC_1$ 或其补角为所求。<br />
+2. 设正方体棱长为2，则 $BC_1=2\sqrt{2}$，$PC_1=\frac{1}{2}B_1D_1=\sqrt{2}$。<br />
+3. 由 $BB_1\perp$ 平面 $A_1B_1C_1D_1$ 知 $BB_1\perp PC_1$，又 $PC_1\perp B_1D_1$，故 $PC_1\perp$ 平面 $PBB_1$，从而 $PC_1\perp PB$。<br />
+4. 在 $\text{Rt}\triangle PBC_1$ 中，$\sin \angle PBC_1 = \frac{PC_1}{BC_1}=\frac{\sqrt{2}}{2\sqrt{2}}=\frac{1}{2}$，得 $\angle PBC_1=\frac{\pi}{6}$，即异面直线所成角为 $\frac{\pi}{6}$。</p>
+<p><strong>点评/变式</strong><br />
+平移是处理正方体中异面直线所成角的首选。关键在利用已知平行线将分散线段集中，再通过线面垂直证出直角三角形简化计算。若 $P$ 变为 $B_1D_1$ 上动点，角度变化亦可转化为函数最值问题。</p>
+<h3><strong>题目2</strong>（2018年全国卷文）</h3>
+<p>在正方体 $ABCD-A_1B_1C_1D_1$ 中，$E$ 为棱 $CC_1$ 的中点，求异面直线 $AE$ 与 $CD$ 所成角的正切值。</p>
+<p><strong>思路</strong><br />
+正方体棱垂直，易于建系。以 $D$ 为原点，$\overrightarrow{DA},\overrightarrow{DC},\overrightarrow{DD_1}$ 为 $x,y,z$ 轴正方向建立空间直角坐标系，写出 $A,E,D,C$ 的坐标，求方向向量 $\overrightarrow{AE}$ 与 $\overrightarrow{CD}$，利用向量夹角公式求余弦，再转化为正切。</p>
+<p><strong>步骤</strong><br />
+1. 设棱长为2，得 $A(2,0,0), E(0,2,1), C(0,2,0), D(0,0,0)$。<br />
+2. $\overrightarrow{AE}=(-2,2,1)$，$\overrightarrow{CD}=(0,-2,0)$。<br />
+3. $\cos\theta = \frac{|\overrightarrow{AE}\cdot\overrightarrow{CD}|}{|\overrightarrow{AE}||\overrightarrow{CD}|} = \frac{|0-4+0|}{\sqrt{(-2)^2+2^2+1^2}\cdot\sqrt{0^2+(-2)^2+0^2}} = \frac{4}{3\cdot 2} = \frac{2}{3}$。<br />
+4. $\sin\theta = \sqrt{1-\left(\frac{2}{3}\right)^2}=\frac{\sqrt{5}}{3}$，$\tan\theta = \frac{\sin\theta}{\cos\theta}=\frac{\sqrt{5}}{2}$。</p>
+<p><strong>点评/变式</strong><br />
+建系法对于规则几何体非常有效，无需繁琐的平移构造。注意异面直线所成角向量的余弦取绝对值。变式中若求 $AE$ 与 $D_1C_1$ 所成角，同样可用向量法，注意方向向量的选取。两种方法结合可确保准确率。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-10.html">2021-文-10</a>（2021 · 中） 在正方体中求解异面直线所成角的大小。</li>
+<li><a href="../../exam/数学/2021-理-05.html">2021-理-05</a>（2021 · 中） 本题考查在正方体中通过平移法求异面直线所成角，并利用线面垂直构造直角三角形求解正弦值。</li>
+<li><a href="../../exam/数学/2018-文-09.html">2018-文-09</a>（2018 · 中） 在正方体中建立空间直角坐标系，利用向量法求异面直线所成角的正切值</li>
+<li><a href="../../exam/数学/2018-理-09.html">2018-理-09</a>（2018 · 中） 长方体中以向量法求异面直线AD1与DB1所成角的余弦值。</li>
+<li><a href="../../exam/数学/2017-理-10.html">2017-理-10</a>（2017 · 中） 已知直三棱柱中求异面直线所成角的余弦值，通过几何法或补形法求解。</li>
+<li><a href="../../exam/数学/2014-理-11.html">2014-理-11</a>（2014 · 中） 直三棱柱中通过平移构造异面直线所成角，利用余弦定理求其余弦值。</li>
+<li><a href="../../exam/数学/2009-文-05.html">2009-文-05</a>（2009 · 中） 求正四棱柱中异面直线BE与CD1所成角的余弦值，通过平移直线构造三角形计算</li>
+<li><a href="../../exam/数学/2009-理-05.html">2009-理-05</a>（2009 · 中） 在正四棱柱中，通过平移直线构造异面直线所成角，并利用余弦定理求其余弦值。</li>
+<li><a href="../../exam/数学/2008-理-10.html">2008-理-10</a>（2008 · 中） 已知正四棱锥中侧棱长与底面边长相等，求异面直线所成角的余弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/353-空间角.html">异面直线所成角</a></li>
+</ul>
+</div>
+</body>
+</html>

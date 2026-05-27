@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数值符号</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数值符号</h1><div class="review-mark" data-stem="三角函数值符号"></div><div class="meta-card"><span><strong>考点</strong>三角函数值符号</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：2</li>
+<li>真题数：3；年份跨度：2013–2020</li>
+<li>出现题位：填空15 选择2 选择11</li>
+<li>难度分布：易1 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>象限符号规律</strong>：<br />
+   正弦（$\sin\alpha$）在一、二象限为正，三、四象限为负；<br />
+   余弦（$\cos\alpha$）在一、四象限为正，二、三象限为负；<br />
+   正切（$\tan\alpha$ = $\frac{\sin\alpha}{\cos\alpha}$）在一、三象限为正，二、四象限为负。<br />
+   倍角、半角的三函数符号需先确定其终边所在象限，不可直接套用原角的符号。</p>
+</li>
+<li>
+<p><strong>同角基本关系</strong>（$\alpha$ 为任意角，等式有意义）：<br />
+   $$\sin^2\alpha + \cos^2\alpha = 1, \quad \tan\alpha = \frac{\sin\alpha}{\cos\alpha}$$<br />
+   利用平方关系求值，开方时必须根据角所在象限确定正负号。</p>
+</li>
+<li>
+<p><strong>二倍角公式</strong>：<br />
+   $$\sin 2\alpha = 2\sin\alpha\cos\alpha$$<br />
+   $$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$$<br />
+   常通过选择适当形式消去常数或统一函数名（如化为二次齐次式）。</p>
+</li>
+<li>
+<p><strong>两角和与差公式（正切）</strong>：<br />
+   $$\tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}$$<br />
+   常考查 $\beta=\frac{\pi}{4}$ 时 $\tan\left(\alpha+\frac{\pi}{4}\right)=\frac{1+\tan\alpha}{1-\tan\alpha}$，可逆向求 $\tan\alpha$。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>象限倍角范围法</strong><br />
+   已知 $\alpha$ 所在象限（或范围），先写出 $\alpha$ 的区间，两边乘以相应倍数得到 $2\alpha$（或 $\frac{\alpha}{2}$）的范围，再根据终边位置确定对应三角函数值的符号。</p>
+</li>
+<li>
+<p><strong>特殊值检验法（秒杀选择题）</strong><br />
+   选取符合题设象限的简单特殊角（如第四象限可选 $-60^\circ$ 或 $300^\circ$），代入计算各选项的值，逐一排除，直到只剩唯一正确选项。</p>
+</li>
+<li>
+<p><strong>条件化简——齐次化与消常数</strong><br />
+   遇到 $\sin 2\alpha$、$\cos 2\alpha$ 与常数的混合等式，通常用 $\cos 2\alpha = 2\cos^2\alpha - 1$ 或 $1 - 2\sin^2\alpha$ 把常数吸收掉，得到关于 $\sin\alpha$ 与 $\cos\alpha$ 的齐次关系，进而求出 $\tan\alpha$ 或正余弦间的倍数关系。</p>
+</li>
+<li>
+<p><strong>知 $\tan$ 求组合值的“直角三角形法”</strong><br />
+   由 $\tan\theta = \frac{m}{n}$ 及象限，可设 $\vert\sin\theta\vert = \frac{\vert m\vert}{\sqrt{m^2+n^2}}$，$\vert\cos\theta\vert = \frac{\vert n\vert}{\sqrt{m^2+n^2}}$，再附上象限决定的符号，直接写出 $\sin\theta$、$\cos\theta$ 的值。</p>
+</li>
+<li>
+<p><strong>构造对偶式（和积互求）</strong><br />
+   若求 $\sin\theta + \cos\theta$，可先求 $(\sin\theta + \cos\theta)^2 = 1 + \sin 2\theta$，利用已知条件得出结果，再由象限定号。虽本次真题未直接出现，但属同类考点重要手段。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li>
+<p><strong>开方忘判号</strong><br />
+   $\sin^2\alpha = a$ 解得 $\sin\alpha = \pm\sqrt{a}$，必须结合 $\alpha$ 的象限或已知条件中的范围（如 $\alpha \in (0,\frac{\pi}{2})$）确定唯一符号。第二象限 $\cos\theta$ 必负，若忘记取负直接导致结果出错。</p>
+</li>
+<li>
+<p><strong>倍角范围误判</strong><br />
+   如 $\alpha$ 为第四象限角，$2\alpha$ 的终边可能落在第四或第三象限（$540^\circ \sim 720^\circ$ 等价于 $180^\circ \sim 360^\circ$），因此 $\cos 2\alpha$ 可正可负，不能贸然断定其符号，须细致推导或取特例检验。</p>
+</li>
+<li>
+<p><strong>和角公式符号混淆</strong><br />
+   $\tan(\alpha + \frac{\pi}{4}) = \frac{1+\tan\alpha}{1-\tan\alpha}$ 的分母是 $1 - \tan\alpha$，勿与 $\tan(\alpha - \frac{\pi}{4})$ 的分母 $1+\tan\alpha$ 混淆。移项计算时符号易颠倒。</p>
+</li>
+<li>
+<p><strong>“除式漏条件”导致丢解</strong><br />
+   在 $4\sin\alpha\cos\alpha = 2\cos^2\alpha$ 两边同除 $\cos\alpha$（或 $\cos^2\alpha$）时，必须确保 $\cos\alpha \neq 0$。虽然本例中角范围已保证不为零，但若在一般情形下直接约分可能失根，需分类讨论。</p>
+</li>
+<li>
+<p><strong>忽略隐含范围</strong><br />
+   题目若给出 $\alpha$ 在具体区间，如 $\alpha \in \left(0,\frac{\pi}{2}\right)$，则自动隐含所有三角函数在该区间内的符号信息（全正），解题时无需额外假设。</p>
+</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2020·理·02</h3>
+<p>若 $\alpha$ 为第四象限角，则 $\cos 2\alpha$ 与 $\sin 2\alpha$ 哪个恒为正或恒为负？<br />
+<strong>思路</strong><br />
+由 $\alpha$ 的四象限范围写出 $2\alpha$ 的范围，判断其终边所在的大致区域，从而确定 $\sin 2\alpha$ 和 $\cos 2\alpha$ 的符号；也可直接取两个第四象限的简单角检验选项。<br />
+<strong>步骤</strong><br />
+1. $\alpha$ 为第四象限角，设 $2k\pi + \frac{3\pi}{2} &lt; \alpha &lt; 2k\pi + 2\pi,\;k \in \mathbb{Z}$。<br />
+2. 则 $2\alpha$ 满足 $4k\pi + 3\pi &lt; 2\alpha &lt; 4k\pi + 4\pi$，即终边在 $3\pi \sim 4\pi$ 之间，相当于 $ \pi \sim 2\pi$（第三、四象限）。<br />
+3. 在第三、四象限，$\sin$ 值为负，故 $\sin 2\alpha &lt; 0$ 恒成立；$\cos 2\alpha$ 在第三象限负、第四象限正，无法唯一确定。<br />
+4. 检验：取 $\alpha = -60^\circ$，$2\alpha = -120^\circ$，$\sin(-120^\circ) &lt; 0$，$\cos(-120^\circ) = -\frac12 &lt; 0$；取 $\alpha = 300^\circ$，$2\alpha = 600^\circ$（即 $240^\circ$），$\sin 240^\circ &lt; 0$，$\cos 240^\circ = -\frac12 &lt; 0$。虽两例中 $\cos 2\alpha$ 均为负，但只要存在某 $\alpha$ 使 $\cos 2\alpha &gt; 0$ 便不能选“&lt;0”。实际存在 $\alpha = 315^\circ$ 时 $2\alpha = 630^\circ (270^\circ)$，$\cos 270^\circ = 0$；$\alpha=350^\circ$ 时 $2\alpha=700^\circ(340^\circ)$，$\cos 340^\circ &gt;0$。故 $\cos 2\alpha$ 符号不确定。因此唯一恒成立的选项为 D（$\sin 2\alpha &lt; 0$）。<br />
+<strong>点评/变式</strong><br />
+象限倍角的符号问题重在画图或写区间，切忌凭直觉断符号。变式：若 $\alpha$ 为第三象限角，判断 $\tan 2\alpha$ 的符号。（解：$\alpha \in (\pi, \frac{3\pi}{2})$，$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-02.html">2020-理-02</a>（2020 · 易） 已知α为第四象限角, 用二倍角公式判断 cos2α、sin2α 的正负。</li>
+<li><a href="../../exam/数学/2019-文-11.html">2019-文-11</a>（2019 · 中） 本题主要考查利用二倍角公式和同角基本关系求三角函数值，需结合角的范围判断符号。</li>
+<li><a href="../../exam/数学/2013-理-15.html">2013-理-15</a>（2013 · 中） 已知第二象限角的正切值，利用两角和正切公式及同角关系求正弦与余弦之和</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角函数值符号</a></li>
+</ul>
+</div>
+</body>
+</html>

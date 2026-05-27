@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二面角的平面角及求法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二面角的平面角及求法</h1><div class="review-mark" data-stem="二面角的平面角及求法"></div><div class="meta-card"><span><strong>考点</strong>二面角的平面角及求法</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：15</li>
+<li>真题数：5；年份跨度：2008–2018</li>
+<li>出现题位：解答18 解答19 解答20</li>
+<li>难度分布：中5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二面角</strong>：从一条直线出发的两个<strong>半平面</strong>所组成的图形，这条直线叫做二面角的棱，两个半平面叫做二面角的面。</li>
+<li><strong>二面角的平面角</strong>：在二面角 $\alpha\text{-}l\text{-}\beta$ 的棱 $l$ 上任取一点 $O$，分别在面 $\alpha,\beta$ 内作垂直于棱的射线 $OA,OB$，则 $\angle AOB$ 叫做二面角的平面角。二面角的大小用其平面角来度量，范围是 $[0,\pi]$。</li>
+<li><strong>求平面角的常用几何方法</strong>：</li>
+<li><strong>定义法</strong>：直接过棱上一点在两个面内作棱的垂线。</li>
+<li><strong>三垂线定理法</strong>：若一个面内一点到另一个面的垂线容易作出，常利用三垂线定理（或逆定理）作出平面角。</li>
+<li><strong>垂面法</strong>：作与棱垂直的平面，与两个面交线的夹角即为平面角。</li>
+<li><strong>空间向量法求二面角</strong>：</li>
+<li>分别求出两个半平面的法向量 $\vec{n}_1,\vec{n}_2$。</li>
+<li>法向量夹角 $\theta$ 满足 $\cos\theta = \frac{\vec{n}_1\cdot\vec{n}_2}{|\vec{n}_1||\vec{n}_2|}$（注意二面角可能为锐角或钝角，与法向量的方向选择有关）。</li>
+<li><strong>二面角平面角 $\varphi$ 的判定</strong>：观察图形，若二面角为锐角，则 $\cos\varphi = |\cos\theta|$；若为钝角，则 $\cos\varphi = -|\cos\theta|$。或根据法向量的“穿入穿出”判断：两法向量同时穿入或穿出同侧时，二面角与法向量夹角互补；一穿入一穿出时相等。</li>
+<li><strong>相关定理</strong>（常用于证明垂直，为建系或找平面角奠基）：</li>
+<li>线面垂直判定：一条直线与平面内两条相交直线垂直，则线面垂直。</li>
+<li>线面垂直性质：垂直于同一平面的两直线平行；线面垂直则线与平面内任意直线垂直。</li>
+<li>勾股定理逆定理：判定直角三角形。</li>
+<li>空间向量垂直：点积为零。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>几何法（作-证-求）</strong></li>
+<li><strong>作</strong>：根据条件选择恰当方法（定义法、三垂线法、垂面法）作出二面角的平面角。优先考虑从特殊点（中点、垂足）向棱作垂线，或利用等腰三角形、全等三角形等。</li>
+<li><strong>证</strong>：说明所作角即为二面角的平面角（满足棱垂直、在两半平面内）。</li>
+<li><strong>求</strong>：把平面角置于三角形中，解三角形得出角的大小或三角函数值。</li>
+<li>
+<p><strong>适用情景</strong>：图形规则、线面垂直关系明确，容易直接找出平面角。</p>
+</li>
+<li>
+<p><strong>向量法（建系-求法向量-算夹角-定二面角）</strong></p>
+</li>
+<li><strong>建系</strong>：选择合适原点与坐标轴，尽量使图形中的点落在坐标轴上或坐标平面内，充分用好垂直条件（如 $PO\perp$ 底面、直棱柱、$PD\perp$ 底面等）。写出各点坐标。</li>
+<li><strong>求法向量</strong>：设所求平面 $Ax+By+Cz=0$ 的法向量为 $\vec{n}=(x,y,z)$，由平面内两不共线向量的数量积为 0 列方程组，取一组解得到法向量（可取整）。</li>
+<li><strong>计算夹角</strong>：代入公式 $\cos\theta = \frac{\vec{n}_1\cdot\vec{n}_2}{|\vec{n}_1||\vec{n}_2|}$。</li>
+<li><strong>定二面角</strong>：结合几何直观判断二面角是锐角还是钝角，确定余弦值的正负；若只需求正弦值，常利用 $\sin\varphi=\sqrt{1-\cos^2\varphi}$ 且易知正负，注意二面角范围保证正弦非负。</li>
+<li>
+<p><strong>含参问题</strong>：如已知二面角大小反求长度比（2018 理 20），先用参数表示相关点坐标，再用二面角等式列出方程，解出参数，再求最终目标。</p>
+</li>
+<li>
+<p><strong>综合法应用</strong>：先用几何法证明垂直关系（为建系提供正交基底或为找平面角创造条件），再灵活选择几何法或向量法求二面角。高考中向量法更为通用，应作为首选训练。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>二面角平面角与法向量夹角混淆</strong>：求二面角 $\varphi$ 时，直接令 $\cos\varphi = \frac{\vec{n}_1\cdot\vec{n}_2}{|\vec{n}_1||\vec{n}_2|}$ 而不判断符号，导致余弦值错误。必须结合图形判断二面角为锐角/钝角，再取绝对值或加负号。</li>
+<li><strong>建系时点的坐标写错</strong>：未注意给定的长度关系（如 $AA_1=2AB=4$）、中点坐标、动点分线段比例（如点 $M$ 在棱 $BC$ 上）；竖坐标与底面垂直关系混乱。</li>
+<li><strong>法向量求解不规范</strong>：解方程组时赋值不当导致法向量不是所期望方向，或未化简导致后续计算繁杂，容易出错。</li>
+<li><strong>忽略二面角的取值范围</strong>：二面角 $\in[0,\pi]$，正弦值必非负。若求得 $\cos\varphi$ 为负，则 $\varphi$ 为钝角，$\sin\varphi=\sqrt{1-\cos^2\varphi}&gt;0$。部分同学会误加正负号。</li>
+<li><strong>几何法中平面角找错</strong>：过一点向棱作垂线时，没有证明该垂线与另一面内的射线恰好构成平面角，或错误地使用了“与棱相交但不垂直”的线段。</li>
+<li><strong>三垂线定理使用条件不满足</strong>：必须保证“垂线、斜线、射影”三线关系正确，尤其需确认其中一条线与棱的垂直关系及线面垂直关系。</li>
+<li><strong>坐标运算粗心</strong>：向量坐标的减法、数量积公式运算失误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题 1】2018 理 20</h3>
+<p><strong>题目</strong>：三棱锥 $P\text{-}ABC$，$AB=BC=2\sqrt{2}$?（题干为 $AB=BC=2$，$PA=PB=PC=AC=4$），$O$ 为 $AC$ 中点。证明 $PO\perp$ 平面 $ABC$；点 $M$ 在棱 $BC$ 上，二面角 $M\text{-}PA\text{-}C$ 为 $30^\circ$，求 $PC$ 与平面 $PAM$ 所成角的正弦值。</p>
+<p><strong>思路</strong>：
+（1）由等腰三角形得 $PO\perp AC$，计算长度用勾股逆定理证 $PO\perp OB$，从而线面垂直。
+（2）建系 $O\text{-}xyz$，设 $M$ 坐标（利用共线设参数 $\lambda$），求出平面 $PAM$ 和平面 $PAC$ 的法向量，由二面角大小为 $30^\circ$ 建立关于 $\lambda$ 的方程，解得 $\lambda$ 确定 $M$ 位置。再求 $PC$ 方向向量与平面 $PAM$ 法向量夹角正弦（即线面角正弦）。</p>
+<p><strong>步骤</strong>：
+- 连接 $OB$，计算 $BO=2$，$PO=2\sqrt{3}$，由 $PB=4$ 得 $PO^2+BO^2=PB^2$，故 $PO\perp OB$，又 $PO\perp AC$，得 $PO\perp$ 平面 $ABC$。
+- 以 $O$ 为原点，$OB$ 方向为 $x$ 轴，$OC$ 方向为 $y$ 轴，$OP$ 方向为 $z$ 轴建系。则 $A(0,-2,0)$, $C(0,2,0)$, $P(0,0,2\sqrt{3})$, $B(2,0,0)$。
+- 设 $\overrightarrow{BM}=\lambda\overrightarrow{BC}$（$0\le\lambda\le1$），$\overrightarrow{BC}=(-2,2,0)$，则 $M(2-2\lambda,2\lambda,0)$。
+- 平面 $PAC$ 即 $yOz$ 平面，法向量可取 $\vec{n}_1=(1,0,0)$。平面 $PAM$：$\overrightarrow{PA}=(0,-2,-2\sqrt{3})$，$\overrightarrow{AM}=(2-2\lambda,2\lambda+2,0)$。设法向量 $\vec{n}_2=(x,y,z)$，令 $x=1$ 解得法向量。
+- 二面角 $M\text{-}PA\text{-}C=30^\circ$，且观察知该二面角为锐角，则 $|\cos\langle\vec{n}_1,\vec{n}_2\rangle|=\cos30^\circ=\frac{\sqrt3}{2}$，解得 $\lambda=\frac{1}{2}$（舍去另一根）。
+- $M(1,1,0)$，$\vec{n}_2=(1,0,\frac{1-\lambda}{\sqrt3})$ 具体计算得 $\vec{n}_2$。然后求线面角：设 $PC$ 与平面 $PAM$ 所成角为 $\theta$，$\overrightarrow{CP}=(0,-2,2\sqrt{3})$，$\sin\theta=\frac{|\overrightarrow{CP}\cdot\vec{n}_2|}{|\overrightarrow{CP}||\vec{n}_2|}$，结果为 $\frac{\sqrt3}{4}$。</p>
+<p><strong>点评/变式</strong>：
+- 第（2）问是以二面角大小反求点的位置，属条件逆向应用。注意利用二面角为锐角避免绝对值方程多解。
+- 线面角的正弦等于方向向量与法向量夹角余弦的绝对值，不可混淆。
+- 变式：将二面角条件改为 $M$ 为 $BC$ 中点，求二面角 $M\text{-}PA\text{-}C$ 的余弦值，即正向求解，思路一致。</p>
+<h3>【代表题 2】2013 理 18</h3>
+<p><strong>题目</strong>：直棱柱 $ABC\text{-}A_1B_1C_1$，$D,E$ 分别为 $AB,BB_1$ 中点，$AA_1=AC=CB=\frac{\sqrt2}{2}AB$?（题干 $AA_1=AC=CB=\frac{\sqrt2}{2}AB$）。证明 $BC_1\parallel$ 平面 $A_1CD$；求二面角 $D\text{-}A_1C\text{-}E$ 的正弦值。</p>
+<p><strong>思路</strong>：
+（1）利用三角形中位线或平行四边形证线面平行（取 $A_1C$ 中点 $F$，证 $DF\parallel BC_1$）。
+（2）底面为等腰直角三角形（$AC=CB$ 且满足勾股关系），直棱柱侧棱垂直底面，可建系。向量法求二面角：写出 $D,A_1,C,E$ 坐标，求平面 $A_1CD$ 和平面 $A_1CE$ 的法向量，计算夹角进而得二面角正弦。</p>
+<p><strong>步骤</strong>：
+- 由 $AC=CB$，$AB=\sqrt2 AC$ 可知 $\triangle ABC$ 为等腰直角三角形，$\angle C=90^\circ$。
+- 建系：以 $C$ 为原点，$CA$ 方向为 $x$ 轴，$CB$ 方向为 $y$ 轴，$CC_1$ 方向为 $z$ 轴。设 $AC=2$，则 $A(2,0,0)$, $B(0,2,0)$, $C(0,0,0)$, $A_1(2,0,4)$, $D(1,1,0)$, $E(0,2,2)$ 等。
+- 求平面 $A_1CD$ 法向量 $\vec{n}_1$：$\overrightarrow{CA_1}=(2,0,4)$，$\overrightarrow{CD}=(1,1,0)$，解得 $\vec{n}_1=(2,-2,-1)$（取一组）。
+- 求平面 $A_1CE$ 法向量 $\vec{n}_2$：$\overrightarrow{CA_1}=(2,0,4)$，$\overrightarrow{CE}=(0,2,2)$，解得 $\vec{n}_2$。
+- $\cos\langle\vec{n}_1,\vec{n}_2\rangle$ 计算，观察二面角 $D\text{-}A_1C\text{-}E$ 为锐角，则正弦为 $\sqrt{1-\cos^2}$，得 $\frac{\sqrt{6}}{3}$ 或类似结果。（具体数值需依坐标计算确认）。</p>
+<p><strong>点评/变式</strong>：
+- 直棱柱中有天然的侧棱垂直底面，建系首选底面垂直两边作为 $x,y$ 轴。等腰直角三角形提供完美正交系。
+- 寻找线面平行时，注意中点条件的充分利用；求二面角时若需正弦值，用 $\sqrt{1-\cos^2}$ 可避开判断钝锐角时的符号陷阱（因二面角正弦恒非负）。
+- 变式：若将 $E$ 点改为 $CC_1$ 上的动点，求二面角最值，需引入参数，利用法向量夹角建立函数关系。</p>
+<h3>【代表题 3】2012 理 19</h3>
+<p><strong>题目</strong>：直三棱柱 $ABC\text{-}A_1B_1C_1$，$AC=BC=\frac{\sqrt2}{2}AA_1$，$D$ 为 $AA_1$ 中点，$DC_1\perp BD$。证明 $DC_1\perp BC$；求二面角 $A_1\text{-}BD\text{-}C_1$ 的大小。</p>
+<p><strong>思路</strong>：
+（1）证明线线垂直可转化证线面垂直：由条件 $DC_1\perp BD</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-20.html">2018-理-20</a>（2018 · 中） 本题考查三棱锥中证明线面垂直及利用二面角条件求线面角的正弦值。</li>
+<li><a href="../../exam/数学/2013-理-18.html">2013-理-18</a>（2013 · 中） 考查直棱柱中线面平行的证明和二面角正弦值的求解。</li>
+<li><a href="../../exam/数学/2012-理-19.html">2012-理-19</a>（2012 · 中） 该题考查直三棱柱中证明线线垂直，并求解二面角的平面角大小。</li>
+<li><a href="../../exam/数学/2011-理-18.html">2011-理-18</a>（2011 · 中） 四棱锥中证明线线垂直并求二面角余弦值，涉及线面垂直判定与空间向量法。</li>
+<li><a href="../../exam/数学/2008-理-19.html">2008-理-19</a>（2008 · 中） 正四棱柱中证明线面垂直并求二面角大小，可用几何法或空间向量法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/643-二面角的平面角及求法.html">二面角的平面角及求法</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>周期性</h1><div class="review-mark" data-stem="周期性"></div><div class="meta-card"><span><strong>考点</strong>周期性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：5；年份跨度：2014–2022</li>
+<li>出现题位：填空15 选择9 选择11 选择12</li>
+<li>难度分布：中4 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>周期定义</strong>：若存在非零常数 $T$，使 $f(x+T)=f(x)$ 对定义域内任意 $x$ 恒成立，则 $T$ 为 $f(x)$ 的周期。最小正周期是其中最小的正数。</li>
+<li><strong>三角函数周期</strong>：</li>
+<li>$y=A\sin(\omega x+\varphi)+B$ 及 $y=A\cos(\omega x+\varphi)+B$ 的最小正周期 $T=\frac{2\pi}{|\omega|}$（$\omega \neq 0$）。</li>
+<li>$y=|\sin(\omega x+\varphi)|$ 及 $y=|\cos(\omega x+\varphi)|$ 的周期变为原周期的一半，即 $T=\frac{\pi}{|\omega|}$。$$y=\cos|x|=\cos x$$，周期仍为 $2\pi$ ；$y=\sin|x|$ 不是周期函数。</li>
+<li><strong>抽象函数对称性与周期性</strong>（设 $f(x)$ 定义域为 $\mathbb{R}$）：</li>
+<li><strong>双对称推周期</strong>：<ul>
+<li>若 $f(x)$ 关于两条直线 $x=a$ 与 $x=b$ 对称 ($a \neq b$)，则 $T=2|a-b|$。</li>
+<li>若 $f(x)$ 关于点 $(a,0)$ 与直线 $x=b$ 对称 ($a \neq b$)，则 $T=4|a-b|$。</li>
+</ul>
+</li>
+<li><strong>一个等式推周期</strong>：<ul>
+<li>若 $f(x+a)=f(x+b)$，则 $T=|a-b|$。</li>
+<li>若 $f(x+a)=-f(x)$ 或 $f(x+a)=\frac{1}{f(x)}$ 或 $f(x+a)=-\frac{1}{f(x)}$，则 $T=2a$。</li>
+</ul>
+</li>
+<li><strong>奇偶性与对称性结合推周期</strong>：<ul>
+<li>$f(x)$ 为奇函数且关于 $x=a$ 对称 $\Rightarrow$ $T=4a$。</li>
+<li>$f(x)$ 为偶函数且关于 $x=a$ 对称 $\Rightarrow$ $T=2a$。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>三角型周期显式求解法</strong>：</li>
+<li>将已知函数化为标准三角函数型或带绝对值的三角函数型。</li>
+<li>代入条件（如函数值、零点）建立关于 $\omega$ 的方程，结合 $\omega$ 的范围求最值或取值。注意 $\omega$ 与周期的关系 $T=\frac{2\pi}{\omega}$。</li>
+<li><strong>数形结合辨识法</strong>（适用于选择填空题快速判断）：</li>
+<li>对于含绝对值的三角函数，可用几何画板或草图勾勒图像趋势。</li>
+<li>直接观察重复单元宽度锁定周期，对照选项验证给定区间单调性。</li>
+<li><strong>抽象函数递推求值法</strong>（适用于构造周期性求和）：</li>
+<li><strong>第一步</strong>：利用给出的对称性或奇偶性等式，进行迭代代换。常用手段：将 $x$ 替换为 $x+1$、$x-1$ 等，消去中间项，推出 $f(x+T)=f(x)$ 的形式，求出周期 $T$。</li>
+<li><strong>第二步</strong>：利用奇偶性，计算一个周期内各整数点的函数值（常利用 $f(0)=0$ 或对称轴函数值）。</li>
+<li><strong>第三步</strong>：将所求长数列和拆分成若干个完整周期加余项，利用周期性化简求和。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>三角参数范围易漏</strong>：涉及 $f(x)=A\cos(\omega x+\varphi)$ 求 $\omega$ 最小值时，零点表达式 $\omega x + \varphi = \frac{\pi}{2}+k\pi$ 中 $k \in \mathbb{Z}$ 不可遗漏或写错；求出的 $\omega$ 表达式如 $\omega=3+9k$ 需取满足 $\omega&gt;0$ 的最小正值。</li>
+<li><strong>混淆 $f(1-x)=f(1+x)$ 的双重性质</strong>：该式不仅表明函数关于 $x=1$ 轴对称，更关键的是结合奇偶性可导出 $f(x+2)=-f(x)$ 进而得到 $T=4$。切勿直接误判周期为 $2$。</li>
+<li><strong>绝对值的贸然应用</strong>：</li>
+<li>$y=\sin|x|$ 和 $y=\cos|x|$ 的性质差异巨大。$\cos|x| = \cos x$ 仍是周期函数；$\sin|x|$ 破坏了奇变规律，不再是周期函数，不可强行套用绝对值对原周期减半的结论。</li>
+<li>$y=|\sin x|$ 与 $y=\sin|x|$ 分属不同概念，注意绝对值加在变量 $x$ 上还是整体函数值上。</li>
+<li><strong>求和时忽略头尾</strong>：计算 $f(1)+f(2)+...+f(50)$ 这种非完整周期个数的和时，别忘记处理余项（例如前 $48$ 项是周期组合，最后单独加工第 $49$ 和第 $50$ 项）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> 2018-理-11：已知 $f(x)$ 是定义在 $\mathbb{R}$ 上的奇函数，满足 $f(1-x)=f(1+x)$，若 $f(1)=2$，求 $f(1)+f(2)+...+f(50)$ 的值。
+<strong>思路</strong> 先由等式推出 $f(x+2)=-f(x)$，得周期 $T=4$。再由奇函数求出一个周期内各整数点函数值，最后分组求和。
+<strong>步骤</strong>
+1. 因为 $f(x)$ 是奇函数，且 $f(1-x)=f(1+x)$，所以 $f(1+x) = f(1-x) = -f(x-1)$。
+2. 令 $t=x+1$，则 $x-1=t-2$，上式变为 $f(t) = -f(t-2)$，即 $f(x+2)=-f(x)$。
+3. 由 $f(x+2) = -f(x)$ 得 $f(x+4) = -f(x+2) = f(x)$，故周期 $T=4$。
+4. 计算一个周期内的值：$f(1)=2$，$f(2)=f(0)=0$，$f(3)=f(1-2)=f(-1)=-f(1)=-2$，$f(4)=f(0)=0$。
+5. 求和：前 $48$ 项为 $12$ 个完整周期，和为 $0$。总合 $=0 + f(49) + f(50) = f(1) + f(2) = 2+0 = 2$。
+<strong>点评/变式</strong> 抽象函数求值必抓“周期性”和“整数点函数值”两步。变式：若条件改为 $f(x)$ 为偶函数，$f(1+x)=f(1-x)$，则可推出 $T=2$，结果将截然不同。</p>
+<p><strong>题目</strong> 2022-理-15：已知 $f(x)=\cos(\omega x+\varphi)$，$\omega&gt;0, 0&lt;\varphi&lt;\pi$，最小正周期 $T$，$f(T)=\frac{\sqrt{3}}{2}$，$x=\frac{\pi}{9}$ 为零点，求 $\omega$ 最小值。
+<strong>思路</strong> 直接使用 $T=\frac{2\pi}{\omega}$ 代入函数值方程求 $\varphi$，再用零点方程求 $\omega$ 的通式，结合限制条件取最小正值。
+<strong>步骤</strong>
+1. 周期 $T=\frac{2\pi}{\omega}$，则 $f(T)=\cos(2\pi+\varphi)=\cos\varphi=\frac{\sqrt{3}}{2}$。
+2. 由 $0&lt;\varphi&lt;\pi$ 得 $\varphi=\frac{\pi}{6}$。
+3. $x=\frac{\pi}{9}$ 是零点 $\Rightarrow \cos(\frac{\pi}{9}\omega + \frac{\pi}{6}) = 0$。则 $\frac{\pi}{9}\omega + \frac{\pi}{6} = \frac{\pi}{2} + k\pi$ ($k \in \mathbb{Z}$)。
+4. 解得 $\omega = 3 + 9k$。因为 $\omega&gt;0$，当 $k=0$ 时取最小正数 $\omega=3$。
+<strong>点评/变式</strong> 三角函数含参求最值，本质是解三角方程。易错点在于零点方程写作 $\frac{\pi}{2} + 2k\pi$ 漏解。同时务必检验求出的参数是否满足周期的定义范围。</p>
+<p><strong>题目</strong> 2019-理-09：下列以 $\frac{\pi}{2}$ 为周期且在 $(\frac{\pi}{4}, \frac{\pi}{2})$ 上单调递增的是：A. $|\cos 2x|$ B. $|\sin 2x|$ C. $\cos|x|$ D. $\sin|x|$
+<strong>思路</strong> 逐项分析周期后锁定 A 或 B（CD周期不合格或非周期函数），再代入区间验证 A、B的单调性。
+<strong>步骤</strong>
+1. D项 $\sin|x|$ 不是周期函数，排除。
+2. C项 $\cos|x| = \cos x$，周期 $T=2\pi$，排除。
+3. A项 $f(x)=|\cos 2x|$，$\omega=2$，周期 $T=\frac{\pi}{2}$。$x \in (\frac{\pi}{4}, \frac{\pi}{2})$ 时 $2x \in (\frac{\pi}{2}, \pi)$，此区间 $\cos 2x&lt;0$，故 $|\cos 2x| = -\cos 2x$。$-\cos 2x$ 在 $(\frac{\pi}{2}, \pi)$ 上单调递增，故 A 正确。
+4. B项 $f(x)=|\sin 2x|$，周期也是 $\frac{\pi}{2}$，但 $x \in (\frac{\pi}{4}, \frac{\pi}{2})$ 时，$\sin 2x$ 从极大值点向零点递减，单调性不合，排除。
+<strong>点评/变式</strong> 此类题应优先扫除“绝对假周期”选项，过长的周期或不周期项直接排除，缩小包围圈，最后用区间单调性一锤定音。熟记 $y=|\sin \omega x|$ 与 $y=|\cos \omega x|$ 的翻折图像是关键。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-15.html">2022-理-15</a>（2022 · 中） 三角函数求参问题，根据周期性和零点条件解出ω和φ。</li>
+<li><a href="../../exam/数学/2019-理-09.html">2019-理-09</a>（2019 · 中） 本题考查三角函数的图象识别，通过分析正弦、余弦函数的周期性与单调性选择正确选项。</li>
+<li><a href="../../exam/数学/2018-文-12.html">2018-文-12</a>（2018 · 中） 该题考查利用奇函数和对称性推导函数的周期性，并求多个函数值之和。</li>
+<li><a href="../../exam/数学/2018-理-11.html">2018-理-11</a>（2018 · 中） 根据奇函数性质和对称轴推导周期，利用周期性和赋值求和。</li>
+<li><a href="../../exam/数学/2014-文-15.html">2014-文-15</a>（2014 · 易） 本题通过函数奇偶性与对称性推导周期性，求函数值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/761-周期性.html">周期性</a></li>
+</ul>
+</div>
+</body>
+</html>

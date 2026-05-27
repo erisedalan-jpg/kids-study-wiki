@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>组合计数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>组合计数</h1><div class="review-mark" data-stem="组合计数"></div><div class="meta-card"><span><strong>考点</strong>组合计数</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>7</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：15</li>
+<li>真题数：7；年份跨度：2008–2023</li>
+<li>出现题位：填空13 解答20 选择3 选择5 选择6 选择10</li>
+<li>难度分布：易3 中4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分类加法计数原理</strong>：做一件事，有 $n$ 类方案，第 $i$ 类有 $m_i$ 种方法，则总方法数为 $N=m_1+m_2+\cdots+m_n$。各类方案相互独立，用“或”连接。</li>
+<li><strong>分步乘法计数原理</strong>：做一件事，有 $n$ 个步骤，第 $i$ 步有 $m_i$ 种方法，则总方法数为 $N=m_1 \times m_2 \times \cdots \times m_n$。各步骤相互依存，用“且”连接。</li>
+<li><strong>排列数公式</strong>：从 $n$ 个不同元素中取出 $m$ 个并按顺序排列，$A_n^m = n(n-1)(n-2)\cdots(n-m+1) = \frac{n!}{(n-m)!}$。注意顺序影响结果。</li>
+<li><strong>组合数公式</strong>：从 $n$ 个不同元素中取出 $m$ 个组成一组（无顺序），$C_n^m = \frac{A_n^m}{m!} = \frac{n!}{m!(n-m)!}$。性质：$C_n^m = C_n^{n-m}$；$C_n^0 = 1$。</li>
+<li><strong>古典概型</strong>：$P(A) = \frac{A\text{包含的基本事件数}}{\text{总基本事件数}}$。核心是分子与分母的计数必须基于“等可能”的样本空间，通常都使用组合数进行无放回抽取的计数。</li>
+<li><strong>分层抽样</strong>：按比例确定各层抽取的个体数量。若总体含 $N$ 个个体，某层有 $K$ 个，抽取 $n$ 个样本，则该层抽取 $k = n \times \frac{K}{N}$ 个（需取整，高考常为整除）。层内抽取多采用组合计数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确任务类型</strong>：审题时判断是“排列”（与顺序有关）还是“组合”（与顺序无关），还是“概率”（计数比）。概率问题最终常转化为分子、分母的计数问题。</li>
+<li><strong>选定计数策略</strong>：</li>
+<li><strong>直接法</strong>：满足条件的直接按“先分类，再分步”原则计数。</li>
+<li><strong>间接法</strong>：当计算“至少”“至多”等复杂情况时，可从总情况数中减去不符合的情况数。</li>
+<li><strong>处理分层抽取</strong>：先按比例算出各层应抽取的人数，再在每层内分别进行组合计数，最后将各层的选法数相乘（分步乘法原理）。</li>
+<li><strong>列举法破新定义</strong>：遇到复杂的约束条件（如给定数位差）且元素数量有限时，不要死套公式。固定起始值 $i$，按条件递推 $j, k$，有序穷举所有解。</li>
+<li><strong>概率计算标准化</strong>：对于“不放回随机抽取”，分子、分母统一用组合数 $C_n^m$ 建模。概率求和时，注意各互斥事件之间用“加法”。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分层抽样步骤混淆</strong>：必须先根据抽样比求出各层抽取的人数，才算完成第一步。若直接在全样本中混合抽取，完全背离分层抽样定义。</li>
+<li><strong>先选再排致重复</strong>：在涉及分组、选人时，如果先选出一部分再对它们进行排列，极易因忽略组间无序性造成重复计数。严格按照题目要求直接使用组合或排列。</li>
+<li><strong>审题忽视顺序暗示</strong>：“选出两人”是组合；“两人分别担任班长和团支书”是排列；“选两人到甲、乙两校”默认有顺序，需小心辨别“不同结果”的含义。</li>
+<li><strong>列举法漏解/多解</strong>：依赖 $i&lt;j&lt;k$ 这种自然大小顺序是防止重复的关键。列举必须严格遵守题目给出的 $k-j$ 与 $j-i$ 的数值关系，手写穷举时建议按 $i$ 递增依次输出。</li>
+<li><strong>概率分母错误</strong>：古典概型分母计算时，常误用分步抽取的总数而非组合总数。注意：无放回抽取概率计算，若分子分母统一用组合数（无序）或统一用排列数（有序），结果一致，但不可混用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2023-新课标Ⅱ-03</h3>
+<ul>
+<li><strong>题目</strong>：某校初中部400人，高中部200人，用分层抽样（比例分配）共抽取60人，求不同抽样结果数。</li>
+<li><strong>思路</strong>：分两步走。第一步，严格按层数比例算出初中、高中应抽人数；第二步，各层内部进行组合计数，最后分步相乘。</li>
+<li><strong>步骤</strong>：</li>
+<li>计算抽样比：总人数 $400+200=600$，抽取 $60$，比例为 $60:600=1:10$。</li>
+<li>确定各层人数：初中抽 $400 \times \frac{1}{10}=40$ 人；高中抽 $200 \times \frac{1}{10}=20$ 人。</li>
+<li>计数：从初中400人中选40人，有 $C_{400}^{40}$ 种；从高中200人中选20人，有 $C_{200}^{20}$ 种。</li>
+<li>据分步乘法，总结果数为 $C_{400}^{40} \times C_{200}^{20}$，对应选项 D。</li>
+<li><strong>点评</strong>：该题极易误选成 $C_{600}^{60}$ 或颠倒分层人数的选项。核心是必须死扣“比例分配的分层随机抽样”含义，先求人数再用组合计数。</li>
+</ul>
+<h3>2020-文-03</h3>
+<ul>
+<li><strong>题目</strong>：将钢琴12个键编号 $a_1 \dots a_{12}$。若 $1 \le i&lt;j&lt;k \le 12$，且 $k-j=3, j-i=4$ 为原位大三和弦；$k-j=4, j-i=3$ 为原位小三和弦，求两类和弦个数之和。</li>
+<li><strong>思路</strong>：这是一个典型的列举法求解的计数问题，而非公式运算。分别固定 $i$，利用 $i&lt;j&lt;k$ 和差值关系列举合法序列。</li>
+<li><strong>步骤</strong>：</li>
+<li>原位大三和弦条件：$k-j=3, j-i=4$。令 $i$ 从 1 开始递增：
+     $i=1 \Rightarrow j=5, k=8$；$i=2 \Rightarrow j=6, k=9$；$i=3 \Rightarrow j=7, k=10$；
+     $i=4 \Rightarrow j=8, k=11$；$i=5 \Rightarrow j=9, k=12$。
+     共 5 个。</li>
+<li>原位小三和弦条件：$k-j=4, j-i=3$。令 $i$ 从 1 开始递增：
+     $i=1 \Rightarrow j=4, k=8$；$i=2 \Rightarrow j=5, k=9$；$i=3 \Rightarrow j=6, k=10$；
+     $i=4 \Rightarrow j=7, k=11$；$i=5 \Rightarrow j=8, k=12$。
+     共 5 个。</li>
+<li>求和：$5+5=10$，选项 C。</li>
+<li><strong>变式</strong>：若问题改为求音程跨度之和，或限制 $i,j,k$ 在特定黑白键范围，原理不变，只需在列举时加入新约束即可。始终注意 $i&lt;j&lt;k$ 天然保证了不重复，所以总数直接相加。</li>
+</ul>
+<h3>2018-文-05</h3>
+<ul>
+<li><strong>题目</strong>：2名男同学，3名女同学，任选2人，求2人都是女生的概率。</li>
+<li><strong>思路</strong>：古典概型，分别求“选2人”的总组合数（分母）与“选的2人全是女生”的组合数（分子）。</li>
+<li><strong>步骤</strong>：</li>
+<li>算分母：共5人，任选2人，$C_5^2 = 10$ 种。</li>
+<li>算分子：只有3名女生，选2人，$C_3^2 = 3$ 种。</li>
+<li>求概率：$P = \frac{3}{10} = 0.3$，选项 D。</li>
+<li><strong>点评</strong>：该题是组合计数在概率中的最基础应用。文理通用法门：文科生列穷举 $ab, aA, aB, aC, bA, bB, bC, AB, AC, BC$ 也能清晰验证。记忆提示：无放回无序抽取求概率，分子分母全用 $C$ 最稳妥。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-03.html">2023-新课标Ⅱ-03</a>（2023 · 易） 该题考查分层抽样人数分配及组合计数基本方法，直接应用分层比例与组合公式求解。</li>
+<li><a href="../../exam/数学/2020-文-03.html">2020-文-03</a>（2020 · 中） 钢琴12键按定义的原位大三和弦(k-j=3,j-i=4)与原位小三和弦(k-j=4,j-i=3)计数, 求两类和弦个数之和。</li>
+<li><a href="../../exam/数学/2018-文-05.html">2018-文-05</a>（2018 · 易） 从2名男生和3名女生中选2人，求均为女生的概率，考查古典概型计算。</li>
+<li><a href="../../exam/数学/2013-文-13.html">2013-文-13</a>（2013 · 易） 从五个数字中取两个不同数，计算和为5的古典概率。</li>
+<li><a href="../../exam/数学/2009-文-20.html">2009-文-20</a>（2009 · 中） 本题通过分层抽样抽取工人，计算恰有指定性别人数的概率。</li>
+<li><a href="../../exam/数学/2009-理-10.html">2009-理-10</a>（2009 · 中） 甲、乙两人从4门课程中各选修2门，求恰有1门课程相同的选法数。</li>
+<li><a href="../../exam/数学/2008-理-06.html">2008-理-06</a>（2008 · 中） 从30名同学中选3人，求既有男生又有女生的概率，考查古典概型与组合计数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1090-组合计数.html">组合计数</a></li>
+</ul>
+</div>
+</body>
+</html>

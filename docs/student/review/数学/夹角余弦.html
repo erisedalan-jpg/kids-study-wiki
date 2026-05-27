@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>夹角余弦</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>夹角余弦</h1><div class="review-mark" data-stem="夹角余弦"></div><div class="meta-card"><span><strong>考点</strong>夹角余弦</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向量夹角公式</strong>：已知非零向量 $\vec{a},\vec{b}$，其夹角 $\theta$ 的余弦为<br />
+  $$\cos \theta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}| |\vec{b}|}$$
+  其中 $0 \le \theta \le \pi$，$\cos\theta$ 的符号由数量积决定。</li>
+<li><strong>数量积（点积）的坐标表示</strong>：若 $\vec{a}=(x_1, y_1)$，$\vec{b}=(x_2, y_2)$，则<br />
+  $\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。</li>
+<li><strong>向量的模（长度）</strong>：$|\vec{a}|=\sqrt{x_1^2+y_1^2}$，同样可求 $|\vec{b}|$。</li>
+<li><strong>适用条件</strong>：两向量必须为非零向量，否则夹角无定义。所有运算均基于坐标或模与数量积的已知信息。平面向量中常用等式 $\lambda \vec{a}+\mu \vec{b}=\vec{c}$ 通过坐标相等建立方程组，求出未知向量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定位已知与未知</strong>：找出直接给出的向量坐标，识别通过线性组合隐含的向量，如本题中 $2\vec{a}+\vec{b}$ 已知，$\vec{a}$ 已知，可求 $\vec{b}$。</li>
+<li><strong>求全向量坐标</strong>：利用向量线性运算的坐标公式建立方程，解出未知坐标。设 $\vec{b}=(x,y)$，则<br />
+   $k\vec{a}+\vec{b}= (kx_1+x, ky_1+y)$，与已知坐标联立，解出 $x,y$。</li>
+<li><strong>分步计算关键量</strong>：</li>
+<li>求数量积：用坐标公式 $\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。</li>
+<li>求两向量的模：$|\vec{a}|=\sqrt{x_1^2+y_1^2}$，$|\vec{b}|$ 同理。</li>
+<li><strong>代入公式得余弦</strong>：$\cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$，化简即得。注意结果通常保留最简分数或根式形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>向量线性运算坐标写错</strong>：如 $2\vec{a}+\vec{b}$ 误为 $(2x_1+b_1, 2y_1+b_2)$ 时，忘记 $\vec{a}$ 的坐标乘 2，或者 $\vec{b}$ 坐标用错符号。务必按分量逐项对应。</li>
+<li><strong>解方程时符号疏漏</strong>：方程 $8+x=3$ 易得 $x=-5$，若移项出错会得错误坐标，导致后续全错。</li>
+<li><strong>数量积计算时遗漏负号</strong>：坐标含负数时，乘积累加符号易错，建议分步计算并复查。</li>
+<li><strong>模长公式与数量积混淆</strong>：求模时忘记开根号，或者误将模的平方当模使用。务必牢记 $|\vec{a}|=\sqrt{x_1^2+y_1^2}$。</li>
+<li><strong>夹角范围与余弦符号</strong>：本题只求余弦值，若需反推角度，要结合 $\cos\theta$ 正负判断锐角/钝角。此处直接求值，不需考虑多解。</li>
+<li><strong>忽略零向量检验</strong>：虽然此题自动满足非零，但养成习惯求模后确认均大于零。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2010-文-02</h3>
+<p><strong>题目</strong>：已知平面向量 $\vec{a}=(4,3)$，$2\vec{a}+\vec{b}=(3,18)$，求 $\vec{a}$ 与 $\vec{b}$ 的夹角的余弦值。</p>
+<p><strong>思路</strong>：从已知条件先求出 $\vec{b}$ 的坐标，再利用向量夹角余弦的坐标公式直接计算。$2\vec{a}+\vec{b}$ 的坐标给出，相当于 $\vec{b}=(3,18)-2(4,3)$。</p>
+<p><strong>步骤</strong>：
+1. 设 $\vec{b}=(x,y)$，则 $2\vec{a}+\vec{b}=2(4,3)+(x,y)=(8+x,6+y)$。
+2. 已知 $(8+x,6+y)=(3,18)$，得方程组<br />
+   $8+x=3 \Rightarrow x=-5$，<br />
+   $6+y=18 \Rightarrow y=12$，因此 $\vec{b}=(-5,12)$。
+3. 计算数量积：$\vec{a}\cdot\vec{b}=4\times(-5)+3\times12=-20+36=16$。
+4. 计算模长：$|\vec{a}|=\sqrt{4^2+3^2}=5$，$|\vec{b}|=\sqrt{(-5)^2+12^2}=\sqrt{25+144}=13$。
+5. 代入公式：$\cos\theta=\dfrac{16}{5\times 13}=\dfrac{16}{65}$。</p>
+<p><strong>点评/变式</strong>：该题核心是“向量方程→坐标”这一转化，属于平面向量基本运算的组合。变式可将已知条件改为 “$\vec{a}$ 与 $\vec{b}$ 的数量积及模” 直接求余弦，或给出 $\vec{a}+k\vec{b}$ 的形式设计参数求角。关键在于始终回归 $\cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$ 这一核心桥梁。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-文-02.html">2010-文-02</a>（2010 · 易） 本题通过向量坐标运算求两向量夹角的余弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">夹角余弦</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抽象不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>抽象不等式</h1><div class="review-mark" data-stem="抽象不等式"></div><div class="meta-card"><span><strong>考点</strong>抽象不等式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：填空15</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>抽象不等式是指给出的不等式含有一个抽象函数符号 $f$，没有具体解析式，必须利用已知的函数性质（定义域、单调性、奇偶性、周期性等）脱去“$f$”求解自变量范围。</p>
+<p>核心知识与适用条件：
+- <strong>单调性</strong>：若 $f(x)$ 在区间 $I$ 上单调递增，则 $\forall x_1,x_2 \in I,\ f(x_1) &gt; f(x_2) \iff x_1 &gt; x_2$；单调递减时不等号反向。
+- <strong>奇偶性</strong>：<br />
+  偶函数 $f(-x)=f(x)=f(|x|)$，可将函数值转化为自变量绝对值的关系，常用于自变量符号不确定的情形。<br />
+  奇函数 $f(-x)=-f(x)$，可通过移项或赋值将不等式的自变量迁移到同一单调区间。
+- <strong>综合使用</strong>：当题目同时给出奇偶性与单调性时，核心思路是将不等式两边化为同一单调区间内的 $f$ 值比较，然后脱去 $f$，转化为普通不等式（组），并时刻不忘函数的<strong>定义域</strong>。</p>
+<h2>解题方法与套路</h2>
+<p>处理抽象不等式的一般步骤（以“偶+单减”高配题型为范本）：</p>
+<ol>
+<li><strong>化归为 $f(A) &gt; f(B)$ 形式</strong>：将常数项写成某点函数值（如已知 $f(2)=0$，则 $f(x-1)&gt;0 \iff f(x-1)&gt;f(2)$）。  </li>
+<li><strong>套用奇偶性统一变量形式</strong>：若 $f(x)$ 为偶函数，利用 $f(x)=f(|x|)$ 把不等式化为 $f(|x-1|) &gt; f(2)$，保证括号内的表达式非负，从而可安全利用给定区间 $[0,+\infty)$ 上的单调性。  </li>
+<li>若是奇函数，常通过令 $x$ 换为 $-x$ 或移项变形使两边自变量属于同一单调区间。  </li>
+<li><strong>脱去 $f$ 得自变量不等式</strong>：根据在特定区间的单调性，把 $f(A) &gt; f(B)$ 转化为 $A<B$（单调递减时）或 $A>B$（单调递增时）。注意明确所依赖的区间，并保证 $A,B$ 都在该区间内。  </li>
+<li><strong>解不等式（组）</strong>：解得的自变量范围，须与函数定义域取交集。本考点多结合绝对值不等式求解。  </li>
+<li><strong>等价检验</strong>：结果可代回抽象条件快速验算边界值，避免放大或遗漏。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域</strong>：直接解出自变量范围而不与题目隐式或显式的定义域交集，导致增解。抽象函数题中定义域有时隐含于单调区间陈述中。  </li>
+<li><strong>误判放缩方向</strong>：偶函数在对称区间单调性相反，若不利用 $f(|x|)$ 直接强行分段讨论，极易搞反不等号。牢记：偶函数等价转化用绝对值，能避开符号讨论陷阱。  </li>
+<li><strong>绝对值不等式解错</strong>：$|x-1|&lt;2 \implies -2&lt;x-1&lt;2$，忌只写 $x-1&lt;2$ 而漏掉左边界。  </li>
+<li><strong>符号画蛇添足</strong>：偶函数 $f(x-1)&gt;0$ 不可写作 $f(x-1)&gt;f(2) \implies x-1&gt;2$ 或 $x-1&lt;-2$，而必须用绝对值统一。只有当自变量被确定为非负时才能直接去绝对值。  </li>
+<li><strong>错用奇偶性导致不等号反向</strong>：奇函数移项时符号变化易错，务必严格写 $f(A) &gt; f(B) \implies f(A) &gt; -f(-B) \cdots$ 理清逻辑。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知偶函数 $f(x)$ 在 $[0,+\infty)$ 单调递减，$f(2)=0$，若 $f(x-1) &gt; 0$，求 $x$ 的取值范围。</p>
+<p><strong>思路</strong>：<br />
+目标是脱去 $f$。由于 $f(2)=0$，将不等式化为 $f(x-1) &gt; f(2)$。因 $f(x)$ 为偶函数且仅在 $[0,+\infty)$ 上给出单调性，应利用 $f(x)=f(|x|)$ 将自变量转化为非负的 $|x-1|$，从而利用递减性质得出 $|x-1|&lt;2$，解绝对值不等式即得。</p>
+<p><strong>步骤</strong>：<br />
+1. 同解变形：$f(x-1)&gt;0 \iff f(x-1) &gt; f(2)$。<br />
+2. 利用偶函数性质：$f(x-1)=f(|x-1|)$，所以不等式等价于 $f(|x-1|) &gt; f(2)$。<br />
+3. 注意此时 $|x-1| \ge 0$ 且 $2 \ge 0$，均处于已知单调递减区间 $[0,+\infty)$ 内。由单调递减得：$f(|x-1|) &gt; f(2) \implies |x-1| &lt; 2$。<br />
+4. 解绝对值不等式：$-2 &lt; x-1 &lt; 2$，得 $-1 &lt; x &lt; 3$。<br />
+5. 无额外定义域限制，故解集为 $(-1, 3)$。</p>
+<p><strong>点评/变式</strong>：<br />
+该题是“偶函数+单调性”解抽象不等式的母题。若条件改为奇函数 $f(x)$ 在 $[0,+\infty)$ 单调递减且 $f(2)=0$，则 $f(x-1)&gt;0$ 可化为 $f(x-1) &gt; f(2)$；奇函数在对称区间单调性可推得在 $(-\infty,0]$ 也单调递减，需分 $x-1 \ge 0$ 和 $x-1&lt;0$ 讨论，或利用奇函数性质 $f(x-1) &gt; f(2) = -f(-2)$，移项得 $f(x-1)+f(-2)&gt;0$ 再化积等，最终得到的解集将不再关于原点对称。这种对比能加深对“偶用绝对值，奇看分段”的理解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-15.html">2014-理-15</a>（2014 · 易） 利用偶函数单调性将抽象不等式转化为绝对值不等式求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">抽象不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

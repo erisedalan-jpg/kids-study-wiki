@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两角和的余弦公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两角和的余弦公式</h1><div class="review-mark" data-stem="两角和的余弦公式"></div><div class="meta-card"><span><strong>考点</strong>两角和的余弦公式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两角和的余弦公式</strong><br />
+  $$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$$<br />
+  公式特征：同名函数相乘，中间符号相反（$\cos\cos$减$\sin\sin$），用于将两角和（或差）的余弦转化为单角正、余弦的积。</li>
+<li><strong>两角差的余弦公式</strong><br />
+  $$\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$$<br />
+  可由 $\beta$ 换成 $-\beta$ 结合诱导公式导出。</li>
+<li><strong>适用条件与常见变形</strong>  </li>
+<li>任意角 $\alpha,\beta\in \mathbf{R}$ 成立。  </li>
+<li>常与诱导公式联用，如 $\sin(\alpha+\beta)=\cos!\left[\frac{\pi}{2}-(\alpha+\beta)\right]=\cos!\left[\left(\frac{\pi}{2}-\alpha\right)-\beta\right]$，从而化归为余弦公式。  </li>
+<li>在解三角形中，若某角可表示成已知特殊角的和或差（如 $105^\circ=60^\circ+45^\circ$，或 $\frac{7\pi}{12}=\frac\pi3+\frac\pi4$），可借助两角和与差的余弦（或正弦）公式求出该角的三角函数值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别和差结构</strong><br />
+   审视目标角 $\theta$ 能否写成已知的角 $\alpha,\beta$ 的和或差（优先凑出 $30^\circ,45^\circ,60^\circ$ 及其同终边角）。</li>
+<li><strong>选取公式并明确符号</strong>  </li>
+<li>计算 $\cos(\alpha\pm\beta)$：用 $\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$。  </li>
+<li>需算 $\sin(\alpha\pm\beta)$ 时，可利用 $\sin(\alpha\pm\beta)=\cos!\left[\frac{\pi}{2}-(\alpha\pm\beta)\right]$，化归为余弦公式，或直接用正弦公式（两者互通）。</li>
+<li><strong>代入已知函数值</strong><br />
+   将特殊角或已知角的三角函数值代入，注意分母有理化、化简根式。</li>
+<li><strong>回代题目求解</strong><br />
+   在解三角形等综合题中，将求得的三角函数值代入面积公式 $S=\frac12 bc\sin A$、正弦定理 $\frac{a}{\sin A}=\frac{b}{\sin B}$ 等，解出目标量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>符号记混</strong><br />
+  $\cos(\alpha+\beta)$ 右侧是“$-$”，$\cos(\alpha-\beta)$ 右侧是“$+$”；切不可与正弦公式的符号规则混淆。</li>
+<li><strong>拆角不合理</strong><br />
+  如将 $\frac{7\pi}{12}$ 写成 $\frac\pi2+\frac\pi{12}$，$\frac\pi{12}$ 并非特殊角，导致后续无法笔算；应拆为 $\frac\pi3+\frac\pi4$ 或 $\frac{3\pi}4-\frac\pi6$ 等。</li>
+<li><strong>忽略角度范围导致符号错误</strong><br />
+  利用 $\sin A=\sqrt{1-\cos^2A}$ 求值时，需先确认角 $A$ 的象限，若 $A$ 为钝角，$\cos A&lt;0$，$\sin A$ 仍取正；错选负号直接失分。</li>
+<li><strong>混淆正弦定理与余弦定理</strong><br />
+  已知两角一边求边用正弦定理；已知两边夹角或三边才优先用余弦定理。本题求边 $c$ 用正弦定理，不能用余弦定理硬套。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>在 $\triangle ABC$ 中，内角 $A,B,C$ 的对边分别为 $a,b,c$，已知 $b=2$，$B=\frac{\pi}{6}$，$C=\frac{\pi}{4}$，求 $\triangle ABC$ 的面积。</p>
+<h3><strong>思路</strong></h3>
+<p>先由三角形内角和得 $A=\pi-B-C=\frac{7\pi}{12}$；用正弦定理由已知边 $b$ 和两角 $B,C$ 求边 $c$；将角 $A$ 拆为 $\frac{\pi}{3}+\frac{\pi}{4}$，利用两角和的正弦（或用余弦公式化归）求 $\sin A$；最后代入面积公式 $S=\frac12 bc\sin A$ 求解。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>求角 $A$：$A=\pi-\frac{\pi}{6}-\frac{\pi}{4}=\frac{7\pi}{12}$。  </li>
+<li>由正弦定理 $\displaystyle\frac{b}{\sin B}=\frac{c}{\sin C}$ 得<br />
+   $$c=\frac{b\sin C}{\sin B}=\frac{2\cdot\frac{\sqrt2}{2}}{\frac12}=2\sqrt2.$$  </li>
+<li>求 $\sin A$：将 $\frac{7\pi}{12}$ 拆为 $\frac\pi3+\frac\pi4$，用两角和的正弦公式（可直接写，或转成余弦）<br />
+   $$\begin{aligned}
+   \sin\frac{7\pi}{12}&amp;=\sin!\left(\frac\pi3+\frac\pi4\right) \
+   &amp;=\sin\frac\pi3\cos\frac\pi4+\cos\frac\pi3\sin\frac\pi4 \
+   &amp;=\frac{\sqrt3}{2}\cdot\frac{\sqrt2}{2}+\frac12\cdot\frac{\sqrt2}{2}=\frac{\sqrt6+\sqrt2}{4}.
+   \end{aligned}$$<br />
+   若用余弦公式：$\sin A=\cos!\left(\frac\pi2-A\right)=\cos!\left(-\frac\pi{12}\right)=\cos\frac\pi{12}$，再将 $\frac\pi{12}$ 写成 $\frac\pi3-\frac\pi4$，用两角差的余弦可得到相同结果。  </li>
+<li>代入面积公式<br />
+   $$S=\frac12 bc\sin A=\frac12\cdot2\cdot2\sqrt2\cdot\frac{\sqrt6+\sqrt2}{4}
+     =\frac{2\sqrt2(\sqrt6+\sqrt2)}{4}
+     =\frac{2\sqrt{12}+4}{4}=\frac{4\sqrt3+4}{4}= \sqrt3+1.$$<br />
+   故 $\triangle ABC$ 的面积为 $\sqrt3+1$。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题表面考正弦定理与面积公式，实则“两角和与差的三角函数”是求 $\sin A$ 的关键，若不会拆角，将无法得到准确值。  </li>
+<li>常见变式：已知两边及一边对角，或已知两角一边，均可用类似流程；若将 $B,C$ 改为非特殊角但给出其三角函数值，则直接利用公式求出 $\sin A=\sin(B+C)$，用 $\sin(B+C)=\sin B\cos C+\cos B\sin C$ 即可，无需拆特殊角。  </li>
+<li>另可提问求 $a$ 边或外接圆半径等，核心仍是正弦定理与和角公式的组合运用。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-04.html">2013-文-04</a>（2013 · 易） 利用正弦定理求边长，再用三角形面积公式计算面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">两角和的余弦公式</a></li>
+</ul>
+</div>
+</body>
+</html>

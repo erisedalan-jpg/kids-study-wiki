@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>棱柱与棱锥的体积计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>棱柱与棱锥的体积计算</h1><div class="review-mark" data-stem="棱柱与棱锥的体积计算"></div><div class="meta-card"><span><strong>考点</strong>棱柱与棱锥的体积计算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>棱柱体积</strong>：$V = S_{\text{底}} \cdot h$，其中 $h$ 为侧棱长（直棱柱）或两底面间的距离。</li>
+<li><strong>棱锥体积</strong>：$V = \frac{1}{3}S_{\text{底}} \cdot h$，$h$ 为顶点到底面的高。</li>
+<li><strong>等体积原理</strong>：三棱锥的顶点可在与底面平行的直线上任意移动而不改变体积；对同一个三棱锥，选择不同的面作为底面，所得体积关系为 $\frac{1}{3}S_1h_1 = \frac{1}{3}S_2h_2$。</li>
+<li><strong>正棱柱的性质</strong>：底面为正多边形，侧棱垂直于底面；侧面为全等的矩形；底面多边形的高、中线等线面垂直关系可直接用于寻找棱锥的高。</li>
+<li><strong>三棱锥的底与高</strong>：若一条直线垂直于一个平面，则该直线上任一点到该平面的距离相等，可选最方便的点作为锥顶。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接公式法</strong>：分析几何体，明确底面积与对应的高，直接代入体积公式。常用于棱柱或高易求的棱锥。</li>
+<li><strong>换顶点（等体积法）</strong>：对于三棱锥，若原顶点到底面距离不易求，可更换顶点，选取垂足明确的点作为新顶点，原锥体积不变。核心步骤：找出与待求体积相等的三棱锥，其高可直接从正棱柱的垂直关系中获得。</li>
+<li><strong>割补法</strong>：将不规则几何体分割为若干规则棱锥/棱柱，或补形变成易求体积的几何体，再作加减运算。</li>
+<li><strong>线面垂直的挖掘</strong>：在正棱柱中，底面正三角形的高垂直于侧棱，因此垂直于侧面；利用此性质可快速锁定棱锥的高。</li>
+<li><strong>面积计算</strong>：熟练正三角形、矩形等面积公式，以及底面上线段长度的计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>漏乘 $\frac{1}{3}$</strong>：棱锥体积计算时忘记系数 $\frac{1}{3}$，直接按棱柱体积计算。</li>
+<li><strong>高混淆</strong>：将斜高（如侧面三角形的高）误作为棱锥的高，或找不到真正的垂足。</li>
+<li><strong>换顶点无依据</strong>：盲目更换三棱锥的顶点，未先证明线面垂直关系，导致所用“高”不垂直于新底面。</li>
+<li><strong>底面积对应错误</strong>：换了底面后，依然用错高，未保持底与高的对应。</li>
+<li><strong>数字计算</strong>：正三角形面积 $\frac{\sqrt{3}}{4}a^2$、高 $\frac{\sqrt{3}}{2}a$ 等常数混淆；侧棱长与底面边长的关系误用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2014·全国卷文·7）</h3>
+<p>正三棱柱 $ABC-A_1B_1C_1$ 的底面边长为 $2$，侧棱长为 $\sqrt{3}$，$D$ 为 $BC$ 中点，则三棱锥 $A-B_1DC_1$ 的体积为（ ）</p>
+<h3><strong>思路</strong></h3>
+<p>三棱锥 $A-B_1DC_1$ 的高不易直接找到。观察到 $AD \perp BC$ 且 $AD \perp BB_1$，故 $AD \perp$ 平面 $BCC_1B_1$，$A$ 到侧面 $BCC_1B_1$ 的距离即为 $AD$。而 $\triangle B_1DC_1$ 恰在侧面内，因此若以 $\triangle B_1DC_1$ 为底，高即为 $AD$，直接用锥体体积公式求值。</p>
+<h3><strong>步骤</strong></h3>
+<ul>
+<li>
+<p><strong>计算底面 $\triangle B_1DC_1$ 的面积</strong><br />
+  侧面 $BCC_1B_1$ 为矩形，宽 $B_1C_1=2$，高（侧棱长）$=\sqrt{3}$。<br />
+  $D$ 是 $BC$ 中点，则 $D$ 到 $B_1C_1$ 的距离等于侧棱长 $\sqrt{3}$。<br />
+  $$S_{\triangle B_1DC_1} = \frac{1}{2} \times B_1C_1 \times \text{高} = \frac{1}{2} \times 2 \times \sqrt{3} = \sqrt{3}.$$</p>
+</li>
+<li>
+<p><strong>确定高 $h$</strong><br />
+  在正三棱柱中，$AD \perp BC$，又 $BB_1 \perp$ 底面，故 $BB_1 \perp AD$，因此 $AD \perp$ 平面 $BCC_1B_1$。$A$ 到该平面距离即为 $AD$。<br />
+  正三角形 $ABC$ 边长为 $2$，其高<br />
+  $$AD = \frac{\sqrt{3}}{2} \times 2 = \sqrt{3}.$$</p>
+</li>
+<li>
+<p><strong>求体积</strong><br />
+  $$V_{A-B_1DC_1} = \frac{1}{3} S_{\triangle B_1DC_1} \cdot AD = \frac{1}{3} \times \sqrt{3} \times \sqrt{3} = 1.$$</p>
+</li>
+</ul>
+<p>故三棱锥体积为 $1$，选 C.</p>
+<h3><strong>点评</strong></h3>
+<p>本题表面考查三棱锥体积，实则考查<strong>线面垂直关系的发现与等底等高的灵活选择</strong>。许多考生试图用割补或换顶点，却忽略 $A$ 到侧面距离恒定且易求这一关键。<strong>变式</strong>：若题目改为求点 $C$ 到平面 $AB_1D$ 的距离，可设距离为 $d$，用等体积法 $V_{C-AB_1D} = V_{A-BCD_1}$ 等转化，列方程求出 $d$，本质仍是体积不变性的应用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-07.html">2014-文-07</a>（2014 · 中） 求正三棱柱内三棱锥的体积，可用等体积法或直接计算底面积与高求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">棱柱与棱锥的体积计算</a></li>
+</ul>
+</div>
+</body>
+</html>

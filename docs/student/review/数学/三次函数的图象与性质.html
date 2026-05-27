@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三次函数的图象与性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三次函数的图象与性质</h1><div class="review-mark" data-stem="三次函数的图象与性质"></div><div class="meta-card"><span><strong>考点</strong>三次函数的图象与性质</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择11</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>三次函数的一般形式：$f(x)=ax^3+bx^2+cx+d\ (a\neq0)$，定义域 $\mathbb{R}$，值域 $\mathbb{R}$。</li>
+<li>导数：$f'(x)=3ax^2+2bx+c$（二次函数），$\Delta=4(b^2-3ac)$ 决定极值点个数：</li>
+<li>$\Delta&gt;0$：$f'(x)=0$ 有两不等实根 $x_1,x_2$，函数有两个极值点（一个极大、一个极小）；</li>
+<li>$\Delta\leq0$：$f'(x)\geq0$ 或 $f'(x)\leq0$ 恒成立，函数单调，无极值点。</li>
+<li>对称性：任意三次函数图象都是中心对称图形，对称中心为 $\displaystyle\left(-\frac{b}{3a},\ f!\left(-\frac{b}{3a}\right)\right)$，即拐点（二阶导数为零的点）。</li>
+<li>零点存在性：奇次多项式在 $\mathbb{R}$ 上至少有一个零点，故 $f(x)=0$ 必有实根，即 $\exists x_0\in\mathbb{R}, f(x_0)=0$。</li>
+<li>极值点的导数性质：可导函数的极值点必使 $f'(x_0)=0$（费马引理）；三次函数处处可导，故极值点处切线水平。</li>
+<li>单调性：三次函数在极值点两侧的单调性取决于 $a$ 的正负及极值点次序。若 $a&gt;0$，极大值点左侧递增、右侧递减；极小值点左侧递减、右侧递增。整体上，极小值点 $x_0$ 左侧可能先增后减，并非在整个区间 $(-\infty,x_0)$ 单调递减。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>求导定参：由 $f'(x)=3ax^2+2bx+c$，根据 $\Delta$ 符号或给定极值条件反解参数。</li>
+<li>画导函数草图：借助二次函数图象分析 $f'(x)$ 的正负区间，得到原函数单调区间与极值点。</li>
+<li>对称中心提取：公式法求 $x=-\dfrac{b}{3a}$，或令 $f''(x)=0$ 得拐点，直接写出对称中心坐标。</li>
+<li>零点判定：结合极限 $\lim\limits_{x\to-\infty}f(x)$ 与 $\lim\limits_{x\to+\infty}f(x)$ 异号（$a&gt;0$ 时左负右正）及连续性，必存在零点；也可通过特殊值符号或单调区间端点值判断零点个数。</li>
+<li>选项验证法：对判断正误题，逐项用特例或性质检验，如利用对称中心否定单调性全程成立的选项，用极值点导数必为零检验导数选项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>误认为三次函数一定有极大值与极小值：当 $\Delta\leq0$ 时单调，无极值。</li>
+<li>错把极小值点左侧整体当成单调递减区间：极小值点前函数可能先递增到极大值再递减，选项“若 $x_0$ 是极小值点，则 $f(x)$ 在 $(-\infty,x_0)$ 单调递减”是典型陷阱。</li>
+<li>混淆对称中心与极值点：对称中心是拐点，不一定是极值点，且三次函数中心对称性往往被忽略，导致误判图形特征。</li>
+<li>忽视定义域与极限：不检查 $\mathbb{R}$ 上奇次函数必过零点，误选“存在零点”为错误项。</li>
+<li>极值点处 $f'(x_0)=0$ 是必要条件，对可导函数永远正确，不能作为错误结论排除。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $f(x)=x^3+ax^2+bx+c$，下列结论错误的是（ ）
+A. $\exists x_0\in\mathbb{R}, f(x_0)=0$
+B. 函数 $y=f(x)$ 的图象是中心对称图形
+C. 若 $x_0$ 是 $f(x)$ 的极小值点，则 $f(x)$ 在区间 $(-\infty,x_0)$ 上单调递减
+D. 若 $x_0$ 是 $f(x)$ 的极值点，则 $f'(x_0)=0$</p>
+<p><strong>思路</strong>：本题考三次函数通性，无需具体参数，利用一般结论逐一判定。A 用零点存在性；B 用对称中心公式；C 用极小值点附近单调性变化规律；D 用可导函数极值点必要条件。</p>
+<p><strong>步骤</strong>：
+- A 项：三次函数 $x\to-\infty$ 时 $f(x)\to-\infty$，$x\to+\infty$ 时 $f(x)\to+\infty$，由连续性知至少穿过 $x$ 轴一次，故 $\exists x_0\in\mathbb{R}, f(x_0)=0$，A 正确。
+- B 项：对称中心 $x_0=-\dfrac{a}{3}$，代入得 $\left(-\dfrac{a}{3}, f!\left(-\dfrac{a}{3}\right)\right)$，任意三次函数均为中心对称图形，B 正确。
+- C 项：设 $a=0,b=-3,c=0$ 得 $f(x)=x^3-3x$，$f'(x)=3(x^2-1)$，极小值点为 $x=1$；在 $(-\infty,1)$ 上 $f(x)$ 先增（$(-\infty,-1)$）后减（$(-1,1)$），并非单调递减，故 C 错误。
+- D 项：$f(x)$ 处处可导，极值点必满足 $f'(x_0)=0$，D 正确。
+故选 C。</p>
+<p><strong>点评/变式</strong>：此题错误项利用了学生认为“极小值点左侧必递减”的惯性思维，实则忽略了极大值点可能出现在左侧。变式：若题干给定了 $f'(x)$ 有两不等实根且 $a&gt;0$，画出导函数草图可直观看出极小值点在右，左侧有一段递增区间。训练时应强调结合导函数正负画原函数草图，避免概念混淆。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-11.html">2013-文-11</a>（2013 · 难） 本题考查三次函数的性质，包括零点存在性、对称性、单调性与极值点的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三次函数的图象与性质</a></li>
+</ul>
+</div>
+</body>
+</html>

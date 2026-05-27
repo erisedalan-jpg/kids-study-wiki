@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>取整函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>取整函数</h1><div class="review-mark" data-stem="取整函数"></div><div class="meta-card"><span><strong>考点</strong>取整函数</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2016–2016</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>取整函数定义：对于任意实数 $x$，$[x]$ 表示不超过 $x$ 的最大整数，即满足 $[x] \le x &lt; [x]+1$，且 $[x]\in\mathbb{Z}$。<br />
+   例如 $[0.9]=0$，$[2.6]=2$，$[\lg 99]=1$。<br />
+   基本性质：</li>
+<li>$x-1&lt;[x]\le x$；</li>
+<li>若 $n\in\mathbb{Z}$，则 $[x+n]=[x]+n$；</li>
+<li>对单调递增函数 $f(n)$，$[f(n)]$ 的取值分段上升，常借助不等式 $k\le f(n)&lt;k+1$ 确定使取整值为 $k$ 的 $n$ 的范围。</li>
+<li>等差数列通项与求和：</li>
+<li>通项 $a_n=a_1+(n-1)d$，前 $n$ 项和 $S_n=\dfrac{n(a_1+a_n)}{2}=na_1+\dfrac{n(n-1)}{2}d$。</li>
+<li>常见对数取值分界：$\lg 1=0$，$\lg 10=1$，$\lg 100=2$，$\lg 1000=3$，可用于确定 $[\lg a_n]$ 的区间划分。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>对于形如 $b_n=[f(n)]$（$f(n)$ 单调或易求）的数列求和问题，通用解法：
+1. <strong>求出原数列表达式</strong>：通过已知条件（等差/等比性质）求出 $a_n$ 或 $f(n)$ 的精确表达式。
+2. <strong>确定取整分段依据</strong>：令 $[f(n)]=k$（$k$ 为整数），解不等式 $k\le f(n)&lt;k+1$，得到 $n$ 的连续整数区间，从而确定哪些项取相同的整数值 $k$。
+3. <strong>计算各段项数</strong>：统计满足每个整数值 $k$ 的项数，注意首尾项序号，避免误算。
+4. <strong>分段求和</strong>：$S = \sum k \times (\text{该段项数})$，最后累加即得所求数列和。
+5. 若 $f(n)$ 不是整数线性函数（如含对数），常以 $10$ 的幂次为界划分区间，再结合单调性确定取值。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对取整定义理解偏差</strong>：误将 $[x]$ 当作四舍五入，或混淆“不超过”与“小于”。例如 $[2.6]=2$，而非 $3$；$[0.9]=0$，而非 $1$。对负数时更需谨慎，但现行试题多避免负数。</li>
+<li><strong>分段区间端点确定错误</strong>：取整值 $k$ 对应的 $x$ 范围是 $k\le x&lt;k+1$，左闭右开。若误写成 $k &lt; x\le k+1$ 将导致项数偏移。例如 $\lg a_n \ge 1$ 时，$[\lg a_n]=1$ 对应 $1\le \lg a_n&lt;2$，即 $10\le a_n&lt;100$。</li>
+<li><strong>数列项数计数失误</strong>：在等差数列中，由 $a_n$ 的取值范围反推 $n$ 的项数时，需正确解不等式。如 $a_n=n$，求 $[\lg n]=1$ 的项数，应为 $n=10$ 到 $99$，共 $90$ 项，容易漏计 $n=10$ 或错计 $n=100$。</li>
+<li><strong>忽略首项特殊值</strong>：如 $\lg 1=0$，$[\lg 1]=0$，与 $n=2\sim9$ 同为 $0$，合并项数需注意所有分段均覆盖，避免缺漏或重复。</li>
+<li><strong>求和时忘记对应取值</strong>：分段后直接加项数，忘记乘以该段对应的整数值 $k$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2016 文 17）</h3>
+<p><strong>题目</strong><br />
+等差数列 ${a_n}$ 满足 $a_3+a_4=4$，$a_5+a_7=6$。<br />
+（Ⅰ）求通项 $a_n$；<br />
+（Ⅱ）设 $b_n=[a_n]$，求 ${b_n}$ 的前 $10$ 项和。</p>
+<p><strong>思路</strong><br />
+利用等差数列性质构造关于 $a_1,d$ 的方程组求出通项，然后直接计算前 $10$ 项 $a_n$ 值，依取整定义写出 $b_n$，最后分组求和。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）设公差为 $d$，由 $a_3+a_4=4$ 得 $2a_1+5d=4$，由 $a_5+a_7=6$ 得 $2a_1+10d=6$。<br />
+两式相减得 $5d=2$，即 $d=\dfrac{2}{5}$，代入得 $a_1=1$。<br />
+所以 $$a_n=1+(n-1)\cdot\frac{2}{5}=\frac{2n+3}{5}.$$  </p>
+<p>（Ⅱ）将 $n=1$ 到 $10$ 代入：<br />
+$a_1=1,\ a_2=1.4,\ a_3=1.8,\ a_4=2.2,\ a_5=2.6,\ a_6=3.0,\ a_7=3.4,\ a_8=3.8,\ a_9=4.2,\ a_{10}=4.6.$<br />
+取整得 $b_1=b_2=b_3=1$；$b_4=b_5=2$；$b_6=b_7=b_8=3$；$b_9=b_{10}=4$。<br />
+前 $10$ 项和 $S_{10}=3\times1+2\times2+3\times3+2\times4=24$。</p>
+<p><strong>点评/变式</strong><br />
+本题取整对象是等差数列本身，直接列项即可。若 $n$ 较大（如求 $S_{100}$），需解出 $[a_n]=k$ 对应的 $n$ 范围再分段求和：<br />
+由 $\dfrac{2n+3}{5}&lt; k+1$ 得 $n&lt; \dfrac{5k+2}{2}$，结合 $n$ 为正整数可批量求项数，避免逐项计算。此题可变为 $b_n=[\log_2 a_n]$ 等，引入对数后需结合单调性分段。</p>
+<h3>代表题2（2016 理 17）</h3>
+<p><strong>题目</strong><br />
+$S_n$ 为等差数列 ${a_n}$ 的前 $n$ 项和，$a_1=1$，$S_7=28$，记 $b_n=[\lg a_n]$。<br />
+（Ⅰ）求 $b_1,b_{11},b_{101}$；<br />
+（Ⅱ）求 ${b_n}$ 的前 $1000$ 项和。</p>
+<p><strong>思路</strong><br />
+由 $a_1,S_7$ 求出 $d$，得通项 $a_n=n$；进而 $b_n=[\lg n]$，利用 $\lg n$ 的单调性及整数分界点 $1,10,100,1000$ 分段，统计各段项数并乘相应 $k$ 值，求和。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）由 $S_7=7a_1+21d=28$，$a_1=1$，解得 $d=1$，故 $a_n=n$。<br />
+于是 $b_1=[\lg 1]=0$；$b_{11}=[\lg 11]=1$（因为 $1\le \lg 11&lt;2$）；$b_{101}=[\lg 101]=2$（因为 $2\le \lg 101&lt;3$）。</p>
+<p>（Ⅱ）求 $S_{1000}=\sum_{n=1}^{1000} b_n$，按 $b_n$ 的值分段：<br />
+- $b_n=0$：$1\le n \le 9$（共 $9$ 项，注意 $n=1$ 时 $\lg 1=0$，取整为 $0$；$n=9$ 时 $\lg 9&lt;1$），该项数和为 $0$。<br />
+- $b_n=1$：$10\le n \le 99$，共 $90$ 项，和为 $90\times 1=90$。<br />
+- $b_n=2$：$100\le n \le 999$，共 $900$ 项，和为 $900\times 2=1800$。<br />
+- $b_n=3$：$n=1000$ 一项，和为 $3$。<br />
+因此 $S_{1000}=0+90+1800+3=1893$。</p>
+<p><strong>点评/变式</strong><br />
+本题关键是将 $\lg n$ 的值域用 $[0,1),[1,2),[2,3)$ 划分，对应 $n$ 的范围恰为 $[1,10),[10,100),[100,1000)$。数清各区间内整数个数（注意开闭）即可。可变式为 $b_n=[\log_2 a_n]$ 或 $b_n=[\sqrt{a_n}]$，核心仍是利用单调性确定分段区间。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-17.html">2016-文-17</a>（2016 · 中） 等差数列通项公式与性质，结合取整函数求数列前10项和</li>
+<li><a href="../../exam/数学/2016-理-17.html">2016-理-17</a>（2016 · 中） 本题通过等差数列前n项和与对数取整函数，考查通项公式求解及新定义数列的求和。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1163-取整函数.html">取整函数</a></li>
+</ul>
+</div>
+</body>
+</html>

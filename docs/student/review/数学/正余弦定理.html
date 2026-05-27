@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正余弦定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正余弦定理</h1><div class="review-mark" data-stem="正余弦定理"></div><div class="meta-card"><span><strong>考点</strong>正余弦定理</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦定理</strong>：$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$（$R$ 为外接圆半径），可直接用于“边化角”或“角化边”。</li>
+<li><strong>余弦定理</strong>：$a^2 = b^2 + c^2 - 2bc\cos A$，$\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}$。适用于已知两边夹角求对边，或已知三边求角。</li>
+<li><strong>三角形面积公式</strong>：$S_{\triangle ABC} = \dfrac12 ab\sin C = \dfrac12 ac\sin B = \dfrac12 bc\sin A$。</li>
+<li><strong>诱导公式与两角和差</strong>：$\sin C = \sin(A+B)$，$\cos C = -\cos(A+B)$（利用 $A+B+C=\pi$）。</li>
+<li><strong>同角关系</strong>：$\sin^2\alpha + \cos^2\alpha = 1$；由 $\cos\alpha$ 求 $\sin\alpha$ 时，需根据角 $\alpha$ 所在的区间确定 $\sin\alpha$ 的符号（三角形内角 $\in(0,\pi)$，正弦恒正）。</li>
+<li><strong>边角互化原则</strong>：遇到齐次式（边的一次或二次齐次式），优先使用正弦定理或余弦定理转化为纯边或纯角关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断已知与求解</strong>：明确已知条件（边、角）、待求量（边、角、面积等），画出三角形示意图。</li>
+<li><strong>利用内角关系</strong>：若所求角不是直接已知，则写为 $\sin C = \sin(A+B)$ 或 $\cos C = -\cos(A+B)$，再用两角和/差公式展开。</li>
+<li><strong>由余弦值求正弦值</strong>：根据 $\cos A, \cos B$，利用 $\sin A = \sqrt{1-\cos^2 A}$，注意三角形内角正弦均正，免去符号讨论（若 $\cos A$ 为负则 $A$ 为钝角，$\sin A$ 仍取正值）。</li>
+<li><strong>选取定理求边</strong>：若已知两角一边（如 $a$ 和 $A,B$），用正弦定理 $\dfrac{b}{\sin B} = \dfrac{a}{\sin A}$ 求另一边。</li>
+<li><strong>面积计算</strong>：代入 $S = \frac12 ab\sin C$ 或 $S = \frac12 bc\sin A$ 等，优先选用已知两边及其夹角的公式。</li>
+<li><strong>检验合理性</strong>：最后检查所求边长、面积是否为正，角是否满足内角和，钝角情形是否矛盾。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将 $\sin C = \sin A + \sin B$</strong>：正确为 $\sin C = \sin(A+B)$，切勿与加法混淆。</li>
+<li><strong>求 $\sin A$ 时忽略钝角可能</strong>：如 $\cos A = -\dfrac{5}{13}$，则 $A\in(\frac{\pi}{2},\pi)$，但 $\sin A$ 仍取正数 $\dfrac{12}{13}$，不可误取负值或丢掉。</li>
+<li><strong>正弦定理求角时忽视多解</strong>：已知两边及其中一边的对角时，三角形可能两解，必须根据“大边对大角”或内角和检验，本题采用求边而非求角可避开此陷阱。</li>
+<li><strong>面积公式选错边角对</strong>：$S =\frac12 ab\sin C$ 中必须是边 $a,b$ 的夹角 $C$，不能随意代入用错角。</li>
+<li><strong>忽略单位与最终形式</strong>：长度、面积要带单位作答（若题目无单位，保留数值即可），并注意化简为最简形式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题1</strong>：2008-文-17（2008）</h3>
+<p><strong>题目</strong>：在 $\triangle ABC$ 中，已知 $\cos A = -\dfrac{5}{13}$，$\cos B = \dfrac{3}{5}$。<br />
+（Ⅰ）求 $\sin C$ 的值；<br />
+（Ⅱ）设 $BC = 5$，求 $\triangle ABC$ 的面积。</p>
+<p><strong>思路</strong>：<br />
+$C$ 与 $A,B$ 满足 $C = \pi - (A+B)$，故 $\sin C = \sin(A+B)$。由已知余弦求对应正弦，然后利用两角和正弦公式。第（Ⅱ）问中 $BC = a = 5$（对边为 $A$），先用正弦定理求出另一边 $b = AC$ 或 $c = AB$，再代入面积公式 $S = \frac12 ab\sin C$ 或 $S = \frac12 bc\sin A$。</p>
+<p><strong>步骤</strong>：
+1. 由 $\cos A = -\dfrac{5}{13}$，$A\in(0,\pi)$，$\sin A = \sqrt{1-\cos^2 A} = \dfrac{12}{13}$。<br />
+   由 $\cos B = \dfrac{3}{5}$，$\sin B = \sqrt{1-\cos^2 B} = \dfrac{4}{5}$。
+2. $\sin C = \sin[\pi - (A+B)] = \sin(A+B)$<br />
+   $= \sin A\cos B + \cos A\sin B$<br />
+   $= \dfrac{12}{13}\cdot\dfrac{3}{5} + \left(-\dfrac{5}{13}\right)\cdot\dfrac{4}{5} = \dfrac{36}{65} - \dfrac{20}{65} = \dfrac{16}{65}$。
+3. 由正弦定理 $\dfrac{BC}{\sin A} = \dfrac{AC}{\sin B}$，得 $AC = b = \dfrac{BC \cdot \sin B}{\sin A} = \dfrac{5 \times \dfrac{4}{5}}{\dfrac{12}{13}} = \dfrac{4}{\dfrac{12}{13}} = \dfrac{13}{3}$。
+4. 面积 $S = \dfrac12 \cdot BC \cdot AC \cdot \sin C = \dfrac12 \times 5 \times \dfrac{13}{3} \times \dfrac{16}{65} = \dfrac{1}{2} \times \dfrac{65}{3} \times \dfrac{16}{65} = \dfrac{8}{3}$。</p>
+<p><strong>点评/变式</strong>：<br />
+本题核心在于用两角和公式求 $\sin C$，并注意符号。若条件改为 $\cos A$ 与 $\cos B$ 的具体数值，务必先判断角度范围，再由平方关系开方取正。变式可求 $\cos C$、$BC$ 边上的高，或给出角的范围结合正弦定理求多解情况。记住：三角形中角的正弦恒正，余弦的符号直接反映锐角/钝角，这是易得分的关键细节。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-文-17.html">2008-文-17</a>（2008 · 中） △ABC中cosA=-5/13、cosB=4/5，利用两角和公式求sinC，再由正弦定理求BC=5时三角形面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正余弦定理</a></li>
+</ul>
+</div>
+</body>
+</html>

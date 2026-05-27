@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散数学</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>离散数学</h1><div class="review-mark" data-stem="离散数学"></div><div class="meta-card"><span><strong>考点</strong>离散数学</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择12</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>序列基本概念</strong>：给定有限符号集（如 ${0,1}$），一个 $n$ 周期序列是指满足 $a_{i+n}=a_i$（$i$ 为任意下标）的无穷序列，研究时只需关注其一个完整周期内的取值。</li>
+<li><strong>自相关函数</strong>：对于周期为 $N$ 的序列 ${a_i}$，其（非归一化）自相关函数常定义为 $C(k)=\sum_{i=1}^{N} a_i a_{i+k}$，其中下标按模 $N$ 理解。当序列取值仅为 $0$ 或 $1$ 时，$C(k)$ 等于两个平移版本对应位置同时为 $1$ 的个数。</li>
+<li><strong>周期序列的性质</strong>：对 $0$-$1$ 序列，$C(0)$ 等于一个周期内 $1$ 的个数 $w$。$C(k)$（$k \not\equiv 0 \pmod N$）的值介于 $0$ 与 $w$ 之间。在某些工程或数学问题中，要求对所有 $k \not\equiv 0 \pmod N$，$C(k)$ 不超过某个给定阈值 $\lambda$，这即为低自相关性约束。</li>
+<li><strong>问题转化方法</strong>：需找出所有满足 $C(k) \le \lambda$ 的周期序列，本质上是组合枚举与约束检验问题。由于周期和符号集均很小（如此题 $N=5$，$\lambda=1/5$ 可能对应归一化条件，实际计数 $C(k)$ 很可能须 $\le 0$ 或 $\le 1$ 等），通常需要结合对称性、移位等价性、$1$ 的个数 $w$ 分类讨论。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确参数与目标</strong>：将题意翻译为清晰数学条件。确定周期长度 $N$、符号集、自相关函数定义（特别注意是否归一化，本题题干中 $C(k)$ 若带分母 $5$ 且需要 $\le 1/5$，等价于传统的计数型自相关 $C(k)_{\text{count}} \le 1$）。</li>
+<li><strong>固定 $1$ 的个数 $w$ 分类</strong>：由于 $C(0)=w$，对 $0$-$1$ 序列的不同可能 $w$（$0$ 到 $N$）分别考虑。$w=0$ 或 $w=1$ 时往往容易满足低自相关要求。</li>
+<li><strong>生成与检验</strong>：对每种 $w$，列举所有互不等价的序列（将序列视为环状，消除移位等价性）。对每个候选序列，计算所有 $k=1,2,\dots,N-1$ 的 $C(k)$，检验不等式。</li>
+<li><strong>利用对称性与互补性</strong>：$0$-$1$ 序列的互补（$0,1$ 互换）有时不改变自相关分布（需注意 $C(k)$ 的定义是否关于 $1$ 对称）。排除明显会导致 $C(k)$ 过大的高密度序列（如 $w&gt; N\lambda$ 时必有某个 $k$ 使 $C(k)\ge 2$ 等），缩小搜索范围。</li>
+<li><strong>验证与作答</strong>：多选或单选题，需逐一核对选项描述中给出的特定序列或满足条件的序列数目，确保无遗漏、无重复，并注意序列的循环移位是否视为同一序列。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对 $C(k)$ 定义理解偏差</strong>：误将原文中的分数形式 $C(k)<em i_k="i+k">{\text{norm}} = \frac{1}{N}\sum a_i a</em>$ 当成整数计数 $C(k)<em i_k="i+k">{\text{count}} = \sum a_i a</em>$，导致约束条件转换错误。必须根据题干具体表达式和阈值匹配计算方式。</li>
+<li><strong>忽略移位等价性</strong>：计数时未将循环移位视为同一个序列，导致多选或计数结果偏大。除非题目明确说明序列是固定起点的，否则在离散周期序列问题中默认考虑移位等价。</li>
+<li><strong>遗漏边界情况</strong>：忘记检验 $k$ 取遍所有非零模 $N$ 值，特别是 $k$ 与 $N$ 不互素时的情况。有时仅凭部分 $k$ 值满足条件就下结论。</li>
+<li><strong>对“周期”理解不当</strong>：不善于利用 $a_{i}=a_{i+N}$ 的性质，在计算时不将下标映射回 $1$ 到 $N$ 的范围，导致自相关求和出错。</li>
+<li><strong>枚举分类不严谨</strong>：在手动或少类枚举时，对 $w$ 较大时的序列结构分析不够，没能快速排除那些必然导致两个非零移位 $1$ 重叠超过阈值的密集排列，浪费时间和精力。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2020-理-12）关于0-1周期序列与自相关函数 $C(k)$ 的问题，选项涉及满足 $C(k)\le 1/5$ 的5周期序列的判定或计数。</p>
+<p><strong>思路</strong>：本题实际是针对周期 $N=5$ 的 $0$-$1$ 序列，要求归一化自相关 $C(k)=\frac{1}{5}\sum_{i=1}^5 a_i a_{i+k}$ 对于 $k=1,2,3,4$ 均 $\le 1/5$。这等价于非归一化的计数自相关 $C_{\text{count}}(k)\le 1$。因此，在一个周期内，任何两个不同距离的 $1$ 都不能同时为 $1$ 两次及以上。我们将通过分析 $1$ 的个数 $w$ 来枚举所有可能序列。</p>
+<p><strong>步骤</strong>：
+1.  <strong>$w=0$ 或 $w=1$</strong>：全 $0$ 序列或仅一个 $1$ 的序列，显然对所有 $k\neq0$ 有 $C_{\text{count}}(k)=0\le 1$，均满足。
+2.  <strong>$w=2$ 的情况</strong>：设两个 $1$ 在周期内距离为 $d$（$1\le d \le 2$，因距离 $d$ 与 $5-d$ 对称）。只有距离 $d=1$ 的相邻两个 $1$，如序列 $(1,1,0,0,0)$。计算其自相关：$C_{\text{count}}(1)=1$（因为平移1位后两个 $1$ 刚好有一个重合），其余 $C_{\text{count}}(k)=0$，满足条件。距离 $d=2$ 同理。
+3.  <strong>$w=3$ 的情况</strong>：三个 $1$ 会产生三对距离。若要使所有 $C_{\text{count}}(k)\le 1$，意味着不能有任何一对 $1$ 的距离重复或被 $1$ 的多重重叠导致某 $C_{\text{count}}(k)\ge 2$。序列 $(1,1,0,1,0)$ 中有相邻和间隔1个0的组合，检验发现会有某个 $k$ 使得重叠计数达到 $2$，不满足条件。实际上，$w=3$ 时，5个位置中选3个，必有两个 $1$ 相邻或间距为1，加上第三个 $1$ 的移位，很容易导致 $C(1)$ 或 $C(2)\ge 2$。经逐类检验，无 $w=3$ 的序列满足要求。
+4.  <strong>$w\ge 4$</strong>：$1$ 的密度过高，自相关必然产生大于 $1$ 的重叠，不可能满足条件。
+5.  <strong>结论</strong>：所有满足条件的序列必然是 $w=0,1$ 或 $w=2$ 且两个 $1$ 间距任意（可相邻或间隔一个 $0$）。但注意，原题通常将此作为多选题中的逻辑推断，根据选项选出正确的序列特性或计数。</p>
+<p><strong>点评/变式</strong>：这道题表面涉及“自相关函数”的新定义，但通过归一化分析转化为“非零移位下的 $1$ 重叠数 $\le 1$”这个清晰的组合约束。解题核心在于“翻译”条件，并利用小周期 $N=5$ 进行有限分类。考生失分往往在于未能将分数形式的不等式正确转化为计数不等式，直接陷入复杂计算。变式可将周期改为 $N=7$，阈值调整为 $2/7$，或者将符号集改为 ${-1,1}$ 考察不同序列性质，但解题思路（翻译条件、按 $1$ 的个数分类枚举、利用对称性）完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-12.html">2020-理-12</a>（2020 · 难） 0-1 周期序列与自相关函数 C(k)，多选满足 C(k)≤1/5 的 5 周期序列。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">离散数学</a></li>
+</ul>
+</div>
+</body>
+</html>

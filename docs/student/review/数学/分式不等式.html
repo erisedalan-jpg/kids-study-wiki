@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分式不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分式不等式</h1><div class="review-mark" data-stem="分式不等式"></div><div class="meta-card"><span><strong>考点</strong>分式不等式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>分式不等式标准形式：$\frac{f(x)}{g(x)}&gt;0$ 或 $\frac{f(x)}{g(x)}&lt;0$（含 $\ge,\le$）。</li>
+<li>等价转化：</li>
+<li>$\frac{f(x)}{g(x)}&gt;0 \iff f(x)g(x)&gt;0$（分母不为零自动满足）</li>
+<li>$\frac{f(x)}{g(x)}&lt;0 \iff f(x)g(x)&lt;0$</li>
+<li>$\frac{f(x)}{g(x)}\ge0 \iff \begin{cases} f(x)g(x)\ge0 \ g(x)\neq0 \end{cases}$</li>
+<li>$\frac{f(x)}{g(x)}\le0 \iff \begin{cases} f(x)g(x)\le0 \ g(x)\neq0 \end{cases}$</li>
+<li>常见可化为分式不等式的情形：移项通分，化为 $\frac{A(x)}{B(x)}&gt;0$ 形式，切不可随意去分母。</li>
+<li>结合绝对值不等式的解集：$|x|&gt;a \ (a&gt;0) \iff x&gt;a \text{ 或 } x&lt;-a$；$|x|&lt;a \iff -a&lt;x&lt;a$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化简每个不等式为最简形式</strong>  </li>
+<li>对于绝对值不等式，直接写解集；对于分式不等式，移项使右边为 $0$，分子分母统一化为乘积形式。</li>
+<li><strong>分式化整式</strong>  </li>
+<li>将 $\frac{f(x)}{g(x)}&gt;0$（$&lt;0$）转化为 $f(x)g(x)&gt;0$（$&lt;0$）；若带等号，需附加分母不为零。</li>
+<li><strong>解整式不等式</strong>  </li>
+<li>求对应方程根，用数轴穿根法或二次函数图像得解集。</li>
+<li><strong>求交集（或并集，依题意）</strong>  </li>
+<li>画数轴，确定公共部分，注意端点取舍（分母限制与定义域）。</li>
+<li><strong>检验与作答</strong>  </li>
+<li>验证端点是否符合条件，尤其分母为零的点必须剔除。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>去分母错误</strong>：直接两边同乘分母（未知正负），导致不等号方向不确定。正确做法是移项通分。</li>
+<li><strong>解分式不等式忽略分母不为零</strong>：在 $\ge0$ 或 $\le0$ 时易把使分母为零的 $x$ 纳入解集，需额外剔除。</li>
+<li><strong>绝对值不等式方向混淆</strong>：$|x|&gt;3$ 表示到原点距离大于 $3$，是“两根之外”；$|x|&lt;a$ 是“两根之内”。</li>
+<li><strong>求交集时忽视端点</strong>：例如集合 $A$ 是开区间，集合 $B$ 是开区间，交集端点应为开，但习惯性写成闭区间。</li>
+<li><strong>数轴穿根法奇穿偶不穿误用</strong>：在含有 $(x-a)^n$ 因子时注意奇次幂穿过、偶次幂反弹。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2009 理科）设集合 $A={x \mid |x|&gt;3}$，$B=\left{x \mid \frac{x-1}{x-4}&lt;0\right}$，求 $A\cap B$。  </p>
+<p><strong>思路</strong>：先分别解出 $A$ 和 $B$ 中不等式的解集，然后利用数轴求两集合的交集。  </p>
+<p><strong>步骤</strong>：<br />
+1. 解 $|x|&gt;3$：由绝对值不等式得 $x&gt;3$ 或 $x&lt;-3$，故 $A=(-\infty,-3)\cup(3,+\infty)$。<br />
+2. 解 $\frac{x-1}{x-4}&lt;0$：等价于 $(x-1)(x-4)&lt;0$，解得 $1&lt;x&lt;4$，且分母 $x-4\neq0$ 自然满足，故 $B=(1,4)$。<br />
+3. 求 $A\cap B$：数轴上 $A$ 是 $(-\infty,-3)\cup(3,+\infty)$，$B$ 是 $(1,4)$，公共部分为 $(3,4)$。<br />
+4. 对应选项 B。  </p>
+<p><strong>点评/变式</strong>：本题为基础分式不等式与绝对值不等式结合求交集的题型。陷阱点在于考生可能在解分式不等式时错误去分母，或忽略分母不为零导致区间端点误判。<br />
+- <strong>变式</strong>：若 $B=\left{x \mid \frac{x-1}{x-4}\le0\right}$，则解集为 $[1,4)$，注意 $4$ 取不到。若求 $A\cap B$，结果为 $[1,4)$ 与 $(-\infty,-3)\cup(3,+\infty)$ 的交集 $(3,4)$，进一步考察端点取值。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-02.html">2009-理-02</a>（2009 · 易） 本题通过绝对值不等式与分式不等式求集合的交集，属于基础运算题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/696-分式不等式.html">分式不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

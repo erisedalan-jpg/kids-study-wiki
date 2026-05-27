@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>极值点判别</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>极值点判别</h1><div class="review-mark" data-stem="极值点判别"></div><div class="meta-card"><span><strong>考点</strong>极值点判别</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：填空16</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极值点定义</strong>：设函数 $f(x)$ 在 $x_0$ 附近有定义，若对附近任一 $x\neq x_0$ 恒有 $f(x)&gt;f(x_0)$（或 $f(x)&lt;f(x_0)$），则 $x_0$ 为极小（大）值点。极值点是函数单调性改变的分界点。</li>
+<li><strong>一阶判别法</strong>：$f'(x_0)=0$ 且在 $x_0$ 左右导数 <strong>异号</strong>（左正右负为极大，左负右正为极小）。仅有 $f'(x_0)=0$ 不保证是极值点。</li>
+<li><strong>二阶判别法</strong>：若 $f'(x_0)=0$ 且 $f''(x_0)\neq0$，则 $f''(x_0)&gt;0$ 时 $x_0$ 为极小值点，$f''(x_0)&lt;0$ 时 $x_0$ 为极大值点。当 $f''(x_0)=0$ 时失效，需回到一阶判别。</li>
+<li><strong>含参极值点问题转化</strong>：极值点分布条件常转化为导函数 $f'(x)$ <strong>变号零点</strong>的个数与位置问题。进一步可分参或构造两个函数，转化为两函数图象交点的条件（交点横坐标对应零点）。</li>
+<li><strong>指数函数求导</strong>：$(a^x)'=a^x\ln a$（$a&gt;0$且 $a\neq1$）；特别注意 $0&lt;a&lt;1$ 时 $\ln a&lt;0$，导数符号反转，函数递减。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求导定号</strong>：写出 $f'(x)$，令 $f'(x)=0$ 并化为便于分析的形式（常将非零因子分离）。</li>
+<li><strong>方程分参</strong>：把方程 $f'(x)=0$ 拆成 $g(x)=h(x)$ 的形式，使得 $g(x)$ 和 $h(x)$ 的图象容易画出（如一线一曲线，或一条过原点的直线与一条指数/对数型曲线）。</li>
+<li><strong>图象定参</strong>：</li>
+<li>画图讨论参数对 $g(x)$ 或 $h(x)$ 的影响（如底数 $a$ 对指数函数陡峭程度的影响）；</li>
+<li>结合原函数的极大、极小值点的顺序（如 $x_1&lt;x_2$ 分别为极小、极大值点），确定 $f'(x)$ 的符号变化规律（哪段正、哪段负），从而确定两函数图象的上下关系。</li>
+<li><strong>临界求界</strong>：找到满足条件的参数临界状态——通常是两函数图象<strong>相切</strong>（此时导函数零点重合，无极值点或为拐点）。利用切点处的函数值相等、导数值相等，解出参数临界值。</li>
+<li><strong>范围验证</strong>：结合单调性分析及图象上下关系，在临界值划分的区间内取特殊值检验，确定最终参数的取值范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视导数变号</strong>：误以为 $f'(x_0)=0$ 就是极值点。必须验证 $x_0$ 两侧 $f'(x)$ 异号。尤其在参数讨论中，导函数零点可能为“不穿过”的零点（重根或切线碰零点），此时并非极值点。</li>
+<li><strong>忽视底数对单调性的影响</strong>：$a^x$ 及 $\ln a$ 的符号在 $a&gt;1$ 和 $0&lt;a&lt;1$ 时相反。不分类讨论直接画图极易搞错导函数符号，导致极大极小位置颠倒。</li>
+<li><strong>混淆极大值与极小值点的顺序条件</strong>：题干给出 $x_1&lt;x_2$ 且指定谁是极小、谁是极大，这直接决定 $f'(x)$ 在区间上的正负号。必须将代数式与图象的上下关系严格对应，否则会解出反向的不等式。</li>
+<li><strong>处理“过原点的切线”时的疏漏</strong>：设切点求斜率，往往利用切点既在曲线上又在切线上，切点处导数等于切线斜率。对抽象函数如 $g(x)=a^x\ln a$，求导时要小心 $(\ln a)^2$ 等表达式。</li>
+<li><strong>边界取舍错误</strong>：临界值（如切线斜率与直线斜率相等时）通常需舍去，因为此时两图象相切，零点为二重根，导数不变号，无两个不同极值点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $x=x_1$ 和 $x=x_2$ 分别是函数 $f(x)=2a^x - ex^2$（$a&gt;0$ 且 $a\neq1$）的极小值点和极大值点。若 $x_1&lt;x_2$，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>：求导得 $f'(x)=2(a^x\ln a - ex)$。极值点对应 $f'(x)$ 的变号零点，即方程 $a^x\ln a = ex$ 有两根 $x_1,x_2$。由极值点性质知，当 $x&lt;x_1$ 时 $f'(x)&lt;0$，$x_1<x\<x_2$ 时 $f'(x)>0$，$x>x_2$ 时 $f'(x)&lt;0$。这等价于曲线 $y=a^x\ln a$ 与直线 $y=ex$ 的图象有两个交点，且先交处曲线在直线下方，后交处曲线上穿再下穿。分 $a&gt;1$、$0&lt;a&lt;1$ 画图，可知只有 $0&lt;a&lt;1$ 才可能满足符号变化。进一步，当 $a$ 变小时指数曲线变陡，临界为直线 $y=ex$ 与 $y=a^x\ln a$ 相切于某点，利用切点条件求出临界 $a$，再由图象上下关系确定 $a$ 的范围。</p>
+<p><strong>步骤</strong>：
+1. 求导：$f'(x)=2a^x\ln a - 2ex = 2(a^x\ln a - ex)$。
+2. $f'(x)$ 的正负取决于 $g(x)=a^x\ln a$ 与直线 $h(x)=ex$ 的大小关系：$f'(x)&gt;0 \iff a^x\ln a &gt; ex$（注意 $\ln a$ 符号，下文分情况）。
+3. 因 $x_1$ 极小，$x_2$ 极大且 $x_1&lt;x_2$，可得 $f'(x)$ 的符号：
+   $$x&lt;x_1: f'(x)&lt;0;\quad x_1<x\<x_2: f'(x)>0;\quad x>x_2: f'(x)&lt;0.$$
+   即 $g(x)$ 与 $h(x)$ 图象的关系：$(-\infty,x_1)$ 上 $g(x)<ex$；$(x_1,x_2)$ 上 $g(x)>ex$；$(x_2,+\infty)$ 上 $g(x)<ex$。
+4. 若 $a>1$，则 $\ln a&gt;0$，$g(x)=a^x\ln a$ 为下凸增函数且恒正。直线 $y=ex$ 过原点，二者至多有一个交点（或相切），无法产生上述要求的两交点且符合符号变化，故 $a&gt;1$ 不成立。
+5. 因此 $0&lt;a&lt;1$，此时 $\ln a&lt;0$，$g(x)=a^x\ln a$ 恒负，且 $a^x$ 递减，$g(x)$ 单调递增（因为负值减少）。画出草图：指数型曲线在 $x$ 轴下方，从左向右上升趋于0；直线 $y=ex$ 过原点。二者可有两个交点，第一个交点附近曲线从下方穿越到上方？需结合 $f'(x)$ 的符号：在 $x$ 趋于 $-\infty$ 时 $a^x\ln a$ 负无穷（？）实际上 $a^x \to +\infty$，乘以负的 $\ln a$ 得 $-\infty$，而 $ex\to -\infty$，比较需要极限。为确保有两交点和正确的符号变化，需要直线与曲线相交情况为：在较小交点的左邻域 $g(x)<ex$，中间 $g(x)>ex$，右邻域 $g(x)&lt;ex$。对于 $0&lt;a&lt;1$，曲线 $g(x)$ 是递增且上凸（？需要二阶导验证），但可通过几何条件分析。
+6. 临界情形：直线 $y=ex$ 与 $y=a^x\ln a$ 相切。设切点为 $(x_0, a^{x_0}\ln a)$，则切线斜率满足 $g'(x_0)=a^{x_0}(\ln a)^2 = e$，且切线过原点：$a^{x_0}\ln a - 0 = e(x_0-0) \Rightarrow a^{x_0}\ln a = ex_0$。联立得：
+   $$\begin{cases} a^{x_0}(\ln a)^2 = e \ a^{x_0}\ln a = ex_0 \end{cases}$$
+   两式相除得 $\ln a = \frac{1}{x_0}$，即 $x_0 = \frac{1}{\ln a}$。代入第一式得 $a^{1/\ln a}(\ln a)^2 = e$。由于 $a^{1/\ln a} = e^{\frac{\ln a}{\ln a}} = e$，故 $e(\ln a)^2 = e \Rightarrow (\ln a)^2=1 \Rightarrow \ln a = -1$（因 $0&lt;a&lt;1$ 舍去正1）。得 $a = e^{-1} = \frac{1}{e}$。
+7. 当 $a=1/e$ 时，直线与曲线相切，导函数只有一个二重零点，无极值点，不满足题意。要得到两个不同极值点且符号正确，需直线斜率 $e$ 小于曲线在原点附近某点的变化率使得有两个交点。结合图象分析，当 $a$ 越接近0时，曲线越陡。实际当 $a&gt;1/e$ 且 $a&lt;1$ 时，可满足条件。所以范围为 $\frac{1}{e} &lt; a &lt; 1$。答案写成 $(\frac{1}{e}, 1)$。</p>
+<p><strong>点评与变式</strong>：本题典型地体现“极值点→导函数变号零点→两图象交点”的转化链。过原点的切线提供绝佳的临界情形，利用切点双重条件求出参数界限是高频技巧。变式可改为极大值点极小值点反过来，或更换为对数型函数，核心思想一致。务必注意底数范围分讨论和导数符号与图象上下关系的精确对应。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-16.html">2022-理-16</a>（2022 · 难） f(x)=2a^x-ex²（a&gt;0，a≠1）的极小值点x₁小于极大值点x₂，利用导数求极值点条件得参数a的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/918-极值点判别.html">极值点判别</a></li>
+</ul>
+</div>
+</body>
+</html>

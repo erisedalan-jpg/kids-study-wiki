@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弦长</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>弦长</h1><div class="review-mark" data-stem="弦长"></div><div class="meta-card"><span><strong>考点</strong>弦长</span><span><strong>权重</strong>36</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：36</li>
+<li>真题数：11；年份跨度：2009–2023</li>
+<li>出现题位：填空15 解答19 解答20 解答23 选择7 选择8 选择9 选择10</li>
+<li>难度分布：中10 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>通用弦长公式</strong>：直线 $y=kx+m$ 与圆锥曲线交于 $A(x_1,y_1),B(x_2,y_2)$，则
+  $$|AB|=\sqrt{1+k^2}|x_1-x_2|=\sqrt{1+\frac1{k^2}}|y_1-y_2|,$$
+  其中 $|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1x_2}$，由联立方程消元后利用韦达定理求得。</li>
+<li><strong>圆的弦长</strong>：半径 $R$，弦心距为 $d$，则 $|AB|=2\sqrt{R^2-d^2}$。</li>
+<li><strong>直线参数方程</strong>：若 $\begin{cases}x=x_0+t\cos\alpha\y=y_0+t\sin\alpha\end{cases}$（$t$ 为参数），代入曲线得 $at^2+bt+c=0$，则 $|AB|=|t_1-t_2|=\frac{\sqrt{\Delta}}{|a|}$。</li>
+<li><strong>抛物线焦点弦</strong>：</li>
+<li>对于 $y^2=2px\ (p&gt;0)$，过焦点的弦长 $|AB|=x_1+x_2+p$。</li>
+<li>若焦点弦倾斜角为 $\theta$，则 $|AB|=\frac{2p}{\sin^2\theta}$。</li>
+<li>通径（垂直对称轴）：$|AB|=2p$。</li>
+<li><strong>椭圆与双曲线的焦点弦通径</strong>：过焦点且垂直焦点所在轴的弦长分别为 $\frac{2b^2}{a}$（椭圆）和 $\frac{2b^2}{a}$（双曲线）。</li>
+<li><strong>抛物线的焦点弦性质</strong>：以焦点弦为直径的圆与准线相切（抛物线特有）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直线与曲线联立</strong>：设出直线方程，代入曲线消元，得到一元二次方程，利用韦达定理得两根和与积，代入弦长公式。</li>
+<li><strong>圆中优先几何法</strong>：求圆心到直线的距离 $d$，再使用 $2\sqrt{R^2-d^2}$ 求弦长，避开繁琐代数。</li>
+<li><strong>焦点弦的特殊处理</strong>：若是抛物线、椭圆、双曲线的焦点弦，优先考虑用定义转化到焦点距离，或用焦点弦长公式（如倾斜角公式）简化计算。</li>
+<li><strong>多曲线通径比较</strong>：抓住“过焦点且与坐标轴垂直”这一条件，直接写出各自的通径表达式，利用长度关系建立方程。</li>
+<li><strong>弦长与面积结合</strong>：若已知三角形面积，通常利用 $S=\frac12\times|AB|\times h$，其中 $h$ 是点（如原点或圆心）到弦所在直线的距离，从而建立关于参数的方程。</li>
+<li><strong>参数方程求弦长</strong>：将直线标准参数方程代入曲线，利用 $t$ 的几何意义直接求 $|t_1-t_2|$，无需再乘额外的系数（前提是 $t$ 系数平方和为1）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视斜率不存在的情况</strong>：设直线方程为 $y=kx+m$ 时漏掉 $x=x_0$ 这类竖直线，导致丢解。</li>
+<li><strong>圆的弦长公式误用</strong>：直接用含 $k$ 的通用公式，计算繁琐且易错；未先求弦心距。</li>
+<li><strong>抛物线焦点弦长公式记错开口方向</strong>：$|AB|=\frac{2p}{\sin^2\theta}$ 仅适用于 $y^2=2px$ 且焦点在 $x$ 轴正半轴；若为 $x^2=2py$，应用 $|AB|=\frac{2p}{\cos^2\theta}$ 或重新推导。</li>
+<li><strong>参数方程 $t$ 的意义</strong>：直线参数方程必须化成 $(\cos\alpha,\sin\alpha)$ 作为方向向量的标准形式，否则 $|t_1-t_2|$ 不直接等于弦长，还需乘以方向向量的模。</li>
+<li><strong>联立后未限制判别式</strong>：在求参数范围或检验答案时，漏掉 $\Delta&gt;0$ 导致参数取值错误。</li>
+<li><strong>弦长公式中 $k$ 与 $\frac1k$ 混淆</strong>：使用 $x$ 差时乘 $\sqrt{1+k^2}$，使用 $y$ 差时乘 $\sqrt{1+\frac1{k^2}}$，不可互换。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2023·新课标Ⅱ·10（多选题）</h3>
+<p><strong>题目</strong>：设 $O$ 为原点，直线 $y=\sqrt{3}(x-1)$ 过抛物线 $C:y^2=2px(p&gt;0)$ 的焦点，且与 $C$ 交于 $M,N$ 两点，$l$ 为 $C$ 的准线，判断选项的正误。
+<strong>思路</strong>：由直线过焦点得 $p$ 值，联立直线与抛物线求 $M,N$ 坐标，用焦点弦公式算长度；利用抛物线定义证明几何位置关系；计算距离判断等腰。
+<strong>步骤</strong>：
+1. （A）直线 $y=\sqrt{3}(x-1)$ 恒过点 $(1,0)$，故焦点 $F(1,0)$，得 $\frac p2=1$，$p=2$，A 正确。
+2. （B）联立 $\begin{cases}y=\sqrt{3}(x-1)\y^2=4x\end{cases}$，消 $y$ 得 $3(x-1)^2=4x\Rightarrow 3x^2-10x+3=0$，解得 $x_1=3,x_2=\frac13$。由 $|</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-10.html">2023-新课标Ⅱ-10</a>（2023 · 中） 抛物线焦点与弦长计算，结合圆与等腰三角形的几何性质判断选项正误</li>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-15.html">2023-新课标Ⅱ-15</a>（2023 · 中） 该题考查直线与圆相交的弦长、点到直线距离及三角形面积，求参数。</li>
+<li><a href="../../exam/数学/2020-文-19.html">2020-文-19</a>（2020 · 中） 本题考查椭圆与抛物线的标准方程及几何性质，利用交点坐标求弦长并计算离心率。</li>
+<li><a href="../../exam/数学/2016-理-23.html">2016-理-23</a>（2016 · 中） 本题要求将圆的直角坐标方程转化为极坐标方程，并利用直线参数方程与弦长求斜率。</li>
+<li><a href="../../exam/数学/2015-理-23.html">2015-理-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程化为普通方程，并求解两曲线交点及弦长的最大值。</li>
+<li><a href="../../exam/数学/2014-文-10.html">2014-文-10</a>（2014 · 中） 本题考查抛物线焦点弦长度的计算，通过焦点和倾斜角求直线方程，联立抛物线利用弦长公式求解。</li>
+<li><a href="../../exam/数学/2012-文-10.html">2012-文-10</a>（2012 · 难） 通过等轴双曲线与抛物线准线相交的弦长求双曲线实轴长。</li>
+<li><a href="../../exam/数学/2012-理-08.html">2012-理-08</a>（2012 · 中） 等轴双曲线与抛物线准线相交，已知弦长求实轴长。</li>
+<li><a href="../../exam/数学/2011-理-07.html">2011-理-07</a>（2011 · 中） 该题通过直线与双曲线相交得到弦长关系，求双曲线离心率。</li>
+<li><a href="../../exam/数学/2010-文-20.html">2010-文-20</a>（2010 · 中） 椭圆中焦点弦长计算，结合等差数列性质求弦长和椭圆参数。</li>
+<li><a href="../../exam/数学/2009-理-09.html">2009-理-09</a>（2009 · 中） 直线与抛物线相交，利用焦点和比例关系求直线斜率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/866-弦长.html">弦长</a></li>
+</ul>
+</div>
+</body>
+</html>

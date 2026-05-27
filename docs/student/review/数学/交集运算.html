@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>交集运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>交集运算</h1><div class="review-mark" data-stem="交集运算"></div><div class="meta-card"><span><strong>考点</strong>交集运算</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>17</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：16</li>
+<li>真题数：17；年份跨度：2008–2022</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易17</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>交集定义</strong><br />
+  由所有属于集合 $A$ <strong>且</strong> 属于集合 $B$ 的元素组成的集合，称为 $A$ 与 $B$ 的交集，记作 $A \cap B$，即<br />
+  $A \cap B = {x | x \in A \text{ 且 } x \in B}$。<br />
+  这是“公共元素”的提取，不可把两集合的所有元素直接合并。</p>
+</li>
+<li>
+<p><strong>常见集合表示法</strong>  </p>
+</li>
+<li>列举法：$A={1,2,3}$，元素逐一写出。  </li>
+<li>描述法：$B={x | x&gt;1}$，依条件确定元素。  </li>
+<li>区间表示：连续实数的集合常用区间 $(-\infty,1)$、$(0,2]$ 等。  </li>
+<li>
+<p>注意整数集 $\mathbb{Z}$、自然数集 $\mathbb{N}$ 等限定（如 $x \in \mathbb{Z}$ 只能取整数）。</p>
+</li>
+<li>
+<p><strong>基本流程</strong>：先化简每个集合（解不等式、具体列出元素等），再求公共部分。<br />
+  常用工具：<strong>数轴</strong> 是求连续集合交集的最直观方法。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别集合类型</strong>  </li>
+<li>若为有限个离散元素（列举法），直接看两集合共有元素。  </li>
+<li>若为连续范围（描述法/不等式/区间），画数轴找重叠区间。  </li>
+<li>
+<p>混合型（离散 + 连续）：先由连续范围过滤，再从中取离散值（特别注意整数条件）。</p>
+</li>
+<li>
+<p><strong>化简集合</strong>  </p>
+</li>
+<li>解不等式时注意符号法则、分解因式、绝对值意义。如 $|x|&lt;3 \Rightarrow -3&lt;x&lt;3$；$x^2&lt;9 \Rightarrow -3&lt;x&lt;3$。  </li>
+<li>
+<p>注意整数约束，要把连续解精确到符合 $\mathbb{Z}$ 的具体数值。</p>
+</li>
+<li>
+<p><strong>进行交运算</strong>  </p>
+</li>
+<li>离散集合：取两集合共有的元素组成的集合。  </li>
+<li>连续集合：数轴上取同时属于两部分的公共区间，严格按照端点大小写交集。  </li>
+<li>
+<p>混合型：先将离散元素代入连续条件，筛选出满足条件的元素。</p>
+</li>
+<li>
+<p><strong>检验端点与特殊点</strong>  </p>
+</li>
+<li>严格按“大于/小于”是否带等号判断端点取舍。  </li>
+<li>若交集是单元素或空集，直接写出 $\varnothing$ 或 ${\,}$，不要猜测。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>混淆“交集”与“并集”</strong>：交集取公共部分；并集才是把两部分合在一起加去重。<br />
+  看见 $A \cap B$ 绝不能把两集合所有元素全写上。</p>
+</li>
+<li>
+<p><strong>忽略元素取舍条件</strong><br />
+  不等式解集如果附加 $x\in\mathbb{Z}$ 或 $x\in\mathbb{N}$，必须把连续解变为具体整数。如 $|x|&lt;3, x\in\mathbb{Z}$ 得 ${-2,-1,0,1,2}$，不能再写成 $(-3,3)$。</p>
+</li>
+<li>
+<p><strong>错判空集</strong>：若两个条件无公共部分，交集就是 $\varnothing$，不能乱填全集或单边集合。</p>
+</li>
+<li>
+<p><strong>端点开闭出错</strong>：区间交集的端点遵循“就严不就松”，开闭以同时满足两个条件为准。<br />
+  如 $A=(1,3], B=(2,4)$ 时，$A\cap B=(2,3]$，左端开、右端闭。</p>
+</li>
+<li>
+<p><strong>描述法未化简直接交</strong>：例如 $S={s\mid s=2n+1,n\in\mathbb{Z}}$ 与 $T={t\mid t=4n+1,n\in\mathbb{Z}}$ 代表奇数集与其子集，应通过分析集合间的包含关系求解，而不是直接联立方程。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong></h3>
+<p>已知 $M={2,4,6,8,10}$，$N={x\mid -1&lt;x&lt;6}$，求 $M\cap N$。<br />
+<strong>思路</strong>：$M$ 是有限列举集，$N$ 是不等式描述的连续集，属于混合型。需从 $M$ 中筛选满足 $-1&lt;x&lt;6$ 的元素。<br />
+<strong>步骤</strong>：将 $M$ 中元素逐一代入 $N$ 的条件。<br />
+- $2\in(-1,6)$，保留；$4\in(-1,6)$，保留。<br />
+- $6$ 不满足 $x&lt;6$（等于不取），舍去；$8,10$ 均大于 $6$，舍去。<br />
+所以 $M\cap N={2,4}$。<br />
+<strong>点评</strong>：连续范围端点等号决定取舍。若条件改为 $x\leq 6$，则 $6$ 也符合，交集变为 ${2,4,6}$。</p>
+<h3><strong>题目2</strong></h3>
+<p>已知 $S={s\mid s=2n+1, n\in\mathbb{Z}}$，$T={t\mid t=4n+1, n\in\mathbb{Z}}$，求 $S\cap T$。<br />
+<strong>思路</strong>：两集合都用描述法给出，应先分析代表的数集特征，明确包含关系。<br />
+<strong>步骤</strong>：$S$ 是所有奇数集（$2n+1$ 遍历 $\cdots,-3,-1,1,3,5,\cdots$）。<br />
+$T$ 是除以 $4$ 余 $1$ 的整数（$4n+1$ 形如 $\cdots,-7,-3,1,5,9,\cdots$），显然 $T$ 中每一个元素都是奇数，因此 $T\subseteq S$。<br />
+当 $T\subseteq S$ 时，$S\cap T=T$。<br />
+<strong>点评</strong>：若分别列举再取公共部分也能得出，但直接用包含关系更简洁。注意不要错误地联立 $2n_1+1=4n_2+1$ 并强行解参数，那是求两集合相等的条件，不是交运算基本方法。</p>
+<h3><strong>题目3</strong></h3>
+<p>已知 $A={x\mid|x|&lt;3, x\in\mathbb{Z}}$，$B={x\mid|x|&gt;1, x\in\mathbb{Z}}$，求 $A\cap B$。<br />
+<strong>思路</strong>：先分别将含绝对值的不等式转化为区间，再用整数条件精确到具体元素，最后取交集。<br />
+<strong>步骤</strong>：<br />
+- $|x|&lt;3 \Rightarrow -3&lt;x&lt;3$，结合 $x\in\mathbb{Z}$ 得 $A={-2,-1,0,1,2}$。<br />
+- $|x|&gt;1 \Rightarrow x&lt;-1\text{ 或 }x&gt;1$，结合 $x\in\mathbb{Z}$ 得 $B={\cdots,-4,-3,-2,2,3,4,\cdots}$（只需写出与 $A$ 有关的范围即可）。<br />
+- 取公共整数元素：$A$ 中小于 $-1$ 的有 $-2$（$-3$ 不在 $A$ 中），大于 $1$ 的有 $2$。<br />
+故 $A\cap B={-2,2}$。<br />
+<strong>点评</strong>：绝对值不等式转换容易忽略整数约束而产生连续区间答案；另外 $|x|&gt;1$ 的解集是两段分开的区间，取交时要分段对照。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-01.html">2022-文-01</a>（2022 · 易） 求集合M和N的交集，直接利用交集定义计算。</li>
+<li><a href="../../exam/数学/2021-理-02.html">2021-理-02</a>（2021 · 易） 该题考查集合包含关系与交集运算，并涉及全称命题与存在性命题的真假判断。</li>
+<li><a href="../../exam/数学/2020-文-01.html">2020-文-01</a>（2020 · 易） 解绝对值不等式化简集合A和B，再根据交集定义求解。</li>
+<li><a href="../../exam/数学/2019-文-01.html">2019-文-01</a>（2019 · 易） 利用数轴求集合的交集运算。</li>
+<li><a href="../../exam/数学/2019-理-01.html">2019-理-01</a>（2019 · 易） 本题主要考查集合的交集运算和一元二次不等式的解法。</li>
+<li><a href="../../exam/数学/2018-文-02.html">2018-文-02</a>（2018 · 易） 求两个有限集合的交集</li>
+<li><a href="../../exam/数学/2017-理-02.html">2017-理-02</a>（2017 · 易） 本题考查集合交集运算，通过交集元素求参数并确定集合。</li>
+<li><a href="../../exam/数学/2016-文-01.html">2016-文-01</a>（2016 · 易） 已知集合A和B，求解交集，考查集合表示与交集运算。</li>
+<li><a href="../../exam/数学/2015-理-01.html">2015-理-01</a>（2015 · 易） 该题主要考查集合的交集运算及一元二次不等式的解法。</li>
+<li><a href="../../exam/数学/2014-文-01.html">2014-文-01</a>（2014 · 易） 考查集合交集运算，涉及二次方程求解。</li>
+<li><a href="../../exam/数学/2013-文-01.html">2013-文-01</a>（2013 · 易） 求两集合的交集，运用交集定义求解。</li>
+<li><a href="../../exam/数学/2013-理-01.html">2013-理-01</a>（2013 · 易） 求一元二次不等式解集并计算与已知整数集合的交集。</li>
+<li><a href="../../exam/数学/2011-文-01.html">2011-文-01</a>（2011 · 易） 求集合交集与子集个数</li>
+<li><a href="../../exam/数学/2010-文-01.html">2010-文-01</a>（2010 · 易） 本题主要考查含绝对值不等式和根式不等式的集合求解及交集运算。</li>
+<li><a href="../../exam/数学/2010-理-01.html">2010-理-01</a>（2010 · 易） 考查集合交集运算，需解绝对值不等式并注意集合元素为整数。</li>
+<li><a href="../../exam/数学/2008-文-02.html">2008-文-02</a>（2008 · 易） 整数集合M={m∈Z|-3&lt;m&lt;2}与N={n∈Z|-1≤n≤3}的交集运算，考查集合交集定义。</li>
+<li><a href="../../exam/数学/2008-理-01.html">2008-理-01</a>（2008 · 易） 此题考查集合的列举法表示与交集运算，需根据给定不等式确定整数集合并求公共元素。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/646-交集运算.html">交集运算</a></li>
+</ul>
+</div>
+</body>
+</html>

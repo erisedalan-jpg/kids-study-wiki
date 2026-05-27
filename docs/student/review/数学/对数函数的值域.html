@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数的值域</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数函数的值域</h1><div class="review-mark" data-stem="对数函数的值域"></div><div class="meta-card"><span><strong>考点</strong>对数函数的值域</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择10</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对数函数的值域</strong>：形如 $y=\log_a x\ (a&gt;0,\ a\neq 1)$ 的函数，其值域为 $\mathbb{R}$。无论底数 $a$ 为何值，只要 $x$ 取遍 $(0,+\infty)$，$y$ 就能取遍一切实数。</li>
+<li><strong>与对数相关的复合函数值域</strong>：</li>
+<li>若 $f(x)$ 的值域包含于 $(0,+\infty)$，则 $y=\log_a f(x)$ 的值域由 $f(x)$ 的范围和 $a$ 决定。一般先求 $u=f(x)$ 的值域，再求 $y=\log_a u$ 的值域。</li>
+<li>特别注意恒等式 $y=a^{\log_a x}=x\ (x&gt;0)$，其本质是定义域受限的恒等函数，定义域为 $(0,+\infty)$，值域也为 $(0,+\infty)$，而非 $\mathbb{R}$。</li>
+<li><strong>常见基本初等函数的值域与定义域对比</strong>（高频考点）：</li>
+<li>$y=x$：定义域 $\mathbb{R}$，值域 $\mathbb{R}$；</li>
+<li>$y=\lg x$（或 $y=\log_a x$）：定义域 $(0,+\infty)$，值域 $\mathbb{R}$；</li>
+<li>$y=a^x\ (a&gt;0,a\neq 1)$：定义域 $\mathbb{R}$，值域 $(0,+\infty)$；</li>
+<li>$y=\sqrt{x}$：定义域 $[0,+\infty)$，值域 $[0,+\infty)$；</li>
+<li>$y=\dfrac{1}{\sqrt{x}}$：定义域 $(0,+\infty)$，值域 $(0,+\infty)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分步求定义域、值域</strong>：对于复合型或隐含限制的函数，先确定自变量的取值范围（定义域），再通过解析式分析因变量的所有可能取值（值域），不可想当然。</li>
+<li><strong>恒等式变形注意定义域</strong>：如 $y=10^{\lg x}$ 可化为 $y=x$，但此变形要求 $x&gt;0$，所以定义域不是 $\mathbb{R}$ 而是 $(0,+\infty)$，值域随之限定。处理对数、偶次根式等常见限制时，必须将变形前后的定义域约束同步考虑。</li>
+<li><strong>选项对比排除法</strong>：对于定义域和值域均需匹配的选择题，可先比较定义域排除部分选项，再比较值域，或直接选取熟悉的基本函数进行最值、范围分析。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>将 $y=10^{\lg x}$ 等同于 $y=x$</strong>，误认为定义域和值域均为 $\mathbb{R}$，忽略了对数真数 $x&gt;0$ 的限制。</li>
+<li><strong>混淆 $y=\lg x$ 的值域</strong>：误认为值域是 $(0,+\infty)$，实际对数函数值域为 $\mathbb{R}$，可正可负可零。</li>
+<li><strong>误判 $y=\sqrt{x}$ 的值域</strong>：其值域为 $[0,+\infty)$，而题目要求 $(0,+\infty)$（不含 $0$），容易忽略端点差异导致错选。</li>
+<li><strong>未全面考虑限制条件</strong>：如 $y=\frac{1}{\sqrt{x}}$ 定义域 $x&gt;0$ 且值域 $y&gt;0$，若只想到分母不为零而忘记偶次根式下非负，则会错选 $y=\sqrt{x}$ 等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题（2016·全国卷文·10）</h3>
+<p><strong>题目</strong>：下列函数中，其定义域和值域分别与函数 $y=10^{\lg x}$ 的定义域和值域相同的是（ ）
+A. $y=x$　　B. $y=\lg x$　　C. $y=2^x$　　D. $y=\dfrac{1}{\sqrt{x}}$</p>
+<p><strong>思路</strong>：
+第一步，求出给定函数 $y=10^{\lg x}$ 的定义域和值域。由 $\lg x$ 有意义得 $x&gt;0$，值域由 $10^{\lg x}=x\ (x&gt;0)$ 得 $y&gt;0$，即均为 $(0,+\infty)$。
+第二步，逐一分析各选项的定义域和值域，找出与 $(0,+\infty)$ 完全一致的选项。</p>
+<p><strong>步骤</strong>：
+1. $y=10^{\lg x}$：定义域 $\lbrace x\mid x&gt;0\rbrace=(0,+\infty)$；值域 $\lbrace y\mid y&gt;0\rbrace=(0,+\infty)$。
+2. A：$y=x$，定义域 $\mathbb{R}$，值域 $\mathbb{R}$，不满足。
+3. B：$y=\lg x$，定义域 $(0,+\infty)$，值域 $\mathbb{R}$，不满足。
+4. C：$y=2^x$，定义域 $\mathbb{R}$，值域 $(0,+\infty)$，不满足。
+5. D：$y=\dfrac{1}{\sqrt{x}}$，由 $x&gt;0$ 得定义域 $(0,+\infty)$；由 $\sqrt{x}&gt;0$ 得 $\frac{1}{\sqrt{x}}&gt;0$，值域 $(0,+\infty)$，完全匹配。</p>
+<p><strong>点评/变式</strong>：
+- 本题核心不是直接考对数函数值域，而是考恒等变形下的定义域限制与常见函数值域的记忆。$a^{\log_a x}=x$ 仅在 $x&gt;0$ 时成立。
+- <strong>变式</strong>：函数 $y=\lg(x^2+1)$ 的值域是（ ）
+  - 分析：$x^2+1\geq 1$，则 $y=\lg u,\ u\geq 1$，值域为 $[0,+\infty)$。
+  - 注意：不能认为 $x^2+1&gt;0$ 就得到值域 $\mathbb{R}$，必须考虑内层函数最小值限制。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-10.html">2016-文-10</a>（2016 · 易） 比较函数定义域和值域，判断与y=10^{lgx}相同的函数</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">对数函数的值域</a></li>
+</ul>
+</div>
+</body>
+</html>

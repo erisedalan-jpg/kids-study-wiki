@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中点条件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>中点条件</h1><div class="review-mark" data-stem="中点条件"></div><div class="meta-card"><span><strong>考点</strong>中点条件</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>中点坐标公式</strong>：若 $A(x_1,y_1)$，$B(x_2,y_2)$，则 $AB$ 中点 $M\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$。已知中点可反求端点坐标。</li>
+<li><strong>抛物线标准方程与几何要素</strong>：$y^2=2px$（$p&gt;0$）焦点 $F\left(\frac p2,0\right)$，准线 $x=-\frac p2$。本题 $y^2=8x\Rightarrow p=4$，$F(2,0)$，准线 $x=-2$。</li>
+<li><strong>抛物线的定义</strong>：抛物线上任意一点到焦点的距离等于它到准线的距离。常用来“化斜为直”求距离。</li>
+<li><strong>坐标轴上的点</strong>：$y$ 轴上点横坐标为 $0$，可设为 $N(0,y_0)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定点——设元</strong>：根据点在坐标轴或曲线上的位置，合理设出未知点的坐标（尽量单参数）。</li>
+<li><strong>中点反演</strong>：利用“已知端点和中点，求另一端点”或“已知两端点写中点”，按中点公式建立等量关系，用已知点表示未知点。</li>
+<li><strong>代入曲线</strong>：将表示出的点代入所在曲线方程，解出参数。</li>
+<li><strong>距离转化</strong>：求线段长度时优先考虑能否用定义（如抛物线定义）转化，避免复杂平方根运算；若不行则用两点间距离公式 $d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$。</li>
+<li><strong>整体求解</strong>：若所求为两倍关系（如 $|FN|=2|FM|$），可先求 $|FM|$ 再乘 $2$，减少计算量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记坐标轴上的点的特征</strong>：$y$ 轴上点横坐标为 $0$，$x$ 轴上点纵坐标为 $0$，设坐标时漏写导致无法建立方程。</li>
+<li><strong>中点公式用反</strong>：误以为 $x_M=\frac{x_M+x_N}{2}$ 之类。牢记中点坐标是两端点坐标的算术平均。</li>
+<li><strong>抛物线定义错用</strong>：焦点坐标和准线方程与 $p$ 的关系记混（$y^2=2px$ 焦点 $(\frac p2,0)$，准线 $x=-\frac p2$），导致距离算错。</li>
+<li><strong>开方漏正负</strong>：在 $y^2=8x$ 中求出 $y$ 时忽略 $\pm$，但本题求长度，最终结果不受影响，若求坐标则需完整写出。</li>
+<li><strong>误求 $|FM|$ 当答案</strong>：审题不细，题目问 $|FN|$，而由中点关系 $|FN|=2|FM|$，忘记乘 $2$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017 全国Ⅰ理 16）已知 $F$ 是抛物线 $C:y^2=8x$ 的焦点，$M$ 是 $C$ 上一点，$FM$ 的延长线交 $y$ 轴于点 $N$。若 $M$ 为 $FN$ 的中点，则 $|FN|=$ ______。</p>
+<p><strong>思路</strong><br />
+由 $F$ 坐标与 $N$ 在 $y$ 轴上，设 $N(0,n)$，用中点公式反表示 $M$ 坐标，代入抛物线解出 $n$，再用定义求 $|FM|$，最后得到 $|FN|=2|FM|$。</p>
+<p><strong>步骤</strong><br />
+1. 由 $y^2=8x$ 得 $p=4$，焦点 $F(2,0)$，准线 $x=-2$。<br />
+2. 设 $N(0,n)$，因 $M$ 为 $FN$ 中点，则<br />
+   $$M\left(\frac{2+0}{2},\frac{0+n}{2}\right)=\left(1,\frac n2\right).$$<br />
+3. $M$ 在抛物线上，代入 $y^2=8x$：<br />
+   $$\left(\frac n2\right)^2=8\times1\Rightarrow \frac{n^2}{4}=8\Rightarrow n^2=32\Rightarrow n=\pm4\sqrt2.$$<br />
+4. 由抛物线定义，$M$ 到焦点的距离等于到准线的距离：<br />
+   $$|FM|=x_M+\frac p2=1+2=3.$$<br />
+5. $M$ 为中点，故 $|FN|=2|FM|=6$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题巧用中点将双参数转化为单参数，再借定义避开了平方根计算，是解析几何中“设而不求”“定义转化”的经典范例。<br />
+- 变式：若改为 $N$ 在 $x$ 轴上，$M$ 为 $FN$ 中点，求 $|FN|$；思路类似，只不过 $N$ 纵坐标为 $0$，表示 $M$ 后代入时需注意方程结构变化。<br />
+- 也可追问 $\triangle OFN$ 的面积等，训练多角度应用同一几何关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-16.html">2017-理-16</a>（2017 · 中） 抛物线y²=8x焦点F，M在抛物线上，FM延长线交y轴于N，M为FN中点，利用抛物线焦半径和中点条件求|FN|。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">中点条件</a></li>
+</ul>
+</div>
+</body>
+</html>

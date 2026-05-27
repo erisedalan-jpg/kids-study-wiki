@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>概率应用</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>概率应用</h1><div class="review-mark" data-stem="概率应用"></div><div class="meta-card"><span><strong>考点</strong>概率应用</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2020–2020</li>
+<li>出现题位：选择3 选择4</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>概率的基本性质</strong>：必然事件概率为 $1$，不可能事件概率为 $0$；若事件 $A$ 与 $\overline{A}$ 对立，则 $P(\overline{A}) = 1 - P(A)$。</li>
+<li><strong>事件关系的理解</strong>：“超过”与“不超过”互为对立事件；“不小于”等价于“大于或等于”。</li>
+<li><strong>概率应用模型</strong>：将实际问题中的条件转化为概率语言，利用“在某一概率保证下求所需资源”的逆向推理。常见的情形是：已知某随机变量的分布或某一特殊事件的概率，求使某个有利事件发生的概率不低于给定阈值的参数。</li>
+<li><strong>考纲要求</strong>：能根据实际问题建立简单的概率模型，进行基本的数据处理与决策判断。本例涉及临界情况分析，不涉及复杂的分布计算，属于概率与不等式、实际应用的交叉。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>转化对立事件</strong>：若题目给出 $P( X &gt; a) = p$，则立即得出 $P( X \leq a) = 1 - p$，这是这类题最关键的转换步骤。</li>
+<li><strong>确定安全边界</strong>：找到“使任务能够完成”的临界条件。通常取对立事件中能使问题得以解决的最大（或最小）数值，以满足题目所要求的概率下限。</li>
+<li><strong>建立数量关系</strong>：将概率的保证转化为关于资源的方程或不等式。例如，积压量 $+$ 当日最大新订单量 $\leq$ 自身能力 $+$ 志愿者能力。</li>
+<li><strong>求解并取整</strong>：解出所需人数、件数等。当结果不为整数时，一律按“进一法”向上取整，确保概率不低于给定值。</li>
+<li><strong>检验合理性</strong>：将求得的整数代回实际情境，确认满足题目中的概率约束。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误读“超过”与“不小于”</strong>：把 $P(X &gt; 1600) = 0.05$ 直接当作“新订单不超过 1600 的概率是 0.05”，导致对立事件概率算错。</li>
+<li><strong>遗忘已有积压</strong>：只考虑当日新订单，漏加前一天积压的订单，造成总任务量低估。</li>
+<li><strong>忽略自身能力</strong>：忘记超市自身每天能完成 1200 份配货，导致对志愿者数量的需求被严重高估。</li>
+<li><strong>直接用概率乘以订单数</strong>：将该概率与平均订单数混淆，试图用期望值代替临界值，这是考生常见的模型混淆错误。</li>
+<li><strong>取整方向错误</strong>：计算出 $18$ 时直接填 $18$，但如果计算结果是 $17.1$，有人认为可以舍去小数取 $17$，这会导致实际完成概率低于 $0.95$。资源类题目必须向上取整。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2020·全国卷·文科）</h3>
+<p><strong>题目</strong><br />
+在新冠肺炎疫情防控期间，某超市开通网上销售业务，每天能完成 $1200$ 份订单配货。由于订单量大增，某日积压 $500$ 份未配货，预计第二天新订单超过 $1600$ 份的概率为 $0.05$。志愿者每人每天能完成 $50$ 份订单的配货，为使第二天完成积压订单及当日订单的配货的概率不小于 $0.95$，至少需要志愿者多少名？</p>
+<p><strong>思路</strong><br />
+要求完成的概率不小于 $0.95$，关键是找到在 $0.95$ 概率保证下，第二天总订单数的最大值。由 $P(\text{新订单} &gt; 1600) = 0.05$，得 $P(\text{新订单} \leq 1600) = 0.95$。只要第二天总订单数不超过 $500 + 1600 = 2100$，且总配货能力能达到 $2100$，就能以 $0.95$ 的概率完成配货。由此建立不等式，解出所需志愿者人数。</p>
+<p><strong>步骤</strong><br />
+设第二天新订单数为 $X$，则 $P(X &gt; 1600) = 0.05$，故 $P(X \leq 1600) = 0.95$。<br />
+积压订单 $500$ 份，因此在 $0.95$ 的概率保证下，第二天最多需要处理的订单总数为 $500 + 1600 = 2100$ 份。<br />
+超市自身可完成 $1200$ 份，需志愿者完成的订单数为 $2100 - 1200 = 900$ 份。<br />
+设需要志愿者 $n$ 名，每人完成 $50$ 份，则有 $50n \geq 900$，解得 $n \geq 18$。<br />
+故至少需要志愿者 $18$ 名，选 B。</p>
+<p><strong>点评/变式</strong><br />
+本题属于最基础的概率实际应用题，核心仅用到对立事件的概率转换与一次不等式。很多考生误以为需要计算随机变量的期望，或忽略了已经积压的订单。<br />
+<strong>变式</strong>：若预计新订单超过 $1800$ 份的概率为 $0.1$，则 $0.9$ 保证下新订单 $\leq 1800$，总最大订单为 $500+1800=2300$，需志愿者完成 $1100$ 份，$50n \geq 1100$，至少 $22$ 人。可见，概率阈值与临界值的选择直接影响最终结果，必须严格按对立事件转化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-04.html">2020-文-04</a>（2020 · 中） 超市积压订单，已知新订单超过1600份的概率为0.05，志愿者每人每天完成50份，求保证完成概率不小于0.95所需最少志愿者人数。</li>
+<li><a href="../../exam/数学/2020-理-03.html">2020-理-03</a>（2020 · 中） 新冠疫情网售配货, 求使"次日清积压且配货概率不小于0.95"所需最少志愿者人数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/341-概率应用.html">概率应用</a></li>
+</ul>
+</div>
+</body>
+</html>

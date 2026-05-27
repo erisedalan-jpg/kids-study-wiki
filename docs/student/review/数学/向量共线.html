@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量共线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量共线</h1><div class="review-mark" data-stem="向量共线"></div><div class="meta-card"><span><strong>考点</strong>向量共线</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：21</li>
+<li>真题数：6；年份跨度：2008–2021</li>
+<li>出现题位：填空13 解答21</li>
+<li>难度分布：易4 难2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：方向相同或相反的两个非零向量称为共线向量（平行向量）。规定零向量与任意向量共线。</li>
+<li><strong>充要条件</strong>：向量 $\vec{a}$ 与 $\vec{b}$（$\vec{b} \neq \vec{0}$）共线 $\iff$ 存在唯一实数 $\lambda$，使得 $\vec{a} = \lambda \vec{b}$。</li>
+<li><strong>坐标表示</strong>：若 $\vec{a} = (x_1, y_1)$，$\vec{b} = (x_2, y_2)$，则 $\vec{a} \parallel \vec{b} \iff x_1 y_2 - x_2 y_1 = 0$（即交叉相乘相等）。等价地，当 $x_2, y_2$ 不为零时，有 $\frac{x_1}{x_2} = \frac{y_1}{y_2}$。</li>
+<li><strong>基底下的共线定理</strong>：若基底向量 $\vec{e}_1, \vec{e}_2$ 不共线，则向量 $m\vec{e}_1 + n\vec{e}_2$ 与 $p\vec{e}_1 + q\vec{e}_2$ 共线的充要条件为 $mq - np = 0$（系数交叉积相等），由存在实数 $t$ 使得系数成比例 $m = tp$，$n = tq$ 消去 $t$ 得到。</li>
+<li><strong>三点共线转化</strong>：$A,B,C$ 三点共线 $\iff \overrightarrow{AB} \parallel \overrightarrow{AC}$（有公共点），常结合向量的线性表示求解参数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>坐标直接代入法</strong><br />
+   给出两个向量的坐标，直接利用 $x_1y_2 - x_2y_1 = 0$ 列方程求解参数。<br />
+<em>适用</em>：向量坐标已明确给出或易求，多为选择填空题。</p>
+</li>
+<li>
+<p><strong>基底线性表示法（待定系数法）</strong><br />
+   当向量用同一组基底（基底不共线）的线性组合表示时，设出比例系数 $t$，建立向量等式：目标向量 $= t$ × 另一向量。再利用基底线性表示的唯一性，对应系数成比例，得到方程组求解。<br />
+   等价地，可直接用系数交叉积为零 $mq - np = 0$ 迅速得解。<br />
+<em>适用</em>：向量由不共线基底表示，如真题“$\lambda \vec{a} + \vec{b}$ 与 $\vec{a} + 2\vec{b}$ 平行”。</p>
+</li>
+<li>
+<p><strong>几何情境中的共线条件化归</strong><br />
+   在解析几何综合题中，向量共线常用来表示平行、坐标比例关系或点在线上。需要将几何条件转化为向量式或坐标等式，再与曲线方程联立求解。常用 $\overrightarrow{OP} = \lambda \overrightarrow{OQ}$ 或 $\overrightarrow{AB} \parallel \overrightarrow{CD}$ 建立坐标关系。<br />
+<em>适用</em>：直线与圆锥曲线中的存在性、位置关系问题。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记零向量审题</strong>：若向量 $\vec{b} = \vec{0}$，则 $a \parallel b$ 不能直接套用 $\vec{a} = \lambda \vec{b}$ 或坐标比例，需单独讨论。虽然真题多默认非零，但客观题要警惕。</li>
+<li><strong>坐标公式符号写错</strong>：共线条件易与垂直条件 $\vec{a} \perp \vec{b} \iff x_1x_2 + y_1y_2 = 0$ 混淆。记牢：<strong>共线是“交叉乘相减为零”，垂直是“横纵分别乘再相加为零”</strong>。</li>
+<li><strong>基底不共线的前提遗漏</strong>：应用 $mq - np = 0$ 或系数比例法时，必须确认基底不共线，否则定理失效。</li>
+<li><strong>消参不彻底</strong>：使用待定系数法引入参数 $t$ 后，忘了消去 $t$ 求原题参数，导致最后一步出错。</li>
+<li><strong>忽视方向比例</strong>：共线时 $\lambda$ 的正负反映同向或反向，应用题中有时需根据图形取舍，勿漏。</li>
+<li><strong>解析几何中盲目使用共线向量式</strong>：用 $\overrightarrow{OP} = \lambda \overrightarrow{OQ}$ 时，需保证 $O,P,Q$ 原点或定点正确对应，避免坐标写反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目1</strong>（2021文-13）：已知向量 $\vec{a} = (2,5)$，$\vec{b} = (\lambda, 4)$，若 $\vec{a} \parallel \vec{b}$，则 $\lambda = ____$。<br />
+<strong>思路</strong>：坐标已给出，直接应用共线坐标公式。<br />
+<strong>步骤</strong>：<br />
+由 $\vec{a} \parallel \vec{b}$ 得 $2 \times 4 - 5 \times \lambda = 0$，即 $8 - 5\lambda = 0$，解得 $\lambda = \frac{8}{5}$。<br />
+<strong>点评/变式</strong>：最基础的坐标共线题，熟练公式十秒内可解。变式：将 $\vec{b}$ 改为 $(\lambda, 30)$，则用 $\frac{2}{\lambda} = \frac{5}{30}$ 同样可解，注意 $\lambda \neq 0$。</p>
+<hr />
+<p><strong>题目2</strong>（2016文-13）：已知向量 $\vec{a} = (m, 4)$，$\vec{b} = (3, -2)$，且 $\vec{a} \parallel \vec{b}$，则 $m = ____$。<br />
+<strong>思路</strong>：利用 $x_1y_2 = x_2y_1$ 建立方程。<br />
+<strong>步骤</strong>：<br />
+由共线条件得 $m \times (-2) - 4 \times 3 = 0$，即 $-2m = 12$，所以 $m = -6$。<br />
+<strong>点评/变式</strong>：注意纵坐标有负号，不要忘记负号参与运算。若两向量坐标均含分数，可先通分再用交叉相乘法，绝对避免直接交叉乘时位数对错。</p>
+<hr />
+<p><strong>题目3</strong>（2015理-13）：设向量 $\vec{a}, \vec{b}$ 不平行，向量 $\lambda \vec{a} + \vec{b}$ 与 $\vec{a} + 2\vec{b}$ 平行，则实数 $\lambda = ____$。<br />
+<strong>思路</strong>：基底 $\vec{a}, \vec{b}$ 不共线，可用待定系数法，设系数 $t$ 建立等式。<br />
+<strong>步骤</strong>：<br />
+由平行可设 $\lambda \vec{a} + \vec{b} = t(\vec{a} + 2\vec{b})$，整理得 $(\lambda - t)\vec{a} + (1 - 2t)\vec{b} = \vec{0}$。<br />
+因为 $\vec{a}, \vec{b}$ 不平行，所以系数必为零：<br />
+$\begin{cases} \lambda - t = 0 \ 1 - 2t = 0 \end{cases}$，解得 $t = \frac{1}{2}$，代入得 $\lambda = \frac{1}{2}$。<br />
+<strong>点评/变式</strong>：这类不共线基底下的共线题，关键是“两次”系数对应相等。也可直接记成比例：$\frac{\lambda}{1} = \frac{1}{2}$（但需注意分母顺序对应），得出 $\lambda = \frac{1}{2}$。若题目改为 $\lambda \vec{a} + \mu \vec{b}$ 与 $2\vec{a} + 3\vec{b}$ 平行，则可列式 $\frac{\lambda}{2} = \frac{\mu}{3}$ 求参。核心是确保基底线性表示的唯一性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-13.html">2021-文-13</a>（2021 · 易） 考查平面向量平行的坐标条件，通过坐标比例关系求参数λ。</li>
+<li><a href="../../exam/数学/2016-文-13.html">2016-文-13</a>（2016 · 易） 已知两向量平行，利用向量共线的坐标表示求参数</li>
+<li><a href="../../exam/数学/2015-理-13.html">2015-理-13</a>（2015 · 易） 本题利用向量平行的条件，通过共线定理建立方程求解参数λ。</li>
+<li><a href="../../exam/数学/2009-理-21.html">2009-理-21</a>（2009 · 难） 椭圆及直线与椭圆综合题，已知离心率和原点到切线距离求椭圆方程，再探究是否存在定点满足向量关系</li>
+<li><a href="../../exam/数学/2008-理-13.html">2008-理-13</a>（2008 · 易） 本题通过向量共线条件求参数值，考查向量平行的坐标表示及运算。</li>
+<li><a href="../../exam/数学/2008-理-21.html">2008-理-21</a>（2008 · 难） 椭圆与直线相交，利用平行向量求参数，计算四边形面积最值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/743-向量共线.html">向量共线</a></li>
+</ul>
+</div>
+</body>
+</html>

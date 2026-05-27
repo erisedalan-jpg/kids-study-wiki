@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>长方体外接球</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>长方体外接球</h1><div class="review-mark" data-stem="长方体外接球"></div><div class="meta-card"><span><strong>考点</strong>长方体外接球</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择7</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：若一个多面体的所有顶点都在同一球面上，则称该球为多面体的外接球。</li>
+<li><strong>长方体外接球的定理</strong>：长方体的体对角线长等于其外接球的直径。这是由长方体与球心的对称性决定的——球心即长方体体对角线的中点。</li>
+<li><strong>核心公式</strong>（设长方体长、宽、高分别为 $a, b, c$）：</li>
+<li>体对角线长：$d = \sqrt{a^2 + b^2 + c^2}$  </li>
+<li>外接球半径：$R = \dfrac{d}{2} = \dfrac{\sqrt{a^2 + b^2 + c^2}}{2}$  </li>
+<li>外接球表面积：$S = 4\pi R^2$  </li>
+<li>外接球体积：$V = \dfrac{4}{3}\pi R^3$</li>
+<li><strong>适用条件</strong>：题干明确为“长方体的顶点都在一个球面上”或“长方体的外接球”，即可直接代入。特殊的，正方体是长方体的特例（$a=b=c$），公式同样适用。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别模型</strong>：判断几何体是否为长方体（含正方体），是否提及所有顶点在同一个球面上。</li>
+<li><strong>提取棱长</strong>：从题干中准确找出长、宽、高的值或比例，若有参数先保留符号运算。</li>
+<li><strong>计算体对角线</strong>：代入 $d = \sqrt{a^2+b^2+c^2}$，注意平方和的开方不要遗漏。</li>
+<li><strong>求半径</strong>：$R = \dfrac{d}{2}$，务必区分直径与半径。</li>
+<li><strong>求目标量</strong>：根据所求量（表面积 $S=4\pi R^2$ 或体积 $V=\frac{4}{3}\pi R^3$）直接计算。若给出的是倍数关系，可先整体平方或立方再乘系数，减少中间开方次数，提高准确率。</li>
+<li>技巧：求表面积时可先算 $R^2 = \dfrac{a^2+b^2+c^2}{4}$，则 $S = \pi (a^2+b^2+c^2)$，跳过开方直接得出答案。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>直径与半径混淆</strong>：体对角线等于直径，不是半径。求表面积或体积时忘记除以2，导致结果错误。</li>
+<li><strong>开方、平方误用</strong>：计算 $R^2$ 时直接将 $\dfrac{\sqrt{a^2+b^2+c^2}}{2}$ 写成 $\dfrac{a^2+b^2+c^2}{2}$，漏掉分母的平方。</li>
+<li><strong>表面积与体积公式误记</strong>：表面积是 $4\pi R^2$（系数4），体积是 $\frac{4}{3}\pi R^3$，二者容易写串。</li>
+<li><strong>棱长代入错误</strong>：遇到诸如 $2a$ 的长时，平方项应计算为 $(2a)^2 = 4a^2$，而不是 $2a^2$。</li>
+<li><strong>特殊图形混淆</strong>：对正方体误用对角线等于棱长的 $\sqrt{2}$ 倍等平面结论；必须使用体对角线（$\sqrt{3}a$ 倍棱长）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2010全国卷文7）：设长方体的长、宽、高分别为 $2a, a, a$，其顶点都在一个球面上，则该球的表面积为（ ）</p>
+<p><strong>思路</strong><br />
+长方体的外接球直径即为体对角线。先求体对角线长，得到半径，再代入球的表面积公式。直接套用结论 $S = \pi(a^2+b^2+c^2)$ 最为快捷。</p>
+<p><strong>步骤</strong><br />
+1. 记长 $l=2a$，宽 $w=a$，高 $h=a$。<br />
+2. 体对角线平方：$d^2 = l^2 + w^2 + h^2 = (2a)^2 + a^2 + a^2 = 4a^2 + a^2 + a^2 = 6a^2$。<br />
+3. 由 $R^2 = \dfrac{d^2}{4} = \dfrac{6a^2}{4} = \dfrac{3}{2}a^2$。<br />
+4. 表面积：$S = 4\pi R^2 = 4\pi \cdot \dfrac{3}{2}a^2 = 6\pi a^2$。<br />
+   （或用简化公式 $S = \pi d^2 = \pi \cdot 6a^2 = 6\pi a^2$）</p>
+<p><strong>点评</strong><br />
+此题纯考长方体外接球的直接公式套用，属于低档基础题，需保证绝对正确。注意长是 $2a$ 而非 $a$，这是很多考生易看错的点。变式：若改为正方体（长宽高等长），或给出表面积反求棱长，解法完全同源，务必形成条件反射——看到长方体顶点共球，立即联想体对角线即直径。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-文-07.html">2010-文-07</a>（2010 · 易） 已知长方体尺寸，求其外接球的表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">长方体外接球</a></li>
+</ul>
+</div>
+</body>
+</html>

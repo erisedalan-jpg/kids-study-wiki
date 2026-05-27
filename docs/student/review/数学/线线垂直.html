@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线线垂直</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>线线垂直</h1><div class="review-mark" data-stem="线线垂直"></div><div class="meta-card"><span><strong>考点</strong>线线垂直</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答19</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>线线垂直的判定定理</strong></li>
+<li>线面垂直性质：若一条直线垂直于一个平面，则该直线垂直于平面内的任意直线。符号表示：$l \perp \alpha, m \subset \alpha \Rightarrow l \perp m$。</li>
+<li>平行传递：若两直线平行，其中一条垂直于第三条直线，则另一条也垂直于第三条直线。即 $a \parallel b, b \perp c \Rightarrow a \perp c$。</li>
+<li>三垂线定理（影垂则斜垂，斜垂则影垂，高考非必写但必会）：平面内一条直线若垂直于斜线的射影，则垂直于斜线；反之亦然。</li>
+<li>勾股定理逆定理：在三角形中，若两边平方和等于第三边平方，则夹角为直角。</li>
+<li>
+<p>等腰三角形中线：等腰三角形底边上的中线垂直于底边。</p>
+</li>
+<li>
+<p><strong>本题核心来源</strong></p>
+</li>
+<li>菱形对角线互相垂直平分：$AC \perp BD$。</li>
+<li>折叠中的不变量：折叠前后，折痕两侧图形的内部度量性质不变，与折痕垂直的线段仍保持垂直。若原图形中 $EF \perp BD$，折叠后 $D'H \perp EF$ 依然成立（$H$ 为垂足）。</li>
+<li>平行与垂直的传递：由 $EF \parallel AC$ 及 $D'H \perp EF$ 推出 $AC \perp D'H$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>证明空间中线线垂直，一般按以下流程推进：</p>
+<ol>
+<li><strong>观察几何特征，抓平行或共面关系</strong></li>
+<li>先找平行四边形、菱形、三角形中位线等产生的平行关系，将待证垂直的直线平移到容易证明的位置。</li>
+<li>
+<p>本题利用菱形对边平行及 $AE=CF$ 得出 $EF \parallel AC$，将目标转化为证 $EF \perp HD'$ 或 $AC \perp HD'$ 的等价关系。</p>
+</li>
+<li>
+<p><strong>利用折叠不变性提取垂直</strong></p>
+</li>
+<li>
+<p>折叠问题中，折痕所在的直线 $EF$，折叠前后与折痕垂直的线段长度及角度不变。原平面图形中若 $BD \perp EF$，则翻折后 $D'H \perp EF$（$H$ 为 $EF$ 与 $BD$ 的交点），且 $D'H$ 仍在平面 $D'EF$ 内。</p>
+</li>
+<li>
+<p><strong>综合传递得证</strong></p>
+</li>
+<li>将已证垂直与平行关系结合，使用“若 $a \parallel b$，且 $b \perp c$，则 $a \perp c$”完成线线垂直证明。</li>
+<li>
+<p>若平行关系不直接，可证其中一直线垂直于另一直线所在平面，再用线面垂直性质推出线线垂直（本题用了更直接的传递）。</p>
+</li>
+<li>
+<p><strong>套用标准范式书写</strong></p>
+</li>
+<li>先交代已知和辅助线，逐句写明平行或垂直的依据，最后下结论，做到“因—理—果”清晰。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>模糊折叠前后变化的线线关系</strong></li>
+<li>
+<p>折痕 $EF$ 在折叠前后，其上点的位置、线段长度不变；但空间位置改变，尤其是与折痕不垂直的线段，其原来共面的垂直关系可能消失（如原图中 $AC \perp BD$，折后 $AC$ 与 $D'H$ 关系需重新证明）。不能直接将平面图形的垂直视为空间垂直，必须经过传递或求证。</p>
+</li>
+<li>
+<p><strong>错认折面内的垂线</strong></p>
+</li>
+<li>
+<p>原平面内 $EF \perp BD$，折后 $D'H$ 只是原 $BD$ 的一段，垂直于 $EF$ 的性质保留；但 $BH$ 段在底面，与 $D'H$ 不再共线，原 $BD \perp EF$ 的结论不能直接套用到 $BD'$ 上。务必区分“折痕垂线”和“原垂线的断裂”。</p>
+</li>
+<li>
+<p><strong>平行传递中方向混淆</strong></p>
+</li>
+<li>
+<p>由 $EF \parallel AC$ 和 $EF \perp HD'$，得 $AC \perp HD'$，必须写清传递依据：因为 $EF \parallel AC$，且 $EF \perp HD'$，故 $HD' \perp AC$。有些同学会漏写“因为 $EF \parallel AC$”，导致逻辑断档。</p>
+</li>
+<li>
+<p><strong>跳步漏证平面垂直关系</strong></p>
+</li>
+<li>虽然本题允许用平行传递，但如果企图用线面垂直证明，则需严格证明一条直线垂直于另一条所在平面。若找不到合适的平面，容易强行构造导致失分。所以首选题目中明晰的平行+垂直传递路径。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2016年新课标全国卷·文19）</h3>
+<p>菱形 $ABCD$ 的对角线 $AC$ 与 $BD$ 交于点 $O$，点 $E,F$ 分别在 $AD,CD$ 上，$AE=CF$，$EF$ 交 $BD$ 于点 $H$，将 $\triangle DEF$ 沿 $EF$ 折到 $\triangle D'EF$ 的位置。
+（Ⅰ）求证：$AC \perp HD'$。</p>
+<hr />
+<p><strong>思路</strong>
+目标证 $AC \perp HD'$。观察折叠平面图形：$ABCD$ 为菱形，$AC \perp BD$；由 $AE=CF$ 得 $EF \parallel AC$，从而 $EF \perp BD$。翻折后，$D'H$ 保持与折痕 $EF$ 垂直，即 $D'H \perp EF$。再利用 $EF \parallel AC$ 传递垂直，立即得 $AC \perp HD'$。全程只用平行性质和折叠不变量。</p>
+<hr />
+<p><strong>步骤</strong>
+1. 在菱形 $ABCD$ 中，由 $AE=CF$ 及 $AD \parallel CD$ 的比例关系可得 $EF \parallel AC$。（或通过三角形相似：$\triangle DEF \sim \triangle DAC$）
+2. 菱形对角线 $AC \perp BD$，结合 $EF \parallel AC$，得 $EF \perp BD$，故 $EF \perp HD$（$H$ 为 $EF$ 与 $BD$ 交点）。
+3. 将 $\triangle DEF$ 沿 $EF$ 翻折得到 $\triangle D'EF$，折痕 $EF$，原线段 $HD \perp EF$，翻折后对应线段 $HD' \perp EF$ 不变。
+4. 由 $HD' \perp EF$ 且 $EF \parallel AC$，根据“平行线中若一条垂直于某直线，则另一条也垂直于该直线”的性质，得 $HD' \perp AC$，即 $AC \perp HD'$。</p>
+<hr />
+<p><strong>点评与变式</strong>
+- <strong>点评</strong>：本题是“折纸问题+线线垂直”的典型基础题，关键抓住“折痕垂线保值”和“平行传递垂直”两步。折叠前必做的一件事是标注垂直与平行关系，折叠后立刻标出哪些垂直保留。
+- <strong>变式思考</strong>：若将菱形改为矩形，且 $E,F$ 为中点，$AC$ 变成某条对角线，证明翻折后某个线线垂直依然可类似操作。若题目要求证 $AC \perp$ 平面 $D'HB$ 等，则可先证线线垂直以后，再结合线面垂直判定，层层推进。遇到更复杂的翻折问题，常需先用勾股定理逆定理验算某些垂直线段（如 $OD'$ 是否垂直于底面），再综合线面垂直得出更多线线垂直。本题（Ⅱ）问求体积正是这样递进，请紧密结合第一问的垂直结论来找高。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-19.html">2016-文-19</a>（2016 · 难） 菱形ABCD折叠成立体图形后证明AC⊥HD'（线线垂直），再求五棱锥D'-ABCFE的体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1083-线线垂直.html">线线垂直</a></li>
+</ul>
+</div>
+</body>
+</html>

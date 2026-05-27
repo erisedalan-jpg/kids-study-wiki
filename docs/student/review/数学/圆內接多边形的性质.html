@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆內接多边形的性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆內接多边形的性质</h1><div class="review-mark" data-stem="圆內接多边形的性质"></div><div class="meta-card"><span><strong>考点</strong>圆內接多边形的性质</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>四点共圆的判定（定义法）</strong>：若平面内若干个点到某一定点的距离都相等，则这些点在以该定点为圆心、该距离为半径的同一个圆上。这是证明共圆最直接的方法，核心是找一个候选圆心，并证明距离相等。</li>
+<li><strong>菱形的性质</strong>：菱形的对角线互相垂直且平分；菱形的四条边都相等。由这两条可推出菱形被对角线分成的四个直角三角形全等。</li>
+<li><strong>直角三角形斜边中线定理</strong>：直角三角形斜边上的中线等于斜边的一半。在菱形中，各边中点与对角线交点连线恰好是所在直角三角形的斜边中线。</li>
+<li><strong>适用条件</strong>：几何图形中出现直角、中点、菱形（或正方形、矩形）对角线交点时，可优先考虑该定理组合，将“中点共圆”转化为“到对角线交点等距”。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>证明“一组点共圆”的标准套路（以本题为例）：
+1. <strong>画图并标点</strong>：作出几何图形，标出待证共圆的各点（如中点）和候选圆心（如菱形对角线交点）。
+2. <strong>寻找等量关系</strong>：利用已知图形的性质（菱形→垂直、等边；中点→中线），将各待证点到候选圆心的距离用同一线段长度表示（如 $\frac{1}{2}AB$）。
+3. <strong>运用定理架桥</strong>：
+   - 由菱形对角线垂直得直角三角形；
+   - 由中点得斜边中线；
+   - 由斜边中线定理得 $OM=ON=OP=OQ=\frac{1}{2}AB$。
+4. <strong>回扣圆的定义</strong>：明确圆心、半径，断言各点在以 $O$ 为圆心、 $\frac{1}{2}AB$ 为半径的圆上，完成证明。
+5. <strong>规范书写</strong>：区分“已知”“求证”“证明”，证明中条件→结论环环相扣，最终回归定义。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>圆心选错</strong>：不假思索地将圆心设为某顶点或某边中点，导致距离不等。应结合图形对称性（菱形中心为对角线交点）锁定圆心。</li>
+<li><strong>直角三角形识别错误</strong>：误将中线当成角平分线或高线，或忘记菱形的对角线垂直这一关键前提，导致无法套用斜边中线定理。</li>
+<li><strong>中点条件用混</strong>：题目中的中点既是各边中点，又是直角三角形的斜边中点，必须明确“谁是谁的斜边中线”，否则 $OM=\frac{1}{2}AB$ 的依据会出错。</li>
+<li><strong>概念混淆</strong>：把菱形性质和矩形性质记反（如认为菱形对角线相等），导致垂直条件丢失，后续推理全错。</li>
+<li><strong>书写失分</strong>：缺少“已知”“求证”结构，或跳步直接写四点共圆而不展示距离相等的推导。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：求证：菱形各边中点在以对角线的交点为圆心的同一个圆上。</p>
+<p><strong>思路</strong>：这是一道四点共圆的定义法证明题。圆心已给出（对角线交点），只需证明四个中点到该交点的距离相等。联想菱形性质可得直角三角形，结合中点与斜边中线定理即可建立等距关系。</p>
+<p><strong>步骤</strong>：
+1. 已知：菱形 $ABCD$，对角线 $AC$ 与 $BD$ 交于点 $O$，$M,N,P,Q$ 分别为 $AB,BC,CD,DA$ 的中点。求证：$M,N,P,Q$ 在以 $O$ 为圆心的同一个圆上。
+2. ∵ 四边形 $ABCD$ 是菱形，
+   ∴ $AC \perp BD$ 且 $AB=BC=CD=DA$。
+3. 在 $Rt\triangle AOB$ 中，$M$ 为斜边 $AB$ 中点，由斜边中线定理得 $OM=\frac{1}{2}AB$。
+   同理，在 $Rt\triangle BOC$ 中，$ON=\frac{1}{2}BC$；在 $Rt\triangle COD$ 中，$OP=\frac{1}{2}CD$；在 $Rt\triangle DOA$ 中，$OQ=\frac{1}{2}DA$。
+4. 又 ∵ $AB=BC=CD=DA$，
+   ∴ $OM=ON=OP=OQ=\frac{1}{2}AB$。
+5. 因此，$M,N,P,Q$ 四点到点 $O$ 的距离相等，根据圆的定义，它们在以 $O$ 为圆心、$OM$ 为半径的同一个圆上。</p>
+<p><strong>点评/变式</strong>：本题本质是“到定点的距离等于定长”的直接应用，属于基础压轴题。变式方向：
+- 拓展图形：把菱形改为正方形、矩形或一般平行四边形，结论是否成立？正方形依然成立（菱形特例）；矩形对角线相等但不一定垂直，四个中点共圆吗？此时四点构成矩形，圆心仍为对角线交点，但依据变为“矩形对角线相等且互相平分”（$OM=\frac{1}{2}AC$ 等），同样共圆，但证明路径不同。
+- 改证其它点：求证菱形各边中点与对角线交点五点共线？错，是共圆。进一步可拓展到任意四边形各边中点顺次连接得到的平行四边形（中点四边形），其对角线交点为对称中心，但不一定共圆，需要附加条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-16.html">2009-理-16</a>（2009 · 中） 菱形各边中点到对角线交点距离相等，证四点共圆</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/772-圆內接多边形的性质.html">圆內接多边形的性质</a></li>
+</ul>
+</div>
+</body>
+</html>

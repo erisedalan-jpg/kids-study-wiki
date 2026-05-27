@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>折线图</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>折线图</h1><div class="review-mark" data-stem="折线图"></div><div class="meta-card"><span><strong>考点</strong>折线图</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>折线图</strong>是描述统计中用于展示数据随时间变化趋势的图形工具。在高考中，其核心考点在于“读图”与“用图”：</p>
+<ul>
+<li><strong>基本构成</strong>：横轴通常表示时间或其他有序变量，纵轴表示对应的数据值。每个数据点对应一个时刻的具体数值，用线段连接各点以直观展示变化。</li>
+<li><strong>核心读图要素</strong><ul>
+<li><strong>点</strong>：直接读出某一时间点的具体数值，关注转折点、最大值、最小值。</li>
+<li><strong>线</strong>：观察整体走势（上升、下降、波动）；线段的斜率大小反映数据变化的<strong>快慢程度</strong>：线段越陡，说明该时间段内数据变化（增长或减少）的<strong>速度</strong>越快，而非绝对数值变化量最大。</li>
+<li><strong>区间分析</strong>：根据题目要求，截取特定时间段进行分析。分阶段描述趋势是常见考法。</li>
+</ul>
+</li>
+<li><strong>应用场景</strong>：经济指标（如本题投资额）、气温变化、人口数据等具有时间序列特征的数据。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确坐标意义</strong>：首先看清图表标题、横轴及纵轴所代表的统计量及单位。这是后续一切分析的基础，避免答非所问。</li>
+<li><strong>定性分析整体趋势</strong>：从宏观上概括数据的变化总趋势。例如“总体呈上升趋势”“波动中增长”等。</li>
+<li><strong>定量提取关键数据</strong>：根据题目设问，精准定位到图中的点或线段，读取或估算相应数值。对于年份，要特别注意它在横轴上的位置表示。</li>
+<li><strong>分阶段剖析变化</strong>：若明显存在趋势转折点，则应以转折点为界，将数据分成若干段，逐一描述各阶段的具体变化特征（是增是减、增/减的快慢等）。</li>
+<li><strong>规范作答</strong>：在回答简答题时，语言描述应完整、具体。不仅要说“上升”，还要结合图指出从哪一年到哪一年，大约从多少增长到多少，体现了数据的变化过程。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“变化量”与“变化速度”</strong>：这是最常见陷阱。看到最陡的线段，误认为是对应数值增加最多的年份。线段斜率 $\frac{\Delta y}{\Delta x}$ 大，表示增长速率快，但 $\Delta y$（纵轴变化量）不一定最大。</li>
+<li><strong>忽略坐标轴起点与刻度</strong>：有时纵轴起点不为零，会夸大数据的波动视觉效果。注意检查刻度，避免被视觉偏差干扰。本题纵轴起点为 $0$，刻度均匀。</li>
+<li><strong>横轴变量识别不清</strong>：将时间刻度附带的间隙误认为数据缺失或是不重要的信息。应理解相邻数据点是连续的记录。</li>
+<li><strong>描述过于笼统</strong>：仅回答“上升了”或“下降了”，未指明具体的时间段及大致的数值变化，在解答题中会因答题不规范而失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：如图（2018全国卷I理科18题图）是某地区2000年至2016年环境基础设施投资额 $y$（单位：亿元）的折线图。请根据图表描述该地区环境基础设施投资额的变化趋势与特点。</p>
+<p><strong>思路</strong>：
+本题为典型的读图描述题。解题关键在于分阶段剖析趋势，并注意对增长速度的定性描述。观察发现，图形整体向上，但前后两段增长速度明显不同，应以一个转折点为界，分别阐述。</p>
+<p><strong>步骤</strong>：
+1. <strong>整体总览</strong>：从2000年到2016年，该地区的环境基础设施投资额整体呈现显著的增长态势。
+2. <strong>确定转折点</strong>：观察折线走势，大约在2006年或2008年左右，折线“变陡”。以2010年为界，前后增长模式有明显区别。
+3. <strong>分阶段描述</strong>：
+   - <strong>第一阶段（2000-2010年）</strong>：投资额从约 $20$ 亿元增长到约 $50$ 亿元，增长相对平缓，十年间增加了约 $30$ 亿元，折线斜率较小，说明<strong>增长速度较慢</strong>。
+   - <strong>第二阶段（2010-2016年）</strong>：投资额从约 $50$ 亿元迅速增长至约 $180$ 亿元以上。此阶段折线斜率大，走势陡峭，说明<strong>增长速度显著加快</strong>，六年的绝对增量远超前一阶段。
+4. <strong>提炼特征</strong>：综上，该地区环境基础设施投资额不仅逐年增加，而且随时间推移，投资增速在加快，尤其是进入第二个十年后，呈现出高速增长的特点。</p>
+<p><strong>点评/变式</strong>：
+本题完美展示了折线图分析的核心——<strong>变化趋势</strong>而非孤立数值。易错点在于仅说出“2016年数值最大”或“2000到2016增长了很多”，而未能体现“先慢后快”这一变化过程中的速率差异。高考中此类图表题要求答案遵循“总-分”或“阶段式”逻辑，如“2008年起大幅上升”，其底层逻辑正是斜率的变化。变式训练可切换为具有波动数据的折线图，要求描述波动规律，如“先升后降，整体较平稳”，但分析方法本质相同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-18.html">2018-理-18</a>（2018 · 中） 根据折线图分析环境基础设施投资额的变化趋势，建立回归模型并预测。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">折线图</a></li>
+</ul>
+</div>
+</body>
+</html>

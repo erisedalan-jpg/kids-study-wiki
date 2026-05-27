@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数函数性质</h1><div class="review-mark" data-stem="对数函数性质"></div><div class="meta-card"><span><strong>考点</strong>对数函数性质</span><span><strong>权重</strong>26</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：26</li>
+<li>真题数：4；年份跨度：2017–2024</li>
+<li>出现题位：填空16 选择6 选择8</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义与条件</strong>：函数 $y=\log_a x$（$a&gt;0$，$a\neq 1$）叫对数函数，$\ln x$ 即 $a=e$ 的自然对数，$e\approx 2.718$。</li>
+<li><strong>基本性质</strong>：定义域 $(0,+\infty)$，值域 $\mathbb R$；恒过定点 $(1,0)$；当 $a&gt;1$ 时在 $(0,+\infty)$ 上单调递增，$0&lt;a&lt;1$ 时单调递减。</li>
+<li><strong>运算法则</strong>（真数均 $&gt;0$）：$\ln(MN)=\ln M+\ln N$，$\ln\frac{M}{N}=\ln M-\ln N$，$\ln M^n=n\ln M$。特别注意 $\ln(M+N)$ 没有展开公式。</li>
+<li><strong>复合函数 $f(x)=\ln g(x)$</strong>：定义域由 $g(x)&gt;0$ 解出；单调性由外层 $y=\ln u$（增函数）与内层 $u=g(x)$ 复合，遵循“同增异减”。如 $f(x)=\ln(x^2-2x-8)$，先由 $x^2-2x-8&gt;0$ 得定义域 $(-\infty,-2)\cup(4,+\infty)$，再求递增区间为 $(4,+\infty)$。</li>
+<li><strong>对数与绝对值、奇偶性</strong>：处理 $\ln|A(x)|$ 型函数，注意定义域缺零点且对称；奇偶性首先要求定义域关于原点对称，若 $x=0$ 有定义且为奇函数，则必有 $f(0)=0$。</li>
+<li><strong>对数函数的恒成立问题</strong>：通过零点、符号变化转化为方程约束。如 $(x+a)\ln(x+b)\ge 0$，常利用两个因式的零点重合保证整体不变号。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求定义域先行</strong>：见到对数 $ \ln( \cdot ) $，立即写 $ \cdot &gt;0 $；复合函数还要考虑分母不为零、偶次根式等。</li>
+<li><strong>单调性的复合判断</strong>：如果内层 $g(x)$ 在某个区间单调递增/递减，而 $y=\ln t$ 递增，则 $f(x)$ 在该区间的单调性与内层相同；处理复合函数单调区间切不可忘记定义域前提。</li>
+<li><strong>奇偶性处理程序</strong>：先求定义域，观察是否关于 $x=0$ 对称；再计算 $f(-x)$ 与 $\pm f(x)$ 比较。对于含参数的奇函数，若 $f(0)$ 有意义，直接用 $f(0)=0$ 快速求参数。</li>
+<li><strong>比较大小与命题判断</strong>：涉及幂、指数、对数的比较，优先利用单调性；可使用特殊值（正、负、分数）排除错误选项。</li>
+<li><strong>对数型恒成立问题</strong>：分析根与零点，利用 $(x-a)$ 与 $\ln(x-b)$ 的变号规律得出参数关系，再求最值常用二次函数配方法。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域</strong>：凡遇对数表达式，忘记真数必须 $&gt;0$；复合函数单调区间写成实数集，未扣定义域取交集，甚为致命。</li>
+<li><strong>变形盲目套用公式</strong>：$\ln(ab)=\ln a+\ln b$ 必须在 $a&gt;0,b&gt;0$ 时使用；对数型奇偶性化简不当导致定义域缩小。</li>
+<li><strong>绝对值不等式陷阱</strong>：$|A|&gt;|B|$ 两边只需平方，但绝对值函数非单调，$a&gt;b$ 不能推出 $|a|&gt;|b|$（如 $1&gt;-2$ 不成立）。</li>
+<li><strong>忽略对数内部的有界要求</strong>：奇函数 $f(0)=0$ 仅在 $x=0$ 有意义时才成立，如 $f(x)=\ln\left|\frac{1}{1-x}+a\right|+b$ 在 $x=0$ 有定义，可直接用 $f(0)=0$；反之要先判断。</li>
+<li><strong>零点变号分析失误</strong>：$y=x-a$ 在 $x=a$ 两侧变号，$y=\ln(x-b)$ 在 $x=b+1$ 两侧变号。若二者乘积恒非负，必须使两个变号点重合，否则会正负交替。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2024-新课标Ⅱ-08）</h3>
+<p><strong>题目</strong>：设 $f(x)=(x+a)\ln(x+b)$，若 $f(x)\ge 0$，则 $a^2+b^2$ 的最小值为（ ）<br />
+A. $18$  B. $14$  C. $\frac12$  D. $1$</p>
+<p><strong>思路</strong>：由 $f(x)\ge 0$ 恒成立推出参数关系。观察函数结构：一次因式 $x+a$ 与对数 $\ln(x+b)$ 均会在某点变号。乘积恒非负→两个变号点必须重合（或通过定义域规避，但本题需重合）。</p>
+<p><strong>步骤</strong>：
+1. 定义域：$x+b&gt;0$ 即 $x&gt;-b$。<br />
+2. 令 $f(x)=0$ 突破口：<br />
+   - $x+a=0 \Rightarrow x_1=-a$（若在定义域内，两侧 $x+a$ 由负变正）<br />
+   - $\ln(x+b)=0 \Rightarrow x_2=1-b$（两侧 $\ln$ 由负变正）<br />
+3. 若 $x_1 \neq x_2$，两零点将数轴分成三段，乘积 $f(x)$ 会出现负区间，与恒非负矛盾。故必须有 $x_1=x_2$。<br />
+4. 得 $-a = 1-b$，即 $b = a+1$（或 $a+b= -1$ 亦可称为 $b-a=1$）。<br />
+5. 代入目标：$a^2+b^2 = a^2+(a+1)^2 = 2a^2+2a+1 = 2\left(a+\frac12\right)^2+\frac12\ge \frac12$，当 $a=-\frac12,b=\frac12$ 时取最小值。<br />
+6. 验证定义域：$x&gt; -b = -\frac12$ 内恒成立，无误。选 <strong>C</strong>。</p>
+<p><strong>点评/变式</strong>：此题将零点变号分析与不等式恒成立结合，本质是“乘积非负则符号改变点必须抵消”。变式思考：若 $f(x)=(x+a)\ln(b-x)$ 恒非正，应采用类似重合策略。</p>
+<h3><strong>题目2</strong>（2022-文-16）</h3>
+<p><strong>题目</strong>：若 $f(x)=\ln\left|\frac{1}{1-x}+a\right|+b$ 是奇函数，求 $a$，$b$。</p>
+<p><strong>思路</strong>：奇函数→定义域关于原点对称且 $f(0)=0$。先据定义域求参数 $a$，再用 $f(0)=0$ 求 $b$。</p>
+<p><strong>步骤</strong>：
+1. 定义域要求：$1-x \neq 0$ 且 $\frac{1}{1-x}+a \neq 0$。<br />
+   $\frac{1}{1-x}+a = \frac{1+a-ax}{1-x} \neq 0 \Rightarrow (1+a-ax)(1-x) \neq 0$。<br />
+   这是为了保证真数不为零（绝对值内部不零即可，还需不等于零是因为 $\ln 0$ 无意义；绝对值保证真数 $&gt;0$）。<br />
+   所以不能取的值：$x=1$ 与 $x=\frac{1+a}{a}$（后者由 $1+a-ax=0$ 解出）。<br />
+2. 奇函数定义域关于原点对称，因此两个“禁区”须互为相反数（或同为相反数对）。<br />
+   由 $1 = -\frac{1+a}{a}$ 得 $a = -a</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-08.html">2024-新课标Ⅱ-08</a>（2024 · 中） 函数定义域含参，结合对数与一次函数符号分析确定参数关系，利用二次函数或基本不等式求最值。</li>
+<li><a href="../../exam/数学/2022-文-16.html">2022-文-16</a>（2022 · 中） 本题通过奇函数定义域对称性及f(0)=0求参数值。</li>
+<li><a href="../../exam/数学/2019-理-06.html">2019-理-06</a>（2019 · 中） 本题通过特值法结合函数单调性判断不等式正误，考查对数、指数、幂函数性质及绝对值意义。</li>
+<li><a href="../../exam/数学/2017-文-08.html">2017-文-08</a>（2017 · 中） 本题考查复合函数单调区间的求解，需先求定义域，再利用“同增异减”原则判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/298-对数函数.html">对数函数性质</a></li>
+</ul>
+</div>
+</body>
+</html>

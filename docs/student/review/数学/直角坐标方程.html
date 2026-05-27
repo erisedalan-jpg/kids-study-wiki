@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直角坐标方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直角坐标方程</h1><div class="review-mark" data-stem="直角坐标方程"></div><div class="meta-card"><span><strong>考点</strong>直角坐标方程</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：解答22</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直角坐标方程</strong>：直接用 $x,y$ 表示曲线或直线的关系式，通常形如 $F(x,y)=0$ 或 $y=f(x)$。  </li>
+<li><strong>参数方程化为直角坐标方程（消参）</strong>：核心是消去参数，建立 $x$ 与 $y$ 的直接关系。常用方法：</li>
+<li>代数消参：由一式解出参数代入另一式；</li>
+<li>三角恒等式消参：利用 $\sin^2\theta+\cos^2\theta=1$ 等；</li>
+<li>整体消参：将 $x,y$ 表达式相加减或乘除，直接得到 $x$ 与 $y$ 的关系。</li>
+<li><strong>常见曲线的参数方程</strong>：</li>
+<li>圆：$\begin{cases} x=a+r\cos\theta \ y=b+r\sin\theta \end{cases}$ （$\theta$ 为参数） $\Rightarrow (x-a)^2+(y-b)^2=r^2$；</li>
+<li>椭圆：$\begin{cases} x=a\cos\theta \ y=b\sin\theta \end{cases}$ （$\theta$ 为参数） $\Rightarrow \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$；</li>
+<li>直线：$\begin{cases} x=x_0+t\cos\alpha \ y=y_0+t\sin\alpha \end{cases}$ （$t$ 为参数，$\alpha$ 为倾斜角） $\Rightarrow$ 消 $t$ 得 $y-y_0=\tan\alpha\,(x-x_0)$。  </li>
+<li><strong>注意</strong>：消参过程中必须保证方程等价，必要时标出变量的取值范围。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别参数方程的类型</strong><br />
+   根据结构判断是圆、椭圆、直线还是其他曲线；若有三角函数常考虑三角恒等式，若是一次线性参数通常用代入消参。</li>
+<li><strong>选择消参策略</strong>  </li>
+<li>若参数为 $\theta$ 且出现 $\cos\theta,\sin\theta$，优先利用 $\sin^2\theta+\cos^2\theta=1$；  </li>
+<li>若参数为 $t$ 且 $x,y$ 均为 $t$ 的一次式，解出 $t$ 代入或者写出斜率直接得到直角坐标方程；  </li>
+<li>如果参数表达式中含 $\frac{1}{\cos\theta}$ 等，可用 $\tan\theta$ 代换或者平方后应用 $1+\tan^2\theta=\sec^2\theta$。</li>
+<li><strong>写出结果并检查等价性</strong><br />
+   将消参后的方程化为标准形式；特别注意参数取值范围是否限制了 $x,y$ 的范围，若有，必须注明限定条件。</li>
+<li><strong>直线参数方程的标准式</strong><br />
+   若已知点 $(x_0,y_0)$ 和倾斜角 $\alpha$，则参数方程 $\begin{cases} x=x_0+t\cos\alpha \ y=y_0+t\sin\alpha \end{cases}$ 消去 $t$ 得到的直角坐标方程不含参数，且 $|t|$ 表示点到定点距离（仅在标准形式下成立）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视参数的取值范围</strong><br />
+  消参后直接写出整个曲线方程，忘记参数可能限制了 $x$ 或 $y$ 的取值。如椭圆参数方程 $\theta \in [0,2\pi)$ 完整，但若题设 $\theta \in [0,\pi]$，则只能得到上半部分。</li>
+<li><strong>直线参数方程非标准形式误用 $t$ 的几何意义</strong><br />
+  只有形如 $\begin{cases} x=x_0+t\cos\alpha \ y=y_0+t\sin\alpha \end{cases}$ 时，$|t|$ 才表示距离；若 $x=1+2t,\, y=2+t$ 等形式不是标准式，需先化为标准式（提取系数平方和为 1）才能使用。</li>
+<li><strong>三角恒等式应用不当</strong><br />
+  例如 $\begin{cases} x=2\sec\theta \ y=3\tan\theta \end{cases}$ 需用 $1+\tan^2\theta=\sec^2\theta$，消去后可能漏掉 $x \leq -2$ 或 $x \geq 2$ 的范围。</li>
+<li><strong>盲目平方导致增解</strong><br />
+  消参时两边平方可能引入不在原参数范围内的点，务必结合参数方程检验定义域。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2018-文-22（1）</h3>
+<p><strong>题目</strong><br />
+在直角坐标系 $xOy$ 中，曲线 $C$ 的参数方程为 $\begin{cases} x=2\cos\theta \ y=4\sin\theta \end{cases}$（$\theta$ 为参数），直线 $l$ 的参数方程为 $\begin{cases} x=1+t\cos\alpha \ y=2+t\sin\alpha \end{cases}$（$t$ 为参数，$\alpha$ 为 $l$ 的倾斜角）。求 $C$ 和 $l$ 的直角坐标方程。</p>
+<p><strong>思路</strong><br />
+$C$ 的参数中含 $\cos\theta,\sin\theta$，利用平方和为 $1$ 消去 $\theta$ 可得椭圆方程。<br />
+$l$ 的参数方程是含 $t$ 的一次式（标准形式），解出 $t$ 的关系或用两式相除消去 $t$，得到直线方程。</p>
+<p><strong>步骤</strong><br />
+1. 对于 $C$：<br />
+   由 $\displaystyle \frac{x}{2}=\cos\theta,\ \frac{y}{4}=\sin\theta$，平方相加得<br />
+   $$\left(\frac{x}{2}\right)^2+\left(\frac{y}{4}\right)^2 = \cos^2\theta+\sin^2\theta = 1$$<br />
+   即 $\displaystyle \frac{x^2}{4}+\frac{y^2}{16}=1$。此为焦点在 $y$ 轴上的椭圆，$\theta\in\mathbb{R}$ 对应整个椭圆，无需限制范围。</p>
+<ol>
+<li>对于 $l$：<br />
+   由 $\displaystyle \frac{x-1}{\cos\alpha}=t,\ \frac{y-2}{\sin\alpha}=t$，两式相等消去 $t$：<br />
+   $$\frac{x-1}{\cos\alpha}=\frac{y-2}{\sin\alpha}$$<br />
+   整理得 $y-2=\tan\alpha\,(x-1)$ （若 $\cos\alpha=0$ 即 $\alpha=\frac{\pi}{2}$ 时，直线方程为 $x=1$，此时参数式仍成立，需单独说明）。<br />
+   故 $l$ 的直角坐标方程为 $y-2=\tan\alpha\,(x-1)$ 或当 $\alpha=\frac{\pi}{2}$ 时为 $x=1$。</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+- 消参运算中，$C$ 的方程很容易直接写出，但要注意分清 $a^2,b^2$ 的位置；椭圆标准方程中分母大的对应长轴。<br />
+- 直线消参时，标准参数方程消去 $t$ 后自然得到点斜式，倾斜角 $\alpha$ 隐含了斜率。<br />
+- <strong>变式</strong>：若直线参数方程为 $\begin{cases} x=1+2t \ y=2+t \end{cases}$，则 $t$ 前系数平方和不等于 $1$，不能直接用 $t$ 表示距离，需先化为 $\begin{cases} x=1+\frac{2}{\sqrt{5}}t' \ y=2+\frac{1}{\sqrt{5}}t' \end{cases}$，此时 $|t'|$ 才为距离。直角坐标方程依然是直接消去 $t$ 或 $t'$ 得到 $y-2=\frac{1}{2}(x-1)$，但不带几何意义。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-22.html">2018-文-22</a>（2018 · 易） 考查参数方程化为直角坐标方程的基本方法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直角坐标方程</a></li>
+</ul>
+</div>
+</body>
+</html>

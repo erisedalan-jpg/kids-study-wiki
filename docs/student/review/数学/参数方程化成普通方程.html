@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参数方程化成普通方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>参数方程化成普通方程</h1><div class="review-mark" data-stem="参数方程化成普通方程"></div><div class="meta-card"><span><strong>考点</strong>参数方程化成普通方程</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>极坐标与直角坐标互化<br />
+  以极点 $O$ 为原点，极轴为 $x$ 轴正半轴建立直角坐标系，则<br />
+  $$x = \rho \cos\theta,\qquad y = \rho \sin\theta,$$<br />
+  $$\rho^2 = x^2+y^2,\qquad \tan\theta = \frac{y}{x}\ (x\neq 0).$$</li>
+<li>常见曲线的参数方程<br />
+  圆 $(x-a)^2+(y-b)^2=r^2$ 的参数方程可写为<br />
+  $$\begin{cases} x = a + r\cos t,\ y = b + r\sin t, \end{cases} t\in[0,2\pi).$$<br />
+  半圆须根据 $y$ 的范围限制参数 $t$ 的取值区间。</li>
+<li>普通方程化为参数方程的关键<br />
+  引入一个合适的参数（通常用三角函数、斜率、时间等），使得方程恒等。利用 $\cos^2\alpha+\sin^2\alpha=1$ 是化圆的参数方程的常用方法：若普通方程含平方和，如 $(x-a)^2+(y-b)^2=r^2$，直接令 $x-a=r\cos t$，$y-b=r\sin t$。</li>
+<li>切线的几何与代数处理<br />
+  设切点 $D$ 坐标已知（用参数表示），曲线在 $D$ 处的切线斜率 $k_D$ 与过 $D$ 的半径 $CD$ 垂直，即 $k_{CD}\cdot k_D=-1$。若已知切线与另一直线 $l$ 垂直，则 $k_D\cdot k_l=-1$。两式联立可直接得出 $k_{CD}=k_l$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>极坐标 $\to$ 直角坐标普通方程</strong><br />
+   两边同乘 $\rho$ 或利用 $\rho\cos\theta=x,\ \rho\sin\theta=y$ 直接代入，整理得 $x,y$ 的关系。</li>
+<li><strong>由普通方程写参数方程</strong>  </li>
+<li>判断曲线类型（圆、椭圆、直线等）。  </li>
+<li>对圆 $(x-a)^2+(y-b)^2=r^2$，设参数 $t$：$x=a+r\cos t,\ y=b+r\sin t$。  </li>
+<li>若曲线只是部分（如半圆），依据原方程中 $x$ 或 $y$ 的范围确定参数 $t$ 的取值范围。  </li>
+<li><strong>利用参数方程处理切线、距离等问题</strong>  </li>
+<li>将点坐标用参数表示，便于代入条件求参数值。  </li>
+<li>切线垂直问题：若切线与已知直线 $l$ 垂直，利用 “圆心与切点连线垂直于切线” 及 “斜率乘积为 $-1$” 的性质，转化为圆心到切点连线（半径 $CD$）与 $l$ 平行，斜率相等，从而解出参数。</li>
+<li><strong>求倾斜角</strong><br />
+   已知斜率为 $k$，倾斜角 $\alpha$ 满足 $\tan\alpha = k$，注意 $\alpha\in[0,\pi)$；若 $k$ 为特殊值，直接得角；否则用反三角表示。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>极坐标化直角坐标时漏乘 $\rho$</strong><br />
+  方程 $\rho = 2\cos\theta$ 直接代 $x=\rho\cos\theta$ 会出错，必须先化为 $\rho^2 = 2\rho\cos\theta$，再用 $x^2+y^2=\rho^2$、$x=\rho\cos\theta$。</li>
+<li><strong>忽视参数 $t$ 的范围导致曲线不全</strong><br />
+  如半圆 $y\ge 0$，圆的参数方程中 $y=r\sin t$ 要求 $\sin t\ge 0$，通常 $t\in[0,\pi]$，而不是 $[0,2\pi)$。不限制范围会误将整圆当作结果。</li>
+<li><strong>混淆切线垂直的斜率关系</strong><br />
+  切线 $l_1$ 与直线 $l_2$ 垂直，则 $k_{l_1}\cdot k_{l_2}=-1$。但此题用到的是：切线与 $l$ 垂直 $\iff$ 过切点的半径与 $l$ 斜率相等（或平行于 $l$），切忌直接误认为 $k_{CD}\cdot k_l=-1$。</li>
+<li><strong>参数方程形式不唯一</strong><br />
+  圆的参数方程也可设为 $x=1+\cos t,\ y=\sin t$ 或 $x=1+\sin t,\ y=\cos t$ 并相应调整 $t$ 的范围，阅卷仅看是否等价，但必须确保参数 $t$ 能对应所有满足要求的点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014 全国课标卷Ⅰ 文23）<br />
+在直角坐标系 $xOy$ 中，以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，半圆 $C$ 的极坐标方程为 $\rho=2\cos\theta$，$\theta\in[0,\frac{\pi}{2}]$。<br />
+（Ⅰ）求 $C$ 的参数方程；<br />
+（Ⅱ）设点 $D$ 在半圆 $C$ 上，半圆 $C$ 在 $D$ 处的切线与直线 $l:y=\sqrt{3}x+2$ 垂直，根据（Ⅰ）中得到的参数方程，求直线 $CD$ 的倾斜角及 $D$ 的坐标。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）由 $\rho=2\cos\theta$ 两边乘 $\rho$ 得 $\rho^2=2\rho\cos\theta$，代入 $x^2+y^2$ 和 $x$ 得普通方程，再配方得出半圆，用三角函数引入参数，并依 $y\ge0$ 限制参数区间。<br />
+（Ⅱ）设 $D(1+\cos t,\sin t)$，由切线与 $l$ 垂直，结合圆的几何性质得 $CD\parallel l$，斜率相等求出 $t$，进而得倾斜角与坐标。</p>
+<p><strong>步骤</strong><br />
+1. 由 $\rho=2\cos\theta$ 得 $\rho^2=2\rho\cos\theta$，化为 $x^2+y^2=2x$。<br />
+   配方：$(x-1)^2+y^2=1$。<br />
+   由 $\theta\in[0,\frac{\pi}{2}]$ 得 $y=\rho\sin\theta=2\cos\theta\sin\theta\ge0$，所以 $0\le y\le 1$，为上半圆（含端点）。<br />
+   因此参数方程可设为<br />
+   $$\begin{cases} x=1+\cos t,\ y=\sin t, \end{cases} t\in[0,\pi].$$
+2. （Ⅱ）设 $D(1+\cos t,\sin t)$，$0&lt;t&lt;\pi$。<br />
+   半圆圆心 $C(1,0)$，半径 $r=1$。<br />
+   切线垂直于半径 $CD$，切线与 $l:y=\sqrt{3}x+2$ 垂直，所以 $k_{CD}\cdot k_l=(-1)\cdot(-1)?$ 稍等：切线 $m$ 满足 $m\perp CD$ 且 $m\perp l$，故 $k_{CD}=k_l=\sqrt{3}$。<br />
+   所以 $\dfrac{\sin t - 0}{(1+\cos t)-1} = \dfrac{\sin t}{\cos t} = \tan t = \sqrt{3}$。<br />
+   由 $t\in[0,\pi]$，得 $t=\frac{\pi}{3}$。<br />
+   直线 $CD$ 的倾斜角即为 $t=\frac{\pi}{3}$（或写 $60^\circ$）。<br />
+   $D$ 坐标：$x=1+\cos\frac{\pi}{3}=1+\frac12=\frac32$，$y=\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}$。<br />
+   所以 $D\left(\frac32,\frac{\sqrt{3}}{2}\right)$。</p>
+<p><strong>点评/变式</strong><br />
+- 圆的参数方程给出后，可直接用 $t$ 表示点 $D$，避免设直角坐标再结合圆方程消元，计算简洁。<br />
+- 切线垂直条件转化为半径与已知直线平行，是本题的几何转化关键，若直接用切线斜率公式反而复杂。<br />
+- 变式：若改为求点 $D$ 满足 $\angle DCO = \theta$ 等，亦可直接通过参数角求解。注意检验半圆的范围，保证解在 $t\in[0,\pi]$ 且 $y\ge0$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-23.html">2014-文-23</a>（2014 · 中） 半圆极坐标方程转参数方程，利用切线垂直关系求点的坐标和倾斜角。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">参数方程化成普通方程</a></li>
+</ul>
+</div>
+</body>
+</html>

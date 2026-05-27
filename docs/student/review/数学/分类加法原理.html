@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分类加法原理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分类加法原理</h1><div class="review-mark" data-stem="分类加法原理"></div><div class="meta-card"><span><strong>考点</strong>分类加法原理</span><span><strong>权重</strong>20</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：20</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分类加法计数原理</strong>：完成一件事有 $n$ 类不同方案，在第 $1$ 类方案中有 $m_1$ 种不同方法，在第 $2$ 类方案中有 $m_2$ 种不同方法，……，在第 $n$ 类方案中有 $m_n$ 种不同方法，那么完成这件事共有 $N = m_1 + m_2 + \cdots + m_n$ 种不同方法。</li>
+<li><strong>适用条件</strong>：各类方案彼此独立、相互排斥，任何一类中的任何一种方法都能单独完成这件事（即“分类不漏，类类独立”）。</li>
+<li><strong>与分步乘法原理的区别</strong>：如果需依次完成多个步骤才能完成整件事，则用乘法；若一步到位且可划分互斥类别，则用加法。复杂问题往往先分类，再在每类内分步。</li>
+<li><strong>核心思想</strong>：<strong>不重不漏</strong>地划分“完成事件”的标准类别，尤其注意分类标准统一，划分到可以直接用排列组合公式或乘法原理计数的粒度。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确“完成事件”的具体含义</strong>：审题锁定最终完成的任务是什么（如此题中为“甲、乙各选2门且恰有1门相同”）。</li>
+<li><strong>确定分类标准</strong>：找到可以划分所有完成情况的互斥维度（如按相同的课程是哪一门分类，或按甲的选课组合分类）。确保<strong>类与类之间无交集</strong>，<strong>所有类并集等于整体事件</strong>。</li>
+<li><strong>逐类计算方案数</strong>：对每一类，若内部需要分步则使用排列组合与乘法原理进行计数。</li>
+<li><strong>加法汇总</strong>：将各类方案数直接相加得到最终结果。</li>
+<li><strong>检验</strong>：快速检查分类是否遗漏或重叠，复杂情况可选用对立事件验证。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分类标准不统一导致重复计数</strong>：例如既按相同课程分类，又无意中掺入甲选课的不同，造成一种情况被反复计算。</li>
+<li><strong>类内误用加法或类间误用乘法</strong>：类内完成该类的子步骤用乘法，类间合并用加法。常见错误是看见数量直接相乘，忽略了它们是否属于同一事件的互斥类别。</li>
+<li><strong>“恰有1门相同”的计数漏算</strong>：只考虑相同的那门来自甲的两门，却忽略了乙的另一门必须从甲未选的课中选取，未排除甲的另一门被乙重复选取的情形，得到错误式子 $C_4^2 \times 2 \times C_3^1$（乙选课剩余选修课未去重）。</li>
+<li><strong>忽略甲、乙选择的对称性或顺序</strong>：若题目未指明甲、乙顺序，却按有序计算会导致倍数错误。但本题甲、乙是不同对象，选课有区分，必须考虑顺序。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009-理-10）<br />
+甲、乙两人从4门课程中各选修2门，则甲、乙所选的课程中恰有1门相同的选法共有______种。</p>
+<p><strong>思路</strong><br />
+“恰有1门相同”可翻译为：两人所选课程交集大小为1。直接整体分类：先选定甲的两门课，再约束乙的选法。由于甲的不同选课组合互斥，可把甲的每种选课方案作为一类，对每类计算乙符合条件的选法数，最后用分类加法原理求和。甲选2门有 $C_4^2=6$ 类，每类下乙要与甲恰有1门相同，则乙必须先从甲的两门中选1门作为相同课程，再从甲未选的两门中选1门作为另一门课程，有 $C_2^1 \times C_2^1 =4$ 种方法。因此每类均有4种，总数为 $6 \times 4=24$。若严格用加法，就是 $4+4+\dots+4$ （共6个4）。亦可按相同课程是哪门分类，结果一致。</p>
+<p><strong>步骤</strong><br />
+1. <strong>分类标准</strong>：以甲选修的两门课的组合来分类。甲从4门中选2门，共有 $C_4^2=6$ 种不同选法，这6类互斥且无遗漏。
+2. <strong>类内分步</strong>（对甲的每一种固定选法）：
+   - 步骤一：乙从甲已选的2门中选出恰1门相同的课程，有 $C_2^1=2$ 种选法。
+   - 步骤二：乙再从甲未选的2门中选出另1门课程（确保不与甲所选另一门相同），有 $C_2^1=2$ 种选法。
+   - 由分步乘法，乙有 $2 \times 2 = 4$ 种选法满足条件。
+3. <strong>加法汇总</strong>：6类中每类都有4种方案，且类间互斥，故总选法数为 $4+4+4+4+4+4 = 6 \times 4 = 24$ 种。</p>
+<p><strong>点评/变式</strong><br />
+- 此题清晰展示了<strong>先分类、后分步</strong>的计数策略：分类让问题降维，每类下直接用乘法简洁计算。
+- 变式1：若改为“甲、乙所选课程至少1门相同”，则正向分类较繁，可用对立事件：总选法减去全部不同。总选法 $C_4^2 \cdot C_4^2 = 36$，全部不同即甲选2门后乙从剩余2门中选2门，有 $1$ 种，故至少1门相同为 $36-1=35$。
+- 变式2：若3人选课恰有1门相同，分类层级会更多，注意用好分类加法原理逐层拆分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-10.html">2009-理-10</a>（2009 · 中） 甲、乙两人从4门课程中各选修2门，求恰有1门课程相同的选法数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/478-分类计数原理.html">分类加法原理</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数</h1><div class="review-mark" data-stem="对数"></div><div class="meta-card"><span><strong>考点</strong>对数</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2008–2013</li>
+<li>出现题位：选择5 选择8</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：若 $a^b=N$（$a&gt;0, a \neq 1$），则 $b=\log_a N$。特别地，$\log_a 1=0$，$\log_a a=1$。</li>
+<li><strong>运算性质</strong>（$a&gt;0, a \neq 1, M,N&gt;0$）：<ul>
+<li>$\log_a(MN)=\log_a M + \log_a N$</li>
+<li>$\log_a\frac{M}{N}=\log_a M - \log_a N$</li>
+<li>$\log_a M^n = n\log_a M$</li>
+</ul>
+</li>
+<li><strong>换底公式</strong>：$\log_a b = \frac{\log_c b}{\log_c a}$（$a,b,c&gt;0，a,c \neq 1$）。常用推论：$\log_a b = \frac{1}{\log_b a}$；$\log_{a^n} b^m = \frac{m}{n}\log_a b$。</li>
+<li><strong>单调性</strong>：当 $a&gt;1$ 时，$y=\log_a x$ 在 $(0, +\infty)$ 上单调递增；当 $0&lt;a&lt;1$ 时，$y=\log_a x$ 单调递减。</li>
+<li><strong>数值比较关键点</strong>：对数符号由底数与真数是否大于 1 决定。$\log_a b&gt;0$ 当且仅当 $(a-1)(b-1)&gt;0$；$\log_a b&lt;0$ 当且仅当 $(a-1)(b-1)&lt;0$。常借助中间值 $0$ 和 $1$ 进行过渡比较。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化同底统一标准</strong>：比较底数不同的对数大小时，首选换底公式将所有对数转化为同底（常取 $10$ 或 $e$），再用函数单调性求解。</li>
+<li><strong>寻找中间值“0”与“1”</strong>：当对数无法直接化为同底时，判断各自与 $0$ 或 $1$ 的大小关系。$\log_a b$ 与 $1$ 的比较相当于直接比较真数 $b$ 与底数 $a$ 的大小。</li>
+<li><strong>换底收放法</strong>：利用换底公式将目标对数拆解为乘积或分式，再结合已知条件进行分别比较。</li>
+<li><strong>作差/作商法</strong>：对于结构相似的对数表达式，可尝试作差并化为积商形式的对数，或因式分解后判断符号；作商时结合换底公式与不等号方向推理。</li>
+<li><strong>中间值桥接法（放大缩小）</strong>：将复杂对数通过换底或运算写成已知范围值的组合，应用于链条式不等关系的判断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略底数范围致单调性误用</strong>：未先判别底数 $a&gt;1$ 还是 $0&lt;a&lt;1$ 就直接套用单调性，导致比较方向完全相反。</li>
+<li><strong>直接比较真数大小</strong>：误以为“真数大则对数大”，忘记了底数的影响。必须是同底且底数大于 $1$ 时才成立。</li>
+<li><strong>对数自身正负性质混淆</strong>：（$\log_3 2$ 是小于 $1$ 的正数，$\log_5 2$ 也是正数）同真数不同底数时，误以为底数越大值越大。实则若 $\log_a 2 &gt; \log_b 2 &gt; 0$，可推出 $b&gt;a&gt;1$ 或 $0&lt;a&lt;b&lt;1$。</li>
+<li><strong>忽视定义域要求</strong>：做换底或变形时未注意真数必须恒大于 $0$，以及在变量 $x$ 处于不同区间时，对数值符号及幂次变形的方向会受影响（如 $x \in (0,1)$ 时，$\ln x &lt;0$，此时 $2\ln x &lt; \ln x$，$\ln^3 x$ 的符号与大小需结合负值仔细分析）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题1</strong>：2013-文-08</h3>
+<p><strong>题目</strong>：已知 $a=\log_3 2$，$b=\log_5 2$，$c=\log_2 3$，比较 $a,b,c$ 的大小。
+<strong>思路</strong>：$c$ 明显大于 $1$，$a$ 和 $b$ 均属于 $(0,1)$。问题的核心在于比较 $a$ 与 $b$ 的大小。由于真数相同而底数不同，可采用换底公式化为同底分数的倒数来比较，或转换为同底对数。
+<strong>步骤</strong>：
+1.  <strong>粗分离</strong>：$c=\log_2 3 &gt; \log_2 2 = 1$；$0&lt;a&lt;1$，$0&lt;b&lt;1$。故 $c$ 最大。
+2.  <strong>细比较</strong>：比较 $a$ 与 $b$。
+    法一（换底倒数法）：$a = \frac{1}{\log_2 3}$，$b = \frac{1}{\log_2 5}$。因 $y=\log_2 x$ 单调递增，$\log_2 3 &lt; \log_2 5$，取倒数得 $\frac{1}{\log_2 3} &gt; \frac{1}{\log_2 5}$，即 $a&gt;b$。
+    法二（换底相同真数法）：$a=\frac{\lg 2}{\lg 3}$，$b=\frac{\lg 2}{\lg 5}$。分子相同，分母 $\lg 3 &lt; \lg 5$，故 $a&gt;b$。
+3.  <strong>结论</strong>：$c&gt;a&gt;b$。选 D。
+<strong>点评/变式</strong>：同真数对数比较通用方法化为倒数再比，切记当 $a,b&gt;1$ 时结论依然成立，即 $\log_3 2 &gt; \log_5 2$。推广：若 $p&gt;q&gt;1, m&gt;1$，则 $\log_p m &lt; \log_q m$。</p>
+<h3><strong>代表题2</strong>：2008-文-05</h3>
+<p><strong>题目</strong>：设 $x \in (e^{-1}, 1)$，$a=\ln x$，$b=2\ln x$，$c=\ln^3 x$，比较 $a,b,c$ 的大小。
+<strong>思路</strong>：先由 $x$ 的取值范围确定 $\ln x$ 的符号及大致范围，再定性判断各表达式经过乘除运算后的数值大小变化。
+<strong>步骤</strong>：
+1.  <strong>定基调</strong>：由 $e^{-1} &lt; x &lt; 1$ 得 $-1 &lt; \ln x &lt; 0$，即 $\ln x$ 是介于 -1 和 0 的负数。
+2.  <strong>析差值</strong>：$b-a = (2\ln x) - (\ln x) = \ln x &lt; 0$，故 $b &lt; a$。
+3.  <strong>析乘方</strong>：$c=\ln^3 x = (\ln x)^3$。由于 $\ln x \in (-1, 0)$，其三次方绝对值小于一次方，且仍为负数。
+    计算 $c-a = \ln^3 x - \ln x = \ln x(\ln^2 x - 1)$。
+    因为 $-1&lt;\ln x&lt;0$，$\ln x$ 为负； $\ln^2 x \in (0,1)$，故 $(\ln^2 x - 1)$ 为负。负乘负得正，故 $c-a &gt; 0 \implies c &gt; a$。
+4.  <strong>结论</strong>：$c &gt; a &gt; b$。选 C。
+<strong>点评/变式</strong>：处理 0 到 1 区间的变量幂次极易出错。牢记口诀“大零小一，越乘越小”。负值区间内绝对值与大小是相反的：$-0.2 &gt; -0.8$，平方后 $0.04 &lt; 0.64$。此类题可用特值法快速验证，取 $x=e^{-0.5}$，则 $a=-0.5, b=-1, c=-0.125$ 直接得解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-08.html">2013-文-08</a>（2013 · 易） 本题通过对数值的比较，考查换底公式的应用及对数大小判断方法。</li>
+<li><a href="../../exam/数学/2008-文-05.html">2008-文-05</a>（2008 · 中） 当x∈(e⁻¹,1)时比较lnx、2lnx、ln³x三个对数值的大小，考查对数函数单调性。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/300-对数概念.html">对数</a></li>
+</ul>
+</div>
+</body>
+</html>

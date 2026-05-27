@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正四棱锥</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正四棱锥</h1><div class="review-mark" data-stem="正四棱锥"></div><div class="meta-card"><span><strong>考点</strong>正四棱锥</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：填空14</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>正四棱锥：底面是正方形，顶点在底面的投影是正方形中心的棱锥。侧棱长不一定相等，但侧棱与底面的夹角相等。</li>
+<li>平行于底面的截面性质：截面是正方形，且与原底面相似；截得的小棱锥与原棱锥相似，对应边长比等于对应高之比。</li>
+<li>相似棱锥体积比：体积比等于相似比（对应边长比）的立方，即若相似比为 $k=\dfrac{l_1}{l_2}$，则 $\dfrac{V_1}{V_2}=k^3$。</li>
+<li>棱台体积公式（台体中截面未直接给出时常用割补法）：截得棱台体积 $V_{\text{台}} = V_{\text{大锥}} - V_{\text{小锥}}$。 若已知上、下底面积 $S_1, S_2$ 及台高 $h$，也可用 $V = \frac13 h (S_1 + S_2 + \sqrt{S_1 S_2})$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别嵌套锥体</strong>：画出正四棱锥被平行于底面的平面截切的轴截面（等腰三角形），标出截面、底边、高及相关长度。</li>
+<li><strong>抓住相似关系</strong>：利用相似三角形或相似棱锥，建立原大棱锥与截去小棱锥的对应边比例关系。</li>
+<li>若已知小棱锥底面边长 $a$ 和高 $h_{\text{小}}$，以及大棱锥底面边长 $A$，则相似比 $k=\dfrac{A}{a}$，大棱锥高 $H = k \cdot h_{\text{小}}$。</li>
+<li><strong>计算体积差</strong>：$V_{\text{台}} = \frac13 A^2 \cdot H - \frac13 a^2 \cdot h_{\text{小}}$。</li>
+<li>可先求 $A^2 H$ 与 $a^2 h_{\text{小}}$，再作差，避免提前开方出错。</li>
+<li><strong>验算台体公式（可选）</strong>：用 $V = \frac13 h_{\text{台}} (S_{\text{上}} + S_{\text{下}} + \sqrt{S_{\text{上}} S_{\text{下}}})$ 复核，注意台高 $h_{\text{台}} = H - h_{\text{小}}$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>比例错误：误将大、小棱锥的底面边长比当作高比，实际二者相等；但若将高之比反过来代入体积，极易出错。</li>
+<li>棱台高混淆：台体高不是原大棱锥的高，也不是截去小棱锥的高，而是二者之差。</li>
+<li>体积公式用错：记成 $\frac13 h (S_1 + S_2)$ 漏掉 $\sqrt{S_1 S_2}$ 项，或直接用平均面积乘高。</li>
+<li>相似体积比直接求台体：部分考生试图直接用体积比关系求台体，但需要知道大锥或小锥体积方可差减，不能忽略完整计算步骤。</li>
+<li>单位与计算：面积单位与长度单位混淆，导致最后结果数量级错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+底面边长为 $4$ 的正四棱锥被平行于其底面的平面所截，截去一个底面边长为 $2$、高为 $3$ 的正四棱锥，求所得棱台的体积。</p>
+<p><strong>思路</strong><br />
+将棱台视为原大正四棱锥减去截掉的正四棱锥。利用已知小棱锥的底面边长与高，通过相似比求出大棱锥的高，再分别计算两棱锥体积作差。</p>
+<p><strong>步骤</strong><br />
+1. 设原大正四棱锥的底面边长为 $A=4$，高为 $H$；截去的小正四棱锥底面边长 $a=2$，高 $h_{\text{小}}=3$。<br />
+2. 由平行截面的性质，两个正四棱锥相似，相似比 $k = \dfrac{A}{a} = \dfrac{4}{2} = 2$。于是大棱锥高 $H = k \cdot h_{\text{小}} = 2 \times 3 = 6$。<br />
+3. 大棱锥体积 $V_{\text{大}} = \frac13 \times 4^2 \times 6 = \frac13 \times 16 \times 6 = 32$。<br />
+4. 小棱锥体积 $V_{\text{小}} = \frac13 \times 2^2 \times 3 = \frac13 \times 4 \times 3 = 4$。<br />
+5. 棱台体积 $V_{\text{台}} = V_{\text{大}} - V_{\text{小}} = 32 - 4 = 28$。  </p>
+<p><strong>点评/变式</strong><br />
+- 此题直接用台体公式亦可：上底面积 $4$，下底面积 $16$，台高 $6-3=3$，$V=\frac13 \times 3 \times (4+16+\sqrt{4\times16}) = 1 \times (20+8) = 28$。<br />
+- 变式：若给出原棱锥的高及截去部分的高，求上底面边长；或给出台体体积反求截面位置，均需灵活运用相似比与体积差。
+- 提醒：相似立体体积比是边长比的立方，某些题目会以此设计斜率、高度等间接条件，务必画截面图明确对应关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-14.html">2023-新课标Ⅱ-14</a>（2023 · 易） 利用割补法或台体体积公式求正四棱锥截得的棱台体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/957-正四棱锥.html">正四棱锥</a></li>
+</ul>
+</div>
+</body>
+</html>

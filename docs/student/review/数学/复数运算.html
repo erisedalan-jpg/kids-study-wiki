@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数运算</h1><div class="review-mark" data-stem="复数运算"></div><div class="meta-card"><span><strong>考点</strong>复数运算</span><span><strong>权重</strong>28</span><span><strong>真题数</strong>20</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：28</li>
+<li>真题数：20；年份跨度：2008–2022</li>
+<li>出现题位：填空15 选择1 选择2 选择3</li>
+<li>难度分布：易19 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数的代数形式</strong>：$z = a + bi\ (a,b \in \mathbb{R})$，$a$ 为实部，$b$ 为虚部（虚部是实数）。</li>
+<li><strong>复数相等</strong>：$a+bi = c+di \iff a = c$ 且 $b = d$。</li>
+<li><strong>复数的模</strong>：$|z| = \sqrt{a^2 + b^2}$，表示复平面内点 $(a,b)$ 到原点的距离。
+  性质：$|z_1z_2| = |z_1||z_2|$，$|z_1/z_2| = |z_1|/|z_2|\,(z_2 \neq 0)$，$|z^n| = |z|^n$。</li>
+<li><strong>共轭复数</strong>：$\overline{z} = a - bi$，满足 $z\overline{z} = |z|^2$，$|\overline{z}| = |z|$。</li>
+<li><strong>四则运算</strong>：
+  加减：实部与实部相加减，虚部与虚部相加减。
+  乘法：$(a+bi)(c+di) = (ac-bd) + (ad+bc)i$。
+  除法：$\frac{a+bi}{c+di} = \frac{(a+bi)(c-di)}{c^2+d^2}\,(c+di \neq 0)$。</li>
+<li><strong>虚数单位 $i$</strong>：$i^2 = -1$，$i^{4k}=1,\ i^{4k+1}=i,\ i^{4k+2}=-1,\ i^{4k+3}=-i$。</li>
+<li><strong>几何意义</strong>：复数 $z=a+bi$ 对应复平面上的点 $(a,b)$ 或向量，对称性与坐标变换联系紧密（如关于虚轴对称：$(a,b) \to (-a,b)$，对应 $z$ 变为 $-\overline{z}$ 的特殊情形）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>统一形式</strong>：将题中复数均化成 $a+bi$ 的标准代数形式，特别是除法与乘方运算后。</li>
+<li><strong>复数相等列方程组</strong>：若等式两侧均为复数且含未知实数，令实部、虚部分别相等，转化为实数方程组求解。</li>
+<li><strong>模长计算策略</strong>：</li>
+<li>先化简复数再代入 $|z| = \sqrt{a^2+b^2}$。</li>
+<li>遇乘积、商或乘方的模，优先用模的性质简算。</li>
+<li>对于含多个复数的模长条件，可设三角形式（如 $z=2\cos\theta+2i\sin\theta$）简化运算。</li>
+<li><strong>共轭与除法</strong>：分母含虚数时，分子分母同乘分母的共轭复数，分母化为实数。</li>
+<li><strong>几何对称题</strong>：抓住点坐标的对称关系（关于虚轴、实轴、原点），直接写出对应复数再计算。</li>
+<li><strong>含 $z$ 与 $\overline{z}$ 的方程</strong>：可设 $z=a+bi$，将方程化为一对实方程求解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆虚部与虚数单位</strong>：虚部是 $b$，不是 $bi$。如 $z=3-4i$ 的虚部是 $-4$，共轭复数的虚部变号，实部不变。</li>
+<li><strong>除法时漏乘或错用</strong>：分子、分母同乘共轭复数后，分母应为 $c^2+d^2$（无 $i$），切忌忘记同时乘分子。</li>
+<li><strong>模长计算变实数平方</strong>：$|a+bi|=\sqrt{a^2+b^2}$，不是 $a^2+b^2$，开方不能少。</li>
+<li><strong>乘方运算中 $i^2=-1$ 符号失误</strong>：如 $(2i)^2 = -4$，$(1+i)^2=2i$，注意含 $i$ 项的符号变化。</li>
+<li><strong>复数相等忽略限制条件</strong>：题目常隐含 $a,b\in\mathbb{R}$，务必确认实部、虚部均为实数，否则不可直接对应相等。</li>
+<li><strong>共轭复数误解</strong>：共轭仅虚部变号，若将 $a+bi$ 误认为共轭为 $-a+bi$ 或 $a-bi$ 混淆方向。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2022-文-02）</h3>
+<p>设 $(1+2i)a + b = 2i$，其中 $a,b$ 为实数，则（　　）
+A. $a=1, b=-1$ 　B. $a=1, b=1$　C. $a=-1, b=1$　D. $a=-1, b=-1$</p>
+<p><strong>思路</strong>：将等式左侧整理成 $A+Bi$ 的形式，再利用复数相等（实部、虚部分别相等）列出关于 $a,b$ 的方程组。</p>
+<p><strong>步骤</strong>：
+左侧 $= a + 2ai + b = (a+b) + 2ai$，右侧 $= 0 + 2i$。
+由复数相等得：
+$$
+\begin{cases}
+a + b = 0 \
+2a = 2
+\end{cases}
+$$
+解得 $a = 1$，代入得 $b = -1$，故选 A。</p>
+<p><strong>点评/变式</strong>：该题考查复数乘法及相等条件的直接应用。注意不要漏乘 $2i \cdot a$ 中的 $i$，且须把不含 $i$ 的项全部归入实部。变式中可将 $2i$ 换成其他复数，或改为含 $\overline{z}$ 的方程，解法相同。</p>
+<hr />
+<h3><strong>题目2</strong>（2022-理-02）</h3>
+<p>已知 $z = 1 - 2i$，且 $z + a\overline{z} + b = 0$，其中 $a,b$ 为实数，则（　　）
+A. $a=1, b=-2$　B. $a=-1, b=2$　C. $a=1, b=2$　D. $a=-1, b=-2$</p>
+<p><strong>思路</strong>：先写出 $\overline{z}$，代入方程，把左侧整理为 $A+Bi$ 形式，利用复数等于零等价于实部、虚部均为零，列方程组。</p>
+<p><strong>步骤</strong>：
+$\overline{z} = 1 + 2i$，代入：
+$1 - 2i + a(1+2i) + b = (1 + a + b) + (-2 + 2a)i = 0$。
+则
+$$
+\begin{cases}
+1 + a + b = 0 \
+-2 + 2a = 0
+\end{cases}
+$$
+由第二式得 $a = 1$，代入第一式得 $b = -2$，故选 A。</p>
+<p><strong>点评/变式</strong>：题目涉及共轭复数与方程，核心仍是“化为 $a+bi$ 后实虚部分别为零”。常见变式：将等式改为 $z^2 + az + b = 0$，需先计算 $z^2$ 再合并。</p>
+<hr />
+<h3><strong>题目3</strong>（2021-文-02）</h3>
+<p>设 $z = \frac{4+3i}{i}$，则 $\overline{z} =$（　　）
+A. $3-4i$　B. $-3+4i$　C. $3-4i$　D. $3+4i$</p>
+<p>（原题选项有重复，答案应为 $3-4i$）</p>
+<p><strong>思路</strong>：先通过复数除法化简 $z$，再取共轭得 $\overline{z}$。</p>
+<p><strong>步骤</strong>：
+$z = \frac{4+3i}{i}$。分子分母同乘 $-i$（或同乘 $i$ 的共轭 $-i$）：
+$z = \frac{(4+3i)(-i)}{i(-i)} = \frac{-4i -3i^2}{1} = -4i + 3 = 3 - 4i$。
+因此 $\overline{z} = 3 + 4i$。
+但观察选项应为 $3-4i$ 才正确？重新审视：
+$z = \frac{4+3i}{i}$，分子分母乘 $-i$：分母 $i \cdot (-i) = -i^2 = 1$，分子 $(4+3i)(-i) = -4i -3i^2 = -4i +3 = 3-4i$，所以 $z=3-4i$，共轭为 $3+4i$。选项 D 为 $3+4i$，原卷答案选 C 有误，应以正确推导为准：此题原解析答案给出 C（$3-4i$）可能是直接取 $z$ 的虚部变号误解，实际 $z=3-4i$ 的共轭是 $3+4i$ 。根据题目要求，我们按正确处理：$z=3-4i$，$\overline{z}=3+4i$。</p>
+<p><strong>点评/变式</strong>：除法化简是关键，切记分母实数化。共轭复数变换务必只变虚部符号。变式：$\frac{3+4i}{1-i}$，需分母实数化后取共轭。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-02.html">2022-文-02</a>（2022 · 易） 考查复数代数形式的运算法则及复数相等的条件。</li>
+<li><a href="../../exam/数学/2022-理-02.html">2022-理-02</a>（2022 · 易） 本题通过已知复数及其共轭，利用复数相等条件求解实参数</li>
+<li><a href="../../exam/数学/2021-文-02.html">2021-文-02</a>（2021 · 易） 该题考查复数的除法运算，通过化简求复数z的值。</li>
+<li><a href="../../exam/数学/2020-理-15.html">2020-理-15</a>（2020 · 中） 已知复数z₁、z₂满足|z₁|=|z₂|=2且z₁+z₂=√3+i，求|z₁-z₂|。</li>
+<li><a href="../../exam/数学/2018-文-01.html">2018-文-01</a>（2018 · 易） 本题主要考查复数的代数形式乘法运算，通过直接计算求解。</li>
+<li><a href="../../exam/数学/2018-理-01.html">2018-理-01</a>（2018 · 易） 本题考查复数的除法运算，通过化简复数表达式得到结果。</li>
+<li><a href="../../exam/数学/2017-文-02.html">2017-文-02</a>（2017 · 易） 本题考查复数的乘法运算及化简。</li>
+<li><a href="../../exam/数学/2017-理-01.html">2017-理-01</a>（2017 · 易） 该题考查复数的除法运算，要求将复数化简为标准形式。</li>
+<li><a href="../../exam/数学/2014-文-02.html">2014-文-02</a>（2014 · 易） 本题考查复数的除法运算，需分子分母同乘分母的共轭复数进行化简。</li>
+<li><a href="../../exam/数学/2014-理-02.html">2014-理-02</a>（2014 · 易） 复数几何意义及乘法运算，利用对称性求复数乘积</li>
+<li><a href="../../exam/数学/2013-文-02.html">2013-文-02</a>（2013 · 易） 计算复数模的简单运算题，直接求分子与分母的模。</li>
+<li><a href="../../exam/数学/2013-理-02.html">2013-理-02</a>（2013 · 易） 本题给出复数方程，要求通过复数除法求解z，主要考查复数代数形式的四则运算。</li>
+<li><a href="../../exam/数学/2012-文-02.html">2012-文-02</a>（2012 · 易） 本题考查复数的除法运算及其共轭复数的求法。</li>
+<li><a href="../../exam/数学/2012-理-03.html">2012-理-03</a>（2012 · 易） 该题考查复数的四则运算、共轭复数、虚部等概念，要求判断命题真假。</li>
+<li><a href="../../exam/数学/2011-文-02.html">2011-文-02</a>（2011 · 易） 复数除法运算，分子分母同乘共轭复数化简求值。</li>
+<li><a href="../../exam/数学/2011-理-01.html">2011-理-01</a>（2011 · 易） 复数除法运算及共轭复数概念的应用</li>
+<li><a href="../../exam/数学/2010-文-03.html">2010-文-03</a>（2010 · 易） 已知复数代数形式，通过乘除运算化简并求模长。</li>
+<li><a href="../../exam/数学/2010-理-02.html">2010-理-02</a>（2010 · 易） 考查复数的基本运算、共轭复数概念及模的求值。</li>
+<li><a href="../../exam/数学/2009-理-01.html">2009-理-01</a>（2009 · 易） 复数除法运算，分子分母同乘共轭复数化简为标准形式</li>
+<li><a href="../../exam/数学/2008-理-02.html">2008-理-02</a>（2008 · 易） 本题考查复数乘方展开及复数为实数的条件。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/811-复数运算.html">复数运算</a></li>
+</ul>
+</div>
+</body>
+</html>

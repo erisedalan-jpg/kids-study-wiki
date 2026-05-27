@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线的截距</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线的截距</h1><div class="review-mark" data-stem="直线的截距"></div><div class="meta-card"><span><strong>考点</strong>直线的截距</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直线的截距</strong>：直线与 $x$ 轴交点的横坐标称为横截距（$a$），与 $y$ 轴交点的纵坐标称为纵截距（$b$）。截距是实数，可为正、负或零。</li>
+<li><strong>截距式方程</strong>：若直线在 $x$、$y$ 轴上的截距分别为 $a$、$b$（$a \neq 0, b \neq 0$），则直线方程为 $\displaystyle\frac{x}{a}+\frac{y}{b}=1$。<br />
+  过原点的直线不能用截距式表示（截距均为 $0$）。</li>
+<li><strong>由一般式或点斜式求截距</strong>：将直线方程 $Ax+By+C=0$ 化为截距式时，令 $y=0$ 得 $x=-\frac{C}{A}$（横截距），令 $x=0$ 得 $y=-\frac{C}{B}$（纵截距）。</li>
+<li><strong>直线与坐标轴围成的三角形面积</strong>：$S = \frac{1}{2}|a||b|$，其中 $a$、$b$ 为直线在两轴上的截距。注意取绝对值以保证面积非负。</li>
+<li><strong>切线相关</strong>（本题背景）：圆 $x^2+y^2=r^2$ 上一点 $(x_0,y_0)$ 处的切线方程为 $x_0 x + y_0 y = r^2$；若用点斜式，切线斜率 $k$ 与圆心和切点连线的斜率乘积为 $-1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断点与圆的位置关系</strong>：将点代入圆方程，若满足则点在圆上；若不满足且需切线，要分情况讨论（设斜率、判别式等）。</li>
+<li><strong>求切线方程（点在圆上）</strong>：</li>
+<li>法一：利用切线垂直过切点的半径，求出斜率 $k=-\frac{x_0}{y_0}$（$y_0 \neq 0$），再点斜式写出方程；</li>
+<li>法二：直接代切线公式 $x_0 x + y_0 y = r^2$。</li>
+<li><strong>计算截距</strong>：将所得直线方程整理为一般式，分别令 $x=0$、$y=0$，求出纵截距 $b$ 和横截距 $a$。</li>
+<li><strong>求三角形面积</strong>：$S=\frac{1}{2}|ab|$，直接代入计算。若截距已为正值，可去掉绝对值。</li>
+<li><strong>化简与作答</strong>：注意计算结果是否为最简分数或整数，面积须带单位（本题无单位）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>截距与距离混淆</strong>：截距是坐标值（可正可负），求面积时务必加绝对值；距离是长度，本身就非负。</li>
+<li><strong>忽略截距为零的情形</strong>：当直线过原点时，截距均为 $0$，此时与坐标轴围不成三角形（除非要说面积为 $0$），不可盲目套用 $\frac{1}{2}|ab|$。</li>
+<li><strong>求切线斜率时忘记垂直关系</strong>：点在圆上时，切点与圆心连线的斜率 $k_1$ 与切线斜率 $k_2$ 满足 $k_1 k_2 = -1$，计算易取倒数而忘负号。</li>
+<li><strong>方程系数符号错误</strong>：点斜式展开或化简一般式时，移项符号疏忽导致截距计算错误。例如 $y-2=-\frac{1}{2}(x-1)$ 化为 $x+2y-5=0$ 时，常数项符号要仔细。</li>
+<li><strong>忽视斜率不存在的情况</strong>：若点在圆的上、下顶点，切线水平，斜率为 $0$；在左、右顶点，切线竖直，斜率不存在。本题无此情况，但其他题目需警惕分类讨论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009-文-15）：已知圆 $O: x^2+y^2=5$ 和点 $A(1,2)$，则过 $A$ 且与圆 $O$ 相切的直线与两坐标轴围成的三角形的面积等于___。</p>
+<p><strong>思路</strong><br />
+先验证 $A$ 在圆上，利用切线与半径垂直求出斜率，点斜式写出切线方程，再分别求出横、纵截距，最后用面积公式 $S=\frac{1}{2}|ab|$ 计算。</p>
+<p><strong>步骤</strong><br />
+1. 验证：$1^2+2^2=5$，点 $A$ 在圆上。<br />
+2. 圆心 $O(0,0)$ 与 $A$ 连线的斜率 $k_{OA} = \frac{2-0}{1-0}=2$，故切线斜率 $k = -\frac{1}{2}$。<br />
+3. 切线方程：$y-2 = -\frac{1}{2}(x-1)$，化简得 $x+2y-5=0$。<br />
+4. 求截距：令 $y=0$ 得 $x=5$（横截距 $a=5$）；令 $x=0$ 得 $y=\frac{5}{2}$（纵截距 $b=\frac{5}{2}$）。<br />
+5. 面积：$S = \frac{1}{2} \times 5 \times \frac{5}{2} = \frac{25}{4}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接给出点在圆上，无需讨论点在圆外用判别式。若点改为 $(3,1)$（在圆外），则需设点斜式，利用圆心到直线距离等于半径求斜率，可能有两解，截距与面积计算更复杂。<br />
+- 注意截距可正可负，本题截距皆为正，面积可直接求。若截距一正一负，面积仍为其绝对值乘积的一半。<br />
+- 变式训练：求过点 $(-2,1)$ 且与圆 $x^2+y^2=5$ 相切的直线在两轴上的截距之和（或面积），需先判断点位置再计算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-15.html">2009-文-15</a>（2009 · 难） 求过圆上一点的切线方程并计算其与坐标轴围成的三角形面积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1028-直线的截距.html">直线的截距</a></li>
+</ul>
+</div>
+</body>
+</html>

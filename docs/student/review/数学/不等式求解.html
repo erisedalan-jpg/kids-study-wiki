@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式求解</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>不等式求解</h1><div class="review-mark" data-stem="不等式求解"></div><div class="meta-card"><span><strong>考点</strong>不等式求解</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2014–2018</li>
+<li>出现题位：选择2 选择12</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>不等式求解的核心是将条件转化为标准不等式并通过同解变形求出解集。在本考点涉及的真题中，常见不等式类型与工具包括：
+- 一元二次不等式：形如 $ax^2+bx+c&gt;0\ (a\neq0)$，先化为标准形，求对应方程根，利用二次函数图像或数轴穿根写解集。
+- 二元不等式整数解：如 $x^2+y^2\le k$，$x,y\in\mathbb Z$，需对整数变量分类讨论，逐一验证范围，本质上是不等式对整数解的约束。
+- 含参不等式的存在性转化：存在 $x_0$ 使 $F(x_0)<m^2$，常转化为函数的最小值（最苛刻条件）小于 $m^2$，从而解关于参数的一元二次不等式（如 $m^2>4$）。
+- 极值点条件：$f(x)=A\sin(\omega x+\varphi)$ 的极值点为 $\omega x+\varphi=\frac{\pi}{2}+k\pi$，极值平方为 $A^2$，利用该条件代入不等式消去 $x_0$ 的具体值，选取最小 $\lvert x_0\rvert$ 实现转化。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别不等式类型</strong>：看清是一元、二元还是含参存在性问题，明确求解目标（解集、元素个数、参数范围）。</li>
+<li><strong>等价转化</strong>：将几何、集合、函数极值等条件翻译成不等式。如存在极值点满足不等式，转化为最小 $\lvert x_0\rvert$ 时不等式成立，将存在性问题化归为最值问题。</li>
+<li><strong>解标准不等式</strong>：对于一元二次不等式，求出对应方程的根，根据二次项系数决定开口方向，用“大于取两边，小于取中间”或穿根法得出解集。</li>
+<li><strong>整数解问题</strong>：对二元不等式，固定其中一个整数变量，解出另一个变量的范围，再枚举所有可能取值，统计满足条件的配对个数。</li>
+<li><strong>检验边界与定义域</strong>：参数范围得出后，结合题目限制（如集合元素为整数、$m\neq0$ 等）进行取舍。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>二次项系数符号忽略</strong>：解 $ -x^2+4&gt;0$ 类型时，未将系数化为正就使用“大于取两边”导致解集反向。</li>
+<li><strong>不等式平方未限制非负</strong>：无论是直接平方还是利用平方转化，必须确保两边非负，否则会增解。</li>
+<li><strong>存在性问题误求所有值</strong>：如“存在 $x_0$ 使 $g(x_0)&lt;m^2$”容易错误解成 $g(x_0)<em _min="\min">{\max}&lt;m^2$，正确应为 $g(x_0)</em>&lt;m^2$。</li>
+<li><strong>整数解范围遗漏</strong>：在 $x^2+y^2\le3$ 中，固定 $x$ 时，只取非负 $y$ 或者忘记 $y$ 取负整数，造成计数遗漏。</li>
+<li><strong>极值点坐标公式记忆错误</strong>：$\sin$ 的极值点横坐标易与对称中心混淆，记成 $k\pi$ 导致 $x_0$ 表达式错误，最终解出的参数范围不对。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2018理2） 集合 $A={(x,y)\mid x^2+y^2\le3,\ x\in\mathbb Z,\ y\in\mathbb Z}$，求 $A$ 中元素个数。<br />
+<strong>思路</strong> 该集合是圆盘 $x^2+y^2\le3$ 内的整点（格点）。分别令 $x$ 取所有可能整数值（由 $x^2\le3$ 得 $x=-1,0,1$），再对每个固定 $x$ 解出 $y$ 的整数范围，计数相加。<br />
+<strong>步骤</strong><br />
+1. 由 $x^2\le3$ 且 $x\in\mathbb Z$，得 $x\in{-1,0,1}$。<br />
+2. 当 $x=-1$ 时，$y^2\le2 \Rightarrow y\in{-1,0,1}$，共3个。<br />
+3. 当 $x=0$ 时，$y^2\le3 \Rightarrow y\in{-1,0,1}$，共3个。<br />
+4. 当 $x=1$ 时，同 $x=-1$，$y\in{-1,0,1}$，共3个。<br />
+5. 总数 $3+3+3=9$，选A。<br />
+<strong>点评/变式</strong> 本题属“不等式背景下的有限点集计数”，易错点在于忘记 $x,y$ 的负整数解。若不等式改为 $x^2+y^2&lt;3$，则圆心 $(0,0)$ 不可取？此时 $x=0,y=\pm1$ 满足，总数变为7。</p>
+<p><strong>题目</strong>（2014理12） 设函数 $f(x)=\sqrt{3}\sin\frac{\pi x}{m}$，若存在 $f(x)$ 的极值点 $x_0$ 满足 $x_0^2+[f(x_0)]^2&lt;m^2$，求 $m$ 的取值范围。<br />
+<strong>思路</strong> 先写出极值点的通式与极值，代入不等式得关于 $m$ 和整数 $k$ 的条件。存在性等价于使不等式成立的最苛刻（即 $|x_0|$ 最小）的极值点能满足，从而转化为关于 $m$ 的一元二次不等式。<br />
+<strong>步骤</strong><br />
+1. $f(x)$ 极值为 $\pm\sqrt{3}$，故 $[f(x_0)]^2=3$。极值点满足 $\frac{\pi x_0}{m}=\frac{\pi}{2}+k\pi \Rightarrow x_0=m\left(k+\frac12\right),\ k\in\mathbb Z$。<br />
+2. 代入条件得 $m^2\left(k+\frac12\right)^2+3<m^2$。存在整数 $k$ 使之成立，需绝对距离最近的极值点成立，即 $|x_0|_{\min}=\frac{|m|}{2}$（当 $k=0$ 或 $k=-1$）。<br />3. 因此只需 $\left(\frac{m}{2}\right)^2+3\<m^2\ \Rightarrow\ \frac{m^2}{4}+3\<m^2\ \Rightarrow\ \frac34m^2>3\ \Rightarrow\ m^2>4$。<br />4. 解得 $m>2$ 或 $m&lt;-2$，选C。<br />
+<strong>点评/变式</strong> 本题难点在于“存在极值点”的正确转化——不是所有极值点，而是存在一个即可是，故取极小 $|x_0|$ 求范围。若条件改为“对任意极值点均有 $x_0^2+[f(x_0)]^2&lt;m^2$”，则需考虑最大 $|x_0|$，结果会不同。注意参数 $m$ 出现在正弦函数的分母中，默认 $m\neq0$，解集不包含0，</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-02.html">2018-理-02</a>（2018 · 易） 集合中元素个数的判断，通过分类讨论确定圆内整点个数。</li>
+<li><a href="../../exam/数学/2014-理-12.html">2014-理-12</a>（2014 · 中） 本题通过正弦函数极值点构造不等式，求参数 m 的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">不等式求解</a></li>
+</ul>
+</div>
+</body>
+</html>

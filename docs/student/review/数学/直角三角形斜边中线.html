@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直角三角形斜边中线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直角三角形斜边中线</h1><div class="review-mark" data-stem="直角三角形斜边中线"></div><div class="meta-card"><span><strong>考点</strong>直角三角形斜边中线</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直角三角形斜边中线定理</strong>：直角三角形斜边上的中线等于斜边的一半。<br />
+  符号表述：在 ${\rm Rt}\triangle ABC$ 中，$\angle C=90^\circ$，$M$ 为 $AB$ 中点，则 $CM = \dfrac12 AB$。</li>
+<li><strong>逆定理</strong>：若三角形一边上的中线等于该边的一半，则该三角形是直角三角形，且该边为斜边。</li>
+<li><strong>与四点共圆的联系</strong>：若一条线段的两端与一点构成直角三角形，则该点为圆心、线段为直径；斜边中线即为半径。常用于证明一组点到同一点的距离相等，从而共圆。</li>
+<li><strong>菱形性质补充</strong>：菱形的对角线互相垂直平分，且四条边相等。利用菱形构造直角三角形，使斜边中线定理自然出场。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别直角三角形</strong>：遇到“中点”与“对角线交点”时，优先联想菱形或矩形等垂直平分的条件，标出所有直角。  </li>
+<li><strong>连接关键中点与对角线交点</strong>：把各边中点与对角线交点相连，得到若干条“斜边中线”。  </li>
+<li><strong>应用斜边中线定理</strong>：写出每条中线等于所在直角三角形斜边的一半。结合四边形边长相等，统一这些长度。  </li>
+<li><strong>固化结论</strong>：由距离相等直接得出各点共圆，并指明圆心和半径。  </li>
+<li><strong>通用技巧</strong>：证明“到定点的距离等于定长”是证明点在同一个圆上的最直接思路；当图形中出现多个直角三角形时，中线等长是首选工具。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>误将非直角三角形的中线当成斜边中线使用，未先判明直角就套用定理。  </li>
+<li>忘记菱形对角线垂直这一核心性质，导致找不到直角三角形。  </li>
+<li>混淆斜边中线与一般中位线、中线的定理，套用错公式。  </li>
+<li>在书写证明时不清不楚：没有明确指出哪条是斜边、哪条是中线。  </li>
+<li>将“各边中点共圆”等同于“各边中点与顶点共圆”，审题不细导致思路偏差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009·理·16）<br />
+求证：菱形各边中点在以对角线的交点为圆心的同一个圆上。</p>
+<p><strong>思路</strong><br />
+要证四个中点共圆，只需证明这四个点到菱形对角线交点的距离相等。借助菱形对角线互相垂直平分，构造直角三角形，利用“直角三角形斜边上的中线等于斜边的一半”即可统一为边长的一半。</p>
+<p><strong>步骤</strong><br />
+已知：菱形 $ABCD$，对角线 $AC$、$BD$ 相交于点 $O$，$M$、$N$、$P$、$Q$ 分别为 $AB$、$BC$、$CD$、$DA$ 的中点。<br />
+求证：$M$、$N$、$P$、$Q$ 在以 $O$ 为圆心的同一个圆上。</p>
+<ul>
+<li><strong>证</strong>：<br />
+  ① ∵ 四边形 $ABCD$ 是菱形，<br />
+  ∴ $AC \perp BD$ 且 $O$ 为 $AC$、$BD$ 的中点，$AB=BC=CD=DA$。<br />
+  ② 在 ${\rm Rt}\triangle AOB$ 中，$M$ 为斜边 $AB$ 的中点，<br />
+  ∴ $OM = \dfrac12 AB$（直角三角形斜边中线定理）。<br />
+  ③ 同理，在 ${\rm Rt}\triangle BOC$ 中 $ON=\dfrac12 BC$，<br />
+  在 ${\rm Rt}\triangle COD$ 中 $OP=\dfrac12 CD$，<br />
+  在 ${\rm Rt}\triangle DOA$ 中 $OQ=\dfrac12 DA$。<br />
+  ④ 又 $AB=BC=CD=DA$，<br />
+  ∴ $OM=ON=OP=OQ=\dfrac12 AB$。<br />
+  ⑤ 所以 $M$、$N$、$P$、$Q$ 到定点 $O$ 的距离相等，即四个点都在以 $O$ 为圆心、$\dfrac12 AB$ 为半径的同一个圆上。</li>
+</ul>
+<p><strong>点评/变式</strong><br />
+本题虽标为压轴题，但本质是“割裂的直角三角形”组合模型。证明共圆常化归为等距，而等距的桥梁就是斜边中线定理。<br />
+- 变式1：若改为矩形，结论是否成立？（仍成立，但对角线未必垂直，此时直角三角形仍存在，中点到对角线交点仍等于斜边一半，四条边相等改成对边相等即可）<br />
+- 变式2：直接证明四个中点构成的四边形是矩形，从另一角度亦可得四点共圆（对角线相等且互相平分），此法也离不开斜边中线或中位线联合性质。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-16.html">2009-理-16</a>（2009 · 中） 菱形各边中点到对角线交点距离相等，证四点共圆</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/578-直角三角形斜边中线.html">直角三角形斜边中线</a></li>
+</ul>
+</div>
+</body>
+</html>

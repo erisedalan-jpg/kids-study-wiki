@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三垂线定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三垂线定理</h1><div class="review-mark" data-stem="三垂线定理"></div><div class="meta-card"><span><strong>考点</strong>三垂线定理</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三垂线定理</strong>：若平面内的一条直线与一条斜线在该平面内的射影垂直，则它也与这条斜线垂直。<br />
+  符号表示：$PA$ 是平面 $\alpha$ 的斜线，$A$ 为斜足，$PO\perp\alpha$ 于 $O$，$OA$ 是 $PA$ 在 $\alpha$ 内的射影。若 $l\subset\alpha$ 且 $l\perp OA$，则 $l\perp PA$。</li>
+<li><strong>三垂线定理的逆定理</strong>：若平面内的一条直线与平面的一条斜线垂直，则它也与斜线在该平面内的射影垂直。</li>
+<li><strong>射影找法</strong>：过斜线上一点（通常为线面垂直的垂足）向平面作垂线，垂足与斜足连线即为射影。</li>
+<li><strong>应用条件</strong>：</li>
+<li>必须存在一个平面的垂线（通常由已知的线面垂直获得，如本题中 $PD\perp$ 底面）。</li>
+<li>斜线及其射影需明确。</li>
+<li>目标直线必须在平面内。</li>
+<li><strong>辅助方法</strong>：等体积法求点到平面的距离（高）——对同一个三棱锥换不同顶点计算体积。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证线线垂直（一条为平面斜线，一条在平面内）</strong></li>
+<li><strong>步骤一</strong>：找或作平面的垂线，确定斜线在平面内的射影。</li>
+<li><strong>步骤二</strong>：在平面内证明目标直线与射影垂直（常用勾股定理逆定理、余弦定理或平面几何性质）。</li>
+<li>
+<p><strong>步骤三</strong>：由三垂线定理直接推出目标直线与斜线垂直。</p>
+</li>
+<li>
+<p><strong>求点到平面的距离（棱锥的高）</strong></p>
+</li>
+<li><strong>步骤一</strong>：选取一个三棱锥，使其体积易求（通常将目标点作为顶点，底面易算高且易算面积）；或借助已有的垂直关系直接计算体积。</li>
+<li><strong>步骤二</strong>：计算该三棱锥的体积 $V$（常用 $V=\frac13\times S_{底}\times h_{垂直}$）。</li>
+<li><strong>步骤三</strong>：换顶点，以目标点为顶点，所求距离为高 $h$，再用 $V=\frac13\times S_{新底}\times h$，解出 $h$。</li>
+<li><strong>步骤四</strong>：若新底三角形三边可求，可用勾股定理或余弦定理计算其面积。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>射影找错</strong>：没有注意“垂足—斜足”的对应关系。例如本题中斜线是 $PA$，射影是 $DA$，而非其他线段。</li>
+<li><strong>忽视三垂线定理的使用前提</strong>：平面内的直线必须垂直于<strong>射影</strong>，而不是垂直于斜线的其他关联线。必须先在平面内证明垂直关系，再套用定理。</li>
+<li><strong>等体积法换底时底面积算错</strong>：换底后新底为斜三角形，误用边长或夹角导致面积错误。务必先验证三角形的形状（如直角）再计算面积以简化运算。</li>
+<li><strong>忽略长度关系的代数转化</strong>：底面条件如 $\angle DAB=60^\circ$，$AB=2AD$ 等，需及时设出具体长度或利用余弦定理推导出隐藏的垂直关系，否则三垂线所需条件无法推出。</li>
+<li><strong>体积相等关系写错</strong>：三棱锥 $D-PBC$ 与 $P-DBC$ 为同一几何体，顶点换位后体积不变，但列式时高与底需与新顶点严格对应。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·全国卷文18）<br />
+四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为平行四边形，$\angle DAB=60^\circ$，$AB=2AD$，$PD\perp$ 底面 $ABCD$。<br />
+（Ⅰ）证明：$PA\perp BD$；<br />
+（Ⅱ）设 $PD=AD=1$，求棱锥 $D-PBC$ 的高。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）$PA$ 是底面 $ABCD$ 的斜线，$PD\perp$ 底面，射影为 $AD$。只需在底面证明 $BD\perp AD$，即可由三垂线定理得 $PA\perp BD$。<br />
+（Ⅱ）棱锥 $D-PBC$ 的高不易直接作，利用等体积法：求 $V_{P-DBC}$，再除以 $\frac13 S_{\triangle PBC}$ 即得高。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）<br />
+1. 设 $AD=1$，则 $AB=2$。在 $\triangle ABD$ 中，$\angle DAB=60^\circ$，<br />
+   $$BD^2 = AD^2 + AB^2 - 2\cdot AD\cdot AB\cdot\cos60^\circ = 1+4 -2\times1\times2\times\frac12 = 3 \Rightarrow BD=\sqrt3.$$
+2. 验证：$AD^2 + BD^2 = 1+3=4 = AB^2$，$\therefore AD\perp BD$。<br />
+3. 因 $PD\perp$ 底面，$AD$ 是 $PA$ 在底面内的射影，$BD\subset$ 底面，且 $BD\perp AD$，由三垂线定理得 $PA\perp BD$。</p>
+<p>（Ⅱ）<br />
+1. $V_{P-DBC} = \frac13 S_{\triangle DBC} \cdot PD$。<br />
+   底面平行四边形中 $\angle DCB=60^\circ$，$BC=AD=1$，$DC=AB=2$，<br />
+   $$S_{\triangle DBC}=\frac12 BC\cdot DC\cdot\sin60^\circ = \frac12\times1\times2\times\frac{\sqrt3}{2}=\frac{\sqrt3}{2}.$$
+   又 $PD=1$，故 $V_{P-DBC} = \frac13 \times \frac{\sqrt3}{2} \times 1 = \frac{\sqrt3}{6}$。
+2. 三棱锥 $D-PBC$ 的体积 $V_{D-PBC}=V_{P-DBC}= \frac{\sqrt3}{6}$。<br />
+   设所求高为 $h$，则 $V_{D-PBC} = \frac13 S_{\triangle PBC} \cdot h$。
+3. 计算 $S_{\triangle PBC}$：<br />
+   $PB^2 = PD^2 + BD^2 = 1+3=4 \Rightarrow PB=2$，<br />
+   $PC^2 = PD^2 + DC^2 = 1+4=5 \Rightarrow PC=\sqrt5$，<br />
+   $BC=1$。<br />
+   $\because BC^2+PB^2 = 1+4=5=PC^2$，$\therefore \triangle PBC$ 为直角三角形，$\angle PBC=90^\circ$。<br />
+   $$S_{\triangle PBC} = \frac12 BC \cdot PB = \frac12 \times 1\times 2 = 1.$$
+4. 回代：$\frac13 \times 1 \times h = \frac{\sqrt3}{6} \Rightarrow h=\frac{\sqrt3}{2}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题（Ⅰ）为三垂线定理的典型应用，关键在于利用已知边长关系推导出平面内的垂直。若将 $\angle DAB$ 改为其他度数，或 $AB$ 与 $AD$ 的比例调整，需灵活使用余弦定理导出垂直，仍可沿用此套路。<br />
+- （Ⅱ）的等体积法是求无直接垂线的点面距的基本方法，换底时优先选择能借助已知垂线或容易算出的三角形作为底。<br />
+- 变式：若底面改为菱形且给出对角线垂直，同样可转化为三垂线模型；若将 $PD$ 改为不垂直底面的斜高，则需先作高再找射影，思路仍从“找垂足、定射影、证平面内垂直”入手。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-18.html">2011-文-18</a>（2011 · 中） 立体几何中，通过线面垂直证明异面直线垂直，并利用等体积法求点到平面的距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三垂线定理</a></li>
+</ul>
+</div>
+</body>
+</html>

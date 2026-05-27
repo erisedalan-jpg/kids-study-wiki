@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的极值点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数的极值点</h1><div class="review-mark" data-stem="函数的极值点"></div><div class="meta-card"><span><strong>考点</strong>函数的极值点</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极值点定义</strong>：函数 $y=f(x)$ 在点 $x_0$ 的某邻域内有定义，若对邻域内异于 $x_0$ 的任意 $x$ 恒有 $f(x) &lt; f(x_0)$（或 $f(x) &gt; f(x_0)$），则称 $x_0$ 为极大（小）值点。</li>
+<li><strong>可导极值点必要条件</strong>：若函数 $f(x)$ 在 $x_0$ 处可导且取得极值，则必有 $f'(x_0)=0$。注意该命题的逆命题不成立。</li>
+<li><strong>利用导数判定极值（充分条件）</strong>：<ol>
+<li><strong>第一充分条件</strong>：设 $f'(x_0)=0$，若 $f'(x)$ 在 $x_0$ 两侧左正右负，则 $x_0$ 为极大值点；左负右正，则为极小值点。若两侧不变号，则不是极值点。</li>
+<li><strong>第二充分条件</strong>：设 $f'(x_0)=0$ 且 $f''(x_0)\neq0$，若 $f''(x_0)&lt;0$ 则为极大值点；若 $f''(x_0)&gt;0$ 则为极小值点。</li>
+</ol>
+</li>
+<li><strong>三次函数性质</strong>：对于三次函数 $f(x)=ax^3+bx^2+cx+d$（$a\neq0$），其导函数 $f'(x)=3ax^2+2bx+c$。<ul>
+<li><strong>极值点存在性</strong>：当判别式 $\Delta = 4b^2-12ac &gt; 0$ 时，$f'(x)=0$ 有两个不等实根，函数有两个极值点；当 $\Delta \leq 0$ 时，函数无极值点，为单调函数。</li>
+<li><strong>对称性</strong>：任何三次函数的图像都是中心对称图形，其对称中心为拐点 $(-\frac{b}{3a}, f(-\frac{b}{3a}))$，该点横坐标恰为两极值点的中点。</li>
+</ul>
+</li>
+<li><strong>函数零点存在性</strong>：连续奇次多项式（如三次函数）当 $x \to -\infty$ 与 $x \to +\infty$ 时函数值异号，由零点存在定理，其图像必穿过 $x$ 轴，即至少存在一个零点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>导数为零是前提，极值判定看两侧</strong>
+   判断某点是否为极值点，标准流程是：先检查 $f'(x_0)=0$ 是否成立，再分析 $x_0$ 左右两侧导数的正负。孤立地看导数值为零不能得出极值结论。</li>
+<li><strong>三次函数极值分析“三步走”</strong>
+   遇到仅含参数的三次函数问题，可遵循：①求导得二次函数 $f'(x) = 3ax^2+2bx+c$；②求判别式 $\Delta = 4b^2-12ac$；③分 $\Delta &gt; 0$（有两极值点，列表呈现单调区间与极值）和 $\Delta \leq 0$（单调无极值）两种情况讨论。</li>
+<li><strong>选项甄别：特值反例与几何直观</strong>
+   对于三次函数性质的选择题，可用两种策略快速排错：</li>
+<li><strong>列表法</strong>：假设 $\Delta &gt; 0$ 且两极值点为 $x_1 &lt; x_2$，列表能直观展示单调区间：$(-\infty, x_1)$ 递增，$(x_1, x_2)$ 递减，$(x_2, +\infty)$ 递增。任何违背此单调区间的描述（如极小值点左侧全域单调递减）都是错的。</li>
+<li><strong>图像追踪法</strong>：脑中勾勒三次函数图像，从 $- \infty$ 到 $+ \infty$ 追踪函数走势，结合其必然穿过 $x$ 轴、具有中心对称性等特征，可快速判定命题真假。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“局部邻域”与“全局区间”</strong>：极值的单调性描述仅对极值点两侧的<strong>某个邻域</strong>成立。例如，极小值点左侧邻域递减，右侧邻域递增。错误选项常将此性质绝对化，声称函数在整个无限区间（如 $(-\infty, x_0)$）上单调递减，这是典型的以偏概全。</li>
+<li><strong>错将必要条件当充分条件</strong>：由 $f'(x_0)=0$ 直接断言 $x_0$ 是极值点，忽略了 $f'(x_0)=0$ 但 $x_0$ 不是极值点的情况（如 $y=x^3$ 在 $x=0$ 处）。必须检查导数在 $x_0$ 两侧是否变号。</li>
+<li><strong>三次函数存在性判断失误</strong>：误认为所有三次函数都有两个极值点。当导函数判别式 $\Delta \leq 0$ 时，三次函数严格单调，没有极值点。</li>
+<li><strong>忽视隐含的零点问题</strong>：忘记“存在 $x_0$ 使 $f(x_0)=0$”等价于函数有零点。对于三次奇函数，趋向无穷时必穿过 $x$ 轴，确保零点存在。这是所有三次函数图像的固有属性，非特殊情况。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知函数 $f(x)=x^3+ax^2+bx+c$，判断选项：A. $\exists x_0 \in \mathbb R, f(x_0)=0$；B. 函数图像是中心对称图形；C. 若 $x_0$ 是极小值点，则 $f(x)$ 在 $(-\infty, x_0)$ 单调递减；D. 若 $x_0$ 是极值点，则 $f'(x_0)=0$ 中错误的是哪个。</p>
+<p><strong>思路</strong>：
+这是一道三次函数性质综合题，考点覆盖零点存在、对称性、导数与极值、单调性。三次函数图像是分析基础。可从最易判断的选项入手，利用基本定理和导数工具逐一分析。核心陷阱在 C 项，它混淆了极小值点左侧的“局部单调性”与“全局单调性”。</p>
+<p><strong>步骤</strong>：
+1. <strong>分析 A 项</strong>：由于 $f(x)$ 是三次函数（奇次多项式），当 $x \to -\infty$ 时，最高次项 $x^3$ 主导，$f(x) \to -\infty$；当 $x \to +\infty$ 时，$f(x) \to +\infty$。函数连续，图像必与 $x$ 轴相交，故 $\exists x_0$ 使 $f(x_0)=0$。A 正确。
+2. <strong>分析 B 项</strong>：任选三次函数 $f(x)=x^3$，其图像关于原点中心对称。三次函数均有拐点，且拐点即为其对称中心。对该函数，对称中心为点 $P(-\frac{a}{3}, f(-\frac{a}{3}))$，可以通过验证 $f(x_P+t)+f(x_P-t)=2f(x_P)$ 来证明。B 正确。
+3. <strong>分析 D 项</strong>：这是可导函数取得极值的必要条件。由极值定义，若 $x_0$ 是极值点且 $f(x)$ 在该点可导，则必有 $f'(x_0)=0$。多项式处处可导，故 D 正确。
+4. <strong>分析 C 项</strong>：求导得 $f'(x)=3x^2+2ax+b$。要使 $x_0$ 为极小值点，前提是 $\Delta = 4a^2-12b &gt; 0$，此时 $f'(x)=0$ 有两个不等实根，设 $x_1 &lt; x_2$。由“左负右正”的判定法则知，$x_2$ 为极小值点，即 $x_0=x_2$。此时，列表显示其单调区间为：$(-\infty, x_1)$ 递增，$(x_1, x_2)$ 递减，$(x_2, +\infty)$ 递增。可见，在 $(-\infty, x_0)$ 这个大区间内，函数在 $x_1$ 处从递增变为递减，根本不具有统一单调性。故 C 错，为应选答案。</p>
+<p><strong>点评/变式</strong>：
+本题 C 项的错误极具代表性。考生常凭直觉认为极值点一侧函数会单调变化到无穷远，忽略了另一个极值点带来的走向反转。<strong>记忆要点</strong>：有极值的三次函数，其单调区间被两极值点分割为“<strong>增→减→增</strong>”或“<strong>减→增→减</strong>”三段，极小值点必然位于一个包含单增和单减的复合区间内，绝不可能是单一单调区间的端点。
+<strong>变式思考</strong>：若将 C 项改为“若 $x_0$ 是 $f(x)$ 的极小值点，则 $f(x)$ 在 $x_0$ 的某左邻域内单调递减”，则该命题正确。此处“某邻域”三字是关键区别。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-10.html">2013-理-10</a>（2013 · 中） 该题以三次函数为载体，考查极值点的性质、单调性及函数图像的对称性等综合知识。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数的极值点</a></li>
+</ul>
+</div>
+</body>
+</html>

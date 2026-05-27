@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>由三视图求体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>由三视图求体积</h1><div class="review-mark" data-stem="由三视图求体积"></div><div class="meta-card"><span><strong>考点</strong>由三视图求体积</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2012–2017</li>
+<li>出现题位：选择6 选择7</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>由三视图求体积，核心是 <strong>还原几何体</strong> 与 <strong>尺寸对应</strong>。</p>
+<ul>
+<li><strong>体积公式（必记）</strong></li>
+<li>柱体（棱柱、圆柱）：$V = S_{\text{底}} h$（$h$ 为高，由正/侧视图读出）</li>
+<li>锥体（棱锥、圆锥）：$V = \frac{1}{3} S_{\text{底}} h$</li>
+<li>
+<p>台体、球体高考偶有涉及，但在“三视图→体积”主线中，切割体与组合体更为常见。</p>
+</li>
+<li>
+<p><strong>三视图规则（还原依据）</strong></p>
+</li>
+<li><strong>长对正</strong>：主视图与俯视图的左右方向长度一致。</li>
+<li><strong>高平齐</strong>：主视图与侧视图的上下方向高度一致。</li>
+<li><strong>宽相等</strong>：俯视图的上下方向宽度与侧视图的左右方向宽度一致。</li>
+<li>
+<p>实线表可见轮廓，虚线表不可见但存在的轮廓（切割产生的交线常为虚线）。</p>
+</li>
+<li>
+<p><strong>常见几何体在三视图中的识别要点</strong></p>
+</li>
+<li>矩形框+内部线：多为切割/组合。</li>
+<li>三角形框（或含虚线三角）：各类锥体。</li>
+<li>圆或圆弧：旋转体（圆柱、圆锥、球缺等），切割处常出现曲线轮廓。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>“由三视图求体积”通用步骤：</p>
+<ol>
+<li><strong>定原型</strong>：根据三视图外轮廓与内部实/虚线，判断原几何体的大致类型（柱/锥/球/组合/切割）。切割体可先还原为“整块”再切除。</li>
+<li><strong>抓尺寸</strong>：利用“长对正、高平齐、宽相等”，将视图中的数字、线段长度、半径等对应到几何体的关键尺寸（底面边长/半径、高）。</li>
+<li><strong>套公式</strong>：直接计算体积。对于切割体，常用 <strong>割补法</strong>：</li>
+<li><strong>割</strong>：将不规则几何体分割成若干规则几何体求和。</li>
+<li><strong>补</strong>：先计算完整几何体体积，再减去切掉部分的体积（2017年真题即用此法）。</li>
+</ol>
+<blockquote>
+<p>核心思维：从“粗实线框”抓整体，从“内部线”断切割；俯视图定底面形状与尺寸，正/侧视图定高度。</p>
+</blockquote>
+<h2>高频易错</h2>
+<ul>
+<li><strong>俯视图的“宽”不对应</strong>：侧视图的左右方向对应俯视图的图形上下方向，看反会使底面尺寸全错。</li>
+<li><strong>锥体忘乘 $\frac{1}{3}$</strong>：三视图很容易让人产生“柱体”错觉，棱锥/圆锥算完底面积乘高立马忘记体积公式里的三分之一。</li>
+<li><strong>切割体方向判错</strong>：尤其斜切圆柱/棱柱时，被切部分的高度和完整部分的高易混淆。必须看清哪条实线表示切口的最低/最高点。</li>
+<li><strong>虚线漏看或误判</strong>：虚线多为被遮挡的棱或切割交线，忽略它会导致几何体形状还原不完整，尤其是组合体的内部挖空结构。</li>
+<li><strong>将网格边长与数值混淆</strong>：当“小正方形边长为1”时，数对格子数就得到对应尺寸；若网格标有其他数值，需仔细对应，切莫直接数格当长度。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2017年全国卷·文 第6题</h3>
+<p><strong>题目</strong>：网格小正方形边长为1，粗实线画出某几何体三视图，该几何体由一平面将一圆柱截去一部分所得，求体积。
+<strong>思路</strong>：几何体原型为圆柱；观察主/俯视图内部斜线，判定为用平面斜切圆柱上半部，且切去部分恰好为“上部高为6的圆柱的一半”。适用“补体法”：先算完整圆柱，再减去切掉的半圆柱。
+<strong>步骤</strong>：
+1. <strong>定完整圆柱尺寸</strong>：由俯视图圆与正/侧视图的高，得圆柱底面直径（或半径，从网格数出对应值）及总高。根据分析，完整圆柱体积设为 $V_{\text{完整}}$。
+2. <strong>定切去部分</strong>：切割面在圆柱上半部形成，切去部分相当于一个与圆柱上半等高的“半圆柱”。该部分高为6（由主视图截切位置定），其体积 $V_{\text{切}} = \frac{1}{2} \times (\pi r^2 \times 6)$。
+3. <strong>求体积</strong>：$V = V_{\text{完整}} - V_{\text{切}}$，代入数值得答案（对应选项B：$63\pi$）。
+<strong>点评/变式</strong>：遇到“斜切圆柱/棱柱”，先补完整再减切块是核心策略。变式可考“切去部分的三视图画法”或将该几何体改为水平放置切割。</p>
+<h3>代表题2：2012年全国卷·文 第7题</h3>
+<p><strong>题目</strong>：网格小正方形边长为1，粗线画出某几何体三视图，求体积。
+<strong>思路</strong>：三视图均为三角形框架，内部有线，判定为三棱锥。俯视图给出底面形状与尺寸，正/侧视图给出锥体高度。
+<strong>步骤</strong>：
+1. <strong>定底面</strong>：俯视图为等腰直角三角形，斜边长6，斜边上的高为3。则底面积 $S_{\text{底}} = \frac{1}{2} \times 6 \times 3 = 9$。
+2. <strong>定高</strong>：由正视图（或侧视图）内部竖直尺寸，锥体高 $h = 3$。
+3. <strong>套锥体公式</strong>：体积 $V = \frac{1}{3} S_{\text{底}} h = \frac{1}{3} \times 9 \times 3 = 9$。
+<strong>点评/变式</strong>：棱锥的三视图识别重点在“正/侧视图为三角形且俯视图反映底面实形”。锥体高通常由正/侧视图的竖直高度直接决定，底面积则从俯视图唯一确定。变式可将三角形底面换为四边形，或使锥体倒置（顶点在下），高与底面尺寸的对应方法不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-06.html">2017-文-06</a>（2017 · 中） 通过三视图还原不规则几何体，该几何体为圆柱截去部分后的组合体，求其体积</li>
+<li><a href="../../exam/数学/2012-文-07.html">2012-文-07</a>（2012 · 中） 由三视图还原三棱锥，利用锥体体积公式求解体积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">由三视图求体积</a></li>
+</ul>
+</div>
+</body>
+</html>

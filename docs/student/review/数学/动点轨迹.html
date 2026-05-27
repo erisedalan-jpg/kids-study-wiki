@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动点轨迹</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>动点轨迹</h1><div class="review-mark" data-stem="动点轨迹"></div><div class="meta-card"><span><strong>考点</strong>动点轨迹</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2015–2015</li>
+<li>出现题位：选择10 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>动点轨迹</strong>：动点按照给定条件运动时，其相关几何量（如距离、角度、坐标）所满足的变化规律，常以函数关系呈现。</li>
+<li><strong>核心工具</strong>：坐标系、勾股定理、三角函数定义、分段函数。</li>
+<li><strong>适用条件</strong>：动点沿多边形边界运动，且对应角度 $x$ 为自变量时，需按不同边界分段建立函数关系；若动点位置由角度 $x$ 唯一确定，则函数 $f(x)$ 通常为分段函数，且各段具有明确的几何意义。</li>
+<li><strong>关键转换</strong>：利用直角三角形边角关系，将距离 $PA$、$PB$ 表示为 $x$ 的三角函数，或用勾股定理转化为 $\tan x$、$\sin x$、$\cos x$ 的组合。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确自变量与因变量</strong>：确定角度 $x$ 的起始边、终止边及取值范围；确定所求距离之和的表达对象。</li>
+<li><strong>分阶段讨论</strong>：按动点所在边将整个运动过程分割为若干区间（如 $BC$、$CD$、$DA$），明确每个区间内 $x$ 的范围及动点坐标或几何关系。</li>
+<li><strong>建立函数关系</strong>：在每个区间上，利用直角三角形的边角关系或两点间距离公式，将距离之和表示为 $x$ 的函数。常用方法：</li>
+<li>在 $BC$ 和 $DA$ 上用正切：$PB=OB\tan x$ 或 $PA$ 用对边比邻边；</li>
+<li>在 $CD$ 上利用余弦或正弦表达水平、垂直位移，再用勾股定理求斜边长度；</li>
+<li>距离之和可能包含根号，注意化简与单调性。</li>
+<li><strong>分析函数性质</strong>：判断各区间上函数的单调性、对称性、端点值、是否有极值或拐点，进而排除干扰选项。</li>
+<li><strong>图像辨识</strong>：若为选择题，可结合特殊点（如区间端点、中点）的函数值、单调性、凹凸性，与选项图像匹配。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>自变量范围错位</strong>：未明确 $x$ 在哪条边上对应哪个区间，导致分段错误。例如把 $P$ 在 $CD$ 上时的 $x$ 范围与 $BC$、$DA$ 混淆。</li>
+<li><strong>距离表示遗漏根号</strong>：在 $CD$ 上时，$PA$ 和 $PB$ 均为直角三角形的斜边，需用勾股定理，不可直接用边长差。</li>
+<li><strong>忽略函数单调性</strong>：$BC$ 和 $DA$ 段上，由于等腰或不等腰，距离之和可能单调递增或递减，直接猜想易选错图像。</li>
+<li><strong>对称性误判</strong>：认为整个函数关于 $x=\pi/4$ 或 $\pi/2$ 对称，而实际对称中心或轴不在中点，或仅局部对称。</li>
+<li><strong>端点处理不当</strong>：区间端点衔接处的连续性常被干扰项破坏，必须检验衔接点值是否相等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015·全国卷·文科11/理科10）<br />
+长方形 $ABCD$，$AB=2$，$BC=1$，$O$ 为 $AB$ 中点。动点 $P$ 沿 $BC \to CD \to DA$ 运动，记 $\angle BOP = x$，$f(x)=PA+PB$，则 $y=f(x)$ 的图象大致为（给定选项 A、B 等）。</p>
+<p><strong>思路</strong><br />
+按 $P$ 所在边分三段：$BC$、$CD$、$DA$，分别用 $x$ 表示 $PA$ 和 $PB$，求和得到分段函数，再分析单调性、对称性与特殊点值，结合选项图像排除错误选项。</p>
+<p><strong>步骤</strong><br />
+1. 定坐标系与长度：以 $O$ 为原点，$OB$ 为 $x$ 轴正方向，则 $B(1,0)$，$A(-1,0)$，$AB=2$，$BC=1$。
+2. 分段建函数：
+   - <strong>当 $P$ 在 $BC$ 上</strong>：$x \in [0, \arctan1]$，$P$ 坐标 $(1, \tan x)$。<br />
+     $PB = \tan x$，$PA = \sqrt{(1+1)^2 + \tan^2 x} = \sqrt{4+\tan^2 x}$。<br />
+     $f(x) = \tan x + \sqrt{4+\tan^2 x}$，单调增。
+   - <strong>当 $P$ 在 $CD$ 上</strong>：设 $\angle BOC = \frac{\pi}{4}$，$x \in [\frac{\pi}{4}, \pi-\arctan\frac{1}{2}]$。此时 $OP = \frac{1}{\cos(x-\frac{\pi}{4})}$？更直接：$P$ 坐标 $(1, 1) +$ 沿 $CD$ 移动。可写 $PB = \sqrt{1^2 + (1 + \tan(x-\frac{\pi}{4}))^2}$ … 但图像题可用特值：$x=\frac{\pi}{2}$ 时，$P$ 在 $CD$ 中点？不，$x=\frac{\pi}{2}$ 时 $OP\perp AB$，$P$ 坐标 $(0,1)$，此时 $PA=PB=\sqrt{1^2+1^2}=\sqrt{2}$，$f(\frac{\pi}{2})=2\sqrt{2} \approx 2.828$。且该段上 $f(x)$ 先减后增（非单调）。
+   - <strong>当 $P$ 在 $DA$ 上</strong>：$x \in [\pi-\arctan\frac{1}{2}, \frac{3\pi}{4}]$，$P$ 坐标 $(-1, \cot(\pi-x))$ 等形式，$f(x)$ 可表示为 $\cot(\pi-x) + \sqrt{4+\cot^2(\pi-x)}$，且单调减。
+3. 总体性质：$f(x)$ 在 $[0,\frac{\pi}{4}]$ 增，$[\frac{\pi}{4},\frac{\pi}{2}]$ 增势放缓或略降，之后到某点再增然后过 $\frac{\pi}{2}$ 后下降，最后在 $DA$ 段单调减，且关于某条竖线不对称，整体呈现先上升、中间平缓或微降、后下降的轮廓，图像类似开口向下的单峰但顶部平坦。
+4. 对比选项：正确图像应是定义域 $[0,\frac{3\pi}{4}]$，值域从 $2$ 到 $\sqrt{5}+1$ 再回到 $2$ 的过程，且无尖锐拐点，连续。答案为 B（原高考答案通常是 B，具体需结合当年选项）。</p>
+<p><strong>点评/变式</strong><br />
+- 本题巧妙结合动点轨迹、三角函数与分段函数图像，考查建模与数形结合能力。<br />
+- 变式：将长方形改为正方形，或改变边比，则函数对称性及极值点位置变化，但分段建模思路不变。<br />
+- 若改为选择题，可直接代入 $x=0,\frac{\pi}{4},\frac{\pi}{2}$ 等特殊角求值，排除错误选项，提高解题速度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-11.html">2015-文-11</a>（2015 · 中） 动点P沿长方形边界运动，将PA+PB表示为角度x的函数，判断函数图象形状。</li>
+<li><a href="../../exam/数学/2015-理-10.html">2015-理-10</a>（2015 · 中） 根据角度变化分析动点到两定点距离之和，判断对应函数图像的形状。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/715-动点轨迹.html">动点轨迹</a></li>
+</ul>
+</div>
+</body>
+</html>

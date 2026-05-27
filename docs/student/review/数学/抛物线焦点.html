@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛物线焦点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>抛物线焦点</h1><div class="review-mark" data-stem="抛物线焦点"></div><div class="meta-card"><span><strong>考点</strong>抛物线焦点</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2009–2023</li>
+<li>出现题位：选择9 选择10</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线定义</strong>：平面内与一个定点$F$（焦点）和一条定直线$l$（准线）距离相等的点的轨迹。焦点到准线的距离记为$p$（$p&gt;0$），称为焦参数。</li>
+<li><strong>标准方程与焦点准线</strong>：</li>
+<li>$y^2=2px\ (p&gt;0)$：焦点$F\left(\frac{p}{2},0\right)$，准线$x=-\frac{p}{2}$，开口向右。</li>
+<li>$y^2=-2px$：焦点$F\left(-\frac{p}{2},0\right)$，准线$x=\frac{p}{2}$，开口向左。</li>
+<li>$x^2=2py$：焦点$F\left(0,\frac{p}{2}\right)$，准线$y=-\frac{p}{2}$，开口向上。</li>
+<li>$x^2=-2py$：焦点$F\left(0,-\frac{p}{2}\right)$，准线$y=\frac{p}{2}$，开口向下。</li>
+<li><strong>焦半径公式</strong>：设$P(x_0,y_0)$在抛物线上，$F$为焦点。</li>
+<li>对于$y^2=2px$，$|PF| = x_0 + \frac{p}{2}$。</li>
+<li>对于$x^2=2py$，$|PF| = y_0 + \frac{p}{2}$。
+  其余标准方程类似，用横/纵坐标加$\frac{p}{2}$，注意符号。</li>
+<li><strong>焦点弦性质</strong>（直线过焦点与抛物线交于两点$A(x_1,y_1), B(x_2,y_2)$）：</li>
+<li>弦长公式：$|AB| = x_1+x_2+p$（对$y^2=2px$开口向右）。</li>
+<li>直径与准线：以焦点弦$AB$为直径的圆必与相应准线相切。</li>
+<li><strong>共同焦点</strong>：若两曲线焦点相同，则直接由标准方程求出的焦点坐标相等，由此列方程求参数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准方程定位法</strong>：由给定的抛物线标准方程直接写出焦点坐标和准线方程，明确$p$的几何意义。若焦点在$x$轴上，注意区分左右开口。</li>
+<li><strong>定义转化法</strong>：遇到抛物线上的点到焦点的距离，立即转化为该点到准线的距离（或反向转化），这是处理距离比例、最值、定点问题的核心。</li>
+<li><strong>焦点弦处理流程</strong>：</li>
+<li>设出直线方程，若有斜率则用点斜式（注意斜率不存在的情况）。</li>
+<li>与抛物线方程联立，消去一个变量得到一元二次方程，利用韦达定理得到$x_1+x_2$和$x_1x_2$（或$y_1+y_2$等）。</li>
+<li>求弦长：若直线过焦点，优先使用焦点弦长公式$|AB|=x_1+x_2+p$或$|AB|=\sqrt{1+k^2}|x_1-x_2|$；同时可结合定义验证其他几何特性（如以$AB$为直径的圆与准线相切）。</li>
+<li><strong>共同焦点问题</strong>：分别写出两条曲线的焦点坐标（椭圆需用$a^2=b^2+c^2$求半焦距），令其相等解得参数。常配合排除法快速筛选选项。</li>
+<li><strong>焦半径比例问题</strong>：利用焦半径公式将$|FA|,|FB|$表示成横坐标（或纵坐标）的线性式，代入比例关系并结合韦达定理求解直线斜率等参数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>$p$与焦点坐标混淆</strong>：焦点是$\left(\frac{p}{2},0\right)$而不是$(p,0)$；焦点到准线距离为$p$，注意半焦距$c$与$p$的区别，椭圆与抛物线共焦点时切勿直接令$p$等于椭圆半焦距。</li>
+<li><strong>焦点弦公式使用条件</strong>：$|AB|=x_1+x_2+p$ 只在直线经过焦点且抛物线为$y^2=2px$时成立；若直线不过焦点，只能使用普通的弦长公式。</li>
+<li><strong>消元方向与判别式</strong>：联立抛物线$y^2=2px$与直线$x=my+a$往往更简捷；若消$y$得到$x$的二次方程，需注意$y$的范围。判别式$\Delta &gt;0$是保证有两个交点的前提，求参数范围时易忽略。</li>
+<li><strong>开口方向影响焦半径表达式</strong>：如$y^2=-2px$，焦点$F(-\frac{p}{2},0)$，点$P(x_0,y_0)$到焦点的距离是$\frac{p}{2}-x_0$（注意$x_0\le 0$）。误套公式易导致符号错误。</li>
+<li><strong>距离计算粗心</strong>：点到直线的距离公式、弦长公式中根号和代值易出错，尤其是含参运算；注意形如“以$MN$为直径的圆与准线相切”需要验证圆心到准线的距离等于$\frac{1}{2}|MN|$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2023新课标Ⅱ-10·多选）</h3>
+<p>设$O$为原点，直线$y=\sqrt{3}(x-1)$过抛物线$C:y^2=2px\ (p&gt;0)$的焦点，且与$C$交于$M,N$两点，$l$为$C$的准线，则正确选项为（$\quad$）。
+A. $p=2$　B. $|MN|=\frac{8}{3}$　C. 以$MN$为直径的圆与$l$相切　D. $\triangle OMN$为等腰三角形</p>
+<p><strong>思路</strong>：由直线过焦点求出$p$得到抛物线方程；联立直线与抛物线用焦点弦公式求$|MN|$；利用焦点弦的几何性质判断圆与准线的位置关系；计算$O$到直线的距离及$M,N$坐标判断是否等腰。</p>
+<p><strong>步骤</strong>：
+1. 直线$y=\sqrt{3}(x-1)$恒过点$(1,0)$，依题意焦点为$F(1,0)$，故$\frac{p}{2}=1$，得$p=2$，$C:y^2=4x$，A正确。
+2. 设$M(x_1,y_1), N(x_2,y_2)$，联立$\begin{cases} y=\sqrt{3}(x-1) \ y^2=4x \end{cases}$，消$y$得$3(x-1)^2=4x$，整理为$3x^2-10x+3=0$。解得$x_1=\frac13, x_2=3$（或反序）。由焦点弦长公式$|MN|=x_1+x_2+p=\frac13+3+2=\frac{16}{3} \neq \frac83$，B错误。
+3. 取$MN$中点$A$，及$M,N,A$到准线$x=-1$的距离$d_1,d_2,d$。由抛物线定义及梯形中位线性质，$d=\frac{1}{2}(d_1+d_2)=\frac{1}{2}(|MF|+|NF|)=\frac12|MN|$，故以$MN$为直径的圆与$l$相切，C正确。
+4. $O$到直线$\sqrt{3}x - y -\sqrt{3}=0$的距离$d_O=\frac{|\sqrt{3}\cdot0-0-\sqrt{3}|}{\sqrt{3+1}}=\frac{\sqrt{3}}{2}$。若$\triangle OMN$为等腰，需出现$|OM|=|ON|$或其它两边相等，由$M(\frac13,-\frac{2\sqrt{3}}{3}), N(3,2\sqrt{3})$易算得两腰不相等且$O$不在中垂线上，D错误。</p>
+<p><strong>点评/变式</strong>：本题全面考查抛物线定义与焦点弦性质。A项利用焦点坐标求$p$；B项切忌计算繁琐，熟练应用$x_1+x_2+p$可提速；C项是焦点弦经典几何结论，可直接使用；D项检验运算。变式可将直线改为过焦点但倾斜角任意的一般直线，或问$MN$的垂直平分线方程等。</p>
+<h3><strong>题目2</strong>（2019全国Ⅱ文-9）</h3>
+<p>若抛物线$y^2=2px\ (p&gt;0)$的焦点是椭圆$\frac{x^2}{3p}+\frac{y^2}{p}=1$的一个焦点，则$p=$（$\quad$）
+A. $2$　B. $3$　C. $4$　D. $8$</p>
+<p><strong>思路</strong>：分别求出抛物线和椭圆的焦点坐标，根据焦点相同列方程求解$p$，也可结合选项用特值排除。</p>
+<p><strong>步骤</strong>：
+1. 抛物线$y^2=2px$的焦点为$F_1\left(\frac{p}{2},0\right)$。
+2. 椭圆$\frac{x^2}{3p}+\frac{y^2}{p}=1$，由$3p&gt;p&gt;0$知焦点在$x$轴上，且$a^2=3p, b^2=p$，则半焦距$c=\sqrt{a^2-b^2}=\sqrt{3p-p}=\sqrt{2p}$，焦点为$(\pm \sqrt{2p},0)$。
+3. 由题意，$\frac{p}{2} = \sqrt{2p}$（正半轴焦点）或$\frac{p}{2} = -\sqrt{2p}$（无正解，舍去），两边平方得$\frac{p^2}{4}=2p$，由$p&gt;0$解得$p=8$，故选D。
+   亦可用排除法：若$p=2$，抛物线焦点$(1,0)$，椭圆焦点$(\pm2,0)$，不合；$p=3$时抛物线焦点$(1.5,0)$，椭圆$c=\sqrt{6}\approx2.45$；$p=4$时抛物线焦点$(2,0)$，椭圆$c=\sqrt{8}=2\sqrt{2}\approx2.83$；均不相等，排除得D。</p>
+<p><strong>点评/变式</strong>：共同焦点问题关键在“两口径一致”。需准确把握椭圆$c^2$与$p$的区别，避免直接将$p$当成半焦距。变式可改为抛物线与双曲线共焦点，或焦点在$y$轴上。</p>
+<h3><strong>题目3</strong>（2009全国Ⅱ理-9）</h3>
+<p>已知直线$y=k(x+2)\ (k&gt;0)$与抛物线$C:y^2=8x$交于$A,B$两点，$F$为$C$的焦点，若$|FA|=2|FB|$，则$k=$（$\quad$）
+A. $\frac13$　B. $\frac{\sqrt{2}}{3}$　C. $\frac23$　D. $\frac{2\sqrt{2}}{3}$</p>
+<p><strong>思路</strong>：写出焦点坐标，利用焦半径公式将$|FA|,|FB|$转化为$A,B$的横坐标线性关系，联立直线与抛物线方程，通过韦达定理和比例条件构造关于$k$的方程。</p>
+<p><strong>步骤</strong>：
+1. 抛物线$y^2=8x$，$2p=8 \Rightarrow p=4$，焦点$F(2,0)$，准线$x=-2$。直线$y=k(x+</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-10.html">2023-新课标Ⅱ-10</a>（2023 · 中） 抛物线焦点与弦长计算，结合圆与等腰三角形的几何性质判断选项正误</li>
+<li><a href="../../exam/数学/2019-文-09.html">2019-文-09</a>（2019 · 易） 本题通过抛物线与椭圆共焦点求参数p，考查几何性质与方程求解。</li>
+<li><a href="../../exam/数学/2009-理-09.html">2009-理-09</a>（2009 · 中） 直线与抛物线相交，利用焦点和比例关系求直线斜率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/876-抛物线焦点.html">抛物线焦点</a></li>
+</ul>
+</div>
+</body>
+</html>

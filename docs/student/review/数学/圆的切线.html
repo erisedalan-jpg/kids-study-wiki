@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的切线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆的切线</h1><div class="review-mark" data-stem="圆的切线"></div><div class="meta-card"><span><strong>考点</strong>圆的切线</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>切线的判定与性质</strong><br />
+  经过半径外端且垂直于半径的直线是圆的切线；圆的切线垂直于过切点的半径。<br />
+  从圆外一点引圆的两条切线，切线长相等，且该点与圆心的连线平分两切线的夹角。</li>
+<li><strong>切线长定理</strong><br />
+  若 $PA,PB$ 是 $\odot O$ 的切线，$A,B$ 为切点，则 $PA=PB$，且 $PO$ 平分 $\angle APB$，$OA \perp PA$。</li>
+<li><strong>等腰三角形的“三线合一”</strong><br />
+  等腰三角形底边上的高、中线与顶角平分线重合，该线也是底边的垂直平分线。</li>
+<li><strong>弦切角定理</strong>（选考，可助平行与相似）<br />
+  弦切角等于它所夹的弧所对的圆周角。</li>
+<li><strong>四点共圆与圆幂</strong><br />
+  若四边形对角互补或外角等于内对角，则四点共圆；相交弦定理、切割线定理常用于线段计算。</li>
+<li><strong>垂径定理</strong><br />
+  垂直于弦的直径平分弦且平分弦所对的两条弧；过圆心向弦作垂线，垂足平分弦。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审图挖掘隐含信息</strong><br />
+   标记已知切点、切线，立即连接圆心与切点得到垂直关系；标记切线长相等线段。</li>
+<li><strong>证明平行首选角关系</strong><br />
+   在圆与等腰三角形复合图形中，平行常由同位角、内错角相等得出。利用切线得垂直，结合等腰三角形底边上的高也是角平分线，推导出等角。</li>
+<li><strong>线段计算的通用链</strong><br />
+   设半径为 $r$，利用切线长定理设出相等线段；由垂径定理建立弦心距、半弦长与半径的勾股关系；遇特殊角（$30^\circ,45^\circ,60^\circ$）立即标注比例；最终通过列方程求未知量。</li>
+<li><strong>面积问题的拆分法</strong><br />
+   四边形面积常拆分为梯形或几个三角形之和。借助平行线得到相似或等高三角形，化未知为已知线段乘积。</li>
+<li><strong>勾股与相似双线程</strong><br />
+   在圆中计算线段优先考虑垂径定理的直角三角形（$r^2=d^2+(l/2)^2$）；在切线背景中，切线长、点到圆心距离、半径构成直角三角形；必要时寻找“A字”“8字”相似模型。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>切线判定与性质颠倒</strong><br />
+  证明切线必须“过半径外端”且“与半径垂直”，只写“连线垂直”而漏“半径外端”会丢步骤分。</li>
+<li><strong>混淆切线与割线</strong><br />
+  圆外一点到圆的两条切线相等，但若其中一条变为割线，切线长定理不再适用，必须改用切割线定理。</li>
+<li><strong>辅助线连接不当</strong><br />
+  看到切线应第一时间连接圆心与切点，而不是连接切点与其他无关点；垂径定理中作弦心距才是标准动作。</li>
+<li><strong>忽视“等腰+切线”导角</strong><br />
+  切线产生的直角与等腰三角形底角互余，易漏掉互余关系导致角推导卡壳；一定要在图上标出直角符号。</li>
+<li><strong>默认为特殊位置</strong><br />
+  如本题中 $O$ 未必在 $AD$ 上，需要先证明；直接拿 $O$ 在 $AD$ 上作为条件使用是典型错误。</li>
+<li><strong>计算结果未化简或保留根号错误</strong><br />
+  面积、线段长度最后结果需化简，含有根式要最简；若题目无特殊说明，分母有理化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2015-理-22</h3>
+<p><strong>题目</strong>：$O$ 为等腰 $\triangle ABC$ 内一点，$\odot O$ 与底边 $BC$ 交于 $M,N$，与底边上的高 $AD$ 交于点 $G$，且与 $AB,AC$ 分别相切于 $E,F$。<br />
+(1) 求证：$EF \parallel BC$；<br />
+(2) 若 $AG$ 等于 $\odot O$ 半径，且 $AE=MN=2\sqrt{3}$，求四边形 $EBCF$ 的面积。</p>
+<p><strong>思路</strong><br />
+(1) 由切线长定理得 $AE=AF$，$\triangle AEF$ 等腰，通过切线垂直关系与 $\triangle ABC$ 等腰及 $AD \perp BC$ 导角，证明 $\angle AEF=\angle ABC$，得同位角相等推出平行。<br />
+(2) 利用 $AG$=半径构造等边三角形并得特殊角度，结合垂径定理求弦心距、半径；再通过梯形中位线或相似求出 $BC$ 边长，最终利用梯形面积公式计算。</p>
+<p><strong>步骤</strong><br />
+<strong>(1) 证明 $EF\parallel BC$</strong><br />
+$\because AB,AC$ 分别与 $\odot O$ 相切于 $E,F$，<br />
+$\therefore AE=AF$（切线长定理），得 $\triangle AEF$ 为等腰三角形。<br />
+连接 $OE,OF$，则 $OE \perp AB$，$OF \perp AC$。<br />
+在 $\triangle AEO$ 和 $\triangle AFO$ 中，$AE=AF$，$OE=OF$，$AO$ 公共，<br />
+$\therefore \triangle AEO \cong \triangle AFO$（SSS），<br />
+$\therefore \angle EAO = \angle FAO$，即 $AO$ 平分 $\angle BAC$。<br />
+又 $\triangle ABC$ 为等腰三角形，$AB=AC$，$AD \perp BC$ 于 $D$，<br />
+由三线合一知 $AD$ 平分 $\angle BAC$，$D$ 为 $BC$ 中点。<br />
+$\therefore A,O,D$ 三点共线。<br />
+$\because AD \perp BC$，$\therefore \angle ADC=90^\circ$。<br />
+在 $\triangle AEF$ 中，$\angle AEF = \frac{1}{2}(180^\circ - \angle EAF)$。<br />
+$\angle EAF = \angle BAC$，$\triangle ABC$ 中 $\angle ABC = \frac{1}{2}(180^\circ - \angle BAC)$，<br />
+$\therefore \angle AEF = \angle ABC$，<br />
+$\therefore EF \parallel BC$（同位角相等）。  </p>
+<p><strong>(2) 求四边形 $EBCF$ 面积</strong><br />
+连接 $OM,ON$，过 $O$ 作 $OH \perp MN$ 于 $H$，则 $MH = \frac{1}{2}MN = \sqrt{3}$。<br />
+设 $\odot O$ 半径为 $r$，由已知 $AG=r$。<br />
+$\because A,O,D$ 共线，$AD$ 过圆心 $O$ 与弦 $MN$ 垂直平分？<br />
+注意：$AD$ 为 $BC$ 的高，$MN$ 在 $BC$ 上，故 $AD \perp BC$ 即 $AD \perp MN$。<br />
+$\therefore O$ 到 $MN$ 的垂线 $OH$ 在 $AD$ 上，即 $H$ 在 $AD$ 上。<br />
+由垂径定理：$r^2 = OH^2 + MH^2 = OH^2 + 3$。<br />
+又在 $\text{Rt}\triangle AHO$ 中，$AO = AG + GO$？点顺序：$A—G—O—H—D$ 可能。<br />
+由 $AG=r$，设 $OH=d$，则 $AH = AG + GO?$ 这里需要明确 $G$ 的位置。<br />
+已知 $\odot O$ 与 $AD$ 交于 $G$，且 $AG=r$，则 $G$ 在 $A$ 与 $O$ 之间（或 $O$ 在 $A$ 与 $G$ 之间需讨论）。因为 $AG$ 等于半径，且 $OE \perp AB$，$AE$ 为切线。<br />
+连接 $OE$，则 $OE=r$，$AE=2\sqrt{3}$，在 $\text{Rt}\triangle AEO$ 中，<br />
+$AO = \sqrt{AE^2 + OE^2} = \sqrt{12+r^2}$。<br />
+又 $A,O,D$ 共线，$AG=r$，若 $G$ 在 $A$ 与 $O$ 之间，则 $AO=AG+GO=r+?$ 不知道。<br />
+由 $AG=r$ 且 $G$ 在 $AD$ 上，$O$ 也在 $AD$ 上，$G$ 为圆与 $AD$ 交点，所以 $G$ 到 $O$ 距离为 $r$。因此 $GO=r$，从而 $AO=AG+GO=r+r=2r$（或者 $AO=|AG \pm GO|$，但交点 $G$ 在圆上，所以 $OG=r$；又 $AG=r$，得 $AO=AG+OG=2r$，图形中 $A,G,O$ 依次排列）。<br />
+于是 $\sqrt{12+r^2}=2r \Rightarrow 12+r^2=4r^2 \Rightarrow 3r^2=12 \Rightarrow r=2$。<br />
+代入得 $AO=4$，$r=2$。在 $\text{Rt}\triangle AHO$ 中，$OH$ 未知，由 $r^2=OH^2+3 \Rightarrow 4=OH^2+3 \Rightarrow OH=1$。<br />
+则 $AH = AO - OH = 4-1=3$（$H$ 在 $O$ 下方，$A,O,H$ 共线）。<br />
+由 $EF \parallel BC$，$\triangle AEF \sim \triangle ABC$，<br />
+$\dfrac{EF}{BC} = \dfrac{AH}{AD}$。<br />
+这里 $H$ 其实是 $AD$ 与 $MN$ 的交点吗？$MN$ 在 $BC$ 上，$H$ 为 $MN$ 中点，而 $BC$ 也垂直于 $AD$，所以 $H$ 也在 $BC$ 上？确切地说，$AD \perp BC$，$H$ 是 $O$ 向 $MN$ 所作垂足，$MN$ 是 $BC$ 的一部分，所以 $H$ 在 $BC$ 上。因此 $AH$ 是从 $A$ 到 $BC$ 的垂线段长，即 $AD = AH + HD$。$HD = OH?$ 不，$HD$ 是 $H$ 到 $D$ 的距离。<br />
+需要求 $EF$ 和 $BC$。<br />
+由 $\triangle AEO$，$AE=2\sqrt{3}$，$OE=2$，$AO=4$，得 $\sin\angle EAO = \dfrac{OE}{AO} = \dfrac{1}{2}$，故 $\angle EAO = 30^\circ$，$\angle BAC = 60^\circ$。<br />
+$\triangle ABC$ 为等腰三角形，顶角 $60^\circ$，所以是等边三角形！$AB=AC=BC$。<br />
+又 $AD \perp BC$，$\angle BAD = 30^\circ$，在 $\text{Rt}\triangle ABD$ 中，$\angle B=60^\circ$。<br />
+$AH=3$，在 $\text{Rt}\triangle AHE$ 中？不，$H$ 是 $MN$ 中点，$E$ 是切点，不在 $BC$ 上。<br />
+由 $EF \parallel BC$，且 $A,O,D$ 共线，$AD$ 是 $EF$ 的垂直平分线？因为 $\triangle AEF$ 等腰，$AO$ 平分 $\angle EAF$，所以 $AO$ 垂直平分 $EF$。设 $AO$ 与 $EF$ 交于 $K$，则 $AK \perp EF$，$K$ 为 $EF$ 中点。<br />
+由 $\triangle AEO \sim \triangle AKE$（共角 $\angle EAO$，直角），<br />
+$\dfrac{AE}{AO} = \dfrac{AK}{AE} \Rightarrow AK = \dfrac{AE^2}{AO} = \dfrac{12}{4}=3$。<br />
+所以 $AK=3$，且 $AH=3$，得 $K$ 与 $H$ 重合？检查：$A,K,O,H,D$ 共线，$AK=3$，$AH=3$，所以 $K,H$ 为同一点。<br />
+因此 $EF$ 经过 $H$ 点（$MN$ 中点），且垂直于 $AD$。<br />
+在 $\text{Rt}\triangle AKE$ 中，$AE=2\sqrt{3}$，$AK=3$，由勾股定理 $EK = \sqrt{AE^2-AK^2} = \sqrt{12-9}=\sqrt{3}$。<br />
+$\therefore EF = 2EK = 2\sqrt{3}$。<br />
+因为 $\triangle ABC$ 等边，且 $A$ 到 $BC$ 距离 $AD$：在等边三角形中，高 $AD = \dfrac{\sqrt{3}}{2} BC$。<br />
+又 $A,H,D$ 共线，$H$ 在 $BC$ 上，$AH=3$。点 $H$ 就是 $AD$ 与 $BC$ 的交点？不，$AD$ 本来就是高与 $BC$ 的交点为 $D$。这里 $H$ 是弦 $MN$ 的中点，而 $MN$ 在 $BC$ 上，所以 $H$ 是 $BC$ 上的点，但不一定是 $D$！注意 $AD \perp BC$，但 $H$ 是 $O$ 向 $MN$ 作垂线的垂足，因为 $MN \subset BC$，所以 $H$ 在 $BC$ 上，且 $AH \perp BC$。所以 $AH$ 就是点 $A$ 到边 $BC$ 的距离，即 $AH = AD$。因为从直线外一点到直线的垂线段唯一，所以 $H$ 与 $D$ 重合！<br />
+这就意味着 $D$ 就是 $MN$ 的中点。由 $M,N$ 关于 $D$ 对称。于是 $MD=ND=\sqrt{3}$。<br />
+由 $AH=AD=3$，等边 $\triangle ABC$ 的高为 $3$。所以边长 $BC = \dfrac{2}{\sqrt{3}} \times 3 = 2\sqrt{3}$。<br />
+但这样 $BC=2\sqrt{3}$，而 $EF=2\sqrt{3}$，两者相等？这意味着 $E,F$ 与 $B,C$ 重合？矛盾。<br />
+重新梳理：由 $\angle EAO=30^\circ$，$AO=4$，$AE=2\sqrt{3}$，$\angle BAC=60^\circ$，等腰三角形顶角 $60^\circ$ 确实是等边三角形。<br />
+在等边 $\triangle ABC$ 中，$AD$ 是高，也是中线。设 $AB=BC=CA=x$，则 $AD = \dfrac{\sqrt{3}}{2}x$。<br />
+由 $AH \perp BC$，且 $A,O,D$ 共线，$AH$ 就是 $AD$ 吗？$A,H,D$ 都在同一直线，且都垂直于 $BC$，所以 $H$ 在 $AD$ 上。但 $H$ 的位置：由前面 $OH=1$，</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-22.html">2015-理-22</a>（2015 · 中） 几何综合题，考查等腰三角形性质、圆的切线与弦的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆的切线</a></li>
+</ul>
+</div>
+</body>
+</html>

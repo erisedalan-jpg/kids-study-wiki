@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>不等式性质</h1><div class="review-mark" data-stem="不等式性质"></div><div class="meta-card"><span><strong>考点</strong>不等式性质</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：13</li>
+<li>真题数：2；年份跨度：2022–2022</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三元均值不等式</strong>：若 $x,y,z&gt;0$，则 $\frac{x+y+z}{3}\ge \sqrt[3]{xyz}$，当且仅当 $x=y=z$ 时取等。常见变形：$xyz\le \left(\frac{x+y+z}{3}\right)^3$。</li>
+<li><strong>二元均值不等式（基本不等式）</strong>：若 $a,b&gt;0$，则 $a+b\ge 2\sqrt{ab}$，当且仅当 $a=b$ 时取等。</li>
+<li><strong>不等式的性质</strong>：  </li>
+<li>传递性：$a&gt;b,b&gt;c\Rightarrow a&gt;c$；  </li>
+<li>同向可加性：$a&gt;b,c&gt;d\Rightarrow a+c&gt;b+d$；  </li>
+<li>正数同向可乘性：$a&gt;b&gt;0,c&gt;d&gt;0\Rightarrow ac&gt;bd$；  </li>
+<li>正数的倒数方向反转：$a&gt;b&gt;0\Rightarrow \frac1a&lt;\frac1b$。</li>
+<li>利用均值不等式求最值必须满足 <strong>“一正、二定、三相等”</strong>，缺一不可。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定和求积最大值</strong>：将已知条件表示为<strong>正项之和为定值</strong>，直接套用三元（或二元）均值不等式，将和转化为积的上界。</li>
+<li><strong>定积求和最小值</strong>：若条件为积是定值，求和的极小值，则反向应用均值不等式。</li>
+<li><strong>分式放缩</strong>：若待证不等式含分母为和式（如 $b+c$），可先用基本不等式将分母放大：$b+c\ge 2\sqrt{bc}$，从而整体缩小分式：$\frac{a}{b+c}\le \frac{a}{2\sqrt{bc}}$。注意不等号方向。</li>
+<li><strong>多步放缩求和</strong>：对多项分别进行同向放缩后，利用同向可加性累加，再提取公因式，结合已知条件化简至目标形式。</li>
+<li><strong>验证等号一致性</strong>：所有放缩步骤的取等条件必须一致，且能在同一组变量取值下同时满足，否则证明不成立。优先在放缩前设想最终取等点。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略正数条件</strong>：均值不等式以及分母放大等操作必须保证所有变量为正数，未说明正负时需分类讨论。</li>
+<li><strong>放缩方向颠倒</strong>：由均值不等式得 $b+c\ge 2\sqrt{bc}$，分式 $\frac{a}{b+c}\le \frac{a}{2\sqrt{bc}}$ 方向变小；若误写成 $\frac{a}{b+c}\ge \cdots$ 则全盘皆错。</li>
+<li><strong>多次放缩等号矛盾</strong>：例如一处取等需 $a=b$，另一处需 $b=c$，但整体条件无法同时满足，导致结论不成立或取不到等号。必须验证整体取等可行性。</li>
+<li><strong>根号与指数书写混乱</strong>：三元均值 $\frac{x+y+z}{3}\ge \sqrt[3]{xyz}$，切忌将 $\sqrt[3]{a^{3/2}}$ 错算为 $a^{1/2}$（实际应为 $a^{1/2}$）。平时多练习指数与根式的互化。</li>
+<li><strong>无端添加负号或分母为零</strong>：放缩时保证分母不为零，不引入绝对值而无依据。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2022·全国·文23 / 理23）<br />
+已知 $a,b,c$ 都是正数，且 $a^{\frac32}+b^{\frac32}+c^{\frac32}=1$，证明：<br />
+(1) $abc\le \frac19$；<br />
+(2) $\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\le \frac1{2\sqrt{abc}}$。</p>
+<p><strong>思路</strong><br />
+(1) 条件为三项正数的和等于定值1，目标为积的上界，直接使用三元均值不等式把和转化为积。<br />
+(2) 左端各项分母均为两数之和，先利用二元均值不等式将分母放大，使分式整体缩小；放缩后各项通分，提取出 $a^{\frac32}+b^{\frac32}+c^{\frac32}$，代入已知条件即得右端。</p>
+<p><strong>步骤</strong><br />
+<strong>(1)</strong> 由 $a,b,c&gt;0$ 得 $a^{\frac32},b^{\frac32},c^{\frac32}&gt;0$。由三元均值不等式：
+$$\frac{a^{\frac32}+b^{\frac32}+c^{\frac32}}{3} \ge \sqrt[3]{a^{\frac32}b^{\frac32}c^{\frac32}} = (abc)^{\frac12}$$
+结合条件 $a^{\frac32}+b^{\frac32}+c^{\frac32}=1$，有 $\frac13 \ge (abc)^{\frac12}$。两边平方得 $abc \le \frac19$，当且仅当 $a^{\frac32}=b^{\frac32}=c^{\frac32}$，即 $a=b=c=\frac1{3^{2/3}}$ 时取等。</p>
+<p><strong>(2)</strong> 由基本不等式 $b+c \ge 2\sqrt{bc}$，又 $a&gt;0$，故
+$$\frac{a}{b+c} \le \frac{a}{2\sqrt{bc}} = \frac{a\cdot\sqrt a}{2\sqrt{bc}\sqrt a}= \frac{a^{\frac32}}{2\sqrt{abc}}$$
+同理，
+$$\frac{b}{c+a} \le \frac{b^{\frac32}}{2\sqrt{abc}},\quad \frac{c}{a+b} \le \frac{c^{\frac32}}{2\sqrt{abc}}$$
+三式相加得
+$$\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b} \le \frac{a^{\frac32}+b^{\frac32}+c^{\frac32}}{2\sqrt{abc}} = \frac{1}{2\sqrt{abc}}$$
+所有放缩的取等条件均为 $a=b=c$，与(1)一致，故等号可以取得。证毕。</p>
+<p><strong>点评/变式</strong><br />
+此题突出“从和到积”与“分母均值放缩”两类最基础的均值不等式应用。第(2)问将分式放缩后通分，巧妙利用已知条件一次性化简，避免了分项讨论。<br />
+<strong>变式训练</strong>：若将条件改为 $a^2+b^2+c^2=1$，试证明 $abc\le\frac{\sqrt3}{9}$，并探讨形如 $\frac{a}{b+c}$ 的和的取值范围。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-23.html">2022-文-23</a>（2022 · 中） 证明三元不等式和分式不等式，使用三元均值不等式和基本不等式。</li>
+<li><a href="../../exam/数学/2022-理-23.html">2022-理-23</a>（2022 · 中） 本题考查三元均值不等式和基本不等式的应用，包括证明积与和的不等关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/117-不等式性质.html">不等式性质</a></li>
+</ul>
+</div>
+</body>
+</html>

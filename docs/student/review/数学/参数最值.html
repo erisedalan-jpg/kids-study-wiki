@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参数最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>参数最值</h1><div class="review-mark" data-stem="参数最值"></div><div class="meta-card"><span><strong>考点</strong>参数最值</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答21</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>参数最值问题本质</strong>：已知含参函数不等式在给定区间上恒成立，求参数的最大（小）值。常见于导数综合题，往往需要将不等式转化为函数值正负讨论，核心是寻找参数的临界值。</li>
+<li><strong>常用方法</strong>：</li>
+<li><strong>分离参数法</strong>：若能将参数 $b$ 独立出来，化为 $b &lt; h(x)$ 或 $b &gt; h(x)$ 恒成立，则 $b_{\max}= \inf h(x)$ 或 $b_{\min}= \sup h(x)$，再利用导数求 $h(x)$ 的最值。</li>
+<li><strong>构造函数分类讨论</strong>：直接设 $F(x)$ 为不等式两侧之差，研究 $F(x)$ 的单调性与最值，得出参数需满足的条件。</li>
+<li><strong>端点效应</strong>：若整理后的函数满足 $F(0)=0$，且要求 $x&gt;0$ 时 $F(x)&gt;0$（或 $&lt;0$），则 $F'(0)\ge 0$（或 $\le 0$）是必要条件。若 $F'(0)=0$，再依次考查 $F''(0),F'''(0),\dots$ 直到某阶导数不含参数或不为 $0$，得到参数的必要范围，该范围往往直接给出最值候选。</li>
+<li><strong>不等式放缩</strong>：利用已知不等式（如 $e^x\ge x+1$, $\ln x\le x-1$ 等）进行放大或缩小，将问题转化为简单函数。</li>
+<li><strong>适用条件</strong>：函数可导，端点值特殊（常为 $0$），高阶导数存在。端点效应仅提供必要条件，必须验证候选参数下的充分性（证明原不等式确实恒成立）。</li>
+<li><strong>关联工具</strong>：导数求单调性/极值/最值；洛必达法则（求极限辅助）；泰勒展开（理解高阶导数与函数正负的关系）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>整理恒成立条件</strong><br />
+   将待求式化为 $F(x,b) &gt;0$（或 $\ge 0$）且 $x\in (0,+\infty)$ 的形式，尽量凑出端点 $F(0,b)=0$。</p>
+</li>
+<li>
+<p><strong>尝试分离参数</strong><br />
+   若分离后新函数形式简单、最值易求，则优先分离参数，用导数求 $h(x)$ 在 $(0,+\infty)$ 上的下确界。</p>
+</li>
+<li>
+<p><strong>无法分离时，直接求导讨论</strong><br />
+   求 $F'(x)$，结合 $F(0)=0$ 看 $F'(0)$ 的符号。若 $F'(0)$ 符号不定，可能要通过高阶导数确定。</p>
+</li>
+<li>若 $F'(0)&gt;0$，则存在 $\delta&gt;0$ 使 $x\in(0,\delta)$ 时 $F(x)&gt;0$；  </li>
+<li>
+<p>若 $F'(0)&lt;0$，则局部出现 $F(x)&lt;0$，不合要求，得到参数限制。</p>
+</li>
+<li>
+<p><strong>高阶导数端点分析</strong><br />
+   当 $F'(0)=0$ 时，对 $F''(x)$ 重复上述过程：由 $F''(0)\ge 0$ 得参数必要条件。若仍有 $F''(0)=0$，持续求导至 $F^{(k)}(0)\neq0$。
+   该必要条件常直接给出参数最大（小）值的临界值。</p>
+</li>
+<li>
+<p><strong>验证充分性</strong><br />
+   将临界参数值代回，简化 $F(x)$，通过因式分解、放缩或再求导证明恒成立。例如利用平方差、指数函数性质、已知不等式。</p>
+</li>
+<li>
+<p><strong>下结论</strong><br />
+   写出参数最值，注意等号能否取到。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略端点值要求</strong>：忘记将函数变形为端点 $0$ 处的值（如 $g(0)=0$），导致失去必要条件。</li>
+<li><strong>只求出必要条件而不验证充分性</strong>：误以为 $g'''(0)\ge 0$ 就保证了 $x&gt;0$ 时 $g(x)&gt;0$，漏掉后续证明，可能出错。</li>
+<li><strong>高阶导数计算错误</strong>：求导过程项数多，符号、系数易错，尤其是复合函数与指数交叉项。</li>
+<li><strong>分离参数时不等号方向错误</strong>：除参变元时若不考虑除数正负，直接移项会造成方向颠倒，必须讨论区间内除式符号。</li>
+<li><strong>误用端点效应</strong>：若函数在端点的值不是 $0$ 或端点不可导，不能简单套用此套路。</li>
+<li><strong>忽略定义域细节</strong>：如 $x&gt;0$ 时某些表达式可能趋于无穷，需要用洛必达或极限处理，否则最值不存在却误判。</li>
+<li><strong>对 $b$ 的最大值理解偏差</strong>：题目问“最大值”而非取值范围，意味着能找到上界且上界可达，必须指出何时取等（如 $b=2$ 时恒成立）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014·全国新课标Ⅰ·理21）<br />
+已知 $f(x)=e^x - e^{-x} - 2x$．<br />
+（Ⅰ）讨论 $f(x)$ 的单调性；<br />
+（Ⅱ）设 $g(x)=f(2x)-4b f(x)$，当 $x&gt;0$ 时 $g(x)&gt;0$，求 $b$ 的最大值；<br />
+（Ⅲ）已知 $1.4142&lt;\sqrt{2}&lt;1.4143$，估计 $\ln 2$ 的近似值（精确到 $0.001$）．</p>
+<h3>思路与步骤</h3>
+<p><strong>（Ⅰ）单调性</strong><br />
+求导：$f'(x)=e^x + e^{-x} - 2$。由基本不等式 $e^x + e^{-x} \ge 2$，当且仅当 $x=0$ 时取等。故 $f'(x)\ge 0$ 恒成立，$f(x)$ 在 $\mathbb{R}$ 上单调递增。特别地，$f(0)=0$，从而 $x&gt;0$ 时 $f(x)&gt;0$，$x&lt;0$ 时 $f(x)&lt;0$。</p>
+<p><strong>（Ⅱ）求 $b$ 的最大值</strong>（核心）<br />
+- <strong>整理函数</strong>：<br />
+  $f(2x)=e^{2x}-e^{-2x} - 4x$，<br />
+  $g(x)=f(2x)-4b f(x) = (e^{2x}-e^{-2x}-4x) -4b(e^x - e^{-x} - 2x)$<br />
+  $= e^{2x} - e^{-2x} - 4b(e^x - e^{-x}) + (8b - 4)x$．</p>
+<ul>
+<li>
+<p><strong>端点观察</strong>：<br />
+  $g(0)=1-1-0+0=0$，且要求 $x&gt;0$ 时 $g(x)&gt;0$。</p>
+</li>
+<li>
+<p><strong>求导分析必要条件</strong>：<br />
+  $g'(x)=2e^{2x} + 2e^{-2x} - 4b(e^x + e^{-x}) + 8b - 4$，<br />
+  $g'(0)=2+2-4b\cdot 2 + 8b -4 = 0$。<br />
+  $g''(x)=4e^{2x} - 4e^{-2x} - 4b(e^x - e^{-x})$，<br />
+  $g''(0)=0$。<br />
+  $g'''(x)=8e^{2x} + 8e^{-2x} - 4b(e^x + e^{-x})$，<br />
+  $g'''(0)=8+8-4b\cdot 2 = 16 - 8b$。</p>
+</li>
+</ul>
+<p>若 $g'''(0)&lt;0$，则 $g''(x)$ 在 $x=0$ 附近递减，结合 $g''(0)=0$，有 $g''(x)&lt;0$（小范围），进而 $g'(x)$ 递减，结合 $g'(0)=0$ 得 $g'(x)&lt;0$，从而 $g(x)&lt;0$，与要求矛盾。<br />
+  故必须有 $g'''(0)\ge 0 \Rightarrow 16-8b\ge 0 \Rightarrow b\le 2$。所以 $b$ 的最大可能值为 $2$。</p>
+<ul>
+<li>
+<p><strong>验证充分性（$b=2$）</strong>：<br />
+   代入 $b=2$：
+   $g(x) = e^{2x} - e^{-2x} - 8(e^x - e^{-x}) + 12x$。<br />
+   改造：令 $t = e^x - e^{-x} &gt;0$（$x&gt;0$），则 $t'=e^x+e^{-x}$，且 $e^{2x} - e^{-2x} = (e^x-e^{-x})(e^x+e^{-x}) = t\sqrt{t^2+4}$（或写作 $e^{2x}+e^{-2x}=t^2+2$）。<br />
+   更简洁：直接对 $g(x)$ 因式分解或再求导。<br />
+   令 $h(x) = e^{2x} - e^{-2x} - 8(e^x - e^{-x}) + 12x$，则<br />
+   $h'(x) = 2(e^{2x}+e^{-2x}) - 8(e^x + e^{-x}) + 12$。<br />
+   令 $u = e^x + e^{-x} \ge 2$，则 $e^{2x}+e^{-2x}=u^2 - 2$，<br />
+   $h'(x) = 2(u^2-2) - 8u +12 = 2u^2 -8u +8 = 2(u^2 -4u +4) = 2(u-2)^2 \ge 0$。<br />
+   故 $h'(x)\ge 0$ 恒成立（等号仅在 $u=2$，即 $x=0$ 时取得）。于是 $h(x)$ 在 $[0,+\infty)$ 单调递增，又 $h(0)=0$，所以 $x&gt;0$ 时 $h(x)&gt;0$，满足要求。</p>
+</li>
+<li>
+<p><strong>结论</strong>：$b</p>
+</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-21.html">2014-理-21</a>（2014 · 难） 考查利用导数研究函数单调性，结合不等式恒成立求参数最值，并估计对数值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">参数最值</a></li>
+</ul>
+</div>
+</body>
+</html>

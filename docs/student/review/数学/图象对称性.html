@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图象对称性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图象对称性</h1><div class="review-mark" data-stem="图象对称性"></div><div class="meta-card"><span><strong>考点</strong>图象对称性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：3；年份跨度：2008–2009</li>
+<li>出现题位：选择3 选择4</li>
+<li>难度分布：易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图象对称的两大基本类型</strong>  </li>
+<li>轴对称：若对于定义域内任意 $x$，都有 $f(a+x)=f(a-x)$，则图象关于直线 $x=a$ 对称；特别地，偶函数满足 $f(-x)=f(x)$，图象关于 $y$ 轴（$x=0$）对称。  </li>
+<li>中心对称：若对于定义域内任意 $x$，都有 $f(a+x)+f(a-x)=2b$，则图象关于点 $(a,b)$ 中心对称；特别地，奇函数满足 $f(-x)=-f(x)$，图象关于原点 $(0,0)$ 中心对称。</li>
+<li><strong>奇偶性的判定条件</strong>  </li>
+<li>定义域必须关于原点对称，否则既不是奇函数也不是偶函数。  </li>
+<li>计算 $f(-x)$，若 $f(-x)=f(x)$ 恒成立，则为偶函数；若 $f(-x)=-f(x)$ 恒成立，则为奇函数。</li>
+<li><strong>常见对称关系补充</strong>  </li>
+<li>若函数存在反函数，则原函数与其反函数的图象关于直线 $y=x$ 对称。  </li>
+<li>若函数满足 $f(x)=f^{-1}(x)$，则图象自身关于 $y=x$ 对称。  </li>
+<li>图象关于 $y=-x$ 对称的特征：坐标变换满足 $(x,y)\to(-y,-x)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先锁定定义域</strong>：写出函数有意义的 $x$ 的取值范围，检查是否关于原点对称。若不对称，直接排除“关于原点对称”或“关于 $y$ 轴对称”（非奇非偶函数无这些对称性）。  </li>
+<li><strong>计算 $f(-x)$ 并化简</strong>：将 $-x$ 代入解析式，利用对数性质、有理式通分等方式化简，直至能与 $f(x)$ 或 $-f(x)$ 比较。  </li>
+<li><strong>判定奇偶性并对应图象特征</strong>：  </li>
+<li>$f(-x)=-f(x)\Rightarrow$ 奇函数 $\Rightarrow$ 图象关于原点对称。  </li>
+<li>$f(-x)=f(x)\Rightarrow$ 偶函数 $\Rightarrow$ 图象关于 $y$ 轴对称。  </li>
+<li><strong>若选项涉及 $y=x$ 或 $y=-x$</strong>：  </li>
+<li>求解或验证反函数关系（较少考，一般结合指数对数互换）。  </li>
+<li>可通过取特殊点及其对称点是否在图象上快速排除。  </li>
+<li><strong>特殊值快速验算</strong>：对于综合性较强的函数，可在左右对称位置取一对互为相反数的点，比较函数值，初步判断对称类型，再用定义严格证明。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域对称性</strong>：直接代入 $-x$ 计算结果，但定义域本身不对称，导致误判为奇函数或偶函数。奇偶性前提是定义域关于原点对称，缺此条件函数必为非奇非偶。  </li>
+<li><strong>化简 $f(-x)$ 时符号处理失误</strong>：尤其是含分式、对数、根式的情形，通分或提取负号时漏掉负号，造成 $f(-x)$ 表达式错误。  </li>
+<li><strong>混淆图象对称与函数性质</strong>：误以为“图象关于 $y$ 轴对称”一定意味着 $f(x)=f(-x)$，却忘了必须对定义域内所有 $x$ 成立；仅用个别点验证而忽略整体恒等，造成误选。  </li>
+<li><strong>错把 $y=x$ 对称等同于奇函数</strong>：奇函数图象关于原点中心对称，不是关于直线 $y=x$ 对称。两者极易混淆，审题时务必看清选项是“原点”还是“直线 $y=x$”。  </li>
+<li><strong>忽略定义域限制下的对称性变化</strong>：如分式中分母的零点、对数真数等限制，虽整体表达式可化为奇函数形式，但挖去的点可能破坏对称性，需验算去心域是否仍符合对称性定义（通常仍可成立，但需注意）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2009-文-03</h3>
+<ul>
+<li><strong>题目</strong>：函数 $y=\log_{2}\frac{2-x}{2+x}$ 的图象（选项涉及原点、$y$ 轴、$y=x$、$y=-x$ 对称）。  </li>
+<li><strong>思路</strong>：判定奇偶性，因为定义域关于原点对称，且对数分式形式可通过取倒数转化为相反数，具备奇函数特征。  </li>
+<li><strong>步骤</strong>  </li>
+<li>由 $\frac{2-x}{2+x}&gt;0$ 解得定义域 $(-2,2)$，关于原点对称。  </li>
+<li>计算 $f(-x)=\log_{2}\frac{2+x}{2-x}=\log_{2}\Big(\frac{2-x}{2+x}\Big)^{-1}=-\log_{2}\frac{2-x}{2+x}=-f(x)$。  </li>
+<li>得出 $f(x)$ 为奇函数，图象关于原点对称，选相应选项。  </li>
+<li><strong>点评</strong>：对真数为分式型且互为倒数的对数函数，常直接利用对数性质快速得到相反数，这是识别奇偶性的典型模式。变式：若对数底数或真数略有调整，仍可先看定义域再化简 $f(-x)$。</li>
+</ul>
+<h3>2008-文-04 / 2008-理-03</h3>
+<ul>
+<li><strong>题目</strong>：函数 $f(x)=\frac{1}{x}-x$ 的图象关于什么对称（选项含 $y$ 轴、坐标原点、$y=x$、$y=-x$）。  </li>
+<li><strong>思路</strong>：函数为奇函数，因此图象关于原点中心对称，直接利用奇偶性判断。  </li>
+<li><strong>步骤</strong>  </li>
+<li>定义域 ${x\mid x\neq 0}$ 关于原点对称。  </li>
+<li>$f(-x)=\frac{1}{-x}-(-x)=-\frac{1}{x}+x=-\big(\frac{1}{x}-x\big)=-f(x)$。  </li>
+<li>所以 $f(x)$ 是奇函数，图象关于坐标原点对称，故选原点对应选项。  </li>
+<li><strong>点评/变式</strong>：此类函数由奇函数减去奇函数仍为奇函数，可直接组合判断。变式：改为 $f(x)=\frac{1}{x}+x$，则为奇函数加奇函数，仍为奇函数，同样关于原点对称；若改为 $f(x)=\frac{1}{x}-x^2$，则是奇+偶，需整体代入验算，一般非奇非偶。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-03.html">2009-文-03</a>（2009 · 易） 判断函数奇偶性，利用奇函数图象对称性得出关于原点对称。</li>
+<li><a href="../../exam/数学/2008-文-04.html">2008-文-04</a>（2008 · 易） 判断函数f(x)=1/x-x的奇偶性，利用f(-x)=-f(x)得出图象关于原点对称。</li>
+<li><a href="../../exam/数学/2008-理-03.html">2008-理-03</a>（2008 · 易） 函数f(x)=1/x-x的图象对称性判断，利用奇函数关于原点对称的性质选出正确选项。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/771-图象对称性.html">图象对称性</a></li>
+</ul>
+</div>
+</body>
+</html>

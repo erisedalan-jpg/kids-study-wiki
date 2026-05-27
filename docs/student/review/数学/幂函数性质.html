@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>幂函数性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>幂函数性质</h1><div class="review-mark" data-stem="幂函数性质"></div><div class="meta-card"><span><strong>考点</strong>幂函数性质</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>幂函数的定义</strong>：形如 $y = x^\alpha$（$\alpha$ 为常数）的函数称为幂函数。高中重点研究 $\alpha = -1, 1, 2, 3,\frac{1}{2}$ 等情形。</li>
+<li><strong>单调性</strong>（核心）：</li>
+<li>当 $\alpha&gt;0$ 时，$y=x^\alpha$ 在 $[0,+\infty)$ 上单调递增（如 $y=x^3$ 在 $\mathbb{R}$ 上单调递增）；</li>
+<li>当 $\alpha&lt;0$ 时，$y=x^\alpha$ 在 $(0,+\infty)$ 上单调递减（如 $y=x^{-1}$），注意区间分段，不能说在整个定义域上单调。</li>
+<li><strong>奇偶性</strong>：$y=x^3$ 为奇函数，图像对称于原点；$y=x^2$ 为偶函数。</li>
+<li><strong>比较大小常用依据</strong>：</li>
+<li>若 $a&gt;b$ 且 $\alpha&gt;0$，则 $a^\alpha &gt; b^\alpha$；</li>
+<li>若 $a&gt;b&gt;0$ 且 $\alpha&lt;0$，则 $a^\alpha &lt; b^\alpha$。</li>
+<li><strong>关联函数</strong>：指数函数 $y=a^x$（$a&gt;1$ 增，$0&lt;a&lt;1$ 减），对数函数 $y=\log_a x$（$a&gt;1$ 增，$0&lt;a&lt;1$ 减）。幂函数与指数函数的区别：幂函数底数为变量，指数为常数；指数函数底数为常数，指数为变量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>特值排除法</strong>：选满足题设条件的特殊值代入，逐一检验各选项，排除错误项。注意特值需覆盖正、负、零、分数等不同情形，避免偶然性。</li>
+<li><strong>函数单调性法</strong>：将不等式两边构造成同一个函数的两个函数值，利用该函数的单调性判别大小。</li>
+<li>形如 $a&gt;b$ 比较 $a^3$ 与 $b^3$，用幂函数 $y=x^3$（增函数）⇒ $a^3&gt;b^3$；</li>
+<li>形如 $a&gt;b$ 比较 $3^a$ 与 $3^b$，用指数函数 $y=3^x$（增函数）⇒ $3^a&gt;3^b$；</li>
+<li>形如 $a&gt;b&gt;0$ 比较 $\ln a$ 与 $\ln b$，用对数函数 $y=\ln x$（增函数）。</li>
+<li><strong>绝对值的处理</strong>：$|a|&gt;|b|$ 不一定由 $a&gt;b$ 推出，需借助平方去绝对值或结合数轴分析符号。</li>
+<li><strong>基础不等式组排除</strong>：结合选项特点，必要时用不等式性质推导，如 $a-b&gt;0$ 不能保证 $\ln(a-b)&gt;0$（需 $a-b&gt;1$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆幂函数与指数函数的单调性</strong>：看到底数有指数形式时，误用幂函数单调性。牢记自变量在底数位置是幂函数，在指数位置是指数函数。</li>
+<li><strong>忽略定义域</strong>：幂函数指数为负时，定义域不含 $0$；对数函数真数必须 $&gt;0$；$\ln(a-b)$ 的隐含条件是 $a-b&gt;0$，而非仅给 $a&gt;b$ 就能保证。</li>
+<li><strong>误判绝对值大小</strong>：“$a&gt;b$ ⇒ $|a|&gt;|b|$” 不恒成立（如 $a=-1, b=-2$），常见陷阱。</li>
+<li><strong>特殊值选取不当</strong>：只取正数验证，遗漏负数情况；或用特殊值得出“正确”就轻信，未意识到特殊值只能否定错误选项，不能严格证明正确选项。</li>
+<li><strong>忽视幂的运算条件</strong>：如 $a^3-b^3&gt;0$ 等价于 $(a-b)(a^2+ab+b^2)&gt;0$，由 $a&gt;b$ 及 $a^2+ab+b^2\geq 0$ 可严格证明 $a^3&gt;b^3$，避免仅凭单调性记忆失误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：（2019·全国卷理6）若 $a&gt;b$，则下列不等式正确的是</h3>
+<p>A. $\ln(a-b)&gt;0$<br />
+B. $3^a &lt; 3^b$<br />
+C. $a^3 - b^3 &gt; 0$<br />
+D. $|a| &gt; |b|$</p>
+<p><strong>思路</strong>：<br />
+题目给出一个大前提 $a&gt;b$，选项涉及对数、指数、幂函数、绝对值多个知识点。通过举反例排除错误选支，并利用幂函数 $y=x^3$ 的单调性确认正确选项，体现特殊值排除法与单调性判定相结合的解题策略。</p>
+<p><strong>步骤</strong>：<br />
+1. <strong>A选项</strong>：取 $a=2, b=1$，满足 $a&gt;b$，此时 $a-b=1$，$\ln 1 =0$，不满足 $&gt;0$，故A错。<br />
+2. <strong>B选项</strong>：考察指数函数 $y=3^x$。底数 $3&gt;1$，$y=3^x$ 在 $\mathbb{R}$ 上单调递增。由 $a&gt;b$ 得 $3^a &gt; 3^b$，而B是 $3^a &lt; 3^b$，显然错误。也可取 $a=2, b=1$，$3^2=9&gt;3$，排除B。<br />
+3. <strong>D选项</strong>：取 $a=1, b=-2$，满足 $a&gt;b$，但 $|1|=1 &lt; |-2|=2$，不满足 $|a|&gt;|b|$，排除D。<br />
+4. <strong>C选项</strong>：构造函数 $f(x)=x^3$，该幂函数在 $\mathbb{R}$ 上单调递增。由 $a&gt;b$ 知 $f(a)&gt;f(b)$，即 $a^3 &gt; b^3$，移项得 $a^3 - b^3 &gt; 0$，故C正确。（也可因式分解证明）</p>
+<p><strong>点评/变式</strong>：<br />
+本题难度不大，但覆盖了幂、指、对三个核心初等函数与绝对值的性质。$y=x^3$ 的单调递增性是高三学生必须熟练掌握的基本结论。变式可改为 “若 $a&gt;b&gt;0$，则” 或将 $3^a$ 换成 $\left(\frac{1}{3}\right)^a$，此时指数函数的单调性反转，易错点便转化为对不同底数指数函数单调性的分辨。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-06.html">2019-理-06</a>（2019 · 中） 本题通过特值法结合函数单调性判断不等式正误，考查对数、指数、幂函数性质及绝对值意义。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">幂函数性质</a></li>
+</ul>
+</div>
+</body>
+</html>

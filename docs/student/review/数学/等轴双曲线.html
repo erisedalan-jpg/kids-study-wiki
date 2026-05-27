@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等轴双曲线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等轴双曲线</h1><div class="review-mark" data-stem="等轴双曲线"></div><div class="meta-card"><span><strong>考点</strong>等轴双曲线</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择10</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：实轴与虚轴长相等的双曲线称为等轴双曲线，即 $a=b$。</li>
+<li><strong>标准方程</strong>（中心在原点）：</li>
+<li>焦点在 $x$ 轴上：$x^{2}-y^{2}=a^{2}\quad(a&gt;0)$；</li>
+<li>焦点在 $y$ 轴上：$y^{2}-x^{2}=a^{2}\quad(a&gt;0)$。</li>
+<li><strong>基本量</strong>：实轴长 $2a$，虚轴长 $2a$，半焦距 $c=\sqrt{a^{2}+a^{2}}=\sqrt{2}a$。</li>
+<li><strong>离心率</strong>：$e=\frac{c}{a}=\sqrt{2}$（定值）。</li>
+<li><strong>渐近线</strong>：$y=\pm x$（互相垂直）。</li>
+<li><strong>几何意义</strong>：等轴双曲线上任意一点到两坐标轴距离之积为常数 $\frac{a^{2}}{2}$；可经旋转化为反比例函数 $xy=\pm\frac{a^{2}}{2}$ 的形式。</li>
+<li><strong>与抛物线准线交汇</strong>：抛物线 $y^{2}=2px\ (p&gt;0)$ 的准线方程为 $x=-\frac{p}{2}$，代入等轴双曲线方程可解出交点坐标，利用弦长条件列出关于 $a$ 的方程。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设标准方程</strong>：依据焦点所在坐标轴，写出正确的等轴双曲线方程（本题焦点在 $x$ 轴，设 $x^{2}-y^{2}=a^{2}$）。  </li>
+<li><strong>求已知直线（曲线）方程</strong>：如抛物线的准线 $x=-\frac{p}{2}$，由其参数 $p$ 写出。  </li>
+<li><strong>联立解交点</strong>：将直线方程代入双曲线方程，解出交点坐标（通常纵坐标是关于 $a$ 的表达式）。  </li>
+<li><strong>用弦长列方程</strong>：若两交点关于坐标轴对称，弦长可直接用 $|AB|=|y_{1}-y_{2}|$ 或其他简捷形式；再套用题目给定的长度建立关于 $a$ 的等式。  </li>
+<li><strong>解出实轴长</strong>：先求 $a$（或 $a^{2}$），注意实轴长 $=2a$，且 $a&gt;0$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆实轴长与 $a$</strong>：实轴长是 $2a$，不是 $a$；求出 $a^{2}$ 后需开方得 $a$，再乘 $2$。  </li>
+<li><strong>方程设错</strong>：焦点在 $x$ 轴与在 $y$ 轴的等轴双曲线方程不同，注意题目中“焦点在 $x$ 轴上”这一条件，不可错写成 $y^{2}-x^{2}=a^{2}$。  </li>
+<li><strong>准线方程写错</strong>：抛物线 $y^{2}=16x$ 中 $2p=16$，故准线为 $x=-\frac{p}{2}$ 而非 $x=-p$，牢记 $p=8$，准线 $x=-4$。  </li>
+<li><strong>弦长计算冗余</strong>：交点关于 $x$ 轴对称时纵坐标互为相反数，弦长直接为 $2|y|$，无需用距离公式两点计算。  </li>
+<li><strong>忽略隐含条件</strong>：$a&gt;0$，长度取正值；代坐标入方程时注意 $x$、$y$ 的符号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2012-文-10</h3>
+<p><strong>题目</strong>：等轴双曲线 $C$ 的中心在原点，焦点在 $x$ 轴上，$C$ 与抛物线 $y^{2}=16x$ 的准线交于点 $A$ 和 $B$，$|AB|=4\sqrt{3}$，则 $C$ 的实轴长为（　）<br />
+A. $\sqrt{2}$　B. $2\sqrt{2}$　C. $4$　D. $8$</p>
+<p><strong>思路</strong>：设出等轴双曲线标准方程，写出抛物线准线，联立求交点纵坐标，利用弦长条件解 $a$，进而得实轴长 $2a$。</p>
+<p><strong>步骤</strong>：<br />
+1. 由焦点在 $x$ 轴，设等轴双曲线：$x^{2}-y^{2}=a^{2}\ (a&gt;0)$。<br />
+2. $y^{2}=16x$ 的准线：$x=-\frac{16}{4}=-4$。<br />
+3. 将 $x=-4$ 代入双曲线方程：$(-4)^{2}-y^{2}=a^{2} \Rightarrow 16-y^{2}=a^{2} \Rightarrow y^{2}=16-a^{2}$。<br />
+   ∴ $y=\pm\sqrt{16-a^{2}}$，故 $A(-4,\sqrt{16-a^{2}})$，$B(-4,-\sqrt{16-a^{2}})$。<br />
+4. 弦长 $|AB|=2\sqrt{16-a^{2}}=4\sqrt{3}$（题干所给），则 $\sqrt{16-a^{2}}=2\sqrt{3}$。<br />
+5. 两边平方：$16-a^{2}=12 \Rightarrow a^{2}=4 \Rightarrow a=2$（负值舍去）。<br />
+6. 实轴长 $2a=4$，对应选项 C。</p>
+<p><strong>点评</strong>：本题将等轴双曲线与抛物线准线的垂直弦长巧妙结合，考查了圆锥曲线的基本方程和代数处理能力。注意弦长的几何对称性可极大简化计算；若用距离公式反而繁琐。变式可将准线换成抛物线的焦点弦、椭圆/圆的相交弦，思路大同小异，核心仍是设方程、联立、用弦长求参数。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-10.html">2012-文-10</a>（2012 · 难） 通过等轴双曲线与抛物线准线相交的弦长求双曲线实轴长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1071-等轴双曲线.html">等轴双曲线</a></li>
+</ul>
+</div>
+</body>
+</html>

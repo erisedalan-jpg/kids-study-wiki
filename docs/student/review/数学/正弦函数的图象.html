@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数的图象</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数的图象</h1><div class="review-mark" data-stem="正弦函数的图象"></div><div class="meta-card"><span><strong>考点</strong>正弦函数的图象</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦函数的图象</strong>：$y=\sin x$ 的图象是一条波浪线，定义域 $\mathbb{R}$，值域 $[-1,1]$，以 $2\pi$ 为最小正周期，是奇函数，关于原点对称。</li>
+<li><strong>五点作图法</strong>：取 $x=0,\frac{\pi}{2},\pi,\frac{3\pi}{2},2\pi$，对应 $y=0,1,0,-1,0$，可快速描出基本波形。</li>
+<li><strong>与余弦函数的关系</strong>：$\cos x = \sin!\left(x+\frac{\pi}{2}\right)$，两图象形状相同，仅相位差 $\frac{\pi}{2}$。$y=\sin x$ 与 $y=\cos x$ 的图象交点满足 $\sin x = \cos x$，即 $x=\frac{\pi}{4}+k\pi$。</li>
+<li><strong>两函数图象竖直距离</strong>：对同一 $x=a$，函数 $f(x)$ 与 $g(x)$ 的图象上两点 $M(a,f(a))$、$N(a,g(a))$，其距离 $|MN|=|f(a)-g(a)|$。</li>
+<li><strong>辅助角公式</strong>：$a\sin x + b\cos x = \sqrt{a^2+b^2}\sin(x+\varphi)$，其中 $\tan\varphi=\frac{b}{a}$。由此 $|\sin x - \cos x| = \sqrt{2}\left|\sin!\left(x-\frac{\pi}{4}\right)\right|$，最大值为 $\sqrt{2}$。此公式是处理正弦、余弦线性组合的核心工具。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化距离为函数差</strong>：动直线 $x=a$ 与两函数图象交点间的竖直距离，就是两函数值之差的绝对值，即 $d(a)=|f(a)-g(a)|$。</li>
+<li><strong>统一函数名</strong>：遇到 $\sin x$ 与 $\cos x$ 的差或和，优先用辅助角公式合并为单一正弦（或余弦）型函数，如 $A\sin(x+\varphi)$。</li>
+<li><strong>求最值</strong>：对于 $|A\sin(x+\varphi)|$，最大值即为 $|A|$（若 $A&gt;0$ 则直接取 $A$），利用正弦的有界性 $|\sin\theta|\le 1$。</li>
+<li><strong>关注定义域</strong>：若题目给出 $a$ 的取值范围，需在区间上求极值；若无限制，则直接取全局最大。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记绝对值</strong>：两点距离是非负的，构造差函数时必须加绝对值 $|f(x)-g(x)|$，否则可能只求差的最大值而漏掉最小值导致错误。</li>
+<li><strong>辅助角计算失误</strong>：$\sin x - \cos x = \sqrt{2}\sin!\left(x-\frac{\pi}{4}\right)$，而非 $\sqrt{2}\sin!\left(x+\frac{\pi}{4}\right)$，注意符号与辅助角 $\varphi$ 的象限。可代入特殊点检验。</li>
+<li><strong>混淆横纵距离</strong>：动直线 $x=a$ 给出的两点 $M,N$ 横坐标相同，距离为纵坐标之差，不是横坐标之差，也不是两点间欧氏距离。</li>
+<li><strong>忽略选项特征</strong>：当选项中出现 $\sqrt{2}$、$2$ 等值，应联想到 $\sin x \pm \cos x$ 的振幅为 $\sqrt{2}$，直接锁定答案，避免复杂计算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2008 全国卷理 8）：动直线 $x=a$ 与 $f(x)=\sin x$ 和 $g(x)=\cos x$ 的图象分别交于 $M,N$ 两点，求 $|MN|$ 的最大值。<br />
+<strong>思路</strong>：同一直线 $x=a$ 与两函数交点的距离即 $|\sin a - \cos a|$，化为 $A\sin(a+\varphi)$ 的形式求最值。<br />
+<strong>步骤</strong>：
+1. 由题意，$M(a,\sin a)$，$N(a,\cos a)$，故 $|MN| = |\sin a - \cos a|$。
+2. 利用辅助角公式：$\sin a - \cos a = \sqrt{2}\sin!\left(a - \frac{\pi}{4}\right)$。
+3. 所以 $|MN| = \sqrt{2}\left|\sin!\left(a - \frac{\pi}{4}\right)\right|$。
+4. 正弦函数绝对值最大为 $1$，因此 $|MN|_{\max} = \sqrt{2}$，对应选项 B。</p>
+<p><strong>点评/变式</strong>：本题本质是求同一自变量下两正弦型函数的差的最值，属基础题。变式可改为垂直于 $y$ 轴的交点距离、或求 $|\sin x + \sqrt{3}\cos x|$ 的最大值（合并后振幅为 $2$）、或限制 $a$ 在某个区间求最大值，只需结合单调性分析即可。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-08.html">2008-理-08</a>（2008 · 易） 本题通过动直线与正弦、余弦函数图像交点的纵坐标之差构造绝对值函数，求该差值的最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/962-正弦函数的图象.html">正弦函数的图象</a></li>
+</ul>
+</div>
+</body>
+</html>

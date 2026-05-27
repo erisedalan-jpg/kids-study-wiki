@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数的值</h1><div class="review-mark" data-stem="函数的值"></div><div class="meta-card"><span><strong>考点</strong>函数的值</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择5</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数值定义</strong>：函数 $y=f(x)$ 在 $x=a$ 处的函数值就是 $f(a)$，即用 $a$ 替换解析式中的 $x$ 后计算得到的数值。</li>
+<li><strong>分段函数求值</strong>：若函数在定义域的不同子集上对应关系不同，必须先判断自变量属于哪个区间，再代入对应的解析式计算。</li>
+<li><strong>对数恒等式</strong>：$a^{\log_a N}=N\ (a&gt;0,a\neq 1,N&gt;0)$，指数与对数运算中经常用于化简。</li>
+<li><strong>对数运算性质</strong>：$\log_a (MN)=\log_a M+\log_a N$，$\log_a M^n=n\log_a M$（$a&gt;0,a\neq 1,M,N&gt;0$）。</li>
+<li><strong>常见函数结构</strong>：$f(x)=1+\log_2(2-x)$ 型需注意真数 $2-x&gt;0$，定义域 $x&lt;2$；$f(x)=2^{x-1}$ 可利用指数法则 $a^{m-n}=\dfrac{a^m}{a^n}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断自变量所属分段区间</strong>：将自变量的值与分段点进行比较，必要时先估算大致范围（如 $\log_2 12$ 的范围）。</li>
+<li><strong>代入正确解析式</strong>：根据区间选择对应表达式，不要误用另一个分段。</li>
+<li><strong>灵活化简运算</strong>：</li>
+<li>对数型：利用 $\log_a a^k = k$、对数恒等式、换底公式等化简；</li>
+<li>指数型：利用 $a^{\log_a N}=N$ 及指数运算法则化简；</li>
+<li>多层运算时，先内后外，注意括号和运算顺序。</li>
+<li><strong>结果求和或组合</strong>：若题目要求 $f(a)+f(b)$，分别求出再相加。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分段点判断失误</strong>：如将 $x=-2$ 误判为满足 $x\ge 1$，导致代入错误解析式。</li>
+<li><strong>对数真数范围忽略</strong>：形如 $\log_2(2-x)$ 要求 $2-x&gt;0$，但本题给定自变量满足条件，若变换题目需检查定义域。</li>
+<li><strong>对数恒等式误用</strong>：$f(\log_2 12)=2^{\log_2 12 -1}$ 错误地写成 $2^{\log_2 12} -1$ 或 $2^{\log_2 (12-1)}$。</li>
+<li><strong>运算细节疏漏</strong>：$\log_2(2-(-2))=\log_2 4=2$，计算 $1+2=3$ 过程中漏加 $1$。</li>
+<li><strong>最终结果选项误选</strong>：计算得 $9$ 却选 $12$，因 $2^{\log_2 12}$ 直接当成 $12$ 后忘记再除以 $2$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2015·理·05</h3>
+<p><strong>题目</strong>：设函数 $f(x)=\begin{cases} 1+\log_2(2-x), &amp; x&lt;1 \ 2^{x-1}, &amp; x\ge 1 \end{cases}$，则 $f(-2)+f(\log_2 12)=$（ ）<br />
+A．3　B．6　C．9　D．12</p>
+<p><strong>思路</strong>：分段函数求值，先判段，再代入。$-2&lt;1$，用第一段；$\log_2 12&gt;\log_2 2=1$，用第二段。求值后相加。</p>
+<p><strong>步骤</strong>：
+- 计算 $f(-2)$：因为 $-2&lt;1$，代入 $f(x)=1+\log_2(2-x)$，<br />
+  $f(-2)=1+\log_2(2-(-2))=1+\log_2 4 = 1+2 = 3$。
+- 计算 $f(\log_2 12)$：因为 $\log_2 12 &gt;1$，代入 $f(x)=2^{x-1}$，<br />
+  $f(\log_2 12)=2^{\log_2 12 -1}=2^{\log_2 12}\cdot 2^{-1}=12\times \frac12 =6$。
+- 求和：$f(-2)+f(\log_2 12)=3+6=9$。</p>
+<p><strong>点评/变式</strong>：本题属于基础分段函数求值，关键是对数恒等式的运用。变式：若分段点改为 $x=2$，且改为 $f(x)=\begin{cases} 2^{x+1}, &amp; x&lt;2 \ 3+\log_3(x-1), &amp; x\ge 2\end{cases}$，求 $f(\log_2 3)+f(10)$，同样先判断区间再计算。务必熟练掌握 $\log_a a^b=b$ 及 $a^{\log_a b}=b$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-05.html">2015-理-05</a>（2015 · 易） 考查分段函数求值及对数运算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数的值</a></li>
+</ul>
+</div>
+</body>
+</html>

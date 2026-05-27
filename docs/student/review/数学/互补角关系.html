@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互补角关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>互补角关系</h1><div class="review-mark" data-stem="互补角关系"></div><div class="meta-card"><span><strong>考点</strong>互补角关系</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>互补角定义</strong>：若 $A+C=\pi$，则 $\cos A = -\cos C$，$\sin A = \sin C$。  </li>
+<li><strong>余弦定理</strong>：在 $\triangle ABC$ 中，边 $a$ 的对角为 $A$，则 $a^2=b^2+c^2-2bc\cos A$，用于已知两边及夹角求第三边，或已知三边求角。  </li>
+<li><strong>三角形面积公式</strong>：$S_{\triangle}=\frac12 ab\sin C$（两边及其夹角正弦值的乘积的一半）。  </li>
+<li><strong>适用条件</strong>：题目中出现“内角互补”“$A+C=\pi$”或圆内接四边形（对角互补），常借助公共边在两个三角形中建立等式。  </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别公共边与互补关系</strong>：图形中连接对角线（如 $BD$），将四边形拆分为两个三角形，分别包含互补角 $A$ 和 $C$。  </li>
+<li><strong>双余弦定理列式</strong>：在两个三角形中分别用余弦定理写出公共边平方的表达式。  </li>
+<li>$\triangle BCD$：$BD^2 = BC^2+CD^2-2\cdot BC\cdot CD\cos C$；  </li>
+<li>$\triangle ABD$：$BD^2 = AB^2+AD^2-2\cdot AB\cdot AD\cos A$。  </li>
+<li><strong>利用互余/互补转化</strong>：代入 $\cos A = -\cos C$（互补）或 $\cos A = \sin C$（互余），令两式相等解出 $\cos C$ 或边长。  </li>
+<li><strong>求面积</strong>：四边形面积 $S = S_{\triangle ABD}+S_{\triangle BCD}$，利用 $\sin A = \sin(\pi - C)=\sin C$，直接代入面积公式求和。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>符号记混</strong>：互补余弦互为相反数（$\cos A = -\cos C$），正弦相等（$\sin A = \sin C$），切勿写成 $\cos A = \cos C$。  </li>
+<li><strong>余弦定理中符号</strong>：当 $\cos C$ 为负时，$-2bc\cos C$ 实际为正，列式时注意保持符号一致，避免移项出错。  </li>
+<li><strong>面积公式用错</strong>：三角形的面积必须用夹角的正弦，不可用余弦。互补角的正弦值相等，可直接替换。  </li>
+<li><strong>忽略角的范围</strong>：三角形内角 $C\in(0,\pi)$，由 $\cos C$ 求 $C$ 时结果唯一，但开方求 $\sin C$ 时取正（因 $\sin C&gt;0$）。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014·全国卷文·17）<br />
+四边形 $ABCD$ 的内角 $A$ 与 $C$ 互补，$AB=1$，$BC=3$，$CD=DA=2$。<br />
+（1）求 $C$ 和 $BD$；（2）求四边形 $ABCD$ 的面积。  </p>
+<p><strong>思路</strong><br />
+连接 $BD$，分别在 $\triangle ABD$ 和 $\triangle BCD$ 中用余弦定理表示 $BD^2$，利用 $A+C=\pi \Rightarrow \cos A = -\cos C$ 建立方程解出 $\cos C$ 及 $C$，再代回求得 $BD$。面积拆分为两个三角形面积之和，用 $\sin A = \sin C$ 简化计算。  </p>
+<p><strong>步骤</strong><br />
+- （1）在 $\triangle BCD$ 中：$BD^2 = 3^2+2^2-2\cdot3\cdot2\cos C = 13-12\cos C$ ①<br />
+  在 $\triangle ABD$ 中：$BD^2 = 1^2+2^2-2\cdot1\cdot2\cos A = 5-4\cos A$<br />
+  因为 $A+C=\pi$，$\cos A = -\cos C$，所以 $BD^2 = 5-4(-\cos C) = 5+4\cos C$ ②<br />
+  联立①②：$13-12\cos C = 5+4\cos C \Rightarrow 16\cos C=8 \Rightarrow \cos C = \frac12$，<br />
+  故 $C=60^\circ$，$BD = \sqrt{13-12\times\frac12} = \sqrt{7}$。<br />
+- （2）$\sin A = \sin C = \frac{\sqrt3}2$，<br />
+  $S = \frac12 AB\cdot DA\sin A + \frac12 BC\cdot CD\sin C = \frac12\times1\times2\times\frac{\sqrt3}2 + \frac12\times3\times2\times\frac{\sqrt3}2 = 2\sqrt3$。  </p>
+<p><strong>点评/变式</strong><br />
+本题是“互补角+余弦定理”的经典模板，核心在于通过公共边联立方程消元。变式训练：可改为 $A$ 与 $C$ 互补但已知对角线长度反求边长；或四边形为圆内接四边形（对角互补同样适用）；也可求四边形面积的最大值，此时会结合基本不等式或三角函数有界性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-17.html">2014-文-17</a>（2014 · 中） 利用余弦定理和互补角关系求四边形边长及角度，再计算面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">互补角关系</a></li>
+</ul>
+</div>
+</body>
+</html>

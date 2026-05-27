@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>棱柱结构特征</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>棱柱结构特征</h1><div class="review-mark" data-stem="棱柱结构特征"></div><div class="meta-card"><span><strong>考点</strong>棱柱结构特征</span><span><strong>权重</strong>17</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：17</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>棱柱的结构特征</strong>：有两个面互相平行（底面），其余各面都是四边形，且相邻四边形的公共边都互相平行（侧棱）；底面是全等的多边形，侧面都是平行四边形。</li>
+<li><strong>直棱柱</strong>：侧棱垂直于底面的棱柱。在直棱柱中，侧棱长等于高；侧面均为矩形。本题为直三棱柱（侧棱垂直底面）。</li>
+<li><strong>空间垂直关系的转化链</strong>：线线垂直 $\rightarrow$ 线面垂直 $\rightarrow$ 面面垂直。  </li>
+<li>线面垂直判定：一条直线与平面内两条相交直线都垂直，则该直线与此平面垂直。  </li>
+<li>面面垂直判定：一个平面过另一个平面的垂线，则这两个平面垂直。</li>
+<li><strong>体积公式</strong>：  </li>
+<li>柱体体积 $V = S_{\text{底}} h$（棱柱的高为侧棱长或上下底面距离）。  </li>
+<li>锥体体积 $V = \frac{1}{3} S_{\text{底}} h$。  </li>
+<li>不规则几何体可分割为若干个柱、锥、台体求和，或用“大减小”策略。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证明面面垂直的通用步骤</strong>：  </li>
+<li>先锁定其中一个平面内的一条关键直线（通常选择与交线垂直或与两平面相关的直线）；  </li>
+<li>证明该直线垂直于另一个平面（需在该平面内找两条相交直线分别与已知直线垂直）；  </li>
+<li>由线面垂直推出面面垂直。<br />
+   辅助思路：寻找或构造等腰直角、矩形、全等等条件，推出直角（$90^\circ$）关系。</li>
+<li><strong>棱柱中体积分割的解题路径</strong>：  </li>
+<li>画出几何体分界后的两部分，明确一部分的几何体类型（常为棱锥、棱台、或组合体）；  </li>
+<li>合理设元（如设底面边长为1或$a$），简化计算；  </li>
+<li>若分割面为平面，注意利用等底、等高转化，避免复杂积分；  </li>
+<li>计算体积比时，往往可以约去参数，得到整数比或简单分数比。</li>
+<li><strong>计算题信息提取</strong>：从题干“侧棱垂直底面”→直棱柱→高即为侧棱长；“$\angle ACB=90^\circ$”→底面为直角三角形→便于计算面积与建系；中点$D$可构造等腰直角三角形等隐藏条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误把直棱柱的侧面当作高</strong>：只有当以侧面为底计算体积时，侧棱才与高重合；一般高为两个底面间的垂直距离，即侧棱长。</li>
+<li><strong>证明面面垂直时漏掉“相交直线”条件</strong>：由线线垂直直接推线面垂直，需强调两线相交且在平面内，否则论证不严密。</li>
+<li><strong>空间想象错误导致体积分割重复或遗漏</strong>：平面$BDC_1$将三棱柱分成一个四棱锥$B-DACC_1$与一个不规则多面体（甚至是三棱锥），应将各部分准确剥离，不要想当然认为两部分都是锥体或柱体。</li>
+<li><strong>设参数时混淆比例</strong>：原题可能隐含$AA_1=2AC$等特殊比例，若直接设$AA_1=AC$会导致错误的高与体积。需根据题中相等关系恰当赋值，例如设$AC=BC=1, AA_1=2$配合中点条件。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2012·全国文·19）</h3>
+<p>在直三棱柱$ABC-A_1B_1C_1$中，侧棱垂直底面，$\angle ACB=90^\circ$，$AC=BC=\frac{1}{2}AA_1$，$D$是棱$AA_1$的中点。<br />
+（Ⅰ）证明：平面$BDC_1 \perp$平面$BDC$；<br />
+（Ⅱ）求平面$BDC_1$将此棱柱分成的两部分体积的比。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）要证面面垂直，只需证明平面$BDC_1$内的直线$DC_1$垂直于平面$BDC$。由已知直棱柱和等腰直角底面，可先证$DC_1 \perp BC$，再证$DC_1 \perp DC$，从而$DC_1 \perp$平面$BDC$。<br />
+（Ⅱ）设参数简化计算，将棱柱体积与截得的一部分体积具体算出，另一部分用总体积相减，再求比值。</p>
+<p><strong>步骤</strong><br />
+<strong>（Ⅰ）证明</strong><br />
+由直棱柱性质：$CC_1 \perp$底面$ABC$，故$BC \perp CC_1$；又已知$\angle ACB=90^\circ$，即$BC \perp AC$；且$CC_1 \cap AC=C$，所以<br />
+$$BC \perp \text{平面 } ACC_1A_1$$<br />
+因$DC_1 \subset$平面$ACC_1A_1$，得 $DC_1 \perp BC$。<br />
+设$AC=BC=1$，则$AA_1=2$，$D$为$AA_1$中点，故$AD=1$。在正方形/矩形结构中，$\triangle ADC$为等腰直角三角形，$\angle ADC=45^\circ$；同理$\triangle A_1D C_1$也为等腰直角三角形，$\angle A_1DC_1=45^\circ$，于是<br />
+$$\angle CDC_1 = 180^\circ - 45^\circ - 45^\circ = 90^\circ$$<br />
+即 $DC_1 \perp DC$。又$DC \cap BC = C$，所以<br />
+$$DC_1 \perp \text{平面 } BDC$$<br />
+而$DC_1 \subset$平面$BDC_1$，由判定定理得平面$BDC_1 \perp$平面$BDC$。  </p>
+<p><strong>（Ⅱ）求解体积比</strong><br />
+三棱柱体积 $V = S_{\triangle ABC} \cdot AA_1 = \left(\frac{1}{2}\times1\times1\right) \times 2 =1$。<br />
+平面$BDC_1$截得的一部分为四棱锥$B-DACC_1$（底面为直角梯形$DACC_1$，高为$BC$）。<br />
+$S_{\text{梯形}DACC_1} = \frac{AD+CC_1}{2}\times AC = \frac{1+2}{2}\times1 = \frac{3}{2}$。<br />
+故 $V_1 = V_{B-DACC_1} = \frac{1}{3} \times \frac{3}{2} \times BC = \frac{1}{3}\times\frac{3}{2}\times1 = \frac12$。<br />
+另一部分体积 $V_2 = V - V_1 = 1 - \frac12 = \frac12$。<br />
+所以两部分体积之比 $V_1 : V_2 = 1:1$（或按题干要求写“体积的比为 1:1”）。</p>
+<p><strong>点评/变式</strong><br />
+- 本题综合考查直棱柱的结构特征、线面垂直与面面垂直的判定，以及空间几何体的体积分割。第（Ⅰ）问的关键是发现$DC_1$的“双重垂直”，其中$DC_1 \perp DC$需结合中点产生的$45^\circ$余角证明。<br />
+- 第（Ⅱ）问若无法直接看出其中的四棱锥，可用$V = V_{B-CDC_1} + V_{B-DAC}$等进行重新组合，同样可得比为$1:1$。<br />
+- <strong>变式</strong>：将中点条件改为$AD:AA_1=1:3$或$D$为靠近$A$的四等分点，则体积比会变为一般值，训练含参比例的体积计算。也可交换垂直条件（如所求证明换成平面$ADC_1 \perp$平面$BDC$），进一步巩固垂直转化链条。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-19.html">2012-文-19</a>（2012 · 中） 证明面面垂直关系及棱柱分割后两部分体积比的计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/934-棱柱的结构特征.html">棱柱结构特征</a></li>
+</ul>
+</div>
+</body>
+</html>

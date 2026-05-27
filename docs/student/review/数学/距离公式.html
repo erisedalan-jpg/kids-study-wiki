@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>距离公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>距离公式</h1><div class="review-mark" data-stem="距离公式"></div><div class="meta-card"><span><strong>考点</strong>距离公式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>两点间距离公式</strong><br />
+   设两点 $A(x_1,y_1)$，$B(x_2,y_2)$，则<br />
+   $$|AB| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$<br />
+   特别地，当线段在坐标轴或特殊几何图形上时，可直接利用勾股定理或几何性质简化。</p>
+</li>
+<li>
+<p><strong>点到直线距离公式</strong><br />
+   点 $P(x_0,y_0)$ 到直线 $Ax+By+C=0$ 的距离<br />
+   $$d = \frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$$<br />
+   此公式隐含条件：直线方程为一般式且系数 $A,B$ 不同时为零。</p>
+</li>
+<li>
+<p><strong>与距离相关的函数建模</strong><br />
+   动点到多个定点距离之和、差、比值等表达式往往构成分段函数，需分区间讨论动点轨迹，再转化为代数式求最值或判断图像。</p>
+</li>
+<li>
+<p><strong>三角函数与距离的互化</strong><br />
+   当角度作为自变量时，可将边长用三角函数表示，再结合距离公式建立函数关系。关键技巧是设角参数，将几何距离用正弦、余弦及已知边长表达。</p>
+</li>
+<li>
+<p><strong>绝对值在距离和中的应用</strong><br />
+   形如 $|x-a|+|x-b|$ 的距离和最值问题，常利用绝对值几何意义：数轴上点 $x$ 到 $a$ 与 $b$ 的距离之和，当 $x$ 介于 $a,b$ 之间时和最小。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>坐标系建系法</strong>  </li>
+<li>将几何图形置于平面直角坐标系中，用坐标明确定点与动点。  </li>
+<li>根据动点所在边分段，写出每一段上动点坐标（用角度或某参数表示）。  </li>
+<li>
+<p>代入距离公式得到分段函数解析式，再分析函数性质。</p>
+</li>
+<li>
+<p><strong>角度参数法</strong>  </p>
+</li>
+<li>当动点沿折线运动且题中给出角度条件时，以该角为自变量 $x$；  </li>
+<li>用直角三角形边角关系，将各段长表示成关于 $x$ 的三角函数式；  </li>
+<li>
+<p>合并得距离和 $f(x)$，注意定义域由图形的几何约束确定。</p>
+</li>
+<li>
+<p><strong>分段讨论不可省略</strong>  </p>
+</li>
+<li>动点在不同边或不同区域时，距离表达式不同，必须逐段求解。  </li>
+<li>
+<p>分段点通常对应图形顶点或特殊位置，需单独计算端点值以保证连续。</p>
+</li>
+<li>
+<p><strong>图像排除法</strong>  </p>
+</li>
+<li>优先计算一些特殊点（起点、终点、中间顶点、对称位置）的函数值；  </li>
+<li>结合函数单调性、奇偶性、对称性快速排除错误选项。  </li>
+<li>
+<p>对于选择题常见的定性判断：函数值何时取最值，是否直线上升或弯曲。</p>
+</li>
+<li>
+<p><strong>距离和最值常用结论</strong>  </p>
+</li>
+<li>数轴上到两定点距离之和：当点在线段内部时最小，外部时随远离而增大。  </li>
+<li>平面上到两定点距离之和为定值的轨迹是椭圆（可用于识别图像走势）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忘记分段导致解析式错误</strong><br />
+  动点经折线运动时，在不同边上的坐标表达式不同，直接用单一公式会出错。必须根据动点运动顺序划分区间。</p>
+</li>
+<li>
+<p><strong>角度范围判断失误</strong><br />
+  自变量 $x$ 的定义域由图形和运动路径共同决定，如题目中 $\angle BOP$ 可能从 $0$ 变化到 $\pi$，但并非都是完整的 $[0,\pi]$，需结合点 $P$ 在边界上的可达性判定。</p>
+</li>
+<li>
+<p><strong>距离公式展开时忽略根号</strong><br />
+  如 $|AB| = \sqrt{(x_A-x_B)^2+(y_A-y_B)^2}$，求导或分析单调性时不能直接去掉根号，要等价转化为根号内式的单调性，或在比较大小平方处理时注意符号。</p>
+</li>
+<li>
+<p><strong>误判对称性与周期性</strong><br />
+  从几何对称性简单认为函数图像对称，未考虑角度与路径的先后顺序，导致错选对称图像。应严格解析验证对称关系。</p>
+</li>
+<li>
+<p><strong>绝对值距离处理不当</strong><br />
+  在函数 $f(x)=|PA|+|PB|$ 中，若直接平方化简易引入增解，建议分区间脱去绝对值号或运用几何意义简化。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：长方形 $ABCD$，$AB=2$，$BC=1$，$O$ 是 $AB$ 的中点。点 $P$ 沿 $BC \to CD \to DA$ 运动，设 $\angle BOP = x$。记 $f(x)=|PA|+|PB|$，问 $y=f(x)$ 的图像大致为（选择题选项略）。</p>
+<p><strong>思路</strong><br />
+以 $O$ 为原点建立坐标系，标定各顶点坐标。将动点 $P$ 的路径分为三段，分别用角度 $x$ 表示 $P$ 坐标，代入两点距离公式求出每段上 $|PA|+|PB|$ 的表达式。分析每段函数的单调性及特殊点值，与选项特征对比排除。</p>
+<p><strong>步骤</strong><br />
+1. 建系：以 $O$ 为原点 $(0,0)$，$A(-1,0)$，$B(1,0)$，则 $C(1,1)$，$D(-1,1)$。<br />
+2. $P$ 在 $BC$ 边上（$x$ 从 $0$ 到 $\frac{\pi}{4}$）：此时 $P(1, \tan x)$，<br />
+   $|PA| = \sqrt{(1+1)^2+\tan^2 x}$，$|PB| = \sqrt{0^2+\tan^2 x}=|\tan x|$，<br />
+   故 $f(x)=\sqrt{4+\tan^2 x} + \tan x$，递增且增长速度逐渐放缓。<br />
+3. $P$ 在 $CD$ 边上（$x$ 从 $\frac{\pi}{4}$ 到 $\frac{3\pi}{4}$）：设 $P(t,1)$，由 $\tan x = \frac{1}{t}$ 得 $t = \cot x$，<br />
+   此时 $P(\cot x, 1)$，<br />
+   $|PA| = \sqrt{(\cot x+1)^2+1}$，$|PB| = \sqrt{(\cot x-1)^2+1}$，<br />
+   两段距离和为对称结构，当 $\cot x=0$ 即 $x=\frac{\pi}{2}$ 时 $f(x)$ 取最小值 $2\sqrt{2}$，两侧对称增大。<br />
+4. $P$ 在 $DA$ 边上（$x$ 从 $\frac{3\pi}{4}$ 到 $\pi$）：$P(-1, \tan(\pi-x))$，<br />
+   注意到对称性，$f(x)$ 与第一段关于 $x=\frac{\pi}{2}$ 对称，递减趋势与第一段递增相反。<br />
+5. 综合：定义域 $[0,\pi]$，$f(0)=3$，$f(\frac{\pi}{4})=...$，$f(\frac{\pi}{2})=2\sqrt{2} \approx 2.828$，$f(\frac{3\pi}{4})$ 对称，$f(\pi)=3$。函数先增后减再增？实际是先增（峰不明显）、后下凹降至最低、再对称上升，图像呈现“碗状”但两端翘起且关于 $x=\frac{\pi}{2}$ 对称。对比选项选对称且在中间有最小值的非直线图形。  </p>
+<p><strong>点评/变式</strong><br />
+此题把几何轨迹与函数图像结合，核心是分段建模和对称思想的运用。变式训练可将长方形改为正方形，或改为到两定点距离之差、积的函数，亦可将动点路径改为三角形或其他折线，进一步加深对距离函数的理解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-11.html">2015-文-11</a>（2015 · 中） 动点P沿长方形边界运动，将PA+PB表示为角度x的函数，判断函数图象形状。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">距离公式</a></li>
+</ul>
+</div>
+</body>
+</html>

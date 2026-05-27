@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列求和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列求和</h1><div class="review-mark" data-stem="数列求和"></div><div class="meta-card"><span><strong>考点</strong>数列求和</span><span><strong>权重</strong>32</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：32</li>
+<li>真题数：11；年份跨度：2010–2023</li>
+<li>出现题位：填空15 填空16 解答17 解答18 选择7 选择12</li>
+<li>难度分布：中10 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等差、等比数列求和公式</strong><br />
+  等差数列 ${a_n}$ 前 $n$ 项和：$S_n=\dfrac{n(a_1+a_n)}{2}=na_1+\dfrac{n(n-1)}{2}d$。<br />
+  等比数列 ${a_n}$ 前 $n$ 项和：$q\neq 1$ 时 $S_n=\dfrac{a_1(1-q^n)}{1-q}$；$q=1$ 时 $S_n=na_1$。<br />
+  推导中常用倒序相加（等差）与错位相减（等比）。</li>
+<li><strong>常见求和方法及适用类型</strong>  </li>
+<li><strong>公式法</strong>：直接套用等差、等比、平方和 $\sum k^2$、立方和等已知公式。  </li>
+<li><strong>分组求和</strong>：通项为若干可求和的数列组合（如奇偶分段、$n\pm (-1)^n$ 型），分别求和再相加。  </li>
+<li><strong>裂项相消</strong>：通项可拆为两项之差（如 $\frac{1}{n(n+k)}=\frac 1k(\frac 1n-\frac{1}{n+k})$），写开后中间项抵消。常用于分式、根式、对数型。  </li>
+<li><strong>错位相减</strong>：通项为“等差 $\times$ 等比”的形式（如 ${n\cdot q^n}$），乘公比后与原式错位相减，化为等比求和。  </li>
+<li><strong>倒序相加</strong>：适用于与首末等距的两项和为常数的数列。  </li>
+<li><strong>并项求和</strong>：递推中含有 $(-1)^n$ 或要求将正负交替的项合并，利用周期性或相邻组合来简化。  </li>
+<li><strong>分段求和与取整函数</strong>：通项含 $[x]$、绝对值或分段定义时，按段归类后求各项和。  </li>
+<li><strong>重要关系与定理</strong>  </li>
+<li>等差数列中 $a_m+a_n=a_p+a_q \iff m+n=p+q$。  </li>
+<li>等比数列中 $a_m a_n = a_p a_q \iff m+n=p+q$。  </li>
+<li>构造等差、等比证明不等式时，常先放缩为等比再求和。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先定型，再选法</strong><br />
+   观察通项 $a_n$（或递推）的结构，迅速匹配上述基本求和方法。若无法直接套用，优先变形为已知型。</li>
+<li><strong>公式法求和步骤</strong>  </li>
+<li>由已知求首项、公差（比）、项数，检查是否 $q=1$。  </li>
+<li>代入公式，注意 $n$ 的含义（项数）。</li>
+<li><strong>分组求和步骤</strong>  </li>
+<li>按奇偶、分段区间或符号拆分数列。  </li>
+<li>每组内部单独求和（往往等差或等比）。  </li>
+<li>各组合并，要特别注意各组项数（如偶数 $n=2k$ 时奇偶项各 $k$ 项，奇数 $n=2k-1$ 时奇 $k$ 偶 $k-1$）。</li>
+<li><strong>裂项相消步骤</strong>  </li>
+<li>将通项拆成 $f(n)-f(n+1)$ 或 $f(n)-f(n+k)$ 形式。  </li>
+<li>写出前 $n$ 项和，确认保留项与抵消项。  </li>
+<li>特别注意裂项系数（如 $\frac{1}{n(n+1)}=\frac 1n-\frac{1}{n+1}$，$\frac{1}{(2n-1)(2n+1)}=\frac 12(\frac 1{2n-1}-\frac 1{2n+1})$）。</li>
+<li><strong>错位相减步骤</strong>  </li>
+<li>设 $S_n$ 为所求，乘公比 $q$ 得 $qS_n$。  </li>
+<li>两式相减，对齐次数，中间部分构成等比数列求和。  </li>
+<li>化简时注意最后一项的符号，避免漏项。</li>
+<li><strong>并项求和步骤</strong>  </li>
+<li>多用于含 $(-1)^n$ 递推。视 $n$ 为偶数/奇数写相邻两项关系式，加和或作差以得规律。  </li>
+<li>利用周期性写出若干组，求总组数及余项。</li>
+<li><strong>与对数、取整结合</strong>  </li>
+<li>对数型：$\log a_1+\log a_2+\cdots+\log a_n=\log(a_1 a_2\cdots a_n)$，化为积的运算，再确定数列类型。  </li>
+<li>取整型：先求通项，确定 $[f(n)]$ 的分段常数区间，再分段求和。</li>
+<li><strong>程序框图类</strong>  </li>
+<li>读懂循环变量与累加（累乘）结构，明确每次循环处理的项数，确定步长变化。  </li>
+<li>将框图转化为和式，按数列方法求解或补全条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>裂项系数错误</strong>：未提取系数导致和式倍数错误。例 $\frac{1}{n(n+2)}$ 应裂为 $\frac{1}{2}(\frac{1}{n}-\frac{1}{n+2})$，忘记乘 $\frac12$ 失分。</li>
+<li><strong>错位相减中的公比讨论</strong>：忽略 $q=1$ 情形直接除 $1-q$ 造成失根。等比求和必须先判断 $q$ 是否为 $1$。</li>
+<li><strong>项数计数不准</strong>：分组求和、并项求和或按周期求和时，对奇偶组项数、总组数及余项处理不当，从而导致求和范围错误。</li>
+<li><strong>递推正负号混淆</strong>：递推 $a_{n+1}+(-1)^n a_n =2n-1$ 类，在并项时下标奇偶与符号的对应要逐一验算，漏写或写错正负。</li>
+<li><strong>取整函数分段遗漏</strong>：如 $b_n=[\lg a_n]$，需明确 $\lg a_n$ 落在哪些整数区间，并正确划分 $n$ 的对应范围，忽略边界项导致累计错误。</li>
+<li><strong>程序框图步长与项数关系</strong>：交替加减的数列，循环变量步长应为 $2$ 而非 $1$；循环终止条件与处理项数的关系也易错。</li>
+<li><strong>不等式放缩方向与精度</strong>：证明求和不等式时，放缩过头导致无法传递，应放缩为可求和（如等比）且保持不等式方向。</li>
+<li><strong>公式记忆混淆</strong>：等比求和分子 $a_1(1-q^n)$ 与分母 $1-q$，指数 $n$ 与项数对应，勿记成 $n-1$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2023·新课标Ⅱ·18</h3>
+<p>已知 ${a_n}$ 为等差数列，$b_n=\begin{cases} a_n-6,&amp; n\text{ 为奇数}\ 2a_n,&amp; n\text{ 为偶数}\end{cases}$。$S_n,T_n$ 分别为 ${a_n},{b_n}$ 的前 $n$ 项和，$S_4=32,T_3=16$。<br />
+(1) 求 ${a_n}$ 通项公式；<br />
+(2) 证明：当 $n&gt;5$ 时，$T_n&gt;S_n$。</p>
+<p><strong>思路</strong><br />
+(1) 设基本量 $a_1,d$，由两个和式列方程组解出 $a_1,d$。<br />
+(2) 利用奇偶分组将 $T_n$ 分为奇数项和与偶数项和，再与 $S_n$ 作差比较。</p>
+<p><strong>步骤</strong><br />
+1. 设 $a_n=a_1+(n-1)d$。<br />
+   $S_4=4a_1+6d=32$ ①<br />
+   $b_1=a_1-6,\ b_2=2(a_1+d),\ b_3=a_3-6=a_1+2d-6$，</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-18.html">2023-新课标Ⅱ-18</a>（2023 · 中） 该题考查等差数列通项公式、前n项和及分组求和，通过奇偶讨论比较两数列和的大小关系。</li>
+<li><a href="../../exam/数学/2018-理-07.html">2018-理-07</a>（2018 · 中） 考查程序框图中循环结构的应用，根据数列通项确定计数变量的更新方式。</li>
+<li><a href="../../exam/数学/2017-理-15.html">2017-理-15</a>（2017 · 中） 已知等差数列的项与前n项和，求数列求和表达式的值</li>
+<li><a href="../../exam/数学/2016-理-17.html">2016-理-17</a>（2016 · 中） 本题通过等差数列前n项和与对数取整函数，考查通项公式求解及新定义数列的求和。</li>
+<li><a href="../../exam/数学/2014-理-17.html">2014-理-17</a>（2014 · 中） 本题考查等比数列定义与通项公式，并用放缩法证明数列不等式。</li>
+<li><a href="../../exam/数学/2013-文-07.html">2013-文-07</a>（2013 · 易） 该题考查程序框图的执行与循环结构，给出N=4时计算累加和S的值。</li>
+<li><a href="../../exam/数学/2013-文-17.html">2013-文-17</a>（2013 · 中） 本题通过等差与等比数列综合条件求通项，并对特定间隔项进行求和。</li>
+<li><a href="../../exam/数学/2012-文-12.html">2012-文-12</a>（2012 · 中） 求解由递推关系给出的数列前60项和，利用奇偶项分组转化为等差数列求和。</li>
+<li><a href="../../exam/数学/2012-理-16.html">2012-理-16</a>（2012 · 中） 根据奇偶项递推关系，通过分组构造求数列前60项和。</li>
+<li><a href="../../exam/数学/2011-理-17.html">2011-理-17</a>（2011 · 中） 求等比数列通项公式及利用对数运算和裂项相消法求数列前n项和</li>
+<li><a href="../../exam/数学/2010-理-17.html">2010-理-17</a>（2010 · 中） 数列递推求通项公式及错位相减法求和</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1081-累加求和.html">数列求和</a></li>
+</ul>
+</div>
+</body>
+</html>

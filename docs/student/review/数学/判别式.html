@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>判别式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>判别式</h1><div class="review-mark" data-stem="判别式"></div><div class="meta-card"><span><strong>考点</strong>判别式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二次方程与判别式</strong>：对于一元二次方程 $ax^2+bx+c=0\,(a \neq 0)$，其判别式 $\Delta = b^2-4ac$。</li>
+<li>$\Delta &gt; 0 \Leftrightarrow$ 方程有两个不等实根；</li>
+<li>$\Delta = 0 \Leftrightarrow$ 方程有两个相等实根（一重根）；</li>
+<li>$\Delta &lt; 0 \Leftrightarrow$ 方程无实根。</li>
+<li><strong>判别式的几何意义（直线与二次曲线相切）</strong>：若直线与二次曲线（如抛物线 $y=ax^2+bx+c$）相切，则联立直线与曲线方程消去 $y$ 后得到的关于 $x$ 的二次方程必有 $\Delta = 0$，且二次项系数不为零。</li>
+<li><strong>导数与切线</strong>：函数 $y=f(x)$ 在点 $(x_0,f(x_0))$ 处的切线斜率为 $k=f'(x_0)$，切线方程为 $y-f(x_0)=f'(x_0)(x-x_0)$。</li>
+<li><strong>适用条件</strong>：只有在联立后消元得到的是 <strong>二次</strong> 方程时，才能用 $\Delta = 0$ 刻画相切；若消元后为一次方程或二次项系数含参为零时，需单独讨论。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求已知曲线的切线</strong><br />
+   对第一条曲线求导，代入切点横坐标得斜率 $k$，再用点斜式写出切线方程。</li>
+<li><strong>联立切线与目标曲线</strong><br />
+   将切线方程代入第二条曲线（通常为二次函数）的方程，消去 $y$，整理成关于 $x$ 的一元方程。</li>
+<li><strong>利用相切条件建立方程</strong><br />
+   确保消元后的方程为二次方程（二次项系数不为 $0$），令其判别式 $\Delta = 0$，得到关于参数的方程。</li>
+<li><strong>解参数并检验</strong><br />
+   解出参数值，检查是否满足二次项系数 $\neq 0$，必要时回代验证。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>求导出错</strong>：$y=x+\ln x$ 的导数应为 $y'=1+\frac{1}{x}$，易忘记 $\ln x$ 的导数。</li>
+<li><strong>切线方程书写</strong>：点斜式 $y-y_0=k(x-x_0)$ 中的横纵坐标与斜率代入要准确，避免符号错误。</li>
+<li><strong>消元整理不仔细</strong>：联立消 $y$ 后移项、合并同类项时容易漏项或符号出错，导致二次方程系数错误。</li>
+<li><strong>忽视二次项系数为零的情况</strong>：若消元后 $x^2$ 系数含有参数，必须先说明 $a \neq 0$ 或分情况讨论，否则 $\Delta=0$ 失效。</li>
+<li><strong>混淆“相切”与“相交”</strong>：只有直线与二次曲线 <strong>有且只有一个公共点</strong> 且直线不平行于对称轴时才是相切，用 $\Delta=0$ 处理；若二次项系数为零，可能平行于渐近线或对称轴而产生一个交点但非相切，需警惕。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>已知曲线 $y=x+\ln x$ 在点 $(1,1)$ 处的切线与曲线 $y=ax^2+(a+2)x+1$ 相切，求实数 $a$ 的值。</p>
+<p><strong>思路</strong><br />
+先求第一条曲线在 $(1,1)$ 的导数得切线斜率，写出切线方程；再将该切线方程与含参的二次曲线联立，利用“相切”条件得到关于 $x$ 的二次方程且 $\Delta=0$，从而解出 $a$。</p>
+<p><strong>步骤</strong><br />
+1. 对 $y=x+\ln x$ 求导：$y'=1+\frac{1}{x}$，当 $x=1$ 时，$k=1+1=2$。<br />
+   切线方程为 $y-1=2(x-1)$，即 $y=2x-1$。<br />
+2. 联立 $\begin{cases} y=2x-1 \ y=ax^2+(a+2)x+1 \end{cases}$，消去 $y$ 得：<br />
+   $2x-1 = ax^2+(a+2)x+1$<br />
+   整理成标准二次方程：$ax^2+ax+2=0$。<br />
+3. 依题意，切线与抛物线相切，且由题可知 $a\neq0$（保证是二次曲线），<br />
+   故 $\Delta = a^2 - 8a = 0$。<br />
+   解得 $a=8$ 或 $a=0$（舍去 $a=0$）。<br />
+   $\therefore a=8$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题是“导数几何意义 + 判别式法处理相切”的经典结合。判别式在此作为“二次方程有相等实根”的翻译工具，务必先确认为二次方程。<br />
+- 变式思考：若将第二条曲线换成 $y=ax^2+bx+c$，且已知某点处的切线方程，同样可用 $\Delta=0$ 求参。<br />
+- 若二次项系数含参且可能为零，需讨论 $a=0$ 时曲线退化为直线的情况，此时相切条件不再由 $\Delta=0$ 表述，应直线重合或平行判定。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-16.html">2015-文-16</a>（2015 · 中） 求曲线切线方程，利用导数几何意义及判别式求解参数值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">判别式</a></li>
+</ul>
+</div>
+</body>
+</html>

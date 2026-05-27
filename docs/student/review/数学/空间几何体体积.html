@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何体体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间几何体体积</h1><div class="review-mark" data-stem="空间几何体体积"></div><div class="meta-card"><span><strong>考点</strong>空间几何体体积</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>正方体截角后的体积计算：正方体被平面沿三个面对角线截下一个三棱锥（即切去一个角），该三棱锥为直角三棱锥，底面是等腰直角三角形，侧棱垂直底面，体积为正方体体积的 $\frac{1}{6}$。</li>
+<li>空间几何体体积的求法：直接公式法（柱、锥、台、球），间接法（割补法、等体积法），以及利用三视图还原几何体再求体积。</li>
+<li>三视图规则：主视图与俯视图长对正，主视图与侧视图高平齐，俯视图与侧视图宽相等。三视图中的实线表示可见轮廓，虚线表示不可见轮廓。</li>
+<li>正方体面对角线、体对角线与截面的特征：与正方体顶点相关的截面往往形成正三角形、正方形、正六边形等，掌握其面积与体积比例。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>还原几何体</strong>：根据三视图，先判断基本几何体（如正方体、长方体），再根据内部线条判断被截去部分的形状。本题主、俯、侧视图均是正方形且有一条对角线，可还原为正方体被平面沿三个面对角线切去一个三棱锥，剩余部分为三视图所示。</li>
+<li><strong>标注顶点与棱长</strong>：设正方体棱长为 $a$，明确截去部分是由三条共顶点的棱构成的直角三棱锥，其三条直角棱长均为 $a$。</li>
+<li><strong>计算体积比值</strong>：截去三棱锥体积 $V_{\text{截}}=\frac{1}{3}\times\left(\frac{1}{2}a^2\right)\times a = \frac{a^3}{6}$，剩余体积 $V_{\text{剩}}=a^3-\frac{a^3}{6}=\frac{5a^3}{6}$，二者比值 $\frac{V_{\text{截}}}{V_{\text{剩}}}=\frac{1}{5}$。</li>
+<li><strong>归一化处理</strong>：比值与棱长无关，可直接设 $a=1$ 简化计算，避免符号干扰。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>三视图内对角线虚实不分：若对角线为虚线，则截去的部分可能位于不同方位，导致体积比变化。务必确认图中线型为实线。</li>
+<li>误将截去部分当成四棱锥或其它几何体：本题三视图的三个对角线均连通于同一顶点，由此判断截去的是一个三棱锥，若判断错误，体积公式将用错。</li>
+<li>体积比值分子分母颠倒：题目问“截去部分体积与剩余部分体积的比值”，务必看清谁比谁，避免写成 $5$ 或 $\frac{5}{1}$。</li>
+<li>忽略正方体切割后的剩余形状：剩余部分不是规则几何体，不能直接求积，用总体积减去截去部分体积为通法，但需确保截去部分计算无误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015-文-06）<br />
+一个正方体被一个平面截去一部分后，剩余部分的三视图如图，则截去部分体积与剩余部分体积的比值为多少？<br />
+（三视图特征：三个视图均为正方形，且每个正方形内有一条对角线，对角线从同一顶点出发。）</p>
+<p><strong>思路</strong><br />
+由三视图“三个同向对角线”可判定截去部分为从正方体同一顶点出发的三条棱构成的三棱锥，体积为正方体的六分之一，进而求比值。</p>
+<p><strong>步骤</strong><br />
+1. 设正方体棱长为 $1$，则体积 $V_{\text{正方体}}=1$。<br />
+2. 截去的三棱锥底面为边长为 $1$ 的等腰直角三角形，面积为 $\frac{1}{2}$，高为 $1$，故体积 $V_{\text{截}}=\frac{1}{3}\times\frac{1}{2}\times1=\frac{1}{6}$。<br />
+3. 剩余体积 $V_{\text{剩}}=1-\frac{1}{6}=\frac{5}{6}$。<br />
+4. 所求比值 $\frac{V_{\text{截}}}{V_{\text{剩}}}=\frac{1/6}{5/6}=\frac{1}{5}$。</p>
+<p><strong>点评/变式</strong><br />
+该题是“割补法”的经典应用，关键是通过三视图还原切割方式。变式可改为截去两个角或多个角，或换成被一平面截去一个三棱柱等，核心仍是先还原再作差。此外，若三视图中的对角线方向变化或部分为虚线，对应的截去位置随之改变，但体积比可能依然不变，需结合空间想象灵活分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-06.html">2015-文-06</a>（2015 · 中） 一个正方体截去一角后，通过三视图求截去部分与剩余部分体积之比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">空间几何体体积</a></li>
+</ul>
+</div>
+</body>
+</html>

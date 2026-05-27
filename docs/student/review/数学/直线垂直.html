@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线垂直</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线垂直</h1><div class="review-mark" data-stem="直线垂直"></div><div class="meta-card"><span><strong>考点</strong>直线垂直</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直线垂直的判定（解析几何核心）</strong></li>
+<li>若两直线斜率存在且非零：$k_1 \cdot k_2 = -1$。</li>
+<li>一般式 $A_1x+B_1y+C_1=0$ 与 $A_2x+B_2y+C_2=0$ 垂直 $\iff A_1A_2+B_1B_2=0$。</li>
+<li>方向向量 $\vec{v_1}\perp\vec{v_2} \iff \vec{v_1}\cdot\vec{v_2}=0$。</li>
+<li><strong>极坐标与直角坐标互化</strong></li>
+<li>互化公式：$x=\rho\cos\theta,\ y=\rho\sin\theta,\ \rho^2=x^2+y^2,\ \tan\theta=\frac{y}{x}\ (x\neq0)$。</li>
+<li>直线方程互化时注意 $\rho$ 和 $\theta$ 的等价变形。</li>
+<li><strong>轨迹问题处理原则</strong></li>
+<li>设出动点坐标 $(x,y)$ 或 $(\rho,\theta)$，利用几何条件建立等量关系。</li>
+<li>消参法、相关点代入法（用已知曲线上的动点表示所求动点）。</li>
+<li><strong>限制条件不可忽略</strong></li>
+<li>轨迹方程要注明变量的取值范围（如 $\theta$ 的范围），否则可导致失分。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>垂直条件的翻译</strong>  </li>
+<li>在直角坐标系中，若已知两线垂直，优先写出斜率表达式利用 $k_1k_2=-1$；若含参数注意斜率不存在情况。  </li>
+<li>利用向量内积为 0 可绕过斜率讨论，尤其适合含参数或多动点问题。</li>
+<li><strong>极坐标下垂直的处理</strong>  </li>
+<li>常将极坐标条件化为直角坐标处理，利用垂直条件得出 $x,y$ 关系，再互化回极坐标。  </li>
+<li>若两点与极点有关，可构造直角三角形利用三角函数关系或射影几何性质简化。</li>
+<li><strong>轨迹类题通用步骤</strong><br />
+   (1) 设所求轨迹上的动点坐标（直角或极坐标），同时设相关动点坐标（如在已知曲线上的点）。<br />
+   (2) 将几何条件（垂直、共线、线段比例等）坐标化，建立方程。<br />
+   (3) 消去相关动点坐标，得到所求轨迹方程。<br />
+   (4) 结合几何限制（如点在线段上运动）确定变量的取值范围，补全答案。</li>
+<li><strong>极坐标方程的求法技巧</strong>  </li>
+<li>先写出直角坐标方程 $F(x,y)=0$，再利用 $x=\rho\cos\theta,y=\rho\sin\theta$ 代入化简得极坐标方程。  </li>
+<li>注意 $\rho=0$ 或某些 $\theta$ 处是否成立，确保轨迹完整性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略斜率不存在导致漏解</strong><br />
+  当用 $k_1k_2=-1$ 时，必须单独验证水平线与竖直线垂直的情形。</li>
+<li><strong>极坐标方程转换时变形不当</strong><br />
+  $\rho\cos\theta+\sqrt3\rho\sin\theta=4$ 化简为 $\rho\sin(\theta+\frac\pi6)=2$ 时，易忽略 $\rho&gt;0$ 的隐含条件或 $\theta$ 取值范围改变。</li>
+<li><strong>轨迹范围标记缺失</strong><br />
+  如本题中 $P$ 在线段 $OM$ 上运动，导致 $\theta$ 限制为 $[\frac\pi4,\frac\pi2)$，漏写则方程不完整，会被扣分。</li>
+<li><strong>混淆极角与直角坐标中的倾斜角</strong><br />
+  直线 $l$ 过极点时 $\theta=\alpha$ 为直线极坐标方程，过定点 $(a,0)$ 且与某线垂直时，需通过直角坐标推导后再转化。</li>
+<li><strong>将 $\rho$ 视为长度忽略符号约定</strong><br />
+  极径 $\rho$ 允许取负值表示反方向，求轨迹时若未作说明应按题设（如 $\rho&gt;0$）取值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2019-文-22 极坐标与参数方程</h3>
+<p>$M(\rho_0,\theta_0)\ (\rho_0&gt;0)$ 在曲线 $C:\rho=4\sin\theta$ 上，直线 $l$ 过 $A(4,0)$ 且与 $OM$ 垂直，垂足为 $P$。<br />
+（1）当 $\theta_0=\frac\pi3$ 时，求 $\rho_0$ 及 $l$ 的极坐标方程；<br />
+（2）当 $M$ 在 $C$ 上运动且 $P$ 在线段 $OM$ 上时，求 $P$ 点轨迹的极坐标方程。</p>
+<p><strong>思路</strong><br />
+（1）$\theta_0$ 代入曲线直接得 $\rho_0$，得 $M$ 极坐标后化为直角坐标，算出 $OM$ 斜率，利用垂直得 $l$ 斜率，写出 $l$ 直角坐标方程再化为极坐标方程。<br />
+（2）设 $P(\rho,\theta)$，由 $P$ 在线段 $OM$ 上且 $OM\perp AP$，建立直角坐标方程后转化为极坐标；利用 $M$ 在 $C$ 上消去 $M$ 坐标，并由 $P$ 在 $OM$ 上的几何限制求 $\theta$ 范围。</p>
+<p><strong>步骤</strong><br />
+<strong>(1)</strong> $\rho_0=4\sin\frac\pi3=2\sqrt3$，得 $M(2\sqrt3,\frac\pi3)$，直角坐标 $M(\sqrt3,3)$。<br />
+$k_{OM}=\frac{3}{\sqrt3}=\sqrt3$，则 $l\perp OM$ 得 $k_l=-\frac1{\sqrt3}$。<br />
+$l$ 过 $A(4,0)$，直角方程 $y=-\frac{\sqrt3}{3}(x-4)$ 即 $x+\sqrt3y-4=0$。<br />
+极坐标方程：$\rho\cos\theta+\sqrt3\rho\sin\theta=4\;\Rightarrow\; \rho\left(\frac12\cos\theta+\frac{\sqrt3}{2}\sin\theta\right)=2 \;\Rightarrow\; \rho\sin(\theta+\frac\pi6)=2$。</p>
+<p><strong>(2)</strong> 设 $P(\rho,\theta)$，由题意 $P$ 在直角坐标系可记为 $(x,y)$，则 $k_{OP}=\frac{y}{x}$，$k_{AP}=\frac{y}{x-4}$。<br />
+由 $OP\perp AP$ 得 $\frac{y}{x}\cdot\frac{y}{x-4}=-1\ \Rightarrow\ x(x-4)+y^2=0$，即 $x^2+y^2-4x=0$。<br />
+转化为极坐标：$\rho^2-4\rho\cos\theta=0\;\Rightarrow\; \rho=4\cos\theta$。<br />
+又 $P$ 在线段 $OM$ 上，$M$ 在 $\rho=4\sin\theta$ 上运动，$P$ 为 $OM$ 上除端点 $O,M$ 的点，故 $\theta$ 需满足 $0\le\theta\le\frac\pi2$ 且 $P$ 位于 $OM$ 之间可算出 $OM$ 斜率与 $OP$ 斜率一致，限制 $P$ 极角即为 $\theta$，由几何条件得 $\frac\pi4\le\theta\le\frac\pi2$（代入验证 $M$ 点对应角度范围）。<br />
+综上轨迹极坐标方程：$\rho=4\cos\theta,\;\theta\in[\frac\pi4,\frac\pi2)$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是垂直条件的坐标化，以及轨迹限制范围的确定，极坐标方程最后常用一个含 $\theta$ 范围的条件来保证纯粹性。<br />
+- 变式：若 $A$ 点改为极点 $O$，则 $l$ 为过极点垂线，方程可直接写出；若取消 $P$ 在线段 $OM$ 上的限制，轨迹为整个圆 $\rho=4\cos\theta$，需注意以 $\theta$ 为参数时 $\rho$ 可能为负值，应结合题意取舍。<br />
+- 极坐标与直角坐标灵活切换是解析几何中规避复杂消参的重要思想。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-22.html">2019-文-22</a>（2019 · 中） 在极坐标系中求极径、垂直直线的极坐标方程及动点轨迹的极坐标方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直线垂直</a></li>
+</ul>
+</div>
+</body>
+</html>

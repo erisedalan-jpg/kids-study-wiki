@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数加减法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数加减法</h1><div class="review-mark" data-stem="复数加减法"></div><div class="meta-card"><span><strong>考点</strong>复数加减法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2016–2021</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数代数形式的加减运算</strong>：设 $z_1 = a + bi$，$z_2 = c + di$（$a,b,c,d \in \mathbb R$），则
+  $$z_1 \pm z_2 = (a \pm c) + (b \pm d)i$$
+  即实部与实部相加减，虚部与虚部相加减。</li>
+<li><strong>共轭复数的核心恒等式</strong>：设 $z = a + bi$，$\overline z = a - bi$，则
+  $$z + \overline z = 2a \quad (\text{纯实数}), \qquad z - \overline z = 2bi \quad (\text{纯虚数})$$
+  这两个等式架起了复数运算与实部、虚部之间的桥梁。</li>
+<li><strong>复数相等的条件</strong>：两个复数相等 $\iff$ 实部相等且虚部相等。特别地，$a+bi=0 \iff a=0$ 且 $b=0$。该条件是化“复”为“实”、列方程组的理论依据。</li>
+<li><strong>适用条件</strong>：所有运算均在复数代数形式下进行，设元时务必声明 $a,b \in \mathbb R$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>本考点的真题均可归约为“待定系数法+复数相等”的统一解题套路：</p>
+<ol>
+<li><strong>设标准形式</strong>：将所求复数设为 $z = a + bi$（$a,b \in \mathbb R$）。</li>
+<li><strong>翻译条件</strong>：将题设等式中的复数运算（加减法、共轭等）全部用 $a,b$ 表示，化简为“实部+虚部”的形式。</li>
+<li><strong>分离实虚</strong>：利用恒等变形，把等式一边化为 $A + Bi$ 的标准形，另一边通常为已知复数或 $0$。</li>
+<li><strong>列方程组</strong>：由复数相等的充要条件，得 $\text{实部}=\text{实部}$，$\text{虚部}=\text{虚部}$。</li>
+<li><strong>解出参数</strong>：解关于 $a,b$ 的实系数方程组，还原 $z=a+bi$ 即为所求。</li>
+<li><strong>若涉及共轭</strong>：优先使用 $z+\overline z = 2a$ 与 $z-\overline z = 2bi$，可跳过设元直接联系实部虚部，进一步提高速度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>遗漏“$a,b \in \mathbb R$”</strong>：不声明实部、虚部为实数，则无法使用复数相等列方程，会被直接扣步骤分。</li>
+<li><strong>共轭减法忘掉 $i$</strong>：计算 $z - \overline z = 2bi$ 时，容易漏写虚数单位 $i$，误写成 $2b$，导致虚部系数出错。</li>
+<li><strong>移项时符号混乱</strong>：加减法去括号或移项时，实部与虚部符号不同步处理，尤其在项数较多时极易犯符号错误。</li>
+<li><strong>混淆 $\overline z$ 与 $-z$</strong>：把共轭运算错当成取相反数，写出 $z + \overline z = 0$ 等错误结论。</li>
+<li><strong>结构复杂时运算跳步</strong>：如 $k_1(z+\overline z) + k_2(z-\overline z)$ 这类式子，不先化为 $2k_1 a + 2k_2 b i$ 而直接硬代，极易在 $i$ 的系数上算错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一（2021·理·01）</h3>
+<p><strong>题目</strong>：设 $2(z+\overline z) + 3(z-\overline z) = 4+6i$，求 $z$。</p>
+<p><strong>思路</strong>：直接应用共轭实虚分离公式，将左式化为 $4a + 6bi$，再与右式配对列方程，可避免张开括号的繁琐运算。</p>
+<p><strong>步骤</strong>：
+1. 设 $z = a+bi$（$a,b\in \mathbb R$），则 $\overline z = a-bi$。
+2. 利用公式：$z+\overline z = 2a$，$z-\overline z = 2bi$。
+3. 左式 $= 2\cdot 2a + 3\cdot 2bi = 4a + 6bi$。
+4. 原方程化为 $4a + 6bi = 4 + 6i$。
+5. 由复数相等得 $\begin{cases}4a = 4 \ 6b = 6\end{cases}$，解得 $a=1, b=1$。
+6. 故 $z = 1+ i$，对应选项 C。</p>
+<p><strong>点评/变式</strong>：本题的巧妙之处在于无需将 $z,\overline z$ 分别代入再合并，直接用分离公式一步到位。若题设系数不是 $2,3$ 而是更复杂的倍数，公式 $k_1(z+\overline z) + k_2(z-\overline z) = 2k_1 a + 2k_2 b i$ 仍然是通用的高速处理方式。变式：若条件改为 $m(z+\overline z) + n(z-\overline z) = c+di$，照样可设 $z=a+bi$ 快速求出通解。</p>
+<hr />
+<h3>代表题二（2016·文·02）</h3>
+<p><strong>题目</strong>：设复数 $z$ 满足 $z+i = 3-i$，则 $\overline z = (\quad)$。</p>
+<p><strong>思路</strong>：先通过移项直接解出 $z$，再取其共轭。本题没有未知参数，不需要设元，直接用加减法求解。</p>
+<p><strong>步骤</strong>：
+1. 由 $z + i = 3 - i$，移项得 $z = 3 - i - i = 3 - 2i$。
+2. 共轭复数 $\overline z = \overline{3 - 2i} = 3 + 2i$。
+3. 对应选项 C。</p>
+<p><strong>点评/变式</strong>：这是复数加减法最直接的考查，注意移项时 $-i-i = -2i$ 的合并。若题设变为含 $z$ 和 $\overline z$ 的等式，如下一题，则需设元求解。本题的变式可改造为：已知 $z + 2i = 5 + \overline z$，求 $z$，此时就需设 $z=a+bi$ 利用复数相等来处理。从这道真题可以看到，复数加减法既可以直接解出 $z$，也可以作为解方程组的一环，解题时要会识别题目类型，选对路径。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-01.html">2021-理-01</a>（2021 · 易） 通过设复数的代数形式，利用共轭关系与运算等式求解未知数，确定复数。</li>
+<li><a href="../../exam/数学/2016-文-02.html">2016-文-02</a>（2016 · 易） 该题考查复数代数形式的加减运算及共轭复数的概念。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/802-复数加减法.html">复数加减法</a></li>
+</ul>
+</div>
+</body>
+</html>

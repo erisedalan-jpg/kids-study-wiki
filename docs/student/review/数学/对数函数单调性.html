@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数单调性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数函数单调性</h1><div class="review-mark" data-stem="对数函数单调性"></div><div class="meta-card"><span><strong>考点</strong>对数函数单调性</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2009–2021</li>
+<li>出现题位：选择7 选择8 选择12</li>
+<li>难度分布：中1 易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对数函数的定义</strong>：函数 $y=\log_a x\ (a&gt;0,\ a\neq 1)$ 叫做对数函数，其中 $x&gt;0$。</li>
+<li><strong>单调性</strong>：</li>
+<li>当 $a&gt;1$ 时，$y=\log_a x$ 在 $(0,+\infty)$ 上单调递增；</li>
+<li>当 $0&lt;a&lt;1$ 时，$y=\log_a x$ 在 $(0,+\infty)$ 上单调递减。</li>
+<li><strong>核心性质与公式</strong>：</li>
+<li>$\log_a 1=0$，$\log_a a=1$；</li>
+<li>积、商、幂的对数：$\log_a(MN)=\log_a M+\log_a N$，$\log_a\frac{M}{N}=\log_a M-\log_a N$，$\log_a M^n=n\log_a M$（$M,N&gt;0$）；</li>
+<li>换底公式：$\log_a b=\frac{\log_c b}{\log_c a}\ (c&gt;0,c\neq 1)$，特别地 $\log_a b=\frac{1}{\log_b a}$；</li>
+<li>对数恒等式：$a^{\log_a N}=N$。</li>
+<li><strong>比较大小的基本依据</strong>：</li>
+<li>同底对数：若 $a&gt;1$，真数大的对数值大；若 $0&lt;a&lt;1$，真数大的对数值小。</li>
+<li>不同底对数：可借助换底公式化为同底，或引入中间值（如 $0,1$）进行比较。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>比较对数式或与其它初等函数混合的数值大小，通用步骤及技巧如下（按优先级排列）：</p>
+<ol>
+<li><strong>统一形式，化为同底或同真数</strong>  </li>
+<li>若底数不同但真数相同，用 $\log_a b=\frac{1}{\log_b a}$ 化为同底；  </li>
+<li>若底数、真数均不同，利用换底公式转化为同底（通常选 $10$ 或 $e$ 或某个共同底数）；  </li>
+<li>
+<p>对可拆分的对数，先用运算性质拆成常数 $+$ 简单对数（如 $1+\log_a 2$），将问题转化为比较剩余部分。</p>
+</li>
+<li>
+<p><strong>利用对数函数的单调性直接判断</strong><br />
+   化为同底后，按底数大于 $1$ 还是介于 $(0,1)$ 之间，根据真数大小得到对数值大小。</p>
+</li>
+<li>
+<p><strong>借助中间值“搭桥”</strong><br />
+   最常用的中间值是 $0$ 和 $1$：  </p>
+</li>
+<li>
+<p>$a&gt;1$ 时 $\log_a x\begin{cases} &gt;0, &amp; x&gt;1 \ =0, &amp; x=1 \ &lt;0, &amp; 0&lt;x&lt;1 \end{cases}$<br />
+   若两个对数值分别位于 $1$ 的两侧或 $0$ 的两侧，可直接比出大小；<br />
+   必要时引入 $\frac12$、$\log_a b$ 的近似值等作为中间量。</p>
+</li>
+<li>
+<p><strong>构造函数，利用导数比大小（混合型）</strong><br />
+   当对数与幂函数、指数函数、根式等混合时，可：  </p>
+</li>
+<li>先将常数参数化（如令 $x=0.01$），将两式作差并构造函数 $f(x)$；  </li>
+<li>通过求导研究 $f(x)$ 的单调性与端点值，证明不等式；  </li>
+<li>
+<p>常用经典不等式链：$\frac{x}{1+x}&lt;\ln(1+x)<x\ (x>0)$，$\sqrt{1+x}-1&lt;\frac{x}{2}$ 等进行放缩。</p>
+</li>
+<li>
+<p><strong>取对数或指数化</strong><br />
+   对于形如 $a^b$ 与 $c^d$ 的结构，常两边取对数，将对数比较转化为积的比较。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略底数范围导致单调性反向</strong>：看到 $\log_a x$ 就默认递增，不检查 $a$ 是否大于 $1$。若 $0&lt;a&lt;1$，真数越大函数值越小。</li>
+<li><strong>换底公式时分子分母颠倒或符号错误</strong>：$\log_a b=\frac{\ln b}{\ln a}$，当 $a,b$ 跨越 $1$ 时分母为负，比较时不等号方向可能反转。</li>
+<li><strong>盲目使用近似值估算</strong>：试题常设置数值非常接近的情况（如 $\ln 1.02$ 和 $\sqrt{1.04}-1$），估算无法区分，必须严格证明。</li>
+<li><strong>忽视定义域</strong>：对数真数必须大于 $0$，比较大小过程中如需构造函数，应检查定义域并讨论单调区间。</li>
+<li><strong>拆分对数后错误比较</strong>：如 $a=\log_3 6=1+\log_3 2$，需比较的是 $\log_3 2$ 与 $\log_5 2$，往往需要继续换底或取倒数，不可直接比较底数大小。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2013-理-08</h3>
+<ul>
+<li><strong>题目</strong>：设 $a=\log_3 6$，$b=\log_5 10$，$c=\log_7 14$，比较 $a,b,c$ 的大小。</li>
+<li><strong>思路</strong>：真数均可拆分为底数的倍数，利用对数运算法则写成“$1+$ 小对数”，进而比较 $\log_3 2$，$\log_5 2$，$\log_7 2$。因三个对数真数相同、底数不同，用换底公式的倒数形式化为同底比较。</li>
+<li><strong>步骤</strong>：</li>
+<li>拆分：$a=\log_3(3\times 2)=1+\log_3 2$，同理 $b=1+\log_5 2$，$c=1+\log_7 2$。因此只需比较 $\log_3 2$，$\log_5 2$，$\log_7 2$ 的大小。</li>
+<li>换底：$\log_3 2=\frac{1}{\log_2 3}$，$\log_5 2=\frac{1}{\log_2 5}$，$\log_7 2=\frac{1}{\log_2 7}$。</li>
+<li>利用 $y=\log_2 x$ 的单调递增性：由 $7&gt;5&gt;3&gt;1$，得 $\log_2 7&gt;\log_2 5&gt;\log_2 3&gt;0$。</li>
+<li>取倒数后不等号反向：$\frac{1}{\log_2 7}&lt;\frac{1}{\log_2 5}&lt;\frac{1}{\log_2 3}$，即 $\log_7 2&lt;\log_5 2&lt;\log_3 2$。</li>
+<li>加 $1$ 后顺序不变：$1+\log_7 2&lt;1+\log_5 2&lt;1+\log_3 2$，即 $c&lt;b&lt;a$。</li>
+<li><strong>点评/变式</strong>：本题核心是将常数分离，将问题化归为“同真数不同底”的对数比较。变式可改成 $a=\log_2 6$，$b=\log_3 10$ 等，同样拆分后利用倒数性质。注意若底数均小于 $1$，单调性相反，取倒数后仍需小心不等号。</li>
+</ul>
+<h3>2. 2021-理-12</h3>
+<ul>
+<li><strong>题目</strong>：设 $a=2\ln 1.01$，$b=\ln 1.02$，$c=\sqrt{1.04}-1$，则（ ）
+  A．$a&lt;b&lt;c$　B．$b&lt;c&lt;a$　C．$b&lt;a&lt;c$　D．$c&lt;a&lt;b$</li>
+<li><strong>思路</strong>：先比较 $a$ 与 $b$：利用对数性质化为真数比较。再分别比较 $b$ 与 $c$、$a$ 与 $c$：令 $x=0.01$，将 $b,c$ 用 $x$ 表示，作差构造函数并由导数判断大小。</li>
+<li><strong>步骤</strong>：</li>
+<li>比较 $a$ 与 $b$：<br />
+     $a=2\ln(1+0.01)=\ln(1+0.01)^2=\ln(1+0.02+0.0001)=\ln 1.0201$。<br />
+     因为 $y=\ln x$ 单调递增且 $1.0201&gt;1.02$，所以 $a&gt;b$。</li>
+<li>比较 $b$ 与 $c$：<br />
+     令 $x=0.01$，则 $b=\ln(1+2x)$，$c=\sqrt{1+4x}-1$。考虑函数<br />
+     $f(x)=\ln(1+2x)-(\sqrt{1+4x}-1),\ x&gt;0$。<br />
+     $$f'(x)=\frac{2}{1+2x}-\frac{2}{\sqrt{1+4x}} = 2\left(\frac{1}{1+2x}-\frac{1}{\sqrt{1+4x}}\right).$$<br />
+     因为 $(1+2x)^2=1+4x+4x^2&gt;1+4x$，所以 $1+2x&gt;\sqrt{1+4x}$，从而 $\frac{1}{1+2x}&lt;\frac{1}{\sqrt{1+4x}}$，故 $f'(x)&lt;0$，$f(x)$ 在 $(0,+\infty)$ 上递减。<br />
+     又 $f(0)=\ln 1 - (\sqrt{1}-1)=0$，故 $f(x)&lt;0$ 对 $x&gt;0$ 成立。因此 $x=0.01$ 时，$\ln 1.02 &lt; \sqrt{1.04}-1$，即 $b&lt;c$。</li>
+<li>比较 $a$ 与 $c$：类似地，$a=\ln(1+2x+x^2)$，可进一步分析或利用 $b<c$ 且 $a>b$ 直接推出 $c<a$（由 $b\<c$ 和 $a>b$ 无法确定 $a$ 与 $c$，故仍需比较）。<br />     令 $g(x)=\ln(1+2x+x^2)-(\sqrt{1+4x}-1)$。经求导分析可得 $g(x)>0$（过程略），或利用已知不等式 $\ln(1+t)&gt;\frac{2t}{2+t}$ 等得到 $a&gt;c$。综合得 $b&lt;c&lt;a$，答案选 B。</li>
+<li><strong>点评/变式</strong>：本题将数值比较与导数应用结合，代表“构造法”思路。常见陷阱是直接用 $\ln(1+x)\approx x$ 近似估算，而此处真数相近，必须严格证明。变式可改为 $a=e^{0.02}-1$ 等形式，同样用构造函数法。</li>
+</ul>
+<h3>3. 2009-理-07</h3>
+<ul>
+<li><strong>题目</strong>：设 $a=\log_3 \pi$，$b=\log_2 \sqrt{3}$，$c=\log_3 \sqrt{2}$，比较 $a,b,c$ 大小。</li>
+<li><strong>思路</strong>：引入明确中间值。$a$ 底数 $3$、真数 $\pi&gt;3$，故 $a&gt;1$；$b,c$ 均小于 $1$；再用 $\frac12$ 搭桥区分 $b$ 与 $c$。</li>
+<li><strong>步骤</strong>：</li>
+<li>$a=\log_3 \pi&gt;\log_3 3=1$；</li>
+<li>$c=\log_3 \sqrt{2}=\frac12\log_3 2&lt;\frac12\log_3 3=\frac12$；</li>
+<li>$b=\log_2 \sqrt{3}=\frac12\log_2 3$，由于 $\log_2 3&gt;\log_2 2=1$，故 $b&gt;\frac12$；</li>
+<li>综上 $a&gt;1&gt;b&gt;\frac12&gt;c$，得 $a&gt;b&gt;c$。</li>
+<li><strong>点评/变式</strong>：本题突出中间值“$1$”和“$\frac12$”的桥梁作用。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-12.html">2021-理-12</a>（2021 · 中） 本题通过构造函数与导数，结合对数运算与单调性比较三个数的大小。</li>
+<li><a href="../../exam/数学/2013-理-08.html">2013-理-08</a>（2013 · 易） 通过将a、b、c化为1+logₙ2形式，利用对数函数单调性比较大小。</li>
+<li><a href="../../exam/数学/2009-理-07.html">2009-理-07</a>（2009 · 易） 比较对数式大小，利用单调性及中介值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/827-对数函数单调性.html">对数函数单调性</a></li>
+</ul>
+</div>
+</body>
+</html>

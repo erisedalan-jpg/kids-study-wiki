@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多选题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>多选题</h1><div class="review-mark" data-stem="多选题"></div><div class="meta-card"><span><strong>考点</strong>多选题</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择12</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>多选题结构特点</strong>：每道多选题通常有4个选项（A、B、C、D），正确选项个数≥2且≤4；全部选对得满分，部分选对得部分分，有选错得0分。因此需要“宁可少选，不可错选”。</li>
+<li><strong>核心能力要求</strong>：多选题不仅考查单一知识点，更侧重对概念准确性、逻辑严谨性、多角度分析能力的综合考查。常涉及函数性质（单调性、奇偶性、周期性）、不等式变换、数列、几何度量及新定义情境题。</li>
+<li><strong>必备公式与性质</strong>：</li>
+<li>构造函数比大小：若 $f(x)$ 单调，则由 $f(x) &lt; f(y)$ 可得 $x$ 与 $y$ 的大小关系。</li>
+<li>指数与对数运算性质： $a^x$ 的单调性由底数决定； $\ln|A| &gt; 0 \Leftrightarrow |A| &gt; 1$； $\ln(A) &gt; 0 \Leftrightarrow A &gt; 1$。</li>
+<li>球的相关度量：球的表面积 $S = 4\pi R^2$；球心到截面的距离 $d = \sqrt{R^2 - r^2}$，其中 $r$ 为截面圆半径。</li>
+<li>新定义下周期序列与自相关函数： $C(k) = \frac{1}{m}\sum_{i=1}^{m} a_i a_{i+k}$ ，其中 $a_i\in{0,1}$ 为周期序列，需依据条件枚举或递推验证。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选项相互印证法</strong><br />
+   观察四个选项是否具有对偶、互斥或递推关系。例如，若A与B互斥，则至多一个正确；若C与D互斥，也至多一个正确。结合至少两个正确的规则，可快速排除矛盾组合，避免逐一硬算。</li>
+<li><strong>特例与极端值检验</strong><br />
+   对于含参数或抽象函数的选项，可代入特殊值（如 $x=0,1,-1$ 等）或边界情况验证是否恒成立。若反例存在，则该选项错误，达到“排错留对”的目的。</li>
+<li><strong>构造函数与单调性比大小</strong><br />
+   遇到形如 $f(x) - f(y) &lt; g(y) - g(x)$ 或可转化为 $h(x) &lt; h(y)$ 的结构，通过移项构造出单调函数，直接得出 $x$ 与 $y$ 的大小关系，进而判断选项中的对数、绝对值等条件。</li>
+<li><strong>几何度量与公式直算</strong><br />
+   对于无需图的球、锥、柱等计算类选项，直接代入公式算出关键量（如 $R, r, d$ 等），再逐一核对选项是否正确。注意“存在”“任意”等字眼的区别。</li>
+<li><strong>新定义问题“紧贴定义”</strong><br />
+   遇到数列新定义（如周期序列、自相关函数），严格按题目定义计算或枚举。可将选项逐一代入定义式，借助周期性进行有限项验证，避免主观臆断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>过度推导而误选互斥项</strong>：从同一条件推出两个互斥结论时，必有一个推导有误。此时应回溯每一步的等价性，尤其是去绝对值、取对数、平方等变形是否同解。</li>
+<li><strong>忽视定义域和隐含范围</strong>：解出 $x<y$ 后判断 $\ln(y-x+1)>0$ 时，需注意 $y-x+1&gt;0$ 恒成立，但 $&gt;1$ 才得对数正，忽略绝对值或隐含范围会导致错选。</li>
+<li><strong>混淆“存在”与“任意”</strong>：几何存在性问题（如“存在点使得…”）只需找出一个例子即可判定正确；而任意性问题需要严格证明，不能以特例代替全盘。</li>
+<li><strong>多选题核对不严谨</strong>：部分选对的侥幸心理会使得考生在可确定两选项正确时，冒险选第三个不确定选项，结果因错选而全军覆没。养成“只选绝对有把握的”习惯。</li>
+<li><strong>新定义理解表面化</strong>：未看清周期序列中下标模运算规则，或自相关函数求和起止项，导致枚举遗漏或重复，计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2020年新课标卷·理12（0-1周期序列与自相关函数）</h3>
+<p><strong>题目</strong>（简述）：给定0-1周期序列，定义自相关函数 $C(k)=\frac{1}{5}\sum_{i=1}^{5} a_i a_{i+k}$，其中下标模5处理。要求选出所有使得 $C(k)\le \frac{1}{5}$ 成立的5周期序列。<br />
+<strong>思路</strong>：此题为多选题，需逐一验证选项给出的序列。依据定义，计算 $k=1,2,3,4$ 时的 $C(k)$，判断是否满足不等式。由于是周期序列，可先写出一个完整周期的序列值，然后按公式计算，注意下标循环。<br />
+<strong>步骤</strong>：
+- 设序列为 $a_1a_2a_3a_4a_5$，对于每个 $k$，计算 $a_i a_{i+k}$（$i=1\sim5$，下标模5加1处理），求平均值。
+- 对每个候选序列，分别计算各 $k$ 的 $C(k)$，只要有一个 $C(k)&gt;\frac15$，该序列不符合；若所有 $k$ 的 $C(k)\le\frac15$，则序列符合。
+- 根据结果，标记正确选项。
+<strong>点评与变式</strong>：此类题核心在于“忠实于定义”，耐心计算不跳步。变式可改为求 $C(k)$ 的最大可能值，或给定 $C(k)$ 的范围反推序列形式。</p>
+<h3>代表题二：2020年卷·11（指数不等式与对数大小判断）</h3>
+<p><strong>题目</strong>（简述）：若 $2^x - 2^y &lt; 3^{-x} - 3^{-y}$，则下列选项正确的是（   ）<br />
+A. $\ln(y-x+1)&gt;0$    B. $\ln(y-x+1)&lt;0$    C. $\ln|x-y|&gt;0$    D. $\ln|x-y|&lt;0$<br />
+<strong>思路</strong>：将不等式移项，构造同构函数，利用单调性得出 $x,y$ 大小关系，再代入各个选项，转化为判断真数与1的大小关系。<br />
+<strong>步骤</strong>：
+- 原式化为 $2^x+3^{-x} &lt; 2^y+3^{-y}$。令 $f(t)=2^t+3^{-t}$，因 $2^t$ 增，$3^{-t}$ 减，易判断 $f(t)$ 为 $R$ 上增函数。
+- 由 $f(x)<f(y)$ 得 $x\<y$，即 $y-x>0$。
+- 代入A：$\ln(y-x+1) > \ln 1 = 0$，A正确；B错误。
+- 对C、D：$\ln|x-y| = \ln(y-x)$，由于 $y-x$ 不一定大于1，无法确定符号（仅知$&gt;0$），故C、D不一定成立。
+- 最终确定正确选项为A。
+<strong>点评与变式</strong>：本题关键为构造单调函数，常见组合如 $a^x \pm b^{-x}$ 的单调性判断。注意对数内外需严格保持范围。变式可改为 $a^x - a^y &lt; b^{-y} - b^{-x}$ 且 $a,b$ 不确定大小，讨论各种情况。多选题中常仅一个绝对正确的具体不等式选项，其余在界线上摇摆，务必只选确定的。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-12.html">2020-理-12</a>（2020 · 难） 0-1 周期序列与自相关函数 C(k)，多选满足 C(k)≤1/5 的 5 周期序列。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">多选题</a></li>
+</ul>
+</div>
+</body>
+</html>

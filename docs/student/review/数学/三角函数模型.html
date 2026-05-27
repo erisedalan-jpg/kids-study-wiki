@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数模型</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数模型</h1><div class="review-mark" data-stem="三角函数模型"></div><div class="meta-card"><span><strong>考点</strong>三角函数模型</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三角函数模型定义</strong>：形如 $y=A\sin(\omega t+\varphi)+b$（或余弦型）的函数，可以用来描述简谐运动、圆周运动等周期性变化规律。</li>
+<li><strong>物理参数对应关系</strong>：<ul>
+<li><strong>振幅 $A$</strong>：质点离开平衡位置的最大距离。在描述点 $P$ 到 $x$ 轴的距离时，若轨迹为圆，半径 $R$ 通常对应振幅。</li>
+<li><strong>角速度 $\omega$</strong>：单位时间转过的角度，决定周期 $T=\frac{2\pi}{|\omega|}$。</li>
+<li><strong>初相 $\varphi$</strong>：初始时刻质点所在位置对应的角度。</li>
+</ul>
+</li>
+<li><strong>解析式形式</strong>：描述“距离”时，由于距离非负，最终函数常以 $y=|A\sin(\omega t+\varphi)|$ 或 $y=|A\cos(\omega t+\varphi)|$ 形式呈现，图像具有“翻折”特征。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审清物理/几何背景</strong>：明确是质点纵坐标 $y$ 还是“到 $x$ 轴的距离 $d$”。前者可取负值，后者 $d=|y|$ 恒为非负。</li>
+<li><strong>建立坐标系与参数方程</strong>：<ul>
+<li>圆心在原点的圆周运动，质点坐标可设为 $(R\cos\theta, R\sin\theta)$。</li>
+<li>明确角度 $\theta$ 随时间 $t$ 的变化规律：$\theta = \omega t + \varphi$。</li>
+</ul>
+</li>
+<li><strong>确定初相 $\varphi$</strong>：根据初始位置 $(x_0, y_0)$ 反推 $\varphi$。注意 $\sin\varphi = \frac{y_0}{R}$ 并结合象限定角。</li>
+<li><strong>写出距离函数解析式</strong>：<ul>
+<li>点 $P$ 的纵坐标表达式：$y=R\sin(\omega t+\varphi)$。</li>
+<li>距离函数解析式：$d=|y|=|R\sin(\omega t+\varphi)|$。</li>
+</ul>
+</li>
+<li><strong>辨图与破题</strong>：重点考察距离为0的时刻、初始距离、距离最大变化趋势、函数是否可导（尖点）。最后结合解析式特征筛选图象。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>绝对值处理不当</strong>：直接误以为距离函数就是点纵坐标的原始正弦曲线，忽略距离非负导致的“下半波翻折”，错选有负半周或直线下降段的图象。</li>
+<li><strong>初相判断失误</strong>：未正确理解初始位置所在象限，导致 $\varphi$ 求错。例如将第四象限的点误判为 $\varphi=\frac{\pi}{4}$ 等。</li>
+<li><strong>变量混淆</strong>：距离 $d$ 的正切、单调性与纵坐标 $y$ 本身的变化趋势混淆，导致图象中增减趋势判断错误。</li>
+<li><strong>忽略角速度方向</strong>：虽“逆时针”运动一般对应 $\omega&gt;0$，但若遇到给定特定旋转方向，需确认角速度的正负。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2010-理-04）</h3>
+<p>质点 $P$ 在半径为 $2$ 的圆周上逆时针运动，初始位置为 $P_0(\sqrt{2}, -\sqrt{2})$，角速度为 $1$。求点 $P$ 到 $x$ 轴的距离 $d$ 关于时间 $t$ 的函数图象大致形状。</p>
+<p><strong>思路</strong>：
+首先由坐标求初相，确定点 $P$ 的纵坐标 $y$ 的正弦表达式；然后写出距离 $d=|y|$ 的绝对值函数式；最后根据绝对值正弦函数的图象特点（无负值、有尖点、初始值变化趋势）锁定正确图象。</p>
+<p><strong>步骤</strong>：
+1. <strong>定初相</strong>：
+   半径为 $R=2$，设 $P$ 的纵坐标 $y=2\sin(t+\varphi)$。初始位置 $P_0(\sqrt{2}, -\sqrt{2})$ 处，$\sin\varphi = \frac{y_0}{R} = \frac{-\sqrt{2}}{2}$。因该点在第四象限，取 $\varphi=-\frac{\pi}{4}$。故 $y=2\sin(t-\frac{\pi}{4})$。
+2. <strong>立距离函数</strong>：
+   到 $x$ 轴的距离 $d = |y|$，则有 $d(t) = |2\sin(t-\frac{\pi}{4})|$。
+3. <strong>析图象特征</strong>：
+   - $t=0$ 时，$d(0)=|2\sin(-\frac{\pi}{4})|=\sqrt{2} &gt;0$，图象应从正半轴开始。
+   - 函数为带有绝对值的正弦型，其波形正弦曲线在 $x$ 轴下方部分对称翻折至上方。
+   - 当 $\sin(t-\frac{\pi}{4})=0$ 时，$d=0$，且图象在零点处产生“尖点”（不可导），函数值由减小直接变为增大。</p>
+<p><strong>点评/变式</strong>：
+本题关键是区分纵坐标与距离。若直接看 $y(t)$ 会误选有下降穿过 $x$ 轴的图。凡遇到“距离”类问题，务必先加绝对值再辨图，尤其注意零点附近是否光滑以及数值的正负变化。</p>
+<blockquote>
+<p><strong>变式</strong>：若题干改为“点 $P$ 的纵坐标 $y$ 的图象”，则答案为纯粹的 $2\sin(t-\frac{\pi}{4})$ 曲线，会经过原点向下，与本题包含绝对值的图象截然不同。</p>
+</blockquote>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-04.html">2010-理-04</a>（2010 · 中） 本题通过质点圆周运动模型，考查根据运动参数建立距离关于时间的函数关系并识别其大致图像的能力。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/529-三角函数模型.html">三角函数模型</a></li>
+</ul>
+</div>
+</body>
+</html>

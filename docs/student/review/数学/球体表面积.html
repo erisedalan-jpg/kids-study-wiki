@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球体表面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球体表面积</h1><div class="review-mark" data-stem="球体表面积"></div><div class="meta-card"><span><strong>考点</strong>球体表面积</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>球体表面积公式：$S=4\pi R^2$（$R$ 为球半径）。</li>
+<li>球心与截面圆的距离：过球心的平面截得大圆，半径为 $R$；不过球心的平面截得小圆，半径 $r=\sqrt{R^2-d^2}$，其中 $d$ 为球心到平面的距离。</li>
+<li>球面上任意一点到过球心的平面的距离：最大值为 $R$（位于垂直于该平面的直径端点），最小值为 $-R$（另一端点），即球面上点到过球心平面的距离取值范围为 $[0,R]$。</li>
+<li>三棱锥体积：$V=\frac{1}{3}Sh$，其中 $S$ 为底面面积，$h$ 为顶点到底面的高。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定点定形，动点分析</strong>：识别题目中的固定点（如球心 $O$、定点 $A,B$）与动点（$C$），明确体积表达式中哪些量固定、哪些可变化。  </li>
+<li><strong>合理选取底面与高</strong>：优先选择面积固定或易求的三角形作底面（如本题 $\triangle OAB$），将动点到底面的距离作为变量高。  </li>
+<li><strong>几何最值转化</strong>：利用球的几何性质求高的最大值。特别地，若底面所在平面过球心，球面上点到该平面的最大距离即为半径 $R$。  </li>
+<li><strong>建立等量关系</strong>：利用体积最大值已知的条件，列出关于 $R$ 的方程并求解。  </li>
+<li><strong>代公式求最终量</strong>：得到 $R$ 后代入球表面积公式 $S=4\pi R^2$ 或其它目标公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>底面选择不当</strong>：误选动点所在平面为底面，导致底面积和高都在变化，难以求最值。应优先固定底面。  </li>
+<li><strong>高最大值的定位出错</strong>：以为球面上点到任意平面的最大距离都是 $R$，忽略了平面是否过球心。若平面不过球心，最大距离为 $R+d$（$d$ 为球心到平面距离）。本题中平面 $OAB$ 过球心，$d=0$，故最大高为 $R$。  </li>
+<li><strong>体积公式记忆混淆</strong>：三棱锥体积是 $\frac13 Sh$，忘记系数 $\frac13$ 或误用 $\frac12$。  </li>
+<li><strong>计算表面积出错</strong>：误记公式为 $\pi R^2$ 或 $2\pi R^2$，混淆表面积与体积（$V=\frac43\pi R^3$），或求表面积时忘记平方运算。  </li>
+<li><strong>单位或最值遗漏</strong>：只求出半径却忘记代入表面积公式，或看错选项，如在求表面积时直接选了半径或体积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015 全国卷 理 9）<br />
+$A,B$ 是球 $O$ 球面上两点，$\angle AOB = 90^\circ$，$C$ 为该球面上的动点。三棱锥 $O!-!ABC$ 体积最大值为 $36$，求球 $O$ 的表面积。</p>
+<p><strong>思路</strong><br />
+固定 $\triangle OAB$ 为底面（$O$ 为球心，$\triangle OAB$ 在过球心的平面上），动点 $C$ 到底面距离的最大值即球的半径 $R$。由此表达体积最大值，解出 $R$，再求表面积。</p>
+<p><strong>步骤</strong><br />
+1. 设球半径 $OA=OB=OC=R$。由 $\angle AOB=90^\circ$，得固定底面积<br />
+   $$S_{\triangle OAB} = \frac{1}{2}\cdot OA \cdot OB = \frac12 R^2.$$
+2. 平面 $OAB$ 过球心 $O$，故球面上动点 $C$ 到该平面的最大距离为 $R$（当 $OC \perp$ 平面 $OAB$ 时取到）。
+3. 三棱锥 $O!-!ABC$ 体积 $V = \frac13 \cdot S_{\triangle OAB} \cdot h$，最大体积为<br />
+   $$V_{\max} = \frac13 \cdot \frac12 R^2 \cdot R = \frac16 R^3.$$
+4. 由已知 $V_{\max}=36$，得<br />
+   $$\frac16 R^3 = 36 \quad\Rightarrow\quad R^3 = 216 \quad\Rightarrow\quad R = 6.$$
+5. 球表面积 $S = 4\pi R^2 = 4\pi \times 36 = 144\pi$，对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是将动点位置转化为距离最值，活用“球面上点到过球心平面的最大距离为半径”。注意三棱锥的顶点选法：虽然棱锥名为 $O!-!ABC$，但 $O$ 可作顶点、$\triangle ABC$ 作底面，亦可灵活更换底面以简化计算。  </p>
+<p><strong>变式1</strong>（改变条件）若 $\angle AOB = 120^\circ$，其余不变，则最大体积为 $\frac16 R^3$ 是否还成立？此时 $S_{\triangle OAB} = \frac12 R^2 \sin 120^\circ = \frac{\sqrt3}{4} R^2$，最大高仍为 $R$，体积最大值 $V_{\max}= \frac{\sqrt3}{12} R^3$。若已知最大体积即可反解 $R$。  </p>
+<p><strong>变式2</strong>（改变目标）条件不变，若三棱锥 $O!-!ABC$ 体积最大值为 $36$，求球的体积。则先解出 $R=6$，体积 $V_{\text球}= \frac43 \pi R^3 = 288\pi$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-09.html">2015-理-09</a>（2015 · 中） 已知球面上两点和动点构成三棱锥，由体积最大值求球表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">球体表面积</a></li>
+</ul>
+</div>
+</body>
+</html>

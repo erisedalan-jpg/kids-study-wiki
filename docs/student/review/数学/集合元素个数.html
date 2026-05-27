@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合元素个数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>集合元素个数</h1><div class="review-mark" data-stem="集合元素个数"></div><div class="meta-card"><span><strong>考点</strong>集合元素个数</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>集合元素个数问题研究的是如何确定用描述法给出的有限集合中互异元素的数量。其核心依据是集合元素的<strong>确定性</strong>与<strong>互异性</strong>。当集合元素为有序数对（点）且满足不等式约束时，常需根据变量定义域（如实数、整数）将不等式解集转化为有限个具体元素。关键步骤为：依约束条件缩小变量范围，对所有可能取值分类讨论，逐一验证并列出全部元素，最后计数。特别注意整数条件下不等式的解是离散的，处理时需谨慎考虑边界是否取等。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确元素形式与变量限制</strong>：看清集合代表元素是单个变量、有序数对还是其他形式，并重点关注题目对变量施加的数集限制（如 $\mathbb{Z}$，$\mathbb{N}$，$\mathbb{R}$ 等）。  </li>
+<li><strong>由约束条件缩小取值范围</strong>：将条件转化为关于变量的方程或不等式，确定各变量的最大可能范围。对于圆、椭圆等有限区域，变量的取值范围通常较小。  </li>
+<li><strong>分类讨论并枚举元素</strong>：固定其中一个变量的每个可能整数值，代入不等式，解出另一变量在相同限制下的全部可能取值，逐一写出对应的元素。  </li>
+<li><strong>检查互异性并统计个数</strong>：将所有满足条件的元素列出，确认无重复后直接计数。若是点集，不同坐标自然对应不同元素。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视变量整数的限制</strong>：将不等式直接按实数处理，导致误判为无穷集或错误计数。  </li>
+<li><strong>分类讨论时漏解</strong>：分类时漏掉某个变量的可能取值（如未考虑 $x=-1$ 导致漏掉点），或对每一个值解另一变量时少算了边界值。  </li>
+<li><strong>不等式取等条件处理不当</strong>：含有 $\le$ 或 $\ge$ 时漏掉边界点，导致少计元素。  </li>
+<li><strong>重复计数</strong>：当元素为无序对象（如含 ${a,b}$ 型的数对，但点坐标通常有序）时，误将顺序不同本质相同的元素算作多个。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知集合 $A={(x,y) \mid x^2+y^2\le 3,\, x\in\mathbb{Z},\, y\in\mathbb{Z}}$，求 $A$ 中元素的个数。</p>
+<p><strong>思路</strong><br />
+点集元素由整数坐标构成，且受限于圆盘 $x^2+y^2\le3$。$x$ 的取值范围极小，可枚举 $x$ 的所有可能整数值，对每个固定 $x$ 求解 $y$ 的整数解，最后汇总计数。</p>
+<p><strong>步骤</strong><br />
+1. 由 $x^2\le 3$，且 $x\in\mathbb{Z}$，知 $x$ 只可能为 $-1,0,1$。<br />
+2. 当 $x=-1$ 时：条件化为 $1+y^2\le3 \Rightarrow y^2\le2$，$y\in\mathbb{Z}\Rightarrow y=-1,0,1$，得点 $(-1,-1),(-1,0),(-1,1)$。<br />
+3. 当 $x=0$ 时：条件化为 $y^2\le3\Rightarrow y=-1,0,1$，得点 $(0,-1),(0,0),(0,1)$。<br />
+4. 当 $x=1$ 时：条件化为 $1+y^2\le2\Rightarrow y=-1,0,1$，得点 $(1,-1),(1,0),(1,1)$。<br />
+5. 所有点互异，共计 $3+3+3=9$ 个。  </p>
+<p><strong>点评/变式</strong><br />
+本题为“有限点集元素计数”的典型题，核心是整数约束下的分类讨论。变式可将圆盘区域改为其他形状，如 ${(x,y)\mid |x|+|y|\le 2,\,x,y\in\mathbb{Z}}$，解法相同；也可将整数集改为自然数集，进一步缩小取值范围。注意养成良好习惯：先定范围，再逐类击破，最后验证互异。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-02.html">2018-理-02</a>（2018 · 易） 集合中元素个数的判断，通过分类讨论确定圆内整点个数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">集合元素个数</a></li>
+</ul>
+</div>
+</body>
+</html>

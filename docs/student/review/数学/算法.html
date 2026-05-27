@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>算法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>算法</h1><div class="review-mark" data-stem="算法"></div><div class="meta-card"><span><strong>考点</strong>算法</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>算法(程序框图)</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：算法(程序框图)</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2011–2017</li>
+<li>出现题位：选择3 选择5 选择8</li>
+<li>难度分布：易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三种基本逻辑结构</strong>：顺序结构、条件（选择）结构、循环结构。程序框图必须能通过这三种结构表达。</li>
+<li><strong>循环结构</strong>：根据条件重复执行某一段操作（循环体）。分为<strong>当型循环</strong>（先判断条件，成立就执行）与<strong>直到型循环</strong>（先执行一次，再判断，直到条件成立退出）。框图特征：当型有向回箭头由判断框引出；直到型箭头回到循环体起点上方。</li>
+<li><strong>循环三要素</strong>：</li>
+<li>循环变量（计数变量如 $k$，累加/累乘变量如 $S,p$）的<strong>初始值</strong>；</li>
+<li><strong>循环终止条件</strong>（注意是“成立时执行”还是“不成立时退出”）；</li>
+<li><strong>循环体</strong>中的变量更新规则（顺序、算式）。</li>
+<li><strong>常见模型</strong>：</li>
+<li>累加求和：$S = S + a_k$；</li>
+<li>累乘求积：$p = p \times k$（阶乘或连乘）；</li>
+<li>计数累积：$k = k + 1$；</li>
+<li>交替号：$a = -a$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别结构与出入口</strong>：找出“开始”“输入”“输出”框，确定初始输入值和最终输出哪个变量。</li>
+<li><strong>划定循环部分</strong>：找到判断框（菱形），理清循环体包含哪些运算，明确是当型还是直到型，以及循环条件。</li>
+<li><strong>列表追踪变量</strong>：按循环次序，逐步写出各变量值的变化过程。表格列上线为“循环次数”“$k$”“$S$（或$p$）”“其他变量”等，直到满足退出条件为止。  </li>
+<li><strong>注意“边界”一次</strong>：重点关注<strong>最后一次进入循环</strong>与<strong>第一次跳出循环</strong>的变値。尤其遇到“$k &lt; N$”与“$k \le N$”时，多执行或少执行一次是常见得分点。</li>
+<li><strong>复验输出值</strong>：根据最后一次循环结束后的变量值，对应框图输出框得出答案。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>循环次数“差一次”</strong>：把“$k&lt;N$”当成终止条件时，$k$ 刚增至 $N$ 仍未退出，需再执行一次循环体后才判断。务必区分“成立执行/不成立退出”的判断逻辑。</li>
+<li><strong>变量更新顺序颠倒</strong>：在同一循环中，若先 $k=k+1$ 后 $p=p\times k$，与先乘后加一结果不同。严格按照框图从上到下的流程执行。</li>
+<li><strong>初始值遗漏与错用</strong>：累加变量 $S$ 通常初值为 $0$；累乘变量 $p$ 初值为 $1$；计数变量 $k$ 初值常为 $0$ 或 $1$。看框图“输入/初值”框。</li>
+<li><strong>混淆变量角色</strong>：例如将累加变量当作计数变量，或把输出变量误认为循环条件中的变量。</li>
+<li><strong>直到型循环的盲区</strong>：直到型先执行一次循环体，再判断条件。若一开始条件就为真，是否仍执行一次？依框图确定，通常直到型循环体至少执行一次。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目一（2017·理·08，含交替号与计数循环）</h3>
+<p><strong>题目</strong>：执行如图程序框图，若输入 $a=-1$，则输出 $S= (\quad)$。选项：2, 3, 4, 5。<br />
+<strong>框图还原</strong>（描述）：开始，输入 $a=-1$，初始化 $S=0,k=1$；循环条件“$k \le 6$？”（当型）；循环体依次为：$S = S + a \times k$，$a = -a$，$k = k+1$；输出 $S$。<br />
+<strong>思路</strong>：采用变量追踪法，列出每一步的 $k,S,a$ 值，循环共执行6次（$k=1,2,3,4,5,6$），循环结束后 $k=7$ 跳出，输出当时的 $S$。<br />
+<strong>步骤</strong>：
+- 初始：$S=0,k=1,a=-1$。
+- $k=1$：$S=0+(-1)\times 1=-1$，$a=1$，$k=2$。
+- $k=2$：$S=-1+1\times 2=1$，$a=-1$，$k=3$。
+- $k=3$：$S=1+(-1)\times 3=-2$，$a=1$，$k=4$。
+- $k=4$：$S=-2+1\times 4=2$，$a=-1$，$k=5$。
+- $k=5$：$S=2+(-1)\times 5=-3$，$a=1$，$k=6$。
+- $k=6$：$S=-3+1\times 6=3$，$a=-1$，$k=7$。
+- 此时 $k=7 \le 6$ 不成立，退出循环，输出 $S=3$。<br />
+答案选B。<br />
+<strong>点评/变式</strong>：本题核心是循环体中符号交替（$a=-a$）与计数累积。变式可改变终止条件（如 $k&lt;7$），则循环次数可能多一次或少一次，要重新追踪。另外当累加表达式变为 $S=S+a$ 或平方项时，方法不变。</p>
+<h3>题目二（2011·文·05/理·03，累乘阶乘模型）</h3>
+<p><strong>题目</strong>：执行如图程序框图，若输入 $N=6$，则输出 $p= (\quad)$。选项：120, 720, 1440, 5040。<br />
+<strong>框图还原</strong>：开始，输入 $N=6$，初始化 $k=1,p=1$；判断“$k&lt;N$？”（当型），成立则执行：$p=p\times k$，$k=k+1$；不成立则输出 $p$。<br />
+<strong>思路</strong>：明确循环条件是“$k&lt;N$ 时继续”，即 $k=1,2,3,4,5$ 时进入循环体，当 $k$ 增至 $N=6$ 时，条件“$6&lt;6$？”不成立，直接输出此时 $p$。注意最后一次循环后才判断。<br />
+<strong>步骤</strong>：
+- 初始：$N=6,k=1,p=1$。
+- $k=1$：满足 $1&lt;6$，$p=1\times 1=1$，$k=2$。
+- $k=2$：$p=1\times 2=2$，$k=3$。
+- $k=3$：$p=2\times 3=6$，$k=4$。
+- $k=4$：$p=6\times 4=24$，$k=5$。
+- $k=5$：$p=24\times 5=120$，$k=6$。
+- 此时 $k=6$，条件 $6&lt;6$ 不成立，不再进入循环，输出 $p=120$？但标准答案是720，说明我们漏了一次。重新检查：框图可能是先乘再加一，或者判断条件不同？根据原题解析：$N=6,k=1,p=1$，$p=1,k&lt;N$成立，有 $k=2$，$p=p\times k$？解析片段：“P=1，k＜N成立，有k=2”，意味着 $k$ 先增？但通常顺序是 $p=p\times k$，然后 $k=k+1$。解析后文未给出全部，但选项120和720分别对应“$k&lt;N$”与“$k \le N$”的差别。我们根据答案720反推：若循环体 $p=p\times k,\ k=k+1$，判断 $k&lt;N$ 时执行，则模拟：初始 $k=1,p=1$。1&lt;6，执行：$p=1\times1=1,k=2$；2&lt;6：$p=1\times2=2,k=3$；3&lt;6：$p=2\times3=6,k=4$；4&lt;6：$p=6\times4=24,k=5$；5&lt;6：$p=24\times5=120,k=6$；此时 $k=6$，$6&lt;6$ 假，退出，输出120，这是错误答案。若条件是 $k\le N$ 或 $k&lt;7$，则 $k=6$ 时还会执行一次：$p=120\times6=720,k=7$，输出720。原题解析中，$N=6,k=1,p=1$，然后 $P=1$，$k&lt;N$ 成立，有 $k=2$。这说明与我们的模拟一致，但结果却是720，意味着框图可能是先 $k=k+1$，再 $p=p\times k$，且判断 $k&lt;N$。模拟：初始 $k=1,p=1$；条件 $k&lt;6$ 成立，$k=2$，$p=1\times2=2$；$k&lt;6$ 成立，$k=3$，$p=2\times3=6$；$k&lt;6$ 成立，$k=4$，$p=6\times4=24$；$k&lt;6$ 成立，$k=5$，$p=24\times5=120$；$k&lt;6$ 成立，$k=6$，$p=120\times6=720$；此时 $k=6&lt;6$ 不成立，退出，输出720。可见框图中<strong>先对计数变量加1，再乘到积</strong>是本题的关键顺序。许多考生按通常“先乘后加”得出120，从而失分。<br />
+<strong>点评/变式</strong>：累乘求阶乘的程序框图，务必注意变量更新的先后。典型失分点就是 $k$ 自增与乘法谁先谁后，导致最终积刚好差最后一个因子。复习时遇到框图一定要逐框追踪，不可想当然套用模式。变式：若改为直到型循环，判断框变为“$k\ge N$？”则退出，同样要重新追踪。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-08.html">2017-理-08</a>（2017 · 易） 执行程序框图，计算给定初始值下的输出结果。</li>
+<li><a href="../../exam/数学/2011-文-05.html">2011-文-05</a>（2011 · 易） 一道程序框图题，给定输入 N=6，要求根据循环流程计算输出 p 的值。</li>
+<li><a href="../../exam/数学/2011-理-03.html">2011-理-03</a>（2011 · 易） 程序框图执行，模拟循环过程计算输出值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1075-算法.html">算法</a></li>
+</ul>
+</div>
+</body>
+</html>

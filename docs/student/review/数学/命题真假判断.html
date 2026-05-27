@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命题真假判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>命题真假判断</h1><div class="review-mark" data-stem="命题真假判断"></div><div class="meta-card"><span><strong>考点</strong>命题真假判断</span><span><strong>权重</strong>23</span><span><strong>真题数</strong>8</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：23</li>
+<li>真题数：8；年份跨度：2012–2024</li>
+<li>出现题位：填空14 填空16 选择2 选择3</li>
+<li>难度分布：易5 中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>命题的真假</strong>：一个命题只有“真”与“假”两种可能，两者必居其一。</li>
+<li><strong>全称量词($\forall$)与存在量词($\exists$)</strong>：<ul>
+<li>全称命题 $p:\forall x\in M, p(x)$。要判断为假，只需找到一个反例 $x_0\in M$使 $p(x_0)$ 不成立；要判断为真，必须证明所有 $x$ 都成立。</li>
+<li>特称（存在）命题 $q:\exists x_0\in M, q(x_0)$。要判断为真，只需找到一个实例 $x_0$ 使成立；要判断为假，则需证明对任意 $x\in M$ 都不成立。</li>
+</ul>
+</li>
+<li><strong>命题的否定</strong>：全称与特称命题的否定遵循“两变一不变”：量词改变（$\forall$ 与 $\exists$ 互变），结论否定，范围不变。命题 $\neg p$ 的真假性与 $p$ 相反。</li>
+<li><strong>复合命题的真假</strong>（真值表）：<ul>
+<li>$p \lor q$ (或)：一真即真，全假才假。</li>
+<li>$p \land q$ (且)：一假即假，全真才真。</li>
+<li>$\neg p$ (非)：与原命题真假相反。</li>
+</ul>
+</li>
+<li><strong>逻辑用语在知识板块中的应用</strong>：命题的真假判断常结合函数性质（值域、定点）、不等式（取特殊值验证）、立体几何（判定定理）和复数（运算化简）等核心考点，需要先对各分支命题进行真假判定，再进行逻辑联结词的组合判断。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定对象，分主次</strong>：明确命题的语句结构。若是复合命题，先拆分为最简单的基本命题 $p, q, r$ 等。</li>
+<li><strong>判单命，讲依据</strong>：<ul>
+<li><strong>全称命题判断</strong>：要证真需严格证明；要证伪只需举出一个<strong>具体、明确</strong>的反例。</li>
+<li><strong>特称命题判断</strong>：要证真只需构造或找到一个<strong>具体</strong>的实例；要证伪需全面的代数推导或几何证明。</li>
+<li><strong>常见考点速判</strong>：结合具体知识点储备快速判定，如利用 $\sin x \in [-1,1]$，$e^x &gt; 0$，复数运算，线面关系公理等。</li>
+</ul>
+</li>
+<li><strong>搭积木，用真值</strong>：<ul>
+<li>将第2步判定出的单命题真假（真记为1，假记为0）代入原复合命题的结构中。</li>
+<li>严格依据“且($\land$)、或($\lor$)、非($\neg$)”的真值表，递推出整个大命题的真假。</li>
+</ul>
+</li>
+<li><strong>验选项，定结论</strong>：对于选择题，可直接对照选项中的命题组合，优先计算单命题或否定命题的真假以缩小范围，快速排除。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>量词命题判定与区分的混淆</strong>：<ul>
+<li><strong>易错点</strong>：欲证“存在命题”为假，需证其“全称否定”为真，不可仅凭无法举例就判定为假；同样，欲否“全称命题”，只需一个反例，不需要全面证明其错误。</li>
+<li><strong>真题直击</strong>：2024年新课标Ⅱ卷第2题，面对 $\forall x \in R, |x+1|&gt;1$，马上尝试找反例，取 $x=-1$ 即得 $0&gt;1$ 不成立，直接定出该全称命题为假，避免陷入绝对值不等式分类讨论的泥潭。</li>
+</ul>
+</li>
+<li><strong>混淆“命题的否定”与“原命题的反面”</strong>：<ul>
+<li><strong>易错点</strong>：复合命题的否定必须遵循德摩根律（且变或，或变且）。尤其注意“量词命题”的否定中，既要变量词，又要否结论。常常有考生只否定了结论而忘记改变量词。</li>
+</ul>
+</li>
+<li><strong>空间几何公理条件的遗漏</strong>：<ul>
+<li><strong>易错点</strong>：平面基本性质的“三点不共线”条件、线面平行/垂直判定定理中“线在面内”、“面内相交线”等关键前提。忽略条件会导致错误地将假命题判为真。</li>
+<li><strong>真题直击</strong>：2020年全国卷文/理第16题中的 $p_2$：“过空间中任意三点有且仅有一个平面”。若三点共线，则有无数个平面，因忽略公理前提而极易被误判为真。</li>
+</ul>
+</li>
+<li><strong>直接计算/化简意识不足</strong>：<ul>
+<li><strong>易错点</strong>：对含有复杂表达式（如复数、向量、解析式）的命题，不先进行等价化简就直接判断性质，导致误判。</li>
+<li><strong>真题直击</strong>：2012年理科第3题，针对复数 $z = \frac{2}{-1+i}$，需要先分母实数化化简得到 $z = -1-i$，然后其模长、共轭、虚部等属性才一目了然。不化简极易在模长判断上出错。</li>
+</ul>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2024年新课标Ⅱ卷第2题）已知命题 $p: \forall x \in R, |x+1|&gt;1$；命题 $q: \exists x &gt; 0, x^3 = x$。判断 $p$、$q$ 及其否定的真假组合。
+<strong>思路</strong>：这是一道典型的量词命题判断。分别对 $p$（全称）和 $q$（特称）执行“特值探路”法。对于 $p$，尝试构造反例；对于 $q$，尝试寻找正例。
+<strong>步骤</strong>：
+1.  <strong>判 $p$</strong>：因为 $p$ 是全称命题，要证伪只需一个反例。令 $x=-1$，则 $|x+1| = 0$，显然绝对值不可能大于 $1$。故 $p$ 为假命题。由真假对立可知，$\neg p$ 为真命题。
+2.  <strong>判 $q$</strong>：因为 $q$ 是特称命题，要证真只需一个例子。在 $x&gt;0$ 内寻找，发现当 $x=1$ 时，$x^3 = 1$ 且 $x = 1$，等式成立。故 $q$ 为真命题，且 $\neg q$ 为假命题。
+3.  <strong>组合判断</strong>：对照选项，B项“$\neg p$ 和 $q$ 都是真命题”符合我们判定的结果。
+<strong>点评/变式</strong>：
+本题核心在于“举反例/正例”的意识，切忌一看到绝对值和等式就陷入冗长的分类讨论或解方程。这是判断量词命题真假的最高效策略。
+- <strong>变式</strong>：若将 $q$ 改为 $\forall x&gt;0, x^3=x$，则立马举反例 $x=2$ 即可判定为假。</p>
+<hr />
+<p><strong>题目</strong>：（2020年全国卷文/理第16题）给定四个立体几何命题 $p_1, p_2, p_3, p_4$，判断其组合 $\land, \lor, \neg$ 的真假。
+<strong>思路</strong>：这是一个典型的多知识融合、逻辑联结词综合问题。解题流程严格遵循“分拆-判据-组合”。先利用立体几何公理、定理、性质将四个基础命题的真假完全锁定，再进行逻辑运算。
+<strong>步骤</strong>：
+1.  <strong>判 $p_1, p_2, p_3, p_4$ 真假</strong>：
+    -   $p_1$：“两两相交且不过同一点的三条直线必共面”。由基本事实（不在一直线上三点确定一平面），两两相交的三条直线的关系必然构成一个三角形或其延伸，此命题正确，为<strong>真</strong>。
+    -   $p_2$：“过空间中任意三点有且仅有一个平面”。缺少“不共线”这一硬性条件，为<strong>假</strong>。
+    -   $p_3$：“空间两直线不相交，则平行”。空间还有异面情形，为<strong>假</strong>。
+    -   $p_4$：“若直线 $l \subset \alpha$，直线 $m \perp \alpha$，则 $m \perp l$”。由线面垂直定义，一垂垂直面内所有线，此命题为<strong>真</strong>。
+2.  <strong>组合判断</strong>：
+    -   ① $p_1 \land p_4$：真且真 → <strong>真</strong>。
+    -   ② $p_1 \land p_2$：真且假 → <strong>假</strong>。
+    -   ③ $\neg p_2 \lor p_3$：$\neg p_2$ 为真，或运算一真即真 → <strong>真</strong>。
+    -   ④ $\neg p_3 \lor \neg p_4$：$\neg p_3$ 为真，或运算一真即真 → <strong>真</strong>。
+3.  <strong>结论</strong>：所有真命题的序号为 ①③④。
+<strong>点评/变式</strong>：
+易错点在于 $p_1$ 和 $p_2$ 的判断。$p_1$ 需直观感悟空间位置；$p_2$ 纯粹是对公理条件的记忆考查。本题完美展示了，纵使后续有复杂的逻辑组合，但只要底层的四个单命题真假判定无误，后续只需按“真值表”机械化操作即可万无一失。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-02.html">2024-新课标Ⅱ-02</a>（2024 · 易） 本题考查通过赋值法判断命题真假及其否定的逻辑关系。</li>
+<li><a href="../../exam/数学/2021-文-03.html">2021-文-03</a>（2021 · 易） 本题考查正弦函数值域和指数函数性质在命题真假判断中的应用。</li>
+<li><a href="../../exam/数学/2021-理-02.html">2021-理-02</a>（2021 · 易） 该题考查集合包含关系与交集运算，并涉及全称命题与存在性命题的真假判断。</li>
+<li><a href="../../exam/数学/2021-理-03.html">2021-理-03</a>（2021 · 易） 判断正弦与指数函数相关命题的真假，并用逻辑联结词确定复合命题的真值。</li>
+<li><a href="../../exam/数学/2020-文-16.html">2020-文-16</a>（2020 · 中） 考查空间中线面位置关系命题的真假判断及复合命题真假判定。</li>
+<li><a href="../../exam/数学/2020-理-16.html">2020-理-16</a>（2020 · 中） 给出四个关于空间直线与平面关系的命题p₁~p₄，判断真命题序号并给出含逻辑联结词的复合命题真假。</li>
+<li><a href="../../exam/数学/2016-理-14.html">2016-理-14</a>（2016 · 中） 该题考查空间线面平行垂直关系及命题真假判断。</li>
+<li><a href="../../exam/数学/2012-理-03.html">2012-理-03</a>（2012 · 易） 该题考查复数的四则运算、共轭复数、虚部等概念，要求判断命题真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/765-命题真假判断.html">命题真假判断</a></li>
+</ul>
+</div>
+</body>
+</html>

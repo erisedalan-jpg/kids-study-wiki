@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列递推式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列递推式</h1><div class="review-mark" data-stem="数列递推式"></div><div class="meta-card"><span><strong>考点</strong>数列递推式</span><span><strong>权重</strong>26</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：26</li>
+<li>真题数：6；年份跨度：2008–2015</li>
+<li>出现题位：填空16 解答17 解答19 解答20</li>
+<li>难度分布：中5 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>递推公式</strong>：给出数列两项或多项之间的关系式，如 $a_{n+1}=f(a_n)$ 或含 $S_n$ 的关系。</li>
+<li><strong>$a_n$ 与 $S_n$ 的基本关系</strong>：
+  $$a_n = \begin{cases} S_1, &amp; n=1 \ S_n - S_{n-1}, &amp; n\ge 2 \end{cases}$$
+  常用于消去 $a_n$ 或 $S_n$，得到仅含 $S_n$ 或仅含 $a_n$ 的递推。</li>
+<li><strong>常见递推模型与构造方法</strong>：</li>
+<li><strong>$a_{n+1}=pa_n+q$</strong>（$p\neq1$，$q\neq0$）：构造等比，设 $a_{n+1}+\lambda=p(a_n+\lambda)$，解得 $\lambda=\frac{q}{p-1}$。</li>
+<li><strong>$a_{n+1}=a_n+f(n)$</strong>（累加法）：$a_n=a_1+\sum_{k=1}^{n-1}f(k)$。</li>
+<li><strong>$a_{n+1}=f(n)a_n$</strong>（累乘法）：$a_n=a_1\prod_{k=1}^{n-1}f(k)$。</li>
+<li><strong>$a_{n+1}=\frac{pa_n}{qa_n+r}$</strong>（倒数型）：取倒数化为 $\frac{1}{a_{n+1}}$ 的线性关系。</li>
+<li><strong>$a_{n+1}+(-1)^n a_n = f(n)$</strong>（含 $(-1)^n$ 奇偶交替）：一般分奇偶项列式，通过消元或并项转化为隔项递推，再进行分组求和。</li>
+<li><strong>周期递推</strong>：若 $a_{n+T}=a_n$ 恒成立，则数列为周期数列，可通过计算前几项发现周期。</li>
+<li><strong>等比/等差数列的定义</strong>：证明数列 ${b_n}$ 为等差或等比，需得出 $b_{n+1}-b_n=d$ 或 $\frac{b_{n+1}}{b_n}=q$（常数），且注意首项非零（等比）。</li>
+<li><strong>适用条件注意</strong>：所有利用 $a_n=S_n-S_{n-1}$ 的变形必须注意 $n\ge2$；构造新数列时需验证首项是否符合构造形式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>$S_n$ 与 $a_n$ 的互化</strong><br />
+   已知 $S_n$ 与 $a_n$ 的等式，考虑利用 $a_{n+1}=S_{n+1}-S_n$（或 $a_n=S_n-S_{n-1}$）消元，得到纯相邻项或纯 $S_n$ 的递推，再往等差或等比转化。</li>
+<li><strong>构造辅助数列</strong><br />
+   对于非标准型递推，通过取倒数、因式分解、两边同加（乘）常数、同除以某式等手段，构造出 $\left{\frac{1}{a_n}\right}$、${a_{n+1}-2a_n}$ 等能判定等差/等比的新数列。</li>
+<li><strong>累加 / 累乘法</strong><br />
+   遇到 $a_{n+1}-a_n = f(n)$ 可累加；$\frac{a_{n+1}}{a_n}=f(n)$ 可累乘。当 $f(n)$ 为可求和或可化简的数列时直接计算。</li>
+<li><strong>奇偶分拆与分组处理</strong><br />
+   递推式中含有 $(-1)^n$ 或奇偶项关系不同时，分别对 $n$ 取奇数和偶数列出等式，通过加减消元得到关于 $a_{2k-1}$ 和 $a_{2k}$ 的独立递推；求和时按两项或四项一组整理，转化为若干个可求和的片段。</li>
+<li><strong>周期识别与验证</strong><br />
+   若递推式不易直接解出通项，可计算前几项（如 $a_1,a_2,a_3,\dots$）观察是否有重复，确定周期 $T$ 后，所求任意项均可通过模 $T$ 转化为前几项之一。</li>
+<li><strong>错位相减预备</strong><br />
+   由递推求出通项后（如 $a_n = n\cdot 2^{2n-1}$ 型），求和时注意等差数列乘等比数列的结构，采用错位相减法。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略 $n\ge2$ 条件</strong>：利用 $a_n=S_n-S_{n-1}$ 构造等差或等比时，必须注明 $n\ge2$，且需单独验证 $n=1$ 时首项是否满足所得通项公式。</li>
+<li><strong>倒数变形时忘记约束</strong>：等式两边同除以 $S_{n+1}S_n$ 或 $a_na_{n+1}$ 前，应确保这些项不为零，否则可能漏解或产生增根。</li>
+<li><strong>奇偶分组时项数混淆</strong>：含 $(-1)^n$ 的递推求和，前 $60$ 项分组容易算错组数；建议先写出相邻两式推得的规律，再按规律的周期（如每 $4$ 项一个片段）计算总数。</li>
+<li><strong>周期数列起点推算错误</strong>：递推方向为正向给出 $a_8$ 反求 $a_1$ 时，需正确逆向迭代或正向从 $a_1$ 试推找周期，极容易多算或少算一项导致余数对应错误。</li>
+<li><strong>构造新数列时首项计算错误</strong>：构造出 $\left{\frac1{S_n}\right}$ 为首项 $-1$、公差 $-1$，忘记 $S_1=a_1=-1$，直接当做正数导致符号错误。</li>
+<li><strong>累加时项数出错</strong>：累加法求和从 $a_1$ 加到 $a_n$，中间有 $n-1$ 个等式，求和上限为 $n-1$，代入 $f(n)$ 时常见标号偏移。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2015 理 16</h3>
+<p><strong>题目</strong>：数列 ${a_n}$ 前 $n$ 项和 $S_n$，$a_1=-1$，$a_{n+1}=S_{n+1}S_n$，求 $S_n$。<br />
+<strong>思路</strong>：题目给出 $a_{n+1}$ 与 $S_{n+1},S_n$ 的关系，自然想到利用 $a_{n+1}=S_{n+1}-S_n$ 消去 $a_{n+1}$，得到关于 $S_n$ 的递推，再变形构造等差数列。<br />
+<strong>步骤</strong>：<br />
+由 $a_{n+1}=S_{n+1}-S_n$ 及已知得 $S_{n+1}-S_n = S_{n+1}S_n$。两边同除以 $S_{n+1}S_n$（$S_n\neq0$ 由递推及首项保证），得 $\frac{1}{S_n} - \frac{1}{S_{n+1}} = 1$，即 $\frac{1}{S_{n+1}} - \frac{1}{S_n} = -1$。又 $\frac{1}{S_1}=\frac{1}{a_1} = -1$，故数列 $\left{\frac{1}{S_n}\right}$ 是首项 $-1$、公差 $-1$ 的等差数列。于是 $\frac{1}{S_n} = -1 + (n-1)(-1) = -n$，得 $S_n = -\frac{1}{n}$。<br />
+<strong>点评与变式</strong>：核心是 $a_n$ 与 $S_n$ 的转化，并构造倒数等差数列。变式可能让求 $a_n$，只需再结合 $a_n=S_n-S_{n-1}\,(n\ge2)$。易错：忘考虑 $S_n$ 是否为零、遗漏 $n=1$ 验证。</p>
+<h3>2. 2014 文 16</h3>
+<p><strong>题目</strong>：数列 ${a_n}$ 满足 $a_{n+1}=\frac{1}{1-a_n}$，$a_8=2$，求 $a_1$。<br />
+<strong>思路</strong>：递推式为分式形式，直接求通项较复杂，但结构简洁，尝试迭代计算几项观察周期规律，再用周期反推。<br />
+<strong>步骤</strong>：<br />
+由 $a_8=2$，令 $n=7$ 得 $a_8=\frac{1}{1-a_7} \Rightarrow 2=\frac{1}{1-a_7} \Rightarrow a_7=\frac12$。<br />
+令 $n=6$：$a_7=\frac{1}{1-a_6} \Rightarrow \frac12=\frac{1}{1-a_6} \Rightarrow a_6=-1$。<br />
+令 $n=5$：$a_6=\frac{1}{1-a_5} \Rightarrow -1=\frac{1}{1-a_5} \Rightarrow a_5=2$。<br />
+发现 $a_8=2$, $a_5=2$, 表明周期 $T=3$：$2,\frac12,-1$ 循环。因 $8$ 除以 $3$ 余 $2$，对应循环第 $2$ 项为 $\frac12$（即 $a_8=\frac12$? 注意此处由 $a_8=2$ 反推，循环应理解为：若 $a_{k}=2$，则 $a_{k-3}=2$。实际从 $a_1$ 看：若 $a_1=2$，则 $a_2=\frac12$, $a_3=-1$, $a_4=2$，周期 $3$。现已知 $a_8=2$，而 $a_8$ 应与 $a_{8\bmod 3 = a_2$ 同值？ 等等需仔细：从正向 $a_1=2, a_2=1/2, a_3=-1, a_4=2, a_5=1/2, a_6=-1, a_7=2, a_8=1/2$ 并不等于 $2$。正向推矛盾？重新考察：由解析知从 $a_8=2$ 逆向得 $a_7=1/2, a_6=-1, a_5=2$，所以序列倒推周期 $3$。因此 $a_1$ 应等于 $a_7$（因为 $8-1=7$，$7\bmod3=1$，但倒推方向，$a_1$ 与 $a_4$ 同值？实际上 $a_8=2$，倒推 $a_5=2$, $a_2=2$ 也会如此，故 $a_1$ 经 $8 \div 3 = 2\cdots 2$ 推理：$a_8$ 相当于循环中第 $2$ 位（从 $a_1$ 开始考虑），按循环顺序为 $2$, $1/2$, $-1$，若 $a_1$ 是这个循环的开头，则第 $2$ 位为 $1/2$，但题目 $a_8=2$，矛盾。因此更靠谱是反向推理：由 $a_8=2$ 得 $a_7=1/2$，$a_6=-1$，$a_5=2$，依此类推 $a_2=2$ 会推到 $a_1=?$ 计算：$a_3=-1$, $a_2=2$, $a_1=1/2$，所以 $a_1=1/2$。原解析解答：$8\div3=2\cdots2$，故 $a_1=1/2$。故按由前向后循环若 $a_1$ 为 $1/2$ 则 $a_2=2$, $a_3=-1$, $a_4=1/2$... 则 $a_8$ 是第 $8$ 项：$8\bmod3=2$，对应 $a_2=2$，符合 $a_8=2$，所以 $a_1=1/2$）。故结果 $a_1=\frac12$。<br />
+<strong>点评与变式</strong>：对于看不出如何构造的递推，可直接计算前几项找周期。周期数列求某项只需利用下标模 $T$。注意计算时的方向性，从已知项反推或者先证明周期再对应。</p>
+<h3>3. 2012 理 16</h3>
+<p><strong>题目</strong>：数列 ${a_n}$ 满足 $a_{n+1}+(-1)^n a_n = 2n-1$，求前 $60$ 项和。<br />
+<strong>思路</strong>：递推中含 $(-1)^n$，导致相邻两项符号交替变化，应分别对连续两项的相加和相减进行消元，找到关于奇偶项的隔项递推规律，进而分组求和。<br />
+<strong>步骤</strong>：<br />
+由 $a_{n+1}+(-1)^n a_n = 2n-1$，写出前若干式：<br />
+$n=1$：$a_2 - a_1 = 1$<br />
+$n=2$：$a_3 + a_2 = 3$<br />
+$n=3$：$a_4 - a_3 = 5$<br />
+$n=4$：$a_5 + a_4 = 7$<br />
+$n=5$：$a_6 - a_5 = 9$<br />
+$n=6$：$a_7 + a_6 = 11$<br />
+观察相邻两式作和可消去中间项：$(a_3+a_2)+(a_2-a_1)=4 \Rightarrow a_3-a_1+2a_2?$ 更好的思路是解析中的观察：通过 $(n=1)+(n=2)$ 可得 $a_3+a</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-16.html">2015-理-16</a>（2015 · 中） 本题考查由数列递推关系构造等差数列求前n项和。</li>
+<li><a href="../../exam/数学/2014-文-16.html">2014-文-16</a>（2014 · 易） 数列递推式已知一项，通过反向迭代求另一项，涉及周期规律识别。</li>
+<li><a href="../../exam/数学/2012-理-16.html">2012-理-16</a>（2012 · 中） 根据奇偶项递推关系，通过分组构造求数列前60项和。</li>
+<li><a href="../../exam/数学/2010-理-17.html">2010-理-17</a>（2010 · 中） 数列递推求通项公式及错位相减法求和</li>
+<li><a href="../../exam/数学/2009-理-19.html">2009-理-19</a>（2009 · 中） 本题给出数列前n项和与项的关系，通过递推式证明数列为等比数列并求通项</li>
+<li><a href="../../exam/数学/2008-理-20.html">2008-理-20</a>（2008 · 中） 已知递推关系构造新数列求通项，并由数列单调性求参数取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/894-数列递推式.html">数列递推式</a></li>
+</ul>
+</div>
+</body>
+</html>

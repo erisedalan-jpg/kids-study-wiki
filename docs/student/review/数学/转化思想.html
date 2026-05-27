@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>转化思想</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>转化思想</h1><div class="review-mark" data-stem="转化思想"></div><div class="meta-card"><span><strong>考点</strong>转化思想</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：1</li>
+<li>真题数：6；年份跨度：2012–2019</li>
+<li>出现题位：填空14 填空15 解答21 解答23 选择6 选择12</li>
+<li>难度分布：易1 中4 难1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>转化思想</strong>是高考数学中统领性的思想方法，其核心是：把未知、复杂、隐蔽的问题，通过等价变形、换元、同解转化、数形结合等手段，转化为已知、简单、明确的问题加以解决。<br />
+常考的转化模型有：</p>
+<ul>
+<li><strong>函数性质的区间转化</strong>：奇偶性、周期性将所求区间上的函数值或解析式，转化到已知区间上计算，核心是 $f(-x)=-f(x)$ 或 $f(-x)=f(x)$。</li>
+<li><strong>恒成立与存在性转化</strong>：$\forall x$ 恒成立 $\Leftrightarrow$ 求最值（如 $a \ge f(x)$ 恒成立 $\Rightarrow a \ge f(x)_{\max}$）；存在 $x$ 使成立 $\Leftrightarrow$ 最值问题。常用方法是分离参数。</li>
+<li><strong>三角角度转化</strong>：利用诱导公式、和差角公式、倍半角公式等，把所求角转化为已知角或特殊角，把不熟悉的三角函数结构转化为可求值的形式。</li>
+<li><strong>代数结构转化</strong>：通过换元、因式分解、配方、乘“1”等技巧，将高次不等式、复杂方程化为低次或熟悉结构；常见如已知 $a^3+b^3=2$ 结合幂次转化证明不等式。</li>
+<li><strong>极值点与方程零点转化</strong>：极值点条件 $f'(x_0)=0$ 转化为关于 $x_0$ 的方程；存在极值点满足某不等式 $\Rightarrow$ 转化为关于参数的不等式求解。</li>
+<li><strong>数形转化</strong>：将方程根、不等式解集转化为函数图像交点、区域位置关系，再借助图像特征列出参数约束。</li>
+</ul>
+<p>转化时必须遵循<strong>等价性</strong>：若进行放缩、平方等非等价变形，要注意讨论范围或检验，防止增解、漏解。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题识别转化点</strong>：看到奇偶性→想到对称区间转化；看到“恒成立”“存在”→立刻分离参数或构造函数求最值；看到非特殊角、复杂角关系→诱导公式拆角；看到高次、分式、根式→换元降次。</li>
+<li><strong>选择转化路径</strong>：  </li>
+<li>函数问题：用单调性、奇偶性、周期性把未知转化到已知区间。  </li>
+<li>三角求值：用诱导公式“奇变偶不变，符号看象限”将角化小，再用和差倍半公式。  </li>
+<li>不等式：若显含参数，尝试分离参数，将问题转化为无参函数的最值问题；若结构对称或可分解，构造新函数或放缩为已知不等关系。  </li>
+<li>极值点条件：由 $f'(x_0)=0$ 得到 $x_0$ 与参数关系，代入约束等式/不等式消参。</li>
+<li><strong>实施等价变形</strong>：写清转化过程，保持每一步充要条件，必要时标注定义域变化。</li>
+<li><strong>求解熟悉问题</strong>：转化为常规题型后（如二次函数最值、指对运算、解不等式），按标准步骤求解。</li>
+<li><strong>还原并验证</strong>：将中间结果代回原题，检验是否满足所有条件（如奇函数定义域包含0时是否有 $f(0)=0$，参数分离时分母不能为0等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>奇偶性区间转化时符号错误</strong>：当 $x&lt;0$，利用奇函数 $f(x)=-f(-x)$，易漏掉负号或搞混 $f(-x)$ 表达式中的符号；尤其指对型函数复合时容易算错。</li>
+<li><strong>忽视定义域导致转化不等价</strong>：换元后忘记写出新元范围；分离参数时分母为0不讨论；三角函数中角度取值范围变化被忽略。</li>
+<li><strong>诱导公式“符号看象限”不熟练</strong>：如将 $\tan\left(\alpha-\frac{5\pi}{4}\right)$ 化为 $\tan\left(\alpha-\frac{\pi}{4}\right)$ 时，未考虑周期可能带来的直接相等，导致多走弯路或符号错误。</li>
+<li><strong>恒成立问题盲目分离参数</strong>：未考虑函数单调性、最值是否能取到；当最值在开区间端点处趋近时，不等号是否带等号判断不清。</li>
+<li><strong>放缩不当</strong>：在不等式证明中放缩过度导致结果不成立，或用错基本不等式的等号条件。</li>
+<li><strong>指对转化忘讨论底数</strong>：在指数、对数方程或不等式中进行同底变换，忽略底数需大于0且不等于1的限制，以及对数真数大于0的条件。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目一</strong>（2019 文·6）</h3>
+<p><strong>题目</strong> 已知 $f(x)$ 为奇函数，且当 $x \ge 0$ 时，$f(x)=e^x-1$，求 $x&lt;0$ 时 $f(x)$ 的表达式。<br />
+<strong>思路</strong> 利用奇函数性质将 $x&lt;0$ 的解析式与 $-x&gt;0$ 的已知解析式建立联系。<br />
+<strong>步骤</strong><br />
+设 $x&lt;0$，则 $-x&gt;0$，由已知 $f(-x)=e^{-x}-1$。<br />
+由 $f(x)$ 为奇函数得：$f(x)=-f(-x)=-(e^{-x}-1)=1-e^{-x}$。<br />
+故当 $x&lt;0$ 时，$f(x)=1-e^{-x}$。<br />
+<strong>点评/变式</strong><br />
+此题是奇函数性质的直接应用，转化关键为“$x&lt;0$ 时用 $-x$ 代入已知区间”。变式：改为偶函数，则 $f(x)=f(-x)=e^{-x}-1$；若题干给的是 $x&gt;0$ 的解析式，求 $x&lt;0$，需结合奇偶性及 $f(0)=0$（定义域含0必用）。</p>
+<h3><strong>题目二</strong>（2019 理·14）</h3>
+<p><strong>题目</strong> 已知 $f(x)$ 是奇函数，当 $x&lt;0$ 时 $f(x)=-e^{ax}$，且 $f(\ln 2)=8$，求 $a$。<br />
+<strong>思路</strong> 借助奇函数将对正值 $\ln 2$ 的函数值转化为负值区间计算，再利用已知解析式和对数恒等式解出参数。<br />
+<strong>步骤</strong><br />
+$\ln 2 &gt;0$，由奇函数：$f(\ln 2) = -f(-\ln 2)$。<br />
+因为 $-\ln 2&lt;0$，由已知 $f(-\ln 2) = -e^{a(-\ln 2)} = -e^{-a\ln 2}$。<br />
+所以 $f(\ln 2) = -(-e^{-a\ln 2}) = e^{-a\ln 2} = 2^{-a}$ （或直接 $e^{-a\ln 2}=8$）。<br />
+由题 $f(\ln 2)=8$，得 $e^{-a\ln 2}=8 = 2^3$。<br />
+两边取 $\ln$：$-a\ln 2 = 3\ln 2$，解得 $a=-3$。<br />
+<strong>点评/变式</strong><br />
+本题将未知区间函数值转化为已知区间计算，并结合指数、对数运算求参，体现<strong>转化与运算一体化</strong>。易错点：奇函数符号代错，或指数对数化运算时漏负号。</p>
+<h3><strong>题目三</strong>（2018 文·15）</h3>
+<p><strong>题目</strong> 已知 $\tan\left(\alpha-\frac{5\pi}{4}\right)=\frac{1}{5}$，求 $\tan\alpha$。<br />
+<strong>思路</strong> 先用诱导公式将 $\frac{5\pi}{4}$ 化为与 $\frac{\pi}{4}$ 相关的角，再将 $\alpha-\frac{\pi}{4}$ 视为整体，利用两角和的正切公式求 $\tan\alpha$。<br />
+<strong>步骤</strong><br />
+$\tan\left(\alpha-\frac{5\pi}{4}\right)=\tan\left(\alpha-\pi-\frac{\pi}{4}\right)=\tan\left(\alpha-\frac{\pi}{4}\right)$ （正切周期 $\pi$，且 $\tan(\theta-\pi)=\tan\theta$）。<br />
+已知 $\tan\left(\alpha-\frac{\pi}{4}\right)=\frac{1}{5}$。<br />
+则 $\tan\alpha = \tan\left[\left(\alpha-\frac{\pi}{4}\right)+\frac{\pi}{4}\right] = \frac{\tan\left(\alpha-\frac{\pi}{4}\right)+\tan\frac{\pi}{4}}{1-\tan\left(\alpha-\frac{\pi}{4}\right)\tan\frac{\pi}{4}} = \frac{\frac{1}{5}+1}{1-\frac{1}{5}\times 1} = \frac{\frac{6}{5}}{\frac{4}{5}} = \frac{3}{2}$。<br />
+<strong>点评/变式</strong><br />
+本题两次转化：先利用正切周期化简角，再通过拆角 $\alpha = (\alpha-\frac{\pi}{4})+\frac{\pi}{4}$ 运用和角公式，将非特殊角求值转化为已知正切关系式求值。变式：若给出 $\tan\left(\alpha+\frac{\pi}{4}\right)$，求 $\tan\alpha$，同样灵活拆角即可。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-06.html">2019-文-06</a>（2019 · 易） 考查利用奇偶性求分段函数在对称区间上的解析式，体现转化与化归思想。</li>
+<li><a href="../../exam/数学/2019-理-14.html">2019-理-14</a>（2019 · 中） 考查函数奇偶性与对数运算，利用奇函数性质转化求参数值。</li>
+<li><a href="../../exam/数学/2018-文-15.html">2018-文-15</a>（2018 · 中） 本题给出 tan(α-π/4) 的值，利用两角和的正切公式间接求 tanα。</li>
+<li><a href="../../exam/数学/2017-文-23.html">2017-文-23</a>（2017 · 中） 已知条件为等式，求证两个不等式，考查不等式的证明方法与转化思想。</li>
+<li><a href="../../exam/数学/2014-理-12.html">2014-理-12</a>（2014 · 中） 本题通过正弦函数极值点构造不等式，求参数 m 的取值范围。</li>
+<li><a href="../../exam/数学/2012-文-21.html">2012-文-21</a>（2012 · 难） 本题考查含参数函数的单调区间求法及利用导数解决不等式恒成立问题，并求参数最值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">转化思想</a></li>
+</ul>
+</div>
+</body>
+</html>

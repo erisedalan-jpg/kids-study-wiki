@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>象限坐标符号</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>象限坐标符号</h1><div class="review-mark" data-stem="象限坐标符号"></div><div class="meta-card"><span><strong>考点</strong>象限坐标符号</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复平面的坐标表示</strong>：复数 $z = a + bi\ (a,b \in \mathbb{R})$ 在复平面内对应点 $Z(a, b)$，其中实部 $a$ 为横坐标，虚部 $b$ 为纵坐标。</li>
+<li><strong>各象限内点的坐标符号特征</strong>：<ul>
+<li>第一象限：$a &gt; 0,\ b &gt; 0$</li>
+<li>第二象限：$a &lt; 0,\ b &gt; 0$</li>
+<li>第三象限：$a &lt; 0,\ b &lt; 0$</li>
+<li>第四象限：$a &gt; 0,\ b &lt; 0$</li>
+</ul>
+</li>
+<li><strong>坐标轴上的点</strong>：不在任何象限。若 $a=0, b\neq0$，点在虚轴上；若 $a\neq0, b=0$，点在实轴上；$a=b=0$ 为原点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>已知复数（或点）所在象限求参数取值范围的通用步骤：
+1. <strong>写出点坐标</strong>：将复数化为标准代数形式 $z = a + bi$，明确实部 $a$ 与虚部 $b$ 的表达式（含参数）。
+2. <strong>依据象限列不等式组</strong>：根据点所在象限，写出实部与虚部应满足的符号条件（严格不等式，不含等号）。
+   - 第四象限 → $a&gt;0$ 且 $b&lt;0$；
+   - 第一象限 → $a&gt;0$ 且 $b&gt;0$；
+   - 第二象限 → $a&lt;0$ 且 $b&gt;0$；
+   - 第三象限 → $a&lt;0$ 且 $b&lt;0$。
+3. <strong>解不等式组</strong>：分别求解每一个不等式，再取交集，得到参数的取值范围。
+4. <strong>检验边界</strong>：若题目涉及“在某象限内”，等号不可取；若求点在某半轴或轴上的情况，应单独列出等式条件。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>象限符号记忆混乱</strong>：常将第四象限的纵坐标符号误记为正，导致 $b&lt;0$ 写成 $b&gt;0$。建议记忆口诀：“一全正，二正弦，三正切，四余弦”对应三角函数符号，结合坐标横纵的符号进行联想。</li>
+<li><strong>忽略 “在象限内” 隐含的严格不等号</strong>：将 $a&gt;0, b&lt;0$ 误写成 $a \ge 0, b \le 0$，错误包含了坐标轴上的点。题目明确说“在第四象限”，一定不能取等。</li>
+<li><strong>混淆实部与虚部</strong>：将 $m+3$ 当成虚部，$m-1$ 当成实部，导致不等式方向完全反置。应始终牢记 $z = a+bi$ 的对应顺序。</li>
+<li><strong>解不等式组时取并集</strong>：误把同时满足的条件当成“或”的关系，取了并集，导致范围扩大。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $z = (m+3) + (m-1)i$ 在复平面内对应的点在第四象限，求实数 $m$ 的取值范围。</p>
+<p><strong>思路</strong>：由复数的几何意义，点坐标为 $(m+3, m-1)$。第四象限需要横坐标为正、纵坐标为负，列出关于 $m$ 的不等式组，解出 $m$ 的范围。</p>
+<p><strong>步骤</strong>：
+1. 实部 $a = m+3$，虚部 $b = m-1$。
+2. 点在第四象限 $\Rightarrow a&gt;0$ 且 $b&lt;0$。
+3. 列不等式组：
+   $$\begin{cases} m+3 &gt; 0 \ m-1 &lt; 0 \end{cases}$$
+4. 解之得 $m &gt; -3$ 且 $m &lt; 1$，即 $-3 &lt; m &lt; 1$。
+5. 对照选项，取值范围为 $(-3, 1)$，选项 A。</p>
+<p><strong>点评/变式</strong>：
+- 本题属于“已知象限求参数”的基础题型，核心是建立实部与虚部的符号不等式。
+- <strong>变式1</strong>：若点在第二象限，则条件变为 $m+3&lt;0$ 且 $m-1&gt;0$，此时不等式组无解，即不存在 $m$ 使点在第二象限。
+- <strong>变式2</strong>：若点位于直线 $y=x$ 上（虚部等于实部），则列出 $m-1 = m+3$，解得无解；若在虚轴上（实部为0），则 $m+3=0$，此时 $m=-3$，虚部为 $-4$，点在虚轴负半轴上，不属于任何象限。
+- 此类题可进一步与复数的模、共轭复数、复数运算的几何意义结合，但核心仍是坐标与象限的符号关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-01.html">2016-理-01</a>（2016 · 易） 已知复数代数形式，根据其在复平面内对应点所在象限求参数取值范围，涉及象限符号和解不等式组。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1114-象限坐标符号.html">象限坐标符号</a></li>
+</ul>
+</div>
+</body>
+</html>

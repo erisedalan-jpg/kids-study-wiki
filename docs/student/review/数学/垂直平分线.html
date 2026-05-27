@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>垂直平分线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>垂直平分线</h1><div class="review-mark" data-stem="垂直平分线"></div><div class="meta-card"><span><strong>考点</strong>垂直平分线</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>线段垂直平分线</strong>：过线段中点且垂直于线段的直线。其上任一点到线段两端点距离相等。</li>
+<li><strong>三角形外接圆圆心（外心）</strong>：三角形三条边垂直平分线的交点。外心到三角形三个顶点距离相等（外接圆半径 $R$）。</li>
+<li>坐标平面上求垂直平分线的步骤：</li>
+<li>求线段中点 $M(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2})$；</li>
+<li>求线段斜率 $k$，则垂直平分线斜率为 $-\frac{1}{k}$（当 $k \neq 0$ 且 $k$ 存在时）；</li>
+<li>利用点斜式写出直线方程。</li>
+<li>外心坐标的常见求法：</li>
+<li><strong>垂直平分线交点法</strong>：任选两边作垂直平分线，联立方程求解交点。</li>
+<li><strong>待定系数法</strong>：设圆心 $(a,b)$，由 $|OA|=|OB|=|OC|$ 列方程组求 $a,b$。</li>
+<li><strong>适用条件</strong>：给定三角形三个顶点坐标求外心及外接圆方程。垂直平分线法在边平行于坐标轴时尤为简便。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>优先观察边是否平行于坐标轴</strong><br />
+   若某边水平或竖直，其垂直平分线为竖直或水平直线，可直接写出方程（如 $x = \text{中点横坐标}$ 或 $y = \text{中点纵坐标}$），减少计算量。</p>
+</li>
+<li>
+<p><strong>选择合适两边作垂直平分线</strong><br />
+   通常选取两条斜率易算且不为0、不涉及复杂分数的边；若有一边水平/竖直，必须利用它。</p>
+</li>
+<li>
+<p><strong>规范求垂直平分线的步骤</strong>  </p>
+</li>
+<li>写出两端点坐标；</li>
+<li>计算中点坐标；</li>
+<li>计算原线段斜率，取负倒数得垂直平分线斜率；</li>
+<li>
+<p>点斜式写出方程，化为一般式或简单形式。</p>
+</li>
+<li>
+<p><strong>联立求交点</strong><br />
+   将两条垂直平分线方程联立求解，得外心坐标 $(x_0,y_0)$。<br />
+   （若使用待定系数法，通常列 $|OA|^2 = |OB|^2$ 和 $|OB|^2 = |OC|^2$，化简方程组消去二次项，更快得到线性方程组。）</p>
+</li>
+<li>
+<p><strong>根据所求外心进行后续计算</strong><br />
+   如求外接圆半径、判断点与圆的位置关系等。坐标距离公式 $d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$ 不要错用。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>垂直斜率误用</strong>：忘记取负倒数（如斜率 $k$ 的垂线斜率是 $-\frac{1}{k}$，而非 $\frac{1}{k}$ 或 $k$ 本身）。</li>
+<li><strong>中点坐标算错</strong>：横坐标、纵坐标分别平均时，分子漏加或除以 $2$ 遗漏。</li>
+<li><strong>直线方程化简出错</strong>：尤其点斜式转一般式时符号错误，导致交点坐标错误。</li>
+<li><strong>忽视斜率不存在的情况</strong>：当线段垂直 $x$ 轴时，斜率不存在，其垂直平分线为水平线 $y = y_{\text{中}}$，不能机械套用负倒数。</li>
+<li><strong>坐标代入距离公式时漏平方或符号错</strong>：距离公式根号内的平方溢出括号。</li>
+<li><strong>计算外心后无脑套公式</strong>：若外心坐标含分数，到原点距离需通信分、开方，小心根号内化简。</li>
+<li><strong>混淆外心与重心、内心</strong>：外心是垂直平分线交点，别记成中线交点（重心）或角平分线交点（内心）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1 （2015-文-07）</h3>
+<p><strong>题目</strong>：已知三点 $A(1,0)$，$B(0,\sqrt{3})$，$C(2,\sqrt{3})$，则 $\triangle ABC$ 外接圆的圆心到原点的距离为（ ）<br />
+A. $\dfrac{5}{3}$　B. $\dfrac{\sqrt{21}}{3}$　C. $\dfrac{2\sqrt{5}}{3}$　D. $\dfrac{4}{3}$</p>
+<p><strong>思路</strong>：注意到 $B$、$C$ 纵坐标相同，线段 $BC$ 为水平边，其垂直平分线为竖直线 $x=1$。再求另一直线（如 $AB$ 的垂直平分线），联立可得圆心坐标，再计算圆心到原点距离。</p>
+<p><strong>步骤</strong>：
+1. <strong>求 $BC$ 的垂直平分线</strong>：<br />
+   $B(0,\sqrt{3})$, $C(2,\sqrt{3})$，中点 $M_{BC}(1,\sqrt{3})$，$BC$ 斜率 $k_{BC}=0$，垂直平分线垂直于 $x$ 轴，故方程为 $x=1$。</p>
+<ol>
+<li>
+<p><strong>求 $AB$ 的垂直平分线</strong>：<br />
+   $A(1,0)$, $B(0,\sqrt{3})$，中点 $M_{AB}\left(\dfrac{1+0}{2},\dfrac{0+\sqrt{3}}{2}\right)=\left(\dfrac12,\dfrac{\sqrt{3}}{2}\right)$。<br />
+   $AB$ 斜率 $k_{AB}=\dfrac{\sqrt{3}-0}{0-1}=-\sqrt{3}$，垂直平分线斜率为 $\dfrac{1}{\sqrt{3}}=\dfrac{\sqrt{3}}{3}$。<br />
+   方程：$y-\dfrac{\sqrt{3}}{2}=\dfrac{\sqrt{3}}{3}\left(x-\dfrac12\right)$，化简得 $y=\dfrac{\sqrt{3}}{3}x+\dfrac{\sqrt{3}}{3}$。</p>
+</li>
+<li>
+<p><strong>联立求外心 O'</strong>：<br />
+   将 $x=1$ 代入 $y=\dfrac{\sqrt{3}}{3}\times1+\dfrac{\sqrt{3}}{3}=\dfrac{2\sqrt{3}}{3}$，<br />
+   外心坐标为 $O'\left(1,\dfrac{2\sqrt{3}}{3}\right)$。</p>
+</li>
+<li>
+<p><strong>求圆心到原点距离</strong>：<br />
+   $|OO'|=\sqrt{(1-0)^2+\left(\dfrac{2\sqrt{3}}{3}-0\right)^2}=\sqrt{1+\dfrac{4 \times 3}{9}}=\sqrt{1+\dfrac{4}{3}}=\sqrt{\dfrac{7}{3}}=\dfrac{\sqrt{21}}{3}$。</p>
+</li>
+</ol>
+<p><strong>点评/变式</strong>：本题充分利用了水平边的垂直平分线为直接书写形式，大幅简化计算。若三边均不平行于坐标轴，则需分别求两条垂直平分线。变式：将 $C$ 坐标改为 $(2,-\sqrt{3})$，外心位置改变，但仍可一样操作。注意外心可能在三角形内部也可能在外部，但求解方法不变。本题常见错误是 $AB$ 斜率求反（写为 $\sqrt{3}$）导致垂直斜率出错，或中点坐标代错。若采用待定系数法，设圆心 $(a,b)$，由 $|OA|^2=|OB|^2$ 和 $|OB|^2=|OC|^2$ 也可迅速得到线性方程组，但本题垂直平分线法更直观。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-07.html">2015-文-07</a>（2015 · 中） 已知三角形三点坐标，求外接圆圆心到原点的距离，属于解析几何计算题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">垂直平分线</a></li>
+</ul>
+</div>
+</body>
+</html>

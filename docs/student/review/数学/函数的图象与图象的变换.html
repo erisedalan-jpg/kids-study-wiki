@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数的图象与图象的变换</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数的图象与图象的变换</h1><div class="review-mark" data-stem="函数的图象与图象的变换"></div><div class="meta-card"><span><strong>考点</strong>函数的图象与图象的变换</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：2</li>
+<li>真题数：2；年份跨度：2010–2018</li>
+<li>出现题位：解答24 选择3</li>
+<li>难度分布：易1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数图象的识别与判断</strong>（针对给定解析式选图）<br />
+  基本流程：<br />
+  ① 确定定义域 → 排除无定义点选项；<br />
+  ② 判断奇偶性（$f(-x)=\pm f(x)$）→ 若有对称性，缩小范围；<br />
+  ③ 计算特殊点（与坐标轴交点、极值点、极限点）的函数值符号或大小；<br />
+  ④ 利用导数或极限分析单调性与渐近趋势（$x\to\pm\infty$，无穷大/无穷小，渐近线）；<br />
+  ⑤ 结合选项差异进行排除，锁定正确答案。</li>
+<li><strong>常见图象变换</strong>（$y=f(x)$ 为基础）  </li>
+<li>平移：$y=f(x+a)$ 左右平移（左加右减），$y=f(x)+b$ 上下平移（上加下减）。  </li>
+<li>对称：$y=-f(x)$ 关于 $x$ 轴对称；$y=f(-x)$ 关于 $y$ 轴对称；$y=-f(-x)$ 关于原点对称。  </li>
+<li>翻折：$y=|f(x)|$ 保留 $x$ 轴上方部分，下方沿 $x$ 轴对称翻折；$y=f(|x|)$ 保留 $y$ 轴右侧部分，并作其关于 $y$ 轴的对称图形。</li>
+<li><strong>含绝对值函数的图象</strong><br />
+  对 $f(x)=|kx+b|+c$ 型，先去绝对值写成分段一次函数：<br />
+  $$f(x)=\begin{cases} kx+b+c, &amp; x\geq -\frac{b}{k}\ -kx-b+c, &amp; x&lt;-\frac{b}{k} \end{cases}$$<br />
+  其图象为以 $\left(-\frac{b}{k}, c\right)$ 为顶点的“V”形折线。</li>
+<li><strong>利用图象解不等式</strong><br />
+  不等式 $f(x)\le g(x)$ 的解集几何意义：函数 $y=f(x)$ 的图象在 $y=g(x)$ 图象下方（含交点）所对应的 $x$ 范围。<br />
+  解集非空问题等价于两函数图象存在交点，常通过临界相切、过定点等极端位置确定参数边界，再用运动观点求得参数范围。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接识图（选择题）</strong>  </li>
+<li>步骤1：观察解析式结构，求定义域，排除定义域不符选项。  </li>
+<li>步骤2：检验奇偶性（常用 $f(-x)$ 化简），若不具有奇偶性则跳至特殊点。  </li>
+<li>步骤3：选取易算的数值（如 $x=0, 1, e$ 等）代入求 $f(x)$，根据正负、大小排除选项。  </li>
+<li>步骤4：结合 $x\to +\infty$（或 $x\to -\infty$）时函数的变化趋势（可用极限、函数增长快慢比较），排除剩余干扰项。  </li>
+<li>步骤5：必要时求导确定单调区间、极值点辅助确认。</li>
+<li><strong>带绝对值函数的图象与不等式求解</strong>  </li>
+<li>步骤1：根据零点分段，将函数改写为分段形式，必要时画草图。  </li>
+<li>步骤2：若求参数取值范围，将不等式转化为两图象的位置关系。通常固定 $y=f(x)$（曲线或折线），让 $y=g(x)$（动直线或曲线）运动，寻找临界状态：  <ul>
+<li>过图象拐点、端点；  </li>
+<li>斜率变化导致平行（无交点）；  </li>
+<li>相切（导数相等）。  </li>
+</ul>
+</li>
+<li>步骤3：解出临界参数，并验证端点是否满足题意（解集非空通常取闭区间，注意平行时无交点需开区间），写出最终范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域导致奇偶性误判</strong><br />
+  务必先求定义域，只有关于原点对称时，奇偶性的讨论才有意义，否则函数既不是奇函数也不是偶函数。  </li>
+<li><strong>特殊点取值计算错误</strong><br />
+  对于 $e^x$、$\ln x$ 等超越函数，代入整数点要准确，如 $f(1)=e-\frac{1}{e}&gt;0$，而 $f(0)$ 可能无定义。避免心算失误。  </li>
+<li><strong>无穷远处趋势判断失准</strong><br />
+  当分子分母均趋于无穷时，若未比较主导项，可能错判渐近线或极限值（如 $e^x$ 远快于多项式）。必要时用洛必达或提取主导因子。  </li>
+<li><strong>分段函数端点处理不当</strong><br />
+  将绝对值函数改写成分段式时，分段点的等号归属要明确，画图时端点用实心/空心标注。若临界刚好在分段点，需单独检验。  </li>
+<li><strong>图象解不等式的边界开闭错误</strong><br />
+  由图象求参数范围时，临界状态对应的参数值是否可取，必须回代题目验证（如解集非空：当两线平行无交点时参数不可取；若仅过一个点且解集为该点，则仍非空，参数可取）。常见失分点是漏掉或错加等号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2018年全国Ⅲ卷理科第3题</h3>
+<p><strong>题目</strong>：函数 $f(x)=\dfrac{e^x-e^{-x}}{x^2}$ 的图象大致是（　　）<br />
+（选项为四幅图，需由性质选出正确图形）</p>
+<p><strong>思路</strong>：此题为典型的“由式识图”选择题。先看定义域（$x\neq0$），据此选项均有间断点；接着利用奇偶性、特殊点函数值、无穷远处趋势逐层排除。</p>
+<p><strong>步骤</strong>：<br />
+1. <strong>奇偶性</strong>：定义域 ${x|x\neq0}$ 关于原点对称。<br />
+   $f(-x)=\dfrac{e^{-x}-e^{x}}{(-x)^2} = -\dfrac{e^{x}-e^{-x}}{x^2} = -f(x)$，<br />
+   函数为奇函数，图象关于原点对称 ⇒ 排除选项 A（A为偶函数特征）。<br />
+2. <strong>特殊点</strong>：取 $x=1$，$f(1)=e-\dfrac1e &gt;0$，第一象限内函数值应为正 ⇒ 排除选项 D（D 在 $x=1$ 时值为负）。<br />
+3. <strong>无穷远趋势</strong>：当 $x\to+\infty$，$e^x$ 主导，$e^{-x}\to0$，$f(x)\sim\dfrac{e^x}{x^2}\to+\infty$，图象应趋向 $+\infty$ ⇒ 排除选项 C（C 中 $x\to+\infty$ 时 $y$ 趋于 0 或有界）。<br />
+   综上，正确选项为 B。</p>
+<p><strong>点评/变式</strong>：本题综合考查了奇偶性、特殊点及渐近趋势，是高考函数图象题的范式操作。注意指数型函数的增长速率，$\dfrac{e^x}{x^2}\to+\infty$ 可以直接由“指数爆炸”记忆。变式：若分母改为 $e^x+e^{-x}$，则奇偶性改变，需重新分析，同理可依本法排除。</p>
+<h3>2. 2010年全国新课标卷文科第24题</h3>
+<p><strong>题目</strong>：设函数 $f(x)=|2x-4|+1$。<br />
+（Ⅰ）画出 $y=f(x)$ 的图象；<br />
+（Ⅱ）若不等式 $f(x)\leq ax$ 的解集非空，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>：绝对值函数先分段，再用图象工具解决不等式有解的参数范围问题。将不等式视为两曲线 $y=f(x)$（固定折线）与 $y=ax$（过原点动直线）的位置关系，找出恰有交点的临界斜率。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）分段：由 $2x-4=0$ 得 $x=2$。<br />
+$$f(x)=\begin{cases} -2x+5, &amp; x&lt;2 \ 2x-3, &amp; x\geq 2 \end{cases}$$<br />
+画出分段折线：当 $x&lt;2$ 时为斜率 $-2$ 的射线，过 $(2,1)$；当 $x\geq 2$ 时为斜率 $2$ 的射线，也过 $(2,1)$；顶点为 $(2,1)$。<br />
+（Ⅱ）设 $g(x)=ax$，过原点的直线。不等式 $f(x)\le ax$ 解集非空等价于两条曲线存在交点（或 $f(x)$ 在 $g(x)$ 下方有公共区域）。<br />
+考察动直线绕原点旋转：<br />
+- 当直线过顶点 $(2,1)$ 时，斜率 $a=\frac12$，此时直线与折线恰交于一点，解集为 ${2}$，非空，可取。<br />
+- 当直线斜率增大到与右支平行或更大时，直线始终在折线上方？右支斜率为 $2$，当 $a\ge2$ 时，直线与右支无交点（右支 $y=2x-3$ 与 $y=ax$ 比较），但与左支可能仍有交点，需仔细分析。由图象观察：直线过顶点且继续逆时针旋转（$a&gt;\frac12$），直线位于折线上方，除顶点外无交点，但解集仍非空（因顶点在）。所以 $a\ge\frac12$ 时，不等式 $f(x)\le ax$ 至少有一个解 $x=2$，故整个 $[\frac12,+\infty)$ 满足。<br />
+- 考察直线顺时针旋转（$a&lt;\frac12$），当 $a&lt;-2$ 时，直线与左支射线 $y=-2x+5$ 相交（因为斜率小于 $-2$ 的直线最终会穿过该射线），解集非空。临界 $a=-2$ 时，直线 $y=-2x$ 与左支 $y=-2x+5$ 平行且在下方，无交点，解集为空，故 $a=-2$ 不可取。<br />
+综上，$a$ 的取值范围为 $(-\infty,-2)\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-03.html">2018-理-03</a>（2018 · 易） 本题考查函数图像的识别，通过奇偶性、特殊点函数值及极限排除错误选项。</li>
+<li><a href="../../exam/数学/2010-文-24.html">2010-文-24</a>（2010 · 难） 考查绝对值函数图象画法及利用图象解含参不等式求参数范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数的图象与图象的变换</a></li>
+</ul>
+</div>
+</body>
+</html>

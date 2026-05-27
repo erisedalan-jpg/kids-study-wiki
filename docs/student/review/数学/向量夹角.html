@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量夹角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量夹角</h1><div class="review-mark" data-stem="向量夹角"></div><div class="meta-card"><span><strong>考点</strong>向量夹角</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：12</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向量夹角定义</strong>：已知两个非零向量 $\vec{a}$ 与 $\vec{b}$，则 $\angle AOB = \theta \ (0 \le \theta \le \pi)$ 为向量夹角。向量必须共起点。</li>
+<li><strong>向量的模</strong>：$|\vec{a}| = \sqrt{\vec{a}^2}$，且 $|\vec{a}|^2 = \vec{a}^2$。</li>
+<li><strong>模长运算公式</strong>：</li>
+<li>和向量的模：$|\vec{a} + \vec{b}|^2 = |\vec{a}|^2 + 2\vec{a} \cdot \vec{b} + |\vec{b}|^2$。</li>
+<li>差向量的模：$|\vec{a} - \vec{b}|^2 = |\vec{a}|^2 - 2\vec{a} \cdot \vec{b} + |\vec{b}|^2$。</li>
+<li><strong>数量积定义</strong>：$\vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos \theta$。对于单位向量 $\vec{e}_1, \vec{e}_2$，有 $\vec{e}_1 \cdot \vec{e}_2 = \cos \theta$。</li>
+<li><strong>三角函数单调性</strong>：余弦函数在 $[0, \pi]$ 上单调递减，因此由 $\cos \theta$ 的范围反推 $\theta$ 的范围时需注意不等号方向。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理“已知模的关系，求夹角范围”类选择题的标准步骤：
+1. <strong>两边平方</strong>：将给定的模长不等式（如 $|\vec{a} + \vec{b}| &gt; 1$）两边同时平方，去掉根号。
+2. <strong>展开降幂</strong>：利用模长平方公式展开，将几何问题转化为代数运算。
+3. <strong>代入条件</strong>：将已知的模长（如 $|\vec{a}|=|\vec{b}|=1$）及数量积公式 $\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos \theta$ 代入不等式，整理出关于 $\cos \theta$ 的不等式。
+4. <strong>求角范围</strong>：结合 $\theta \in [0, \pi]$ 的范围限制，利用余弦函数的单调性，将 $\cos \theta$ 的不等式等价转化为对应的角度 $\theta$ 的取值范围。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记平方</strong>：直接对向量模的不等式进行移项或开方，导致逻辑错误。必须合理使用“两边平方”这一核心手段。</li>
+<li><strong>混淆范围</strong>：忽视向量夹角规定范围是 $[0, \pi]$。解出 $\cos \theta$ 范围后，错用三角不等式导致角度区间错误。务必牢记在 $[0, \pi]$ 上，余弦函数单调递减。</li>
+<li><strong>忽视等号</strong>：求解“&gt;”或“&lt;”构成的命题时，忘记检查区间的开闭情况。例如 $\cos \theta &gt; -\frac{1}{2}$ 在 $[0, \pi]$ 上对应的角度区间不含右端点，即 $[0, \frac{2\pi}{3})$。</li>
+<li><strong>单位向量性质</strong>：未能及时由“单位向量”得出 $|\vec{a}|=|\vec{b}|=1$ 和 $\vec{a} \cdot \vec{b} = \cos \theta$ 的简化条件。</li>
+<li><strong>整体构思</strong>：只验证了题干直接给出的 $P_1$ 或 $P_2$，而没有将 $P_3$、$P_4$ 转化为 $|\vec{a} - \vec{b}|^2$ 的形式进行推演，导致凭感觉选错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $\vec{a}$ 与 $\vec{b}$ 均为单位向量，夹角为 $\theta$。判断命题真假：
+$P_1$：$|\vec{a}+\vec{b}| &gt; 1 \iff \theta \in [0, \frac{2\pi}{3})$；$P_2$：$|\vec{a}+\vec{b}| &gt; 1 \iff \theta \in (\frac{\pi}{3}, \pi]$；
+$P_3$：$|\vec{a}-\vec{b}| &gt; 1 \iff \theta \in [0, \frac{\pi}{3})$；$P_4$：$|\vec{a}-\vec{b}| &gt; 1 \iff \theta \in (\frac{\pi}{3}, \pi]$。</p>
+<p><strong>思路</strong>：核心是分别解出“和的模大于1”与“差的模大于1”的条件。通过对向量模不等式两边平方，将其转化为 $\cos \theta$ 的不等式，再结合 $\theta \in [0, \pi]$ 求出角度范围。</p>
+<p><strong>步骤</strong>：
+1. <strong>处理 $P_1$ 与 $P_2$（向量和的模）</strong>：
+   - 由 $|\vec{a}+\vec{b}| &gt; 1$ 平方得 $|\vec{a}|^2 + 2\vec{a}\cdot\vec{b} + |\vec{b}|^2 &gt; 1$。
+   - 代入单位向量性质：$1 + 2\cos\theta + 1 &gt; 1 \implies \cos\theta &gt; -\frac{1}{2}$。
+   - 在 $\theta \in [0, \pi]$ 内，余弦值大于 $-\frac{1}{2}$ 对应区间为 $[0, \frac{2\pi}{3})$。
+   - 结论：$P_1$ 为真，$P_2$ 为假。</p>
+<ol>
+<li><strong>处理 $P_3$ 与 $P_4$（向量差的模）</strong>：</li>
+<li>由 $|\vec{a}-\vec{b}| &gt; 1$ 平方得 $|\vec{a}|^2 - 2\vec{a}\cdot\vec{b} + |\vec{b}|^2 &gt; 1$。</li>
+<li>同理代入：$1 - 2\cos\theta + 1 &gt; 1 \implies \cos\theta &lt; \frac{1}{2}$。</li>
+<li>在 $\theta \in [0, \pi]$ 内，余弦值小于 $\frac{1}{2}$ 对应区间为 $(\frac{\pi}{3}, \pi]$。</li>
+<li>
+<p>结论：$P_3$ 为假，$P_4$ 为真。</p>
+</li>
+<li>
+<p><strong>综合判断</strong>：真命题为 $P_1$ 和 $P_4$。</p>
+</li>
+</ol>
+<p><strong>点评/变式</strong>：本题完全基于单位向量的几何特性。核心陷阱在于 $\theta$ 范围是闭区间 $[0, \pi]$，且余弦函数在此区间单调递减。
+- <strong>变式</strong>：若条件由“大于1”改为“小于等于1”，则 $|\vec{a}+\vec{b}| \le 1 \iff \theta \in [\frac{2\pi}{3}, \pi]$；$|\vec{a}-\vec{b}| \le 1 \iff \theta \in [0, \frac{\pi}{3}]$。
+- <strong>复习建议</strong>：在稿纸上自行默写并推导一遍差向量的平方展开及角度转换过程，避免考试时因死记“和”的结果而在“差”的题目上掉入命题陷阱。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-10.html">2011-理-10</a>（2011 · 中） 考查单位向量模长不等式与夹角范围的关系，判断四个命题的真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/324-向量的夹角.html">向量夹角</a></li>
+</ul>
+</div>
+</body>
+</html>

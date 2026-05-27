@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分段求解</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分段求解</h1><div class="review-mark" data-stem="分段求解"></div><div class="meta-card"><span><strong>考点</strong>分段求解</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>绝对值的定义</strong>：$|x-a|=\begin{cases} x-a, &amp; x\geq a \ a-x, &amp; x&lt;a \end{cases}$，在数轴上表示点 $x$ 到点 $a$ 的距离。</li>
+<li><strong>和型绝对值函数</strong>：$f(x)=|x-a|+|x-b|$（$a\leq b$），其分段形式为
+  $$f(x)=\begin{cases} -2x+a+b, &amp; x<a \\ b-a, & a\leq x\leq b \\ 2x-a-b, & x>b \end{cases}$$
+  几何意义：数轴上点到 $a,b$ 的距离之和。最小值为 $b-a$，且在 $x\in[a,b]$ 上取得。</li>
+<li><strong>绝对值三角不等式</strong>：$||a|-|b||\leq |a\pm b|\leq |a|+|b|$。
+  推论：$|x-a|+|x-b|\geq |(x-a)-(x-b)|=|a-b|$，等号当 $(x-a)(x-b)\leq0$ 时成立。</li>
+<li><strong>恒成立转化</strong>：$\forall x,\ f(x)\geq k \iff f(x)<em _max="\max">{\min}\geq k$；$\forall x,\ f(x)\leq k \iff f(x)</em>\leq k$。</li>
+<li><strong>零点分段法</strong>：令每个绝对值内部的线性表达式为零，得零点，将数轴分区，在每个区间上脱去绝对值符号，将函数化为一次函数，然后求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>对于含多个绝对值的不等式或恒成立问题，通用解决流程：
+1. <strong>化简定参</strong>：将函数整理为 $f(x)=\sum |x-a_i|$ 或 $f(x)=\sum |mx+n|$ 的标准形，明确参数关系。
+2. <strong>零点排序</strong>：求出所有绝对值内部表达式的零点，按从小到大排列，将数轴分成若干段。
+3. <strong>分段写式</strong>：在每一段上，根据 $x$ 与零点的大小关系去掉绝对值符号，合并得到该区间上的解析式（通常为一次函数或常数）。
+4. <strong>分段求解不等式</strong>：
+   - 每个区间上解所得不等式；
+   - 最后结果必须与该区间的范围<strong>取交集</strong>；
+   - 最终解集为各区间的<strong>并集</strong>。
+5. <strong>最值/恒成立策略</strong>：
+   - 若能直接利用绝对值三角不等式或几何意义求最值，优先使用（更快捷）；
+   - 当参数出现在绝对值内部，可构造 $|x-m|+|x-n|\geq |m-n|$，转化为关于参数的不等式；
+   - 若必须分段，则逐段分析函数的单调性与最值，再依 “$f(x)\geq k$ 恒成立”等价于最小值 $\geq k$ 处理。
+6. <strong>检验等号</strong>：使用绝对值不等式时，必须检查等号能否成立，确保转化等价。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>零点遗漏或顺序错乱</strong>：当绝对值内部为 $|x-a^2|,|x-2a+1|$ 等含参数式时，对参数的不同取值，零点大小关系会改变，需讨论或利用对称性避开分段。此题利用不等式整体求最值避免了讨论。</li>
+<li><strong>解不等式后忘记与分段区间取交集</strong>：分段时，每个区间的解只是局部解，必须与区间定义域取交，否则会扩大解集导致错误。</li>
+<li><strong>恒成立方向弄反</strong>：$f(x)\geq 4$ 恒成立应保证 $f(x)$ 的最小值 $\geq 4$，而非最大值。很多学生误求最大值导致错误。</li>
+<li><strong>绝对值三角不等式等号条件误判</strong>：$|x-a^2|+|x-2a+1|\geq |(x-a^2)-(x-2a+1)| = |a^2-2a+1|$，等号在 $(x-a^2)(x-2a+1)\leq 0$ 时成立。需确认这样的 $x$ 确实存在（该题中由于 $x$ 可取任意实数，总能找到满足条件的 $x$，故最值可以取到），否则不能直接令最小值等于 $|a^2-2a+1|$。</li>
+<li><strong>混淆“解集非空”与“恒成立”</strong>：第(1)问是求解不等式（存在性），第(2)问是任意 $x$ 都成立，逻辑不同，不能混用方法。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·文·23）已知函数 $f(x)=|x-a^2|+|x-2a+1|$。
+(1) 当 $a=2$ 时，求不等式 $f(x)\geq 4$ 的解集；
+(2) 若 $f(x)\geq 4$，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong><br />
+(1) 代入 $a=2$ 得 $f(x)=|x-4|+|x-5|$，利用几何意义（数轴上点 $x$ 到 $4,5$ 的距离之和）或零点分段法将数轴分为 $(-\infty,4),[4,5],(5,+\infty)$ 三段，脱去绝对值解不等式。(2) 恒成立问题转化为求 $f(x)$ 的最小值。直接使用绝对值三角不等式：$f(x)\geq |(x-a^2)-(x-2a+1)| = (a-1)^2$，令最小值 $(a-1)^2\geq 4$，解出 $a$ 的范围，注意验证最小值能否取到。</p>
+<p><strong>步骤</strong><br />
+(1) $a=2$ 时，$f(x)=|x-4|+|x-5|$。<br />
+零点为 $4,5$，分段：
+- 当 $x&lt;4$ 时，$f(x)=-(x-4)-(x-5)= -2x+9$。不等式 $-2x+9\geq 4 \Rightarrow x\leq \frac{5}{2}$。与 $x&lt;4$ 取交得 $x\leq \frac{5}{2}$。
+- 当 $4\leq x\leq 5$ 时，$f(x)=(x-4)-(x-5)=1$。不等式 $1\geq 4$ 无解。
+- 当 $x&gt;5$ 时，$f(x)=(x-4)+(x-5)=2x-9$。不等式 $2x-9\geq 4 \Rightarrow x\geq \frac{13}{2}$。与 $x&gt;5$ 取交得 $x\geq \frac{13}{2}$。
+综上，解集为 $\left{ x \middle| x\leq \frac{5}{2} \text{ 或 } x\geq \frac{13}{2} \right}$。</p>
+<p>(2) $f(x)=|x-a^2|+|x-2a+1| \geq |(x-a^2)-(x-2a+1)| = |a^2-2a+1| = (a-1)^2$。<br />
+当且仅当 $(x-a^2)(x-2a+1)\leq 0$ 时等号成立。对任意 $a$，总存在 $x$ 介于 $a^2$ 与 $2a-1$ 之间（含端点），故最小值确实为 $(a-1)^2$。<br />
+要使 $f(x)\geq 4$ 对所有 $x$ 成立，只需最小值 $(a-1)^2\geq 4$，解得 $a-1\leq -2$ 或 $a-1\geq 2$，即 $a\leq -1$ 或 $a\geq 3$。<br />
+$a$ 的取值范围是 $(-\infty,-1]\cup[3,+\infty)$。</p>
+<p><strong>点评/变式</strong><br />
+- 该题完美展示了绝对值恒成立问题的通法：利用 $|x-m|+|x-n|\geq |m-n|$ 直接转化为参数不等式，避免了对 $a$ 的复杂分段讨论，极大地简化过程。
+- 若问题改为 $f(x)\leq 4$ 有解，则应考虑 $f(x)$ 的最小值 $\leq 4$，同样使用该最值转化。
+- 变式：若函数为 $|x-a^2|+|x+2a+1|$，则差项的绝对值将变为 $|a^2+2a+1|=(a+1)^2$，其余同理，注意等号条件存在性需验证。
+- 强调：优先考虑整体最值工具（绝对值三角不等式、几何距离最值），只有在零点确定且不含参数或参数影响分区时才详细分段。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-23.html">2020-文-23</a>（2020 · 中） 该题考查含参绝对值不等式的分段求解及利用绝对值三角不等式求参数范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">分段求解</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>表面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>表面积</h1><div class="review-mark" data-stem="表面积"></div><div class="meta-card"><span><strong>考点</strong>表面积</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>柱体表面积</strong>：圆柱表面积 $S_{\text{柱}}=2\pi r^2+2\pi r h$，其中 $r$ 为底面半径，$h$ 为高；若为组合体且底面与其它几何体重合，重合面不计入表面积。</li>
+<li><strong>锥体表面积</strong>：圆锥表面积 $S_{\text{锥}}=\pi r^2+\pi r l$，其中 $r$ 为底面半径，$l$ 为母线长。母线 $l$ 与高 $h$、底面半径 $r$ 满足 $l=\sqrt{r^2+h^2}$。</li>
+<li><strong>组合体表面积</strong>：几何体由多个基本几何体拼接而成时，总表面积为各几何体侧面积之和，减去所有重合部分的面积（通常为底面圆面积）。注意暴露面与非暴露面的分辨。</li>
+<li><strong>三视图还原</strong>：由三视图还原几何体时，先通过正视图、侧视图判断高度和形状，通过俯视图判断底面形状和尺寸。组合体需明确组合方式及交界面位置。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读三视图，拆解组合体</strong>：先识别组合体由哪几个基本几何体构成，明确上下、左右的拼接关系。本题为下圆柱上圆锥，圆柱与圆锥底面大小相同且共底面结合。</li>
+<li><strong>提取尺寸参数</strong>：从三视图标注中获取底面直径（或半径）、各部分高。如图中圆柱高 $4$，圆锥高 $2\sqrt{3}$，底面直径 $4$，即半径 $r=2$。</li>
+<li><strong>求锥体母线</strong>：对圆锥，利用母线公式 $l=\sqrt{r^2+h_{\text{锥}}^2}$ 计算母线长，以备侧面积公式使用。</li>
+<li><strong>分块计算侧面积</strong>：圆柱侧面积 $S_{\text{柱侧}}=2\pi r h_{\text{柱}}$，圆锥侧面积 $S_{\text{锥侧}}=\pi r l$。注意圆柱是否上下底面均暴露，若其中一面与圆锥底面重合，则只计算一个底面或只计算圆柱侧面积加一个底面，视具体暴露情况。本题组合体暴露面为：圆锥侧面、圆柱侧面、圆柱下底面。因此总表面积 = 圆锥侧面积 + 圆柱侧面积 + 圆柱一个底面面积。</li>
+<li><strong>代入数值求解</strong>：将半径、高、母线等代入公式，注意 $π$ 保留并合并同类项，最终比对选项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将重合面计入表面积</strong>：组合体内部紧贴的面不再是外表面，不可重复计算。常见错误：计算圆锥表面积包含底面圆，又算圆柱上底面，导致多算一个圆的面积。</li>
+<li><strong>圆锥母线与其高度混淆</strong>：直接用圆锥的高 $h_{\text{锥}}$ 代替母线 $l$ 计算侧面积，导致公式错误（$S_{\text{锥侧}}=\pi r h_{\text{锥}}$ 是错的）。</li>
+<li><strong>三视图尺寸对应错误</strong>：未正确区分三视图中标注的长度是直径还是半径，或混淆圆锥高与圆柱高。</li>
+<li><strong>组合体结构判断失误</strong>：未看出圆柱和圆锥是组合而非挖切，或误以为圆锥底面大于圆柱顶面，导致面积计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：如图（2016年理数第6题）是由圆柱与圆锥组合而成的几何体的三视图，则该几何体的表面积为（　）
+选项：A．$20\pi$　B．$24\pi$　C．$28\pi$　D．$32\pi$</p>
+<p><strong>思路</strong>：从三视图知该组合体下半部分为圆柱，上半部分为圆锥，且两者底面相同、紧密拼接。表面积只算暴露面：圆锥侧面＋圆柱侧面＋圆柱的下底面。三视图中标注尺寸：圆柱底面直径 $4$，圆柱高 $4$；圆锥底面直径 $4$，高 $2\sqrt{3}$。先求半径 $r=2$，再求圆锥母线长 $l$，最后分别求侧面积并相加。</p>
+<p><strong>步骤</strong>：
+1. 由三视图确定几何体为上圆锥下圆柱，且结合面无缝隙。标注尺寸对应：直径 $4 \Rightarrow r=2$；圆柱高 $h_{\text{柱}}=4$；圆锥高 $h_{\text{锥}}=2\sqrt{3}$。
+2. 计算圆锥母线长：$l=\sqrt{r^2+h_{\text{锥}}^2}=\sqrt{2^2+(2\sqrt{3})^2}=\sqrt{4+12}=\sqrt{16}=4$。
+3. 分别计算暴露部分的面积：
+   圆锥侧面积 $S_{\text{锥侧}}=\pi r l = \pi \times 2 \times 4 = 8\pi$，
+   圆柱侧面积 $S_{\text{柱侧}}=2\pi r h_{\text{柱}}=2\pi \times 2 \times 4 = 16\pi$，
+   圆柱一个底面积 $S_{\text{底}}=\pi r^2 = \pi\times 4 = 4\pi$（下底面暴露，上底面与圆锥重合）。
+4. 组合体表面积 $S = S_{\text{锥侧}}+S_{\text{柱侧}}+S_{\text{底}}=8\pi+16\pi+4\pi=28\pi$。</p>
+<p><strong>点评/变式</strong>：本题核心在“重合面不重复计算”，属于组合体表面积计算的典型考法。可变形为：将圆锥改为半球，或改为上方小圆柱，同样需注意结合面不计。解题关键在于精准识别暴露面并正确调用柱、锥、球的侧面积与底面积公式。另外，三视图出现 $\sqrt{3}$ 倍数的数值往往暗示含 $30^\circ/60^\circ$ 的特殊直角三角形，可利用此快速验算母线长。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-06.html">2016-理-06</a>（2016 · 中） 根据三视图计算圆柱和圆锥组合体的表面积，需注意重合面不计入。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">表面积</a></li>
+</ul>
+</div>
+</body>
+</html>

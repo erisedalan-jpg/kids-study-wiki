@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多面体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>多面体</h1><div class="review-mark" data-stem="多面体"></div><div class="meta-card"><span><strong>考点</strong>多面体</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：填空16</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>多面体</strong>：由若干个平面多边形围成的空间封闭几何体。</li>
+<li><strong>正多面体</strong>（柏拉图立体）：每个面都是全等的正多边形，且每个顶点出发的棱数相同的凸多面体，仅5种（正四、正六、正八、正十二、正二十面体）。</li>
+<li><strong>半正多面体</strong>（阿基米德立体）：由两种或两种以上的正多边形围成，每个顶点处的棱的排列顺序完全相同的凸多面体。常体现于正方体棱的中点或等分点上，具有极高的对称性。</li>
+<li><strong>欧拉公式</strong>：对任意凸多面体，顶点数 $V$、棱数 $E$、面数 $F$ 满足 $V - E + F = 2$。当已知 $E$，求 $V$ 或 $F$ 时需结合面、顶点的具体结构分类讨论，不可直接套用。</li>
+<li><strong>正方体表面约束下的棱长问题</strong>：若所有顶点都在一个棱长为1的正方体表面上，可在正方体的面、棱上“还原”出多面体的顶点，利用对称性将空间长度转化为正方形对角线上或面内的平面几何计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分层计数法（数面）</strong><br />
+   按空间分层（上、中、下）或按对应正方体的不同面分组，遵循对称性逐个累加，注意每一层的多边形类型与个数，避免重复或遗漏。</li>
+<li><strong>借助母体（正方体）还原几何位置</strong><br />
+   明确半正多面体所有顶点均落在正方体表面上，将多面体的棱、顶点与正方体的面、棱建立对应关系。</li>
+<li><strong>平面化转换与构造三角形</strong><br />
+   延长多面体的棱与正方体棱相交，利用对称性得到等腰直角三角形或正方形对角线关系，把立体问题降维到平面直角坐标系中处理。</li>
+<li><strong>设元列方程求棱长</strong><br />
+   设半正多面体棱长为 $x$，抓住正方体棱长为1这一总量，结合线段间的和、差、倍数关系，建立一元一次方程（或勾股定理），求解 $x$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>数面时层间混乱</strong>：只数侧面的面，漏掉上、下底面或多层间的过渡面，导致总数26被误数为24或28。</li>
+<li><strong>欧拉公式盲目代用</strong>：已知 $E=48$ 时直接猜 $V$ 或 $F$ 计算，未结合每个顶点连接3条棱等结构信息，极易算出非整数或矛盾结果。正确做法是结合层数结构直接计数或先求 $V$ 再求 $F$。</li>
+<li><strong>母体中线段投影错位</strong>：将多面体棱的两端点误接到正方体同一条棱的等分点上，忽略半正多面体棱实际跨越正方体的面，造成几何关系错误。</li>
+<li><strong>方程列错</strong>：设棱长为 $x$，在等腰直角 $\triangle BGE$ 中，$BG$ 的表达式未正确表示为 $ \frac{\sqrt{2}}{2} $ 与 $x$ 的关系，导致解得 $x = 1 - \frac{\sqrt{2}}{2}$ 等错误答案；正确应注意正方体棱1 = 两段 $x$ 加一段等腰直角三角形直角边与斜边的差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2019·全国卷 理16）</h3>
+<p>印信形状多为正方体，南北朝独孤信印信为“半正多面体”（图1）。半正多面体由两种或以上正多边形围成。图2是一棱数为48的半正多面体，其所有顶点都在棱长为1的正方体表面上。求该半正多面体的面数，并求其棱长。</p>
+<h3><strong>思路</strong></h3>
+<p>第一问可直接分层数得面数；第二问需在正方体中还原半正多面体的位置，取一层相邻顶点构造辅助线，利用对称性与等腰直角三角形，将正方体棱长1表示为含棱长 $x$ 的方程，解出 $x$。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>
+<p><strong>求面数</strong>：<br />
+   由对称性，第一层（最上层）有9个面，第三层（最下层）对称亦有9个面，中间层（第二层）有8个面。故总面数 $F = 9+8+9 = 26$。  </p>
+</li>
+<li>
+<p><strong>求棱长</strong>：<br />
+   设半正多面体棱长为 $x$。在正方体某个角附近，选取连续两点 $A,B$ 在该多面体上，且 $AB=x$。<br />
+   延长 $BC$ 与 $FE$ 交于 $G$，延长 $BC$ 交正方体棱于 $H$。<br />
+   由对称性，四边形 $BGE D$ 为等腰直角三角形，$BG=EG$，$\angle G=90^\circ$。<br />
+   观察知 $BG = \frac{\sqrt{2}}{2} - x$（结合正方体面对角线的一半与多面体棱的关系）。<br />
+   由等腰直角三角形斜边上的数量特征，可列：在正方体棱长方向上的总长为1，即<br />
+   $$ x + x + (\sqrt{2} - 1)x = 1 \quad \text{或等价} \quad \sqrt{2} x + x = \sqrt{2} $$<br />
+   简化得 $x = \sqrt{2} - 1$。<br />
+   （注：实际列式中，利用正方体棱长为1，各线段和为1，得出 $x = \sqrt{2}-1$。）</p>
+</li>
+</ol>
+<p>准确推导：设该半正多面体顶点在正方体的棱上，截出的等腰直角三角形直角边为 $\frac{\sqrt{2}}{2} - x$，而正方体棱1 = 两个 $x$ 加上该直角边对应的线段，最终得到 $x=\sqrt{2}-1$。</p>
+<h3><strong>点评/变式</strong></h3>
+<p>本题以数学文化为外壳，考查空间想象与平面几何转化能力。计数面数要善用分层，不可乱数。求棱长关键在于“母体（正方体）还原”和“等腰直角三角形边关系的建立”。<br />
+<strong>变式</strong>：若母体是棱长为2的正方体，半正多面体棱数仍为48且顶点在母体表面，则其棱长应变为 $2(\sqrt{2}-1)$，体积、表面积可进一步求解，需牢牢抓住相似缩放与线段比例。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-16.html">2019-理-16</a>（2019 · 难） 棱数48的半正多面体各顶点在棱长为1的正方体表面上，求该多面体的面数（26）和棱长（√2-1）。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/346-空间几何体-多面体.html">多面体</a></li>
+</ul>
+</div>
+</body>
+</html>

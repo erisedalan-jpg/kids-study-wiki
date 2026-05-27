@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>其他不等式的解法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>其他不等式的解法</h1><div class="review-mark" data-stem="其他不等式的解法"></div><div class="meta-card"><span><strong>考点</strong>其他不等式的解法</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：解答24</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>绝对值处理</strong>：对形如 $|ax+b|$ 的表达式，通常通过讨论零点范围转化为分段函数，如 $f(x)=\begin{cases} -2x+5, &amp; x&lt;2 \ 2x-3, &amp; x \ge 2 \end{cases}$。</li>
+<li><strong>图像解不等式</strong>：不等式 $f(x) \le g(x)$ 的解集，可转化为函数 $y=f(x)$ 的图像在 $y=g(x)$ 的图像下方（含交点）所对应的 $x$ 的集合。</li>
+<li><strong>相切与边界</strong>：在处理动态直线（如 $y=ax$）与固定折线的不等式关系时，临界情况往往出现在直线与折线某段平行（即斜率相等）或直线恰好过折线端点（取等号时的边界点）的瞬间。</li>
+<li><strong>解集非空</strong>：指至少存在一个 $x_0$ 使得不等式成立。在图像上即意味着 $y=f(x)$ 与 $y=g(x)$ 在定义域内有公共点，或 $f(x)$ 的部分图像在 $g(x)$ 下方。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>去绝对值，求分段函数</strong>：找到绝对值内表达式的零点，作为分段点，写出不含绝对值的分段解析式。</li>
+<li><strong>精准作图</strong>：根据分段函数画出一侧的射线和另一侧的射线（或线段），标出折点坐标，特别注意定义域边界是实心点还是空心点。</li>
+<li><strong>转换不等式为图像关系</strong>：将 $f(x) \le ax$ 理解为固定曲线在动态直线下方的部分。</li>
+<li><strong>寻找临界斜率</strong>：</li>
+<li>让直线 $y=ax$ 绕原点旋转。</li>
+<li>找到直线刚好过折线端点时的斜率值（解方程 $f(x_0)=ax_0$）。</li>
+<li>找到直线与折线某一段平行时的斜率值（令 $a$ 等于该段解析式的斜率）。</li>
+<li><strong>定范围、定开闭</strong>：</li>
+<li>根据直线旋转过程中满足不等式条件的位置，确定 $a$ 的范围区间。</li>
+<li>检验区间端点是否满足“解集非空”或“有交点”，决定该点处区间是开是闭（通常直线恰好过折点时满足条件，取闭区间；平行但无其他交点时需谨慎验证）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>绝对值的分段点</strong>：绝对值零点处连续，分段函数在分段点处的值必须相等，不能写错连接位置。注意定义域划分，避免遗漏分段点。</li>
+<li><strong>画图时的定义域边界</strong>：射线端点若属于函数定义域，应画成实心；若不包含，画成空心。本题因定义域为 $\mathbb{R}$，均为实心连接。</li>
+<li><strong>混淆“解集非空”与“恒成立”</strong>：本题只需存在解即可，容易出现临界情况讨论不全。特别注意直线过折点此类单点相交情况极易忽略。</li>
+<li><strong>斜率范围遗漏</strong>：直线旋转时只注意到夹在两条射线之间的部分，忘记了斜率绝对值大于某临界值后，直线也会因趋势变化再次产生交点。如本题中，不仅要注意过折点的斜率，还需注意射线倾斜方向的交界。</li>
+<li><strong>忘记取等号</strong>：不等式含等号时，临界状态（直线恰好过折端点）意味着满足 $f(x)=ax$，此时不等式依旧成立，对应的斜率值必须包含在解集中。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 含绝对值分段函数与直线斜率的参数范围</h3>
+<ul>
+<li><strong>题目</strong>：已知函数 $f(x)=|2x-4|+1$，(Ⅰ)画出其图像；(Ⅱ)若 $f(x) \le ax$ 的解集非空，求实数 $a$ 的取值范围。</li>
+<li><strong>思路</strong>：</li>
+<li>将绝对值函数化为分段形式，根据分界点 $x=2$ 拆成两条射线，描点连线完成图像。</li>
+<li>将问题转化为动态直线 $y=ax$ 与折线 $y=f(x)$ 有交点，或者折线整体不全部严格在直线上方。</li>
+<li>令直线绕原点旋转，考察直线斜率 $a$ 变化时，刚从无交点变为有交点的两个极端瞬间，一个是逆时针旋至过端点 $(2,1)$，一个是顺时针旋至与右侧射线平行。</li>
+<li>由这些临界斜率出发，结合直线旋转的方向，写出能使图像产生交集的斜率范围并验证区间开闭。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>(Ⅰ) 去绝对值</strong>：$x&lt;2$ 时，$2x-4&lt;0 \Rightarrow f(x)=-(2x-4)+1=-2x+5$；$x \ge 2$ 时，$2x-4 \ge 0 \Rightarrow f(x)=(2x-4)+1=2x-3$。画图得到一条以 $(2,1)$ 为折点的下凸折线。左侧射线斜率为 $-2$，右侧射线斜率为 $2$。</li>
+<li><strong>(Ⅱ) 求临界斜率</strong>：<ol>
+<li>直线 $y=ax$ 过折点 $(2,1)$ 时，代入得 $1=2a$，解得 $a=\frac{1}{2}$。此时直线与折线有唯一交点 $(2,1)$，不等式 $f(x) \le ax$ 成立（取等），解集非空，故 $a=\frac{1}{2}$ 包含在内。</li>
+<li>考察直线斜率与折线斜率的关系。当 $a \ge 2$ 时，对于 $x \ge 2$ 的部分，直线斜率不小于右侧射线斜率，且过原点，直线够“陡”，能保证在折线上方或相交；对于 $x&lt;2$ 部分，需结合 $a$ 整体画图观察。发现当 $a \ge \frac{1}{2}$ 时，逆时针旋转直线，直线与折线开始有交点（临界为过折点）。</li>
+<li>当直线逆时针转至与右侧射线平行时，即 $a=2$，此时对 $x&gt;2$ 区域，两线平行且直线 $y=2x$ 截距为 $0$，射线 $y=2x-3$ 截距为 $-3$，直线始终在射线上方，无新交点。但左侧已有交点，因此 $a=2$ 满足条件，解集非空。</li>
+<li>顺时针旋转直线，刚离开折点后，直线处于折线下方，无交点。直到 $a$ 降至 $-2$ 以下，直线倾斜方向与左侧射线同向且绝对值更大，靠近 $y$ 轴无限延伸，必在第二象限与左侧射线相交。因此 $a&lt;-2$ 时存在交点。平行临界 $a=-2$ 时，直线 $y=-2x$ 与左侧射线 $y=-2x+5$ 平行，且在下方，无交点，故 $a=-2$ 不可取。</li>
+</ol>
+</li>
+<li><strong>综合范围</strong>：满足条件的 $a$ 为 $(-\infty, -2) \cup [\frac{1}{2}, +\infty)$。</li>
+<li><strong>点评/变式</strong>：</li>
+<li>本题是典型的“动直线与定折线”位置关系问题，通过图像将代数不等式转化为几何相交条件是关键。</li>
+<li>过折点的斜率值往往是答案区间的一个边界，且因为在该点严格取等，通常闭区间涵盖；平行但不相交的临界斜率则需开区间剔除。</li>
+<li><strong>变式</strong>：若条件改为 $f(x) \ge ax$ 的解集为 $\mathbb{R}$，则需保证折线永远在直线上方，此时应联立折线方程与直线方程，由 $\Delta \le 0$ 或图形全在上方求范围，这又是另一类常见题。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-文-24.html">2010-文-24</a>（2010 · 难） 考查绝对值函数图象画法及利用图象解含参不等式求参数范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">其他不等式的解法</a></li>
+</ul>
+</div>
+</body>
+</html>

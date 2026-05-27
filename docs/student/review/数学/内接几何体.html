@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>内接几何体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>内接几何体</h1><div class="review-mark" data-stem="内接几何体"></div><div class="meta-card"><span><strong>考点</strong>内接几何体</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>内接几何体与球</strong>：若一个几何体的所有顶点都在同一个球面上，称该几何体内接于球，球为该几何体的外接球。公共底面的两圆锥内接于同一个球时，两圆锥的顶点与公共底面圆的圆周共球面。</li>
+<li><strong>球的截面性质</strong>：球心到截面圆的距离 $d$ 、截面圆半径 $r$ 与球半径 $R$ 满足勾股关系：$R^2 = r^2 + d^2$。此处的“截面”就是两圆锥的公共底面。</li>
+<li><strong>圆锥的高与球的关系</strong>：当两圆锥公共底面在球的某截面，且两圆锥顶点都在球面上时，球心在底面的垂线上。若球心位于公共底面与某一圆锥顶点之间（即球心分高为两段），则两圆锥的高分别为 $h_1 = R + d$ 和 $h_2 = R - d$（其中 $d$ 为球心到截面的距离，$d&lt;R$）；若球心与顶点在截面同侧，情况类似，此时高的表达式需要根据图形确定。</li>
+<li><strong>面积公式</strong>：圆锥底面积 $S_{\text{底}} = \pi r^2$；球面面积 $S_{\text{球}} = 4\pi R^2$。两面积之比是解题的常见条件。</li>
+<li><strong>体积公式</strong>：圆锥体积 $V = \frac13 \pi r^2 h$，但本题主要求高的比值，体积较小者对应高较小者（同底面时体积与高成正比）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画轴截面图</strong>：沿球心、两圆锥顶点及底面圆心所在的平面作截面，得到大圆（球）及其内接两个等腰三角形（圆锥轴截面），公共底边为弦。</li>
+<li><strong>设元引参</strong>：设球半径 $R$，公共底面圆半径 $r$，球心到公共底面的距离 $d$。若球心在公共底面与另一顶点之间，则 $0&lt;d&lt;R$。</li>
+<li><strong>建立半径关系</strong>：由垂径定理/球的截面性质写出 $R^2 = r^2 + d^2$。</li>
+<li><strong>转化面积条件</strong>：根据题目给出的底面积与球面积之比，得到 $\pi r^2 : 4\pi R^2 =$ 已知比值，化简得到 $r^2$ 与 $R^2$ 的关系。</li>
+<li><strong>联立解出 $d$</strong>：将 $r^2$ 代入 $R^2 = r^2 + d^2$，求出 $d$ 用 $R$ 表示的值（或直接求出比值）。</li>
+<li><strong>确定圆锥的高</strong>：两个圆锥的高必为 $R \pm d$ 的形式（注意几何位置判断符号），写出两高表达式，求其比值。体积之比或高之比问题皆可据此解决。</li>
+<li><strong>检验</strong>：确认较小者和较大者的对应关系，确保所求比值符合题设（如 $&lt;1$ 等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>球心位置的误判</strong>：认为球心一定在两圆锥顶点连线的中点，或误把圆锥高等同于球半径。实际中，只有当公共底面过球心时 $d=0$，才有 $h_1 = h_2 = R$。本题由面积比推出 $d&gt;0$，球心偏向一侧圆锥，导致两高不相等。</li>
+<li><strong>面积比代入错误</strong>：混淆球表面积 $4\pi R^2$ 与球的截面圆面积，或将比值的分子分母弄反。牢记条件 $\frac{\pi r^2}{4\pi R^2} = \frac{3}{16}$ 时，得 $r^2 = \frac34 R^2$。</li>
+<li><strong>开方忽略正负</strong>：由 $d^2$ 解得 $d = \frac{R}{2}$ 时，距离 $d$ 取正值，因 $d$ 表示长度。</li>
+<li><strong>高表达式符号错</strong>：两圆锥的高为 $R+d$ 与 $R-d$（设球心在公共底面的异侧之一锥顶点方向），注意哪个是较大的高，哪个是较小的高。忽视几何实际会导致大小比颠倒。</li>
+<li><strong>最终比值未化简</strong>：求出 $\frac{R-d}{R+d}$ 后必须代入 $d$ 值得到最简分数，防止因未约分而失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·全国卷·文16）已知两个圆锥有公共底面，且两个圆锥的顶点和底面的圆周都在同一个球面上。若圆锥底面面积是这个球面面积的 $\frac{3}{16}$，则这两个圆锥中，体积较小者的高与体积较大者的高的比值为______。</p>
+<p><strong>思路</strong><br />
+画轴截面，设球半径 $R$、底面半径 $r$、球心到公共底面距离 $d$，利用截面性质与面积比求出 $d$，再得两圆锥的高 $R-d$ 与 $R+d$，求比值。</p>
+<p><strong>步骤</strong><br />
+1. 设球半径为 $R$，公共底面圆半径为 $r$，球心 $O$ 到公共底面的距离为 $d$（$0&lt;d&lt;R$）。由题意，两圆锥顶点在球面上，一个在截面一侧，另一个在另一侧，故高分别为 $h_1 = R + d$ 与 $h_2 = R - d$。<br />
+2. 由球的截面性质，得 $R^2 = r^2 + d^2$。<br />
+3. 由底面积与球面积关系：$\pi r^2 = \frac{3}{16} \cdot 4\pi R^2$，化简得 $r^2 = \frac34 R^2$。<br />
+4. 代入 $R^2 = r^2 + d^2$：$R^2 = \frac34 R^2 + d^2 \implies d^2 = \frac14 R^2 \implies d = \frac{R}{2}$（取正）。<br />
+5. 两圆锥的高分别为 $h_{\text{大}} = R + \frac{R}{2} = \frac32 R$，$h_{\text{小}} = R - \frac{R}{2} = \frac12 R$。体积较小者对应高较小者，故所求比值 $\frac{h_{\text{小}}}{h_{\text{大}}} = \frac{\frac12 R}{\frac32 R} = \frac13$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是用球的截面性质将面积条件转化为球心距，进而区分两锥的高。变式：若条件改为“底面周长为球的某截面周长之比”或“球的体积与圆锥体积关系”，同样可先用半径、距离建立方程。注意公共底面的两锥互补，若 $d=0$ 则两锥全等；本题 $d&gt;0$ 产生不同高度，构造出大小比 $\frac{R-d}{R+d}$。考场上务必准确识别“较小者的高”的指代。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-16.html">2011-文-16</a>（2011 · 中） 两个共底面圆锥内接于同一球，考查球与圆锥的几何关系及相关计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">内接几何体</a></li>
+</ul>
+</div>
+</body>
+</html>

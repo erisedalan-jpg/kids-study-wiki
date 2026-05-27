@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数图象的判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数图象的判断</h1><div class="review-mark" data-stem="函数图象的判断"></div><div class="meta-card"><span><strong>考点</strong>函数图象的判断</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>函数图象的判断核心是“以性定图”：利用函数的基本性质与特殊点排除错误选项，最终锁定唯一正确图象。</li>
+<li>常用判断依据：</li>
+<li><strong>定义域</strong>：由解析式直接确定的 $x$ 取值范围，可排除在定义域外仍有图象的选项。</li>
+<li><strong>值域（符号）</strong>：判断 $f(x)$ 的正负恒成立区间，常用导数研究整体或局部符号，排除正负不一致的选项。</li>
+<li><strong>奇偶性与对称性</strong>：$f(-x)=f(x)$ 为偶函数（关于 $y$ 轴对称），$f(-x)=-f(x)$ 为奇函数（关于原点对称），可排除不对称选项。</li>
+<li><strong>单调性与极值</strong>：通过导数研究单调区间与极值点，对比选项走势。</li>
+<li><strong>特殊点与渐近线</strong>：计算与坐标轴的交点、最高/最低点、间断点处的左右极限（水平/垂直渐近线），进一步锁定图象。</li>
+<li>适用条件：所有初等函数及其组合（对数、指数、分式等）的图象选择题，优先从定义域、符号、极限入手，可快速排除大量干扰项。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>第一步：求定义域，缩小范围</strong><br />
+   列出使解析式有意义的 $x$ 集合（注意分母不为零、偶次根号下非负、对数的真数大于零等），直接排除定义域之外仍有图象的选项。</li>
+<li><strong>第二步：研究函数的符号（正负）</strong><br />
+   优先判断函数在各区间内的正负情况。若 $f(x)$ 恒正或恒负，立即排除含有相反符号的选项；若部分区间符号确定，也可排除明显不符的选项。常用方法：</li>
+<li>若 $f(x)$ 为分式，可单独考察分子、分母的符号。</li>
+<li>利用导数求出关键部分的最值，证明其恒大于零或恒小于零。</li>
+<li><strong>第三步：利用奇偶性、特殊点与极限</strong>  </li>
+<li>检验 $f(-x)$ 与 $f(x)$ 的关系，排除不对称图象。</li>
+<li>计算 $x \to$ 定义域端点或间断点时的函数极限，确定渐近行为。</li>
+<li>代入特殊值（如 $x=1, e, -0.5$ 等）快速核对函数值大小。</li>
+<li><strong>第四步：结合单调性与极值定位细节</strong><br />
+   若前几步仍剩多个选项，求导分析单调区间与极值点，对比图象的升降趋势与拐点，做出最终判断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：直接代入正负值判断，未注意 $x$ 本身不能取到全部实数，导致错选在定义域外画线的选项。</li>
+<li><strong>求导法则混淆</strong>：复合函数求导漏掉内层、分式求导符号错误，导致单调性判断完全相反，进而排错。</li>
+<li><strong>符号分析不彻底</strong>：只检验某一点的函数值正负，未确认该正负是否对定义域内所有区间恒成立，被选项中局部相符的图象迷惑。</li>
+<li><strong>忽视选项间的细微差异</strong>：例如渐近线的位置、某一侧函数值是趋于 $0^+$ 还是 $0^-$，或极值点横坐标的具体数值，未加严判就匆忙选择。</li>
+<li><strong>直接画图</strong>：试图完全通过描点法手工作图取代性质分析，耗时长且易失真，在考场中极易失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2012 全国理 10）<br />
+已知函数 $f(x)=\dfrac{1}{\ln(x+1)-x}$，则 $y=f(x)$ 的图象大致为（  ）（选项略，含四幅图象）</p>
+<p><strong>思路</strong><br />
+该函数为分式形式，含有对数和一次式，直接描点较复杂。先求定义域排除部分选项，再确定分母符号，利用导数证明分母恒负，从而 $f(x)&lt;0$，可排除正函数值选项，最后结合定义域边界排除剩余干扰项。</p>
+<p><strong>步骤</strong><br />
+1. 求定义域：真数 $x+1&gt;0 \Rightarrow x&gt;-1$；分母 $\ln(x+1)-x \neq 0$。<br />
+   令 $g(x)=\ln(x+1)-x$，$g(0)=0$，且 $x=0$ 时无定义，故定义域为 $(-1,0) \cup (0,+\infty)$。排除在 $x\le -1$ 仍有图象的选项。<br />
+2. 研究符号：只需判断分母 $g(x)$ 的符号。<br />
+   $g'(x)=\dfrac{1}{x+1}-1 =\dfrac{-x}{x+1}$。<br />
+   当 $x \in (-1,0)$ 时，$g'(x)&gt;0$，$g(x)$ 单调递增；<br />
+   当 $x \in (0,+\infty)$ 时，$g'(x)&lt;0$，$g(x)$ 单调递减。<br />
+   因此 $g(x)$ 在 $x=0$ 处取得最大值 $g(0)=0$，即对定义域内所有 $x\neq 0$，恒有 $g(x)&lt;0$。<br />
+   从而 $f(x)=\dfrac{1}{g(x)}&lt;0$ 在 $(-1,0)$ 和 $(0,+\infty)$ 上恒成立。排除函数值为正的选项。<br />
+3. 结合定义域和符号已可排除全部错误选项，锁定正确图象（通常正确选项表现为：函数图象全部在 $x$ 轴下方，且无 $x\le-1$ 及 $x=0$ 处的线条）。<br />
+4. 验证细节（可选）：$x\to 0^-$ 时 $g(x)\to 0^-$，$f(x)\to -\infty$；$x\to 0^+$ 时 $g(x)\to 0^-$，$f(x)\to -\infty$；$x\to +\infty$ 时 $g(x)\to -\infty$，$f(x)\to 0^-$。图象在 $x=0$ 两侧均向下无限延伸，与所选项一致。</p>
+<p><strong>点评/变式</strong><br />
+- 本题典型地体现了“符号排除法”的威力：一旦证得分母恒负，整个函数符号完全确定，可直接淘汰过半选项。<br />
+- 变式训练：若函数改为 $y=\dfrac{x}{\ln(x+1)-x}$ 或 $y=\ln(x+1)-x$ 本身，需重新考虑符号与单调性，但同样优先从定义域、符号、特殊点切入，切忌盲目求导画图。<br />
+- 提示：遇到含 $\ln(x+1)-x$ 的结构，应立刻联想到经典不等式 $\ln(x+1) \le x$（$x&gt;-1$），等号仅在 $x=0$ 成立，这一结论可直接用于判断符号，无需重复求导，考场效率极高。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-10.html">2012-理-10</a>（2012 · 中） 本题通过分析函数分母的值域及定义域，结合导数研究函数性质，利用排除法判断函数图象</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/677-函数图象的判断.html">函数图象的判断</a></li>
+</ul>
+</div>
+</body>
+</html>

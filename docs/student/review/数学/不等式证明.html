@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式证明</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>不等式证明</h1><div class="review-mark" data-stem="不等式证明"></div><div class="meta-card"><span><strong>考点</strong>不等式证明</span><span><strong>权重</strong>24</span><span><strong>真题数</strong>13</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：24</li>
+<li>真题数：13；年份跨度：2009–2020</li>
+<li>出现题位：解答21 解答22 解答23 解答24</li>
+<li>难度分布：难3 中10</li>
+</ul>
+<h2>知识精要</h2>
+<p>不等式证明是高考数学的重要考点，常出现在压轴题位置，分值高、区分度大。</p>
+<ul>
+<li><strong>比较法</strong>：作差比较 $a-b \geq 0$；作商比较（要求均为正数）$\frac{a}{b} \geq 1$。</li>
+<li><strong>综合法</strong>：从已知条件或基本不等式出发，逐步推导。</li>
+<li><strong>分析法</strong>：从结论出发寻找充分条件，即“执果索因”。</li>
+<li><strong>基本不等式链</strong>：若 $a, b &gt; 0$，则 $\frac{2}{\frac{1}{a}+\frac{1}{b}} \leq \sqrt{ab} \leq \frac{a+b}{2} \leq \sqrt{\frac{a^2+b^2}{2}}$。</li>
+<li><strong>均值不等式</strong>：若 $a, b &gt; 0$，则 $a+b \geq 2\sqrt{ab}$；三元形式 $a+b+c \geq 3\sqrt[3]{abc}$。</li>
+<li><strong>柯西不等式</strong>：$(a^2+b^2)(c^2+d^2) \geq (ac+bd)^2$，向量形式 $|\vec{a} \cdot \vec{b}| \leq |\vec{a}||\vec{b}|$。</li>
+<li><strong>绝对值不等式</strong>：$||a|-|b|| \leq |a \pm b| \leq |a|+|b|$。</li>
+<li><strong>导数工具</strong>：构造函数，利用单调性求最值证明不等式。需注意定义域，特别是含 $\ln x$ 时要求 $x&gt;0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>作差构造法</strong><br />
+   将欲证不等式化为 $F(x) \geq 0$ 形式，构造函数求导，分析单调性求最小值。若直接作差求导复杂，可先等价变形。</li>
+<li><strong>放缩法</strong><br />
+   利用已知不等式（如均值、切线放缩、$\ln x \leq x-1$、$e^x \geq x+1$ 等）对复杂表达式进行适度放大或缩小，转化为易证不等式。需控制放缩尺度。</li>
+<li><strong>换元与消元</strong><br />
+   对于多元条件不等式，利用已知等式消去一元或多变量，转化为单变量函数问题；或利用齐次特征令比值换元统一变量。</li>
+<li><strong>绝对值证明套路</strong><br />
+   优先利用平方法去掉绝对值（要求两边非负）；若不能，利用绝对值三角不等式或分类讨论去绝对值号。</li>
+<li><strong>充要条件证法</strong><br />
+   必须分别证明充分性与必要性。熟练运用分析法倒推（$\Leftarrow$ 寻找成立条件）与综合法正写（$\Rightarrow$ 由条件导出结论）。</li>
+<li><strong>对称换元与对偶式</strong><br />
+   对于轮换对称或含形如 $\frac{a^2}{b}$ 的结构，常配上 $b$ 使用均值不等式消除分母，如 $\frac{a^2}{b}+b \geq 2a$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略“正数”条件</strong>：在应用均值不等式或柯西不等式放缩时，必须严格验证字母范围是否均为正数。</li>
+<li><strong>极值点偏移混淆</strong>：利用导数证双变量不等式时，务必确认 $x_1, x_2$ 的对应关系与区间位置，不可随意套用对称构造法。</li>
+<li><strong>对数单身狗，指数找朋友</strong>：含 $\ln x$ 或 $e^x$ 的不等式，构造函数时常分离它们，避免求导后复杂化。如 $\ln x$ 一般不与多项式相乘除。</li>
+<li><strong>放缩失度</strong>：放缩后若得到 $f(x) \leq$ 某个常数，必须验证等号能否取到；若不能取到，放缩过度导致证明失败。</li>
+<li><strong>区间的开闭与定义域</strong>：利用导数求单调性，书写区间时注意 $(, )$ 与 $[, ]$ 的区别；若定义域为 $(0, +\infty)$，切线放缩时需确认切点在定义域内。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2020-理-21</h3>
+<ul>
+<li><strong>题目</strong>：已知 $f(x)=\sin 2x \sin^2 x$，证明 $|f(x)| \leq \frac{3\sqrt{3}}{8}$，且证明连乘积不等式。</li>
+<li><strong>思路</strong>：利用倍角公式及积化和差化简，转化为三次函数求导求最值；连乘部分通过对数化积累求和结合放缩。</li>
+<li><strong>步骤</strong>：  </li>
+<li>$f(x)=2\sin x \cos x \cdot \sin^2 x = 2\sin^3 x \cos x$。  </li>
+<li>为去除根号或绝对值，可考虑平方：$[f(x)]^2 = 4\sin^6 x \cos^2 x = 4\sin^6 x(1-\sin^2 x)$。  </li>
+<li>令 $t=\sin^2 x \in [0, 1]$，则 $y=4t^3(1-t)=4(t^3-t^4)$，求导得 $y'=4(3t^2-4t^3)=4t^2(3-4t)$。  </li>
+<li>在 $t=\frac{3}{4}$ 时取得最大值，代回得 $y_{\max}=\frac{27}{64}$，故 $|f(x)| \leq \sqrt{\frac{27}{64}} = \frac{3\sqrt{3}}{8}$。</li>
+<li><strong>点评/变式</strong>：三角函数不等式常化为二次或三次函数求最值，或者利用三角函数有界性放缩。注意绝对值符号需结合对称性处理。</li>
+</ul>
+<h3>代表题2：2017-文-23</h3>
+<ul>
+<li><strong>题目</strong>：已知 $a, b &gt; 0$ 且 $a^3+b^3=2$，证明 $(a+b)(a^5+b^5) \geq 4$ 及 $a+b \leq 2$。</li>
+<li><strong>思路</strong>：第一问柯西不等式一步到位；第二问利用立方和公式消元，结合均值不等式构造关于 $a+b$ 的不等式。</li>
+<li><strong>步骤</strong>：<br />
+  (1) 由柯西不等式：$(a+b)(a^5+b^5) \geq (a^3+b^3)^2 = 2^2 = 4$。<br />
+  (2) 由 $a^3+b^3=(a+b)(a^2-ab+b^2)=2$，且 $a^2-ab+b^2 = (a+b)^2-3ab$。<br />
+  设 $s=a+b, p=ab$。则 $s(s^2-3p)=2$。<br />
+  由均值 $\sqrt{ab} \leq \frac{a+b}{2}$ 得 $p \leq \frac{s^2}{4}$。<br />
+  代入得 $2 = s^3 - 3sp \geq s^3 - 3s \cdot \frac{s^2}{4} = \frac{1}{4}s^3$，即 $s^3 \leq 8$，故 $s \leq 2$。</li>
+<li><strong>点评/变式</strong>：已知高次和求一次和的范围，典型套路是“降次”结合均值不等式，利用 $ab$ 与 $a+b$ 的等量关系消元是关键。</li>
+</ul>
+<h3>代表题3：2011-文-21</h3>
+<ul>
+<li><strong>题目</strong>：已知 $f(x)=\frac{\ln x}{x+1}+\frac{1}{x}$，证明当 $x&gt;0$ 且 $x \neq 1$ 时，$f(x) &gt; \frac{\ln x}{x-1}$。</li>
+<li><strong>思路</strong>：作差转化为分式结构，以 $x-1$ 与 $x+1$ 为节点，构造 $h(x)=\ln x - \frac{2(x-1)}{x+1}$ 或其变体，利用导数及经典不等式 $\ln x \leq x-1$ 或切线放缩证明。</li>
+<li><strong>步骤</strong>：  </li>
+<li>要证 $\frac{\ln x}{x+1}+\frac{1}{x} &gt; \frac{\ln x}{x-1}$，通分移项即证 $\frac{1}{x} &gt; \frac{2\ln x}{x^2-1}$。  </li>
+<li>当 $x&gt;1$ 时，$x^2-1&gt;0$，即证 $\ln x &lt; \frac{x^2-1}{2x} = \frac{1}{2}(x-\frac{1}{x})$。  </li>
+<li>构造函数 $F(x)=\ln x - \frac{x}{2} + \frac{1}{2x}$，$F(1)=0$，求导得 $F'(x)= -\frac{(x-1)^2}{2x^2} \leq 0$，故 $F(x)$ 单调递减，$x&gt;1$ 时 $F(x)&lt;0$ 得证。  </li>
+<li>同理可证 $0&lt;x&lt;1$ 情形。</li>
+<li><strong>点评/变式</strong>：对数不等式变形核心常为 $\ln x$ 与有理函数的比较。注意 $x$ 与 $1$ 的大小关系影响分母符号，需分类讨论。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-21.html">2020-理-21</a>（2020 · 难） f(x)=sin²xsin2x，讨论(0,π)单调性，证明|f(x)|≤3√3/8及sin²xsin²2x…sin²(2ⁿx)≤(3/4)ⁿ。</li>
+<li><a href="../../exam/数学/2017-文-23.html">2017-文-23</a>（2017 · 中） 已知条件为等式，求证两个不等式，考查不等式的证明方法与转化思想。</li>
+<li><a href="../../exam/数学/2017-理-21.html">2017-理-21</a>（2017 · 中） 本题通过导数研究含参函数恒成立问题，求参数并证明极值点的唯一性及不等式。</li>
+<li><a href="../../exam/数学/2017-理-23.html">2017-理-23</a>（2017 · 中） 该题考查利用柯西不等式和均值不等式证明不等式，涉及代数变形与等号条件。</li>
+<li><a href="../../exam/数学/2016-文-21.html">2016-文-21</a>（2016 · 中） 本题主要考查椭圆与直线的位置关系，通过几何条件求三角形面积并证明参数不等式。</li>
+<li><a href="../../exam/数学/2016-文-24.html">2016-文-24</a>（2016 · 中） 求 f(x)=|x-1/2|+|x+1/2|≤6 的解集；并证明当 a,b∈M 时 |a+b|&lt;|1+ab|。</li>
+<li><a href="../../exam/数学/2016-理-24.html">2016-理-24</a>（2016 · 中） 求含绝对值不等式 f(x)=|x-1/2|+|x+1/2|≤6 的解集 M；并由 a,b∈M 证明 |a+b|&lt;|1+ab|。</li>
+<li><a href="../../exam/数学/2015-文-24.html">2015-文-24</a>（2015 · 中） 本题通过已知条件证明根式和不等式，并讨论充要条件，考查不等式性质与逻辑推理。</li>
+<li><a href="../../exam/数学/2015-理-24.html">2015-理-24</a>（2015 · 中） 本题考查利用不等式性质证明充要条件。</li>
+<li><a href="../../exam/数学/2013-文-24.html">2013-文-24</a>（2013 · 中） 本题要求证明给定正数和为1条件下的两个不等式，考查不等式证明方法与技巧。</li>
+<li><a href="../../exam/数学/2013-理-24.html">2013-理-24</a>（2013 · 中） 证明不等式，利用基本不等式和已知条件 a+b+c=1 推导结论。</li>
+<li><a href="../../exam/数学/2011-文-21.html">2011-文-21</a>（2011 · 难） 已知函数在一点处的切线方程求参数，并利用导数证明不等式。</li>
+<li><a href="../../exam/数学/2009-理-22.html">2009-理-22</a>（2009 · 难） 本题考查含参函数极值点存在条件、单调性讨论及极值点相关不等式证明。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/624-不等式的证明.html">不等式证明</a></li>
+</ul>
+</div>
+</body>
+</html>

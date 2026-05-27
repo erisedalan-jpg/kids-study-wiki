@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三元均值不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三元均值不等式</h1><div class="review-mark" data-stem="三元均值不等式"></div><div class="meta-card"><span><strong>考点</strong>三元均值不等式</span><span><strong>权重</strong>20</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：20</li>
+<li>真题数：2；年份跨度：2022–2022</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三元均值不等式</strong>：若 $a, b, c &gt; 0$，则 $\frac{a+b+c}{3} \ge \sqrt[3]{abc}$（算术平均 ≥ 几何平均）。</li>
+<li>常见变形：$a+b+c \ge 3\sqrt[3]{abc}$；$abc \le \left(\frac{a+b+c}{3}\right)^3$。</li>
+<li>取等条件：当且仅当 $a=b=c$ 时，等号成立。</li>
+<li><strong>证明不等式的基本策略</strong>：</li>
+<li><strong>由因导果</strong>：从已知条件出发，通过不等式的等价变形（如去分母、乘方、代换）逐步推出待证结论。</li>
+<li><strong>执果索因</strong>：从待证结论出发，分析使其成立所需的条件，逐步追溯到已知条件。</li>
+<li><strong>传递性</strong>：若 $A \ge B$ 且 $B \ge C$，则 $A \ge C$。常用于复杂不等式的分段缩放。</li>
+<li><strong>适用条件判定</strong>：三元均值不等式要求各项均为正数。若题目给定幂次形式（如 $a^{3/2}$），需先通过整体代换，将三次根号下的对象视为单个整体，再应用公式。对于分式型不等式，常先用基本不等式对分母进行缩放，通分后转化为整式形式，再调用三元均值不等式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题与归一化</strong>：识别题目中的正数条件。若给定和为定值（如 $a^{3/2}+b^{3/2}+c^{3/2}=1$），求积的最大值，直接套用 $x+y+z \ge 3\sqrt[3]{xyz}$。</li>
+<li><strong>结构配对</strong>：将已知条件中的每一项与结论中的元素建立对应。对于 $a^{3/2}$ 这类幂次，将其整体看作 $X$，则结论中的 $abc$ 是 $X^{2/3}$ 的乘积，即 $(X^{2/3})(Y^{2/3})(Z^{2/3}) = (XYZ)^{2/3}$。</li>
+<li><strong>分式倒数放缩</strong>：对于形如 $\frac{a}{b+c}$ 的和式，分母利用基本不等式 $b+c \ge 2\sqrt{bc}$ 进行缩放。取其倒数时要注意不等号反向，即 $\frac{a}{b+c} \le \frac{a}{2\sqrt{bc}}$。</li>
+<li><strong>统一形式与叠加</strong>：将缩放后的各项统一为 $\frac{\sqrt{a}}{2\sqrt{bc}}$ 等形式。为了使用已知条件或均值不等式，往往需要进一步凑项、配方或有理化。观察各项的系数和指数，尝试将目标式整体包装成一个新的均值不等式结构。</li>
+<li><strong>验证取等条件</strong>：每一步缩放必须检查取等条件是否一致。最终结论的取等条件是所有步骤取等条件的交集。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视正数条件</strong>：应用 $a+b \ge 2\sqrt{ab}$ 或三元均值不等式前，未严格验证 $a, b, c &gt; 0$。</li>
+<li><strong>公式记忆混淆</strong>：将几何平均与算术平均的关系记反，弄错立方根与系数的关系。务必牢记：算术平均 $\ge$ 几何平均，系数 $3$ 在算术平均的分母上，等号同号。</li>
+<li><strong>放缩方向错误</strong>：由 $A \le B$ 要推出 $A \le C$，应该继续放大 $B$ 使其 $\le C$，而非缩小。尤其在分式放缩时，分母放大（或缩小）会导致整个分式缩小（或放大），方向极易搞反。</li>
+<li><strong>幂次运算失误</strong>：计算 $(a^{3/2})^{2/3}=a$ 等分数指数幂时，指数相乘法则应用错误，导致变量次数不对，整个证明链断裂。</li>
+<li><strong>取等条件不一致</strong>：多次使用不等式进行缩放，前后取等条件冲突（如第一次缩放要求 $a=b$，第二次要求 $b=c$ 从而导出 $a=c$，这是协调的；但若第二次要求 $a=2b$，则整体等号无法取得）。若未发现冲突，会写出实际上等号永远不成立的“不正确”不等式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>代表题一</strong>：见“2022-文-23”及同题“2022-理-23”。
+- <strong>题目</strong>：已知 $a,b,c&gt;0$，且 $a^{3/2}+b^{3/2}+c^{3/2}=1$。证明：(1) $abc \le \frac{1}{9}$；(2) $\frac{a}{b+c} + \frac{b}{c+a} + \frac{c}{a+b} \le \frac{1}{2abc}$。
+- <strong>思路</strong>：
+  - (1) 直接利用条件中的三项和为定值，构造三元均值不等式。令 $X=a^{3/2}$，则 $\sqrt[3]{X}=a^{1/2}$，通过乘法运算推导出 $abc$ 的界。
+  - (2) 结论左侧是三个对称的分式。先对每个分母使用二元基本不等式进行放大（分母放大-&gt;分式缩小），将对称式转化为轮换对称的根式形式。通约后，尝试将上限与(1)中的 $abc$ 建立联系。
+- <strong>步骤</strong>：
+  - <strong>(1)证明</strong>：
+    - 由 $a,b,c&gt;0$ 知 $a^{3/2}, b^{3/2}, c^{3/2}&gt;0$。
+    - 根据三元均值不等式：$a^{3/2}+b^{3/2}+c^{3/2} \ge 3 \sqrt[3]{a^{3/2} b^{3/2} c^{3/2}}$。
+    - 即 $1 \ge 3 (abc)^{1/2}$。
+    - 两边平方得 $1 \ge 9abc$，即 $abc \le \frac{1}{9}$。
+    - 当且仅当 $a^{3/2}=b^{3/2}=c^{3/2}$，即 $a=b=c=\left(\frac{1}{3}\right)^{2/3}=\sqrt[3]{\frac{1}{9}}$ 时取等。
+  - <strong>(2)证明</strong>：
+    - 因 $a,b,c&gt;0$，由基本不等式得 $b+c \ge 2\sqrt{bc}$，同理 $c+a \ge 2\sqrt{ca}$，$a+b \ge 2\sqrt{ab}$。
+    - 于是
+      $$\frac{a}{b+c} + \frac{b}{c+a} + \frac{c}{a+b} \le \frac{a}{2\sqrt{bc}} + \frac{b}{2\sqrt{ca}} + \frac{c}{2\sqrt{ab}}$$
+    - 通分，将右侧写为 $\frac{a\sqrt{a} + b\sqrt{b} + c\sqrt{c}}{2\sqrt{abc}}$。
+    - 为了利用条件，将分子与 $a^{3/2}+b^{3/2}+c^{3/2}=1$ 对比，注意到 $a\sqrt{a} = a^{3/2}$。故分子即为 $1$。
+    - 所以，原式 $\le \frac{1}{2\sqrt{abc}}$。
+    - 要证 $\frac{1}{2\sqrt{abc}} \le \frac{1}{2abc}$，只需证 $\frac{1}{\sqrt{abc}} \le \frac{1}{abc}$，即 $abc \le \sqrt{abc}$。
+    - 由 (1) 知 $abc \le \frac{1}{9} &lt; 1$，故 $\sqrt{abc} \ge abc$ 成立，倒数关系反向，于是 $\frac{1}{2\sqrt{abc}} \le \frac{1}{2abc}$ 成立。
+    - 整个缩放链的等号无法同时取得：(1)的等号需 $abc=1/9$，而上述放缩等号需 $abc=1$，故最终不等式严格取小于号，原题 $\le$ 号成立。
+- <strong>点评/变式</strong>：本题是三元均值不等式与二元基本不等式的经典结合。(2)中的“过渡缩放”值得深入学习：先利用分母和基本不等式将三个分式联系起来，再整体利用已知的和为定值条件。注意最终不等号需要回头检查已证式子之间的逻辑传递。变式训练可将条件改为 $a^2+b^2+c^2=1$ 或 $ab+bc+ca=1$，求证形式类似的上下界构造题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-23.html">2022-文-23</a>（2022 · 中） 证明三元不等式和分式不等式，使用三元均值不等式和基本不等式。</li>
+<li><a href="../../exam/数学/2022-理-23.html">2022-理-23</a>（2022 · 中） 本题考查三元均值不等式和基本不等式的应用，包括证明积与和的不等关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/083-不等式.html">三元均值不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角形面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角形面积</h1><div class="review-mark" data-stem="三角形面积"></div><div class="meta-card"><span><strong>考点</strong>三角形面积</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>23</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：0</li>
+<li>真题数：23；年份跨度：2008–2023</li>
+<li>出现题位：填空15 填空16 解答17 解答21 解答22 选择4 选择5 选择8 选择9 选择10 选择12</li>
+<li>难度分布：中17 易3 难3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心公式</strong>：</li>
+<li>基础面积公式：$S = \dfrac{1}{2} ah$（底×高÷2）。</li>
+<li>正弦定理面积公式：$S = \dfrac{1}{2}ab\sin C = \dfrac{1}{2}bc\sin A = \dfrac{1}{2}ac\sin B$。<strong>适用条件：已知两边及其夹角。</strong></li>
+<li>向量与坐标面积公式：若 $\vec{a}=(x_1,y_1)$，$\vec{b}=(x_2,y_2)$，则 $S = \dfrac{1}{2}|x_1y_2 - x_2y_1|$。</li>
+<li>海伦公式（拓展）：$S = \sqrt{p(p-a)(p-b)(p-c)}$，其中 $p=\dfrac{a+b+c}{2}$。</li>
+<li>解析几何三角形面积：$S = \dfrac{1}{2} \times \text{弦长} \times \text{点到直线距离}$。<ul>
+<li>弦长通常由圆锥曲线联立＋韦达定理求得。</li>
+<li>高通常由点到直线距离公式求得。</li>
+</ul>
+</li>
+<li><strong>面积比转化定理</strong>：若两个三角形同底（或等底），面积比等于高的比；若同高（或等高），面积比等于底的比。</li>
+<li><strong>解三角形综合</strong>：已知面积往往配合余弦定理或正弦定理进行“知值求边”或“知边求值”。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选公式，定方向</strong>：若题目仅含长度角度，选 $\dfrac{1}{2}ab\sin C$；若在直角坐标系中涉及坐标或曲线，优先考虑弦长+点到直线距离或向量叉积公式。</li>
+<li><strong>翻译面积条件</strong>：看到“面积是2倍”或具体数值，立刻转化为边长的比例关系或方程。</li>
+<li><strong>解析几何标准动作</strong>：涉及直线与圆锥曲线相交弦面积：</li>
+<li>联立方程，写出韦达定理（$\Delta&gt;0$ 求范围）。</li>
+<li>写出弦长公式 $|AB|=\sqrt{1+k^2}|x_1-x_2|$。</li>
+<li>写出点到直线距离公式求高。</li>
+<li><strong>解三角形标准动作</strong>：出现多边形面积，一般通过连接对角线或补形，转化为多个“边角边”三角形面积之和。</li>
+<li><strong>设而不求与整体代入</strong>：面积往往只关心边长乘积（如 $ac$），不需要单独求出 $a$ 和 $c$，利用已知等式进行整体代换即可解题。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略隐含限制</strong>：三角形几何中，边长必须满足两边之和大于第三边；解析几何中，直线与曲线相交须 $\Delta &gt; 0$。如果不验证这些条件，极易解出增根。</li>
+<li><strong>面积公式中的夹角错配</strong>：使用 $S=\dfrac{1}{2}ab\sin C$ 时，注意角必须是边 $a$ 和 $b$ 的夹角。</li>
+<li><strong>钝角三角形陷阱</strong>：已知两边和面积求角时，$\sin$ 值通常对应锐角和钝角两个解。如果题目指定为钝角三角形，务必舍去锐角解，选钝角。</li>
+<li><strong>同角三角函数正负号</strong>：三角形内角正弦必正，余弦在钝角时为负。用 $\sin^2+\cos^2=1$ 开方需结合角度范围定号。</li>
+<li><strong>向量法与解析法混淆</strong>：使用点坐标求三角形面积时，切记代公式 $S=\dfrac{1}{2}|x_1y_2-x_2y_1|$ 不要遗漏纵坐标或符号错乱。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2015-理-17</h3>
+<ul>
+<li><strong>题目</strong>：$\triangle ABC$ 中，$D$ 为 $BC$ 上的点，$AD$ 平分 $\angle BAC$，$\triangle ABD$ 面积是 $\triangle ADC$ 面积的2倍。（1）求 $\dfrac{\sin B}{\sin C}$；（2）若 $AD=1$，$DC=\dfrac{\sqrt{2}}{2}$，求 $BD$ 和 $AC$ 的长。</li>
+<li><strong>思路</strong>：</li>
+<li>面积比转化为底边长比。</li>
+<li>构造高线，结合角平分线性质与正弦定理求角度比值。</li>
+<li>利用已知边长和面积关系联立余弦定理求解具体边长。</li>
+<li><strong>步骤</strong>：</li>
+<li>过 $A$ 作 $AE \perp BC$，由于两三角形同高，由面积比 $2:1$ 得 $BD=2DC$。</li>
+<li>在 $\triangle ABD$ 和 $\triangle ADC$ 中分别用正弦定理，结合 $\angle BAD=\angle DAC$ 及互补角正弦相等，易得 $\dfrac{\sin B}{\sin C}=\dfrac{DC}{BD}=\dfrac{1}{2}$。</li>
+<li>由 $DC=\dfrac{\sqrt{2}}{2}$ 得 $BD=\sqrt{2}$。设 $AC=x$，则 $AB=2x$。在 $\triangle ABD$ 与 $\triangle ADC$ 中分别用余弦定理表示 $\cos \angle BAD$ 与 $\cos \angle DAC$，由两角相等构建等式解得 $x$，即得 $AC$。</li>
+<li><strong>点评/变式</strong>：<strong>角平分线+面积比=边长比</strong>是高频命题点。若将条件改为“D为中点且 $\triangle ABD$ 面积等于 $\triangle ACD$”，则难度下降为基础题。</li>
+</ul>
+<h3>代表题2：2023-新课标Ⅱ-17</h3>
+<ul>
+<li><strong>题目</strong>：记 $\triangle ABC$ 的内角 $A,B,C$ 的对边分别为 $a,b,c$，面积为 $\sqrt{3}$，$D$ 为 $BC$ 中点，且 $AD=1$。（1）若 $\angle ADC = \dfrac{\pi}{3}$，求 $\tan B$；（2）若 $b^2+c^2=8$，求 $b,c$。</li>
+<li><strong>思路</strong>：</li>
+<li>利用三角形中线分割面积的性质，或直接利用 $\angle ADC$ 与 $\angle ADB$ 互补及正弦面积公式列方程。</li>
+<li>中线条件通常配合向量法或余弦定理（在两个小三角形中写 $AD^2$）构造等式。</li>
+<li><strong>步骤</strong>：</li>
+<li>由 $S_{\triangle ADC}=\dfrac{1}{2} \cdot AD \cdot DC \cdot \sin\dfrac{\pi}{3} = \dfrac{1}{2}S_{\triangle ABC} = \dfrac{\sqrt{3}}{2}$，解得 $DC=2$，故 $a=4$。</li>
+<li>在 $\triangle ABD$ 中，$\angle ADB = \dfrac{2\pi}{3}$，由余弦定理求 $c$，再在 $\triangle ABD$ 中用正弦或余弦定理求 $\cos B$，转化为 $\tan B$。</li>
+<li>第二问若用中线长定理（或向量）：$b^2+c^2=2(AD^2+BD^2)$，求出 $a$ 后用余弦定理和面积公式联立求解 $b,c$。</li>
+<li><strong>点评/变式</strong>：<strong>中线+面积</strong>的组合常利用“中线将三角形分割为面积相等的两部分”。注意中线长公式 $m_a^2 = \dfrac{b^2}{2} + \dfrac{c^2}{2} - \dfrac{a^2}{4}$ 可大幅简化运算。</li>
+</ul>
+<h3>代表题3：2014-文-17</h3>
+<ul>
+<li><strong>题目</strong>：四边形 $ABCD$ 的内角 $A$ 与 $C$ 互补，$AB=1$，$BC=3$，$CD=DA=2$。（1）求 $C$ 和 $BD$；（2）求四边形 $ABCD$ 的面积。</li>
+<li><strong>思路</strong>：</li>
+<li><strong>互补角余弦互为相反数</strong>，在 $\triangle ABD$ 和 $\triangle BCD$ 中用余弦定理表示 $BD^2$，联立方程消去角求值。</li>
+<li>四边形无直接面积公式，必须<strong>割补</strong>为两个三角形面积之和：$S = S_{\triangle BCD} + S_{\triangle ABD}$。</li>
+<li><strong>步骤</strong>：</li>
+<li>在 $\triangle BCD$ 中：$BD^2 = 13 - 12\cos C$。</li>
+<li>在 $\triangle ABD$ 中：$A= \pi - C$，故 $\cos A = -\cos C$。得 $BD^2 = 5 + 4\cos C$。</li>
+<li>联立两式解出 $\cos C = \dfrac{1}{2}$，得 $C=60^\circ$。代入得 $BD=\sqrt{7}$。</li>
+<li>面积 $S = \dfrac{1}{2}\times 3\times 2 \times \sin 60^\circ + \dfrac{1}{2}\times 1\times 2 \times \sin 120^\circ = 2\sqrt{3}$。</li>
+<li><strong>点评/变式</strong>：圆内接四边形对角互补时此性质必用。即便是普通四边形，面对“面积”也必先切分为三角形。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-05.html">2023-新课标Ⅱ-05</a>（2023 · 中） 直线与椭圆联立，通过判别式求参数范围，结合三角形面积比解出参数值。</li>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-15.html">2023-新课标Ⅱ-15</a>（2023 · 中） 该题考查直线与圆相交的弦长、点到直线距离及三角形面积，求参数。</li>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-17.html">2023-新课标Ⅱ-17</a>（2023 · 中） 本题考查解三角形中中线相关问题的解法，包括三角形面积公式、余弦定理及正弦定理的应用。</li>
+<li><a href="../../exam/数学/2021-文-15.html">2021-文-15</a>（2021 · 中） 该题考查三角形面积公式与余弦定理的应用，通过已知条件解三角形求边长。</li>
+<li><a href="../../exam/数学/2020-文-09.html">2020-文-09</a>（2020 · 中） 本题通过双曲线渐近线与直线交点求三角形面积，结合焦距与均值不等式求最值。</li>
+<li><a href="../../exam/数学/2020-理-08.html">2020-理-08</a>（2020 · 中） 本题通过双曲线渐近线与直线交点构建三角形，结合面积与均值不等式求焦距最小值。</li>
+<li><a href="../../exam/数学/2019-理-15.html">2019-理-15</a>（2019 · 易） 应用余弦定理建立方程求边长，再利用三角形面积公式计算面积。</li>
+<li><a href="../../exam/数学/2018-文-16.html">2018-文-16</a>（2018 · 中） 已知圆锥母线垂直和线面角，由三角形面积求母线长，再计算圆锥体积。</li>
+<li><a href="../../exam/数学/2017-文-22.html">2017-文-22</a>（2017 · 中） 极坐标系下动点轨迹求解及三角形面积最值问题</li>
+<li><a href="../../exam/数学/2017-理-17.html">2017-理-17</a>（2017 · 中） 该题考查三角形内角关系与三角恒等变换求角，再利用余弦定理及面积公式求边长。</li>
+<li><a href="../../exam/数学/2016-文-21.html">2016-文-21</a>（2016 · 中） 本题主要考查椭圆与直线的位置关系，通过几何条件求三角形面积并证明参数不等式。</li>
+<li><a href="../../exam/数学/2015-理-17.html">2015-理-17</a>（2015 · 中） 三角形中角平分线与面积关系问题，通过正弦定理求边长比，用余弦定理求线段长。</li>
+<li><a href="../../exam/数学/2014-文-17.html">2014-文-17</a>（2014 · 中） 利用余弦定理和互补角关系求四边形边长及角度，再计算面积。</li>
+<li><a href="../../exam/数学/2014-理-04.html">2014-理-04</a>（2014 · 中） 已知钝角三角形两边及面积，利用面积公式求夹角正弦，分类讨论并利用余弦定理求第三边。</li>
+<li><a href="../../exam/数学/2014-理-10.html">2014-理-10</a>（2014 · 中） 抛物线焦点弦与原点构成的三角形面积计算</li>
+<li><a href="../../exam/数学/2013-文-04.html">2013-文-04</a>（2013 · 易） 利用正弦定理求边长，再用三角形面积公式计算面积。</li>
+<li><a href="../../exam/数学/2013-理-12.html">2013-理-12</a>（2013 · 难） 考查含参数直线分割三角形为面积相等的两部分，求参数b的取值范围。</li>
+<li><a href="../../exam/数学/2012-文-17.html">2012-文-17</a>（2012 · 中） 本题通过已知边角关系求角A，再利用三角形面积和余弦定理求边长b、c。</li>
+<li><a href="../../exam/数学/2012-理-17.html">2012-理-17</a>（2012 · 中） 利用正弦定理和三角恒等变换求三角形内角A，结合余弦定理与面积公式求边长b,c。</li>
+<li><a href="../../exam/数学/2011-文-09.html">2011-文-09</a>（2011 · 中） 本题通过抛物线的几何性质求三角形面积，涉及焦点、准线及通径长度。</li>
+<li><a href="../../exam/数学/2010-理-16.html">2010-理-16</a>（2010 · 难） 在三角形中结合面积公式与余弦定理求解角度。</li>
+<li><a href="../../exam/数学/2009-文-15.html">2009-文-15</a>（2009 · 难） 求过圆上一点的切线方程并计算其与坐标轴围成的三角形面积</li>
+<li><a href="../../exam/数学/2008-理-17.html">2008-理-17</a>（2008 · 易） 在三角形中已知两角余弦求第三角正弦，并用面积公式和正弦定理计算边长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角形面积</a></li>
+</ul>
+</div>
+</body>
+</html>

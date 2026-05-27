@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>指数函数性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>指数函数性质</h1><div class="review-mark" data-stem="指数函数性质"></div><div class="meta-card"><span><strong>考点</strong>指数函数性质</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：2</li>
+<li>真题数：2；年份跨度：2019–2021</li>
+<li>出现题位：选择3 选择6</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>指数函数的一般形式为 $y = a^x$（$a&gt;0$ 且 $a \neq 1$）。<br />
+- 定义域：$\mathbb{R}$；值域：$(0, +\infty)$。<br />
+- 图像恒过定点 $(0,1)$。<br />
+- 单调性：当 $a&gt;1$ 时，$y=a^x$ 在 $\mathbb{R}$ 上单调递增；当 $0&lt;a&lt;1$ 时，在 $\mathbb{R}$ 上单调递减。<br />
+- 常见底数为 $e$ 的指数函数 $y=e^x$（单调递增，恒正）；结合绝对值或复合后，性质可由底数及内层函数共同决定，如 $y=e^{|x|}$ 为偶函数，最小值为 $1$。<br />
+- 利用指数函数比较大小：若 $a&gt;1$ 且 $x_1 &lt; x_2$，则 $a^{x_1} &lt; a^{x_2}$；若 $0&lt;a&lt;1$ 且 $x_1 &lt; x_2$，则 $a^{x_1} &gt; a^{x_2}$。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断指数型命题的真假</strong>：先明确指数函数的定义域、值域、单调性及定点；对于复合型（如 $e^{|x|}$），分层分析，善用偶函数、最值等性质。  </li>
+<li><strong>比较大小或解指数不等式</strong>：  </li>
+<li>底数相同时，直接利用指数函数单调性。  </li>
+<li>底数不同时，常化为同底，或借助中间值（如 $0$、$1$）进行比较。  </li>
+<li>还可结合幂函数、对数函数性质，或取特殊值排除错误选项。  </li>
+<li><strong>选项排除法</strong>：在不等式判断中，赋特殊值（如 $a=2, b=1$ 或 $a=1, b=-2$）可快速排除错误选项，提高选择题解题效率。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忽略指数函数的值域恒正：$\forall x \in \mathbb{R},\ a^x &gt; 0$，这是真命题判断中的常见依据。  </li>
+<li>误判单调性：底数 $a&gt;1$ 时递增，$0&lt;a&lt;1$ 时递减，易记反。  </li>
+<li>复合指数函数忽略内层性质的约束：如 $e^{|x|}$ 当 $x \in \mathbb{R}$ 时 $|x| \ge 0$，结合 $y=e^x$ 在 $[0,+\infty)$ 上递增得 $e^{|x|} \ge e^0 =1$，漏掉等号成立条件会导致判断错误。  </li>
+<li>混淆不同函数类型：如将指数函数 $3^x$ 与幂函数 $x^3$ 的单调性混用，误将幂函数性质当作指数函数性质导致错选。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-文-03）<br />
+已知命题 $p$：$\exists x \in \mathbb{R}$，$\sin x &lt; 1$；命题 $q$：$\forall x \in \mathbb{R}$，$e^{|x|} \ge 1$，则下列命题中为真命题的是<br />
+A. $p \land q$<br />
+B. $\lnot p \land q$<br />
+C. $p \land \lnot q$<br />
+D. $\lnot(p \lor q)$  </p>
+<p><strong>思路</strong>：分别判断 $p$、$q$ 的真假，再结合逻辑联结词判断复合命题。<br />
+<strong>步骤</strong>：<br />
+1. 对于 $p$，由正弦函数 $\sin x \in [-1,1]$，可知 $\sin x =1$ 仅为个别点，大部分点 $\sin x &lt; 1$ 成立，故存在 $x$ 使 $\sin x &lt;1$，$p$ 为真。<br />
+2. 对于 $q$，函数 $y=e^{|x|}$ 为偶函数，当 $x \ge 0$ 时 $|x|=x$，$y=e^x \ge e^0 =1$；由对称性知 $x&lt;0$ 时亦有 $e^{|x|} \ge 1$，故 $\forall x \in \mathbb{R}$，$e^{|x|} \ge 1$ 恒成立，$q$ 真。<br />
+3. $p$ 真且 $q$ 真，则 $p \land q$ 为真，故选A。<br />
+<strong>点评/变式</strong>：复合命题真假判断，关键在于准确判断单命题的真假。注意 $e^{|x|} \ge 1$ 中的等号能够取到（$x=0$），因此是全称真命题。变式可将指数函数换为 $2^{|x|}$ 或 $a^{|x|}$（$a&gt;1$），结论一致。</p>
+<p><strong>题目</strong>（2019-理-06）<br />
+若 $a&gt;b$，则<br />
+A. $\ln(a-b)&gt;0$<br />
+B. $3^a &lt; 3^b$<br />
+C. $a^3 - b^3 &gt; 0$<br />
+D. $|a| &gt; |b|$  </p>
+<p><strong>思路</strong>：考查利用函数单调性及特殊值排除法判断不等式。<br />
+<strong>步骤</strong>：<br />
+1. 取 $a=2, b=1$ 满足 $a&gt;b$，此时 $\ln(2-1)=0$，知A错；$3^2 &gt; 3^1$ 与B矛盾，排除B；$|2| &gt; |1|$ 未排除D，但需进一步检验。<br />
+2. 再取 $a=1, b=-2$ 满足 $a&gt;b$，则 $|1| &lt; |-2|$，知D错，排除D。<br />
+3. 验证C：幂函数 $y=x^3$ 在 $\mathbb{R}$ 上单调递增，由 $a&gt;b$ 得 $a^3 &gt; b^3$，即 $a^3 - b^3 &gt; 0$ 恒成立，故选C。<br />
+<strong>点评/变式</strong>：本题直接法利用指数函数 $y=3^x$ 的单调性易错选B（应为 $3^a &gt; 3^b$）；幂函数 $y=x^3$ 与指数函数单调性不同，需准确区分。赋值法是解决抽象不等式选择题的通用技巧，配合单调性分析可速解。变式可将底数改为 $\frac 12$ 或其他值，核心仍是抓住单调性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-03.html">2021-文-03</a>（2021 · 易） 本题考查正弦函数值域和指数函数性质在命题真假判断中的应用。</li>
+<li><a href="../../exam/数学/2019-理-06.html">2019-理-06</a>（2019 · 中） 本题通过特值法结合函数单调性判断不等式正误，考查对数、指数、幂函数性质及绝对值意义。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">指数函数性质</a></li>
+</ul>
+</div>
+</body>
+</html>

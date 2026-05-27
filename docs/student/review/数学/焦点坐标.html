@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦点坐标</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>焦点坐标</h1><div class="review-mark" data-stem="焦点坐标"></div><div class="meta-card"><span><strong>考点</strong>焦点坐标</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线焦点坐标</strong>：对于标准方程 $y^2 = 2px\ (p&gt;0)$，焦点为 $F\left(\frac p2,0\right)$；$y^2 = -2px\ (p&gt;0)$ 焦点为 $\left(-\frac p2,0\right)$；$x^2 = 2py\ (p&gt;0)$ 焦点为 $\left(0,\frac p2\right)$；$x^2 = -2py\ (p&gt;0)$ 焦点为 $\left(0,-\frac p2\right)$。  </li>
+<li><strong>椭圆焦点坐标</strong>：对于椭圆 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\ (a&gt;b&gt;0)$，焦点在 $x$ 轴上，$c = \sqrt{a^2 - b^2}$，焦点为 $(\pm c,0)$；若焦点在 $y$ 轴上（$\frac{y^2}{a^2}+\frac{x^2}{b^2}=1$），焦点为 $(0,\pm c)$，其中 $c = \sqrt{a^2 - b^2}$。  </li>
+<li><strong>共焦点条件</strong>：若两曲线共用同一焦点，则该点坐标满足两曲线的焦点公式，可建立关于待定参数的方程。注意区分长轴所在轴，正确计算 $c$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先定型再定量</strong>：将所给方程化为标准形式，明确曲线类型及开口（或长轴）方向。  </li>
+<li><strong>写出焦点坐标</strong>：利用标准方程的参数（$p$ 或 $a,b$）表示出焦点坐标，注意 $p&gt;0$，$a&gt;b&gt;0$ 等隐含条件。  </li>
+<li><strong>建立方程</strong>：根据“公共焦点”或焦点重合条件，令对应坐标相等（如焦点在 $x$ 轴上，则横坐标相等，纵坐标为 $0$）。  </li>
+<li><strong>解方程求参数</strong>：消元或直接解方程，注意舍去不合题意的增根（如负值、零值）。  </li>
+<li><strong>检验与巧解</strong>：遇到选择题时，可代入选项检验焦点坐标是否一致，利用排除法快速求解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>椭圆 $a,b$ 大小判断错误</strong>：焦点总是在长轴上，若分母大的项对应 $a^2$；若分母大小与 $x^2,y^2$ 关系不清，易把 $c^2 = a^2 - b^2$ 弄反。  </li>
+<li><strong>抛物线焦点位置符号错误</strong>：一次项决定对称轴，系数正负决定开口，焦点在轴上且与开口同向，计算 $\frac p2$ 时注意正负号。  </li>
+<li><strong>忽略参数范围</strong>：如 $p&gt;0$，得到 $p=0$ 时应舍去；椭圆 $a&gt;b&gt;0$，若解得 $p$ 使 $a\le b$ 需检验。  </li>
+<li><strong>混淆不同曲线的 $c$ 含义</strong>：椭圆 $c$ 是半焦距，抛物线中并没有 $c$；公共焦点时不能直接将椭圆 $c$ 与抛物线 $\frac p2$ 做无关联的比较，需建立相等关系。  </li>
+<li><strong>解方程时平方导致增根</strong>：如 $\frac p2 = \sqrt{2p}$ 两边平方可能引入 $p=0$，需代回验证。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2019 全国Ⅱ理 8）若抛物线 $y^2 = 2px\ (p&gt;0)$ 的焦点是椭圆 $\frac{x^2}{3p} + \frac{y^2}{p} = 1$ 的一个焦点，则 $p =$<br />
+A. $2$　　 B. $3$　　 C. $4$　　 D. $8$</p>
+<p><strong>思路</strong><br />
+分别写出抛物线和椭圆的焦点坐标，利用焦点相同建立关于 $p$ 的方程。注意椭圆方程中分母 $3p$ 与 $p$ 的大小关系，判断焦点所在轴并计算 $c$。亦可代入选项快速排除。</p>
+<p><strong>步骤</strong><br />
+1. 由抛物线 $y^2 = 2px\ (p&gt;0)$，焦点为 $F\left(\frac p2, 0\right)$。<br />
+2. 椭圆方程 $\frac{x^2}{3p} + \frac{y^2}{p} = 1$，因为 $3p &gt; p &gt; 0$，故焦点在 $x$ 轴上，$a^2 = 3p$，$b^2 = p$，则 $c = \sqrt{a^2 - b^2} = \sqrt{3p - p} = \sqrt{2p}$，焦点为 $(\pm \sqrt{2p}, 0)$。<br />
+3. 由题设，抛物线的焦点就是椭圆的某一个焦点，由于都在 $x$ 轴正半轴或负半轴？注意 $\frac p2 &gt; 0$，而椭圆焦点为 $(\pm \sqrt{2p}, 0)$，正半轴焦点为 $(\sqrt{2p}, 0)$，所以：<br />
+   $$ \frac p2 = \sqrt{2p} $$<br />
+4. 两边平方得 $\frac{p^2}{4} = 2p \implies p^2 = 8p \implies p(p-8)=0$。<br />
+   结合 $p&gt;0$，得 $p=8$。<br />
+5. 检验：$p=8$ 时，抛物线焦点 $(4,0)$，椭圆 $a^2=24,\ b^2=8,\ c=\sqrt{16}=4$，焦点 $(\pm 4,0)$，符合。故选 <strong>D</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 本题本质是两曲线的基本量计算与相等关系构建，难度较低。若疏忽椭圆焦点位置判断，误认为焦点在 $y$ 轴，会得到 $c = \sqrt{p - 3p}$ 无解或错解。<br />
+- 变式思考：若改为抛物线与椭圆有公共焦点且焦点在 $y$ 轴，可将椭圆方程调整为 $\frac{x^2}{p} + \frac{y^2}{3p} = 1$，再与 $x^2 = 2py$ 组合求解。亦可将椭圆换成双曲线，注意 $c = \sqrt{a^2 + b^2}$，方法完全一致。<br />
+- 小题巧解：当 $p=2$ 时，抛物线焦点 $(1,0)$，椭圆焦点 $(\pm \sqrt4,0)=(\pm2,0)$，不重合，排除 A；类似可快速排除 B、C，直接选 D。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-08.html">2019-理-08</a>（2019 · 易） 本题通过抛物线与椭圆共焦点条件求参数p，考查标准方程与焦点坐标关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">焦点坐标</a></li>
+</ul>
+</div>
+</body>
+</html>

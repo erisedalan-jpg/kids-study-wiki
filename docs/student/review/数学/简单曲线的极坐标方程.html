@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简单曲线的极坐标方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>简单曲线的极坐标方程</h1><div class="review-mark" data-stem="简单曲线的极坐标方程"></div><div class="meta-card"><span><strong>考点</strong>简单曲线的极坐标方程</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2011–2011</li>
+<li>出现题位：解答23</li>
+<li>难度分布：难2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极坐标系定义</strong>：在平面内取定点 $O$ (极点)，引射线 $Ox$ (极轴)，则点 $M$ 的位置由极径 $\rho = |OM|$ 和极角 $\theta = \angle xOM$ 确定，记为 $M(\rho, \theta)$。</li>
+<li><strong>直角坐标与极坐标互化</strong>：以直角坐标系原点为极点、$x$ 轴正半轴为极轴时，有互换公式：$x = \rho\cos\theta$，$y = \rho\sin\theta$；以及 $\rho^2 = x^2 + y^2$，$\tan\theta = \dfrac{y}{x} (x \neq 0)$。</li>
+<li><strong>常见曲线的极坐标方程</strong>：</li>
+<li>过极点且与极轴成 $\alpha$ 角的射线：$\theta = \alpha (\rho \in \mathbb{R})$ 或限定 $\rho \ge 0$。</li>
+<li>圆心在极点、半径为 $r$ 的圆：$\rho = r$。</li>
+<li>圆心为 $C(r,0)$、半径为 $r$ 且过极点的圆：$\rho = 2r\cos\theta$。</li>
+<li>圆心为 $C(r, \frac{\pi}{2})$、半径为 $r$ 且过极点的圆：$\rho = 2r\sin\theta$。</li>
+<li><strong>极径的几何意义</strong>：对于同一条射线 $\theta = \theta_0$ 与两条曲线的交点 $A, B$，它们到极点的距离即对应极径 $\rho_1, \rho_2$。若 $A, B$ 在极点同侧，则两点距离 $|AB| = |\rho_1 - \rho_2|$。此类弦长的计算是极坐标方程的核心应用。</li>
+<li><strong>轨迹方程求解</strong>：</li>
+<li>相关点法（代入法）：若动点 $P(x,y)$ 与已知曲线 $C_1$ 上的动点 $M(x_0,y_0)$ 满足确定的向量关系，可将 $M$ 的坐标用 $P$ 的坐标表示，代入 $C_1$ 方程即得 $P$ 的轨迹方程。</li>
+<li>参数方程到普通方程：消去参数即可。反之，选择合适参数可构造参数方程。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求动点轨迹的通用步骤（代入法）</strong>：</li>
+<li><strong>设点</strong>：设所求动点 $P$ 坐标为 $(x, y)$，已知曲线 $C_1$ 上相关动点 $M$ 坐标为 $(x_0, y_0)$。</li>
+<li><strong>构关系</strong>：根据题中向量关系（如 $\vec{OP} = k \vec{OM}$）或中点坐标公式，将 $x_0, y_0$ 表达为 $x, y$ 的式子。</li>
+<li><strong>代入</strong>：将上述表达式直接代入已知曲线 $C_1$ 的方程，化简后即得曲线 $C_2$ 的方程。结果可以保留为参数方程或化为普通方程。</li>
+<li><strong>极坐标下求弦长的标准流程</strong>：</li>
+<li><strong>化方程为极坐标</strong>：将两曲线（通常是圆）的直角坐标方程或参数方程，利用互化公式 $\rho^2=x^2+y^2, x=\rho\cos\theta, y=\rho\sin\theta$，转化为极坐标方程 $\rho = f(\theta)$ 的形式。</li>
+<li><strong>确定射线</strong>：明确题目给出的射线所对应的极角 $\theta = \theta_0$。</li>
+<li><strong>求出极径</strong>：将 $\theta_0$ 分别代入两曲线的极坐标方程，解出对应的非零极径 $\rho_1$（与 $C_1$ 交点）和 $\rho_2$（与 $C_2$ 交点）。</li>
+<li><strong>计算弦长</strong>：若两交点均在射线上，则两点间距为 $|\rho_1 - \rho_2|$。注意 $\rho$ 的正负直接代入，距离公式一般带绝对值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆极坐标方程的几何形式</strong>：容易记错过极点的圆的方程，特别是圆心纵坐标 $a$ 与极坐标方程 $\rho = 2a\sin\theta$ 的对应关系。图像记忆法：圆心在 $(0,a)$，极坐标方程为 $\rho = 2a\sin\theta$；圆心在 $(a,0)$，极坐标方程为 $\rho = 2a\cos\theta$。</li>
+<li><strong>距离计算未取绝对值</strong>：在 $|AB| = |\rho_1 - \rho_2|$ 计算中，忘记结果必须是非负的。即使解出的极径为负，直接代入差的绝对值即可，无需强行转化为正极径再运算。</li>
+<li><strong>忽略“异于极点”的条件</strong>：射线与曲线若在极角处有一个是极点（$\rho=0$），该交点不计入求弦长的范围。求交点极径时，解出的 $\rho=0$ 应当舍去，只用非零解来计算距离。</li>
+<li><strong>代入法求轨迹时坐标代反</strong>：在利用中点或定比分点坐标公式时，如果搞错了 $P$ 和 $M$ 的对应关系，会导致最终轨迹方程错误。务必看清题目中“谁是谁的”动点关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：在直角坐标系 $xOy$ 中，曲线 $C_1$ 的参数方程为 $\begin{cases} x=2\cos\alpha \ y=2+2\sin\alpha \end{cases}$ （$\alpha$ 为参数）。点 $M$ 是 $C_1$ 上的动点，点 $P$ 满足 $\vec{OP} = 2\vec{OM}$，$P$ 点的轨迹为曲线 $C_2$。
+（Ⅰ）求 $C_2$ 的方程；
+（Ⅱ）在以 $O$ 为极点，$x$ 轴正半轴为极轴的极坐标系中，射线 $\theta = \dfrac{\pi}{3}$ 与 $C_1$ 异于极点的交点为 $A$，与 $C_2$ 异于极点的交点为 $B$，求 $|AB|$。</p>
+<p><strong>思路</strong>：
+（Ⅰ）由 $\vec{OP}=2\vec{OM}$ 得到 $M$ 是 $OP$ 的中点，将 $M$ 坐标用 $P$ 坐标表示并代入 $C_1$，即得 $C_2$ 的参数方程。
+（Ⅱ）先将两曲线的参数方程转化为极坐标方程，再令 $\theta=\frac{\pi}{3}$ 分别求出交点 $A, B$ 的极径，最后利用距离公式 $|\rho_1 - \rho_2|$ 求弦长。</p>
+<p><strong>步骤</strong>：
+（Ⅰ）设 $P$ 点坐标为 $(x, y)$，由条件 $\vec{OP} = 2\vec{OM}$ 知 $M$ 为 $OP$ 中点，故 $M(\dfrac{x}{2}, \dfrac{y}{2})$。因为 $M$ 在 $C_1$ 上，所以有：
+$$\begin{cases} \dfrac{x}{2}=2\cos\alpha \ \dfrac{y}{2}=2+2\sin\alpha \end{cases}$$
+整理得曲线 $C_2$ 的参数方程为：
+$$\begin{cases} x=4\cos\alpha \ y=4+4\sin\alpha \end{cases} \quad (\alpha\text{为参数})$$
+（Ⅱ）曲线 $C_1$ 的普通方程为 $x^2 + (y-2)^2 = 4$，即 $x^2+y^2 -4y=0$。利用互化公式 $\rho^2 = x^2+y^2, y=\rho\sin\theta$，可得：
+$$\rho^2 - 4\rho\sin\theta = 0 \quad \Rightarrow \quad \rho = 4\sin\theta \ (\rho \neq 0)$$
+同理，$C_2$ 的普通方程为 $x^2 + (y-4)^2 = 16$，即 $x^2+y^2-8y=0$，极坐标方程为：
+$$\rho = 8\sin\theta \ (\rho \neq 0)$$
+令射线 $\theta = \dfrac{\pi}{3}$，分别代入两方程：
+交点 $A$ 的极径 $\rho_1 = 4\sin\dfrac{\pi}{3} = 4 \times \dfrac{\sqrt{3}}{2} = 2\sqrt{3}$；
+交点 $B$ 的极径 $\rho_2 = 8\sin\dfrac{\pi}{3} = 8 \times \dfrac{\sqrt{3}}{2} = 4\sqrt{3}$。
+所以，两点距离 $|AB| = |\rho_2 - \rho_1| = |4\sqrt{3} - 2\sqrt{3}| = 2\sqrt{3}$。</p>
+<p><strong>点评/变式</strong>：
+此题展示的极坐标求弦长法，避免了繁琐的直角坐标下求交点再算距离的过程，其精髓在于利用极径直接表达点到极点的距离。这是极坐标系最大的优势。
+变式：若射线变为 $\theta = \dfrac{\pi}{6}$，结果如何？若把“射线”改为“过极点的直线”，则需考虑 $\theta$ 和 $\theta+\pi$ 两种情况，弦长需注意讨论。参数方程化为极坐标方程时，熟练应用 $\rho^2 = x^2+y^2$ 与 $y=\rho\sin\theta$ 是快速解题的关键。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-23.html">2011-文-23</a>（2011 · 难） 该题考查参数方程与极坐标方程综合，由动点满足的向量关系求轨迹曲线，并在极坐标系下求两曲线交点的极径差。</li>
+<li><a href="../../exam/数学/2011-理-23.html">2011-理-23</a>（2011 · 难） 本题考查根据参数方程求轨迹方程，以及在极坐标系下求两曲线交点的极径差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1073-简单曲线的极坐标方程.html">简单曲线的极坐标方程</a></li>
+</ul>
+</div>
+</body>
+</html>

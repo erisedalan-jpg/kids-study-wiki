@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>外接圆半径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>外接圆半径</h1><div class="review-mark" data-stem="外接圆半径"></div><div class="meta-card"><span><strong>考点</strong>外接圆半径</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等边三角形</strong>：边长 $a$，面积 $S=\frac{\sqrt{3}}{4}a^{2}$；外接圆半径 $R_{\triangle}=\frac{a}{\sqrt{3}}$；内切圆半径 $r_{\triangle}=\frac{\sqrt{3}}{6}a$。</li>
+<li><strong>球的截面性质</strong>：球心到截面的距离 $d$、截面圆半径 $r$、球半径 $R$ 满足 $d^{2}+r^{2}=R^{2}$。过球心的截面（大圆）$r=R$，$d=0$。</li>
+<li><strong>球表面积</strong>：$S_{\text{球}}=4\pi R^{2}$。</li>
+<li>等边三角形外接圆与其所在平面截球所得圆重合时，三角形顶点落在球面上，三角形外接圆即为球的小圆。</li>
+<li>以上关系是求解“球心到三角形所在平面距离”的核心依据。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由条件定边长</strong>：若已知等边三角形面积，用 $S=\frac{\sqrt{3}}{4}a^{2}$ 反解边长 $a$。</li>
+<li><strong>求外接圆半径</strong>：等边三角形外接圆半径 $r=\frac{a}{\sqrt{3}}$（或直接由正弦定理 $2r=\frac{a}{\sin 60^\circ}$）。</li>
+<li><strong>求球半径</strong>：由球的表面积 $S_{\text{球}}=4\pi R^{2}$ 得出 $R$。</li>
+<li><strong>用截面勾股定理</strong>：球心到截面距离 $d=\sqrt{R^{2}-r^{2}}$，注意 $r$ 为截面圆半径（此处即外接圆半径）。</li>
+<li>答案验证时，检查 $r\le R$ 是否成立，不成立则无解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>面积公式混淆</strong>：等边三角形面积是 $\frac{\sqrt{3}}{4}a^{2}$，误记成 $\frac{\sqrt{3}}{2}a^{2}$ 或 $\frac{1}{2}a^{2}\sin 60^\circ$ 而忘记化简导致计算错误。</li>
+<li><strong>外接圆半径与内切圆半径颠倒</strong>：等边三角形外接圆半径是 $\frac{a}{\sqrt{3}}$，内切圆是 $\frac{\sqrt{3}}{6}a$，题目中用错关系式将得不出正确答案。</li>
+<li><strong>球的截面勾股关系用反</strong>：正确为 $R^{2}=r^{2}+d^{2}$，常有考生误写为 $r^{2}=R^{2}+d^{2}$ 或 $d^{2}=R^{2}+r^{2}$。</li>
+<li><strong>球的表面积忘记除以 $4\pi$</strong>：求 $R$ 时，由 $16\pi=4\pi R^{2}$ 解得 $R^{2}=4$，$R=2$，有考生会直接令 $R=16\pi$ 或 $R=4\pi$。</li>
+<li><strong>漏开方或错开方</strong>：得到 $d^{2}=1$ 时，距离为正，应写 $d=1$，忘写正数或写出负值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020·理·10）：已知 $\triangle ABC$ 是面积为 $\frac{9\sqrt{3}}{4}$ 的等边三角形，且其顶点都在球 $O$ 的球面上。若球 $O$ 的表面积为 $16\pi$，则 $O$ 到平面 $ABC$ 的距离为（ ）<br />
+A. $\sqrt{3}$　　B. $\frac{3}{2}$　　C. $1$　　D. $\frac{\sqrt{3}}{2}$</p>
+<p><strong>思路</strong>：等边三角形面积→边长→外接圆半径（截面圆半径）；球表面积→球半径；用截面勾股定理求球心到平面的距离。</p>
+<p><strong>步骤</strong>：
+1. 由 $S_{\triangle ABC}=\frac{\sqrt{3}}{4}a^{2}=\frac{9\sqrt{3}}{4}$，得 $a^{2}=9$，边长 $a=3$。
+2. 等边三角形外接圆半径 $r=\frac{a}{\sqrt{3}}=\frac{3}{\sqrt{3}}=\sqrt{3}$。
+3. 球 $O$ 表面积 $S_{\text{球}}=4\pi R^{2}=16\pi$，得 $R^{2}=4$，$R=2$。
+4. 设 $O$ 到平面 $ABC$ 的距离为 $d$，则 $d^{2}+r^{2}=R^{2}$，即 $d^{2}+(\sqrt{3})^{2}=2^{2}$，$d^{2}+3=4$，$d^{2}=1$，$d=1$。故选 C。</p>
+<p><strong>点评/变式</strong>：此题是典型的“球与截面”模型，等边三角形的外接圆充当截面圆，将平面几何与立体几何串联。变式可将等边三角形换为直角三角形、矩形或正 $n$ 边形的外接圆；也可反过来已知球心到平面的距离与球半径，求三角形面积或边长。核心始终是：
+- 平面图形外接圆半径 $\to$ 截面圆半径 $r$
+- $d$、$r$、$R$ 的勾股关系不变
+- 球的表面积或体积给出 $R$
+这组关系在多面体外接球问题中反复出现，一定要熟练。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-10.html">2020-理-10</a>（2020 · 中） 已知球的表面积和等边三角形面积，求球心到三角形所在平面的距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">外接圆半径</a></li>
+</ul>
+</div>
+</body>
+</html>

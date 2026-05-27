@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数学史</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数学史</h1><div class="review-mark" data-stem="数学史"></div><div class="meta-card"><span><strong>考点</strong>数学史</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>数学史的考查方式</strong>：以中国古代数学典籍（如《九章算术》《海岛算经》《数书九章》等）为背景，将文言描述转化为现代几何、代数或三角模型，核心仍为高中数学常规考点（相似三角形、数列、体积等）。</li>
+<li><strong>《海岛算经》与重差术</strong>：魏晋刘徽著，原为《九章算术注》第十卷，后独立成书。全书共九道测望问题，利用 <strong>两个等高的标杆（表）</strong> 在不同位置观测同一目标，通过相似三角形对应边成比例，建立方程求解不可到达的“高、深、广、远”，此法称为“重差术”。</li>
+<li><strong>测量模型核心公式</strong>：<br />
+  如测海岛高 $AB$，在地面水平线 $AC$ 上立两个等高的标杆 $DE=FG=h$（表高），两标杆间距 $EG=d$（表距），由前、后标杆顶端 $F,D$ 望海岛顶端 $B$，视线交标杆于点 $H,G$，记 $EH=a$，$GC=b$（均称“表目距”），则 <strong>表目距的差</strong> $\Delta = b-a$，海岛高为：
+  $$AB = \frac{h \cdot d}{\Delta} + h$$
+  其中 $\frac{h \cdot d}{\Delta}$ 是利用相似三角形算出的从标杆顶端至海岛顶端的垂直增量，加 $h$ 得到总高。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂图文，还原几何模型</strong><br />
+   在题图中标出所有已知线段（表高、表距、“表目距”等），明确哪些线段在同一水平线，哪些垂直于水平面。  </li>
+<li><strong>抽象为相似三角形问题</strong><br />
+   通常出现两组竖直高度与水平视线构成的相似 $\triangle$：  </li>
+<li>后标杆视线：$\triangle BFD \sim \triangle DHE$（或对应）  </li>
+<li>前标杆视线：$\triangle BFG \sim \triangle FGC$（或对应）<br />
+   注意有时将海岛高分割为“水平视线以上部分 + 标杆高”或类似结构。  </li>
+<li><strong>设未知数列比例方程</strong><br />
+   设关键未知量（如视线交标杆处的水平距离，或岛的远近距离），利用“表目距”“表高”“表距”结合相似比例得到方程组，消去中间变量，直接推导最终公式。  </li>
+<li><strong>对照选项选择或直接计算</strong><br />
+   若为选择题，可将推导出的表达式与选项匹配（注意加减表高、乘除表距的细微差别）。<br />
+   若为填空题或解答题，按步骤规范写出比例关系并化简得分。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“表目距”与“表距”</strong>：<br />
+  “表距”$EG$ 是两个标杆间的水平距离，“表目距”$EH,GC$ 是视线在标杆上截出的两段（从标杆底端/顶端量起需看题意）。这两者单位相同但含义完全不同。  </li>
+<li><strong>错判加减表高</strong>：<br />
+  直接算出的 $\frac{\text{表高}\times\text{表距}}{\text{表目距的差}}$ 往往是从标杆顶端到目标顶端的竖直增量，总高必须再加标杆高度（表高）。若没加或误减，易选错选项。  </li>
+<li><strong>直接套用公式而不画图</strong>：<br />
+  数学史类题型文文结合，题干常含文言提炼，直接公式记忆容易因表述差异而出错，必须在草稿纸上还原图形和线段关系。  </li>
+<li><strong>忘记单位一致性</strong>：<br />
+  所有长度单位应统一（题中通常默认一致），若涉及坡度、仰角则转化为比例。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021年理9）<br />
+魏晋刘徽《海岛算经》测海岛高问题：$E,H,G$ 在水平线 $AC$ 上，$DE$ 和 $FG$ 为等高的测量标杆（称“表高”），$EG$ 为“表距”，$GC$ 与 $EH$ 为“表目距”，二者差为“表目距的差”，求海岛高 $AB$ 的表达式。</p>
+<p><strong>思路</strong><br />
+画示意图：海岛 $B$ 垂直于 $A$ 在地面，后标杆 $DE$ 与前标杆 $FG$ 均垂直地面且等高。由 $F$ 望 $B$ 视线交割标杆于 $G$，由 $D$ 望 $B$ 视线交割标杆于 $H$。设海岛水平距离为未知数，利用两个相似三角形分别表示出“表目距”与水平距离的关系，联立消去距离，解出 $AB$。</p>
+<p><strong>步骤</strong>
+1. 设 $AB = H$，$AC$ 上从后标杆到海岛的水平距离 $AE = x$，标杆高 $DE=FG = h$，表距 $EG = d$，后表目距 $EH = a$，前表目距 $GC = b$。<br />
+2. 由后标杆视线：$B$、$D$、$H$ 三点共线，有 $\triangle BFD \sim \triangle DHE$（或 $ \triangle BAH \sim \triangle DEH$），这里用相似更直接：<br />
+   竖直线 $BA \parallel DE$，则 $\frac{BA}{DE} = \frac{AH}{EH}$，即 $\frac{H}{h} = \frac{x + a}{a}$  ⟶ (1)<br />
+3. 由前标杆视线：同理 $BA \parallel FG$，得 $\frac{BA}{FG} = \frac{AG}{GC}$，即 $\frac{H}{h} = \frac{x+d+b}{b}$  ⟶ (2)<br />
+4. 联立 (1)(2)：$\frac{x + a}{a} = \frac{x+d+b}{b}$<br />
+   交叉相乘得 $b(x+a)=a(x+d+b)$ ⟶ $bx+ab=ax+ad+ab$ ⟶ $(b-a)x = ad$ ⟶ $x = \frac{a d}{b-a}$<br />
+5. 代入 (1) 求 $H$：<br />
+   $H = h \cdot \frac{x+a}{a} = h \cdot \frac{\frac{a d}{b-a} + a}{a} = h \left( \frac{d}{b-a} + 1 \right) = \frac{h d}{b-a} + h$<br />
+   其中 $b-a$ 即“表目距的差”，故 $AB = \frac{\text{表高} \times \text{表距}}{\text{表目距的差}} + \text{表高}$，对应选项 <strong>A</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 本题本质是两次“望高”联立，利用 <strong>相似中的公共边（表高）与水平位移</strong> 建立等量关系，折射出《海岛算经》“以两表齐高，度其影……”的重差智慧。<br />
+- 变式可改为测谷深、测河宽，均可类似设两个观测点，列比例消去公共未知量，最终表达为“表高×表距÷表目距差”加（或减）适当基准高。<br />
+- 应试关键：<strong>分清表目距的起点</strong>（本题从标杆底端 $E$、$C$ 起算），若从顶端计，则公式会变形，必须依题意图示重推。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-09.html">2021-理-09</a>（2021 · 中） 据《海岛算经》测海岛高，两个等高测量标杆形成的比例关系，利用相似三角形求海岛高AB的表达式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/895-数学史.html">数学史</a></li>
+</ul>
+</div>
+</body>
+</html>

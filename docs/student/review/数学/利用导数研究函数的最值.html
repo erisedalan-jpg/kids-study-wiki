@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>利用导数研究函数的最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>利用导数研究函数的最值</h1><div class="review-mark" data-stem="利用导数研究函数的最值"></div><div class="meta-card"><span><strong>考点</strong>利用导数研究函数的最值</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：11</li>
+<li>真题数：5；年份跨度：2011–2015</li>
+<li>出现题位：解答21</li>
+<li>难度分布：中1 难4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>导数的几何与单调性意义</strong>：$f'(x)$ 的正负决定 $f(x)$ 的单调区间；极值点出现在 $f'(x)$ 变号处。闭区间上连续函数必存在最值，开区间内最值需结合单调性与端点极限讨论。</li>
+<li><strong>最值的求解方法</strong>：</li>
+<li>求导数 $f'(x)$，解方程 $f'(x)=0$，找出定义域内所有临界点。</li>
+<li>判断各临界点是否为极值点（一阶导数符号变化或二阶导数符号），并求出极值。</li>
+<li>比较所有极值与区间端点函数值（开区间则取极限），最大者为最大值，最小者为最小值。</li>
+<li><strong>含参函数讨论的关键点</strong>：导数的零点与参数有关，必须对参数进行分类讨论，通常按“导数零点是否存在”“导数零点是否在定义域内”“零点左右导数符号”展开。分类标准：使导数系数为零、使导数零点存在或根的大小关系。</li>
+<li><strong>最值在恒成立与证明不等式中的应用</strong>：</li>
+<li>$f(x) \ge g(x)$ 恒成立 $\Leftrightarrow$ $h(x)=f(x)-g(x) \ge 0$ 恒成立 $\Leftrightarrow$ $h(x)_{\min} \ge 0$。</li>
+<li>分离参数：$k \le g(x)$ 恒成立 $\Leftrightarrow$ $k \le g(x)<em _max="\max">{\min}$；$k \ge g(x)$ 恒成立 $\Leftrightarrow$ $k \ge g(x)</em>$。需结合 $x$ 的取值确定不等号方向。</li>
+<li><strong>超越函数最值估算</strong>：无法解出精确极值点时，设隐零点 $x_0$ 满足 $f'(x_0)=0$，将最值表达式化简为 $x_0$ 的函数，利用 $x_0$ 的范围确定最值范围或整数解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确定义域</strong>：对含 $\ln x$ 需 $x&gt;0$，分式分母不为零等，防止后续讨论漏掉限制。</li>
+<li><strong>求导并化简</strong>：将 $f'(x)$ 写成利于判断符号的形式（因式分解、通分），注意参数是否影响导数符号。</li>
+<li><strong>含参单调性的分类标准</strong>：</li>
+<li>先讨论导数恒正/恒负的情形（如 $a \le 0$ 时 $e^x - a \ge 0$ 恒成立；$a \le 0$ 时 $\frac{1-ax}{x}&gt;0$ 恒成立）。</li>
+<li>当导数有零点时，解出零点 $x=x(a)$，按零点与定义域边界的大小关系分段讨论，列表给出单调区间。</li>
+<li><strong>利用单调性求最值</strong>：</li>
+<li>若函数在先增后减，则极大值点为最大值点；先减后增，极小值点为最小值点。</li>
+<li>定义域为开区间时，判断极值是否为最值需结合 $x$ 趋于边界时的函数极限；若函数单调则最值在边界趋向处取得。</li>
+<li><strong>由最值条件求参数</strong>：</li>
+<li>将最值表达式与不等式结合，构造关于参数的新函数 $g(a)$。</li>
+<li>再次求导分析 $g(a)$ 的单调性，求出满足不等式的参数范围。注意不等式方向与自变量正负的配合。</li>
+<li><strong>恒成立/不等式证明的转化</strong>：</li>
+<li><strong>直接作差构造函数</strong>：$h(x)=f(x)-g(x)$，转化为求 $h(x)<em _max="\max">{\min}$ 或 $h(x)</em>$。</li>
+<li><strong>分离参数法</strong>：将参数分离到不等式一侧，另一侧为 $x$ 的函数 $\varphi(x)$，转化为求 $\varphi(x)$ 在区间上的最值。</li>
+<li><strong>隐零点代换</strong>：若导数零点无法直接解出，可设 $x_0$，利用 $f'(x_0)=0$ 得到关系式（如 $e^{x_0}=\cdots$），将最值表达式化简，再通过 $x_0$ 的限定范围求得最值整数部分或范围。</li>
+<li><strong>双参数或多参数最值处理</strong>：</li>
+<li>利用恒成立条件建立参数间的线性不等关系，代入目标式化为单变量函数，消元后求导求最值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：处理 $f(x)=\frac{\ln x}{x}+\frac{1}{x}$ 等分式或对数时，忘记 $x&gt;0$ 且 $x \neq 1$，导致导数讨论区间错误。</li>
+<li><strong>参数分类遗漏边界</strong>：只讨论 $a&gt;0$ 和 $a&lt;0$，忘记 $a=0$ 的情形；或对 $e^x - a$ 的零点 $\ln a$，未讨论 $a \le 0$ 时无零点。</li>
+<li><strong>极值误当最值</strong>：开区间上函数可能在极小值点取得最小值，但需确认该极小值是否小于所有边界极限；若趋向边界时函数值更小，则该极值不是最小值。</li>
+<li><strong>分离参数未考虑符号</strong>：由 $(x-k)(e^x-1)+x+1&gt;0$ 分离 $k$ 时，需确保除式 $e^x-1$ 在 $x&gt;0$ 时为正，否则移项会变号。若符号变化，应分段讨论。</li>
+<li><strong>二次求导不足导致符号判断出错</strong>：当一阶导数的符号不易直接看出时，应对一阶导数再次求导（二阶导数），通过二阶导数的正负和一阶导数的特殊点，反推一阶导数的符号。</li>
+<li><strong>最值表达式构建错误</strong>：求得 $f(x)_{\max}$ 后建立不等式时，忘记将最大值点的坐标 $x=\frac{1}{a}$ 代回原函数，导致表达式含错变量。</li>
+<li><strong>忽视最大值的取得条件</strong>：如 $f(x)= \ln x + a(1-x)$ 有最大值的前提是 $a&gt;0$，当 $a \le 0$ 时函数单调无最大值，直接讨论不等式会漏掉前提。</li>
+<li><strong>整数解取值临界误判</strong>：根据隐零点求得 $k &lt; g(x)_{\min}$ 且 $k$ 为整数时，需注意 $k$ 应小于函数的最小值，若最小值为 $\approx 2.xxx$，则 $k$ 最大取 $2$，而非四舍五入。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2015 全国卷Ⅱ 文 21</h3>
+<p><strong>题目</strong>：设 $f(x)=\ln x + a(1-x)$ 。（Ⅰ）讨论 $f(x)$ 的单调性；（Ⅱ）当 $f(x)$ 有最大值，且最大值大于 $2a-2$ 时，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>：直接求导，按 $a$ 与 $0$ 的关系分类讨论单调区间；由单调性得出函数存在最大值的参数前提及最大值表达式，代入不等式构造关于 $a$ 的新函数，再通过导数解不等式。</p>
+<p><strong>步骤</strong>：
+（Ⅰ）定义域 $x&gt;0$，$f'(x)=\frac{1}{x}-a=\frac{1-ax}{x}$。
+- 若 $a \le 0$，则 $f'(x) &gt; 0$ 恒成立，$f(x)$ 在 $(0,+\infty)$ 上单调递增，无最大值。
+- 若 $a &gt; 0$，令 $f'(x)=0$ 得 $x=\frac{1}{a}$。当 $0 &lt; x &lt; \frac{1}{a}$ 时 $f'(x)&gt;0$，$f(x)$ 单调递增；当 $x &gt; \frac{1}{a}$ 时 $f'(x)&lt;0$，$f(x)$ 单调递减。故 $f(x)$ 在 $x=\frac{1}{a}$ 处取得极大值，也是最大值。</p>
+<p>（Ⅱ）由（Ⅰ）知当 $a&gt;0$ 时有最大值，且 $f(x)_{\max}=f\left(\frac{1}{a}\right)=\ln\frac</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-21.html">2015-文-21</a>（2015 · 中） 本题主要考查含参对数函数的单调性讨论及已知最值条件求参数取值范围，涉及分类讨论与构造函数思想。</li>
+<li><a href="../../exam/数学/2012-文-21.html">2012-文-21</a>（2012 · 难） 本题考查含参数函数的单调区间求法及利用导数解决不等式恒成立问题，并求参数最值。</li>
+<li><a href="../../exam/数学/2012-理-21.html">2012-理-21</a>（2012 · 难） 通过导数求函数解析式与单调区间，并求含参表达式的最大值。</li>
+<li><a href="../../exam/数学/2011-文-21.html">2011-文-21</a>（2011 · 难） 已知函数在一点处的切线方程求参数，并利用导数证明不等式。</li>
+<li><a href="../../exam/数学/2011-理-21.html">2011-理-21</a>（2011 · 难） 本题考查利用导数求切线参数及含参不等式恒成立问题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/706-利用导数研究函数的最值.html">利用导数研究函数的最值</a></li>
+</ul>
+</div>
+</body>
+</html>

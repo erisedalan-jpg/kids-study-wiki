@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆周角定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆周角定理</h1><div class="review-mark" data-stem="圆周角定理"></div><div class="meta-card"><span><strong>考点</strong>圆周角定理</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：0</li>
+<li>真题数：3；年份跨度：2010–2011</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆周角定理</strong>：圆上一条弧所对的圆周角等于它所对圆心角的一半。同弧或等弧所对的圆周角相等。</li>
+<li><strong>四点共圆的判定定理</strong>：<ul>
+<li>若四边形对角互补，则四点共圆。</li>
+<li>若线段同侧两点对该线段张角相等，则四点共圆。</li>
+</ul>
+</li>
+<li><strong>弦切角定理</strong>：弦切角等于它所夹的弧所对的圆周角。</li>
+<li><strong>相似三角形的判定与性质</strong>：<ul>
+<li>判定：两组边对应成比例且夹角相等；三组边对应成比例；两角对应相等。</li>
+<li>性质：对应边成比例，对应角相等。常用于证明线段比例关系或等角。</li>
+</ul>
+</li>
+<li><strong>切割线定理</strong>：从圆外一点引圆的切线和割线，切线长是这点到割线与圆交点的两条线段长的比例中项。</li>
+<li><strong>根与系数的关系（韦达定理）</strong>：方程 $x^2 - 14x + mn = 0$ 的两个根 $x_1, x_2$ 满足 $x_1 + x_2 = 14$，$x_1 \cdot x_2 = mn$，这里的乘积关系常和线段长度比例建立连接。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证明四点共圆</strong>：<ul>
+<li><strong>路径 A（利用相似导角）</strong>：欲证 $C, B, D, E$ 四点共圆，可证 $\angle ADE = \angle ACB$（同侧张角）或对角互补。通过比例式 $\frac{AD}{AE} = \frac{AC}{AB}$ 及公共角 $\angle A$，证 $\triangle ADE \sim \triangle ACB$，从而得到等角。</li>
+<li><strong>路径 B（利用同弧导角）</strong>：先证明某角等于已知圆周角，再结合圆内接四边形性质或弦切角推导。</li>
+</ul>
+</li>
+<li><strong>证明等角关系</strong>：<ul>
+<li><strong>利用同弧或等弧</strong>：当弧相等时，其所对的圆周角相等。</li>
+<li><strong>利用弦切角</strong>：当有切线时，寻找切线所夹的弧，利用弦切角等于该弧所对的圆周角进行等量代换。</li>
+<li><strong>关键步骤</strong>：将所求的角拆解或转化到已知等式中。如证 $\angle ACE = \angle BCD$，先证两个角都等于 $\angle ABC$。</li>
+</ul>
+</li>
+<li><strong>证明线段成比例或等积式</strong>：<ul>
+<li>欲证 $BC^2 = BE \cdot CD$，常将其改写为比例式 $\frac{BC}{BE} = \frac{CD}{BC}$，再寻找包含这四条边且形似 $\triangle BDC \sim \triangle ECB$ 的相似关系。</li>
+<li>注意所需线段必须是对应边，切勿找错对应顶点。</li>
+</ul>
+</li>
+<li><strong>结合代数方程求线段长</strong>：<ul>
+<li>若线段长度是某二次方程的根，直接解方程或应用韦达定理。通过 $AD \cdot AB = AE \cdot AC$ 这一乘积相等关系，可以直接建立四点共圆所需的相似比例条件，无需解出具体数值即可完成几何证明。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆圆周角与弦切角定理的适用条件</strong>：<ul>
+<li>圆周角必须满足顶点在圆上，两边是弦。</li>
+<li>弦切角必须满足顶点在圆上，一边是切线，另一边是弦。易错点在于误把顶点不在圆上的角当作弦切角，或找错弦切角所夹的弧。</li>
+</ul>
+</li>
+<li><strong>相似三角形判定中“夹角”找错</strong>：<ul>
+<li>在比例式 $\frac{AD}{AE} = \frac{AC}{AB}$ 中，公共角 $\angle A$ 必须是这两组边（$AD$ 与 $AE$、$AC$ 与 $AB$）的夹角。如果乱写比例（如 $\frac{AD}{AC} = \frac{AE}{AB}$），会导致无法使用“两边夹角”判定相似。</li>
+</ul>
+</li>
+<li><strong>四点共圆条件用错</strong>：<ul>
+<li>证出 $\angle ADE = \angle ACB$ 后，必须确认 $E$ 和 $C$ 在 $BD$ 或 $AD$ 同侧，才能判定四点共圆，但高考题中通常考察标准图形。</li>
+<li>对角互补常用于圆内接四边形性质，但不易直接通过单次相似推导出来。</li>
+</ul>
+</li>
+<li><strong>比例式中线段对应关系混乱</strong>：<ul>
+<li>在利用切割线定理或相似比列式时，如 $BC^2 = BE \cdot CD$，容易将 $BE$ 和 $CD$ 的位置写反。必须严格对应相似三角形的顶点顺序，$BC$ 对应 $EB$，$DC$ 对应 $CB$，即 $\triangle BDC \sim \triangle ECB$。</li>
+</ul>
+</li>
+<li><strong>计算半径时找不到外接圆圆心</strong>：<ul>
+<li>直角三角形的外接圆圆心在斜边中点。非直角三角形时，需做两条弦的中垂线找圆心，这是构造法求半径的关键。</li>
+</ul>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2011-理-22（四点共圆与求半径）</h3>
+<p><strong>题目</strong>：在 $\triangle ABC$ 中，$D, E$ 分别在 $AB, AC$ 上。已知 $AE=m$，$AC=n$，且 $AD, AB$ 是方程 $x^2 - 14x + mn = 0$ 的两个根。
+（Ⅰ）证明：$C, B, D, E$ 四点共圆；
+（Ⅱ）若 $\angle A = 90^\circ$，$m=4, n=6$，求 $C, B, D, E$ 所在圆的半径。</p>
+<p><strong>思路</strong>：
+（Ⅰ）利用韦达定理得到线段乘积关系，结合公共角证明三角形相似，从而得到等角来证四点共圆。
+（Ⅱ）由 $m, n$ 解出 $AD, AB$ 的长度，得到直角三角形的边长。由于 $C, B, D, E$ 共圆，而 $\angle A = 90^\circ$，可通过几何关系找到圆心或结合勾股定理求解半径。</p>
+<p><strong>步骤</strong>：
+<em>证明部分：</em>
+1. 连接 $DE$。
+2. 由韦达定理知 $AD \cdot AB = mn$，又已知 $AE \cdot AC = mn$，故 $AD \cdot AB = AE \cdot AC$。
+3. 化为比例式 $\frac{AD}{AC} = \frac{AE}{AB}$。在 $\triangle ADE$ 和 $\triangle ACB$ 中，有 $\angle DAE = \angle CAB$，且夹此角的两边成比例。
+4. 因此 $\triangle ADE \sim \triangle ACB$，得 $\angle ADE = \angle ACB$。
+5. $\angle ADE$ 与 $\angle ACB$ 对 $AB$ 同侧张角相等，故 $C, B, D, E$ 四点共圆。</p>
+<p><em>求值部分：</em>
+1. 代入 $m=4, n=6$，方程为 $x^2 - 14x + 24 = 0$，解得两根为 $x_1=2, x_2=12$。
+2. 不妨设 $AD=2, AB=12$，则 $BD=12-2=10$。
+3. 在 $\text{Rt}\triangle ABC$ 中，$AB=12, AC=6$，由勾股定理得 $BC = \sqrt{12^2+6^2} = 6\sqrt{5}$。
+4. 取 $BD$ 中点 $F$，$CE$ 中点 $G$，分别过 $F, G$ 作 $AB, AC$ 的垂线，两线交点 $H$ 即为圆心。
+5. 连接 $CH$，在 $\text{Rt}\triangle CGH$ 中，$CG = \frac{1}{2}(6-4)=1$，$GH = AF = AD + \frac{1}{2}BD = 2+5 = 7$。
+6. 半径 $R = CH = \sqrt{CG^2 + GH^2} = \sqrt{1^2 + 7^2} = 5\sqrt{2}$。</p>
+<p><strong>点评/变式</strong>：
+纯几何与韦达定理的结合是高考热点。注意乘积相等转化为相似比是证明四点共圆的极高效手段。求外接圆半径时，若三角形为直角三角形，可直接取斜边中点；若为非直角三角形，必须利用圆心到弦的距离公式或中垂线交点法。</p>
+<h3>2. 2010-理/文-22（弦切角与相似比）</h3>
+<p><strong>题目</strong>：已知圆上的弧 $\widehat{AC} = \widehat{BC}$，过点 $C$ 的圆的切线与 $BA$ 的延长线交于点 $E$。
+（Ⅰ）证明：$\angle ACE = \angle BCD$；
+（Ⅱ）证明：$BC^2 = BE \cdot CD$。</p>
+<p><strong>思路</strong>：
+（Ⅰ）由弧等得圆周角等，由切线得弦切角等，进行等量代换即可。
+（Ⅱ）证明线段平方等于乘积，一般需找相似三角形，通过等比代换建立关系。</p>
+<p><strong>步骤</strong>：
+<em>证明角度相等：</em>
+1. 弧 $\widehat{AC}$ 与 $\widehat{BC}$ 相等，由圆周角定理得 $\angle BDC = \angle ADC$，即 $\angle BCD = \angle ABC$。
+2. $EC$ 是圆 $O$ 在 $C$ 处切线，由弦切角定理知 $\angle ACE$ 等于其所夹弧 $\widehat{AC}$ 所对的圆周角 $\angle ABC$。
+3. 故 $\angle ACE = \angle ABC = \angle BCD$，证毕。</p>
+<p><em>证明线段关系：</em>
+1. 要证 $BC^2 = BE \cdot CD$，即证 $\frac{BC}{BE} = \frac{CD}{BC}$。
+2. 在圆中，由 $\widehat{AC} = \widehat{BC}$ 得 $\angle CDB = \angle CEB$（同弧 $\widehat{BC}$ 或等弧转换）。
+3. 又 $\angle EBC = \angle CBD$，故 $\triangle BDC \sim \triangle EBC$。
+4. 根据相似得 $\frac{BC}{BE} = \frac{CD}{BC}$，交叉相乘即 $BC^2 = BE \cdot CD$。</p>
+<p><strong>点评/变式</strong>：
+本题是圆的基本性质“接力”：弧等传递角等，弦切角搭桥，最后通过相似三角形解决线段比例问题。注意写相似三角形时必须对应点写对，否则比例式全错。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-22.html">2011-理-22</a>（2011 · 中） 四点共圆证明与相关半径计算，结合二次方程根与系数关系</li>
+<li><a href="../../exam/数学/2010-文-22.html">2010-文-22</a>（2010 · 易） 本题利用圆的切线性质与弦切角定理证明角相等及线段比例关系，结合三角形相似进行推导。</li>
+<li><a href="../../exam/数学/2010-理-22.html">2010-理-22</a>（2010 · 中） 考查圆切线和圆周角的性质，证明角相等及线段比例关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆周角定理</a></li>
+</ul>
+</div>
+</body>
+</html>

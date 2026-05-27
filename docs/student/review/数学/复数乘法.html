@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数乘法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数乘法</h1><div class="review-mark" data-stem="复数乘法"></div><div class="meta-card"><span><strong>考点</strong>复数乘法</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：18</li>
+<li>真题数：5；年份跨度：2015–2023</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数的代数形式</strong>：$z = a + bi$，其中 $a,b\in\mathbb{R}$，$i$ 为虚数单位，满足 $i^2 = -1$。</li>
+<li><strong>复数乘法法则</strong>：设 $z_1 = a+bi$，$z_2 = c+di$，则<br />
+  $$z_1 z_2 = (a+bi)(c+di) = ac + adi + bci + bdi^2 = (ac-bd) + (ad+bc)i.$$<br />
+  运算实质：多项式乘法展开，合并实部与虚部，注意 $i^2$ 化为 $-1$。</li>
+<li><strong>共轭复数</strong>：$z=a+bi$ 的共轭复数 $\overline{z}=a-bi$。若已知 $z$ 为某两复数乘积，求 $\overline{z}$ 时常先算出乘积再取共轭。</li>
+<li><strong>复数相等的条件</strong>：$a+bi = c+di \iff a=c \text{ 且 } b=d$（$a,b,c,d\in\mathbb{R}$）。含参数等式常用此法列方程求解。</li>
+<li><strong>复数的几何意义</strong>：复数 $a+bi$ 对应复平面内的点 $(a,b)$，由此可判断乘积所在象限。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接展开，逐项相乘</strong>：将两个复数看作二项式相乘，使用分配律展开，注意带上虚数单位 $i$。</li>
+<li><strong>合并 $i^2$，分离实虚</strong>：遇到 $i^2$ 立即化为 $-1$；整理后写成 $(\text{实部}) + (\text{虚部})i$ 的标准代数形式。</li>
+<li><strong>求共轭莫跳步</strong>：若先求 $z$ 的乘积再求 $\overline{z}$，严格按照“先乘后取共轭”的顺序，不要漏掉虚部符号变化。</li>
+<li><strong>含参问题用复数相等</strong>：若等式两侧均为复数代数形式，利用实部、虚部分别相等列出实数方程组，求解参数。</li>
+<li><strong>判断点所在象限</strong>：求出乘积的实部 $x$ 和虚部 $y$，根据 $(x,y)$ 的符号确定象限（第一象限：$x&gt;0,y&gt;0$；第二象限：$x&lt;0,y&gt;0$；第三象限：$x&lt;0,y&lt;0$；第四象限：$x&gt;0,y&lt;0$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记 $i^2=-1$ 或符号错乱</strong>：展开时常因疏忽将 $bdi^2$ 写成 $+bd$ 而非 $-bd$，导致实部符号错误。</li>
+<li><strong>实部虚部归并不彻底</strong>：展开后出现 $i^2$ 项、$i$ 项、常数项混在一起，没有将不含 $i$ 的项全部合并为实部，含 $i$ 的一次项全部合并为虚部。</li>
+<li><strong>共轭对象搞错</strong>：题目要求 $\overline{z}$ 但直接对两个相乘的复数先分别取共轭再乘，或不根据最终乘积直接求共轭，或只改了虚部的符号而忘记实部不变。</li>
+<li><strong>复数相等时虚部系数看漏</strong>：等式两边含 $i$ 项系数比较时，误将虚部与实部交叉相等，或参数对应不准确导致方程列错。</li>
+<li><strong>象限判断只看实部或虚部</strong>：未完整判断 $(x,y)$ 的符号组合，或误以为虚部 $y$ 为 $bi$ 中的 $b$ 即为坐标纵轴（确实如此，但有时考生搞混）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2023新课标Ⅱ卷</h3>
+<p><strong>题目</strong>：在复平面内，$(1+3i)(3-i)$ 对应的点位于哪个象限？<br />
+<strong>思路</strong>：先按乘法展开，化简为 $a+bi$ 形式，根据实部、虚部正负确定象限。<br />
+<strong>步骤</strong>：
+1. 展开：$(1+3i)(3-i) = 3 - i + 9i - 3i^2$。
+2. 合并 $i^2$：$-3i^2 = -3(-1) = 3$。
+3. 合并实部与虚部：实部 $3+3=6$，虚部 $(-1+9)i = 8i$，即 $6+8i$。
+4. 对应点 $(6,8)$，实虚皆正，位于第一象限。<br />
+<strong>点评/变式</strong>：本题核心是乘法后的象限判断。若改成 $(1-3i)(-3+i)$，结果实虚部符号将变化，点可能落在第四或第二象限，需重新计算确认。务必在化简后看清实虚部符号。</p>
+<h3>2. 2019全国卷文科</h3>
+<p><strong>题目</strong>：设 $z = i(2+i)$，则 $\overline{z}=$？<br />
+<strong>思路</strong>：先计算 $z$，再求共轭。注意 $i$ 在前，直接用分配律展开。<br />
+<strong>步骤</strong>：
+1. 计算 $z$：$z = i(2+i) = 2i + i^2 = 2i - 1$。
+2. 写成标准形式：$z = -1 + 2i$。
+3. 取共轭：$\overline{z} = -1 - 2i$，对应选项 D. $-1-2i$。<br />
+<strong>点评/变式</strong>：此题易错点在于展开后误将 $-1+2i$ 的共轭写成 $1-2i$ 或 $1+2i$，应对“实部不变，虚部变号”刻入肌肉记忆。若题目改为 $\overline{i(2-i)}$，先算 $z=2i - i^2 = 2i+1 = 1+2i$，共轭为 $1-2i$。</p>
+<h3>3. 2018全国卷文科</h3>
+<p><strong>题目</strong>：$i(2+3i) =$？<br />
+<strong>思路</strong>：直接用乘法法则，$i$ 乘以括号内每一项，合并实虚。<br />
+<strong>步骤</strong>：
+1. 分配：$i(2+3i) = 2i + 3i^2$。
+2. $i^2 = -1$，得 $2i + 3(-1) = -3 + 2i$。
+3. 对应选项 D. $-3+2i$。<br />
+<strong>点评/变式</strong>：本题为基础到不能再基础的纯运算。训练时将系数从 $i$ 换成 $-i$ 练习，如 $(-i)(2+3i) = -2i -3i^2 = 3-2i$，巩固符号处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-01.html">2023-新课标Ⅱ-01</a>（2023 · 易） 该题考查复数乘法运算及复数在复平面内对应点所在象限的判断。</li>
+<li><a href="../../exam/数学/2019-文-02.html">2019-文-02</a>（2019 · 易） 本题主要考查复数乘法运算及共轭复数的概念。</li>
+<li><a href="../../exam/数学/2018-文-01.html">2018-文-01</a>（2018 · 易） 本题主要考查复数的代数形式乘法运算，通过直接计算求解。</li>
+<li><a href="../../exam/数学/2017-文-02.html">2017-文-02</a>（2017 · 易） 本题考查复数的乘法运算及化简。</li>
+<li><a href="../../exam/数学/2015-理-02.html">2015-理-02</a>（2015 · 易） 该题考查复数的乘法运算及复数相等的条件，通过实部与虚部分别相等求参数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/332-复数的乘除运算.html">复数乘法</a></li>
+</ul>
+</div>
+</body>
+</html>

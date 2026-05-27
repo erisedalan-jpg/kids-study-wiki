@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基本事件计数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>基本事件计数</h1><div class="review-mark" data-stem="基本事件计数"></div><div class="meta-card"><span><strong>考点</strong>基本事件计数</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>古典概型</strong>：若随机试验所有可能出现的基本事件为有限个，且每个基本事件发生的可能性相等，则事件 $A$ 的概率为<br />
+  $$P(A)=\frac{m}{n}$$<br />
+  其中 $n$ 为基本事件总数，$m$ 为事件 $A$ 包含的基本事件个数。</li>
+<li><strong>基本事件计数方法</strong>：</li>
+<li><strong>枚举法（列举法）</strong>：当样本总数较小时，系统性地列出所有等可能基本事件，确保不重不漏。</li>
+<li><strong>组合数计算</strong>：从 $N$ 个不同元素中任取 $k$ 个（无序）的组合数为<br />
+    $$C_N^k = \binom{N}{k} = \frac{N!}{k!(N-k)!}$$<br />
+    常结合分步乘法原理使用，如“先选…再选…”。</li>
+<li><strong>适用条件</strong>：试验结果等可能且总数有限；题目中是否为“有序抽取”或“无序抽取”需根据问题情境确定（一般“任取”“随机取出”若不计顺序，可直接用组合数）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确样本空间的结构</strong><br />
+   判断抽取是否有序、是否放回，确定基本事件是“排列”还是“组合”。对于“任取 $k$ 个”且不强调顺序的情形，视为无序组合。</li>
+<li><strong>计算基本事件总数 $n$</strong>  </li>
+<li>当样本较小或背景简单时，可用有规律的树状图、表格或字母组列举。</li>
+<li>适合用组合数时，直接计算 $C_N^k$。</li>
+<li><strong>计算有利事件数 $m$</strong>  </li>
+<li>按题目要求（如“恰有 $r$ 个具备某特征”）使用分步计数：从具有该特征的个体中选 $r$ 个，从其余个体中选 $k-r$ 个，再相乘。</li>
+<li>若采用列举法，在列举的全部结果中筛选出符合条件的情形并计数。</li>
+<li><strong>求概率</strong><br />
+   将 $m$ 与 $n$ 代入 $P=\dfrac{m}{n}$，化为最简分数，并与选项比对。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>列举无序样本时产生重复或遗漏</strong>：如把 ${a,b,A}$ 和 ${b,a,A}$ 当成两个不同事件，导致 $n$ 虚增；或列举无规律而漏掉部分组合。</li>
+<li><strong>对“恰好”理解偏差</strong>：把“恰有2只测量过”算成“至少有2只”或“只有2只未测”等情况，造成有利事件数 $m$ 错误。</li>
+<li><strong>混淆有序与无序</strong>：若题目暗示“不放回一次取出”相当于无序，但仍按有序排列计算，增大计算量且易出错。应直接采用组合数或无序列举。</li>
+<li><strong>计算粗心</strong>：组合数算错、约分错误，或分数与选项对应失误（例如算得6/10未化成3/5而错选）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+从5只兔子（3只测量过指标，2只未测量）中随机取出3只，求恰有2只测量过该指标的概率。</p>
+<p><strong>思路</strong><br />
+采用古典概型，基本事件为从5只中无序取3只的所有组合。可直接使用组合数计算总数和有利数，也可通过系统列举验证。</p>
+<p><strong>步骤</strong><br />
+- 设测量过的兔子为 $a,b,c$，未测量过的为 $A,B$。<br />
+- <strong>基本事件总数</strong>：从5只中任取3只，无序组合数 $n = C_5^3 = 10$。<br />
+  列举验证：${a,b,c}$，${a,b,A}$，${a,b,B}$，${a,c,A}$，${a,c,B}$，${a,A,B}$，${b,c,A}$，${b,c,B}$，${b,A,B}$，${c,A,B}$ 共10种。<br />
+- <strong>有利事件数</strong>：恰有2只测量过，即从3只测量过的中选2只，从2只未测中选1只，<br />
+  $m = C_3^2 \times C_2^1 = 3 \times 2 = 6$。<br />
+  列举对照：${a,b,A}$，${a,b,B}$，${a,c,A}$，${a,c,B}$，${b,c,A}$，${b,c,B}$ 共6种。<br />
+- <strong>概率</strong>：$P = \dfrac{6}{10} = \dfrac{3}{5}$，对应选项 B。</p>
+<p><strong>点评/变式</strong><br />
+本题是古典概型直接应用的典范，考查基本事件的无序组合计数。若问“至少2只测量过”则需累加恰2只与恰3只的情形（$C_3^2C_2^1 + C_3^3 = 6+1=7$，概率7/10）。掌握“恰有 $k$ 个”的分步组合计数模式，可快速迁移到产品抽检、摸球、分组等同类问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-04.html">2019-文-04</a>（2019 · 易） 本题通过列举法求解从5只兔子中任取3只时恰有2只做过测试的古典概率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">基本事件计数</a></li>
+</ul>
+</div>
+</body>
+</html>

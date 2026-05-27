@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次函数图象</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二次函数图象</h1><div class="review-mark" data-stem="二次函数图象"></div><div class="meta-card"><span><strong>考点</strong>二次函数图象</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：18</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>二次函数的标准形式：$y=ax^2+bx+c$（$a \neq 0$），可配方为 $y=a(x-h)^2+k$，其中 $(h,k)$ 为顶点，对称轴为 $x=h=-\frac{b}{2a}$。</li>
+<li>函数加上绝对值：$y=|f(x)|$ 的图象由 $y=f(x)$ 的图象保留 $x$ 轴上方的部分，并将 $x$ 轴下方的部分对称翻折到上方得到。若 $f(x)$ 的图象关于某竖直线对称，则 $y=|f(x)|$ 的图象仍关于该直线对称。</li>
+<li>轴对称的代数特征：若函数 $y=f(x)$ 满足 $f(a+x)=f(a-x)$ 或 $f(x)=f(2a-x)$，则 $y=f(x)$ 的图象关于直线 $x=a$ 对称。</li>
+<li>图象交点与对称思想：若两条曲线 $C_1$ 与 $C_2$ 均关于同一直线 $x=a$ 对称，则它们的所有交点也关于 $x=a$ 对称。若交点为 $(x_1,y_1),(x_2,y_2),\dots,(x_m,y_m)$，则</li>
+<li>当 $m$ 为偶数时，横坐标可按对称配对，每对之和为 $2a$；</li>
+<li>当 $m$ 为奇数时，必有一个交点在对称轴上，其横坐标为 $a$，其余成对，和仍为 $m \cdot a$。
+  一般地，$\sum_{i=1}^m x_i = m \cdot a$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别对称结构</strong>：面对 $f(x)=f(2-x)$ 或 $f(a+x)=f(b-x)$ 等条件，立即翻译为图象关于直线 $x=\frac{a+b}{2}$（此处 $x=1$）对称。</li>
+<li><strong>处理绝对值二次型</strong>：将二次函数配方，求出对称轴与顶点；画出 $y=|x^2-2x-3|$ 的草图，确认翻折后对称轴不变。配方：$x^2-2x-3=(x-1)^2-4$，对称轴 $x=1$。</li>
+<li><strong>利用双对称性</strong>：证明/观察另一个函数图象也关于同一直线对称，则整体交点关于该直线对称。</li>
+<li><strong>求和结论</strong>：交点横坐标之和 = 交点个数 × 对称轴对应的 $x$ 值（即 $m \times 1 = m$）。直接选择选项 B。</li>
+<li><strong>特殊到一般验证</strong>：可取特殊的满足 $f(x)=f(2-x)$ 的函数（如常函数、二次函数 $f(x)=(x-1)^2$ 等），检验交点个数及横坐标之和，快速锁定答案。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对 $f(x)=f(2-x)$ 性质的误判</strong>：易错认为表示周期性或把对称轴求错为 $x=2$。正确对称轴应为 $x=\frac{x+(2-x)}{2}=1$。</li>
+<li><strong>忽略绝对值对对称性的影响</strong>：误以为加绝对值后对称轴改变。实际上 $|(x-1)^2-4|$ 仍关于 $x=1$ 对称，翻折不破坏原有轴对称。</li>
+<li><strong>交点数奇偶处理不当</strong>：在求和时，若 $m$ 为奇数时忘记对称轴上的单个交点横坐标恰为 $a$，仍按全部成对求和导致错误。通用结论 $\sum x_i = m a$ 不分奇偶，可直接使用。</li>
+<li><strong>盲目套用交点公式</strong>：未确认两个函数<strong>同时</strong>关于该直线对称就断言交点对称，会导致错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目1：2016年全国文科卷第12题</h3>
+<p><strong>题目</strong><br />
+已知函数 $f(x)$（$x \in \mathbb{R}$）满足 $f(x)=f(2-x)$，若函数 $y=|x^2-2x-3|$ 与 $y=f(x)$ 图象的交点为 $(x_1,y_1),(x_2,y_2),\dots,(x_m,y_m)$，则 $\sum_{i=1}^{m} x_i =$（ ）<br />
+A．0　　B．m　　C．2m　　D．4m</p>
+<p><strong>思路</strong><br />
+由 $f(x)=f(2-x)$ 得到 $f(x)$ 的对称轴；画出 $y=|x^2-2x-3|$ 的图象，证明它也关于同一对称轴对称；利用两条关于同一直线对称的曲线交点必关于该直线对称的性质，将所有交点的横坐标配对求和。</p>
+<p><strong>步骤</strong><br />
+1. 由 $f(x)=f(2-x)$，令 $x=1+t$，得 $f(1+t)=f(1-t)$，故 $f(x)$ 的图象关于直线 $x=1$ 对称。<br />
+2. 对 $g(x)=x^2-2x-3$ 配方：$g(x)=(x-1)^2-4$。其图象为开口向上、对称轴 $x=1$ 的抛物线。<br />
+3. $y=|g(x)|$ 的图象：将 $g(x)&lt;0$ 的部分（即 $x\in (-1,3)$ 之间的部分）翻折至 $x$ 轴上方。翻折不改变整体关于 $x=1$ 的对称性，因为若 $(x,y)$ 在翻折后的曲线上，则 $(2-x,y)$ 也在其上。<br />
+4. 因此，两曲线 $y=|x^2-2x-3|$ 与 $y=f(x)$ 都关于直线 $x=1$ 对称，它们的交点也必然关于 $x=1$ 对称。<br />
+5. 设交点个数为 $m$，将交点按关于 $x=1$ 对称成对分组。若存在对称轴上的交点，其横坐标即为 $1$；其余每一对交点的横坐标之和均为 $2$。<br />
+6. 总数 $m$ 个交点的横坐标之和为：
+   - 若 $m$ 为偶数：分为 $\frac m2$ 对，每对和为 $2$，总和 $m$；
+   - 若 $m$ 为奇数：有1个点的横坐标为 $1$，其余 $m-1$ 个点成 $\frac{m-1}{2}$ 对，每对和 $2$，总和 $1 + 2 \cdot \frac{m-1}{2} = m$。<br />
+   综上，不论奇偶，$\displaystyle\sum_{i=1}^{m} x_i = m$。<br />
+7. 对应选项，选 B。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是利用二次函数的对称性与抽象函数对称条件的互译，最终将交点求和转化为对称轴与交点个数的乘积。解题时不必具体求出交点坐标。<br />
+变式：若把二次函数换成 $y=|x^2-4|$，对称轴为 $x=0$；另一函数满足 $f(x)=f(-x)$（偶函数，关于 $x=0$ 对称），则交点横坐标之和为 $0$，即和为 $0\cdot m = 0$。若另一函数满足 $f(x)=f(4-x)$，则对称轴为 $x=2$，此时两条曲线对称轴不同，不可直接使用上述对称求和结论，需重新分析。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-12.html">2016-文-12</a>（2016 · 中） 函数 f(x) 关于直线 x=1 对称，与给定二次函数绝对值图像的交点横坐标之和为 m。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/187-函数图象.html">二次函数图象</a></li>
+</ul>
+</div>
+</body>
+</html>

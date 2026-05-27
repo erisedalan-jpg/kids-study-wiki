@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>最值</h1><div class="review-mark" data-stem="最值"></div><div class="meta-card"><span><strong>考点</strong>最值</span><span><strong>权重</strong>40</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：40</li>
+<li>真题数：11；年份跨度：2012–2024</li>
+<li>出现题位：填空14 解答22 解答24 选择4 选择5 选择9 选择11 选择12</li>
+<li>难度分布：易5 中5 难1</li>
+</ul>
+<h2>知识精要</h2>
+<p>函数的最值问题是函数与导数模块的核心，贯穿整个高中数学。核心知识点如下：
+- <strong>基本初等函数的最值</strong>：
+    - 二次函数 $f(x)=ax^2+bx+c$ 在 $\mathbb{R}$ 上：$a&gt;0$ 有最小值 $\frac{4ac-b^2}{4a}$，无最大值；$a&lt;0$ 有最大值，无最小值。闭区间 $[m,n]$ 上：在端点及对称轴 $x=-\frac{b}{2a}$ 处取最值。
+    - 三角函数：$y=A\sin(\omega x+\varphi)+B$ 或 $y=A\cos(\omega x+\varphi)+B$ 的最值为 $|A|+B$ 或 $-|A|+B$。$y=a\sin x+b\cos x$ 可化为 $\sqrt{a^2+b^2}\sin(x+\varphi)$ 求最值。
+    - 指数/对数函数：利用单调性求最值，特别注意复合函数定义域。
+- <strong>导数法求最值</strong>：
+    - 对于可导函数 $f(x)$，在闭区间 $[a,b]$ 上的最值求解步骤：第一步，求导函数 $f'(x)$；第二步，解方程 $f'(x)=0$ 及不可导点，得到区间内所有极值可疑点；第三步，比较所有极值可疑点函数值与端点值 $f(a),f(b)$，最大者为最大值，最小者为最小值。
+    - 对于开区间 $(a,b)$ 或无穷区间，通过判断单调性及区间端点/无穷远处的极限趋势来确认最值的存在性。
+- <strong>不等式法求最值</strong>：
+    - 基本不等式：$a,b&gt;0$ 时，$a+b \ge 2\sqrt{ab}$（和定积最大），$ab \le \left(\frac{a+b}{2}\right)^2$（积定和最小）。需严格遵守“一正二定三相等”。
+    - 绝对值不等式：$|a|-|b| \le |a \pm b| \le |a|+|b|$。常用于求 $|x-a|+|x-b|$ 型函数的最小值（图像法或几何意义更佳）。
+- <strong>其他模型中的最值</strong>：
+    - 线性规划：$z=ax+by$ 型目标函数，在约束条件的可行域顶点处取得最值。
+    - 向量中的数量积 $\vec{a}\cdot\vec{b}$ 的最值，常转化为坐标运算或利用 $|\vec{a}\cdot\vec{b}| \le |\vec{a}||\vec{b}|$。
+    - 立体几何中体积/面积最值，先建立目标函数（如设为高 $h$ 或角 $\theta$ 的函数），再利用导数或不等式求解。
+    - 解析几何中的距离、面积最值常转化为函数问题或利用几何性质（如对称性、定义）求解。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确目标函数与定义域</strong>：
+    仔细审题，将所求最值的量（面积、长度、表达式值）表示为某个变量（设为 $x$，或点的坐标）的函数 $f(x)$。<strong>定义域是生命线</strong>，必须根据题意明确写出自变量的取值范围。</li>
+<li><strong>选择最优方法</strong>：<ul>
+<li><strong>初等函数型</strong>：若函数为熟悉的二次、三角、对勾函数等类型，优先采用配方法、三角恒等变换、图像法或单调性法直接求最值。</li>
+<li><strong>复杂函数型</strong>：若函数较为复杂（如超越函数积、商、指对混合），必须<strong>求导</strong>。令导数等于零求出极值可疑点，再结合端点值比较。</li>
+<li><strong>和、积、倒数和结构型</strong>：若表达式可化为“和定”或“积定”的形式，且变量为正，优先尝试<strong>基本不等式</strong>及变形（如 $a+b+c \ge 3\sqrt[3]{abc}$）。</li>
+<li><strong>两点距离、线段和差型</strong>：优先考虑几何意义，如将 $\sqrt{(x-a)^2+(0-b)^2}$ 看作点 $(x,0)$ 到 $(a,b)$ 的距离，将 $|x-a|+|x-b|$ 看作数轴上点到两点距离之和。线性规划问题用几何法求截距、斜率、距离的最值。</li>
+<li><strong>多元变量型</strong>：利用题设条件（如等式关系 $g(x,y)=0$）进行消元，将多元函数化为一元函数。若消元困难或表达式对称，可考虑利用不等式（如 $\sqrt{ab} \le \frac{a+b}{2}$）整体构造或换元。</li>
+</ul>
+</li>
+<li><strong>验证取等条件与极值点</strong>：
+    利用基本不等式必须<strong>验证等号能否成立</strong>，这是填空题和解答题的得分关键。利用导数，需列表确认函数在极值可疑点两侧的单调性变化，并比较所有极值点与端点的函数值。若为开区间，需判断函数在该区间的最大值/最小值趋势。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆三角函数性质</strong>：如误将 $y=\sin 2x$ 和 $y=\sin(2x-\frac{\pi}{4})$ 的对称轴、零点看作相同。通过令相位整体等于标准值可避免混淆。</li>
+<li><strong>基本不等式忽略“正”和“定”</strong>：看到 $a+b$ 就想用 $2\sqrt{ab}$，却忽略 $a,b$ 可能为负。“和定”与“积定”是前提，不能随意构造。</li>
+<li><strong>定义域/参数范围判断失误</strong>：<ul>
+<li>求分段函数或带参数的最值时，忽略了分段区间的断点或参数变动对定义域的影响。</li>
+<li>如真题中根据 $f(x) \ge -\frac{8}{9}$ 求参数 $m$，需准确平移区间并分段解析，容易遗漏右端点。</li>
+</ul>
+</li>
+<li><strong>导数与端点值比较遗漏</strong>：导数等于零的点不一定是整个区间的最值点，<strong>必须与区间端点函数值比较</strong>。这是解答题扣分的重灾区。</li>
+<li><strong>几何最值建模错误</strong>：<ul>
+<li>立体几何中建系或设变量后，函数关系列错，如将高与底面半径的关系误写为和的关系。</li>
+<li>解析几何中面积公式忘写系数 $\frac{1}{2}$，或最值点对应的几何位置不存在。</li>
+</ul>
+</li>
+<li><strong>线性规划区域判断错误</strong>：将虚线与实线混淆，导致可行域边界取否判断错误，进而使最值点选错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2024-新课标Ⅱ-14</h3>
+<ul>
+<li><strong>题目</strong>：在 $4\times4$ 方格表选4个方格，每行每列恰选一个，求选法总数及选中4个数之和的最大值。</li>
+<li><strong>思路</strong>：这是一个排列组合与最值的综合题。第一空是经典错位排列模型：逐行选列，列号不重复，为 $4!$ 种。第二空，需理解所有 $4!$ 种选法中，每种选法对应一个和。直接求所有和的最大值，数据固定，可穷举或分析。最优策略是优先将每行的最大值选出，但需兼顾列限制。由于方格表数据未知，此题核心实为理解模型后列举或逻辑推理。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>求选法总数</strong>：第一行可在4列中选一个，有4种；第二行只能选剩余3列，有3种；以此类推，共 $4 \times 3 \times 2 \times 1 = 24$ 种。</li>
+<li><strong>分析最大和</strong>：要使和最大，应尽量选每行最大的数。但若某列的最大数在多行出现，则产生冲突。</li>
+<li><strong>求最大值</strong>：观察表格（原题有数据），将每行的最大两个数找出，尝试组合，使每列只占一个。通过简单列举最优组合，即可得到最大和。（此题因表格数据缺失，仅演示方法）</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：此题将“排列数”与“最值筛选”结合，新高考趋势。关键在于理解两种约束：模型约束（每行每列恰一个）与数据约束（数值大小）。变式：“在一个 $n \times n$ 矩阵中，求此模型下的最大值/最小值”。</li>
+</ul>
+<h3>2024-新课标Ⅱ-09</h3>
+<ul>
+<li><strong>题目</strong>：对于函数 $f(x)=\sin 2x$ 和 $g(x)=\sin(2x-\frac{\pi}{4})$，判断零点、最大值、最小正周期和对称轴是否相同。（多选）</li>
+<li><strong>思路</strong>：逐一验证四个选项。涉及三角函数的基本性质，直接利用相应公式和结论分别求出两个函数各自的属性，再进行比较。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>验证零点（A选项）</strong>：令 $f(x)=0$，得 $2x=k\pi \Rightarrow x=\frac{k\pi}{2}$。令 $g(x)=0$，得 $2x-\frac{\pi}{4}=k\pi \Rightarrow x=\frac{k\pi}{2}+\frac{\pi}{8}$。零点集不同，A错误。</li>
+<li><strong>验证最大值（B选项）</strong>：两者最大振幅均为1，故最大值均为1，B正确。</li>
+<li><strong>验证最小正周期（C选项）</strong>：$T_f=\frac{2\pi}{2}=\pi$，$T_g=\frac{2\pi}{2}=\pi$，C正确。</li>
+<li><strong>验证对称轴（D选项）</strong>：$f(x)$ 对称轴方程 $2x=\frac{\pi}{2}+k\pi \Rightarrow x=\frac{\pi}{4}+\frac{k\pi}{2}$。$g(x)$ 对称轴方程 $2x-\frac{\pi}{4}=\frac{\pi}{2}+k\pi \Rightarrow x=\frac{3\pi}{8}+\frac{k\pi}{2}$。对称轴不同，D错误。
+故选：BC</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：本题属基础题，考查三角函数基本通性通法。易错点在于平移变换后，误以为所有性质都不变。变式：“判断 $f(x)=\cos 2x$ 与 $g(x)=\sin(2x+\frac{\pi}{3})$ 的上述性质异同”。</li>
+</ul>
+<h3>2022-文-11</h3>
+<ul>
+<li><strong>题目</strong>：函数 $f(x)=\cos x + (x+1)\sin x + 1$ 在区间 $[0,2\pi]$ 的最小值、最大值分别为多少。</li>
+<li><strong>思路</strong>：函数形式较复杂，非标准三角函数，直接求最值的最佳方案是对 $f(x)$ 求导，通过研究其单调性，找到区间内的极值点，再与端点值比较得出最值。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>求导</strong>：$f'(x) = -\sin x + \sin x + (x+1)\cos x = (x+1)\cos x$。</li>
+<li><strong>求极值可疑点</strong>：令 $f'(x)=0$，在 $[0,2\pi]$ 上，得 $x+1=0$（无解），或 $\cos x=0$。解得 $x_1=\frac{\pi}{2}$，$x_2=\frac{3\pi}{2}$。</li>
+<li><strong>比较函数值</strong>：计算极值可疑点和端点的函数值。<ul>
+<li>$f(0) = \cos 0 + (0+1)\times 0 + 1 = 2$。</li>
+<li>$f(\frac{\pi}{2}) = 0 + (\frac{\pi}{2}+1) \times 1 + 1 = \frac{\pi}{2}+2$。</li>
+<li>$f(\frac{3\pi}{2}) = 0 + (\frac{3\pi}{2}+1) \times (-1) + 1 = -\frac{3\pi}{2} - 1 + 1 = -\frac{3\pi}{2}$。</li>
+<li>$f(2\pi) = \cos 2\pi + (2\pi+1)\sin 2\pi + 1 = 2$。</li>
+</ul>
+</li>
+<li><strong>定结论</strong>：比较四个值 $2, \frac{\pi}{2}+2, -\frac{3\pi}{2}, 2$，最大值为 $\frac{\pi}{2}+2$，最小值为 $-\frac{3\pi}{2}$。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：利用导数求超越函数最值的标准范例。注意：求导后能分解因式是极大简化运算的关键。本题极值点恰好在区间内，直接比较端点即可。易错点为代值计算错误及漏算端点值。变式：“求 $f(x)=\cos x + (x+2)\sin x + 1$ 在 $[0,2\pi]$ 上的最值”。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-09.html">2024-新课标Ⅱ-09</a>（2024 · 易） 本题通过比较两个正弦型函数的零点、最值、周期和对称轴，考查正弦函数的图像与性质。</li>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-14.html">2024-新课标Ⅱ-14</a>（2024 · 易） 本题通过分步乘法计数原理计算选法总数，并结合列举法求所有选法中数字之和的最大值。</li>
+<li><a href="../../exam/数学/2022-文-11.html">2022-文-11</a>（2022 · 中） 利用导数求函数在闭区间上的单调性与最值</li>
+<li><a href="../../exam/数学/2022-文-12.html">2022-文-12</a>（2022 · 中） 本题通过几何分析和均值不等式求四棱锥体积最大值时对应的高。</li>
+<li><a href="../../exam/数学/2021-文-04.html">2021-文-04</a>（2021 · 易） 本题考查三角函数的最小正周期和最大值的求解。</li>
+<li><a href="../../exam/数学/2019-理-12.html">2019-理-12</a>（2019 · 难） 函数f满足f(x+1)=2f(x)且x∈(0,1]时f(x)=x(x-1)，对任意x∈(-∞,m]均有f(x)≥-8/9，求m的取值范围。</li>
+<li><a href="../../exam/数学/2017-文-22.html">2017-文-22</a>（2017 · 中） 极坐标系下动点轨迹求解及三角形面积最值问题</li>
+<li><a href="../../exam/数学/2017-理-05.html">2017-理-05</a>（2017 · 易） 该题考查线性规划中目标函数在给定约束条件下的最小值求解。</li>
+<li><a href="../../exam/数学/2017-理-12.html">2017-理-12</a>（2017 · 中） 本题考查向量数量积的最值问题，通过建系或利用向量中点公式将数量积转化为点P到某点的距离平方求最小值。</li>
+<li><a href="../../exam/数学/2014-理-24.html">2014-理-24</a>（2014 · 易） 考查含参绝对值函数的最小值证明，利用绝对值三角不等式直接放缩。</li>
+<li><a href="../../exam/数学/2012-文-24.html">2012-文-24</a>（2012 · 中） 含参绝对值函数最值或不等式恒成立问题</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/286-函数的最值.html">最值</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>共轭复数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>共轭复数</h1><div class="review-mark" data-stem="共轭复数"></div><div class="meta-card"><span><strong>考点</strong>共轭复数</span><span><strong>权重</strong>28</span><span><strong>真题数</strong>12</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：28</li>
+<li>真题数：12；年份跨度：2009–2022</li>
+<li>出现题位：选择1 选择2 选择3</li>
+<li>难度分布：易12</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>共轭复数定义</strong>：若 $z=a+bi\ (a,b\in\mathbb{R})$，则其共轭复数 $\overline{z}=a-bi$。实部相同，虚部互为相反数。</li>
+<li><strong>核心性质</strong>：</li>
+<li>$z\cdot\overline{z}=|z|^2=a^2+b^2$（实数）。</li>
+<li>$z+\overline{z}=2a$（实数），$z-\overline{z}=2bi$（纯虚数，当 $b\neq0$ 时）。</li>
+<li>$\overline{z_1\pm z_2}=\overline{z_1}\pm\overline{z_2}$，$\overline{z_1\cdot z_2}=\overline{z_1}\cdot\overline{z_2}$，$\overline{\left(\frac{z_1}{z_2}\right)}=\frac{\overline{z_1}}{\overline{z_2}}\ (z_2\neq 0)$。</li>
+<li>$\overline{\overline{z}}=z$。</li>
+<li><strong>复数相等的充要条件</strong>：$a+bi=c+di\iff a=c$ 且 $b=d$（其中 $a,b,c,d\in\mathbb{R}$）。</li>
+<li><strong>复平面中的点</strong>：$z=a+bi$ 对应点 $(a,b)$，$\overline{z}$ 对应点 $(a,-b)$，两点关于实轴对称。</li>
+<li><strong>复数代数形式的运算</strong>：</li>
+<li>加减法：实部与实部相加减，虚部与虚部相加减。</li>
+<li>乘法：按多项式乘法展开，利用 $i^2=-1$ 合并。</li>
+<li>除法：分子分母同乘以分母的共轭复数，化为 $a+bi$ 的标准形式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设标准形式法</strong>：当题目涉及 $z$ 与 $\overline{z}$ 的混合运算且不易直接化简时，设 $z=a+bi\ (a,b\in\mathbb{R})$，写出 $\overline{z}=a-bi$，代入等式中利用复数相等的充要条件列方程组求解 $a,b$。  </li>
+<li><strong>整体化简法</strong>：对于仅含 $z$ 的运算（如求 $\overline{z}$、$|z|$ 等），先对 $z$ 的表达式进行四则运算化为 $a+bi$ 的标准形，然后直接写出共轭复数或进行后续计算。  </li>
+<li><strong>性质直用</strong>：遇到 $z+\overline{z}$、$z-\overline{z}$、$z\cdot\overline{z}$ 等对称结构时，直接套用性质转化为实数或纯虚数，大幅简化解题过程，避免设未知数。  </li>
+<li><strong>分母实数化</strong>：复数除法运算中，分子分母同乘以分母的共轭复数，使分母变为实数，再分离实部与虚部。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>共轭复数符号搞反</strong>：$\overline{z}$ 是虚部变号，而非实部变号。如 $z=1-2i$ 的共轭是 $1+2i$，误记为 $-1+2i$ 会导致全题失分。  </li>
+<li><strong>漏掉虚数单位 $i$</strong>：在计算 $z-\overline{z}$ 时，结果为 $2bi$，部分考生只写 $2b$ 而忽略 $i$，使得方程无法匹配。  </li>
+<li><strong>复数相等条件未分离实虚部</strong>：遇到含 $z$ 和 $\overline{z}$ 的方程时，若不能正确将式子整理为“实数+虚数”的形式，会列错方程组。  </li>
+<li><strong>共轭复数运算误用</strong>：比如误认为 $z\cdot\overline{z}=a^2-b^2$（实际为 $a^2+b^2$），或认为 $\overline{z_1+z_2}=\overline{z_1}-\overline{z_2}$ 等。  </li>
+<li><strong>复平面点坐标颠倒</strong>：$\overline{z}$ 的对应点是 $(a,-b)$，而不是 $(-a,b)$ 或 $(-a,-b)$；命题中常以象限判断考查，需画出草图确认。  </li>
+<li><strong>虚部概念混淆</strong>：复数 $a+bi$ 的虚部是实数 $b$，而不是 $bi$。例如 $z=-1-i$ 的虚部是 $-1$，而非 $-i$。此类辨析常在命题判断中出现。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2022·理·02）</h3>
+<p><strong>题目</strong>：已知 $z=1-2i$，且 $z+a\overline{z}+b=0$，其中 $a,b$ 为实数，求 $a,b$ 的值。<br />
+<strong>思路</strong>：先求出 $\overline{z}=1+2i$，代入方程整理成“实部 $+$ 虚部$\times i$”的形式，再利用复数相等的充要条件列出关于 $a,b$ 的实数方程组求解。<br />
+<strong>步骤</strong>：<br />
+由 $z=1-2i$ 得 $\overline{z}=1+2i$。<br />
+代入方程：<br />
+$$(1-2i)+a(1+2i)+b=0$$
+展开并合并实部与虚部：<br />
+$$(1+a+b)+(2a-2)i=0$$<br />
+因为 $a,b\in\mathbb{R}$，根据复数相等的条件得：<br />
+$$\begin{cases} 1+a+b=0 \ 2a-2=0 \end{cases}$$<br />
+解方程组：由第二式得 $a=1$，代入第一式得 $b=-2$。<br />
+故选A（$a=1,b=-2$）。<br />
+<strong>点评/变式</strong>：本题核心是“标准化——分离实虚部——列方程组”。若题目改为已知 $a,b$ 求 $z$，则需设 $z=x+yi$ 反向求解，思想一致。注意务必先准确写出 $\overline{z}$。</p>
+<h3>代表题2（2021·理·01）</h3>
+<p><strong>题目</strong>：设 $(z+\overline{z})(z-\overline{z})=4+6i$，则 $z=$（   ）<br />
+<strong>思路</strong>：不直接设 $z=a+bi$ 展开，而是利用对称性质：$z+\overline{z}=2a$，$z-\overline{z}=2bi$，乘积即为 $4abi$，与右端 $4+6i$ 对比即可快速求出实部、虚部。<br />
+<strong>步骤</strong>：<br />
+设 $z=a+bi\ (a,b\in\mathbb{R})$，则 $\overline{z}=a-bi$。<br />
+$$z+\overline{z}=2a,\quad z-\overline{z}=2bi$$<br />
+左端 $(2a)\cdot(2bi)=4abi$。<br />
+已知 $4abi=4+6i$，虚部对应虚部，实部对比：<br />
+$4ab$ 是实数，而右端实部为 $4$，虚部为 $6$，所以必须有：<br />
+$$4ab = 6 \quad\text{且等式左边没有实部，实际上 }4ab\text{ 为实数，但 }4abi\text{ 中 }i\text{ 的系数是 }4ab\text{，应与 }6\text{ 相等；}\text{同时右端还有实部 }4\text{，这说明我们前面判断有误：}$$<br />
+纠正：$4abi$ 为纯虚数，而右端 $4+6i$ 包含实部 $4$，这说明直接对比不严谨。正确做法：设 $z=a+bi$，则 $(z+\overline{z})(z-\overline{z})=(2a)(2bi)=4abi$，它应为纯虚数，但右端有实部 $4$，说明 $z+\overline{z}$ 或 $z-\overline{z}$ 的模写错了？重新审题：题目给出的是 $(z+\overline{z})(z-\overline{z})=4+6i$？原题中可能不是这样。根据提供的真题语料，2021理01题干：“设 $(z+\bar{z})(z-\bar{z})=4+6i$”，但看似不合理。查看解析原文：“设 $z=a+bi$，则 $z+\bar{z}=2a$，$z-\bar{z}=2bi$，则 $(z+\bar{z})(z-\bar{z})=4a+6i$ ？ 解析中写的是：$(z+\bar{z})(z-\bar{z})=4a+6i\ ?$ 实际解析为：”则 $(z+\bar{z})(z-\bar{z})=4abi$，所以 $4ab=6$ …” 但原解析又说：“所以 $4a=4, 6b=6$”？查看题干：设 $(z+\bar{z})(z-\bar{z})=4+6i$ ？ 不对，题干是：“设 $(2+3)z+(4-6)\bar{z}=4+6i$”？ 看提供的语料：“题干：1. 设2 3 4 6iz z z z+ + - = +，则z=（    ）”这显然是乱码。从解析看：“设i z a b = +，则i z a b = -，则2 3 4 6 i 4 6i z z z z a b + + - = + = + ，所以 4 4 6 6 a b = = ，解得1 a b = =”，说明原题应该是 $2(z+\bar{z})+3(z-\bar{z})=4+6i$？实际上是 $2(z+\bar{z})+3(z-\bar{z})=4+6i$？不对，解析里写的是“2 3 4 6 i 4 6i z z z z a b + + - = + = +”，推测原题是 $2(z+\bar{z})+3(z-\bar{z})=4+6i$，整理得 $(2z+2\bar{z})+(3z-3\bar{z})=(2+3)z+(2-3)\bar{z}=5z-\bar{z}=4+6i$？但解析却得出 $4a=4, 6b=6$。仔细看：“则2 3 4 6 i 4 6i z z z z a b + + - = + = + ，所以 4 4 6 6 a b = = ”，说明左端是 $4a+6bi = 4+6i$。所以原题可能是 $2(z+\bar{z})+3(z-\bar{z})=4+6i$？那么 $2(2a)+3(2bi)=4a+6bi=4+6i$，得 $4a=4,6b=6$。这符合解析。鉴于语料中乱码，我按解析思路给出标准形式：设 $z=a+bi$，则 $2(z+\bar{z})=4a$，$3(z-\bar{z})=6bi$，和等于 $4+6i$。但严格按语料，题干是“设2 3 4 6iz z z z+ + - = +”，暂解读为 $2(z+\bar{z})+3(z-\bar{z})=4+6i$。为了忠实于解析中的 $4a=4, 6b=6$，我将题干还原为：“设 $2(z+\overline{z})+3(z-\overline{z})=4+6i$，求 $z$。”这样逻辑正确。在代表题精讲中，我可以简述题目：已知 $2(z+\overline{z})+3(z-\overline{z})=4+6i$，求 $z$。然后利用对称性质求解。这样符合解析步骤。<br />
+因此，代表题2的题目简述为：已知 $2(z+\overline{z})+3(z-\overline{z})=4+6i$，求复数 $z$。<br />
+<strong>步骤</strong>：设 $z=a+bi\ (a,b\in\mathbb{R})$，则 $\overline{z}=a-bi$。<br />
+$z+\overline{z}=2a$，$z-\overline{z}=2bi$。<br />
+代入得：$2(2a)+3(2bi)=4a+6bi = 4+6i$。<br />
+根据复数相等得 $4a=4,\ 6b=6$，解得 $a=1,\ b=1$，故 $z=1+i$。选C。<br />
+<strong>点评/变式</strong>：本题巧妙利用 $z\pm\overline{z}$ 的化简，避免了直接展开的繁琐。若等式复杂，也可设标准形式硬展开，但利用对称结构能显著提速。变式：若改为含 $z\cdot\overline{z}$ 的方程，则可利用 $|z|^2$ 整体求模。</p>
+<h3>代表题3（2019·文·02）</h3>
+<p><strong>题目</strong>：设 $z=i(2+i)$，求 $\overline{z}$。<br />
+<strong>思路</strong>：先计算 $z$，化成 $a+bi$ 的标准形式，然后直接写出共轭复数。<br />
+<strong>步骤</strong>：<br />
+$z=i(2+i)=2i+i^2=2i-1=-1+2i$。<br />
+所以 $\overline{z}=-1-2i$。故选D。<br />
+<strong>点评/变式</strong>：本题为最基本的共轭复数运算，易错点在于乘法运算漏项或 $i^2$ 处理错误。务必先算准 $z$ 再取共轭。变式：求 $|z|$ 或 $\frac{1}{z}$ 时，同样先化简为标准形式再运算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-02.html">2022-理-02</a>（2022 · 易） 本题通过已知复数及其共轭，利用复数相等条件求解实参数</li>
+<li><a href="../../exam/数学/2021-理-01.html">2021-理-01</a>（2021 · 易） 通过设复数的代数形式，利用共轭关系与运算等式求解未知数，确定复数。</li>
+<li><a href="../../exam/数学/2019-文-02.html">2019-文-02</a>（2019 · 易） 本题主要考查复数乘法运算及共轭复数的概念。</li>
+<li><a href="../../exam/数学/2019-理-02.html">2019-理-02</a>（2019 · 易） 本题考查复数的共轭复数概念及复数在复平面的对应点位置判断。</li>
+<li><a href="../../exam/数学/2016-文-02.html">2016-文-02</a>（2016 · 易） 该题考查复数代数形式的加减运算及共轭复数的概念。</li>
+<li><a href="../../exam/数学/2014-文-02.html">2014-文-02</a>（2014 · 易） 本题考查复数的除法运算，需分子分母同乘分母的共轭复数进行化简。</li>
+<li><a href="../../exam/数学/2013-理-02.html">2013-理-02</a>（2013 · 易） 本题给出复数方程，要求通过复数除法求解z，主要考查复数代数形式的四则运算。</li>
+<li><a href="../../exam/数学/2012-文-02.html">2012-文-02</a>（2012 · 易） 本题考查复数的除法运算及其共轭复数的求法。</li>
+<li><a href="../../exam/数学/2012-理-03.html">2012-理-03</a>（2012 · 易） 该题考查复数的四则运算、共轭复数、虚部等概念，要求判断命题真假。</li>
+<li><a href="../../exam/数学/2011-理-01.html">2011-理-01</a>（2011 · 易） 复数除法运算及共轭复数概念的应用</li>
+<li><a href="../../exam/数学/2010-理-02.html">2010-理-02</a>（2010 · 易） 考查复数的基本运算、共轭复数概念及模的求值。</li>
+<li><a href="../../exam/数学/2009-理-01.html">2009-理-01</a>（2009 · 易） 复数除法运算，分子分母同乘共轭复数化简为标准形式</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/534-共轭复数.html">共轭复数</a></li>
+</ul>
+</div>
+</body>
+</html>

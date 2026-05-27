@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆的性质</h1><div class="review-mark" data-stem="圆的性质"></div><div class="meta-card"><span><strong>考点</strong>圆的性质</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆的标准方程</strong>：圆心 $C(h,k)$，半径 $r$ 的方程为 $(x-h)^2+(y-k)^2=r^2$。给定方程直接读出圆心与半径是解题第一步。</li>
+<li><strong>直线与圆的位置关系</strong>：利用圆心到直线的距离 $d$ 与半径 $r$ 比较。当 $d&lt;r$ 时相交，且弦长 $L=2\sqrt{r^2-d^2}$（垂径定理）。由此可由弦长反推弦心距。</li>
+<li><strong>点到直线的距离公式</strong>：点 $(x_0,y_0)$ 到直线 $Ax+By+C=0$ 的距离 $d=\dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。在圆与圆锥曲线综合中，这是连接几何条件与代数方程的桥梁。</li>
+<li><strong>双曲线的渐近线</strong>：焦点在 $x$ 轴的双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ 的渐近线为 $y=\pm\dfrac{b}{a}x$（或 $bx\pm ay=0$）。渐近线可视为过原点的直线，其斜率由 $a,b$ 决定。</li>
+<li><strong>双曲线离心率</strong>：$e=\dfrac{c}{a}$，其中 $c^2=a^2+b^2$。所有参数关系的统一是求解离心率的核心。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理“圆截直线（含曲线渐近线）所得弦长”类问题的通用步骤：
+1. <strong>锁定圆心与半径</strong>：从圆的方程直接得到圆心坐标及半径 $r$。
+2. <strong>写出直线方程并化为一般式</strong>：若为双曲线的渐近线，先写出渐近线方程（注意正负号取舍不影响距离时可任取一条，如 $bx+ay=0$）。
+3. <strong>由弦长求弦心距</strong>：利用垂径定理 $d = \sqrt{r^2 - \left(\frac{L}{2}\right)^2}$，将已知弦长转化为圆心到直线的距离 $d$。
+4. <strong>列点到直线距离等式</strong>：将圆心坐标代入点到直线距离公式，令其等于上一步求出的 $d$，得到关于圆锥曲线参数（$a,b,c$）的方程。
+5. <strong>结合圆锥曲线参数关系求目标量</strong>：利用椭圆/双曲线中 $a,b,c$ 的固有关系（如双曲线中 $c^2=a^2+b^2$）化简方程，求解所需参数（如离心率 $e=\frac{c}{a}$ 或 $\frac{b}{a}$ 等）。
+6. <strong>检验取舍</strong>：注意距离的非负性，以及最终答案可能的多解情况是否符合题意。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>渐近线方程混淆</strong>：双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ 的渐近线是 $y=\pm\dfrac{b}{a}x$，等价于 $bx\pm ay=0$；切莫误记为 $y=\pm\dfrac{a}{b}x$。</li>
+<li><strong>弦长与半弦长混淆</strong>：垂径定理给出的是“半弦长”与半径、弦心距的勾股关系：$(L/2)^2 + d^2 = r^2$。计算时易直接把弦长 $L$ 当作直角边，导致 $d$ 求错。</li>
+<li><strong>距离公式分母用错</strong>：点到直线 $Ax+By+C=0$ 的距离分母为 $\sqrt{A^2+B^2}$，不要遗漏平方根号下的平方，或错误地使用 $a^2+b^2$ 而不开方。</li>
+<li><strong>双曲线参数关系记反</strong>：椭圆中 $a^2=b^2+c^2$，双曲线中 $c^2=a^2+b^2$。两者不能混淆，否则离心率范围与计算结果都会出错。</li>
+<li><strong>距离等式化简失误</strong>：在将距离等式化为关于 $a,b,c$ 的比例关系时，注意 $\sqrt{a^2+b^2}=c$，可整体代换简化运算。常因未发现此关系而陷入复杂代数运算导致错误。</li>
+<li><strong>忽略题目隐含条件</strong>：如双曲线焦点在 $x$ 轴（$a&gt;0,b&gt;0$），渐近线过原点，圆心在 $x$ 轴上等，这些可简化点到直线距离的计算，若盲目代入一般公式并展开会增加出错风险。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2017·全国卷）双曲线 $C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a&gt;0,b&gt;0)$ 的一条渐近线被圆 $(x-2)^2+y^2=4$ 所截得的弦长为 $2$，求 $C$ 的离心率。</p>
+<p><strong>思路</strong>：题目给出圆、渐近线和弦长，目标是双曲线离心率。首先从圆方程获取圆心 $(2,0)$ 和半径 $r=2$。由弦长 $2$ 及半径，利用垂径定理求出圆心到渐近线的距离 $d=\sqrt{2^2-1^2}=\sqrt{3}$。取一条渐近线 $bx+ay=0$，用点到直线距离公式列出方程 $\dfrac{|2b|}{\sqrt{a^2+b^2}}=\sqrt{3}$。结合双曲线中 $c^2=a^2+b^2$，将距离等式化为关于 $\dfrac{b}{c}$ 的方程，求出 $\dfrac{b}{c}$ 后即可求得 $e=\dfrac{c}{a}$。</p>
+<p><strong>步骤</strong>：
+1. 由圆 $(x-2)^2+y^2=4$ 得圆心 $C(2,0)$，半径 $r=2$。
+2. 弦长 $L=2$，半弦长为 $1$。由垂径定理，圆心到直线距离 $d=\sqrt{r^2-1^2}=\sqrt{4-1}=\sqrt{3}$。
+3. 双曲线 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$ 的一条渐近线方程为 $bx+ay=0$。
+4. 圆心 $(2,0)$ 到该直线的距离为 $d=\dfrac{|b\cdot2+a\cdot0|}{\sqrt{a^2+b^2}}=\dfrac{2b}{\sqrt{a^2+b^2}}$。
+5. 令其等于 $\sqrt{3}$：$\dfrac{2b}{\sqrt{a^2+b^2}}=\sqrt{3}$。由于 $c=\sqrt{a^2+b^2}$，代入得 $\dfrac{2b}{c}=\sqrt{3}$，即 $\dfrac{b}{c}=\dfrac{\sqrt{3}}{2}$。
+6. 在双曲线中 $c^2=a^2+b^2$，故 $\left(\dfrac{a}{c}\right)^2=1-\left(\dfrac{b}{c}\right)^2=1-\dfrac{3}{4}=\dfrac{1}{4}$，所以 $\dfrac{c}{a}=2$，离心率 $e=2$。</p>
+<p><strong>点评/变式</strong>：本题将圆的弦长转化为弦心距，进而与双曲线的特征量 $a,b,c$ 挂钩，是典型的解析几何综合模式。核心是熟练运用垂径定理和点到直线距离式，并快速识别 $\sqrt{a^2+b^2}=c$ 简化运算。变式可改为已知离心率求弦长，或将双曲线换成椭圆（注意参数关系变为 $a^2=b^2+c^2$），解法思路完全一致，需特别防范参数关系的变换。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-09.html">2017-理-09</a>（2017 · 中） 双曲线渐近线被圆截弦长，求离心率</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆的性质</a></li>
+</ul>
+</div>
+</body>
+</html>

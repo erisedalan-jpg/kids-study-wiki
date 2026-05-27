@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实轴长</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>实轴长</h1><div class="review-mark" data-stem="实轴长"></div><div class="meta-card"><span><strong>考点</strong>实轴长</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择10</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>双曲线的实轴</strong>：双曲线与实轴所在直线相交所得两个顶点间的线段称为实轴，长度记为 $2a$；$a$ 为实半轴长。</li>
+<li><strong>等轴双曲线</strong>：实轴长与虚轴长相等的双曲线。中心在原点、焦点在 $x$ 轴上的标准方程为<br />
+  $$x^2 - y^2 = a^2 \quad (a&gt;0)$$<br />
+  此时实轴在 $x$ 轴上，实轴长 $2a$，虚轴长也为 $2a$。</li>
+<li><strong>抛物线的准线</strong>：对抛物线 $y^2 = 2px\ (p&gt;0)$，准线方程为 $x = -\frac{p}{2}$。<br />
+  本题 $y^2 = 16x$ 中 $2p=16 \Rightarrow p=8$，准线为 $x=-4$。</li>
+<li><strong>对称交点与弦长</strong>：若直线 $x = x_0$ 与等轴双曲线交于 $A(x_0, y_0)$，$B(x_0, -y_0)$，则 $|AB| = 2|y_0|$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>利用抛物线、等轴双曲线方程求实轴长的通用步骤：
+1. <strong>定型设参</strong>：根据焦点位置设等轴双曲线方程。焦点在 $x$ 轴设 $x^2 - y^2 = a^2$，焦点在 $y$ 轴设 $y^2 - x^2 = a^2$。
+2. <strong>求相关直线</strong>：求出已知抛物线（或其它曲线）的准线、渐近线等直线方程，一般可得垂直于坐标轴的直线 $x = m$ 或 $y = n$。
+3. <strong>联立求交点（含参）</strong>：将直线方程代入双曲线方程，解出交点坐标（用 $a$ 表示纵/横坐标的绝对值）。
+4. <strong>利用弦长列方程</strong>：根据条件中的弦长（如 $|AB|=l$），建立关系 $2|y_0| = l$ 或 $2|x_0| = l$，解出交点坐标的具体值。
+5. <strong>回代求 $a$ 及 $2a$</strong>：将坐标代入双曲线方程，求出 $a^2$，进而得到实轴长 $2a$。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆 $a$ 与 $2a$</strong>：求出 $a$ 后忘记题目问的是实轴长 $2a$，导致误选半轴长的选项。</li>
+<li><strong>准线方程错记</strong>：$y^2 = 2px$ 的准线是 $x = -\frac{p}{2}$，而非 $x = \frac{p}{2}$ 或 $x = -p$。需先正确写出 $p$ 再代入。</li>
+<li><strong>等轴双曲线方程设错</strong>：看到“焦点在 $x$ 轴”就设为 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$，忘记等轴条件 $a = b$，应直接设 $x^2 - y^2 = a^2$，减少参数。</li>
+<li><strong>坐标代入计算错误</strong>：将 $A(m, y_0)$ 代入 $x^2 - y^2 = a^2$ 时，误算为 $m^2 - y_0^2$ 的符号或数值，建议先平方再相减。</li>
+<li><strong>弦长理解偏差</strong>：若 $A, B$ 关于 $x$ 轴对称且横坐标相同，$|AB|$ 为两点纵坐标之差的绝对值 $2|y_0|$，不要误用横坐标之差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>代表题1</strong>（2012 全国大纲卷 文10）<br />
+<strong>题目</strong>：等轴双曲线 $C$ 的中心在原点，焦点在 $x$ 轴上，$C$ 与抛物线 $y^2 = 16x$ 的准线交于 $A, B$ 两点，$|AB| = 4\sqrt{3}$，求 $C$ 的实轴长。  </p>
+<p><strong>思路</strong>：设出等轴双曲线标准方程；写出抛物线准线；利用对称性表达 $A, B$ 坐标；由弦长得纵坐标，代入双曲线求 $a$，最后得 $2a$。  </p>
+<p><strong>步骤</strong>：
+1. 设等轴双曲线为 $x^2 - y^2 = a^2\ (a&gt;0)$。<br />
+2. 抛物线 $y^2 = 16x$ 的准线为 $x = -4$。<br />
+3. 由对称性，可设 $A(-4, y_0),\; B(-4, -y_0)$，则 $|AB| = 2|y_0| = 4\sqrt{3} \Rightarrow |y_0| = 2\sqrt{3}$，取 $y_0 = 2\sqrt{3}$。<br />
+4. 将 $A(-4, 2\sqrt{3})$ 代入双曲线：<br />
+   $$(-4)^2 - (2\sqrt{3})^2 = a^2 \ \Rightarrow\ 16 - 12 = a^2\ \Rightarrow\ a^2 = 4.$$<br />
+   得 $a = 2$（$a&gt;0$）。<br />
+5. 实轴长 $= 2a = 4$。  </p>
+<p><strong>点评/变式</strong>：
+- 本题关键是把“等轴”转化为 $a = b$，直接用单参数方程，避免 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ 的复杂形式。
+- 变式训练：若焦点在 $y$ 轴，设 $y^2 - x^2 = a^2$；若与抛物线的焦点弦相交，同样利用坐标对称性列方程，策略一致。
+- 易错提醒：常有同学求出 $a=2$ 即选 A，忽略了实轴长是 $2a$；另有同学将准线错写为 $x=4$，导致整题错误。牢记抛物线标准形式与 $p$ 的几何意义。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-10.html">2012-文-10</a>（2012 · 难） 通过等轴双曲线与抛物线准线相交的弦长求双曲线实轴长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">实轴长</a></li>
+</ul>
+</div>
+</body>
+</html>

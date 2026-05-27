@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>锥体体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>锥体体积</h1><div class="review-mark" data-stem="锥体体积"></div><div class="meta-card"><span><strong>考点</strong>锥体体积</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>棱锥的体积公式</strong>：$V = \frac{1}{3} S_{\text{底}} h$，其中 $S_{\text{底}}$ 为底面积，$h$ 为顶点到底面的高。三棱锥（四面体）体积同样适用。</li>
+<li><strong>等体积转化（顶点变换）</strong>：在同一个三棱锥中，可以任选一点作为顶点，适当选择底面可以简化高的计算。特别是当目标棱锥的高不易直接求时，可将其转化为以原棱锥的某个面为底、利用中点或平行关系得到高为原高的一半等简化关系。</li>
+<li><strong>线面平行的判定与性质</strong>：通过构造三角形的中位线或平行四边形可以证明线面平行。如本题 $E$ 为中点，可连接 $BD$ 交 $AC$ 于 $O$，则 $OE \parallel PB$。</li>
+<li><strong>二面角的平面角构造</strong>：作棱的垂线，得到与二面角棱垂直的两条相交线，则夹角即为二面角的平面角。常用方法为过棱上一点分别在两个半平面内作垂直。</li>
+<li><strong>面积投影法求二面角</strong>：若不易直接作出平面角，可利用 $\cos\theta = \frac{S_{\text{投影}}}{S_{\text{原}}}$ 计算二面角，但需准确找到射影关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证明线面平行</strong>：在面内找（或作）一条直线与已知直线平行。通常利用三角形的中位线（连接对角线交点与中点）或平行四边形。</li>
+<li><strong>求三棱锥体积的三步走</strong>：</li>
+<li><strong>锁定目标</strong>：确定求体积的棱锥，识别底面与高。</li>
+<li><strong>转化优化</strong>：若所给三棱锥的底面面积或高不易求，利用中点、三等分点等比例关系将其转化为另一个易求体积的棱锥。如 $E$ 为 $PD$ 中点，则 $V_{E-ACD} = \frac{1}{2} V_{P-ACD}$，或者将底面换为 $\triangle ACD$（矩形的一半）直接利用高 $h'$。</li>
+<li><strong>利用夹角求高</strong>：当二面角给出时，过点向棱作垂，再在一个面内作交线垂线，构造含高的直角三角形，利用三角函数求高。</li>
+<li><strong>二面角的利用</strong>：对于二面角 $D - AE - C$，棱为 $AE$。可经过点 $C$ 做平面 $AED$ 的垂线，或者在平面 $AEC$ 内过点 $C$ 作 $AE$ 的垂线，连接垂足与点 $D$ 内对应的点，得到平面角 $60^\circ$，结合已知长度求出点 $C$ 到平面 $AED$ 的距离（即三棱锥 $C-AED$ 的高），再转化到目标三棱锥。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>二面角的平面角找错</strong>：将棱误判，如错以为棱是 $AD$ 或 $AC$。本题二面角 $D-AE-C$ 的棱是 $AE$，需过点分别在面 $AED$ 和面 $AEC$ 内作 $AE$ 的垂线。</li>
+<li><strong>垂足位置判断失误</strong>：利用 $PA \perp$ 底面，可证平面 $PAD \perp$ 平面 $ABCD$，从而在构造二面角平面角时，注意垂直关系的传递。</li>
+<li><strong>体积转化时忽略比例系数</strong>：$E$ 为 $PD$ 中点，$V_{E-ACD} = \frac{1}{2} V_{P-ACD}$，有时误当成 $\frac{1}{3}$ 或直接用 $V_{P-ABCD}$ 错除。</li>
+<li><strong>混淆三棱锥的高与线段长</strong>：由二面角求出的往往是点 $C$ 到棱 $AE$ 的垂直距离，需注意以此构建的高是否确实垂直于底面，需要进一步转化。</li>
+<li><strong>运算失误</strong>：在已知 $AP=1, AD=\sqrt{3}$ 的情况下，通过二面角求相关边长，易因根号运算或比例算错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题</strong> 2014-理-18</h3>
+<p><strong>题目</strong>：四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA \perp$ 平面 $ABCD$，$E$ 为 $PD$ 的中点。<br />
+（Ⅰ）证明：$PB \parallel$ 平面 $AEC$；<br />
+（Ⅱ）设二面角 $D-AE-C$ 为 $60^\circ$，$AP=1$，$AD=\sqrt{3}$，求三棱锥 $E-ACD$ 的体积。</p>
+<p><strong>思路</strong>：<br />
+（Ⅰ）利用三角形中位线，连接 $BD$ 交 $AC$ 于 $O$，则 $O$ 为 $BD$ 中点，$OE \parallel PB$，得证。<br />
+（Ⅱ）三棱锥 $E-ACD$ 若以 $ACD$ 为底，高为点 $E$ 到平面 $ACD$ 的距离，利用 $E$ 为中点可得高为 $PA$ 的一半吗？要注意 $PA \perp$ 底面，但 $E$ 到平面 $ACD$ 的距离并非直接是 $PA$ 的一半（因为 $PA$ 不垂直于 $ACD$？不对，$ACD$ 就是底面的一半，$PA \perp$ 底面，故 $PA \perp$ 面 $ACD$，所以点 $P$ 到底面 $ACD$ 的距离就是 $PA$。但 $E$ 是 $PD$ 中点，它在平面 $PAD$ 内，到底面 $ACD$ 的距离是 $PA$ 的一半？因为 $E$ 到 $AD$ 中点的连线平行于 $PA$？可以这样：$E$ 在 $PD$ 上，$PA \perp AD$，所以 $A$、$D$、$P$ 构成直角三角形，$E$ 到底面 $ACD$ 的距离即 $E$ 到 $AD$ 所在直线的距离在竖直方向的分量？更简便：直接转换，$V_{E-ACD} = \frac{1}{2} V_{P-ACD}$，因为 $E$ 是 $PD$ 中点，以 $ACD$ 为底，两棱锥高之比 $h_E:h_P = 1:2$（$E$ 在 $PD$ 上，到底面的距离由 $P$ 和 $D$ 的坐标决定，底面上点 $D$ 距离为0，$P$ 距离为 $PA=1$，$E$ 为 $PD$ 中点，所以到面 $ACD$ 的距离为 $\frac{1}{2}$）。那么 $V_{P-ACD} = \frac{1}{3} \cdot S_{\triangle ACD} \cdot PA$，而 $S_{\triangle ACD} = \frac{1}{2} AD \cdot CD$。$AD=\sqrt{3}$ 已知，$CD$ 未知。需要利用二面角 $D-AE-C$ 为 $60^\circ$ 求 $CD$（设 $CD = AB = x$）。通过建立坐标系或纯几何法求 $x$。纯几何：在平面 $PAD$ 内，$AE$ 是 $PD$ 的中线，二面角 $D-AE-C$ 的平面角可通过在平面 $AEC$ 内作 $AE$ 的垂线 $EG$ 或过 $C$ 作 $AE$ 的垂线。考虑到 $PA \perp AC$，$AD \perp CD$，可利用体积或投影。最佳方法：设 $CD = t$，以 $A$ 为原点，向量 $\overrightarrow{AD}$ 为 $y$ 轴，$\overrightarrow{AB}$ 为 $x$ 轴，$\overrightarrow{AP}$ 为 $z$ 轴建系。则 $A(0,0,0), D(0,\sqrt{3},0), C(t,\sqrt{3},0), P(0,0,1), E(0,\frac{\sqrt{3}}{2},\frac{1}{2})$。求平面 $AED$ 的法向量与平面 $AEC$ 的法向量，利用二面角余弦的绝对值等于 $\frac{1}{2}$ 求 $t$。求出 $t$ 后计算底面积和体积。这是最稳妥的套路。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）连接 $BD$ 交 $AC$ 于 $O$，由矩形知 $O$ 为 $BD$ 中点。又 $E$ 为 $PD$ 中点，故在 $\triangle PBD$ 中，$OE \parallel PB$。$OE \subset$ 平面 $AEC$，$PB \not\subset$ 平面 $AEC$，所以 $PB \parallel$ 平面 $AEC$。<br />
+（Ⅱ）以 $A$ 为坐标原点，射线 $AB, AD, AP$ 分别为 $x,y,z$ 轴正半轴建系。设 $AB = t\;(t&gt;0)$，则 $A(0,0,0), C(t,\sqrt{3},0), D(0,\sqrt{3},0), P(0,0,1), E(0,\frac{\sqrt{3}}{2},\frac{1}{2})$。<br />
+平面 $AED$（即平面 $PAD$）的法向量可取 $\boldsymbol{n_1} = (1,0,0)$（因为 $AB \perp$ 平面 $PAD$）。<br />
+平面 $AEC$ 中，$\overrightarrow{AE}=(0,\frac{\sqrt{3}}{2},\frac{1}{2}), \overrightarrow{AC}=(t,\sqrt{3},0)$。设法向量 $\boldsymbol{n_2}=(x,y,z)$，由 $\boldsymbol{n_2} \cdot \overrightarrow{AE}=\frac{\sqrt{3}}{2}y + \frac{1}{2}z=0$，$\boldsymbol{n_2} \cdot \overrightarrow{AC}=tx+\sqrt{3}y=0$。取 $y=-1$，则 $z=\sqrt{3}$，$x=\frac{\sqrt{3}}{t}$，得 $\boldsymbol{n_2}=(\frac{\sqrt{3}}{t},-1,\sqrt{3})$。<br />
+二面角 $D-AE-C$ 的平面角等于 $\boldsymbol{n_1},\boldsymbol{n_2}$ 的夹角或其补角，由题意二面角为 $60^\circ$，故 $|\cos\langle\boldsymbol{n_1},\boldsymbol{n_2}\rangle| = \cos60^\circ=\frac{1}{2}$。<br />
+计算：$\boldsymbol{n_1}\cdot\boldsymbol{n_2} = \frac{\sqrt{3}}{t}$，$|\boldsymbol{n_1}|=1$，$|\boldsymbol{n_2}|=\sqrt{\frac{3}{t^2}+1+3}=\sqrt{\frac{3}{t^2}+4}$。<br />
+所以 $\frac{\frac{\sqrt{3}}{t}}{\sqrt{\frac{3}{t^2}+4}} = \frac{1}{2}$，平方得 $\frac{\frac{3}{t^2}}{\frac{3}{t^2}+4} = \frac{1}{4}$，化简得 $\frac{3}{t^2}+4 = \frac{12}{t^2} \Rightarrow \frac{9}{t^2}=4 \Rightarrow t^2=\frac{9}{4}$，故 $t=\frac{3}{2}$（负舍）。<br />
+于是 $CD = t = \frac{3}{2}$。<br />
+三棱锥 $E-ACD$ 的体积：以 $\triangle ACD$ 为底，$E$ 到底面的高 $h$：由于 $E$ 为 $PD$ 中点，$PA \perp$ 底面，$D$ 在底面，故 $h = \frac{1}{2} PA = \frac{1}{2}$。<br />
+底面积 $S_{\triangle ACD} = \frac{1}{2} AD \cdot CD = \frac{1}{2} \times \sqrt{3} \times \frac{3}{2} = \frac{3\sqrt{3}}{4}$。<br />
+所以 $V_{E-ACD} = \frac{1}{3} \times \frac{3\sqrt{3}}{4} \times \frac{1}{2} = \frac{\sqrt{3}}{8}$。</p>
+<p><strong>点评/变式</strong>：<br />
+本题（Ⅱ）核心是利用空间向量将二面角条件转化为边长，避免复杂的纯几何构造。注意建系时坐标系选取要使得点坐标简单。若用传统几何法，则需取 $AD$ 中点 $F$，证明 $\angle EFC$ 或其补角为平面角，计算量较大。变式：若改为“二面角 $A-PB-C$ 为 $60^\circ$”或“求点 $B$ 到平面 $AEC$ 的距离”，同样可建系处理，保持体积公式灵活转化。体积转化时牢记比例关系 $V_{E-ACD} = \frac{1}{2}V_{P-ACD} = \frac{1}{4}V_{P-ABCD}$，可以快速建立体积与已知量的联系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-18.html">2014-理-18</a>（2014 · 中） 以四棱锥为载体，考查线面平行证明及已知二面角求三棱锥体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">锥体体积</a></li>
+</ul>
+</div>
+</body>
+</html>

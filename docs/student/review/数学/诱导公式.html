@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>诱导公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>诱导公式</h1><div class="review-mark" data-stem="诱导公式"></div><div class="meta-card"><span><strong>考点</strong>诱导公式</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：2</li>
+<li>真题数：5；年份跨度：2013–2020</li>
+<li>出现题位：填空16 解答17 选择6 选择9 选择11</li>
+<li>难度分布：中2 易3</li>
+</ul>
+<h2>知识精要</h2>
+<p>诱导公式是三角函数求值与化简的核心工具，其本质是利用三角函数的周期性、对称性，将任意角的三角函数转化为锐角三角函数。以下为考级核心要点：</p>
+<ol>
+<li>
+<p><strong>基本公式（按要求将角度视为 $\alpha$ 为锐角）</strong>：</p>
+<ul>
+<li>终边相同：$\sin(2k\pi + \alpha) = \sin\alpha$，$\cos(2k\pi + \alpha) = \cos\alpha$ ($k \in \mathbb{Z}$)。</li>
+<li>关于原点对称：$\sin(\pi + \alpha) = -\sin\alpha$，$\cos(\pi + \alpha) = -\cos\alpha$，$\tan(\pi + \alpha) = \tan\alpha$。</li>
+<li>关于 $x$ 轴对称：$\sin(-\alpha) = -\sin\alpha$，$\cos(-\alpha) = \cos\alpha$。</li>
+<li>关于 $y$ 轴对称：$\sin(\pi - \alpha) = \sin\alpha$，$\cos(\pi - \alpha) = -\cos\alpha$。</li>
+<li>关于 $y=x$ 对称：$\sin(\frac{\pi}{2} - \alpha) = \cos\alpha$，$\cos(\frac{\pi}{2} - \alpha) = \sin\alpha$。</li>
+<li>$\frac{\pi}{2}$ 加减的变换（奇变偶不变）：$\sin(\frac{\pi}{2} + \alpha) = \cos\alpha$，$\cos(\frac{\pi}{2} + \alpha) = -\sin\alpha$。</li>
+</ul>
+</li>
+<li>
+<p><strong>记忆口诀与应用规则</strong>：</p>
+<ul>
+<li><strong>奇变偶不变</strong>：若角度加减的是 $\frac{\pi}{2}$ 的奇数倍，则正弦与余弦互变（正切与余切互变）；若是偶数倍，则函数名不变。</li>
+<li><strong>符号看象限</strong>：将 $\alpha$ 视为锐角，看原函数在变换后角度所在象限的符号。例如 $\cos(\frac{\pi}{2}+\alpha)$，$\frac{\pi}{2}$ 是奇数倍，余弦变正弦；$\frac{\pi}{2}+\alpha$ 是第二象限角，在第二象限余弦为负，故结果为 $-\sin\alpha$。</li>
+</ul>
+</li>
+<li>
+<p><strong>与其它公式的综合</strong>：</p>
+<ul>
+<li><strong>同角关系</strong>：$\sin^2\alpha + \cos^2\alpha = 1$，$\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$。常用于“知一求二”或化弦为切。</li>
+<li><strong>两角和差与二倍角</strong>：诱导公式常作为化简的前置步骤，将角度统一后，再使用和差角或二倍角公式。如 $\cos(\alpha+\frac{\pi}{4})$ 的处理。</li>
+<li><strong>三角形内的诱导</strong>：在 $\triangle ABC$ 中，$A+B+C=\pi$，则 $\sin(A+B) = \sin C$，$\cos A = -\cos(B+C)$，$\sin\frac{A+B}{2} = \cos\frac{C}{2}$ 等。</li>
+</ul>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>针对给定真题，归纳出以下通用解法步骤：</p>
+<ol>
+<li>
+<p><strong>角度统一与函数名化简</strong>：</p>
+<ul>
+<li>观察式子中的角度差异，寻找 $\frac{\pi}{2}$，$\pi$ 等特殊关系。</li>
+<li>利用诱导公式将不同名或不同角的三角函数统一。例如，将 $\cos(\frac{\pi}{2} - x)$ 化为 $\sin x$，将 $\cos(\frac{\pi}{2}+A)$ 化为 $-\sin A$。</li>
+</ul>
+</li>
+<li>
+<p><strong>构造方程或函数求值</strong>：</p>
+<ul>
+<li><strong>已知一角关系求另一角</strong>：利用同角平方关系（$\sin^2+\cos^2=1$）消元，构造关于单一函数的二次方程求解。注意根据角范围取舍根。</li>
+<li><strong>已知值求表达式</strong>：将目标表达式直接或配凑后，利用诱导公式和二倍角公式转化为已知角的函数。</li>
+<li><strong>边角互化证三角形</strong>：利用正弦定理或余弦定理将边的条件转为角的条件，或反之。在等式两边齐次时，用正弦定理化边为角；出现边的平方和或夹角关系时，用余弦定理。</li>
+</ul>
+</li>
+<li>
+<p><strong>换元法简化问题</strong>：</p>
+<ul>
+<li>当出现同角的正弦、余弦复杂组合时（如能统一为 $\sin x$ 和 $\cos^2 x$），可设 $t = \sin x$（或 $\cos x$），注意 $t \in [-1, 1]$，将原函数转化为二次函数在区间上的最值问题。</li>
+</ul>
+</li>
+<li>
+<p><strong>整体代换与配凑技巧</strong>：</p>
+<ul>
+<li>注意观察已知角与所求角之间的数量关系，如 $2\alpha$ 与 $\alpha+\frac{\pi}{4}$，$\alpha+\frac{\pi}{4}$ 的二倍角为 $2\alpha+\frac{\pi}{2}$，可用诱导公式化为与 $\sin 2\alpha$ 相关的式子。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li>
+<p><strong>诱导公式符号判断失误</strong>：</p>
+<ul>
+<li><strong>典型陷阱</strong>：忽略“将 $\alpha$ 视为锐角”这一前提，机械记忆导致符号错误。如 $\cos(\pi - \alpha)$，部分考生误记为 $-\cos\alpha$，但实际应为 $-\cos\alpha$??？（此处特指易混点，正确为 $-\cos\alpha$。常见错误是 $\cos(\pi+\alpha)$ 和 $\cos(\pi-\alpha)$ 都写成 $-\cos\alpha$，这是对的，但解题时易混淆为其中一个带符号）</li>
+<li><strong>纠正</strong>：严格遵循“奇变偶不变，符号看象限”。默念时强制写出假想的锐角象限。特别注意含 $\frac{\pi}{2}$ 的情形，正弦变余弦，余弦变正弦，并检查新函数的符号。</li>
+</ul>
+</li>
+<li>
+<p><strong>开方时忽略角的范围导致符号错误</strong>：</p>
+<ul>
+<li><strong>典型陷阱</strong>：从 $\cos^2 A = \frac{1}{4}$ 得到 $\cos A = \frac{1}{2}$，遗漏 $-\frac{1}{2}$的解。尤其在三角形中，角 $A \in (0, \pi)$，余弦可为负。</li>
+<li><strong>纠正</strong>：任何开方操作之前，必须优先判定该角所在象限或已知约束范围，从而确定正弦、余弦的具体符号。</li>
+</ul>
+</li>
+<li>
+<p><strong>混淆正弦定理的比值</strong>：</p>
+<ul>
+<li><strong>典型陷阱</strong>：在边角互化时，忘记正弦定理 $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$。将“边化角”时遗漏系数，导致化简出错。如 $b\cos B$ 化为了 $\sin B \cos B$，正确应为 $\sin B \cos B$，但只是利用了等式的齐次性。</li>
+<li><strong>纠正</strong>：只要等式两边每一项的次数相同（齐次式），即可直接利用正弦定理将边替换为对应角的正弦，无需关注外接圆半径。</li>
+</ul>
+</li>
+<li>
+<p><strong>忽略三角形内角的隐含条件</strong>：</p>
+<ul>
+<li><strong>典型陷阱</strong>：求三角形内角大小时，由 $\cos B = \frac{1}{2}$ 得 $B = \frac{\pi}{3}$ 或 $300^\circ??$。后者显然超出内角和范围。</li>
+<li><strong>纠正</strong>：牢记三角形内角 $A, B, C \in (0, \pi)$，且内角和为 $\pi$。得出正弦值或余弦值后，需结合此范围舍去增根。</li>
+</ul>
+</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题1：2020-文-17</h3>
+<p><strong>题目</strong>：在 $\triangle ABC$ 中，角 $A， B， C$ 的对边为 $a， b， c$。已知 $\cos^2(\frac{\pi}{2}+A) + \cos A = \frac{5}{4}$。</p>
+<p>（1）求 $A$；（2）若 $b - c = \frac{\sqrt{3}}{3}a$，证明 $\triangle ABC$ 是直角三角形。</p>
+<p><strong>思路</strong>：
+（1）利用诱导公式 $\cos(\frac{\pi}{2}+A)=-\sin A$，将条件转化为关于 $\sin A$ 和 $\cos A$ 的方程。再用 $\sin^2 A = 1 - \cos^2 A$ 替换，解出 $\cos A$ 的值，结合三角形内角范围定出 $A$。
+（2）等式 $b - c = \frac{\sqrt{3}}{3}a$ 两边涉及边的一次齐次式，用正弦定理化为角的关系。结合已求出的 $A=\frac{\pi}{3}$ 及三角形内角和，推出 $B, C$ 关系，最终得出有一个角为直角。</p>
+<p><strong>步骤</strong>：
+（1）由 $\cos^2(\frac{\pi}{2}+A) + \cos A = \frac{5}{4}$，及诱导公式 $\cos(\frac{\pi}{2}+A) = -\sin A$，得：
+$(-\sin A)^2 + \cos A = \frac{5}{4}$，即 $\sin^2 A + \cos A = \frac{5}{4}$。
+代入同角关系 $\sin^2 A = 1 - \cos^2 A$，得方程：
+$1 - \cos^2 A + \cos A = \frac{5}{4}$，即 $4\cos^2 A - 4\cos A + 1 = 0$。
+配方得 $(2\cos A - 1)^2 = 0$，解得 $\cos A = \frac{1}{2}$。
+又 $A \in (0， \pi)$，故 $A = \frac{\pi}{3}$。</p>
+<p>（2）证明：由正弦定理 $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$，将 $b-c = \frac{\sqrt{3}}{3}a$ 化边为角：
+$\sin B - \sin C = \frac{\sqrt{3}}{3} \sin A$。
+由（1）知 $A = \frac{\pi}{3}$，故 $\sin A = \frac{\sqrt{3}}{2}$。
+则 $\sin B - \sin C = \frac{\sqrt{3}}{3} \times \frac{\sqrt{3}}{2} = \frac{1}{2}$。
+在 $\triangle ABC$ 中，$C = \pi - (A+B) = \frac{2\pi}{3} - B$，
+于是 $\sin C = \sin(\frac{2\pi}{3} - B)$。
+代入上式：$\sin B - \sin(\frac{2\pi}{3} - B) = \frac{1}{2}$。
+展开并整理：$\sin B - (\sin\frac{2\pi}{3}\cos B - \cos\frac{2\pi}{3}\sin B) = \sin B - (\frac{\sqrt{3}}{2}\cos B + \frac{1}{2}\sin B) = \frac{1}{2}\sin B - \frac{\sqrt{3}}{2}\cos B = \frac{1}{2}$。
+即 $\sin B - \sqrt{3}\cos B = 1$，化为 $2\sin(B - \frac{\pi}{3}) = 1$，
+得 $\sin(B - \frac{\pi}{3}) = \frac{1}{2}$。
+由 $B \in (0， \frac{2\pi}{3})$，知 $B - \frac{\pi}{3} \in (-\frac{\pi}{3}， \frac{2\pi}{3})$。
+所以 $B - \frac{\pi}{3} = \frac{\pi}{6}$ 或 $\frac{5\pi}{6}$（舍去，因 $B &lt; \pi$）。
+解得 $B = \frac{\pi}{2}$。
+因此 $\triangle ABC$ 为直角三角形。</p>
+<p><strong>点评/变式</strong>：本题（1）的核心在于利用诱导公式正确转化 $\cos(\frac{\pi}{2}+A)$，并构造关于 $\cos A$ 的二次方程求解。易错点在于直接记 $\cos(\frac{\pi}{2}+A)=\sin A$ 而丢掉负号。（2）的关键是正弦定理边化角，以及利用两角和差公式进行三角恒等变形。变式训练：条件可换为“$b+c=2a$”，求角或边的范围。</p>
+<h3>代表题2：2017-文-16</h3>
+<p><strong>题目</strong>：$\triangle ABC$ 的内角 $A， B， C$ 的对边为 $a， b， c$，若 $2b\cos B = a\cos C + c\cos A$，则 $B = \underline{\hspace{1cm}}$。</p>
+<p><strong>思路</strong>：
+等式中每一项都含边长，是齐次式，可使用正弦定理将所有边化为对应角的正弦。然后利用两角和的正弦公式及三角形内的诱导公式进行化简，解出 $\cos B$ 的值，结合内角取值范围求出角 $B$。</p>
+<p><strong>步骤</strong>：
+由正弦定理 $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$，原等式可化为：
+$2\sin B \cos B = \sin A \cos C + \sin C \cos A$。
+右边符合两角和正弦公式：$\sin A \cos C + \cos A \sin C = \sin(A+C)$。
+在 $\triangle ABC$ 中，$A+C = \pi - B$。
+由诱导公式 $\sin(\pi - B) = \sin B$，所以 $\sin(A+C) = \sin B$。
+于是原方程化为 $2\sin B \cos B = \sin B$。
+整理得 $\sin B(2\cos B - 1) = 0$。
+由于 $B \in (0， \pi)$，$\sin B \neq 0$。
+故 $2\cos B - 1 = 0$，解得 $\cos B = \frac{1}{2}$。
+结合 $B \in (0， \pi)$，得 $B = \frac{\pi}{3}$。</p>
+<p><strong>点评/变式</strong>：此题非常经典，考查了“边全化角”策略。核心步骤是利用诱导公式 $\sin(A+C) = \sin B$ 转化。易错点是见到 $\sin B$ 就直接约分，未讨论 $\sin B = 0$ 的情形。虽然本题在三角形内确保了 $\sin B \neq 0$，但在其他非三角形背景中，务必先移项提取公因式，不能直接约去可能为零的因式。</p>
+<h3>代表题3：2016-文-11</h3>
+<p><strong>题目</strong>：函数 $f(x) = \cos 2x + 6\cos(\frac{\pi}{2} - x)$ 的最大值为（　　）。</p>
+<p><strong>思路</strong>：
+观察函数结构，发现含 $\cos 2x$ 和 $\cos(\frac{\pi}{2} - x)$。利用诱导公式，$\cos(\frac{\pi}{2} - x) = \sin x$。再利用二倍角公式，$\cos 2x = 1 - 2\sin^2 x$。此时函数化为仅含 $\sin x$ 的二次式。通过换元法，令 $t = \sin x$，将原问题转化为区间 $[-1， 1]$ 上二次函数求最值的问题。</p>
+<p><strong>步骤</strong>：
+由诱导公式得 $\cos(\frac{\pi}{2} - x) = \sin x$。
+由二倍角公式得 $\cos 2x = 1 - 2\sin^2 x$。
+代入函数得 $f(x) = 1 - 2\sin^2 x + 6\sin x$。
+令 $t = \sin x$，其中 $t \in [-1， 1]$。
+则原函数转化为关于 $t$ 的二次函数：
+$y = -2t^2 + 6t + 1</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-17.html">2020-文-17</a>（2020 · 中） 利用诱导公式与同角关系求角A，再结合余弦定理和边的关系证明结论。</li>
+<li><a href="../../exam/数学/2017-文-16.html">2017-文-16</a>（2017 · 易） 本题考查利用正弦定理与三角恒等变换求解三角形内角，属于基础计算题。</li>
+<li><a href="../../exam/数学/2016-文-11.html">2016-文-11</a>（2016 · 中） 运用二倍角公式与诱导公式化简三角函数为二次函数，通过换元求最值。</li>
+<li><a href="../../exam/数学/2016-理-09.html">2016-理-09</a>（2016 · 易） 本题给出 cos(π/4 – α) 的值，求 sin2α，考查诱导公式与二倍角公式的应用。</li>
+<li><a href="../../exam/数学/2013-文-06.html">2013-文-06</a>（2013 · 易） 本题已知 sin2α 的值，利用二倍角公式和诱导公式求 cos²(α+π/4) 的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">诱导公式</a></li>
+</ul>
+</div>
+</body>
+</html>

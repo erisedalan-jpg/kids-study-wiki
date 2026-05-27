@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数不等式证明</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数不等式证明</h1><div class="review-mark" data-stem="函数不等式证明"></div><div class="meta-card"><span><strong>考点</strong>函数不等式证明</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：解答21</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极值点条件</strong>：可导函数在 $x=x_0$ 处取得极值的必要条件是 $f'(x_0)=0$（需验证左右导数符号或二阶导判断极值类型）。</li>
+<li><strong>函数单调性判定</strong>：若在区间 $I$ 上 $f'(x)&gt;0$，则 $f(x)$ 单调递增；$f'(x)&lt;0$ 则单调递减。</li>
+<li><strong>证明函数不等式 $f(x)&gt;0$ 的核心方法</strong>：<ol>
+<li><strong>转化为最值问题</strong>：证明 $f(x)$ 在定义域内的最小值大于 $0$。通过求导找到最小值点 $x_0$，代入得最小值 $f(x_0)$。</li>
+<li><strong>放缩法</strong>：若函数含有参数且不易直接求最值，可先利用参数范围进行放缩，转化为不含参数的简单函数进行证明。对于 $g(x)+c$ 形式的函数，可放缩为 $g(x)+c \ge h(x)$，再证 $h(x)&gt;0$。</li>
+</ol>
+</li>
+<li><strong>常见切线放缩不等式</strong>：<ul>
+<li>$e^x \ge x+1$ （当且仅当 $x=0$ 时取等号）</li>
+<li>$\ln(x+1) \le x$ （当且仅当 $x=0$ 时取等号）
+（注意定义域限制，需灵活变形使用）</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分析条件，明确目标</strong>：审题分清题目是求参数值、讨论性质，还是证明不等式。对于含参不等式，注意参数可能只需满足某个范围（如 $m \le 2$）。</li>
+<li><strong>确定函数与定义域</strong>：明确要研究的函数主体 $f(x)$ 及其自然定义域。本题中 $f(x)=e^x - \ln(x+m)$，定义域为 $x &gt; -m$。</li>
+<li><strong>导数分析求极值</strong>：<ul>
+<li>求导 $f'(x)$，代入极值点条件 $f'(0)=0$ 解出参数。</li>
+<li>将参数代回，分解因式或判断二阶导，列表分析 $f'(x)$ 符号，确定单调区间。</li>
+</ul>
+</li>
+<li><strong>转化证明最值问题</strong>：<ul>
+<li>直接求最值：若参数已定，直接求出 $f(x)$ 的最小值，证其大于 $0$。</li>
+<li>放缩后求最值：若参数在某一范围内变化（如 $m \le 2$），可先将函数放缩：
+    利用 $m \le 2$，有 $-\ln(x+m) \ge -\ln(x+2)$，
+    故 $f(x) = e^x - \ln(x+m) \ge e^x - \ln(x+2)$。</li>
+<li>令 $g(x) = e^x - \ln(x+2) (x&gt;-2)$，只需证 $g(x) &gt; 0$。</li>
+</ul>
+</li>
+<li><strong>证明放缩后函数的最小值</strong>：对 $g(x)$ 求导，设极值点（隐零点或显零点），分析单调性求出最小值，利用极值点处导数为 $0$ 的关系进行代换，最终证得最小值 $&gt;0$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视极值点的验证</strong>：由 $f'(x_0)=0$ 解出参数后，必须代回验证 $x_0$ 两侧导数是否异号（或二阶导不为零），确保是真正的极值点，否则可能丢解或增解。</li>
+<li><strong>忽略定义域</strong>：讨论单调性和最值时，必须时刻扣住原函数的定义域。例如本题中定义域为 $(-m, +\infty)$，所有分析都必须在此区间内进行。</li>
+<li><strong>直接代入参数端值</strong>：证明第二问 $m \le 2$ 时，不能想当然地认为 $m=2$ 时最小直接代入证明。正确的逻辑是利用单调性进行<strong>同向放缩</strong>，转化为不含参的函数求最值。注意放缩不等号的方向必须保证最终能推出目标结论。</li>
+<li><strong>隐零点处理不当</strong>：在求极值点时，导数方程可能无法直接解出精确根，例如 $g'(x)=e^x - \frac{1}{x+m}=0$ 的根往往是超越方程的根。需要设出这个零点 $x_0$，并利用 $g'(x_0)=0$ 的代换关系，即 $e^{x_0}=\frac{1}{x_0+m}$ 或 $\ln(x_0+m)=-x_0$，来计算最小值 $g(x_0)$ 的值并判断符号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2013-理-21</h3>
+<p><strong>题目</strong>：设函数 $f(x)=e^x - \ln(x+m)$。(Ⅰ) 若 $x=0$ 是 $f(x)$ 的极值点，求 $m$，并讨论单调性；(Ⅱ) 当 $m \le 2$ 时，证明 $f(x)&gt;0$。</p>
+<p><strong>思路</strong>：
+(Ⅰ) 利用极值点的必要条件 $f'(0)=0$ 求 $m$，再回代验证并分析导函数符号，得单调区间。
+(Ⅱ) 此为含参不等式证明。由于 $m$ 并非定值，考虑利用参数范围放缩掉 $m$。由 $m \le 2$，将 $f(x)$ 放缩为 $g(x)=e^x - \ln(x+2)$。再证 $g(x)_{\text{min}}&gt;0$。求 $g'(x)$，得隐零点 $x_0$，利用零点方程代换求出最小值并判定符号。</p>
+<p><strong>步骤</strong>：
+<strong>(Ⅰ) 解：</strong>
+1.  函数定义域为 $(-m, +\infty)$。求导得 $f'(x)=e^x - \frac{1}{x+m}$。
+2.  由 $x=0$ 是极值点，得 $f'(0)=e^0 - \frac{1}{0+m}=0$，解得 $m=1$。
+3.  验证：当 $m=1$ 时，$f(x)=e^x - \ln(x+1)$，定义域 $(-1,+\infty)$。
+    $f'(x)=e^x - \frac{1}{x+1}$。易知 $f'(0)=0$。
+    当 $x\in(-1,0)$ 时，$e^x&lt;1，\frac{1}{x+1}&gt;1$，故 $f'(x)&lt;0$；
+    当 $x\in(0,+\infty)$ 时，$e^x&gt;1，\frac{1}{x+1}&lt;1$，故 $f'(x)&gt;0$。
+    $f(x)$ 在 $(-1,0)$ 上递减，在 $(0,+\infty)$ 上递增。</p>
+<p><strong>(Ⅱ) 证明：</strong>
+1.  当 $m \le 2$，由于 $x &gt; -m \ge -2$，函数定义域含 $(-2, +\infty)$。
+    由参数单调性有 $x+m \le x+2$，则 $\ln(x+m) \le \ln(x+2)$。
+    所以 $-\ln(x+m) \ge -\ln(x+2)$。
+    故 $f(x)=e^x - \ln(x+m) \ge e^x - \ln(x+2)$。
+2.  令 $g(x)=e^x - \ln(x+2)$，$x \in (-2,+\infty)$。只需证 $g(x)&gt;0$。
+    求导：$g'(x)=e^x - \frac{1}{x+2}$。显然 $g'(x)$ 在定义域内单调递增。
+    又 $g'(-1)=e^{-1}-1&lt;0$，$g'(0)=1-\frac{1}{2}&gt;0$。
+    故存在唯一 $x_0 \in (-1,0)$，使得 $g'(x_0)=0$，即 $e^{x_0}=\frac{1}{x_0+2}$，或 $\ln(x_0+2)=-x_0$。
+3.  当 $x \in (-2, x_0)$ 时，$g'(x)&lt;0$；当 $x \in (x_0, +\infty)$ 时，$g'(x)&gt;0$。
+    因此 $g(x)_{\text{min}} = g(x_0) = e^{x_0} - \ln(x_0+2)$。
+4.  代换得：$g(x_0) = \frac{1}{x_0+2} - (-x_0) = \frac{1}{x_0+2} + x_0 = \frac{x_0^2+2x_0+1}{x_0+2} = \frac{(x_0+1)^2}{x_0+2}$。
+    由于 $x_0 \in (-1,0)$，有 $x_0+2 &gt; 0$ 且 $(x_0+1)^2 &gt; 0$，故 $g(x_0)&gt;0$。
+5.  综上，$f(x) \ge g(x) \ge g(x_0) &gt; 0$，命题得证。</p>
+<p><strong>点评/变式</strong>：
+本题是隐零点代换与放缩法的经典结合。第(Ⅱ)问的关键一步是利用 $m$ 的范围对真数进行放缩，将含参问题转化为函数求最值问题。这种“两边夹”的思想（$f(x)$ 恒大于另一个函数的最小值）是处理参数范围在不等式中常见的套路。变式训练可尝试将条件改为 $m \ge 2$ 或其他范围，思路将截然不同，可能需要寻找上界或直接讨论原函数。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-21.html">2013-理-21</a>（2013 · 难） 本题通过极值点求参数并讨论单调性，再证明函数不等式，综合考查导数应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数不等式证明</a></li>
+</ul>
+</div>
+</body>
+</html>

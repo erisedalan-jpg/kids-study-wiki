@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线定义</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>双曲线定义</h1><div class="review-mark" data-stem="双曲线定义"></div><div class="meta-card"><span><strong>考点</strong>双曲线定义</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：13</li>
+<li>真题数：2；年份跨度：2009–2022</li>
+<li>出现题位：选择11</li>
+<li>难度分布：难1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>第一定义</strong>：平面内与两个定点 $F_1,F_2$ 的距离之差的绝对值为常数 $2a$（$0&lt;2a&lt;|F_1F_2|$）的点的轨迹叫双曲线。即 $| |PF_1|-|PF_2| |=2a$。应用时常需就点 $P$ 在左支还是右支分类去绝对值。</li>
+<li><strong>第二定义</strong>：动点到焦点距离与到对应准线（$x=\pm\frac{a^2}{c}$）距离之比为离心率 $e=\frac{c}{a}&gt;1$。这也是焦半径公式的基础。</li>
+<li><strong>标准方程与参数</strong>：焦点在 $x$ 轴：$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，$c^2=a^2+b^2$，通径长 $\frac{2b^2}{a}$，渐近线 $y=\pm\frac{b}{a}x$。</li>
+<li><strong>焦点三角形</strong>：$\triangle PF_1F_2$ 中，由定义与余弦定理可得 $|PF_1||PF_2|=\frac{2b^2}{1\mp\cos\theta}$（$\theta=\angle F_1PF_2$），面积 $S_{\triangle PF_1F_2}=b^2\cot\frac{\theta}{2}$。</li>
+<li><strong>几何性质</strong>：焦点到以实轴为直径的圆（$x^2+y^2=a^2$）的切线长为 $b$（切点、圆心、焦点构成直角三角形：$c^2=a^2+b^2$）；焦点到渐近线距离为 $b$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义切入，边角转化</strong><br />
+   出现双曲线上一点到两焦点的连线（焦点三角形或焦点弦），优先用第一定义，将长度差转化为 $2a$。若已知角度，配合余弦定理建立 $a,b,c$ 的齐次方程。</li>
+<li><strong>几何特征代数化</strong><br />
+   抓题目中“以实轴为直径的圆”“切线”等直角、长度特征，直接写出 $OB=a$，$OF_1=c$，切线长 $b$，将几何条件转化为 $a,b,c$ 关系。</li>
+<li><strong>焦点弦比例——第二定义或焦半径</strong><br />
+   过焦点的弦被焦点分成两段的比例问题，可用第二定义导出倾斜角式焦半径：$|AF|=\frac{b^2}{a-c\cos\theta}$ 或按坐标焦半径 $r=ex\mp a$，再联立直线与双曲线方程，利用韦达定理与向量比关系求 $e$。</li>
+<li><strong>分类讨论破“绝对值”</strong><br />
+   题目未明确点在哪一支时，对 $|MF_1|-|MF_2|=\pm2a$ 分两种情况讨论，对应不同几何位置，可能得到多个离心率，注意 $e&gt;1$ 取舍。</li>
+<li><strong>齐次方程求离心率</strong><br />
+   几乎所有离心率问题最终都归结为关于 $a,b,c$ 的齐次等式，两边同除以 $a$ 或 $a^2$ 化为 $e$ 的方程求解，注意 $e&gt;1$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略绝对值</strong>：直接用 $|PF_1|-|PF_2|=2a$ 而不判断符号，导致漏解或错解。</li>
+<li><strong>同一支与两支混淆</strong>：过焦点直线与双曲线两支各有一个交点时，两交点到该焦点距离之差为 $2a$ 的模式与在同一支时不同，定义应用易错。</li>
+<li><strong>余弦定理角错位</strong>：在 $\triangle F_1NF_2$ 中，边与角对应关系搞混，尤其当点 $N$ 在左支，$\angle F_1NF_2$ 可能为锐角/钝角，套用公式需谨慎。</li>
+<li><strong>切线长性质遗忘</strong>：不清楚“以实轴为直径的圆”半径为 $a$，切线长等于 $b$，导致无法建立方程。</li>
+<li><strong>焦半径符号</strong>：第二定义中，若点在同侧（右支用右焦点），焦半径 $|PF|=ex-a$；异侧为 $a-ex$。直接带符号错误将造成方程失真。</li>
+<li><strong>双曲线离心率 $e&gt;1$ 的检验</strong>：解得 $e=\frac{3}{5}$ 等小于1的值要舍去。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2022年全国卷理·11（双切线+焦点三角形）</h3>
+<p><strong>题目</strong>：双曲线 $C$ 的两焦点 $F_1,F_2$，以实轴为直径的圆 $D$，过 $F_1$ 作 $D$ 的切线与 $C$ 交于 $M,N$，$\cos\angle F_1NF_2=\frac35$，求离心率。
+<strong>思路</strong>：利用切线长性质得到直角三角形边长 $a,b,c$；结合正弦定理或余弦定理转化 $\angle F_1NF_2$ 的三角比，用双曲线定义建立 $|NF_1|,|NF_2|$ 的关系，分类 $N$ 所在支，联立解出 $e$。
+<strong>步骤</strong>：
+- 设焦点在 $x$ 轴，圆 $D:x^2+y^2=a^2$，过 $F_1(-c,0)$ 的切线切点为 $B$，则 $OB\perp F_1N$，$|OB|=a$，$|OF_1|=c$，切线长 $|F_1B|=b$。
+- 设 $\angle F_1NF_2=\theta$，$\cos\theta=\frac35$，$\sin\theta=\frac45$。在 $\triangle F_1NF_2$ 中，由正弦定理比例或构建边长关系。
+- 若 $M,N$ 在同一支（设 $N$ 在左支），利用定义 $|NF_2|-|NF_1|=2a$；再在直角 $\triangle OBF_1$ 及共边关系中表示 $|NF_1|,|NF_2|$，根据三角比可得 $2b=3a$，结合 $c^2=a^2+b^2$ 得离心率 $e=\frac{\sqrt{13}}{2}$。
+- 若 $M,N$ 分在异支（$N$ 在右支），定义式 $|NF_1|-|NF_2|=2a$，同理解得 $a=2b$，从而 $e=\frac{\sqrt{5}}{2}$。
+- 最终 $e$ 的值为 $\frac{\sqrt{5}}{2}$ 或 $\frac{\sqrt{13}}{2}$。
+<strong>点评/变式</strong>：本题核心是“焦点到以实轴为直径的圆切线长 $=b$”这一几何性质，可快速破题。同时考查双曲线定义的去绝对值分类，易漏解。变式可把圆换成“以虚轴为直径”或“以焦距为直径”，切点改为交点，但本质仍是挖掘直角与边长比例。</p>
+<h3>2. 2009年全国卷理·11（焦点弦比例+第二定义）</h3>
+<p><strong>题目</strong>：已知双曲线 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$ 的右焦点 $F$，过 $F$ 斜率为 $\sqrt{3}$ 的直线交 $C$ 于 $A,B$，若 $\overrightarrow{AF}=4\overrightarrow{FB}$，求离心率。
+<strong>思路</strong>：由焦点弦被焦点分成定比，优先考虑双曲线第二定义（焦半径公式）或极坐标方程，利用弦倾斜角表示焦半径，结合比例关系得到 $e$ 的方程。
+<strong>步骤</strong>：
+- 右焦点 $F(c,0)$，直线 $AB$ 倾斜角 $60^\circ$（斜率 $\sqrt{3}$），参数式焦半径：$|AF|=\frac{b^2}{a-c\cos60^\circ}=\frac{b^2}{a-\frac{c}{2}}$，$|BF|=\frac{b^2}{a+c\cos60^\circ}=\frac{b^2}{a+\frac{c}{2}}$（注意方向，$A$ 在 $F$ 上方或前方按比值调整位置）。
+- 由 $\overrightarrow{AF}=4\overrightarrow{FB}$ 得 $|AF|=4|BF|$，即 $\frac{b^2}{a-\frac{c}{2}}=4\cdot\frac{b^2}{a+\frac{c}{2}}$，化简解得 $a=\frac56c$，故 $e=\frac{c}{a}=\frac65$。
+<strong>点评/变式</strong>：第二定义焦半径公式在焦点弦定比问题中比联立韦达定理更直接，但须注意点所在支与公式中正负号。若比值为向量倍数，要正确对应长度关系并判断在同侧还是异侧（此处同侧适用横坐标焦半径 $|AF|=ex_A-a,|BF|=ex_B-a$ 联立直线亦可得）。变式可将定比改为 $AF=\lambda FB$ 求 $e$ 范围，或结合三角形面积构造综合题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-11.html">2022-理-11</a>（2022 · 难） 本题考查双曲线离心率求解，通过焦点作圆切线并结合双曲线定义、几何关系，需对M、N位置分类讨论。</li>
+<li><a href="../../exam/数学/2009-理-11.html">2009-理-11</a>（2009 · 中） 已知双曲线右焦点作斜率为某值的直线交曲线于两点，由向量关系求离心率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/730-双曲线的定义.html">双曲线定义</a></li>
+</ul>
+</div>
+</body>
+</html>

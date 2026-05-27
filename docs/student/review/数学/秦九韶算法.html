@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>秦九韶算法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>秦九韶算法</h1><div class="review-mark" data-stem="秦九韶算法"></div><div class="meta-card"><span><strong>考点</strong>秦九韶算法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>算法(程序框图)</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：算法(程序框图)</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2016–2016</li>
+<li>出现题位：选择8 选择9</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>秦九韶算法</strong>：中国古代计算一元$n$次多项式值的优秀算法，西方称霍纳(Horner)算法。它将求值运算转化为一种递推关系，只需$n$次乘法和$n$次加法，远少于直接计算。</li>
+<li><strong>基本公式</strong>：设多项式 $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$，秦九韶算法通过从内层多次提取公因数改写为 $f(x)=((\cdots((a_nx+a_{n-1})x+a_{n-2})x+\cdots +a_1)x+a_0)$。</li>
+<li><strong>递推步骤</strong>：令 $v_0=a_n$，对于 $k=1,2,\dots,n$，执行 $v_k=v_{k-1}\cdot x+a_{n-k}$，最终 $v_n=f(x)$。</li>
+<li><strong>程序框图特征</strong>：通常采用循环结构——初始值可为 $S=0$ 或 $S=a_n$，然后循环 $n$ 次（或$n+1$次），每次输入下一个系数 $a$，执行 $S=S\times x + a$。输入系数的顺序必须从<strong>最高次项系数</strong>到<strong>常数项</strong>。</li>
+<li><strong>核心理解</strong>：算法只做两种运算：“乘 $x$” 和 “加下一个系数”，反复进行。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂框图，确定变量角色</strong>：明确哪个变量存放当前累加值（通常为 $S$ 或 $v$），哪个是循环变量（如 $k$），以及循环终止条件。</li>
+<li><strong>确定初始状态与循环次数</strong>：注意 $S$ 的初值（可能为 $0$ 或直接输入第一个系数）。多项式次数为 $n$ 时，一般需要输入 $n+1$ 个系数，因此循环体执行 $n+1$ 次。</li>
+<li><strong>按顺序手工模拟</strong>：根据框图流程，严格按照“输入$a$ $\to$ 计算 $S=S\times x +a$ $\to$ 循环变量加1 $\to$ 检查条件”的顺序，一步步写出每一步的变量值。</li>
+<li><strong>系数与次数对应</strong>：输入的数字序列 $a$ 必须与多项式的系数顺序对应。若题干未明确，可根据算法特点推断：秦九韶算法总是从高次到低次（即 $a_n, a_{n-1}, \dots, a_0$）。</li>
+<li><strong>最后检查输出节点</strong>：确认循环退出后输出的变量是否正确，注意是否在更新后退出。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>系数顺序颠倒</strong>：误以为输入顺序是常数项→一次项→高次项，导致代入错误。牢记秦九韶公式内部提取因子的顺序决定了系数必须从高位向低位输入。</li>
+<li><strong>循环次数搞错</strong>：混淆次数 $n$ 与系数个数 $n+1$。如 $n=2$ 时系数有 3 个，循环应执行 3 次。若框图中初值为 $S=0$，则第一次输入的是最高次系数，循环次数为 $n+1$。</li>
+<li><strong>初始值错误</strong>：框图可能将 $S$ 初始化为 0 或直接读取第一个系数，需结合程序结构判断，不可想当然。</li>
+<li><strong>计算中途失误</strong>：模拟算式时直接跳步或乘加顺序颠倒（如误算成 $S=(S+a)\times x$），一定要严格按照 $S=S\times x+a$ 的正确递推式。</li>
+<li><strong>忽略退出条件的判断时机</strong>：有的框图先计算，后判断 $k&gt;n$ 退出；有的先判断。特别注意最后一步是否有效。本题是计算后 $k$ 自增，再判断，所以最后有效一步算完才退出。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2016 年文科数学全国卷（理 8 同题）</h3>
+<p><strong>题目</strong>：执行如图秦九韶算法程序框图，输入 $x=2$，$n=2$，依次输入的 $a$ 为 $2,2,5$，求输出的 $S$。</p>
+<p><strong>思路</strong>：首先识别这是典型的秦九韶递推，$n=2$ 表示多项式次数为 2，共有 3 个系数 $a_2,a_1,a_0$。初始 $S$ 很可能为 $0$，然后循环 $k$ 从 $1$ 到 $3$，每次读入一个系数，执行 $S=S\times x +a$，最终输出 $S$。</p>
+<p><strong>步骤</strong>：
+1. 输入 $x=2$，$n=2$，设 $S=0$，$k=1$。
+2. 第 1 次输入 $a=2$，$S=0\times 2 + 2 = 2$，$k=1$ 不满足退出条件。
+3. 第 2 次输入 $a=2$，$S=2\times 2 + 2 = 6$，$k=2$ 不满足退出条件。
+4. 第 3 次输入 $a=5$，$S=6\times 2 + 5 = 17$，$k=3$ 满足退出条件（$k&gt;2$）。
+5. 输出 $S=17$。</p>
+<p><strong>点评/变式</strong>：该题完美诠释了秦九韶算法的过程，多项式为 $f(x)=2x^2+2x+5$，当 $x=2$ 时代入得 17。变式：若框图初始 $S$ 为第一个输入的 $a$，则循环次数应少一次，计算顺序仍同。文理同题说明此考点考查频率虽低但一经出现便是经典，务必掌握模拟流程的严谨性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-09.html">2016-文-09</a>（2016 · 中） 该题考查秦九韶算法的程序框图，通过循环结构计算多项式值。</li>
+<li><a href="../../exam/数学/2016-理-08.html">2016-理-08</a>（2016 · 易） 通过程序框图考查秦九韶算法求多项式值的过程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1041-秦九韶算法.html">秦九韶算法</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>求导运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>求导运算</h1><div class="review-mark" data-stem="求导运算"></div><div class="meta-card"><span><strong>考点</strong>求导运算</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>导数定义</strong>：$f'(x_0)=\lim\limits_{\Delta x \to 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$，几何意义是曲线在点$(x_0,f(x_0))$处切线的斜率。</li>
+<li><strong>基本初等函数导数公式</strong>（必记）：</li>
+<li>$(x^\alpha)'=\alpha x^{\alpha-1}$（$\alpha \in \mathbb{R}$）；特别地，$(x)'=1$，$(\frac{1}{x})'=-\frac{1}{x^2}$，$(\sqrt{x})'=\frac{1}{2\sqrt{x}}$。</li>
+<li>$(\ln x)'=\frac{1}{x}$，$(\log_a x)'=\frac{1}{x\ln a}$。</li>
+<li>$(e^x)'=e^x$，$(a^x)'=a^x\ln a$。</li>
+<li>$(\sin x)'=\cos x$，$(\cos x)'=-\sin x$。</li>
+<li><strong>四则运算法则</strong>：</li>
+<li>$[f(x) \pm g(x)]' = f'(x) \pm g'(x)$；</li>
+<li>$[f(x)\cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$；</li>
+<li>$\left[\frac{f(x)}{g(x)}\right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$（$g(x)\neq 0$）。</li>
+<li><strong>复合函数求导</strong>（链式法则）：若$y=f(u), u=g(x)$，则$y'_x = f'(u)\cdot g'(x)$。</li>
+<li><strong>切线方程</strong>：曲线$y=f(x)$在点$(x_0, f(x_0))$处的切线方程为$y - f(x_0) = f'(x_0)(x - x_0)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别函数结构</strong>：观察所给函数是基本初等函数的和差积商，还是复合函数。若含乘积（如 $x \cdot \ln x$），优先考虑乘法法则；若含分式，用除法法则；若为嵌套形式，用链式法则。</li>
+<li><strong>分层逐步求导</strong>：</li>
+<li>对乘积形式：先写出“前导后不导 + 前不导后导”的形式，再逐一求导不要跳步；</li>
+<li>对复合函数：由外向内逐层求导，每层乘以内层函数的导数，注意不漏不重；</li>
+<li>对多步混合运算：可先化简（如拆括号、有理化、对数恒等式变形）降低求导复杂度，但化简需保证等价。</li>
+<li><strong>准确代入基本公式</strong>：对 $\ln x$、$x^\alpha$、$e^x$ 等的导数必须瞬间反应，避免与积分混淆。</li>
+<li><strong>计算某点导数值</strong>：将 $x=x_0$ 代入导函数 $f'(x)$，即得切线斜率 $k$，再代入点斜式得切线方程。</li>
+<li><strong>检验</strong>：快速检查导函数定义域与切线方程常数项是否合理，斜率与曲线趋势是否一致。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>乘法法则漏项</strong>：$(uv)' \neq u'v'$，必须严格 $u'v+uv'$，尤其常数因子不要遗忘（如 $(3\ln x+1)$ 的导数为 $\frac{3}{x}$，而非 $\frac{3}{x}+1$）。</li>
+<li><strong>$\ln x$ 求导错误</strong>：误记为 $\frac{1}{x}$ 的系数或幂，如将 $(3\ln x+1)'$ 算成 $\frac{3}{x}+1$ 而多出常数 1，正确应为 $\frac{3}{x}$。</li>
+<li><strong>切线方程写错</strong>：切点坐标代入点斜式时，注意符号，如 $y-y_0=k(x-x_0)$，切勿将 $y_0$ 或 $x_0$ 写到导数位置。</li>
+<li><strong>忽略定义域</strong>：若函数含 $\ln x$，则 $x&gt;0$，导数及切线讨论需在此域内。</li>
+<li><strong>复合函数丢内层导数</strong>：例如 $y=\ln(3x+1)$ 求导，外层 $\ln u$ 导为 $1/u$，内层 $3x+1$ 导为 $3$，正确结果为 $\frac{3}{3x+1}$，易漏乘 $3$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2012-文-13 曲线 $y=x(3\ln x+1)$ 在点 $(1,1)$ 处的切线方程</h3>
+<ul>
+<li><strong>思路</strong>：函数为乘积形式，适用乘法法则。先求导函数，再将 $x=1$ 代入得切线斜率，最后用点斜式写出切线方程。</li>
+<li><strong>步骤</strong>：</li>
+<li>设 $u=x$，$v=3\ln x+1$，则 $y=uv$。</li>
+<li>求导：$u'=1$，$v'=\frac{3}{x}$。</li>
+<li>代入乘法公式：$y' = u'v + uv' = 1\cdot(3\ln x+1) + x\cdot\frac{3}{x} = 3\ln x+1+3 = 3\ln x+4$。</li>
+<li>计算 $x=1$ 时的导数值 $k = 3\ln 1+4 = 4$。</li>
+<li>切线过 $(1,1)$ 且斜率为 $4$，方程为 $y-1=4(x-1)$，即 $y=4x-3$。</li>
+<li><strong>点评/变式</strong>：此题核心是乘积求导与基本公式的熟练运用，$v$ 中的常数 $1$ 求导为 $0$ 是易错点。变式：若函数改为 $y=\frac{\ln x}{x}$，则需用商法则或化为 $x^{-1}\ln x$ 后乘法求导；若改为 $y=\ln(3x+1)$，则为复合求导，结果 $\frac{3}{3x+1}$，考察链式法则。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-13.html">2012-文-13</a>（2012 · 易） 求曲线在某点的切线方程，需先求导得斜率，再用点斜式写出方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">求导运算</a></li>
+</ul>
+</div>
+</body>
+</html>

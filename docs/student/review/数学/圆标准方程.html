@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆标准方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆标准方程</h1><div class="review-mark" data-stem="圆标准方程"></div><div class="meta-card"><span><strong>考点</strong>圆标准方程</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>10</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：16</li>
+<li>真题数：10；年份跨度：2010–2020</li>
+<li>出现题位：填空13 填空15 解答20 解答23 选择5 选择8</li>
+<li>难度分布：中5 难4 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆的标准方程</strong>：圆心为 $C(a,b)$，半径为 $r$ 的圆的标准方程为<br />
+  $$(x-a)^2+(y-b)^2=r^2 \quad (r&gt;0).$$</li>
+<li><strong>点与圆的位置关系</strong>：点 $P(x_0,y_0)$ 在圆上 $\Leftrightarrow (x_0-a)^2+(y_0-b)^2=r^2$。</li>
+<li><strong>直线与圆相切的条件</strong>：圆心到直线的距离 $d=r$。点到直线距离公式：
+  $$d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}.$$</li>
+<li><strong>圆与坐标轴相切</strong>：</li>
+<li>与 $x$ 轴相切 $\Rightarrow |b|=r$；</li>
+<li>与 $y$ 轴相切 $\Rightarrow |a|=r$；</li>
+<li>与两坐标轴都相切 $\Rightarrow |a|=|b|=r$，圆心在 $y=x$ 或 $y=-x$ 上，具体象限由题意判断。</li>
+<li><strong>弦长问题</strong>：设直线与圆相交弦长为 $L$，圆心到直线的距离为 $d$，半径 $r$，则有<br />
+  $$\left(\frac{L}{2}\right)^2 + d^2 = r^2.$$</li>
+<li><strong>圆的方程的求法</strong>：</li>
+<li>待定系数法：设标准方程 $(x-a)^2+(y-b)^2=r^2$ 或一般方程 $x^2+y^2+Dx+Ey+F=0$，根据条件列方程组。</li>
+<li>几何性质法：利用圆心在弦的垂直平分线上、圆心到切线的距离等于半径等。</li>
+<li><strong>极坐标与直角坐标互化</strong>：$\rho^2=x^2+y^2,\ x=\rho\cos\theta,\ y=\rho\sin\theta$。</li>
+<li><strong>轨迹方程</strong>：将动点坐标代入几何条件，化简即得轨迹方程，注意排除不满足题意的点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接求圆的标准方程（待定系数法）</strong></li>
+<li>设圆心 $(a,b)$，半径 $r$，写出标准方程。</li>
+<li>利用点在圆上、与直线相切、截得弦长等条件列关于 $a,b,r$ 的方程组。</li>
+<li>
+<p>解方程组得圆心和半径，写圆方程。</p>
+</li>
+<li>
+<p><strong>与坐标轴相切类问题</strong></p>
+</li>
+<li>先根据题意确定圆心所在象限，得到 $a,b$ 的符号与 $r$ 的关系（如 $a=b=r&gt;0$ 在第一象限）。</li>
+<li>
+<p>再结合圆过某点等其他条件列方程，解出 $r$ 或具体坐标。</p>
+</li>
+<li>
+<p><strong>已知弦求圆（或轨迹）</strong></p>
+</li>
+<li>弦心距 $d$、半径 $r$、半弦长 $\frac L2$ 满足勾股关系。</li>
+<li>圆心在弦的垂直平分线上。</li>
+<li>
+<p>若已知多段弦长，可联立关于圆心坐标的方程。</p>
+</li>
+<li>
+<p><strong>与抛物线综合的圆</strong></p>
+</li>
+<li>先由抛物线性质（焦点、准线、弦长公式）求直线方程或交点坐标。</li>
+<li>圆心满足到准线的距离等于半径，且圆过交点，利用圆心到交点距离等于半径列式。</li>
+<li>
+<p>结合垂直平分线等几何特征确定圆心。</p>
+</li>
+<li>
+<p><strong>直线与圆相交的垂直问题</strong></p>
+</li>
+<li>设 $A(x_1,y_1),B(x_2,y_2)$，将直线方程代入圆方程，得到韦达定理。</li>
+<li>
+<p>条件 $OA \perp OB$ 转化为 $x_1x_2+y_1y_2=0$，代入韦达结果求参数。</p>
+</li>
+<li>
+<p><strong>轨迹方程求法</strong></p>
+</li>
+<li>设动点坐标 $(x,y)$；</li>
+<li>将几何条件（如截弦长、距离）转化为 $x,y$ 的等式；</li>
+<li>化简即得轨迹方程，注意去除退化或不符合条件的点。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>圆与两坐标轴相切时忽略圆心位置的讨论</strong>：圆心不一定在第一象限，可能在其他象限导致多个解。必须由题目条件（如圆过点的坐标）判断圆心象限。</li>
+<li><strong>将“相切”误记为圆心到直线距离等于直径</strong>：牢记是 $d=r$。</li>
+<li><strong>使用弦长公式时混淆半径与半弦长</strong>：勾股关系中斜边是半径 $r$，直角边是弦心距 $d$ 和半弦长 $\frac L2$。</li>
+<li><strong>求轨迹方程未排除不符合题意的点</strong>：例如构造方程时平方导致范围扩大，需根据实际几何意义舍去不合理的部分。</li>
+<li><strong>极坐标与直角坐标互化时代换错误</strong>：注意 $\rho^2=x^2+y^2$，$\rho\cos\theta=x$，$\rho\sin\theta=y$，极坐标方程中常出现 $\rho^2+12\rho\cos\theta+11=0$ 等。</li>
+<li><strong>设一般方程时漏条件</strong>：一般方程 $x^2+y^2+Dx+Ey+F=0$ 表示圆的充要条件是 $D^2+E^2-4F&gt;0$，别忘了验证。</li>
+<li><strong>已知圆过两点直接设标准方程遗漏垂直平分线条件</strong>：圆心必在两点连线的垂直平分线上，可减少参数个数。</li>
+<li><strong>直线与抛物线相交求弦长时混淆焦点弦公式</strong>：对 $y^2=2px$，焦点弦 $|AB|=x_1+x_2+p$；对 $x^2=2py$，焦点弦 $|AB|=y_1+y_2+p$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2020全国Ⅱ文理）</h3>
+<p><strong>题目</strong>：过点 $(2,1)$ 的圆与两坐标轴都相切，则圆心到直线 $2x-y-3=0$ 的距离为（ ）<br />
+A. $\dfrac{\sqrt{5}}{5}$　B. $\dfrac{2\sqrt{5}}{5}$　C. $\dfrac{3\sqrt{5}}{5}$　D. $\dfrac{4\sqrt{5}}{5}$</p>
+<p><strong>思路</strong>：由圆与两坐标轴均相切，且过点 $(2,1)$ 在第一象限，可判断圆心必在第一象限，设圆心 $(a,a)\,(a&gt;0)$，半径 $r=a$。利用点在圆上列方程求出 $a$，再用点到直线距离公式求距离。</p>
+<p><strong>步骤</strong>：<br />
+1. 由题意，圆心必在第一象限，设圆心 $C(a,a)$，则半径 $r=a$，圆方程为 $(x-a)^2+(y-a)^2=a^2$。<br />
+2. 将 $(2,1)$ 代入得 $(2-a)^2+(1-a)^2=a^2$，化简得 $a^2-6a+5=0$，解得 $a=1$ 或 $a=5$。<br />
+3. 圆心为 $(1,1)$ 或 $(5,5)$，计算圆心到直线 $2x-y-3=0$ 的距离：<br />
+   $$d=\frac{|2\times1-1-3|}{\sqrt{2^2+(-1)^2}}=\frac{2}{\sqrt{5}}=\frac{2\sqrt5}{5},$$
+   或<br />
+   $$d=\frac{|2\times5-5-3|}{\sqrt5}=\frac{2}{\sqrt5}=\frac{2\sqrt5}{5}.$$
+   两者距离相同。<br />
+4. 故选 B。</p>
+<p><strong>点评/变式</strong>：本题核心是“与两坐标轴相切$\Rightarrow$圆心在 $y=x$ 或 $y=-x$ 上”以及结合点所在象限正确设出参数。若点在其他象限，圆心可能为 $(a,-a)$ 或 $(-a,a)$ 等形式。变式：将点改为 $(-1,2)$ 等其他象限的点，需重新讨论圆心位置。</p>
+<h3>代表题2（2018全国Ⅱ文20）</h3>
+<p><strong>题目</strong>：设抛物线 $C:y^2=4x$ 的焦点为 $F$，过 $F$ 且斜率为 $k\,(k&gt;0)$ 的直线 $l$ 与 $C$ 交于 $A,B$ 两点，$|AB|=8$。<br />
+(1) 求 $l$ 的方程；<br />
+(2) 求过点 $A,B$ 且与 $C$ 的准线相切的圆的方程。</p>
+<p><strong>思路</strong>：(1) 利用抛物线焦点弦长公式或联立方程+弦长公式求出斜率 $k$，得直线方程。(2) 由抛物线定义，圆心到准线的距离即为半径，同时圆心在 $AB$ 的垂直平分线上，设圆心坐标利用半径相等列方程，解得圆心和半径。</p>
+<p><strong>步骤</strong>：<br />
+(1) $F(1,0)$，准线 $x=-1$。设 $l:y=k(x-1)$。<br />
+联立 $\begin{cases} y^2=4x \ y=k(x-1)\end{cases}$ 消 $x$ 或 $y$ 得 $k^2x^2-(2k^2+4)x+k^2=0$。<br />
+焦点弦长 $|AB|=x_1+x_2+2=\frac{2k^2+4}{k^2}+2=8$，解得 $k^2=1$，因 $k&gt;0$，故 $k=1$。<br />
+所以 $l$ 的方程为 $y=x-1$。</p>
+<p>(2) 由(1)可得 $AB$ 中点 $D(3,2)$，$k_{AB}=1$，故垂直平分线斜率为 $-1$，方程为 $y-2=-(x-3)$，即 $y=-x+5$。<br />
+设圆心 $C(t, -t+5)$，圆与准线 $x=-1$ 相切，故半径 $r=|t-(-1)|=|t+1|$。<br />
+又圆过 $A$ 点，$A$ 满足 $\begin{cases} y^2=4x \ y=x-1 \end{cases}$，解得 $A(3+2\sqrt2, 2+2\sqrt2)$ 或另一交点（使用其中一个即可）。由 $|CA|=r$：<br />
+$$(t-(3+2\sqrt2))^2 + (-t+5-(2+2\sqrt2))^2 = (t+1)^2.$$
+化简可解得 $t=3$ 或 $t=-1$（注意检验实际几何意义）。<br />
+当 $t=3$ 时，圆心 $(3,2)$，$r=4$；当 $t=-1$ 时，圆心 $(-1,6)$，$r=0$（舍去）。<br />
+因此圆心为 $(3,2)$，半径 $r=4$，圆方程为 $(x-3)^2+(y-2)^2=16$。</p>
+<p><strong>点评/变式</strong>：本题巧妙借助抛物线定义将“与准线相切”转化为半径表达式，减少了参数。易错点在于解出多个圆心时，需检验半径是否为正且符合题意（如取舍 $r=0$ 的情况）。变式：若抛物线开口方向改变，焦点准线坐标相应调整，方法可迁移。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-08.html">2020-文-08</a>（2020 · 中） 考查根据象限条件设圆心坐标求圆方程，进而计算点到直线距离</li>
+<li><a href="../../exam/数学/2020-理-05.html">2020-理-05</a>（2020 · 中） 根据条件求圆心坐标，再利用点到直线距离公式计算圆心到直线距离。</li>
+<li><a href="../../exam/数学/2018-文-20.html">2018-文-20</a>（2018 · 中） 考查抛物线与直线相交的焦点弦问题，并求过交点与准线相切的圆的方程。</li>
+<li><a href="../../exam/数学/2016-文-23.html">2016-文-23</a>（2016 · 中） 将圆的直角坐标方程化为极坐标方程，通过直线参数方程求弦长进而求斜率。</li>
+<li><a href="../../exam/数学/2013-文-20.html">2013-文-20</a>（2013 · 难） 求圆心轨迹方程并利用点到直线距离求圆的方程</li>
+<li><a href="../../exam/数学/2012-文-20.html">2012-文-20</a>（2012 · 难） 本题结合抛物线与圆，考查焦点弦性质、对称性应用及点到直线距离比值计算。</li>
+<li><a href="../../exam/数学/2012-理-20.html">2012-理-20</a>（2012 · 难） 抛物线几何性质结合圆方程，求解参数值及距离比。</li>
+<li><a href="../../exam/数学/2011-文-20.html">2011-文-20</a>（2011 · 中） 求曲线与坐标轴交点确定的圆的方程，并由直线与圆相交且垂直条件求参数</li>
+<li><a href="../../exam/数学/2010-文-13.html">2010-文-13</a>（2010 · 易） 求圆心在原点且与直线相切的圆的方程，通过圆心到直线距离求半径。</li>
+<li><a href="../../exam/数学/2010-理-15.html">2010-理-15</a>（2010 · 难） 根据点与坐标、相切条件，利用待定系数法求解圆的标准方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/373-圆的标准方程.html">圆标准方程</a></li>
+</ul>
+</div>
+</body>
+</html>

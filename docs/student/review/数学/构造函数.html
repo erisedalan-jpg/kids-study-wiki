@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>构造函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>构造函数</h1><div class="review-mark" data-stem="构造函数"></div><div class="meta-card"><span><strong>考点</strong>构造函数</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：4；年份跨度：2015–2021</li>
+<li>出现题位：解答21 选择12</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<p>构造函数是导数应用中的核心思想，主要用于解不等式、比大小和求参数范围。其理论根基是导数与单调性的关系：若 $F'(x) &gt; 0$，则 $F(x)$ 单调递增；若 $F'(x) &lt; 0$，则 $F(x)$ 单调递减。结合特殊点的函数值（如 $F(0)=0$），可将抽象不等式转化为自变量的比较。</p>
+<p><strong>常见构造函数模型</strong>（必须牢记导数形式，逆向联想原函数）：
+1. <strong>和差型</strong>：由 $f'(x) \pm g'(x) &gt; 0$ 构造 $F(x) = f(x) \pm g(x)$。
+2. <strong>积商型</strong>：
+   - $xf'(x) + f(x) \rightarrow [x f(x)]'$；
+   - $xf'(x) - f(x) \rightarrow \left[\frac{f(x)}{x}\right]'$；
+   - $f'(x) + f(x) \rightarrow [\mathrm{e}^x f(x)]'$；
+   - $f'(x) - f(x) \rightarrow \left[\frac{f(x)}{\mathrm{e}^x}\right]'$；
+   - $f'(x)g(x) + f(x)g'(x) \rightarrow [f(x)g(x)]'$；
+   - $f'(x)g(x) - f(x)g'(x) \rightarrow \left[\frac{f(x)}{g(x)}\right]'$（常见 $g(x)=x^n,\ \mathrm{e}^x$ 等）。
+3. <strong>比大小模型</strong>：通过将待比较的式子变形为同一函数在不同点处的值，利用单调性判定。例如比较 $2\ln1.01$ 与 $\sqrt{1.04}-1$，设 $x=0.01$，构造 $F(x)=2\ln(1+x)-\sqrt{1+4x}+1$。
+4. <strong>奇偶性平移</strong>：若 $f(x)$ 为奇函数，则 $\frac{f(x)}{x}$ 一般为偶函数；结合单调性可快速画草图，解 $f(x)&gt;0$ 等价于 $x\cdot\frac{f(x)}{x}&gt;0$，用数形结合。</p>
+<p><strong>适用条件</strong>：题目出现抽象函数导数不等式（如 $xf'(x) &lt; f(x)$）、含参不等式恒成立、超越式大小比较等，优先考虑构造函数。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察结构，联想导数</strong>：将条件中的 $f'(x)$ 与 $f(x)$ 的组合与上述常见模型的导数形式对照，确定构造函数 $F(x)$。必要时两边同乘正因子（如 $x$，$\mathrm{e}^x$）。</li>
+<li><strong>确定新函数及定义域</strong>：写出 $F(x)$，特别关注使分母为零的点、对数真数定义域等，这些是后期解不等式的分段点。</li>
+<li><strong>判断单调性与奇偶性</strong>：求 $F'(x)$，利用已知不等式判断其符号，得出单调区间。若涉及奇偶性，计算 $F(-x)$ 进行验证。</li>
+<li><strong>利用特殊点求值</strong>：代入如 $F(0), F(1), F(-1)$ 等已知值，作为解不等式的临界点。</li>
+<li><strong>转化原问题</strong>：</li>
+<li>解抽象不等式：将 $f(x) &gt; 0$ 等变形为 $F(x) &gt; 0$ 或 $x\cdot F(x) &gt; 0$ 等形式，结合单调性与特殊点列不等式组。</li>
+<li>比较大小：将数转化为同一函数的不同函数值，由自变量大小及单调性推出结果。</li>
+<li>求参数范围：按单调性求出含参最值，构建关于参数的不等式，再构造函数求解。</li>
+<li><strong>写出答案</strong>，务必回验定义域。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：如构造函数 $F(x)=\frac{f(x)}{x}$ 时漏掉 $x \neq 0$，解不等式时讨论不全，导致解集错误。</li>
+<li><strong>导数符号与单调性混淆</strong>：$F'(x) &lt; 0$ 是减函数，自变量增大函数值反而减小，处理不等式时方向易反。</li>
+<li><strong>奇偶性判断失误</strong>：误把 $\frac{f(x)}{x}$（$f$ 奇）当成奇函数，实际上它是偶函数，画错草图会直接选错。</li>
+<li><strong>构造时漏乘因子</strong>：如看到 $f'(x) + 2f(x)$ 应联想 $\mathrm{e}^{2x}f(x)$，漏掉指数系数导致无法整合。</li>
+<li><strong>不等式传递不当</strong>：在解复合不等式时，忽略中间变量的符号，盲目乘除导致不等号方向错误。例如由 $x&lt;y$ 推 $\ln|x-y|$ 的正负，需讨论绝对值。</li>
+<li><strong>比大小选模失误</strong>：未将常数合理参数化（设 $x$），导致函数复杂难以求导，或没有统一为相同自变量的函数值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2021·理·12）</h3>
+<p>已知 $a = 2\ln1.01$，$b = \ln1.02$，$c = \sqrt{1.04} - 1$，比较 $a, b, c$ 的大小。</p>
+<p><strong>思路</strong>
+$a = \ln(1.01^2) = \ln1.0201$，直接与 $b=\ln1.02$ 比较可得 $a&gt;b$。难点在 $a$ 与 $c$、$b$ 与 $c$。引入参数 $x=0.01$，则 $a = 2\ln(1+x)$，$b = \ln(1+2x)$，$c = \sqrt{1+4x} - 1$。通过构造函数，利用导数和单调性比较大小。</p>
+<p><strong>步骤</strong>
+1. 比较 $a$ 与 $b$：$a=\ln1.0201 &gt; \ln1.02 = b$，所以 $a&gt;b$。
+2. 比较 $a$ 与 $c$：令 $F(x) = 2\ln(1+x) - (\sqrt{1+4x} - 1)$，$x&gt;0$。
+   求导：$F'(x) = \frac{2}{1+x} - \frac{2}{\sqrt{1+4x}} = 2\frac{\sqrt{1+4x} - (1+x)}{(1+x)\sqrt{1+4x}}$。
+   因 $\sqrt{1+4x} &gt; 1+x$（平方即可验证），故 $F'(x) &gt; 0$，$F(x)$ 在 $(0, +\infty)$ 单调递增。
+   又 $F(0)=0$，所以 $F(0.01) &gt; 0 \Rightarrow 2\ln1.01 &gt; \sqrt{1.04} - 1$，即 $a &gt; c$。
+3. 比较 $b$ 与 $c$：令 $G(x) = \ln(1+2x) - (\sqrt{1+4x} - 1)$，$x&gt;0$。
+   $G'(x) = \frac{2}{1+2x} - \frac{2}{\sqrt{1+4x}} = 2\frac{\sqrt{1+4x} - (1+2x)}{(1+2x)\sqrt{1+4x}}$。
+   因 $\sqrt{1+4x} &lt; 1+2x$（$ (1+2x)^2 = 1+4x+4x^2 &gt; 1+4x $），故 $G'(x) &lt; 0$，$G(x)$ 在 $(0, +\infty)$ 单调递减。
+   又 $G(0)=0$，所以 $G(0.01) &lt; 0 \Rightarrow \ln1.02 &lt; \sqrt{1.04} - 1$，即 $b &lt; c$。
+4. 综上，$b &lt; c &lt; a$，选B。</p>
+<p><strong>点评/变式</strong>
+比较大小的核心是把常数“变活”，设为变量后再构造函数，统一在同一自变量的函数值下比较。变式：比较 $2\ln1.02$ 与 $\sqrt{1.08}-1$ 等，方法完全一致。</p>
+<hr />
+<h3><strong>题目2</strong>（2020·文·12）</h3>
+<p>若 $2^x - 3^{-x} &lt; 2^y - 3^{-y}$，判断选项中正确的式子。</p>
+<p><strong>思路</strong>
+不等式两边结构相同，可构造函数 $f(t)=2^t-3^{-t}$，利用单调性比较 $x$ 与 $y$ 的大小，再逐项分析各选项中的对数或绝对值。</p>
+<p><strong>步骤</strong>
+1. 构造函数：令 $f(t) = 2^t - 3^{-t}$。
+   因 $2^t$ 为增函数，$3^{-t}$ 为减函数，所以 $-3^{-t}$ 为增函数，故 $f(t)$ 在 $\mathbb{R}$ 上单调递增。
+2. 由 $f(x) &lt; f(y)$ 及单调性得 $x &lt; y$，于是 $y - x &gt; 0$。
+3. 判断选项：
+   A, B 选项核心是 $\ln(y</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-12.html">2021-理-12</a>（2021 · 中） 本题通过构造函数与导数，结合对数运算与单调性比较三个数的大小。</li>
+<li><a href="../../exam/数学/2020-文-12.html">2020-文-12</a>（2020 · 中） 通过构造函数并利用单调性比较两数大小，进而判断对数式的正负。</li>
+<li><a href="../../exam/数学/2015-文-21.html">2015-文-21</a>（2015 · 中） 本题主要考查含参对数函数的单调性讨论及已知最值条件求参数取值范围，涉及分类讨论与构造函数思想。</li>
+<li><a href="../../exam/数学/2015-理-12.html">2015-理-12</a>（2015 · 中） 本题考查利用导数研究抽象函数单调性、奇偶性，结合构造函数与不等式解法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/923-构造函数.html">构造函数</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>到角公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>到角公式</h1><div class="review-mark" data-stem="到角公式"></div><div class="meta-card"><span><strong>考点</strong>到角公式</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择11</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>到角公式</strong><br />
+  设直线 $l_1$ 的斜率为 $k_1$，$l_2$ 的斜率为 $k_2$，则 $l_1$ 到 $l_2$ 的角 $\theta$（从 $l_1$ 绕交点逆时针旋转到与 $l_2$ 重合所转过的角）满足<br />
+  $$\tan\theta = \frac{k_2 - k_1}{1 + k_1 k_2} \quad (1 + k_1 k_2 \neq 0).$$</li>
+<li><strong>方向性</strong>：分子为“终边斜率 $-$ 始边斜率”，分母中 $k_1$、$k_2$ 的顺序与分子保持一致。</li>
+<li>
+<p><strong>垂直</strong>限制：$1 + k_1 k_2 = 0$ 时两直线垂直，到角为 $90^\circ$，公式失效。</p>
+</li>
+<li>
+<p><strong>夹角公式（对比）</strong><br />
+  两直线夹角 $\alpha$（不大于 $90^\circ$）满足<br />
+  $$\tan\alpha = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right| \quad (1 + k_1 k_2 \neq 0).$$
+  夹 角没有方向，结果总取正值。在等腰三角形问题中，若仅使用夹角公式会得到两个可能的斜率值，必须结合几何位置进一步筛选。</p>
+</li>
+<li>
+<p><strong>适用条件</strong><br />
+  两直线斜率均存在且不垂直。一般用于已知（或可设）两直线斜率，求与角有关的等量关系，从而建立方程。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>设出目标直线方程</strong><br />
+   若直线过原点，直接设 $y = kx$；若不过原点，设斜截式或点斜式。</p>
+</li>
+<li>
+<p><strong>转化“角相等”的几何条件</strong>  </p>
+</li>
+<li>等腰三角形底边与两腰所成的角相等 → 可利用<strong>到角公式</strong>表达“一条直线到另一条的角”。</li>
+<li>
+<p>明确角的<strong>旋转方向</strong>：反复观察图形，标出“哪条直线转到哪条直线”，写出对应的到角正切。</p>
+</li>
+<li>
+<p><strong>列方程求解</strong>  </p>
+</li>
+<li>写出两个到角的正切表达式，令它们相等（或根据其他等量关系列出方程）。</li>
+<li>
+<p>解得斜率的候选值。</p>
+</li>
+<li>
+<p><strong>检验与取舍</strong>  </p>
+</li>
+<li><strong>限制条件</strong>：如“原点在底边上”“斜率存在”“分母不为零”等。</li>
+<li><strong>图形验证</strong>：利用倾斜角的范围或画草图排除误根（例如底边应位于两腰之间，或不满足交点位置等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>到角方向弄反</strong><br />
+  记错“始边 → 终边”与公式的对应，导致分子、分母符号错误。正确记忆：$\tan\theta = \dfrac{k_{\text{终}} - k_{\text{始}}}{1 + k_{\text{始}} k_{\text{终}}}$。</p>
+</li>
+<li>
+<p><strong>混淆到角与夹角</strong><br />
+  夹角公式取了绝对值，会丢失方向信息。当题目需要区分“到角”或“有向角”时，使用夹角公式会产生多解，增加后续排除成本。</p>
+</li>
+<li>
+<p><strong>忽视分母为零的情况</strong><br />
+  由 $1 + k_1 k_2 = 0$ 引起的无定义情形未单独讨论，导致漏解或误判。</p>
+</li>
+<li>
+<p><strong>解出斜率后未筛根</strong><br />
+  仅靠代数方程得到的根不一定满足几何实际（如原点在底边上、三角形存在性、倾斜角范围等）。本题中 $k=-\frac{1}{3}$ 虽满足方程，但原点不在实际底边线段上，必须结合图形舍去。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>等腰三角形两腰所在直线的方程分别为 $l_1: x + y - 2 = 0$ 与 $l_2: x - 7y - 4 = 0$，原点在等腰三角形的底边上，则底边所在直线的斜率为（ ）<br />
+A. 3　　B. 2　　C. $\frac{1}{3}$　　D. $-\frac{1}{3}$</p>
+<h3>思路</h3>
+<p>利用 “原点在底边上” 可设底边 $l_3: y = kx$。等腰三角形的底边与两腰的“到角”相等，根据图形选定旋转方向：$l_3$ 到 $l_1$ 的角等于 $l_2$ 到 $l_3$ 的角。由此列出到角方程，解出 $k$，再结合原点位置排除增根。</p>
+<h3>步骤</h3>
+<ol>
+<li>
+<p><strong>求两腰斜率</strong><br />
+   $l_1: y = -x + 2 \Rightarrow k_1 = -1$；<br />
+   $l_2: y = \frac{1}{7}x - \frac{4}{7} \Rightarrow k_2 = \frac{1}{7}$。</p>
+</li>
+<li>
+<p><strong>设底边方程</strong><br />
+   由原点在底边上，设 $l_3: y = kx$（斜率 $k$ 存在）。</p>
+</li>
+<li>
+<p><strong>写出到角正切表达式</strong>  </p>
+</li>
+<li>$l_3$ 到 $l_1$ 的角：$\tan\theta_1 = \dfrac{k_1 - k}{1 + k k_1} = \dfrac{-1 - k}{1 - k}$；  </li>
+<li>
+<p>$l_2$ 到 $l_3$ 的角：$\tan\theta_2 = \dfrac{k - k_2}{1 + k_2 k} = \dfrac{k - \frac{1}{7}}{1 + \frac{k}{7}}$。</p>
+</li>
+<li>
+<p><strong>列方程</strong><br />
+   $\dfrac{-1 - k}{1 - k} = \dfrac{k - \frac{1}{7}}{1 + \frac{k}{7}}$，<br />
+   化简得 $\dfrac{k+1}{k-1} = \dfrac{7k-1}{k+7}$（注意符号处理），交叉相乘：<br />
+   $(k+1)(k+7) = (k-1)(7k-1)$，<br />
+   展开得 $k^2 + 8k + 7 = 7k^2 - 8k + 1$，整理得 $6k^2 - 16k - 6 = 0$，即 $3k^2 - 8k - 3 = 0$。<br />
+   解得 $k = 3$ 或 $k = -\frac{1}{3}$。</p>
+</li>
+<li>
+<p><strong>验根</strong><br />
+   由草图可知，两腰交点可求得，底边应在两腰“内侧”，使原点落在线段内部。$k = -\frac{1}{3}$ 时，底边过于平缓，原点不在底边线段上，舍去。故仅有 $k=3$ 满足。</p>
+</li>
+</ol>
+<h3>点评与变式</h3>
+<ul>
+<li><strong>点评</strong>：本题关键是把等腰三角形的“等角”转化为<strong>有向</strong>的到角相等，而不能用夹角直接列式。列方程时严格遵照“始边 → 终边”的顺序，是避免符号错误的核心。最后的筛根要结合图形或倾斜角的顺序，切勿直接双选。</li>
+<li><strong>变式</strong>：若题中“原点在底边所在直线上”改为“底边过原点且不经过第三象限”，也会影响斜率取舍；或改为求底边方程，过程不变，最后写出 $y=3x$。到角思想还可用于光线反射、三角形角平分线等问题——本质都是等角关系的斜率表达。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-11.html">2008-理-11</a>（2008 · 难） 等腰三角形两腰方程已知，原点在底边上，利用到角公式求底边斜率，涉及直线对称性。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1214-到角公式.html">到角公式</a></li>
+</ul>
+</div>
+</body>
+</html>

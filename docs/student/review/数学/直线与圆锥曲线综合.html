@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与圆锥曲线综合</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与圆锥曲线综合</h1><div class="review-mark" data-stem="直线与圆锥曲线综合"></div><div class="meta-card"><span><strong>考点</strong>直线与圆锥曲线综合</span><span><strong>权重</strong>27</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：27</li>
+<li>真题数：2；年份跨度：2010–2013</li>
+<li>出现题位：解答20</li>
+<li>难度分布：难1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>椭圆定义与方程</strong>：标准方程 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a&gt;b&gt;0)$，关系式 $a^2=b^2+c^2$，焦点 $(\pm c,0)$。</li>
+<li><strong>点差法（中点弦）</strong>：设弦端点 $A(x_1,y_1),B(x_2,y_2)$，代入椭圆方程作差，利用中点坐标公式 $x_1+x_2=2x_0, y_1+y_2=2y_0$，得弦斜率 $k_{AB}=-\frac{b^2 x_0}{a^2 y_0}$。可求离心率、轨迹或方程。</li>
+<li><strong>弦长公式</strong>：直线 $y=kx+m$ 与椭圆交于两点，弦长 $|AB|=\sqrt{1+k^2}|x_1-x_2|=\sqrt{1+k^2}\frac{\sqrt{\Delta}}{|a|}$。</li>
+<li><strong>垂直关系转化</strong>：两直线垂直 $l_1 \perp l_2 \iff k_1k_2=-1$，常用于设出直线方程及化简面积表达式。</li>
+<li><strong>面积最值</strong>：对角线垂直的四边形面积 $S=\frac{1}{2}|AB|\cdot|CD|$，利用弦长公式转化为函数，通过换元、二次函数或基本不等式求最值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>中点弦：点差法找关系</strong><br />
+   遇到弦中点问题，直接设端点坐标代入曲线方程作差，结合中点坐标快速得出直线斜率与中点坐标的约束关系，避免繁复的联立运算。</li>
+<li><strong>常规弦长：设而不求 + 韦达定理</strong><br />
+   设直线方程（注意讨论斜率不存在情况），联立圆锥曲线，化为关于 $x$（或 $y$）的一元二次方程，利用弦长公式计算距离。</li>
+<li><strong>向量/几何条件代数化</strong><br />
+   将等差、等比、垂直、共线等几何关系，通过两点距离公式、斜率乘积为 $-1$ 或向量数量积为 $0$ 进行转化。</li>
+<li><strong>面积与最值：目标函数法</strong><br />
+   明确面积表达式中涉及的两条弦长，分别用弦长公式写为某参数（斜率或截距）的函数，用换元法（常设 $t=\sqrt{参数}$）转化为二次函数或均值不等式模型求解最大值。</li>
+<li><strong>直接代入焦点求基本量</strong><br />
+   若直线过焦点，可直接将焦点坐标代入直线方程求出 $c$，建立 $a,b,c$ 的第一个方程。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略判别式验证</strong>：联立方程后，用韦达定理前必须检验 $\Delta&gt;0$ 保证存在两交点，尤其求最值时需讨论参数取值范围的约束。</li>
+<li><strong>垂直时斜率混淆</strong>：明确垂直指两条直线的斜率乘积为 $-1$。本题中，若已知一条直线斜率为 $-1$，则与其垂直的直线斜率为 $1$。</li>
+<li><strong>面积公式系数出错</strong>：对角线互相垂直的四边形的面积为对角线乘积的一半：$S=\frac{1}{2}|AB||CD|$，易漏掉 $\frac{1}{2}$。</li>
+<li><strong>弦长公式计算错误</strong>：使用 $|AB|=\sqrt{1+k^2}|x_1-x_2|$ 时，注意 $|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1x_2}$ 以及联立方程化成的二次方程中二次项系数的绝对值。</li>
+<li><strong>椭圆本身定义的运用</strong>：针对焦点三角形的边长，优先考虑椭圆定义转化（如 $|AF_1|+|AF_2|=2a$），避免全部用两点间距离硬算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2013-理-20</h3>
+<p><strong>题目</strong>：椭圆 $M:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 右焦点在 $x+y-\sqrt{3}=0$ 上，该直线交椭圆于 $A,B$，$P$ 为中点且 $OP$ 斜率为 $\frac{1}{2}$。求 $M$ 的方程；四边形 $ACBD$ 对角线 $CD\perp AB$，求其面积最大值。</p>
+<p><strong>思路</strong>：用焦点求 $c$；利用点差法建立中点与斜率关系再结合 $a^2=b^2+c^2$ 求椭圆方程。设 $CD$ 方程斜率为 $1$，联立求弦长，用垂直四边形面积公式建立函数求最值。</p>
+<p><strong>步骤</strong>：
+1. 直线过右焦点 $(c,0)$，代入得 $c=\sqrt{3}$，则 $a^2-b^2=3$。
+2. 设 $A(x_1,y_1), B(x_2,y_2), P(x_0,y_0)$，代入椭圆相减结合 $k_{AB}=-\frac{b^2 x_0}{a^2 y_0}$。已知 $k_{AB}=-1$，$k_{OP}=\frac{y_0}{x_0}=\frac{1}{2}$，联立得 $a^2=2b^2$，解得 $b^2=3, a^2=6$，方程为 $\frac{x^2}{6}+\frac{y^2}{3}=1$。
+3. 由 $CD \perp AB$ 知 $k_{CD}=1$，设 $CD: y=x+t$，联立椭圆得 $3x^2+4tx+2t^2-6=0$。弦长 $|CD|=\sqrt{2}|x_1-x_2|=\sqrt{2}\frac{\sqrt{72-8t^2}}{3}$。
+4. 联立 $AB$ 与椭圆得 $|AB|=\frac{4\sqrt{6}}{3}$。面积 $S=\frac{1}{2}|AB||CD|$，化简得 $S=\frac{2\sqrt{6}}{3}\sqrt{9-t^2}$，当 $t=0$ 时 $S_{max}=2\sqrt{6}$。</p>
+<p><strong>点评/变式</strong>：点差法是解决中点弦问题的核心技巧，避免了全坐标求解。面积最值问题通常转化为 $t$ 的二次函数，注意由 $\Delta&gt;0$ 确定 $t \in (-3,3)$，以保证最值取在定义域内。</p>
+<h3>2010-理-20</h3>
+<p><strong>题目</strong>：椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a&gt;b&gt;0)$，过左焦点斜率为 $1$ 的直线交椭圆于 $A,B$，$|AF_2|,|AB|,|BF_2|$ 成等差数列。求离心率；若点 $P(0,-1)$ 满足 $|PA|=|PB|$，求椭圆方程。</p>
+<p><strong>思路</strong>：利用椭圆定义将等差数列转化为关于 $|AB|$ 的方程；联立直线和椭圆，用弦长表示 $|AB|$，建立 $a,b,c$ 关系求离心率。再利用垂直平分线性质联系中点坐标求解方程。</p>
+<p><strong>步骤</strong>：
+1. 由椭圆定义：$(|AF_2|+|BF_2|)+|AB|=4a$，由等差中项 $2|AB|=|AF_2|+|BF_2|$，代入得 $|AB|=\frac{4}{3}a$。
+2. 左焦点 $(-c,0)$，直线 $l: y=x+c$，设 $A(x_1,y_1)$，联立椭圆消 $y$，利用弦长公式表达 $|AB|=\sqrt{1+1^2}\frac{\sqrt{\Delta}}{|二次系数|}=\frac{4}{3}a$，整理得 $a^2=3b^2$，结合 $c^2=a^2-b^2$ 得离心率 $e=\frac{c}{a}=\frac{\sqrt{6}}{3}$。
+3. 设 $AB$ 中点 $N(x_0,y_0)$，由韦达定理得 $x_0=\frac{x_1+x_2}{2}=-\frac{3c}{4}, y_0=x_0+c=\frac{c}{4}$。由 $|PA|=|PB|$ 知 $PN \perp AB$，即 $k_{PN}=\frac{y_0+1}{x_0}=-1$，解得 $c=2$。
+4. 得到 $a^2=6, b^2=2$，椭圆方程为 $\frac{x^2}{6}+\frac{y^2}{2}=1$。</p>
+<p><strong>点评/变式</strong>：等差数列与椭圆定义的巧妙结合是本题突破口。由 $|PA|=|PB|$ 可知点 $P$ 在线段 $AB$ 的中垂线上，利用斜率乘积为 $-1$ 建立方程。此类“定型”与“定量”相结合的考法在选填中常见。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-20.html">2013-理-20</a>（2013 · 难） 本题考查利用点差法求椭圆方程及对角线垂直的四边形面积最大值。</li>
+<li><a href="../../exam/数学/2010-理-20.html">2010-理-20</a>（2010 · 中） 椭圆焦点弦与等差数列结合，求离心率和方程，涉及弦中点与垂直关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1007-直线与圆锥曲线的综合.html">直线与圆锥曲线综合</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的切线方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆的切线方程</h1><div class="review-mark" data-stem="圆的切线方程"></div><div class="meta-card"><span><strong>考点</strong>圆的切线方程</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>圆的切线判定与性质</strong></li>
+<li>若点 $P(x_0,y_0)$ 在圆 $x^2+y^2=r^2$ 上，则过 $P$ 的切线方程为 $$x_0x+y_0y=r^2.$$</li>
+<li>对于一般圆 $(x-a)^2+(y-b)^2=r^2$，若切点为 $(x_0,y_0)$，则切线为 $(x_0-a)(x-a)+(y_0-b)(y-b)=r^2.$</li>
+<li>
+<p>点在圆外时，可设出斜率用圆心到直线距离等于半径求解，或利用切点弦方程。</p>
+</li>
+<li>
+<p><strong>斜率关系</strong></p>
+</li>
+<li>
+<p>过圆上一点的切线垂直于该点与圆心的连线。若圆心 $O(0,0)$，点 $A(x_0,y_0)$，则半径 $OA$ 的斜率 $k_{OA}=\frac{y_0}{x_0}$（$x_0\neq0$），切线斜率 $k=-\frac{x_0}{y_0}$（$y_0\neq0$），满足 $k\cdot k_{OA}=-1$。</p>
+</li>
+<li>
+<p><strong>直线截距与三角形面积</strong></p>
+</li>
+<li>直线在 $x$ 轴截距 $a$，$y$ 轴截距 $b$，与坐标轴围成的直角三角形面积 $S=\frac12|a||b|$。</li>
+<li>注意截距有正负，面积用绝对值。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断点与圆的位置关系</strong></li>
+<li>将点的坐标代入圆的方程左边，与 $r^2$ 比较：若相等则在圆上；若大于则在圆外；若小于则在圆内。</li>
+<li>
+<p>本专题真题中，$A(1,2)$ 代入 $x^2+y^2=5$ 得 $1+4=5$，恰好在圆上。</p>
+</li>
+<li>
+<p><strong>求圆上一点的切线方程</strong></p>
+</li>
+<li><strong>方法一（公式法）</strong>：对于圆 $x^2+y^2=r^2$，直接写 $x_0x+y_0y=r^2$，又快又准。</li>
+<li>
+<p><strong>方法二（斜率法）</strong>：利用半径与切线垂直求出斜率，再用点斜式求方程。</p>
+<ul>
+<li>适用于忘记公式时，但要注意斜率不存在的情况（若 $y_0=0$，则切线垂直于 $x$ 轴）。</li>
+</ul>
+</li>
+<li>
+<p><strong>求截距与面积</strong></p>
+</li>
+<li>将切线方程化为截距式 $\frac{x}{a}+\frac{y}{b}=1$ 或直接令 $x=0$ 求纵截距、令 $y=0$ 求横截距。</li>
+<li>面积 $S=\frac12|\text{横截距}\times\text{纵截距}|$，注意带上绝对值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆切点位置处理</strong>：点在圆上、圆外、圆内的切线求法截然不同。点在圆外时不能直接套用 $x_0x+y_0y=r^2$ 公式（该公式只有切点在圆上时有效）。本题因点恰在圆上才可直接使用。</li>
+<li><strong>斜率计算错误</strong>：利用垂直关系时，切线斜率 $k=-\frac{1}{k_{OA}}$，但若误写为 $k=k_{OA}$ 或取倒数忘加负号，则全盘皆输。</li>
+<li><strong>忘记斜率不存在的情况</strong>：当切点纵坐标 $y_0=0$ 时，半径斜率为0，切线斜率不存在（切线垂直于 $x$ 轴），此时切线为 $x=\pm r$，不可盲目用点斜式。</li>
+<li><strong>截距与面积不带绝对值</strong>：截距本身可能为负，面积必须为正，最后一步漏绝对值会导致答案错误。</li>
+<li><strong>计算粗心</strong>：如将截距混淆为“截距的倒数”，或面积忘记乘 $\frac12$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知圆 $O: x^2+y^2=5$ 和点 $A(1,2)$，求过 $A$ 且与圆 $O$ 相切的直线与两坐标轴围成的三角形的面积。</p>
+<p><strong>思路</strong><br />
+先验证点 $A$ 在圆上，然后可利用圆上一点的切线公式或利用半径与切线垂直求斜率，写出切线方程，再求截距，最后计算面积。</p>
+<p><strong>步骤</strong><br />
+1. 验证点在圆上：$1^2+2^2=5$，故 $A$ 在圆 $O$ 上。<br />
+2. 法一（斜率法）：圆心 $O(0,0)$，半径 $OA$ 斜率 $k_{OA}=2$，则切线斜率 $k=-\frac{1}{2}$。<br />
+   切线方程：$y-2=-\frac12(x-1)$，化简得 $x+2y-5=0$。<br />
+   法二（公式法）：直接写 $1\cdot x+2\cdot y=5$，即 $x+2y-5=0$。<br />
+3. 求截距：令 $x=0$，得 $y=\frac52$；令 $y=0$，得 $x=5$。<br />
+4. 面积：$S=\frac12\times|5|\times\left|\frac52\right|=\frac{25}{4}$。</p>
+<p><strong>点评/变式</strong><br />
+此类题属基础题，但极易因忽略点在圆上而错用一般设斜率 $d=r$ 的方法，浪费时间和增加计算量。变式：若点改为 $P(3,4)$ 在圆 $x^2+y^2=25$ 外，求过 $P$ 的切线方程，则需设直线方程，利用圆心到直线距离等于半径解出斜率，注意斜率存在与不存在分类讨论。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-15.html">2009-文-15</a>（2009 · 难） 求过圆上一点的切线方程并计算其与坐标轴围成的三角形面积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆的切线方程</a></li>
+</ul>
+</div>
+</body>
+</html>

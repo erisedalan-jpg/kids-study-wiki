@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>截面圆半径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>截面圆半径</h1><div class="review-mark" data-stem="截面圆半径"></div><div class="meta-card"><span><strong>考点</strong>截面圆半径</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：填空15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球的截面性质</strong>：球心到截面的距离 $d$、截面圆半径 $r$、球半径 $R$ 满足 $$r^2 + d^2 = R^2.$$</li>
+<li><strong>直线与平面的夹角</strong>：若直线与平面所成角为 $\theta$（$0^\circ \le \theta \le 90^\circ$），则直线上一点到平面的距离可由该点到平面上某已知点的线段长与 $\sin\theta$ 的关系求出。具体地，若过球心 $O$ 的直线与截面交角为 $\theta$，且直线上一点 $M$ 在截面上，则球心到截面的距离 $d$ 满足 $$d = |OM| \cdot \sin\theta,$$ 这是由直角三角形中 $\theta$ 的对边与斜边关系得出（$\theta$ 即为 $OM$ 与其在截面内投影的夹角）。</li>
+<li><strong>球表面积公式</strong>：$S = 4\pi R^2$；<strong>圆面积公式</strong>：$S_{\text{圆}} = \pi r^2$.</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设未知量</strong>：设球半径 $R$，截面圆半径 $r$。</li>
+<li><strong>求球心到截面的距离</strong>：充分利用题中给出的“特殊点”、“特殊角”：</li>
+<li>确定球心 $O$ 与截面上已知点 $M$ 的连线长度 $|OM|$；</li>
+<li>利用直线与截面所成角 $\theta$，得到距离 $d = |OM| \cdot \sin\theta$（注意 $\theta$ 是线面角，不是线与法线的夹角）。</li>
+<li><strong>利用截面性质建立方程</strong>：代入 $r^2 + d^2 = R^2$，消去 $r$ 或 $d$，得到关于 $R$ 的方程。</li>
+<li><strong>结合其他条件求解</strong>：由给定的截面圆面积或周长等条件，进一步求得 $r$ 或 $R$，最后计算目标量（如球表面积、体积等）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆线面角与线法线角</strong>：直线与平面成 $45^\circ$，则直线与法线的夹角为 $90^\circ-45^\circ=45^\circ$，此时球心到平面的距离 $d$ 若直接用 $\cos45^\circ$ 会出错，必须分清哪条边在三角形中对应哪个角。正确应为 $d = |OM|\sin45^\circ$。</li>
+<li><strong>截面性质误用</strong>：将公式记成 $r^2 = d^2 - R^2$ 或 $r = R - d$，这是严重的概念错误。</li>
+<li><strong>几何体中的点位置分析不当</strong>：如 $M$ 是半径 $OA$ 的中点，则 $|OM| = \dfrac{R}{2}$，不看条件直接取 $|OM| = R$ 会导致后续全错。</li>
+<li><strong>面积、表面积公式混淆</strong>：圆面积 $\pi r^2$，球表面积 $4\pi R^2$，计算时切忌代错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009·全国卷·理15）<br />
+设 $OA$ 是球 $O$ 的半径，$M$ 是 $OA$ 的中点，过 $M$ 且与 $OA$ 成 $45^\circ$ 角的平面截球 $O$ 的表面得到圆 $C$．若圆 $C$ 的面积等于 $\dfrac{7\pi}{4}$，则球 $O$ 的表面积等于 <strong><em>_</em></strong>_．</p>
+<p><strong>思路</strong><br />
+求球表面积即求球半径 $R$。利用过 $M$ 的截面与 $OA$ 的夹角，求出球心到截面的距离 $d$，再通过球的截面性质与已知圆面积建立关于 $R$ 的方程。</p>
+<p><strong>步骤</strong><br />
+设球半径为 $R$，截面圆 $C$ 的半径为 $r$。
+1. 由 $M$ 为 $OA$ 中点得 $|OM| = \dfrac{R}{2}$。
+2. 因为截面与 $OA$ 成 $45^\circ$ 角，则球心 $O$ 到截面的距离 $d$ 为：<br />
+   $$d = |OM| \sin 45^\circ = \frac{R}{2} \cdot \frac{\sqrt{2}}{2} = \frac{\sqrt{2}}{4}R.$$
+3. 由球的截面性质 $r^2 + d^2 = R^2$，得<br />
+   $$r^2 = R^2 - d^2 = R^2 - \left( \frac{\sqrt{2}}{4}R \right)^2 = R^2 - \frac{2}{16}R^2 = \frac{7}{8}R^2.$$
+4. 已知圆 $C$ 面积 $\pi r^2 = \dfrac{7\pi}{4}$，所以<br />
+   $$\pi \cdot \frac{7}{8}R^2 = \frac{7\pi}{4} \quad \Rightarrow \quad \frac{7}{8}R^2 = \frac{7}{4} \quad \Rightarrow \quad R^2 = 2.$$
+5. 球表面积 $S = 4\pi R^2 = 4\pi \cdot 2 = 8\pi$．</p>
+<p>故答案为 $8\pi$．</p>
+<p><strong>点评/变式</strong><br />
+- 本题紧扣球的截面性质与线面角的几何意义，计算量小而思维量足，是典型的填空题压轴风格。<br />
+- 易错点在于线面角的三角函数选用：若误用 $\cos45^\circ$ 求 $d$，会得到 $d = \dfrac{\sqrt{2}}{4}R$ 恰好也是对的（巧合），但换成其他角度就会暴露问题。务必明确：点 $O$ 到平面的垂足 $H$ 与 $M$ 构成的 $\triangle OHM$ 中，$\angle OMH$ 才是线面角 $45^\circ$，$OH$ 为对边，故用正弦。<br />
+- <strong>变式</strong>：若将“与 $OA$ 成 $45^\circ$ 角”改为“与 $OA$ 成 $30^\circ$ 角”，其余条件不变，可自行计算球表面积为 $3\pi$ 还是其他？若将“$M$ 是 $OA$ 中点”改为“$M$ 分 $OA$ 为 $1:2$”等，均可体会距离与半径的比例变化，深刻掌握球截面问题的核心解法。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-15.html">2009-理-15</a>（2009 · 中） 本题通过球半径与截面圆半径的几何关系，结合45°角条件求解球的表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/872-截面圆半径.html">截面圆半径</a></li>
+</ul>
+</div>
+</body>
+</html>

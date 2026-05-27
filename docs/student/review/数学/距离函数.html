@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>距离函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>距离函数</h1><div class="review-mark" data-stem="距离函数"></div><div class="meta-card"><span><strong>考点</strong>距离函数</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>– <strong>点到轴距离函数</strong>：点 $P(x,y)$ 到 $x$ 轴的距离定义为 $d=|y|$，本质是绝对值函数，它将坐标的纵分量映射为<strong>非负数</strong>。
+– <strong>圆周运动建模</strong>：若质点以角速度 $\omega$ 在半径为 $r$ 的圆上逆时针运动，初始位置对应角 $\varphi_0$，则 $y=r\sin(\omega t+\varphi_0)$。于是到 $x$ 轴距离 $d(t)=r\left|\sin(\omega t+\varphi_0)\right|$。
+– <strong>正弦型绝对值的图像特征</strong>：$d=A|\sin(\omega t+\varphi)|$<br />
+ • <strong>周期</strong>：$T=\dfrac{\pi}{\omega}$（将 $\sin$ 的周期 $\dfrac{2\pi}{\omega}$ 减半，因下方翻折）。<br />
+ • <strong>值域</strong>：$[0,A]$，最大值为 $A$。<br />
+ • <strong>零点特点</strong>：$\sin(\omega t+\varphi)=0$ 时 $d=0$，此处曲线<strong>出现尖点</strong>（不可导）。<br />
+ • <strong>初始值</strong>：$t=0$ 时 $d=A|\sin\varphi|$，由此可判断曲线起点高低。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>还原动点坐标</strong>：由题意建立参数方程，通常设转角参数 $\theta=\omega t+\varphi_0$，写出 $x,y$。  </li>
+<li><strong>构建距离函数</strong>：根据“到 $x$ 轴距离”得 $d=|y|$，出现绝对值直接保留。  </li>
+<li><strong>标准化三角函数</strong>：将 $y$ 表达式化为 $A\sin(\omega t+\varphi)$ 形式，确定振幅、角频率、初相。  </li>
+<li><strong>去绝对值分析图像</strong>：<br />
+ – 确定零点位置：解 $\sin(\omega t+\varphi)=0$。<br />
+ – 确定峰值时刻：解 $\sin(\omega t+\varphi)=\pm1$，此时 $d=A$。<br />
+ – 将 $\sin$ 曲线在时间轴下方的部分对称翻折至上方，形成“波浪尖底”形状。  </li>
+<li><strong>匹配选项</strong>：优先通过 <strong>$t=0$ 时的距离值</strong>、<strong>第一个零点时刻</strong>、<strong>周期长短</strong> 三个关键特征定位正确图像。</li>
+</ol>
+<h2>高频易错</h2>
+<p>– <strong>忘记绝对值</strong>：直接画出 $y=2\sin(t-\frac{\pi}{4})$ 的图像，出现负距离，必然选错。<br />
+– <strong>初相误判</strong>：由初始位置求 $\varphi_0$ 时没有检验符号，例如将 $(-\frac{\pi}{4})$ 误作 $(\frac{\pi}{4})$，导致 $t=0$ 时距离值不对。<br />
+– <strong>周期混淆</strong>：误将绝对值后的周期当作 $\frac{2\pi}{\omega}$，导致图像疏密判断出错。正确周期为 $\frac{\pi}{\omega}$。<br />
+– <strong>峰值与值域</strong>：误认为距离最大值仍为 $2$ 而允许负值，忽略了值域是 $[0,2]$，并且峰值处曲线应为平滑弧形而非尖点。</p>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>简述</h3>
+<p>质点 $P$ 在半径 $2$ 的圆周上逆时针运动，角速度 $1$，初始位置 $P_0(\sqrt{2},-\sqrt{2})$。求 $P$ 到 $x$ 轴距离 $d$ 关于时间 $t$ 的函数图像。</p>
+<h3><strong>思路</strong></h3>
+<p>先写出纵坐标 $y=2\sin(t+\varphi_0)$，利用 $t=0$ 时 $y=-\sqrt{2}$ 定初相。$d=|y|$，转化为 $d=2|\sin(t-\dfrac{\pi}{4})|$ 并分析周期、零点和起点高度，据此排除错误选项。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>
+<p><strong>建立运动方程</strong><br />
+   设 $t=0$ 时转角为 $\varphi_0$，则 $y=2\sin(t+\varphi_0)$。由 $t=0$ 时 $y=-\sqrt{2}$ 得 $\sin\varphi_0=-\dfrac{\sqrt{2}}{2}$，取 $\varphi_0=-\dfrac{\pi}{4}$（逆时针为正）。故 $y=2\sin!\left(t-\dfrac{\pi}{4}\right)$。</p>
+</li>
+<li>
+<p><strong>写出距离函数</strong><br />
+   $d(t)=|y|=2\left|\sin!\left(t-\dfrac{\pi}{4}\right)\right|$，定义域 $t\ge0$。</p>
+</li>
+<li>
+<p><strong>捕捉图像关键特征</strong><br />
+   – <strong>起点</strong>：$t=0$，$d(0)=2|\sin(-\frac{\pi}{4})|=\sqrt{2}\approx1.41&gt;0$，图像不从原点出发。<br />
+   – <strong>第一个零点</strong>：令 $\sin(t-\frac{\pi}{4})=0$，得 $t=\frac{\pi}{4}\approx0.785$，此处距离降为零且出现尖点。<br />
+   – <strong>最大值</strong>：当 $|\sin(t-\frac{\pi}{4})|=1$ 时 $d=2$，在 $t=\frac{3\pi}{4}$ 等处达到。<br />
+   – <strong>周期</strong>：$T=\pi$，图像呈现等间距的拱形（每次峰与下一个尖点间隔 $\frac{\pi}{2}$）。</p>
+</li>
+<li>
+<p><strong>筛选选项</strong><br />
+   排除起点在原点或 $d=0$ 的图像；排除周期为 $2\pi$ 或图像保留负半周的选项；确认 $t=\frac{\pi}{4}$ 处触及 $t$ 轴且存在尖点，曲线其余部分平滑上凸。最终选出吻合此特征的图像。</p>
+</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>这道题是“运动轨迹+距离函数+图像识别”的经典组合，核心能力在于将实际运动翻译成三角函数并正确处理绝对值。<strong>变式1</strong>：若点 $P$ 到 $y$ 轴距离 $d=|x|$，则 $x=2\cos(t-\frac{\pi}{4})$，图像由余弦绝对值决定，形态类似但相位平移。<strong>变式2</strong>：若角速度改为 $2$，则 $d=2|\sin(2t-\frac{\pi}{4})|$，周期压缩为 $\frac{\pi}{2}$，零点更密集。掌握“标准化正弦—加绝对值—提取三要素（起点、零点、周期）”的流程，无论题目如何包装都能快速锁定答案。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-04.html">2010-理-04</a>（2010 · 中） 本题通过质点圆周运动模型，考查根据运动参数建立距离关于时间的函数关系并识别其大致图像的能力。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1122-距离函数.html">距离函数</a></li>
+</ul>
+</div>
+</body>
+</html>

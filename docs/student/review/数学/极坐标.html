@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>极坐标</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>极坐标</h1><div class="review-mark" data-stem="极坐标"></div><div class="meta-card"><span><strong>考点</strong>极坐标</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2019–2020</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极坐标系定义</strong>：在平面内取定点 $O$（极点），引射线 $Ox$（极轴），对于任意点 $M$，用 $\rho$（极径，$\rho \geq 0$ 或允许负值时按 $( \rho,\theta )$ 与 $( -\rho,\theta+\pi )$ 等价）和 $\theta$（极角，$0 \leq \theta &lt; 2\pi$ 或 $-\pi &lt; \theta \leq \pi$）表示，记为 $M(\rho,\theta)$。</li>
+<li><strong>极坐标与直角坐标互化</strong>（极点与原点重合，极轴与 $x$ 轴正半轴重合）：<br />
+  $$x = \rho \cos\theta,\quad y = \rho \sin\theta, \quad \rho^2 = x^2 + y^2,\quad \tan\theta = \frac{y}{x}\ (x \neq 0).$$</li>
+<li><strong>常见曲线的极坐标方程</strong>：<br />
+  ① 过极点倾斜角为 $\alpha$ 的直线：$\theta = \alpha$；<br />
+  ② 垂直于极轴且与极点距离为 $d$ 的直线：$\rho \cos\theta = d$；<br />
+  ③ 平行于极轴且与极点距离为 $d$ 的直线：$\rho \sin\theta = d$；<br />
+  ④ 圆心在极点半径为 $r$ 的圆：$\rho = r$；<br />
+  ⑤ 圆心在 $(a,0)$ 且过极点的圆：$\rho = 2a\cos\theta$；<br />
+  ⑥ 圆心在 $(0,a)$ 且过极点的圆：$\rho = 2a\sin\theta$；<br />
+  ⑦ 圆心 $(\rho_0,\theta_0)$ 半径 $R$ 的圆：$\rho^2 - 2\rho \rho_0\cos(\theta-\theta_0) + \rho_0^2 = R^2$。</li>
+<li><strong>参数方程化为普通方程</strong>：消去参数 $t$（或 $\theta$）得到 $x,y$ 的直接关系，关键方法有代入消元、利用三角恒等式（如 $\cos^2\theta+\sin^2\theta=1$）、代数变形（平方差、韦达代换等）。消参后务必根据参数限制写出 $x,y$ 的取值范围。</li>
+<li><strong>求轨迹的极坐标方程</strong>：设动点 $P(\rho,\theta)$，利用几何条件或垂直、共线等关系建立 $\rho,\theta$ 的等式，整理即得。若条件涉及直角坐标，可先求直角坐标方程再互化。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>参数方程化普通方程的标准步骤</strong>  </li>
+<li>对形如 $x=f(t),\, y=g(t)$ 的方程，尝试直接解出 $t$ 代入另一式，或通过恒等变形消去 $t$。  </li>
+<li>三角函数型：常用平方和、和差角、二倍角等恒等式，如 $x=4\cos^2\theta,\, y=4\sin^2\theta$ 直接相加得 $x+y=4$。  </li>
+<li>代数型：如 $x=t+\frac1t,\, y=t-\frac1t$，可利用平方差得 $x^2-y^2=4$。  </li>
+<li>消参后标明约束（如 $x$ 范围，或 $\theta \in [0,2\pi)$ 对应曲线的完整性）。</li>
+<li><strong>求曲线交点的方法</strong>  </li>
+<li>在极坐标系下，联立两条曲线的极坐标方程求解 $(\rho,\theta)$，注意极径多值性。  </li>
+<li>更保险：先化为直角坐标方程，联立求解直角坐标交点，再转化为极坐标。适用于判断交点的精确坐标（如 $P$ 点）。</li>
+<li><strong>求圆的极坐标方程（已知圆心在极轴与过极点条件）</strong>  </li>
+<li>设圆心直角坐标 $(a,0)$，半径 $|a|$，直角坐标方程 $(x-a)^2 + y^2 = a^2$，化简为 $x^2+y^2=2ax$。  </li>
+<li>代入 $x=\rho\cos\theta,\, y=\rho\sin\theta$ 得 $\rho^2 = 2a\rho\cos\theta \Rightarrow \rho = 2a\cos\theta$（$\rho \neq 0$ 可约去）。  </li>
+<li>利用曲线上已知点（如交点 $P$）求出 $a$，回代得方程。</li>
+<li><strong>求动点轨迹的极坐标方程</strong>  </li>
+<li><strong>设点</strong>：设所求轨迹上任意一点 $P(\rho,\theta)$。  </li>
+<li><strong>用已知条件列式</strong>：如垂直条件（两直线斜率乘积为 $-1$）或利用相关点（如 $M$ 在已知曲线上，$P$ 在 $OM$ 上得 $M(\rho_M,\theta)$）。  </li>
+<li><strong>化简</strong>：得到 $\rho$ 与 $\theta$ 的关系。  </li>
+<li><strong>定范围</strong>：由动点的存在条件（如 $P$ 在线段 $OM$ 上，$M$ 在某一曲线上的限制角范围）确定 $\theta$ 或 $\rho$ 的限制区间，这是极坐标轨迹题的易失分点。</li>
+<li><strong>极坐标下垂直条件的转化技巧</strong>  </li>
+<li>如 $l \perp OM$，知道 $A$ 在 $l$ 上，可先用直角坐标写出点斜式，再化为极坐标方程；或利用直角三角形性质：由射影定理或直径所对圆周角为直角等几何意义直接写出轨迹（如 $OP \perp AP$ 意味着 $P$ 在以 $OA$ 为直径的圆上，立刻得 $\rho = 4\cos\theta$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>消参后丢失范围</strong>：参数方程消参得到普通方程时，必须注明 $x,y$ 的取值范围。例如 $x=4\cos^2\theta$，隐含 $0 \le x \le 4$，若题目要求轨迹整段曲线需标明。极坐标中同样要注意 $\theta$ 和 $\rho$ 的可行域。</li>
+<li><strong>忽略极径可能为零的情况</strong>：极坐标方程化简时，若约去 $\rho$，要单独讨论 $\rho=0$ 是否包含在曲线中。如圆 $\rho = 2a\cos\theta$，当 $\theta = \frac{\pi}{2}$ 时 $\rho=0$，极点在该圆上，不可漏。</li>
+<li><strong>角度范围限制不清导致多解或漏解</strong>：代表题 2019 中 $P$ 点轨迹为圆 $\rho = 4\cos\theta$，但 $P$ 必须在线段 $OM$ 上且 $M$ 在 $\rho = 4\sin\theta$ 上，因此由 $0 \le \rho \le \rho_M$ 结合 $\rho = 4\cos\theta$、$\rho_M = 4\sin\theta$ 推出 $\cos\theta \le \sin\theta$，解得 $\theta \in [\frac{\pi}{4}, \frac{\pi}{2}]$。若漏写范围，会导致轨迹多出一段圆弧，属于经典失分。</li>
+<li><strong>极坐标方程互化时象限判断</strong>：$\tan\theta = \frac{y}{x}$ 取角时需要结合点所在象限确定 $\theta$，书写极坐标时应尽量用 $\rho&gt;0$ 和明确的 $\theta$ 表示。</li>
+<li><strong>“圆心在极轴上”的理解偏差</strong>：“极轴”是射线 $Ox$，圆心在极轴上意味着圆心坐标为 $(a,0)$ 且 $a$ 可正可负，事实上半径 $|a|$，方程 $\rho = 2a\cos\theta$ 中 $a$ 可为负，表示圆在另一侧。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2020 理 22）</h3>
+<p>已知 $C_1: \begin{cases} x =</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-22.html">2020-理-22</a>（2020 · 中） 两曲线C₁、C₂参数方程化为普通方程，再建立极坐标方程，求过原点和C₁C₂交点的圆的极坐标方程。</li>
+<li><a href="../../exam/数学/2019-理-22.html">2019-理-22</a>（2019 · 中） 极坐标系中，点M在曲线ρ=4sinθ上，直线l过A(4,0)且与OM垂直，求垂足P的极坐标方程及轨迹。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">极坐标</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与椭圆的位置关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与椭圆的位置关系</h1><div class="review-mark" data-stem="直线与椭圆的位置关系"></div><div class="meta-card"><span><strong>考点</strong>直线与椭圆的位置关系</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：5；年份跨度：2015–2023</li>
+<li>出现题位：解答20 解答21 选择5</li>
+<li>难度分布：中5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>椭圆标准方程</strong>：<br />
+  焦点在 $x$ 轴：$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \ (a&gt;b&gt;0)$，满足 $a^2=b^2+c^2$。<br />
+  焦点在 $y$ 轴：$\displaystyle \frac{y^2}{a^2}+\frac{x^2}{b^2}=1 \ (a&gt;b&gt;0)$。</li>
+<li><strong>直线与椭圆的位置关系</strong>：<br />
+  设直线 $l: y=kx+m$，椭圆 $C: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$，联立消元得一元二次方程 $Ax^2+Bx+C=0$，判别式 $\Delta = B^2-4AC$。  </li>
+<li>$\Delta&gt;0 \iff$ 相交（两个交点）；  </li>
+<li>$\Delta=0 \iff$ 相切；  </li>
+<li>$\Delta&lt;0 \iff$ 相离。<br />
+  解题中必须保证 $\Delta&gt;0$ 以确认交点存在（否则所有推导可能无意义）。</li>
+<li><strong>弦长公式</strong>：<br />
+  若直线 $y=kx+m$ 与椭圆相交于 $A(x_1,y_1), B(x_2,y_2)$，则<br />
+  $$|AB|=\sqrt{1+k^2}|x_1-x_2|=\sqrt{1+k^2}\cdot\frac{\sqrt{\Delta}}{|A|}.$$</li>
+<li><strong>中点弦与点差法</strong>：<br />
+  设 $A(x_1,y_1), B(x_2,y_2)$ 在椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 上，弦 $AB$ 中点 $M(x_0,y_0)$，则<br />
+  $$k_{AB}\cdot k_{OM} = -\frac{b^2}{a^2},$$<br />
+  其中 $O$ 为坐标原点。此结论仅当直线 $AB$ 存在斜率且 $M$ 非中心时成立，且必须先确保 $\Delta&gt;0$。</li>
+<li><strong>焦点三角形面积</strong>：<br />
+  椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 上一点 $P$，$F_1,F_2$ 为焦点，$\angle F_1PF_2=\theta$，则<br />
+  $$S_{\triangle F_1PF_2}=b^2\tan\frac{\theta}{2}.$$<br />
+  对于以焦点和一条弦构成的三角形，常将面积转化为弦所在直线的函数或利用同底等高关系。</li>
+<li><strong>点到直线的距离</strong>：<br />
+  点 $(x_0,y_0)$ 到直线 $Ax+By+C=0$ 的距离 $d=\dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。<br />
+  在面积比问题中，等高同底三角形面积比转化为对应高（距离）之比，是简化计算的关键。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>联立方程 + 韦达定理</strong>  </li>
+<li>设直线方程（优先设 $y=kx+m$ 或 $x=ty+n$，视斜率存在性而定）。  </li>
+<li>联立椭圆与直线方程，消元得一元二次方程，写出判别式 $\Delta&gt;0$（求出参数范围）。  </li>
+<li>利用韦达定理写出 $x_1+x_2, x_1x_2$（或 $y_1+y_2,y_1y_2$），并据此表示目标量（弦长、面积、向量等）。</li>
+<li><strong>面积比与长度比的转化</strong>  </li>
+<li>同底（等底）三角形面积比 $\Leftrightarrow$ 高（点到直线距离）之比。  </li>
+<li>共边或共顶点的三角形面积比，可转化为线段比或通过坐标表示。  </li>
+<li>遇到“面积是几倍”的条件，先画出公共边或公共顶点，将面积关系转化为距离或长度方程。</li>
+<li><strong>中点弦与定值问题</strong>  </li>
+<li>出现“弦的中点”优先想到点差法：两式相减得斜率与中点坐标的关系。  </li>
+<li>证明斜率乘积为定值：设直线 $l: y=kx+b$，联立求出中点坐标 $M$，再求出 $k_{OM}$，相乘化简消去 $b$。注意 $b$ 不过原点且不平行坐标轴时保证没有退化。</li>
+<li><strong>直线过定点问题</strong>  </li>
+<li>设直线含参数（如 $y=kx+m$），通过题设条件（韦达定理、向量关系、斜率关系等）得到参数间的线性关系 $m=f(k)$ 或常数关系。  </li>
+<li>将参数关系代入直线方程，分离含参部分，令参数系数为零，解出定点坐标。  </li>
+<li>也可先利用对称性或特殊位置猜测定点，再回头证明一般情形。</li>
+<li><strong>未知标准方程的椭圆</strong>  </li>
+<li>已知椭圆中心在原点，对称轴为坐标轴，可设一般方程 $mx^2+ny^2=1 \ (m&gt;0,n&gt;0,m\neq n)$。  </li>
+<li>代入两点的坐标即可求解 $m,n$，再化为标准形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略判别式</strong><br />
+  联立后直接使用韦达定理而不验证 $\Delta&gt;0$，导致求出的参数范围不准确或存在多解未舍去。任何直线与椭圆相交问题，必须先求或后检验 $\Delta&gt;0$。</li>
+<li><strong>距离公式去绝对值出错</strong><br />
+  在面积比 $|m-\sqrt{2}|/|m+\sqrt{2}|=2$ 等式中，忽略绝对值直接平方可能得到增根，也可能漏掉分类讨论。必须平方后检验，或根据已知范围判定正负。</li>
+<li><strong>设直线忽视斜率不存在</strong><br />
+  点斜式 $y-y_0=k(x-x_0)$ 不能表示垂直于 $x$ 轴的直线。若题目不排除此类情况，需单独讨论 $x=x_0$ 的情形。</li>
+<li><strong>点差法使用条件不清</strong><br />
+  点差法运用的前提是直线与椭圆有两个不同交点（$\Delta&gt;0$），且中点不是原点（对定点定值）。学生常直接代结论，忽视存在性验证。</li>
+<li><strong>向量关系误用</strong><br />
+  “$\overrightarrow{MT}=\overrightarrow{TH}$”意味着 $T$ 是 $MH$ 的中点，而非 $M,T,H$ 共线即可，必须正确翻译为坐标关系：$x_T=\frac{x_M+x_H}{2},\ y_T=\frac{y_M+y_H}{2}$。</li>
+<li><strong>定点定值问题化简复杂致错</strong><br />
+  参数较多时，根与系数的关系代入后化简容易出错。建议先整体代入，不急着展开，利用“消参找常数”的方法逐步进行。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> （2023新课标Ⅱ-05）</h3>
+<p>已知椭圆 $C: \frac{x^2}{3}+y^2=1$ 的左、右焦点分别为 $F_1,F_2$，直线 $y=x+m$ 与 $C$ 交于 $A,B$ 两点。若 $\triangle F_1AB$ 面积是 $\triangle F_2AB$ 面积的 $2$ 倍，求 $m$。</p>
+<p><strong>思路</strong><br />
+两个三角形公共底边 $AB$，面积比即两个焦点到直线 $AB$ 的距离之比。由距离之比列出关于 $m$ 的方程，解之，再结合 $\Delta&gt;0$ 确定最终答案。</p>
+<p><strong>步骤</strong><br />
+1. 椭圆中 $a^2=3,b^2=1$，则 $c=\sqrt{2}$，焦点 $F_1(-\sqrt{2},0),\ F_2(\sqrt{2},0)$。<br />
+2. 直线 $y=x+m$ 即 $x-y+m=0$。<br />
+   $F_1$ 到直线的距离 $d_1=\frac{|-\sqrt{2}+m|}{\sqrt{2}}$，<br />
+   $F_2$ 到直线的距离 $d_2=\frac{|\sqrt{2}+m|}{\sqrt{2}}$。<br />
+3. 由 $S_{\triangle F_1AB}=2S_{\triangle F_2AB}$ 及同底得 $\frac{d_1}{d_2}=2$，即 $|m-\sqrt{2}|=2|m+\sqrt{2}|$。<br />
+   平方整理：$m^2-2\sqrt{2}m+2=4(m^2+2\sqrt{2}m+2) \Rightarrow 3m^2+10\sqrt{2}m+6=0$。<br />
+   解得 $m=-3\sqrt{2}$ 或 $m=-\frac{\sqrt{2}}{3}$。<br />
+4. 检验相交条件：联立 $\begin{cases} y=x+m \ \frac{x^2}{3}+y^2=1 \end{cases}$ 消 $y$ 得 $\frac{4}{3}x^2+2mx+m^2-1=0$，<br />
+   $\Delta = 4m^2-4\cdot\frac{4}{3}(m^2-1)=\frac{4}{3}(4-m^2)&gt;0 \Rightarrow m^2&lt;4$。<br />
+   故 $m=-3\sqrt{2}$（$m^2=18&gt;4$）舍去，$m=-\frac{\sqrt{2}}{3}\in(-2,2)$ 符合。</p>
+<p><strong>点评/变式</strong><br />
+- 关键转化为距离比，避免计算弦长再求面积。<br />
+- 注意绝对值处理与判别式检验，这是高频失分点。<br />
+- 变式：若改为面积之和或之差为定值，同样先转化为距离关系。</p>
+<h3><strong>题目</strong> （2022文-21 改编）</h3>
+<p>已知椭圆 $E$ 的中心在原点，对称轴为坐标轴，且过 $A(0,-2),\ B\Big(\frac{3}{2},-1\Big)$。求 $E$ 的方程。</p>
+<p><strong>思路</strong><br />
+用待定系数法设一般方程 $mx^2+ny^2=1\ (m&gt;0,n&gt;0,m\neq n)$，代入两点坐标解出 $m,n$，再化为标准形式。</p>
+<p><strong>步骤</strong><br />
+1. 设椭圆方程为 $mx^2+ny^2=1$。<br />
+2. 代入 $A(0,-2)$：$4n=1 \Rightarrow n=\frac14$。<br />
+3. 代入 $B\Big(\frac{3}{2},-1\Big)$：$m\cdot\frac94 + n\cdot1 =1$，即 $\frac94 m + \frac14 =1 \Rightarrow \frac94 m = \frac34 \Rightarrow m=\frac13$。<br />
+4. 椭圆方程为 $\frac13 x^2 + \frac14 y^2 =1$，即标准式 $\frac{x^2}{3}+\frac{y^2}{4}=1$。注意到 $a^2=4,b^2=3$，焦点在 $y$ 轴。</p>
+<p><strong>点评/变式</strong><br />
+- 设 $mx^2+ny^2=1$ 可避免讨论焦点在哪个轴，运算更直接。<br />
+- 若已知椭圆离心率和一点，可结合 $a^2=b^2+c^2,\ e=c/a$ 等列方程组。<br />
+- 本题为后续定点问题铺垫，求对标准方程是第一步。</p>
+<h3><strong>题目</strong> （2022理-20(2)）</h3>
+<p>椭圆 $E: \frac{y^2}{4}+\frac{x^2}{3}=1$（由前问得），过点 $P(1,-2)$ 的直线交 $E$ 于 $</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-05.html">2023-新课标Ⅱ-05</a>（2023 · 中） 直线与椭圆联立，通过判别式求参数范围，结合三角形面积比解出参数值。</li>
+<li><a href="../../exam/数学/2022-文-21.html">2022-文-21</a>（2022 · 中） 考查椭圆标准方程的求解以及直线与椭圆相交的综合问题。</li>
+<li><a href="../../exam/数学/2022-理-20.html">2022-理-20</a>（2022 · 中） 求椭圆标准方程，并讨论直线与椭圆相交问题，含斜率存在性分类讨论</li>
+<li><a href="../../exam/数学/2016-文-21.html">2016-文-21</a>（2016 · 中） 本题主要考查椭圆与直线的位置关系，通过几何条件求三角形面积并证明参数不等式。</li>
+<li><a href="../../exam/数学/2015-文-20.html">2015-文-20</a>（2015 · 中） 已知椭圆离心率和一点求标准方程，并证明中点弦斜率乘积为定值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直线与椭圆的位置关系</a></li>
+</ul>
+</div>
+</body>
+</html>

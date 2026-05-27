@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>交线性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>交线性质</h1><div class="review-mark" data-stem="交线性质"></div><div class="meta-card"><span><strong>考点</strong>交线性质</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平面法向量</strong>：若直线 $m \perp \alpha$，则 $m$ 的方向向量即为平面 $\alpha$ 的一个法向量。  </li>
+<li><strong>平面交线方向</strong>：设平面 $\alpha,\beta$ 不平行，其交线 $c$ 同时位于两平面内。因此 $c$ 的方向向量 $\vec{c}$ 既垂直于 $\alpha$ 的法向量 $\vec{n}<em>\alpha$，又垂直于 $\beta$ 的法向量 $\vec{n}</em>\beta$，即 $\vec{c} \parallel \vec{n}<em>\alpha \times \vec{n}</em>\beta$。  </li>
+<li><strong>线线垂直的传递</strong>：若直线 $l \perp m$ 且 $l \perp n$，且 $m,n$ 不平行，则 $l$ 的方向向量垂直于 $m,n$ 所张成的平面的法向量（即 $l \parallel \vec{m} \times \vec{n}$）。异面直线同样适用，因为方向向量可自由平移。  </li>
+<li><strong>异面直线的“公垂线”方向</strong>：两条异面直线 $m,n$ 的公垂线方向为 $\vec{m} \times \vec{n}$。  </li>
+<li><strong>结合导出</strong>：若 $m \perp \alpha$、$n \perp \beta$，且 $m,n$ 异面（方向不平行），则 $\alpha$ 与 $\beta$ 必相交，交线方向平行于 $m,n$ 的公垂线方向。若另有直线 $l$ 满足 $l \perp m$ 且 $l \perp n$，则 $l$ 平行于该交线。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>翻译条件为法向量</strong><br />
+   由“直线垂直于平面”直接得到直线的方向向量就是该平面的法向量。设 $m \perp \alpha$，$n \perp \beta$，则 $\vec{m}$ 为 $\alpha$ 的法向量，$\vec{n}$ 为 $\beta$ 的法向量。</p>
+</li>
+<li>
+<p><strong>判断平面位置关系</strong><br />
+   若 $\vec{m} \nparallel \vec{n}$，则 $\alpha$ 与 $\beta$ 相交（不平行）。特别地，若 $\vec{m} \perp \vec{n}$ 则平面垂直。</p>
+</li>
+<li>
+<p><strong>确定交线方向</strong><br />
+   交线 $c$ 的方向向量取 $\vec{c} = \vec{m} \times \vec{n}$（或非零倍数）。</p>
+</li>
+<li>
+<p><strong>解译直线 $l$ 的方向</strong><br />
+   由 $l \perp m$ 且 $l \perp n$，可知 $l$ 的方向向量 $\vec{l}$ 同时垂直于 $\vec{m}$ 与 $\vec{n}$，故 $\vec{l} \parallel \vec{m} \times \vec{n}$。</p>
+</li>
+<li>
+<p><strong>建立 $l$ 与交线的关系</strong><br />
+   比较 $\vec{l}$ 与 $\vec{c}$：两者方向相同，因此 $l$ 与交线平行（或异面平行）。注意检查 $l$ 是否在 $\alpha$ 或 $\beta$ 内（本题 $l \not\subset \alpha, l \not\subset \beta$ 保证 $l$ 不与交线重合）。</p>
+</li>
+<li>
+<p><strong>排除干扰项</strong><br />
+   所有涉及“$\alpha \parallel \beta$”“$l \perp \beta$”“交线垂直于 $l$”的选项，均可通过向量关系直接排除。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用“异面”为“垂直”</strong>：异面直线只说明不共面、不平行，不一定垂直。不能把“异面”当“垂直”用去推导 $\alpha \perp \beta$。  </li>
+<li><strong>混淆线线垂直与线面垂直的传递方向</strong>：由 $l \perp m$ 和 $l \perp n$ 只能得到 $l$ 垂直于 $m,n$ 的方向向量张成的平面，而不能随意声称 $l \parallel \alpha$ 或 $l \perp \beta$。  </li>
+<li><strong>错误认定交线与 $l$ 垂直</strong>：交线的方向是 $\vec{m} \times \vec{n}$，而 $l$ 的方向也是 $\vec{m} \times \vec{n}$，两者平行而非垂直。常因空间想象失误误选 C 项。  </li>
+<li><strong>忽视 $l \not\subset \alpha, l \not\subset \beta$ 条件</strong>：此条件排除了 $l$ 恰为交线的可能性，从而明确 $l$ 与交线是“平行（异面平行）”而非“重合”。若不注意，可能在 $\alpha \parallel \beta$ 或 $\alpha$ 与 $\beta$ 重合时产生混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2013 理·04）</h3>
+<p>已知 $m,n$ 为异面直线，$m \perp \alpha$，$n \perp \beta$。直线 $l$ 满足 $l \perp m$，$l \perp n$，且 $l \not\subset \alpha$，$l \not\subset \beta$，则正确的选项是（ ）</p>
+<p>A．$\alpha \parallel \beta$ 且 $l \parallel \alpha$<br />
+B．$\alpha \perp \beta$ 且 $l \perp \beta$<br />
+C．$\alpha$ 与 $\beta$ 相交，且交线垂直于 $l$<br />
+D．$\alpha$ 与 $\beta$ 相交，且交线平行于 $l$</p>
+<p><strong>思路</strong>：<br />
+将线面垂直转化为法向量；利用 $m,n$ 异面（方向不平行）推出两平面必相交；再通过 $l$ 同时垂直于 $m,n$ 得到 $l$ 的方向恰为两法向量叉积的方向，即交线方向，从而得出 $l$ 平行于交线。</p>
+<p><strong>步骤</strong>：<br />
+1. 由 $m \perp \alpha$ 得 $\vec{m}$ 是 $\alpha$ 的法向量；由 $n \perp \beta$ 得 $\vec{n}$ 是 $\beta$ 的法向量。<br />
+2. 因为 $m,n$ 为异面直线，它们的方向向量 $\vec{m}, \vec{n}$ 不平行，所以 $\alpha$ 与 $\beta$ 不平行（必相交），排除 A。<br />
+3. $\alpha$ 与 $\beta$ 的交线 $c$ 的方向向量 $\vec{c} \parallel \vec{m} \times \vec{n}$。<br />
+4. 由 $l \perp m$ 且 $l \perp n$，知 $\vec{l}$ 同时垂直于 $\vec{m}$ 与 $\vec{n}$，故 $\vec{l} \parallel \vec{m} \times \vec{n}$。<br />
+5. 因此 $\vec{l} \parallel \vec{c}$，即 $l$ 平行于交线。由 $l \not\subset \alpha, l \not\subset \beta$ 可知 $l$ 为交线的平行线（可异面）。<br />
+6. 选项 D 正确。C 错误。B 中无法保证 $\vec{m} \perp \vec{n}$，故 $\alpha \perp \beta$ 不一定成立。</p>
+<p><strong>点评/变式</strong>：<br />
+本题的结论可概括为：<strong>若两平面的垂线异面，则两平面相交，且任一同时垂直于这两条垂线的直线必平行于两平面的交线</strong>。变式训练可尝试将条件改为“$m \subset \alpha, n \subset \beta$”或“$l$ 为某一直线”，考察线面平行、垂直的判定，强化用法向量与叉积处理交线问题的思想。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-04.html">2013-理-04</a>（2013 · 中） 已知m,n为异面直线且分别垂直平面α,β，直线l同时垂直m,n且不在平面内，推断面面关系及交线与l的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">交线性质</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计估计</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>统计估计</h1><div class="review-mark" data-stem="统计估计"></div><div class="meta-card"><span><strong>考点</strong>统计估计</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>频率分布直方图</strong><br />
+  横轴表示数据分组，纵轴表示 $\frac{\text{频率}}{\text{组距}}$。<br />
+  每个小矩形的面积 $=$ 组距 $\times \frac{\text{频率}}{\text{组距}} =$ 该组的频率。<br />
+  所有小矩形面积之和等于 $1$。<br />
+  用样本估计总体时：</li>
+<li>众数：最高矩形底边中点的横坐标。</li>
+<li>中位数：使直方图左右两侧面积各为 $0.5$ 的横坐标，需按面积比例插值。</li>
+<li>平均数：$\bar{x} \approx \sum_{i=1}^{n} x_i p_i$，其中 $x_i$ 为第 $i$ 组组中值，$p_i$ 为该组频率。</li>
+<li><strong>频数分布表</strong><br />
+  给出各组频数，频率 $= \frac{\text{频数}}{\text{样本容量}}$，可据此绘制频率分布直方图，组距通常自行设定或由题目给定。</li>
+<li><strong>核心思想</strong><br />
+  用样本的频率分布估计总体分布，用样本的数字特征（如平均数、中位数、方差）估计总体的数字特征。比较两个样本时，既要比较集中趋势（平均数、中位数），也可比较离散程度（方差、标准差）或分布形状。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读图与制表</strong>  </li>
+<li>从频率分布直方图中读出各组的 $\frac{\text{频率}}{\text{组距}}$，乘以组距得到频率，再乘以样本容量可得频数。</li>
+<li>由频数分布表计算频率 $\left(\frac{\text{频数}}{\text{总数}}\right)$，再除以组距得到直方图的纵坐标，完成直方图绘制。</li>
+<li><strong>数字特征的估计</strong>  </li>
+<li>众数直接看最高矩形。</li>
+<li>中位数：先确定中位数所在的组（累计频率首次 $\geq 0.5$ 的组），再利用面积插值：<br />
+     设中位数所在组下限为 $L$，组距为 $d$，该组频率为 $p$，前几组累计频率为 $F$，则<br />
+     $$ \text{中位数} \approx L + \frac{0.5 - F}{p} \times d $$</li>
+<li>平均数：取各组组中值 $x_i$，乘以频率 $p_i$ 再求和，即 $\bar{x} = \sum x_i p_i$。</li>
+<li><strong>多组数据的比较</strong>  </li>
+<li>集中趋势：比较平均数或中位数，数值大的一般表示满意度的平均水平更高。</li>
+<li>离散程度：观察直方图的“胖瘦”，数据越集中则方差越小，也可通过计算方差 $s^2 = \sum (x_i - \bar{x})^2 p_i$ 精确比较。</li>
+<li>稳定性：标准差越小，数据越稳定。</li>
+<li><strong>由样本推断总体</strong><br />
+   由于是随机抽样，可用样本数字特征回答总体相关问题，注意表述应为“估计该地区……的平均数为……”，不能去掉“估计”二字。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆纵坐标的含义</strong><br />
+  频率分布直方图纵坐标是 $\frac{\text{频率}}{\text{组距}}$，不是频率。错把纵坐标直接当作频率会导致后续面积计算及数字特征估计全部出错。</li>
+<li><strong>中位数插值公式误用</strong><br />
+  使用面积比例插值时，分母应为中位数所在组的频率，而不是频数；累计频率 $F$ 必须是“前几组频率之和”，漏算或错算都会导致结果偏差。</li>
+<li><strong>平均数计算时组中值取错</strong><br />
+  组中值应为每组上下限的平均值，开区间需注意连续数据的边界规定，尤其第一组和最后一组若存在半开半闭须按实际数据范围取中点。</li>
+<li><strong>将频数当作频率</strong><br />
+  用频数分布表直接计算平均数时忘记除以总频数，导致结果放大数十倍。</li>
+<li><strong>忽略估计的非精确性</strong><br />
+  用直方图或样本数据给出的数字特征都是估计值，答题时缺少“大约”“估计”等字眼可能被扣分。比较两个总体时必须注意抽样误差，不可绝对化。</li>
+<li><strong>对比时只看平均数</strong><br />
+  仅凭平均数比较两组数据可能掩盖分布的差异，应结合中位数、方差以及直方图形状综合判断。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015 全国卷 文科数学）<br />
+某公司调查 A，B 两地区用户对产品的满意度，分别随机抽取 40 个用户。给出 A 地区满意度评分的频率分布直方图（评分范围 $[50,100]$，组距 $10$）和 B 地区满意度评分的频数分布表（同样分组）。<br />
+(1) 根据 B 地区的频数分布表作出频率分布直方图；<br />
+(2) 估计 A 地区满意度评分的平均数和中位数；<br />
+(3) 根据样本数据，比较 A，B 两地区满意度评分的集中趋势与离散程度。</p>
+<p><strong>思路</strong><br />
+(1) B 表→频率→直方图纵坐标；<br />
+(2) A 直方图→各矩形的面积（频率）→组中值→平均数；中位数按面积插值；<br />
+(3) 借助平均数比较集中趋势，借助直方图的“分散度”或计算方差比较离散程度。</p>
+<p><strong>步骤</strong><br />
+1. 由 B 频数表计算各组的频率 $p_i = \frac{\text{频数}}{40}$，再除以组距 $10$ 得到直方图纵坐标，描点作矩形。<br />
+2. 读 A 直方图：各组频率依次记为 $p_1, p_2, \dots, p_5$（面积），组中值依次为 $55,65,75,85,95$。则<br />
+   $$ \bar{x}_A = 55p_1 + 65p_2 + 75p_3 + 85p_4 + 95p_5 $$<br />
+3. 找中位数：计算累计频率，当累计频率首次 $\geq 0.5$ 时，该组下限 $L$，前几组累计频率 $F$，该组频率 $p$，代入插值公式。<br />
+4. 同法得 B 的平均数 $\bar{x}_B$，直方图对比：若 B 的矩形更高且更集中在中部，说明 B 的满意度集中趋势可能接近 A，但离散程度小（因为频率更集中）。可补充计算方差 $s^2 = \sum (x_i - \bar{x})^2 p_i$ 精确说明。</p>
+<p><strong>点评/变式</strong><br />
+本题是统计估计的经典考法，融直方图、频数表、数字特征于一体。<br />
+变式常将频率分布直方图与茎叶图、折线图结合，或要求估计总体中满意度评分在某一区间的人数。<br />
+应对关键：牢记面积代表频率，数字特征本质是“加权平均”；比较时遵循“集中趋势→离散程度→实际意义”的逻辑链条，确保语言严谨。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-18.html">2015-文-18</a>（2015 · 中） 根据频率分布直方图和频数分布表分析用户满意度数据，考查统计图表的理解与基本数据处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">统计估计</a></li>
+</ul>
+</div>
+</body>
+</html>

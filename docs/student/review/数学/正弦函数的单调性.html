@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数的单调性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数的单调性</h1><div class="review-mark" data-stem="正弦函数的单调性"></div><div class="meta-card"><span><strong>考点</strong>正弦函数的单调性</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：11</li>
+<li>真题数：5；年份跨度：2011–2018</li>
+<li>出现题位：选择9 选择10 选择11</li>
+<li>难度分布：中4 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>正弦函数的单调性</strong><br />
+   标准正弦函数 $y = \sin x$ 在一个周期内的单调区间为：  </li>
+<li>单调递增区间：$[-\frac{\pi}{2} + 2k\pi, \frac{\pi}{2} + 2k\pi], k \in \mathbb{Z}$  </li>
+<li>单调递减区间：$[\frac{\pi}{2} + 2k\pi, \frac{3\pi}{2} + 2k\pi], k \in \mathbb{Z}$  </li>
+</ol>
+<p>此性质是求解复合正弦型函数 $y = A\sin(\omega x + \varphi)$（其中 $A \neq 0, \omega &gt; 0$）单调性的基础。</p>
+<ol>
+<li>
+<p><strong>复合正弦函数的单调区间求解</strong><br />
+   对于 $y = A\sin(\omega x + \varphi)$（设 $A &gt; 0, \omega &gt; 0$），先写出 $u = \omega x + \varphi$，再套用 $y = \sin u$ 的单调性条件，最后解出 $x$ 的范围。  </p>
+</li>
+<li>
+<p>求增区间：令 $-\frac{\pi}{2} + 2k\pi \le \omega x + \varphi \le \frac{\pi}{2} + 2k\pi, k \in \mathbb{Z}$  </p>
+</li>
+<li>求减区间：令 $\frac{\pi}{2} + 2k\pi \le \omega x + \varphi \le \frac{3\pi}{2} + 2k\pi, k \in \mathbb{Z}$  </li>
+</ol>
+<p>若 $A &lt; 0$，函数单调性与 $A &gt; 0$ 时相反。此时可先用诱导公式将负号化到相位中，或直接反向套用不等式。</p>
+<ol>
+<li><strong>引入 $\cos x$ 的辅助角公式</strong><br />
+   形如 $a\sin x + b\cos x$ 的函数，必须统一函数名才能使用单调性。化简公式为：<br />
+   $$a\sin\alpha \pm b\cos\alpha = \sqrt{a^2+b^2}\sin(\alpha \pm \varphi)$$<br />
+   其中 $\tan\varphi = \frac{b}{a}$，$\varphi$ 所在象限由 $a, b$ 的符号确定。这是真题中最高频的前置化简动作。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>函数名与结构统一</strong><br />
+   若函数含 $\sin$ 和 $\cos$ 的线性组合，优先用辅助角公式合并为 $A\sin(\omega x + \varphi)$ 或 $A\cos(\omega x + \varphi)$ 的标准形式。若形式为 $\cos x - \sin x$，常提取负号化为 $-\sin(x - \frac{\pi}{4})$ 处理。</p>
+</li>
+<li>
+<p><strong>整体代换求区间</strong><br />
+   将括号内的角整体视为 $u$，利用标准正弦函数的单调区间建立不等式，再解出 $x$ 的范围。这一步务必指定整数 $k$，并理解所得的是一系列互不重叠的单调区间族。</p>
+</li>
+<li>
+<p><strong>给定子区间的含参处理</strong><br />
+   若已知函数在某个具体区间 $[m, n]$ 上单调，则该区间必须是求出的理论单调区间的子集。通过比较区间端点的大小关系，建立关于参数（通常为 $\omega$ 或 $a$）的不等式，求其最大值或取值范围。</p>
+</li>
+<li>
+<p><strong>特殊值排除法</strong><br />
+   遇到求参数范围的复杂选择题时，可在参数允许范围内选取特殊值（如 $\omega = 1, 2$）代入检验单调性，快速排除错误选项。此法在真题的"压轴题"解法中直接出现。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忽视 $\omega$ 的影响</strong><br />
+  在求 $\sin(\omega x + \varphi)$ 的单调区间时，解出 $x$ 时不等式两边要同时除以 $\omega$ 并变号（若 $\omega &lt; 0$）。常犯错误是忘记变换不等号方向或忘记除以 $\omega$。</p>
+</li>
+<li>
+<p><strong>辅助角化简符号错乱</strong><br />
+  化简 $\cos x - \sin x$ 时易直接写成 $\sin(x - \frac{\pi}{4})$，漏掉整体负号。正确应为 $-\sin(x - \frac{\pi}{4})$ 或 $\sqrt{2}\cos(x + \frac{\pi}{4})$，符号错误将导致单调性完全相反。</p>
+</li>
+<li>
+<p><strong>混淆复合函数的单调性</strong><br />
+  $y = A\sin(\omega x + \varphi)$ 中，当 $A &lt; 0$ 时，增区间和减区间对调。许多学生强行记忆“正弦增减”而忽略振幅符号，导致整题方向性错误。</p>
+</li>
+<li>
+<p><strong>忽略周期性带来的多区间选择</strong><br />
+  由 $k \in \mathbb{Z}$ 求出的单调区间有无数个。在限定定义域（如 $[0, a]$）时，必须选择能与给定区间重叠或包含它的那个特定 $k$ 值（常为 $k = 0$），取错 $k$ 值会得到错误参数范围。</p>
+</li>
+<li>
+<p><strong>开闭区间不敏感</strong><br />
+  单调性在闭区间讨论，平移后端点包含与否可能影响参数的“最大值”是否能取等号。如真题求 $a$ 的最大值，关键就是判断 $a \le \frac{3\pi}{4}$ 能否取等。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> (2018-文-10)：若 $f(x) = \cos x - \sin x$ 在 $[0, a]$ 上为减函数，求 $a$ 的最大值。<br />
+<strong>思路</strong><br />
+本题目标是为有限区间 $[0, a]$ 匹配单调性。首先将函数化为单一正弦型，然后求出该函数全局的单调递减区间族，最后让已知区间 $[0, a]$ 成为其中某个减区间的子集，进而锁定 $a$ 的边界。<br />
+<strong>步骤</strong><br />
+1. 化简函数：<br />
+   $$f(x) = \cos x - \sin x = -(\sin x - \cos x) = -\sqrt{2}\sin(x - \frac{\pi}{4})$$<br />
+   可以写成 $f(x) = \sqrt{2}\sin(x + \frac{3\pi}{4})$，但负号形式更易处理单调性。由于系数为负，$f(x)$ 的减区间对应 $\sin(x - \frac{\pi}{4})$ 的增区间。<br />
+2. 令 $-\frac{\pi}{2} + 2k\pi \le x - \frac{\pi}{4} \le \frac{\pi}{2} + 2k\pi, k \in \mathbb{Z}$<br />
+3. 解得 $-\frac{\pi}{4} + 2k\pi \le x \le \frac{3\pi}{4} + 2k\pi$。<br />
+4. 取 $k=0$，得距原点最近的减区间为 $[-\frac{\pi}{4}, \frac{3\pi}{4}]$。<br />
+5. 为使 $[0, a]$ 单调递减，必须有 $[0, a] \subseteq [-\frac{\pi}{4}, \frac{3\pi}{4}]$。据此得到 $a \le \frac{3\pi}{4}$，故 $a$ 的最大值为 $\frac{3\pi}{4}$。<br />
+<strong>点评/变式</strong><br />
+本题是固定区间反求参数的典型。注意“$a$ 的最大值”能够取到等号，因为当 $a = \frac{3\pi}{4}$ 时，$[0, a]$ 确为原函数减区间的子区间。若题目换为求 $a$ 的取值范围，同样不能遗漏这个等号。</p>
+<p><strong>题目</strong> (2018-理-10)：若 $f(x) = \cos x - \sin x$ 在 $[-a, a]$ 上为减函数，求 $a$ 的最大值。<br />
+<strong>思路</strong><br />
+与文科题解法完全一致，区别仅为已知区间变为对称区间 $[-a, a]$。同样需先化简函数、求全局减区间，再让区间包含在减区间内。由于区间是对称的，求出的 $a$ 值会相应变化。<br />
+<strong>步骤</strong><br />
+1. 同文科题，$f(x) = -\sqrt{2}\sin(x - \frac{\pi}{4})$，其减区间族为 $[-\frac{\pi}{4} + 2k\pi, \frac{3\pi}{4} + 2k\pi], k \in \mathbb{Z}$。<br />
+2. 取 $k=0$，减区间为 $[-\frac{\pi}{4}, \frac{3\pi}{4}]$。<br />
+3. 现在需要 $[-a, a] \subseteq [-\frac{\pi}{4}, \frac{3\pi}{4}]$。<br />
+4. 为同时满足 $-a \ge -\frac{\pi}{4}$ 且 $a \le \frac{3\pi}{4}$，得到 $a \le \frac{\pi}{4}$。<br />
+5. 故 $a$ 的最大值为 $\frac{\pi}{4}$。<br />
+<strong>点评/变式</strong><br />
+此题将文科题的端点 $0$ 变为了可移动的 $-a$，对思维习惯有所挑战。必须让整个对称区间完全落在减区间内，是由两端点共同约束得出的更紧致的结果。属于同类题的小幅变式，考查更细致。</p>
+<p><strong>题目</strong> (2012-理-09)：已知 $\omega &gt; 0$，函数 $f(x) = \sin(\omega x + \frac{\pi}{4})$ 在 $[\frac{\pi}{2}, \pi]$ 上单调递减，求 $\omega$ 的取值范围。<br />
+<strong>思路</strong><br />
+此时区间固定，参数 $\omega$ 在角频率位置。可利用“整体代入”思想写出函数单调减区间的通式，由题意区间必须是某一减区间的一部分，由此列出不等式组并借助整数 $k$ 确定参数范围。真题中另有特值排除法可选。<br />
+<strong>步骤</strong><br />
+1. 要求 $f(x)$ 递减，即需 $\frac{\pi}{2} + 2k\pi \le \omega x + \frac{\pi}{4} \le \frac{3\pi}{2} + 2k\pi$。<br />
+2. 解出 $x$ 的范围：$\frac{\frac{\pi}{4} + 2k\pi}{\omega} \le x \le \frac{\frac{5\pi}{4} + 2k\pi}{\omega}$。<br />
+3. 使 $[\frac{\pi}{2}, \pi]$ 为其子区间，必有：<br />
+   $\frac{\frac{\pi}{4} + 2k\pi}{\omega} \le \frac{\pi}{2}$ 且 $\pi \le \frac{\frac{5\pi}{4} + 2k\pi}{\omega}$<br />
+4. 解上述不等式，并结合 $\omega &gt; 0$ 及选择合理整数 $k$（通常取 $k=0$ 或邻近值试算），可得 $\omega \in [\frac{1}{2}, \frac{5}{4}]$。<br />
+<strong>点评/变式</strong><br />
+这是典型的由区间单调求参数 $\omega$ 范围的问题。待定系数在相位内部，必须同时处理两个端点的不等式。掌握特值排除法能快速在考场上验证选项、抢分，但完整推导更能应对填空题或变式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-10.html">2018-文-10</a>（2018 · 中） 本题考查利用两角和差公式化简三角函数，并结合正弦函数的单调性求参数的最大值。</li>
+<li><a href="../../exam/数学/2018-理-10.html">2018-理-10</a>（2018 · 中） 利用正弦函数单调性求参数最大值，通过三角恒等变换化简函数解析式。</li>
+<li><a href="../../exam/数学/2012-理-09.html">2012-理-09</a>（2012 · 难） 本题考查正弦型函数在给定区间内的单调性，通过单调递减条件求参数ω的取值范围。</li>
+<li><a href="../../exam/数学/2011-文-11.html">2011-文-11</a>（2011 · 中） 本题主要考查利用辅助角公式化简三角函数，并判断其对称性与单调性。</li>
+<li><a href="../../exam/数学/2011-理-11.html">2011-理-11</a>（2011 · 中） 本题通过辅助角公式化简三角函数，利用最小正周期和偶函数性质确定参数，进而判断单调区间。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/961-正弦函数的单调性.html">正弦函数的单调性</a></li>
+</ul>
+</div>
+</body>
+</html>

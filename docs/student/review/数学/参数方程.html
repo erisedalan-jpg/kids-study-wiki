@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参数方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>参数方程</h1><div class="review-mark" data-stem="参数方程"></div><div class="meta-card"><span><strong>考点</strong>参数方程</span><span><strong>权重</strong>77</span><span><strong>真题数</strong>13</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：77</li>
+<li>真题数：13；年份跨度：2010–2022</li>
+<li>出现题位：解答22 解答23 选择4</li>
+<li>难度分布：中11 易1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>参数方程与普通方程互化</strong><ul>
+<li><strong>消参方法</strong>：代入消参（由一式解出参数代入另一式）；三角恒等变换消参（如利用 $\sin^2 \theta + \cos^2 \theta = 1$）；代数变换消参（如已知 $x=t+\frac{1}{t}, y=t-\frac{1}{t}$，则 $x^2 - y^2 = 4$）。</li>
+<li><strong>特别注意</strong>：参数方程化为普通方程时，必须<strong>注明 $x, y$ 的取值范围</strong>（即参数对坐标的限制，如 $x \ge 0$，或 $0 \le y \le 1$），否则不是等价变形。</li>
+</ul>
+</li>
+<li><strong>极坐标与直角坐标互化公式</strong><ul>
+<li>互化前提：极点与原点重合，极轴与 $x$ 轴正半轴重合。</li>
+<li>核心公式：$$x = \rho \cos\theta,\quad y = \rho \sin\theta,\quad \rho^2 = x^2 + y^2,\quad \tan\theta = \frac{y}{x}\ (x \neq 0)$$</li>
+<li>常见变形：$\rho = 2a\cos\theta \implies (x-a)^2 + y^2 = a^2$（圆心在 $x$ 轴且过极点的圆）。</li>
+<li>三角展开：$\rho \sin(\theta \pm \frac{\pi}{3}) = \frac{1}{2}\rho \sin\theta \pm \frac{\sqrt{3}}{2}\rho \cos\theta$。</li>
+</ul>
+</li>
+<li><strong>直线参数方程标准式</strong><ul>
+<li>标准式：$\begin{cases} x = x_0 + t\cos\alpha \ y = y_0 + t\sin\alpha \end{cases}$（$t$ 为参数，$\alpha$ 为倾斜角）。</li>
+<li>参数 $t$ 的几何意义：$|t|$ 表示直线上动点到定点 $(x_0, y_0)$ 的距离。</li>
+</ul>
+</li>
+<li><strong>常见曲线</strong><ul>
+<li>圆 $(x-a)^2+(y-b)^2=r^2$ 的参数方程：$\begin{cases} x = a + r\cos\theta \ y = b + r\sin\theta \end{cases}$（$\theta$ 为参数）。</li>
+<li>椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的参数方程：$\begin{cases} x = a\cos t \ y = b\sin t \end{cases}$（$t$ 为参数）。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>极坐标转直角坐标</strong></li>
+<li>遇到含 $\rho, \theta$ 的三角和差公式，先展开（如 $\rho\sin(\theta + \frac{\pi}{3})$），再利用 $x = \rho\cos\theta, y = \rho\sin\theta$ 整体代换，最后化简得到 $Ax+By+C=0$ 形式。</li>
+<li><strong>参数方程求交点</strong></li>
+<li>将曲线参数方程直接代入直线直角坐标方程（或另一曲线方程），转化为关于参数 $t$（或 $\theta$）的三角函数方程。</li>
+<li>核心技巧：<strong>辅助角公式</strong> 处理 $a\sin t + b\cos t$，或利用 $\sin t, \cos t$ 的有界性建立不等式求参数范围。</li>
+<li>若涉及二次项，可利用 $\sin^2 t + \cos^2 t = 1$ 转化为二次函数或判别式问题。</li>
+<li><strong>处理动点轨迹与距离</strong></li>
+<li><strong>向量法</strong>：若 $\overrightarrow{OP} = 2\overrightarrow{OM}$，且 $M$ 在已知曲线上，设参数表达 $M$ 后，$P$ 点坐标直接成比例扩大，消参即得轨迹。</li>
+<li><strong>中点公式</strong>：$M$ 为 $PQ$ 中点，直接用参数表示 $P, Q$ 坐标后，利用中点坐标公式构建 $M$ 的参数方程。</li>
+<li><strong>距离最值</strong>：通常用两点间距离公式化为 $\alpha$ 的三角函数求值域，或利用极坐标下 $\rho$ 的函数求极值（$|AB| = |\rho_1 - \rho_2|$）。</li>
+<li><strong>求极坐标轨迹方程</strong><ul>
+<li>先求出普通方程中的 $x,y$ 关系，再利用互化公式反推 $\rho$ 关于 $\theta$ 的表达式。</li>
+<li>关键要<strong>注意 $\theta$ 的限制范围</strong>（如线段、射线或半圆的限制）。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>消参不完全导致 $x,y$ 范围扩大</strong>：如半圆极坐标 $\rho=2\cos\theta, \theta\in[0,\frac{\pi}{2}]$ 化为普通方程应为 $(x-1)^2+y^2=1$ <strong>且 $0\le y\le 1$</strong>。漏写 $y\ge 0$ 会作为错误处理。</li>
+<li><strong>忽视隐含条件</strong>：参数方程 $\begin{cases} x = t + \frac{1}{t} \ y = t - \frac{1}{t} \end{cases}$ 隐含 $|x| \ge 2$。此类隐含范围是易扣分点。</li>
+<li><strong>极坐标方程与直线垂直混淆</strong>：求切线或垂线时，容易混淆直线斜率和极径斜率。如极坐标方程中，若切线与已知直线垂直，应先转化为直角坐标下的垂直关系（斜率乘积为 $-1$）。</li>
+<li><strong>角度范围忽略</strong>：在极坐标方程求交点或轨迹时，未讨论 $\theta$ 与 $\rho$ 同号的情况，导致出现不在线段上的多余点。</li>
+<li><strong>参数 $t$ 的意义错用</strong>：非标准直线的参数方程（$t$ 的系数平方和不为 1），$|t|$ 不表示长度。只有标准式才有几何意义。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2022-文-22/理-22</h3>
+<ul>
+<li><strong>题目</strong>：曲线 $C: \begin{cases} x = \sqrt{3}\cos 2t \ y = 2\sin t \end{cases}$，直线 $l$ 极坐标方程为 $\rho\sin(\theta+\frac{\pi}{3})+m=0$。（1）求 $l$ 的直角坐标方程；（2）若 $l$ 与 $C$ 有公共点，求 $m$ 范围。</li>
+<li><strong>思路</strong>：极坐标方程核心在于“展开-代换”四字诀。对于公共点问题，需将参数方程代入直角坐标方程，利用三角函数有界性或二次函数值域求解。</li>
+<li><strong>步骤</strong><ol>
+<li><strong>化直</strong>：$\rho\sin(\theta+\frac{\pi}{3}) = \rho(\frac{1}{2}\sin\theta+\frac{\sqrt{3}}{2}\cos\theta) = \frac{1}{2}y + \frac{\sqrt{3}}{2}x$。得 $l: \sqrt{3}x + y + 2m = 0$。</li>
+<li><strong>联立</strong>：代入 $C$，得 $\sqrt{3}(\sqrt{3}\cos 2t) + 2\sin t + 2m = 0$。化简为 $3(1-2\sin^2 t) + 2\sin t + 2m = 0$。</li>
+<li><strong>换元</strong>：令 $u = \sin t \in [-1, 1]$，问题转化为二次函数 $2m = 6u^2 - 2u - 3$ 在 $[-1,1]$ 有解。</li>
+<li><strong>求值域</strong>：对称轴 $u=\frac{1}{6}$，最小值在 $u=\frac{1}{6}$ 处取 $-\frac{19}{6}$；最大值在 $u=-1$ 处取 $5$。故 $-19 \le 2m \le \frac{19}{3}$，即 $m \in [-\frac{19}{12}, \frac{5}{2}]$。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：此题典型陷阱在于 $C$ 方程中 $x$ 是关于 $2t$ 的余弦，需化为 $x=\sqrt{3}(1-2\sin^2 t)$ 实现变量统一。若无法统一参数角度，此题无法解出。</li>
+</ul>
+<h3>代表题 2：2020-理-22</h3>
+<ul>
+<li><strong>题目</strong>：$C_1: \begin{cases} x = 4\cos^2\theta \ y = 4\sin^2\theta \end{cases}$，$C_2: \begin{cases} x = t+\frac{1}{t} \ y = t-\frac{1}{t} \end{cases}$。（1）化为普通方程；（2）求经过极点和 $C_1, C_2$ 交点 $P$ 且圆心在极轴上的圆的极坐标方程。</li>
+<li><strong>思路</strong>：消参时注意取值范围限制。对于过极点的圆，其极坐标方程必为 $\rho = 2R\cos\theta$，求出 $P$ 点坐标即可解得 $R$。</li>
+<li><strong>步骤</strong><ol>
+<li><strong>化普</strong>：$C_1$ 两式相加即得 $x+y=4$，但注意到 $\cos^2\theta, \sin^2\theta \in [0,1]$，故 $x,y \in [0,4]$。</li>
+<li>$C_2$ 利用平方差得 $x^2-y^2=(t+\frac{1}{t})^2 - (t-\frac{1}{t})^2 = 4$，即 $\frac{x^2}{4} - \frac{y^2}{4} = 1$。注意 $|x| \ge 2$。</li>
+<li><strong>求交点</strong>：联立 $\begin{cases} x+y=4 \ x^2-y^2=4 \end{cases}$，解得 $x-y=1$，进而得 $P(\frac{5}{2}, \frac{3}{2})$。</li>
+<li><strong>求极坐标</strong>：设圆极坐标方程 $\rho = 2R\cos\theta$。$P$ 点极径 $\rho_P = \sqrt{(\frac{5}{2})^2+(\frac{3}{2})^2} = \frac{\sqrt{34}}{2}$，极角 $\cos\theta_P = \frac{5/2}{\rho_P}$。代入 $\rho_P = 2R\cos\theta_P$ 得 $2R = \frac{\rho_P}{\cos\theta_P} = \frac{34}{10} = \frac{17}{5}$。故极坐标方程为 $\rho = \frac{17}{5}\cos\theta$。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：本题考查了消参的两种基本方法（加减消元与平方差消元）。求圆的极坐标方程，若能识破“过极点+圆心在极轴”即 $\rho = a\cos\theta$ 的结论，计算量将极大简化。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-22.html">2022-文-22</a>（2022 · 中） 本题考查极坐标方程转化为直角坐标方程，并利用参数方程求参数的取值范围。</li>
+<li><a href="../../exam/数学/2022-理-22.html">2022-理-22</a>（2022 · 中） 极坐标与直角坐标互化，参数方程联立与换元法求参数范围</li>
+<li><a href="../../exam/数学/2020-理-22.html">2020-理-22</a>（2020 · 中） 两曲线C₁、C₂参数方程化为普通方程，再建立极坐标方程，求过原点和C₁C₂交点的圆的极坐标方程。</li>
+<li><a href="../../exam/数学/2019-理-22.html">2019-理-22</a>（2019 · 中） 极坐标系中，点M在曲线ρ=4sinθ上，直线l过A(4,0)且与OM垂直，求垂足P的极坐标方程及轨迹。</li>
+<li><a href="../../exam/数学/2018-文-22.html">2018-文-22</a>（2018 · 易） 考查参数方程化为直角坐标方程的基本方法。</li>
+<li><a href="../../exam/数学/2015-理-23.html">2015-理-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程化为普通方程，并求解两曲线交点及弦长的最大值。</li>
+<li><a href="../../exam/数学/2014-理-23.html">2014-理-23</a>（2014 · 中） 极坐标与参数方程转化，利用切线斜率关系求点的坐标及倾斜角。</li>
+<li><a href="../../exam/数学/2013-文-23.html">2013-文-23</a>（2013 · 中） 已知动点P、Q在参数曲线上，求中点M的轨迹参数方程，并将距离d表示为α的函数，判断轨迹是否过原点。</li>
+<li><a href="../../exam/数学/2013-理-23.html">2013-理-23</a>（2013 · 中） 本题通过参数方程给出两点，求其中点轨迹的参数方程，并判断轨迹是否过原点。</li>
+<li><a href="../../exam/数学/2011-理-23.html">2011-理-23</a>（2011 · 难） 本题考查根据参数方程求轨迹方程，以及在极坐标系下求两曲线交点的极径差。</li>
+<li><a href="../../exam/数学/2010-文-23.html">2010-文-23</a>（2010 · 中） 本题要求对参数方程形式的直线与圆进行方程互化与几何关系分析。</li>
+<li><a href="../../exam/数学/2010-理-04.html">2010-理-04</a>（2010 · 中） 本题通过质点圆周运动模型，考查根据运动参数建立距离关于时间的函数关系并识别其大致图像的能力。</li>
+<li><a href="../../exam/数学/2010-理-23.html">2010-理-23</a>（2010 · 中） 本题考查直线和圆的参数方程交点求解，以及动点轨迹参数方程的建立与曲线类型判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/061-方程.html">参数方程</a></li>
+</ul>
+</div>
+</body>
+</html>

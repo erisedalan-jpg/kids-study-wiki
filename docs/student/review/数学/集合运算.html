@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>集合运算</h1><div class="review-mark" data-stem="集合运算"></div><div class="meta-card"><span><strong>考点</strong>集合运算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：6</li>
+<li>真题数：6；年份跨度：2009–2021</li>
+<li>出现题位：选择1 选择2 选择9</li>
+<li>难度分布：易5 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>集合基本概念</strong>：元素与集合的关系（$\in,\notin$），常用数集 $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}$，集合表示法（列举法、描述法）。</li>
+<li><strong>子集与真子集</strong>：$A\subseteq B$ 表示 $A$ 中元素全在 $B$ 中；$A\subsetneqq B$ 表示 $A\subseteq B$ 且 $A\ne B$。空集 $\varnothing$ 是任何集合的子集。</li>
+<li><strong>集合基本运算</strong>（全集 $U$ 下）：</li>
+<li><strong>交集</strong> $A\cap B={x|x\in A\text{ 且 }x\in B}$。</li>
+<li><strong>并集</strong> $A\cup B={x|x\in A\text{ 或 }x\in B}$。</li>
+<li><strong>补集</strong> $\complement_U A={x|x\in U\text{ 且 }x\notin A}$。</li>
+<li><strong>运算律</strong>：交换律、结合律、分配律；<strong>德摩根律</strong>：$\complement_U (A\cap B)=(\complement_U A)\cup(\complement_U B)$，$\complement_U (A\cup B)=(\complement_U A)\cap(\complement_U B)$。</li>
+<li><strong>集合的“化归”</strong>：很多集合以不等式或方程的解集形式给出，运算前必须先化简，如解一元二次不等式、绝对值不等式、分式不等式等，再用区间或数集表示。</li>
+<li><strong>常用结论</strong>：$A\cap B=A\Leftrightarrow A\subseteq B$；$A\cup B=A\Leftrightarrow B\subseteq A$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定全集、看符号</strong>：先明确全集 $U$（若题目给出），看清求的是 $\cap,\cup,\complement$ 还是混合运算，优先处理括号内。</li>
+<li><strong>化简集合</strong>：对描述法给出的集合，尤其是由不等式、方程定义的，先解出元素（或范围）。</li>
+<li>绝对值不等式 $|x|&gt;a$（$a&gt;0$）$\Leftrightarrow x&gt;a$ 或 $x&lt;-a$；$|x|&lt;a\Leftrightarrow -a&lt;x&lt;a$。</li>
+<li>二次不等式如 $x^2-3x+2\le 0$，因式分解得 $1\le x\le 2$。</li>
+<li>分式不等式如 $\frac{x-a}{x-b}&lt;0$ 转化为整式不等式并注意分母不为零。</li>
+<li><strong>选择表示与工具</strong>：</li>
+<li><strong>有限集</strong>：直接列出元素，通过观察求交、并、补。</li>
+<li><strong>无限连续集（区间）</strong>：画数轴，标注端点（注意空心/实心），直观得出结果。</li>
+<li><strong>混合运算</strong>：若遇 $\complement_U(M\cup N)$ 等，按“先并后补”或利用德摩根律转化为 $\complement_U M\cap\complement_U N$，视情况选择更简捷的路径。</li>
+<li><strong>检查端点与边界</strong>：结果写成集合或区间时，务必确认端点是否可取、是否在全集范围内。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“且”与“或”</strong>：$A\cap B$ 是公共元素（且），$A\cup B$ 是全部元素（或），切勿搞反。</li>
+<li><strong>忽略全集</strong>：求补集时没看清全集 $U$，例如 $U={1,2,3,4,5}$，求 $\complement_U{1,2}$ 写成了 ${3,4,5,6}$ 等。</li>
+<li><strong>描述法理解偏差</strong>：未分清集合的代表元素，如 ${x|y=\sqrt{x}}$ 是定义域集合，并非点集；解不等式方向错误导致集合写反。</li>
+<li><strong>解不等式时的细节丢分</strong>：二次不等式系数化为正时不等号方向错误；分式不等式去分母忘讨论符号；绝对值不等式忘了“或”与“且”的结构。</li>
+<li><strong>漏写边界</strong>：开区间与闭区间用错，特别是一次、二次不等式中的等号。如 $x^2-3x+2\le0$ 解集含有 $1$ 和 $2$，写成 ${x|1&lt;x&lt;2}$ 错误。</li>
+<li><strong>忘记空集情形</strong>：两个没有公共元素的集合的交集是 $\varnothing$，勿漏写或错写成无解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2021-文-01）</h3>
+<p><strong>题目</strong>：已知全集 $U={1,2,3,4,5}$，$M={1,2}$，$N={3,4}$，求 $\complement_U (M\cup N)$。<br />
+<strong>思路</strong>：有限集运算，先求并集再求补集。<br />
+<strong>步骤</strong>：<br />
+$M\cup N={1,2}\cup{3,4}={1,2,3,4}$，<br />
+全集 $U$ 中去掉 ${1,2,3,4}$ 剩余 ${5}$，<br />
+$\therefore \complement_U(M\cup N)={5}$。<br />
+<strong>点评/变式</strong>：注意全集的限定，若忘记全集直接写“无”或写 ${5,6}$ 都是典型错误。变式：若求 $\complement_U M\cap\complement_U N$，用德摩根律得相同结果，验证运算一致性。</p>
+<h3><strong>题目2</strong>（2020-理-01）</h3>
+<p><strong>题目</strong>：已知 $U={-2,-1,0,1,2,3}$，$A={-1,0,1}$，$B={1,2}$，求 $\complement_U(A\cup B)$。<br />
+<strong>思路</strong>：同样先并后补，注意元素不重不漏。<br />
+<strong>步骤</strong>：<br />
+$A\cup B={-1,0,1,2}$，<br />
+全集扣除这些元素，得 ${-2,3}$，<br />
+故结果为 ${-2,3}$。<br />
+<strong>点评/变式</strong>：集合中含有正负数、零，排列易漏。建议有序书写并检查全集元素个数。可变为求 $(\complement_U A)\cap(\complement_U B)$ 或 $A\cap B$ 等，培养混合运算顺序感。</p>
+<h3><strong>题目3</strong>（2014-理-01）</h3>
+<p><strong>题目</strong>：设 $M={0,1,2}$，$N={x|x^2-3x+2\le 0}$，求 $M\cap N$。<br />
+<strong>思路</strong>：先化简描述法集合 $N$，再与有限集 $M$ 取交。<br />
+<strong>步骤</strong>：<br />
+解 $x^2-3x+2\le 0$ 得 $(x-1)(x-2)\le 0\Rightarrow 1\le x\le 2$，即 $N={1,2}$（整数集还是实数集？题目未明确，但 $N$ 与 $M$ 运算时取公共元素，$M$ 为有限整数集，交集由共同整数构成）。<br />
+$M\cap N={0,1,2}\cap{1,2}={1,2}$。<br />
+<strong>点评/变式</strong>：此类题极易漏掉不等式中的等号，错写 $N=(1,2)$ 而漏掉 $1,2$。变式：若 $N$ 改为区间表示，如 $N=[1,2]$，与 $M$ 取交仍为 ${1,2}$，注意区分集合类型，最终交集仍是元素组成。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-01.html">2021-文-01</a>（2021 · 易） 本题考查给定全集下集合的并集与补集运算。</li>
+<li><a href="../../exam/数学/2020-理-01.html">2020-理-01</a>（2020 · 易） 已知全集U={-2,-1,0,1,2,3}及A、B, 求 ∁_U(A∪B)。</li>
+<li><a href="../../exam/数学/2014-理-01.html">2014-理-01</a>（2014 · 易） 本题通过解一元二次不等式求集合N，再计算与集合M的交集。</li>
+<li><a href="../../exam/数学/2010-文-09.html">2010-文-09</a>（2010 · 中） 偶函数性质结合绝对值不等式求解，通过转化再解不等式得到集合范围。</li>
+<li><a href="../../exam/数学/2009-文-01.html">2009-文-01</a>（2009 · 易） 已知全集和两个集合，求并集的补集。</li>
+<li><a href="../../exam/数学/2009-理-02.html">2009-理-02</a>（2009 · 易） 本题通过绝对值不等式与分式不等式求集合的交集，属于基础运算题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1348-集合的基本运算.html">集合运算</a></li>
+</ul>
+</div>
+</body>
+</html>

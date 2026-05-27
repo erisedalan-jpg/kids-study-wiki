@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同角三角函数关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>同角三角函数关系</h1><div class="review-mark" data-stem="同角三角函数关系"></div><div class="meta-card"><span><strong>考点</strong>同角三角函数关系</span><span><strong>权重</strong>23</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：23</li>
+<li>真题数：11；年份跨度：2009–2024</li>
+<li>出现题位：填空13 填空14 填空15 解答15 选择3 选择4 选择6 选择7 选择10 选择11</li>
+<li>难度分布：中5 易6</li>
+</ul>
+<h2>知识精要</h2>
+<p>同角三角函数的基本关系是三角函数恒等变换与求值的基石，其核心内容如下：</p>
+<ol>
+<li><strong>平方关系</strong>：$\sin^2\alpha + \cos^2\alpha = 1$。<ul>
+<li><strong>适用条件</strong>：$\alpha$ 为任意角。</li>
+<li><strong>衍生变形</strong>：$(\sin\alpha \pm \cos\alpha)^2 = 1 \pm 2\sin\alpha\cos\alpha$ （与二倍角公式 $\sin2\alpha = 2\sin\alpha\cos\alpha$ 紧密联系）。</li>
+</ul>
+</li>
+<li><strong>商数关系</strong>：$\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$。<ul>
+<li><strong>适用条件</strong>：$\alpha$ 满足 $\cos\alpha \neq 0$，即 $\alpha \neq \frac{\pi}{2} + k\pi, k \in \mathbb{Z}$。</li>
+<li><strong>衍生变形</strong>：$\sin\alpha = \tan\alpha \cdot \cos\alpha$。</li>
+</ul>
+</li>
+<li><strong>核心思想</strong>：“知一求二”。在已知一个三角函数值及角所在象限（或能够判定符号）的前提下，可通过上述两组关系求出该角的其他三角函数值。其本质是利用方程思想求解。</li>
+<li><strong>与其它公式的联系</strong>：<ul>
+<li><strong>与诱导公式</strong>：实现各象限角的三角函数值向锐角三角函数的转化。</li>
+<li><strong>与两角和差公式</strong>：在同角关系求值后，代入 $\sin(\alpha \pm \beta), \cos(\alpha \pm \beta), \tan(\alpha \pm \beta)$ 等公式进行综合计算。</li>
+<li><strong>与二倍角公式</strong>：二倍角公式（如 $\sin2\alpha = 2\sin\alpha\cos\alpha$, $\cos2\alpha = \cos^2\alpha - \sin^2\alpha$）本身就是同角关系的直接应用和延伸，常与平方关系结合进行化简求值。</li>
+</ul>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>在高考真题中，本考点很少单独出现，多作为解题链的中间环节。通用解法可归纳为以下几个步骤：</p>
+<ol>
+<li><strong>看角定号</strong>：拿到题目，首先确定目标角或已知角的范围（象限）。这是杜绝符号错误的根本。若角所在象限未明确给出，必须分类讨论或通过已知函数值的隐含信息判定。</li>
+<li><strong>选公式定目标</strong>：分析已知条件与需要求解的量之间的联系，选择合适的公式。<ul>
+<li><strong>已知 $\tan\alpha$ 求 $\sin\alpha, \cos\alpha$ 的齐次式</strong>：利用商数关系 $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$ 并结合平方关系，构造分式或方程组求解。</li>
+<li><strong>已知 $\sin\alpha \pm \cos\alpha$ 的值</strong>：优先对该式进行平方，利用平方关系转化为求 $2\sin\alpha\cos\alpha$（即 $\sin2\alpha$），再通过配方等手段求 $\sin\alpha \mp \cos\alpha$，最后由方程组解出 $\sin\alpha$ 和 $\cos\alpha$。</li>
+<li><strong>一般求值问题</strong>：直接运用平方关系 $\sin^2\alpha + \cos^2\alpha = 1$ 进行弦切互化或已知一个值求另一个值。</li>
+</ul>
+</li>
+<li><strong>方程求解</strong>：将第一步确定的符号，代入第二步选择的公式，构建方程或方程组。在利用平方关系开方求解 $\sin\alpha$ 或 $\cos\alpha$ 时，务必根据第一步的符号进行取舍。</li>
+<li><strong>整体代换</strong>：若问题不要求单独求出 $\sin\alpha$ 或 $\cos\alpha$，而是求某个组合式的值（如 $\sin\alpha + \cos\alpha$，$\sin\alpha\cos\alpha$），应优先考虑整体思想，通过完全平方公式或韦达定理等建立联系，避免复杂的分情况讨论和求值。</li>
+</ol>
+<h2>高频易错</h2>
+<p>这些真题暴露的典型失分点，需要高度警惕：</p>
+<ul>
+<li><strong>符号判定错误</strong>：这是最高频错误。在利用平方关系开方时，忽略了角所在的象限，导致三角函数值的正负号判断失误。例如，2013理15题，明确 $\theta$ 为第二象限角，求出的正弦为正、余弦为负，才能正确计算和与积。2009文/理04题，由 $\cot A$ 为负值，可判断 $A$ 为钝角，从而排除 $\cos A$ 为正的选项。</li>
+<li><strong>公式适用条件忽视</strong>：使用商数关系 $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$ 及其变形时，未确保分母不为零（即角 $\alpha$ 的终边不在 $y$ 轴上）。若题目中隐含有条件限制了角的范围，需仔细甄别。</li>
+<li><strong>混淆平方关系与二倍角</strong>：在处理 $(\sin\alpha - \cos\alpha)^2 = 1 - \sin2\alpha$ 或解方程 $2\sin\alpha = \cos\alpha$ 时，部分学生容易在利用 $\sin^2\alpha + \cos^2\alpha = 1$ 消元时出现符号或系数错误。</li>
+<li><strong>三角与二次函数结合型问题的值域忽视</strong>：如2017理14题，将 $\sin^2x$ 转化为 $1-\cos^2x$ 后，转化为关于 $\cos x$ 的二次函数，此时必须严格根据 $x$ 的范围确定中间变量 $t = \cos x$ 的取值范围，然后在此范围内求二次函数的最值。学生常常忽略定义域（这里是三角函数的值域）限制，直接对二次函数取全局最值。</li>
+<li><strong>对“第一象限角”的过度联想</strong>：第一象限角的三角函数值不一定都为最简单的正数。比如2024新课标Ⅱ-13题给出了具体的数值关系，是一个计算题，而不是简单的符号判断题。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p>对下方标【代表题】的 2 道进行精讲。</p>
+<p><strong>题目</strong> 2023-新课标Ⅱ-07：已知 $\alpha$ 为锐角，$\cos\alpha = \frac{1+\sqrt{5}}{4}$，则 $\sin\frac{\alpha}{2} =$ ( )。
+<strong>思路</strong>
+本题要求半角的正弦值，核心思路是利用二倍角公式（或半角公式）搭建已知角 $\alpha$ 的余弦与待求角 $\frac{\alpha}{2}$ 正弦之间的关系。通过设定一个完全平方的形式，可巧妙避开直接开方时的正负号讨论。
+<strong>步骤</strong>
+1.  <strong>建立关系</strong>：由余弦的二倍角公式 $\cos\alpha = 1 - 2\sin^2\frac{\alpha}{2}$，得 $2\sin^2\frac{\alpha}{2} = 1 - \cos\alpha$。
+2.  <strong>代入求值</strong>：将 $\cos\alpha = \frac{1+\sqrt{5}}{4}$ 代入，得 $1 - \cos\alpha = 1 - \frac{1+\sqrt{5}}{4} = \frac{3-\sqrt{5}}{4}$。
+3.  <strong>构造完全平方</strong>：将 $\frac{3-\sqrt{5}}{4}$ 分子分母同乘以2，得 $\frac{6-2\sqrt{5}}{8} = \frac{(\sqrt{5}-1)^2}{8}$。
+4.  <strong>开方定号</strong>：$\sin\frac{\alpha}{2}$ 的表达式为 $\sin\frac{\alpha}{2} = \sqrt{\frac{(\sqrt{5}-1)^2}{16}}$。因为 $\alpha$ 为锐角，则 $\frac{\alpha}{2}$ 也是锐角，其正弦值为正，故 $\sin\frac{\alpha}{2} = \frac{\sqrt{5}-1}{4}$。
+<strong>点评/变式</strong>
+本题的难点在于数值计算和配方技巧。常规思路是半角公式 $\sin\frac{\alpha}{2} = \sqrt{\frac{1-\cos\alpha}{2}}$，直接带入 $\cos\alpha$ 的值会产生复合二次根式，需要配出完全平方式才能化简。这提醒考生在备考中需积累常见的根式化简技巧，如 $(\sqrt{5}-1)^2 = 6-2\sqrt{5}$。</p>
+<p><strong>题目</strong> 2024-新课标Ⅱ-15（节选关键步骤）：记 $\triangle ABC$ 的内角 $A,B,C$ 的对边分别为 $a,b,c$，已知 $\sin A + \sqrt{3}\cos A = 2$。(1) 求 $A$。
+<strong>思路</strong>
+这是一道典型的“同角关系+辅助角公式”综合题。通过辅助角公式将已知等式左边合并为单一三角函数形式，再利用同角三角函数的基本关系与特殊角的三角函数值求解 $A$。
+<strong>步骤</strong>
+1.  <strong>辅助角公式合并</strong>：将 $\sin A + \sqrt{3}\cos A$ 合并为 $2\sin\left(A+\frac{\pi}{3}\right)$。原等式即 $2\sin\left(A+\frac{\pi}{3}\right) = 2$。
+2.  <strong>化简求解</strong>：得到 $\sin\left(A+\frac{\pi}{3}\right) = 1$。
+3.  <strong>同角关系定角</strong>：因为 $A$ 为三角形内角，$A \in (0,\pi)$。那么 $A+\frac{\pi}{3} \in \left(\frac{\pi}{3}, \frac{4\pi}{3}\right)$。在此区间内，使得正弦值为1的角只有 $\frac{\pi}{2}$。
+4.  <strong>得出结论</strong>：所以 $A+\frac{\pi}{3} = \frac{\pi}{2}$，解得 $A = \frac{\pi}{6}$。
+<strong>点评/变式</strong>
+本题将常规的“给值求角”问题嵌入到解三角形的情境中，并综合考查了辅助角公式。角范围的判定是本题的易错点，必须明确角 $A$ 是三角形内角这一隐含条件，并将合并后的角 $A+\frac{\pi}{3}$ 作为一个整体来研究其范围，最后根据特定区间内的正弦值确定唯一的角。该方法可推广至所有形如 $a\sin x + b\cos x = c$ 且已知角范围的问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-13.html">2024-新课标Ⅱ-13</a>（2024 · 中） 本题主要考查两角和的正切公式应用、角的范围确定以及同角三角函数关系求解。</li>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a>（2024 · 中） 本题主要考查解三角形，利用三角恒等变换求角A，运用正弦定理求边并计算周长。</li>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-07.html">2023-新课标Ⅱ-07</a>（2023 · 易） 本题考查利用二倍角公式或半角公式求锐角半角的正弦值，通过代数运算得出结果。</li>
+<li><a href="../../exam/数学/2019-文-11.html">2019-文-11</a>（2019 · 中） 本题主要考查利用二倍角公式和同角基本关系求三角函数值，需结合角的范围判断符号。</li>
+<li><a href="../../exam/数学/2019-理-10.html">2019-理-10</a>（2019 · 中） 利用二倍角公式和同角关系求正弦值，需注意角范围判断正负。</li>
+<li><a href="../../exam/数学/2017-理-14.html">2017-理-14</a>（2017 · 易） 考查利用同角三角函数关系转化为二次函数求最值。</li>
+<li><a href="../../exam/数学/2013-文-06.html">2013-文-06</a>（2013 · 易） 本题已知 sin2α 的值，利用二倍角公式和诱导公式求 cos²(α+π/4) 的值。</li>
+<li><a href="../../exam/数学/2013-理-15.html">2013-理-15</a>（2013 · 中） 已知第二象限角的正切值，利用两角和正切公式及同角关系求正弦与余弦之和</li>
+<li><a href="../../exam/数学/2010-文-10.html">2010-文-10</a>（2010 · 易） 已知角α的余弦值及象限，求其正弦并利用两角和公式计算正弦值。</li>
+<li><a href="../../exam/数学/2009-文-04.html">2009-文-04</a>（2009 · 易） 利用同角三角函数基本关系，由余切值求解余弦值，涉及符号判断与方程联立。</li>
+<li><a href="../../exam/数学/2009-理-03.html">2009-理-03</a>（2009 · 易） 已知cotA的值求cosA，运用同角三角函数基本关系及平方关系求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/293-同角三角函数关系.html">同角三角函数关系</a></li>
+</ul>
+</div>
+</body>
+</html>

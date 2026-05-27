@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>面面位置关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>面面位置关系</h1><div class="review-mark" data-stem="面面位置关系"></div><div class="meta-card"><span><strong>考点</strong>面面位置关系</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>面面位置关系</strong>：空间中的两个平面有且仅有两种位置关系——<strong>平行</strong>与<strong>相交</strong>（含垂直这一特殊相交情形）。</li>
+<li><strong>面面平行的判定</strong>：</li>
+<li>判定定理：若一个平面内的两条<strong>相交直线</strong>分别平行于另一个平面内的两条相交直线，则两平面平行。</li>
+<li>向量视角：若两平面的法向量平行，则两平面平行。特别地，<strong>垂直于同一直线的两个平面平行</strong>。</li>
+<li><strong>面面平行的性质</strong>：</li>
+<li>两平行平面同时与第三平面相交，则交线平行；</li>
+<li>一条直线垂直于两个平行平面中的一个，则也垂直于另一个。</li>
+<li><strong>面面垂直的判定与性质</strong>：</li>
+<li>判定定理：若一个平面包含另一个平面的<strong>垂线</strong>，则两平面垂直。</li>
+<li>性质定理：若两平面垂直，则在一个平面内垂直于交线的直线必垂直于另一个平面。</li>
+<li><strong>核心联系——法向量与平面</strong>：</li>
+<li>若直线 $m\perp\alpha$，则 $m$ 的方向向量即平面 $\alpha$ 的法向量。</li>
+<li>两平面 $\alpha,\beta$ 的法向量分别为 $\vec{m},\vec{n}$：<ul>
+<li>$\vec{m}\parallel\vec{n}\;\Rightarrow\;\alpha\parallel\beta$；</li>
+<li>$\vec{m}$ 与 $\vec{n}$ 不平行 $\Rightarrow\;\alpha$ 与 $\beta$ 相交（若进一步有 $\vec{m}\perp\vec{n}$，则 $\alpha\perp\beta$）。</li>
+</ul>
+</li>
+<li><strong>两条异面直线的公垂线方向唯一</strong>：与两条不平行直线都垂直的直线，其方向确定（所有这样的直线互相平行）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标出垂线→法向量</strong>：题设中有“直线⊥平面”，立刻将该直线方向视为对应平面的法向量。</li>
+<li><strong>线线关系→法向量关系</strong>：利用已知的线线关系（平行、异面、垂直等）推断两法向量的方向关系。</li>
+<li>若两垂线平行或重合，则法向量平行 → 两平面平行。</li>
+<li>若两垂线相交或异面（总之不平行），则法向量不平行 → 两平面相交。</li>
+<li><strong>判定交线方向</strong>：当两平面相交时，交线的方向必同时垂直于两平面的法向量，即与两垂线的<strong>公垂线方向</strong>一致。若题中出现同时垂直于两垂线的第三条直线，其方向即交线方向。</li>
+<li><strong>检验特殊条件</strong>：注意题中的“⊄”“⊂”等限定，排除直线恰好落在平面内的情形，从而得到准确的平行或垂直结论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误认为“与两条异面直线都垂直的直线只有一条”</strong>：实际上，与两条异面直线同时垂直的直线有<strong>无数条</strong>，但它们的<strong>方向都相同</strong>（均与公垂线平行）。</li>
+<li><strong>由“$m\perp\alpha,n\perp\beta$ 且 $m,n$ 异面”直接跳结论“$\alpha,\beta$ 平行或垂直”</strong>：正确路径是：$m,n$ 异面 $\Rightarrow$ 法向量不平行 $\Rightarrow\alpha$ 与 $\beta$ 必相交。缺乏法向量转化的中间一环容易出错。</li>
+<li><strong>忽略条件“$l\not\subset\alpha,\;l\not\subset\beta$”</strong>：若不作此限制，$l$ 可能恰好落在 $\alpha$ 或 $\beta$ 内，导致 $l$ 与交线重合（而非平行），从而误判选项。</li>
+<li><strong>混淆“垂直于同一平面的两直线平行”与“垂直于同一直线的两平面平行”</strong> ：前者说明两直线平行，后者说明两平面平行。本题是两垂线异面，故两平面不可能平行。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2013·理·04）<br />
+已知 $m,n$ 为异面直线，$m\perp\alpha$，$n\perp\beta$。直线 $l$ 满足 $l\perp m$，$l\perp n$，$l\not\subset\alpha$，$l\not\subset\beta$，判断正确选项。</p>
+<p><strong>思路</strong><br />
+- 由 $m\perp\alpha$，$n\perp\beta$ 得 $m,n$ 分别为 $\alpha,\beta$ 的法向量。<br />
+- $m,n$ 异面 $\Rightarrow$ $m$ 与 $n$ 不平行 $\Rightarrow$ $\alpha$ 与 $\beta$ 必相交，排除 A、B。<br />
+- 设交线为 $a$，利用“线面垂直 $\Rightarrow$ 线线垂直”可得 $a\perp m$ 且 $a\perp n$。<br />
+- $l$ 也同时垂直于 $m$ 和 $n$，故 $l$ 与 $a$ 方向相同（同为 $m,n$ 的公垂线方向）。<br />
+- 再由 $l\not\subset\alpha,\;l\not\subset\beta$ 知 $l$ 不在 $\alpha$ 或 $\beta$ 内，所以 $l\parallel a$（交线平行于 $l$），选 D。</p>
+<p><strong>步骤</strong><br />
+1. $m\perp\alpha\Rightarrow$ 对 $\forall$ 直线 $a\subset\alpha$ 有 $m\perp a$，同理 $n\perp\beta\Rightarrow$ 对 $\forall b\subset\beta$ 有 $n\perp b$。<br />
+2. 因为 $m,n$ 异面，故 $m\nparallel n$，$\alpha$ 的法向量与 $\beta$ 的法向量不平行 $\Rightarrow\alpha$ 与 $\beta$ 相交，设交线为 $a$。<br />
+3. $a\subset\alpha$ 且 $a\subset\beta$，故 $m\perp a$，$n\perp a$。<br />
+4. 又 $l\perp m$，$l\perp n$，所以 $l$ 与 $a$ 都同时垂直于 $m$ 与 $n$。由于同时垂直于两条不平行直线的直线方向唯一，故 $l\parallel a$。<br />
+5. 结合 $l\not\subset\alpha$、$l\not\subset\beta$，得 $\alpha$ 与 $\beta$ 相交且交线平行于 $l$。</p>
+<p><strong>点评与变式</strong><br />
+- 本题核心是利用<strong>法向量思想</strong>将较抽象的面面关系转化为直观的线线关系。<br />
+- 变式：若条件改为“$m\perp\alpha$，$n\perp\beta$，且 $m\parallel n$”，则 $\alpha\parallel\beta$；若再加“$l\perp\alpha$”，可继续探究 $l$ 与 $\beta$ 的位置关系。<br />
+- 务必牢记：与两条异面直线均垂直的直线不是只有一条，但方向确定。这是排除“交线垂直于 $l$”选项的关键。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-04.html">2013-理-04</a>（2013 · 中） 已知m,n为异面直线且分别垂直平面α,β，直线l同时垂直m,n且不在平面内，推断面面关系及交线与l的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">面面位置关系</a></li>
+</ul>
+</div>
+</body>
+</html>

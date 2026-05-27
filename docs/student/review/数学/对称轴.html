@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对称轴</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对称轴</h1><div class="review-mark" data-stem="对称轴"></div><div class="meta-card"><span><strong>考点</strong>对称轴</span><span><strong>权重</strong>24</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：24</li>
+<li>真题数：2；年份跨度：2024–2024</li>
+<li>出现题位：选择9 选择11</li>
+<li>难度分布：易1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>轴对称的定义</strong>：若函数 $y=f(x)$ 满足 $f(a+x)=f(a-x)$（或等价地 $f(x)=f(2a-x)$）对定义域内任意 $x$ 均成立，则其图像关于直线 $x=a$ 对称，$x=a$ 称为对称轴。  </li>
+<li><strong>正弦型函数的对称轴</strong>：对于 $f(x)=A\sin(\omega x+\varphi)+k$（$A\neq0,\omega\neq0$），对称轴由 $\omega x+\varphi=\frac{\pi}{2}+m\pi\ (m\in\mathbb Z)$ 解出；对称中心由 $\omega x+\varphi=m\pi$ 解出，坐标为 $(x_0,k)$。  </li>
+<li><strong>三次函数的对称性</strong>：任意三次函数 $f(x)=ax^3+bx^2+cx+d\ (a\neq0)$ 都是中心对称图形，对称中心为其拐点 $\left(-\frac{b}{3a},f!\left(-\frac{b}{3a}\right)\right)$。一般三次函数没有对称轴（除非退化为直线）。判断对称轴时，可代入对称定义验证恒成立条件。  </li>
+<li><strong>对称中心</strong>：若 $f(a+x)+f(a-x)=2b$ 恒成立，则图像关于点 $(a,b)$ 中心对称。  </li>
+<li><strong>关联结论</strong>：若函数既是轴对称又是中心对称，则必有周期性；对称轴可能出现在导函数的零点或原函数的极值点处，需结合具体解析式分析。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准形式法</strong>：对 $y=A\sin(\omega x+\varphi)$ 等基本三角函数，直接令“角”满足相应条件求解对称轴（$\omega x+\varphi=\frac{\pi}{2}+k\pi$）和对称中心（$\omega x+\varphi=k\pi$），注意区分两者方程。  </li>
+<li><strong>定义代入法</strong>：对于抽象函数或非典型函数，设对称轴为 $x=a$，列出 $f(a+x)=f(a-x)$（或对称中心条件），整理成关于 $x$ 的多项式恒等式，比较系数或判定是否存在 $a,b$ 使等式对所有 $x$ 成立。  </li>
+<li><strong>导数辅助法</strong>：多项式函数的对称中心可先求二阶导数零点（拐点横坐标），再验证 $f(x_0+x)+f(x_0-x)=2f(x_0)$ 是否恒成立。三次函数必有且只有一个对称中心，无需通过待定系数法盲试。  </li>
+<li><strong>逐项排除法</strong>：选择题中先计算易判断的选项（如最大值、周期），利用零点差异、极值符号等快速排除错误选项，缩小目标范围后再验证对称轴/中心。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆对称轴与对称中心的公式</strong>：正弦型函数中，对称轴对应 $\sin$ 取 $\pm1$ 的位置（$\frac{\pi}{2}+k\pi$），对称中心对应 $\sin$ 取 $0$ 的位置（$k\pi$）。错用公式会导致垂直平移后的中心纵坐标写错。  </li>
+<li><strong>误认为所有三次函数都有对称轴</strong>：形如 $f(x)=ax^3+bx^2+cx+d$ 只有在极其特殊的情况下（如 $a=0$ 退化为二次函数，或恒等变形后满足轴对称定义）才可能有对称轴，一般三次函数仅中心对称。见到“存在 $a,b$ 使 $x=b$ 为对称轴”的选项，必须代入定义严格验证恒等式是否可解。  </li>
+<li><strong>忽略定义域变化对对称性的影响</strong>：如果函数表达式经过限制定义域，原本含对称轴的周期性函数可能因截断而失去对称性。选择题中题干未给限制定义域时，默认全体实数，但仍需注意选项是否出现无解情况。  </li>
+<li><strong>对称中心计算时漏掉纵坐标</strong>：点对称需同时满足横纵坐标，常见错误是只求横坐标 $a$，忽略纵坐标 $b=f(a)$ 或 $b$ 可能为常数，造成判断失误。  </li>
+<li><strong>周期与对称轴/中心混淆</strong>：周期反映 $f(x+T)=f(x)$，对称轴反映 $f(a+x)=f(a-x)$，两者逻辑不同，不能用周期公式替代对称轴方程。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2024·新课标Ⅱ-09）</h3>
+<p><strong>题目</strong>：判断函数 $f(x)=\sin 2x$ 与 $g(x)=\sin!\left(2x-\frac{\pi}{4}\right)$ 的零点、最大值、最小正周期和对称轴是否相同。<br />
+<strong>思路</strong>：分别求两函数的零点、最大值、周期、对称轴方程，逐一比较。<strong>步骤</strong>：<br />
+- A（零点）：令 $f(x)=0$ 得 $x=\frac{k\pi}{2}$；令 $g(x)=0$ 得 $2x-\frac{\pi}{4}=k\pi \Rightarrow x=\frac{k\pi}{2}+\frac{\pi}{8}$，零点不同，A 错误。<br />
+- B（最大值）：$\max f(x)=\max g(x)=1$，B 正确。<br />
+- C（周期）：$T_f=T_g=\frac{2\pi}{2}=\pi$，C 正确。<br />
+- D（对称轴）：$f(x)$ 的对称轴满足 $2x=\frac{\pi}{2}+k\pi \Rightarrow x=\frac{\pi}{4}+\frac{k\pi}{2}$；$g(x)$ 的对称轴满足 $2x-\frac{\pi}{4}=\frac{\pi}{2}+k\pi \Rightarrow x=\frac{3\pi}{8}+\frac{k\pi}{2}$，两者不同，D 错误。<br />
+<strong>点评/变式</strong>：本题直接考查正弦型函数的性质公式，关键在于相位 $\varphi$ 不影响最大值和周期，但会引起零点与对称轴平移。可变形为 $g(x)=\cos(2x+\varphi)$ 等，对称轴公式随之变化，务必化成标准正弦或余弦形式再套用。</p>
+<h3><strong>题目2</strong>（2024·新课标Ⅱ-11）</h3>
+<p><strong>题目</strong>：已知 $f(x)=2x^3-3ax^2+1$，分析 $a&gt;1$ 时零点个数、$a&lt;0$ 时 $x=0$ 的极值性质、是否存在对称轴 $x=b$、是否存在对称中心 $(1,f(1))$。<br />
+<strong>思路</strong>：利用导数研究单调性与极值判断零点与极值点；对称轴/中心分别代入恒等式 $f(b+x)=f(b-x)$ 与 $f(1+x)+f(1-x)=2f(1)$ 进行系数分析或利用三次函数拐点性质。<br />
+<strong>步骤</strong>：<br />
+- A：$f'(x)=6x^2-6ax=6x(x-a)$，极值点为 $0$ 和 $a$。当 $a&gt;1$ 时，$f(0)=1&gt;0$，$f(a)=-a^3+1&lt;0$，结合 $\lim\limits_{x\to-\infty}f(x)=-\infty$，$\lim\limits_{x\to+\infty}f(x)=+\infty$，由零点定理知在 $(-\infty,0),(0,a),(a,+\infty)$ 各有一个零点，共三个，A 正确。<br />
+- B：当 $a&lt;0$ 时，导函数符号：$x<a$ 或 $x>0$ 时 $f'&gt;0$；$a&lt;x&lt;0$ 时 $f'&lt;0$。$x=0$ 处左负右正，为极小值点，B 错误。<br />
+- C：假设存在 $b$ 使 $x=b$ 为对称轴，即 $f(b+x)=f(b-x)$ 恒成立。代入展开并整理，奇次幂项系数为零得方程组，可推出 $a=0$ 且 $b=0$，此时 $f(x)=2x^3+1$，但验证 $2x^3+1$ 不满足轴对称（代入即知），故无解；一般三次函数至多有一个对称中心，不存在对称轴，C 错误。<br />
+- D：三次函数对称中心为二阶导数零点，$f''(x)=12x-6a=0 \Rightarrow x=\frac{a}{2}$。令 $\frac{a}{2}=1$ 得 $a=2$，此时对称中心为 $(1,f(1))=(1,3-3a)=(1,-3)$。验证 $f(1+x)+f(1-x)$ 是否等于 $-6$，代入成立，D 正确。<br />
+<strong>点评/变式</strong>：三次函数的对称中心必为拐点，是快速解题的关键。对称轴问题需严格恒等验证，不能凭“图像感觉”判断。变式可推广至一般多项式 $f(x)$ 满足 $f(m+x)=f(m-x)$ 的条件，从而训练恒等式系数比较法。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-09.html">2024-新课标Ⅱ-09</a>（2024 · 易） 本题通过比较两个正弦型函数的零点、最值、周期和对称轴，考查正弦函数的图像与性质。</li>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a>（2024 · 难） f(x)=2x³-3ax²+1，综合判断关于零点个数、极值点、对称轴和对称中心的四个命题真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/174-轴对称图形.html">对称轴</a></li>
+</ul>
+</div>
+</body>
+</html>

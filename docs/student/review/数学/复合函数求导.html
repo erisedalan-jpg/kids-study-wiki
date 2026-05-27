@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合函数求导</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复合函数求导</h1><div class="review-mark" data-stem="复合函数求导"></div><div class="meta-card"><span><strong>考点</strong>复合函数求导</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复合函数求导法则（链式法则）</strong>：若 $y=f(u)$，$u=g(x)$ 均可导，则 $y'_x=f'(u)\cdot g'(x)$，即“外导乘内导”。</li>
+<li><strong>常见复合结构求导</strong>：</li>
+<li>$f(ax+b)$：$a f'(ax+b)$；</li>
+<li>$f(x^n)$：$n x^{n-1} f'(x^n)$；</li>
+<li>$\ln(g(x))$：$\frac{g'(x)}{g(x)}$（$g(x)&gt;0$）；</li>
+<li>$e^{g(x)}$：$g'(x) e^{g(x)}$。</li>
+<li><strong>极值点必要条件</strong>：若 $x_0$ 是函数 $h(x)$ 的极值点，且 $h(x)$ 在 $x_0$ 处可导，则 $h'(x_0)=0$。注意：导数为零的点不一定是极值点，需验证两侧导数变号或利用二阶导。</li>
+<li><strong>乘积求导</strong>：$(uv)'=u'v+uv'$，在含复合结构的乘积函数中需与链式法则联合使用。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确函数关系与定义域</strong>：先写出完整函数表达式，标注使原函数及中间变量有意义的 $x$ 范围。对含对数、根式、分式的结构，定义域是隐蔽失分点。</li>
+<li><strong>拆解复合层次</strong>：从外向内识别基本初等函数，用不同变量标记层次（如 $u=g(x)$），确保链式法则不重不漏。</li>
+<li><strong>逐层求导并回代</strong>：按“外导（对中间变量）$\times$ 内导”逐层写出，最终将所有中间变量替换为 $x$ 的表达式，整理成最简形式。</li>
+<li><strong>代入条件列方程</strong>：若已知极值点、切线斜率等，将 $x_0$ 代入导数得方程。注意检验 $x_0$ 是否在定义域内，以及导数是否真实存在。</li>
+<li><strong>检验充分性</strong>：求出参数后，回代验证 $x_0$ 两侧导数符号是否改变（或计算二阶导），确保参数值对应的是极值点而非驻点。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域导致误判</strong>：如 $\ln(g(x))$ 要求 $g(x)&gt;0$，若极值点恰好使内层函数无意义（比如 $x=0$ 时内层为负），则必不是极值点，解题应先排除。</li>
+<li><strong>链式法则漏层</strong>：多层复合（如 $\ln(\sin(x^2+1))$）求导时，因未写出每一层导数乘积而丢分。每求一层立即乘以内层导数，事后逐层检查。</li>
+<li><strong>混淆乘积求导与复合求导</strong>：对 $x f(x)$ 这类混合结构，既要用乘积法则 $(x)'f(x)+x f'(x)$，又要对 $f(x)$ 内部的复合结构用链式法则，两者不可偏废。</li>
+<li><strong>误将驻点当极值点</strong>：$h'(x_0)=0$ 是极值点的必要不充分条件，求出参数后务必验证 $h'(x)$ 在 $x_0$ 两侧是否异号，或 $h''(x_0) \neq 0$。仅在解答题中完整表述方可全分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-理-20）：设函数 $f(x)=\ln(a-x)$，已知 $x=0$ 是函数 $y=x f(x)$ 的极值点，求实数 $a$ 的值。</p>
+<p><strong>思路</strong><br />
+先写出 $h(x)=x\ln(a-x)$ 并明确 $a-x&gt;0$。用乘积法则与链式法则求 $h'(x)$，代入 $x=0$ 令 $h'(0)=0$ 解 $a$。最后检验定义域与极值点充分性。</p>
+<p><strong>步骤</strong><br />
+1. 设 $h(x)=x\ln(a-x)$，定义域为 $a-x&gt;0$，即 $x&lt;a$。因 $x=0$ 为其极值点，必有 $0<a$，即 $a>0$。<br />
+2. 求导：$$h'(x)= (x)'\ln(a-x) + x\cdot \frac{d}{dx}[\ln(a-x)] = \ln(a-x) + x\cdot\frac{1}{a-x}\cdot(-1) = \ln(a-x) - \frac{x}{a-x}.$$<br />
+3. 由 $x=0$ 是极值点及可导性，得 $h'(0)=0$：$$\ln(a-0)-\frac{0}{a-0}= \ln a = 0 \quad\Rightarrow\quad a=1.$$<br />
+4. 检验：当 $a=1$ 时，$f(x)=\ln(1-x)$，定义域 $x&lt;1$ 包含 $x=0$。<br />
+   $h'(x)=\ln(1-x)-\frac{x}{1-x}$，在 $x=0$ 邻近，取 $x=-0.1$（左）与 $x=0.1$（右）判断符号：<br />
+   当 $x&lt;0$ 且接近 $0$ 时，$1-x&gt;1$，$\ln(1-x)&lt;0$，$-\frac{x}{1-x}&gt;0$，因 $|x|$ 充分小，$\ln(1-x)\approx -x$，$h'(x)\approx -x+\frac{-x}{1-x}$ 在 $x&lt;0$ 时为正；类似 $x&gt;0$ 时为负。导函数左正右负，故 $x=0$ 是极大值点，符合题意。<br />
+   综上，$a=1$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是将极值条件转化为导数为零，关键在于复合函数求导的准确性及定义域的隐含约束。变式可将 $f(x)$ 换为 $\ln(a+x^2)$ 或 $e^{a-x}$，或设 $y=x^2 f(x)$ 增加乘积与复合的嵌套深度，训练链式法则的熟练度。审题时若漏掉 $a-x&gt;0$，直接由 $\ln a=0$ 得 $a=1$ 虽结果相同，但缺少定义域检查在解答题中会扣过程分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-20.html">2021-理-20</a>（2021 · 中） 已知x=0是y=xln(a-x)的极值点，求参数值并分析极值性质。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/795-复合函数求导.html">复合函数求导</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全称量词与存在量词</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>全称量词与存在量词</h1><div class="review-mark" data-stem="全称量词与存在量词"></div><div class="meta-card"><span><strong>考点</strong>全称量词与存在量词</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：15</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>全称量词</strong>：短语“对所有的”“对任意一个”在逻辑中叫做全称量词，用符号 $\forall$ 表示。含有全称量词的命题称为全称命题，形式为 $\forall x\in M,p(x)$。</li>
+<li><strong>存在量词</strong>：短语“存在一个”“至少有一个”在逻辑中叫做存在量词，用符号 $\exists$ 表示。含有存在量词的命题称为特称命题，形式为 $\exists x\in M,q(x)$。</li>
+<li><strong>含有一个量词的命题的否定</strong>：</li>
+<li>$\neg(\forall x\in M,p(x))\iff \exists x\in M,\neg p(x)$</li>
+<li>$\neg(\exists x\in M,q(x))\iff \forall x\in M,\neg q(x)$</li>
+<li><strong>集合描述中的隐含量词</strong>：描述法 ${x\mid p(x)}$ 中，性质 $p(x)$ 实际隐含了“使 $p(x)$ 成立的所有 $x$”。验证 $x_0$ 属于该集合，相当于判断命题 $p(x_0)$ 是否为真；判断集合间包含关系 $A\subseteq B$ 等价于 $\forall x(x\in A \rightarrow x\in B)$。</li>
+<li><strong>真假判断</strong>：全称命题为真需证明对所有 $x$ 成立，为假只需举一反例；特称命题为真需找到至少一个 $x$ 使 $p(x)$ 成立，为假需证对一切 $x$ 都不成立。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化集合为量词命题</strong>：当遇到抽象集合的包含、相等、交集问题时，将集合表述转化为全称或存在命题。例如 $A\subseteq B$ 即 $\forall x\in A, x\in B$；$A\cap B=A$ 即 $A\subseteq B$。</li>
+<li><strong>分析元素结构</strong>：对描述法给出的集合，识别参数与约束。用参数形式表示元素，通过量词转换关系：如 $\exists n\in\mathbb Z, s=2n+1$ 对应存在量词。</li>
+<li><strong>判定包含方向</strong>：若要证 $T\subseteq S$，即证 $\forall t\in T,\exists s\in S, t=s$，实质是将 $T$ 中元素的参数形式向 $S$ 的参数形式转化的过程。</li>
+<li><strong>否定与反例</strong>：判断全称命题假或证明不包含时，构造反例，即找一个元素满足前置条件但不满足结论。</li>
+<li><strong>交集/并集快速结论</strong>：若 $A\subseteq B$，则 $A\cap B=A$；若 $A\supseteq B$，则 $A\cap B=B$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略参数范围</strong>：描述法中参数的取值域（如 $n\in\mathbb Z$）是关键，错误扩大或缩小参数范围会导致集合关系判断失误。</li>
+<li><strong>混淆全称与存在</strong>：证明全称命题时，误用“取一个代表”的方式，而忽略了“任意性”；证明存在命题时，只说明可能性而未具体找到实例。</li>
+<li><strong>集合包含与量词方向弄反</strong>：$A\subseteq B$ 对应 $\forall x\in A,\dots$，而不是 $\forall x\in B,\dots$，不少学生会在推理时反向推导。</li>
+<li><strong>否定时量词变化漏改</strong>：否定一个命题时，忘记将 $\forall$ 与 $\exists$ 互换，同时未将结论否定，导致错误。</li>
+<li><strong>对隐含量词不敏感</strong>：集合如 ${s\mid s=2n+1, n\in\mathbb Z}$ 本质上使用了存在量词 $\exists n\in\mathbb Z$，解题时若不自觉提取，易在交并运算中盲目展开。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知集合 $S={s\mid s=2n+1, n\in\mathbb Z}$ ， $T={t\mid t=4n+1, n\in\mathbb Z}$ ，则 $S\cap T$ 等于（ ）<br />
+A. $\varnothing$　　 B. $S$　　 C. $T$　　 D. $\mathbb Z$</p>
+<p><strong>思路</strong>：将集合的描述转化为量词形式。$S$ 中的元素可表示为 $s=2n+1$，$\exists n\in\mathbb Z$；$T$ 中的元素可表示为 $t=4n+1$，$\exists n\in\mathbb Z$。要判断 $S\cap T$，先判断 $T$ 与 $S$ 的包含关系。任取 $t\in T$，求证 $t\in S$；再判断反方向是否成立。</p>
+<p><strong>步骤</strong>：
+1. 分析 $T$ 的任意元素：设 $t\in T$，则存在整数 $k$ 使 $t=4k+1$。
+2. 将其变形为 $S$ 的形式：$t=4k+1=2(2k)+1$，令 $n'=2k\in\mathbb Z$，则 $t=2n'+1$。故 $\forall t\in T$，均有 $t\in S$，即 $T\subseteq S$。
+3. 验证是否 $S\subseteq T$：取 $S$ 中元素 $s=2\cdot 1+1=3$，若 $3\in T$，需存在整数 $m$ 使 $3=4m+1\Rightarrow m=\frac{1}{2}\notin\mathbb Z$，所以 $3\notin T$。这里使用了全称量词否定——找一个反例否定全称命题。
+4. 因此 $T\subsetneqq S$，故 $S\cap T = T$。
+5. 正确选项为 C。</p>
+<p><strong>点评/变式</strong>：本题表面考集合，实则是全称量词与存在量词的隐性应用。“$T\subseteq S$”等价于全称命题“$\forall x\in T, x\in S$”为真；而证伪“$S\subseteq T$”只需能找出一个 $x\in S$ 且 $x\notin T$，即特称命题的验证。变式：若将 $S,T$ 的定义改为带两个参数或其他约束，如 $T={t\mid t=4n+1, n\in\mathbb N}$，则需重新审视参数范围对包含关系的影响，体现了量词中个体域的重要性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-02.html">2021-理-02</a>（2021 · 易） 该题考查集合包含关系与交集运算，并涉及全称命题与存在性命题的真假判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/280-全称量词与存在量词.html">全称量词与存在量词</a></li>
+</ul>
+</div>
+</body>
+</html>

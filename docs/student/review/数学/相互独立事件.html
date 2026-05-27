@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相互独立事件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相互独立事件</h1><div class="review-mark" data-stem="相互独立事件"></div><div class="meta-card"><span><strong>考点</strong>相互独立事件</span><span><strong>权重</strong>23</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：23</li>
+<li>真题数：6；年份跨度：2008–2023</li>
+<li>出现题位：填空13 填空15 解答18 解答19 选择5 选择12</li>
+<li>难度分布：中3 易2 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>相互独立事件</strong>：若事件 $A$ 与 $B$ 满足 $P(AB)=P(A)P(B)$，则称 $A$ 与 $B$ 相互独立。若 $A$ 与 $B$ 独立，则 $A$ 与 $\bar{B}$，$\bar{A}$ 与 $B$，$\bar{A}$ 与 $\bar{B}$ 也相互独立。</li>
+<li><strong>独立性的实际判断</strong>：题目中明确声明“相互独立”“互不影响”，或由实际问题结构自然独立（如两人选择互不干扰、信道每次传输独立等），均可直接使用乘法公式。</li>
+<li><strong>互斥与独立的区别</strong>：互斥事件不能同时发生，而独立事件发生与否互不影响。当 $P(A)&gt;0,P(B)&gt;0$ 时，互斥事件一定不独立；独立事件一定不互斥（除非概率为0）。</li>
+<li><strong>n次独立重复试验与二项分布</strong>：在相同条件下重复试验 $n$ 次，各次结果独立，且每次事件 $A$ 发生的概率为 $p$，则 $A$ 恰好发生 $k$ 次的概率为 $P(X=k)=C_n^k p^k (1-p)^{n-k}$。常用于多数判决、多次射击等情景。</li>
+<li><strong>积事件与和事件</strong>：若事件 $A_i$ 相互独立，则它们同时发生的概率 $P(A_1A_2\cdots A_n)=\prod P(A_i)$。求至少一个发生（和事件）的概率，常用对立事件：$P(A_1\cup A_2\cup\cdots)=1-P(\bar{A_1}\bar{A_2}\cdots)$。</li>
+<li><strong>系统可靠性</strong>：串联系统正常工作当且仅当所有元件正常，概率为各元件正常概率的乘积；并联系统正常工作当至少一个元件正常，概率为 $1-\prod(1-p_i)$（各元件失效相互独立）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别独立，正确分步</strong>：判断各事件是否独立，是则直接相乘计算积事件概率；不独立则不能直接相乘。</li>
+<li><strong>复杂事件拆解</strong>：将所求事件分解为若干互斥的情境之和，每个情境再拆成若干独立事件的积。遵循“先分类加法（互斥），再分步乘法（独立）”。</li>
+<li><strong>善用对立事件简化计算</strong>：当事件包含的情形较多时（如“至少一个正常”“至少两次多于”等），转求对立事件的概率。</li>
+<li><strong>多数判决/二项分布通式</strong>：$n$ 次独立重复传输或试验，“多数为某结果”的概率可利用二项分布求和（如 $k \ge \frac{n}{2}$），有时亦可借助对称性简化。</li>
+<li><strong>已知积概率反推单次概率</strong>：若 $P(A)$ 与 $P(AB)$ 已知且 $A,B$ 独立，由 $P(AB)=P(A)P(B)$ 可直接解出 $P(B)$，避免条件概率计算的弯路。</li>
+<li><strong>比较概率大小</strong>：求差或作商结合已知参数范围判断符号，如 2023 年 D 选项即用差值因式分解证明不等式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆独立与互斥</strong>：当成互斥事件直接相加，或不该用乘法时乱乘。</li>
+<li><strong>忽视“互斥求和”的前提</strong>：将非互斥的事件直接相加导致重复计算；正确做法是画 Venn 图或用容斥公式。</li>
+<li><strong>并联概率误算为直接相乘</strong>：元件并联正常工作的概率常错写成 $p_1 p_2$，正确是 $1-(1-p_1)(1-p_2)$。</li>
+<li><strong>二项分布漏乘组合数</strong>：只写 $p^k (1-p)^{n-k}$ 忘记 $C_n^k$，导致缺漏可能的情况。</li>
+<li><strong>混淆“至少”“恰好”“至多”</strong>：求“至少两轮”未包含“三轮”的情况，或未用对立事件简化。</li>
+<li><strong>将条件概率与独立乘法混用</strong>：碰到“已知…求随后…”的句式，本能用 $P(B|A)=P(AB)/P(A)$，但若已知独立条件，直接利用 $P(AB)=P(A)P(B)$ 求 $P(B)$ 即可，无需引入条件概率公式。</li>
+<li><strong>概率相乘时忽视顺序</strong>：如 2023 年 B 项，三次传输依次收到“1,0,1”是确定的顺序，概率乘对应每次收信号的概率，不可随意调换。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2023 新课标Ⅱ 第 12 题（多选）</h3>
+<p><strong>题目</strong> 信道传输 0、1，发送 0 收 1 的概率为 $a$，发送 1 收 0 的概率为 $b$，传输独立。单次传输收啥译啥；三次传输译码取出现次数多的信号。判断四个选项概率正误。</p>
+<p><strong>思路</strong> 将发送与接收视为独立事件链，A、B 根据明确顺序直接乘出概率；C 为三次独立传输译码为 1 的概率，即三次收到信号中 1 的个数≥2，可用二项分布求和；D 比较两种方案译码正确的概率，差值分解后利用 $0&lt;a&lt;0.5$ 定号。</p>
+<p><strong>步骤</strong>
+- A：发送 1,0,1，依次收 1,0,1 的概率为 $(1-b)(1-a)(1-b)=(1-a)(1-b)^2$。正确。
+- B：三次传输发送 1（即三次发送 1），依次收 1,0,1 的概率为 $(1-b)\,b\,(1-b)=b(1-b)^2$。正确（选项给出等价形式）。
+- C：发送 1 译码为 1 的概率：恰有 3 个 1 概率 $(1-b)^3$；恰有 2 个 1 有 3 种位置，概率 $3b(1-b)^2$。合计 $(1-b)^3+3b(1-b)^2=(1-b)^2(1+2b)$，而选项给出 $b(1-b)^2+(1-b)^3$ 并非正确，错误。
+- D：发送 0，单次译码为 0 概率 $1-a$。三次译码为 0 概率为 $(1-a)^3+3(1-a)^2a=(1-a)^2(1+2a)$。作差：$(1-a)^2(1+2a)-(1-a)=a(1-a)(1-2a)$，因 $0&lt;a&lt;0.5$，差为正，三次方案更优。正确。</p>
+<p><strong>点评</strong> 本题综合独立事件乘法、二项分布与不等式比较。三次传输可抽象为 $n=3$ 的独立重复试验，利用二项分布写出译码正确概率是破题关键。</p>
+<h3>2. 2014 文 13（填空）</h3>
+<p><strong>题目</strong> 甲乙等可能从红、白、蓝 3 色运动服中各选</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-12.html">2023-新课标Ⅱ-12</a>（2023 · 中） 考查相互独立事件与互斥事件的概率计算，以及传输方案译码正确率的比较。</li>
+<li><a href="../../exam/数学/2014-文-13.html">2014-文-13</a>（2014 · 易） 甲、乙各自等可能选衣，求选同色概率，利用独立事件乘法公式计算。</li>
+<li><a href="../../exam/数学/2014-理-05.html">2014-理-05</a>（2014 · 易） 本题利用相互独立事件的概率乘法公式求解条件概率。</li>
+<li><a href="../../exam/数学/2012-理-15.html">2012-理-15</a>（2012 · 难） 求部件正常工作概率，涉及正态分布对称性、元件正常工作的概率及独立事件同时发生的计算</li>
+<li><a href="../../exam/数学/2008-文-19.html">2008-文-19</a>（2008 · 中） 甲乙各射一发独立，给出各环概率，求一轮甲环数多于乙的概率，及三轮中至少两轮甲领先的概率。</li>
+<li><a href="../../exam/数学/2008-理-18.html">2008-理-18</a>（2008 · 中） 该题考查二项分布下投保人出险概率的求解及基于盈利期望确定最低保费。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/468-事件相互独立性-高中.html">相互独立事件</a></li>
+</ul>
+</div>
+</body>
+</html>

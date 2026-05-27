@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数定义域</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数定义域</h1><div class="review-mark" data-stem="函数定义域"></div><div class="meta-card"><span><strong>考点</strong>函数定义域</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：3</li>
+<li>真题数：2；年份跨度：2016–2020</li>
+<li>出现题位：选择10</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数定义域</strong>：自变量 $x$ 的取值范围，是研究函数一切性质的前提。</li>
+<li>常见限制：分母不为零；偶次根号下被开方数非负；对数真数大于零、底数大于零且不等于 $1$；零次幂底数不为零等。</li>
+<li>复合函数 $y=f(g(x))$ 的定义域：由 $g(x)$ 的定义域与 $f(u)$ 对 $u$ 的要求取交集得到。</li>
+<li>实际应用或几何问题还需考虑实际意义。</li>
+<li><strong>函数值域</strong>：函数值的集合，由定义域和对应关系共同决定。常见函数的值域：</li>
+<li>$y=x$：$\mathbb{R}$</li>
+<li>$y=\lg x$：$\mathbb{R}$</li>
+<li>$y=a^x$（$a&gt;0,a\neq1$）：$(0,+\infty)$</li>
+<li>$y=\frac{1}{\sqrt{x}}$：$(0,+\infty)$</li>
+<li>$y=10^{\lg x}$：化简为 $y=x$，但隐含定义域 $(0,+\infty)$，故值域为 $(0,+\infty)$。</li>
+<li><strong>函数的奇偶性</strong>：</li>
+<li>定义域必须关于原点对称，否则既不是奇函数也不是偶函数。</li>
+<li>奇函数：$\forall x\in D,\ f(-x)=-f(x)$，图像关于原点对称。</li>
+<li>偶函数：$\forall x\in D,\ f(-x)=f(x)$，图像关于 $y$ 轴对称。</li>
+<li><strong>函数的单调性</strong>：</li>
+<li>单调区间是定义域的子集。</li>
+<li>四则运算对单调性的影响：增 + 增 = 增；减 + 减 = 减；正数倍单调性不变；增函数的倒数在其同号区间内为减函数等。</li>
+<li>具体函数如 $y=x^3$ 在 $\mathbb{R}$ 上递增；$y=\frac{1}{x^3}$ 在 $(0,+\infty)$ 和 $(-\infty,0)$ 上分别递减。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>求函数定义域的基本步骤</strong><br />
+   （1）列出全部约束条件（分母、根号、对数等）。<br />
+   （2）解不等式（组）得到交集。<br />
+   （3）用区间或集合表示，并检查是否关于原点对称（若后续要判断奇偶性）。</p>
+</li>
+<li>
+<p><strong>判断函数奇偶性的通用流程</strong><br />
+   （1）先求定义域，若不关于原点对称 → 非奇非偶，结束。<br />
+   （2）若对称，计算 $f(-x)$，与 $f(x)$ 比较：  </p>
+<ul>
+<li>$f(-x)=f(x)$ → 偶函数；  </li>
+<li>$f(-x)=-f(x)$ → 奇函数；  </li>
+<li>均不成立 → 非奇非偶。<br />
+   （3）对于含参或分段函数，可结合图像或特殊值辅助否定。</li>
+</ul>
+</li>
+<li>
+<p><strong>利用单调性性质快速判断复合函数单调性</strong>  </p>
+</li>
+<li>若 $y=f(u)$ 与 $u=g(x)$ 单调性相同，则 $y=f(g(x))$ 递增；相反则递减（同增异减）。  </li>
+<li>
+<p>利用基本初等函数的单调性及四则运算：如 $x^3$ 增，$\frac{1}{x^3}$ 在 $(0,+\infty)$ 减，则 $x^3 - \frac{1}{x^3}$ 为增函数（增 − 减 = 增 + 增 = 增）。</p>
+</li>
+<li>
+<p><strong>求值域的方法</strong>  </p>
+</li>
+<li>先明确定义域。  </li>
+<li>利用基本函数值域、图像、单调性、换元法或反解法。  </li>
+<li>注意等价变形是否改变定义域（如 $y=10^{\lg x}$ 化简为 $y=x$ 时定义域缩小）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略隐含定义域</strong>：如 $f(x)=x^3-\frac{1}{x^3}$ 中分式要求 $x\neq0$；$y=10^{\lg x}$ 中真数 $x&gt;0$，若直接化简成 $y=x$ 会误认为定义域为 $\mathbb{R}$。</li>
+<li><strong>奇偶性判断的第一步缺失</strong>：不先看定义域是否关于原点对称就直接用 $-x$ 代入，导致在原点不对称的函数上错误地套用结论。</li>
+<li><strong>单调性“整体递增”与“分别在区间上递增”混淆</strong>：如 $y=\frac{1}{x^3}$ 在 $(0,+\infty)$ 和 $(-\infty,0)$ 上分别递减，但不能说在定义域上单调递减（因跨区间不连续）。本题 $f(x)=x^3-\frac{1}{x^3}$ 在 $(0,+\infty)$ 递增，也在 $(-\infty,0)$ 递增，仍为正确选项。</li>
+<li><strong>定义域与值域“相同”的理解偏差</strong>：指集合相等，而非形式类似。如 $y=\lg x$ 定义域 $(0,+\infty)$、值域 $\mathbb{R}$，并不相同；$y=\frac{1}{\sqrt{x}}$ 定义域和值域都是 $(0,+\infty)$。</li>
+<li><strong>审题失误</strong>：选项中出现“奇函数且在(0,+∞)递增”等组合描述时，需逐一验证两个性质是否同时成立，避免只判对一半就选。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2020-文-10</h3>
+<p><strong>题目</strong>：已知 $f(x)=x^3-\frac{1}{x^3}$，判断其奇偶性及在 $(0,+\infty)$ 上的单调性。</p>
+<p><strong>思路</strong>：<br />
+定义域含分式且为奇次幂，需关注 $x\neq0$。先求定义域并检查对称性，再用定义判断奇偶性。对于单调性，分别考虑 $x^3$ 的单调性与 $-\frac{1}{x^3}$ 的单调性，利用增函数减减函数仍为增函数的原则。</p>
+<p><strong>步骤</strong>：<br />
+1. 定义域：由 $\frac{1}{x^3}$ 要求 $x\neq0$，得 $D=(-\infty,0)\cup(0,+\infty)$，关于原点对称。<br />
+2. 奇偶性：$f(-x)=(-x)^3-\frac{1}{(-x)^3}=-x^3+\frac{1}{x^3}=-(x^3-\frac{1}{x^3})=-f(x)$，故为奇函数。<br />
+3. 单调性：当 $x\in(0,+\infty)$ 时，$y=x^3$ 递增；$y=\frac{1}{x^3}$ 递减，因此 $-\frac{1}{x^3}$ 递增。两个增函数相加仍为增函数，所以 $f(x)$ 在 $(0,+\infty)$ 上单调递增。<br />
+4. 综合选A。</p>
+<p><strong>点评/变式</strong>：<br />
+本题为函数性质的基础综合，提醒我们奇偶性必须结合定义域对称性；利用简单函数的单调性及四则运算可快速判断复杂函数的单调性。变式：若改为 $f(x)=x^3+\frac{1}{x^3}$，单调性如何变化？仍为奇函数，但 $x^3$ 增、$\frac{1}{x^3}$ 减，减法变成加法后不再保证单调性统一，需用导数或单调性定义重新判断。</p>
+<h3>代表题二：2016-文-10</h3>
+<p><strong>题目</strong>：函数 $y=10^{\lg x}$ 的定义域和值域均为 $(0,+\infty)$，下列哪个函数与之相同？<br />
+选项：A. $y=x$　B. $y=\lg x$　C. $y=2^x$　D. $y=\frac{1}{\sqrt{x}}$</p>
+<p><strong>思路</strong>：<br />
+依次求各选项的定义域与值域，与 $(0,+\infty)$ 进行比较，注意定义域受解析式自然约束，值域由对应关系决定。</p>
+<p><strong>步骤</strong>：<br />
+1. A：$y=x$，定义域 $\mathbb{R}$，值域 $\mathbb{R}$，不符。<br />
+2. B：$y=\lg x$，定义域 $(0,+\infty)$，值域 $\mathbb{R}$，不符。<br />
+3. C：$y=2^x$，定义域 $\mathbb{R}$，值域 $(0,+\infty)$，不符。<br />
+4. D：$y=\frac{1}{\sqrt{x}}$，要求 $x&gt;0$，定义域 $(0,+\infty)$；当 $x&gt;0$ 时 $\sqrt{x}&gt;0$，其倒数仍大于 $0$，且可取得一切正实数，故值域 $(0,+\infty)$，符合要求。<br />
+5. 正确选项为D。</p>
+<p><strong>点评/变式</strong>：<br />
+本题陷阱在于 $y=10^{\lg x}$ 易化简为 $y=x$ 而忽略真数 $x&gt;0$ 的隐含条件，导致定义域误判。解题时必须保持原式约束。变式：求 $y=\sqrt{\lg x}$ 的定义域与值域，应满足 $x&gt;0$ 且 $\lg x\geq0$ 即 $x\geq1$，定义域 $[1,+\infty)$，值域 $[0,+\infty)$，与本题进行对比，体会“相同”的含义。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-10.html">2020-文-10</a>（2020 · 易） 考查由解析式求函数定义域、判断奇偶性和单调性</li>
+<li><a href="../../exam/数学/2016-文-10.html">2016-文-10</a>（2016 · 易） 比较函数定义域和值域，判断与y=10^{lgx}相同的函数</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/680-函数定义域.html">函数定义域</a></li>
+</ul>
+</div>
+</body>
+</html>

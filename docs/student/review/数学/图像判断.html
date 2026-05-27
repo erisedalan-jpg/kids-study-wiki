@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像判断</h1><div class="review-mark" data-stem="图像判断"></div><div class="meta-card"><span><strong>考点</strong>图像判断</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>圆周运动代数化：圆心在原点、半径为 $R$ 的圆周上的质点，可用参数方程 $\begin{cases} x = R\cos\theta \ y = R\sin\theta \end{cases}$ 或 $\begin{cases} x = R\sin\theta \ y = R\cos\theta \end{cases}$ 描述，其中 $\theta$ 为以弧度表示的旋转角。</li>
+<li>角速度 $\omega$：匀速圆周运动中，$\theta = \theta_0 + \omega t$（逆时针为正），$t$ 为时间。</li>
+<li>点到坐标轴的距离：点 $P(x,y)$ 到 $x$ 轴距离为 $d = |y|$，到 $y$ 轴距离为 $d = |x|$，必须取绝对值以确保非负。</li>
+<li>绝对值三角函数图象：$y = A|\sin(\omega t + \varphi)|$ 或 $y = A|\cos(\omega t + \varphi)|$ 的周期是原始三角函数的 $\frac{1}{2}$，振幅为 $|A|$，图象翻折后整体位于 $x$ 轴上方。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建立运动模型</strong>：将实际情境转化为参数方程或函数关系，明确圆心、半径、角速度等关键量。</li>
+<li><strong>写出角度函数</strong>：利用角速度公式 $\theta(t) = \theta_0 + \omega t$，注意 $\theta_0$ 由初始位置坐标确定。</li>
+<li><strong>表达目标变量</strong>：所求量（如距离、坐标分量）用角度或时间表示，尤其注意距离需加绝对值。</li>
+<li><strong>分析函数图象特征</strong>：从解析式得出周期、振幅、单调区间、零点和特殊点值（如 $t=0$ 初值），排除干扰选项，选出符合规律的图象。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>漏掉距离的绝对值</strong>：直接取 $y$ 值而不是 $|y|$ 作为距离，导致函数值域、周期、图象形状错误。</li>
+<li><strong>初始角度求解错误</strong>：由坐标 $P_0(x_0, y_0)$ 利用 $x_0 = R\cos\theta_0, y_0 = R\sin\theta_0$ 求 $\theta_0$ 时，未结合象限确定正确符号或错误使用弧度值。</li>
+<li><strong>周期计算失误</strong>：混淆 $\sin$ 与 $|\sin|$ 的周期，误认为绝对值正弦的周期仍为 $2\pi$，实际为 $\pi$。</li>
+<li><strong>忽略角速度单位</strong>：角速度默认以弧度/单位时间给出，若试题隐含角度制，需转换，否则角度函数不匹配。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>质点 $P$ 在半径为 $2$ 的圆周上逆时针运动，初始位置为 $P_0(\sqrt{2}, -\sqrt{2})$，角速度为 $1$。点 $P$ 到 $x$ 轴的距离 $d$ 关于时间 $t$ 的函数图象大致为选项之一。  </p>
+<h3><strong>思路</strong></h3>
+<p>建立圆周运动的参数方程，确定角度 $\theta$ 与时间 $t$ 的关系；写出 $y$ 坐标，则距离 $d = |y|$；分析 $d(t)$ 的性质并与选项图象比对。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>设圆心在原点，半径为 $R=2$，点 $P$ 坐标 $(x,y)$ 满足 $x=2\cos\theta,\; y=2\sin\theta$。  </li>
+<li>由角速度 $\omega = 1$，得 $\theta(t) = \theta_0 + t$。  </li>
+<li>$t=0$ 时，$2\cos\theta_0 = \sqrt{2} \Rightarrow \cos\theta_0 = \frac{\sqrt{2}}{2}$，$2\sin\theta_0 = -\sqrt{2} \Rightarrow \sin\theta_0 = -\frac{\sqrt{2}}{2}$，结合第四象限得 $\theta_0 = -\dfrac{\pi}{4}$，故 $\theta(t) = t - \dfrac{\pi}{4}$。  </li>
+<li>到 $x$ 轴距离 $d = |y| = \left|2\sin\left(t - \frac{\pi}{4}\right)\right| = 2\left|\sin\left(t - \frac{\pi}{4}\right)\right|$。  </li>
+<li>函数特征：周期 $T = \dfrac{2\pi}{1} \div 2 = \pi$，非负，最大值为 $2$，最小值为 $0$；$t=0$ 时 $d = 2\left|-\frac{\sqrt{2}}{2}\right| = \sqrt{2}$；$t = \frac{\pi}{4}$ 时 $d = 0$；$t = \frac{3\pi}{4}$ 时 $d = 2$。图象为从 $(!0,\sqrt{2}!)$ 下降至 $(!\frac{\pi}{4},0!)$ 再上升至 $(!\frac{3\pi}{4},2!)$ 的波浪线。  </li>
+<li>对照选项，选取符合该走势的图象。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题关键在将距离转化为 $|2\sin(t - \frac{\pi}{4})|$，排除未取绝对值或初值错误的干扰项。验证特殊点（如零点、峰值点）可快速淘汰错误图象。<br />
+<strong>变式</strong>：若求点 $P$ 到 $y$ 轴距离 $d'$，则 $d' = |x| = 2\left|\cos\left(t - \frac{\pi}{4}\right)\right|$，图象类似但相位偏移。也可改为求质点纵坐标 $y$ 本身（不取绝对值），则周期为 $2\pi$ 且含负值区，图象形状迥异，应注意审题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-04.html">2010-理-04</a>（2010 · 中） 本题通过质点圆周运动模型，考查根据运动参数建立距离关于时间的函数关系并识别其大致图像的能力。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/768-图像判断.html">图像判断</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离心率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>离心率</h1><div class="review-mark" data-stem="离心率"></div><div class="meta-card"><span><strong>考点</strong>离心率</span><span><strong>权重</strong>61</span><span><strong>真题数</strong>23</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：61</li>
+<li>真题数：23；年份跨度：2008–2022</li>
+<li>出现题位：填空14 解答19 解答20 解答21 选择4 选择5 选择6 选择7 选择9 选择11 选择12</li>
+<li>难度分布：难3 中16 易4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>离心率定义</strong>：<ul>
+<li>椭圆与双曲线中，$e = \frac{c}{a}$，其中 $c$ 为半焦距，$a$ 为长半轴（实半轴）长。</li>
+<li>范围：椭圆 $e \in (0, 1)$；双曲线 $e \in (1, +\infty)$；抛物线 $e=1$。</li>
+</ul>
+</li>
+<li><strong>基本关系</strong>：务必区分椭圆与双曲线的参数关系。<ul>
+<li>椭圆：$a^2 = b^2 + c^2$，焦点在长轴上。</li>
+<li>双曲线：$c^2 = a^2 + b^2$，焦点在实轴上。</li>
+</ul>
+</li>
+<li><strong>渐近线（双曲线）</strong>：<ul>
+<li>焦点在 $x$ 轴：$y = \pm \frac{b}{a} x$。</li>
+<li>焦点在 $y$ 轴：$y = \pm \frac{a}{b} x$。</li>
+<li>渐近线斜率与离心率关系：若渐近线斜率为 $k = \frac{b}{a}$，则 $e = \frac{c}{a} = \sqrt{1+ \left( \frac{b}{a} \right)^2} = \sqrt{1 + k^2}$。</li>
+</ul>
+</li>
+<li><strong>通径（焦径）</strong>：<ul>
+<li>过焦点且垂直于焦点所在对称轴的弦。半通径长 $l = \frac{b^2}{a}$。</li>
+<li>椭圆/双曲线的通径端点坐标：$x$ 轴上的焦点 $F(\pm c, 0)$，则 $y = \pm \frac{b^2}{a}$。</li>
+</ul>
+</li>
+<li><strong>圆锥曲线定义</strong>：<ul>
+<li>椭圆第一定义：$|PF_1| + |PF_2| = 2a$。</li>
+<li>双曲线第一定义：$\left| |PF_1| - |PF_2| \right| = 2a$。</li>
+<li>椭圆与双曲线的第二定义（选填可用）：动点到焦点距离与到对应准线距离之比为定值 $e$。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接法求 $e$</strong>：已知 $a, b, c$ 中任意两个的等量关系，直接联立 $a,b,c$ 基本关系消元，解出 $e = \frac{c}{a}$。</p>
+<ul>
+<li>如题干给出渐近线斜率 $k$，双曲线直接套 $e = \sqrt{1+k^2}$。</li>
+<li>椭圆题给出 $a,c$ 线性关系可直接得出 $e$。</li>
+</ul>
+</li>
+<li>
+<p><strong>几何法构造 $a,c$ 齐次式</strong>：这是高考最高频的题型，尤其涉及焦点三角形、圆与圆锥曲线交点。</p>
+<ul>
+<li><strong>步骤</strong>：<ul>
+<li><strong>画图</strong>：据题意精准画出图形，标出已知长度、角度。</li>
+<li><strong>找几何关系</strong>：利用等腰三角形、直角三角形（勾股定理）、正弦/余弦定理、圆的对称性与半径相等、切线的垂直关系等。</li>
+<li><strong>翻译成边</strong>：将几何条件转化为仅含 $a,b,c$ 的线段长度表达式。常用切入点：<ul>
+<li>椭圆上点 $P$ 满足 $PF_1 \perp PF_2$，则 $|PF_1|^2 + |PF_2|^2 = |F_1F_2|^2 = 4c^2$，且 $|PF_1|+|PF_2| = 2a$。</li>
+<li>焦点三角形已知角度，可用正弦定理或构造过点作坐标轴的垂线求出点坐标。</li>
+</ul>
+</li>
+<li><strong>代入/消元</strong>：将点的坐标代入圆锥曲线方程，结合定义，消去 $b$，得到仅含 $a,c$ 的齐次方程，两边同除 $a^2$ 或 $a^4$ 等，解出 $e$。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>通径公式使用</strong>：题干出现“过焦点且垂直长/实轴的弦”，立即写出弦长 $ = 2 \cdot \frac{b^2}{a}$，直接得等式求解。</p>
+</li>
+<li>
+<p><strong>轨迹交点法</strong>：求点坐标时，若该点同时在两线上（如同时在圆与圆锥曲线上），可联立方程或利用圆的几何性质求坐标，代入曲线方程。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>混淆 $a,b,c$ 关系</strong>：</p>
+<ul>
+<li>双曲线计算中误用 $a^2+b^2=c^2$ 为 $a^2=b^2+c^2$。</li>
+<li>一看到 $PF_1 \perp PF_2$ 就默认 $|PF_1|^2+|PF_2|^2=4c^2$，但在双曲线中需注意到底是在焦点三角形用余弦定理，还是结合定义导出 $|PF_1|\cdot|PF_2|$ 的值。</li>
+</ul>
+</li>
+<li>
+<p><strong>忽略分类讨论</strong>：</p>
+<ul>
+<li>双曲线问题常需判断交点 $M,N$ 位于双曲线的同一支还是两支，不同情况得出的夹角或线段关系不同（如真题 2022 理-11）。仅做出一种情况会漏解，现多选题趋势更需警惕。</li>
+<li>椭圆对称轴方向未定时，需分焦点在 $x$ 轴或 $y$ 轴讨论。</li>
+</ul>
+</li>
+<li>
+<p><strong>渐近线斜率与 $e$ 的关系错乱</strong>：</p>
+<ul>
+<li>双曲线 $\frac{x^2}{a^2} - \frac{y^2}{b^2}=1$ 的渐近线斜率为 $\pm \frac{b}{a}$，才对应 $e=\sqrt{1+\left(\frac{b}{a}\right)^2}$。若渐近线斜率为 $\pm \frac{a}{b}$，则 $e=\sqrt{1+\left(\frac{a}{b}\right)^2}$，不能死记。</li>
+</ul>
+</li>
+<li>
+<p><strong>点坐标直接代入方程的运算错误</strong>：</p>
+<ul>
+<li>将形如 $(c, \sqrt{3}c)$ 的点代入 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 或双曲线方程后，不会灵活利用 $b^2 = a^2 - c^2$ 或 $c^2-a^2$ 消元，导致式子冗长算错。</li>
+</ul>
+</li>
+<li>
+<p><strong>忽略离心率范围限制</strong>：</p>
+<ul>
+<li>求得 $e$ 的两个值，未根据椭圆 $0&lt;e&lt;1$、双曲线 $e&gt;1$ 进行取舍。</li>
+</ul>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022-理-11）</h3>
+<p>双曲线 $C$ 焦点 $F_1, F_2$，以实轴为直径作圆 $D$。过 $F_1$ 作 $D$ 的切线与 $C$ 交于 $M,N$，$\cos \angle F_1 N F_2 = \frac{3}{5}$，求离心率 $e$。</p>
+<p><strong>思路</strong>
+画图，圆心 $O$，半径 $a$。切线 $F_1 M N$，切点 $G$，故 $OG \perp MN$。本题关键在于将已知角 $\angle F_1 N F_2$（余弦为 $\frac{3}{5}$）置于 $\triangle F_1 N F_2$ 中，用正弦定理或余弦定理结合双曲线定义求出边长关系。由于 $M,N$ 为交点，需分点在同一支或两支讨论。</p>
+<p><strong>步骤</strong>
+1. <strong>几何关联</strong>：连接 $OG$ 则 $OG \perp F_1 N$。在 $Rt\triangle OG F_1$ 中，$|OG|=a, |OF_1|=c, |F_1 G|=b$。
+2. <strong>设角</strong>：设 $\angle F_1 N F_2 = \theta$，则 $\cos \theta = \frac{3}{5}$，故 $\sin \theta = \frac{4}{5}$。
+3. <strong>分类讨论</strong>：
+    - <strong>情况一</strong>：$M,N$ 在左支，$N$ 为左支上点。在 $\triangle F_1 N F_2$ 中，由正弦定理：$\frac{|F_1 F_2|}{\sin \theta} = \frac{|NF_2|}{\sin \angle NF_1F_2} = \frac{|NF_1|}{\sin \angle NF_2F_1}$。结合双曲线定义 $|NF_2| - |NF_1| = 2a$。由 $OG \parallel NF_2$ 等几何关系导出 $ \angle NF_1F_2$ 正余弦。
+    - <strong>解析结论</strong>：经运算可得 $|NF_1| = 3b/2 - a$ 等关系，代入定义式最终化简得关系式 $2b=3a$ 或 $a=2b$。由 $e = \frac{c}{a} = \frac{\sqrt{a^2+b^2}}{a} = \sqrt{1+\left(\frac{b}{a}\right)^2}$，当 $2b=3a$ 时 $e=\frac{\sqrt{13}}{2}$；当 $a=2b$ 时 $e=\frac{\sqrt{5}}{2}$。
+    - <strong>情况二</strong>：$M,N$ 各在左右支，同样利用定义和三角关系，可验证结果与上述合并情况无异。</p>
+<p><strong>点评/变式</strong>
+- <strong>核心难点</strong>：几何条件（切线、定角）与圆锥曲线定义的无缝衔接，辅以三角计算。
+- <strong>变式训练</strong>：将“切线”条件换成“过焦点作 $60^\circ$ 的直线”，余弦值换成其他值，思路类似：以焦点三角形为突破口，联立定义与正余弦定理。</p>
+<hr />
+<h3><strong>题目</strong>（2020-理-19 / 文-19）</h3>
+<p>椭圆 $C_1: \frac{x^2}{a^2} + \frac{y^2}{b^2}=1$ 与抛物线 $C_2$ 共焦点 $F$，过 $F$ 垂直于 $x$ 轴的弦分别为 $AB, CD$，且 $|CD| = \frac{4}{3}|AB|$。（1）求 $C_1$ 的离心率。</p>
+<p><strong>思路</strong>
+由共焦点可知 $C_2$ 方程可设为 $y^2=4cx$。通径长可直接用公式表达，竖直线交抛物线弦长也是通径，由此建立等量关系直接求 $e$。</p>
+<p><strong>步骤</strong>
+1. <strong>设方程</strong>：$C_1$ 焦点 $F(c,0)$，$C_2$ 为 $y^2=4cx$。
+2. <strong>算弦长</strong>：
+    - $|AB|$ 是椭圆通径，长 $=\frac{2b^2}{a}$。
+    - $|CD|$ 是抛物线过焦点的弦，将 $x=c$ 代入 $y^2=4cx$ 得 $y=\pm 2c$，长 $=4c$。
+3. <strong>建等式</strong>：由 $|CD| = \frac{4}{3}|AB|$ 得 $4c = \frac{4}{3} \cdot \frac{2b^2}{a}$，化简 $c = \frac{2b^2}{3a}$。
+4. <strong>化简求 $e$</strong>：代入椭圆 $b^2 = a^2 - c^2$：$3ac = 2(a^2-c^2)$，同除 $a^2$：$3e = 2(1-e^2)$。
+整理得 $2e^2 + 3e - 2 = 0$，即 $(2e-1)(e+2)=0$。因 $e&gt;0$，故 $e = \frac{1}{2}$。</p>
+<p><strong>点评/变式</strong>
+- <strong>容易错点</strong>：抛物线通径误记为 $\frac{a}{b}$ 等形式，一定要熟记抛物线 $y^2=2px$ 的通径为 $2p$，本题 $p=2c$ 故通径为 $4c$。
+- <strong>拓展</strong>：若抛物线开口方向变为上下，同理只用通径建等式即可。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-11.html">2022-理-11</a>（2022 · 难） 本题考查双曲线离心率求解，通过焦点作圆切线并结合双曲线定义、几何关系，需对M、N位置分类讨论。</li>
+<li><a href="../../exam/数学/2020-文-19.html">2020-文-19</a>（2020 · 中） 本题考查椭圆与抛物线的标准方程及几何性质，利用交点坐标求弦长并计算离心率。</li>
+<li><a href="../../exam/数学/2020-理-19.html">2020-理-19</a>（2020 · 难） 椭圆C₁右焦点与抛物线C₂焦点重合且中心与顶点重合，利用焦点弦关系求椭圆离心率及两曲线标准方程。</li>
+<li><a href="../../exam/数学/2019-文-12.html">2019-文-12</a>（2019 · 中） 本题通过圆的对称性求双曲线离心率，采用几何法简化运算。</li>
+<li><a href="../../exam/数学/2019-文-20.html">2019-文-20</a>（2019 · 中） 本题通过等边三角形和垂直焦点三角形情境，考查椭圆定义、离心率及参数范围的求解。</li>
+<li><a href="../../exam/数学/2019-理-11.html">2019-理-11</a>（2019 · 中） 本题通过几何对称性求双曲线离心率，结合圆的方程建立参数关系求解。</li>
+<li><a href="../../exam/数学/2018-文-06.html">2018-文-06</a>（2018 · 中） 已知双曲线离心率，求其渐近线方程。</li>
+<li><a href="../../exam/数学/2018-文-11.html">2018-文-11</a>（2018 · 中） 根据椭圆焦点和垂直条件建立方程求解离心率。</li>
+<li><a href="../../exam/数学/2018-理-05.html">2018-理-05</a>（2018 · 易） 已知双曲线离心率求渐近线方程</li>
+<li><a href="../../exam/数学/2018-理-12.html">2018-理-12</a>（2018 · 中） 通过椭圆焦点、顶点及等腰三角形条件建立方程求离心率。</li>
+<li><a href="../../exam/数学/2017-理-09.html">2017-理-09</a>（2017 · 中） 双曲线渐近线被圆截弦长，求离心率</li>
+<li><a href="../../exam/数学/2016-理-11.html">2016-理-11</a>（2016 · 中） 已知双曲线的焦点和垂直条件及正弦值，求离心率。</li>
+<li><a href="../../exam/数学/2015-理-11.html">2015-理-11</a>（2015 · 中） 利用等腰三角形和顶角条件求M坐标，代入双曲线方程得a=b，从而求出离心率</li>
+<li><a href="../../exam/数学/2014-文-20.html">2014-文-20</a>（2014 · 中） 已知椭圆上点M满足MF₂⊥x轴，结合直线MN的斜率求椭圆离心率。</li>
+<li><a href="../../exam/数学/2013-文-05.html">2013-文-05</a>（2013 · 易） 求椭圆离心率，利用焦点三角形中垂直与角度关系计算。</li>
+<li><a href="../../exam/数学/2012-文-04.html">2012-文-04</a>（2012 · 中） 该题考查椭圆离心率的求解，利用等腰三角形和焦点三角形几何关系建立方程。</li>
+<li><a href="../../exam/数学/2012-理-04.html">2012-理-04</a>（2012 · 中） 椭圆离心率的求解，通过等腰三角形条件建立几何关系方程。</li>
+<li><a href="../../exam/数学/2011-文-04.html">2011-文-04</a>（2011 · 易） 已知椭圆标准方程，求离心率</li>
+<li><a href="../../exam/数学/2011-理-07.html">2011-理-07</a>（2011 · 中） 该题通过直线与双曲线相交得到弦长关系，求双曲线离心率。</li>
+<li><a href="../../exam/数学/2011-理-14.html">2011-理-14</a>（2011 · 中） 已知椭圆离心率和焦点三角形周长，利用椭圆定义求标准方程。</li>
+<li><a href="../../exam/数学/2010-文-05.html">2010-文-05</a>（2010 · 易） 求双曲线渐近线经过给定点时的离心率</li>
+<li><a href="../../exam/数学/2009-理-21.html">2009-理-21</a>（2009 · 难） 椭圆及直线与椭圆综合题，已知离心率和原点到切线距离求椭圆方程，再探究是否存在定点满足向量关系</li>
+<li><a href="../../exam/数学/2008-理-09.html">2008-理-09</a>（2008 · 中） 根据双曲线方程和参数范围求离心率的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/391-椭圆离心率.html">离心率</a></li>
+</ul>
+</div>
+</body>
+</html>

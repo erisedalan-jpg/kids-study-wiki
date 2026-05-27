@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最大公约数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>最大公约数</h1><div class="review-mark" data-stem="最大公约数"></div><div class="meta-card"><span><strong>考点</strong>最大公约数</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>算法(程序框图)</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：算法(程序框图)</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>更相减损术</strong>：出自《九章算术》，用于求两个正整数的最大公约数。核心操作：以较大的数减去较小的数，然后用差与较小的数构成新的一对数，重复此过程，直到两数相等为止，该相等的数即为最大公约数。</li>
+<li>可简化为：若 $a&gt;b$，则令 $a = a - b$；否则令 $b = b - a$；当 $a = b$ 时停止，输出 $a$。</li>
+<li><strong>等价原理</strong>：$\gcd(a,b) = \gcd(a-b,b)$ （假设 $a&gt;b$），通过不断相减逐步约化。</li>
+<li><strong>程序框图常见结构</strong>：输入 → 循环判断（$a \neq b$）→ 比较大小并相减 → 输出相等时的 $a$。</li>
+<li><strong>与辗转相除法（欧几里得算法）区别</strong>：辗转相除法用取余运算 $a \bmod b$ 代替多次相减，速度更快，但更相减损术只用减法，适合早期算法实现。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别算法类型</strong>：看到框图中有“$a&gt;b$？→ $a=a-b$”“$b&gt;a$？→ $b=b-a$”，且循环条件为 $a \neq b$，则是更相减损术求最大公约数。</li>
+<li><strong>模拟执行流程</strong>：</li>
+<li>记录初始 $a,b$；</li>
+<li>在循环内，当 $a \neq b$ 时，比较大小：<ul>
+<li>若 $a&gt;b$，用 $a-b$ 替代 $a$；</li>
+<li>否则，用 $b-a$ 替代 $b$；</li>
+</ul>
+</li>
+<li>循环直至 $a=b$，输出该值。</li>
+<li><strong>快速心算技巧</strong>：不需要严格按框图逐步减法，可直接计算 $\gcd(a,b)$。对于中小数字，多次相减等价于取余数，如 $18-14=4$，再用 $14-4=10$，$10-4=6$，$6-4=2$，$4-2=2$，结果相同。</li>
+<li><strong>注意输出值</strong>：最终输出的是 $a$ 还是其他变量，严格按框图指示。本题输出 $a$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>循环终止条件混淆</strong>：误以为 $a=0$ 或 $b=0$ 时终止，实际上更相减损术是两数相等时停止，输出该数（非零）。</li>
+<li><strong>更新顺序出错</strong>：每次只改变较大数，较小数保持不变。切忌同时更新两个变量。</li>
+<li><strong>误用辗转相除</strong>：将“$a=a-b$”视为“$a = a \bmod b$”，虽然结果一致，但框图明确用减法，必须依据流程模拟，否则可能对中间变量判断失误。</li>
+<li><strong>多减一轮</strong>：当两数相等时不应再进入循环；若在 $a=b$ 时意外执行减法会导致结果为0，从而选错选项（如本题A.0）。</li>
+<li><strong>忘记初始输入</strong>：部分考生直接口算最大公约数而忽略框图中间过程导致误判，例如误以为最后输出 $b$ 而不是 $a$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2015-文-08</h3>
+<p><strong>题目</strong>：执行如图所示的程序框图（更相减损术），输入 $a=14, b=18$，则输出的 $a=$（ ）<br />
+A. 0　　B. 2　　C. 4　　D. 14  </p>
+<p><strong>思路</strong>：模拟框图循环，按照更相减损的规则逐步更新 $a,b$，直到 $a=b$，此时输出 $a$。</p>
+<p><strong>步骤</strong>：
+1. 初始：$a=14$，$b=18$。判断 $a \neq b$，成立，进入循环。
+2. 判断 $a&gt;b$？$14&gt;18$ 不成立，执行 $b=b-a$ ⇒ $b=18-14=4$。此时 $a=14,b=4$。
+3. 回到循环条件，$a\neq b$ 成立。判断 $a&gt;b$？$14&gt;4$ 成立，执行 $a=a-b$ ⇒ $a=14-4=10$。此时 $a=10,b=4$。
+4. $a\neq b$，$a&gt;b$ 成立，$a=10-4=6$，得 $a=6,b=4$。
+5. $a\neq b$，$a&gt;b$ 成立，$a=6-4=2$，得 $a=2,b=4$。
+6. $a\neq b$，$a&gt;b$ 不成立，执行 $b=b-a$ ⇒ $b=4-2=2$，得 $a=2,b=2$。
+7. 判断 $a\neq b$ 不成立，跳出循环，输出 $a=2$。</p>
+<p>故答案为 <strong>B</strong>。  </p>
+<p><strong>点评/变式</strong>：本题直接源自《九章算术》“更相减损术”，通过减法迭代求最大公约数。需要注意循环停止条件是两个数相等，而非一个为0。若将框图改为辗转相除法（$a = a \bmod b$ 并交换），结果相同但循环次数更少。变式训练可尝试输入 $a=24,b=36$，按此框图输出应为 $12$；或判断若将条件“$a&gt;b$”改为“$a&gt;b$？$a=a-b$”同时“$b&gt;a$？$b=b-a$”不变，结果不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-08.html">2015-文-08</a>（2015 · 中） 该题考查以程序框图形式呈现的《九章算术》更相减损术算法，通过循环结构求两数最大公约数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">最大公约数</a></li>
+</ul>
+</div>
+</body>
+</html>

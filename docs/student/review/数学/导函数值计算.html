@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导函数值计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>导函数值计算</h1><div class="review-mark" data-stem="导函数值计算"></div><div class="meta-card"><span><strong>考点</strong>导函数值计算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>导数的定义</strong>：函数 $y=f(x)$ 在 $x=x_0$ 处的导数 $f'(x_0)$ 是函数在该点处的瞬时变化率，也是曲线在点 $(x_0,f(x_0))$ 处切线的斜率。  </li>
+<li><strong>基本初等函数的导数公式</strong>（必记）：  </li>
+<li>$(\ln x)' = \dfrac{1}{x}$；  </li>
+<li>更一般地，$(\ln |x|)' = \dfrac{1}{x}$。  </li>
+<li><strong>导数的运算法则</strong>：常数乘函数：$[c\cdot f(x)]' = c\cdot f'(x)$。  </li>
+<li><strong>复合函数求导（链式法则）</strong>：若 $y=f(u), u=g(x)$，则 $y'_x = f'(u)\cdot g'(x)$。<br />
+   对 $y=\ln(g(x))$，导数为 $\dfrac{g'(x)}{g(x)}$。特例：$y=\ln(x+1)$ 的导数为 $\dfrac{1}{x+1}$。  </li>
+<li><strong>导函数值计算</strong>：将给定点 $x_0$ 的横坐标直接代入导函数 $f'(x)$，所得数值即为该点处的导数值（切线斜率）。  </li>
+<li><strong>切线方程</strong>：曲线 $y=f(x)$ 在点 $(x_0,f(x_0))$ 处的切线方程可由点斜式写出：$y - f(x_0) = f'(x_0)(x - x_0)$。若切点恰为原点，方程简化为 $y = f'(0)x$。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确函数与切点</strong>：确定函数解析式 $y=f(x)$ 及切点坐标 $(x_0, y_0)$。注意切点必须既在曲线上，又是切线的公共点。  </li>
+<li><strong>准确求导</strong>：利用求导公式与法则（乘积、商、复合函数求导）求出导函数 $f'(x)$。复合函数务必“层层求导再相乘”，尤其是对数型函数 $\ln(u(x))$ 的导数为 $\dfrac{u'(x)}{u(x)}$。  </li>
+<li><strong>计算切点处斜率</strong>：将 $x_0$ 代入导函数，算出 $k = f'(x_0)$。  </li>
+<li><strong>套用点斜式写方程</strong>：将 $k$ 与点 $(x_0, y_0)$ 代入 $y - y_0 = k(x - x_0)$，化简为一般式或斜截式即可。若已知切线过原点，可直接写 $y=kx$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>复合函数求导丢“尾巴”</strong>：计算 $y=2\ln(x+1)$ 的导数时，最典型的错误是只写 $\dfrac{2}{x+1}$，忘记乘以 $(x+1)$ 的导数 $1$ —— 本题恰好乘 $1$ 不影响结果，但若换成 $y=\ln(2x+1)$ 就会错误地写成 $\dfrac{1}{2x+1}$，正确应为 $\dfrac{2}{2x+1}$。  </li>
+<li><strong>混淆导数值与切线方程</strong>：题目要求写切线方程，却只写斜率 $y'=2$ 或点坐标，造成非智力失分。必须写出完整的直线方程。  </li>
+<li><strong>切点坐标误用</strong>：若切点不是原点或不是 $(0,f(0))$，可能会混淆 $x_0$ 与 $y_0$，或将 $y_0$ 遗漏。牢记点斜式 $y - y_0 = f'(x_0)(x - x_0)$ 中 $y_0$ 必须等于 $f(x_0)$。  </li>
+<li><strong>导数公式记忆错误</strong>：如将 $(\ln x)'$ 误记为 $\dfrac{1}{x\ln 10}$ 或 $x^{-1}$ 的写法不规范。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2018·全国卷·理13）<br />
+曲线 $y=2\ln(x+1)$ 在点 $(0,0)$ 处的切线方程为<strong><em>_</em></strong>___。  </p>
+<p><strong>思路</strong><br />
+直接按“求导 → 代横坐标 → 点斜式”的标准流程处理。本题切点在原点上，切线方程可简化为 $y = f'(0)x$，只需算出 $x=0$ 时的导数值即可。  </p>
+<p><strong>步骤</strong><br />
+1. 给定函数 $y=2\ln(x+1)$，求导：<br />
+   令 $u=x+1$，则 $y=2\ln u$，<br />
+   $y' = 2 \cdot \dfrac{1}{u} \cdot u' = 2 \cdot \dfrac{1}{x+1} \cdot 1 = \dfrac{2}{x+1}$。<br />
+2. 计算在 $x=0$ 处的导数值：$f'(0) = \dfrac{2}{0+1} = 2$，此即切线斜率。<br />
+3. 因为切点为 $(0,0)$，由点斜式得 $y - 0 = 2(x - 0)$，即 $y = 2x$。  </p>
+<p><strong>点评/变式</strong><br />
+- 此题为基础题，考查复合函数求导与导数的几何意义，属于“一分不丢”的题。<br />
+- 变式1：若曲线变为 $y=2\ln(x+1)+1$，点变为 $(0,1)$，则切线斜率为 $2$，方程为 $y-1=2(x-0)$。<br />
+- 变式2：求过原点且与曲线相切的切线方程（原点未必是切点），则需设切点、列方程，难度升级。本题直接给切点，简化了过程。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-13.html">2018-理-13</a>（2018 · 易） 利用导数求曲线在某点处的切线方程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">导函数值计算</a></li>
+</ul>
+</div>
+</body>
+</html>

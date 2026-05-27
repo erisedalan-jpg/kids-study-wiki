@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数奇偶性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数奇偶性</h1><div class="review-mark" data-stem="函数奇偶性"></div><div class="meta-card"><span><strong>考点</strong>函数奇偶性</span><span><strong>权重</strong>32</span><span><strong>真题数</strong>16</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：32</li>
+<li>真题数：16；年份跨度：2008–2021</li>
+<li>出现题位：填空14 填空15 选择2 选择3 选择4 选择8 选择9 选择10 选择11 选择12</li>
+<li>难度分布：易10 中6</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>定义</strong>：设函数 $f(x)$ 定义域 $D$ 关于原点对称。<ul>
+<li><strong>奇函数</strong>：对于任意 $x\in D$，都有 $f(-x)=-f(x)$。图像关于原点对称。</li>
+<li><strong>偶函数</strong>：对于任意 $x\in D$，都有 $f(-x)=f(x)$。图像关于 $y$ 轴对称。</li>
+</ul>
+</li>
+<li><strong>运算性质</strong>：<ul>
+<li>奇函数 $+$ 奇函数 $=$ 奇函数；偶函数 $+$ 偶函数 $=$ 偶函数。</li>
+<li>奇函数 $\times$ 奇函数 $=$ 偶函数；奇函数 $\times$ 偶函数 $=$ 奇函数；偶函数 $\times$ 偶函数 $=$ 偶函数。</li>
+<li>复合函数 $f(g(x))$ 的奇偶性遵循“同偶异奇”原则（内层外层均为偶函数则为偶函数，其余情况与外层奇偶性一致，注意定义域约束）。</li>
+</ul>
+</li>
+<li><strong>核心定理</strong>：<ul>
+<li>若奇函数 $f(x)$ 在 $x=0$ 处有定义，则必有 $f(0)=0$。</li>
+<li>奇函数在关于原点对称区间上的单调性相同；偶函数在关于原点对称区间上的单调性相反。</li>
+</ul>
+</li>
+<li><strong>图像对称轴与周期</strong>：<ul>
+<li>若 $f(x+a)$ 是偶函数，则 $f(x)$ 关于 $x=a$ 对称。</li>
+<li>若 $f(x+a)$ 是奇函数，则 $f(x)$ 关于点 $(a,0)$ 中心对称。</li>
+<li>$f(x)$ 若关于 $x=a$ 和 $x=b$ 都对称，则 $T=2|a-b|$ 是一个周期。</li>
+</ul>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义验证法</strong>：判断奇偶性，第一步求定义域并验证是否关于原点对称，第二步计算 $f(-x)$，对比与 $\pm f(x)$ 的关系。</li>
+<li><strong>性质转化法（脱壳法）</strong>：<ul>
+<li>处理抽象不等式 $f(m) &gt; f(n)$ 时，若 $f(x)$ 为偶函数且在 $[0, +\infty)$ 上单调递增，则等价于 $|m| &gt; |n|$。</li>
+<li>若条件仅给出 $x&gt;0$ 或 $x&lt;0$ 的解析式，求另一区间函数值或解析式，可利用 $f(x)=\pm f(-x)$ 将变量转化到已知区间。</li>
+</ul>
+</li>
+<li><strong>函数构造法</strong>：<ul>
+<li>遇到 $x f'(x) - f(x)$ 或 $x f'(x) + f(x)$ 型不等式，联想构造函数 $g(x)=\frac{f(x)}{x}$ 或 $g(x)=xf(x)$，利用导数判断单调性，结合奇偶性求解不等式。</li>
+</ul>
+</li>
+<li><strong>图像特征法</strong>：利用奇函数图像关于原点中心对称，偶函数图像关于 $y$ 轴对称，结合极限趋势排除错误选项，快速识别函数图像。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>忽略定义域</strong>：判断奇偶性时，必须先确认定义域关于原点对称。如函数 $y=\log_2\frac{2-x}{2+x}$，定义域为 $(-2,2)$，具备对称性才能判定为奇函数。</li>
+<li><strong>混淆单调区间与单调性</strong>：奇函数在对称区间的单调性<strong>严格相同</strong>，偶函数则<strong>严格相反</strong>。书写单调区间时，若函数在 $x=0$ 不连续，不可用“$\cup$”连接。</li>
+<li><strong>误用 $f(0)=0$ 定理</strong>：奇函数需在 $x=0$ 有定义时才能得出 $f(0)=0$。若定义域不包含 $0$（如 $f(x)=\frac{1}{x}$），不能强行套用此结论。</li>
+<li><strong>复合函数奇偶性误判</strong>：仅记“同增异减”而忽略奇偶性。如 $f(x)=x^3$ 是奇函数，$g(x)=\cos x$ 是偶函数，但复合函数 $f(g(x))$ 是偶函数。</li>
+<li><strong>平移变换后的奇偶性</strong>：若 $f(x)$ 为奇函数，则 $f(x+a)-b$ 关于点 $(-a, -b)$ 中心对称，而非原点。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题一（2021-文-09）</h3>
+<p><strong>题目</strong>：设函数 $f(x)=\frac{1-x}{1+x}$，则下列函数中为奇函数的是（   ）
+A. $f(x-1)-1$  B. $f(x-1)+1$  C. $f(x+1)-1$  D. $f(x+1)+1$</p>
+<p><strong>思路</strong>：本题考察平移变换构造奇函数。直接利用分离常数法化简 $f(x)$，识别其对称中心，通过平移将对称中心移至原点 $(0,0)$ 即可获得奇函数。</p>
+<p><strong>步骤</strong>：
+1.  <strong>化简</strong>：$f(x)=\frac{1-x}{1+x} = \frac{2-(1+x)}{1+x} = \frac{2}{1+x} - 1$。
+2.  <strong>识别对称中心</strong>：反比例函数 $y=\frac{2}{x}$ 是奇函数，对称中心为 $(0,0)$。$f(x)$ 是由 $y=\frac{2}{x}$ 向左平移 1 个单位，再向下平移 1 个单位得到，故对称中心为 $(-1, -1)$。
+3.  <strong>还原变换</strong>：欲使其为奇函数（关于原点对称），需将 $f(x)$ 向右平移 1 个单位，再向上平移 1 个单位，得到函数 $g(x)=f(x-1)+1$。
+4.  <strong>验证</strong>：$g(x)=\frac{2}{1+(x-1)}-1+1 = \frac{2}{x}$，满足 $g(-x)=-g(x)$。</p>
+<p><strong>点评/变式</strong>：求解复杂分式函数的对称中心，分离常数是首选。逆向思维：若 $f(x+a)+b$ 为奇函数，则 $f(x)$ 的对称中心为 $(a, b)$。</p>
+<h3>代表题二（2020-文-10）</h3>
+<p><strong>题目</strong>：设函数 $f(x)=x^3-\frac{1}{x^3}$，则 $f(x)$（    ）
+A. 是奇函数，且在 $(0,+\infty)$ 单调递增
+B. 是奇函数，且在 $(0,+\infty)$ 单调递减
+C. 是偶函数，且在 $(0,+\infty)$ 单调递增
+D. 是偶函数，且在 $(0,+\infty)$ 单调递减</p>
+<p><strong>思路</strong>：直接利用定义判断奇偶性，利用熟知的幂函数单调性及单调性的运算法则判断。</p>
+<p><strong>步骤</strong>：
+1.  <strong>定义域与奇偶性</strong>：定义域 ${x|x \neq 0}$。$f(-x)=(-x)^3 - \frac{1}{(-x)^3} = -x^3 + \frac{1}{x^3} = -f(x)$，故为奇函数。
+2.  <strong>单调性</strong>：$y=x^3$ 在 $(0, +\infty)$ 递增，$y=-\frac{1}{x^3}$ 在 $(0, +\infty)$ 也递增（由 $y=x^{-3}$ 递减，负号改变单调性）。递增函数加递增函数仍为递增函数。
+3.  <strong>结论</strong>：$f(x)$ 在 $(0, +\infty)$ 单调递增。</p>
+<p><strong>点评/变式</strong>：$\frac{1}{x^a}$ 型单调性：指数为正越大，增长越快；指数为负要注意反比例特性及分界点。利用导数也可验证，$f'(x)=3x^2+3x^{-4}&gt;0$，同样可得单调递增。</p>
+<h3>代表题三（2019-理-14）</h3>
+<p><strong>题目</strong>：已知 $f(x)$ 是奇函数，且当 $x&lt;0$ 时，$f(x)=-e^{ax}$。若 $f(\ln 2)=8$，则 $a=$<strong><em>_</em></strong>。</p>
+<p><strong>思路</strong>：利用奇函数性质“正负互推”，将自变量为正数的函数值转化为已知解析式的区间求解。</p>
+<p><strong>步骤</strong>：
+1.  <strong>定区间</strong>：$\ln 2 \in (0,1)$，不在已知区间 $x&lt;0$ 上。
+2.  <strong>化归</strong>：由 $f(x)$ 为奇函数，得 $f(\ln 2) = -f(-\ln 2)$。
+3.  <strong>代入</strong>：$-\ln 2 &lt; 0$，满足已知解析式，故 $f(-\ln 2) = -e^{a(-\ln 2)} = -e^{-a\ln 2}$。
+4.  <strong>联立求解</strong>：$f(\ln 2) = -(-e^{-a\ln 2}) = e^{-a\ln 2} = 8$。
+    两边同时取自然对数：$-a\ln 2 = \ln 8 = 3\ln 2$。
+    由 $\ln 2 \neq 0$，解得 $a=-3$。</p>
+<p><strong>点评/变式</strong>：本题核心是“$f(x)=-f(-x)$”这个符号转换。注意指数运算：$e^{-a\ln 2} = (e^{\ln 2})^{-a} = 2^{-a}=8$，可得 $-a=3$，更快捷。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-09.html">2021-文-09</a>（2021 · 易） 本题考查函数平移变换与奇偶性的判断，通过平移将给定函数转化为已知奇函数。</li>
+<li><a href="../../exam/数学/2020-文-10.html">2020-文-10</a>（2020 · 易） 考查由解析式求函数定义域、判断奇偶性和单调性</li>
+<li><a href="../../exam/数学/2019-理-14.html">2019-理-14</a>（2019 · 中） 考查函数奇偶性与对数运算，利用奇函数性质转化求参数值。</li>
+<li><a href="../../exam/数学/2018-理-03.html">2018-理-03</a>（2018 · 易） 本题考查函数图像的识别，通过奇偶性、特殊点函数值及极限排除错误选项。</li>
+<li><a href="../../exam/数学/2017-文-14.html">2017-文-14</a>（2017 · 易） 已知奇函数在x&lt;0时的解析式，利用奇偶性求f(2)的值。</li>
+<li><a href="../../exam/数学/2015-文-12.html">2015-文-12</a>（2015 · 中） 本题考查利用函数的奇偶性与单调性解抽象不等式，通过导数判断单调性并转化绝对值不等式求解。</li>
+<li><a href="../../exam/数学/2015-理-12.html">2015-理-12</a>（2015 · 中） 本题考查利用导数研究抽象函数单调性、奇偶性，结合构造函数与不等式解法。</li>
+<li><a href="../../exam/数学/2014-文-15.html">2014-文-15</a>（2014 · 易） 本题通过函数奇偶性与对称性推导周期性，求函数值。</li>
+<li><a href="../../exam/数学/2014-理-15.html">2014-理-15</a>（2014 · 易） 利用偶函数单调性将抽象不等式转化为绝对值不等式求解。</li>
+<li><a href="../../exam/数学/2011-文-03.html">2011-文-03</a>（2011 · 易） 本题通过具体函数选项考查偶函数定义及在指定区间上的单调性判断。</li>
+<li><a href="../../exam/数学/2011-理-02.html">2011-理-02</a>（2011 · 易） 本题考查函数奇偶性与单调性的判断，属于基础选择题。</li>
+<li><a href="../../exam/数学/2011-理-11.html">2011-理-11</a>（2011 · 中） 本题通过辅助角公式化简三角函数，利用最小正周期和偶函数性质确定参数，进而判断单调区间。</li>
+<li><a href="../../exam/数学/2010-文-09.html">2010-文-09</a>（2010 · 中） 偶函数性质结合绝对值不等式求解，通过转化再解不等式得到集合范围。</li>
+<li><a href="../../exam/数学/2010-理-08.html">2010-理-08</a>（2010 · 中） 本题利用偶函数性质将分段函数转化为绝对值函数，并求解绝对值不等式。</li>
+<li><a href="../../exam/数学/2009-文-03.html">2009-文-03</a>（2009 · 易） 判断函数奇偶性，利用奇函数图象对称性得出关于原点对称。</li>
+<li><a href="../../exam/数学/2008-文-04.html">2008-文-04</a>（2008 · 易） 判断函数f(x)=1/x-x的奇偶性，利用f(-x)=-f(x)得出图象关于原点对称。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/284-函数的奇偶性.html">函数奇偶性</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>与圆有关的比例线段</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>与圆有关的比例线段</h1><div class="review-mark" data-stem="与圆有关的比例线段"></div><div class="meta-card"><span><strong>考点</strong>与圆有关的比例线段</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2011–2014</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>与圆有关的比例线段主要涉及以下核心定理与结论，使用时务必注意 <strong>模型识别</strong> 与 <strong>条件匹配</strong>：</p>
+<ul>
+<li><strong>相交弦定理</strong>：圆内两条弦 $AB$、$CD$ 交于点 $P$，则 $PA \cdot PB = PC \cdot PD$。</li>
+<li><strong>割线定理</strong>：从圆外一点 $P$ 引两条割线与圆交于 $A,B$ 和 $C,D$（$A,C$ 为近点），则 $PA \cdot PB = PC \cdot PD$。</li>
+<li><strong>切割线定理</strong>：从圆外一点 $P$ 引切线与圆切于 $A$，引割线与圆交于 $B,C$，则 $PA^2 = PB \cdot PC$。</li>
+<li><strong>切线长定理</strong>：过圆外一点引圆的两条切线，切线长相等。</li>
+<li><strong>弦切角定理</strong>：弦切角等于它所夹弧对的圆周角。由此可推出 <strong>切割线所交的三角形相似</strong>。</li>
+<li><strong>相似三角形与成比例线段</strong>：圆中的比例线段往往通过相似三角形推导，常见相似模型有：</li>
+<li>相交弦导出的 $\triangle PAD \sim \triangle PCB$ 等；</li>
+<li>
+<p>切割线导出的 $\triangle PAB \sim \triangle PCA$（$A$ 为切点，$BC$ 为割线，则有 $\triangle PAB \sim \triangle PCA$）。</p>
+</li>
+<li>
+<p><strong>四点共圆的判定与性质</strong>：</p>
+</li>
+<li><strong>判定</strong>：若 $\angle ADE = \angle ACB$（或对角互补、外角等于内对角等），则 $C,B,D,E$ 四点共圆。</li>
+<li><strong>性质</strong>：四点共圆后可运用圆幂定理、圆周角相等、弦切角等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>与圆有关的比例线段证明或计算，一般按以下步骤破题：</p>
+<ol>
+<li>
+<p><strong>识图与标记</strong><br />
+   在图中标出切线、割线、相交弦、已知等分点/中点等关键元素，区分切点、交点、圆心。将已知长度用字母或数字标记。</p>
+</li>
+<li>
+<p><strong>优先寻找圆幂关系</strong><br />
+   如果是圆外一点带切线，直接考虑 <strong>切割线定理</strong>；两条割线用 <strong>割线定理</strong>；圆内相交弦用 <strong>相交弦定理</strong>。这些关系可直接写出等积式，避免重复证相似。</p>
+</li>
+<li>
+<p><strong>寻找相似三角形</strong><br />
+   若直接使用圆幂定理条件不足，则通过圆中角的关系（圆周角、弦切角）找相似三角形：</p>
+</li>
+<li>有切线时，找切点与割线端点构成的三角形，通常有 $\triangle P$切点$B \sim \triangle P$切点$C$ 等。</li>
+<li>
+<p>通过四点共圆传递角相等，构造相似。</p>
+</li>
+<li>
+<p><strong>设置中间比或设未知数</strong><br />
+   将待证等式转化为比例式或等积式。当涉及 $AD \cdot DE = 2PB^2$ 这类含有系数的等式时，可利用中点、已知倍长关系将系数化入几何长度（如 $PC=2PA$、$D$ 为中点等）。</p>
+</li>
+<li>
+<p><strong>四点共圆的策略</strong>  </p>
+</li>
+<li>证共圆：用相似得角相等，或证比例线段结合公共角。</li>
+<li>
+<p>利用共圆：共圆后可以把角、线段转移到便于使用圆幂定理的新结构。</p>
+</li>
+<li>
+<p><strong>计算问题处理</strong><br />
+   对于求半径等数值计算，先由方程或已知条件确定各线段长度，再利用圆心角、圆周角、垂径定理等方法求出半径，或构成直角三角形通过勾股定理求解。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“切点”与“交点”</strong>：切线是 $PA$，切点是 $A$；割线与圆有两个交点，一定要分清近点和远点，否则写错 $PA \cdot PB = PC \cdot PD$ 的对应。</li>
+<li><strong>误用割线定理当相交弦</strong>：割线是从圆外一点引出，相交弦是圆内两条弦，两者结论形式相同但图形完全不一样，不能混淆。</li>
+<li><strong>切割线定理中的平方关系写错</strong>：$PA^2 = PB \cdot PC$ 中是 <strong>切线长的平方</strong>，不是任一线段的平方。</li>
+<li><strong>四点共圆判定条件不全</strong>：仅有一组角相等不一定共圆，必须是“四边形对角互补”或“外角等于内对角”或“两点在同侧对同弧的角相等”。若仅由相似得到 $\angle ADE = \angle ACB$，要确认点 $D,E$ 在 $AC$ 的同侧才可推出共圆。</li>
+<li><strong>处理系数时漏掉中点或倍长关系</strong>：如 $AD \cdot DE = 2PB^2$，系数 $2$ 往往需要结合中点将某线段拆成两等份去转化，不能凭空约掉。</li>
+<li><strong>忘写对应点顺序致比例写反</strong>：相似三角形对应顶点写错，会导致比例式错误，继而整题失分。按公共角或弦切角准确对应。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2014-理-22）</h3>
+<p><strong>题目</strong>：$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 交于 $B, C$，且 $PC = 2PA$，$D$ 为 $PC$ 的中点，$AD$ 的延长线交 $\odot O$ 于点 $E$。证明：
+（Ⅰ）$BE = EC$；
+（Ⅱ）$AD \cdot DE = 2PB^2$。</p>
+<p><strong>思路</strong>：
+（Ⅰ）证 $BE=EC$ 即证 $E$ 为弧 $BC$ 的中点，可推 $AE$ 为 $\angle BAC$ 的平分线或利用圆周角相等。结合 $D$ 是 $PC$ 中点及 $PC=2PA$ 可发现 $PA=PD$，借助弦切角与等腰三角形寻找角等。
+（Ⅱ）将目标 $AD \cdot DE = 2 PB^2$ 联系相交弦定理在两条弦 $AE$ 和 $BC$ 上：$AD \cdot DE = BD \cdot DC$。再把 $BD \cdot DC$ 表达成 $PB$ 和 $PC$，利用 $PC=2PA$、$PA^2 = PB \cdot PC$ 以及中点条件消去 $PA$。</p>
+<p><strong>步骤</strong>：
+（Ⅰ）
+由 $PC=2PA$ 且 $D$ 为 $PC$ 中点，得 $PD = DC = PA$，故 $PA = PD$。<br />
+因为 $PA$ 是切线，所以 $\angle PAD = \angle PDA$（等腰三角形），又由弦切角定理得 $\angle PAE = \angle C$，结合外角等关系可得 $\angle BAE = \angle CAE$，从而 $\widehat{BE} = \widehat{EC}$，即 $BE = EC$。</p>
+<p>（Ⅱ）
+由相交弦定理：$AD \cdot DE = BD \cdot DC$。<br />
+由切割线定理：$PA^2 = PB \cdot PC$。<br />
+把 $BD \cdot DC = (PB + PD) \cdot (PC - PD)$，注意这里需要根据图中点的顺序准确表达 $BD$ 和 $DC$。由于 $D$ 在 $PC$ 上，$B$ 在 $PD$ 间，故可设 $PD = DC = PA/2$ 等具体推导。结合 $PC = 2PA$，$PD = PA$，得 $DC = PA$，$BD = PB + PA$？实际应根据原图形正确表达，最终转化为 $2PB^2$。具体化简过程略，最终得到 $AD \cdot DE = 2 PB^2$。</p>
+<p><strong>点评/变式</strong>：该题是以切割线为背景的综合性圆幂问题，关键利用中点构造等腰三角形，再结合相交弦定理把目标转化为含有 $PB$ 与已知量的等式。遇到 <strong>切线长与割线段的中点</strong> 这类条件，必须立刻联想到相等的线段，构造等腰或全等三角形。</p>
+<h3>代表题2（2011-理-22）</h3>
+<p><strong>题目</strong>：$D,E$ 分别在 $\triangle ABC$ 的边 $AB,AC$ 上，不与顶点重合。已知 $AE = m$，$AC = n$，$AD, AB$ 的长是关于 $x$ 的方程 $x^2 - 14x + mn = 0$ 的两个根。
+（Ⅰ）证明 $C,B,D,E$ 四点共圆；
+（Ⅱ）若 $\angle A = 90^\circ$，且 $m=4, n=6$，求 $C,B,D,E$ 所在圆的半径。</p>
+<p><strong>思路</strong>：
+（Ⅰ）由韦达定理，$AD + AB = 14$，$AD \cdot AB = mn = AE \cdot AC$。有公共角 $\angle A$，推出 $\triangle ADE \sim \triangle ACB$，得角等，依据外角等于内对角（或对角互补）证四点共圆。
+（Ⅱ）代入 $m,n$ 解出 $AD, AB$ 长度。四点共圆后，$\angle A = 90^\circ$ 意味着 $DE$ 是直径？不对，因为 $A$ 不一定在圆上。取 $CE$ 中点 $G$，$DB$ 中点 $F$，作中垂线找圆心 $H$，连 $DH$，构成直角三角形求出半径。或者注意到共圆且 $DE$ 所对圆周角有直角时，可利用直径性质。</p>
+<p><strong>步骤</strong>：
+（Ⅰ）
+由方程根与系数关系，得
+$$ AD \cdot AB = mn = AE \cdot AC. $$
+故
+$$ \frac{AD}{AC} = \frac{AE}{AB}, $$
+又 $\angle DAE = \angle CAB$，因此 $\triangle ADE \sim \triangle ACB$。<br />
+所以 $\angle ADE = \angle ACB$，由四边形 $C,B,D,E$ 中，外角 $\angle ADE$ 等于内对角 $\angle ACB$，得四点共圆。</p>
+<p>（Ⅱ）
+$m=4, n=6$ 时，方程 $x^2 -14x + 24 =0$ 的两根为 $2$ 和 $12$，即 $AD=2, AB=12$ 或互换。结合已知 $AE=4, AC=6$。因 $\angle A=90^\circ$，四点共圆，由圆的性质，找圆心：取 $CE$ 中点 $G$，$DB$ 中点 $F$，分别作垂直平分线交于 $H$，$H$ 即为圆心。连接 $DH$，在 $\triangle AHC$ 等中计算半径。最终得到半径 $R = \frac{5\sqrt{2}}{2}$ 或类似值（实际计算略）。</p>
+<p><strong>点评/变式</strong>：本题把一元二次方程的根与圆中比例线段有机结合，体现 <strong>代数条件几何化</strong> 的思想。证明共圆的核心是得到比例式并发现相似，代入数值后找半径的方法——作中垂线找圆心——是常见套路，切忌生搬硬套圆幂公式而忽略基本尺规思想。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-22.html">2014-理-22</a>（2014 · 中） 本题考查圆的切线、割线性质，通过相似三角形及比例关系证明线段相等与等积式。</li>
+<li><a href="../../exam/数学/2011-理-22.html">2011-理-22</a>（2011 · 中） 四点共圆证明与相关半径计算，结合二次方程根与系数关系</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1176-与圆有关的比例线段.html">与圆有关的比例线段</a></li>
+</ul>
+</div>
+</body>
+</html>

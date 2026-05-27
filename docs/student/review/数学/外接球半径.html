@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>外接球半径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>外接球半径</h1><div class="review-mark" data-stem="外接球半径"></div><div class="meta-card"><span><strong>考点</strong>外接球半径</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>外接球定义</strong>：若一个多面体的所有顶点都在同一个球面上，则称该多面体内接于球，该球为多面体的外接球。</li>
+<li><strong>球心与半径的本质</strong>：外接球球心到多面体各顶点的距离相等，等于球的半径 $R$。球心的位置是空间中的关键：往往在多面体的几何对称中心（如直棱柱上下底面中心连线的中点）。</li>
+<li><strong>常见柱体外接球公式</strong>：</li>
+<li><strong>直棱柱（含正棱柱、长方体）</strong>：底面外接圆半径为 $r$，柱高为 $h$，则外接球半径 $$R = \sqrt{r^2 + \left(\frac{h}{2}\right)^2}.$$<br />
+    特别地，对于长方体长、宽、高为 $a,b,c$，外接球半径 $R = \frac{1}{2}\sqrt{a^2+b^2+c^2}$。</li>
+<li><strong>正棱锥（侧棱相等）</strong>：底面外接圆半径 $r$，棱锥高为 $h$，球心在高所在直线上，满足 $R^2 = (h-R)^2 + r^2$，解得 $R = \frac{r^2+h^2}{2h}$。</li>
+<li><strong>正三角形相关数据</strong>：边长为 $a$ 的正三角形，外接圆半径 $r = \frac{a}{\sqrt{3}}$，内心、重心、垂心合一。</li>
+<li><strong>球的表面积与体积</strong>：$S = 4\pi R^2$，$V = \frac{4}{3}\pi R^3$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定球心</strong>：利用几何体的对称性寻找球心。对直棱柱，球心为上、下底面外接圆圆心连线的中点；对正棱锥，球心在底面外接圆圆心与顶点的连线（高线）上。</li>
+<li><strong>构造截面</strong>：过球心、底面外接圆圆心及一个底顶点（或侧棱中点）作截面，得到由外接圆半径 $r$、半高 $h/2$（或高与半径差）和球半径 $R$ 构成的直角三角形。</li>
+<li><strong>求 $r$ 和 $h$</strong>：从底面多边形求出外接圆半径 $r$（正 $n$ 边形用边长或角度计算），从已知条件得到几何体的高 $h$。</li>
+<li><strong>建立方程</strong>：使用勾股定理或射影关系列方程，解出 $R$。  </li>
+<li>直棱柱：$R = \sqrt{r^2 + (h/2)^2}$。  </li>
+<li>侧棱垂直于底面的锥体：设球心到锥顶距离为 $x$，则 $R^2 = r^2 + (h-x)^2$ 且 $R = x$，得 $R = \frac{r^2+h^2}{2h}$。</li>
+<li><strong>计算目标量</strong>：根据问题求 $R$、表面积 $S$ 或体积 $V$，代入公式即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>底面半径 $r$ 误用边心距（内切圆半径）</strong>：很多同学将正三角形的边心距（$\frac{\sqrt{3}}{6}a$）误当成外接圆半径。务必区分：外接圆半径 $r = \frac{a}{\sqrt{3}}$，内切圆半径 $r_{\text{内}} = \frac{\sqrt{3}}{6}a$。</li>
+<li><strong>球心位置判断错误</strong>：将直棱柱球心误认为底面中心或高的中点，未放在上下底面中心连线的中点。特别是侧棱不垂直时，球心位置需要另行分析。</li>
+<li><strong>直角三角形构建错误</strong>：截面直角三角形的两条直角边应为底面外接圆半径 $r$ 和半高 $h/2$，而不是底面边长或侧棱长。</li>
+<li><strong>计算表面积遗漏系数</strong>：求表面积时忘记乘以 $4\pi$，或在由 $R^2$ 计算 $S$ 时，直接用 $S = \pi R^2$。</li>
+<li><strong>忽略单位与化简</strong>：得到 $R^2$ 后开方不彻底，或最终表面积/体积未化为最简分式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2010-理-10）<br />
+设三棱柱的侧棱垂直于底面，所有棱长都为 $a$，顶点都在一个球面上，则该球的表面积为（　　）<br />
+A. $\pi a^2$　　B. $\frac{7}{3}\pi a^2$　　C. $\frac{4}{3}\pi a^2$　　D. $5\pi a^2$</p>
+<p><strong>思路</strong><br />
+由“所有棱长都为 $a$”及“侧棱垂直于底面”可知该三棱柱为正三棱柱，底面为边长为 $a$ 的正三角形，高为 $a$。球心在上下底面中心连线的中点。构造直角三角形，一条直角边为底面外接圆半径 $r = \frac{a}{\sqrt{3}}$，另一条直角边为半高 $\frac{a}{2}$，斜边即为球半径 $R$。用勾股定理求出 $R^2$，再求表面积 $S=4\pi R^2$。</p>
+<p><strong>步骤</strong><br />
+1. 确定底面外接圆半径：正三角形边长为 $a$，外接圆半径 $$r = \frac{a}{2\sin 60^\circ} = \frac{a}{\sqrt{3}}.$$<br />
+2. 高 $h = a$，半高为 $\frac{h}{2} = \frac{a}{2}$。<br />
+3. 球半径 $R$ 满足 $$R^2 = r^2 + \left(\frac{h}{2}\right)^2 = \left(\frac{a}{\sqrt{3}}\right)^2 + \left(\frac{a}{2}\right)^2 = \frac{a^2}{3} + \frac{a^2}{4} = \frac{7a^2}{12}.$$<br />
+4. 球的表面积 $$S = 4\pi R^2 = 4\pi \cdot \frac{7a^2}{12} = \frac{7}{3}\pi a^2.$$<br />
+5. 对应选项 B。</p>
+<p><strong>点评/变式</strong><br />
+- 本题属于“全棱长相等的正棱柱外接球”，抓住“对称中心=球心”这一关键，即可化繁为简。<br />
+- 变式一：若改为“所有棱长均为 $a$ 的正四棱柱”（即正方体），球半径 $R = \frac{\sqrt{3}}{2}a$，表面积 $S = 3\pi a^2$。<br />
+- 变式二：若三棱柱的底面是边长为 $a$ 的正三角形，但侧棱长为 $2a$，其他条件不变，则 $R^2 = \frac{a^2}{3} + a^2 = \frac{4a^2}{3}$，$S = \frac{16}{3}\pi a^2$，体会半高在公式中的角色。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-10.html">2010-理-10</a>（2010 · 中） 正三棱柱外接球的表面积计算，通过上下底面中心连线中点确定球心求半径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/813-外接球半径.html">外接球半径</a></li>
+</ul>
+</div>
+</body>
+</html>

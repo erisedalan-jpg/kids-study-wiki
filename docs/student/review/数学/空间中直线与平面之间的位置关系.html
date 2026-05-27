@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间中直线与平面之间的位置关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间中直线与平面之间的位置关系</h1><div class="review-mark" data-stem="空间中直线与平面之间的位置关系"></div><div class="meta-card"><span><strong>考点</strong>空间中直线与平面之间的位置关系</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>线面平行</strong></p>
+<ul>
+<li><strong>判定定理</strong>：若 $a \not\subset \alpha, b \subset \alpha, a \parallel b$，则 $a \parallel \alpha$。（面外线平行面内线）</li>
+<li><strong>性质定理</strong>：若 $a \parallel \alpha, a \subset \beta, \alpha \cap \beta = b$，则 $a \parallel b$。（线面平行得线线平行）</li>
+<li><strong>推论</strong>：若 $\alpha \parallel \beta, m \subset \alpha$，则 $m \parallel \beta$。（面面平行得线面平行）</li>
+</ul>
+</li>
+<li>
+<p><strong>线面垂直</strong></p>
+<ul>
+<li><strong>判定定理</strong>：若 $m \subset \alpha, n \subset \alpha, m \cap n = P, l \perp m, l \perp n$，则 $l \perp \alpha$。（线垂直于面内两条相交线）</li>
+<li><strong>性质定理</strong>：若 $a \perp \alpha, b \perp \alpha$，则 $a \parallel b$；若 $a \perp \alpha, b \subset \alpha$，则 $a \perp b$。（垂直于同一平面、线面垂直得线线垂直）</li>
+<li><strong>线面垂直的传递性</strong>：$a \perp \alpha, a \parallel b \Rightarrow b \perp \alpha$。</li>
+</ul>
+</li>
+<li>
+<p><strong>线线、线面、面面关系转化</strong></p>
+<ul>
+<li>核心“定理链”：线线平行满足一定条件可推出线面平行，线面平行满足一定条件可推出线线平行；面面平行满足一定条件可直接推出线面平行（即上述推论）。</li>
+<li>线面角定义：平面的一条斜线和它在平面上的射影所成的锐角。$m \parallel n, \alpha \parallel \beta \Rightarrow m$ 与 $\alpha$ 所成角等于 $n$ 与 $\beta$ 所成角（等角定理推论）。</li>
+</ul>
+</li>
+<li>
+<p><strong>符号体系</strong></p>
+<ul>
+<li>直线、平面多用小写/希腊字母表示：如 $m, n$ 为直线；$\alpha, \beta$ 为平面。</li>
+<li>关系符号：$\subset$（线在面内，含重合）、$\not\subset$（线不在面内）、$\cap$（相交）、$\parallel$（平行）、$\perp$（垂直）。</li>
+<li>命题表述常将条件用逗号分割，隐含“且”关系：如“$m \perp n, m \perp \alpha, n \parallel \beta$”即此三者同时成立。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>这类“多命题真伪判断”题，通用解法分两步：</p>
+<ol>
+<li>
+<p><strong>逐句翻译条件，构造/寻找最强结论</strong></p>
+<ul>
+<li>将每个命题的条件，用线面关系定理转化为尽可能强的几何性质。</li>
+<li>特别注意条件中的“若有平行，能否构造相交平面其出性质定理？”、“若有垂直，能否判定垂直于平面/直线？”。例如见到 $m \perp \alpha, n \parallel \alpha$，立刻翻译为：存在 $\alpha$ 内直线 $l$ 平行于 $n$，进而 $m \perp l$，最终 $m \perp n$。</li>
+</ul>
+</li>
+<li>
+<p><strong>逻辑验证与反例排除</strong></p>
+<ul>
+<li>对难以直接证明的命题，尝试构造反例模型（墙角、正方体、斜放平面）。</li>
+<li>确认条件是否满足定理的全部要求（如判定线面垂直必须“相交线”；判定面面垂直需“线在面内且垂直于交线”）。对缺失必要条件的命题可直接判断为错误。</li>
+<li>对于“动平面/直线”的相等关系，可考虑转化为最小角定理、等角定理，或者考虑极端位置。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用面面垂直判定</strong>：看到 $m \perp n, m \perp \alpha$ 就认为 $n$ 也在 $\beta$ 内或可以推出 $\alpha \perp \beta$。实际上，$n$ 可以平行于 $\alpha$ 与 $\beta$ 的交线，此时两平面可以不垂直（如①的错误）。</li>
+<li><strong>忽略定理“相交”条件</strong>：证明线面垂直时忘记验证两直线必须相交；证明面面平行时忽略线面平行必须是“两条相交直线”。</li>
+<li><strong>混淆命题方向</strong>：将性质定理反过来当作判定定理使用。例如“$m \parallel \alpha, m \perp n$ 推出 $n \perp \alpha$”是错误的；必须从线面垂直出发推导线线垂直。</li>
+<li><strong>过度推理</strong>：认为由线面垂直和线面平行能直接得到面面关系。其实，$m \perp \alpha, n \parallel \beta$ 混合条件时，$\alpha$ 与 $\beta$ 关系不确定，必须小心求证。</li>
+<li><strong>误认线面角符号含义</strong>：$m \parallel n, \alpha \parallel \beta$ 时，角度相等源于等角定理，但考生可能因忽略“线在面上的射影”平行这一推理过程而漏选正确命题。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2016·理-14）</h3>
+<p>$\alpha, \beta$ 是两个平面，$m, n$ 是两条直线，判断下列四个命题：
+①如果 $m \perp n, m \perp \alpha, n \parallel \beta$，那么 $\alpha \perp \beta$。
+②如果 $m \perp \alpha, n \parallel \alpha$，那么 $m \perp n$。
+③如果 $\alpha \parallel \beta, m \subset \alpha$，那么 $m \parallel \beta$。
+④如果 $m \parallel n, \alpha \parallel \beta$，那么 $m$ 与 $\alpha$ 所成的角和 $n$ 与 $\beta$ 所成的角相等。</p>
+<h3><strong>思路</strong></h3>
+<p>利用线面关系定理链和空间模型逐条验证。对①尝试构建反例；对②利用性质定理推导；对③直接应用面面平行性质；对④考虑等角定理及斜线射影的平行性。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>分析命题①</strong></li>
+<li>已知 $m \perp n, m \perp \alpha$，但 $n \parallel \beta$。</li>
+<li>设想正方体模型：取 $\alpha$ 为底面，$m$ 为垂直于底面的棱，令 $n$ 为上底面内与 $m$ 垂直的棱。此时 $m \perp \alpha$ 成立，$m \perp n$ 成立。但若 $\beta$ 为上底面所在平面，$n$ 在 $\beta$ 内显然 $n \parallel \beta$ 不成立（因为 $n \subset \beta$）。为满足 $n \parallel \beta$，可让 $\beta$ 为与 $n$ 平行但不过 $n$ 的侧面，此时显然 $\alpha$ 与 $\beta$ 垂直。但要证命题错误，需找不垂直的情况：设 $\alpha$ 为底面，$m$ 为垂直底面的棱，$n$ 为底面内的一条直线，此时 $m \perp n, m \perp \alpha$ 都成立。此时令 $\beta$ 也为底面所在的同一个平面，则 $n \parallel \beta$ 显然不成立（因为 $n \subset \beta$）。要构造符合条件的平面 $\beta$：只要能容纳与 $n$ 平行的直线即可。取 $\beta$ 为与 $\alpha$ 斜交的平面，它与 $\alpha$ 的交线平行于 $n$，那么 $n \parallel \beta$，且 $\alpha$ 与 $\beta$ 不垂直。因此①为假命题。</li>
+<li>
+<p>（更直白反例：将一张纸斜插在桌面上，纸面为 $\beta$，桌面为 $\alpha$。在桌面上方悬一条直线 $n$ 平行于纸面，再取垂直桌面的直线 $m$，使 $m \perp n$，此时纸面与桌面即不垂直）。</p>
+</li>
+<li>
+<p><strong>分析命题②</strong></p>
+</li>
+<li>条件：$m \perp \alpha, n \parallel \alpha$。</li>
+<li>因为 $n \parallel \alpha$，由线面平行性质，在 $\alpha$ 内存在直线 $l$ 使得 $n \parallel l$。</li>
+<li>已知 $m \perp \alpha$，则 $m$ 垂直于 $\alpha$ 内任意直线，故 $m \perp l$。</li>
+<li>而 $n \parallel l$，所以 $m \perp n$。</li>
+<li>
+<p>命题②正确。</p>
+</li>
+<li>
+<p><strong>分析命题③</strong></p>
+</li>
+<li>条件：$\alpha \parallel \beta, m \subset \alpha$。</li>
+<li>根据面面平行性质：若两个平面平行，则其中一个平面内的任意直线必平行于另一个平面（若无交点）。</li>
+<li>
+<p>所以 $m \parallel \beta$。命题③正确。</p>
+</li>
+<li>
+<p><strong>分析命题④</strong></p>
+</li>
+<li>条件：$m \parallel n, \alpha \parallel \beta$。</li>
+<li>线面角定义为斜线与它在平面内的射影所成的锐角。</li>
+<li>因 $\alpha \parallel \beta$，两平面的法向量平行；又 $m \parallel n$，所以两直线方向向量平行。因此两直线与各自平面的夹角相等（等角定理的直接推论）。或考虑将 $\beta$ 平移至与 $\alpha$ 重合，$n$ 平移至与 $m$ 重合，此时两线面角完全等价。</li>
+<li>命题④正确。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li><strong>核心考点</strong>：命题①考察反例构造能力，需打破“垂直+平行”直接推面面垂直的定式思维；②③④考察线面平行、垂直的性质及等角定理的准确应用。考生常因混淆条件间“推出”与“组合”的区别而失分。</li>
+<li><strong>变式思考</strong>：将①中“$m \perp n$”改为“$m \perp \beta$”，其他不变，能否推出 $\alpha \perp \beta$？ 答案仍不能，$m$ 必须垂直于 $\beta$ 内两条相交直线，或者 $m$ 垂直 $\alpha$ 且 $m$ 在 $\beta$ 内才能推 $\alpha \perp \beta$。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-14.html">2016-理-14</a>（2016 · 中） 该题考查空间线面平行垂直关系及命题真假判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1043-空间中直线与平面之间的位置关系.html">空间中直线与平面之间的位置关系</a></li>
+</ul>
+</div>
+</body>
+</html>

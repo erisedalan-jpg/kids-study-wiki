@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数值计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数值计算</h1><div class="review-mark" data-stem="数值计算"></div><div class="meta-card"><span><strong>考点</strong>数值计算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择7</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>程序框图的构成</strong>：起止框、输入/输出框、处理框、判断框、流程线。循环结构由判断框控制循环的继续或终止。</li>
+<li><strong>循环结构的两种类型</strong>：</li>
+<li><strong>当型循环</strong>：先判断条件，条件成立时执行循环体，否则退出（满足条件则循环）。</li>
+<li><strong>直到型循环</strong>：先执行循环体，再判断条件，条件不成立时继续循环，成立时退出（满足条件则跳出）。</li>
+<li><strong>变量赋值与迭代</strong>：每次循环中，变量的值按框图中的运算公式更新。同一变量在不同循环轮次中会连续变化，需逐次追踪。</li>
+<li><strong>循环变量的作用</strong>：通常有计数变量（如 $n=n+1$）和累加（积）变量，二者初始值及更新顺序直接影响结果。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂框图，确定结构</strong><br />
+   明确起止框、输入输出框；识别循环体范围；看清判断框的条件，并区分当型/直到型。</li>
+<li><strong>列出关键变量，标出初始值</strong><br />
+   在草稿纸上列出所有会被赋值的变量，按框图标注它们的初始值。</li>
+<li><strong>逐次模拟循环，表格化记录</strong><br />
+   按循环次数顺序执行每一步，将每个变量在该次循环结束时的值填入表格。每一次判断条件后，决定是否继续或跳出。</li>
+<li><strong>留意边界，防止多一次或少一次</strong><br />
+   当条件处于临界时，要特别小心是否在执行循环体后才判断、还是判断后执行循环体。可在草稿表格中标注“第k次进入”“第k次判断”。</li>
+<li><strong>归纳规律，简化计算</strong>（仅当循环次数多时）<br />
+   若循环次数较多，可从迭代关系发现数列规律（如等差、等比、斐波那契等），利用通项公式直接计算，避免机械运行数十次。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆当型与直到型循环</strong>：当型是“真则循环”，直到型是“真则跳出”。不明确结构会导致执行次序判断错误。</li>
+<li><strong>初始值未正确设置</strong>：多数程序框图的变量初始值在框图开始处给定，容易遗漏，导致首轮计算即出错。</li>
+<li><strong>赋值顺序错误</strong>：循环体内多条赋值语句若顺序不同，结果可能天差地别。必须严格按框图从上到下依次执行，不能随意调换。</li>
+<li><strong>多算或少算一次循环</strong>：尤其是判断条件和循环体先后顺序不同时，临界值常造成输出值偏差 ±1。建议在边界手动测试：假设循环变量刚好取到判断条件值，模拟一遍确认。</li>
+<li><strong>忘记更新计数变量</strong>：部分框图中计数变量 $n$ 的更新可能位于循环体末尾，容易忽略，导致输出值始终为初值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022 全国乙卷文科第 7 题）</h3>
+<p>执行所给的程序框图（框图略，主要逻辑为：初始 $b=2,\ a=1,\ n=1$；循环体依次执行 $b=b+a$，$a=b-a$，$n=n+1$；当满足某条件时输出 $n$），输出的 $n=$（ ）<br />
+A. 3  B. 4  C. 5  D. 6</p>
+<p><strong>思路</strong><br />
+该题为典型的循环结构程序框图求输出值，循环体内涉及两个变量 $a,b$ 的迭代赋值，$n$ 为计数变量。由于循环次数不多，利用列表法逐步模拟运行即可。关键要抓住 $b=b+a$ 与 $a=b-a$ 这一对赋值的实际效果：一次更新后，$(a,b)$ 的新值相当于前两个值之和构成的新数对，本质是生成斐波那契数列的变体。</p>
+<p><strong>步骤</strong><br />
+1. 列出初始值：$b=2,\ a=1,\ n=1$。<br />
+2. <strong>第一次循环</strong>：<br />
+   $b = b+a = 2+1 = 3$，<br />
+   $a = b-a = 3-1 = 2$，<br />
+   $n = n+1 = 2$。<br />
+   此时 $(a,b)=(2,3)$，$n=2$。<br />
+3. <strong>第二次循环</strong>：<br />
+   $b = 3+2 = 5$，<br />
+   $a = 5-2 = 3$，<br />
+   $n = 2+1 = 3$。<br />
+   此时 $(a,b)=(3,5)$，$n=3$。<br />
+4. <strong>第三次循环</strong>：<br />
+   $b = 5+3 = 8$，<br />
+   $a = 8-3 = 5$，<br />
+   $n = 3+1 = 4$。<br />
+   此时 $(a,b)=(5,8)$，$n=4$。<br />
+5. 达到循环终止条件（框图通常判断 $b$ 是否超过某个阈值或满足特定不等式），跳出循环，输出 $n=4$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是准确追踪赋值顺序，切忌将 $a=b-a$ 误认为是 $a=b-a_{\text{旧}}$。赋值语句中的右手边所有变量均取语句执行前的当前值。易错点在于判断循环何时停止，如条件为 $b&gt;7$ 时跳出，则第三次循环后 $b=8&gt;7$ 满足，输出 $n=4$；若条件写成 $b \geq 8$，可能在 $b=8$ 时多循环一次导致输出 $5$。<br />
+<strong>变式训练</strong>：更复杂的迭代如 $t=a,\ a=b,\ b=t+b$（斐波那契标准形式）或带条件判断的内层分支，均可用同一表格跟踪法解决。建议考生在草稿纸上清晰列出“步号—a—b—n—条件判断”五列，可有效避免少算或多算。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-07.html">2022-文-07</a>（2022 · 易） 本题考查程序框图的循环执行过程，通过模拟计算输出最终满足条件的n值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">数值计算</a></li>
+</ul>
+</div>
+</body>
+</html>

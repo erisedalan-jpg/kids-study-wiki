@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点到平面距离</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>点到平面距离</h1><div class="review-mark" data-stem="点到平面距离"></div><div class="meta-card"><span><strong>考点</strong>点到平面距离</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：3</li>
+<li>真题数：3；年份跨度：2011–2018</li>
+<li>出现题位：解答18 解答19 选择7</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>点到平面距离定义</strong>：由空间一点向平面作垂线，垂线段的长即为该点到该平面的距离。</li>
+<li><strong>核心方法——等体积法（体积桥）</strong>：<br />
+  若 $P$ 为平面 $\alpha$ 外一点，$A,B,C$ 为 $\alpha$ 上不共线三点，则点 $P$ 到 $\alpha$ 的距离<br />
+  $$d = \frac{3V_{P-ABC}}{S_{\triangle ABC}}.$$
+  通过选择便于计算体积的顶点与底面（常利用已知线面垂直或可求高的三棱锥）求出 $V_{P-ABC}$，再求出 $\triangle ABC$ 的面积，即可解得 $d$。</li>
+<li><strong>向量法求距离</strong>（新高考常备）：<br />
+  若平面 $\alpha$ 的法向量为 $\boldsymbol n$，定点 $P$ 到平面 $\alpha$ 的距离<br />
+  $$d = \frac{|\overrightarrow{AP}\cdot \boldsymbol n|}{|\boldsymbol n|},$$<br />
+  其中 $A$ 为 $\alpha$ 内任意一点。向量法无需构造三棱锥，适用于可方便建系的图形。</li>
+<li><strong>适用条件</strong>：能以已知垂直关系或坐标运算得到三棱锥体积与底面面积；向量法需能准确求出平面法向量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定位目标三棱锥</strong><br />
+   确定哪个点是待求距离的“顶”，哪个平面是“底”，将该点与平面上的三个点构成三棱锥。</li>
+<li><strong>换顶点求体积</strong><br />
+   选取另一个便于求高的顶点（常为已有线面垂直或能直接求高的一点），计算同一三棱锥的体积 $V$。常用公式：$V = \frac13 S_{\text{底}} \cdot h_{\text{已知}}$。注意变换不会改变体积大小。</li>
+<li><strong>求目标底面面积</strong><br />
+   结合已知长度、角度以及垂直关系（如线线垂直、线面垂直），准确计算出待求距离所对的底面三角形的面积。优先寻找直接直角，若无直角可解三角形。</li>
+<li><strong>用体积反求距离</strong><br />
+   利用 $d = \dfrac{3V}{S_{\text{底面}}}$ 得出点到平面的距离。可代入数值，注意分母和分子的单位与运算。</li>
+<li><strong>（向量法备选）</strong><br />
+   建系 $\rightarrow$ 求平面法向量 $\rightarrow$ 利用点法距公式求解。需明确坐标、准确计算叉积或法向量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记证明关键垂直</strong>：直接用某线段作为高，却未证明它与底面垂直（如 $PO\perp$ 平面 $ABC$、$BC\perp PB$ 等），会在立体几何证明题中失去步骤分。</li>
+<li><strong>等体积变换选错顶点</strong>：若所选新顶点到新底面的距离未知，则无法求出体积。应选择有明确线面垂直或已给长度的顶点。</li>
+<li><strong>平面面积计算失误</strong>：误用斜边当高、将平行四边形面积直接当作三角形面积、忽略正弦定理中角度的匹配、漏乘 $\frac12$ 等。</li>
+<li><strong>体积公式疏忽</strong>：忘记乘 $\frac13$ 或将 $V=Sh$ 当成三棱锥体积。</li>
+<li><strong>数据代入粗心</strong>：求 $d=\frac{3V}{S}$ 时，将 $V$ 与 $S$ 的对应关系弄错，混淆不同平面的面积与体积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2018全国Ⅱ文19(2)）</h3>
+<p>在三棱锥 $P-ABC$ 中，$AB=BC=2\sqrt{2}$，$PA=PB=PC=AC=4$，$O$ 为 $AC$ 中点。已证 $PO\perp$ 平面 $ABC$。点 $M$ 在棱 $BC$ 上，且 $MC=2MB$，求点 $C$ 到平面 $POM$ 的距离。<br />
+<strong>思路</strong>：能利用已证的 $PO\perp$ 平面 $ABC$，将三棱锥 $C-POM$ 的体积转化为以 $P$ 为顶点的 $P-COM$ 的体积。<br />
+<strong>步骤</strong><br />
+1. 计算 $V_{C-POM}=V_{P-COM}$。$PO\perp$ 底面 $ABC$，故 $P-COM$ 的高 $PO$ 可求：在正 $\triangle PAC$ 中，$PO=2\sqrt{3}$。<br />
+2. 求 $S_{\triangle COM}$：由 $BC=2\sqrt{2}$，$MC=2MB$ 得 $MC=\frac{4\sqrt{2}}3$；$\triangle ABC$ 为等腰直角三角形（$AB=BC=2\sqrt{2}$，$\angle B=90^\circ$），$\angle C=45^\circ$，$OC=2$。<br />
+   $$S_{\triangle COM}=\frac12\cdot OC\cdot CM\cdot\sin45^\circ = \frac12\times 2\times\frac{4\sqrt{2}}3\times\frac{\sqrt{2}}2 = \frac43.$$<br />
+3. 得 $V_{P-COM}= \frac13 S_{\triangle COM}\cdot PO = \frac13\times\frac43\times2\sqrt{3}= \frac{8\sqrt{3}}9.$<br />
+4. 求 $S_{\triangle POM}$：$PO\perp OM$，先求 $OM$。在 $\triangle COM$ 中用余弦定理：<br />
+   $OM^2=OC^2+CM^2-2\cdot OC\cdot CM\cos45^\circ = 4+\frac{32}{9} - 2\times2\times\frac{4\sqrt{2}}3\times\frac{\sqrt{2}}2 = \frac{20}{9}$，$OM=\frac{2\sqrt5}3$。<br />
+   $S_{\triangle POM}= \frac12\cdot PO\cdot OM = \frac12\times 2\sqrt{3}\times\frac{2\sqrt{5}}3= \frac{2\sqrt{15}}3.$<br />
+5. 由 $d=\frac{3V}{S}$ 得点 $C$ 到平面 $POM$ 的距离 $d = \dfrac{3\times\frac{8\sqrt{3}}9}{\frac{2\sqrt{15}}3} = \frac{\frac{8\sqrt{3}}3}{\frac{2\sqrt{15}}3} = \frac{8\sqrt{3}}{2\sqrt{15}} = \frac{4\sqrt{5}}5.$<br />
+<strong>点评/变式</strong>：等体积法在此题中两次受益于第(1)问证明的线面垂直，考前务必养成“先证后算”的习惯。若将条件改为正棱锥或建系，亦可使用向量法。</p>
+<h3><strong>题目2</strong>（2011全国文18(Ⅱ)）</h3>
+<p>四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为平行四边形，$\angle DAB=60^\circ$，$AB=2AD$，$PD\perp$ 底面 $ABCD$。设 $PD=AD=1$，求棱锥 $D-PBC$ 的高（即点 $D$ 到平面 $PBC$ 的距离）。<br />
+<strong>思路</strong>：求点 $D$ 到平面 $PBC$ 的距离，用等体积法将三棱锥 $D-PBC$ 的体积转换为三棱锥 $P-DBC$ 的体积，后者高为已知的 $PD$。<br />
+<strong>步骤</strong><br />
+1. 体积 $V_{D-PBC}=V_{P-DBC}= \frac13 S_{\triangle DBC}\cdot PD$。由 $\angle DAB=60^\circ$，$AD=1$，$AB=2$，得 $\triangle ABD$ 中 $BD=\sqrt{3}$，$AD\perp BD$。平行四边形对角线性质得 $S_{\triangle DBC}=S_{\triangle ABD}=\frac12\cdot1\cdot\sqrt{3}=\frac{\sqrt{3}}2$。故<br />
+   $$V_{P-DBC} = \frac13\times\frac{\sqrt{3}}2\times1 = \frac{\sqrt{3}}6.$$<br />
+2. 求 $S_{\triangle PBC}$：需证 $BC\perp PB$。由已知 $AD\perp BD$ 且 $AD\parallel BC$，故 $BC\perp BD$。又 $PD\perp$ 底面，得 $PD\perp BC$，所以 $</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-19.html">2018-文-19</a>（2018 · 中） 在三棱锥中证明线面垂直，并求点到平面的距离</li>
+<li><a href="../../exam/数学/2014-文-07.html">2014-文-07</a>（2014 · 中） 求正三棱柱内三棱锥的体积，可用等体积法或直接计算底面积与高求解。</li>
+<li><a href="../../exam/数学/2011-文-18.html">2011-文-18</a>（2011 · 中） 立体几何中，通过线面垂直证明异面直线垂直，并利用等体积法求点到平面的距离。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/977-点到平面的距离.html">点到平面距离</a></li>
+</ul>
+</div>
+</body>
+</html>

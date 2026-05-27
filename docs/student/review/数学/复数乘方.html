@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数乘方</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数乘方</h1><div class="review-mark" data-stem="复数乘方"></div><div class="meta-card"><span><strong>考点</strong>复数乘方</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>复数代数形式的乘方：设 $z=a+bi\ (a,b\in\mathbb{R})$，则 $z^n = (a+bi)^n$。当 $n$ 较小时，可直接按二项式定理展开，并结合 $i^2=-1$、$i^3=-i$、$i^4=1$ 化简。</li>
+<li>复数乘方的三角形式（棣莫弗定理）：若 $z=r(\cos\theta+i\sin\theta)$，则 $z^n = r^n(\cos n\theta + i\sin n\theta),\ n\in\mathbb{N}^*$。特别地，当模 $r=1$ 时，$(\cos\theta+i\sin\theta)^n = \cos n\theta + i\sin n\theta$。</li>
+<li>常用简化技巧：对于 $(1\pm i)^2$ 等特殊复数的平方结果应熟记：$(1+i)^2=2i$，$(1-i)^2=-2i$。由此可快速递推更高次幂。</li>
+<li>适用条件：代数形式或三角形式均可处理复数乘方，需注意指数为正整数。当次数较高且角度易于表达时，优先使用三角形式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察底数特征</strong>：先看复数是否为 $1\pm i$、$\sqrt{3}\pm i$ 等特殊形式，它们的平方或低次幂结果简洁，可借以减少计算量。</li>
+<li><strong>低次直接乘方</strong>：若次数 $n\le 4$，可直接逐步平方或展开。如 $(a+bi)^2 = a^2 - b^2 + 2abi$，再结合 $i^2=-1$。</li>
+<li><strong>高次借助三角形式</strong>：当 $n$ 较大且辐角为特殊角时，将复数化为 $r(\cos\theta+i\sin\theta)$，利用棣莫弗定理一步到位。</li>
+<li><strong>二项展开法</strong>：对 $(a+bi)^n$ 用二项式定理展开，整理实部与虚部，注意 $i$ 的幂周期为 4。</li>
+<li><strong>验算与选项匹配</strong>：计算结束后，注意结果的实部与虚部正负号，对照选项快速排除。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>$i$ 的幂次混淆</strong>：$i^2=-1$，$i^3=-i$，$i^4=1$，在多次相乘时符号易错，可先合并所有 $i$ 的因子次数再统一处理。</li>
+<li><strong>平方展开漏项或符号错误</strong>：如误算 $(1-i)^2=1-2i-i^2$ 后忘记 $-i^2$ 应为 $+1$，得到 $2-2i$ 而非正确结果 $-2i$。</li>
+<li><strong>直接四次方展开易漏乘</strong>：若直接用二项式定理展开 $(1-i)^4$，组合系数和符号运算量大，容易在虚部系数处出错。</li>
+<li><strong>混淆 $1-i$ 与 $i-1$</strong>：题目中通常是 $1-i$，平方得 $-2i$；若顺手写成 $(i-1)^2$ 则结果为 $-1+2i-i^2=2i$，符号相反。</li>
+<li><strong>忘记复数乘方结果的实虚性</strong>：计算中间可能得到纯虚数，再平方后变回实数；需要注意结果的最终形式是纯实数、纯虚数还是普通复数，防止选项误读。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020-文-02）<br />
+计算 $(1-\mathrm{i})^4 =$ （选择题，选项：A. $-4$　B. $4$　C. $-4\mathrm{i}$　D. $4\mathrm{i}$）</p>
+<p><strong>思路</strong><br />
+注意到底数为 $1-\mathrm{i}$，先计算 $(1-\mathrm{i})^2$，再将结果平方得到四次方，可避免直接四次方展开的繁琐。同时关注 $i^2=-1$ 的使用。</p>
+<p><strong>步骤</strong><br />
+1. 计算 $(1-\mathrm{i})^2$：<br />
+   $$(1-\mathrm{i})^2 = 1^2 - 2\cdot 1\cdot \mathrm{i} + (\mathrm{i})^2 = 1 - 2\mathrm{i} - 1 = -2\mathrm{i}.$$
+2. 将上步结果平方得到四次方：<br />
+   $$(1-\mathrm{i})^4 = [(-2\mathrm{i})]^2 = (-2)^2 \cdot \mathrm{i}^2 = 4 \times (-1) = -4.$$
+3. 对照选项，$-4$ 对应 A。</p>
+<p><strong>点评/变式</strong><br />
+- 分步平方是处理 $(1\pm i)$ 偶次方的高效手段，可大幅降低出错率。<br />
+- 若题目改为 $(1+\mathrm{i})^4$，则 $(1+\mathrm{i})^2=2\mathrm{i}$，四次方为 $(2\mathrm{i})^2=-4$，结果仍为 $-4$。<br />
+- 变式：计算 $(1+\sqrt{3}\mathrm{i})^3$。提示：模为 $2$，辐角 $60^\circ$，用三角形式 $[2(\cos 60^\circ+i\sin 60^\circ)]^3=8(\cos 180^\circ+i\sin 180^\circ)=-8$，更快。<br />
+- 此题易错点在于由 $-2\mathrm{i}$ 平方时忘记 $\mathrm{i}^2=-1$ 而误得 $4\mathrm{i}$ 或 $4$，需强化虚数单位平方的符号意识。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-02.html">2020-文-02</a>（2020 · 易） 本题考查复数的乘方运算，结合指数幂的运算性质求值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">复数乘方</a></li>
+</ul>
+</div>
+</body>
+</html>

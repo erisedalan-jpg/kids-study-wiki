@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数周期性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数周期性</h1><div class="review-mark" data-stem="三角函数周期性"></div><div class="meta-card"><span><strong>考点</strong>三角函数周期性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2017–2019</li>
+<li>出现题位：选择3 选择8</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>周期函数</strong>：对于函数 $y=f(x)$，若存在非零常数 $T$，使得 $f(x+T)=f(x)$ 对定义域内每一个 $x$ 都成立，则 $T$ 为周期。所有周期中最小的正数称为<strong>最小正周期</strong>，常简称为周期。</li>
+<li><strong>正弦、余弦型函数的周期</strong>：</li>
+<li>$y=A\sin(\omega x+\varphi)+b$ 或 $y=A\cos(\omega x+\varphi)+b$ （$A \neq 0$，$\omega \neq 0$）的最小正周期公式：<br />
+    $$T=\frac{2\pi}{|\omega|}$$</li>
+<li>对 $y=A\tan(\omega x+\varphi)$，周期为 $T=\frac{\pi}{|\omega|}$。</li>
+<li><strong>周期的几何意义</strong>：</li>
+<li>相邻两个最高点（或最低点）的距离为一个周期 $T$；</li>
+<li><strong>相邻一个最高点和一个最低点</strong>（即相邻极值点）的横坐标差为半个周期 $\frac{T}{2}$；</li>
+<li>相邻两个零点的距离为 $\frac{T}{2}$（函数值变化趋势一致时，否则一个零点到下一个同向零点为 $T$）。</li>
+<li><strong>由极值点求 $\omega$</strong>：已知相邻的最值点横坐标 $x_1,x_2$，则 
+  $$\frac{T}{2}=|x_2-x_1| \quad\Rightarrow\quad T=2|x_2-x_1|$$
+  再利用 $T=\frac{2\pi}{|\omega|}$ 解出 $\omega$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接求周期</strong>：识别函数是否形如 $A\sin(\omega x+\varphi)$、$A\cos(\omega x+\varphi)$，提取 $\omega$ 的系数，代入 $T=\frac{2\pi}{|\omega|}$ 计算。注意绝对值和系数位置，例如 $y=\sin 2x$ 的 $\omega=2$。</li>
+<li><strong>由图像特征反推周期</strong>：</li>
+<li>找到两个相邻同类型最高点（或最低点），横坐标差的绝对值为一个周期 $T$；</li>
+<li>给定一个最高点和一个相邻最低点，距离为 $\frac{T}{2}$；</li>
+<li>给定相邻两个零点，距离为 $\frac{T}{2}$。</li>
+<li><strong>由周期或其他条件求参数 $\omega$</strong>：</li>
+<li>根据题设中的“相邻极值点”“相邻对称轴”等条件，先算 $T$（或半周期），再用 $T=\frac{2\pi}{|\omega|}$ 列方程求 $\omega$。</li>
+<li>注意 $\omega&gt;0$ 的条件通常直接给出，若未给，需考虑正负。</li>
+<li><strong>验证特殊选项</strong>：对于选择题，可代入选项验证给定特征是否符合周期关系，快速排除。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>相邻极值点误认为一个周期</strong>：相邻最高点和最低点的横向距离是 $\frac{T}{2}$，不是 $T$。在极值点处，正弦或余弦曲线每隔半个周期出现一次极值（极大与极小交替）。</li>
+<li><strong>忽略 $\omega$ 的绝对值</strong>：周期公式中 $|\omega|$ 必须取绝对值，避免因 $\omega&lt;0$ 导致周期计算出错。题目通常会给 $\omega&gt;0$，但没给时要警惕。</li>
+<li><strong>混淆不同类型函数的周期公式</strong>：正切型函数的周期是 $\frac{\pi}{|\omega|}$，不要和正弦、余弦的 $\frac{2\pi}{|\omega|}$ 混淆。</li>
+<li><strong>忽略 $x$ 的系数提取</strong>：$y=\sin(2x+\frac{\pi}{3})$ 中 $\omega=2$，若误以为是 $\omega=1$ 则会把周期算成 $2\pi$ 而错选。</li>
+<li><strong>零点的间隔判断错误</strong>：不是任意两个相邻零点都是半周期，若函数值在两个零点之间穿过极值，则相邻零点间距确实为 $\frac{T}{2}$，但要确保是单调区间端点对应的零点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1 （2017年全国卷·文·第3题）</h3>
+<p><strong>题目</strong>：函数 $f(x)=\sin(2x+\varphi)$ 的最小正周期为（ ）<br />
+A. $4\pi$　B. $2\pi$　C. $\pi$　D. $\frac{\pi}{2}$</p>
+<p><strong>思路</strong>：直接识别 $\omega$，套用正弦型函数周期公式。题目中 $\omega=2$，周期 $T=\frac{2\pi}{2}=\pi$。注意 $\varphi$ 不影响周期。</p>
+<p><strong>步骤</strong>：
+1. 函数为 $f(x)=\sin(2x+\varphi)$，与 $y=\sin(\omega x+\varphi)$ 对比得 $\omega=2$。
+2. 最小正周期公式 $T=\frac{2\pi}{|\omega|}=\frac{2\pi}{2}=\pi$。
+3. 对应选项C。</p>
+<p><strong>点评/变式</strong>：此题极基础，考查对公式的直接记忆。变式：若改为 $f(x)=\cos\left(\frac{x}{2}-\frac{\pi}{6}\right)$，则 $\omega=\frac12$，$T=\frac{2\pi}{1/2}=4\pi$。注意系数是除以 $x$ 的系数，切勿搞反。</p>
+<h3>代表题2 （2019年全国卷·文·第8题）</h3>
+<p><strong>题目</strong>：若 $x_1=\frac{\pi}{4}$，$x_2=\frac{3\pi}{4}$ 是函数 $f(x)=\sin\omega x\ (\omega&gt;0)$ 两个相邻的极值点，则 $\omega=$（ ）<br />
+A. 2　B. $\frac{3}{2}$　C. 1　D. $\frac{1}{2}$</p>
+<p><strong>思路</strong>：相邻极值点（一个极大、一个极小）的横坐标之差为半个周期。先求半周期长度，再换算成全周期，最后用周期公式反解 $\omega$。</p>
+<p><strong>步骤</strong>：
+1. 相邻极值点横坐标差为 $\Delta x = \left|\frac{3\pi}{4}-\frac{\pi}{4}\right| = \frac{\pi}{2}$。
+2. 差对应半个周期，即 $\frac{T}{2}=\frac{\pi}{2}$，所以 $T=\pi$。
+3. 由 $T=\frac{2\pi}{\omega}$ 且 $\omega&gt;0$，得 $\pi=\frac{2\pi}{\omega}$，解得 $\omega=2$。
+4. 对应选项A。</p>
+<p><strong>点评/变式</strong>：此题将周期与极值点几何意义结合，是关键考法。若条件变为“相邻两个零点的距离为 $\frac{\pi}{3}$”，则 $\frac{T}{2}=\frac{\pi}{3}$，$T=\frac{2\pi}{3}$，进而 $\omega=3$。熟记三种特殊点间距与周期的关系，能快速破题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-08.html">2019-文-08</a>（2019 · 易） 通过极值点求出三角函数周期，再利用周期公式确定参数 w</li>
+<li><a href="../../exam/数学/2017-文-03.html">2017-文-03</a>（2017 · 易） 该题考查三角函数的最小正周期计算，利用周期公式直接求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/611-三角函数的周期性.html">三角函数周期性</a></li>
+</ul>
+</div>
+</body>
+</html>

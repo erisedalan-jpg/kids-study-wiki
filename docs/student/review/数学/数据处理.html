@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数据处理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数据处理</h1><div class="review-mark" data-stem="数据处理"></div><div class="meta-card"><span><strong>考点</strong>数据处理</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2019–2019</li>
+<li>出现题位：填空13 填空14</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>数据处理的核心任务</strong>：从一堆杂乱的数据中提取有代表性的数字特征，用样本估计总体。</li>
+<li><strong>平均值（数学期望）</strong>：</li>
+<li>一般地，$n$ 个数据 $x_1,x_2,\dots,x_n$ 的算术平均值为 $\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$。</li>
+<li>若数据有重复，可用加权平均：数据 $x_i$ 出现了 $f_i$ 次（$i=1,\dots,k$），总次数 $n=\sum f_i$，则平均值 $\bar{x}=\frac{\sum f_i x_i}{\sum f_i}$。</li>
+<li><strong>用频率估计概率</strong>：当试验次数很大时，某一事件发生的频率稳定在某个常数附近，可用该频率作为概率的估计值。本题中，车次正点率本身就是频率稳定值，已知不同频率出现的频数，所求“平均正点率的估计值”本质上就是这些频率按车次数量为权的加权平均。</li>
+<li><strong>适用的前提</strong>：数据已经经过分类统计，给出了各类的指标值及对应的频数，且总频数已知或可以求出。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确所求与已知</strong>：分清需要求的是“平均数”“估计值”还是“加权平均”，并标注各指标的数值及其出现的次数（或权重）。</li>
+<li><strong>计算总频数（样本容量）</strong>：将各类出现的次数相加，得到 $n$。若直接给出总车次，可以跳过。</li>
+<li><strong>计算总目标量</strong>：用“指标值×对应频数”求和，得到总目标量。如求平均正点率，总目标量是“总正点列车数”，即各类正点率乘以对应车次求和。</li>
+<li><strong>求估计值</strong>：总目标量 $\div$ 总频数，得到平均值或估计值。注意依据题意，结果可能是精确值也可能是估计值，但过程采用相同的加权公式。</li>
+<li><strong>检验合理性</strong>：检查结果是否在指标值的最小值与最大值之间，若偏离太多，需反思是否忘记了加权。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用简单算术平均</strong>：直接将不同正点率 $(0.97+0.98+0.99)\div 3 = 0.98$ ——本题恰好结果相同，但当各组频数不相等时，该做法必然出错。忽略权重是致命错误。</li>
+<li><strong>权重对应错误</strong>：把正点率当作频数，把车次数当作指标值，导致计算颠倒。</li>
+<li><strong>忽视“估计值”的含义</strong>：误认为求出的平均正点率是精确的实际平均率，不理解这是基于统计数据的概率估计，结果带有近似性。即使数值一样，也要明确这是估计值。</li>
+<li><strong>计算粗心</strong>：在求和、除法时出现计算错误，特别是在加权求和时漏乘或加错。</li>
+<li><strong>对“所有车次”的理解偏差</strong>：以为只需求某一种车次的正点率，或者漏掉某一类车次。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2019年全国卷文14 / 理13</h3>
+<p><strong>题目</strong>：已知在经停某站的高铁列车中，10个车次的正点率为0.97，20个车次的正点率为0.98，10个车次的正点率为0.99，求经停该站高铁列车所有车次的平均正点率的估计值。</p>
+<p><strong>思路</strong>：所求为加权平均，权数是各正点率对应车次的个数。先计算总车次，再计算总正点列车数的估计值，最后相除。</p>
+<p><strong>步骤</strong>：
+1. 总车次 $n = 10+20+10 = 40$。
+2. 总正点列车数的估计值：$10\times0.97 + 20\times0.98 + 10\times0.99 = 9.7 + 19.6 + 9.9 = 39.2$。
+3. 平均正点率的估计值：$\frac{39.2}{40}=0.98$。</p>
+<p><strong>点评/变式</strong>：本题文理同题，难度低，重在理解数据处理中的加权思想。考查的核心是用样本频率分布估计总体数字特征。变式1：若将某类车次数量改变（如10车次0.97改为30车次0.97），则必须重新加权计算，直接求算术平均必然错误。变式2：已知正点率但给出的是百分比，处理时统一化为小数；或者要求用分数精确表示，注意约分。加权平均的思想在统计中无处不在，如根据频率分布直方图求平均数的估计值，也是用各区间的中点作指标，频率作权重。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-14.html">2019-文-14</a>（2019 · 易） 已知高铁列车各正点率及对应车次数，求所有车次平均正点率的估计值（加权平均数）。</li>
+<li><a href="../../exam/数学/2019-理-13.html">2019-理-13</a>（2019 · 易） 高铁某站各正点率及对应车次统计，求所有车次平均正点率的估计值（加权平均数）。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">数据处理</a></li>
+</ul>
+</div>
+</body>
+</html>

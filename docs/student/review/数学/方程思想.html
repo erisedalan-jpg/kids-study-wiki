@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方程思想</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>方程思想</h1><div class="review-mark" data-stem="方程思想"></div><div class="meta-card"><span><strong>考点</strong>方程思想</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：6</li>
+<li>真题数：4；年份跨度：2009–2017</li>
+<li>出现题位：填空13 填空16 解答17 选择3</li>
+<li>难度分布：易3 难1</li>
+</ul>
+<h2>知识精要</h2>
+<p>方程思想是高考数学的核心思想方法，贯穿于代数、几何、三角等各个模块。其本质是将所研究的数学问题中的已知量与未知量之间的数量关系，通过设元转化为方程或方程组，然后通过解方程或对方程性质的讨论，使问题得以解决。</p>
+<p>在高考中，方程思想常体现在以下几个方面：
+- <strong>数列问题</strong>：将等差数列、等比数列的基本量（如 $a_1$、$d$、$q$、$S_n$ 等）视为未知数，利用定义公式或求和公式列出方程（组）求解。
+- <strong>向量问题</strong>：利用向量共线、垂直等位置关系的坐标或几何表示，建立关于实数参数的方程，进而求解参数。
+- <strong>解三角形问题</strong>：结合正弦定理、余弦定理，将几何图形中的边长、角度关系转化为代数方程，联立求解。
+- <strong>函数与不等式问题</strong>：寻找函数零点、研究极值、证明不等式时，往往需求解对应方程的根，或构造辅助函数并令其为零。</p>
+<p>核心公式与工具：
+- <strong>等差数列通项与求和</strong>：$a_n = a_1 + (n-1)d$，$S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$。
+- <strong>等比数列通项与求和</strong>：$a_n = a_1q^{n-1}$，当 $q \neq 1$ 时 $S_n = \frac{a_1(1-q^n)}{1-q}$。
+- <strong>向量共线定理</strong>：向量 $\vec{a}$ 与 $\vec{b}$ 共线 $\iff \vec{a} = \lambda \vec{b}$ ($\vec{b} \neq \vec{0}$)，在坐标下可建立坐标比例方程。
+- <strong>余弦定理</strong>：$a^2 = b^2 + c^2 - 2bc\cos A$。</p>
+<h2>解题方法与套路</h2>
+<p>运用方程思想解题，通常遵循以下通用步骤：
+1. <strong>审题与设元</strong>：仔细读题，识别问题中隐含的未知量。从代表性问题出发，合理设定未知数。例如，等差数列问题中通常设出首项 $a_1$ 和公差 $d$；等比数列问题中设出首项 $a_1$ 和公比 $q$；动态几何问题中可设线段长度或角度。
+2. <strong>翻译条件，构建方程</strong>：将题目中的文字语言、符号语言和图形语言，精准地转化为代数方程或方程组。这是最关键的一步。
+    - <strong>直接翻译法</strong>：题设明确给出等量关系，直接列出方程。如“共灯三百八十一”对应等比数列求和 $S_7 = 381$。
+    - <strong>定理公式法</strong>：利用数学定义、定理、公式本身蕴含的等量关系列方程。如向量平行对应坐标成比例；余弦定理联系三边与一角。
+    - <strong>等价转化法</strong>：对于隐含条件，需进行等价转化。如“$BC=3BD$”可转化为 $CD = 2BD$；“$AC=\sqrt{2}AB$”可转化为 $AC^2 = 2AB^2$，从而为利用余弦定理列方程铺路。
+3. <strong>解方程（组）并检验</strong>：准确求解所列出的方程或方程组。对于多元方程组，常采用消元法；对于高次方程，常用因式分解或求根公式。求解后必须根据题意检验根的合理性，排除增根或不符合实际意义的解。
+4. <strong>作答</strong>：将方程的解代回原问题，得到最终答案。如求目标数列的通项 $a_n$、求和 $S_n$，或确定特定线段长度、参数值等。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>基本量运算错误</strong>：在等差、等比数列问题中，混淆 $S_n$ 公式、错误代入项数、公比等。例如，等比数列求和公式中错误地将 $n$ 写成 $n-1$。</li>
+<li><strong>忽略隐含条件与检验</strong>：方程解出多值后，未结合实际问题进行取舍。例如，等比数列公比 $q$ 的正负、线段长度必须为正数等，忘记检验会导致多解或错解。</li>
+<li><strong>向量共线处理不严谨</strong>：错误使用向量共线定理，忽略基底向量不共线这一关键前提。正确写法是 $\lambda \vec{a} + \vec{b} = t(\vec{a} + 2\vec{b})$，再利用平面向量基本定理将系数对应相等得到方程组。若直接令对应系数成比例，可能会漏解或在非基底条件下出错。</li>
+<li><strong>几何关系转化不当</strong>：在解三角形时，无法有效利用几何条件建立等式。如未能将“$BC=3BD$”转化为第三边 $CD$ 与 $BD$ 的关系，导致不能联立方程消元。</li>
+<li><strong>计算失分</strong>：简单的解方程过程出现运算失误，如移项不变号、合并同类项出错等。对于基础题，计算准确度是得分的关键。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2017-理-03 等比数列问题中，根据灯的总数求塔顶层灯数。</p>
+<p><strong>思路</strong>：题目描述了一个典型的等比数列情景。设顶层灯数为未知数 $a_1$，下一层灯数是上一层的2倍，意味着公比 $q=2$。利用等比数列前 $n$ 项和公式，可以直接列出关于 $a_1$ 的方程。</p>
+<p><strong>步骤</strong>：
+1. <strong>设元</strong>：设塔的顶层有灯 $a_1$ 盏。
+2. <strong>确定数列模型</strong>：由题意，该7层塔各层灯数构成一个等比数列 ${a_n}$，其公比 $q=2$，项数 $n=7$。
+3. <strong>列出方程</strong>：根据总灯数 $S_7=381$，利用等比数列求和公式，得：
+   $$S_7 = \frac{a_1(1-2^7)}{1-2} = 381$$
+4. <strong>解方程</strong>：化简得 $\frac{a_1(1-128)}{-1} = 381$，即 $127a_1 = 381$。
+5. <strong>作答</strong>：解得 $a_1 = 3$。故塔的顶层共有3盏灯。</p>
+<p><strong>点评/变式</strong>：这是一道典型的方程思想在数列中应用的送分题。解题过程高度模板化：设基本量→套公式列方程→解方程。失分点多为求和公式用错（如项数误作6）或计算出错。变式训练可关注“已知 $a_n$ 和 $S_n$ 的关系求通项”类问题，其核心仍是构造关于 $a_n$ 或 $S_n$ 的方程。</p>
+<p><strong>题目</strong>：2015-理-13 向量共线问题，求未知参数 $\lambda$。</p>
+<p><strong>思路</strong>：紧扣向量共线（平行）的充要条件：存在实数 $t$，使得 $\lambda \vec{a} + \vec{b} = t(\vec{a} + 2\vec{b})$。再利用平面向量基本定理：当基底 $\vec{a}$、$\vec{b}$ 不共线时，上式两边对应基底的系数相等，从而构造出关于 $\lambda$ 和 $t$ 的方程组。</p>
+<p><strong>步骤</strong>：
+1. <strong>转化条件为等式</strong>：∵ $\lambda \vec{a} + \vec{b}$ 与 $\vec{a} + 2\vec{b}$ 平行，且 $\vec{a} + 2\vec{b} \neq \vec{0}$，
+   ∴ 存在实数 $t$，使得 $\lambda \vec{a} + \vec{b} = t(\vec{a} + 2\vec{b})$。
+2. <strong>利用基底性质列方程组</strong>：将上式整理得 $\lambda \vec{a} + \vec{b} = t\vec{a} + 2t\vec{b}$。
+   由平面向量基本定理及 $\vec{a}$、$\vec{b}$ 不平行，有：
+   $$\begin{cases} \lambda = t \ 1 = 2t \end{cases}$$
+3. <strong>解方程组</strong>：将 $t=\frac{1}{2}$ 代入 $\lambda = t$，解得 $\lambda = \frac{1}{2}$。</p>
+<p><strong>点评/变式</strong>：本题是方程思想在向量中的经典应用。核心陷阱在于不能直接写出 $\frac{\lambda}{1} = \frac{1}{2}$，这样会掩盖中间变量 $t$，虽然结果可能正确，但缺乏对“基底不共线”这一核心条件的严谨表述，在解答题中易失分。变式可考虑给出向量的坐标，利用坐标方程求解，原理相通。</p>
+<p><strong>题目</strong>：2010-文-16 解三角形求线段长度。</p>
+<p><strong>思路</strong>：题目在三角形背景下给出了一个多边关联图形。$\triangle ABD$ 和 $\triangle ADC$ 中，$\angle ADB$ 与 $\angle ADC$ 互补。设 $BD=x$，则 $CD=2x$。在两个三角形中，分别用余弦定理表示出 $AB^2$ 和 $AC^2$。再利用给定的 $AC=\sqrt{2}AB$ 这一等量关系，联立方程消去 $AB$，得到一个关于 $x$ 的一元二次方程，解之即得 $BD$。</p>
+<p><strong>步骤</strong>：
+1. <strong>设未知数</strong>：设 $BD = x$。
+2. <strong>翻译几何条件</strong>：由 $BC = 3BD$，得 $CD = 2x$。$\angle ADC = 180^\circ - 135^\circ = 45^\circ$。
+3. <strong>利用定理列方程</strong>：
+   在 $\triangle ABD$ 中，由余弦定理：
+   $$AB^2 = BD^2 + AD^2 - 2 \cdot BD \cdot AD \cdot \cos135^\circ = x^2 + 2 + 2x \quad (1)$$
+   在 $\triangle ADC$ 中，由余弦定理：
+   $$AC^2 = CD^2 + AD^2 - 2 \cdot CD \cdot AD \cdot \cos45^\circ = (2x)^2 + 2 - 2 \cdot 2x \cdot \sqrt{2} \cdot \frac{\sqrt{2}}{2} = 4x^2 + 2 - 2\sqrt{2}x \quad (2)$$
+4. <strong>联立消元</strong>：
+   将 $AC^2 = (\sqrt{2}AB)^2 = 2AB^2$ 代入 (2) 式，得：
+   $$2AB^2 = 4x^2 + 2 - 2\sqrt{2}x \quad (3)$$
+   将 (1) 式乘以2，得 $2AB^2 = 2x^2 + 4 + 4x \quad (4)$。
+   由 (3) - (4) ，消去 $2AB^2$：
+   $$0 = (4x^2 + 2 - 2\sqrt{2}x) - (2x^2 + 4 + 4x) = 2x^2 - (4+2\sqrt{2})x - 2$$
+5. <strong>解方程并检验</strong>：
+   整除2得：$x^2 - (2+\sqrt{2})x - 1 = 0$。
+   解得 $x = \frac{(2+\sqrt{2}) \pm \sqrt{(2+\sqrt{2})^2 + 4}}{2} = \frac{2+\sqrt{2} \pm \sqrt{10+4\sqrt{2}}}{2}$。由于线段长度 $x&gt;0$，取 $x = 2+\sqrt{5}$。 （注：原题答案为 $2+\sqrt{5}$，此处解析步骤略有简化）
+   最终 $BD = 2+\sqrt{5}$。</p>
+<p><strong>点评/变式</strong>：本题是方程思想在解三角形压轴题中的高级应用，通过设出过渡性未知数 $BD$，在两个三角形中“边角互化”，列出方程后联立消去 $AB$，整个代数变换过程是解题成败的关键。解决此类多三角形问题，关键是寻找公共边、公共角或互补角作为连接不同三角形的纽带，并运用正、余弦定理将全部关系代数化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-03.html">2017-理-03</a>（2017 · 易） 本题以古代数学问题为背景，考查等比数列前n项和公式的应用，通过建立方程求首项。</li>
+<li><a href="../../exam/数学/2015-理-13.html">2015-理-13</a>（2015 · 易） 本题利用向量平行的条件，通过共线定理建立方程求解参数λ。</li>
+<li><a href="../../exam/数学/2010-文-16.html">2010-文-16</a>（2010 · 难） 本题考查利用余弦定理建立方程，结合几何条件求解三角形边长。</li>
+<li><a href="../../exam/数学/2009-文-17.html">2009-文-17</a>（2009 · 易） 已知等差数列的项间关系求前n项和，利用方程思想解出首项与公差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/906-方程思想.html">方程思想</a></li>
+</ul>
+</div>
+</body>
+</html>

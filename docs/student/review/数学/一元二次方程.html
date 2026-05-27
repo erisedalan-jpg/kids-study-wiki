@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一元二次方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>一元二次方程</h1><div class="review-mark" data-stem="一元二次方程"></div><div class="meta-card"><span><strong>考点</strong>一元二次方程</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2014–2017</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>一元二次方程的标准形式</strong>：$ax^2+bx+c=0\,(a\neq 0)$。</li>
+<li><strong>求根公式</strong>：$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$，其中判别式 $\Delta=b^2-4ac$。</li>
+<li>$\Delta&gt;0$：方程有两个不相等的实根，对应的解集中有两个元素。</li>
+<li>$\Delta=0$：方程有两个相等的实根，解集为单元素集。</li>
+<li>$\Delta&lt;0$：方程无实根，解集为空集（在实数范围内）。</li>
+<li><strong>因式分解法（十字相乘法）</strong>：若方程可化为 $a(x-x_1)(x-x_2)=0$，则根为 $x_1,x_2$。优先考虑此法可快速求解。</li>
+<li><strong>韦达定理</strong>：若方程两根为 $x_1,x_2$，则 $x_1+x_2=-\dfrac{b}{a}$，$x_1x_2=\dfrac{c}{a}$。常用于已知一根求另一根或构造参数方程。</li>
+<li><strong>集合语言下的转化</strong>：若 $B={x\mid ax^2+bx+c=0}$，则 $B$ 中的元素就是方程的根。$A\cap B$ 的元素必须同时满足集合 $A$ 的条件和方程，实质是方程的根落在已知集合中。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直译条件</strong>：将集合语言转化为方程根的条件。如 $A\cap B={1}$ 意味着 $1$ 是方程 $x^2-4x+m=0$ 的实根，且 $1\in A$。</li>
+<li><strong>代入求参</strong>：将已知的公共元素代入一元二次方程，解出参数。如 $1-4+m=0 \Rightarrow m=3$。</li>
+<li><strong>还原解集</strong>：将求得的参数代回原方程，解出全部实根（优先因式分解，其次求根公式），写出集合 $B$。</li>
+<li><strong>求解交集（若需要）</strong>：当集合 $B$ 直接可解时，先解方程得 $B$，再与已知集合 $A$ 取公共元素。如 $x^2-x-2=0$ 解得 $B={-1,2}$，再与 $A={-2,0,2}$ 交得 ${2}$。</li>
+<li><strong>检验互异性</strong>：集合的元素具有互异性，方程的重根在解集中只写一次。用韦达定理辅助验证时注意根的重数不影响集合表示。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略二次项系数不为零的隐含条件</strong>：题目以 $x^2-4x+m=0$ 形式给出，二次项系数已确定，但若系数含参，务必先讨论 $a\neq0$，否则会降次漏解或错用求根公式。</li>
+<li><strong>代入公共元素后只求参数，忘记回代解出全部实根</strong>：如由 $1$ 入方程求得 $m=3$ 后，必须再解 $x^2-4x+3=0$ 得 ${1,3}$，若只记得 $1$ 而遗漏 $3$，会错选 ${1}$。</li>
+<li><strong>因式分解符号错误</strong>：$x^2-x-2=0$ 错分解为 $(x-2)(x+1)=0$ 得根 $2$ 和 $-1$，正确应为 $(x-2)(x+1)$，但常数项为 $-2$，注意验证一次项系数。</li>
+<li><strong>混淆交集与并集</strong>：题目要求的是 $B$ 或 $A\cap B$，看清问题。如2017题最终求集合 $B$，而非 $A\cap B$ 或 $A\cup B$。</li>
+<li><strong>忘记检验根是否都在已知集合中</strong>：当用韦达定理构造可能解时，有时会产生不符合 $A\cap B$ 的增根，需回代题目条件取舍。</li>
+<li><strong>判别式疏忽</strong>：若题目隐含方程有实根，则参数必须满足 $\Delta \ge 0$。虽然本组题方程自然有解，但在其他变式中忽略此点会导致参数值不合法。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2017-理-02</h3>
+<p><strong>题目</strong>：设集合 $A={1,2,4}$，$B={x\mid x^2-4x+m=0}$，若 $A\cap B={1}$，则 $B=$（ ）
+A. ${1,-3}$ B. ${1,0}$ C. ${1,3}$ D. ${1,5}$</p>
+<p><strong>思路</strong>：交集 ${1}$ 说明 $1$ 同时属于 $A$ 和 $B$。利用 $1\in B$ 代入方程求出 $m$，再解二次方程求出 $B$ 的所有元素。</p>
+<p><strong>步骤</strong>：
+1. 由 $A\cap B={1}$ 知 $1\in B$，所以 $1$ 是方程 $x^2-4x+m=0$ 的根。
+2. 代入 $x=1$：$1^2-4\times1+m=0 \Rightarrow 1-4+m=0 \Rightarrow m=3$。
+3. 将 $m=3$ 代回方程：$x^2-4x+3=0$。
+4. 因式分解得 $(x-1)(x-3)=0$，解得 $x_1=1,\ x_2=3$。
+5. 因此 $B={1,3}$。对应选项 C。</p>
+<p><strong>点评/变式</strong>：本题核心是“已知交集反求方程参数”，本质上是一元二次方程根的定义应用。求出参数后，必须解出方程的所有根，不能默认只有一个根。变式：若 $A\cap B={1,2}$，则 $1$ 和 $2$ 均需满足方程，导致方程组无解，此时应反思两根之和与积是否与集合矛盾。</p>
+<h3>代表题2：2014-文-01</h3>
+<p><strong>题目</strong>：已知集合 $A={-2,0,2}$，$B={x\mid x^2-x-2=0}$，则 $A\cap B=$（ ）
+A. $\varnothing$ B. ${2}$ C. ${0}$ D. ${-2}$</p>
+<p><strong>思路</strong>：先解出集合 $B$（解一元二次方程），再求 $A$ 与 $B$ 的公共元素。</p>
+<p><strong>步骤</strong>：
+1. 解方程 $x^2-x-2=0$，因式分解：$(x-2)(x+1)=0$。
+2. 得根 $x_1=2,\ x_2=-1$，故 $B={-1,2}$。
+3. 集合 $A={-2,0,2}$，公共元素只有 $2$。
+4. 所以 $A\cap B={2}$。对应选项 B。</p>
+<p><strong>点评/变式</strong>：此题直接考查二次方程的因式分解和交集运算，属于基础题。易错点为因式分解符号出错，建议分解后立即用一次项系数检验：$-2+1=-1$，符合 $-x$ 的系数 $-1$。变式：若方程变为 $x^2-x+m=0$ 且已知交集非空，则需讨论根的情况，可结合韦达定理和判别式处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-02.html">2017-理-02</a>（2017 · 易） 本题考查集合交集运算，通过交集元素求参数并确定集合。</li>
+<li><a href="../../exam/数学/2014-文-01.html">2014-文-01</a>（2014 · 易） 考查集合交集运算，涉及二次方程求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">一元二次方程</a></li>
+</ul>
+</div>
+</body>
+</html>

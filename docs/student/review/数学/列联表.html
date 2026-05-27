@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>列联表</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>列联表</h1><div class="review-mark" data-stem="列联表"></div><div class="meta-card"><span><strong>考点</strong>列联表</span><span><strong>权重</strong>4</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：4</li>
+<li>真题数：2；年份跨度：2010–2017</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>列联表</strong>：两个分类变量 $X,Y$ 的频数统计表，常用 $2\times 2$ 表
+  $$
+  \begin{array}{c|cc}
+  &amp; Y_1 &amp; Y_2 &amp; \text{合计} \
+  \hline
+  X_1 &amp; a &amp; b &amp; a+b \
+  X_2 &amp; c &amp; d &amp; c+d \
+  \hline
+  \text{合计} &amp; a+c &amp; b+d &amp; n=a+b+c+d
+  \end{array}
+  $$</li>
+<li><strong>独立性检验原理</strong>：原假设 $H_0$：$X$ 与 $Y$ 独立；备择假设 $H_1$：$X$ 与 $Y$ 有关。根据观测频数与期望频数的差异构造统计量 $K^2$。</li>
+<li><strong>$K^2$ 公式</strong>：
+  $$
+  K^2 = \frac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}
+  $$
+  其中 $n$ 为样本容量，$ad-bc$ 衡量关联强度。</li>
+<li><strong>临界值与把握性</strong>：给定显著性水平 $\alpha$，查表得临界值 $k_0$。</li>
+<li>常用临界值：$P(K^2\geq k_0)=\alpha$ <ul>
+<li>$\alpha=0.050$ 时 $k_0=3.841$；</li>
+<li>$\alpha=0.010$ 时 $k_0=6.635$；</li>
+<li>$\alpha=0.001$ 时 $k_0=10.828$。</li>
+</ul>
+</li>
+<li>若 $K^2\geq k_0$，则有 $1-\alpha$ 的把握认为 $X$ 与 $Y$ 有关；否则没有充分证据认为有关。</li>
+<li><strong>适用前提</strong>：样本为简单随机抽样，各单元格期望频数不宜过小（通常 $\geq5$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>估计概率/比例</strong>  </li>
+<li>由频率分布直方图：概率＝组距×（频率/组距）之和，即小矩形面积。  </li>
+<li>由列联表：直接求频数除以总数。</li>
+<li><strong>补全列联表</strong>  </li>
+<li>从直方图读频率→频数；或根据已知数据，利用行和、列和、总数推导缺失格子。</li>
+<li><strong>计算 $K^2$</strong>  </li>
+<li>代入公式 $K^2 = \frac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}$。  </li>
+<li>可先算 $|ad-bc|$、分母各乘积，注意检查 $n$ 是否等于总和。</li>
+<li><strong>下结论</strong>  </li>
+<li>与临界值比较：  <ul>
+<li>若 $K^2 \geq 6.635$，则有 $99\%$ 把握认为两分类变量有关；  </li>
+<li>若 $K^2 &lt; 3.841$，则没有足够证据认为有关（不能说“无关”）。  </li>
+</ul>
+</li>
+<li>标准表述：“在犯错误概率不超过 0.0X 的前提下，认为……与……有关。”</li>
+<li><strong>比较优劣或提建议</strong>  </li>
+<li>结合直方图位置、离散程度、中位数、高产量比例等进行比较。  </li>
+<li>若独立性检验表明与某分层变量有关，则可采用分层抽样提高估计精度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>直方图读错</strong>：纵坐标是“频率/组距”，频率需乘组距（面积），漏乘组距导致频数算错。</li>
+<li><strong>列联表填写错位</strong>：必须分清行变量与列变量，搞反会导致 $K^2$ 计算全错。</li>
+<li><strong>$K^2$ 公式混淆</strong>：分子 $n(ad-bc)^2$ 易漏平方；分母四个括号不能错；$n$ 误用为某一类别总数。</li>
+<li><strong>结论随意说“无关”</strong>：当 $K^2$ 小于临界值时，统计学只能说“没有充分证据认为有关”，不能断言“无关”。</li>
+<li><strong>临界值对应把握性记反</strong>：$K^2$ 越大把握性越高，99% 对应 6.635，95% 对应 3.841。</li>
+<li><strong>混淆相关与因果</strong>：独立性检验只判断关联性，不证明因果关系；答题时避免“导致”“影响”等措辞。</li>
+<li><strong>忽略调查方法改进</strong>：如果检验出有显著关联，后续抽样应考虑分层（如按性别、养殖方法等分层）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2017-文-19</h3>
+<p><strong>题目</strong>：新旧网箱养殖法各抽100个网箱得产量频率分布直方图。(1) 估计旧养殖法箱产量&lt;50kg的概率；(2) 填写列联表并判断是否有99%把握认为产量与养殖法有关；(3) 比较两种养殖法优劣。</p>
+<p><strong>思路</strong>：由直方图面积求概率和频数，补列联表，计算 $K^2$ 比对临界值，再结合分布比较均值或集中度。</p>
+<p><strong>步骤</strong>：
+1. 旧养殖法前5组（&lt;50kg）频率和为各组面积之和，例如 $(0.012+0.014+0.024+0.034+0.040)\times5=0.62$，故概率估计为0.62。
+2. 新养殖法同样读前5组面积得频率，换算频数，填入列联表。<br />
+   列联表：
+   $$
+   \begin{array}{c|cc}
+   &amp; &lt;50\text{kg} &amp; \geq50\text{kg} &amp; \text{合计} \ \hline
+   \text{旧} &amp; 62 &amp; 38 &amp; 100 \
+   \text{新} &amp; 66 &amp; 34 &amp; 100 \ \hline
+   \text{合计} &amp; 128 &amp; 72 &amp; 200
+   \end{array}
+   $$
+3. $K^2 = \frac{200\times(62\times34-38\times66)^2}{100\times100\times128\times72} \approx 9.6 &gt; 6.635$，故有99%把握认为有关。
+4. 比较：旧法产量多集中在中低区域，新法高产量比例更突出，且新法样本分布右移，说明新法平均产量可能更高，新法更优。</p>
+<p><strong>点评/变式</strong>：本题融合直方图与独立性检验，关键在正确读取频率。变式可能将直方图换成茎叶图或表格，步骤类似。</p>
+<h3>2010-文-19</h3>
+<p><strong>题目</strong>：调查500位老年人，列联表为 “性别×是否需要志愿者帮助”。(1) 估计需要帮助的比例；(2) 是否有99%把握认为需要帮助与性别有关？(3) 根据(2)结论提出更好调查方法。</p>
+<p><strong>思路</strong>：比例估计用频率，独立性检验计算 $K^2$，若有关则建议分层抽样。</p>
+<p><strong>步骤</strong>：
+1. 需要帮助的比例 $p = \frac{40+30}{500}=0.14$。
+2. 计算 $K^2$：数据为 $a=40, b=30, c=160, d=270$，总和500。<br />
+   $ad-bc = 40\times270 - 30\times160 = 10800-4800=6000$，<br />
+   分母 $(a+b)(c+d)(a+c)(b+d) = 70\times430\times200\times300$，<br />
+   $K^2 = \frac{500\times6000^2}{70\times430\times200\times300} \approx 9.967 &gt; 6.635$，有99%把握认为性别与是否需要帮助有关。
+3. 由于两变量显著相关，说明不同性别层内需求比例差异大，宜采用<strong>分层抽样</strong>，按性别分层，可提高总体比例估计的精度。</p>
+<p><strong>点评/变式</strong>：该题第三问链接“抽样方法的选择”，是独立性检验应用的延伸。当检验结果为有关时，分层抽样省样本、估计更准。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-19.html">2017-文-19</a>（2017 · 中） 该题考查频率分布直方图读取概率、列联表填写与独立性检验的比较。</li>
+<li><a href="../../exam/数学/2010-文-19.html">2010-文-19</a>（2010 · 中） 本题考查独立性检验与比例估计，基于列联表进行假设检验并评价调查方法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/465-2x2列联表.html">列联表</a></li>
+</ul>
+</div>
+</body>
+</html>

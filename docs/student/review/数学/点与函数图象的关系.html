@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点与函数图象的关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>点与函数图象的关系</h1><div class="review-mark" data-stem="点与函数图象的关系"></div><div class="meta-card"><span><strong>考点</strong>点与函数图象的关系</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>点与函数图象的关系</strong>：若点 $(x_0,y_0)$ 在函数 $y=f(x)$ 的图象上，则 $y_0 = f(x_0)$；反之，若坐标满足解析式，则该点必在图象上。</li>
+<li><strong>解析式含参问题</strong>：已知图象过某点，可将该点坐标“代入”函数解析式，得到关于参数的方程，解之即得参数值。</li>
+<li><strong>适用条件</strong>：点坐标明确、函数式结构已知但含未知系数。适用于一次、二次、指数、对数、多项式等各类函数，是求解析式或参数的基础操作。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>虽然真题仅一道，但“已知图象过点求参数”类问题的通用解法可归纳为：
+1. <strong>设解析式</strong>：明确函数表达式中的待定系数（如本题中的 $a$）。
+2. <strong>代入坐标</strong>：将已知点 $(x_0,y_0)$ 的横坐标 $x_0$ 替代解析式中的 $x$，令结果等于纵坐标 $y_0$。
+3. <strong>解方程</strong>：求解关于参数的方程，得到参数值并规范作答（注意题目对参数范围有无限制）。
+4. <strong>检验（可选）</strong>：对于简单题可省略，复杂时可将求出的参数代回，验证点是否确实在图象上。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>代错变量</strong>：将点的横、纵坐标位置颠倒，如误代入 $x=4$ 或 $y=-1$，导致方程错误。</li>
+<li><strong>符号疏忽</strong>：代入时未正确处理符号，尤其当点的坐标含有负号时，如本题中 $(-1,4)$，容易在 $-a + 2$ 处算错。</li>
+<li><strong>计算粗心</strong>：解一元一次方程时移项或合并同类项出错，最终结果正负号写反。</li>
+<li><strong>漏看单位或形式</strong>：部分考题要求用特定形式（如填“a=？”或只填数值），容易丢掉“a=”或写错位置。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知函数 $f(x)=ax^3-2x$ 的图象过点 $(-1,4)$，求 $a$ 的值。</p>
+<p><strong>思路</strong>：根据点与函数图象的关系，图象过点意味着将该点坐标代入函数解析式后等式成立。直接代入即可得到关于 $a$ 的方程。</p>
+<p><strong>步骤</strong>：
+1. 将点 $(-1,4)$ 代入 $f(x)=ax^3-2x$：
+   $$4 = a \cdot (-1)^3 - 2 \cdot (-1)$$
+2. 计算幂和乘积：$(-1)^3 = -1$，所以
+   $$4 = a \cdot (-1) + 2$$
+3. 整理得：
+   $$4 = -a + 2$$
+4. 移项解出 $a$：
+   $$a = 2 - 4 = -2$$
+5. 答案：填 $-2$ 或 $a=-2$。</p>
+<p><strong>点评/变式</strong>：本题是典型的“坐标代入法”最基础应用，属于课标“函数与图象”的核心要求。若函数形式更复杂，如含两个参数，则需至少两个已知点坐标，联立方程组求解。应对策略：无论函数多复杂，始终坚持“点（横坐标，纵坐标）→代入解析式→方程（组）→解参”的路径，确保计算准确、符号无误。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-13.html">2015-文-13</a>（2015 · 易） 已知函数图象过点求参数值，利用点坐标满足函数解析式建立方程求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">点与函数图象的关系</a></li>
+</ul>
+</div>
+</body>
+</html>

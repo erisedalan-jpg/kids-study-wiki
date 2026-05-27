@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机变量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>随机变量</h1><div class="review-mark" data-stem="随机变量"></div><div class="meta-card"><span><strong>考点</strong>随机变量</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>随机变量</strong>：随机试验中取值随结果变化的量，高考主要研究离散型随机变量（取值可一一列举）。</li>
+<li><strong>离散型随机变量的分布列</strong>：设 $X$ 的可能取值为 $x_1, x_2, \dots, x_n$，对应概率 $P(X=x_i)=p_i$，满足 $p_i \ge 0$ 且 $\sum_{i=1}^n p_i = 1$。列表表示即分布列。</li>
+<li><strong>数学期望（均值）</strong>：$E(X) = x_1p_1 + x_2p_2 + \dots + x_np_n$，刻画随机变量的平均取值水平。</li>
+<li><strong>方差</strong>：$D(X) = \sum_{i=1}^n (x_i - E(X))^2 p_i$，衡量随机变量取值的离散程度（本考点真题未直接考查，但属必会公式）。</li>
+<li><strong>用频率估计概率</strong>：在样本数据中，事件出现的频率 $\frac{频数}{总样本量}$ 可作为其概率的估计值，这是统计问题转化为概率计算的关键桥梁。</li>
+<li><strong>函数型随机变量</strong>：当随机变量的取值由另一变量的分段函数给出时，需根据条件映射所有可能结果，将原变量的概率对应转化为新变量的概率。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读表算频率</strong>：从频数分布表提取各小组的频数，计算频率 $f_i = \frac{n_i}{N}$，直接作为对应范围内事件发生的概率估计。</li>
+<li><strong>确定随机变量取值与对应关系</strong>：理清题目定义（如利润函数），列出随机变量 $X$ 的所有可能取值，并找到各取值对应的原始事件（如质量指标值的区间）。</li>
+<li><strong>计算概率并合并</strong>：对 $X$ 的每个取值，将所有对应原始事件的频率相加，得到该取值的概率。务必核验总概率是否为 $1$。</li>
+<li><strong>规范列出分布列</strong>：用表格给出 $X$ 及其对应概率，保持数值一致（可用小数或分数）。</li>
+<li><strong>套用公式求期望</strong>：代入 $E(X) = \sum x_i p_i$ 计算，注意正负号和权重。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>频率直接当概率</strong>：题目中“以频率作为概率”的要求必须严格遵守，但需明确这只是估计，计算时应直接使用频率值，避免另行化为分数约分时产生误差。</li>
+<li><strong>区间边界混淆</strong>：注意分组表示是左闭右开 $[ , )$ 还是闭区间，尤其涉及“大于或等于”的端点条件，必须正确归入相应小组，防止频数累加错误。</li>
+<li><strong>随机变量取值遗漏</strong>：当原始变量范围较宽、取值由分段函数定义时，可能多个不同原范围映射到同一新取值，需合并它们的概率，不可遗漏或重复计算。</li>
+<li><strong>期望计算粗心</strong>：常见错误——漏乘概率、忘记负号、总和不是 $1$ 仍强行计算。应先检查概率总和再求期望。</li>
+<li><strong>单位书写</strong>：应用题中期望常常有单位（如元），答时勿漏。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·理·19）<br />
+某种产品质量指标值 $t$ 越大越好，$t \ge 102$ 为优质品。用配方 A 和 B 各生产 100 件产品，实测指标值频数如下表（分组区间单位略）：</p>
+<table>
+<thead>
+<tr>
+<th>指标值分组</th>
+<th>[90,94)</th>
+<th>[94,98)</th>
+<th>[98,102)</th>
+<th>[102,106)</th>
+<th>[106,110]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 频数</td>
+<td>8</td>
+<td>20</td>
+<td>42</td>
+<td>22</td>
+<td>8</td>
+</tr>
+<tr>
+<td>B 频数</td>
+<td>4</td>
+<td>12</td>
+<td>42</td>
+<td>32</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>（1）分别估计两种配方生产的产品的优质品率。<br />
+（2）配方 B 的产品利润 $y$（元）与 $t$ 的关系为：<br />
+$$y=\begin{cases} -2, &amp; t&lt;94 \ 2, &amp; 94 \le t &lt; 102 \ 4, &amp; t \ge 102 \end{cases}$$<br />
+从配方 B 产品中随机抽取一件，记利润为 $X$，求 $X$ 的分布列及数学期望。</p>
+<p><strong>思路</strong><br />
+（1）优质品对应 $t \ge 102$，直接累加最后两组的频数，除以100即得估计的优质品率。<br />
+（2）$X$ 的可能取值为 -2, 2, 4。由分段函数找出对应的 $t$ 范围，再从配方 B 频数表计算各范围的频率作为概率，列出分布列，最后计算期望。</p>
+<p><strong>步骤</strong><br />
+<strong>（1）</strong> 配方 A：优质品频数 $22+8=30$，优质品率估计 $P_A = \frac{30}{100}=0.3$。<br />
+配方 B：优质品频数 $32+10=42$，优质品率估计 $P_B = \frac{42}{100}=0.42$。  </p>
+<p><strong>（2）</strong> 对于配方 B，总件数 $100$。<br />
+- 当 $t&lt;94$ 时，$X=-2$，频数 $4$，概率 $P(X=-2)=\frac{4}{100}=0.04$。<br />
+- 当 $94 \le t &lt; 102$ 时，$X=2$，频数 $12+42=54$，概率 $P(X=2)=\frac{54}{100}=0.54$。<br />
+- 当 $t \ge 102$ 时，$X=4$，频数 $32+10=42$，概率 $P(X=4)=\frac{42}{100}=0.42$。<br />
+验证：$0.04+0.54+0.42=1$，符合分布列性质。<br />
+$X$ 的分布列为：  </p>
+<table>
+<thead>
+<tr>
+<th>$X$</th>
+<th>-2</th>
+<th>2</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$P$</td>
+<td>0.04</td>
+<td>0.54</td>
+<td>0.42</td>
+</tr>
+</tbody>
+</table>
+<p>数学期望：<br />
+$E(X</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-19.html">2011-理-19</a>（2011 · 中） 考查用质量指标值和优质品标准进行产品分类统计或概率计算的问题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1133-随机变量.html">随机变量</a></li>
+</ul>
+</div>
+</body>
+</html>

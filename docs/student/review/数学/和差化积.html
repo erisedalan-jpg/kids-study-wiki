@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>和差化积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>和差化积</h1><div class="review-mark" data-stem="和差化积"></div><div class="meta-card"><span><strong>考点</strong>和差化积</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：3</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>和差化积公式</strong>（核心）：
+  $$\sin x+\sin y=2\sin\frac{x+y}{2}\cos\frac{x-y}{2}$$
+  $$\sin x-\sin y=2\cos\frac{x+y}{2}\sin\frac{x-y}{2}$$
+  $$\cos x+\cos y=2\cos\frac{x+y}{2}\cos\frac{x-y}{2}$$
+  $$\cos x-\cos y=-2\sin\frac{x+y}{2}\sin\frac{x-y}{2}$$</li>
+<li><strong>适用条件与关联</strong>：公式无条件恒成立，高频用于三角形内角关系转化。若 $A+B+C=\pi$，则 $\cos B=-\cos(A+C)$，$\sin B=\sin(A+C)$，常与和差化积联动。</li>
+<li><strong>边角互化定理</strong>：正弦定理 $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$，可将边等式 $b^2=ac$ 化为 $\sin^2 B=\sin A\sin C$。</li>
+<li><strong>角的取舍依据</strong>：由 $\sin B$ 求 $B$ 可能有两解，需利用隐含条件筛选，如余弦定理、基本不等式 $a^2+c^2\ge 2ac$ 等确定范围。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化异为同</strong>：遇 $\cos(A-C)+\cos B$ 或类似结构，优先利用 $B=\pi-(A+C)$ 将 $\cos B$ 转为 $-\cos(A+C)$，使角度仅含 $A,C$，便于和差化积。</li>
+<li><strong>和差化积操作</strong>：识别具体组合（和或差），套用对应公式。特别注意 $\cos x-\cos y$ 的负号。</li>
+<li><strong>边转角</strong>：出现边的关系 $b^2=ac$ 等，直接用正弦定理转化为角的正弦关系，与第一步所得的角方程联立。</li>
+<li><strong>解三角方程定角</strong>：求出 $\sin B$ 或 $\cos B$ 后，由角的范围先得通解，再结合边角关系（如用余弦定理构造不等式）缩小范围，排除增根，锁定唯一解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>和差化积记错符号</strong>：$\cos x - \cos y = -2\sin\frac{x+y}{2}\sin\frac{x-y}{2}$，极易丢掉负号；$\sin x - \sin y$ 实为 $2\cos\frac{x+y}{2}\sin\frac{x-y}{2}$，切勿混淆。</li>
+<li><strong>三角形内角转化漏负号</strong>：$\cos B = \cos[\pi-(A+C)] = -\cos(A+C)$，若漏掉负号，后续计算全错。</li>
+<li><strong>多解不检验</strong>：由 $\sin B = \frac{\sqrt{3}}{2}$ 得 $B=\frac{\pi}{3}$ 或 $\frac{2\pi}{3}$ 后，直接填两个角。必须代回条件（如 $b^2=ac$ 配合余弦定理或基本不等式）验证 $B$ 是否可为钝角，否则失分。</li>
+<li><strong>忽略边角条件隐藏的范围</strong>：在 $b^2=ac$ 这样的对称条件下，$B$ 不会是最大角，因而 $B \le \frac{\pi}{3}$（由基本不等式或余弦定理导出），这正是筛选的关键。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2009-文-18</h3>
+<p><strong>题目</strong>：在 $\triangle ABC$ 中，角 $A,B,C$ 的对边分别为 $a,b,c$，已知 $\cos(A-C)+\cos B=\frac{3}{2}$，$b^2=ac$，求 $B$。</p>
+<p><strong>思路</strong>：将 $\cos B$ 化为 $-\cos(A+C)$，再对 $\cos(A-C)-\cos(A+C)$ 使用和差化积，得到 $\sin A\sin C$ 的值；通过正弦定理把 $b^2=ac$ 转化为 $\sin^2 B = \sin A\sin C$，求出 $\sin B$；最后用基本不等式或余弦定理确定 $B$ 的正确范围，舍去增根。</p>
+<p><strong>步骤</strong>：
+1. 由 $A+B+C=\pi$ 得 $B=\pi-(A+C)$，故 $\cos B = -\cos(A+C)$。<br />
+   原式变为：$\cos(A-C) - \cos(A+C) = \frac{3}{2}$。
+2. 和差化积：$\cos\alpha - \cos\beta = -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$，其中 $\alpha=A-C,\ \beta=A+C$。<br />
+   $$-2\sin\frac{(A-C)+(A+C)}{2}\sin\frac{(A-C)-(A+C)}{2} = -2\sin A \sin(-C) = 2\sin A \sin C.$$
+   于是 $2\sin A\sin C = \frac{3}{2} \Rightarrow \sin A \sin C = \frac{3}{4}$。
+3. 由正弦定理 $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}$，将 $b^2=ac$ 化为 $\sin^2 B = \sin A \sin C = \frac{3}{4}$。<br />
+   因为 $B\in(0,\pi)$ 且 $\sin B&gt;0$，所以 $\sin B = \frac{\sqrt{3}}{2}$，可得 $B=\frac{\pi}{3}$ 或 $B=\frac{2\pi}{3}$。
+4. 验证舍根：<br />
+   由余弦定理 $b^2 = a^2 + c^2 - 2ac\cos B$，代入 $b^2=ac$，得 $ac = a^2 + c^2 - 2ac\cos B$，<br />
+   即 $a^2 + c^2 = ac(1+2\cos B)$。<br />
+   由基本不等式 $a^2 + c^2 \ge 2ac$，得 $ac(1+2\cos B) \ge 2ac$，从而 $1+2\cos B \ge 2 \Rightarrow \cos B \ge \frac{1}{2}$。<br />
+   当 $\cos B \ge \frac{1}{2}$ 时，$B \in (0, \frac{\pi}{3}]$，故只能取 $B = \frac{\pi}{3}$。</p>
+<p><strong>点评/变式</strong>：本题融合和差化积、正弦定理、基本不等式，是典型的“角→边→角”闭环题型。<br />
+- 变式1：将条件改为 $\sin(A-C)+\sin B = \frac{3}{2}$，利用 $\sin B = \sin(A+C)$，和差化积得 $2\sin A\cos C$，同样可解。<br />
+- 变式2：若给出 $a$、$c$ 的齐次关系，先用余弦定理求 $\cos B$，再结合角度范围锁定答案。无论如何，牢记“多解必检验，不等式是利器”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-18.html">2009-文-18</a>（2009 · 中） 已知△ABC中cos(A-C)+cosB=3/2且b²=ac，综合运用余弦定理与和差化积求角B。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/274-两角和差正余弦.html">和差化积</a></li>
+</ul>
+</div>
+</body>
+</html>

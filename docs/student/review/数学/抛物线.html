@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛物线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>抛物线</h1><div class="review-mark" data-stem="抛物线"></div><div class="meta-card"><span><strong>考点</strong>抛物线</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：6；年份跨度：2008–2022</li>
+<li>出现题位：填空15 填空16 解答19 解答21 选择6 选择9</li>
+<li>难度分布：中4 难2</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>定义与标准方程</strong></p>
+<ul>
+<li><strong>定义</strong>：平面内与一个定点 $F$（焦点）和一条定直线 $l$（准线，$F \notin l$）距离相等的点的轨迹。焦点到准线的距离称为焦准距，用 $p$ 表示（$p&gt;0$）。</li>
+<li><strong>标准方程与几何要素</strong>（务必结合开口方向记忆）：<ul>
+<li>$y^2 = 2px$：开口向右，焦点 $F(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$。</li>
+<li>$y^2 = -2px$：开口向左，焦点 $F(-\frac{p}{2},0)$，准线 $x=\frac{p}{2}$。</li>
+<li>$x^2 = 2py$：开口向上，焦点 $F(0,\frac{p}{2})$，准线 $y=-\frac{p}{2}$。</li>
+<li>$x^2 = -2py$：开口向下，焦点 $F(0,-\frac{p}{2})$，准线 $y=\frac{p}{2}$。</li>
+</ul>
+</li>
+<li><strong>离心率</strong>：抛物线的离心率 $e=1$。</li>
+</ul>
+</li>
+<li>
+<p><strong>核心定理与常用结论</strong></p>
+<ul>
+<li><strong>焦半径公式</strong>：抛物线上一点 $M(x_0,y_0)$ 到焦点 $F$ 的距离称为焦半径。<ul>
+<li>对于 $y^2=2px$，$|MF| = x_0 + \frac{p}{2}$。</li>
+<li>对于 $x^2=2py$，$|MF| = y_0 + \frac{p}{2}$。</li>
+</ul>
+</li>
+<li><strong>焦点弦与通径</strong>：过焦点且与对称轴垂直的弦称为通径。通径是抛物线中最短的焦点弦，其长度为 $2p$。</li>
+<li><strong>切线方程与几何性质</strong>：<ul>
+<li>对于 $x^2=2py$，其在点 $(x_0, y_0)$ 处的切线斜率为 $k = \frac{x_0}{p}$（可通过求导 $y'=\frac{x}{p}$ 得出）。</li>
+<li>过抛物线外一点引两条切线，切点弦所在直线方程可由点差法或同构思想快速写出。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>定义转化法（核心思维）</strong></p>
+<ul>
+<li><strong>适用场景</strong>：题目中出现“焦点”、“准线”或隐含距离关系（如 $|AF|=|BF|$，圆上点到焦点的距离最值）。</li>
+<li><strong>操作</strong>：将抛物线上的点到焦点的距离，立即转化为该点到准线的距离。这是解决最值问题（如 2021 理 21 第 1 问）和轨迹转化问题的首选利器。</li>
+</ul>
+</li>
+<li>
+<p><strong>联立方程与韦达定理（通法）</strong></p>
+<ul>
+<li><strong>设线与联立</strong>：设出直线方程（注意斜率存在性讨论），与抛物线方程联立。对于 $y^2=2px$，若设直线 $x=my+a$ 可简化运算并避免斜率不存在的讨论。</li>
+<li><strong>求解目标</strong>：利用韦达定理得到 $x_1+x_2, x_1x_2$ 或 $y_1+y_2, y_1y_2$，进而求解弦长、面积、定点定值问题。</li>
+<li><strong>弦长公式</strong>：$|AB| = \sqrt{1+k^2}|x_1-x_2| = \sqrt{1+\frac{1}{k^2}}|y_1-y_2|$。</li>
+</ul>
+</li>
+<li>
+<p><strong>点差法（设而不求）</strong></p>
+<ul>
+<li><strong>适用场景</strong>：涉及弦的中点或斜率关系（如 2008 文 15）。</li>
+<li><strong>操作</strong>：将弦两端点坐标代入抛物线方程，两式相减，利用平方差公式变形，得到斜率与中点坐标的关系：对于 $y^2=2px$，有 $k_{AB} = \frac{p}{y_0}$ （$y_0$ 为中点纵坐标）；对于 $x^2=2py$，有 $k_{AB} = \frac{x_0}{p}$。</li>
+</ul>
+</li>
+<li>
+<p><strong>切线问题的处理</strong></p>
+<ul>
+<li><strong>导数法</strong>：适用于 $x^2=2py$ 或 $y^2=2px$，直接求导得出斜率，写出切线方程（如 2021 理 21）。</li>
+<li><strong>判别式法</strong>：设出切线方程，联立抛物线，令 $\Delta=0$。通用性强，但计算量较大。</li>
+</ul>
+</li>
+<li>
+<p><strong>综合最值求解</strong></p>
+<ul>
+<li><strong>几何法</strong>：深刻理解并运用抛物线定义进行线段转移，结合“两点之间线段最短”求解。</li>
+<li><strong>代数法</strong>：设出动点坐标，利用弦长公式或面积公式构建关于某变量（如斜率、点坐标）的函数，通过换元、配方法或基本不等式求最值（如 2021 理 21 第 2 问求面积最值）。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>标准方程与焦点准线对应不清</strong>：极易混淆 $y^2=2px$ 与 $x^2=2py$ 的焦点坐标和准线方程，尤其是在最值问题中搞错符号。</li>
+<li><strong>忽略定义中的距离相等</strong>：遇到曲线上点到定点的距离问题，不会优先联想到准线进行转化，导致计算复杂化。</li>
+<li><strong>点差法的使用陷阱</strong>：点差法只能用于“假设弦存在”的前提下求出斜率。如果题目要求证明弦存在或求轨迹，必须检验判别式 $\Delta&gt;0$。</li>
+<li><strong>联立时忽略二次项系数</strong>：设直线与抛物线联立后，需确保二次项系数不为零（如斜率不存在或与对称轴平行的情形需单独讨论）。</li>
+<li><strong>开方丢解</strong>：由 $y^2=2px$ 求 $y$ 时，要带上正负号，如 2017 理 16 中求 $M$ 点纵坐标时需注意正负。</li>
+<li><strong>混淆不同曲线的几何参数</strong>：在抛物线与椭圆、双曲线的综合题中（如 2020 理 19），务必分清各自的焦点、通径、离心率等，切不可混淆。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题一：2022-文-06</h3>
+<p><strong>题目</strong>：已知 $F$ 为抛物线 $C: y^2=4x$ 的焦点，$A$ 在 $C$ 上，$B(3,0)$，若 $|AF|=|BF|$，求 $|AB|$。
+<strong>思路</strong>：从定义出发。先由已知点坐标和抛物线方程求出 $|BF|$，再利用等式和抛物线定义确定 $A$ 点的位置，最后计算距离。
+<strong>步骤</strong>：
+1.  <strong>求 $|BF|$</strong>：由 $C: y^2=4x$ 得 $2p=4 \Rightarrow p=2$，焦点 $F(1,0)$。$B(3,0)$，则 $|BF| = 3-1 = 2$。
+2.  <strong>定 $A$ 点</strong>：由 $|AF|=|BF|=2$。设 $A(x_0, y_0)$，由抛物线定义，$|AF|$ 等于 $A$ 到准线 $x=-1$ 的距离，即 $x_0+1=2$。解得 $x_0=1$。
+    将 $x_0=1$ 代入 $y^2=4x$，得 $y_0^2=4 \Rightarrow y_0=\pm2$。
+    此时 $A(1, \pm2)$，$A$ 与焦点 $F$ 的连线恰好垂直于 $x$ 轴（通径的一半）。
+3.  <strong>求 $|AB|$</strong>：$|AB| = \sqrt{(3-1)^2 + (0 \mp 2)^2} = \sqrt{2^2 + 2^2} = 2\sqrt{2}$。
+    故答案选 B. $2\sqrt{2}$。
+<strong>点评</strong>：本题完全围绕定义展开，无需设线联立。若试图设 $A$ 点坐标解方程组，虽能得出答案，但耗时远超定义法。牢记：凡涉抛物线上点到焦点的距离，近乎无脑转化。</p>
+<h3>代表题二：2020-理-19</h3>
+<p><strong>题目</strong>：椭圆 $C_1: \frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a&gt;b&gt;0)$ 的右焦点 $F$ 与抛物线 $C_2$ 的焦点重合，顶点重合。过 $F$ 且与 $x$ 轴垂直的直线交 $C_1$ 于 $A,B$，交 $C_2$ 于 $C,D$，且 $|CD|=\frac{4}{3}|AB|$。(1) 求 $C_1$ 的离心率；(2) 设 $M$ 是 $C_1$ 与 $C_2$ 的公共点，$|MF|=5$，求 $C_1$ 与 $C_2$ 的标准方程。
+<strong>思路</strong>：(1) 通径比推出参数关系。(2) 利用公共点和焦半径公式建立方程组。
+<strong>步骤</strong>：
+1.  <strong>设参</strong>：由题意，$C_1$ 右焦点 $F(c,0)$，抛物线开口必向右，设为 $y^2=4cx$。
+2.  <strong>通径条件</strong>：过 $F(c,0)$ 且垂直 $x$ 轴的直线 $x=c$。
+    - 椭圆中，令 $x=c$，得 $y=\pm\frac{b^2}{a}$，所以 $|AB|=\frac{2b^2}{a}$。
+    - 抛物线中，通径 $|CD|=4c$。
+    由 $|CD|=\frac{4}{3}|AB|$ 得 $4c = \frac{4}{3} \cdot \frac{2b^2}{a}$。
+    化简：$3ac = 2b^2 = 2(a^2 - c^2)$。
+    两边同除 $a^2$：$3e = 2(1 - e^2) \Rightarrow 2e^2 + 3e - 2=0$。
+    解得 $e=\frac{1}{2}$ 或 $e=-2$（舍）。
+3.  <strong>求方程</strong>：由 $e=\frac{1}{2}$ 得 $a=2c, b^2=3c^2$。
+    即 $C_1: \frac{x^2}{4c^2}+\frac{y^2}{3c^2}=1$，$C_2: y^2=4cx$。
+    设公共点 $M(x_0,y_0)$。由 $|MF|=5$。
+    - 椭圆中，$|MF| = a - e x_0 = 2c - \frac{1}{2}x_0 = 5$。
+    - 抛物线中，$|MF| = x_0 + c = 5$。
+    解方程组：
+    $\begin{cases} 2c - \frac{1}{2}x_0 = 5 \ x_0 + c = 5 \end{cases}$
+    由 $x_0 = 5 - c$ 代入第一式：$2c - \frac{1}{2}(5-c)=5$。
+    解得 $c=3, x_0=2, y_0^2 = 4 \times 3 \times 2 = 24$。
+    故 $C_1: \frac{x^2}{36}+\frac{y^2}{27}=1$，$C_2: y^2=12x$。
+<strong>点评</strong>：综合题的核心是抓住圆锥曲线的特例——通径，迅速建立等式求离心率。后半段利用两个曲线各自不同的焦半径公式表达同一个长度，是“设而不求”联立思想的高级运用。</p>
+<h3>代表题三：2008-文-15</h3>
+<p><strong>题目</strong>：已知 $F$ 是抛物线 $C: y^2=4x$ 的焦点，$A,B$ 在 $C$ 上，弦 $AB$ 的中点为 $M(2,2)$，求 $\triangle ABF$ 的面积。
+<strong>思路</strong>：涉及弦和中点，首选点差法求弦斜率，然后求弦方程、弦长和点 $F$ 到弦的距离。
+<strong>步骤</strong>：
+1.  <strong>点差法求斜率</strong>：设 $A(x_1,y_1), B(x_2,y_2)$。由 $y_1^2=4x_1, y_2^2=4x_2$ 相减得 $(y_1+y_2)(y_1-y_2)=4(x_1-x_2)$。
+    由中点 $M(2,2)$ 知 $y_1+y_2=4$。
+    代入得 $4(y_1-y_2)=4(x_1-x_2) \Rightarrow k_{AB}=\frac{y_1-y_2}{x_1-x_2}=1$。
+2.  <strong>弦长与面积</strong>：直线 $AB$ 方程为 $y-2=1\cdot(x-2) \Rightarrow y=x$。
+    焦点 $F(1,0)$。
+    联立 $\begin{cases} y=x \ y^2=4x \end{cases}$，得 $x^2=4x$，解出交点 $(0,0)$ 和 $(4,4)$。
+    弦长 $|AB| = \sqrt{(4-0)^2+(4-0)^2}=4\sqrt{2}$。
+    点 $F(1,0)$ 到直线 $y=x$ 的距离 $d = \frac{|1-0|}{\sqrt{1^2+(-1)^2}} = \frac{\sqrt{2}}{2}$。
+    面积 $S_{\triangle ABF} = \frac{1}{2} |AB| d = \frac{1}{2} \times 4\sqrt{2} \times \frac{\sqrt{2}}{2} = 2$。
+<strong>点评</strong>：与中点有关，第一时间使用点差法，可以绕开复杂的含参联立求斜率，是解析几何小题的顶级提速技巧。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-06.html">2022-文-06</a>（2022 · 中） 抛物线C: y²=4x的焦点F，点A在C上，点B(3,0)，|AF|=|BF|，利用抛物线焦半径性质求|AB|。</li>
+<li><a href="../../exam/数学/2021-理-21.html">2021-理-21</a>（2021 · 难） 本题通过抛物线与圆的位置关系求参数，并计算切线构成的三角形面积的最大值。</li>
+<li><a href="../../exam/数学/2020-理-19.html">2020-理-19</a>（2020 · 难） 椭圆C₁右焦点与抛物线C₂焦点重合且中心与顶点重合，利用焦点弦关系求椭圆离心率及两曲线标准方程。</li>
+<li><a href="../../exam/数学/2017-理-16.html">2017-理-16</a>（2017 · 中） 抛物线y²=8x焦点F，M在抛物线上，FM延长线交y轴于N，M为FN中点，利用抛物线焦半径和中点条件求|FN|。</li>
+<li><a href="../../exam/数学/2011-文-09.html">2011-文-09</a>（2011 · 中） 本题通过抛物线的几何性质求三角形面积，涉及焦点、准线及通径长度。</li>
+<li><a href="../../exam/数学/2008-文-15.html">2008-文-15</a>（2008 · 中） 抛物线y²=4x焦点为F，A、B是抛物线上两点且线段AB中点为M(2,2)，求△ABF面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">抛物线</a></li>
+</ul>
+</div>
+</body>
+</html>

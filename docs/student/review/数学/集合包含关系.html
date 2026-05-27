@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合包含关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>集合包含关系</h1><div class="review-mark" data-stem="集合包含关系"></div><div class="meta-card"><span><strong>考点</strong>集合包含关系</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：13</li>
+<li>真题数：3；年份跨度：2012–2023</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>子集定义</strong>：对于两个集合 $A,B$，若任意 $x \in A$ 都有 $x \in B$，则称 $A \subseteq B$（$A$ 包含于 $B$，或 $B$ 包含 $A$）。空集 $\varnothing$ 是任何集合的子集。</li>
+<li><strong>真子集</strong>：若 $A \subseteq B$ 且存在 $x \in B$ 但 $x \notin A$，则 $A \subsetneqq B$。</li>
+<li><strong>集合相等的包含表述</strong>：$A = B$ 等价于 $A \subseteq B$ 且 $B \subseteq A$。</li>
+<li><strong>含参包含关系核心定理</strong>：由 $A \subseteq B$ 求参数，需满足 $A$ 中任一元素均在 $B$ 中，且须检验集合元素的<strong>互异性</strong>（同一集合内元素不得重复），剔除无解或导致违背集合定义的参数值。</li>
+<li><strong>常见包含关系判定方法</strong>：</li>
+<li><strong>列举法</strong>：适用于离散有限集，直接逐元素比对。</li>
+<li><strong>描述法转化</strong>：将无限集（如不等式解集）通过数轴表示，利用区间端点关系建立不等式组。</li>
+<li><strong>特征性质法</strong>：对于具有通项公式的数集，通过分析元素的共同特性判断包含（如奇偶数集合）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确集合元素，化简表达</strong><br />
+   将题目中抽象或复杂表示的集合化简为具体区间、列举形式或通项表达式。<br />
+<em>如</em>：解不等式 $x^2-x-2&lt;0$ 得 $A={x \mid -1&lt;x&lt;2}$；将 $S={s \mid s=2n+1, n\in \mathbf Z}$ 识别为全体奇数。</li>
+<li><strong>翻译包含关系，建立约束</strong><br />
+   将 $A \subseteq B$ 转化为“$A$ 中每个元素都必须属于 $B$”。  </li>
+<li>若 $A$ 为有限集，则列出所有元素的等式或方程。  </li>
+<li>若均为无限区间，则在数轴上对比端点，写出不等式（注意边界是否可取等）。</li>
+<li><strong>分类讨论（关键步骤）</strong><br />
+   当题目中出现参数，且无法直接确定 $A$ 中元素与 $B$ 中元素的对应关系时，必须<strong>按不同对应情况分类</strong>。<br />
+<em>策略</em>：对 $A$ 中每个可能产生多义的元素，分别假设它等于 $B$ 中的哪个元素，逐类求解。</li>
+<li><strong>回代检验互异性与包含合理性</strong><br />
+   将求出的参数值代回原集合，检验：  </li>
+<li>集合内部的元素是否满足互异性（无重复）；  </li>
+<li>全部元素是否确实落在 $B$ 中；  </li>
+<li>对真子集条件，还需确认 $A \neq B$ 是否成立（除非特殊说明）。剔除不满足的增根。</li>
+<li><strong>结论综合</strong><br />
+   汇总所有通过检验的参数值，得出最终答案。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记互异性检验</strong>：由含参等式求出参数后，未代回检验集合 $B$ 内部是否出现相同元素，导致错误答案（如 $a=2$ 时 $B={1,0,2}$ 无重复正确，但另一情况可能出现重复需舍去，代入 $a=2$ 得 $A={0,-2}$ 与 $B$ 不符，必须舍去）。  </li>
+<li><strong>默认对应关系唯一</strong>：$A$ 的元素在 $B$ 中可能对应多个选择，不全面分类讨论就会漏解。典型案例：【代表题】2023 中需分 $ -a = a-2$ 或 $-a = 2a-2$ 讨论。  </li>
+<li><strong>混淆子集与真子集</strong>：题干要求 $A \subsetneqq B$ 时，除了包含还需排除相等情形。若用“子集”思路解完参数后，须额外检查 $A$ 与 $B$ 是否可能相等，相等则舍去。  </li>
+<li><strong>无限集端点取舍模糊</strong>：在数轴上解决不等式集合的包含关系时，判断端点处的 ≤ 与 &lt; 常因疏忽而失分。需紧扣每个区间开闭，并按“子集端点不能超出全集范围”原则列出严格不等式。  </li>
+<li><strong>忽视元素代表范围</strong>：如集合 $S={2n+1}$ 中的 $n \in \mathbf Z$，写元素时直接认为所有整数，但 $T={4n+1}$ 也是整数子集，切忌仅凭部分项特征草率判断。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2023-新课标Ⅱ-02）</h3>
+<p>设集合 $A={0, -a}$，$B={1, a-2, 2a-2}$，若 $A \subseteq B$，求实数 $a$ 的值。</p>
+<p><strong>思路</strong><br />
+$A$ 含有两个元素，需分别落到 $B$ 的三个元素中。由于 $0$ 也是 $A$ 的元素，可以找 $B$ 中哪个元素等于 $0$ 来简化，也可直接对 $-a$ 的可能等式全面讨论。此题利用 $0\in B$ 可快速减少分支；若 $B$ 中无 $0$ 则无解，但有明显含 $0$ 的表达式则分情况。</p>
+<p><strong>步骤</strong><br />
+由 $A \subseteq B$ 知 $0 \in B$ 且 $-a \in B$。<br />
+- 若 $a-2=0$，则 $a=2$。此时 $A={0,-2}$，$B={1,0,2}$。$-2 \notin B$，不满足包含，舍去。<br />
+- 若 $2a-2=0$，则 $a=1$。此时 $A={0,-1}$，$B={1,-1,0}$。$0$ 和 $-1$ 都在 $B$ 中，且集合 $B$ 内元素互异，符合题意。<br />
+综上，$a=1$。</p>
+<p><strong>点评/变式</strong><br />
+此题核心陷阱在于不检验元素的归属与互异性。若直接将 $A$ 中每个元素与 $B$ 中元素“任意匹配”而不检验 $0$ 的归属，可能误入多解。变式：改为 $A \subsetneqq B$，答案不变；若 $B$ 中包含参数二次项，讨论分支会更多，务必保持分类层次清晰。</p>
+<hr />
+<h3><strong>题目2</strong>（2021-理-02）</h3>
+<p>已知集合 $S={s \mid s=2n+1, n \in \mathbf Z}$，$T={t \mid t=4n+1, n \in \mathbf Z}$，求 $S \cap T$。</p>
+<p><strong>思路</strong><br />
+此题不直接问包含，但需通过分析两集合元素结构，判断 $T$ 与 $S$ 的包含关系，进而得出交集。$S$ 是全体奇数，$T$ 是除以 4 余 1 的整数，即形如 $4k+1$ 的奇数。</p>
+<p><strong>步骤</strong><br />
+- 任取 $t \in T$，存在 $n \in \mathbf Z$ 使得 $t = 4n+1$。将其写成 $2(2n)+1$，由于 $2n \in \mathbf Z$，故 $t \in S$。因此 $T \subseteq S$。<br />
+- 反之，$S$ 中形如 $4k+3$（如 $3$）的元素不属于 $T$，故 $S \not\subseteq T$。<br />
+- 于是 $T \subsetneqq S$，所以 $S \cap T = T$。</p>
+<p><strong>点评/变式</strong><br />
+此题从集合运算反推包含关系，解答中直接得到 $T \subseteq S$，体现了“特征性质分析法”在无限数集中的威力。变式：若 $T={4n+3}$，则 $S \cap T$ 仍为 $T$；而将 $S$ 改为偶数集合，则交集为空。要能区分整数模运算下的子集结构。</p>
+<hr />
+<h3><strong>题目3</strong>（2012-文-01）</h3>
+<p>已知集合 $A={x \mid x^2-x-2&lt;0}$，$B={x \mid -1&lt;x&lt;1}$，判断 $A$ 与 $B$ 的包含关系。</p>
+<p><strong>思路</strong><br />
+先将 $A$ 化简为区间，再在数轴上比较 $A$ 和 $B$ 的区间范围，直接观察端点位置，确定哪个是哪个的子集或真子集。</p>
+<p><strong>步骤</strong><br />
+- 解 $x^2-x-2&lt;0$ 得 $(x-2)(x+1)&lt;0$，所以 $A = {x \mid -1 &lt; x &lt; 2}$。<br />
+- $B = {x \mid -1 &lt; x &lt; 1}$。<br />
+- 数轴显示：$B$ 的范围完全落在 $A$ 的内部（$-1$ 到 $1$ 均在 $-1$ 到 $2$ 之间），且 $A$ 中尚有 $[1,2)$ 中的元素（如 $x=1.5$）不属于 $B$。故 $B \subsetneqq A$。对比选项，选 B。</p>
+<p><strong>点评/变式</strong><br />
+本题为连续数集的包含判断基础题。注意边界：$A$ 两端都是开区间，若 $B$ 为半开半闭，需仔细比较端点等号成立情形。变式：若 $B={x \mid -1 \le x &lt; 1}$，则 $B$ 仍真包含于 $A$；若将 $A$ 改为 $x^2-x-2 \le 0$（即闭区间），包含关系依旧，但端点闭合不影响真子集判定。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-02.html">2023-新课标Ⅱ-02</a>（2023 · 易） 根据集合包含关系分类讨论求参数值。</li>
+<li><a href="../../exam/数学/2021-理-02.html">2021-理-02</a>（2021 · 易） 该题考查集合包含关系与交集运算，并涉及全称命题与存在性命题的真假判断。</li>
+<li><a href="../../exam/数学/2012-文-01.html">2012-文-01</a>（2012 · 易） 本题通过解一元二次不等式求集合A，再判断A与B的包含关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1137-集合包含关系.html">集合包含关系</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两直线垂直</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两直线垂直</h1><div class="review-mark" data-stem="两直线垂直"></div><div class="meta-card"><span><strong>考点</strong>两直线垂直</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：填空14</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>垂直的斜率条件</strong><br />
+  若两直线斜率均存在（$k_1, k_2$），则它们垂直的充要条件为<br />
+  $$k_1 \cdot k_2 = -1.$$
+  对于一般式 $A_1x + B_1y + C_1 = 0$ 与 $A_2x + B_2y + C_2 = 0$，垂直的条件等价于<br />
+  $$A_1A_2 + B_1B_2 = 0.$$</li>
+<li><strong>特殊情况</strong><br />
+  斜率不存在的直线（垂直于$x$轴）与斜率为$0$的直线（垂直于$y$轴）垂直。若一直线斜率不存在，则与之垂直的直线斜率必为$0$。</li>
+<li><strong>导数与切线斜率</strong><br />
+  函数$y=f(x)$在$x_0$处的切线斜率 $k = f'(x_0)$。切线方程可写为 $y - y_0 = f'(x_0)(x - x_0)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求切线斜率</strong><br />
+   对给定函数求导，代入切点的横坐标，得到切线斜率 $k_1$（若含参数则保留）。</li>
+<li><strong>求目标直线斜率</strong><br />
+   将已知直线方程化为斜截式或直接提取斜率 $k_0$。</li>
+<li><strong>建立垂直方程</strong><br />
+   利⽤ $k_1 \cdot k_0 = -1$（斜率均存在时）或 $A_1A_2+B_1B_2=0$ 列方程。</li>
+<li><strong>解出参数</strong><br />
+   解方程即得所求参数，注意检验斜率是否存在。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>垂直条件记错</strong><br />
+  误记为斜率相等（平行）或斜率互为相反数，正确应为斜率乘积为 $-1$。</li>
+<li><strong>忽略斜率不存在的情况</strong><br />
+  题目出现垂直于坐标轴的直线时，必须讨论斜率不存在的情形，否则易漏解。</li>
+<li><strong>切线方程斜率符号错误</strong><br />
+  求导后代入横坐标时弄错符号，或写切线方程时移项出错，导致斜率取反。</li>
+<li><strong>把一般式系数直接当斜率</strong><br />
+  直线 $Ax+By+C=0$ 的斜率为 $-\dfrac{A}{B}$（$B \neq 0$），切勿直接拿 $A$ 或 $B$ 当作斜率参与乘积。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1（2008-理-14）</h3>
+<p><strong>题目</strong><br />
+设曲线 $y = e^{ax}$ 在点 $(0,1)$ 处的切线与直线 $x+2y+1=0$ 垂直，求 $a$。</p>
+<p><strong>思路</strong><br />
+由切线垂直建立斜率关系：切线斜率 $k_1 = y'\big|_{x=0}$，已知直线斜率 $k_2$，由 $k_1 k_2 = -1$ 解 $a$。</p>
+<p><strong>步骤</strong><br />
+1. 求导：$y' = a e^{ax}$，在 $x=0$ 处斜率 $k_1 = a e^{0} = a$。<br />
+2. 已知直线 $x+2y+1=0$，化为斜截式 $y = -\frac{1}{2}x - \frac{1}{2}$，斜率 $k_2 = -\frac12$。<br />
+3. 两直线垂直，得 $a \cdot \left(-\frac12\right) = -1$，解得 $a = 2$。</p>
+<p><strong>点评/变式</strong><br />
+本题为导数与垂直条件的简单结合。若已知直线改为 $2x - 1 = 0$（斜率不存在），则切线斜率必为 $0$，由此亦可建立等式。变式训练时可尝试 « 曲线 $y = \ln(ax)$ 在 $x=1$ 处的切线与 $3x - y + 5 = 0$ 垂直，求 $a$ » 以熟练步骤。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-14.html">2008-理-14</a>（2008 · 易） 求曲线切线方程，并利用两直线垂直条件求参数值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/627-两直线垂直.html">两直线垂直</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模拟方法估计概率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>模拟方法估计概率</h1><div class="review-mark" data-stem="模拟方法估计概率"></div><div class="meta-card"><span><strong>考点</strong>模拟方法估计概率</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>几何概型</strong>：若样本点等可能地落在测度（长度、面积、体积）为 $\Omega$ 的区域，事件 $A$ 对应的测度为 $A$，则 $P(A)=\dfrac{A}{\Omega}$。</li>
+<li><strong>模拟方法估计概率</strong>（Monte Carlo 方法）：利用随机数生成大量样本点，通过统计事件发生的频率 $\dfrac{N_1}{N}$ 去估计该事件的概率 $p$，即 $\hat{p}=\dfrac{N_1}{N}$。</li>
+<li><strong>估计定积分</strong>：设 $f(x)$ 在 $[a,b]$ 上满足 $0\le f(x)\le M$。随机产生 $N$ 个点 $(x_i,y_i)$ 均匀分布在矩形 $[a,b]\times[0,M]$ 内，统计满足 $y_i\le f(x_i)$ 的点数 $N_1$，则
+  $$\int_{a}^{b}f(x)\,dx\approx \frac{N_1}{N}\cdot M(b-a).$$
+  特别地，当 $a=0,\ b=1,\ M=1$ 时，$\displaystyle\int_{0}^{1}f(x)\,dx\approx\frac{N_1}{N}$.</li>
+<li><strong>适用条件</strong>：$f(x)$ 连续，且能确定其上界 $M$；随机数 $x_i,\ y_i$ 须为均匀随机数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确区域</strong>：确定积分区间 $[a,b]$ 和函数值域上界 $M$，构造矩形 $D=[a,b]\times[0,M]$。</li>
+<li><strong>对应概率模型</strong>：点 $(x_i,y_i)$ 均匀落在 $D$ 内，事件“$y_i\le f(x_i)$”的概率
+   $$p=\frac{\int_a^b f(x)\,dx}{M(b-a)}.$$</li>
+<li><strong>频率估计概率</strong>：用 $N$ 次试验中事件发生的频率 $\dfrac{N_1}{N}$ 作为 $p$ 的近似。</li>
+<li><strong>反解积分近似值</strong>：
+   $$\int_a^b f(x)\,dx\approx \frac{N_1}{N}\cdot M(b-a).$$
+   若 $M=b-a=1$，则直接为 $\dfrac{N_1}{N}$。</li>
+<li><strong>注意题目表述</strong>：题干常直接给出 $x_i,y_i$ 的区间、统计的 $N_1$，代入公式即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记乘矩形面积</strong>：当矩形面积 $S=M(b-a)\neq1$ 时，积分近似值是频率乘以 $S$，而非频率本身。很多同学漏乘 $M(b-a)$ 导致错误。</li>
+<li><strong>混淆 $N$ 与 $N_1$</strong>：分母为总点数 $N$，分子为满足 $y_i\le f(x_i)$ 的点数 $N_1$，不可颠倒。</li>
+<li><strong>误解“均匀随机数”</strong>：$x_i,y_i$ 分别独立来自区间上的均匀分布，而不是仅 $x_i$ 随机、$y_i$ 取函数值。</li>
+<li><strong>定积分上、下限</strong>：若 $f(x)$ 可正可负，上述只适用于非负函数；若变号需分段处理或平移，不可直接使用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1 （2010-理-13）</h3>
+<p><strong>题目</strong>：设 $y=f(x)$ 在 $[0,1]$ 上连续且 $0\le f(x)\le1$。用随机模拟估计积分：产生两组 $N$ 个 $[0,1]$ 上均匀随机数 $x_i,y_i$，得到 $N$ 个点 $(x_i,y_i)$，其中满足 $y_i\le f(x_i)$ 的点数为 $N_1$，则积分 $\displaystyle\int_0^1 f(x)\,dx$ 的近似值为<strong><em>_</em></strong>_。</p>
+<p><strong>思路</strong>：此题矩形区域为 $[0,1]\times[0,1]$，面积 $1$。由几何概型，点落在曲线下方区域的概率即为积分值。频率 $\frac{N_1}{N}$ 是该概率的估计，因此积分近似值直接为 $\frac{N_1}{N}$。</p>
+<p><strong>步骤</strong>：
+1. 区域：$D=[0,1]\times[0,1]$，面积 $S=1$。
+2. 几何概型：点落在曲线下方区域的概率 $p=\frac{\int_0^1 f(x)\,dx}{S}=\int_0^1 f(x)\,dx$。
+3. 用频率估计概率：$\hat{p}=\frac{N_1}{N}$。
+4. 于是 $\int_0^1 f(x)\,dx\approx \frac{N_1}{N}$。</p>
+<p><strong>点评/变式</strong>：本题是最简情形，矩形面积恰为 $1$。变式：设 $f(x)$ 在 $[0,2]$ 上满足 $0\le f(x)\le3$，则模拟时需生成 $x_i\in[0,2]$、$y_i\in[0,3]$ 的均匀随机数，统计点数 $N_1$ 后积分近似值为 $\frac{N_1}{N}\times(2\times3)=\frac{6N_1}{N}$。牢记“概率乘面积”是避免漏乘的核心。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-13.html">2010-理-13</a>（2010 · 易） 本题通过随机模拟方法和几何概型近似计算定积分的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1189-模拟方法估计概率.html">模拟方法估计概率</a></li>
+</ul>
+</div>
+</body>
+</html>

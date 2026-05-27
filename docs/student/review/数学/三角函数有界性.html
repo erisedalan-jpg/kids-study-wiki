@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数有界性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数有界性</h1><div class="review-mark" data-stem="三角函数有界性"></div><div class="meta-card"><span><strong>考点</strong>三角函数有界性</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦、余弦的有界性</strong>：对于任意实数 $x$，恒有 $|\sin x| \leq 1$，$|\cos x| \leq 1$。进一步，$0 \leq |\sin x| \leq 1$，$0 \leq |\cos x| \leq 1$。</li>
+<li><strong>三角函数复合最值的策略</strong>：求含 $\sin x$ 或 $\cos x$ 的代数式最值时，优先利用有界性换元，设 $t = \sin x$（或 $t = |\sin x|$），将问题转化为有限区间上的函数最值。</li>
+<li><strong>对勾函数性质</strong>：函数 $f(t) = t + \frac{a}{t}\ (a&gt;0)$ 在 $(0,\sqrt{a}]$ 上单调递减，在 $[\sqrt{a}, +\infty)$ 上单调递增。其最值必须在定义域内讨论，不可盲目套用基本不等式 $t + \frac{a}{t} \geq 2\sqrt{a}$。</li>
+<li><strong>基本不等式的失效条件</strong>：当且仅当 $t = \sqrt{a}$ 时取等，若该值不在 $t$ 的实际取值范围内，则不等式取不到等号，最小值需由单调性重新确定。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别结构，恰当换元</strong><br />
+   遇 $f(|\sin x|)$ 或 $f(\sin x)$ 形式，立刻令 $t = |\sin x|$ 或 $t = \sin x$，将超越函数转化为代数函数。</li>
+<li><strong>精确界定新元范围（核心）</strong><br />
+   依据三角函数有界性写出 $t$ 的严格范围。例如 $t = |\sin x|$ 时，$t \in (0,1]$（注意 $t=0$ 时分母可能无意义，需单独讨论）。</li>
+<li><strong>求代数最值而非直接均值</strong><br />
+   转化为 $y = g(t),\ t\in D$。若 $g(t)$ 为对勾型，先检查等号成立点是否在 $D$ 内。若在，可用基本不等式；若不在，必须利用单调性（导数或对勾函数规律）求最值。</li>
+<li><strong>复合选项筛选</strong><br />
+   选择题中可结合特征快速排除：一眼看出“等号”所需的自变量超出三角函数值域，则该选项最小值一定大于基本不等式下界。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将绝对值视为 $[-1,1]$</strong>：$|\sin x|$ 的范围是 $[0,1]$，不是 $[-1,1]$。由 $|\sin x|$ 构造分式时，定义域常为 $(0,1]$，端点 $0$ 使分母无意义需剔除。</li>
+<li><strong>直接套用基本不等式忽略取等条件</strong>：看到 $t + \frac{4}{t}$ 便写 $\geq 4$，忘记等号要求 $t=2$，而 $t = |\sin x| \leq 1$，等号永假。此类错误极其高频。</li>
+<li><strong>混淆单调区间</strong>：对勾函数 $t + \frac{a}{t}$ 的递减区间为 $(0,\sqrt{a}]$。当定义域为 $(0,1]$ 且 $\sqrt{a} &gt; 1$（即 $a&gt;1$）时，函数全程递减，最大值在左端点（开区间无最小值时需取极限），最小值在右端点。不清楚单调性易选错。</li>
+<li><strong>忽略对数等复合结构定义域</strong>：涉及 $\ln x$ 时，其值域为 $\mathbb{R}$，可正可负，基本不等式失效，不属此题考点但常混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2021·全国卷文8题改编）</h3>
+<p>下列函数中最小值为 $4$ 的是<br />
+A. $y = x^2 + 2x + 4$<br />
+B. $y = |\sin x| + \frac{4}{|\sin x|}$<br />
+C. $y = 2^x + 2^{2-x}$<br />
+D. $y = \ln x + \frac{4}{\ln x}$</p>
+<h3><strong>思路</strong></h3>
+<p>本题核心是甄别每个选项能否取得最小值 $4$。B 选项为典型“三角函数有界性+对勾函数”陷阱，需换元并严格在值域内求最值；C 选项可用基本不等式正确取得 $4$；A、D 分别通过配方和定义域分析排除。</p>
+<h3><strong>步骤</strong></h3>
+<ul>
+<li><strong>A选项</strong>：$y = x^2 + 2x + 4 = (x+1)^2 + 3 \geq 3$，最小值为 $3$，不合题意。  </li>
+<li><strong>B选项</strong>：令 $t = |\sin x|$，则 $t \in (0,1]$，$y = t + \frac{4}{t}$。<br />
+  对勾函数 $y = t + \frac{4}{t}$ 在 $(0,2]$ 上单调递减。因为 $(0,1] \subset (0,2]$，所以函数在 $t=1$ 时取得最小值 $1 + 4 = 5$。基本不等式 $t+\frac{4}{t} \geq 4$ 的等号在 $t=2$ 时成立，但 $t \leq 1$，取不到。最小值为 $5 \neq 4$。  </li>
+<li><strong>C选项</strong>：$y = 2^x + \frac{4}{2^x}$（因为 $2^{2-x} = \frac{4}{2^x}$）。令 $u = 2^x &gt; 0$，则 $y = u + \frac{4}{u} \geq 2\sqrt{4} = 4$。等号当 $u=2$ 即 $x=1$ 时成立，最小值恰为 $4$。  </li>
+<li><strong>D选项</strong>：$\ln x$ 的值域为 $\mathbb{R}$。当 $0&lt;x&lt;1$ 时 $\ln x&lt;0$，$y$ 可取负值，无最小值（趋向 $-\infty$），更不可能为 $4$。</li>
+</ul>
+<h3><strong>点评/变式</strong></h3>
+<p>B 选项的典型错误是心算 $t+\frac{4}{t} \geq 4$ 后直接选下，忽略了 $t$ 的真范围。<strong>核心教训</strong>：凡含 $\sin x$ 或 $\cos x$ 的分式最值，换元后必须先用有界性卡死新元的区间，再决定用基本不等式还是单调性。<br />
+<strong>变式</strong>：若题干改为 $y = 2|\sin x| + \frac{2}{|\sin x|}$，最小值还是 $4$ 吗？等号要求 $|\sin x|=1$，可取得，最小值为 $4$。关键在于等号条件是否落在三角值域内。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-08.html">2021-文-08</a>（2021 · 中） 本题考查运用基本不等式求不同函数的最小值，需注意等号成立条件。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角函数有界性</a></li>
+</ul>
+</div>
+</body>
+</html>

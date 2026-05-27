@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>命题的否定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>命题的否定</h1><div class="review-mark" data-stem="命题的否定"></div><div class="meta-card"><span><strong>考点</strong>命题的否定</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>全称量词与存在量词</strong><br />
+  全称量词“所有”“任意一个”等，符号 $\forall$；<br />
+  存在量词“存在一个”“至少有一个”等，符号 $\exists$。  </li>
+<li><strong>全称命题与特称命题的形式</strong><br />
+  全称命题：$\forall x \in M, p(x)$；<br />
+  特称命题（存在性命题）：$\exists x_0 \in M, p(x_0)$。  </li>
+<li><strong>命题的否定</strong>  </li>
+<li>全称命题的否定是特称命题：<br />
+     $\neg(\forall x \in M, p(x)) \iff \exists x_0 \in M, \neg p(x_0)$。  </li>
+<li>特称命题的否定是全称命题：<br />
+     $\neg(\exists x_0 \in M, p(x_0)) \iff \forall x \in M, \neg p(x)$。  </li>
+<li>注意：否定只否定结论，不改变量词的论域；常见量词“都是”的否定是“不都是”，而非“都不是”。  </li>
+<li><strong>命题与其否定的真假关系</strong><br />
+  一个命题与它的否定必为一真一假（互斥且互补）。由此可快速判断：若原命题真，则其否定假；原命题假，则其否定真。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接判定含量词命题的真假</strong>  </li>
+<li>全称命题真：必须对所有 $x \in M$ 都成立（一般需要推理或恒成立证明）；若遇困难，优先考虑反例。  </li>
+<li>全称命题假：只需在 $M$ 内找到一个使 $p(x)$ 不成立的反例。  </li>
+<li>特称命题真：只需在 $M$ 内找到一个使 $p(x_0)$ 成立的正例。  </li>
+<li>特称命题假：必须证明对所有 $x \in M$，$p(x)$ 均不成立。  </li>
+<li><strong>结合否定关系简化判断</strong><br />
+   若直接判断原命题较繁琐，可先判断其否定命题的真假，再由“一真一假”得到原命题的真假。  </li>
+<li><strong>选填题中的特殊值验证法</strong><br />
+   遇到代数式或不等式，优先代入特殊值（如 $0, 1, -1$ 或边界值）快速寻找反例或正例。  </li>
+<li><strong>复合选项的处理</strong><br />
+   对于“$p$ 和 $q$ 都是真命题”一类选项，先分别判定 $p$、$q$ 的真假，再判定 $\neg p$、$\neg q$ 的真假，最后对照选项作出选择。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆命题否定与否命题</strong><br />
+  否命题是将条件和结论都否定，而命题的否定只否定结论。含量词命题的否定务必遵循“换量词，否结论”的规则，不要画蛇添足。  </li>
+<li><strong>全称命题的反例找错</strong><br />
+  对 $\forall x \in \mathbb{R}, |x+1|&gt;1$，误以为 $x=-1$ 时 $|x+1|=0 \le 1$ 不成立，却因忽略定义域或计算错误而漏掉反例。  </li>
+<li><strong>特称命题盲目求解方程</strong><br />
+  $\exists x&gt;0, x^3=x$ 不能直接消去 $x$ 得 $x^2=1$，必须考虑 $x=0$ 是否为解（此处 $x&gt;0$ 故舍弃 $x=0$），正确得正例 $x=1$。  </li>
+<li><strong>否定后命题的真假判断失误</strong><br />
+  若原命题假，则其否定真，这是必然结论，不应受“否定形式看起来不对”的干扰。  </li>
+<li><strong>忽视隐含量词</strong><br />
+  例如“$x^2&gt;1$”常隐含全称量词或存在量词，需根据语境补全，否则否定时易出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2024·新课标Ⅱ·02）</h3>
+<p>已知命题 $p: \forall x \in \mathbb{R}, |x+1|&gt;1$；命题 $q: \exists x&gt;0, x^3=x$，则（　）<br />
+A. $p$ 和 $q$ 都是真命题<br />
+B. $\neg p$ 和 $q$ 都是真命题<br />
+C. $p$ 和 $\neg q$ 都是真命题<br />
+D. $\neg p$ 和 $\neg q$ 都是真命题  </p>
+<p><strong>思路</strong><br />
+分别判定 $p$ 与 $q$ 的真假，再根据“命题与否定一真一假”得出 $\neg p$ 和 $\neg q$ 的真假，最后匹配选项。全称命题 $p$ 找反例，特称命题 $q$ 找正例。</p>
+<p><strong>步骤</strong><br />
+1. 判断 $p$：取 $x=-1 \in \mathbb{R}$，则 $|x+1|=|0|=0 \ngtr 1$，因此 $p$ 为假命题，故 $\neg p$ 为真命题。<br />
+2. 判断 $q$：方程 $x^3=x \Rightarrow x(x-1)(x+1)=0$，在 $x&gt;0$ 条件下有解 $x=1$，因此存在 $x=1$ 使 $x^3=x$ 成立，$q$ 为真命题，故 $\neg q$ 为假命题。<br />
+3. 于是 $\neg p$ 真，$q$ 真。对应选项 B。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心在于用特殊值（$x=-1$）反证全称命题，用因式分解（或直接观察 $x=1$）证实特称命题。<br />
+- 变式：若将 $p$ 改为 $\forall x \in \mathbb{R}, |x+1|\ge 0$，则为真命题，因绝对值非负恒成立。若将 $q$ 改为 $\exists x&lt;0, x^3=x$，则取 $x=-1$，亦可真。<br />
+- 注意选项结构，养成“先分后合”的判断习惯，避免混乱。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-02.html">2024-新课标Ⅱ-02</a>（2024 · 易） 本题考查通过赋值法判断命题真假及其否定的逻辑关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/762-命题的否定.html">命题的否定</a></li>
+</ul>
+</div>
+</body>
+</html>

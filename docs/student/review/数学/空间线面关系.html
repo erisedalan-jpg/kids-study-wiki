@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间线面关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间线面关系</h1><div class="review-mark" data-stem="空间线面关系"></div><div class="meta-card"><span><strong>考点</strong>空间线面关系</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：2</li>
+<li>真题数：2；年份跨度：2020–2020</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>平面的基本性质（公理）</strong><br />
+  公理1：如果一条直线上的两点在一个平面内，那么这条直线在此平面内。<br />
+  公理2：过不在同一条直线上的三点，有且只有一个平面。<br />
+  公理3：如果两个不重合的平面有一个公共点，那么它们有且只有一条过该点的公共直线。<br />
+  推论：两条相交直线确定一个平面；两条平行直线确定一个平面；直线和直线外一点确定一个平面。</p>
+</li>
+<li>
+<p><strong>空间中直线与直线的位置关系</strong><br />
+  相交直线：在同一平面内，有且只有一个公共点。<br />
+  平行直线：在同一平面内，没有公共点。<br />
+  异面直线：不同在任何一个平面内，既不相交也不平行。</p>
+</li>
+<li>
+<p><strong>直线与平面的位置关系</strong><br />
+  直线在平面内（有无数公共点），直线与平面相交（有且只有一个公共点），直线与平面平行（无公共点）。<br />
+  线面垂直的定义：如果一条直线垂直于一个平面内的任意一条直线，则称这条直线垂直于这个平面。<br />
+  性质定理：若直线 $l \subset \alpha$，直线 $m \perp \alpha$，则 $m \perp l$（线面垂直则垂直于面内所有直线）。</p>
+</li>
+<li>
+<p><strong>复合命题的逻辑联结词</strong><br />
+  且（$\land$）：全真才真。<br />
+  或（$\lor$）：有真即真。<br />
+  非（$\lnot$）：与原命题真假相反。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分析简单命题的真假</strong>  </li>
+<li>对于平面基本性质的命题，紧扣“不共线三点”等关键词。遇“任意三点”立即考虑共线反例。  </li>
+<li>对于线线关系命题，熟练掌握“异面”概念，当条件只说不相交时，不能默认平行。  </li>
+<li>
+<p>对于线面垂直产生的线线垂直，直接用定义判定，无需添加辅助线。</p>
+</li>
+<li>
+<p><strong>画图与举反例结合</strong><br />
+   真假判断优先使用特征图形或反例（如共线三点、异面直线），避免纯想象。</p>
+</li>
+<li>
+<p><strong>将数学命题转化为逻辑符号</strong><br />
+   将自然语言改写为 $p \land q$、$\lnot p \lor q$ 等形式，明确每一复合命题的结构。</p>
+</li>
+<li>
+<p><strong>逐项判定复合命题的真值</strong><br />
+   利用已知的简单命题真值，按照逻辑联结词规则计算复合命题真假，注意“非”的优先级。</p>
+</li>
+<li>
+<p><strong>验证与排除</strong><br />
+   当题目要求选出所有真命题的序号时，可先排除明显含假命题的组合，再仔细验证剩余选项。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>“任意三点”误区</strong>：公理2强调“不共线三点”，若忽略此条件，认为过任意三点都有唯一平面，必错。  </li>
+<li><strong>异面直线理解不足</strong>：空间中两条直线没有公共点，除平行外还有异面情形。将“不相交”等价为“平行”是典型失分点。  </li>
+<li><strong>线面垂直性质用反</strong>：由 $m \perp \alpha$ 可推出 $m$ 与 $\alpha$ 内所有直线垂直，但由 $m$ 垂直于面内某一直线却不能推出 $m \perp \alpha$，切忌混淆。  </li>
+<li><strong>复合命题运算错误</strong>：混淆 $\lnot p \lor q$ 与 $\lnot(p \lor q)$，或错误认为 $p \land q$ 一真则真。必须严格按照“且全真才真、或有真即真”运算。  </li>
+<li><strong>忽略隐含条件</strong>：如“两两相交且不过同一点”自然推出三条直线共面，若只看到“两两相交”而没注意“不过同一点”，可能误以为有异面情况。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2020年全国卷·理16（文16相同）</h3>
+<p><strong>题目</strong><br />
+给出四个命题：<br />
+$p_1$：两两相交且不过同一点的三条直线必在同一平面内。<br />
+$p_2$：过空间中任意三点有且仅有一个平面。<br />
+$p_3$：若空间两条直线不相交，则这两条直线平行。<br />
+$p_4$：若直线 $l \subset \alpha$，直线 $m \perp \alpha$，则 $m \perp l$。<br />
+判断以下复合命题的真假：<br />
+① $p_1 \land p_4$ ② $p_1 \land p_2$ ③ $\lnot p_2 \lor p_3$ ④ $\lnot p_3 \lor \lnot p_4$</p>
+<p><strong>思路</strong><br />
+先逐个判定 $p_1$～$p_4$ 的真假，再用逻辑运算求各复合命题的真值，筛选出真命题。</p>
+<p><strong>步骤</strong><br />
+1. <strong>判 $p_1$</strong>：设 $l_1$ 与 $l_2$ 相交，确定平面 $\alpha$。第三条直线 $l_3$ 与 $l_1$、$l_2$ 都相交且不过同一点，则两个交点均在 $\alpha$ 内，由公理1知 $l_3 \subset \alpha$。故 $p_1$ 为真。<br />
+2. <strong>判 $p_2$</strong>：若三点共线，过此三点的平面有无数个，与“有且仅有”矛盾。故 $p_2$ 为假。<br />
+3. <strong>判 $p_3$</strong>：空间两条直线不相交，可能是平行，也可能是异面。命题忽略了异面，故为假。<br />
+4. <strong>判 $p_4$</strong>：由线面垂直定义，$m \perp \alpha$ 推出 $m$ 垂直于 $\alpha$ 内所有直线，而 $l \subset \alpha$，所以 $m \perp l$。故 $p_4$ 为真。<br />
+5. <strong>计算复合命题</strong><br />
+   ① $p_1 \land p_4$：真 $\land$ 真 $\rightarrow$ 真<br />
+   ② $p_1 \land p_2$：真 $\land$ 假 $\rightarrow$ 假<br />
+   ③ $\lnot p_2 \lor p_3$：非（假）$\lor$ 假 $\rightarrow$ 真 $\lor$ 假 $\rightarrow$ 真<br />
+   ④ $\lnot p_3 \lor \lnot p_4$：非（假）$\lor$ 非（真）$\rightarrow$ 真 $\lor$ 假 $\rightarrow$ 真</p>
+<p><strong>点评/变式</strong><br />
+本题综合了平面公理、异面直线概念、线面垂直性质与简易逻辑，一道题覆盖多个考点。复习时，特别要牢记“不在同一直线上的三点确定平面”，异面直线的存在性，以及线面垂直的传递链条。变式训练可改为判断逆命题，如“若 $m \perp l$ 且 $l \subset \alpha$，则 $m \perp \alpha$”为假（需 $l$ 与 $m$ 相交且都垂直于交线），这是常考陷阱。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-16.html">2020-文-16</a>（2020 · 中） 考查空间中线面位置关系命题的真假判断及复合命题真假判定。</li>
+<li><a href="../../exam/数学/2020-理-16.html">2020-理-16</a>（2020 · 中） 给出四个关于空间直线与平面关系的命题p₁~p₄，判断真命题序号并给出含逻辑联结词的复合命题真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">空间线面关系</a></li>
+</ul>
+</div>
+</body>
+</html>

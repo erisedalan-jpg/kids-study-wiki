@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球内接多面体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球内接多面体</h1><div class="review-mark" data-stem="球内接多面体"></div><div class="meta-card"><span><strong>考点</strong>球内接多面体</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2010–2017</li>
+<li>出现题位：填空15 选择10</li>
+<li>难度分布：易1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>球内接多面体的核心问题是确定球心的位置并求出半径 $R$，进而计算表面积 $S=4\pi R^2$ 或体积 $V=\frac{4}{3}\pi R^3$。常见典型多面体的外接球半径公式：</p>
+<ul>
+<li><strong>长方体（含正方体）</strong>：体对角线即为球的直径。设长、宽、高分别为 $a,b,c$，则半径
+  $$R=\frac{\sqrt{a^{2}+b^{2}+c^{2}}}{2}$$</li>
+<li><strong>正棱柱</strong>（底面为正多边形，侧棱垂直于底面）：上下底面中心连线的中点即为球心。设底面外接圆半径为 $r$，高（侧棱长）为 $h$，则
+  $$R=\sqrt{r^{2}+\left(\frac{h}{2}\right)^{2}}$$
+  其中正三角形外接圆半径 $r=\frac{\sqrt{3}}{3}a$（$a$ 为边长），正方形 $r=\frac{\sqrt{2}}{2}a$ 等。</li>
+<li><strong>一般直棱柱</strong>（侧棱垂直底面，且底面多边形存在外接圆）：球心是上下底面外心连线的中点，半径同样用 $R=\sqrt{r_{底}^{2}+(h/2)^{2}}$ 计算。</li>
+</ul>
+<p>适用条件：多面体所有顶点共球面（外接球存在）。对直棱柱来说，底面必须存在外接圆（如任意三角形、正多边形等）。</p>
+<h2>解题方法与套路</h2>
+<p>遇到“多面体外接球”问题，可按下列步骤求解半径：</p>
+<ol>
+<li><strong>锁定球心</strong><br />
+   寻找空间内到多面体各顶点距离相等的点。常见几何体的球心规律：</li>
+<li>长方体/正方体：体对角线交点。</li>
+<li>正棱柱/直棱柱（底面有外心）：上下底面外心连线的中点。</li>
+<li>
+<p>正棱锥：顶点在底面射影为底面中心时，球心在高线上，利用特征直角三角形求解（本次未涉及）。</p>
+</li>
+<li>
+<p><strong>构造特征截面或直角三角形</strong><br />
+   将立体关系转化为平面图形（如过球心与底面外心的截面，或体对角线与棱构成的三角形）。</p>
+</li>
+<li>
+<p><strong>计算半径 $R$</strong><br />
+   利用勾股定理或己知公式直接运算。</p>
+</li>
+<li>长方体：$2R=\sqrt{a^2+b^2+c^2}$。</li>
+<li>
+<p>正三棱柱：先求底面外接圆半径 $r=\frac{\sqrt{3}}{3}a$，再求 $R=\sqrt{r^2+(h/2)^2}$。</p>
+</li>
+<li>
+<p><strong>代入公式得表面积（或体积）</strong><br />
+   注意区分半径与直径，避免漏乘系数。表面积 $S=4\pi R^2$，体积 $V=\frac{4}{3}\pi R^3$。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆直径与半径</strong>：计算得到的是直径 $2R$，却在表面积公式中误作半径使用。必须先将直径除以2得 $R$。</li>
+<li><strong>错用面对角线代替体对角线</strong>：长方体的外接球直径是体对角线 $\sqrt{a^2+b^2+c^2}$，而非某个面的对角线 $\sqrt{a^2+b^2}$。</li>
+<li><strong>错误定位球心</strong>：直三棱柱外接球的球心在上下底面外心连线的中点，不是底面中心到顶点的连线。底面外心与重心（正三角形时重合）需明确。</li>
+<li><strong>底面外接圆半径求错</strong>：正三角形边长为 $a$，外接圆半径 $r=\frac{\sqrt{3}}{3}a$（非 $\frac{\sqrt{3}}{2}a$，那是对角线/高）。正四边形 $r=\frac{\sqrt{2}}{2}a$。</li>
+<li><strong>公式混淆</strong>：球的表面积 $S=4\pi R^2$（不是 $\pi R^2$），体积 $V=\frac{4}{3}\pi R^3$，记混会导致整题错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017文）：长方体的长、宽、高分别为3，2，1，其顶点都在球O的球面上，求球O的表面积。<br />
+<strong>思路</strong>：长方体所有顶点均在球面上，则体对角线长为球的直径。由长方体棱长计算出体对角线，得半径，再代入表面积公式。<br />
+<strong>步骤</strong><br />
+长方体体对角线长 $l=\sqrt{3^2+2^2+1^2}=\sqrt{14}$。因此球半径 $R=\frac{\sqrt{14}}{2}$。<br />
+表面积 $S=4\pi R^2=4\pi \cdot \frac{14}{4}=14\pi$。<br />
+<strong>点评/变式</strong>：若题目改为“长方体的三条棱长之和为定值”或“求体积”，先由公式 $V=\frac{4}{3}\pi R^3$ 求解。核心始终是体对角线即直径。</p>
+<p><strong>题目</strong>（2010理）：侧棱垂直于底面、所有棱长都为 $a$ 的正三棱柱，顶点全在一个球面上，求球的表面积。<br />
+<strong>思路</strong>：此几何体为棱长均为 $a$ 的正三棱柱，高 $h=a$，底面是边长为 $a$ 的正三角形。球心在上下底面中心连线的中点，构造直角三角形，其中一条直角边为底面外接圆半径 $r$，另一条为半个柱高 $h/2$，斜边即球半径 $R$。<br />
+<strong>步骤</strong><br />
+底面外接圆半径 $r=\frac{\sqrt{3}}{3}a$，半高 $\frac{h}{2}=\frac{a}{2}$。<br />
+则球半径 $R=\sqrt{r^2+\left(\frac{h}{2}\right)^2}=\sqrt{\frac{a^2}{3}+\frac{a^2}{4}}=\sqrt{\frac{7}{12}a^2}=\frac{\sqrt{21}}{6}a$。<br />
+表面积 $S=4\pi R^2=4\pi \cdot \frac{7}{12}a^2=\frac{7}{3}\pi a^2$。<br />
+<strong>点评/变式</strong>：若三棱柱为非正三角形但底面有外接圆，需用正弦定理求底面外接圆半径 $r=\frac{a}{2\sin A}$，再套用 $R=\sqrt{r^2+(h/2)^2}$。若将正三棱柱改为侧棱垂直底面的长方体，则退化为第一类题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-15.html">2017-文-15</a>（2017 · 易） 长方体的顶点均在球面上，通过体对角线求球的半径，再计算球的表面积。</li>
+<li><a href="../../exam/数学/2010-理-10.html">2010-理-10</a>（2010 · 中） 正三棱柱外接球的表面积计算，通过上下底面中心连线中点确定球心求半径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/988-球内接多面体.html">球内接多面体</a></li>
+</ul>
+</div>
+</body>
+</html>

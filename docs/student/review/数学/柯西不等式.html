@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>柯西不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>柯西不等式</h1><div class="review-mark" data-stem="柯西不等式"></div><div class="meta-card"><span><strong>考点</strong>柯西不等式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2013–2017</li>
+<li>出现题位：解答23 解答24</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>柯西不等式是证明不等式和求最值的有力工具，其标准形式为：对任意实数 $a_1,a_2,\cdots,a_n$ 和 $b_1,b_2,\cdots,b_n$，有<br />
+$$(a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2) \geq (a_1b_1+a_2b_2+\cdots+a_nb_n)^2.$$
+取等条件为 $\frac{a_1}{b_1}=\frac{a_2}{b_2}=\cdots=\frac{a_n}{b_n}$（当某个分母为零时，对应分子也为零）。二维形式 $n=2$ 最为常用，即 $(a^2+b^2)(c^2+d^2)\ge(ac+bd)^2$。  </p>
+<p>此外，柯西不等式还有变体形式，如“权方和”不等式：若 $x_i&gt;0$，则<br />
+$$\frac{y_1^2}{x_1}+\frac{y_2^2}{x_2}+\cdots+\frac{y_n^2}{x_n} \ge \frac{(y_1+y_2+\cdots+y_n)^2}{x_1+x_2+\cdots+x_n}.$$<br />
+使用柯西不等式时，关键是将待证式子配凑成“平方和的乘积”或“分式平方和”的结构，并注意方向“ ≥ ”不可用反。高考中常与均值不等式、立方和公式等结合，用以证明对称结构的不等式或求最值。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>结构识别与直接套用</strong><br />
+   观察是否具备 $(\sum A_i^2)(\sum B_i^2) \ge (\sum A_iB_i)^2$ 的形式。例如 $(a+b)(a^5+b^5)$ 可视为 $[(\sqrt{a})^2+(\sqrt{b})^2][(\sqrt{a^5})^2+(\sqrt{b^5})^2]$。</li>
+<li><strong>引入常数项或条件配凑</strong><br />
+   当已知 $a+b+c$ 或和为定值时，通过乘上 $(a+b+c)$ 构造分母以使分式符合柯西形式，如证明 $\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a} \ge a+b+c$，可写为 $\left(\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\right)(b+c+a) \ge (a+b+c)^2$。</li>
+<li><strong>联合均值不等式转化条件</strong><br />
+   带有高次项的条件（如 $a^3+b^3=2$）常通过因式分解或代换转化为低次和 $a+b$ 与积 $ab$ 的关系，再由均值不等式 $ab \le (\frac{a+b}{2})^2$ 构造关于 $a+b$ 的不等式求解。</li>
+<li><strong>逆用或变形运用</strong><br />
+   将目标式转化为平方和除以线性项的形式，利用 $\frac{x_1^2}{y_1}+\cdots+\frac{x_n^2}{y_n} \ge \frac{(x_1+\cdots+x_n)^2}{y_1+\cdots+y_n}$，直接得到下界。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>方向颠倒</strong>：柯西不等式左边乘积大于等于右边平方和，不可将“≥”误用作“≤”；权方和公式同样如此，证毕时需确认不等号方向。</li>
+<li><strong>忽略取等条件</strong>：高考证明题必须验证等号成立时的变量取值（通常各数对应成比例），缺乏取等条件会被扣过程分。</li>
+<li><strong>配凑系数失误</strong>：构造平方和时要注意系数的均衡，如将 $a+b$ 视为 $(\frac{a}{\sqrt{k}})^2+(\frac{b}{\sqrt{m}})^2$ 等，需保证展开后与原式一致，否则放缩失真。</li>
+<li><strong>滥用条件范围</strong>：权方和形式要求分母严格为正，若题目未明确正数，不能随意用分式柯西。在 $a,b,c$ 均为正数的前提下才可安全使用 $ \sum \frac{x^2}{y} \ge \frac{(\sum x)^2}{\sum y}$。</li>
+<li><strong>混淆均值与柯西</strong>：均值不等式常用于产生“积→和”的缩放，柯西用于“和与平方和”的链接，在综合题中需分清每一步所运用的工具及其前提。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2017理23</h3>
+<p><strong>题目</strong>：已知 $a&gt;0,b&gt;0$，且 $a^3+b^3=2$，证明：<br />
+(1) $(a+b)(a^5+b^5) \ge 4$；<br />
+(2) $a+b \le 2$。</p>
+<p><strong>思路</strong>：(1) 注意到 $a+b = (\sqrt{a})^2+(\sqrt{b})^2$，$a^5+b^5 = (\sqrt{a^5})^2+(\sqrt{b^5})^2$，直接应用柯西不等式。<br />
+(2) 条件 $a^3+b^3=2$ 可变形出 $a+b$ 与 $ab$ 的关系，然后由均值不等式将 $ab$ 缩放为 $a+b$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-23.html">2017-理-23</a>（2017 · 中） 该题考查利用柯西不等式和均值不等式证明不等式，涉及代数变形与等号条件。</li>
+<li><a href="../../exam/数学/2013-文-24.html">2013-文-24</a>（2013 · 中） 本题要求证明给定正数和为1条件下的两个不等式，考查不等式证明方法与技巧。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">柯西不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

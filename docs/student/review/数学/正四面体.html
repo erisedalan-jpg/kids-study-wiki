@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正四面体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正四面体</h1><div class="review-mark" data-stem="正四面体"></div><div class="meta-card"><span><strong>考点</strong>正四面体</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正四面体的定义</strong>：四个面都是全等的正三角形的四面体，所有棱长相等。</li>
+<li><strong>与正方体的关系</strong>：正四面体可内接于正方体，其顶点为正方体的四个互不共面的顶点，棱长为正方体面对角线。若正方体棱长为 $a$，则正四面体棱长 $l=\sqrt{2}a$，体积 $V=\frac{1}{3}a^3$，高 $h=\frac{\sqrt{6}}{3}l=\frac{2\sqrt{3}}{3}a$。</li>
+<li><strong>常见度量公式</strong>（设棱长为 $a$）：</li>
+<li>表面积 $S=\sqrt{3}a^2$，体积 $V=\frac{\sqrt{2}}{12}a^3$，高 $h=\frac{\sqrt{6}}{3}a$；</li>
+<li>外接球半径 $R=\frac{\sqrt{6}}{4}a$，内切球半径 $r=\frac{\sqrt{6}}{12}a$；</li>
+<li>对棱距离 $d=\frac{\sqrt{2}}{2}a$（对棱互相垂直）。</li>
+<li><strong>三视图投影原理</strong>：正视图将空间图形向后投射到坐标平面（如 $zOx$ 平面），投影时仅保留垂直于投影面的坐标（$y$ 坐标舍去），被遮挡的线用虚线表示。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>坐标还原几何体</strong>：给出一组空间直角坐标，先观察是否具有“一个原点+三个两点共一面”特征，联想正方体顶点（坐标只含 $0$ 和 $1$），补形成正方体，再取其四个顶点即得正四面体。</li>
+<li><strong>确定投影平面上的二维点</strong>：去掉投影方向所对应的坐标（如以 $zOx$ 为投影面，去掉 $y$），得到各顶点在投影面上的二维坐标。</li>
+<li><strong>恢复棱的连线</strong>：按原四面体的棱连接对应的投影点，画全六条棱的投影线段。</li>
+<li><strong>虚实线判断</strong>：根据与投影面垂直的坐标轴（此处为 $y$ 轴）的大小判断前后位置。坐标大的点更靠近观察者，若两线段交叉，则靠前的线段画实线，被遮挡的线段画虚线；重合于外围轮廓的线画实线。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>投影点遗漏或错连</strong>：直接凭感觉画图，未按原四面体所有棱一一投影，导致漏画内部对角线。</li>
+<li><strong>虚实线混淆</strong>：不加区分地将所有投影线段画成实线，或记错前后方向。应以投影面法线方向判断遮挡关系——坐标值大的在前，实线；被完全遮挡的线段画虚线。</li>
+<li><strong>误判形状为三角形</strong>：将正四面体的投影想当然看作正三角形，忽略投影方向变化时可能得到带对角线的正方形。</li>
+<li><strong>坐标马虎</strong>：丢弃坐标时保留错误变量，或未考虑某些点因坐标特殊而投影重合。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2013·全国理·7）<br />
+一个四面体的顶点在空间直角坐标系 $O!-!xyz$ 中的坐标分别是 $(1,0,1)$，$(1,1,0)$，$(0,1,1)$，$(0,0,0)$，画该四面体三视图中的正视图时，以 $zOx$ 平面为投影面，则得到的正视图可以为（　　）</p>
+<p><strong>思路</strong><br />
+四个点均只含 $0$ 和 $1$，可还原为棱长为 $1$ 的正方体的四个顶点。以 $zOx$ 为投影面，即沿 $y$ 轴方向投射，去掉 $y$ 坐标得四个投影点；再连接原四面体的全部棱，并根据 $y$ 坐标大小判别虚实。</p>
+<p><strong>步骤</strong><br />
+1. 记 $O(0,0,0)$，$A(1,0,1)$，$B(1,1,0)$，$C(0,1,1)$，此四点构成棱长为 $\sqrt{2}$ 的正四面体。<br />
+2. 向 $zOx$ 平面投影（去掉 $y$）：<br />
+   $O\to(0,0)$，$A\to(1,1)$，$B\to(1,0)$，$C\to(0,1)$。<br />
+   四个投影点恰好是边长为 $1$ 的正方形的四个顶点。<br />
+3. 连原四面体的六条棱：<br />
+   $OA$：$(0,0)!-!(1,1)$（左下到右上对角线）<br />
+   $OB$：$(0,0)!-!(1,0)$（底边）<br />
+   $OC$：$(0,0)!-!(0,1)$（左边）<br />
+   $AB$：$(1,1)!-!(1,0)$（右边）<br />
+   $AC$：$(1,1)!-!(0,1)$（顶边）<br />
+   $BC$：$(1,0)!-!(0,1)$（右下到左上对角线）<br />
+4. 判断可见性：沿 $y$ 轴方向看，$y$ 坐标大的靠近观察者。$B,C$ 的 $y=1$，在最前；$O,A$ 的 $y=0$，在后方。<br />
+   - 正方形边框由 $OB,OC,AB,AC$ 投影组成，虽然有前后，但处于轮廓位置，均画实线。<br />
+   - 对角线 $BC$（$y=1$ 在前）画实线；对角线 $OA$（$y=0$ 在后）与 $BC$ 投影交叉，被遮挡，画虚线。<br />
+   故正视图为正方形加一条内部实对角线（$BC$）和一条虚对角线（$OA$）。</p>
+<p><strong>点评与变式</strong><br />
+- 本题核心是“正方体模型+投影坐标剥离+虚实遮挡判断”。在选择题中，抓住正方体补形可快速画出直观图。<br />
+- 变式：若以 $xOy$ 平面为投影面，正视图将是边长 $\sqrt{2}$ 的正三角形，需注意投影方向不同导致图形迥异，务必厘清坐标轴与投影面的对应关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-07.html">2013-理-07</a>（2013 · 中） 在给定坐标系中，由四面体顶点坐标判断以zOx为投影面的正视图形状。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正四面体</a></li>
+</ul>
+</div>
+</body>
+</html>

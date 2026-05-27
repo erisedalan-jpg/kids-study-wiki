@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>曲线交点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>曲线交点</h1><div class="review-mark" data-stem="曲线交点"></div><div class="meta-card"><span><strong>考点</strong>曲线交点</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择5</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线标准方程与焦点</strong>：抛物线 $y^2=2px \ (p&gt;0)$ 的焦点为 $F\left(\frac p2, 0\right)$，准线为 $x=-\frac p2$。本题中 $C: y^2=4x$，即 $2p=4$，$p=2$，焦点 $F(1,0)$。</li>
+<li><strong>曲线交点的本质</strong>：两条曲线 $C_1$ 与 $C_2$ 的交点坐标同时满足两者的方程。求解交点问题时，常将几何条件转化为坐标满足的方程（组）。</li>
+<li><strong>轴垂线的翻译</strong>：$PF \perp x$ 轴意味着点 $P$ 与焦点 $F$ 的横坐标相同，从而 $P$ 的横坐标等于焦点横坐标。</li>
+<li><strong>反比例函数参数</strong>：曲线 $y=\frac{k}{x} \ (k&gt;0)$ 位于第一、三象限。利用交点坐标代入可求参数 $k$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由圆锥曲线方程快速求焦点、准线</strong>：对形如 $y^2=2px$ 的抛物线，直接写出焦点坐标 $(\frac p2, 0)$。</li>
+<li><strong>将垂直/平行等几何位置关系转化为坐标关系</strong>：例如 $PF \perp x$ 轴 ⟹ $x_P = x_F$，据此将交点坐标已知化。</li>
+<li><strong>代入消元求另一坐标</strong>：将已知横（或纵）坐标代入较简单的曲线方程（本题是抛物线方程），解出交点纵横坐标的完整信息。</li>
+<li><strong>利用另一曲线求参数</strong>：将求出的交点坐标代入含参曲线方程（本题是反比例函数 $y=\frac{k}{x}$），解出参数值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误判焦点位置</strong>：$y^2=4x$ 是开口向右的抛物线，焦点在 $x$ 轴正半轴，不要记成 $(\frac p4,0)$ 或 $(p,0)$。</li>
+<li><strong>忽略 $k&gt;0$ 对交点象限的限制</strong>：$k&gt;0$ 时反比例函数图像在一、三象限，结合抛物线在 $x$ 轴上方也有图像，可锁定交点在第一象限，避免多解。</li>
+<li><strong>轴垂线含义混淆</strong>：$PF \perp y$ 轴与 $PF \perp x$ 轴不要混淆，垂直 $x$ 轴意味着 $x_P=x_F$，纵坐标未知，代入方程可解。</li>
+<li><strong>直接联立方程盲目求解</strong>：不要一上来就联立 $y^2=4x$ 与 $y=\frac{k}{x}$ 去解交点，先利用 $PF \perp x$ 轴这一几何条件简化，可避免繁杂运算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2016-文-05）</h3>
+<p><strong>题目</strong>：抛物线 $C: y^2=4x$ 的焦点为 $F$，曲线 $y=\frac{k}{x} \ (k&gt;0)$ 与 $C$ 交于点 $P$，且 $PF \perp x$ 轴，求 $k$。</p>
+<p><strong>思路</strong>：由抛物线的标准方程直接写出焦点 $F$ 坐标；利用 $PF \perp x$ 轴得到 $P$ 点横坐标；将横坐标代入抛物线方程求出 $P$ 点纵坐标（注意 $k&gt;0$ 限定了交点象限）；最后将 $P$ 点坐标代入 $y=\frac{k}{x}$ 解出 $k$。</p>
+<p><strong>步骤</strong>：
+1. 由 $y^2=4x$ 得 $2p=4$，$p=2$，焦点 $F$ 的坐标为 $(1,0)$。
+2. 由 $PF \perp x$ 轴知 $P$ 与 $F$ 横坐标相等，故 $x_P = 1$。
+3. 将 $x_P=1$ 代入 $y^2=4x$，得 $y_P^2 = 4$，即 $y_P = \pm 2$。又因为 $k&gt;0$，曲线 $y=\frac{k}{x}$ 在第一、三象限，抛物线 $y^2=4x$ 在 $x$ 轴上方有 $y=2\sqrt{x}$，而交点 $P$ 应使 $y&gt;0$，故取 $P(1,2)$。
+4. 将 $P(1,2)$ 代入 $y=\frac{k}{x}$，得 $2 = \frac{k}{1}$，解得 $k=2$。</p>
+<p><strong>点评/变式</strong>：本题巧妙地将“点在曲线上”、“轴垂线”与“参数求解”结合，无需大量计算。变式：若将“$PF \perp x$轴”改为“$PF \perp y$轴”，则 $P$ 点纵坐标与 $F$ 相同（为0），此时 $P$ 即为原点，$k=0$与条件矛盾，不成立；或改为“$P$ 为准线与 $x$ 轴交点”，横坐标为 $-1$，代入抛物线得 $y^2=-4$ 无解——可深刻体会几何条件如何转化为方程是否有解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-05.html">2016-文-05</a>（2016 · 易） 由抛物线焦点与反比例函数交点及垂直条件，求参数 k 的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">曲线交点</a></li>
+</ul>
+</div>
+</body>
+</html>

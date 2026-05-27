@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与圆相切</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与圆相切</h1><div class="review-mark" data-stem="直线与圆相切"></div><div class="meta-card"><span><strong>考点</strong>直线与圆相切</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：15</li>
+<li>真题数：2；年份跨度：2022–2024</li>
+<li>出现题位：选择10 选择11</li>
+<li>难度分布：中1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>相切定义</strong>：直线与圆<strong>有且只有一个公共点</strong>（交点），此时直线叫做圆的切线，公共点叫做切点。</li>
+<li><strong>判定方法</strong>（两种等价形式，根据题目条件选择）：</li>
+<li><strong>几何法（距离法）</strong>：圆心到直线的距离 $d$ 等于圆的半径 $r$，即 $d = r$。点到直线距离公式：$d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。</li>
+<li><strong>代数法（判别式法）</strong>：联立直线与圆的方程，消元得一元二次方程，其判别式 $\Delta = 0$。</li>
+<li><strong>切线的重要几何性质</strong>：</li>
+<li>圆心与切点的连线<strong>垂直于</strong>切线（斜率积为 $-1$，若斜率均存在）。</li>
+<li>从圆外一点引圆的两条切线，它们的<strong>切线长相等</strong>（切线长 $=\sqrt{PO^2-r^2}$，$P$ 为圆外点，$O$ 为圆心）。</li>
+<li>切点弦、切线方程（对于给定圆 $x^2+y^2=r^2$，过圆上一点 $(x_0,y_0)$ 的切线方程为 $x_0x+y_0y=r^2$；过圆外一点的切线需设斜率，用距离法求解，并注意斜率不存在的情况）。</li>
+<li><strong>与圆锥曲线的综合</strong>：直线与圆相切常作为圆锥曲线问题的中间条件，利用几何性质（垂直、长度关系）可简化运算，结合双曲线定义、抛物线定义或其他几何定理（如正弦定理、余弦定理）完成求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断直线与圆是否相切</strong>：</li>
+<li>直接计算圆心到直线的距离 $d$，与半径 $r$ 比较。</li>
+<li>若直线含参数，可联立方程，利用 $\Delta=0$ 建立参数关系。</li>
+<li><strong>利用切线几何性质构造直角三角形</strong>：</li>
+<li>见到切线立即连接圆心与切点，得到垂直关系，便于用勾股定理或三角关系求距离、离心率等。</li>
+<li>与圆锥曲线焦点相关时，常结合定义将切线段长度转化为曲线上点到焦距的关系。</li>
+<li><strong>处理动点引切线问题</strong>：</li>
+<li>设出点坐标，表示切线方程（或用切线长公式、切点弦方程），将相切条件转化为方程（如 $d=r$），再与曲线方程联立求解最值或轨迹。</li>
+<li>注意切线斜率的局限性，需分斜率存在与不存在讨论。</li>
+<li><strong>分类讨论在双曲线中的特殊要求</strong>：</li>
+<li>若直线与双曲线交于两点且涉及焦点、切线，必须明确交点是否在同一支上，因为双曲线定义（$ |PF_1|-|PF_2| =2a$）在单支和跨支时表现形式不同，会导致多解。</li>
+<li><strong>离心率问题常用链</strong>：
+   切线条件 $\rightarrow$ 几何关系（垂直、长度）$\rightarrow$ 含 $a,b,c$ 的方程 $\rightarrow$ 齐次化解出离心率 $e=\frac{c}{a}=\sqrt{1+\frac{b^2}{a^2}}$（焦点在 $x$ 轴）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>漏掉斜率不存在的情况</strong>：设直线方程 $y-y_0=k(x-x_0)$ 利用 $d=r$ 求 $k$ 时，必须单独检验 $x=x_0$（即斜率不存在）是否满足相切，避免漏解。</li>
+<li><strong>距离公式求 $d$ 时符号与分母错误</strong>：尤其圆心坐标含参数、直线方程未化为一般式时，分母忘记开方，分子绝对值漏掉。</li>
+<li><strong>混淆“点在圆上”与“点在圆外”的切线求法</strong>：过圆上一点只能用公式法（或垂直斜率法）；过圆外一点必须设斜率用距离等于半径，且一般有两条切线。</li>
+<li><strong>双曲线两支的陷阱</strong>：看到 $\cos\angle F_1NF_2&gt;0$ 就默认 $N$ 在某支，未分 $M,N$ 位置讨论，导致漏解。</li>
+<li><strong>误用几何性质</strong>：非标准位置的圆，切线垂直性质仍成立，但因圆心不在原点，易将坐标关系写错。</li>
+<li><strong>将直线与曲线的唯一交点等同于直线与圆相切</strong>：当直线过曲线其他部分而与圆仅一个公共点时仍为圆的切线；但在圆锥曲线综合题中，直线与圆锥曲线交于两点，与圆相切是独立条件。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2024新课标Ⅱ-10节选）</h3>
+<p><strong>题目</strong>：抛物线 $C:y^2=4x$ 的准线为 $l$，已知圆 $A:(x-4)^2+y^2=1$，判断 $l$ 与圆 $A$ 是否相切。<br />
+<strong>思路</strong>：直接求出准线方程，计算圆 $A$ 的圆心到准线的距离，与半径比较。<br />
+<strong>步骤</strong>：
+1. 由 $y^2=4x$ 得 $p=2$，准线 $l$ 方程：$x=-1$。
+2. 圆 $A$ 的圆心 $A(4,0)$，半径 $r=1$。
+3. 圆心到 $l$ 的距离 $d = |4 - (-1)| = 5$。
+4. 因为 $d \neq r$，且 $d&gt;r$，所以 $l$ 与圆 $A$ 相离，<strong>不相切</strong>。<br />
+<strong>点评/变式</strong>：本题属于直线与圆位置关系的最基本判定，但巧妙嵌入了抛物线准线。变式：若将圆 $A$ 改为 $(x-a)^2+y^2=a^2$，问 $a$ 为何值时准线与圆相切，则需解 $|a+1|=|a|$，体会参数对切线的调控。</p>
+<h3><strong>题目2</strong>（2022全国理-11）</h3>
+<p><strong>题目</strong>：双曲线 $C$ 的左右焦点为 $F_1,F_2$，以 $C$ 的实轴为直径的圆记为 $D$。过 $F_1$ 作圆 $D$ 的切线与 $C$ 交于 $M,N$ 两点，且 $\cos\angle F_1NF_2=\frac{3}{5}$，求 $C$ 的离心率。<br />
+<strong>思路</strong>：利用切线的垂直性质构建直角三角形，结合双曲线定义、余弦定理或正弦定理得到 $a,b,c$ 的齐次方程，并一定<strong>分 $M,N$ 在双曲线同支还是异支讨论</strong>，最后解出离心率。<br />
+<strong>步骤</strong>（简述核心）：
+1. 设双曲线焦点在 $x$ 轴，圆 $D$ 方程为 $x^2+y^2=a^2$（圆心为原点，半径 $a$）。
+2. 过 $F_1(-c,0)$ 作圆 $D$ 的切线，切点为 $G$，则 $OG\perp F_1G$，且 $OG=a$，$OF_1=c$，得 $F_1G=b$。
+3. 设 $\angle F_1NF_2=\alpha$，由 $\cos\alpha=\frac{3}{5}$ 得 $\sin\alpha=\frac{4}{5}$。
+4. 在 $\triangle F_1NF_2$ 中，利用切线位置得一边长为 $b$ 的几何关系，结合双曲线定义：
+   - <strong>情形一</strong>：$M,N$ 在同一支，可推出 $|NF_2|-|NF_1|=2a$ 等，建立方程得到 $2b=3a$ $\Rightarrow$ $\frac{b}{a}=\frac{3}{2}$，离心率 $e=\sqrt{1+\frac{b^2}{a^2}}=\frac{\sqrt{13}}{2}$。
+   - <strong>情形二</strong>：$M,N$ 分居两支，利用 $|NF_2|+|NF_1|=2c$ 或类似几何量，导出 $a=2b$ $\Rightarrow$ $\frac{b}{a}=\frac{1}{2}$，离心率 $e=\sqrt{1+\frac{b^2}{a^2}}=\frac{\sqrt{5}}{2}$。
+5. 经检验两解均满足题意，故离心率为 $\frac{\sqrt{13}}{2}$ 或 $\frac{\sqrt{5}}{2}$。<br />
+<strong>点评/变式</strong>：此题将圆的切线、双曲线定义与解三角形深度融合，分类讨论是决定能否得满分的关键。变式训练：可将“过焦点作以实轴为直径的圆的切线”换成“过焦点作以虚轴为直径的圆的切线”，其他条件略改，进一步体会几何关系转化与离心率范围的隐含约束。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-10.html">2024-新课标Ⅱ-10</a>（2024 · 中） 考查抛物线与圆的综合应用，涉及准线、切线、三点共线及抛物线定义的转化。</li>
+<li><a href="../../exam/数学/2022-理-11.html">2022-理-11</a>（2022 · 难） 本题考查双曲线离心率求解，通过焦点作圆切线并结合双曲线定义、几何关系，需对M、N位置分类讨论。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1004-直线与圆相切.html">直线与圆相切</a></li>
+</ul>
+</div>
+</body>
+</html>

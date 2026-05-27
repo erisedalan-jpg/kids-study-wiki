@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>椭圆定义</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>椭圆定义</h1><div class="review-mark" data-stem="椭圆定义"></div><div class="meta-card"><span><strong>考点</strong>椭圆定义</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：10</li>
+<li>真题数：2；年份跨度：2011–2019</li>
+<li>出现题位：填空14 解答20</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>椭圆定义</strong>：平面内到两个定点 $F_1,F_2$ 的距离之和等于常数 $2a$（$2a&gt;|F_1F_2|$）的点的轨迹，即 $|PF_1|+|PF_2|=2a$。</li>
+<li><strong>基本量关系</strong>：焦点 $F_1(-c,0),F_2(c,0)$，焦距 $|F_1F_2|=2c$，长轴长 $2a$，短轴长 $2b$，满足 $a^2=b^2+c^2$（$a&gt;b&gt;0$）。</li>
+<li><strong>离心率</strong>：$e=\dfrac{c}{a}\in(0,1)$，$e$ 越接近 $1$ 椭圆越扁，越接近 $0$ 越圆。</li>
+<li><strong>焦点三角形</strong>：以椭圆上一点 $P$ 与两焦点 $F_1,F_2$ 为顶点的 $\triangle PF_1F_2$，周长为 $2a+2c$；常结合余弦定理、面积公式 $S=\dfrac{1}{2}|PF_1||PF_2|\sin\theta$（$\theta=\angle F_1PF_2$）等。</li>
+<li><strong>椭圆上点对焦点张角的最值</strong>：点 $P$ 位于短轴端点时，$\angle F_1PF_2$ 最大，其半角正切 $\tan\dfrac{\theta}{2}=\dfrac{c}{b}$。椭圆上存在点 $P$ 使 $\angle F_1PF_2=\alpha$ 的条件为最大张角 $\ge\alpha$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>看到“焦点+椭圆上一点”优先用定义</strong><br />
+   将 $|PF_1|+|PF_2|=2a$ 作为核心等量关系，结合其他条件转化为方程。如给定焦半径长度或夹角，可通过定义与余弦定理联立。</li>
+<li><strong>求离心率的基本路径</strong><br />
+   由条件建立关于 $a,c$ 的齐次方程（或直接得到 $\dfrac{c}{a}$），往往需配合 $a^2=b^2+c^2$ 消去 $b$。常见条件类型：焦点三角形边角关系、点坐标满足椭圆方程、几何性质（如等边三角形、垂直）等。</li>
+<li><strong>焦点三角形面积与垂直问题的双重转化</strong><br />
+   当 $PF_1\perp PF_2$ 时，有 $|PF_1|^2+|PF_2|^2=|F_1F_2|^2=4c^2$，且面积 $S_{\triangle PF_1F_2}=\dfrac{1}{2}|PF_1||PF_2|$。与定义 $|PF_1|+|PF_2|=2a$ 联立可导出 $(|PF_1|+|PF_2|)^2$ 的展开式，进而解出 $b$ 或建立 $a,b,c$ 关系。</li>
+<li><strong>存在性问题转化为几何边界</strong><br />
+   “是否存在点 $P$ 满足某条件”常归结为椭圆与某曲线（如圆）有交点。例如 $PF_1\perp PF_2$ 的点 $P$ 在以 $F_1F_2$ 为直径的圆 $x^2+y^2=c^2$ 上，存在性等价于该圆与椭圆有公共点，充要条件为 $c\ge b$（即最大张角不小于 $90^\circ$），代入 $b$ 值即可得 $a$ 的范围。</li>
+<li><strong>利用定义速算焦点三角形周长</strong><br />
+   例如直线过焦点交椭圆于 $A,B$，则 $\triangle ABF_2$ 的周长 $=4a$（利用定义将 $AB+AF_2+BF_2$ 拆为 $(AF_1+BF_1)+AF_2+BF_2=2a+2a$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>定义中忽略 $2a&gt;2c$ 的条件</strong>：若 $2a\le 2c$ 则轨迹不存在或为线段，必须验证$a&gt;c$。</li>
+<li><strong>标准方程与焦点位置不匹配</strong>：焦点在 $x$ 轴时方程为 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，其中 $a^2$ 是 $x$ 项分母，需注意 $a&gt;b$；焦点在 $y$ 轴时则相反。</li>
+<li><strong>混淆 $a,b,c$ 关系</strong>：始终牢记 $a^2=b^2+c^2$，最大为 $a$。求出离心率 $e=\dfrac{c}{a}$ 后误写为 $\dfrac{a}{c}$。</li>
+<li><strong>离心率范围反推时忽略 $b$ 的限制</strong>：如由存在 $PF_1\perp PF_2$ 推出 $c\ge b$，得到 $a^2\le 2c^2$ 等，代入 $b$ 的具体值求 $a$ 范围时，忘记 $a&gt;b$ 的基础约束。</li>
+<li><strong>解方程时符号错误</strong>：例如由等边三角形得 $|PF_1|=\sqrt{3}c$，$|PF_2|=c$，求和后 $e=\dfrac{2}{\sqrt{3}+1}=\sqrt{3}-1$，分母有理化易算错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2019年文科第20题（椭圆定义+离心率+存在性）</h3>
+<p><strong>题目</strong><br />
+已知 $F_1,F_2$ 是椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a&gt;b&gt;0)$ 的两个焦点，$P$ 为 $C$ 上一点，$O$ 为坐标原点。<br />
+(1) 若 $\triangle POF_2$ 为等边三角形，求 $C$ 的离心率；<br />
+(2) 若存在点 $P$ 使得 $PF_1\perp PF_2$，且 $\triangle F_1PF_2$ 的面积等于 $16$，求 $b$ 的值和 $a$ 的取值范围。</p>
+<p><strong>思路</strong><br />
+(1) 由等边三角形得 $|OP|=|OF_2|=|PF_2|=c$，利用对称性或坐标求出 $|PF_1|$，代入椭圆定义即可得 $e$。<br />
+(2) 由垂直和面积得关于 $|PF_1|,|PF_2|$ 的方程组，结合定义推出 $b$；存在性转化为椭圆上存在点对焦点张角 $90^\circ$，即最大张角条件 $c\ge b$，解得 $a$ 范围。</p>
+<p><strong>步骤</strong><br />
+(1) 由 $\triangle POF_2$ 等边，得 $|OP|=|PF_2|=c$，$|OF_2|=c$，$\angle POF_2=60^\circ$。又 $F_1(-c,0)$，则 $\angle F_1OP=120^\circ$。在 $\triangle F_1OP$ 中用余弦定理（或直接由 $P$ 坐标）：<br />
+$|PF_1|=\sqrt{c^2+c^2-2c\cdot c\cos120^\circ}=\sqrt{3}c$。<br />
+由椭圆定义 $|PF_1|+|PF_2|=2a$，即 $\sqrt{3}c+c=2a$，则离心率 $e=\dfrac{c}{a}=\dfrac{2}{\sqrt{3}+1}=\sqrt{3}-1$。</p>
+<p>(2) 设 $|PF_1|=m,|PF_2|=n$，则 $\begin{cases}m+n=2a\m^2+n^2=(2c)^2=4c^2\ \frac12 mn=16\end{cases}$。<br />
+由 $(m+n)^2=m^2+n^2+2mn$ 得 $4a^2=4c^2+64$，又 $c^2=a^2-b^2$，代入得 $4a^2=4(a^2-b^2)+64$，解得 $b^2=16$，即 $b=4$。<br />
+存在 $P$ 使 $PF_1\perp PF_2$ 等价于以 $F_1F_2$ 为直径的圆 $x^2+y^2=c^2$ 与椭圆有交点，充要条件为椭圆短轴端点不在圆外，即 $c\ge b$。由 $c^2=a^2-b^2\ge b^2$ 得 $a^2\ge 2b^2=32</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-20.html">2019-文-20</a>（2019 · 中） 本题通过等边三角形和垂直焦点三角形情境，考查椭圆定义、离心率及参数范围的求解。</li>
+<li><a href="../../exam/数学/2011-理-14.html">2011-理-14</a>（2011 · 中） 已知椭圆离心率和焦点三角形周长，利用椭圆定义求标准方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1413-椭圆的定义.html">椭圆定义</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>并联系统可靠性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>并联系统可靠性</h1><div class="review-mark" data-stem="并联系统可靠性"></div><div class="meta-card"><span><strong>考点</strong>并联系统可靠性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：填空15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正态分布</strong>：若 $X \sim N(\mu,\sigma^2)$，则 $P(X &gt; \mu) = \frac12$（对称性）。记忆要点：均值 $\mu$ 是对称中心，也是中位数。</li>
+<li><strong>独立事件</strong>：各元件工作相互独立，则事件同时发生的概率等于各自概率的乘积。</li>
+<li><strong>系统可靠性基本模型</strong>（各元件正常与否相互独立）：</li>
+<li><strong>串联系统</strong>：系统正常当且仅当所有元件正常。可靠度 $R = \prod_{i=1}^{n} p_i$。</li>
+<li><strong>并联系统</strong>：系统正常当且仅当至少一个元件正常。可靠度 $R = 1 - \prod_{i=1}^{n} (1-p_i)$。</li>
+<li><strong>混联系统</strong>：按串并联层级分解，从内层到外层逐步计算。</li>
+<li><strong>适用条件</strong>：上述公式只对独立元件成立，且概率 $p_i$ 为各元件正常工作的概率。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂系统连接方式</strong>：将文字或示意图转化为逻辑关系（串联“且”、并联“或”），用逻辑草图辅助。</li>
+<li><strong>求每个元件的正常概率</strong>：根据分布或数据给出单一元件正常工作的概率 $p_i$。涉及正态分布时，优先利用对称性求 $P(X &gt; \mu) = 0.5$。</li>
+<li><strong>分层计算系统可靠度</strong>：</li>
+<li>若为串联，可靠度 = 各可靠度相乘。</li>
+<li>若为并联，可靠度 = $1 - \prod (1-p_i)$。</li>
+<li>混联结构先算子系统的可靠度，将其视为一个等效元件，再与其余部分组合。</li>
+<li><strong>结合对立事件简化计算</strong>：当正向情况较复杂时，可先求系统失效的概率，再用 $1$ 减去。</li>
+<li><strong>注意独立前提</strong>：确认各个元件是否独立，不独立不可直接套用乘积公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆串联与并联公式</strong>：串联用乘法；并联不是概率相加，而是 $1 - \prod (1-p_i)$。</li>
+<li><strong>正态分布概率求错</strong>：不确定 $P(X &gt; \mu)$ 的值，错误使用非标准正态表；记住过均值点的概率恰为 $0.5$。</li>
+<li><strong>系统逻辑误判</strong>：未正确区分“且”与“或”，尤其是混合结构中子系统与元件的关系。</li>
+<li><strong>忽略独立性条件</strong>：未验证题设中“相互独立”直接套公式，或在没有说明独立性时盲目计算。</li>
+<li><strong>计算粗心</strong>：小数、分数转换错误，例如 $0.5^2=0.25$，$1-0.25=0.75$，最后结果 $\frac38$ 算成其他值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2012 理 15）：三个元件的使用寿命均服从 $N(1000,50^2)$，元件正常与否相互独立。元件 1 或 2 正常工作且元件 3 正常工作，则部件正常工作。求部件使用寿命超过 1000 小时的概率。</p>
+<p><strong>思路</strong>：超出 1000 小时即“寿命 &gt; 1000”。由正态分布的对称性，每个元件超过 1000 小时的概率均为 $p=0.5$。系统结构为元件 1、2 并联，再与元件 3 串联。先求并联部分的可靠度，再与串联部分相乘。</p>
+<p><strong>步骤</strong>：
+1. 设 $A_i$ 表示元件 $i$ 的使用寿命超过 1000 小时，则 $P(A_i) = 0.5$，且 $A_1,A_2,A_3$ 相互独立。
+2. 元件 1 和 2 组成的并联子系统正常（至少一个正常）的概率：<br />
+   $P(A_1 \cup A_2) = 1 - P(\overline{A_1})P(\overline{A_2}) = 1 - (1-0.5)(1-0.5) = 1 - 0.25 = 0.75$。
+3. 整个部件正常需要该并联子系统与元件 3 同时正常（串联）：<br />
+   $P = P(A_1 \cup A_2) \cdot P(A_3) = 0.75 \times 0.5 = 0.375 = \frac38$。</p>
+<p><strong>点评/变式</strong>：此题关键有两步——①正态分布均值对称性得 $p=0.5$；②正确拆分混联结构。变式训练：若元件 1、2 串联后再与元件 3 并联，则可靠度为 $1 - (1 - p^2)(1-p)$；若 $p$ 变为其他值，方法不变，直接代入公式计算即可。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-15.html">2012-理-15</a>（2012 · 难） 求部件正常工作概率，涉及正态分布对称性、元件正常工作的概率及独立事件同时发生的计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1185-并联系统可靠性.html">并联系统可靠性</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>导数</h1><div class="review-mark" data-stem="导数"></div><div class="meta-card"><span><strong>考点</strong>导数</span><span><strong>权重</strong>30</span><span><strong>真题数</strong>12</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：30</li>
+<li>真题数：12；年份跨度：2008–2024</li>
+<li>出现题位：填空16 解答20 解答21 解答22 选择3 选择4 选择7 选择8 选择11</li>
+<li>难度分布：难6 中2 易4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>导数定义与几何意义</strong></li>
+<li>函数 $y=f(x)$ 在 $x=x_0$ 处的导数 $f'(x_0)$ 是曲线在点 $(x_0, f(x_0))$ 处切线的斜率。</li>
+<li>切线方程：$y - f(x_0) = f'(x_0)(x - x_0)$。</li>
+<li>$f'(x_0)$ 存在是可导的前提，$f'(x_0)=0$ 是 $x_0$ 为极值点的 <strong>必要不充分条件</strong>。</li>
+<li><strong>基本初等函数导数公式（必须熟练）</strong></li>
+<li>$(x^n)' = nx^{n-1}$； $(\sin x)' = \cos x$； $(\cos x)' = -\sin x$； $(a^x)' = a^x \ln a$； $(\text{e}^x)' = \text{e}^x$； $(\ln x)' = \frac{1}{x}$。</li>
+<li><strong>导数运算与复合函数求导</strong></li>
+<li>四则运算法则：$[f(x) \pm g(x)]' = f'(x) \pm g'(x)$； $[f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)$； $\left[ \frac{f(x)}{g(x)} \right]' = \frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)} (g(x) \neq 0)$。</li>
+<li>链式法则（复合函数）：$y = f(g(x))$，则 $y' = f'(g(x)) \cdot g'(x)$。</li>
+<li><strong>导数与单调性、极值、最值</strong></li>
+<li><strong>单调性</strong>：在区间 $I$ 上，$f'(x) &gt; 0 \Rightarrow f(x)$ 单调递增；$f'(x) &lt; 0 \Rightarrow f(x)$ 单调递减。（注意等号仅在孤立点成立）</li>
+<li><strong>极值判断</strong>：$x_0$ 两侧 $f'(x)$ 变号是极值点存在的充分条件。左正右负极大，左负右正极小。务必检查定义域。</li>
+<li><strong>闭区间最值</strong>：比较所有极值点与区间端点处的函数值，取最大/最小者。</li>
+<li><strong>三次函数特性</strong></li>
+<li>$f(x)=ax^3+bx^2+cx+d(a \neq 0)$ 的导数为二次函数，根的个数（判别式 $\Delta$）决定极值点个数。</li>
+<li>三次函数的图像关于唯一拐点（即二阶导数为零的点）成中心对称。对称中心横坐标为 $x = -\frac{b}{3a}$。</li>
+<li><strong>函数零点问题</strong></li>
+<li>判断零点个数常结合单调性、极值符号与零点存在定理。若在区间 $[m,n]$ 上单调且 $f(m)f(n)&lt;0$，则区间内有唯一零点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>利用导数研究函数单调性的标准步骤</strong><ul>
+<li>确定定义域（至关重要，尤其是含 $\ln x$、$\frac{1}{x}$ 等）。</li>
+<li>求导并化简（通分、因式分解，目标是能轻易判断符号）。</li>
+<li>解导函数方程，找到临界点，划分区间列表。</li>
+<li>各区间的导数符号 $\rightarrow$ 函数的增减性。（若含参数，需分类讨论）</li>
+</ul>
+</li>
+<li><strong>求函数极值/最值的规范流程</strong><ul>
+<li>求定义域，求导。</li>
+<li>令 $f'(x)=0$，解出所有根（驻点）及不可导点。</li>
+<li>列表（或画导函数符号图），确认极值点和极值。</li>
+<li>闭区间最值：将驻点、不可导点、端点值代入原函数比较。</li>
+</ul>
+</li>
+<li><strong>导数证明不等式的核心——构造函数</strong><ul>
+<li><strong>移项构造</strong>：欲证 $g(x) &gt; h(x)$，构造 $F(x) = g(x) - h(x)$，即证 $F(x)_{\text{min}} &gt; 0$。</li>
+<li><strong>双函数构造</strong>：若无法直接求最值，可构造 $F(x)、G(x)$ 分别研究单调性并借助中间量放缩。</li>
+<li><strong>隐零点代换</strong>：当导函数零点无法直接求解时，设隐零点 $x_0$，利用导函数方程代换掉超越部分，化简原函数。此为证明复杂不等式或求最值的核心技巧。</li>
+</ul>
+</li>
+<li><strong>求解参数范围的通法</strong><ul>
+<li><strong>变量分离</strong>：将参数 $a$ 分离到不等式一边，如 $a \ge g(x)$，则需求 $g(x)_{\max}$。此法优先尝试，但要注意保号与极限。</li>
+<li><strong>分类讨论</strong>：当不易分离参数时，直接对含参函数求导，根据极值点、定义域等划分参数区间，逐个讨论单调性，确保满足题意（如 $f(x) \ge 0$ 恒成立）。</li>
+<li><strong>轨迹与几何意义</strong>：将方程根问题转化为两函数图像交点问题（2022理16），通过切线斜率等几何意义确定参数边界，本质是导数几何意义的灵活运用。</li>
+</ul>
+</li>
+<li><strong>切线与公切线问题的两步走</strong><ul>
+<li><strong>单一切线</strong>：先求切点（或设切点），再求斜率，最后写出方程。切点是解题核心。</li>
+<li><strong>公切线</strong>：设出两条曲线的各自切点 $(x_1,f(x_1))$、$(x_2,g(x_2))$，利用“斜率相等”且“截距相等”（或切线重合）建立方程组求解。注意区分“切点相同”和“切线相同”。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆极值的充要条件</strong>：$f'(x_0)=0$ 是 $x_0$ 为极值点的必要不充分条件！必须检验 $x_0$ 两侧导数是否变号（如2024真题选项B的反例，$f'(0)=0$ 但两侧同号，非极值点）。</li>
+<li><strong>忽视函数的定义域</strong>：研究对数、分母含变量等类型的函数时，第一步必须写出定义域。讨论单调性、区间必须基于定义域（如2019真题需在 $(0,1)$ 和 $(1,\infty)$ 上分别讨论）。</li>
+<li><strong>含参讨论漏解、乱序</strong>：参数导致导函数零点大小不确定时，必须按逻辑顺序分类（如 $a&lt;0, a=0, 0&lt;a&lt;1, a&gt;1$），不重不漏。画函数图像时务必区分 $0&lt;a&lt;1$ 与 $a&gt;1$ 的差异。</li>
+<li><strong>运算失误</strong>：</li>
+<li>复合函数 $(a^x)'$ 误记为 $x a^{x-1}$，正确的是 $a^x \ln a$。</li>
+<li>常见分式、根式求导后符号遗忘。三角函数求导正负号混淆。</li>
+<li><strong>误用零点存在定理</strong>：定理要求函数在闭区间内“连续”且端点值“异号”。若函数不连续（有渐近线），即使两端点异号也不能直接断言有零点。</li>
+<li><strong>“切线相同”不等于“切点相同”</strong>：一条直线可以是两条曲线的公切线，但切点可能在不同位置（2019真题即曲线 $y=\ln x$ 与 $y=e^x$ 在不同点的同一直线公切线）。</li>
+<li><strong>证明不等式时忽视取等条件</strong>：若放缩链条中某步等号无法取得，即便最终不等式不等号正确，从逻辑上也可能扣分。必须检查每一步等号成立条件是否能同时满足。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1（2024-新课标Ⅱ-11）</h3>
+<ul>
+<li><strong>题目</strong>：讨论函数 $f(x)=2x^3-3ax^2+1$ 的零点、极值点与对称性。</li>
+<li><strong>思路</strong>：这是典型的三次函数问题。通过求导得到导函数的零点（即原函数的极值点），根据参数 $a$ 的变化讨论极值点符号，进而判定零点个数；通过二阶导数寻找对称中心。</li>
+<li><strong>步骤</strong>：
+  1.</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-11.html">2024-新课标Ⅱ-11</a>（2024 · 难） f(x)=2x³-3ax²+1，综合判断关于零点个数、极值点、对称轴和对称中心的四个命题真假。</li>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-22.html">2023-新课标Ⅱ-22</a>（2023 · 难） 本题主要考查利用导数证明不等式以及已知函数的极值点求参数取值范围，涉及导数研究单调性和分类讨论。</li>
+<li><a href="../../exam/数学/2022-文-11.html">2022-文-11</a>（2022 · 中） 利用导数求函数在闭区间上的单调性与最值</li>
+<li><a href="../../exam/数学/2022-理-16.html">2022-理-16</a>（2022 · 难） f(x)=2a^x-ex²（a&gt;0，a≠1）的极小值点x₁小于极大值点x₂，利用导数求极值点条件得参数a的取值范围。</li>
+<li><a href="../../exam/数学/2020-理-21.html">2020-理-21</a>（2020 · 难） f(x)=sin²xsin2x，讨论(0,π)单调性，证明|f(x)|≤3√3/8及sin²xsin²2x…sin²(2ⁿx)≤(3/4)ⁿ。</li>
+<li><a href="../../exam/数学/2019-理-20.html">2019-理-20</a>（2019 · 难） 已知f(x)=lnx-(x+1)/(x-1)，讨论单调性并证明有且仅有两个零点，再证明零点处lnx曲线切线也是e^x的切线。</li>
+<li><a href="../../exam/数学/2014-文-03.html">2014-文-03</a>（2014 · 易） 函数在某点导数为零与该点为极值点的逻辑关系判断。</li>
+<li><a href="../../exam/数学/2014-理-08.html">2014-理-08</a>（2014 · 易） 本题考查利用导数求曲线切线方程，并通过已知切线斜率解出参数值。</li>
+<li><a href="../../exam/数学/2010-理-21.html">2010-理-21</a>（2010 · 中） 利用导数研究含参函数的单调区间，并求解恒成立条件下参数的取值范围。</li>
+<li><a href="../../exam/数学/2009-理-04.html">2009-理-04</a>（2009 · 易） 利用导数求函数在点(1,1)处的切线斜率与方程</li>
+<li><a href="../../exam/数学/2008-文-07.html">2008-文-07</a>（2008 · 易） 曲线y=ax²在点(1,a)处切线与直线2x-y-6=0平行，利用导数等于斜率求参数a。</li>
+<li><a href="../../exam/数学/2008-文-21.html">2008-文-21</a>（2008 · 难） f(x)=ax³-3x²，由极值点条件求a，再利用导数研究g(x)=f(x)+f'(x)在[0,2]最大值点为x=0时a的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/425-反函数导数.html">导数</a></li>
+</ul>
+</div>
+</body>
+</html>

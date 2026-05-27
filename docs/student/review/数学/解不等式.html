@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>解不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>解不等式</h1><div class="review-mark" data-stem="解不等式"></div><div class="meta-card"><span><strong>考点</strong>解不等式</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>偶函数的性质</strong>：若 $f(x)$ 是偶函数，则对定义域内任意 $x$，有 $f(-x)=f(x)$，且 $f(x)=f(|x|)$。利用后者可将任意实数自变量转化为非负自变量，直接使用 $x\ge0$ 时的已知解析式。</li>
+<li><strong>指数函数的单调性</strong>：当底数 $a&gt;1$ 时，$a^{u}&gt;a^{v} \iff u&gt;v$；当 $0&lt;a&lt;1$ 时，不等号反向。本题 $2&gt;1$，故可去掉底数保持不等号方向。</li>
+<li><strong>绝对值不等式</strong>（$a&gt;0$）：</li>
+<li>$|x|&gt;a \iff x&gt;a \ \text{或}\ x&lt;-a$；</li>
+<li>$|x|&lt;a \iff -a&lt;x&lt;a$。</li>
+<li><strong>复合函数不等式的求解原则</strong>：利用函数性质化简 $f(g(x))$，转化为初等不等式，最后用集合或区间表示解集。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>等价转化函数形式</strong>：若 $f(x)$ 为偶函数，将 $f(\text{表达式})$ 改写为 $f(|\text{表达式}|)$，把变量限制在非负范围，直接代入已知解析式。  </li>
+<li><strong>整理不等式结构</strong>：代入后得到形如 $a^{|u|}&gt;c$ 或 $\log_a|u|&gt;c$ 等标准形式，将常数写成同底数幂或同底对数，使不等式两侧底数相同。  </li>
+<li><strong>去外层函数</strong>：根据底数的单调性去掉指数/对数符号，得到仅含绝对值（或简单代数式）的不等式。  </li>
+<li><strong>解核心代数不等式</strong>：常用绝对值不等式口诀“大于取两边，小于取中间”，解得自变量的基本范围。  </li>
+<li><strong>规范写出解集</strong>：用集合 ${x\mid x&gt;a\ \text{或}\ x&lt;b}$ 或区间表示，注意边界点是否取到。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用偶函数性质</strong>：直接将 $x-2$ 代入 $x\ge0$ 时的解析式，忽略 $x-2$ 可能为负，而忘记使用 $f(x)=f(|x|)$ 进行统一转化，导致分类讨论或错误。</li>
+<li><strong>绝对值不等式方向混淆</strong>：$|x|&gt;a$ 易漏掉 $x&lt;-a$ 部分；$|x|<a$ 误写成 $x>a$ 或 $x&lt;-a$。</li>
+<li><strong>指数函数单调性忽略底数</strong>：见到 $a^u&gt;a^v$ 就直接写 $u&gt;v$，未先确认 $a&gt;1$ 还是 $0&lt;a&lt;1$。本题虽 $2&gt;1$ 成立，但须养成先看底数的习惯。</li>
+<li><strong>解集表示不规范</strong>：如写成 $x&lt;0$ 或 $x&gt;4$ 而不并集，或漏掉写成区间时的正确逻辑联结词，最终导致选项误判。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2010·全国卷·理科第8题</h3>
+<p><strong>题目</strong>：设偶函数 $f(x)$ 满足 $f(x)=2^x-4\ (x\ge0)$，则 ${x\mid f(x-2)&gt;0}=$ （ ）<br />
+A. ${x\mid x&lt;-2\ \text{或}\ x&gt;4}$ <br />
+B. ${x\mid x&lt;0\ \text{或}\ x&gt;4}$ <br />
+C. ${x\mid x&lt;0\ \text{或}\ x&gt;6}$ <br />
+D. ${x\mid x&lt;-2\ \text{或}\ x&gt;2}$</p>
+<p><strong>思路</strong><br />
+利用偶函数性质 $f(x)=f(|x|)$ 将 $f(x-2)$ 转化为 $2^{|x-2|}-4$，再解指数不等式和绝对值不等式。</p>
+<p><strong>步骤</strong><br />
+1. 由 $f(x)$ 是偶函数且 $x\ge0$ 时 $f(x)=2^x-4$，得对任意实数 $x$ 有 $f(x)=f(|x|)=2^{|x|}-4$。<br />
+2. 于是 $f(x-2)=f(|x-2|)=2^{|x-2|}-4$。<br />
+3. 不等式 $f(x-2)&gt;0$ 即 $2^{|x-2|}-4&gt;0\Rightarrow 2^{|x-2|}&gt;4=2^2$。<br />
+4. 底数 $2&gt;1$，指数函数递增，故 $|x-2|&gt;2$。<br />
+5. 解绝对值不等式：$|x-2|&gt;2 \iff x-2&gt;2 \ \text{或}\ x-2&lt;-2 \iff x&gt;4 \ \text{或}\ x&lt;0$。<br />
+6. 解集为 ${x\mid x&lt;0\ \text{或}\ x&gt;4}$，对应选项 B。</p>
+<p><strong>点评/变式</strong><br />
+- 核心技巧是利用偶函数性质将变量放入绝对值，从而直接套用 $x\ge0$ 的解析式，避免讨论 $x-2$ 的符号，大幅简化运算。<br />
+- <strong>变式</strong>：若 $f(x)$ 为奇函数且 $x\ge0$ 时 $f(x)=2^x-4$，解 $f(x-2)&gt;0$，则需先利用奇函数性质求出 $x&lt;0$ 时的解析式，再分情况解不等式，难度增加。掌握 $f(|x|)$ 转化是处理偶函数相关不等式的高效武器。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-08.html">2010-理-08</a>（2010 · 中） 本题利用偶函数性质将分段函数转化为绝对值函数，并求解绝对值不等式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1108-解不等式.html">解不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

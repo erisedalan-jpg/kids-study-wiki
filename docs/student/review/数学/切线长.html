@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切线长</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>切线长</h1><div class="review-mark" data-stem="切线长"></div><div class="meta-card"><span><strong>考点</strong>切线长</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>切线长定义</strong>：从圆外一点 $P$ 引圆的切线，设切点为 $Q$，圆心为 $C$，圆半径为 $r$，则切线长 $|PQ| = \sqrt{|PC|^2 - r^2}$。其本质源于勾股定理（半径垂直于切线）。</li>
+<li><strong>抛物线定义</strong>：平面内到定点（焦点）和定直线（准线）距离相等的点的轨迹。对于抛物线 $x^2 = 2py$（或 $y^2 = 2px$），必须精准识别焦点坐标与准线方程。本例 $y = \frac{1}{4}x^2$ 即 $x^2 = 4y$，焦点 $(0,1)$，准线 $y = -1$。</li>
+<li><strong>距离公式</strong>：<ul>
+<li>两点间距离：$|AB| = \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}$</li>
+<li>点到直线距离：点 $(x_0, y_0)$ 到直线 $Ax + By + C = 0$ 距离 $d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$。核心用于判断直线与圆的位置关系：$d &gt; r$ 相离，$d = r$ 相切，$d &lt; r$ 相交。</li>
+</ul>
+</li>
+<li><strong>线段和的最值转化</strong>：动点到两定点的距离和问题，常利用抛物线定义将动点到焦点的距离与到准线的距离进行等量代换，化为共线问题求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准化方程</strong>：将给定的圆锥曲线方程化为标准形式，明确写出焦点坐标与准线方程。这是应用定义解题的前提。</li>
+<li><strong>坐标设定</strong>：根据动点所在曲线，设出动点坐标（如抛物线常设 $(x_0, y_0)$ 或用参数方程），将几何条件代数化。</li>
+<li><strong>切线长计算或转化</strong>：<ul>
+<li>涉及切线长，直接套用公式 $|PQ| = \sqrt{|PC|^2 - r^2}$，避免单独求切点坐标的复杂过程。</li>
+<li>证明或判断与圆相切时，转化为计算圆心到直线的距离 $d$，并与半径 $r$ 比较。</li>
+</ul>
+</li>
+<li><strong>最值模型构建</strong>：<ul>
+<li>识别“距离和”或“距离差”结构。</li>
+<li>若涉及准线，利用圆锥曲线第二定义（抛物线即第一定义）进行“距离转移”，将动点到焦点的距离等价转化为到准线的距离，或将到准线距离转化为到焦点距离，使动线段共线。</li>
+<li>利用“两点之间线段最短”或“三角形两边之和大于第三边”求解最值。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>方程形式混淆</strong>：将 $y = \frac{1}{4}x^2$ 误认为 $y^2 = 4x$ 形式，导致焦点和准线错判（本例中 $p=2$，焦点在 $y$ 轴）。</li>
+<li><strong>切线长公式误用</strong>：计算切线长时，忘记“先求平方差再开方”，或错误地直接用点圆心距加/减半径。</li>
+<li><strong>定义转化方向错误</strong>：在求线段和最小值时，无法判断应该将焦点距离转化为准线距离，还是将准线距离转化为焦点距离。应遵循“动点转移后，两个定点（或定线）位于转化后线段的异侧”的原则，以实现三点共线。</li>
+<li><strong>忽略动点范围</strong>：抛物线上点的坐标具有任意性，但在求最值时，需注意变量是否受限制，以及等号成立条件能否取到。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024-新课标Ⅱ-10）：抛物线 $C: y = \frac{1}{4}x^2$ 的准线为 $l$，$P$ 为 $C$ 上的动点，过 $P$ 作圆 $A: x^2 + (y-4)^2 = 1$ 的一条切线，$Q$ 为切点，过 $P$ 作 $l$ 的垂线，垂足为 $B$，判断选项。</p>
+<p><strong>思路</strong>：先将抛物线方程标准化为 $x^2 = 4y$，确定焦点 $F(0,1)$、准线 $l: y = -1$ 及圆心 $A(0,4)$。利用切线长公式求 $|PQ|$，利用抛物线定义转化 $|PB|$，最后通过几何关系处理距离和的最值及位置关系判断。</p>
+<p><strong>步骤</strong>：
+1. <strong>标准化与要素识别</strong>：由 $y = \frac{1}{4}x^2$ 得 $x^2 = 4y$，则 $2p=4$，焦点 $F(0,1)$，准线 $l: y = -1$。圆 $A$ 圆心为 $C(0,4)$，半径 $r=1$。
+2. <strong>准线与圆的位置关系</strong>：圆心 $C(0,4)$ 到准线 $l: y=-1$ 的距离 $d = |4 - (-1)| = 5$。因为 $d &gt; r$，故 $l$ 与圆相离（判断相切选项为错误）。
+3. <strong>切线长计算</strong>：设 $P(x_0, y_0)$，在抛物线上故 $x_0^2 = 4y_0$。圆心 $C(0,4)$。
+   $|PQ| = \sqrt{|PC|^2 - r^2} = \sqrt{x_0^2 + (y_0-4)^2 - 1}$。
+4. <strong>距离和的最值分析</strong>：$B$ 为 $P$ 到准线 $l$ 的垂足，故 $|PB| = y_0 - (-1) = y_0 + 1$。由抛物线定义，$|PF| = |PB| = y_0 + 1$。
+5. <strong>线段和转化</strong>：$|PQ| + |PB| = \sqrt{x_0^2 + (y_0-4)^2 - 1} + (y_0+1)$。由于 $x_0^2 = 4y_0$，代入得 $|PQ| + |PB| = \sqrt{4y_0 + y_0^2 - 8y_0 + 16 - 1} + (y_0+1) = \sqrt{y_0^2 - 4y_0 + 15} + (y_0+1) = \sqrt{(y_0-2)^2 + 11} + (y_0+1)$。此式随 $y_0$ 变化无固定最小值，但可从几何角度转化为 $|PQ| + |PF| \ge |AF| = 3$，当 $P, Q, A$ 共线且 $P$ 在线段 $AF$ 上时取等（需验证等号成立条件是否满足选项描述，若选项描述为 $\sqrt{5}$ 等固定值，需具体计算）。</p>
+<p><strong>点评/变式</strong>：
+- 核心在于利用抛物线定义将到准线的距离 $|PB|$ 等价转化为到焦点 $F$ 的距离 $|PF|$，这是处理抛物线中距离之和最值的标准套路。
+- 切线长公式的运用避免了求具体切点 $Q$ 坐标的繁琐，直接建立了 $|PQ|$ 与点 $P$ 坐标的关系，简化了运算。
+- 变式训练可思考：若圆 $A$ 圆心在焦点处，求 $|PQ| + |PB|$ 的最小值。此时 $|PQ| + |PF|$ 的最值需结合三角形三边关系处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-10.html">2024-新课标Ⅱ-10</a>（2024 · 中） 考查抛物线与圆的综合应用，涉及准线、切线、三点共线及抛物线定义的转化。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">切线长</a></li>
+</ul>
+</div>
+</body>
+</html>

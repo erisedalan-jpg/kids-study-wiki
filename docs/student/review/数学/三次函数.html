@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三次函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三次函数</h1><div class="review-mark" data-stem="三次函数"></div><div class="meta-card"><span><strong>考点</strong>三次函数</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2021–2021</li>
+<li>出现题位：选择10 选择12</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三次函数标准形式</strong>：$f(x)=ax^3+bx^2+cx+d\ (a \neq 0)$。定义域 $\mathbb{R}$，整体无绝对极值，但可存在两个局部极值点（一个极大、一个极小）或无极值点。</li>
+<li><strong>导数与极值条件</strong>：$f'(x)=3ax^2+2bx+c$。判别式 $\Delta = 4(b^2-3ac)$。</li>
+<li>$\Delta &gt; 0$：$f'(x)=0$ 有两个不等实根 $x_1&lt;x_2$，$f(x)$ 必有一个极大值点和一个极小值点。</li>
+<li>$\Delta \le 0$：$f(x)$ 单调，无极值点。</li>
+<li>在 $\Delta&gt;0$ 时，若 $a&gt;0$，则较小根为极大值点，较大根为极小值点；若 $a&lt;0$，则较小根为极小值点，较大根为极大值点。</li>
+<li><strong>含重因式的三次函数极值特征</strong>：$f(x)=a(x-\alpha)^2(x-\beta)$，导数 $f'(x)=a(x-\alpha)[3x-(\alpha+2\beta)]$。驻点：$x_1=\alpha$，$x_2=\frac{\alpha+2\beta}{3}$。因 $(x-\alpha)^2$ 的存在，$x=\alpha$ 处函数有水平切线，但未必是极值点，需要结合 $a$ 的正负与两个驻点的大小关系判断。</li>
+<li><strong>分类讨论依据</strong>：极大值点落在哪个驻点，取决于 $a$ 的符号和 $\alpha,\beta$ 的大小关系。最终多数情形可归结为不等式 $ab &gt; a^2$（当 $\alpha$ 用 $a$，$\beta$ 用 $b$ 表示时）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出导数并因式分解</strong>：对 $f(x)=a(x-a)^2(x-b)$ 形式的函数，求导后提取公因式，写成 $f'(x)=a(x-a)(3x-a-2b)$。</li>
+<li><strong>求出所有驻点</strong>：令 $f'(x)=0$，得到 $x_1=a$，$x_2=\frac{a+2b}{3}$。注意区分它们是否相等（相等时无极值，题设一般会排除）。</li>
+<li><strong>确定极大值点对应的驻点</strong>：</li>
+<li>若 $a&gt;0$，$f(x)$ 整体趋势为“增—减—增”，极大值点在较小的驻点处取得；</li>
+<li>若 $a&lt;0$，$f(x)$ 整体趋势为“减—增—减”，极大值点在较大的驻点处取得。</li>
+<li><strong>建立不等式并解出参数关系</strong>：</li>
+<li>当 $a&gt;0$ 时，$a &lt; \frac{a+2b}{3}$ $\Rightarrow$ $a&lt;b$，两边同乘 $a$（正数）得 $a^2 &lt; ab$；</li>
+<li>当 $a&lt;0$ 时，$a &gt; \frac{a+2b}{3}$ $\Rightarrow$ $a&gt;b$，两边同乘 $a$（负数）不等号反向，仍得 $a^2 &lt; ab$。
+   综合得 $ab &gt; a^2$。</li>
+<li><strong>检验端点与特殊情形</strong>：如 $a=b$ 时函数退化为 $a(x-a)^3$，无极值点，直接排除。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记讨论最高次项系数 $a$ 的正负</strong>：极值点的“大小根对应极大/极小”规则随 $a$ 的符号而反转，只记一种情况是常见失分点。</li>
+<li><strong>不分驻点直接代值</strong>：看到 $(x-a)^2$ 就认为 $x=a$ 一定是极值点，实际上二次因式可能导致该点为拐点（不改变单调性）。</li>
+<li><strong>不等式乘参数时未考虑符号</strong>：由 $a&lt;b$ 到 $a^2&lt;ab$ 需要乘以 $a$，$a$ 的正负决定不等号是否改变。此题无论 $a$ 正负最终得到相同形式，但过程必须明确乘的是正还是负，否则会直接错选相反选项。</li>
+<li><strong>混淆 $a$ 的双重身份</strong>：题干中 $a$ 既是区间参数又是极值点横坐标，书写时易混淆。建议审题时明确哪个是函数参数，哪个是自变量。</li>
+<li><strong>忽略 $a \neq 0$ 的隐含条件</strong>：若漏看 $a \neq 0$，会多出 $a=0$ 时函数退化为 $0$ 的错误讨论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021全国卷文12/理10）：设 $a \neq 0$，若 $x=a$ 为函数 $f(x)=a(x-a)^2(x-b)$ 的极大值点，则<br />
+A. $a<b$　B. $a>b$　C. $ab<a^2$　D. $ab>a^2$</p>
+<p><strong>思路</strong><br />
+$f(x)$ 含有参数 $a$（非零）和 $b$，$x=a$ 是极大值点。先求导并分解，根据 $a$ 的正负判断极大值对应的驻点位置，通过不等式推出 $a,b$ 满足的条件，再与选项比对。</p>
+<p><strong>步骤</strong><br />
+1. 求导并分解：<br />
+   $f'(x)=a[(x-a)^2]'(x-b)+a(x-a)^2$<br />
+   化简得 $f'(x)=a(x-a)[2(x-b)+(x-a)]=a(x-a)(3x-a-2b)$。<br />
+   驻点：$x_1=a$，$x_2=\dfrac{a+2b}{3}$。</p>
+<ol>
+<li>
+<p>排除 $a=b$ 情形：若 $a=b$，则 $f(x)=a(x-a)^3$，$f'(x)=3a(x-a)^2 \ge 0$ 或 $\le 0$（恒非负或非正），无极值，与题设矛盾。故 $a \neq b$，两驻点不等。</p>
+</li>
+<li>
+<p>分类讨论 $a$ 的正负：</p>
+</li>
+<li><strong>当 $a&gt;0$</strong>：原函数先增后减再增，极大值点对应较小的驻点。<br />
+     由题意 $x=a$ 是极大值点，故 $a &lt; \dfrac{a+2b}{3}$，解得 $a&lt;b$。两边同乘正数 $a$，得 $a^2 &lt; ab$，即 $ab &gt; a^2$。</li>
+<li>
+<p><strong>当 $a&lt;0$</strong>：原函数先减后增再减，极大值点对应较大的驻点。<br />
+     由题意 $a &gt; \dfrac{a+2b}{3}$，解得 $a&gt;b$。两边同乘负数 $a$，不等号反向，得 $a^2 &lt; ab$，同样推出 $ab &gt; a^2$。</p>
+</li>
+<li>
+<p>综合得恒有 $ab &gt; a^2$，对应选项 <strong>D</strong>。</p>
+</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+本题核心是三次函数极值点与参数关系的逆向考查。变式训练：可将条件改为“$x=a$ 为极小值点”，则结论变为 $ab &lt; a^2$（选项 C）。还可将函数改为 $f(x)=(x-a)^2(x-b)$（无 $a$ 系数），极大值点的条件变为 $a&lt;\frac{a+2b}{3}$，直接得到 $a&lt;b$，但不再有系数乘法的符号陷阱。务必熟记“三次函数 $a$ 的符号决定大小根谁为极大”的结论，并严格分类讨论乘因子时的符号变化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-12.html">2021-文-12</a>（2021 · 中） 该题考查含参三次函数的极值点条件，通过求导与分类讨论确定参数关系。</li>
+<li><a href="../../exam/数学/2021-理-10.html">2021-理-10</a>（2021 · 中） 三次函数的极值点与参数关系，通过分类讨论和图象分析得到ab&gt;a²</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/600-三次函数.html">三次函数</a></li>
+</ul>
+</div>
+</body>
+</html>

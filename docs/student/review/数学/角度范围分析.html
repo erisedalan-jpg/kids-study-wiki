@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角度范围分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>角度范围分析</h1><div class="review-mark" data-stem="角度范围分析"></div><div class="meta-card"><span><strong>考点</strong>角度范围分析</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：填空13</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两角和的正切公式</strong><br />
+  $$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}\quad\left(\alpha,\beta,\alpha+\beta\neq k\pi+\frac{\pi}{2}\right)$$</li>
+<li><strong>同角三角函数基本关系</strong><br />
+  已知 $\tan\theta$ 求 $\sin\theta$：构造直角三角形，由 $\tan\theta=\dfrac{\text{对边}}{\text{邻边}}$ 得斜边，$\sin\theta=\pm\dfrac{\text{对边}}{\text{斜边}}$，符号由 $\theta$ 所在象限决定。</li>
+<li><strong>象限角范围与符号</strong>  </li>
+<li>第一象限角 $\alpha$：$2k\pi&lt;\alpha&lt;2k\pi+\dfrac{\pi}{2}$，$\sin\alpha&gt;0$，$\cos\alpha&gt;0$，$\tan\alpha&gt;0$。  </li>
+<li>第三象限角 $\beta$：$2k\pi+\pi&lt;\beta&lt;2k\pi+\dfrac{3\pi}{2}$，$\sin\beta&lt;0$，$\cos\beta&lt;0$，$\tan\beta&gt;0$。  </li>
+<li>由「$\alpha$ 第一象限，$\beta$ 第三象限」可叠加得 $\pi+2k\pi&lt;\alpha+\beta&lt;2\pi+2k\pi$，即 $\alpha+\beta$ 落在第三或第四象限。  </li>
+<li>进一步锁定象限：若 $\tan(\alpha+\beta)&gt;0$，则 $\alpha+\beta$ 在第三象限；若 $\tan(\alpha+\beta)&lt;0$，则 $\alpha+\beta$ 在第四象限。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>正切和角先行</strong><br />
+   对于已知 $\tan\alpha\pm\tan\beta$ 与 $\tan\alpha\tan\beta$ 的求值问题，直接代入两角和正切公式，先求出 $\tan(\alpha+\beta)$。</li>
+<li><strong>锁定和角的准确范围</strong>  </li>
+<li>第一步：根据单角象限写出角的基本区间，叠加得到和角的初始范围（往往横跨两个象限）。  </li>
+<li>第二步：利用已求得的 $\tan(\alpha+\beta)$ 的符号，将和角范围缩小到唯一确定的象限（或终边位置）。</li>
+<li><strong>同角关系转化</strong><br />
+   已知 $\tan\theta$ 求 $\sin\theta$（或 $\cos\theta$）时，构造直角三角形求出绝对值，再结合第二步锁定的象限赋予正确的符号。</li>
+<li><strong>周期性勿忘</strong><br />
+   若题目未限定角的范围仅为 $0$ 到 $2\pi$，结果一般与周期 $2\pi$ 的倍数无关，但符号和象限分析时必须带上 $+2k\pi$ 以保证严谨，最终只影响周期不影响符号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略象限叠加导致范围判断过粗</strong><br />
+  直接认为「第一象限角加第三象限角＝第四象限角」或「可能多种情况」而放弃二次锁定，导致 $\sin(\alpha+\beta)$ 符号出错。务必先写出区间表达式再结合函数值符号收缩。</li>
+<li><strong>直接用平方关系开方忘判号</strong><br />
+  由 $\tan\theta$ 求 $\sin\theta$ 时，不经象限分析就直接写 $\sin\theta=\frac{\tan\theta}{\sqrt{1+\tan^2\theta}}$ 并取正或随意取正负，极易丢分。必须养成「先定象限，后定符号」的习惯。</li>
+<li><strong>对 $\tan\alpha,\tan\beta$ 的符号疏忽</strong><br />
+  第三象限角 $\tan\beta&gt;0$，若误记成负值，则会推导出矛盾，影响后续和角范围的判断。熟记各象限三角函数的符号口诀（一全正，二正弦，三正切，四余弦）。</li>
+<li><strong>公式条件遗漏</strong><br />
+  使用 $\tan(\alpha+\beta)$ 公式时，忽略分母 $1-\tan\alpha\tan\beta=0$ 的情形（此时和角正切不存在）。本题虽未出现，但给出乘积为 $\sqrt{2}+1\neq 1$，说明分母不为零，公式可直接使用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2024·新课标Ⅱ·13）</h3>
+<p><strong>题目</strong><br />
+已知 $\alpha$ 为第一象限角，$\beta$ 为第三象限角，$\tan\alpha+\tan\beta=4$，$\tan\alpha\tan\beta=\sqrt{2}+1$，求 $\sin(\alpha+\beta)$。</p>
+<p><strong>思路</strong><br />
+两角和正切公式可直接求得 $\tan(\alpha+\beta)$；再由 $\alpha,\beta$ 的象限写出 $\alpha+\beta$ 的基本范围，用 $\tan(\alpha+\beta)$ 的符号将范围精确锁定到唯一个象限；最后在直角三角形中求 $|\sin(\alpha+\beta)|$，赋予正确符号即得。</p>
+<p><strong>步骤</strong><br />
+1. 求 $\tan(\alpha+\beta)$<br />
+   $$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=\frac{4}{1-(\sqrt{2}+1)}=\frac{4}{-\sqrt{2}}=-2\sqrt{2}.$$
+2. 锁定 $\alpha+\beta$ 的象限<br />
+   $\alpha$ 在第一象限：$2k\pi&lt;\alpha&lt;2k\pi+\dfrac{\pi}{2}$；<br />
+   $\beta$ 在第三象限：$2m\pi+\pi&lt;\beta&lt;2m\pi+\dfrac{3\pi}{2}$。<br />
+   相加得：$2(k+m)\pi+\pi&lt;\alpha+\beta&lt;2(k+m)\pi+2\pi$，即终边落在第三或第四象限。<br />
+   $\tan(\alpha+\beta)=-2\sqrt{2}&lt;0$，正切为负的象限是第二、四象限。交集为第四象限。<br />
+   故 $\alpha+\beta$ 是第四象限角，$\sin(\alpha+\beta)&lt;0$。
+3. 求 $\sin(\alpha+\beta)$<br />
+   由 $\tan(\alpha+\beta)=-2\sqrt{2}$，构造直角三角形：对边 $2\sqrt{2}$，邻边 $1$，斜边 $\sqrt{(2\sqrt{2})^2+1^2}=3$。<br />
+   所以 $|\sin(\alpha+\beta)|=\dfrac{2\sqrt{2}}{3}$。结合符号得<br />
+   $$\sin(\alpha+\beta)=-\frac{2\sqrt{2}}{3}.$$</p>
+<p><strong>点评/变式</strong><br />
+本题核心陷阱在于 $\alpha+\beta$ 的范围不能仅凭「一象限+三象限」直接认定为某单一象限，必须用正切的符号二次确界。变式训练：若条件改为 $\tan\alpha+\tan\beta=4$，$\tan\alpha\tan\beta=1-\sqrt{2}$，则 $\tan(\alpha+\beta)=2\sqrt{2}&gt;0$，此时 $\alpha+\beta$ 落在第三象限，$\sin(\alpha+\beta)=-\frac{2\sqrt{2}}{3}$？不对，需要重新算：若 $\tan(\alpha+\beta)&gt;0$，交集为第三象限，正弦仍为负，此时由正切求正弦绝对值相同，符号依然负值。可见无论正切正负，只要锁定第三或第四，正弦均为负值。但符号必须每次都经过严格推导，不可凭直觉。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-13.html">2024-新课标Ⅱ-13</a>（2024 · 中） 本题主要考查两角和的正切公式应用、角的范围确定以及同角三角函数关系求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1106-角度范围分析.html">角度范围分析</a></li>
+</ul>
+</div>
+</body>
+</html>

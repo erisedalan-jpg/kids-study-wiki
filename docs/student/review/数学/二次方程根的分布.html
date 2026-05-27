@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二次方程根的分布</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二次方程根的分布</h1><div class="review-mark" data-stem="二次方程根的分布"></div><div class="meta-card"><span><strong>考点</strong>二次方程根的分布</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>研究一元二次方程 $ax^2+bx+c=0(a \neq 0)$ 的根在特定区间内的分布情况，核心依据是<strong>判别式、对称轴、端点函数值</strong>的符号约束。</p>
+<ul>
+<li><strong>判别式</strong>：$\Delta = b^2-4ac$，决定根的数量及是否为重根。$\Delta &gt; 0$ 对应两不等实根，$\Delta = 0$ 对应两相等实根，$\Delta &lt; 0$ 无实根。</li>
+<li><strong>韦达定理</strong>：若方程 $ax^2+bx+c=0(a \neq 0)$ 有两根 $x_1,x_2$，则 $x_1+x_2=-\dfrac{b}{a}$，$x_1x_2=\dfrac{c}{a}$。常用于限制根的正负或与给定数值的大小比较。</li>
+<li><strong>根的分布常见模型</strong>（设 $f(x)=ax^2+bx+c$，$a \neq 0$）：</li>
+<li><strong>两根均大于 $k$</strong> $\Leftrightarrow$ $\Delta \ge 0$，$-\dfrac{b}{2a}&gt;k$，$a \cdot f(k)&gt;0$。</li>
+<li><strong>两根均小于 $k$</strong> $\Leftrightarrow$ $\Delta \ge 0$，$-\dfrac{b}{2a}<k$，$a \cdot f(k)>0$。</li>
+<li><strong>一根大于 $k$，一根小于 $k$</strong> $\Leftrightarrow$ $a \cdot f(k)&lt;0$（无需判别式）。</li>
+<li><strong>两根均在区间 $(m,n)$ 内</strong> $\Leftrightarrow$
+    $\begin{cases} \Delta \ge 0 \ m &lt; -\dfrac{b}{2a} &lt; n \ a \cdot f(m) &gt; 0 \ a \cdot f(n) &gt; 0 \end{cases}$</li>
+<li><strong>零点与极值关联</strong>：对于可导函数，极值点 $\Leftrightarrow$ 导函数的变号零点。若函数在开区间内有两个极值，则该区间内导函数必有两个不相等的变号零点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理“二次方程根的分布”问题，通用步骤如下：</p>
+<ol>
+<li><strong>明确方程形式</strong>：将问题转化为标准一元二次方程 $ax^2+bx+c=0$，特别注意二次项系数 $a$ 是否为 $0$ 的讨论。</li>
+<li><strong>找准限制条件</strong>：依据题意，将“根所在区间”“根的个数”“根的正负”等文字语言，翻译成关于判别式 $\Delta$、对称轴 $-\frac{b}{2a}$、特定端点函数值 $f(k)$ 的数学不等式组。</li>
+<li><strong>建立不等式组</strong>：遵循“优先使用韦达定理，其次考虑判别式，最后用端点值”的原则，写出所有约束条件。对于“两根一正一负”，直接使用 $x_1x_2=\dfrac{c}{a}&lt;0$（隐含 $\Delta&gt;0$）；对于“两根均正”，用 $\Delta \ge 0$，$x_1+x_2&gt;0$，$x_1x_2&gt;0$。</li>
+<li><strong>求解参数范围</strong>：解上述不等式组，得出参数取值范围。</li>
+<li><strong>反向检验</strong>：注意题干中隐含的定义域限制（如对数的真数 $&gt;0$），确保参数使原方程在定义域内有意义，并排除重根不满足“两个”极值或零点的情况。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略二次项系数限制</strong>：使用韦达定理和判别式前，未明确二次项系数 $a \neq 0$。当 $a$ 含参数时，必须分类讨论 $a=0$ 时是否退化为一次方程。</li>
+<li><strong>误用判别式零点的性质</strong>：$\Delta &gt; 0$ 对应两个不同变号零点，$\Delta = 0$ 对应重根，在连续函数中通常不是极值点（如 $y=x^3$）。若要求“既有极大值也有极小值”，必须满足 $\Delta &gt; 0$，不能取等号。</li>
+<li><strong>忽略定义域限制</strong>：实际问题中方程的定义域可能受限制（如分式分母不为零、对数的真数大于零、根号下非负）。建立根的分布条件时，必须把根限制在原函数的定义域内（如本题中 $x&gt;0$）。</li>
+<li><strong>混淆条件与结论</strong>：将选项代入检验的思维与正向推导的思维混淆。推导时应由“极值点个数”正向转化为“导函数变号零点个数”，再转化为“二次方程根的正负分布”，最后得出参数间关系。</li>
+<li><strong>韦达定理符号错误</strong>：记错 $x_1+x_2=-\dfrac{b}{a}$，$x_1x_2=\dfrac{c}{a}$ 的符号，尤其在二次项系数 $a$ 与一次项系数 $b$、常数项 $c$ 的符号混合运算中。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023-新课标Ⅱ-11）</h3>
+<p>函数 $f(x)=a\ln x+\dfrac{b}{x}+\dfrac{c}{x^2}(a \neq 0)$ 既有极大值也有极小值，判断选项：
+A. $bc&gt;0$　　B. $ab&gt;0$　　C. $b^2+8ac&gt;0$　　D. $ac&lt;0$</p>
+<h3><strong>思路</strong></h3>
+<p>“既有极大值也有极小值” $\Rightarrow$ 连续可导函数 $f(x)$ 的导函数在定义域 $(0,+\infty)$ 内至少有两个变号零点。因此，先求导并通分，令分子 $g(x)=0$。根据原函数形式，$g(x)$ 可能为一元二次方程。通过换元或直接分析，将问题转化为该二次方程在 $(0,+\infty)$ 上有两个不相等实根，运用韦达定理和判别式得出参数关系。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>求导并通分</strong>：函数定义域为 $(0,+\infty)$。
+    $f'(x) = \dfrac{a}{x} - \dfrac{b}{x^2} - \dfrac{2c}{x^3} = \dfrac{ax^2 - bx - 2c}{x^3}$.</li>
+<li><strong>转化零点条件</strong>：
+    $f(x)$ 极值点个数 $\Leftrightarrow$ $f'(x)$ 在 $(0,+\infty)$ 上变号零点个数。
+    因为 $x^3 &gt; 0$，$f'(x)$ 的符号由分子 $h(x) = ax^2 - bx - 2c$ 决定。
+    故 $h(x)=0$ 必须在 $(0,+\infty)$ 上有两不等实根。</li>
+<li><strong>建立二次方程根的分布条件</strong>：
+    对于 $ax^2 - bx - 2c = 0$：<ul>
+<li>二次项系数 $a \neq 0$（已知）；</li>
+<li>判别式 $\Delta = (-b)^2 - 4 \cdot a \cdot (-2c) = b^2 + 8ac &gt; 0$；</li>
+<li>两根均为正：设两根为 $x_1,x_2$，则 $x_1+x_2 = \dfrac{b}{a} &gt; 0$，$x_1x_2 = -\dfrac{2c}{a} &gt; 0$。</li>
+</ul>
+</li>
+<li><strong>判断选项</strong>：<ul>
+<li>由 $x_1x_2 = -\dfrac{2c}{a} &gt; 0 \Rightarrow \dfrac{c}{a} &lt; 0 \Rightarrow a,c$ 异号，即 $ac &lt; 0$。 <strong>D对</strong>。</li>
+<li>由 $x_1+x_2 = \dfrac{b}{a} &gt; 0$ 且 $ac &lt; 0$：若 $a&gt;0$，则 $b&gt;0$ 且 $c&lt;0$；若 $a&lt;0$，则 $b&lt;0$ 且 $c&gt;0$。总之 $ab&gt;0$。 <strong>B对</strong>。</li>
+<li>由 $\Delta = b^2+8ac &gt; 0$，<strong>C对</strong>。</li>
+<li>对于 A：若 $a&gt;0,b&gt;0,c&lt;0$，则 $bc&lt;0$；若 $a&lt;0,b&lt;0,c&gt;0$，则 $bc&lt;0$。故 $bc&lt;0$，A错。</li>
+</ul>
+</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p><strong>点评</strong>：本题是“导数极值—二次方程根分布”的经典转化题。核心陷阱在于定义域 $(0,+\infty)$ 要求正根，且极大极小值均存在要求两不等根（判别式严格 $&gt;0$）。使用了韦达定理避免了对对称轴位置的复杂讨论，最为简捷。选项 C 的判别式 $b^2+8ac$ 通过通分后分子直接得出，无需死记。
+<strong>变式</strong>：若题目改为“函数 $f(x)$ 不存在极值”，则导函数 $f'(x)$ 在 $(0,+\infty)$ 上恒不变号。对应二次方程无根，或有两相等实根（非变号零点），即 $\Delta = b^2+8ac \le 0$，或两根不在 $(0,+\infty)$ 内。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-11.html">2023-新课标Ⅱ-11</a>（2023 · 中） 利用导数研究函数极值的存在性，转化为二次方程正根的判别条件。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/642-二次方程根的分布.html">二次方程根的分布</a></li>
+</ul>
+</div>
+</body>
+</html>

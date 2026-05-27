@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比较大小</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>比较大小</h1><div class="review-mark" data-stem="比较大小"></div><div class="meta-card"><span><strong>考点</strong>比较大小</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：2</li>
+<li>真题数：6；年份跨度：2009–2022</li>
+<li>出现题位：选择4 选择7 选择8 选择10 选择11 选择12</li>
+<li>难度分布：中4 易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>比较大小的本质</strong>：转化为函数单调性问题或中间值插入问题。</li>
+<li><strong>函数单调性法</strong>：若待比较的两数可化为同一函数的不同自变量值，则构造该函数，判断其在所涉区间上的单调性（增则自变量大函数值大，减则反）。</li>
+<li><strong>中间值法（搭桥法）</strong>：常用中间值 $0$ 或 $1$（如 $\log_a b$ 与 $0$ 或 $1$ 比较）。将各数与中间值比较，再间接推出大小关系。</li>
+<li><strong>作差/作商法</strong>：欲比较 $A$ 与 $B$，可取差 $A-B$ 判符号，或商 $\frac{A}{B}$ 与 $1$ 比大小（注意 $B$ 的正负）。</li>
+<li><strong>同构变形与单调性</strong>：将条件不等式变形为 $f(x) &lt; f(y)$ 的形式，通过 $f$ 的单调性推 $x$ 与 $y$ 的大小。</li>
+<li><strong>对数换底公式</strong>：$\log_a b = \frac{\ln b}{\ln a}$ 或 $\frac{\log_c b}{\log_c a}$，便于统一底数比较。</li>
+<li><strong>数列单调性与不等式传递</strong>：利用递推关系推导各项的单调性或直接比较相邻项、隔项大小。</li>
+<li><strong>概率比较中的差式分析</strong>：不同策略下的概率表达式相减，通过因式分解、符号判定分析优劣。</li>
+<li><strong>特值法（适用选择/填空题）</strong>：在参数可任意选取时（满足给定范围），取特殊值代入快速判断。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题定法</strong>：一看能否同构函数；二看有无现成单调表达式；三看能否取中间量；四看是否需要作差或作商。</li>
+<li><strong>同构函数法步骤</strong>  </li>
+<li>将已知不等式恒等变形，使左右两边结构相同；  </li>
+<li>构造函数 $f(x)$，并指明其定义域及单调性（注意增减运算：增+增=增，增−减=增等）；  </li>
+<li>由单调性推出自变量的大小关系；  </li>
+<li>根据结论判定选项中的对数、绝对值等范围。</li>
+<li><strong>中间值法步骤</strong>  </li>
+<li>判断每个数的正负或与 $0$、$1$ 的关系（如 $\log_a b$，$a&gt;1$ 时 $b&gt;1$ 则正且 $&gt;1$ 等）；  </li>
+<li>无法直接比较两数时，插入中间量（如 $\frac{1}{2}$，$2$ 等）分而比之。</li>
+<li><strong>作差/作商法步骤</strong>（用于概率或复杂数列）  </li>
+<li>列出要比较的两个量 $P$、$Q$ 的表达式；  </li>
+<li>计算 $P - Q$，提取公因式或配方判断符号；  </li>
+<li>若概率表达式中含多个变量，利用已知大小关系简化。</li>
+<li><strong>数列比较的迭代与放缩</strong>  </li>
+<li>利用递推关系连续迭代，得到前几项具体形式；  </li>
+<li>通过 $a_k$ 的范围放缩或传递不等号方向。</li>
+<li><strong>选择题技巧</strong>  </li>
+<li>优先使用特值法：给参数 $p_1,p_2,p_3$ 等满足条件的简单值（如 $0.9,0.8,0.7$）代入检验；  </li>
+<li>选项互斥时，排除明显错误项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略单调性严格成立的条件</strong>：如用 $f(x)=2^x-3^{-x}$ 单调增，必须分别确认 $2^x$ 增、$-3^{-x}$ 增（即 $3^{-x}$ 减），缺一不可。</li>
+<li><strong>对数比较时忽略底数与真数的范围</strong>：如 $\log_3 2$ 在 $(0,1)$ 内，$\log_5 2$ 也在 $(0,1)$ 内，仅看底数大真数小需换底或利用函数 $y=\frac{\ln 2}{\ln x}$ 单调性判断。</li>
+<li><strong>不等号传递方向弄反</strong>：如 $a&lt; b$ 且 $b&lt; c$ 得 $a&lt; c$，但在分式或负号运算中容易混淆。</li>
+<li><strong>作商法忘记分母符号</strong>：$\frac{A}{B}&gt;1$ 且 $B&gt;0$ 才能推 $A&gt;B$；若 $B&lt;0$ 符号相反。</li>
+<li><strong>概率问题中漏乘组合系数</strong>：如第二盘定对手后，另两盘顺序有两种等可能情形，忘记乘以 $\frac12$ 或误以为只有一种顺序。</li>
+<li><strong>构造的函数与变量不匹配</strong>：变形后必需使函数式子完全一样，例如 $2^x-3^{-x}$ 与 $2^y-3^{-y}$ 对应，而不能一侧有常数。</li>
+<li><strong>误用绝对值或对数定义域</strong>：$\ln|x-y|&gt;0$ 要求 $|x-y|&gt;1$；$\ln(y-x+1)&gt;0$ 要求 $y-x+1&gt;1$ 即 $y-x&gt;0$，要注意前提推导。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2022-理-04）</h3>
+<p><strong>题目</strong>：已知 $a_k \in \mathbb{N}^*$, $k=1,2,\dots$, 定义数列 $b_n$: $b_1 = a_1 + \frac{1}{a_1}$, $b_2 = a_1 + \frac{1}{a_2 + \frac{1}{a_2}}$, $b_3 = a_1 + \frac{1}{a_2 + \frac{1}{a_3 + \frac{1}{a_3}}}$, 依此类推。判断大小关系：A. $b_1&lt; b_5$  B. $b_3&lt; b_8$  C. $b_6&lt; b_2$  D. $b_4&lt; b_7$。</p>
+<p><strong>思路</strong>：由递推写出 $b_n$ 与 $b_{n+1}$ 的关系，利用 $a_k$ 为正整数放缩，判断序列的单调性和间隔项的大小规律。</p>
+<p><strong>步骤</strong>：
+- 依定义，记连分式结构：$b_n$ 最内层表现为 $a_n+ \frac1{a_n}$；而 $b_{n+1}$ 将该层替换为 $a_n + \frac1{a_{n+1}+ \frac1{a_{n+1}}}$。
+- 注意到 $a_{n} \ge 1$, 有 $a_{n} + \frac1{a_{n+1}+ \frac1{a_{n+1}}} &lt; a_{n} + 1$，同时大于 $a_n$，经过多层嵌套后，可推出 $b_1 &gt; b_2$（因第一层 $a_1+\frac1{a_1} &gt; a_1+\frac1{a_2+\frac1{a_2}}$），且下标奇数项与偶数项分别具有单调性。
+- 实质比较结论：$b_1 &gt; b_3 &gt; b_5 &gt; \dots$, $b_2 &lt; b_4 &lt; b_6 &lt; \dots$，且所有偶数项均小于所有奇数项，所以 $b_4 &lt; b_7$ 正确。即 A错 $b_1&gt;b_5$；B错 $b_3&gt;b_8$；C错 $b_6&gt;b_2$；D正确。</p>
+<p><strong>点评/变式</strong>：本题核心是连分式结构的单调性分析，大可不必逐项算出具体值。变式可将 $a_k$ 范围改为 $a_k \ge 2$ 等，单调方向可能变化，需重新判定。</p>
+<h3>代表题2（2022-理-10）</h3>
+<p><strong>题目</strong>：某棋手与甲、乙、丙各赛一盘，相互独立。对甲的胜率 $p_1$，乙 $p_2$，丙 $p_3$，且 $p_3 &gt; p_2 &gt; p_1 &gt; 0$。记 p 为该棋手连胜两盘的概率，问 p 与比赛次序的关系。</p>
+<p><strong>思路</strong>：连胜两盘意味着第二盘必须获胜，且另两盘中恰好再赢一盘。列出不同次序的 p 表达式，作差比较。</p>
+<p><strong>步骤</strong>：
+- 第二盘与甲比赛时，有两种顺序：（乙,甲,丙）或（丙,甲,乙），p甲 = $\frac12[(1-p_2)p_1 p_3 + p_2 p_1 (1-p_3) + (1-p_3)p_1 p_2 + p_3 p_1 (1-p_2)] = p_1(p_2+p_3) - 2p_1 p_2 p_3$。
+- 同理，第二盘与乙比赛：p乙 = $p_2(p_1+p_3) - 2p_1 p_2 p_3$；第二盘与丙：p丙 = $p_3(p_1+p_2) - 2p_1 p_2 p_3$。
+- 比较：p丙 - p乙 = $(p_3-p_2)(p_1+p_2+p_3-2p_1 p_2 p_3 通过化简为$(p_3-p_2)(p_1(1-p_2)+p_3(1-p_1))$，显然正数，故 p丙 &gt; p乙。类似可得 p丙 &gt; p甲，所以第二盘与丙比赛 p 最大。答案选D。</p>
+<p><strong>点评/变式</strong>：概率比较问题考查学生把文字转化为数学表达并作差分析的能力，注意组合系数一定加对。变式可推广至 $n$ 名对手的最优排列。</p>
+<h3>代表题3（2020-文-12）</h3>
+<p><strong>题目</strong>：若 $2^{x} - 3^{-x} &lt; 2^{y} - 3^{-y}$，则（  ）<br />
+A. $\ln(y-x+1) &gt; 0$  B. $\ln(y-x+1) &lt; 0$  C. $\ln|x-y| &gt; 0$  D. $\ln|x-y| &lt; 0$</p>
+<p><strong>思路</strong>：构造函数 $f(t)=2^t-3^{-t}$，由其单调性得到 $x&lt;y$，代入选项判断对数真数与1的大小。</p>
+<p><strong>步骤</strong>：
+- 由已知 $2^{x} - 3^{-x} &lt; 2^{y} - 3^{-y}$，设 $f(t)=2^t - 3^{-t}$。
+- $2^t$ 是 $\mathbb{R}$ 上增函数，$3^{-t}=(\frac13)^t$ 是减函数，则 $-3^{-t}$ 是增函数，故 $f(t)$ 为增函数。
+- 由 $f(x) &lt; f(y)$ 得 $x &lt; y$ ⇒ $y - x &gt; 0$。
+- 对于选项 A：真数 $y - x + 1 &gt; 1$，故 $\ln(y-x+1) &gt; 0$，A正确；B误。
+- C、D中 $\ln|x-y|$ 真数为 $|x-y| = y-x$，无法确定是否 $&gt;1$，故不一定。</p>
+<p><strong>点评/变式</strong>：构造同构函数是高考比较大小的杀手锏，关键是识别并正确判断单调性。变式可将 $2,3$ 互换或改为其他底数，甚至在不等式侧加上常数项，仍可同构解决。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-04.html">2022-理-04</a>（2022 · 中） 本题通过数列递推关系比较各项大小，考查逻辑推理与特值验证能力。</li>
+<li><a href="../../exam/数学/2022-理-10.html">2022-理-10</a>（2022 · 中） 本题通过计算棋手在不同对手组合下连胜两盘的概率，比较概率大小以确定最优比赛顺序。</li>
+<li><a href="../../exam/数学/2020-文-12.html">2020-文-12</a>（2020 · 中） 通过构造函数并利用单调性比较两数大小，进而判断对数式的正负。</li>
+<li><a href="../../exam/数学/2020-理-11.html">2020-理-11</a>（2020 · 中） 通过构造函数利用函数单调性得出变量大小关系，进而判断对数式的符号</li>
+<li><a href="../../exam/数学/2013-文-08.html">2013-文-08</a>（2013 · 易） 本题通过对数值的比较，考查换底公式的应用及对数大小判断方法。</li>
+<li><a href="../../exam/数学/2009-文-07.html">2009-文-07</a>（2009 · 易） 比较对数式大小，涉及对数运算与估算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">比较大小</a></li>
+</ul>
+</div>
+</body>
+</html>

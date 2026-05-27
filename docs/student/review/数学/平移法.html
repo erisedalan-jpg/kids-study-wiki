@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平移法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平移法</h1><div class="review-mark" data-stem="平移法"></div><div class="meta-card"><span><strong>考点</strong>平移法</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>平移法是求解异面直线所成角的通法，核心是通过直线平移将空间角转化为平面相交直线的角，从而在三角形中计算。其依据是等角定理：空间中如果两个角的两边分别对应平行，且方向相同，则这两个角相等或互补。对于给定两条异面直线 $a$ 与 $b$，常用步骤为取一条直线（或两条）平移至某点，使得两条直线相交，所成锐角（或直角）即为异面直线所成的角，范围是 $\left(0, \frac{\pi}{2}\right]$。若平移后得到的角为钝角，则取其补角作为异面直线夹角。正方体中常利用对面平行、中位线以及特殊点的连线实现平移，如 $AD_1\parallel BC_1$，$B_1D_1\parallel BD$ 等。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选择平移基准点</strong>：观察两条异面直线，抓住其中一条直线的端点或中点，结合几何体的特征（如正方体棱平行关系），寻找一条与其中一条异面直线平行的、且与另一条异面直线能构成三角形边的连线。</li>
+<li><strong>作出平移辅助线，明确所求角</strong>：将目标线平移到合适位置，使两条直线交于一点。明确平移后形成的角（或其补角）即为所求异面直线所成的角。</li>
+<li><strong>证明垂直或利用长度关系简化</strong>：对于含有垂直关系的几何体（如正方体），优先证明平移后构成的三角形中是否存在直角三角形，可利用线面垂直定理（如正方体中体对角线、面对角线间的垂直关系）。</li>
+<li><strong>设棱长（或关键长度）并计算</strong>：设棱长为具体数值（如 $2$），便于计算各线段长度。若三角形可解，通过余弦定理或锐角三角函数（如正弦、正切）求角。若为直角三角形可直接利用边长比求角。</li>
+<li><strong>下结论</strong>：根据范围写出角的大小。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆角与补角</strong>：平移后得到的两条相交直线所成的角可能为异面直线所成角的补角，必须确认取锐角或直角。尤其在正方体等常见模型中，应验证三角形内角的范围。</li>
+<li><strong>平移选择不当导致难以计算</strong>：不加选择地平移可能导致角度所在的三角形边太难求，优先平移到规则图形的特殊点（如中点、顶点）。</li>
+<li><strong>棱长设定不当</strong>：设棱长为 $1$ 可能产生大量分数与根号，增加计算出错风险；设棱长为 $2$ 或 $2$ 的整数倍可使中点、对角线等长度保持整齐，减少计算压力。</li>
+<li><strong>忽视垂直关系的证明</strong>：在正方体中用肉眼观察得出 $PC\perp PB$ 而未给出严谨推导（如利用线面垂直），可能失分。务必先证垂直再解直角三角形。</li>
+<li><strong>漏用正方体结构性质</strong>：记错面对角线长与体对角线长，如将 $B_1D_1$ 的长度记错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> 2021年理科数学第5题：在正方体 $ABCD{-}A_1B_1C_1D_1$ 中，$P$ 为 $B_1D_1$ 的中点，求直线 $PB$ 与 $AD_1$ 所成的角。</p>
+<p><strong>思路</strong><br />
+将 $AD_1$ 平移到与 $PB$ 相交的位置，利用 $AD_1 \parallel BC_1$，则 $\angle PBC_1$（或其补角）即为所求。连接 $PC_1$，通过证明 $PC_1\perp PB$ 得到直角三角形，进而利用三角函数求角。</p>
+<p><strong>步骤</strong><br />
+1. 连接 $BC_1$，因为 $AD_1 \parallel BC_1$，所以 $PB$ 与 $AD_1$ 所成角等于 $PB$ 与 $BC_1$ 所成角，即 $\angle PBC_1$ 或其补角。<br />
+2. 连接 $PC_1$，在正方体中 $BB_1 \perp$ 平面 $A_1B_1C_1D_1$，$PC_1 \subset$ 平面 $A_1B_1C_1D_1$，所以 $BB_1 \perp PC_1$；又 $P$ 为 $B_1D_1$ 中点，在正方形 $A_1B_1C_1D_1$ 中，$PC_1 \perp B_1D_1$，且 $B_1D_1\cap BB_1=B_1$，故 $PC_1 \perp$ 平面 $PBB_1$，于是 $PC_1 \perp PB$。<br />
+3. 设正方体棱长为 $2$，则 $BC_1 = 2\sqrt{2}$，$PC_1 = \frac{1}{2}\,B_1D_1 = \sqrt{2}$。<br />
+4. 在 $\text{Rt}\triangle PBC_1$ 中，$\sin \angle PBC_1 = \dfrac{PC_1}{BC_1} = \dfrac{\sqrt{2}}{2\sqrt{2}} = \dfrac{1}{2}$，又 $\angle PBC_1$ 为锐角，得 $\angle PBC_1 = \dfrac{\pi}{6}$。<br />
+5. 故直线 $PB$ 与 $AD_1$ 所成角为 $\dfrac{\pi}{6}$。</p>
+<p><strong>点评/变式</strong><br />
+本题为已知正方体中点和线关系求异面直线成角的典型题，平移法是首选。解题时棱长设为 $2$ 使计算更整，避免了分数。证明 $PC_1 \perp PB$ 是关键跳板，体现了“先垂直、后计算”的安全模式。变式可将中点移至面对角线其他等分点，或改为求 $PB$ 与 $A_1C_1$ 所成角，平移策略类似，此时可能需构造一般三角形用余弦定理求解，注意异面直线角的范围为 $\left(0,\frac{\pi}{2}\right]$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-05.html">2021-理-05</a>（2021 · 中） 本题考查在正方体中通过平移法求异面直线所成角，并利用线面垂直构造直角三角形求解正弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/846-平移法.html">平移法</a></li>
+</ul>
+</div>
+</body>
+</html>

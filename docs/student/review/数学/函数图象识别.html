@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数图象识别</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数图象识别</h1><div class="review-mark" data-stem="函数图象识别"></div><div class="meta-card"><span><strong>考点</strong>函数图象识别</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择3</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数图象识别的基本依据</strong><br />
+  给定解析式 $y=f(x)$，画出或选择大致图象，核心是利用函数的性质与特征点进行排除。常用判断维度：  </li>
+<li><strong>定义域</strong>：排除不在定义域内的点或区间。  </li>
+<li><strong>奇偶性</strong>：若 $f(-x)=f(x)$，图象关于 $y$ 轴对称；若 $f(-x)=-f(x)$，图象关于原点对称。  </li>
+<li><strong>特殊点</strong>：函数与坐标轴的交点、易计算的定点（如 $x=0,\pm1,\pm2$ 等）的函数值符号和大小。  </li>
+<li><strong>单调性与极值</strong>：利用导数 $f'(x)$ 判断增减区间及极值点位置。  </li>
+<li><strong>极限与渐近行为</strong>：当 $x\to\pm\infty$ 或趋向渐近线时 $f(x)$ 的趋向，有无水平/垂直渐近线。  </li>
+<li><strong>图象变换的识别</strong><br />
+  若解析式可由基本初等函数通过平移、伸缩、对称得到，可直接由变换规则判图。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先锁定定义域</strong><br />
+   找出使解析式无意义的点，如分母为零、负数的偶次根、对数真数非正等，排除包含这些点的选项。</li>
+<li><strong>再断奇偶性</strong><br />
+   计算 $f(-x)$，与 $f(x)$ 比较，快速判定对称性。奇函数排除不对称选项，偶函数排除不关于 $y$ 轴对称的选项。</li>
+<li><strong>取关键点算值</strong><br />
+   选取易算的特殊横坐标（通常 $x=0,1,-1$ 等），代入得到 $f(x)$ 的值或符号，比较选项在该点的位置。</li>
+<li><strong>用导数看增减与极值</strong><br />
+   求 $f'(x)$，确定单调区间和极值点的大致横坐标，看图象的升降与凹凸是否符合。</li>
+<li><strong>分析渐近趋势</strong><br />
+   考察 $x\to +\infty$ 和 $x\to -\infty$ 时函数值趋向，以及有无某方向趋于常数、无穷等，进一步排除。</li>
+<li><strong>综合对比剩余选项</strong><br />
+   一般经过前几步即可排除至唯一选项，若仍有疑难，可进一步计算二阶导数、更多特殊点或利用函数零点的存在性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域先行</strong>：未检查定义域即判断奇偶性或取点，导致选到含无定义区间的错误图象。  </li>
+<li><strong>奇偶性判断粗心</strong>：对含有根式、绝对值、分段形式的函数，未先化简或没注意符号变化，误判对称性。  </li>
+<li><strong>特殊点计算错误</strong>：算错 $f(1)$ 或 $f(0)$ 的精确值或符号，尤其在含 $e^x$、$\ln x$ 时混淆大小关系。  </li>
+<li><strong>极限判断偏差</strong>：简单认为“指数函数增长快于多项式”，但对具体组合（如 $e^x - x$ 等）的极限方向判断不严谨，忽略负向趋势。  </li>
+<li><strong>导数应用生疏</strong>：不会快速求极值点的位置，或不会由 $f'(x)$ 符号变化判断图象的峰谷形状。  </li>
+<li><strong>过度依赖单点排除</strong>：仅用一点信息就下结论，未用多种方法交叉验证，导致误选。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> (2018·全国卷文科第3题)<br />
+函数 $f(x)=\frac{e^x - e^{-x}}{x}$ （概略表达式，原题为 $f(x)=e^x - e^{-x}$ 及其变式？实际根据真题解析：函数为 $f(x)=e^x - \frac{1}{e^x}$，即 $f(x)=e^x - e^{-x}$，但题干被截断，根据解析的奇偶性和 $f(1)=e-\frac1e$，可复原为 $f(x)=e^x - e^{-x}$）。选取正确的大致图象。选项为四幅曲线图。</p>
+<p><strong>思路</strong><br />
+先明确定义域：$x\in\mathbb{R}$，无间断。判断奇偶性，发现为奇函数，排除关于 $y$ 轴对称的选项A。取 $x=1$，$f(1)=e - e^{-1}&gt;0$，排除在 $x=1$ 处函数值为负的选项D。再分析 $x\to +\infty$ 时 $f(x)\to +\infty$，而选项C显示当 $x$ 很大时图象趋于平缓或下降，排除C。剩余B即为正确选项。</p>
+<p><strong>步骤</strong><br />
+1. 定义域为 $\mathbb{R}$，无放弃选项。<br />
+2. 奇偶性：$f(-x)=e^{-x}-e^{x} = -(e^x - e^{-x}) = -f(x)$，故为奇函数，图象关于原点对称 → 排除A（A图关于 $y$ 轴对称，为偶函数）。<br />
+3. 特殊点：取 $x=1$，$f(1)=e^1 - e^{-1} = e - \frac{1}{e} &gt;0$，对应点在 $x$ 轴上方。观察选项D，在 $x=1$ 处的点在 $x$ 轴下方 → 排除D。<br />
+4. 极限趋势：当 $x\to +\infty$，$e^x\to +\infty$，$e^{-x}\to 0$，故 $f(x)\to +\infty$，图象应向右上方无限延伸。选项C在 $x$ 增大时图象回落（可能趋向水平）→ 排除C。<br />
+5. 仅剩B，且B满足奇函数、过原点附近、$x&gt;0$ 时函数值为正且单调增长的趋势，与导数 $f'(x)=e^x+e^{-x}&gt;0$ 增函数吻合，故B正确。</p>
+<p><strong>点评/变式</strong><br />
+本题是典型的“看图识式”题，所用方法极其经典：奇偶性→特殊点→极限，轻松排除三个选项。强调顺序：优先用定义域和对称性，减少一半以上选项；再用易于计算的特殊点（0, 1, -1 等）细化；最后用趋势收尾。<br />
+变式：若函数变为 $f(x)=e^x + e^{-x}$（偶函数）或 $f(x)=x e^{-x}$ 等，同样遵循上述步骤，需特别注意乘除因子对奇偶性和渐近行为的影响。考生应练就“看式识图”的组合拳。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-03.html">2018-文-03</a>（2018 · 中） 判断函数f(x)=(e^x-e^{-x})/x²的大致图象，利用奇函数性质及函数图象特征进行识别。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数图象识别</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量加减法的几何意义</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量加减法的几何意义</h1><div class="review-mark" data-stem="向量加减法的几何意义"></div><div class="meta-card"><span><strong>考点</strong>向量加减法的几何意义</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向量加法的几何意义</strong>：三角形法则（首尾相连，和向量由起点指向终点）与平行四边形法则（共起点，和向量为对角线）。<br />
+  坐标表示：若 $\vec{a}=(x_1,y_1)$，$\vec{b}=(x_2,y_2)$，则 $\vec{a}+\vec{b}=(x_1+x_2,y_1+y_2)$。  </li>
+<li><strong>向量减法的几何意义</strong>：$\vec{a}-\vec{b}$ 表示以 $\vec{b}$ 的终点指向 $\vec{a}$ 的终点的向量（共起点时）；等于“被减向量加上减向量的相反向量”。<br />
+  坐标表示：$\vec{a}-\vec{b}=(x_1-x_2,y_1-y_2)$。  </li>
+<li><strong>数量积</strong>：$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta$；坐标 $\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。  </li>
+<li><strong>向量垂直的充要条件</strong>：$\vec{a}\perp\vec{b}\Leftrightarrow \vec{a}\cdot\vec{b}=0$。  </li>
+<li><strong>向量线性运算的基本策略</strong>：在几何图形中，选取一组不共线、模长和夹角已知的基向量（如矩形的邻边、正方形中相邻垂直的边），将待求向量用基向量线性表示，再算数量积。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选好基向量</strong>：一般选图形中互相垂直且长度已知的两个边所在向量作为基向量（例如正方形中 $\vec{AB}$ 与 $\vec{AD}$）。  </li>
+<li><strong>分解目标向量</strong>：利用向量加减法几何意义，将所求表达式中的向量写成基向量的线性组合。  </li>
+<li>如中点 $E$ 的 $\vec{AE} = \vec{AD} + \frac12\vec{DC}$ 或 $\vec{AB} + \frac12\vec{AD}$ 等（依基向量选择）。  </li>
+<li><strong>展开数量积</strong>：将分解后的向量点乘按分配律展开。  </li>
+<li><strong>利用已知条件化简</strong>：  </li>
+<li>基向量模长已知，代入 $|\vec{a}|^2$；  </li>
+<li>若基向量互相垂直，则数量积为 $0$；  </li>
+<li>平行向量间点乘转化为模长乘积。  </li>
+<li><strong>得出数值结果</strong>。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>基向量选择混乱</strong>：没用统一的一组基向量表示所有相关向量，导致表达式不一致，计算错误。  </li>
+<li><strong>加减法方向搞反</strong>：$\vec{AB} - \vec{AD} = \vec{DB}$，而不是 $\vec{BD}$；减法必须牢记“共起点，指被减”。  </li>
+<li><strong>中点向量的表示错误</strong>：如正方形 $ABCD$ 中，$E$ 为 $CD$ 中点，误写为 $\frac12(\vec{AD}+\vec{AC})$ 等情况，应直接利用平行四边形或三角形法则。  </li>
+<li><strong>漏掉垂直条件</strong>：未利用正方形或矩形邻边垂直带来的点积为零的性质，导致冗余运算或结果错误。  </li>
+<li><strong>运算符号和顺序</strong>：展开点乘时忽略向量方向，符号写反；尤其在减法组合时更易出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：正方形 $ABCD$ 边长为 $2$，$E$ 为 $CD$ 中点，求 $\vec{AE}\cdot\vec{BD}$。</h3>
+<p><strong>思路</strong>：选取 $\vec{AB}$ 和 $\vec{AD}$ 为基向量，将 $\vec{AE}$ 与 $\vec{BD}$ 用它们表示，展开数量积，并用模长和垂直关系求值。</p>
+<p><strong>步骤</strong>：<br />
+1. 设基向量 $\vec{a}=\vec{AB}$，$\vec{b}=\vec{AD}$，则 $|\vec{a}|=|\vec{b}|=2$，且 $\vec{a}\cdot\vec{b}=0$。<br />
+2. 表达 $\vec{AE}$：从 $A$ 经 $D$ 到 $E$，$E$ 为 $CD$ 中点，因此 $\vec{AE}=\vec{AD}+\frac12\vec{DC}$。又 $\vec{DC}=\vec{AB}=\vec{a}$，所以 $\vec{AE}= \vec{b} + \frac12\vec{a}$。<br />
+3. 表达 $\vec{BD}$：$\vec{BD}=\vec{AD}-\vec{AB}=\vec{b}-\vec{a}$。<br />
+4. 计算数量积：<br />
+   $$ \vec{AE}\cdot\vec{BD} = \left(\vec{b}+\frac12\vec{a}\right)\cdot(\vec{b}-\vec{a}) = \vec{b}\cdot\vec{b} - \vec{b}\cdot\vec{a} + \frac12\vec{a}\cdot\vec{b} - \frac12\vec{a}\cdot\vec{a} $$<br />
+   $$ = |\vec{b}|^2 - 0 + 0 - \frac12|\vec{a}|^2 = 4 - \frac12\times4 = 2。 $$<br />
+5. 故原式值为 $2$。</p>
+<p><strong>点评/变式</strong>：<br />
+- 该题核心在于利用基向量分解，利用垂直和模长条件约化。<br />
+- 若改为一般矩形或平行四边形，则需知道邻边夹角及模长，仍可用同样步骤，但垂直带来的点积为零不再适用，需用 $|\vec{a}||\vec{b}|\cos\theta$。<br />
+- 也可建坐标系，将 $A(0,0),B(2,0),C(2,2),D(0,2),E(1,2)$，用坐标运算，殊途同归。但掌握向量基底的几何意义更有一般性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-14.html">2013-文-14</a>（2013 · 中） 该题通过正方形中向量的线性运算求数量积，考查向量加减法的几何意义与垂直性质。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">向量加减法的几何意义</a></li>
+</ul>
+</div>
+</body>
+</html>

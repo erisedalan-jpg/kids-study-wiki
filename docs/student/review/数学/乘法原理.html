@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>乘法原理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>乘法原理</h1><div class="review-mark" data-stem="乘法原理"></div><div class="meta-card"><span><strong>考点</strong>乘法原理</span><span><strong>权重</strong>25</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：25</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择6</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>乘法原理</strong>：完成一件事需经过 $n$ 个步骤，第 $k$ 步有 $m_k$ 种不同的方法（与前面步骤的方法无关），则完成这件事共有 $N = m_1 \times m_2 \times \dots \times m_n$ 种不同的方法。核心是“分步相乘，步步相关”。</li>
+<li><strong>分配问题通法</strong>：将 $m$ 个元素分配到 $n$ 个不同位置，若对每个位置的元素个数有非负整数限制，通常先分组（将元素分成满足个数限制的组），再将各组分配给不同位置（排列）。不同元素分组时需区分“平均分组”与“非平均分组”：</li>
+<li>非平均分组（各组人数互不相同）：分组数即为组合数乘积。</li>
+<li>平均分组（出现人数相同的组）：需除以相同人数组数的阶乘以消除组间顺序。</li>
+<li><strong>本例模型</strong>：5 个不同元素分成 4 组，组人数分别为 $2,1,1,1$。有一个人数为 2 的组，其余三组人数相同（均为 $1$）。但组别将分配到不同项目（有顺序），因此分组时只需选定 2 人成组，其余自动成三组，分组方法数 $C_5^2 = 10$；再排列到 4 个不同项目，方法数 $A_4^4 = 24$。由乘法原理得总方案数为 $240$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题拆限制</strong>：明确“元素是否相同”“位置是否相同”“每个位置的元素个数要求”。  </li>
+<li><strong>确定分组方案</strong>：将总个数按位置要求拆成若干个非负整数之和，列出所有可能的人数分配组合（如 $5=2+1+1+1$）。  </li>
+<li><strong>先分组后排列</strong>：  </li>
+<li>若元素不同、位置不同 → 先按人数方案选出各组成员（组合），再对不同组做全排列分配给位置。  </li>
+<li>若出现多个组人数相同，且位置还未分配 → 分组时不必除序，因后续排列自然赋予顺序。  </li>
+<li>若题目问的是组本身无顺序（如分堆），则需除以相同组数的阶乘。  </li>
+<li><strong>分步相乘</strong>：每一步的方法数相乘即得总方案数，务必确认步骤之间相互独立且无重复计数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用“先选位置再放剩余”</strong>：常见错误是先每个位置至少分一个，再从剩余元素任选位置。例如本题中先选 4 人排列到 4 个项目，剩下 1 人选任一项目，得到 $A_5^4 \times 4 = 480$。该做法会重复计数（两个人分到同一项目的组内顺序被多次计算）。  </li>
+<li><strong>分组时不分情况盲目除序</strong>：在分组后即除以相同组数阶乘，但后续排列又乘上相同组数阶乘，若不注意步骤整体性，会漏乘或重复除。记住：当组要分配给不同位置时，组与组之间的顺序在排列阶段自然解决，分组阶段只需选出成员。  </li>
+<li><strong>混淆元素与位置的角色</strong>：以人为主语分步时，每一步的选择可能受到“每个位置至少一个”的后续约束，导致计数变形。建议固定“分组→排列”框架，避免随意分步。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-理-06）：将 5 名北京冬奥会志愿者分配到花样滑冰、短道速滑、冰球和冰壶 4 个项目进行培训，每名志愿者只分配到 1 个项目，每个项目至少分配 1 名志愿者，则不同的分配方案共有（ ）<br />
+A. 60 种　B. 120 种　C. 240 种　D. 480 种  </p>
+<p><strong>思路</strong><br />
+5 名不同的志愿者为元素，4 个不同的项目为位置，每个位置至少 1 人。符合人数分配的唯一组合是“一个项目 2 人，其余三个项目各 1 人”。因此，可先分组成 $2,1,1,1$ 的四组，再将四组排列至 4 个项目。此种分组为非平均分组（仅一人数组相同但后续排列会赋予不同项目，不产生组间重复序），可直接组合选人。</p>
+<p><strong>步骤</strong><br />
+1. <strong>分组</strong>：从 5 人中任选 2 人组成一组，其余 3 人各成一组。分组方法数为 $C_5^2 = 10$。此时四组视为无差别集合，但人数构成不同。<br />
+2. <strong>分配</strong>：将分好的四组分配给 4 个不同的项目，进行全排列。排列方法数为 $A_4^4 = 4! = 24$。<br />
+3. <strong>乘法原理</strong>：完成分配需要先分组再排列，两步方法数相乘 $10 \times 24 = 240$。<br />
+得出方案共 240 种，选 C。</p>
+<p><strong>点评/变式</strong><br />
+本题本质是“有位置限定的不定数分配”，只要锁定人数分配组合，按先组后排的框架即可直接得解。变式：若志愿者之间相同（如 5 本相同的书），则只需考虑每个位置的人数分配（非负整数解个数，采用隔板法），此时结果完全不同。务必区分元素的同异与位置是否有序，是计数问题的命门。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-06.html">2021-理-06</a>（2021 · 易） 本题考查分组分配问题，先确定人数分配，再用先选后排思想求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/477-分步计数原理.html">乘法原理</a></li>
+</ul>
+</div>
+</body>
+</html>

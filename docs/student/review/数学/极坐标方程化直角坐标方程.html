@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>极坐标方程化直角坐标方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>极坐标方程化直角坐标方程</h1><div class="review-mark" data-stem="极坐标方程化直角坐标方程"></div><div class="meta-card"><span><strong>考点</strong>极坐标方程化直角坐标方程</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>极坐标与直角坐标互化公式</strong>（极点与原点重合，极轴与 $x$ 轴正半轴重合）：
+  $$x = \rho\cos\theta,\quad y = \rho\sin\theta,\quad \rho^2 = x^2 + y^2,\quad \tan\theta = \frac{y}{x}\ (x \neq 0).$$</li>
+<li><strong>常见曲线的极坐标方程化直角坐标</strong>：</li>
+<li>圆 $\rho = 2a\sin\theta$（$a&gt;0$）$\Rightarrow$ $x^2 + y^2 = 2ay$，即 $x^2 + (y-a)^2 = a^2$。</li>
+<li>圆 $\rho = 2a\cos\theta$（$a&gt;0$）$\Rightarrow$ $x^2 + y^2 = 2ax$，即 $(x-a)^2 + y^2 = a^2$。</li>
+<li>射线 $\theta = \alpha$（$\rho \in \mathbb{R}$）$\Rightarrow$ 直线 $y = x\tan\alpha$（极点除外）。</li>
+<li><strong>参数方程化为普通方程</strong>：消去参数 $t$，常用代入消元或利用 $\sin^2 t + \cos^2 t = 1$ 等恒等式。需注意参数允许值对 $x,y$ 范围的影响。</li>
+<li><strong>极坐标系下共射线点的距离</strong>：若点 $A(\rho_1,\alpha)$，$B(\rho_2,\alpha)$ 在同一条射线 $\theta = \alpha$ 上，则 $|AB| = |\rho_1 - \rho_2|$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>极坐标方程化直角坐标方程的标准操作</strong></li>
+<li>若方程不含根式，优先两边同乘 $\rho$，构造 $\rho^2$、$\rho\cos\theta$、$\rho\sin\theta$。</li>
+<li>利用代换 $\rho^2 = x^2+y^2$，$\rho\cos\theta = x$，$\rho\sin\theta = y$ 直接代入，化为 $x,y$ 的方程。</li>
+<li>整理成标准形式，判断曲线类型（圆、直线等）。</li>
+<li><strong>求两曲线交点的坐标</strong></li>
+<li>统一化为直角坐标方程后联立方程组求解。</li>
+<li>或全部化为极坐标方程，解出 $\rho,\theta$ 再转化为直角坐标，注意极点的处理。</li>
+<li><strong>参数方程消参与应用</strong></li>
+<li>将参数方程写为普通方程 $y = f(x)$ 或 $F(x,y)=0$。</li>
+<li>若参数方程不易直接消参，可利用参数 $t$ 的几何意义或代入特殊值。</li>
+<li>对于直线型参数方程，可快速得其极坐标方程 $\theta = \alpha$（过极点）。</li>
+<li><strong>求极坐标系下的距离最值</strong></li>
+<li>找出两点的极径表达式（通常含某个角参数）。</li>
+<li>利用 $|AB| = |\rho_A - \rho_B|$（两点共射线）将距离表示为角 $\alpha$ 的函数。</li>
+<li>结合三角函数的有界性或二次函数求最值，注意 $\alpha$ 的范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记乘 $\rho$</strong>：遇到 $\rho = 2\sin\theta$ 若直接代换 ${\rho} = 2\cdot\frac{y}{\rho}$ 会引入分母 $\rho$，导致丢解或复杂化。务必先化为 $\rho^2 = 2\rho\sin\theta$ 再代换。</li>
+<li><strong>忽略极点处的情况</strong>：焦点 $\rho=0$ 对应的点即直角坐标原点，常需单独检验是否满足方程。</li>
+<li><strong>参数方程消参后范围缺失</strong>：如 $x=t^2+1$，$y=t-1$，消去 $t$ 得 $x=(y+1)^2+1$，但 $x\ge1$ 易漏掉。考试中应注明范围或等价条件。</li>
+<li><strong>极坐标下求距离用错公式</strong>：$|AB| = |\rho_1 - \rho_2|$ 仅当 $A,B$ 在 <strong>同一条射线</strong> 上时成立。若 $\theta$ 不同，必须转直角坐标或用余弦定理 $|AB| = \sqrt{\rho_1^2+\rho_2^2-2\rho_1\rho_2\cos(\theta_1-\theta_2)}$。</li>
+<li><strong>角度范围导致最值截断</strong>：利用三角函数求最值时，必须结合题给 $\alpha$ 的取值范围（如 $0\le\alpha\le\pi$），不可盲目取理论最值点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2015-文-23（10分）</h3>
+<p>在直角坐标系 $xOy$ 中，曲线 $C_1$：$\begin{cases} x=t\cos\alpha,\ y=t\sin\alpha \end{cases}$ ($t$ 为参数，$t\neq0$)，其中 $0\le\alpha\le\pi$。极坐标系以 $O$ 为极点，$x$ 轴正半轴为极轴，曲线 $C_2$：$\rho=2\sin\theta$，$C_3$：$\rho=2\sqrt{3}\cos\theta$。<br />
+（1）求 $C_2$ 与 $C_3$ 交点的直角坐标；<br />
+（2）若 $C_1$ 与 $C_2$ 交于点 $A$，$C_1$ 与 $C_3$ 交于点 $B$，求 $|AB|$ 的最大值。</p>
+<p><strong>思路</strong><br />
+（1）分别将 $C_2$ 和 $C_3$ 的极坐标方程化为直角坐标方程，联立解交点。<br />
+（2）$C_1$ 消参得过极点的直线 $y=x\tan\alpha$（或 $x=0$），极坐标方程为 $\theta=\alpha$。在此射线上，$A$ 的极径由 $C_2$ 给出，$B$ 的极径由 $C_3$ 给出，用 $|AB|=|\rho_A-\rho_B|$ 表达为 $\alpha$ 的三角函数，求最大值。</p>
+<p><strong>步骤</strong><br />
+（1）$C_2$：$\rho=2\sin\theta \Rightarrow \rho^2=2\rho\sin\theta \Rightarrow x^2+y^2=2y$，即 $x^2+(y-1)^2=1$。<br />
+$C_3$：$\rho=2\sqrt{3}\cos\theta \Rightarrow \rho^2=2\sqrt{3}\rho\cos\theta \Rightarrow x^2+y^2=2\sqrt{3}x$，即 $(x-\sqrt{3})^2+y^2=3$。<br />
+联立 $\begin{cases} x^2+y^2=2y\ x^2+y^2=2\sqrt{3}x \end{cases}$，得 $2y=2\sqrt{3}x \Rightarrow y=\sqrt{3}x$，代入第一式：<br />
+$x^2+3x^2=2\sqrt{3}x \Rightarrow 4x^2-2\sqrt{3}x=0 \Rightarrow 2x(2x-\sqrt{3})=0$，解得 $x=0$ 或 $x=\frac{\sqrt{3}}{2}$。<br />
+对应 $y=0$ 或 $y=\frac{3}{2}$。<br />
+$\therefore$ 交点直角坐标为 $(0,0)$，$\left(\frac{\sqrt{3}}{2},\frac{3}{2}\right)$。</p>
+<p>（2）$C_1$ 消去参数 $t$：$\begin{cases} x=t\cos\alpha\y=t\sin\alpha \end{cases} \Rightarrow y=x\tan\alpha$，当 $\alpha\neq\frac{\pi}{2}$；当 $\alpha=\frac{\pi}{2}$ 时，方程为 $x=0$（$y\neq0$）。其极坐标方程为 $\theta=\alpha$（$\rho\in\mathbb{R},\rho\neq0$）。<br />
+将 $\theta=\alpha$ 代入 $C_2$：$\rho=2\sin\alpha$，得 $A(2\sin\alpha,\alpha)$。<br />
+代入 $C_3$：$\rho=2\sqrt{3}\cos\alpha$，得 $B(2\sqrt{3}\cos\alpha,\alpha)$。<br />
+因 $A,B$ 在同一条射线 $\theta=\alpha$ 上，<br />
+$|AB| = |\rho_A-\rho_B| = |2\sin\alpha - 2\sqrt{3}\cos\alpha| = 4\left|\frac{1}{2}\sin\alpha - \frac{\sqrt{3}}{2}\cos\alpha\right| = 4|\sin(\alpha - \frac{\pi}{3})|$。<br />
+由题 $0\le\alpha\le\pi$，得 $\alpha-\frac{\pi}{3} \in [-\frac{\pi}{3}, \frac{2\pi}{3}]$，<br />
+故 $\sin(\alpha-\frac{\pi}{3}) \in [-\frac{\sqrt{3}}{2}, 1]$，$|\sin(\alpha-\frac{\pi}{3})| \in [0,1]$。<br />
+当 $\alpha-\frac{\pi}{3} = \frac{\pi}{2}$ 即 $\alpha = \frac{5\pi}{6}$ 时，取得最大值 $1$。<br />
+$\therefore |AB|_{\max}=4$。</p>
+<p><strong>点评/变式</strong><br />
+- 极坐标方程乘 $\rho$ 是关键一步，切莫遗漏。<br />
+- 射线 $\theta=\alpha$ 与两圆相交，直接代 $\theta$ 得极径，避免直角坐标下直线与圆联立的繁琐运算。<br />
+- 距离用 $|AB| = |\rho_1-\rho_2|$ 的前提是两点共射线，此处恰好满足。若方向不同，则必须用直角坐标距离公式或极坐标余弦定理。<br />
+- 变式：若 $C_1$ 不是过极点的直线，求 $|AB|$ 时就需将两点直角坐标求出，用 $|AB|=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$，或利用参数的几何意义，难度会提升。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-23.html">2015-文-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程与普通方程的转化，以及利用极坐标求曲线交点与距离最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">极坐标方程化直角坐标方程</a></li>
+</ul>
+</div>
+</body>
+</html>

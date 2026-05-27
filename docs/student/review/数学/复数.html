@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数</h1><div class="review-mark" data-stem="复数"></div><div class="meta-card"><span><strong>考点</strong>复数</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：12</li>
+<li>真题数：3；年份跨度：2015–2024</li>
+<li>出现题位：填空15 选择1 选择2</li>
+<li>难度分布：易2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数的定义与形式</strong>：形如 $z=a+bi$（$a,b\in\mathbf{R}$）的数称为复数，其中 $a$ 是实部，$b$ 是虚部，$i$ 是虚数单位且 $i^2=-1$。</li>
+<li><strong>复数的模</strong>：$|z|=\sqrt{a^2+b^2}$。模是复数在复平面上对应点到原点的距离，恒为非负实数。</li>
+<li><strong>复数相等的充要条件</strong>：$a+bi=c+di \iff a=c \text{ 且 } b=d$。两个复数相等，实部与虚部分别相等；若表达式中含未知实数，常通过此条件构建方程组求出参数。</li>
+<li><strong>复数的运算</strong>：</li>
+<li>加减法：实部与实部相加减，虚部与虚部相加减。</li>
+<li>乘法：按多项式乘法展开，注意 $i^2=-1$ 代入化简。</li>
+<li>除法：分子分母同乘分母的共轭复数（$a+bi$ 的共轭为 $a-bi$），分母实数化后再化简。</li>
+<li><strong>复数模的常见性质</strong>：</li>
+<li>$|z_1z_2|=|z_1|\cdot |z_2|$，$|\frac{z_1}{z_2}|=\frac{|z_1|}{|z_2|}$（$z_2\neq 0$）。</li>
+<li>$||z_1|-|z_2||\le |z_1\pm z_2|\le |z_1|+|z_2|$。</li>
+<li>若 $|z_1|=|z_2|=r$，则可设 $z_1=r(\cos\theta+i\sin\theta)$，$z_2=r(\cos\alpha+i\sin\alpha)$，将模长问题转化为三角运算，借助 $\cos^2+\sin^2=1$ 及和差化积处理 $z_1\pm z_2$ 的模。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接利用公式求模或化简</strong>：对于给定复数，直接提取实部与虚部代入 $|z|=\sqrt{a^2+b^2}$ 即可。若无明确形式，先通过四则运算化简为 $a+bi$ 的标准形式再求模。</p>
+</li>
+<li>
+<p><strong>利用“复数相等”构建方程组</strong>：</p>
+</li>
+<li>步骤一：将等式两边化为 $a+bi$ 的标准形式。若含分母，需先进行除法运算（分母实数化）。</li>
+<li>步骤二：根据复数相等的充要条件，令实部等于实部、虚部等于虚部，得到关于所求实参数（或两复数参数）的方程组。</li>
+<li>
+<p>步骤三：解方程组求出目标量或所需关系式。</p>
+</li>
+<li>
+<p><strong>已知模长关系求两复数差的模</strong>：</p>
+</li>
+<li>步骤一：根据两复数模长均为 $r$，设 $z_1=r(\cos\theta+i\sin\theta)$，$z_2=r(\cos\alpha+i\sin\alpha)$。</li>
+<li>步骤二：将 $z_1+z_2$ 用三角函数表示，并根据已知条件写出实部、虚部对应的等式。</li>
+<li>步骤三：将两等式平方相加，利用 $\cos\theta\cos\alpha+\sin\theta\sin\alpha=\cos(\theta-\alpha)$ 求出 $\cos(\theta-\alpha)$。</li>
+<li>步骤四：代入 $|z_1-z_2|^2=2r^2-2r^2\cos(\theta-\alpha)$ 计算，再开方得出最终结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>模长计算时漏掉符号</strong>：$z=-1-i$ 的实部是 $-1$，虚部是 $-1$，代公式时写为 $|z|=\sqrt{(-1)^2+(-1)^2}$，切忌只计算数字部分而忽略负号导致结果错误。</li>
+<li><strong>“复数相等”应用时的形式错误</strong>：在整理等式时，若未除尽分母或未将左侧整理为 $a+bi$ 形式，会直接导致实部、虚部对应错误。必须先在等式两端均化为标准形式再对应。</li>
+<li><strong>忽略隐含的实数条件</strong>：设 $z_1=2\cos\theta+2i\sin\theta$ 的前提是 $|z_1|=2$，且 $\theta$ 是实数（保证模长定义无误）。若随意将参数设为复数则推导失效。</li>
+<li><strong>混淆模长与绝对值的运算</strong>：$|z_1z_2|=|z_1||z_2|$ 无条件成立，但 $|z_1+z_2|=|z_1|+|z_2|$ 一般不成立，不可随意拆开。遇到和差模长求值时，必须通过设三角形式或利用 $|z|^2=z\cdot \bar{z}$ 进行严谨计算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2024-新课标Ⅱ-01）</h3>
+<p>已知 $z=-1-i$，求 $|z|$。
+<strong>思路</strong>：直接识别复数的实部与虚部，代入模长定义式计算。<br />
+<strong>步骤</strong>：<br />
+由 $z=-1-i$，得实部 $a=-1$，虚部 $b=-1$。<br />
+$|z|=\sqrt{a^2+b^2}=\sqrt{(-1)^2+(-1)^2}=\sqrt{2}$。<br />
+<strong>点评/变式</strong>：本题为高考基础送分题。切记代入时带符号平方。变式训练：求 $z \cdot \bar{z}$ 的值。由性质，$z\bar{z}=|z|^2=(\sqrt{2})^2=2$。</p>
+<h3><strong>题目</strong>（2020-理-15）</h3>
+<p>已知 $|z_1|=|z_2|=2$，$z_1+z_2=\sqrt{3}+i$，求 $|z_1-z_2|$。<br />
+<strong>思路</strong>：两复数模长均为定值，无法直接拆解和式模长。引入辐角将复数表示为三角函数形式，利用“和”的实、虚部建立方程组，求出辐角差关系，最后计算差的模长。<br />
+<strong>步骤</strong>：<br />
+设 $z_1=2(\cos\theta+i\sin\theta)$，$z_2=2(\cos\alpha+i\sin\alpha)$。<br />
+由和式可得：<br />
+$2(\cos\theta+\cos\alpha)+2i(\sin\theta+\sin\alpha)=\sqrt{3}+i$。<br />
+复数相等得方程组：<br />
+$\begin{cases} 2(\cos\theta+\cos\alpha)=\sqrt{3} \ 2(\sin\theta+\sin\alpha)=1 \end{cases}$。<br />
+两式分别整简后平方相加：<br />
+$4(\cos\theta+\cos\alpha)^2+4(\sin\theta+\sin\alpha)^2=(\sqrt{3})^2+1^2$<br />
+$\Rightarrow 4(\cos^2\theta+2\cos\theta\cos\alpha+\cos^2\alpha)+4(\sin^2\theta+2\sin\theta\sin\alpha+\sin^2\alpha)=4$<br />
+$\Rightarrow 4(2+2(\cos\theta\cos\alpha+\sin\theta\sin\alpha))=4$<br />
+$\Rightarrow 8+8\cos(\theta-\alpha)=4$<br />
+$\Rightarrow \cos(\theta-\alpha)=-\frac{1}{2}$。<br />
+计算差的模平方：<br />
+$|z_1-z_2|^2=4(\cos\theta-\cos\alpha)^2+4(\sin\theta-\sin\alpha)^2=8-8\cos(\theta-\alpha)=8-8(-\frac{1}{2})=12$。<br />
+故 $|z_1-z_2|=2\sqrt{3}$。<br />
+<strong>点评/变式</strong>：这是利用三角函数设元解决复数模长问题的经典压轴题。核心在于平方求和消去多余变量、凑出余弦差公式。变式：若已知 $|z_1|=|z_2|=1$，$z_1+z_2=1$，求 $|z_1-z_2|$，可采用同样设元法，得答案 $\sqrt{3}$。</p>
+<h3><strong>题目</strong>（2015-文-02）</h3>
+<p>若 $a$ 为实数，且 $\frac{2+ai}{1+i}=3+i$，求 $a$。<br />
+<strong>思路</strong>：观察等式含分母复数，首先进行分母实数化运算，将左侧化为标准代数形式，再利用复数相等建立方程求解。<br />
+<strong>步骤</strong>：<br />
+左侧上下同乘分母的共轭复数 $(1-i)$：<br />
+$\frac{2+ai}{1+i} = \frac{(2+ai)(1-i)}{(1+i)(1-i)} = \frac{2-2i+ai-ai^2}{1-i^2} = \frac{(2+a)+(a-2)i}{2}$。<br />
+原等式变为：$\frac{2+a}{2} + \frac{a-2}{2}i = 3+i$。<br />
+根据复数相等的充要条件，令实部等于实部，虚部等于虚部：<br />
+$\begin{cases} \frac{2+a}{2}=3 \ \frac{a-2}{2}=1 \end{cases}$。<br />
+两方程均解得 $a=4$。<br />
+<strong>点评/变式</strong>：基础题型，考查除法运算与相等的应用。务必在分母实数化后将结果拆成标准的实部加虚部形式。变式：若上式变为 $\frac{2+ai}{1+2i}=1+i$，则步骤一致，最终解得 $a=4$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-01.html">2024-新课标Ⅱ-01</a>（2024 · 易） 该题考查复数的模的计算，直接代入模长公式求解。</li>
+<li><a href="../../exam/数学/2020-理-15.html">2020-理-15</a>（2020 · 中） 已知复数z₁、z₂满足|z₁|=|z₂|=2且z₁+z₂=√3+i，求|z₁-z₂|。</li>
+<li><a href="../../exam/数学/2015-文-02.html">2015-文-02</a>（2015 · 易） 该题考查复数的基本运算和复数相等的条件应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/330-复数概念.html">复数</a></li>
+</ul>
+</div>
+</body>
+</html>

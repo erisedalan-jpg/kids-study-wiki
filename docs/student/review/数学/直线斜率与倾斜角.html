@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线斜率与倾斜角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线斜率与倾斜角</h1><div class="review-mark" data-stem="直线斜率与倾斜角"></div><div class="meta-card"><span><strong>考点</strong>直线斜率与倾斜角</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>倾斜角</strong>：直线向上的方向与 $x$ 轴正方向所成的最小正角，记作 $\alpha$，范围 $0 \le \alpha &lt; \pi$。</li>
+<li><strong>斜率</strong>：$k = \tan \alpha$（$\alpha \ne \frac{\pi}{2}$）。当 $\alpha = \frac{\pi}{2}$ 时斜率不存在。</li>
+<li><strong>斜率公式</strong>：过 $P_1(x_1,y_1)$，$P_2(x_2,y_2)$（$x_1 \ne x_2$）的直线斜率 $k = \dfrac{y_2-y_1}{x_2-x_1}$。</li>
+<li><strong>平行与垂直的斜率关系</strong>（设两直线斜率均存在）：</li>
+<li>平行：$k_1 = k_2$；</li>
+<li>垂直：$k_1 \cdot k_2 = -1$。</li>
+<li><strong>圆的重要性质</strong>：过圆上一点的半径与过该点的切线垂直。这可将切线的斜率转化为半径所在直线的斜率问题。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>显化斜率</strong>：将直线方程化为斜截式 $y=kx+b$ 或利用两点坐标直接求出斜率。</li>
+<li><strong>斜率与倾斜角互求</strong>：给定倾斜角 $\alpha$，则 $k=\tan\alpha$；给定斜率 $k$，则 $\alpha = \arctan k$（注意结合 $\alpha$ 的范围取正确象限角）。</li>
+<li><strong>利用位置关系建立等式</strong>：</li>
+<li>垂直关系：写出目标直线斜率应为已知直线斜率的负倒数；</li>
+<li>平行关系：直接相等。</li>
+<li><strong>借助几何性质转化</strong>：如圆的切线问题，先转化为半径所在直线的斜率（垂直关系），再进行计算。</li>
+<li><strong>参数方程求点</strong>：设出曲线参数方程对应的点坐标，代入斜率等条件列方程，解出参数值后回代得坐标。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忽视倾斜角范围 $[0,\pi)$：用 $\arctan$ 求倾斜角时，当斜率为负，结果应为负角加 $\pi$。</li>
+<li>斜率不存在的情况：涉及垂直判定时，若一条直线斜率不存在，则与之垂直的直线斜率为 $0$。不可盲目套用 $k_1k_2=-1$。</li>
+<li>将极坐标或参数方程转化为普通方程时，忽略参数或变量的取值范围，导致点定位错误（如本题中 $y\ge 0$ 的限制）。</li>
+<li>混淆直线 $CD$ 与切线的垂直关系：误以为所给直线 $l$ 的斜率直接等于切线的斜率，而忽略了切线又与半径垂直的中间转化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014-文-23）<br />
+在直角坐标系中，半圆 $C$ 的极坐标方程为 $\rho=2\cos\theta$（$\theta\in[0,\frac{\pi}{2}]$），
+（Ⅰ）求 $C$ 的参数方程；
+（Ⅱ）点 $D$ 在半圆 $C$ 上，半圆在 $D$ 处的切线与直线 $l: y=\sqrt{3}x+2$ 垂直，根据参数方程求直线 $CD$ 的倾斜角及 $D$ 的坐标。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）由 $\rho=2\cos\theta$ 两边乘 $\rho$ 得 $\rho^2=2\rho\cos\theta$，化为直角坐标方程并限缩 $y\ge0$ 后，再化为参数方程。<br />
+（Ⅱ）圆上半径 $CD$ 与切线垂直，切线与 $l$ 垂直，故 $CD \parallel l$，$k_{CD}=k_l=\sqrt{3}$，从而得倾斜角。设参数 $t$ 表示 $D$ 点，利用斜率公式解出 $t$ 后回代得 $D$ 坐标。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）由 $\rho=2\cos\theta$ 得 $\rho^2=2\rho\cos\theta$，代入 $x=\rho\cos\theta, y=\rho\sin\theta$，得 $x^2+y^2=2x$，配方：$(x-1)^2+y^2=1$。<br />
+由 $\theta\in[0,\frac{\pi}{2}]$ 知 $y=\rho\sin\theta=2\cos\theta\sin\theta=\sin2\theta\ge0$，故 $C$ 的方程为 $(x-1)^2+y^2=1\;(0\le y\le1)$。<br />
+令 $x-1=\cos t,\;y=\sin t$，参数 $t\in[0,\pi]$，得参数方程
+$$
+\begin{cases}
+x=1+\cos t,\
+y=\sin t,
+\end{cases}
+\quad t\in[0,\pi].
+$$
+（Ⅱ）直线 $l: y=\sqrt{3}x+2$ 的斜率 $k_l=\sqrt{3}$。<br />
+圆心为 $C(1,0)$，$D$ 在圆上，则 $CD$ 为半径，故 $CD$ 垂直于过 $D$ 的切线。<br />
+由切线 $\perp l$，知 $CD \parallel l$，所以 $k_{CD}=k_l=\sqrt{3}$。<br />
+由 $k_{CD}=\tan\alpha$ 得直线 $CD$ 的倾斜角 $\alpha=60^\circ$（即 $\frac{\pi}{3}$）。<br />
+设 $D(1+\cos t,\sin t)$，则 $k_{CD}=\dfrac{\sin t-0}{(1+\cos t)-1}=\dfrac{\sin t}{\cos t}=\tan t$。<br />
+由 $\tan t=\sqrt{3}$ 及 $t\in[0,\pi]$，得 $t=\frac{\pi}{3}$。<br />
+代入参数方程得 $D$ 坐标：$x=1+\cos\frac{\pi}{3}=1+\frac{1}{2}=\frac{3}{2}$，$y=\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}$。<br />
+故 $D\left(\frac{3}{2},\frac{\sqrt{3}}{2}\right)$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将极坐标、参数方程与直线斜率、垂直关系综合在一起。关键一步是借助圆的半径与切线的垂直性质，将切线条件转化为半径所在直线的斜率，进而得出 $CD$ 与已知直线平行。<br />
+- 变式：若半圆在 $D$ 处的切线与 $l$ 平行，则 $CD \perp l$，斜率乘积 $-1$，倾斜角相应变化。务必注意倾斜角范围及参数 $t$ 的限定。<br />
+- 坐标带参数求斜率时，形式常可化简（如本题 $\dfrac{\sin t}{\cos t}$），利用参数方程中参数的几何意义能让问题简化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-23.html">2014-文-23</a>（2014 · 中） 半圆极坐标方程转参数方程，利用切线垂直关系求点的坐标和倾斜角。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直线斜率与倾斜角</a></li>
+</ul>
+</div>
+</body>
+</html>

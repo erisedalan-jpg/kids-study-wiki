@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直角坐标系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直角坐标系</h1><div class="review-mark" data-stem="直角坐标系"></div><div class="meta-card"><span><strong>考点</strong>直角坐标系</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：12</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：解答22</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直角坐标系</strong>：由两条互相垂直、原点重合的数轴构成（$x$ 轴水平，$y$ 轴竖直）。平面上任一点的位置用有序数对 $(x,y)$ 唯一确定。</li>
+<li><strong>曲线与方程</strong>：曲线 $C$ 上点的坐标满足方程 $F(x,y)=0$，或参数方程 $\begin{cases} x=f(t) \ y=g(t) \end{cases}$（$t$ 为参数）。</li>
+<li><strong>圆的标准方程</strong>：圆心 $(a,b)$，半径 $r&gt;0$，则圆方程为 $(x-a)^2+(y-b)^2=r^2$。</li>
+<li><strong>圆的参数方程</strong>（核心）：圆心 $(a,b)$，半径 $r$，则参数方程为<br />
+    $$\begin{cases} x = a + r\cos\theta \ y = b + r\sin\theta \end{cases} \quad (\theta \text{ 为参数})$$
+    $\theta$ 的几何意义通常为旋转角，无特殊说明时 $\theta\in[0,2\pi)$。</li>
+<li><strong>参数方程与普通方程的互化</strong>：  <ul>
+<li>普通方程 $\to$ 参数方程：利用恒等式 $\cos^2\theta+\sin^2\theta=1$，引入参数 $\theta$。  </li>
+<li>参数方程 $\to$ 普通方程：消去参数 $t$，注意 $x,y$ 取值范围的一致性。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由圆心半径直接列参数方程</strong><br />
+   已知圆心 $(a,b)$ 和半径 $r$，立即写出：$x=a+r\cos\theta$，$y=b+r\sin\theta$，并注明“$\theta$ 为参数”。</li>
+<li><strong>由普通方程写出参数方程</strong><br />
+   若给出 $(x-a)^2+(y-b)^2=r^2$，令 $(x-a)=r\cos\theta$，$(y-b)=r\sin\theta$，即得参数方程。注意配平方项中符号：$x-(-a)$ 对应圆心 $-a$ 等。</li>
+<li><strong>参数 $\theta$ 的选取</strong><br />
+   一般无限制时直接写 $\theta$ 为参数；若有象限或范围要求，根据几何条件限定 $\theta$ 区间（如上半圆 $\theta\in[0,\pi]$）。</li>
+<li><strong>避免混淆</strong><br />
+   严格对应：$x$ 与 $\cos\theta$，$y$ 与 $\sin\theta$；系数为半径 $r$；常数项为圆心坐标。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>符号错误</strong>：圆心 $(2,1)$ 时，$x=2+\cos\theta$，$y=1+\sin\theta$；若圆心为 $(-2,1)$，则为 $x=-2+\cos\theta$，$y=1+\sin\theta$。参数方程中的常数项就是圆心坐标本身，千万不要再变号。</li>
+<li><strong>三角函数对应颠倒</strong>：将 $x=2+\sin\theta, y=1+\cos\theta$ 写错，导致普通方程不再是标准圆方程（虽然也是圆，但参数意义混乱，会是扣分点）。</li>
+<li><strong>遗漏参数说明</strong>：写参数方程时必须注明哪个量是参数，如“$\theta$ 为参数”或“$t$ 为参数”，否则视为不完整。</li>
+<li><strong>参数范围想当然</strong>：若题目只让“写出一个参数方程”，按最简形式 $\theta\in\mathbb{R}$ 即可，不必主动限定 $[0,2\pi)$；若题目背景与角有关，可注明 $\theta\in[0,2\pi)$，无错误，但注意不要遗漏括号导致歧义。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021·理·22）<br />
+在直角坐标系 $xOy$ 中，$\odot C$ 的圆心为 $C(2,1)$，半径为 $1$。写出 $\odot C$ 的一个参数方程。</p>
+<p><strong>思路</strong><br />
+直接套用圆的参数方程模板：已知圆心 $(a,b)=(2,1)$，半径 $r=1$，代入 $x=a+r\cos\theta$、$y=b+r\sin\theta$ 即可。</p>
+<p><strong>步骤</strong><br />
+1. 由题意，圆心坐标 $a=2$，$b=1$，半径 $r=1$。<br />
+2. 代入参数方程通式：<br />
+   $x = 2 + 1 \cdot \cos\theta = 2 + \cos\theta$，<br />
+   $y = 1 + 1 \cdot \sin\theta = 1 + \sin\theta$。<br />
+3. 写出最终参数方程并注明参数：<br />
+   $$\begin{cases} x = 2 + \cos\theta \ y = 1 + \sin\theta \end{cases} \quad (\theta \text{ 为参数}).$$</p>
+<p><strong>点评/变式</strong><br />
+- 本题为最基础的送分题，考查圆的参数方程的强制性记忆，核心是“圆心加半径乘余弦/正弦”。<br />
+- <strong>变式1</strong>：若圆心在原点，半径为 $3$，则参数方程为 $x=3\cos\theta, y=3\sin\theta$。<br />
+- <strong>变式2</strong>：若圆方程为 $(x+1)^2+(y-2)^2=4$，则圆心 $(-1,2)$，半径 $2$，参数方程为 $x=-1+2\cos\theta, y=2+2\sin\theta$。易错点：圆心横坐标是 $-1$，参数方程中直接写 $-1$，不能再写成 $-1-2\cos\theta$ 之类。<br />
+- 在综合题中，参数方程常与直线参数方程、极坐标方程互化、距离最值等结合，但根基仍是正确写出标准形式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-22.html">2021-理-22</a>（2021 · 易） 已知圆心坐标和半径，求圆的参数方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/132-平面直角坐标系.html">直角坐标系</a></li>
+</ul>
+</div>
+</body>
+</html>

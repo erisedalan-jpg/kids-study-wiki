@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平方消元</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平方消元</h1><div class="review-mark" data-stem="平方消元"></div><div class="meta-card"><span><strong>考点</strong>平方消元</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平方消元</strong>的核心是借助平方运算，将含有“和”“差”形式的根式、绝对值或向量模长等式转化为普通的代数方程，从而消除根号或绝对值符号，便于对方程组进行加减消元求解。</li>
+<li>对于平面向量问题，常利用向量模长与数量积的基本关系：
+  $$| \vec{a} \pm \vec{b} |^2 = | \vec{a} |^2 \pm 2 \vec{a} \cdot \vec{b} + | \vec{b} |^2$$
+  该式本质上是完全平方公式在向量内积下的体现。</li>
+<li>适用条件：已知条件同时给出 $|\vec{a} + \vec{b}|$ 与 $|\vec{a} - \vec{b}|$ 的值（或可转化的类似形式），且目标是求 $\vec{a} \cdot \vec{b}$。</li>
+<li>本方法也适用于求解含有 $\sqrt{A + B}$ 与 $\sqrt{A - B}$ 的方程组，通过两边平方变形，相加或相减消去交叉项。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别对称结构</strong>：观察题干是否同时存在 $|\vec{a} + \vec{b}|$ 与 $|\vec{a} - \vec{b}|$（或 $\sqrt{f(x)+g(x)}$ 与 $\sqrt{f(x)-g(x)}$）。这种“和”“差”配对非常适合平方消元。</li>
+<li><strong>两边平方</strong>：对每一个已知的模长等式（或根式等式）两边同时平方，得到两个展开式：
+   $$|\vec{a} + \vec{b}|^2 = |\vec{a}|^2 + 2\vec{a} \cdot \vec{b} + |\vec{b}|^2$$
+   $$|\vec{a} - \vec{b}|^2 = |\vec{a}|^2 - 2\vec{a} \cdot \vec{b} + |\vec{b}|^2$$
+   如果是具体数值，则直接代入。</li>
+<li><strong>加减消元</strong>：将两个平方后的等式相减，可以消去 $|\vec{a}|^2 + |\vec{b}|^2$ 这一求和项，直接得到 $4\vec{a} \cdot \vec{b}$ 的值，从而迅速解出数量积。若目标不是数量积而是其他组合，也可通过相加先求出 $|\vec{a}|^2 + |\vec{b}|^2$。</li>
+<li><strong>回代检验</strong>：求得结果后可代入原等式验证，避免平方过程中引入的符号错误（本题中模长非负，平方等价）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略平方的等价性</strong>：对等式两边平方时，必须保证两边非负。向量模长天然非负，因此该操作不会产生增根，但遇到一般代数式时需注意符号限制。</li>
+<li><strong>加减消元时的符号处理</strong>：相减时用 $|\vec{a} + \vec{b}|^2 - |\vec{a} - \vec{b}|^2$ 得到 $4 \vec{a} \cdot \vec{b}$，切忌把两个展开式直接相加得到 $2(|\vec{a}|^2 + |\vec{b}|^2)$ 后却用错误的关系去求数量积，导致整题丢分。</li>
+<li><strong>仅记公式但混淆顺序</strong>：有的考生误记为 $|\vec{a} + \vec{b}|^2 - |\vec{a} - \vec{b}|^2 = 2 \vec{a} \cdot \vec{b}$，忽略了公式展开后的系数 $4$。应牢记：
+  $$|\vec{a} + \vec{b}|^2 - |\vec{a} - \vec{b}|^2 = 4\vec{a} \cdot \vec{b}$$</li>
+<li><strong>对含有根号的式子未完全平方</strong>：如 $\sqrt{10}$ 平方后应得到 $10$，计算中容易出现漏平方的失误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2014-理-03</h3>
+<p><strong>题目</strong><br />
+设向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a} + \vec{b}| = \sqrt{10}$，$|\vec{a} - \vec{b}| = \sqrt{6}$，则 $\vec{a} \cdot \vec{b} = (\quad)$<br />
+A. $1$　B. $2$　C. $3$　D. $5$</p>
+<p><strong>思路</strong><br />
+题干直接给出“和”与“差”的模长，且目标为数量积，完美匹配平方消元的典型场景。直接对两式分别平方，然后两式相减即可消去 $|\vec{a}|^2 + |\vec{b}|^2$，得到纯数量积的表达式。</p>
+<p><strong>步骤</strong><br />
+1. 将已知模长平方：
+   $$|\vec{a} + \vec{b}|^2 = (\sqrt{10})^2 = 10, \quad |\vec{a} - \vec{b}|^2 = (\sqrt{6})^2 = 6$$
+2. 展开模长表达式：
+   $$|\vec{a}|^2 + 2\vec{a} \cdot \vec{b} + |\vec{b}|^2 = 10$$
+   $$|\vec{a}|^2 - 2\vec{a} \cdot \vec{b} + |\vec{b}|^2 = 6$$
+3. 将两式相减（前式减后式）：
+   $$(|\vec{a}|^2 + 2\vec{a} \cdot \vec{b} + |\vec{b}|^2) - (|\vec{a}|^2 - 2\vec{a} \cdot \vec{b} + |\vec{b}|^2) = 10 - 6$$
+   简化得：
+   $$4\vec{a} \cdot \vec{b} = 4$$
+4. 解得 $\vec{a} \cdot \vec{b} = 1$，对应选项 A。</p>
+<p><strong>点评/变式</strong><br />
+本题是向量数量积求值中最基础的“和差模长”模型，技巧性强且计算量极小，属于必拿分题。值得注意的是，同一思路稍加变式即可处理更隐蔽的情形：例如已知 $|\vec{a}|, |\vec{b}|$ 以及 $|\vec{a} + \vec{b}|$，求 $|\vec{a} - \vec{b}|$——此时同样可通过平方后相加或相减求解。掌握平方消元的本质（凑出对称的完全平方展开式），就能在一类问题中快速锁定解答路径。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-03.html">2014-理-03</a>（2014 · 易） 考查平面向量模长与数量积关系，通过平方运算求解向量点积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">平方消元</a></li>
+</ul>
+</div>
+</body>
+</html>

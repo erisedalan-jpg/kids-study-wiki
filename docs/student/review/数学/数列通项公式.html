@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列通项公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列通项公式</h1><div class="review-mark" data-stem="数列通项公式"></div><div class="meta-card"><span><strong>考点</strong>数列通项公式</span><span><strong>权重</strong>20</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：20</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>数列通项与前 $n$ 项和</strong>：若 $S_n = a_1 + a_2 + \cdots + a_n$，则
+  $$a_n = \begin{cases} S_1, &amp; n=1,\ S_n - S_{n-1}, &amp; n \geq 2.\end{cases}$$
+  该公式是“和化项”的核心工具，在任何涉及 $S_n$ 与 $a_n$ 互推的问题中必备。</li>
+<li><strong>前 $n$ 项积</strong>：若 $T_n = b_1 b_2 \cdots b_n$（本题记为 $b_n$），类似有
+  $$b_n = \begin{cases} T_1, &amp; n=1,\ \dfrac{T_n}{T_{n-1}}, &amp; n \geq 2,\end{cases}$$
+  注意符号区分：本题中 $b_n$ 是数列 ${S_n}$ 的前 $n$ 项积，而非通常的等比中项。</li>
+<li><strong>等差数列的判定与证明</strong>：核心方法为</li>
+<li>定义法：$b_{n} - b_{n-1} = d$（常数）对 $n\geq 2$ 成立。</li>
+<li>中项法：$2b_{n} = b_{n-1} + b_{n+1}$ 对 $n\geq 2$ 成立（较少在解答题证明中使用）。</li>
+<li>通项法：若可求得 $b_n = pn + q$，则直接说明为等差数列。
+  在给出的已知等式中消元或代换，推出 $b_n$ 的递推关系，是证明等差数列的关键。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>多变量消元，确立主元</strong><br />
+   题干涉及 ${a_n},{S_n},{b_n}$ 三个量，通常先以 $S_n$ 和 $b_n$ 表示关系。已知 $b_n$ 是 $S_1,S_2,\dots,S_n$ 的连乘积，立刻写出
+   $$\frac{S_n}{S_{n-1}} = b_n \quad (n\geq 2),\quad S_1 = b_1,$$
+   将 $S_n$ 或 $S_{n-1}$ 统一用 $b_n$ 表示，代入条件等式，化为仅含 $b_n, b_{n-1}$ 的关系。</li>
+<li><strong>构造定义式，证明等差</strong><br />
+   由递推关系整理成 $b_n - b_{n-1} = \text{常数}$ 的形式。常见技巧：取倒数、通分、分离常数。该题往往会出现分式方程，两边取倒数可简化。</li>
+<li><strong>求通项，注意分段</strong>  </li>
+<li>得到 $b_n$（公差 $d$，首项 $b_1$ 由初始值求得）通项后，回代得 $S_n$ 表达式。</li>
+<li>利用 $a_n = S_n - S_{n-1}\ (n\geq 2)$，单独计算 $a_1 = S_1$，检验是否与 $n\geq 2$ 的通项公式统一。若不一，必须写成分段形式。</li>
+<li><strong>验证首项</strong><br />
+   所有由 $S_n$ 推导 $a_n$ 的问题，最后一步必须验证 $n=1$ 时表达式是否一致，这往往是得分关键。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆积与和的互逆公式</strong>：本题中 $b_n$ 是 ${S_n}$ 的“前 $n$ 项积”，若错误地写成 $S_n = b_n - b_{n-1}$ 会全盘皆输。必须牢记 $S_n = \dfrac{b_n}{b_{n-1}}\ (n\geq 2)$。</li>
+<li><strong>忽视 $n$ 的范围</strong>：在使用 $S_n / S_{n-1} = b_n$ 时，默认 $n\geq 2$；当 $n=1$ 时，直接用 $b_1 = S_1$。后续求 $a_n$ 时，$a_1$ 需要单独从 $S_1$ 求得，不可随意套用 $S_n - S_{n-1}$。</li>
+<li><strong>分式变形失误</strong>：已知条件 $\frac{2}{S_n} + \frac{1}{b_n} = 2$，代入 $S_n$ 表达式时常因分式叠加、颠倒分母而出错。建议一步步写出分母显式，再进行移项、通分。</li>
+<li><strong>等差数列证明书写不规范</strong>：仅算出某特殊项差值为常数，未严格说明“对 $n\geq 2$ 恒成立”会被扣分。定义法中必须注明起始项。</li>
+<li><strong>通项最终未分段</strong>：若 $a_n$ 在 $n=1$ 时不符合 $n\geq 2$ 的公式，要写成分段函数，漏写直接失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021·理·19）：设 $S_n$ 为数列 ${a_n}$ 的前 $n$ 项和，$b_n$ 为数列 ${S_n}$ 的前 $n$ 项积，已知 $\dfrac{2}{S_n} + \dfrac{1}{b_n} = 2$．（1）证明：数列 ${b_n}$ 是等差数列；（2）求 ${a_n}$ 的通项公式．</p>
+<p><strong>思路</strong><br />
+题中 $b_n = S_1 S_2 \cdots S_n$，可得递推关系 $S_n = \dfrac{b_n}{b_{n-1}}\ (n\geq 2)$，且 $S_1 = b_1$。将其代入条件等式，即可得到 $b_n$ 与 $b_{n-1}$ 的方程，化简归结为 $b_n - b_{n-1}$ 的形式，从而完成等差数列证明。得 $b_n$ 通项后反求 $S_n$，再利用 $a_n = S_n - S_{n-1}$ 求通项并验证首项。</p>
+<p><strong>步骤</strong><br />
+1. 由题知，当 $n\geq 2$ 时，$S_n = \dfrac{b_n}{b_{n-1}}$；当 $n=1$ 时，$S_1 = b_1$。<br />
+2. 代入 $\dfrac{2}{S_n} + \dfrac{1}{b_n} = 2$：<br />
+   当 $n \geq 2$ 时，
+   $$\frac{2}{\frac{b_n}{b_{n-1}}} + \frac{1}{b_n} = 2 \implies \frac{2b_{n-1}}{b_n} + \frac{1}{b_n} = 2.$$
+   两边同乘 $b_n$ 得 $2b_{n-1} + 1 = 2b_n$，即
+   $$b_n - b_{n-1} = \frac{1}{2}.$$<br />
+   当 $n=1$ 时，$\dfrac{2}{S_1} + \dfrac{1}{b_1} = 2$，即 $\dfrac{2}{b_1} + \dfrac{1}{b_1} = 2 \implies \dfrac{3}{b_1} = 2 \implies b_1 = \dfrac{3}{2}$.<br />
+   所以 ${b_n}$ 是首项为 $\frac{3}{2}$，公差为 $\frac{1}{2}$ 的等差数列。<br />
+3. 由等差通项公式得 $b_n = \frac{3}{2} + (n-1)\cdot \frac{1}{2} = \frac{n+2}{2}$。<br />
+4. 求 $S_n$：$n=1$ 时，$S_1 = b_1 = \frac{3}{2}$；$n\geq 2$ 时，
+   $$S_n = \frac{b_n}{b_{n-1}} = \frac{\frac{n+2}{2}}{\frac{n+1}{2}} = \frac{n+2}{n+1}.$$
+   注意到 $n=1$ 时 $\frac{n+2}{n+1} = \frac{3}{2}$，故 $S_n = \dfrac{n+2}{n+1}$ 对所有 $n\in \mathbb{N}^*$ 成立。<br />
+5. 求 $a_n$：当 $n=1$ 时，$a_1 = S_1 = \frac{3}{2}$；当 $n \geq 2$ 时，
+   $$a_n = S_n - S_{n-1} = \frac{n+2}{n+1} - \frac{n+1}{n} = \frac{(n+2)n - (n+1)^2}{n(n+1)} = \frac{-1}{n(n+1)}.$$
+   检验 $n=1$：$-\frac{1}{1\times 2} = -\frac{1}{2} \neq \frac{3}{2}$，故需分段：
+   $$a_n = \begin{cases} \dfrac{3}{2}, &amp; n=1,\[8pt] -\dfrac{1}{n(n+1)}, &amp; n \geq 2.\end{cases}$$</p>
+<p><strong>点评/变式</strong><br />
+本题巧妙地将前 $n$ 项积伪装成“另一个数列”，考查学生对基本关系的灵活转化。证明等差数列时，务必区分 $n=1$ 与 $n\geq 2$，否则会遗漏首项条件。变式方向：可将条件改为 $\frac{1}{S_n} + \frac{2}{b_n} = 3$ 等比形式，或将 $b_n$ 定义为 ${S_n}$ 的前 $n$ 项和，训练符号转译与逻辑链完整性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-19.html">2021-理-19</a>（2021 · 中） 本题主要考查数列前n项和与前n项积的关系，通过已知等式证明等差数列并求通项公式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/384-数列通项公式.html">数列通项公式</a></li>
+</ul>
+</div>
+</body>
+</html>

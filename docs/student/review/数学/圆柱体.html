@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆柱体</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆柱体</h1><div class="review-mark" data-stem="圆柱体"></div><div class="meta-card"><span><strong>考点</strong>圆柱体</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆柱体积</strong>：底面半径 $r$，高 $h$，则体积 $V=\pi r^2 h$。若给定直径 $d=2r$，则 $V=\frac{\pi d^2}{4}h$。</li>
+<li><strong>三视图与几何体还原</strong>：给定正视图、侧视图、俯视图，识别几何体的形状、组合方式及关键尺寸。对圆柱体，正视图与侧视图均为矩形，俯视图为圆（或同心圆、圆弧）。</li>
+<li><strong>组合体体积</strong>：若零件由多个规则几何体叠加（或挖切）而成，体积为各部分体积之和（或差）。此题常见组合为两个同轴圆柱叠加。</li>
+<li><strong>切削问题</strong>：切削掉部分的体积 = 毛坯体积 - 零件体积。所求比值 $\displaystyle \frac{V_{\text{削}}}{V_{\text{坯}}}$ 或 $\displaystyle \frac{V_{\text{零件}}}{V_{\text{坯}}}$，需仔细对应。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>还原几何体</strong>：从俯视图入手，确定几何体的基本形状（柱、锥、球等）；结合正视图和侧视图的轮廓与内部线，判断其为等径体或变径叠加（如不同半径圆柱叠加）。</li>
+<li><strong>标定尺寸</strong>：根据网格或三视图标注，逐一确定各几何体的直径（或半径）与高度。注意视图中的宽对应柱体的直径，高对应柱体的高。</li>
+<li><strong>分块计算体积</strong>：将几何体拆分为基本柱体，分别计算体积后求和（或求差）得到零件体积。</li>
+<li><strong>计算比值</strong>：先求毛坯体积 $V_0$ 和零件体积 $V_1$，则切削掉部分的体积为 $V_0-V_1$，所求比值为 $\frac{V_0-V_1}{V_0}$，注意约分至最简分数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>直径与半径混淆</strong>：三视图中给出的宽度为直径，代入体积公式时误作半径，导致体积扩大 4 倍。</li>
+<li><strong>视图对应关系颠倒</strong>：正视图的宽对应俯视图的直径，侧视图的宽也对应俯视图的直径，将高与直径对应错位。</li>
+<li><strong>组合体划分错误</strong>：叠加体未正确识别分层界面，高度分配错误（如上、下圆柱高度颠倒）。</li>
+<li><strong>比值方向出错</strong>：题目问“切削掉部分的体积与原来毛坯体积的比值”，切勿用零件体积比毛坯体积；反之亦然。</li>
+<li><strong>单位与计算</strong>：若网格边长有单位意义，计算时忽略单位一致，或忘记 $\pi$ 保留代数运算，比值结果忘约分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2014 全国卷文 6）</h3>
+<p>网格纸上正方形小格边长 1 cm，图中粗线画出某零件的三视图。该零件由底面半径 3 cm、高 6 cm 的圆柱体毛坯切削得到，求切削掉部分的体积与原来毛坯体积的比值。（选项略）</p>
+<p><strong>思路</strong><br />
+由三视图还原：俯视图为两个同心圆（直径 6 与直径 4），正视图与侧视图均为下方宽 6、高 2 的矩形，上方叠一个宽 4、高 4 的矩形。故零件为组合体：下部是底面半径 3、高 2 的圆柱，上部同轴叠一个底面半径 2、高 4 的圆柱。分别计算体积求和得零件体积，毛坯体积按整圆柱计算，再求差值得比例。</p>
+<p><strong>步骤</strong><br />
+1. 确定尺寸：下部圆柱 $r_1=3$, $h_1=2$ ；上部圆柱 $r_2=2$, $h_2=4$；毛坯 $R=3$, $H=6$。单位均为 cm。<br />
+2. 计算零件体积：<br />
+   $$V_1=\pi r_1^2 h_1 + \pi r_2^2 h_2 = \pi \times 9\times 2 + \pi \times 4\times 4 = 18\pi + 16\pi = 34\pi \,(\text{cm}^3)$$<br />
+3. 计算毛坯体积：<br />
+   $$V_0=\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-06.html">2014-文-06</a>（2014 · 中） 通过三视图还原零件形状，计算圆柱体毛坯与切削后零件的体积比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆柱体</a></li>
+</ul>
+</div>
+</body>
+</html>

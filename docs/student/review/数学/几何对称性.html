@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何对称性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何对称性</h1><div class="review-mark" data-stem="几何对称性"></div><div class="meta-card"><span><strong>考点</strong>几何对称性</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>双曲线的核心方程与参数关系</strong>：在标准方程 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$（$a&gt;0, b&gt;0$）中，焦距 $c = \sqrt{a^2+b^2}$，离心率 $e = \frac{c}{a}$。</li>
+<li><strong>图形的几何对称性</strong>：双曲线关于 $x$ 轴、$y$ 轴和原点对称。若已知条件是两圆与曲线相交，且交点满足长度、坐标的对称条件，可直接利用对称性确定关键点的坐标。</li>
+<li><strong>圆与直径的几何性质</strong>：以 $OF$ 为直径的圆，圆心为 $OF$ 的中点，直径为 $OF$，即半径 $r = \frac{|OF|}{2} = \frac{c}{2}$。直径所对的圆周角为直角，但本题更关键的是利用半径和同心圆的位置关系。</li>
+<li><strong>双曲线与圆的交点性质</strong>：题目中圆 $x^2+y^2=a^2$ 是双曲线的辅助圆，它与以 $OF$ 为直径的圆相交，交点 $P,Q$ 满足 $|PQ|=|OF|=c$。结合对称性可快速得到 $P$ 点坐标与 $a,c$ 的联系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图定轴，利用对称性</strong>：面对圆与圆锥曲线相交的问题，先画出简易示意图。若条件给出两圆均关于 $x$ 轴对称，或交点连线 $PQ$ 的长度与 $OF$ 相等，往往能推出 $PQ \perp x$ 轴，且 $A$ 为垂足。</li>
+<li><strong>转化长度条件为坐标</strong>：由 $|PQ| = c$ 且对称，得 $|PA| = \frac{c}{2}$。再结合以 $OF$ 为直径的圆的半径也为 $\frac{c}{2}$，可知 $A$ 为该圆的圆心，从而 $|OA| = \frac{c}{2}$，因此 $P$ 点坐标为 $\left( \frac{c}{2}, \frac{c}{2} \right)$（或纵坐标为负，依对称性只需用正纵坐标）。</li>
+<li><strong>代入核心方程建立关系</strong>：将 $P$ 点坐标代入 $x^2 + y^2 = a^2$，得到 $\left( \frac{c}{2} \right)^2 + \left( \frac{c}{2} \right)^2 = a^2$，即 $\frac{c^2}{2} = a^2$。</li>
+<li><strong>求离心率</strong>：由 $\frac{c^2}{2} = a^2$ 推出 $c^2 = 2a^2$，所以 $e = \frac{c}{a} = \sqrt{2}$。当题目出现 $|PQ| = |OF|$ 等特殊相等关系时，几乎都指向离心率可求。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误判关键点的位置</strong>：没有利用对称性直接得出 $PQ \perp x$ 轴，尝试解两圆交点方程，导致计算繁琐且易出错。一定要先分析图形对称性。</li>
+<li><strong>混淆圆心与半径</strong>：以 $OF$ 为直径的圆，其圆心是 $OF$ 的中点，半径为 $\frac{c}{2}$，不要错当成圆心在 $O$ 或 $F$，半径写成 $c$。</li>
+<li><strong>将 $P$ 点错误地代入双曲线方程</strong>：$P$ 点是两圆的交点，并非双曲线上的点，只能代入圆的方程 $x^2+y^2=a^2$。误代入双曲线方程会导致无解或错误关系。</li>
+<li><strong>离心率 $e$ 与 $c/a$ 的最终化简</strong>：得到 $c^2=2a^2$ 就易得 $e=\sqrt{2}$，需注意 $e&gt;1$，排除 $e= -\sqrt{2}$ 或 $e=\sqrt{2}/2$ 等情况。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $F$ 为双曲线 $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$（$a,b&gt;0$）的右焦点，$O$ 为坐标原点，以 $OF$ 为直径的圆与圆 $x^2+y^2=a^2$ 交于 $P, Q$ 两点。若 $|PQ| = |OF|$，求双曲线的离心率。</p>
+<p><strong>思路</strong>：先利用圆的对称性与 $|PQ|=|OF|$ 这个关键条件，确定 $PQ$ 与 $x$ 轴垂直，并推导出 $P$ 点的坐标，再代入已知圆方程求出 $a$ 与 $c$ 的比值关系。</p>
+<p><strong>步骤</strong>：
+1. 设 $|OF| = c$，以 $OF$ 为直径的圆的半径为 $\frac{c}{2}$，圆心为 $\left( \frac{c}{2}, 0 \right)$。
+2. 由对称性可知 $PQ$ 关于 $x$ 轴对称。又 $|PQ| = c$，设 $PQ$ 与 $x$ 轴交于点 $A$，则 $|PA| = \frac{c}{2}$，且 $PA \perp x$ 轴。
+3. 因为以 $OF$ 为直径的圆的半径也是 $\frac{c}{2}$，所以 $|PA|$ 恰好等于该圆半径，故 $A$ 点就是该圆的圆心，即 $A \left( \frac{c}{2}, 0 \right)$。于是 $P$ 点坐标为 $\left( \frac{c}{2}, \frac{c}{2} \right)$。
+4. 点 $P$ 在圆 $x^2 + y^2 = a^2$ 上，代入坐标得：
+   $$ \left( \frac{c}{2} \right)^2 + \left( \frac{c}{2} \right)^2 = a^2 \implies \frac{c^2}{2} = a^2 $$
+5. 解得 $c^2 = 2a^2$，故离心率 $e = \frac{c}{a} = \sqrt{2}$。</p>
+<p><strong>点评/变式</strong>：本题核心在于“对称性破局”——直接将长度相等转化为坐标，省去解两个圆的方程组。若改为椭圆，以 $OF$ 为直径的圆与 $x^2+y^2=a^2$ 相交，再给 $|PQ|=|OF|$，将会导致 $e=\sqrt{2}&gt;1$ 与椭圆 $0&lt;e&lt;1$ 矛盾，考题通常会改编条件或用 $b$ 代替 $a$ 来构造新解，必须仔细区分曲线类型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-12.html">2019-文-12</a>（2019 · 中） 本题通过圆的对称性求双曲线离心率，采用几何法简化运算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">几何对称性</a></li>
+</ul>
+</div>
+</body>
+</html>

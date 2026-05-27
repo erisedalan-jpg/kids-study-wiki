@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球截面性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球截面性质</h1><div class="review-mark" data-stem="球截面性质"></div><div class="meta-card"><span><strong>考点</strong>球截面性质</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球的截面性质</strong>：用一个平面去截球，截面是圆面。设球半径为 $R$，球心到截面距离为 $d$，截面圆半径为 $r$，则三者关系为<br />
+  $$R^2 = r^2 + d^2$$
+  其中球心与截面圆圆心的连线垂直于截面。该性质是解球截面问题的核心，将空间关系转化为直角三角形中的勾股型关系。</li>
+<li><strong>球的体积与表面积</strong>（考纲要求掌握）：<br />
+  体积 $V = \frac{4}{3}\pi R^3$，表面积 $S = 4\pi R^2$。</li>
+<li><strong>适用条件</strong>：已知 $r$ 和 $d$ 求 $R$，或已知 $R$ 及 $r$（或 $d$）求另一个。特别注意当截面过球心时，$d=0$，$r=R$，截面为大圆；当截面与球相切时，$r=0$，$d=R$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画截面图，提炼直角三角形</strong>：过球心作截面的垂线，垂足为截面圆心，连接球心与截面圆上一点，必得直角三角形，斜边为球半径 $R$，直角边为球心距 $d$ 和截面圆半径 $r$。</li>
+<li><strong>列方程</strong>：直接利用 $R^2 = r^2 + d^2$ 建立等量关系。</li>
+<li><strong>求目标量</strong>：若求球的体积或表面积，先求出球半径 $R$，再代入公式。</li>
+<li><strong>多截面组合</strong>：若题目涉及多个平行截面或与球心等距的截面，可分别建立直角三角形，利用公共的 $R$ 联立方程。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将球心距与截面圆半径直接相加等于球半径</strong>：应为勾股关系 $R = \sqrt{r^2 + d^2}$，切勿写成 $R = r+d$。</li>
+<li><strong>混淆球半径 $R$ 与截面圆半径 $r$</strong>：代公式时注意区分，$R$ 是球自身的半径，$r$ 是截面圆的半径，$r \leq R$。</li>
+<li><strong>忽视球心与截面圆心的位置关系</strong>：球心到截面的距离是垂线段长，其垂足恰为截面圆圆心；忘记这一性质会导致无法构建直角三角形。</li>
+<li><strong>计算体积时根式与分数叠代错误</strong>：例如先平方开方求 $R$，再立方代入体积公式，根号运算是高频失分点，注意 $(\sqrt{a})^3 = a\sqrt{a}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> 平面 $\alpha$ 截球 $O$ 的球面所得圆的半径为 $1$，球心 $O$ 到平面 $\alpha$ 的距离为某定值，求此球的体积。</p>
+<p><strong>思路</strong> 将已知截面圆半径 $r=1$ 和球心距 $d$ 代入球截面核心关系 $R^2 = r^2 + d^2$，求出球半径 $R$，再由体积公式 $V = \frac{4}{3}\pi R^3$ 得解。最终结果取决于 $d$ 的具体数值（如原题给出 $d=\sqrt{2}$ 时，$R=\sqrt{3}$，$V=4\sqrt{3}\pi$）。</p>
+<p><strong>步骤</strong>
+1. 设球半径为 $R$。由截面性质，球心距 $d$ 满足 $R^2 = 1^2 + d^2$，即 $R = \sqrt{1+d^2}$。
+2. 球的体积为 $V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi (\sqrt{1+d^2})^3 = \frac{4}{3}\pi (1+d^2)\sqrt{1+d^2}$。
+3. 将给定的 $d$ 值代入即得体积。如 $d=\sqrt{2}$ 时，$R=\sqrt{3}$，$V = \frac{4}{3}\pi (\sqrt{3})^3 = 4\sqrt{3}\pi$，对应选项形式。</p>
+<p><strong>点评/变式</strong>
+- 本题直接考查球截面性质与体积公式的结合，难度基础，但极易因忘记 $R^2 = r^2 + d^2$ 而错用加法。
+- 变式：若已知截面圆面积为某值、球心距为某值，求球表面积，只需多一步由面积得 $r$，其余步骤一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-08.html">2012-文-08</a>（2012 · 易） 已知球的截面圆半径和球心到平面距离，求球的体积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">球截面性质</a></li>
+</ul>
+</div>
+</body>
+</html>

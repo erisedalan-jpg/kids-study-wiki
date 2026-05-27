@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切点判定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>切点判定</h1><div class="review-mark" data-stem="切点判定"></div><div class="meta-card"><span><strong>考点</strong>切点判定</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>切线方程核心公式：曲线 $y=f(x)$ 在点 $P(x_0, y_0)$ 处的切线方程为 $$y - y_0 = f'(x_0)(x - x_0)$$<br />
+  其中斜率 $k = f'(x_0)$ 由函数在切点的导数值唯一确定。</li>
+<li>导数的几何意义：函数 $f(x)$ 在 $x_0$ 处的导数 $f'(x_0)$ 是曲线在点 $(x_0, f(x_0))$ 处切线的斜率。</li>
+<li>确认切点条件：给定的点必须同时满足曲线方程和切线方程，即 $(x_0, y_0)$ 在曲线上（$y_0 = f(x_0)$），且该点斜率存在。</li>
+<li>常见三角函数的导数：$(\sin x)' = \cos x$，$(\cos x)' = -\sin x$，复合运算满足线性法则 $(af+bg)' = af' + bg'$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确认切点与函数值</strong>：验证给定点 $(x_0, y_0)$ 是否在曲线上，若未直接给出 $y_0$，需代入计算。</li>
+<li><strong>求导函数</strong>：对原函数求导，得到 $f'(x)$。涉及基本初等函数、四则运算或简单复合时，分步运用导数公式。</li>
+<li><strong>计算切线斜率</strong>：将切点横坐标 $x_0$ 代入导函数，得 $k = f'(x_0)$。</li>
+<li><strong>点斜式写方程并化简</strong>：代入点斜式 $y - y_0 = k(x - x_0)$，多数题目要求化为一般式 $Ax + By + C = 0$ 或斜截式，注意移项与符号。</li>
+<li><strong>检验选项（选择题专用）</strong>：将切点坐标代入所给选项快速排除，必要时验证斜率或横纵截距。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>导数值求错</strong>：三角求导符号错误，如 $(\cos x)'$ 漏掉负号，或求混合函数时法则混淆。务必牢记 $(\cos x)' = -\sin x$。</li>
+<li><strong>点斜式符号颠倒</strong>：写切线方程时，常误写为 $y-y_0 = k(x+x_0)$，或移项时符号错误导致一般式与选项不匹配。</li>
+<li><strong>化简粗心</strong>：由点斜式化一般式时，常数项合并容易出错，例如 $\pi$ 项的系数或常数项的符号。</li>
+<li><strong>忽略切点验证</strong>：看到“切线”就直接设切点，未检查所给点是否确实在曲线上，导致后续全错（本题已明确在点处）。</li>
+<li><strong>混淆“在点处”与“过点”的切线</strong>：本题是“在点 $(\pi, -1)$ 处”，该点即为切点，直接使用；若为“过某点”的切线，该点不一定是切点，需设切点另解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：曲线 $y = 2\sin x + \cos x$ 在点 $(\pi, -1)$ 处的切线方程为<br />
+A. $x - y - \pi - 1 = 0$　B. $2x - 2y - \pi - 1 = 0$<br />
+C. $2x + y - 2\pi + 1 = 0$　D. $x + y - \pi + 1 = 0$</p>
+<p><strong>思路</strong>：先验证点 $(\pi,-1)$ 在曲线上，对 $y$ 求导得斜率，代入点斜式，化简成一般式后与选项匹配。</p>
+<p><strong>步骤</strong><br />
+1. 验证：当 $x=\pi$ 时，$y=2\sin\pi + \cos\pi = 0 + (-1) = -1$，点在曲线上。<br />
+2. 求导：$y' = 2\cos x - \sin x$。<br />
+3. 斜率：$k = y'|_{x=\pi} = 2\cos\pi - \sin\pi = 2 \times (-1) - 0 = -2$。<br />
+4. 点斜式：$y - (-1) = -2(x - \pi)$，即 $y+1 = -2x + 2\pi$。<br />
+5. 化一般式：$2x + y + 1 - 2\pi = 0$，即 $2x + y - 2\pi + 1 = 0$，对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接考查导数的几何意义与基本求导公式，属于必保分题。<br />
+- 若改为“过点 $(0,0)$ 的曲线 $y = 2\sin x + \cos x$ 的切线方程”，则需设切点 $(x_0, 2\sin x_0+\cos x_0)$，利用斜率相等列方程求解，注意区分题型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-10.html">2019-文-10</a>（2019 · 中） 本题考查利用导数几何意义求曲线切线方程，需先判定点是否在曲线上并作为切点处理。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">切点判定</a></li>
+</ul>
+</div>
+</body>
+</html>

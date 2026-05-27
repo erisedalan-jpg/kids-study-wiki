@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>独立重复试验</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>独立重复试验</h1><div class="review-mark" data-stem="独立重复试验"></div><div class="meta-card"><span><strong>考点</strong>独立重复试验</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>独立重复试验（$n$重伯努利试验）</strong><br />
+  在相同条件下重复做$n$次试验，每次试验只有两个对立结果$A$与$\overline{A}$，每次$P(A)=p$保持不变，且各次试验相互独立。事件$A$恰好出现$k$次的概率：
+  $$P_n(k)=C_n^k\,p^k(1-p)^{n-k}$$</li>
+<li><strong>独立事件与乘法公式</strong><br />
+  若事件$A_1,A_2,\dots,A_n$相互独立，则
+  $$P(A_1A_2\cdots A_n)=P(A_1)P(A_2)\cdots P(A_n)$$</li>
+<li><strong>互斥事件与加法公式</strong><br />
+  若事件$A_1,A_2,\dots,A_n$两两互斥，则
+  $$P\left(\bigcup_{i=1}^n A_i\right)=\sum_{i=1}^n P(A_i)$$</li>
+<li><strong>适用条件辨析</strong><br />
+  当试验条件发生变化导致每次试验概率不同时（如发球权交换），不宜直接套用二项分布公式，但仍可利用“独立性”逐次相乘，再按互斥情形求和。</li>
+<li><strong>本题背景</strong><br />
+  乒乓球10:10平后，每赢一球交换发球权，先多得2分者胜。各球结果独立，但甲发球与乙发球时甲得分概率不同（0.5与0.4）。解题关键是按发球顺序正确识别每次试验的概率并分解事件。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂规则与概率赋值</strong><br />
+   明确“独立”“互斥”关系，标出不同情境下的概率值（如发球权不同时得分概率）。</li>
+<li><strong>将复杂事件分解为基本序列</strong><br />
+   按时间顺序写出所有可能的结果序列（如甲连胜两球记为“甲甲”），确保序列符合比赛结束条件。</li>
+<li><strong>逐次相乘求单条序列概率</strong><br />
+   每次试验的概率可能不同，但因彼此独立，直接将对应概率连乘。</li>
+<li><strong>分类相加求总概率</strong><br />
+   把所有互斥的有利序列的概率相加，即得所求事件的概率。</li>
+<li><strong>验证覆盖与对立</strong><br />
+   检查是否遗漏情况，必要时用对立事件简化计算。对于“先达到某条件”的停止规则，可利用序列的终止特征进行筛选。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用二项分布</strong><br />
+  看到“打了$n$个球”就想$C_n^k p^k (1-p)^{n-k}$，忽略发球权交换导致每球得分概率不同，本题不是真正意义上的独立重复试验。</li>
+<li><strong>漏掉顺序约束</strong><br />
+  例如“$X=4$且甲获胜”必须满足前两球打成1:1，后两球甲连胜；若随意排列成甲连胜两球再输两球等，则不符合“先多得2分结束”的规则。</li>
+<li><strong>概率对象混淆</strong><br />
+  甲发球时甲得分概率为0.5；乙发球时甲得分概率为0.4。计算时需分清这一球是谁发球，切忌将0.5与0.4用反。</li>
+<li><strong>乘法与加法混淆</strong><br />
+  单条路径内各次试验独立，用乘法；不同路径之间互斥，用加法。两者不能颠倒。</li>
+<li><strong>忽视“比赛结束”条件</strong><br />
+  $X=2$只可能“甲连胜两球”或“乙连胜两球”；如果考虑了“甲得一球乙得一球”，则比赛未结束，$X&gt;2$，不应计入$P(X=2)$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2019·全国卷·理18）<br />
+11分制乒乓球比赛，10:10平后每球交换发球权，先多得2分者胜。甲发球时甲得分概率为0.5，乙发球时甲得分概率为0.4，各球结果独立。甲先发球，又打$X$个球该局结束。<br />
+(1) 求$P(X=2)$；<br />
+(2) 求事件“$X=4$且甲获胜”的概率。</p>
+<p><strong>思路</strong><br />
+(1) $X=2$意味着两球后就分出胜负，根据规则只能是甲连胜两球或乙连胜两球。按照发球顺序（第一球甲发，第二球乙发）分别计算概率，再求和。<br />
+(2) $X=4$且甲获胜，说明前两球双方各得1分，后两球甲连胜。前两球各得1分有两种情形：甲第一球得分第二球失分，或第一球失分第二球得分。后两球甲连胜：第三球甲发球甲得分，第四球乙发球甲得分。先算前两球两情形的概率和，再乘以后两球连胜的概率。</p>
+<p><strong>步骤</strong><br />
+(1) 设甲发球甲得分事件为$A$，$P(A)=0.5$；乙发球甲得分事件为$B$，$P(B)=0.4$。<br />
+- 甲连胜两球：$A$发生且$B$发生<br />
+  $P_1=0.5\times0.4=0.2$
+- 乙连胜两球：$\overline{A}$且$\overline{B}$发生（甲均失分）<br />
+  $P_2=(1-0.5)\times(1-0.4)=0.5\times0.6=0.3$
+两情形互斥，故$P(X=2)=0.2+0.3=0.5$。</p>
+<p>(2) $X=4$且甲获胜，序列必为“前两球1:1，后两球甲连胜”。<br />
+前两球1:1分两种情况：<br />
+① 甲得分→甲失分：$A$发生且$\overline{B}$发生<br />
+  $P_{a}=0.5\times0.6=0.3$<br />
+② 甲失分→甲得分：$\overline{A}$发生且$B$发生<br />
+  $P_{b}=0.5\times0.4=0.2$<br />
+前两球打成1:1的总概率为$P_{\text{前}}=0.3+0.2=0.5$。</p>
+<p>后两球甲连胜：第三球甲发（$A$），第四球乙发（$B$）<br />
+$P_{\text{后}}=0.5\times0.4=0.2$</p>
+<p>前两球与后两球独立，事件总概率<br />
+$P=0.5\times0.2=0.1$。</p>
+<p><strong>点评/变式</strong><br />
+本题极易误用二项分布，实则考查<strong>事件的分解与有序概率乘法</strong>。核心能力是根据发球顺序还原“收益矩阵”，将复杂事件拆成互斥的路径，逐段相乘再相加。<br />
+- <strong>变式1</strong>：若改成10:10后一直由甲发球，则变为典型的$n$重伯努利试验，可用二项公式直接计算。<br />
+- <strong>变式2</strong>：求$X=5$且甲获胜的概率，需分析前四球打成2:2且第五球甲得分等情形，进一步提升有序分解与分类讨论的能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-18.html">2019-理-18</a>（2019 · 中） 11分制乒乓球10:10平局后概率问题，求P(X=2)及X=4且甲获胜的概率，各球结果相互独立。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/318-事件的独立性.html">独立重复试验</a></li>
+</ul>
+</div>
+</body>
+</html>

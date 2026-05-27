@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇偶讨论</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>奇偶讨论</h1><div class="review-mark" data-stem="奇偶讨论"></div><div class="meta-card"><span><strong>考点</strong>奇偶讨论</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>奇偶分段数列模型</strong>：若数列 ${b_n}$ 的通项按脚标奇偶分为两段，即<br />
+  $$b_n=\begin{cases}
+  f(n), &amp; n \text{ 为奇数}\
+  g(n), &amp; n \text{ 为偶数}
+  \end{cases}$$
+  其前 $n$ 项和必须<strong>按奇偶分组求和</strong>，并对总项数 $n$ 的奇偶性进行分类讨论。</li>
+<li><strong>分组策略</strong>：令 $n=2k$（偶数）时，奇子列 ${b_{2m-1}}$ 和偶子列 ${b_{2m}}$ 各有 $k$ 项；<br />
+  $n=2k-1$（奇数）时，奇子列有 $k$ 项，偶子列有 $k-1$ 项。</li>
+<li><strong>等差数列的奇偶性质</strong>：等差数列 ${a_n}$ 中，所有奇数项、所有偶数项分别构成公差为 $2d$ 的等差数列。这为快速求和提供了基础。</li>
+<li><strong>奇偶讨论的数学思想</strong>：凡是条件随自变量奇偶而分段给出的问题（数列、函数、不等式），必须<strong>先分奇偶、再综合</strong>，不能直接套用单一公式，否则结论不完整或不成立。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设基本量，用方程组求通项</strong><br />
+   等差数列 ${a_n}$ 设首项 $a_1$、公差 $d$，用 $S_n$ 或被奇偶分段定义的 $T_n$ 的特定项数值列出方程，解出 $a_1,d$ 得通项。</li>
+<li><strong>显化奇偶分段表达式</strong><br />
+   将 $a_n$ 通项代入 $b_n$ 的分段定义，得到仅含 $n$ 的奇偶分段具体式子。如 $b_n=\begin{cases}2n-3, &amp; n\text{ 奇}\4n+6, &amp; n\text{ 偶}\end{cases}$。</li>
+<li><strong>先求偶数项和 $S_{2k}$、$T_{2k}$，再推奇数</strong>  </li>
+<li>设 $n=2k$，奇数项求和：$k$ 项等差数列求和；偶数项求和：$k$ 项等差数列求和；合并得 $T_{2k}$。  </li>
+<li>当 $n=2k+1$（或 $2k-1$）时，利用 $T_{2k+1}=T_{2k}+b_{2k+1}$，$S_{2k+1}=S_{2k}+a_{2k+1}$ 转化，避免重复计算。</li>
+<li><strong>作差比较大小并讨论奇偶</strong><br />
+   构造 $T_n-S_n$，代入 $n$ 为偶数、奇数时的解析式，分别证明 $&gt;0$（或满足题目不等式）。注意验证起始 $n_0$ 及单调性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>奇偶项数算错</strong>：$n=2k$ 时奇偶各 $k$ 项；$n=2k-1$ 时奇数 $k$ 项、偶数 $k-1$ 项。混淆会导致求和公式错用。</li>
+<li><strong>偶项的下标与表达式错位</strong>：$b_{2k}$ 应代入<strong>偶数段</strong> $g(2k)$，而 $b_{2k-1}$ 代入奇数段 $f(2k-1)$，不能反过来。</li>
+<li><strong>只证一种奇偶情况</strong>：证明 $n&gt;5$ 时 $T_n&gt;S_n$，必须对 $n$ 为偶数和奇数分别验证，仅证偶数会丢失奇数情形，扣分严重。</li>
+<li><strong>忽略起始项验证</strong>：在奇偶分类后，直接使用差式 $2k^2-k-6&gt;0$，必须检验 $k$ 起始值（由 $n&gt;5$ 推出 $k\ge 3$ 等），不检验可能导致结论悬空。</li>
+<li><strong>通项代入时计算粗心</strong>：如 $a_n=2n+3$，奇数 $b_n=a_n-6=2n-3$，偶数 $b_n=2a_n=4n+6$，计算错误会连锁反应。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>典例（2023·新课标Ⅱ·18）</h3>
+<p><strong>题目</strong><br />
+已知 ${a_n}$ 为等差数列，$b_n=\begin{cases} a_n-6, &amp; n\text{ 为奇数}\ 2a_n, &amp; n\text{ 为偶数} \end{cases}$，$S_n,T_n$ 分别为 ${a_n},{b_n}$ 的前 $n$ 项和，且 $S_4=32,T_3=16$。<br />
+（1）求 ${a_n}$ 的通项公式；<br />
+（2）证明：当 $n&gt;5$ 时，$T_n&gt;S_n$。</p>
+<p><strong>思路</strong><br />
+（1）设 $a_n=a_1+(n-1)d$，由 $S_4$ 和 $T_3$ 得到关于 $a_1,d$ 的方程组，解出通项。<br />
+（2）由（1）写出 $b_n$ 的具体分段表达式，分别对 $n$ 为偶数和奇数求出 $S_n,T_n$，作差 $T_n-S_n$ 并证明恒正。</p>
+<p><strong>步骤</strong><br />
+<strong>（1）</strong> 设 $a_n=a_</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-18.html">2023-新课标Ⅱ-18</a>（2023 · 中） 该题考查等差数列通项公式、前n项和及分组求和，通过奇偶讨论比较两数列和的大小关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/818-奇偶讨论.html">奇偶讨论</a></li>
+</ul>
+</div>
+</body>
+</html>

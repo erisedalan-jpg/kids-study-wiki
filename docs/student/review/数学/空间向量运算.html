@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间向量运算</h1><div class="review-mark" data-stem="空间向量运算"></div><div class="meta-card"><span><strong>考点</strong>空间向量运算</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>空间向量的坐标运算</strong><br />
+  若 $\vec{a}=(x_1,y_1,z_1)$，$\vec{b}=(x_2,y_2,z_2)$，则<br />
+  数量积：$\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2+z_1z_2$<br />
+  模长：$|\vec{a}|=\sqrt{x_1^2+y_1^2+z_1^2}$，$|\vec{b}|=\sqrt{x_2^2+y_2^2+z_2^2}$<br />
+  夹角余弦：$\cos\langle\vec{a},\vec{b}\rangle=\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$</p>
+</li>
+<li>
+<p><strong>异面直线所成角</strong><br />
+  设异面直线 $l_1,l_2$ 的方向向量分别为 $\vec{a},\vec{b}$，则所成角 $\theta\in\left(0,\frac{\pi}{2}\right]$ 满足<br />
+  $$\cos\theta = |\cos\langle\vec{a},\vec{b}\rangle| = \frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}$$<br />
+  注意需要加绝对值，以保证余弦值为正。</p>
+</li>
+<li>
+<p><strong>空间直角坐标系的建立原则</strong><br />
+  优先利用图形中的垂直关系（如正棱锥的高与底面垂直，正方形对角线相互垂直）建立坐标系，使尽可能多的点落在坐标轴上或坐标平面内，便于坐标表示。</p>
+</li>
+<li>
+<p><strong>坐标的确定</strong><br />
+  根据已知长度将几何条件“翻译”成坐标；正四棱锥等对称图形常以底面中心为原点、高所在直线为 $z$ 轴建立坐标系。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建系</strong>：分析几何体的对称性与垂直关系，选择合适原点与坐标轴。正棱锥常以底面中心为原点，高为 $z$ 轴；底面正方形常以对角线为 $x,y$ 轴。  </li>
+<li><strong>标点</strong>：结合棱长、边长等条件，求出相关点的坐标。必要时设棱长为具体数值（如 2）简化计算。  </li>
+<li><strong>取向量</strong>：用终点坐标减起点坐标，写出所求异面直线的方向向量。  </li>
+<li><strong>算夹角</strong>：代入向量夹角公式计算余弦，再取绝对值，得到异面直线所成角的余弦值。  </li>
+<li><strong>选答案</strong>：比对选项，确认数值相符的选项。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>坐标系选择不当</strong>：建系时未充分利用垂直关系，导致点的坐标含多重根号或参数，增大计算难度与出错概率。  </li>
+<li><strong>向量坐标计算错误</strong>：求向量时起点、终点混淆，或坐标加减粗心出错。  </li>
+<li><strong>忘记取绝对值</strong>：异面直线夹角为锐角或直角，若直接使用向量夹角余弦（可能为负），会得到错误选项。务必对点积取绝对值：$\cos\theta = \frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}$。  </li>
+<li><strong>模长求解失误</strong>：平方和开方时漏项或计算有误，尤其是 $z$ 坐标的平方易漏算。  </li>
+<li><strong>图形位置误判</strong>：如将正四棱锥顶点坐标的 $z$ 值算错（高应为 $\sqrt{\text{侧棱长}^2 - (\text{底面中心到顶点距离})^2}$）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2008-理-10</h3>
+<p><strong>题目</strong>：正四棱锥 $S-ABCD$ 侧棱长与底面边长相等，$E$ 为 $SB$ 中点，求异面直线 $AE$ 与 $SD$ 所成角的余弦值。</p>
+<p><strong>思路</strong>：几何体对称，适合建系。设棱长为 $2$，以底面中心为原点，$AC$ 所在直线为 $x$ 轴，$BD$ 所在直线为 $y$ 轴，高 $SO$ 为 $z$ 轴。写出 $A(1,-1,0)$、$D(-1,-1,0)$、$S(0,0,\sqrt{2})$、$B(1,1,0)$，得到 $E$ 坐标。求向量 $\overrightarrow{AE}$、$\overrightarrow{SD}$，用夹角公式计算余弦并取绝对值。</p>
+<p><strong>步骤</strong>：<br />
+1. 建系：以正方形中心 $O$ 为原点，$OA$ 为 $x$ 轴正方向，$OB$ 为 $y$ 轴正方向，$OS$ 为 $z$ 轴正方向。<br />
+2. 设棱长均为 $2$，则 $A(1,-1,0)$，$B(1,1,0)$，$D(-1,-1,0)$。<br />
+   底面中心 $O$ 到 $A$ 的距离为 $\sqrt{1^2+(-1)^2}=\sqrt{2}$，侧棱长 $2$，故高 $SO=\sqrt{2^2-(\sqrt{2})^2}=\sqrt{2}$，得 $S(0,0,\sqrt{2})$。<br />
+   中点 $E$：$E\left(\frac{1+0}{2},\frac{1+0}{2},\frac{0+\sqrt{2}}{2}\right)=\left(\frac12,\frac12,\frac{\sqrt{2}}{2}\right)$。<br />
+3. 向量：$\overrightarrow{AE}=\left(\frac12-1,\frac12-(-1),\frac{\sqrt{2}}{2}-0\right)=\left(-\frac12,\frac32,\frac{\sqrt{2}}{2}\right)$<br />
+   $\overrightarrow{SD}=(-1,-1,-\sqrt{2})$。<br />
+4. 计算：$\overrightarrow{AE}\cdot\overrightarrow{SD}=\left(-\frac12\right)\times(-1)+\frac32\times(-1)+\frac{\sqrt{2}}{2}\times(-\sqrt{2})=\frac12-\frac32-1=-2$<br />
+   $|\overrightarrow{AE}|=\sqrt{\left(-\frac12\right)^2+\left(\frac32\right)^2+\left(\frac{\sqrt{2}}{2}\right)^2}=\sqrt{\frac14+\frac94+\frac24}=\sqrt{3}$<br />
+   $|\overrightarrow{SD}|=\sqrt{(-1)^2+(-1)^2+(-\sqrt{2})^2}=\sqrt{1+1+2}=2$<br />
+   余弦值：$\cos\theta=\dfrac{|-2|}{\sqrt{3}\times2}=\dfrac{2}{2\sqrt{3}}=\dfrac{\sqrt{3}}{3}$。<br />
+5. 对应选项 C。</p>
+<p><strong>点评/变式</strong>：本题直接用向量坐标法避免了作辅助线平移的麻烦。建系时把正方形对角线放在坐标轴上使得 $x,y$ 坐标为 $\pm1$，计算极简。若底面正方形按“边与轴平行”建系，则坐标为 $(\pm1,\pm1,0)$，虽亦可但会增加坐标数值。变式：若求 $AE$ 与 $SC$ 所成角，或求 $SE$ 与 $AC$ 的距离，同样方法通用，关键是坐标系选取。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-10.html">2008-理-10</a>（2008 · 中） 已知正四棱锥中侧棱长与底面边长相等，求异面直线所成角的余弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/410-空间向量运算.html">空间向量运算</a></li>
+</ul>
+</div>
+</body>
+</html>

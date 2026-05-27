@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列不等式</h1><div class="review-mark" data-stem="数列不等式"></div><div class="meta-card"><span><strong>考点</strong>数列不等式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等差数列与等比数列的转化</strong><br />
+  若 $a_1, 3a_2, 9a_3$ 成等差数列，则 $2 \times (3a_2) = a_1 + 9a_3$。将等比通项 $a_n = a_1 q^{n-1}$ 代入可解公比 $q$。</li>
+<li><strong>等比数列前 $n$ 项和</strong><br />
+  $a_1=1, q \neq 1$ 时，$S_n = \frac{a_1(1-q^n)}{1-q}$。本题 $q=\frac13$，得 $S_n = \frac32\left(1-\frac1{3^n}\right)$。</li>
+<li><strong>错位相减法求 ${n \cdot q^n}$ 型前 $n$ 项和</strong><br />
+  对 $T_n = \sum_{k=1}^n k \cdot q^k$（或类似形式），乘公比 $q$ 后错位相减，利用等比数列求和化简。<br />
+  公式原型：<br />
+  $$T_n = \sum_{k=1}^n k x^{k} \quad (x \neq 1) \;\Longrightarrow\; T_n = \frac{x - (n+1)x^{n+1} + n x^{n+2}}{(1-x)^2}$$
+  本题 $b_n = \frac{n}{3^n}$，对应 $x=\frac13$，用标准步骤可解。</li>
+<li><strong>数列不等式的证明</strong><br />
+  求出 $S_n$ 与 $T_n$ 的解析式后，常用作差法或放缩法比较大小。若作差结果恒负（正），则不等式得证。无需过度放缩时，直接化简更可靠。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>通项优先，方程求参</strong><br />
+   根据等差（等比）条件列出关于首项、公差的方程，解出基本量，写出通项公式。</li>
+<li><strong>识别差比结构，固定错位相减步骤</strong>  </li>
+<li>写出 $T_n$ 展开式；  </li>
+<li>两边同乘公比 $q$（本题为 $\frac13$）得到 $qT_n$ 的展开式；  </li>
+<li>两式相减（通常用 $T_n - qT_n$），中间项呈现等比数列；  </li>
+<li>对中间等比部分求和，再整理出 $T_n$ 的封闭形式。<br />
+<strong>公式化记忆</strong>：${n \cdot q^{n-1}}$ 求和结果为 $\frac{1 - (n+1)q^n + n q^{n+1}}{(1-q)^2}$，可代入验证。</li>
+<li><strong>证明不等式：先化简，再作差</strong><br />
+   将 $S_n$ 和 $T_n$ 写成最简分式，将欲证不等式移项化为 $T_n - \frac{S_n}{2} &lt; 0$，代入计算结果，判定符号。若结果为 $- \frac{n}{2\cdot 3^n}$ 等形式，直接得结论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>等差条件列式错位</strong>：$a_1, 3a_2, 9a_3$ 成等差，是 $2 \cdot (3a_2) = a_1 + 9a_3$，勿漏乘系数 $3$ 或 $9$。</li>
+<li><strong>等比求和公式记混</strong>：$S_n = \frac{a_1(1-q^n)}{1-q}$，分母是 $1-q$；注意 $q^n$ 指数与项数对应。</li>
+<li><strong>错位相减时项数匹配错误</strong>：乘 $q$ 后，$qT_n$ 最后一项指数为 $n+1$；相减时中间对齐的项数为 $n-1$ 项，极易多算或少算。</li>
+<li><strong>错位相减后整理符号出错</strong>：$T_n - qT_n$ 右侧首项是 $T_n$ 的首项，末项是 $-qT_n$ 的末项；合并时分数通分、提取公因式要步步心算验证。</li>
+<li><strong>不等式证明未彻底化简</strong>：求出 $T_n$ 后直接代入 $T_n &lt; \frac{S_n}{2}$，若不提取公因式或通分，易看不出恒负（恒正），导致“伪证”或未完成证明。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2021-文-19</h3>
+<p><strong>题目</strong><br />
+已知 ${a_n}$ 是首项为 $1$ 的等比数列，$b_n = \frac{n a_n}{3}$，且 $a_1, 3a_2, 9a_3$ 成等差数列。<br />
+（1）求 ${a_n}$ 和 ${b_n}$ 的通项公式；<br />
+（2）记 $S_n, T_n$ 分别为 ${a_n}$ 和 ${b_n}$ 的前 $n$ 项和，证明：$T_n &lt; \frac{S_n}{2}$。</p>
+<p><strong>思路</strong><br />
+（1）由等差数列条件建立公比 $q$ 的方程；解出 $q$ 得 $a_n$，再代入 $b_n$。<br />
+（2）分别用等比求和与错位相减法求 $S_n$ 与 $T_n$，作差证明不等式。</p>
+<p><strong>步骤</strong><br />
+<strong>（1）</strong> 设公比为 $q$，则 $a_n = q^{n-1}$。<br />
+由 $a_1, 3a_2, 9a_3$ 成等差：$2 \cdot 3a_2 = a_1 + 9a_3$<br />
+$\Rightarrow 6q = 1 + 9q^2 \;\Longrightarrow\; 9q^2 - 6q + 1 = 0 \;\Longrightarrow\; (3q-1)^2 = 0$<br />
+得 $q = \frac13$，故 $a_n = \left(\frac13\right)^{n-1}$，<br />
+$b_n = \frac{n a_n}{3} = \frac{n}{3} \cdot \left(\frac13\right)^{n-1} = \frac{n}{3^n}$。</p>
+<p><strong>（2）</strong> ${a_n}$ 前 $n$ 项和：<br />
+$$S_n = \frac{1 \cdot \left(1 - \frac1{3^n}\right)}{1 - \frac13} = \frac32\left(1 - \frac1{3^n}\right)$$
+${b_n}$ 前 $n$ 项和 $T_n$：<br />
+$T_n = \frac1{3} + \frac2{3^2} + \frac3{3^3} + \cdots + \frac{n}{3^n}$<br />
+乘 $\frac13$：$\frac13 T_n = \frac1{3^2} + \frac2{3^3} + \cdots + \frac{n-1}{3^n} + \frac{n}{3^{n+1}}$<br />
+相减：$\frac23 T_n = \frac1{3} + \frac1{3^2} + \cdots + \frac1{3^n} - \frac{n}{3^{n+1}}$<br />
+中间等比求和：$\frac{\frac13(1-\frac1{3^n})}{1-\frac13} = \frac12\left(1-\frac1{3^n}\right)$<br />
+故 $\frac23 T_n = \frac12\left(1-\frac1{3^n}\right) - \frac{n}{3^{n+1}}$<br />
+$\Rightarrow T_n = \frac34\left(1-\frac1{3^n}\right) - \frac{n}{2 \cdot 3^n}$<br />
+比较 $T_n$ 与 $\frac{S_n}{2} = \frac34\left(1-\frac1{3^n}\right)$：<br />
+$T_n - \frac{S_n}{2} = -\frac{n}{2 \cdot 3^n} &lt; 0$ 恒成立，<br />
+所以 $T_n &lt; \frac{S_n}{2}$，得证。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是错位相减法，步骤固定，计算量可控；不等式证明退化为作差直接得符号，难度较低。<br />
+- 变式1：若 $b_n = n \cdot a_n$，则求和时乘公比 $q$；证明可能需放缩。<br />
+- 变式2：改为证明 $T_n &gt; \frac{S_n}{4}$ 等形式，可训练放缩或函数单调性视角，避免过度依赖直接作差。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-19.html">2021-文-19</a>（2021 · 中） 本题考查等比数列通项与求和、等差数列性质及错位相减法证明不等式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">数列不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

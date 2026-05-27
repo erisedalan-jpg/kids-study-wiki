@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>推理判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>推理判断</h1><div class="review-mark" data-stem="推理判断"></div><div class="meta-card"><span><strong>考点</strong>推理判断</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>推理判断题常见于高考文科数学，主要考查逻辑推理、分析判断能力，通常涉及排序、真假话、对应关系等。</li>
+<li>核心工具：</li>
+<li><strong>命题与真假</strong>：一个陈述要么真要么假，不可能有第三种情况。</li>
+<li><strong>矛盾关系</strong>：若两句话互相矛盾（例如“A&gt;B”与“A≤B”），则必有一真一假。</li>
+<li><strong>约束条件</strong>：题干中给出的“互不相同”“只有一个人说对”等是推理的硬约束，必须全部满足。</li>
+<li>常用推理规则：</li>
+<li>若某人说的话蕴含另一人说的话，则后者为真时前者也为真（如“丙&gt;乙且丙&gt;甲”蕴含“丙&gt;乙”）。</li>
+<li>使用假设法或代入验证法逐一排查，避免遗漏。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读懂条件，符号化</strong><br />
+   将每个人的陈述用不等式、等式或性质表达清楚，注明所有限定条件（如成绩互不相同、只有一句真话等）。</li>
+<li><strong>选择推理路径</strong>  </li>
+<li>若选项具体，优先使用<strong>代入验证法</strong>：将选项代回题干，看是否恰好有一人预测正确且互不相同。  </li>
+<li>若选项不明确或想直接推理，采用<strong>假设法</strong>：依次假设某人的话为真，推出其他人的话的真假，检查是否与“只有一人说对”矛盾。</li>
+<li><strong>检查蕴含与矛盾关系</strong><br />
+   当某人正确会强迫另一人也正确时，可直接排除该人正确的可能性。例如本题中乙正确必然导致丙正确，违反唯一正确性，故乙一定错误；同理丙正确也导致乙正确，故丙也错误，从而甲正确。熟练后可直接快速求解。</li>
+<li><strong>验证最终排序</strong><br />
+   得到排序后反代回各陈述，确认是否恰有一真、两假且互不相同，避免疏忽。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略“互不相同”</strong>：推理过程可能得出非严格不等式（如乙≥甲），但最终排序必须严格不等，否则违反互不相同条件，题目会特意强调这一点。</li>
+<li><strong>误判蕴含关系</strong>：没有注意到“丙&gt;乙且丙&gt;甲”与“丙&gt;乙”的包含关系，导致假设乙或丙正确时无法立即发现矛盾，浪费解题时间。</li>
+<li><strong>只凭感觉猜答案</strong>：未逐一核对其他选项的陈述真假，可能误选表面看似合理的选项，必须确保证据链完整。</li>
+<li><strong>忽视“只有一个人预测正确”</strong>：验证时只确认了某人正确，未同时确认其余二人均错误，导致误判。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+甲、乙、丙三人成绩互不相同，每人作出一句预测：甲说“我的成绩比乙高”；乙说“丙的成绩比我和甲的都高”；丙说“我的成绩比乙高”。成绩公布后，只有一个人预测正确。求三人成绩由高到低的次序。</p>
+<p><strong>思路</strong><br />
+题目给出了三个条件句和一个唯一真话约束。可利用假设法分情况推理，也可将四个选项逐一代入验证。注意乙的话蕴含丙的话，利用此矛盾关系可快速定位。</p>
+<p><strong>步骤</strong><br />
+1. 符号化：设甲、乙、丙成绩分别为 A, B, C，互不相同。<br />
+   甲预测：$A &gt; B$；<br />
+   乙预测：$C &gt; B$ 且 $C &gt; A$；<br />
+   丙预测：$C &gt; B$。<br />
+   只有一人正确。<br />
+2. 观察蕴含：若乙预测正确，则 $C &gt; B$ 成立，即丙预测也正确，违背唯一真话 → 乙一定错误。<br />
+   若丙预测正确，则 $C &gt; B$ 成立，此时甲预测错误得 $A \le B$，结合 $C &gt; B$ 可知 $C &gt; B \ge A$，推得 $C &gt; A$ 且 $C &gt; B$，即乙预测也正确，矛盾 → 丙一定错误。<br />
+3. 既然乙、丙均错误，必然甲预测正确。由甲正确得 $A &gt; B$；乙错误得并非“$C &gt; B$ 且 $C &gt; A$”，即 $C \le B$ 或 $C \le A$；丙错误得 $C \le B$。联合得 $C \le B$ 且 $A &gt; B$，结合互不相同得 $A &gt; B &gt; C$，排序为甲、乙、丙。<br />
+4. 验证：甲说 A&gt;B 正确；乙说 C&gt;B 且 C&gt;A 错误；丙说 C&gt;B 错误，恰一人正确。因此选 A. 甲、乙、丙。<br />
+   （也可直接代入选项：A 选项甲&gt;乙&gt;丙，甲对，乙错，丙错，满足；B 乙&gt;甲&gt;丙，甲错，乙错，丙错，无人对；C 丙&gt;乙&gt;甲，甲错，乙对，丙对，两人对；D 甲&gt;丙&gt;乙，甲对，乙错，丙对，两人对；仅A符合。）</p>
+<p><strong>点评/变式</strong><br />
+- 这种“只有一真”的推理题，优先寻找陈述间的逻辑包含关系，可以省去逐一假设的麻烦。本题乙→丙，因此乙不能真；丙真时可由甲假推出乙真，故丙不能真，直接锁定甲真，效率极高。<br />
+- 变式训练：将条件改为“只有一人说假话”，或“恰有两人说对”，逻辑内核不变，仍需抓住矛盾与蕴含。也可增加人数、增加“至少有一人成绩相同”等条件，练习适应变化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-05.html">2019-文-05</a>（2019 · 中） 本题通过三人成绩预测的推理情境，考查逻辑分析与反证法的应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">推理判断</a></li>
+</ul>
+</div>
+</body>
+</html>

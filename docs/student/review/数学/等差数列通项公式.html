@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等差数列通项公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等差数列通项公式</h1><div class="review-mark" data-stem="等差数列通项公式"></div><div class="meta-card"><span><strong>考点</strong>等差数列通项公式</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：7</li>
+<li>真题数：6；年份跨度：2009–2024</li>
+<li>出现题位：填空12 填空14 解答17</li>
+<li>难度分布：易4 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：从第二项起，每一项与前一项的差等于同一个常数 $d$，即 $a_{n+1}-a_n=d$（常数）。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 + (n-1)d$；推广形式：$a_n = a_m + (n-m)d$。</li>
+<li><strong>等差中项</strong>：若 $a,A,b$ 成等差数列，则 $A=\dfrac{a+b}{2}$，即 $2A=a+b$。</li>
+<li><strong>前 $n$ 项和公式</strong>：
+  $$S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$$
+  其中已知 $a_n$ 时优先用第一个，已知 $d$ 时优先用第二个。</li>
+<li><strong>重要性质</strong>：若 ${a_n}$ 为等差数列，且 $m+n = p+q$（均为正整数），则
+  $$a_m + a_n = a_p + a_q$$
+  特别地，$a_1+a_n = a_2+a_{n-1} = \cdots$。</li>
+<li><strong>公差与单调性</strong>：$d&gt;0 \Rightarrow$ 递增；$d&lt;0 \Rightarrow$ 递减；$d=0 \Rightarrow$ 常数列。涉及 $S_n$ 最值时，常借助二次函数或 $a_n$ 的正负转折项求解。</li>
+</ul>
+<p>以上基础源自考纲要求，真题中通项公式常与求和结合，本质是“基本量 $a_1, d$”的方程思想。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>基本量法（首选）</strong><br />
+   将所有条件通过通项公式 $a_n = a_1 + (n-1)d$ 和前 $n$ 项和公式统一转化为关于 $a_1$ 与 $d$ 的方程（组），解出 $a_1,d$，再代入所求。  </li>
+<li>若给出若干项的和，如 $a_3+a_4=7,a_2+a_5=5$，直接写：<br />
+     $$(a_1+2d)+(a_1+3d)=7,\quad (a_1+d)+(a_1+4d)=5$$</li>
+<li>
+<p>若给出 $S_n$，例如 $S_3=-15$，用 $S_3 = 3a_1 + 3d$ 列方程。</p>
+</li>
+<li>
+<p><strong>利用性质简化（检验用）</strong><br />
+   当条件中有“两两和”且下标满足 $m+n=p+q$ 时，可直接使用 $a_m+a_n = a_p+a_q$ 验证或快速求解。但注意：若题目所给数值与性质矛盾（如错题数据），必须回到基本量法，不可硬套性质。</p>
+</li>
+<li>
+<p><strong>求通项后解决衍生问题</strong>  </p>
+</li>
+<li>求 $S_n$ 的最值：<br />
+     方法一：将 $S_n$ 写成 $n$ 的二次函数 $S_n = An^2 + Bn$，结合 $n \in \mathbb{N}^*$ 和对称轴求最值。<br />
+     方法二：解 $a_n \ge 0$（或 $\le 0$）找到正负转折项。</li>
+<li>
+<p>构造新数列（如取整函数）：先求出 ${a_n}$ 通项，逐项计算新数列的前几项，再求和。</p>
+</li>
+<li>
+<p><strong>含参数的等比条件</strong><br />
+   若等差数列 ${a_n}$ 的某三项成等比，则用等比中项列式：$a_{11}^2 = a_1 \cdot a_{13}$，全部转化为 $a_1,d$ 的方程，注意 $d \neq 0$ 等隐含条件。</p>
+</li>
+</ol>
+<p>通用流程：<strong>设 $a_1,d$ → 译条件为方程 → 解方程 → 回代目标 → 作答</strong>。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>方程组列式、计算错误</strong>：通项公式中的 $n-1$ 易误写为 $n$，如把 $a_5$ 写成 $a_1+5d$；解二元一次方程组时正负号、倍数关系易错。务必用 $a_1+(n-1)d$ 仔细核对每一项。</li>
+<li><strong>求和公式混淆</strong>：<br />
+  $$S_n = na_1 + \frac{n(n-1)}{2}d \quad\text{中}\quad \frac{n(n-1)}{2}d \ \text{不是}\ nd$$
+  尤其是计算 $S_{10}=10a_1+\frac{10\times 9}{2}d$，注意系数为 $45$，而非 $55$ 或 $10$。</li>
+<li><strong>忽略 $n$ 为正整数</strong>：求 $S_n$ 最值时，二次函数的对称轴可能不是整数，需取最接近的整数 $n$ 计算比较。</li>
+<li><strong>滥用下标和性质</strong>：只有在确定是等差数列时，$m+n=p+q \Rightarrow a_m+a_n=a_p+a_q$ 才成立。若题目故意构造多解（如 $a_3a_7=-16, a_4+a_6=0$），直接用性质可得 $a_4+a_6 = a_3+a_7 = 0$，简化运算，但要注意此时仍需求解方程组，而不是只靠性质得所有项。</li>
+<li><strong>遗漏多解情况</strong>：由 $a_3a_7=-16, a_3+a_7=0$ 可解得 $a_3=4, a_7=-4$ 或 $a_3=-4, a_7=4$，导致两个不同的等差数列，需全部写出。凡涉及乘积条件时，应考虑正负两种情况。</li>
+<li><strong>忽视公差为零</strong>：若无特殊说明，等差数列的公差 $d$ 可为零。当条件出现“等比”或明确 $d \neq 0$ 时，方可排除零公差。通项公式中 $d=0$ 为常数列，仍满足等差定义。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>  2024 新课标Ⅱ 第12题</h3>
+<p>已知等差数列 ${a_n}$ 前 $n$ 项和为 $S_n$，$a_3+a_4=7$，$a_2+a_5=5$，求 $S_{10}$。<br />
+<strong>思路</strong>  直接使用基本量法，设首项为 $a_1$，公差为 $d$，将两个和条件转化为 $a_1$ 与 $d$ 的方程，解出后代入 $S_{10}$ 公式。<br />
+<strong>步骤</strong><br />
+1. 由通项公式得：$a_3+a_4 = (a_1+2d)+(a_1+3d) = 2a_1+5</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-12.html">2024-新课标Ⅱ-12</a>（2024 · 易） 该题考查等差数列的通项与求和，通过解方程组求首项和公差，再计算前10项和。</li>
+<li><a href="../../exam/数学/2020-文-14.html">2020-文-14</a>（2020 · 易） 该题考查等差数列通项公式与前n项和公式的应用，通过已知条件求公差并计算前10项和。</li>
+<li><a href="../../exam/数学/2018-文-17.html">2018-文-17</a>（2018 · 易） 已知等差数列首项及前3项和，求通项公式及前n项和的最小值。</li>
+<li><a href="../../exam/数学/2016-文-17.html">2016-文-17</a>（2016 · 中） 等差数列通项公式与性质，结合取整函数求数列前10项和</li>
+<li><a href="../../exam/数学/2013-文-17.html">2013-文-17</a>（2013 · 中） 本题通过等差与等比数列综合条件求通项，并对特定间隔项进行求和。</li>
+<li><a href="../../exam/数学/2009-文-17.html">2009-文-17</a>（2009 · 易） 已知等差数列的项间关系求前n项和，利用方程思想解出首项与公差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1063-等差数列通项公式.html">等差数列通项公式</a></li>
+</ul>
+</div>
+</body>
+</html>

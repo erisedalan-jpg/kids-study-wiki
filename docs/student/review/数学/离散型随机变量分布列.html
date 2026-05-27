@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量分布列</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>离散型随机变量分布列</h1><div class="review-mark" data-stem="离散型随机变量分布列"></div><div class="meta-card"><span><strong>考点</strong>离散型随机变量分布列</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>离散型随机变量</strong>：若随机变量 $\xi$ 的全部可能取值是有限个或可列无限个，则称 $\xi$ 为离散型随机变量。</li>
+<li><strong>分布列</strong>：设 $\xi$ 的取值为 $x_1,x_2,\dots,x_i,\dots$，且 $P(\xi=x_i)=p_i$，则表格或公式<br />
+  $$
+  \begin{array}{c|ccc}
+  \xi &amp; x_1 &amp; x_2 &amp; \cdots \
+  \hline
+  P &amp; p_1 &amp; p_2 &amp; \cdots
+  \end{array}
+  $$
+  称为 $\xi$ 的分布列。性质：$p_i\ge0$；$\sum_{i} p_i=1$。</li>
+<li><strong>数学期望</strong>：$E(\xi)=\sum\limits_{i} x_i p_i$。它反映随机变量取值的平均水平。</li>
+<li><strong>概率计算基础</strong>：</li>
+<li>分层抽样：各层按比例抽取，层内常为不放回简单随机抽样。</li>
+<li>古典概型：$P(A)=\dfrac{\text{事件}A\text{包含的基本事件数}}{\text{基本事件总数}}$。</li>
+<li>超几何分布：若有 $N$ 件产品，其中 $M$ 件次品，不放回抽取 $n$ 件，则次品数 $X$ 服从超几何分布，$P(X=k)=\dfrac{C_M^k C_{N-M}^{n-k}}{C_N^n}$，本题中男工人数的分布本质上符合超几何分布的模型。</li>
+<li><strong>组合数与计数</strong>：分层后各层独立抽样，总情况数为各层抽样方式的乘积；计算概率时需注意“逐层抽取”与“整体混合抽取”的区别。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>通读题意，明确随机变量的实际意义</strong><br />
+   确定 $\xi$ 表示什么量，如“抽取的男工人数”。将所有可能取值一一列出（通常从最小值到最大值）。</li>
+<li><strong>拆解抽样过程，建立概率模型</strong>  </li>
+<li>若题目涉及分层抽样，先按比例确定各层抽取的个体数。</li>
+<li>判断抽样过程是否放回、各层之间是否独立，结合组合数或分步乘法计数原理，列出总样本空间及事件对应的基本事件数。</li>
+<li>若变量由多个独立来源的计数构成，可采用“分类+分步”的方法：先分析每个来源的取值组合，计算每种组合的概率，再将相同总量对应的概率相加。</li>
+<li><strong>逐个计算 $P(\xi=k)$，列分布列</strong><br />
+   对每个 $k$，找出所有使 $\xi=k$ 的（甲组男工人数，乙组男工人数）组合，利用古典概型或超几何概型分别计算概率并求和。计算时可直接套用组合数公式：<br />
+   $P(\xi=k)=\sum\limits_{i,j} \dfrac{C_{m_1}^{i}C_{n_1}^{a-i}}{C_{N_1}^{a}} \times \dfrac{C_{m_2}^{j}C_{n_2}^{b-j}}{C_{N_2}^{b}}$，其中 $i+j=k$，并保证取值不超出各组容量。</li>
+<li><strong>检验分布列是否正确</strong><br />
+   所有概率之和必须等于 $1$。若发现 $\sum p_i \neq 1$，检查取值是否遗漏或重复，以及组合数边界是否出错。</li>
+<li><strong>计算数学期望</strong><br />
+   套用期望公式 $E(\xi)=\sum k \cdot P(\xi=k)$，注意加权求和时代入数值而非概率表达式，避免低级的四则运算错误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分层抽样与性别混淆</strong><br />
+  题中“层”是按甲、乙组划分，不是按性别。第（Ⅰ）问抽取人数只与各组总人数成比例，与组内男女人数无关，切忌看到男女工人数就去按性别分层。</li>
+<li><strong>男工人数的计数范围想当然</strong><br />
+  比如认为抽取的 $3$ 人全部可能来自某一个组，但实际上甲组抽 $2$ 人、乙组抽 $1$ 人，因此男工人数 $\xi$ 的最大值受各组抽取人数的限制（甲最多已抽 $2$ 人，乙最多抽 $1$ 人），遗漏限制条件会导致取值超出实际可能。</li>
+<li><strong>概率模型选择错误</strong><br />
+  “层内不放回简单随机抽样”对应超几何分布（组合数模型），而非二项分布。若误用放回抽样或独立重复试验的概率公式，必将全盘皆输。</li>
+<li><strong>分布列概率之和不等于1时强行不检查</strong><br />
+  不验证概率和等于 $1$，可能掩盖了某取值下的概率计算错误或遗漏组合。例如本题中 $\xi=2$ 时，可能有“甲组2男、乙组0男”和“甲组1男1女、乙组1男”等不同情形，漏算任何一种都会使总概率偏离 $1$。</li>
+<li><strong>期望计算中混淆变量取值与概率</strong><br />
+  用分布列代入 $E(\xi)$ 时，错将 $x_i$ 与 $p_i$ 位置颠倒，或算完 $E(\xi)$ 后忘记单位、未化简分数等低级失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2009年理-20。某车间甲组10人（4女），乙组5人（3女），按分层抽样从两组共抽3人进行考核（层内不放回）。<br />
+（Ⅰ）求从甲、乙组各抽取的人数；<br />
+（Ⅱ）求从甲组抽取的工人中恰有1名女工人的概率；<br />
+（Ⅲ）记 $\xi$ 为抽取的3名工人中男工人数，求 $\xi$ 的分布列及数学期望。</p>
+<p><strong>思路</strong>：<br />
+（Ⅰ）分层抽样按人数比，甲组10人、乙组5人，总15人，抽3人，比例为 $10:5=2:1$，故甲抽2人，乙抽1人。<br />
+（Ⅱ）在甲组抽2人且恰有1名女工，即要求1男1女。甲组有男工 $10-4=6$ 人，女工4人，用组合数直接计算古典概率。<br />
+（Ⅲ）$\xi$ 是甲、乙两组男工人数之和。甲组抽2人，设男工数 $X$；乙组抽1人，设男工数 $Y$。则 $\xi=X+Y$，$X$ 可能取 $0,1,2$，$Y$ 取 $0,1$。分别算出 $(X,Y)$ 每种组合的概率，再按 $\xi$ 的取值加总，列出分布列并求期望。</p>
+<p><strong>步骤</strong>：<br />
+1. <strong>（Ⅰ）求各层抽取人数</strong><br />
+   甲组人数:乙组人数= $10:5=2:1$，总抽取3人，故甲抽取 $3 \times \frac{2}{3}=2$ 人，乙抽取 $3 \times \frac{1}{3}=1$ 人。<br />
+2. <strong>（Ⅱ）甲组恰有1名女工的概率</strong><br />
+   甲组共有 $C_{10}^2$ 种抽法。恰1名女工（即1男1女）有 $C_6^1 C_4^1$ 种。概率<br />
+   $$P=\frac{C_6^1 C_4^1}{C_{10}^2}=\frac{6\times 4}{45}=\frac{24}{45}=\frac{8}{15}.$$
+3. <strong>（Ⅲ）求 $\xi$ 的分布列与期望</strong><br />
+   - 甲组：男6女4，抽2人。$X$ 的分布：<br />
+     $P(X=0)=\frac{C_4^2}{C_{10}^2}=\frac{6}{45}$，<br />
+     $P(X=1)=\frac{C_6^1 C_4^1}{C_{10}^2}=\frac{24}{45}$，<br />
+     $P(X=2)=\frac{C_6^2}{C_{10}^2}=\frac{15}{45}$。
+   - 乙组：男2女3，抽1人。$Y$ 的分布：<br />
+     $P(Y=0)=\frac{C_3^1}{C_5^1}=\frac{3}{5}$，$P(Y=1)=\frac{C_2^1}{C_5^1}=\frac{2}{5}$。
+   - $\xi=X+Y$ 的可能取值：$0,1,2,3$。<br />
+     $P(\xi=0)=P(X=0)P(Y=0)=\frac{6}{45}\times\frac{3}{5}=\frac{18}{225}=\frac{2}{25}$；<br />
+     $P(\xi=1)=P(X=1)P(Y=0)+P(X=0)P(Y=1)=\frac{24}{45}\times\frac{3}{5}+\frac{6}{45}\times\frac{2}{5}=\frac{72+12}{225}=\frac{84}{225}=\frac{28}{75}$；<br />
+     $P(\xi=2)=P(X=2)P(Y=0)+P(X=1)P(Y=1)=\frac{15}{45}\times\frac{3}{5}+\frac{24}{45}\times\frac{2}{5}=\frac{45+48}{225}=\frac{93}{225}=\frac{31}{75}$；<br />
+     $P(\xi=3)=P(X=2)P(Y=1)=\frac{15}{45}\times\frac{2}{5}=\frac{30}{225}=\frac{2}{15}$。
+   - 检验：总和 $\frac{2}{25}+\frac{28}{75}+\frac{31}{75}+\frac{2}{15}=\frac{6}{75}+\frac{28}{75}+\frac{31}{75}+\frac{10}{75}=\frac{75}{75}=1$，正确。
+   - 分布列为：
+     $$
+     \begin{array}{c|cccc}
+     \xi &amp; 0 &amp; 1 &amp; 2 &amp; 3 \
+     \hline
+     P &amp; \frac{2}{25} &amp; \frac{28}{75} &amp; \frac{31}{75} &amp; \frac{2}{15}
+     \end{array}
+     $$
+   - 数学期望：<br />
+     $$E(\xi)=0\times\frac{2}{25}+1\times\frac{28}{75}+2\times\frac{31}{75}+3\times\frac{2}{15}=\frac{28}{75}+\frac{62}{75}+\frac{30}{75}=\frac{120}{75}=\frac{8}{5}.$$</p>
+<p><strong>点评/变式</strong>：<br />
+本题完美呈现了“分层抽样 → 古典概型 → 离散型随机变量分布列与期望”的标准化命题链。解题关键在于将总的随机变量拆分为两个独立层的计数之和，利用乘法原理和分类相加得出概率。常见变式是将“各层抽取人数”改为未知，让考生先由某些条件确定抽取方案；或在期望问题后追加“方差”计算，或引入“不放回”变为不同组间的超几何混合。无论怎样变，<strong>先固定抽样结构 → 再建立各层变量分布 → 最后合成总分布</strong>这一思维流程是恒定的，值得反复演练。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-20.html">2009-理-20</a>（2009 · 中） 该题考查分层抽样方法、组合概率计算以及离散型随机变量分布列与期望的求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1038-离散型随机变量分布列.html">离散型随机变量分布列</a></li>
+</ul>
+</div>
+</body>
+</html>

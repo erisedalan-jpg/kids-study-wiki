@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合命题的真假判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复合命题的真假判断</h1><div class="review-mark" data-stem="复合命题的真假判断"></div><div class="meta-card"><span><strong>考点</strong>复合命题的真假判断</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>命题</strong>：可以判断真假的陈述句。真值：真（T）或假（F）。</li>
+<li><strong>简单命题</strong>：不含逻辑联结词的命题；<strong>复合命题</strong>：由简单命题用逻辑联结词联结而成。</li>
+<li><strong>逻辑联结词</strong>：</li>
+<li><strong>或</strong>（$\lor$）：两个命题中<strong>至少一个为真</strong>，则复合命题为真；全假才假。</li>
+<li><strong>且</strong>（$\land$）：两个命题中<strong>两个都为真</strong>，则复合命题为真；一假即假。</li>
+<li><strong>非</strong>（$\lnot$）：对一个命题进行否定，<strong>真变假，假变真</strong>。</li>
+<li><strong>真值表</strong>（核心）：
+  | $p$ | $q$ | $p \lor q$ | $p \land q$ | $\lnot p$ |
+  |:---:|:---:|:---------:|:----------:|:-------:|
+  | T | T | T | T | F |
+  | T | F | T | F | F |
+  | F | T | T | F | T |
+  | F | F | F | F | T |</li>
+<li><strong>判断复合命题真假的根本原则</strong>：先求出各简单命题的真值，再依据真值表自内向外逐层计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>拆解复合命题</strong>：将复合命题按括号、逻辑联结词分层，识别出最内层的简单命题。</li>
+<li><strong>判定简单命题真假</strong>：利用函数性质、不等式、几何性质等知识判断每个简单命题的真假。尤其注意题干中可能隐含的全称、特称以及单调性、奇偶性等易错点。</li>
+<li><strong>逐层代入真值表</strong>：从内层向外层，严格按照 $\lor$（有真则真）、$\land$（有假则假）、$\lnot$（取反）计算，直至得到整个复合命题的真假。</li>
+<li><strong>选项比对</strong>：若为选择题，可将选项涉及的复合命题直接计算，避免多余运算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>“或（$\lor$）”与“且（$\land$）”真值混淆</strong>：误认为“或”需要两个都真（实为至少一个真）；误认为“且”只需一个真（实为两个都真）。</li>
+<li><strong>否定变换出错</strong>：将“$p_1 \lor p_2$”的否定错写成“$\lnot p_1 \lor \lnot p_2$”（正确为 $\lnot p_1 \land \lnot p_2$）；“$p_1 \land p_2$”的否定错写成“$\lnot p_1 \land \lnot p_2$”（正确为 $\lnot p_1 \lor \lnot p_2$）。</li>
+<li><strong>简单命题本身的真假判断失误</strong>：如真题中的 $p_2$：$y=2^x+2^{-x}$，误认为在 $\mathbb{R}$ 上是减函数。实际上该函数为偶函数，在 $(0,+\infty)$ 上增，在 $(-\infty,0)$ 上减，故为假命题。凡涉及函数单调性时必须明确区间。</li>
+<li><strong>忽略隐含条件或全称量词</strong>：命题中若含有“在 $\mathbb{R}$ 上”“任意”等字眼，只要存在一个反例即判定为假。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2010-理-05）</h3>
+<p>已知命题 $p_1$：函数 $y=2^x-2^{-x}$ 在 $\mathbb{R}$ 上是增函数，<br />
+$p_2$：函数 $y=2^x+2^{-x}$ 在 $\mathbb{R}$ 上是减函数，<br />
+则在复合命题 $q_1$：$p_1 \lor p_2$，$q_2$：$p_1 \land p_2$，$q_3$：$(\lnot p_1) \lor p_2$，$q_4$：$p_1 \land (\lnot p_2)$ 中，真命题是（ ）<br />
+A. $q_1, q_3$　B. $q_2, q_3$　C. $q_1, q_4$　D. $q_2, q_4$</p>
+<h3><strong>思路</strong></h3>
+<p>先分别判定 $p_1$ 与 $p_2$ 的真假，再利用真值表逐层计算 $q_1\sim q_4$ 的真值，最后看哪个选项的命题全部为真。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>判定 $p_1$</strong>：对于 $f(x)=2^x-2^{-x}$，其导数 $f'(x)=2^x\ln 2 + 2^{-x}\ln 2 &gt;0$ 恒成立，故 $f(x)$ 在 $\mathbb{R}$ 上严格递增，<strong>$p_1$ 为真（T）</strong>。</li>
+<li><strong>判定 $p_2$</strong>：对于 $g(x)=2^x+2^{-x}$，$g(-x)=g(x)$ 为偶函数。取 $x_1=0, x_2=1$，有 $g(0)=2$，$g(1)=2.5$，$g(0)&lt;g(1)$ 不满足减函数定义，故<strong>$p_2$ 为假（F）</strong>。</li>
+<li><strong>逐层计算 $q_i$</strong>：</li>
+<li>$q_1=p_1\lor p_2 = T\lor F = T$。</li>
+<li>$q_2=p_1\land p_2 = T\land F = F$。</li>
+<li>$q_3=(\lnot p_1)\lor p_2 = (\lnot T)\lor F = F\lor F = F$。</li>
+<li>$q_4=p_1\land (\lnot p_2) = T\land (\lnot F) = T\land T = T$。</li>
+<li>真命题为 $q_1$ 和 $q_4$，故选 <strong>C</strong>。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题本质是“真值表+函数性质”，函数单调性的准确判断是前提。遇到 $y=a^x \pm a^{-x}$ 这类函数，可通过导数或特殊值快速辨别：形如 $a^x-a^{-x}$ 必为奇函数且单调；$a^x+a^{-x}$ 为偶函数（双曲余弦型），在 $\mathbb{R}$ 上不单调。</li>
+<li><strong>变式1</strong>：若将 $p_2$ 改为“$y=2^x+2^{-x}$ 在 $(0,+\infty)$ 上为增函数”，则 $p_2$ 为真，此时 $q_1,q_2,q_4$ 均为真，$q_3$ 为假。</li>
+<li><strong>变式2</strong>：解此类选择题可先看 $q_1$ 和 $q_2$，发现 $q_1$ 为真而 $q_2$ 为假，可立即排除 B、D，只需在 A、C 中再判断 $q_3$ 或 $q_4$ 即可快速得解，节省时间。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-05.html">2010-理-05</a>（2010 · 中） 本题通过判断两个指数型函数的单调性，考查复合命题的真假判定。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/798-复合命题的真假判断.html">复合命题的真假判断</a></li>
+</ul>
+</div>
+</body>
+</html>

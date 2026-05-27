@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式恒成立</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>不等式恒成立</h1><div class="review-mark" data-stem="不等式恒成立"></div><div class="meta-card"><span><strong>考点</strong>不等式恒成立</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：5；年份跨度：2012–2020</li>
+<li>出现题位：解答21 选择11 选择12</li>
+<li>难度分布：中3 难2</li>
+</ul>
+<h2>知识精要</h2>
+<p>不等式恒成立问题的核心是<strong>转化为函数的最值问题</strong>。设函数 $f(x)$ 在区间 $D$ 上有定义，则：
+- $f(x) \ge m$ 恒成立 $\Leftrightarrow m \le f(x)<em _max="\max">{\min}$；
+- $f(x) \le m$ 恒成立 $\Leftrightarrow m \ge f(x)</em>$；
+- 存在 $x \in D$ 使 $f(x) \ge m$ $\Leftrightarrow m \le f(x)_{\max}$；存在性类似取最大值。</p>
+<p>常用手段有：
+1. <strong>构造函数法</strong>：将原不等式变形为 $h(x) \ge 0$（或 $\le 0$）的形式，直接研究 $h(x)$ 在给定区间的最值，借助导数分析单调性。
+2. <strong>分离参数法</strong>：将参数 $a$ 分离到不等式一侧，得到 $a \ge g(x)$ 恒成立或 $a \le g(x)$ 恒成立，转化为求 $g(x)$ 的值域（最值）。此法需注意定义域及分离时不等号方向。
+3. <strong>分类讨论法</strong>：含参函数无法直接统一处理时，对参数分段讨论（如 $a\ge 1$，$0&lt;a&lt;1$，$a\le 0$），借助导数、特殊点（如端点、零点）确定满足条件的参数范围。
+4. <strong>端点效应与必要性探路</strong>：若不等式在端点处取等，常可由端点导数值得到参数的必要条件，再证明其充分性，降低讨论难度。
+5. <strong>数形结合</strong>：对于含指数、对数的超越不等式，可分别画出两侧函数图像，利用单调性及临界位置确定参数范围（如 $4^x &lt; \log_a x$ 问题需考虑 $0&lt;a&lt;1$ 且曲线临界相切或交点位置）。</p>
+<p><strong>适用条件</strong>：函数通常连续可导，区间可为开区间、闭区间或半开区间。隐含条件务必关注：真数 $&gt;0$，底数 $&gt;0$ 且 $\neq 1$，定义域优先。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>明确恒成立类型，化为最值问题</strong><br />
+   把不等式统一为 $F(x, a) \ge 0$（$\le 0$）或 $a \ge g(x)$（$a \le g(x)$）。若采用普通构造函数，则需求 $F(x)$ 的最大/小值；若分离参数，则需求 $g(x)$ 的值域（最值）。</p>
+</li>
+<li>
+<p><strong>规范求导，分析单调性</strong><br />
+   对目标函数求导，通分、因式分解，找出导数的零点及正负区间，列出单调表。注意定义域内可能存在的不可导点或间断点。</p>
+</li>
+<li>
+<p><strong>求出最值（或临界值）</strong><br />
+   若区间为闭区间，比较端点与极值；若区间为开区间，常需求极限（如 $x \to 0^+$ 或 $x \to +\infty$），可利用洛必达法则或放缩得到确界。特别关注等号成立的条件是否在定义域内。</p>
+</li>
+<li>
+<p><strong>根据不等式方向写出参数范围</strong><br />
+   对于 $a \le g(x)<em _max="\max">{\min}$，$a$ 小于等于最小值；对于 $a \ge g(x)</em>$，$a$ 大于等于最大值。若恒成立不等式含等号，参数取值包含该界值。</p>
+</li>
+<li>
+<p><strong>含参讨论时的策略（补充）</strong><br />
+   当导数符号依赖参数时，可按参数临界值（如导数零点、定义域边界）分段，利用特殊点（如 $x=0$，$x=1$）验证可行性，必要时代入端点或零点建立不等式，再验证充分性。</p>
+</li>
+<li>
+<p><strong>数形结合快速选填</strong><br />
+   对于小题，画出简图，利用单调性与特殊点（如 $x=1$ 时两函数值相等）得到临界条件，解出参数范围。如指数与对数混合可考虑同底转化或利用反函数对称性。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域导致错误</strong>：对数真数 $&gt;0$，分母 $\neq 0$，偶次根号下非负等。例如 $f(x)=2\ln x+1$ 定义域 $(0,+\infty)$，解题时务必先写出定义域。</li>
+<li><strong>分离参数时未讨论正负号</strong>：不等式两边同除以含 $x$ 的式子时，未考虑其正负会改变不等号方向，导致参数范围错误。若符号不确定，应分类讨论或避免分离。</li>
+<li><strong>误将“存在性”当“恒成立”处理</strong>：“存在 $x$ 使 $f(x)&gt;a$”应求 $f(x)<em _min="\min">{\max} &gt; a$，而非 $f(x)</em> &gt; a$。极易混淆，需看清题意。</li>
+<li><strong>临界等号不检验</strong>：求出参数范围后，需检验参数取边界值时等号能否成立（即原不等式是否可取等）。若等号无法同时成立，边界可能不可取。</li>
+<li><strong>构造函数后未关注最值点是否在区间内</strong>：利用导数求极值时，必须验证极值点是否属于所给区间。若不在，最值在端点取得。</li>
+<li><strong>滥用“端点效应”而不证明充分性</strong>：只有端点处函数值为零且导数为零时，才可快速得出必要性条件，但必须补证充分性，否则丢分。</li>
+<li><strong>对数底数范围的遗忘</strong>：如 $4^x &lt; \log_a x$，由 $x\in(0,\frac{1}{2}]$ 时 $4^x&gt;1$，要使 $\log_a x$ 更大，必须 $0&lt;a&lt;1$。忘记讨论底数范围直接出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2020-文-21</h3>
+<p><strong>题目</strong>：已知 $f(x)=2\ln x+1$．(1) 若 $f(x) \le 2x+c$，求 $c$ 的取值范围；(2) 设 $a&gt;0$，讨论函数 $g(x)=\frac{f(x)-f(a)}{x-a}$ 的单调性。（注：原题第二问省略，此处仅讨论第一问恒成立）</p>
+<p><strong>思路</strong>：移项构造 $h(x)=2\ln x+1-2x-c \le 0$ 恒成立，即 $h(x)_{\max} \le 0$。求导得单调性，找到最大值点为 $x=1$，代入即得 $c$ 的范围。</p>
+<p><strong>步骤</strong>：
+由 $f(x) \le 2x+c$，得 $2\ln x+1-2x-c \le 0$ 对任意 $x&gt;0$ 恒成立。
+令 $h(x)=2\ln x+1-2x-c\ (x&gt;0)$，
+则 $h'(x)=\frac{2}{x}-2=\frac{2(1-x)}{x}$。
+当 $0&lt;x&lt;1$ 时，$h'(x)&gt;0$，$h(x)$ 单调递增；
+当 $x&gt;1$ 时，$h'(x)&lt;0$，$h(x)$ 单调递减。
+所以 $h(x)_{\max}=h(1)=2\ln 1+1-2-c=-1-c$。
+要使 $h(x) \le 0$ 恒成立，只需 $-1-c \le 0$，解得 $c \ge -1$。
+故 $c$ 的取值范围是 $[-1,+\infty)$。</p>
+<p><strong>点评/变式</strong>：本题为最基础的移项构造函数法，最值唯一且在定义域内。变式：若改为“存在 $x$ 使 $f(x) \le 2x+c$”，则只需 $h(x)_{\min} \le 0$，即 $c \ge -1$ 反而变为无限制，应注意区分。若函数含有参数，常需对参数分类讨论。</p>
+<h3>代表题2：2017-文-21</h3>
+<p><strong>题目</strong>：已知 $f(x)=(1-x^2)e^x$。(1) 讨论 $f(x)$ 的单调性；(2) 当 $x \ge 0$ 时，$f(x) \le ax+1$，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>：第(2)问为含参恒成立，构造函数 $h(x)=f(x)-ax-1$ 或分离参数后再讨论。因 $x \ge 0$，且 $f(x)=(1-x)(1+x)e^x$，可尝试分离参数：$a \ge \frac{(1-x^2)e^x-1}{x}$（$x&gt;0$）并研究右侧函数的最值，但分离后的极限处理较复杂。标准解答常用分类讨论：设 $h(x)=(1-x^2)e^x-ax-1\le 0$，注意到 $h(0)=0$，可利用端点效应得出 $a$ 的必要条件，再证明充分性。</p>
+<p><strong>步骤</strong>（分类讨论法）：
+令 $h(x)=(1-x^2)e^x-ax-1,\ x\ge 0$，则 $h(0)=0$，$h'(x)=(-x^2-2x+1)e^x-a$，$h'(0)=1-a$。
+$h(x) \le 0$ 恒成立且 $h(0)=0$，则必有 $h'(0) \le 0$（否则在0附近 $h(x)&gt;0$），得 $a \ge 1$。这是必要条件。
+现证 $a \ge 1$ 时恒成立：
+当 $a \ge 1$ 时，$h(x) \le (1-x^2)e^x-x-1$，令 $H(x)=(1-x^2)e^x-x-1$。
+$H'(x)=(-x^2-2x+1)e^x-1$，$H''(x)=-(x^2+4x+1)e^x &lt;0$ 对 $x&gt;0$ 成立，故 $H'(x)$ 在 $[0,+\infty)$ 递减，$H'(x) \le H'(0)=0$，所以 $H(x)$ 递减，$H(x) \le H(0)=0$，从而 $h(x) \le H(x) \le 0$。
+故 $a \ge 1$ 时恒成立，而 $a&lt;1$ 时 $h'(0)&gt;0$，存在某邻域 $h(x)&gt;0$，不成立。
+综上，$a$ 的取值范围是 $[1,+\infty)$。</p>
+<p><strong>点评/变式</strong>：解答中先探路再证明是常见手段。若直接分离参数：$x&gt;0$ 时 $a \ge \frac{(1-x^2)e^x-1}{x}$，设 $g(x)$，需两次或三次求导得 $g(x)$ 单调性，且 $x \to 0^+$ 极限为1（洛必达），也得到 $a \ge 1$。此类题型注意讨论 $x=0$ 时不等式自动成立。变式：若 $x \ge 0$ 时 $f(x) \ge ax+1$，解法类似，从端点导数得到 $a \le 1$。</p>
+<h3>代表题3：2014-理-21</h3>
+<p><strong>题目</strong>：已知 $f(x)=e^x</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-21.html">2020-文-21</a>（2020 · 中） 本题考查利用导数解决不等式恒成立问题及含参函数单调性判定。</li>
+<li><a href="../../exam/数学/2017-文-21.html">2017-文-21</a>（2017 · 中） 本题考查含参数的函数单调性讨论，以及不等式恒成立条件下求参数取值范围。</li>
+<li><a href="../../exam/数学/2014-理-21.html">2014-理-21</a>（2014 · 难） 考查利用导数研究函数单调性，结合不等式恒成立求参数最值，并估计对数值。</li>
+<li><a href="../../exam/数学/2013-文-12.html">2013-文-12</a>（2013 · 中） 存在正数x使2^x(x-a)&lt;1成立，利用存在量词转化为最值问题求参数a的取值范围。</li>
+<li><a href="../../exam/数学/2012-文-11.html">2012-文-11</a>（2012 · 难） 本题考查给定区间上指数与对数不等式恒成立求参数范围的问题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">不等式恒成立</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>前n项和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>前n项和</h1><div class="review-mark" data-stem="前n项和"></div><div class="meta-card"><span><strong>考点</strong>前n项和</span><span><strong>权重</strong>27</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：27</li>
+<li>真题数：11；年份跨度：2009–2023</li>
+<li>出现题位：填空13 填空14 填空16 解答17 选择3 选择6 选择8</li>
+<li>难度分布：中5 易6</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>等差数列的前 $n$ 项和</strong></li>
+<li>公式 1：$S_n = \frac{n(a_1 + a_n)}{2}$ （已知首末项，用此公式）。结合通项公式 $a_n = a_1 + (n-1)d$。</li>
+<li>公式 2：$S_n = n a_1 + \frac{n(n-1)}{2}d$ （已知首项和公差，用此公式）。可视为关于 $n$ 的二次函数（$d \neq 0$），常数项为 $0$，对称轴用于求最值。</li>
+<li>
+<p>重要性质：在等差数列中，$S_{2k-1} = (2k-1)a_k$，特别地，$S_9=9a_5$，$S_5=5a_3$。此性质可快速转化项与和的关系。</p>
+</li>
+<li>
+<p><strong>等比数列的前 $n$ 项和</strong></p>
+</li>
+<li>必须考虑公比 $q$ 是否等于 $1$。</li>
+<li>当 $q=1$ 时，$S_n = n a_1$。</li>
+<li>当 $q \neq 1$ 时，$S_n = \frac{a_1(1 - q^n)}{1 - q}$。</li>
+<li>
+<p>重要性质：若公比 $q \neq -1$，等比数列中，依次等长的片段和仍构成等比数列。例如，$S_4, S_8 - S_4, S_{12} - S_8$ 成等比数列，公比为原公比的片段长度次方（此处为 $q^4$）。</p>
+</li>
+<li>
+<p><strong>递推关系求 $S_n$</strong></p>
+</li>
+<li>利用核心恒等式 $a_n = \begin{cases} S_1 &amp; (n=1) \ S_n - S_{n-1} &amp; (n \geq 2) \end{cases}$，将给定的 $a_n$ 与 $S_n$ 的关系式转化为仅含 $S_n$ 的递推式，解出 $S_n$。典型如 $a_{n+1} = S_{n+1}S_n \implies S_{n+1} - S_n = S_{n+1}S_n \implies \frac{1}{S_n} - \frac{1}{S_{n+1}} = 1$，构造等差数列。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>基本量法（方程思想）</strong>：</li>
+<li>对于等差/等比数列，将问题归结为首项 $a_1$ 和公差 $d$（或公比 $q$）的方程组。</li>
+<li>利用给定的 $S_n$ 条件代入对应的前 $n$ 项和公式，联立方程求解。这是解决题干中明确给出和的条件时的通用思路。</li>
+<li>
+<p>注意区分等比数列中 $q=1$ 的情况，若方程出现矛盾，则排除 $q=1$。</p>
+</li>
+<li>
+<p><strong>性质巧用法（整体代入）</strong>：</p>
+</li>
+<li><strong>等比片段和</strong>：见到 $S_m, S_{2m}$ 等条件，优先考虑利用 $S_m, S_{2m}-S_m, S_{3m}-S_{2m}$ 成等比数列的性质，避免求解 $a_1$ 和 $q$ 的复杂运算。特别适用于 $S_4, S_6$ 求 $S_8$ 这类问题。</li>
+<li>
+<p><strong>等差中项与和</strong>：见到 $S_n$ 与特定项（如 $a_3, a_5$）的关系，直接用性质 $S_{2k-1} = (2k-1)a_k$ 进行转化。</p>
+</li>
+<li>
+<p><strong>函数的视角</strong>：</p>
+</li>
+<li>
+<p>将等差数列的 $S_n = \frac{d}{2}n^2 + (a_1 - \frac{d}{2})n$ 看作 $n$ 的二次函数，用来解决最值问题（如 $S_n$ 最大时 $n$ 的值）。通过配方求对称轴，找最近的整数点。</p>
+</li>
+<li>
+<p><strong>构造法求通项/求和</strong>：</p>
+</li>
+<li>遇到 $a_n$ 与 $S_n$ 的混合递推，消去 $a_n$（或消去 $S_n$），构造关于 $S_n$（或 $a_n$）的新等差/等比数列。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略 $q=1$ 的讨论</strong>：使用等比数列求和公式 $S_n = \frac{a_1(1-q^n)}{1-q}$ 时，必须明确 $q \neq 1$。若题目未给定 $q \neq 1$，解题第一步应先检验 $q=1$ 是否满足条件。</li>
+<li><strong>等比片段和性质的条件</strong>：性质 $S_m, S_{2m}-S_m, S_{3m}-S_{2m}$ 成等比的前提是公比 $q \ne -1$。若 $q=-1$，片段和可能为 $0$，不构成等比。</li>
+<li><strong>项数搞错</strong>：利用公式时，注意 $n$ 是项数。求片段和 $S_{2m}-S_m$ 时，其项数是 $m$，公比应为 $q^m$。</li>
+<li><strong>符号陷阱</strong>：在方程化简或等量代换时，移项易出现符号错误，尤其是代入 $S_n$ 公式时分子分母的负号处理。</li>
+<li><strong>二次函数最值点</strong>：用二次函数求 $S_n$ 最值时，对称轴 $n = -\frac{a_1 - d/2}{d}$，若计算得小数，需比较相邻两个整数对应的 $S_n$ 值，不能简单四舍五入。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2023-新课标Ⅱ-08</h3>
+<ul>
+<li><strong>题目</strong>：等比数列 ${a_n}$，$S_4=-5$，$S_6=21S_2$，求 $S_8$。</li>
+<li><strong>思路</strong>：目标求 $S_8$，已知 $S_4$ 和 $S_6$ 与 $S_2$ 的关系，可直接利用等比数列片段和性质，即 $S_2, S_4-S_2, S_6-S_4, S_8-S_6$ 成等比数列。</li>
+<li><strong>步骤</strong>：</li>
+<li>由题意 $S_4=-5 \ne 0$，知 $q \ne -1$，片段和性质可用。</li>
+<li>设等比数列公比为 $q$，则有 $(S_4 - S_2)^2 = S_2 \cdot (S_6 - S_4)$。</li>
+<li>将 $S_6 = 21S_2$ 代入得：$(-5 - S_2)^2 = S_2(21S_2 + 5)$。</li>
+<li>展开整理得：$20S_2^2 - 10S_2 - 25 = 0 \implies 4S_2^2 - 2S_2 - 5 = 0$。</li>
+<li>解出 $S_2 = \frac{1 \pm \sqrt{21}}{4}$。再应用等比性质 $S_4, S_8-S_4, \dots$ 成等比，公比为 $q^4$。</li>
+<li>亦可由 $S_4, S_6, S_8$ 关系：$(S_6 - S_4)^2 = (S_4 - S_2)(S_8 - S_6)$，解得 $S_8 = -85$。</li>
+<li><strong>点评/变式</strong>：此题若用基本量法，需设 $a_1, q$ 列方程，会涉及高次方程，运算量大且易错。优先使用性质是秒杀此类题型的关键。变式训练：已知 $S_2=7, S_6=91$，求 $S_4$。</li>
+</ul>
+<h3>代表题2：2010-文-17</h3>
+<ul>
+<li><strong>题目</strong>：等差数列 ${a_n}$，$a_3=5, a_{10}=-9$，求通项及前 $n$ 项和 $S_n$ 的最大值及对应 $n$。</li>
+<li><strong>思路</strong>：用基本量法解出 $a_1$ 和 $d$，写出 $S_n$ 的二次函数表达式，利用二次函数对称轴求最大值。</li>
+<li><strong>步骤</strong>：</li>
+<li>由 $a_3 = a_1 + 2d = 5$，$a_{10} = a_1 + 9d = -9$，两式相减得 $7d = -14 \implies d = -2$。</li>
+<li>代入得 $a_1 = 5 - 2(-2) = 9$。</li>
+<li>写出前 $n$ 项和：$S_n = n \cdot 9 + \frac{n(n-1)}{2}(-2) = -n^2 + 10n$。</li>
+<li>看作二次函数 $f(n) = -(n-5)^2 + 25$，开口向下，对称轴 $n=5$。</li>
+<li>故当 $n=5$ 时，$S_n$ 取得最大值 $S_5 = 25$。</li>
+<li><strong>点评/变式</strong>：等差数列 $S_n$ 的最值问题，核心是找到变号项。因为 $d&lt;0$，数列递减，当 $n \le 5$ 时 $a_n &gt; 0$，$n&gt;5$ 时 $a_n &lt; 0$，故 $S_5$ 最大。变式：若 $S_3=S_{11}$，求 $n$ 为何值时 $S_n$ 最大。</li>
+</ul>
+<h3>代表题3：2015-理-16</h3>
+<ul>
+<li><strong>题目</strong>：数列 ${a_n}$ 前 $n$ 项和 $S_n$，$a_1=-1$，且 $a_{n+1}=S_{n+1}S_n$，求 $S_n$。</li>
+<li><strong>思路</strong>：利用 $a_{n+1}=S_{n+1}-S_n$，将递推关系转化为关于 $S_n$ 的等式，构造等差数列求 $S_n$。</li>
+<li><strong>步骤</strong>：</li>
+<li>由 $a_{n+1} = S_{n+1} - S_n$ 及已知条件得：$S_{n+1} - S_n = S_{n+1}S_n$。</li>
+<li>等式两边同除以 $S_{n+1}S_n$（须判断 $S_n \ne 0$，可由 $a_1=-1$ 递归验证），得：$\frac{1}{S_n} - \frac{1}{S_{n+1}} = 1$。</li>
+<li>整理得：$\frac{1}{S_{n+1}} - \frac{1}{S_n} = -1$。</li>
+<li>数列 $\left{\frac{1}{S_n}\right}$ 是首项为 $\frac{1}{S_1} = \frac{1}{a_1} = -1$，公差为 $-1$ 的等差数列。</li>
+<li>所以 $\frac{1}{S_n} = -1 + (n-1)(-1) = -n$，因此 $S_n = -\frac{1}{n}$。</li>
+<li><strong>点评/变式</strong>：形如 $a_{n+1} = f(S_n, S_{n+1})$ 的递推，必须用 $a_{n+1} = S_{n+1}-S_n$ 消去 $a$。同除以积项是构造倒等差数列的标准动作。变式：$a_1=1, S_{n+1} = 4a_n + 2$，求 $S_n$。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-08.html">2023-新课标Ⅱ-08</a>（2023 · 中） 本题主要考查等比数列的前n项和公式及性质，利用已知S₄、S₆与S₂的关系求S₈，体现整体代换思想。</li>
+<li><a href="../../exam/数学/2022-文-13.html">2022-文-13</a>（2022 · 易） 已知等差数列前2项和与第3项的关系，求公差。</li>
+<li><a href="../../exam/数学/2020-文-06.html">2020-文-06</a>（2020 · 中） 该题考查等比数列中已知两项差求首项和公比，并计算通项与前n项和的关系式。</li>
+<li><a href="../../exam/数学/2018-理-17.html">2018-理-17</a>（2018 · 易） 已知等差数列首项和前3项和，求前n项和或通项。</li>
+<li><a href="../../exam/数学/2017-理-03.html">2017-理-03</a>（2017 · 易） 本题以古代数学问题为背景，考查等比数列前n项和公式的应用，通过建立方程求首项。</li>
+<li><a href="../../exam/数学/2015-理-16.html">2015-理-16</a>（2015 · 中） 本题考查由数列递推关系构造等差数列求前n项和。</li>
+<li><a href="../../exam/数学/2013-理-03.html">2013-理-03</a>（2013 · 易） 该题考查等比数列通项公式与前n项和的基本应用，通过建立方程组求解首项。</li>
+<li><a href="../../exam/数学/2012-文-14.html">2012-文-14</a>（2012 · 易） 该题考查等比数列前n项和公式应用，由条件方程求公比，注意排除q=1</li>
+<li><a href="../../exam/数学/2011-文-17.html">2011-文-17</a>（2011 · 中） 考查等比数列前n项和公式的应用及对数运算求通项。</li>
+<li><a href="../../exam/数学/2010-文-17.html">2010-文-17</a>（2010 · 中） 本题考查等差数列通项公式求解及前n项和最值问题。</li>
+<li><a href="../../exam/数学/2009-理-14.html">2009-理-14</a>（2009 · 易） 本题利用等差数列的等差中项性质，由条件a5=5a3求S9与S5的比值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/355-等差数列前n项和.html">前n项和</a></li>
+</ul>
+</div>
+</body>
+</html>

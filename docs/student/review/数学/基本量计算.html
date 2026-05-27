@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基本量计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>基本量计算</h1><div class="review-mark" data-stem="基本量计算"></div><div class="meta-card"><span><strong>考点</strong>基本量计算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等比数列定义</strong>：从第二项起，每一项与前一项之比为同一常数 $q$（公比），即 $\frac{a_{n+1}}{a_n}=q$（$q \neq 0$，$a_1 \neq 0$）。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 q^{n-1}$（知首项与公比，可求任意项）。</li>
+<li><strong>前 $n$ 项和公式</strong>：</li>
+<li>当 $q=1$ 时，$S_n = n a_1$；</li>
+<li>当 $q \neq 1$ 时，$S_n = \frac{a_1(1-q^n)}{1-q} = \frac{a_1 - a_n q}{1-q}$。</li>
+<li><strong>基本量思想</strong>：等比数列的 $a_1$ 与 $q$ 称为“基本量”。凡给出两项的关系式，均可通过通项公式转化为关于 $a_1$ 和 $q$ 的方程（组），求解后得到所有其他量。这是解决等比数列问题的核心方法。</li>
+<li><strong>等比中项</strong>：若 $a, G, b$ 成等比数列，则 $G^2 = ab$。在给定等式中出现“跨项差”时，可提取公因式简化求解。</li>
+<li><strong>指数结构</strong>：$a_n$ 和 $S_n(q \neq 1)$ 均表现为指数型表达式（含 $q^n$ 或 $q^{n-1}$），在化简 $\frac{S_n}{a_n}$ 类问题时，注意约分聚项。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设基本量，列方程组</strong><br />
+   设等比数列首项为 $a_1$，公比为 $q$（$q \neq 0$）。将题干中给出的项用 $a_1 \cdot q^{n-1}$ 表示，把条件转化为关于 $a_1$ 和 $q$ 的方程（组）。</li>
+<li><strong>作差（商）消元求公比</strong><br />
+   若给出形如 $a_m - a_n = A$，$a_k - a_l = B$ 的条件，可将两式相除，提公因式后直接约去 $a_1$，得到只含 $q$ 的方程，快速求出 $q$。</li>
+<li><strong>回代求首项</strong><br />
+   将已求得的 $q$ 代入任一原方程，解出 $a_1$。</li>
+<li><strong>代入目标式化简</strong><br />
+   把 $a_1$ 和 $q$ 代入所求表达式（如通项、前 $n$ 项和或比值等），利用指数运算法则化简。对于 $\frac{S_n}{a_n}$ 型，通常先写出 $S_n$ 与 $a_n$ 的公式，再化简比式，注意合理提取 $a_1$ 和 $q^{n-1}$。</li>
+<li><strong>检验公比是否为 1</strong><br />
+   若题目未明确 $q \neq 1$，求 $q$ 后需确认是否满足等比数列定义，代入和式公式时要根据 $q$ 是否为 1 选用相应形式。若通过方程解得 $q=1$，需单独检验。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用前 $n$ 项和公式</strong>：忘记区分 $q=1$ 和 $q \neq 1$ 的情形。当 $q=1$ 时不能套用 $\frac{a_1(1-q^n)}{1-q}$，否则分母为零。但多数题目条件隐含$q \neq 1$（如给出两项差），确认即可。</li>
+<li><strong>通项指数错位</strong>：$a_n = a_1 q^{n-1}$，指数为 $n-1$。例如 $a_5 = a_1 q^4$，$a_6 = a_1 q^5$。若指数写错，后续方程全错。</li>
+<li><strong>提取公因式不当</strong>：如 $a_6 - a_4 = a_1 q^5 - a_1 q^3 = a_1 q^3(q^2 - 1)$，容易漏提公因式或在相除时混淆次数。作差时应先提取 $a_1$ 与 $q$ 的低次幂。</li>
+<li><strong>比值化简不彻底</strong>：计算 $\frac{S_n}{a_n}$ 时，通分后未约去公共的 $a_1$ 或 $q^{n-1}$，导致结果复杂难以匹配选项。建议将 $S_n$ 写成 $\frac{a_1(1-q^n)}{1-q}$，$a_n = a_1 q^{n-1}$，然后比式整体化为 $\frac{1-q^n}{(1-q)q^{n-1}}$，再进一步拆分。</li>
+<li><strong>忽视定义域</strong>：$a_n \neq 0$，$q \neq 0$。当求得 $q=0$ 时须舍去。等比数列各项均不能为零。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+记 $S_n$ 为等比数列 ${a_n}$ 的前 $n$ 项和。若 $a_5-a_3=12$，$a_6-a_4=24$，则 $\frac{S_n}{a_n}=$（ ）<br />
+A. $2^n-1$　B. $2-2^{1-n}$　C. $2-2^{n-1}$　D. $2^{1-n}-1$</p>
+<p><strong>思路</strong><br />
+用基本量 $a_1$ 和 $q$ 表示 $a_3,a_4,a_5,a_6$，联立方程组。观察两方程结构，作差相除可直接求出公比 $q$，进而求出 $a_1$。再用通项与前 $n$ 项和公式表示 $\frac{S_n}{a_n}$，化简后对照选项。</p>
+<p><strong>步骤</strong><br />
+1. 设等比数列首项为 $a_1$，公比为 $q$。由条件得：
+   $$a_5-a_3 = a_1 q^4 - a_1 q^2 = a_1 q^2(q^2-1)=12$$
+   $$a_6-a_4 = a_1 q^5 - a_1 q^3 = a_1 q^3(q^2-1)=24$$
+2. 当 $q \neq \pm 1$ 时，两式相除：
+   $$\frac{a_1 q^3(q^2-1)}{a_1 q^2(q^2-1)} = \frac{24}{12} \Rightarrow q=2$$
+   （若 $q^2-1=0$，则左边为0，与12,24矛盾，故 $q \neq \pm 1$）
+3. 将 $q=2$ 代入第一式：$a_1 \cdot 2^2 \cdot(4-1)=12 \Rightarrow a_1 \cdot 4 \cdot 3 =12 \Rightarrow a_1=1$。
+4. 由 $q=2 \neq 1$，通项 $a_n = 1 \cdot 2^{n-1} = 2^{n-1}$，前 $n$ 项和 $S_n = \frac{1\times(1-2^n)}{1-2} = 2^n-1$。
+5. 目标比值：
+   $$\frac{S_n}{a_n} = \frac{2^n-1}{2^{n-1}} = \frac{2^n}{2^{n-1}} - \frac{1}{2^{n-1}} = 2 - 2^{1-n}$$
+   对应选项B。</p>
+<p><strong>点评/变式</strong><br />
+- 本题利用等比数列通项将“隔项差”条件转化为关于 $a_1$ 和 $q$ 的方程，并通过<strong>作商消元</strong>快速求得公比，是基本量法的典型应用。<br />
+- 目标式 $\frac{S_n}{a_n}$ 的化简也可写成 $\frac{2^n-1}{2^{n-1}} = 2^{1}-2^{1-n}$，注意将分式拆分成整式与指数部分，避免指数运算失误。<br />
+- <strong>变式</strong>：若条件改为“$a_3+a_5=20$，$a_4+a_6=40$”，可同理相除得 $q=2$。更进一步，若直接求 $\frac{S_{n}}{a_{n-1}}$，同样先求基本量再代入目标化简。<br />
+- 注意公比若为负数或分数，方法完全一致；若求得的 $q=1$，则数列为常数列，需另行处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-06.html">2020-文-06</a>（2020 · 中） 该题考查等比数列中已知两项差求首项和公比，并计算通项与前n项和的关系式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">基本量计算</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>系数和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>系数和</h1><div class="review-mark" data-stem="系数和"></div><div class="meta-card"><span><strong>考点</strong>系数和</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：填空15</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>赋值法求系数和</strong>：设多项式展开式为 $f(x)$。</li>
+<li>各项系数之和：$f(1)$。</li>
+<li>各项系数交错和（奇偶项相减）：$f(-1)$。</li>
+<li>奇数项系数之和：$\frac{f(1)-f(-1)}{2}$。</li>
+<li>偶数项系数之和：$\frac{f(1)+f(-1)}{2}$。</li>
+<li><strong>适用条件</strong>：展开式中含有参数或需要求某一类指数（如奇数、偶数、倍数项）的系数之和时，通过给 $x$ 赋特定值（常用 $1,-1$）构造方程。</li>
+<li><strong>核心依据</strong>：二项式定理的恒等变形，赋值后等式仍成立，从而建立系数与参数之间的联系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设函数</strong>：将含参的展开式整体视为关于 $x$ 的函数 $f(x)$。</li>
+<li><strong>赋特值</strong>：</li>
+<li>令 $x=1$，得所有项系数和 $f(1)$。</li>
+<li>令 $x=-1$，得奇偶项系数交错和 $f(-1)$。</li>
+<li><strong>组合计算</strong>：根据题目所求的“奇数次幂项系数之和”或“偶数次幂项系数之和”，套用公式：</li>
+<li>奇数次幂项系数和 $S_{\text{奇}} = \frac{f(1)-f(-1)}{2}$。</li>
+<li>偶数次幂项系数和 $S_{\text{偶}} = \frac{f(1)+f(-1)}{2}$。</li>
+<li><strong>解方程</strong>：令上述结果等于已知数值，解出待定参数（如 $a$）。</li>
+<li><strong>检验</strong>：必要时回代验证，确保赋值过程未遗漏常数项或零次项的影响。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆奇偶公式</strong>：容易将奇数项系数和误记为 $\frac{f(1)+f(-1)}{2}$，务必通过特例（如 $f(x)=a_0+a_1x$）验证记忆。</li>
+<li><strong>无中生有的“常数项”处理</strong>：当 $x$ 的奇数次幂包含 $x^1$ 时，常数项 $a_0$ 为偶数次幂项（$x^0$）。使用 $\frac{f(1)-f(-1)}{2}$ 时已自动消去常数项，不必单独扣除。</li>
+<li><strong>忽略括号前系数</strong>：形如 $(a+x)(1+x)^n$ 的乘积，赋值时 $a$ 也会参与运算，不可只对二项式部分赋值。</li>
+<li><strong>$f(-1)$ 符号错误</strong>：当 $f(x)$ 中含 $(1+x)^4$ 时，代入 $x=-1$ 得 $0^4=0$，容易当成 $2^4$ 计算。</li>
+<li><strong>公式适用范围</strong>：上述奇偶项公式仅适用于按 $x$ 的升幂或降幂排列的标准多项式。若展开式含有负指数或分式，需先化为标准形式再赋值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（a+x）（1+x）⁴ 的展开式中 x 的奇数次幂项的系数之和为 32，求 a。</p>
+<p><strong>思路</strong>：展开式复杂，不直接展开，利用赋值法整体求解。令 $f(x)=(a+x)(1+x)^4$，利用 $f(1)$ 与 $f(-1)$ 组合出奇数次幂项系数和，建立关于 $a$ 的方程。</p>
+<p><strong>步骤</strong>：
+1. 设 $f(x) = (a+x)(1+x)^4$。
+2. 求 $f(1) = (a+1)(1+1)^4 = (a+1) \cdot 16$。
+3. 求 $f(-1) = (a-1)(1-1)^4 = (a-1) \cdot 0 = 0$。
+4. 根据公式，奇数次幂项系数之和为 $\frac{f(1) - f(-1)}{2} = \frac{16(a+1) - 0}{2} = 8(a+1)$。
+5. 由题意知 $8(a+1) = 32$，解得 $a = 3$。</p>
+<p><strong>点评/变式</strong>：此题核心在于识别“系数和”与赋值法的对应关系。变式可能要求偶数次幂项系数和，或改为求所有二项式系数的和。注意 $f(-1)$ 的计算因 $(1-1)^4=0$ 而高度简化，若展开式改为 $(2+x)^4$ 或 $(a-x)(1+x)^4$，$f(-1)$ 不再为 0，需重新计算，但整体框架不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-15.html">2015-理-15</a>（2015 · 中） 给定二项展开式，利用赋值法求奇次项系数和以确定参数值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1078-系数和.html">系数和</a></li>
+</ul>
+</div>
+</body>
+</html>

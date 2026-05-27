@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周期公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>周期公式</h1><div class="review-mark" data-stem="周期公式"></div><div class="meta-card"><span><strong>考点</strong>周期公式</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：2</li>
+<li>真题数：2；年份跨度：2017–2019</li>
+<li>出现题位：选择3 选择8</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>对于函数 $f(x)=A\sin(\omega x+\varphi)$ 或 $f(x)=A\cos(\omega x+\varphi)$（其中 $\omega\neq 0$），最小正周期公式为 $T=\dfrac{2\pi}{|\omega|}$。  </li>
+<li>对于函数 $f(x)=A\tan(\omega x+\varphi)$（$\omega\neq 0$），最小正周期公式为 $T=\dfrac{\pi}{|\omega|}$。  </li>
+<li>周期函数自身的特征点间距关系（以 $y=\sin(\omega x)$ 或 $y=\cos(\omega x)$ 为例）：<br />
+  相邻两个最大值点（或相邻两个最小值点）的横坐标之差等于一个周期 $T$；<br />
+  相邻一个最大值点与一个最小值点（即相邻极值点）的横坐标之差等于半个周期 $\dfrac{T}{2}$；<br />
+  相邻两个零点（同向零点）的横坐标之差等于半个周期 $\dfrac{T}{2}$；<br />
+  对称轴到相邻对称中心的水平距离等于四分之一个周期 $\dfrac{T}{4}$。  </li>
+<li>若只给出部分区间满足特征点间距，可据此反推出 $|\omega|$ 或周期。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准化函数识别</strong>：将所给三角函数表达式化为 $y=A\sin(\omega x+\varphi)+k$ 或 $y=A\cos(\omega x+\varphi)+k$ 的形式，准确提取 $x$ 的系数 $\omega$（注意 $\omega$ 通常取正，或使用绝对值）。  </li>
+<li><strong>直接套用周期公式</strong>：若函数为 $f(x)=\sin(2x+\varphi)$ 之类，直接由 $T=\frac{2\pi}{|2|}=\pi$ 得出答案。对于正切型用 $T=\frac{\pi}{|\omega|}$。  </li>
+<li><strong>由特征点间距求周期或 $\omega$</strong>：  </li>
+<li>若给出相邻极值点横坐标 $x_1,x_2$，则 $\dfrac{T}{2}=|x_2-x_1|$ ⇒ $T=2|x_2-x_1|$ ⇒ $|\omega|=\dfrac{2\pi}{T}$。  </li>
+<li>若给出相邻对称轴、对称中心等类似间距，同样利用 $\dfrac{T}{4}$、$\dfrac{T}{2}$ 的关系求解。  </li>
+<li><strong>检查 $\omega$ 符号</strong>：若题干给定 $\omega&gt;0$，直接取正；否则 $|\omega|$ 反推时注意绝对值，若无附加限定，$\omega$ 可取正负对应的绝对值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>正、余弦与正切的周期公式混用：正、余弦分母为 $|\omega|$ 且分子为 $2\pi$，正切分子为 $\pi$。切不可把 $y=\tan 2x$ 的周期误作 $\pi$ 或 $2\pi$。  </li>
+<li>忽略 $|\omega|$ 的绝对值：当 $\omega$ 为负数时，周期仍按 $|\omega|$ 计算，纯套 $T=\frac{2\pi}{\omega}$ 会得到负值或错解。  </li>
+<li>错判“相邻极值点”间距：将相邻极值点间距 $\frac{T}{2}$ 误认为一个完整周期 $T$，导致算出的 $\omega$ 差一倍。  </li>
+<li>忽略函数的横向平移：周期仅与 $\omega$ 有关，与 $\varphi$ 无关，但由点坐标反推 $\omega$ 时，若误用平移的影响可能算错，应直接利用间距差消去 $\varphi$ 的影响。  </li>
+<li>误把角度制与弧度制混用：在解方程 $T=2\pi/|\omega|$ 时须保证 $\pi$ 为弧度制，点坐标差值直接用弧度值相减。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2019-文-08）</h3>
+<p><strong>题目</strong>：已知 $x_1=\dfrac{\pi}{4}$，$x_2=\dfrac{3\pi}{4}$ 是函数 $f(x)=\sin(\omega x)\,(\omega&gt;0)$ 的两个相邻极值点，求 $\omega$ 的值。选项为 A. $2$  B. $\dfrac{3}{2}$。</p>
+<p><strong>思路</strong>：相邻极值点（一个极大值点和一个极小值点）的横坐标之差等于半个周期。由此建立等式求出周期，再代入 $T=\dfrac{2\pi}{\omega}$ 反解 $\omega$。</p>
+<p><strong>步骤</strong>：<br />
+1. 计算相邻极值点的水平间距：$x_2-x_1 = \dfrac{3\pi}{4}-\dfrac{\pi}{4} = \dfrac{\pi}{2}$。<br />
+2. 由于极大值点与极小值点相邻，间距为 $\dfrac{T}{2}$，故 $\dfrac{T}{2}=\dfrac{\pi}{2}$，得 $T=\pi$。<br />
+3. 又 $T=\dfrac{2\pi}{\omega}$（$\omega&gt;0$），即 $\pi=\dfrac{2\pi}{\omega}$，解得 $\omega=2$。<br />
+4. 故选 A。</p>
+<p><strong>点评/变式</strong>：<br />
+- 该题也可以用极值点的通解来求解：由 $f(x)=\sin(\omega x)$ 的极值点满足 $\omega x = \dfrac{\pi}{2}+k\pi$，相邻两点对应 $k$ 相差 1，同样得到 $\omega(x_2-x_1)=\pi$，直接得 $\omega=2$。<br />
+- 变式：若给出的是相邻两零点的坐标，则其间距为 $\dfrac{T}{2}$，解法完全一致。</p>
+<h3>代表题2（2017-文-03）</h3>
+<p><strong>题目</strong>：函数 $f(x)=\sin!\left(2x+\varphi\right)$ 的最小正周期为（　　）<br />
+A. $4\pi$　B. $2\pi$　C. $\pi$　D. $\dfrac{\pi}{2}$</p>
+<p><strong>思路</strong>：函数已给出 $\omega=2$，直接利用正、余弦型周期公式 $T=\dfrac{2\pi}{|\omega|}$ 即得。</p>
+<p><strong>步骤</strong>：<br />
+1. 函数为 $f(x)=\sin(2x+\varphi)$，可见 $\omega=2$（$\omega&gt;0$）。<br />
+2. 最小正周期 $T=\dfrac{2\pi}{2}=\pi$。<br />
+3. 对照选项，C 正确。</p>
+<p><strong>点评/变式</strong>：<br />
+- 此类题属于直接套公式的基础题，要注意无论初相 $\varphi$ 取何值，周期不变。<br />
+- 若题目改为 $f(x)=\tan!\left(2x+\varphi\right)$，则周期为 $\dfrac{\pi}{2}$；若为 $\cos(-2x+1)$，须取 $|\omega|=2$，周期仍为 $\pi$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-08.html">2019-文-08</a>（2019 · 易） 通过极值点求出三角函数周期，再利用周期公式确定参数 w</li>
+<li><a href="../../exam/数学/2017-文-03.html">2017-文-03</a>（2017 · 易） 该题考查三角函数的最小正周期计算，利用周期公式直接求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">周期公式</a></li>
+</ul>
+</div>
+</body>
+</html>

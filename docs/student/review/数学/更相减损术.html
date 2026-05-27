@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>更相减损术</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>更相减损术</h1><div class="review-mark" data-stem="更相减损术"></div><div class="meta-card"><span><strong>考点</strong>更相减损术</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>算法(程序框图)</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：算法(程序框图)</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2015–2015</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：更相减损术出自《九章算术》，是求两个正整数最大公约数的算法。原文：“可半者半之，不可半者，副置分母、子之数，以少减多，更相减损，求其等也。以等数约之。”</li>
+<li><strong>现代执行步骤</strong>（不考虑“可半者半之”的约简）：给定正整数 $a,b$  </li>
+<li>判断 $a$ 是否等于 $b$，若相等，则 $a$（或 $b$）即为所求最大公约数，结束；  </li>
+<li>若不等，用较大数减去较小数，将所得的差替换原来的较大数；  </li>
+<li>返回步骤1，重复执行。</li>
+<li><strong>适用条件</strong>：任意两个正整数。当数较大或差值悬殊时，效率不如辗转相除法，但其减法运算在程序框图中易于实现。</li>
+<li><strong>与辗转相除法的区别</strong>：辗转相除法用取余运算替代连续减法，更相减损术的核心是“以少减多”的循环减法。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别算法</strong>：从框图或文字描述中确认其逻辑为“两数不等时，大数减小数并更新”，即为更相减损术或其变式。  </li>
+<li><strong>模拟运行</strong>：从给定的初始 $a,b$ 出发，严格按照框图条件分支（通常为 $a \neq b$ 时继续循环；$a&gt;b$ 则 $a \leftarrow a-b$，否则 $b \leftarrow b-a$）。  </li>
+<li><strong>逐步记录</strong>：每执行一次减法，更新对应的变量值，直至 $a=b$。  </li>
+<li><strong>输出结果</strong>：循环终止时的 $a$ 值（或输出指定变量）即为答案。  </li>
+<li><strong>验算</strong>：利用最大公约数的性质（如14和18的最大公约数为2）快速验证，避免模拟错误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“大减小”后的赋值对象</strong>：必须用差替换原来的较大数，而不是较小的数。例如若 $a&gt;b$，执行 $a=a-b$；若 $a&lt;b$，执行 $b=b-a$。  </li>
+<li><strong>循环条件判断遗漏</strong>：程序框图中判断框可能为“$a \neq b$？”或“$a=b$？”，注意是与否的出口指向，避免提前跳出或死循环。  </li>
+<li><strong>数据更新后的大小关系</strong>：减完后两个数的大小可能发生颠倒，下一步必须重新比较大小进行操作。  </li>
+<li><strong>误用辗转相除法模拟</strong>：更相减损术是连续做减法，若用取余(%)直接算会得到相同结果，但框图的执行过程必须按减法一步步模拟。  </li>
+<li><strong>初始值相等或倍数关系处理不当</strong>：如输入 $a=b$ 直接输出；若一个数是另一个数的倍数（如6和18），减法模拟需多次，注意次数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2015-文-08</h3>
+<p><strong>题目</strong>：程序框图实现《九章算术》中的“更相减损术”。输入 $a=14$，$b=18$，输出的 $a=$？<br />
+<strong>思路</strong>：识别框图算法为更相减损术，按步骤模拟减法过程直至两数相等。<br />
+<strong>步骤</strong>：<br />
+- 初始 $a=14,b=18$，$a\neq b$，且 $a<b$， $b\leftarrow 18-14=4$；<br />- 此时 $a=14,b=4$，$a>b$， $a\leftarrow 14-4=10$；<br />
+- $a=10,b=4$，$a&gt;b$， $a\leftarrow 10-4=6$；<br />
+- $a=6,b=4$，$a&gt;b$， $a\leftarrow 6-4=2$；<br />
+- $a=2,b=4$，$a&lt;b$， $b\leftarrow 4-2=2$；<br />
+- 此时 $a=2,b=2$，$a=b$，循环结束，输出 $a=2$。<br />
+<strong>点评/变式</strong>：最终输出的2即为14和18的最大公约数。变式训练：若输入 $a=15,b=25$，过程为 $a=15,b=10$ → $a=5,b=10$ → $a=5,b=5$，输出5。注意顺序别错。</p>
+<h3>代表题2：2015-理-08</h3>
+<p><strong>题目</strong>：同上题，理科卷的程序框图与输入值完全相同（$a=14,b=18$），输出 $a$ 的值。<br />
+<strong>思路</strong>：该题与文科题共用同一算法背景，模拟逻辑完全一致。<br />
+<strong>步骤</strong>：与文科题模拟过程相同，最终输出 $a=2$。<br />
+<strong>点评/变式</strong>：文理同题体现了更相减损术在算法考题中的基础地位。建议考生练习将更相减损术与辗转相除法的框图进行对比，体会差减法和取余运算在循环结构上的异同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-08.html">2015-文-08</a>（2015 · 中） 该题考查以程序框图形式呈现的《九章算术》更相减损术算法，通过循环结构求两数最大公约数。</li>
+<li><a href="../../exam/数学/2015-理-08.html">2015-理-08</a>（2015 · 中） 该题结合程序框图考查《九章算术》中的更相减损术算法，输入数值后模拟执行求最大公约数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">更相减损术</a></li>
+</ul>
+</div>
+</body>
+</html>

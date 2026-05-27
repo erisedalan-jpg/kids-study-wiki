@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平方关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平方关系</h1><div class="review-mark" data-stem="平方关系"></div><div class="meta-card"><span><strong>考点</strong>平方关系</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平方关系</strong>：$\sin^2\alpha + \cos^2\alpha =1$<br />
+  变形：$\sin^2\alpha = 1-\cos^2\alpha$，$\cos^2\alpha = 1-\sin^2\alpha$<br />
+  可导出 $1+\tan^2\alpha = \sec^2\alpha$，$1+\cot^2\alpha = \csc^2\alpha$（要求角使函数有意义）</li>
+<li><strong>商数关系</strong>：$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$，$\cot\alpha = \dfrac{\cos\alpha}{\sin\alpha}$</li>
+<li><strong>符号规则</strong>：由角所在象限决定 $\sin\alpha,\cos\alpha$ 正负。<br />
+  如 $\cot A&lt;0$ 且 $A\in(0,\pi)$，则 $A$ 为钝角，$\cos A&lt;0,\sin A&gt;0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定象限，判符号</strong>：根据已知三角函数值的正负及角的范围，确定目标函数值的符号。  </li>
+<li><strong>化弦为切或化切为弦</strong>：利用商数关系将 $\cot A$（或 $\tan A$）表为 $\dfrac{\cos A}{\sin A}$，得到 $\sin A$ 与 $\cos A$ 的比例式。  </li>
+<li><strong>联立平方关系</strong>：设 $\sin A = k\cdot\text{比例}$，$\cos A = k\cdot\text{比例}$，代入 $\sin^2 A+\cos^2 A=1$ 求 $k^2$。  </li>
+<li><strong>定值取舍</strong>：结合第1步的符号，对开方结果取正确的值。  </li>
+<li><strong>特殊公式速解（选用）</strong>：若熟练 $1+\cot^2 A=\csc^2 A$，可先求 $\csc A$（带符号），再求 $\sin A$，最后得 $\cos A = \cot A \cdot \sin A$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略角范围导致符号错误</strong>：看到 $\cot A$ 为负，直接推 $\cos A$ 与 $\sin A$ 异号，但三角形内角 $A\in(0,\pi)$，$\sin A&gt;0$ 恒成立，只能 $\cos A&lt;0$。不判断直接开方正值会误选 A、B。  </li>
+<li><strong>开方忘加正负号</strong>：由 $\sin^2 A+\cos^2 A=1$ 求值时，开方应写 $|\cos A|$，未结合象限去绝对值则漏掉负号。  </li>
+<li><strong>商数关系倒置</strong>：$\cot A = \dfrac{\cos A}{\sin A}$，警惕误写为 $\dfrac{\sin A}{\cos A}$。  </li>
+<li><strong>联立时运算失误</strong>：将 $\sin A = -\dfrac{5}{12}\cos A$（比例）代入平方关系时系数平方容易算错，建议分步计算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $\triangle ABC$ 中，$\cot A = -\dfrac{12}{5}$，则 $\cos A =$（　）<br />
+A. $\dfrac{12}{13}$　B. $\dfrac{5}{13}$　C. $-\dfrac{5}{13}$　D. $-\dfrac{12}{13}$</p>
+<p><strong>思路</strong>：先由 $\cot A&lt;0$ 及三角形内角范围确定 $A$ 为钝角，得 $\cos A&lt;0$，排除 A、B。再由 $\cot A = \frac{\cos A}{\sin A}$ 得 $\sin A$ 与 $\cos A$ 的比例，联立平方关系解出 $\cos A$。</p>
+<p><strong>步骤</strong>：<br />
+1. $\because A\in(0,\pi),\cot A=-\frac{12}{5}&lt;0 \Rightarrow A\in(\frac{\pi}{2},\pi)$，于是 $\cos A&lt;0$，排除 A、B。<br />
+2. 由 $\cot A=\frac{\cos A}{\sin A}=-\frac{12}{5}$，得 $\sin A = -\frac{5}{12}\cos A$。<br />
+3. 代入 $\sin^2 A+\cos^2 A=1$：<br />
+   $$\left(-\frac{5}{12}\cos A\right)^2 + \cos^2 A =1 \Rightarrow \frac{25}{144}\cos^2 A + \cos^2 A =1$$<br />
+   $$\frac{169}{144}\cos^2 A =1 \Rightarrow \cos^2 A = \frac{144}{169}$$<br />
+4. 开方得 $|\cos A| = \frac{12}{13}$，结合 $\cos A&lt;0$，得 $\cos A = -\frac{12}{13}$。<br />
+   故选 D。</p>
+<p><strong>点评/变式</strong><br />
+- 也可用 $1+\cot^2 A=\csc^2 A$：$\csc^2 A = 1+\frac{144}{25}=\frac{169}{25}$，由 $A$ 为钝角，$\sin A&gt;0$，故 $\csc A = \frac{13}{5}$，得 $\sin A = \frac{5}{13}$，进而 $\cos A = \cot A \cdot \sin A = -\frac{12}{5}\times\frac{5}{13}=-\frac{12}{13}$。<br />
+- <strong>变式</strong>：若题设给出 $\tan A = \frac{3}{4}$ 且 $A$ 为第三象限角，求 $\cos A$。思路一致：判符号为负，再由 $\sin A = \frac{3}{4}\cos A$ 代入平方关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-03.html">2009-理-03</a>（2009 · 易） 已知cotA的值求cosA，运用同角三角函数基本关系及平方关系求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1155-平方关系.html">平方关系</a></li>
+</ul>
+</div>
+</body>
+</html>

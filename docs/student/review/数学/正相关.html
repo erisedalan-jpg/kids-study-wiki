@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正相关</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正相关</h1><div class="review-mark" data-stem="正相关"></div><div class="meta-card"><span><strong>考点</strong>正相关</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正相关</strong>：对两个变量 $x$ 与 $y$，当一个增大时另一个也呈现增大的趋势，则称两者正相关。</li>
+<li><strong>样本相关系数 $r$</strong>：</li>
+<li>$r&gt;0$ 表示正相关，$r&lt;0$ 表示负相关。</li>
+<li>$|r| \le 1$，$|r|$ 越接近 $1$，线性相关程度越强。</li>
+<li>$r=1$ 当且仅当所有样本点 $(x_i,y_i)$ 完全落在一条 <strong>斜率为正</strong> 的直线上（完全正相关）。</li>
+<li>$r=-1$ 当且仅当所有样本点完全落在一条 <strong>斜率为负</strong> 的直线上（完全负相关）。</li>
+<li>$r=0$ 表明两变量间不存在线性相关关系。</li>
+<li>使用条件：数据成对呈现，散点图呈现线性趋势时适用。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>视察散点分布与共线性</strong><br />
+   观察题目给出的散点图或直线方程，判断样本点是否全部落在一条直线上。</li>
+<li><strong>判断直线斜率符号</strong>  </li>
+<li>若所有点共线且斜率为正，则 $r=1$；  </li>
+<li>若所有点共线且斜率为负，则 $r=-1$；  </li>
+<li>若未完全共线，但总体呈上升趋势，则 $0&lt;r&lt;1$；  </li>
+<li>若未完全共线，总体呈下降趋势，则 $-1&lt;r&lt;0$。</li>
+<li><strong>直接对应结论</strong><br />
+   对于给直线方程的题型，若样本点全在该直线上，相关系数的绝对值必为 $1$，符号由斜率定。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆相关方向与完全相关</strong>：看到点都在直线上便立即选 $r=1$ 或 $r=-1$，但忽略斜率符号导致符号错误。</li>
+<li><strong>误把正相关等同于 $r=1$</strong>：只有所有点完全落在一条斜率为正的直线上才取到 $r=1$，若点只是大致上升则 $0&lt;r&lt;1$。</li>
+<li><strong>忽略“不全相等”的条件</strong>：题干中 $x_i$ 不全相等保证了回归直线有意义，但不影响 $r=1$ 的判断（当所有点共线时相关系数仍为 $1$）。</li>
+<li><strong>将线性相关与函数关系混淆</strong>：完全正相关不代表 $y$ 就是 $x$ 的函数，此处强调的是线性相关程度达到极值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>在一组样本点 $(x_1,y_1),\dots,(x_n,y_n)\,(n\ge2,\,x_i$ 不全相等$)$ 的散点图中，若所有样本点都在直线 $y=\frac12 x+1$ 上，则样本相关系数为（ ）<br />
+A. $-1$　　B. $0$　　C. $\frac12$　　D. $1$</p>
+<h3><strong>思路</strong></h3>
+<p>所有样本点完全落在直线上，说明两变量间存在完全线性关系，因此相关系数的绝对值为 $1$。再由直线斜率 $\frac12&gt;0$ 可确定是正相关，故 $r=1$。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>样本点全部位于直线 $y=\frac12 x+1$，即 $y$ 与 $x$ 满足精确的线性函数关系。</li>
+<li>直线的斜率 $k=\frac12&gt;0$，表明 $y$ 随 $x$ 增大而增大，为正相关。</li>
+<li>完全线性正相关对应的样本相关系数 $r=1$。</li>
+<li>核对选项，应选 D。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题直接考察相关系数的极端情形——完全线性正相关。命题陷阱在于选项 C（斜率值）和 A（负相关）。<br />
+<strong>变式1</strong>：若所有点都在 $y=-x+2$ 上，则 $r=-1$。<br />
+<strong>变式2</strong>：点大致在一条上升趋势的直线附近但未完全共线，此时 $r$ 属于 $(0,1)$。考查对相关系数取值范围的精准理解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-03.html">2012-文-03</a>（2012 · 易） 所有样本点落在直线上时，样本相关系数为完全正相关，考查相关系数的概念。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/502-线性相关性.html">正相关</a></li>
+</ul>
+</div>
+</body>
+</html>

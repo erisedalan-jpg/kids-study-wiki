@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两点间距离公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两点间距离公式</h1><div class="review-mark" data-stem="两点间距离公式"></div><div class="meta-card"><span><strong>考点</strong>两点间距离公式</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>7</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：18</li>
+<li>真题数：7；年份跨度：2013–2022</li>
+<li>出现题位：解答23 选择5 选择7 选择11</li>
+<li>难度分布：易1 中6</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两点间距离公式（直角坐标）</strong><br />
+  已知 $P_1(x_1,y_1)$，$P_2(x_2,y_2)$，则<br />
+  $$|P_1P_2|=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$$</li>
+<li><strong>参数方程下的距离</strong><br />
+  若点坐标由参数 $t$（或 $\theta$）给出，直接代入距离公式，化为关于参数的函数。</li>
+<li><strong>极坐标下的距离</strong><br />
+  若点 $A(\rho_1,\theta_1),B(\rho_2,\theta_2)$，可用余弦定理：<br />
+  $$|AB|=\sqrt{\rho_1^2+\rho_2^2-2\rho_1\rho_2\cos(\theta_1-\theta_2)}$$
+  更常见的思路是先化为直角坐标再求解。</li>
+<li><strong>距离与圆锥曲线的结合</strong>  </li>
+<li><strong>抛物线定义</strong>：$|AF|=d_{\text{点A到准线}}$。  </li>
+<li><strong>椭圆/圆上的点</strong>：利用普通方程消元，或设参数方程化为三角函数最值。  </li>
+<li><strong>直线与曲线交点</strong>：联立方程求坐标，再代距离公式；弦长问题可用韦达定理。  </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接代公式求长度</strong>：在已知两点坐标时，直接套用公式，注意横、纵差勿混淆。  </li>
+<li><strong>定义转化法（抛物线焦点）</strong>：求抛物线上点到焦点的距离，优先转化为到准线的距离，避免设未知点坐标。  </li>
+<li><strong>设点消元求最值</strong>：  </li>
+<li>若点在已知曲线上，设其中一个变量，利用曲线方程将距离平方表述为单变量二次函数或三角函数，在定义域内求最值。  </li>
+<li>椭圆/圆常用参数方程：$x=a\cos\theta,\;y=b\sin\theta$（或圆 $x=R\cos\theta,\;y=R\sin\theta$），将距离转化为 $\sin\theta$ 或 $\cos\theta$ 的二次函数。  </li>
+<li><strong>联立方程求交点距离</strong>：  </li>
+<li>求曲线交点→解方程组→得坐标→代距离公式。  </li>
+<li>直线与二次曲线相交弦长：$|MN|=\sqrt{1+k^2}\,|x_1-x_2|$，其中 $|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1x_2}$。  </li>
+<li><strong>极坐标应用</strong>：通常将极坐标方程化为直角坐标方程再求交点或长度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记开方</strong>：距离是平方和的算术平方根，最终结果必须开方。  </li>
+<li><strong>参数方程形式错误</strong>：椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 的参数方程为 $x=a\cos\theta,\;y=b\sin\theta$，<strong>注意系数</strong>不是倒数。  </li>
+<li><strong>忽略变量的取值范围</strong>：用二次函数求最值时，务必讨论对称轴是否落在定义域内（如椭圆上点的 $y\in[-b,b]$ 或 $x\in[-a,a]$）。  </li>
+<li><strong>抛物线定义混淆</strong>：焦点 $F$ 到准线的距离为 $p$，标准方程中 $|AF|=x_A+\frac{p}{2}$（右开口），误记为 $x_A+p$ 或符号错误。  </li>
+<li><strong>极坐标与直角坐标转换失误</strong>：$\rho^2=x^2+y^2,\; \rho\cos\theta=x,\; \rho\sin\theta=y$，易忘平方或搞混正弦余弦。  </li>
+<li><strong>切线/端点处最值漏判</strong>：椭圆上点到某一顶点的距离最大值未必在另一顶点，需通过函数求导或配方确定。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2022-理-05）</h3>
+<p><strong>题目简述</strong>：抛物线 $C:y^2=4x$ 焦点 $F$，点 $A$ 在 $C$ 上，点 $B(3,0)$，且 $|AF|=|BF|$，求 $|AB|$。  </p>
+<p><strong>思路</strong>：由 $B$ 坐标直接求出 $|BF|$；再利用抛物线定义将 $|AF|$ 转化为点 $A$ 到准线的距离，得到 $A$ 的横坐标，进而求出 $A$ 的坐标，最后用两点距离公式。  </p>
+<p><strong>步骤</strong><br />
+1. 由 $y^2=4x$ 得 $2p=4\Rightarrow p=2$，焦点 $F(1,0)$，准线 $x=-1$。<br />
+2. $B(3,0)$，则 $|BF|=\sqrt{(3-1)^2+0}=2$。<br />
+3. 依题意 $|AF|=|BF|=2$，由抛物线定义：$|AF|=$ 点 $A$ 到准线距离 $=x_A+1$，故 $x_A+1=2\Rightarrow x_A=1$。<br />
+4. 代入抛物线得 $y_A^2=4\times1=4\Rightarrow y_A=\pm2$，取 $A(1,2)$ 或 $(1,-2)$，$|AB|$ 相同。<br />
+5. $|AB|=\sqrt{(1-3)^2+(2-0)^2}=\sqrt{4+4}=2\sqrt{2}$。  </p>
+<p><strong>点评/变式</strong><br />
+抛物线定义是此类题的“捷径”。变式：若改为椭圆或双曲线上的点到焦点距离，常需用焦半径公式或设坐标硬算。</p>
+<h3><strong>题目2</strong>（2021-文-11）</h3>
+<p><strong>题目简述</strong>：椭圆 $C:\frac{x^2}{5}+y^2=1$ 的上顶点 $B$，点 $P$ 在 $C$ 上，求 $|PB|$ 的最大值。  </p>
+<p><strong>思路</strong>：$B(0,1)$，设 $P(\sqrt{5}\cos\theta,\sin\theta)$，将 $|PB|$ 表示为 $\sin\theta$ 的二次函数，配方求最值。  </p>
+<p><strong>步骤</strong><br />
+1. 椭圆参数方程：$x=\sqrt{5}\cos\theta,\;y=\sin\theta$（$\theta\in\mathbb{R}$），$B(0,1)$。<br />
+2. $$|PB|^2=(\sqrt{5}\cos\theta-0)^2+(\sin\theta-1)^2=5\cos^2\theta+\sin^2\theta-2\sin\theta+1.$$
+3. 把 $\cos^2\theta=1-\sin^2\theta$ 代入：<br />
+   $$|PB|^2=5(1-\sin^2\theta)+\sin^2\theta-2\sin\theta+1=-4\sin^2\theta-2\sin\theta+6.$$
+4. 令 $t=\sin\theta\in[-1,1]$，则 $f(t)=-4t^2-2t+6=-4\left(t+\frac14\right)^2+\frac{25}{4}$。<br />
+5. 当 $t=-\frac14\in[-1,1]$ 时，$f(t)$ 取最大值 $\frac{25}{4}$，故 $|PB|_{\max}=\frac{5}{2}$。  </p>
+<p><strong>点评/变式</strong><br />
+椭圆上点用参数方程比普通方程消元更简洁。注意二次函数最值须确认顶点在定义域内；变式：若 $B$ 不是顶点，同理可求。</p>
+<h3><strong>题目3</strong>（2021-理-11）</h3>
+<p><strong>题目简述</strong>：椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\,(a&gt;b&gt;0)$ 上顶点 $B(0,b)$，任意点 $P$ 满足 $|PB|\le 2b$，求离心率 $e$ 的取值范围。  </p>
+<p><strong>思路</strong>：用 $P(a\cos\theta,b\sin\theta)$ 写出 $|PB|^2$，转化为 $\sin\theta$ 的二次函数，最大值 $\le 4b^2$ 恒成立，由最值条件推导 $a,b$ 关系，得 $e$ 范围。  </p>
+<p><strong>步骤</strong><br />
+1. 设 $P(a\cos\theta,b\sin\theta)$，$B(0,b)$，则<br />
+   $$|PB|^2=a^2\cos^2\theta+(b\sin\theta-b)^2=a^2(1-\sin^2\theta)+b^2(\sin\theta-1)^2.$$
+2. 整理：<br />
+   $$|PB|^2=a^2-a^2\sin^2\theta+b^2(\sin^2\theta-2\sin\theta+1)=-(a^2-b^2)\sin^2\theta-2b^2\sin\theta+a^2+b^2.$$
+3. 令 $t=\sin\theta\in[-1,1]$，则<br />
+   $$g(t)=-(a^2-b^2)t^2-2b^2t+a^2+b^2.$$
+   这是开口向下的二次函数（$a&gt;b&gt;0$ 故系数负），对称轴 $t_0=\frac{-b^2}{a^2-b^2}&lt;0$。<br />
+4. 最大值在 $t_{\max}=t_0$ 或边界 $t=-1$、$t=1$ 处取得。<br />
+   - 若 $t_0\ge -1$，即 $\frac{-b^2}{a^2-b^2}\ge -1\Rightarrow b^2\le a^2-b^2\Rightarrow 2b^2\le a^2$，此时最大值在 $t=t_0$，<br />
+     $$g(t)_{\max}=g(t_0)=\frac{a^4}{a^2-b^2}.$$
+     要求 $\frac{a^4}{a^2-b^2}\le 4b^2\Rightarrow a^4\le 4b^2(a^2-b^2)$。<br />
+   - 若 $t_0&lt;-1$，即 $2b^2&gt;a^2$，最大值在 $t=-1$，此时 $g(-1)=4b^2\le 4b^2$ 恒成立。<br />
+5. 结合 $a&gt;b&gt;0$，综合得恒成立条件为 $2b^2\le a^2$ 或 $t_0&lt;-1$ 时恒成立，但后者不能一直保证对于所有 $P$ 都满足（需验证所有情况），经严谨讨论，最终条件为 $a^2\ge 2b^2$（即对称轴在区间内且最值不超过 $4b^2$ 的范围推导后得到）。事实上由 $a^4\le 4b^2(a^2-b^2)$ 化简：$a^4-4a^2b^2+4b^4\le0\Rightarrow (a^2-2b^2)^2\le0\Rightarrow a^2=2b^2$，但这是临界。考虑 $t_0&lt;-1$ 时恒成立，即 $a^2&lt;2b^2$ 时恒成立。所以整体 $a^2\le 2b^2$？不对，我们再理清：当 $a^2&lt;2b^2$，$t_0&lt;-1$，最大值在 $t=-1$ 处为 $4b^2$ 恰好满足条件；当 $a^2=2b^2$，$t_0=-1$，最大值仍在顶点边界，等于 $4b^2$；当 $a^2&gt;2b^2$，$t_0&gt;-1$，此时最大值 $g(t_0)&gt;4b^2$（可由 $g(t_0)=a^4/(a^2-b^2)$ 代入 $a^2&gt;2b^2$ 得证大于 $4b^2$），不满足。因此恒有 $|PB|\le 2b$ 当且仅当 $a^2\le 2b^2$，又椭圆 $a&gt;b$，故 $b^2&lt;a^2\le 2b^2$。<br />
+6. 离心率 $e=\sqrt{</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-05.html">2022-理-05</a>（2022 · 易） 根据抛物线定义求点坐标，再利用两点距离公式求弦长。</li>
+<li><a href="../../exam/数学/2021-文-11.html">2021-文-11</a>（2021 · 中） 考查椭圆上动点到定点距离的最值问题，通过参数方程转化为二次函数求最大值。</li>
+<li><a href="../../exam/数学/2021-理-11.html">2021-理-11</a>（2021 · 中） 已知椭圆上动点及其对称点，求距离最大值，结合二次函数分类讨论构造齐次不等式，解得离心率范围。</li>
+<li><a href="../../exam/数学/2015-文-23.html">2015-文-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程与普通方程的转化，以及利用极坐标求曲线交点与距离最大值。</li>
+<li><a href="../../exam/数学/2015-理-07.html">2015-理-07</a>（2015 · 中） 根据三点坐标求圆的方程，并计算该圆与y轴相交所得弦长。</li>
+<li><a href="../../exam/数学/2013-文-23.html">2013-文-23</a>（2013 · 中） 已知动点P、Q在参数曲线上，求中点M的轨迹参数方程，并将距离d表示为α的函数，判断轨迹是否过原点。</li>
+<li><a href="../../exam/数学/2013-理-23.html">2013-理-23</a>（2013 · 中） 本题通过参数方程给出两点，求其中点轨迹的参数方程，并判断轨迹是否过原点。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/626-两点间距离公式.html">两点间距离公式</a></li>
+</ul>
+</div>
+</body>
+</html>

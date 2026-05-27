@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>裂项相消法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>裂项相消法</h1><div class="review-mark" data-stem="裂项相消法"></div><div class="meta-card"><span><strong>考点</strong>裂项相消法</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>裂项相消法</strong>：将数列的通项分裂为两项之差，在求和时使中间大部分项相互抵消，仅剩首尾若干项，从而快速求和的技巧。核心思想是“化积为差”。</li>
+<li><strong>常见代数裂项公式</strong>（$n \in \mathbf{N}^*$）：</li>
+<li>$\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}$；推广：$\frac{1}{n(n+k)}=\frac{1}{k}\left(\frac{1}{n}-\frac{1}{n+k}\right)$</li>
+<li>$\frac{1}{n(n+1)(n+2)}=\frac{1}{2}\left[\frac{1}{n(n+1)}-\frac{1}{(n+1)(n+2)}\right]$</li>
+<li>$a_n=\frac{1}{\sqrt{n+k}+\sqrt{n}}=\frac{1}{k}(\sqrt{n+k}-\sqrt{n})$（分母有理化裂项）</li>
+<li>对数型：$\log_a\frac{b_{n+1}}{b_n}=\log_a b_{n+1}-\log_a b_n$；指数型：$(n+1)\cdot q^n$ 等可用错位相减，但部分积型可凑成 $f(n)-f(n+1)$</li>
+<li><strong>适用条件</strong>：通项可拆成 $a_n=b_n-b_{n+k}$ 的形式，且 ${b_n}$ 求和简单（通常 $k=1$，裂项后前后抵消）。</li>
+<li><strong>与数列求和联用</strong>：往往先通过等差、等比、对数运算等手段求出通项，再对目标数列（倒数、乘积等）使用裂项相消。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求通项</strong>：根据题设条件（等差/等比定义、$a_n$ 与 $S_n$ 关系等）解出原数列的通项 $a_n$。若涉及对数型，先化简出 $b_n$ 的表达式。</li>
+<li><strong>构造目标数列</strong>：明确需要求和的数列通项 $c_n$，例如 $c_n=\frac{1}{b_n}$。观察 $c_n$ 是否为分式、根式、乘积等可能裂项的结构。</li>
+<li><strong>裂项变形</strong>：</li>
+<li>若分母为连续整数积，直接套用 $\frac{1}{n(n+k)}$ 公式，<strong>务必提取系数 $\frac{1}{k}$</strong>。</li>
+<li>若非标准形式，先将分子凑成与分母结构相关的差，或通过待定系数 $\frac{A}{n}+\frac{B}{n+1}$ 通分反推。</li>
+<li>注意符号：如 $b_n=-(\text{正项})$，裂项后整体提取负号。</li>
+<li><strong>消项求和</strong>：</li>
+<li>写出前几项与后几项（$n=1,2,3,\dots,n$），对齐列式，划去互为相反数的中间项。</li>
+<li>标记“留下”的项：开头可正向消掉的项与结尾无法反向消掉的项。</li>
+<li><strong>化简结果</strong>：合并首尾剩余项，得到 $S_n$ 的最简分式或整式形式。检查 $n=1$ 时是否成立，确认通项对任意正整数均适用。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>裂项系数遗漏</strong>：$\frac{1}{n(n+k)}$ 裂项结果为 $\frac{1}{k}\left(\frac{1}{n}-\frac{1}{n+k}\right)$，常漏乘 $\frac{1}{k}$。</li>
+<li><strong>符号错误</strong>：当通项为负值（如 $b_n=-n(n+1)/2$）时，取倒数或裂项后负号易丢失。建议先写绝对值裂项，再整体处理符号。</li>
+<li><strong>剩余项判断失误</strong>：尤其是分母相差 $k&gt;1$ 时，前 $k$ 项和末 $k$ 项会残留，莫误认为只剩一项。</li>
+<li><strong>对数运算混淆</strong>：$\log_3 a_1+\cdots+\log_3 a_n = \log_3(a_1a_2\cdots a_n)$，若 $a_n$ 是指数型，积化为幂指数求和时要注意等差数列求和公式，防止计算错误。</li>
+<li><strong>忽略 $n=1$ 单独验证</strong>：裂项相消后得到 $S_n$，需验证 $n=1$ 是否与 $a_1$ 一致，以防公式对起始项失效。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>等比数列 ${a_n}$ 各项均为正数，且 $2a_1+3a_2=1$，$a_3^2=9a_2a_6$。
+（Ⅰ）求 ${a_n}$ 的通项公式；
+（Ⅱ）设 $b_n=\log_3 a_1+\log_3 a_2+\cdots+\log_3 a_n$，求数列 $\left{\frac{1}{b_n}\right}$ 的前 $n$ 项和 $T_n$。</p>
+<h3>思路</h3>
+<ul>
+<li>先由等比条件求出公比 $q$，结合正项限制确定 $q$，再代回方程求首项 $a_1$，得 $a_n$。</li>
+<li>利用 $a_n=3^{-n}$，将其代入 $b_n$，利用对数和对数积性质转化为等差数列求和，得到 $b_n$ 的解析式。</li>
+<li>$\frac{1}{b_n}$ 化简为 $-\frac{2}{n(n+1)}$，识别出可使用裂项 $\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}$，求和时抵消中间项。</li>
+</ul>
+<h3>步骤</h3>
+<p><strong>（Ⅰ）求通项</strong>
+设公比为 $q$ ($q&gt;0$)，由 $a_3^2=9a_2a_6$ 得 $(a_1q^2)^2=9(a_1q)(a_1q^5)$<br />
+$\Rightarrow a_1^2 q^4 = 9a_1^2 q^6 \Rightarrow 1=9q^2$（各项非零）<br />
+$\Rightarrow q^2=\frac{1}{9}$, 因各项为正，故 $q=\frac{1}{3}$。<br />
+再由 $2a_1+3a_2=1$，即 $2a_1+3a_1\cdot \frac{1}{3}=1 \Rightarrow 3a_1=1 \Rightarrow a_1=\frac{1}{3}$。<br />
+所以 $a_n = \frac{1}{3} \cdot \left(\frac{1}{3}\right)^{n-1} = \left(\frac{1}{3}\right)^n = 3^{-n}$。</p>
+<p><strong>（Ⅱ）求和</strong>
+$$b_n = \log_3 a_1 + \log_3 a_2 + \cdots + \log_3 a_n = \log_3 (a_1 a_2 \cdots a_n)$$<br />
+$$= \log_3 \big( 3^{-1} \cdot 3^{-2} \cdot \cdots \cdot 3^{-n} \big) = \log_3 3^{-(1+2+\cdots+n)} = -\frac{n(n+1)}{2}.$$
+于是 $\frac{1}{b_n} = -\frac{2}{n(n+1)} = -2 \left( \frac{1}{n} - \frac{1}{n+1} \right)$。<br />
+前 $n$ 项和：
+$$T_n = \sum_{k=1}^{n} \frac{1}{b_k} = -2 \sum_{k=1}^{n} \left( \frac{1}{k} - \frac{1}{k+1} \right)$$<br />
+$$= -2 \left[ \left(1-\frac{1}{2}\right) + \left(\frac{1}{2}-\frac{1}{3}\right) + \cdots + \left(\frac{1}{n}-\frac{1}{n+1}\right) \right]$$<br />
+$$= -2 \left( 1 - \frac{1}{n+1} \right) = -\frac{2n}{n+1}.$$</p>
+<h3>点评/变式</h3>
+<p>本题的裂项部分并不复杂，但易错在 $b_n$ 的符号与裂项系数的提取。真正的命题“陷阱”有两处：①对数运算后将积转化为等差数列求和，若误写成 $\log_3 a_n$ 的求和，易忘记等差数列求和时提取负号；②裂项时 $\frac{1}{n(n+1)}$ 前面的系数 $-2$ 不可遗忘，否则得到错误答案 $1-\frac{1}{n+1}$。
+变式：若 $b_n = \log_2 a_1 + \cdots + \log_2 a_n$ 且 $a_n=2^{3n-1}$，则 $b_n=\frac{n(3n+1)}{2}$，$\frac{1}{b_n}$ 需先整理再用 $\frac{1}{n(3n+1)}$ 裂项，系数为 $\frac{1}{3}$，考查更综合的裂项能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-17.html">2011-理-17</a>（2011 · 中） 求等比数列通项公式及利用对数运算和裂项相消法求数列前n项和</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/382-数列裂项相消.html">裂项相消法</a></li>
+</ul>
+</div>
+</body>
+</html>

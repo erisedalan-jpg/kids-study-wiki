@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分组求和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分组求和</h1><div class="review-mark" data-stem="分组求和"></div><div class="meta-card"><span><strong>考点</strong>分组求和</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2012–2023</li>
+<li>出现题位：解答18 选择12</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>分组求和是处理通项公式分段呈现（特别是按奇偶下标分段）或递推关系中含有 $(-1)^n$ 的数列求和的通用方法. 它把原数列按一定规则拆成若干组（最常见的为奇数项组与偶数项组），使每组各自构成等差、等比或可求和的简单数列，分别求和后合并即可得到原数列的前 $n$ 项和.</p>
+<p>核心操作：对任意数列 ${a_n}$，求 $S_n$ 时，
+- 当项数 $n$ 较大或通项分段时，常设 $n=2m$ 或 $n=2m-1$，写出
+  $$
+  S_{2m} = \sum_{k=1}^{m} a_{2k-1} + \sum_{k=1}^{m} a_{2k},\qquad 
+  S_{2m-1} = S_{2m} - a_{2m}.
+  $$
+- 奇偶项分别视作新数列 ${p_k}$（$p_k=a_{2k-1}$）和 ${q_k}$（$q_k=a_{2k}$），项数分别为 $\lceil n/2\rceil$ 和 $\lfloor n/2\rfloor$.
+- 若递推为 $a_{n+1}+(-1)^n a_n = f(n)$，可通过连续写出两式相消获得仅含奇数项或偶数项的递推，或直接分组并项求和.</p>
+<p>常见适用情形：
+1. 直接给出奇偶分段解析式，如 $b_n=\begin{cases} f(n),&amp; n\text{为奇数}\ g(n),&amp;n\text{为偶数}\end{cases}$.
+2. 递推关系中出现 $(-1)^n$，导致奇偶项规律不同（如 $a_{n+1}-a_n = \text{交替}$）.
+3. 三角函数等周期数列，按周期长度分组处理.</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>识别分组信号</strong><br />
+   读到 $n$ 为奇数/偶数分别定义的数列，或递推式含 $(-1)^n$、$\cos n\pi$ 等交替因式时，立即想到分组求和.</p>
+</li>
+<li>
+<p><strong>转化奇偶通项（换元）</strong><br />
+   令 $k\in \mathbb{N}^*$：</p>
+</li>
+<li>奇数项换元：$n=2k-1$，求出 $a_{2k-1}$ 关于 $k$ 的表达式，记作 $p_k$；</li>
+<li>
+<p>偶数项换元：$n=2k$，求出 $a_{2k}$ 关于 $k$ 的表达式，记作 $q_k$.<br />
+   $p_k,q_k$ 往往成为等差/等比数列.</p>
+</li>
+<li>
+<p><strong>限定项数与分段求和</strong>  </p>
+</li>
+<li>若求 $S_{2m}$，则奇数项、偶数项各 $m$ 项：<br />
+     $S_{2m} = \sum_{k=1}^{m} p_k + \sum_{k=1}^{m} q_k$.</li>
+<li>若求 $S_{2m-1}$，则奇数项 $m$ 项，偶数项 $m-1$ 项：<br />
+     $S_{2m-1} = \sum_{k=1}^{m} p_k + \sum_{k=1}^{m-1} q_k = S_{2m} - a_{2m}$.</li>
+<li>
+<p>若求一般 $S_n$，最终写成关于 $n$ 的分段表达式：<br />
+     $S_n = \begin{cases} \text{表达式}_1, &amp; n\text{为偶数}\ \text{表达式}_2, &amp; n\text{为奇数} \end{cases}$.</p>
+</li>
+<li>
+<p><strong>特殊技巧：递推并项</strong><br />
+   对于 $a_{n+1}+(-1)^n a_n = f(n)$：</p>
+</li>
+<li>写出 $n$ 和 $n+1$ 的式子，如<br />
+     $a_{n+1}-a_n = \dots$ (当 $n$ 偶)，$a_{n+2}+a_{n+1} = \dots$ 等，相加或相减推出 $a_{n+2}+a_n$ 或 $a_{n+2}-a_n$ 为简单形式；</li>
+<li>
+<p>再将相邻两项或四项并成一组，把原数列化为可求和的若干组.</p>
+</li>
+<li>
+<p><strong>检验</strong><br />
+   求得 $S_n$ 后，取 $n=1,2,3$ 验证，确保奇偶分段不出错.</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>项数对应混乱</strong><br />
+  奇数项共有 $\lceil n/2\rceil$ 项，偶数项 $\lfloor n/2\rfloor$ 项. 在将 $n$ 换成 $2k-1$ 或 $2k$ 后，$k$ 的最大取值极易写错，务必确认 $k$ 从1到几.</li>
+<li><strong>新数列的首项与公差计算失误</strong><br />
+  $p_k$ 与 $q_k$ 是重新编号的数列，必须用原来的通项严格代入 $n=2k-1$ 和 $n=2k$ 再化简，切勿用原首项直接套用.</li>
+<li><strong>最终结果未分段</strong><br />
+  许多考生求出 $S_{2m}$ 后直接写 $S_n = \dots$，未将 $m$ 反代成 $n/2$ 或 $(n+1)/2$，也未区分 $n$ 奇偶，导致表达式错误或不够明确，会被扣分.</li>
+<li><strong>并项跳跃出错</strong><br />
+  对递推式连续下标操作时，符号和下标相消要特别小心，如写出 $a_2-a_1=1$，$a_3+a_2=3$，相加得 $a_3+a_1=4$，此类推导若跳步易失误.</li>
+<li><strong>忽略 $n$ 的初始项</strong><br />
+  讨论 $S_{2m-1}=S_{2m}-a_{2m}$ 时，必须确保 $a_{2m}$ 已正确求得，而不能用奇数项公式草率回代.</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2023·新课标Ⅱ卷·18）</h3>
+<p>已知等差数列 ${a_n}$，记 $S_n$ 为其前 $n$ 项和. 定义数列 ${b_n}$：<br />
+$$b_n = \begin{cases} a_n-6, &amp; n\text{为奇数},\[2pt] 2a_n, &amp; n\text{为偶数}. \end{cases}$$<br />
+$T_n$ 为 ${b_n}$ 的前 $n$ 项和，且 $S_4=32,\ T_3=16$.<br />
+（1）求 ${a_n}$ 的通项公式；<br />
+（2）证明：当 $n&gt;5$ 时，$T_n &gt; S_n$.</p>
+<p><strong>思路</strong><br />
+(1) 设等差数列公差 $d$，写出 $S_4$ 和 $T_3$（前三项含两个奇数项和一个偶数项），列方程组解出首项和公差.<br />
+(2) 求出 $a_n$ 后，分别得到奇数项和偶数项的 $b_n$ 表达式，用分组求和方法写出 $T_n$ 关于 $n$ 的分段表达式，再与 $S_n$ 作差，讨论 $n$ 的奇偶证明不等式.</p>
+<p><strong>步骤</strong><br />
+(1) 设 $a_n = a_1 + (n-1)d$.<br />
+$S_4 = 4a_1 + 6d = 32$，即 $2a_1+3d=16$.<br />
+前3项：$b_1=a_1-6$，$b_2=2a_2=2(a_1+d)$，$b_3=a_3-6=a_1+2d-6$.<br />
+$T_3 = (a_1-6) + 2(a_1+d) + (a_1+2d-6) = 4a_1+4d-12 = 16$，即 $a_1+d=7$.<br />
+联立解得 $a_1=5,\ d=2$，故 $a_n = 2n+3$.  </p>
+<p>(2) $a_n=2n+3$，则<br />
+奇数项：$n=2k-1$ 时，$a_{2k-1}=2(2k-1)+3=4k+1$，<br />
+$b_{2k-1}= (4k+1)-6 = 4k-5$.<br />
+偶数项：$n=2k$ 时，$a_{2k}=4k+3$，<br />
+$b_{2k}=</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-18.html">2023-新课标Ⅱ-18</a>（2023 · 中） 该题考查等差数列通项公式、前n项和及分组求和，通过奇偶讨论比较两数列和的大小关系。</li>
+<li><a href="../../exam/数学/2012-文-12.html">2012-文-12</a>（2012 · 中） 求解由递推关系给出的数列前60项和，利用奇偶项分组转化为等差数列求和。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/421-分组求和.html">分组求和</a></li>
+</ul>
+</div>
+</body>
+</html>

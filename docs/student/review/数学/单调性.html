@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单调性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>单调性</h1><div class="review-mark" data-stem="单调性"></div><div class="meta-card"><span><strong>考点</strong>单调性</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2008–2020</li>
+<li>出现题位：选择4 选择9</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>单调性的定义</strong>：设函数 $f(x)$ 定义在区间 $I$ 上，对任意 $x_1,x_2\in I$，当 $x_1&lt;x_2$ 时：
+  若 $f(x_1)<f(x_2)$，称 $f(x)$ 在 $I$ 上**单调递增**；
+  若 $f(x_1)>f(x_2)$，称 $f(x)$ 在 $I$ 上<strong>单调递减</strong>。</li>
+<li><strong>基本判定方法</strong>：
+  ① 定义法（作差或作商）；② 导数法（$f'(x)\ge0$ 且不恒为零则递增，$f'(x)\le0$ 且不恒为零则递减）；③ 图像法；④ 复合函数“同增异减”。</li>
+<li><strong>常用基本函数的单调性</strong>：</li>
+<li>幂函数、指数函数、对数函数的单调性取决于底数与指数。</li>
+<li>三角函数及其含绝对值形式：$y=|\sin x|$，$y=|\cos x|$，$y=|\tan x|$ 的周期会减半，单调区间需分段结合图像判断。</li>
+<li>$y=\ln x$ 在 $(0,+\infty)$ 上单调递增；$y=\ln|x|$ 在 $(-\infty,0)$ 递减，在 $(0,+\infty)$ 递增。</li>
+<li><strong>奇偶性与单调性的综合</strong>：奇函数在关于原点对称的区间上单调性相同；偶函数在关于原点对称的区间上单调性相反。</li>
+<li><strong>周期性与单调性</strong>：若函数有周期 $T$，只需研究一个周期内的单调性即可推广到整个定义域。含绝对值的三角函数常满足周期减半：$y=|f(x)|$ 的周期是 $y=f(x)$ 周期的一半（如果 $f(x)$ 在一个周期内正负各半且对称）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>给定解析式判断单调区间</strong>：</li>
+<li>先求定义域，并化简解析式（如利用对数性质、绝对值分段）。</li>
+<li>若含绝对值，分区间去掉绝对值转化为分段函数。</li>
+<li>判断奇偶性可简化讨论（对称区间上只需研究一半）。</li>
+<li>利用基本函数的单调性及复合函数“同增异减”法则，或求导后根据导数的符号划分单调区间。</li>
+<li><strong>比较数值大小</strong>：</li>
+<li>若数值可视为同一函数的函数值，利用该函数在相应区间上的单调性。</li>
+<li>若数值为对数式、指数式等，先判断每个数的范围（常用中间值 $0$ 和 $1$ 作界）。</li>
+<li>两两作差（或作商）比较，借助因式分解判断符号。</li>
+<li><strong>含绝对值的三角函数单调性与周期</strong>：</li>
+<li>画出草图或利用变换：$y=|f(x)|$ 的周期为原周期的一半（当 $f(x)$ 在一个周期内对称变号时）。</li>
+<li>判断在某个区间上的单调性，可结合图像或利用该区间上 $f(x)$ 的符号去掉绝对值后分析。</li>
+<li>排除法：对于同时考查周期与单调性的选择题，可先排除周期不符合的选项，再验证单调性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：讨论单调性必须先在定义域内。例如对数函数真数必须大于零，含分母时不能为零。题干中若出现 $\ln|2x-1|$，需注意 $x\neq \frac12$。</li>
+<li><strong>分段函数连接点</strong>：分区间讨论单调性时，不仅要在各段内单调，还要检查连接点处是否符合整体单调趋势，若设问为“在定义域上单调”则尤为关键。</li>
+<li><strong>绝对值对周期和单调性的误判</strong>：认为 $y=|\sin x|$ 周期仍为 $2\pi$，或误判 $y=|\cos 2x|$ 在 $(\frac{\pi}{4},\frac{\pi}{2})$ 上的单调性。正确做法是结合图像或去掉绝对值分区间验证。</li>
+<li><strong>对数比较时忽略真数的范围</strong>：如 $x\in(e^{-1},1)$ 时 $\ln x\in(-1,0)$，此时对数的幂次会改变符号和大小关系，误用函数单调性外推会出错。注意 $\ln^3 x$ 与 $\ln x$ 的符号相同但绝对值可能更小。</li>
+<li><strong>奇偶性判错</strong>：含有绝对值的对数函数容易看错，务必用定义 $f(-x)$ 仔细验证。如 $f(x)=\ln|2x+1|-\ln|2x-1|$，$f(-x)=\ln|-2x+1|-\ln|-2x-1|=\ln|2x-1|-\ln|2x+1|=-f(x)$，是奇函数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2020-理-09（奇偶性与单调区间）</h3>
+<p><strong>题目</strong>：设函数 $f(x)=\ln|2x+1|-\ln|2x-1|$，判断奇偶性及指定区间上的单调性。</p>
+<p><strong>思路</strong>：先求定义域 ${x|x\neq \pm\frac12}$，验证奇偶性 $f(-x)=-f(x)$ 得奇函数，排除 A、C。再取特殊区间分析单调性：当 $x\in(-\frac12,\frac12)$ 时去绝对值化为 $f(x)=\ln(2x+1)-\ln(1-2x)=\ln\frac{2x+1}{1-2x}$，利用复合函数单调性或求导可得其递增；进而由奇函数对称性得在 $(-\infty,-\frac12)$ 上递减，或在 $(\frac12,+\infty)$ 上递增。比照选项得答案。</p>
+<p><strong>步骤</strong>：
+- 定义域：$2x+1\neq0\Rightarrow x\neq -\frac12$；$2x-1\neq0\Rightarrow x\neq\frac12$，关于原点对称。
+- $f(-x)=\ln|-2x+1|-\ln|-2x-1|=\ln|2x-1|-\ln|2x+1|=-f(x)$，故 $f(x)$ 为奇函数。排除 A、C。
+- 当 $x\in(-\frac12,\frac12)$ 时，$2x+1&gt;0$，$2x-1&lt;0$，于是 $f(x)=\ln(2x+1)-\ln(1-2x)=\ln\frac{2x+1}{1-2x}$。内层函数 $g(x)=\frac{2x+1}{1-2x}=-1+\frac{2}{1-2x}$ 在 $(-\frac12,\frac12)$ 上递增，又 $y=\ln u$ 递增，所以 $f(x)$ 在 $(-\frac12,\frac12)$ 上递增。
+- 由奇函数在对称区间单调性相同，可得在 $(-\infty,-\frac12)$ 上递减，在 $(\frac12,+\infty)$ 上递增。对比选项“在 $(-\infty,-\frac12)$ 单调递减”正确，选 D。</p>
+<p><strong>点评/变式</strong>：含绝对值的对数型函数优先去绝对值，借助奇偶性可避免讨论全部区间。变式训练：若改为 $f(x)=\ln|x+a|-\ln|x-a|$，考察类似性质。</p>
+<h3>2. 2019-理-09（三角函数的周期与单调区间）</h3>
+<p><strong>题目</strong>：下列函数中，以 $\frac{\pi}{2}$ 为周期且在区间 $(\frac{\pi}{4},\frac{\pi}{2})$ 单调递增的是哪一项？选项为 A. $|\cos 2x|$，B. $|\sin 2x|$，C. $\cos|x|$，D. $\sin|x|$。</p>
+<p><strong>思路</strong>：逐一判断周期排除不符合项，再验证特定区间上的单调性。周期：$\cos|x|=\cos x$ 周期 $2\pi$；$\sin|x|$ 不是周期函数，排除 C、D。$|\cos 2x|$ 与 $|\sin 2x|$ 周期均为 $\frac{\pi}{2}$。在 $(\frac{\pi}{4},\frac{\pi}{2})$ 上，分析 $2x\in(\frac{\pi}{2},\pi)$，此时 $\cos 2x&lt;0$，故 $|\cos 2x|=-\cos 2x$，单调递增；而 $\sin 2x&gt;0$，$|\sin 2x|=\sin 2x$ 在该区间递减。由此选定 A。</p>
+<p><strong>步骤</strong>：
+- D: $y=\sin|x|$ 在 $x\ge0$ 时为 $\sin x$，$x&lt;0$ 时为 $-\sin x$，图像非周期重复，排除。
+- C: $\cos|x|=\cos x$，周期 $2\pi$，排除。
+- B: $y=|\sin 2x|$ 周期 $T=\frac{\pi}{2}$。当 $x\in(\frac{\pi}{4},\frac{\pi}{2})$ 时，$2x\in(\frac{\pi}{2},\pi)$，$\sin 2x&gt;0$，去绝对值后为 $y=\sin 2x$，此时 $\sin 2x$ 递减，排除。
+- A: $y=|\cos 2x|$ 周期 $\frac{\pi}{2}$。在 $x\in(\frac{\pi}{4},\frac{\pi}{2})$ 内 $2x\in(\frac{\pi}{2},\pi)$，$\cos 2x&lt;0$，$|\cos 2x|=-\cos 2x$。而 $-\cos 2x$ 的导数 $2\sin 2x&gt;0$，故单调递增，符合题意。选 A。</p>
+<p><strong>点评/变式</strong>：三角绝对值函数的周期往往减半，单调性需结合区间内符号去绝对值判断。可推广到 $y=|\sin(\omega x+\varphi)|$ 等，掌握“周期减半、分段考察”的方法。</p>
+<h3>3. 2008-理-04（利用单调性比较大小）</h3>
+<p><strong>题目</strong>：若 $x\in(e^{-1},1)$，$a=\ln x$，$b=2\ln x$，$c=\ln^3 x$，比较 $a,b,c$ 的大小。</p>
+<p><strong>思路</strong>：首先由 $x\in(e^{-1},1)$ 及 $\ln x$ 单调递增，得 $a\in(-1,0)$。$b=2a$，$c=a^3$。由于 $a$ 为负，$2a&lt;a$，即 $b&lt;a$；比较 $a$ 与 $c$：$a-c=a-a^3=a(1-a^2)$，因 $-1&lt;a&lt;0$，$a&lt;0$ 且 $1-a^2&gt;0$，故 $a-c&lt;0$，即 $a&lt;c$。综上 $b&lt;a&lt;c$。</p>
+<p><strong>步骤</strong>：
+- $a=\ln x$ 在 $(0,+\infty)$ 递增，由 $e^{-1}&lt;x&lt;1$ 得 $-1&lt;a&lt;0$。
+- $b=2a$，而 $a&lt;0$，故 $2a&lt;a$，即 $b&lt;a$。
+- $c=a^3$，比较 $a$ 与 $c$：$a-c=a-a^3=a(1-a)(1+a)$。由 $-1&lt;a&lt;0$ 知 $a&lt;0$，$1-a&gt;0$，$1+a&gt;0$，因此 $a-c&lt;0\Rightarrow a&lt;c$。
+- 结合得 $b&lt;a&lt;c$，选 C。</p>
+<p><strong>点评/变式</strong>：比较大小的关键是统一到同一个变量（这里 $a$），利用函数的单调性确定范围，再通过作差判断。对于指数/对数式的大小比较，还可借助中间值 0 或 1 快速定位。此题可变为比较 $e^x$，$e^{2x}$，$(e^x)^3$ 等类似结构。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-09.html">2020-理-09</a>（2020 · 中） 通过分析函数奇偶性和不同区间的单调性，判断对应函数图像。</li>
+<li><a href="../../exam/数学/2019-理-09.html">2019-理-09</a>（2019 · 中） 本题考查三角函数的图象识别，通过分析正弦、余弦函数的周期性与单调性选择正确选项。</li>
+<li><a href="../../exam/数学/2008-理-04.html">2008-理-04</a>（2008 · 易） 考查对数函数在特定区间内的单调性及利用比较法判断对数值大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/719-单调性.html">单调性</a></li>
+</ul>
+</div>
+</body>
+</html>

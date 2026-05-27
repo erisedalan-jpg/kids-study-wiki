@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数的对称轴</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数的对称轴</h1><div class="review-mark" data-stem="三角函数的对称轴"></div><div class="meta-card"><span><strong>考点</strong>三角函数的对称轴</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对称轴定义</strong>：对于函数 $f(x)=A\sin(\omega x+\varphi)$ （$A\neq 0$），若直线 $x=x_0$ 是函数的一条对称轴，则 $\sin(\omega x_0+\varphi)=\pm 1$，即 $\omega x_0+\varphi = \frac{\pi}{2}+k\pi\,(k\in\mathbb{Z})$。</li>
+<li><strong>对称轴性质</strong>：<ul>
+<li>函数在对称轴处取得最大值 $|A|$ 或最小值 $-|A|$。</li>
+<li>两条相邻对称轴之间的距离等于半个周期，即 $\frac{T}{2}$。</li>
+<li>两条相邻对称轴与函数图像的交点一个是最高点，一个是最低点。</li>
+</ul>
+</li>
+<li><strong>周期与频率的关系</strong>：$T=\frac{2\pi}{\omega}$（$\omega&gt;0$），若已知相邻两对称轴间距 $d$，则 $d=\frac{T}{2}$，可反推 $\omega=\frac{\pi}{d}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求 $\omega$</strong>：利用两条相邻（或若干条连续）对称轴间的距离来确定。<ul>
+<li>相邻对称轴间距 $=$ 半个周期 $=\frac{T}{2}$。</li>
+<li>根据 $T=\frac{2\pi}{\omega}$ 列出方程，求出 $\omega$ 的值。</li>
+</ul>
+</li>
+<li><strong>代入对称轴方程</strong>：将已知的对称轴 $x=x_0$ 代入相位 $\omega x+\varphi$ 中。由于函数在对称轴处取得极值，必定满足：
+    $$\omega x_0+\varphi = \frac{\pi}{2}+k\pi\,\,(k\in\mathbb{Z})$$</li>
+<li><strong>解出 $\varphi$</strong>：将求得的 $\omega$ 代入上式，解出 $\varphi$ 关于整数 $k$ 的表达式。</li>
+<li><strong>确定 $\varphi$ 的最终值</strong>：根据题目给定的 $\varphi$ 的范围（如 $0&lt;\varphi&lt;\pi$），对 $k$ 进行赋值，挑出符合题意的唯一解。</li>
+<li><strong>验证（可选）</strong>：可以结合题目所说的“相邻”对称轴对应最大值和最小值这一隐含条件，确保求出的 $\varphi$ 能满足在两条对称轴处分别取得 $\pm1$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆周期的倍数关系</strong>：误把相邻对称轴的距离直接当成周期 $T$，忘了应该是 $\frac{T}{2}$，导致求出的 $\omega$ 扩大了一倍或缩小了一半。</li>
+<li><strong>忽略取值范围致多解</strong>：求出 $\varphi$ 的通解后，没有根据题目给定的 $\varphi$ 范围（例如 $0, \pi$）对整数 $k$ 进行限制和筛选，导致选到范围外的解，或在范围内出现多解时不会取舍。</li>
+<li><strong>计算起点失误</strong>：在代入对称轴方程时，直接将 $x$ 的值代入，但没有加上 $k\pi$ 项（即只写成 $\omega x + \varphi = \frac{\pi}{2}$），忽略了正弦函数在 $\frac{\pi}{2}+k\pi$ 处都取最值这一个周期性规律，导致漏解。</li>
+<li><strong>性质理解偏差</strong>：不清楚相邻对称轴一个对应最大值点，一个对应最小值点。当 $\varphi$ 有多解时，不会利用“一轴对应最大值，另一轴对应最小值”这一充要条件进行最终确认。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $\omega&gt;0,\,0&lt;\varphi&lt;\pi$，直线 $x=\frac{\pi}{3}$ 和 $x=\frac{4\pi}{3}$ 是函数 $f(x)=\sin(\omega x+\varphi)$ 图象的两条相邻对称轴，求 $\varphi$。<br />
+<strong>思路</strong>：两相邻对称轴间距是半周期，先求出 $\omega$。再根据对称轴必过最值点，代入其中之一（比如 $x=\frac{\pi}{3}$）建立方程，并结合相邻轴对应最值相反的性质和 $\varphi$ 范围确定其值。<br />
+<strong>步骤</strong>：
+1.  <strong>求 $\omega$</strong>：两条相邻对称轴的距离为 $\frac{4\pi}{3} - \frac{\pi}{3} = \pi$。该距离等于半个周期，即 $\frac{T}{2} = \pi \implies T=2\pi$。<br />
+    又 $T=\frac{2\pi}{\omega}$，所以 $\frac{2\pi}{\omega}=2\pi \implies \omega=1$。
+2.  <strong>建立 $\varphi$ 的方程</strong>：对称轴处函数取极值 $\pm 1$。代入 $\omega=1$ 及一条对称轴（例如 $x=\frac{\pi}{3}$），有<br />
+    $$\sin\left(1\times\frac{\pi}{3}+\varphi\right) = \pm 1$$<br />
+    $$\frac{\pi}{3}+\varphi = \frac{\pi}{2}+k\pi,\,k\in\mathbb{Z}$$
+3.  <strong>解出 $\varphi$ 的通解</strong>：$\varphi = \frac{\pi}{2}-\frac{\pi}{3}+k\pi = \frac{\pi}{6}+k\pi$。
+4.  <strong>确定 $\varphi$ 的值</strong>：已知 $0&lt;\varphi&lt;\pi$。<br />
+    - 当 $k=0$ 时，$\varphi=\frac{\pi}{6}$，符合范围。<br />
+    - 当 $k=1$ 时，$\varphi=\frac{\pi}{6}+\pi=\frac{7\pi}{6}$，超出范围舍弃。<br />
+    因此，$\varphi=\frac{\pi}{6}$。
+5.  <strong>验证</strong>：当 $\varphi=\frac{\pi}{6}$ 时，若 $x=\frac{\pi}{3}$ 时取得最大值 $\sin(\frac{\pi}{2})=1$，则在相邻对称轴 $x=\frac{4\pi}{3}$ 处，函数值为 $\sin(\frac{4\pi}{3}+\frac{\pi}{6})=\sin(\frac{3\pi}{2})=-1$，取得最小值。一轴最大，一轴最小，符合“相邻对称轴”概念。<br />
+<strong>点评/变式</strong>：本题核心公式是“相邻对称轴间距 $=\frac{T}{2}$”。若题目中将“相邻对称轴”改为“两条对称轴是 $x=\frac{\pi}{6}$ 和 $x=\frac{5\pi}{12}$，且其间无其他对称轴”，其解法完全一致。若题目改为“其图像关于直线 $x=\frac{\pi}{4}$ 对称”，仍可利用 $\omega x_0+\varphi = \frac{\pi}{2}+k\pi$ 建方程，但需要联合其他条件（如某个点的坐标）才能同时求出 $\omega$ 和 $\varphi$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-09.html">2012-文-09</a>（2012 · 中） 已知正弦函数的两条相邻对称轴，利用对称轴间距求周期，进而确定参数φ的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角函数的对称轴</a></li>
+</ul>
+</div>
+</body>
+</html>

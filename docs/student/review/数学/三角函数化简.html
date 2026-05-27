@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数化简</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数化简</h1><div class="review-mark" data-stem="三角函数化简"></div><div class="meta-card"><span><strong>考点</strong>三角函数化简</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>同角基本关系</strong>：$\sin^2\alpha+\cos^2\alpha=1$，$\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}$（$\alpha\neq k\pi+\dfrac{\pi}{2}$）。</li>
+<li><strong>诱导公式</strong>：$\dfrac{\pi}{2}\pm\alpha$、$\pi\pm\alpha$等可化为锐角三角函数的规律——“奇变偶不变，符号看象限”。例如 $\cos\left(\dfrac{\pi}{2}-\alpha\right)=\sin\alpha$。</li>
+<li><strong>二倍角公式</strong>：$\sin2\alpha=2\sin\alpha\cos\alpha$，$\cos2\alpha=\cos^2\alpha-\sin^2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$。逆用可得降幂公式：$\cos^2\alpha=\dfrac{1+\cos2\alpha}{2}$，$\sin^2\alpha=\dfrac{1-\cos2\alpha}{2}$。</li>
+<li><strong>和差化积与积化和差</strong>（选学但实用）：$\cos\alpha-\cos\beta=-2\sin\dfrac{\alpha+\beta}{2}\sin\dfrac{\alpha-\beta}{2}$ 等，可快速处理同名三角函数差。</li>
+<li><strong>诱导公式的灵活运用</strong>：特殊角 $\dfrac{\pi}{12}$ 与 $\dfrac{5\pi}{12}$ 互余（和为 $\dfrac{\pi}{2}$），可化为同角正、余弦平方差，联动二倍角公式一步出结果。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察角度关系</strong>：先瞄一眼角度之间是否存在互余、互补、倍半等特殊关系。如 $\alpha+\beta=\dfrac{\pi}{2}$ 时，$\cos\beta=\sin\alpha$。</li>
+<li><strong>化同名或同角</strong>：若含高次，优先考虑降幂（二倍角逆用）；若角度不同但有关联，用诱导公式或和差角公式向同一个角靠拢。</li>
+<li><strong>选择公式路径</strong>：</li>
+<li>平方差型 $\cos^2A-\cos^2B$（或 $\sin^2A-\sin^2B$）：直接用降幂公式化为一次余弦差，或用互余诱导公式化为 $\cos^2A-\sin^2A$ 型直接得 $\cos2A$。</li>
+<li>连乘或高次：优先从二倍角、和差化积切入。</li>
+<li><strong>符号步步核查</strong>：使用诱导公式时，式子前面符号要按原函数在对应象限的符号写入，不可只记函数名变化。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>降幂公式记反或漏系数</strong>：$\cos^2\alpha=\dfrac{1+\cos2\alpha}{2}$，不是 $\cos^2\alpha=1+\cos2\alpha$。代入时分子忘记加括号导致错误。</li>
+<li><strong>互余角度转化看错</strong>：$\dfrac{\pi}{12}$ 与 $\dfrac{5\pi}{12}$ 和为 $\dfrac{\pi}{2}$，写成 $\cos\dfrac{5\pi}{12}=\sin\dfrac{\pi}{12}$ 容易多写负号。注意 $\cos(\frac{\pi}{2}-\alpha)=\sin\alpha$ 中 $\alpha=\frac{\pi}{12}$ 对应 $\frac{5\pi}{12}=\frac{\pi}{2}-\frac{\pi}{12}$。</li>
+<li><strong>二倍角与半角混淆</strong>：$\cos\frac{\pi}{6}$ 的值是 $\frac{\sqrt{3}}{2}$，但计算中常粗心写成 $\frac12$ 或 $\frac{\sqrt{2}}{2}$。</li>
+<li><strong>角度象限判定草率</strong>：涉及 $\cos(\pi\pm\alpha)$ 等时，符号容易只凭感觉不按象限规律写。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>计算 $\cos^2\dfrac{\pi}{12}-\cos^2\dfrac{5\pi}{12}$ 的值。选项：A.$\dfrac12$ B.$\dfrac{\sqrt3}{3}$ C.$\dfrac{\sqrt2}{2}$ D.$\dfrac{\sqrt3}{2}$</p>
+<h3><strong>思路一（降幂+和差化积）</strong></h3>
+<p>将两个平方余弦用降幂公式展开成 $\cos2\theta$ 形式，消去常数后求余弦差。</p>
+<p><strong>步骤</strong>
+1. $\cos^2\dfrac{\pi}{12}=\dfrac{1+\cos\frac{\pi}{6}}{2}$，$\cos^2\dfrac{5\pi}{12}=\dfrac{1+\cos\frac{5\pi}{6}}{2}$；
+2. 相减得 $\dfrac{1}{2}\Big(\cos\dfrac{\pi}{6}-\cos\dfrac{5\pi}{6}\Big)$；
+3. $\cos\dfrac{\pi}{6}=\dfrac{\sqrt3}{2}$，$\cos\dfrac{5\pi}{6}=-\dfrac{\sqrt3}{2}$；
+4. 代入得 $\dfrac12\Big(\frac{\sqrt3}{2}-(-\frac{\sqrt3}{2})\Big)=\dfrac{\sqrt3}{2}$，选 D。</p>
+<h3><strong>思路二（互余诱导+二倍角）</strong></h3>
+<p>观察到 $\dfrac{\pi}{12}+\dfrac{5\pi}{12}=\dfrac{\pi}{2}$，将 $\cos\frac{5\pi}{12}$ 化为 $\sin\frac{\pi}{12}$，原式变成平方差直接出二倍角。</p>
+<p><strong>步骤</strong>
+1. $\cos\dfrac{5\pi}{12} = \cos\left(\dfrac{\pi}{2}-\dfrac{\pi}{12}\right) = \sin\dfrac{\pi}{12}$；
+2. 原式 $=\cos^2\dfrac{\pi}{12}-\sin^2\dfrac{\pi}{12}$；
+3. 由二倍角公式 $\cos^2\theta-\sin^2\theta=\cos2\theta$，得 $\cos\left(2\times\dfrac{\pi}{12}\right)=\cos\dfrac{\pi}{6}=\dfrac{\sqrt3}{2}$。</p>
+<h3><strong>点评/变式</strong></h3>
+<p>两种思路均为高频解法：路径二更快，但需要能敏锐识别角度互余关系并熟练诱导公式。变式训练可尝试 $\sin^2\dfrac{\pi}{8}-\sin^2\dfrac{3\pi}{8}$，或用 $\cos^2\dfrac{\pi}{8}-\sin^2\dfrac{\pi}{8}$ 直接求值。若题目变为 $\cos^4\dfrac{\pi}{12}-\sin^4\dfrac{\pi}{12}$，应先用平方差公式分解，再配合同角关系与二倍角求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-06.html">2021-文-06</a>（2021 · 中） 本题通过三角恒等变换求特殊角余弦高次幂表达式的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角函数化简</a></li>
+</ul>
+</div>
+</body>
+</html>

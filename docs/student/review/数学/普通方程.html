@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>普通方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>普通方程</h1><div class="review-mark" data-stem="普通方程"></div><div class="meta-card"><span><strong>考点</strong>普通方程</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2010–2015</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>普通方程的定义</strong>：直接描述点坐标 $(x,y)$ 满足的等量关系的方程，如 $F(x,y)=0$。</li>
+<li><strong>参数方程化普通方程</strong>：核心是“消参”。将参数方程 $\begin{cases} x=f(t) \ y=g(t) \end{cases}$ 通过代入、加减、利用三角恒等式（如 $\sin^2\theta+\cos^2\theta=1$）等方法，消去参数 $t$，得到 $x$ 与 $y$ 的直接关系式。需特别注意参数取值范围对普通方程曲线范围（定义域、值域）的限制。</li>
+<li><strong>极坐标方程化普通方程</strong>：利用坐标变换公式：<ul>
+<li>$x = \rho\cos\theta,\quad y = \rho\sin\theta$</li>
+<li>$\rho^2 = x^2 + y^2,\quad \tan\theta = \frac{y}{x}\;(x \neq 0)$
+常通过方程两边同乘 $\rho$，构造出 $\rho^2$、$\rho\cos\theta$ 或 $\rho\sin\theta$，再整体替换为直角坐标形式。</li>
+</ul>
+</li>
+<li><strong>直线的普通方程与极坐标方程</strong>：过原点且倾斜角为 $\alpha$ 的直线，其极坐标方程为 $\theta = \alpha\;(\rho \in \mathbb{R})$。该直线在直角坐标系中表示为 $y = x\tan\alpha$（当 $\alpha \neq \frac{\pi}{2}$），或 $x=0$（当 $\alpha = \frac{\pi}{2}$）。</li>
+<li><strong>弦长的极坐标表达</strong>：若两点在一条过极点的射线上，或其极角存在关联，可直接用 $|\rho_1 - \rho_2|$ 或 $\rho_1+\rho_2$ 表示距离，这往往比化为直角坐标更简洁。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>极坐标转直角坐标的标准步骤</strong>：</p>
+<ul>
+<li>识别极坐标方程类型（如 $\rho = 2\sin\theta$ 是圆）。</li>
+<li>若方程中不含 $\rho$ 的一次项，可在方程两边同乘 $\rho$，得到 $\rho^2 = 2\rho\sin\theta$。</li>
+<li>利用代换式 $\rho^2 = x^2+y^2$，$\rho\sin\theta = y$，$\rho\cos\theta = x$ 完成转化。</li>
+<li>最后整理成标准的圆或直线等方程，并解方程组求交点。</li>
+</ul>
+</li>
+<li>
+<p><strong>参数方程“消参”求普通方程</strong>：</p>
+<ul>
+<li><strong>代入消参法</strong>：直接从一个方程解出参数，代入另一方程。如 $C_1: \begin{cases} x=t\cos\alpha \ y=t\sin\alpha \end{cases}$，由比值得 $\frac{y}{x} = \tan\alpha$，即 $y=x\tan\alpha$。</li>
+<li><strong>三角恒等式消参法</strong>：面对形如 $\begin{cases} x = r\cos\theta \ y = r\sin\theta \end{cases}$ 的式子，平方相加即可消去 $\theta$，得到 $x^2+y^2=r^2$。</li>
+<li><strong>整体消参法</strong>：利用参数所满足的关系式，将含参数的式子整体替换。</li>
+</ul>
+</li>
+<li>
+<p><strong>处理过极点的直线与两曲线相交的弦长最值问题</strong>：</p>
+<ul>
+<li><strong>步骤一</strong>：确定直线极坐标方程。该直线过极点 $O$，倾斜角为 $\alpha$，故可设为 $\theta = \alpha$。</li>
+<li><strong>步骤二</strong>：求极径。将 $\theta = \alpha$ 分别代入两相交曲线的极坐标方程，解出 $A, B$ 两点对应的极径 $\rho_A, \rho_B$。</li>
+<li><strong>步骤三</strong>：表达弦长。由于 $A, O, B$ 共线，弦长 $|AB| = |\rho_A \pm \rho_B|$。结合图形判断两点在极点的同侧或异侧，确定符号。</li>
+<li><strong>步骤四</strong>：求最值。得到弦长关于 $\alpha$ 的三角函数表达式后，利用三角函数有界性或辅助角公式求最大值。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视参数的限定范围</strong>：参数方程消参后，得到的普通方程可能扩大了变量的取值范围。例如，参数 $t \neq 0$ 或 $\theta$ 有特定区间，会导致普通方程对应的曲线只在一段、去掉某点，必须在转化后注明限制条件（如 $x \neq 0$）。</li>
+<li><strong>极坐标与直角坐标转换时漏乘 $\rho$</strong>：常忘记 $x^2+y^2$ 由 $\rho^2$ 代换而来。如果极坐标方程是 $\rho = \text{含三角函数的式子}$ 的形式，直接“硬套”会出错，须先两边同乘 $\rho$ 构造 $\rho^2$ 项。</li>
+<li><strong>弦长公式的符号判断失误</strong>：在极坐标系下直接使用 $|\rho_1-\rho_2|$ 计算弦长，必须前提是两点在极点同侧（$\rho_1, \rho_2$ 同号）。若两点在极点异侧（$\rho_1, \rho_2$ 异号），弦长实为 $|\rho_1|+|\rho_2| = |\rho_1 - \rho_2|$ 依然成立，但需警惕 $\rho$ 为非负距离概念，避免将负的极径直接作差。最稳妥的方式是画草图辅助分析位置。</li>
+<li><strong>直线特殊斜率未讨论</strong>：由参数方程得到 $y = x\tan\alpha$ 时，必须单独考虑 $\alpha = \frac{\pi}{2}$（即 $x=0$）的情况，因为此时斜率不存在，$\tan\alpha$ 无意义。这是分类讨论的关键采分点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2015-理-23）极坐标与参数方程综合。给定参数曲线 $C_1$ 与极坐标曲线 $C_2, C_3$，第一问求 $C_2$ 与 $C_3$ 交点的直角坐标，第二问求 $C_1$ 与 $C_2, C_3$ 相交所得弦长 $|AB|$ 的最大值。
+<strong>思路</strong>：
+第一问是纯粹的极坐标转普通方程问题。对 $C_2, C_3$ 的极坐标方程两边乘 $\rho$，转化为直角坐标下的圆方程，联立求交点。
+第二问是弦长最值问题。关键洞察在于直线 $C_1$ 过坐标系极点 $O$。因此，$|AB|$ 可视为 $A, O, B$ 三点共线时两段极径之差（或和），利用极坐标处理距离极为便捷。将 $C_1$ 写为极坐标方程 $\theta = \alpha$，分别与 $C_2, C_3$ 联立求出 $A, B$ 的极径，表达出 $|AB|$ 关于 $\alpha$ 的函数进而求最值。
+<strong>步骤</strong>：
+1.  <strong>第一问：求交点直角坐标</strong>
+    - 化 $C_2: \rho=2\sin\theta$ 为 $x^2+y^2=2y$。
+    - 化 $C_3: \rho=2\sqrt{3}\cos\theta$ 为 $x^2+y^2 = 2\sqrt{3}x$。（根据原文描述补充）
+    - 联立两直角坐标方程，解得交点为 $(\frac{\sqrt{3}}{2}, \frac{3}{2})$ 和 $(0,0)$。
+2.  <strong>第二问：求 $|AB|$ 最大值</strong>
+    - 写出 $C_1$ 的极坐标方程。由参数方程消去 $t$ 得 $y = x\tan\alpha$（$\alpha \neq \frac{\pi}{2}$ 且 $t \neq 0$，故曲线不含原点）。其极坐标方程为 $\theta = \alpha\ (\rho \in \mathbb{R}, \rho \neq 0)$。
+    - 联立 $C_2$ 与 $C_1$，将 $\theta = \alpha$ 代入 $C_2$，得 $\rho_A = 2\sin\alpha$。故 $|OA| = |2\sin\alpha|$。
+    - 联立 $C_3$ 与 $C_1$，同理得 $\rho_B = 2\sqrt{3}\cos\alpha$。故 $|OB| = |2\sqrt{3}\cos\alpha|$。
+    - 由几何关系，$A, B$ 在极点 $O$ 的异侧或同侧，但弦长 $|AB| = |\rho_A - \rho_B|$ （此处因两点可能在不同象限导致极径一正一负，此公式本质是距离叠加）。
+    - 计算 $|AB| = |2\sin\alpha - 2\sqrt{3}\cos\alpha| = 4|\sin(\alpha - \frac{\pi}{3})|$。
+    - 利用三角函数有界性，当 $\alpha = \frac{5\pi}{6}$ 时，$|AB|$ 取得最大值 $4$。
+<strong>点评/变式</strong>：
+此题揭示了“过原点直线与曲线相交”类问题的最优解法——极坐标法。用极坐标表达两点距离，将几何最值化为三角函数最值，是解析几何中极具性价比的策略。
+- <strong>变式</strong>：若 $C_1$ 是一条不通过极点的直线，如 $\rho\cos(\theta - \theta_0) = p$，则求弦长需用直线的参数方程 $\begin{cases} x=x_0+t\cos\varphi \ y=y_0+t\sin\varphi \end{cases}$，其中参数 $t$ 的几何意义是直线上点到定点 $(x_0,y_0)$ 的有向距离，弦长变为 $|t_1 - t_2|$。
+- <strong>易错提醒</strong>：在写出 $C_1$ 的极坐标方程 $\theta=\alpha$ 时，务必注明 $\rho \neq 0$，这对应于参数方程中 $t \neq 0$ 的限制，即曲线不包含极点，虽然此题中该细节不影响距离计算，但这是体现逻辑严谨性的关键步骤。</p>
+<p><strong>题目</strong>：（2010-文-23）给定直线参数方程和曲线 $C_2$ 参数方程，求两者交点的几何特性或最值问题。（基于语料概括）
+<strong>思路</strong>：
+核心是将参数方程转化为普通方程。直线 $C_1$ 用代入消参，立即得到 $y$ 关于 $x$ 的一次表达式；曲线 $C_2$ 利用 $\sin^2\theta + \cos^2\theta = 1$ 消参，得到二次曲线（通常为椭圆、圆或双曲线的一支）。转化后在直角坐标系下联立方程组，用代数法求解交点或研究位置关系。
+<strong>步骤</strong>：
+1.  <strong>化普通方程</strong>：
+    - 对 $C_1: \begin{cases} x=1+\frac{1}{2}t \ y=\frac{\sqrt{3}}{2}t \end{cases}$，由第二式解出 $t = \frac{2y}{\sqrt{3}}$，代入第一式，消参得普通方程：$\sqrt{3}x - y - \sqrt{3}=0$。
+    - 对 $C_2$ 提供的参数方程，用三角恒等变换，化为标准圆锥曲线普通方程。
+2.  <strong>联立求解</strong>：
+    - 将 $C_1$ 的普通方程代入 $C_2$，化为关于 $x$ 或 $y$ 的一元二次方程。
+    - 根据题目要求，利用韦达定理求弦长、弦中点，或利用判别式 $\Delta$ 研究相切等位置关系。
+3.  <strong>几何量计算</strong>：遵循“设而不求”原则，用参数 $t$ 或坐标的整体运算来求目标量。
+<strong>点评/变式</strong>：
+此题是参数方程化为普通方程的标准范本。解题的成败在于消参的准确性及范围的等价转化。
+- <strong>消参思路的选择</strong>：涉及一次参数方程，首选代入消参；涉及正余弦的参数方程，首选“平方和”消参。
+- <strong>常见陷阱</strong>：若 $C_2$ 的参数方程中 $\theta$ 有范围限制（如 $\theta \in [0,\pi]$），则消参后的普通方程只代表半圆或半椭圆，解题时需结合图形截取有效部分，否则可能产生增根。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-23.html">2015-理-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程化为普通方程，并求解两曲线交点及弦长的最大值。</li>
+<li><a href="../../exam/数学/2010-文-23.html">2010-文-23</a>（2010 · 中） 本题要求对参数方程形式的直线与圆进行方程互化与几何关系分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/909-普通方程.html">普通方程</a></li>
+</ul>
+</div>
+</body>
+</html>

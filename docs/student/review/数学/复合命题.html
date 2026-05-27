@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合命题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复合命题</h1><div class="review-mark" data-stem="复合命题"></div><div class="meta-card"><span><strong>考点</strong>复合命题</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>命题</strong>：能判断真假的陈述句。真命题记为“真”，假命题记为“假”。</li>
+<li><strong>复合命题</strong>：由简单命题通过逻辑联结词组合而成的命题。</li>
+<li><strong>且（$\land$）</strong>：$p \land q$ 为真 $\Leftrightarrow$ $p$, $q$ 同时为真。</li>
+<li><strong>或（$\lor$）</strong>：$p \lor q$ 为真 $\Leftrightarrow$ $p$, $q$ 至少一个为真（可同真）。</li>
+<li><strong>非（$\lnot$）</strong>：$\lnot p$ 为真 $\Leftrightarrow$ $p$ 为假。</li>
+<li>真值表（核心）：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">$p$</th>
+<th style="text-align: center;">$q$</th>
+<th style="text-align: center;">$p\land q$</th>
+<th style="text-align: center;">$p\lor q$</th>
+<th style="text-align: center;">$\lnot p$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">假</td>
+</tr>
+<tr>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">假</td>
+</tr>
+<tr>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">真</td>
+<td style="text-align: center;">真</td>
+</tr>
+<tr>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">假</td>
+<td style="text-align: center;">真</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>命题的否定</strong>：$\lnot(p\land q)\Leftrightarrow \lnot p \lor \lnot q$；$\lnot(p\lor q)\Leftrightarrow \lnot p \land \lnot q$（德摩根律）。</li>
+<li><strong>适用条件</strong>：复合命题的真假完全由简单命题的真假和联结词决定，不依赖具体内容，但判断简单命题的真假需要相关学科知识（如本题涉及的立体几何公理）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>逐个击破简单命题</strong>：先独立判断每个简单命题的真假（结合几何、代数等背景），在题旁标注“真”“假”。</li>
+<li><strong>写出各复合命题的真值表达式</strong>：将题中的复合命题用真值符号化，如 $p_1\land p_4$ 等。</li>
+<li><strong>代入真值计算</strong>：依据真值表，从内到外计算每个联结词的结果。先算括号内、再算否定、最后算且/或。</li>
+<li><strong>筛选符合条件的选项</strong>：根据题目要求（如真命题的序号）输出结果。</li>
+<li><strong>检查含“非”的情形</strong>：$\lnot p$ 为真即原命题 $p$ 为假，注意不要直接抄反。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>“或”的歧义</strong>：逻辑中的“或”($\lor$) 是可兼容的（至少一个真），与日常“要么…要么…”可能不同，切勿理解成“异或”。</li>
+<li><strong>忽略简单命题本身的真假判断</strong>：直接背真值表但基础命题判断错误，导致满盘皆输。尤其是几何公理、定理的细微条件（如“过三点确定平面”忽视共线情况）。</li>
+<li><strong>$\lnot$ 的优先级不清</strong>：如 $\lnot p \lor q$ 是对 $p$ 否定后再与 $q$ 或，不是对整个 $p\lor q$ 否定。必要时添加括号明确。</li>
+<li><strong>德摩根律记混</strong>：命题否定分配时，且变或、或变且，容易只否定半边。</li>
+<li><strong>题目抄写/识别失误</strong>：真题中可能用不完全标准的符号（如本题 $\varnothing$ 形似否定），需结合上下文还原为 $\lnot$ 或 $\neg$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> （2020·文·16）</h3>
+<p>设有下列四个命题：
+$p_1$：两两相交且不过同一点的三条直线必在同一平面内。
+$p_2$：过空间中任意三点有且仅有一个平面。
+$p_3$：若空间两条直线不相交，则这两条直线平行。
+$p_4$：若直线 $l \subset$ 平面 $\alpha$，直线 $m \perp$ 平面 $\alpha$，则 $m \perp l$。
+则下述命题中所有真命题的序号是<strong><em>_</em></strong>___。
+① $p_1 \land p_4$　② $p_1 \land p_2$　③ $\lnot p_2 \lor p_3$　④ $\lnot p_3 \lor \lnot p_4$</p>
+<p><strong>思路</strong>：先利用立体几何公理与定理判定每个 $p_i$ 的真假，再根据复合命题真值表依次判断①③④。</p>
+<p><strong>步骤</strong>：
+- 判断 $p_1$：设 $l_1 \cap l_2 = A$，两相交直线确定平面 $\beta$；第三条直线 $l_3$ 与前两条均相交且不过同一点，则交点 $B,C$ 均在 $\beta$ 内，故 $l_3 \subset \beta$。$p_1$ 为<strong>真</strong>。
+- 判断 $p_2$：若三点共线，存在无数个平面经过它们。$p_2$ 为<strong>假</strong>。
+- 判断 $p_3$：空间两条直线可能异面（既不相交也不平行）。$p_3$ 为<strong>假</strong>。
+- 判断 $p_4$：线面垂直的性质定理，若 $m \perp \alpha$，则 $m$ 垂直于 $\alpha$ 内任意直线，包括 $l$。$p_4$ 为<strong>真</strong>。
+- 计算复合命题：
+  - ① $p_1 \land p_4$：真 $\land$ 真 → <strong>真</strong>。
+  - ② $p_1 \land p_2$：真 $\land$ 假 → 假。
+  - ③ $\lnot p_2 \lor p_3$：$\lnot$假 $\lor$ 假 = 真 $\lor$ 假 → <strong>真</strong>。
+  - ④ $\lnot p_3 \lor \lnot p_4$：$\lnot$假 $\lor$ $\lnot$真 = 真 $\lor$ 假 → <strong>真</strong>。
+- 所有真命题序号：①③④。</p>
+<p><strong>点评/变式</strong>：
+复合命题题型的成败关键在于基础命题的真假判断，常见于几何公理、不等式性质等场景。本题若将 $p_2$ 改为“过空间不共线三点有且仅有一个平面”则为真。变式训练：当已知 $p_1$ 真、$p_2$ 假、$p_3$ 假、$p_4$ 真时，命题“若 $\lnot p_2 \land p_4$，则 $p_1 \lor p_3$”的真假如何？可自行演练（前件真，后件真，故蕴含命题为真）。牢记：演绎链条的每一步都要严格遵守真值表，切忌“凭感觉”下结论。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-16.html">2020-文-16</a>（2020 · 中） 考查空间中线面位置关系命题的真假判断及复合命题真假判定。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">复合命题</a></li>
+</ul>
+</div>
+</body>
+</html>

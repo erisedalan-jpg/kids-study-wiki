@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>简单复合函数的导数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>简单复合函数的导数</h1><div class="review-mark" data-stem="简单复合函数的导数"></div><div class="meta-card"><span><strong>考点</strong>简单复合函数的导数</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>基本初等函数的导数公式</strong>（核心基础）：</li>
+<li>$(C)'=0$（$C$为常数）；</li>
+<li>$(x^n)' = nx^{n-1}$（$n \in \mathbf{R}$）；</li>
+<li>$(\ln x)' = \frac{1}{x}$；$(\log_a x)' = \frac{1}{x \ln a}$；</li>
+<li>$(e^x)' = e^x$；$(a^x)' = a^x \ln a$；</li>
+<li>
+<p>$(\sin x)' = \cos x$；$(\cos x)' = -\sin x$。</p>
+</li>
+<li>
+<p><strong>导数的四则运算法则</strong>：</p>
+</li>
+<li>$[f(x) \pm g(x)]' = f'(x) \pm g'(x)$；</li>
+<li>$[f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$；</li>
+<li>
+<p>$\left[ \frac{f(x)}{g(x)} \right]' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$（$g(x) \ne 0$）。</p>
+</li>
+<li>
+<p><strong>复合函数的导数（链式法则）</strong>：</p>
+</li>
+<li>设 $y=f(g(x))$ 由 $y=f(u)$ 和 $u=g(x)$ 复合而成，则 $y'$ 为 $y'_x = f'(u) \cdot g'(x)$，记作 $\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$。</li>
+<li>适用条件：内外层函数在各自对应点均可导。</li>
+<li>
+<p>注意：此法则为求导的关键工具，如 $[\ln(x+1)]' = \frac{1}{x+1} \cdot (x+1)' = \frac{1}{x+1}$。</p>
+</li>
+<li>
+<p><strong>导数的几何意义</strong>：</p>
+</li>
+<li>曲线 $y=f(x)$ 在点 $x=x_0$ 处的切线斜率 $k = f'(x_0)$。</li>
+<li>切线方程: $y - f(x_0) = f'(x_0)(x - x_0)$。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p><strong>类型一：求曲线的切线方程</strong>
+1. <strong>写定义域</strong>：先写出原函数的定义域，确保切点有效。
+2. <strong>求导函数</strong>：利用基本公式、四则运算及复合函数链式法则求出 $f'(x)$。
+3. <strong>算切点与斜率</strong>：将切点横坐标 $x_0$ 代入 $f(x)$ 和 $f'(x)$，算出切点纵坐标 $y_0$ 及切线斜率 $k$。
+4. <strong>写方程</strong>：利用点斜式方程 $y - y_0 = k(x - x_0)$，化简为一般式。</p>
+<p><strong>类型二：已知含参不等式的恒成立问题（利用分离参数或最值分析）</strong>
+1. <strong>定目标</strong>：分离参数 $a$，转化为 $a &lt; h(x)$（或 $\le$, $&gt;$, $\ge$）对某区间恒成立。
+2. <strong>探端点（套路验证）</strong>：若分离出的函数 $h(x)$ 在区间端点处的极限或值恰为临界值，需特别关注。诸如当 $x \to 1$ 时出现 $\frac{0}{0}$ 型，常可利用切线定义或洛必达法则找临界值。
+3. <strong>证单调</strong>：
+   - 构建新函数 $F(x)$ 并求导。
+   - 若导函数符号难以直接判断，进行“二次求导”，利用高阶导数判断一阶导函数的单调性，从而定号。
+4. <strong>得结论</strong>：根据单调性确定 $h(x)$ 在区间上的确界（最小值或最大值），从而锁定参数范围。</p>
+<h2>高频易错</h2>
+<ol>
+<li><strong>忘记复合函数求导法则</strong>：形如 $\ln(x+1)$ 的导数容易错写为 $\frac{1}{x+1}$ 而漏乘内层导数 $(x+1)'$，虽然本题内层导数为1不影响，但若是 $\ln(2x+1)$ 则极易失误。务必牢记 <strong>“先外后内，同步相乘”</strong>。</li>
+<li><strong>忽略函数定义域</strong>：求解导数、切线或最值时，必须先明确定义域（如本题隐含 $x&gt;0$），否则可能导致解题过程或单调区间分析错误。</li>
+<li><strong>切线问题中的“在”与“过”混淆</strong>：</li>
+<li>给定点 $(x_0, f(x_0))$ <strong>在</strong> 曲线上（已知切点），直接求导即可。</li>
+<li>给定点 <strong>过</strong> 曲线（未知切点），需设切点坐标求解，极易混淆失分。</li>
+<li><strong>恒成立分离参数时忽略端点效应</strong>：</li>
+<li>当分离后的函数在区间端点无定义或为临界值（如 $x=1$），想当然代入使函数值为零会失分。必须通过单调性严谨证明或求极限。</li>
+<li>分类讨论不全面，未能说明导函数正负判定的依据。</li>
+</ol>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知函数 $f(x) = (x+1)\ln x - a(x-1)$。求：
+(I) 当 $a=4$ 时，曲线 $y=f(x)$ 在 $(1, f(1))$ 处的切线方程；
+(II) 若当 $x \in (1, +\infty)$ 时，$f(x) &gt; 0$，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>：
+- （I）此为常规切线问题。先代入 $a=4$ 求 $f(1)$ 确认切点存在且为 $(1,0)$，再求导计算 $f'(1)$ 即得斜率，最后套点斜式。
+- （II）此为该题难点，是恒成立问题。首解 $f(1)=0$。欲使 $x&gt;1$ 时 $f(x)&gt;0$，可通过分离参数锁定临界情况。转化为证明 $a \le 2$ 时成立，或讨论单调性。关键在于分析 $x&gt;1$ 时 $f(x)$ 的图像特征，利用一阶导甚至二阶导研究单调性势在必行。</p>
+<p><strong>步骤</strong>：
+(I) 当 $a=4$ 时，$f(x) = (x+1)\ln x - 4x + 4$，其定义域为 $(0, +\infty)$。
+1. 求切点：$f(1) = (1+1)\ln 1 - 4 + 4 = 0$，切点为 $(1, 0)$。
+2. 求导：$f'(x) = 1 \cdot \ln x + (x+1) \cdot \frac{1}{x} - 4 = \ln x + \frac{1}{x} - 3$。
+3. 算斜率：$f'(1) = \ln 1 + 1 - 3 = -2$。
+4. 写方程：切线方程为 $y - 0 = -2(x - 1)$，即 $2x + y - 2 = 0$。</p>
+<p>(II) 针对 $x \in (1, +\infty)$ 时 $f(x) &gt; 0$：
+1. 确定临界：$f(1) = 0$，要使 $x&gt;1$ 时 $f(x)&gt;0$，由连续可导性质可知，必须保证 $f(x)$ 在 $x=1$ 处不减，即导函数 $f'(x)$ 在 $x=1$ 处非负。
+2. 求一阶导：$f'(x) = \ln x + \frac{1}{x} + 1 - a$。令 $F(x) = f'(x)$。
+3. 求二阶导定号：$F'(x) = \frac{1}{x} - \frac{1}{x^2} = \frac{x-1}{x^2}$。当 $x \in (1,+\infty)$ 时，$F'(x) &gt; 0$，故 $f'(x)$ 在 $(1, +\infty)$ 单调递增。
+4. 找参数界限：
+   - 若 $f'(1) \ge 0$，即 $\ln 1 + 1 + 1 - a = 2 - a \ge 0 \implies a \le 2$，则当 $x&gt;1$ 时，$f'(x) &gt; f'(1) \ge 0$，$f(x)$ 单调递增。故 $f(x) &gt; f(1) = 0$，恒成立。
+   - 若 $a &gt; 2$，则 $f'(1) = 2 - a &lt; 0$。结合 $f'(x)$ 递增且 $x \to +\infty$ 时 $f'(x) \to +\infty$，必存在 $x_0 &gt; 1$ 使得 $f'(x_0) = 0$，故 $(1, x_0)$ 上 $f(x)$ 递减，此时 $f(x) &lt; f(1)=0$，不满足要求。
+5. 综上，$a$ 的取值范围为 $(-\infty, 2]$。</p>
+<p><strong>点评/变式</strong>：
+- <strong>找临界条件</strong>：本题核心陷阱是参数分类的临界点（$a=2$）隐藏在 $x=1$ 处的导数值中。解此类 $f(x) &gt; 0$ 且已知 $f(1)=0$ 的问题，“切线与 x 轴位置关系”是重要切入口。
+- <strong>二阶导是利器</strong>：当一阶导的符号看不清楚时，果断求二阶导（甚至三阶导）判断单调性，是处理复杂指对函数不等式的不二法门。
+- <strong>变式</strong>：若条件改为“$f(x) \ge 0$ 在 $(0, +\infty)$ 恒成立”，则需考虑 $0&lt;x&lt;1$ 时的单调性及最值，分类讨论会更复杂，需辅以零点存在定理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-20.html">2016-文-20</a>（2016 · 中） 考查利用导数求曲线切线方程，以及求解恒成立不等式中参数的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">简单复合函数的导数</a></li>
+</ul>
+</div>
+</body>
+</html>

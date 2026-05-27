@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计预测</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>统计预测</h1><div class="review-mark" data-stem="统计预测"></div><div class="meta-card"><span><strong>考点</strong>统计预测</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>线性回归方程</strong>：若散点图中点的分布大致在一条直线附近，则可用线性相关拟合。方程为 $\hat{y}=\hat{b}x+\hat{a}$，其中 $\hat{b}$ 为回归系数（斜率），$\hat{a}$ 为截距。</li>
+<li><strong>最小二乘法</strong>：求回归方程的原则是使样本数据点到回归直线的纵距离平方和最小。</li>
+<li><strong>参数公式</strong>：
+  $$\hat{b} = \frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sum_{i=1}^{n} (x_i-\bar{x})^2} = \frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sum x_i^2 - n\bar{x}^2}$$
+  $$\hat{a} = \bar{y} - \hat{b}\bar{x}$$
+  其中 $\bar{x}=\frac{1}{n}\sum x_i$，$\bar{y}=\frac{1}{n}\sum y_i$。</li>
+<li><strong>适用条件</strong>：样本数据成对 $(x_i,y_i)$，且散点图具有线性趋势；预测时不宜任意大幅外推。</li>
+<li><strong>符号说明</strong>：$\hat{y}$ 表示估计值，$\hat{b}$ 表示斜率估计值；斜率 $\hat{b}&gt;0$ 说明正相关（$y$ 随 $x$ 增大而增大），$\hat{b}&lt;0$ 说明负相关。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确变量与编号</strong>：将年份或其他自变量设为 $x$（或题目给定的代号，如 $t$），因变量为 $y$。注意自变量的代表值（如年份 2007 对应 $t=1$）。</li>
+<li><strong>列表计算中间量</strong>：按 $i$ 列出 $x_i$、$y_i$，计算 $x_i^2$、$x_i y_i$，并求出总和 $\sum x_i$、$\sum y_i$、$\sum x_i^2$、$\sum x_i y_i$。</li>
+<li><strong>计算均值</strong>：$\displaystyle \bar{x}=\frac{1}{n}\sum x_i$，$\displaystyle \bar{y}=\frac{1}{n}\sum y_i$。</li>
+<li><strong>代入公式求 $\hat{b}$ 和 $\hat{a}$</strong>：优先使用变形公式 $\hat{b}=\frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sum x_i^2 - n\bar{x}^2}$，计算量小且不易错。</li>
+<li><strong>写出回归方程</strong>：$\hat{y}=\hat{b}x+\hat{a}$，并明确自变量的意义。</li>
+<li><strong>解释变化情况</strong>：由 $\hat{b}$ 的正负和大小说明平均变化趋势。若 $\hat{b}&gt;0$，则“平均每增加一个单位 $x$，$y$ 增加 $\hat{b}$ 个单位”。</li>
+<li><strong>预测</strong>：将预测点对应的 $x$ 值代入方程求出 $\hat{y}$，注意单位与实际意义。如需预测的年份对应的自变量值未直接给出，要按相同编码规则换算（例如 2015 年对应 $t=9$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>年份与代号的对应</strong>：常忽视“2007 年对应的 $t$ 是 1”，将 2015 年误代成 $t=15$，正确应为 $t=9$。</li>
+<li><strong>均值计算错误</strong>：手算时 $\bar{x}$ 或 $\bar{y}$ 算错，导致后续全错。建议验算 $\sum x_i = n\bar{x}$。</li>
+<li><strong>公式混淆</strong>：$\hat{b}$ 的分子分母位置、$\hat{a}$ 与 $\hat{b}\bar{x}$ 的符号（$\hat{a}=\bar{y}-\hat{b}\bar{x}$ 而非 $\bar{y}+\hat{b}\bar{x}$）。</li>
+<li><strong>$\sum x_i^2$ 与 $(\sum x_i)^2$ 不分</strong>：正确是平方再求和 $\sum x_i^2$，而 $n\bar{x}^2$ 是 $n\times (\bar{x})^2$。</li>
+<li><strong>预测说明不到位</strong>：只写数值，未结合背景说明“预计 2015 年人均纯收入约为…千元”；分析变化时只说正相关，未解释斜率的具体含义。</li>
+<li><strong>公式带错数据</strong>：提供的附公式中 $\hat{b}$ 可能以离差形式给出，直接使用时忘记分子分母同步除以 $n$ 或错用 $\sum (x_i-\bar{x})^2 = \sum x_i^2 - n\bar{x}^2$ 的变形。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2014 年理科第 19 题</h3>
+<p><strong>题目</strong><br />
+已知 2007 年至 2013 年农村居民家庭人均纯收入 $y$（千元）与年份代号 $t$ 的数据（$t=1\sim7$ 对应年份 2007~2013），数值为：<br />
+- $t: 1,2,3,4,5,6,7$<br />
+- $y: 2.9, 3.3, 3.6, 4.4, 4.8, 5.2, 5.9$  </p>
+<p>（Ⅰ）求 $y$ 关于 $t$ 的线性回归方程；<br />
+（Ⅱ）分析 2007~2013 年人均纯收入的变化情况，并预测 2015 年的人均纯收入。<br />
+附：$\hat{b}=\frac{\sum (t_i-\bar{t})(y_i-\bar{y})}{\sum (t_i-\bar{t})^2}$，$\hat{a}=\bar{y}-\hat{b}\bar{t}$。</p>
+<p><strong>思路</strong><br />
+计算 $\bar{t},\bar{y}$，用变形公式 $\hat{b}=\frac{\sum t_i y_i - n\bar{t}\bar{y}}{\sum t_i^2 - n\bar{t}^2}$ 求回归系数，再得截距。解释 $\hat{b}$ 的意义进行变化分析，由自变量编码规则给出 2015 年的 $t=9$，代入预测。</p>
+<p><strong>步骤</strong><br />
+1. 列表计算：
+   $\sum t_i = 1+2+...+7=28$，$\bar{t}=28/7=4$；<br />
+   $\sum y_i = 2.9+3.3+3.6+4.4+4.8+5.2+5.9 = 30.1$，$\bar{y}=30.1/7=4.3$；<br />
+   $\sum t_i^2 = 1^2+2^2+...+7^2 = 140$；<br />
+   $\sum t_i y_i = 1\times2.9 + 2\times3.3 + 3\times3.6 + 4\times4.4 + 5\times4.8 + 6\times5.2 + 7\times5.9 = 2.9+6.6+10.8+17.6+24+31.2+41.3 = 134.4$。<br />
+2. 求 $\hat{b}$：<br />
+   $\hat{b} = \frac{134.4 - 7\times4\times4.3}{140 - 7\times4^2} = \frac{134.4 - 120.4}{140 - 112} = \frac{14}{28} = 0.5$。<br />
+3. 求 $\hat{a}$：<br />
+   $\hat{a} = \bar{y} - \hat{b}\bar{t} = 4.3 - 0.5\times4 = 2.3$。<br />
+4. 回归方程：$\hat{y} = 0.5t + 2.3$。<br />
+5. 变化分析：斜率 $\hat{b}=0.5&gt;0$，表明 2007 至 2013 年该地区农村居民人均纯收入逐年增长，平均每年增加约 $0.5$ 千元。<br />
+6. 预测 2015 年：年份代号 $t$ 以 2007 年为 $1$ 依次递增，故 2015 年对应 $t=9$。代入回归方程得 $\hat{y} = 0.5\times9 + 2.3 = 6.8$（千元）。因此预测 2015 年人均纯收入约为 $6.8$ 千元。</p>
+<p><strong>点评/变式</strong><br />
+- 区分“年份”与“年份代号”是解决此类问题的关键，务必按题目给出的编码规则换算，不可直接使用年份数值。<br />
+- 变形公式能显著降低计算量；若考题未直接给出 $\sum x_i^2$ 或 $\sum x_i y_i$ 的和，也要自行列表求算。<br />
+- 变式：若给出的是非等距年份（如 2007,2008,2010,2012），需按实际间隔设置 $t$ 或使用其他模型（如时间序列）；也可能会要求比较两个回归方程的预测优劣（计算残差），或对非线性关系进行转换（如对数回归）。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-19.html">2014-理-19</a>（2014 · 中） 该题考查根据给定数据求线性回归方程，并结合方程进行变化分析与预测。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">统计预测</a></li>
+</ul>
+</div>
+</body>
+</html>

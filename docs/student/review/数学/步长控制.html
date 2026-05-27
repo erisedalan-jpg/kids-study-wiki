@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>步长控制</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>步长控制</h1><div class="review-mark" data-stem="步长控制"></div><div class="meta-card"><span><strong>考点</strong>步长控制</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>算法(程序框图)</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：算法(程序框图)</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>步长控制</strong>：在循环结构中，每执行一次循环体后循环变量增加的值，记为 $\Delta i$。常用语句为 $i = i + \text{步长}$。</li>
+<li><strong>核心作用</strong>：控制循环变量 $i$ 的取值序列，从而决定被累加项的下标取值规律。</li>
+<li><strong>适用条件</strong>：当累加或累乘的项并非逐项递增，而是呈现等差间隔（如奇数项、间隔为 $2$ 的项）时，需要调整步长。尤其在分组求和（如正负项分组）的程序框图中，步长常设为 $2$。</li>
+<li><strong>与循环条件的关系</strong>：步长 $\Delta i$、初值 $i_0$、终值范围共同决定循环次数 $n \approx \lfloor\frac{\text{终值}-i_0}{\Delta i}\rfloor+1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确输出目标</strong>：先通读程序框图，写出最终输出的表达式 $S$，如 $S = 1 - \frac12 + \frac13 - \frac14 + \cdots + \frac1{99} - \frac1{100}$。</li>
+<li><strong>拆分累加逻辑</strong>：观察算法如何处理正负项，常将 $S$ 拆为 $N$、$T$ 分别累加正项和负项，即 $S=N-T$。由此逆推每次循环中 $N$ 和 $T$ 对应的项。</li>
+<li><strong>确定循环变量的取值序列</strong>：根据框图内处理语句（如 $N=N+1/i$，$T=T+1/(i+1)$），列出每次循环中 $i$ 的实际取值，形成数列 ${a_k}$。</li>
+<li><strong>反推步长</strong>：计算相邻两次循环 $i$ 的差值，即为应填入的步长 $\Delta i$。若数列为 $1,3,5,\dots$ 则步长为 $2$；若为 $1,2,3,\dots$ 则步长为 $1$。</li>
+<li><strong>代入选项验证</strong>：将选项的步长代入，模拟运行并检查是否产生目标输出，确保不遗漏、不越界。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误判初值对应的步长</strong>：当框图设置 $i$ 初值为 $1$，但循环体内先处理 $i$ 和 $i+1$ 两个项时，容易将步长误填为 $1$，导致最终只累加到 $\frac1{50}$ 左右，不能覆盖全部 $1\sim100$。</li>
+<li><strong>混淆循环体内部的下标变化</strong>：若循环体内用 $i$ 和 $i+k$ 分别处理两项，步长应为 $k+1$ 还是 $k$？必须根据下次循环需要取到的首项下标来定。如处理 $i$ 和 $i+1$ 后，下一组应取 $i+2$，则步长为 $2$。</li>
+<li><strong>忽略循环条件与步长的匹配</strong>：步长改变后，循环条件的终值可能需相应调整。若原条件为 $i \le 99$，步长 $2$ 可使 $i$ 依次取 $1,3,\dots,99$；若误用步长 $1$ 则循环运行次数翻倍，结果错误。</li>
+<li><strong>盲目套用“步长即相邻两项下标差”</strong>：某些框图用两个独立循环分别累加奇偶项，此时各自循环的步长可能都是 $2$，但需根据各自初值和终结条件分别确定，不可混用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2018年新课标Ⅰ卷文科第8题</h3>
+<p><strong>题目</strong>：已知程序框图（略）计算 $S = 1 - \frac12 + \frac13 - \frac14 + \cdots + \frac1{99} - \frac1{100}$，判断空白框中应填入的步长语句。</p>
+<p><strong>思路</strong>：该算法将正项累入 $N$，负项累入 $T$，最终输出 $S = N - T$。由题干给出的求和通项可知，正项下标为奇数 $1,3,5,\dots,99$，负项下标为偶数 $2,4,6,\dots,100$。若循环变量 $i$ 从 $1$ 开始，则一次循环应同时处理第 $i$ 项（正）和第 $i+1$ 项（负），因此下一次循环需从 $i+2$ 开始，步长必然为 $2$。</p>
+<p><strong>步骤</strong>：
+1. 设初值：$N=0,\ T=0$，循环变量 $i=1$。
+2. 进入循环，执行 $N = N + \frac1i$，$T = T + \frac1{i+1}$，此时处理了第 $1$ 和第 $2$ 项。
+3. 为了处理第 $3$ 和第 $4$ 项，$i$ 应变为 $3$，即 $i = i + 2$。
+4. 循环条件设为 $i \le 99$ 或类似判断，则 $i$ 依次取 $1,3,5,\dots,99$，每次都取到正确的奇偶对。因此空白框填 $i = i + 2$。
+5. 对照选项：A. $i=i+1$、B. $i=i+2$、C. $i=i+3$、D. $i=i+4$，唯有 B 符合。</p>
+<p><strong>点评/变式</strong>：
+- 核心考点是<strong>根据数列项的下标递推确定步长</strong>，而非机械记忆。若将求和改为 $1 - \frac13 + \frac15 - \frac17 + \cdots$，步长仍需为 $2$，但初值和终值会变化。再如计算 $1 + \frac12 + \frac14 + \frac18 + \cdots$（下标等比），步长仍是 $1$，但累加项本身变为 $\frac1{2^{i-1}}$。务必紧扣“下一次循环变量的取值”这一本质，从算法功能反推步长，方能以不变应万变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-08.html">2018-文-08</a>（2018 · 易） 该题考查程序框图中循环结构的执行逻辑，要求根据累加式确定循环步长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">步长控制</a></li>
+</ul>
+</div>
+</body>
+</html>

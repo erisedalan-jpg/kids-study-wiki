@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>随机模拟</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>随机模拟</h1><div class="review-mark" data-stem="随机模拟"></div><div class="meta-card"><span><strong>考点</strong>随机模拟</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2010–2016</li>
+<li>出现题位：填空14 选择10</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>随机模拟（蒙特卡洛方法）是利用随机数模拟实际随机试验，借助频率的稳定性估计概率，进而反推与概率相关的几何量（如面积、体积、圆周率等）的一种近似计算方法。</p>
+<p>核心原理与公式：
+- <strong>几何概型</strong>：设随机试验全部结果构成的区域为 $\Omega$（测度为 $S_\Omega$），事件 $A$ 对应的子区域测度为 $S_A$，则 $P(A)=\dfrac{S_A}{S_\Omega}$。
+- <strong>频率估计概率</strong>：在 $n$ 次独立重复试验中，事件 $A$ 发生 $m$ 次，当 $n$ 很大时，$\dfrac{m}{n}\approx P(A)$。
+- <strong>随机模拟求未知量的方程</strong>：由 $\dfrac{m}{n}\approx \dfrac{S_A}{S_\Omega}$ 建立方程，解出待求量。常见形式：
+  $$S_A \approx \frac{m}{n} S_\Omega \quad \text{或} \quad \text{未知参数}=\frac{m}{n}\times \text{总测度对应的系数}$$
+  例如，在 $[0,1]\times[0,1]$ 均匀正方形内随机投点，统计落入四分之一圆 $x^2+y^2&lt;1\ (x&gt;0,y&gt;0)$ 的点数 $m$，总点数 $n$，则 $\dfrac{m}{n}\approx \dfrac{\pi/4}{1}$，得 $\pi \approx \dfrac{4m}{n}$。</p>
+<p>适用条件：
+1. 随机数 $x_i, y_i$ 来自均匀分布，且相互独立；
+2. 整个试验区域 $\Omega$ 的面积或体积是已知或易于表示的；
+3. 目标区域的边界可用不等式明确刻画（如 $y \le f(x)$ 或 $x^2+y^2&lt;1$）；
+4. 产生的样本点能够完全覆盖 $\Omega$，且落在 $\Omega$ 内的点均为有效点。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定总体区域 $\Omega$</strong>：根据随机数的取值范围，画出或写出所有可能结果构成的区域，通常是矩形或正方形。计算其面积（或长度/体积）$S_\Omega$。</li>
+<li><strong>明确目标事件区域 $A$</strong>：将题目中的“满足条件”翻译成不等式组，画出区域 $A$，并求出其面积的代数表达式（可能含有未知量，如 $S$ 或 $\pi$）。</li>
+<li><strong>构建频率等式</strong>：设总试验次数为 $N$（总点数或数对个数），事件发生的次数为 $M$，由几何概型得 $\dfrac{M}{N}\approx \dfrac{S_A}{S_\Omega}$。</li>
+<li><strong>解出待求量</strong>：把 $S_A$ 中含有的未知量（如圆周率 $\pi$、所求面积 $S$）作为变量，反解即得近似值。特别注意当分母区域面积不是 $1$ 时的乘除关系，防止弄反。</li>
+<li><strong>规范表达</strong>：结果通常用题目给出的 $m,n,N,N_1$ 等字母表示，写成 $\dfrac{\square}{\square}$ 或带系数的整式形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆分子与分母</strong>：频率 $m/n$ 中，$m$ 始终是“满足条件的次数”，$n$ 是“总次数”。解 $\pi$ 时，由 $m/n\approx(\pi/4)$ 得 $\pi\approx 4m/n$，若误写为 $4n/m$ 则失分。</li>
+<li><strong>选错区域测度</strong>：在 $[0,1]$ 上抽取两个数构成点 $(x,y)$，整体区域是面积为 $1$ 的正方形，而非长度为 $1$ 的线段。易错认为总测度是区间长度 $1$。</li>
+<li><strong>四分之一圆与整个圆不分</strong>：$x,y$ 均取自 $[0,1]$，故 $x^2+y^2&lt;1$ 对应的是第一象限内的四分之一圆，面积是 $\pi/4$ 而非 $\pi$。</li>
+<li><strong>忽视总面积的隐藏条件</strong>：当 $y$ 的随机范围是 $[0,1]$，且已知 $0\le f(x)\le 1$ 时，所有随机点全部落在 $[0,1]\times[0,1]$ 的正方形内，总面积为 $1$。若条件变为 $y$ 取自 $[0,a]$，则总面积为 $a$。</li>
+<li><strong>误解随机数的组数</strong>：如题干“随机抽取 $2n$ 个数 $x_1,\dots,x_n,y_1,\dots,y_n$ 构成 $n$ 个数对”，此时总点数或总对数应为 $n$，而不是 $2n$。次数 $n$ 才是试验次数。</li>
+<li><strong>将近似等式看作严格相等</strong>：解答时用“$\approx$”连接，计算所得的未知量是近似值，不能写“=”（除非题目要求近似值本身就写等式）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> (2016·理·10)</h3>
+<p>从区间 $[0,1]$ 随机抽取 $2n$ 个数 $x_1,\dots,x_n,y_1,\dots,y_n$，构成 $n$ 个数对 $(x_i,y_i)$。其中满足 $x_i^2+y_i^2&lt;1$ 的数对共有 $m$ 个，则用随机模拟方法得到的圆周率 $\pi$ 的近似值为<strong><em>_</em></strong>_。</p>
+<p><strong>思路</strong><br />
+将数对视为平面直角坐标系中的点，全部点落在正方形 $[0,1]\times[0,1]$ 内，面积为 $S_\Omega=1$；满足平方和小于 $1$ 的点落在四分之一单位圆内，面积 $S_A=\dfrac{\pi}{4}$。利用频率 $\dfrac{m}{n}$ 作为概率的估计，建立方程求解 $\pi$。</p>
+<p><strong>步骤</strong><br />
+1. 由题意，每个数对独立均匀分布在正方形区域 $\Omega={(x,y)\mid 0\le x\le 1,0\le y\le 1}$，面积 $S_\Omega=1$。<br />
+2. 事件 $A$：$x^2+y^2&lt;1$，且 $x,y\geq 0$，对应区域为四分之一单位圆，面积 $S_A=\dfrac{\pi}{4}$。<br />
+3. 根据几何概型，$P(A)=\dfrac{S_A}{S_\Omega}=\dfrac{\pi}{4}$。<br />
+4. 用随机模拟试验，$n$ 次数对中事件 $A$ 发生 $m$ 次，则 $\dfrac{m}{n}\approx \dfrac{\pi}{4}$。<br />
+5. 解出 $\pi$ 的近似值：$\pi \approx \dfrac{4m}{n}$。</p>
+<p><strong>点评/变式</strong><br />
+本题陷阱在于，总试验次数是数对的个数 $n$，而非随机数的总数 $2n$。变式练习：若 $x_i,y_i$ 均取自 $[0,2]$，总数对仍为 $n$，求 $\pi$ 的近似值。此时正方形面积为 $4$，四分之一圆半径为 $2$？注意条件 $x^2+y^2&lt;1$ 不变，则符合条件的区域仍是半径 $1$ 的四分之一圆，面积为 $\pi/4$，总面积 $4$，所以 $\dfrac{m}{n}\approx \dfrac{\pi/4}{4} = \dfrac{\pi}{16}$，得 $\pi \approx \dfrac{16m}{n}$。此变式强化了“正确区分区域测度”的要求。</p>
+<h3><strong>题目</strong> (2010·文·14)</h3>
+<p>设函数 $y=f(x)$ 在区间 $(0,1]$ 上的图像是连续不断的曲线，且恒有 $0\le f(x)\le 1$。用随机模拟方法计算由曲线 $y=f(x)$ 及直线 $x=0$，$x=1$，$y=0$ 所围成部分的面积 $S$。先产生两组（每组 $N$ 个）区间 $(0,1]$ 上的均匀随机数 $x_1,x_2,\dots,x_N$ 和 $y_1,y_2,\dots,y_N$，由此得到 $N$ 个点 $(x_i,y_i)$，再数出其中满足 $y_i\le f(x_i)$ 的点数 $N_1$，那么由随机模拟方法可得 $S$ 的近似值为<strong><em>_</em></strong>_。</p>
+<p><strong>思路</strong><br />
+在边长为 $1$ 的正方形 $[0,1]\times[0,1]$ 内均匀随机投点，目标面积 $S$ 正是曲线下方、$x$ 轴上方、$x=0$ 与 $x=1$ 之间的曲边梯形的面积。利用落入目标区域的点数频率等于面积比，即可直接得到 $S \approx N_1/N$。</p>
+<p><strong>步骤</strong><br />
+1. 总体区域 $\Omega = {(x,y)\mid 0&lt;x\le 1,\ 0&lt;y\le 1}$，面积 $S_\Omega = 1\times 1 = 1$。<br />
+2. 目标区域 $A$：由 $x=0$，$x=1$，$y=0$ 及 $y=f(x)$ 围成，即 $0\le x\le 1,\ 0\le y\le f(x)$，其面积即为 $S$。<br />
+3. 由于 $0\le f(x)\le 1$，所有随机点均落在 $\Omega$ 内，事件“$y_i\le f(x_i)$”发生当且仅当点落入 $A$。<br />
+4. 由几何概型与频率估计，$\dfrac{N_1}{N}\approx \dfrac{S}{S_\Omega}=\dfrac{S}{1}=S$。<br />
+5. 因此 $S$ 的近似值为 $\dfrac{N_1}{N}$。</p>
+<p><strong>点评/变式</strong><br />
+本题关键在于理解 $y_i\le f(x_i)$ 如何对应曲边梯形，以及默认总面积为 $1$ 的前提。若题干改为 $y_i$ 来自 $[0,2]$ 上的均匀随机数，其余条件不变，则总体正方形变为宽度 $1$、高度 $2$，面积 $2$。此时 $\dfrac{N_1}{N}\approx \dfrac{S}{2}$，故 $S\approx 2\times\dfrac{N_1}{N}$。这种变形考察了灵活应用面积比公式的能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-10.html">2016-理-10</a>（2016 · 中） 利用随机模拟和面积比，通过几何概型求圆周率π的近似值。</li>
+<li><a href="../../exam/数学/2010-文-14.html">2010-文-14</a>（2010 · 中） 本题通过随机模拟方法计算曲线下方面积，考查几何概型与定积分的近似计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/596-随机模拟.html">随机模拟</a></li>
+</ul>
+</div>
+</body>
+</html>

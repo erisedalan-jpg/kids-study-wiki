@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量运算律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量运算律</h1><div class="review-mark" data-stem="向量运算律"></div><div class="meta-card"><span><strong>考点</strong>向量运算律</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：填空13</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向量运算律</strong>  </li>
+<li><strong>加法与减法</strong>：$\vec{a}+\vec{b}=\vec{b}+\vec{a}$（交换律），$(\vec{a}+\vec{b})+\vec{c}=\vec{a}+(\vec{b}+\vec{c})$（结合律），$\vec{a}-\vec{b}=\vec{a}+(-\vec{b})$.  </li>
+<li><strong>数乘</strong>：$\lambda(\mu \vec{a})=(\lambda\mu)\vec{a}$，$(\lambda+\mu)\vec{a}=\lambda\vec{a}+\mu\vec{a}$，$\lambda(\vec{a}+\vec{b})=\lambda\vec{a}+\lambda\vec{b}$.  </li>
+<li><strong>数量积</strong>：$\vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}$（交换律），$(\lambda\vec{a})\cdot\vec{b}=\lambda(\vec{a}\cdot\vec{b})$，$(\vec{a}+\vec{b})\cdot\vec{c}=\vec{a}\cdot\vec{c}+\vec{b}\cdot\vec{c}$（分配律）.  </li>
+<li><strong>模与数量积的关系</strong>：$|\vec{a}|^2=\vec{a}^2=\vec{a}\cdot\vec{a}$，$|\vec{a}\pm\vec{b}|^2=|\vec{a}|^2\pm 2\vec{a}\cdot\vec{b}+|\vec{b}|^2$.  </li>
+<li><strong>适用条件</strong>：凡涉及向量模的等式或不等式，平方去掉模号，转化为数量积运算，是核心转化手段.</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>遇模则平方</strong>：从条件（或目标）中的模等式出发，两边同时平方，得 $|\cdot|^2 = (\cdot)^2$，将几何量转化为代数方程.  </li>
+<li><strong>展开与化简</strong>：利用完全平方公式展开 $|\vec{a}\pm\vec{b}|^2$，移项合并，消去相同项，得到 $\vec{a}\cdot\vec{b}$ 或 $|\vec{a}|$ 与 $|\vec{b}|$ 的关系.  </li>
+<li><strong>联立方程组</strong>：若题目给两个独立条件，分别平方后形成方程组，消去 $\vec{a}\cdot\vec{b}$ 或某一模，解出目标模.  </li>
+<li><strong>换元简化（高阶）</strong>：当表达式中向量多次出现线性组合时，可设基底向量或构造新向量（如 $\vec{c}=\vec{a}-\vec{b}$），将条件转化为关于新向量的简洁关系，减少计算量.</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平方漏项</strong>：误把 $|\vec{a}\pm\vec{b}|^2$ 写成 $|\vec{a}|^2+|\vec{b}|^2$，遗漏交叉项 $\pm 2\vec{a}\cdot\vec{b}$；或展开 $(m\vec{a}\pm n\vec{b})^2$ 时系数漏平方.  </li>
+<li><strong>符号错乱</strong>：移项或展开时忘记括号外负号导致计算结果反号，特别是在 $\vec{a}-\vec{b}$ 与 $\vec{b}-\vec{a}$ 切换时.  </li>
+<li><strong>向量与模混用</strong>：把 $|\vec{a}|$ 直接当作 $\vec{a}$ 参与数量积运算，或者将 $\vec{a}^2$ 误写成 $|\vec{a}|$（丢失平方）.  </li>
+<li><strong>换元不等价</strong>：引入新向量 $\vec{c}=p\vec{a}+q\vec{b}$ 后，未能正确反解原条件，导致关系式变形错误.  </li>
+<li><strong>结果忽略算术根</strong>：由 $\vec{b}^2=3$ 得出 $|\vec{b}|=\pm\sqrt{3}$，忘记模的非负性.</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知向量 $\vec{a}, \vec{b}$ 满足 $|\vec{a}-\vec{b}|=\sqrt{3}$，$|\vec{a}+\vec{b}|=|2\vec{a}-\vec{b}|$，则 $|\vec{b}|=$ ______.</p>
+<p><strong>思路</strong><br />
+条件给出两组模的关系，直接套用“遇模则平方”策略，消去 $\vec{a}\cdot\vec{b}$ 即可求出 $|\vec{b}|$。也可通过设 $\vec{c}=\vec{a}-\vec{b}$ 将两个向量不等式重组为对称形式，减少变量.</p>
+<p><strong>步骤</strong><br />
+<strong>法一（直接平方）</strong><br />
+由 $|\vec{a}+\vec{b}|=|2\vec{a}-\vec{b}|$ 两边平方：
+$$(\vec{a}+\vec{b})^2 = (2\vec{a}-\vec{b})^2$$
+$$\vec{a}^2+2\vec{a}\cdot\vec{b}+\vec{b}^2 = 4\vec{a}^2-4\vec{a}\cdot\vec{b}+\vec{b}^2$$
+移项得 $3\vec{a}^2 - 6\vec{a}\cdot\vec{b}=0$，即<br />
+$$\vec{a}^2 = 2\vec{a}\cdot\vec{b}$$<br />
+对 $|\vec{a}-\vec{b}|=\sqrt{3}$ 两边平方：<br />
+$$(\vec{a}-\vec{b})^2 = 3 \implies \vec{a}^2 - 2\vec{a}\cdot\vec{b} + \vec{b}^2 = 3$$<br />
+将 $\vec{a}^2 = 2\vec{a}\cdot\vec{b}$ 代入，得 $\vec{b}^2 = 3$，故 $|\vec{b}|=\sqrt{3}$.</p>
+<p><strong>法二（换元）</strong><br />
+令 $\vec{c} = \vec{a} - \vec{b}$，则 $\vec{a}+\vec{b} = \vec{c}+2\vec{b}$，$2\vec{a}-\vec{b} = 2\vec{c}+\vec{b}$.<br />
+已知条件化为 $|\vec{c}+2\vec{b}| = |2\vec{c}+\vec{b}|$，且 $|\vec{c}|=\sqrt{3}$.<br />
+对模等式平方：<br />
+$$(\vec{c}+2\vec{b})^2 = (2\vec{c}+\vec{b})^2$$
+$$\vec{c}^2 + 4\vec{c}\cdot\vec{b} + 4\vec{b}^2 = 4\vec{c}^2 + 4\vec{c}\cdot\vec{b} + \vec{b}^2$$
+$$\vec{c}^2 + 4\vec{b}^2 = 4\vec{c}^2 + \vec{b}^2 \implies 3\vec{b}^2 = 3\vec{c}^2 \implies |\vec{b}|^2 = |\vec{c}|^2$$
+于是 $|\vec{b}| = |\vec{c}| = \sqrt{3}$.</p>
+<p><strong>点评/变式</strong><br />
+本题核心为“模平方”的熟练运用，法二通过换元将原式变化为完全对称的形式，避免解方程组，计算量更小。注意两点：平方展开后常数项不能忘，模开方只得正值。<br />
+变式：将条件改为 $|\vec{a}+\vec{b}|=|\vec{a}-\vec{b}|$，则推出 $\vec{a}\perp\vec{b}$；若已知 $|\vec{a}|=1$，$|\vec{b}|=2$，$|\vec{a}+\vec{b}|=\sqrt{7}$，则可反求 $\vec{a}\cdot\vec{b}$ 或夹角——方法同理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-13.html">2023-新课标Ⅱ-13</a>（2023 · 中） 该题考查利用向量数量积的运算律求解向量的模，涉及两种方法转化条件求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1164-向量运算律.html">向量运算律</a></li>
+</ul>
+</div>
+</body>
+</html>

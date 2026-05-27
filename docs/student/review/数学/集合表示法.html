@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>集合表示法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>集合表示法</h1><div class="review-mark" data-stem="集合表示法"></div><div class="meta-card"><span><strong>考点</strong>集合表示法</span><span><strong>权重</strong>17</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：17</li>
+<li>真题数：5；年份跨度：2008–2016</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>集合的表示法</strong><ul>
+<li><strong>列举法</strong>：将元素一一列出，用花括号括起，如 ${1,2,3}$。元素间无序、互异。</li>
+<li><strong>描述法</strong>：${x \mid p(x)}$，其中竖线前代表元素，竖线后为元素满足的条件。可加限制 $x\in\mathbf{Z}$、$x\in\mathbf{R}$ 等；若省略数集，通常默认为实数集 $\mathbf{R}$。</li>
+</ul>
+</li>
+<li><strong>常见数集</strong>：$\mathbf{N}$（非负整数）, $\mathbf{Z}$（整数）, $\mathbf{Q}$（有理数）, $\mathbf{R}$（实数）。</li>
+<li><strong>集合的基本关系与运算</strong>（作为本考点延伸背景）：<ul>
+<li>交集 $A \cap B = {x \mid x\in A \text{ 且 } x\in B}$；</li>
+<li>并集 $A \cup B = {x \mid x\in A \text{ 或 } x\in B}$；</li>
+<li>补集需结合全集，高考此类题常直接给出具体集合求交、并。</li>
+</ul>
+</li>
+<li><strong>不等式解集的表示</strong>：绝对值不等式 $|x|\le a \;(a&gt;0) \Rightarrow -a\le x\le a$；一元二次不等式通过因式分解或图像法求解，注意端点及空心实心。集合中元素的限制条件（如 $x\in\mathbf{Z}$）会使结果从连续区间变为离散整数集。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化简集合</strong>：先将描述法表示的集合化为最简形式。  </li>
+<li>解不等式（绝对值、二次等）得解集；  </li>
+<li>特别注意竖线后的限制条件（如 $x\in\mathbf{Z}$），将解集转化为列举法或明确的整数范围。  </li>
+<li><strong>统一视角</strong>：若涉及不同表示法的集合进行运算，将难以直接比较的集合统一为列举法或区间表示，并关注元素属性（是点还是数，是整数还是实数）。  </li>
+<li><strong>执行集合运算</strong>：  </li>
+<li>交集：取公共元素；  </li>
+<li>并集：取所有元素（注意互异性）；  </li>
+<li>判断元素与集合关系：逐一验证条件。  </li>
+<li><strong>结果表示</strong>：根据题目要求给出列举式或描述式结果，检查是否漏掉或多算元素，整数范围尤其要逐一代入确认。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视 $x\in\mathbf{Z}$ 等限制条件</strong>：描述法中若出现“$x\in\mathbf{Z}$”，必须从解集中取出整数，不能直接给出连续区间。例如 $B={x\mid x^2&lt;9}$ 与 $B={x\in\mathbf{Z}\mid x^2&lt;9}$ 结果不同。  </li>
+<li><strong>误把点集当数集</strong>：形如 ${(x,y)\mid\cdots}$ 表示有序数对组成的集合，不能与数值混淆，也不能把 $(x,y)$ 当作两个单独的数进行交、并运算。  </li>
+<li><strong>列举计数时遗漏或重复</strong>：用分类列举法求点集或有限集元素个数时，常因不按顺序枚举导致漏解或多算。建议按某一变量递减/递增枚举，并立即验证条件。  </li>
+<li><strong>不等式解集端点错误</strong>：绝对值不等式或二次不等式求解时，开闭区间混淆；集合中元素若写明是整数，端点闭合问题影响较小，但仍需根据不等式符号正确选出范围内的整数。  </li>
+<li><strong>交、并集结果表示不规范</strong>：最终答案应写成集合形式，如 ${1,2}$，而非 $1,2$ 或 $(1,2)$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2016-文-01）</h3>
+<p>已知集合 $A={1,2,3}$，$B={x\mid x^2&lt;9}$，则 $A\cap B=$（ ）<br />
+A. ${-2,-1,0,1,2,3}$　B. ${-2,-1,0,1,2}$　C. ${1,2,3}$　D. ${1,2}$</p>
+<p><strong>思路</strong><br />
+首先化简集合 $B$，注意其描述法中没有特别指出 $x$ 的数集，应默认 $x\in\mathbf{R}$。然后求交集时从 $A$ 中取出满足 $x^2&lt;9$ 的元素即可。</p>
+<p><strong>步骤</strong><br />
+1. 解不等式 $x^2&lt;9$，得 $-3&lt;x&lt;3$，故 $B={x\mid -3&lt;x&lt;3}$。<br />
+2. $A\cap B$ 要求元素既在 $A$ 中又在 $B$ 中。$A$ 的元素为 $1,2,3$，逐一检验：<br />
+   - $1\in B$（因为 $-3&lt;1&lt;3$），<br />
+   - $2\in B$，<br />
+   - $3\notin B$（不等式不带等号，$3$ 不满足 $&lt;3$）。<br />
+3. 因此 $A\cap B={1,2}$，选 D。</p>
+<p><strong>点评/变式</strong><br />
+本题极易误选 C，错误原因是混淆了“$x^2&lt;9$”与“$x^2\le 9$”，或忘记检验 $A$ 中的 $3$。变式：若 $B={x\in\mathbf{Z}\mid x^2&lt;9}$，则 $B={-2,-1,0,1,2}$，此时 $A\cap B={1,2}$ 答案仍为 D，但选项可能增加迷惑项。</p>
+<h3><strong>题目</strong>（2016-理-02）</h3>
+<p>已知集合 $A={1,2,3}$，$B={x\mid (x+1)(x-2)&lt;0, x\in\mathbf{Z}}$，则 $A\cup B=$（ ）<br />
+A. ${1}$　B. ${1,2}$　C. ${0,1,2,3}$　D. ${-1,0,1,2,3}$</p>
+<p><strong>思路</strong><br />
+先化简 $B$：解一元二次不等式并结合 $x\in\mathbf{Z}$ 取出所有整数。再求 $A$ 与 $B$ 的并集，注意合并后不要遗漏元素。</p>
+<p><strong>步骤</strong><br />
+1. 解 $(x+1)(x-2)&lt;0$，得 $-1&lt;x&lt;2$。<br />
+2. 因为 $x\in\mathbf{Z}$，在 $-1$ 与 $2$ 之间的整数为 $0,1$，所以 $B={0,1}$。<br />
+3. $A\cup B = {1,2,3}\cup{0,1} = {0,1,2,3}$。<br />
+4. 对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+易错点是不看 $x\in\mathbf{Z}$ 而错选包含 $-1$ 或连续区间的选项。此外，并集运算时常忘记把 $B$ 中的 $0$ 并进去。变式：若 $B$ 中条件改为 $x\in\mathbf{R}$，则 $B=(-1,2)$，此时 $A\cup B$ 无法用列举法表示，需要掌握集合运算的灵活性。</p>
+<h3><strong>题目</strong>（2012-理-01）</h3>
+<p>已知集合 $A={1,2,3,4,5}$，$B={(x,y)\mid x\in A, y\in A, x-y\in A}$，则 $B$ 中所含元素的个数为（ ）<br />
+A. 3　B. 6　C. 8　D. 10</p>
+<p><strong>思路</strong><br />
+$B$ 是点集，元素为满足条件的序对 $(x,y)$。对 $x$ 从大到小（或从小到大）分类取值，对每个 $x$，找出符合条件的 $y$，计算总数。</p>
+<p><strong>步骤</strong><br />
+1. 由条件 $x\in A, y\in A$ 且 $x-y\in A$，即 $x-y$ 也要在 ${1,2,3,4,5}$ 中。<br />
+2. 分类列举（按 $x$ 从 $5$ 到 $2$ 尝试）：<br />
+   - 若 $x=5$，则 $5-y\in{1,2,3,4,5}$ $\Rightarrow y=4,3,2,1$（$y$ 在 $A$ 内），得 4 个；<br />
+   - 若 $x=4$，则 $4-y\in A$ $\Rightarrow y=3,2,1$，3 个；<br />
+   - 若 $x=3$，则 $3-y\in A$ $\Rightarrow y=2,1$，2 个；<br />
+   - 若 $x=2$，则 $2-y\in A$ $\Rightarrow y=1$，1 个；<br />
+   - 若 $x=1$，则 $1-y\in A$ 不可能（因 $y\ge1$ 时差 $\le0$ 不在 $A$ 中），0 个。<br />
+3. 总个数 $4+3+2+1=10$，选 D。</p>
+<p><strong>点评/变式</strong><br />
+本题若没理解“点集”属性或没按顺序枚举，容易多数或漏数。分类时固定 $x$ 再找 $y$ 是常用策略。变式：若条件改为 $x+y\in A$，则需重新分类，仍可通过有序枚举快速得出个数。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-01.html">2016-文-01</a>（2016 · 易） 已知集合A和B，求解交集，考查集合表示与交集运算。</li>
+<li><a href="../../exam/数学/2016-理-02.html">2016-理-02</a>（2016 · 易） 该题考查集合的并集运算，需先解不等式确定集合B的元素。</li>
+<li><a href="../../exam/数学/2012-理-01.html">2012-理-01</a>（2012 · 易） 本题考查通过集合描述法确定元素个数，需分类列举满足条件的x、y值。</li>
+<li><a href="../../exam/数学/2010-理-01.html">2010-理-01</a>（2010 · 易） 考查集合交集运算，需解绝对值不等式并注意集合元素为整数。</li>
+<li><a href="../../exam/数学/2008-理-01.html">2008-理-01</a>（2008 · 易） 此题考查集合的列举法表示与交集运算，需根据给定不等式确定整数集合并求公共元素。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1140-集合的表示法.html">集合表示法</a></li>
+</ul>
+</div>
+</body>
+</html>

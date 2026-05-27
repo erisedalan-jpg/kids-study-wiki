@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与圆相交</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与圆相交</h1><div class="review-mark" data-stem="直线与圆相交"></div><div class="meta-card"><span><strong>考点</strong>直线与圆相交</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆的标准方程</strong>：$(x-a)^2+(y-b)^2=r^2$，圆心$(a,b)$，半径$r$。化为一般方程：$x^2+y^2+Dx+Ey+F=0$。</li>
+<li><strong>极坐标与直角坐标互化</strong>：$x=\rho\cos\theta$，$y=\rho\sin\theta$，$\rho^2=x^2+y^2$。</li>
+<li><strong>直线参数方程标准形式</strong>：$\begin{cases}x=x_0+t\cos\alpha\y=y_0+t\sin\alpha\end{cases}$（$t$为参数），$\alpha$为直线的倾斜角，$|t|$表示直线上动点到定点$(x_0,y_0)$的距离。</li>
+<li><strong>直线与圆相交的弦长</strong>：首选几何法——弦长 $|AB|=2\sqrt{r^2-d^2}$，其中$d$为圆心到直线的距离，$r$为半径。代数法——联立方程组，利用弦长公式 $|AB|=\sqrt{1+k^2}\cdot|x_1-x_2|$。</li>
+<li><strong>点到直线的距离</strong>：直线 $Ax+By+C=0$，点$(x_0,y_0)$到直线的距离 $d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>方程变形</strong>：将圆的方程变形为标准式或一般式，求出圆心和半径；将极坐标方程、参数方程化为直角坐标普通方程。</li>
+<li><strong>确定几何量</strong>：明确圆心坐标与半径；从直线方程中提取斜率$k$（或倾斜角$\alpha$）。</li>
+<li><strong>求圆心到直线的距离</strong>：写出直线的一般式，代入点到直线距离公式，得到用斜率或参数表示的$d$。</li>
+<li><strong>建立弦长方程</strong>：将已知弦长代入几何弦长公式 $|AB|=2\sqrt{r^2-d^2}$，列出关于未知参数的方程。</li>
+<li><strong>求解并验证</strong>：解出斜率或参数值，验证是否满足直线与圆相交（即$d&lt;r$），必要时讨论特殊情况（如斜率不存在）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>极坐标代换失误</strong>：展开$(x+6)^2+y^2=25$后易漏项或合并常数错误；代入$\rho^2=x^2+y^2$时忘记同时替换$x$和$y$。</li>
+<li><strong>参数方程非标准形式</strong>：若参数方程不是标准形式（$t$的系数平方和不为1），不能直接用$t$的几何意义求弦长，必须化为普通方程。</li>
+<li><strong>忽略垂直直线</strong>：当直线斜率可能不存在时（如直线方程设为点斜式），需要单独讨论倾斜角为$90^\circ$的情形，避免漏解。</li>
+<li><strong>弦长公式误用</strong>：代数法中混淆$x_1-x_2$与$|AB|$的关系，忘记乘$\sqrt{1+k^2}$；几何法中直接用$|AB|=d$或忘记式子中的系数$2$。</li>
+<li><strong>范围检验缺失</strong>：求出参数后未验证$d&lt;r$，可能保留了圆外离或相切时的增根。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+在直角坐标系$xOy$中，圆$C$的方程为$(x+6)^2+y^2=25$。<br />
+（Ⅰ）以坐标原点为极点，$x$轴正半轴为极轴建立极坐标系，求$C$的极坐标方程；<br />
+（Ⅱ）直线$l$的参数方程是 $\begin{cases}x=t\cos\alpha\y=t\sin\alpha\end{cases}$（$t$为参数），$l$与$C$交于$A,B$两点，且$|AB|=\sqrt{10}$，求$l$的斜率。  </p>
+<p><strong>思路</strong><br />
+（Ⅰ）将圆的标准方程展开为一般形式，直接代入极坐标互化公式。<br />
+（Ⅱ）从参数方程得到直线的普通方程和倾斜角；利用几何弦长公式，将弦长转化为圆心到直线距离，解出倾斜角的正弦值，进而求得斜率。  </p>
+<p><strong>步骤</strong><br />
+（Ⅰ）由$(x+6)^2+y^2=25$展开得<br />
+$x^2+12x+36+y^2=25 \Rightarrow x^2+y^2+12x+11=0$。<br />
+将$x=\rho\cos\theta$，$y=\rho\sin\theta$，$\rho^2=x^2+y^2$代入，得<br />
+$\rho^2+12\rho\cos\theta+11=0$，即为$C$的极坐标方程。  </p>
+<p>（Ⅱ）消去参数$t$，直线$l$的普通方程为$y=(\tan\alpha)x$，即$k=\tan\alpha$。<br />
+圆$C$的圆心为$(-6,0)$，半径$r=5$。<br />
+直线一般式可写为 $kx-y=0$，圆心到直线的距离<br />
+$d=\frac{|k\cdot(-6)-0|}{\sqrt{k^2+1}}=\frac{6|k|}{\sqrt{k^2+1}}$。<br />
+利用弦长公式 $|AB|=2\sqrt{r^2-d^2}$，代入得<br />
+$\sqrt{10}=2\sqrt{25-\frac{36k^2}{k^2+1}}$。<br />
+两边平方整理：<br />
+$\frac{10}{4}=25-\frac{36k^2}{k^2+1} \Rightarrow \frac{5}{2}=25-\frac{36k^2}{k^2+1} \Rightarrow \frac{36k^2}{k^2+1}=\frac{45}{2}$。<br />
+化简得 $72k^2=45(k^2+1) \Rightarrow 72k^2=45k^2+45 \Rightarrow 27k^2=45 \Rightarrow k^2=\frac{5}{3}$。<br />
+故 $k=\pm\frac{\sqrt{15}}{3}$。<br />
+验证：$d=\frac{6\cdot\sqrt{5/3}}{\sqrt{5/3+1}}=\frac{2\sqrt{15}}{\sqrt{\frac{8}{3}}}= \frac{\sqrt{45}}{\sqrt{2}}=\frac{3\sqrt{5}}{\sqrt{2}}\approx4.74&lt;5$，满足相交条件。  </p>
+<p><strong>点评/变式</strong><br />
+- 本题典型地体现了“方程互化—几何法求弦长”的通法，计算量远小于联立方程组。<br />
+-</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-23.html">2016-理-23</a>（2016 · 中） 本题要求将圆的直角坐标方程转化为极坐标方程，并利用直线参数方程与弦长求斜率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1218-直线与圆相交.html">直线与圆相交</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球截面圆性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球截面圆性质</h1><div class="review-mark" data-stem="球截面圆性质"></div><div class="meta-card"><span><strong>考点</strong>球截面圆性质</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择12</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球的截面性质</strong><br />
+  任意平面截球面得圆。设球半径 $R$，球心 $O$ 到截面距离为 $d$，截面圆半径为 $r$，则<br />
+  $$r^2 + d^2 = R^2$$<br />
+  圆心 $O_1$ 为球心 $O$ 在截面上的射影，即 $OO_1 \perp$ 截面。</li>
+<li><strong>截面圆中的弦心距</strong><br />
+  截面圆的一条弦 $AB$，弦长 $l$，$O_1$ 到弦的距离（弦心距）$h$ 满足<br />
+  $$r^2 = h^2 + \left(\frac{l}{2}\right)^2$$<br />
+  球心 $O$ 到弦 $AB$ 中点 $E$ 的连线 $OE \perp AB$，且<br />
+  $$OE = \sqrt{R^2 - \left(\frac{l}{2}\right)^2}$$</li>
+<li><strong>两个相交平面截球的典型结构</strong><br />
+  两平面分别截球得两圆，其交线为公共弦 $AB$，中点为 $E$。若两平面<strong>垂直</strong>，则球心 $O$、两截面圆圆心 $O_1$、$O_2$、弦中点 $E$ 构成一矩形 $OO_1EO_2$，从而<br />
+  $$O_1O_2 = OE$$<br />
+  即两圆圆心距等于球心到公共弦中点的距离。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定关键点</strong>：画出球心 $O$，两截面圆心 $O_1$、$O_2$，公共弦 $AB$ 及其中心 $E$。</li>
+<li><strong>明垂直关系</strong>：由 $OO_1 \perp$ 平面 $1$，$OO_2 \perp$ 平面 $2$，且平面 $1 \perp$ 平面 $2$，可证 $OO_1 \perp OO_2$，结合 $O_1E \perp AB$、$O_2E \perp AB$，推导出平面图形（多为矩形）。</li>
+<li><strong>追对角线</strong>：利用矩形对角线相等，将求 $O_1O_2$ 转化为求 $OE$ 或其他已知量。</li>
+<li><strong>套核心公式</strong>：借助球半径 $R$ 与公共弦长 $l$，用弦心距公式 $$OE = \sqrt{R^2 - \left(\frac{l}{2}\right)^2}$$ 计算，即得答案。</li>
+<li><strong>（推广）非垂直情形</strong>：若两平面夹角为 $\theta$，则可利用三棱锥或向量法，结合余弦定理求解截面圆半径及圆心距，核心仍是 $OO_1$、$OO_2$ 的长度（即球心到截面距离）和它们之间的夹角。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“球心到弦”与“截面圆心到弦”</strong>：前者用球半径 $R$，后者用截面圆半径 $r$，公式不同，需看清所求。</li>
+<li><strong>矩形识别失误</strong>：两垂直平面截球时，常误认为 $O_1O_2$ 与 $OE$ 垂直或平行，应牢记四边形 $OO_1EO_2$ 中，$OO_1 \perp O_1E$，$OO_2 \perp O_2E$ 且 $OO_1 \perp OO_2$，故为矩形，对角线相等。</li>
+<li><strong>弦长代入错误</strong>：弦心距 $OE$ 计算时用的是弦长的一半，即 $\frac{l}{2}$，切莫直接用全长。</li>
+<li><strong>忽略垂直条件的充分性</strong>：只有两平面互相垂直时，$OO_1EO_2$ 才必定是矩形；若仅给两圆相交，需另行寻找几何关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目</h3>
+<p>已知球的半径为 $2$，相互垂直的两个平面分别截球面得两个圆，若两圆的公共弦长为 $2$，则两圆的圆心距等于（　　）<br />
+A. $1$ 　B. $\sqrt{2}$ 　C. $\sqrt{3}$ 　D. $2$</p>
+<h3>思路</h3>
+<p>由两垂直平面截球，得两截面圆，其圆心 $O_1$、$O_2$ 与球心 $O$ 及公共弦中点 $E$ 组成矩形 $OO_1EO_2$，故 $O_1O_2 = OE$。而 $OE$ 为球心到公共弦中点的距离，借助公共弦长 $2$ 和球半径 $2$，用弦心距公式可算得 $OE$。</p>
+<h3>步骤</h3>
+<p>设球心为 $O$，两截面圆圆心分别为 $O_1$、$O_2$，公共弦为 $AB$，$E$ 为 $AB$ 中点。
+- 因为平面 $1 \perp$ 平面 $2$，且 $OO_1 \perp$ 平面 $1$，$OO_2 \perp$ 平面 $2$，所以 $OO_1 \perp OO_2$。
+- 又 $O_1E \subset$ 平面 $1$，$O_2E \subset$ 平面 $2$，且 $AB \perp$ $O_1E$、$AB \perp O_2E$，结合面面垂直性质可证 $O_1E \perp OO_1$，则四边形 $OO_1EO_2$ 的三个角均为直角，故为矩形。
+- 由矩形性质得 $O_1O_2 = OE$。
+- 在 ${\rm Rt} \triangle OEA$ 中，$OA = R = 2$，$AE = \dfrac{AB}{2} = 1$，则<br />
+  $$OE = \sqrt{OA^2 - AE^2} = \sqrt{4 - 1} = \sqrt{3}$$
+- 因此 $O_1O_2 = \sqrt{3}$，选 C。</p>
+<h3>点评/变式</h3>
+<p>此题核心在于识别几何模型：垂直平面→垂直半径→矩形→对角线转移。只要画出简图，抓住“球心到公共弦中点的距离”这一不变量，直接套用公式即可迅速求解。</p>
+<p><strong>变式</strong>：若将条件中的“相互垂直”改为“两平面夹角为 $60^\circ$”，其余不变，则如何求两圆圆心距？此时四边形 $OO_1EO_2$ 不再是矩形，但 $\triangle OO_1O_2$ 中 $OO_1 = OO_2 = \sqrt{R^2 - r^2}$（需先由公共弦求截面圆半径），再利用 $\angle O_1 O O_2 = 60^\circ$，用余弦定理可得 $O_1O_2$。借此题可体会垂直条件的简化作用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-12.html">2008-理-12</a>（2008 · 易） 两个垂直平面截球所得圆，已知公共弦长，求两圆圆心距。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/990-球截面圆性质.html">球截面圆性质</a></li>
+</ul>
+</div>
+</body>
+</html>

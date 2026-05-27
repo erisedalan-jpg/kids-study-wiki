@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>系数组合</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>系数组合</h1><div class="review-mark" data-stem="系数组合"></div><div class="meta-card"><span><strong>考点</strong>系数组合</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二项式定理</strong>：
+  $$(a+b)^n = \sum_{k=0}^{n} C_n^k a^{n-k} b^k$$
+  通项（第 $k+1$ 项）为 $T_{k+1} = C_n^k a^{n-k} b^k$，其中 $C_n^k$ 为二项式系数。</li>
+<li><strong>系数组合原理</strong>：对于 $(1-x)^m(1+x)^n$ 形式的乘积展开式中 $x^k$ 项的系数，等于第一个因式中各项系数与第二个因式中各项系数的乘积之和，即：
+  $$\sum_{i=0}^k <a href="1-x">x^i</a>^m \cdot <a href="1+x">x^{k-i}</a>^n$$
+  其中 $[x^k]P(x)$ 表示多项式 $P(x)$ 展开式中 $x^k$ 的系数。</li>
+<li><strong>关键公式</strong>：</li>
+<li>$(1-x)^n$ 的通项为 $C_n^r (-x)^r = (-1)^r C_n^r x^r$。</li>
+<li>$(1+x)^n$ 的通项为 $C_n^r x^r$。</li>
+<li><strong>适用条件</strong>：要求乘积展开式中特定次幂的系数，而非整个展开式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确目标</strong>：确定所求系数对应的 $x$ 的幂次 $k$。</li>
+<li><strong>分解组合</strong>：分析第一个因式贡献的指数 $i$ 与第二个因式贡献的指数 $k-i$ 的所有可能配对 $(i, k-i)$。</li>
+<li><strong>分别求系数</strong>：</li>
+<li>利用二项式通项公式，分别写出两个因式中所需项的系数表达式。</li>
+<li>特别注意带有负号的二项式，系数包含 $(-1)^r$ 因子。</li>
+<li><strong>乘积求和</strong>：将每一对组合的系数相乘，然后将所有乘积相加，得到最终系数。</li>
+<li><strong>验证</strong>：检查 $i$ 的取值范围是否在各自因式的展开式指数范围（$0 \le i \le m$ 且 $0 \le k-i \le n$）内。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>遗漏组合</strong>：在求 $x^k$ 的系数时，可能由多对项相乘得到（如常数项与 $x^k$ 项、$x^1$ 项与 $x^{k-1}$ 项等）。必须穷尽所有可能的指数组合，避免漏算。</li>
+<li><strong>符号错误</strong>：处理 $(1-x)^n$ 的展开式时，其通项含有 $(-1)^r$ 因子。在计算各组合项的系数乘积时，必须正确计入该因子带来的正负号影响。</li>
+<li><strong>混淆系数与二项式系数</strong>：所求系数是包含符号的相乘积之和，而二项式系数 $C_n^r$ 仅为正整数。二者不可混淆。</li>
+<li><strong>通项指标错位</strong>：$C_n^k$ 对应的是第 $k+1$ 项，即 $x^k$ 项，计算时确保上标 $k$ 与 $x$ 的指数一致。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> (2008·全国卷)</h3>
+<p>$(1 - \sqrt{x})^6 (1 + \sqrt{x})^4$ 的展开式中 $x$ 的系数是（　　）<br />
+A．﹣4　　 B．﹣3　　 C．3　　 D．4</p>
+<ul>
+<li>
+<p><strong>思路</strong>
+  目标是求 $x^1$ 项的系数。这里可将 $\sqrt{x}$ 视为整体，等价于求 $(1-u)^6(1+u)^4$ 中 $u^2$ 的系数，其中 $u = \sqrt{x}$。该系数由三个部分相乘累加得到。</p>
+</li>
+<li>
+<p><strong>步骤</strong></p>
+</li>
+<li><strong>确定组合拆分</strong>：为使乘积产生 $u^2$ (即对应 $x$)，第一个因式贡献的指数 $r_1$ 与第二个因式贡献的指数 $r_2$ 之和必须为 2。<ul>
+<li>组合一：$r_1=0$ （常数项）与 $r_2=2$ （$u^2$ 项）</li>
+<li>组合二：$r_1=1$ （$u^1$ 项）与 $r_2=1$ （$u^1$ 项）</li>
+<li>组合三：$r_1=2$ （$u^2$ 项）与 $r_2=0$ （常数项）</li>
+</ul>
+</li>
+<li><strong>计算单项系数</strong>：<ul>
+<li>$(1-u)^6$ 的通项为 $C_6^r (-u)^r = (-1)^r C_6^r u^r$。</li>
+<li>常数项（$r=0$）系数：$C_6^0 = 1$。</li>
+<li>$u$ 项（$r=1$）系数：$-C_6^1 = -6$。</li>
+<li>$u^2$ 项（$r=2$）系数：$C_6^2 = 15$。</li>
+<li>$(1+u)^4$ 的通项为 $C_4^r u^r$。</li>
+<li>常数项（$r=0$）系数：$C_4^0 = 1$。</li>
+<li>$u$ 项（$r=1$）系数：$C_4^1 = 4$。</li>
+<li>$u^2$ 项（$r=2$）系数：$C_4^2 = 6$。</li>
+</ul>
+</li>
+<li>
+<p><strong>累加得最终系数</strong>：
+     $x$ 的系数 = (第一因式常数项) × (第二因式 $u^2$ 项) + (第一因式 $u$ 项) × (第二因式 $u$ 项) + (第一因式 $u^2$ 项) × (第二因式常数项)
+     $= (1 \times 6) + (-6 \times 4) + (15 \times 1)$
+     $= 6 - 24 + 15 = -3$。</p>
+</li>
+<li>
+<p><strong>点评/变式</strong>
+  本题核心是“拆分配凑系数”，是乘积型二项式展开求系数的标准考法。用 $u$ 代换 $\sqrt{x}$ 简化了指数关系，使思路更清晰。解题关键在于有条不紊地列出所有和为2的组合，并精准计算含负号二项式的系数。变式训练：求 $(1 - 2x)^5(1+x)^3$ 展开式中 $x^3$ 的系数，自行练习组合求和的完整流程。</p>
+</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-07.html">2008-理-07</a>（2008 · 中） 求两个二项式乘积展开式中x的系数，需分别展开并组合各项系数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1080-系数组合.html">系数组合</a></li>
+</ul>
+</div>
+</body>
+</html>

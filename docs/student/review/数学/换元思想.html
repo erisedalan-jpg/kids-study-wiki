@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>换元思想</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>换元思想</h1><div class="review-mark" data-stem="换元思想"></div><div class="meta-card"><span><strong>考点</strong>换元思想</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>换元思想</strong>是一种通过引入新变量替代原表达式中某一部分，从而将复杂关系转化为熟悉、简洁结构的数学方法。本质是<strong>等价转化</strong>，不改变问题的数学实质。</li>
+<li>核心步骤：<strong>设元 → 表达原变量 → 替换并化简 → 求解 → 回代还原</strong>（若求原变量解）。</li>
+<li>在函数问题中的应用：</li>
+<li>已知 $f[\varphi(x)]$ 解析式，求 $f(x)$：令 $t=\varphi(x)$，解出 $x=\varphi^{-1}(t)$，代入得 $f(t)$，再将 $t$ 换成 $x$。</li>
+<li>图像变换中的对应关系：例如 $y=f(x)$ 经过横坐标伸缩、平移后得 $y=f(ax+b)$，令 $t=ax+b$，则 $x=\frac{t-b}{a}$，可将新函数表达式反解出原函数。</li>
+<li>三角变换中换元常用于处理角频率、初相不一致的复合函数，使表达式统一。</li>
+<li>适用范围：函数复合求解析式、方程求解、不等式证明、数列递推、积分换元等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别复合结构</strong>：找出内层函数或重复出现的整体，如 $f(ax+b)$、$f(\sin x)$、$f(\text{整体})$ 等。</li>
+<li><strong>恰当设元</strong>：令新变量等于内层表达式，例如 $t=ax+b$。新元取值范围应优先考虑，但仅求解析式时可暂不强调。</li>
+<li><strong>反解原变量</strong>：由 $t=\varphi(x)$ 解出 $x=\varphi^{-1}(t)$。如果反函数不唯一，需根据条件选择单值分支，或借助其他关系确定。</li>
+<li><strong>代入替换</strong>：将解析式中所有含 $x$ 的部分表示成 $t$ 的表达式，得到关于 $t$ 的函数关系 $f(t)=\cdots$。</li>
+<li><strong>还原自变量</strong>：将 $t$ 用常规自变量字母 $x$ 代回，写出 $f(x)$ 的最终解析式（注意定义域的一致性）。</li>
+<li><strong>验证</strong>：可将得到的 $f(x)$ 代回原复合关系，检查恒等是否成立。</li>
+</ol>
+<p>——特别地，对图像变换类问题，可正向变换后利用对应点坐标相等列关系式，再用换元法解出原函数；也可逆向变换避免换元，两种方法均需熟练掌握。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>设元后忘记反解</strong>：令 $t=2x$ 后直接写成 $f(2x)=g(x)$，误得 $f(x)=g(\frac{x}{2})$ 时符号或系数出错。必须由 $t=2x$ 解出 $x=\frac{t}{2}$ 后整体代入。</li>
+<li><strong>混淆平移方向与符号</strong>：$f[2(x-\frac{\pi}{3})]$ 的平移量是 $\frac{\pi}{3}$ 而不是 $\frac{2\pi}{3}$，横坐标先伸缩后平移时注意系数提取。</li>
+<li><strong>忽视定义域变化</strong>：换元可能改变自变量的允许范围，若原题有定义域限制，代入和回代时需同步调整。例如 $t=\sqrt{x}$ 有 $t\ge0$。</li>
+<li><strong>多步变换顺序错误</strong>：先平移再伸缩与先伸缩再平移的表达式不同，必须严格按照题意顺序建立 $f(x)$ 与最终函数的关系。</li>
+<li><strong>最终表达式未还原自变量</strong>：得到 $f(t)$ 后忘记把 $t$ 写成 $x$，导致扣分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2021全国卷理第7题）</h3>
+<p>把函数 $y=f(x)$ 图像上所有点的横坐标缩短到原来的 $\frac12$（纵坐标不变），再把所得曲线向右平移 $\frac{\pi}{3}$ 个单位长度，得到函数 $y=\sin\left(x-\frac{\pi}{4}\right)$ 的图像，求 $f(x)$ 的表达式。</p>
+<h4><strong>思路</strong></h4>
+<p>正向逐次写出变换后的函数解析式，建立 $f$ 与 $\sin$ 的相等关系，利用换元法将内层表达式设为 $t$，反解出 $x$ 代入后得到 $f(t)$ 即得 $f(x)$。</p>
+<h4><strong>步骤</strong></h4>
+<ol>
+<li>横坐标缩短为原来的 $\frac12$：$y=f(x)\;\longrightarrow\;y=f(2x)$。</li>
+<li>向右平移 $\frac{\pi}{3}$：$y=f(2x)\;\longrightarrow\;y=f!\left[2!\left(x-\frac{\pi}{3}\right)\right]$。</li>
+<li>根据题意：$f!\left[2!\left(x-\frac{\pi}{3}\right)\right] = \sin\left(x-\frac{\pi}{4}\right)$。</li>
+<li><strong>换元</strong>：令 $t=2!\left(x-\frac{\pi}{3}\right)$，则 $x=\frac{t}{2}+\frac{\pi}{3}$。</li>
+<li>代入右边：$f(t)=\sin\left[\left(\frac{t}{2}+\frac{\pi}{3}\right)-\frac{\pi}{4}\right] = \sin\left(\frac{t}{2}+\frac{\pi}{12}\right)$。</li>
+<li>还原自变量：$f(x)=\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$。</li>
+</ol>
+<p>对照选项知答案为 $\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$。</p>
+<h4><strong>点评/变式</strong></h4>
+<ul>
+<li>本题正向使用换元，避免了逆向变换中平移方向的反复颠倒，思路直接。换元的关键点是正确建立内层表达式并准确反解 $x$。</li>
+<li>若采用逆向变换：从 $y=\sin\left(x-\frac{\pi}{4}\right)$ 向左平移 $\frac{\pi}{3}$ 再横坐标伸长为 2 倍，可得到相同结果。两种方法互为检验。</li>
+<li>变式：若将平移和伸缩顺序颠倒，如先平移再缩短，则表达式变化为 $f(x+\frac{\pi}{3})\to f(2x+\frac{\pi}{3})$，易出错。练习时注意区分 $f[2(x-\frac{\pi}{3})]$ 与 $f(2x-\frac{\pi}{3})$ 的区别。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-07.html">2021-理-07</a>（2021 · 中） 考察三角函数的图像变换（伸缩与平移）及逆向还原解析式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/885-换元思想.html">换元思想</a></li>
+</ul>
+</div>
+</body>
+</html>

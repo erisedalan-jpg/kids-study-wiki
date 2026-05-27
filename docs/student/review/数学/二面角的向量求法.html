@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二面角的向量求法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二面角的向量求法</h1><div class="review-mark" data-stem="二面角的向量求法"></div><div class="meta-card"><span><strong>考点</strong>二面角的向量求法</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二面角的向量定义</strong>：二面角 $\alpha-l-\beta$ 的大小等于其平面角的大小，取值范围为 $[0,\pi]$。若平面 $\alpha,\beta$ 的法向量分别为 $\vec{n}_1,\vec{n}_2$，则<br />
+  $$|\cos\theta|=\frac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$$
+  其中 $\theta$ 为二面角的平面角。</li>
+<li><strong>法向量夹角与二面角的关系</strong>：<br />
+  设 $\varphi=\langle\vec{n}_1,\vec{n}_2\rangle$。  </li>
+<li>若两法向量一个指向二面角内部、一个指向外部，则 $\theta=\varphi$；  </li>
+<li>若同指向内部或同指向外部，则 $\theta=\pi-\varphi$。<br />
+  实操中常先求 $|\cos\theta|$，再结合图形判断锐角或钝角，或利用 $\sin\theta=\sqrt{1-\cos^2\theta}$ 直接得正弦值（二面角正弦 $\ge 0$）。</li>
+<li><strong>建系核心条件</strong>：存在三条两两垂直的直线交于一点，且其中一条垂直于另两条确定的平面（即线面垂直）。常见来源：等腰三角形底边中线、菱形对角线、题目直接给出的线线垂直或线面垂直等。</li>
+<li><strong>坐标与向量运算</strong>：
+  点坐标由几何长度投影到轴上；向量 $\overrightarrow{AB}=(x_B-x_A,\,y_B-y_A,\,z_B-z_A)$；平面法向量求法——设 $\vec{n}=(x,y,z)$，由平面内两不共线向量与 $\vec{n}$ 的数量积为零，赋值求出一组解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证垂直，定建系根基</strong><br />
+   先证明某条直线与底面（或某平面）垂直，得到建系所需的 $z$ 轴方向（或 $x,y,z$ 轴对应关系）。如利用等腰三角形中线、勾股定理逆定理等。</li>
+<li><strong>建立空间直角坐标系</strong><br />
+   以垂足或特殊中点（如本题中 $E$）为原点，使两两垂直的直线落在坐标轴上（尽可能多地点落在坐标轴上，简化坐标）。</li>
+<li><strong>量化并写出所有相关点坐标</strong><br />
+   设出便于计算的线段长度（如 $DA=DB=DC=2$），利用长度、角度、向量相等关系求出各点坐标。注意符号，防止方向写反。</li>
+<li><strong>求两个平面的法向量</strong>  </li>
+<li>平面 $ABD$：取 $\overrightarrow{AB},\overrightarrow{AD}$（或其它组合），设 $\vec{n}_1$，解 $\vec{n}_1\cdot\overrightarrow{AB}=0,\ \vec{n}_1\cdot\overrightarrow{AD}=0$。  </li>
+<li>平面 $ABF$：同理取两向量。</li>
+<li><strong>计算法向量夹角的余弦值</strong><br />
+   $$\cos\langle\vec{n}_1,\vec{n}_2\rangle=\frac{\vec{n}_1\cdot\vec{n}_2}{|\vec{n}_1||\vec{n}_2|}$$</li>
+<li><strong>判断二面角并求值</strong>  </li>
+<li>若题目求余弦，需根据图形判断二面角锐钝，决定是否加负号。  </li>
+<li>若求正弦（如本题），优先求 $|\cos\theta|=|\cos\langle\vec{n}_1,\vec{n}_2\rangle|$（当不确定锐钝时），再用 $\sin\theta=\sqrt{1-\cos^2\theta}$。<br />
+     本题中二面角 $D-AB-F$ 可判断为锐角，此时 $\cos\theta=|\cos\langle\vec{n}_1,\vec{n}_2\rangle|$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>跳步建系</strong>：未经证明直接默认某直线垂直于底面，导致坐标系缺乏严格依据（证垂直是必拿步骤分）。</li>
+<li><strong>点坐标符号错误</strong>：如根据 $\overrightarrow{EF}=\overrightarrow{DA}$ 写 $F$ 坐标，顺序反了得 $F=E+\overrightarrow{AD}$。正确应为 $\overrightarrow{EF}=\overrightarrow{DA} \Rightarrow F=E+\overrightarrow{DA}=E+(A-D)$。</li>
+<li><strong>法向量计算粗心</strong>：解三元一次方程组赋值不合理（分母出现0等），导致后续夹角算错；忘记法向量可同乘倍数，应取整数值简化。</li>
+<li><strong>二面角与法向量夹角关系混淆</strong>：直接拿 $\cos\varphi$ 作为答案，而不判断二面角大小，忽略 $\cos\theta=-\cos\varphi$ 的情况。</li>
+<li><strong>正弦值漏取正</strong>：用同角关系 $\sin\theta=\sqrt{1-\cos^2\theta}$ 时，省去根号或忘记二面角正弦恒正。</li>
+<li><strong>数值运算失误</strong>：求模长时漏平方、点乘时漏项，导致最终结果含根号错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023·新课标Ⅱ·20）</h3>
+<p>三棱锥 $A-BCD$ 中，$DA=DB=DC$，$BD\perp CD$，$\angle ADB=\angle ADC=60^\circ$，$E$ 为 $BC$ 中点。<br />
+(1) 证明：$BC\perp DA$；<br />
+(2) 点 $F$ 满足 $\overrightarrow{EF}=\overrightarrow{DA}$，求二面角 $D-AB-F$ 的正弦值。</p>
+<hr />
+<h3><strong>思路</strong></h3>
+<p>(1) 利用等腰 $\triangle BCD$ 与 $\triangle BCA$（由已知易得 $AB=AC$）得 $BC\perp DE$ 且 $BC\perp AE$，证 $BC\perp$ 平面 $ADE$，得 $BC\perp DA$。<br />
+(2) 通过 $AE\perp DE$ 及 $AE\perp BC$ 证 $AE\perp$ 平面 $BCD$，从而以 $E$ 为原点，$ED,EB,EA$ 分别为 $x,y,z$ 轴建系。设 $DB=2$ 便于计算，确定各点坐标；由向量等式得 $F$ 坐标；求平面 $ABD$ 和 $ABF$ 的法向量，利用公式求二面角余弦，再转正弦。</p>
+<hr />
+<h3><strong>步骤</strong></h3>
+<p><strong>(1) 证明</strong><br />
+由 $DA=DB=DC$，$\angle ADB=\angle ADC=60^\circ$，得 $\triangle ADB\cong\triangle ADC$，故 $AB=AC$。<br />
+又 $E$ 是 $BC$ 中点，∴ $BC\perp AE$。<br />
+在 $\triangle BCD$ 中 $DB=DC$，$E$ 中点 $\Rightarrow BC\perp DE$。<br />
+$AE\cap DE=E \Rightarrow BC\perp$ 平面 $ADE$，又 $DA\subset$ 平面 $ADE$，∴ $BC\perp DA$。</p>
+<p><strong>(2) 建系与坐标</strong><br />
+由(1)知 $DE\perp BC$，又 $BD\perp CD$，设 $DB=DC=2$，则 $BC=2\sqrt{2}$，$BE=CE=\sqrt{2}$，$DE=\sqrt{DB^2-BE^2}=\sqrt{2}$。<br />
+连接 $AE$，由 $AD=2$，$DE=\sqrt{2}$，$\triangle ADB$ 中 $AB^2=AD^2+DB^2-2\cdot AD\cdot DB\cos60^\circ=4+4-4=4$，得 $AB=2$。同理 $AC=2$。<br />
+在 $\triangle AEB$ 中 $AE=\sqrt{AB^2-BE^2}=\sqrt{4-2}=\sqrt{2}$。于是 $AE^2+DE^2=4=AD^2$，故 $AE\perp DE$。<br />
+又 $AE\perp BC$（已证），$BC\cap DE=E$，故 $AE\perp$ 平面 $BCD$。<br />
+以 $E$ 为原点，$\overrightarrow{ED}$ 为 $x$ 轴正方向，$\overrightarrow{EB}$ 为 $y$ 轴正方向，$\overrightarrow{EA}$ 为 $z$ 轴正方向建系：<br />
+$E(0,0,0),\ D(\sqrt{2},0,0),\ B(0,\sqrt{2},0),\ C(0,-\sqrt{2},0),\ A(0,0,\sqrt{2})$。<br />
+由 $\overrightarrow{EF}=\overrightarrow{DA}=A-D=(-\sqrt{2},0,\sqrt{2})$，得 $F=E+\overrightarrow{EF}=(-\sqrt{2},0,\sqrt{2})$。</p>
+<p><strong>(3) 法向量计算</strong><br />
+平面 $ABD$：$\overrightarrow{AB}=(0,\sqrt{2},-\sqrt{2})$，$\overrightarrow{AD}=(\sqrt{2},0,-\sqrt{2})$。<br />
+设法向量 $\vec{n}_1=(x_1,y_1,z_1)$，<br />
+$$\begin{cases} \sqrt{2}y_1-\sqrt{2}z_1=0 \ \sqrt{2}x_1-\sqrt{2}z_1=0 \end{cases}$$
+取 $z_1=1$，得 $x_1=1,y_1=1$，∴ $\vec{n}_1=(1,1,1)$。</p>
+<p>平面 $ABF$：$\overrightarrow{AB}=(0,\sqrt{2},-\sqrt{2})$，$\overrightarrow{AF}=F-A=(-\sqrt{2},0,0)$。<br />
+设法向量 $\vec{n}_2=(x_2,y_2,z_2)$，<br />
+$$\begin{cases} \sqrt{2}y_2-\sqrt{2}z_2=0 \ -\sqrt{2}x_2=0 \end{cases}$$
+取 $y_2=1$，得 $z_2=1,x_2=0$，∴ $\vec{n}_2=(0,1,1)$。</p>
+<p><strong>(4) 求二面角正弦值</strong><br />
+$$\cos\langle\vec{n}_1,\vec{n}_2\rangle=\frac{1\times</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-20.html">2023-新课标Ⅱ-20</a>（2023 · 中） 本题考查线线垂直证明及利用空间向量求二面角的正弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1192-二面角的向量求法.html">二面角的向量求法</a></li>
+</ul>
+</div>
+</body>
+</html>

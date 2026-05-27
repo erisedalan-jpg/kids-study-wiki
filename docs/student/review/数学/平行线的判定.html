@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行线的判定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平行线的判定</h1><div class="review-mark" data-stem="平行线的判定"></div><div class="meta-card"><span><strong>考点</strong>平行线的判定</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平行线判定定理</strong>（核心依据）<br />
+  ① 同位角相等，两直线平行；<br />
+  ② 内错角相等，两直线平行；<br />
+  ③ 同旁内角互补，两直线平行。<br />
+  同一平面内，垂直于同一直线的两条直线互相平行。  </li>
+<li><strong>等腰三角形的性质</strong><br />
+  $AB=AC$ ⇒ 底边上的高 $AD$ 也是底边中线、顶角平分线，且 $AD\perp BC$。  </li>
+<li><strong>圆的切线性质</strong><br />
+  过圆外一点作圆的两条切线，切线长相等（$AE=AF$）；圆心与切点的连线垂直于切线（$OE\perp AB$，$OF\perp AC$）。  </li>
+<li><strong>等腰三角形与圆的组合</strong><br />
+  当 $\odot O$ 与等腰 $\triangle ABC$ 的两腰相切，且圆心 $O$ 在顶角平分线 $AD$ 上时，连接两切点 $E$、$F$ 所得线段 $EF$ 必垂直于 $AD$，从而 $EF\parallel BC$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>瞄准目标平行，倒推垂直或等角</strong><br />
+   要证 $EF\parallel BC$，已知 $BC\perp AD$，只需证 $EF\perp AD$（垂直于同一直线）。  </li>
+<li><strong>连半径，得直角</strong><br />
+   见到切线，连接圆心与切点 $OE$、$OF$，立刻有 $OE\perp AB$，$OF\perp AC$。  </li>
+<li><strong>挖掘对称性，锁定圆心位置</strong><br />
+   由 $AB=AC$ 及 $O$ 与两腰相切，可证 $\text{Rt}\triangle AEO \cong \text{Rt}\triangle AFO$（$HL$），得 $OA$ 平分 $\angle BAC$，故 $O$ 在角平分线 $AD$ 上。  </li>
+<li><strong>利用切线长相等，构造等腰三角形</strong><br />
+   $AE=AF$，结合 $OA$ 为顶角平分线，由“三线合一”逆用或全等可得 $OA\perp EF$，即 $AD\perp EF$，命题得证。  </li>
+<li><strong>面积计算（第2问常见拓展）</strong><br />
+   用弦切角、垂径定理求半径，拆分四边形为三角形与梯形，利用已知线段长度代入公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忽视切线长相等带来的等腰 $\triangle AEF$，导致无法证明 $OA\perp EF$。  </li>
+<li>误认为 $O$ 一定在 $AD$ 上而直接使用，缺少通过全等或角平分线性质推导的步骤（需先证 $\angle EAO=\angle FAO$）。  </li>
+<li>把 $AD$ 与 $EF$ 的交点默认为垂足，但必须依托等腰三角形“三线合一”才能确认垂直关系。  </li>
+<li>混淆圆内接四边形判定与平行判定的条件，错误引用对角互补等无关定理。  </li>
+<li>面积计算时忽略 $AG$ 与半径相等的隐含条件，导致半径或弦心距求错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2015·文·22 第1问）<br />
+等腰 $\triangle ABC$ 内，$\odot O$ 与底边 $BC$ 交于 $M$、$N$，与高 $AD$ 交于 $G$，且与 $AB$、$AC$ 分别切于 $E$、$F$。求证：$EF\parallel BC$。</p>
+<p><strong>思路</strong><br />
+证 $EF$ 与 $BC$ 同时垂直于 $AD$，利用等腰三角形性质及切线性质将平行问题转化为垂直问题。</p>
+<p><strong>步骤</strong><br />
+1. 连接 $OE$、$OF$，则 $OE\perp AB$，$OF\perp AC$（切线性质）。<br />
+2. $OE=OF=r$，$OA$ 为公共边，$\triangle AEO$ 与 $\triangle AFO$ 均为 $\text{Rt}\triangle$，故 $\text{Rt}\triangle AEO \cong \text{Rt}\triangle AFO$（$HL$），得 $\angle EAO=\angle FAO$。<br />
+3. 由 $AB=AC$ 知 $\triangle ABC$ 为等腰三角形，$AD\perp BC$ 且 $AD$ 平分 $\angle BAC$，结合上步得 $O$ 在 $AD$ 上，即 $A$、$O$、$D$ 三点共线。<br />
+4. 由切线长相等知 $AE=AF$，$\triangle AEF$ 为等腰三角形，又 $OA$ 平分 $\angle EAF$（第2步），故 $OA\perp EF$（等腰三角形三线合一），即 $AD\perp EF$。<br />
+5. 已知 $AD\perp BC$，同一平面内垂直于同一直线的两直线平行，故 $EF\parallel BC$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将平行判定转化为证垂直，关键步骤是证明 $O$ 在角平分线上。凡遇“等腰三角形+内切圆切两腰”的结构，均可沿用此套路。<br />
+- 变式：若将 $\odot O$ 改为与 $AB$、$AC$ 相切且与 $BC$ 相离，只要圆心在对称轴上，$EF$ 依然平行于 $BC$。<br />
+- 延伸：当 $AG=r$ 时，可结合射影定理或勾股定理求出半径与梯形高，进而求面积，此时 $EBCF$ 为直角梯形。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-22.html">2015-文-22</a>（2015 · 中） 本题考查圆与三角形的切线和位置关系，证明线段平行并计算四边形面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">平行线的判定</a></li>
+</ul>
+</div>
+</body>
+</html>

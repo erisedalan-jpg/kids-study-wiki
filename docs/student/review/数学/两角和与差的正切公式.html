@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两角和与差的正切公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两角和与差的正切公式</h1><div class="review-mark" data-stem="两角和与差的正切公式"></div><div class="meta-card"><span><strong>考点</strong>两角和与差的正切公式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：3；年份跨度：2013–2024</li>
+<li>出现题位：填空13 填空15</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>两角和与差的正切公式</strong>
+   $$\tan(\alpha \pm \beta)=\frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}\quad(\alpha,\beta,\alpha\pm\beta\neq \frac{\pi}{2}+k\pi,\ k\in\mathbb{Z})$$
+   其中分子符号一致，分母符号相反。</p>
+</li>
+<li>
+<p><strong>常用变形与推论</strong></p>
+</li>
+<li>倒用：$\tan\alpha\pm\tan\beta=\tan(\alpha\pm\beta)(1\mp\tan\alpha\tan\beta)$。</li>
+<li>若已知 $S=\tan\alpha+\tan\beta$，$P=\tan\alpha\tan\beta$，则 $\tan(\alpha+\beta)=\frac{S}{1-P}$。</li>
+<li>能与韦达定理结合：$\tan\alpha,\tan\beta$ 为一元二次方程 $x^2-Sx+P=0$ 的两根。</li>
+<li>
+<p>“1”的代换：$1=\tan\frac{\pi}{4}$ 可凑出 $1\pm\tan\alpha$ 的结构，用于逆用公式。</p>
+</li>
+<li>
+<p><strong>同角关系衔接</strong>
+   已知 $\tan\theta$ 求 $\sin\theta,\ \cos\theta$ 时，常用
+   $$\cos^2\theta=\frac{1}{1+\tan^2\theta},\quad \sin^2\theta=\frac{\tan^2\theta}{1+\tan^2\theta},$$
+   $$\sin\theta=\frac{\tan\theta}{\sqrt{1+\tan^2\theta}}\ (\text{符号由 }\theta\text{ 象限定}).$$
+   也常借助直角三角形（邻1对$|k|$斜$\sqrt{1+k^2}$）快速得绝对值，再添象限符号。</p>
+</li>
+<li>
+<p><strong>角的拆凑原则</strong>
+   观察已知角与目标角关系，将所求角表示为已知角的和差或特殊角组合。例如：
+   $\alpha=(\alpha-\frac{\pi}{4})+\frac{\pi}{4}$，$\theta=(\theta+\frac{\pi}{4})-\frac{\pi}{4}$ 等。拆角后必须注意角范围的传递，避免多解。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>“给值求值”直接代公式</strong>
+   已知 $\tan\alpha,\tan\beta$ 或能求出它们，直接代入正切和差公式。注意分母是否可能为零（此时公式失效，正切不存在）。</p>
+</li>
+<li>
+<p><strong>“和积整体”模式</strong>
+   题目给出 $\tan\alpha+\tan\beta$ 与 $\tan\alpha\tan\beta$ 的值，直接把 $\tan(\alpha+\beta)$ 视为整体代入 $\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$，无需解出单角正切。此类题常搭配韦达定理。</p>
+</li>
+<li>
+<p><strong>“从复角求单角”的凑角法</strong>
+   已知 $\tan(\alpha\pm\beta)$ 及一个角的正切，求另一角。将单角拆成 $\alpha=(\alpha\pm\beta)\mp\beta$，再用公式展开。若遇到特殊角，优先把特殊角与已知角组合。</p>
+</li>
+<li>
+<p><strong>切化弦与弦化切的双向通道</strong>
+   当目标为 $\sin(\alpha+\beta),\ \cos(\alpha+\beta)$ 时，可先求 $\tan(\alpha+\beta)$，再利用同角关系或直角三角形求解。反之，若给出正弦、余弦的线性组合，可构造正切表达式。</p>
+</li>
+<li>
+<p><strong>符号的“象限锁定”</strong>
+   计算三角函数时，必须根据已知角的象限或范围，推断目标角的象限，从而确定正弦、余弦、正切的符号。尤其是通过正切反求正弦时，$\sin\theta$ 的符号不可忽略。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略公式存在条件</strong>：使用 $\tan(\alpha\pm\beta)$ 前必须保证分母 $1\mp\tan\alpha\tan\beta\neq0$，且各角正切本身有定义。</li>
+<li><strong>符号混淆</strong>：分子“±”与分母“∓”的对应关系记错，或变形时把 $1\mp\tan\alpha\tan\beta$ 符号写反。</li>
+<li><strong>拆角后范围判断失误</strong>：由 $\alpha$ 和 $\beta$ 的范围推断 $\alpha\pm\beta$ 的范围时，不会取交集或忽视边界，导致 $\sin,\cos$ 符号选错。</li>
+<li><strong>用 $\sin\theta=\frac{\tan\theta}{\sqrt{1+\tan^2\theta}}$ 忘记带符号</strong>：直接取正负由 $\theta$ 终边位置决定，而不是仅由 $\tan\theta$ 的正负决定。</li>
+<li><strong>凑角时系数错误</strong>：如将 $\tan(\theta+\frac{\pi}{4})$ 展开时，误将 $\tan\frac{\pi}{4}=1$ 的位置代成其他常数。</li>
+<li><strong>韦达定理使用不当</strong>：误认为 $\tan\alpha$ 和 $\tan\beta$ 是任意实数，实际上若两根异号还需结合象限筛选。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2024·新课标Ⅱ·13）</h3>
+<p>已知 $\alpha$ 为第一象限角，$\beta$ 为第三象限角，$\tan\alpha+\tan\beta=4$，$\tan\alpha\tan\beta=\sqrt{2}+1$，求 $\sin(\alpha+\beta)$。</p>
+<p><strong>思路</strong><br />
+条件直接给出和与积，优先整体求出 $\tan(\alpha+\beta)$。然后利用同角关系或直角三角形求出 $\sin(\alpha+\beta)$，重点在于根据 $\alpha+\beta$ 的范围确定正弦的符号。</p>
+<p><strong>步骤</strong><br />
+1. 由两角和正切公式，<br />
+   $$\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=\frac{4}{1-(\sqrt{2}+1)}=\frac{4}{-\sqrt{2}}=-2\sqrt{2}.$$
+2. 根据题意，$\alpha$ 在第一象限（$0&lt;\alpha&lt;\frac{\pi}{2}$），$\beta$ 在第三象限（$\pi&lt;\beta&lt;\frac{3\pi}{2}$），因此 $\pi&lt;\alpha+\beta&lt;2\pi$。<br />
+   $\tan(\alpha+\beta)&lt;0$，故 $\alpha+\beta$ 不在第三象限，只能落在第四象限（$\frac{3\pi}{2}&lt;\alpha+\beta&lt;2\pi$），此时 $\sin(\alpha+\beta)&lt;0$。
+3. 构造直角三角形：将 $\tan(\alpha+\beta)$ 的绝对值视为对邻边比 $2\sqrt{2}:1$，斜边为 $\sqrt{(2\sqrt{2})^2+1^2}=3$。<br />
+   于是 $|\sin(\alpha+\beta)|=\frac{2\sqrt{2}}{3}$。
+4. 结合符号得 $\sin(\alpha+\beta)=-\frac{2\sqrt{2}}{3}$。</p>
+<p><strong>点评/变式</strong><br />
+本题的核心是“和积整体”与“符号判定”。若改为求 $\cos(\alpha+\beta)$，则由第四象限得正号。若题目不直接给和积，而是给出两根满足的一个二次方程，则先用韦达定理转为和积关系。当 $\alpha,\beta$ 的象限有多种可能时，需结合和积的正负进一步缩小范围。</p>
+<h3><strong>题目2</strong>（2018·全国卷·文·15）</h3>
+<p>已知 $\tan\left(\alpha-\frac{\pi}{4}\right)=\frac{1}{6}$，求 $\tan\alpha$。</p>
+<p><strong>思路</strong><br />
+注意到已知角为 $\alpha-\frac{\pi}{4}$，目标角为 $\alpha$，可通过凑角 $\alpha=(\alpha-\frac{\pi}{4})+\frac{\pi}{4}$，利用两角和正切公式求解。</p>
+<p><strong>步骤</strong><br />
+1. 设 $\gamma=\alpha-\frac{\pi}{4}$，则 $\tan\gamma=\frac{1}{6}$，且 $\alpha=\gamma+\frac{\pi}{4}$。
+2. 代入两角和公式：<br />
+   $$\tan\alpha=\tan\left(\gamma+\frac{\pi}{4}\right)=\frac{\tan\gamma+\tan\frac{\pi}{4}}{1-\tan\gamma\tan\frac{\pi}{4}}=\frac{\frac{1}{6}+1}{1-\frac{1}{6}\times 1}.$$
+3. 计算：分子 $=\frac{7}{6}$，分母 $=\frac{5}{6}$，因此 $\tan\alpha=\frac{7}{5}$。</p>
+<p><strong>点评/变式</strong><br />
+“凑角”是处理此类问题的最直接方法。若题目改为已知 $\tan(\alpha+\beta)$ 和 $\tan\beta$ 求 $\tan\alpha$，同样可设 $\alpha=(\alpha+\beta)-\beta$ 展开。要熟练掌握 $\frac{\pi}{4}$、$\frac{\pi}{3}$、$\frac{\pi}{6}$ 等特殊角的正切值，它们常作为拆角桥梁。</p>
+<h3><strong>题目3</strong>（2013·全国卷·理·15）</h3>
+<p>设 $\theta$ 为第二象限角，若 $\tan\left(\theta+\frac{\pi}{4}\right)=\frac{1}{2}$，求 $\sin\theta+\cos\theta$。</p>
+<p><strong>思路</strong><br />
+先用公式由 $\tan(\theta+\frac{\pi}{4})$ 求出 $\tan\theta$，再结合第二象限角的条件及同角关系，求出 $\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-13.html">2024-新课标Ⅱ-13</a>（2024 · 中） 本题主要考查两角和的正切公式应用、角的范围确定以及同角三角函数关系求解。</li>
+<li><a href="../../exam/数学/2018-文-15.html">2018-文-15</a>（2018 · 中） 本题给出 tan(α-π/4) 的值，利用两角和的正切公式间接求 tanα。</li>
+<li><a href="../../exam/数学/2013-理-15.html">2013-理-15</a>（2013 · 中） 已知第二象限角的正切值，利用两角和正切公式及同角关系求正弦与余弦之和</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/629-两角和与差的正切公式.html">两角和与差的正切公式</a></li>
+</ul>
+</div>
+</body>
+</html>

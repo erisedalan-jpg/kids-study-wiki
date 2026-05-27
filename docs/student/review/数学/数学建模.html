@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数学建模</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数学建模</h1><div class="review-mark" data-stem="数学建模"></div><div class="meta-card"><span><strong>考点</strong>数学建模</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>数学建模是用数学语言刻画现实问题的过程，其核心步骤为：<strong>问题分析→模型假设→模型建立→模型求解→模型检验</strong>。本考点涉及的具体知识包括：
+- <strong>拉格朗日点平衡方程</strong>（地月系 $L_2$ 点）：满足 $\frac{M_1}{(R+r)^2} + \frac{M_2}{r^2} = \frac{M_1}{R^3}(R+r)$，其中 $M_1$ 为地球质量，$M_2$ 为月球质量，$R$ 为地月距离，$r$ 为 $L_2$ 点到月球的距离。
+- <strong>无量纲化</strong>：引入比值变量 $\alpha = \frac{r}{R}$，将方程转化为关于 $\alpha$ 的代数方程，便于近似处理。
+- <strong>小量近似</strong>：当 $\alpha \ll 1$ 时，利用 $(1+\alpha)^n$ 的展开或题目给定的近似公式，保留主项、略去高阶小量，得到近似的代数关系。本题给定 $\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$。
+- <strong>近似求解</strong>：由化简后的近似等式直接解出未知量。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题建模</strong>：将文字描述的物理背景转化为给定的数学方程，明确待求量（$r$）与已知量（$M_1, M_2, R$）的关系。</li>
+<li><strong>引入无量纲变量</strong>：设 $\alpha = \frac{r}{R}$（或其他比例关系），将原方程中的所有长度量均用 $R$ 和 $\alpha$ 表示，消除量纲，简化形式。</li>
+<li><strong>代数恒等变形</strong>：对方程进行去分母、移项、合并同类项，将含目标小量的项集中于等式一侧，整理成题目所给近似公式中出现的结构。</li>
+<li><strong>代入近似公式</strong>：利用题目给出的小量近似关系（如 $\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$），将高阶无穷小舍去，得到关于 $\alpha$ 的简洁代数方程。</li>
+<li><strong>回代求解</strong>：解出 $\alpha$ 的近似值，再由 $r = \alpha R$ 求得 $r$ 的近似表达式，与选项匹配。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>方程右侧理解错误</strong>：拉格朗日点方程的右侧易误记为 $\frac{M_1+M_2}{R^3}(R+r)$，本题严格给出的是 $\frac{M_1}{R^3}(R+r)$，必须按题目方程代入，不可凭物理直觉擅自修改。</li>
+<li><strong>无量纲化时代错</strong>：设 $\alpha = \frac{r}{R}$ 后，$R+r = R(1+\alpha)$，分母 $(R+r)^2 = R^2(1+\alpha)^2$，$r^2 = \alpha^2 R^2$。代换时容易漏掉 $R$ 的幂次。</li>
+<li><strong>移项与展开出错</strong>：将方程化为 $\frac{M_2}{\alpha^2} = M_1 \frac{(1+\alpha)^3 - 1}{(1+\alpha)^2}$ 时，$(1+\alpha)^3$ 展开为 $1+3\alpha+3\alpha^2+\alpha^3$，易漏项或符号错误。</li>
+<li><strong>近似使用不当</strong>：直接忽略某类项而不依据题目所给的近似公式，会导致结果错误。必须先将方程变形为近似公式左端的形式，再整体替换为右端表达式。</li>
+<li><strong>最终表达式混淆</strong>：选项同时包含平方根与立方根，求解 $\alpha^3 \approx \frac{M_2}{3M_1}$ 时，误将立方根写作平方根，错选 A、B 项。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2019年全国卷理-04</h3>
+<p><strong>题目</strong>：嫦娥四号中继星“鹊桥”运行于地月拉格朗日 $L_2$ 点。设地球质量 $M_1$，月球质量 $M_2$，地月距离 $R$，$L_2$ 点到月球的距离 $r$ 满足
+$$\frac{M_1}{(R+r)^2} + \frac{M_2}{r^2} = \frac{M_1}{R^3}(R+r).$$
+设 $\alpha = \frac{r}{R}$，且 $\alpha$ 很小，近似计算中
+$$\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3,$$
+则 $r$ 的近似值为：
+A. $\sqrt{\frac{M_2}{M_1}}R$　B. $\sqrt{\frac{M_2}{2M_1}}R$　C. $\sqrt[3]{\frac{3M_2}{M_1}}R$　D. $\sqrt[3]{\frac{M_2}{3M_1}}R$</p>
+<p><strong>思路</strong>：将 $\alpha = r/R$ 代入原方程，化简为目标近似公式的形式，利用近似关系求出 $\alpha$，进而得 $r$。</p>
+<p><strong>步骤</strong>：
+1. 将 $r = \alpha R$ 代入方程：
+   $$\frac{M_1}{(R+\alpha R)^2} + \frac{M_2}{(\alpha R)^2} = \frac{M_1}{R^3}(R+\alpha R)$$
+   化简为
+   $$\frac{M_1}{R^2(1+\alpha)^2} + \frac{M_2}{\alpha^2 R^2} = \frac{M_1(1+\alpha)}{R^2}.$$
+   两边同乘 $R^2$，得
+   $$\frac{M_1}{(1+\alpha)^2} + \frac{M_2}{\alpha^2} = M_1(1+\alpha).$$
+2. 移项，将含 $M_2$ 的项保留在左侧：
+   $$\frac{M_2}{\alpha^2} = M_1(1+\alpha) - \frac{M_1}{(1+\alpha)^2} = M_1 \cdot \frac{(1+\alpha)^3-1}{(1+\alpha)^2}.$$
+3. 展开 $(1+\alpha)^3 = 1 + 3\alpha + 3\alpha^2 + \alpha^3$，代入得
+   $$\frac{M_2}{\alpha^2} = M_1 \cdot \frac{3\alpha + 3\alpha^2 + \alpha^3}{(1+\alpha)^2}.$$
+   两边同乘 $\alpha^2$，得到
+   $$M_2 = M_1 \cdot \frac{3\alpha^3 + 3\alpha^4 + \alpha^5}{(1+\alpha)^2}.$$
+4. 利用近似公式 $\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$，得
+   $$M_2 \approx M_1 \cdot 3\alpha^3.$$
+   故 $\alpha^3 \approx \frac{M_2}{3M_1}$，即 $\alpha \approx \sqrt[3]{\frac{M_2}{3M_1}}$.
+5. 回代 $r = \alpha R$，得 $r \approx \sqrt[3]{\frac{M_2}{3M_1}}R$，对应选项 D.</p>
+<p><strong>点评/变式</strong>：本题以航天工程为背景，本质上是<strong>小量近似的代数运算</strong>。解题的关键不是记住物理结论，而是严格按题目给出的方程和近似公式进行<strong>恒等变形</strong>。变式训练：若题干给出的近似公式变为 $(1+\alpha)^n \approx 1+n\alpha$，或右侧向心力项系数变化，则需重新推导。应试时务必<strong>逐字审题</strong>，区分近似公式的结构，不要死记硬背答案。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-04.html">2019-理-04</a>（2019 · 中） 嫦娥四号在月球 L2 点轨道运行，由万有引力定律和牛顿运动定律推导，求 L2 点到月球距离 r 的近似值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">数学建模</a></li>
+</ul>
+</div>
+</body>
+</html>

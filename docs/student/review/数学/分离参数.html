@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分离参数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分离参数</h1><div class="review-mark" data-stem="分离参数"></div><div class="meta-card"><span><strong>考点</strong>分离参数</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：解答21</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分离参数法</strong>：在方程 $F(x,a)=0$ 或不等式 $F(x,a)\ge 0$ 中，将参数 $a$ 与变量 $x$ 进行等价分离，得到形式 $a=f(x)$ 或 $a\ge g(x)$ 等，从而把含参问题转化为<strong>定函数 $f(x)$（或 $g(x)$）的值域、最值、图像交点</strong>问题。</li>
+<li><strong>核心原理</strong>：</li>
+<li>$a=f(x)$ 在区间 $I$ 上有解 $\Leftrightarrow a$ 属于 $f(x)$ 在 $I$ 上的值域。</li>
+<li>$a=f(x)$ 在区间 $I$ 上有 $k$ 个解 $\Leftrightarrow$ 直线 $y=a$ 与 $y=f(x)$ 在 $I$ 上的图像有 $k$ 个交点。</li>
+<li>$a\ge f(x)$ 恒成立 $\Leftrightarrow a\ge f(x)<em _min="\min">{\max}$；$a\le f(x)$ 恒成立 $\Leftrightarrow a\le f(x)</em>$。</li>
+<li><strong>适用条件</strong>：参数与变量可彻底分离；分离后的函数 $f(x)$（通常不含参数）能用导数高效研究其单调性、极值、渐近线。</li>
+<li><strong>依托工具</strong>：求导、零点存在定理、极限分析（$\lim_{x\to 0^+}f(x)$, $\lim_{x\to +\infty}f(x)$）、函数图像走势。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分离与重构</strong><br />
+   由方程或不等式变形，将参数单独提到一侧，另一侧构造为新函数 $h(x)$，明确 $h(x)$ 的自然定义域（特别注意题目给定的区间）。</li>
+<li><strong>函数精细研究</strong>  </li>
+<li>求 $h'(x)$，确定极值点、单调区间。  </li>
+<li>计算极值、最值，必要时计算区间端点处的函数值或极限（用洛必达、极限法则确定渐近线）。  </li>
+<li>画出 $y=h(x)$ 的大致图像（单调性、极值点、凹凸性非必需）。</li>
+<li><strong>数形结合出参数范围</strong>  </li>
+<li><strong>唯一零点问题</strong>：$h(x)=a$ 在 $I$ 上只有一个根 $\Leftrightarrow$ 直线 $y=a$ 与 $y=h(x)$ 图像在 $I$ 内只有一个交点。<br />
+     常为 $a=h(x)<em _text_极大="\text{极大">{\text{极小}}$ 或 $a=h(x)</em>$ 或边界极限值之间的某个水平线。注意}<strong>相切临界</strong>：$a$ 等于极值点处的函数值。  </li>
+<li><strong>恒成立问题</strong>：转为 $a\ge [h(x)]<em _min="\min">{\max}$ 或 $a\le [h(x)]</em>$，检验等号能否取到。</li>
+<li><strong>验证充分性</strong><br />
+   对于临界值，代回原函数验证是否确实满足“只有一个零点”（排除可能产生的额外零点或没有零点的情况）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略分离变形的等价性</strong>：分离参数时，若两边同除以含 $x$ 的因式，必须先讨论该因式是否为零或变号。在 $(0,+\infty)$ 上除以 $x^2$ 是安全的，但在包含 $x=0$ 的区间需要单独处理。</li>
+<li><strong>遗漏端点与渐近趋势</strong>：未研究 $x\rightarrow$ 边界时 $h(x)$ 的极限，导致画图缺失关键走势，无法准确判断交点个数。例如 $h(x)=\frac{e^x}{x^2}$，$x\to0^+$ 和 $x\to+\infty$ 时 $h(x)\to+\infty$，中间存在唯一极小值，这是“唯一零点”的图象依据。</li>
+<li><strong>把“唯一零点”简单化为 $f(x)=0$ 只有一解</strong>：当函数先减后增且极小值恰为零时，也存在唯一零点，但此时属于“相切根”，分离参数后对应 $y=a$ 与 $y=h(x)$ 在极值点处相交。若不画出极值水平线，极易漏解。</li>
+<li><strong>混淆方程有解与不等式恒成立的条件方向</strong>：<br />
+  $a\ge f(x)$ 恒成立 $\Rightarrow a\ge f(x)<em _min="\min">{\max}$，而非 $a\ge f(x)</em>$。方向弄反是常见失分点。</li>
+<li><strong>多区间问题未区分数形结合的区间一致性</strong>：原题给定区间必须严格遵守，图像只需在此区间上分析，不能将定义域擅自扩大。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2018·全国卷·理21）</h3>
+<p>已知函数 $f(x)=e^x-ax^2$．
+（1）若 $a=1$，证明：当 $x\ge0$ 时，$f(x)\ge1$；
+（2）若 $f(x)$ 在 $(0,+\infty)$ 只有一个零点，求 $a$．</p>
+<h4>（1）思路</h4>
+<p>给定参数值的不等式证明，通常构造函数转化为最值问题。令 $g(x)=f(x)-1=e^x-x^2-1$，证 $g(x)_{\min}\ge0$。一次求导不足以判定，需二阶求导研究单调性。</p>
+<p><strong>步骤</strong><br />
+- 令 $g(x)=e^x-x^2-1$（$x\ge0$），则 $g'(x)=e^x-2x$，$g''(x)=e^x-2$。<br />
+- 令 $g''(x)=0\Rightarrow x=\ln2$。在 $(0,\ln2)$ 上 $g''(x)&lt;0$，$g'(x)$ 递减；在 $(\ln2,+\infty)$ 上 $g''(x)&gt;0$，$g'(x)$ 递增。<br />
+- $g'(0)=1$，$g'(\ln2)=2-2\ln2&gt;0$，且 $g'(x)$ 在 $x=\ln2$ 处取得最小值 $&gt;0$，故 $g'(x)&gt;0$，$g(x)$ 在 $[0,+\infty)$ 上单调递增。<br />
+- $g(x)\ge g(0)=0$，所以 $e^x-x^2\ge1$，即 $f(x)\ge1$。  </p>
+<p><strong>点评</strong><br />
+证明不等式的标准流程：作差→求导→导数的符号判定（可能需要二阶导）→确定单调性→求出最值。本题中 $g'(x)$ 的最小值 $&gt;0$，传递出 $g(x)$ 严格单调增的关键信息。</p>
+<h4>（2）思路</h4>
+<p>$f(x)=0\Leftrightarrow e^x=ax^2$。在 $(0,+\infty)$ 上，$x&gt;0$，可分离参数 $a=\frac{e^x}{x^2}$。令 $h(x)=\frac{e^x}{x^2}(x&gt;0)$，问题转化为直线 $y=a$ 与 $y=h(x)$ 在 $(0,+\infty)$ 的图像恰有一个交点。需研究 $h(x)$ 的单调性、极值及边界趋势。</p>
+<p><strong>步骤</strong><br />
+- 令 $h(x)=\frac{e^x}{x^2}$，$x&gt;0$，则 $h'(x)=\frac{e^x\cdot x^2-e^x\cdot2x}{x^4}=\frac{e^x(x-2)}{x^3}$。<br />
+- 令 $h'(x)=0\Rightarrow x=2$。<br />
+  $0&lt; x&lt;2$ 时，$h'(x)&lt;0$，$h(x)$ 单调递减；<br />
+  $x&gt;2$ 时，$h'(x)&gt;0$，$h(x)$ 单调递增。<br />
+- $h(x)$ 在 $x=2$ 处取得极小值 $h(2)=\frac{e^2}{4}$。<br />
+- 边界趋势：$\lim\limits_{x\to0^+}h(x)=\lim\limits_{x\to0^+}\frac{e^x}{x^2}=+\infty$；$\lim\limits_{x\to+\infty}h(x)=\lim\limits_{x\to+\infty}\frac{e^x}{x^2}=+\infty$（指数爆炸）。<br />
+- 图像特征：两端上穿至 $+\infty$，中间存在唯一极小值点。因此直线 $y=a$ 与 $y=h(x)$ 恰有一个交点的充要条件是<strong>水平线与极小值相切</strong>，即 $a=h(2)=\frac{e^2}{4}$。<br />
+- 验证：当 $a=\frac{e^2}{4}$ 时，$f(x)=e^x-\frac{e^2}{4}x^2$，$x=2$ 是唯一零点，且为极值点型零点（重根），满足题意。  </p>
+<p><strong>点评与变式</strong><br />
+分离参数后将零点个数转化为水平线交点个数，关键是画出 $h(x)$ 的草图（极值、单调性、渐近线）。若题目问的是“有两个零点”，则参数范围应为 $a&gt;\frac{e^2}{4}$；若无零点，则为 $a&lt;\frac{e^2}{4}$。这就是分离参数对动态问题的统一处理威力。注意任何涉及参数与变量分离时的等价性验证，本题除以 $x^2$ 在 $(0,+\infty)$ 上恒正，无需单独讨论。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-21.html">2018-理-21</a>（2018 · 中） 通过导数研究含参指数函数的单调性与极值，证明不等式并解决零点个数问题。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">分离参数</a></li>
+</ul>
+</div>
+</body>
+</html>

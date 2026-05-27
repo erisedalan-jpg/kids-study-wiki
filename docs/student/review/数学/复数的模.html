@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数的模</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数的模</h1><div class="review-mark" data-stem="复数的模"></div><div class="meta-card"><span><strong>考点</strong>复数的模</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：3</li>
+<li>真题数：4；年份跨度：2010–2020</li>
+<li>出现题位：填空15 选择2 选择3</li>
+<li>难度分布：中1 易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>模的定义</strong>：复数 $z=a+bi$（$a,b\in\mathbb{R}$）的模 $|z|=\sqrt{a^2+b^2}$，几何意义为复平面上点 $(a,b)$ 到原点的距离。</li>
+<li><strong>模的运算性质</strong>：</li>
+<li>$|z_1z_2|=|z_1||z_2|$；特别地 $|z^n|=|z|^n$。</li>
+<li>$\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}$（$z_2\neq0$）。</li>
+<li>$|z|=|\bar{z}|$；$z\bar{z}=|z|^2$。</li>
+<li><strong>模与共轭</strong>：若 $|z|=1$，则 $\bar{z}=\frac{1}{z}$。</li>
+<li><strong>平行四边形恒等式</strong>（重点）：
+  $$|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$$
+  该公式能将“两边的平方和”与“对角线的平方和”建立关系，已知其中三者可直接求第四者。</li>
+<li><strong>三角不等式</strong>：$||z_1|-|z_2||\le|z_1\pm z_2|\le|z_1|+|z_2|$，常用于范围估算或验证。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接公式法</strong><br />
+   若所给复数为积、商、幂的模，优先用性质拆分：<br />
+   $|z_1z_2|\rightarrow|z_1||z_2|$，$\left|\frac{z_1}{z_2}\right|\rightarrow\frac{|z_1|}{|z_2|}$，$|z^n|\rightarrow|z|^n$。<br />
+   遇到分子、分母长度较大时直接分别求模再相除，可省去化简复数本身。</p>
+</li>
+<li>
+<p><strong>利用共轭求模</strong><br />
+   若条件出现 $z\bar{z}$ 或 $|z|^2$，直接用 $|z|^2=z\bar{z}$ 转化为代数运算，避免几何讨论。</p>
+</li>
+<li>
+<p><strong>“和与差”模的整体代换</strong><br />
+   已知 $|z_1|,|z_2|,|z_1+z_2|$（或 $|z_1-z_2|$）中的三个量，利用恒等式<br />
+   $|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$ 直接求出第四个量。这比设三角形式或解方程组更快，尤其适合选填题。</p>
+</li>
+<li>
+<p><strong>三角形式或坐标化</strong><br />
+   条件中若只给模长而无辐角时，可设 $z_1=r_1(\cos\theta+i\sin\theta), z_2=r_2(\cos\phi+i\sin\phi)$，将模的关系转化为三角恒等式。此法通用但稍慢，适合需要同时求实部、虚部或辐角的情况。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆模的运算</strong>：$|z_1\pm z_2|\neq|z_1|\pm|z_2|$，必须通过 $|z_1\pm z_2|^2$ 展开计算，或使用平行四边形恒等式。</li>
+<li><strong>忽视模的非负性</strong>：模是实数且 $\ge0$，结果若出现负值或虚数必定错误，开方时注意只取算术平方根。</li>
+<li><strong>错用共轭性质</strong>：$\bar{z}$ 与 $z$ 模相同，但实部与虚部符号有别；在求 $|z|$ 时 $\bar{z}$ 可直接换为 $|z|^2/z$，不可将 $z+\bar{z}$ 与模直接对等。</li>
+<li><strong>化简时先入为主展开实部虚部</strong>：如 $\frac{1-i}{1+i}$，若先有理化繁，直接求 $\frac{|1-i|}{|1+i|}=1$ 更简。应优先判断能否分子分母分别求模。</li>
+<li><strong>平行四边形恒等式记错系数</strong>：正确系数为 $|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$，漏掉右侧系数 $2$ 会致答案错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2020·理·15）</h3>
+<p>设复数 $z_1,z_2$ 满足 $|z_1|=|z_2|=2$，$z_1+z_2=\sqrt{3}+i$，求 $|z_1-z_2|$。  </p>
+<p><strong>思路</strong>：<br />
+已知两模及和，求差的模，直接套用平行四边形恒等式 $|z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$，避免设三角参数。  </p>
+<p><strong>步骤</strong>：<br />
+由条件 $|z_1|=|z_2|=2 \Rightarrow |z_1|^2=|z_2|^2=4$。<br />
+$z_1+z_2=\sqrt{3}+i \Rightarrow |z_1+z_2|^2=(\sqrt{3})^2+1^2=4$。<br />
+代入恒等式：<br />
+$4+|z_1-z_2|^2=2\times(4+4)=16$<br />
+$\Rightarrow |z_1-z_2|^2=12$<br />
+$\Rightarrow |z_1-z_2|=2\sqrt{3}$（取正值）。  </p>
+<p><strong>点评/变式</strong>：<br />
+该题官方解析用三角设定后解方程组，考场耗时长。平行四边形恒等式处理“知和等模、求差模”类问题可“秒杀”。变式训练：若 $|z_1|=3,|z_2|=4,|z_1-z_2|=5$，求 $|z_1+z_2|$。</p>
+<h3><strong>题目2</strong>（2013·文·02）</h3>
+<p>化简并求值：$\left|\frac{1-i}{1+i}\right|$。  </p>
+<p><strong>思路</strong>：<br />
+不必逐项展开为 $a+bi$ 再求模，直接利用模的除法性质。  </p>
+<p><strong>步骤</strong>：<br />
+分子模：$|1-i|=\sqrt{1^2+(-1)^2}=\sqrt{2}$；<br />
+分母模：$|1+i|=\sqrt{1^2+1^2}=\sqrt{2}$；<br />
+原式 $=\frac{\sqrt{2}}{\sqrt{2}}=1$。</p>
+<p><strong>点评/变式</strong>：<br />
+这类题的本质是 $z/\bar{z}$ 的模恒为 $1$（只要 $z\neq0$），因为 $|z/\bar{z}|=|z|/|\bar{z}|=1$。类似地，$\left|\frac{3+4i}{4-3i}\right|$ 等于 $1$，注意分母是分子的某种共轭变形即可心算。</p>
+<h3><strong>题目3</strong>（2010·文·03）</h3>
+<p>已知复数 $z=\frac{\sqrt{3}-i}{1-\sqrt{3}i}$，求 $|z|$。  </p>
+<p><strong>思路</strong>：<br />
+此为分式型复数，可先分母实数化，但更简捷的是分子分母各自求模相除。</p>
+<p><strong>步骤</strong>：<br />
+计算 $|\sqrt{3}-i|=\sqrt{(\sqrt{3})^2+(-1)^2}=2$；<br />
+$|1-\sqrt{3}i|=\sqrt{1^2+(-\sqrt{3})^2}=2$；<br />
+因此 $|z|=\frac{2}{2}=1$。</p>
+<p><strong>点评/变式</strong>：<br />
+当分子分母形如 $a\pm bi$ 且旋转角度不同时，直接求模能免除复数乘除的繁琐运算。注意前提是复数相除——加法不适用。若遇上 $z_1+z_2$ 型则必须回归实部虚部或恒等式处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-15.html">2020-理-15</a>（2020 · 中） 已知复数z₁、z₂满足|z₁|=|z₂|=2且z₁+z₂=√3+i，求|z₁-z₂|。</li>
+<li><a href="../../exam/数学/2013-文-02.html">2013-文-02</a>（2013 · 易） 计算复数模的简单运算题，直接求分子与分母的模。</li>
+<li><a href="../../exam/数学/2010-文-03.html">2010-文-03</a>（2010 · 易） 已知复数代数形式，通过乘除运算化简并求模长。</li>
+<li><a href="../../exam/数学/2010-理-02.html">2010-理-02</a>（2010 · 易） 考查复数的基本运算、共轭复数概念及模的求值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/803-复数模长.html">复数的模</a></li>
+</ul>
+</div>
+</body>
+</html>

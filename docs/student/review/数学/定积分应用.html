@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定积分应用</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>定积分应用</h1><div class="review-mark" data-stem="定积分应用"></div><div class="meta-card"><span><strong>考点</strong>定积分应用</span><span><strong>权重</strong>14</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：14</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定积分的几何意义</strong>：当 $f(x)\ge 0$ 时，$\int_a^b f(x)\,dx$ 表示曲线 $y=f(x)$ 与直线 $x=a,x=b,y=0$ 围成的曲边梯形的面积；若 $f(x)\le 0$，面积等于积分值的相反数。</li>
+<li><strong>平面图形面积的定积分公式</strong>：</li>
+<li>以 $x$ 为积分变量：图形由曲线 $y=f(x)$（上边界）、$y=g(x)$（下边界）及直线 $x=a,x=b$ 围成 $(a&lt;b)$，则面积 $S=\int_a^b [f(x)-g(x)]\,dx$。</li>
+<li>以 $y$ 为积分变量：图形由曲线 $x=\varphi(y)$（右边界）、$x=\psi(y)$（左边界）及直线 $y=c,y=d$ 围成 $(c&lt;d)$，则面积 $S=\int_c^d [\varphi(y)-\psi(y)]\,dy$。</li>
+<li><strong>微积分基本定理（牛顿-莱布尼茨公式）</strong>：若 $F'(x)=f(x)$，则 $\int_a^b f(x)\,dx=F(b)-F(a)$。所求面积最终需化为原函数值的差。</li>
+<li><strong>适用条件</strong>：各边界曲线必须可积；交点明确；需合理选择积分变量避免分段过多导致计算复杂。</li>
+<li><strong>关键操作</strong>：准确画出草图，明确各段曲线的交点与上下/左右边界，将不规则图形转化为规则积分的和或差。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图求交</strong>：在同一坐标系中画出所有曲线（含坐标轴），标注所有交点坐标。联立方程解出曲线与曲线、曲线与坐标轴的交点。</li>
+<li><strong>选积分变量</strong>：观察图形，以“垂直于积分轴的直线穿过图形，上下（或左右）边界始终由两条固定曲线给出”为准则。优先选择避免分段的变量。</li>
+<li>若各段上下边界函数易统一，选 $x$ 为积分变量；否则考虑以 $y$ 为积分变量。</li>
+<li>若边界中含有 $y$ 轴，用 $y$ 积分时 $y$ 轴即为 $x=0$，常能简化。</li>
+<li><strong>定被积函数与区间</strong>：</li>
+<li>$x$ 积分：$S=\int_{x_{\min}}^{x_{\max}} [y_{\text{上}}(x)-y_{\text{下}}(x)]\,dx$。</li>
+<li>$y$ 积分：$S=\int_{y_{\min}}^{y_{\max}} [x_{\text{右}}(y)-x_{\text{左}}(y)]\,dy$。
+   需分段时，各段积分区间不重不漏，面积为各段积分之和。</li>
+<li><strong>计算定积分</strong>：利用基本积分公式求出原函数，代入上下限相减。注意符号和分数化简。</li>
+<li><strong>检验与确认</strong>：面积值必为正，若计算结果为负说明边界相减顺序反了，取绝对值或修正被积函数顺序。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>图形认知偏差</strong>：忽略 $y$ 轴（即 $x=0$）也是一条边界线，未将其纳入左右边界比较，导致图形区域划分错误。  </li>
+<li><strong>积分变量选择不当</strong>：强制用 $x$ 积分，遇到曲线弯折或直线与轴相交，需将图形分为多块，增加计算量和出错概率。当一条曲线需分段表达时，应立即换 $y$ 积分。  </li>
+<li><strong>上下（左右）边界颠倒</strong>：列式时未确认“上-下”或“右-左”的顺序，导致积分值变负，误以为面积为零或负值。  </li>
+<li><strong>交点求解错误</strong>：解方程时平方去根号或移项未注意增根，求得实际不在曲线上的点（如求 $\sqrt{x}=x-2$ 时平方得 $x=1,4$，$x=1$ 需舍去）。  </li>
+<li><strong>被积函数转化出错</strong>：以 $y$ 为变量时，直线 $y=x-2$ 需写成 $x=y+2$，曲线 $y=\sqrt{x}$ 需写成 $x=y^2$，注意反解变量的准确性。  </li>
+<li><strong>忽略负半轴的面积</strong>：当区域延伸到坐标轴负半轴（如本题 $y$ 从 $-2$ 到 $0$ 的部分），漏掉该段积分，导致面积缺失。  </li>
+<li><strong>原函数计算失误</strong>：定积分计算中求原函数时系数遗漏、分数通分错误或代入上下限运算失误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·理·09）：由曲线 $y=\sqrt{x}$，直线 $y=x-2$ 及 $y$ 轴所围成的图形的面积为（ ）<br />
+A. $\frac{10}{3}$  B. $4$  C. $\frac{16}{3}$  D. $6$  </p>
+<p><strong>思路</strong>：先画出草图，曲线 $y=\sqrt{x}$ 是开口向上抛物线右半支，直线 $y=x-2$ 斜率为1，$y$ 轴即 $x=0$。三条线围成封闭区域，涉及 $y$ 负半轴。用 $y$ 为积分变量可避免分段过碎，将所有边界用 $y$ 表示。  </p>
+<p><strong>步骤</strong>：<br />
+1. <strong>求交点</strong>：<br />
+   - 曲线与直线：解 $\sqrt{x}=x-2$，平方得 $x=x^2-4x+4 \Rightarrow x^2-5x+4=0$，得 $x=1$（增根，舍）或 $x=4$，此时 $y=2$。交点为 $(4,2)$。<br />
+   - 直线与 $y$ 轴：$x=0$ 代入 $y=x-2$ 得 $(0,-2)$。<br />
+   - 曲线与 $y$ 轴：$(0,0)$。<br />
+   图形由三部分组成边界：从 $(0,0)$ 沿曲线到 $(4,2)$，沿直线到 $(0,-2)$，沿 $y$ 轴回到 $(0,0)$。<br />
+2. <strong>选择积分变量</strong>：选 $y$ 为积分变量，$y\in[-2,2]$。将边界改写：曲线 $x=y^2$，直线 $x=y+2$，$y$ 轴 $x=0$。<br />
+3. <strong>分段积分</strong>：<br />
+   - 当 $y\in[-2,0]$ 时，图形左边界为 $y$ 轴（$x=0$），右边界为直线 $x=y+2$。<br />
+     面积微元 $dS_1=[(y+2)-0]\,dy$，积分 $S_1=\int_{-2}^{0}(y+2)\,dy = \left[\frac{1}{2}y^2+2y\right]<em 0="0">{-2}^{0} = 0 - (2-4)=2$。<br />
+   - 当 $y\in[0,2]$ 时，图形左边界为曲线 $x=y^2$，右边界为直线 $x=y+2$。<br />
+     面积微元 $dS_2=[(y+2)-y^2]\,dy$，积分 $S_2=\int</em>$。}^{2}(y+2-y^2)\,dy = \left[\frac{1}{2}y^2+2y-\frac{1}{3}y^3\right]_{0}^{2} = (2+4-\frac{8}{3}) - 0 = \frac{10}{3<br />
+4. <strong>总面积</strong> $S=S_1+S_2 = 2 + \frac{10}{3} = \frac{16}{3}$。<br />
+故应选 C。  </p>
+<p><strong>点评/变式</strong>：<br />
+- 本题若强制用 $x$ 积分，则必须在 $[0,2]$ 和 $[2,4]$ 分别用不同下边界（$0$ 和 $x-2$），还需处理 $y=\sqrt{x}$ 与 $y=-\sqrt{x}$？实际围成区域在 $x$ 轴上方和下方均有，极其繁杂。合理选择积分变量是快速求解的关键。<br />
+- 变式：若将 $y$ 轴换成 $x$ 轴，求 $y=\sqrt{x}$、$y=x-2$ 与 $x$ 轴围成面积，则用 $x$ 积分会简便。因此，遇到含 $y$ 轴的图形，优先尝试 $y$ 积分。<br />
+- 需牢记：所有边界（含坐标轴）都要写成相应变量的函数，遗漏 $x=0$ 是常见失分点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-09.html">2011-理-09</a>（2011 · 中） 本题通过定积分计算由曲线、直线及坐标轴围成的平面图形面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1190-定积分应用.html">定积分应用</a></li>
+</ul>
+</div>
+</body>
+</html>

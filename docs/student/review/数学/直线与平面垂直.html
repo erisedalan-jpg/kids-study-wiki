@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与平面垂直</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与平面垂直</h1><div class="review-mark" data-stem="直线与平面垂直"></div><div class="meta-card"><span><strong>考点</strong>直线与平面垂直</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：10</li>
+<li>真题数：3；年份跨度：2008–2018</li>
+<li>出现题位：解答18 解答19 解答20</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：若直线 $l$ 与平面 $\alpha$ 内的<strong>任意一条直线</strong>都垂直，则称 $l \perp \alpha$。</li>
+<li><strong>判定定理</strong>（核心工具）：一条直线与一个平面内的<strong>两条相交直线</strong>都垂直，则该直线与此平面垂直。<br />
+  符号：$l \perp a,\ l \perp b,\ a \cap b = O,\ a \subset \alpha,\ b \subset \alpha \Rightarrow l \perp \alpha$。</li>
+<li><strong>性质定理</strong>：若直线垂直于平面，则它垂直于平面内的<strong>一切直线</strong>。<br />
+  符号：$l \perp \alpha,\ m \subset \alpha \Rightarrow l \perp m$。<br />
+  常用来将“线面垂直”转化为“线线垂直”，尤其用于证明<strong>异面直线垂直</strong>。</li>
+<li><strong>向量语言</strong>：在空间直角坐标系中，直线 $l$ 的方向向量 $\vec v$ 与平面 $\alpha$ 的法向量 $\vec n$ 满足 $\vec v \parallel \vec n \iff l \perp \alpha$。或用两不共线向量 $\vec a,\vec b$ 表示平面，则 $\vec v \cdot \vec a = 0$ 且 $\vec v \cdot \vec b = 0 \iff l \perp \alpha$。</li>
+<li><strong>常用证线线垂直的途径</strong>（为线面垂直储备条件）：</li>
+<li>等腰三角形底边中线垂直底边（三线合一）。  </li>
+<li>勾股定理逆定理（通过边长计算得直角）。  </li>
+<li>线面垂直的性质（已知面垂直线，得线线垂直）。  </li>
+<li>正棱柱、长方体中侧棱与底面垂直带来的垂直关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>传统几何法证线面垂直（三步走）</strong>  </li>
+<li>第一步：在目标平面内找（或构造）两条相交直线；  </li>
+<li>第二步：分别证明待证直线与这两条交线垂直（多用勾股逆定理、等腰三角形性质、已知垂直关系传递）；  </li>
+<li>第三步：根据判定定理，由“垂直于两相交直线”得出结论。<br />
+<em>适用场景：有明显垂直关系的棱锥、棱柱，且便于计算长度。</em></li>
+<li><strong>向量法证线面垂直（建系计算）</strong>  </li>
+<li>建系 → 标出相关点坐标 → 写出直线方向向量及平面内两个不共线向量（或法向量）；  </li>
+<li>验证数量积为零（与两个向量均垂直），或验证方向向量与法向量共线；  </li>
+<li>得出结论。<br />
+<em>适用场景：正棱柱、长方体、有三线两两垂直的图形，或几何关系复杂不易直接推理。</em></li>
+<li><strong>利用线面垂直证线线垂直（异面垂直标准化）</strong>  </li>
+<li>欲证 $a \perp b$，可先证 $a \perp$ 过 $b$ 的某一平面 $\beta$（或 $b \perp$ 过 $a$ 的平面），再根据性质定理推出 $a \perp b$。<br />
+<em>典型：2011 年理 18，证 $PA \perp BD$ 转化为证 $BD \perp$ 平面 $PAD$。</em></li>
+<li><strong>综合题中的角色</strong><br />
+   线面垂直是建立空间直角坐标系的前提之一（找 $z$ 轴），也是求解线面角、二面角的基础。先证垂直，再建系，是考卷主流套路。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视“相交”条件</strong>：只证明直线与平面内两条平行直线垂直，或仅与一条直线垂直就下结论，直接丢分。一定要写明“$a \cap b = O$”。</li>
+<li><strong>长度计算错误导致伪垂直</strong>：用勾股定理逆定理时，易将各棱长弄混（尤其侧棱与底边），导致误判垂直关系。建议列表或图上标注长度。</li>
+<li><strong>建系草率</strong>：原点、坐标轴选择不合理（如未利用垂直关系），导致点坐标复杂、计算量暴增，极易出错。</li>
+<li><strong>跳步失分</strong>：用向量法时没有明确指出建系依据和坐标，或数量积为零的结论直接等号，缺少“计算验证”过程。</li>
+<li><strong>垂足混淆</strong>：在利用等腰三角形三线合一时，必须点明中点是哪个，垂直的是哪两条线，避免张冠李戴。</li>
+<li><strong>默认垂直</strong>：在非长方体的斜棱柱中，不能无根据地将侧棱与底面边长认定为垂直，必须先用条件推导。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2018 年理科第 20 题（第 1 问）</h3>
+<p><strong>题目</strong>：三棱锥 $P-ABC$ 中，$AB = BC = 2$，$PA = PB = PC = AC = 4$，$O$ 为 $AC$ 中点。求证：$PO \perp$ 平面 $ABC$。<br />
+<strong>思路</strong>：用判定定理，需在平面 $ABC$ 内找到两条交于 $O$ 的直线都与 $PO$ 垂直。由等腰 $\triangle PAC$ 得 $PO \perp AC$；连接 $OB$，利用 $\triangle POB$ 边长关系验证 $PO \perp OB$。<br />
+<strong>步骤</strong>：<br />
+1. 连接 $OB$。在 $\triangle ABC$ 中，$AB = BC$，$O$ 为 $AC$ 中点 → $BO \perp AC$，且 $BO = \sqrt{AB^2 - AO^2} = 2$。<br />
+2. 在 $\triangle PAC$ 中，$PA = PC$，$O$ 为 $AC$ 中点 → $PO \perp AC$，且 $PO = \sqrt{PA^2 - AO^2} = 2\sqrt{3}$。<br />
+3. 在 $\triangle POB$ 中，$PB = 4$，$PO^2 + BO^2 = (2\sqrt{3})^2 + 2^2 = 16 = PB^2$ → $PO \perp OB$。<br />
+4. 又 $OB \cap AC = O$，$OB \subset$ 平面 $ABC$，$AC \subset$ 平面 $ABC$，故 $PO \perp$ 平面 $ABC$。<br />
+<strong>点评</strong>：课本级“计算证垂直”范例。三棱锥侧棱相等常隐含“顶点在底面的射影为底面外心”，本题 $O$ 为 $AC$ 中点恰是 $\triangle ABC$ 的外心。变式：若底面为一般三角形，可先确定外心位置再证垂直。</p>
+<h3>2. 2011 年理科第 18 题（第 1 问）</h3>
+<p><strong>题目</strong>：四棱锥 $P-ABCD$，底面 $ABCD$ 为平行四边形，$\angle DAB = 60^\circ$，$AB = 2AD$，$PD \perp$ 底面 $ABCD$。证明：$PA \perp BD$。<br />
+<strong>思路</strong>：异面垂直不易直接证，转化为证 $BD \perp$ 平面 $PAD$。利用 $PD \perp$ 底面得 $BD \perp PD$；再在 $\triangle ABD$ 中用余弦定理证 $BD \perp AD$。<br />
+<strong>步骤</strong>：<br />
+1. 设 $AD = x$，则 $AB = 2x$。在 $\triangle ABD$ 中，由余弦定理 $BD^2 = AD^2 + AB^2 - 2 \cdot AD \cdot AB \cos 60^\circ = x^2 + 4x^2 - 2x \cdot 2x \cdot \frac{1}{2} = 3x^2$，即 $BD = \sqrt{3}x$。<br />
+2. 验证 $AD^2 + BD^2 = x^2 + 3x^2 = 4x^2 = AB^2$，故 $\angle ADB = 90^\circ$，$BD \perp AD$。<br />
+3. 由 $PD \perp$ 底面 $ABCD$，$BD \subset$ 底面 $\Rightarrow BD \perp PD$。<br />
+4. $AD \cap PD = D$，故 $BD \perp$ 平面 $PAD$。又 $PA \subset$ 平面 $PAD$，所以 $PA \perp BD$。<br />
+<strong>点评</strong>：典型“线面垂直性质传递”结构。当图形中出现明显垂线（如 $PD \perp$ 底面），优先考虑其衍生垂直关系。变式：若底面条件不一，换成菱形对角线或矩形邻边垂直，同样可套用该思路。</p>
+<h3>3. 2008 年理科第 19 题（第 1 问）</h3>
+<p><strong>题目</strong>：正四棱柱 $ABCD-A_1B_1C_1D_1$ 中，$AA_1 = 2AB = 4$，$C_1E = 3EC$（$E$ 在 $CC_1$ 上）。证明：$A_1C \perp$ 平面 $BED$。<br />
+<strong>思路</strong>：正四棱柱天然适合建系。以 $D$ 为原点，$DA, DC, DD_1$ 所在直线为 $x,y,z$ 轴，求出 $A_1C$ 方向向量及平面内 $\overrightarrow{BD},\overrightarrow{BE}$ 的坐标，证数量积为 0。<br />
+<strong>步骤（向量法）</strong>：<br />
+1. 建系：$D(0,0,0)$，$B(2,2,0)$，$A_1(2,0,4)$，$C(0,2,0)$，$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-20.html">2018-理-20</a>（2018 · 中） 本题考查三棱锥中证明线面垂直及利用二面角条件求线面角的正弦值。</li>
+<li><a href="../../exam/数学/2011-理-18.html">2011-理-18</a>（2011 · 中） 四棱锥中证明线线垂直并求二面角余弦值，涉及线面垂直判定与空间向量法。</li>
+<li><a href="../../exam/数学/2008-理-19.html">2008-理-19</a>（2008 · 中） 正四棱柱中证明线面垂直并求二面角大小，可用几何法或空间向量法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1010-直线与平面垂直.html">直线与平面垂直</a></li>
+</ul>
+</div>
+</body>
+</html>

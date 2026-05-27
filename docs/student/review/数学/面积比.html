@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>面积比</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>面积比</h1><div class="review-mark" data-stem="面积比"></div><div class="meta-card"><span><strong>考点</strong>面积比</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>几何概型（面积比）</strong>：若试验的所有可能结果构成的区域 $\Omega$ 的面积为 $S_\Omega$，且每个结果出现的可能性相等，则事件 $A$（对应区域面积为 $S_A$）发生的概率
+  $$P(A) = \frac{S_A}{S_\Omega}.$$</li>
+<li><strong>适用条件</strong>：</li>
+<li>样本空间 $\Omega$ 为一个可度量的几何区域（长度、面积、体积）；</li>
+<li>每个基本事件的发生是等可能的（均匀分布）；</li>
+<li>事件 $A$ 对应的子区域可度量。</li>
+<li><strong>随机模拟与频率估计概率</strong>：当试验次数 $n$ 很大时，事件 $A$ 发生的频率 $\frac{m}{n}$ 稳定于其概率 $P(A)$，即
+  $$\frac{m}{n} \approx P(A).$$
+  利用该关系可由已知的面积比反过来推算未知量（如圆周率 $\pi$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定区域</strong>：将实际问题中的变量取值范围转化为平面区域（或空间区域）。明确总区域 $\Omega$ 与事件 $A$ 对应的区域。</li>
+<li><strong>算面积</strong>：分别计算 $S_\Omega$ 与 $S_A$。注意坐标的取值范围（如仅在第一象限，只取四分之一圆等）。</li>
+<li><strong>列等式</strong>：  </li>
+<li>若直接求概率：$P(A) = \dfrac{S_A}{S_\Omega}$；  </li>
+<li>若是随机模拟求未知参数：由频率近似概率，得 $\dfrac{m}{n} \approx \dfrac{S_A}{S_\Omega}$，解出所求量。</li>
+<li><strong>作答</strong>：注意单位统一、近似值的化简。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错用整个圆的面积</strong>：题中 $x,y$ 常限制在 $[0,1]$ 或 $[-1,1]$ 等区间，满足 $x^2+y^2&lt;1$ 的区域可能是 $\frac14$ 圆（第一象限）或半圆等，而总面积是正方形（或矩形），不能直接用整圆的面积。</li>
+<li><strong>混淆距离与平方和</strong>：“平方和小于 $1$”对应区域是单位圆内部（半径 $1$），而不是“平方和的算术平方根小于 $1$”，两者一致，但有时题目会改写表述，需准确识别。</li>
+<li><strong>忽略等可能性假设</strong>：几何概型要求点在该区域内均匀分布。若抽取方式非均匀（如非独立、非均匀），不可直接使用面积比。</li>
+<li><strong>频率与概率的近似方向弄反</strong>：随机模拟中，$\frac{m}{n} \approx P(A)$ 而非 $\frac{n}{m}$。建立方程时要小心。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016·理·10）<br />
+从区间 $[0,1]$ 均匀随机抽取 $2n$ 个数，构成 $n$ 个数对 $(x_1,y_1), (x_2,y_2),\dots,(x_n,y_n)$。其中满足 $x^2+y^2&lt;1$ 的数对共有 $m$ 个，则用随机模拟的方法得到的圆周率 $\pi$ 的近似值为（选项略）。</p>
+<p><strong>思路</strong><br />
+每个数对 $(x,y)$ 看作平面上的点，所有可能结果构成的区域 $\Omega$ 是边长为 $1$ 的正方形 $[0,1]\times[0,1]$。满足 $x^2+y^2&lt;1$ 的点落在单位圆的第一象限部分（四分之一圆）。由几何概型，该事件概率为四分之一圆面积与正方形面积之比。再通过随机模拟的频率近似概率，建立方程解出 $\pi$。</p>
+<p><strong>步骤</strong><br />
+1. 总样本空间 $\Omega = { (x,y) \mid 0\le x\le 1, 0\le y\le 1}$，面积 $S_\Omega = 1 \times 1 = 1$。<br />
+2. 事件 $A = { (x,y) \mid x^2+y^2 &lt; 1,\; 0\le x,y\le 1}$，区域为四分之一单位圆，面积<br />
+   $$S_A = \frac{1}{4}\pi \cdot 1^2 = \frac{\pi}{4}.$$<br />
+3. 由几何概型，$P(A) = \dfrac{S_A}{S_\Omega} = \dfrac{\pi}{4}$。<br />
+4. 随机模拟中，用频率 $\dfrac{m}{n}$ 估计概率 $P(A)$，因此<br />
+   $$\frac{m}{n} \approx \frac{\pi}{4},$$<br />
+   解得 $\pi \approx \dfrac{4m}{n}$。</p>
+<p><strong>点评/变式</strong><br />
+- 该题本质立足“面积比”与“频率估计概率”的双向应用：正向已知面积比得概率，反向通过模拟频率求面积比中的未知参数。<br />
+- <strong>变式1</strong>：若 $x,y$ 均从 $[-1,1]$ 均匀抽取，则总区域为边长 $2$ 的正方形，面积 $4$；事件区域为单位圆（整个圆），面积 $\pi$。则 $\dfrac{m}{n} \approx \dfrac{\pi}{4}$，仍得 $\pi \approx \dfrac{4m}{n}$。<br />
+- <strong>变式2</strong>：用此法可求任意不规则图形的面积。若已知总区域面积和事件区域的形状但面积未知，可进行随机模拟，由点落入事件区域的频率估算其面积。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-10.html">2016-理-10</a>（2016 · 中） 利用随机模拟和面积比，通过几何概型求圆周率π的近似值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1145-面积比.html">面积比</a></li>
+</ul>
+</div>
+</body>
+</html>

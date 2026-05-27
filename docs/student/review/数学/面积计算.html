@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>面积计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>面积计算</h1><div class="review-mark" data-stem="面积计算"></div><div class="meta-card"><span><strong>考点</strong>面积计算</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2016–2016</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>面积计算</strong>核心是“转化”：将不规则图形转化为规则图形（三角形、四边形等）的和或差，或利用全等、相似进行等积变形。常用工具：
+- 三角形面积：$S=\frac12ab\sin C=\frac12\times$底$\times$高<br />
+- 勾股定理与射影定理：$Rt\triangle$中，$a^2+b^2=c^2$；$CD^2=AD\cdot DB$，$AC^2=AD\cdot AB$<br />
+- 相似三角形成比例：$\frac{a}{a'}=\frac{b}{b'}=\frac{c}{c'}=k$，面积比 $=k^2$<br />
+- 全等三角形面积相等（$SSS,SAS,ASA,AAS,HL$）<br />
+- 直角三角形斜边中线等于斜边一半<br />
+- 四点共圆判定：对角互补或外角等于内对角；共圆后可用圆的性质（直径所对圆周角为直角、等弧对等角）<br />
+- 等积变换：同底等高、等底同高面积相等</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>拆补图形</strong> 将所求面积拆成几个三角形/四边形的和或差；若图形不规则，尝试补成规则图形再减掉多余部分。  </li>
+<li><strong>挖掘几何关系</strong> 利用已知垂直、中点、角相等条件，寻找相似或全等三角形，得到关键的边长比例或等量关系。  </li>
+<li><strong>证明四点共圆</strong> 常见路径：对角互补（如$\angle ABC+\angle ADC=180^\circ$）或外角等于内对角；共圆后立刻得到$\angle$性质，便于再证相似或全等。  </li>
+<li><strong>计算所需边长</strong> 结合勾股定理、射影定理、直角三角形性质（如斜边中线）求出关键线段长；注意利用中点、比例等条件简化计算。  </li>
+<li><strong>代入面积公式</strong> 将转化的基本图形面积逐一算出，求和或差，得到最终结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>相似三角形对应边写错</strong>：比例式分子分母必须对应相同位置的边，尤其旋转后的图形。  </li>
+<li><strong>忘记证明四点共圆</strong>就直接用圆的性质，导致被扣步骤分。  </li>
+<li><strong>误用直角三角形性质</strong>：只有直角三角形斜边上的中线才等于斜边的一半；一般三角形不成立。  </li>
+<li><strong>漏掉面积系数的转化</strong>：如相似三角形面积比等于相似比的平方，全等翻折带来面积相等，但写表达式时漏了倍数。  </li>
+<li><strong>计算粗心</strong>：求线段长度时用错勾股定理（如直接用斜边平方减直角边平方时忘记开方），射影定理对应线段混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2016·文22 / 2016·理22（两题实质相同）</h3>
+<p><strong>题目</strong> 正方形$ABCD$中，$E,G$分别在$DA,DC$上（不与端点重合），且$DE=DG$，$DF\perp CE$于$F$。<br />
+（Ⅰ）证明$B,C,G,F$四点共圆；<br />
+（Ⅱ）若$AB=1$，$E$为$DA$中点，求四边形$BCGF$的面积。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）证$\angle GFB=90^\circ$，与$\angle GCB=90^\circ$互补即得四点共圆；通过两次相似（$Rt\triangle DFC\sim Rt\triangle EDC$及$\triangle GDF\sim\triangle BCF$）导出角相等。<br />
+（Ⅱ）发现$G$为$DC$中点，用直角三角形斜边中线定理得$GF=GC$，从而$\triangle GFH\cong\triangle GCB$（$HL$），面积转化为$2S_{\triangle BCG}$，计算即可。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）<br />
+- 由正方形$\angle BCD=90^\circ$，$DF\perp CE$得$\angle DFC=90^\circ$，易证$Rt\triangle DFC\sim Rt\triangle EDC$，$\frac{DF}{ED}=\frac{DC}{EC}$。<br />
+- 又$DE=DG, CD=BC$，推得$\frac{DF}{DG}=\frac{BC}{EC}$；结合$\angle GDF=\angle BCF$（同为$\angle DCE$的余角），得$\triangle GDF\sim\triangle BCF$。<br />
+- 于是$\angle CFB=\angle DFG$，相加得$\angle GFB=\angle DFC=90^\circ$。故$\angle GFB+\angle GCB=180^\circ$，$B,C,G,F$四点共圆。</p>
+<p>（Ⅱ）<br />
+- $E$为$AD$中点，$AD=1\Rightarrow DE=\frac12=DG$，则$CG=\frac12$，$G$为$DC$中点。<br />
+- 在$Rt\triangle DFC$中，$G$为斜边$DC$中点，$\therefore GF=\frac12 DC=\frac12=GC$。<br />
+- 由（Ⅰ）共圆知$\angle GFB=\angle GCB=90^\circ$，又$GB$公共，故$Rt\triangle GFB\cong Rt\triangle GCB\ (HL)$。<br />
+- $S_{\triangle BCG}=\frac12 BC\cdot CG=\frac12\times1\times\frac12=\frac14$，则$S_{四边形BCGF}=2S_{\triangle BCG}=\frac12$。</p>
+<p><strong>点评/变式</strong><br />
+此题将四点共圆、相似与直角三角形斜边中线性质串联，求面积的关键是“等积转化”。若去掉中点条件，可设$DE=x$，通过相似比求出$BF$及$GF$表达式，再用$S=S_{\triangle BCG}+S_{\triangle BFG}$或割补法计算函数最值，训练变化条件下的面积问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-22.html">2016-文-22</a>（2016 · 中） 正方形内构造等长线段与垂线，证明四点共圆并计算四边形面积。</li>
+<li><a href="../../exam/数学/2016-理-22.html">2016-理-22</a>（2016 · 中） 考查正方形中四点共圆证明及四边形面积计算，涉及相似与全等三角形。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1146-面积计算.html">面积计算</a></li>
+</ul>
+</div>
+</body>
+</html>

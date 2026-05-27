@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点斜式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>点斜式</h1><div class="review-mark" data-stem="点斜式"></div><div class="meta-card"><span><strong>考点</strong>点斜式</span><span><strong>权重</strong>4</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：4</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>点斜式方程</strong>：若直线过定点 $P(x_0,\,y_0)$ 且斜率为 $k$，则其方程为<br />
+  $$y-y_0=k(x-x_0)$$</li>
+<li><strong>适用条件</strong>：必须已知直线上一点和直线的斜率；当直线斜率不存在（倾斜角为 $90^\circ$）时，方程应写为 $x=x_0$，不能用点斜式。</li>
+<li><strong>求切线斜率</strong>：函数 $y=f(x)$ 在 $x=x_0$ 处的导数 $f'(x_0)$ 即为曲线在该点处切线的斜率。</li>
+<li><strong>切点与切线</strong>：若点 $(x_0,y_0)$ 在曲线 $y=f(x)$ 上，则切线方程为 $y-y_0=f'(x_0)(x-x_0)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确认点的位置</strong>：验证给定点是否在曲线上。若在，即为切点；若不在，需设切点再列方程。</li>
+<li><strong>求斜率</strong>：对函数求导，将切点横坐标代入导函数，得到切线斜率 $k$。  </li>
+<li>对多项式函数，用 $(x^n)'=nx^{n-1}$ 逐项求导。</li>
+<li><strong>套用点斜式</strong>：将切点坐标 $(x_0,y_0)$ 与斜率 $k$ 代入 $y-y_0=k(x-x_0)$。</li>
+<li><strong>化简方程</strong>：通常化为斜截式 $y=kx+b$ 或一般式，以便匹配选项或按要求作答。</li>
+<li><strong>检查特殊情况</strong>：若导数不存在，检查是否为竖直线情况（$x=x_0$）；若斜率为 $0$，切线为水平线 $y=y_0$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>导函数求错</strong>：误记幂函数导数公式，如将 $(x^3)'$ 错算为 $3x^2$ 忘记系数，或常数项遗漏。务必逐项求导。</li>
+<li><strong>混淆点斜式与斜截式</strong>：直接将点代入 $y=kx+b$ 求 $b$ 时，斜率算错或计算失误导致方程错误。点斜式可直接代入，更不容易出错。</li>
+<li><strong>忽略点不在曲线上</strong>：题目所给点如果不在曲线上，不能直接求导得斜率，必须设切点坐标联立方程，否则解答全错。</li>
+<li><strong>代值错误</strong>：求导后将 $x$ 的值代入导函数时，正负号或运算差错，导致斜率错误。建议代入后二次检验。</li>
+<li><strong>切线方程不化简</strong>：部分题目要求选出正确的直线方程，若不化简为选项中的形式，容易误判。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+曲线 $y=x^3-2x+1$ 在点 $(1,0)$ 处的切线方程为（ ）<br />
+A．$y=x-1$ 　B．$y=-x+1$ 　C．$y=2x-2$ 　D．$y=-2x+2$</p>
+<p><strong>思路</strong><br />
+先验证点 $(1,0)$ 是否在曲线上，确认其为切点；对函数求导得到斜率函数，代入 $x=1$ 得切线斜率；利用点斜式写出切线方程并化简，对比选项。</p>
+<p><strong>步骤</strong><br />
+1. 验证切点：将 $x=1$ 代入原函数 $y=1^3-2\times1+1=0$，故点 $(1,0)$ 在曲线上，即为切点。<br />
+2. 求斜率：对 $y=x^3-2x+1$ 求导，得 $y'=3x^2-2$。<br />
+   当 $x=1$ 时，斜率 $k=3\times1^2-2=1$。<br />
+3. 点斜式：过 $(1,0)$ 且斜率为 $1$ 的直线方程为 $y-0=1\cdot(x-1)$，即 $y=x-1$。<br />
+4. 结合选项，对应 A。</p>
+<p><strong>点评/变式</strong><br />
+此题是导数几何意义与点斜式的直接结合，难度较低。关键步骤是准确求导和代入横坐标得斜率。若题目改为“过点 $(0,1)$ 作曲线 $y=x^3-2x+1$ 的切线”，则该点不在曲线上，需设切点 $(t,t^3-2t+1)$，写出切线方程 $y-(t^3-2t+1)=(3t^2-2)(x-t)$，再将 $(0,1)$ 代入解出 $t$，最后回代得切线方程，此时要警惕思维定式，不能直接对 $(0,1)$ 求导。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-文-04.html">2010-文-04</a>（2010 · 易） 考查利用导数求曲线在给定点的切线方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/398-直线方程-点斜式.html">点斜式</a></li>
+</ul>
+</div>
+</body>
+</html>

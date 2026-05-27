@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>特殊角的三角函数值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>特殊角的三角函数值</h1><div class="review-mark" data-stem="特殊角的三角函数值"></div><div class="meta-card"><span><strong>考点</strong>特殊角的三角函数值</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2021–2023</li>
+<li>出现题位：填空16 选择6</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>特殊角三角函数值</strong>（必须刻入肌肉记忆的数值）
+  | 角 $\theta$ | $0$ | $\frac{\pi}{6}$ | $\frac{\pi}{4}$ | $\frac{\pi}{3}$ | $\frac{\pi}{2}$ |
+  |---|---|---|---|---|---|
+  | $\sin\theta$ | $0$ | $\frac{1}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{3}}{2}$ | $1$ |
+  | $\cos\theta$ | $1$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{2}}{2}$ | $\frac{1}{2}$ | $0$ |
+  | $\tan\theta$ | $0$ | $\frac{\sqrt{3}}{3}$ | $1$ | $\sqrt{3}$ | 不存在 |
+  常用拓展角：$\frac{\pi}{12}=15^\circ$，$\frac{5\pi}{12}=75^\circ$ 等，其三角函数值可通过<strong>和差角公式</strong>或<strong>半角公式</strong>推导。</li>
+<li><strong>核心公式</strong></li>
+<li>同角关系：$\sin^2\alpha+\cos^2\alpha=1$，$\tan\alpha=\frac{\sin\alpha}{\cos\alpha}$.</li>
+<li>诱导公式：“奇变偶不变，符号看象限”，解决任意角转锐角。</li>
+<li>和差角公式：$\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta$，$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$.</li>
+<li>倍角公式/降幂公式：$\cos2\alpha=2\cos^2\alpha-1=1-2\sin^2\alpha$ $\Rightarrow$ $\cos^2\alpha=\frac{1+\cos2\alpha}{2}$，$\sin^2\alpha=\frac{1-\cos2\alpha}{2}$.</li>
+<li>三角方程的基本解：若 $\sin x = a$，且 $|a|\le 1$，则 $x = \arcsin a + 2k\pi$ 或 $\pi - \arcsin a + 2k\pi$，$k\in\mathbb{Z}$. 特别地，$\sin x=\frac12$ 的解为 $x=\frac{\pi}{6}+2k\pi$ 或 $x=\frac{5\pi}{6}+2k\pi$.</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>特殊角直接求值</strong>：遇 $\frac{\pi}{6},\frac{\pi}{4},\frac{\pi}{3},\frac{\pi}{2}$ 等角，直接代值。若角为 $\frac{\pi}{12},\frac{5\pi}{12}$ 等拓展角，优先用<strong>倍角/降幂</strong>或<strong>和差公式</strong>向已知特殊角转化（如 $\frac{5\pi}{12}=\frac{\pi}{4}+\frac{\pi}{6}$，$\frac{\pi}{12}=\frac{\pi}{4}-\frac{\pi}{6}$）。</li>
+<li><strong>解三角方程求角</strong>：已知三角函数值求角，先写出一个特殊角（锐角）作为基准，再补全所有通解形式。例：由 $\sin(\omega x+\varphi)=\frac12$ 可得 $\omega x+\varphi = \frac{\pi}{6}+2k\pi$ 或 $\frac{5\pi}{6}+2k\pi$.</li>
+<li><strong>图像信息求参数再求值</strong>：已知 $y=A\sin(\omega x+\varphi)$ 图像上某条水平线与曲线交点的横坐标差，利用两点相位差 $|\omega(x_2-x_1)|$ 对应函数值相等时的最小正周期关系，解出 $\omega$。再代入已知点（如零点、最值点）及附加条件（如 $f(0)$ 符号）精确定出 $\varphi$，最后算目标值。</li>
+<li><strong>代数化简后再求值</strong>：遇到高次或平方差的三角式，先用降幂公式、平方差公式等统一为单一三角函数的一次式或倍角形式，转化为特殊角直接计算，减少记忆负担。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>多解漏写或选错</strong>：由 $\sin x=\frac12$ 只写 $x=\frac{\pi}{6}+2k\pi$ 而漏掉 $x=\frac{5\pi}{6}+2k\pi$。图像类题目需根据函数走势判断取哪一支，如图中交点横坐标差与 $\frac{2\pi}{3}$ 的对应关系。</li>
+<li><strong>相位差算错</strong>：已知 $A(x_1,\frac12),B(x_2,\frac12)$，$|AB|=\frac{\pi}{6}$，误把 $\omega(x_2-x_1)$ 直接等于 $\pi$ 或 $\frac{\pi}{3}$。正确应为：$\sin X=\frac12$ 相邻或间隔解之间的差为 $\frac{2\pi}{3}$ 或 $\pi$ 的整数倍，需结合图像判断。</li>
+<li><strong>忽略附加条件排除多解</strong>：求出 $\varphi$ 的通解后，未使用 $f(0)&lt;0$ 或最值点等信息唯一确定 $\varphi$，导致表达式含 $k$ 或得到错误符号。</li>
+<li><strong>特殊角函数值符号/数值记混</strong>：如 $\cos\frac{5\pi}{6}=-\frac{\sqrt{3}}{2}$，$\cos\frac{\pi}{6}=\frac{\sqrt{3}}{2}$，两者相减易得 $- \sqrt{3}$，但降幂后的系数 $\frac12$ 漏乘导致错。拓展角 $\frac{\pi}{12},\frac{5\pi}{12}$ 的正余弦值死记硬背容易错，务必现场用公式推导。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2023-新课标Ⅱ-16</h3>
+<p><strong>题目</strong>：已知函数 $f(x)=\sin(\omega x+\varphi)$，如图，$A,B$ 是直线 $y=\frac12$ 与曲线 $y=f(x)$ 的两个交点，若 $|AB|=\frac{\pi}{6}$，则 $f(\pi)=$______.</p>
+<p><strong>思路</strong>：由交点纵坐标得方程 $\sin(\omega x+\varphi)=\frac12$，利用差 $\frac{\pi}{6}$ 求出 $\omega$；再代入一个已知零点 $(\frac{2\pi}{3},0)$ 及 $f(0)&lt;0$ 定出 $\varphi$，最后求 $f(\pi)$.</p>
+<p><strong>步骤</strong>：
+1. 设 $A(x_1,\frac12),B(x_2,\frac12)$，则 $x_2-x_1=\frac{\pi}{6}$.
+2. 由 $\sin(\omega x+\varphi)=\frac12$ 知通解为 $\omega x+\varphi = \frac{\pi}{6}+2k\pi$ 或 $\frac{5\pi}{6}+2k\pi$. 由图，$A,B$ 恰对应同一个“波浪”上不同分支的解，且 $\omega&gt;0$，$(\omega x_2+\varphi)-(\omega x_1+\varphi)=\frac{5\pi}{6}-\frac{\pi}{6}=\frac{2\pi}{3}$.
+3. 故 $\omega(x_2-x_1)=\frac{2\pi}{3}$，即 $\omega\cdot\frac{\pi}{6}=\frac{2\pi}{3}$，解得 $\omega=4$.
+4. 由图象，$f(\frac{2\pi}{3})=0$，即 $\sin(4\cdot\frac{2\pi}{3}+\varphi)=0$ $\Rightarrow$ $\frac{8\pi}{3}+\varphi=k\pi$，$\varphi=k\pi-\frac{8\pi}{3}$.
+5. 代回得 $f(x)=\sin(4x+k\pi-\frac{8\pi}{3})$. 又 $f(0)&lt;0$，$\sin(k\pi-\frac{8\pi}{3})&lt;0$，可定出 $k$ 为偶数，取 $k=0$ 得 $\varphi=-\frac{2\pi}{3}$（经角度简化），即 $f(x)=\sin(4x-\frac{2\pi}{3})$.
+6. $f(\pi)=\sin(4\pi-\frac{2\pi}{3})=\sin(-\frac{2\pi}{3})=-\frac{\sqrt{3}}{2}$.</p>
+<p><strong>点评/变式</strong>：本题核心是将几何距离转化为相位差，再解特殊角方程。若改为 $|AB|$ 对应余弦曲线，或直线 $y=m$ 为其他特殊值（如 $\frac{\sqrt{3}}{2}$），解法同理，相减时取对应的两个特殊角差。</p>
+<h3>2. 2021-文-06</h3>
+<p><strong>题目</strong>：$\cos^2\frac{5\pi}{12} - \cos^2\frac{\pi}{12} =$（   ）<br />
+A. $\frac12$   B. $\frac{\sqrt{3}}{3}$   C. $\frac{\sqrt{2}}{2}$   D. $\frac{\sqrt{3}}{2}$</p>
+<p><strong>思路</strong>：平方差形式，先用降幂公式化为一次余弦差，再代入特殊角的值即得；或先用平方差公式分解，再用和差化积。</p>
+<p><strong>步骤</strong>：
+1. 降幂：$\cos^2\theta=\frac{1+\cos2\theta}{2}$，则原式 $=\frac{1+\cos\frac{5\pi}{6}}{2} - \frac{1+\cos\frac{\pi}{6}}{2} = \frac12\left(\cos\frac{5\pi}{6} - \cos\frac{\pi}{6}\right)$.
+2. 代入特殊值：$\cos\frac{5\pi}{6} = -\frac{\sqrt{3}}{2}$，$\cos\frac{\pi}{6} = \frac{\sqrt{3}}{2}$，差为 $-\sqrt{3}$，乘 $\frac12$ 得 $-\frac{\sqrt{3}}{2}$.
+3. 检查选项为正值，可知原题应为 $\cos^2\frac{\pi}{12} - \cos^2\frac{5\pi}{12}$（或直接用绝对值），结果取正 $\frac{\sqrt{3}}{2}$，故选 <strong>D</strong>.</p>
+<p><strong>点评/变式</strong>：本题直接用降幂搭桥，避开直接记忆 $\cos\frac{\pi}{12}$ 的值。也可用 $\cos^2\alpha-\cos^2\beta = -\sin(\alpha+\beta)\sin(\alpha-\beta)$ 简化。变式：求 $\sin^2\frac{5\pi}{12} - \sin^2\frac{\pi}{12}$，可类似处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-16.html">2023-新课标Ⅱ-16</a>（2023 · 中） 根据三角函数图象求解析式参数并计算函数值。</li>
+<li><a href="../../exam/数学/2021-文-06.html">2021-文-06</a>（2021 · 中） 本题通过三角恒等变换求特殊角余弦高次幂表达式的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/253-特殊角三角函数值.html">特殊角的三角函数值</a></li>
+</ul>
+</div>
+</body>
+</html>

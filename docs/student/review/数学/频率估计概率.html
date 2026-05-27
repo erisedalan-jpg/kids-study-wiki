@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>频率估计概率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>频率估计概率</h1><div class="review-mark" data-stem="频率估计概率"></div><div class="meta-card"><span><strong>考点</strong>频率估计概率</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答18</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>频率估计概率</strong>：在相同条件下进行大量重复试验，事件 $A$ 发生的频率 $\frac{m}{n}$（$n$ 为试验次数，$m$ 为 $A$ 发生的频数）会稳定在某个常数附近，称该常数为事件 $A$ 的概率 $P(A)$。当样本容量足够大且抽样随机时，可用频率作为概率的估计值，即 $P(A)\approx \frac{\text{频数}}{\text{样本容量}}$。</li>
+<li><strong>频率分布表与平均值估计</strong>：若已知样本取值为 $x_i$ 的频数 $f_i$（或频率 $p_i = f_i/n$），则样本平均数 $\bar{x} = \frac{\sum x_i f_i}{n} = \sum x_i p_i$。当以样本均值估计总体均值时，就是加权平均。</li>
+<li><strong>适用条件</strong>：随机抽样、样本容量较大、数据分布能代表总体。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题标量</strong>：明确随机事件对应的数据条件（如“不高于”“高于…但不高于…”），在表格或数据中准确圈定符合条件的取值。</li>
+<li><strong>计数求和</strong>：从频数分布表中累加符合条件的频数。</li>
+<li><strong>计算频率</strong>：频率 $= \frac{\text{满足条件的频数之和}}{\text{总频数}}$，结果可写成分数或小数，作为对应概率的估计值。</li>
+<li><strong>求平均值</strong>：将每个取值 $x_i$ 与其频数 $f_i$ 乘积求和，再除以总频数，即 $\bar{x} = \frac{\sum x_i f_i}{\sum f_i}$。结果需带上实际单位或系数（如保费中的 $a$）。</li>
+<li><strong>检验合理性</strong>：检查所用频数是否全覆盖条件，有无重复或遗漏。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>频数≠频率</strong>：直接拿频数当概率估计值是典型错误。必须除以总数。</li>
+<li><strong>条件区间误判</strong>：注意“不高于”含等号，“高于…但不高于…”为左开右闭区间。需把每种取值翻译成保费值再筛选，不可凭印象。</li>
+<li><strong>平均保费漏乘系数</strong>：保费多以 $a$ 的倍数给出，计算平均保费时先算出倍数平均值，最后乘上 $a$。忘记写 $a$ 会丢失物理意义或单位。</li>
+<li><strong>混淆保费与出险次数</strong>：保费是由出险次数决定的映射，题目表格中有出险次数与保费的对应关系。求概率时条件针对保费，计算时应以保费数值为准绳去匹配出险次数（进而匹配频数）。</li>
+<li><strong>样本量不足</strong>：频率估计概率要求 $n$ 足够大，本题给出 $n=200$ 适用，但考生需意识到小样本下频率波动很大，不宜估计概率。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：某险种基本保费为 $a$，续保人本年度保费与上年度出险次数关系如表。随机调查 200 名续保人一年内出险次数，得到频数分布表。<br />
+(Ⅰ) 求事件 $A$：“一续保人本年度的保费不高于基本保费”的概率估计值；<br />
+(Ⅱ) 求事件 $B$：“保费高于基本保费但不高于基本保费的 160%”的概率估计值；<br />
+(Ⅲ) 求续保人本年度的平均保费估计值。</p>
+<p><strong>思路</strong>：<br />
+- 将“保费条件”转化为“出险次数”：<br />
+  不高于 $a$ → 0 次（$0.85a$）或 1 次（$a$）；<br />
+  高于 $a$ 但不高于 $1.6a$ → 2 次（$1.25a$）或 3 次（$1.5a$），4 次及以上已超出。<br />
+- 从频数表中提取对应频数求和，除以 200 得到频率。<br />
+- 平均保费直接用加权平均公式：$\frac{\sum (\text{保费}\times\text{频数})}{200}$。</p>
+<p><strong>步骤</strong>：<br />
+1. 事件 $A$ 对应出险次数为 0,1，频数 $60+50=110$，$P(A)\approx \frac{110}{200}=0.55$。<br />
+2. 事件 $B$ 对应出险次数为 2,3，频数 $30+30=60$，$P(B)\approx \frac{60}{200}=0.3$。<br />
+3. 各出险次数对应的保费分别为：$0.85a, a, 1.25a, 1.5a, 1.75a, 2a$；频数为 $60,50,30,30,20,10$。<br />
+   平均保费 $= \frac{0.85a\times60 + a\times50 + 1.25a\times30 + 1.5a\times30 + 1.75a\times20 + 2a\times10}{200}$<br />
+   $= \frac{a(0.85\times60 + 50 + 1.25\times30 + 1.5\times30 + 1.75\times20 + 2\times10)}{200}$<br />
+   计算分子：$51 + 50 + 37.5 + 45 + 35 + 20 = 238.5$，<br />
+   故平均保费 $= \frac{238.5a}{200}=1.1925a$。</p>
+<p><strong>点评/变式</strong>：<br />
+- 本题核心是用样本频率估计概率，切勿写出 $P(A)=0.55$ 的等号（可用“估计值为”或“$\approx$”），但高考评卷通常不苛责符号，稳妥可用 $P(A)$ 的估计值为 $0.55$。<br />
+- 平均保费本质是期望的样本估计，若给的是频率而非频数，必须先还原频数或直接用频率加权，避免漏乘总数。<br />
+- 变式：可能将出险次数改为连续区间，需用组中值代替；或者将保费调整为分段函数，需精准解读“160%”这样的倍数关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-18.html">2016-文-18</a>（2016 · 易） 根据出险频数表估计保费概率及加权平均保费</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">频率估计概率</a></li>
+</ul>
+</div>
+</body>
+</html>

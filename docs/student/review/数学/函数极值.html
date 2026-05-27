@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数极值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数极值</h1><div class="review-mark" data-stem="函数极值"></div><div class="meta-card"><span><strong>考点</strong>函数极值</span><span><strong>权重</strong>9</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：9</li>
+<li>真题数：2；年份跨度：2019–2024</li>
+<li>出现题位：解答16 解答21</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>极值与极值点</strong><br />
+   设函数 $y=f(x)$ 在点 $x_0$ 的某邻域有定义，若对该邻域内任意 $x \neq x_0$，恒有 $f(x) &lt; f(x_0)$，则称 $f(x_0)$ 为极大值，$x_0$ 为极大值点；若恒有 $f(x) &gt; f(x_0)$，则称 $f(x_0)$ 为极小值，$x_0$ 为极小值点。极值是局部概念，最值是全局概念。</p>
+</li>
+<li>
+<p><strong>可导函数极值的必要条件</strong><br />
+   若函数 $f(x)$ 在 $x_0$ 处可导且取得极值，则 $f'(x_0)=0$。使 $f'(x)=0$ 的点称为驻点。极值点必为驻点或不可导点，反之不真。</p>
+</li>
+<li>
+<p><strong>充分条件（判别法）</strong>  </p>
+</li>
+<li><strong>第一充分条件</strong>：在 $x_0$ 去心邻域内 $f'(x)$ 左正右负 ⇒ 极大值；左负右正 ⇒ 极小值；两侧同号 ⇒ 不是极值。  </li>
+<li>
+<p><strong>第二充分条件</strong>：$f'(x_0)=0$ 且 $f''(x_0) \neq 0$，若 $f''(x_0)&lt;0$ 则为极大值，$f''(x_0)&gt;0$ 则为极小值。</p>
+</li>
+<li>
+<p><strong>求极值的一般步骤</strong><br />
+   ① 确定定义域；② 求导函数 $f'(x)$；③ 求驻点及不可导点；④ 用极值充分条件逐点判断；⑤ 将极值点代入原函数得极值。</p>
+</li>
+<li>
+<p><strong>含参函数极值问题的核心思路</strong><br />
+   对含参导数的零点、符号进行有序的分类讨论，通常以参数对导数零点的存在性、大小及两侧符号的影响为划分标准，结合极值定义列不等式求解。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>极值计算标准流程</strong>  </li>
+<li>写出定义域 → 求导 → 通分因式分解 → 解方程 $f'(x)=0$ → 列表考察单调性 → 得出结论。  </li>
+<li>
+<p>对指、对、幂混合函数，优先将导数整理为可判断符号的形式。</p>
+</li>
+<li>
+<p><strong>证明极值点唯一性的套路</strong>  </p>
+</li>
+<li>目标转化为证明导函数 $f'(x)$ 在定义域内有唯一变号零点。  </li>
+<li>先判断 $f'(x)$ 的单调性（求二阶导分析）；  </li>
+<li>根据端点极限或特殊点函数值，用零点存在定理锁定唯一零点 $x_0$；  </li>
+<li>
+<p>验证 $x_0$ 两侧 $f'(x)$ 异号，即得唯一极值点。</p>
+</li>
+<li>
+<p><strong>含参求极值范围类问题的破题策略</strong>  </p>
+</li>
+<li>求出驻点（一般含参数表达式）；  </li>
+<li>写出极值关于参数的表达式 $g(a)$；  </li>
+<li>根据题意建立不等式 $g(a) &lt; 0$ 或 $g(a) &gt; 0$；  </li>
+<li>
+<p>结合参数的自然限制（如使驻点有意义）及分类条件求解参数范围。</p>
+</li>
+<li>
+<p><strong>如何避开讨论失分</strong>  </p>
+</li>
+<li>参数每取一个范围，必须明确导数的零点是否存在、有几个、大小顺序如何。  </li>
+<li>画数轴或思维导图梳理分类标准，防止漏掉“等于”的临界情形。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li>
+<p><strong>忘记定义域</strong><br />
+   含对数 $\ln x$ 时未限定 $x&gt;0$，导致驻点或极值点不在定义域内仍错误保留。</p>
+</li>
+<li>
+<p><strong>不验证两侧符号变化</strong><br />
+   仅由 $f'(x_0)=0$ 立即断定极值，忽略 $f'(x_0)$ 不变号的情形（如 $y=x^3$ 在 $x=0$ 处无极值）。</p>
+</li>
+<li>
+<p><strong>混淆极值与最值</strong><br />
+   极值点是区间内部的局部最值点，区间端点有可能成为最值但不一定是极值；求参数范围时误将极值条件代成最值条件。</p>
+</li>
+<li>
+<p><strong>极值表达式代入错误</strong><br />
+   求出极值点 $x=x_0$ 后忘记代回原函数 $f(x)$，而错将 $x_0$ 或导数表达式作为极值。</p>
+</li>
+<li>
+<p><strong>含参讨论遗漏临界值</strong><br />
+   如导数为 $f'(x)=e^x - a$，当 $a \leq 0$ 时 $f'(x)&gt;0$ 恒成立，无极值点；若跳过 $a \leq 0$ 的情况直接设驻点 $\ln a$，将导致丢解或错解。</p>
+</li>
+<li>
+<p><strong>抽象极值点的不等式求解</strong><br />
+   在利用零点存在定理得到极值点 $x_0$ 满足的方程后，未能整体代换化简极值表达式，强行解近似根导致失分。</p>
+</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong> （2024·新课标Ⅱ·16）</h3>
+<p>已知函数 $f(x) = e^x - ax - a^3$．<br />
+（1）当 $a=1$ 时，求曲线 $y=f(x)$ 在点 $(1,f(1))$ 处的切线方程；<br />
+（2）若 $f(x)$ 有极小值，且极小值小于 $0$，求 $a$ 的取值范围．</p>
+<p><strong>思路</strong><br />
+（1）求导得斜率，用点斜式（或直线一般式）写出切线。<br />
+（2）极小值存在 ⇒ 导数有变号零点。先对 $a$ 分类确定是否存在极值点，求出极值表达式，利用极小值 $&lt;0$ 建立不等式解出 $a$ 范围。</p>
+<p><strong>步骤</strong><br />
+<strong>（1）</strong> 当 $a=1$ 时，$f(x)=e^x - x -1$．<br />
+导数为 $f'(x)=e^x - 1$，$f'(1)=e - 1$．切点坐标 $(1,e - 2)$．<br />
+切线方程：$y - (e-2) = (e-1)(x-1)$，化为一般式：$(e-1)x - y - 1 =0$．<br />
+<strong>（2）</strong> $f'(x)=e^x - a$．<br />
+- 当 $a \leq 0$ 时，$f'(x)&gt;0$ 恒成立，$f(x)$ 单调递增，无极小值，舍去．<br />
+- 当 $a &gt; 0$ 时，令 $f'(x)=0$，得唯一驻点 $x = \ln a$．<br />
+  当 $x &lt; \ln a$ 时 $f'(x) &lt; 0$，当 $x &gt; \ln a$ 时 $f'(x) &gt; 0$，<br />
+  因此 $f(x)$ 在 $x=\ln a$ 处取得极小值．<br />
+  极小值 $f(\ln a) = a - a\ln a - a^3$．<br />
+  由题设有 $a - a\ln a - a^3 &lt; 0$，结合 $a&gt;0$，两边同除以 $a$ 得<br />
+  $1 - \ln a - a^2 &lt; 0$，即 $\ln a + a^2 &gt; 1$．<br />
+  记 $g(a) = \ln a + a^2$，$a&gt;0$，$g(a)$ 单调递增，且 $g(1)=1$．<br />
+  故不等式解集为 $a &gt; 1$．<br />
+综上，$a$ 的取值范围是 $(1, +\infty)$．</p>
+<p><strong>点评/变式</strong><br />
+本题型为“由极值性质求参数范围”的典型题。分类讨论的第一步至关重要：导数零点参数 $a$ 必须与零比较。变式常把极小值条件改为极大值，或极值点与某点比较，解法本质均为“含参不等式”。</p>
+<h3><strong>题目2</strong> （2019·全国卷文·21（1））</h3>
+<p>已知函数 $f(x) = (x-1)\ln x - x - 1$．<br />
+证明：$f(x)$ 存在唯一的极值点．</p>
+<p><strong>思路</strong><br />
+要证唯一极值点，等价于证明导函数 $f'(x)$ 在定义域内有唯一零点，且异号。本题用二阶导判定 $f'(x)$ 单调，再用零点定理锁定唯一零点。</p>
+<p><strong>步骤</strong><br />
+函数定义域为 $(0, +\infty)$．<br />
+求导：$f'(x) = \ln x + \frac{x-1}{x} - 1 = \ln x - \frac{1}{x}$．<br />
+再求二阶导：$f''(x) = \frac{1}{x} + \frac{1}{x^2} &gt; 0$ 在 $(0,+\infty)$ 恒成立，<br />
+故 $f'(x)$ 在 $(0,+\infty)$ 上单调递增．<br />
+取点考察：$f'(1) = -1 &lt; 0$，$f'(2) = \ln 2 - \frac{1}{2} &gt; 0$（因 $\ln 2 &gt; \frac{1}{2}$）．<br />
+由零点存在定理和单调性，$f'(x)$ 在 $(1,2)$ 内存在唯一零点，记作 $x_0$．<br />
+当 $0 &lt; x &lt; x_0$ 时，$f'(x) &lt; f'(x_0) = 0$；当 $x &gt; x_0$ 时，$f'(x) &gt; 0$．<br />
+所以 $f(x)$ 在 $x_0$ 处取得极小值，该极值点唯一．</p>
+<p><strong>点评/变式</strong><br />
+证明“极值点唯一”的关键在于转化到导数的零点唯一。二阶导判定单调性、特值验证零点存在性是组合必背套路。若变为证明“存在唯一的极大值点”，只需将导数的符号变化反述。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-16.html">2024-新课标Ⅱ-16</a>（2024 · 中） 利用导数求切线方程，通过讨论单调性与极值条件构造新函数解不等式求参数范围。</li>
+<li><a href="../../exam/数学/2019-文-21.html">2019-文-21</a>（2019 · 中） 证明含参函数的唯一极值点存在性。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/691-函数的极值.html">函数极值</a></li>
+</ul>
+</div>
+</body>
+</html>

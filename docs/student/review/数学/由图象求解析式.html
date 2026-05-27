@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>由图象求解析式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>由图象求解析式</h1><div class="review-mark" data-stem="由图象求解析式"></div><div class="meta-card"><span><strong>考点</strong>由图象求解析式</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：15</li>
+<li>真题数：5；年份跨度：2011–2023</li>
+<li>出现题位：填空16 选择3 选择9 选择11</li>
+<li>难度分布：中3 易1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦型函数</strong>：$y=A\sin(\omega x+\varphi)+k$（$A\neq0,\omega&gt;0$）。$A$ 控制振幅，$\omega$ 控制周期 $T=\frac{2\pi}{\omega}$，$\varphi$ 为初相，$k$ 为纵向平移。</li>
+<li><strong>五点法对应关系</strong>：一个周期内五个关键点依次对应 $\omega x+\varphi=0,\frac{\pi}{2},\pi,\frac{3\pi}{2},2\pi$。利用图像上的最高点（对应 $\frac{\pi}{2}+2k\pi$）、最低点（对应 $\frac{3\pi}{2}+2k\pi$）、上升零点（对应 $0+2k\pi$）、下降零点（对应 $\pi+2k\pi$）可反推 $\varphi$。</li>
+<li><strong>由性质求解析式</strong>：若已知对称轴，对称轴满足 $\omega x+\varphi=\frac{\pi}{2}+k\pi$；若已知对称中心，则满足 $\omega x+\varphi=k\pi$；若已知单调区间，可依据正弦函数的基本单调区间建立不等式确定 $\omega$ 范围。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求 $A$ 与 $k$</strong>：观察图像或已知最值。若最大值为 $M$，最小值为 $m$，则 $A=\frac{M-m}{2}$，$k=\frac{M+m}{2}$。</li>
+<li><strong>求 $\omega$</strong>：先确定周期 $T$。常用方法：</li>
+<li>相邻最高点（或最低点）的水平距离为一个周期。</li>
+<li>相邻对称轴的距离为半周期。</li>
+<li>相邻对称中心或相邻零点的距离为半周期。</li>
+<li>任意两点若分别对应正弦值相等的同一单调区间端点，可结合相位差推 $\omega$（如 2023 年代表题）。
+  利用 $T=\frac{2\pi}{\omega}$ 解出 $\omega$（默认 $\omega&gt;0$）。</li>
+<li><strong>求 $\varphi$</strong>：代入一个已知点坐标（优先取最值点或上升零点以简化方程）。</li>
+<li>若代最高点：$\omega x_0+\varphi=\frac{\pi}{2}+2k\pi$。</li>
+<li>若代最低点：$\omega x_0+\varphi=\frac{3\pi}{2}+2k\pi$。</li>
+<li>若代上升零点（$y=0$ 且正向穿过）：$\omega x_0+\varphi=2k\pi$。</li>
+<li>若代下降零点（$y=0$ 且负向穿过）：$\omega x_0+\varphi=\pi+2k\pi$。
+   结合题目给出的 $\varphi$ 范围（如 $0&lt;\varphi&lt;\pi$ 或 $|\varphi|&lt;\frac{\pi}{2}$ 等）确定唯一的 $\varphi$。</li>
+<li><strong>检验</strong>：可将求得的解析式代回原图或原条件验算最值、零点、单调性等。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>周期判断错误</strong>：误将半周期当作全周期，导致 $\omega$ 值减半或加倍。注意相邻零点间为半周期。</li>
+<li><strong>代点时未区分“第几点”</strong>：将最高点误当作 $\frac{\pi}{2}$ 以外的其他点，例如用 $\sin(\omega x_0+\varphi)=1$ 解出 $\omega x_0+\varphi=\frac{\pi}{2}+2k\pi$ 或 $\frac{5\pi}{2}+2k\pi$ 等，必须结合图像所处的单调区间舍去多余解。</li>
+<li><strong>忽视 $\varphi$ 的范围限制</strong>：解出的 $\varphi$ 有无数个，未根据题设范围（如 $0&lt;\varphi&lt;\pi$）筛选，导致错选或漏解。</li>
+<li><strong>周期公式混淆</strong>：误记 $T=\frac{\pi}{\omega}$，正确应为 $T=\frac{2\pi}{\omega}$（正弦、余弦）。</li>
+<li><strong>$\omega$ 的符号</strong>：题目一般规定 $\omega&gt;0$，若从图像判断出周期为 $T$，直接取 $\omega=\frac{2\pi}{T}&gt;0$。</li>
+<li><strong>复杂函数形式未化简</strong>：如 $f(x)=\sin(\omega x+\varphi)+\cos(\omega x+\varphi)$ 需先用辅助角公式化为 $y=\sqrt{2}\sin(\omega x+\varphi+\frac{\pi}{4})$，再按标准步骤求解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. （2023 新课标Ⅱ 16）交点距离反推解析式</h3>
+<p><strong>题目</strong>：已知 $f(x)=\sin(\omega x+\varphi)$（$\omega&gt;0$），直线 $y=\frac12$ 与曲线两交点 $A,B$ 的横坐标差为 $\frac{\pi}{6}$，且 $f!\left(\frac{2\pi}{3}\right)=0$，$f(0)&lt;0$，求 $f(\pi)$。</p>
+<p><strong>思路</strong>：利用 $y=\frac12$ 对应的正弦值，求出相邻两交点相位差，进而得 $\omega$；再由零点与函数值符号确定 $\varphi$。</p>
+<p><strong>步骤</strong>：
+1. 设 $A(x_1,\frac12),B(x_2,\frac12)$，则 $x_2-x_1=\frac{\pi}{6}$。
+2. 由 $\sin\alpha=\frac12$ 得 $\alpha=\frac{\pi}{6}+2k\pi$ 或 $\frac{5\pi}{6}+2k\pi$。图像上 $A,B$ 分别对应这两个不同解（分别在上升段和下降段），故
+   $$(\omega x_2+\varphi)-(\omega x_1+\varphi)=\frac{5\pi}{6}-\frac{\pi}{6}=\frac{2\pi}{3}.$$
+   即 $\omega(x_2-x_1)=\frac{2\pi}{3}$，代入 $x_2-x_1=\frac{\pi}{6}$ 得 $\omega=4$。
+3. 由 $f!\left(\frac{2\pi}{3}\right)=\sin!\left(\frac{8\pi}{3}+\varphi\right)=0$ 得 $\frac{8\pi}{3}+\varphi=k\pi$，$\varphi=k\pi-\frac{8\pi}{3}$。
+4. 化简得 $\varphi=(k-3)\pi+\frac{\pi}{3}$，记 $m=k-3\in\mathbb Z$，则 $\varphi=m\pi+\frac{\pi}{3}$。
+5. 结合 $f(0)=\sin\varphi&lt;0$，$\varphi$ 在第三、四象限。$\varphi=m\pi+\frac{\pi}{3}$，当 $m=1$ 时 $\varphi=\frac{4\pi}{3}$ 满足；$m=1$（即 $k=4$）对应 $\varphi=\pi+\frac{\pi}{3}=\frac{4\pi}{3}$? 实际上 $\varphi=\frac{4\pi}{3}-\frac{8\pi}{3}?$ 重新整理：$\varphi=k\pi-\frac{8\pi}{3}$，$k=3$ 时 $\varphi=3\pi-\frac{8\pi}{3}=\frac{\pi}{3}$，此时 $\sin\varphi&gt;0$ 不符；$k=2$ 时 $\varphi=2\pi-\frac{8\pi}{3}=-\frac{2\pi}{3}$，相当于 $\frac{4\pi}{3}$（加 $2\pi$），满足 $\sin\varphi=-\frac{\sqrt3}{2}&lt;0$。故可取 $\varphi=-\frac{2\pi}{3}$（或 $\frac{4\pi}{3}$），即 $f(x)=\sin!\left(4x-\frac{2\pi}{3}\right)$。
+6. 计算 $f(\pi)=\sin!\left(4\pi-\frac{2\pi}{3}\right)=\sin!\left(-\frac{2\pi}{3}\right)=-\frac{\sqrt3}{2}$。</p>
+<p><strong>点评/变式</strong>：此题没有直接给出传统波形，而是通过一条水平线与曲线交点距离暗示周期信息，属于“隐藏的周期条件”。考生应敏锐地将正弦值相等的两个不同点转化为相位差，快速求出 $\omega$。变式可改为直线 $y=\frac{\sqrt3}{2}$ 等其他值，方法完全一致。</p>
+<hr />
+<h3>2. （2016 文 03）由波形图求解析式</h3>
+<p><strong>题目</strong>：给出 $y=A\sin(\omega x+\varphi)$ 的部分图像，最大值 2，最小值 -2，半周期对应点 $(-\frac{\pi}{6},0)$ 到 $(\frac{\pi}{3},2)$，求函数解析式。</p>
+<p><strong>思路</strong>：通过波峰、波谷和零点位置确定 $A,\omega,\varphi$。</p>
+<p><strong>步骤</strong>：
+1. 最大值为 2，最小值为 -2，得 $A=2$。
+2. 从点 $(-\frac{\pi}{6},0)$ 到右侧相邻最高点 $(\frac{\pi}{3},2)$ 水平距离为 $\frac{\pi}{3}-(-\frac{\pi}{6})=\frac{\pi}{2}$，占四分之一周期，故 $T=\pi$，$\omega=\frac{2\pi}{T}=2$。
+3. 设 $y=2\sin(2x+\varphi)$。将最高点 $(\frac{\pi}{3},2)$ 代入得 $\sin!\left(\frac{2\pi}{3}+\varphi\right)=1$，则 $\frac{2\pi}{3}+\varphi=\frac{\pi}{2}+2k\pi$，解得 $\varphi=-\frac{\pi}{6}+2k\pi$。取 $k=0$ 得 $\varphi=-\frac{\pi}{6}$ 满足。也可用零点校验。
+4. 解析式为 $y=2\sin!\left(2x-\frac{\pi}{6}\right)$。</p>
+<p><strong>点评/变式</strong>：用最高（低）点求 $\varphi$ 往往最简捷，避免多解混淆。若代零点，需判断是</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-16.html">2023-新课标Ⅱ-16</a>（2023 · 中） 根据三角函数图象求解析式参数并计算函数值。</li>
+<li><a href="../../exam/数学/2016-文-03.html">2016-文-03</a>（2016 · 易） 本题通过部分图象求三角函数y=Asin(ωx+φ)的解析式，确定振幅、周期和初相。</li>
+<li><a href="../../exam/数学/2012-文-09.html">2012-文-09</a>（2012 · 中） 已知正弦函数的两条相邻对称轴，利用对称轴间距求周期，进而确定参数φ的值。</li>
+<li><a href="../../exam/数学/2012-理-09.html">2012-理-09</a>（2012 · 难） 本题考查正弦型函数在给定区间内的单调性，通过单调递减条件求参数ω的取值范围。</li>
+<li><a href="../../exam/数学/2011-理-11.html">2011-理-11</a>（2011 · 中） 本题通过辅助角公式化简三角函数，利用最小正周期和偶函数性质确定参数，进而判断单调区间。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/998-由图象求解析式.html">由图象求解析式</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何补形</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何补形</h1><div class="review-mark" data-stem="几何补形"></div><div class="meta-card"><span><strong>考点</strong>几何补形</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>几何补形</strong>：将非标准几何体（棱台、斜棱柱、不规则多面体等）通过延长棱、添加截面等方式还原为标准几何体（锥体、正棱柱等），借助标准体的性质化难为易。</li>
+<li><strong>正棱台补锥</strong>：正三棱台 $ABC-A_1B_1C_1$ 的上、下底面为正三角形且中心对齐，侧棱延长后必交于一点 $P$，补成正三棱锥 $P-ABC$。此时台体与锥体存在比例关系：相似比 $k = \frac{\text{上底边长}}{\text{下底边长}}$，体积比 $k^3$，对应高之比 $k$。</li>
+<li><strong>体积与高</strong>：正三棱锥 $P-ABC$ 的体积 $V_{\text{锥}} = \frac{V_{\text{台}}}{1-k^3}$。求得锥高后，线面角可直接在锥体直角三角形中解决。</li>
+<li><strong>线面角定义</strong>：斜线与其在平面内的射影所成的锐角。求法：作垂线构造直角三角形，用正切或正弦求解。关键量：斜线段在平面的射影长及垂线段（高）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别可补形特征</strong><br />
+   台体（正/一般棱台、圆台）、斜柱体、缺顶锥等，考虑用补形还原为锥或正柱。优先观察侧棱延长是否共点。</li>
+<li><strong>定相似比 $k$</strong><br />
+   对正棱台/圆台，$k = \frac{\text{上底线段长}}{\text{下底对应线段长}}$（边长、半径、高等）。如本题：$k = \frac{A_1B_1}{AB} = \frac{2}{6} = \frac13$。</li>
+<li><strong>体积转化求锥高</strong><br />
+   已知台体体积 $V_{\text{台}}$，由 $V_{\text{台}} = V_{\text{大锥}} - V_{\text{小锥}} = V_{\text{大锥}}(1-k^3)$ 得 $V_{\text{大锥}} = \frac{V_{\text{台}}}{1-k^3}$。再由锥体体积 $V = \frac13 S_{\text{底}} h_{\text{锥}}$ 解出 $h_{\text{锥}}$。</li>
+<li><strong>转回线面角</strong><br />
+   线面角在锥顶与底面垂足、底面射影构成的直角三角形中。正切 = $\frac{\text{锥高}}{\text{斜足到底面中心距离}}$。（台体中的 $A_1A$ 与平面 $ABC$ 所成角，即 $PA$ 与平面 $ABC$ 所成角，两者相等）</li>
+<li><strong>验算</strong><br />
+   检查相似比方向，避免上下底混淆导致体积倍数出错。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>相似比用反</strong>：将 $k$ 取为 $\frac{\text{下底}}{\text{上底}}$，导致 $V_{\text{大锥}} = \frac{V_{\text{台}}}{k^3-1}$ 误算。牢记补形后大锥比小锥，$k$ 小于1时体积关系才正常。</li>
+<li><strong>台体体积公式误记</strong>：正三棱台体积不是简单的 $\frac13 h (S_1 + \sqrt{S_1S_2}+S_2)$，需正确使用该公式或补形处理。</li>
+<li><strong>线面角找错</strong>：将 $A_1A$ 与底面所成角误认为 $\angle A_1AM$（$M$ 为底面任意点），实际上垂足应为 $A$ 在底面射影，且因台体正三棱台，$A_1$ 在底面的射影在 $AD$ 延长线上（$D$ 为 $BC$ 中点），必须正确作出高线。</li>
+<li><strong>锥体内的比例混淆</strong>：补形后，$PA_1:PA = k$，$P$ 到上、下底面距离之比也为 $k$。台高 $h = h_{\text{大锥}} - h_{\text{小锥}} = h_{\text{大锥}}(1-k)$，切勿错用为 $h=h_{\text{大锥}}(1-k^3)$。</li>
+<li><strong>数值计算</strong>：面积、高、体积涉及根号运算时，谨防简单有理化失误，如 $\frac{4\sqrt3}{3}$ 的平方等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2024·新课标Ⅱ 第7题</h3>
+<p><strong>题目</strong><br />
+正三棱台 $ABC-A_1B_1C_1$ 体积为 $\frac{52}{3}$，$AB=6$，$A_1B_1=2$，求 $A_1A$ 与平面 $ABC$ 所成角的正切值。</p>
+<p><strong>思路</strong><br />
+补形法：将正三棱台侧棱延长交于一点 $P$，补成正三棱锥 $P-ABC$。此时所求线面角即 $PA$ 与底面 $ABC$ 所成角，且由体积比求出大锥高，再结合底面中心到顶点的距离求出正切值。</p>
+<p><strong>步骤</strong><br />
+1. 底面正三角形 $ABC$ 边长 $6$，面积 $S = \frac{\sqrt3}{4} \times 6^2 = 9\sqrt3$。<br />
+2. 相似比 $k = \frac{A_1B_1}{AB} = \frac23?$ 这里注意：$A_1B_1=2$，$AB=6$，所以 $k = \frac{2}{6} = \frac13$。<br />
+3. 大锥体积 $V_{P-ABC} = \frac{V_{\text{台}}}{1 - k^3} = \frac{\frac{52}{3}}{1 - (\frac13)^3} = \frac{\frac{52}{3}}{1 - \frac{1}{27}} = \frac{\frac{52}{3}}{\frac{26}{27}} = \frac{52}{3} \times \frac{27}{26} = 18$。<br />
+4. 设正三棱锥高为 $H$，则 $\frac13 S H = 18 \Rightarrow \frac13 \times 9\sqrt3 \times H = 18 \Rightarrow H = \frac{18 \times 3}{9\sqrt3} = 2\sqrt3$。<br />
+5. 正三角形 $ABC$ 中心为 $O$，则 $AO = \frac{\sqrt3}{3} \times 6 = 2\sqrt3$。<br />
+6. 在 $\mathrm{Rt}\triangle POA$ 中，$\angle PAO$ 即为所求线面角，$\tan \angle PAO = \frac{H}{AO} = \frac{2\sqrt3}{2\sqrt3} = 1$。<br />
+对应选项 B。</p>
+<p><strong>点评/变式</strong><br />
+- 补形法避免了直接计算台高和射影的繁琐几何构造，利用体积比直接得到锥高，化台为锥是关键。<br />
+- 变式：若台体为一般三棱台、或已知线面角反求体积，同样优先补形寻找比例关系。<br />
+- 注意：非正棱台补锥后，底面积与高仍可通过相似比解决，但底边不一定正对中心，此时仍需回到传统射影法求角，但体积转化同样有效。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-07.html">2024-新课标Ⅱ-07</a>（2024 · 中） 考查正三棱台体积与线面角求解，包括直接套用台体公式或补形为三棱锥两种思路</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1194-几何补形.html">几何补形</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球体积公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球体积公式</h1><div class="review-mark" data-stem="球体积公式"></div><div class="meta-card"><span><strong>考点</strong>球体积公式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球的体积公式</strong>：若球半径为 $R$，则体积 $V = \frac{4}{3}\pi R^3$。该公式是高考中计算球体空间大小的唯一工具，需准确记忆系数 $\frac{4}{3}$。</li>
+<li><strong>球的截面性质</strong>（核心定理）：用一个平面去截球，若球心到平面的距离为 $d$，截面圆半径为 $r$，球半径为 $R$，则三者满足勾股关系 $R^2 = r^2 + d^2$。此性质将空间问题转化为直角三角形问题，是求球半径的通用方法。</li>
+<li><strong>适用条件</strong>：已知截面圆半径、球心距、球半径中的任意两个，可直接求第三个；进而可求体积、表面积等。特别注意 $d=0$ 时截面为球的大圆，$d=R$ 时截面退化为点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画截面图</strong>：过球心作截面的垂线，构造出包含球心、截面圆心、截面圆周上一点（或截面圆半径端点）的直角三角形。该直角三角形的三条边分别为球心距 $d$、截面圆半径 $r$、球半径 $R$。</li>
+<li><strong>列勾股方程</strong>：利用 $R^2 = r^2 + d^2$ 求出未知的球半径 $R$。若已知 $r$ 和 $d$，直接相加后开方；若已知 $R$ 和 $r$（或 $d$），则用平方差求解。</li>
+<li><strong>代体积公式</strong>：将求得的 $R$ 代入 $V = \frac{4}{3}\pi R^3$，注意先计算 $R^3$，再乘系数，避免运算错误。</li>
+<li><strong>检查选项特征</strong>：若结果含有根号，注意化简，如 $\sqrt{(\sqrt{2})^2+1^2} = \sqrt{3}$，体积为 $\frac{4}{3}\pi (\sqrt{3})^3 = 4\sqrt{3}\pi$，与选项匹配。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>截面圆半径与球半径混淆</strong>：将题目给出的“截面圆半径”直接当作球半径代入体积公式，导致错选。</li>
+<li><strong>勾股关系用错</strong>：误将 $R$、$r$、$d$ 的关系记成 $R = r + d$ 或 $R^2 = r^2 - d^2$。找准直角边：球半径 $R$ 是直角三角形的斜边，$r$ 和 $d$ 是两直角边。</li>
+<li><strong>体积公式系数错记</strong>：记成 $V = \frac{4}{3}\pi R^3$，丢球 $\frac{1}{3}$ 或记成 $\frac{4}{3}\pi d^3$。</li>
+<li><strong>运算顺序不当</strong>：先乘系数再乘 $\pi$，或忘记 $R^3$ 时指数运算错误（如 $(\sqrt{3})^3 = 3\sqrt{3}$，不是 $3$）。</li>
+<li><strong>单位或符号遗漏</strong>：结果中丢 $\pi$ 或忘记开方，如得到 $R^2=3$ 后直接代入 $V=\frac{4}{3}\pi \cdot 3^3$，正确应为 $R=\sqrt{3}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2012·文·08）平面 $\alpha$ 截球 $O$ 的球面所得圆的半径为 $1$，球心 $O$ 到平面 $\alpha$ 的距离为 $\sqrt{2}$，则此球的体积为<br />
+A. $\sqrt{6}\pi$   B. $4\sqrt{3}\pi$   C. $4\sqrt{6}\pi$   D. $6\sqrt{3}\pi$</p>
+<p><strong>思路</strong><br />
+利用球的截面性质建立球半径 $R$ 与已知量 $r=1$、$d=\sqrt{2}$ 的勾股关系，求出 $R$ 后代入体积公式。注意甄别截面圆半径与球半径，切勿混淆。</p>
+<p><strong>步骤</strong><br />
+1. 画出截面直角三角形：斜边为球半径 $R$，两条直角边分别为球心到截面距离 $d=\sqrt{2}$ 和截面圆半径 $r=1$。<br />
+2. 由 $R^2 = r^2 + d^2$ 得 $R^2 = 1^2 + (\sqrt{2})^2 = 1 + 2 = 3$，所以 $R = \sqrt{3}$。<br />
+3. 代入体积公式：$V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi (\sqrt{3})^3 = \frac{4}{3}\pi \times 3\sqrt{3} = 4\sqrt{3}\pi$。<br />
+4. 对照选项，$4\sqrt{3}\pi$ 对应 B，故选 B。</p>
+<p><strong>点评/变式</strong><br />
+- 本题是截面性质与体积计算的直接考查，难度中等偏易，但易错点集中在“截面圆半径”的识别。若误将 $r=1$ 当 $R$，会错算出 $V=\frac{4}{3}\pi$ 而找不到选项。<br />
+- <strong>变式</strong>：若截面圆半径为 $1$，球心到截面距离为 $2$，则球体积是多少？（$R=\sqrt{5}$，$V=\frac{20\sqrt{5}}{3}\pi$）<br />
+- <strong>进阶变式</strong>：若已知球体积为 $\frac{32}{3}\pi$，球心到截面距离为 $\sqrt{3}$，求截面圆面积。（先反求 $R=2$，再得 $r=\sqrt{2^2-(\sqrt{3})^2}=1$，面积 $\pi$）</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-08.html">2012-文-08</a>（2012 · 易） 已知球的截面圆半径和球心到平面距离，求球的体积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">球体积公式</a></li>
+</ul>
+</div>
+</body>
+</html>

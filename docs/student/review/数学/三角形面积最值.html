@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角形面积最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角形面积最值</h1><div class="review-mark" data-stem="三角形面积最值"></div><div class="meta-card"><span><strong>考点</strong>三角形面积最值</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：解答21</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三角形面积公式</strong><ul>
+<li>底×高÷2：$S = \frac{1}{2}ah$，常用于已知一边及该边上的高。</li>
+<li>两边夹角：$S = \frac{1}{2}ab\sin C$，常用于已知两边及其夹角。</li>
+<li>坐标公式（解析几何常用）：若 $A(x_1,y_1), B(x_2,y_2), C(x_3,y_3)$，则 $S = \frac{1}{2}|x_1y_2 + x_2y_3 + x_3y_1 - x_1y_3 - x_2y_1 - x_3y_2|$。</li>
+<li>直角三角形特例：$S = \frac{1}{2}|\text{直角边}_1| \cdot |\text{直角边}_2|$。</li>
+</ul>
+</li>
+<li><strong>求面积最值的核心思想</strong>：将面积表示为某一变量（如直线的斜率、点的坐标）的函数，利用函数求最值的方法求解。<ul>
+<li>导数法：求导确定单调区间与极值点（尤其适用于高次分式函数）。</li>
+<li>基本不等式法：通过配凑“和定积最大”或“积定和最小”求最值（注意取等条件）。</li>
+<li>二次函数法：若可转化为二次函数，用配方法或顶点公式。</li>
+</ul>
+</li>
+<li><strong>圆锥曲线中的弦长与距离</strong><ul>
+<li>弦长公式：若直线 $y = kx + m$ 与椭圆 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 交于两点，则 $|AB| = \sqrt{1+k^2}|x_1 - x_2| = \sqrt{1+k^2}\frac{\sqrt{\Delta}}{|a_1|}$（联立后二次项系数为 $a_1$）。</li>
+<li>点到直线的距离：$d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$。</li>
+</ul>
+</li>
+<li><strong>两条直线垂直的判定</strong>（斜率均存在时）：$k_1 \cdot k_2 = -1$；若用向量，则数量积为零。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p><strong>解析几何中三角形面积最值问题的通用步骤：</strong></p>
+<ol>
+<li>
+<p><strong>建系，求轨迹方程</strong><br />
+   根据动点满足的几何条件（如斜率之积），直接法求轨迹方程，注意去除不合题意的点（如斜率不存在的点、分母为零的点），明确曲线的范围。</p>
+</li>
+<li>
+<p><strong>设参与联立</strong><br />
+   设出相关直线方程（常含参数 $k$ 或 $m$），与曲线方程联立，利用韦达定理写出交点坐标关系，或直接解出交点坐标（若直线过特殊点或形式简单，可直接解出坐标）。</p>
+</li>
+<li>
+<p><strong>标出关键点与图形特征</strong><br />
+   利用题中几何关系（如垂直、中点、延长线）推导出新交点的坐标。常用“同构式”或“代入法”简化计算。如本题中，通过 $P, Q$ 关于原点对称，$PE \perp x$ 轴，得 $E$ 坐标，再写出 $QE$ 方程并与椭圆联立求 $G$。</p>
+</li>
+<li>
+<p><strong>证明三角形形状（若需要）</strong><br />
+   计算两边斜率并检验乘积是否为 $-1$，或将向量点乘验证是否为零。</p>
+</li>
+<li>
+<p><strong>构建面积的目标函数</strong><br />
+   根据三角形形状选择最简面积公式。若为直角三角形，优先选两条直角边长的乘积之半；若一般三角形，可考虑割补法或 $S = \frac{1}{2} \times$ 弦长 $\times$ 点到直线的距离。将面积表示为单一参变量的函数，并确定变量的取值范围（由题意、直线与曲线相交的限制等决定）。</p>
+</li>
+<li>
+<p><strong>求最值</strong>  </p>
+</li>
+<li>对目标函数求导，判断单调性，求出极大值（最大值），注意定义域端点。</li>
+<li>若表达式能化为 $t + \frac{a}{t}$ 型或二次型，可考虑基本不等式或二次函数。</li>
+<li>
+<p>得到最值后必须检验参数是否在允许范围内，以及取等条件是否成立。</p>
+</li>
+<li>
+<p><strong>规范作答</strong><br />
+   写出最值及此时对应的参数值，若题目不仅要求最值还要求证明，要逻辑严密地书写。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视斜率不存在的情形</strong>：轨迹方程推导时，需排除 $x = \pm 2$ 等使分母为零的点；设直线 $y = kx$ 时要考虑 $k$ 是否可能不存在，本题中由 $P$ 在第一象限可知 $k &gt; 0$，排除了斜率不存在。</li>
+<li><strong>忘记判别式 $\Delta &gt; 0$ 的隐性限制</strong>：联立方程后得到的参数范围必须使直线与曲线有两个不同交点，丢掉这一限制会导致最值取到时不成立。</li>
+<li><strong>坐标符号与对称性利用不当</strong>：利用对称性（如 $P, Q$ 关于原点对称）可以大幅简化运算，若直接硬算极易出错。</li>
+<li><strong>面积表达式的化简方向错误</strong>：盲目通分或展开，导致表达式复杂难以求最值；应尽量利用直角三角形等条件，将面积写成两个较简单因式的乘积。</li>
+<li><strong>最值求解时定义域遗漏</strong>：用导数求最值时，忘记求定义域（如 $k &gt; 0$），可能错误地讨论 $k &lt; 0$ 的情况；用基本不等式时，忽略“正数”条件和取等条件验证。</li>
+<li><strong>代入消元顺序混乱</strong>：如求 $G$ 点坐标时，应利用 $P, Q$ 已用 $k$ 表示这一事实，将 $QE$ 方程与椭圆联立时注意 $Q$ 在椭圆上，可简化因式分解过程，避免重算韦达定理。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2019·全国Ⅱ卷·理21）</h3>
+<p>已知 $A(-2,0)$, $B(2,0)$，动点 $M(x,y)$ 满足直线 $AM$ 与 $BM$ 的斜率之积为 $-\frac{1}{2}$。<br />
+（1）求 $M$ 的轨迹 $C$ 的方程，并说明 $C$ 是什么曲线；<br />
+（2）过原点的直线交 $C$ 于 $P$，$Q$ 两点，$P$ 在第一象限，$PE \perp x$ 轴于 $E$，连接 $QE$ 并延长交 $C$ 于点 $G$。<br />
+ （i）证明：$\triangle PQG$ 是直角三角形；<br />
+ （ii）求 $\triangle PQG$ 面积的最大值。</p>
+<hr />
+<p><strong>思路</strong><br />
+（1）直接由斜率公式列出等式，化简得椭圆方程，注意除去 $A, B$ 两点。<br />
+（2）设直线 $PQ: y = kx\ (k&gt;0)$，与椭圆联立解出 $P, Q$ 坐标（用 $k$ 表示）。由 $PE \perp x$ 轴得 $E$，写出直线 $QE$，与椭圆再次联立，求得 $G$ 坐标。<br />
+（i）计算 $k_{PQ} \cdot k_{PG}$，若为 $-1$ 则得证。<br />
+（ii）由直角三角形得 $S = \frac{1}{2}|PQ| \cdot |PG|$，将长度用 $k$ 表示，得到关于 $k$ 的函数，用导数求最大值。</p>
+<hr />
+<p><strong>步骤</strong></p>
+<p><strong>（1）轨迹方程</strong><br />
+当 $x \neq \pm 2$ 时，$k_{AM} = \frac{y}{x+2}$，$k_{BM} = \frac{y}{x-2}$，<br />
+由 $k_{AM} \cdot k_{BM} = -\frac{1}{2}$ 得<br />
+$$\frac{y}{x+2} \cdot \frac{y}{x-2} = -\frac{1}{2} \quad \Longrightarrow \quad \frac{y^2}{x^2-4} = -\frac{1}{2}.$$
+整理得 $\frac{x^2}{4} + \frac{y^2}{2} = 1$（$x \neq \pm 2$）。<br />
+$C$ 是中心在原点，焦点在 $x$ 轴上的椭圆（不含左右顶点）。</p>
+<p><strong>（2）设直线与求点</strong><br />
+设 $PQ: y = kx\ (k &gt; 0)$，代入椭圆：<br />
+$$\frac{x^2}{4} + \frac{k^2 x^2}{2} = 1 \quad \Longrightarrow \quad x^2\left(\frac{1}{4} + \frac{k^2}{2}\right) = 1.$$
+解得 $x_P = \frac{2}{\sqrt{1+2k^2}}$，于是 $P\left(\frac{2}{\sqrt{1+2k^2}}, \frac{2k}{\sqrt{1+2k^2}}\right)$，<br />
+由对称性 $Q\left(-\frac{2}{\sqrt{1+2k^2}}, -\frac{2k}{\sqrt{1+2k^2}}\right)$。<br />
+$PE \perp x$ 轴 $\Rightarrow E\left(\frac{2}{\sqrt{1+2k^2}}, 0\right)$。  </p>
+<p>直线 $QE$ 的斜率 $k_{QE} = \frac{0 - (-\frac{2k}{\sqrt{1+2k^2}})}{\frac{2}{\sqrt{1+2k^2}} - (-\frac{2}{\sqrt{1+2k^2}})} = \frac{k}{2}$，<br />
+方程 $y = \frac{k}{2}\left(x - \frac{2}{\sqrt{1+2k^2}}\right)$，代入椭圆：<br />
+$$\frac{x^2}{4} + \frac{\frac{k^2}{4}\left(x - \frac{2}{\sqrt{1+2k^2}}\right)^2}{2} = 1.$$
+两边乘 $4$：$x^2 + \frac{k^2}{2}\left(x - \frac{2}{\sqrt{1+2k^2}}\right)^2 = 4$。<br />
+注意到 $Q$ 已满足方程，故设 $x_G = \frac{6k^2+2}{(1+2k^2)\sqrt{1+2k^2}}$（运算过程可利用韦达定理或构造因式），<br />
+最终可得 $G!\left(\frac{2(3k^2+1)}{(1+2k^2)^{3/2}}, \frac{4k^3}{(1+2k^2)^{3/2}}\right)$。</p>
+<p><strong>（i）证明直角三角形</strong><br />
+$k_{PQ} = k$，<br />
+$k_{PG} = \frac{ \frac{4k^3}{(1+2k^2)^{3/2}} - \frac{2k}{\sqrt{1+2k^2}} }{ \frac{2(3k^2+1)}{(1+2k^2)^{3/2}} - \frac{2}{\sqrt{1+2k^2}} } = \frac{ \frac{4k^3 - 2k(1+2k^2)}{(1+2k^2)^{3/2}} }{ \frac{2(3k^2+1) - 2(1+2k^2)}{(1+2k^2)^{3/2}} } = \frac{-2k}{4k^2} = -\frac{1}{k}.$<br />
+因此 $k_{PQ} \cdot k_{PG} = k \cdot (-\frac{1}{k}) = -1$，$\angle QPG = 90^\circ$，$\triangle PQG$ 为直角三角形。</p>
+<p><strong>（ii）求面积最大值</strong><br />
+$|PQ| = \sqrt{1+k^2} \cdot |x_P - x_Q| = \sqrt{1+k^2} \cdot \frac{4}{\sqrt{1+2k^2}}$。<br />
+$|PG| = \sqrt{1 + \frac{1}{k^2}} \cdot |x_P - x_G|$，代入坐标化简得 $|PG| = \frac{4k\sqrt{1+k^2}}{(1+2k^2)^{3/2}}$。<br />
+面积 $S = \frac{1}{2}|PQ| \cdot |PG| = \frac{1}{2} \cdot \frac{4\sqrt{1+k^2}}{\sqrt{1+2k^2}} \cdot \frac{4k\sqrt{1+k^2}}{(1+2k^2)^{3/2}} = \frac{8k(1+k^2)}{(1+2k^2)^2}$。  </p>
+<p>令 $t = k &gt; 0$，$S(t) = \frac{8t(1+t^2)}{(1+2t^2)^2}$。<br />
+求导：$S'(t) = \frac{8(1-2t^2)(1+4t^2 + t^4)}{(1+2t^2)^4}$，<br />
+令 $S'(t) = 0$，在 $t&gt;0$ 时得 $t = \frac{\sqrt{2}}{2}$。<br />
+当 $0 &lt; t &lt; \frac{\sqrt{2}}{2}$ 时 $S'&gt;0$，当 $t &gt; \frac{\sqrt{2}}{2}$ 时 $S'&lt;0$，<br />
+故 $t = \frac{\sqrt{2}}{2}$ 时 $S_{\max} = \frac{8 \cdot \frac{\sqrt{2}}{2} \cdot (1+\frac{1}{2})}{(1+1)^2} = \frac{4\sqrt{2} \cdot \frac{3}{2}}{4} = \frac{3\sqrt{2}}{2}$。  </p>
+<p>所以 $\triangle PQG$ 面积的最大值为 $\frac{3\sqrt{2}}{2}$。</p>
+<hr />
+<p><strong>点评/变式</strong><br />
+本题是典型的“轨迹+直线与椭圆相交+面积最值”的综合题。关键技巧在于利用对称性直接解出 $P, Q$ 坐标，避免设点带来的多参数困扰；求 $G$ 坐标时利用 $Q$ 在椭圆上设而不求，简化联立。面积最值采用导数处理，过程清晰、不易漏掉定义域。<br />
+<strong>变式训练</strong>：若将条件改为“直线 $AM$ 与 $BM$ 的斜率之积为 $\frac{1}{2}$”，轨迹变为双曲线，后续类似问题中面积最值如何处理？可注意定义域限制和表达式结构变化，体验不同曲线背景下面积最值求解的共性与差异。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-21.html">2019-理-21</a>（2019 · 难） 动点M满足直线AM与BM斜率之积为-1/2，求轨迹C方程（椭圆），并研究过原点直线交C于P、Q两点时△PQG的直角性与面积最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角形面积最值</a></li>
+</ul>
+</div>
+</body>
+</html>

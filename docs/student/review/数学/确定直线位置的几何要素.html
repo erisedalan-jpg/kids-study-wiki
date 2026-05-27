@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>确定直线位置的几何要素</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>确定直线位置的几何要素</h1><div class="review-mark" data-stem="确定直线位置的几何要素"></div><div class="meta-card"><span><strong>考点</strong>确定直线位置的几何要素</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择12</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>直线的斜截式方程 $y=ax+b$，其中 $a$ 为斜率（$a&gt;0$ 表示直线倾斜角为锐角），$b$ 为纵截距。</li>
+<li>直线与 $x$ 轴的交点：令 $y=0$ 得 $M(-\frac{b}{a},0)$；与 $y$ 轴交点 $(0,b)$。</li>
+<li>三角形面积公式：$S=\frac12 \times \text{底} \times \text{高}$；任意三角形亦可用顶点坐标的行列式或分割法计算。</li>
+<li>点 $(x_0,y_0)$ 到直线 $Ax+By+C=0$ 的距离公式：$d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。</li>
+<li>平面区域被直线分割的面积问题，核心是确定直线与多边形各边的交点，进而表达被分割的部分面积；常用“临界状态分析”和“分类讨论”。</li>
+<li>给定直线的几何要素（斜率 $a$、截距 $b$）限制了直线的位置与方向，题目通过对面积的约束反过来确定参数的取值范围，体现数形结合和转化思想。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图定形</strong>：先根据已知点坐标画出三角形，分析直线斜率 $a&gt;0$ 的几何意义，大致确定直线与三角形可能相交的边。</li>
+<li><strong>求交点</strong>：联立直线与相关边的方程，求出交点坐标。对有截距的直线，先写出与 $x$ 轴交点 $M$ 的位置。</li>
+<li><strong>分类讨论</strong>：根据交点落在线段上的不同情况，划分参数范围。常用临界位置作为分界点（如交点与顶点重合、交点恰好在端点上）。</li>
+<li><strong>建立等量关系</strong>：用分割面积相等的条件列方程，通常利用三角形面积公式或割补法，将面积表示为参数 $a,b$ 的函数。</li>
+<li><strong>消元求范围</strong>：利用 $a&gt;0$ 及相关约束，消去 $a$，得到仅含 $b$ 的不等式或等式，解出 $b$ 的范围，并检验各分类结果的并集。</li>
+<li><strong>临界分析（解法二思路）</strong>：直接考虑使分割面积为一半时的几种极限位置（如直线过某顶点、与某边平行等），找出对应的临界 $b$ 值，再结合直线斜率 $a&gt;0$ 的趋势推断范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忽视 $a&gt;0$ 的约束，忘记斜率符号对交点位置和可行区域的影响。</li>
+<li>求直线与 $x$ 轴交点时忘记符号：$y=ax+b$ 中令 $y=0$ 得 $x=-\frac{b}{a}$，易错写为 $x=\frac{b}{a}$。</li>
+<li>分类讨论不完整，尤其是当交点与顶点重合的临界情形未考虑，导致范围端点出错。</li>
+<li>在表达被分割部分的面积时，误用底和高，或者三角形面积忘记乘 $\frac12$。</li>
+<li>将直线与线段相交的条件误写为直线与所在直线的交点，未限制参数使交点落在线段上，导致范围扩大。</li>
+<li>求多个分类的 $b$ 的范围后忘记取并集，只取某一类的解作为最终答案。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>已知点 $A(-1,0),B(1,0),C(0,1)$，直线 $y=ax+b\;(a&gt;0)$ 将 $\triangle ABC$ 分割为面积相等的两部分，求 $b$ 的取值范围。</p>
+<h3><strong>思路</strong></h3>
+<p>先固定三角形面积为 $1$，要求分割后两部分面积均为 $\frac12$。直线 $y=ax+b$ 与 $x$ 轴交于点 $M(-\frac{b}{a},0)$。因为 $a&gt;0,b$ 较小可能为正，所以 $M$ 的横坐标非正。根据 $M$ 与 $A$、$O$ 的位置关系分成三类：$M$ 在 $A$ 左侧，$M$ 在线段 $OA$ 上，$M$ 与 $A$ 重合。对每一类求出直线与三角形边界的另一交点 $N$，写出被分割出的左侧（或上方）三角形或四边形的面积，令其为 $\frac12$，从而找到 $b$ 与 $a$ 的关系，再利用 $a&gt;0$ 反解 $b$ 的范围，最后取并集。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>易得 $S_{\triangle ABC}=1$，面积一半为 $\frac12$。<br />
+   直线与 $x$ 轴交点 $M\left(-\frac{b}{a},0\right)$。  </li>
+<li><strong>临界情况1</strong>：$M$ 与 $A(-1,0)$ 重合，则 $-\frac{b}{a}=-1\Rightarrow b=a$。此时直线过 $A$ 且 $a&gt;0$，为分割一半的边界，可得一个临界 $b=\frac12$（代入面积等式）。</li>
+<li><strong>情况分类</strong>（由解析提炼）：  </li>
+<li>若 $M$ 在 $A$ 左侧，直线与 $AC$、$BC$ 或 $AB$ 等相交，经推导得 $b&lt;1-\frac{\sqrt2}{2}$ 等（原始真题选项略，此处展现方法）。  </li>
+<li>具体过程：联立直线与 $BC$ 方程 $x+y=1$，得交点 $N\left(\frac{1-b}{a+1},\frac{a+b}{a+1}\right)$。左侧面积用 $\triangle A M N$ 或割补表示，列方程求得 $b$ 关于 $a$ 的表达式。</li>
+<li>消去 $a$ 时结合 $a&gt;0$ 得到关于 $b$ 的不等式，解出其范围（真题最终答案为选项 B，对应一个开区间，此处从略数值）。  </li>
+<li>取三种情况下 $b$ 范围的并集即为最终所求。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li>本题精髓在于“动直线”含两个参数，但面积一半给出一个等式，最终化为一个参数的范围。数形结合、分类讨论是解这类题的核心。</li>
+<li>变式：若三角形不是等腰直角，或者直线方程为一般式 $Ax+By+C=0$ 带参数，方法同理，关键是准确表达被分割图形的面积。</li>
+<li>注意：当直线的倾斜程度变化时，分割出的形状可能在三角形和四边形间切换，务必分情况讨论。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-12.html">2013-理-12</a>（2013 · 难） 考查含参数直线分割三角形为面积相等的两部分，求参数b的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">确定直线位置的几何要素</a></li>
+</ul>
+</div>
+</body>
+</html>

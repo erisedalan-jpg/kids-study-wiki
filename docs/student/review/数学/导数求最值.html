@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数求最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>导数求最值</h1><div class="review-mark" data-stem="导数求最值"></div><div class="meta-card"><span><strong>考点</strong>导数求最值</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>互为反函数的图像对称性</strong>：若函数 $y=f(x)$ 与 $y=g(x)$ 互为反函数，则它们的图像关于直线 $y=x$ 对称。</li>
+<li><strong>距离的转化</strong>：曲线 $y=f(x)$ 上的动点 $P$ 与曲线 $y=g(x)$ 上的动点 $Q$ 之间的距离 $|PQ|$，当两曲线关于直线 $y=x$ 对称时，其最小值等于曲线 $y=f(x)$ 上的点到直线 $y=x$ 距离最小值的 2 倍。
+  $$|PQ|<em min="min">{min} = 2 \cdot d</em>$$
+  其中 $d_{min}$ 是曲线 $y=f(x)$ 上任意一点 $(x, f(x))$ 到直线 $y=x$ 的距离的最小值。</li>
+<li><strong>点到直线的距离公式</strong>：点 $(x_0, y_0)$ 到直线 $Ax+By+C=0$ 的距离为：
+  $$d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$
+  对于直线 $y=x$，即 $x-y=0$，点 $(x, f(x))$ 到该直线的距离为：
+  $$d(x) = \frac{|x - f(x)|}{\sqrt{2}}$$</li>
+<li><strong>导数求最值步骤</strong>：求函数 $d(x)$ 在定义域内的最小值，通常转化为求其分子绝对值内部函数的最值。若可判断符号去掉绝对值，则直接对目标函数求导，令导数等于零解得驻点，结合单调性判断极小值点即为最小值点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别结构，发现对称</strong>：观察两条曲线方程，判断它们是否互为反函数。若是，则明确它们关于直线 $y=x$ 对称。</li>
+<li><strong>转化距离关系</strong>：将两条曲线上动点距离的最小值问题，转化为单一曲线上动点到直线 $y=x$ 距离的 2 倍问题。</li>
+<li><strong>构造单变量距离函数</strong>：在第一条曲线上任取一点 $(x, f(x))$，利用点到直线距离公式，构造出关于横坐标 $x$ 的距离函数 $d(x)$。通常需要根据函数值的大小关系去掉绝对值符号。</li>
+<li><strong>利用导数求最值</strong>：对构造出的距离函数 $d(x)$ 求导，令 $d'(x)=0$ 求出定义域内的极值点。</li>
+<li><strong>验证并求解</strong>：判断极值点的唯一性及其是否为最小值点。将极值点横坐标代入距离函数，得到最小距离，最后乘以2得到最终结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域</strong>：构造距离函数时，必须优先考虑曲线上动点横坐标的允许范围（定义域），求导找极值点时必须在定义域内进行。</li>
+<li><strong>忘记反函数的专注点</strong>：若 $y=\ln(2x)$，其反函数不是 $y=\frac{e^x}{2}$ 吗？$\ln(2x)$ 的反函数是 $\frac{1}{2}e^x$，而题中另一函数为 $y=\frac{1}{2}e^x$，确认它们互为反函数是转化的前提。</li>
+<li><strong>距离公式记忆错误</strong>：点到直线 $y=x$ 的距离分母是 $\sqrt{1^2+(-1)^2}=\sqrt{2}$，容易误记为 2 或 $\sqrt{2}$ 丢失。</li>
+<li><strong>最终倍数遗漏</strong>：在求出曲线上点到直线距离的最小值 $d_{min}$ 后，忘记乘以 2 得到 $|PQ|_{min}$，导致误选一半的数值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：设点 $P$ 在曲线 $y=\frac{1}{2}e^x$ 上，点 $Q$ 在曲线 $y=\ln(2x)$ 上，求 $|PQ|$ 的最小值。</p>
+<p><strong>思路</strong>：
+首先判定 $y=\frac{1}{2}e^x$ 与 $y=\ln(2x)$ 互为反函数，图像关于 $y=x$ 对称。因此，$|PQ|$ 的最小值等于曲线 $y=\frac{1}{2}e^x$ 上的点到直线 $y=x$ 距离最小值的两倍。构造点 $P(x, \frac{1}{2}e^x)$ 到直线 $y=x$ 的距离函数，由于 $\frac{1}{2}e^x$ 与 $x$ 的大小关系确定，可去绝对值。利用导数求此距离函数的最小值点及最小值，最后乘以 2。</p>
+<p><strong>步骤</strong>：
+1. <strong>判定对称</strong>：由于 $y=\frac{1}{2}e^x$ 的反函数是 $y=\ln(2x)$，两曲线关于直线 $y=x$ 对称。
+2. <strong>转化问题</strong>：设点 $P(x, \frac{1}{2}e^x)$，点 $P$ 到直线 $y=x$ 的距离为 $d(x) = \frac{|\frac{1}{2}e^x - x|}{\sqrt{2}}$。因为在 $x&gt;0$ 的前提下，寻找最小距离时，我们可以先判断 $\frac{1}{2}e^x$ 与 $x$ 的大小。由于 $\frac{1}{2}e^x \ge x$ 是否恒成立？构造 $g(x)=\frac{1}{2}e^x - x$，求其最小值即可。
+3. <strong>构造函数并求导</strong>：设 $g(x) = \frac{1}{2}e^x - x$（$x&gt;0$），则 $d(x) = \frac{g(x)}{\sqrt{2}}$ （在最小值附近可验证 $g(x)&gt;0$）。对 $g(x)$ 求导：
+   $$g'(x) = \frac{1}{2}e^x - 1$$
+4. <strong>求极值点</strong>：令 $g'(x)=0$，解得 $\frac{1}{2}e^x = 1$，即 $e^x = 2$，$x = \ln 2$。
+5. <strong>判断单调性并求最小值</strong>：
+   当 $x &lt; \ln 2$ 时，$g'(x) &lt; 0$，$g(x)$ 单调递减；
+   当 $x &gt; \ln 2$ 时，$g'(x) &gt; 0$，$g(x)$ 单调递增。
+   所以 $g(x)$ 在 $x=\ln 2$ 处取得极小值，也是最小值 $g(\ln 2) = \frac{1}{2}e^{\ln 2} - \ln 2 = 1 - \ln 2 &gt; 0$。
+6. <strong>计算最终结果</strong>：点 $P$ 到直线 $y=x$ 的最小距离为 $d_{min} = \frac{1 - \ln 2}{\sqrt{2}}$。
+   由对称性，$|PQ|<em min="min">{min} = 2 d</em>(1 - \ln 2)$。} = 2 \cdot \frac{1 - \ln 2}{\sqrt{2}} = \sqrt{2</p>
+<p><strong>点评/变式</strong>：
+- <strong>核心思想</strong>：本题将两点距离问题转化为点线距离问题，是解析几何中“对称转化”思想的典型应用。关键在于识别反函数的对称性。
+- <strong>易错辨析</strong>：直接构造 $|PQ|$ 的两点间距离公式并求导会极其复杂，且涉及二元函数。利用对称性降维是唯一可行的高考解法。
+- <strong>变式训练</strong>：若将曲线改为 $y=e^x$ 与 $y=\ln x$，则 $|PQ|_{min} = \sqrt{2}$。请自行推导，体会 $\min(e^x - x)=1$ 这一经典结论的应用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-12.html">2012-理-12</a>（2012 · 中） 本题研究互为反函数的两曲线上的点间最小距离，利用对称性转化为点到直线距离并借助导数求最值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/840-导数求最值.html">导数求最值</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>累加求和</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>累加求和</h1><div class="review-mark" data-stem="累加求和"></div><div class="meta-card"><span><strong>考点</strong>累加求和</span><span><strong>权重</strong>32</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：32</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择7</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>累加求和是数列求基的核心方法之一，核心思想是通过代数变形将数列的通项 $a_n$ 拆分为某新数列的相邻两项之差（或若干项之差），使得中间项在累加过程中正负相消，仅剩首尾有限项，从而化简和式。</p>
+<ul>
+<li>
+<p><strong>核心公式（裂项相消）</strong>
+  若 $a_k = b_{k} - b_{k-1}$ 或 $a_k = b_{k} - b_{k+m}$，则有：
+  $$\sum_{k=1}^n a_k = b_n - b_0 \quad \text{或} \quad \sum_{k=1}^n a_k = \sum_{i=1}^m b_i - \sum_{i=n-m+1}^{n} b_i \quad \text{（保留更多首尾项）}$$</p>
+</li>
+<li>
+<p><strong>常见裂项模型</strong></p>
+</li>
+<li><strong>分式型</strong>（真题来源）<br />
+    $$\frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}$$
+    $$\frac{1}{n(n+k)} = \frac{1}{k}\left( \frac{1}{n} - \frac{1}{n+k} \right)$$
+    $$\frac{1}{(2n-1)(2n+1)} = \frac{1}{2}\left( \frac{1}{2n-1} - \frac{1}{2n+1} \right)$$</li>
+<li><strong>根式型</strong><br />
+    $$\frac{1}{\sqrt{n}+\sqrt{n+1}} = \sqrt{n+1} - \sqrt{n}$$</li>
+<li>
+<p><strong>乘积/对数型</strong><br />
+    $\ln\left(1+\frac{1}{n}\right) = \ln(n+1) - \ln n$</p>
+</li>
+<li>
+<p><strong>适用条件</strong><br />
+  数列通项分母可分解为两个因子之积，且这两个因子之差为常数（如 $n$ 与 $n+1$ 差为 1，$2n-1$ 与 $2n+1$ 差为 2）；或数列通项为相邻两项的积、倒数的差等结构。优先观察通项是否呈现 $\frac{常数}{乘积}$ 或 $\frac{1}{A} - \frac{1}{B}$ 的相似特征。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>识别裂项特征</strong><br />
+   观察通项分母是否为两个等差因子的乘积（或根式差、对数减等形式），通项的分子常为常数。若分母为 $n(n+1)$，立即联想到 $\frac{1}{n} - \frac{1}{n+1}$。</p>
+</li>
+<li>
+<p><strong>待定系数精确裂项</strong><br />
+   若分母为 $n(n+k)$（$k \neq 1$），裂项形式应为 $\frac{1}{k}\left(\frac{1}{n} - \frac{1}{n+k}\right)$，务必乘以系数 $\frac{1}{k}$，切不可漏掉系数。</p>
+</li>
+<li>
+<p><strong>展开和式，错位相消</strong><br />
+   将和式 $\sum_{k=1}^{n} a_k$ 展开写三到四项首项和末几项，明确观察消去规律。<br />
+   如 $S_n = \left(\frac{1}{1} - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \cdots + \left(\frac{1}{n} - \frac{1}{n+1}\right) = 1 - \frac{1}{n+1}$。</p>
+</li>
+<li>
+<p><strong>通项裂项后直接代入求和</strong><br />
+   利用 $\sum_{k=1}^{n} (b_k - b_{k+1}) = b_1 - b_{n+1}$ 快速得出结果，避免每次展开浪费时间。对于间隔项裂项，保留前 $m$ 项和后 $m$ 项。</p>
+</li>
+<li>
+<p><strong>程序框图背景题</strong><br />
+   此类题常将累加求和过程嵌入循环结构（如真题）。分析时，先提取循环体中的累加式子（如 $S = S + 1/[k(k+1)]$）和终止条件（$k&gt;N$），将框图转化为数学和式，再用裂项求解。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>裂项系数错误</strong><br />
+  分母为 $n(n+k)$ 时，裂项后必须乘以 $\frac{1}{k}$。例如 $\frac{1}{n(n+2)} = \frac{1}{2}\left(\frac{1}{n} - \frac{1}{n+2}\right)$，误写成 $\frac{1}{n} - \frac{1}{n+2}$ 会导致结果翻倍。</p>
+</li>
+<li>
+<p><strong>相消后误以为所有项全消</strong><br />
+  不是所有裂项都能消到只剩一项。如 $\frac{1}{n(n+2)}$，和式展开后会保留前两项和最后两项，必须写出具体项数检查头尾留存。</p>
+</li>
+<li>
+<p><strong>忽略程序框图的起止条件</strong><br />
+  在循环结构中，循环变量 $k$ 的初值（如 $k=1$）与终值（$k \leq N$）决定求和的上、下限。误判会多算或少算项。如真题 $N=5$，求的是 $k$ 从 1 到 5 的和，而不是到 4。</p>
+</li>
+<li>
+<p><strong>混淆通项与和式中的 $n$</strong><br />
+  在求 $S_n$ 时，通项是 $a_k$，结果表达为关于 $n$ 的函数。不可将通项表达式中的 $n$ 与求和上限 $n$ 混用。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2010-理-07（程序框图与裂项求和）</h3>
+<p><strong>题目</strong><br />
+执行程序框图，输入 $N=5$，判断输出的数值。框图流程为循环累加：$S = S + \frac{1}{k(k+1)}$，$k$ 从 1 到 $5$。</p>
+<p><strong>思路</strong><br />
+识别循环体累加项 $\frac{1}{k(k+1)}$ 为典型裂项模型。将框图循环转化为和式 $\sum_{k=1}^{5} \frac{1}{k(k+1)}$。裂项后化简即得输出值。选项为分数形式，注意区分分母差异。</p>
+<p><strong>步骤</strong><br />
+1. 由框图可得输出值 $S = \sum_{k=1}^{5} \frac{1}{k(k+1)}$。<br />
+2. 裂项：$\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}$。<br />
+3. 展开求和：<br />
+   $$S = \left(1 - \frac{1}{2}\right) + \left(\frac{1}{2} - \frac{1}{3}\right) + \left(\frac{1}{3} - \frac{1}{4}\right) + \left(\frac{1}{4} - \frac{1}{5}\right) + \left(\frac{1}{5} - \frac{1}{6}\right)$$<br />
+4. 正负相消，中间项全消，余 $1 - \frac{1}{6} = \frac{5}{6}$。<br />
+5. 输出值即为 $\frac{5}{6}$，对应选项 D。</p>
+<p><strong>点评/变式</strong><br />
+本题表面考程序框图，内核是裂项相消求累加和。识别出通项 $\frac{1}{k(k+1)}$ 是解题关键。<br />
+- <strong>变式</strong>：若框图循环条件改为 $k \leq N$，累加项改为 $\frac{1}{k(k+2)}$，$N=6$，则应裂项为 $\frac{1}{2}(\frac{1}{k} - \frac{1}{k+2})$，得到 $S = \frac{1}{2}\left[(1 - \frac{1}{3}) + (\frac{1}{2} - \frac{1}{4}) + \cdots + (\frac{1}{6} - \frac{1}{8})\right]$，保留前二项 $1$ 和 $\frac{1}{2}$，减去末二项 $\frac{1}{7}$ 和 $\frac{1}{8}$，牢记系数 $\frac{1}{2}$。由此训练间隔项消去的应对能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-07.html">2010-理-07</a>（2010 · 易） 该题考查程序框图的执行，输入 N=5，通过循环累加分数求和并输出结果。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1081-累加求和.html">累加求和</a></li>
+</ul>
+</div>
+</body>
+</html>

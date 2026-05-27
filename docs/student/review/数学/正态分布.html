@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正态分布</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正态分布</h1><div class="review-mark" data-stem="正态分布"></div><div class="meta-card"><span><strong>考点</strong>正态分布</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：18</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：填空15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正态分布定义与记法</strong>：若随机变量 $X$ 的概率密度函数为 $f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$，则称 $X$ 服从正态分布，记作 $X\sim N(\mu,\sigma^2)$。$\mu$ 为均值，$\sigma^2$ 为方差（$\sigma&gt;0$ 为标准差）。</li>
+<li><strong>曲线与性质</strong>：正态曲线关于直线 $x=\mu$ 对称，在 $x=\mu$ 处达到最高点。由对称性得 $P(X\ge\mu)=P(X\le\mu)=\frac12$，$P(X\ge\mu+a)=P(X\le\mu-a)$（$a&gt;0$）。</li>
+<li><strong>$3\sigma$ 原则</strong>（不常直接见于本题，但为考纲基础）：$P(\mu-\sigma&lt;X&lt;\mu+\sigma)\approx0.6827$，$P(\mu-2\sigma&lt;X&lt;\mu+2\sigma)\approx0.9545$，$P(\mu-3\sigma&lt;X&lt;\mu+3\sigma)\approx0.9973$。</li>
+<li><strong>标准化</strong>：若 $X\sim N(\mu,\sigma^2)$，则 $Z=\frac{X-\mu}{\sigma}\sim N(0,1)$，可查标准正态分布表求任意区间概率。</li>
+<li><strong>独立事件</strong>：若 $A,B$ 相互独立，则 $P(AB)=P(A)P(B)$，可推广到多个独立事件。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别正态分布参数</strong>：从 $N(\mu,\sigma^2)$ 中读出均值 $\mu$ 和方差 $\sigma^2$。求 $P(X&gt;a)$ 时，若 $a=\mu$，直接由对称性得 $\frac12$；若 $a\neq\mu$，则标准化后查表或利用对称性转化。</li>
+<li><strong>将元件寿命概率化</strong>：把“使用寿命超过某值”转化为随机变量的概率，结合正态分布的对称性得出基础概率。本题中每个元件寿命 $T_i\sim N(1000,50^2)$，$P(T_i&gt;1000)=\frac12$。</li>
+<li><strong>构建系统可靠性模型</strong>：</li>
+<li>串联：所有元件都正常才正常工作，概率为各元件正常概率的乘积（假设独立）。</li>
+<li>并联：至少一个正常即正常工作，概率可用 $1-$ 全部失效的概率。</li>
+<li><strong>分步处理复杂结构</strong>：先计算局部子系统（如元件1、2组成的并联子系统）正常工作的概率，再与串联部分（元件3）相乘。利用独立事件同时发生的概率乘法公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用正态分布对称性</strong>：当求 $P(X&gt;b)$ 且 $b\neq\mu$ 时，不能直接等于 $\frac12$，必须作变换或画图分析。本题恰巧 $b=\mu$，但很多考生误以为所有正态分布概率都是 $\frac12$。</li>
+<li><strong>并联系统计算错误</strong>：对“元件1或元件2正常工作”的概率，错误地直接加两个 $\frac12$ 得到 $1$，忽略了两者同时正常的重叠部分，正确应为 $1-(1-\frac12)\times(1-\frac12)=\frac34$。</li>
+<li><strong>混淆独立与互斥</strong>：本题元件独立，并联概率不能用 $P(A)+P(B)$，必须用 $P(A\cup B)=P(A)+P(B)-P(A)P(B)$ 或对立事件公式。</li>
+<li><strong>忽略单位与符号</strong>：正态分布第二个参数是方差 $\sigma^2$ 而非标准差 $\sigma$，计算时需注意 $N(1000,50^2)$ 中标准差是 $50$，均值和概率计算无误，但细节容易失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：某部件由三个元件连接（元件1与元件2并联后，再与元件3串联）。三个元件使用寿命（小时）均服从 $N(1000,50^2)$，且相互独立。求部件使用寿命超过1000小时的概率。</p>
+<p><strong>思路</strong>：部件寿命超过1000小时，等价于在1000小时时部件仍正常工作，即“超过1000小时”这个时点，元件3正常，且元件1、元件2至少有一个正常。先由正态分布对称性得每个元件寿命超过1000小时的概率为 $p=\frac12$。再按独立事件计算并联部分和串联结果。</p>
+<p><strong>步骤</strong>：
+1. 设 $A_i$ 表示事件“元件 $i$ 的使用寿命超过1000小时”，$i=1,2,3$。由 $T_i\sim N(1000,50^2)$，均值 $\mu=1000$，根据对称性 $P(A_i)=P(T_i&gt;1000)=\frac12$。
+2. 部件正常工作 $B$ 需要：$(A_1\cup A_2)\cap A_3$ 发生。
+3. 计算并联子系统概率：$P(A_1\cup A_2)=1-P(\overline{A_1})P(\overline{A_2})=1-(1-\frac12)^2=\frac34$。
+4. 元件3独立，故 $P(B)=P(A_1\cup A_2)\cdot P(A_3)=\frac34\times\frac12=\frac38$。</p>
+<p><strong>点评/变式</strong>：本题巧妙地把正态分布概率化归为对称性带来的定值（恰好等于均值），重点在于串并联模型与独立性。变式可改为求使用寿命超过1100小时的概率，那时需要标准化计算每个元件概率（例如 $P(T&gt;1100)=P(Z&gt;\frac{1100-1000}{50})=P(Z&gt;2)$），再代入系统结构，考查全面。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-15.html">2012-理-15</a>（2012 · 难） 求部件正常工作概率，涉及正态分布对称性、元件正常工作的概率及独立事件同时发生的计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/496-正态分布概念.html">正态分布</a></li>
+</ul>
+</div>
+</body>
+</html>

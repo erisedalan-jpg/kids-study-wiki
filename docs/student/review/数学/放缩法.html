@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>放缩法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>放缩法</h1><div class="review-mark" data-stem="放缩法"></div><div class="meta-card"><span><strong>考点</strong>放缩法</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：3</li>
+<li>真题数：2；年份跨度：2014–2022</li>
+<li>出现题位：解答17 选择8</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>放缩法是通过有目的地将不等式的一边（或其中的某些项）<strong>放大</strong>或<strong>缩小</strong>，借助不等式的传递性，将难以直接处理的结构转化为易求和、易比较的“过渡量”的一项核心证明与估值方法。
+- <strong>基本原理</strong>：若 $A \le B$ 且 $B \le C$，则 $A \le C$。关键在于构造合适的中间量 $B$，使得 $B$ 易于求和或易于判定。
+- <strong>常见放缩方向</strong>：
+  - 求和型不等式证明：通常将通项<strong>放大</strong>（证小于号）或<strong>缩小</strong>（证大于号），使其变为等比数列、可裂项分式等。
+  - 分式放缩：分子固定时，<strong>缩小分母</strong>则分式变大；<strong>放大分母</strong>则分式变小。
+  - 函数值域判断：对函数表达式进行适度放大或缩小，获得一个“易判断”的范围，用于排除选项。
+- <strong>常用放缩技巧</strong>：
+  - $a_n = 3^n - 1 \ge 3^n - 3^{n-1} = 2\cdot 3^{n-1}$（$n\ge2$），从而 $\frac{1}{3^n-1} \le \frac{1}{2\cdot 3^{n-1}}$。
+  - $\frac{2|x|}{x^2+1} \le 1$ （由基本不等式 $x^2+1 \ge 2|x|$）。
+  - 三角函数有界性放缩：$|\sin x| \le 1, |\cos x| \le 1$。
+- <strong>适用条件</strong>：数列求和不等式证明、复杂函数值域或最值的粗略估计、选择题中通过范围排除错误选项。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确目标不等式方向</strong>：确定要证的是“和 $&lt;$ 某常数”还是“和 $&gt;$ 某常数”，决定是将通项<strong>放大</strong>还是<strong>缩小</strong>。</li>
+<li><strong>拆项观察结构</strong>：写下待求和的通项，寻找它与等比数列、可裂项分式之间的“距离”。优先考虑保留前几项不动，对后面的项进行放缩，以保证精度。</li>
+<li><strong>构造等比或裂过渡量</strong>：  </li>
+<li>等比型：将分母缩小（或放大）成一个等比数列的通项，使放缩后的通项能构成无穷递缩等比数列。  </li>
+<li>裂项型：将通项放大（或缩小）为可裂项相消的差式，如 $\frac{1}{n^2} &lt; \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}$。</li>
+<li><strong>求和并比较</strong>：对放缩后的数列求和，得到中间和 $S'$，验证 $S \le S' &lt; \text{目标}$ 或 $S \ge S' &gt; \text{目标}$。</li>
+<li><strong>检查“等号”与起始项</strong>：  </li>
+<li>确认所证为严格不等式时，是否通过“保留前几项精确值，从某项开始放缩”的方式避免了等号成立。  </li>
+<li>检查不等号方向是否因放缩而反转。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>放缩过度</strong>：将不等式的一边放得“太大”或“太小”，导致求和后越过了目标常数，证明失败。对策：尝试保留前1项或前2项精确值，从 $n\ge2$ 或 $n\ge3$ 开始放缩，并适当调整放缩的松紧度。</li>
+<li><strong>不等号方向反转</strong>：在将分母扩大（分式变小）时，误用了缩小，导致方向错误。务必始终牢记“分母小则分式大”的原则。</li>
+<li><strong>忽略首项条件</strong>：等比放缩时，公比必须满足绝对值小于1，且要验证放缩不等式对起始$n$成立。例如 $n=1$ 时 $3^1-1=2$，若强行用 $3^n-1\ge 2\cdot 3^{n-1}$，等号恰好成立，需确认不破坏整体严格性。</li>
+<li><strong>裂项残留</strong>：构造裂项放缩时，未检验裂项求和后的剩余项，导致残留部分无法处理或不等式方向错误。</li>
+<li><strong>选择题中的误用</strong>：利用放缩得到函数的上界或下界，但忽略了等号成立的条件，可能错失正确选项。例如 $|f(x)|\le 1$ 只能说明值域包含于 $[-1,1]$，不能说明函数图像一定在这个范围内达到边界。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2022-文-08，函数图像选择题）</h3>
+<p><strong>题目</strong>：如图是区间 $[-3,3]$ 上某个函数的大致图像，判断该函数为<br />
+A. $y=\frac{x^3-3x}{x^2+1}$<br />
+B. $y=\frac{x^3-x}{x^2+1}$<br />
+C. $y=\frac{2x\cos x}{x^2+1}$<br />
+D. $y=\frac{2\sin x}{x^2+1}$<br />
+（图像特征：过原点，奇函数，局部有正有负，最大值约大于1）</p>
+<p><strong>思路</strong>：通过奇偶性、特殊点排除部分选项，对剩余可选项利用放缩法快速判断值域上界，与图像极值对比完成排除。</p>
+<p><strong>步骤</strong>：<br />
+1. 四个函数均为奇函数，图像关于原点对称，均过原点，无法直接排除。<br />
+2. 代入 $x=1$：A. $\frac{1-3}{2}=-1$；B. $\frac{1-1}{2}=0$；C. $\frac{2\cos1}{2}=\cos1&gt;0$；D. $\frac{2\sin1}{2}=\sin1&gt;0$。若图像在 $x=1$ 附近为负值，则排除C、D。<br />
+3. 利用放缩判断C的值域：$|y|=\frac{|2x\cos x|}{x^2+1}\le \frac{|2x|}{x^2+1}\le 1$ （因为 $x^2+1\ge2|x|$），所以 $y\in[-1,1]$。观察图像若存在函数值绝对值明显大于1的点，则C必排除。<br />
+4. 同理判断D：$|y|=\frac{|2\sin x|}{x^2+1}\le \frac{2}{x^2+1}\le 2$，上界较宽松，无法直接由值域排除。进一步结合零点（$\sin x=0$处为0）等特性可排除D。最终确认为A。</p>
+<p><strong>点评/变式</strong>：选择题中放缩法常用于“值域放大排除”，其核心是获得一个容易验证的上下界。变式训练：证明 $y=\frac{2x}{x^2+4}$ 的值域为 $[- \frac12, \frac12]$——可直接用基本不等式放缩。</p>
+<h3>代表题2（2014-理-17，数列不等式证明）</h3>
+<p><strong>题目</strong>：已知数列 ${a_n}$ 满足 $a_1=1$，$a_{n+1}=3a_n+1$。<br />
+（Ⅰ）证明 ${a_n+\frac12}$ 是等比数列，并求 ${a_n}$ 的通项公式；<br />
+（Ⅱ）证明：$\frac1{a_1}+\frac1{a_2}+\cdots+\frac1{a_n} &lt; \frac32$。</p>
+<p><strong>思路</strong>：（Ⅰ）构造等比数列，待定系数法求得常数项为 $\frac12$；（Ⅱ）求得通项 $a_n=\frac{3^n-1}{2}$，则 $\frac1{a_n}=\frac2{3^n-1}$。直接求和无法完成，需对分母进行放缩，将其变成等比数列求和。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）设 $a_{n+1}+\lambda = 3(a_n+\lambda)$，代入 $a_{n+1}=3a_n+1$ 得 $\lambda=\frac12$。故 ${a_n+\frac12}$ 是首项 $a_1+\frac12=\frac32$，公比 $3$ 的等比数列。<br />
+$a_n+\frac12 = \frac32\cdot 3^{n-1} = \frac{3^n}{2}$，通项 $a_n = \frac{3^n-1}{2}$。  </p>
+<p>（Ⅱ）由（Ⅰ）得 $\frac1{a_n}=\frac{2}{3^n-1}$。<br />
+当 $n=1$ 时，$\frac1{a_1}=1 &lt; \frac32$，成立。<br />
+当 $n\ge2$ 时，放缩分母：$3^n-1 = 3^n-1 \ge 3^n - 3^{n-1} = 2\cdot 3^{n-1}$。<br />
+于是 $\frac{2}{3^n-1} \le \frac{2}{2\cdot 3^{n-1}} = \frac1{3^{n-1}}$。<br />
+因此求和：<br />
+$$
+\sum_{k=1}^n \frac1{a_k} = 1 + \frac2{3^2-1} + \cdots + \frac2{3^n-1} \le 1 + \frac13 + \frac1{3^2} + \cdots + \frac1{3^{n-1}}
+$$
+右侧为等比数列求和：$1\times\frac{1-(\frac13)^n}{1-\frac13} = \frac32\left(1-\frac1{3^n}\right) &lt; \frac32$。<br />
+综上，对一切正整数 $n$，原不等式成立。</p>
+<p><strong>点评/变式</strong>：本题的放缩核心是将 $3^n-1$ 缩小为 $2\cdot 3^{n-1}$，保留了等比结构。常犯错误是放缩为 $3^n-1 &gt; 3^{n-1}$，此时放缩后的和为调和型，无法求和。若题目改为证 $&lt; \frac54$，则需保留前两项精确值，从第三项放缩。变式：已知 $b_n=2^n-1$，证明 $\sum_{k=1}^n \frac1{b_k} &lt; 2$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-08.html">2022-文-08</a>（2022 · 中） 本题通过函数性质（如特殊点函数值、不等式放缩）排除错误选项，识别函数图像。</li>
+<li><a href="../../exam/数学/2014-理-17.html">2014-理-17</a>（2014 · 中） 本题考查等比数列定义与通项公式，并用放缩法证明数列不等式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/453-数列不等式证明.html">放缩法</a></li>
+</ul>
+</div>
+</body>
+</html>

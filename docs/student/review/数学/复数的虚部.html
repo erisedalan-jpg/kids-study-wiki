@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数的虚部</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数的虚部</h1><div class="review-mark" data-stem="复数的虚部"></div><div class="meta-card"><span><strong>考点</strong>复数的虚部</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>复数 $z$ 的标准形式为 $z=a+bi$（$a,b\in\mathbb R$），其中 $a$ 称为实部，$b$ 称为<strong>虚部</strong>。虚部是一个实数，不含 $i$。</li>
+<li>虚部的表示：若 $z=a+bi$，则虚部 $\operatorname{Im}(z)=b$。例如 $z=3-2i$ 的虚部是 $-2$，不是 $-2i$。</li>
+<li>复数的基本运算与虚部：</li>
+<li>加减：实部与虚部分别相加减。</li>
+<li>乘法：注意 $i^2=-1$，结果仍化为标准形式取虚部。</li>
+<li>除法：分子分母同乘分母的共轭复数，化为标准形式。</li>
+<li>复数的模：$|z|=\sqrt{a^2+b^2}$，与虚部平方和开方相关。</li>
+<li>共轭复数：$\overline{z}=a-bi$，虚部变为原来的相反数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化为标准形式</strong>：遇到含分母或高次幂的复数，先通过四则运算化简为 $a+bi$ 的标准形式。除法分子分母同乘分母的共轭。</li>
+<li><strong>提取虚部</strong>：从标准形式中直接读取 $b$，确认虚部为实数。注意 $b$ 的符号。</li>
+<li><strong>逐一验证命题</strong>：涉及虚部、模、平方、共轭等命题时，均基于 $a+bi$ 计算验证，避免心算错误。</li>
+<li><strong>特殊情形</strong>：纯虚数的实部为零，虚部不为零；实数可视为虚部为零的复数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>把虚部写成带 $i$ 的形式</strong>：如 $z=-1-i$，误写虚部为 $-i$，正确虚部是 $-1$。</li>
+<li><strong>忽略虚部的符号</strong>：共轭变化或运算后符号易错，尤其是负号。</li>
+<li><strong>模的计算混淆</strong>：$|z|=\sqrt{a^2+b^2}$，不是 $\sqrt{a^2+(bi)^2}$，不要把 $i$ 带入平方。</li>
+<li><strong>共轭与虚部关系</strong>：$z$ 与 $\overline{z}$ 的虚部互为相反数，而非虚部不变。</li>
+<li><strong>除法没有同乘共轭</strong>：直接约分导致错误，必须分子分母同乘分母的共轭复数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+复数 $z=\dfrac{2}{-1+i}$，给出四个命题：<br />
+$p_1: |z|=2$，<br />
+$p_2: z^2=2i$，<br />
+$p_3: z$ 的共轭复数为 $1+i$，<br />
+$p_4: z$ 的虚部为 $-1$．<br />
+问真命题为哪两个。</p>
+<p><strong>思路</strong><br />
+先将 $z$ 化成 $a+bi$ 形式，然后分别计算模、平方、共轭、虚部，与命题比对。</p>
+<p><strong>步骤</strong><br />
+1. 化简 $z$：
+   $$z=\frac{2}{-1+i}=\frac{2(-1-i)}{(-1+i)(-1-i)}=\frac{-2-2i}{1+1}=\frac{-2-2i}{2}=-1-i.$$
+2. 求各项：
+   - $|z|=\sqrt{(-1)^2+(-1)^2}=\sqrt2$，所以 $p_1$ 假。
+   - $z^2=(-1-i)^2=1+2i+i^2=1+2i-1=2i$，$p_2$ 真。
+   - 共轭复数 $\overline{z}=-1+i$，不是 $1+i$，$p_3$ 假。
+   - 虚部为 $-1$，$p_4$ 真。
+3. 答案为 $p_2, p_4$，对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+本题全面考查复数标准形式的化简及概念辨析。失分原因常在于虚部符号或共轭记错。变式训练：若 $z=\dfrac{1+i}{1-i}$，可判断其模为 $1$，虚部为 $1$，平方为 $-1$ 等，从而强化复数运算的熟练度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-03.html">2012-理-03</a>（2012 · 易） 该题考查复数的四则运算、共轭复数、虚部等概念，要求判断命题真假。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">复数的虚部</a></li>
+</ul>
+</div>
+</body>
+</html>

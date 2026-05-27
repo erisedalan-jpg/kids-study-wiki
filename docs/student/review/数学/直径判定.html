@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直径判定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直径判定</h1><div class="review-mark" data-stem="直径判定"></div><div class="meta-card"><span><strong>考点</strong>直径判定</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直径的判定（核心）</strong>：在圆中，一条弦是直径 $\iff$ 它所对的圆周角是直角。<br />
+  即：若 $AC$ 是 $\triangle ABC$ 外接圆的弦，要证 $AC$ 为直径，只需证 $\angle ABC=90^\circ$。</li>
+<li><strong>弦切角定理</strong>：切线与过切点的弦所夹的角等于该弦所对的圆周角。<br />
+  如图，$CD$ 切 $\odot O$ 于 $C$，则 $\angle BCD=\angle BAC$；$\angle ACD=\angle ABC$。</li>
+<li><strong>四点共圆的性质</strong>：</li>
+<li>外角等于内对角：若 $B,E,F,C$ 四点共圆，则 $\angle AEF=\angle BCA$，$\angle AFE=\angle ABC$ 等。</li>
+<li>对角互补：$\angle BEF+\angle BCF=180^\circ$，可导出邻补角与圆周角的关系。</li>
+<li><strong>相似三角形的判定</strong>：两边对应成比例且夹角相等（SAS 相似），通过比例线段与角度传递证出相似，进而得到角相等或成比例。</li>
+<li><strong>割线定理的潜在应用</strong>：若涉及切线、割线，可快速得到线段比例，与四点共圆结合使用。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定目标和关键角</strong>：明确要证哪条弦为直径，直接目标为证明其对角为 $90^\circ$。例如证 $AC$ 为直径，则目标为 $\angle B = 90^\circ$。</li>
+<li><strong>倒角铺路</strong>：利用切线得弦切角相等（$\angle BCD=\angle A$，$\angle ACD=\angle B$），利用四点共圆将目标角与已知角关联（如 $\angle EBC=\angle EFC$ 或外角等于内对角）。</li>
+<li><strong>挖掘比例式</strong>：将乘积式 $BC\cdot AE=DC\cdot AF$ 化为比例 $\dfrac{BC}{AF}=\dfrac{DC}{AE}$ 或 $\dfrac{AE}{AF}=\dfrac{DC}{BC}$，结合角度相等找出相似三角形对。</li>
+<li><strong>证明相似，推出关键角关系</strong>：典型路径为：</li>
+<li>由四点共圆得 $\angle AFE=\angle BCA$，加上公共角 $\angle A$，得 $\triangle AEF\sim\triangle ABC$ $\Rightarrow$ $\dfrac{AE}{AF}=\dfrac{AB}{AC}$。</li>
+<li>结合已知比例推出 $\dfrac{DC}{BC}=\dfrac{AB}{AC}$，再配上弦切角 $\angle BCD=\angle BAC$，得 $\triangle DBC\sim\triangle ABC$。</li>
+<li><strong>利用平角构造直角</strong>：由相似得 $\angle DBC=\angle ABC$，又 $A,B,D$ 共线，故 $\angle DBC+\angle ABC=180^\circ$，从而 $\angle ABC=90^\circ$，即证弦为直径。</li>
+<li><strong>回代验证</strong>：确保证明中每一次相似、每一组角的对应都准确无误，尤其注意四点共圆的角位置（内角还是外角）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>弦切角对应错误</strong>：弦切角等于所夹弧对的圆周角，注意是“所夹的弧”（即弦与切线之间的弧），不是随便找一个弧。如 $\angle BCD$ 所夹弧为 $\widehat{BC}$，应该等于 $\angle BAC$；$\angle ACD$ 所夹弧为 $\widehat{AC}$，等于 $\angle ABC$。</li>
+<li><strong>四点共圆的“外角等于内对角”用错边</strong>：在 $B,E,F,C$ 共圆时，$\angle AEF$ 等于 $\angle BCA$，而非 $\angle ABC$。可画简图并标注“外角”位置避免混淆。</li>
+<li><strong>乘积式化比例时方向颠倒</strong>：由 $BC\cdot AE=DC\cdot AF$，常化为 $\dfrac{BC}{AF}=\dfrac{DC}{AE}$ 或 $\dfrac{AE}{AF}=\dfrac{DC}{BC}$，需根据后续相似三角形的需要灵活选择，否则会导致对应边错乱。</li>
+<li><strong>平角过渡时遗忘共线条件</strong>：证出 $\angle DBC=\angle ABC$ 后，必须强调 $A,B,D$ 共线，才能得到两角之和为 $180^\circ$，各自为 $90^\circ$。漏写共线或平角陈述会扣分。</li>
+<li><strong>直接将弦切角用于三角形全等/相似而忽略边关系</strong>：弦切角提供角相等，但两侧无公共边，必须结合其他线段比例才能判定相似，不能单凭弦切角就断定三角形相似。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2013 全国卷 文 22 选考）：<br />
+$CD$ 为 $\triangle ABC$ 外接圆的切线，$C$ 为切点，$AB$ 的延长线交 $CD$ 于 $D$。$E,F$ 分别在弦 $AB,AC$ 上，且 $BC\cdot AE=DC\cdot AF$，$B,E,F,C$ 四点共圆。<br />
+(1) 证明：$CA$ 是 $\triangle ABC$ 外接圆的直径。</p>
+<p><strong>思路</strong>：<br />
+要证 $CA$ 为直径，只需证 $\angle ABC=90^\circ$。充分利用切线带来的弦切角、四点共圆的角相等，以及乘积比例构造相似三角形，最终推出 $\angle DBC=\angle ABC$，结合 $A,B,D$ 共线得直角。</p>
+<p><strong>步骤</strong>：<br />
+1. 由 $B,E,F,C$ 四点共圆，得 $\angle AFE=\angle BCA$（外角等于内对角）。又 $\angle A$ 公共，故 $\triangle AEF\sim\triangle ABC$。<br />
+2. 由相似得 $\dfrac{AE}{AF}=\dfrac{AB}{AC}$。<br />
+3. 已知 $BC\cdot AE=DC\cdot AF$，变形为 $\dfrac{DC}{BC}=\dfrac{AE}{AF}$。<br />
+   结合第2步得 $\dfrac{DC}{BC}=\dfrac{AB}{AC}$。<br />
+4. 由 $CD$ 为切线，$C$ 为切点，弦切角定理给出 $\angle BCD=\angle BAC$。<br />
+5. 在 $\triangle DBC$ 与 $\triangle ABC$ 中：$\dfrac{DC}{BC}=\dfrac{AB}{AC}$，且夹角 $\angle BCD=\angle BAC$，<br />
+   故 $\triangle DBC\sim\triangle ABC$（SAS 相似）。<br />
+6. 由相似得 $\angle DBC=\angle ABC$。<br />
+7. 因为 $AB$ 的延长线交 $CD$ 于 $D$，故 $A,B,D$ 共线，$\angle DBC+\angle ABC=180^\circ$。<br />
+   代入 $\angle DBC=\angle ABC$，得 $2\angle ABC=180^\circ$，即 $\angle ABC=90^\circ$。<br />
+8. 在 $\triangle ABC$ 的外接圆中，$\angle ABC=90^\circ$ 所对的弦 $CA$ 为直径。证毕。</p>
+<p><strong>点评/变式</strong>：<br />
+此题为经典的“证直径”题型，其本质是证明直角，核心工具是四点共圆和切线产生的角、比例关系。变式可改变条件，如将四点共圆换成平行、垂直等，或让乘积式以其他形式给出，但目标始终是锁定某个角为 $90^\circ$。考生应注意：当出现切线时，立刻标注弦切角；出现四点共圆时，优先利用外角等于内对角来沟通目标三角形与已知三角形。比例式的选择需灵活向目标相似靠拢，稍一误用会导致全题卡死。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-22.html">2013-文-22</a>（2013 · 中） 该题考查利用切线性质、四点共圆及比例关系证明线段为外接圆直径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直径判定</a></li>
+</ul>
+</div>
+</body>
+</html>

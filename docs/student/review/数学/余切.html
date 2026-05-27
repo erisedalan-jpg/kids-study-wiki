@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>余切</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>余切</h1><div class="review-mark" data-stem="余切"></div><div class="meta-card"><span><strong>考点</strong>余切</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>余切定义</strong>：$\cot \alpha = \dfrac{\cos \alpha}{\sin \alpha}$（$\sin\alpha \neq 0$）；常写为 $\cot \alpha = \dfrac{1}{\tan \alpha}$（$\tan\alpha \neq 0$）。</li>
+<li><strong>平方关系</strong>：$1 + \cot^2 \alpha = \csc^2 \alpha = \dfrac{1}{\sin^2 \alpha}$，由此可得 $\sin^2 \alpha = \dfrac{1}{1+\cot^2 \alpha}$。</li>
+<li><strong>核心恒等式</strong>：$\sin^2 \alpha + \cos^2 \alpha = 1$。</li>
+<li><strong>三角形内角限制</strong>：在 $\triangle ABC$ 中，$0 &lt; A &lt; \pi$，必有 $\sin A &gt; 0$。若 $\cot A &lt; 0$，则 $\cos A$ 与 $\sin A$ 异号，结合 $\sin A&gt;0$，得 $\cos A&lt;0$，即 $A$ 为钝角。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化切为弦</strong>：由 $\cot A = k$，写出 $\cos A = k \sin A$。</li>
+<li><strong>联立平方和</strong>：将上式代入 $\sin^2 A + \cos^2 A = 1$，消元得到只含 $\sin A$（或 $\cos A$）的方程，求出 $\sin^2 A$ 或 $\cos^2 A$。</li>
+<li><strong>开方定号</strong>：根据角所在范围及已知 $\cot A$ 的符号，确定 $\sin A$ 或 $\cos A$ 的最终符号，尤其注意三角形中 $\sin A&gt;0$，$\cot A$ 的符号直接决定 $\cos A$ 的符号。</li>
+<li><strong>可选路径</strong>：利用 $1+\cot^2 A = \frac{1}{\sin^2 A}$ 先求 $\sin^2 A$，再通过 $\cos^2 A = 1-\sin^2 A$ 得 $|\cos A|$，最后依据象限（三角形内角性质）判号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>疏忽三角形内角范围为 $(0,\pi)$</strong>：不知 $\sin A$ 恒正，直接由 $\cot A &lt; 0$ 得出 $\cos A$ 可能为正的错误结论。</li>
+<li><strong>开方时漏掉负号</strong>：由 $\cos^2 A$ 开方得 $\pm |\cos A|$，不结合 $\cot A$ 的符号筛选，导致误选正值。</li>
+<li><strong>误用倒数关系</strong>：将 $\cot A$ 当作 $\tan A$ 处理，分子分母颠倒；或在已知 $\cot A$ 时忘记 $\cot A = \frac{1}{\tan A}$，计算失误。</li>
+<li><strong>符号判定时机错误</strong>：先求出 $\cos A$ 的绝对值，再用三角形内角排除钝角可能性，但因忽视 $\cot$ 符号而保留锐角结果。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知 $\triangle ABC$ 中，$\cot A = -\dfrac{12}{5}$，则 $\cos A =$（选项略）</p>
+<p><strong>思路</strong><br />
+化余切为余弦与正弦的比，联立 $\sin^2 A + \cos^2 A = 1$ 求 $\cos A$。由于 $A$ 是三角形内角，$\sin A&gt;0$，结合 $\cot A&lt;0$ 判 $\cos A$ 为负，从开方后的两解中选取负值。</p>
+<p><strong>步骤</strong>  </p>
+<p>由 $\cot A = \dfrac{\cos A}{\sin A} = -\dfrac{12}{5}$，得<br />
+$$\cos A = -\frac{12}{5} \sin A.$$</p>
+<p>代入 $\sin^2 A + \cos^2 A = 1$：<br />
+$$\sin^2 A + \left( -\frac{12}{5}\sin A \right)^2 = 1,$$<br />
+$$\sin^2 A + \frac{144}{25}\sin^2 A = 1,$$<br />
+$$\frac{169}{25}\sin^2 A = 1,$$<br />
+$$\sin^2 A = \frac{25}{169}.$$</p>
+<p>因为 $A \in (0, \pi)$，$\sin A &gt; 0$，故<br />
+$$\sin A = \frac{5}{13}.$$</p>
+<p>于是<br />
+$$\cos A = -\frac{12}{5} \times \frac{5}{13} = -\frac{12}{13}.$$</p>
+<p>经检验，$\cos A &lt; 0$ 符合 $\cot A &lt; 0$ 且 $\sin A&gt;0$ 的条件，故答案为 $-\dfrac{12}{13}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接考查余切定义与同角平方关系的联合运用，属于基础必得分题。关键在于开方后根据三角形内角性质果断取正 $\sin A$，再反推 $\cos A$。<br />
+- <strong>变式1</strong>：若已知 $\tan A = -\dfrac{12}{5}$，求 $\cos A$。可用 $\tan A = \dfrac{\sin A}{\cos A}$，类似联立，注意 $\tan A&lt;0$ 时 $\sin A$ 与 $\cos A$ 异号，三角形内 $\sin A&gt;0$，故 $\cos A&lt;0$，结果相同。<br />
+- <strong>变式2</strong>：已知 $\cot A = \dfrac{12}{5}$ 且 $A$ 为第三象限角，求 $\cos A$。此时 $\sin A&lt;0$，$\cos A&lt;0$，开方需判双负，锻炼对符号的全面把握。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-04.html">2009-文-04</a>（2009 · 易） 利用同角三角函数基本关系，由余切值求解余弦值，涉及符号判断与方程联立。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">余切</a></li>
+</ul>
+</div>
+</body>
+</html>

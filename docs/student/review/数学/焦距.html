@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦距</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>焦距</h1><div class="review-mark" data-stem="焦距"></div><div class="meta-card"><span><strong>考点</strong>焦距</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>双曲线标准方程</strong>：焦点在 $x$ 轴，$\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$($a&gt;0,b&gt;0$)；焦点在 $y$ 轴，$\dfrac{y^{2}}{a^{2}}-\dfrac{x^{2}}{b^{2}}=1$。</li>
+<li><strong>渐近线</strong>：焦点在 $x$ 轴时，渐近线方程为 $y=\pm\dfrac{b}{a}x$；焦点在 $y$ 轴时，$y=\pm\dfrac{a}{b}x$。已知一条渐近线方程，可取其斜率的绝对值建立$a,b$关系。</li>
+<li><strong>焦距</strong>：$c^{2}=a^{2}+b^{2}$，焦距为 $2c$（不是$c$）。</li>
+<li>本题中双曲线 $\dfrac{x^{2}}{m}-y^{2}=1\ (m&gt;0)$，即 $a^{2}=m,\ b^{2}=1$，焦点在 $x$ 轴，渐近线斜率为 $\pm\dfrac{1}{\sqrt{m}}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定焦点位置</strong>：由双曲线标准方程判断焦点在 $x$ 轴还是 $y$ 轴，直接读出 $a^{2},b^{2}$。</li>
+<li><strong>写出渐近线斜率</strong>：根据焦点位置，写出渐近线斜率的表达式（$\frac{b}{a}$ 或 $\frac{a}{b}$）。</li>
+<li><strong>由已知渐近线求斜率</strong>：将题设渐近线方程化为 $y=kx$ 形式，取 $|k|$。</li>
+<li><strong>列方程求参数</strong>：令第2步与第3步的斜率绝对值相等，解出参数，注意参数的范围限制（如$m&gt;0$）舍去增根。</li>
+<li><strong>求焦距</strong>：由 $c^{2}=a^{2}+b^{2}$ 算出 $c$，立即写出焦距 $2c$，严防只写 $c$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>焦点位置判断错误，导致渐近线斜率用反 ($\frac{b}{a}$写成$\frac{a}{b}$或相反)。</li>
+<li>对渐近线方程 $Ax+By=0$ 变形时符号或系数出错，求斜率绝对值时漏掉负号参与运算。</li>
+<li>计算出多解时，忘记利用题设的 $m&gt;0$ 等条件进行取舍，保留无效解。</li>
+<li>最终误把 $c$ 当焦距，必须牢记 <strong>焦距是 $2c$</strong>。</li>
+<li>运算中平方、移项等代数变形失误，如 $\frac{\sqrt{3}}{m}= \frac{1}{\sqrt{m}}$ 平方后得 $\frac{3}{m^{2}}=\frac{1}{m}$，进一步化简为 $3=m$，常见错误为忘记分母 $m^2$ 等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-理-13）：已知双曲线 $C:\dfrac{x^{2}}{m}-y^{2}=1\ (m&gt;0)$ 的一条渐近线为 $\sqrt{3}x+my=0$，求 $C$ 的焦距。</p>
+<p><strong>思路</strong>：由所给渐近线方程提取斜率绝对值→根据双曲线标准方程写出$a^2,b^2$及渐近线斜率表达式→建立等式求参数$m$→用$a^2,b^2$求$c$→得焦距$2c$。</p>
+<p><strong>步骤</strong>：
+1. 将渐近线 $\sqrt{3}x+my=0$ 化为斜截式：$y=-\dfrac{\sqrt{3}}{m}x$，得斜率的绝对值为 $\dfrac{\sqrt{3}}{m}$。
+2. 双曲线 $\dfrac{x^{2}}{m}-y^{2}=1$ 的焦点在 $x$ 轴，$a^{2}=m$, $b^{2}=1$，渐近线斜率为 $\pm\dfrac{b}{a}= \pm\dfrac{1}{\sqrt{m}}$。
+3. 令斜率绝对值相等：$\dfrac{\sqrt{3}}{m}= \dfrac{1}{\sqrt{m}}$，两边平方得 $\dfrac{3}{m^{2}}=\dfrac{1}{m}$，整理得 $3=m$（舍去 $m=0$ 不符合 $m&gt;0$）。
+4. 此时 $a^{2}=3,\ b^{2}=1$，所以 $c^{2}=a^{2}+b^{2}=4$，$c=2$。
+5. 焦距为 $2c=4$。</p>
+<p><strong>点评/变式</strong>：本题为基本运算型，失分点往往在“焦距写出 $c$”。变式：若渐近线方程换为 $x + my=0$，则斜率绝对值为 $\frac{1}{|m|}$，等式 $\frac{1}{|m|} = \frac{1}{\sqrt{m}}$ 可得 $m=1$，焦距变为 $2\sqrt{2}$。注意渐近线方程形式变化带来的绝对值处理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-13.html">2021-理-13</a>（2021 · 易） 由双曲线渐近线方程求参数及焦距</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/037-焦点焦距.html">焦距</a></li>
+</ul>
+</div>
+</body>
+</html>

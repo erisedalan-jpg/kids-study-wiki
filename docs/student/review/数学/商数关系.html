@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>商数关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>商数关系</h1><div class="review-mark" data-stem="商数关系"></div><div class="meta-card"><span><strong>考点</strong>商数关系</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>同角三角函数的基本关系中，商数关系为核心纽带：</p>
+<ul>
+<li>$\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$（$\alpha \neq \frac{\pi}{2}+k\pi, k\in\mathbb{Z}$）</li>
+<li>$\cot\alpha = \frac{\cos\alpha}{\sin\alpha}$（$\alpha \neq k\pi, k\in\mathbb{Z}$）</li>
+</ul>
+<p>上述关系直接建立正弦与余弦的比值，与平方关系 $\sin^2\alpha+\cos^2\alpha=1$ 联合，可由比值求具体三角函数值。由商数关系可得 $\sin\alpha = \tan\alpha \cdot \cos\alpha$，或设比例因子：若 $\frac{\sin\alpha}{\cos\alpha}= \frac{a}{b}$，可令 $\sin\alpha = ak$，$\cos\alpha = bk$，代入平方关系解 $k$，再根据象限定符号。特别注意：三角形内角范围为 $(0,\pi)$，锐角三角函数值全正，钝角余弦为负、正弦为正，结合商数符号可定角类型。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定号</strong>：根据已知商数值的正负及角度范围，锁定目标三角函数的符号（可直接排除选择题中的干扰项）。</li>
+<li><strong>列比例</strong>：将条件给出的 $\tan\alpha$ 或 $\cot\alpha$ 写成 $\frac{\sin\alpha}{\cos\alpha}$ 的形式，知一求一联用。</li>
+<li><strong>设参或直代</strong>：</li>
+<li>方法一：设 $\sin\alpha = ak$，$\cos\alpha = bk$（其中 $\frac{a}{b}$ 为已知比值的最简形式，含符号），代入 $\sin^2\alpha+\cos^2\alpha=1$ 求 $k$，回代得值。</li>
+<li>方法二：直接利用恒等式 $\cos^2\alpha = \frac{1}{1+\tan^2\alpha}$ 或 $\sin^2\alpha = \frac{\tan^2\alpha}{1+\tan^2\alpha}$（余切同理），开方后配符号。</li>
+<li><strong>检验</strong>：将结果代回原式或平方关系，确认无运算错误。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略角范围致符号错</strong>：如条件给出 $\cot A&lt;0$ 且 $A\in(0,\pi)$，未推出 $A$ 为钝角，导致 $\cos A$ 取正号。</li>
+<li><strong>比例设参时忘记携带符号</strong>：$\cot A=-\frac{12}{5}$ 应设 $\cos A = -12k$，$\sin A = 5k$（$k&gt;0$），若漏写负号会得正值错解。</li>
+<li><strong>商数关系倒置</strong>：混淆 $\tan\alpha = \frac{\sin\alpha}{\cos\alpha}$ 和 $\cot\alpha = \frac{\cos\alpha}{\sin\alpha}$，代值时分子分母颠倒。</li>
+<li><strong>开方忘记加绝对值</strong>：由 $\cos^2\alpha = \frac{1}{1+\tan^2\alpha}$ 开方得 $|\cos\alpha|$，必须结合象限去绝对值符号。</li>
+<li><strong>三角形限制条件遗漏</strong>：在 $\triangle ABC$ 中角度范围 $0^\circ&lt;A&lt;180^\circ$，但某些学生误用锐角三角函数处理所有内角。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2009-理-03</h3>
+<p><strong>题目</strong>：已知 $\triangle ABC$ 中，$\cot A = -\frac{12}{5}$，则 $\cos A =$ ( )<br />
+A. $\frac{12}{13}$　B. $\frac{5}{13}$　C. $-\frac{5}{13}$　D. $-\frac{12}{13}$</p>
+<p><strong>思路</strong>：由 $\cot A$ 负号知 $A$ 为钝角，$\cos A&lt;0$，可直接排除 A、B 两正选项。再将商数关系与平方关系联立，设比例系数或直接利用恒等式求值。</p>
+<p><strong>步骤</strong>：<br />
+1. 因 $A\in(0,\pi)$ 且 $\cot A = \frac{\cos A}{\sin A} = -\frac{12}{5}&lt;0$，说明 $\cos A$ 与 $\sin A$ 异号，又 $\sin A&gt;0$，故 $\cos A&lt;0$，排除 A、B。<br />
+2. 由商数关系得 $\frac{\cos A}{\sin A} = -\frac{12}{5}$，设 $\cos A = -12k$，$\sin A = 5k$（$k&gt;0$）。<br />
+3. 代入平方关系：$(-12k)^2 + (5k)^2 = 1 \Rightarrow 144k^2 + 25k^2 = 169k^2 = 1$，解得 $k = \frac{1}{13}$。<br />
+4. 则 $\cos A = -12 \times \frac{1}{13} = -\frac{12}{13}$，选出 D。</p>
+<p><strong>点评/变式</strong>：此题巧用符号排除缩小选择范围。设比例系数 $k$ 可避免分式运算，是处理“已知比值求值”的通用高效方法。<br />
+变式：若已知 $\tan\alpha = -\frac{3}{4}$ 且 $\alpha$ 为第二象限角，求 $\sin\alpha$ 与 $\cos\alpha$ 的值。（提示：设 $\sin\alpha = 3k,\ \cos\alpha = -4k$，注意符号与象限匹配。）</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-03.html">2009-理-03</a>（2009 · 易） 已知cotA的值求cosA，运用同角三角函数基本关系及平方关系求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1154-商数关系.html">商数关系</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>斜率公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>斜率公式</h1><div class="review-mark" data-stem="斜率公式"></div><div class="meta-card"><span><strong>考点</strong>斜率公式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>斜率公式</strong>：若两点 $P_1(x_1,y_1)$、$P_2(x_2,y_2)$（$x_1\ne x_2$），则直线 $P_1P_2$ 的斜率 $k=\dfrac{y_2-y_1}{x_2-x_1}$．</li>
+<li><strong>椭圆标准方程</strong>：$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$（$a&gt;b&gt;0$），其中 $c^2=a^2-b^2$，焦点 $F_1(-c,0),F_2(c,0)$，离心率 $e=\dfrac{c}{a}\in(0,1)$．</li>
+<li><strong>椭圆上点的坐标特征</strong>：若 $MF_2\perp x$ 轴，则点 $M$ 横坐标为 $c$，代入方程得 $M\Big(c,\pm\dfrac{b^2}{a}\Big)$．</li>
+<li><strong>离心率的求法</strong>：将斜率坐标化，利用椭圆参数关系 $b^2=a^2-c^2$ 消元，构建关于 $e$ 的方程求解后回验范围．</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图定位</strong>：作出椭圆、焦点，标出 $MF_2\perp x$ 轴的条件，明确 $M$ 的横坐标与 $F_2$ 相同．</li>
+<li><strong>求 $M$ 坐标</strong>：将 $x=c$ 代入椭圆方程，解得 $y=\pm\dfrac{b^2}{a}$，根据需要取正或保留符号．</li>
+<li><strong>写斜率表达式</strong>：由斜率公式用 $M$ 和 $F_1(-c,0)$ 的坐标写出 $k=\dfrac{\frac{b^2}{a}-0}{c-(-c)}=\dfrac{b^2}{2ac}$．</li>
+<li><strong>列方程消元</strong>：令斜率等于给定值，代入 $b^2=a^2-c^2$，化为关于 $a,c$ 的齐次方程．</li>
+<li><strong>求离心率</strong>：两边除以 $a^2$ 得到关于 $e$ 的方程，解出 $e$（注意舍去负根和使 $e\ge1$ 或 $e\le0$ 的根）．</li>
+<li><strong>检验取舍</strong>：椭圆离心率 $0&lt;e&lt;1$，确保结果符合定义域．</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>$M$ 点纵坐标漏符号</strong>：只写 $y=\dfrac{b^2}{a}$ 而忽略可能是负值，导致斜率少讨论；若无绝对值或符号处理，步骤可能不严谨（本题由已知斜率为正可确定符号）．</li>
+<li><strong>分母计算错误</strong>：$MF_2\perp x$ 轴，$F_1$ 到 $M$ 的水平距离是 $c-(-c)=2c$，误写为 $c$ 或 $a$ 会直接失分．</li>
+<li><strong>$b^2$ 与 $a^2$ 关系混淆</strong>：将 $b^2=a^2-c^2$ 写成 $b^2=c^2-a^2$，导致方程错误，离心率无解或算出荒谬值．</li>
+<li><strong>除 $a^2$ 时漏项</strong>：构造齐次方程时忘记将所有项的次数统一，例如 $2ac$ 项除以 $a^2$ 应得 $\dfrac{2c}{a}=2e$，漏除会得到错误方程．</li>
+<li><strong>解二次方程后不检验</strong>：求得 $e=-2$ 等超出 $(0,1)$ 的根直接作答；离心率是正数且小于 1，必须舍去不合题意的解．</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014·全国Ⅱ文20）<br />
+椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\;(a&gt;b&gt;0)$ 的左、右焦点为 $F_1,F_2$，$M$ 是 $C$ 上一点，且 $MF_2\perp x$ 轴，直线 $MF_1$ 与 $C$ 的另一个交点为 $N$．若直线 $MN$ 的斜率为 $\dfrac34$，求 $C$ 的离心率．</p>
+<p><strong>思路</strong><br />
+由垂直条件先写出 $M$ 坐标，利用斜率公式建立 $a,c$ 关系，结合 $b^2=a^2-c^2$ 转化为离心率方程求解．</p>
+<p><strong>步骤</strong><br />
+1. 设 $F_1(-c,0),\,F_2(c,0)$．<br />
+2. 由 $MF_2\perp x$ 轴知 $x_M=c$，代入椭圆得 $\dfrac{c^2}{a^2}+\dfrac{y_M^2}{b^2}=1$，解得 $y_M=\pm\dfrac{b^2}{a}$．已知斜率为正，取 $M\Big(c,\dfrac{b^2}{a}\Big)$．<br />
+3. 直线 $MN$ 即 $MF_1$，其斜率 $k=\dfrac{\frac{b^2}{a}-0}{c-(-c)}=\dfrac{b^2}{2ac}$．<br />
+4. 由条件 $k=\dfrac34$，得 $\dfrac{b^2}{2ac}=\dfrac34$，即 $2b^2=3ac$．<br />
+5. 将 $b^2=a^2-c^2$ 代入，得 $2(a^2-c^2)=3ac$，整理为 $2a^2-3ac-2c^2=0$．<br />
+6. 两边同除以 $a^2$：$2-3e-2e^2=0$，即 $2e^2+3e-2=0$．<br />
+7. 解得 $e=\dfrac12$ 或 $e=-2$（舍去）．故椭圆离心率为 $\dfrac12$．</p>
+<p><strong>点评/变式</strong><br />
+- 本题是“垂直＋斜率”求离心率的典型模型，核心在于利用 $MF_2\perp x$ 轴将几何条件坐标化，再用斜率公式建立方程．<br />
+- <strong>变式1</strong>：将直线 $MN$ 斜率改为 $k$（含参），求离心率 $e$ 关于 $k$ 的关系式．答案可得 $e=\dfrac{-k+\sqrt{k^2+1}}{2}$（留意符号取舍）．<br />
+- <strong>变式2</strong>：若条件改为“$MF_1$ 的斜率为 $\dfrac13$”或“$\triangle MF_1F_2$ 为直角三角形”等，均可通过同类方法化归为 $a,c$ 方程，训练消元与 $e$ 的齐次化思想．</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-20.html">2014-文-20</a>（2014 · 中） 已知椭圆上点M满足MF₂⊥x轴，结合直线MN的斜率求椭圆离心率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">斜率公式</a></li>
+</ul>
+</div>
+</body>
+</html>

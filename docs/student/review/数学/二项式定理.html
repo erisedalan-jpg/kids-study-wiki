@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二项式定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二项式定理</h1><div class="review-mark" data-stem="二项式定理"></div><div class="meta-card"><span><strong>考点</strong>二项式定理</span><span><strong>权重</strong>34</span><span><strong>真题数</strong>8</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>计数原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：计数原理</li>
+<li>权重 weight：34</li>
+<li>真题数：8；年份跨度：2008–2015</li>
+<li>出现题位：填空13 填空14 填空15 选择5 选择7 选择8 选择9</li>
+<li>难度分布：中7 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二项式定理</strong>：$(a+b)^n = \sum_{r=0}^{n} \mathrm{C}_n^r \, a^{n-r} b^r$，其中 $n \in \mathbb{N}^*$。</li>
+<li><strong>通项公式</strong>：第 $r+1$ 项 $T_{r+1} = \mathrm{C}_n^r a^{n-r} b^r$（$r=0,1,\dots,n$）。</li>
+<li><strong>系数与二项式系数</strong>：展开式中每一项的<strong>系数</strong>是包含符号的常数因子；<strong>二项式系数</strong>专指 $\mathrm{C}_n^r$，恒为正。两者仅在 $a,b$ 系数均为 $1$ 且无额外常数时相等。</li>
+<li><strong>赋值法求系数和</strong>：令 $x=1$ 得所有项系数和；令 $x=-1$ 得奇偶项交错和；结合两者可求奇次项系数和、偶次项系数和等。若展开式含多个因式，同样可对整体赋值。</li>
+<li><strong>多个因式乘积的特定项</strong>：先分析目标项可由哪些因式中的哪些项相乘得到，再分类求和。常用通项公式配合组合思想。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接求特定项系数（单二项式）</strong>  </li>
+<li>写出通项 $T_{r+1} = \mathrm{C}_n^r a^{n-r} b^r$。  </li>
+<li>令 $x$ 的指数等于目标次数，解出整数 $r$（须满足 $0 \le r \le n$）。  </li>
+<li>代回通项求系数，注意符号和常数因子。</li>
+<li><strong>多个因式相乘的特定项系数</strong>  </li>
+<li>将因式分别展开或写出各自通项，枚举所有产生目标次数的 $r$ 组合。  </li>
+<li>计算各组合系数乘积再相加。常见模式：$(A+Bx)(C+Dx+\dots)^n$ 型，固定前面因式的取项（常数或一次项），搭配后面因式的对应通项。</li>
+<li><strong>赋值法处理系数和问题</strong>  </li>
+<li>欲求所有系数之和 $\to$ 令 $x=1$。  </li>
+<li>欲求奇次项系数之和 $\to$ 令 $x=1$ 得 $S$，$x=-1$ 得 $T$，则奇次项系数和为 $\frac{S-T}{2}$，偶次项系数和为 $\frac{S+T}{2}$。  </li>
+<li>题目含参数时，先利用给定系数和建立方程求出参数，再求其他量。</li>
+<li><strong>先化简再展开</strong>  </li>
+<li>遇到形如 $(A+B)(A-B)$ 或可合并底数的结构，先用平方差、合并同类底数等化简，再用通项公式，降低运算量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“系数”与“二项式系数”</strong>：如 $(2x-1)^5$ 中 $x^3$ 的系数是 $\mathrm{C}_5^2 \cdot 2^3 \cdot (-1)^2 = 80$，而二项式系数仅是 $\mathrm{C}_5^2=10$。务必看清题目问的是哪一种。</li>
+<li><strong>遗漏通项中的符号或常数因子</strong>：如 $(a-x)^n$ 的通项为 $\mathrm{C}_n^r a^{n-r} (-x)^r = \mathrm{C}_n^r a^{n-r} (-1)^r x^r$，容易漏掉 $(-1)^r$。</li>
+<li><strong>赋值时代入值错误</strong>：求各项系数和不能代入 $x=0$（得常数项），必须代入 $x=1$；求奇偶项差时代入 $x=-1$。含分式的展开式赋值时注意分母不为零。</li>
+<li><strong>多个因式相乘时漏解组合</strong>：例如求 $(1+ax)(1+x)^5$ 中 $x^2$ 系数时，除了 $(1)\cdot \mathrm{C}_5^2 x^2$ 外，还要考虑 $(ax)\cdot \mathrm{C}_5^1 x$，缺一不可。</li>
+<li><strong>忽略 $r$ 的取值范围</strong>：解出的 $r$ 必须为 $0$ 到 $n$ 的整数，否则该项不存在，需特别注意根式、分式等非整数指数的处理。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2015·理·15）</h3>
+<p><strong>题目</strong>：$(a+x)(1+x)^4$ 的展开式中 $x$ 的奇数次幂项的系数之和为 $32$，求 $a$。<br />
+<strong>思路</strong>：此题不宜逐项展开。可利用赋值法，将奇次项系数之和表示为 $\frac{f(1)-f(-1)}{2}$，其中 $f(x)=(a+x)(1+x)^4$。由已知建立方程求解 $a$。<br />
+<strong>步骤</strong>：<br />
+设 $f(x)=(a+x)(1+x)^4$。<br />
+则系数总和 $S = f(1) = (a+1)\cdot 2^4 = 16(a+1)$。<br />
+令 $x=-1$，得 $f(-1) = (a-1)\cdot 0^4 = 0$。<br />
+奇次项系数之和 $= \dfrac{S - f(-1)}{2} = \dfrac{16(a+1)-0}{2} = 8(a+1)$。<br />
+令 $8(a+1)=32$，解得 $a=3$。<br />
+<strong>点评/变式</strong>：赋值法是处理系数和的利器，尤其适合奇偶次分类。注意 $(1+x)^n$ 在 $x=-1$ 时为 $0$，巧妙化简。若求偶次项系数和，则用 $\frac{f(1)+f(-1)}{2}$。</p>
+<h3><strong>题目2</strong>（2014·理·13）</h3>
+<p><strong>题目</strong>：$(x+a)^{10}$ 的展开式中 $x^7$ 的系数为 $15$，求 $a$。<br />
+<strong>思路</strong>：直接写出通项，令 $x$ 的指数为 $7$，确定项数，由系数建立方程。<br />
+<strong>步骤</strong>：<br />
+展开式的通项为 $T_{r+1} = \mathrm{C}<em 10="10">{10}^r x^{10-r} a^r$。<br />
+令 $10-r=7$，解得 $r=3$。<br />
+该项系数为 $\mathrm{C}</em>^3 a^3 = 120 a^3$。<br />
+由题意 $120a^3 = 15$，得 $a^3 = \frac{1}{8}$，故 $a = \frac{1}{2}$。<br />
+<strong>点评/变式</strong>：单二项式特定项系数问题直接用通项公式最简。注意本题系数包含 $a^r$，没有因遗漏符号导致错算的风险。若题目是 $(x-a)^{10}$，则须带 $(-a)^r$。</p>
+<h3><strong>题目3</strong>（2013·理·05）</h3>
+<p><strong>题目</strong>：已知 $(1+ax)(1+x)^5$ 的展开式中 $x^2$ 的系数为 $5$，求 $a$（选项：-4,-3,-2,-1）。<br />
+<strong>思路</strong>：将乘积视为两个来源：第一个因式取 $1$ 时与第二个因式的 $x^2$ 项组合；第一个因式取 $ax$ 时与第二个因式的 $x$ 项组合。分别计算系数并相加。<br />
+<strong>步骤</strong>：<br />
+$(1+x)^5$ 的展开式中，$x$ 的系数为 $\mathrm{C}_5^1 = 5$，$x^2$ 的系数为 $\mathrm{C}_5^2 = 10$。<br />
+所求 $x^2$ 项来自：<br />
+① $1 \cdot (\mathrm{C}_5^2 x^2)$ → 系数 $10$；<br />
+② $ax \cdot (\mathrm{C}_5^1 x)$ → 系数 $a \cdot 5 = 5a$。<br />
+合并系数 $10 + 5a = 5$，解得 $a = -1$。<br />
+<strong>点评/变式</strong>：注意 $(1+ax)$ 的一次项系数是 $a$，不要误写成 $1$。变式可将 $(1+ax)$ 换成 $(a+x)$，方法无异。本题也可用组合恒等式直接心算，属中档必拿分题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-理-15.html">2015-理-15</a>（2015 · 中） 给定二项展开式，利用赋值法求奇次项系数和以确定参数值。</li>
+<li><a href="../../exam/数学/2014-理-13.html">2014-理-13</a>（2014 · 中） 该题考查二项式定理中通项公式的应用，求展开式中特定项的系数。</li>
+<li><a href="../../exam/数学/2013-理-05.html">2013-理-05</a>（2013 · 中） 该题考查二项式定理展开式中特定项系数的计算，涉及多项式乘法与组合数应用。</li>
+<li><a href="../../exam/数学/2011-理-08.html">2011-理-08</a>（2011 · 中） 本题考查二项式定理中求展开式各项系数和及特定常数项，涉及赋值法和通项公式的应用。</li>
+<li><a href="../../exam/数学/2009-文-14.html">2009-文-14</a>（2009 · 中） 求二项展开式中特定项的系数，利用通项公式确定指数并计算组合数。</li>
+<li><a href="../../exam/数学/2009-理-13.html">2009-理-13</a>（2009 · 易） 求展开式中特定项的系数，利用通项公式确定指数。</li>
+<li><a href="../../exam/数学/2008-文-09.html">2008-文-09</a>（2008 · 中） 利用平方差公式化简(1-√x)⁴(1+√x)⁴=(1-x)⁴，再用二项展开式通项求x的系数。</li>
+<li><a href="../../exam/数学/2008-理-07.html">2008-理-07</a>（2008 · 中） 求两个二项式乘积展开式中x的系数，需分别展开并组合各项系数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/472-二项式定理.html">二项式定理</a></li>
+</ul>
+</div>
+</body>
+</html>

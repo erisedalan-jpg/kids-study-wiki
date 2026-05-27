@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数解析式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数解析式</h1><div class="review-mark" data-stem="函数解析式"></div><div class="meta-card"><span><strong>考点</strong>函数解析式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：3；年份跨度：2015–2021</li>
+<li>出现题位：填空13 选择6 选择7</li>
+<li>难度分布：中1 易2</li>
+</ul>
+<h2>知识精要</h2>
+<p>求解函数解析式，核心是根据已知条件（函数性质、图像变换、函数值等）建立关于参数的等式或找到对应关系。</p>
+<ul>
+<li><strong>待定系数法</strong>：已知函数类型（如一次、二次、指数、对数、幂函数等），先设出含参数的解析式，再利用题设条件建立方程（组），解出参数。适用于已知函数结构求参，如 $f(x) = ax^3 - 2x$ 过定点求 $a$。</li>
+<li><strong>图像变换法</strong>：由基本初等函数经过平移、伸缩等变换得到新函数，利用变换规则反求原函数。</li>
+<li><strong>平移变换</strong>：左加右减，上加下减。 $y = f(x)$ 向右平移 $a$ 个单位得 $y = f(x - a)$。</li>
+<li><strong>伸缩变换</strong>：横坐标变为原来的 $\frac{1}{\omega}$ 倍，得到 $y = f(\omega x)$；纵坐标变为原来的 $A$ 倍，得到 $y = A f(x)$。</li>
+<li><strong>变换顺序</strong>：先平移后伸缩，或先伸缩后平移，平移量会发生改变。如先横坐标伸缩为 $\frac{1}{\omega}$，再向右平移 $t$，则最终变为 $y = f(\omega(x - t)) = f(\omega x - \omega t)$。</li>
+<li><strong>性质转化法</strong>：利用函数的奇偶性、对称性、周期性等性质，将所求区间的自变量转化到已知解析式的区间上，然后代入求值。</li>
+<li>奇函数性质：$f(-x) = -f(x)$，若 $f(x)$ 在 $x=0$ 处有定义，则 $f(0) = 0$。用于根据 $x \ge 0$ 的解析式求 $x &lt; 0$ 的解析式。</li>
+<li>偶函数性质：$f(-x) = f(x)$。</li>
+<li><strong>代入法/换元法</strong>：已知复合函数 $f[g(x)]$ 的解析式，求 $f(x)$。令 $t = g(x)$，反解出 $x$，代入解得 $f(t)$，最后变量回代。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>待定系数法求解析式</strong></p>
+<ul>
+<li><strong>步骤一</strong>：根据已知函数特征或问题指引，设出通用的函数解析式形式。</li>
+<li><strong>步骤二</strong>：将题目给出的条件，如函数经过的定点坐标、在某点的导数值等，代入所设解析式。</li>
+<li><strong>步骤三</strong>：解关于待定系数的方程或方程组，得出参数值。</li>
+<li><strong>步骤四</strong>：将参数值代回，得到最终解析式。</li>
+</ul>
+</li>
+<li>
+<p><strong>函数奇偶性求分段解析式</strong></p>
+<ul>
+<li><strong>步骤一</strong>：定位需求解区间，设为“所求区间”。例如已知 $x \ge 0$ 时 $f(x)$ 的表达式，要求 $x &lt; 0$ 时的表达式。</li>
+<li><strong>步骤二</strong>：在所求区间内任取一个自变量值，作“求反”变换。例如，当 $x &lt; 0$ 时，则 $-x &gt; 0$。</li>
+<li><strong>步骤三</strong>：将变换后的自变量（已落在已知区间）代入已知解析式，求出函数值。</li>
+<li><strong>步骤四</strong>：利用奇偶性（如奇函数 $f(x) = -f(-x)$）进行转化，得到所求区间的解析式。注意化简，并最终标明定义域。</li>
+</ul>
+</li>
+<li>
+<p><strong>图像变换反求解析式</strong></p>
+<ul>
+<li><strong>步骤一</strong>（正向还原法）：设原函数为 $f(x)$，严格按照题目描述的变换顺序、方向和量，从 $f(x)$ 一步步写出最终表达式。令此表达式等于已知的最终函数，利用换元思想（如令 $t = x - \frac{\pi}{3}$）解出 $f(x)$。</li>
+<li><strong>步骤二</strong>（逆向还原法）：从最终已知函数出发，逆向进行操作。将所有的平移方向和伸缩倍数全部反过来，直接求出原函数。注意逆向操作的顺序也要与正向完全相反。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>图像变换顺序与平移量</strong>：先伸缩后平移时，平移的是相对于 $x$ 的量，而非相对于 $\omega x$ 的量。例如，$f(x)$ 横坐标变为 $\frac{1}{2}$ 倍得到 $f(2x)$，再向右平移 $\frac{\pi}{3}$ 个单位，得到的是 $f[2(x - \frac{\pi}{3})] = f(2x - \frac{2\pi}{3})$，极易错写成 $f(2x - \frac{\pi}{3})$。</li>
+<li><strong>奇偶性求解析式忘加负号或搞错区间</strong>：</li>
+<li>对于奇函数，$x &lt; 0$ 时，$f(x) = -f(-x)$，容易漏掉整个式子前面的负号。</li>
+<li>错将结论直接写成 $f(x) = f(-x)$（偶函数性质）或颠倒了已知区间和未知区间的角色。</li>
+<li>求解完毕后，未将解析式整理到最简形式，导致与选项不匹配。</li>
+<li><strong>换元法忘记回代</strong>：用换元法求出 $f(t)$ 的表达式后，忘记将中间变量 $t$ 最终换回成 $x$，导致解析式书写不规范。另需注意求出 $t$ 所表示的 $x$ 的范围，即新函数的定义域。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-理-07）：把函数 $y = f(x)$ 图像上所有点的横坐标缩短到原来的 $\frac{1}{2}$，纵坐标不变，再把所得曲线向右平移 $\frac{\pi}{3}$ 个单位长度，得到函数 $y = \sin\left(x - \frac{\pi}{4}\right)$ 的图像，求 $f(x)$。</p>
+<ul>
+<li><strong>思路</strong>：可采用逆向还原法，从最终图像一步步倒推回 $f(x)$。“向右平移”的逆操作是“向左平移”，“横坐标缩短”的逆操作是“横坐标伸长”。注意操作的逆序：先进行的逆操作是最后一步平移的逆。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>逆向第一步</strong>：将 $y = \sin\left(x - \frac{\pi}{4}\right)$ 的图像向左平移 $\frac{\pi}{3}$ 个单位。根据“左加右减”，得到 $y = \sin\left[(x + \frac{\pi}{3}) - \frac{\pi}{4}\right] = \sin\left(x + \frac{\pi}{12}\right)$。</li>
+<li><strong>逆向第二步</strong>：将上一步所得图像所有点的横坐标伸长到原来的 $2$ 倍（纵坐标不变）。根据 $x$ 变为 $\frac{x}{2}$ 的规则，将 $x$ 替换为 $\frac{x}{2}$，得到 $f(x) = \sin\left(\frac{x}{2} + \frac{\pi}{12}\right)$。</li>
+<li><strong>点评/变式</strong>：此题也可正向求解设出 $f(x)$，得到 $f[2(x - \frac{\pi}{3})] = \sin\left(x - \frac{\pi}{4}\right)$，令 $t = 2(x - \frac{\pi}{3})$，解出 $x$ 代入，即可得 $f(t)$。务必注意正向操作时平移量是针对 $x$ 进行的。变式可考查先平移后伸缩，或改变伸缩比例。</li>
+</ul>
+<p><strong>题目</strong>（2019-文-06）：设 $f(x)$ 为奇函数，且当 $x \ge 0$ 时，$f(x) = e^x - 1$，求当 $x &lt; 0$ 时的 $f(x)$。</p>
+<ul>
+<li><strong>思路</strong>：利用奇函数的性质 $f(-x) = -f(x)$，将小于零的自变量转化到大于零的区域求解。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>设为</strong>：当 $x &lt; 0$ 时。</li>
+<li><strong>转化</strong>：则 $-x &gt; 0$。</li>
+<li><strong>代入已知式</strong>：$f(-x) = e^{-x} - 1$。</li>
+<li><strong>用性质求解</strong>：因为 $f(x)$ 为奇函数，所以 $f(x) = -f(-x) = -(e^{-x} - 1) = -e^{-x} + 1$。</li>
+<li><strong>点评/变式</strong>：此题为利用奇偶性求对称区间解析式的标准模型。最常见错误是代换 $f(-x)$ 后忘记整体取负号，而选了 $e^{-x} - 1$ 之类的选项。务必注意 $e^{-x}$ 是 $e$ 的负 $x$ 次方，不是 $-e^x$。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-07.html">2021-理-07</a>（2021 · 中） 考察三角函数的图像变换（伸缩与平移）及逆向还原解析式。</li>
+<li><a href="../../exam/数学/2019-文-06.html">2019-文-06</a>（2019 · 易） 考查利用奇偶性求分段函数在对称区间上的解析式，体现转化与化归思想。</li>
+<li><a href="../../exam/数学/2015-文-13.html">2015-文-13</a>（2015 · 易） 已知函数图象过点求参数值，利用点坐标满足函数解析式建立方程求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/693-函数解析式.html">函数解析式</a></li>
+</ul>
+</div>
+</body>
+</html>

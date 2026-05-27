@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量的数量积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量的数量积</h1><div class="review-mark" data-stem="向量的数量积"></div><div class="meta-card"><span><strong>考点</strong>向量的数量积</span><span><strong>权重</strong>24</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：24</li>
+<li>真题数：2；年份跨度：2018–2022</li>
+<li>出现题位：选择3 选择4</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>定义与几何意义</strong>
+   两个非零向量 $ \vec{a}, \vec{b} $ 的数量积（内积） $ \vec{a} \cdot \vec{b} = |\vec{a}|\,|\vec{b}|\,\cos\theta $（$\theta$ 为 $ \vec{a},\vec{b} $ 夹角）。
+   几何意义：$ \vec{a} $ 的模乘以 $ \vec{b} $ 在 $ \vec{a} $ 方向上的投影 $ |\vec{b}|\cos\theta $。</p>
+</li>
+<li>
+<p><strong>坐标表示</strong>
+   若 $ \vec{a}=(x_1,y_1),\ \vec{b}=(x_2,y_2) $，则 $ \vec{a}\cdot\vec{b} = x_1x_2 + y_1y_2 $。</p>
+</li>
+<li>
+<p><strong>重要运算律</strong></p>
+</li>
+<li>交换律：$ \vec{a}\cdot\vec{b} = \vec{b}\cdot\vec{a} $</li>
+<li>数乘结合律：$ (\lambda\vec{a})\cdot\vec{b} = \lambda(\vec{a}\cdot\vec{b}) $</li>
+<li>
+<p>分配律：$ \vec{a}\cdot(\vec{b}+\vec{c}) = \vec{a}\cdot\vec{b} + \vec{a}\cdot\vec{c} $；特别注意 $ (\vec{a}+\vec{b})\cdot(\vec{c}+\vec{d}) $ 可像多项式乘法展开。</p>
+</li>
+<li>
+<p><strong>模长与夹角</strong></p>
+</li>
+<li>模长：$ |\vec{a}| = \sqrt{\vec{a}\cdot\vec{a}} $，即 $ \vec{a}\cdot\vec{a} = |\vec{a}|^2 $。</li>
+<li>夹角公式：$ \cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|} $。</li>
+<li>
+<p>垂直条件：$ \vec{a}\perp\vec{b} \iff \vec{a}\cdot\vec{b}=0 $（前提：$ \vec{a},\vec{b} $ 为非零向量）。</p>
+</li>
+<li>
+<p><strong>平方展开公式</strong>（由分配律和模长关系直接得出）
+   $ |\vec{a} \pm \vec{b}|^2 = (\vec{a} \pm \vec{b})\cdot(\vec{a} \pm \vec{b}) = |\vec{a}|^2 \pm 2\vec{a}\cdot\vec{b} + |\vec{b}|^2 $
+   这是处理已知模长求数量积的核心桥梁，必须熟练掌握。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>“已知模长关系，求数量积”的标准三步法</strong></li>
+<li><strong>步骤一</strong>：将已知模长等式两边<strong>同时平方</strong>，化为向量模长平方与数量积的线性关系。</li>
+<li><strong>步骤二</strong>：利用 $ |\vec{v}|^2 = \vec{v}\cdot\vec{v} $，代入已知的模信息，转化为只含待求数量积 $ \vec{a}\cdot\vec{b} $ 的方程。</li>
+<li>
+<p><strong>步骤三</strong>：解方程，得出 $ \vec{a}\cdot\vec{b} $。
+   此方法适用于一切形如 $ |m\vec{a} \pm n\vec{b}| = k $ 的问题，平方时注意数乘系数也要平方：$ |m\vec{a} \pm n\vec{b}|^2 = m^2|\vec{a}|^2 \pm 2mn\vec{a}\cdot\vec{b} + n^2|\vec{b}|^2 $。</p>
+</li>
+<li>
+<p><strong>数量积的线性展开与整体代入</strong>
+   遇到计算 $ \vec{a}\cdot(k\vec{a} - \vec{b}) $ 等形式时，直接利用分配律展开成 $ k|\vec{a}|^2 - \vec{a}\cdot\vec{b} $，再将已知的模和数量积整体代入。注意区分向量与系数，避免符号错误。</p>
+</li>
+<li>
+<p><strong>条件转化与方程思想</strong>
+   将“垂直”“平行”“模长”等几何条件即时翻译为数量积或模长的代数等式，建立方程求解未知量。这是向量代数化的核心思想。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>平方展开漏掉交叉项或系数平方</strong>
+   $ |2\vec{a} - \vec{b}|^2 $ 正确展开为 $ 4|\vec{a}|^2 - 4\vec{a}\cdot\vec{b} + |\vec{b}|^2 $，易漏掉系数 $ 4 $ 或中间项 $ -4\vec{a}\cdot\vec{b} $ 的符号。</li>
+<li><strong>混淆数量积与实数乘法的运算律</strong>
+   数量积不满足结合律：$ (\vec{a}\cdot\vec{b})\cdot\vec{c} \neq \vec{a}\cdot(\vec{b}\cdot\vec{c}) $，但满足交换律和分配律。展开 $ (\vec{a}+\vec{b})\cdot(\vec{c}+\vec{d}) $ 时按多项式运算，但每一项必须是数量积形式。</li>
+<li><strong>误将向量平方当作标量直接平方</strong>
+   $ \vec{a}^2 $ 在向量中表示 $ \vec{a}\cdot\vec{a}=|\vec{a}|^2 $，是标量；$ |\vec{a}|^2 $ 是模的平方。不可混淆 $ \vec{a}^2 $ 与 $ a^2 $ 的记号差异。</li>
+<li><strong>忽视零向量的特殊情况</strong>
+   使用 $ \vec{a}\cdot\vec{b}=0 \iff \vec{a}\perp\vec{b} $ 时，必须确保 $ \vec{a},\vec{b} $ 均为非零向量，零向量与任何向量数量积为 $0$，但说它们垂直无意义。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>题1（2022-理-03）</h3>
+<p><strong>题目</strong>：已知向量 $ \vec{a},\vec{b} $ 满足 $ |\vec{a}|=1,\ |\vec{b}|=\sqrt{3},\ |\vec{a}-2\vec{b}|=3 $，求 $ \vec{a}\cdot\vec{b} $。</p>
+<p><strong>思路</strong>：已知三组模长信息，目标求数量积，直接对 $ |\vec{a}-2\vec{b}|=3 $ 两边平方，建立含 $ \vec{a}\cdot\vec{b} $ 的方程。</p>
+<p><strong>步骤</strong>：
+1. 平方：$ |\vec{a}-2\vec{b}|^2 = 9 $
+2. 展开：$ |\vec{a}|^2 - 4\vec{a}\cdot\vec{b} + 4|\vec{b}|^2 = 9 $
+3. 代入：$ |\vec{a}|=1,\ |\vec{b}|^2=3 $，得 $ 1 - 4\vec{a}\cdot\vec{b} + 4\times3 = 9 $
+4. 化简：$ 13 - 4\vec{a}\cdot\vec{b} = 9 \Rightarrow \vec{a}\cdot\vec{b} = 1 $</p>
+<p><strong>点评/变式</strong>：此题淋漓尽致地体现了已知模长用平方方法的威力。变式：若条件改为 $ |\vec{a}+\vec{b}| $ 已知，同样平方展开处理；若求 $ |2\vec{a}-3\vec{b}| $，可先通过已知条件解出 $ \vec{a}\cdot\vec{b} $，再回代平方展开式求模。</p>
+<h3>题2（2018-文-04）</h3>
+<p><strong>题目</strong>：已知向量 $ \vec{a},\vec{b} $ 满足 $ |\vec{a}|=1,\ \vec{a}\cdot\vec{b}=-1 $，求 $ \vec{a}\cdot(2\vec{a}-\vec{b}) $。</p>
+<p><strong>思路</strong>：利用数量积的分配律直接展开，再将已知条件整体代入求值。</p>
+<p><strong>步骤</strong>：
+1. 展开：$ \vec{a}\cdot(2\vec{a}-\vec{b}) = 2\vec{a}\cdot\vec{a} - \vec{a}\cdot\vec{b} $
+2. 转化：$ \vec{a}\cdot\vec{a} = |\vec{a}|^2 = 1 $，且 $ \vec{a}\cdot\vec{b} = -1 $
+3. 代入：$ 2\times1 - (-1) = 2+1 = 3 $</p>
+<p><strong>点评/变式</strong>：本题极简，却完美覆盖数量积运算律与模长定义的核心应用。易错点在于负号处理：$ - \vec{a}\cdot\vec{b} = -(-1) = 1 $。变式：若题目求 $ (2\vec{a}-\vec{b})\cdot(\vec{a}+\vec{b}) $，同样先展为 $ 2|\vec{a}|^2 + \vec{a}\cdot\vec{b} - |\vec{b}|^2 $，再结合已知或额外条件求解，本质不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-03.html">2022-理-03</a>（2022 · 易） 根据向量模长关系，利用数量积运算求解两向量的数量积。</li>
+<li><a href="../../exam/数学/2018-文-04.html">2018-文-04</a>（2018 · 易） 向量模长与数量积运算，利用运算律直接计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/328-向量的数量积.html">向量的数量积</a></li>
+</ul>
+</div>
+</body>
+</html>

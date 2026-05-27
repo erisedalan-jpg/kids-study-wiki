@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相切条件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相切条件</h1><div class="review-mark" data-stem="相切条件"></div><div class="meta-card"><span><strong>考点</strong>相切条件</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：填空16</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>切线斜率：曲线 $y = f(x)$ 在点 $(x_0, f(x_0))$ 处的切线斜率 $k = f'(x_0)$。</li>
+<li>切线方程：$y - f(x_0) = f'(x_0)(x - x_0)$，常整理成斜截式或一般式。</li>
+<li>两曲线相切的等价条件（代数化处理）：</li>
+<li>联立两曲线方程，消去 $y$ 得到关于 $x$ 的一元方程 $h(x) = 0$。</li>
+<li>若 $(x_0, y_0)$ 为切点，则 $x_0$ 是 $h(x) = 0$ 的重根，即 $\Delta = 0$（对于二次方程）或导函数方程同时满足。</li>
+<li>注意区分“相交”与“相切”，相切意味着在交点处切线相同，等价于联立后有唯一二重根。</li>
+<li>适用范围：已知一条曲线在某点的切线，讨论该切线与另一多项式函数（尤其二次函数）曲线相切时参数的取值。本质上综合了导数的几何意义与二次方程根的判别式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求切线</strong>：对第一条曲线求导，计算切点横坐标对应的导数值，得切线斜率；利用点斜式写出切线方程，化为简单形式（如 $y = kx + b$）。</li>
+<li><strong>联立转化</strong>：将切线方程与第二条曲线方程联立，消去 $y$，整理成关于 $x$ 的整式方程（通常是一元二次方程）。</li>
+<li><strong>把握“相切”核心</strong>：两条曲线相切，意味着在切点处不仅函数值相等，且导数值相等（切线相同），所以联立方程有唯一重根。若整理后的方程为 $Ax^2 + Bx + C = 0$，则必有 $A \neq 0$ 且 $\Delta = 0$。</li>
+<li><strong>解参数并检验</strong>：由 $\Delta = 0$ 解出参数后，务必检验 $A \neq 0$ 是否成立，并代入原曲线确认切点存在，避免产生增根。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略二次项系数不为零</strong>：当第二条曲线含参数且为二次函数时，必须保证二次项系数 $a \neq 0$，否则退化为直线，无法用 $\Delta = 0$ 直接判断相切（可能平行或重合）。</li>
+<li><strong>切线方程求错</strong>：导数计算失误（如 $(\ln x)' = \frac{1}{x}$ 忘记）、切点横坐标代错，导致整题崩盘。</li>
+<li><strong>联立后整理错误</strong>：移项、合并同类项粗心，尤其系数复杂时，直接影响 $\Delta$ 的正确性。</li>
+<li><strong>相切与相割混淆</strong>：只有一条曲线在交点处有公切线才是相切，不能看到联立方程有唯一解就认为是相切（对二次方程，唯一解且 $\Delta = 0$ 才是二重根，若为一次方程需另验证导数相等）。</li>
+<li><strong>忘检定义域</strong>：若曲线含有 $\ln x$、$\sqrt{x}$ 等，切点横坐标必须在定义域内，否则切线无意义。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2015 全国卷 文 16）</h3>
+<p>曲线 $y = x + \ln x$ 在点 $(1,1)$ 处的切线与曲线 $y = ax^2 + (a+2)x + 1$ 相切，求 $a$ 的值。</p>
+<p><strong>思路</strong><br />
+先求第一条曲线在 $(1,1)$ 的切线，再将该切线与第二条二次曲线联立，利用相切条件 $\Delta = 0$ 构造关于 $a$ 的方程，并注意二次项系数不为零。</p>
+<p><strong>步骤</strong><br />
+1. $y = x + \ln x$ 的导数为 $y' = 1 + \dfrac{1}{x}$。在 $x = 1$ 处，斜率 $k = 1 + 1 = 2$。<br />
+2. 切线方程为 $y - 1 = 2(x - 1)$，化简得 $y = 2x - 1$。<br />
+3. 联立切线 $y = 2x - 1$ 与曲线 $y = ax^2 + (a+2)x + 1$：<br />
+   $$ax^2 + (a+2)x + 1 = 2x - 1$$<br />
+   整理得 $ax^2 + ax + 2 = 0$。<br />
+4. 由于两线相切，该二次方程应有唯一重根，故<br />
+   $$\begin{cases}
+   a \neq 0, \
+   \Delta = a^2 - 8a = 0.
+   \end{cases}$$<br />
+   解得 $a = 8$（$a = 0$ 舍去）。<br />
+5. 检验：$a = 8$ 时，切点为 $(-\frac{1}{2}, -2)$，同时满足两曲线方程且导数相等，符合题意。</p>
+<p><strong>点评/变式</strong><br />
+- 本题巧妙串联了“导数求切线”与“二次曲线判别式”，是经典小综合。<br />
+- 变式方向：若第二条曲线含对数或分式，相切条件需转化为两函数值相等且导数值相等，构造方程组求解，而不单靠判别式。<br />
+- 易错提醒：见到 $ax^2 + ax + 2 = 0$，不可直接漏掉 $a \neq 0$ 的讨论，否则会错增 $a = 0$ 的答案。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-16.html">2015-文-16</a>（2015 · 中） 求曲线切线方程，利用导数几何意义及判别式求解参数值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">相切条件</a></li>
+</ul>
+</div>
+</body>
+</html>

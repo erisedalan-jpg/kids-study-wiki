@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>存在量词</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>存在量词</h1><div class="review-mark" data-stem="存在量词"></div><div class="meta-card"><span><strong>考点</strong>存在量词</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>常用逻辑</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：常用逻辑</li>
+<li>权重 weight：15</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>存在量词“$\exists$”表示“存在”“至少有一个”。含有存在量词的命题为特称命题，形式如“$\exists x \in D, p(x)$”。  </li>
+<li>对于含参不等式“$\exists x \in D$，使得 $f(x,a) &lt; 0$”成立，求参数取值范围，通常采用分离参数法，等价转化为求函数值域的最值问题。  </li>
+<li>核心转化原理：  </li>
+<li>若 $\exists x \in D$，使 $a &gt; g(x)$ 成立 $\iff a &gt; \inf\limits_{x\in D} g(x)$（若最小值存在，则 $a &gt; g(x)_{\min}$）。  </li>
+<li>若 $\exists x \in D$，使 $a &lt; g(x)$ 成立 $\iff a &lt; \sup\limits_{x\in D} g(x)$（若最大值存在，则 $a &lt; g(x)_{\max}$）。  </li>
+<li>当不等号含等号时类似，注意端点能否取到。  </li>
+<li>关注定义域及函数单调性：利用基本初等函数单调性或导数确定目标函数的值域，尤其是开区间处的极限值，决定参数的严格不等号。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别命题类型</strong>：题干含“存在”“有解”“能成立”等词，锁定为存在量词命题的参数范围问题。  </li>
+<li><strong>分离参数</strong>：对不等式进行等价变形，使参数与变量分离到不等号两侧，注意变形时保持不等号方向（如除以正数不变号，注意变量范围保证正负）。  </li>
+<li><strong>构造函数</strong>：令不含参数的一侧为函数 $g(x)$，明确其定义域（与命题中 $x$ 的范围一致）。  </li>
+<li><strong>求最值或确界</strong>：研究 $g(x)$ 的单调性（借助已知函数单调性、导数或图像），求出 $g(x)$ 在指定区间上的最大值、最小值或确界。若区间为开区间，注意极限值能否取到。  </li>
+<li><strong>转化为参数范围</strong>：依据存在性等价条件，写出参数应满足的不等式。例如：存在 $x&gt;0$ 使 $a &gt; g(x)$，只需 $a &gt; g(x)_{\min}$（或下确界）。  </li>
+<li><strong>检验端点</strong>：区间的开闭与等号是否可取一致，得到最终范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆全称与特称</strong>：“任意 $\forall x$” 恒成立要求参数大于最大值或小于最小值，方向与“存在”相反应严防混淆。  </li>
+<li><strong>分离参数时不等号反向</strong>：乘以或除以负数、移项不当易导致方向错误。必先确定所除因式在定义域内符号。  </li>
+<li><strong>函数单调性误判</strong>：例如 $g(x)=x-\dfrac{1}{2^x}$，误认为整体递减。应拆为增函数加增函数仍为增函数，或用导数验证。  </li>
+<li><strong>忽略定义域开闭与等号</strong>：若最值取不到（开区间），参数范围中的不等号必须严格。如 $x&gt;0$ 时 $g(x)&gt;-1$，则“存在”对应的 $a&gt;-1$ 不能写成 $a\ge -1$。  </li>
+<li><strong>未考虑隐含条件</strong>：题中 $x$ 是正数，分离参数除以 $2^x$ 时需明确 $2^x&gt;0$ 不等号不变；若变量可取负值，除法可能涉及变号讨论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2013 全国文 12）若存在正数 $x$ 使 $2^x(x-a)&lt;1$ 成立，则 $a$ 的取值范围是（ ）<br />
+A. $(-\infty,+\infty)$ 　B. $(-2,+\infty)$ 　C. $(0,+\infty)$ 　D. $(-1,+\infty)$</p>
+<p><strong>思路</strong>📌 存在量词下求参数范围，分离参数，转化为求关于 $x$ 的函数在 $(0,+\infty)$ 上的值域下界，利用单调性解决。</p>
+<p><strong>步骤</strong>✍️<br />
+1. 由 $2^x(x-a)&lt;1$ 且 $x&gt;0$，$2^x&gt;0$，两边同除以 $2^x$ 得 $x-a &lt; \dfrac{1}{2^x}$。<br />
+2. 移项分离参数 $a$：$a &gt; x - \dfrac{1}{2^x}$。<br />
+3. 设 $g(x)=x-\dfrac{1}{2^x}$，$x\in(0,+\infty)$。因 $y=x$ 单调递增，$y=-\dfrac{1}{2^x}$ 也单调递增（$\dfrac{1}{2^x}$ 递减，取负后递增），故 $g(x)$ 在 $(0,+\infty)$ 上单调递增。<br />
+4. 求确界：当 $x\to 0^+$ 时，$g(x)\to 0-1=-1$；当 $x\to+\infty$ 时，$g(x)\to +\infty$。所以 $g(x) &gt; -1$，即下确界为 $-1$，无法取等。<br />
+5. 存在 $x&gt;0$ 使 $a &gt; g(x)$ $\iff a &gt; \inf g(x) = -1$，故 $a\in(-1,+\infty)$。<br />
+6. 对照选项，答案为 D。</p>
+<p><strong>点评/变式</strong>💡 本题是典型的“存在性”参数范围题，分离函数后利用单调性求确界是关键。注意开区间端点极限决定不等号严格性。<br />
+<strong>变式思考</strong>：若条件改为“对任意正数 $x$ 使 $2^x(x-a)&lt;1$ 恒成立”，则需 $a &gt; g(x)$ 对所有 $x&gt;0$ 恒成立，即 $a &gt; g(x)_{\max}$，但 $g(x)$ 无上界，此时 $a$ 不存在，题目会设置其他形式。差异恰恰体现“存在”与“任意”的根本不同。<br />
+<strong>延伸</strong>：若不等式改为 $\exists x&gt;0$，$a &lt; x + \dfrac{1}{2^x}$，而 $h(x)=x+\dfrac{1}{2^x}$ 在 $(0,+\infty)$ 上先减后增有最小值，则 $a$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-12.html">2013-文-12</a>（2013 · 中） 存在正数x使2^x(x-a)&lt;1成立，利用存在量词转化为最值问题求参数a的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/280-全称量词与存在量词.html">存在量词</a></li>
+</ul>
+</div>
+</body>
+</html>

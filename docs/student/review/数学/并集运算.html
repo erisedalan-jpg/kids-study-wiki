@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>并集运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>并集运算</h1><div class="review-mark" data-stem="并集运算"></div><div class="meta-card"><span><strong>考点</strong>并集运算</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：7</li>
+<li>真题数：6；年份跨度：2009–2021</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易6</li>
+</ul>
+<h2>知识精要</h2>
+<p>并集是由所有属于集合 $A$ <strong>或</strong>属于集合 $B$ 的元素构成的集合，记作 $A \cup B$，即<br />
+$$A \cup B = {x \mid x \in A \text{ 或 } x \in B}.$$
+核心性质：$A \cup A = A$，$A \cup \varnothing = A$，$A \cup B = B \cup A$；若 $A \subseteq B$，则 $A \cup B = B$。<br />
+含补集的混合运算：$\complement_U(A \cup B) = (\complement_U A) \cap (\complement_U B)$（德摩根律）。当全集 $U$ 给定，求并集的补集时，可先求并集再取补集，亦可先对各集合取补集再求交集，依据题目结构选择较简路径。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确运算顺序</strong>：有括号先算括号内；若为 $\complement_U(M \cup N)$ 形式，通常先求 $M \cup N$，再用全集减去该并集得到补集。</li>
+<li><strong>离散数集的并集</strong>：直接列出两个集合的全部元素，合并后去除重复元素，写成列举法形式（元素之间无序、互异）。</li>
+<li><strong>连续数集（区间）的并集</strong>：在数轴上画出每个集合对应的区间，所有被覆盖的部分即为并集，并用区间或不等式正确表示（特别注意端点的开闭）。</li>
+<li><strong>描述法集合先化简</strong>：若集合以描述法给出（如不等式、方程的解），先求出具体元素或最简形式，再进行并集运算。</li>
+<li><strong>巧用德摩根律</strong>：当 $\complement_U A$ 与 $\complement_U B$ 容易直接写出时，可用 $\complement_U(A \cup B)=\complement_U A \cap \complement_U B$ 替代先并后补，减少出错。</li>
+<li><strong>结果检验</strong>：检查元素是否满足互异性、区间端点是否正确、全集范围内的元素有无遗漏。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆并集与交集</strong>：把 $A \cup B$ 错写成公共部分（如 ${1,2}$ 与 ${2,3}$ 错取 ${2}$）。</li>
+<li><strong>并集元素重复书写</strong>：合并时忘记互异性，写成 ${1,2,2,3}$ 之类的错误。</li>
+<li><strong>忽略全集范围</strong>：求 $\complement_U(M \cup N)$ 时，全集中某些既不在 $M$ 也不在 $N$ 的元素容易被遗漏，应明确列出全集所有元素后再剔除。</li>
+<li><strong>区间并集端点处理不当</strong>：例如 $A=(-1,2)$，$B=[2,3)$，并集应表示为 $(-1,3)$ 错误（实际上 $(-1,3)$ 不含 $2$，正确的并集应为 $(-1,3)$ 还是 $(-1,2)\cup[2,3)$ ，需仔细核对端点开闭；注意，若 $2$ 处左开右闭，并集在 $2$ 处有定义，不可用单一开区间涵盖）。通常直接用数轴观察，端点开闭情况逐点确定。</li>
+<li><strong>未化简描述法集合</strong>：如 $B={x \mid (x+1)(x-2)&lt;0, x\in \mathbb Z}$ 应求得整数集 ${0,1}$ 再做运算，若误当作连续区间则致错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-文-01）<br />
+已知全集</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-01.html">2021-文-01</a>（2021 · 易） 本题考查给定全集下集合的并集与补集运算。</li>
+<li><a href="../../exam/数学/2020-理-01.html">2020-理-01</a>（2020 · 易） 已知全集U={-2,-1,0,1,2,3}及A、B, 求 ∁_U(A∪B)。</li>
+<li><a href="../../exam/数学/2017-文-01.html">2017-文-01</a>（2017 · 易） 考查集合并集的基本概念与简单运算，能根据定义直接求出两集合的并集。</li>
+<li><a href="../../exam/数学/2016-理-02.html">2016-理-02</a>（2016 · 易） 该题考查集合的并集运算，需先解不等式确定集合B的元素。</li>
+<li><a href="../../exam/数学/2015-文-01.html">2015-文-01</a>（2015 · 易） 本题主要考查集合的并集运算，通过求解不等式表示的区间集合求并集。</li>
+<li><a href="../../exam/数学/2009-文-01.html">2009-文-01</a>（2009 · 易） 已知全集和两个集合，求并集的补集。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/860-并集运算.html">并集运算</a></li>
+</ul>
+</div>
+</body>
+</html>

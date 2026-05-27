@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复数的乘除</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复数的乘除</h1><div class="review-mark" data-stem="复数的乘除"></div><div class="meta-card"><span><strong>考点</strong>复数的乘除</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数代数形式</strong>：$z=a+bi$（$a,b\in\mathbf{R}$），$a$ 为实部，$b$ 为虚部，$i$ 为虚数单位，$i^2=-1$。</li>
+<li><strong>共轭复数</strong>：$\overline{z}=a-bi$，互为共轭的两复数乘积为实数：$(a+bi)(a-bi)=a^2+b^2$。</li>
+<li><strong>乘法法则</strong>：$(a+bi)(c+di)=(ac-bd)+(ad+bc)i$，实质为多项式乘法并代入 $i^2=-1$ 合并。</li>
+<li><strong>除法法则</strong>：<br />
+  $\dfrac{a+bi}{c+di}=\dfrac{(a+bi)(c-di)}{(c+di)(c-di)}=\dfrac{(ac+bd)+(bc-ad)i}{c^2+d^2}$，即分子分母同乘分母的共轭复数，分母化为实数。</li>
+<li><strong>$i$ 的周期性</strong>：$i^{4n}=1,\ i^{4n+1}=i,\ i^{4n+2}=-1,\ i^{4n+3}=-i$（$n\in\mathbf{N}$）。运算中出现高次幂可据此化简。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分母实数化</strong>：观察分母 $c+di$，立即写出其共轭复数 $c-di$，分子分母同乘该共轭数。  </li>
+<li><strong>化简分母</strong>：利用平方差公式 $(c+di)(c-di)=c^2+d^2$，分母变为实数。  </li>
+<li><strong>展开分子</strong>：分子 $(a+bi)(c-di)$ 按多项式乘法展开，遇到 $i^2$ 全部替换为 $-1$，合并实部与虚部。  </li>
+<li><strong>分离结果</strong>：将所得实数分母分配到实部与虚部，写成 $a'+b'i$ 的标准形式，能约分则约分。  </li>
+<li><strong>检验</strong>：涉及 $i$ 的幂时，先用周期性化为 $\pm1$ 或 $\pm i$ 再参与运算，避免计算冗长。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>共轭取错</strong>：分母为 $c+di$ 时，共轭为 $c-di$，切忌只将虚部变号而忘了实部不变，或误写成 $-c+di$。  </li>
+<li><strong>分母平方差漏项</strong>：$(c+di)(c-di)=c^2-(di)^2=c^2+d^2$，常有人误算为 $c^2-d^2$。  </li>
+<li><strong>$i^2$ 处理滞后</strong>：分子展开后忘了将 $i^2$ 换为 $-1$，导致虚、实部符号错误。  </li>
+<li><strong>结果未彻底分离</strong>：形如 $\dfrac{x+yi}{k}$ 的结果必须写成 $\dfrac{x}{k}+\dfrac{y}{k}i$，不可保留分数线而不拆分实虚部。  </li>
+<li><strong>忽略约分</strong>：分子分母同乘后可能出现公约数，需约至最简，否则答案与标准形式不符。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> 计算 $\dfrac{3+i}{1+i}$ 并化为 $a+bi$ 形式。（原题选项：A. $1+2i$ B. $1-2i$ C. $2+i$ D. $2-i$）</p>
+<p><strong>思路</strong><br />
+分母为 $1+i$，其共轭为 $1-i$，分子分母同乘 $1-i$，利用分母平方和化为实数，再展开分子分离实虚部。</p>
+<p><strong>步骤</strong><br />
+1. 写出共轭并同乘：<br />
+   $\dfrac{3+i}{1+i} = \dfrac{(3+i)(1-i)}{(1+i)(1-i)}$<br />
+2. 分母：$(1+i)(1-i)=1^2+1^2=2$<br />
+3. 分子：$(3+i)(1-i)=3\cdot1 -3i +i -i^2 = 3 -2i -(-1)=4-2i$<br />
+4. 原式 $= \dfrac{4-2i}{2} = 2 - i$<br />
+5. 对照选项，正确答案为 D。</p>
+<p><strong>点评/变式</strong><br />
+本题为复数除法的标准考法，完全遵循“分母实数化”套路。注意分子展开时 $-i^2$ 变为 $+1$ 的符号变化。变式训练：$\dfrac{2-i}{1+2i}$。分子分母同乘 $1-2i$：分母 $1^2+2^2=5$，分子 $(2-i)(1-2i)=2-4i-i+2i^2=2-5i-2=-5i$，结果为 $0-i$。通过不断操作固化成条件反射。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-01.html">2017-理-01</a>（2017 · 易） 该题考查复数的除法运算，要求将复数化简为标准形式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">复数的乘除</a></li>
+</ul>
+</div>
+</body>
+</html>

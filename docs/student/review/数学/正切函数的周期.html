@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正切函数的周期</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正切函数的周期</h1><div class="review-mark" data-stem="正切函数的周期"></div><div class="meta-card"><span><strong>考点</strong>正切函数的周期</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正切型函数的周期</strong>：函数 $y = \tan(\omega x + \varphi)$（$\omega &gt; 0$）的最小正周期为 $T = \frac{\pi}{\omega}$。注意分母是 $\omega$，不是 $2\omega$，这是正切与正弦/余弦周期公式的根本区别。</li>
+<li><strong>图像平移规律</strong>：$y = \tan(\omega x + \varphi)$ 向右平移 $a$ 个单位后，解析式变为 $y = \tan\big[\omega(x - a) + \varphi\big] = \tan(\omega x - \omega a + \varphi)$（左加右减，且 $\omega$ 要乘进平移量）。</li>
+<li><strong>两正切型函数图像重合的充要条件</strong>：若 $y = \tan(\omega x + \varphi_1)$ 与 $y = \tan(\omega x + \varphi_2)$ 的图像重合（$\omega$ 相同），则 $\varphi_1 - \varphi_2 = k\pi$，$k \in \mathbb{Z}$。本质是相差整数个周期，因为 $\tan\theta$ 的周期是 $\pi$，相位差为 $\pi$ 的整数倍时图像完全一致。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出平移后的解析式</strong><br />
+   根据“左加右减”将平移量代入，注意将系数 $\omega$ 提出，得到形如 $\tan(\omega x + \text{新常数})$ 的表达式。</li>
+<li><strong>利用图像重合建立等式</strong><br />
+   令平移后的函数与目标函数相等，由正切函数的周期性得到一般关系：<br />
+   $\tan(\omega x + \alpha) = \tan(\omega x + \beta) \quad \Rightarrow \quad \alpha = \beta + k\pi\ (k \in \mathbb{Z})$。<br />
+   注意是 $k\pi$，不是 $2k\pi$。</li>
+<li><strong>解出参数并讨论整数 $k$</strong><br />
+   从等式中解出所求参数（常为 $\omega$）关于 $k$ 的表达式，结合题目给定的范围（如 $\omega &gt; 0$）和“最小值”等要求，确定 $k$ 的取值，得到最终答案。</li>
+<li><strong>（通用思维）正切类问题优先考虑周期性和相位差的周期性，少用诱导公式强行变换，直接比较相位最高效。</strong></li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平移方向反用</strong>：向右平移是 $x$ 减去平移量，误写成 $x + \text{平移量}$ 会导致全盘皆输。</li>
+<li><strong>周期记错</strong>：正切周期是 $\frac{\pi}{\omega}$，在重合条件中错误地加上 $2k\pi$ 而不是 $k\pi$。</li>
+<li><strong>漏乘系数</strong>：平移时只将 $x$ 加减，忘记乘 $\omega$，如 $y=\tan(\omega x + \varphi)$ 向右平移 $a$ 单位，错写成 $\tan(\omega x + \varphi - a)$，正确应为 $\tan(\omega x - \omega a + \varphi)$。</li>
+<li><strong>整数 $k$ 的取值粗心</strong>：求出 $\omega = f(k)$ 后，盲目取 $k=0$，忽略 $\omega&gt;0$ 或“最小正值”可能对应 $k=1$ 或 $k=-1$ 等情况，需结合不等式精细判断。</li>
+<li><strong>误用正弦型重合条件</strong>：正弦/余弦图像重合需相差 $2k\pi$，与正切的 $k\pi$ 混用，是失分重灾区。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009全国文·9）<br />
+将函数 $y = \tan\left(\omega x + \frac{\pi}{4}\right)$（$\omega &gt; 0$）的图像向右平移 $\frac{\pi}{6}$ 个单位长度后，与函数 $y = \tan\left(\omega x + \frac{\pi}{6}\right)$ 的图像重合，求 $\omega$ 的最小值。</p>
+<p><strong>思路</strong><br />
+先由平移规则写出新函数解析式，再利用正切函数图像重合的充要条件（相位相差 $k\pi$）建立等式，解出 $\omega$ 关于整数 $k$ 的表达式，结合 $\omega&gt;0$ 求最小正值。</p>
+<p><strong>步骤</strong><br />
+1. 写出平移后的函数：<br />
+   $y = \tan\left[\omega\left(x - \frac{\pi}{6}\right) + \frac{\pi}{4}\right] = \tan\left(\omega x - \frac{\omega\pi}{6} + \frac{\pi}{4}\right)$。<br />
+2. 令其与目标函数重合：<br />
+   $\tan\left(\omega x - \frac{\omega\pi}{6} + \frac{\pi}{4}\right) = \tan\left(\omega x + \frac{\pi}{6}\right)$。<br />
+   由正切图像重合条件得：<br />
+   $-\frac{\omega\pi}{6} + \frac{\pi}{4} = \frac{\pi}{6} + k\pi$，$k \in \mathbb{Z}$。<br />
+3. 化简等式：<br />
+   $-\frac{\omega\pi}{6} = \frac{\pi}{6} - \frac{\pi}{4} + k\pi = -\frac{\pi}{12} + k\pi$，<br />
+   两边乘 $-\frac{6}{\pi}$：$\omega = \frac{1}{2} - 6k$。<br />
+4. 求 $\omega&gt;0$ 的最小值：<br />
+   当 $k=0$ 时，$\omega = \frac{1}{2} &gt; 0$；$k$ 取负整数会使 $\omega$ 更大，取正整数 $\omega$ 为负。故最小值为 $\frac{1}{2}$。  </p>
+<p><strong>点评/变式</strong><br />
+- <strong>点评</strong>：本题紧扣正切周期 $T=\pi/\omega$，图像重合本质是相位差为 $\pi$ 的整数倍，无需考虑定义域限制。易错点在于将 $k\pi$ 写成 $2k\pi$，或平移时漏乘 $\omega$。<br />
+- <strong>变式</strong>：若将题中“向右平移 $\frac{\pi}{6}$”改为“向左平移 $\frac{\pi}{6}$”，则等式变为 $\frac{\omega\pi}{6} + \frac{\pi}{4} = \frac{\pi}{6} + k\pi$，可得 $\omega = 6k - \frac{1}{2}$，$\omega&gt;0$ 的最小值为 $k=1$ 时的 $\frac{11}{2}$。<br />
+- <strong>延伸</strong>：若目标函数改为 $y = \tan\left(2\omega x + \frac{\pi}{6}\right)$（$\omega$ 不同），则无法仅用相位差表达，需考虑周期变化，一般不直接命制此类题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-09.html">2009-文-09</a>（2009 · 中） 本题考查正切型函数图象的平移变换与周期性，利用平移后函数重合求参数ω的最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正切函数的周期</a></li>
+</ul>
+</div>
+</body>
+</html>

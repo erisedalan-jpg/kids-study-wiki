@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正切函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正切函数</h1><div class="review-mark" data-stem="正切函数"></div><div class="meta-card"><span><strong>考点</strong>正切函数</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正切函数定义</strong>：$y=\tan x$，定义域 ${x|x\neq \frac{\pi}{2}+k\pi, k\in\mathbb{Z}}$，值域 $\mathbb{R}$，最小正周期 $T=\pi$。</li>
+<li><strong>一般形式</strong>：$y=A\tan(\omega x+\varphi)$ 的周期 $T=\frac{\pi}{|\omega|}$，奇偶性、单调区间以 $\omega x+\varphi$ 为整体研究。</li>
+<li><strong>图像平移变换</strong>：$y=\tan(\omega x+\varphi)$ 向右平移 $a$ 个单位长度得 $y=\tan[\omega(x-a)+\varphi]=\tan(\omega x-\omega a+\varphi)$。平移规则：“左加右减，注意 $\omega$ 需提出”。</li>
+<li><strong>图像重合条件</strong>：正切函数的最小正周期为 $\pi$，两正切型函数图像重合当且仅当它们解析式中所含角度相差 $k\pi$（$k\in\mathbb{Z}$），即
+  $$
+  \tan(\alpha) \equiv \tan(\beta) \iff \alpha = \beta + k\pi\quad(k\in\mathbb{Z}).
+  $$</li>
+<li><strong>参数求解</strong>：利用图像重合（或对称、特殊点）列出方程，借助 $\omega&gt;0$ 及 $k\in\mathbb{Z}$ 求 $\omega$ 的最小正值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出平移后解析式</strong>：将 $x$ 换成 $x\pm\text{平移量}$，若原函数为 $y=\tan(\omega x+\varphi)$，右移 $a$ 单位得 $y=\tan[\omega(x-a)+\varphi]$。</li>
+<li><strong>建立重合方程</strong>：令平移后的角度与目标函数角度相差整数个周期 $\pi$，即
+   $$
+   \omega(x-a)+\varphi = \omega x + \varphi_{\text{目标}} + k\pi \quad (k\in\mathbb{Z}).
+   $$
+   消去 $x$ 后得到关于 $\omega$ 和 $k$ 的一次方程。</li>
+<li><strong>解出 $\omega$ 的表达式</strong>：整理得到 $\omega = f(k)$，注意 $\omega&gt;0$ 的限制。</li>
+<li><strong>求最小值</strong>：令 $k$ 取恰当的整数（常取 $0,\pm1,\pm2,\dots$），使 $\omega$ 取得最小正数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平移未提取 $\omega$</strong>：右移 $a$ 单位，错误地写成 $y=\tan(\omega x -a+\varphi)$，漏掉 $\omega a$ 的乘积。</li>
+<li><strong>符号混淆</strong>：左移与右移的加减号搞反，或方程中项的移项符号出错。</li>
+<li><strong>遗忘周期性</strong>：仅令角度相等而忘记 $+k\pi$，导致丢解或误得 $\omega$ 为定值。</li>
+<li><strong>整数 $k$ 取值不当</strong>：解出 $\omega=6k+\frac12$ 后，错选 $k=-1$ 得到负值，或从 $k=1$ 开始导致结果非最小。</li>
+<li><strong>忽视 $\omega&gt;0$ 的约束</strong>：得到 $\omega$ 表达式后未检查正负，直接填绝对值或随意取整数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009·理·08）<br />
+若将函数 $y=\tan!\Big(\omega x+\dfrac{\pi}{4}\Big)$（$\omega&gt;0$）的图象向右平移 $\dfrac{\pi}{6}$ 个单位长度后，与函数 $y=\tan!\Big(\omega x+\dfrac{\pi}{6}\Big)$ 的图象重合，则 $\omega$ 的最小值为（ ）<br />
+A. $\dfrac16$　B. $\dfrac14$　C. $\dfrac13$　D. $\dfrac12$</p>
+<p><strong>思路</strong><br />
+先写出平移后的解析式，利用正切函数“角度差 $k\pi$ 重合”这一核心性质，建立等式，解出 $\omega$ 关于整数 $k$ 的表达式，再结合 $\omega&gt;0$ 找出最小正值。</p>
+<p><strong>步骤</strong><br />
+1. 平移后函数为：
+   $$
+   y=\tan!\Big[\omega\Big(x-\frac{\pi}{6}\Big)+\frac{\pi}{4}\Big]
+     =\tan!\Big(\omega x-\frac{\omega\pi}{6}+\frac{\pi}{4}\Big).
+   $$
+2. 与目标函数 $y=\tan!\Big(\omega x+\dfrac{\pi}{6}\Big)$ 重合，则有：
+   $$
+   -\frac{\omega\pi}{6}+\frac{\pi}{4} = \frac{\pi}{6} + k\pi \quad (k\in\mathbb{Z}).
+   $$
+3. 整理：
+   $$
+   -\frac{\omega\pi}{6} = \frac{\pi}{6}-\frac{\pi}{4}+k\pi = -\frac{\pi}{12}+k\pi,
+   $$
+   $$
+   \frac{\omega\pi}{6} = \frac{\pi}{12}-k\pi.
+   $$
+   两边同乘 $\dfrac{6}{\pi}$：
+   $$
+   \omega = \frac12 - 6k \quad (k\in\mathbb{Z}).
+   $$
+4. 要求 $\omega&gt;0$，取 $k=0$ 得 $\omega=\dfrac12$；$k=-1$ 得 $\omega=\frac{13}{2}&gt;0$，但大于 $\frac12$。故 $\omega_{\min}=\dfrac12$，对应选项 D。</p>
+<p><strong>点评/变式</strong><br />
+该题本质是周期重合问题，正切函数周期 $\pi$ 导致整数 $k$ 出现。易错点在于平移后角度的计算及 $k$ 的取值。<br />
+<strong>变式训练</strong>：若改为向左平移 $\dfrac{\pi}{3}$ 个单位后重合，或给出一个不等式约束 $0&lt;\omega&lt;1$ 求满足条件的 $\omega$ 值，解题套路不变，需注意方向与符号的对应。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-08.html">2009-理-08</a>（2009 · 易） 本题考查正切型函数图象的平移变换及利用图象重合求参数的最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/308-正切函数图象与性质.html">正切函数</a></li>
+</ul>
+</div>
+</body>
+</html>

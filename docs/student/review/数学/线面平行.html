@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线面平行</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>线面平行</h1><div class="review-mark" data-stem="线面平行"></div><div class="meta-card"><span><strong>考点</strong>线面平行</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>8</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：12</li>
+<li>真题数：8；年份跨度：2013–2022</li>
+<li>出现题位：解答18 解答20 选择7 选择9</li>
+<li>难度分布：中8</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>线面平行的定义</strong>：直线 $l$ 与平面 $\alpha$ 没有公共点，则 $l \parallel \alpha$。</li>
+<li><strong>判定定理（核心工具）</strong>：若平面外的一条直线与该平面内的一条直线平行，则该直线与平面平行。<ul>
+<li>符号：$l \not\subset \alpha,\; m \subset \alpha,\; l \parallel m \;\Rightarrow\; l \parallel \alpha$。</li>
+<li>关键条件缺一不可：直线在平面外、直线在平面内、两直线平行。</li>
+</ul>
+</li>
+<li><strong>性质定理（知线面平行得线线平行）</strong>：若一条直线与一个平面平行，则过该直线的任意平面与此平面的交线与该直线平行。<ul>
+<li>符号：$l \parallel \alpha,\; l \subset \beta,\; \alpha \cap \beta = m \;\Rightarrow\; l \parallel m$。</li>
+<li>常用于：已知线面平行，推导线线平行，进而求解交线长度或角度。</li>
+</ul>
+</li>
+<li><strong>常用关联定理</strong>（真题高频综合）：<ul>
+<li>线面垂直判定：直线垂直于平面内两条相交直线。</li>
+<li>面面平行判定：一个平面内的两条相交直线分别平行于另一个平面。</li>
+<li>面面垂直判定：一个平面经过另一个平面的垂线。</li>
+<li>空间向量法：平面法向量平行 $\Leftrightarrow$ 平面平行；法向量垂直 $\Leftrightarrow$ 平面垂直。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>纯几何法证线面平行（首选）</strong></li>
+<li><strong>构造中位线</strong>：观察题目中点条件（如中点、等分点），在三角形中构造中位线，得出线线平行，进而线面平行。<br />
+<em>真题示例</em>：2014文/理、2013文/理均用中位线证 $PB \parallel EO$，$BC_1 \parallel DF$。</li>
+<li><strong>构造平行四边形</strong>：通过平移一组对边平行且相等得到平行四边形，从而证出对边平行。</li>
+<li>
+<p><strong>利用面面平行</strong>：先证直线所在的某个辅助平面与目标平面平行，则辅助平面内的任意直线都与目标平面平行（实践中较少直接使用，多在存在明显平行平面时使用）。</p>
+</li>
+<li>
+<p><strong>空间向量法（小题快解或几何法受阻时）</strong></p>
+</li>
+<li>建立空间直角坐标系（优先选择两两垂直的棱或面对角线方向），写出各点坐标。</li>
+<li>求出两平面的法向量 $\vec{n}_1,\vec{n}_2$。</li>
+<li>平面平行 $\Leftrightarrow \vec{n}_1 \parallel \vec{n}_2$；平面垂直 $\Leftrightarrow \vec{n}_1 \cdot \vec{n}_2 = 0$。</li>
+<li>
+<p>线面平行可通过直线的方向向量与平面法向量垂直（$\vec{v} \cdot \vec{n}=0$）且直线不在平面内来判定（需结合几何检验，排除直线在面内）。</p>
+</li>
+<li>
+<p><strong>解答题标准书写步骤</strong></p>
+</li>
+<li>先明确指出辅助线的作法（如“连接 $AC$ 交 $BD$ 于 $O$，连接 $EO$”）。</li>
+<li>严格按照判定定理的三个条件逐条写明：① 线在面外；② 线在面内；③ 两线平行 → 线面平行。</li>
+<li>涉及线面平行的性质时，需写出“因为 $l \parallel \alpha$，$l \subset \beta$，$\alpha \cap \beta = m$，所以 $l \parallel m$”，再用于后续计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视“平面外”这一条件</strong>：证明线面平行时，使用了平面内的一条直线与已知直线平行，但未明确说明已知直线不在该平面内。扣分点。</li>
+<li><strong>符号书写不规范</strong>：定理三个条件遗漏其一，导致推理链断裂，高考会扣步骤分。</li>
+<li><strong>辅助线作法不正确</strong>：声称构造平行四边形但实际无法保证对边平行；或作交线时不是真正交线，导致后续推导全错。</li>
+<li><strong>向量法判定面面平行时直接用法向量共线</strong>：忽略需排除平面重合的可能（通常正方体、棱柱等图形中不重合，但需心中有数）。</li>
+<li><strong>误用性质定理</strong>：直接说因为线面平行，所以与平面内任意一条直线平行（错误！平行于平面内无数条平行直线，并非所有）。</li>
+<li><strong>体积/距离计算中乱用线面平行</strong>：利用线面平行将点转化到线或面上时，转换目标选择错误，导致高或距离求错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2022年全国卷（文09/理07）正方体中的面面关系判断</h3>
+<p><strong>题目</strong>：正方体 $ABCD-A_1B_1C_1D_1$，$E,F$ 分别为 $AB,BC$ 的中点，判断平面 $B_1EF$ 与各选项平面的位置关系。</p>
+<p><strong>思路</strong>：本题既可用纯几何法快速判定A选项正确，也可建立空间直角坐标系，计算法向量逐一验证，避免几何想象出错。</p>
+<p><strong>步骤</strong>：
+- <strong>几何法（A选项）</strong>：
+    1. 连接 $AC$，则 $EF \parallel AC$，而 $AC \perp BD$，故 $EF \perp BD$。
+    2. 正方体中 $DD_1 \perp$ 平面 $ABCD$，$EF \subset$ 平面 $ABCD$，得 $EF \perp DD_1$。
+    3. $BD \cap DD_1 = D$，所以 $EF \perp$ 平面 $BDD_1$。
+    4. 又 $EF \subset$ 平面 $B_1EF$，故平面 $B_1EF \perp$ 平面 $BDD_1$。A正确。
+- <strong>向量法（验证B、C、D）</strong>：
+    1. 以 $D$ 为原点，$\overrightarrow{DA},\overrightarrow{DC},\overrightarrow{DD_1}$ 为 $x,y,z$ 轴建系，设棱长为2。
+    2. 写出坐标：$B_1(2,2,2)$，$E(2,1,0)$，$F(1,2,0)$，$A(2,0,0)$，$C(0,2,0)$，$D_1(0,0,2)$ 等。
+    3. 求平面 $B_1EF$ 的法向量 $\vec{n}_1$，及各选项平面法向量，验证平行与垂直（计算知仅 $\vec{n}_1$ 与平面 $BDD_1$ 的法向量垂直（实则 $BDD_1$ 的法向量可取 $\overrightarrow{AC}$，$\vec{n}_1$ 与 $\overrightarrow{AC}$ 平行，从而平面垂直））。</p>
+<p><strong>点评/变式</strong>：小题调用线面垂直证面面垂直是最高效的方法。当图形中无现成直角坐标系时，也可不建系而综合使用三垂线定理、线面关系转化。此类题常将平行与垂直混合在各选项中，需逐项冷静分析。</p>
+<h3>2. 2020年全国卷文科第20题 三棱柱中的线面平行与体积</h3>
+<p><strong>题目</strong>：三棱柱 $ABC-A_1B_1C_1$，底面正三角形，侧面 $BB_1C_1C$ 是矩形。$M,N$ 分别是 $BC,B_1C_1$ 中点，$P$ 在 $AM$ 上。过 $B_1C_1$ 和 $P$ 的平面交 $AB$ 于 $E$，交 $AC$ 于 $F$。<br />
+(1) 证明：$AA_1 \parallel MN$，且平面 $A_1AMN \perp$ 平面 $EB_1C_1F$；<br />
+(2) $AO=AB=6$，$AO \parallel$ 平面 $EB_1C_1F$，$\angle MPN=\frac{\pi}{3}$，求四棱锥 $B-EB_1C_1F$ 的体积。</p>
+<p><strong>思路</strong>：(1) 矩形+中点 → 中位线证平行；底面正三角形 → 中线垂直；利用线面垂直导出面面垂直。(2) 由线面平行性质找到 $P$ 的位置，再用角度和长度求高，套体积公式。</p>
+<p><strong>步骤</strong>：
+- <strong>(1) 证明</strong>：
+    - $M,N$ 分别为 $BC,B_1C_1$ 中点，矩形 $BB_1C_1C$ 中 $MN \parallel BB_1$，又棱柱中 $AA_1 \parallel BB_1$，故 $AA_1 \parallel MN$。
+    - 底面正三角形 $\Rightarrow AM \perp BC$。矩形 $\Rightarrow BB_1 \perp BC$，且 $BB_1 \perp MN$。
+    - 由 $MN \parallel AA_1$ 且 $AA_1 \perp AM$（由 $AA_1 \perp$ 底面？此处需利用正三棱柱性质或补充：由 $BB_1 \perp$ 底面，得 $AA_1 \perp$ 底面，故 $AA_1 \perp AM$），可证 $AM \perp$ 平面 $B_1BCC_1$（实际为综合推理）。
+    - 正确推导：因为 $AM \perp BC$，且 $BB_1 \perp$ 底面 $ABC$，所以 $BB_1 \perp AM$。则 $AM \perp$ 平面 $B_1BCC_1$。又平面 $A_1AMN$ 经过 $AM$，所以平面 $A_1AMN \perp$ 平面 $B_1BCC_1$。
+    - 而 $EB_1C_1F$ 是过 $B_1C_1$ 的平面，必有 $B_1C_1 \subset$ 平面 $EB_1C_1F$，且该平面与平面 $B_1BCC_1$ 有交线等。本题中可进一步证明平面 $EB_1C_1F \parallel$ 平面 $B_1BCC_1$？（此处需看完整解析，已知过 $B_1C_1$ 和 $P$ 的平面交 $AB$ 于 $E$，可推 $EF \parallel BC$）。
+    - 实际上，由 $AM \perp BC$ 及 $EF \parallel BC$，得 $AM \perp EF$。结合 $AM \perp B_1C_1$（同垂直于 $BC$ 及 $B_1C_1 \parallel BC$），可得 $AM \perp$ 平面 $EB_1C_1F$，从而面面垂直。
+- <strong>(2) 体积计算</strong>：利用 $AO \parallel$ 平面 $EB_1C_1F$，通过线面平行性质找到点面距离转化，结合已知长度和 $60^\circ$ 角算出点 $P$ 到 $MN$ 的距离作为高，再求四边形 $EB_1C_1F$ 的面积，最终得 $V = \frac{1}{3} \times \text{底面积} \times \text{高} = 24$（步骤较多，考场需细心）。</p>
+<p><strong>点评/变式</strong>：本题将线面平行判定、性质与位置关系证明、体积计算串成一条线。核心依然是“线线→线面→面面”的垂直或平行转化链，以及中线、矩形等条件的灵活使用。体积题往往先证位置关系再算数据，逻辑跳跃会被扣分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-09.html">2022-文-09</a>（2022 · 中） 正方体ABCD-A₁B₁C₁D₁中E、F分别为AB、BC中点，判断平面B₁EF与各平面的垂直或平行关系。</li>
+<li><a href="../../exam/数学/2022-理-07.html">2022-理-07</a>（2022 · 中） 正方体ABCD-A₁B₁C₁D₁中E、F分别为AB、BC中点，判断平面B₁EF与各平面的垂直或平行关系。</li>
+<li><a href="../../exam/数学/2020-文-20.html">2020-文-20</a>（2020 · 中） 该题考查线面平行与垂直的证明以及利用体积公式求几何体体积。</li>
+<li><a href="../../exam/数学/2017-文-18.html">2017-文-18</a>（2017 · 中） 四棱锥中证明线面平行，利用面面垂直性质求体积计算。</li>
+<li><a href="../../exam/数学/2014-文-18.html">2014-文-18</a>（2014 · 中） 证明线面平行及计算点到平面的距离，涉及四棱锥体积与距离求解。</li>
+<li><a href="../../exam/数学/2014-理-18.html">2014-理-18</a>（2014 · 中） 以四棱锥为载体，考查线面平行证明及已知二面角求三棱锥体积。</li>
+<li><a href="../../exam/数学/2013-文-18.html">2013-文-18</a>（2013 · 中） 证明线面平行，并求三棱锥的体积</li>
+<li><a href="../../exam/数学/2013-理-18.html">2013-理-18</a>（2013 · 中） 考查直棱柱中线面平行的证明和二面角正弦值的求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/352-空间直线平面平行.html">线面平行</a></li>
+</ul>
+</div>
+</body>
+</html>

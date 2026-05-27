@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数</h1><div class="review-mark" data-stem="函数"></div><div class="meta-card"><span><strong>考点</strong>函数</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：16</li>
+<li>真题数：3；年份跨度：2008–2024</li>
+<li>出现题位：解答21 选择5 选择6</li>
+<li>难度分布：难2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对数函数</strong>：$y=\ln x$ 在 $(0,+\infty)$ 上单调递增。若 $x\in(e^{-1},1)$，则 $-1&lt;\ln x&lt;0$。比较同底对数大小时可直接利用单调性；比较形如 $2\ln x$ 与 $\ln^3 x$ 的大小时，可整体换元（令 $t=\ln x$），转化为幂函数与正比例函数在负区间的大小比较。</li>
+<li><strong>三次函数与导数</strong>：对 $f(x)=ax^3-3x^2$，导数为 $f'(x)=3ax^2-6x=3x(ax-2)$。由 $a$ 的符号及零点分布可确定单调区间与极值。$a=0$ 时退化为二次函数，须单独讨论。</li>
+<li><strong>函数图像交点与方程根</strong>：曲线 $y=f(x)$ 与 $y=g(x)$ 在区间 $I$ 上的交点个数 $\iff$ 方程 $f(x)=g(x)$ 在 $I$ 上解的个数。常用方法：①直接移项构造函数 $F(x)=f(x)-g(x)$，利用零点存在定理与单调性；②分离参数，转化为 $a=h(x)$，研究 $h(x)$ 在 $I$ 上的值域与图像，数形结合确定直线 $y=a$ 与 $y=h(x)$ 交点的唯一性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>比较对数值大小的通用步骤</strong>  </li>
+<li>确定对数的真数范围，从而推出对数值的符号及范围。  </li>
+<li>若对数底数相同，直接用单调性；若形式复杂，可换元（如令 $t=\ln x$）化为熟悉函数比较。  </li>
+<li>必要时引入中间值（如 $0$、$1$）过渡。</li>
+<li><strong>含参三次函数单调性与极值讨论步骤</strong>  </li>
+<li>求导、通分、因式分解，写出导函数零点。  </li>
+<li>根据参数对零点大小和存在性的影响分类（特别注意二次项系数为零的情形）。  </li>
+<li>列表或分区间写出导数的符号，下结论。</li>
+<li><strong>函数图像“恰有一个交点”类问题的处理套路</strong>  </li>
+<li>将 $f(x)=g(x)$ 化简成 $a\varphi(x)=\psi(x)$ 或 $F(x)=0$ 的形式，注意化简过程中的等价性。  </li>
+<li>若可分离参数，构造函数 $h(x)$，分析其在区间上的奇偶性、单调性、极值、端点极限，画出草图。  </li>
+<li>观察水平直线 $y=a$ 与 $y=h(x)$ 的交点个数，得出 $a$ 的值或范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：对数比较时未先判断 $x$ 范围，直接套用对数运算性质导致符号错误；解函数交点问题时未检查化简后的方程在给定区间是否有意义。</li>
+<li><strong>对数乘法与乘方混淆</strong>：误认为 $2\ln x = \ln x^2$ 而忽略 $x&gt;0$ 时两者恒等，但在判断大小时换元更安全，避免直接比较 $2\ln x$ 和 $\ln^3 x$ 时忘记 $\ln x$ 的符号。</li>
+<li><strong>三次函数讨论漏掉 $a=0$</strong>：导数 $f'(x)=3ax^2-6x$ 中，当 $a=0$ 时实际上不再是三次函数，图象和性质有本质变化，不专门讨论会丢失情形。</li>
+<li><strong>分离参数时未考虑定义域对称性或边界</strong>：例如从 $a(x^2+1)=1+\cos x$ 分离出 $a=\frac{1+\cos x}{x^2+1}$，若函数为偶函数，分析单调性时只需讨论半个区间，但下结论时要注意整个区间上的交点个数。</li>
+<li><strong>盲目使用 $\Delta$ 判断交点个数</strong>：交点问题本质是方程根的问题，对方程变形后可能不再是二次型，不可直接套用判别式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2008·文·05）</h3>
+<p>若 $x\in(e^{-1},1)$，$a=\ln x$，$b=2\ln x$，$c=\ln^3 x$，比较 $a,b,c$ 的大小。</p>
+<ul>
+<li><strong>思路</strong><br />
+  由 $x$ 的范围得出 $a$ 的取值范围，以 $a$ 为桥梁将 $b,c$ 用 $a$ 表示，转化为比较 $a,2a,a^3$ 在 $(-1,0)$ 上的大小。</li>
+<li><strong>步骤</strong>  </li>
+<li>因 $x\in(e^{-1},1)$，由 $\ln x$ 单调增，得 $-1&lt;a&lt;0$。  </li>
+<li>$b=2a$，因为 $a&lt;0$，所以 $b&lt;a$。  </li>
+<li>$c=a^3$，比较 $a$ 和 $a^3$：当 $-1&lt;a&lt;0$ 时，$|a|&gt;|a^3|$，且 $a$ 负，故 $a&lt;a^3$（例如 $a=-0.5$，$a^3=-0.125$）。  </li>
+<li>综上 $b&lt;a&lt;c$。</li>
+<li><strong>点评/变式</strong><br />
+  核心是将对数值化归为同一量的不同函数值比较，利用了负数的幂运算缩小绝对值的特性。变式：若 $x&gt;1$，则 $a&gt;0$，此时 $b=2a&gt;a$，$c=a^3$ 与 $a$ 的大小取决于 $a&gt;1$ 还是 $0&lt;a&lt;1$，需分段讨论。</li>
+</ul>
+<h3><strong>题目2</strong>（2008·文·21）</h3>
+<p>设 $a\in\mathbb R$，函数 $f(x)=ax^3-3x^2$。讨论 $f(x)$ 的单调性。</p>
+<ul>
+<li><strong>思路</strong><br />
+  求导后因式分解，围绕导函数零点个数及大小对 $a$ 进行分类，尤其是 $a=0$ 时函数类型改变。</li>
+<li><strong>步骤</strong>  </li>
+<li>$f'(x)=3ax^2-6x=3x(ax-2)$。  </li>
+<li>当 $a=0$：$f'(x)=-6x$，$x&lt;0$ 时增，$x&gt;0$ 时减。  </li>
+<li>当 $a&gt;0$：$f'(x)$ 零点为 $x=0$ 和 $x=\frac{2}{a}&gt;0$。  <ul>
+<li>$x&lt;0$，$f'(x)&gt;0$（增）；  </li>
+<li>$0&lt;x&lt;\frac{2}{a}$，$f'(x)&lt;0$（减）；  </li>
+<li>$x&gt;\frac{2}{a}$，$f'(x)&gt;0$（增）。  </li>
+</ul>
+</li>
+<li>当 $a&lt;0$：$f'(x)$ 零点为 $x=0$ 和 $x=\frac{2}{a}&lt;0$。  <ul>
+<li>$x&lt;\frac{2}{a}$，$f'(x)&lt;0$（减）；  </li>
+<li>$\frac{2}{a}&lt;x&lt;0$，$f'(x)&gt;0$（增）；  </li>
+<li>$x&gt;0$，$f'(x)&lt;0$（减）。</li>
+</ul>
+</li>
+<li><strong>点评/变式</strong><br />
+  含参三次函数的规范讨论模板。易错点在于忘记 $a=0$ 的情形，以及将 $ax-2$ 的解错写为 $\frac{2}{a}$ 后未考虑 $a$ 的符号对区间次序的影响。常与极值、最值、零点个数问题结合。</li>
+</ul>
+<h3><strong>题目3</strong>（2024·新课标Ⅱ·06）</h3>
+<p>$f(x)=a(x+1)^2-1$，$g(x)=\cos x+2ax$，当 $x\in(-1,1)$ 时曲线 $y=f(x)$ 与 $y=g(x)$ 恰有一个交点，求 $a$。</p>
+<ul>
+<li><strong>思路</strong><br />
+  联立方程化简后分离参数，将交点个数问题转化为水平直线 $y=a$ 与构造的偶函数图像交点唯一的问题，利用对称性和单调性求解。</li>
+<li><strong>步骤</strong>  </li>
+<li>由 $f=g$ 得 $a(x+1)^2-1=\cos x+2ax \implies a(x^2+2x+1)-1=\cos x+2ax$，化简为 $a(x^2+1)=1+\cos x$。  </li>
+<li>$x\in(-1,1)$ 时 $x^2+1&gt;0$，合法分离：$a=\frac{1+\cos x}{x^2+1}:=h(x)$。  </li>
+<li>$h(x)$ 是偶函数，只需研究 $[0,1)$。$h(0)=2$，当 $x\to 1^-$，$h(x)\to\frac{1+\cos 1}{2}$。  </li>
+<li>求导得 $h'(x)=\frac{-(1+\cos x)\cdot 2x - (x^2+1)\sin x}{(x^2+1)^2}$。在 $(0,1)$ 内，分子各项均负，$h'(x)&lt;0$，故 $h(x)$ 从 $2$ 递减至 $\frac{1+\cos 1}{2}$。  </li>
+<li>由偶函数对称性，$y=h(x)$ 在 $(-1,1)$ 上呈“倒扣”形状，最大值在 $x=0$ 处为 $2$，往两侧递减。  </li>
+<li>要使直线 $y=a$ 与 $y=h(x)$ 恰有一个交点，须取最大值 $a=2$。</li>
+<li><strong>点评/变式</strong><br />
+  分离参数后利用偶函数与单调性降维分析是关键。若交点个数为 $2$，则 $a\in\bigl(\frac{1+\cos 1}{2},2\bigr)$；为一个时只有 $a=2$（对应切点）；不可能为 $0$。这类题注意分离后的等价性以及端点值是否取到。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-06.html">2024-新课标Ⅱ-06</a>（2024 · 难） f(x)=a(x+1)²-1，g(x)=cosx+2ax，当x∈(-1,1)时曲线y=f(x)与y=g(x)恰有一个交点，求参数a的取值。</li>
+<li><a href="../../exam/数学/2008-文-05.html">2008-文-05</a>（2008 · 中） 当x∈(e⁻¹,1)时比较lnx、2lnx、ln³x三个对数值的大小，考查对数函数单调性。</li>
+<li><a href="../../exam/数学/2008-文-21.html">2008-文-21</a>（2008 · 难） f(x)=ax³-3x²，由极值点条件求a，再利用导数研究g(x)=f(x)+f'(x)在[0,2]最大值点为x=0时a的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/188-函数概念.html">函数</a></li>
+</ul>
+</div>
+</body>
+</html>

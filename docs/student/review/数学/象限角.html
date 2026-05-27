@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>象限角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>象限角</h1><div class="review-mark" data-stem="象限角"></div><div class="meta-card"><span><strong>考点</strong>象限角</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>象限角与符号</strong>：第四象限角 $\alpha$ 满足 $2k\pi-\frac{\pi}{2}&lt;\alpha&lt;2k\pi\ (k\in\mathbb Z)$，此时 $\sin\alpha&lt;0$，$\cos\alpha&gt;0$，$\tan\alpha&lt;0$。  </li>
+<li><strong>二倍角公式</strong>：<br />
+  $$
+  \sin 2\alpha = 2\sin\alpha\cos\alpha,\qquad 
+  \cos 2\alpha = \cos^2\alpha-\sin^2\alpha = 2\cos^2\alpha-1 = 1-2\sin^2\alpha.
+  $$</li>
+<li><strong>二倍角的象限</strong>：由 $\alpha$ 范围推 $2\alpha$ 范围时，$2\alpha$ 常跨多个象限，故 $\cos 2\alpha$ 符号不确定，但 $\sin 2\alpha$ 的符号可由 $\sin\alpha$ 与 $\cos\alpha$ 的乘积直接确定。此考点核心是“知 $\alpha$ 象限→定 $\sin\alpha,\cos\alpha$ 符号→利用 $\sin 2\alpha = 2\sin\alpha\cos\alpha$ 定号”。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定号法（首选）</strong>：由 $\alpha$ 所在象限，直接写出 $\sin\alpha$、$\cos\alpha$ 的正负，代入 $\sin 2\alpha = 2\sin\alpha\cos\alpha$ 判断符号；$\cos 2\alpha$ 一般用 $\cos 2\alpha = 1-2\sin^2\alpha$ 或 $2\cos^2\alpha-1$ 分析符号可能情况。  </li>
+<li><strong>范围分析法</strong>：用通式表示 $\alpha$ 的范围，乘以 $2$ 得到 $2\alpha$ 的范围，观察 $2\alpha$ 终边可能落入的象限，再根据象限符号判断。  </li>
+<li><strong>特殊值排除法（选择题专用）</strong>：取满足条件的简单角（如 $\alpha = -\frac{\pi}{6}$、$-\frac{\pi}{4}$ 等），计算选项的三角函数值，排除错误选项。注意取一个值若不能唯一确定，则需再取其他值验证剩余选项。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>符号记忆错误</strong>：将第四象限的正余弦符号记反（误记 $\sin\alpha&gt;0$、$\cos\alpha&lt;0$），导致 $\sin 2\alpha$ 符号判断完全相反。  </li>
+<li><strong>误判 $2\alpha$ 象限</strong>：直接默认为 $2\alpha$ 也在第四象限，得出 $\sin 2\alpha&lt;0$、$\cos 2\alpha&gt;0$ 的错误结论。实际上 $\alpha$ 接近 $-90^\circ$ 时 $2\alpha$ 接近 $-180^\circ$（第三象限附近），$\cos 2\alpha$ 可负可正。  </li>
+<li><strong>忽略公式关联</strong>：仅凭 $\sin 2\alpha$ 的符号去推断 $\cos 2\alpha$，未意识到 $\cos 2\alpha$ 可由 $1-2\sin^2\alpha$ 得出恒为正或恒为负的错误断言；应明确 $\cos 2\alpha$ 符号在第四象限角条件下不恒定。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020-理-02）<br />
+若 $\alpha$ 为第四象限角，则（　）<br />
+A. $\cos 2\alpha&gt;0$　B. $\cos 2\alpha&lt;0$　C. $\sin 2\alpha&gt;0$　D. $\sin 2\alpha&lt;0$</p>
+<p><strong>思路</strong><br />
+由第四象限角得到 $\sin\alpha$ 与 $\cos\alpha$ 的符号，直接利用二倍角正弦公式 $\sin 2\alpha=2\sin\alpha\cos\alpha$ 判定符号；对于余弦可通过取特殊值说明其不恒定。</p>
+<p><strong>步骤</strong><br />
+- <strong>法一（公式法）</strong><br />
+  $\alpha$ 为第四象限角 $\Rightarrow \sin\alpha&lt;0,\ \cos\alpha&gt;0$。<br />
+  则 $\sin 2\alpha = 2\sin\alpha\cos\alpha &lt;0$，故选 D。<br />
+  $\cos 2\alpha = \cos^2\alpha-\sin^2\alpha$，仅知平方差无法确定符号，故 A、B 均错。  </p>
+<ul>
+<li><strong>法二（特殊值法）</strong><br />
+  取 $\alpha = -\frac{\pi}{6}$（第四象限角），则<br />
+  $\cos 2\alpha = \cos!\left(-\frac{\pi}{3}\right)=\frac{1}{2}&gt;0$，排除 B；<br />
+  $\sin 2\alpha = \sin!\left(-\frac{\pi}{3}\right)=-\frac{\sqrt{3}}{2}&lt;0$，C 错；<br />
+  再取 $\alpha = -\frac{\pi}{3}$，$\cos 2\alpha = \cos!\left(-\frac{2\pi}{3}\right)=-\frac{1}{2}&lt;0$，说明 $\cos 2\alpha$ 可负，A 不恒成立。最终 D 正确。</li>
+</ul>
+<p><strong>点评/变式</strong><br />
+本题陷阱在于 $\cos 2\alpha$ 符号的不确定性，而 $\sin 2\alpha$ 由同号相乘得正、异号相乘得负的规则，第四象限 $\sin\alpha$ 与 $\cos\alpha$ 异号，乘积恒负。<br />
+变式：若 $\alpha$ 为第二象限角，则 $\sin\alpha&gt;0$、$\cos\alpha&lt;0$，可得 $\sin 2\alpha =2\sin\alpha\cos\alpha &lt;0$，而 $\cos 2\alpha = 1-2\sin^2\alpha$ 同样符号不固定。此类问题优先用二倍角正弦的乘积符号直接得到确定答案。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-02.html">2020-理-02</a>（2020 · 易） 已知α为第四象限角, 用二倍角公式判断 cos2α、sin2α 的正负。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">象限角</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等边三角形</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等边三角形</h1><div class="review-mark" data-stem="等边三角形"></div><div class="meta-card"><span><strong>考点</strong>等边三角形</span><span><strong>权重</strong>4</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：4</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等边三角形性质</strong>：三边相等，每个内角均为 $60^\circ$；三线合一（高、中线、角平分线重合）；中心为重心、外心、内心、垂心的合一，到顶点的距离与到边的距离之比为 $2:1$。</li>
+<li><strong>中点向量公式</strong>：若 $D$ 为 $BC$ 中点，则 $\overrightarrow{PB}+\overrightarrow{PC}=2\overrightarrow{PD}$，可将向量和转化为单一向量。</li>
+<li><strong>向量数量积</strong>：定义 $\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta$；坐标运算若 $\vec{a}=(x_1,y_1),\ \vec{b}=(x_2,y_2)$，则 $\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$；模长 $|\vec{a}|=\sqrt{x^2+y^2}$。</li>
+<li><strong>最值转化</strong>：向量表达式最值常通过建系转化为二元二次函数，利用配方结合平方非负性求最小值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察结构，优先化简</strong>：遇到 $\overrightarrow{PA}\cdot(\overrightarrow{PB}+\overrightarrow{PC})$ 类含向量和的点积，先利用中点公式化为 $2\overrightarrow{PA}\cdot\overrightarrow{PD}$，消去括号，减少变量。</li>
+<li><strong>建系坐标化</strong>：利用图形对称性建立直角坐标系。对等边三角形，常以底边中线为 $y$ 轴、底边为 $x$ 轴，将顶点、中点坐标用边长表示（高 $\sqrt{3}$，半底边长 $1$）。</li>
+<li><strong>设出动点坐标</strong>：设 $P(x,y)$，写出相关向量的坐标，代入目标表达式进行代数化。注意向量坐标为其终点坐标减起点坐标。</li>
+<li><strong>转化为二次函数最值</strong>：整理得形如 $Ax^2+Bx+Cy^2+Dy+E$ 的多项式，配方为 $A(x-m)^2+C(y-n)^2+F$。</li>
+<li><strong>依据非负性定最小值</strong>：当平方项系数为正时，令平方项为 $0$ 即得最小值，同时验证此时 $P$ 点的位置在平面内存在。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>中点转化漏乘 $2$</strong>：直接使用 $\overrightarrow{PB}+\overrightarrow{PC}=\overrightarrow{PD}$ 会致后续计算整体差 $4$ 倍（数量积中含系数）。</li>
+<li><strong>等边三角形高与半底混淆</strong>：边长为 $2$ 的高为 $\sqrt{3}$，半底长为 $1$，常见坐标如 $A(0,\sqrt{3})$ 误写为 $(0,2)$ 或 $(0,\sqrt{2})$。</li>
+<li><strong>向量坐标作差时符号错误</strong>：$\overrightarrow{PA}$ 应为 $A-P$，即 $(-x,\ \sqrt{3}-y)$，不可写成 $(x,\ y-\sqrt{3})$，否则符号全反导致数量积符号错误（虽配方后最值可能对齐，但中间易错）。</li>
+<li><strong>配方时系数分离不完全</strong>：提取公因式或常数项遗漏，未将原式完全化为平方和+常数的结构，导致最值计算偏差。</li>
+<li><strong>忽视取等条件</strong>：配方后令平方项为 $0$ 所得的点，需确认不超出平面允许范围（该题允许任意点，但有些问题会限制点在某区域内）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知 $\triangle ABC$ 是边长为 $2$ 的等边三角形，$P$ 为平面 $ABC$ 内一点，则 $\overrightarrow{PA}\cdot(\overrightarrow{PB}+\overrightarrow{PC})$ 的最小值是（ ）<br />
+A. $-2$　B. $-\dfrac{4}{3}$　C. $-\dfrac{3}{2}$　D. $-1$</p>
+<p><strong>思路</strong><br />
+取 $BC$ 中点 $D$ 将向量和转化为 $2\overrightarrow{PD}$，得目标为 $2\overrightarrow{PA}\cdot\overrightarrow{PD}$。以 $D$ 为原点建立坐标系，写出 $A,B,C$ 坐标，设 $P(x,y)$，把数量积化为 $x,y$ 的二次函数，配方求最小值。</p>
+<p><strong>步骤</strong><br />
+1. 取 $BC$ 中点 $D$，由中点公式得 $\overrightarrow{PB}+\overrightarrow{PC}=2\overrightarrow{PD}$，<br />
+   原式 $=2\overrightarrow{PA}\cdot\overrightarrow{PD}$。
+2. 建立直角坐标系：以 $D$ 为原点，直线 $BC$ 为 $x$ 轴（$B$ 到 $C$ 方向为正），$DA$ 为 $y$ 轴正向。<br />
+   由等边三角形边长为 $2$，得高 $AD=\sqrt{3}$，<br />
+   故 $A(0,\sqrt{3}),\ B(-1,0),\ C(1,0)$。
+3. 设 $P(x,y)$，则<br />
+   $\overrightarrow{PA}=A-P=(-x,\ \sqrt{3}-y)$，<br />
+   $\overrightarrow{PD}=D-P=(-x,\ -y)$。
+4. 计算数量积：<br />
+   $\overrightarrow{PA}\cdot\overrightarrow{PD}=(-x)\cdot(-x)+(\sqrt{3}-y)\cdot(-y)=x^2+y^2-\sqrt{3}y$。<br />
+   原式 $=2(x^2+y^2-\sqrt{3}y)$。
+5. 配方：<br />
+   $2\left[x^2+\left(y^2-\sqrt{3}y\right)\right]=2\left[x^2+\left(y-\frac{\sqrt{3}}{2}\right)^2-\frac{3}{4}\right]$<br />
+   $=2\left[x^2+\left(y-\frac{\sqrt{3}}{2}\right)^2\right]-\frac{3}{2}$。
+6. 因 $x^2\ge0$，$(y-\frac{\sqrt{3}}{2})^2\ge0$，当 $x=0,\ y=\frac{\sqrt{3}}{2}$ 时原式取最小值 $-\dfrac{3}{2}$。<br />
+   此时 $P$ 恰为 $\triangle ABC$ 的中心。对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+本题通过“中点转化→建系→坐标运算→二次函数配方”四步走，将几何最值化归为代数最值，是处理向量与动点结合的通用套路。<br />
+变式：若求 $\overrightarrow{PA}\cdot\overrightarrow{PB}$ 的最小值，亦可同样建系；若能恰当运用极化恒等式 $\vec{a}\cdot\vec{b}=\frac{1}{4}(|\vec{a}+\vec{b}|^2-|\vec{a}-\vec{b}|^2)$，可更快捷地转化为距离平方差求解，对选择填空极为高效。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-12.html">2017-理-12</a>（2017 · 中） 本题考查向量数量积的最值问题，通过建系或利用向量中点公式将数量积转化为点P到某点的距离平方求最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/172-等边三角形.html">等边三角形</a></li>
+</ul>
+</div>
+</body>
+</html>

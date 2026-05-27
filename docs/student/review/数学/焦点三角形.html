@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦点三角形</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>焦点三角形</h1><div class="review-mark" data-stem="焦点三角形"></div><div class="meta-card"><span><strong>考点</strong>焦点三角形</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：3</li>
+<li>真题数：3；年份跨度：2012–2019</li>
+<li>出现题位：解答20 选择4 选择5</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>焦点三角形</strong>：以椭圆（或双曲线）的两个焦点 $F_1,F_2$ 与曲线上任意一点 $P$ 为顶点的三角形（$\triangle PF_1F_2$），是解析几何中沟通定义、几何性质与解三角形的核心模型。</li>
+<li><strong>椭圆定义</strong>：$|PF_1|+|PF_2|=2a$。这是处理焦点三角形边长的首要工具。</li>
+<li><strong>基本特征量</strong>（椭圆）：长半轴 $a$，短半轴 $b$，半焦距 $c$，离心率 $e=\frac{c}{a}$，关系 $a^2=b^2+c^2$。</li>
+<li><strong>焦点三角形边角关系</strong>：</li>
+<li>底边：$|F_1F_2|=2c$。</li>
+<li>设 $|PF_1|=m,|PF_2|=n$，则 $m+n=2a$。</li>
+<li>顶角：$\angle F_1PF_2=\theta$。</li>
+<li>面积公式：$S_{\triangle PF_1F_2}=\frac12 mn\sin\theta=b^2\tan\frac{\theta}{2}$（椭圆专用）。当$\theta=90^\circ$时，$S=b^2$。</li>
+<li>余弦定理：$(2c)^2=m^2+n^2-2mn\cos\theta$。</li>
+<li><strong>离心率计算</strong>：通常利用焦点三角形的特殊几何关系（如垂直、等腰、等边，或给定边长比），建立 $a,c$ 的齐次方程，解出 $e=\frac{c}{a}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图标量</strong>：根据题意画出椭圆及焦点三角形，标出 $F_1,F_2,P$，并将已知的垂直、角度、线段长等条件标记在图上。</li>
+<li><strong>调用椭圆定义</strong>：涉及 $P$ 到两焦点的距离，优先写出 $|PF_1|+|PF_2|=2a$，并视情况设出其中一边为未知数。</li>
+<li><strong>挖掘几何特征</strong>：利用等腰、等边、直角、30°等条件，结合正弦定理、余弦定理或勾股定理建立边角方程。</li>
+<li><strong>构造 $a,c$ 关系</strong>：将所得边的关系代入椭圆定义与 $2c$ 的表示中，消去与 $P$ 坐标或具体边长有关的中间量，得到 $a,c$ 的等式，即可解得离心率 $e=\frac{c}{a}$。</li>
+<li><strong>求范围或特定值</strong>：若问题涉及存在性或取值范围，需利用椭圆上点的坐标范围（如 $x_P\in[-a,a]$）或焦半径取值范围 $[a-c,a+c]$，结合不等式求解 $a,b$ 的范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆长短轴</strong>：在面积、垂直等问题中将 $b^2$ 写成 $a^2$，或 $a^2=b^2+c^2$ 记错，导致离心率错解。</li>
+<li><strong>忽视定义域</strong>：利用存在点 $P$ 求参数范围时，忘记椭圆上点坐标的内在限制，如 $PF_1\perp PF_2$ 的存在条件为以 $F_1F_2$ 为直径的圆与椭圆有交点，即 $c\geq b$，否则漏掉 $a$ 的下限。</li>
+<li><strong>角度位置误判</strong>：把焦点三角形中的底角、顶角对应边弄错，如误将 $\angle PF_1F_2$ 当作顶角，或把 $|F_1F_2|$ 与 $|PF_2|$ 混淆。</li>
+<li><strong>通分/约分错误</strong>：在由特殊三角形边长比直接得出离心率时，忘记椭圆定义中的 $2a$ 系数，出现 $\frac{c}{a}$ 相差 2 倍的低级失误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题1：2019-文-20(1)</h3>
+<p><strong>题目</strong>：$F_1,F_2$ 是椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 焦点，$P$ 在椭圆上，$O$ 为原点，若 $\triangle POF_2$ 为等边三角形，求离心率。</p>
+<p><strong>思路</strong>：连接 $PF_1$，利用等边三角形得出 $\angle F_1PF_2=90^\circ$ 及 $|PF_2|=c,|PF_1|=\sqrt{3}c$，再由椭圆定义得 $c+\sqrt{3}c=2a$，即得 $e$。</p>
+<p><strong>步骤</strong>：
+- 由 $POF_2$ 等边知 $|PF_2|=c$, $\angle POF_2=60^\circ$。
+- 在 $\triangle PF_1O$ 中，$|OF_1|=c$, $\angle F_1OP=120^\circ$，得 $|PF_1|=\sqrt{3}c$。
+- 又 $PF_1\perp PF_2$（因为 $|PF_1|^2+|PF_2|^2=4c^2=|F_1F_2|^2$）。
+- 由定义：$\sqrt{3}c + c = 2a \Rightarrow (\sqrt{3}+1)c=2a$。
+- 所以 $e=\frac{c}{a}=\frac{2}{\sqrt{3}+1}=\sqrt{3}-1$。</p>
+<p><strong>点评/变式</strong>：利用等边三角形“隐藏”的直角是破题关键。变式：若改为 $\triangle POF_2$ 是顶角为 $120^\circ$ 的等腰三角形，则需用余弦定理求 $|PF_1|,|PF_2|$，方法不变。</p>
+<h3>题2：2013-文-05</h3>
+<p><strong>题目</strong>：椭圆左、右焦点 $F_1,F_2$，$P$ 在椭圆上，$PF_2\perp F_1F_2$，$\angle PF_1F_2=30^\circ$，求离心率。</p>
+<p><strong>思路</strong>：在直角三角形 $PF_1F_2$ 中，由 $30^\circ$ 角得三边比例，设 $|PF_2|=x$，则 $|PF_1|=2x$，$|F_1F_2|=\sqrt{3}x$，再代入椭圆定义即得。</p>
+<p><strong>步骤</strong>：
+- 设 $|PF_2|=t$，由 $PF_2\perp F_1F_2$ 及 $\angle PF_1F_2=30^\circ$ 得 $|PF_1|=2t$，$|F_1F_2|=\sqrt{3}t$。
+- 椭圆定义：$|PF_1|+|PF_2|=3t=2a \Rightarrow t=\frac{2a}{3}$。
+- 焦距：$2c=|F_1F_2|=\sqrt{3}t=\frac{2\sqrt{3}a}{3} \Rightarrow c=\frac{\sqrt{3}a}{3}$。
+- 所以 $e=\frac{c}{a}=\frac{\sqrt{3}}{3}$。</p>
+<p><strong>点评/变式</strong>：本题直接用边比例对接定义，步骤极简。注意不要混淆 $30^\circ$ 所在边的关系，若条件改为 $\angle PF_2F_1=30^\circ$，$t$ 与 $2c$ 的关系将改变，离心率结果不同，需仔细画图分析。</p>
+<h3>题3：2012-文-04</h3>
+<p><strong>题目</strong>：$F_1,F_2$ 是椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 左右焦点，$P$ 为直线 $x=\frac{3}{2}a$ 上一点，$\triangle F_2PF_1$ 是底角为 $30^\circ$ 的等腰三角形，求离心率。</p>
+<p><strong>思路</strong>：等腰三角形底角 $30^\circ$，则顶角 $\angle F_1PF_2=120^\circ$，且 $|PF_2|=|F_1F_2|=2c$。利用 $P$ 的横坐标与焦半径的几何关系，构造 $a,c$ 方程。</p>
+<p><strong>步骤</strong>：
+- 由等腰及底角 $30^\circ$ 知 $|PF_2|=|F_1F_2|=2c$，$\angle PF_2F_1=30^\circ$。
+- 过 $P$ 作 $x$ 轴垂线于 $F_2$ 或利用坐标：$P$ 横坐标为 $\frac{3}{2}a$，$F_2(c,0)$。
+- 点 $P$ 到 $F_2$ 的距离 $|PF_2|=\frac{3}{2}a-c$（注意 $P$ 与 $F_2$ 的横坐标差）。
+- 由 $|PF_2|=2c$ 得 $\frac{3}{2}a-c=2c \Rightarrow \frac{3}{2}a=3c \Rightarrow e=\frac{c}{a}=\frac{1}{2}$。</p>
+<p><strong>点评/变式</strong>：本题易错在将 $|PF_2|$ 用两点距离公式复杂化。抓住 $P$ 在直线 $x=\frac{3}{2}a$ 上、且 $P$ 与 $F_1,F_2$ 构成等腰三角形的几何对称性，直接得水平距离关系。若 $P$ 所在直线为 $x=k a$，则一般情况 $|ka-c|$ 与 $2c$ 相关，可求 $e$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-20.html">2019-文-20</a>（2019 · 中） 本题通过等边三角形和垂直焦点三角形情境，考查椭圆定义、离心率及参数范围的求解。</li>
+<li><a href="../../exam/数学/2013-文-05.html">2013-文-05</a>（2013 · 易） 求椭圆离心率，利用焦点三角形中垂直与角度关系计算。</li>
+<li><a href="../../exam/数学/2012-文-04.html">2012-文-04</a>（2012 · 中） 该题考查椭圆离心率的求解，利用等腰三角形和焦点三角形几何关系建立方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/571-焦点三角形.html">焦点三角形</a></li>
+</ul>
+</div>
+</body>
+</html>

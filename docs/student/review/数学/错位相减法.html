@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>错位相减法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>错位相减法</h1><div class="review-mark" data-stem="错位相减法"></div><div class="meta-card"><span><strong>考点</strong>错位相减法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2010–2021</li>
+<li>出现题位：解答17 解答19</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>错位相减法</strong>是求数列 ${a_n \cdot b_n}$ 前 $n$ 项和的核心方法，其中 ${a_n}$ 是等差数列，${b_n}$ 是公比为 $q$（$q \neq 1$）的等比数列。  </li>
+<li>操作要点：先写出 $S_n = a_1b_1 + a_2b_2 + \dots + a_nb_n$，再等式两边同乘 $q$，得 $qS_n$，两式错位相减，将“差”转化为等比数列求和。</li>
+<li>适用前提：准确识别等差数列与等比数列的通项结构，确保乘积形式，且等比数列公比不为 $1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>结构识别</strong>：确认所求数列可拆分为一个等差数列和一个等比数列的乘积，化为标准形式 $c_n = (An+B) \cdot q^{n-1}$。  </li>
+<li><strong>写 $S_n$ 展开</strong>：按 $n$ 从 $1$ 到 $n$ 写出和式，各项对齐指数。  </li>
+<li><strong>同乘公比</strong>：在等式两边同乘等比数列的公比 $q$，得到 $qS_n$ 的展开式，注意指数同步偏移。  </li>
+<li><strong>错位相减</strong>：用 $S_n - qS_n$（或 $qS_n - S_n$），使中间项系数呈现规律，形成等比数列的前 $n-1$ 项和（或 $n$ 项）结构。  </li>
+<li><strong>等比求和</strong>：提取公因式，利用等比求和公式 $a_1\frac{1-q^{m}}{1-q}$ 计算中间部分，注意项数为 $n-1$ 的场景。  </li>
+<li><strong>解出 $S_n$</strong>：整理化简得 $S_n = \frac{1}{1-q}\big[\text{表达式}\big]$，并通分、合并同类项得到最简结果。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错位错项</strong>：乘 $q$ 后不移位对齐，导致相减时首尾项遗漏或系数错误。  </li>
+<li><strong>项数误判</strong>：中间等比部分求和时，将项数 $n-1$ 误当 $n$ 使用，尤其首项已提前提出时。  </li>
+<li><strong>符号混乱</strong>：采用 $S_n - qS_n$ 或 $qS_n - S_n$ 时遗忘整体乘以 $-1$ 导致的符号错漏。  </li>
+<li><strong>零项忽略</strong>：求和最终表达式在 $n=1$ 时不适用，需单独验证（若题目未要求可不写，但心中应有意识）。  </li>
+<li><strong>指数运算</strong>：乘公比时，$q^n \cdot q = q^{n+1}$，但代入求和公式时混淆指数偏移。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2021-文-19）</h3>
+<p>已知 ${a_n}$ 是首项为 $1$ 的等比数列，$a_1, 3a_2, 9a_3$ 成等差数列；$b_n = \frac{n a_n}{3}$。（1）求 ${a_n}$、${b_n}$ 的通项；（2）记 $S_n, T_n$ 分别为 ${a_n}$、${b_n}$ 前 $n$ 项和，证明 $T_n &lt; \frac{S_n}{2}$。  </p>
+<p><strong>思路</strong><br />
+由等差条件求出等比公比 $q$，得 $a_n$；代入得 $b_n = \frac{n}{3^n}$，属典型“等差乘等比”，适合错位相减法求 $T_n$。再算出 $S_n$，作差比较 $T_n$ 与 $\frac{S_n}{2}$。</p>
+<p><strong>步骤</strong><br />
+设公比为 $q$，$a_n = q^{n-1}$。由 $a_1 + 9a_3 = 2 \cdot 3a_2$ 得 $1+9q^2 = 6q$，解得 $q = \frac{1}{3}$，故 $a_n = \left(\frac{1}{3}\right)^{n-1}$，$S_n = \frac{1 - (1/3)^n}{1 - 1/3} = \frac{3}{2}\left(1 - \frac{1}{3^n}\right)$。<br />
+又 $b_n = \frac{n}{3}\cdot\left(\frac{1}{3}\right)^{n-1} = \frac{n}{3^n}$，则<br />
+$$T_n = \frac{1}{3} + \frac{2}{3^2} + \frac{3}{3^3} + \dots + \frac{n}{3^n}$$<br />
+乘以公比 $\frac{1}{3}$：<br />
+$$\frac{1}{3}T_n = \frac{1}{3^2} + \frac{2}{3^3} + \dots + \frac{n-1}{3^n} + \frac{n}{3^{n+1}}$$<br />
+两式相减（$T_n - \frac{1}{3}T_n$）：<br />
+$$\frac{2}{3}T_n = \frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \dots + \frac{1}{3^n} - \frac{n}{3^{n+1}} = \frac{\frac{1}{3}\left(1 - \frac{1}{3^n}\right)}{1 - \frac{1}{3}} - \frac{n}{3^{n+1}}$$<br />
+化简得 $T_n = \frac{3}{4} - \frac{2n+3}{4 \cdot 3^n}$。<br />
+计算 $\frac{S_n}{2} = \frac{3}{4} - \frac{3}{4 \cdot 3^n}$，则 $\frac{S_n}{2} - T_n = \frac{2n}{4 \cdot 3^n} &gt; 0$，故 $T_n &lt; \frac{S_n}{2}$。</p>
+<p><strong>点评/变式</strong><br />
+本题将等比数列性质与错位相减求和结合，证明不等式需先求出精确和再作差。易错点在于 $T_n$ 化简时合并常数项符号，以及中间等比部分求和的首项为 $\frac{1}{3}$、项数为 $n$。变式：若 $b_n = \frac{n}{a_n}$，形式类似，错位相减时公比取倒数即可。</p>
+<hr />
+<h3><strong>题目</strong>（2010-理-17）</h3>
+<p>数列 ${a_n}$ 满足 $a_1=2$，$a_{n+1} - a_n = 3 \cdot 2^{2n-1}$。（1）求通项 $a_n$；（2）令 $b_n = n a_n$，求 ${b_n}$ 前 $n$ 项和 $S_n$。</p>
+<p><strong>思路</strong><br />
+（1）利用累加法求 $a_n$，注意右边可化为等比数列求和；（2）得 $b_n = n \cdot 2^{2n-1}$，为“等差 $\times$ 等比”型，公比 $4$，利用错位相减法。</p>
+<p><strong>步骤</strong><br />
+（1）由递推累加：<br />
+$a_n = a_1 + \sum_{k=1}^{n-1} (a_{k+1} - a_k) = 2 + 3\sum_{k=1}^{n-1} 2^{2k-1} = 2 + 3 \cdot \frac{2\left(4^{n-1} - 1\right)}{4 - 1} = 2^{2n-1}.$<br />
+（2）$b_n = n \cdot 2^{2n-1}$，令 $S_n = \sum_{k=1}^n k \cdot 2^{2k-1}$。写为<br />
+$$S_n = 1 \cdot 2 + 2 \cdot 2^3 + 3 \cdot 2^5 + \dots + n \cdot 2^{2n-1}$$<br />
+公比 $q = 2^2 = 4$，乘 $4$：<br />
+$$4S_n = 1 \cdot 2^3 + 2 \cdot 2^5 + \dots + (n-1) \cdot 2^{2n-1} + n \cdot 2^{2n+1}$$<br />
+错位相减 $4S_n - S_n$：<br />
+$$3S_n = -2 - (2^3 + 2^5 + \dots + 2^{2n-1}) + n \cdot 2^{2n+1}$$<br />
+中间是首项 $2^3 = 8$，公比 $4$，项数 $n-1$ 的等比数列求和，得：<br />
+$$3S_n = -2 - \frac{8(4^{n-1} - 1)}{4-1} + n \cdot 2^{2n+1} = \frac{(3n-1)2^{2n+1} + 2}{3}$$<br />
+故 $S_n = \frac{(3n-1)2^{2n+1} + 2}{9}$。</p>
+<p><strong>点评/变式</strong><br />
+本题先由递推累加求出等比型通项，成为错位相减的铺垫。乘公比时选择 $4S_n - S_n$ 可避免负号太多。求和时特别注意中间等比部分的项数为 $n-1$，而非 $n$。变式可令 $b_n = \frac{n}{a_n}$，$a_n = 2^{2n-1}$，则应用错位相减时公比变为 $\frac{1}{4}$，方法完全对称。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-19.html">2021-文-19</a>（2021 · 中） 本题考查等比数列通项与求和、等差数列性质及错位相减法证明不等式。</li>
+<li><a href="../../exam/数学/2010-理-17.html">2010-理-17</a>（2010 · 中） 数列递推求通项公式及错位相减法求和</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/385-数列错位相减.html">错位相减法</a></li>
+</ul>
+</div>
+</body>
+</html>

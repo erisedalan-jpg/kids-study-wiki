@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦点弦</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>焦点弦</h1><div class="review-mark" data-stem="焦点弦"></div><div class="meta-card"><span><strong>考点</strong>焦点弦</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：7</li>
+<li>真题数：5；年份跨度：2008–2018</li>
+<li>出现题位：填空15 解答19 解答20 选择10</li>
+<li>难度分布：中4 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线焦点弦定义</strong>：过抛物线焦点的直线与抛物线相交所得线段 $AB$ 称为焦点弦。</li>
+<li><strong>标准方程与焦点、准线</strong>：对于 $y^2=2px\ (p&gt;0)$，焦点 $F(\frac p2,0)$，准线 $x=-\frac p2$。对于 $x^2=2py$ 可类似对应。</li>
+<li><strong>抛物线定义</strong>：抛物线上任一点到焦点的距离等于该点到准线的距离。对 $y^2=2px$ 上点 $P(x_0,y_0)$，有 $|PF|=x_0+\frac p2$。</li>
+<li><strong>焦点弦长公式（通用方法）</strong>：设焦点弦所在直线 $y=k(x-\frac p2)$，与抛物线联立，利用韦达定理求 $x_1+x_2$，则
+  $$|AB|=x_1+x_2+p$$
+  推导依据：$|AF|=x_1+\frac p2$，$|BF|=x_2+\frac p2$，相加即得。</li>
+<li><strong>焦点弦长公式（倾斜角版）</strong>：若焦点弦 $AB$ 的倾斜角为 $\theta(\theta\neq 0)$，则
+  $$|AB|=\frac{2p}{\sin^2\theta}$$
+  特别地，当 $\theta=90^\circ$（通径）时 $|AB|=2p$，为焦点弦中最短。</li>
+<li><strong>焦点弦坐标关系</strong>：在 $y^2=2px$ 下，设 $A(x_1,y_1),B(x_2,y_2)$，焦点弦所在直线为 $x=my+\frac p2$，联立得 $y^2-2pmy-p^2=0$，则 $y_1y_2=-p^2$，$x_1x_2=\frac{p^2}{4}$。</li>
+<li><strong>以弦为直径的圆与准线的位置关系</strong>：以抛物线的焦点弦为直径的圆必与准线相切。切点即为该弦两端点向准线所作垂线的垂足连线中点，或弦的中点在准线上的投影。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建系写方程</strong>：根据抛物线方程确定 $p$、焦点和准线。设出焦点弦所在直线方程，常用 $y=k(x-\frac p2)$（需注意斜率不存在的情况）或 $x=my+\frac p2$（避免讨论斜率 $k$ 是否存在，更适用于抛物线 $y^2=2px$）。</li>
+<li><strong>联立消元</strong>：将直线方程代入抛物线方程，消去 $x$ 或 $y$，得到一元二次方程。例如对 $y^2=2px$ 用 $x=my+\frac p2$ 消 $x$ 得 $y^2-2pmy-p^2=0$。</li>
+<li><strong>韦达定理抓关系</strong>：写出两根和与积。由条件等式建立关于参数（$k$ 或 $m$）的方程，解出参数，得到直线方程。</li>
+<li><strong>弦长问题优选公式</strong>：</li>
+<li>已知倾斜角 $\theta$ 或易求 $\sin\theta$，直接使用 $|AB|=\frac{2p}{\sin^2\theta}$，简便快捷。</li>
+<li>已有坐标关系时，使用 $|AB|=x_1+x_2+p$ 或 $|AB|=\sqrt{1+k^2}|x_1-x_2|$，$|AB|=\sqrt{1+m^2}|y_1-y_2|$。</li>
+<li><strong>几何性质辅助</strong>：在处理与准线相切、求圆心等问题时，灵活运用抛物线的定义和焦点弦的几何性质（如以焦点弦为直径的圆与准线相切，圆心为弦中点，半径为弦长一半等），可大幅简化计算。</li>
+<li><strong>与面积结合</strong>：求 $\triangle OAB$ 面积时常拆分为 $\triangle OAF$ 与 $\triangle OBF$ 面积之和，即 $S=\frac12\cdot|OF|\cdot|y_1-y_2|$，利用韦达定理求 $|y_1-y_2|$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略斜率不存在的情况</strong>：设直线为 $y=k(x-\frac p2)$ 时，必须考虑 $k$ 不存在（倾斜角 $90^\circ$）的情形，即通径 $x=\frac p2$。若未单独讨论可能漏解。</li>
+<li><strong>焦点弦长公式用错位置</strong>：公式 $|AB|=x_1+x_2+p$ 以及 $|AB|=\frac{2p}{\sin^2\theta}$ 仅适用于 $y^2=2px$ 形式的抛物线。对于 $x^2=2py$，焦点弦长公式相应变为 $|AB|=y_1+y_2+p$ 及 $|AB|=\frac{2p}{\cos^2\theta}$，切勿机械记忆。</li>
+<li><strong>韦达定理符号错误</strong>：联立方程后两根和、积的符号易错，尤其焦点弦方程代入 $y^2=2px$ 时常有常数项为 $-p^2$，注意 $y_1y_2=-p^2$ 的符号。</li>
+<li><strong>长度与斜率、倾斜角转化错误</strong>：由 $|AB|=\frac{2p}{\sin^2\theta}$ 解 $\sin^2\theta$ 时，若限制 $k&gt;0$ 或 $\theta$ 范围，要注意取舍。</li>
+<li><strong>圆的方程求解遗漏条件</strong>：求过两点且与准线相切的圆时，不仅要注意圆心在弦的垂直平分线上，还要充分利用抛物线的定义判断切点位置，避免复杂的待定系数法。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2018年（文20/理19）——抛物线焦点弦与相切圆</h3>
+<p><strong>题目</strong>：抛物线 $C:y^2=4x$，焦点 $F$，过 $F$ 斜率为 $k(k&gt;0)$ 的直线 $l$ 与 $C$ 交于 $A,B$，$|AB|=8$。（1）求 $l$ 方程；（2）求过点 $A,B$ 且与 $C$ 的准线相切的圆的方程。</p>
+<p><strong>思路</strong>：
+（1）由 $y^2=4x$ 得 $p=2$，焦点 $F(1,0)$。求直线方程，可利用焦点弦长公式求 $k$。两种方法：一是设直线 $y=k(x-1)$，联立得 $x_1+x_2$，用 $|AB|=x_1+x_2+p=8$ 解 $k$；二是直接用 $|AB|=\frac{2p}{\sin^2\theta}=8$，由 $\sin^2\theta=\frac{4}{8}=\frac12$ 得倾斜角，进而得 $k$。注意 $k&gt;0$，故 $k=1$。
+（2）由焦点弦几何性质：以 $AB$ 为直径的圆与准线相切。因此所求圆的圆心为 $AB$ 的中点 $D$，半径 $R=\frac{|AB|}{2}=4$。求出中点坐标和准线方程即可写出圆方程。</p>
+<p><strong>步骤</strong>：
+（1）法一：由 $y^2=4x$ 得 $p=2$，焦点 $F(1,0)$。设 $l:y=k(x-1)$，代入抛物线：$k^2x^2-2(k^2+2)x+k^2=0$，则 $x_1+x_2=\frac{2(k^2+2)}{k^2}$。焦点弦长 $|AB|=x_1+x_2+p=\frac{2(k^2+2)}{k^2}+2=8$，解得 $k^2=1$，又 $k&gt;0$，故 $k=1$，直线 $l$ 方程为 $y=x-1$。
+法二：由焦点弦长公式 $|AB|=\frac{2p}{\sin^2\theta}=\frac{4}{\sin^2\theta}=8$，得 $\sin^2\theta=\frac12$，$\theta=45^\circ$ 或 $135^\circ$，$k=\tan\theta=1$（$k&gt;0$ 取 $45^\circ$）。得 $l:y=x-1$。
+（2）由（1）得 $|AB|=8$，则半径 $R=4$。准线 $x=-1$。设 $A(x_1,y_1),B(x_2,y_2)$，由 $\begin{cases}y=x-1\y^2=4x\end{cases}$ 得 $x^2-6x+1=0$，中点 $D(3,2)$。由几何性质，以 $AB$ 为直径的圆与准线相切，故圆心到准线距离 $d=3-(-1)=4=R$，满足条件。因此圆心即为 $D(3,2)$，圆方程为 $(x-3)^2+(y-2)^2=16$。</p>
+<p><strong>点评/变式</strong>：本题（2）若直接设圆的方程待定系数会较繁，利用焦点弦的几何性质可直接得圆心为弦中点、半径等于半弦长，该性质对任意抛物线焦点弦均成立。变式：若已知弦长求斜率，注意斜率正负取舍；若将“与准线相切”改为“与 $y$ 轴相切”等，则需另用条件解圆心。</p>
+<h3>2014年文科第10题——焦点弦长公式直接应用</h3>
+<p><strong>题目</strong>：抛物线 $C:y^2=3x$ 焦点 $F$，过 $F$ 倾斜角 $30^\circ$ 的直线交 $C$ 于 $A,B$，则 $|AB|$ 等于多少。</p>
+<p><strong>思路</strong>：由 $y^2=3x$ 得 $2p=3$，即 $p=\frac32$。已知倾斜角 $\theta=30^\circ$，直接利用焦点弦长公式 $|AB|=\frac{2p}{\sin^2\theta}$ 计算最快捷。也可用联立法：写直线、联立、韦达定理、$x_1+x_2+p$。但用公式一步到位。</p>
+<p><strong>步骤</strong>：
+由 $y^2=3x$ 得 $p=\frac32$，焦点 $F(\frac34,0)$，准线 $x=-\frac34$。直线倾斜角 $\theta=30^\circ$，则 $\sin\theta=\frac12$，$\sin^2\theta=\frac14$。焦点弦长
+$$|AB|=\frac{2p}{\sin^2\theta}=\frac{3}{\frac14}=12.$$
+（也可用通式法：直线 $y=\frac{\sqrt3}{3}(x-\frac34)$，联立求 $x_1+x_2$，再 $|AB|=x_1+x_2+p=12$，过程略。）</p>
+<p><strong>点评/变式</strong>：本题为选择题，使用焦点弦倾斜角公式可秒杀。注意公式的适用条件——必须是抛物线标准方程 $y^2=2px$，焦点在 $x$ 轴正半轴。若抛物线为 $x^2=2py$，则弦长公式变为 $|AB|=\frac{2p}{\cos^2\theta}$（$\theta$ 为倾斜角）。同源题 2014 理科第10题在此基础上增加了面积考查，用 $S=\frac12|OF|\cdot|y_1-y_2|$ 求解，同样可结合韦达定理或焦点弦坐标关系快速得出。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-20.html">2018-文-20</a>（2018 · 中） 考查抛物线与直线相交的焦点弦问题，并求过交点与准线相切的圆的方程。</li>
+<li><a href="../../exam/数学/2018-理-19.html">2018-理-19</a>（2018 · 中） 求抛物线焦点弦所在直线方程及与准线相切的圆方程</li>
+<li><a href="../../exam/数学/2014-文-10.html">2014-文-10</a>（2014 · 中） 本题考查抛物线焦点弦长度的计算，通过焦点和倾斜角求直线方程，联立抛物线利用弦长公式求解。</li>
+<li><a href="../../exam/数学/2014-理-10.html">2014-理-10</a>（2014 · 中） 抛物线焦点弦与原点构成的三角形面积计算</li>
+<li><a href="../../exam/数学/2008-理-15.html">2008-理-15</a>（2008 · 难） 已知抛物线焦点和弦长，求两段焦半径比值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/380-抛物线焦点弦.html">焦点弦</a></li>
+</ul>
+</div>
+</body>
+</html>

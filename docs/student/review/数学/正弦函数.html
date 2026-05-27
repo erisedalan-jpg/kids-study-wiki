@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数</h1><div class="review-mark" data-stem="正弦函数"></div><div class="meta-card"><span><strong>考点</strong>正弦函数</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：12</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦函数定义</strong>：$y=\sin x$，定义域 $\mathbb{R}$，值域 $[-1,1]$，最小正周期 $2\pi$，奇函数，图像关于原点对称。</li>
+<li><strong>一般正弦型函数</strong>：$y=A\sin(\omega x+\varphi)+k$（$A\neq0,\omega\neq0$）：</li>
+<li>最小正周期：$T=\frac{2\pi}{|\omega|}$（$\omega$ 决定横向伸缩，周期只与 $\omega$ 有关，与 $A,\varphi,k$ 无关）。</li>
+<li>值域：$[-|A|+k,\,|A|+k]$。</li>
+<li>对称轴：令 $\omega x+\varphi=\frac{\pi}{2}+k\pi\,(k\in\mathbb{Z})$ 解出 $x$。</li>
+<li>对称中心：令 $\omega x+\varphi=k\pi\,(k\in\mathbb{Z})$ 得 $x$，中心为 $(x,k)$。</li>
+<li>单调区间：将 $\omega x+\varphi$ 代入 $y=\sin t$ 的单调区间解 $x$（注意 $\omega$ 正负）。</li>
+<li><strong>五点法作图</strong>：取 $\omega x+\varphi=0,\frac{\pi}{2},\pi,\frac{3\pi}{2},2\pi$ 的五个点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>求正弦型函数最小正周期的通用步骤：
+1. <strong>化为标准形式</strong>：将函数写成 $y=A\sin(\omega x+\varphi)+k$ 或 $y=A\cos(\omega x+\varphi)+k$，明确 $\omega$。
+2. <strong>提取 $\omega$</strong>：若函数为复合形式（如 $y=\sin\left(2x+\frac{\pi}{3}\right)$），直接读取 $\omega$ 的系数。注意 $\omega$ 应为 $x$ 的系数，不含括号内常数项。
+3. <strong>代公式</strong>：最小正周期 $T=\frac{2\pi}{|\omega|}$。$\omega$ 必须加绝对值以避免负数导致的错误。
+4. <strong>选答案</strong>：结合选项选择最简结果。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略绝对值</strong>：$\omega&lt;0$ 时忘记取绝对值，例如 $y=\sin(-2x)$ 的周期是 $\frac{2\pi}{|-2|}=\pi$，而非负周期。</li>
+<li><strong>周期公式混淆</strong>：正弦/余弦的周期是 $\frac{2\pi}{|\omega|}$；正切函数的周期是 $\frac{\pi}{|\omega|}$。切忌将正切周期公式用于正弦。</li>
+<li><strong>系数提取错误</strong>：如 $y=\sin\left(\frac{\pi}{3}-2x\right)$，应先将 $\omega$ 提取为 $-2$ 或直接看 $x$ 系数的绝对值 $2$，周期仍为 $\pi$，不因内部常数顺序而改变。</li>
+<li><strong>误认为相位或振幅影响周期</strong>：$A$ 和 $\varphi$ 只影响值域和平移，不改变周期长度。</li>
+<li><strong>复合函数误判</strong>：遇到 $y=|\sin x|$ 或 $y=\sin|x|$ 类变形时，需结合图像分析周期变化，不能直接套用公式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：函数 $f(x)=\sin\left(2x+\frac{\pi}{3}\right)$ 的最小正周期为（ ）
+A. $4\pi$　　B. $2\pi$　　C. $\pi$　　D. $\frac{\pi}{2}$</p>
+<p><strong>思路</strong>：题中函数已化为 $y=\sin(\omega x+\varphi)$ 形式，直接读出 $\omega=2$，代入正弦函数周期公式 $T=\frac{2\pi}{|\omega|}$ 即可。</p>
+<p><strong>步骤</strong>：
+1. 确定函数形式为 $f(x)=\sin(\omega x+\varphi)$，其中 $\omega=2$。
+2. 计算最小正周期：$T=\frac{2\pi}{|2|}=\pi$。
+3. 对应选项，选 C。</p>
+<p><strong>点评/变式</strong>：
+- 本题为高考基础题，牢记公式即可秒杀。注意无论 $\varphi$ 是何值，周期只由 $\omega$ 决定。
+- 变式 1：$f(x)=2\sin\left(-\frac{1}{2}x+\frac{\pi}{4}\right)-1$ 的最小正周期为 $\frac{2\pi}{|-1/2|}=4\pi$。
+- 变式 2：若题干为 $f(x)=\sin\left(\frac{\pi}{3}-3x\right)$，则 $\omega=-3$，周期 $T=\frac{2\pi}{3}$。
+- 拓展：结合单调性、对称性考查时，先由周期公式求出 $\omega$，再进一步解不等式或方程。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-03.html">2017-文-03</a>（2017 · 易） 该题考查三角函数的最小正周期计算，利用周期公式直接求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/310-正弦函数图象与性质.html">正弦函数</a></li>
+</ul>
+</div>
+</body>
+</html>

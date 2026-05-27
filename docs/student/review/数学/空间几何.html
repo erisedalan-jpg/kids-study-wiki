@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间几何</h1><div class="review-mark" data-stem="空间几何"></div><div class="meta-card"><span><strong>考点</strong>空间几何</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>异面直线所成的角</strong>：过空间任意一点 $O$，分别引两条异面直线的平行线，所成的锐角或直角称为异面直线的夹角。范围：$\theta \in (0,\frac{\pi}{2}]$。</li>
+<li><strong>平移法（定义法）</strong>：利用三角形中位线、平行四边形等性质，将一条或两条异面直线平移到同一平面，转化为平面角求解。</li>
+<li><strong>补形法</strong>：将原几何体补成更规则的几何体（如直三棱柱补成直四棱柱），使异面直线关系显化，方便平移与计算。</li>
+<li><strong>余弦定理</strong>：在求夹角时，将角置于三角形中，通过三边长度求角：$\cos \theta = \frac{a^2+b^2-c^2}{2ab}$。</li>
+<li><strong>空间距离与长度计算</strong>：结合勾股定理、直角三角形性质求线段长度，涉及不在同一平面内的线段时常需构造直角或借助中间量（如本题中 $MQ$、$MP$ 的计算）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>选点平移</strong>：选取异面直线中一条的端点或中点，或直接选取空间中的特定点（如另一条直线上的点），利用三角形中位线、平行四边形等构造平行线，将两条异面直线平移到同一平面，得到夹角。</li>
+<li><strong>构造三角形</strong>：连接平移后对应点，得到包含所求角（或其补角）的三角形。</li>
+<li><strong>求三边长度</strong>：综合运用题给数据、勾股定理、余弦定理等，逐一计算所构三角形的三边长。</li>
+<li>底面上线段优先用余弦定理（已知两边一夹角时）。</li>
+<li>侧棱或高与底面垂直的线段，利用垂直关系转化为直角三角形求解。</li>
+<li><strong>求角</strong>：利用余弦定理求出夹角余弦值。注意：若求出余弦为负，则异面直线所成角为其补角，应取正余弦值。</li>
+<li><strong>补形优化（可选）</strong>：若平移构造复杂，可将直三棱柱补成直四棱柱，使目标直线自然平移到可解位置，简化计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略角的范围</strong>：异面直线所成角范围是 $(0,\frac{\pi}{2}]$，计算出余弦值为负时，必须取绝对值作为答案，否则会误选负值选项。</li>
+<li><strong>中点选取不当</strong>：构造中位线时，若选点不恰当（如非中点），则所得线段长度难以计算，应优先选择与已知长度关联大的中点（如棱中点、底面顶点与中点等）。</li>
+<li><strong>三角形边长计算错误</strong>：底面非直角三角形使用余弦定理时，注意公式符号：$c^2=a^2+b^2-2ab\cos C$，特别是钝角其余弦为负值，计算时容易漏掉负号或算错。</li>
+<li><strong>空间想象欠缺</strong>：将异面直线夹角误认为相交直线夹角，或者平移后误认成邻补角，未进行补角转换。</li>
+<li><strong>误用勾股定理</strong>：非直角三角形的第三边不能直接用勾股定理，需先用余弦定理求出必要线段。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017·理·10）</h3>
+<p>已知直三棱柱 $ABC-A_1B_1C_1$ 中，$\angle ABC = 120^\circ$，$AB=2$，$BC=CC_1=1$，求异面直线 $AB_1$ 与 $BC_1$ 所成角的余弦值。</p>
+<p><strong>思路</strong>：可采用平移法——取相关棱的中点，利用中位线定理将 $AB_1$、$BC_1$ 平移到同一三角形中；或采用补形法将三棱柱补成四棱柱，使 $BC_1$ 平移至 $AD_1$ 等可解位置。两种方法均需先求各线段长，再用余弦定理求角，注意角可能为其补角。</p>
+<p><strong>步骤</strong>（平移法）：
+1. 设 $M$、$N$、$P$ 分别为 $AB$、$BB_1$、$B_1C_1$ 的中点，连接 $MN$、$NP$、$MP$。
+2. 由中位线得 $MN \parallel AB_1$，且 $MN = \frac{1}{2}AB_1$；$NP \parallel BC_1$，且 $NP = \frac{1}{2}BC_1$。故 $\angle MNP$ 或其补角为异面直线所成角。
+3. 计算所需线段：
+   - $AB_1 = \sqrt{AB^2 + BB_1^2} = \sqrt{2^2+1^2} = \sqrt{5}$，所以 $MN = \frac{\sqrt{5}}{2}$。
+   - $BC_1 = \sqrt{BC^2 + CC_1^2} = \sqrt{1^2+1^2} = \sqrt{2}$，所以 $NP = \frac{\sqrt{2}}{2}$。
+   - 在底面 $ABC$ 中，由余弦定理求 $AC$：
+     $$AC^2 = AB^2 + BC^2 - 2\cdot AB\cdot BC\cdot\cos120^\circ = 4+1 - 2\times2\times1\times(-\frac12) = 7$$
+     得 $AC=\sqrt{7}$。
+   - 取 $BC$ 中点 $Q$，连接 $PQ$、$MQ$。易知 $PQ \perp$ 底面（因 $P$ 在 $B_1C_1$ 中点，$Q$ 在 $BC$ 中点，$PQ \parallel BB_1$ 且长度等于 $BB_1=1$）。
+   - $MQ$ 为 $\triangle ABC$ 中位线，$MQ \parallel AC$ 且 $MQ = \frac{1}{2}AC = \frac{\sqrt{7}}{2}$。
+   - 在 $\triangle MQP$ 中，$\angle MQP = 90^\circ$，故 $MP = \sqrt{PQ^2 + MQ^2} = \sqrt{1^2 + (\frac{\sqrt{7}}{2})^2} = \frac{\sqrt{11}}{2}$。
+4. 在 $\triangle MNP$ 中，由余弦定理：
+   $$\cos \angle MNP = \frac{MN^2 + NP^2 - MP^2}{2 \cdot MN \cdot NP} = \frac{(\frac{\sqrt{5}}{2})^2 + (\frac{\sqrt{2}}{2})^2 - (\frac{\sqrt{11}}{2})^2}{2 \cdot \frac{\sqrt{5}}{2} \cdot \frac{\sqrt{2}}{2}} = \frac{\frac{5}{4}+\frac{2}{4}-\frac{11}{4}}{\frac{\sqrt{10}}{2}} = \frac{-1}{\frac{\sqrt{10}}{2}} = -\frac{\sqrt{10}}{5}$$
+5. 因为异面直线所成角为锐角或直角，故余弦值应取正值：$\cos\theta = |\cos\angle MNP| = \frac{\sqrt{10}}{5}$。</p>
+<p><strong>点评/变式</strong>：本题典型地体现了“平移—构造三角形—解三角形”的标准化流程。易错点在于余弦定理中钝角的处理，以及最后一步绝对值转换。补形法（将直三棱柱补成底面为平行四边形的直四棱柱 $ABCD-A_1B_1C_1D_1$，连接 $AD_1$，则 $AD_1 \parallel BC_1$，$\angle B_1AD_1$ 即为所求角）会使计算更简捷，建议掌握。变式常考：已知正三棱柱、侧棱垂直于底面的棱锥等情形，方法相通。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-10.html">2017-理-10</a>（2017 · 中） 已知直三棱柱中求异面直线所成角的余弦值，通过几何法或补形法求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1044-空间几何.html">空间几何</a></li>
+</ul>
+</div>
+</body>
+</html>

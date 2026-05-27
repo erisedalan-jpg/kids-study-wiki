@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>互斥事件</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>互斥事件</h1><div class="review-mark" data-stem="互斥事件"></div><div class="meta-card"><span><strong>考点</strong>互斥事件</span><span><strong>权重</strong>22</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：22</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>互斥事件</strong>：事件 $A$ 与 $B$ 不能同时发生，即 $A \cap B = \varnothing$。互斥事件的和的概率：$P(A \cup B) = P(A) + P(B)$。推广到两两互斥事件 $A_1,A_2,\dots,A_n$，有 $P\left(\bigcup_{i=1}^n A_i\right) = \sum_{i=1}^n P(A_i)$。</li>
+<li><strong>相互独立事件</strong>：若 $P(AB)=P(A)P(B)$，则 $A$ 与 $B$ 相互独立。多个事件相互独立要求任意子集均满足积的概率等于概率的积。</li>
+<li><strong>独立重复试验</strong>：在相同条件下重复 $n$ 次试验，每次结果互不影响，则 $n$ 次试验相互独立。若每次成功概率为 $p$，则恰有 $k$ 次成功的概率为 $\operatorname{C}_{n}^{k} p^{k}(1-p)^{n-k}$。</li>
+<li><strong>复杂事件分解</strong>：将目标事件分解为若干互斥事件的和，或若干独立事件的积，再利用概率公式计算。若直接求和困难，可考虑其对立事件。</li>
+<li><strong>作差比较概率大小</strong>：对两个概率 $P_1,P_2$，可通过计算 $P_1 - P_2$ 的符号来判断大小，尤其当概率表达式含参数时，常可因式分解判号。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确事件与记号</strong>：先定义基本事件及其概率，如本题中“发送 0 收到 1”的概率为 $a$，“发送 1 收到 0”的概率为 $b$，则正确接收概率为 $1-a$ 与 $1-b$。</li>
+<li><strong>分解复杂事件</strong>：  </li>
+<li>若事件可表为若干独立事件的积，则概率相乘。  </li>
+<li>若事件可表为若干互斥事件的和，则概率相加。  </li>
+<li>对于“$n$ 次传输中译码为某信号”，找出所有满足译码规则的情形，它们两两互斥。</li>
+<li><strong>列出所有互斥情形</strong>：如发送 1 进行三次传输，译码为 1 是指收到三个信号中出现次数多的为 1，即收到 2 个 1 和 1 个 0，或 3 个 1。注意防止遗漏或重复。</li>
+<li><strong>利用独立重复试验公式（可选）</strong>：三次传输可视为 3 次独立重复试验，正确接收概率为 $1-b$，错误概率为 $b$。译码为 1 即成功次数 $\geq 2$，其概率为 $\operatorname{C}_3^2 (1-b)^2 b + \operatorname{C}_3^3 (1-b)^3$。</li>
+<li><strong>作差比较</strong>：比较两种方案概率大小时，列出概率作差 $P_{\text{三次}} - P_{\text{单次}}$，因式分解，结合参数范围判断符号。通常利用 $a&lt;0.5$ 等条件确定某个因式的正负。</li>
+<li><strong>选项逐项验证</strong>：多选题需逐个判别，计算一项确认一项。遇到不确定时可先跳过，最后回查。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆互斥与独立</strong>：互斥事件一般不独立（除非概率为 0），独立事件一般不为互斥。本题中“依次收到 1,0,1”是三个独立事件的积，切勿用加法。</li>
+<li><strong>遗漏译码规则的某些情形</strong>：三次传输译码为 1 需要收到 2 个或 3 个 1，有时只想到 3 个 1 或只写出一种排列（如 1,1,0）而忽略 1,0,1 和 0,1,1。必须用组合数或列举全面。</li>
+<li><strong>误用二项分布系数</strong>：$k$ 次成功恰有 $\operatorname{C}_n^k$ 种排列，丢系数导致概率偏小。本题 C 选项的错误正是缺少系数 3。</li>
+<li><strong>概率相乘时底数误用</strong>：需分清当前讨论的是发送 0 还是发送 1，分别对应概率 $a,b$ 及对应正确率 $1-a,1-b$，不要串用。</li>
+<li><strong>比较大小不彻底</strong>：作差后未结合参数范围判断因式符号，或忽略 $a&gt;0$ 等隐含条件导致判断错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2023·新课标Ⅱ·12（多选）</h3>
+<p>在信道内传输 0,1 信号，信号的传输相互独立。发送 0 时，收到 1 的概率为 $a(0&lt;a&lt;1)$，收到 0 的概率为 $1-a$；发送 1 时，收到 0 的概率为 $b(0&lt;b&lt;1)$，收到 1 的概率为 $1-b$。考虑单次传输和三次传输两种方案。三次传输译码规则：收到的信号中出现次数多的即为译码。则下列选项正确的有：<br />
+A. 单次传输，依次发送 1,0,1，依次收到 1,0,1 的概率为 $(1-a)(1-b)^2$<br />
+B. 三次传输，发送 1，依次收到 1,0,1 的概率为 $b(1-b)^2$<br />
+C. 三次传输，发送 1，译码为 1 的概率为 $b(1-b)^2 + (1-b)^3$<br />
+D. 当 $0&lt;a&lt;0.5$ 时，若发送 0，采用三次传输方案译码为 0 的概率大于单次传输译码为 0 的概率  </p>
+<p><strong>思路</strong><br />
+A 选项：三个独立事件的积——发送1收1、发送0收0、发送1收1，概率相乘。<br />
+B 选项：三次传输发送1相当于三次独立发送1，事件为“收1、收0、收1”的积，概率 $ (1-b) \times b \times (1-b) = b(1-b)^2$。<br />
+C 选项：译码为1即三次接收中至少两个1。互斥情形包括恰两个1和恰三个1。恰两个1有 $\operatorname{C}_3^2=3$ 种，每种概率 $b(1-b)^2$，三个1概率 $(1-b)^3$，总概率应为 $3b(1-b)^2+(1-b)^3$，与选项不同。<br />
+D 选项：分别计算单次译码为0的概率（$1-a$）和三次译码为0的概率（三次接收中至少两个0），作差判断。  </p>
+<p><strong>步骤</strong><br />
+- <strong>A</strong>：所求概率 $= P(\text{收1}\mid\text{发1}) \times P(\text{收0}\mid\text{发0}) \times P(\text{收1}\mid\text{发1}) = (1-b)(1-a)(1-b) = (1-a)(1-b)^2$，正确。<br />
+- <strong>B</strong>：三次传输发送1，每次发送相互独立。依次收到 1,0,1 的概率 $= (1-b) \cdot b \cdot (1-b) = b(1-b)^2$，正确。<br />
+- <strong>C</strong>：发送1，译码为1即三次接收中1的个数 $\geq 2$。概率 $= \operatorname{C}<em _text_单="\text{单">3^2 b (1-b)^2 + \operatorname{C}_3^3 (1-b)^3 = 3b(1-b)^2 + (1-b)^3$。选项漏掉了系数3，错误。<br />
+- <strong>D</strong>：发送0，单次译码为0的概率 $P</em>}}=1-a$。三次传输译码为0的情形：接收到2个0（1个1）或3个0。每一传输收0的概率为 $1-a$，收1的概率为 $a$。故三次译码为0的概率 $P_{\text{三}} = \operatorname{C<em _text_三="\text{三">3^2 a(1-a)^2 + (1-a)^3 = 3a(1-a)^2 + (1-a)^3$。<br />
+  计算 $P</em> = (1-a)^2[3a + (1-a)] - (1-a) = (1-a)^2(2a+1) - (1-a) = (1-a)[(1-a)(2a+1) - 1]$。}} - P_{\text{单}<br />
+  化简 $(1-a)(2a+1)-1 = 2a+1 -2a^2 -a -1 = a - 2a^2 = a(1-2a)$。<br />
+  故 $P_{\text{三}} - P_{\text{单}} = (1-a) \cdot a(1-2a)$。由于 $0&lt;a&lt;0.5$，$1-a&gt;0$，$a&gt;0$，$1-2a&gt;0$，故差大于0，即 $P_{\text{三}} &gt; P_{\text{单}}$，正确。  </p>
+<p><strong>点评/变式</strong><br />
+此题综合考查了相互独立事件的积、互斥事件的和以及二项分布的概率计算，信息背景新颖但核心是基础概率模型的组合。易错点在于 C 选项遗漏组合数，以及 D 选项作差后因式分解的细节。<br />
+变式思考：若改为“译码为出现次数少的信号”或“平局情况特殊定义”，则互斥情形的列举需随之改变，但解法仍是分解与求和。另外，当 $a=0.5$ 时两种方案概率相等，可作为特殊值检验选项。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-12.html">2023-新课标Ⅱ-12</a>（2023 · 中） 考查相互独立事件与互斥事件的概率计算，以及传输方案译码正确率的比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/317-事件的关系运算.html">互斥事件</a></li>
+</ul>
+</div>
+</body>
+</html>

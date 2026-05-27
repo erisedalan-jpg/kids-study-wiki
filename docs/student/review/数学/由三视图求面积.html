@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>由三视图求面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>由三视图求面积</h1><div class="review-mark" data-stem="由三视图求面积"></div><div class="meta-card"><span><strong>考点</strong>由三视图求面积</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2012–2016</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三视图原理</strong>：正视图与侧视图“高平齐”，正视图与俯视图“长对正”，俯视图与侧视图“宽相等”。由三视图还原几何体时，必须严格对齐各视图的对应尺寸。</li>
+<li><strong>常见几何体的表面积公式</strong>（全面积）：</li>
+<li>圆柱：$S=2\pi r^2+2\pi r h$（上下底＋侧面积）；</li>
+<li>圆锥：$S=\pi r^2+\pi r l$（底面积＋侧面积，$l$为母线长）；</li>
+<li>圆台：$S=\pi(r'^2+r^2+r'l+rl)$；</li>
+<li>球：$S=4\pi R^2$；</li>
+<li>棱柱、棱锥、棱台：侧面积由各侧面展开图求和，全面积=侧面积+底面积。</li>
+<li><strong>常见几何体的体积公式</strong>：</li>
+<li>柱体：$V=Sh$；</li>
+<li>锥体：$V=\frac{1}{3}Sh$；</li>
+<li>台体：$V=\frac{1}{3}(S'+\sqrt{S'S}+S)h$；</li>
+<li>球体：$V=\frac{4}{3}\pi R^3$。</li>
+<li><strong>组合体的面积/体积计算</strong>：</li>
+<li>拼接式组合体：分别计算各基本体的面积或体积，相加；注意相接面不计入表面积（如果相接面为内部面）。</li>
+<li>切割式组合体：用整体减去切去部分；表面积可能增加切口面。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>视图对齐与结构还原</strong>：将三视图的长、宽、高对齐，确定几何体是由哪些基本体（柱、锥、台、球）以何种方式组合（叠加、挖切）而成，必要时画出直观图。</li>
+<li><strong>尺寸标注</strong>：从三视图的线段长度、符号（如直径 $ \phi $）、网格边长等提取关键数据，区分哪个是底面半径、直径，哪个是高、母线等。</li>
+<li><strong>选择公式</strong>：根据还原后的几何体类型，选用面积或体积公式。对于组合体，先拆成单个基本体。</li>
+<li><strong>处理重叠面（求表面积时）</strong>：若为拼接组合体，一个几何体的某个面与另一个几何体的面相接，则该面不计入整个几何体的表面积。画截面草图辅助判断。</li>
+<li><strong>计算与检查</strong>：逐块计算面积或体积，取 $\pi\approx3.14$ 时注意题目是否要求用 $\pi$ 表示；最后带单位或合理取舍。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>尺寸“看错位”</strong>：将侧视图中的斜高（如圆锥的母线、棱锥的侧棱）误当作底面边长或高，导致高、母线混淆。</li>
+<li><strong>表面积重复计算</strong>：组合体拼接时，相接的底面或侧面被重复计入表面积（如圆柱与圆锥共底面，该底面只算一次或不算）。</li>
+<li><strong>锥体体积漏乘 $\frac{1}{3}$</strong>：三棱锥、圆锥等体积计算中，学生常直接 $V=Sh$ 而导致错误。</li>
+<li><strong>底面形状误判</strong>：俯视图为三角形时，未判断是等腰、直角还是一般三角形，导致底面积求错（如将斜边长误作底边长）。</li>
+<li><strong>高与侧棱的混淆</strong>：在三棱锥中，视图中标注的线段可能不是锥体的高，而是侧棱长，需结合投影关系确定高。</li>
+<li><strong>网格纸中半格/非整数尺寸</strong>：小正方形边长为1时，对角线等长可能为 $\sqrt{2}$、$\sqrt{5}$ 等，忽略精确计算导致面积/体积出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2016·文·07）</h3>
+<p><strong>题目</strong>：如图是由圆柱与圆锥组合而成的几何体的三视图，则该几何体的表面积为（ ）<br />
+A. $20\pi$　B. $24\pi$　C. $28\pi$　D. $32\pi$</p>
+<p><strong>思路</strong>：这是一个圆柱在下、圆锥在上且同底面的拼接组合体。由三视图读取尺寸：圆柱底面直径 $4$（半径 $r=2$），高 $h_1=4$；圆锥底面直径同样 $4$，由正视图或侧视图求得圆锥的母线长（图中标注斜边长即为母线）。还原后分别计算圆柱侧面积、圆柱一个底面（下底）面积和圆锥侧面积，相加即为全面积。注意圆柱上底面与圆锥底面重合，不计入表面积。</p>
+<p><strong>步骤</strong>：
+1. 确定圆柱部分：底面半径 $r=2$，高 $h_1=4$，则<br />
+   圆柱侧面积 $S_{柱侧}=2\pi r h_1 = 2\pi \times 2 \times 4 = 16\pi$；<br />
+   圆柱一个底面积 $S_{底}=\pi r^2 = \pi \times 2^2 = 4\pi$（只计下底，上底与圆锥底重合不计）。
+2. 确定圆锥部分：底面半径 $r=2$，由三视图得圆锥的高 $h_2 = 2\sqrt{3}$，则母线 $l=\sqrt{h_2^2+r^2}= \sqrt{(2\sqrt{3})^2+2^2}= \sqrt{12+4}=4$。<br />
+   圆锥侧面积 $S_{锥侧}= \pi r l = \pi \times 2 \times 4 = 8\pi$。
+3. 全面积 $S = S_{柱侧}+S_{底}+S_{锥侧} = 16\pi + 4\pi + 8\pi = 28\pi$，选C。</p>
+<p><strong>点评/变式</strong>：组合体表面积的关键是“不重不漏”，重合面不能算。此题若改为求体积，则圆柱体积 $V_1=\pi r^2 h_1=16\pi$，圆锥体积 $V_2=\frac{1}{3}\pi r^2 h_2=\frac{8\sqrt{3}}{3}\pi$，总体积 $V=16\pi+\frac{8\sqrt{3}}{3}\pi$。</p>
+<h3>代表题2（2012·理·07）</h3>
+<p><strong>题目</strong>：网格纸上小正方形的边长为1，粗线画出的是某几何体的三视图，则此几何体的体积为（ ）<br />
+A. $6$　B. $9$　C. $12$　D. $18$</p>
+<p><strong>思路</strong>：由三视图判定该几何体为三棱锥（一个顶点在底面正上方），俯视图为三角形底面，正视图和侧视图反映了高。通过网格数读取底面的关键尺寸，确定底面是等腰直角三角形，高为3，用锥体体积公式求解。</p>
+<p><strong>步骤</strong>：
+1. 底面还原：俯视图显示底面三角形，斜边长横跨6格（长为6），该斜边上的高垂直方向占据3格（高为3）；由正、侧视图对齐得知该三角形为等腰直角三角形（或以斜边为底，高恰为中垂线）。计算底面积 $S_{底}= \frac{1}{2} \times 6 \times 3 = 9$。
+2. 确定锥体高：由正视图（或侧视图）中的竖直线段读得高 $h=3$（与底面垂直）。
+3. 体积 $V= \frac{1}{3} S_{底} h = \frac{1}{3} \times 9 \times 3 = 9$，选B。</p>
+<p><strong>点评/变式</strong>：三棱锥的体积关键在于找准底面积与高。若将俯视图的斜边误为直角边，则会错误求得底面积。另外，对于放倒的三棱锥，可通过“换底”思想，选容易计算的面作为底面。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-07.html">2016-文-07</a>（2016 · 中） 根据三视图求圆柱与圆锥组合体的表面积</li>
+<li><a href="../../exam/数学/2012-理-07.html">2012-理-07</a>（2012 · 中） 由三视图还原几何体并计算其体积，涉及三棱锥体积公式。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1198-由三视图求面积.html">由三视图求面积</a></li>
+</ul>
+</div>
+</body>
+</html>

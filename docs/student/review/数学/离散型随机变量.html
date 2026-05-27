@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散型随机变量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>离散型随机变量</h1><div class="review-mark" data-stem="离散型随机变量"></div><div class="meta-card"><span><strong>考点</strong>离散型随机变量</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：3</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>离散型随机变量</strong>：若随机变量 $X$ 的全部可能取值是有限个或可列无限多个，则称 $X$ 为离散型随机变量。</li>
+<li><strong>分布列</strong>：设 $X$ 的取值为 $x_i$，对应概率 $p_i=P(X=x_i)$，则表或解析式称为分布列。核心性质：$p_i \ge 0$ 且 $\sum p_i = 1$。</li>
+<li><strong>数学期望</strong>：$E(X)=\sum x_i p_i$，反映随机变量取值的平均水平。线性性质：$E(aX+b)=aE(X)+b$。</li>
+<li><strong>方差</strong>：$D(X)=\sum [x_i-E(X)]^2 p_i$。常用简化公式：$D(X)=E(X^2)-[E(X)]^2$。性质：$D(aX+b)=a^2D(X)$。方差刻画随机变量的离散程度。</li>
+<li><strong>概率应用</strong>：用频率估计概率是古典概型的常见延伸；决策问题常比较不同方案的期望收益或综合考虑期望与风险（方差）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>构建函数模型</strong>：根据实际情境写出因变量（如利润）关于自变量（如销售量/需求量）的分段函数，注意定义域（如 $n \in N$）。</li>
+<li><strong>确定随机变量取值</strong>：将从实际问题抽象出的核心指标（如利润 $X$）作为随机变量，列出其所有可能的取值。</li>
+<li><strong>计算对应概率</strong>：基于频率分布表计算各取值所对应事件的概率。若涉及分段，需明确每一段对应原始数据的哪些类别，并对概率求和。</li>
+<li><strong>列分布列并检验</strong>：按取值顺序写出分布列，快速验证概率之和是否为 1。</li>
+<li><strong>求解特征值</strong>：代入期望、方差公式或利用简化公式 $D(X)=E(X^2)-[E(X)]^2$ 计算。</li>
+<li><strong>比较与决策</strong>：若涉及购销决策，通常计算不同方案下的期望收益。若仅比较收益，选期望大者；若考虑风险，可进一步比较方差。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分段函数定义域混淆</strong>：易将需求 $n$ 与进货量 $m$ 的大小关系写反，或遗漏等号。务必结合题意明确“供过于求”和“供不应求”的表达式。</li>
+<li><strong>利润计算陷阱</strong>：成本是“全部进货量”的成本，收入是“实际售出量”的收入。未售出商品是“作垃圾处理”（残值为0）还是“折价处理”必须看清。</li>
+<li><strong>概率计算遗漏</strong>：当随机变量取值对应多个原始数据情形时，需将所有符合该取值条件的原始事件概率相加，切忌只取单一频率。</li>
+<li><strong>期望、方差公式混用</strong>：方差计算时 $D(X)=\sum [x_i-E(X)]^2 p_i$ 注意先减期望再平方；用 $D(X)=E(X^2)-[E(X)]^2$ 时，$E(X^2)$ 是对随机变量平方的期望，而非期望的平方。</li>
+<li><strong>决策理由单薄</strong>：最后决策的理由不仅要给出数值结果，还需点明比较依据（如“在只考虑收益的情况下应选期望较大者”，若两者期望相同则需进一步比较方差说明稳定性）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1（2012-理-18（1））</h3>
+<p><strong>题目</strong>：购进 16 枝玫瑰，售价 10 元，进价 5 元，未售出作垃圾处理。求当天利润 $y$ 关于需求量 $n$ 的函数式。
+<strong>思路</strong>：分段函数核心在于临界点。购进 16 枝，当 $n \ge 16$ 时，可全卖出；当 $n \le 15$ 时，卖 $n$ 枝，余下 $16-n$ 枝亏损。
+<strong>步骤</strong>：
+- 当 $n \ge 16$ 时，售出 16 枝，利润为 $y=16 \times (10-5) = 80$。
+- 当 $n \le 15$ 时，售出 $n$ 枝，利润为 $y=10n - 16 \times 5 = 10n - 80$。
+- 综合得函数解析式：
+$$ y = \begin{cases} 10n - 80, &amp; n \le 15 \text{ 且 } n \in N \ 80, &amp; n \ge 16 \text{ 且 } n \in N \end{cases} $$
+<strong>点评/变式</strong>：易错点在于 $n=16$ 的归属，将其放入任意一侧等号即可，但切勿遗漏。若残值不为零（如折价回收），亏损项需变为 $(16-n)\times(5-\text{残值})$。</p>
+<h3>代表题 2（2012-理-18（2））</h3>
+<p><strong>题目</strong>：利用频率分布表，以频率作为概率。购进 16 枝，利润 $X$ 的分布列、期望、方差；并对比进 17 枝作决策。
+<strong>思路</strong>：先由（1）得 $X$ 取值与 $n$ 的对应关系：当 $n=14,15$ 时 $X$ 分别取 60,70；当 $n \ge 16$ 时 $X$ 均取 80。据此合并概率。再求进 17 枝的利润期望，比较决策。
+<strong>步骤</strong>：
+- <strong>分布列</strong>：需求 $n$ 对应利润 $X$ 及频率（概率）：
+  - $n=14, p=0.1$，利润 $X=10 \times 14 - 80 = 60$；
+  - $n=15, p=0.2$，利润 $X=10 \times 15 - 80 = 70$；
+  - $n=16,17,18,19,20$，合并概率 $p=0.16+0.16+0.15+0.13+0.10=0.7$，利润 $X=80$。
+  - $X$ 分布列为：
+    | $X$ | 60 | 70 | 80 |
+    | :--- | :---: | :---: | :---: |
+    | $P$ | 0.1 | 0.2 | 0.7 |
+- <strong>期望</strong>：$E(X)=60 \times 0.1 + 70 \times 0.2 + 80 \times 0.7 = 76$（元）。
+- <strong>方差</strong>：$E(X^2)=60^2 \times 0.1 + 70^2 \times 0.2 + 80^2 \times 0.7 = 5820$，则 $D(X)=E(X^2)-[E(X)]^2 = 5820 - 5776 = 44$。
+- <strong>决策比较</strong>：设进 17 枝时利润为 $Y$。同理计算得 $E(Y) \approx 76.4$（大于 76），且 $D(Y) \approx 112.04$（风险远大于 $X$ 的方差 44）。若只考虑收益最大化，可选 17 枝；本题原标准答案偏向选 17 枝（$E(Y)&gt;E(X)$）。若兼顾稳定性，进货 16 枝风险更小。
+<strong>点评/变式</strong>：本题关键是理解“多阶段销售数据转化为分布列”的过程。若在考试中仅仅对比期望，直接写 $E(Y)&gt;E(X)$ 即可建议选 17 枝；若要体现深度，可附加对方差的评述。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-18.html">2012-理-18</a>（2012 · 中） 以花店玫瑰花销售为背景，考查分段函数模型及离散型随机变量的分布列、期望与方差，并利用期望进行决策。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1330-离散型随机变量及其分布列.html">离散型随机变量</a></li>
+</ul>
+</div>
+</body>
+</html>

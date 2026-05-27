@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代数形式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>代数形式</h1><div class="review-mark" data-stem="代数形式"></div><div class="meta-card"><span><strong>考点</strong>代数形式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>复数的代数形式：$z=a+bi\;(a,b\in\mathbb{R})$，$a$ 为实部，$b$ 为虚部。</li>
+<li>复数相等：$a+bi=c+di\Leftrightarrow a=c$ 且 $b=d$（$a,b,c,d\in\mathbb{R}$）。</li>
+<li>共轭复数：$z=a+bi$ 的共轭 $\overline{z}=a-bi$，满足 $z\cdot\overline{z}=a^2+b^2$。</li>
+<li>四则运算：<br />
+  加减：$(a+bi)\pm(c+di)=(a\pm c)+(b\pm d)i$。<br />
+  乘法：$(a+bi)(c+di)=(ac-bd)+(ad+bc)i$。<br />
+  除法：$\dfrac{a+bi}{c+di}=\dfrac{(a+bi)(c-di)}{(c+di)(c-di)}=\dfrac{ac+bd}{c^2+d^2}+\dfrac{bc-ad}{c^2+d^2}i\;(c+di\neq0)$。<br />
+  本质：分母实数化，即分子分母同乘分母的共轭复数。</li>
+<li>虚数单位 $i$ 的幂周期性：$i^4=1$，$i^{4k+r}=i^r$，特别地 $i^1=i,\ i^2=-1,\ i^3=-i,\ i^4=1$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别运算类型</strong>：判断题目是加减、乘法还是除法。</li>
+<li><strong>除法的标准化步骤</strong>：<br />
+   ① 将分子分母写成代数形式；<br />
+   ② 分子分母同乘分母的共轭复数；<br />
+   ③ 分母利用 $(c+di)(c-di)=c^2+d^2$ 化为实数；<br />
+   ④ 分子展开、合并同类项，利用 $i^2=-1$ 化简；<br />
+   ⑤ 将结果写成 $a+bi$（或 $a+bi$ 的最简分数形式）。</li>
+<li><strong>乘法的快速处理</strong>：直接按多项式乘法展开，合并时牢记 $i^2=-1$。</li>
+<li><strong>混合运算</strong>：先乘除、后加减，遇除法优先分母实数化。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分母漏乘或部分乘</strong>：分子分母必须同乘分母的共轭复数，尤其分子未完全分配。</li>
+<li><strong>$i^2$ 符号错误</strong>：展开过程中将 $i^2$ 误写成 $1$ 或忘记变号。</li>
+<li><strong>结果形式不规范</strong>：最终答案未分离实部、虚部，或虚部未写成带 $i$ 的形式；分数未化到最简。</li>
+<li><strong>共轭概念混淆</strong>：分母实数化时错误地乘了分子或分母本身的共轭，而不是分母的共轭。</li>
+<li><strong>运算跳步导致失误</strong>：直接套公式时代错符号（如除法结果虚部分子 $bc-ad$ 顺序反）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> (2018·全国卷理科)<br />
+化简 $\frac{1+2i}{1-2i}$。<br />
+选项：A．$i$　B．$-\frac{3}{5}$　C．$-\frac{4}{5}$　D．$-\frac{3}{5}+\frac{4}{5}i$</p>
+<p><strong>思路</strong><br />
+分母为 $1-2i$，其共轭复数为 $1+2i$。分子分母同乘 $1+2i$，利用平方差公式将分母化为实数，分子按完全平方公式展开，最后化为 $a+bi$ 形式。</p>
+<p><strong>步骤</strong><br />
+1. 写出原式：$\frac{1+2i}{1-2i}$。
+2. 分子分母同乘分母的共轭复数 $(1+2i)$：<br />
+   $$\frac{(1+2i)(1+2i)}{(1-2i)(1+2i)} = \frac{(1+2i)^2}{1^2 - (2i)^2}$$
+3. 分母化简：$1 - 4i^2 = 1 - 4(-1) = 1+4 = 5$。
+4. 分子展开：$(1+2i)^2 = 1^2 + 2\cdot 1\cdot 2i + (2i)^2 = 1 + 4i + 4i^2$。<br />
+   代入 $i^2 = -1$ 得 $1 + 4i - 4 = -3 + 4i$。
+5. 原式 $= \frac{-3+4i}{5} = -\frac{3}{5} + \frac{4}{5}i$。<br />
+   对应选项 D。</p>
+<p><strong>点评/变式</strong><br />
+该题直接考查复数除法的分母实数化，是基础但必考运算。若题目变为 $\frac{2-i}{1+i}$，同样策略：分子分母同乘 $(1-i)$，分母变成 $1^2+1^2=2$，分子 $(2-i)(1-i)=2-2i-i+i^2=2-3i-1=1-3i$，结果为 $\frac{1}{2}-\frac{3}{2}i$。关键始终是：<strong>共轭对象选分母的、每一步严格检查 $i^2=-1$、最后分离实虚部。</strong></p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-01.html">2018-理-01</a>（2018 · 易） 本题考查复数的除法运算，通过化简复数表达式得到结果。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">代数形式</a></li>
+</ul>
+</div>
+</body>
+</html>

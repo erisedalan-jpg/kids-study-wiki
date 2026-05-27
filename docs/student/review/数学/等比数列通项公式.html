@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等比数列通项公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等比数列通项公式</h1><div class="review-mark" data-stem="等比数列通项公式"></div><div class="meta-card"><span><strong>考点</strong>等比数列通项公式</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：18</li>
+<li>真题数：4；年份跨度：2009–2022</li>
+<li>出现题位：填空13 解答17 选择5 选择8</li>
+<li>难度分布：中3 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：如果一个数列从第 $2$ 项起，每一项与它的前一项的比等于同一个常数 $q$（$q \neq 0$），则这个数列叫等比数列，$q$ 称为公比。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 q^{\,n-1}$（$n \in \mathbb{N}^<em>$，$a_1 \neq 0$，$q \neq 0$）。<br />
+  推广形式：$a_n = a_m q^{\,n-m}$（$m,n \in \mathbb{N}^</em>$）。</li>
+<li><strong>等比中项与下标性质</strong>：若 $m+n = p+q$（$m,n,p,q \in \mathbb{N}^*$），则 $a_m a_n = a_p a_q$。<br />
+  特别地，$a_n^2 = a_{n-k} a_{n+k}$（$n&gt;k$）。这一性质常用来整体代换，减少计算量。</li>
+<li><strong>前 $n$ 项和公式</strong>（常用于列方程）：
+  $$S_n = \begin{cases}
+  n a_1, &amp; q = 1 \[4pt]
+  \dfrac{a_1 (1 - q^n)}{1 - q} = \dfrac{a_1 - a_n q}{1 - q}, &amp; q \neq 1
+  \end{cases}$$
+  注意：使用含 $1-q$ 的分式时必须先确认 $q \neq 1$。</li>
+<li><strong>适用条件</strong>：上述公式对所有等比数列均成立，但需时刻关注公比 $q$ 的范围——题目常隐含“$q \neq 0$”“各项均为正数（保证 $q&gt;0$）”“$S_n$ 公式分母不为零”等条件，这些是分类讨论的依据。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设基本量</strong>：将题目所求与已知统一到首项 $a_1$ 和公比 $q$ 上，设出 $a_1$ 与 $q$（$q \neq 0$）。</li>
+<li><strong>列方程（组）</strong>：  </li>
+<li>已知若干项的具体值或关系，直接代入通项公式或求和公式。  </li>
+<li>若给出类似 $a_p a_q$ 的形式，优先利用性质 $a_p a_q = a_m a_n$（$p+q=m+n$）整体处理，避免展开后出现高次方程。</li>
+<li><strong>解方程（组）</strong>：  </li>
+<li>先判断是否需要讨论 $q=1$（特别是出现 $S_n$ 或 $1-q$ 分母时）。  </li>
+<li>遇到高次方程时，常通过“相除”降次，例如已知 $S_6 = 4S_3$ 时，写出 $\dfrac{a_1(1-q^6)}{1-q} = 4 \cdot \dfrac{a_1(1-q^3)}{1-q}$，约去相同因式可快速得到 $q^3$ 的值，无需解出 $a_1$。  </li>
+<li>若题目有“各项均为正数”等条件，应据此舍去不合题意的解（如负公比）。</li>
+<li><strong>回代求目标量</strong>：求出 $a_1$ 和 $q$（或求出整体如 $q^3$）后，选择最直接的公式求指定项或和。常用 $a_n = a_1 q^{n-1}$ 或 $a_n = a_m q^{n-m}$。</li>
+<li><strong>利用性质简化</strong>（优先策略）：当所求与已知的下标和相等时，可以直接利用等比性质整体代入，绕开 $a_1$ 与 $q$ 的具体计算（如由 $a_4a_7$ 和 $a_4+a_7$ 直接得到 $a_1+a_{10}$）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略 $q=1$ 的讨论</strong>：见到 $S_n$ 公式或分母含 $1-q$ 时，必须分 $q=1$ 与 $q\neq1$ 两种情况。如不讨论，可能漏解或推理不严谨。真题中常隐含 $q\neq1$（如 $a_2-a_5 \neq 0$），但审题时仍需主动确认。</li>
+<li><strong>混淆等差与等比的性质</strong>：等比数列中是 <strong>乘积相等</strong>（$a_m a_n = a_p a_q$），而非相加相等。将等差性质误植到等比是常见错误。</li>
+<li><strong>忽视隐含范围而致多解</strong>：题目给出“各项均为正数”时，意味着 $a_1&gt;0$ 且 $q&gt;0$，解得负公比必须舍去；同样，当公比的指数为分数时，需注意实数解的限制。</li>
+<li><strong>方程组运算方向错误</strong>：解题时习惯于直接展开所有项，导致出现 $q$ 的高次方程。应学会用相减、相除或整体替换降次，减少计算量和出错概率。例如求 $q^3$ 整体比直接求 $q$ 更简捷。</li>
+<li><strong>通项公式下标误用</strong>：$a_n = a_1 q^{\,n-1}$ 中指数为 $n-1$ 而非 $n$，求某一指定项时需仔细核对项数。从 $a_m$ 出发时，$a_n = a_m q^{\,n-m}$，指数为下标之差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1（2022·理·08）</h3>
+<p><strong>题目</strong>：等比数列 ${a_n}$ 的前 $3$ 项和为 $168$，$a_2 - a_5 = 42$，则 $a_6$ 等于（　）
+A. $14$　B. $12$　C. $6$　D. $3$</p>
+<p><strong>思路</strong>：已知前 $3$ 项和及两项之差，可直接设 $a_1$ 和公比 $q$，列出方程组求解。注意要先判断 $q \neq 1$，再用求和公式。</p>
+<p><strong>步骤</strong>：<br />
+1. 设公比为 $q$，显然 $q \neq 0$。若 $q=1$，则 $a_2 - a_5 = 0$，与条件矛盾，故 $q \neq 1$。<br />
+2. 由前 $3$ 项和为 $168$ 得 $\displaystyle \frac{a_1(1-q^3)}{1-q} = 168$；<br />
+   由 $a_2 - a_5 = 42$ 得 $a_1 q - a_1 q^4 = 42$，即 $a_1 q (1-q^3) = 42$。<br />
+3. 将两式相除（或代入消元）：<br />
+   $$\frac{\dfrac{a_1(1-q^3)}{1-q}}{a_1 q (1-q^3)} = \frac{168}{42} \;\Rightarrow\; \frac{1}{q(1-q)} = 4 \;(q\neq 1)$$<br />
+   但更简捷的方式是，由第一个方程得 $a_1(1+q+q^2)=168$，第二个方程可写为 $a_1 q(1-q^3)=42$。注意到 $1-q^3 = (1-q)(1+q+q^2)$，因此<br />
+   $$a_1 q (1-q)(1+q+q^2) = 42$$<br />
+   将 $a_1(1+q+q^2)=168$ 代入上式得 $168 q (1-q) = 42$，解得 $q = \frac{1}{2}$（舍去负值因为还需代回检验，实际 $q=\frac{1}{2}$ 满足；另一解为 $q=\frac{1}{2}$，此处解方程得 $q(1-q)=1/4$，解得 $q=1/2$）。<br />
+4. 代回 $a_1(1+q+q^2)=168$，由 $q=\frac{1}{2}$ 可得 $a_1 = 96$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-08.html">2022-理-08</a>（2022 · 中） 本题通过等比数列前n项和及特定项的关系求公比和首项，进而求指定项。</li>
+<li><a href="../../exam/数学/2012-理-05.html">2012-理-05</a>（2012 · 中） 该题考查等比数列的性质及通项公式的应用，通过已知条件求指定项的和。</li>
+<li><a href="../../exam/数学/2011-理-17.html">2011-理-17</a>（2011 · 中） 求等比数列通项公式及利用对数运算和裂项相消法求数列前n项和</li>
+<li><a href="../../exam/数学/2009-文-13.html">2009-文-13</a>（2009 · 易） 本题根据等比数列前n项和的关系求公比，进而计算指定项的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1070-等比数列通项公式.html">等比数列通项公式</a></li>
+</ul>
+</div>
+</body>
+</html>

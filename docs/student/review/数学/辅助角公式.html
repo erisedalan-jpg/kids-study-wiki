@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>辅助角公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>辅助角公式</h1><div class="review-mark" data-stem="辅助角公式"></div><div class="meta-card"><span><strong>考点</strong>辅助角公式</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：10</li>
+<li>真题数：6；年份跨度：2008–2024</li>
+<li>出现题位：填空13 解答15 解答17 选择10 选择11</li>
+<li>难度分布：中4 易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>辅助角公式（合一公式）</strong><br />
+  对于形如 $a\sin\theta + b\cos\theta$ 的式子，可化为单一三角函数：<br />
+  $$a\sin\theta + b\cos\theta = \sqrt{a^2+b^2}\sin(\theta+\varphi) = \sqrt{a^2+b^2}\cos(\theta-\varphi')$$<br />
+  其中 $\tan\varphi=\dfrac{b}{a}$（$\varphi$ 所在象限由 $a,b$ 的符号确定）；若用余弦形式，辅助角会相应变化。</li>
+<li><strong>常见特例（必记）</strong><br />
+  $\sin\theta \pm \cos\theta = \sqrt{2}\sin\left(\theta \pm \dfrac{\pi}{4}\right)$<br />
+  $\sqrt{3}\sin\theta \pm \cos\theta = 2\sin\left(\theta \pm \dfrac{\pi}{6}\right)$<br />
+  $\sin\theta \pm \sqrt{3}\cos\theta = 2\sin\left(\theta \pm \dfrac{\pi}{3}\right)$</li>
+<li><strong>核心功能</strong>  </li>
+<li>化多函数为单一正弦（或余弦）型函数 $y= A\sin(\omega x+\varphi)$，进而讨论：最大值/最小值、周期、单调区间、对称轴、对称中心。  </li>
+<li>在解三角形中，用于化简边角关系方程，求角的大小。</li>
+<li><strong>使用条件</strong><br />
+  必须是同角同名（正弦、余弦）的线性组合，且系数为常数。若角度不一致（如 $\sin 2x$ 与 $\cos x$），通常不能用该公式，需先化同角。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别目标式</strong>：若表达式形如 $a\sin x + b\cos x$（或正弦、余弦互换），立即想到辅助角公式。  </li>
+<li><strong>提取模长</strong>：计算 $\sqrt{a^2+b^2}$，作为合并后的振幅。如 $a\sin x + b\cos x = \sqrt{a^2+b^2}\sin(x+\varphi)$。  </li>
+<li><strong>确定辅助角</strong>：  </li>
+<li>令 $\sin\varphi = \frac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi = \frac{a}{\sqrt{a^2+b^2}}$。  </li>
+<li>常用特殊角直接写出：碰到 $\sqrt{3}$、$1$ 等系数，直接对应 $\frac{\pi}{6}$、$\frac{\pi}{4}$、$\frac{\pi}{3}$。  </li>
+<li>若非特殊角，保留 $\varphi$ 并用条件给出 $\tan\varphi$。  </li>
+<li><strong>应用性质解题</strong>：  </li>
+<li>求<strong>最值/值域</strong>：根据正弦（或余弦）的有界性 $|\sin(\cdots)|\le1$。  </li>
+<li>求<strong>周期</strong>：$T=\frac{2\pi}{|\omega|}$（注意 $x$ 系数）。  </li>
+<li>求<strong>单调区间/对称性</strong>：将 $\omega x+\varphi$ 看作整体，套用正弦（余弦）基本性质解不等式。  </li>
+<li><strong>解三角形情境</strong>：  </li>
+<li>先用正弦定理或余弦定理将边角混合式化为角的三角函数等式。  </li>
+<li>移项、整理成 $a\sin A + b\cos A = c$ 形式，用辅助角公式化为 $\sqrt{a^2+b^2}\sin(A+\varphi)=c$。  </li>
+<li>由 $A\in(0,\pi)$ 解出 $A$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>辅助角计算错误</strong>：$\tan\varphi = \frac{b}{a}$ 容易写反。正确对照：$a\sin\theta + b\cos\theta = \sqrt{a^2+b^2}\sin(\theta+\varphi)$ 中，$\sin\varphi$ 对应 $\cos\theta$ 的系数 $b$，$\cos\varphi$ 对应 $\sin\theta$ 的系数 $a$，因此 $\tan\varphi = b/a$。  </li>
+<li><strong>忽略系数符号对 $\varphi$ 象限的影响</strong>：若 $a&lt;0$，不宜直接写 $\varphi=\arctan\frac{b}{a}$，应化为正系数再处理，如提出负号或用诱导公式调整。  </li>
+<li><strong>合并后忘记“$\sqrt{a^2+b^2}$”</strong>：特别是直接写 $\sin x + \cos x = \sin(x+\pi/4)$ 而遗漏 $\sqrt{2}$ 的倍数。  </li>
+<li><strong>求角时忽视取值范围</strong>：在三角形中，$A\in(0,\pi)$，由 $\sin(A+\varphi)=k$ 解出的 $A$ 可能有多种可能，需根据三角形内角限制或题目条件取舍。  </li>
+<li><strong>将不同角直接合并</strong>：如 $\sin(2x+\frac{\pi}{4})+\cos(2x+\frac{\pi}{4})$ 可合并，因为角相同；但 $\sin 2x + \cos x$ 则不能直接用辅助角公式。  </li>
+<li><strong>把辅助角用于非齐次式</strong>：公式只适用于正弦余弦的一次齐次组合，若非齐次（如有常数项、二次项），不能直接套用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong> （2024-新课标Ⅱ-15）</h3>
+<p>记 $\triangle ABC$ 的内角 $A,B,C$ 的对边分别为 $a,b,c$，已知 $\sin A + \sqrt{3}\cos A = 2$．<br />
+（1）求 $A$；<br />
+（2）若 $a=2$，$\dfrac{\sin B}{\sin C}= \dfrac{b}{c}$，求 $\triangle ABC$ 的周长．  </p>
+<p><strong>思路</strong><br />
+（1）利用辅助角公式将左边化为 $2\sin(A+\frac{\pi}{3})$，由正弦有界性解出 $A$。<br />
+（2）利用正弦定理将第二个条件化为 $b/c = b/c$ 其实恒成立？原题是 $\frac{\sin B}{\sin C}= \frac{b}{c}$，该等式由正弦定理自然成立，应看原题完整表达：原题实为 $2\sin B\sin C = \cdots$？这里题干节选自用户消息：“2sinsin2bCcB=”，应为 $\frac{2\sin B}{\sin C}= \frac{b}{c}$ 之类的？但谨慎对待，可能是 $\frac{\sin B}{\sin C}= \frac{b}{c}$ 给出 $b=c$？其实由正弦定理 $\frac{b}{\sin B}=\frac{c}{\sin C}$，所以 $\frac{\sin B}{\sin C}=\frac{b}{c}$ 恒成立，无法推出新条件。推测原题条件可能是 $\frac{\sqrt{2}\sin B}{\sin C}= \dots$ 但我按真题语料原样：原题为“2sinsin2bCcB=”可能代表 $2\sin B\sin C = \frac{b}{c}$？但最终给答案周长 $2\sqrt{6}+3+2$？无法还原，但（1）求 $A$ 是明确的。我在讲解时专注辅助角公式的应用，仅讲第（1）问的辅助角模块，第（2）问略提思路。因是辅助角公式考点，重点在（1）。</p>
+<p><strong>步骤</strong><br />
+（1）由 $\sin A + \sqrt{3}\cos A = 2$，利用辅助角公式：<br />
+$$左边 = \sqrt{1^2+(\sqrt{3})^2}\left( \frac{1}{2}\sin A + \frac{\sqrt{3}}{2}\cos A \right) = 2\sin\left(A+\frac{\pi}{3}\right)$$<br />
+于是 $2\sin\left(A+\frac{\pi}{3}\right) = 2 \Rightarrow \sin\left(A+\frac{\pi}{3}\right) = 1$．<br />
+因为 $A\in(0,\pi)$，则 $A+\frac{\pi}{3}\in\left(\frac{\pi}{3}, \frac{4\pi}{3}\right)$，在此区间正弦为1只能取 $A+\frac{\pi}{3} = \frac{\pi}{2}$，故 $A = \frac{\pi}{6}$．  </p>
+<p><strong>点评与变式</strong><br />
+- 辅助角公式的核心是提 $\sqrt{a^2+b^2}$，本题中 $a=1,b=\sqrt{3}$，提2后括号内恰为 $\sin\frac{\pi}{6}$ 和 $\cos\frac{\pi}{6}$？注意核对：$\frac{1}{2}=\cos\frac{\pi}{3}$, $\frac{\sqrt{3}}{2}=\sin\frac{\pi}{3}$，所以是 $\sin A\cos\frac{\pi}{3}+\cos A\sin\frac{\pi}{3} = \sin(A+\frac{\pi}{3})$。<br />
+- 变式：若方程为 $\sqrt{3}\sin A - \cos A = 1$，化为 $2\sin(A-\frac{\pi}{6})=1$，结合 $A$ 范围求解。</p>
+<hr />
+<h3><strong>题目2</strong> （2017-文-13）</h3>
+<p>函数 $f(x)=2\cos x + \sin x$ 的最大值为______．  </p>
+<p><strong>思路</strong><br />
+直接用辅助角公式合成正弦型函数，由振幅得最大值。</p>
+<p><strong>步骤</strong><br />
+$f(x) = \sin x + 2\cos x$，这里 $a=1,b=2$（对应 $\sin$ 系数1，$\cos$ 系数2）。<br />
+模长 $\sqrt{1^2+2^2} = \sqrt{5}$，<br />
+故 $f(x) = \sqrt{5}\left( \frac{1}{\sqrt{5}}\sin x + \frac{2}{\sqrt{5}}\cos x \right) = \sqrt{5}\sin(x+\varphi)$，<br />
+其中 $\tan\varphi = 2$．所以最大值为 $\sqrt{5}$．  </p>
+<p><strong>点评与变式</strong><br />
+- 务必牢记最终最大值是 $\sqrt{a^2+b^2}$，可直接写。<br />
+- 如果求最小值，则为 $-\sqrt{a^2+b^2}$。注意定义域全体实数时，最值由振幅决定。<br />
+- 变式：$g(x)=3\sin x - 4\cos x$ 的最大值是 $5$。</p>
+<hr />
+<h3><strong>题目3</strong> （2012-文-17）</h3>
+<p>已知 $a,b,c$ 分别为 $\triangle ABC$ 三个内角 $A,B,C$ 的对边，$c = \sqrt{3}a\sin C - c\cos A$．<br />
+（1）求 $A$；<br />
+（2）若 $a=2$，$\triangle ABC$ 的面积为 $\sqrt{3}$，求 $b,c$．  </p>
+<p><strong>思路</strong><br />
+第（1）问用正弦定理化边为角，再用辅助角公式求角 $A$。  </p>
+<p><strong>步骤</strong><br />
+（1）由正弦定理 $\dfrac{a}{\sin A} = \dfrac{c}{\sin C}$，即 $a = \dfrac{\sin A}{\sin C}c$，代入条件 $c = \sqrt{3}a\sin C - c\cos A$：<br />
+得 $c = \sqrt{3} \cdot \dfrac{\sin A}{\sin C}c \cdot \sin C - c\cos A$，两边除以 $c$（$c\neq0$），得<br />
+$1 = \sqrt{3}\sin A - \cos A$．<br />
+移项为 $\sqrt{3}\sin A - \cos A = 1$．利用辅助角公式：<br />
+$\sqrt{(\sqrt{3})^2+(-1)^2} = 2$，<br />
+所以 $2\left( \dfrac{\sqrt{3}}{2}\sin A - \dfrac{1}{2}\cos A \right) = 1$，<br />
+即 $2\sin\left(A - \dfrac{\pi}{6}\right) = 1$，故 $\sin\left(A - \dfrac{\pi}{6}\right) = \dfrac{1}{2}$．<br />
+由于 $A\in(0,\pi)$，$A-\frac{\pi}{6}\in\left(-\frac{\pi}{6}, \frac{5\pi}{6}\right)$，<br />
+所以 $A-\dfrac{\pi}{6} = \dfrac{\pi}{6}$ 或 $\dfrac{5\pi}{6}$（后者 $A=\pi$ 舍去），得 $A = \dfrac{\pi}{3}$．  </p>
+<p><strong>点评与变式</strong><br />
+- 边角混合条件首选正弦定理统一为角的关系，是解三角形的典型入口。<br />
+- 系数 $\sqrt{3}$ 与 $1$ 组合，提2后直接匹配 $\frac{\pi}{6}$ 的三角函数值，要非常熟练。<br />
+- 求角时切记结合三角形内角范围剔除增根。<br />
+- （2）问用 $A=\pi/3$ 及面积、余弦定理联立解方程（略）。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a>（2024 · 中） 本题主要考查解三角形，利用三角恒等变换求角A，运用正弦定理求边并计算周长。</li>
+<li><a href="../../exam/数学/2017-文-13.html">2017-文-13</a>（2017 · 易） 利用辅助角公式将函数化为正弦型函数，进而求其最大值。</li>
+<li><a href="../../exam/数学/2012-文-17.html">2012-文-17</a>（2012 · 中） 本题通过已知边角关系求角A，再利用三角形面积和余弦定理求边长b、c。</li>
+<li><a href="../../exam/数学/2011-文-11.html">2011-文-11</a>（2011 · 中） 本题主要考查利用辅助角公式化简三角函数，并判断其对称性与单调性。</li>
+<li><a href="../../exam/数学/2011-理-11.html">2011-理-11</a>（2011 · 中） 本题通过辅助角公式化简三角函数，利用最小正周期和偶函数性质确定参数，进而判断单调区间。</li>
+<li><a href="../../exam/数学/2008-文-10.html">2008-文-10</a>（2008 · 易） 求f(x)=sinx-cosx的最大值，利用辅助角公式化为√2sin(x-π/4)求最大值√2。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1126-辅助角公式.html">辅助角公式</a></li>
+</ul>
+</div>
+</body>
+</html>

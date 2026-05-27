@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>解一元二次方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>解一元二次方程</h1><div class="review-mark" data-stem="解一元二次方程"></div><div class="meta-card"><span><strong>考点</strong>解一元二次方程</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>本题虽标记为“解一元二次方程”，实际综合了圆的方程、点到直线距离两大核心。关键知识点：
+- 圆的标准方程：圆心 $(a,b)$，半径 $r&gt;0$，方程为 $(x-a)^2+(y-b)^2=r^2$。
+- 圆与坐标轴相切的充要条件：若圆与两坐标轴都相切，则圆心到 $x$ 轴和 $y$ 轴的距离相等且等于半径，即 $|a|=|b|=r$。结合象限符号，圆心必为 $(\pm r,\pm r)$。
+- 点 $(x_0,y_0)$ 到直线 $Ax+By+C=0$ 的距离公式：$d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$。
+- 解一元二次方程：代入条件后得到关于 $a$ 的方程 $a^2-6a+5=0$，用因式分解 $(a-1)(a-5)=0$ 或求根公式求解。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>圆心定位</strong>：根据点 $(2,1)$ 在第一象限及圆与两轴相切，推断圆心必在第一象限，设圆心 $(a,a)$，半径 $r=a\ (a&gt;0)$。</li>
+<li><strong>建方程</strong>：写出标准圆方程 $(x-a)^2+(y-a)^2=a^2$。</li>
+<li><strong>代点求解</strong>：将已知点 $(2,1)$ 代入，得 $(2-a)^2+(1-a)^2=a^2$，化简为一元二次方程 $a^2-6a+5=0$。</li>
+<li><strong>解方程得圆心</strong>：解得 $a=1$ 或 $a=5$，得两个满足条件的圆，圆心 $(1,1)$ 或 $(5,5)$。</li>
+<li><strong>代距离公式</strong>：计算圆心到直线 $2x-y-3=0$ 的距离 $d=\frac{|2a-a-3|}{\sqrt{2^2+(-1)^2}}=\frac{|a-3|}{\sqrt{5}}$。代入两圆心，距离均为 $\frac{2}{\sqrt{5}}=\frac{2\sqrt{5}}{5}$。</li>
+<li><strong>作答</strong>：结合选项选出对应值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视象限条件</strong>：未判断圆心必在第一象限，错误设为 $(a,-a)$ 或 $(-a,a)$ 等，增加计算量且导致舍根错误。</li>
+<li><strong>半径与坐标符号混淆</strong>：切两轴时半径应为 $|a|$，但题目点位于第一象限，应直接取 $a&gt;0$，避免绝对值讨论。</li>
+<li><strong>点到直线距离公式记错</strong>：分母为 $\sqrt{A^2+B^2}$，分子忘记加绝对值或系数带入错误，如直线方程 $2x-y-3=0$，误将常数项写为 $+3$。</li>
+<li><strong>解一元二次方程失误</strong>：展开 $(2-a)^2+(1-a)^2=a^2$ 时符号错误，得错误方程 $a^2+6a+5=0$ 或漏项。</li>
+<li><strong>结果形式未化简</strong>：距离 $\frac{2}{\sqrt{5}}$ 未分母有理化即无选项匹配，正确形式 $\frac{2\sqrt{5}}{5}$ 才是选项B。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2020-文-08）：过点 $(2,1)$ 的圆与两坐标轴都相切，则圆心到直线 $2x-y-3=0$ 的距离为（    ）
+A. $\frac{\sqrt{5}}{5}$  B. $\frac{2\sqrt{5}}{5}$  C. $\frac{3\sqrt{5}}{5}$  D. $\frac{4\sqrt{5}}{5}$</p>
+<p><strong>思路</strong>：由相切条件设圆心 $(a,a)$，点代入求 $a$，再用距离公式。</p>
+<p><strong>步骤</strong>：
+1. 因为点 $(2,1)$ 在第一象限，若圆与两坐标轴均相切，则圆心也在第一象限，设圆心 $(a,a)$ 且 $a&gt;0$，半径 $r=a$。
+2. 圆方程为 $(x-a)^2+(y-a)^2=a^2$。
+3. 点 $(2,1)$ 代入：$(2-a)^2+(1-a)^2=a^2$，展开得 $a^2-4a+4+a^2-2a+1=a^2$ $\Rightarrow a^2-6a+5=0$。
+4. 解方程：$(a-1)(a-5)=0$，得 $a=1$ 或 $a=5$，对应圆心 $(1,1)$ 或 $(5,5)$。
+5. 圆心到直线 $2x-y-3=0$ 的距离 $d=\frac{|2a-a-3|}{\sqrt{4+1}}=\frac{|a-3|}{\sqrt{5}}$。
+   当 $a=1$ 时，$d=\frac{|1-3|}{\sqrt{5}}=\frac{2}{\sqrt{5}}=\frac{2\sqrt{5}}{5}$；
+   当 $a=5$ 时，$d=\frac{|5-3|}{\sqrt{5}}=\frac{2}{\sqrt{5}}$，结果相同。
+6. 选B。</p>
+<p><strong>点评/变式</strong>：本题巧妙利用“与两轴相切”得出圆心横纵坐标相等，再通过代入给定点解出圆心坐标。注意最后距离相同，体现多解归一。变式可改为“过点某点的圆与两轴相切，求半径”，或“圆心在直线 $y=x$ 上并与某直线相切”等条件，本质相同。解题关键是吃透“相切”的几何意义，转化为代数条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-08.html">2020-文-08</a>（2020 · 中） 考查根据象限条件设圆心坐标求圆方程，进而计算点到直线距离</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">解一元二次方程</a></li>
+</ul>
+</div>
+</body>
+</html>

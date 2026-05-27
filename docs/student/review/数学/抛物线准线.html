@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>抛物线准线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>抛物线准线</h1><div class="review-mark" data-stem="抛物线准线"></div><div class="meta-card"><span><strong>考点</strong>抛物线准线</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：8</li>
+<li>真题数：2；年份跨度：2012–2012</li>
+<li>出现题位：选择8 选择10</li>
+<li>难度分布：难1 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线定义</strong>：平面内到定点$F$（焦点）与定直线$l$（准线）距离相等的点的轨迹。标准方程为$y^2=2px\ (p&gt;0)$（开口向右）时，焦点$F(\frac p2,0)$，准线为$x=-\frac p2$。</li>
+<li><strong>四种标准形式的准线</strong>：</li>
+<li>$y^2=2px$：准线 $x=-\frac p2$；</li>
+<li>$y^2=-2px$：准线 $x=\frac p2$；</li>
+<li>$x^2=2py$：准线 $y=-\frac p2$；</li>
+<li>$x^2=-2py$：准线 $y=\frac p2$。</li>
+<li><strong>$p$ 的几何意义</strong>：焦点到准线的距离，恒为正。由方程直接读出 $2p$ 后求 $p$ 时注意系数对应。</li>
+<li><strong>等轴双曲线</strong>：实轴与虚轴等长，即 $a=b$，标准方程可设为 $x^2-y^2=a^2$（焦点在 $x$ 轴上）或 $y^2-x^2=a^2$（焦点在 $y$ 轴上），离心率 $e=\sqrt2$。</li>
+<li><strong>弦长的对称性应用</strong>：垂直于坐标轴的弦与曲线交点具有对称性，便于由弦长推坐标。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ul>
+<li>
+<ol>
+<li><strong>准确写出抛物线准线方程</strong>：先把抛物线方程化为标准形式，确定开口方向与 $p$ 值，套用准线公式。如 $y^2=16x$，$2p=16 \Rightarrow p=8$，准线 $x=-4$。</li>
+</ol>
+</li>
+<li>
+<ol>
+<li><strong>利用准线与曲线的交点求弦端点坐标</strong>：准线为竖直或水平直线，与另一曲线相交，交点坐标必满足准线方程。根据弦长 $|AB|$ 可结合对称性推出交点坐标。如 $|AB|=4\sqrt3$ 时，$A(-4,y_0)$, $B(-4,-y_0)$，由 $|y_0-(-y_0)|=4\sqrt3$ 得 $y_0=\pm2\sqrt3$。</li>
+</ol>
+</li>
+<li>
+<ol>
+<li><strong>代入另一曲线方程构建参数等式</strong>：将其中一个交点坐标代入双曲线（或椭圆等）方程，得到关于 $a$（或所求参数）的方程，求解即可。</li>
+</ol>
+</li>
+<li>
+<ol>
+<li><strong>注意隐含条件</strong>：焦点在 $x$ 轴上的等轴双曲线设为 $x^2-y^2=a^2\ (a&gt;0)$；实轴长 $2a$；交点坐标代入后勿忘检验取值范围。</li>
+</ol>
+</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li><strong>准线方程符号记反</strong>：$y^2=2px$ 的准线是 $x=-\frac p2$，不是 $x=\frac p2$。当方程是 $y^2=16x$ 时，$2p=16$，$p=8$，准线为 $x=-4$，有考生误写为 $x=4$。</li>
+<li><strong>$p$ 与方程系数的关系混淆</strong>：标准方程中一次项系数是 $2p$，不是 $p$。比如看到 $y^2=16x$，直接误认为 $p=16$。</li>
+<li><strong>弦长与坐标的转化</strong>：交点连线垂直于坐标轴时，弦长即纵坐标（或横坐标）差的两倍。对称性应用错误会导致坐标符号丢失或数值错误。</li>
+<li><strong>等轴双曲线方程设错</strong>：未指明焦点轴时设成 $x^2-y^2=a^2$ 或 $y^2-x^2=a^2$ 均可能。本题焦点在 $x$ 轴，应设 $x^2-y^2=a^2$；若设反则无解或解出虚数。</li>
+<li><strong>实轴长与 $a$ 混淆</strong>：所求“实轴长”是 $2a$，求出 $a$ 后忘记乘以 $2$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2012-文-10</h3>
+<p><strong>题目</strong><br />
+等轴双曲线$C$中心在原点，焦点在$x$轴上，$C$与抛物线$y^2=16x$的准线交于$A,B$两点，$|AB|=4\sqrt3$，则$C$的实轴长为（ ）<br />
+A. $\sqrt2$　B. $2\sqrt2$　C. $4$　D. $8$</p>
+<p><strong>思路</strong><br />
+先由抛物线写准线方程，得横坐标；由$|AB|$及交点对称性求$A,B$坐标；代入等轴双曲线方程求$a$，实轴长即$2a$。</p>
+<p><strong>步骤</strong><br />
+1. 抛物线$y^2=16x$，$2p=16 \Rightarrow p=8$，准线为$x=-\frac p2=-4$。<br />
+2. 设$A(-4,y_0),B(-4,-y_0)$，则$|AB|=|y_0-(-y_0)|=2|y_0|=4\sqrt3$，得$|y_0|=2\sqrt3$，故$A(-4,2\sqrt3),B(-4,-2\sqrt3)$。<br />
+3. 等轴双曲线焦点在$x$轴，设$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，且$a=b$，即$x^2-y^2=a^2$。<br />
+4. 将$A(-4,2\sqrt3)$代入：$(-4)^2-(2\sqrt3)^2=a^2 \Rightarrow 16-12=a^2 \Rightarrow a^2=4$，$a=2$，实轴长$2a=4$。<br />
+5. 对应选项C。</p>
+<p><strong>点评/变式</strong><br />
+- 核心抓住准线$x=-4$与对称性。若抛物线换成$y^2=-16x$，准线为$x=4$，其余步骤不变。<br />
+- 双曲线设为标准形式时，等轴条件下可省去$b$直接写$x^2-y^2=a^2$。若双曲线焦点在$y$轴，则设为$y^2-x^2=a^2$，代入点的顺序不变。</p>
+<h3>代表题2：2012-理-08</h3>
+<p><strong>题目</strong><br />
+题干同文科题，题目、选项完全一致，不再重复。</p>
+<p><strong>思路与步骤</strong><br />
+与文科题思路完全一致，从抛物线$y^2=16x$得准线$x=-4$，结合$|AB|=4\sqrt3$得交点纵坐标$\pm2\sqrt3$，代入等轴双曲线$x^2-y^2=a^2$得$a=2$，实轴长$4$。</p>
+<p><strong>点评/变式</strong><br />
+本题文理同题，说明准线、等轴双曲线的基本运算属于必会基础。注意：若交点连线不垂直于坐标轴，不能直接用对称性求坐标，需联立准线与曲线方程求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-10.html">2012-文-10</a>（2012 · 难） 通过等轴双曲线与抛物线准线相交的弦长求双曲线实轴长。</li>
+<li><a href="../../exam/数学/2012-理-08.html">2012-理-08</a>（2012 · 中） 等轴双曲线与抛物线准线相交，已知弦长求实轴长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/551-抛物线的准线.html">抛物线准线</a></li>
+</ul>
+</div>
+</body>
+</html>

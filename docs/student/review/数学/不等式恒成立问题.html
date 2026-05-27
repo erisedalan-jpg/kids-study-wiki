@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不等式恒成立问题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>不等式恒成立问题</h1><div class="review-mark" data-stem="不等式恒成立问题"></div><div class="meta-card"><span><strong>考点</strong>不等式恒成立问题</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>恒成立问题本质</strong>：寻求参数范围，使得某不等式在指定区间上“永远成立”。</li>
+<li><strong>常用转化方向</strong>：</li>
+<li>直接构造含参函数 $g(x)$，转化为求 $g(x)$ 的最值，令 $g(x)<em _max="\max">{\min} &gt; 0$（或 $g(x)</em> &lt; 0$）。</li>
+<li>分离参数：若可化为 $a &gt; h(x)$ 恒成立，则 $a &gt; h(x)<em _min="\min">{\max}$；若 $a &lt; h(x)$ 恒成立，则 $a &lt; h(x)</em>$。</li>
+<li><strong>导数工具的必用条件</strong>：</li>
+<li>函数在给定区间上可导。</li>
+<li>利用导数研究单调性、极值与最值。</li>
+<li><strong>端点效应与临界点</strong>：当不等式在区间端点处取等号（如本题 $f(1)=0$），往往可推出参数的必要条件，进而结合单调性讨论充分性。</li>
+<li><strong>隐零点与设而不求</strong>：当导函数的零点不可解时，可设零点 $x_0$，利用 $g'(x_0)=0$ 消去参数或超越项，完成最值估算。</li>
+<li><strong>洛必达法则的辅助</strong>：分离参数后若求 $h(x)$ 的极限为 $\frac{0}{0}$ 或 $\frac{\infty}{\infty}$ 型，可借助洛必达法则求极限值，作为参数范围的临界值（解答中需用“由洛必达法则可得”并指明条件满足）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义域先行</strong>：涉及对数 $\ln x$ 时，定义域为 $(0,+\infty)$，复合函数要注意内层定义域。所有讨论必须在定义域内进行。</li>
+<li><strong>构造函数并求导</strong>：</li>
+<li>若是含参讨论型，直接令 $F(x,!a)$，求 $F'(x)$，整理成可分析符号的形式。</li>
+<li>若分离参数型，变形为 $a &gt; (\text{或} &lt;) h(x)$，对 $h(x)$ 求导研究其单调性与最值（或上/下确界）。</li>
+<li><strong>讨论核心点</strong>：</li>
+<li>找出使导数为零的驻点（可能含参数），分情况讨论该点是否在区间内。</li>
+<li>若导函数符号不易判断，可进行二阶求导或局部因式分解。</li>
+<li>注意临界情形：区间端点函数值、导数值、极值点的函数极限。</li>
+<li><strong>端点优先检查</strong>：当 $x \to a^+$ 或 $x \to +\infty$ 时，检查函数值是否满足不等式的“取等”条件，这常给出参数的必要范围。</li>
+<li><strong>重述结论</strong>：根据最值与参数关系，写出参数的最终取值范围（用区间或集合表示），并确认等号能否取得。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：直接对 $\ln x$ 求导而未强调 $x&gt;0$，或在区间 $(1,+\infty)$ 上讨论时，错写为 $[1,+\infty)$。</li>
+<li><strong>端点 $f(1)=0$ 的误用</strong>：</li>
+<li>已知 $f(1)=0$，要使 $x&gt;1$ 时 $f(x)&gt;0$，不能直接等价于 $f'(x)&gt;0$（仅是充分非必要条件，还需考虑导数变号）。</li>
+<li>易漏掉 $f'(1)$ 必须非负的必要条件：由 $f(x)&gt;0=f(1)$，若 $f'(1)&lt;0$，则在 $1$ 右侧附近函数值会小于 $0$，导致矛盾。这一“端点效应”是缩小讨论范围的关键。</li>
+<li><strong>参数分离时不讨论分母符号</strong>：变形 $a &lt; \frac{(x+1)\ln x}{x-1}$ 时，需确认分母在 $x&gt;1$ 时恒正，否则不等式方向会反转。</li>
+<li><strong>分离后函数的最值不可达</strong>：如 $h(x) &gt; a$ 恒成立，而 $h(x)_{\min}$ 在开区间取不到，只能用下确界或极限来描述，此时等号是否可取需要判定极限情形。</li>
+<li><strong>忽略二阶导或多次求导后的符号切换</strong>：当 $f'(x)$ 难以直观判断，需求 $f''(x)$，但易在求导运算中出错（特别是乘积和对数的导数）。</li>
+<li><strong>解题步骤跳跃</strong>：直接由 $f''(x)$ 符号下结论，未明确说明一阶导单调性及根的存在性，导致逻辑链断裂被扣分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2016-文-20（Ⅰ）——切线方程</h3>
+<p><strong>题目</strong><br />
+已知 $f(x)=(x+1)\ln x-a(x-1)$，当 $a=4$ 时，求曲线 $y=f(x)$ 在 $(1, f(1))$ 处的切线方程。</p>
+<p><strong>思路</strong><br />
+切线方程的关键要素是切点坐标与切线斜率。其中切点横坐标 $x_0=1$，纵坐标由原函数直接计算，斜率由导数在 $x=1$ 处的值确定。代入 $a=4$，按部就班计算，注意定义域 $x&gt;0$。</p>
+<p><strong>步骤</strong><br />
+1. 当 $a=4$ 时，$f(x)=(x+1)\ln x -4(x-1)$，定义域 $x&gt;0$。<br />
+2. 计算 $f(1)$：$f(1)=(1+1)\ln1 -4\times0 =0$。切点为 $(1,0)$。<br />
+3. 求导：$f'(x)=\ln x + \frac{x+1}{x} -4 = \ln x + 1 + \frac{1}{x} -4 = \ln x + \frac{1}{x} -3$。<br />
+4. 切线斜率 $k=f'(1)=\ln 1 + 1 -3 = -2$。<br />
+5. 切线方程：$y-0 = -2(x-1)$，即 $y = -2x+2$。</p>
+<p><strong>点评/变式</strong><br />
+切线问题属于基础得分项，务必保证运算准确。注意 $\frac{d}{dx}[(x+1)\ln x] = \ln x + \frac{x+1}{x}$。若题目改为过原点的切线，则需要设切点并解方程，难度会提升一档。</p>
+<h3>代表题2：2016-文-20（Ⅱ）——恒成立求参数范围</h3>
+<p><strong>题目</strong><br />
+若当 $x\in(1,+\infty)$ 时 $f(x)&gt;0$ 恒成立，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong><br />
+观察 $f(1)=0$，问题转化为：在 $x&gt;1$ 时函数值保持为正。可采用分离参数法或直接讨论法。分离参数：由 $f(x)&gt;0$ 得 $a &lt; \frac{(x+1)\ln x}{x-1}$（分母正），令 $h(x)=\frac{(x+1)\ln x}{x-1}$，求 $h(x)$ 在 $x&gt;1$ 时的下确界。直接讨论法则利用 $f'(x)$，结合 $f(1)=0$ 去推参数的必要条件 $f'(1)\ge0$，再分类证明。</p>
+<p><strong>步骤（分离参数法）</strong><br />
+1. 当 $x&gt;1$ 时，$x-1&gt;0$，$f(x)&gt;0 \iff a &lt; \frac{(x+1)\ln x}{x-1}$。<br />
+   令 $h(x)=\frac{(x+1)\ln x}{x-1}$，定义域 $(1,+\infty)$。<br />
+2. 求导 $h'(x)$：<br />
+   $h'(x)=\frac{[( \ln x + 1 + \frac{1}{x})(x-1) - (x+1)\ln x]}{(x-1)^2}$<br />
+   化简分子：<br />
+   $N(x)=(x-1)\ln x + x - 1 + \frac{(x-1)}{x} - (x+1)\ln x = -2\ln x + x - 1 + 1 - \frac{1}{x} = x - \frac{1}{x} - 2\ln x$。<br />
+   所以 $h'(x)=\frac{x - \frac{1}{x} - 2\ln x}{(x-1)^2}$。<br />
+3. 再令 $\varphi(x)=x - \frac{1}{x} - 2\ln x$，$x&gt;1$。<br />
+   $\varphi'(x)=1+\frac{1}{x^2}-\frac{2}{x}=\frac{x^2+1-2x}{x^2}=\frac{(x-1)^2}{x^2}&gt;0$，<br />
+   故 $\varphi(x)$ 在 $(1,+\infty)$ 单调递增，$\varphi(x)&gt;\varphi(1)=0$。<br />
+4. 因此 $h'(x)&gt;0$，$h(x)$ 在 $(1,+\infty)$ 单调递增。<br />
+5. $h(x)$ 的下确界为 $\lim_{x\to1^+} h(x)$（因为单调增且取不到 $x=1$）。<br />
+   使用洛必达法则或等价变形：<br />
+   $\lim_{x\to1^+}\frac{(x+1)\ln x}{x-1} \xlongequal{\frac{0}{0}} \lim_{x\to1^+}\frac{\ln x + 1 + \frac{1}{x}}{1}=2$。<br />
+   故 $h(x)&gt;2$。<br />
+6. 要使 $a &lt; h(x)$ 恒成立，需 $a \le 2$。等号可取：当 $a=2$ 时，$f(x)=(x+1)\ln x -2(x-1)$，可以证明 $f(x)&gt;0$（可用前述端点效应+导数证明）。<br />
+   综上，$a$ 的取值范围为 $(-\infty, 2]$。</p>
+<p><strong>点评/变式</strong><br />
+- 分离参数后遇到函数单调递增且上/下确界通过洛必达求得，是恒成立问题的经典套路。务必注明洛必达法则条件已满足，且讨论等号能否取得。<br />
+- 变式：若把 $(1,+\infty)$ 换成 $(0,+\infty)$，则需分段讨论 $x$ 的正负对不等式方向的影响，难度大幅提升。端点效应法的核心是“特殊点显化必要条件”，可快速缩小参数范围，再证明充分性，同样高效。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-20.html">2016-文-20</a>（2016 · 中） 考查利用导数求曲线切线方程，以及求解恒成立不等式中参数的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">不等式恒成立问题</a></li>
+</ul>
+</div>
+</body>
+</html>

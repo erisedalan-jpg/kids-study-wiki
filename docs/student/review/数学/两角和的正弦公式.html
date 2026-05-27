@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两角和的正弦公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两角和的正弦公式</h1><div class="review-mark" data-stem="两角和的正弦公式"></div><div class="meta-card"><span><strong>考点</strong>两角和的正弦公式</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：13</li>
+<li>真题数：6；年份跨度：2008–2018</li>
+<li>出现题位：填空13 填空15 填空16 解答17 选择10</li>
+<li>难度分布：中3 易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两角和的正弦公式</strong>：<br />
+  $$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$$
+  适用条件：$\alpha,\beta$ 为任意角。常与诱导公式配合使用，例如在三角形中 $\sin A=\sin(B+C)$。</li>
+<li><strong>同角三角函数的基本关系</strong>：$\sin^2\theta+\cos^2\theta=1$，根据角所在象限确定正负号。</li>
+<li><strong>正弦定理</strong>（解三角形）：在 $\triangle ABC$ 中，$\displaystyle\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R$。利用正弦定理可将边的线性组合转化为角的正弦组合，从而衔接两角和公式。</li>
+<li><strong>诱导公式</strong>：$\sin(\pi-\theta)=\sin\theta$，$\cos(\pi-\theta)=-\cos\theta$；在三角形中 $\sin(A+C)=\sin B$ 等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>平方相加构造和角</strong>：当已知 $\sin\alpha+\cos\beta$ 与 $\cos\alpha+\sin\beta$ 的形式时，可将两式分别平方后相加，利用 $\sin^2+\cos^2=1$ 得到常数项，交叉项组合成 $2(\sin\alpha\cos\beta+\cos\alpha\sin\beta)=2\sin(\alpha+\beta)$，直接求出目标值。  </li>
+<li><strong>边角互化后用和角化简</strong>：在解三角形中，遇到形如 $a\cos C+c\cos A$ 的齐次边角式，先用正弦定理化为 $\sin A\cos C+\sin C\cos A=\sin(A+C)$，再利用三角形内角和 $A+B+C=\pi$ 转化为 $\sin B$，消元求解角或边。  </li>
+<li><strong>已知单角三角函数值求和角正弦</strong>：  </li>
+<li>步骤一：由已知角的某个三角函数值及象限，用平方关系求出该角的其他三角函数值（注意符号）。  </li>
+<li>步骤二：将目标角拆分成已知角的和或差，或利用三角形内角互补关系，如求 $\sin A$ 可化为 $\sin(B+C)$。  </li>
+<li>步骤三：套用两角和的正弦公式展开，代入数值计算。若用于解三角形，可进一步结合正弦定理求边长。  </li>
+<li><strong>整体代换与方程思想</strong>：对条件等式平方或组合，使 $\sin(\alpha+\beta)$ 作为整体出现，通过解方程直接得结果，避免逐一求解 $\alpha,\beta$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略角的象限导致符号错误</strong>：用 $\sin^2\theta+\cos^2\theta=1$ 求 $\sin\theta$ 时，必须根据角所在象限判断正负。例如 $\alpha$ 为第三象限角时 $\sin\alpha&lt;0$，忽略则会导致结果互为相反数。  </li>
+<li><strong>平方相加漏项</strong>：对 $\sin\alpha+\cos\beta=1$ 和 $\cos\alpha+\sin\beta=0$ 平方时，中间交叉项 $2\sin\alpha\cos\beta$ 与 $2\cos\alpha\sin\beta$ 相加后才是 $2\sin(\alpha+\beta)$，若直接将两式平方相加后未合并交叉项或漏写系数，会推导错误。  </li>
+<li><strong>三角形内角范围误判</strong>：由正弦值求角时，$\sin B&gt;0$ 且 $B\in(0,\pi)$，可能得 $B$ 为锐角或钝角，需结合题目隐含条件（如大边对大角）排除增解；同时注意 $\sin(A+C)=\sin B$ 而非 $\sin(\pi-B)$ 写错符号。  </li>
+<li><strong>边角互化忘记正弦定理条件</strong>：将 $b\cos B$ 写成 $\sin B\cos B$ 时，漏掉系数 $2R$ 的约分，或误将 $a\cos C$ 直接写成 $\cos A\cos C$，本质是对正弦定理 $a=2R\sin A$ 不熟练导致转化乱套。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2018-理-15）</h3>
+<p>已知 $\sin\alpha+\cos\beta=1$，$\cos\alpha+\sin\beta=0$，求 $\sin(\alpha+\beta)$。  </p>
+<p><strong>思路</strong>：两个条件等式都包含 $\sin$、$\cos$ 的一次项及交叉配对特征，通过平方相加可产生 $\sin\alpha\cos\beta+\cos\alpha\sin\beta$，恰好构成 $\sin(\alpha+\beta)$。无需单独求 $\alpha,\beta$。  </p>
+<p><strong>步骤</strong>：<br />
+1. 将 $\sin\alpha+\cos\beta=1$ 两边平方：<br />
+   $$\sin^2\alpha+2\sin\alpha\cos\beta+\cos^2\beta=1 \quad ①$$<br />
+2. 将 $\cos\alpha+\sin\beta=0$ 两边平方：<br />
+   $$\cos^2\alpha+2\cos\alpha\sin\beta+\sin^2\beta=0 \quad ②$$<br />
+3. ①+②得：<br />
+   $$(\sin^2\alpha+\cos^2\alpha)+(\cos^2\beta+\sin^2\beta)+2(\sin\alpha\cos\beta+\cos\alpha\sin\beta)=1$$<br />
+   即 $1+1+2\sin(\alpha+\beta)=1$，<br />
+   所以 $2\sin(\alpha+\beta)=-1$，解得 $\sin(\alpha+\beta)=-\dfrac12$。  </p>
+<p><strong>点评/变式</strong>：平方相加工方程是处理“对偶式”的经典技巧，可拓展至 $\sin\alpha+\sin\beta$ 与 $\cos\alpha+\cos\beta$ 组合求 $\cos(\alpha-\beta)$ 等。注意两式平方前先检查是否有 $=0$ 的等式，避免遗漏。</p>
+<h3><strong>题目2</strong>（2017-文-16）</h3>
+<p>在 $\triangle ABC$ 中，内角 $A,B,C$ 对边为 $a,b,c$，若 $2b\cos B=a\cos C+c\cos A$，求角 $B$。  </p>
+<p><strong>思路</strong>：边角混合等式，先用正弦定理统一为角的正弦，右侧出现 $\sin A\cos C+\sin C\cos A$，正好用两角和正弦化简，结合三角形内角关系求解。  </p>
+<p><strong>步骤</strong>：<br />
+1. 由正弦定理 $a=2R\sin A$，$b=2R\sin B$，$c=2R\sin C$，代入等式并约去 $2R$ 得：<br />
+   $$2\sin B\cos B=\sin A\cos C+\sin C\cos A$$<br />
+2. 右边用两角和正弦：$\sin A\cos C+\sin C\cos A=\sin(A+C)$。<br />
+   又因为 $A+B+C=\pi$，有 $\sin(A+C)=\sin(\pi-B)=\sin B$。<br />
+3. 即 $2\sin B\cos B=\sin B$。<br />
+   由于 $\sin B\neq0$（$B\in(0,\pi)$），两边约去 $\sin B$：$\ 2\cos B=1$，<br />
+   得 $\cos B=\dfrac12$，结合 $0&lt;B&lt;\pi$，故 $B=\dfrac{\pi}{3}$。  </p>
+<p><strong>点评/变式</strong>：本题关键在正弦定理化边为角、和角公式化为单角函数。常见变式：$a\cos B+b\cos A=c$ 等，均可化得 $c=c$ 恒成立，用于判定形状或求角。</p>
+<h3><strong>题目3</strong>（2016-理-13/文-15）</h3>
+<p>在 $\triangle ABC$ 中，$\cos A=\dfrac45$，$\cos C=\dfrac{5}{13}$，$a=1$，求 $b$。  </p>
+<p><strong>思路</strong>：已知两角余弦，先用平方关系求对应正弦，再利用三角形内角和关系将 $\sin B$ 表示为 $\sin(A+C)$，展开后代入正弦定理求边 $b$。  </p>
+<p><strong>步骤</strong>：<br />
+1. 由 $\cos A=\dfrac45$，$A\in(0,\pi)$，得 $\sin A=\sqrt{1-\cos^2A}=\dfrac35$。<br />
+   由 $\cos C=\dfrac{5}{13}$，$C\in(0,\pi)$，得 $\sin C=\sqrt{1-\cos^2C}=\dfrac{12}{13}$。<br />
+2. 在 $\triangle ABC$ 中，$B=\pi-(A+C)$，所以<br />
+   $$\sin B=\sin(A+C)=\sin A\cos C+\cos A\sin C=\frac35\times\frac{5}{13}+\frac45\times\frac{12}{13}=\frac{15}{65}+\frac{48}{65}=\frac{63}{65}$$<br />
+3. 由正弦定理 $\displaystyle\frac{a}{\sin A}=\frac{b}{\sin B}$，得<br />
+   $$b=\frac{a\sin B}{\sin A}=\frac{1\times\frac{63}{65}}{\frac35}=\frac{63}{65}\times\frac53=\frac{21}{13}$$  </p>
+<p><strong>点评/变式</strong>：这是典型的“知两角一边”解三角形问题，和角正弦用于求第三个角的正弦。注意如果给出 $\cos A$ 为负数（钝角），正弦仍取正，但后续和角公式中符号需小心代入。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-15.html">2018-理-15</a>（2018 · 中） 已知两个三角函数方程，两边平方后相加，利用公式求得 sin(α+β) 的值。</li>
+<li><a href="../../exam/数学/2017-文-16.html">2017-文-16</a>（2017 · 易） 本题考查利用正弦定理与三角恒等变换求解三角形内角，属于基础计算题。</li>
+<li><a href="../../exam/数学/2016-文-15.html">2016-文-15</a>（2016 · 中） 已知两角的余弦和一边，用同角关系、两角和正弦公式及正弦定理求另一边</li>
+<li><a href="../../exam/数学/2016-理-13.html">2016-理-13</a>（2016 · 中） 已知两角余弦和一边，求另一边，需用同角平方关系求正弦，再通过诱导公式与正弦定理求解。</li>
+<li><a href="../../exam/数学/2010-文-10.html">2010-文-10</a>（2010 · 易） 已知角α的余弦值及象限，求其正弦并利用两角和公式计算正弦值。</li>
+<li><a href="../../exam/数学/2008-理-17.html">2008-理-17</a>（2008 · 易） 在三角形中已知两角余弦求第三角正弦，并用面积公式和正弦定理计算边长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/634-两角和的正弦公式.html">两角和的正弦公式</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>值域</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>值域</h1><div class="review-mark" data-stem="值域"></div><div class="meta-card"><span><strong>考点</strong>值域</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：3</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>值域的定义</strong>：函数 $y=f(x)$ 中，所有函数值组成的集合叫做值域，记为 ${y \mid y=f(x), x\in A}$，其中 $A$ 为定义域。</li>
+<li><strong>反函数与值域/定义域的关系</strong>：若函数 $y=f(x)$ 有反函数 $y=f^{-1}(x)$，则<br />
+  ① 原函数的定义域 = 反函数的值域；<br />
+  ② <strong>原函数的值域 = 反函数的定义域</strong>。<br />
+  这是利用反函数求原函数值域（反函数法）的理论依据，也是求反函数时必须标明定义域的原因。</li>
+<li><strong>常见求值域的方法</strong>（结合考题提炼）  </li>
+<li><strong>直接观察法</strong>：如 $y=\sqrt{-x}\ (x\le 0)$，由算术平方根的非负性直接得值域 $[0,+\infty)$。  </li>
+<li><strong>利用单调性</strong>：对单调函数，端点处的函数值界定值域区间。  </li>
+<li><strong>反函数法</strong>：解出 $x=g(y)$，求出 $y$ 允许的取值范围（即 $g(y)$ 的定义域），即为 $f(x)$ 的值域。  </li>
+<li>配方法、换元法、判别式法、不等式法等视具体函数类型选用。</li>
+<li><strong>根式函数的值域要点</strong>：$y=\sqrt{u(x)}\ (u(x)\ge 0)$ 的值域永远为 $[0,+\infty)$，但需结合 $u(x)$ 的范围确定是否有限制；若根号外有负号如 $y=-\sqrt{u(x)}$，则值域为 $(-\infty,0]$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p><strong>反函数相关题中的值域三步法</strong>（全真题通用）<br />
+1. <strong>定原函数值域</strong>：由已知解析式和定义域，用直接法、单调性等求出原函数的值域 $R_f$。<br />
+2. <strong>反解交换</strong>：由 $y=f(x)$ 解出 $x=\varphi(y)$，再交换 $x,y$ 得 $y=\varphi(x)$。<br />
+3. <strong>标明反函数定义域</strong>：将反函数的定义域写成原函数的值域 $R_f$。<br />
+特别地，对于选择题，可先由原函数定义域、值域分别排除反函数定义域、值域错误的选项，再验证对应关系。</p>
+<p><strong>通用值域求解步骤</strong><br />
+- 第一步：观察函数结构，优先考虑定义域约束（如根式、分式、对数等）。<br />
+- 第二步：选用合适方法（观察/单调性/反解/配方法等）计算 $y$ 的取值范围。<br />
+- 第三步：写成区间或集合形式，注意端点的闭开。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆反函数的定义域与原函数的定义域</strong>：反函数的定义域是原函数的值域，不是原函数的定义域。如原函数定义域 $x\le 0$，值域 $y\ge 0$，则反函数的定义域为 $x\ge 0$。常见错误：直接把原函数定义域 $x\le 0$ 作为反函数的定义域。  </li>
+<li><strong>忽视值域对反函数解析式的影响</strong>：如由 $y=\sqrt{-x}$ 反解除 $x=-y^2$，交换得 $y=-x^2$，但必须带上定义域 $x\ge 0$ 才能与解析式构成完整反函数；缺定义域或定义域标错（如标成 $x\le 0$）会改变值域，导致错误选项。  </li>
+<li><strong>根式函数的值域遗漏非负性</strong>：看到 $y=\sqrt{\cdots}$ 就认为值域 $[0,+\infty)$，但若根号内含参数，需讨论被开方数的取值范围。如 $y=\sqrt{-x}\ (x\le 0)$，因 $-x\ge 0$，值域为 $[0,+\infty)$ 正确；但若 $y=\sqrt{x+1}\ (x\ge 3)$，值域实为 $[2,+\infty)$，不可简单记为 $[0,+\infty)$。  </li>
+<li><strong>反函数写法中忘记交换变量</strong>：由 $x=\varphi(y)$ 直接写反函数为 $x=\varphi(y)$ 而未交换 $x,y$，导致丢分。  </li>
+<li><strong>解反函数时，开方未考虑符号导致值域错误</strong>：如 $y=x^2\ (x\le 0)$ 反解为 $x=-\sqrt{y}$，错解为 $x=\sqrt{y}$ 就会得到错误的值域（定义域）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2009-文-02</h3>
+<p><strong>题目</strong>：函数 $y=\sqrt{-x}\ (x\le 0)$ 的反函数是（ ）<br />
+A. $y=x^2\ (x\ge 0)$　B. $y=-x^2\ (x\ge 0)$　C. $y=x^2\ (x\le 0)$　D. $y=-x^2\ (x\le 0)$</p>
+<p><strong>思路</strong>：利用反函数的定义域为原函数的值域这一关键点，结合定义域快速排除错误选项，再验证解析式。<br />
+<strong>步骤</strong>：<br />
+1. 求原函数的值域：由 $y=\sqrt{-x}$ 且 $x\le 0$ 知 $-x\ge 0$，算术平方根的值域为 $[0,+\infty)$，即 $y\ge 0$。因此反函数的定义域必须为 $x\ge 0$。<br />
+2. 依据定义域排除：选项 A、B 的定义域为 $x\ge 0$，符合；C、D 的定义域为 $x\le 0$，直接排除。<br />
+3. 依据值域排除剩余选项：A 的值域为 $y\ge 0$，B 的值域为 $y\le 0$。原函数定义域 $x\le 0$ 对应反函数的值域应为 $y\le 0$（因为反函数的值域 = 原函数的定义域），故 B 的值域正确，而 A 的值域错误。因此选 <strong>B</strong>。<br />
+4. （验证解析式）由 $y=\sqrt{-x}$ 平方得 $y^2=-x$，即 $x=-y^2$，交换 $x,y$ 得 $y=-x^2\ (x\ge 0)$，吻合。</p>
+<p><strong>点评/变式</strong>：本题核心考査反函数定义域、值域的相互确定关系。许多考生只记住“反函数交换 $x,y$”，却忘了标注定义域，导致误选 A 或 D。<br />
+<strong>变式</strong>：函数 $y=-\sqrt{x+1}\ (x\ge -1)$ 的反函数是<strong><em>_</em></strong>_。提示：值域 $y\le 0$ → 反函数定义域 $x\le 0$；反解出 $x=y^2-1$，交换得 $y=x^2-1\ (x\le 0)$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-02.html">2009-文-02</a>（2009 · 易） 函数反函数求解，结合定义域与值域排除选项</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1267-函数的定义域与值域.html">值域</a></li>
+</ul>
+</div>
+</body>
+</html>

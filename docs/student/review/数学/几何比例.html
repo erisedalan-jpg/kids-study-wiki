@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何比例</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何比例</h1><div class="review-mark" data-stem="几何比例"></div><div class="meta-card"><span><strong>考点</strong>几何比例</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线定义与焦半径</strong>：抛物线 $y^2=2px\ (p&gt;0)$ 上一点 $P(x_0,y_0)$ 到焦点 $F(\frac{p}{2},0)$ 的距离等于它到准线 $x=-\frac{p}{2}$ 的距离，即 $|PF|=x_0+\frac{p}{2}$。</li>
+<li><strong>焦点弦的比例转化</strong>：若直线过焦点或准线与对称轴的交点，常将焦半径之比转化为横坐标（或纵坐标）的线性关系，利用定义是绕开弦长公式的关键。</li>
+<li><strong>韦达定理搭桥</strong>：直线与圆锥曲线相交，点坐标满足的等量关系（如 $x_1=2x_2+2$）需与联立后的韦达定理联立消元，实现从几何比到斜率的求解。</li>
+<li><strong>直线过定点的几何意义</strong>：本题直线 $y=k(x+2)$ 恒过 $(-2,0)$，恰好是抛物线 $y^2=8x$ 的准线与 $x$ 轴交点，这为相似比提供“天然”桥梁。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画图定型</strong>：先画出抛物线及其准线、焦点，标出定点 $(-2,0)$，确认直线恒过准线上一点，联想定义转化。</li>
+<li><strong>定义转化比例</strong>：由 $|FA|=x_A+\frac p2,\ |FB|=x_B+\frac p2$，将焦半径比 $|FA|=2|FB|$ 写成 $x_A=2x_B+2$（本例 $p=4$）。</li>
+<li><strong>联立方程</strong>：设 $A(x_1,y_1),B(x_2,y_2)$，联立 $\begin{cases} y=k(x+2)\ y^2=8x \end{cases}$，消去 $y$ 得关于 $x$ 的二次方程，确保 $\Delta&gt;0$（检验 $k$ 范围）。</li>
+<li><strong>韦达+比例消元</strong>：写出 $x_1+x_2,\ x_1x_2$ 关于 $k$ 的表达式，将 $x_1=2x_2+2$ 代入，构造只含 $x_2,k$ 的方程，解出 $k$，结合 $k&gt;0$ 取舍。</li>
+<li><strong>几何巧解（可选）</strong>：利用直线过准线上点，作垂直得相似，由对应边成比例直接得 $x_1,x_2$ 关于 $k$ 的比，一步得斜率，适合选填题快速破解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误入“弦长公式”陷阱</strong>：直接使用 $|FA|=\sqrt{(x_1-2)^2+y_1^2}$ 等距离公式展开，导致运算量暴增，脱离定义转化而失分。</li>
+<li><strong>漏用直线过定点</strong>：没发现直线 $y=k(x+2)$ 的定点 $(-2,0)$ 与准线的关系，错失相似比简化的机会，小题大做。</li>
+<li><strong>忽略 $k&gt;0$ 的限定</strong>：联立解出的 $k$ 会有正负两个值，忘记题目给定 $k&gt;0$ 而导致答案多选或代入错误。</li>
+<li><strong>韦达定理代换混乱</strong>：在用 $x_1=2x_2+2$ 消元时，未能正确转化为仅含 $x_2$ 的形式，或在代入和差积时符号出错。</li>
+<li><strong>斜率与点的对应错位</strong>：联立后直接求坐标再反求 $k$，却错误使用焦半径与坐标关系（如混淆 $x$ 与 $y$），应全程紧扣 $x$ 坐标。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+直线 $y=k(x+2)(k&gt;0)$ 与抛物线 $C: y^2=8x$ 交于 $A,B$ 两点，$F$ 为 $C$ 的焦点，且 $|FA|=2|FB|$，求 $k$。</p>
+<p><strong>思路</strong><br />
+利用抛物线定义将焦半径比转化为 $A,B$ 横坐标的线性关系；联立直线与抛物线，借助韦达定理表达横坐标的和与积；代入所设比例消去一个横坐标，求解 $k$（注意 $k&gt;0$ 取舍）。也可用几何相似快速得坐标比后直接求斜率。</p>
+<p><strong>步骤</strong><br />
+1. 抛物线 $y^2=8x$ 中 $p=4$，焦点 $F(2,0)$，准线 $x=-2$。直线 $y=k(x+2)$ 恒过定点 $(-2,0)$ 恰为准线与 $x$ 轴交点。<br />
+2. 设 $A(x_1,y_1), B(x_2,y_2)$，由抛物线定义：<br />
+   $|FA|=x_1+2,\ |FB|=x_2+2$。<br />
+   依题意 $|FA|=2|FB|$ 得<br />
+   $$x_1+2 = 2(x_2+2) \implies x_1 = 2x_2+2. \tag{1}$$<br />
+3. 联立方程组<br />
+   $$\begin{cases} y = k(x+2) \ y^2 = 8x \end{cases}$$<br />
+   消去 $y$ 得 $k^2(x+2)^2 = 8x$，整理为<br />
+   $$k^2x^2 + (4k^2-8)x + 4k^2 = 0.$$<br />
+   显然 $k&gt;0$，且直线与抛物线有两交点，需 $\Delta &gt;0$（后续可验证）。<br />
+   由韦达定理：<br />
+   $$x_1+x_2 = \frac{8-4k^2}{k^2} = \frac{8}{k^2}-4, \quad x_1x_2 = 4. \tag{2}$$<br />
+4. 将 $x_1 = 2x_2+2$ 代入 $x_1x_2 = 4$：<br />
+   $(2x_2+2)x_2 = 4 \implies 2x_2^2+2x_2-4=0 \implies x_2^2+x_2-2=0$，<br />
+   解得 $x_2 = 1$ 或 $x_2 = -2$。<br />
+   - 若 $x_2 = -2$，则 $x_1 = 2(-2)+2 = -2$，但 $x=-2$ 在准线上，交点不存在（或重合作准线交点，代回检验不满足），舍去。<br />
+   - 若 $x_2 = 1$，则 $x_1 = 4$。<br />
+5. 将 $x_1=4, x_2=1$ 代入 $x_1+x_2 = \frac{8}{k^2}-4$ 得<br />
+   $4+1 = \frac{8}{k^2}-4 \implies 5 = \frac{8}{k^2}-4 \implies \frac{8}{k^2}=9$，<br />
+   故 $k^2 = \frac{8}{9}$，因 $k&gt;0$，得 $k = \frac{2\sqrt{2}}{3}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心：将距离比转化为横坐标关系，再用韦达定理消元。若直接平方求弦长，运算量极大。<br />
+- 几何巧解：过 $A,B$ 分别作准线垂线，垂足 $A_1,B_1$。由 $AA_1\parallel x$ 轴和相似可得 $x_1,x_2$ 与定点坐标的比，一步得 $x_1:x_2$，适合选填速解。<br />
+- 变式：若条件改为 $|FA|=\lambda|FB|$，解法同理，得到 $x_1=\lambda x_2 + 2(\lambda-1)$，代入韦达即可求 $k$ 关于 $\lambda$ 的表达式。<br />
+- 注意验证交点横坐标需大于 $0$（开口向右），排除负值解，避免增根。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-理-09.html">2009-理-09</a>（2009 · 中） 直线与抛物线相交，利用焦点和比例关系求直线斜率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/668-几何比例.html">几何比例</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>导数与最值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>导数与最值</h1><div class="review-mark" data-stem="导数与最值"></div><div class="meta-card"><span><strong>考点</strong>导数与最值</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2015–2020</li>
+<li>出现题位：解答21</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>导数与单调性</strong>：$f'(x)&gt;0 \Rightarrow f(x)$ 单调递增；$f'(x)&lt;0 \Rightarrow f(x)$ 单调递减。（开区间内）</li>
+<li><strong>极值与最值</strong>：极值点是导函数变号零点；闭区间$[a,b]$上的最值，先求所有极值点及不可导点，再算端点函数值，比较即得。开区间或无穷区间必须结合单调性和极限判断。</li>
+<li><strong>恒成立问题</strong>：<br />
+  $\forall x\in D,\; f(x)\le k \;\iff\; k\ge f(x)<em _min="\min">{\max}$；<br />
+  $\forall x\in D,\; f(x)\ge k \;\iff\; k\le f(x)</em>$。</li>
+<li><strong>双变量绝对值不等式</strong>：若对任意 $x_1,x_2\in D$ 都有 $|f(x_1)-f(x_2)|\le M$，当且仅当 $f(x)<em _min="\min">{\max}-f(x)</em>\le M$。</li>
+<li><strong>含参讨论核心</strong>：求导后关注导函数类型（一次型、二次型、$e^x$ 混合型等），按参数对导函数零点的有无、大小、与定义域关系进行分类。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求单调区间（通用步骤）</strong><br />
+   ① 写出定义域；② 求 $f'(x)$ 并尽量因式分解；③ 解 $f'(x)&gt;0$ 得增区间，$f'(x)&lt;0$ 得减区间；④ 含参时，按参数导致的正负变化分段给出结论。</li>
+<li><strong>求最值（闭区间）</strong><br />
+   ① 求 $f'(x)$，找出所有驻点和不可导点；② 计算这些点及区间端点处的函数值；③ 比较得出最大、最小值。</li>
+<li><strong>恒成立求参数范围</strong>  </li>
+<li>能分离参数：$a\ge g(x)$ 恒成立 $\Leftrightarrow a\ge g(x)<em _min="\min">{\max}$；$a\le g(x)$ 恒成立 $\Leftrightarrow a\le g(x)</em>$。  </li>
+<li>不易分离：直接构造函数 $h(x)=f(x)-g(x)$，转化为求 $h(x)<em _min="\min">{\max}\le0$ 或 $h(x)</em>\ge0$。</li>
+<li><strong>双变量任意问题统一化归</strong><br />
+   将 $|f(x_1)-f(x_2)|\le M$ 转化为 $f(x)<em _min="\min">{\max}-f(x)</em>\le M$，先利用导数求出区间上的最值，再解关于参数的不等式。</li>
+<li><strong>导函数符号不明时“二次求导”</strong><br />
+   令 $g(x)=f'(x)$，求 $g'(x)$ 判断 $g(x)$ 的单调性，结合特殊点（如 $g(0)=0$）确定 $f'(x)$ 的正负。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>定义域被忽略</strong>：对数真数大于零、分母不为零等。讨论单调性时区间不能跨越无定义点。</li>
+<li><strong>求导运算错误</strong>：分式、复合函数、指数/对数求导法则混淆；忘记乘内层导数。</li>
+<li><strong>含参讨论不全面</strong>：忘记讨论二次项系数为零、指数函数的底数情况、$m=0$ 等退化情形。</li>
+<li><strong>极值点误作最值点</strong>：不在闭区间时，极值不一定是最值；闭区间内也需与端点值大小对比再下结论。</li>
+<li><strong>恒成立取等条件遗漏</strong>：写参数范围时漏掉等号，或未验证等号能否同时成立。</li>
+<li><strong>双变量任意与存在混淆</strong>：对“任意 $x_1$，存在 $x_2$”等不同表述，误用最大最小值之差。</li>
+<li><strong>分式函数求导后符号判断</strong>：对形如 $\frac{f(x)-f(a)}{x-a}$ 的导数，忘记分子部分需重新构造函数分析符号，不要直接消去公因式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1（2020·全国·文 21）</h3>
+<p><strong>题目</strong>：已知 $f(x)=2\ln x+1$。<br />
+(1) 若 $f(x)\le 2x+c$，求 $c$ 的取值范围；<br />
+(2) 设 $a&gt;0$，讨论 $g(x)=\dfrac{f(x)-f(a)}{x-a}$ 的单调性。</p>
+<p><strong>思路</strong><br />
+(1) 恒成立问题直接移项构造函数 $h(x)=f(x)-2x-c$，转化为求 $h(x)_{\max}\le0$。<br />
+(2) 求导后分子单独设为 $m(x)$，由于一次求导符号不易直接判断，可对 $m(x)$ 二次求导，借助 $m'(x)$ 推出 $m(x)&lt;0$，从而得 $g'(x)&lt;0$。</p>
+<p><strong>步骤</strong><br />
+(1) 定义域 $(0,+\infty)$。<br />
+令 $h(x)=2\ln x+1-2x-c$，则 $h'(x)=\frac{2}{x}-2=\frac{2(1-x)}{x}$。<br />
+$0&lt;x&lt;1$ 时 $h'(x)&gt;0$，$x&gt;1$ 时 $h'(x)&lt;0$。<br />
+所以 $h(x)_{\max}=h(1)=-1-c\le0$，即 $c\ge-1$。<br />
+(2) $g(x)$ 的定义域为 $(0,a)\cup(a,+\infty)$。<br />
+求导得 $g'(x)=\dfrac{\frac{2}{x}(x-a)-[2\ln x+1-2\ln a-1]}{(x-a)^2}$，化简后分子设为 $m(x)=2-\frac{2a}{x}-2\ln\frac{x}{a}$。<br />
+$m'(x)=\frac{2a}{x^2}-\frac{2}{x}=\frac{2(a-x)}{x^2}$。<br />
+由 $m'(x)$ 可知 $m(x)$ 在 $(0,a)$ 递增，在 $(a,+\infty)$ 递减，且 $m(a)=0$，故 $m(x)&lt;0\;(x\neq a)$。<br />
+从而 $g'(x)&lt;0$，$g(x)$ 在 $(0,a)$ 和 $(a,+\infty)$ 均单调递减，无递增区间。</p>
+<p><strong>点评/变式</strong><br />
+恒成立模型典型，勿忘先求定义域。第二问中 $\frac{f(x)-f(a)}{x-a}$ 型的导数常用作差函数的单调性处理，也可联想拉格朗日中值定理的背景；二次求导是判断这类分子符号的利器。间断点 $x=a$ 处须断开写区间。</p>
+<h3>代表题 2（2015·全国·理 21）</h3>
+<p><strong>题目</strong>：已知 $f(x)=e^{mx}+x^2-mx$。<br />
+(1) 证明 $f(x)$ 在 $(-\infty,0)$ 单调递减，在 $(0,+\infty)$ 单调递增；<br />
+(2) 对任意 $x_1,x_2\in[-1,1]$ 都有 $|f(x_1)-f(x_2)|\le e-1$，求 $m$ 的取值范围。</p>
+<p><strong>思路</strong><br />
+(1) 求导后 $f'(x)=m(e^{mx}-1)+2x$，直接判断符号困难，采用二阶导数证明 $f'(x)$ 单调且以 $0$ 为零点。<br />
+(2) 题给条件等价于 $f(x)<em _min="\min">{\max}-f(x)</em>\le e-1$，利用 (1) 的单调性确定最值，再转化为关于 $m$ 的不等式组求解。</p>
+<p><strong>步骤</strong><br />
+(1) $f'(x)=me^{mx}+2x-m=m(e^{mx}-1)+2x$。<br />
+若 $m=0$，$f(x)=1+x^2$，结论显然成立。<br />
+若 $m\neq0$，求 $f''(x)=m^2e^{mx}+2&gt;0$，故 $f'(x)$ 在 $\mathbb{R}$ 上单调递增。<br />
+又 $f'(0)=0$，所以 $x&lt;0$ 时 $f'(x)<f'(0)=0$，$x>0$ 时 $f'(x)&gt;0$，得证。<br />
+(2) 由 (1) 知 $f(x)$ 在 $[-1,1]$ 上最小值 $f(0)=1$，最大值在 $f(-1)$ 或 $f(1)$ 处。<br />
+依题意 $\max{f(-1),f(1)}-1\le e-1$，即 $f(-1)\le e,\; f(1)\le e$。<br />
+代入得 $e^{-m}+1+m\le e$，$e^m+1-m\le e$。<br />
+令 $g(t)=e^t-t$，则</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-21.html">2020-文-21</a>（2020 · 中） 本题考查利用导数解决不等式恒成立问题及含参函数单调性判定。</li>
+<li><a href="../../exam/数学/2015-理-21.html">2015-理-21</a>（2015 · 中） 利用导数研究含参函数的单调性并利用最值解决不等式恒成立求参数范围</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/838-导数与最值.html">导数与最值</a></li>
+</ul>
+</div>
+</body>
+</html>

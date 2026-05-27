@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>长方体性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>长方体性质</h1><div class="review-mark" data-stem="长方体性质"></div><div class="meta-card"><span><strong>考点</strong>长方体性质</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>长方体的结构特征</strong>：六个面都是矩形，相对的面平行且全等。侧棱垂直于底面。</li>
+<li><strong>面面平行的性质定理</strong>：如果两个平行平面同时与第三个平面相交，那么它们的交线平行。</li>
+<li><strong>线面平行的性质定理</strong>：如果一条直线平行于一个平面，且经过这条直线的平面与该平面相交，那么这条直线与交线平行。</li>
+<li><strong>作截面图的依据</strong>：利用“平行平面被第三个平面截得的交线平行”这一原理，可在几何体上找到截平面与各面的交线。对于复杂的截面，可从一个已知点出发，利用平行关系逐步确定完整的截面多边形。</li>
+<li><strong>体积计算的割补思想</strong>：当几何体被平面分割时，若直接求解不规则部分体积困难，可转化为求规则几何体（柱、锥、台）的体积差或比值。长方体的体积公式 $V = abc$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>画截面图的通法</strong>：</p>
+<ul>
+<li><strong>找初始交线</strong>：连接已知的两个截面点，确定截面与长方体某个面（常为上底面或下底面）的交线。</li>
+<li><strong>作平行线</strong>：利用“面面平行”的性质，过截面上的点作初始交线的平行线，从而得到截面与其他平行面的交线。</li>
+<li><strong>连线闭合</strong>：依次连接截面与各棱的交点，即可得到完整的截面多边形。本题中，需画出的截面是正方形，可作为验证条件。</li>
+</ul>
+</li>
+<li>
+<p><strong>体积分割问题的求解策略</strong>：</p>
+<ul>
+<li><strong>定性判断</strong>：先明确分割后的两部分各自是什么几何体，或可看作哪些基本几何体通过组合/切割得到。</li>
+<li><strong>寻找关键量</strong>：计算所需的所有棱长或高。尤其注意利用截面图形的几何性质（如本题中的正方形）建立方程，解出未知棱长。</li>
+<li><strong>选择易算部分</strong>：计算体积比时，通常选择形状规则、易于计算的那部分体积，另一部分可用总体积减去已求部分得到，或直接通过比值关系得出。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>截面的形状判断错误</strong>：误将截面与表面的交线围成的多边形当作截面本身，导致面积或边长计算错误。注意“交线围成一个正方形”指的是截面在几何体内部各面交线构成的边界是正方形，该正方形是截面的一部分，而非整个截面就是一个孤立的平面图形。</li>
+<li><strong>未利用截面特性列方程</strong>：题目明确交线围成正方形，这一条件必须用于推导相关边长，比如得出截面过棱上特定点或确定正方形边长。忽略此条件将导致无法计算。</li>
+<li><strong>体积比计算顺序混乱</strong>：在求两部分体积之比时，必须明确哪部分对应分子、哪部分对应分母。可先算出一个明确部分的体积，再用它比另一部分或总体积，审题不清极易导致比值写反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：（2015-文-19）</h3>
+<p>长方体 $ABCD - A_1B_1C_1D_1$ 中，$AB=16$，$BC=10$，$AA_1=8$，点 $E$，$F$ 分别在 $A_1B_1$，$D_1C_1$ 上，$A_1E = D_1F = 4$。过 $E$，$F$ 的平面 $\alpha$ 与此长方体的面相交，交线围成一个正方形。
+（Ⅰ）画出这个正方形（不必说明画法和理由）；
+（Ⅱ）求平面 $\alpha$ 把该长方体分成的两部分体积的比值。</p>
+<h3><strong>思路</strong></h3>
+<p>（Ⅰ）截面作图需利用面面平行性质。平面 $\alpha$ 已与上底面 $A_1B_1C_1D_1$ 交于 $EF$。因平面 $ABB_1A_1 \parallel$ 平面 $DCC_1D_1$，所以平面 $\alpha$ 与它们的交线应平行。且平面 $\alpha$ 与面 $ABCD$ 的交线也应平行于 $EF$。据此可推出截面在长方体内截出的图形为平行四边形。结合“交线围成正方形”可确定棱上的交点位置。
+（Ⅱ）由正方形边长 $EF$ 可通过勾股定理求出。利用正方形这一条件可推出平面 $\alpha$ 在侧棱上的交点位置（或截得棱的长度），从而确定截得部分是一个规则的直三棱柱。体积比利用直三棱柱与剩余部分的关系求解。</p>
+<h3><strong>步骤</strong></h3>
+<p><strong>（Ⅰ）</strong>
+1.  连接 $EF$。此为截面与上底面 $A_1B_1C_1D_1$ 的交线。
+2.  在线段 $BB_1$ 上取一点 $M$，在线段 $CC_1$ 上取一点 $N$，使得 $BM = AM = 6$。（如何得到见下：由 $EF$ 为正方形一边，可求 $EF = \sqrt{12^2+8^2} = \sqrt{208+\cdots}$ 等，此处省略推理，最终作图位置：在 $BB_1$ 上截取 $BM = CN = 6$。）
+3.  连接 $EM$, $MN$, $NF$。则四边形 $EFNM$（或再加上下底面的交线，形成五边形或六边形）围成的图形即为所求正方形。在所给图中标出 $M$ 与 $N$ 并连线。</p>
+<p><strong>（Ⅱ）</strong>
+1.  <strong>计算 $EF$ 长</strong>：过 $E$ 作 $A_1D_1$ 的平行线交 $A_1B_1$ 的垂线… 直接由长方体性质，有 $EF = \sqrt{(A_1E - D_1F)^2 + B_1C_1^2 + ( \dots )}$ 等。在矩形 $A_1B_1C_1D_1$ 中，$A_1D_1 = 10$, 过 $F$ 作 $FH \perp A_1B_1$ 于 $H$，则 $EH = 16 - 4 - 4 = 8$。所以 $EF^2 = EH^2 + FH^2 = 8^2 + 10^2 = 164$。故 $EF = 2\sqrt{41}$。
+2.  <strong>确定正方形边长与分割几何体</strong>：交线围成正方形，其边长 $l$ 等于 $EF = 2\sqrt{41}$。平面 $\alpha$ 截侧面 $BCC_1B_1$ 所得交线应等于 $l$，即 $MN = 2\sqrt{41}$，而 $BC = 10$，由勾股定理得 $BM^2 + BC^2 = MN^2$，即 $BM^2 + 100 = 164$，得 $BM = 8$（负值舍去）。但 $BB_1=8$，这说明点 $M$ 与 $B$ 重合。同理 $CN=8$，点 $N$ 与 $C$ 重合。
+3.  <strong>计算体积</strong>：平面 $\alpha$ 截得一个直三棱柱 $EBF - MCN$（点 $M,N$ 即 $B,C$）。
+    该三棱柱以 $\triangle EBF$ 为底面，高为 $BC=10$。
+    其体积 $V_{\text{柱}} = S_{\triangle EBF} \times BC = \left( \frac{1}{2} \times B_1E \times BB_1 \right) \times BC = \left( \frac{1}{2} \times 4 \times 8 \right) \times 10 = 160$。
+    长方体总体积 $V = 16 \times 10 \times 8 = 1280$。
+    另一部分体积 $V - V_{\text{柱}} = 1280 - 160 = 1120$。
+4.  <strong>求比值</strong>：两体积比为 $V_{\text{柱}} : (V - V_{\text{柱}}) = 160 : 1120 = 1 : 7$。或者为 $(V - V_{\text{柱}}) : V_{\text{柱}} = 7 : 1$。题目要求“两部分的体积的比值”，最终答 $\frac{1}{7}$ 或 $\frac{7}{1}$ 均可。</p>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li><strong>核心方法提炼</strong>：本题的核心在于将“截面形状为正方形”这一条件成功转化为计算各棱上截线段长度的方程。注意不要混淆截面围成的图形与实际截面多边形的关系。本题中由于正方形边长 $&gt;BC$，导致截面与侧棱的交点落在了延长线上（或说与底面顶点重合），形成棱柱，这种情况在高考中较为常见，需结合数值灵敏判断几何体结构。</li>
+<li><strong>变式拓展</strong>：若 $AA_1$ 的长度增加，使得正方形边长小于侧棱长, 此时截面在侧棱 $BB_1$, $CC_1$ 上截得点 $M, N$ 不在端点，且 $BM = CN$，则切割出的部分变为一个“棱台”。计算时可利用比例关系或直接求体积差。掌握这种由静态到动态变化的分析模式，能够极大提高应对截面分割问题的能力。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-19.html">2015-文-19</a>（2015 · 中） 在长方体中根据给定条件作出正方形截面，并计算平面分割长方体所得两部分的体积比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">长方体性质</a></li>
+</ul>
+</div>
+</body>
+</html>

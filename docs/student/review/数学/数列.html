@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列</h1><div class="review-mark" data-stem="数列"></div><div class="meta-card"><span><strong>考点</strong>数列</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：15</li>
+<li>真题数：3；年份跨度：2008–2020</li>
+<li>出现题位：解答18 解答19 选择12</li>
+<li>难度分布：难2 中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等差数列</strong><ul>
+<li><strong>定义</strong>：$a_{n+1} - a_n = d$（常数）。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 + (n-1)d$。</li>
+<li><strong>前 $n$ 项和公式</strong>：$S_n = \frac{n(a_1 + a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$。</li>
+<li><strong>重要性质</strong>：若 $m+n=p+q$，则 $a_m + a_n = a_p + a_q$。</li>
+</ul>
+</li>
+<li><strong>等比数列</strong><ul>
+<li><strong>定义</strong>：$\frac{a_{n+1}}{a_n} = q$（常数，$q \neq 0$）。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 q^{n-1}$。</li>
+<li><strong>前 $n$ 项和公式</strong>：当 $q=1$ 时 $S_n = na_1$；当 $q \neq 1$ 时 $S_n = \frac{a_1(1-q^n)}{1-q}$。</li>
+<li><strong>等比中项性质</strong>：若 $a, b, c$ 成等比，则 $b^2 = ac$。注意：此项常作为核心条件用于列方程。</li>
+</ul>
+</li>
+<li><strong>数列递推与构造</strong><ul>
+<li><strong>线性组合构造</strong>：通过将已知递推关系式进行加减等线性运算，构造出新的等差或等比数列，是求解通项的关键方法。</li>
+<li><strong>方程组思想</strong>：由新构造数列的通项公式与原数列通项的关系，建立方程组，解出所求通项。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义与性质转化法</strong>
+   将题目中的等差或等比条件，直接转化为关于首项 $a_1$ 和公差 $d$（或公比 $q$）的方程。如利用“三项成等比数列”列出 $a_3 a_{10} = a_6^2$ 的关系式，求解基本量。</li>
+<li><strong>递推关系线性运算法（构造法）</strong>
+    对于形如 $\begin{cases} a_{n+1} = f(a_n, b_n) \ b_{n+1} = g(a_n, b_n) \end{cases}$ 的数列组，常对两式作和、差或倍数运算，以消去交叉项，构造出仅含 $a_n+b_n$ 或 $a_n-b_n$ 的新数列，并证明其为等差或等比数列。</li>
+<li><strong>通项公式反求法</strong>
+    先求出构造数列（如 ${a_n+b_n}$ 和 ${a_n-b_n}$）的通项公式，再将其视为关于 $a_n$ 和 $b_n$ 的二元一次方程组，通过解方程组直接反解出单个数列的通项公式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>等比数列条件的多解性</strong>：在利用等比中项 $b^2 = ac$ 列方程求解公差 $d$ 时，得到的方程通常是一元二次方程，会产生两个解。必须回代检验所有解是否符合题意（如是否导致等比数列某项为零），防止漏解。</li>
+<li><strong>基本量运用混乱</strong>：在设基本量后，用 $a_1, d$（或 $a_1, q$）表示特定项（如 $a_3, a_6, a_{10}$）时，极易因项数推算错误导致方程列错。建议统一用 $a_n = a_m + (n-m)d$ 的形式从已知项出发，减少失误。</li>
+<li><strong>构造后首项的计算遗漏</strong>：在证明新构造数列 ${a_n+b_n}$ 为等差或等比时，不仅要证明递推关系，还必须明确写出新数列的首项（如 $a_1+b_1$），否则后续的通项公式将无法正确写出。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 ${a_n}$ 和 ${b_n}$ 满足 $a_1=1, b_1=0, a_{n+1} = 4a_n - 3b_n - 4, b_{n+1} = 4b_n - 3a_n - 4$。证明 ${a_n+b_n}$ 是等比数列，${a_n-b_n}$ 是等差数列，并求 ${a_n}$ 和 ${b_n}$ 的通项公式。
+<strong>思路</strong>：目标是证明两个构造数列的等差/等比性质。直接对给出的 $a_{n+1}$ 和 $b_{n+1}$ 的递推式分别进行相加和相减运算，观察结果是否符合定义。
+<strong>步骤</strong>：
+1. <strong>运算构造</strong>：
+   - 两式相加：$a_{n+1} + b_{n+1} = (4a_n - 3b_n - 4) + (4b_n - 3a_n - 4) = (a_n + b_n) - 8$。
+   - 两式相减：$a_{n+1} - b_{n+1} = (4a_n - 3b_n - 4) - (4b_n - 3a_n - 4) = 7(a_n - b_n)$。
+2. <strong>判定性质</strong>：
+   - 由和式可得 $(a_{n+1}+b_{n+1}) - (a_n+b_n) = -8$，且首项 $a_1+b_1=1$。故 ${a_n+b_n}$ 是首项为1，公差为 $-8$ 的<strong>等差数列</strong>。
+   - 由差式可得 $\frac{a_{n+1}-b_{n+1}}{a_n-b_n} = 7$，且首项 $a_1-b_1=1$。故 ${a_n-b_n}$ 是首项为1，公比为 $7$ 的<strong>等比数列</strong>。
+3. <strong>求通项</strong>：
+   - 由等差数列通项公式：$a_n + b_n = 1 + (n-1)(-8) = 9 - 8n$。
+   - 由等比数列通项公式：$a_n - b_n = 1 \times 7^{n-1} = 7^{n-1}$。
+   - 联立两式：$\begin{cases} a_n + b_n = 9-8n \ a_n - b_n = 7^{n-1} \end{cases}$，解得 $a_n = \frac{7^{n-1} - 8n + 9}{2}$，$b_n = \frac{9 - 8n - 7^{n-1}}{2}$。
+<strong>点评/变式</strong>：本题的核心是“通过线性运算构造新数列”。注意最终证明需指明首项与公差/公比。变式训练：若递推关系变为系数不等的线性组合，如 $a_{n+1} = 2a_n + b_n, b_{n+1} = a_n + 2b_n$，则通常寻找待定系数进行组合，令 $a_{n+1} + \lambda b_{n+1} = k(a_n + \lambda b_n)$，转化为等比数列问题。</p>
+<p><strong>题目</strong>：等差数列 ${a_n}$ 中，$a_4=10$，且 $a_3, a_6, a_{10}$ 成等比数列，求 ${a_n}$ 前 20 项的和 $S_{20}$。
+<strong>思路</strong>：利用已知项 $a_4$ 和公差 $d$ 表示出 $a_3, a_6, a_{10}$，代入等比中项条件 $a_3 \cdot a_{10} = a_6^2$，解出 $d$，进而求出 $a_1$ 和 $S_{20}$。
+<strong>步骤</strong>：
+1. <strong>设基本量并表示目标项</strong>：
+   设公差为 $d$，由 $a_4=10$ 可得：
+   $a_3 = a_4 - d = 10 - d$，
+   $a_6 = a_4 + 2d = 10 + 2d$，
+   $a_{10} = a_4 + 6d = 10 + 6d$。
+2. <strong>列方程求公差</strong>：
+   由等比中项性质有 $(10-d)(10+6d) = (10+2d)^2$。
+   展开得：$100 + 60d - 10d - 6d^2 = 100 + 40d + 4d^2$。
+   化简为：$10d^2 - 10d = 0$，即 $10d(d-1)=0$。
+   解得 $d=0$ 或 $d=1$。
+3. <strong>分类讨论求 $S_{20}$</strong>：
+   - 当 $d=0$ 时，数列为常数列，$a_1 = a_4 = 10$。$S_{20} = 20 \times 10 = 200$。
+   - 当 $d=1$ 时，$a_1 = a_4 - 3d = 10 - 3 = 7$。$S_{20} = 20 \times 7 + \frac{20 \times 19}{2} \times 1 = 140 + 190 = 330$。
+<strong>点评/变式</strong>：“等比中项”是方程的来源，“等差数列通项”是表达项的规则。本题极易漏掉 $d=0$ 的解而失分。无论题目是否明确“公差不为0”，只要方程解出零值，都必须保留并讨论。常数列既是等差数列又是公比为1的等比数列，满足“成等比”的条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-12.html">2020-理-12</a>（2020 · 难） 0-1 周期序列与自相关函数 C(k)，多选满足 C(k)≤1/5 的 5 周期序列。</li>
+<li><a href="../../exam/数学/2019-理-19.html">2019-理-19</a>（2019 · 难） 已知数列{a_n}和{b_n}满足递推关系，证明{a_n+b_n}是等比数列、{a_n-b_n}是等差数列，并求通项公式。</li>
+<li><a href="../../exam/数学/2008-文-18.html">2008-文-18</a>（2008 · 中） 等差数列a₄=10且a₃、a₆、a₁₀成等比，求公差d后算出a₁，再求前20项和S₂₀。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/381-数列概念-高中.html">数列</a></li>
+</ul>
+</div>
+</body>
+</html>

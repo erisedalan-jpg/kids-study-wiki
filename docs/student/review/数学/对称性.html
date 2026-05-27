@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对称性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对称性</h1><div class="review-mark" data-stem="对称性"></div><div class="meta-card"><span><strong>考点</strong>对称性</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：15</li>
+<li>真题数：4；年份跨度：2011–2024</li>
+<li>出现题位：填空16 解答19 选择11 选择12</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数对称性</strong></li>
+<li>轴对称：若函数 $y=f(x)$ 满足 $f(a+x)=f(a-x)$，则图像关于直线 $x=a$ 对称。</li>
+<li>中心对称：若满足 $f(a+x)+f(a-x)=2b$，则图像关于点 $(a,b)$ 中心对称。特别地，奇函数关于原点对称，偶函数关于 $y$ 轴对称。</li>
+<li>对称性常用于图像交点问题：若两个函数图像具有公共对称中心（或对称轴），其交点也成对出现，从而可快速求交点横（纵）坐标之和。</li>
+<li><strong>圆锥曲线的对称性</strong></li>
+<li>椭圆、双曲线、抛物线均为轴对称图形，椭圆与双曲线还关于中心对称。</li>
+<li>点关于坐标轴或原点的对称点坐标规律：$(x,y)$ 关于 $x$ 轴对称得 $(x,-y)$，关于 $y$ 轴对称得 $(-x,y)$，关于原点对称得 $(-x,-y)$。</li>
+<li>若点在曲线上，利用对称性可将未知点转化到已知分支或区域，简化方程与计算。</li>
+<li><strong>立体几何中的对称性</strong></li>
+<li>正多面体、半正多面体具有丰富的对称面、对称轴和对称中心。</li>
+<li>利用对称性可将复杂空间图形还原到正方体、正四面体等规则图形中，从而借助平面几何与投影计算棱长、面数等。</li>
+<li><strong>对称性在解题中的通用价值</strong></li>
+<li>化繁为简：将“不对称”的条件通过对称点转化为对称条件，建立等量关系。</li>
+<li>递推构造：借助对称变换（如关于坐标轴对称）构造点列时，可得到便捷的坐标递推公式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别对称特征</strong><br />
+   审题时注意关键词：“对称点”“对称轴”“中心对称”“关于……对称”；几何图形本身的对称性（双曲线左、右支关于 $y$ 轴对称等）。</li>
+<li><strong>坐标化对称关系</strong><br />
+   将对称关系转化为点的坐标等式。例如，$Q$ 与 $P$ 关于 $y$ 轴对称 $\Leftrightarrow x_Q=-x_P,\ y_Q=y_P$；关于原点对称 $\Leftrightarrow$ 坐标均反号。</li>
+<li><strong>联立方程消元</strong><br />
+   在解析几何中，把对称点坐标代入曲线方程和直线方程，利用已知斜率或距离等条件建立方程（组），消去中间变量。</li>
+<li><strong>利用图形对称性转化条件</strong><br />
+   如两圆关于 $x$ 轴对称，公共弦垂直于对称轴，从而将 $|PQ|$ 转化为 $2|y_P|$，避免复杂联立。</li>
+<li><strong>应用函数图像对称性求和/求值</strong><br />
+   对于两个函数图像的交点横坐标之和问题，先找公共对称中心（或轴），则所有交点两两成对，每对横坐标之和为定值（对称中心横坐标的 $2$ 倍），由此快速求和。</li>
+<li><strong>空间对称性还原位置</strong><br />
+   将半正多面体等复杂形体“放回”正方体，借助正方体的对称面与对称中心，寻找截面、等腰直角三角形等特征，用平面几何求解长度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆对称类型</strong>：将中心对称当作轴对称使用，或误将关于 $x$ 轴的对称点写成 $(-x,y)$。切记关于 $x$ 轴对称是 $y$ 变号，关于 $y$ 轴对称是 $x$ 变号。</li>
+<li><strong>忽视定义域/曲线分支</strong>：利用对称性转化点时，未检验生成点是否在规定的分支或区域内（如双曲线左、右支的符号限制），导致增解或漏解。</li>
+<li><strong>对称性使用不严谨</strong>：仅凭图形直观断言对称而缺乏代数验证。高考中，图形只起辅助作用，必须用坐标或方程证明对称关系。</li>
+<li><strong>空间对称体截面选取错误</strong>：半正多面体截正方体时，切入点找不对，导致等腰直角三角形等特征识别错误，无法正确建立关于棱长的方程。</li>
+<li><strong>忽略隐含的对称中心</strong>：两个函数的组合可能隐含中心对称，如 $y=\frac{1}{1-x}$ 的对称中心为 $(1,0)$，若未发现则无法运用对称性简化交点求和。</li>
+<li><strong>参数范围对对称性的影响</strong>：例如斜率 $k$ 与 $0&lt;k&lt;1$ 的限制，可能决定点列构造中交点位于左支还是右支，进而影响对称点的坐标正负。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2024·新课标Ⅱ-19</h3>
+<p>已知双曲线 $C:x^2-y^2=m\ (m&gt;0)$，点 $P_1(5,4)$ 在 $C$ 上，常数 $k$ 满足 $0&lt;k&lt;1$。构造点列 $P_n(n\geq2)$：过 $P_{n-1}$ 作斜率为 $k$ 的直线与 $C$ 的左支交于 $Q_{n-1}$，令 $P_n$ 为 $Q_{n-1}$ 关于 $y$ 轴的对称点。记 $P_n(x_n,y_n)$。
+(1) 求 $m$；
+(2) 证明数列 ${x_n-y_n}$ 是等比数列；
+(3) 记 $S_n$ 为 $\triangle P_nP_{n+1}P_{n+2}$ 的面积，证明 $S_n=S_{n+1}$。</p>
+<p><strong>思路</strong><br />
+由对称性将 $Q_{n-1}$ 用 $P_n$ 表示：$Q_{n-1}(-x_n,y_n)$；再利用 $Q_{n-1}$ 在直线 $P_{n-1}Q_{n-1}$ 上和双曲线 $C$ 上，结合斜率 $k$ 建立 $P_n$ 与 $P_{n-1}$ 的递推关系，进而证明数列性质。</p>
+<p><strong>步骤</strong><br />
+1. 由 $P_1(5,4)$ 在 $C$ 上：$5^2-4^2=m\Rightarrow m=9$，故 $C:x^2-y^2=9$。<br />
+2. 设 $P_n(x_n,y_n)$，则 $Q_{n-1}$ 关于 $y$ 轴的对称点为 $P_n$，故 $Q_{n-1}=(-x_n,y_n)$。<br />
+3. $Q_{n-1}$ 在 $C$ 上：$(-x_n)^2-y_n^2=9\Rightarrow x_n^2-y_n^2=9$，即 $P_n$ 也在 $C$ 右支。<br />
+4. 由 $k_{P_{n-1}Q_{n-1}}=k$，得 $\dfrac{y_n-y_{n-1}}{-x_n-x_{n-1}}=k$，整理为 $y_n-y_{n-1}=-k(x_n+x_{n-1})$。<br />
+5. 对 $x_n^2-y_n^2=9$ 及 $x_{n-1}^2-y_{n-1}^2=9$ 作差：$(x_n-x_{n-1})(x_n+x_{n-1})=(y_n-y_{n-1})(y_n+y_{n-1})$，代入第4步的 $y_n-y_{n-1}$ 关系，可得 $(x_n-x_{n-1})=(y_n+y_{n-1})(-k)$。<br />
+   进一步解得 $x_n-y_n=\dfrac{1+k}{1-k}(x_{n-1}-y_{n-1})$，故 ${x_n-y_n}$ 是公比为 $\frac{1+k}{1-k}$ 的等比数列。<br />
+6. 面积部分可利用 $P_n$ 均在右支</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-19.html">2024-新课标Ⅱ-19</a>（2024 · 中） 本题通过双曲线上已知点与斜率递推构造对称点列，考查直线与双曲线位置关系及几何变换。</li>
+<li><a href="../../exam/数学/2019-文-16.html">2019-文-16</a>（2019 · 中） 该题考查半正多面体的面数计数与借助正方体对称性求棱长，体现空间想象与平面几何转化。</li>
+<li><a href="../../exam/数学/2019-理-11.html">2019-理-11</a>（2019 · 中） 本题通过几何对称性求双曲线离心率，结合圆的方程建立参数关系求解。</li>
+<li><a href="../../exam/数学/2011-理-12.html">2011-理-12</a>（2011 · 中） 函数图象有公共对称中心，求两函数交点横坐标之和。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/834-对称性.html">对称性</a></li>
+</ul>
+</div>
+</body>
+</html>

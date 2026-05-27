@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与抛物线位置关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与抛物线位置关系</h1><div class="review-mark" data-stem="直线与抛物线位置关系"></div><div class="meta-card"><span><strong>考点</strong>直线与抛物线位置关系</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线定义</strong>：平面内与一个定点 $F$（焦点）和一条定直线 $l$（准线）距离相等的点的轨迹。若焦点到准线的距离为 $p$（$p&gt;0$），则标准方程为 $y^{2}=2px$（焦点在 $x$ 轴正半轴）。</li>
+<li><strong>基本元素</strong>：焦点 $F\left(\frac{p}{2},0\right)$，准线 $x=-\frac{p}{2}$；抛物线上的点 $P(x_0,y_0)$ 满足焦半径公式 $|PF|=x_0+\frac{p}{2}$。</li>
+<li><strong>焦点弦性质</strong>：过焦点 $F$ 的直线交抛物线于 $M(x_1,y_1), N(x_2,y_2)$，弦长 $|MN|=x_1+x_2+p$（由焦半径直接推出）。</li>
+<li><strong>以焦点弦为直径的圆</strong>：以焦点弦 $MN$ 为直径的圆与准线相切。原因：圆心到准线的距离等于 $M,N$ 到准线距离之和的一半，由定义得 $d(M,\text{准线})+d(N,\text{准线})=|MF|+|NF|=|MN|$，故圆心到准线的距离 $d=\frac{1}{2}|MN|$，等于圆的半径。</li>
+<li><strong>直线与抛物线交点</strong>：联立直线与抛物线方程，消元得到一元二次方程，利用韦达定理和弦长公式 $|MN|=\sqrt{1+k^{2}}|x_1-x_2|$ 或焦点弦公式求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由焦点位置求参数</strong>：若直线经过抛物线的焦点，将焦点坐标代入直线方程即可解出 $p$。</li>
+<li><strong>焦点弦长计算优先用定义</strong>：过焦点的弦长可直接套用 $|MN|=x_1+x_2+p$，联立方程后通过韦达定理求出 $x_1+x_2$，避免复杂弦长展开。</li>
+<li><strong>判断圆与准线的位置关系</strong>：抓住“圆心到准线的距离 = 半径”的等价转化。利用抛物线定义将点到准线的距离转化为焦半径，快速得证相切。</li>
+<li><strong>判断三角形的形状</strong>：计算三边长度或使用斜率、向量。一般先由弦长和点到直线距离公式计算边长，或利用抛物线几何性质。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>标准方程与焦点坐标混淆</strong>：$y^{2}=2px$ 的焦点是 $\left(\frac{p}{2},0\right)$，而非 $(p,0)$，准线是 $x=-\frac{p}{2}$，计算 $p$ 时易代错位置。</li>
+<li><strong>焦点弦长公式记成 $x_1+x_2+\frac{p}{2}$</strong>：正确为 $x_1+x_2+p$，系由焦半径 $x_1+\frac{p}{2}$ 与 $x_2+\frac{p}{2}$ 相加得到。</li>
+<li><strong>以弦为直径的圆的半径误取</strong>：半径应为弦长的一半，圆心是弦的中点。直接用“圆心到准线的距离”与“半径”比较时，易忘记圆心坐标的求法，或忽视抛物线定义转化的便利。</li>
+<li><strong>判断等腰三角形时忽略符号</strong>：联立直线与抛物线求交点坐标时，注意 $y$ 的正负，避免因代错符号导致 $OM$ 与 $ON$ 的长度计算错误。</li>
+<li><strong>弦长公式选择不当</strong>：非焦点弦必须使用一般弦长公式 $\sqrt{1+k^2}|x_1-x_2|$；焦点弦可简化，若混淆适用范围，既费时又易出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2023新课标Ⅱ卷10）：$O$为坐标原点，直线 $y=-\sqrt{3}(x-1)$ 过抛物线 $C:y^{2}=2px\ (p&gt;0)$ 的焦点，且与 $C$ 交于 $M,N$ 两点，$l$为 $C$ 的准线，判断四个选项正误。  </p>
+<p><strong>思路</strong>：由直线过焦点求出 $p$，得抛物线方程；联立直线与抛物线求交点坐标，利用焦点弦长公式或弦长公式求 $|MN|$；利用抛物线定义证明以 $MN$ 为直径的圆与准线相切；计算 $OM,ON$ 长度判断是否等腰三角形。</p>
+<p><strong>步骤</strong>：
+1. <strong>求 $p$</strong>：直线 $y=-\sqrt{3}(x-1)$ 与 $x$ 轴交于点 $(1,0)$，该点为焦点，故 $\frac{p}{2}=1$，得 $p=2$，A正确。抛物线方程为 $y^{2}=4x$。
+2. <strong>求 $|MN|$</strong>：联立 $\begin{cases} y=-\sqrt{3}(x-1) \ y^{2}=4x \end{cases}$，消 $y$ 得 $3(x-1)^{2}=4x$，整理为 $3x^{2}-10x+3=0$，解得 $x_{1}=3,\ x_{2}=\frac{1}{3}$。由焦点弦长公式得 $|MN|=x_{1}+x_{2}+p=3+\frac{1}{3}+2=\frac{16}{3}$，B错误。
+3. <strong>判断圆与准线相切</strong>：设 $MN$ 中点为 $A$，则 $A$ 到准线 $x=-1$ 的距离 $d=\frac{1}{2}(d_M+d_N)$。由抛物线定义，$d_M=|MF|, d_N=|NF|$，故 $d=\frac{1}{2}(|MF|+|NF|)=\frac{1}{2}|MN|$，等于圆的半径，圆与准线相切，C正确。
+4. <strong>判断 $\triangle OMN$ 形状</strong>：将 $x_1=3$ 代入 $y^{2}=4x$ 得 $y=\pm2\sqrt{3}$；$x_2=\frac{1}{3}$ 得 $y=\pm\frac{2}{\sqrt{3}}$。结合直线斜率负，过焦点，可取 $M(3,-2\sqrt{3}), N(\frac{1}{3},\frac{2\sqrt{3}}{3})$。计算 $|OM|=\sqrt{9+12}=\sqrt{21}$，$|ON|=\sqrt{\frac{1}{9}+\frac{4}{3}}=\frac{\sqrt{13}}{3}$，三边不等，非等腰三角形，D错误。  </p>
+<p><strong>点评/变式</strong>：本题综合考查抛物线定义、焦点弦及几何性质。选项C利用定义直接转化是核心技巧，避免复杂计算。常见变式：将直线改为对称形式 $y=k(x-1)$，或判断以 $MN$ 为直径的圆与 $y$ 轴位置关系；也可拓展至抛物线焦点弦中点轨迹、弦长最值等问题，均需紧扣定义。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-10.html">2023-新课标Ⅱ-10</a>（2023 · 中） 抛物线焦点与弦长计算，结合圆与等腰三角形的几何性质判断选项正误</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1016-直线与抛物线位置关系.html">直线与抛物线位置关系</a></li>
+</ul>
+</div>
+</body>
+</html>

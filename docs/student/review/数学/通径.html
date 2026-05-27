@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>通径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>通径</h1><div class="review-mark" data-stem="通径"></div><div class="meta-card"><span><strong>考点</strong>通径</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>通径定义</strong>：在圆锥曲线（抛物线、椭圆、双曲线）中，过焦点且垂直于对称轴的弦称为通径。对抛物线，通径是焦点弦中长度最短的一条。</li>
+<li><strong>抛物线通径公式</strong>：对于标准方程 $y^2=2px\ (p&gt;0)$，焦点 $F(\frac p2,0)$，通径所在直线方程为 $x=\frac p2$，代入得 $y^2=p^2$，$y=\pm p$，因此通径长 $|AB|=2p$。对于其他开口方向的抛物线，通径长均为 $2p$。</li>
+<li><strong>通径的几何意义</strong>：$p$ 是焦点到准线的距离，通径长 $2p$ 恰好是焦点到准线距离的两倍。通径两端点与准线上一点可构造三角形，利用高等于 $p$ 快速求面积。</li>
+<li><strong>适用条件</strong>：仅当题目出现“过焦点且垂直于对称轴的弦”或隐含有通径信息（如弦长已知且垂直于对称轴）时，可直接使用 $|AB|=2p$ 求参数 $p$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别通径特征</strong>：题干若指明直线过焦点且与对称轴垂直，则弦即为通径，弦长必然为 $2p$。</li>
+<li><strong>设出标准方程</strong>：根据抛物线开口方向设出标准形式（如 $y^2=2px$ 或 $x^2=2py$），写出焦点坐标、准线方程。</li>
+<li><strong>利用通径长求参数</strong>：由 $|AB|=2p$ 和已知弦长，解出 $p$，进而得到焦准距、准线方程等所有几何量。</li>
+<li><strong>计算目标量</strong>：利用面积公式 $S=\frac12 \times 底 \times 高$ 或其它几何关系求解。对于抛物线上焦点弦与准线上点构成的三角形，底通常为通径，高为焦点到准线的距离 $p$（或两倍 $p$ 等，视具体点位置而定）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆对称轴与准线</strong>：通径垂直于对称轴，不是垂直于准线。易错误地认为通径长等于焦点到准线距离，实际是两倍。</li>
+<li><strong>抛物线开口方向的漏设</strong>：题目未明确开口方向时，可能需分 $y^2=2px$ 和 $x^2=2py$ 等情形讨论，但若明确“对称轴为 x 轴”则只有一种情形。</li>
+<li><strong>通径端点和准线上点连线高度的误判</strong>：三角形 $ABP$ 中，$P$ 在准线上，$AB$ 为通径，高不一定正好是 $p$，需注意 $P$ 的具体位置。本题中 $P$ 为任意准线上一点，则 $DP$ 是两平行线（过 $A,B$ 的直线与准线）之间的距离，即焦点到准线距离 $p$（因为 $AB$ 过焦点且垂直于对称轴，而准线垂直于对称轴，两者平行）。</li>
+<li><strong>计算面积时忘记乘 $\frac12$</strong>：三角形面积底乘高的一半，切勿遗漏。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011-文-09）：已知直线 $l$ 过抛物线 $C$ 的焦点，且与 $C$ 的对称轴垂直，$l$ 与 $C$ 交于 $A,B$ 两点，$|AB|=12$，$P$ 为 $C$ 的准线上一点，则 $\triangle ABP$ 的面积为（ ）<br />
+A.18  B.24  C.36  D.48</p>
+<p><strong>思路</strong>：由“过焦点且垂直对称轴的弦”识别为通径，得 $|AB|=2p=12$，故 $p=6$。三角形 $ABP$ 以 $AB$ 为底，高为焦点到准线的距离 $p$（因为 $AB$ 所在直线与准线平行），进而求得面积。</p>
+<p><strong>步骤</strong>：<br />
+1. 设抛物线方程为 $y^2=2px\ (p&gt;0)$，则焦点 $F(\frac p2,0)$，准线为 $x=-\frac p2$。<br />
+2. 直线 $l$ 过焦点且与对称轴（$x$ 轴）垂直，方程为 $x=\frac p2$，通径 $|AB|=2p=12$，解得 $p=6$。<br />
+3. 准线上任取一点 $P$，$AB$ 所在直线 $x=\frac p2$ 与准线 $x=-\frac p2$ 平行，两者距离 $d = \frac p2 - (-\frac p2) = p = 6$，此为三角形 $ABP$ 的高。<br />
+4. $S_{\triangle ABP} = \frac12 \times |AB| \times d = \frac12 \times 12 \times 6 = 36$，故选 C。</p>
+<p><strong>点评/变式</strong>：本题核心是捕捉通径长与 $p$ 的关系。变式可改为椭圆或双曲线中通径的应用（椭圆通径长为 $\frac{2b^2}{a}$，双曲线类似），或已知三角形面积反求 $p$，亦可把点 $P$ 设为 $x$ 轴上准线上的动点，结合向量或最值问题综合考查。务必牢记“垂直对称轴的焦点弦”即通径，长度可直接代公式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-09.html">2011-文-09</a>（2011 · 中） 本题通过抛物线的几何性质求三角形面积，涉及焦点、准线及通径长度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">通径</a></li>
+</ul>
+</div>
+</body>
+</html>

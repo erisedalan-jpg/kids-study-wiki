@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一元二次不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>一元二次不等式</h1><div class="review-mark" data-stem="一元二次不等式"></div><div class="meta-card"><span><strong>考点</strong>一元二次不等式</span><span><strong>权重</strong>19</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：19</li>
+<li>真题数：6；年份跨度：2012–2019</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易6</li>
+</ul>
+<h2>知识精要</h2>
+<p>一元二次不等式是形如 $ax^2+bx+c&gt;0\ (\ge,\ &lt;,\ \le)$ 的不等式，其中 $a \neq 0$。标准求解流程要求先将二次项系数化为正，再求对应方程的根，最后依据“大于取两边，小于取中间”写出解集。</p>
+<p>核心工具：
+- 因式分解法：将 $ax^2+bx+c$ 分解为 $a(x-x_1)(x-x_2)$，根为 $x_1,x_2$。
+- 求根公式：$x_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}$，$\Delta=b^2-4ac$。
+- 解集结构（$a&gt;0$）：
+  - $&gt;0$：${x \mid x<x_1 \text{ 或 } x>x_2}$（$x_1&lt;x_2$）；若 $\Delta\le 0$，则为 $\mathbb{R}$ 或某特定区间。
+  - $&lt;0$：${x \mid x_1&lt;x&lt;x_2}$；若 $\Delta\le 0$，解集为空集或单点。
+  - 含等号时端点取闭。
+- 集合运算融合：交集 $\cap$ 取公共部分，并集 $\cup$ 取所有，子集判断需注意端点与元素的离散性（如 $x\in\mathbb{Z}$）。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化标准型</strong>：将不等式化为 $ax^2+bx+c&gt;0$（或$&lt;0,\ \ge,\ \le$），并确保 $a&gt;0$。若 $a&lt;0$，两边乘 $-1$ 并改变不等号方向。</li>
+<li><strong>求根定界</strong>：解相应方程 $ax^2+bx+c=0$。优先因式分解，否则用求根公式。得根 $x_1\le x_2$。</li>
+<li><strong>写解集</strong>：</li>
+<li>$&gt;0$（或 $\ge$）：解集为 $(-\infty, x_1)\cup(x_2,+\infty)$（若等号，端点可取）。</li>
+<li>$&lt;0$（或 $\le$）：解集为 $(x_1, x_2)$（若等号，闭区间）。</li>
+<li>特例：$\Delta&lt;0$ 时，$a&gt;0$ 则 $&gt;0$ 解集 $\mathbb{R}$，$&lt;0$ 空集。</li>
+<li><strong>结合集合运算</strong>：</li>
+<li>将不等式解集用区间或集合描述，连同其他已知集合画数轴。</li>
+<li>交集：取重合部分，注意端点的空心实心。</li>
+<li>并集：合并所有区间。</li>
+<li>若限定 $x\in\mathbb{Z}$，先将连续解集中的整数挑出形成离散集合，再运算。</li>
+<li><strong>检验</strong>：带回特值（如 $0$）验证，确保不等号方向与边界正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>二次项系数未化正</strong>：直接套用“大于取两边”导致解集反向。例：$-x^2+3x-2&gt;0$ 应化为 $x^2-3x+2&lt;0$。</li>
+<li><strong>不等式方向记忆混淆</strong>：$ax^2+bx+c&gt;0$ 取两边，$&lt;0$ 取中间；但若 $a&lt;0$ 且未变号，结论全反。</li>
+<li><strong>$\mathbf{\Delta\le 0}$ 情形漏判</strong>：如 $x^2+x+1&gt;0$ 恒成立，而非空集；$x^2+x+1&lt;0$ 无解，常错填为 $\mathbb{R}$。</li>
+<li><strong>忽略整数约束</strong>：题干含 $x\in\mathbb{Z}$，解出区间后未提取整数，直接将区间作为集合元素（如 ${x\mid -1&lt;x&lt;2,x\in\mathbb{Z}}$ 应为 ${0,1}$，而非区间）。</li>
+<li><strong>交集并集混淆</strong>：交集误当并集，取多而出错；并集误当交集，遗漏部分元素。</li>
+<li><strong>端点开闭失误</strong>：原不等式含等号，解集端点应闭，但运算时画空心点；或另一集合为开区间，交集端点受子集端点影响，易多取或漏取边界。</li>
+<li><strong>子集判断不当</strong>：比较集合关系时，仅看端点忽略了中间连续统，如 $B\subsetneq A$，需确认 $A$ 中存在元素不属于 $B$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题1（2019-理-01）</h3>
+<p><strong>题目</strong>：设集合 $A={x\mid x^2-5x+6&gt;0}$，$B={x\mid x-1&lt;0}$，求 $A\cap B$。<br />
+<strong>思路</strong>：分别解一元二次不等式与一次不等式，画数轴取交集。<br />
+<strong>步骤</strong>：<br />
+1. 解 $x^2-5x+6&gt;0$：因式分解 $(x-2)(x-3)&gt;0$，得根 $2,3$。开口向上，取两边：$A=(-\infty,2)\cup(3,+\infty)$。<br />
+2. 解 $x-1&lt;0$：$x&lt;1$，即 $B=(-\infty,1)$。<br />
+3. 数轴交：$A\cap B = \big[(-\infty,2)\cup(3,+\infty)\big] \cap (-\infty,1) = (-\infty,1)$。<br />
+<strong>点评/变式</strong>：本题为最基础的二次不等式与一次不等式交集，注意“取两边”后与 $x&lt;1$ 交集，只有 $x&lt;1$。变式：若 $A={x\mid x^2-5x+6\le 0}=[2,3]$，则 $A\cap B=\varnothing$。</p>
+<h3>题2（2016-理-02）</h3>
+<p><strong>题目</strong>：已知集合 $A={1,2,3}$，$B={x\mid (x+1)(x-2)&lt;0, x\in\mathbb{Z}}$，求 $A\cup B$。<br />
+<strong>思路</strong>：解出二次不等式并筛选整数得 $B$，再与 $A$ 作并集。<br />
+<strong>步骤</strong>：<br />
+1. 解 $(x+1)(x-2)&lt;0$：根为 $-1,2$，开口向上，取中间得 $-1&lt;x&lt;2$。<br />
+2. 附加 $x\in\mathbb{Z}$：满足条件的整数为 $0,1$，故 $B={0,1}$。<br />
+3. 并集：$A\cup B = {1,2,3}\cup{0,1} = {0,1,2,3}$。<br />
+<strong>点评/变式</strong>：易错点为忘记整数约束而将 $B$ 写成区间 $(-1,2)$，导致并集出错。变式：若 $B$ 改为 ${x\mid (x+1)(x-2)\ge 0, x\in\mathbb{Z}}$，则 $B={\cdots,-2,-1,2,3,\cdots}$，并集考虑无限离散集合。</p>
+<h3>题3（2015-理-01）</h3>
+<p><strong>题目</strong>：已知 $A={-2,-1,0,1,2}$，$B={x\mid (x-1)(x+2)&lt;0}$，求 $A\cap B$。<br />
+<strong>思路</strong>：解二次不等式得连续区间，再找出 $A$ 中落在区间内的元素。<br />
+<strong>步骤</strong>：<br />
+1. 解 $(x-1)(x+2)&lt;0$：根为 $-2,1$，取中间得 $-2&lt;x&lt;1$，即 $B=(-2,1)$（开区间）。<br />
+2. $A$ 中检验：<br />
+   - $-2$：不在 $(-2,1)$（端点开）；<br />
+   - $-1$：在；<br />
+   - $0$：在；<br />
+   - $1$：不在（端点开）；<br />
+   - $2$：不在。<br />
+   故 $A\cap B={-1,0}$。<br />
+<strong>点评/变式</strong>：开区间端点 $-2,1$ 不能取，$-2\in A$ 但不在 $B$，易误以为包含。若不等式改为 $\le 0$，则 $B=[-2,1]$，交集变为 ${-2,-1,0,1}$。强化端点取舍意识。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-01.html">2019-理-01</a>（2019 · 易） 本题主要考查集合的交集运算和一元二次不等式的解法。</li>
+<li><a href="../../exam/数学/2016-理-02.html">2016-理-02</a>（2016 · 易） 该题考查集合的并集运算，需先解不等式确定集合B的元素。</li>
+<li><a href="../../exam/数学/2015-理-01.html">2015-理-01</a>（2015 · 易） 该题主要考查集合的交集运算及一元二次不等式的解法。</li>
+<li><a href="../../exam/数学/2014-理-01.html">2014-理-01</a>（2014 · 易） 本题通过解一元二次不等式求集合N，再计算与集合M的交集。</li>
+<li><a href="../../exam/数学/2013-理-01.html">2013-理-01</a>（2013 · 易） 求一元二次不等式解集并计算与已知整数集合的交集。</li>
+<li><a href="../../exam/数学/2012-文-01.html">2012-文-01</a>（2012 · 易） 本题通过解一元二次不等式求集合A，再判断A与B的包含关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/267-一元二次不等式.html">一元二次不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

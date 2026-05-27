@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>反函数</h1><div class="review-mark" data-stem="反函数"></div><div class="meta-card"><span><strong>考点</strong>反函数</span><span><strong>权重</strong>14</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：14</li>
+<li>真题数：2；年份跨度：2009–2012</li>
+<li>出现题位：选择2 选择12</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：若函数 $y=f(x)$ 的值域为定义域的一一映射，则存在反函数 $y=f^{-1}(x)$，满足 $f^{-1}(f(x))=x$（$x$ 在 $f$ 定义域内）且 $f(f^{-1}(x))=x$（$x$ 在 $f$ 值域内）。反函数的定义域是原函数的值域，值域是原函数的定义域。</li>
+<li><strong>求法</strong>：由 $y=f(x)$ 解出 $x=g(y)$，再互换 $x,y$ 得 $y=g(x)$，并注明定义域（即原函数的值域）。</li>
+<li><strong>性质</strong>：</li>
+<li>原函数与反函数图像关于直线 $y=x$ 对称。</li>
+<li>若原函数单调递增（减），则反函数也单调递增（减）。</li>
+<li>特殊对：指数函数 $y=a^x$ 与对数函数 $y=\log_a x$ 互为反函数。</li>
+<li><strong>适用条件</strong>：函数在其定义域内必须是单射（一一对应），通常要求严格单调。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求反函数的标准步骤</strong>：</li>
+<li>确定原函数定义域和值域。</li>
+<li>由 $y=f(x)$ 反解出 $x$ 关于 $y$ 的表达式（注意定义域限制，如开方要带正负号）。</li>
+<li>互换 $x,y$，写出 $y=f^{-1}(x)$，并标注反函数的定义域（即原函数的值域）。</li>
+<li>利用选择题特点可快速排除：定义域不符、值域不符、对应法则类型错误直接排除。</li>
+<li><strong>利用反函数对称性处理最值距离</strong>：</li>
+<li>若 $y=f(x)$ 与 $y=g(x)$ 互为反函数，它们关于 $y=x$ 对称。</li>
+<li>求两曲线上点间最短距离，可转化为某条曲线上点到直线 $y=x$ 距离最小值的 $2$ 倍。</li>
+<li>设点 $P(x,f(x))$，点 $P$ 到 $y=x$ 距离 $d=\frac{|f(x)-x|}{\sqrt{2}}$，通过导数求 $d$ 的最小值，再乘以 $2$ 得到 $|PQ|_{\min}$（当且仅当 $P,Q$ 关于 $y=x$ 对称时取到）。</li>
+<li><strong>复合函数与反函数的识别</strong>：抽象函数若满足 $f(g(x))=x$ 且 $g(f(x))=x$，则互为反函数，可直接应用对称性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记反函数的定义域</strong>：求反函数只互换 $x,y$ 而不写定义域，导致解析式相同的不同函数选项误判（如 2009 文 02 中，$y=x^2$ 与 $y=-x^2$ 还需配合定义域才能锁定）。</li>
+<li><strong>值域与定义域混淆</strong>：原函数的值域是反函数的定义域；解题时弄反顺序，写错范围的正负或开闭区间。</li>
+<li><strong>忽略单调性限制</strong>：只有在严格单调区间上函数才有反函数。若给出整个定义域但不单调，必须指明区间，否则无反函数。</li>
+<li><strong>对称性错误应用</strong>：两函数互为反函数时，图像关于 $y=x$ 对称，而非 $y=-x$；求最短距离时误直接求两曲线函数值之差，忘记利用对称转化为单一曲线到直线距离。</li>
+<li><strong>开方未带符号</strong>：由 $y=x^2$ 反解时，$x=\pm\sqrt{y}$，必须根据原函数定义域中 $x$ 的范围选择正确符号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. （2012 理 12）已知两互为反函数曲线上的最短距离</h3>
+<p><strong>题目</strong>：点 $P$ 在 $y=\frac12 e^x$ 上，点 $Q$ 在 $y=\ln(2x)$ 上，求 $|PQ|$ 最小值。</p>
+<p><strong>思路</strong>：观察到 $y=\frac12 e^x$ 与 $y=\ln(2x)$ 互为反函数（因为由 $y=\ln(2x)$ 得 $2x=e^y$，即 $x=\frac12 e^y$，互换得反函数为 $y=\frac12 e^x$），图像关于 $y=x$ 对称。两曲线上点最短距离是 $y=x$ 对称的点对之间距离，等于曲线 $y=\frac12 e^x$ 上点 $P$ 到 $y=x$ 距离最小值的两倍。</p>
+<p><strong>步骤</strong>：
+- 设 $P(x,\frac12 e^x)(x&gt;0)$，$P$ 到 $y=x$ 的距离为 $d(x)=\frac{|\frac12 e^x - x|}{\sqrt{2}}$，因 $\frac12 e^x &gt; x$ 在定义域成立，去绝对值得 $d(x)=\frac{1}{\sqrt{2}}(\frac12 e^x - x)$。
+- 构造函数 $g(x)=\frac12 e^x - x$，求导 $g'(x)=\frac12 e^x -1$。
+- 令 $g'(x)=0 \Rightarrow e^x=2 \Rightarrow x=\ln 2$。
+- 当 $0&lt;x&lt;\ln2$ 时 $g'(x)&lt;0$，$x&gt;\ln2$ 时 $g'(x)&gt;0$，故 $x=\ln2$ 时 $g(x)$ 取最小值 $g(\ln2)=\frac12\cdot2-\ln2=1-\ln2$。
+- $d_{\min}=\frac{1-\ln2}{\sqrt{2}}$，故 $|PQ|<em _min="\min">{\min}=2d</em>(1-\ln2)$。}=\sqrt{2</p>
+<p><strong>点评/变式</strong>：本质是反函数对称性+点到直线距离+导数求最值的综合。若曲线改为 $y=e^x$ 与 $y=\ln x$，同理可用。关键是确认互为反函数后消去一个变量，转化为点到直线的经典模型。</p>
+<h3>2. （2009 文 02）求具体函数的反函数</h3>
+<p><strong>题目</strong>：函数 $y=\sqrt{-x}\;(x\le 0)$ 的反函数是（ ）</p>
+<p><strong>思路</strong>：按三步求反函数，并利用选择题的排除法：原函数定义域 $x\le 0$ 意味着反函数值域为 $(-\infty,0]$，反函数定义域为原函数值域 $y\ge 0$。直接验证选项的定义域值域可快速锁定答案。</p>
+<p><strong>步骤</strong>：
+- 原函数 $y=\sqrt{-x}$，定义域 $x\le 0$，值域 $y\ge 0$。
+- 反解：两边平方得 $y^2=-x$，即 $x=-y^2$，此时 $y\ge 0$。
+- 互换 $x,y$ 得 $y=-x^2$，且反函数定义域为 $x\ge 0$（原值域）。
+- 得到反函数 $y=-x^2\,(x\ge 0)$。
+- 核对选项：A $y=x^2(x\ge0)$（值域$y\ge0$，不对应原定义域），C $y=x^2(x\le0)$（定义域不符），D $y=-x^2(x\le0)$（定义域不符），B 符合。</p>
+<p><strong>点评/变式</strong>：此类题用反函数定义三要素（定义域、值域、对应法则）逐项排除最高效。注意带根号反解时平方会引入多值性，必须用原函数定义域约束符号。变式：若改为 $y=-\sqrt{-x}\,(x\le 0)$，则反函数为 $y=x^2\,(x\ge 0)$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-12.html">2012-理-12</a>（2012 · 中） 本题研究互为反函数的两曲线上的点间最小距离，利用对称性转化为点到直线距离并借助导数求最值。</li>
+<li><a href="../../exam/数学/2009-文-02.html">2009-文-02</a>（2009 · 易） 函数反函数求解，结合定义域与值域排除选项</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/292-反函数.html">反函数</a></li>
+</ul>
+</div>
+</body>
+</html>

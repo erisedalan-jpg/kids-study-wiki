@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>两角和与差的三角函数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>两角和与差的三角函数</h1><div class="review-mark" data-stem="两角和与差的三角函数"></div><div class="meta-card"><span><strong>考点</strong>两角和与差的三角函数</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：1</li>
+<li>真题数：4；年份跨度：2014–2018</li>
+<li>出现题位：填空14 选择10</li>
+<li>难度分布：中2 易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两角和与差的正弦公式</strong>
+  $$\sin(\alpha \pm \beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$$</li>
+<li><strong>两角和与差的余弦公式</strong>
+  $$\cos(\alpha \pm \beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$$
+  （注意余弦公式符号：“同名异号”）</li>
+<li><strong>两角和与差的正切公式</strong>
+  $$\tan(\alpha \pm \beta)=\frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta} \quad(\alpha,\beta,\alpha\pm\beta \neq k\pi+\frac{\pi}{2})$$</li>
+<li><strong>辅助角公式（合一变形）</strong>
+  $$a\sin x + b\cos x = \sqrt{a^2+b^2}\sin(x+\varphi)$$
+  其中 $\tan\varphi=\frac{b}{a}$，$\varphi$ 所在象限由 $a,b$ 符号决定；也可化为余弦形式。</li>
+<li><strong>正弦型函数的单调性</strong>
+  对于 $y=A\sin(\omega x+\varphi)$（$A&gt;0,\omega&gt;0$），将 $\omega x+\varphi$ 视为整体代入 $y=\sin t$ 的单调区间：</li>
+<li>增区间：$-\frac{\pi}{2}+2k\pi \le \omega x+\varphi \le \frac{\pi}{2}+2k\pi$</li>
+<li>减区间：$\frac{\pi}{2}+2k\pi \le \omega x+\varphi \le \frac{3\pi}{2}+2k\pi$
+  若 $A&lt;0$，需先化为正，或根据复合函数单调性反向求解。</li>
+<li><strong>适用条件</strong>：角度为任意实数；公式适用于化简、求值、研究三角函数性质（单调性、最值、周期等）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化简优先</strong><br />
+   见到含 $\sin$、$\cos$ 的线性组合（如 $\cos x - \sin x$），立即用辅助角公式合并为 $A\sin(x+\varphi)$ 或 $A\cos(x+\varphi)$ 形式。<br />
+<em>例</em>：$\cos x - \sin x = -\sin(x-\frac{\pi}{4})$ 或 $\sqrt{2}\cos(x+\frac{\pi}{4})$。</li>
+<li><strong>整体代换求单调区间</strong><br />
+   令 $t = \omega x+\varphi$，由 $y=\sin t$（或$\cos t$）的单调区间反解 $x$ 的范围，再结合给定区间限制求出参数的最大（小）值。</li>
+<li><strong>角度变换与拆角技巧</strong><br />
+   对于形如 $\sin(x+2\varphi)-2\sin\varphi\cos(x+\varphi)$ 的式子，将 $x+2\varphi$ 拆成 $(x+\varphi)+\varphi$，利用两角和的正弦公式展开，往往可以抵消并简化。</li>
+<li><strong>区间包含问题处理</strong><br />
+   若已知 $f(x)$ 在区间 $I$ 上是单调的，需使 $I$ 是求得的单调区间的子集，由此建立关于参数的不等式，得出参数的取值范围或最值。</li>
+<li><strong>最值问题直接利用正弦、余弦的有界性</strong><br />
+   化简后若得到 $\sin(x-\varphi)$ 等形式，由 $-1 \le \sin \le 1$ 直接得到最大（小）值，无需讨论更多细节。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>辅助角公式的符号与相位</strong><br />
+  如 $\cos x-\sin x = \sqrt{2}\cos(x+\frac{\pi}{4})$，但若写成 $-\sin(x-\frac{\pi}{4})$，负号会导致单调性反转。必须先明确 $A$ 的符号，再套用正弦的单调区间（通常要求 $A&gt;0$）。</li>
+<li><strong>正、余弦公式符号混淆</strong><br />
+  $\cos(\alpha+\beta)=\cos\alpha\cos\beta - \sin\alpha\sin\beta$，$\cos(\alpha-\beta)=\cos\alpha\cos\beta + \sin\alpha\sin\beta$，与正弦公式的符号容易记错。应对方法：记住“余余正正，符号相反”。</li>
+<li><strong>单调区间端点开闭與参数限制</strong><br />
+  如求 $a$ 的最大值，当单调区间包含 $0$ 且另一端为 $\frac{3\pi}{4}$ 时，$a$ 可以取到 $\frac{3\pi}{4}$（闭区间），但题中若给开区间要注意。另如 $[-a,a]$ 包含原点情形，对称区间的限制要同时满足左、右两个端点，取交集的最苛刻值。</li>
+<li><strong>忽略公式的适用条件</strong><br />
+  用正切公式时必须保证分母不为零且各角、和差角不在 $\frac{\pi}{2}+k\pi$ 上。</li>
+<li><strong>盲目展开而不会构造“同名角”</strong><br />
+  如 $\sin(x+2\varphi)-2\sin\varphi\cos(x+\varphi)$，若直接将所有项全展开反而复杂，正确做法是看出 $x+2\varphi = (x+\varphi)+\varphi$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2018·文·10）</h3>
+<p>若 $f(x)=\cos x - \sin x$ 在 $[0,a]$ 上是减函数，求 $a$ 的最大值。</p>
+<p><strong>思路</strong><br />
+先利用辅助角公式将 $f(x)$ 化为单一正弦或余弦形式，并保证 $A&gt;0$ 或先处理负号，再套入正弦（或余弦）的标准减区间，结合区间 $[0,a]$ 是减区间子集的条件求 $a$ 的最大值。</p>
+<p><strong>步骤</strong><br />
+$f(x)=\cos x-\sin x = -\sin(x-\frac{\pi}{4})$。<br />
+令 $g(x)= \sin(x-\frac{\pi}{4})$，则 $f(x)=-g(x)$。<br />
+$f(x)$ 单调递减 $\Leftrightarrow$ $g(x)$ 单调递增。<br />
+$g(x)$ 的增区间：$-\frac{\pi}{2}+2k\pi \le x-\frac{\pi}{4} \le \frac{\pi}{2}+2k\pi \Rightarrow -\frac{\pi}{4}+2k\pi \le x \le \frac{3\pi}{4}+2k\pi$。<br />
+取 $k=0$，得到包含 $0$ 的 $f(x)$ 的减区间为 $[-\frac{\pi}{4},\, \frac{3\pi}{4}]$。<br />
+因为 $f(x)$ 在 $[0,a]$ 上减，所以 $[0,a] \subseteq [-\frac{\pi}{4},\, \frac{3\pi}{4}]$，于是 $a \le \frac{3\pi}{4}$。<br />
+故 $a$ 的最大值为 $\frac{3\pi}{4}$。</p>
+<p><strong>点评/变式</strong><br />
+解题关键是看清负号对单调性的影响。若直接化为 $f(x)=\sqrt{2}\cos(x+\frac{\pi}{4})$，则 $\cos$ 的减区间为 $x+\frac{\pi}{4}\in[2k\pi,\,\pi+2k\pi]$，同样得 $x\in[-\frac{\pi}{4}+2k\pi,\,\frac{3\pi}{4}+2k\pi]$，殊途同归。变式：若区间改为 $[-a,a]$，则需同时满足 $-a \ge -\frac{\pi}{4}$ 和 $a \le \frac{3\pi}{4}$，取交集得 $a \le \frac{\pi}{4}$，这就是同卷理科第10题的结论，注意对称区间与不对称区间的细微差别。</p>
+<hr />
+<h3><strong>题目</strong>（2018·理·10）</h3>
+<p>若 $f(x)=\cos x - \sin x$ 在 $[-a,a]$ 上是减函数，求 $a$ 的最大值。</p>
+<p><strong>思路</strong><br />
+化简后得出减区间，再使对称区间 $[-a,a]$ 完全落在该减区间内。</p>
+<p><strong>步骤</strong><br />
+同上得 $f(x)$ 的一个减区间为 $[-\frac{\pi}{4},\, \frac{3\pi}{4}]$。<br />
+要使 $[-a,a] \subseteq [-\frac{\pi}{4},\, \frac{3\pi}{4}]$，必须满足：<br />
+$\begin{cases}
+-a \ge -\frac{\pi}{4} \
+a \le \frac{3\pi}{4}
+\end{cases} \Rightarrow a \le \frac{\pi}{4}$ 且 $a \le \frac{3\pi}{4}$，所以 $a \le \frac{\pi}{4}$。<br />
+因此 $a$ 的最大值为 $\frac{\pi}{4}$。</p>
+<p><strong>点评/变式</strong><br />
+与文科题对比，仅区间条件从 $[0,a]$ 变为 $[-a,a]$，答案从 $\frac{3\pi}{4}$ 变成 $\frac{\pi}{4}$，原因是增加了左端点的约束。此类选择题常设计成“姊妹题”，提醒我们审题时注意区间形式。</p>
+<hr />
+<h3><strong>题目</strong>（2014·文·14）</h3>
+<p>函数 $f(x)=\sin(x+\varphi)-2\sin\varphi\cos x$ 的最大值为______。</p>
+<p><strong>思路</strong><br />
+直接展开第一项并合并同类项，可以凑出两角差的正弦公式大幅简化。</p>
+<p><strong>步骤</strong><br />
+$f(x)=\sin x\cos\varphi+\cos x\sin\varphi - 2\sin\varphi\cos x$<br />
+$=\sin x\cos\varphi - \sin\varphi\cos x$<br />
+$=\sin(x-\varphi)$。<br />
+由正弦的有界性，最大值为 $1$。</p>
+<p><strong>点评/变式</strong><br />
+此题表面含参 $\varphi$，但化简后参数消失，最大值恒定。关键在于灵活运用两角和的正弦公式，不要盲目将第二项用二倍角或其他公式复杂化。同类题如：$f(x)=\sin(x+2\varphi)-2\sin\varphi\cos(x+\varphi)$，将 $x+2\varphi$ 视为 $(x+\varphi)+\varphi$，同理可得最大值为 $1$。这就是构造角、拆角的典型应用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-10.html">2018-文-10</a>（2018 · 中） 本题考查利用两角和差公式化简三角函数，并结合正弦函数的单调性求参数的最大值。</li>
+<li><a href="../../exam/数学/2018-理-10.html">2018-理-10</a>（2018 · 中） 利用正弦函数单调性求参数最大值，通过三角恒等变换化简函数解析式。</li>
+<li><a href="../../exam/数学/2014-文-14.html">2014-文-14</a>（2014 · 易） 本题考查利用两角和与差的三角函数公式化简函数，并求三角函数的最大值。</li>
+<li><a href="../../exam/数学/2014-理-14.html">2014-理-14</a>（2014 · 易） 函数化简为sinx，利用两角和差公式求三角函数最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">两角和与差的三角函数</a></li>
+</ul>
+</div>
+</body>
+</html>

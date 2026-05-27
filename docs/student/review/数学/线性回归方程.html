@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线性回归方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>线性回归方程</h1><div class="review-mark" data-stem="线性回归方程"></div><div class="meta-card"><span><strong>考点</strong>线性回归方程</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：3</li>
+<li>真题数：5；年份跨度：2014–2022</li>
+<li>出现题位：解答18 解答19</li>
+<li>难度分布：中5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>两个核心问题</strong>：一是判断两个变量的<strong>线性相关程度</strong>，用<strong>样本相关系数</strong> $r$；二是建立一个变量对另一个变量的<strong>线性回归方程</strong>，用<strong>最小二乘法</strong>求回归系数。</li>
+<li><strong>样本相关系数</strong><br />
+  $$r=\frac{\sum_{i=1}^n (x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum_{i=1}^n (x_i-\bar x)^2\sum_{i=1}^n (y_i-\bar y)^2}}$$<br />
+  性质：$|r|\le 1$；$|r|$ 越接近 $1$，线性相关越强；$r&gt;0$ 为正相关，$r&lt;0$ 为负相关。</li>
+<li><strong>最小二乘估计</strong>（线性回归方程 $\hat y=\hat b x+\hat a$）<br />
+  $$\hat b=\frac{\sum_{i=1}^n (x_i-\bar x)(y_i-\bar y)}{\sum_{i=1}^n (x_i-\bar x)^2},\quad \hat a=\bar y-\hat b\bar x$$  </li>
+<li>等价变形：$\displaystyle\sum_{i=1}^n (x_i-\bar x)^2=\sum_{i=1}^n x_i^2-n\bar x^2$，$\displaystyle\sum_{i=1}^n (x_i-\bar x)(y_i-\bar y)=\sum_{i=1}^n x_i y_i-n\bar x\bar y$。  </li>
+<li>回归直线恒过样本中心点 $(\bar x,\bar y)$。</li>
+<li><strong>适用条件</strong>：两个变量总体上具有线性相关趋势（可先画散点图或计算 $r$ 判断）。如果题目明确指出两个变量“近似成正比”，则可设 $y=kx$，直接利用样本估计比例系数 $k$，无需添加截距项。</li>
+<li><strong>模型比较与选择</strong>：若数据有明显阶段性变化，可分段建模；评价模型拟合优劣或预测可靠性，要结合数据变化趋势、样本代表性等实际背景说明。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读题审条件</strong><br />
+   明确题目要求：是求相关系数 $r$，还是求回归方程 $\hat y=\hat b x+\hat a$，还是直接进行预测或模型比较。注意“成正比”等特殊条件，避免机械套用回归公式。</li>
+<li><strong>提取统计量</strong><br />
+   从题干给出的求和数据中提取 $\bar x,\bar y$，$\sum x_i^2$，$\sum y_i^2$，$\sum x_iy_i$，或直接给出的 $\sum (x_i-\bar x)^2$，$\sum (y_i-\bar y)^2$，$\sum (x_i-\bar x)(y_i-\bar y)$。灵活代公式。</li>
+<li><strong>按公式计算</strong>  </li>
+<li>相关系数：直接代入公式，结果按题目要求精确到指定小数位。  </li>
+<li>回归系数：先求 $\hat b$，再求 $\hat a=\bar y-\hat b\bar x$。若给出的是离差平方和与离差乘积和，优先使用离差形式。</li>
+<li><strong>代入回归方程进行预测或解释</strong>  </li>
+<li>点预测：把给定的自变量值代入回归方程求出 $\hat y$。  </li>
+<li>解释：说明回归系数的含义（如 $\hat b&gt;0$ 表示 $y$ 随 $x$ 增大而增大）。</li>
+<li><strong>模型选择与理由</strong><br />
+   结合数据的实际变化趋势（如折线图走势先慢后快）、数据范围（全部数据还是近期数据）、抽样代表性等给出统计意义上的合理理由。典型理由：近期数据更能反映当前趋势，或剔除了陈旧扰动，预测更可靠。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆统计量</strong>：将 $\sum x_i^2$ 当成 $\bigl(\sum x_i\bigr)^2$；把 $\sum (x_i-\bar x)^2$ 错算为 $\sum x_i^2 - \bar x^2$（漏乘 $n$）。必须牢记 $\sum (x_i-\bar x)^2=\sum x_i^2 - n\bar x^2$。</li>
+<li><strong>截距遗漏或错算</strong>：只算 $\hat b$ 而忘记求 $\hat a$；或求 $\hat a$ 时代错 $x,y$ 的均值。</li>
+<li><strong>相关系数保留精度错误</strong>：未注意题目要求的“精确到 $0.01$”，导致不必要的扣分。</li>
+<li><strong>模型选择理由空洞</strong>：只写“模型②更好”而不解释数据特征（如增长速度变快、近期影响更大等）。</li>
+<li><strong>正比模型误用回归</strong>：如果题目明确“$y$ 与 $x$ 近似成正比”，直接用 $\hat y=\hat b x+\hat a$ 会丢失实际意义；此时应用样本的 $\frac{\sum y_i}{\sum x_i}$ 或 $\frac{\bar y}{\bar x}$ 估计比例系数 $k$，再用 $k$ 乘以总体 $x$ 的总和得到总体 $y$ 的估计。</li>
+<li><strong>忽略单位或数量级</strong>：涉及总材积量、野生动物总数等估计时，注意样本和总体之间的关系（如样本平均乘以总体数量）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2022年文科第19题（相关系数+正比模型估计）</h3>
+<p><strong>题目</strong>：给出10棵树木的根部横截面积 $x_i$ 与材积量 $y_i$ 的数据、总和以及 $\sum x_i^2,\sum y_i^2,\sum x_iy_i$。(1)估计该林区树木平均一棵的根部横截面积与平均一棵的材积量；(2)求根部横截面积与材积量的样本相关系数（精确到0.01）；(3)已知该林区所有树木根部横截面积总和为 $186\,\text{m}^2$，且材积量与根部横截面积近似成正比，利用数据给出总材积量的估计值。</p>
+<p><strong>思路</strong>：<br />
+(1)直接用样本均值估计总体均值。 (2)利用给定的求和数据，代入相关系数公式，注意用 $\sum x_i^2-n\bar x^2$ 等转化计算。 (3)正比关系意味着 $y=kx$，用样本数据估计比例系数 $k$，再由总横截面积推总材积量。</p>
+<p><strong>步骤</strong>：<br />
+1. 由总和得 $\bar x=\frac{0.6}{10}=0.06$，$\bar y=\frac{3.9}{10}=0.39$，此即平均估计值。<br />
+2. 计算相关系数：<br />
+   $\sum x_i^2=0.038,\ \sum y_i^2=1.6158,\ \sum x_iy_i=0.2474$，$n=10$。<br />
+   $L_{xx}=\sum x_i^2-n\bar x^2=0.038-10\times0.06^2=0.002$，<br />
+   $L_{yy}=\sum y_i^2-n\bar y^2=1.6158-10\times0.39^2=0.0948$，<br />
+   $L_{xy}=\sum x_iy_i-n\bar x\bar y=0.2474-10\times0.06\times0.39=0.0134$。<br />
+   则 $r=\frac{L_{xy}}{\sqrt{L_{xx}L_{yy}}}=\frac{0.0134}{\sqrt{0.002\times0.0948}}\approx0.97$。<br />
+3. 材积量与根部横截面积近似成正比，设 $y=kx$。比例系数可用样本总材积量除以总横截面积估计：$k=\frac{3.9}{0.6}=6.5$。<br />
+   已知总横截面积为 $186$，故总材积量 $\hat Y=6.5\times186=1209\ \text{m}^3$（根据题目精度，可写 $1209$ 或按有效数字处理）。</p>
+<p><strong>点评/变式</strong>：<br />
+本题关键在于第(3)问区别于传统回归方程，利用“成正比”条件，直接用总和之比估计比例系数，避免添加不存在的截距项。变式：若改为“近似的线性关系（不一定过原点）”，则需建立完整回归方程，再用总横截面积的均值或总和间接预测总材积量（结合样本均值关系）。</p>
+<h3>2. 2020年理科第18题（相关系数+抽样方法）</h3>
+<p><strong>题目</strong>：调查某地区野生动物数量，将200个地块中抽取20个样区，得到植物覆盖面积 $x_i$ 和野生动物数量 $y_i$，并给出 $\sum x_i=60$，$\sum y_i=1200$，$\sum (x_i-\bar x)^2=80$，$\sum (y_i-\bar y)^2=9000$，$\sum (x_i-\bar x)(y_i-\bar y)=800$。(1)估计该地区这种野生动物数量；(2)求样本的相关系数（精确到0.01）；(3)已知各地块植物覆盖面积差异很大，为提高样本代表性，给出更合理的抽样方法并说明理由。</p>
+<p><strong>思路</strong>：<br />
+(1)先求样本均值，再乘以地块总数。 (2)直接代入给出的离差平方和及离差乘积和，计算 $r$。 (3)根据“各层差异很大”的特征，选择分层抽样，使样本结构更接近总体。</p>
+<p><strong>步骤</strong>：<br />
+1. 样本平均每样区动物数量 $\bar y=\frac{1200}{20}=60$，总地块数 $200$，估计总数 $\hat N=200\times60=12000$。<br />
+2. 相关系数 $r=\frac{\sum (x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum (x_i-\bar x)^2\sum (y_i-\bar y)^2}}=\frac{800}{\sqrt{80\times9000}}=\frac{800}{\sqrt{720000}}=\frac{800}{848.528}\approx0.94$。<br />
+3. 分层抽样：按植物覆盖面积将地块分为若干层（如高、中、低覆盖），在各层内按比例抽取样区。理由：覆盖面积差异大且可能与动物数量高度相关，分层抽样可减少层内变异，使样本对各层都有代表性，从而提高总体估计的准确性。</p>
+<p><strong>点评/变式</strong>：<br />
+利用给出的离差平方和直接求 $r$ 可大幅简化运算，注意不要机械地去凑原始 $x_i,y_i$。第(3)问考查抽样设计的统计思想，是通向实际问题建模的桥梁。若题目背景改为“趋势随时间变化明显”，则应从系统抽样或改进回归模型角度作答。</p>
+<h3>3. 2018年文科第18题（两个回归模型的比较与预测）</h3>
+<p><strong>题目</strong>：给出某地区2000—2016年环境基础设施投资额的折线图。以时间 $t$ 为自变量，用2000—2016年数据建立模型①：$\hat y=-30.4+13.5t$（$t=1,2,\dots,17$）；用2010—2016年数据建立模型②：$\hat y=99+17.5t$（$t=1,2,\dots,7$）。(1)分别利用两个模型求2018年的投资额预测值；(2)判断哪个模型得到的预测值更可靠并说明理由。</p>
+<p><strong>思路</strong>：<br />
+(1)确定 $t$ 的取值：模型①中2018年对应 $t=19$（2000年为 $t=1$，则2000+18=2018）；模型②中2010年为 $t=1$，2018年为 $t=9$。分别代入方程。(2)从折线图可看出后期投资额增长速度明显加快，模型①用全部年份拟合会低估近期增长趋势，模型②仅用近期数据更能反映当前发展态势，更可靠。</p>
+<p><strong>步骤</strong>：<br />
+1. 模型①：2018年 $t=19$，预测值 $\hat y_1=-30.4+13.5\times19=226.1$（亿元）。<br />
+   模型②：2018年 $t=9$，预测值 $\hat y_2=99+17.5\times9=256.5$（亿元）。<br />
+2. 模型②更可靠。理由：由折线图可见，2000—2009年投资额增长相对平缓，2010年起增速明显提高。模型①使用了全部17年的数据，将早期的低增速与后期的高增速混合，得到的预测值偏低；模型②仅使用后7年的数据，更好地拟合了近年来的快速增长趋势，因此对2018年的预测更为可靠。</p>
+<p><strong>点评/变式</strong>：<br />
+此题不要求重新计算回归方程，而是考查对既有模型的评价与应用。注意预测时 $t$ 的编码规则必须与建模时一致。类似题型变式：给出两个模型的决定系数 $R^2$ 或残差图，据此判别优劣，或分析模型假设的合理性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-19.html">2022-文-19</a>（2022 · 中） 林业抽样估计某林区树木总体材积，结合样本均值、相关系数与线性回归方程。</li>
+<li><a href="../../exam/数学/2020-理-18.html">2020-理-18</a>（2020 · 中） 某地野生动物数量调查抽样数据，求数量点估计、线性相关系数，并判断更合理的抽样方法。</li>
+<li><a href="../../exam/数学/2018-文-18.html">2018-文-18</a>（2018 · 中） 本题给出环境和投资额折线图，要求利用两个线性回归模型预测2018年投资额并判断模型可靠性。</li>
+<li><a href="../../exam/数学/2018-理-18.html">2018-理-18</a>（2018 · 中） 根据折线图分析环境基础设施投资额的变化趋势，建立回归模型并预测。</li>
+<li><a href="../../exam/数学/2014-理-19.html">2014-理-19</a>（2014 · 中） 该题考查根据给定数据求线性回归方程，并结合方程进行变化分析与预测。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/481-回归直线方程.html">线性回归方程</a></li>
+</ul>
+</div>
+</body>
+</html>

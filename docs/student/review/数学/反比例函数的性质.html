@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>反比例函数的性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>反比例函数的性质</h1><div class="review-mark" data-stem="反比例函数的性质"></div><div class="meta-card"><span><strong>考点</strong>反比例函数的性质</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：3</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择5</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>反比例函数的标准形式：$y = \frac{k}{x}$（$k \neq 0$），也可写作 $xy = k$。</li>
+<li>当 $k &gt; 0$ 时，图象位于第一、三象限，在每个象限内 $y$ 随 $x$ 的增大而减小；当 $k &lt; 0$ 时，图象位于第二、四象限，在每个象限内 $y$ 随 $x$ 的增大而增大。</li>
+<li>图象是双曲线，两条坐标轴是其渐近线，图象关于原点对称（奇函数）。</li>
+<li>曲线上任意一点 $(x_0, y_0)$ 满足 $x_0 y_0 = k$，这个乘积 $k$ 的几何意义是：过该点向坐标轴作垂线段所围成的矩形面积为 $|k|$。</li>
+<li>在与其它曲线（如抛物线、直线）综合应用时，常通过联立方程或利用几何条件（如垂直、距离等）将问题转化为代数等式，再借助 $xy = k$ 直接求解参数 $k$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>利用已知条件确定点坐标</strong><br />
+   若已知点在某条已知方程曲线上（如抛物线、椭圆、直线），且满足特殊位置关系（如 $PF \perp x$ 轴），可直接将该点的横坐标或纵坐标代入已知曲线方程，求出点的完整坐标。</p>
+</li>
+<li>
+<p><strong>利用 $xy = k$ 直接求参数</strong><br />
+   一旦得到满足反比例函数的点 $P(x_0, y_0)$，且题目限定 $k&gt;0$（或 $k&lt;0$），则 $k = x_0 y_0$，特别注意检验 $k$ 的符号是否符合题意。</p>
+</li>
+<li>
+<p><strong>交点向单一方程转化</strong><br />
+   当曲线 $y = \frac{k}{x}$ 与另一曲线相交时，可联立消去 $y$（或 $x$），把交点问题转化为方程根的关系。若已知交点的某个坐标值，直接带回求 $k$ 更为快捷。</p>
+</li>
+<li>
+<p><strong>注意隐含条件</strong><br />
+   反比例函数定义域 $x \neq 0$，$k \neq 0$；题目往往通过“在第一象限”“$PF \perp x$ 轴”等暗示点的坐标符号，从而确定 $k$ 的符号。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略 $k$ 的符号限制</strong>：题目明确给出 $k&gt;0$（或 $k&lt;0$），求出 $k$ 值后未检验符号，导致多解或错选。</li>
+<li><strong>误用反比例函数单调性</strong>：说“$y$ 随 $x$ 增大而减小”时忘记加上“在每一个象限内”的前提，跨象限比较会出错。</li>
+<li><strong>求点坐标时符号错误</strong>：如抛物线 $y^2 = 4x$ 在 $x=1$ 时可得 $y = \pm 2$，若题目暗示点在第一象限（如 $PF \perp x$ 轴且 $P$ 在第一象限），应取正值，忽略此细节会算出 $k = -2$ 等错误结果。</li>
+<li><strong>混淆乘积 $k$ 的几何意义</strong>：将矩形面积直接当作 $k$，忘记取绝对值或符号处理。</li>
+<li><strong>联立时代入不当</strong>：将 $y = \frac{k}{x}$ 直接代入抛物线方程时忘记 $x \neq 0$ 的隐含约束，或丢解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016·全国卷Ⅲ·文5）<br />
+设 $F$ 为抛物线 $C: y^2 = 4x$ 的焦点，曲线 $y = \frac{k}{x} \ (k &gt; 0)$ 与 $C$ 交于点 $P$，且 $PF \perp x$ 轴，则 $k =$（ ）<br />
+A. $\frac{1}{2}$   B. 1   C. $\frac{3}{2}$   D. 2</p>
+<p><strong>思路</strong><br />
+由抛物线方程求焦点坐标；由 $PF \perp x$ 轴且 $P$ 在抛物线上，推出 $P$ 点横坐标与焦点横坐标相同，代入抛物线得 $P$ 的纵坐标；再将 $P$ 的坐标代入反比例函数，利用 $k = xy$ 直接求值，注意 $k&gt;0$ 的限定。</p>
+<p><strong>步骤</strong><br />
+1. 抛物线 $y^2 = 4x$ 为 $y^2 = 2px$ 形式，其中 $2p = 4$，故 $p = 2$，焦点 $F(1, 0)$。<br />
+2. $PF \perp x$ 轴，说明 $P$ 与 $F$ 有相同的横坐标，因此 $x_P = 1$。<br />
+3. 点 $P$ 在抛物线上，将 $x=1$ 代入 $y^2 = 4x$ 得 $y^2 = 4$，故 $y = \pm 2$。由曲线 $y = \frac{k}{x} \ (k&gt;0)$ 且交点为第一象限内的点（因 $k&gt;0$，反比例函数在第一象限），应取 $y = 2$，所以 $P(1, 2)$。<br />
+4. 点 $P$ 也在反比例函数上，则 $k = x_P \cdot y_P = 1 \times 2 = 2$。<br />
+5. 检验 $k = 2 &gt; 0$，符合题意，故选 D。</p>
+<p><strong>点评/变式</strong><br />
+- 本题核心是“坐标翻译”：垂直条件 $\rightarrow$ 横坐标相等；点在圆锥曲线上 $\rightarrow$ 纵坐标求出；点在反比例函数上 $\rightarrow$ 利用 $xy=k$ 一步得解。<br />
+- 变式1：若条件改为“$PF \perp y$ 轴”，则纵坐标相同为0，但此时 $y=0$，$x$ 无解，说明反比例函数不可能与点 $F$ 相交于纵坐标为0的点，可考查反比例函数无界但不过坐标轴的性质。<br />
+- 变式2：将反比例函数换为 $y = \frac{k}{x}$ 且未给出 $k&gt;0$，则可能出现 $k = -2$，此时需根据交点所在象限取舍。<br />
+- 注意：即便未明确 $P$ 所在象限，由 $PF \perp x$ 轴和 “曲线与 $C$ 交于点 $P$” 也可能存在两个交点，要养成结合函数性质检验的习惯。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-05.html">2016-文-05</a>（2016 · 易） 由抛物线焦点与反比例函数交点及垂直条件，求参数 k 的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/539-反比例函数的性质.html">反比例函数的性质</a></li>
+</ul>
+</div>
+</body>
+</html>

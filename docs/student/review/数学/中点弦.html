@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中点弦</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>中点弦</h1><div class="review-mark" data-stem="中点弦"></div><div class="meta-card"><span><strong>考点</strong>中点弦</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2010–2015</li>
+<li>出现题位：解答20 选择12</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>中点弦</strong>：直线与圆锥曲线相交所得的以交点连线的中点作为已知条件的弦。核心工具为<strong>点差法</strong>（设而不求）。</li>
+<li><strong>点差法核心思想</strong>：设交点坐标，代入曲线方程，作差后利用平方差公式及中点坐标公式，将弦所在直线的斜率与中点坐标直接联系在一起。</li>
+<li><strong>椭圆中点弦斜率积结论</strong><br />
+  对于椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\ (a&gt;b&gt;0)$，弦 $AB$ 不与坐标轴平行，中点为 $M(x_0,y_0)$，弦斜率为 $k$，则有<br />
+  $$k\cdot k_{OM}= -\frac{b^2}{a^2},$$<br />
+  其中 $k_{OM}=\frac{y_0}{x_0}$。焦点在 $y$ 轴的椭圆可同理推导或直接用点差法。</li>
+<li><strong>双曲线中点弦斜率积结论</strong><br />
+  对于双曲线 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$，弦 $AB$ 的中点为 $M(x_0,y_0)$，弦斜率为 $k$，则有<br />
+  $$k\cdot k_{OM}= \frac{b^2}{a^2}.$$</li>
+<li><strong>适用条件</strong>：弦存在且斜率存在；所得关系与判别式 $\Delta&gt;0$ 配合才能保证弦真实存在。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设点</strong>：设交点 $A(x_1,y_1),B(x_2,y_2)$，中点 $M(x_0,y_0)$，其中 $x_0=\frac{x_1+x_2}{2},\ y_0=\frac{y_1+y_2}{2}$。  </li>
+<li><strong>代入方程相减</strong>：将 $A,B$ 坐标分别代入曲线方程，两式相减得<br />
+   $$(\text{二次项系数差}) = 0$$<br />
+   并利用平方差公式 $(x_1^2-x_2^2)=(x_1+x_2)(x_1-x_2)$ 化为中点与差分形式。  </li>
+<li><strong>转化为斜率关系</strong>：用 $\frac{y_1-y_2}{x_1-x_2}=k$ 代入，得到 $k$ 与中点坐标 $x_0,y_0$ 的方程。  </li>
+<li><strong>求解目标量</strong>：直接证明定值，或结合其他条件（如已知焦点、中点坐标、直线过定点等）求曲线方程或斜率。  </li>
+<li><strong>检验</strong>：涉及求方程或具体坐标时，务必检验判别式，确保中点弦真实存在。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记验证判别式</strong>：点差法只保证中点满足坐标关系，不保证直线与曲线一定有交点。求值问题务必回代 $\Delta&gt;0$ 检验。  </li>
+<li><strong>混淆焦点位置与斜率积公式</strong>：椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 中 $a&gt;b$ 前提下，$k\cdot k_{OM}=-\frac{b^2}{a^2}$；若化成 $\frac{x^2}{b^2}+\frac{y^2}{a^2}=1$，结果不同。<strong>更稳妥的是现场用点差法推导</strong>，避免死记反号。  </li>
+<li><strong>忽略斜率不存在的情况</strong>：若弦与坐标轴垂直，点差法分母为零，需单独讨论。  </li>
+<li><strong>双曲线中点弦的特殊存在区域</strong>：双曲线中某些中点对应的弦不存在（中点落在渐近线区域之外），只靠斜率关系未必正确，必须结合判别式。  </li>
+<li><strong>点差法运算符号易错</strong>：相减时注意符号，尤其是双曲线 $y^2$ 项前的负号，容易漏掉导致结论反号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>2015-文-20</strong></h3>
+<p><strong>题目</strong>：椭圆 $C:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\ (a&gt;b&gt;0)$ 离心率 $e=\frac{\sqrt3}{2}$，点 $(2,\sqrt2)$ 在 $C$ 上。<br />
+(1) 求 $C$ 的方程；<br />
+(2) 直线 $l$ 不过原点 $O$ 且不平行于坐标轴，与 $C$ 交于 $A,B$，线段 $AB$ 中点为 $M$，证明：直线 $OM$ 的斜率与 $l$ 的斜率的乘积为定值。</p>
+<p><strong>思路</strong>：<br />
+(1) 利用离心率与过点条件建立 $a,b,c$ 方程组，解得方程。<br />
+(2) 点差法沟通弦斜率与中点坐标，直接得出斜率积为 $-\frac{b^2}{a^2}$。</p>
+<p><strong>步骤</strong>：<br />
+1. 由 $e=\frac{c}{a}=\frac{\sqrt3}{2}$ 得 $c^2=\frac34 a^2,\ b^2=a^2-c^2=\frac14 a^2$。<br />
+2. 点 $(2,\sqrt2)$ 代入方程：$\frac{4}{a^2}+\frac{2}{\frac14 a^2}=1$，即 $\frac{4}{a^2}+\frac{8}{a^2}=1\Rightarrow a^2=12$，进而 $b^2=3$。椭圆 $C:\frac{x^2}{12}+\frac{y^2}{3}=1$。<br />
+3. 设 $l:y=kx+t\ (k\neq0, t\neq0)$，$A(x_1,y_1),B(x_2,y_2),M(x_0,y_0)$。<br />
+4. 代入椭圆：$\frac{x_1^2}{12}+\frac{y_1^2}{3}=1,\ \frac{x_2^2}{12}+\frac{y_2^2}{3}=1$，相减得<br />
+   $$\frac{(x_1+x_2)(x_1-x_2)}{12}+\frac{(y_1+y_2)(y_1-y_2)}{3</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-20.html">2015-文-20</a>（2015 · 中） 已知椭圆离心率和一点求标准方程，并证明中点弦斜率乘积为定值</li>
+<li><a href="../../exam/数学/2015-理-20.html">2015-理-20</a>（2015 · 中） 考查椭圆与直线相交的中点弦问题，证明斜率乘积为定值并探索四边形形状。</li>
+<li><a href="../../exam/数学/2010-理-12.html">2010-理-12</a>（2010 · 中） 已知焦点及中点弦条件求双曲线方程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1213-中点弦.html">中点弦</a></li>
+</ul>
+</div>
+</body>
+</html>

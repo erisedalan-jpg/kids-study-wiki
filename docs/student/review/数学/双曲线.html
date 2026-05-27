@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>双曲线</h1><div class="review-mark" data-stem="双曲线"></div><div class="meta-card"><span><strong>考点</strong>双曲线</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：11</li>
+<li>真题数：4；年份跨度：2008–2021</li>
+<li>出现题位：填空13 选择11 选择12</li>
+<li>难度分布：易1 中2 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>双曲线的定义</strong>：平面内与两个定点 $F_1,F_2$ 的距离之差的绝对值为非零常数 $2a$（$2a&lt;|F_1F_2|$）的点的轨迹。</li>
+<li><strong>标准方程</strong>（焦点在 $x$ 轴）：$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\;(a&gt;0,b&gt;0)$。<br />
+  实半轴长 $a$，虚半轴长 $b$，半焦距 $c=\sqrt{a^2+b^2}$，焦距 $2c$。</li>
+<li><strong>渐近线方程</strong>：$y=\pm \dfrac{b}{a}x$（焦点在 $x$ 轴）；若焦点在 $y$ 轴，则 $y=\pm \dfrac{a}{b}x$。<br />
+  渐近线斜率与 $a,b$ 的对应是求参核心。</li>
+<li><strong>离心率</strong>：$e=\dfrac{c}{a}\;(e&gt;1)$。$e$ 越大，双曲线开口越开阔；由 $a,b,c$ 关系可得 $e=\sqrt{1+\dfrac{b^2}{a^2}}$。</li>
+<li><strong>双曲线中 $a,b,c$ 关系</strong>：$c^2=a^2+b^2$（区别于椭圆 $c^2=a^2-b^2$）。</li>
+<li><strong>几何特征</strong>：双曲线上的点到两焦点的距离差为 $2a$；涉及焦点、准线、圆等综合图形时，常结合对称性、圆的性质建立方程。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由渐近线求参数或焦距的通用步骤</strong>  </li>
+<li>将所给渐近线方程化为斜截式，识别斜率 $k$；  </li>
+<li>根据双曲线焦点位置，令 $|k|=\dfrac{b}{a}$（焦点在 $x$ 轴）或 $\dfrac{a}{b}$（焦点在 $y$ 轴）；  </li>
+<li>从标准方程读出 $a^2$、$b^2$，代入关系式解出参数；  </li>
+<li>利用 $c=\sqrt{a^2+b^2}$ 求焦距 $2c$；注意多个解时由条件（如符号、$m&gt;0$）取舍。</li>
+<li><strong>求离心率 $e$ 的通用套路</strong>  </li>
+<li>利用题给几何条件（长度关系、点在圆上、定义等）建立 $a,c$ 或 $a,b,c$ 的等式；  </li>
+<li>借助 $c^2=a^2+b^2$ 消去 $b$，或直接整理出关于 $e=\dfrac{c}{a}$ 的方程；  </li>
+<li>齐次化：将 $a,c$ 统一，求 $e$ 并保证 $e&gt;1$。</li>
+<li><strong>几何图形中的双曲线问题</strong>  </li>
+<li>先画图，利用对称性（$x$ 轴、$y$ 轴、中心对称）确定关键点坐标；  </li>
+<li>将几何量（如直径、弦长）转化为代数条件，代入双曲线或已知圆的方程；  </li>
+<li>利用 $|PF_1|\pm|PF_2|=2a$ 等定义式直接求 $a$，再求 $e$。</li>
+<li><strong>检查易漏步骤</strong>  </li>
+<li>焦距是 $2c$，经常因粗心只求 $c$ 而丢分；  </li>
+<li>渐近线平方后可能产生增根，需回代检验符号和定义域。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>渐近线斜率混淆</strong>：焦点在 $x$ 轴时渐近线为 $y=\pm\frac{b}{a}x$；焦点在 $y$ 轴时为 $y=\pm\frac{a}{b}x$。不判断焦点位置直接套用极易出错。</li>
+<li><strong>$a,b,c$ 关系记反</strong>：双曲线是 $c^2=a^2+b^2$，错误地用成椭圆 $c^2=a^2-b^2$ 会导致全盘皆错。</li>
+<li><strong>焦距与半焦距混淆</strong>：题目求焦距 $2c$，却填 $c$ 值。如 2021 题算出 $c=2$，必须写 $4$。</li>
+<li><strong>忽视参数范围</strong>：如 $m&gt;0$，解方程得到 $m=0$ 或 $m=3$ 时，须舍去 $m=0$。</li>
+<li><strong>渐近线方向与符号</strong>：渐近线 $y=\pm kx$ 中符号要与具体直线匹配，不能直接平方后丢掉正负号，否则可能解出多余解。</li>
+<li><strong>离心率范围</strong>：双曲线 $e&gt;1$，若算出的值 $\le 1$ 必定有误，应及时检查。</li>
+<li><strong>用定义求 $a$ 时忽略绝对值</strong>：双曲线定义差为 $2a$，三角形边长相减应带绝对值，否则 $a$ 可能为负。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2021 理·13）</h3>
+<p>已知双曲线 $C:\dfrac{x^2}{m}-y^2=1\;(m&gt;0)$ 的一条渐近线为 $\sqrt{3}x+my=0$，则 $C$ 的焦距为<strong><em>_</em></strong>__．</p>
+<p><strong>思路</strong><br />
+将渐近线化为斜截式，找出斜率 $k$，与标准渐近线斜率 $\dfrac{b}{a}$ 对应；从方程读出 $a^2=m,b^2=1$，联立求 $m$，最后得焦距 $2c$。</p>
+<p><strong>步骤</strong><br />
+1. 渐近线 $\sqrt{3}x+my=0\Rightarrow y=-\dfrac{\sqrt{3}}{m}x$，斜率 $k=-\dfrac{\sqrt{3}}{m}$。<br />
+2. 双曲线焦点在 $x$ 轴，渐近线为 $y=\pm\dfrac{b}{a}x$。由方程知 $a^2=m,b^2=1$，故 $a=\sqrt{m},b=1$，渐近线斜率应为 $\pm\dfrac{1}{\sqrt{m}}$。<br />
+3. 因 $m&gt;0$，$-\dfrac{\sqrt{3}}{m}&lt;0$，只能取负号：$-\dfrac{\sqrt{3}}{m}=-\dfrac{1}{\sqrt{m}}$，得 $\dfrac{\sqrt{3}}{m}=\dfrac{1}{\sqrt{m}}$。<br />
+   两边平方：$\dfrac{3}{m^2}=\dfrac{1}{m}\Rightarrow m=3$（舍去 $m=0$）。<br />
+4. $c=\sqrt{a^2+b^2}=\sqrt{m+1}=\sqrt{4}=2$，焦距 $2c=4$。</p>
+<p><strong>点评/变式</strong><br />
+此题基础，但要警惕仅平方导致多解，以及最后焦距乘以 2。变式：若渐近线为 $\sqrt{3}x-my=0$，斜率变为正，对应 $\dfrac{b}{a}=\dfrac{\sqrt{3}}{m}$，平方后得 $m=\sqrt{3}$，焦距将变化，务必符号匹配。</p>
+<h3><strong>题目2</strong>（2019 文·12 / 理·11）</h3>
+<p>设 $F$ 为双曲线 $C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\;(a&gt;0,b&gt;0)$ 的右焦点，$O$ 为坐标原点，以 $OF$ 为直径的圆与圆 $x^2+y^2=a^2$ 交于 $P,Q$ 两点．若 $|PQ|=|OF|$，则 $C$ 的离心率为<br />
+A. $\sqrt{2}$ 　B. $\sqrt{3}$ 　C. $2$ 　D. $\sqrt{5}$</p>
+<p><strong>思路</strong><br />
+利用对称性确定交点 $P$ 坐标，代入圆 $x^2+y^2=a^2$ 得到 $a,c$ 关系，进而求出离心率。</p>
+<p><strong>步骤</strong><br />
+1. $F(c,0)$，$|OF|=c$，以 $OF$ 为直径的圆圆心为 $\bigl(\frac{c}{2},0\bigr)$，半径 $r=\frac{c}{2}$。<br />
+2. 由对称性，$PQ\perp x$ 轴，设垂足为 $A$，则 $|PA|=\frac{|PQ|}{2}=\frac{c}{2}$，且 $A$ 即圆心，故 $P$ 点横坐标为 $\frac{c}{2}$，纵坐标为 $\frac{c}{2}$（取正），$P\bigl(\frac{c}{2},\frac{c}{2}\bigr)$。<br />
+3. $P$ 在圆 $x^2+y^2=a^2$ 上，代入得 $\bigl(\frac{c}{2}\bigr)^2+\bigl(\frac{c}{2}\bigr)^2=a^2\Rightarrow \frac{c^2}{2}=a^2\Rightarrow c^2=2a^2$。<br />
+4. 离心率 $e=\dfrac{c}{a}=\sqrt{2}$（$e&gt;1$），选 A。</p>
+<p><strong>点评/变式</strong><br />
+关键是把几何条件“$|PQ|=|OF|$”转化为 $P$ 点坐标。若题目变为 $|PQ|=\sqrt{2}|OF|$，则 $P\bigl(\frac{c}{2},\frac{\sqrt{2}c}{2}\bigr)$，代入得 $\frac{c^2}{4}+\frac{c^2}{2}=a^2\Rightarrow c^2=\frac{4}{3}a^2$，$e=\frac{2}{\sqrt{3}}$，可见此类问题核心是建立 $a,c$ 齐次式。注意与椭圆中类似题目的区别——椭圆关系式为 $a^2=b^2+c^2$，会导致不同结果。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-13.html">2021-理-13</a>（2021 · 易） 由双曲线渐近线方程求参数及焦距</li>
+<li><a href="../../exam/数学/2019-文-12.html">2019-文-12</a>（2019 · 中） 本题通过圆的对称性求双曲线离心率，采用几何法简化运算。</li>
+<li><a href="../../exam/数学/2019-理-11.html">2019-理-11</a>（2019 · 中） 本题通过几何对称性求双曲线离心率，结合圆的方程建立参数关系求解。</li>
+<li><a href="../../exam/数学/2008-文-11.html">2008-文-11</a>（2008 · 难） 等腰三角形ABC中∠ABC=120°，以A、B为焦点过顶点C的双曲线离心率，综合三角与双曲线定义。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/368-双曲线定义与方程.html">双曲线</a></li>
+</ul>
+</div>
+</body>
+</html>

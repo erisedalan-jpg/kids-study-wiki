@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数的对称性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数的对称性</h1><div class="review-mark" data-stem="正弦函数的对称性"></div><div class="meta-card"><span><strong>考点</strong>正弦函数的对称性</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2011–2016</li>
+<li>出现题位：选择7 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦函数的对称轴</strong>：对 $y=\sin x$，对称轴为 $x=k\pi+\frac{\pi}{2}(k\in\mathbb Z)$；对一般正弦型函数 $y=A\sin(\omega x+\varphi)+k$，令 $\omega x+\varphi=k\pi+\frac{\pi}{2}$ 解出 $x$ 即得对称轴。</li>
+<li><strong>正弦函数的对称中心</strong>：$y=\sin x$ 的对称中心为 $(k\pi,0)$；$y=A\sin(\omega x+\varphi)+k$ 的对称中心由 $\omega x+\varphi=k\pi$ 解得横坐标，纵坐标为 $k$。</li>
+<li><strong>辅助角公式</strong>：$a\sin\theta+b\cos\theta=\sqrt{a^2+b^2}\sin(\theta+\delta)$，其中 $\tan\delta=\frac{b}{a}$。据此可将同名或异名三角函数和差式化为单一正弦型（或余弦型）函数，便于研究对称性与单调性。</li>
+<li><strong>图像平移与对称轴求法</strong>：$y=f(x)$ 左右平移：左加右减，注意是对 $x$ 进行替换。若平移后解析式形如 $y=A\sin(\omega x+\varphi)$，直接由 $\omega x+\varphi$ 解对称轴。</li>
+<li><strong>适用条件</strong>：所有基于正弦型函数对称性的题目，均需先将函数化为 $y=A\sin(\omega x+\varphi)+k$ 或 $y=A\cos(\omega x+\varphi)+k$ 的标准形式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标准化</strong>：将所给函数通过三角恒等变换（辅助角公式、和差化积、倍角公式等）化为 $y=A\sin(\omega x+\varphi)+k$ 或 $y=A\cos(\omega x+\varphi)+k$ 的标准形式。若含余弦，可利用诱导公式统一为正弦。</li>
+<li><strong>平移变换</strong>：若涉及平移，切记“左加右减”是对 $x$ 而言。例如 $y=2\sin 2x$ 向左平移 $\frac{\pi}{12}$，应写为 $y=2\sin[2(x+\frac{\pi}{12})]=2\sin(2x+\frac{\pi}{6})$，注意先提取 $\omega$。</li>
+<li><strong>求对称轴</strong>：对标准正弦型，令相位 $\omega x+\varphi = k\pi+\frac{\pi}{2}\ (k\in\mathbb Z)$，解出 $x$。</li>
+<li><strong>求对称中心</strong>：令 $\omega x+\varphi = k\pi$，解得横坐标 $(x_0)$，对称中心为 $(x_0, k)$。</li>
+<li><strong>判断单调性</strong>：利用正弦的单调增区间 $[-\frac{\pi}{2}+2k\pi, \frac{\pi}{2}+2k\pi]$ 和减区间 $[\frac{\pi}{2}+2k\pi, \frac{3\pi}{2}+2k\pi]$，令 $\omega x+\varphi$ 落在对应区间解出 $x$ 范围。若只判断某一开区间内的单调性，代入区间端点验证。</li>
+<li><strong>验证选项</strong>：选择题常将对称性与单调性结合，先求对称轴/中心缩小范围，再代特殊值或考察区间单调。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平移对象错误</strong>：$y=\sin 2x$ 向左平移 $\frac{\pi}{12}$ 时，易错写为 $y=\sin(2x+\frac{\pi}{12})$，正确应先提系数：$y=\sin[2(x+\frac{\pi}{12})]=\sin(2x+\frac{\pi}{6})$。</li>
+<li><strong>对称轴方程未写 $k\in\mathbb Z$</strong>：对称轴或对称中心表达式必须带上 $k\in\mathbb Z$，否则只表示一条或一点，不合题意。</li>
+<li><strong>辅助角使用不当</strong>：合并 $a\sin\theta+b\cos\theta$ 时，注意确定辅助角所在的象限，避免符号错误。也可直接化为余弦，如 $y=\sin(2x+\frac{\pi}{4})+\cos(2x+\frac{\pi}{4})$ 可化为 $\sqrt{2}\cos 2x$，更简洁。</li>
+<li><strong>混淆正弦与余弦的对称轴</strong>：$y=\cos x$ 的对称轴为 $x=k\pi$，不是 $x=k\pi+\frac{\pi}{2}$。若化成余弦形式，对称轴方程要对应调整。</li>
+<li><strong>对称中心纵坐标忽略平移</strong>：$y=A\sin(\omega x+\varphi)+k$ 的对称中心纵坐标为 $k$，不是 $0$。</li>
+<li><strong>单调区间不匹配</strong>：由整体解单调区间时，易忽略 $k$ 的取值，或不知道将解出的区间与给定开区间求交集。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2016理7——将 $y=2\sin 2x$ 左移 $\frac{\pi}{12}$ 单位，求对称轴。</h3>
+<ul>
+<li><strong>思路</strong>：先按平移规则得出新函数解析式，再直接由正弦对称轴通式解出 $x$。</li>
+<li><strong>步骤</strong>：
+  平移后 $y=2\sin\left[2\left(x+\frac{\pi}{12}\right)\right]=2\sin\left(2x+\frac{\pi}{6}\right)$。
+  令 $2x+\frac{\pi}{6}=k\pi+\frac{\pi}{2},\ k\in\mathbb Z$，
+  得 $2x=k\pi+\frac{\pi}{3}$，
+  即 $x=\frac{k\pi}{2}+\frac{\pi}{6}$，对照选项选 B。</li>
+<li><strong>点评/变式</strong>：本题易错在平移后未提取系数，导致相位错误。变式：将平移单位改为 $\frac{\pi}{6}$，则得 $y=2\sin(2x+\frac{\pi}{3})$，对称轴为 $x=\frac{k\pi}{2}+\frac{\pi}{12}$。</li>
+</ul>
+<h3><strong>题目</strong>：2011文11——$f(x)=\sin(2x+\frac{\pi}{4})+\cos(2x+\frac{\pi}{4})$，求单调性与对称轴。</h3>
+<ul>
+<li><strong>思路</strong>：利用辅助角（或直接观察两角和公式）化成单一三角函数，再分析对称轴和单调性。</li>
+<li><strong>步骤</strong>：
+  $f(x)=\sqrt{2}\sin\left(2x+\frac{\pi}{4}+\frac{\pi}{4}\right)=\sqrt{2}\sin\left(2x+\frac{\pi}{2}\right)=\sqrt{2}\cos 2x$。
+  对称轴由 $2x=k\pi$ 得 $x=\frac{k\pi}{2}$，排除 A、C。
+  单调递减区间：$2x\in[2k\pi, \pi+2k\pi]$，即 $x\in[k\pi, \frac{\pi}{2}+k\pi]$。
+  当 $k=0$ 时，减区间为 $[0,\frac{\pi}{2}]$，在 $(0,\frac{\pi}{2})$ 内单调递减，故 D 正确。</li>
+<li><strong>点评/变式</strong>：该题巧妙利用 $\sin(\theta+\frac{\pi}{2})=\cos\theta$ 直接化为单一余弦，避免辅助角繁复计算。变式训练：$f(x)=\sin(2x+\frac{\pi}{3})+\cos(2x-\frac{\pi}{6})$，亦可利用诱导公式简化，再判对称轴与单调性。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-理-07.html">2016-理-07</a>（2016 · 中） 该题考查三角函数图象平移变换及正弦函数的对称轴求解。</li>
+<li><a href="../../exam/数学/2011-文-11.html">2011-文-11</a>（2011 · 中） 本题主要考查利用辅助角公式化简三角函数，并判断其对称性与单调性。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/567-正弦函数的对称性.html">正弦函数的对称性</a></li>
+</ul>
+</div>
+</body>
+</html>

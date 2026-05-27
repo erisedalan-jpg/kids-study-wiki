@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>虚数单位</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>虚数单位</h1><div class="review-mark" data-stem="虚数单位"></div><div class="meta-card"><span><strong>考点</strong>虚数单位</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：3</li>
+<li>真题数：2；年份跨度：2012–2015</li>
+<li>出现题位：选择2</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>虚数单位</strong>：$i$ 满足 $i^2 = -1$，且 $i$ 与实数进行四则运算时，交换律、结合律、分配律仍然成立。$i$ 的幂呈现周期性：$i^{4n}=1,\ i^{4n+1}=i,\ i^{4n+2}=-1,\ i^{4n+3}=-i$。</li>
+<li><strong>复数代数形式</strong>：$z=a+bi\ (a,b\in\mathbb{R})$，其中 $a$ 为实部(Re$z$)，$b$ 为虚部(Im$z$)。当 $b=0$ 时为实数；当 $b\ne 0$ 且 $a=0$ 时为纯虚数。</li>
+<li><strong>复数相等</strong>：$a+bi=c+di\iff a=c$ 且 $b=d$，特别地，$a+bi=0\iff a=0$ 且 $b=0$。复数比较必须化为实部、虚部分别相等。</li>
+<li><strong>共轭复数</strong>：$z=a+bi$ 的共轭复数为 $\overline{z}=a-bi$，两者关于实轴对称，满足 $z\cdot\overline{z}=a^2+b^2=|z|^2$。</li>
+<li><strong>运算规则</strong>：加减法用实部、虚部分别运算；乘法按多项式展开且利用 $i^2=-1$ 化简；除法将分子分母同乘分母的共轭复数（分母实数化）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>分母实数化（核心技巧）</strong><br />
+   形如 $\frac{a+bi}{c+di}$ 的复数除法，分子分母同乘分母的共轭复数 $c-di$，化为 $\frac{(a+bi)(c-di)}{c^2+d^2}$，拆为 $A+Bi$ 标准形式。</li>
+<li><strong>复数相等求参数</strong><br />
+   等号两边同时化为 $a+bi$ 标准形式，由实部等于实部、虚部等于虚部得出关于参数的方程组求解。</li>
+<li><strong>共轭复数处理</strong><br />
+   先化简原复数至 $a+bi$ 形式，再直接写出 $a-bi$。若含乘除运算，可先分子分母同乘共轭复数，计算结果即为所求复数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>实部虚部混淆</strong>：忘记复数相等需实部、虚部分别对应。例：由 $2+ai=2+4i$ 忘记单独对比，误写成含 $a$ 的整体符号。</li>
+<li><strong>共轭复数遗忘交替符</strong>：求出 $z=-1+i$ 后，易漏掉虚部变号而误选 $-1-i$ 为正确，注意共轭唯一改变虚部符号。</li>
+<li><strong>分母实数化只乘分母共轭复数漏乘分子</strong>：必须分子分母同乘同一复数，否则改变原式的值。</li>
+<li><strong>代数运算中 $i^2=-1$ 处理失误</strong>：乘开后忘记将 $i^2$ 换为 $-1$ 而留 $i^2$，导致实部虚部合并错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：若 $a$ 为实数，且 $\frac{2+ai}{1+i}=3+i$，则 $a=$ (　　)
+A. $-4$　B. $-3$　C. $3$　D. $4$</p>
+<p><strong>思路</strong>：等式左边为含参分数式，先分母实数化至 $A+Bi$ 形式，再利用复数相等的条件令实部、虚部分别对应得到 $a$ 值。
+<strong>步骤</strong>：<br />
+1. 分母实数化：$\frac{2+ai}{1+i} = \frac{(2+ai)(1-i)}{(1+i)(1-i)} = \frac{2-2i+ai - a i^2}{1^2+1^2}$。<br />
+2. 化简分子：$i^2=-1$，$-ai^2= a$，故 $2-2i+ai+a = (2+a)+(a-2)i$，分母为 $2$。<br />
+3. 原式 $= \frac{2+a}{2} + \frac{a-2}{2}i$。<br />
+4. 令其等于 $3+i$：$\frac{2+a}{2}=3$ 且 $\frac{a-2}{2}=1$，解得 $a=4$。
+<strong>点评/变式</strong>：用复数相等将问题转化为简单方程是基础考点，可推广为已知实部与虚部的关系求解参数。</p>
+<hr />
+<p><strong>题目</strong>：复数 $z=\frac{-3+i}{2+i}$ 的共轭复数是 (　　)
+A. $2+i$　B. $2-i$　C. $-1+i$　D. $-1-i$</p>
+<p><strong>思路</strong>：先对原复数进行分母实数化化简成 $a+bi$，再取其共轭 $a-bi$。
+<strong>步骤</strong>：<br />
+1. 分母实数化：$z=\frac{-3+i}{2+i}=\frac{(-3+i)(2-i)}{(2+i)(2-i)}$。<br />
+2. 分子展开：$(-3)\cdot(2-i)+i\cdot(2-i)= -6+3i+2i - i^2$。<br />
+3. 利用 $i^2=-1$ 得 $-6+5i -(-1)= -5+5i$。分母为 $2^2+1^2=5$。<br />
+4. 化简得 $z=-1+i$。其共轭复数为 $-1-i$。
+<strong>点评/变式</strong>：分母实数化在求共轭、模长等问题中是必经步骤，熟练掌握可快速应对高频率考查的复数除法类题型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-02.html">2015-文-02</a>（2015 · 易） 该题考查复数的基本运算和复数相等的条件应用。</li>
+<li><a href="../../exam/数学/2012-文-02.html">2012-文-02</a>（2012 · 易） 本题考查复数的除法运算及其共轭复数的求法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/588-虚数单位.html">虚数单位</a></li>
+</ul>
+</div>
+</body>
+</html>

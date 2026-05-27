@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数与方程综合运用</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数与方程综合运用</h1><div class="review-mark" data-stem="函数与方程综合运用"></div><div class="meta-card"><span><strong>考点</strong>函数与方程综合运用</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数零点与方程根</strong>：$F(x)=0$ 的实数根 $\Leftrightarrow$ 函数 $y=F(x)$ 的零点 $\Leftrightarrow$ 两个函数 $y=f(x)$ 与 $y=g(x)$ 图象交点的横坐标。</li>
+<li><strong>函数图象的对称中心</strong>：</li>
+<li>若 $f(a+x)+f(a-x)=2b$，则 $y=f(x)$ 的图象关于点 $(a,b)$ 中心对称。</li>
+<li>常见类型：$y=\dfrac{k}{x-a}+b\,(k\neq0)$ 关于 $(a,b)$ 对称；正弦函数 $y=A\sin(\omega x+\varphi)$ 的对称中心为 $(\dfrac{k\pi-\varphi}{\omega},0)\,(k\in\mathbb Z)$。</li>
+<li><strong>图象交点与对称性</strong>：若 $y=f(x)$ 与 $y=g(x)$ 的图象有<strong>公共对称中心</strong> $(a,b)$，且一个交点不重合于对称中心，则其余交点必成对出现，每一对关于该中心对称，其横坐标之和为 $2a$。</li>
+<li><strong>数形结合</strong>：研究超越方程、分式函数与三角函数的交点问题，通常难以直接解方程，需通过作草图、考察单调性、渐近线、对称性和区间端点值来综合分析。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>统一形式</strong>：将题干给出的方程或交点问题转化为 $f(x)=g(x)$ 的形式，准备画图。</li>
+<li><strong>寻找对称性（关键）</strong>：</li>
+<li>检查 $f(x)$ 与 $g(x)$ 是否具有<strong>相同的对称中心</strong>。对于分式型 $y=\dfrac{k}{x-a}+b$，其对称中心即其渐近线交点 $(a,b)$；对于正弦型，对称中心为其平衡位置零点。</li>
+<li>一旦确认公共对称中心 $(a,b)$，即可断定所有成对交点的横坐标之和为 $2a$（若对称中心本身为交点，可单独处理）。</li>
+<li><strong>界定研究区间</strong>：结合定义域和给定区间，明确讨论范围。</li>
+<li><strong>画示意图</strong>：</li>
+<li>画 $y=f(x)$ 的关键特征：渐近线、单调性、区间端点的函数值或极限。</li>
+<li>画 $y=g(x)$ 的关键特征：周期、振幅、对称轴、特殊点。</li>
+<li><strong>数交点</strong>：从图象中逐一数出给定区间内的交点数目，注意结合函数值大小关系判断交点是否存在。若区间端点值异号且连续，则至少有一个交点。</li>
+<li><strong>求和得解</strong>：若全部交点为 $2n$ 个（成对出现），则横坐标总和 $=n\cdot 2a$；若包含对称中心自身，需加上该点横坐标 $a$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域与渐近线</strong>：如 $y=\dfrac{1}{1-x}$ 在 $x=1$ 处无定义，画图时若漏画渐近线，易在 $x=1$ 两侧误判交点。</li>
+<li><strong>正弦函数作图失真</strong>：$y=2\sin\pi x$ 的周期 $T=2$，在 $[-2,4]$ 上恰有三个完整周期。忽视周期、振幅或与对称中心的相对位置，可能导致漏数或多数交点。</li>
+<li><strong>区间端点处理不当</strong>：端点为开区间或闭区间，以及端点处函数值大小关系，直接决定该处是否存在交点。如解析中 $1&lt;x\le4$ 时 $y_1&lt;0$，而 $y_2$ 在该区间正负交替，需逐个周期检验。</li>
+<li><strong>误用对称中心</strong>：不是所有函数都有对称中心，只有在确认为公共对称中心后才能使用求和性质。有时两个函数分别有自己的对称中心，并不公共，不能用此性质。</li>
+<li><strong>粗心忘加对称中心本身</strong>：若对称中心恰好是交点，其横坐标 $a$ 必须单独计入总和。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·全国理·12）：函数 $y=\dfrac{1}{1-x}$ 的图象与函数 $y=2\sin\pi x$（$-2\le x\le4$）的图象所有交点的横坐标之和等于<br />
+A. 8  B. 6  C. 4  D. 2  </p>
+<p><strong>思路</strong><br />
+两个函数明显无法直接解方程。观察发现 $y_1=\dfrac{1}{1-x}$ 可变形为 $y_1=-\dfrac{1}{x-1}$，其图象关于点 $(1,0)$ 对称；$y_2=2\sin\pi x$ 的对称中心为 $(k,0)\,(k\in\mathbb Z)$，因此它们有公共对称中心 $(1,0)$。于是所有交点关于 $(1,0)$ 成对出现，每对横坐标之和为 $2$。只需数出交点数，即可求和。</p>
+<p><strong>步骤</strong><br />
+1. 确认定义域：$x\neq 1$。$y_1$ 在 $x=1$ 处有竖直渐近线。<br />
+2. 分析 $y_1$ 的单调性与符号：$y_1=\dfrac{1}{1-x}$ 在 $(-\infty,1)$ 和 $(1,+\infty)$ 上分别递增。当 $x&lt;1$ 时，$1-x&gt;0$，$y_1&gt;0$；当 $x&gt;1$ 时，$y_1&lt;0$。<br />
+3. 作示意图：<br />
+   - 画 $y_1$ 图象：以 $x=1$ 为渐近线的两支双曲线，均过原点 $(0,1)$？校正：$x=0$ 时 $y_1=1$；极限行为 $x\to1^-$ 时 $y_1\to+\infty$，$x\to1^+$ 时 $y_1\to-\infty$。<br />
+   - 画 $y_2=2\sin\pi x$：振幅 $2$，周期 $T=2$，过所有整数值零点，在 $x=1$ 处为零（对称中心）。在 $[-2,4]$ 画出三个完整周期的正弦波。<br />
+4. 分区间数交点：<br />
+   - $[-2,0]$：$y_1$ 在 $x=-2$ 时 $y_1=\frac13$，$x=0$ 时 $y_1=1$，始终为正且递增；$y_2$ 在这个区间有一个半波，由 $-2\to-1$ 负半周，$-1\to0$ 正半周。由图象可知在 $(-2,-1)$ 负半周无交点，在 $(-1,0)$ 正半周恰好有 1 个交点。由对称性，$[2,4]$ 区间对应同样 1 个交点。<br />
+   - $(0,1)$：$y_1$ 从 $1$ 增至 $+\infty$；$y_2$ 在 $(0,1)$ 为正半周，从 $0$ 升至 $2$ 再降至 $0$，恰与 $y_1$ 相交于 1 个点。由对称性，$(1,2)$ 对应 1 个交点。<br />
+   - $(1,2)$：$y_1&lt;0$ 且递增；$y_2$ 在 $(1,2)$ 为负半周，两者从 $(1^+)$ 开始 $y_1\to-\infty, y_2=0$，到 $x=2$ 时 $y_1=-1, y_2=0$，中间必有 1 个交点。对称到 $(0,1)$ 已计数。<br />
+   - $(2,4]$：$y_1&lt;0$ 且上升，$y_2$ 完成一个周期（$2\to4$），正负各半。$x=2$ 均为 0？$y_1(2)=-1\neq0$，无交点；$x=3$ 时 $y_1=-\frac12$，$y_2=0$；$x=4$ 时 $y_1=-\frac13$，$y_2=0$。通过极值比较，在 $(2,3)$ 负半周有 1 交点，$(3,4)$ 正半周无交点（$y_2$ 正，$y_1$ 负）。由对称，$[-2,0]$ 对应处同理。<br />
+   综上，在 $x\neq1$ 的区间内共 4 对 8 个交点，均不包含对称中心 $x=1$。<br />
+5. 横坐标之和：因每对关于 $(1,0)$ 对称，每对横坐标和为 $2$，共 4 对，总和 $=4\times2=8$。</p>
+<p><strong>点评/变式</strong><br />
+- 对称中心的发现与利用是本题“题眼”。遇见分式函数与三角函数的交点问题，应立刻想到对称性。<br />
+- 画草图不必极其精确，但必须体现渐近线、符号、周期和单调性趋势，足以判断交点个数。<br />
+- 变式：若将函数改为 $y=\dfrac{1}{2-x}$ 与 $y=\sin\pi x$，公共对称中心变为 $(2,0)$，思路完全一致。<br />
+- 若交点中包含对称中心本身，则总和需加上 $a$。例如区间端点包含对称中心且函数值相等时，该点即为交点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-12.html">2011-理-12</a>（2011 · 中） 函数图象有公共对称中心，求两函数交点横坐标之和。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/675-函数与方程综合运用.html">函数与方程综合运用</a></li>
+</ul>
+</div>
+</body>
+</html>

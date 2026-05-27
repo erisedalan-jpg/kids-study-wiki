@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>万有引力定律</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>万有引力定律</h1><div class="review-mark" data-stem="万有引力定律"></div><div class="meta-card"><span><strong>考点</strong>万有引力定律</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>万有引力定律</strong>：任意两质点间引力 $F = G\frac{m_1m_2}{r^2}$，$G$ 为引力常量。适用条件：两质点间，或均质球体（外部问题可视为球心处质点）。</li>
+<li><strong>天体圆周运动</strong>：天体做匀速圆周运动时，向心力由万有引力提供。对绕中心天体运行的行星（或卫星），有 $G\frac{Mm}{r^2} = m\omega^2 r = m\frac{v^2}{r}$，角速度 $\omega$ 由轨道半径和中心天体质量决定。</li>
+<li><strong>拉格朗日 $L_2$ 点</strong>：位于两体连线的延长线上（较小天体外侧），探测器在该点所受两体引力的合力恰好提供与月球同步公转的向心力。关键关系：$\frac{GM_1}{(R+r)^2} + \frac{GM_2}{r^2} = \omega^2 (R+r)$，其中 $\omega$ 等于月球公转角速度 $\omega^2 = \frac{GM_1}{R^3}$。</li>
+<li><strong>小量近似</strong>：若 $\alpha \ll 1$，利用泰勒展开或给出的近似公式简化方程，保留主导项求近似解。本题所给近似：$\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题搭模型</strong>：明确研究对象（探测器）、受力（地球引力、月球引力）及运动形式（与月球同步绕地公转的圆周运动）。</li>
+<li><strong>列平衡/动力学方程</strong>：用牛顿第二定律（绕公共质心转动）写出向心力方程；利用月球公转关系消去角速度，得到 $L_2$ 点位置方程。</li>
+<li><strong>引入小量并化简</strong>：设小量 $\alpha = r/R$，代入方程，两边同乘分母，整理成所需形式。</li>
+<li><strong>套用近似公式</strong>：按题目给出的近似关系，将方程化为仅含小量主项（如 $\alpha^3$）与质量比的简单等式。</li>
+<li><strong>解出待求量</strong>：解方程得到 $r$ 的表达式，匹配选项，注意系数与根号的次数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆向心力来源</strong>：探测器公转向心力应为地球与月球引力的合力，而非仅地球引力。遗漏 $L_2$ 点月球引力项会导致方程错误。</li>
+<li><strong>未能正确消去角速度</strong>：太阳/行星系统中的公转角速度需由两天体的实际运动求出，忘记 $GM_1/R^2 = \omega^2 R$（月球公转方程）会多出未知量。</li>
+<li><strong>小量近似处理生硬</strong>：方程化简不到位，没能化为题目所给近似公式的标准形式，导致无法直接代换。</li>
+<li><strong>指数与系数错判</strong>：近似后方程常出现 $\alpha^3$ 或 $\alpha^2$，系数 $3$ 易被遗漏，最后错选选项。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> （2019 全国 I 卷·理综第 4 题）</h3>
+<p>“鹊桥”中继星运行在地月拉格朗日 $L_2$ 点。地球质量 $M_1$，月球质量 $M_2$，地月距离 $R$，$L_2$ 点到月球距离 $r$，$r$ 满足 $\frac{M_1}{(R+r)^2} + \frac{M_2}{r^2} = \frac{M_1}{R^3}(R+r)$。设 $\alpha = \frac{r}{R}$，$\alpha$ 很小，近似有 $\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$，求 $r$ 的近似值。
+选项：
+A. $\frac{M_2}{M_1}R$
+B. $\sqrt{\frac{M_2}{2M_1}}R$
+C. $\sqrt[3]{\frac{3M_2}{M_1}}R$
+D. $\sqrt[3]{\frac{M_2}{3M_1}}R$</p>
+<h4><strong>思路</strong></h4>
+<p>由题干方程引入 $\alpha$，化简成可直接使用所给近似公式的形式，解出 $\alpha$ 再回代 $r=\alpha R$。</p>
+<h4><strong>步骤</strong></h4>
+<ol>
+<li><strong>代入 $\alpha$</strong>：将 $r = \alpha R$ 代入关系方程。
+   $$
+   \frac{M_1}{R^2(1+\alpha)^2} + \frac{M_2}{\alpha^2 R^2} = \frac{M_1}{R^3} \cdot R(1+\alpha) = \frac{M_1}{R^2}(1+\alpha)
+   $$</li>
+<li><strong>消去公因子</strong>：两边同乘 $R^2$，得
+   $$
+   \frac{M_1}{(1+\alpha)^2} + \frac{M_2}{\alpha^2} = M_1(1+\alpha)
+   $$</li>
+<li><strong>移项，凑近似形式</strong>：
+   $$
+   \frac{M_2}{\alpha^2} = M_1(1+\alpha) - \frac{M_1}{(1+\alpha)^2} = M_1 \left[ \frac{(1+\alpha)^3 - 1}{(1+\alpha)^2} \right]
+   $$
+   展开 $(1+\alpha)^3 = 1 + 3\alpha + 3\alpha^2 + \alpha^3$，分子变为 $3\alpha + 3\alpha^2 + \alpha^3$，提出 $\alpha$：
+   $$
+   \frac{M_2}{\alpha^2} = M_1 \frac{\alpha(3 + 3\alpha + \alpha^2)}{(1+\alpha)^2}
+   $$</li>
+<li><strong>化为给定近似结构</strong>：两边同乘 $\alpha^2$，分离出 $\frac{3\alpha^3+3\alpha^4+\alpha^5}{(1+\alpha)^2}$：
+   $$
+   M_2 = M_1 \alpha^3 \frac{3 + 3\alpha + \alpha^2}{(1+\alpha)^2} = M_1 \frac{3\alpha^3 + 3\alpha^4 + \alpha^5}{(1+\alpha)^2}
+   $$</li>
+<li><strong>用近似简化</strong>：根据题目近似，$\frac{3\alpha^3 + 3\alpha^4 + \alpha^5}{(1+\alpha)^2} \approx 3\alpha^3$，代入得
+   $$
+   M_2 \approx M_1 \cdot 3\alpha^3
+   $$
+   故 $\alpha^3 \approx \frac{M_2}{3M_1}$，即 $\alpha = \sqrt[3]{\frac{M_2}{3M_1}}$。</li>
+<li><strong>回求 $r$</strong>：$r = \alpha R = \sqrt[3]{\frac{M_2}{3M_1}} R$。对应选项 D。</li>
+</ol>
+<h4><strong>点评/变式</strong></h4>
+<ul>
+<li><strong>核心技巧</strong>：非孤立求解方程，而是通过巧妙变形“凑”出题设的近似表达式，直接代换出结果，避免手动级数展开的繁琐。</li>
+<li><strong>变式思维</strong>：若题目改为求 $L_1$ 点（地月之间），方程符号略有不同，但方法相通。掌握此“变形—套近似—解小量”的流程，能应对各类平衡点近似求解问题。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-理-04.html">2019-理-04</a>（2019 · 中） 嫦娥四号在月球 L2 点轨道运行，由万有引力定律和牛顿运动定律推导，求 L2 点到月球距离 r 的近似值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/246-万有引力定律.html">万有引力定律</a></li>
+</ul>
+</div>
+</body>
+</html>

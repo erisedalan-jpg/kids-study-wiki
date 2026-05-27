@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>长方体对角线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>长方体对角线</h1><div class="review-mark" data-stem="长方体对角线"></div><div class="meta-card"><span><strong>考点</strong>长方体对角线</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：填空15</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>长方体的体对角线长公式</strong>：若长方体长、宽、高分别为 $a,b,c$，则体对角线长 $d=\sqrt{a^2+b^2+c^2}$。  </li>
+<li><strong>球内接长方体的核心关系</strong>：长方体所有顶点都在同一个球面上（外接球）时，外接球的直径等于长方体的体对角线长，即 $2R=d=\sqrt{a^2+b^2+c^2}$，球心为体对角线的中点。  </li>
+<li><strong>球的表面积公式</strong>：$S=4\pi R^2$（注意系数是 $4$，不是 $4/3$，也不要与体积 $V=\frac{4}{3}\pi R^3$ 混淆）。  </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确认几何关系</strong>：看到“长方体顶点都在球面上”，立即锁定其为长方体的外接球问题，外接球直径 = 体对角线长。  </li>
+<li><strong>求体对角线</strong>：由长宽高直接代入 $d=\sqrt{a^2+b^2+c^2}$，必要时可先根据已知条件求出全部棱长。  </li>
+<li><strong>转半径</strong>：由 $2R=d$ 得 $R=\dfrac{d}{2}$，注意先不要急于计算数值，保留根号形式避免精度损失。  </li>
+<li><strong>算表面积/体积</strong>：若求表面积代入 $S=4\pi R^2$，若求体积则代入 $V=\dfrac{4}{3}\pi R^3$。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆面对角线与体对角线</strong>：面对角线为 $\sqrt{a^2+b^2}$，体对角线为 $\sqrt{a^2+b^2+c^2}$。外接球直径关联的是体对角线。  </li>
+<li><strong>忘记将直径化为半径</strong>：求出体对角线长 $d$ 后，直接当作半径 $R$ 代入公式，导致面积扩大4倍。应将 $R=d/2$。  </li>
+<li><strong>表面积与体积公式用混</strong>：球表面积是 $4\pi R^2$，体积是 $\frac{4}{3}\pi R^3$；记错系数或混淆 $R^2$ 与 $R^3$。  </li>
+<li><strong>运算忽略约分</strong>：计算 $S=4\pi \left(\frac{\sqrt{14}}{2}\right)^2$ 时，平方得 $\frac{14}{4}$，乘以 $4$ 后正好约为 $14\pi$。若强行先算小数，容易引入误差。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017·全国·文·15）<br />
+长方体的长、宽、高分别为 3，2，1，其顶点都在球 $O$ 的球面上，则球 $O$ 的表面积为 <strong><em>_</em></strong>_。  </p>
+<p><strong>思路</strong><br />
+长方体外接球的球心为体对角线中点，直径的长度等于体对角线的长度。先由长宽高求出体对角线，即得球的直径，进一步得到半径，最后用球的表面积公式计算。  </p>
+<p><strong>步骤</strong><br />
+1. 计算体对角线长：<br />
+   $$d = \sqrt{3^2 + 2^2 + 1^2} = \sqrt{9+4+1} = \sqrt{14}$$<br />
+2. 球的半径：<br />
+   $$R = \frac{d}{2} = \frac{\sqrt{14}}{2}$$<br />
+3. 球的表面积：<br />
+   $$S = 4\pi R^2 = 4\pi \left( \frac{\sqrt{14}}{2} \right)^2 = 4\pi \cdot \frac{14}{4} = 14\pi$$  </p>
+<p><strong>点评/变式</strong><br />
+本题直接给出长宽高，属于最基础的“体对角线→外接球”模型。若变式为：已知长方体的三个面面积（或面对面角线长），需先联立求出三条棱长，再套用同一套路。此外，若将“长方体”改为“有共顶点的三条棱两两垂直的三棱锥”，外接球直径仍然等于以这三条棱为长宽高的长方体的体对角线，思想完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-15.html">2017-文-15</a>（2017 · 易） 长方体的顶点均在球面上，通过体对角线求球的半径，再计算球的表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">长方体对角线</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>棱台体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>棱台体积</h1><div class="review-mark" data-stem="棱台体积"></div><div class="meta-card"><span><strong>考点</strong>棱台体积</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：13</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：填空14</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>棱台定义</strong>：用一个平行于棱锥底面的平面去截棱锥，底面与截面之间的部分叫做棱台。</li>
+<li><strong>核心特征</strong>：上下底面互相平行且相似，对应边成比例；各侧棱延长后交于一点（原棱锥的顶点）。</li>
+<li><strong>正棱台</strong>：由正棱锥截得的棱台，上下底面都是正多边形，侧面是全等的等腰梯形。</li>
+<li><strong>体积公式</strong>：</li>
+<li><strong>推导关系式（补锥法）</strong>：$V_{\text{台}} = V_{\text{大锥}} - V_{\text{小锥}}$。将棱台补回成原棱锥，利用相似比求原锥体高，再作差求体积。</li>
+<li><strong>台体体积公式</strong>：$V = \frac{1}{3}h(S_{\text{上}} + S_{\text{下}} + \sqrt{S_{\text{上}}S_{\text{下}}})$，其中 $h$ 是台体高，$S_{\text{上}}$ 和 $S_{\text{下}}$ 分别为上、下底面积。<ul>
+<li><strong>适用条件</strong>：$S_{\text{上}}$ 与 $S_{\text{下}}$ 必须为对应的相似多边形面积。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>结构与比例分析</strong>：利用“平行于底面的截面”条件，明确上下底面的相似比 $k$。</li>
+<li>底面边长之比即为相似比，底面积之比等于相似比的平方。</li>
+<li>利用相似比建立被截去小锥体与原大锥体对应高之间的比例关系。</li>
+<li><strong>补形还原法</strong>：</li>
+<li>将棱台侧棱延长，还原为原来的大棱锥。</li>
+<li>通过小锥体已知高或边长条件，结合相似比，求出大锥体的高。</li>
+<li>计算 $V_{\text{大锥}} - V_{\text{小锥}}$ 得到棱台体积。此法是台体问题最本质的通用解法。</li>
+<li><strong>公式直接代入法</strong>：</li>
+<li>明确台体的高 $h$ 以及上下底面积。</li>
+<li>直接应用台体体积公式 $V = \frac{1}{3}h(S_{\text{上}} + S_{\text{下}} + \sqrt{S_{\text{上}}S_{\text{下}}})$ 求解。</li>
+<li>此方法速度快，但需警惕高是否为台体高，以及面积是否对应正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆高与侧棱长</strong>：将截面与底面之间的“距离”与截去的小棱锥的高混淆。此题中被截去的小正四棱锥的高为 3，求出的原大正四棱锥的高应为 6，这是正确的半高关系，不可直接将小锥高当作台体高。</li>
+<li><strong>面积比与边长比混用</strong>：在使用台体公式时，误将边长直接当作面积代入。本题上底面边长为 2，下底面边长为 4，面积 $S_{\text{上}}=4$，$S_{\text{下}}=16$，$\sqrt{S_{\text{上}}S_{\text{下}}}=8$。若误代入边长，结果必然错误。</li>
+<li><strong>公式项遗漏或错算</strong>：体积公式包含三项，尤其是中间项 $\sqrt{S_{\text{上}}S_{\text{下}}}$ 易被遗漏或与 $\frac{1}{3}hS_{\text{中}}$ 混淆。此处应严格计算平方根确保精度。</li>
+<li><strong>补形比例推算失误</strong>：在补成大锥体时，利用小锥体高为 3 及边长比为 1:2，错误地认为大锥高是 $3 \times 2 = 6$ 而漏掉加台体高的过程。必须通过截面几何关系列比例式求解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>简述：底面边长为 4 的正四棱锥被平行于底面的平面截去一个底面边长为 2、高为 3 的正四棱锥，求所得棱台的体积。</p>
+<p><strong>思路</strong>：
+平面平行于底面，截得的截面与大底面相似，相似比为 $2:4=1:2$。由上往下，截去的小正四棱锥与原大正四棱锥相似。可通过相似比求出原完整大锥体的高，利用“大锥减小锥”求体积；或直接确定台体高及上下底面积，代入台体体积公式。</p>
+<p><strong>步骤</strong>：
+<strong>方法一（补锥法）</strong>：
+1. 设原正四棱锥（大锥）体积为 $V_1$，高为 $H$；被截去的小正四棱锥体积为 $V_2$，高 $h_2=3$。
+2. 大小棱锥相似，相似比（边长比）为 $k = \frac{4}{2}=2$。高度比等于相似比，即 $\frac{H}{h_2}=2$。
+3. 代入数据得 $\frac{H}{3}=2 \implies H=6$。
+4. 大锥底面积 $S_1=4^2=16$，小锥底面积 $S_2=2^2=4$。
+5. 大锥体积 $V_1=\frac{1}{3}S_1H=\frac{1}{3} \times 16 \times 6=32$。
+6. 小锥体积 $V_2=\frac{1}{3}S_2h_2=\frac{1}{3} \times 4 \times 3=4$。
+7. 棱台体积 $V=V_1-V_2=32-4=28$。</p>
+<p><strong>方法二（公式法）</strong>：
+1. 确定台体高 $h=H-h_2=6-3=3$。
+2. 上下底面积：$S_{\text{下}}=4^2=16$，$S_{\text{上}}=2^2=4$。
+3. 代入台体公式：
+$$V=\frac{1}{3}\times 3 \times (4+16+\sqrt{4 \times 16}) = 1 \times (20+8)=28$$。</p>
+<p><strong>点评/变式</strong>：
+本题核心在于利用平行截面构造相似关系。直接使用台体公式更加快捷，但补锥法是解决所有复杂棱台问题的基础思维（尤其当台体为非正棱台或给出侧棱比例时）。<strong>变式思考</strong>：若将“截去一个高为 3 的正四棱锥”改为“截得棱台的高为 3”，则原锥体高 $H$ 变为 $6+3=9$（因为高之比仍为 $2:1$，台体高占大锥高一半），体积结果将不同。务必仔细区分题目给出的高是台体高还是截去锥体的高。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-14.html">2023-新课标Ⅱ-14</a>（2023 · 易） 利用割补法或台体体积公式求正四棱锥截得的棱台体积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1387-棱台的体积.html">棱台体积</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>异面直线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>异面直线</h1><div class="review-mark" data-stem="异面直线"></div><div class="meta-card"><span><strong>考点</strong>异面直线</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>异面直线</strong>：不同在任何一个平面内的两条直线。判定常通过定义或“既不平行也不相交”。</li>
+<li><strong>线面垂直的关键性质</strong>：若直线 $m \perp \alpha$，则 $m$ 垂直于 $\alpha$ 内的所有直线；反之，若 $m$ 垂直于 $\alpha$ 内两条相交直线，则 $m \perp \alpha$。</li>
+<li><strong>面面位置关系</strong>：两平面要么平行，要么相交。若两平面平行，同时垂直于它们的两条直线必平行（或重合）；若两平面相交，其交线与两平面的垂线均垂直。</li>
+<li><strong>线线垂直与线面垂直的转化</strong>：$l \perp m$ 且 $l \perp n$ 不一定推出 $l \perp$ 由 $m,n$ 确定的平面，除非 $m$ 与 $n$ 相交。对异面直线，需平移至相交后判断。</li>
+<li><strong>本题核心逻辑链</strong>：$m \perp \alpha$，$n \perp \beta$，且 $m,n$ 异面 $\Rightarrow$ $\alpha$ 与 $\beta$ 必相交。设交线为 $a$，由 $a \subset \alpha$ 得 $m \perp a$，由 $a \subset \beta$ 得 $n \perp a$；又已知 $l \perp m$，$l \perp n$，结合 $l \not\subset \alpha, l \not\subset \beta$，可得 $l \parallel a$。即交线平行于 $l$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>模型化与反证法</strong>：先用反证法否定不可能的情形（如假设 $\alpha \parallel \beta$，导出 $m \parallel n$ 与异面矛盾），锁定 $\alpha$ 与 $\beta$ 相交。  </li>
+<li><strong>交线定向</strong>：利用线面垂直的性质，得出交线同时垂直于两平面的垂线，从而确定交线方向。  </li>
+<li><strong>平移异面直线为共面直线</strong>：将条件 $l \perp m$ 与 $l \perp n$ 转化为 $l$ 垂直于由 $m',n'$（平移至相交）确定的平面，或直接利用向量共线思想，得到 $l$ 与交线方向一致。  </li>
+<li><strong>验证细节条件</strong>：注意题中附加条件（如 $l \not\subset \alpha, l \not\subset \beta$）是排除重合、确定平行关系的关键，必须仔细核对。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错判 $\alpha \parallel \beta$</strong>：忽略 $m,n$ 异面，错误地认为同时垂直于两异面直线的两平面可以平行。实际上此时两平面必相交。  </li>
+<li><strong>误以为 $l$ 垂直于交线</strong>：看到 $l \perp m$ 和 $l \perp n$，且 $m,n$ 与交线垂直，容易错误联想 $l$ 也与交线垂直，忽略了交线与 $m,n$ 均垂直时，$l$ 与交线同方向。  </li>
+<li><strong>忽略条件 $l \not\subset \alpha, l \not\subset \beta$</strong>：不能直接判定 $l$ 是交线还是与交线平行，必须结合该条件排除 $l$ 就是交线本身。  </li>
+<li><strong>空间想象混乱</strong>：对 $l$ 与 $\alpha,\beta$ 的关系判断失误，不清楚 $l \perp m$ 且 $m \perp \alpha$ 时，$l$ 可能在 $\alpha$ 内，也可能与 $\alpha$ 平行或斜交，需结合 $l \not\subset \alpha$ 和 $l \perp n$ 等综合确定。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2013·理·04）：已知 $m,n$ 为异面直线，$m \perp \alpha$，$n \perp \beta$。直线 $l$ 满足 $l \perp m$，$l \perp n$，$l \not\subset \alpha$，$l \not\subset \beta$，则正确选项是 D：$\alpha$ 与 $\beta$ 相交，且交线平行于 $l$。</p>
+<p><strong>思路</strong>：先由 $m \perp \alpha$，$n \perp \beta$ 及 $m,n$ 异面推导 $\alpha$ 与 $\beta$ 不可能平行，只能相交。设交线为 $a$，利用线面垂直的定义得到 $m \perp a$ 与 $n \perp a$，从而 $a$ 的方向与 $m,n$ 均垂直。再由 $l \perp m$，$l \perp n$ 得 $l$ 的方向也与 $m,n$ 均垂直。在三维空间中，同时与两条不平行直线垂直的直线方向唯一（平移至共面后，垂直于所确定的平面），故 $l$ 与 $a$ 平行或重合。结合 $l \not\subset \alpha, l \not\subset \beta$，排除重合，故 $l \parallel a$。</p>
+<p><strong>步骤</strong><br />
+1. 若 $\alpha \parallel \beta$，由 $m \perp \alpha$，$n \perp \beta$ 可得 $m \parallel n$，与 $m,n$ 异面矛盾，故 $\alpha$ 与 $\beta$ 相交，记交线为 $a$。<br />
+2. 因为 $a \subset \alpha$ 且 $m \perp \alpha$，所以 $m \perp a$；同理 $a \subset \beta$ 且 $n \perp \beta$，所以 $n \perp a$。<br />
+3. 已知 $l \perp m$ 且 $l \perp n$，因此 $l$ 与 $a$ 均同时垂直于 $m$ 和 $n$。<br />
+4. 由于 $m,n$ 是异面直线（不平行），在空间中与两条不平行直线均垂直的直线必然互相平行（或重合）。<br />
+5. 又 $l \not\subset \alpha$ 且 $l \not\subset \beta$，而交线 $a \subset \alpha$ 且 $a \subset \beta$，所以 $l$ 与 $a$ 不重合，只能是 $l \parallel a$。故 $\alpha$ 与 $\beta$ 相交，且交线平行于 $l$，选 D。</p>
+<p><strong>点评/变式</strong><br />
+- <strong>模型验证</strong>：在正方体 $ABCD-A_1B_1C_1D_1$ 中，取 $m=AA_1$，$n=BC$（异面），$\alpha$ 为底面 $ABCD$（$AA_1 \perp$ 底面），$\beta$ 为侧面 $BCC_1B_1$（$BC \perp$ 侧面），取 $l=B_1C_1$，可验证 $l \perp m$（$B_1C_1 \perp AA_1$），$l \perp n$（$B_1C_1 \perp BC$），$l \not\subset \alpha$，$l \not\subset \beta$，此时 $\alpha \cap \beta = BC$，且 $l \parallel BC$，与结论一致。<br />
+- <strong>变式思维</strong>：若去掉 $l \not\subset \alpha, l \not\subset \beta$，则 $l$ 可能与交线重合；若增加条件 $l \subset \alpha$，则 $l$ 将与交线重合且垂直于 $m$，可延伸讨论面面垂直等情形。此类问题核心是把握“同时垂直于两异面直线的直线”与“两平面交线”的方向一致性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-04.html">2013-理-04</a>（2013 · 中） 已知m,n为异面直线且分别垂直平面α,β，直线l同时垂直m,n且不在平面内，推断面面关系及交线与l的关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">异面直线</a></li>
+</ul>
+</div>
+</body>
+</html>

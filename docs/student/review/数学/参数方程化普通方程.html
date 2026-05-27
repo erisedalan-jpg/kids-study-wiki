@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参数方程化普通方程</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>参数方程化普通方程</h1><div class="review-mark" data-stem="参数方程化普通方程"></div><div class="meta-card"><span><strong>考点</strong>参数方程化普通方程</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：3；年份跨度：2015–2020</li>
+<li>出现题位：解答22 解答23</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>参数方程与普通方程</strong><br />
+  参数方程通过引入参数 $t$（或 $\theta$）表示曲线上点的坐标关系，形式为 $\begin{cases} x=f(t) \ y=g(t) \end{cases}$。<br />
+  普通方程为直接联系 $x,y$ 的方程 $F(x,y)=0$。<br />
+  化普通方程的核心是<strong>消去参数</strong>，得到 $x,y$ 的直接关系。</p>
+</li>
+<li>
+<p><strong>常见消参方法</strong>  </p>
+</li>
+<li><strong>代入消参</strong>：由一个方程解出参数代入另一个方程，适用于一次参数或易于显化的情形。  </li>
+<li><strong>三角恒等式消参</strong>：当出现 $\cos\theta,\sin\theta$ 时，利用 $\cos^2\theta+\sin^2\theta=1$ 或 $1+\tan^2\theta=\sec^2\theta$ 等恒等式。  </li>
+<li><strong>代数变形（加减、平方、倒数）</strong>：例如参数以“和”“差”“积”等形式出现，可通过构造对称式或平方差消去参数。  </li>
+<li>
+<p><strong>整体消参</strong>：直接观察参数与 $x,y$ 的关系，通过加减乘除消去参数。</p>
+</li>
+<li>
+<p><strong>必须注意的定义域（范围）</strong><br />
+  消参后普通方程可能扩大了变量的取值范围，必须<strong>根据原参数方程中参数的限制（如 $t \neq 0$、$\theta$ 范围、三角函数有界性等）写出 $x$ 或 $y$ 的允许范围</strong>，确保轨迹等价。  </p>
+</li>
+<li>
+<p><strong>直线参数方程的标准形式</strong><br />
+  过点 $(x_0,y_0)$、倾斜角为 $\alpha$ 的直线：$\begin{cases} x=x_0+t\cos\alpha \ y=y_0+t\sin\alpha \end{cases}$（$t$ 为参数，$|t|$ 表示点到 $(x_0,y_0)$ 的距离）。<br />
+  普通方程为 $y-y_0=\tan\alpha\,(x-x_0)$（当 $\alpha \neq \frac{\pi}{2}$ 时）。<br />
+  参数 $t$ 的几何意义在中点、弦长等问题中有重要应用。</p>
+</li>
+<li>
+<p><strong>曲线参数方程的标准形式举例</strong><br />
+  圆：$\begin{cases} x=a+r\cos\theta \ y=b+r\sin\theta \end{cases}$；<br />
+  椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$：$\begin{cases} x=a\cos\theta \ y=b\sin\theta \end{cases}$；<br />
+  抛物线 $y^2=2px$：$\begin{cases} x=2pt^2 \ y=2pt \end{cases}$。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先定类型，选准消参法</strong>  </li>
+<li>若参数方程含 $\cos\theta,\sin\theta$ 且次数相同或可化为平方和形式，优先用 $\cos^2\theta+\sin^2\theta=1$ 消参。  </li>
+<li>若参数为 $t$ 且出现 $t+\frac{1}{t}$、$t-\frac{1}{t}$ 等形式，考虑平方作差，利用 $(t+\frac{1}{t})^2-(t-\frac{1}{t})^2=4$。  </li>
+<li>
+<p>若一个方程易解出参数（如 $t$ 的一次式），直接代入另一方程。</p>
+</li>
+<li>
+<p><strong>关注变量范围</strong><br />
+   消参后立即检查：  </p>
+</li>
+<li>三角函数型：由 $\sin\theta,\cos\theta$ 的有界性及原方程限制确定 $x,y$ 范围（如 $x=4\cos^2\theta$ 则 $x\in[0,4]$）。  </li>
+<li>
+<p>分式型：如 $t \neq 0$ 导致 $x$ 或 $y$ 不能取某些值。<br />
+   将范围附在普通方程后，写成“$F(x,y)=0$，（$x$ 满足的条件）”。</p>
+</li>
+<li>
+<p><strong>化完之后验等价</strong><br />
+   可将特殊点代回原参数方程检查是否满足。避免因平方、去分母等操作产生增解。</p>
+</li>
+<li>
+<p><strong>结合其他知识求解综合问题</strong><br />
+   参数方程化普通方程是第一步，后续常涉及求交点坐标、弦中点、距离最值等。交点只需联立普通方程；涉及极坐标，先统一化为直角坐标或极坐标再求解。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忽略参数范围直接写普通方程</strong><br />
+  典型错误：曲线 $\begin{cases} x=4\cos^2\theta \ y=4\sin^2\theta \end{cases}$ 化得 $x+y=4$，但忘记 $x,y \in [0,4]$。轨迹只是线段而非整条直线。<br />
+  曲线 $\begin{cases} x=t+\frac{1}{t} \ y=t-\frac{1}{t} \end{cases}$（$t$ 为参数，$t \neq 0$）消参得 $x^2-y^2=4$，但必须注意 $|x|\ge 2$，否则轨迹不是完整双曲线。</p>
+</li>
+<li>
+<p><strong>混淆直线参数方程中 $t$ 的几何意义</strong><br />
+  标准形式 $\begin{cases} x=x_0+t\cos\alpha \ y=y_0+t\sin\alpha \end{cases}$ 才满足 $|t|=$ 点到定点距离；若不是标准形式（如 $t$ 的系数不是倾斜角的余弦正弦，或平方和不为1），则 $t$ 无此几何意义，使用中点 $t_1+t_2=0$ 等结论会出错。</p>
+</li>
+<li>
+<p><strong>消参方法不当导致增解或复杂化</strong><br />
+  使用 $\cos^2\theta=1-\sin^2\theta$ 代入后开平方引起正负号选择，易丢失或增加分支。尽量使用恒等式整体消去参数。</p>
+</li>
+<li>
+<p><strong>极坐标与直角坐标互化时忽略极点或极轴</strong><br />
+  例如把圆心在极轴上的圆直接设为 $x^2+y^2=ax$，再用交点求 $a$，注意极径 $\rho\ge0$、角度范围。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2020全国I文22</h3>
+<p><strong>题目</strong><br />
+已知曲线 $C_1$：$\begin{cases} x=4\cos^2\theta\ y=4\sin^2\theta \end{cases}$（$\theta$ 为参数），$C_2$：$\begin{cases} x=t+\frac{1}{t}\ y=t-\frac{1}{t} \end{cases}$（$t$ 为参数）。<br />
+(1) 化 $C_1,C_2$ 为普通方程；<br />
+(2) 以原点为极点、$x$ 轴正半轴为极轴建极坐标系，$C_1$ 与 $C_2$ 交点为 $P$，求圆心在极轴上且过极点和 $P$ 的圆的极坐标方程。</p>
+<p><strong>思路</strong><br />
+(1) 对于 $C_1$，利用 $\cos^2\theta+\sin^2\theta=1$ 直接相加得 $x+y=4$，同时注意 $x,y$ 范围。对于 $C_2$，观察到 $x,y$ 分别含有 $t+\frac{1}{t}$ 和 $t-\frac{1}{t}$，平方相减可消去 $t$。<br />
+(2) 联立普通方程求出交点 $P$ 直角坐标；设所求圆的直角坐标方程（圆心在极轴即 $x$ 轴上，设为 $(a,0)$，半径为 $|a|$ 因为过极点），代入 $P$ 解 $a$，再化为极坐标方程。</p>
+<p><strong>步骤</strong><br />
+(1) $C_1$：两式相加得 $x+y=4\cos^2\theta+4\sin^2\theta=4$。由 $\cos^2\theta,\sin^2\theta\in[0,1]$ 得 $x\in[0,4],y\in[0,4]$。所以普通方程为 $x+y=4\;(0\le x\le 4)$。<br />
+$C_2$：由 $x=t+\frac{1}{t},\; y=t-\frac{1}{t}$，平方得 $x^2=t^2+2+\frac{1}{t^2}$，$y^2=t^2-2+\frac{1}{t^2}$，相减得 $x^2-y^2=4$。由 $t\neq0$ 及均值不等式，$|x|=|t+\frac{1}{t}|\ge2$，故普通方程为 $x^2-y^2=4\;(|x|\ge2)$。<br />
+(2) 联立 $\begin{cases} x+y=4 \ x^2-y^2=4 \end{cases}$，第二式因式分解 $(x+y)(x-y)=4$，代入 $x+y=4$ 得 $x-y=1$，解得 $x=\frac{5}{2},y=\frac{3}{2}$，即 $P(\frac{5}{2},\frac{3}{2})$。<br />
+设圆心在 $x$ 轴上 $(a,0)$，半径为 $|a|$（过极点 $O$），圆的直角坐标方程为 $(x-a)^2+y^2=a^2$，即 $x^2+y^2-2ax=0$。<br />
+代入 $P$：$\left(\frac{5}{2}\right)^2+\left(\frac{3}{2}\right)^2-2a\cdot\frac{5}{2}=0$ ⇒ $\frac{34}{4}=5a$ ⇒ $a=\frac{17}{10}$。<br />
+圆方程 $x^2+y^2-\frac{17}{5}x=0$，化为极坐标：$\rho^2-\frac{17}{5}\rho\cos\theta=0$ ⇒ $\rho=\frac{17}{5}\cos\theta$（$\rho\neq0$ 时，也包含极点）。</p>
+<p><strong>点评/变式</strong><br />
+消参时“平方差”是处理 $t\pm\frac{1}{t}$ 类型的关键。交点通过普通方程联立可避开参数。综合阶段注意极坐标与直角坐标的互化，并利用圆心在极轴这一条件简化圆的方程形式。<br />
+变式：若 $C_2$ 参数改为 $\begin{cases} x=t-\frac{1}{t}\ y=t+\frac{1}{t} \end{cases}$，则轨迹为 $y^2-x^2=4$，需变通处理。</p>
+<h3>2. 2018全国I理22</h3>
+<p><strong>题目</strong><br />
+在直角坐标系 $xOy$ 中，曲线 $C$ 的参数方程为 $\begin{cases} x=2\cos\theta\ y=4\sin\theta \end{cases}$（$\theta$ 为参数），直线 $l$ 的参数方程为 $\begin{cases} x=1+t\cos\alpha\ y=2+t\sin\alpha \end{cases}$（$t$ 为参数）。<br />
+(1) 求 $C$ 和 $l$ 的直角坐标方程；<br />
+(2) 若曲线 $C$ 截直线 $l$ 所得线段的中点坐标为 $(1,2)$，求 $l$ 的斜率。</p>
+<p><strong>思路</strong><br />
+(1) 曲线 $C$ 是椭圆，利用 $\cos^2\theta+\sin^2\theta=1$ 消参；直线 $l$ 直接写成点斜式或保留参数，但(1)问求直角坐标方程，即写出 $x\sin\alpha-y\cos\alpha+2\cos\alpha-\sin\alpha=0$。<br />
+(2) 中点条件可用直线参数方程中 $t$ 的几何意义：设与椭圆交点对应的参数 $t_1,t_2$，中点对应 $t_1+t_2=0$。将直线参数方程代入椭圆普通方程，利用韦达定理求出 $\tan\alpha$。</p>
+<p><strong>步骤</strong><br />
+(1) 曲线 $C$：由 $x=2\cos\theta,y=4\sin\theta$，得 $\frac{x}{2}=\cos\theta,\frac{y}{4}=\sin\theta$，平方相加得 $\frac{x^2}{4}+\frac{y^2}{16}=1$，即 $4x^2+y^2=16$。<br />
+直线 $l$：消去 $t$，由 $\begin{cases} x-1=t\cos\alpha\ y-2=t\sin\alpha \end{cases}$，当 $\cos\alpha\neq0$ 时，相除得 $\frac{y-2}{x-1}=\tan\alpha$，化为 $y-2=\tan\alpha(x-1)$；统一形式为 $x\sin\alpha-y\cos\alpha+2\cos\alpha-\sin\alpha=0$（包含 $\alpha=\frac{\pi}{2}$ 情形）。<br />
+(2) 将 $l$ 的参数方程代入椭圆 $4x^2+y^2=16$：<br />
+$4(1+t\cos\alpha)^2+(2+t\sin\alpha)^2=16$，<br />
+展开整理：$4(1+2t\cos\alpha+t^2\cos^2\alpha)+(4+4t\sin\alpha+t^2\sin^2\alpha)=16$<br />
+⇒ $4+8t\cos\alpha+4t^2\cos^2\alpha+4+4t\sin\alpha+t^2\sin^2\alpha=16$<br />
+⇒ $(4\cos^2\alpha+\sin^2\alpha)t^2+(8\cos\alpha+4\sin\alpha)t-8=0$。<br />
+设交点对应 $t_1,t_2$，中点 $(1,2)$ 对应 $t=0$（点 $(1,2)$ 本身对应 $t=0$ 满足直线方程）。中点弦中点公式 $t_1+t_2=0$。<br />
+由韦达定理，$t_1+t_2=-\frac{8\cos\alpha+4\sin\alpha}{4\cos^2\alpha+\sin^2\alpha}=0$ ⇒ $8\cos\alpha+4\sin\alpha=0$ ⇒ $2\cos\alpha+\sin\alpha=0$ ⇒ $\tan\alpha=-2$。<br />
+故 $l$ 的斜率为 $-2$。</p>
+<p><strong>点评/变式</strong><br />
+本题体现了直线参数方程中 $t$ 的几何意义的典型应用：中点条件转化为 $t_1+t_2=0$。注意直线参数方程必须是标准形式（系数平方和为 $\cos^2\alpha+\sin^2\alpha=1$）才能确保 $t$ 的几何意义正确。<br />
+变式：若直线参数方程为 $\begin{cases} x=1+2t\ y=2+t \end{cases}$，则不是标准形，需先化为标准形或化为普通方程再用其他方法。</p>
+<h3>3. 2015全国I文23</h3>
+<p><strong>题目</strong><br />
+直角坐标系 $xOy$ 中，曲线 $C_1$：$\begin{cases} x=t\cos\alpha\ y=t\sin\alpha \end{cases}$（$t$ 为参数，$t\neq0$），其中 $0\le\alpha\le\pi$。在以 $O$ 为极点、$x$ 轴正半轴为极轴的极坐标系中，$C_2:\rho=2\sin\theta$，$C_3:\rho=2\sqrt{3}\cos\theta$。<br />
+(1) 求 $C_2$ 与 $C_3$ 交点的直角坐标；<br />
+(2) 若 $C_1$ 与 $C_2$、$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-22.html">2020-文-22</a>（2020 · 中） 题目考查参数方程与普通方程互化、直角坐标与极坐标互化及圆的方程求解。</li>
+<li><a href="../../exam/数学/2018-理-22.html">2018-理-22</a>（2018 · 中） 参数方程与直角坐标方程互化，结合中点坐标求直线斜率。</li>
+<li><a href="../../exam/数学/2015-文-23.html">2015-文-23</a>（2015 · 中） 本题主要考查极坐标方程与直角坐标方程的互化、参数方程与普通方程的转化，以及利用极坐标求曲线交点与距离最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">参数方程化普通方程</a></li>
+</ul>
+</div>
+</body>
+</html>

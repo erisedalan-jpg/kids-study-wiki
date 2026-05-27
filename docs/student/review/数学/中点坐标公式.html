@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中点坐标公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>中点坐标公式</h1><div class="review-mark" data-stem="中点坐标公式"></div><div class="meta-card"><span><strong>考点</strong>中点坐标公式</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：11</li>
+<li>真题数：4；年份跨度：2013–2024</li>
+<li>出现题位：解答22 解答23 选择5</li>
+<li>难度分布：易1 中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>中点坐标公式</strong>：若 $P_1(x_1,y_1)$，$P_2(x_2,y_2)$，则线段 $P_1P_2$ 的中点 $M(x,y)$ 满足
+  $$x=\frac{x_1+x_2}{2},\quad y=\frac{y_1+y_2}{2}.$$</li>
+<li><strong>相关点法（代入法）</strong>：当动点 $M$ 由已知曲线上的动点 $P$（或 $P,Q$）通过确定关系（如中点）生成时，用 $M$ 的坐标表示 $P$ 的坐标，代入已知曲线方程即得 $M$ 的轨迹方程。</li>
+<li><strong>参数方程中的中点</strong>：若曲线 $C$ 的参数方程为 $\begin{cases} x=f(t) \ y=g(t) \end{cases}$，其上两点对应的参数分别为 $t_1,t_2$，则其中点坐标为 $\big(\frac{f(t_1)+f(t_2)}{2},\frac{g(t_1)+g(t_2)}{2}\big)$。</li>
+<li><strong>弦中点问题</strong>：直线与二次曲线相交，弦的中点坐标同时满足直线方程和由韦达定理（或点差法）得到的中点关系。若已知中点坐标求斜率，可设直线参数方程，利用参数 $t$ 的几何意义：中点对应 $t_1+t_2=0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>已知曲线和生成关系求轨迹</strong>  </li>
+<li>设所求动点坐标为 $(x,y)$，关联已知曲线上的动点坐标为 $(x_0,y_0)$。  </li>
+<li>由中点关系或其他几何条件写出 $\begin{cases} x=x(x_0,y_0) \ y=y(x_0,y_0) \end{cases}$，反解出 $x_0=\dots,\;y_0=\dots$。  </li>
+<li>
+<p>代入已知曲线方程化简，注意题目给定的范围限制（如 $y&gt;0$、角度范围等），写出轨迹方程和必要的限制。</p>
+</li>
+<li>
+<p><strong>给出弦中点坐标求直线斜率</strong>（2018 理 22 型）  </p>
+</li>
+<li>方法一：设直线参数方程 $\begin{cases} x=x_0+t\cos\theta \ y=y_0+t\sin\theta \end{cases}$（$t$ 为参数），代入曲线方程得关于 $t$ 的二次方程。中点对应的参数 $t_1+t_2=0$，解出 $\theta$ 或斜率。  </li>
+<li>
+<p>方法二：利用韦达定理，设直线方程 $y-y_0=k(x-x_0)$ 与曲线联立，由中点坐标关系 $\frac{x_1+x_2}{2}=x_0$ 得到 $x_1+x_2$，再结合韦达定理解出 $k$（需判别式检验）。</p>
+</li>
+<li>
+<p><strong>参数形式下的中点轨迹</strong>（2013 文 23 型）  </p>
+</li>
+<li>直接由参数方程写出两动点坐标，应用中点公式得到轨迹的参数方程。  </li>
+<li>若需消参转化为普通方程，可用三角恒等式等手段；若需判断是否过定点，将特殊参数值代入坐标验证。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视变量取值范围</strong>：轨迹方程化简后，原题中隐含的范围（如 $y&gt;0$、参数 $\alpha\in(0,2\pi)$）必须继承，遗漏会导致轨迹多出一部分而丢分。</li>
+<li><strong>中点代入时坐标代反</strong>：相关点法中，将 $M$ 的坐标作为中点表示 $P$ 的坐标时，易误写成 $P(x,y)$。要注意明确谁是动点谁是相关点，如 2024 题中 $M$ 是 $PP'$ 中点，则 $P$ 的纵坐标是 $M$ 纵坐标的 2 倍。</li>
+<li><strong>参数方程消参致范围错误</strong>：消参过程若忽略参数范围，普通方程可能表示整个圆或椭圆，而实际轨迹只是其中一部分。</li>
+<li><strong>弦中点问题斜率存在性</strong>：设 $y=k(x-x_0)+y_0$ 时需考虑斜率不存在的情况，必要时分情况讨论或使用直线参数方程规避。</li>
+<li><strong>计算疏忽</strong>：中点公式的系数 $\frac{1}{2}$ 容易漏乘或错乘，代入方程时忘记平方或系数处理不当，尤其是分母含有 4 等数时要细心。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong> （2024·新课标Ⅱ·05）</h3>
+<p><strong>题目</strong>：已知曲线 $C: x^2+y^2=16\;(y&gt;0)$，从 $C$ 上任一点 $P$ 向 $x$ 轴作垂线段 $PP'$，$P'$ 为垂足，求线段 $PP'$ 的中点 $M$ 的轨迹方程。<br />
+<strong>思路</strong>：用相关点法。设 $M(x,y)$，则 $P'$ 为 $(x,0)$，由中点关系得 $P(x,2y)$。又 $P$ 在已知半圆上，代入满足 $y&gt;0$，即得轨迹。<br />
+<strong>步骤</strong>：<br />
+设 $M(x,y)$，则 $P'(x,0)$，由 $M$ 为 $PP'$ 中点，得 $P$ 坐标为 $(x,2y)$。<br />
+因为 $P$ 在曲线 $C$ 上，故 $x^2+(2y)^2=16$ 且 $2y&gt;0$（即 $y&gt;0$）。<br />
+化简得 $\frac{x^2}{16}+\frac{y^2}{4}=1\;(y&gt;0)$.<br />
+故选 A。<br />
+<strong>点评/变式</strong>：注意 $P$ 的纵坐标是 $M$ 纵坐标的 2 倍，而非一半。变式：若 $M$ 是 $OP$ 中点（$O$ 为原点），则 $P(2x,2y)$，代入得轨迹为 $\frac{x^2}{4}+\frac{y^2}{4}=1\;(y&gt;0)$，即圆的一部分。范围条件是这类题的易错点。</p>
+<h3><strong>题目2</strong> （2018·理·22）</h3>
+<p><strong>题目</strong>：直角坐标系 $xOy$ 中，曲线 $C:\frac{x^2}{4}+y^2=1$，直线 $l$ 参数方程为 $\begin{cases} x=2+t\cos\alpha\ y=4+t\sin\alpha \end{cases}$（$t$ 为参数）。若 $C$ 截 $l$ 所得线段中点坐标为 $(1,2)$，求 $l$ 的斜率。<br />
+<strong>思路</strong>：利用直线参数方程中 $t$ 的几何意义，或普通方程联立韦达定理。中点对应参数和为零，由此解出 $\tan\alpha$。<br />
+<strong>步骤</strong>：<br />
+将 $l$ 代入 $C$：$(2+t\cos\alpha)^2/4+(4+t\sin\alpha)^2=1$。<br />
+整理得关于 $t$ 的二次方程：$(\frac{\cos^2\alpha}{4}+\sin^2\alpha)t^2 + (\cos\alpha+8\sin\alpha)t + 8=0$。<br />
+设弦端点对应参数 $t_1,t_2$，中点对应参数 $\frac{t_1+t_2}{2}$，中点坐标 $(1,2)$ 对应点恰为 $t=0$ 时 $l$ 上的点？需验证：当 $x=1$ 时，$2+t\cos\alpha=1$ 得 $t=-\frac{1}{\cos\alpha}$；当 $y=2$ 时，$4+t\sin\alpha=2$ 得 $t=-\frac{2}{\sin\alpha}$，因是同一点，应有 $-\frac{1}{\cos\alpha}=-\frac{2}{\sin\alpha}$，得 $\tan\alpha=2$。但题目中给中点不是对应的 $t=0$ 的点，正确做法是利用中点几何性质：中点 $(1,2)$ 是弦的中点，所以 $t_1+t_2=0$。先写出直线普通方程：消去 $t$，得 $y-4=\tan\alpha\,(x-2)$，即 $y=kx-2k+4$，（其中 $k=\tan\alpha$）。与椭圆联立：$\frac{x^2}{4}+(kx-2k+4)^2=1$。利用韦达定理，中点横坐标 $\frac{x_1+x_2}{2}=1$，所以 $x_1+x_2=2$。联立方程化为 $(1+4k^2)x^2+8k(4-2k)x+4(4-2k)^2-4=0$，则 $x_1+x_2=-\frac{8k(4-2k)}{1+4k^2}=2$，解出 $k$ 即可。计算得 $k=2$ 时满足。<br />
+（注意到中点 $(1,2)$ 恰好在直线 $l$ 上吗？验证：$x=1,y=2$ 代入 $y=k(x-2)+4$，得 $2=k(1-2)+4\Rightarrow -k= -2\Rightarrow k=2$。实际上，因为弦中点必在直线上，所以将中点代入直线方程直接得到 $2=k(1-2)+4 \Rightarrow k=2$。这是最快解法！）<br />
+<strong>点评/变式</strong>：弦中点问题，若中点坐标已知且直线过某定点，可直接将中点代入直线的一般方程或点斜式，得出斜率。但需确认中点确实在该直线上，这在任何弦中点问题中都成立。注意直线斜率不存在的情况若不满足中点条件则弃之。</p>
+<h3><strong>题目3</strong> （2013·文·23）</h3>
+<p><strong>题目</strong>：动点 $P,Q$ 都在曲线 $C:\begin{cases} x=2\cos\beta\ y=2\sin\beta \end{cases}$（$\beta$ 为参数）上，对应参数分别为 $\beta=\alpha$ 与 $\beta=2\alpha$（$0&lt;\alpha&lt;2\pi$），$M$ 为 $PQ$ 的中点。<br />
+(1) 求 $M$ 的轨迹的参数方程；<br />
+(2) 将 $M$ 到原点的距离 $d$ 表示为 $\alpha$ 的函数，并判断 $M$ 的轨迹是否过原点。<br />
+<strong>思路</strong>：直接由参数写出 $P,Q$ 坐标，利用中点公式得 $M$ 的参数方程；再利用距离公式和三角恒等式求 $d$，令 $d=0$ 看是否有解。<br />
+<strong>步骤</strong>：<br />
+(1) 依题得 $P(2\cos\alpha,2\sin\alpha)$，$Q(2\cos2\alpha,2\sin2\alpha)$，<br />
+则 $M$ 坐标：<br />
+$$x=\frac{2\cos\alpha+2\cos2\alpha}{2}= \cos\alpha+\cos2\alpha,$$
+$$y=\frac{2\sin\alpha+2\sin2\alpha}{2}= \sin\alpha+\sin2\alpha,$$
+所以 $M$ 的轨迹参数方程为 $\begin{cases} x=\cos\alpha+\cos2\alpha \ y=\sin\alpha+\sin2\alpha \end{cases}$（$0&lt;\alpha&lt;2\pi$，参数 $\alpha$）。<br />
+(2) 距离 $d=\sqrt{x^2+y^2}=\sqrt{(\cos\alpha+\cos2\alpha)^2+(\sin\alpha+\sin2\alpha)^2}$.<br />
+展开得 $=\sqrt{\cos^2\alpha+\sin^2\alpha + \cos^2 2\alpha+\sin^2 2\alpha +2(\cos\alpha\cos2\alpha+\sin\alpha\sin2\alpha)}$<br />
+$=\sqrt{2+2\cos(\alpha-2\alpha)}=\sqrt{2+2\cos\alpha}=\sqrt{4\cos^2\frac{\alpha}{2}}=2|\cos\frac{\alpha}{2}|$.<br />
+当 $\alpha=\pi$ 时，$d=2|\cos\frac{\pi}{2}|=0$，此时 $M$ 坐标为 $(0,0)$，故轨迹过原点。<br />
+<strong>点评/变式</strong>：此类参数方程的中点轨迹问题，直接应用中点公式得到参数方程是基础。求距离时注意三角恒等式的灵活运用（和差化积、倍角公式）。判断是否过定点，代入特殊参数值检验即可，无须消参。变式：若求 $M$ 轨迹的普通方程，可继续三角变换：$x=2\cos\frac{3\alpha}{2}\cos\frac{\alpha}{2},\; y=2\sin\frac{3\alpha}{2}\cos\frac{\alpha}{2}$，消去参数较复杂，考场上通常只要求参数方程或距离最值。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-05.html">2024-新课标Ⅱ-05</a>（2024 · 易） 求圆上动点相关中点的轨迹方程，利用中点公式转移代入得出椭圆方程。</li>
+<li><a href="../../exam/数学/2018-理-22.html">2018-理-22</a>（2018 · 中） 参数方程与直角坐标方程互化，结合中点坐标求直线斜率。</li>
+<li><a href="../../exam/数学/2013-文-23.html">2013-文-23</a>（2013 · 中） 已知动点P、Q在参数曲线上，求中点M的轨迹参数方程，并将距离d表示为α的函数，判断轨迹是否过原点。</li>
+<li><a href="../../exam/数学/2013-理-23.html">2013-理-23</a>（2013 · 中） 本题通过参数方程给出两点，求其中点轨迹的参数方程，并判断轨迹是否过原点。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/635-中点坐标公式.html">中点坐标公式</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数值大小比较</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数值大小比较</h1><div class="review-mark" data-stem="对数值大小比较"></div><div class="meta-card"><span><strong>考点</strong>对数值大小比较</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：10</li>
+<li>真题数：3；年份跨度：2008–2013</li>
+<li>出现题位：选择4 选择7 选择8</li>
+<li>难度分布：易3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>对数函数的单调性</strong><br />
+  对于 $y=\log_a x \,(a&gt;0,a\neq 1)$：当 $a&gt;1$ 时，在 $(0,+\infty)$ 上单调递增；当 $0&lt;a&lt;1$ 时，在 $(0,+\infty)$ 上单调递减。比较同底对数可直接利用单调性。</p>
+</li>
+<li>
+<p><strong>对数恒等式与变形</strong><br />
+  $\log_a(xy)=\log_a x + \log_a y$，$\log_a \dfrac{x}{y}=\log_a x - \log_a y$，$\log_a b^n = n\log_a b$，$\log_a b = \dfrac{\log_c b}{\log_c a}$（换底公式）。通过变形可将不同底的对数转化为同底或建立与特殊值的关系。</p>
+</li>
+<li>
+<p><strong>特殊中间值 $0$ 与 $1$</strong><br />
+  $\log_a 1 = 0$；$\log_a a = 1$。任何底大于 $1$ 时，真数大于 $1$ 则对数大于 $0$，真数小于 $1$ 则对数小于 $0$；底在 $(0,1)$ 时相反。比较不同底对数时，常借助 $0$ 和 $1$ 进行分界。</p>
+</li>
+<li>
+<p><strong>作差/作商比较法</strong><br />
+  对于同号的对数值，可作差与 $0$ 比较，或作商与 $1$ 比较，结合因式符号或单调性得出结论。</p>
+</li>
+<li>
+<p><strong>指数与对数互化</strong><br />
+  $a = \log_b c \iff b^a = c$，必要时可将对数式转化为指数式，借助指数函数的性质比较大小。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>比较对数值大小的通用步骤：</p>
+<ol>
+<li>
+<p><strong>观察底数与真数，判断能否直接利用单调性</strong><br />
+   若底数相同，直接由单调性比较真数大小；若真数相同，可由换底公式 $\log_a x = \dfrac{1}{\log_x a}$ 转化为比较倒数，再利用单调性；若底数和真数均不同，进入下一步。</p>
+</li>
+<li>
+<p><strong>借助 $0$ 或 $1$ 进行划分</strong><br />
+   确定各对数值与 $0$、$1$ 的大小关系，将多个对数分成大于 $1$、$(0,1)$、小于 $0$ 等区间，往往可以快速排出顺序。例如 $\log_a b &gt; 1 \iff (a&gt;1\text{ 且 }b&gt;a)$ 或 $(0&lt;a&lt;1\text{ 且 }0&lt;b&lt;a)$。</p>
+</li>
+<li>
+<p><strong>化为同底或同真数</strong><br />
+   通过换底公式或对数运算法则，将式子变形成底数（或真数）相同的形式，再利用单调性或作差、作商比较。</p>
+</li>
+<li>
+<p><strong>作差或作商及因式分析</strong><br />
+   若仍难直接判断，对两个对数作差（或作商），利用对数性质合并，结合已知变量的范围判断正负。</p>
+</li>
+<li>
+<p><strong>遇变量真数时注意定义域和符号</strong><br />
+   真数中含有变量 $x$ 时，必须先确定其取值范围（保证对数有意义），再比较同底对数或通过作差判断大小。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忽视底数对单调性的影响</strong><br />
+  只记住“增函数”而忘记讨论 $0&lt;a&lt;1$ 时的减函数情形，导致大小反向。</p>
+</li>
+<li>
+<p><strong>误用中间值 $1$ 的判断条件</strong><br />
+  容易记错：$\log_a b &gt; 1$ 不一定等价于 $b&gt;1$，必须结合底数 $a$ 与 $1$ 的大小关系共同判断。</p>
+</li>
+<li>
+<p><strong>换底公式使用不当</strong><br />
+  换底后忽略底数变化导致的单调性反转，如 $\log_a b = \dfrac{1}{\log_b a}$，比较 $\log_3 2$ 与 $\log_5 2$ 时不能直接比较 $2$ 的大小。</p>
+</li>
+<li>
+<p><strong>忽略真数的限制条件</strong><br />
+  含有变量的对数比较时，忘记先求定义域，导致错误。如 $x\in(e^{-1},1)$ 时未判断 $\ln x$ 的符号就盲目作差。</p>
+</li>
+<li>
+<p><strong>作差时符号判断失误</strong><br />
+  提取公因式后，未结合变量范围确定每一部分的符号，导致大小结论错误。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2013-理-08</h3>
+<p><strong>题目</strong><br />
+设 $a=\log_3 6$，$b=\log_5 10$，$c=\log_7 14$，比较 $a,b,c$ 的大小。</p>
+<p><strong>思路</strong><br />
+三个对数的底数和真数均不同，但真数都是底数的两倍，可分离出 $\log_a 2$ 的形式：<br />
+$a=1+\log_3 2$，$b=1+\log_5 2$，$c=1+\log_7 2$。<br />
+只需比较 $\log_3 2,\log_5 2,\log_7 2$。它们真数相同、底数不同，利用换底公式 $\log_x 2 = \dfrac{1}{\log_2 x}$，由 $\log_2 x$ 的单调性可知 $\log_2 7 &gt; \log_2 5 &gt; \log_2 3 &gt; 0$，从而 $\log_3 2 &gt; \log_5 2 &gt; \log_7 2$。</p>
+<p><strong>步骤</strong>
+1. 化简：$a=\log_3(3\times2)=1+\log_3 2$，$b=1+\log_5 2$，$c=1+\log_7 2$。
+2. 因为 $y=\log_2 x$ 在 $(0,+\infty)$ 上单调递增，所以 $\log_2 7 &gt; \log_2 5 &gt; \log_2 3$。
+3. 取倒数得 $\dfrac{1}{\log_2 3} &gt; \dfrac{1}{\log_2 5} &gt; \dfrac{1}{\log_2 7}$，即 $\log_3 2 &gt; \log_5 2 &gt; \log_7 2$。
+4. 各加 $1$ 可得 $a &gt; b &gt; c$。</p>
+<p><strong>点评/变式</strong><br />
+该题核心是“连环同真数”结构的识别。变式：比较 $\log_2 3$、$\log_3 4$、$\log_4 5$ 等，可考虑与 $1$ 的差或换底后作商。</p>
+<h3>2. 2009-理-07</h3>
+<p><strong>题目</strong><br />
+设 $a=\log_3 \pi$，$b=\log_2 \sqrt{3}$，$c=\log_3 \sqrt{2}$，比较 $a,b,c$ 的大小。</p>
+<p><strong>思路</strong><br />
+$a$ 的底和真数均大于 $1$，可先与 $1$ 比较；$b$ 和 $c$ 真数为根式，可化为 $\frac12 \log_2 3$ 和 $\frac12 \log_3 2$。通过分界点 $1$ 和中间值 $\frac12$ 划分区间即可排序。</p>
+<p><strong>步骤</strong>
+1. $a=\log_3 \pi$，因为 $\pi &gt; 3$，所以 $a &gt; 1$。
+2. $b=\log_2 \sqrt{3} = \frac12 \log_2 3$，由于 $\log_2 3 &gt; \log_2 2 = 1$，故 $b &gt; \frac12$；且 $\log_2 3 &lt; \log_2 4 = 2$，所以 $b &lt; 1$，即 $b \in (0.5, 1)$。
+3. $c=\log_3 \sqrt{2} = \frac12 \log_3 2$，因为 $\log_3 2 &lt; \log_3 3 = 1$，故 $c &lt; \frac12$。
+4. 综上 $a &gt; 1 &gt; b &gt; \frac12 &gt; c$，即 $a &gt; b &gt; c$。</p>
+<p><strong>点评/变式</strong><br />
+用 $1$ 和 $\frac12$ 双重中间值巧妙分段。若出现底数不确定的情况（如 $a \in (0,1)$），需反向讨论，切不可直接套用此题结论。</p>
+<h3>3. 2008-理-04</h3>
+<p><strong>题目</strong><br />
+若 $x \in (e^{-1}, 1)$，$a = \ln x$，$b = 2\ln x$，$c = \ln^3 x$，比较 $a,b,c$ 的大小。</p>
+<p><strong>思路</strong><br />
+先确定 $a$ 的范围，再作差比较 $b$ 与 $a$、$c$ 与 $a$ 的关系，利用因式分解和符号判断。</p>
+<p><strong>步骤</strong>
+1. 当 $x \in (e^{-1}, 1)$ 时，$\ln x$ 单调递增，所以 $a = \ln x \in (-1, 0)$。
+2. $b - a = 2\ln x - \ln x = \ln x = a &lt; 0$，因此 $b &lt; a$。
+3. $a - c = \ln x - \ln^3 x = \ln x(1 - \ln^2 x) = a (1 - a^2)$。<br />
+   由 $a \in (-1,0)$ 得 $a &lt; 0$，$a^2 \in (0,1)$，因此 $1-a^2 &gt; 0$，于是 $a(1-a^2) &lt; 0$，即 $a &lt; c$。
+4. 结合得 $b &lt; a &lt; c$。</p>
+<p><strong>点评/变式</strong><br />
+解决含变量的对数比较问题时，“先定范围后作差”是基本策略。该题陷阱在于 $b$ 和 $c$ 看似接近，实则需要精细判断。变式：若 $x \in (1, e)$，$a,b,c$ 的大小关系将变为 $c &lt; a &lt; b$，建议自行验证，强化对符号区间的敏感度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-理-08.html">2013-理-08</a>（2013 · 易） 通过将a、b、c化为1+logₙ2形式，利用对数函数单调性比较大小。</li>
+<li><a href="../../exam/数学/2009-理-07.html">2009-理-07</a>（2009 · 易） 比较对数式大小，利用单调性及中介值。</li>
+<li><a href="../../exam/数学/2008-理-04.html">2008-理-04</a>（2008 · 易） 考查对数函数在特定区间内的单调性及利用比较法判断对数值大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1162-对数值大小比较.html">对数值大小比较</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>向量法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>向量法</h1><div class="review-mark" data-stem="向量法"></div><div class="meta-card"><span><strong>考点</strong>向量法</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面向量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面向量</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>向量法基本思想</strong>：将几何问题转化为向量运算，通过建立坐标系，用坐标表示点和向量，借助数量积和模长等工具求解。</li>
+<li><strong>空间直角坐标系</strong>：利用题目中线面垂直关系，选择恰当原点建立右手系，尽量使关键点落在坐标轴上或坐标平面内。</li>
+<li><strong>空间向量坐标</strong>：两点 $A(x_1,y_1,z_1)$，$B(x_2,y_2,z_2)$，则 $\overrightarrow{AB}=(x_2-x_1,y_2-y_1,z_2-z_1)$。</li>
+<li><strong>异面直线所成角的向量求法</strong>：设方向向量为 $\vec{a},\vec{b}$，则所成角 $\theta\in\left(0,\frac{\pi}{2}\right]$ 满足<br />
+  $$\cos\theta=\frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}.$$<br />
+  注意 <strong>必须加绝对值</strong>，确保取锐角或直角。</li>
+<li><strong>向量模长与数量积</strong>：若 $\vec{a}=(x_1,y_1,z_1)$，$\vec{b}=(x_2,y_2,z_2)$，则<br />
+  $$|\vec{a}|=\sqrt{x_1^2+y_1^2+z_1^2},\quad \vec{a}\cdot\vec{b}=x_1x_2+y_1y_2+z_1z_2.$$</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>建系</strong>：分析几何体特征，寻找三条两两垂直的直线作为 $x,y,z$ 轴，写出原点坐标。常见的有共点的三条棱互相垂直的长方体、墙角模型等。</li>
+<li><strong>标点</strong>：根据几何体已知边长，准确写出各点坐标（注意 $z$ 轴方向及坐标正负）。</li>
+<li><strong>取向量</strong>：用终点减起点求出目标直线的方向向量（异面直线上各取一个以直线上点为起终点的向量即可）。</li>
+<li><strong>代公式</strong>：将两方向向量代入 $\cos\theta=\frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}$，先算数量积和模长，再求余弦值。</li>
+<li><strong>得结果</strong>：化简得出余弦值（通常会是常数或有理化形式），对照选项或直接作答。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>建系不恰当</strong>：未找到真正的三垂直关系，导致点坐标难以表示；或建系后未标明正方向，坐标符号写反。</li>
+<li><strong>向量坐标计算失误</strong>：终点减起点顺序颠倒但未注意符号一致，或在 $z$ 坐标上漏掉高度参数。</li>
+<li><strong>忽略绝对值</strong>：直接用 $\cos\theta=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$ 可能得到负值，而异面直线所成角为锐角或直角，余弦值非负。缺少绝对值是典型失分点。</li>
+<li><strong>混淆向量</strong>：例如将 $\overrightarrow{D_1A}$ 与 $\overrightarrow{AD_1}$ 搞混，向量方向相反但不影响绝对值，但坐标计算不同，易算错一个符号导致数量积错误。</li>
+<li><strong>模长开方运算</strong>：求模长时忘记平方和开方，或约分时错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2018·理·09）在长方体 $ABCD - A_1B_1C_1D_1$ 中，$AB = BC = 1$，$AA_1 = \sqrt{3}$，则异面直线 $AD_1$ 与 $DB_1$ 所成角的余弦值为（ ）  </p>
+<p><strong>思路</strong><br />
+长方体存在共点的三垂直棱，以 $D$ 为原点建立空间直角坐标系，写出 $A,D_1,D,B_1$ 的坐标，得到 $\overrightarrow{AD_1}$ 与 $\overrightarrow{DB_1}$，代入异面直线夹角公式即可。</p>
+<p><strong>步骤</strong><br />
+1. 以 $D$ 为原点，$\overrightarrow{DA}$ 为 $x$ 轴正方向，$\overrightarrow{DC}$ 为 $y$ 轴正方向，$\overrightarrow{DD_1}$ 为 $z$ 轴正方向建立坐标系。<br />
+2. 由题意得：$A(1,0,0)$，$D_1(0,0,\sqrt{3})$，$D(0,0,0)$，$B_1(1,1,\sqrt{3})$。<br />
+3. 取方向向量：<br />
+   $$\overrightarrow{AD_1} = D_1 - A = (-1, 0, \sqrt{3}),$$<br />
+   $$\overrightarrow{DB_1} = B_1 - D = (1, 1, \sqrt{3}).$$<br />
+4. 计算数量积与模长：<br />
+   $$\overrightarrow{AD_1}\cdot\overrightarrow{DB_1} = (-1)\times1 + 0\times1 + \sqrt{3}\times\sqrt{3} = 2,$$<br />
+   $$|\overrightarrow{AD_1}| = \sqrt{(-1)^2+0^2+(\sqrt{3})^2} = 2,$$<br />
+   $$|\overrightarrow{DB_1}| = \sqrt{1^2+1^2+(\sqrt{3})^2} = \sqrt{5}.$$<br />
+5. 设异面直线所成角为 $\theta$，则<br />
+   $$\cos\theta = \frac{|\overrightarrow{AD_1}\cdot\overrightarrow{DB_1}|}{|\overrightarrow{AD_1}||\overrightarrow{DB_1}|} = \frac{2}{2 \times \sqrt{5}} = \frac{\sqrt{5}}{5}.$$<br />
+故答案为 $\frac{\sqrt{5}}{5}$，对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+- 本题直接用向量法避免了异面直线平移作辅助线的麻烦，思路清晰，计算简便。<br />
+- <strong>变式</strong>：若将条件改为求 $AD_1$ 与平面 $DBB_1$ 所成角的正弦值，则可先求平面法向量，再用线面角公式 $\sin\theta=\frac{|\vec{a}\cdot\vec{n}|}{|\vec{a}||\vec{n}|}$ 求解；或求二面角时注意法向量方向与夹角的关系。这些均体现了向量法在空间角问题中的通用性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-09.html">2018-理-09</a>（2018 · 中） 长方体中以向量法求异面直线AD1与DB1所成角的余弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">向量法</a></li>
+</ul>
+</div>
+</body>
+</html>

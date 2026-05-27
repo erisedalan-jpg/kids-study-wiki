@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>利用导数研究曲线上某点切线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>利用导数研究曲线上某点切线</h1><div class="review-mark" data-stem="利用导数研究曲线上某点切线"></div><div class="meta-card"><span><strong>考点</strong>利用导数研究曲线上某点切线</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答21</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>导数的几何意义：函数 $y=f(x)$ 在点 $(x_0,f(x_0))$ 处的导数 $f'(x_0)$，就是曲线在该点处切线的斜率 $k$。</li>
+<li>切线方程的求法：曲线过点 $(x_0,f(x_0))$ 的切线方程为
+  $$y - f(x_0) = f'(x_0)(x - x_0)$$
+  若点不在曲线上，则需设切点，利用斜率相等和点在线上消元求解。</li>
+<li>切线与坐标轴的交点：令 $x=0$ 或 $y=0$ 代入切线方程即可求得截距与交点横坐标。</li>
+<li>函数交点与方程根的关系：曲线 $y=f(x)$ 与直线 $y=kx+b$ 的交点 $\iff$ 方程 $f(x)-kx-b=0$ 的实根，可借助导数研究构造函数的单调性、极值、零点存在性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求参数 $a$ 时，紧扣切点三要素</strong>  </li>
+<li>切点坐标满足原函数；  </li>
+<li>切点处导数值为切线斜率；  </li>
+<li>切线方程通过切点，并利用题设额外几何条件（如与 $x$ 轴交点横坐标为 $-2$）建立等式。</li>
+<li><strong>证明交点唯一性的通法</strong>  </li>
+<li>构造函数 $g(x)=f(x)- (kx-2)$，将交点问题转化为 $g(x)$ 的零点个数问题。  </li>
+<li>求导 $g'(x)$，分析其符号或二次导数，确定单调区间与极值。  </li>
+<li>当极值最值与零的大小关系明确时，结合零点存在定理（若 $g(x_1)\cdot g(x_2)&lt;0$ 且单调则唯一）得出结论。  </li>
+<li>若极值处恰好为零，需单独讨论它们相切的情形。</li>
+<li><strong>切线与函数图像相切时，注意利用“公切”条件</strong>  </li>
+<li>两曲线在公共点处函数值相等且导数值相等，可联立方程组求解参数或判别情况。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>不区分“在某点处的切线”与“过某点的切线”</strong>：前者点必为切点，后者点未必是切点，需另设切点后求解。</li>
+<li><strong>导数计算粗心</strong>：多项式求导注意系数，如 $f(x)=x^3-3x^2+ax+2$，导数为 $3x^2-6x+a$，易漏掉常数项导数为零。</li>
+<li><strong>漏掉切点既在曲线上又在切线上</strong>：在利用交点横坐标建立方程时，必须先正确写出切线方程，再将条件代入。</li>
+<li><strong>证明零点唯一时，只说明了单调性未说明两端值异号</strong>：单调解存在性时必须补充端点函数值或极限符号，否则不给分。</li>
+<li><strong>忽视参数讨论</strong>：如 $k&lt;1$ 时需结合 $k$ 的范围讨论 $g(x)$ 的最小值符号，误以为固定某个 $k$ 值可得对所有 $k&lt;1$ 成立。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $f(x)=x^3-3x^2+ax+2$，曲线在 $(0,2)$ 处的切线与 $x$ 轴交点的横坐标为 $-2$。（Ⅰ）求 $a$；（Ⅱ）证明：当 $k&lt;1$ 时，曲线 $y=f(x)$ 与直线 $y=kx-2$ 只有一个交点。</p>
+<p><strong>思路</strong>：<br />
+（Ⅰ）求导得切线斜率，写出切线方程，代入交点横坐标解 $a$。<br />
+（Ⅱ）令 $g(x)=f(x)-kx+2$，则问题转化为证 $g(x)$ 零点唯一。求导，利用 $a$ 的值化简 $g'(x)$，分析单调性与极值，结合 $k&lt;1$ 证明极小值大于零或由单调性直接得零点唯一。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）$f'(x)=3x^2-6x+a$，$f'(0)=a$，切线方程为 $y-2=a(x-0)$，即 $y=ax+2$。令 $y=0$，得 $x=-\frac{2}{a}$。由题设 $-\frac{2}{a}=-2 \implies a=1$。<br />
+（Ⅱ）由（Ⅰ）$f(x)=x^3-3x^2+x+2$。构造 $g(x)=f(x)-(kx-2)=x^3-3x^2+(1-k)x+4$。$g'(x)=3x^2-6x+1-k$，其判别式 $\Delta=36-12(1-k)=24+12k$。<br />
+当 $k&lt;1$ 时，$\Delta&gt;0$，$g'(x)=0$ 有两实根 $x_1,x_2\ (x_1<x_2)$。计算极小值：$x_2= \frac{6+\sqrt{\Delta}}{6}>0$，$g(x_2)$ 是极小值。<br />
+通过恒等变形：由 $g'(x_2)=0$ 得 $1-k=-3x_2^2+6x_2$，代入 $g(x_2)$ 得<br />
+$$g(x_2)=x_2^3-3x_2^2+(-3x_2^2+6x_2)x_2+4 = -2x_2^3+3x_2^2+4.$$
+令 $h(x)=-2x^3+3x^2+4$，$h'(x)=-6x^2+6x=-6x(x-1)$，在 $(0,1)$ 递增，在 $(1,+\infty)$ 递减。又 $h(0)=4$，$h(1)=5$，故 $h(x)&gt;0$ 对 $x&gt;0$ 恒成立。而 $x_2&gt;0$，所以极小值 $g(x_2)&gt;0$，从而 $g(x)$ 无零点。但需注意，若 $g(-\infty)\to -\infty$，$g(+\infty)\to +\infty$，且 $g(x)$ 在 $\mathbb{R}$ 上先增后减再增，极小值 $&gt;0$，则 $g(x)$ 仅有一个零点，实际图像与 $x$ 轴仅有一个交点。故原两曲线仅有一个交点。</p>
+<p><strong>点评/变式</strong>：<br />
+此题切线部分为基础送分点，务必保证求导出错率为零。第（Ⅱ）问表面证交点唯一，实则考查利用导数研究三次函数零点，其中“极小值恒正”是核心。变式训练可尝试：若 $k$ 变为 $k&gt;1$，或改为证明曲线与直线有两个交点时 $k$ 的范围。掌握通过极值与零的关系讨论零点个数的方法，是解决这类问题的万能钥匙。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-21.html">2014-文-21</a>（2014 · 中） 本题通过切线条件求参数并利用导数分析函数单调性，证明曲线与直线交点唯一。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">利用导数研究曲线上某点切线</a></li>
+</ul>
+</div>
+</body>
+</html>

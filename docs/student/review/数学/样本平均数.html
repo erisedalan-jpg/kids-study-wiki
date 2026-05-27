@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>样本平均数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>样本平均数</h1><div class="review-mark" data-stem="样本平均数"></div><div class="meta-card"><span><strong>考点</strong>样本平均数</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：21</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>样本平均数(样本均值)定义</strong>：对于一组样本数据 $x_1, x_2, \cdots, x_n$，其样本平均数 
+  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
+  它是总体均值的最小方差无偏估计，反映样本数据的集中趋势。</p>
+</li>
+<li>
+<p><strong>加权平均数</strong>：若数据 $x_i$ 出现频数为 $f_i$，则 $\bar{x} = \frac{\sum x_i f_i}{\sum f_i}$。在实际计算中，当已知总和时可直接用总量除以个数。</p>
+</li>
+<li>
+<p><strong>线性变换性质</strong>：若 $y_i = kx_i$（$k$ 为常数），则 $\bar{y} = k\bar{x}$。该性质是解决“由样本均值推算总体总量”类问题的核心依据。</p>
+</li>
+<li>
+<p><strong>样本平均数与估计</strong>：在简单随机抽样下，样本平均数可作为总体平均数的估计值；当已知总体规模 $N$ 时，总体总量的估计量 $\hat{T} = N \cdot \bar{x}$。</p>
+</li>
+<li>
+<p><strong>区分两组概念</strong>：</p>
+</li>
+<li>$\bar{x}$（样本平均数）vs $\mu$（总体平均数）</li>
+<li>样本总和 $\sum x_i = n\bar{x}$，直接用于质量检查与后续计算</li>
+<li>样本平均数是计算样本方差、相关系数等后续统计量的基础中间量</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接公式法</strong><br />
+   当已知所有样本数据时，直接求和除以样本容量。若题目已给出总和，则直接用总和计算，避免逐项累加出错。</p>
+</li>
+<li>
+<p><strong>对称结构与补全法</strong><br />
+   若数据呈现某种重复或对称，可先统计频数再加权求和，减少计算量。</p>
+</li>
+<li>
+<p><strong>“总和–平均数”互推套路</strong><br />
+   题型特征：给出样本平均数，求样本总和；或给出样本总和，求平均数。<br />
+   核心关系：$\sum x_i = n\bar{x}$。这一步往往是相关系数计算、回归分析等大题的第一步。</p>
+</li>
+<li>
+<p><strong>比例估计与总量推算套路</strong><br />
+   适用场景：由样本平均数推断总体总量，且总体规模已知或可测。<br />
+   步骤：</p>
+</li>
+<li>计算样本平均数 $\bar{x}$</li>
+<li>确定总体单位数 $N$</li>
+<li>
+<p>估计总体总量 $\hat{T} = N \bar{x}$<br />
+   当存在线性关系 $y = kx$ 时，先估计系数 $k = \bar{y} / \bar{x}$，再代入总体自变量总量求目标总量。</p>
+</li>
+<li>
+<p><strong>利用样本平均数简化复杂公式代入</strong><br />
+   在相关系数 $r$、回归系数等公式中，需要 $\bar{x}, \bar{y}$。正确求出平均数是后续计算正确的前提。一般先列出 $\bar{x}, \bar{y}$ 的值，再代入。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>总量与平均数的混淆</strong>：题目给出的是“总和”还是“平均数”需仔细辨别。本题中表格给出每棵树的横截面积与材积量，最后一行“总和”是直接给出的，可直接用总和求平均，勿再累加一遍。</p>
+</li>
+<li>
+<p><strong>单位与量纲错误</strong>：根部横截面积单位为 $\text{m}^2$，材积量为 $\text{m}^3$，平均数带有相同单位。答题时必须写明单位，否则失分。</p>
+</li>
+<li>
+<p><strong>计算精度丢失</strong>：求平均数时若除不尽，应根据题意保留适当小数位数，或先以分数形式保留，在后续乘法运算中再统一近似，避免累积误差。本题第(1)问计算简单，第(3)问利用比例推算时要保持精度一致。</p>
+</li>
+<li>
+<p><strong>误用总体平均数与样本平均数</strong>：已知总体根部横截面积总和为 $186\text{m}^2$，并非所有树的横截面积平均，需结合样本信息估计材积量。不能直接套用样本材积量平均数乘以树的总数，而必须先确定两者比例关系。</p>
+</li>
+<li>
+<p><strong>忽略等比关系的条件验证</strong>：题目明确“材积量与其根部横截面积近似成正比”，这是使用比例估计的前提。若条件不成立则不能直接使用，需改用回归等其他方法。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022 全国甲卷文科第19题）</h3>
+<p>为估计林区某种树木的总材积量，随机选取10棵，测量根部横截面积 $x_i$ 与材积量 $y_i$，数据如表。已知 $\sum x_i=0.6$，$\sum y_i=3.9$。<br />
+（1）估计平均一棵树的根部横截面积与平均材积量；<br />
+（2）求根部横截面积与材积量的样本相关系数（精确到0.01）；<br />
+（3）已知该林区所有树木根部横截面积总和为 $186\text{m}^2$，树木材积量与其根部横截面积近似成正比，利用数据给出总材积量的估计值。</p>
+<h3><strong>思路</strong></h3>
+<p>（1）直接使用样本平均数公式 $\bar{x}=\frac{1}{n}\sum x_i$，$\bar{y}=\frac{1}{n}\sum y_i$，已知总和，直接除以10即可。<br />
+（3）利用第（1）问求出的 $\bar{x}$ 与 $\bar{y}$，确定比例系数 $\hat{k}=\bar{y}/\bar{x}$，再用总体根部横截面积总和 $S_x = 186$ 乘以该系数，即得总材积量估计 $\hat{T}_y = \hat{k} \cdot S_x$。注意此处利用的是“成正比”条件，而非直接使用 $\bar{y}$ 乘以树木总数。</p>
+<h3><strong>步骤</strong></h3>
+<p><strong>第（1）问</strong><br />
+样本容量 $n=10$，由题意总和已给出：<br />
+$\sum x_i = 0.6$，$\sum y_i = 3.9$。<br />
+平均根部横截面积<br />
+$$\bar{x} = \frac{0.6}{10} = 0.06 \; (\text{m}^2)$$<br />
+平均材积量<br />
+$$\bar{y} = \frac{3.9}{10} = 0.39 \; (\text{m}^3)$$</p>
+<p><strong>第（3）问</strong><br />
+由“材积量 $y$ 与根部横截面积 $x$ 近似成正比”，设 $y = kx$。<br />
+利用样本平均数估计比例系数：<br />
+$$\hat{k} = \frac{\bar{y}}{\bar{x}} = \frac{0.39}{0.06} = 6.5$$<br />
+已知林区所有树木根部横截面积总和为 $186\text{m}^2$，因此总材积量估计值为<br />
+$$\hat{T}_y = \hat{k} \times 186 = 6.5 \times 186 = 1209 \; (\text{m}^3)$$  </p>
+<h3><strong>点评与变式</strong></h3>
+<p>本题以样本平均数为起点，贯穿了统计估计的基本逻辑链：样本均值→比例系数→总体总量估计。第（1）问虽简单，却是全题的基础；一旦求错，后续分数全丢。<br />
+<strong>变式1</strong>：若没有直接给出总和，而只给原始数据表，则需先计算 $\sum x_i$ 和 $\sum y_i$ 再求平均。<br />
+<strong>变式2</strong>：若不成正比而是线性关系 $y = a + bx$，则需先用最小二乘法求回归系数，再用总体横截面积均值或总和进行预测，此时不能简单用比例。<br />
+<strong>警示</strong>：第（3）问易错点为直接用平均材积量乘以树木棵数，但树木棵数未知，必须借助“成正比”这一关键条件，通过根部横截面积总量转换。这说明在应用题中挖掘隐含比例关系是解题的突破口。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-19.html">2022-文-19</a>（2022 · 中） 林业抽样估计某林区树木总体材积，结合样本均值、相关系数与线性回归方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/055-平均数.html">样本平均数</a></li>
+</ul>
+</div>
+</body>
+</html>

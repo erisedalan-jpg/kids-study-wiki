@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线过定点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线过定点</h1><div class="review-mark" data-stem="直线过定点"></div><div class="meta-card"><span><strong>考点</strong>直线过定点</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定点问题的本质</strong>：含参直线系在参数变化时恒过某固定点。在解析几何中，常通过求出直线方程（显式或隐式），代入定点坐标检验等式是否与参数无关；或将直线方程化为 $f(x,y) + \lambda g(x,y) = 0$ 的形式，令 $f(x,y)=0$ 且 $g(x,y)=0$ 解出定点。</li>
+<li><strong>相关定义与定理</strong>：</li>
+<li><strong>轨迹方程的求法</strong>：设动点 $(x,y)$，建立与已知曲线上动点坐标的关系，代入已知曲线方程消去参数，注意等价变形与范围限制。</li>
+<li><strong>向量数量积的坐标表示</strong>：若 $\vec{a}=(x_1,y_1),\vec{b}=(x_2,y_2)$，则 $\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。</li>
+<li><strong>两直线垂直的充要条件</strong>：斜率均存在时，$k_1k_2=-1$；若一直线斜率为 $0$，则另一直线斜率不存在。</li>
+<li><strong>椭圆标准方程</strong>：$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1(a&gt;b&gt;0)$，焦点 $(\pm c,0)$ 满足 $c^2=a^2-b^2$（本题椭圆 $C:\frac{x^2}{2}+y^2=1$，左焦点 $F(-1,0)$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>轨迹问题步骤化</strong>：</li>
+<li>设主动点坐标 $M(x_0,y_0)$，从动点坐标 $P(x,y)$；</li>
+<li>利用几何或向量关系建立 $(x,y)$ 与 $(x_0,y_0)$ 的等式；</li>
+<li>用 $x,y$ 表示 $x_0,y_0$，代入主动点满足的曲线方程；</li>
+<li>化简并注明 $x,y$ 的限制条件。</li>
+<li><strong>证明直线过定点的主要路径</strong>：</li>
+<li><strong>直求法</strong>：将条件等式变形，直接解出定点坐标。</li>
+<li><strong>反代验证法</strong>：猜测定点（常由特殊位置得到），写出直线方程后将定点坐标代入，利用已知条件验证等式恒成立。这是高考中最高效的方式。</li>
+<li><strong>直线系法</strong>：整理直线方程为 $A(x,y) + \lambda B(x,y)=0$，解方程组 $\begin{cases} A=0 \ B=0 \end{cases}$ 得定点。</li>
+<li><strong>垂直条件的转化</strong>：</li>
+<li>斜率形式：$k_1k_2=-1$（需分斜率存在与不存在讨论）；</li>
+<li>向量形式：方向向量的数量积为零，如 $\vec{v}<em OQ="OQ">l \cdot \vec{v}</em>=0$，可避免斜率讨论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>轨迹方程范围遗漏</strong>：由向量关系或垂足等几何条件产生的隐含限制（如 $x$ 的取值范围）被忽略，导致扣分。若题目无特殊说明且变形可逆，则整条曲线为轨迹。</li>
+<li><strong>向量点积条件误用</strong>：$\overrightarrow{OP}\cdot\overrightarrow{PQ}$ 与 $\overrightarrow{OP}\cdot\overrightarrow{OQ}$ 混淆，未注意向量起终点坐标，导致方程错误。</li>
+<li><strong>斜率存在性漏讨论</strong>：用 $k_1k_2=-1$ 处理垂直时，未单独讨论斜率为 $0$ 或不存在的情形，导致证明不严谨。</li>
+<li><strong>定点代入后的化简误区</strong>：将定点代入直线方程后，不能有效利用已知等式进行化简，导致无法得出恒成立的结论；或者在推导过程中丢失 $t=0$ 等特殊情况的验证。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017·全国Ⅰ文20）<br />
+设 $O$ 为原点，动点 $M$ 在椭圆 $C:\frac{x^2}{2}+y^2=1$ 上，过 $M$ 作 $x$ 轴的垂线，垂足为 $N$，点 $P$ 满足 $\overrightarrow{NP}=\sqrt{2}\overrightarrow{NM}$。<br />
+（1）求点 $P$ 的轨迹方程；<br />
+（2）点 $Q$ 在直线 $x=-3$ 上，且 $\overrightarrow{OP}\cdot\overrightarrow{PQ}=1$，证明：过点 $P$ 且垂直于 $OQ$ 的直线 $l$ 过 $C$ 的左焦点 $F$。</p>
+<p><strong>思路</strong><br />
+（1）利用向量关系建立 $P(x,y)$ 与 $M(x_0,y_0)$ 的坐标联系，用 $x,y$ 表示 $x_0,y_0$，代入椭圆方程即得轨迹。<br />
+（2）设出 $P(m,n)$ 和 $Q(-3,t)$，由点积条件建立 $m,n,t$ 的关系式；写出直线 $l$ 的方程（注意斜率讨论），将左焦点 $F(-1,0)$ 代入，验证等式在条件关系下恒成立。</p>
+<p><strong>步骤</strong><br />
+（1）设 $M(x_0,y_0)$，则 $N(x_0,0)$。设 $P(x,y)$，由 $\overrightarrow{NP}=\sqrt{2}\overrightarrow{NM}$ 得<br />
+$$(x-x_0,\;y-0)=\sqrt{2}(x_0-x_0,\;y_0-0)=(0,\;\sqrt{2}y_0)$$
+故 $x=x_0$，$y=\sqrt{2}y_0$。<br />
+$M$ 在椭圆上：$\frac{x_0^2}{2}+y_0^2=1$。代入得
+$$\frac{x^2}{2}+\left(\frac{y}{\sqrt{2}}\right)^2=1 \quad\Rightarrow\quad \frac{x^2}{2}+\frac{y^2}{2}=1$$
+即 $x^2+y^2=2$。所以点 $P$ 的轨迹方程为 $x^2+y^2=2$。</p>
+<p>（2）由（1）可设 $P(m,n)$，则 $m^2+n^2=2$。设 $Q(-3,t)$。<br />
+$\overrightarrow{OP}=(m,n)$，$\overrightarrow{PQ}=(-3-m,\;t-n)$，由 $\overrightarrow{OP}\cdot\overrightarrow{PQ}=1$ 得<br />
+$$m(-3-m)+n(t-n)=1 \;\Rightarrow\; -3m-m^2+nt-n^2=1$$
+将 $m^2+n^2=2$ 代入，整理得 $nt=3+3m$，即
+$$nt=3(m+1)\quad\quad(<em>)$$
+直线 $OQ$ 的方向向量为 $(-3,t)$。当 $t\neq0$ 时，$k_{OQ}=-\dfrac{t}{3}$，则垂线 $l$ 的斜率 $k_l=\dfrac{3}{t}$。<br />
+$l$ 的方程：$y-n=\dfrac{3}{t}(x-m)$。<br />
+要证 $l$ 过左焦点 $F(-1,0)$，将 $(-1,0)$ 代入：
+$$0-n=\frac{3}{t}(-1-m) \;\Rightarrow\; -nt=-3(m+1) \;\Rightarrow\; nt=3(m+1)$$
+此即为条件 $(</em>)$，等式恒成立。<br />
+当 $t=0$ 时，$Q(-3,0)$，$OQ$ 为 $x$ 轴，垂直于 $OQ$ 的直线 $l$ 必垂直于 $x$ 轴，又过 $P(m,n)$，其方程为 $x=m$。此时由 $(*)$ 得 $0=3(m+1)$，故 $m=-1$，即 $l:x=-1$，恰好过 $F(-1,0)$。<br />
+综上，过点 $P$ 且垂直于 $OQ$ 的直线 $l$ 恒过左焦点 $F(-1,0)$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题证明直线过定点的核心技巧是“先猜后证”：根据对称性或特殊位置（如取 $P$ 为某特殊点）感知定点为左焦点，然后采用代点验证的思路将证明转化为代数恒等变形，大幅降低思维量。<br />
+- 斜率分类讨论是垂直证明中的必要环节，利用方向向量点积为零（如 $\vec{v}_l \cdot \vec{OQ}=0$）可避免讨论，值得在同类题中尝试。<br />
+- 变式思考：若将条件 $\overrightarrow{OP}\cdot\overrightarrow{PQ}=1$ 改为其他常数或与 $P$ 的坐标相关的形式，能否仍然过定点？可练习将本题条件一般化，探究定点与椭圆几何性质的联系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-20.html">2017-文-20</a>（2017 · 中） 已知椭圆上动点及向量关系，求动点轨迹方程，并利用向量垂直证明相关直线过左焦点。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直线过定点</a></li>
+</ul>
+</div>
+</body>
+</html>

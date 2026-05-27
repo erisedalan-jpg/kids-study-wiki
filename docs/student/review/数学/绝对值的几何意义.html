@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>绝对值的几何意义</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>绝对值的几何意义</h1><div class="review-mark" data-stem="绝对值的几何意义"></div><div class="meta-card"><span><strong>考点</strong>绝对值的几何意义</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>绝对值的代数定义</strong><br />
+  $|x| = \begin{cases} 
+  x, &amp; x \ge 0 \ 
+  -x, &amp; x &lt; 0 
+  \end{cases}$</p>
+</li>
+<li>
+<p><strong>绝对值的几何意义</strong><br />
+  $|x-a|$ 表示数轴上动点 $x$ 到定点 $a$ 的距离；<br />
+  $|x+a|$ 即 $|x-(-a)|$，表示 $x$ 到 $-a$ 的距离。</p>
+</li>
+<li>
+<p><strong>简单绝对值不等式的几何解</strong><br />
+  设 $c&gt;0$：<br />
+  $|x-a|&lt;c \Leftrightarrow a-c &lt; x &lt; a+c$（到 $a$ 的距离小于 $c$）；<br />
+  $|x-a|&gt;c \Leftrightarrow x<a-c \text{ 或 } x>a+c$（到 $a$ 的距离大于 $c$）。</p>
+</li>
+<li>
+<p><strong>绝对值之和的几何意义（核心）</strong><br />
+  $f(x)=|x-a|+|x-b|$ 表示 $x$ 到 $a$ 与 $b$ 两点的距离之和。  </p>
+</li>
+<li>当 $x$ 位于 $a$ 与 $b$ 之间时，$f(x)$ 最小，最小值为 $|a-b|$；  </li>
+<li>
+<p>当 $x$ 在 $[a,b]$（或 $[b,a]$）之外时，$f(x) &gt; |a-b|$，且越远离区间，值越大，值域为 $[\,|a-b|,\; +\infty)$。<br />
+  等价命题：$|x-a|+|x-b| \ge |a-b|$（绝对值三角不等式，等号当 $(x-a)(x-b)\le0$ 时成立）。</p>
+</li>
+<li>
+<p><strong>含参绝对值不等式的常见转化</strong><br />
+  形如 $|x+a|+|x+b| \ge m$ 或 $\le m$ 的问题，若要求恒成立，可转化为最值问题：<br />
+  恒成立 $\Leftrightarrow$ $\min{|x+a|+|x+b|} \ge m$ （或 $\max \le m$），再利用几何意义求出最值，解参数不等式。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>零点分段法（通法）</strong>  </li>
+<li>令每个绝对值内部表达式为零，求出全部零点；  </li>
+<li>将零点标在数轴上，划分若干区间；  </li>
+<li>在每个区间内确定绝对值内式子的符号，去绝对值化为一次不等式（组），求解；  </li>
+<li>
+<p>将各区间的解集按题目要求取并集或交集。<br />
+   适用情形：求含绝对值不等式的解集，尤其当参数不确定或结构较复杂时。</p>
+</li>
+<li>
+<p><strong>几何意义法（巧法）</strong>  </p>
+</li>
+<li>识别题中含绝对值之和（或差）的结构，将其翻译为“数轴上动点到定点的距离之和”；  </li>
+<li>画出定点，结合距离之和的最小值（或最大值）与不等号方向，直接得到关于 $x$ 或参数的条件；  </li>
+<li>
+<p>特别地，对于 $|x+a|+|x+b| \ge c$ 恒成立问题，直接由最小值 $|a-b| \ge c$ 解出参数范围（注意定点是 $-a,\,-b$）；若为有解问题，则需考虑值域与 $c$ 的关系。</p>
+</li>
+<li>
+<p><strong>利用绝对值三角不等式进行放缩</strong>  </p>
+</li>
+<li>$||a|-|b|| \le |a \pm b| \le |a|+|b|$，等号成立条件需明确；  </li>
+<li>
+<p>用于过渡或直接求最值，避免分段讨论。</p>
+</li>
+<li>
+<p><strong>函数观点处理</strong><br />
+   将 $f(x)=k-|x+a|-|x-2|$ 视为分段线性函数，画出图象，利用图象的折点与截距分析不等式解集或恒成立条件。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>几何意义中的定点错位</strong><br />
+  $|x+a|$ 常被误认为到 $a$ 的距离，正确应为到 $-a$ 的距离。例如 $|x+1|+|x-2|$ 表示到 $-1$ 与 $2$ 的距离之和，最小值是 $|(-1)-2| = 3$。</p>
+</li>
+<li>
+<p><strong>“恒成立”与“有解”的混淆</strong>  </p>
+</li>
+<li>$f(x) \le 1$ 恒成立 $\Rightarrow$ $\max f(x) \le 1$；  </li>
+<li>
+<p>$f(x) \le 1$ 有解 $\Rightarrow$ $\min f(x) \le 1$。<br />
+  许多同学在参数范围问题中误用最值方向，导致结果相反。审题时务必圈出“恒成立”“存在”“解集为非空”等关键词。</p>
+</li>
+<li>
+<p><strong>零点分段时端点处理不当</strong><br />
+  求出零点后，区间开闭应与等号结合验证，尤其在最终合并解集时，端点是否包含常造成失分。建议将每个区间求出的解与该区间的限制条件取交集后再取并。</p>
+</li>
+<li>
+<p><strong>直接使用几何意义而不讨论动点位置</strong><br />
+  对于 $|x+a|+|x-2| \ge 4$，直接用最小值 $|a+2| \ge 4$ 得出参数范围，这只适用于恒成立。若是求 $x$ 的解集，需进一步讨论 $x$ 在定点两侧的具体区间表达式，不能一蹴而就。</p>
+</li>
+<li>
+<p><strong>忽视一次项系数不为 1 的情况</strong><br />
+  如 $|2x+1|$ 需先化为 $2|x+\frac{1}{2}|$，否则几何意义对应距离被缩放，最值计算出错。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2018 全国卷·理 23）<br />
+设函数 $f(x)=5-|x+a|-|x-2|$．<br />
+（1）当 $a=1$ 时，求不等式 $f(x)</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-理-23.html">2018-理-23</a>（2018 · 中） 考查含一个或两个绝对值不等式的求解集及利用绝对值几何意义求参数取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">绝对值的几何意义</a></li>
+</ul>
+</div>
+</body>
+</html>

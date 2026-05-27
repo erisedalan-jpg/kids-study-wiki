@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切割线定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>切割线定理</h1><div class="review-mark" data-stem="切割线定理"></div><div class="meta-card"><span><strong>考点</strong>切割线定理</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：7</li>
+<li>真题数：2；年份跨度：2013–2014</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>切割线定理</strong>：从圆外一点引圆的切线和割线，切线长是这点到割线与圆交点的两条线段长的比例中项。如图，若 $PA$ 为 $\odot O$ 的切线，$A$ 为切点，$PBC$ 为割线，则 $PA^2 = PB \cdot PC$。</li>
+<li><strong>弦切角定理</strong>：弦切角等于它所夹的弧所对的圆周角。如上图中，$PA$ 为切线，则 $\angle PAB = \angle C$。</li>
+<li><strong>四点共圆的判定与性质</strong>：若四边形对角互补或一个外角等于其内对角，则四点共圆；四点共圆的性质包括同弧上的圆周角相等，外角等于内对角等。</li>
+<li><strong>与圆有关的比例线段</strong>：在圆中，除切割线定理外，还涉及相交弦定理、割线定理等，它们共属于圆幂定理体系，用于建立线段间的等量或比例关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别切线与割线，建立基础比例</strong>：题干中若出现圆的切线与过同一点的割线，立即联想切割线定理，写出 $切线长^2 = P点到近交点距离 \times P点到远交点距离$ 的等式。</li>
+<li><strong>利用弦切角转化角度条件</strong>：遇到切线时，将“弦切角”等同于其“所夹弧对的圆周角”，这是将圆外角与圆内角建立联系的关键桥梁，常用于构造相似三角形。</li>
+<li><strong>挖掘比例与乘积条件</strong>：对形如 $a \cdot b = c \cdot d$ 的条件，常化为比例式 $\frac{a}{c} = \frac{d}{b}$，由此探寻含对应角所在三角形可能存在的相似关系。</li>
+<li><strong>借助四点共圆进行角度传递</strong>：题目中若给出或可证得四点共圆，利用其性质在同图中灵活地将某个角代换为另一位置的等角，为证明垂直、平行或相似铺路。</li>
+<li><strong>面积比转化为线段比</strong>：涉及圆的面积比时，直接归结为两圆半径之比或直径之比的平方。求出关键的直径或半径并计算其平方比即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>写错切割线定理的对应关系</strong>：混淆等式中的三条线段，正确关系是“切线长”对应割线上从点 $P$ 出发的两段“全长”与“外段”，即 $PT^2 = PA \cdot PB$，其中 $A$ 是离 $P$ 较近的交点。</li>
+<li><strong>弦切角的找法错误</strong>：误认为弦切角等于切线上任意角，弦切角特指切点处切线与过切点的弦所夹的角，它等于该弦所对的圆周角。容易找错弦或所夹的弧。</li>
+<li><strong>忽略四点共圆需先证明</strong>：在使用四点共圆性质解题前，若题干未明确给出“四点共圆”，必须先判定，再由判定转入性质使用。常因跳步直接使用性质而失分。</li>
+<li><strong>面积比值计算不全</strong>：求圆面积比只求到半径比或直径比就停止，必须写出“面积比等于半径比的平方”一步，避免遗漏平方导致结果错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2013 年理科第 22 题，已知 $CD$ 为 $\triangle ABC$ 外接圆的切线，$D$ 在 $AB$ 的延长线上，且 $BC \cdot AE = DC \cdot AF$，$B, E, F, C$ 四点共圆。
+（1）证明：$CA$ 是 $\triangle ABC$ 外接圆的直径；
+（2）若 $DB = BE = EA$，求过 $B, E, F, C$ 四点的圆与 $\triangle ABC$ 外接圆面积的比值。</p>
+<p><strong>思路</strong>：
+（1）证直径即证 $CA$ 所对圆周角为 $90^\circ$。利用弦切角、乘积式证相似、四点共圆性质传递角，最终推出 $\angle CFA = 90^\circ$。
+（2）以 $DB = a$ 为基准，利用几何条件逐步推算出两圆直径 $CE$ 和 $CA$ 的表达式，最终求面积比即求 $(CE:CA)^2$。</p>
+<p><strong>步骤</strong>：
+（1）证明：
+1. $CD$ 为切线，由弦切角定理得 $\angle DCB = \angle A$。
+2. 将条件 $BC \cdot AE = DC \cdot AF$ 化为比例 $\frac{BC}{DC} = \frac{AF}{AE}$，结合 $\angle DCB = \angle A$，即证得 $\triangle DCB \sim \triangle AFE$（两边对应成比例且夹角相等）。
+3. 由相似得对应角 $\angle DBC = \angle AFE$。
+4. 由 $B, E, F, C$ 四点共圆知 $\angle DBC = \angle CFE$（外角等于内对角）。
+5. 故 $\angle AFE = \angle CFE = 90^\circ$ （在 $A, F, C$ 共线上），即 $CA \perp AB$，因此弦 $CA$ 所对的圆周角为直角，$CA$ 是外接圆的直径。</p>
+<p>（2）求解：
+1. 设 $DB = BE = EA = a$，则 $DA = 3a$。由切割线定理 $DC^2 = DB \cdot DA = a \cdot 3a = 3a^2$。
+2. 在 $Rt \triangle ABC$ 中，由 $CA$ 为直径得 $\angle B = 90^\circ$。又 $AB = 2a$，$BC$ 可由射影定理或勾股定理求得：$BC^2 = DB \cdot BA = a \cdot 2a = 2a^2$，$CA^2 = BC^2 + BA^2 = 2a^2 + 4a^2 = 6a^2$。
+3. 对 $B, E, F, C$ 四点圆，由条件知 $DB=BE$，可证 $C, E, D$ 共圆等，推出该圆直径 $CE = DC = \sqrt{3}a$。则 $CE^2 = 3a^2$。
+4. 面积比 $S_{\text{小圆}} : S_{\triangle ABC\text{外接圆}} = CE^2 : CA^2 = 3a^2 : 6a^2 = 1:2$。</p>
+<p><strong>点评/变式</strong>：
+该题综合了弦切角、相似判定、四点共圆、切割线定理及直角三角形的度量关系，环环相扣。<strong>第(1)问的关键在于利用弦切角和比例式推出相似，进而将两个看似无关的角 $\angle DBC$ 与 $\angle AFE$ 建立联系，再由共圆传递角证得直角</strong>。若将条件改为“$E, F$ 为空间中动点”，则圆的相关定理将失效，题目就会转向空间位置关系，这提醒我们要紧扣“共圆”“切线”这些平面几何专属条件。</p>
+<hr />
+<p><strong>题目</strong>：2014 年文科第 22 题，如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交。
+（注：原题无具体小问及解析，按典型考法推演）</p>
+<p><strong>思路</strong>：
+经典“切线+割线”背景，第一组关系必为切割线定理。若求线段 $PC$ 或证明某比例，核心都是围绕 $PA^2 = PB \cdot PC$ 展开计算或构造等式。</p>
+<p><strong>步骤</strong>：
+设 $PA, PB, BC$ 已知长度，求 $PC$：
+1. 由切割线定理直接得 $PA^2 = PB \cdot PC$。
+2. 将已知数代入求解 $PC$。若求 $BC$，则需 $PC = PB + BC$，代入等式解方程。</p>
+<p><strong>点评/变式</strong>：
+这是切割线定理最直接的应用，属于“看到割线、切线，先写切割线等式”的条件反射训练。<strong>注意线段表述：定理中等式右边用的是从 $P$ 出发到两交点的全长 $PC$ 和部分长 $PB$</strong>，变式常将其与相交弦定理混合，需要先证共圆再切换定理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-22.html">2014-文-22</a>（2014 · 中） 根据切线及割线关系求线段长度或角度，考查切割线定理的应用。</li>
+<li><a href="../../exam/数学/2013-理-22.html">2013-理-22</a>（2013 · 中） 该题考查圆的切线性质、相似三角形判定及四点共圆，需证明直径并求两圆面积比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/700-切割线定理.html">切割线定理</a></li>
+</ul>
+</div>
+</body>
+</html>

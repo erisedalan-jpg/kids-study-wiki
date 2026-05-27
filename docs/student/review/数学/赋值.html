@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>赋值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>赋值</h1><div class="review-mark" data-stem="赋值"></div><div class="meta-card"><span><strong>考点</strong>赋值</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择7</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>赋值</strong>是算法中的基本操作，用“$=$”表示，意义是将右边表达式的值计算后赋给左边的变量，如 $S = S + M$ 表示把当前 $S$ 与 $M$ 的和作为 $S$ 的新值。</li>
+<li>在程序框图中，赋值操作发生在处理框（矩形框）内，每执行一次赋值，变量的旧值被新值覆盖，后续运算均使用最新值。</li>
+<li><strong>累加变量</strong>通常初始化为 $0$，累乘变量初始化为 $1$，并按照循环结构在每次迭代中更新：$S = S + a_k$ 或 $M = M \cdot q$ 等形式。</li>
+<li>赋值过程中的变量更新必须严格按框图从上到下、从左到右的顺序模拟，同一轮循环中各赋值语句的先后顺序直接影响最终结果。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明初始</strong>：列出程序开始前所有输入变量及赋初值的变量的初始值，如 $x=2, t=2, M=1, S=3, k=1$。</li>
+<li><strong>判条件</strong>：检查进入循环的条件（如 $k \le t$），若满足则进入循环体，否则直接输出结果。</li>
+<li><strong>逐句执行</strong>：按循环体内语句顺序依次更新变量值，建议列表演示每个变量在每步的变化。</li>
+<li><strong>记更新</strong>：每次循环结束后，循环变量必须按框图指示自增（如 $k = k+1$），再回到判断条件。</li>
+<li><strong>定终值</strong>：当循环条件不再满足时，输出的变量值即为所求结果。</li>
+<li>对于嵌套循环或条件分支，同样按“深度优先”方式逐层模拟，防止跳步。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“$=$”的数学意义与赋值意义</strong>：$S = S + M$ 在数学上不成立，但作为赋值语句合法，理解错误会导致模拟卡死。</li>
+<li><strong>初始值记错</strong>：如累加变量只看框图初始框，不要遗漏已给的初值（本题 $S$ 初值为 $3$，而非 $0$）。</li>
+<li><strong>循环终止条件边界误判</strong>：当 $k=t$ 时仍会执行一次循环体，执行后 $k$ 自增，才跳出。极易漏掉最后一次循环。</li>
+<li><strong>赋值顺序颠倒</strong>：先更新 $S$ 还是先更新 $M$，必须与框图一致。若交换顺序，结果完全不同。</li>
+<li><strong>变量覆盖后未使用新值</strong>：某变量在循环初被赋值，之后其值被其他变量引用，必须是本轮更新后的值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2014 理-07）<br />
+执行如图所示的程序框图，若输入的 $x$，$t$ 均为 $2$，则输出的 $S=$（　）</p>
+<p><strong>思路</strong><br />
+初始值明确，循环条件 $k \le t$，循环体内先计算 $M = M \times \dfrac{x}{k}$，再累加 $S = S + M$，然后 $k$ 自增 $1$。逐次模拟即可。</p>
+<p><strong>步骤</strong><br />
+- 初值：$x=2$，$t=2$，$M=1$，$S=3$，$k=1$
+- 第 1 次循环：$k=1 \le t$
+  $M = 1 \times \dfrac{2}{1} = 2$
+  $S = 3 + 2 = 5$
+  $k = 1+1=2$
+- 第 2 次循环：$k=2 \le t$
+  $M = 2 \times \dfrac{2}{2} = 2$
+  $S = 5 + 2 = 7$
+  $k = 2+1=3$
+- 判断 $k=3 \le t$？否，跳出循环，输出 $S=7$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是赋值顺序和循环边界的模拟。注意 $M$ 的计算含有除法，$x,k$ 均为整数时结果仍可能为整数，不会因小数出现而复杂化。变式常将 $t$ 改为更大的数，或改变初始 $S,M$ 的值，解题方法完全一致。考生训练时可自行改变循环条件（如 $k &lt; t$），体验边界差异。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-07.html">2014-理-07</a>（2014 · 易） 本题考查程序框图的执行过程，通过给定输入值模拟运算求解输出的S值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">赋值</a></li>
+</ul>
+</div>
+</body>
+</html>

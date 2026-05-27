@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>曲线类型</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>曲线类型</h1><div class="review-mark" data-stem="曲线类型"></div><div class="meta-card"><span><strong>考点</strong>曲线类型</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：解答23</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>参数方程与普通方程的互化</strong>：通过消参（代入法、三角恒等式 $\sin^2\theta+\cos^2\theta=1$、代数变换）将参数方程化为普通方程，以便识别曲线类型。</li>
+<li><strong>常见曲线的参数方程</strong>：</li>
+<li>过定点 $(x_0,y_0)$、倾斜角为 $\alpha$ 的直线：$\begin{cases} x = x_0 + t\cos\alpha \ y = y_0 + t\sin\alpha \end{cases}$（$t$ 为参数，$|t|$ 表示直线上点到定点的距离）。</li>
+<li>圆心在 $(a,b)$、半径为 $r$ 的圆：$\begin{cases} x = a + r\cos\theta \ y = b + r\sin\theta \end{cases}$（$\theta$ 为参数）。</li>
+<li>椭圆、双曲线、抛物线的参数方程（如 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \Leftrightarrow$ $\begin{cases} x = a\cos\varphi \ y = b\sin\varphi \end{cases}$）。</li>
+<li><strong>曲线交点的求法</strong>：将参数方程代入另一曲线方程，或均化为普通方程联立求解，注意参数的取值范围。</li>
+<li><strong>轨迹问题的参数法</strong>：主动点（如动直线）依赖参数 $\alpha$ 变化，从动点坐标 $P(x,y)$ 用 $\alpha$ 表达，既得轨迹参数方程；消参后可识别曲线类型与几何特征（如圆、椭圆等）。</li>
+<li><strong>垂线与中点坐标</strong>：点 $(x_1,y_1)$ 关于直线 $Ax+By+C=0$ 的对称点或垂足，常用垂直斜率关系与中点坐标公式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>参数方程识别与互化</strong>  </li>
+<li>一眼识别参数方程类型（见知识精要）。  </li>
+<li>涉及交点的，优先化为普通方程，再联立求解。  </li>
+<li>
+<p>若普通方程复杂或带根号，可联立参数方程求解参数值。</p>
+</li>
+<li>
+<p><strong>动直线与定点垂足的轨迹问题</strong>  </p>
+</li>
+<li>
+<p>步骤：<br />
+     (1) 设动直线 $C_1$ 的方程（含参数 $\alpha$），化为普通方程 $y = kx + b$ 或一般式。<br />
+     (2) 求过原点且垂直于 $C_1$ 的直线方程（斜率与 $C_1$ 斜率互为负倒数）。<br />
+     (3) 联立两直线方程，解出垂足 $A$ 的坐标（用 $\alpha$ 表示）。<br />
+     (4) 由中点坐标公式得 $P(\frac{x_A}{2}, \frac{y_A}{2})$，即得轨迹参数方程。<br />
+     (5) 消去参数 $\alpha$（多用平方和关系），化为普通方程，判定曲线类型并指出范围（若有限制）。</p>
+</li>
+<li>
+<p><strong>参数方程求轨迹的通用步骤</strong>  </p>
+</li>
+<li>设动点坐标 $(x,y)$，将题目几何条件转化为坐标关系。  </li>
+<li>引入恰当的参数（如倾斜角、旋转角、参数方程的 $t,\theta$ 等）。  </li>
+<li>表达 $x = f(\alpha),\; y = g(\alpha)$。  </li>
+<li>必要时交代参数 $\alpha$ 的范围，保证轨迹的纯粹性和完备性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视参数的取值范围</strong>：参数方程消参时可能扩大轨迹范围（如 $\sin^2\alpha+\cos^2\alpha=1$ 消参后默认为全体实数，但实际 $\alpha\in[0,\pi)$ 等）。必须注明普通方程中变量的限制，否则轨迹类型判定错误。</li>
+<li><strong>混淆直线参数方程中 $t$ 的几何意义</strong>：仅当参数方程形如 $\begin{cases}x=x_0+t\cos\alpha\y=y_0+t\sin\alpha\end{cases}$ 时 $|t|$ 才是距离，若系数不是 $\cos\alpha,\sin\alpha$ 则无此性质。</li>
+<li><strong>垂足坐标求解错误</strong>：直接用点到直线距离公式会错求长度，轨迹问题需要坐标。应联立两垂直直线的方程解交点。</li>
+<li><strong>中点坐标运算失误</strong>：容易忘记除以2，导致轨迹方程整体缩放错误。</li>
+<li><strong>无法识别曲线类型</strong>：消参后得到的普通方程如 $x^2+y^2 - \frac{1}{2}x =0$ 配得 $\left(x-\frac{1}{4}\right)^2+y^2=\frac{1}{16}$ 才是标准圆，不配方则可能误判。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 2010-理-23</h3>
+<p><strong>题目</strong> ：已知直线 $C_1:\begin{cases} x = 1 + t\cos\alpha \ y = t\sin\alpha \end{cases}$（$t$ 为参数），圆 $C_2:\begin{cases} x = \cos\theta \ y = \sin\theta \end{cases}$（$\theta$ 为参数）。<br />
+（Ⅰ）当 $\alpha=\frac{\pi}{3}$ 时，求 $C_1$ 与 $C_2$ 的交点坐标；<br />
+（Ⅱ）过坐标原点 $O$ 作 $C_1$ 的垂线，垂足为 $A$，$P$ 为 $OA$ 中点，当 $\alpha$ 变化时，求 $P$ 点的轨迹的参数方程，并指出它是什么曲线。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）先将 $\alpha=\frac{\pi}{3}$ 代入 $C_1$ 得普通方程，$C_2$ 直接化为单位圆 $x^2+y^2=1$，联立求交点。<br />
+（Ⅱ）$C_1$ 化为普通方程，由垂直得 $OA$ 方程，解出 $A$，再用中点公式得 $P$ 的参数方程，消参识别曲线。</p>
+<p><strong>步骤</strong><br />
+<strong>（Ⅰ）</strong> $C_2$ 普通方程为 $x^2 + y^2 = 1$。<br />
+当 $\alpha=\frac{\pi}{3}$ 时，$C_1$ 的普通方程：由 $x=1+\frac{1}{2}t,\; y=\frac{\sqrt{3}}{2}t$ 消去 $t$，得 $y = \sqrt{3}(x-1)$。<br />
+代入圆方程：$x^2 + 3(x-1)^2 = 1 \Rightarrow 4x^2 -6x+2=0 \Rightarrow x=1$ 或 $x=\frac{1}{2}$。<br />
+对应 $y=0,\; y=-\frac{\sqrt{3}}{2}$。<br />
+交点坐标为 $(1,0)$ 和 $\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$。</p>
+<p><strong>（Ⅱ）</strong> $C_1$ 的普通方程：消去 $t$ 得 $y = \tan\alpha \cdot (x-1)$，即 $\sin\alpha \cdot x - \cos\alpha \cdot y = \sin\alpha$。<br />
+过原点 $O$ 且垂直于 $C_1$ 的直线方程为 $\cos\alpha \cdot x + \sin\alpha \cdot y = 0$（斜率积为 $-1$ 的转换）。<br />
+联立两直线方程解得垂足 $A$：
+$$
+\begin{cases}
+x_A = \sin^2\alpha \
+y_A = -\sin\alpha\cos\alpha
+\end{cases}
+$$
+则 $P$ 为 $OA$ 中点：
+$$
+P:\; \begin{cases}
+x = \dfrac{1}{2}\sin^2\alpha \[4pt]
+y = -\dfrac{1}{2}\sin\alpha\cos\alpha
+\end{cases} \quad (\alpha\text{ 为参数}).
+$$
+消参：利用倍角公式 $x = \dfrac{1}{4}(1-\cos2\alpha)$，$y = -\dfrac{1}{4}\sin2\alpha$。<br />
+可得普通方程 $\left(x - \dfrac{1}{4}\right)^2 + y^2 = \dfrac{1}{16}$。<br />
+故 $P$ 点轨迹是以 $\left(\dfrac{1}{4}, 0\right)$ 为圆心、半径为 $\dfrac{1}{4}$ 的圆（去掉一点？实际上 $\alpha$ 变化时，$2\alpha$ 取遍所有值，轨迹是整个圆，原点 $O$ 作为极限情况包含在内或作为退化点，常保留整个圆）。  </p>
+<p><strong>点评/变式</strong><br />
+- 该题是典型的“由主动直线生成从动点轨迹”的参数法问题，关键是抓住垂直和中点两个条件，用 $\alpha$ 表示坐标。<br />
+- 易错点：消参时如果不化为正弦余弦的二次齐次式，直接用 $\tan\alpha$ 表达 $A$ 坐标再消参会复杂且易出错。利用直线方程的一般式并保留 $\sin\alpha,\cos\alpha$ 更简洁。<br />
+- 变式：若将 $C_1$ 改为过某定点的直线束，$O$ 改为另一固定点，求垂足的中点轨迹，方法完全一致，多配成圆或椭圆。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-23.html">2010-理-23</a>（2010 · 中） 本题考查直线和圆的参数方程交点求解，以及动点轨迹参数方程的建立与曲线类型判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/559-曲线类型.html">曲线类型</a></li>
+</ul>
+</div>
+</body>
+</html>

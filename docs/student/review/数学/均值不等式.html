@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>均值不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>均值不等式</h1><div class="review-mark" data-stem="均值不等式"></div><div class="meta-card"><span><strong>考点</strong>均值不等式</span><span><strong>权重</strong>23</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：23</li>
+<li>真题数：4；年份跨度：2013–2020</li>
+<li>出现题位：解答23 解答24 选择8 选择9</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>基本不等式</strong>：$\frac{a+b}{2} \ge \sqrt{ab}$ ($a&gt;0, b&gt;0$)，当且仅当 $a=b$ 时取等号。其变形 $ab \le \left(\frac{a+b}{2}\right)^2$ 常用于求积的最大值。</li>
+<li><strong>推广形式</strong>：若 $a_i&gt;0$，则 $\frac{a_1+a_2+\cdots+a_n}{n} \ge \sqrt[n]{a_1a_2\cdots a_n}$（当且仅当所有数相等时取等）。特别地，对于三元：$a+b+c \ge 3\sqrt[3]{abc}$。</li>
+<li><strong>平方与和</strong>：$a^2+b^2 \ge 2ab$；$a^2+b^2 \ge \frac{(a+b)^2}{2}$。常用以建立两数平方和与和之间的关系。</li>
+<li><strong>核心应用条件</strong>：“一正、二定、三相等”。即涉及变量均为正数，求和或积为定值，并能验证等号成立的条件。</li>
+<li><strong>柯西不等式（均值不等式的向量/序列形式）</strong>：$(a_1b_1+a_2b_2+\cdots+a_nb_n)^2 \le (a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)$，当 $\frac{a_1}{b_1}=\frac{a_2}{b_2}=\cdots=\frac{a_n}{b_n}$ 时取等。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别应用场景</strong>：题目涉及“最大值”、“最小值”、“取值范围”，或表达式具有“和”与“积”的对称结构时，考虑使用均值/柯西不等式。</li>
+<li><strong>构造定值条件</strong>：<ul>
+<li><strong>求积最大值</strong>：配凑“和”为定值（如已知 $a+2b=2$，求 $ab$ 最大值，需配凑 $a \times 2b$）。</li>
+<li><strong>求和最小值</strong>：配凑“积”为定值（如 $x + \frac{1}{x}$ 型）。</li>
+<li><strong>高次降次</strong>：利用 $a^3+b^3=(a+b)(a^2-ab+b^2)$ 等因式分解，结合条件将高次和转化为低次积或和的结构。</li>
+</ul>
+</li>
+<li><strong>连续放缩与整体代换</strong>：对于复杂条件（如 $a+b+c=1$ 或 $a^3+b^3=2$），常采用整体代换，将目标式变形后一次或多次运用不等式进行放缩，直至出现已知条件。</li>
+<li><strong>验证等号条件</strong>：解题最后一步必检验等号能否成立，这既是求解参数的需要（当且仅当某条件时取最值），也是判断范围严谨性的依据（不满足取等条件则不能取到该值）。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>忽视“正数”前提</strong>：直接对可能非正的变量套用 $\frac{a+b}{2} \ge \sqrt{ab}$。必须先判断或说明变量为正。</li>
+<li><strong>忽视取等条件</strong>：未经检验取等条件，导致将最大值或最小值写成无法取到的边界值。必须写出“当且仅当 $a=b$ 时”并代入验证是否与题设条件矛盾。</li>
+<li><strong>错用/混用公式</strong>：混淆三元和二元均值不等式结构。如错误使用 $a+b+c \ge \sqrt[3]{abc}$（正确为 $3\sqrt[3]{abc}$）；或将 $a^2+b^2 \ge 2ab$ 用于求 $a+b$ 最大值的特定方向错误放缩（需注意放缩方向是求上界还是下界）。</li>
+<li><strong>忽略双变量“非独立”性</strong>：如在解析几何中，参数 $a,b$ 受曲线方程约束，利用几何性质将约束转化为 $ab$ 或 $a^2+b^2$ 的定值或不等关系后，再使用均值不等式。切忌脱离曲线性质盲目设值。</li>
+<li><strong>柯西不等式结构匹配错误</strong>：使用柯西不等式时，强行凑齐平方和乘积，未对应项位置错误。证明时应拆分为 $(\sqrt{a})^2+(\sqrt{b})^2$ 与对应序列明确的一致性。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题一：2020-理-08（双曲线中的焦距最值）</h3>
+<p><strong>题目</strong>：已知双曲线 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$ 的渐近线与直线 $x=a$ 交于 $D,E$，$\triangle ODE$ 面积为 8，求焦距 $2c$ 的最小值。
+<strong>思路</strong>：利用渐近线方程与 $x=a$ 联立求出 $D,E$ 纵坐标及底 $|DE|$。由面积得到 $ab$ 的值（定值）。焦距 $2c = 2\sqrt{a^2+b^2}$，利用 $a^2+b^2 \ge 2ab$ 将平方和转化为积的形式求出最小值。
+<strong>步骤</strong>：
+1.  <strong>表示点与面积</strong>：渐近线 $y = \pm\frac{b}{a}x$，令 $x=a$ 得 $y=\pm b$。则 $|DE|=2b$。$\triangle ODE$ 面积 $S=\frac{1}{2} \times a \times (2b) = ab =8$。
+2.  <strong>构建目标函数</strong>：焦距 $2c = 2\sqrt{a^2+b^2}$。
+3.  <strong>应用均值不等式</strong>：由 $a^2+b^2 \ge 2ab = 16$，故 $2c = 2\sqrt{a^2+b^2} \ge 2\sqrt{16} = 8$。
+4.  <strong>取等条件</strong>：当且仅当 $a=b$ 时等号成立，此时结合 $ab=8$ 得 $a=b=2\sqrt{2}$，符合 $a&gt;0,b&gt;0$ 条件。
+<strong>点评/变式</strong>：本题核心是将几何中的面积约束转化为参数的代数定值 $ab=8$。焦距最小问题即求 $\sqrt{a^2+b^2}$ 最小值。变式训练可关注椭圆中类似面积或长度定值，利用 $a^2+b^2$ 或 $a+b$ 的转化。</p>
+<h3>代表题二：2017-理-23（高次对称条件证明）</h3>
+<p><strong>题目</strong>：已知 $a&gt;0, b&gt;0, a^3+b^3=2$。证明：(1) $(a+b)(a^5+b^5) \ge 4$；(2) $a+b \le 2$。
+<strong>思路</strong>：(1) 式呈现乘积和形式，设计成柯西不等式 $(\sqrt{a} \sqrt{a^5} + \sqrt{b} \sqrt{b^5})^2$ 类型。(2) 利用立方和公式和条件，将目标式 $a+b$ 与 $ab$ 关联，利用 $ab \le \left(\frac{a+b}{2}\right)^2$ 建立关于 $a+b$ 的不等式求解。
+<strong>步骤</strong>：
+(1) 由柯西不等式：$(a+b)(a^5+b^5) = [(\sqrt{a})^2+(\sqrt{b})^2][(a^{2.5})^2+(b^{2.5})^2] \ge (\sqrt{a}\cdot a^2\sqrt{a} + \sqrt{b}\cdot b^2\sqrt{b})^2 = (a^3+b^3)^2 = 4$，当且仅当 $a=b=1$ 取等。
+(2) 由 $a^3+b^3=(a+b)(a^2-ab+b^2)=2$，且 $a^2-ab+b^2 = (a+b)^2-3ab$，故 $(a+b)[(a+b)^2-3ab]=2$。整理得 $3ab(a+b) = (a+b)^3-2$。由均值不等式 $ab \le \left(\frac{a+b}{2}\right)^2$，代入得 $(a+b)^3-2 \le 3\left(\frac{a+b}{2}\right)^2(a+b) = \frac{3}{4}(a+b)^3$。化简得 $\frac{1}{4}(a+b)^3 \le 2$，即 $(a+b)^3 \le 8$，故 $a+b \le 2$。当且仅当 $a=b=1$ 取等。
+<strong>点评/变式</strong>：证明不等式的关键在于找到起点和放缩方向。(1)的结构极适合柯西不等式，直接对应证出定值。(2)的难点在于将 $ab$ 替换为 $a+b$ 的关系式，利用均值不等式造出关于 $a+b$ 的同构不等关系求解。该方法适用于已知高次幂和，求证一次幂和的题型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-09.html">2020-文-09</a>（2020 · 中） 本题通过双曲线渐近线与直线交点求三角形面积，结合焦距与均值不等式求最值。</li>
+<li><a href="../../exam/数学/2020-理-08.html">2020-理-08</a>（2020 · 中） 本题通过双曲线渐近线与直线交点构建三角形，结合面积与均值不等式求焦距最小值。</li>
+<li><a href="../../exam/数学/2017-理-23.html">2017-理-23</a>（2017 · 中） 该题考查利用柯西不等式和均值不等式证明不等式，涉及代数变形与等号条件。</li>
+<li><a href="../../exam/数学/2013-文-24.html">2013-文-24</a>（2013 · 中） 本题要求证明给定正数和为1条件下的两个不等式，考查不等式证明方法与技巧。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/295-基本不等式.html">均值不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

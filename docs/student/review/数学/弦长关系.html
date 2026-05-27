@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弦长关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>弦长关系</h1><div class="review-mark" data-stem="弦长关系"></div><div class="meta-card"><span><strong>考点</strong>弦长关系</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线标准方程与焦点</strong>：对于 $y^2 = 2px\ (p&gt;0)$，焦点 $F(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$。题中 $y^2=4x$ 即 $p=2$，焦点 $F(1,0)$。</li>
+<li><strong>焦半径公式</strong>：抛物线上一点 $P(x_0,y_0)$ 到焦点的距离 $|PF| = x_0 + \frac{p}{2}$。若点在 $x$ 轴下方同理。</li>
+<li><strong>焦点弦的坐标关系</strong>：过焦点的直线与抛物线交于 $A(x_1,y_1), B(x_2,y_2)$，联立方程后得到关于 $y$ 或 $x$ 的二次方程，应用韦达定理。</li>
+<li><strong>长度比例转化</strong>：给出 $|AF| = m|BF|$，可将焦半径用横坐标表示，得到 $x_1 + \frac{p}{2} = m(x_2 + \frac{p}{2})$，进而建立 $x_1$ 与 $x_2$ 的线性关系，再利用根与系数关系或点坐标关系求解参数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设直线方程</strong>：优先设点斜式 $y = k(x - \frac{p}{2})$，并单独检验斜率不存在（直线与 $x$ 轴垂直）的情况，看是否满足长度比例。</li>
+<li><strong>联立消元</strong>：将直线方程代入抛物线方程，消去 $x$（或 $y$），得到关于 $y$（或 $x$）的一元二次方程。注意讨论二次项系数不为零。</li>
+<li><strong>写出韦达定理</strong>：由方程得到 $y_1+y_2$ 与 $y_1y_2$，或 $x_1+x_2$ 与 $x_1x_2$。</li>
+<li><strong>转化长度条件</strong>：利用焦半径公式将 $|AF| = m|BF|$ 转为 $x_1 + \frac{p}{2} = m(x_2 + \frac{p}{2})$。若消元得到 $y$ 的方程，则用 $x_i = \frac{y_i^2}{2p}$（或结合点在直线上）进一步转化为 $y_1$ 与 $y_2$ 的关系。</li>
+<li><strong>联立求解</strong>：将长度转化出的线性关系与韦达定理结合，解出 $k$ 或 $m$。注意根据题意取舍根的符号，并进行验证。</li>
+<li><strong>写出最终方程</strong>：将斜率 $k$ 代回所设直线方程，整理成一般式或斜截式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略斜率不存在的情况</strong>：焦点弦垂直于 $x$ 轴时，$x_1 = x_2 = \frac{p}{2}$，此时 $|AF| = |BF|$，不满足比例 $\neq 1$ 的条件，但仍需检验，防止因未讨论而漏解或步骤不严谨失分。</li>
+<li><strong>坐标转化错误</strong>：将 $|AF| = m|BF|$ 写成 $x_1 = m x_2$，忽略了焦半径中的常数项 $\frac{p}{2}$，导致关系式错误。</li>
+<li><strong>消元后应用韦达定理时代错符号</strong>：如方程 $ky^2 - 4y - 4k = 0$ 中 $y_1y_2 = \frac{-4k}{k} = -4$，符号容易与求和公式混淆。</li>
+<li><strong>用错纵坐标与横坐标的转化</strong>：由 $x_i = \frac{y_i^2}{4}$（代入时注意系数），错误使用 $x_i = \frac{y_i}{2}$ 或平方遗漏。</li>
+<li><strong>多解除却不舍去增根</strong>：将 $y_1,y_2$ 反代求 $k$ 时可能会产生不满足原长度比例的增根，需代入检验。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2013·文·10）抛物线 $C: y^2 = 4x$ 的焦点为 $F$，直线 $l$ 过 $F$ 且与 $C$ 交于 $A, B$ 两点。若 $|AF| = 3|BF|$，则 $l$ 的方程为（选项略）。</p>
+<p><strong>思路</strong>：由抛物线方程得焦点，设出直线点斜式（因焦点在 $x$ 轴，可设 $y = k(x-1)$），联立抛物线消 $x$ 得 $y$ 的二次方程，利用焦半径公式将长度比化为横坐标关系，再转为纵坐标关系，结合韦达定理解出 $k$。</p>
+<p><strong>步骤</strong>：
+1. 由 $y^2=4x$ 知 $p=2$，焦点 $F(1,0)$。斜率不存在时直线为 $x=1$，此时 $|AF|=|BF|=2$，不满足 $3$ 倍关系，舍去。
+2. 设 $l: y = k(x-1) \ (k \neq 0)$。由 $x = \frac{y^2}{4}$，代入直线得 $y = k(\frac{y^2}{4} - 1)$，整理得 $ky^2 - 4y - 4k = 0$。
+3. 设 $A(x_1,y_1), B(x_2,y_2)$，则 $y_1 + y_2 = \frac{4}{k},\ y_1y_2 = -4$。
+4. 焦半径定义：$|AF| = x_1 + 1,\ |BF| = x_2 + 1$。由 $|AF| = 3|BF|$ 得 $x_1 + 1 = 3(x_2 + 1)$，即 $x_1 = 3x_2 + 2$。
+5. 用纵坐标表示横坐标：$x_1 = \frac{y_1^2}{4}, x_2 = \frac{y_2^2}{4}$，代入得 $\frac{y_1^2}{4} = 3 \cdot \frac{y_2^2}{4} + 2$，整理为 $y_1^2 = 3y_2^2 + 8$。
+6. 由 $y_1y_2 = -4$ 得 $y_1 = -\frac{4}{y_2}$，代入上式：$\frac{16}{y_2^2} = 3y_2^2 + 8$。令 $t = y_2^2 &gt; 0$，方程化为 $3t^2 + 8t - 16 = 0$。
+7. 解得 $t = \frac{4}{3}$ 或 $t = -4$（舍去）。故 $y_2^2 = \frac{4}{3}$，对应 $y_2 = \pm \frac{2}{\sqrt{3}}$。由 $y_1 = -\frac{4}{y_2}$ 得 $y_1, y_2$ 异号。
+8. 利用 $y_1 + y_2 = \frac{4}{k}$，将 $y_2 = \frac{2}{\sqrt{3}}$ 时 $y_1 = -2\sqrt{3}$，求和得 $-\frac{4}{\sqrt{3}} = \frac{4}{k}$，得 $k = -\sqrt{3}$；另一组符号相反得 $k = \sqrt{3}$。
+9. 故直线方程为 $y = \pm \sqrt{3}(x-1)$。</p>
+<p><strong>点评/变式</strong>：本题是典型的抛物线焦点弦长度比问题，核心在于焦半径公式的灵活运用和坐标转化。变形问法可能是已知直线方程求长度比，或将抛物线换为椭圆/双曲线（统一使用焦半径公式 $|PF| = ed$）。务必先讨论斜率不存在情形，解题时注意韦达定理与长度关系联立消元。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-10.html">2013-文-10</a>（2013 · 中） 本题考查抛物线焦点弦性质，通过直线与抛物线联立，利用弦长比例关系求解直线方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">弦长关系</a></li>
+</ul>
+</div>
+</body>
+</html>

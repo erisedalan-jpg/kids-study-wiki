@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>方差计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>方差计算</h1><div class="review-mark" data-stem="方差计算"></div><div class="meta-card"><span><strong>考点</strong>方差计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：解答17</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平均数</strong>：样本数据 $x_1,x_2,\dots,x_n$ 的样本平均数为<br />
+  $$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$$</li>
+<li><strong>方差</strong>：衡量数据离散程度。若数据是总体，则方差为<br />
+  $$\sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2$$<br />
+  若数据为样本，在大多数高考题中（如此题）直接按定义使用“样本方差”<br />
+  $$s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2$$<br />
+  除非题设明确要求用无偏估计（除以 $n-1$），否则一律遵守题中给定的公式。</li>
+<li><strong>简化计算</strong>：方差可化为“平方的平均减平均的平方”<br />
+  $$s^2=\frac{1}{n}\sum_{i=1}^{n}x_i^2-\bar{x}^2$$<br />
+  可用于手工速算。</li>
+<li><strong>标准差</strong>：$s=\sqrt{s^2}$，与原始数据量纲一致。</li>
+<li><strong>均值比较的判定式</strong>（本题第二问）：<br />
+  若两样本量相同为 $n$，$\bar{y}-\bar{x}\geq 2\sqrt{\dfrac{s_1^2+s_2^2}{n}}$ 则认为有显著提高。这是基于两样本均值差的假设检验的简化形态，理解符号意义即可，不要求推导。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>准确排列数据</strong>：先把原始数据按顺序抄录，防止遗漏或错位，可写两行方便对齐。</li>
+<li><strong>求平均数</strong>：计算总和，除以数据个数 $n$。求和时采用“凑整”或逐对相加减少错误。</li>
+<li><strong>求每个数据与平均数的离差</strong>：$x_i-\bar{x}$ 或 $y_i-\bar{y}$，注意正负号。</li>
+<li><strong>计算方差</strong>：  </li>
+<li>方法一（定义法）：逐项求离差的平方，累加后除以 $n$。  </li>
+<li>方法二（快速法）：利用 $s^2=\overline{x^2}-\bar{x}^2$，先求数据的平方的均值，再减去均值的平方。适用于数据较整或已给出平方和的场合。</li>
+<li><strong>代入判定公式</strong>：先算 $\bar{y}-\bar{x}$，再算 $\sqrt{\frac{s_1^2+s_2^2}{n}}$，乘 $2$ 后比较大小，得出结论。</li>
+<li><strong>作答规范</strong>：均值、方差保留题目要求的有效数字或精确值（通常分数或小数均可，此处小数需算准）。判定结论用文字明确表述“有/没有显著提高”。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>方差分母混淆</strong>：在未特别说明时，此题及多数高考题默认方差分母为 $n$（即总体方差公式），直接除 $n$。题目明确给出 $s^2$ 的计算结果全部为除以 $10$，务必严格匹配。</li>
+<li><strong>离差平方和计算疏忽</strong>：  </li>
+<li>漏项：$n$ 个数据少算一个或重复。  </li>
+<li>符号处理：负数的平方为正，但忘记平方直接相加减。  </li>
+<li>小数平方：如 $0.2^2=0.04$，$0.3^2=0.09$，小数点后位数容易错。</li>
+<li><strong>平均数计算错误</strong>：逐项累加时进位错误，导致 $\bar{x}$ 偏差，连锁反应导致离差全错。</li>
+<li><strong>判定式理解偏差</strong>：  </li>
+<li>误将 $\sqrt{\frac{s_1^2+s_2^2}{n}}$ 记作 $\frac{s_1^2+s_2^2}{n}$（忘记开方）。  </li>
+<li>忘记乘系数 $2$，造成结论反转。</li>
+<li><strong>有效数字与单位</strong>：本题数据精确到一位小数，方差计算结果保留到小数后三位或直接写分数，作答时勿省略。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-理-17）<br />
+新旧设备各生产10件产品，旧设备指标：9.8, 10.3, 10.0, 10.2, 9.9, 9.8, 10.0, 10.1, 10.2, 9.7；新设备指标：10.1, 10.4, 10.1, 10.0, 10.1, 10.3, 10.6, 10.5, 10.4, 10.5。求样本均值和样本方差；并判断新设备均值是否较旧设备有显著提高（判定准则： $\bar{y}-\bar{x}\geq 2\sqrt{\frac{s_1^2+s_2^2}{10}}$ ）。</p>
+<p><strong>思路</strong><br />
+（1）分别计算两组的平均数，再求各数据与均值的离差，平方累加后除以10得方差。<br />
+（2）利用给定的比较公式直接代入数值得结论。</p>
+<p><strong>步骤</strong><br />
+- <strong>旧设备均值</strong>：$9.8+10.3+10.0+10.2+9.9+9.8+10.0+10.1+10.2+9.7=100$，$\bar{x}=10$。<br />
+- <strong>新设备均值</strong>：$10.1+10.4+10.1+10.0+10.1+10.3+10.6+10.5+10.4+10.5=103$，$\bar{y}=10.3$。<br />
+- <strong>旧设备方差</strong>：<br />
+  离差：$-0.2, 0.3, 0, 0.2, -0.1, -0.2, 0, 0.1, 0.2, -0.3$<br />
+  平方：$0.04, 0.09, 0, 0.04, 0.01, 0.04, 0, 0.01, 0.04, 0.09$<br />
+  和：$0.36$，故 $s_1^2=\frac{0.36}{10}=0.036$。<br />
+- <strong>新设备方差</strong>：<br />
+  离差：$-0.2, 0.1, -0.2, -0.3, -0.2, 0, 0.3, 0.2, 0.1, 0.2$<br />
+  平方：$0.04, 0.01, 0.04, 0.09, 0.04, 0, 0.09, 0.04, 0.01, 0.04$<br />
+  和：$0.40$，故 $s_2^2=\frac{0.40}{10}=0.04$。<br />
+- <strong>判断</strong>：<br />
+  $\bar{y}-\bar{x}=0.3$<br />
+  $2\sqrt{\frac{0.036+0.04}{10}}=2\sqrt{0.0076}\approx 2\times0.0872=0.1744$<br />
+  $0.3\geq0.1744$，所以新设备均值较旧设备有显著提高。</p>
+<p><strong>点评/变式</strong><br />
+- 本题完全考查“用计算器”式的准确手工计算，步骤清晰分值高，必须做到百分百正确。<br />
+- 变式训练：可改变方差定义（除以 $n$ 或 $n-1$），或改变判定系数（如 $1.96\sqrt{\cdots}$），但套路不变——严格按题给公式执行。<br />
+- 建议平时练习中多用“平方的均值减均值的平方”进行交叉验算：<br />
+  如旧设备平方均值：$\frac{1}{10}(9.8^2+10.3^2+\cdots+9.7^2)=\frac{1000.36}{10}=100.036$，则 $s_1^2=100.036-10^2=0.036$，结果一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-17.html">2021-理-17</a>（2021 · 易） 本题给出新旧设备各10件产品的指标数据，要求计算样本平均数、方差，并依据给定标准判断新设备均值是否有显著提高。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/905-方差计算.html">方差计算</a></li>
+</ul>
+</div>
+</body>
+</html>

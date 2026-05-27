@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>弦切角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>弦切角</h1><div class="review-mark" data-stem="弦切角"></div><div class="meta-card"><span><strong>考点</strong>弦切角</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：解答22</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p>定义：顶点在圆上，一边和圆相交，另一边和圆相切的角叫做弦切角。如图，$EC$ 是切线，$C$ 为切点，$CA$ 是过切点的弦，则 $\angle ACE$ 是弦切角，它所夹的弧是弧 $AC$（不含切点 $C$ 的另一端点 $A$ 在弧的另一侧）。</p>
+</li>
+<li>
+<p>弦切角定理：弦切角等于它所夹的弧所对的圆周角。在真题中 $\angle ACE$ 夹弧 $AC$，于是 $\angle ACE = \angle ABC$（$\angle ABC$ 是弧 $AC$ 上的圆周角）。</p>
+</li>
+<li>
+<p>推论：若两弦切角所夹的弧相等，则这两个弦切角相等；反之亦然。这一推论常与等弧对等角（或等弦对等角）结合使用。</p>
+</li>
+<li>
+<p>适用条件：必须严格找到弦切角及其<strong>所夹的弧</strong>（以切点为端点的那段弧，不含切点处切线所成的直线），然后找该弧对应的任一圆周角。圆内接四边形的外角、切线长定理等常常一起出现，注意综合运用。</p>
+</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>切线—圆周角转化</strong><br />
+   题目给出圆的切线，立即标记切点，作出过切点的弦，构成弦切角。由弦切角定理将其转化为对应弧上的圆周角，完成角度关系的初步等价交换。</p>
+</li>
+<li>
+<p><strong>等弧或等弦加载角度条件</strong><br />
+   题设若给出弧相等（如弧 $AC$ = 弧 $BC$），则直接得到 $\angle BCD = \angle ABC$ 等圆周角相等，与步骤1中的转化结果建立等量传递，实现等角证明。</p>
+</li>
+<li>
+<p><strong>等积式转比例找相似</strong><br />
+   需证 $BC^2 = BE \cdot CD$ 这类等积式，先化为比例 $\dfrac{BC}{BE} = \dfrac{CD}{BC}$（或等价形式），再去寻找包含这四条线段的两个三角形。由已证得的角等（有时结合公共角）判定它们相似，从相似三角形的比例关系得出目标等式。</p>
+</li>
+<li>
+<p><strong>注意“三点共线”带来的平角关系</strong><br />
+   切线常与圆的割线相交，利用邻补角、对顶角、圆周角与圆内接四边形对角互补等性质为相似提供角等条件（如 $\angle ECB = \angle CDB$ 可由内接四边形外角等于内对角得到）。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>夹弧判断错误</strong><br />
+  弦切角总夹着以切点为一端点的弧。如图，$\angle ACE$ 夹的是弧 $AC$，不是弧 $BC$。错误地认为切线 $EC$ 只与切点处的切线方向有关、忽视是弦 $CA$ 与切线夹角，会把弧搞反。</p>
+</li>
+<li>
+<p><strong>定理对象混淆</strong><br />
+  弦切角等于它所夹弧上的<strong>圆周角</strong>，不是圆心角、不是其它弧上的圆周角。切忌将 $\angle ACE$ 直接等同于 $\angle EBC$ 或其它角。</p>
+</li>
+<li>
+<p><strong>等积式转化时线段错位</strong><br />
+  由 $BC^2 = BE \cdot CD$ 推比例时，应该写成 $\dfrac{BC}{BE} = \dfrac{CD}{BC}$ 或 $\dfrac{BC}{CD} = \dfrac{BE}{BC}$，不能随意组合分子分母。写错比例就找不到正确的相似三角形。</p>
+</li>
+<li>
+<p><strong>忽视“同弧上的圆周角相等”</strong><br />
+  弧 $AC = BC$ 推出 $\angle ABC = \angle CAB$？注意等弧对的圆周角是对应弧的圆周角：若弧 $AC$ = 弧 $BC$，则 $\angle ABC$（对弧 $AC$）等于 $\angle BAC$（对弧 $BC$）。真题中用的是 $\angle BCD = \angle ABC$，因为 $D$ 在圆上，$\angle BCD$ 对弧 $BD$？要仔细识别点 $D$ 的位置（真题中 $D$ 是 $AC$ 上一点？实际题干弧 AC=BC，点 D 出现，需根据图示判断，此处易忽略图示而推导错误）。</p>
+</li>
+<li>
+<p><strong>漏用切线与弦的夹角等于所夹弧的弦切角</strong><br />
+  部分题目没有直接出现“弦切角”的字眼，需要自己构造。看到切线和过切点的另一条直线，就应想到弦切角定理。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>如图：已知圆上的弧 $AC = BC$，过 $C$ 点的圆的切线与 $BA$ 的延长线交于 $E$ 点。证明：
+（Ⅰ）$\angle ACE = \angle BCD$；
+（Ⅱ）$BC^2 = BE \cdot CD$。</p>
+<h3><strong>思路</strong></h3>
+<p>第（Ⅰ）问：$\angle ACE$ 是弦切角，其所夹弧为 $AC$，由弦切角定理转为同弧圆周角 $\angle ABC$；再由题设弧 $AC=BC$ 推出 $\angle ABC = \angle BCD$，传递即得。
+第（Ⅱ）问：要证等积式，先化为比例 $\dfrac{BC}{BE} = \dfrac{CD}{BC}$，即需证 $\triangle BDC \sim \triangle ECB$。寻找相似条件：已有 $\angle BCD = \angle EBC$（第Ⅰ问的结论或弧等），以及 $C$ 处切线带来的 $\angle ECB = \angle CDB$（弦切角或圆内接四边形性质）。</p>
+<h3><strong>步骤</strong></h3>
+<p><strong>（Ⅰ）</strong>
+1. 因为 $EC$ 是圆在 $C$ 点的切线，$CA$ 是过切点的弦，所以 $\angle ACE$ 是弦切角，所夹弧为弧 $AC$。
+2. 由弦切角定理得 $\angle ACE = \angle ABC$（$\angle ABC$ 是弧 $AC$ 上的圆周角）。
+3. 已知弧 $AC = BC$，根据等弧所对的圆周角相等，得 $\angle ABC = \angle BCD$。
+4. 所以 $\angle ACE = \angle BCD$。</p>
+<p><strong>（Ⅱ）</strong>
+1. 在 $\triangle BDC$ 和 $\triangle ECB$ 中，
+   - 由（Ⅰ）或弧等可得 $\angle EBC = \angle BCD$（同弧等角）。
+   - 因为四边形 $ABCD$ 是圆内接四边形，外角 $\angle ECB$ 等于内对角 $\angle BDC$（或由 $\angle ECB$ 为弦切角，夹弧 $BC$，等于圆周角 $\angle CDB$）。
+2. 所以 $\triangle BDC \sim \triangle ECB$（两角对应相等）。
+3. 由相似得对应边成比例：$\dfrac{BC}{BE} = \dfrac{CD}{BC}$。
+4. 交叉相乘得 $BC^2 = BE \cdot CD$。</p>
+<h3><strong>点评与变式</strong></h3>
+<p>本题是弦切角与相似三角形结合的经典基础题，几乎完全依赖弦切角定理进行角度转移。<strong>变式</strong>思路：可将圆弧条件改为弦相等（如 $AC=BC$），或把点 $D$ 放在 $AC$ 的延长线上，同样能触发弦切角与内接四边形外角的转化。练习时，注意对同一幅图从不同弧的角度观察弦切角，锻炼快速锁定夹弧的能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-文-22.html">2010-文-22</a>（2010 · 易） 本题利用圆的切线性质与弦切角定理证明角相等及线段比例关系，结合三角形相似进行推导。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">弦切角</a></li>
+</ul>
+</div>
+</body>
+</html>

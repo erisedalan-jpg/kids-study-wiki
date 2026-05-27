@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>垂直关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>垂直关系</h1><div class="review-mark" data-stem="垂直关系"></div><div class="meta-card"><span><strong>考点</strong>垂直关系</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>垂直的判定与转化</strong><br />
+  在解析几何中，两直线 $l_1$、$l_2$ 垂直（$l_1 \perp l_2$）常通过下列方式转化为代数关系：</li>
+<li>斜率之积：$k_1 \cdot k_2 = -1$（注意斜率不存在时单独讨论）。</li>
+<li>向量点积：若直线方向向量分别为 $\vec{v}_1$、$\vec{v}_2$，则 $\vec{v}_1 \cdot \vec{v}_2 = 0$；对于以点 $P$ 为顶点的直角，可用 $\overrightarrow{PA} \cdot \overrightarrow{PB}=0$。</li>
+<li>勾股定理：在 $\triangle ABC$ 中，若 $AB \perp AC$，则 $|BC|^2 = |AB|^2 + |AC|^2$。</li>
+<li><strong>椭圆中的焦点三角形</strong><br />
+  设椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \ (a&gt;b&gt;0)$ 的两焦点为 $F_1(-c,0)$、$F_2(c,0)$，点 $P$ 在椭圆上，则 $\triangle PF_1F_2$ 满足：</li>
+<li>$|PF_1|+|PF_2|=2a$，$|F_1F_2|=2c$，$b^2=a^2-c^2$。</li>
+<li>若 $\angle F_1PF_2 = 90^\circ$，则 $|PF_1|^2+|PF_2|^2 = 4c^2$。</li>
+<li><strong>离心率的求解通法</strong><br />
+  $e=\frac{c}{a}$，需通过几何关系或点的坐标代入椭圆方程建立关于 $a,c$ 的齐次方程，结合 $e \in (0,1)$ 解得。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理圆锥曲线中“垂直关系”的通用步骤：
+1. <strong>设焦点与坐标</strong>：根据对称性建立坐标系，写出焦点坐标，必要时设出动点坐标。
+2. <strong>将垂直条件代数化</strong>：借助直角三角形边角关系、勾股定理、两直线垂直的斜率关系或向量垂直，求出关键点的坐标或边长。
+3. <strong>利用曲线定义或方程</strong>：将点的坐标代入曲线标准方程，或利用定义中的长度关系，得到关于 $a,b,c$ 的方程。
+4. <strong>消元求离心率</strong>：利用 $b^2=a^2-c^2$（椭圆）或 $b^2=c^2-a^2$（双曲线）消去 $b$，建立 $a,c$ 的齐次方程，解出 $e=\frac{c}{a}$，并根据离心率范围取舍。
+5. <strong>选择题可灵活运用</strong>：等腰直角三角形、含 $30^\circ$（或 $60^\circ$）的直角三角形等特殊三角形，可直接推得边长比例，快速得到关于 $a,c$ 的关系。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>坐标与线段长度的符号</strong>：焦点在 $x$ 轴时，$F_2(c,0)$，向量 $\overrightarrow{F_2P}$ 的坐标容易写反；计算 $P$ 的坐标时，要注意方向与角度所在的象限。</li>
+<li><strong>误用垂足点</strong>：本题中直角为 $\angle F_1PF_2$ 还是 $\angle PF_2F_1$？需仔细区分垂直关系的位置，不同位置的直角对应不同的边长计算。</li>
+<li><strong>椭圆离心率的范围</strong>：求得 $e$ 的方程后可能有多解，务必用 $0&lt;e&lt;1$ 检验并舍去超出范围的根。</li>
+<li><strong>混淆椭圆与双曲线的焦点三角形性质</strong>：椭圆中 $|PF_1|+|PF_2|=2a$，双曲线中 $||PF_1|-|PF_2||=2a$；将垂直关系与和（或差）联立时不可混用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2018·全国卷·文·11（椭圆离心率）</h3>
+<p><strong>题目</strong><br />
+已知 $F_1$，$F_2$ 是椭圆 $C$ 的两个焦点，$P$ 是 $C$ 上的一点，若 $PF_1 \perp PF_2$，且 $\angle PF_2F_1=60^\circ$，则 $C$ 的离心率为 $\ (\ \ )$<br />
+A. $1-\frac{\sqrt{3}}{2}$　B. $2-\sqrt{3}$　C. $\frac{\sqrt{3}-1}{2}$　D. $\sqrt{3}-1$</p>
+<p><strong>思路</strong><br />
+由垂直和 $60^\circ$ 角确定 $\triangle PF_1F_2$ 的形状，用已知边 $|F_1F_2|=2c$ 表示出 $P$ 的坐标，代入椭圆方程建立关于 $a,c$ 的方程，化简求 $e$。</p>
+<p><strong>步骤</strong><br />
+1. 设椭圆方程为 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \ (a&gt;b&gt;0)$，焦点 $F_1(-c,0)$，$F_2(c,0)$。<br />
+2. 在 $\triangle PF_1F_2$ 中，$PF_1 \perp PF_2$ 且 $\angle PF_2F_1=60^\circ$，则 $\triangle PF_1F_2$ 为直角三角形，斜边 $|F_1F_2|=2c$。<br />
+   $|PF_2| = |F_1F_2|\cos 60^\circ = 2c \times \frac{1}{2}=c$，<br />
+   $|PF_1| = |F_1F_2|\sin 60^\circ = 2c \times \frac{\sqrt{3}}{2}=\sqrt{3}c$。<br />
+3. 由 $F_2(c,0)$ 出发，$P$ 在 $x$ 轴上方，$\angle PF_2F_1=60^\circ$ 表明 $\overrightarrow{F_2P}$ 与 $x$ 轴负方向夹角 $60^\circ$，故<br />
+   $$P!\left(c - |PF_2|\cos 60^\circ,\ |PF_2|\sin 60^\circ\right) = \left(c - \frac{c}{2},\ \frac{\sqrt{3}c}{2}\right) = \left(\frac{c}{2},\ \frac{\sqrt{3}c}{2}\right).$$<br />
+4. 将 $P$ 代入椭圆方程：<br />
+   $$\frac{(c/2)^2}{a^2} + \frac{(\sqrt{3}c/2)^2}{b^2}=1 \quad\Rightarrow\quad \frac{c^2}{4a^2} + \frac{3c^2}{4b^2}=1.$$<br />
+5. 利用 $b^2 = a^2-c^2$ 消去 $b$：<br />
+   $$\frac{c^2}{4a^2} + \frac{3c^2}{4(a^2-c^2)}=1.$$<br />
+   两边同乘 $4a^2(a^2-c^2)$：<br />
+   $$c^2(a^2-c^2) + 3c^2a^2 = 4a^2(a^2-c^2).$$<br />
+   整理得 $4a^4 - 8a^2c^2 + 4c^4=0$，除以 $4$ 并用 $e=\frac{c}{a}$ 代入：<br />
+   $$a^4 - 2a^2c^2 + c^4=0 \ \Rightarrow\ 1 - 2e^2 + e^4=0 \ \Rightarrow\ (e^2-1)^2=0 \quad(\text{但此题应为 } e^4-8e^2+4=0).$$<br />
+   重新审慎推导：从 $\frac{c^2}{4a^2} + \frac{3c^2}{4(a^2-c^2)}=1$ 出发，设 $e^2=\frac{c^2}{a^2}$，则<br />
+   $$\frac{e^2}{4} + \frac{3e^2}{4(1-e^2)}=1 \ \Rightarrow\ e^2(1-e^2) + 3e^2 = 4(1-e^2).$$<br />
+   即 $e^2 - e^4 + 3e^2 = 4 - 4e^2 \ \Rightarrow\ -e^4 + 8e^2 - 4 = 0$，即 $e^4 - 8e^2 + 4 = 0$。<br />
+6. 解二次方程 $t^2 - 8t + 4=0$（令 $t=e^2$），得 $t=4 \pm 2\sqrt{3}$。<br />
+   因 $e \in (0,1)$，$t&lt;1$，故 $t=4-2\sqrt{3}=\left(\sqrt{3}-1\right)^2$，于是<br />
+   $$e = \sqrt{t} = \sqrt{3}-1.$$<br />
+   对应选项 D。</p>
+<p><strong>点评</strong><br />
+本题充分体现了垂直条件与直角三角形边角关系的结合，利用三角比直接求得 $P$ 坐标，再代入标准方程是通法。变式：若条件改为 $\angle F_1PF_2=60^\circ$ 且 $PF_1 \perp x$ 轴等，同样通过直角三角形的边或坐标入手，建立齐次方程求离心率。注意求解过程中对齐次方程的化简要细致，避免符号错误。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-11.html">2018-文-11</a>（2018 · 中） 根据椭圆焦点和垂直条件建立方程求解离心率。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">垂直关系</a></li>
+</ul>
+</div>
+</body>
+</html>

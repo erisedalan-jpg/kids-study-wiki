@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线截距</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线截距</h1><div class="review-mark" data-stem="直线截距"></div><div class="meta-card"><span><strong>考点</strong>直线截距</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：填空14</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直线截距式</strong>：形如 $x-2y-z=0$ 的直线，化为斜截式 $y=\frac{1}{2}x-\frac{z}{2}$ 后，$-\frac{z}{2}$ 即为该直线在 $y$ 轴上的<strong>截距</strong>。</li>
+<li><strong>截距的符号意义</strong>：截距可正可负，表示直线与 $y$ 轴交点的纵坐标。在目标函数 $z=ax+by$（$b \neq 0$）中，转化为 $y=-\frac{a}{b}x+\frac{z}{b}$，截距为 $\frac{z}{b}$，<strong>截距越大，$z$ 的值变化方向取决于 $b$ 的符号</strong>。如 $z=x-2y$，截距为 $-\frac{z}{2}$，截距越大 $z$ 越小；截距越小 $z$ 越大。</li>
+<li><strong>可行域与最优解</strong>：在约束条件（线性不等式组）构成的<strong>可行域</strong>（凸多边形）内，目标函数的最值必在可行域的<strong>顶点</strong>处取得。通过平移目标函数族直线，找出使截距最大或最小的顶点即可求得 $z$ 的范围。</li>
+<li><strong>适用条件</strong>：二元一次不等式组表示的封闭或半封闭区域，目标函数为线性函数 $z=Ax+By$（$A,B$ 为常数，$B\neq0$ 时用截距分析；$B=0$ 时直接化为 $x=\frac{z}{A}$，由可行域中 $x$ 的范围确定）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>画可行域</strong>：将每个约束条件化为等式画线，根据不等号定半平面，取交集得可行域，标出所有顶点坐标。</li>
+<li><strong>改写目标函数</strong>：将 $z=ax+by$（$b\neq0$）变形为 $y=-\frac{a}{b}x+\frac{z}{b}$，明确截距表达式 $d=\frac{z}{b}$，并理清 $z$ 与截距的单调关系（$b&gt;0$ 时截距越大 $z$ 越大；$b&lt;0$ 时截距越大 $z$ 越小）。</li>
+<li><strong>平移找最优截距</strong>：作一族平行直线 $y=-\frac{a}{b}x+d$，沿截距增大或减小方向平移，确定直线首次和末次接触可行域的顶点（或边界线），得到截距的极值点。</li>
+<li><strong>计算顶点并回代</strong>：将极值点的坐标代入目标函数，计算对应的 $z$ 值；若可行域无上界或下界，则相应最值为无穷（但通常题目为封闭区域或给出明确范围）。</li>
+<li><strong>写出取值范围</strong>：根据最大值和最小值写出 $z$ 的取值范围 $[z_{\min}, z_{\max}]$（含边界时取闭区间）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>截距与 $z$ 的单调性搞反</strong>：没有关注 $b$ 的负号。如 $z=x-2y$ 化为 $y=\frac{x}{2}-\frac{z}{2}$，截距是 $-\frac{z}{2}$，截距越大 $z$ 越小，易错认为截距越大 $z$ 越大。</li>
+<li><strong>直线平移方向错误</strong>：未根据 $z$ 与截距的关系正确判断平移方向，导致求出的最值颠倒。</li>
+<li><strong>顶点坐标求错</strong>：联立直线方程时计算失误，或忽略区域内某些顶点（如在边界交点上）。</li>
+<li><strong>忽略不等号是否带等号</strong>：若约束条件不含等号（如 $&gt;$），可行域不包含边界，最值可能取不到，最终范围应写开区间。但多数真题带等号，写成闭区间即可。</li>
+<li><strong>目标函数中 $y$ 的系数为零的特殊情况</strong>：$z=ax$ 时不能用截距分析，需直接根据可行域的 $x$ 范围确定。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：设 $x,y$ 满足约束条件 $\begin{cases} x-y \ge -1 \ x+y \le 3 \ x \ge 0 \ y \ge 0 \end{cases}$，则 $z=x-2y$ 的取值范围为____。</p>
+<p><strong>思路</strong>：目标函数 $z=x-2y$ 中含有 $-2y$，化为截距式分析。变形为 $y=\frac{x}{2}-\frac{z}{2}$，截距 $d=-\frac{z}{2}$，则 $z=-2d$，截距越大 $z$ 越小。在约束条件构成的可行域内，平移斜率为 $\frac12$ 的直线族，找出截距的最大与最小点，即可得 $z$ 的范围。</p>
+<p><strong>步骤</strong>：
+1. 作出可行域：不等式组 $\begin{cases} y \le x+1 \ y \le 3-x \ x \ge 0 \ y \ge 0 \end{cases}$，四条边界围成一个四边形。联立交点：$(0,0)$、$(0,1)$、$(1,2)$、$(3,0)$。可行域为以这四点为顶点的凸四边形区域（含边界）。
+2. 写出目标函数截距形式：$z=x-2y \Rightarrow y=\frac{1}{2}x-\frac{z}{2}$，截距 $d=-\frac{z}{2}$。$z$ 与 $d$ 负相关：$d$ 最大时 $z$ 最小，$d$ 最小时 $z$ 最大。
+3. 平移找极值点：作平行直线 $y=\frac{1}{2}x+d$，平移使得截距 $d$ 尽可能大和尽可能小。当直线经过点 $B(1,2)$ 时，$d = 2 - \frac{1}{2}\times1 = 1.5$ 为最大（直线在 $y$ 轴截距最大）。当直线经过点 $A(3,0)$ 时，$d = 0 - \frac{1}{2}\times3 = -1.5$ 为最小。
+4. 计算 $z$ 的极值：在 $A(3,0)$ 处 $z=3-0=3$；在 $B(1,2)$ 处 $z=1-4=-3$。
+5. 得出取值范围：$z \in [-3,3]$。</p>
+<p><strong>点评/变式</strong>：本题核心是利用截距的几何意义将代数目标转化为图形上的平移操作。注意 $z$ 的系数为负时的反向关系是常见陷阱。变式：若目标函数变为 $z=2x+y$，则截距 $d=z$，截距越大 $z$ 越大，平移方向相反，在可行域同一顶点$(3,0)$处取得最大值$6$，在$(0,0)$处取得最小值 $0$。掌握这种系数符号判断法，任意线性目标函数皆可通过截距平移快速求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-14.html">2012-理-14</a>（2012 · 易） 本题给出线性约束条件，求目标函数z=x-2y的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1028-直线的截距.html">直线截距</a></li>
+</ul>
+</div>
+</body>
+</html>

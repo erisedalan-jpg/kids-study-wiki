@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数图象平移</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数图象平移</h1><div class="review-mark" data-stem="三角函数图象平移"></div><div class="meta-card"><span><strong>考点</strong>三角函数图象平移</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2009–2009</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>图象平移规律</strong>：将 $y=f(x)$ 的图象向左平移 $a$ 个单位得 $y=f(x+a)$，向右平移 $a$ 个单位得 $y=f(x-a)$。对于三角函数 $y=A\tan(\omega x+\varphi)$，平移时只对自变量 $x$ 进行加减，即向右平移 $\theta$ 个单位后变为 $y=A\tan[\omega(x-\theta)+\varphi]=A\tan(\omega x-\omega\theta+\varphi)$。</li>
+<li><strong>正切函数的周期性与重合条件</strong>：函数 $y=\tan(\omega x+\varphi_1)$ 与 $y=\tan(\omega x+\varphi_2)$ 的图象重合，当且仅当它们的相位差为周期的整数倍，即 $\varphi_1 = \varphi_2 + k\pi\ (k\in\mathbb{Z})$。这里 $\omega$ 相同，周期 $T=\dfrac{\pi}{\omega}$。</li>
+<li><strong>$\omega$ 的最小正值求法</strong>：由相位等式解出 $\omega$ 关于整数 $k$ 的表达式，结合 $\omega&gt;0$ 的限制，取使 $\omega$ 为最小正值的整数 $k$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出平移后的解析式</strong>：根据“左加右减”，把原函数中的 $x$ 替换为 $x \pm \Delta x$，化简得到平移后的具体表达式。</li>
+<li><strong>构造重合等式</strong>：令平移后的函数解析式与目标函数解析式相等，利用正切函数的周期性，得到相位差等于 $k\pi$ 的方程。</li>
+<li><strong>解出参数的范围表达式</strong>：整理方程，将所求参数（如 $\omega$）表示为整数 $k$ 的函数。</li>
+<li><strong>确定参数的最值</strong>：根据题目给出的参数范围（如 $\omega&gt;0$），选取合适的整数 $k$，求得参数的最小正值或相应取值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平移方向与符号混淆</strong>：向右平移 $\dfrac{\pi}{6}$ 个单位是对 $x$ 减去 $\dfrac{\pi}{6}$，常误写成 $x+\dfrac{\pi}{6}$；必须坚持“左加右减”且作用于 $x$ 本身。</li>
+<li><strong>漏写括号导致相位错误</strong>：平移时先提 $\omega$ 再减，即 $\tan[\omega(x-\theta)+\varphi]$，若误写成 $\tan(\omega x - \theta + \varphi)$ 会导致系数错误。</li>
+<li><strong>忽略周期性整数 $k$</strong>：正切函数周期为 $\dfrac{\pi}{\omega}$，图象重合的条件是相差 $k\pi$，而非 $2k\pi$。漏掉 $k\pi$ 会直接影响 $\omega$ 的解。</li>
+<li><strong>不注意参数范围</strong>：求得 $\omega$ 关于 $k$ 的表达式后，未结合 $\omega&gt;0$ 或其他限制条件盲目取 $k=0$，可能导致负值或被要求最小正值时选错 $k$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2009-文-09）：将函数 $y=\tan\left(\omega x+\dfrac{\pi}{4}\right)$（$\omega&gt;0$）的图象向右平移 $\dfrac{\pi}{6}$ 个单位长度后，与函数 $y=\tan\left(\omega x+\dfrac{\pi}{6}\right)$ 的图象重合，求 $\omega$ 的最小值。</p>
+<p><strong>思路</strong>：先依据平移规则写出新函数，再利用正切函数图象重合的周期性条件建立方程，最终解出 $\omega$ 并求最小正值。</p>
+<p><strong>步骤</strong>：
+向右平移 $\dfrac{\pi}{6}$ 个单位后，函数变为
+$$y=\tan\left[\omega\left(x-\frac{\pi}{6}\right)+\frac{\pi}{4}\right]=\tan\left(\omega x-\frac{\omega\pi}{6}+\frac{\pi}{4}\right).$$
+令其与 $y=\tan\left(\omega x+\dfrac{\pi}{6}\right)$ 重合，则存在整数 $k$ 使得
+$$-\frac{\omega\pi}{6}+\frac{\pi}{4}=\frac{\pi}{6}+k\pi.$$
+整理得 $$\frac{\omega\pi}{6}=\frac{\pi}{4}-\frac{\pi}{6}-k\pi=\frac{\pi}{12}-k\pi,$$
+所以 $$\omega=\frac{1}{2}-6k.$$
+由 $\omega&gt;0$，取 $k=0$ 得 $\omega=\dfrac12$；若 $k\leq -1$ 则 $\omega&gt;\dfrac12$。故 $\omega$ 的最小值为 $\dfrac12$。</p>
+<p><strong>点评/变式</strong>：本题核心在于利用“重合$\Leftrightarrow$相差整数倍周期”建立参数方程。变式可改为向左平移，或目标函数相位含参、求平移量等，均遵循相同逻辑。解题时注意区分正切与正弦/余弦的周期差异（正切周期为 $\pi/\omega$，而正弦/余弦为 $2\pi/\omega$），以防误用 $2k\pi$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2009-文-09.html">2009-文-09</a>（2009 · 中） 本题考查正切型函数图象的平移变换与周期性，利用平移后函数重合求参数ω的最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">三角函数图象平移</a></li>
+</ul>
+</div>
+</body>
+</html>

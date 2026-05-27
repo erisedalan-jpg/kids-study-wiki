@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>二倍角的余弦公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>二倍角的余弦公式</h1><div class="review-mark" data-stem="二倍角的余弦公式"></div><div class="meta-card"><span><strong>考点</strong>二倍角的余弦公式</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：2</li>
+<li>真题数：2；年份跨度：2013–2020</li>
+<li>出现题位：填空13 选择6</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>二倍角的余弦公式（核心三形式）</strong>
+  $$\cos 2\alpha = \cos^2 \alpha - \sin^2 \alpha$$
+  $$\cos 2\alpha = 2\cos^2 \alpha - 1$$
+  $$\cos 2\alpha = 1 - 2\sin^2 \alpha$$
+  以上公式对任意 $\alpha \in \mathbf{R}$ 均成立。</li>
+<li><strong>升幂公式与降幂公式</strong>
+  由二倍角的后两个形式反向得到：
+  $$1 + \cos 2\alpha = 2\cos^2 \alpha \quad\Rightarrow\quad \cos^2 \alpha = \frac{1 + \cos 2\alpha}{2}$$
+  $$1 - \cos 2\alpha = 2\sin^2 \alpha \quad\Rightarrow\quad \sin^2 \alpha = \frac{1 - \cos 2\alpha}{2}$$
+  这两个公式是实现三角恒等变形中“降次”与“升角”的核心工具。</li>
+<li><strong>适用条件</strong>
+  公式无需限定角的具体范围，但若涉及开方或符号选取（如 $\cos \alpha$ 从 $\cos^2 \alpha$ 开方），必须结合给定角的象限确定符号。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>已知单角的弦值求二倍角的余弦值</strong><br />
+   若已知 $\sin \alpha$，优先选用 $\cos 2\alpha = 1 - 2\sin^2 \alpha$；<br />
+   若已知 $\cos \alpha$，优先选用 $\cos 2\alpha = 2\cos^2 \alpha - 1$。<br />
+   这样可以一次代入直接得值，无需先求其他函数值。</li>
+<li><strong>已知二倍角弦值求单角余弦平方或相关组合</strong><br />
+   利用降幂公式将 $\cos^2 \theta$ 或 $\sin^2 \theta$ 转化为含 $\cos 2\theta$ 的表达式，再代入已知量。</li>
+<li><strong>角度不一致时的配凑思路</strong><br />
+   首先观察“所求角”与“已知角”的倍数关系或代数和关系。常用技巧：</li>
+<li>所求角的一半或两倍与已知角有直接联系，优先使用二倍角或降幂公式。</li>
+<li>结合诱导公式将 $2\alpha \pm \frac{\pi}{2}$、$\frac{\pi}{2} \pm \alpha$ 转化为已知单角或多倍角的弦值。
+   典型链路：$\cos^2(\alpha + \frac{\pi}{4}) = \frac{1 + \cos(2\alpha + \frac{\pi}{2})}{2} = \frac{1 - \sin 2\alpha}{2}$。</li>
+<li><strong>运算回路</strong><br />
+   若遇到平方、四次方等高次项，反复使用降幂公式或 $\sin^2 \alpha + \cos^2 \alpha = 1$ 降次，直到出现可直接代入的已知条件。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>公式选择错误</strong><br />
+  将 $\sin^2 \alpha = \frac{1 - \cos 2\alpha}{2}$ 与 $\cos^2 \alpha$ 的降幂形式混淆，导致分子符号颠倒。务必记住：$\sin^2$ 前为“减”，$\cos^2$ 前为“加”。</li>
+<li><strong>系数与分母遗漏</strong><br />
+  降幂公式时忘记除以 $2$，或在代入 $\cos 2\alpha = 1 - 2\sin^2 \alpha$ 时漏掉系数 $2$。</li>
+<li><strong>诱导公式误用</strong><br />
+  $\cos(2\alpha + \frac{\pi}{2}) = -\sin 2\alpha$，容易少掉负号或误记为 $+\sin 2\alpha$。建议结合函数名变化与象限符号双重验证。</li>
+<li><strong>忽略开方时的符号</strong><br />
+  由 $\cos^2 \theta = a$ 求 $\cos \theta$ 时，若题目没有给出角的象限，则 $\cos \theta = \pm \sqrt{a}$，不可直接舍去负号。</li>
+<li><strong>对标准形式的变形不敏感</strong><br />
+  比如见到 $1 + \cos 2\alpha$ 要立即联想到 $2\cos^2 \alpha$，见到 $1 - \cos 2\alpha$ 要联想到 $2\sin^2 \alpha$，避免在简单题上绕远路。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目1（2020年文数）</h3>
+<p><strong>题目</strong> 已知 $\sin x = -\dfrac{2}{3}$，求 $\cos 2x$。<br />
+<strong>思路</strong> 已知 $\sin x$ 直接求 $\cos 2x$，首选 $\cos 2x = 1 - 2\sin^2 x$，避免涉及 $\cos x$ 的符号讨论。<br />
+<strong>步骤</strong><br />
+$$\cos 2x = 1 - 2\sin^2 x = 1 - 2 \times \left(-\frac{2}{3}\right)^2 = 1 - 2 \times \frac{4}{9} = 1 - \frac{8}{9} = \frac{1}{9}$$
+<strong>点评/变式</strong> 本题为基础题，体现“公式选择决定运算量”的思想。若先用 $\cos^2 x = 1 - \sin^2 x$ 再代 $\cos 2x = 2\cos^2 x - 1$，也能得解，但多一步求 $\cos^2 x$ 且易在正负号上犹豫。变式训练：若改为已知 $\cos x = \frac{1}{3}$，则优先用 $\cos 2x = 2\cos^2 x - 1$。</p>
+<h3>题目2（2013年文数）</h3>
+<p><strong>题目</strong> 已知 $\sin 2\alpha = \dfrac{2}{3}$，求 $\cos^2\left(\alpha + \dfrac{\pi}{4}\right)$。<br />
+<strong>思路</strong> 所求式子为余弦的平方，且角度为 $\alpha + \frac{\pi}{4}$，自然想到降幂公式 $\cos^2 \theta = \frac{1 + \cos 2\theta}{2}$，此时新角 $2\left(\alpha + \frac{\pi}{4}\right) = 2\alpha + \frac{\pi}{2}$，利用诱导公式 $\cos\left(2\alpha + \frac{\pi}{2}\right) = -\sin 2\alpha$ 即可与已知挂钩。<br />
+<strong>步骤</strong><br />
+$$
+\begin{aligned}
+\cos^2\left(\alpha + \frac{\pi}{4}\right) 
+&amp;= \frac{1 + \cos\left[2\left(\alpha + \frac{\pi}{4}\right)\right]}{2} \
+&amp;= \frac{1 + \cos\left(2\alpha + \frac{\pi}{2}\right)}{2} \
+&amp;= \frac{1 - \sin 2\alpha}{2} \
+&amp;= \frac{1 - \frac{2}{3}}{2} = \frac{\frac{1}{3}}{2} = \frac{1}{6}
+\end{aligned}
+$$
+<strong>点评/变式</strong> 此题核心是“观察角之间的关系”：所求角的两倍与已知角差一个 $\frac{\pi}{2}$。诱导公式 $\cos\left(\theta + \frac{\pi}{2}\right) = -\sin \theta$ 是高频考点。变式：若已知 $\cos 2\alpha = \frac{1}{3}$，求 $\sin^2\left(\alpha - \frac{\pi}{4}\right)$，可用类似思路：$\sin^2\left(\alpha - \frac{\pi}{4}\right) = \frac{1 - \cos\left(2\alpha - \frac{\pi}{2}\right)}{2} = \frac{1 - \sin 2\alpha}{2}$，需由 $\cos 2\alpha$ 先求 $\sin 2\alpha$（注意符号），进一步增加难度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-13.html">2020-文-13</a>（2020 · 易） 本题考查余弦的二倍角公式的直接应用，通过代入已知数值求解。</li>
+<li><a href="../../exam/数学/2013-文-06.html">2013-文-06</a>（2013 · 易） 本题已知 sin2α 的值，利用二倍角公式和诱导公式求 cos²(α+π/4) 的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">二倍角的余弦公式</a></li>
+</ul>
+</div>
+</body>
+</html>

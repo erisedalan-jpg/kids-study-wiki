@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆锥体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆锥体积</h1><div class="review-mark" data-stem="圆锥体积"></div><div class="meta-card"><span><strong>考点</strong>圆锥体积</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆锥体积公式</strong>：$V = \frac{1}{3}\pi r^2 h$，其中 $r$ 为底面半径，$h$ 为圆锥的高。</li>
+<li><strong>圆锥侧面积公式</strong>：$S_{\text{侧}} = \pi r l$，其中 $l$ 为母线长。</li>
+<li><strong>圆锥轴截面</strong>：过圆锥高线的截面，是等腰三角形，其顶角是母线间的夹角。</li>
+<li><strong>二面角的平面角作法</strong>：通常在棱上找一点，分别在两个半平面内作垂直于棱的射线。对于二面角 $P-AC-O$，若 $AC$ 为棱，常利用等腰三角形性质和线面垂直关系，构造垂线找到平面角，如本题中 $\angle PDO$。</li>
+<li><strong>勾股定理与特殊角</strong>：在直角三角形中，结合 $30^\circ, 45^\circ, 60^\circ$ 等角度的边长比例关系，可快速计算线段长度。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>求解圆锥及含二面角综合问题的通用步骤：
+1. <strong>画轴截面，定参数</strong>：画出圆锥的轴截面（如 $\triangle PAB$）。利用母线和轴截面的顶角，解直角三角形求出底面半径 $r$ 和高 $h$。
+2. <strong>计算基础量</strong>：将求得的 $r, h$ 代入体积、侧面积等公式，直接判断选项正误。
+3. <strong>处理二面角，抓平面角</strong>：
+   - 确定二面角的棱和两个半平面。
+   - 在底面内，从圆心 $O$ 向棱（如 $AC$）作垂线，垂足为 $D$，连接 $P$ 与 $D$。
+   - 证明 $\angle PDO$ 即为所求二面角的平面角（利用 $PO$ 垂直于底面，$AC$ 垂直于 $OD$，进而 $AC$ 垂直于平面 $POD$，得到 $AC \perp PD$）。
+4. <strong>解直角三角形求线段</strong>：在含平面角的直角三角形（如 $\triangle POD$）中，利用已知二面角大小和高，求出相关垂线段长度，再结合底面圆中的弦长公式或勾股定理，求出目标线段长。
+5. <strong>计算截面三角形面积</strong>：若求截面三角形（如 $\triangle PAC$）面积，需找准底和高。底为第4步求得的弦长，高为第3步中的 $PD$，利用 $S = \frac{1}{2} \times \text{底} \times \text{高}$ 计算。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆直径与半径</strong>：轴截面顶角对的是底面直径，求半径时需注意将直接得到的长度除以2或利用顶角的一半构造直角三角形。</li>
+<li><strong>错认二面角的平面角</strong>：不能凭感觉认定某个角就是平面角，必须严格按照“垂直于棱”的条件进行寻找或证明。本题中 $\angle PDO$ 是解题关键，易误认为是其他角。</li>
+<li><strong>计算侧面积误用公式</strong>：侧面积公式为 $\pi r l$，会错误地代入直径 $2r$ 进行计算，导致结果扩大为2倍。</li>
+<li><strong>线段长度计算跳步</strong>：在计算 $AD = \sqrt{OA^2 - OD^2}$ 时，容易因未先求出 $OD$ 而卡住。需遵循“先用二面角求 $OD$，再用勾股定理求 $AD$”的顺序。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h4><strong>题目</strong>简述</h4>
+<p>已知圆锥顶点 $P$，底面圆心 $O$，底面直径 $AB$，$\angle APB = 120^\circ$，母线 $PA=2$。点 $C$ 在底面圆周，且二面角 $P-AC-O$ 为 $45^\circ$。判断关于体积、侧面积、弦长 $AC$ 及 $\triangle PAC$ 面积的四个选项正误。</p>
+<h4><strong>思路</strong></h4>
+<ol>
+<li>从轴截面 $\triangle PAB$ 入手，利用顶角 $120^\circ$ 求出高 $h=OP$ 和半径 $r=OA$。</li>
+<li>代入体积、侧面积公式验证 A、B 选项。</li>
+<li>根据二面角 $P-AC-O$ 为 $45^\circ$ 的条件，作出并证明其平面角，求出圆心 $O$ 到 $AC$ 的距离。</li>
+<li>在底面圆中解直角三角形求弦长 $AC$，进而求 $\triangle PAC$ 的高和面积，判断 C、D 选项。</li>
+</ol>
+<h4><strong>步骤</strong></h4>
+<ol>
+<li><strong>求基本量</strong>：在轴截面中，由 $PA=2$，$\angle APO = 60^\circ$，得高 $OP = PA \cdot \cos 60^\circ = 1$，底面半径 $OA = PA \cdot \sin 60^\circ = \sqrt{3}$。</li>
+<li><strong>验证 A, B 选项</strong>：</li>
+<li>体积 $V = \frac{1}{3}\pi \cdot (\sqrt{3})^2 \cdot 1 = \pi$，A 正确。</li>
+<li>侧面积 $S = \pi \cdot \sqrt{3} \cdot 2 = 2\sqrt{3}\pi \neq 4\sqrt{3}\pi$，B 错误。</li>
+<li><strong>求弦长 $AC$</strong>：</li>
+<li>取 $AC$ 中点 $D$，连接 $OD, PD$。由 $OA=OC$ 得 $OD \perp AC$，又 $PO \perp$ 底面，故 $AC \perp PO$，从而 $AC \perp$ 平面 $POD$，所以 $AC \perp PD$。因此 $\angle PDO$ 是二面角 $P-AC-O$ 的平面角，为 $45^\circ$。</li>
+<li>在 $\triangle POD$ 中，$PO=1, \angle PDO=45^\circ$，则 $OD = PO = 1$。</li>
+<li>在底面 $\triangle OAD$ 中，$OA=\sqrt{3}, OD=1$，则 $AD = \sqrt{OA^2 - OD^2} = \sqrt{2}$。故 $AC = 2AD = 2\sqrt{2}$，C 正确。</li>
+<li><strong>验证 D 选项</strong>：</li>
+<li>在 $\triangle POD$ 中，$PD = \sqrt{PO^2 + OD^2} = \sqrt{2}$。</li>
+<li>$\triangle PAC$ 面积 $S = \frac{1}{2} \cdot AC \cdot PD = \frac{1}{2} \times 2\sqrt{2} \times \sqrt{2} = 2 \neq \sqrt{3}$，D 错误。</li>
+</ol>
+<h4><strong>点评/变式</strong></h4>
+<ul>
+<li><strong>核心考点</strong>：本题是立体几何中多知识点融合的典型，核心在于利用轴截面求基本量和利用二面角平面角进行线段转化。</li>
+<li><strong>解题思想</strong>：将空间问题平面化，先后在轴截面、含平面角的直角三角形、底面圆内三角形三个平面图形中解决问题。</li>
+<li><strong>变式思考</strong>：若将“二面角 $P-AC-O$ 为 $45^\circ$”改为“$\triangle PAC$ 的面积为 $\sqrt{3}$”，则求解方向变为先设未知棱长，用面积表示高，再利用共边关系反求圆的半径或母线，对逆向思维能力要求更高。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-09.html">2023-新课标Ⅱ-09</a>（2023 · 中） 考查圆锥的体积、侧面积计算及二面角的判断与应用。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/079-圆锥.html">圆锥体积</a></li>
+</ul>
+</div>
+</body>
+</html>

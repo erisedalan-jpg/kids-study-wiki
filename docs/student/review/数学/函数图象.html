@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数图象</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数图象</h1><div class="review-mark" data-stem="函数图象"></div><div class="meta-card"><span><strong>考点</strong>函数图象</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：18</li>
+<li>真题数：3；年份跨度：2008–2015</li>
+<li>出现题位：选择3 选择11 选择12</li>
+<li>难度分布：中1 难1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>函数图象的作图基础</strong>：确定定义域；分析奇偶性（对称性）、周期性；求单调区间与极值点；计算关键点（与坐标轴交点、极值点、端点、间断点）；判断渐近线（水平、垂直、斜渐近线）；综合描点连线。</li>
+<li><strong>基本变换</strong>：平移 $y=f(x)+k$、$y=f(x+h)$；对称 $y=-f(x)$、$y=f(-x)$、$y=-f(-x)$（关于原点）；翻折 $y=|f(x)|$（下翻上）、$y=f(|x|)$（去左、右翻左）；伸缩 $y=Af(\omega x)$。</li>
+<li><strong>数形结合核心思想</strong>：方程 $f(x)=g(x)$ 的解 → 两图象交点的横坐标；不等式 $f(x)&gt;g(x)$ → 图象的上下关系；$f(x)=k$ 的根个数 → 水平直线与 $y=f(x)$ 的交点个数；参数取值范围 → 图象变动趋势。</li>
+<li><strong>分段函数图象</strong>：逐段作常规函数图象，注意分界点的实心/空心，及整体连续性与可导性。</li>
+<li><strong>特殊函数模型</strong>：绝对值对数 $y=|\log_a x|$（$a&gt;1$）：在 $(0,1)$ 递减，$(1,+\infty)$ 递增，且满足若 $|\log_a x_1|=|\log_a x_2|$ 且 $x_1\neq x_2$，则 $x_1x_2=1$；对数与一次函数复合。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直接作图象（详细分析法）</strong>：按“定义域→奇偶性→单调性→极值点→特殊点→渐近线”顺序分析，如 $f(x)=\frac{1}{x}-x$，一眼看出奇函数，直接选原点对称。</li>
+<li><strong>排除法（选择题速解）</strong>：利用奇偶性排除对称性不符选项；取特殊点计算函数值排除范围不符选项；分析趋于无穷或间断点处的极限行为排除渐近趋势错误选项；特别对于动点类，只需算关键位置（起点、转角点、终点）的函数值及大致单调性即可锁定。</li>
+<li><strong>分段函数五步图解</strong>：①分段写出解析式并明确各段定义域；②分别画出各段图象；③分界点重算左右值以确定实心或空心；④用水平直线 $y=m$ 截图象，求交点横坐标及个数；⑤利用对称性或公式（如对数绝对值对称积为1）建立根的关系，转化为单变量求范围。</li>
+<li><strong>几何轨迹转函数式</strong>：将动点用角参数 $x$ 表示坐标，由几何关系写出距离和作为分段函数，逐段分析，注意转折角度（如 $x=\pi/4,\pi/2,3\pi/4$）的函数值及趋势。</li>
+<li><strong>对数（或指数）双方程处理</strong>：若 $f(a)=f(b)=f(c)=m$，作 $y=m$ 与 $f(x)$ 交点，根据图象确定每个交点的解析关系（如 $|\lg a|=|\lg b|\Rightarrow ab=1$），将目标量化为一个变量的函数求范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域直接变换</strong>：如 $f(x)=\lg x$ 与 $f(|x|)=\lg|x|$，后者定义域 $x\neq0$，而由 $\lg x$ 直接右翻左会漏掉 $x&lt;0$ 部分的单调性相反。</li>
+<li><strong>分段函数分界点处理不当</strong>：界点处函数值到底属于哪一段要对照原始条件；图象上的实心点与空心点画错，导致后续穿线交点个数错误。</li>
+<li><strong>对数绝对值对称性的误用</strong>：只适用于 $|\log_a x|=|\log_a y|$ 且 $x\neq y$ 时得 $xy=1$，必须是同底且同绝对值结构；如果不是纯绝对值而是带平移或伸缩，对称关系要重新推导。</li>
+<li><strong>数形结合时水平线范围误判</strong>：直线 $y=m$ 必须与图象有交点，$m$ 的取值范围取决于值域和单调段，忽略边界导致参数范围开闭错误。</li>
+<li><strong>图象变换顺序混淆</strong>：如 $y=\sin(2x+\pi/3)$ 先伸缩后平移与先平移后伸缩的单位长度不同，常导致相位错误。</li>
+<li><strong>动点问题角度与坐标转换错</strong>：角 $x$ 以哪条射线为始边、哪点为顶点要明确；在长方形边界运动时，相邻边的直线方程和坐标表示容易因象限不同而弄错符号，导致分段表达式出差错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2015·文·11）</h3>
+<p>长方形 $ABCD$，$AB=2$，$BC=1$，$O$ 是 $AB$ 中点，动点 $P$ 沿 $BC \to CD \to DA$ 运动，记 $\angle BOP = x$，将 $PA+PB$ 表示为 $x$ 的函数 $f(x)$，判断 $y=f(x)$ 的图象。</p>
+<p><strong>思路</strong><br />
+由 $P$ 位置分三段写出 $f(x)$ 的解析式，分析每一段上的单调性与关键点（转折角）的函数值，对比选项图象。若采用排除法，可先算 $x=0$ 时 $f(0)=2$，$x=\pi$ 时 $f(\pi)=2$，排除端点不等的选项；再算中间极值点 $x=\pi/4,\pi/2,3\pi/4$ 的值，看出先增后减再增再减的趋势。</p>
+<p><strong>步骤</strong><br />
+1. 建系：$O$ 为原点，$A(-1,0)$，$B(1,0)$，$C(1,1)$，$D(-1,1)$。射线 $OP$ 从 $OB$ 出发逆时针旋转，角 $x\in[0,\pi]$。
+2. 分段写函数：<br />
+   - $P$ 在 $BC$ 上：$x\in[0,\frac{\pi}{4}]$，$P(1,\tan x)$，$PB=\tan x$，$PA=\sqrt{(-1-1</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-11.html">2015-文-11</a>（2015 · 中） 动点P沿长方形边界运动，将PA+PB表示为角度x的函数，判断函数图象形状。</li>
+<li><a href="../../exam/数学/2010-文-12.html">2010-文-12</a>（2010 · 难） 本题考查分段函数与对数函数图象性质，利用数形结合求参数乘积的取值范围。</li>
+<li><a href="../../exam/数学/2008-理-03.html">2008-理-03</a>（2008 · 易） 函数f(x)=1/x-x的图象对称性判断，利用奇函数关于原点对称的性质选出正确选项。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/187-函数图象.html">函数图象</a></li>
+</ul>
+</div>
+</body>
+</html>

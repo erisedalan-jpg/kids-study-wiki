@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比例估计</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>比例估计</h1><div class="review-mark" data-stem="比例估计"></div><div class="meta-card"><span><strong>考点</strong>比例估计</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2010–2022</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>比例估计</strong>：用样本中具有某特征的个体数 $x$ 与样本容量 $n$ 之比 $\hat{p}=\frac{x}{n}$ 作为总体比例 $p$ 的点估计。在大样本简单随机抽样下，$\hat{p}$ 是 $p$ 的无偏估计，其方差近似为 $V(\hat{p})\approx\frac{p(1-p)}{n}$。  </li>
+<li><strong>比值估计（比估计）</strong>：若目标变量 $Y$ 与辅助变量 $X$ 近似满足 $Y\approx R X$，且总体总值 $X_{\text{总}}$ 已知，则 $Y$ 的总体总值可用样本比值 $\hat{R}=\frac{\bar{y}}{\bar{x}}$ 估计：$\hat{Y}<em _text_总="\text{总">{\text{总}} = \hat{R} \cdot X</em>$。该法在利用正比关系时能显著提高估计精度，属比例估计思想的重要推广。  }</li>
+<li><strong>独立性检验（卡方检验）</strong>：设 $2\times2$ 列联表，观测频数 $a,b,c,d$，检验两个分类变量是否独立。统计量<br />
+  $$K^{2}=\frac{n(ad-bc)^{2}}{(a+b)(c+d)(a+c)(b+d)} \quad (n=a+b+c+d)$$<br />
+  在原假设成立下近似服从 $\chi^{2}(1)$ 分布。给定显著性水平，若 $K^{2} \ge k_{\alpha}$，则拒绝独立性假设，认为两变量相关。常用临界值：$P(K^{2}\ge3.841)=0.05$，$P(K^{2}\ge6.635)=0.01$。  </li>
+<li><strong>抽样方法优化</strong>：若检验表明总体比例与某分层变量显著相关，则采用<strong>按该变量分层抽样</strong>可减小层内变异，使总体比例的估计更精确（相同样本量下方差更小）。  </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确目标</strong>：区分“估计总体比例”还是“估计总体总量”。前者直接用样本比例 $\hat{p}$，后者则可能需借助辅助变量的比估计。  </li>
+<li><strong>计算基本统计量</strong>：列频数表或按数据计算 $\sum x_i$、$\sum y_i$、$\sum x_i^2$、$\sum y_i^2$、$\sum x_i y_i$、$\bar{x}$、$\bar{y}$ 等，为后续公式代入做准备。  </li>
+<li><strong>比估计三步走</strong>：  </li>
+<li>验证正比（或近似线性过原点）关系的合理性；  </li>
+<li>计算样本比值 $\hat{R}=\frac{\bar{y}}{\bar{x}}$；  </li>
+<li>用 $\hat{Y}<em _text_总="\text{总">{\text{总}}=\hat{R}X</em>$ 得出总量估计值。  }</li>
+<li><strong>独立性检验与抽样建议</strong>：  </li>
+<li>由样本计算 $\hat{p}$ （如需要）；  </li>
+<li>代入卡方公式得 $K^{2}$；  </li>
+<li>与临界值比较（$99\%$ 把握对应 $6.635$）；  </li>
+<li>若拒绝独立，建议按该分类变量分层抽样，并说明理由（提高精度、降低费用等）。  </li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>公式混淆</strong>：把比估计的 $\hat{R}=\frac{\bar{y}}{\bar{x}}$ 写成 $\frac{\sum y_i}{\sum x_i}$（两者在简单随机抽样下等价，但概念不同；已知 $\bar{x},\bar{y}$ 直接用前者）。  </li>
+<li><strong>卡方计算细节</strong>：$(ad-bc)^2$ 易漏平方；分母各项为各行列合计和的乘积，不可错位；期望频数需均 $\ge5$，否则卡方近似不准确。  </li>
+<li><strong>相关系数与比估计</strong>：求相关系数时，分母为 $\sqrt{\sum(x_i-\bar{x})^2\sum(y_i-\bar{y})^2}$，易误用 $\sum x_i^2$ 未减 $\bar{x}^2$，导致结果偏离。  </li>
+<li><strong>下结论不完整</strong>：独立性检验不能只说“相关”或“不相关”，必须指明结论对应的把握（如“有99%把握认为需要帮助与性别有关”）。改进抽样方法时，要明确“按性别分层”而非笼统的“分层抽样”。  </li>
+<li><strong>忽略前提条件</strong>：比估计要求 $Y$ 与 $X$ 呈正比例（或高度正相关、截距可忽略），若散点图明显不过原点或相关性弱，比估计偏差会很大，此时不宜使用。  </li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1 — 2022年理19</h3>
+<p><strong>题目</strong>：10棵树木的根部横截面积 $x_i$ 与材积量 $y_i$ 数据，已知 $\sum x_i=0.6,\ \sum y_i=3.9$，$\sum x_i^2=0.038,\ \sum y_i^2=1.6158,\ \sum x_iy_i=0.2474$。<br />
+（1）估计平均一棵树的根部横截面积与平均材积量；<br />
+（2）求根部横截面积与材积量的样本相关系数（精确到0.01）；<br />
+（3）已知该林区所有树木的根部横截面积总和为 $186\text{m}^2$，材积量与其根部横截面积近似成正比，估计总材积量。  </p>
+<p><strong>思路</strong>：（1）直接求样本均值；（2）根据相关系数公式，先求各离差平方和与离差乘积和；（3）利用样本均值之比作为比例系数，乘以总横截面积即得总材积量的比估计。  </p>
+<p><strong>步骤</strong>：<br />
+- （1）$\bar{x}=0.6/10=0.06\text{m}^2$，$\bar{y}=3.9/10=0.39\text{m}^3$。<br />
+- （2）计算：<br />
+  $\sum(x_i-\bar{x})^2 = \sum x_i^2 - n\bar{x}^2 = 0.038 - 10\times0.06^2 = 0.002$；<br />
+  $\sum(y_i-\bar{y})^2 = 1.6158 - 10\times0.39^2 = 0.0948$；<br />
+  $\sum(x_i-\bar{x})(y_i-\bar{y}) = 0.2474 - 10\times0.06\times0.39 = 0.0134$。<br />
+  相关系数 $r = \frac{0.0134}{\sqrt{0.002 \times 0.0948}} \approx \frac{0.0134}{0.01377} \approx 0.97$。<br />
+- （3）比例系数 $\hat{R} = \frac{\bar{y}}{\bar{x}} = \frac{0.39}{0.06} = 6.5$，<br />
+  总材积量估计 $\hat{Y}_{\text{总}} = 6.5 \times 186 = 1209\text{m}^3$。  </p>
+<p><strong>点评/变式</strong>：本题完美演示了“利用正比关系进行比估计”的全流程。若题目未给正比条件，而需要检验线性关系，则需先做散点图或相关系数显著性检验（此处 $r\approx0.97$ 极强相关）。变式可以改为：给出置信区间，求总材积量的近似区间估计（需涉及比估计的方差公式）。  </p>
+<h3>代表题2 — 2010年理19</h3>
+<p><strong>题目</strong>：调查500位老年人，得到需要志愿者帮助的列联表：男性需要40人、不需要160人；女性需要30人、不需要270人。<br />
+（1）估计该地区老年人需要帮助的比例；<br />
+（2）能否有99%把握认为需要帮助与性别有关？<br />
+（3）根据（2）结论，提出更好的调查方法估计需要帮助的比例，并说明理由。  </p>
+<p><strong>思路</strong>：（1）样本比例直接计算；（2）计算卡方统计量，与6.635比较；（3）若拒绝独立，建议按性别分层抽样，可提高精度。  </p>
+<p><strong>步骤</strong>：<br />
+- （1）样本中需要帮助总人数 $40+30=70$，$\hat{p}=70/500=0.14$。<br />
+- （2）列联表变量：$a=40,b=30,c=160,d=270$，$n=500$。<br />
+  $ad-bc = 40\times270 - 30\times160 = 10800 - 4800 = 6000$，<br />
+  边际合计：$a+b=70,\ c+d=430,\ a+c=200,\ b+d=300$。<br />
+  $$K^{2} = \frac{500\times 6000^2}{70\times430\times200\times300} = \frac{500\times36\times10^6}{70\times430\times60000} $$<br />
+  简化计算：$70\times430=30100$，$30100\times60000=1.806\times10^9$；分子 $500\times3.6\times10^7=1.8\times10^{10}$，<br />
+  $K^{2} \approx \frac{1.8\times10^{10}}{1.806\times10^9} \approx 9.967$。<br />
+  因 $9.967 &gt; 6.635$，而 $P(K^{2}\ge6.635)=0.01$，故有99%把握认为需要帮助与性别有关。<br />
+- （3）既然与性别显著相关，可将老年人按性别分为两层，采用<strong>按性别分层抽样</strong>。这样能降低层内变异，使相同样本量下比例估计的方差更小，提高估计精度。  </p>
+<p><strong>点评/变式</strong>：独立性检验是比例估计中判断是否分层的关键前导。答题时务必写明临界值对应的概率和结论。变式可要求写出分层抽样的具体配额（比例分配或最优分配），或基于分层数据重新估计比例及其标准差。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-19.html">2022-理-19</a>（2022 · 中） 该题考查利用样本数据估计总体均值、计算样本相关系数以及利用比例关系估计总材积量。</li>
+<li><a href="../../exam/数学/2010-文-19.html">2010-文-19</a>（2010 · 中） 本题考查独立性检验与比例估计，基于列联表进行假设检验并评价调查方法。</li>
+<li><a href="../../exam/数学/2010-理-19.html">2010-理-19</a>（2010 · 中） 本题通过2×2列联表数据，考查独立性检验和总体比例估计，并引出抽样方法改进。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1208-比例估计.html">比例估计</a></li>
+</ul>
+</div>
+</body>
+</html>

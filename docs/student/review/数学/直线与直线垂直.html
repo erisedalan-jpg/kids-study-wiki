@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与直线垂直</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与直线垂直</h1><div class="review-mark" data-stem="直线与直线垂直"></div><div class="meta-card"><span><strong>考点</strong>直线与直线垂直</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>异面直线垂直的定义</strong>：如果两条异面直线所成的角是直角，那么这两条异面直线互相垂直。</li>
+<li><strong>线面垂直的性质定理</strong>：如果一条直线垂直于一个平面，那么这条直线垂直于平面内的任意一条直线。这是证明线线垂直的核心工具。</li>
+<li><strong>线面垂直的判定定理</strong>（与线线垂直的转化）：一条直线与一个平面内的两条相交直线都垂直，则该直线与此平面垂直。</li>
+<li><strong>勾股定理的逆定理</strong>：在三角形中，若两边的平方和等于第三边的平方，则该三角形为直角三角形，可用于证明共面直线的垂直。</li>
+<li><strong>向量法</strong>：设直线$l_1,l_2$的方向向量分别为$\vec{a},\vec{b}$，则$l_1 \perp l_2 \iff \vec{a} \cdot \vec{b}=0$。在可以方便建系的图形中，向量法是证明异面直线垂直的通法。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>几何法证明线线垂直（核心转化）</strong>：欲证$l_1 \perp l_2$，若两线共面可直接用勾股定理或平面几何性质；若为异面直线，则常将其中一条直线置于另一条直线的垂面内，即证明$l_2$垂直于$l_1$所在的某个平面$\alpha$，则$l_2 \perp \alpha \Rightarrow l_2 \perp l_1$。确定垂面的关键是找到与目标直线垂直的两条相交直线。</li>
+<li><strong>向量法/坐标法</strong>：  </li>
+<li>步骤一：根据几何体的特征（如直棱柱、正棱锥等）建立空间直角坐标系，写出相关点的坐标。  </li>
+<li>步骤二：求出目标两条直线的方向向量。  </li>
+<li>步骤三：计算两方向向量的数量积。若数量积为$0$，则两直线垂直。</li>
+<li><strong>边长关系的逆推</strong>：当几何体给出大量相等或倍分关系时，可通过设边长，计算出相关线段的长度，在目标三角形中验证勾股定理，从而得到垂直关系。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆判定与性质</strong>：直接将需要的线线垂直当作已知条件去证明线面垂直，而题目恰恰要求先证线线垂直，导致循环论证。应先明确证明逻辑：是通过线面垂直的性质得到线线垂直，还是先证线面垂直。</li>
+<li><strong>建系后点坐标求解错误</strong>：对空间直角坐标系原点及坐标轴的选择不当，导致关键点的坐标含有未知参数或表达复杂，增加计算负担或出错。尤其在直三棱柱底面不是直角三角形的条件下，需要利用已知的等腰或边长关系准确写出坐标。</li>
+<li><strong>方向向量找错</strong>：用向量法证明异面直线垂直时，把直线的方向向量错写为线段起终点坐标差的反向或其他无关向量。</li>
+<li><strong>忽略异面垂直与相交垂直的区别</strong>：证明过程中未明确说明两条直线是否共面，对异面直线直接使用平面几何定理（如“直径所对圆周角为直角”）致误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：在直三棱柱$ABC-A_1B_1C_1$中，$AC=BC=\frac{1}{2}AA_1$，$D$是棱$AA_1$的中点，且$DC_1 \perp BD$。证明：$DC_1 \perp BC$。</p>
+<p><strong>思路</strong>：要证异面直线$DC_1 \perp BC$，由直三棱柱侧棱垂直于底面可知$CC_1 \perp$平面$ABC$，进而$CC_1 \perp BC$。若能证$BC$垂直于平面$ACC_1A_1$内的两条相交直线，则$BC \perp$平面$ACC_1A_1$，从而$BC \perp DC_1$。分析已知的$DC_1 \perp BD$，结合边长关系计算可得$\triangle ACC_1$与$\triangle ADC$的边角关系，或利用线面垂直转化。</p>
+<p><strong>步骤</strong>：
+- <strong>法一（几何综合法）</strong>：<br />
+  1. 在直三棱柱中，$CC_1 \perp$底面$ABC$，$BC \subset$底面$ABC \Rightarrow CC_1 \perp BC$。<br />
+  2. 由$AC=BC$及$D$为中点，设$AC=BC=a$，则$AA_1=CC_1=2a$。计算可得$AD=a$，$CD=\sqrt{AC^2+AD^2}=\sqrt{2}a$；同理$C_1D=\sqrt{CC_1^2+C_1D^2}$需在侧面展开，注意到侧面$ACC_1A_1$为矩形，连接$CD$与$C_1D$。在$\triangle BCD$中或因建系不方便，可利用已知垂直$DC_1 \perp BD$。连接$B_1C$，证明$BC \perp$平面$ACC_1A_1$。由底面$\triangle ABC$中$AC=BC$，又$D$是$AA_1$中点，需严格导出$BC \perp AC$？题目并未给出底面是直角的条件。此处需要借助$DC_1 \perp BD$反推。<br />
+  3. 另法：取$A_1B_1$中点$E$，连接$C_1E,DE,BD$。由直棱柱及等腰底面知$C_1E \perp A_1B_1$，进而$C_1E \perp$平面$ABB_1A_1$，得$C_1E \perp BD$。又已知$DC_1 \perp BD$，且$C_1E \cap DC_1=C_1$，故$BD \perp$平面$C_1DE$，从而$BD \perp DE$。在矩形$ABB_1A_1$中用勾股定理可证$DE \perp A_1D$，逐步推得侧棱与底面边长的关系符合等腰直角特征，最终可得$AC \perp BC$。由$BC \perp CC_1$，$BC \perp AC$，$AC \cap CC_1=C$，得$BC \perp$平面$ACC_1A_1$，所以$BC \perp DC_1$。</p>
+<ul>
+<li><strong>法二（向量坐标法）</strong>：  </li>
+<li>由题意知$AC=BC$，为计算方便，设底面$\triangle ABC$为等腰直角三角形吗？不可先入为主。根据已知垂直关系推得$AC \perp BC$后，以$C$为原点，$CA,CB,CC_1$所在直线为$x,y,z$轴建系。  </li>
+<li>设$CA=CB=1$，则$CC_1=2$，点$C(0,0,0), B(0,1,0), C_1(0,0,2), D(1,0,1)$。  </li>
+<li>$\overrightarrow{DC_1}=(-1,0,1), \overrightarrow{BC}=(0,-1,0)$。计算数量积：$\overrightarrow{DC_1} \cdot \overrightarrow{BC} =(-1)\times0+0\times(-1)+1\times0=0$，故$DC_1 \perp BC$。</li>
+</ul>
+<p><strong>点评/变式</strong>：
+- 证明异面垂直，几何法的本质是“以面为桥”，将线线垂直转化为线面垂直来证，关键是寻找或构造恰当的垂面。本题构造平面$ACC_1A_1$作为$BC$的垂面是突破口。
+- 向量坐标法在直棱柱、底面易建系的题中几乎万无一失，但务必先确保底面两条互相垂直的轴，若底面没有现成的垂直，需先进行几何铺垫或灵活选取基底，不能盲目建系。
+- 变式：若题设为“直三棱柱底面为正三角形，侧棱与底面边长相等，求体对角线是否与侧面的对角线垂直”，可用同样思路——选好底面垂直关系建系或用三垂定理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-19.html">2012-理-19</a>（2012 · 中） 该题考查直三棱柱中证明线线垂直，并求解二面角的平面角大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1020-直线与直线垂直.html">直线与直线垂直</a></li>
+</ul>
+</div>
+</body>
+</html>

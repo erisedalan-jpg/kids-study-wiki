@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的几何性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆的几何性质</h1><div class="review-mark" data-stem="圆的几何性质"></div><div class="meta-card"><span><strong>考点</strong>圆的几何性质</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2013–2023</li>
+<li>出现题位：选择10 选择11</li>
+<li>难度分布：中1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>圆的定义与方程</strong><br />
+  平面上到定点距离等于定长的点的集合。<br />
+  标准方程：圆心 $(a,b)$，半径 $r$，$(x-a)^2+(y-b)^2=r^2$。<br />
+  一般方程：$x^2+y^2+Dx+Ey+F=0$（满足 $D^2+E^2-4F&gt;0$）。</p>
+</li>
+<li>
+<p><strong>直径式圆的方程</strong><br />
+  以 $A(x_1,y_1)$、$B(x_2,y_2)$ 为直径端点的圆方程为 $(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$，圆心 $\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)$，半径 $r=\frac{|AB|}{2}$。</p>
+</li>
+<li>
+<p><strong>直径所对的圆周角</strong><br />
+  圆上任意一点与直径端点连线所成的角为直角；反之，若一动点对定线段张角为直角，则该点在该线段为直径的圆上。</p>
+</li>
+<li>
+<p><strong>直线与圆的位置关系</strong><br />
+  圆心到直线的距离 $d$ 与半径 $r$ 比较：<br />
+  相切 $\Leftrightarrow d=r$，相交 $\Leftrightarrow d<r$，相离 $\Leftrightarrow d>r$。</p>
+</li>
+<li>
+<p><strong>抛物线的定义与常用性质</strong>  </p>
+</li>
+<li>抛物线 $y^2=2px\ (p&gt;0)$ 上一点到焦点 $F(\frac p2,0)$ 的距离等于该点到准线 $x=-\frac p2$ 的距离。  </li>
+<li>
+<p>以抛物线焦点弦为直径的圆必与准线相切；反之，以焦半径为直径的圆常与坐标轴或某定直线相切，需结合几何条件判定。</p>
+</li>
+<li>
+<p><strong>梯形中位线性质</strong><br />
+  梯形的中位线平行于两底，且等于两底和的一半，是解决圆锥曲线中“中点距离”问题的常用工具。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>将圆的条件转化为垂直或距离</strong>  </li>
+<li>条件“以 $AB$ 为直径的圆过点 $P$” $\Leftrightarrow$ $PA \perp PB$ $\Leftrightarrow$ $\overrightarrow{PA}\cdot\overrightarrow{PB}=0$ 或斜率乘积为 $-1$（需讨论斜率不存在）。  </li>
+<li>
+<p>条件“以 $AB$ 为直径的圆与直线 $l$ 相切” $\Leftrightarrow$ 弦 $AB$ 的中点 $M$ 到 $l$ 的距离 $d=\frac 12|AB|$。</p>
+</li>
+<li>
+<p><strong>利用圆锥曲线定义转化长度</strong><br />
+   抛物线中的距离问题，优先使用定义将抛物线上的点到焦点的距离转化为到准线的距离，从而避免复杂坐标运算。</p>
+</li>
+<li>
+<p><strong>构建中点、中位线</strong><br />
+   在焦点弦问题中，通过取弦的中点，并分别向准线作垂线段，利用梯形中位线定理建立中点到底边的距离与两腰（焦半径）长度的关系。</p>
+</li>
+<li>
+<p><strong>坐标法与几何法结合</strong>  </p>
+</li>
+<li>若图形具备显著的垂直、相切等几何特征，优先用几何性质（如射影定理、相似三角形、勾股定理）直接建立参数方程。  </li>
+<li>
+<p>涉及具体坐标、弦长计算时，再联立方程使用弦长公式 $|AB|=\sqrt{1+k^2}|x_1-x_2|$ 或焦半径公式。</p>
+</li>
+<li>
+<p><strong>破解含参数的圆过定点问题</strong>  </p>
+</li>
+<li>设出动点坐标，写出以该动点与焦点为直径的圆的方程（或用直径式），代入定点坐标得出关系式，再结合曲线方程消元求解参数。或直接用“直径对直角”得到垂直关系，利用斜率或向量坐标运算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略抛物线开口方向</strong>：既定 $y^2=2px\ (p&gt;0)$ 焦点为 $(\frac p2,0)$，准线 $x=-\frac p2$，计算时切勿将符号写反，导致距离表达式出错。</li>
+<li><strong>使用直径式圆方程时的符号</strong>：$(x-x_1)(x-x_2)+(y-y_1)(y-y_2)=0$ 不要展开时漏项，或误将等号写成半径平方。</li>
+<li><strong>垂直条件转化不严谨</strong>：用斜率之积为 $-1$ 时未考虑斜率不存在的情况（如2013题中 $MF$ 可能与 $x$ 轴垂直，但实际这里 $M$ 不在该位置），建议优先使用向量点积为零更稳妥。</li>
+<li><strong>混淆“相切”与“过点”</strong>：“圆与直线相切”是 $d=r$；“圆过某点”是该点满足圆的方程，即点在圆上，此时该点与直径端点连线垂直。不能混用。</li>
+<li><strong>误用梯形中位线</strong>：只有当三条线互相平行（或均垂直于同一直线）时才能构造梯形，必须保证所作垂线段均垂直于准线，且中位线也垂直于准线。</li>
+<li><strong>企图通过解交点硬算</strong>：2013题若设 $M$ 坐标，联立圆方程和抛物线方程会很繁琐，且易产生高次方程，应优先挖掘“以 $MF$ 为直径的圆过定点”的几何意义（直角）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2023年新课标Ⅱ卷 第10题</h3>
+<p><strong>题目</strong>：设 $O$ 为原点，直线 $y=\sqrt{3}(x-1)$ 过抛物线 $C: y^2=2px\ (p&gt;0)$ 的焦点，且与 $C$ 交于 $M,N$ 两点，$l$ 为 $C$ 的准线。判断选项正误：<br />
+A. $p=2$<br />
+B. $|MN|=\frac{8}{3}$<br />
+C. 以 $MN$ 为直径的圆与 $l$ 相切<br />
+D. $\triangle OMN$ 为等腰三角形  </p>
+<p><strong>思路</strong>：<br />
+由直线过焦点求 $p$；用焦点弦弦长公式或联立求 $|MN|$；利用抛物线定义与梯形中位线证明圆与准线相切；计算 $O$ 到直线距离并与三角形边长比较判断等腰。</p>
+<p><strong>步骤</strong>：<br />
+1. 直线 $y=\sqrt{3}(x-1)$ 过焦点，焦点坐标 $(1,0)$，故 $\frac p2=1\Rightarrow p=2$，A正确。<br />
+2. 抛物线 $y^2=4x$。联立 $\begin{cases} y=\sqrt{3}(x-1) \ y^2=4x \end{cases}$，消 $y$ 得 $3(x-1)^2=4x$，整理得 $3x^2-10x+3=0$，解得 $x_1=3, x_2=\frac13$。<br />
+   $\therefore |MN|=x_1+x_2+p=3+\frac13+2=\frac{16}{3}$，B错误。<br />
+3. 设 $MN$ 中点为 $A$，$M,N,A$ 到准线 $l:x=-1$ 的距离分别为 $d_1,d_2,d$。<br />
+   由抛物线定义 $d_1=|MF|, d_2=|NF|$。<br />
+   $d=\frac{d_1+d_2}{2}=\frac{|MF|+|NF|}{2}=\frac{|MN|}{2}$，圆心到准线距离等于半径，故圆与 $l$ 相切，C正确。<br />
+4. $O$ 到直线 $y=\sqrt{3}(x-1)$ 即 $\sqrt{3}x-y-\sqrt{3}=0$ 的距离 $d_O=\frac{|\sqrt{3}|}{2}=\frac{\sqrt{3}}{2}$，并非 $|OM|$ 或 $|ON|$ 的一半等，经计算 $|OM|\neq|ON|$ 且不等于底边长，D错误。</p>
+<p><strong>点评/变式</strong>：<br />
+该题系统考查了基于抛物线定义的圆相切问题。C选项结论可推广：对于任何抛物线，以其焦点弦为直径的圆都与准线相切。证明核心是梯形中位线。变式：改为椭圆或双曲线，是否仍有类似性质？(椭圆/双曲线无“焦准距相等”定义，结论一般不成立，改为以焦点弦为直径的圆与相应准线的位置关系需利用第二定义比值 $e$)。</p>
+<h3>代表题2：2013年全国大纲卷 理科 第11题</h3>
+<p><strong>题目</strong>：抛物线 $C: y^2=2px\ (p&gt;0)$ 焦点为 $F$，点 $M$ 在 $C$ 上，$|MF|=5$。若以 $MF$ 为直径的圆过点 $(0,2)$，则 $C$ 的方程为？<br />
+选项给出 $y^2=4x$ 或 $y^2=8x$ 或 $y^2=16x$ 等组合。</p>
+<p><strong>思路</strong>：<br />
+“以 $MF$ 为直径的圆过点 $A(0,2)$” $\Rightarrow$ $MA\perp FA$。结合 $|MF|=5$，可利用焦点弦性质及几何关系（射影定理或勾股定理）求 $p$，避免设 $M$ 坐标硬解。</p>
+<p><strong>步骤</strong>：<br />
+1. 焦点 $F(\frac p2,0)$，设 $A(0,2)$。由条件 $AF\perp AM$。<br />
+2. 在 ${\rm Rt}\triangle MAF$ 中，斜边 $|MF|=5$，直角边 $|AF|=\sqrt{(\frac p2)^2+4}$。由抛物线定义，$M$ 到准线距离为 $5$，设 $M$ 横坐标为 $x_M$，则 $x_M+\frac p2=5$ $\Rightarrow x_M=5-\frac p2$，即 $M$ 到 $y$ 轴距离为 $5-\frac p2$。<br />
+3. 利用直角三角形的射影定理或勾股定理：过 $F$ 作 $FA$ 垂线或直接使用 $A$ 点处直角关系。简便方法：以 $MF$ 为直径的圆的圆心为 $MF$ 中点，由圆过 $A$ 知圆心到 $A$ 距离等于 $|MF|/2$，或直接用直径式。<br />
+   用垂直更直接：$k_{FA}\cdot k_{MA}=-1$，但可用向量或几何。<br />
+   这里给出几何法：由 $AF\perp AM$，则 $A$ 在以 $MF$ 为直径的圆上，圆心 $N(\frac{x_M+\frac p2}{2}, \frac{y_M}{2})$，半径 $r=\frac{5}{2}$。圆过原点另一层可用，但本题直接利用点在圆上：<br />
+   $|AF|^2+|AM|^2=|MF|^2$ 即 $\left(\frac p2\right)^2+4 + |AM|^2 =25$。<br />
+   又由抛物线定义，$M$ 到 $F$ 距离 $5$，$M$ 到 $A$ 距离结合 $M$ 坐标 $(5-\frac p2, \pm\sqrt{2p(5-\frac p2)})$ 会很乱。更好的几何性质：以焦半径为直径的圆与 $y$ 轴相切？本题是圆过点 $(0,2)$，观察坐标，若 $p=2$，则 $F(1,0)$，$|MF|=5$，$M$ 的横坐标为 $4$，代入 $y^2=8\Rightarrow y=\pm 2\sqrt{2}$，并非恰好。应考虑利用 $\triangle AOF$ 与 $\triangle AMF$ 的相似。<br />
+   实际上，设 $M$ 在 $x$ 轴上方，由 $A(0,2)$，$AF\perp AM$，$\therefore \angle OAF+\angle MAx=90^\circ$ 等。注意到 $|AF|$ 为定值，可借助射影定理：在 ${\rm Rt}\triangle AOF$ 中，$|OF|=\frac p2$，$|OA|=2$，$|AF|$ 已知式。但最好构建 $M$ 的纵坐标。用斜率垂直：$k_{FA}=\frac{2-0}{0-\frac p2}=-\frac{4}{p}$，则 $k_{MA}=\frac{p}{4}$，直线 $MA$ 方程 $y-2=\frac p4 (x-0)$，即 $y=\frac p4 x+2$。而 $M$ 在抛物线 $y^2=2px$ 上，且 $M$ 到 $F$ 距离为 $5$，联立求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-10.html">2023-新课标Ⅱ-10</a>（2023 · 中） 抛物线焦点与弦长计算，结合圆与等腰三角形的几何性质判断选项正误</li>
+<li><a href="../../exam/数学/2013-理-11.html">2013-理-11</a>（2013 · 难） 已知抛物线焦点弦及圆的性质，求抛物线方程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/777-圆的几何性质.html">圆的几何性质</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>含参数不等式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>含参数不等式</h1><div class="review-mark" data-stem="含参数不等式"></div><div class="meta-card"><span><strong>考点</strong>含参数不等式</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>不等式</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：不等式</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答24</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>绝对值不等式的核心思想</strong><br />
+   含绝对值的不等式 $|f(x)| \gtrless g(x)$ 本质上是分段函数的表达，必须通过“<strong>零点分段</strong>”去掉绝对值符号，转化为若干不等式组求解。零点即为使绝对值内部表达式等于 $0$ 的 $x$ 值。</p>
+</li>
+<li>
+<p><strong>零点分段法操作要点</strong><br />
+   对于形如 $|x-a|$ 的绝对值，零点为 $x=a$。以零点为界将数轴分段：</p>
+</li>
+<li>当 $x \geq a$ 时，$|x-a| = x-a$；</li>
+<li>
+<p>当 $x &lt; a$（或 $x \le a$，依据不等式等号归属而定）时，$|x-a| = -(x-a)=a-x$。<br />
+   每一段上将原不等式化为无绝对值的一次或二次不等式，并<strong>与分段区间取交集</strong>作为该段解集，最终各段解集的并集即为原不等式解集。</p>
+</li>
+<li>
+<p><strong>含参数不等式的逆向求参</strong><br />
+   已知含参绝对值不等式的解集求参数，通常利用解集的端点与参数的关系建立方程。关键是分段求解过程中必须严格保持<strong>参数与自变量的相对大小关系</strong>，结合解集形式反推参数值。若某段不等式组无解（集合为空），则排除该段对应参数情况。</p>
+</li>
+<li>
+<p><strong>适用条件与核心公式</strong></p>
+</li>
+<li>$|x-a|$ 的几何意义：数轴上点 $x$ 到点 $a$ 的距离。</li>
+<li>$|x-a| &gt; c\ (c&gt;0) \iff x &gt; a+c$ 或 $x &lt; a-c$；</li>
+<li>$|x-a| &lt; c\ (c&gt;0) \iff a-c &lt; x &lt; a+c$。<br />
+   但当绝对值与一次项混合时（如 $|x-a| + 3x \le 0$），几何意义不便直接使用，必须使用分段讨论。</li>
+</ol>
+<hr />
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>定零点，分区间</strong><br />
+   令绝对值内部表达式 $=0$，解出零点 $x_0$。以 $x_0$ 将全体实数分为 $(-\infty, x_0)$ 和 $[x_0, +\infty)$（等号可任意归入一侧，但需保证不重不漏）。</p>
+</li>
+<li>
+<p><strong>分段去绝对值，化为一元不等式（组）</strong><br />
+   在每个区间上，依据 $x$ 与 $x_0$ 的大小关系写出 $|x-a|$ 的等价表达式，将原不等式转化为不含绝对值的不等式，并与该区间的约束条件联立，形成不等式组：
+   $$
+   \begin{cases}
+   x \geq a \
+   \text{化简后的不等式}
+   \end{cases}
+   \quad \text{和} \quad
+   \begin{cases}
+   x &lt; a \
+   \text{化简后的不等式}
+   \end{cases}
+   $$</p>
+</li>
+<li>
+<p><strong>求解不等式组，整合结果</strong><br />
+   分别解出每个不等式组。注意不等式组的解是该组内所有不等式的交集。将各组的解集取并集，即得原不等式的解集。</p>
+</li>
+<li>
+<p><strong>已知解集求参数：利用端点对应</strong><br />
+   若题目给出最终解集为 ${x \mid x \le x_0}$（或单侧区间），则：</p>
+</li>
+<li>分段讨论后某一侧区间可能无解（矛盾），应从另一侧得到解集；</li>
+<li>将得到的解集形式（如 $x \le -\dfrac{a}{2}$）与已知解集端点对比，建立方程 $-\dfrac{a}{2} = -1$，解出参数，并<strong>检验是否符合前提条件</strong>（如 $a&gt;0$）。</li>
+</ol>
+<hr />
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忽略分段区间与不等式解的取交</strong><br />
+  分段去掉绝对值后解出的 $x$ 范围，必须与该段的定义区间取交集。例如在 $x \ge a$ 段解得 $x \le \dfrac{a}{4}$，若 $a &gt; 0$ 则交集为空，不能直接写 $x \le \dfrac{a}{4}$。</p>
+</li>
+<li>
+<p><strong>绝对值等号归属混乱</strong><br />
+  零点处函数值为 $0$，等号可放在任意一侧，但不能两边都不放或两边都放（重复）。通常采用“右侧取等，左侧不取”：$x \ge a$ 和 $x &lt; a$，保证不重不漏。归属不影响最终解集，但影响书写规范。</p>
+</li>
+<li>
+<p><strong>忽略参数的正负与大小关系</strong><br />
+  参数 $a&gt;0$ 等条件在分段求解时必须参与不等式的等价变形，例如判断 $\dfrac{a}{4}$ 与 $a$ 的大小，否则可能导致错误地保留空集。切记在参数背景下全程关注参数的取值范围。</p>
+</li>
+<li>
+<p><strong>直接套用几何意义导致错误</strong><br />
+  $|x-a|+3x \le 0$ 不是标准的两边绝对值或纯绝对值不等式，不能直接用“距离”公式求解，必须老老实实分段讨论。</p>
+</li>
+<li>
+<p><strong>解集端点代入不检验</strong><br />
+  由端点相等求出参数值后，必须代回原不等式验证解集是否完全一致，避免增根。</p>
+</li>
+</ul>
+<hr />
+<h2>代表题精讲</h2>
+<h3>代表题：2011·理·24</h3>
+<p><strong>题目</strong>：设函数 $f(x)=|x-a|+3x$，其中 $a&gt;0$。<br />
+（Ⅰ）当 $a=1$ 时，求不等式 $f(x) \ge 3x+2$ 的解集；<br />
+（Ⅱ）若不等式 $f(x) \le 0$ 的解集为 ${x \mid x \le -1}$，求 $a$ 的值。</p>
+<p><strong>思路</strong>：<br />
+（Ⅰ）代入 $a=1$ 化简得 $|x-1| \ge 2$，直接利用绝对值几何意义或两边平方求解。<br />
+（Ⅱ）由 $f(x) \le 0$ 得 $|x-a|+3x \le 0$。零点为 $x=a$，分 $x \ge a$ 和 $x &lt; a$ 两段去绝对值，每种情况解出 $x$ 的范围并取交集。最后利用已知解集为 $x \le -1$ 建立等量关系求 $a$，并验证 $a&gt;0$ 是否符合。</p>
+<p><strong>步骤</strong>：<br />
+<strong>（Ⅰ）</strong> 当 $a=1$ 时，$f(x) = |x-1|+3x$，不等式 $f(x) \ge 3x+2$ 化为：
+$$
+|x-1|+3x \ge 3x+2 \implies |x-1| \ge 2.
+$$
+由绝对值不等式得 $x-1 \ge 2$ 或 $x-1 \le -2$，解得 $x \ge 3$ 或 $x \le -1$。<br />
+$\therefore$ 解集为 ${x \mid x \ge 3 \text{ 或 } x \le -1}$。</p>
+<p><strong>（Ⅱ）</strong> 由 $f(x) \le 0$ 得：
+$$
+|x-a| + 3x \le 0.
+$$
+<strong>分段讨论</strong>：</p>
+<ul>
+<li>
+<p><strong>当 $x \ge a$ 时</strong>，$|x-a| = x-a$，原不等式化为：
+  $$
+  x-a + 3x \le 0 \implies 4x \le a \implies x \le \frac{a}{4}.
+  $$
+  此时需同时满足 $x \ge a$ 和 $x \le \dfrac{a}{4}$。因为 $a&gt;0$ 时 $a &gt; \dfrac{a}{4}$，所以不存在 $x$ 同时满足两者，故此段解集为 $\varnothing$。</p>
+</li>
+<li>
+<p><strong>当 $x &lt; a$ 时</strong>，$|x-a| = a-x$，原不等式化为：
+  $$
+  a-x + 3x \le 0 \implies 2x \le -a \implies x \le -\frac{a}{2}.
+  $$
+  还需满足 $x &lt; a$。由于 $a&gt;0$，$-\dfrac{a}{2} &lt; 0 &lt; a$，故 $x \le -\dfrac{a}{2}$ 已隐含 $x &lt; a$。此段解集为 $x \le -\dfrac{a}{2}$。</p>
+</li>
+</ul>
+<p>综合两段，原不等式 $f(x) \le 0$ 的解集为 ${x \mid x \le -\dfrac{a}{2}}$。<br />
+已知解集为 ${x \mid x \le -1}$，故有：
+$$
+-\frac{a}{2} = -1 \implies a = 2.
+$$
+$a=2&gt;0$，符合题意。</p>
+<p><strong>点评/变式</strong>：<br />
+本题（Ⅱ）的“陷阱”在于 $x \ge a$ 这一支得到空集。很多考生会不加验证直接写出 $x \le \dfrac{a}{4}$ 作为潜在解集，从而无法得出唯一参数。解题的关键在于严格求解<strong>不等式组</strong>，并始终不忘比较参数与分段端点的相对大小。<br />
+<strong>变式训练</strong>：若将条件改为 $f(x) \le 0$ 的解集为 ${x \mid -3 \le x \le -1}$，则不可能成立，因为绝对值加一次函数形成的解集必然是单侧射线。你能分析原因吗？</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-24.html">2011-理-24</a>（2011 · 中） 求解含参数绝对值不等式及根据解集求参数，涉及分类讨论思想。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/758-含参数不等式.html">含参数不等式</a></li>
+</ul>
+</div>
+</body>
+</html>

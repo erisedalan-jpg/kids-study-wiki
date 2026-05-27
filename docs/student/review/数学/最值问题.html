@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最值问题</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>最值问题</h1><div class="review-mark" data-stem="最值问题"></div><div class="meta-card"><span><strong>考点</strong>最值问题</span><span><strong>权重</strong>31</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：31</li>
+<li>真题数：5；年份跨度：2011–2022</li>
+<li>出现题位：填空13 填空14 选择6 选择9 选择10</li>
+<li>难度分布：中3 易2</li>
+</ul>
+<h2>知识精要</h2>
+<p>高中阶段的最值问题，核心是建立目标函数并利用工具求其最大值或最小值。常见类型与原理如下：</p>
+<ol>
+<li><strong>函数最值的一般原理</strong>  </li>
+<li>连续函数在闭区间上必存在最值，最值只可能在极值点、区间端点或不可导点取得。  </li>
+<li>
+<p>导数法：解 $f'(x)=0$ 得驻点，比较驻点、不可导点和区间端点的函数值。</p>
+</li>
+<li>
+<p><strong>常见函数模型的最值策略</strong>  </p>
+</li>
+<li>二次函数 $f(x)=ax^2+bx+c$：配方或利用对称轴 $x=-\frac{b}{2a}$，结合开口方向。  </li>
+<li>对勾函数、分式函数：可换元或利用基本不等式（注意“一正二定三相等”）。  </li>
+<li>
+<p>高次多项式或超越函数：求导研究单调性。</p>
+</li>
+<li>
+<p><strong>线性规划中的最值</strong>  </p>
+</li>
+<li>目标函数 $z=ax+by$ 可化为 $y=-\frac{a}{b}x+\frac{z}{b}$。  </li>
+<li>平移直线，$b&gt;0$ 时截距最大对应 $z$ 最大；$b&lt;0$ 时截距最小对应 $z$ 最大。  </li>
+<li>
+<p>可行域由约束条件围成，最优解通常位于可行域顶点。</p>
+</li>
+<li>
+<p><strong>空间几何体的最值</strong>  </p>
+</li>
+<li>球内接几何体常利用对称性：底面积最大时取正方形/圆，高取极端位置（如垂直于底面过球心的线段）。  </li>
+<li>
+<p>建立体积或表面积关于某变量（高、半径、角）的函数，再用导数或不等式求最值，务必明确变量范围（如 $0&lt;h&lt;R$）。</p>
+</li>
+<li>
+<p><strong>算法与程序框图中的最值</strong>  </p>
+</li>
+<li>循环结构中通过比较保留最大值、最小值，理解 $A$、$B$ 赋值逻辑。</li>
+</ol>
+<hr />
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>函数与导数最值</strong>  </li>
+<li>① 从实际问题中抽象出目标函数 $f(x)$，明确定义域；  </li>
+<li>② 求 $f'(x)$，解 $f'(x)=0$，找到驻点及不可导点；  </li>
+<li>③ 将驻点、不可导点、区间端点代入比较，取最大/最小值；  </li>
+<li>
+<p>④ 实际问题要验证所得点是否合理，并写明确切值。</p>
+</li>
+<li>
+<p><strong>线性规划</strong>  </p>
+</li>
+<li>① 将约束条件转化为直线方程，画出可行域（实线含等号，虚线不含）；  </li>
+<li>② 改写目标函数为直线 $y=kx+m$ 形式，明确 $m$ 与 $z$ 的关系；  </li>
+<li>③ 平移直线，观察直线与可行域的交点，找出使截距取极值的边界顶点；  </li>
+<li>
+<p>④ 联立该顶点所在的两条边界方程，解出坐标代入目标式得最值。</p>
+</li>
+<li>
+<p><strong>几何体最值</strong>  </p>
+</li>
+<li>① 选取描述几何状态的关键变量（如棱锥的高 $h$、截面半径 $r$，角 $\theta$ 等）；  </li>
+<li>② 用约束条件把体积/面积表示为该变量的函数（如 $V=\frac{1}{3}S(h)\cdot h$）；  </li>
+<li>③ 用导数或不等式求函数最值，注意变量自然限制（如 $0&lt;h&lt;R$，$0&lt;\theta&lt;\frac{\pi}{2}$）；  </li>
+<li>
+<p>④ 有时可直接用几何极端位置（如顶点在垂直于底面的直径端点时）省去求导。</p>
+</li>
+<li>
+<p><strong>算法框图最值</strong>  </p>
+</li>
+<li>按框图流程模拟若干步，理解 $A$ 存最大值、$B$ 存最小值的比较过程。</li>
+</ol>
+<hr />
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域</strong>：用导数求最值时，只顾驻点，忽视区间端点或不可导点，导致漏掉真正最值。  </li>
+<li><strong>线性规划的截距陷阱</strong>：当目标函数中 $y$ 的系数为负时，截距最大 $z$ 反而最小，反之亦然；未注意等号是否可取，造成可行域扩大或缩小。  </li>
+<li><strong>几何变量范围失误</strong>：建函数时，未限定高小于半径、角度非负等，求出的“最值”超出物理可能。  </li>
+<li><strong>基本不等式“等号”不验证</strong>：用 $\sqrt{ab}\le\frac{a+b}{2}$ 求最值时，未检验等号成立条件，导致错误答案。  </li>
+<li><strong>体积公式缺 $\frac{1}{3}$</strong>：椎体、圆锥体积计算漏乘 $\frac{1}{3}$，致使后续函数全错。  </li>
+<li><strong>三棱锥体积最值中的底面混淆</strong>：以 $\triangle AOB$ 为底时，高为 $C$ 到平面 $AOB$ 的距离，最大值出现在过球心且垂直于底面的直径端点，常错选其他位置。  </li>
+<li><strong>算法框图的理解偏差</strong>：错误地将 $A$ 当最小值，$B$ 当最大值；未注意循环终止条件。</li>
+</ul>
+<hr />
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022理-09）</h3>
+<p>球 $O$ 半径为 $1$，四棱锥顶点为 $O$，底面四个顶点均在球面上，求体积最大时棱锥的高。<br />
+<strong>思路</strong><br />
+以球心为顶点，底面为内接于球的小圆上的四边形。取底面四边形为正方形时面积最大。设高为 $h$（球心到底面距离），则底面所在截面圆半径 $r=\sqrt{1-h^2}$，正方形边长 $\sqrt{2}r$，面积 $S=2(1-h^2)$，体积 $V=\frac{1}{3}Sh=\frac{2}{3}h(1-h^2)$，$h\in(0,1)$。用导数求极值。<br />
+<strong>步骤</strong><br />
+1. 建函数：$V(h)=\frac{2}{3}(h-h^3)$，定义域 $0&lt;h&lt;1$。<br />
+2. 求导：$V'(h)=\frac{2}{3}(1-3h^2)$。<br />
+3. 令 $V'(h)=0$ 得 $h=\frac{\sqrt{3}}{3}$（负值舍去）。<br />
+4. 当 $0&lt;h&lt;\frac{\sqrt{3}}{3}$ 时 $V'&gt;0$，当 $h&gt;\frac{\sqrt{3}}{3}$ 时 $V'&lt;0$，故 $h=\frac{\sqrt{3}}{3}$ 时 $V$ 最大。<br />
+<strong>点评/变式</strong><br />
+关键是把多变量几何问题转化为单变量函数，并利用圆内接四边形中正方形面积最大这一性质。变式：若顶点为球面上一点，底面过球心，则高与底面半径的关系不同，需重新建模。</p>
+<h3><strong>题目</strong>（2018文-14）</h3>
+<p>已知 $x,y$ 满足线性约束条件 $\begin{cases} ... \end{cases}$，求 $z=x+y$ 的最大值。<br />
+<strong>思路</strong><br />
+这是典型的线性规划题，先作出可行域，再将目标函数化为直线 $y=-x+z$，平移该直线使截距 $z$ 最大即可。<br />
+<strong>步骤</strong><br />
+1. 由约束不等式组画出可行域（多边形区域）。<br />
+2. 目标函数改写为 $y=-x+z$，$z$ 即直线在 $y$ 轴上的截距。<br />
+3. 平移直线 $y=-x$，当直线过可行域最右上方的顶点 $A$ 时 $z$ 最大。<br />
+4. 联立过 $A$ 的两边界方程解得 $A(5,4)$。<br />
+5. 代入 $z=5+4=9$，得最大值 $9$。<br />
+<strong>点评/变式</strong><br />
+作图务必准确，关注斜率关系。若目标函数变为 $z=2x-y$，由于 $y$ 系数为负，截距最大时 $z$ 反而最小，此为易错点。最优解也可在整条线段上取得。</p>
+<h3><strong>题目</strong>（2015文-10）</h3>
+<p>已知球 $O$ 上两点 $A,B$ 满足 $\angle AOB=90^\circ$，$C$ 为球面上动点，三棱锥 $O-ABC$ 体积最大值为 $36$，求球表面积。<br />
+<strong>思路</strong><br />
+取 $\triangle AOB$ 为底面（等腰直角三角形），则体积取决于 $C$ 到底面的高。当 $C$ 位于垂直于底面 $AOB$</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-09.html">2022-理-09</a>（2022 · 中） 本题通过建立四棱锥体积表达式，利用基本不等式求体积最大值及对应的高。</li>
+<li><a href="../../exam/数学/2018-文-14.html">2018-文-14</a>（2018 · 易） 本题考查简单线性规划，已知线性约束条件求目标函数的最大值。</li>
+<li><a href="../../exam/数学/2015-文-10.html">2015-文-10</a>（2015 · 中） 当三棱锥体积最大时，利用几何关系求球半径，进而计算球的表面积。</li>
+<li><a href="../../exam/数学/2012-理-06.html">2012-理-06</a>（2012 · 中） 考查程序框图的理解与应用，通过循环和条件判断统计数列中的最大值与最小值。</li>
+<li><a href="../../exam/数学/2011-理-13.html">2011-理-13</a>（2011 · 易） 该题考查线性规划中由约束条件求目标函数的最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/913-最值问题.html">最值问题</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>准线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>准线</h1><div class="review-mark" data-stem="准线"></div><div class="meta-card"><span><strong>考点</strong>准线</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线的定义</strong>：平面内与一个定点 $F$（焦点）和一条定直线 $l$（准线）距离相等的点的轨迹。焦点到准线的距离称为焦准距，记为 $p\ (p&gt;0)$。</li>
+<li><strong>标准方程与准线</strong>（顶点在原点）：</li>
+<li>开口向右：$y^2=2px$，焦点 $F(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$；</li>
+<li>开口向左：$y^2=-2px$，准线 $x=\frac{p}{2}$；</li>
+<li>开口向上：$x^2=2py$，准线 $y=-\frac{p}{2}$；</li>
+<li>开口向下：$x^2=-2py$，准线 $y=\frac{p}{2}$。</li>
+<li><strong>通径</strong>：过焦点且垂直于对称轴的弦称为抛物线的通径，长度为 $2p$。小题中可直接使用 $|AB|=2p$ 建立方程。</li>
+<li><strong>焦半径性质</strong>：抛物线上任意点到焦点的距离等于该点到准线的距离，这是抛物线最核心的几何特征。</li>
+<li><strong>焦点—准线距离</strong>：焦点到准线的距离恰好为 $p$。准线与对称轴垂直，且与过焦点且垂直于对称轴的弦（通径）平行，这两条平行线间的距离亦为 $p$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设标准方程，引入参数 $p$</strong>：根据题意（或默认）明确对称轴与开口方向，设出抛物线方程（如 $y^2=2px$），使焦点、准线坐标均由 $p$ 表示。</li>
+<li><strong>识别“通径”场景</strong>：只要题目出现“过焦点且与对称轴垂直的弦”，直接对应通径长 $2p$，免除联立方程。</li>
+<li><strong>由弦长反求 $p$</strong>：如 $|AB|=m$，则 $2p=m$，求出 $p$ 即可确定所有几何量（焦点、准线位置）。</li>
+<li><strong>转化为距离与面积</strong>：涉及准线上动点或定点构成的三角形面积时，观察底边所在直线与准线的关系。底边通常为通径，所在直线与准线平行，距离正好为 $p$。利用 $S=\frac{1}{2}\times$ 底 $\times$ 高直接计算。</li>
+<li><strong>画图辅助</strong>：快速画出抛物线、焦点、准线、通径及目标点 $P$，将抽象条件转化为具体几何长度（多为 $p$ 或 $2p$ 的倍数）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆 $p$ 与 $2p$</strong>：通径长为 $2p$，焦点到准线距离为 $p$。常见错误：由 $|AB|=12$ 误得 $p=12$，导致面积错选 72。正确应为 $2p=12 \Rightarrow p=6$。</li>
+<li><strong>准线方程符号反号</strong>：如 $y^2=2px$ 的准线是 $x=-\frac{p}{2}$，忘记负号会误写为 $x=\frac{p}{2}$，进而影响点 $P$ 的坐标和距离计算。</li>
+<li><strong>三角形的高找不准</strong>：$P$ 在准线上，$\triangle ABP$ 以 $AB$ 为底时，高为点 $P$ 到直线 $AB$ 的距离。因为 $AB \perp$ 对称轴且过焦点，准线平行于 $AB$，所以高等于焦点到准线的距离 $p$，而不是点 $P$ 到焦点的距离或其他线段长。</li>
+<li><strong>忽视图形的对称性</strong>：无论抛物线开口向左还是向右，只要题目未限定，设 $y^2=2px$ 不影响通径长、焦点到准线距离等绝对长度，但需保持准线在焦点相反一侧，避免方向判断错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·全国卷文9）<br />
+已知直线 $l$ 过抛物线 $C$ 的焦点，且与 $C$ 的对称轴垂直．$l$ 与 $C$ 交于 $A,B$ 两点，$|AB|=12$，$P$ 为 $C$ 的准线上一点，则 $\triangle ABP$ 的面积为（ ）<br />
+A.18　　B.24　　C.36　　D.48  </p>
+<p><strong>思路</strong><br />
+“过焦点且与对称轴垂直”说明 $AB$ 是通径，其长 $|AB|=2p=12$，得 $p=6$。准线与焦点分居顶点两侧，平行于 $AB$，故点 $P$ 到直线 $AB$ 的距离恒等于焦点到准线的距离 $p=6$。$\triangle ABP$ 的面积可直接用 $\frac{1}{2}\times$ 底 $|AB|$ $\times$ 高 $p$ 求得。</p>
+<p><strong>步骤</strong><br />
+1. 设抛物线方程为 $y^2=2px\ (p&gt;0)$，则焦点 $F(\frac{p}{2},0)$，对称轴为 $x$ 轴，准线为 $x=-\frac{p}{2}$。<br />
+2. 直线 $l$ 过焦点且垂直于 $x$ 轴，方程为 $x=\frac{p}{2}$。将其代入抛物线，得 $y^2=p^2$，故 $A,B$ 纵坐标为 $\pm p$，弦长 $|AB|=2p=12$，解得 $p=6$。<br />
+3. 此时焦点为 $F(3,0)$，准线为 $x=-3$。$P$ 在准线上，设 $P(-3, y_0)$，$AB$ 所在直线为 $x=3$。点 $P$ 到 $AB$ 的距离 $d=|3-(-3)|=6=p$。<br />
+4. $\triangle ABP$ 的面积 $S=\frac{1}{2}\times |AB|\times d = \frac{1}{2}\times 12\times 6 = 36$，故选 C。  </p>
+<p><strong>点评/变式</strong><br />
+- 本题直接考查通径与准线的基础几何性质，无需复杂的代数运算，画出图形，标出 $p$ 和 $2p$ 即可口算答案。牢记：通径 $=2p$，焦点到准线距离 $=p$。<br />
+- 变式1：若 $P$ 为焦点，$AB$ 为准线上垂直于对称轴的弦，求 $\triangle ABP$ 的面积（仍为 $36$，对称互换）。<br />
+- 变式2：若点 $P$ 在抛物线上运动，求 $\triangle ABP$ 面积的最大值。此时可用焦点到准线转化，或设点坐标用距离公式，最值仍与 $p$ 相关。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-09.html">2011-文-09</a>（2011 · 中） 本题通过抛物线的几何性质求三角形面积，涉及焦点、准线及通径长度。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1165-准线.html">准线</a></li>
+</ul>
+</div>
+</body>
+</html>

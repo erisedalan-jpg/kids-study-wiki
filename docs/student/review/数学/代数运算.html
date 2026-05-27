@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代数运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>代数运算</h1><div class="review-mark" data-stem="代数运算"></div><div class="meta-card"><span><strong>考点</strong>代数运算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2015–2024</li>
+<li>出现题位：填空13 选择1</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数模的计算</strong>：若复数 $z = a + bi$（$a, b \in \mathbf{R}$），则其模长 $|z| = \sqrt{a^2 + b^2}$。此为代数运算中复数领域的基础核心。</li>
+<li><strong>函数值的代入运算</strong>：若函数 $f(x)$ 的定义明确，求参数或函数值时，将已知点坐标或变量值直接代入解析式中，转化为方程（组）求解。这是函数与方程思想的直接体现。</li>
+<li><strong>实数运算的根本</strong>：涉及幂运算、四则运算时，务必遵循先乘方、再乘除、后加减的顺序，并注意符号的准确性。代数运算的根基在于对算理的精确执行。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确运算对象的结构</strong>：遇到复数先分离实部与虚部；遇到函数先看解析式的构成（如多项式、分式等）。</li>
+<li><strong>代入已知条件</strong>：将题目给定的数值（如实部、虚部，或函数过的点）直接代入相应的公式或解析式中。</li>
+<li><strong>建立等量关系</strong>：通过代入，将题目的文字或几何条件转化为纯粹的代数方程。</li>
+<li><strong>精确化简求解</strong>：严格按照运算规则进行计算。如计算 $|1-i|$ 时，先平方再开方：$\sqrt{1^2 + (-1)^2}$；解方程 $-a+2=4$ 时，注意移项变号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>复数模与绝对值的混淆</strong>：切莫将 $|z|$ 等同于实数绝对值去直接去掉符号。必须牢记 $|z| = \sqrt{a^2 + b^2}$，结果是实数。</li>
+<li><strong>代入时的符号错误</strong>：如将形如 $f(-1)$ 代入 $-2x$ 时，极易因负号丢失或叠加错误，导致正负性反转。</li>
+<li><strong>运算跳步导致失分</strong>：求解如 $4 = a(-1)^3 - 2(-1)$ 此类算式时，建议分步计算幂次和乘法，再整理方程，避免一步到位产生的计算事故。</li>
+<li><strong>忽略定义域</strong>：虽然真题层面较简单，但在涉及根式、分式等复杂函数的代入时，需潜意识验证结果的合法性。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2024-新课标Ⅱ-01</h3>
+<ul>
+<li><strong>题目</strong>：已知 $z = 1 - i$，求 $|z|$ 的值。</li>
+<li><strong>思路</strong>：直接应用复数模长的定义公式，找出实部与虚部进行代数运算。</li>
+<li><strong>步骤</strong>：</li>
+<li>识别复数：$z = 1 - i$，实部 $a=1$，虚部 $b=-1$。</li>
+<li>套用模长公式：$|z| = \sqrt{a^2 + b^2}$。</li>
+<li>代入计算：$|z| = \sqrt{1^2 + (-1)^2} = \sqrt{1+1} = \sqrt{2}$。</li>
+<li><strong>点评/变式</strong>：
+  本题是对复数代数运算最直接的考查。核心在于公式记忆的准确度与平方运算的速度。变式训练可关注分子或分母含复数的模长计算，如 $\left|\dfrac{1+i}{1-i}\right|$，需先化简再求模。</li>
+</ul>
+<h3>2015-文-13</h3>
+<ul>
+<li><strong>题目</strong>：已知函数 $f(x) = ax^3 - 2x$ 的图象过点 $(-1, 4)$，求实数 $a$ 的值。</li>
+<li><strong>思路</strong>：利用点在函数图象上的几何性质，将点的横纵坐标对应代入解析式，构建关于 $a$ 的方程求解。</li>
+<li><strong>步骤</strong>：</li>
+<li>依题意，点 $(-1, 4)$ 满足函数关系，即当 $x=-1$ 时，$f(-1)=4$。</li>
+<li>将 $x=-1$ 代入函数式：$f(-1) = a(-1)^3 - 2(-1)$。</li>
+<li>计算代数式：$a(-1) + 2 = -a + 2$。</li>
+<li>建立并解方程：$-a + 2 = 4$，得 $-a = 2$，故 $a = -2$。</li>
+<li><strong>点评/变式</strong>：
+  核心在于代入后的指数运算与去括号法则。该题型常作为复杂函数或导数应用题的基元步骤出现。变式可引入奇偶性，如已知 $f(x) + g(x) = x^3$，其中 $f(x)$ 为奇函数，$g(x)$ 为偶函数，让考生通过赋值（如代入 $x=-1$）构造方程解出参数。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-01.html">2024-新课标Ⅱ-01</a>（2024 · 易） 该题考查复数的模的计算，直接代入模长公式求解。</li>
+<li><a href="../../exam/数学/2015-文-13.html">2015-文-13</a>（2015 · 易） 已知函数图象过点求参数值，利用点坐标满足函数解析式建立方程求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/649-代数运算.html">代数运算</a></li>
+</ul>
+</div>
+</body>
+</html>

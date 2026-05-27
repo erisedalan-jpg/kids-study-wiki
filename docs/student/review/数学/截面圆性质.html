@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>截面圆性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>截面圆性质</h1><div class="review-mark" data-stem="截面圆性质"></div><div class="meta-card"><span><strong>考点</strong>截面圆性质</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：5</li>
+<li>真题数：2；年份跨度：2009–2012</li>
+<li>出现题位：填空16 选择11</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>球的基本要素</strong>：设球心为 $O$，球半径为 $R$。</li>
+<li><strong>截面圆性质（核心）</strong>：</li>
+<li>用一个平面去截球，截面是圆面。截面圆的圆心 $O_1$ 是球心 $O$ 在截面上的投影。</li>
+<li>球心与截面圆圆心的连线 $OO_1$ 垂直于截面（即 $OO_1 \perp$ 平面）。</li>
+<li>设截面圆半径为 $r$，球心到截面的距离 $d = OO_1$，则必满足勾股关系：$$R^2 = r^2 + d^2$$</li>
+<li><strong>特殊截面（大圆）</strong>：当截面过球心 $O$ 时，$d=0$，此时截面圆半径最大 $(r=R)$，称为大圆。</li>
+<li><strong>几何体关联</strong>：</li>
+<li>球内接正三棱锥/正三角形：常需求解三角形外接圆半径作为 $r$。</li>
+<li>球的直径端点性质：若 $SC$ 为球的直径，则 $SC$ 的中点即为球心 $O$；连接直径一端点 $S$ 与球心 $O$ 并延长交球面于另一点 $C$，利用平行或比例关系可求几何体高。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>涉及球与截面圆的定量计算，通常按以下步骤操作：</p>
+<ol>
+<li><strong>定球心、圈截面</strong>：画出轴截面图或关键截面图，明确标注球心 $O$、截面圆圆心 $O_1$ 及球半径 $R$、截面圆半径 $r$。</li>
+<li><strong>用勾股串半径</strong>：在 $\triangle OO_1A$（$A$ 为截面圆与球的公共点）中，利用 $R^2 = r^2 + d^2$ 建立方程。</li>
+<li><strong>求距离（核心桥梁）</strong>：根据其它几何条件求出 $r$ 或 $d$。</li>
+<li>若截面过某线段中点或与某直线成固定夹角，常通过解三角形确定 $d$。</li>
+<li>若截面为内接三角形的外接圆，利用正弦定理 $a/\sin A = 2r$ 计算 $r$。</li>
+<li><strong>解算目标量</strong>：</li>
+<li>求球的表面积/体积：先求 $R$。</li>
+<li>求内接几何体的体积/高：利用球心到截面的距离 $d$ 及直径性质推导几何体的高线长度。例如：若 $SC$ 为直径，且 $C$ 在过截面圆且垂直于截面的直线上，则几何体的高 $h = 2d$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对 $d$ 的几何意义理解错</strong>：误将球心到截面圆上某点的距离当作 $d$。必须牢记 $d$ 是球心到截面圆<strong>圆心</strong>的垂线段长。</li>
+<li><strong>混淆 $R$、$r$、$d$ 的对应关系</strong>：在 $R^2 = r^2 + d^2$ 中，$R$ 必为斜边。若题目已知球的直径，需先除以 2 得到半径 $R$ 再代入，常出现直接以直径为边计算的错误。</li>
+<li><strong>无法将空间角转化为平面距离</strong>：如给定“过某点且与某直线成 $\theta$ 角的平面截球”，常需将此线面角正确放置在一个直角三角形中求出 $d$。典型错误是找错夹角的对边或邻边，导致 $d$ 算反。</li>
+<li><strong>多面体高与 $d$ 的关系搞反</strong>：对于顶点在球心正上方且截面对称的情况，几何体的高未必等于 $d$。若顶点与截面圆在球心异侧且连线过球心，高可能是 $R+d$ 或 $R-d$；若利用直径端点性质，高甚至可能是 $2d$，务必画图确认比例关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong>（2012 理 11·锥体体积）</h3>
+<p>已知三棱锥 $S-ABC$ 顶点均在球 $O$ 表面，$\triangle ABC$ 是边长为 1 的正三角形，$SC$ 是球 $O$ 的直径且 $SC=2$，求三棱锥体积。</p>
+<ul>
+<li><strong>思路</strong>：利用 $SC$ 为直径推导线面关系，将三棱锥高转化为球心到截面距离的两倍，通过直角三角形链计算 $d$ 与体积。</li>
+<li><strong>步骤</strong>：</li>
+<li>依题意：球半径 $R=1$。</li>
+<li>求截面圆半径 $r$：底面 $\triangle ABC$ 为正三角形，其外接圆即为截面圆，由正弦定理 $ \frac{1}{\sin 60^\circ} = 2r \Rightarrow r = \frac{\sqrt{3}}{3} $。</li>
+<li>求球心到截面距离 $d$：在直角 $\triangle OO_1A$ 中，$d = OO_1 = \sqrt{R^2 - r^2} = \sqrt{1 - \frac{1}{3}} = \frac{\sqrt{6}}{3}$。</li>
+<li>推导几何体的高：$SC$ 为直径，则 $O$ 为 $SC$ 中点；延长 $CO_1$ 交球面于 $D$。由 $OO_1 \perp$ 平面 $ABC$，得 $SD \perp$ 平面 $ABC$，且 $SD = 2OO_1 = \frac{2\sqrt{6}}{3}$。</li>
+<li>计算体积：$S_{\triangle ABC} = \frac{\sqrt{3}}{4}$，体积 $V = \frac{1}{3} \times \frac{\sqrt{3}}{4} \times \frac{2\sqrt{6}}{3} = \frac{\sqrt{2}}{6}$。</li>
+<li><strong>点评/变式</strong>：
+  关键是把 $SC$ 为直径转化为“球心 $O$ 为中点”及平行比例关系。若直径端点直接作射影，往往高度就是 $2d$ 或 $R+d$，切忌臆测而忽略推导。此模型可推广至任意圆内接三角形作为底面的棱锥。</li>
+</ul>
+<h3><strong>题目2</strong>（2009 文 16·球表面积）</h3>
+<p>设 $OA$ 是球 $O$ 的半径，$M$ 是 $OA$ 中点，过 $M$ 且与 $OA$ 成 $45^\circ$ 角的平面截球得圆 $C$。若圆 $C$ 面积为 $\frac{7\pi}{4}$，求球 $O$ 的表面积。</p>
+<ul>
+<li><strong>思路</strong>：以 $M$ 的特殊位置和给定夹角在轴截面内构建含 $d$ 的直角三角形，列方程解出球半径 $R$。</li>
+<li><strong>步骤</strong>：</li>
+<li>设球半径为 $R$，截面圆 $C$ 的半径为 $r$。由面积得 $\pi r^2 = \frac{7\pi}{4} \Rightarrow r^2 = \frac{7}{4}$。</li>
+<li>画出轴截面：图示包含球心 $O$、截面圆圆心 $O_1$（即 $C$）、$M$ 点。由平面与 $OA$ 成 $45^\circ$ 角知，在含 $OO_1$ 与 $OA$ 的三角形中，$\angle OMO_1 = 45^\circ$。因为 $M$ 是 $OA$ 中点，$OM = \frac{R}{2}$。</li>
+<li>在 $\triangle OMO_1$ 中，球心到截面距离 $d = OO_1 = OM \cdot \sin 45^\circ = \frac{R}{2} \times \frac{\sqrt{2}}{2} = \frac{\sqrt{2}R}{4}$。</li>
+<li>代入核心公式：$R^2 = r^2 + d^2 = \frac{7}{4} + (\frac{\sqrt{2}R}{4})^2 = \frac{7}{4} + \frac{R^2}{8}$。</li>
+<li>解得 $\frac{7}{8}R^2 = \frac{7}{4} \Rightarrow R^2 = 2$，故球表面积 $S = 4\pi R^2 = 8\pi$。</li>
+<li><strong>点评/变式</strong>：
+  “过定点且与某直线成定角”的截面关键是要想到定点、线、角都在轴截面内，立刻能把空间角转化为平面直角三角形中的边长关系。本类题失分点常在误认为 $M$ 就是截面圆圆心上，务必区分弦中点与圆心的差异。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-理-11.html">2012-理-11</a>（2012 · 中） 计算球内接三棱锥的体积，利用球心到截面距离求高。</li>
+<li><a href="../../exam/数学/2009-文-16.html">2009-文-16</a>（2009 · 中） 该题考查球体被平面所截，利用截面圆半径、球半径及夹角关系求球的表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/873-截面圆性质.html">截面圆性质</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线的倾斜角与斜率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线的倾斜角与斜率</h1><div class="review-mark" data-stem="直线的倾斜角与斜率"></div><div class="meta-card"><span><strong>考点</strong>直线的倾斜角与斜率</span><span><strong>权重</strong>16</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：16</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>直线的倾斜角</strong>：直线向上方向与 $x$ 轴正方向所成的最小正角，记为 $\alpha$，$\alpha \in [0,\pi)$。</li>
+<li><strong>直线的斜率</strong>：倾斜角 $\alpha \neq \frac{\pi}{2}$ 时，斜率 $k = \tan\alpha$。当直线方程为 $y = kx + b$ 时，$k$ 即为该直线的斜率。</li>
+<li><strong>斜率与倾斜角的关系</strong>：由直线方程可直接读出斜率，进而得到倾斜角的正切值：
+  $$\tan\alpha = k.$$</li>
+<li><strong>同角三角函数基本关系</strong>：
+  $$\sin^2\alpha + \cos^2\alpha = 1,\quad \tan\alpha = \frac{\sin\alpha}{\cos\alpha},\quad 1 + \tan^2\alpha = \frac{1}{\cos^2\alpha}.$$</li>
+<li><strong>二倍角公式（余弦）</strong>：
+  $$\cos 2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha = \cos^2\alpha - \sin^2\alpha.$$</li>
+<li><strong>适用条件</strong>：直线斜率存在（倾斜角不为 $\frac{\pi}{2}$）；角度 $\theta$ 的终边落在该直线上时，$\theta$ 与倾斜角 $\alpha$ 的关系为 $\theta = \alpha$ 或 $\theta = \alpha + \pi$，但正切值不变。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由直线方程求斜率与正切值</strong><br />
+   从直线方程 $y = kx$（或 $y = kx + b$）中直接读出斜率 $k$，则 $\tan\theta = k$。  </li>
+<li><strong>利用“1的代换”求 $\cos^2\theta$</strong><br />
+   由 $1 + \tan^2\theta = \dfrac{1}{\cos^2\theta}$，得<br />
+   $\cos^2\theta = \dfrac{1}{1 + \tan^2\theta}$。<br />
+   （注：此公式不涉及象限，直接得到平方值，安全高效。）  </li>
+<li><strong>代入二倍角公式计算 $\cos 2\theta$</strong><br />
+   $\cos 2\theta = 2\cos^2\theta - 1$，将上一步的 $\cos^2\theta$ 代入即可。  </li>
+<li><strong>（选通法）构造直角三角形</strong><br />
+   由 $\tan\theta = 2$，不妨设角 $\theta$ 终边上一点 $(1,2)$，可求斜边 $\sqrt{5}$，得 $\cos\theta = \pm \frac{1}{\sqrt{5}}$，平方后代入二倍角公式，结果一致。注意平方后符号消失，无需讨论象限。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆倾斜角与直线的夹角</strong>：直线 $y = 2x$ 的倾斜角 $\alpha$ 满足 $\tan\alpha = 2$，而非 $\alpha = 2$。  </li>
+<li><strong>忽略斜率不存在的情况</strong>：本题直线为 $y = 2x$，斜率存在，但复习时需注意倾斜角为 $\frac{\pi}{2}$ 时斜率无定义，相关公式失效。  </li>
+<li><strong>三角函数符号判断失误</strong>：终边在直线 $y = 2x$ 上，角 $\theta$ 可在第一或第三象限，$\cos\theta$ 有正负。但所求为 $\cos 2\theta$，只依赖 $\cos^2\theta$，故可直接使用 $1 + \tan^2\theta = \frac{1}{\cos^2\theta}$ 避开符号讨论。若错误地强行判断象限而忽略平方，可能得错解。  </li>
+<li><strong>公式记忆串用</strong>：二倍角公式 $\cos 2\theta = 1 - 2\sin^2\theta$ 与 $\cos 2\theta = 2\cos^2\theta - 1$ 混淆，或与正弦二倍角混淆，导致代入错误。  </li>
+<li><strong>计算粗心</strong>：由 $\tan\theta = 2$ 求 $\cos^2\theta$ 时，分母计算为 $1+2^2=5$，易误算成 $1+2=3$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·全国卷文数第7题）<br />
+已知角 $\theta$ 的顶点与原点重合，始边与 $x$ 轴的正半轴重合，终边在直线 $y = 2x$ 上，则 $\cos 2\theta =$（ ）</p>
+<p><strong>思路</strong><br />
+直线上终边确定后，斜率即 $\tan\theta$，通过同角关系求出 $\cos^2\theta$，代入二倍角公式即得 $\cos 2\theta$。回避讨论 $\theta$ 的象限。</p>
+<p><strong>步骤</strong><br />
+1. 由终边在直线 $y = 2x$ 上，得斜率 $k = 2$，故 $\tan\theta = 2$。<br />
+2. 依据 $1 + \tan^2\theta = \dfrac{1}{\cos^2\theta}$，得<br />
+   $\cos^2\theta = \dfrac{1}{1 + 2^2} = \dfrac{1}{5}$。<br />
+3. 由二倍角公式 $\cos 2\theta = 2\cos^2\theta - 1$，<br />
+   $\cos 2\theta = 2 \times \dfrac{1}{5} - 1 = -\dfrac{3}{5}$。<br />
+4. 对应选项为 $-\dfrac{3}{5}$。</p>
+<p><strong>点评/变式</strong><br />
+该题是解析几何中斜率概念与三角恒等变换的经典结合，难度中等，但属于必会基础题。<br />
+- <strong>变式方向一</strong>：将直线改为 $y = \sqrt{3}x$，此时 $\tan\theta = \sqrt{3}$，倾斜角为特殊角，可先求出 $\theta = \frac{\pi}{3}$ 或 $\frac{4\pi}{3}$，再求 $\cos 2\theta$，但直接使用公式依然更快捷。<br />
+- <strong>变式方向二</strong>：求 $\sin 2\theta$ 或 $\tan 2\theta$，需额外注意符号：若终边所在象限不确定，$\sin 2\theta$ 或 $\tan 2\theta$ 可能有两解，此时需结合倾斜角范围或点的坐标符号进一步限定。<br />
+- <strong>通法优势</strong>：利用 $\cos^2\theta = \frac{1}{1+\tan^2\theta}$ 求余弦平方，是处理“已知正切求余弦二倍角”的最优套路，省去开方和符号判断，大幅降低错误率。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-07.html">2011-文-07</a>（2011 · 中） 根据直线的斜率与倾斜角关系，利用同角三角函数关系和二倍角公式求值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/393-直线倾斜角与斜率.html">直线的倾斜角与斜率</a></li>
+</ul>
+</div>
+</body>
+</html>

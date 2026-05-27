@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>终边相同的角</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>终边相同的角</h1><div class="review-mark" data-stem="终边相同的角"></div><div class="meta-card"><span><strong>考点</strong>终边相同的角</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>终边相同的角</strong>：所有与角 $\alpha$ 终边相同的角，可表示为 $\theta = \alpha + 2k\pi\ (k\in\mathbb{Z})$。若角 $\theta$ 的终边在直线 $y=kx$ 上，则 $\tan\theta = k$，但需明确角可位于两个不同象限（$\theta$ 与 $\pi+\theta$ 终边均在该直线上）。</li>
+<li><strong>任意角三角函数定义</strong>：设角 $\theta$ 终边上一点 $P(x,y)$，$|OP|=r=\sqrt{x^2+y^2}$，则 $\sin\theta=\dfrac{y}{r}$，$\cos\theta=\dfrac{x}{r}$，$\tan\theta=\dfrac{y}{x}$（$x\neq0$）。</li>
+<li><strong>同角商数关系</strong>：$\tan\theta = \dfrac{\sin\theta}{\cos\theta}$。</li>
+<li><strong>二倍角公式</strong>：$\cos 2\theta = \cos^2\theta - \sin^2\theta = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta = \dfrac{1-\tan^2\theta}{1+\tan^2\theta}$。特别地，用 $\tan\theta$ 表达的“万能公式”在此类题型中可直接使用。</li>
+<li><strong>适用条件</strong>：已知角终边直线斜率时，可设 $\tan\theta$，代入 $\cos2\theta$ 的含切表达式快速求值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>化斜率为正切</strong>：由终边所在直线 $y=kx$，直接得到 $\tan\theta = k$。注意直线过原点、不含截距，斜率即角的正切。</li>
+<li><strong>选用二倍角公式</strong>：已知 $\tan\theta$ 求 $\cos2\theta$，优先使用 $\cos2\theta = \dfrac{1-\tan^2\theta}{1+\tan^2\theta}$，避免求 $\sin\theta,\cos\theta$ 的符号讨论。</li>
+<li><strong>代值化简</strong>：将斜率 $k$ 代入上述公式，化简即得结果。</li>
+<li><strong>符号检验（可选）</strong>：若使用 $\sin\theta,\cos\theta$ 求解，需根据终边所在象限确定符号，但利用正切表达式可自动包含符号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆终边与直线</strong>：终边在直线 $y=2x$ 上包含两个互为反向延长线的射线，对应 $\tan\theta = 2$ 恒成立，但 $\theta$ 的象限不确定，直接用 $\sin\theta,\cos\theta$ 时有正负取舍风险。</li>
+<li><strong>误判直线倾斜角</strong>：错误地将直线倾斜角直接等同于 $\theta$ 的一个值，而忽略角 $\theta$ 可能相差 $\pi$ 的整数倍，导致周期理解偏差。</li>
+<li><strong>公式使用不当</strong>：用 $\cos2\theta = 2\cos^2\theta - 1$ 时，需先求 $\cos^2\theta$，由 $\tan\theta$ 得 $\cos^2\theta = \dfrac{1}{1+\tan^2\theta}$，容易在代换时漏掉系数或平方。</li>
+<li><strong>数值计算粗心</strong>：代入 $k=2$ 时，$\cos2\theta = \dfrac{1-4}{1+4} = -\dfrac{3}{5}$，有考生可能错误计算为 $\dfrac{1-2}{1+2}$ 等形式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011 理 05）：已知角 $\theta$ 的顶点与原点重合，始边与 $x$ 轴正半轴重合，终边在直线 $y=2x$ 上，求 $\cos2\theta$。</p>
+<p><strong>思路</strong>：由终边在直线上得 $\tan\theta = 2$，直接代入二倍角的万能公式 $\cos2\theta = \dfrac{1-\tan^2\theta}{1+\tan^2\theta}$ 即得。</p>
+<p><strong>步骤</strong>：
+1. 由终边所在直线 $y=2x$ 得 $\tan\theta = 2$。
+2. 代入公式：$\cos2\theta = \dfrac{1-\tan^2\theta}{1+\tan^2\theta} = \dfrac{1-2^2}{1+2^2} = \dfrac{1-4}{1+4} = -\dfrac{3}{5}$。</p>
+<p><strong>点评/变式</strong>：此题直击“终边在直线上”与“正切值”的等价关系，无需讨论象限，切入点是万能公式的熟练运用。变式可问 $\sin2\theta$ 或 $\tan2\theta$，同样用正切表达，如 $\tan2\theta = \dfrac{2\tan\theta}{1-\tan^2\theta}$；也可将直线改为 $y = -3x$，方法完全一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-理-05.html">2011-理-05</a>（2011 · 中） 根据角终边在直线上求三角函数值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1091-终边相同的角.html">终边相同的角</a></li>
+</ul>
+</div>
+</body>
+</html>

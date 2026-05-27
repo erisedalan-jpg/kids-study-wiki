@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数函数的定义域</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数函数的定义域</h1><div class="review-mark" data-stem="对数函数的定义域"></div><div class="meta-card"><span><strong>考点</strong>对数函数的定义域</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择10</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对数函数定义</strong>：函数 $y = \log_a x$（$a&gt;0$ 且 $a \neq 1$）的定义域为 $(0, +\infty)$，值域为 $\mathbb{R}$。  </li>
+<li><strong>对数型复合函数定义域</strong>：形如 $y = \log_{a} f(x)$ 的定义域由 $f(x) &gt; 0$ 确定，如 $y = \lg(g(x))$ 要求 $g(x) &gt; 0$。  </li>
+<li><strong>对数恒等式</strong>：$a^{\log_a N} = N$（$a&gt;0$，$a \neq 1$，$N&gt;0$），化简时必须同时保证对数有意义（$N&gt;0$）。例如 $y = 10^{\lg x}$（即 $a=10$，$N=x$），化简得 $y = x$，但定义域仍受 $\lg x$ 中 $x&gt;0$ 约束，最终定义域和值域均为 $(0, +\infty)$。  </li>
+<li><strong>需熟记的基本初等函数定义域与值域</strong>：  </li>
+<li>$y = x$：定义域 $\mathbb{R}$，值域 $\mathbb{R}$。  </li>
+<li>$y = \lg x$：定义域 $(0, +\infty)$，值域 $\mathbb{R}$。  </li>
+<li>$y = 2^x$（指数函数）：定义域 $\mathbb{R}$，值域 $(0, +\infty)$。  </li>
+<li>$y = \frac{1}{\sqrt{x}}$：定义域 $(0, +\infty)$，值域 $(0, +\infty)$。根式+分母要求 $x&gt;0$，且 $\sqrt{x}&gt;0$ 导致值域 $(0, +\infty)$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>面对“判断与某函数定义域、值域均相同的函数”类问题时，通用步骤：<br />
+1. <strong>化简原函数并锁定其定义域、值域</strong>：<br />
+   - 先利用对数恒等式、指数运算法则等化简，注意隐含的定义域限制（如真数 $&gt;0$，分母 $\neq 0$，偶次根号下 $\geq 0$ 等）。<br />
+   - 求出化简后函数的自然定义域和值域组合。<br />
+2. <strong>逐项分析选项函数的定义域和值域</strong>：<br />
+   - 依据基本初等函数性质快速写出。<br />
+   - 对复合函数，重点检查定义域的限制条件（对数型找真数 $&gt;0$，分式型找分母 $\neq 0$，根式型找被开方数范围等），再结合图像或单调性确定值域。<br />
+3. <strong>比对匹配</strong>：<br />
+   - 同时满足“定义域相同”且“值域相同”的选项即为答案。通常可先筛掉定义域不一致的选项，再验证值域。</p>
+<h2>高频易错</h2>
+<ol>
+<li><strong>对数恒等式使用不顾定义域</strong>：看到 $y = 10^{\lg x}$ 直接写成 $y = x$（$\mathbb{R}$），忽略 $\lg x$ 要求 $x&gt;0$，误选 $y=x$。对数恒等式 $a^{\log_a N}=N$ 成立的前提是 $N&gt;0$，定义域不能扩大。  </li>
+<li><strong>记混基本函数的值域</strong>：  </li>
+<li>$y = \lg x$ 值域是 $\mathbb{R}$，不是 $(0, +\infty)$；  </li>
+<li>$y = 2^x$ 值域是 $(0, +\infty)$，定义域是 $\mathbb{R}$，两者与题目所给 $(0, +\infty)$ 的配对易混淆。  </li>
+<li><strong>忽视复合函数的隐含限制</strong>：如 $y = \frac{1}{\sqrt{x}}$，只看到分母 $\neq 0$ 会误认为 $x \neq 0$，但实际上还有根号要求 $x \geq 0$，综合得 $x&gt;0$；且因 $\sqrt{x}&gt;0$，故值域为 $(0, +\infty)$ 而非 $\mathbb{R}$。漏掉根号或分母任一限制都会导致误判。  </li>
+<li><strong>粗心颠倒定义域与值域</strong>：有的选项定义域符合但值域不符合（如 $y=\lg x$ 定义域 $(0, +\infty)$ 与题干一致，但值域 $\mathbb{R}$ 与 $(0, +\infty)$ 不同），部分考生看见定义域相同就直接选，忘记核对值域。</li>
+</ol>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016·全国卷文 · 第10题）<br />
+下列函数中，其定义域和值域分别与函数 $y = 10^{\lg x}$ 的定义域和值域相同的是（ ）<br />
+A. $y = x$　B. $y = \lg x$　C. $y = 2^x$　D. $y = \frac{1}{\sqrt{x}}$</p>
+<p><strong>思路</strong><br />
+先求 $y = 10^{\lg x}$ 的定义域和值域：因为含有 $\lg x$，真数 $x&gt;0$，利用对数恒等式得当 $x&gt;0$ 时 $10^{\lg x} = x$，值域自然为 $(0, +\infty)$。随后逐个分析四个选项的定义域和值域，找出同时匹配 $(0, +\infty)$ 的选项。</p>
+<p><strong>步骤</strong><br />
+1. 函数 $y = 10^{\lg x}$：<br />
+   - 由 $\lg x$ 得 $x &gt; 0$，故定义域为 $(0, +\infty)$。<br />
+   - 当 $x \in (0, +\infty)$ 时，$10^{\lg x} = x$，对应的值域为 $(0, +\infty)$。<br />
+   所以目标定义域和值域均为 $(0, +\infty)$。  </p>
+<ol>
+<li>逐项分析：  </li>
+<li>A. $y = x$：定义域 $\mathbb{R}$，值域 $\mathbb{R}$，不匹配。  </li>
+<li>B. $y = \lg x$：定义域 $(0, +\infty)$，值域 $\mathbb{R}$，定义域同但值域不同。  </li>
+<li>C. $y = 2^x$：定义域 $\mathbb{R}$，值域 $(0, +\infty)$，值域同但定义域不同。  </li>
+<li>
+<p>D. $y = \frac{1}{\sqrt{x}}$：由 $\sqrt{x}$ 得 $x \geq 0$，分母不为零得 $\sqrt{x} \neq 0 \Rightarrow x \neq 0$，综合定义域为 $(0, +\infty)$。当 $x&gt;0$ 时 $\sqrt{x} &gt; 0$，$y = \frac{1}{\sqrt{x}} &gt; 0$，且可以取遍 $(0, +\infty)$，故值域为 $(0, +\infty)$，完全匹配。  </p>
+</li>
+<li>
+<p>得答案为 D。</p>
+</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+- 本题核心陷阱是 $y = 10^{\lg x}$ 的化简受真数 $x&gt;0$ 限制，许多同学潜意识里将 $10^{\lg x}$ 等同于 $y=x$ 而错选 A。牢记对数恒等式的“ $N&gt;0$ ”条件是避免失误的关键。<br />
+- 变式提升：若题干改为“与 $y=\ln e^x$ 的定义域和值域均相同”，先化简得 $y=x$，但 $\ln e^x = x$ 成立条件是 $e^x &gt;0$（恒成立），所以定义域 $\mathbb{R}$，值域 $\mathbb{R}$，则正确选项会相应变化。熟悉不同函数的限制差异能有效应对同类题目。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-10.html">2016-文-10</a>（2016 · 易） 比较函数定义域和值域，判断与y=10^{lgx}相同的函数</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">对数函数的定义域</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相关系数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相关系数</h1><div class="review-mark" data-stem="相关系数"></div><div class="meta-card"><span><strong>考点</strong>相关系数</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：8</li>
+<li>真题数：3；年份跨度：2012–2022</li>
+<li>出现题位：解答18 解答19 选择3</li>
+<li>难度分布：中2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>相关系数的定义</strong><br />
+  样本相关系数 $r$ 是描述两个变量之间<strong>线性相关程度</strong>和<strong>方向</strong>的定量指标。<br />
+  计算公式（以样本数据 $(x_i, y_i)$ 为例）：<br />
+  $$ 
+  r = \frac{\sum\limits_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}
+           {\sqrt{\sum\limits_{i=1}^{n}(x_i - \bar{x})^2 \cdot 
+                  \sum\limits_{i=1}^{n}(y_i - \bar{y})^2}}
+  $$<br />
+  推算中常用等价形式：<br />
+  $$ r = \frac{n\sum x_i y_i - \sum x_i \sum y_i}
+               {\sqrt{n\sum x_i^2 - (\sum x_i)^2} \cdot
+                \sqrt{n\sum y_i^2 - (\sum y_i)^2}} $$</p>
+</li>
+<li>
+<p><strong>性质与判定</strong>  </p>
+</li>
+<li>$r \in [-1, 1]$。  </li>
+<li>$r&gt;0$ 表示<strong>正相关</strong>（一个增大，另一个也增大）；$r&lt;0$ 表示<strong>负相关</strong>。  </li>
+<li>$|r|$ 越接近 $1$，线性相关越强；$|r|$ 越接近 $0$，线性相关越弱（未必无关，可能呈非线性关系）。  </li>
+<li>
+<p>所有样本点恰好落在一条斜率为正的直线上 $\Rightarrow r=1$；斜率为负 $\Rightarrow r=-1$（完全线性相关）。</p>
+</li>
+<li>
+<p><strong>适用条件</strong>  </p>
+</li>
+<li>主要用于衡量<strong>线性</strong>相关；非线性相关时 $r$ 失效。  </li>
+<li>样本容量 $n \ge 2$，且变量的取值不能全部相等（否则分母为零）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>计算样本（线性）相关系数的通用步骤</strong>  </li>
+<li>步骤一：列出或从题目中获取所需的基本统计量——$\sum x_i$, $\sum y_i$, $\sum x_i^2$, $\sum y_i^2$, $\sum x_i y_i$（或已给离差平方和与离差积和）。  </li>
+<li>步骤二：计算均值 $\bar{x}=\frac{\sum x_i}{n}$, $\bar{y}=\frac{\sum y_i}{n}$（若题目已给出 $\sum(x_i-\bar{x})^2$ 等，可跳过）。  </li>
+<li>步骤三：代入相关系数公式，分清哪个是 $x$，哪个是 $y$，分母两个开方相乘，分子为离差积和。  </li>
+<li>
+<p>步骤四：按题目要求的精确度（如精确到 0.01）求值，注意正负号。</p>
+</li>
+<li>
+<p><strong>利用相关系数进行分析与决策</strong>  </p>
+</li>
+<li>若散点图显示<strong>所有点共线</strong>，直接根据直线斜率正负判定 $r=\pm 1$，无需计算。  </li>
+<li>
+<p>根据 $|r|$ 大小判断线性相关强弱，再用其他统计方法（如回归、比例估计）做预测。</p>
+</li>
+<li>
+<p><strong>结合相关系数的实际应用</strong>  </p>
+</li>
+<li>
+<p>当题中变量<strong>近似成正比</strong>时，可利用样本均值比进行总体总量估计：<br />
+     $$ \hat{Y}<em _text_总="\text{总">{\text{总}} = X</em> $$}} \cdot \frac{\bar{y}}{\bar{x}<br />
+     本质是用样本平均单位量去推算总体。</p>
+</li>
+<li>
+<p><strong>抽样方法的合理选择</strong>  </p>
+</li>
+<li>面对差异较大的总体，为提高代表性，常改用<strong>分层抽样</strong>（各层按比例抽），从而更准确地估计总体参数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>完全共线误判</strong>：散点图中所有样本点恰在一条直线上，且斜率为正，相关系数为 $1$ 而非 $0$ 或小于 $1$；斜率为负则为 $-1$。  </li>
+<li><strong>分母缺失开方</strong>：计算时忘记对 $\sum(x_i-\bar{x})^2$ 和 $\sum(y_i-\bar{y})^2$ 的乘积开平方，直接使用原值导致错误。  </li>
+<li><strong>混淆数据对应关系</strong>：代入公式时，$x$ 和 $y$ 颠倒会导致正负号无影响（$r$ 对称），但若计算后续回归系数时弄反则全错。注意题目中哪个是自变量、哪个是因变量。  </li>
+<li><strong>忽视精确度要求</strong>：题中明确要求“精确到 0.01”，结果未四舍五入或只写过分简化的近似值会被扣分。  </li>
+<li><strong>适用范围错误</strong>：用相关系数判断非线性关系强度，或认为 $r=0$ 一定独立（实际可能呈曲线关系）。  </li>
+<li><strong>总量估计误用</strong>：在已知成正比的条件下，未能用样本比值直接估算总材积量（如误用回归截距），忽略“总和成比例”这一信息。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>题目 1（2022·文·19）</h3>
+<p><strong>题目</strong>：给出 10 棵树木根部横截面积与材积量的样本数据，已知 $\sum x_i=0.6$, $\sum y_i=3.9$, $\sum x_i^2=0.038$, $\sum y_i^2=1.6158$, $\sum x_i y_i=0.2474$。要求：（1）估计平均一棵树的横截面积与材积量；（2）求样本相关系数精确到 0.01；（3）已知林区所有树的总横截面积为 $186\,\text{m}^2$，且材积量与横截面积近似成正比，估计总材积量。  </p>
+<p><strong>思路</strong>：<br />
+- 平均值直接用总和除以样本量。<br />
+- 样本相关系数直接代入公式 $r = \frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sqrt{(\sum x_i^2 - n\bar{x}^2)(\sum y_i^2 - n\bar{y}^2)}}$ 或利用离差形式简化。<br />
+- 总材积量由总横截面积乘以样本平均单位材积量（即 $\bar{y}/\bar{x}$）得到。</p>
+<p><strong>步骤</strong>：<br />
+（1）$n=10$，$\bar{x}=0.6/10=0.06$, $\bar{y}=3.9/10=0.39$。<br />
+（2）计算 $r$：<br />
+$$ r = \frac{\sum x_i y_i - n\bar{x}\bar{y}}{\sqrt{(\sum x_i^2 - n\bar{x}^2)(\sum y_i^2 - n\bar{y}^2)}} 
+     = \frac{0.2474 - 10\times0.06\times0.39}{\sqrt{(0.038 - 10\times0.06^2)(1.6158 - 10\times0.39^2)}} $$
+分子 $= 0.2474 - 0.234 = 0.0134$。<br />
+分母根号内：$\sum x_i^2 - n\bar{x}^2 = 0.038 - 0.036 = 0.002$；<br />
+$\sum y_i^2 - n\bar{y}^2 = 1.6158 - 1.521 = 0.0948$。<br />
+乘积 $= 0.002 \times 0.0948 = 0.0001896$，开方 $ \approx 0.01377$。<br />
+$ r \approx 0.0134 / 0.01377 \approx 0.97$。精确到 0.01 得 $0.98$。<br />
+（3）所有树的总根部横截面积 $X_{\text{总}}=186$，则总材积量<br />
+$$ \hat{Y}_{\text{总}} = 186 \times \frac{\bar{y}}{\bar{x}} = 186 \times \frac{0.39}{0.06} = 186 \times 6.5 = 1209 $$<br />
+即约 $1209\,\text{m}^3$。</p>
+<p><strong>点评/变式</strong>：<br />
+本题是相关系数与比例估计的典型组合。注意题目直接给出了平方和与积和，手算时代入公式时避免重复计算均值引起的误差。若换成回归直线过原点的情况，斜率 $\hat{\beta} = \frac{\sum x_i y_i}{\sum x_i^2}$，但本题直接利用“成正比”的比例关系更快捷。</p>
+<hr />
+<h3>题目 2（2020·文·18）</h3>
+<p><strong>题目</strong>：从 200 块地中抽取 20 块得到植物覆盖面积 $x_i$ 和野生动物数量 $y_i$，并已知 $\sum x_i=60$, $\sum y_i=1200$, $\sum(x_i-\bar{x})^2=80$, $\sum(y_i-\bar{y})^2=9000$, $\sum(x_i-\bar{x})(y_i-\bar{y})=800$。<br />
+（1）求该地区野生动物数量估计值；（2）求样本相关系数精确到 0.01；（3）为提高代表性，给出更合理的抽样方法并说明理由。  </p>
+<p><strong>思路</strong>：<br />
+- 估计值 = 样区平均数量 × 总地块数。<br />
+- 直接使用题目给出的离差平方和与离差积和代入 $r$ 公式。<br />
+- 面对植物覆盖面积差异大，应采用分层抽样。</p>
+<p><strong>步骤</strong>：<br />
+（1）样区平均野生动物数量 $\bar{y}=1200/20=60$，总地块数 $200$，估计总数 $= 200\times60 = 12000$。<br />
+（2）<br />
+$$ r = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}
+            {\sqrt{\sum(x_i-\bar{x})^2}\sqrt{\sum(y_i-\bar{y})^2}}
+    = \frac{800}{\sqrt{80}\times\sqrt{9000}} = \frac{800}{ \sqrt{720000} } $$
+$\sqrt{720000} = \sqrt{72\times10000} = 100\sqrt{72} \approx 100\times8.485 = 848.5$。<br />
+$ r \approx 800/848.5 \approx 0.9428 $，精确到 0.01 为 $0.94$。<br />
+（3）植物覆盖面积差异大，宜采用<strong>分层抽样</strong>：将总体按植物覆盖面积大小分层，各层内独立按比例随机抽样，可减少层内差异对总体估计的影响，使样本更具代表性。</p>
+<p><strong>点评/变式</strong>：<br />
+此题数据给出的是离差平方和，直接免去计算均值平方的推导，是相关系数计算的简单形式。抽样方法的选择一定要与题中“差异很大”这一特征关联，答案中需点明分层抽样的优点。若要求说明为什么简单随机抽样不佳，可以补充因为它可能使样本集中在某一特征的区块，导致估计偏差。</p>
+<hr />
+<h3>题目 3（2012·文·03）</h3>
+<p><strong>题目</strong>：一组样本数据散点图中，所有点 $(x_i, y_i)$ 都在直线 $y=x+1$ 上，则这组样本的相关系数为（ ）<br />
+A. $-1$　B. $0$　C. $0.5$　D. $1$  </p>
+<p><strong>思路</strong>：<br />
+所有样本点完全落在一条斜率大于零的直线上，即 $x$ 与 $y$ 完全正线性相关，相关系数必为 $1$。</p>
+<p><strong>步骤</strong>：<br />
+由题设，直线 $y=x+1$ 斜率 $k=1&gt;0$，且所有点共线，故 $|r|=1$ 且正相关，$r=1$。选 D。</p>
+<p><strong>点评/变式</strong>：<br />
+纯概念题，关键是理解完全线性相关时 $r$ 的绝对值就是 $1$，且正负号由斜率符号决定。若直线为 $y=-\frac{1}{2}x+3$，则 $r=-1$。切勿与斜率值的大小混淆——只要点在一条直线上，$r$ 就取 $\pm1$，与斜率数值无关。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-19.html">2022-文-19</a>（2022 · 中） 林业抽样估计某林区树木总体材积，结合样本均值、相关系数与线性回归方程。</li>
+<li><a href="../../exam/数学/2020-文-18.html">2020-文-18</a>（2020 · 中） 该题考查用样本平均数估计总体、计算相关系数及选择合适的抽样方法以改进估计精度。</li>
+<li><a href="../../exam/数学/2012-文-03.html">2012-文-03</a>（2012 · 易） 所有样本点落在直线上时，样本相关系数为完全正相关，考查相关系数的概念。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/359-统计案例.html">相关系数</a></li>
+</ul>
+</div>
+</body>
+</html>

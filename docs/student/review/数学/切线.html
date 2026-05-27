@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>切线</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>切线</h1><div class="review-mark" data-stem="切线"></div><div class="meta-card"><span><strong>考点</strong>切线</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：3；年份跨度：2008–2021</li>
+<li>出现题位：解答20 解答21 选择7</li>
+<li>难度分布：难2 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>导数的几何意义</strong>：函数 $y=f(x)$ 在点 $x_0$ 处的导数 $f'(x_0)$ 即为曲线在该点 $(x_0, f(x_0))$ 处切线的斜率 $k$。</li>
+<li><strong>切线方程</strong>：曲线 $y=f(x)$ 在点 $(x_0, y_0)$ 处的切线方程为 $y - y_0 = f'(x_0)(x - x_0)$。其中 $(x_0, y_0)$ 为切点。</li>
+<li><strong>圆锥曲线的切线</strong>：<ul>
+<li><strong>抛物线</strong> $x^2 = 2py$：点 $(x_0, y_0)$ 处的切线斜率为 $k = \frac{x_0}{p}$（可由求导或联立判别式为零求得）。切线方程为 $y - y_0 = \frac{x_0}{p}(x - x_0)$，化简即 $x_0x = p(y + y_0)$。</li>
+<li><strong>抛物线</strong> $y^2 = 2px$：点 $(x_0, y_0)$ 处的切线方程为 $y_0y = p(x + x_0)$。</li>
+</ul>
+</li>
+<li><strong>切点弦方程</strong>：过曲线外一点 $P(x_0, y_0)$ 作曲线的两条切线，切点为 $A, B$。若曲线为抛物线 $x^2=2py$，则切点弦 $AB$ 所在的直线方程为 $x_0x = p(y + y_0)$。其推导本质是利用两切点均满足同一直线方程。</li>
+<li><strong>公切线问题</strong>：证明一条直线同时是两个函数图像的切线，需分别找出两函数图像上的切点，并验证两切点处的切线方程完全一致（斜率相等、截距相等）。</li>
+<li><strong>平行与垂直关系</strong>：两直线平行，斜率相等（$k_1=k_2$）；两直线垂直，斜率乘积为 $-1$（$k_1k_2=-1$）。此关系常用于求参数或切点坐标。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>已知切点求切线方程</strong>：<ul>
+<li><strong>步骤一</strong>：求导，得到导函数 $f'(x)$。</li>
+<li><strong>步骤二</strong>：将切点横坐标 $x_0$ 代入导函数，计算切线斜率 $k = f'(x_0)$。</li>
+<li><strong>步骤三</strong>：利用点斜式写出切线方程 $y - f(x_0) = k(x - x_0)$，并化简。</li>
+</ul>
+</li>
+<li><strong>已知切线斜率或切线过某点求参数/切点</strong>：<ul>
+<li><strong>情况A：已知斜率 $k$</strong>。令导数 $f'(x_0) = k$，解出切点横坐标 $x_0$，进而求出纵坐标或参数。</li>
+<li><strong>情况B：已知切线过非切点 $P(m, n)$</strong>。设切点坐标为 $(x_0, f(x_0))$，写出含参切线方程 $y - f(x_0) = f'(x_0)(x - x_0)$。将点 $P(m, n)$ 代入，解出 $x_0$，再确定切线方程。</li>
+</ul>
+</li>
+<li><strong>求圆锥曲线切点弦方程及面积最值</strong>：<ul>
+<li><strong>步骤一</strong>：设曲线外一点 $P(x_0, y_0)$ 及曲线上两切点 $A(x_1,y_1), B(x_2,y_2)$。</li>
+<li><strong>步骤二</strong>：写出以 $A, B$ 为切点的切线方程。</li>
+<li><strong>步骤三</strong>：利用点 $P$ 在两切线上，得到 $A, B$ 坐标满足同一直线方程，即切点弦 $AB$ 方程。</li>
+<li><strong>步骤四</strong>：联立切点弦方程与曲线方程，利用韦达定理和弦长公式求弦长 $|AB|$。</li>
+<li><strong>步骤五</strong>：利用点到直线距离公式求点 $P$ 到弦 $AB$ 的距离 $d$。</li>
+<li><strong>步骤六</strong>：将三角形面积 $S = \frac{1}{2}|AB|d$ 表达为目标变量的函数，借助二次函数或不等式求最值。</li>
+</ul>
+</li>
+<li><strong>证明公切线问题</strong>：<ul>
+<li><strong>步骤一</strong>：求出第一条曲线在给定切点 $A$ 处的切线方程 $l$。</li>
+<li><strong>步骤二</strong>：设第二条曲线上的切点 $B$，写出其在 $B$ 处的切线方程 $l'$（含参）。</li>
+<li><strong>步骤三</strong>：令 $l'$ 与 $l$ 重合，即斜率相等、截距相等，建立方程组。</li>
+<li><strong>步骤四</strong>：通过方程变形或解方程，证明 $B$ 存在且满足条件。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>弄错切点</strong>：在“过某点”的切线问题中，该点不一定是切点。必须设出切点坐标进行求解，否则极易漏解或出错。</li>
+<li><strong>混淆导数公式</strong>：<ul>
+<li>$(\ln x)' = \frac{1}{x}$，特别注意复合函数求导，如 $\ln\frac{x-1}{x+1} = \ln(x-1) - \ln(x+1)$ 可简化求导。</li>
+<li>分式求导要仔细，分子是“上导下不导减去下导上不导”。</li>
+</ul>
+</li>
+<li><strong>忽略定义域</strong>：讨论函数单调性或写切线方程时，需确保自变量取值在函数定义域内。例如，$f(x) = \ln x$ 的定义域为 $(0, +\infty)$。</li>
+<li><strong>弦长公式使用错误</strong>：弦长公式 $|AB| = \sqrt{1+k^2}|x_1 - x_2| = \sqrt{1+k^2}\frac{\sqrt{\Delta}}{|a|}$（$a$为联立后二次项系数）中，$\Delta$ 须为正，且 $|x_1-x_2| = \frac{\sqrt{\Delta}}{|a|}$，计算时勿忘绝对值。</li>
+<li><strong>面积最值漏考虑变量范围</strong>：用坐标表示三角形面积后求最值，务必根据点所在曲线方程求出坐标的取值范围（如圆的纵坐标范围 $y \in [-3,-5]$），不结合范围直接用基本不等式或二次函数对称轴求解易出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2008-文-07（导数基础应用）</h3>
+<ul>
+<li><strong>题目</strong>：已知曲线 $y=ax^2$ 在点 $(1, a)$ 处的切线与直线 $2x - y - 6 = 0$ 平行，求 $a$ 的值。</li>
+<li><strong>思路</strong>：利用导数求出曲线在给定点处的切线斜率，再利用两直线平行斜率相等的条件，建立关于 $a$ 的方程求解。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>求导</strong>：对 $y=ax^2$ 求导得 $y' = 2ax$。</li>
+<li><strong>求斜率</strong>：在点 $(1, a)$ 处，切线斜率 $k = y'|_{x=1} = 2a$。</li>
+<li><strong>已知直线斜率</strong>：直线 $2x - y - 6 = 0$ 可化为 $y = 2x - 6$，其斜率为 $2$。</li>
+<li><strong>列方程</strong>：因为两条直线平行，所以斜率相等，即 $2a = 2$。</li>
+<li><strong>求解</strong>：解得 $a = 1$。</li>
+</ol>
+</li>
+<li><strong>点评/变式</strong>：本题是导数几何意义最直接的考察，属于送分题。关键点在于：1. 求导公式要准确；2. 切点横坐标必须代入导函数求斜率；3. 理解平行即斜率相等。变式：若两直线垂直，则条件变为 $2a \times 2 = -1$。</li>
+</ul>
+<h3>代表题 2：2021-理-21（切线综合与最值）</h3>
+<ul>
+<li><strong>题目</strong>：已知抛物线 $C: x^2 = 2py (p&gt;0)$，焦点 $F$ 与圆 $M: x^2 + (y+4)^2 = 1$ 上点距离最小值为 $4$。（1）求 $p$；（2）点 $P$ 在圆 $M$ 上，$PA, PB$ 是抛物线 $C$ 的两条切线，切点为 $A, B$，求 $\triangle PAB$ 面积的最大值。</li>
+<li><strong>思路</strong>：
+    （1）将距离表示为点的坐标的函数，利用二次函数或几何性质求最小值，列方程解 $p$。
+    （2）设点 $P(x_0, y_0)$，并设切点 $A(x_1, \frac{x_1^2}{4}), B(x_2, \frac{x_2^2}{4})$。先利用切线方程得到切点弦 $AB$ 的方程，然后将弦长 $|AB|$ 和点 $P$ 到弦 $AB$ 的距离 $d$ 用 $P$ 的坐标表示，最后将面积 $S$ 表示为 $y_0$ 的函数，结合 $y_0$ 的范围（源自 $P$ 在圆 $M$ 上）求最大值。</li>
+<li><strong>步骤</strong>：
+    （1）<strong>求 $p$</strong>：抛物线焦点 $F(0, \frac{p}{2})$，圆 $M$ 的圆心为 $(0, -4)$，半径为 $1$。圆上点 $N(x_0, y_0)$ 满足 $y_0 \in [-5, -3]$。距离 $|FN| = \sqrt{x_0^2 + (y_0 - \frac{p}{2})^2} = \sqrt{-8y_0 -16 + (y_0 - \frac{p}{2})^2}$。此为关于 $y_0$ 的二次函数，开口向上，对称轴 $y_0 = \frac{p}{2} + 4 &gt; 0$。故当 $y_0 = -3$ 时距离最小。由 $\sqrt{1 - (-3+3)^2 + (-3 - \frac{p}{2})^2} = 3 + \frac{p}{2} = 4$（几何法：$|FN|<em PAB="PAB" _triangle="\triangle">{min} = |FO| - 1 = 4 + \frac{p}{2} - 1 = 3 + \frac{p}{2} = 4$），解得 $p=2$。抛物线方程为 $x^2 = 4y$。
+    （2）<strong>求面积最大值</strong>：
+        - <strong>设点</strong>：设 $P(x_0, y_0), A(x_1, y_1), B(x_2, y_2)$，其中 $x_1^2=4y_1, x_2^2=4y_2$。对 $y = \frac{x^2}{4}$ 求导得 $y' = \frac{x}{2}$。
+        - <strong>得切线方程</strong>：$PA: y - y_1 = \frac{x_1}{2}(x - x_1) \implies x_1x = 2(y + y_1)$。同理 $PB: x_2x = 2(y + y_2)$。
+        - <strong>得切点弦方程</strong>：因 $P$ 在两切线上，有 $x_0x_1 = 2(y_0 + y_1)$ 和 $x_0x_2 = 2(y_0 + y_2)$。这表明 $A, B$ 坐标均满足直线方程 $x_0x = 2(y + y_0)$，即切点弦 $AB$ 的方程为 $y = \frac{x_0}{2}x - y_0$。
+        - <strong>联立求弦长</strong>：联立 $\begin{cases} y = \frac{x_0}{2}x - y_0 \ x^2 = 4y \end{cases}$，消 $y$ 得 $x^2 - 2x_0x + 4y_0 = 0$。则 $\Delta = 4x_0^2 - 16y_0 = 4(x_0^2 - 4y_0)$。弦长 $|AB| = \sqrt{1 + (\frac{x_0}{2})^2} \cdot \frac{\sqrt{\Delta}}{1} = \frac{\sqrt{4+x_0^2}}{2} \cdot 2\sqrt{x_0^2 - 4y_0} = \sqrt{(4+x_0^2)(x_0^2 - 4y_0)}$。
+        - <strong>求距离</strong>：点 $P(x_0, y_0)$ 到直线 $AB: x_0x - 2y - 2y_0 = 0$ 的距离 $d = \frac{|x_0^2 - 2y_0 - 2y_0|}{\sqrt{x_0^2 + 4}} = \frac{|x_0^2 - 4y_0|}{\sqrt{x_0^2 + 4}}$。
+        - <strong>表达面积</strong>：$S</em>$。
+        - } = \frac{1}{2}|AB|d = \frac{1}{2}(x_0^2 - 4y_0)^{\frac{3}{2}<strong>消元求最值</strong>：点 $P$ 在圆 $M: x_0^2 + (y_0+4)^2 = 1$ 上，故 $x_0^2 = 1 - (y_0+4)^2$。代入得 $S = \frac{1}{2}[1 - (y_0+4)^2 - 4y_0]^{\frac{3}{2}} = \frac{1}{2}(-y_0^2 - 12y_0 -15)^{\frac{3}{2</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-21.html">2021-理-21</a>（2021 · 难） 本题通过抛物线与圆的位置关系求参数，并计算切线构成的三角形面积的最大值。</li>
+<li><a href="../../exam/数学/2019-理-20.html">2019-理-20</a>（2019 · 难） 已知f(x)=lnx-(x+1)/(x-1)，讨论单调性并证明有且仅有两个零点，再证明零点处lnx曲线切线也是e^x的切线。</li>
+<li><a href="../../exam/数学/2008-文-07.html">2008-文-07</a>（2008 · 易） 曲线y=ax²在点(1,a)处切线与直线2x-y-6=0平行，利用导数等于斜率求参数a。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">切线</a></li>
+</ul>
+</div>
+</body>
+</html>

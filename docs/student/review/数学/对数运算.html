@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>对数运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>对数运算</h1><div class="review-mark" data-stem="对数运算"></div><div class="meta-card"><span><strong>考点</strong>对数运算</span><span><strong>权重</strong>28</span><span><strong>真题数</strong>11</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：28</li>
+<li>真题数：11；年份跨度：2009–2023</li>
+<li>出现题位：填空14 解答17 解答18 选择4 选择5 选择7 选择8 选择11 选择12</li>
+<li>难度分布：中6 易4 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>对数的核心定义</strong>：若 $a^x=N$（$a&gt;0, a\neq1$），则 $x=\log_a N$。常见对数 $\log_{10}N$ 记作 $\lg N$，$\log_e N$ 记作 $\ln N$（$e\approx2.71828$）。零和负数没有对数。</li>
+<li><strong>对数恒等式与换底公式</strong>：$a^{\log_a N}=N$；$\log_b N=\dfrac{\log_a N}{\log_a b}$。特别地，$\log_a b=\dfrac{1}{\log_b a}$，$\log_{a^m} b^n=\dfrac{n}{m}\log_a b$。</li>
+<li><strong>运算法则</strong>：<br />
+  $\log_a(MN)=\log_a M+\log_a N$，<br />
+  $\log_a\dfrac{M}{N}=\log_a M-\log_a N$，<br />
+  $\log_a M^n=n\log_a M$（$M,N&gt;0$）。<br />
+  注意与 $(\log_a M)^n$ 的区别，不可混淆。</li>
+<li><strong>对数函数性质</strong>：$y=\log_a x$（$a&gt;0,a\neq1$），定义域 $(0,+\infty)$，过定点 $(1,0)$。当 $a&gt;1$ 时单调递增；当 $0&lt;a&lt;1$ 时单调递减。比较对数值大小时，常利用单调性、中间值 $0,1$ 或作差/作商。</li>
+<li><strong>对数与函数性质综合</strong>：结合奇偶性（如 $f(-x)=f(x)$ 或 $f(-x)=-f(x)$）可列方程求参数；定义域关于原点对称是奇偶性的前提，必须检验。</li>
+<li><strong>对数与数列综合</strong>：等差/等比数列的通项与前 $n$ 项和公式常与对数运算结合，如 $\log_a b_1 + \log_a b_2 + \dots + \log_a b_n = \log_a(b_1b_2\cdots b_n)$。利用数列性质可化简求和。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>定义域优先明暗线</strong><br />
+   处理含对数式子的方程、不等式或函数性质问题，第一步必须考虑真数 $&gt;0$、底数 $&gt;0$ 且 $\neq1$，写出并验证定义域。奇偶性、单调性等讨论均基于定义域进行。</p>
+</li>
+<li>
+<p><strong>特殊值法速解含参对数方程</strong><br />
+   若已知函数具有奇偶性等对称性质，优先代入易于计算的特殊值（如 $f(1)=f(-1)$）列方程，求出参数值，再代入原函数检验定义域是否关于原点对称，避免因定义域不对称造成增根。</p>
+</li>
+<li>
+<p><strong>比较大小“三看”策略</strong>  </p>
+</li>
+<li>一看能否化成同底：利用对数运算法则将不同底对数化成同底，直接利用单调性比较。  </li>
+<li>二看能否找桥：引入中间值 $0$、$1$ 或 $\dfrac12$ 等，常见变形如 $\log_a (xy)=1+\log_a\dfrac{x}{y}$，将数值与 $1$ 比较。  </li>
+<li>
+<p>三看结构构造函数：形如 $a=\ln(1+x)$、$c=\sqrt{1+2x}-1$ 的比较，可将 $a$ 变形为 $\ln(1+2x+x^2)$ 等，或构造函数利用导数、常用不等式（$\ln(1+x)\leq x$、$\ln(1+x)\geq \dfrac{x}{1+x}$ 等）判断大小。</p>
+</li>
+<li>
+<p><strong>对数运算与数列“两步走”</strong>  </p>
+</li>
+<li>第一步：求出数列通项 $a_n$，利用等差、等比基本量（$a_1,d,q$）列方程。  </li>
+<li>
+<p>第二步：代入 $b_n=\log_c a_n$，运用对数运算法则将积/商转化为和/差，结合等差、等比求和公式完成计算。若遇到取整函数 $[\lg a_n]$，需划分区间分类计数。</p>
+</li>
+<li>
+<p><strong>分段函数中“对数段”的处理</strong><br />
+   先根据自变量所在区间选取对应解析式；对数段可能涉及恒等式 $a^{\log_a N}=N$ 或换底，计算时小心指数与对数的互化。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视真数与底数的范围</strong>：含参数的偶函数问题如 $f(x)=\ln\dfrac{2x-1}{2x+1}+ax$，由 $f(1)=f(-1)$ 解得 $a=0$ 后，忘记检验定义域是否关于原点对称，导致产生没有排除的错误解。</li>
+<li><strong>对数运算法则误用</strong>：常见错误为 $\log_a(M+N)=\log_a M+\log_a N$，$\log_a M \cdot \log_a N = \log_a(MN)$，$(\log_a M)^n = n\log_a M$。务必区分对数加法对应真数乘法，系数 $n$ 是真数的指数，而非对数的幂。</li>
+<li><strong>对数值比较时忘记单调性方向</strong>：底数 $a&gt;1$ 时 $\log_a x$ 递增，$0&lt;a&lt;1$ 时递减。用换底公式化为同底时，注意倒数会使不等号方向变化，例如由 $\log_2 7 &gt; \log_2 5$ 推得 $\dfrac{1}{\log_2 7} &lt; \dfrac{1}{\log_2 5}$，即 $\log_7 2 &lt; \log_5 2$，从而影响 $\log_3 6$ 等拆分后的比较。</li>
+<li><strong>对数复合函数奇偶性检验缺失</strong>：仅由 $f(-x)+f(x)=0$ 或 $f(-x)-f(x)=0$ 得到恒等式就结束，忽略定义域对称性的验证，导致“伪奇偶”情形。</li>
+<li><strong>数列对数和时首项和项数错误</strong>：如 $\log_3 a_1 + \log_3 a_2 + \dots + \log_3 a_n$ 中，把项数搞错，或把 $a_n$ 的通项直接当成对数求和公式中的项，忘记先求对数再求和的结构。</li>
+<li><strong>取整函数与对数分段计数遗漏</strong>：$b_n=[\lg a_n]$ 中，对数的值跨越整数点时，需准确界定区间端点（$1,10,100,1000,\dots$），容易忘记包含或不包含端点造成计数偏差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023·新课标Ⅱ·04）</h3>
+<p>若 $f(x)=\ln\dfrac{2x-1}{2x+1}+a x$ 为偶函数，则 $a=$（ ）<br />
+A. $-1$　B. $0$　C. $\dfrac12$　D. $1$</p>
+<p><strong>思路</strong><br />
+利用偶函数定义</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-04.html">2023-新课标Ⅱ-04</a>（2023 · 中） 考查偶函数性质求参数，利用特殊值法及定义域对称性进行检验。</li>
+<li><a href="../../exam/数学/2021-理-12.html">2021-理-12</a>（2021 · 中） 本题通过构造函数与导数，结合对数运算与单调性比较三个数的大小。</li>
+<li><a href="../../exam/数学/2019-文-18.html">2019-文-18</a>（2019 · 易） 等比数列的通项公式求解及对数运算后的等差数列求和。</li>
+<li><a href="../../exam/数学/2019-理-14.html">2019-理-14</a>（2019 · 中） 考查函数奇偶性与对数运算，利用奇函数性质转化求参数值。</li>
+<li><a href="../../exam/数学/2016-理-17.html">2016-理-17</a>（2016 · 中） 本题通过等差数列前n项和与对数取整函数，考查通项公式求解及新定义数列的求和。</li>
+<li><a href="../../exam/数学/2015-理-05.html">2015-理-05</a>（2015 · 易） 考查分段函数求值及对数运算</li>
+<li><a href="../../exam/数学/2013-理-08.html">2013-理-08</a>（2013 · 易） 通过将a、b、c化为1+logₙ2形式，利用对数函数单调性比较大小。</li>
+<li><a href="../../exam/数学/2011-文-17.html">2011-文-17</a>（2011 · 中） 考查等比数列前n项和公式的应用及对数运算求通项。</li>
+<li><a href="../../exam/数学/2011-理-17.html">2011-理-17</a>（2011 · 中） 求等比数列通项公式及利用对数运算和裂项相消法求数列前n项和</li>
+<li><a href="../../exam/数学/2010-理-11.html">2010-理-11</a>（2010 · 难） 本题通过分段函数图象，结合对数运算性质，利用数形结合求函数值相等时自变量的取值范围。</li>
+<li><a href="../../exam/数学/2009-文-07.html">2009-文-07</a>（2009 · 易） 比较对数式大小，涉及对数运算与估算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/832-对数运算.html">对数运算</a></li>
+</ul>
+</div>
+</body>
+</html>

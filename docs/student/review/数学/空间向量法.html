@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间向量法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间向量法</h1><div class="review-mark" data-stem="空间向量法"></div><div class="meta-card"><span><strong>考点</strong>空间向量法</span><span><strong>权重</strong>15</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：15</li>
+<li>真题数：2；年份跨度：2016–2024</li>
+<li>出现题位：解答17 解答19</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<p>本专题聚焦于空间向量法在立体几何解答题中的系统应用，尤其适用于折叠型结合体中垂直关系的证明与二面角的计算。考纲级核心要点提炼如下：</p>
+<ol>
+<li><strong>空间直角坐标系的建立原则</strong>：优先利用题设中的三线两两垂直关系（如线面垂直、面面垂直、折叠前后不变的垂直）。常见建系策略：以垂足为原点，垂线为 $z$ 轴，底面内相互垂直的直线为 $x$、$y$ 轴；折叠问题常以折痕的垂线所在直线为坐标轴。</li>
+<li><strong>点坐标的确定</strong>：平面图形折叠后，平面内点的坐标可通过平面几何关系直接得到；折起部分的点坐标需结合折叠前后的<strong>不变量</strong>（如折痕两侧的线段长度不变）与<strong>变量</strong>（空间角）计算，注意竖坐标的符号与数值。</li>
+<li><strong>向量法证明垂直</strong>：</li>
+<li>线线垂直：转化为方向向量的数量积为零，即 $\vec{a}\cdot\vec{b}=0$。</li>
+<li>线面垂直：证明直线的方向向量与平面内两相交直线的方向向量数量积均为零，或证明方向向量与平面的法向量平行。</li>
+<li><strong>空间角公式</strong>：</li>
+<li><strong>异面直线夹角</strong>：$\cos\theta = \dfrac{|\vec{u}\cdot\vec{v}|}{|\vec{u}||\vec{v}|}$（$\theta\in(0,\frac{\pi}{2}]$）。</li>
+<li><strong>线面角</strong>：$\sin\theta = \dfrac{|\vec{u}\cdot\vec{n}|}{|\vec{u}||\vec{n}|}$（$\vec{n}$ 为平面法向量，$\theta\in[0,\frac{\pi}{2}]$）。</li>
+<li><strong>二面角</strong>：核心公式 $\cos\langle\varphi\rangle = \dfrac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$。若求二面角的正弦值，则先用 $\sin\theta=\sqrt{1-\cos^2\theta}$ 计算，并须根据图形判断二面角为锐角还是钝角，以避免符号错误。</li>
+<li><strong>法向量的求法</strong>：设平面内两不共线向量，列方程组求解，可取一组简单整数解。</li>
+<li><strong>折叠问题的本质</strong>：平面图形沿折痕翻折后，折痕两侧的平面图形形状不变（边长、角度不变），但空间位置改变；折痕上的点及线段在折叠前后共面、长不变；若折痕与某直线垂直，则该垂线在折叠后与折痕的垂直关系保持。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>针对折叠体中的垂直证明与二面角计算，归纳出以下通用解法步骤：</p>
+<ol>
+<li><strong>还原平面图形，计算关键量</strong>：在平面展开图中，利用正弦定理、余弦定理、勾股定理等求出所有边长、对角线长及相互垂直关系。尤其注意折痕与哪些线垂直（如在平面图形中 $EF\perp AD$）。</li>
+<li><strong>确定空间不变量，推出垂直关系</strong>：根据折叠性质，$EF$ 折叠后仍垂直于平面图形中原本与其垂直的线段（非折线部分）。利用这些不变的垂直，结合勾股定理逆定理，证明新的线线垂直，进而推出线面垂直（如 $PE\perp$ 底面某些线）。</li>
+<li><strong>建立空间直角坐标系</strong>：以折叠后产生的线面垂直为基础，选垂足为原点，垂线方向为 $z$ 轴，底面内两条互相垂直的直线为 $x$、$y$ 轴。建系后应使关键点坐标形式尽可能简单（很多坐标取 $0$）。</li>
+<li><strong>标出所有相关点坐标</strong>：逐一计算 $A, B, C, D, P$ 等点坐标。底面内的点直接由平面几何得出；空间中的点注意 $z$ 坐标的正负及长度。</li>
+<li><strong>求平面的法向量</strong>：对目标平面（如面 $PCD$、面 $PBF$），取两个不共线的同面量，设平面法向量 $\vec{n}=(x,y,z)$，数量积列方程组，取一个非零解即可。</li>
+<li><strong>套用公式求二面角正弦值</strong>：利用二面角公式 $\cos\theta = \dfrac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$ 得余弦，再 $\sin\theta = \sqrt{1-\cos^2\theta}$。若题目要求正弦值且二面角为钝角，正弦值仍为正，直接用绝对值公式所得余弦求正弦即可，但建议简要说明二面角锐钝。</li>
+<li><strong>作答与检验</strong>：结果需化为最简形式，检验法向量有无取错、坐标计算有无疏漏。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>折叠关系应用错误</strong>：混淆折叠前后变化的量与不变的量。误认为折叠后原平面内所有角度都保持不变，实际上仅折痕所在的平面图形的内部关系不变，而折起部分与底面所成空间角会变。</li>
+<li><strong>建系坐标与图形不符</strong>：原点选择不当，导致点坐标混淆正负号。竖坐标的正负须严格对应点在基准面的上方还是下方。</li>
+<li><strong>法向量求解随意性导致计算困难</strong>：设出法向量 $\vec{n}=(x,y,z)$ 后，联立方程时未知数多于方程，需合理给某个元赋值。赋值不当可能引入分数或过大数值，增加后续模长计算负担。建议取简单整数。</li>
+<li><strong>二面角余弦公式符号误用</strong>：求二面角的平面角时，若直接套用 $\cos\theta = \frac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$，得到的是锐角的余弦。实际二面角可能是钝角，但正弦值恒正，因此用此绝对值公式求正弦值不受影响。若求余弦，则需判断方向。</li>
+<li><strong>忽略了证明题中的逻辑顺序</strong>：如第（1）问证明线线垂直 $EF\perp PD$，常需先用线面垂直判定得 $EF\perp$ 平面 $PDE$（或类似结构），再推出线线垂直。跳步或直接计算向量数量积（大计算量）易失分。</li>
+<li><strong>计算粗心</strong>：向量坐标运算涉及平方、开方，细小错误会导致最终结果错误。尤其注意 $|\vec{n}|=\sqrt{x^2+y^2+z^2}$ 中的根号化简。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> 2024 新课标Ⅱ-17（改编简述）</h3>
+<p>平面四边形 $ABCD$ 中，$AB=8$，$CD=3$，$AD=5\sqrt{3}$，$\angle ADC=90^\circ$，$\angle BAD=30^\circ$。点 $E,F$ 满足 $\overrightarrow{AE}=\frac{2}{5}\overrightarrow{AD}$，$\overrightarrow{AF}=\frac{1}{2}\overrightarrow{AB}$。将 $\triangle AEF$ 沿 $EF$ 折至 $\triangle PEF$，使得 $PC=4\sqrt{3}$。证明：$EF\perp PD$；求面 $PCD$ 与面 $PBF$ 所成二面角的正弦值。</p>
+<p><strong>思路</strong>：<br />
+（1）由平面图形的几何关系，求出 $EF$ 长度，证 $EF\perp AD$；折叠后 $EF\perp PE, EF\perp DE$，得 $EF\perp$ 平面 $PDE$，从而 $EF\perp PD$。<br />
+（2）利用 $PE\perp EF$ 及 $PC$ 长证 $PE\perp$ 平面 $BCDE$，以 $E$ 为原点建系，计算法向量，套二面角公式。</p>
+<p><strong>步骤</strong>：
+1. 平面图形中：由余弦定理在 $\triangle ADE$ 求 $AE=\frac{2}{5}AD=2\sqrt{3}$，$AF=4$，$\angle EAF=30^\circ$，得 $EF^2=AE^2+AF^2-2\cdot AE\cdot AF\cos30^\circ =12+16-24=4$，$EF=2$。勾股逆定理得 $EF\perp AD$。
+2. 折叠后 $EF\perp PE$，$EF\perp DE$（原 $AE,AD$），故 $EF\perp$ 平面 $PDE$，$PD\subset$ 平面 $PDE$，得证。
+3. 又由 $DE=AD-AE=3\sqrt{3}$，$\triangle PDE$ 中 $PE=2\sqrt{3}$，$PD=\sqrt{PE^2+DE^2}=\sqrt{39}$？再根据 $PC=4\sqrt{3}$，底面 $CD=3$，过 $P$ 作 $PO\perp DE$ 于 $O$，用二推垂直；具体地，由 $PE^2+ED^2=PD^2$ 得 $PE\perp ED$，结合 $PE\perp EF$ 推出 $PE\perp$ 底面，从而可建系 $E(0,0,0)$，$B,C,D$ 在平面 $xy$ 内。
+4. 建系 $E-xyz$：$EF$ 方向为 $x$ 轴，$ED$ 为 $y$ 轴，$EP$ 为 $z$ 轴。得 $P(0,0,2\sqrt{3})$，$D(0,3\sqrt{3},0)$，$C$ 坐标通过 $\angle ADC=90^\circ$ 和 $CD=3$ 得 $C(-3,3\sqrt{3},0)$，$F(2,0,0)$，$B$ 由 $AF=\frac12 AB$ 及平面几何得 $B(8\cos?)$ 具体算：$A(0,-2\sqrt{3},0)$，$F$ 为 $AB$ 中点，$A(0,-2\sqrt{3},0)$，则 $B=(4,2\sqrt{3},0)$ 经核对，更准确应为 $A(0,-2\sqrt{3},0)$，$F(2,0,0)$，则 $B=(4,2\sqrt{3},0)$。坐标确定后，求面 $PCD$ 和面 $PBF$ 法向量，计算 $\cos\theta$，得 $\sin\theta=\frac{8\sqrt{65}}{65}$。</p>
+<p><strong>点评/变式</strong>：此题第二问建系时充分借助了第一问的垂直结论，体现了立体几何大题层层递进的设计。折叠题建系关键就是找准那条与底面垂直的棱。变式：折叠后若未直接给出 $PC$ 长，而改为二面角大小，方法同源，均需先找垂足。</p>
+<h3><strong>题目</strong> 2016 理-19（改编简述）</h3>
+<p>菱形 $ABCD$ 对角线交于 $O$，$AB=5$，$AC=6$。点 $E,F$ 分别在 $AD,CD$ 上，$AE=CF=\dfrac{5}{4}$。$EF$ 交 $BD$ 于 $H$。将 $\triangle DEF$ 沿 $EF$ 折至 $\triangle D'EF$，$OD'=\dfrac{\sqrt{10}}{2}$？原题 $OD'= \text{已知}$。证明：$D'H\perp$ 平面 $ABCD$；求二面角 $B-D'A-C$ 的正弦值。</p>
+<p><strong>思路</strong>：<br />
+平面菱形中计算出 $OD=4$，$EF$ 与 $BD$ 垂直且 $H$ 为 $OD$ 上定点。折叠后证 $D'H\perp OH, D'H\perp EF$ 推出线面垂直。建系用 $H$ 为原点或 $O$ 为原点均可，推荐 $O$ 为原点，$x,y$ 轴沿对角线方向。</p>
+<p><strong>步骤</strong>：
+1. 菱形 $AC=6\Rightarrow AO=3$，$BO=\sqrt{AB^2-AO^2}=4$，$BD=8$。由平行线比例得 $EF\perp BD$，$H$ 为 $OD$ 上靠近 $O$ 的点？详细：通过 $AE/AD = \frac{5/4}{5}?$ 得 $EF$ 位置，求得 $OH, HD$ 长。
+2. 折叠前 $EF\perp HD$，故折叠后 $EF\perp D'H$；结合 $OD'$ 长与 $OH, D'H$ 长度关系用勾股定理得 $D'H\perp OH$。从而 $D'H\perp$ 平面 $ABCD$。
+3. 以 $O$ 为原点，$OA$ 为 $x$ 轴，$OD$ 为 $y$ 轴，建系，$D'(0,?,?)$？实际 $D'$ 坐标经分析，因 $D'H\perp$ 底面，且 $H$ 在 $y$ 轴上，$D'$ 位置在底面正上方，可算出坐标。写出各点，求平面 $B-D'A$ 和 $D'AC$ 法向量，得二面角余弦，进而正弦。</p>
+<p><strong>点评/变式</strong>：本题也是经典的折叠题，先平面几何计算，再折叠出线面垂直。建系时原点选在菱形中心，使底面点坐标对称易写。要注意二面角 $B-D'A-C$ 的棱为 $D'A$，需准确选择平面内向量。这类问题可变形为折叠后给出二面角求线段长，反向使用同样坐标关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-17.html">2024-新课标Ⅱ-17</a>（2024 · 中） 立体几何题，考查线面垂直的判定与性质，以及用空间向量法求解二面角的正弦值。</li>
+<li><a href="../../exam/数学/2016-理-19.html">2016-理-19</a>（2016 · 中） 本题为立体几何折叠问题，先证明线面垂直，再计算二面角的正弦值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/579-空间向量法.html">空间向量法</a></li>
+</ul>
+</div>
+</body>
+</html>

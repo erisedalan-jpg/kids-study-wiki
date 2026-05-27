@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数列的概念及简单表示法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数列的概念及简单表示法</h1><div class="review-mark" data-stem="数列的概念及简单表示法"></div><div class="meta-card"><span><strong>考点</strong>数列的概念及简单表示法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：解答20</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>数列定义</strong>：数列是按一定次序排列的一列数，本质是定义在正整数集 $N^*$ (或其有限子集) 上的函数 $a_n = f(n)$。</li>
+<li><strong>通项公式</strong> $a_n$ 与前 $n$ 项和 $S_n$ 的关系 (核心)：
+    $$ a_n =
+    \begin{cases}
+    S_1, &amp; n=1 \
+    S_n - S_{n-1}, &amp; n \ge 2
+    \end{cases} $$
+    该公式适用于任何数列，是实现 $S_n$ 与 $a_n$ 相互转化的唯一桥梁。</li>
+<li><strong>递推公式</strong>：表示数列相邻若干项之间关系的式子。处理递推公式的主要目标是通过变形、换元，将其转化为等差数列或等比数列模型。</li>
+<li><strong>等比数列判定</strong>：若从第二项起，每一项与前一项的比值为同一非零常数 $q$（需验证首项非零），则该数列为等比数列。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>消元转化法</strong>：遇到题干中同时含有 $a_n$ 与 $S_n$ 的等式 (如 $a_{n+1}=S_n+f(n)$)，通常利用 $a_n = S_n - S_{n-1}$ 统一替换，转化为只含 $S_n$ (或只含 $a_n$) 的递推关系，进而寻求简单数列模型。</li>
+<li><strong>辅助数列法</strong>：对于较复杂的递推式，可依据等式结构特征，整体设出新数列 $b_n$ (如题中设 $b_n = S_n - 3^n$)，目的是将原递推简化为关于 $b_n$ 的等差或等比数列。</li>
+<li><strong>单调性求参</strong>：已知数列单调递增 (或递减) 求参数范围，常转化为 $a_{n+1} \ge a_n$ (或 $\le$) 对任意 $n \in N^*$ 恒成立。一般先求出通项，代入不等式后进行参数分离，转化为求函数的最值问题。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>忽略 $n=1$ 的检验</strong>：利用 $a_n = S_n - S_{n-1}$ 时，$n$ 的起始条件必须是 $n \ge 2$。此时求出的通项必须在最后验证 $a_1$ 是否满足该式，若不满足需写成分段形式。</li>
+<li><strong>等比数列判定漏验首项</strong>：构造出 $b_{n+1} = q b_n$ 后，必须说明 $b_1 \ne 0$，才能严格判定其为等比数列。</li>
+<li><strong>混淆恒成立与存在性问题</strong>：第 (Ⅱ) 问中 $a_{n+1} \ge a_n$ 对 <strong>所有</strong> $n \in N^*$ 恒成立，意味着参数 $a$ 必须大于等于含 $n$ 代数式的最大值，而非最小值，且需注意 $n$ 的取值范围及等号能否取到。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2008-理-20）</h3>
+<p>已知 $a_1 = a$, $a_{n+1} = S_n + 3^n$，设 $b_n = S_n - 3^n$。(Ⅰ) 求 $b_n$ 的通项公式；(Ⅱ) 若 $a_{n+1} \ge a_n$ 恒成立，求 $a$ 的取值范围。</p>
+<p><strong>思路</strong>
+(Ⅰ) 题设给出了 $a_{n+1}$ 与 $S_n$ 的关系，且目标 $b_n$ 是用 $S_n$ 定义的。故利用 $a_{n+1} = S_{n+1} - S_n$ 消去 $a_{n+1}$，建立 $S_n$ 的递推式，再换元化为 $b_n$ 的等比数列求通项。
+(Ⅱ) 由 $b_n$ 的通项反推出 $S_n$，结合 $a_n = S_n - S_{n-1}$ 求出 $a_n$ (注意分段)，代入单调性不等式，分离参数后转化为求二次型函数的最值。</p>
+<p><strong>步骤</strong>
+(Ⅰ)
+由 $a_{n+1} = S_n + 3^n$ 及 $a_{n+1} = S_{n+1} - S_n$ 得：
+$$ S_{n+1} - S_n = S_n + 3^n \implies S_{n+1} = 2S_n + 3^n $$
+两边同除以 $3^{n+1}$ 或直接代入目标 $b_n$：
+目标是 $b_n = S_n - 3^n$，可得 $S_n = b_n + 3^n$，代入上式：
+$$ b_{n+1} + 3^{n+1} = 2(b_n + 3^n) + 3^n $$
+$$ b_{n+1} = 2b_n + 2 \cdot 3^n + 3^n - 3^{n+1} = 2b_n $$
+易求 $b_1 = S_1 - 3 = a_1 - 3 = a - 3$。
+故 ${b_n}$ 是以 $a-3$ 为首项，2为公比的等比数列，得 $b_n = (a-3) \cdot 2^{n-1}$。</p>
+<p>(Ⅱ)
+由 $b_n = S_n - 3^n$，得 $S_n = (a-3) \cdot 2^{n-1} + 3^n$。
+当 $n \ge 2$ 时，$a_n = S_n - S_{n-1} = [(a-3) \cdot 2^{n-1} + 3^n] - [(a-3) \cdot 2^{n-2} + 3^{n-1}]$
+$$ = (a-3) \cdot 2^{n-2} + 2 \cdot 3^{n-1} $$
+又 $a_1 = a$，检验 $n=1$ 时不符合上式，故通项分段：
+$$ a_n = \begin{cases} a, &amp; n=1 \ (a-3) \cdot 2^{n-2} + 2 \cdot 3^{n-1}, &amp; n \ge 2 \end{cases} $$
+由 $a_{n+1} \ge a_n$ 对 $n \in N^*$ 恒成立：
+当 $n=1$ 时，$a_2 \ge a_1$，即 $a-3 + 6 \ge a \implies 3 \ge 0$，恒成立。
+当 $n \ge 2$ 时，$(a-3) \cdot 2^{n-1} + 2 \cdot 3^n \ge (a-3) \cdot 2^{n-2} + 2 \cdot 3^{n-1}$
+整理得：$(a-3) \cdot 2^{n-2} \ge -4 \cdot 3^{n-1}$
+分离参数：$a-3 \ge -4 \cdot 3^{n-1} / 2^{n-2} = -8 \cdot \left( \frac{3}{2} \right)^{n-1}$
+故 $a \ge 3 - 8 \cdot \left( \frac{3}{2} \right)^{n-1}$ 对 $n \ge 2$ 恒成立。
+令 $f(n) = 3 - 8 \cdot \left( \frac{3}{2} \right)^{n-1}$，其在 $n \ge 2$ 上单调递减。
+因此 $a$ 需大于等于其最大值，即 $n=2$ 时的值：
+$f(2) = 3 - 8 \times \frac{3}{2} = -9$。
+综上，$a$ 的取值范围是 $[-9, +\infty)$。</p>
+<p><strong>点评/变式</strong>
+- <strong>核心思想</strong>：本题完美体现了“辅助数列”思想，通过拼凑目标设元，使递推关系极度简化。
+- <strong>易错警戒</strong>：务必养成习惯求出分段通项后，代入单调性需讨论 $n=1$。本题虽 $n=1$ 时恒成立，但失分往往在于未讨论步骤。
+- <strong>变式思考</strong>：若条件改为 $a_{n+1} \le a_n$，则参数分离后需寻找含 $n$ 代数式的最小值，而 $n \to \infty$ 时 $f(n)$ 趋于负无穷，此时 $a$ 无解或受其他条件限制。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-20.html">2008-理-20</a>（2008 · 中） 已知递推关系构造新数列求通项，并由数列单调性求参数取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1180-数列的概念及简单表示法.html">数列的概念及简单表示法</a></li>
+</ul>
+</div>
+</body>
+</html>

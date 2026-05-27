@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>求和公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>求和公式</h1><div class="review-mark" data-stem="求和公式"></div><div class="meta-card"><span><strong>考点</strong>求和公式</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>由 $a_{m+n}=a_m a_n$ 且 $a_1=2$，可推导 ${a_n}$ 为<strong>等比数列</strong>。</p>
+<ul>
+<li>令 $m=1$：$a_{n+1}=a_n\cdot a_1=2a_n$，故 $\dfrac{a_{n+1}}{a_n}=2$，公比 $q=2$。</li>
+<li>通项公式：$a_n = a_1 q^{\,n-1} = 2^n$。</li>
+<li>前 $n$ 项和公式： $S_n = \dfrac{a_1(1-q^n)}{1-q} = 2^{n+1}-2 \quad (q\neq1)$。</li>
+</ul>
+<p><strong>一般地</strong>，等比数列 ${a_n}$ 中，若 $m+n=p+q$，则 $a_m a_n = a_p a_q$。此处条件升级为任意两项下标加法对应项的乘法，揭示<strong>指数函数特征</strong>：形如 $a_n = c\cdot q^{\,n}$ 可满足 $a_{m+n}=a_m a_n$（只需 $c^2 = c\cdot q$，验证可得 $c=q$ 或 $c=0$ 等特例）。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>由递推关系求通项</strong><br />
+   若给出 $a_{m+n}=a_m a_n$，优先<strong>赋值</strong>（如令 $m=1$）转化为 $a_{n+1}=k a_n$，并检查首项得到等比数列。</p>
+</li>
+<li>
+<p><strong>判定等比后直接写通项</strong><br />
+   利用 $a_n = a_1 q^{n-1}$ 得到项的表达式，避免逐项推导。</p>
+</li>
+<li>
+<p><strong>有限段求和的处理</strong>  </p>
+</li>
+<li>和 $a_{k+1}+a_{k+2}+\cdots+a_{N}$ 可用 $S_N - S_k$ 计算。</li>
+<li>或直接利用等比数列求和公式计算部分和：首项 $a_{k+1}$，公比 $q$，项数 $N-k$。</li>
+<li>
+<p>将条件方程化为指数等式，利用同底数幂相等解出下标。</p>
+</li>
+<li>
+<p><strong>指数方程的求解</strong><br />
+   写入形如 $2^A - 2^B = 2^M - 2^N$，往往对应指数相等。注意检验<strong>唯一性</strong>。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视项数计算</strong>：从 $k+1$ 到 $N$ 共有 $N-k$ 项，而非 $N-k-1$ 或 $N-k+1$。</li>
+<li><strong>求和公式记混</strong>：等比数列前 $n$ 项和分母为 $1-q$，注意首项和公比的幂次。$S_n = \dfrac{a_1(1-q^n)}{1-q}$ 而非 $q^n-1$ 直接倒置。</li>
+<li><strong>误用等差数列公式</strong>：遇到和式先确认是等差还是等比，不可盲目套用。</li>
+<li><strong>指数运算出错</strong>：$2^{k+1}+2^{k+2}+\cdots+2^{10} = 2^{k+1}(2^{10-k}-1)$ 时，括号内指数易算错。</li>
+<li><strong>忽略 $q=1$ 的讨论</strong>：虽然本题公比为2，但养成习惯检查 $q=1$ 时公式退化为 $S_n = n a_1$，确保不失分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2020-理-06 等比定义与求和逆向求参</h3>
+<p><strong>题目</strong><br />
+数列 ${a_n}$ 满足 $a_1=2$，$a_{m+n}=a_m a_n$。若 $a_{k+1}+a_{k+2}+\cdots+a_{10}=2^{11}-2^{5}$，求 $k$ 的值。</p>
+<p><strong>思路</strong><br />
+由乘积条件得等比，写出通项 $a_n=2^n$，将左边和式表示为 $S_{10}-S_k$ 或直接等比求和，化简为 $2^{11}-2^{k+1}$，与右边 $2^{11}-2^5$ 对比得出 $k$。</p>
+<p><strong>步骤</strong>  </p>
+<ol>
+<li>
+<p>求通项：令 $m=1$，有 $a_{n+1}=a_n\cdot a_1 = 2a_n$，所以 ${a_n}$ 是首项 $2$、公比 $2$ 的等比数列，<br />
+   因此 $a_n = 2\cdot 2^{\,n-1}=2^n$。</p>
+</li>
+<li>
+<p>计算部分和：<br />
+   $$a_{k+1}+a_{k+2}+\cdots+a_{10} = S_{10} - S_k$$<br />
+   前 $n$ 项和 $S_n = \dfrac{2(1-2^n)}{1-2}=2^{n+1}-2$。<br />
+   则 $S_{10}=2^{11}-2$，$S_k=2^{k+1}-2$，<br />
+   两者相减得 $(2^{11}-2)-(2^{k+1}-2) = 2^{11}-2^{k+1}$。</p>
+</li>
+<li>
+<p>建立等式并求解：<br />
+   由题意 $2^{11}-2^{k+1}=2^{11}-2^{5}$，<br />
+   所以 $2^{k+1}=2^5$，可得 $k+1=5$，即 $k=4$。</p>
+</li>
+</ol>
+<p><strong>点评</strong><br />
+本题将<strong>等比定义隐藏于抽象等式</strong>，考查赋值意识与整体代换。求和时活用 $S_N-S_k$ 可避免复杂项数运算。  </p>
+<p><strong>变式</strong><br />
+若条件改为 $a_{k+1}+a_{k+2}+\cdots+a_{15}=2^{16}-2^{7}$，则 $2^{16}-2^{k+1}=2^{16}-2^{7}$ 推出 $k=6$（假设仍为同一数列）。<br />
+进一步可设 $a_1=3$、$a_{m+n}=a_m a_n$，则公比为 $3$，和式变为 $3$ 的幂，方法完全相同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-06.html">2020-理-06</a>（2020 · 中） 已知数列递推求通项及等比数列求和，利用求和公式建立方程求参数值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">求和公式</a></li>
+</ul>
+</div>
+</body>
+</html>

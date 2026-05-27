@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数平移变换</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数平移变换</h1><div class="review-mark" data-stem="函数平移变换"></div><div class="meta-card"><span><strong>考点</strong>函数平移变换</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择9</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平移变换法则（左加右减，上加下减）</strong><br />
+  设函数 $y=f(x)$，则：</li>
+<li>$y=f(x+a)$ 的图像由 $y=f(x)$ 向左平移 $|a|$ 个单位（$a&gt;0$ 左移，$a&lt;0$ 右移）。</li>
+<li>$y=f(x)+b$ 的图像由 $y=f(x)$ 向上平移 $|b|$ 个单位（$b&gt;0$ 上移，$b&lt;0$ 下移）。</li>
+<li>
+<p>复合平移：$y=f(x+a)+b$ 先左右平移 $a$，再上下平移 $b$。</p>
+</li>
+<li>
+<p><strong>对称中心与奇函数</strong>  </p>
+</li>
+<li>若 $y=f(x)$ 是奇函数，则满足 $f(-x)=-f(x)$，且图像关于原点 $(0,0)$ 中心对称，当 $0$ 在定义域内时有 $f(0)=0$。</li>
+<li>一般函数 $y=f(x)$ 若有对称中心 $(h,k)$，则满足 $f(h+x)+f(h-x)=2k$，或平移后 $y=f(x+h)-k$ 为奇函数。</li>
+<li>
+<p>分式函数 $f(x)=\dfrac{ax+b}{cx+d}$（$c\neq 0$）的对称中心常在渐近线交点 $\left(-\dfrac{d}{c},\dfrac{a}{c}\right)$，可通过分离常数得到。</p>
+</li>
+<li>
+<p><strong>利用平移构造函数判定奇偶性</strong><br />
+  欲使 $g(x)=f(x+a)+b$ 为奇函数，等价于将 $f(x)$ 的对称中心 $(h,k)$ 平移到原点。应有：
+  $$
+  a = h,\quad b = -k \quad \Rightarrow \quad g(x)=f(x+h)-k \text{ 为奇函数}.
+  $$
+  （注意：此处 $h$ 是 $f(x)$ 对称中心的横坐标，当 $h$ 为正时向左平移 $|h|$；若对称中心为 $(h,k)$，则 $g(x)=f(x+h)-k$ 是奇函数。）</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>化简原函数表达式</strong><br />
+   对分式函数优先分离常数，写成 $f(x)=A+\dfrac{B}{x+C}$ 的形式，便于直观读出对称中心 $( -C, A)$。</p>
+</li>
+<li>
+<p><strong>确定对称中心</strong><br />
+   若函数由标准函数（如 $\dfrac{k}{x}$, $k\ne 0$）平移得到，直接反推平移量；若函数为 $f(x)=\dfrac{ax+b}{cx+d}$，对称中心为 $\left(-\dfrac{d}{c},\dfrac{a}{c}\right)$。</p>
+</li>
+<li>
+<p><strong>写出奇函数化平移</strong><br />
+   设对称中心为 $(h,k)$，则 $g(x)=f(x+h)-k$ 必为奇函数。据此将 $f(x+h)-k$ 展开对应到选项中的 $f(x\pm 1)\pm 1$ 等形式。</p>
+</li>
+<li>
+<p><strong>验证与选择</strong><br />
+   将符合的变换代入验证 $g(-x)=-g(x)$，或利用特殊值（如 $g(0)=0$ 是否为 $0$，若 $0$ 在定义域内）快速排除。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>平移方向记反</strong><br />
+  $f(x+1)$ 是向左平移 $1$ 单位，$f(x-1)$ 是向右平移 $1$ 单位。“左加右减”仅针对 $x$ 本身的代换，不要与图像平移肉眼方向混淆。</li>
+<li><strong>分离常数计算错误</strong><br />
+  例如 $f(x)=\dfrac{1-x}{1+x}$ 分子分母排列不当，易错写成 $\dfrac{x-1}{x+1}$ 导致符号反号。建议统一写成按 $x$ 降幂或分离后再核对。</li>
+<li><strong>对称中心坐标搞反</strong><br />
+  分离常数得到的 $f(x)=A+\dfrac{B}{x+C}$，中心为 $(-C, A)$，注意横坐标是分母零点的相反数。</li>
+<li><strong>忽视定义域变化</strong><br />
+  平移后新函数的定义域随之平移，奇函数要求定义域关于原点对称。若题目未限定定义域，一般默认自然定义域在平移后仍对称。</li>
+<li><strong>把“向下平移”符号弄错</strong><br />
+  若对称中心纵坐标为 $k$，变为奇函数需减去 $k$（即 $f(x+h)-k$）。若错写成 $+k$ 会导致中心纵坐标变为 $2k$，不是奇函数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021-文-09</h3>
+<p><strong>题目</strong>：设函数 $f(x)=\dfrac{1-x}{1+x}$，则下列函数中为奇函数的是<br />
+A. $f(x-1)-1$<br />
+B. $f(x-1)+1$<br />
+C. $f(x+1)-1$<br />
+D. $f(x+1)+1$</p>
+<p><strong>思路</strong>：先将 $f(x)$ 分离常数，找出其对称中心，再通过平移使对称中心移到原点，所得新函数即为奇函数，对应选项。</p>
+<p><strong>步骤</strong>：<br />
+1. 分离常数：<br />
+   $$
+   f(x)=\frac{1-x}{1+x} = \frac{-(x-1)}{x+1} = \frac{-(x+1)+2}{x+1} = -1 + \frac{2}{x+1}.
+   $$
+2. 由表达式 $f(x)=-1+\dfrac{2}{x+1}$ 可知其对称中心为 $(-1,-1)$。<br />
+3. 将对称中心 $(-1,-1)$ 平移到原点：自变量加 $1$（左移 $1$？这里注意：$h=-1$，则 $f(x+h)=f(x-1)$），函数值减 $(-1)$ 即加 $1$，得 $g(x)=f(x-1)+1$。<br />
+4. 验证 $g(x)$：<br />
+   $$
+   g(x)=f(x-1)+1 = -1+\frac{2}{(x-1)+1}+1 = \frac{2}{x},
+   $$
+   显然 $g(-x)=-g(x)$，且定义域对称，是奇函数。匹配选项 B。</p>
+<p><strong>点评/变式</strong>：<br />
+- 本题核心是“任何中心对称图形平移后可成为奇函数”，对称中心是关键。分离常数后直接读写中心是最快的方法。<br />
+- 变式：若问 $f(x+2)-3$ 为奇函数时 $f(x)$ 的对称中心，可反推。已知 $g(x)=f(x+a)+b$ 为奇函数，则 $f(x)$ 对称中心为 $(-a, -b)$。<br />
+- 切勿死记“左加右减”而忽略函数值平移的符号：$f(x-1)+1$ 右移 $1$、上移 $1$，将原中心 $(-1,-1)$ 挪至 $(0,0)$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-09.html">2021-文-09</a>（2021 · 易） 本题考查函数平移变换与奇偶性的判断，通过平移将给定函数转化为已知奇函数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数平移变换</a></li>
+</ul>
+</div>
+</body>
+</html>

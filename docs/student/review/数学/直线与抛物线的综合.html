@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与抛物线的综合</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与抛物线的综合</h1><div class="review-mark" data-stem="直线与抛物线的综合"></div><div class="meta-card"><span><strong>考点</strong>直线与抛物线的综合</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：2；年份跨度：2018–2018</li>
+<li>出现题位：解答19 解答20</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>抛物线定义</strong>：平面内与一个定点 $F$（焦点）和一条定直线 $l$（准线）距离相等的点的轨迹。$p$ 为焦点到准线的距离。</li>
+<li><strong>标准方程与焦点、准线</strong>：$y^2=2px\ (p&gt;0)$，焦点 $F(\frac p2,0)$，准线 $x=-\frac p2$；本题 $y^2=4x$ 中 $p=2$，焦点 $F(1,0)$，准线 $x=-1$。</li>
+<li><strong>焦点弦长公式</strong>：</li>
+<li>用坐标：过焦点 $F$ 的弦 $AB$，设 $A(x_1,y_1),B(x_2,y_2)$，则 $|AB|=x_1+x_2+p$。</li>
+<li>用倾斜角 $\theta$（$\theta \neq \frac{\pi}{2}$）：$|AB|=\frac{2p}{\sin^2\theta}$。</li>
+<li><strong>韦达定理与弦长</strong>：直线方程与抛物线联立，消 $y$（或 $x$），得一元二次方程，利用 $x_1+x_2$ 及 $x_1x_2$ 求弦长。</li>
+<li><strong>圆的方程</strong>：已知圆心 $(a,b)$ 和半径 $r$，则圆方程 $(x-a)^2+(y-b)^2=r^2$。弦的垂直平分线过圆心。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>联立方程法求弦长（通用）</strong>  </li>
+<li>设直线点斜式 $y-y_0=k(x-x_0)$，与抛物线方程联立，消去 $y$ 得到关于 $x$ 的一元二次方程。  </li>
+<li>若无特殊结构要求，写韦达定理：$x_1+x_2$ 与 $x_1x_2$。  </li>
+<li>根据弦长公式求待定系数。过焦点弦长优先用 $|AB|=x_1+x_2+p$ 简化计算。</li>
+<li><strong>倾斜角法求焦点弦长（特化）</strong>  </li>
+<li>适用于直接给出焦点弦长和倾斜角（或斜率）的情形。  </li>
+<li>使用公式 $|AB|=\frac{2p}{\sin^2\theta}$，由 $\sin^2\theta$ 反推斜率 $k=\tan\theta$。</li>
+<li><strong>求圆方程的步骤</strong>  </li>
+<li>由弦 $AB$ 求中点 $D$，写出垂直平分线方程。  </li>
+<li>设圆心为垂直平分线与某定关系（如与准线相切）交点，或利用圆心到准线距离等于半径，且圆心到 $A,B$ 距离相等求解。  </li>
+<li>根据相切条件得出半径，写出标准方程。注意可能有多解（如圆心在 $AB$ 上方或下方）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记 $p$ 与方程系数关系</strong>：在 $y^2=4x$ 中 $2p=4\Rightarrow p=2$，焦点 $F(1,0)$，而非 $F(2,0)$；准线 $x=-1$。</li>
+<li><strong>弦长公式混用</strong>：一般弦长 $|AB|=\sqrt{1+k^2}|x_1-x_2|$，焦点弦可直接用 $|AB|=x_1+x_2+p$。若用一般公式，计算量易增，且易漏加 $p$。</li>
+<li><strong>忽略相切条件对称性</strong>：圆心可能在 $x$ 轴上方或下方，两解不能丢。</li>
+<li><strong>垂直平分线写错</strong>：斜率需取负倒数，并用中点坐标代入。</li>
+<li><strong>联立后判别式验证</strong>：所求 $k$ 必须保证直线与抛物线有两个交点，应验证 $\Delta&gt;0$，虽然本题已给出弦长保证交点存在，但习惯不可缺。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2018年文科数学第20题/理科数学第19题</h3>
+<p><strong>题目</strong><br />
+抛物线 $C:y^2=4x$，焦点 $F$，过 $F$ 斜率为 $k\ (k&gt;0)$ 的直线 $l$ 与 $C$ 交于 $A,B$，$|AB|=8$。<br />
+(1) 求 $l$ 的方程；<br />
+(2) 求过 $A,B$ 且与 $C$ 的准线相切的圆的方程。</p>
+<p><strong>思路</strong><br />
+(1) 可用联立法或焦点弦倾斜角公式求 $k$。<br />
+(2) 先求弦 $AB$ 中点，得垂直平分线；设圆心在垂直平分线上，利用圆心到准线距离等于圆心到 $A$（或 $B$）的距离，列方程解圆心坐标和半径。</p>
+<p><strong>步骤</strong><br />
+<strong>(1) 求直线</strong><br />
+<strong>法一（联立坐标法）</strong>：焦点 $F(1,0)$，设 $l: y=k(x-1)$，与 $y^2=4x$ 联立：
+$$
+\begin{cases}
+y=k(x-1) \
+y^2=4x
+\end{cases}
+\Rightarrow k^2(x-1)^2=4x \Rightarrow k^2x^2-2(k^2+2)x+k^2=0.
+$$
+韦达定理：$x_1+x_2=\frac{2(k^2+2)}{k^2}$，$x_1x_2=1$。<br />
+焦点弦长 $|AB|=x_1+x_2+p=\frac{2(k^2+2)}{k^2}+2=8$，解得 $k^2=1$，由 $k&gt;0$ 得 $k=1$。<br />
+故直线 $l$ 方程为 $y=x-1$。</p>
+<p><strong>法二（倾斜角公式）</strong>：设倾斜角 $\theta$，焦弦长 $|AB|=\frac{2p}{\sin^2\theta}=\frac{4}{\sin^2\theta}=8$，得 $\sin^2\theta=\frac12$，$\theta=45^\circ$，则 $k=\tan\theta=1$，$l: y=x-1$。</p>
+<p><strong>(2) 求圆的方程</strong><br />
+由(1)可得 $A,B$ 坐标满足 $x^2-6x+1=0$，中点 $D(3,2)$。$AB$ 垂直平分线斜率 $-1$，方程为 $y-2=-(x-3)$，即 $y=-x+5$。<br />
+设圆心 $E(a, -a+5)$。准线 $x=-1$，相切则半径 $r=|a-(-1)|=|a+1|$。又圆心到 $A$ 距离等于 $r$，由抛物定义，$|EA|=r$ 且 $|EA|$ 也可用弦半长关系求。联立 $|EA|^2=r^2$，或将条件转换为圆心到焦点距离关系等。利用 $A(3+2\sqrt2, 2+2\sqrt2)$ 等代入可解，或者运用焦点弦性质：以焦点弦为直径的圆与准线相切，圆心 $D(3,2)$，但此处圆过 $A,B$ 且与准线相切并非一定以 $AB$ 为直径，故圆心不一定是中点。<br />
+由 $|EA|^2=r^2$ 写出方程：$(a-x_1)^2+(-a+5-y_1)^2=(a+1)^2$，利用 $x_1+y_1-1=0$（因为 $y_1=x_1-1$）化简。取 $A$ 点可选 $(3+2\sqrt2,2+2\sqrt2)$，代入解得 $a=3$ 或 $a=11$，对应 $r=4$ 或 $12$。<br />
+圆心 $(3,2)$ 时 $r=4$，圆方程 $(x-3)^2+(y-2)^2=16$；<br />
+圆心 $(11,-6)$ 时 $r=12$，圆方程 $(x-11)^2+(y+6)^2=144$。</p>
+<p><strong>点评/变式</strong><br />
+焦点弦长两种方法对比：坐标法具有一般性，倾斜角公式仅适用于过焦点的弦且垂直时需单独讨论。圆的相切问题本质是点（圆心）到直线距离等于半径，结合弦的对称性转化为方程组求解。变式训练：若要求圆心在 $x$ 轴上，如何调整？</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-20.html">2018-文-20</a>（2018 · 中） 考查抛物线与直线相交的焦点弦问题，并求过交点与准线相切的圆的方程。</li>
+<li><a href="../../exam/数学/2018-理-19.html">2018-理-19</a>（2018 · 中） 求抛物线焦点弦所在直线方程及与准线相切的圆方程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">直线与抛物线的综合</a></li>
+</ul>
+</div>
+</body>
+</html>

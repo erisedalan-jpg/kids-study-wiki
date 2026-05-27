@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复合函数的单调性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>复合函数的单调性</h1><div class="review-mark" data-stem="复合函数的单调性"></div><div class="meta-card"><span><strong>考点</strong>复合函数的单调性</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>复合函数 $y=f(g(x))$ 的单调性由内层函数 $u=g(x)$ 与外层函数 $y=f(u)$ 共同决定，其核心判定法则为 <strong>“同增异减”</strong>：
+- 若内层函数与外层函数单调性 <strong>相同</strong>（同增或同减），则复合函数为 <strong>增函数</strong>；
+- 若内层函数与外层函数单调性 <strong>相反</strong>（一增一减），则复合函数为 <strong>减函数</strong>。
+此法则成立的前提：$x$ 在定义域内取值，且 $u=g(x)$ 的值域必须落在外层函数 $f(u)$ 的定义域内。因此，求复合函数单调区间必须先求函数的自然定义域，再在定义域的子集上讨论单调性。常见外层函数有 $y=\ln u$（增）、$y=a^u\,(a&gt;1)$（增）、$y=a^u\,(0&lt;a&lt;1)$（减）、$y=\log_a u\,(a&gt;1)$（增）等。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求定义域</strong>——先写出使函数有意义的所有条件（如真数 $&gt;0$、分母 $\neq0$、偶次根式下 $\geq0$ 等），解出 $x$ 的取值范围，此区间即为函数讨论的基础。</li>
+<li><strong>分解复合结构</strong>——将函数拆分为内层函数 $u=g(x)$ 与外层函数 $y=f(u)$，明确各自的单调性。</li>
+<li><strong>判内层单调区间</strong>——在定义域内求出 $u=g(x)$ 的单调递增区间和单调递减区间。</li>
+<li><strong>判外层单调性</strong>——确定外层函数 $y=f(u)$ 在其定义域（即 $u$ 的取值范围）上的单调性（常为恒定单调）。</li>
+<li><strong>用“同增异减”复合</strong>——将内层区间与外层单调性组合：同则为增区间，异则为减区间。</li>
+<li><strong>规范作答</strong>——单调区间必须写出 $x$ 的完整区间，多个区间用逗号隔开，不可用并集符号“$\cup$”。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域直接求单调区间</strong>：如看到 $x^2-2x-8$ 直接求二次函数递增区间 $(1,+\infty)$，忽略真数大于 0 的限制而误选 C。</li>
+<li><strong>混淆内外层单调性</strong>：误将外层函数的单调性套用到内层，或忘记外层函数是增还是减，导致“同增异减”用反。</li>
+<li><strong>单调区间书写不规范</strong>：将不连续的单调区间用并集符号 $\cup$ 连接（如写成 $(-\infty,-2)\cup(4,+\infty)$ 表示递增区间），这是典型错误，应写成“$(-\infty,-2)$ 和 $(4,+\infty)$”或“$(-\infty,-2), (4,+\infty)$”。</li>
+<li><strong>忽略内层值域对外层定义域的约束</strong>：当外层函数定义域有限制时，内层函数的值域必须保证外层有意义，否则单调区间需进一步取子集。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017·文·8）</h3>
+<p>函数 $f(x)=\ln(x^2-2x-8)$ 的单调递增区间是 （）
+A. $(-\infty,-2)$　　B. $(-\infty,-1)$　　C. $(1,+\infty)$　　D. $(4,+\infty)$</p>
+<p><strong>思路</strong><br />
+先求定义域（真数 $&gt;0$），将函数分解为内层二次函数与外层对数函数。外层对数函数恒为增，只需在定义域上找内层函数的递增区间，由“同增”得原函数递增区间。</p>
+<p><strong>步骤</strong><br />
+1. 由 $x^2-2x-8&gt;0$，解得 $x&lt;-2$ 或 $x&gt;4$，故定义域为 $(-\infty,-2)\cup(4,+\infty)$。<br />
+2. 令 $t=x^2-2x-8$，则 $y=\ln t$。外层 $y=\ln t$ 是 $(0,+\infty)$ 上的增函数。<br />
+3. 内层 $t=x^2-2x-8$ 在 $(-\infty,1)$ 上单调递减，在 $(1,+\infty)$ 上单调递增。<br />
+4. 结合定义域：在 $(-\infty,-2)$ 上内层递减，外层递增，“一减一增”为减区间；在 $(4,+\infty)$ 上内层递增，外层递增，“同增”为增区间。<br />
+5. 故 $f(x)$ 的单调递增区间为 $(4,+\infty)$，选 D。</p>
+<p><strong>点评/变式</strong><br />
+本题最大陷阱是忘记真数大于 0，直接求二次函数对称轴右侧区间而误选 C。审题时必须先求定义域，再叠单调性。若将外层函数改为 $y=\log_{\frac{1}{2}} t$（减函数），则递增区间应取内层的递减区间与定义域交集，即变为 $(-\infty,-2)$。复习时可自设外层为减函数进行变式训练，强化“同增异减”的灵活应用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-08.html">2017-文-08</a>（2017 · 中） 本题考查复合函数单调区间的求解，需先求定义域，再利用“同增异减”原则判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">复合函数的单调性</a></li>
+</ul>
+</div>
+</body>
+</html>

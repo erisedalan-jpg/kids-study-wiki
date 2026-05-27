@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平方差公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平方差公式</h1><div class="review-mark" data-stem="平方差公式"></div><div class="meta-card"><span><strong>考点</strong>平方差公式</span><span><strong>权重</strong>4</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：4</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平方差公式</strong>：$a^2 - b^2 = (a-b)(a+b)$，其中$a$、$b$可以是数、字母、单项式或多项式。</li>
+<li><strong>逆用</strong>：$(a-b)(a+b)=a^2 - b^2$，常用于化简乘积与分式。</li>
+<li><strong>变形与推广</strong>：</li>
+<li>$a^2 - b^2 = (a+b)^2 - 2ab - 2b^2$（一般不直接使用，但可见于配方法）。</li>
+<li>指数幂的形式同样成立：$(a^m)^2 - (b^n)^2 = (a^m - b^n)(a^m + b^n)$。</li>
+<li><strong>适用条件</strong>：两项平方差结构，特别注意指数为偶数时可提取平方形式。在分式化简、因式分解、二项式展开求系数时，常先借助平方差公式降次或约分，简化后续计算。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别结构</strong>：观察式子是否为平方差的形式，尤其是分式中分子、分母是否含有 $(A)^2 - (B)^2$ 或可化为平方差的式子。</li>
+<li><strong>灵活变形</strong>：</li>
+<li>若分子为 $(1-x^2)^k$，分母为 $(1+x)^k$，立即联想 $1-x^2 = (1-x)(1+x)$，从而将原式变形为 $[(1-x)(1+x)]^k \div (1+x)^k = (1-x)^k$。</li>
+<li>注意幂的运算法则：$(ab)^k = a^k b^k$，同底数幂相除时指数相减。</li>
+<li><strong>转换目标</strong>：化简后的式子往往结构更简单，此时再调用二项式定理、特殊值法或待定系数法求指定项系数。</li>
+<li><strong>通项求解</strong>：对于形如 $(a+b)^n$ 的展开式，第 $r+1$ 项通项为 $T_{r+1} = C_n^r a^{n-r} b^r$，令 $x$ 的指数等于目标次数，解出 $r$ 再计算系数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忘记优先化简</strong>：见到二项式高次幂直接展开，导致计算量暴增且易出错。本题若先不利用平方差公式化简，则需要对 $(1-x^2)^4$ 和 $(1+x)^4$ 分别展开后做多项式除法，极易算错。</li>
+<li><strong>指数运算错误</strong>：$$ \frac{(1-x^2)^4}{(1+x)^4} \neq \left( \frac{1-x^2}{1+x} \right)^4 $$ ？这里恰好相等，因为分子分母指数相同。但更一般地，$\frac{(a^2-b^2)^m}{(a+b)^n}$ 当 $m \neq n$ 时不能直接整体写成幂的商，要先将分子变形为 $(a-b)^m (a+b)^m$ 再约分。</li>
+<li><strong>符号混乱</strong>：$(-x)^r = (-1)^r x^r$，计算系数时漏掉 $(-1)^r$ 因子的正负。</li>
+<li><strong>通项公式使用不当</strong>：把 $(1-x)^4$ 误写成 $C_4^r \cdot 1^{4-r} \cdot (-x)^r$ 时，遗漏 $1^{4-r}$ 或者将组合数位置写反。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2008·文·09 $(1-x^2)^4/(1+x)^4$ 的展开式中 $x$ 的系数是（ ） A．-4 B．-3 C．3 D．4</p>
+<p><strong>思路</strong>：先利用平方差公式和幂的运算法则将分式化简成一个二项式，再利用二项式定理求指定项系数，避免直接展开的复杂运算。</p>
+<p><strong>步骤</strong>：
+1. 化简原式：<br />
+   $$ \frac{(1-x^2)^4}{(1+x)^4} = \left( \frac{1-x^2}{1+x} \right)^4 $$
+   分子用平方差公式：$1-x^2 = (1-x)(1+x)$，代入得<br />
+   $$ = \left( \frac{(1-x)(1+x)}{1+x} \right)^4 = (1-x)^4, \quad (x \neq -1) $$
+2. 写出 $(1-x)^4$ 的二项展开通项：<br />
+   $$ T_{r+1} = C_4^r \cdot 1^{4-r} \cdot (-x)^r = (-1)^r C_4^r x^r $$
+3. 求 $x$ 的系数，即令 $r=1$：<br />
+   $$ T_2 = (-1)^1 C_4^1 x = -4x $$
+   系数为 $-4$。
+4. 选 A。</p>
+<p><strong>点评/变式</strong>：
+- 此题的本质是“先化简，再展开”。平方差公式在这里起到了消去分母的关键作用。
+- <strong>变式</strong>：求 $\frac{(1-x^2)^5}{(1+x)^3}$ 展开式中 $x^3$ 的系数。<br />
+  解：原式 $= (1-x)^5 (1+x)^{5-3} = (1-x)^5 (1+x)^2$，然后分别展开求乘积中 $x^3$ 系数，比直接化简更灵活，同样依赖于平方差公式的分解。
+- 注意定义域：原式分母不为零，即 $x \neq -1$，但不影响系数求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-文-09.html">2008-文-09</a>（2008 · 中） 利用平方差公式化简(1-√x)⁴(1+√x)⁴=(1-x)⁴，再用二项展开式通项求x的系数。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/166-平方差公式.html">平方差公式</a></li>
+</ul>
+</div>
+</body>
+</html>

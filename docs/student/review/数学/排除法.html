@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>排除法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>排除法</h1><div class="review-mark" data-stem="排除法"></div><div class="meta-card"><span><strong>考点</strong>排除法</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2010–2022</li>
+<li>出现题位：选择6 选择8</li>
+<li>难度分布：中1 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>排除法定义</strong>：从选择题的选项出发，利用题干条件或函数/图像的性质，逐步剔除不符合要求的选项，从而间接锁定正确答案的解题策略，属于间接法与数学直觉的结合。</li>
+<li><strong>核心依据</strong>：若某个选项与题目所给的必要条件（如定义域、值域、奇偶性、单调性、特殊点函数值、极限趋势等）矛盾，则该选项必错，直接排除。</li>
+<li><strong>常用切入点</strong>：</li>
+<li><strong>特殊值</strong>：选取定义域内或边界处的若干个易于计算的特殊点，验证函数值、导数值、坐标是否符合。</li>
+<li><strong>函数性质</strong>：奇偶性（图像对称性）、单调性、周期性与有界性。</li>
+<li><strong>极限与渐近</strong>：当自变量趋于无穷、间断点或区间端点时的变化趋势。</li>
+<li><strong>数形结合</strong>：结合几何图形的运动规律，抓住关键位置/时刻的特征进行检验。</li>
+<li><strong>适用条件</strong>：已知若干同类型选项，并存在有限个易于判别的条件可将其区分；多用于函数图像识别、方程根的范围、命题真伪判断等选择题。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定性粗筛</strong>：快速扫描选项间的显著差异（如奇偶性、定义域、是否过原点），优先排除明显违背全局性质（如对称轴、渐近线）的选项。</li>
+<li><strong>特殊值验根</strong>：选取 $x=0$、$x=1$、$x=-1$ 或极值点等特殊位置，计算各选项的函数值并与图像/条件比对，这是最直接高效的“秒杀”手段。</li>
+<li><strong>极限定位</strong>：若剩余选项在无穷远处的趋势不同，可计算 $x\to +\infty$ 或 $x\to$ 某间断点时的极限，快速排除趋向不符的选项。</li>
+<li><strong>局部性质验证</strong>：利用单调性（导数符号）、凹凸性、极值点位置等局部特征，对高度相似的干扰项进行最终甄别。</li>
+<li><strong>动态过程抓关键时刻</strong>：对于运动或几何变化类图像题，重点关注初始时刻、终止时刻及经过特殊位置时的状态量（距离、角度等），与选项逐一核对。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>盲目依赖技巧忽视定义域</strong>：排除选项时若忽略函数自身可能存在的无定义点（分母为零、负数的对数等），易误排除正确选项或将错误选项保留。</li>
+<li><strong>特殊值选取不当</strong>：选取的特殊点代入多个选项所得结果相同，导致无法有效排除，正确做法是选取能体现选项间差异的“矛盾点”。</li>
+<li><strong>只用一个条件定终身</strong>：仅凭一个特征（如偶函数）就直接秒选，可能因粗心忽略该特征多个选项同时满足，务必用两个以上条件交叉验证。</li>
+<li><strong>动态题错把路程当位移/距离</strong>：例如质点运动到 $x$ 轴的距离 $d=|y|$，若当成纵坐标 $y$ 的正负直接排除，会导致排错；需注意距离的非负性及拐点处的尖点特征。</li>
+<li><strong>用特例代替整体</strong>：所找的特殊点恰好在选项函数与正确函数取值相同时，会导致无法区分，此时必须结合极限、单调性等更稳健的属性。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：根据函数图像选取解析式（2022 全国乙卷文 8）</h3>
+<p><strong>题目</strong>：给出定义在 $[-3,3]$ 上的某个函数的图像，从四个解析式中选出符合图像的一个。</p>
+<p><strong>思路</strong>：四个选项均为分式型或组合型函数，结构差异明显。利用图像当中的关键点（零点、与 $y$ 轴交点）及函数的有界性、奇偶性实施排除。</p>
+<p><strong>步骤</strong>：
+- <strong>排除 B</strong>：选项 B 为 $f(x)=\frac{x^3-x}{x^2+1}$。计算 $f(1)=\frac{1-1}{1+1}=0$，即图像应当过点 $(1,0)$。观察所给图像，$x=1$ 处函数值明显不为 $0$，故 B 与图像矛盾，排除。
+- <strong>排除 C</strong>：选项 C 为 $h(x)=\frac{2x\cos x}{x^2+1}$。当 $x\in\left(0,\frac{\pi}{2}\right)$ 时，$0&lt;\cos x&lt;1$，于是 $0&lt;h(x)&lt;\frac{2x}{x^2+1}$。由基本不等式，$\frac{2x}{x^2+1}\le\frac{2x}{2x}=1$，因此 $0&lt;h(x)&lt;1$，但图像在 $x\in\left(0,\frac{\pi}{2}\right)$ 的部分明显存在大于 $1$ 的函数值，排除 C。
+- <strong>排除 D</strong>：选项 D 为 $m(x)=\frac{2\sin x}{x^2+1}$。该函数为奇函数，图像应关于原点对称，而所给图像在 $[-3,3]$ 上并不关于原点对称，排除 D。
+- <strong>确定 A</strong>：依次排除后，A 选项为正确答案。（也可验证 A 的零点、极值等与图像一致。）</p>
+<p><strong>点评/变式</strong>：通过特殊点、不等式放缩、奇偶性三步即完成全题，体现了排除法“条件撞击”的效率。变式训练：若剩余两个对称性相似的选项，可继续利用 $x\to +\infty$ 的渐近行为或求导验证极值点来区分。</p>
+<h3>代表题 2：圆周运动距离函数的图像识别（2010 全国大纲文 6）</h3>
+<p><strong>题目</strong>：质点 $P$ 在半径为 $2$ 的圆周上逆时针匀角速运动，初始位置 $P_0(\sqrt{2},-\sqrt{2})$，求点 $P$ 到 $x$ 轴距离 $d$ 关于时间 $t$ 的函数图像。</p>
+<p><strong>思路</strong>：距离 $d=|y|$ 恒非负，且运动过程中出现 $d=0$ 的时刻。抓住 $t=0$ 和 $d=0$ 两个特殊时刻的数值，便可逐项排除。</p>
+<p><strong>步骤</strong>：
+- <strong>分析初始时刻</strong>：$t=0$ 时，$P_0$ 的纵坐标为 $-\sqrt{2}$，故 $d=|y|=\sqrt{2}$。观察选项，A、D 在 $t=0$ 处的距离均为 $0$ 或 $2$ 而非 $\sqrt{2}$，予以排除。
+- <strong>分析 $d=0$ 的时刻</strong>：质点逆时针运动，角速度为 $1$，由初始位置 $P_0$ 到 $x$ 轴（纵坐标 $0$）需转过的角度为 $\frac{\pi}{4}$（从 $-\sqrt{2}$ 到 $0$ 的上行路径），对应 $t=\frac{\pi}{4}$ 时 $d=0$。选项 B 在该时刻附近距离未接触 $t$ 轴（不为 $0$），而选项 C 在 $t=\frac{\pi}{4}$ 处恰为 $0$，排除 B。
+- <strong>锁定答案</strong>：经两步排除，仅剩选项 C，故选 C。</p>
+<p><strong>点评/变式</strong>：本题利用“距离”的非负性和特殊时刻的取值，快速屏蔽干扰项，避免了描绘整个三角函数绝对值图像的复杂过程。任何涉及周期性动态过程的距离、角度问题，优先寻找初态、末态及经过界点时的特征，往往一击制胜。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-08.html">2022-文-08</a>（2022 · 中） 本题通过函数性质（如特殊点函数值、不等式放缩）排除错误选项，识别函数图像。</li>
+<li><a href="../../exam/数学/2010-文-06.html">2010-文-06</a>（2010 · 易） 质点P在圆周上逆时针运动，求其到x轴距离d关于时间t的函数图象。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">排除法</a></li>
+</ul>
+</div>
+</body>
+</html>

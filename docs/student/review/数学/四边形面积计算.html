@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>四边形面积计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>四边形面积计算</h1><div class="review-mark" data-stem="四边形面积计算"></div><div class="meta-card"><span><strong>考点</strong>四边形面积计算</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>四边形面积公式</strong><ul>
+<li>平行四边形：$S=ah$（$a$为底，$h$为该底上的高）。</li>
+<li>矩形：$S=ab$（$a,b$为相邻两边）。</li>
+<li>菱形：$S=\frac{1}{2}d_1d_2$（$d_1,d_2$为对角线长）。</li>
+<li>正方形：$S=a^2$。</li>
+<li>梯形：$S=\frac{1}{2}(a+b)h$（$a,b$为两底，$h$为高）。</li>
+<li>一般四边形：可分割为两个三角形求面积和（$S=\frac{1}{2}d_1d_2\sin\theta$仅适用于对角线夹角$\theta$已知的情形）。</li>
+</ul>
+</li>
+<li><strong>等积变换与和差法</strong><ul>
+<li>不规则四边形的面积常通过“总面积－空白面积”或“分割成规则图形之和”计算。</li>
+<li>当四边形为梯形且上下底平行时，优先使用梯形公式；若不易直接求高，也可用相似三角形或平行线分线段成比例转化为两个三角形面积之差。</li>
+</ul>
+</li>
+<li><strong>本题关联的平面几何核心定理</strong><ul>
+<li>切线长定理：从圆外一点引圆的两条切线，它们的切线长相等（本题中$AE=AF$）。</li>
+<li>等腰三角形三线合一：顶角的平分线、底边上的中线及底边上的高互相重合。</li>
+<li>垂径定理：垂直于弦的直径平分这条弦（$MN$被$OD$垂直平分，$MD=ND=1$）。</li>
+<li>含$30^\circ$角的直角三角形：$30^\circ$所对直角边等于斜边的一半，三边之比为$1:\sqrt{3}:2$。</li>
+<li>相似三角形的性质：相似三角形面积比等于相似比的平方；对应线段（高、中线、角平分线）之比等于相似比。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证平行，定形状</strong><br />
+   若问题涉及四边形且给出切点、交点等，先利用切线长定理或弦切角、同位角等证出对边平行，明确四边形是梯形、平行四边形等特殊形状。</li>
+<li><strong>用圆的几何性质列方程求关键长度</strong><br />
+   将已知线段（如切线长$AE$、弦长$MN$）与半径、圆心距等放入直角三角形，结合勾股定理或垂径定理（$r^2-d^2=(\frac{MN}{2})^2$）建立方程。</li>
+<li><strong>挖掘特殊角并判定整体图形</strong><br />
+   利用“$AG=r$”这类条件得出$AO=2r$，在包含切线的直角三角形中得到特定角（如$30^\circ$），从而推出等腰三角形的顶角或底角，再判定是否为等边三角形，实现全图量化。</li>
+<li><strong>选择最佳面积路径</strong>  </li>
+<li><strong>路径一（和差法）</strong>：所求四边形$=$大三角形$-$小三角形（相似三角形面积比已知）。  </li>
+<li><strong>路径二（直接公式）</strong>：若已求出两底和高，直接代入梯形面积公式。<br />
+   两种路径互相验证，避免计算失误。</li>
+<li><strong>规范书写与检验</strong><br />
+   所有长度、角度均需带单位或保持代数精确值（含根号），最后化为最简根式或分数，必要时代入$S_{\text{梯形}}=\frac{1}{2}(上底+下底)\times 高$快速复查。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用切线性质</strong>：从一点引出的两条切线长度相等，但图中需要有明确的“从同一点出发”的前提；注意区分“切点”与一般交点。</li>
+<li><strong>垂径定理漏一半</strong>：弦长为$MN$时，半弦长$MD=ND=\frac{MN}{2}$，代入勾股定理时误写为$r^2-d^2=MN^2$。</li>
+<li><strong>忽略$AG=r$的几何意义</strong>：此类条件往往暗示圆心到三角形顶点的距离$AO=AG+r=2r$，结合切线$OE\perp AB$可推出$Rt\triangle AEO$中的特殊角，直接决定整个图形的形状，遗漏此步骤将无法继续计算。</li>
+<li><strong>面积计算选错高</strong>：在梯形中，高是两底间的距离，不是腰长；若用相似三角形面积相减，需确认“小三角形”与“大三角形”的相似比，不能随意用底之比代替高之比。</li>
+<li><strong>根式运算粗心</strong>：如$r^2=4/3$推出$r=2/\sqrt{3}$，后续可能忘记有理化分母，或在面积叠加时$\sqrt{3}$的系数相消出错，导致最终结果多一个或少一个根号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2015·文·22 节选）</h3>
+<p>如图，$O$为等腰$\triangle ABC$内一点，$\odot O$与底边$BC$交于$M,N$，与底边上的高$AD$交于点$G$，且与$AB,AC$分别相切于$E,F$。已知$AG$等于$\odot O$的半径，且$AE=MN=2$，求四边形$EBCF$的面积。</p>
+<p><strong>思路</strong><br />
+本题关键是利用圆的切线、垂径定理及$AG=r$导出$30^\circ$角，判定$\triangle ABC$为等边三角形。四边形$EBCF$可看作$\triangle ABC$减去与它相似的$\triangle AEF$，或用梯形面积公式直接求解。</p>
+<p><strong>步骤</strong>
+1. <strong>证明$EF\parallel BC$，明确梯形</strong><br />
+   由$AB,AC$为切线得$AE=AF$；又$\triangle ABC$等腰，$AB=AC$。故$\frac{AE}{AB}=\frac{AF}{AC}$，因此$EF\parallel BC$，四边形$EBCF$为梯形。
+2. <strong>设半径$r$，用$AG=r$推角度</strong><br />
+   连接$OE,OM,OA$。因$AG=r$且$OG=r$，$A$到$O$的距离$AO=2r$。在$Rt\triangle AEO$中，$OE=r$，$AE=2$，斜边$AO=2r$，有$\sin\angle OAE=\frac{OE}{AO}=\frac12$，故$\angle OAE=30^\circ$。由对称性$\angle BAC=2\angle OAE=60^\circ$，等腰$\triangle ABC$实为等边三角形。
+3. <strong>计算半径$r$及关键长度</strong><br />
+   由$AE=2$，$AO=2r$，勾股定理：$AE^2+OE^2=AO^2\Rightarrow 4+r^2=4r^2\Rightarrow r^2=\frac43$，$r=\frac{2}{\sqrt3}$。<br />
+   圆心$O$在$AD$上，设$OD=d$，由垂径定理：$r^2-d^2=1^2\Rightarrow \frac43-d^2=1\Rightarrow d^2=\frac13$，$d=\frac{1}{\sqrt3}$。<br />
+   等边三角形高$AD=AO+OD=2r+d=\frac{4}{\sqrt3}+\frac{1}{\sqrt3}=\frac{5}{\sqrt</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-22.html">2015-文-22</a>（2015 · 中） 本题考查圆与三角形的切线和位置关系，证明线段平行并计算四边形面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">四边形面积计算</a></li>
+</ul>
+</div>
+</body>
+</html>

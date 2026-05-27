@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>零点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>零点</h1><div class="review-mark" data-stem="零点"></div><div class="meta-card"><span><strong>考点</strong>零点</span><span><strong>权重</strong>28</span><span><strong>真题数</strong>7</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：28</li>
+<li>真题数：7；年份跨度：2011–2024</li>
+<li>出现题位：填空15 解答20 解答21 选择6 选择9 选择10</li>
+<li>难度分布：难2 易1 中4</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>1. 函数的零点</strong>
+- 定义：对于函数 $y=f(x),x\in D$，使 $f(x)=0$ 的实数 $x$ 叫做函数的零点。零点不是点，是横坐标。
+- 等价转化：$f(x)$ 的零点 ⟺ 方程 $f(x)=0$ 的实根 ⟺ $y=f(x)$ 的图像与 $x$ 轴的交点的横坐标。
+- 对于两个函数 $y=f(x)$ 与 $y=g(x)$，交点横坐标等同于方程 $f(x)=g(x)$ 的根，也等同于辅助函数 $h(x)=f(x)-g(x)$ 的零点。</p>
+<p><strong>2. 零点存在性定理</strong>
+- 条件：函数 $y=f(x)$ 在闭区间 $[a,b]$ 上连续，且 $f(a)\cdot f(b)&lt;0$（端点函数值异号）。
+- 结论：至少存在一个 $c\in(a,b)$ 使得 $f(c)=0$。
+- 适用场景：判断零点所在区间，或配合单调性证明零点唯一。</p>
+<p><strong>3. 导数视野下的零点研究</strong>
+- 利用导数求单调区间，求极值、最值。
+- 结合极限（或端点值）符号，画出函数草图，判断零点个数。
+- 若在某个单调区间两端函数值异号（或一端极限异号），则该区间内有唯一零点。
+- 讨论含参零点个数：往往分离参数为 $a = h(x)$，转化为水平直线与函数 $y=h(x)$ 图像的交点，通过研究 $h(x)$ 的值域、单调性与渐近线得出结论。</p>
+<p><strong>4. 三角函数零点常用性质</strong>
+- $y = \sin(\omega x+\varphi)$ 的零点：$\omega x+\varphi = k\pi, k\in\mathbb{Z}$。
+- 周期：$T=\frac{2\pi}{|\omega|}$；对称轴：$\omega x+\varphi = \frac{\pi}{2}+k\pi$。
+- 给定零点、最值点求参数，常列方程，注意 $k$ 取整性和参数范围。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接解方程法</strong><br />
+   对简单初等函数，直接令 $f(x)=0$ 求解，注意定义域限制。</p>
+</li>
+<li>
+<p><strong>零点存在性定理定位法</strong><br />
+   选区间，验连续，算端点值 $f(a), f(b)$，若异号则必有零点。常用于选填中快速确定零点所在区间。</p>
+</li>
+<li>
+<p><strong>单调性 + 端点极限定号法</strong><br />
+   第一步：求导，确定函数单调区间和极值点。<br />
+   第二步：计算各单调区间端点（或极限）的函数值符号。<br />
+   第三步：若某单调区间两端值异号（一个正，一个负），则该区间内有唯一零点。<br />
+   此法适用于“证明有且仅有几个零点”类大题。</p>
+</li>
+<li>
+<p><strong>构造辅助函数法</strong><br />
+   处理 $y=f(x)$ 与 $y=g(x)$ 交点问题，令 $F(x)=f(x)-g(x)$，转为 $F(x)$ 零点。  </p>
+</li>
+<li>若 $F(x)$ 具有奇偶性（如偶函数），且“恰有一个”交点，则零点必为对称中心（通常为 $x=0$），据此建立方程。  </li>
+<li>
+<p>再验证除对称中心外无其他零点。</p>
+</li>
+<li>
+<p><strong>已知零点或交点情况求参数</strong>  </p>
+</li>
+<li>代入零点：$f(x_0)=0$ 直接建立参数方程。  </li>
+<li>
+<p>利用周期、最值、零点等条件建立关于参数的等式，结合整数 $k$ 和参数范围求最小值或具体值。</p>
+</li>
+<li>
+<p><strong>分离参数→图像交点法</strong><br />
+   对于含参方程 $f(x)=a$ 或 $f(x)=g(a)$，分离参数后画出定函数图像，水平线滑动，数形结合讨论零点个数。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视定义域</strong>：分式、对数、根号函数零点必须先确定自然定义域，尤其对数函数 $x&gt;0$ 易被遗漏。2019理20在 $(0,1)$ 和 $(1,+\infty)$ 分别讨论，不能混在一起。</li>
+<li><strong>错用零点存在定理</strong>：定理要求闭区间连续且端点异号。开区间端点极限异号不能直接使用，需补充说明闭区间连续或使用极限严格论证。</li>
+<li><strong>把“交点”与“零点”混淆</strong>：两函数 $f,g$ 交点横坐标是 $f-g$ 的零点，但构造 $f-g$ 时不要忘记定义域取交集。</li>
+<li><strong>讨论参数不全面</strong>：含二次项系数参数时，容易遗漏系数为 $0$ 的情况；含对数分式时间断点处需单独说明。</li>
+<li><strong>三角函数多解遗漏或误选</strong>：用 $\sin,\cos$ 零点公式 $x = k\pi + \cdots$ 时忘记 $k\in\mathbb{Z}$，或周期、对称轴公式记忆混淆。2024新课标Ⅱ09中易将对称轴公式混淆认为相同。</li>
+<li><strong>最小值或正整数解取错</strong>：求参数最小值时，若解出 $w = 3+9k$，$k$ 取最小非负整数可得 $w_{\min}=3$，忽略 $k$ 的整数性会丢分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>1. 2024年新课标Ⅱ卷第6题（偶函数与唯一交点）</h3>
+<p><strong>题目</strong><br />
+设 $f(x)=a(x+1)^2-1$，$g(x)=\cos x+2ax$，当 $x\in(-1,1)$ 时两曲线恰有一个交点，求 $a$ 的值。</p>
+<p><strong>思路</strong><br />
+两曲线交点个数等价于 $F(x)=f(x)-g(x)$ 的零点个数。化简 $F(x)$，发现为偶函数，且在对称区间 $(-1,1)$ 内恰有一个零点。由于偶函数零点成对出现（除非零点是 $x=0$），故 $x=0$ 必为零点。代入 $F(0)=0$ 解得 $a$，再验证唯一性。</p>
+<p><strong>步骤</strong><br />
+令<br />
+$$F(x)=a(x+1)^2-1-\cos x-2ax = a(x^2+2x+1)-1-\cos x-2ax = ax^2 + a -1 -\cos x.$$
+$F(x)$ 是偶函数，对称区间 $(-1,1)$ 上若只有一个零点，则必为 $x=0$。<br />
+由 $F(0)=a -1 -\cos 0 = a-2=0$ 得 $a=2$。<br />
+检验：当 $a=2$ 时，$F(x)=2x^2+1-\cos x$。$x\in(-1,1)$ 时，$2x^2\ge0$，$1-\cos x\ge0$，两者同时为 $0$ 仅当 $x=0$。故恰有一零点。答案为 $a=2$。</p>
+<p><strong>点评/变式</strong><br />
+偶函数在对称区间上零点个数通常为偶数，如果题目说“恰有一个”，基本指向对称中心。变式：将条件改为在 $(-1,1)$ 上恰好没有交点，或恰好两个交点，可讨论 $F(x)&gt;0$ 恒成立或两个对称零点。</p>
+<h3>2. 2024年新课标Ⅱ卷第9题（正弦型函数基本性质）</h3>
+<p><strong>题目</strong><br />
+比较 $f(x)=\sin 2x$ 和 $g(x)=\sin(2x-\frac{\pi}{4})$ 的零点、最值、周期、对称轴，选择正确选项。</p>
+<p><strong>思路</strong><br />
+分别套用正弦函数 $y=\sin(\omega x+\varphi)$ 的标准结论，逐个验证四个选项。</p>
+<p><strong>步骤</strong><br />
+- <strong>零点</strong>：$f(x)=0\Rightarrow 2x=k\pi\Rightarrow x=\frac{k\pi}{2}$；$g(x)=0\Rightarrow 2x-\frac{\pi}{4}=k\pi\Rightarrow x=\frac{k\pi}{2}+\frac{\pi}{8}$，零点不同，A错。<br />
+- <strong>最大值</strong>：两函数最大振幅均为1，最大值相等，B正确。<br />
+- <strong>周期</strong>：$T=\frac{2\pi}{2}=\pi$，相同，C正确。<br />
+- <strong>对称轴</strong>：$f(x)$ 对称轴满足 $2x=\frac{\pi}{2}+k\pi\Rightarrow x=\frac{\pi}{4}+\frac{k\pi}{2}$；$g(x)$ 对称轴 $2x-\frac{\pi}{4}=\frac{\pi}{2}+k\pi\Rightarrow x=\frac{3\pi}{8}+\frac{k\pi}{2}$，不同，D错。<br />
+故选BC。</p>
+<p><strong>点评/变式</strong><br />
+正弦型函数性质务必熟记：零点 $k\pi$，对称轴 $\frac{\pi}{2}+k\pi$，无须死记，可从图像或单位圆理解。变式可改为 $f(x)=\cos$ 型，或同时改变 $\omega$ 考察周期。</p>
+<h3>3. 2022年理第15题（由周期和零点求参数最小值）</h3>
+<p><strong>题目</strong><br />
+已知 $f(x)=\cos(\omega x+\varphi),\omega&gt;0,0&lt;\varphi&lt;\pi$，最小正周期 $T$，满足 $f(T)=\frac{\sqrt3}{2}$，$x=\frac{\pi}{9}$ 为 $f(x)$ 的零点，求 $\omega$ 的最小值。</p>
+<p><strong>思路</strong><br />
+由周期公式表达 $T$，代入 $f(T)$ 解出 $\varphi$，再利用零点条件建立 $\omega$ 的方程，结合 $\omega&gt;0$ 和整数 $k$ 取最小正值。</p>
+<p><strong>步骤</strong><br />
+由 $T=\frac{2\pi}{\omega}$，$f(T)=\cos(\omega\cdot\frac{2\pi}{\omega}+\varphi)=\cos(2\pi+\varphi)=\cos\varphi=\frac{\sqrt3}{2}$。<br />
+又 $0&lt;\varphi&lt;\pi$，故 $\varphi=\frac{\pi}{6}$。<br />
+零点条件：$f(\frac{\pi}{9})=\cos(\frac{\omega\pi}{9}+\frac{\pi}{6})=0$，<br />
+所以 $\frac{\omega\pi}{9}+\frac{\pi}{6} = \frac{\pi}{2}+k\pi, k\in\mathbb{Z}$。<br />
+解得 $\omega = 3+9k$。<br />
+$\omega&gt;0$，取 $k=0$ 得最小正值 $\omega=3$。</p>
+<p><strong>点评/变式</strong><br />
+本题陷阱在 $k$ 的取值：由周期性零点公式得到 $k\in\mathbb{Z}$，不可漏写。求最小值时应令 $k=0$ 或最小的非负整数，避免误取 $k=1$ 得到 $\omega=12$。变式可改为给两个零点或给对称轴，同理列方程取最小正解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-06.html">2024-新课标Ⅱ-06</a>（2024 · 难） f(x)=a(x+1)²-1，g(x)=cosx+2ax，当x∈(-1,1)时曲线y=f(x)与y=g(x)恰有一个交点，求参数a的取值。</li>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-09.html">2024-新课标Ⅱ-09</a>（2024 · 易） 本题通过比较两个正弦型函数的零点、最值、周期和对称轴，考查正弦函数的图像与性质。</li>
+<li><a href="../../exam/数学/2022-理-15.html">2022-理-15</a>（2022 · 中） 三角函数求参问题，根据周期性和零点条件解出ω和φ。</li>
+<li><a href="../../exam/数学/2019-文-21.html">2019-文-21</a>（2019 · 中） 证明含参函数的唯一极值点存在性。</li>
+<li><a href="../../exam/数学/2019-理-20.html">2019-理-20</a>（2019 · 难） 已知f(x)=lnx-(x+1)/(x-1)，讨论单调性并证明有且仅有两个零点，再证明零点处lnx曲线切线也是e^x的切线。</li>
+<li><a href="../../exam/数学/2018-文-21.html">2018-文-21</a>（2018 · 中） 本题通过导数研究含参函数的单调性，并利用零点存在定理及单调性证明零点唯一性。</li>
+<li><a href="../../exam/数学/2011-文-10.html">2011-文-10</a>（2011 · 中） 考察利用导数判断函数单调性及零点存在定理确定零点所在区间。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/288-函数零点.html">零点</a></li>
+</ul>
+</div>
+</body>
+</html>

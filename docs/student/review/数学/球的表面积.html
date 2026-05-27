@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>球的表面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>球的表面积</h1><div class="review-mark" data-stem="球的表面积"></div><div class="meta-card"><span><strong>考点</strong>球的表面积</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>9</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：10</li>
+<li>真题数：9；年份跨度：2009–2020</li>
+<li>出现题位：填空15 填空16 选择4 选择10 选择11</li>
+<li>难度分布：中7 易2</li>
+</ul>
+<h2>知识精要</h2>
+<p>球的表面积是立体几何与外接问题的核心考点，集中于一个基本公式和几个关键几何模型。</p>
+<ol>
+<li><strong>基本公式</strong>：</li>
+<li>球的表面积：$S = 4\pi R^2$</li>
+<li>球的体积：$V = \frac{4}{3}\pi R^3$（在求解半径 $R$ 时经常作为中间步骤）</li>
+<li><strong>球的截面性质</strong>（关键模型）：</li>
+<li>平面截球面得到圆，球心 $O$ 到截面圆的距离 $d$、球的半径 $R$、截面圆半径 $r$ 三者满足勾股关系：$R^2 = r^2 + d^2$。</li>
+<li>当 $d=0$ 时，截面为大圆；$d=R$ 时，截面退化为点。此题关系是沟通球与体内点、线、面的核心桥梁。</li>
+<li><strong>常见空间几何体的外接球模型</strong>：</li>
+<li><strong>长方体（含正方体）</strong>：体对角线长为外接球直径 $2R = \sqrt{\text{长}^2+\text{宽}^2+\text{高}^2}$。</li>
+<li><strong>正棱柱/直棱柱</strong>：外接球心为上、下底面外心连线的中点。$R^2 = \left(\frac{h}{2}\right)^2 + r_{\text{底面}}^2$。</li>
+<li><strong>正棱锥</strong>：外接球心在高线上。可利用轴截面图形，通过勾股定理列方程求 $R$。</li>
+<li>能补形为长方体的四面体，优先补形求解。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<p>求解球的表面积，本质是求解球的半径 $R$。牢固掌握以下两类基本途径：</p>
+<ol>
+<li><strong>直接求半径 $R$</strong>：</li>
+<li><strong>已知表面积/体积</strong>：直接用公式 $S = 4\pi R^2$ 或 $V = \frac{4}{3}\pi R^3$ 反解出 $R$。注意开方运算的准确性。</li>
+<li><strong>利用截面圆关系</strong>：根据题意找出截面圆半径 $r$ 和球心到截面距离 $d$，代入核心关系式 $R^2 = r^2 + d^2$。<ul>
+<li>例如，已知球心到截面ABC的距离，需求解截面圆圆心（对于三角形即外心）的半径 $r$。</li>
+</ul>
+</li>
+<li><strong>构建几何体外接球模型求 $R$</strong>：</li>
+<li><strong>找球心位置</strong>：这是解题的关键。对于规则几何体，球心必在几何体的重心或对称中心。<ul>
+<li>长方体、正方体：球心为体对角线交点。</li>
+<li>一般直棱柱：球心为上、下底面外接圆圆心连线的中点。</li>
+<li>正棱锥：球心在顶点与底面外接圆圆心所连的高线上。</li>
+</ul>
+</li>
+<li><strong>构造特征三角形</strong>：画出几何体，找到包含球心 $O$、底面外接圆圆心 $O_1$、几何体一个顶点（如棱柱底面上的一个顶点）在内的直角三角形。</li>
+<li><strong>列勾股定理方程</strong>：在此直角三角形中，三边分别为：球半径 $R$、底面外接圆半径 $r$、球心到底面的距离（通常是高的一半或与高相关）。<ul>
+<li>对于直三棱柱：$R^2 = \left(\frac{h}{2}\right)^2 + r_{\text{底面}}^2$。</li>
+<li>对于底面为正三角形的几何体，底面外接圆半径 $r = \frac{\sqrt{3}}{3}a$（$a$为边长）。</li>
+</ul>
+</li>
+<li><strong>动态最值问题</strong>：抓住“点C位于垂直于面AOB的直径端点时，三棱锥 $O-ABC$ 体积最大”这类题设，直接建立体积与 $R$ 的函数关系，解出 $R$。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>混淆直径与半径</strong>：公式 $S = 4\pi R^2$ 中的是半径 $R$，题设常给“对角线长”、“体对角线是直径”，务必先求半径 $R$ 再代入计算，避免将直径当作半径直接平方。</li>
+<li><strong>截面圆性质理解错误</strong>：搞不清“球心到截面距离 $d$”、“截面圆半径 $r$”、“球的半径 $R$”的几何关系，错误地认为 $R = r + d$。正解是直角三角形勾股关系：$R^2 = r^2 + d^2$。</li>
+<li><strong>外接球模型应用混乱</strong>：</li>
+<li><strong>底面外接圆半径求错</strong>：等边三角形的外接圆半径 $r = \frac{\sqrt{3}}{3}a$，而不是高或内切圆半径。</li>
+<li><strong>球心位置找错</strong>：对于侧棱垂直于底面的三棱柱，球心是上下底面中心连线的中点，而非底面中心。计算时遗漏“侧棱长的一半”这个关键边。</li>
+<li><strong>体积最值中的位置误判</strong>：在求解“三棱锥体积最大值”时，不能准确判断动点的最优位置是垂直于底面的直径端点，导致无法入手。</li>
+<li><strong>计算粗心</strong>：在解方程 $R^2 = \text{常数}$ 后，忘记最后目标是求表面积 $4\pi R^2$，或者在代入时漏乘系数 $4\pi$。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题1：2020-文-11（理-10）</h3>
+<p><strong>题目</strong>：面积为 $\frac{9\sqrt{3}}{4}$ 的等边三角形ABC顶点在球面上，球表面积 $16\pi$，求 $O$ 到平面ABC的距离。</p>
+<p><strong>思路</strong>：点面距离 $d$ 是勾股关系 $R^2 = r^2 + d^2$ 中的一条直角边。我们已知球表面积可求 $R$，已知等边三角形面积可求边长进而求其外接圆半径 $r$，最后解出 $d$。</p>
+<p><strong>步骤</strong>：
+1. <strong>由球表面积求半径</strong>：$4\pi R^2 = 16\pi \implies R^2 = 4 \implies R = 2$。
+2. <strong>由三角形面积求外接圆半径</strong>：设等边三角形边长为 $a$，其面积 $S = \frac{\sqrt{3}}{4}a^2 = \frac{9\sqrt{3}}{4} \implies a^2 = 9 \implies a = 3$。等边三角形外接圆半径 $r = \frac{\sqrt{3}}{3}a = \sqrt{3}$。
+3. <strong>利用勾股关系求距离</strong>：球心 $O$ 到截面ABC的距离 $d$ 满足 $R^2 = r^2 + d^2$，代入得 $2^2 = (\sqrt{3})^2 + d^2 \implies d^2 = 1 \implies d = 1$。
+4. 答案选C。</p>
+<p><strong>点评/变式</strong>：此题是截面性质的标准应用。截面圆是三角形ABC的外接圆，其半径 $r$ 是连接空间问题与平面图形的关键中间量。</p>
+<blockquote>
+<p><strong>变式</strong>：若已知的是距离 $d$ 和球的表面积，求三角形的面积，步骤完全逆向。</p>
+</blockquote>
+<h3>代表题2：2017-文-15</h3>
+<p><strong>题目</strong>：长宽高为3，2，1的长方体的顶点在球面上，求球的表面积。</p>
+<p><strong>思路</strong>：长方体所有顶点到其中心距离相等，该中心即为外接球心，体对角线即为外接球直径。</p>
+<p><strong>步骤</strong>：
+1. <strong>求体对角线长</strong>：$\text{体对角线} = \sqrt{3^2 + 2^2 + 1^2} = \sqrt{14}$。
+2. <strong>确定球半径</strong>：球直径 $2R = \sqrt{14}$，故半径 $R = \frac{\sqrt{14}}{2}$。
+3. <strong>求表面积</strong>：$S = 4\pi R^2 = 4\pi \times \left(\frac{\sqrt{14}}{2}\right)^2 = 4\pi \times \frac{14}{4} = 14\pi$。</p>
+<p><strong>点评/变式</strong>：此题为“墙角模型”的外接球，可推广到所有可补形为长方体的四面体。关键是牢记长方体与外接球的关系：$ (2R)^2 = \text{长}^2 + \text{宽}^2 + \text{高}^2 $，直接跳过了找球心的步骤，大幅简化运算。若为正方体，则 $2R = \sqrt{3}a$。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-文-11.html">2020-文-11</a>（2020 · 中） 利用球表面积公式和等边三角形面积公式，结合球心到截面距离公式求解空间距离。</li>
+<li><a href="../../exam/数学/2020-理-10.html">2020-理-10</a>（2020 · 中） 已知球的表面积和等边三角形面积，求球心到三角形所在平面的距离。</li>
+<li><a href="../../exam/数学/2017-文-15.html">2017-文-15</a>（2017 · 易） 长方体的顶点均在球面上，通过体对角线求球的半径，再计算球的表面积。</li>
+<li><a href="../../exam/数学/2016-文-04.html">2016-文-04</a>（2016 · 易） 根据正方体体积求棱长，再通过体对角线得出外接球半径，计算球的表面积</li>
+<li><a href="../../exam/数学/2015-文-10.html">2015-文-10</a>（2015 · 中） 当三棱锥体积最大时，利用几何关系求球半径，进而计算球的表面积。</li>
+<li><a href="../../exam/数学/2013-文-15.html">2013-文-15</a>（2013 · 中） 求正四棱锥的体积和底面边长，进而计算其外接球的表面积。</li>
+<li><a href="../../exam/数学/2010-理-10.html">2010-理-10</a>（2010 · 中） 正三棱柱外接球的表面积计算，通过上下底面中心连线中点确定球心求半径。</li>
+<li><a href="../../exam/数学/2009-文-16.html">2009-文-16</a>（2009 · 中） 该题考查球体被平面所截，利用截面圆半径、球半径及夹角关系求球的表面积。</li>
+<li><a href="../../exam/数学/2009-理-15.html">2009-理-15</a>（2009 · 中） 本题通过球半径与截面圆半径的几何关系，结合45°角条件求解球的表面积。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/993-球的表面积.html">球的表面积</a></li>
+</ul>
+</div>
+</body>
+</html>

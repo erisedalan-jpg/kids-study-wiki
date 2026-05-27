@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>计算</h1><div class="review-mark" data-stem="计算"></div><div class="meta-card"><span><strong>考点</strong>计算</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：填空15</li>
+<li>难度分布：难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>抛物线标准方程：$y^2=2px\;(p&gt;0)$，焦点 $F!\left(\frac p2,0\right)$，准线 $x=-\frac p2$，参数 $p$ 为焦准距。</li>
+<li>抛物线定义：抛物线上的点 $P(x_0,y_0)$ 满足 $|PF|=$ 点 $P$ 到准线的距离，即焦半径公式 $|PF|=x_0+\frac p2$（对 $y^2=2px$）。</li>
+<li>焦点弦问题：过焦点的直线与抛物线相交，常将焦半径长度用定义转化为横（纵）坐标的线性式，再联立直线与抛物线方程，借助韦达定理处理坐标和、积。</li>
+<li>弦长公式（辅助）：$|AB|=\sqrt{1+k^2}\,|x_1-x_2|$，其中 $k$ 为直线斜率。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读抛物线方程取出关键参数</strong>：将方程化为标准式 $y^2=2px$，确定 $p$、焦点坐标和准线方程。  </li>
+<li><strong>写直线方程</strong>：根据条件（过焦点、给定斜率）得到直线点斜式，化简为 $y=kx+b$ 的形式。  </li>
+<li><strong>联立消元得一元二次方程</strong>：把直线代入抛物线，消去 $y$（或 $x$），整理成关于 $x$（或 $y$）的方程 $ax^2+bx+c=0$。  </li>
+<li><strong>利用韦达定理写出和与积</strong>：$x_1+x_2=-\frac ba$，$x_1x_2=\frac ca$，同时判断大小关系以对应题目给出的长短关系。  </li>
+<li><strong>用定义表出焦半径</strong>：将 $|FA|,|FB|$ 写成 $x_1+\frac p2$、$x_2+\frac p2$（或其他坐标），代入所求的比值、和、积等表达式。  </li>
+<li><strong>代数化简直达结果</strong>：既可直接求根代值，也可利用韦达定理的整体关系化简比值（如 $\frac{x_1+\frac p2}{x_2+\frac p2}$ 特殊时可用“和积”求对称式）。  </li>
+<li><strong>如涉及弦长</strong>：可直接用弦长公式 $|AB|=\sqrt{1+k^2}|x_1-x_2|$，或总和两根差公式 $|x_1-x_2|=\frac{\sqrt{\Delta}}{|a|}$ 计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>把抛物线的焦点坐标记错，例如将 $y^2=2px$ 的焦点 $(\frac p2,0)$ 写成 $(0,\frac p2)$，或忘记除以 $2$。  </li>
+<li>应用焦半径公式时漏加 $\frac p2$，只写 $|PF|=x_0$；或对标准方程 $y^2=4x$ 误认为 $p=4$，导致 $|PF|=x_0+2$ 的错误。  </li>
+<li>联立方程消元时变形符号出错，特别是在多项式展开 $(y-?)$ 时忽略符号。  </li>
+<li>在用韦达定理判断 $x_1,x_2$ 的大小时，直接抛弃题目中 $|FA|&gt;|FB|$ 的约束，导致 $x_1,x_2$ 对应关系弄反。  </li>
+<li>有理化分母或化简二次根式比值时出现计算错误，如 $\frac{4+2\sqrt2}{4-2\sqrt2}$ 化简时忘记乘以共轭根式或合并同类项出错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知 $F$ 是抛物线 $C:y^2=4x$ 的焦点，过 $F$ 且斜率为 $1$ 的直线交 $C$ 于 $A,B$ 两点，且 $|FA|&gt;|FB|$，求 $\dfrac{|FA|}{|FB|}$。</p>
+<p><strong>思路</strong>：由抛物线定义将焦半径长度比转化为横坐标的关系，联立直线与抛物线方程，利用韦达定理和求根公式得出两交点的横坐标，代入比值计算。</p>
+<p><strong>步骤</strong>：<br />
+1. 由 $y^2=4x$ 得 $2p=4\Rightarrow p=2$，焦点 $F(1,0)$，准线 $x=-1$。<br />
+2. 过 $F$ 斜率为 $1$ 的直线方程为 $y=x-1$。<br />
+3. 联立 $\begin{cases} y=x-1 \ y^2=4x \end{cases}$，消 $y$ 得 $(x-1)^2=4x$，整理为 $x^2-6x+1=0$。<br />
+4. 设 $A(x_1,y_1),B(x_2,y_2)$，方程两根为 $x=3\pm2\sqrt2$。因 $|FA|&gt;|FB|$，知 $x_1&gt;x_2$，故 $x_1=3+2\sqrt2$，$x_2=3-2\sqrt2$。<br />
+5. 用定义得 $|FA|=x_1+1=4+2\sqrt2$，$|FB|=x_2+1=4-2\sqrt2$，比值为 $\dfrac{4+2\sqrt2}{4-2\sqrt2}$。分子分母同乘 $4+2\sqrt2$：<br />
+   $$ \frac{4+2\sqrt2}{4-2\sqrt2} = \frac{(4+2\sqrt2)^2}{16-8} = \frac{16+16\sqrt2+8}{8} = \frac{24+16\sqrt2}{8}=3+2\sqrt2.$$<br />
+   故答案为 $3+2\sqrt2$。</p>
+<p><strong>点评/变式</strong>：抛物线定义将“焦半径”</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-15.html">2008-理-15</a>（2008 · 难） 已知抛物线焦点和弦长，求两段焦半径比值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1113-计算.html">计算</a></li>
+</ul>
+</div>
+</body>
+</html>

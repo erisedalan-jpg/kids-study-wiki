@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>比较法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>比较法</h1><div class="review-mark" data-stem="比较法"></div><div class="meta-card"><span><strong>考点</strong>比较法</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2008–2008</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>比较法的核心思想</strong>：欲比较两个式子 $A$ 与 $B$ 的大小，可作差 $A-B$，也可作商 $\dfrac{A}{B}$（需确定符号），通过变形判断差的正负或商与 $1$ 的大小关系，从而得到 $A$ 与 $B$ 的大小。</li>
+<li><strong>作差比较法</strong>：$A&gt;B\iff A-B&gt;0$；$A&lt;B\iff A-B&lt;0$；$A=B\iff A-B=0$。常用于多项式、对数式、指数式等。</li>
+<li><strong>作商比较法</strong>：若 $B&gt;0$，则 $A&gt;B\iff\dfrac{A}{B}&gt;1$；$A&lt;B\iff\dfrac{A}{B}&lt;1$；$A=B\iff\dfrac{A}{B}=1$。常用于幂形式、指数形式或已知正负的式子。</li>
+<li><strong>中间值法（与比较法配合）</strong>：常借助 $0$、$1$ 等特殊值作媒介，先用函数单调性确定各式的范围，再结合作差或作商精细比较。</li>
+<li><strong>适用条件</strong>：比较的数或式子结构相近，或可用单调性、运算律化成可比较的形式。比较过程中往往需要灵活运用因式分解、符号判断、已知范围等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ul>
+<li><strong>步骤一：确定范围</strong><br />
+  利用基本函数的单调性（如 $y=\ln x$，$y=a^x$ 等）确定各比较对象的粗略范围，特别是正负和是否大于 $1$。  </li>
+<li><strong>步骤二：选择比较方式</strong><br />
+  结构为和差形式优先作差；结构为积商幂形式且各对象同号时优先作商；当范围已明确时可直接作差并判断符号。  </li>
+<li><strong>步骤三：变形化简</strong><br />
+  作差后通过提公因式、因式分解、配方、有理化等手段化成易于判断正负的若干因式乘积形式。  </li>
+<li><strong>步骤四：符号判定</strong><br />
+  利用已知范围确定每一个因子的正负零，综合得到差的符号或商与 $1$ 的大小，得出最终不等关系。  </li>
+<li><strong>步骤五：整理排序</strong><br />
+  按题目要求将各对象从小到大或从大到小排列，对照选项作答。</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略定义域与取值范围</strong>：如对数真数必须为正，若不顾 $x$ 的范围直接比较 $\ln x$ 的正负，可能出错。必须先用单调性算出准确的数值区间（如 $\ln x\in(-1,0)$）。  </li>
+<li><strong>作差后变形不彻底</strong>：仅作差不整理成乘积形式，凭感觉判断符号，导致错误。因式分解到每个因子的符号都可由已知范围确定为止。  </li>
+<li><strong>符号判断时丢掉负号法则</strong>：例如 $a\in(-1,0)$，则 $a&lt;0$，$1+a&gt;0$，$1-a&gt;0$，它们的乘积符号为负，若符号错判会倒置大小关系。  </li>
+<li><strong>作商时不检验分母零和符号</strong>：作商前必须确保分母不为零且往往需已知分母正负，否则不等式方向无法确定。  </li>
+<li><strong>将比较法与其他方法混淆</strong>：在能直接作差作商时却盲目使用特殊值或图像法，可能得不出严格大小关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：若 $x\in(e^{-1},1)$，$a=\ln x$，$b=2\ln x$，$c=\ln^3 x$，则 $a,b,c$ 的大小关系为（ ）<br />
+A. $a&lt;b&lt;c$　B. $c&lt;a&lt;b$　C. $b&lt;a&lt;c$　D. $b&lt;c&lt;a$</p>
+<p><strong>思路</strong>：<br />
+先由 $x$ 范围利用对数单调性确定 $a=\ln x$ 所在的区间，然后比较 $a$ 与 $b$、$a$ 与 $c$ 的大小。其中 $b-a$ 可直接化简，$a-c$ 需作差并因式分解，利用 $a$ 的范围判定符号。</p>
+<p><strong>步骤</strong>：<br />
+1. 由 $x\in(e^{-1},1)$ 及 $y=\ln x$ 在 $(0,+\infty)$ 上单调递增，得 $\ln x\in(-1,0)$，即 $a\in(-1,0)$。<br />
+2. 比较 $a$ 与 $b$：$b-a=2\ln x-\ln x=\ln x=a&lt;0$，故 $b&lt;a$。<br />
+3. 比较 $a$ 与 $c$：$a-c=\ln x-\ln^3 x=a-a^3=a(1-a^2)=a(1-a)(1+a)$。<br />
+   - $a\in(-1,0)\Rightarrow a&lt;0$；$1-a&gt;0$；$1+a&gt;0$。<br />
+   - 三个因子乘积 $a(1-a)(1+a)&lt;0$，故 $a-c&lt;0$，即 $a&lt;c$。<br />
+4. 综上，$b&lt;a&lt;c$，对应选项 C。</p>
+<p><strong>点评/变式</strong>：<br />
+本题利用单调性确定范围后，直接用差比较法完成排序，是典型的“比较法”基础题。变式训练：若 $x\in(0,1)$，比较 $\ln x$、$2^{\ln x}$、$\ln^2 x$ 的大小，可先定范围再分别作差或与 $1$ 比较，熟练因式分解和符号判定。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2008-理-04.html">2008-理-04</a>（2008 · 易） 考查对数函数在特定区间内的单调性及利用比较法判断对数值大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1159-比较法.html">比较法</a></li>
+</ul>
+</div>
+</body>
+</html>

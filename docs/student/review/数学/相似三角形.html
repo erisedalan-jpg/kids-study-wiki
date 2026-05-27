@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相似三角形</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相似三角形</h1><div class="review-mark" data-stem="相似三角形"></div><div class="meta-card"><span><strong>考点</strong>相似三角形</span><span><strong>权重</strong>21</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：21</li>
+<li>真题数：6；年份跨度：2010–2021</li>
+<li>出现题位：解答22 选择9</li>
+<li>难度分布：中5 易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>相似三角形定义</strong>：对应角相等、对应边成比例的三角形。符号“$\sim$”。</li>
+<li><strong>判定定理</strong>  </li>
+<li>两角对应相等（AA）  </li>
+<li>两边对应成比例且夹角相等（SAS）  </li>
+<li>三边对应成比例（SSS）  </li>
+<li>直角三角形：斜边和一条直角边对应成比例（HL），或有一锐角相等。</li>
+<li><strong>性质</strong>  </li>
+<li>对应边成比例，对应高、中线、角平分线之比等于相似比。  </li>
+<li>周长比等于相似比，面积比等于相似比的平方。  </li>
+<li><strong>比例线段常见模型</strong>  </li>
+<li>平行线截线段成比例：若 $l_1\parallel l_2\parallel l_3$，则 $\frac{AB}{BC}=\frac{DE}{EF}$。  </li>
+<li>直角三角形射影定理：$CD^2=AD\cdot DB$，$AC^2=AD\cdot AB$，$BC^2=BD\cdot AB$（由 $\triangle ACD\sim\triangle ABC\sim\triangle CBD$ 得到）。  </li>
+<li><strong>圆与相似的核心联系</strong>  </li>
+<li>同弧或等弧所对的圆周角相等；弦切角等于它所夹弧对的圆周角。  </li>
+<li>圆内接四边形对角互补，外角等于内对角。  </li>
+<li>圆幂定理（相交弦、割线、切割线）本质上来自相似三角形。如切割线定理 $PA^2=PB\cdot PC$ 可由 $\triangle PAB\sim\triangle PCA$ 得到。  </li>
+<li><strong>四点共圆判定</strong>（常用于构造相似）  </li>
+<li>对角互补的四边形内接于圆。  </li>
+<li>外角等于内对角的四边形内接于圆。  </li>
+<li>同底同侧张角相等的两点与底边两端点共圆。  </li>
+<li>到定点距离相等的四点共圆（圆的定义）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>找相似三角形</strong>：从角度相等入手（公共角、对顶角、圆的圆周角/弦切角、平行线同位角/内错角），结合已知比例式或等积式，锁定相似对。  </li>
+<li><strong>用比例式进行转化</strong>：由相似得比例 $\frac{a}{b}=\frac{c}{d}$，化成乘积式 $ad=bc$；常用等线段代换（如正方形、等腰、中点、线段相等）将乘积式变为所需形式。  </li>
+<li><strong>四点共圆证明</strong>：  </li>
+<li>证四边形对角互补，常用方法是用相似转移角（如 $\triangle XX\sim\triangle YY$ 得对应角相等），结合已知直角或平角得到互补。  </li>
+<li>或证外角等于内对角，利用已有角度相等关系。  </li>
+<li><strong>面积问题</strong>：优先考虑相似面积比等于相似比的平方；若图形可分割，常用全等将面积转化（如 $S_{BCGF}=2S_{\triangle BCG}$）。  </li>
+<li><strong>测量与代数的结合</strong>：列比例式后，引入未知数，通过加减消元、代换得到目标表达式，注意区分“表高”“表距”“表目距”等基本量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>相似对应关系写错</strong>：不按对应顶点顺序书写，导致比例式错乱。务必找准对应角、对应边，如公共角 $\angle A$ 对应 $\angle A$，若 $DE\parallel BC$ 则 $\triangle ADE\sim\triangle ABC$。  </li>
+<li><strong>忽视隐含条件</strong>：  </li>
+<li>正方形四边相等、直角；切线垂直于过切点的半径（间接构造直角）；弦切角等于圆周角。  </li>
+<li>圆内接四边形外角等于内对角，这一条件常被忽略，能直接打通角相等通道。  </li>
+<li><strong>四点共圆判定条件混淆</strong>：仅有一对角相等不能判定共圆，必须满足对角互补或外角等于内对角等。  </li>
+<li><strong>代数运算失分</strong>：比例式交叉相乘后，未注意到边长平方关系（如切割线定理 $DC^2=DB\cdot DA$），忘记开方或平方运算顺序错误。  </li>
+<li><strong>面积比与相似比平方记反</strong>：相似比 $k$ 对应面积比 $k^2$，若由面积比求长度比需开方。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021-理-09</h3>
+<p><strong>题目</strong>：根据《海岛算经》测高模型，已知标杆等高的“表高”、标杆间距“表距”，以及两次测量的“表目距”和“表目距的差”，求海岛高 $AB$ 的表达式。<br />
+<strong>思路</strong>：利用两组相似 $\triangle ABH\sim\triangle EDH$ 和 $\triangle ABG\sim\triangle FGC$，通过比例式消去中间量，解出 $AB$ 关于已知量的代数式。<br />
+<strong>步骤</strong>：<br />
+设表高 $DE=FG=h$，表距 $EG=d$，表目距 $EH=a$，$GC=b$，差 $b-a$。<br />
+由 $\triangle ABH\sim\triangle EDH$ 得 $\frac{AB}{h}=\frac{BH}{a}$，故 $BH=\frac{a}{h}AB$。<br />
+由 $\triangle ABG\sim\triangle FGC$ 得 $\frac{AB}{h}=\frac{BG}{b}$，故 $BG=\frac{b}{h}AB$。<br />
+又 $BG-BH=EG=d$，代入得 $\frac{b-a}{h}AB=d$，所以 $AB=\frac{h\cdot d}{b-a}$。<br />
+但此式为从标杆顶端看岛高的计算公式，原题选项中还需加表高（因 $BH$ 为水平距离差，实际 $AB$ 还需加上标杆高度），修正后得 $AB=\frac{h\cdot d}{b-a}+h$，即 $\frac{\text{表高}\times\text{表距}}{\text{表目距的差}}+\text{表高}$。<br />
+<strong>点评/变式</strong>：本题将相似性质与实际问题结合，核心是建立两个比例式并消去水平距离。注意区分最终表达式是否需要加表高，易错在直接给出 $\frac{hd}{b-a}$ 而忽略标杆自身高度。变式可改为测量河宽或塔高，方法一致。</p>
+<h3>2016-理-22</h3>
+<p><strong>题目</strong>：正方形 $ABCD$，$E,G$ 分别在 $DA,DC$ 上，$DE=DG$，$DF\perp CE$ 于 $F$。
+（Ⅰ）证明 $B,C,G,F$ 四点共圆；
+（Ⅱ）若 $AB=1$，$E$ 为 $DA$ 中点，求四边形 $BCGF$ 的面积。<br />
+<strong>思路</strong>：（Ⅰ）通过相似转移角度，证明 $\angle GFB=90^\circ$，从而对角互补得共圆；（Ⅱ）利用全等和等积转化求面积。<br />
+<strong>步骤</strong>：
+（Ⅰ）由 $DF\perp CE$，得 $\triangle DFC\sim\triangle EDC$（AA），于是 $\frac{DF}{DC}=\frac{FC}{DE}$。由 $CD=BC$，$DE=DG$，代入得 $\frac{DF}{BC}=\frac{FC}{DG}$。<br />
+又 $\angle GDF=\angle BCF$（都与 $\angle DCE$ 互余），所以 $\triangle GDF\sim\triangle BCF$（SAS）。<br />
+因此 $\angle CFB=\angle DFG$，从而 $\angle GFB=\angle GFC+\angle CFB=\angle GFC+\angle DFG=\angle DFC=90^\circ$。<br />
+在四边形 $BCGF$ 中，$\angle GFB+\angle BCD=90^\circ+90^\circ=180^\circ$，对角互补，故 $B,C,G,F$ 四点共圆。<br />
+（Ⅱ）$E$ 为 $DA$ 中点，$DE=\frac12$，$DG=\frac12$，$CG=\frac12$。在 $\triangle DFC$ 中，由 $GF=GC=\frac12$（直角斜边中线），可证 $\triangle GFB\cong\triangle GCB$。<br />
+$S_{BCGF}=2S_{\triangle BCG}=2\times\frac12\times BC\times CG=2\times\frac12\times1\times\frac12=\frac12$。<br />
+<strong>点评/变式</strong>：证明四点共圆关键是导出对角互补；面积求解时抓住全等实现图形重组。变式可改 $E$ 为 $DA$ 上任意点，用相似比求面积。</p>
+<h3>2013-理-22</h3>
+<p><strong>题目</strong>：$CD$ 切 $\triangle ABC$ 外接圆于 $C$，$AB$ 延长线交 $CD$ 于 $D$，$BC\cdot AE=DC\cdot AF$，$B,E,F,C$ 四点共圆。
+（1）证明 $CA$ 是外接圆直径；
+（2）若 $DB=BE=EA$，求过 $B,E,F,C$ 的圆与 $\triangle ABC$ 外接圆面积比。<br />
+<strong>思路</strong>：（1）由弦切角与比例式得相似，用四点共圆转移角导出直角；（2）设 $DB=m$，利用切割线定理及勾股定理求直径平方比。<br />
+<strong>步骤</strong>：
+（1）由弦切角定理 $\angle DCB=\angle A$，又 $BC\cdot AE=DC\cdot AF\Rightarrow\frac{BC}{DC}=\frac{AF}{AE}$，且夹角 $\angle DCB=\angle A$，故 $\triangle CDB\sim\triangle AEF$（SAS），得 $\angle CBD=\angle AFE$。<br />
+由 $B,E,F,C$ 共圆，$\angle CFE=\angle CBE$，而 $\angle CBE=\angle CBD$，所以 $\angle CFE=\angle CBD=\angle AFE$。又 $\angle AFE+\angle CFE=180^\circ$，故 $\angle AFE=\angle CFE=90^\circ$，即 $CA\perp AB$，所以 $CA$ 为直径。<br />
+（2）设 $DB=BE=EA=x$，则 $AB=3x$。由于 $\angle C=90^\circ$（$CA$ 为直径），$\triangle ABC$ 外接圆直径平方 $=AB^2+AC^2$。<br />
+由切割线定理 $DC^2=DB\cdot DA=x\cdot4x=4x^2\Rightarrow DC=2x$。<br />
+在 $rt\triangle DCA$ 中，$AC^2=DC^2-AD^2?$ 不，$AC^2=DC^2-AD^2?$ 需要修正：如图，$DA=DB+BA=4x$，$\triangle DCA$ 中，$DC^2+CA^2=DA^2$？不，因为 $CA$ 是直径时 $CD$ 是切线，$CD\perp CA$，故 $DC^2+CA^2=DA^2\Rightarrow 4x^2+CA^2=16x^2\Rightarrow CA^2=12x^2$。<br />
+$\triangle ABC$ 外接圆直径平方 $=AB^2+AC^2=9x^2+12x^2=21x^2$。<br />
+过 $B,E,F,C$ 四点共圆的直径为 $CE$（因 $\angle CFE=90^\circ$），$CE^2=BC^2+BE^2$。<br />
+$BC^2=CA^2+AB^2?$ 不，$BC^2=AB</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-09.html">2021-理-09</a>（2021 · 中） 据《海岛算经》测海岛高，两个等高测量标杆形成的比例关系，利用相似三角形求海岛高AB的表达式。</li>
+<li><a href="../../exam/数学/2016-理-22.html">2016-理-22</a>（2016 · 中） 考查正方形中四点共圆证明及四边形面积计算，涉及相似与全等三角形。</li>
+<li><a href="../../exam/数学/2013-理-22.html">2013-理-22</a>（2013 · 中） 该题考查圆的切线性质、相似三角形判定及四点共圆，需证明直径并求两圆面积比。</li>
+<li><a href="../../exam/数学/2011-理-22.html">2011-理-22</a>（2011 · 中） 四点共圆证明与相关半径计算，结合二次方程根与系数关系</li>
+<li><a href="../../exam/数学/2010-文-22.html">2010-文-22</a>（2010 · 易） 本题利用圆的切线性质与弦切角定理证明角相等及线段比例关系，结合三角形相似进行推导。</li>
+<li><a href="../../exam/数学/2010-理-22.html">2010-理-22</a>（2010 · 中） 考查圆切线和圆周角的性质，证明角相等及线段比例关系。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1033-相似三角形.html">相似三角形</a></li>
+</ul>
+</div>
+</body>
+</html>

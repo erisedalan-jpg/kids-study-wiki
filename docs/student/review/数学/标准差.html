@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>标准差</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>标准差</h1><div class="review-mark" data-stem="标准差"></div><div class="meta-card"><span><strong>考点</strong>标准差</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>标准差</strong>是衡量数据离散程度的统计量，反映各数据偏离平均数的平均距离。标准差越大，数据波动越大。</li>
+<li><strong>总体标准差的估计</strong>（用样本均值 $\bar{x}$ 代替总体均值）：设样本容量为 $n$，数据为 $x_1,x_2,\dots,x_n$，则标准差
+  $$s = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2}$$
+  即先求方差 $s^2$，再开平方。</li>
+<li><strong>分组数据的标准差估计</strong>（用频率分布表）：设共 $k$ 组，第 $i$ 组组中值为 $m_i$，频数为 $f_i$（$\sum f_i = n$），则
+  $$\bar{x} = \frac{1}{n}\sum_{i=1}^{k} f_i m_i$$
+  $$s = \sqrt{\frac{1}{n}\sum_{i=1}^{k} f_i (m_i - \bar{x})^2}$$
+  注意：此处用组中值代替组内所有数据，是一种近似估计。</li>
+<li><strong>适用条件</strong>：已给出频率/频数分布表，或已要求“以组中值为代表”时，必须使用上述分组公式。结果按要求精确到指定位数。</li>
+<li><strong>附值利用</strong>：若题目提供 $\sqrt{a}$ 的近似值，往往意味着计算结果需化为最简根式后代入近似值，避免直接小数值累积误差。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>读表定中点</strong>：根据分组区间计算各组组中值。对于闭区间或半开半闭区间，统一用“（下限+上限）/2”。</li>
+<li><strong>加权算均值</strong>：$\bar{x} = \frac{\sum (频数 \times 组中值)}{总数}$，可列表计算，防止遗漏。</li>
+<li><strong>求离差平方和</strong>：计算 $(m_i - \bar{x})^2$，再乘以对应频数 $f_i$ 得到该组贡献，求和 $\sum f_i(m_i - \bar{x})^2$。</li>
+<li><strong>计算方差与标准差</strong>：$s^2 = \frac{离差平方和}{n}$，$s = \sqrt{s^2}$。注意分母是 $n$，不是 $n-1$（高考中频率分布表估计标准差常用总体方差形式）。</li>
+<li><strong>开方取近似</strong>：若遇不易开方的数，先化简成 $k\sqrt{m}$ 形式，利用所给附值或手动估算，按要求精确到0.01等。</li>
+<li><strong>回答比例</strong>：所求比例 = 符合条件的企业数 / 总调查数，可直接用频数之和除以 $n$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>组中值算错</strong>：忽略负号或区间端点加减错误（如 [-0.20,0) 的组中值为 -0.10）。</li>
+<li><strong>混淆频数与频率</strong>：计算平均数、方差时必须乘以<strong>频数</strong>，而不是频率。</li>
+<li><strong>忘记加权</strong>：直接用各组的组中值做简单平均，忽视频数不等。</li>
+<li><strong>方差分母误用 $n-1$</strong>：在频率分布表估计总体标准差时，如无特别说明，公式用 $\frac{1}{n}$。</li>
+<li><strong>开方与符号</strong>：标准差非负，且必须先计算方差再开方，不要先对离差平方求和直接开方。</li>
+<li><strong>精确度与凑整</strong>：中间步骤不要过早四舍五入，最后一步才精确到指定位数；若题目给参考值（如 $\sqrt{74}\approx8.602$），必须准确提取并用在最终结果中。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2019-文-19</h3>
+<p><strong>题目</strong>：给出100个企业产值增长率的频数分布表，分5组（含负增长组），要求：(1)估计增长率不低于40%及负增长的企业比例；(2)求增长率的平均数与标准差的估计值（以组中值代表，精确到0.01，附 $\sqrt{74}\approx8.602$）。</p>
+<p><strong>思路</strong>：(1)直接统计符合条件的企业频数，除以100。(2)先计算组中值，加权得平均数；再计算各组离差平方和，除以100得方差，开方并利用附值求标准差近似。</p>
+<p><strong>步骤</strong>：
+- 组中值依次为：[-0.20,0) → $m_1=-0.10$，[0,0.20) → $m_2=0.10$，[0.20,0.40) → $m_3=0.30$，[0.40,0.60) → $m_4=0.50$，[0.60,0.80) → $m_5=0.70$。频数 $f$：2, 24, 53, 14, 7。
+- (1) 增长率不低于40%即 ≥0.40，对应后两组频数和 $14+7=21$，比例 $21/100=0.21$；产值负增长对应第一组 $y&lt;0$，频数2，比例 $2/100=0.02$。
+- (2) 平均数 $\bar{y}=\frac{1}{100}[(-0.10)\times2 + 0.10\times24 + 0.30\times53 + 0.50\times14 + 0.70\times7] = 0.30$。
+  方差 $s^2 = \frac{1}{100}[2\times(-0.40)^2 + 24\times(-0.20)^2 + 53\times0^2 + 14\times0.20^2 + 7\times0.40^2]$
+  $= \frac{1}{100}(0.32+0.96+0+0.56+1.12)=\frac{2.96}{100}=0.0296$。
+  标准差 $s = \sqrt{0.0296} = \frac{\sqrt{2.96}}{10} = \frac{\sqrt{296}}{100} = \frac{2\sqrt{74}}{100} = \frac{\sqrt{74}}{50} \approx \frac{8.602}{50} \approx 0.17$。</p>
+<p><strong>点评/变式</strong>：
+- 此题完美体现用组中值近似估计标准差的全流程。注意负增长组的中值包含负号，计算离差时符号处理尤为关键。
+- 变式：若频数改为频率，方差公式变为 $s^2 = \sum (频率_i \times (m_i-\bar{x})^2)$，不必再除以 $n$。若题目未给参考值，可直接开方并四舍五入，本题的 $\sqrt{74}$ 提示能快速得到精确小数结果，应主动利用。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-19.html">2019-文-19</a>（2019 · 中） 本题通过频数分布表估计企业产值增长率的比例、平均数与标准差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/199-标准差.html">标准差</a></li>
+</ul>
+</div>
+</body>
+</html>

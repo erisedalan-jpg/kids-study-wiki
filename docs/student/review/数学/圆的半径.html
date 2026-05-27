@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆的半径</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆的半径</h1><div class="review-mark" data-stem="圆的半径"></div><div class="meta-card"><span><strong>考点</strong>圆的半径</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>四点共圆的判定</strong>：常用方法包括对角互补、外角等于内对角、圆幂定理的逆定理（如相交弦定理、割线定理逆定理）。特别地，若 $AD\cdot AB = AE\cdot AC$，则 $D,E,B,C$ 四点共圆；也可通过比例 $AD/AE = AC/AB$ 结合公共角证三角形相似，进而得等角，推对角互补。</li>
+<li><strong>韦达定理</strong>：方程 $x^2 - (x_1+x_2)x + x_1x_2=0$ 的两根 $x_1,x_2$ 满足和与积关系，常将线段长与方程根对应，建立等量关系。</li>
+<li><strong>三角形外接圆半径</strong>：正弦定理形式 $a=2R\sin A$，即 $R=\dfrac{a}{2\sin A}$；或用面积公式 $R=\dfrac{abc}{4S}$。所选三角形必须内接于待求圆。</li>
+<li><strong>圆的坐标求法</strong>：已知三点坐标，设一般方程或利用中垂线求圆心，再利用距离公式得半径。特别当圆上存在多条弦在坐标轴上时，可快速得到圆心坐标。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>证共圆</strong>：若题目给出线段乘积相等（如 $AD\cdot AB = mn = AE\cdot AC$），优先考虑切割线定理逆定理；若无直接乘积，可化为比例式，寻找公共角证三角形相似，得对应角相等，再结合邻补角推出对角互补，从而完成共圆证明。</li>
+<li><strong>求圆的半径</strong>：  </li>
+<li><strong>直角三角形法</strong>：若共圆四点中能构造直角三角形，斜边即直径，半径 $R=\dfrac{\text{斜边}}{2}$；  </li>
+<li><strong>正弦定理法</strong>：选取圆上三点构成的三角形，求出某一内角的正弦及其对边长度，直接代入 $R=\dfrac{a}{2\sin A}$；  </li>
+<li><strong>坐标法</strong>：将图形置于直角坐标系，由圆上三点坐标求外接圆方程，或用几何法（弦的中垂线交点）求圆心，再算半径。</li>
+<li><strong>一元二次方程根与线段匹配</strong>：先根据韦达定理得到两根和与积，结合图形中线段的大小关系确定对应线段长度（如 $AD&lt;AB$），防止多解混淆。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>角对应错误</strong>：利用相似证共圆时，必须注意顶点对应顺序，如 $\triangle ADE \sim \triangle ACB$ 得 $\angle ADE = \angle C$，再通过平角关系得出对角互补，切忌直接用 $\angle ADE = \angle B$。</li>
+<li><strong>正弦定理选错三角形</strong>：求四点共圆的半径，必须确保所选三角形的三个顶点都在该圆上，且所选角必须为所取边的对角。</li>
+<li><strong>忽视线段长度合理性</strong>：解一元二次方程得到两根时，若没有结合图形中点的位置（如 $D$ 在 $AB$ 上且不与端点重合）进行取舍，容易误取另一根导致错误。</li>
+<li><strong>计算失误</strong>：利用正弦定理时，注意直角三角形的边角关系，及时化简根式，避免 $\sin$ 值代错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2011·文·22）：$\triangle ABC$ 中，$D,E$ 分别在 $AB,AC$ 上，$AE=m$，$AC=n$，$AD,AB$ 是 $x^2-14x+mn=0$ 的两根。<br />
+（Ⅰ）求证：$C,B,D,E$ 四点共圆；<br />
+（Ⅱ）若 $\angle A=90^\circ$，$m=4$，$n=6$，求 $C,B,D,E$ 所在圆的半径。</p>
+<p><strong>思路</strong><br />
+（Ⅰ）由韦达定理得 $AD\cdot AB = mn = AE\cdot AC$，化为比例结合公共角证相似，推出对角互补即得共圆。<br />
+（Ⅱ）先解方程得 $AD,AB$，由 $\angle A=90^\circ$ 求相关边长；取圆上 $\triangle BDE$，用正弦定理求外接圆半径；亦可建系直接求圆方程得半径。</p>
+<p><strong>步骤</strong><br />
+（Ⅰ）证明：由韦达定理，$AD+AB=14$，$AD\cdot AB = mn = m\cdot n = AE\cdot AC$。<br />
+故 $\dfrac{AD}{AE} = \dfrac{AC}{AB}$，又 $\angle DAE = \angle CAB$，<br />
+所以 $\triangle ADE \sim \triangle ACB$，得 $\angle ADE = \angle C$。<br />
+因为 $A,D,B$ 共线，$\angle ADE + \angle BDE = 180^\circ$，<br />
+所以 $\angle C + \angle BDE = 180^\circ$，四边形 $CBDE$ 对角互补，<br />
+所以 $C,B,D,E$ 四点共圆。</p>
+<p>（Ⅱ）当 $m=4,n=6$ 时，$mn=24$，方程为 $x^2-14x+24=0$，解得 $x=2$ 或 $12$。<br />
+由 $D$ 在 $AB$ 上且不与端点重合，结合图形取 $AD=2$，$AB=12$（$AE=4$，$AC=6$）。<br />
+由 $\angle A=90^\circ$，$AB=12$，$AC=6$，得 $BC=\sqrt{12^2+6^2}=6\sqrt{5}$；<br />
+$BE=\sqrt{AB^2+AE^2}=\sqrt{12^2+4^2}=4\sqrt{10}$。<br />
+在圆 $CBDE$ 中，$\angle BDE = \angle BCE = \angle C$（同弧 $BE$）。<br />
+在 $\text{Rt}\triangle ABC$ 中，$\sin C = \dfrac{AB}{BC} = \dfrac{12}{6\sqrt{5}} = \dfrac{2}{\sqrt{5}}$。<br />
+对 $\triangle BDE$ 用正弦定理：$2R = \dfrac{BE}{\sin\angle BDE} = \dfrac{4\sqrt{10}}{\frac{2}{\sqrt{5}}} = 2\sqrt{50} = 10\sqrt{2}$，<br />
+故半径 $R = 5\sqrt{2}$。</p>
+<p>（另解：以 $A$ 为原点建系，可得圆过 $B(12,0), D(2,0), C(0,6)$，圆心 $(7,5)$，半径 $R=5\sqrt{2}$。）</p>
+<p><strong>点评/变式</strong><br />
+该题将一元二次方程根与系数关系、三角形相似、四点共圆、正弦定理求半径等核心知识点串联，综合性较强。解题关键是由乘积相等转换为比例证相似，求半径时找准圆上的三角形及其边角对应。变式可改为已知某切线段长代替方程，或求四边形面积等，核心思路依然是从线段乘积关系出发，构造共圆并结合正弦定理或勾股定理求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2011-文-22.html">2011-文-22</a>（2011 · 中） 本题主要考查四点共圆的判定与一元二次方程根与系数的关系，并结合直角三角形求圆的半径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">圆的半径</a></li>
+</ul>
+</div>
+</body>
+</html>

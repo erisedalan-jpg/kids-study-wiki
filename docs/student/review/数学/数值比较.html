@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数值比较</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>数值比较</h1><div class="review-mark" data-stem="数值比较"></div><div class="meta-card"><span><strong>考点</strong>数值比较</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择6</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>数值比较的核心：利用条件判断语句（如 $x&gt;A$ 或 $x&lt;B$）对两个实数的大小关系进行判定。</li>
+<li>在算法（程序框图）中，通过循环结构与比较运算，可对一组数进行极值筛选：</li>
+<li>初始化最大值 $A$、最小值 $B$ 为第一个数 $a_1$。</li>
+<li>后续每个数 $x$ 分别与当前的 $A$、$B$ 比较：<ul>
+<li>若 $x &gt; A$，则用 $x$ 更新 $A$。</li>
+<li>若 $x &lt; B$，则用 $x$ 更新 $B$。</li>
+</ul>
+</li>
+<li>最终，$A$ 即为这组数的最大值，$B$ 为最小值。该算法是“打擂法”求最值的经典实现。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别框图结构</strong>：明确循环开始、循环体、循环条件及输出位置。</li>
+<li><strong>确定变量角色</strong>：找到承载最大值、最小值的变量，注意其初始赋值（常为第一个输入值）。</li>
+<li><strong>模拟执行</strong>：选取一个小规模的典型数据（如 ${3,1,4,2}$），按循环顺序逐步更新变量值，验算结果。</li>
+<li><strong>归纳功能</strong>：根据模拟结果判断框图的整体功能是输出最大值、最小值、还是其他统计量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>初始值误区</strong>：将 $A$ 或 $B$ 初始赋为 $0$ 或固定常数，导致结果错误（尤其全负或全正时）。正确的初始化是取序列的第一个数。</li>
+<li><strong>最大/最小值混淆</strong>：框图内 $x &gt; A$ 时更新 $A$，则 $A$ 存最大值；$x &lt; B$ 时更新 $B$，则 $B$ 存最小值。考试中极易张冠李戴，把 $A$ 当最小值、$B$ 当最大值。</li>
+<li><strong>循环次数遗漏</strong>：输入 $N$ 个数时，循环体通常执行 $N-1$ 次（第一个数已赋给 $A,B$），漏算次数会导致提前终止或多余操作。</li>
+<li><strong>处理相等情况</strong>：相等时不满足 $x&gt;A$ 或 $x&lt;B$，因此 $A,B$ 保持不变，不影响正确性。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2012·文·06）<br />
+执行右侧程序框图，输入正整数 $N\ (N\ge 2)$ 和实数 $a_1,a_2,\dots ,a_n$，输出 $A,B$，则 $A,B$ 的含义是？</p>
+<p><strong>思路</strong><br />
+题目考查程序框图识别与数值比较求最值的逻辑。通过分析循环中的比较操作，确定 $A$ 接收更大的数、$B$ 接收更小的数，从而得出 $A$ 为最大值、$B$ 为最小值。</p>
+<p><strong>步骤</strong><br />
+1. 框图首先输入 $N$ 和 $a_1$，并令 $A=a_1,\ B=a_1$，计数器 $i=2$。<br />
+2. 进入循环：输入下一个数 $x$。<br />
+   - 若 $x&gt;A$，则 $A=x$；否则 $A$ 不变。<br />
+   - 若 $x<B$，则 $B=x$；否则 $B$ 不变。<br />   - 计数器 $i$ 加 $1$，判断 $i>N$ 是否成立，成立则退出循环。<br />
+3. 循环结束时，$A$ 为所有输入实数中的最大值，$B$ 为最小值，并输出 $A,B$。  </p>
+<p><strong>点评/变式</strong><br />
+此题是算法与数值比较结合的经典原型，几乎年年有变式考法。<br />
+- 变式一：求最大值与平均值的组合框图中，需额外累加变量。<br />
+- 变式二：改变比较方向（如 $x&lt;A$ 更新 $A$），此时 $A$ 变为最小值，极易失分。<br />
+- 解题铁律：<strong>动手代值模拟，追踪变量变化，绝不凭直觉猜测。</strong></p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-06.html">2012-文-06</a>（2012 · 易） 该题考查程序框图的理解，通过循环结构对输入实数进行逐个判断以更新输出值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">数值比较</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>四点共圆</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>四点共圆</h1><div class="review-mark" data-stem="四点共圆"></div><div class="meta-card"><span><strong>考点</strong>四点共圆</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：7</li>
+<li>真题数：5；年份跨度：2011–2016</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中5</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>四点共圆的判定定理（常考核心）</strong>  </li>
+<li><strong>对角互补</strong>：若四边形一组对角之和为 $180^\circ$，则四点共圆。  </li>
+<li><strong>外角等于内对角</strong>：若四边形的一个外角等于它的内对角，则四点共圆。  </li>
+<li><strong>同侧张角相等</strong>：若两个点在一条线段同侧，且对该线段所张的角相等，则这两点与线段两端点四点共圆（圆周角定理逆定理）。  </li>
+<li><strong>圆幂定理的逆用</strong>：若两线段交于一点，满足 $PA\cdot PB=PC\cdot PD$（相交弦逆定理）或割线比例关系，可证四点共圆（多在综合性推理中作为桥梁）。  </li>
+<li><strong>四点共圆的性质（常用于求解）</strong>  </li>
+<li>共圆后所有圆周角性质成立：同弧所对圆周角相等，弦切角等于所夹弧对的圆周角。  </li>
+<li>圆内接四边形对角互补、外角等于内对角。  </li>
+<li>可用于构造直角三角形（直径所对圆周角为 $90^\circ$），转化长度与面积。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>观察图形，锁定目标四边形</strong>：明确要证明的是哪四个点共圆，为后续角度或比例推理确定方向。  </li>
+<li><strong>首选“对角互补”路径</strong>：在正方形、直角三角形等垂直关系丰富的图形中，优先证明一组对角均为 $90^\circ$（或互补）。常用于：  </li>
+<li>利用已知垂直（如 $DF \perp CE$）得出某个角为 $90^\circ$；  </li>
+<li>通过相似三角形传递角的相等关系，转化为另一角为 $90^\circ$，从而证互补。  </li>
+<li><strong>灵活运用相似三角形搭桥</strong>：当直角或已知角不够直接时，通过比例关系 $\frac{DE}{DC}=\frac{DF}{CF}$ 等发现相似，再利用相似得到对应角相等，最终转化为共圆条件（如 $\angle GDF = \angle BCF$ 推出 $\triangle GDF \sim \triangle BCF$，从而得到角相等，进而证 $\angle GFB = 90^\circ$）。  </li>
+<li><strong>已知共圆反推性质求值</strong>：当题目后续要求面积、长度时，立刻利用共圆所得性质：如直角、等角、圆幂、直角三角形斜边中线等，再结合全等或割补法完成计算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对角找错</strong>：证明对角互补时，所找的“对角”不是目标四边形的真正对角，导致推理无效。务必核实四边形顶点的对应关系。  </li>
+<li><strong>相似三角形对应边比例写错</strong>：如将 $\frac{DF}{CF}$ 误写为 $\frac{CF}{DF}$，导致后续比例无法传递，影响角相等证明。  </li>
+<li><strong>弦切角定理使用条件不清</strong>：弦切角等于所夹弧对的圆周角，必须满足一边与圆相切、另一边是弦，且离开切点的角才是弦切角。  </li>
+<li><strong>误将比例关系直接当共圆条件</strong>：仅凭线段成比例不能直接得到四点共圆，必须结合夹角相等等条件，转化为圆幂逆定理或相似角关系。  </li>
+<li><strong>计算面积时忽略“共圆带来的直角三角形”</strong>：如证明 $\angle GFB = 90^\circ$ 后，$GF$ 与 $BF$ 垂直，却仍用一般四边形面积公式，而未拆分为两个直角三角形求解。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题一：2016 年正方形中的四点共圆</h3>
+<p><strong>题目</strong>：在正方形 $ABCD$ 中，$E$、$G$ 分别在 $DA$、$DC$ 上，$DE=DG$，过 $D$ 作 $DF \perp CE$ 于 $F$。<br />
+（Ⅰ）证明 $B，C，G，F$ 四点共圆；<br />
+（Ⅱ）若 $AB=1$，$E$ 为 $DA$ 的中点，求四边形 $BCGF$ 的面积。  </p>
+<p><strong>思路</strong>：<br />
+- 对（Ⅰ）可优先考虑对角互补：已有 $\angle BCD=90^\circ$，若证 $\angle GFB=90^\circ$ 即可。<br />
+- 通过 $DF \perp CE$ 得 $\angle DFC=90^\circ$，结合 $DE=DG$ 和正方形边长相等等条件，构造相似三角形 $\triangle GDF \sim \triangle BCF$，进行角度传递，最终得到 $\angle GFB = \angle DFC = 90^\circ$。<br />
+- 对（Ⅱ），利用（Ⅰ）结论得到 $\angle GFB=90^\circ$，再结合 $GF=GC$（可由直角三角形斜边中线或全等得出），将四边形分割为全等三角形求面积。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）由正方形得 $DC=BC$，$DE=DG$。<br />
+由 $DF \perp CE$ 得 $\angle DFC=90^\circ$，$\text{Rt}\triangle DFC \sim \text{Rt}\triangle EDC$，有 $\frac{DF}{CF}=\frac{ED}{DC}=\frac{DG}{BC}$。<br />
+又 $\angle GDF = 90^\circ - \angle FDC = \angle FCD$，而 $\angle BCF = 90^\circ - \angle FCD$，注意此处需要更精确的关系：由相似得 $\angle GDF = \angle BCF$，于是 $\triangle GDF \sim \triangle BCF$。<br />
+所以 $\angle CFB = \angle DFG$，<br />
+则 $\angle GFB = \angle GFC + \angle CFB = \angle GFC + \angle DFG = \angle DFC = 90^\circ$。<br />
+又 $\angle BCD=90^\circ$，故 $\angle BCD + \angle GFB = 180^\circ$，所以 $B，C，G，F$ 四点共圆。  </p>
+<p>（Ⅱ）$AB=1$，$E$ 为 $DA$ 中点，则 $DE=\frac12$，$DG=\frac12$，$GC=\frac12$。<br />
+在 $\text{Rt}\triangle DFC$ 中，$F$ 为斜边中点吗？需注意：由 $\triangle GDF \sim \triangle BCF$ 可得 $\frac{GF}{BF}=\frac{GD}{BC}=\frac12$，且可证明 $GF=GC$。实际上，连接 $GF$，由 $\angle GFB=90^\circ$ 及 $GC=GD$，可证 $\triangle GFB \cong \triangle GCB$（$GF=GC$，公共边 $GB$，直角），故 $S_{\triangle GFB}=S_{\triangle GCB}$。<br />
+由 $AB=1$，$BC=1$，$CG=\frac12$，$S_{\triangle BCG}=\frac12 \times 1 \times \frac12=\frac14$。<br />
+因此 $S_{BCGF}=2S_{\triangle BCG}=\frac12$。  </p>
+<p><strong>点评/变式</strong>：本题以正方形为载体，核心是“直角 + 相似三角形”推导共圆，典型的“对角互补”判定法。变式中可将 $E$ 位置一般化，或换为矩形背景，但方法相通。  </p>
+<h3>代表题二：2013 年弦切线与四点共圆</h3>
+<p><strong>题目</strong>：$CD$ 为 $\triangle ABC$ 外接圆的切线，$AB$ 延长线交 $CD$ 于 $D$，$E$、$F$ 分别在弦 $AB$、$AC$ 上，满足 $BC \cdot AE = DC \cdot AF$，且 $B，E，F，C$ 四点共圆。<br />
+（1）证明：$CA$ 是 $\triangle ABC$ 外接圆的直径；<br />
+（2）若 $DB=BE=EA$，求过 $B，E，F，C$ 四点的圆的面积与 $\triangle ABC$ 外接圆面积的比值。（本题只要求掌握共圆部分，重点在（1））  </p>
+<p><strong>思路</strong>：<br />
+- 题设直接给出了 $B，E，F，C$ 四点共圆，利用它的性质 $\angle CFE = \angle CBE$。<br />
+- 切线 $CD$ 给出弦切角：$\angle DCB = \angle A$。<br />
+- 将比例条件 $BC \cdot AE = DC \cdot AF$ 改写成 $\frac{BC}{DC}=\frac{AF}{AE}$，结合弦切角等，可证 $\triangle CDB \sim \triangle AEF$，得 $\angle CBD = \angle AFE$。<br />
+- 由共圆性质得 $\angle CFE = \angle CBE$，于是 $\angle CFE = \angle AFE$，且 $A$、$F$、$C$ 共线，故两角和为平角，各为 $90^\circ$，即 $\angle AFC=90^\circ$，所以 $CA$ 为直径。</p>
+<p><strong>步骤</strong>：<br />
+（1）由 $CD$ 是 $\triangle ABC$ 外接圆的切线，得 $\angle DCB = \angle A$。<br />
+由 $BC \cdot AE = DC \cdot AF$ 得 $\frac{BC}{DC} = \frac{AF}{AE}$。<br />
+所以 $\triangle BCD \sim \triangle FAE$（两边成比例且夹角相等，夹角为 $\angle DCB$ 和 $\angle A$），于是 $\angle CBD = \angle AFE$。<br />
+又 $B，E，F，C$ 四点共圆 $\Rightarrow \angle CFE = \angle CBE$（同弧 $\widehat{CE}$ 所对圆周角）。<br />
+所以 $\angle CFE = \angle AFE$。<br />
+因为 $A，F，C$ 三点共线，故 $\angle CFE + \angle AFE = 180^\circ$，从而 $\angle CFE = \angle AFE = 90^\circ$，即 $\angle AFC = 90^\circ$，所以 $CA$ 是 $\triangle ABC$ 外接圆的直径。  </p>
+<p><strong>点评/变式</strong>：本题训练“已知共圆”如何输出角相等等关键性质，同时结合切线带来的弦切角，对比例条件进行相似转化。直径证明常落脚在“圆周角为 $90^\circ$”。若将四点共圆条件换成其他形式（如圆幂等式），可类比推理。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-22.html">2016-文-22</a>（2016 · 中） 正方形内构造等长线段与垂线，证明四点共圆并计算四边形面积。</li>
+<li><a href="../../exam/数学/2016-理-22.html">2016-理-22</a>（2016 · 中） 考查正方形中四点共圆证明及四边形面积计算，涉及相似与全等三角形。</li>
+<li><a href="../../exam/数学/2013-文-22.html">2013-文-22</a>（2013 · 中） 该题考查利用切线性质、四点共圆及比例关系证明线段为外接圆直径。</li>
+<li><a href="../../exam/数学/2013-理-22.html">2013-理-22</a>（2013 · 中） 该题考查圆的切线性质、相似三角形判定及四点共圆，需证明直径并求两圆面积比。</li>
+<li><a href="../../exam/数学/2011-文-22.html">2011-文-22</a>（2011 · 中） 本题主要考查四点共圆的判定与一元二次方程根与系数的关系，并结合直角三角形求圆的半径。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/766-四点共圆.html">四点共圆</a></li>
+</ul>
+</div>
+</body>
+</html>

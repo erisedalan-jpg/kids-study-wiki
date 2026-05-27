@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>元素与集合关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>元素与集合关系</h1><div class="review-mark" data-stem="元素与集合关系"></div><div class="meta-card"><span><strong>考点</strong>元素与集合关系</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>集合</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：集合</li>
+<li>权重 weight：10</li>
+<li>真题数：4；年份跨度：2012–2022</li>
+<li>出现题位：选择1 选择2</li>
+<li>难度分布：易4</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>元素与集合关系</strong>：对任意元素 $a$ 与集合 $A$，只有 $a \in A$（属于）或 $a \notin A$（不属于）两种关系。这是描述集合的基础。</li>
+<li><strong>常用集合表示（考纲重点）</strong>：</li>
+<li>自然数集 $\mathbb{N}$，整数集 $\mathbb{Z}$，实数集 $\mathbb{R}$。</li>
+<li>列举法：${1, 2, 3}$。</li>
+<li>描述法：${x \mid P(x)}$，其中 $P(x)$ 为元素满足的条件，如 ${x \mid -1 &lt; x &lt; 6}$。</li>
+<li><strong>核心运算及适用条件</strong>：</li>
+<li><strong>交集 $A \cap B$</strong>：${x \mid x \in A \text{ 且 } x \in B}$。求两个集合的公共元素。</li>
+<li><strong>并集 $A \cup B$</strong>：${x \mid x \in A \text{ 或 } x \in B}$。合并两个集合的所有元素。</li>
+<li><strong>补集 $\complement_U A$</strong>：<strong>前提必须已知全集 $U$</strong>。$\complement_U A = {x \mid x \in U \text{ 且 } x \notin A}$。</li>
+<li><strong>数集与点集</strong>：集合的元素可以是数（数集），亦可是有序数对（点集）。如 ${(x,y) \mid x \in A, y \in A}$ 表示点集。</li>
+<li><strong>方程与集合</strong>：若 $B = {x \mid x^2 - 4x + m = 0}$，则已知 $1 \in B$，意味着代入 $x=1$ 能使方程成立，从而可解出参数 $m$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题与区分集合类型</strong>：第一要务是看清集合是<strong>数集</strong>还是<strong>点集</strong>。点集的元素是有序数对，其运算逻辑与数集完全不同。</li>
+<li><strong>规范化集合</strong>：将所有抽象条件或描述法集合具体化。比如，遇到描述法 ${x \mid |x| &lt; 3}$ 或补集条件，优先转化为列举法 ${-2, -1, 0, 1, 2}$ 或具体区间，使集合元素一目了然。</li>
+<li><strong>交集逆推法</strong>：由 $A \cap B = {c}$，可直接推出两层结论：① $c \in A$；② $c \in B$。这是求解集合中未知参数的核心突破口。</li>
+<li><strong>逐一验证法</strong>：涉及元素与单个集合的关系判断（如 $2 \in M$），先通过补集等条件求出目标集合的确切元素，再逐一检查各选项。</li>
+<li><strong>分类列举法</strong>：解决点集问题或满足复杂条件的数集构造问题时，需固定一个变量（如 $x$），按其所有可能取值，依次列举符合条件的 $y$ 值。为保证不重不漏，应按一定顺序（如从大到小）列举。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>审题不清，混淆数集与点集</strong>：看到 $B={(x, y) \mid ...}$，却仍然当作数的集合进行交集运算，导致根本性错误。在看到集合中的括号时必须立即警觉。</li>
+<li><strong>忽略前提，错用补集</strong>：在没有确定全集 $U$ 的情况下求补集，或仅在已知 $\complement_U M$ 时，错误地反推 $M$，认为 $M$ 是去掉补集元素后剩余的全集元素。必须牢记：$M$ 与 $\complement_U M$ 的元素合起来恰好构成全集 $U$，且两者无公共元素。</li>
+<li><strong>边界条件判断失误</strong>：在涉及不等式的描述法集合中，容易混淆开区间 $(-1, 6)$ 与闭区间，导致在取整数元素时，错误地包含或排除端点值。</li>
+<li><strong>列举无序导致遗漏</strong>：在构造满足特定条件的元素时，若没有固定的枚举策略（如固定第一个变量，按顺序变化第二个变量），极易漏算或重复计算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目一</strong>（2022-理-01）</h3>
+<p><strong>题目</strong>：已知全集 $U={1,2,3,4,5}$，集合 $M$ 满足 $\complement_U M = {1,3}$，判断选项中元素与集合 $M$ 的关系。
+<strong>思路</strong>：利用补集的定义，从全集中去掉补集的元素，就能反推出原集合 $M$ 的具体元素，然后逐一核对选项的正误。
+<strong>步骤</strong>：
+1. <strong>确定全集与补集</strong>：全集 $U = {1,2,3,4,5}$，$M$ 的补集 $\complement_U M = {1,3}$。
+2. <strong>反推集合 $M$</strong>：根据定义，$M$ 是由 $U$ 中所有<strong>不属于</strong> $\complement_U M$ 的元素构成。因此，在 $U$ 中去掉 1 和 3，得到 $M = {2,4,5}$。
+3. <strong>验证选项</strong>：
+   - A项：$2 \in M$。因为 2 在 ${2,4,5}$ 中，正确。
+   - B项：$3 \in M$。错误，3 在补集中。
+   - C、D项：$4 \notin M$、$5 \notin M$。4和5 都在 $M$ 中，故错误。
+<strong>点评/变式</strong>：本题是补集定义的最直接应用。失分点常在于将补集关系想象得过于复杂。<strong>变式</strong>：若已知 $M \cap \complement_U M$，其结果必定是空集；若已知 $M \cup \complement_U M$，结果必定是全集 $U$。</p>
+<h3><strong>题目二</strong>（2017-理-02）</h3>
+<p><strong>题目</strong>：设集合 $A={1,2,4}$，$B={x \mid x^2 - 4x + m = 0}$。若 $A \cap B = {1}$，求集合 $B$。
+<strong>思路</strong>：从“交集为 {1}”这一关键条件入手，解读出“1”同时属于 $A$ 和 $B$。利用“1属于B”代入方程解出参数 $m$，再还原出集合 $B$。
+<strong>步骤</strong>：
+1. <strong>解读交集条件</strong>：由 $A \cap B = {1}$，可知 $1 \in A$ 且 $1 \in B$。
+2. <strong>代入求参</strong>：将 $x = 1$ 代入集合 $B$ 的方程 $x^2 - 4x + m = 0$ 中，得 $1^2 - 4 \times 1 + m = 0$，即 $1 - 4 + m = 0$，解得 $m = 3$。
+3. <strong>还原集合并验证</strong>：将 $m = 3$ 代回方程，得 $x^2 - 4x + 3 = 0$。解方程得 $x_1 = 1$，$x_2 = 3$。所以 $B = {1, 3}$。
+4. <strong>反向核验</strong>：重新计算 $A \cap B = {1,2,4} \cap {1,3} = {1}$，符合题意。
+<strong>点评/变式</strong>：关键思路是“交集元素必然是原集合的元素”。注意，求出 $B = {1, 3}$ 后，必须验证是否与 $A$ 的交集真为 ${1}$。若解出 $B = {1,2}$，则交集为 ${1,2}$，与题意矛盾，需舍去。</p>
+<h3><strong>题目三</strong>（2012-理-01）</h3>
+<p><strong>题目</strong>：已知集合 $A={1,2,3,4,5}$，$B={(x,y) \mid x \in A, y \in A, x - y \in A}$，求集合 $B$ 中所含元素的个数。
+<strong>思路</strong>：本题是点集问题。需理解有序数对 $(x,y)$ 满足的三个条件，并采用“固定$x$、列举$y$”的策略，确保不重不漏地列出所有符合条件的点。
+<strong>步骤</strong>：
+1. <strong>分析条件</strong>：$(x,y)$ 需满足 $x \in A$，$y \in A$，且 $x - y$ 的值也在 $A$ 中。由于 $A$ 中均为正数，这就要求 $x &gt; y$。
+2. <strong>有序列举</strong>：以 $x$ 为基准，从大到小进行枚举。
+   - 当 $x=5$ 时，为使 $x - y \in A$，$y$ 可取 1, 2, 3, 4。共4个点。
+   - 当 $x=4$ 时，$y$ 可取 1, 2, 3。共3个点。
+   - 当 $x=3$ 时，$y$ 可取 1, 2。共2个点。
+   - 当 $x=2$ 时，$y$ 只能取 1。共1个点。
+   - 当 $x=1$ 时，无符合条件的 $y$。
+3. <strong>求和</strong>：总元素个数为 $4+3+2+1 = 10$ 个。
+<strong>点评/变式</strong>：本题极易因列举混乱而漏解。固定其中一个变量进行枚举是核心方法。<strong>变式</strong>：若将条件改为 $x+y \in A$，计算逻辑类似。当 $x=3$ 时，$y$ 可取 1,2；当 $x=4$ 时，$y$ 只能取 1。需要根据新条件重新审视线性的枚举路径。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-01.html">2022-文-01</a>（2022 · 易） 求集合M和N的交集，直接利用交集定义计算。</li>
+<li><a href="../../exam/数学/2022-理-01.html">2022-理-01</a>（2022 · 易） 已知全集U={1,2,3,4,5}，集合M满足∁_U M={1,3}，判断元素与M的关系。</li>
+<li><a href="../../exam/数学/2017-理-02.html">2017-理-02</a>（2017 · 易） 本题考查集合交集运算，通过交集元素求参数并确定集合。</li>
+<li><a href="../../exam/数学/2012-理-01.html">2012-理-01</a>（2012 · 易） 本题考查通过集合描述法确定元素个数，需分类列举满足条件的x、y值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/277-元素与集合关系.html">元素与集合关系</a></li>
+</ul>
+</div>
+</body>
+</html>

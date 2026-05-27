@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>角平分线定理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>角平分线定理</h1><div class="review-mark" data-stem="角平分线定理"></div><div class="meta-card"><span><strong>考点</strong>角平分线定理</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答17</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>三角形内角平分线定理</strong>：在 $\triangle ABC$ 中，若 $AD$ 平分 $\angle BAC$ 且交 $BC$ 于 $D$，则<br />
+$$
+\frac{BD}{DC} = \frac{AB}{AC}.
+$$<br />
+即角平分线将对边分成的两段与邻边成比例。<br />
+- 证明思路：过 $C$ 作 $AD$ 的平行线交 $BA$ 延长线于 $E$，利用平行线分线段成比例及等腰三角形性质。<br />
+- 适用条件：已知角平分线，求边之比；或已知边之比，证角平分线；常与正弦定理、余弦定理结合解三角形。<br />
+- 变形：$BD = \frac{AB}{AB+AC}\cdot BC$，$DC = \frac{AC}{AB+AC}\cdot BC$；在 $\triangle ABD$ 和 $\triangle ACD$ 中，由正弦定理可得 $\frac{\sin \angle BAD}{\sin \angle B} = \frac{BD}{AB}$ 等关系，结合平分角可导出角的关系。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别关键条件</strong>：题设出现“角平分线”并给出分线段长度或比例，立即联想内角平分线定理，将角平分转化为边比例 $\frac{BD}{DC} = \frac{AB}{AC}$。  </li>
+<li><strong>设比例系数</strong>：若已知 $BD:DC=m:n$，则设 $AB=mk$，$AC=nk$，再结合其他条件求解 $k$ 或角度。  </li>
+<li><strong>联用正弦定理</strong>：目标为求角的正弦值之比或角度时，先由角平分线定理得边比，再在 $\triangle ABC$ 中用正弦定理 $\frac{AB}{\sin C} = \frac{AC}{\sin B}$，得 $\frac{\sin B}{\sin C} = \frac{AC}{AB}$，与边比挂钩。  </li>
+<li><strong>联用余弦定理</strong>：若已知一边一角或求边长，利用边比设出两边长，配合夹角用余弦定理列方程。  </li>
+<li><strong>整体步骤</strong>：平移角度关系→转化边比→设出边长→解三角形（正弦/余弦）→回代求目标量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用顶点顺序</strong>：角平分线分对边所得两线段必须与邻边对应正确，即 $\frac{BD}{DC} = \frac{AB}{AC}$，不可颠倒为 $\frac{BD}{DC} = \frac{AC}{AB}$。  </li>
+<li><strong>忽略比例系数单位</strong>：由比例设边长时，必须引入相同的比例系数 $k$，避免直接令 $AB=BD$ 等错误。  </li>
+<li><strong>角平分线长公式混淆</strong>：内角平分线长 $AD^2 = AB\cdot AC - BD\cdot DC$ 非必考，若题目未要求切勿盲目代入，优先用比例定理。  </li>
+<li><strong>正弦定理对应错误</strong>：由 $\frac{AB}{\sin C} = \frac{AC}{\sin B}$ 得到的是 $\frac{\sin B}{\sin C} = \frac{AC}{AB}$，而非 $\frac{AB}{AC}$，需与角平分线定理的边比配合时注意取倒数。  </li>
+<li><strong>忘记角度关系</strong>：$AD$ 平分 $\angle A$，则 $\angle BAD = \angle CAD = \frac{1}{2}\angle A$，在解三角形时可直接使用。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2015年高考文科数学全国卷 第17题</h3>
+<p><strong>题目</strong>：在 $\triangle ABC$ 中，$D$ 是 $BC$ 上的点，$AD$ 平分 $\angle BAC$，$BD=2DC$。<br />
+（Ⅰ）求 $\frac{\sin B}{\sin C}$；<br />
+（Ⅱ）若 $\angle BAC = 60^\circ$，求 $\angle B$。</p>
+<p><strong>思路</strong>：<br />
+（Ⅰ）由 $AD$ 平分角和 $BD=2DC$，根据内角平分线定理得 $AB:AC = BD:DC = 2:1$，即 $AB=2AC$。再在 $\triangle ABC$ 中用正弦定理将边比转化为角的正弦比：$\frac{AB}{\sin C} = \frac{AC}{\sin B}$，变形即可求出 $\frac{\sin B}{\sin C}$。<br />
+（Ⅱ）已知 $\angle A=60^\circ$，且 $\frac{\sin B}{\sin C} = \frac{1}{2}$（由（Ⅰ）结果），又 $\sin C = \sin(180^\circ - A - B) = \sin(120^\circ - B)$，代入得关于 $B$ 的方程，结合三角形内角和及角度范围解出 $B$。</p>
+<p><strong>步骤</strong>：<br />
+（Ⅰ）<br />
+1. 因为 $AD$ 平分 $\angle BAC$，由内角平分线定理得 $\frac{AB}{AC} = \frac{BD}{DC}$。<br />
+2. 已知 $BD=2DC$，所以 $\frac{AB}{AC} = 2$，即 $AB = 2AC$。<br />
+3. 在 $\triangle ABC$ 中由正弦定理 $\frac{AB}{\sin C} = \frac{AC}{\sin B}$。<br />
+4. 代入 $AB=2AC$ 得 $\frac{2AC}{\sin C} = \frac{AC}{\sin B}$，消去 $AC$ 得 $\frac{2}{\sin C} = \frac{1}{\sin B}$。<br />
+5. 所以 $\frac{\sin B}{\sin C} = \frac{1}{2}$。  </p>
+<p>（Ⅱ）<br />
+1. 由（Ⅰ）知 $\sin B = \frac{1}{2} \sin C$。<br />
+2. 在 $\triangle ABC$ 中，$A+B+C=180^\circ$，又 $\angle A = 60^\circ$，所以 $C = 120^\circ - B$。<br />
+3. 则 $\sin C = \sin(120^\circ - B) = \sin 120^\circ \cos B - \cos 120^\circ \sin B = \frac{\sqrt{3}}{2}\cos B + \frac{1}{2}\sin B$。<br />
+4. 代入 $\sin B = \frac{1}{2} \left( \frac{\sqrt{3}}{2}\cos B + \frac{1}{2}\sin B \right)$，即 $\sin B = \frac{\sqrt{3}}{4}\cos B + \frac{1}{4}\sin B$。<br />
+5. 移项得 $\frac{3}{4}\sin B = \frac{\sqrt{3}}{4}\cos B$，两边乘4得 $3\sin B = \sqrt{3}\cos B$，所以 $\tan B = \frac{\sqrt{3}}{3}$。<br />
+6. 因为 $B$ 是三角形内角，且由 $\tan B = \frac{\sqrt{3}}{3}$ 得 $B = 30^\circ$（$0^\circ &lt; B &lt; 120^\circ$）。  </p>
+<p><strong>点评/变式</strong>：<br />
+- 本题完美展示了角平分线定理与正弦定理的“接力”：先用角平分线定理得边比，再用正弦定理将边比转化为角的正弦比，是经典套路。<br />
+- 第二问中构建关于 $B$ 的方程时，利用 $A+B+C=\pi$ 消去 $C$，是解三角形的基本操作，注意两角和差的正弦公式不要记错。<br />
+- 变式：若将条件改为 $AD$ 平分 $\angle BAC$ 且 $\frac{\sin B}{\sin C}=k$，则可反推 $BD:DC$；若加入边长数据，则可求三角形面积等，核心均是先确立边比关系。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-17.html">2015-文-17</a>（2015 · 中） 三角形中角平分线性质与分割线段比例计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1103-角平分线定理.html">角平分线定理</a></li>
+</ul>
+</div>
+</body>
+</html>

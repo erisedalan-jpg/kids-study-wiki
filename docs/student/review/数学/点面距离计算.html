@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点面距离计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>点面距离计算</h1><div class="review-mark" data-stem="点面距离计算"></div><div class="meta-card"><span><strong>考点</strong>点面距离计算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>点到平面的距离定义</strong>：从平面外一点引该平面的垂线，点与垂足间的线段长即为该点到平面的距离，它是空间点面间的最短距离。  </li>
+<li><strong>基本定理与性质</strong>：</li>
+<li>若两个平面垂直，则在一个平面内垂直于它们交线的直线必垂直于另一个平面（面面垂直  线面垂直）。</li>
+<li>过平面外一点有且仅有一条直线与该平面垂直。</li>
+<li><strong>常用求距方法</strong>：</li>
+<li><strong>直接法（垂线法）</strong>：过点作（或证）平面的垂线，找到垂足位置，通过解三角形求出垂线段长。<br />
+     适用条件：图形中易证线面垂直关系，或者存在与目标平面垂直的、包含该点的平面（面面垂直作交线的垂线）。</li>
+<li><strong>等体积法（换底法）</strong>：在三棱锥中，通过更换底面，利用体积相等建立关于所求距离（即高）的方程。<br />
+     核心公式：$V = \frac{1}{3}Sh$，则 $h = \dfrac{3V}{S}$。<br />
+     适用条件：三棱锥的体积和某一底面的面积易求，或可通过其它几何关系间接算得。</li>
+<li><strong>向量法</strong>（理科/新高考）：利用平面的法向量及点面距公式 $d = \dfrac{|\vec{PA} \cdot \vec{n}|}{|\vec{n}|}$。 </li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别与定策</strong><br />
+   分析点与目标平面的位置关系，观察是否存在过点的已知平面与目标平面垂直。  </li>
+<li>若存在，优先用 <strong>面面垂直性质</strong>：作交线的垂线即得点面距，转解直角三角形。  </li>
+<li>若不存在，考虑 <strong>等体积法</strong>：选取合适的三棱锥，保证体积和底面积易算。</li>
+<li><strong>面面垂直作垂线法步骤</strong><br />
+   (1) 证明一个包含该定点且与目标平面垂直的平面（常通过线面垂直推导）。<br />
+   (2) 找出两平面交线。<br />
+   (3) 在含点平面内，过点作交线的垂线段。<br />
+   (4) 证明该垂线段即为点到平面的距离（由面面垂直性质）。<br />
+   (5) 放入对应的平面三角形，利用已知边长和三角函数或勾股定理求长度。</li>
+<li><strong>等体积法步骤</strong><br />
+   (1) 构造以所求距离为高的三棱锥（通常顶点是目标点，底面在目标平面上）。<br />
+   (2) 选择另一组易求体积的底和高（或通过已知棱锥体积转化）。<br />
+   (3) 计算体积 $V$ 和新底面积 $S$。<br />
+   (4) 代入 $h = \dfrac{3V}{S}$ 解出所求距离。</li>
+<li><strong>检查关键垂直与数据</strong><br />
+   无论是哪种方法，都必须清晰论证线面、面面垂直关系，这是得分关键。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>遗漏垂直证明</strong>：直接默认某线段为垂线段而不进行严格的推理证明，导致步骤分丢失。<br />
+  凡是“作××⊥×于×”，紧跟着必须写明“因为…，所以该线段垂直于平面”。</li>
+<li><strong>面面垂直性质条件记反</strong>：必须是“两平面垂直，一个面内垂直于交线的直线垂直于另一个面”，容易忽略“垂直于交线”或“在其中一个面内”这两个条件。</li>
+<li><strong>体积代换时底面积或高算错</strong>：等体积法计算三角形面积（尤其斜三角形）时，底、高选配错误或忘记乘 $\frac12$；求体积时忘记乘以 $\frac13$。</li>
+<li><strong>误判高在平面内的位置</strong>：用等体积法求点面距时，高是从顶点向底面作的垂线段，其投影未必在底面三角形内部，但计算距离只需长度，不影响公式。</li>
+<li><strong>单位与数值遗漏</strong>：解三角形过程中弄混边长比例，如相似或勾股计算粗心导致最终距离错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2014·全国卷文科·第18题</h3>
+<p><strong>题目</strong><br />
+四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA\perp$ 平面 $ABCD$，$E$ 为 $PD$ 的中点。<br />
+（Ⅰ）证明：$PB\parallel$ 平面 $AEC$；<br />
+（Ⅱ）设 $AP=1$，$AD=\sqrt{3}$，三棱锥 $P-ABD$ 的体积 $V=\dfrac{\sqrt{3}}{4}$，求 $A$ 到平面 $PBC$ 的距离。  </p>
+<p><strong>思路</strong><br />
+第一问考线面平行，通过中位线构造平行四边形或线线平行。第二问求点 $A$ 到平面 $PBC$ 的距离。关键发现：由 $PA\perp$ 底面得 $PA\perp BC$，结合 $BC\perp AB$ 推出 $BC\perp$ 平面 $PAB$，于是有面面垂直：平面 $PBC\perp$ 平面 $PAB$，交线为 $PB$。立即作出 $AH\perp PB$ 于 $H$，则 $AH\perp$ 平面 $PBC$，$AH$ 长即为所求。利用给出的体积条件和已知边长求出 $AB$，再在 $\text{Rt}\triangle PAB$ 中由等面积法或比例求出 $AH$。  </p>
+<p><strong>步骤</strong><br />
+1. （Ⅰ）连接 $BD$ 交 $AC$ 于 $O$，连接 $EO$。矩形 $ABCD$ 中 $O$ 为 $BD$ 中点，又 $E$ 为 $PD$ 中点，故 $EO\parallel PB$。$EO\subset$ 平面 $AEC$，$PB\not\subset$ 平面 $AEC$，所以 $PB\parallel$ 平面 $AEC$。<br />
+2. （Ⅱ）由 $PA\perp$ 平面 $ABCD$，且 $ABCD$ 为矩形，得 $PA\perp AB$，$PA\perp AD$。<br />
+   $V_{P-ABD} = \frac13 S_{\triangle ABD} \cdot PA = \frac13 \left(\frac12 AB \cdot AD\right) \cdot AP$。<br />
+   代入 $AP=1$，$AD=\sqrt{3}$，$V=\frac{\sqrt{3}}{4}$：<br />
+   $\frac13 \cdot \frac12 AB \cdot \sqrt{3} \cdot 1 = \frac{\sqrt{3}}{4} \Rightarrow AB = \frac32$。<br />
+3. 证明面面垂直：$BC\perp AB$，$BC\perp PA$，$PA\cap AB = A$ $\Rightarrow BC\perp$ 平面 $PAB$。又 $BC\subset$ 平面 $PBC$，故平面 $PBC \perp$ 平面 $PAB$，交线为 $PB$。<br />
+   在平面 $PAB$ 内，过 $A$ 作 $AH\perp PB$ 于 $H$，则 $AH\perp$ 平面 $PBC$，即 $AH$ 为点 $A$ 到平面 $PBC$ 的距离。<br />
+4. 在 $\text{Rt}\triangle PAB$ 中，$PA=1$，$AB=\frac32$，$PB = \sqrt{PA^2+AB^2} = \frac{\sqrt{13}}{2}$。<br />
+   由等面积 $\frac12 PA\cdot AB = \frac12 PB\cdot AH$，得 $AH = \dfrac{PA\cdot AB}{PB} = \dfrac{1\times\frac32}{\frac{\sqrt{13}}{2}} = \dfrac{3}{\sqrt{13}} = \dfrac{3\sqrt{13}}{13}$。<br />
+   故 $A$ 到平面 $PBC$ 的距离为 $\dfrac{3\sqrt{13}}{13}$。  </p>
+<p><strong>点评与变式</strong><br />
+本题完美演示了“面面垂直作垂线法”的套路。要点是优先寻找过定点且与目标平面垂直的平面，本题中 $PA\perp$ 底面衍生出 $BC\perp$ 面 $PAB$，使平面 $PBC$ 与平面 $PAB$ 垂直暴露无遗。变式：若将问题改为求点 $D$ 到平面 $PBC$ 的距离，则可用等体积法 $V_{D-PBC}=V_{P-BCD}$，或者利用线面平行（$AD\parallel$ 平面 $PBC$）转化距离。二者结合可检验不同方法的优劣。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-18.html">2014-文-18</a>（2014 · 中） 证明线面平行及计算点到平面的距离，涉及四棱锥体积与距离求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">点面距离计算</a></li>
+</ul>
+</div>
+</body>
+</html>

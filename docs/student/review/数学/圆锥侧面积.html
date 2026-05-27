@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圆锥侧面积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>圆锥侧面积</h1><div class="review-mark" data-stem="圆锥侧面积"></div><div class="meta-card"><span><strong>考点</strong>圆锥侧面积</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：11</li>
+<li>真题数：3；年份跨度：2016–2023</li>
+<li>出现题位：填空16 选择6 选择9</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>圆锥侧面积公式</strong>：$S_{\text{侧}} = \pi r l$，其中 $r$ 为底面半径，$l$ 为母线长。</li>
+<li><strong>核心要素关系</strong>：轴截面（过顶点和底面直径的平面）为等腰三角形，母线 $l$、高 $h$、半径 $r$ 满足勾股定理 $l^2 = r^2 + h^2$。</li>
+<li><strong>圆锥体积公式</strong>：$V = \frac{1}{3}\pi r^2 h$。</li>
+<li><strong>相关角的定义</strong>：<ul>
+<li><strong>母线与底面所成角</strong>：指母线与它在底面上的投影（即底面半径）的夹角，通常位于轴截面中。</li>
+<li><strong>二面角</strong>：二面角的平面角是棱上一点分别在两个半平面内作垂直于棱的射线所成的角。在圆锥中构造二面角时，常需通过作辅助线找到该平面角。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>转化关键元素</strong>：将题干条件（如母线夹角、二面角、线面角）集中到圆锥的<strong>轴截面</strong>或<strong>相关截面三角形</strong>中，利用三角函数或勾股定理，求出母线长 $l$、高 $h$、底面半径 $r$ 中的未知量。</li>
+<li><strong>公式选择与应用</strong>：<ul>
+<li>求侧面积：明确需要 $r$ 和 $l$，直接代入 $S_{\text{侧}} = \pi r l$。</li>
+<li>求表面积：$S_{\text{表}} = S_{\text{侧}} + S_{\text{底}} = \pi r l + \pi r^2$。对于组合体，注意衔接面是否计入表面积。</li>
+<li>求体积：明确需要 $r$ 和 $h$，代入 $V = \frac{1}{3}\pi r^2 h$。</li>
+</ul>
+</li>
+<li><strong>分析几何关系求未知元素</strong>：<ul>
+<li>已知母线夹角及构成的三角形面积，通常利用 $S = \frac{1}{2}l_1 l_2 \sin\theta$（此处 $l_1=l_2=l$）解出母线长 $l$。</li>
+<li>已知线面角（如母线与底面成角），通常在轴截面中，该角对边为高 $h$，邻边为半径 $r$，斜边为母线 $l$。</li>
+<li>已知二面角，需准确找到其平面角（通常在一垂面内），再解直角三角形。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆侧面积与表面积</strong>：侧面积不含底面圆面积。组合体的表面积要注意接触面不计入。</li>
+<li><strong>母线长 $l$ 与高 $h$ 混淆</strong>：牢记母线是顶点到底面圆周上任意一点的线段，是斜线段，长度 $l = \sqrt{r^2+h^2} \ge h$。计算体积须用高，计算侧面积须用母线。</li>
+<li><strong>已知条件挖掘不全</strong>：如三视图中，圆锥母线长需要通过轴截面（等腰三角形）的一半（直角三角形）利用勾股定理计算，不能误将正视图中的腰长作为母线长代入公式。</li>
+<li><strong>截面面积计算错误</strong>：求解圆锥斜截面三角形面积时，须先确认其几何特征（如是否等腰），再选择合适公式底乘以高的一半，切勿乱代角度或边长。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>例1（2023·新课标Ⅱ·09）</h3>
+<ul>
+<li><strong>题目</strong>：已知圆锥 PO 底面直径 AB，且 $\angle APB=120^\circ$，$PA=2$。点 C 在底面圆周，二面角 $P-AC-O$ 为 $45^\circ$。判断相关量。</li>
+<li><strong>思路</strong>：由轴截面等腰三角形 $PAB$ 提供母线长 $l=2$ 及顶角，先解出高 $h$ 和半径 $r$，验证体积与侧面积。再根据二面角条件，构造平面角，求弦 $AC$ 长及截面 $\triangle PAC$ 面积。</li>
+<li><strong>步骤</strong>：<ul>
+<li><strong>求基本量</strong>：在轴截面 $Rt\triangle POA$ 中，$\angle APO = 60^\circ$，$PA=2$，则 $h=OP=PA\cos60^\circ=1$，$r=OA=PA\sin60^\circ=\sqrt{3}$。</li>
+<li><strong>验证A</strong>：体积 $V=\frac{1}{3}\pi r^2 h = \frac{1}{3}\pi \times 3 \times 1 = \pi$。A正确。</li>
+<li><strong>验证B</strong>：侧面积 $S_{\text{侧}}=\pi r l = \pi \times \sqrt{3} \times 2 = 2\sqrt{3}\pi$。B错误。</li>
+<li><strong>利用二面角求AC</strong>：取 $AC$ 中点 $D$，连 $OD, PD$。因 $AC \perp OD, AC \perp PD$，故 $\angle PDO$ 为二面角平面角，即 $\angle PDO=45^\circ$。在 $Rt\triangle POD$ 中，$OD = OP = 1$。在 $Rt\triangle AOD$ 中，$AD = \sqrt{OA^2 - OD^2} = \sqrt{3-1} = \sqrt{2}$。故 $AC=2\sqrt{2}$。C正确。</li>
+<li><strong>求 $\triangle PAC$ 面积</strong>：$PD = \sqrt{OP^2+OD^2} = \sqrt{2}$。$S_{\triangle PAC} = \frac{1}{2} AC \times PD = \frac{1}{2} \times 2\sqrt{2} \times \sqrt{2} = 2$。D错误。</li>
+</ul>
+</li>
+<li><strong>点评/变式</strong>：本题通过轴截面和典型截面综合考查圆锥的基本量与空间角。<strong>关键是将二面角转化为垂直关系，找到平面角所在的直角三角形</strong>。变式训练可尝试将二面角 $P-AC-O$ 改为 $\angle PCO$ 是二面角平面角，判断其合理性。</li>
+</ul>
+<h3>例2（2018·理·16）</h3>
+<ul>
+<li><strong>题目</strong>：圆锥顶点 S，母线 SA、SB 夹角的余弦值为 $\frac{7}{8}$，SA 与底面成 $45^\circ$ 角，且 $\triangle SAB$ 面积为 $5\sqrt{15}$。求圆锥侧面积。</li>
+<li><strong>思路</strong>：由 $\triangle SAB$ 的面积求出母线长 $l$。利用母线与底面所成的 $45^\circ$ 角，求出底面半径 $r$，最后代入侧面积公式。</li>
+<li><strong>步骤</strong>：<ul>
+<li><strong>求母线长 $l$</strong>：设母线 $SA=SB=l$。由夹角余弦值 $\frac{7}{8}$，得正弦值 $\sin\angle ASB = \sqrt{1-\left(\frac{7}{8}\right)^2} = \frac{\sqrt{15}}{8}$。又 $S_{\triangle SAB} = \frac{1}{2} l^2 \sin\angle ASB = \frac{1}{2} l^2 \cdot \frac{\sqrt{15}}{8} = 5\sqrt{15}$，解得 $l^2 = 80$，故 $l=4\sqrt{5}$。</li>
+<li><strong>求底面半径 $r$</strong>：母线与底面成 $45^\circ$ 角，在轴截面直角三角形中，半径 $r$ 是母线的射影，故 $r = l \cos 45^\circ = 4\sqrt{5} \times \frac{\sqrt{2}}{2} = 2\sqrt{10}$。</li>
+<li><strong>求侧面积</strong>：$S_{\text{侧}} = \pi r l = \pi \times 2\sqrt{10} \times 4\sqrt{5} = 40\sqrt{2}\pi$。</li>
+</ul>
+</li>
+<li><strong>点评/变式</strong>：此题特点是条件分散在<strong>轴截面</strong>（线面角）和<strong>任意截面</strong>（顶角三角形面积）中。<strong>解题的核心在于抓住母线长 $l$ 这一共同要素，将其作为桥梁</strong>。易错点在于混淆面积公式，以及由线面角求半径时错用正弦函数。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-09.html">2023-新课标Ⅱ-09</a>（2023 · 中） 考查圆锥的体积、侧面积计算及二面角的判断与应用。</li>
+<li><a href="../../exam/数学/2018-理-16.html">2018-理-16</a>（2018 · 中） 圆锥的侧面积计算，涉及母线夹角余弦值、线面角及截面面积条件求母线长和底面半径。</li>
+<li><a href="../../exam/数学/2016-理-06.html">2016-理-06</a>（2016 · 中） 根据三视图计算圆柱和圆锥组合体的表面积，需注意重合面不计入。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/783-圆锥侧面积.html">圆锥侧面积</a></li>
+</ul>
+</div>
+</body>
+</html>

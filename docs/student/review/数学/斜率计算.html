@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>斜率计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>斜率计算</h1><div class="review-mark" data-stem="斜率计算"></div><div class="meta-card"><span><strong>考点</strong>斜率计算</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择3</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>斜率定义</strong>：直线倾斜角 $\alpha$ 的正切值 $k=\tan\alpha\ (\alpha\neq \frac{\pi}{2})$；过两点 $P_1(x_1,y_1),P_2(x_2,y_2)$ 的直线斜率 $k=\frac{y_2-y_1}{x_2-x_1}\ (x_1\neq x_2)$。</li>
+<li><strong>导数与切线斜率</strong>：函数 $y=f(x)$ 在 $x=x_0$ 处的导数 $f'(x_0)$ 就是曲线在点 $(x_0,f(x_0))$ 处切线的斜率，即 $k=f'(x_0)$。</li>
+<li><strong>切线的点斜式</strong>：曲线 $y=f(x)$ 在点 $P(x_0,y_0)$（其中 $y_0=f(x_0)$）处的切线方程为 $y-y_0=f'(x_0)(x-x_0)$。</li>
+<li><strong>求导必备公式</strong>（基础）：</li>
+<li>$C'=0$，$(x^n)'=nx^{n-1}$，$(\sin x)'=\cos x$，$(\cos x)'=-\sin x$，$(e^x)'=e^x$，$(\ln x)'=\frac1x$。</li>
+<li>基本运算法则：$[u(x)\pm v(x)]'=u'\pm v'$，$[u(x)v(x)]'=u'v+uv'$，$\bigl[\frac{u(x)}{v(x)}\bigr]'=\frac{u'v-uv'}{v^2}\ (v\neq0)$。</li>
+<li><strong>适用条件</strong>：切点必须在曲线上，且函数在该点可导（光滑曲线）。若切点未知，通常需设切点坐标并借助斜率关系列方程求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先定位切点</strong>：确认题目是否直接给出切点。若给出，只需代入求导得斜率；若只给“过某点”的切线，需判断该点是否是切点——一般需设切点坐标 $(x_0,f(x_0))$。</li>
+<li><strong>求导并算斜率</strong>：对曲线解析式求导，得到导函数 $f'(x)$，再将切点横坐标 $x_0$ 代入，得切线斜率 $k=f'(x_0)$。</li>
+<li><strong>套用点斜式</strong>：将斜率 $k$ 与切点坐标 $(x_0,y_0)$ 代入 $y-y_0=k(x-x_0)$，化简为一般式或斜截式。</li>
+<li><strong>检验与参数反求</strong>（变式）：当曲线或直线含参数时，利用条件“切线经过某点”或“切线斜率等于某值”建立方程，反向求出参数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分式函数求导出错</strong>：分式求导分子是“子导母不导减去子不导母导”，分母为平方，极易漏掉分母平方或分子符号错误。建议先写出公式再逐一代入。</li>
+<li><strong>切点横坐标代入错误</strong>：在 $f'(x)$ 中代入的是切点的横坐标 $x_0$，而非其他点的坐标。尤其在“过某点”问题中，更容易误将过点坐标直接当作切点。</li>
+<li><strong>点斜式符号混淆</strong>：方程形式为 $y-y_0=k(x-x_0)$，注意是减去坐标，若误写成 $y+y_0=k(x+x_0)$ 或错用 $y-y_0=k(x+x_0)$ 则全题失分。</li>
+<li><strong>忽略切点在曲线上的隐性条件</strong>：当题目给出“在点 $(-1,-1)$ 处的切线”时，暗含该点在曲线上，即 $f(-1)=-1$。若需设切点时漏用此关系，会导致方程无法求解。</li>
+<li><strong>混淆“在点切”与“过点切”</strong>：“在点 $(a,b)$ 处的切线”则 $(a,b)$ 就是切点；“过点 $(a,b)$ 且与曲线相切的直线”则不保证 $(a,b)$ 是切点，必须先设切点。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题1】2010·全国卷·理T3（原题改编讲解）</h3>
+<p><strong>题目</strong>  曲线 $y=\frac{x}{x+2}$ 在点 $(-1,-1)$ 处的切线方程为（ ）<br />
+A．$y=2x+1$　B．$y=2x-1$　C．$y=-2x-3$　D．$y=-2x-2$</p>
+<p><strong>思路</strong><br />
+首先验证点 $(-1,-1)$ 是否在曲线上（代入满足），故该点即为切点。接着对分式函数求导得到导函数，将横坐标 $x=-1$ 代入导函数即得切线斜率，最后用点斜式写出切线方程并化为选项中的形式。</p>
+<p><strong>步骤</strong><br />
+1. 检验：当 $x=-1$ 时，$y=\frac{-1}{-1+2}=-1$，点 $(-1,-1)$ 在曲线上。<br />
+2. 求导：$y'=\frac{(x)'(x+2)-x(x+2)'}{(x+2)^2}=\frac{1\cdot(x+2)-x\cdot1}{(x+2)^2}=\frac{2}{(x+2)^2}$。<br />
+3. 计算斜率：$k=y'\big|_{x=-1}=\frac{2}{(-1+2)^2}=2$。<br />
+4. 切线方程：由点斜式得 $y-(-1)=2\bigl[x-(-1)\bigr]$，即 $y+1=2(x+1)$，化简得 $y=2x+1$。<br />
+故正确答案为 <strong>A</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 本题为基础题，考查商的导数公式与导数的几何意义，运算量小，是必保分的题目。考生应熟练分式求导的“子导母不导”口诀，并对“在点”型切线直接套用点斜式。<br />
+- <strong>变式</strong>：若曲线改为 $y=\frac{ax}{x+1}$ 在 $x=1$ 处的切线斜率为 $1$，求 $a$。同样先求导得 $y'=\frac{a}{(x+1)^2}$，代入 $x=1$ 得 $k=\frac{a}{4}=1$，解得 $a=4$。此类参数反求，关键仍是导数与斜率对应。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2010-理-03.html">2010-理-03</a>（2010 · 易） 求曲线在给定点的切线方程，考查导数几何意义和切线求法。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1215-斜率计算.html">斜率计算</a></li>
+</ul>
+</div>
+</body>
+</html>

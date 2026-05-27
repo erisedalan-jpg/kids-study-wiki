@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正方体外接球</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正方体外接球</h1><div class="review-mark" data-stem="正方体外接球"></div><div class="meta-card"><span><strong>考点</strong>正方体外接球</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正方体外接球</strong>：球心为正方体中心，即体对角线中点；球直径等于正方体体对角线长。</li>
+<li><strong>核心公式</strong>：设正方体棱长为 $a$，则体对角线长 $d=\sqrt{a^{2}+a^{2}+a^{2}}=\sqrt{3}a$。外接球半径 $R=\dfrac{d}{2}=\dfrac{\sqrt{3}}{2}a$。</li>
+<li><strong>表面积与体积</strong>：球表面积 $S=4\pi R^{2}$，体积 $V_{\text{球}}=\dfrac{4}{3}\pi R^{3}$。已知 $a$ 可直接代入。</li>
+<li><strong>适用条件</strong>：所有顶点都在球面上的正方体（即正方体是球的内接正方体），可直接使用上述关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求棱长</strong>：根据题设（体积、表面积、面对角线等）解出正方体棱长 $a$。</li>
+<li><strong>算体对角线</strong>：利用 $d=\sqrt{3}a$ 得到体对角线长（即外接球直径）。</li>
+<li><strong>得半径</strong>：$R=\dfrac{\sqrt{3}}{2}a$。</li>
+<li><strong>求目标量</strong>：代入球体表面积 $S=4\pi R^{2}$ 或体积 $V=\dfrac{4}{3}\pi R^{3}$。</li>
+<li>若反向设问（已知球相关量求正方体棱长），逆用上述关系即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆内切球与外接球</strong>：内切球直径等于棱长 $a$，半径 $R_{\text{内}}=\dfrac{a}{2}$；外接球半径 $R=\dfrac{\sqrt{3}}{2}a$。切勿看到“正方体与球”直接代 $R=\dfrac{a}{2}$。</li>
+<li><strong>体对角线算错</strong>：体对角线平方为 $a^{2}+a^{2}+a^{2}=3a^{2}$，开方得 $\sqrt{3}a$，不是 $\sqrt{2}a$（那是面对角线）。</li>
+<li><strong>公式代错</strong>：球表面积 $4\pi R^{2}$，误记成 $\pi R^{2}$ 或 $4\pi R^{3}$/体积公式混用。</li>
+<li><strong>开方运算</strong>：由体积求棱长时注意立方根，如体积为 $8$，棱长为 $\sqrt[3]{8}=2$，不是平方根。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2016·文·04）<br />
+体积为 $8$ 的正方体的顶点都在同一球面上，则该球面的表面积为（   ）<br />
+<strong>思路</strong><br />
+已知正方体体积 → 求棱长 → 外接球半径与棱长的固定比例关系 → 套球表面积公式。<br />
+<strong>步骤</strong><br />
+1. 由体积 $V=a^{3}=8$，得棱长 $a=2$。<br />
+2. 正方体体对角线（外接球直径） $d=\sqrt{3}a=2\sqrt{3}$。<br />
+3. 外接球半径 $R=\dfrac{d}{2}=\sqrt{3}$。<br />
+4. 球表面积 $S=4\pi R^{2}=4\pi \times (\sqrt{3})^{2}=12\pi$。<br />
+<strong>点评/变式</strong><br />
+- 本题直接利用正方体的体对角线即外接球直径这一基本事实，无需作图找球心。<br />
+- 变式：若已知外接球表面积为 $12\pi$，求正方体体积，逆推即可：$R=\sqrt{3}$，$a=\dfrac{2R}{\sqrt{3}}=2$，$V=8$。<br />
+- 易错警示：本题若误用内切球（半径 $1$），会得表面积 $4\pi$，务必区分“顶点在球面”与“面与球相切”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-04.html">2016-文-04</a>（2016 · 易） 根据正方体体积求棱长，再通过体对角线得出外接球半径，计算球的表面积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正方体外接球</a></li>
+</ul>
+</div>
+</body>
+</html>

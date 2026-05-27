@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>焦点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>焦点</h1><div class="review-mark" data-stem="焦点"></div><div class="meta-card"><span><strong>考点</strong>焦点</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>4</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：0</li>
+<li>真题数：4；年份跨度：2010–2018</li>
+<li>出现题位：解答20 选择9 选择11 选择12</li>
+<li>难度分布：中4</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>焦点</strong>是圆锥曲线定义与几何性质的核心载体。椭圆、双曲线、抛物线均依赖焦点建立统一的内在联系。</p>
+<ul>
+<li>
+<p><strong>定义关联</strong><br />
+  椭圆：$|PF_1|+|PF_2|=2a$，$2a&gt;|F_1F_2|=2c$。<br />
+  双曲线：$||PF_1|-|PF_2||=2a$，$2a&lt;|F_1F_2|=2c$。<br />
+  抛物线：$|PF|=d_{P\text{-准线}}$，焦点到准线的距离为 $p&gt;0$。</p>
+</li>
+<li>
+<p><strong>基本参数与位置</strong><br />
+  椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\,(a&gt;b&gt;0)$：焦点 $(\pm c,0)$，$c^2=a^2-b^2$，离心率 $e=\frac{c}{a}\in(0,1)$。<br />
+  双曲线 $\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$：焦点 $(\pm c,0)$，$c^2=a^2+b^2$，$e=\frac{c}{a}&gt;1$。<br />
+  抛物线 $y^2=2px$：焦点 $(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$，$e=1$。</p>
+</li>
+<li>
+<p><strong>焦点弦与通径</strong><br />
+  过焦点且垂直于对称轴的弦称为通径。椭圆通径长 $\frac{2b^2}{a}$，双曲线通径长 $\frac{2b^2}{a}$，抛物线通径长 $2p$。通径是同一圆锥曲线中最短的焦点弦。</p>
+</li>
+<li>
+<p><strong>焦点三角形（椭圆与双曲线）</strong><br />
+  椭圆上点 $P$，$\angle F_1PF_2=\theta$，则面积 $S_{\triangle PF_1F_2}=b^2\tan\frac{\theta}{2}$。<br />
+  双曲线上点 $P$，面积 $S_{\triangle PF_1F_2}=b^2\cot\frac{\theta}{2}$（常结合定义与余弦定理求解）。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定义优先法</strong><br />
+   遇到曲线上的点到焦点的连线，优先利用定义将焦半径转化为到另一焦点或准线的距离，尤其适用于求轨迹方程、离心率、最值问题。</li>
+<li><strong>焦点三角形策略</strong>  </li>
+<li>已知焦点三角形内角或边的关系，紧扣椭圆 $|PF_1|+|PF_2|=2a$ 或双曲线 $||PF_1|-|PF_2||=2a$。  </li>
+<li>结合正弦定理、余弦定理与 $|F_1F_2|=2c$ 建立方程，直接求出 $a,c$ 比例或相关长度。</li>
+<li><strong>通径与几何量直求</strong><br />
+   涉及“过焦点且垂直对称轴的弦”，直接写出通径长度，避免设点联立。抛物线中 $2p=|AB|$，快速得 $p$，进而求面积、距离。</li>
+<li><strong>中点弦——“点差法”</strong><br />
+   已知焦点所在曲线上的弦及中点，设交点为 $A(x_1,y_1),B(x_2,y_2)$，代入曲线方程作差，利用中点公式及斜率 $k=\frac{y_1-y_2}{x_1-x_2}$ 求出参数关系。特别适合结合焦点坐标求 $a,b$。</li>
+<li><strong>坐标化与离心率方程</strong><br />
+   用 $a,b,c$ 表示焦点坐标、曲线上特殊点（如垂直时的点 $(c,\frac{b^2}{a})$），代入方程或利用向量垂直等条件建立关于 $a,b,c$ 的齐次方程，解出 $e$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>$a,b,c$ 关系混淆</strong>：椭圆 $a^2=b^2+c^2$，双曲线 $c^2=a^2+b^2$，抛物线 $p$ 不依赖 $a,b$。解题时先判断曲线类型。</li>
+<li><strong>焦点位置判断失误</strong>：标准方程中，焦点总是在对称轴上，不是看分母大小，而是看含 $x^2$ 和 $y^2$ 项哪个下为 $a^2$（椭圆）或被减（双曲线）。例如 $y^2=2px$ 焦点在 $x$ 轴。</li>
+<li><strong>通径长度记错</strong>：椭圆、双曲线为 $\frac{2b^2}{a}$，抛物线为 $2p$，切忌与准线方程、焦准距混淆。</li>
+<li><strong>焦点三角形面积公式误用</strong>：椭圆用 $\tan$，双曲线用 $\cot$，且公式中的 $\theta$ 是焦点对顶角 $\angle F_1PF_2$，不是其他角。</li>
+<li><strong>忽视定义限制</strong>：椭圆要求 $|PF_1|+|PF_2|=2a\ge |F_1F_2|$，双曲线要求差的绝对值 $2a&lt;|F_1F_2|$，未验证会导致方程多解。</li>
+<li><strong>抛物线焦半径公式误用</strong>：只有当抛物线标准方程为 $y^2=2px$ 时，焦半径 $|PF|=x_P+\frac{p}{2}$，方向或标准方程变化时须调整符号。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2018 全国文 11）</h3>
+<p>已知 $F_1,F_2$ 是椭圆 $C$ 的两个焦点，$P$ 是 $C$ 上一点，若 $PF_1\perp PF_2$，且 $\angle PF_2F_1=60^\circ$，求 $C$ 的离心率。</p>
+<p><strong>思路</strong><br />
+抓住 $\triangle PF_1F_2$ 为直角三角形，结合角度与焦点定义直接求出 $|PF_1|,|PF_2|$，再利用椭圆定义建立 $a,c$ 关系。</p>
+<p><strong>步骤</strong><br />
+设 $|F_1F_2|=2c$。在 $\text{Rt}\triangle PF_1F_2$ 中，$\angle PF_2F_1=60^\circ$，$\angle F_1PF_2=90^\circ$，则 $\angle PF_1F_2=30^\circ$。<br />
+由 $30^\circ$ 所对直角边：$|PF_2|=\frac12|F_1F_2|=c$。<br />
+由勾股或正切：$|PF_1|=\sqrt{3}c$。<br />
+根据椭圆定义：$|PF_1|+|PF_2| = (\sqrt{3}+1)c = 2a$。<br />
+因此离心率 $e=\frac{c}{a}= \frac{2}{\sqrt{3}+1} = \sqrt{3}-1$。</p>
+<p><strong>点评/变式</strong><br />
+焦点三角形与离心率结合是高频考点，解题核心是“先借直角三角形/余弦定理解边长，再用定义转 $a,c$”。若条件改为已知 $\angle F_1PF_2$，则可用余弦定理与定义联立。</p>
+<hr />
+<h3><strong>题目</strong>（2011 全国文 9）</h3>
+<p>已知直线 $l$ 过抛物线 $C$ 的焦点，且与 $C$ 的对称轴垂直。$l$ 与 $C$ 交于 $A,B$ 两点，$|AB|=12$，$P$ 为 $C$ 的准线上一点，则 $\triangle ABP$ 的面积为？</p>
+<p><strong>思路</strong><br />
+由“过焦点且垂直于对称轴”立即识别 $AB$ 为通径，其长度即 $2p$，直接求出 $p$；底 $AB$ 已知，高为 $P$ 到 $AB$ 的距离（即焦点到准线的距离 $p$），得面积。</p>
+<p><strong>步骤</strong><br />
+设抛物线方程为 $y^2=2px\;(p&gt;0)$，焦点 $F(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$。<br />
+直线 $l$ 垂直于</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2018-文-11.html">2018-文-11</a>（2018 · 中） 根据椭圆焦点和垂直条件建立方程求解离心率。</li>
+<li><a href="../../exam/数学/2014-理-20.html">2014-理-20</a>（2014 · 中） 椭圆中给定焦点和垂直条件，求直线与椭圆的另一交点相关问题。</li>
+<li><a href="../../exam/数学/2011-文-09.html">2011-文-09</a>（2011 · 中） 本题通过抛物线的几何性质求三角形面积，涉及焦点、准线及通径长度。</li>
+<li><a href="../../exam/数学/2010-理-12.html">2010-理-12</a>（2010 · 中） 已知焦点及中点弦条件求双曲线方程</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/037-焦点焦距.html">焦点</a></li>
+</ul>
+</div>
+</body>
+</html>

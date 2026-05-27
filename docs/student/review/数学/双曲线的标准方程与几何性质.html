@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线的标准方程与几何性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>双曲线的标准方程与几何性质</h1><div class="review-mark" data-stem="双曲线的标准方程与几何性质"></div><div class="meta-card"><span><strong>考点</strong>双曲线的标准方程与几何性质</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：解答21</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li>
+<p><strong>标准方程与基本量</strong><br />
+   双曲线焦点在 $x$ 轴上时：$\displaystyle{\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\;(a&gt;0,b&gt;0)}$<br />
+   焦点在 $y$ 轴上时：$\displaystyle{\frac{y^2}{a^2}-\frac{x^2}{b^2}=1\;(a&gt;0,b&gt;0)}$<br />
+   其中 $c$ 为半焦距，满足 $c^2=a^2+b^2$，离心率 $e=\dfrac{c}{a}&gt;1$。<br />
+   由焦点坐标可得 $c$，由 $e=c/a$ 得 $a$，再由 $b^2=c^2-a^2$ 得 $b$。</p>
+</li>
+<li>
+<p><strong>几何性质</strong>  </p>
+</li>
+<li>顶点：$(\pm a,0)$ 或 $(0,\pm a)$；焦点：$(\pm c,0)$ 或 $(0,\pm c)$。  </li>
+<li>渐近线：若焦点在 $x$ 轴，则 $y=\pm\dfrac{b}{a}x$；若焦点在 $y$ 轴，则 $y=\pm\dfrac{a}{b}x$。  </li>
+<li>
+<p>双曲线上一点到两焦点的距离之差的绝对值为 $2a$。</p>
+</li>
+<li>
+<p><strong>直线与双曲线的位置关系</strong><br />
+   联立直线与双曲线方程，消元后得到一元二次方程，利用判别式 $\Delta$ 判断交点个数：</p>
+</li>
+<li>$\Delta&gt;0$ 有两个交点（可能在同一支或两支）；  </li>
+<li>$\Delta=0$ 相切；  </li>
+<li>$\Delta&lt;0$ 无公共点。<br />
+   相交时，常结合韦达定理处理中点、弦长、定点、定值等问题。当直线过 $x$ 轴上定点时，常设横截式 $x=my+t$ 以简化运算（注意该设法的适用范围）。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>已知焦点和离心率求标准方程</strong><br />
+   ① 由焦点坐标写 $c$；② 由 $e=\dfrac{c}{a}$ 求 $a$；③ 由 $b^2=c^2-a^2$ 求 $b^2$；④ 根据焦点位置写出标准方程。</p>
+</li>
+<li>
+<p><strong>直线与双曲线相交问题的通用步骤（以过 $x$ 轴定点为例）</strong><br />
+   ① 根据条件设直线方程，如过 $(-4,0)$ 且与左支交于两点，可设 $x=my-4$，并利用渐近线斜率初步限定 $m$ 的范围（如本题中 $-\dfrac{1}{2}&lt;m&lt;\dfrac{1}{2}$）；<br />
+   ② 联立直线与双曲线方程，消去 $x$（或 $y$）得到关于 $y$（或 $x$）的一元二次方程；<br />
+   ③ 写出韦达定理：$y_1+y_2$ 与 $y_1y_2$（或 $x_1+x_2$ 与 $x_1x_2$）；<br />
+   ④ 利用给定的几何条件（如直线交点、定点、定值等），将目标表达式用坐标表示，并代入韦达定理化简，消去变量，得到定值或定点坐标。</p>
+</li>
+<li>
+<p><strong>证明点在定直线上的核心思路</strong><br />
+   设出相关交点坐标，分别写出两直线方程，联立解出交点坐标（通常保留一个变量），借助韦达定理将交点横（纵）坐标化为常数值，即可证得该点在垂直于坐标轴的定直线上（如 $x=-1$）。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>基本量关系混淆</strong><br />
+   双曲线 $c^2=a^2+b^2$，椭圆 $c^2=a^2-b^2$，两者切勿记混。  </li>
+<li><strong>离心率公式推导</strong><br />
+   由 $e=\dfrac{c}{a}$ 求 $a$ 时要注意 $e&gt;1$，避免分子分母颠倒。  </li>
+<li><strong>直线设法忽略斜率讨论</strong><br />
+   设 $y=kx+t$ 需讨论斜率不存在；设 $x=my+t$ 无法表示斜率为 $0$ 的直线。应根据题意选择恰当形式，并注意这种设法的局限性。如本题过 $(-4,0)$ 与左支交于两点，斜率为 $0$ 时与左支仅有一个交点，故可安全使用 $x=my-4$。  </li>
+<li><strong>联立后忽视隐含条件</strong><br />
+   仅用 $\Delta&gt;0$ 不够，若要求交于左支或右支，还应考虑坐标的和与积的符号。但若仅证明定直线（无关具体参数范围），适当利用韦达定理即可。  </li>
+<li><strong>代数化简出错</strong><br />
+   两直线联立求交点时常包含较复杂的分式，代入韦达定理后需细心整理，避免因符号或通分错误导致结果偏差。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2023·新课标Ⅱ·21）</h3>
+<p>已知双曲线 $C$ 的中心为坐标原点，左焦点为 $(-2\sqrt{5},0)$，离心率为 $\sqrt{5}$．<br />
+(1) 求 $C$ 的方程；<br />
+(2) 记 $C$ 的左、右顶点分别为 $A_1$，$A_2$，过点 $(-4,0)$ 的直线与 $C$ 的左支交于 $M$，$N$ 两点，$M$ 在第二象限，直线 $MA_1$ 与 $NA_2$ 交于点 $P$．证明：点 $P$ 在定直线上．</p>
+<h4><strong>思路</strong></h4>
+<p>(1) 由焦点坐标得 $c$，利用离心率求 $a$，进而求 $b$，写出方程。<br />
+(2) 设直线 $MN: x=my-4$，与双曲线联立，得韦达定理。写出直线 $MA_1$ 与 $NA_2$ 的方程，联立求交点 $P$ 的横坐标，借助韦达定理将其化简为定值 $-1$，从而证明 $P$ 在定直线 $x=-1$ 上。</p>
+<h4><strong>步骤</strong></h4>
+<p><strong>(1)</strong> 设双曲线方程为 $\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\;(a&gt;0,b&gt;0)$.<br />
+由左焦点 $(-2\sqrt{5},0)$ 知 $c=2\sqrt{5}$，又 $e=\dfrac{c}{a}=\sqrt{5}$，得 $a=2$.<br />
+于是 $b^2=c^2-a^2=20-4=16$，所以 $C$ 的方程为 $\dfrac{x^2}{4}-\dfrac{y^2}{16}=1$.</p>
+<p><strong>(2)</strong> 由 (1) 知 $A_1(-2,0),\,A_2(2,0)$. 设 $M(x_1,y_1),\,N(x_2,y_2)$，直线 $MN$ 的斜率不为 $0$，故可设 $MN:x=my-4$，且由渐近线 $y=\pm2x$ 可得 $-\dfrac{1}{2}&lt;m&lt;\dfrac{1}{2}$.<br />
+联立 $\begin{cases}x=my-4\\4x^2-y^2=16\end{cases}$，消去 $x$ 得<br />
+$(4m^2-1)y^2-32my+48=0$.<br />
+由韦达定理： $y_1+y_2=\dfrac{32m}{4m^2-1},\quad y_1y_2=\dfrac{48}{4m^2-1}$.<br />
+直线 $MA_1$ 方程：$y=\dfrac{y_1}{x_1+2}(x+2)$；直线 $NA_2$ 方程：$y=\dfrac{y_2}{x_2-2}(x-2)$.<br />
+设 $P(x,y)$，联立两直线方程，消去 $y$ 得<br />
+$\dfrac{y_1}{x_1+2}(x+2)=\dfrac{y_2}{x_2-2}(x-2)$.<br />
+代入 $x_1=my_1-4,\,x_2=my_2-4$，得<br />
+$\dfrac{y_1}{my_1-2}(x+2)=\dfrac{y_2}{my_2-6}(x-2)$.<br />
+交叉相乘并整理，将 $(x+2)$ 与 $(x-2)$ 视为系数，解出 $x$ 的关键是分离比例：<br />
+$\dfrac{x+2}{x-2}=\dfrac{y_2(my_1-2)}{y_1(my_2-6)}=\dfrac{my_1y_2-2y_2}{my_1y_2-6y_1}$.<br />
+注意到需要 $y_1$ 与 $y_2$ 的对称关系，利用韦达定理整体代换。<br />
+构造 $\dfrac{y_2}{y_1}=\dfrac{y_2^2}{y_1y_2}$ 并不方便，我们直接将右式分子分母同时考虑变形：<br />
+由 $y_1+y_2$ 和 $y_1y_2$ 可得 $my_1y_2=\dfrac{48m}{4m^2-1}$，$6y_1+2y_2$ 不易直接表示。<br />
+更简洁的做法：由韦达定理的特征，可以求出 $\frac{y_1}{y_2}$ 的关系或直接求交点横坐标。<br />
+将原比例式改写为 $\dfrac{x+2}{x-2}=\dfrac{y_2(my_1-2)}{y_1(my_2-6)}$，令其等于某个常数。<br />
+通过代入 $m$ 的具体表达式？实际上，利用韦达定理我们可以整体求出该比值。<br />
+已知 $y_1+y_2=\frac{32m}{4m^2-1},\,y_1y_2=\frac{48}{4m^2-1}$，设 $\lambda=\frac{y_1}{y_2}$，则 $\lambda+\frac{1}{\lambda}=\frac{(y_1+y_2)^2}{y_1y_2}-2$，整理可发现该比值有固定关系。<br />
+但更直接的：我们整理右式，目标证 $\dfrac{x+2}{x-2}$ 为定值。<br />
+$\dfrac{y_2(my_1-2)}{y_1(my_2-6)} = \dfrac{my_1y_2-2y_2}{my_1y_2-6y_1}$，把 $y_2$ 用 $y_1+y_2$ 和 $y_1$ 表达不唯一，可尝试分子分母同时除以 $y_1y_2$：<br />
+$\dfrac{m - \frac{2}{y_1}}{m - \frac{6}{y_2}}$，不显然。<br />
+我们换一种标准解法：将 $MA_1$ 与 $NA_2$ 的方程分别写为<br />
+$y=\frac{y_1}{x_1+2}(x+2),\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2023-新课标Ⅱ-21.html">2023-新课标Ⅱ-21</a>（2023 · 中） 本题主要考查双曲线标准方程的求解以及利用直线与双曲线联立，结合韦达定理证明动直线交点在定直线上。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/733-双曲线的标准方程与几何性质.html">双曲线的标准方程与几何性质</a></li>
+</ul>
+</div>
+</body>
+</html>

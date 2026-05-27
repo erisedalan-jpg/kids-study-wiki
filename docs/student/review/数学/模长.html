@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>模长</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>模长</h1><div class="review-mark" data-stem="模长"></div><div class="meta-card"><span><strong>考点</strong>模长</span><span><strong>权重</strong>3</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>复数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：复数</li>
+<li>权重 weight：3</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择1</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>复数模长定义</strong>：复数 $z = a + bi$（$a, b \in \mathbb{R}$，$i$ 为虚数单位）的模长 $|z|$ 表示复平面上对应点 $Z(a,b)$ 到原点的距离。</li>
+<li><strong>计算公式</strong>：$$|z| = |a+bi| = \sqrt{a^2 + b^2}$$</li>
+<li><strong>本质联系</strong>：$|z| = \sqrt{z \cdot \overline{z}}$，其中 $\overline{z}=a-bi$ 为共轭复数。</li>
+<li><strong>适用条件</strong>：对任意复数 $a+bi$ 直接适用，实数可视为虚部为零的特殊复数。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别形式</strong>：将复数化为标准代数形式 $a+bi$，若题干给出运算形如 $z = c + di$（$c,d$ 可能含负号或运算），先整理实部与虚部。</li>
+<li><strong>提取实虚</strong>：准确读出实部 $a$ 与虚部 $b$（含符号），特别注意虚部是 $i$ 的系数，不包含 $i$。</li>
+<li><strong>代入公式</strong>：直接计算 $|z| = \sqrt{a^2 + b^2}$，注意平方运算会消除符号，最终结果为非负实数。</li>
+<li><strong>化简结果</strong>：若平方和为完全平方数则开尽，否则保留根号或化为最简根式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忘记模长公式中的平方再开方，误写成 $|z| = a + b$ 或 $|z| = \sqrt{a+b}$。</li>
+<li>忽略虚部的符号：$|a-bi| = \sqrt{a^2+(-b)^2} = \sqrt{a^2+b^2}$，模长与虚部符号无关，但计算时必须用原系数平方。</li>
+<li>将模长与共轭复数混淆：模长是实数，共轭是复数；求 $|z|$ 不能写成 $a-bi$。</li>
+<li>根式化简不规范：例如 $\sqrt{2}$ 保留即可，不用近似，若题目为选择题要核对选项的根号形式。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024·新课标Ⅱ·1）已知 $z = -1 - i$，则 $|z| =$<br />
+A. $0$　B. $1$　C. $\sqrt{2}$　D. $2$</p>
+<p><strong>思路</strong><br />
+复数已给出标准代数形式，实部 $a=-1$，虚部 $b=-1$，直接使用模长公式 $\sqrt{a^2+b^2}$ 求值。</p>
+<p><strong>步骤</strong><br />
+由 $z=-1-i$，得 $a=-1, b=-1$。<br />
+$|z| = \sqrt{(-1)^2 + (-1)^2} = \sqrt{1+1} = \sqrt{2}$。<br />
+对应选项 C。</p>
+<p><strong>点评/变式</strong><br />
+- 此题属于复数模长最基础的直接计算，属于送分题，必须秒杀。<br />
+- 注意符号陷阱：即使写成 $z = -1 - i$，平方后符号消失，模长恒为正实数。<br />
+- 变式：若 $z = 2 - i$，则 $|z| = \sqrt{5}$；若 $z = \frac{1}{1+i}$，先化简为 $\frac{1-i}{2} = \frac12 - \frac12 i$，再求模长为 $\frac{\sqrt{2}}{2}$，核心步骤仍是先化为 $a+bi$ 形式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-01.html">2024-新课标Ⅱ-01</a>（2024 · 易） 该题考查复数的模的计算，直接代入模长公式求解。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/803-复数模长.html">模长</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>递推关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>递推关系</h1><div class="review-mark" data-stem="递推关系"></div><div class="meta-card"><span><strong>考点</strong>递推关系</span><span><strong>权重</strong>18</span><span><strong>真题数</strong>5</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：18</li>
+<li>真题数：5；年份跨度：2012–2024</li>
+<li>出现题位：解答19 选择4 选择12</li>
+<li>难度分布：中3 难2</li>
+</ul>
+<h2>知识精要</h2>
+<p>递推关系是定义在整数集（或半直线）上的函数方程，通过前项与后项的恒等式给出序列的生成规则。高考中常见如下核心模型：</p>
+<ol>
+<li><strong>一阶线性递推</strong><br />
+   $a_{n+1}=pa_n+q$  </li>
+<li>若 $p=1$，则为等差数列，$a_n=a_1+(n-1)q$。  </li>
+<li>
+<p>若 $p \neq 1$，用不动点 $x=px+q \Rightarrow x=\frac{q}{1-p}$，构造等比数列 ${a_n-x}$，公比 $p$。</p>
+</li>
+<li>
+<p><strong>累加与累乘型</strong>  </p>
+</li>
+<li>$a_{n+1}=a_n+f(n)$ $\Rightarrow$ 累加：$a_n=a_1+\sum_{k=1}^{n-1}f(k)$。  </li>
+<li>
+<p>$a_{n+1}=a_n \cdot g(n)$ $\Rightarrow$ 累乘：$a_n=a_1 \prod_{k=1}^{n-1}g(k)$（$g(k)\neq 0$）。</p>
+</li>
+<li>
+<p><strong>分式递推</strong><br />
+   $a_{n+1}=\dfrac{aa_n+b}{ca_n+d}$（$c \neq 0$，且不与 $ad-bc$ 退化）。<br />
+   作不动点方程 $x=\dfrac{ax+b}{cx+d}$：  </p>
+</li>
+<li>有两个不等实根 $\alpha,\beta$，则 $\dfrac{a_n-\alpha}{a_n-\beta}$ 为等比数列；  </li>
+<li>
+<p>有重根 $\alpha$，则 $\dfrac{1}{a_n-\alpha}$ 为等差数列。</p>
+</li>
+<li>
+<p><strong>交替符号递推</strong><br />
+   含 $(-1)^n$ 的递推（如 $a_{n+1}+(-1)^n a_n = f(n)$），通常分奇偶项建立两个子列递推，或利用相邻两项相加相减消去交替符号。</p>
+</li>
+<li>
+<p><strong>函数平移递推</strong><br />
+   $f(x+T)=k f(x)$（如 $T=1$, $k&gt;0$），可逐段平移区间，将函数值表为初始区间上的倍数，常用于求参数范围或值域。</p>
+</li>
+<li>
+<p><strong>点列递推（解析几何背景）</strong><br />
+   通过几何变换（对称、旋转、交轨）建立点坐标的递推，可直接用韦达定理、中点公式等转化为数列问题。</p>
+</li>
+</ol>
+<p><strong>适用条件</strong>：上述方法均要求初始项有意义，构造等比/等差时需验证首项非零。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题定类型</strong>：看清递推是数列递推、函数递推，还是几何点列递推；识别系数是常数还是与 $n$ 有关。</li>
+<li><strong>一阶线性递推</strong>：直接化为 $a_{n+1}-\lambda = p(a_n-\lambda)$，其中 $\lambda$ 为不动点。</li>
+<li><strong>累加/累乘</strong>：将递推式改写为 $a_{n+1}-a_n=f(n)$ 或 $\dfrac{a_{n+1}}{a_n}=g(n)$，注意累加时下标从 $1$ 到 $n-1$，求和项数为 $n-1$。</li>
+<li><strong>消去交替项</strong>：遇到 $a_{n+1}+(-1)^n a_n = f(n)$，写出 $a_{n+2}+(-1)^{n+1} a_{n+1} = f(n+1)$，与上式组合消去 $(-1)^n$，得到仅含 $a_{n+2}, a_n$ 的二阶递推。</li>
+<li><strong>分式递推不动点法</strong>：解 $x=\dfrac{ax+b}{cx+d}$，根据根的情况构造新数列。若仅有一个不动点，则取倒数；若两个，则构造差比。</li>
+<li><strong>函数平移递推</strong>：由 $f(x+1)=2f(x)$ 可得 $f(x+n)=2^n f(x)$，再将已知区间 $[0,1]$ 的表达式向左平移，分段写出解析式，求最值或解不等式。</li>
+<li><strong>连分数递推比大小</strong>：利用各项为正且部分分母有下界，比较连分数深度不同时的大小，常通过整体递推 $b_n = f(b_{n-1})$ 的单调性判断。</li>
+<li><strong>几何点列</strong>：设点坐标，写出直线与曲线方程，联立后用韦达定理求出另一交点坐标，再利用对称或旋转得到下一个点，化简得出 $x_n$（或 $y_n$）的递推公式，继而求通项或极限。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>项数统计错误</strong>：累加时误将 $a_n = a_1 + \sum_{k=1}^n f(k)$，忽略了应加到 $n-1$。  </li>
+<li><strong>忽视初始条件</strong>：构造等比或等差数列后，验证新数列的首项是否为 $0$；若首项为 $0$ 将导致新数列为常数列 $0$，方法失效。  </li>
+<li><strong>分奇偶未彻底</strong>：交替符号递推中，只写出一步消去操作却未分 $n$ 为奇偶验证下标范围，导致通项分段错误。  </li>
+<li><strong>函数递推区间平移错位</strong>：由 $f(x+1)=2f(x)$ 得 $f(x)=2f(x-1)$，向左平移时注意 $x+n$ 的值域与初始区间匹配，避免定义域错误。  </li>
+<li><strong>参数范围遗漏临界点</strong>：如 “$f(x)\geq -\frac{8}{9}$ 恒成立” 求 $m$ 时，需保证每个分段的最低点均满足条件，且最后区间含 $x=m$ 时取等验证。  </li>
+<li><strong>连分数比较忽略单调性方向</strong>：若 $b_n$ 由 $1+\frac{1}{a_1+\cdots}$ 定义，尤其 $a_k \in \mathbb{N}^*$，易错误地认为 $b_{n}$ 单调递增，实际奇偶项呈交错递减。  </li>
+<li><strong>几何递推忽略特殊性</strong>：在点列构造中，未注意点所在支（如左支）的限制可能导致坐标符号错误；韦达定理应用时未将已知交点代入简化运算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目1</strong> (2024·新课标Ⅱ·19)</h3>
+<p>已知双曲线 $C: x^2-y^2=m\ (m&gt;0)$，点 $P_1(5,4)$ 在 $C$ 上，$k$ 为常数，$0&lt;k&lt;1$。按如下方式构造点列 $P_n\ (n=2,3,\dots)$：过 $P_{n-1}$ 作斜率为 $k$ 的直线与 $C$ 的左支交于点 $Q_{n-1}$，令 $P_n$ 为 $Q_{n-1}$ 关于 $y$ 轴的对称点。求点 $P_n$ 的坐标或证明某种性质。</p>
+<p><strong>思路</strong>：由 $P_1$ 得 $m=9$，双曲线 $x^2-y^2=9$。设 $P_{n-1}(x_{n-1},y_{n-1})$，写出直线方程并与 $C$ 联立，利用韦达定理求得 $Q_{n-1}$ 坐标，再对称得到 $P_n$ 坐标，导出 ${x_n},{y_n}$ 的递推关系，进而求解通项或证明相关结论。</p>
+<p><strong>步骤</strong>：<br />
+1. 显然 $5^2-4^2=9 \Rightarrow m=9$，$C: x^2-y^2=9$。<br />
+2. 设 $P_{n-1}(x_{n-1}, y_{n-1})$，直线 $l: y-y_{n-1}=k(x-x_{n-1})$。<br />
+3. 联立 $\begin{cases} y=k x + (y_{n-1}-k x_{n-1}) \ x^2-y^2=9 \end{cases}$，消 $y$ 整理得关于 $x$ 的一元二次方程。由已知 $P_{n-1}$ 在 $C$ 上，故 $x_{n-1}$ 为该方程的一个根。<br />
+4. 设另一根为 $x_Q$，由韦达定理 $x_{n-1}+x_Q = \frac{2k(y_{n-1}-k x_{n-1})}{1-k^2}$，利用 $x_{n-1}^2-y_{n-1}^2=9$ 化简可得 $x_Q = \frac{(1+k^2)x_{n-1} - 2k y_{n-1}}{1-k^2}$ （具体推导略）。<br />
+5. 则 $Q_{n-1}(x_Q,\ y_Q)$ 在左支，由对称得 $P_n(-x_Q,\ y_Q)$，于是<br />
+   $$x_n = -x_Q = \frac{2k y_{n-1} - (1+k^2)x_{n-1}}{1-k^2}, \quad y_n = y_Q = k x_Q + (y_{n-1}-k x_{n-1})$$<br />
+   结合两点均满足双曲线方程，可进一步消去 $y_n$ 得到仅含</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-19.html">2024-新课标Ⅱ-19</a>（2024 · 中） 本题通过双曲线上已知点与斜率递推构造对称点列，考查直线与双曲线位置关系及几何变换。</li>
+<li><a href="../../exam/数学/2022-理-04.html">2022-理-04</a>（2022 · 中） 本题通过数列递推关系比较各项大小，考查逻辑推理与特值验证能力。</li>
+<li><a href="../../exam/数学/2019-理-12.html">2019-理-12</a>（2019 · 难） 函数f满足f(x+1)=2f(x)且x∈(0,1]时f(x)=x(x-1)，对任意x∈(-∞,m]均有f(x)≥-8/9，求m的取值范围。</li>
+<li><a href="../../exam/数学/2019-理-19.html">2019-理-19</a>（2019 · 难） 已知数列{a_n}和{b_n}满足递推关系，证明{a_n+b_n}是等比数列、{a_n-b_n}是等差数列，并求通项公式。</li>
+<li><a href="../../exam/数学/2012-文-12.html">2012-文-12</a>（2012 · 中） 求解由递推关系给出的数列前60项和，利用奇偶项分组转化为等差数列求和。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/383-数列递推公式.html">递推关系</a></li>
+</ul>
+</div>
+</body>
+</html>

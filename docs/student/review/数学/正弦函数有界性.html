@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数有界性</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数有界性</h1><div class="review-mark" data-stem="正弦函数有界性"></div><div class="meta-card"><span><strong>考点</strong>正弦函数有界性</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：6</li>
+<li>真题数：2；年份跨度：2017–2021</li>
+<li>出现题位：填空13 选择3</li>
+<li>难度分布：易2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>正弦函数的有界性</strong>：对任意 $x\in\mathbb{R}$，恒有 $-1\le \sin x \le 1$，即 $|\sin x|\le 1$。它是求解三角函数值域、最值，以及判断相关命题真假的根本依据。</li>
+<li><strong>存在性/全称性辨析</strong>：由于 $\sin x$ 可以取到 $-1$ 和 $1$（如 $\sin\frac{\pi}{2}=1$，$\sin\left(-\frac{\pi}{2}\right)=-1$），所以</li>
+<li>全称命题 $\forall x\in\mathbb{R},\ \sin x&lt;1$ 为假命题（反例 $x=\frac{\pi}{2}$）；</li>
+<li>特称命题 $\exists x\in\mathbb{R},\ \sin x&lt;1$ 为真命题（可举 $x=0$）。</li>
+<li><strong>辅助角公式与最值</strong>：$f(x)=a\sin x+b\cos x$ 可化简为 $\sqrt{a^2+b^2}\sin(x+\varphi)$（或余弦形式），其中 $\tan\varphi=\frac{b}{a}$（注意 $a,b$ 的符号与位置）。借助正弦有界性，得 $f(x)<em _min="\min">{\max}=\sqrt{a^2+b^2}$，$f(x)</em>$。若含有垂直平移 $+k$，则最值相应加 $k$。}=-\sqrt{a^2+b^2</li>
+<li><strong>指数函数 $e^{|x|}$ 的性质</strong>：$|x|\ge 0$，结合指数函数 $y=e^u$ 的单调递增性，恒有 $e^{|x|}\ge e^0=1$，该全称命题为真。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>正弦有界性判命题</strong>：遇到含 $\sin x$ 的不等关系，立即写出范围 $[-1,1]$。判定全称：找反例（通常取 $\pm\frac{\pi}{2}$）；判定特称：找正例（通常取 $0$ 或 $\pi$）。  </li>
+<li><strong>一次正余弦线性组合求最值</strong>：统一化为 $A\sin(x+\varphi)+k$ 或 $A\cos(x+\varphi)+k$。步骤：  </li>
+<li>提取 $\sqrt{a^2+b^2}$；  </li>
+<li>对应配凑和角公式；  </li>
+<li>利用 $|\sin(\text{整体})|\le 1$ 直接写出最大值 $|A|+k$，最小值 $-|A|+k$。  </li>
+<li><strong>复合命题真假推断</strong>：先逐一判定各原子命题真假，再套用“且真全真，或假全假，非反真假”的规则，得出最终结论。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆 $e^{|x|}$ 与 $|e^x|$</strong>：$|e^x|=e^x&gt;0$，当 $x&lt;0$ 时 $e^x&lt;1$，此时命题 $\forall x,\ |e^x|\ge 1$ 为假。而 $e^{|x|}$ 的指数永远非负，故恒 $\ge 1$。务必看清指数位置。</li>
+<li><strong>误将特称当全称，或反之</strong>：$\sin x&lt;1$ 与 $\sin x\le 1$ 差别巨大。$\sin x\le 1$ 是全称真命题，$\sin x&lt;1$ 只有特称真。审题时圈出量词 $\forall$ 与 $\exists$。</li>
+<li><strong>辅助角公式中系数张冠李戴</strong>：$a\sin x+b\cos x$ 化为 $\sqrt{a^2+b^2}\sin(x+\varphi)$ 时，$\sin(x+\varphi)$ 展开为 $\sin x\cos\varphi+\cos x\sin\varphi$，因此 $\cos\varphi=\frac{a}{\sqrt{a^2+b^2}},\ \sin\varphi=\frac{b}{\sqrt{a^2+b^2}}$，$\tan\varphi=\frac{b}{a}$。切忌搞反。同时，最值仅由振幅决定，与辅助角 $\varphi$ 无关，还需留意原式是否自带负号。</li>
+<li><strong>忽视定义域</strong>：求最值时，若给定 $x\in D$ 的区间，则需结合正弦图像在区间内的单调性求解，不能盲目套用振幅。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021·全国甲卷）：已知命题 $p: \exists x\in\mathbb{R},\ \sin x&lt;1$；命题 $q: \forall x\in\mathbb{R},\ e^{|x|}\ge 1$，则下列命题中为真命题的是（ ）<br />
+A. $p\land q$　B. $\lnot p\land q$　C. $p\land\lnot q$　D. $\lnot p\lor q$</p>
+<p><strong>思路</strong>：分别判定 $p$、$q$ 的真假，再用真值表挑选真命题。$p$ 依赖正弦有界性及实例，$q$ 依赖绝对值非负与指数单调性。</p>
+<p><strong>步骤</strong>：<br />
+- 对于 $p$：由 $|\sin x|\le 1$ 知，存在 $x=0$ 使 $\sin 0=0&lt;1$，故 $\exists x\in\mathbb{R},\ \sin x&lt;1$ 成立，$p$ 真。<br />
+- 对于 $q$：由于 $|x|\ge 0$，且指数函数 $y=e^u$ 递增，$e^{|x|}\ge e^0=1$ 恒成立，故 $q$ 真。<br />
+- 结合逻辑联结词：$p$ 真且 $q$ 真，故 $p\land q$ 真；$\lnot p$ 假，$\lnot q$ 假，其他选项均含假命题。<br />
+故选 <strong>A</strong>。</p>
+<p><strong>点评/变式</strong>：本题易错点是将 $p$ 误认为全称命题而判假。注意区别“存在 $&lt;1$”与“任意 $\le 1$”。变式：若 $p$ 改为“$\forall x\in\mathbb{R},\ \sin x\le 1$”，则 $p$ 仍真，$p\land q$ 仍为真；若 $q$ 改为 $|e^x|\ge 1$，则 $q$ 为假（反例 $x=-1$），应选 $p\land\lnot q$。</p>
+<hr />
+<p><strong>题目</strong>（2017·全国Ⅰ卷）：函数 $f(x)=2\cos x+\sin x$ 的最大值为______。</p>
+<p><strong>思路</strong>：$a\cos x+b\sin x$ 型，通过辅助角公式合成为单一正弦函数，利用有界性得最大值。</p>
+<p><strong>步骤</strong>：<br />
+- 确定系数：$a=2$（余弦系数），$b=1$（正弦系数），计算模长 $\sqrt{2^2+1^2}=\sqrt{5}$。<br />
+- 提取模长并配凑：<br />
+  $f(x)=\sqrt{5}\left(\frac{2}{\sqrt{5}}\cos x+\frac{1}{\sqrt{5}}\sin x\right)$。<br />
+  令 $\cos\varphi=\frac{1}{\sqrt{5}},\ \sin\varphi=\frac{2}{\sqrt{5}}$（即 $\tan\varphi=2$），原式化为 $\sqrt{5}(\sin x\cos\varphi+\cos x\sin\varphi)=\sqrt{5}\sin(x+\varphi)$。<br />
+- 由 $|\sin(x+\varphi)|\le 1$ 得 $f(x)\le \sqrt{5}$，当 $\sin(x+\varphi)=1$ 时取等。<br />
+故最大值为 $\sqrt{5}$。</p>
+<p><strong>点评/变式</strong>：辅助</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-理-03.html">2021-理-03</a>（2021 · 易） 判断正弦与指数函数相关命题的真假，并用逻辑联结词确定复合命题的真值。</li>
+<li><a href="../../exam/数学/2017-文-13.html">2017-文-13</a>（2017 · 易） 利用辅助角公式将函数化为正弦型函数，进而求其最大值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/960-正弦函数有界性.html">正弦函数有界性</a></li>
+</ul>
+</div>
+</body>
+</html>

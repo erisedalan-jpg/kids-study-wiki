@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>样本相关系数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>样本相关系数</h1><div class="review-mark" data-stem="样本相关系数"></div><div class="meta-card"><span><strong>考点</strong>样本相关系数</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>概率统计</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：概率统计</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>样本相关系数</strong> $r$ 用来定量描述两个变量之间<strong>线性相关</strong>的强弱与方向。</li>
+<li><strong>公式</strong>（常用等价形式）：
+  $$r=\frac{\sum\limits_{i=1}^{n}(x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum\limits_{i=1}^{n}(x_i-\bar x)^2 \sum\limits_{i=1}^{n}(y_i-\bar y)^2}}
+  =\frac{\sum x_i y_i - n\bar x \bar y}{\sqrt{\left(\sum x_i^2 - n\bar x^2\right)\left(\sum y_i^2 - n\bar y^2\right)}}$$
+  其中 $\bar x=\frac{1}{n}\sum x_i$，$\bar y=\frac{1}{n}\sum y_i$。</li>
+<li><strong>取值范围</strong>：$-1 \le r \le 1$。</li>
+<li>$r&gt;0$ 正相关，$r&lt;0$ 负相关。</li>
+<li>$|r|$ 越接近 $1$，线性相关越强；$|r|$ 越接近 $0$，线性相关越弱。</li>
+<li><strong>适用条件</strong>：成对数据 $(x_i,y_i)\ (i=1,2,\dots,n)$ 大致呈直线趋势（散点图无明显曲线特征）。</li>
+<li><strong>相关性与回归的区别</strong>：相关系数只刻画相关程度和方向；若需预测，可进一步建立<strong>一元线性回归模型</strong>。当题目说“近似成正比”时，模型为 $y=kx$（过原点），可用样本均值比值 $\hat k=\dfrac{\bar y}{\bar x}$ 估计 $k$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>求均值</strong>：由所给数据的总和直接计算 $\bar x = \frac{\sum x_i}{n}$，$\bar y = \frac{\sum y_i}{n}$。  </li>
+<li><strong>凑齐公式所需统计量</strong>：  </li>
+<li>通常题目会给出 $\sum x_i^2$、$\sum y_i^2$、$\sum x_i y_i$ 或离差平方和。  </li>
+<li>若给的是原始平方和，优先用变形公式：<br />
+     $\sum (x_i-\bar x)^2 = \sum x_i^2 - n\bar x^2$，<br />
+     $\sum (y_i-\bar y)^2 = \sum y_i^2 - n\bar y^2$，<br />
+     $\sum (x_i-\bar x)(y_i-\bar y) = \sum x_i y_i - n\bar x \bar y$。  </li>
+<li><strong>代入公式</strong>求 $r$：先计算分子、分母，再相除。注意题目要求的精确度（如精确到 $0.01$），计算过程中多保留几位小数。  </li>
+<li><strong>利用比例关系进行估计</strong>（若题设“成正比”）：  </li>
+<li>用样本均值比 $\hat k = \dfrac{\bar y}{\bar x}$ 作为比例系数的估计值。  </li>
+<li>总体总量的估计值 $= \hat k \times$ 总体的 $x$ 总量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分母平方和混淆</strong>：分子是乘积离差和，分母是各自离差平方和的平方根，切忌漏掉根号或错用标准差。  </li>
+<li><strong>漏减均值贡献</strong>：直接使用 $\sum x_i^2$、$\sum y_i^2$ 计算离差平方和时，忘记减去 $n\bar x^2$ 与 $n\bar y^2$，导致分母偏大。  </li>
+<li><strong>精度与开方</strong>：计算 $\sqrt{(\cdots)}$ 后应注意小数位数，四舍五入到指定精度。题目常给出参考值如 $\sqrt{1.896}\approx 1.377$，需要灵活移位（如 $\sqrt{0.0001896}=0.01377$）。  </li>
+<li><strong>正比≠有截距回归</strong>：如果题设“材积量与横截面积近似成正比”，模型是 $y=kx$，不是 $y=a+bx$。此时比例系数用 $\bar y/\bar x$ 或 $\sum y/\sum x$ 均可，二者在只知总和时等价。  </li>
+<li><strong>单位与数量级</strong>：求总材积量时注意横截面积总和的单位是否与样本一致，防止数量级错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022·理·19 改编）</h3>
+<p>为了估计林区某种树木的总材积量，随机选取 $10$ 棵，测得根部横截面积 $x$（$\text{m}^2$）与材积量 $y$（$\text{m}^3$）数据，并给出 $\sum x_i=0.6$，$\sum y_i=3.9$，$\sum x_i^2=0.038$，$\sum y_i^2=1.6158$，$\sum x_i y_i=0.2474$。<br />
+（1）估计平均一棵的根部横截面积与平均材积量；<br />
+（2）求根部横截面积与材积量的样本相关系数（精确到 $0.01$）；<br />
+（3）已知该林区所有这种树木根部横截面积总和为 $186\ \text{m}^2$，且材积量与根部横截面积近似成正比，估计总材积量。<br />
+（附：相关系数公式 $r=\frac{\sum (x_i-\bar x)(y_i-\bar y)}{\sqrt{\sum (x_i-\bar x)^2\sum (y_i-\bar y)^2}}$，$\sqrt{1.896}\approx 1.377$。）</p>
+<h3><strong>思路</strong></h3>
+<ul>
+<li>用总量直接求均值。  </li>
+<li>将所给平方和、乘积和转化为离差形式代入公式，借助附注开方。  </li>
+<li>第三问成正比的模型为 $y=kx$，用样本均值比估计 $k$，再乘以总面积。</li>
+</ul>
+<h3><strong>步骤</strong></h3>
+<p><strong>（1）</strong><br />
+$\bar x = \dfrac{0.6}{10}=0.06\ \text{m}^2$，$\bar y = \dfrac{3.9}{10}=0.39\ \text{m}^3$。  </p>
+<p><strong>（2）</strong><br />
+$\displaystyle\sum (x_i-\bar x)(y_i-\bar y)=0.2474-10\times0.06\times0.39=0.0134$，<br />
+$\displaystyle\sum (x_i-\bar x)^2=0.038-10\times0.06^2=0.002$，<br />
+$\displaystyle\sum (y_i-\bar y)^2=1.6158-10\times0.39^2=0.0948$。<br />
+分母 $\sqrt{0.002\times0.0948}=\sqrt{0.0001896}=\sqrt{1.896\times10^{-4}}=1.377\times10^{-2}=0.01377$。<br />
+因此 $r=\dfrac{0.0134}{0.01377}\approx0.9732\approx0.97$。  </p>
+<p><strong>（3）</strong><br />
+由成正比，比例系数 $\hat k=\dfrac{\bar y}{\bar x}=\dfrac{0.39}{0.06}=6.5$。<br />
+总材积量估计值 $=\hat k \times 186 = 1209\ \text{m}^3$。</p>
+<h3><strong>点评与变式</strong></h3>
+<ul>
+<li>相关系数计算务必先求均值，再转换离差，熟练变形公式可省去逐项作差，提高正确率。  </li>
+<li>第三问注意模型假定“成正比”而非线性回归（不需要截距），若题设改为“具有线性相关关系”，则需用回归方程 $\hat y=\hat b x+\hat a$ 估计，并注意此时 $\hat b=r\cdot\frac{s_y}{s_x}$，截距 $\hat a=\bar y-\hat b\bar x$。  </li>
+<li>变式：若题目给出 $\sum (x_i-\bar x)^2$ 等离差平方和，则可省去变形，直接代入。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-理-19.html">2022-理-19</a>（2022 · 中） 该题考查利用样本数据估计总体均值、计算样本相关系数以及利用比例关系估计总材积量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/930-样本相关系数.html">样本相关系数</a></li>
+</ul>
+</div>
+</body>
+</html>

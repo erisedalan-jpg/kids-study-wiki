@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正弦函数的极值点</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正弦函数的极值点</h1><div class="review-mark" data-stem="正弦函数的极值点"></div><div class="meta-card"><span><strong>考点</strong>正弦函数的极值点</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>正弦函数的极值点：对于 $f(x)=A\sin(\omega x+\varphi)$（$A\neq0$，$\omega\neq0$），令 $\omega x+\varphi=\frac{\pi}{2}+k\pi\,(k\in\mathbb Z)$，解得 $x=\frac{\frac{\pi}{2}+k\pi-\varphi}{\omega}$，这些点均为极值点，对应的函数值为 $f(x)=\pm A$。  </li>
+<li>极值点的横坐标具有周期性分布，相邻两个极值点之间的距离为 $\frac{\pi}{|\omega|}$，且函数图像在极值点处关于垂直于 $x$ 轴的直线对称。  </li>
+<li>若问题涉及“存在”某极值点满足给定不等式，常选取使条件最苛刻的极值点（如距离原点最近的极值点）进行验证或列式，从而将存在性问题转化为解关于参数的不等式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写出极值点通式</strong>：由 $\omega x+\varphi=\frac{\pi}{2}+k\pi$ 解出 $x_0$ 关于整数 $k$ 的表达式，并明确 $f(x_0)=\pm A$。  </li>
+<li><strong>列出约束不等式</strong>：将 $x_0$ 和 $f(x_0)$ 代入题设不等关系（如 $x_0^2+[f(x_0)]^2&lt;m^2$），得到含参数 $m$ 与整数 $k$ 的不等式。  </li>
+<li><strong>紧化条件</strong>：由于“存在”某个 $k$ 成立即可，为使得条件最易满足（或寻找 $m$ 的临界值），通常取 $|x_0|$ 最小的极值点（取 $k=0$ 或 $k=-1$，视表达式而定）代入，得到关于 $m$ 的最强限制。  </li>
+<li><strong>解参数不等式</strong>：消去 $k$，整理成关于 $m$（或 $m^2$）的不等式，注意等价变形（平方非负、分母不为零等），求出参数取值范围。</li>
+<li><strong>作答</strong>：将解集写成区间或集合形式，注意参数可能正负对称。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>将 $f(x_0)=\pm A$ 误写为只取正极值 $A$，忽略平方后无区别，但列式时需留意是否影响后续。  </li>
+<li>在寻找最小的 $|x_0|$ 时，只考虑 $k=0$，忘记 $k=-1$ 也给出同样绝对值，需确认 $|x_0|_{\min}$ 的表达式是否含有绝对值以正确建立不等式。  </li>
+<li>解不等式时跳步：如由 $x_0^2+A^2&lt;m^2$ 和 $x_0=\frac{m}{2}$ 代入得 $\frac{m^2}{4}+A^2<m^2$，移项时忘记 $\frac{3m^2}{4}>A^2$，从而错误得到 $m^2$ 的范围。  </li>
+<li>忽略参数 $m$ 在分母或根号内时对符号的要求（题目隐含 $m\neq0$，但最终解集不含 $0$）。  </li>
+<li>将“存在”问题错当成“恒成立”问题，导致选错用于代入的极值点（例如取了最大 $|x_0|$ 而非最小）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知函数 $f(x)=\sqrt{3}\sin\frac{\pi x}{m}$（$m\neq0$），若存在 $f(x)$ 的极值点 $x_0$ 满足 $x_0^2+[f(x_0)]^2&lt;m^2$，则 $m$ 的取值范围是（ ）<br />
+A. $(-\infty,-6)\cup(6,+\infty)$　B. $(-\infty,-4)\cup(4,+\infty)$　C. $(-\infty,-2)\cup(2,+\infty)$　D. $(-\infty,-1)\cup(1,+\infty)$</p>
+<p><strong>思路</strong><br />
+1. 求出 $f(x)$ 的极值点 $x_0$ 的表达式，得到 $|x_0|$ 的最小值。<br />
+2. 利用 $f(x_0)=\pm\sqrt{3}$，代入不等式 $x_0^2+3&lt;m^2$。<br />
+3. 因为“存在”一个极值点成立，只需用距离原点最近的极值点（最小 $|x_0|$）去检验，此时对 $m$ 的限制最松，若该点满足不等式，则存在性成立；由此解出 $m$ 的范围。</p>
+<p><strong>步骤</strong><br />
+1. 令 $\frac{\pi x}{m}=\frac{\pi}{2}+k\pi\;(k\in\mathbb Z)\Rightarrow x_0=m\left(\frac12+k\right)$，此时 $f(x_0)=\pm\sqrt{3}$。<br />
+2. 距离 $0$ 最近的极值点为 $k=0$ 或 $k=-1$，均有 $|x_0|=\frac{|m|}{2}$。<br />
+3. 要求存在 $x_0$ 满足 $x_0^2+3&lt;m^2$，取 $|x_0|=\frac{|m|}{2}$ 代入：<br />
+   $\left(\frac{m}{2}\right)^2+3&lt;m^2$（可平方消去绝对值），得 $\frac{m^2}{4}+3&lt;m^2$。<br />
+4. 整理：$3&lt;\frac{3m^2}{4}\Rightarrow m^2&gt;4\Rightarrow |m|&gt;2$，即 $m&gt;2$ 或 $m&lt;-2$。<br />
+5. 对照选项，选C。</p>
+<p><strong>点评/变式</strong><br />
+- 此题关键是把“存在”转化为取最小 $|x_0|$，避免逐一讨论 $k$。若条件改为“对所有极值点恒成立”，则应取 $|x_0|$ 最大的情形，通常不存在上界。<br />
+- 变式：将 $f(x)$ 改为 $A\sin\frac{\pi x}{m}$，条件 $x_0^2+A^2<m^2$，同理可得 $m^2>\frac{4A^2}{3}$，当 $A=\sqrt{3}$ 时即为真题。<br />
+- 注意 $m$ 出现在分母，解出的范围自动排除 $m=0$，但结论中 $|m|&gt;2$ 已包含。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-理-12.html">2014-理-12</a>（2014 · 中） 本题通过正弦函数极值点构造不等式，求参数 m 的取值范围。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正弦函数的极值点</a></li>
+</ul>
+</div>
+</body>
+</html>

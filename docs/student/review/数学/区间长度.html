@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>区间长度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>区间长度</h1><div class="review-mark" data-stem="区间长度"></div><div class="meta-card"><span><strong>考点</strong>区间长度</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>其他</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择7</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>几何概型定义</strong>：若随机试验的可能结果无限多且每个结果发生的可能性相等，通常借助几何度量（长度、面积、体积）来定义概率，称为几何概型。</li>
+<li><strong>核心公式</strong>：$P(A) = \frac{\mu(A)}{\mu(\Omega)}$，其中 $\mu$ 表示对应区域的几何度量。</li>
+<li><strong>区间长度概率模型</strong>：在一维区间内等可能取点，概率等于事件对应子区间的长度与总区间长度之比，即 $P = \frac{L_{\text{事件}}}{L_{\text{总}}}$。</li>
+<li><strong>适用条件</strong>：试验结果无限且等可能，概率与位置无关，仅与几何度量占比有关。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别模型</strong>：题干中出现“在区间……随机取数”等描述，立即锁定为一维几何概型（长度型）。</li>
+<li><strong>确定总长度</strong>：根据给定区间端点计算总长度 $L_{\text{总}}$。</li>
+<li><strong>确定事件长度</strong>：根据事件条件（如“取到的数小于某值”）确定对应子区间的长度 $L_{\text{事件}}$。</li>
+<li><strong>套用公式</strong>：概率 $P = \frac{L_{\text{事件}}}{L_{\text{总}}}$，计算结果后约分为最简分数。</li>
+<li><strong>作答验证</strong>：检查概率值是否在 $0$ 和 $1$ 之间，核对区间端点是否考虑开闭（一般不影响概率）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略区间长度计算</strong>：将区间端点误作长度直接代入公式，例如把 $(0,\frac12)$ 的总长度误认为是 $\frac12 - 0$ 但计算错误。</li>
+<li><strong>分子分母颠倒</strong>：将“总长度”作为分子导致概率 $&gt;1$。</li>
+<li><strong>开闭区间混淆（不影响概率）</strong>：开区间或闭区间的单点概率为 $0$，因此是否包含端点不影响连续型区间长度概率的计算结果。</li>
+<li><strong>数轴单位误读</strong>：如将 $\frac13$ 理解为在总区间为 $\frac12$ 中的绝对坐标，未正确折算长度。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2021-文-07</h3>
+<p><strong>题目</strong>：在区间 $(0, \frac12)$ 随机取 $1$ 个数，求取到的数小于 $\frac13$ 的概率。</p>
+<p><strong>思路</strong>：识别为几何概型，总区间长度 $L_{\text{总}} = \frac12$，事件“小于 $\frac13$”对应子区间 $(0, \frac13)$，长度 $L_{\text{事件}} = \frac13$，概率为两者之比。</p>
+<p><strong>步骤</strong>：
+- 总长度：$L_{\text{总}} = \frac12 - 0 = \frac12$。
+- 事件长度：$L_{\text{事件}} = \frac13$（在区间 $(0, \frac12)$ 内，$\frac13 &lt; \frac12$ 成立，因此完整包含子区间）。
+- 概率计算：$P = \frac{\frac13}{\frac12} = \frac13 \times \frac21 = \frac23$。
+- 对照选项，选 $\frac23$。</p>
+<p><strong>点评/变式</strong>：此题极简，但易错点在于看到 $\frac12$ 和 $\frac13$ 直接相减或相乘。变式可将总区间改为 $(0,1)$ 或事件改为“大于某个数”，或引入分段区间，解题步骤完全一致，只需准确求出子区间长度。注意当事件子区间超出总区间范围时，应取交集长度。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-07.html">2021-文-07</a>（2021 · 易） 该题考查在给定区间内随机取数，求事件“小于某值”的几何概型概率计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">区间长度</a></li>
+</ul>
+</div>
+</body>
+</html>

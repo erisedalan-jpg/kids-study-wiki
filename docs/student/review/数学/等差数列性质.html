@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>等差数列性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>等差数列性质</h1><div class="review-mark" data-stem="等差数列性质"></div><div class="meta-card"><span><strong>考点</strong>等差数列性质</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：11</li>
+<li>真题数：6；年份跨度：2013–2017</li>
+<li>出现题位：填空15 填空16 解答17 选择5</li>
+<li>难度分布：中4 易1 难1</li>
+</ul>
+<h2>知识精要</h2>
+<p>等差数列是高考核心考点，以下要点需精准掌握。</p>
+<ul>
+<li><strong>定义</strong>：$a_{n+1} - a_n = d$（$d$ 为常数，$n \in \mathbb{N}^*$）。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 + (n-1)d$。</li>
+<li>可推广为 $a_n = a_m + (n-m)d$。</li>
+<li><strong>前 $n$ 项和公式</strong>：
+  $$S_n = \frac{n(a_1+a_n)}{2} = na_1 + \frac{n(n-1)}{2}d$$
+  $S_n$ 在公差 $d \ne 0$ 时是关于 $n$ 的二次函数（常数项为 $0$）。</li>
+<li><strong>核心性质</strong>：</li>
+<li><strong>等差中项</strong>：$2a_n = a_{n-1} + a_{n+1}$（$n \ge 2$）。更一般地，若 $m+n = p+q$，则 $a_m + a_n = a_p + a_q$。</li>
+<li><strong>奇偶项和性质</strong>：$S_{2n-1} = (2n-1)a_n$（用中间项表示）；在含 $2n$ 项的等差数列中，$S_{\text{偶}} - S_{\text{奇}} = nd$，$\dfrac{S_{\text{偶}}}{S_{\text{奇}}} = \dfrac{a_{n+1}}{a_n}$。</li>
+<li>片段和性质：$S_n, S_{2n}-S_n, S_{3n}-S_{2n}$ 仍成等差数列（公差为 $n^2 d$）。</li>
+<li><strong>判定与条件</strong>：</li>
+<li>定义法；等差中项法；通项为一次型 $a_n = pn+q$；前 $n$ 项和为无常数项的二次型 $S_n = An^2 + Bn$。</li>
+<li><strong>与其它知识的综合</strong>：结合等比中项、取整函数、对数运算、利用导数求最值等。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>从历年真题可提炼出以下通法：</p>
+<ol>
+<li><strong>基本量法</strong>：设出首项 $a_1$ 和公差 $d$，利用条件列方程组求解。适合给出若干项或和的具体关系时使用。</li>
+<li><strong>性质巧用简化法</strong>：当条件涉及下标和相等或奇数项和时，优先利用 $a_m + a_n = a_p + a_q$ 或 $S_{2n-1} = (2n-1)a_n$ 直接得到中间项，避免解方程组。</li>
+<li><strong>化成函数处理最值</strong>：求 $S_n$ 或 $nS_n$ 的最值，写出 $S_n$ 关于 $n$ 的二次函数（或 $nS_n$ 为三次型），利用二次函数单调性、对称轴（考虑 $n$ 为正整数取附近值）或求导解决。</li>
+<li><strong>裂项相消求和</strong>：若 $S_n$ 为等差数列的前 $n$ 项和，求 $\sum \frac{1}{S_k}$ 时，将 $\frac{1}{S_n}$ 裂成两项差（如 $\frac{2}{n(n+1)} = 2(\frac{1}{n} - \frac{1}{n+1})$）即可抵消。</li>
+<li><strong>新定义分段处理法</strong>：遇到 $b_n = [a_n]$（取整函数）或 $b_n = [\lg a_n]$ 等，先求出通项 $a_n$，再按照取整规则分段确定 $b_n$ 的取值，然后分段求和（常需找规律）。</li>
+<li><strong>等比中项转化法</strong>：等差数列中某些项成等比数列，利用 $(a_{k+m})^2 = a_k \cdot a_{k+2m}$ 建立方程，结合公差求解。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>混淆公式与下标</strong>：$a_n$ 和 $S_n$ 公式中公差系数记错（如 $S_n = na_1 + \frac{n(n+1)}{2}d$ 错写为 $\frac{n(n-1)}{2}d$）；误用 $S_{2n-1} = (2n-1)a_{n}$ 时，中间项 $a_n$ 下标算错。</li>
+<li><strong>忽略 $n$ 的正整数约束</strong>：用二次函数求 $S_n$ 最值，对称轴为小数时未比较相邻整数对应的函数值，直接取整导致错误（如 2013 年理 16）。</li>
+<li><strong>裂项时系数漏乘</strong>：裂 $\frac{1}{S_n}$ 时，若 $S_n = \frac{n(n+k)}{2}$ 型，提取系数容易出错，需用待定系数法验证。</li>
+<li><strong>新定义取整边界不清</strong>：由 $a_n$ 到 $[a_n]$ 或 $[\lg a_n]$ 分段时，未严格按 $[x]$ 定义确定每段的起止项数，导致漏项或重复。</li>
+<li><strong>等比中项符号忽略</strong>：在等差数列中利用 $a_4^2 = a_2 \cdot a_8$ 建立方程时，解出 $a_4$ 后未注意公差符号是否唯一，但在给定条件明确时可确定。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2017·理·15）</h3>
+<p>等差数列 ${a_n}$ 前 $n$ 项和为 $S_n$，$a_3=3$，$S_4=10$，求 $\displaystyle \sum_{k=1}^{n} \frac{1}{S_k}$。</p>
+<p><strong>思路</strong>：先由基本量求出 $a_1$ 和 $d$，写出 $S_n$ 表达式，再将 $\frac{1}{S_n}$ 裂项求和。</p>
+<p><strong>步骤</strong>：
+设公差为 $d$，由 $a_3 = a_1 + 2d = 3$，$S_4 = 4a_1 + 6d = 10$，解得 $a_1 = 1$，$d = 1$。
+$\Rightarrow a_n = n$，$S_n = \frac{n(n+1)}{2}$。
+因此 $\frac{1}{S_k} = \frac{2}{k(k+1)} = 2\left(\frac{1}{k} - \frac{1}{k+1}\right)$。
+求和：
+$$
+\sum_{k=1}^{n} \frac{1}{S_k} = 2\left[ \left(1-\frac{1}{2}\right) + \left(\frac{1}{2}-\frac{1}{3}\right) + \cdots + \left(\frac{1}{n}-\frac{1}{n+1}\right) \right] = 2\left(1-\frac{1}{n+1}\right) = \frac{2n}{n+1}.
+$$</p>
+<p><strong>点评/变式</strong>：裂项是处理等差数列倒数和的典型手段。若 $S_n$ 为 $n(n+2)$ 型，则 $\frac{1}{S_n} = \frac{1}{2}\left(\frac{1}{n} - \frac{1}{n+2}\right)$，系数与间隔需注意。</p>
+<h3><strong>题目</strong>（2016·文·17）</h3>
+<p>等差数列 ${a_n}$ 中，$a_3 + a_4 = 4$，$a_5 + a_7 = 6$。
+（Ⅰ）求通项公式；（Ⅱ）设 $b_n = [a_n]$，求</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-理-15.html">2017-理-15</a>（2017 · 中） 已知等差数列的项与前n项和，求数列求和表达式的值</li>
+<li><a href="../../exam/数学/2016-文-17.html">2016-文-17</a>（2016 · 中） 等差数列通项公式与性质，结合取整函数求数列前10项和</li>
+<li><a href="../../exam/数学/2016-理-17.html">2016-理-17</a>（2016 · 中） 本题通过等差数列前n项和与对数取整函数，考查通项公式求解及新定义数列的求和。</li>
+<li><a href="../../exam/数学/2015-文-05.html">2015-文-05</a>（2015 · 中） 已知等差数列部分项之和，利用等差中项性质求a3，再通过前n项和公式计算S5。</li>
+<li><a href="../../exam/数学/2014-文-05.html">2014-文-05</a>（2014 · 易） 等差数列通项与等比中项结合求前n项和公式</li>
+<li><a href="../../exam/数学/2013-理-16.html">2013-理-16</a>（2013 · 难） 由等差数列前n项和条件求首项和公差，利用导数求nSn的最小值</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/412-等差数列性质.html">等差数列性质</a></li>
+</ul>
+</div>
+</body>
+</html>

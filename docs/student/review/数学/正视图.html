@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正视图</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正视图</h1><div class="review-mark" data-stem="正视图"></div><div class="meta-card"><span><strong>考点</strong>正视图</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>三视图基础</strong>：三视图包括正视图（主视图）、侧视图（左视图）和俯视图。它们是从物体的正前方、正左方和正上方分别向三个互相垂直的投影面（$V$面、$W$面、$H$面）作正投影所得的图形。</li>
+<li><strong>投影原则</strong>：<ul>
+<li><strong>位置</strong>：正视图在左上，侧视图在正视图正右方，俯视图在正视图正下方。</li>
+<li><strong>尺寸规律</strong>：长对正，高平齐，宽相等。</li>
+</ul>
+</li>
+<li><strong>空间直角坐标系与投影面</strong>：在坐标系 $O-xyz$ 中，以 $zOx$ 平面为投影面时，相当于将空间点的 $y$ 坐标压缩为 $0$，只保留其 $x$ 坐标和 $z$ 坐标，并以此为基准画出图形。此时，投影的视线方向是垂直于 $zOx$ 平面的，即沿着 $y$ 轴方向。</li>
+<li><strong>组合体三视图</strong>：画三视图时，看得见的轮廓线画成实线，看不见的轮廓线画成虚线。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>确定投影方向与投影面</strong>
+    仔细审题，明确题目要求的投影面（如 $xOy$、$zOx$、$yOz$ 平面），并由此推断出视线的方向。例如，以 $zOx$ 平面为投影面，视线方向即为 $y$ 轴方向。</p>
+</li>
+<li>
+<p><strong>还原几何体</strong>
+    根据所给条件（顶点坐标、描述等），在草稿纸上画出空间直角坐标系，准确定位各点，连接关键点，还原出几何体的直观图。对于由坐标给出的点，可借助单位正方体来辅助构图。</p>
+</li>
+<li>
+<p><strong>执行投影操作</strong>
+    从确定的视线方向观察几何体，想象将所有轮廓线投射到指定的投影面上。</p>
+<ul>
+<li>对于坐标点，投影点的坐标是直接提取两个相应的轴坐标。例如，点 $(x_0, y_0, z_0)$ 在 $zOx$ 平面上的投影点为 $(x_0, z_0)$。</li>
+</ul>
+</li>
+<li>
+<p><strong>绘制与辨析</strong>
+    将想象的投影图形绘制或者与选项进行比对。</p>
+<ul>
+<li>注意各顶点投影后的位置关系。</li>
+<li>判断轮廓线、棱的可见性：外轮廓必为实线；内部的棱，若被前面的面遮挡则为虚线，若不被遮挡则为实线。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆投影面与前/俯/侧视图的对应关系</strong>：误以为 $zOx$ 平面为水平面（俯视图）或侧面（侧视图）。必须明确：以 $zOx$ 平面为投影面得到的是几何体在 $zOx$ 面上的投影，其方向相当于通常意义下的正视图（主视图）。</li>
+<li><strong>坐标与几何位置对应错误</strong>：在空间直角坐标系中，无法根据坐标想象出点的空间位置，从而导致几何体还原失败。常见错误是将 $y$ 轴和 $z$ 轴坐标混淆。</li>
+<li><strong>虚实线判断失误</strong>：只注重投影后的形状，忽略了对棱的可见性进行判断，导致将本应画成虚线的不可见棱画成了实线，从而选错图形。<ul>
+<li>例如，当从 $y$ 轴正向观察时，$y$ 坐标更大的点会遮挡 $y$ 坐标更小的点。</li>
+</ul>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：一个四面体的顶点在空间直角坐标系 $O-xyz$ 中的坐标分别是 $(1, 0, 1)$，$(1, 1, 0)$，$(0, 1, 1)$，$(0, 0, 0)$，画该四面体三视图中的正视图时，以 $zOx$ 平面为投影面，则得到正视图可以为（　）</p>
+<p><strong>思路</strong>：
+本题的核心是以 $zOx$ 平面为投影面绘制正视图。解题步骤为：首先根据四点坐标在单位正方体中还原出四面体；然后从 $y$ 轴正向（垂直 $zOx$ 平面）观察，将各点投影至 $zOx$ 平面；最后连接各投影点并判断棱的可见性，与选项进行比对。</p>
+<p><strong>步骤</strong>：
+1.  <strong>还原几何体</strong>：在坐标系中作出一个棱长为 $1$ 的正方体。题设四点 $(0,0,0)$，$(1,0,1)$，$(1,1,0)$，$(0,1,1)$ 恰好是正方体 $4$ 个互不相邻的顶点，构成一个正四面体。这 $4$ 个顶点也是正方体 $4$ 条体对角线的端点。
+2.  <strong>执行投影</strong>：以 $zOx$ 平面为投影面，相当于将所有点的 $y$ 坐标置为 $0$。
+    -   点 $A(0,0,0)$ 投影为 $A'(0,0)$。
+    -   点 $B(1,0,1)$ 投影为 $B'(1,1)$。
+    -   点 $C(0,1,1)$ 投影为 $C'(0,1)$。
+    -   点 $D(1,1,0)$ 投影为 $D'(1,0)$。
+    连线后，投影图形是顶点为 $A'$, $B'$, $C'$, $D'$ 的一个边长为 $1$ 的正方形。
+3.  <strong>判断虚实与形状</strong>：
+    -   从 $y$ 轴正向观察，点 $C(0,1,1)$ 和 $D(1,1,0)$ 位于“后方”（$y$ 坐标大），点 $A(0,0,0)$ 和 $B(1,0,1)$ 位于“前方”（$y$ 坐标小）。
+    -   投影正方形的四条边 $A'B'$，$A'C'$，$B'D'$，$C'D'$ 是四面体的四条棱的投影，构成了外轮廓，应画为实线。
+    -   正方形的对角线 $A'D'$ 和 $B'C'$，对应四面体另外两条不在同一平面上的棱的投影，其中对角线 $B'C'$ 被遮挡，应画成虚线，但对角线 $A'D'$ 可见应画为实线。或者从遮挡关系看，棱 $BC$ 的投影被遮挡。
+    -   对照选项，图形应为正方形内部有一条虚线对角线。</p>
+<p><strong>点评/变式</strong>：
+本题考查空间想象能力和对投影规则的理解，回避了复杂的组合体，转而从坐标和最简单的正四面体入手，视角新颖。
+-   <strong>变式</strong>：若题干改为“以 $xOy$ 平面为投影面”，则应从 $z$ 轴负向看向正方向，得到的投影是 $xOy$ 平面上的一个正方形，其内部一条对角线画成虚线。解答思路完全一致，关键在于准确转换视线方向和投影平面。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-09.html">2013-文-09</a>（2013 · 中） 由空间直角坐标系中的点坐标判断四面体形状，并画出在zOx平面上的正视图。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正视图</a></li>
+</ul>
+</div>
+</body>
+</html>

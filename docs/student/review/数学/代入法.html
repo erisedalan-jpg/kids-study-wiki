@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>代入法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>代入法</h1><div class="review-mark" data-stem="代入法"></div><div class="meta-card"><span><strong>考点</strong>代入法</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：10</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择5</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>代入法（相关点法）本质</strong>：当所求动点 $M(x,y)$ 的运动依赖于另一已知动点 $P(x_0,y_0)$ 在已知曲线上的运动时，利用 $M$ 与 $P$ 的坐标关系，将 $P$ 的坐标用 $M$ 的坐标表示，再代入 $P$ 满足的已知方程，即得 $M$ 的轨迹方程。</li>
+<li><strong>核心公式与关系</strong>：若已知 $f(x_0,y_0)=0$，且 $x_0=g(x,y),\; y_0=h(x,y)$，则 $M$ 的轨迹方程为 $f\big(g(x,y),\,h(x,y)\big)=0$。</li>
+<li><strong>适用条件</strong>：  </li>
+<li>已知一条曲线 $C$（即已知动点所在曲线的方程）；  </li>
+<li>所求动点与已知动点之间存在明确的坐标转移关系（如中点、定比分点、投影点、对称点等）；  </li>
+<li>已知动点无额外限制时直接代换，若有范围（如 $y&gt;0$），必须将范围同步代换到新方程中。</li>
+<li><strong>代入法与“直接法”区分</strong>：直接法是直接把动点满足的几何条件坐标化；代入法必须有“已知曲线上的相关点”作为桥梁。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设点</strong>：设所求轨迹上的动点为 $M(x,y)$，已知曲线上的相关动点为 $P(x_0,y_0)$。  </li>
+<li><strong>建关系</strong>：根据题中几何关系（如中点、垂足等），写出 $x_0,y_0$ 关于 $x,y$ 的表达式，即 $\begin{cases} x_0 = g(x,y) \ y_0 = h(x,y) \end{cases}$。  </li>
+<li><strong>代方程</strong>：将 $x_0,y_0$ 代入已知曲线 $C$ 的方程 $F(x_0,y_0)=0$ 中，得 $F(g(x,y),\,h(x,y))=0$。  </li>
+<li><strong>化简检验</strong>：将所得方程化简为标准形式，并根据已知条件（如 $y_0&gt;0$）回代求出 $x,y$ 的限制条件，完整写出轨迹方程并标注范围。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>坐标反向代换</strong>：错误地将 $M$ 的坐标代入 $P$ 满足的方程，而未用 $M$ 的坐标表示 $P$ 的坐标。必须用 $x,y$ 表达 $x_0,y_0$，而非反过来。  </li>
+<li><strong>映射关系弄反</strong>：如中点的处理，若 $M$ 是 $PP'$ 的中点，有的同学会将 $P$ 的坐标写成 $P(2x, y)$，忽略了垂足的坐标对应关系，应仔细核对几何条件。  </li>
+<li><strong>忽略范围丢失</strong>：已知曲线有范围（如 $y&gt;0$），代入后忘记将范围转化为新轨迹中 $y$ 的限制，导致轨迹多出不符合题意的部分而被扣分。  </li>
+<li><strong>方程化简错误</strong>：代入后出现 $\dfrac{x^2}{16} + \dfrac{y^2}{4}=1$ 写成 $\dfrac{x^2}{16} + y^2 = 1$ 等分母错配，或因心算跳步导致系数错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024·新课标Ⅱ-05）已知曲线 $C: x^2+y^2=16\;(y&gt;0)$，从 $C$ 上任意一点 $P$ 向 $x$ 轴作垂线段 $PP'$，$P'$ 为垂足，则线段 $PP'$ 的中点 $M$ 的轨迹方程为（ ）<br />
+A. $\dfrac{x^2}{16}+\dfrac{y^2}{4}=1\;(y&gt;0)$　B. $\dfrac{x^2}{16}+\dfrac{y^2}{8}=1\;(y&gt;0)$<br />
+C. $\dfrac{y^2}{16}+\dfrac{x^2}{4}=1\;(y&gt;0)$　D. $\dfrac{y^2}{16}+\dfrac{x^2}{8}=1\;(y&gt;0)$</p>
+<p><strong>思路</strong>：$M$ 运动由 $P$ 决定，且 $M$ 是 $PP'$ 中点，可用“代入法”。设 $M(x,y)$，表示出 $P$ 的坐标，再代入已知半圆方程，并注意 $y&gt;0$ 的保留。</p>
+<p><strong>步骤</strong><br />
+1. 设 $M(x,y)$，由 $PP' \perp x$ 轴且 $P'$ 在 $x$ 轴上，得 $P'(x,0)$。<br />
+2. $M$ 为 $PP'$ 中点，故 $y = \dfrac{y_P + 0}{2} \Rightarrow y_P = 2y$，又 $x_P = x$，所以 $P(x, 2y)$。<br />
+3. $P$ 在半圆 $x^2+y^2=16\;(y&gt;0)$ 上，代入：$x^2 + (2y)^2 = 16 \Rightarrow x^2+4y^2=16$，且 $2y&gt;0 \Rightarrow y&gt;0$。<br />
+4. 化为标准形式：$\dfrac{x^2}{16} + \dfrac{y^2}{4} = 1\;(y&gt;0)$，对应选项 <strong>A</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 此题本质是“相关点代入法”的简单应用，步骤死板但需严谨。<br />
+- 陷阱一：若误以为 $M$ 是 $PP'$ 的靠近 $x$ 轴的三等分点，关系变为 $P(x, 3y)$，轨迹变为 $x^2+9y^2=16$，需灵活应对比例变化。<br />
+- 陷阱二：若原曲线是圆 $x^2+y^2=16$ 无 $y&gt;0$，轨迹会是整个椭圆，加上 $y&gt;0$ 后只有上半部分，审题时必须圈出范围。<br />
+- 变式训练：可以将垂足改为向 $y$ 轴作垂线段，或取 $P$ 与原点连线的中点，再次巩固“设点—找关系—代方程—定范围”四步法。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-05.html">2024-新课标Ⅱ-05</a>（2024 · 易） 求圆上动点相关中点的轨迹方程，利用中点公式转移代入得出椭圆方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/120-代入消元法.html">代入法</a></li>
+</ul>
+</div>
+</body>
+</html>

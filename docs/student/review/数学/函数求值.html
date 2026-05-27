@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>函数求值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>函数求值</h1><div class="review-mark" data-stem="函数求值"></div><div class="meta-card"><span><strong>考点</strong>函数求值</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：填空14</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>奇偶性定义</strong>：设函数 $f(x)$ 定义域关于原点对称。</li>
+<li>若对任意 $x$，都有 $f(-x) = -f(x)$，则 $f(x)$ 为奇函数。</li>
+<li>若对任意 $x$，都有 $f(-x) = f(x)$，则 $f(x)$ 为偶函数。</li>
+<li><strong>奇函数的重要性质</strong>：</li>
+<li>若 $0$ 在定义域内，则必有 $f(0)=0$。</li>
+<li>函数值互为相反数：$f(a) = -f(-a)$。</li>
+<li><strong>函数求值的核心思想</strong>：将待求自变量通过奇偶性、周期性等性质转化到已知解析式的区间上，再代入计算。</li>
+<li><strong>适用条件</strong>：已知函数在某一对称区间上的解析式，且可判断函数整体或局部具有奇偶性，方可跨区间求值。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判断目标自变量所处区间</strong>：观察要求的 $f(a)$ 中 $a$ 的符号，确定该点是否在已知解析式的区间内。</li>
+<li><strong>构造对称点</strong>：若不在已知区间，利用奇偶性写出 $f(a)$ 与 $f(-a)$（或 $f(a)$ 与 $-f(-a)$）的关系。对于奇函数，$f(a)=-f(-a)$。</li>
+<li><strong>代入已知解析式计算</strong>：将构造出的 $-a$ 代入题目给出的那段解析式，求得 $f(-a)$ 的具体数值。</li>
+<li><strong>回代求出目标值</strong>：根据第2步的关系式，得到 $f(a)$ 的值。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆奇偶函数的符号关系</strong>：奇函数是 $f(-x) = -f(x)$，易错记为 $f(-x) = f(x)$ 或符号使用混乱，导致最终结果正负号错误。</li>
+<li><strong>忽略定义域的对称性</strong>：利用奇偶性前必须确保自变量的相反数仍在定义域内。比如求 $f(0)$ 时，若 $0$ 不在定义域内，则不能使用 $f(0)=0$ 的结论。</li>
+<li><strong>解析式代入错误</strong>：将 $-x$ 代入已知解析式时，未正确处理括号和指数运算，如 $(-x)^3$ 算成 $-x^3$ 漏负号（虽然本题中 $x^3$ 为奇函数，但易错的是类似 $x^2$ 项）。</li>
+<li><strong>直接代入原解析式</strong>：不看自变量所在区间，看见 $f(2)$ 就将 $2$ 代入 $x&lt;0$ 时的表达式，导致方法性错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：已知函数 $f(x)$ 是定义在 $\mathbf{R}$ 上的奇函数，当 $x \in (-\infty, 0)$ 时，$f(x)=2x^3+x^2$，求 $f(2)$ 的值。</p>
+<p><strong>思路</strong>：所求 $x=2$ 属于 $(0,+\infty)$，没有直接给出解析式。由于函数是奇函数，可以将 $f(2)$ 转化为 $-f(-2)$，其中 $-2 \in (-\infty, 0)$ 是已知区间，代入解析式即可求解。</p>
+<p><strong>步骤</strong>：
+1. 由奇函数性质得 $f(2) = -f(-2)$。
+2. 因为 $-2 \in (-\infty, 0)$，故 $f(-2) = 2 \times (-2)^3 + (-2)^2 = 2 \times (-8) + 4 = -16 + 4 = -12$。
+3. 所以 $f(2) = -(-12) = 12$。</p>
+<p><strong>点评/变式</strong>：本题是奇偶性求值的最基础模型，直接利用 $f(x)=-f(-x)$ 一步转化即可。变式题可能会将奇偶性与周期性结合，或给出某一段的抽象关系式（如 $f(x+1)$ 为奇函数），此时需先挖掘出对称中心，再转化求值。核心不变，仍然是“构造对称点，代入已知”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2017-文-14.html">2017-文-14</a>（2017 · 易） 已知奇函数在x&lt;0时的解析式，利用奇偶性求f(2)的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">函数求值</a></li>
+</ul>
+</div>
+</body>
+</html>

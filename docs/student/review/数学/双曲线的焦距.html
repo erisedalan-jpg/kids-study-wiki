@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>双曲线的焦距</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>双曲线的焦距</h1><div class="review-mark" data-stem="双曲线的焦距"></div><div class="meta-card"><span><strong>考点</strong>双曲线的焦距</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2020–2020</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>双曲线的标准方程</strong>（焦点在 $x$ 轴）：$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\ (a&gt;0,\ b&gt;0)$。</li>
+<li><strong>焦距</strong>：两焦点间的距离，记为 $2c$，其中 $c$ 满足 $$c^2 = a^2 + b^2.$$
+  焦点坐标：$F_1(-c,0)$，$F_2(c,0)$。</li>
+<li><strong>渐近线方程</strong>（焦点在 $x$ 轴）：$y = \pm \frac{b}{a}x$。
+  若焦点在 $y$ 轴，方程为 $\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1$，焦距仍为 $2c$，但渐近线为 $y = \pm \frac{a}{b}x$。</li>
+<li><strong>基本不等式</strong>：对任意正数 $a,b$，有 $a^2 + b^2 \ge 2ab$，当且仅当 $a=b$ 时取等。常用于与焦距相关的条件最值问题。</li>
+<li><strong>几何量的代数化</strong>：直线与渐近线交点、点到直线的距离均可由 $a,b$ 表示，从而将面积、长度等几何条件转化为 $a,b$ 的方程或关系式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>由渐近线求交点坐标</strong>：将定直线（如 $x=a$ 或 $x=m$）与渐近线 $y = \pm \frac{b}{a}x$ 联立，得到两个交点 $D(x_0, \frac{b}{a}x_0)$，$E(x_0, -\frac{b}{a}x_0)$（或纵坐标相反）。  </li>
+<li><strong>计算相关几何量</strong>：  </li>
+<li>线段长度 $|ED| = \frac{2b}{a}|x_0|$；  </li>
+<li>若原点 $O$ 到直线的距离可作为三角形的高，可用公式 $d = |x_0|$（当直线为 $x=x_0$ 时）。  </li>
+<li><strong>建立等量关系</strong>：利用面积、长度等已知条件，得出 $a$ 与 $b$ 的乘积 $ab$ 或其它确定关系。  </li>
+<li><strong>构造目标函数</strong>：写下焦距 $2c = 2\sqrt{a^2+b^2}$（或 $c^2 = a^2+b^2$），将条件代入。  </li>
+<li><strong>用基本不等式求最值</strong>：对 $a^2+b^2$ 使用 $a^2+b^2 \ge 2ab$，结合定值 $ab$ 求出最小值，并务必验证取等条件（通常为 $a=b$）是否允许。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>焦距是 $2c$ 而不是 $c$</strong>：求解最小值时容易求出 $c$ 的最小值就选答案，忘记乘以 $2$，直接掉入命题陷阱。  </li>
+<li><strong>焦点位置看错</strong>：题目给定标准方程后需先判断焦点所在轴。若焦点在 $y$ 轴，渐近线为 $y = \pm \frac{a}{b}x$，表达式不同，交点坐标和后续计算会整体改变。  </li>
+<li><strong>三角形面积的底与高选错</strong>：如本题 $\triangle ODE$ 推荐以 $ED$ 为底、原点 $O$ 到直线 $x=a$ 的距离为高，计算简单。若盲目用坐标公式或分割三角形，易增加错误风险。  </li>
+<li><strong>忽略不等式取等条件</strong>：$a^2+b^2 \ge 2ab$ 当且仅当 $a=b$ 时等号成立，题目中的条件必须允许 $a=b$ 存在（双曲线实轴与虚轴相等等价于等轴双曲线，此时方程有意义），若不允许则需另寻他法。  </li>
+<li><strong>面积计算时遗漏 $\frac{1}{2}$</strong>：三角形面积公式 $S = \frac{1}{2} \times$ 底 $\times$ 高，很多同学漏写 $\frac{1}{2}$，导致结果放大一倍。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong> （2020·理·08）<br />
+设 $O$ 为坐标原点，直线 $x=a$ 与双曲线 $C: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\ (a&gt;0,b&gt;0)$ 的两条渐近线分别交于 $D, E$ 两点。若 $\triangle ODE$ 的面积为 $8$，则 $C$ 的焦距的最小值为（ ）<br />
+A. 4 B. 8 C. 16 D. 32</p>
+<p><strong>思路</strong><br />
+由渐近线方程求出 $D,E$ 的坐标，写出 $|ED|$ 长度，利用 $\triangle ODE$ 的面积求出 $ab$ 的值，再将焦距表示为 $2c = 2\sqrt{a^2+b^2}$，利用基本不等式求最小值。</p>
+<p><strong>步骤</strong><br />
+1. 双曲线 $\frac{x^2}{a^2} - \frac{y^2}{b^2}=1$ 的渐近线为 $y=\frac{b}{a}x$ 与 $y=-\frac{b}{a}x$。<br />
+2. 与直线 $x=a$ 联立：<br />
+   $D(a,\ b)$（第一象限），$E(a,\ -b)$（第四象限）。<br />
+3. 线段 $|ED| = b - (-b) = 2b$。<br />
+4. 原点 $O$ 到直线 $x=a$ 的距离为 $a$，此即 $\triangle ODE$ 以 $ED$ 为底时的高。<br />
+   面积 $S = \frac{1}{2} \cdot |ED| \cdot a = \frac{1}{2} \cdot 2b \cdot a = ab = 8$。<br />
+5. 焦距 $2c = 2\sqrt{a^2+b^2}$。由基本不等式，$a^2+b^2 \ge 2ab = 16$，当且仅当 $a=b$ 时等号成立。<br />
+6. 于是 $2c \ge 2\sqrt{16} = 8$。<br />
+   焦距的最小值为 $8$，对应选项 <strong>B</strong>。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将几何关系、代数恒等式与不等式有机融合，核心是“面积条件→$ab$ 定值→最值问题”的转化链。<br />
+- 最容易失分的是误将焦距当成 $c$，算出 $c \ge 4$ 后错选 A。务必牢记焦距是 $2c$。<br />
+- 变式思考：若将直线改为 $x=2a$，则 $D(2a,2b), E(2a,-2b)$，$|ED|=4b$，高为 $2a$，面积 $S = \frac{1}{2} \cdot 4b \cdot 2a = 4ab$。给定面积后仍可固定 $ab$，用相同方法求最值，规律完全一致。这提醒我们，解答解析几何最值问题时，优先将条件化为 $a,b$ 的积或平方和关系，是通用且高效的策略。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2020-理-08.html">2020-理-08</a>（2020 · 中） 本题通过双曲线渐近线与直线交点构建三角形，结合面积与均值不等式求焦距最小值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">双曲线的焦距</a></li>
+</ul>
+</div>
+</body>
+</html>

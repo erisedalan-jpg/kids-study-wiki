@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>体积计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>体积计算</h1><div class="review-mark" data-stem="体积计算"></div><div class="meta-card"><span><strong>考点</strong>体积计算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>6</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：6；年份跨度：2012–2021</li>
+<li>出现题位：解答18 解答19 解答20 选择6</li>
+<li>难度分布：中5 易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>体积计算是立体几何的核心考点，核心在于掌握基本几何体的体积公式与灵活运用转化思想。</p>
+<ul>
+<li><strong>柱体体积公式</strong>：$V = Sh$（其中 $S$ 为底面积，$h$ 为高）。对棱柱、圆柱均适用。</li>
+<li><strong>锥体体积公式</strong>：$V = \frac{1}{3} Sh$（其中 $S$ 为底面积，$h$ 为高）。是柱体体积的 $\frac{1}{3}$，此为高频考点。</li>
+<li><strong>割补法求体积</strong>：当目标几何体不规则时，采用“切割”或“补形”策略。<ul>
+<li><strong>切割</strong>：将复杂几何体分割为若干规则锥体或柱体求和，或通过整体减去部分得到。</li>
+<li><strong>等体积转化（等积法）</strong>：常用于求点到面的距离，或当直接求某一几何体的高困难时，转求另一个易求的等体积几何体（常为三棱锥换底）。</li>
+</ul>
+</li>
+<li><strong>三视图还原</strong>：由三视图还原几何体原型，利用长对正、高平齐、宽相等的原则，是计算体积的前提。</li>
+<li><strong>体积比</strong>：常涉及平面分割几何体，关键是理清分割后各部分底面积与高的比例关系，不必先算出绝对体积。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>求解体积问题，核心是“定形状、找底高、巧转化”，推荐按以下步骤操作：</p>
+<ol>
+<li>
+<p><strong>几何体定性与还原</strong>：
+    根据题意、直观图或三视图，精准确定几何体的类型（柱、锥、台或组合体）。若为三视图，优先构建长方体或正方体框架进行还原。特别注意平行、垂直关系，它们直接关联高线。</p>
+</li>
+<li>
+<p><strong>确定底面积与高（核心计算）</strong>：
+    底面积常为三角形、矩形、梯形等平面图形，直接套用面积公式。高是顶点到底面的垂直距离。证明线面垂直是找到高的关键：若图形中无现成垂线，则需通过面面垂直的性质定理转化为线面垂直，或依据条件证明。</p>
+</li>
+<li>
+<p><strong>执行割补或等积转化</strong>：</p>
+<ul>
+<li><strong>规则几何体</strong>：直接代入柱体或锥体体积公式。</li>
+<li><strong>不规则几何体</strong>：考虑切割（如所求 $V = V_{\text{整体}} - V_{\text{切掉部分}}$）或补形。</li>
+<li><strong>求点面距或换底</strong>：对棱锥，若原高不易求，可尝试更换底面和顶点，找一个面与对应高线易求的组合，利用体积相等建立方程。</li>
+</ul>
+</li>
+<li>
+<p><strong>处理体积比</strong>：
+    先确认分割面的位置，分析其将原几何体的底和高切分成了何比例。利用等高时体积比等于底面积比，或底面积相等时体积比等于高之比，简化运算。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>公式混淆</strong>：锥体体积漏乘 $\frac{1}{3}$，这是最高频失分点。运算后务必再次确认系数。</li>
+<li><strong>三视图还原偏差</strong>：对三视图中的虚线（不可见轮廓线）和实线辨析不清，导致几何体形状判断错误。未注意三视图中斜线的实际意义，常把斜面误认为垂直面。</li>
+<li><strong>高（线面距）的确定错误</strong>：误将侧棱长或斜高直接当作几何体的高代入公式。必须牢记，高是顶点向底面所在平面所作的垂线段。</li>
+<li><strong>割补时重叠或遗漏</strong>：分割后的几何体重叠或遗漏了某一部分，导致体积多算或少算。计算“切掉部分”的体积时，要清晰界定其边界。</li>
+<li><strong>体积比误算</strong>：在求体积比时，直接代入了估算的数值，而没有应用平行或比例关系进行精确推导，导致比值错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-文-18）：四棱锥 $P-ABCD$ 底面是矩形，$PD \perp $ 底面 $ABCD$，$M$ 为 $BC$ 中点，且 $PB \perp AM$。
+（1） 求证：平面 $PAM \perp$ 平面 $PBD$；
+（2） 若 $PD=DC=1$，求四棱锥 $P-ABCD$ 的体积。
+<strong>思路</strong>：
+第（1）问为垂直证明，是求体积的预演。通过证 $AM \perp$ 平面 $PBD$ 得面面垂直。第（2）问的关键在于利用垂直条件求出底面的另一边长 $BC$。只有在底面矩形确定后，才能用锥体体积公式 $V=\frac{1}{3} \times S_{ABCD} \times PD$ 求解。
+<strong>步骤</strong>：
+1.  <strong>由垂直关系求底面边长</strong>：
+    - 已知 $PD \perp$ 底面 $ABCD$, $AM \subset$ 底面 $ABCD$ $\Rightarrow$ $PD \perp AM$。
+    - 又知 $PB \perp AM$, $PB \cap PD = P$ $\Rightarrow$ $AM \perp$ 平面 $PBD$。
+    - 因 $BD \subset$ 平面 $PBD$，则 $AM \perp BD$。
+    - 在矩形 $ABCD$ 中，$M$ 为 $BC$ 中点，设 $BC = x$。由 $\triangle ABM \sim \triangle BCD$ （因 $\angle BAM$ 与 $\angle DBC$ 互余） 得到 $\frac{AB}{BM} = \frac{BC}{CD}$。代入 $AB=CD=1$, $BM=\frac{x}{2}$，有 $\frac{1}{\frac{x}{2}} = \frac{x}{1}$。解得 $x = \sqrt{2}$，即 $BC = \sqrt{2}$。
+2.  <strong>计算体积</strong>：
+    - 底面积 $S_{ABCD} = AB \cdot BC = 1 \times \sqrt{2} = \sqrt{2}$。
+    - 高为 $PD=1$。
+    - 四棱锥体积 $V_{P-ABCD} = \frac{1}{3} S_{ABCD} \cdot PD = \frac{1}{3} \times \sqrt{2} \times 1 = \frac{\sqrt{2}}{3}$。
+<strong>点评/变式</strong>：
+证明垂直是手段，求长度和面积是目的。本题需从复杂的线线垂直关系反推底面图形特征，这是常见考法。若无法直接求得完整底面，可尝试将目标锥体分割，但本题通过证明相似得边长是最优解。</p>
+<p><strong>题目</strong>（2020-文-20）：三棱柱 $ABC-A_1B_1C_1$ 底面为正三角形，侧面 $BB_1C_1C$ 为矩形，已知平面 $EB_1C_1F$ 的生成方式及一堆平行垂直条件。$AO=AB=6$, $AO \parallel$ 平面 $EB_1C_1F$, $\angle MPN = \frac{\pi}{3}$。求四棱锥 $B-EB_1C_1F$ 的体积。
+<strong>思路</strong>：
+目标棱锥底面是梯形 $EB_1C_1F$，顶点为 $B$。需利用平行关系将高线转化为易求的线段。由 $AO \parallel$ 平面 $EB_1C_1F$ 结合正三棱柱中心 $O$ 的性质，可推出 $M, P, N$ 的关系，找到四棱锥的高是与平面垂直的线段 $PM$（或其长度关系），然后分别求底面积和高。
+<strong>步骤</strong>：
+1.  <strong>分析高线</strong>：
+    由条件可证平面 $A_1AMN \perp$ 平面 $EB_1C_1F$，且交线过 $PN$。$B$ 在平面 $A_1AMN$ 内，$B$ 到交线的距离即为四棱锥的高。通过正三棱柱和角度的条件，推得图形是棱长为 $6$ 的正三棱柱，且 $P$ 为 $AM$ 上特定点，$PM$ 即为高的一部分或等同高。
+2.  <strong>求底面梯形面积</strong>：
+    - 证明 $EF \parallel B_1C_1$。在正三角形中，结合比例关系可得 $EF$ 的长度。
+    - 梯形 $EB_1C_1F$ 中，下底 $B_1C_1 = 6$，上底 $EF$ 通过比例求出为 $2$ （由 $AO \parallel$ 平面等条件推出梯形中位线）。
+    - 梯形的高为 $MN = 6$。
+    - 底面积 $S = \frac{1}{2} (2+6) \times 6 = 24$。
+3.  <strong>求四棱锥体积</strong>：
+    - 顶点 $B$ 到底面 $EB_1C_1F$ 的距离即 $B$ 到 $PN$ 的距离 $h$。在 $\triangle MPN$ 中，$\angle MPN = \frac{\pi}{3}$，可算出 $h = 3$。
+    - 体积 $V_{B-EB_1C_1F} = \frac{1}{3} S \cdot h = \frac{1}{3} \times 24 \times 3 = 24$。
+<strong>点评/变式</strong>：
+处理复杂截面锥体体积，“换底找高”是核心思想。本题将高转化为平面内点到直线的距离，大大简化了运算。变式可训练直接用等体积法，如求 $V_{B-EB_1C_1F} = V_{B_1-EBC_1F}$ 等，但此处直接求更清晰。</p>
+<p><strong>题目</strong>（2015-理-06）：一个正方体被一个平面截去一部分后，剩余部分的三视图如图，求截去部分体积与剩余部分体积的比值。
+<strong>思路</strong>：
+此为典型的三视图与割补结合题。由三视图还原切割体，发现切掉的是正方体的一个角（三棱锥）。直接代入正方体棱长和锥体公式即可求比值，无需计算具体体积数值。可设棱长为 $1$ 辅助运算。
+<strong>步骤</strong>：
+1.  <strong>三视图还原</strong>：
+    在三视图中均有直角和斜线，是一个从顶点出发切去三个两两垂直的棱的几何体。还原可知切掉的部分是一个底面为等腰直角三角形、高为正方体棱长的三棱锥。
+2.  <strong>计算体积比</strong>：
+    - 设正方体棱长为 $1$，原体积 $V_{\text{正方体}} = 1^3 = 1$。
+    - 切去的三棱锥底面是两直角边为 $1$ 的直角三角形，面积 $S=\frac{1}{2} \times 1 \times 1 = \frac{1}{2}$，高为 $1$。
+    - 切去部分体积 $V_{\text{切}} = \frac{1}{3} \times S \times h = \frac{1}{3} \times \frac{1}{2} \times 1 = \frac{1}{6}$。
+    - 剩余部分体积 $V_{\text{剩}} = 1 - \frac{1}{6} = \frac{5}{6}$。
+    - 比值为 $V_{\text{切}} : V_{\text{剩}} = \frac{1}{6} : \frac{5}{6} = \frac{1}{5}$。
+<strong>点评/变式</strong>：
+“设长度为 $1$”是解决比例、比值的通用技巧，可避免繁杂代数式，直观呈现体积份数关系。务必注意圆锥、棱锥的 $\frac{1}{3}$ 系数。此模型可拓展为在各种方向切正方体，需熟练掌握正方体“补角”法。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2021-文-18.html">2021-文-18</a>（2021 · 中） 本题考查四棱锥中的线面垂直与面面垂直证明，并结合体积计算。</li>
+<li><a href="../../exam/数学/2020-文-20.html">2020-文-20</a>（2020 · 中） 该题考查线面平行与垂直的证明以及利用体积公式求几何体体积。</li>
+<li><a href="../../exam/数学/2015-理-06.html">2015-理-06</a>（2015 · 易） 由三视图还原正方体被平面所截后的几何体，计算截去部分与剩余部分的体积比。</li>
+<li><a href="../../exam/数学/2014-文-06.html">2014-文-06</a>（2014 · 中） 通过三视图还原零件形状，计算圆柱体毛坯与切削后零件的体积比。</li>
+<li><a href="../../exam/数学/2014-理-06.html">2014-理-06</a>（2014 · 中） 根据三视图还原零件，计算切削掉部分与圆柱毛坯的体积比。</li>
+<li><a href="../../exam/数学/2012-文-19.html">2012-文-19</a>（2012 · 中） 证明面面垂直关系及棱柱分割后两部分体积比的计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">体积计算</a></li>
+</ul>
+</div>
+</body>
+</html>

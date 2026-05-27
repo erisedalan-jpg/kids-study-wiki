@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>解三角形</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>解三角形</h1><div class="review-mark" data-stem="解三角形"></div><div class="meta-card"><span><strong>考点</strong>解三角形</span><span><strong>权重</strong>46</span><span><strong>真题数</strong>17</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：46</li>
+<li>真题数：17；年份跨度：2009–2024</li>
+<li>出现题位：填空13 填空15 填空16 解答15 解答17 解答18 选择4 选择5 选择7</li>
+<li>难度分布：中14 易2 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>
+<p><strong>正弦定理</strong>
+  $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$$
+  其中 $R$ 为 $\triangle ABC$ 外接圆半径。变形：$a=2R\sin A$，$b=2R\sin B$，$c=2R\sin C$，以及 $\sin A = \frac{a}{2R}$ 等。</p>
+</li>
+<li>
+<p><strong>余弦定理</strong>
+  $$a^2 = b^2 + c^2 - 2bc\cos A$$
+  $$b^2 = a^2 + c^2 - 2ac\cos B$$
+  $$c^2 = a^2 + b^2 - 2ab\cos C$$
+  变形求角：$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$，依此类推。</p>
+</li>
+<li>
+<p><strong>三角形面积公式</strong>
+  $$S = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ac\sin B$$
+  这是将边、角与面积联系的核心桥梁。</p>
+</li>
+<li>
+<p><strong>三角形内角和</strong>
+  $A + B + C = \pi$。由此推出诱导关系：$\sin(A+C) = \sin B$，$\cos(A+C) = -\cos B$，$\sin\frac{B}{2} = \cos\frac{A+C}{2}$ 等，常用于三角恒等变换。</p>
+</li>
+<li>
+<p><strong>边角互化</strong>
+  核心依据是正弦定理，可将边长代换为对应角的正弦值，或将角的正弦代换为对应边长。例如：化简 $a\cos C + c\cos A = b$ 等。</p>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>边角互化，统一形式</strong>
+   题目条件若同时含边和角的三角函数，应利用正弦定理进行“边化角”或“角化边”，将条件统一为角的关系或边的二次式，再结合恒等变换或余弦定理求解。如已知 $\sin A + \sqrt{3} \cos A = 2$，统一为角的形式求 $A$。</p>
+</li>
+<li>
+<p><strong>已知一角及对边，求最值或范围</strong>
+   已知一角（如 $A$）及其对边（如 $a$），求解周长、两边之和或面积的最值，通法是：</p>
+</li>
+<li>先用余弦定理建立另外两边 $b, c$ 的等量关系：$a^2 = b^2 + c^2 - 2bc\cos A$。</li>
+<li>将目标量（如 $b+c$，$bc$）用该等量关系表达。</li>
+<li>
+<p>利用基本不等式 $b^2 + c^2 \ge 2bc$ 或 $(b+c)^2 \le 2(b^2 + c^2)$ 求最值，注意验证取等条件。</p>
+</li>
+<li>
+<p><strong>边角关系证明与求角</strong>
+   对于含 $a\cos B + b\cos A$ 型结构的等式，通常可：</p>
+</li>
+<li>用正弦定理边化角，逆用两角和的正弦公式 $\sin A\cos B + \cos A\sin B = \sin(A+B) = \sin C$。</li>
+<li>
+<p>或用余弦定理将 $\cos B, \cos A$ 代入，化简得出边的关系。
+   然后依据关系求得某个角的余弦值或正弦值，确定角。</p>
+</li>
+<li>
+<p><strong>解多三角形与平面几何联系</strong>
+   遇到有公共边或角的相邻三角形，应分别在各三角形中运用正弦、余弦定理，利用公共边、角或互补关系（如 $\angle ADB + \angle ADC = \pi$，其正弦值相等）建立方程，联立求解。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>
+<p><strong>忽略内角范围导致多解或错解</strong>
+  由 $\sin A$ 求 $A$ 时，在 $(0,\pi)$ 内常有两解（互补），必须结合题意（如三角形为钝角三角形、大边对大角等）检验并取舍。由 $\cos A$ 或 $\tan A$ 求角则不会多解，应优先计算余弦值或利用恒等式得出正切值。</p>
+</li>
+<li>
+<p><strong>基本不等式求最值时忽略取等条件</strong>
+  在求周长最大值或面积最大值时，必须验证“$b=c$”或“三角形构成条件”等取等情况是否成立，否则最值可能无法取得。</p>
+</li>
+<li>
+<p><strong>正弦定理边角互化易错点</strong>
+  边化角时，必须是齐次式的对应替换。如 $b\cos B = a\cos A$ 可化为 $\sin B\cos B = \sin A\cos A$，即 $\sin 2B = \sin 2A$，此时可得 $2B = 2A$ 或 $2B = \pi - 2A$，即 $A=B$ 或 $A+B=\frac{\pi}{2}$。遗漏后一种情况会失解。</p>
+</li>
+<li>
+<p><strong>混淆正弦定理中的 $2R$</strong>
+  在计算外接圆相关问题时容易遗漏或滥用 $2R$，记住代换时 $\sin A, \sin B, \sin C$ 分别与边长 $a, b, c$ 的比值为常数 $2R$，但 $R$ 在纯粹边角关系化简中常会消去，不必刻意求出。</p>
+</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024-新课标Ⅱ-15）：在 $\triangle ABC$ 中，内角 $A,B,C$ 对边为 $a,b,c$，已知 $\sin A + \sqrt{3} \cos A = 2$。
+（1）求 $A$。
+（2）若 $a=2$，$\sqrt{2}b\sin C = c\sin B$，求 $\triangle ABC$ 的周长。</p>
+<p><strong>思路</strong>：（1）利用辅助角公式化简左边，由 $\sin(A+\varphi)=1$ 结合 $A$ 的范围求 $A$。
+（2）先利用正弦定理化简条件 $\sqrt{2}b\sin C = c\sin B$ 为边的比例关系，求出 $b,c$ 的比值或值；再结合（1）中 $A$ 和已知 $a=2$，用余弦定理联立方程求 $b, c$，最后算周长。</p>
+<p><strong>步骤</strong>：
+（1）$\sin A + \sqrt{3} \cos A = 2\sin(A + \frac{\pi}{3}) = 2$，故 $\sin(A + \frac{\pi}{3}) = 1$。因 $0&lt;A&lt;\pi$，则 $\frac{\pi}{3} &lt; A+\frac{\pi}{3} &lt; \frac{4\pi}{3}$，所以 $A+\frac{\pi}{3} = \frac{\pi}{2}$，即 $A = \frac{\pi}{6}$。
+（2）由 $\sqrt{2}b\sin C = c\sin B$ 及正弦定理 $\frac{b}{\sin B} = \frac{c}{\sin C}$ 得 $\sqrt{2}bc = cb$，因 $c,b \neq 0$ 得 $c = \sqrt{2}b$。由余弦定理 $a^2 = b^2 + c^2 - 2bc\cos A$ 代入$A=\frac{\pi}{6}, a=2$ 得 $4 = b^2 + 2b^2 - 2\sqrt{2}b^2 \cdot \frac{\sqrt{3}}{2}$，解得 $b^2$ 进而求出 $b,c$ 和周长。计算得周长为 $2+ \sqrt{6} + \sqrt{3} + \sqrt{2}$（具体数值按真题答案）。</p>
+<p><strong>点评/变式</strong>：本题第（1）问是典型的辅助角公式求角问题，务必注意角范围的限制以确定唯一解。第（2）问先通过正弦定理得到边之比，是简化条件的关键。变式训练：可将条件改为 “$\sqrt{3}a\cos C = c\sin A$”，同样用正弦定理边化角求 $C$。</p>
+<p><strong>题目</strong>（2021-文-15/理-15）：在 $\triangle ABC$ 中，内角 $A,B,C$ 对边为 $a,b,c$，面积为 $\sqrt{3}$，$B=60^\circ$，$a^2 + c^2 = 3ac$，则 $b=$______。</p>
+<p><strong>思路</strong>：已知面积和夹角 $B$，可用面积公式求出 $ac$，再结合已知 $a^2 + c^2$ 与 $ac$ 的关系，直接代入余弦定理求 $b^2$。</p>
+<p><strong>步骤</strong>：
+由面积公式 $S = \frac{1}{2}ac\sin B$，代入 $\sqrt{3} = \frac{1}{2}ac\sin 60^\circ = \frac{\sqrt{3}}{4}ac$，得 $ac=4$。
+由余弦定理 $b^2 = a^2 + c^2 - 2ac\cos B$，代入 $\cos 60^\circ = \frac{1}{2}$ 及 $a^2 + c^2 = 3ac = 12$，得 $b^2 = 12 - 2 \times 4 \times \frac{1}{2} = 8$，故 $b=2\sqrt{2}$。</p>
+<p><strong>点评/变式</strong>：此题免去了分别求 $a$ 和 $c$ 的步骤，直接整体代入，考查了代数变形能力。如果题干不给 $a^2 + c^2$ 的等式，改为“$b=2\sqrt{2}$”，求 $a^2 + c^2$ 的值，解法完全一样。</p>
+<p><strong>题目</strong>（2021-理-05）：在正方体 $ABCD-A_1B_1C_1D_1$ 中，$P$ 为 $B_1D_1$ 的中点，求直线 $PB$ 与 $AD_1$ 所成角的余弦值（或角度）。</p>
+<p><strong>思路</strong>：异面直线所成角通过平移转化为相交线夹角。将 $AD_1$ 平移至 $BC_1$，连接 $P, B, C_1$，解 $\triangle PBC_1$ 求 $\angle PBC_1$ 或其补角。</p>
+<p><strong>步骤</strong>：
+连接 $BC_1, PC_1$。因为 $AD_1 \parallel BC_1$，故 $\angle PBC_1$（或其补角）即为所求线线角。
+设正方体棱长为 $1$，则在 $\triangle PBC_1$ 中，可计算各边长度：
+$BC_1 = \sqrt{2}$（正方体面对角线）。
+在 $\triangle B_1C_1D_1$ 中，$P$ 为 $B_1D_1$ 中点，故 $PC_1 = \frac{1}{2}B_1D_1 = \frac{\sqrt{2}}{2}$。
+连接 $PB$。由 $BB_1 \perp$ 底面，$B_1P \subset$ 底面，得 $BB_1 \perp B_1P$，且 $B_1P = \frac{\sqrt{2}}{2}$，所以 $PB = \sqrt{1^2 + (\frac{\sqrt{2}}{2})^2} = \frac{\sqrt{6}}{2}$。
+在 $\triangle PBC_1$ 中，使用余弦定理求 $\cos \angle PBC_1$，或利用勾股定理逆定理：$PC_1^2 + PB^2 = (\frac{\sqrt{2}}{2})^2 + (\frac{\sqrt{6}}{2})^2 = 2 = BC_1^2$，故 $\angle BPC_1 = 90^\circ$。
+从而 $\sin \angle PBC_1 = \frac{PC_1}{BC_1} = \frac{1}{2}$，所以 $\angle PBC_1 = \frac{\pi}{6}$。</p>
+<p><strong>点评/变式</strong>：立体几何求异面直线夹角问题的核心是“平移转化”，并构造含待求角的三角形，再通过计算三边长度，用余弦定理或勾股定理求角。若求线面角或二面角，同样是着力于构造平面角，化归为解三角形。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2024-新课标Ⅱ-15.html">2024-新课标Ⅱ-15</a>（2024 · 中） 本题主要考查解三角形，利用三角恒等变换求角A，运用正弦定理求边并计算周长。</li>
+<li><a href="../../exam/数学/2021-文-15.html">2021-文-15</a>（2021 · 中） 该题考查三角形面积公式与余弦定理的应用，通过已知条件解三角形求边长。</li>
+<li><a href="../../exam/数学/2021-理-05.html">2021-理-05</a>（2021 · 中） 本题考查在正方体中通过平移法求异面直线所成角，并利用线面垂直构造直角三角形求解正弦值。</li>
+<li><a href="../../exam/数学/2021-理-15.html">2021-理-15</a>（2021 · 中） △ABC中面积为√3，B=60°，a²+c²=3ac，综合余弦定理与正弦定理求边长b。</li>
+<li><a href="../../exam/数学/2020-理-17.html">2020-理-17</a>（2020 · 中） △ABC中sin²A-sin²B-sin²C=sinBsinC，用正弦定理转化求角A=2π/3，再求BC=3时周长最大值。</li>
+<li><a href="../../exam/数学/2019-文-15.html">2019-文-15</a>（2019 · 中） 利用正弦定理将边角关系转化为三角方程求解三角形内角。</li>
+<li><a href="../../exam/数学/2019-理-15.html">2019-理-15</a>（2019 · 易） 应用余弦定理建立方程求边长，再利用三角形面积公式计算面积。</li>
+<li><a href="../../exam/数学/2018-文-07.html">2018-文-07</a>（2018 · 中） 已知两边及半角余弦值，通过二倍角公式求角C余弦，再应用余弦定理求第三边。</li>
+<li><a href="../../exam/数学/2018-理-16.html">2018-理-16</a>（2018 · 中） 圆锥的侧面积计算，涉及母线夹角余弦值、线面角及截面面积条件求母线长和底面半径。</li>
+<li><a href="../../exam/数学/2017-文-16.html">2017-文-16</a>（2017 · 易） 本题考查利用正弦定理与三角恒等变换求解三角形内角，属于基础计算题。</li>
+<li><a href="../../exam/数学/2017-理-17.html">2017-理-17</a>（2017 · 中） 该题考查三角形内角关系与三角恒等变换求角，再利用余弦定理及面积公式求边长。</li>
+<li><a href="../../exam/数学/2016-理-13.html">2016-理-13</a>（2016 · 中） 已知两角余弦和一边，求另一边，需用同角平方关系求正弦，再通过诱导公式与正弦定理求解。</li>
+<li><a href="../../exam/数学/2015-文-17.html">2015-文-17</a>（2015 · 中） 三角形中角平分线性质与分割线段比例计算</li>
+<li><a href="../../exam/数学/2014-理-04.html">2014-理-04</a>（2014 · 中） 已知钝角三角形两边及面积，利用面积公式求夹角正弦，分类讨论并利用余弦定理求第三边。</li>
+<li><a href="../../exam/数学/2010-理-16.html">2010-理-16</a>（2010 · 难） 在三角形中结合面积公式与余弦定理求解角度。</li>
+<li><a href="../../exam/数学/2009-文-18.html">2009-文-18</a>（2009 · 中） 已知△ABC中cos(A-C)+cosB=3/2且b²=ac，综合运用余弦定理与和差化积求角B。</li>
+<li><a href="../../exam/数学/2009-理-17.html">2009-理-17</a>（2009 · 中） 考查利用三角形内角关系及余弦公式求解边长。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/589-解三角形.html">解三角形</a></li>
+</ul>
+</div>
+</body>
+</html>

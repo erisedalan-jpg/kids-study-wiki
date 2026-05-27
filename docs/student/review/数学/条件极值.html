@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>条件极值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>条件极值</h1><div class="review-mark" data-stem="条件极值"></div><div class="meta-card"><span><strong>考点</strong>条件极值</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>函数与导数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：函数与导数</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：解答24</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>条件极值问题在高考中常以不等式证明或最值求解的形式出现，核心是在一个已知的等式约束条件下，求多元表达式的最值或证明不等式。常用工具包括：
+- <strong>均值不等式链</strong>：若 $a,b&gt;0$，则 $\frac{2}{\frac{1}{a}+\frac{1}{b}} \le \sqrt{ab} \le \frac{a+b}{2} \le \sqrt{\frac{a^{2}+b^{2}}{2}} $，当且仅当 $a=b$ 时取等。
+- <strong>柯西不等式</strong>：$(\sum_{i=1}^n a_i^2)(\sum_{i=1}^n b_i^2) \ge (\sum_{i=1}^n a_i b_i)^2$，当且仅当 $\frac{a_1}{b_1}=\frac{a_2}{b_2}= \cdots = \frac{a_n}{b_n}$ 时取等。
+- <strong>重要恒等式与变形</strong>：$a^2+b^2+c^2 = (a+b+c)^2 - 2(ab+bc+ca)$，$a^3+b^3+c^3 - 3abc = (a+b+c)(a^2+b^2+c^2 - ab - bc - ca)$ 等。
+- <strong>约束条件的运用</strong>：将 $a+b+c=1$ 等条件代入目标式，实现降元或齐次化，是处理条件极值的根本思路。</p>
+<h2>解题方法与套路</h2>
+<p>面对“已知 $a+b+c$ 为定值，证明含 $a,b,c$ 的不等式”类问题，可采用以下通法：
+1. <strong>对称化与轮换处理</strong>：若目标式具有对称性，可猜测取等条件为 $a=b=c$，并围绕该点构造不等式。
+2. <strong>均值不等式直接放缩</strong>：对轮换型分式和 $\sum \frac{a^2}{b}$，常用 $\frac{a^2}{b}+b \ge 2a$（由均值 $x^2+y^2 \ge 2xy$ 变形或其他）进行配凑求和，消去分母。
+3. <strong>柯西不等式齐次化</strong>：对于 $\sum \frac{a^2}{b}$，可写成 $\sum \frac{a^2}{b} \cdot \sum a$ 再用柯西，或直接 $(\sum \frac{a^2}{b})(\sum b) \ge (\sum a)^2$，从而得到 $\sum \frac{a^2}{b} \ge \sum a$。
+4. <strong>由已知等式化基本量</strong>：如由 $a+b+c=1$ 将目标式化为关于 $ab+bc+ca$ 或 $a^2+b^2+c^2$ 的关系，再用 $ab+bc+ca \le \frac{1}{3}(a+b+c)^2$ 等常见结论。
+5. <strong>反证法或构造平方和</strong>：当直接放缩困难时，可移项构造完全平方或利用 $a^2+b^2+c^2 \ge ab+bc+ca$ 进行过渡。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽略取等条件验证</strong>：多次使用均值不等式时，需确保各处取等号的条件一致（如均要求 $a=b=c$），否则等号无法取得，导致证明不严谨或最值错误。</li>
+<li><strong>混淆不等式方向</strong>：使用柯西不等式时，注意是 $(\sum a_i^2)(\sum b_i^2) \ge (\sum a_i b_i)^2$，分式变形时勿颠倒分母分子。</li>
+<li><strong>误用均值不等式的前提</strong>：均值不等式要求各项为正数，忽视“均为正数”条件会导致错误（负数时不成立）。</li>
+<li><strong>条件 $a+b+c=1$ 的滥用</strong>：在放缩目标式时，不能简单地直接代入 $1$，须注意结构是否齐次。例如，需将目标式化为一次齐次式再代入。</li>
+<li><strong>忘记消元或齐次化</strong>：直接对非齐次式用均值易产生矛盾，如 $\frac{a^2}{b}$ 是二次除以一次，一般需要与 $a$ 或 $b$ 的线性项搭配齐次化。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2013-文-24（选修4-5：不等式选讲）</h3>
+<p><strong>题目</strong>：设 $a,b,c$ 均为正数，且 $a+b+c=1$，证明：（Ⅰ）$ab+bc+ca \le \frac{1}{3}$；（Ⅱ）$\frac{a^{2}}{b}+\frac{b^{2}}{c}+\frac{c^{2}}{a} \ge 1$。</p>
+<p><strong>思路</strong>：（Ⅰ）利用已知和平方关系 $1 = (a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)$，结合 $a^2+b^2+c^2 \ge ab+bc+ca$ 进行放缩。（Ⅱ）左式为轮换分式和，可用柯西不等式 $(\sum \frac{a^2}{b})(\sum b) \ge (\sum a)^2$ 直接得到下界，再代入条件 $a+b+c=1$。</p>
+<p><strong>步骤</strong>：
+（Ⅰ）由 $a+b+c=1$ 得：
+$$1 = (a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)$$
+又因为 $a^2+b^2+c^2 \ge ab+bc+ca$（当且仅当 $a=b=c$ 取等），代入上式：
+$$1 \ge (ab+bc+ca) + 2(ab+bc+ca) = 3(ab+bc+ca)$$
+所以 $ab+bc+ca \le \frac{1}{3}$，当且仅当 $a=b=c=\frac{1}{3}$ 时取等。</p>
+<p>（Ⅱ）由柯西不等式：
+$$\left( \frac{a^2}{b} + \frac{b^2}{c} + \frac{c^2}{a} \right)(b+c+a) \ge (a+b+c)^2$$
+因为 $a,b,c&gt;0$ 且 $a+b+c=1$，代入即得：
+$$\frac{a^2}{b} + \frac{b^2}{c} + \frac{c^2}{a} \ge \frac{(a+b+c)^2}{a+b+c} = a+b+c = 1$$
+当且仅当 $\frac{a^2}{b^2}=\frac{b^2}{c^2}=\frac{c^2}{a^2}$ 且 $a+b+c=1$，即 $a=b=c=\frac{1}{3}$ 时取等。</p>
+<p><strong>点评/变式</strong>：
+- 第（Ⅰ）问是“和为定值，求交叉项和最值”的经典结论，也可直接用均值 $a^2+b^2 \ge 2ab$ 三轮相加得出 $a^2+b^2+c^2 \ge ab+bc+ca$，是高中不等式证明的基石。
+- 第（Ⅱ）问体现了柯西不等式处理分式轮换和的强大功能。变式训练：若条件不变，证明 $\frac{a}{b+c} + \frac{b}{c+a} + \frac{c}{a+b} \ge \frac{3}{2}$（用均值或柯西的另一形式）。注意取等条件一致性是高考阅卷的踩分点。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-24.html">2013-文-24</a>（2013 · 中） 本题要求证明给定正数和为1条件下的两个不等式，考查不等式证明方法与技巧。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">条件极值</a></li>
+</ul>
+</div>
+</body>
+</html>

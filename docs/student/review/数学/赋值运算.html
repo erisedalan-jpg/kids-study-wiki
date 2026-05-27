@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>赋值运算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>赋值运算</h1><div class="review-mark" data-stem="赋值运算"></div><div class="meta-card"><span><strong>考点</strong>赋值运算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数学思想方法</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数学思想方法</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>赋值运算</strong>是程序框图的核心，表示将表达式的结果存储到变量中，一般用“$=$”或“$\rightarrow$”表示（如 $M\leftarrow\frac{M\times x}{k}$）。执行顺序为<strong>自上而下，逐条执行</strong>，每次赋值会覆盖变量原有值。</li>
+<li><strong>初始条件</strong>：循环开始前必须明确各变量的初值（如输入值及累计变量初值）。</li>
+<li><strong>循环结构</strong>：</li>
+<li><strong>循环体</strong>：重复执行的赋值与运算。</li>
+<li><strong>循环变量更新</strong>：通常使用 $k=k+1$ 等累加改变循环变量。</li>
+<li><strong>循环终止条件</strong>：当判断框条件不满足时跳出循环，条件通常为 $k\leqslant t$ 或 $k&gt;t$ 等。</li>
+<li><strong>常见框图符号</strong>：矩形（处理框）表示赋值计算；菱形（判断框）决定循环继续或终止。</li>
+<li><strong>适用条件</strong>：在循环嵌套时，严格按框图流向一步步执行，不能跳跃；关键变量随循环推进而动态变化，最终输出结果由最后一次赋值决定。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>框图标序，记录初值</strong><br />
+   从“开始”框出发，将输入值、初始赋值在草稿纸上清晰列出（如 $x=2,t=2; M=1, S=3, k=1$）。</li>
+<li><strong>按循环执行，逐次更新</strong><br />
+   从第一个执行框进入循环，依次计算赋值语句，每执行一步更新变量表，直到判断框条件不再成立为止。</li>
+<li><strong>盯紧终止条件，防“多一步”</strong><br />
+   进入循环前先判断一次，循环内每轮结束后也要判断。特别注意“$k$ 在何时增加”，条件中可能用 $k\leqslant t$（先判断后执行）或 $k\leqslant n$ 等，务必逐轮验证，不可臆断循环次数。</li>
+<li><strong>输出结果，核对选项</strong><br />
+   跳出循环后，输出对应的变量值，并与选项比对。若结果不符，回头检查是否有遗漏的更新（如 $S$ 累加漏项或除法取整细节）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>循环次数弄错</strong>：常见于 $k$ 从 $1$ 开始，条件是 $k\leqslant t$，当 $t=2$ 时，实际执行 $k=1$ 和 $k=2$ 两轮，$k=3$ 时跳出。易误认为只执行一轮。</li>
+<li><strong>变量初值遗忘</strong>：部分框图在进入循环前已赋初值（如 $S=3$），考生若未记录，直接从循环内开始计算会导致结果偏移。</li>
+<li><strong>循环体内顺序颠倒</strong>：先更新 $M$ 再累加 $S$，还是先加后更新 $M$，顺序不同结果完全不同，必须按框图流水线执行，不能想当然。</li>
+<li><strong>忽视“赋值覆盖”特性</strong>：$S=S+M$ 本质是用 $S$ 旧值加 $M$ 后赋给 $S$，不是解方程。在连续循环中，每一步 $S$ 值都依赖上一步结果。</li>
+<li><strong>除法和数据类型</strong>：若涉及 $M=M\times x/k$，$k$ 为整数，要注意运算是否按实数进行（框图题一般按实数运算，但个别题目可能涉及取整，本题无）。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2014·全国卷文第8题）</h3>
+<p>执行程序框图，输入 $x=2,t=2$，输出 $S$ 的值。</p>
+<h3><strong>思路</strong></h3>
+<p>按框图顺序“<strong>初值记录→循环执行→判断→继续/跳出</strong>”进行仿真。注意 $S$ 初始为 $3$，$M$ 初始为 $1$，$k$ 初始为 $1$；循环条件是 $k\leqslant t$，每次循环内先算 $M$，再更新 $S$，最后 $k$ 加 $1$。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>初始状态</strong><br />
+   $x=2,\quad t=2,\quad M=1,\quad S=3,\quad k=1$。</li>
+<li><strong>第 1 次循环</strong>（$k=1\leqslant 2$，进入）  </li>
+<li>$M\leftarrow \dfrac{M\times x}{k} = \dfrac{1\times 2}{1}=2$  </li>
+<li>$S\leftarrow S+M = 3+2 = 5$  </li>
+<li>$k\leftarrow k+1 = 2$。<br />
+   此时 $M=2, S=5, k=2$。</li>
+<li><strong>判断条件</strong>：$k=2\leqslant 2$ 成立，进入第 2 次循环。  </li>
+<li>$M\leftarrow \dfrac{2\times 2}{2}=2$  </li>
+<li>$S\leftarrow 5+2=7$  </li>
+<li>$k\leftarrow 2+1=3$<br />
+   此时 $M=2, S=7, k=3$。</li>
+<li><strong>判断条件</strong>：$k=3\leqslant 2$ 不成立，跳出循环。<br />
+   输出 $S=7$。</li>
+</ol>
+<p>故答案为 <strong>D．7</strong>。</p>
+<h3><strong>点评/变式</strong></h3>
+<p>本题是典型的“<strong>循环变量控制次数 + 累加求和</strong>”题型，关键陷阱在于 $S$ 的初值不是 $0$ 而是 $3$，且 $M$ 每轮均被重新赋值。变式中如果 $t$ 变大（如 $t=4$），要特别注意 $M$ 的更新模式：$M$ 实际上对应泰勒展开的某一项，理解该结构有助于快速口算，但考试时仍建议老老实实逐步模拟，避免错漏。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-08.html">2014-文-08</a>（2014 · 易） 程序框图，给定输入值 x=t=2，通过循环结构计算输出 S 的值。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">赋值运算</a></li>
+</ul>
+</div>
+</body>
+</html>

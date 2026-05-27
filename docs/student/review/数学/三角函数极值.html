@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三角函数极值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>三角函数极值</h1><div class="review-mark" data-stem="三角函数极值"></div><div class="meta-card"><span><strong>考点</strong>三角函数极值</span><span><strong>权重</strong>13</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>三角函数</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：三角函数</li>
+<li>权重 weight：13</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择8</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>对于正弦型函数 $f(x)=A\sin(\omega x+\varphi)\quad(\omega&gt;0)$，其极值点（即最大值点和最小值点）交替出现，相邻极值点的水平距离恒为半个周期：$\Delta x=\dfrac{T}{2}$。</li>
+<li>周期公式：$T=\dfrac{2\pi}{\omega}$，$\omega$ 为角频率。</li>
+<li>适用条件：$f(x)$ 是标准的正弦（或余弦）型函数，无绝对值、分段等复杂变形，且极值点明确给出时，可直接利用距离反求 $\omega$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>标出横坐标差</strong>：将题给两个相邻极值点的横坐标作差，得到 $\Delta x$。</li>
+<li><strong>建立半周期等式</strong>：由 $\Delta x=\dfrac{T}{2}$，得 $T=2\Delta x$。</li>
+<li><strong>求角频率</strong>：代入 $T=\dfrac{2\pi}{\omega}$，解出 $\omega=\dfrac{2\pi}{T}=\dfrac{\pi}{\Delta x}$。</li>
+<li><strong>检验选项</strong>：将结果与选项比对，注意 $\omega&gt;0$ 的条件。若涉及相邻零点，同理可用半个周期，但零点与极值点间隔 $\dfrac{T}{4}$，切勿混淆。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆极值点与零点</strong>：相邻零点水平间距也是 $T/2$，但相邻极值点与零点之间间距为 $T/4$。审题时需明确“极值点”与“零点”。</li>
+<li><strong>忽略“相邻”二字</strong>：若两个极值点不相邻，则间距可能是 $kT/2\ (k\in\mathbb{N}^*)$，不可直接当作 $T/2$ 计算。</li>
+<li><strong>误用半个周期公式</strong>：$\Delta x=\dfrac{T}{2}$ 仅对“相邻极值点”成立，对相邻对称轴之间的距离也是 $T/2$，但对称中心间隔为 $T/2$，混合使用容易出错。</li>
+<li><strong>单位混淆</strong>：题干中的数字可能带有 $\pi$，计算 $\Delta x$ 时需正确写出，防止丢失 $\pi$ 导致 $\omega$ 计算错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+已知 $x_1=\dfrac{\pi}{4}$，$x_2=\dfrac{3\pi}{4}$ 是函数 $f(x)=\sin(\omega x)\ (\omega&gt;0)$ 的两个相邻极值点，求 $\omega$ 的值。</p>
+<p><strong>思路</strong><br />
+利用相邻极值点横坐标的差等于半个周期的结论，先求出周期 $T$，再通过周期公式反解 $\omega$。</p>
+<p><strong>步骤</strong><br />
+1. 计算相邻极值点的横坐标差：<br />
+   $$\Delta x = x_2 - x_1 = \frac{3\pi}{4} - \frac{\pi}{4} = \frac{\pi}{2}.$$
+2. 根据相邻极值点间的距离为半个周期，得：<br />
+   $$\frac{T}{2} = \frac{\pi}{2} \quad\Rightarrow\quad T = \pi.$$
+3. 将 $T=\pi$ 代入 $T=\dfrac{2\pi}{\omega}$：<br />
+   $$\frac{2\pi}{\omega} = \pi \quad\Rightarrow\quad \omega = 2.$$
+4. 对应选项，$\omega=2$ 符合题意。</p>
+<p><strong>点评与变式</strong><br />
+本题直接考查正弦函数极值点的周期结构，属于基础题。变式可改为给出相邻极值点与零点的距离，如“$x_1=\dfrac{\pi}{4}$ 为极大值点，$x_2=\dfrac{\pi}{2}$ 为零点”，则两点的水平距离为 $T/4$，需灵活转换。也可将函数换成 $f(x)=\cos(\omega x+\varphi)$，核心规律完全相同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2019-文-08.html">2019-文-08</a>（2019 · 易） 通过极值点求出三角函数周期，再利用周期公式确定参数 w</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/609-三角函数极值.html">三角函数极值</a></li>
+</ul>
+</div>
+</body>
+</html>

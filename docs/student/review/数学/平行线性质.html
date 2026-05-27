@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平行线性质</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平行线性质</h1><div class="review-mark" data-stem="平行线性质"></div><div class="meta-card"><span><strong>考点</strong>平行线性质</span><span><strong>权重</strong>2</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：2</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平行线判定与性质</strong></li>
+<li><strong>判定定理</strong>：同位角相等，则两直线平行；内错角相等，则两直线平行；同旁内角互补，则两直线平行。</li>
+<li><strong>性质定理</strong>：两直线平行，则同位角相等、内错角相等、同旁内角互补。</li>
+<li><strong>三角形中位线定理</strong></li>
+<li>三角形两边中点的连线平行于第三边，且等于第三边的一半。</li>
+<li>逆定理：过三角形一边中点且平行于另一边的直线必平分第三边（常用）。</li>
+<li><strong>平行线分线段成比例</strong></li>
+<li>一组平行线截两条直线，所得对应线段成比例。</li>
+<li>推论：平行于三角形一边的直线截其他两边（或延长线），所得对应线段成比例。</li>
+<li><strong>平行与平行四边形</strong></li>
+<li>定义：两组对边分别平行的四边形叫平行四边形。</li>
+<li>判定：一组对边平行且相等 ⇔ 平行四边形；两组对边分别平行 ⇔ 平行四边形。</li>
+<li>性质：平行四边形对边相等、对角相等、对角线互相平分。</li>
+<li><strong>平行弦与圆</strong></li>
+<li>圆中平行弦所夹的弧相等，等弧所对的弦相等、圆周角相等。</li>
+<li>常见应用：若弦 $AB \parallel CD$，则 $\widehat{AC} = \widehat{BD}$，从而 $AC=BD$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>见中点连中点，构造中位线</strong>
+   题设出现两个中点，立即连接得到三角形中位线，导出平行关系（平行于第三边）并得到比例关系。</li>
+<li><strong>利用平行关系构造平行四边形</strong>
+   当图形中出现一组对边平行时，再找另一组平行或一组等边，可判定平行四边形，从而转移线段、等角。</li>
+<li><strong>平行线 + 圆 ⟹ 弧相等</strong>
+   遇到圆内平行弦，立刻联想“等弧对等弦、等角”，将线段相等转化为弧相等，或反之。</li>
+<li><strong>证明线段相等的路径</strong>
+   ① 直接全等三角形；② 等角对等边；③ 平行四边形对边相等；④ 圆中等弧对等弦；⑤ 等量代换（常用前几步衔接）。</li>
+<li><strong>证明三角形相似的思路</strong>
+   利用平行线产生的内错角、同位角相等，结合等腰条件或圆周角，找两对角对应相等；若共线点注意角度重合与互补。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>中位线性质误用</strong>：忽视“中点”这个前提，错误判断平行或比例关系。</li>
+<li><strong>平行弦所夹弧混淆</strong>：把“夹弧”当成相邻弧，记错对应弦；注意是两平行弦截圆所得的两段不相交的弧相等。</li>
+<li><strong>平行四边形判定条件缺失</strong>：仅有一组平行不足以判定为平行四边形，必须再加另一组平行或该组对边相等。</li>
+<li><strong>相似三角形对应点写错</strong>：由于平行和圆的复杂共点，容易把角的对应关系弄反。应找准夹相同弧的圆周角或明确由平行得到的角。</li>
+<li><strong>忽略隐含平行</strong>：中位线得到的平行未标注，导致后续无法利用内错角、同位角转化角相等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>代表题</strong> 2012-文-22</h3>
+<p><strong>题目</strong>：如图，$D,E$ 分别为 $\triangle ABC$ 边 $AB,AC$ 的中点，直线 $DE$ 交 $\triangle ABC$ 的外接圆于 $F,G$ 两点，且 $CF \parallel AB$。求证：
+（1）$CD = BC$；
+（2）$\triangle BCD \sim \triangle GBD$。</p>
+<p><strong>思路</strong>：
+（1）由中点得中位线 $DE \parallel BC$；结合条件 $CF \parallel AB$，可得平行四边形 $BCFD$，于是 $CD=BF$。再通过圆中平行弦 $CF \parallel AB$ 得 $\widehat{AF}=\widehat{BC}$，故 $AF=BC$。再证 $AF=CD$（利用另一平行四边形 $ADCF$ 或等量代换），从而 $CD=BC$。
+（2）利用（1）结论 $CD=BC$，得 $\angle CDB = \angle CBD$；结合 $DE \parallel BC$ 得内错角相等 $\angle GDB = \angle CBD$；再找另一组角等，如利用圆内接四边形性质或平行弦得 $\angle BCD = \angle GBD$，即可证相似。</p>
+<p><strong>步骤</strong>：
+（1）
+- 连接 $AF$。
+- 因为 $D,E$ 分别是 $AB,AC$ 中点，所以 $DE \parallel BC$（三角形中位线），即 $FG \parallel BC$。
+- 又已知 $CF \parallel AB$，所以四边形 $BCFD$ 中 $CF \parallel BD$，$DF \parallel BC$，故 $BCFD$ 是平行四边形，得 $CD = BF$。
+- 由 $CF \parallel AB$，在圆中平行弦所夹弧相等：$\widehat{AF} = \widehat{BC}$，从而弦 $AF = BC$。
+- 因为 $BCFD$ 是平行四边形，$CF = BD$；而 $D$ 为 $AB$ 中点，$AD = BD$，所以 $CF = AD$，结合 $CF \parallel AD$，得 $ADCF$ 也是平行四边形，故 $AF = CD$。
+- 于是 $CD = AF = BC$，即 $CD = BC$。</p>
+<p>（2）
+- 由（1）$CD = BC$ 得 $\angle CDB = \angle CBD$（等腰三角形底角相等）。
+- 由 $DE \parallel BC$ 得 $\angle GDB = \angle CBD$（内错角），因此 $\angle CDB = \angle GDB$。
+- 又 $A,B,F,C$ 四点共圆，且 $CF \parallel AB$ 已得 $\widehat{AF}=\widehat{BC}$，从而 $\angle ABF = \angle BCA$（等弧所对圆周角），$\angle ABF$ 即 $\angle GBD$，$\angle BCA$ 即 $\angle BCD$，所以 $\angle GBD = \angle BCD$。
+- 在 $\triangle BCD$ 与 $\triangle GBD$ 中，$\angle BDC = \angle GDB$，$\angle BCD =</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-22.html">2012-文-22</a>（2012 · 中） 几何证明题，利用三角形中位线和平行线及外接圆性质证明线段等长与三角形相似。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">平行线性质</a></li>
+</ul>
+</div>
+</body>
+</html>

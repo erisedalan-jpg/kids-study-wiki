@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>递推公式应用</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>递推公式应用</h1><div class="review-mark" data-stem="递推公式应用"></div><div class="meta-card"><span><strong>考点</strong>递推公式应用</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2014–2014</li>
+<li>出现题位：填空16</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>递推公式</strong>：给出数列中一项与它前一项（或前几项）的关系式，如 $a_{n+1}=f(a_n)$。它是定义数列的一种重要方式，通过连续代入可确定数列的任意有限项。</li>
+<li><strong>由递推求指定项的基本策略</strong>：若已知递推公式与某项的值，可利用方程变形（正向递推或反向递推）求出相邻项，进而逐次求出目标项。</li>
+<li><strong>周期数列</strong>：若存在正整数 $T$，对任意 $n$ 都有 $a_{n+T}=a_n$，则数列 ${a_n}$ 为周期数列，$T$ 是其一个周期。通过计算若干项发现周期性，可快速定位任意项的值，避免大量重复计算。</li>
+<li><strong>适用条件</strong>：递推公式形如 $a_{n+1}= \frac{pa_n+q}{ra_n+s}$ 等分式形式，或迭代后易出现循环的结构。注意递推式中 $n$ 的取值范围（如分母不能为 $0$ 的约束），确保每一步运算都有意义。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>直接代入（递推/倒推）</strong><br />
+   由已知项出发，将 $n$ 取适当的值代入递推公式，直接解出一项或前一项。若求更早的项（如已知 $a_8$ 求 $a_1$），则反复反向代入，直到求出目标项。注意每一次代入需精确解方程，避免符号与运算错误。</p>
+</li>
+<li>
+<p><strong>归纳周期法</strong><br />
+   连续计算出若干项后，观察数值重复的规律（如 $a_5=2$, $a_6=-1$, $a_7=\frac12$, $a_8=2$ 出现循环）。一旦发现周期 $T$，那么 $a_m$ 可由 $a_{m \bmod T}$（适当调整脚标对齐）快速得到，免去逐项计算的繁琐。</p>
+</li>
+<li>
+<p><strong>递推式变形与脚标对齐</strong><br />
+   有时递推式不是直接给出 $a_n$ 与 $a_{n+1}$ 的关系，需先变形。如从 $a_{n+1}=\frac{1}{1-a_n}$ 反解 $a_n$ 得 $a_n=1-\frac{1}{a_{n+1}}$ 等。注意“向前推”与“向后推”脚标的对应关系。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>解方程出错</strong>：反向递推时常需解分式方程，计算时忽略分母不为零的条件，或移项、变号失误，导致求出的项错误，后续全盘皆错。</li>
+<li><strong>脚标代换混乱</strong>：递推式中 $n$ 的起始含义不清，例如已知 $a_8$，应令 $n=7$ 得到关于 $a_7$ 的方程；若直接书写 $a_8=f(a_7)$，容易漏掉 $n$ 与项数的对应关系。</li>
+<li><strong>周期判断不充分</strong>：仅凭两三项的重复就贸然断定周期，未多验证几项，可能会误判周期长度。应至少完整看到循环重新出现再下结论。</li>
+<li><strong>忽略定义域</strong>：递推式中的分式可能使某些项无意义（分母为零）。解题时如果出现此类值，需检查题目条件是否已避免，或讨论剔除。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong> (2014·全国卷·文·16)</h3>
+<p>数列 ${a_n}$ 满足 $a_{n+1} = \frac{1}{1-a_n}$，且 $a_8=2$，求 $a_1$。</p>
+<p><strong>思路</strong><br />
+已知第 $8$ 项，利用递推公式反向递推，依次计算出 $a_7, a_6, a_5, \dots$ 的值，观察数列是否呈现周期变化，利用周期性直接锁定 $a_1$，避免逐项推到第 $1$ 项的繁琐计算。</p>
+<p><strong>步骤</strong><br />
+1. 由递推式 $a_{n+1} = \frac{1}{1-a_n}$ 反解 $a_n$：<br />
+   当 $a_{n+1} \neq 0$ 时，$1-a_n = \frac{1}{a_{n+1}}$，即 $a_n = 1 - \frac{1}{a_{n+1}}$。
+2. 代入 $n=7$：$a_7 = 1 - \frac{1}{a_8} = 1 - \frac12 = \frac12$。
+3. 代入 $n=6$：$a_6 = 1 - \frac{1}{a_7} = 1 - 2 = -1$。
+4. 代入 $n=5$：$a_5 = 1 - \frac{1}{a_6} = 1 - (-1) = 2$。
+5. 发现 $a_5=2=a_8$，继续试算可验证 $a_4=\frac12$, $a_3=-1$, $a_2=2$, $a_1=\frac12$，数列呈现周期 $T=3$：$2,\ \frac12,\ -1,\ 2,\ \dots$。<br />
+   事实上 $8 \div 3 = 2 \cdots 2$，即 $a_8$ 处于周期的第 $2$ 位（若从 $a_1$ 开始为第 $1$ 位），故 $a_1$ 也对应周期的第 $2$ 位，值为 $\frac12$。</p>
+<p><strong>点评/变式</strong><br />
+本题核心是发现“分式递推→周期数列”的典型模式。若题目改为求 $a_{100}$，利用周期性可立即答出，无需逐项迭代。<br />
+<strong>变式</strong>：若递推式变为 $a_{n+1} = 1 - \frac{1}{a_n}$ 或 $a_{n+1} = \frac{a_n-1}{a_n+1}$ 等，同样可通过计算前几项探索周期，并注意初始项对周期起点的影响。建议考生养成“多算几项、先观察规律”的习惯，这往往是突破递推难题的捷径。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2014-文-16.html">2014-文-16</a>（2014 · 易） 数列递推式已知一项，通过反向迭代求另一项，涉及周期规律识别。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">递推公式应用</a></li>
+</ul>
+</div>
+</body>
+</html>

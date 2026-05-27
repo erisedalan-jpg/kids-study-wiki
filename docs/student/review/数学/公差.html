@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>公差</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>公差</h1><div class="review-mark" data-stem="公差"></div><div class="meta-card"><span><strong>考点</strong>公差</span><span><strong>权重</strong>40</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>数列</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：数列</li>
+<li>权重 weight：40</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：填空13</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>等差数列定义</strong>：从第二项起，每一项与前一项的差等于同一个常数，即 $a_{n+1} - a_n = d$（$n \in \mathbb{N}^<em>$），常数 $d$ 称为</em><em>公差</em>*。</li>
+<li><strong>通项公式</strong>：$a_n = a_1 + (n-1)d$ （$a_1$ 为首项）。</li>
+<li><strong>前 $n$ 项和公式</strong>（必记双形式）：
+  $$ S_n = \frac{n(a_1 + a_n)}{2} = n a_1 + \frac{n(n-1)}{2}d $$
+  适用条件：已知首项和公差（或末项）时灵活选用。</li>
+<li><strong>公差 $d$ 的几何意义</strong>：在 $a_n$ 关于 $n$ 的一次函数关系 $a_n = dn + (a_1 - d)$ 中，$d$ 是斜率；在 $S_n$ 关于 $n$ 的二次函数关系 $S_n = \frac{d}{2}n^2 + (a_1 - \frac{d}{2})n$ 中，二次项系数为 $\frac{d}{2}$，常数项为 $0$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设基本量</strong>：将已知条件中的各项或前 $n$ 项和统一转化为只含 $a_1$ 和 $d$（或 $a_1$ 与某一项）的表达式。</li>
+<li>若出现 $S_n$，优先代入 $S_n = n a_1 + \frac{n(n-1)}{2}d$，避免引入中间项 $a_n$。</li>
+<li><strong>列方程（组）</strong>：利用题设等式等价转化为关于 $d$（或 $a_1$ 与 $d$）的方程。</li>
+<li><strong>解方程求公差</strong>：化简时注意合并同类项，避免计算失误。若方程中 $a_1$ 被消去，则直接得 $d$；若仍含 $a_1$，需结合其他条件联立求解。</li>
+<li><strong>验算（可选）</strong>：将求得的 $d$ 代回原式，确认等式成立，尤其注意符号。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>前 $n$ 项和公式选错致计算复杂</strong>：对 $S_2, S_3$ 等小下标，直接用 $S_2 = a_1 + a_2 = 2a_1 + d$，$S_3 = 3a_1 + 3d$ 最简。切勿生搬硬套末项公式而多设 $a_2, a_3$。</li>
+<li><strong>下标与系数混淆</strong>：$S_3 = 3a_1 + 3d$ 中 $d$ 的系数是 $C_3^2 = 3$（来自 $\frac{3 \times 2}{2}$），不要误写成 $2d$ 或 $6d$。</li>
+<li><strong>移项变号错误</strong>：由 $6a_1 + 3d = 6a_1 + 6d + 6$ 得 $3d - 6d = 6$，最后 $d = -2$。常见失分点为把 $-3d = 6$ 解成 $d = 2$。</li>
+<li><strong>忽略 $d$ 可为负</strong>：习惯性以为公差为正，漏掉负解。实际等式中系数关系决定符号，负公差完全成立。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2022-文-13）<br />
+记 $S_n$ 为等差数列 ${a_n}$ 的前 $n$ 项和．若 $3S_2 = 2S_3 + 6$，则公差 $d = ______$．</p>
+<p><strong>思路</strong><br />
+将 $S_2$ 和 $S_3$ 用首项 $a_1$ 和公差 $d$ 表示，代入等式消去 $a_1$ 直接求出 $d$。选用 $S_n = na_1 + \frac{n(n-1)}{2}d$ 最直接。</p>
+<p><strong>步骤</strong><br />
+1. 写出 $S_2$ 与 $S_3$：
+   $$ S_2 = 2a_1 + \frac{2 \times 1}{2}d = 2a_1 + d $$
+   $$ S_3 = 3a_1 + \frac{3 \times 2}{2}d = 3a_1 + 3d $$
+2. 代入条件 $3S_2 = 2S_3 + 6$：
+   $$ 3(2a_1 + d) = 2(3a_1 + 3d) + 6 $$
+3. 展开并化简：
+   $$ 6a_1 + 3d = 6a_1 + 6d + 6 $$
+   约去 $6a_1$，得：
+   $$ 3d = 6d + 6 $$
+   $$ -3d = 6 $$
+   $$ d = -2 $$
+4. 得公差 $d = -2$。</p>
+<p><strong>点评/变式</strong><br />
+此题只含一个方程，却能求出唯一 $d$，关键在于 $a_1$ 被完美消去，说明条件与首项无关。<br />
+<strong>变式训练</strong>：若将条件改为 $S_3 = 3S_2 + 6$，则 $3a_1 + 3d = 3(2a_1 + d) + 6$ $\Rightarrow$ $3a_1 + 3d = 6a_1 + 3d + 6$ $\Rightarrow$ $-3a_1 = 6$，此时只能求出 $a_1 = -2$，而 $d$ 无法确定。对比可见，不同系数结构决定了未知量能否分离，解题时先预判消元对象可事半功倍。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2022-文-13.html">2022-文-13</a>（2022 · 易） 已知等差数列前2项和与第3项的关系，求公差。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/356-等差数列概念.html">公差</a></li>
+</ul>
+</div>
+</body>
+</html>

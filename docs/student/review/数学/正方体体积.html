@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正方体体积</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>正方体体积</h1><div class="review-mark" data-stem="正方体体积"></div><div class="meta-card"><span><strong>考点</strong>正方体体积</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择4</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>正方体体积公式：若棱长为 $a$，则体积 $V = a^3$。</li>
+<li>正方体的体对角线长：$l = \sqrt{a^2 + a^2 + a^2} = \sqrt{3}a$。</li>
+<li>正方体的外接球：正方体八个顶点均落在球面上，球心与正方体中心重合，外接球的直径 $2R$ 等于正方体的体对角线长，即 $2R = \sqrt{3}a$，外接球半径 $R = \frac{\sqrt{3}}{2}a$。</li>
+<li>球的表面积公式：$S = 4\pi R^2$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>已知正方体体积，直接由 $V = a^3$ 反解棱长 $a = \sqrt[3]{V}$。</li>
+<li>联想正方体与球的位置关系：顶点同在球面上 $\rightarrow$ 球为正方体的外接球。</li>
+<li>建立棱长 $a$ 与外接球半径 $R$ 的关系：$2R = \sqrt{3}a$，即 $R = \frac{\sqrt{3}}{2}a$。</li>
+<li>将 $R$ 代入球的表面积公式 $S = 4\pi R^2$ 计算，注意化简结果保留 $\pi$（高考选择题常见设置）。</li>
+<li>若问题改为内切球（$2R = a$）或与各棱相切的球（$2R = \sqrt{2}a$），对应半径关系随之切换，切忌混淆。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>体对角线公式记错：误记为 $\sqrt{2}a$（面对角线）或 $\sqrt{a^2 + a^2}$ 导致外接球半径算错。</li>
+<li>半径与直径不分：体对角线长等于外接球的直径 $2R$，而非半径 $R$，计算表面积时忘记除以 $2$。</li>
+<li>体积为 $8$ 时，棱长开立方易错算为 $a=2\sqrt{2}$，正确值为 $a=2$。</li>
+<li>球的表面积系数 $4\pi R^2$ 与体积公式 $\frac{4}{3}\pi R^3$ 混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：体积为 $8$ 的正方体的顶点都在同一球面上，则该球面的表面积为____。（2016·全国卷·文）</p>
+<p><strong>思路</strong>：由正方体体积求棱长，由棱长得体对角线，体对角线即外接球直径，再求球半径代入表面积公式。</p>
+<p><strong>步骤</strong>：
+正方体体积 $V = a^3 = 8$，解得棱长 $a = 2$。
+体对角线长 $l = \sqrt{3}a = 2\sqrt{3}$。
+因顶点均在同一球面上，该球为正方体的外接球，其直径 $2R = l = 2\sqrt{3}$，得半径 $R = \sqrt{3}$。
+球的表面积 $S = 4\pi R^2 = 4\pi \times (\sqrt{3})^2 = 12\pi$。</p>
+<p><strong>点评/变式</strong>：
+- 本题为核心套路题，关键点在于正方体结构特征的迁移。外接球、内切球、棱切球三者对应半径公式务必精准记忆。
+- 变式：若原题改为“体积为 $8$ 的正方体的各面都与同一个球相切”，则该球为内切球，直径 $2R = a$，半径 $R = 1$，表面积 $S = 4\pi$；若改为“球与正方体的各条棱都相切”，则直径 $2R = \sqrt{2}a$，半径 $R = \sqrt{2}$，表面积 $S = 8\pi$。对比训练可强化空间想象与公式切换能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2016-文-04.html">2016-文-04</a>（2016 · 易） 根据正方体体积求棱长，再通过体对角线得出外接球半径，计算球的表面积</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">正方体体积</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>直线与圆锥曲线位置关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>直线与圆锥曲线位置关系</h1><div class="review-mark" data-stem="直线与圆锥曲线位置关系"></div><div class="meta-card"><span><strong>考点</strong>直线与圆锥曲线位置关系</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>解析几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：解析几何</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2013–2013</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>直线与圆锥曲线的位置关系，基本方法是通过联立直线与曲线方程，转化为一元二次方程，利用判别式 $\Delta$ 判断交点个数。  </li>
+<li>$\Delta &gt; 0$ $\Leftrightarrow$ 相交（两个公共点）；  </li>
+<li>$\Delta = 0$ $\Leftrightarrow$ 相切（一个公共点）；  </li>
+<li>$\Delta &lt; 0$ $\Leftrightarrow$ 相离（无公共点）。  </li>
+<li>弦长公式（适用于直线 $y=kx+m$ 与二次曲线相交于 $A(x_1,y_1),B(x_2,y_2)$）：<br />
+  $$|AB| = \sqrt{1+k^2}|x_1-x_2| = \sqrt{1+k^2}\frac{\sqrt{\Delta}}{|A_2|},$$<br />
+  或 $|AB| = \sqrt{1+\frac{1}{k^2}}|y_1-y_2|$（斜率 $k$ 存在时）。  </li>
+<li>抛物线焦点弦的性质（以 $y^2=2px\ (p&gt;0)$ 为例）：  </li>
+<li>焦点 $F(\frac{p}{2},0)$，准线 $x=-\frac{p}{2}$。  </li>
+<li>焦半径公式：$|AF| = x_A+\frac{p}{2}$，$|BF| = x_B+\frac{p}{2}$。  </li>
+<li>若焦点弦 $AB$ 的倾斜角为 $\theta$，则 $|AB| = \frac{2p}{\sin^2\theta}$，焦点弦长为 $\frac{2p}{\sin^2\theta}$。  </li>
+<li>韦达定理在弦问题中的应用：<br />
+  联立消元后，$x_1+x_2$、$x_1x_2$（或 $y_1+y_2$、$y_1y_2$）由系数表达，用于处理与弦中点、长度、比例等有关问题。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>设线联立</strong><br />
+   根据条件设出直线方程（常为点斜式 $y-y_0=k(x-x_0)$ 或横截式 $x=ty+m$），注意斜率不存在时的单独讨论。  </li>
+<li><strong>消元得二次方程</strong><br />
+   将直线方程代入曲线方程，消去 $x$ 或 $y$，得到一个一元二次方程，确保二次项系数不为零。  </li>
+<li><strong>判别式与韦达定理</strong><br />
+   写出判别式 $\Delta&gt;0$ 确保有两个交点，写出根与系数的关系式。  </li>
+<li><strong>转化几何条件</strong><br />
+   将长度关系、比例关系、共线关系等几何条件转化为关于交点坐标的代数关系：  </li>
+<li>线段相等或比例：若 $F$ 在弦 $AB$ 上，由 $|AF|=\lambda|BF|(\lambda&gt;0)$ 及 $A,F,B$ 共线，常用向量关系 $\overrightarrow{AF}=\lambda\overrightarrow{FB}$，得到 $x_1-x_F=\lambda(x_F-x_2)$，$y_1-y_F=\lambda(y_F-y_2)$，注意符号。  </li>
+<li>也可直接利用焦半径公式等将长度转化为坐标。  </li>
+<li><strong>解参数</strong><br />
+   联立韦达定理的表达式与几何条件转化出的方程，求出斜率 $k$ 或参数 $m$，并检验是否满足 $\Delta&gt;0$。  </li>
+<li><strong>写出直线方程</strong><br />
+   将求出的参数代回所设直线，最终方程常需写成最简形式。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视斜率不存在的情况</strong>：当设直线为 $y=k(x-x_0)$ 时，必须验证 $x=x_0$ 是否满足题意（如垂直于 $x$ 轴的焦点弦 $|AF|=|BF|$，一般不满足比例不为 1 的条件，但仍需说明排除过程）。  </li>
+<li><strong>长度的比例转化符号错误</strong>：焦点在 $A,B$ 之间时，$\overrightarrow{AF}$ 与 $\overrightarrow{FB}$ 同向，$\overrightarrow{AF}=\lambda\overrightarrow{FB}$；若用线段长度比，则 $|AF|=\lambda|BF|$ 应得出 $y_A - y_F = -\lambda(y_B - y_F)$（若 $y_A&gt;y_F&gt;y_B$），或统一用向量处理避免符号混乱。  </li>
+<li><strong>忘记判别式检验</strong>：求解过程中可能得到多个 $k$ 值，必须代入 $\Delta&gt;0$ 筛选，舍去使二次方程无两个不同实根的解。  </li>
+<li><strong>抛物线焦半径公式记混</strong>：$y^2=2px$ 上点 $P(x_0,y_0)$ 到焦点距离是 $x_0+\frac{p}{2}$，而不是 $x_0+p$ 或其他形式；开口方向不同时公式相应变化。  </li>
+<li><strong>设线消元选择不当</strong>：若消去 $x$ 可能会引入分式或丢失 $x=...$ 的情况，消去 $y$ 得到关于 $x$ 的二次方程更直接，但要根据具体问题选择更简洁的消元方式。本题消 $x$ 得到关于 $y$ 的方程，利用了 $y_1y_2$ 为定值，更为简便。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>【题目】</strong> 抛物线 $C:y^2=4x$ 的焦点为 $F$，直线 $l$ 过 $F$ 且与 $C$ 交于 $A,B$ 两点。若 $|AF|=3|BF|$，求直线 $l$ 的方程。  </p>
+<p><strong>思路</strong><br />
+利用焦点 $F(1,0)$ 设直线 $l:y=k(x-1)$，与抛物线联立消去 $x$，得到关于 $y$ 的二次方程及韦达关系。将长度比例 $|AF|=3|BF|$ 转化为 $A,F,B$ 的共线向量关系：$\overrightarrow{AF}=3\overrightarrow{FB}$，从而建立 $y_1=-3y_2$。结合韦达定理求出 $k$。</p>
+<p><strong>步骤</strong><br />
+1. 由 $y^2=4x$ 知 $2p=4$，$p=2$，焦点 $F(1,0)$。设 $l: y=k(x-1)$。<br />
+2. 由 $x=\frac{y}{k}+1$（$k\neq 0$）代入抛物线：$y^2=4\left(\frac{y}{k}+1\right)$，整理得<br />
+   $$y^2 - \frac{4}{k}y - 4 = 0.$$<br />
+   设 $A(x_1,y_1),B(x_2,y_2)$，则 $\Delta = \frac{16}{k^2}+16 &gt;0$ 恒成立，且<br />
+   $$y_1+y_2 = \frac{4}{k},\quad y_1y_2 = -4.$$<br />
+3. 由 $|AF|=3|BF|$ 且 $F$ 在线段 $AB$ 上，得 $\overrightarrow{AF}=3\overrightarrow{FB}$，即 $(1-x_1,-y_1)=3(x_2-1,y_2-0)$，由纵坐标得 $-y_1=3y_2$，即 $y_1=-3y_2$。<br />
+4. 将 $y_1=-3y_2$ 代入 $y_1y_2=-4$：$-3y_2^2=-4 \Rightarrow y_2^2=\frac{4}{3}$，则 $y_2=\pm\frac{2}{\sqrt{3}}$，进而 $y_1=\mp\frac{6}{\sqrt{3}}$。<br />
+   代入 $y_1+y_2 = \frac{4}{k}$：<br />
+   - 当 $y_2=\frac{2}{\sqrt{3}},y_1=-\frac{6}{\sqrt{3}}$，和 $-\frac{4}{\sqrt{3}} = \frac{4}{k}$，解得 $k=-\sqrt{3}$；<br />
+   - 当 $y_2=-\frac{2}{\sqrt{3}},y_1=\frac{6}{\sqrt{3}}$，和 $\frac{4}{\sqrt{3}} = \frac{4}{k}$，解得 $k=\sqrt{3}$。<br />
+5. 直线 $l$ 的方程为 $y=\sqrt{3}(x-1)$ 或 $y=-\sqrt{3}(x-1)$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将焦点弦长度比例转化为坐标比例，巧妙绕开了焦半径的复杂计算。利用向量共线得到的纵坐标关系简单明了，是处理共线比例问题的通法。<br />
+- 变式：① 若条件改为 $|AF|=\lambda|BF|$，可用同样方法得 $y_1=-\lambda y_2$，结合 $y_1y_2=-p^2$（对于 $y^2=2px$，焦点弦满足 $y_1y_2=-p^2$，本题中 $p=2$，$y_1y_2=-4$），可直接求 $y_1,y_2$ 再得 $k$。<br />
+- 注意，若消去 $x$ 不方便时，也可消去 $y$ 用 $x_1+1=3(x_2+1)$ 及弦长关系处理，但本题消 $y$ 会复杂，选择消 $x$ 更优，体现了根据抛物线方程特征选择消元方向的重要性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2013-文-10.html">2013-文-10</a>（2013 · 中） 本题考查抛物线焦点弦性质，通过直线与抛物线联立，利用弦长比例关系求解直线方程。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1006-直线与圆锥曲线的位置关系.html">直线与圆锥曲线位置关系</a></li>
+</ul>
+</div>
+</body>
+</html>
