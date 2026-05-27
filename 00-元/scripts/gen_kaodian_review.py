@@ -67,18 +67,19 @@ def resolve_concept(kaodian: str, alias_lookup: dict[str, str],
 
 
 def _generate_one(subject: str, kp: str, info: dict, alias_lookup: dict,
-                  weights: dict, call_fn) -> tuple[str, "str | None", str]:
-    """生成单个考点专题。返回 (考点, md或None, 状态)。call_fn(prompt)->带 .text 的结果。"""
-    prompt = build_prompt(subject, kp, info)
+                  weights: dict, call_fn) -> tuple[str, str | None, str]:
+    """生成单个考点专题。返回 (考点, md或None, 状态)。call_fn(prompt)->带 .text 的结果。
+    全程异常安全：任何失败返回 (kp, None, 状态)，绝不抛出（避免中断线程池其余任务）。"""
     try:
+        prompt = build_prompt(subject, kp, info)
         body = call_fn(prompt).text
+        if not body_is_complete(body):
+            return kp, None, "输出空或缺区块"
+        concept_link, weight = resolve_concept(kp, alias_lookup, weights)
+        md = render_md(subject, kp, info, llm_body=body, weight=weight, concept_link=concept_link)
+        return kp, md, "ok"
     except Exception as ex:  # noqa: BLE001
-        return kp, None, f"LLM 失败 {ex}"
-    if not body_is_complete(body):
-        return kp, None, "输出空或缺区块"
-    concept_link, weight = resolve_concept(kp, alias_lookup, weights)
-    md = render_md(subject, kp, info, llm_body=body, weight=weight, concept_link=concept_link)
-    return kp, md, "ok"
+        return kp, None, f"失败 {type(ex).__name__}: {ex}"
 
 
 GROUP = lambda subj: Path(__file__).parent / f"group_考点_{subj}.yaml"

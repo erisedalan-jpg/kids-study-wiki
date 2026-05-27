@@ -124,7 +124,7 @@ class TestGenerateOne(unittest.TestCase):
             raise RuntimeError("net")
         kp, md, st = g._generate_one("数学", "复数", self._info(), {}, {}, boom)
         self.assertIsNone(md)
-        self.assertIn("LLM 失败", st)
+        self.assertIn("失败", st)
 
 
 if __name__ == "__main__":
