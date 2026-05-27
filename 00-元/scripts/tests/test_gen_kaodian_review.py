@@ -44,5 +44,20 @@ class TestRenderMd(unittest.TestCase):
         self.assertIn("[[330-复数概念|复数]]", md)
 
 
+class TestResolveConcept(unittest.TestCase):
+    def test_resolve_concept_uses_alias_lookup(self):
+        import gen_kaodian_review as g
+        alias = {"余弦定理": "126-定理"}
+        link, weight = g.resolve_concept("余弦定理", alias, weights={"126-定理": 87})
+        self.assertEqual(link, "[[126-定理|余弦定理]]")
+        self.assertEqual(weight, 87)
+
+    def test_resolve_concept_missing(self):
+        import gen_kaodian_review as g
+        link, weight = g.resolve_concept("无词条考点", {}, weights={})
+        self.assertEqual(link, "")
+        self.assertEqual(weight, 0)
+
+
 if __name__ == "__main__":
     unittest.main()

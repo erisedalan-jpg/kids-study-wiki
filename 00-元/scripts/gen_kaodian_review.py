@@ -46,6 +46,19 @@ def _import_helpers():
     return REPO_ROOT, read_frontmatter, setup_utf8, call, Task, build_kaodian_map
 
 
+def resolve_concept(kaodian: str, alias_lookup: dict[str, str],
+                    weights: dict[str, str | int]) -> tuple[str, int]:
+    """考点 → (wikilink 到概念词条, weight)。无对应词条返回 ("", 0)。"""
+    stem = alias_lookup.get(kaodian)
+    if not stem:
+        return "", 0
+    try:
+        w = int(weights.get(stem, 0) or 0)
+    except ValueError:
+        w = 0
+    return f"[[{stem}|{kaodian}]]", w
+
+
 GROUP = lambda subj: Path(__file__).parent / f"group_考点_{subj}.yaml"
 
 
@@ -104,6 +117,16 @@ def main() -> int:
     if args.one:
         kmap = {args.one: kmap[args.one]} if args.one in kmap else {}
 
+    from fix_wikilinks import collect_targets
+    _, alias_lookup = collect_targets()
+    weights: dict[str, int] = {}
+    subj_dir = REPO_ROOT / args.subject
+    if subj_dir.is_dir():
+        for cp in subj_dir.glob("*.md"):
+            wf = read_frontmatter(cp)
+            if wf.get("weight"):
+                weights[cp.stem] = wf["weight"]
+
     out_dir = REPO_ROOT / "复习" / args.subject
     out_dir.mkdir(parents=True, exist_ok=True)
     items = list(kmap.items())
@@ -123,8 +146,9 @@ def main() -> int:
         except Exception as ex:  # noqa: BLE001
             print(f"  ⚠ {kp}: LLM 失败 {ex}")
             continue
-        # weight / concept_link 由后续任务（P1.5）回填真实值
-        md = render_md(args.subject, kp, info, llm_body=body, weight=0, concept_link="")
+        concept_link, weight = resolve_concept(kp, alias_lookup, weights)
+        md = render_md(args.subject, kp, info, llm_body=body, weight=weight,
+                       concept_link=concept_link)
         if args.apply:
             fpath.write_text(md, encoding="utf-8")
         done += 1
