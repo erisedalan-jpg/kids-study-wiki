@@ -112,9 +112,10 @@ def main() -> int:
     done = skip = 0
     for kp, info in items:
         fpath = out_dir / f"{_safe_name(kp)}.md"
-        if fpath.exists() and not args.regen:
-            skip += 1
-            continue
+        if fpath.exists():
+            if read_frontmatter(fpath).get("状态") == "已校对" or not args.regen:
+                skip += 1
+                continue
         prompt = build_prompt(args.subject, kp, info)
         try:
             body = call(prompt=prompt, task=Task.COMPLEX,
@@ -122,6 +123,7 @@ def main() -> int:
         except Exception as ex:  # noqa: BLE001
             print(f"  ⚠ {kp}: LLM 失败 {ex}")
             continue
+        # weight / concept_link 由后续任务（P1.5）回填真实值
         md = render_md(args.subject, kp, info, llm_body=body, weight=0, concept_link="")
         if args.apply:
             fpath.write_text(md, encoding="utf-8")
