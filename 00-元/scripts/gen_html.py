@@ -514,8 +514,8 @@ def main() -> int:
     atom_titles: dict[str, str] = {}     # alias / bare-name → stem
     by_subject: dict[str, list] = defaultdict(list)
     all_atoms: list = []
-    for s in SUBJECTS:
-        sd = REPO_ROOT / s
+    for sd in source_dirs():
+        s = sd.name
         if not sd.is_dir():
             continue
         for p in iter_entries(sd):
