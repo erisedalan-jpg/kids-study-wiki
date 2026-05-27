@@ -47,5 +47,26 @@ class TestNormalizeSource(unittest.TestCase):
         self.assertIn("考点: [集合表示法]", new)
 
 
+class TestNormalizeParam(unittest.TestCase):
+    def setUp(self):
+        import normalize_kaodian_source as m
+        self.m = m
+
+    def test_exam_dir_for(self):
+        from pathlib import Path
+        d = self.m.exam_dir_for("北京", "物理")
+        self.assertEqual(d.name, "北京-物理")
+        self.assertEqual(d.parent.name, "真题")
+
+    def test_canon_path_for_subject(self):
+        p = self.m.canon_path_for("化学")
+        self.assertEqual(p.name, "canonical_考点_化学.yaml")
+
+    def test_defaults_jilin_math(self):
+        d = self.m.exam_dir_for("吉林", "数学")
+        self.assertEqual(d.name, "吉林-数学")
+        self.assertEqual(self.m.canon_path_for("数学").name, "canonical_考点_数学.yaml")
+
+
 if __name__ == "__main__":
     unittest.main()

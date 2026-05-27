@@ -4,8 +4,10 @@
 --apply 前要求 git 工作树干净（基线可回退）。
 
 CLI:
-  python 00-元/scripts/normalize_kaodian_source.py            # dry-run：列将改文件+前后diff
-  python 00-元/scripts/normalize_kaodian_source.py --apply    # 写盘（需 git 干净）
+  python 00-元/scripts/normalize_kaodian_source.py                               # dry-run：吉林-数学（默认）
+  python 00-元/scripts/normalize_kaodian_source.py --apply                       # 写盘（需 git 干净）
+  python 00-元/scripts/normalize_kaodian_source.py --province 北京 --subject 数学 # dry-run：北京-数学
+  python 00-元/scripts/normalize_kaodian_source.py --province 北京 --subject 数学 --apply
 """
 from __future__ import annotations
 
@@ -20,14 +22,23 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent))
 from _utils import REPO_ROOT, setup_utf8  # noqa: E402
 
-EXAM_DIR = REPO_ROOT / "真题" / "吉林-数学"
-CANON_YAML = Path(__file__).parent / "canonical_考点_数学.yaml"
+SCRIPT_DIR = Path(__file__).parent
 
 FM_RE = re.compile(r"^(---\s*\n)(.*?)(\n---\s*\n)", re.DOTALL)
 KAO_RE = re.compile(r"^(考点:[ \t]*)(.*)$", re.MULTILINE)
 
 
-def load_canonical(path: Path = CANON_YAML) -> dict[str, str]:
+def exam_dir_for(province: str, subject: str) -> Path:
+    return REPO_ROOT / "真题" / f"{province}-{subject}"
+
+
+def canon_path_for(subject: str) -> Path:
+    return SCRIPT_DIR / f"canonical_考点_{subject}.yaml"
+
+
+def load_canonical(path: Path | None = None) -> dict[str, str]:
+    if path is None:
+        path = canon_path_for("数学")
     if not path.exists():
         return {}
     with path.open(encoding="utf-8") as f:
@@ -86,20 +97,26 @@ def git_clean() -> bool:
 def main() -> int:
     setup_utf8()
     ap = argparse.ArgumentParser()
+    ap.add_argument("--province", default="吉林")
+    ap.add_argument("--subject", default="数学")
     ap.add_argument("--apply", action="store_true", help="写盘（需 git 干净）")
     args = ap.parse_args()
 
-    cmap = load_canonical()
+    exam_dir = exam_dir_for(args.province, args.subject)
+    canon_path = canon_path_for(args.subject)
+    cmap = load_canonical(canon_path)
     if not cmap:
-        print(f"映射表空或不存在：{CANON_YAML}")
+        print(f"映射表空或不存在：{canon_path}")
         return 1
-
+    if not exam_dir.is_dir():
+        print(f"真题目录不存在：{exam_dir}")
+        return 1
     if args.apply and not git_clean():
         print("拒绝：git 工作树不干净，先提交/暂存以保基线。")
         return 1
 
     changed = 0
-    for p in sorted(EXAM_DIR.glob("*.md")):
+    for p in sorted(exam_dir.glob("*.md")):
         text = p.read_text(encoding="utf-8")
         new, before, after = rewrite_text(text, cmap)
         if new == text:
@@ -108,7 +125,7 @@ def main() -> int:
         print(f"{p.name}: {before} → {after}")
         if args.apply:
             p.write_text(new, encoding="utf-8", newline="")
-    print(f"\n{'[APPLY] 已改写' if args.apply else '[dry-run] 将改写'} {changed} 文件")
+    print(f"\n{'[APPLY] 已改写' if args.apply else '[dry-run] 将改写'} {changed} 文件（{exam_dir.name}）")
     return 0
 
 
