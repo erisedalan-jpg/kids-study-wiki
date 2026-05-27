@@ -5,10 +5,11 @@
 
 P1：只含考点频次（无公式/方法/易错速查库，那是 P2）。
 
-CLI:
-  python 00-元/scripts/gen_exam_blueprint.py                 # dry-run 打印各段题位统计
-  python 00-元/scripts/gen_exam_blueprint.py --dump-考点      # 导去重考点+频次（喂归一表）
-  python 00-元/scripts/gen_exam_blueprint.py --apply         # 写 docs/student/数学题位速查.html
+CLI（--subject 默认 数学，可选 物理/化学/生物）:
+  python 00-元/scripts/gen_exam_blueprint.py                          # 数学 dry-run
+  python 00-元/scripts/gen_exam_blueprint.py --dump-考点               # 导去重考点+频次
+  python 00-元/scripts/gen_exam_blueprint.py --apply                  # 写 数学题位速查.html
+  python 00-元/scripts/gen_exam_blueprint.py --subject 物理 --apply   # 写 物理题位速查.html
 """
 from __future__ import annotations
 
@@ -28,6 +29,20 @@ OUT_HTML = REPO_ROOT / "docs" / "student" / "数学题位速查.html"
 NORMALIZE_YAML = Path(__file__).parent / "normalize_考点_数学.yaml"
 GROUP_YAML = Path(__file__).parent / "group_考点_数学.yaml"
 OTHER = "其他"
+
+
+def paths_for(subject: str) -> tuple[Path, Path, Path, Path]:
+    """按学科解析 (真题目录, 归一表, 分组表, 输出HTML)。
+    归一表优先 normalize_考点_<科>.yaml（数学），缺则用 canonical_考点_<科>.yaml
+    （物化生——真题已迁移为 canonical，再套等幂）。"""
+    here = Path(__file__).parent
+    exam_dir = REPO_ROOT / "真题" / f"吉林-{subject}"
+    norm = here / f"normalize_考点_{subject}.yaml"
+    if not norm.exists():
+        norm = here / f"canonical_考点_{subject}.yaml"
+    group = here / f"group_考点_{subject}.yaml"
+    out = REPO_ROOT / "docs" / "student" / f"{subject}题位速查.html"
+    return exam_dir, norm, group, out
 
 ERA_ORDER = ["旧结构(08-22)", "过渡(2023)", "最新(24+)"]
 TYPE_ORDER = {"选择": 0, "填空": 1, "解答": 2}
@@ -78,7 +93,8 @@ def aggregate(rows: list[dict], normalize: dict[str, str]) -> dict:
         era = era_of(year)
         if era is None:
             continue
-        if era == "旧结构(08-22)" and r.get("文理") != "理":
+        # 旧结构去文科卷（数学保留理科；物化生为「不分」理综，不受影响）
+        if era == "旧结构(08-22)" and r.get("文理") == "文":
             continue
         try:
             qno = int(r.get("题号") or 0)
@@ -133,8 +149,8 @@ def tree_to_lines(tree: list[tuple[str, int, list[tuple[str, int]]]]) -> list[st
     return lines
 
 
-def read_rows() -> list[dict]:
-    return [read_frontmatter(p) for p in sorted(EXAM_DIR.glob("*.md"))]
+def read_rows(exam_dir: Path = EXAM_DIR) -> list[dict]:
+    return [read_frontmatter(p) for p in sorted(exam_dir.glob("*.md"))]
 
 
 def load_normalize(path: Path = NORMALIZE_YAML) -> dict[str, str]:
@@ -207,7 +223,7 @@ KATEX_HEAD = """
 """
 
 
-def render_html(agg: dict) -> str:
+def render_html(agg: dict, subject: str = "数学") -> str:
     parts = []
     for era in ERA_ORDER:
         slots = agg.get(era, {})
@@ -234,11 +250,11 @@ def render_html(agg: dict) -> str:
     return f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>数学题位考点速查（吉林）</title>
+<title>{subject}题位考点速查（吉林）</title>
 <link rel="stylesheet" href="./vendor/style.css">
 {PRINT_CSS}{KATEX_HEAD}</head>
 <body><div class="bp-wrap">
-<h1>数学题位考点速查 · 吉林高考</h1>
+<h1>{subject}题位考点速查 · 吉林高考</h1>
 <p class="legend">按卷型三段 × 逐题位，考点按真题频次降序。旧结构按理科卷统计；
 样本 ≤2 标「规律参考」。Ctrl+P 可存 A4 PDF。</p>
 {body}
@@ -251,19 +267,22 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="写盘 HTML")
     ap.add_argument("--dump-考点", dest="dump", action="store_true",
                     help="导去重考点+频次（喂归一表）")
+    ap.add_argument("--subject", default="数学",
+                    help="学科（数学/物理/化学/生物），默认 数学")
     args = ap.parse_args()
 
-    rows = read_rows()
-    print(f"读取 {len(rows)} 题（{EXAM_DIR.name}）", flush=True)
+    exam_dir, norm_yaml, group_yaml, out_html = paths_for(args.subject)
+    rows = read_rows(exam_dir)
+    print(f"读取 {len(rows)} 题（{exam_dir.name}）", flush=True)
 
     if args.dump:
         for name, n in dump_kaodian(rows):
             print(f"{n:>4}  {name}")
         return 0
 
-    normalize = load_normalize()
+    normalize = load_normalize(norm_yaml)
     agg = aggregate(rows, normalize)
-    group = load_group()
+    group = load_group(group_yaml)
     attach_trees(agg, group)
     for era in ERA_ORDER:
         slots = agg.get(era, {})
@@ -277,10 +296,10 @@ def main() -> int:
         print("\n(dry-run) 加 --apply 写 HTML。")
         return 0
 
-    html_out = render_html(agg)
-    OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
-    OUT_HTML.write_text(html_out, encoding="utf-8", newline="")
-    print(f"\n[APPLY] → {OUT_HTML}")
+    html_out = render_html(agg, args.subject)
+    out_html.parent.mkdir(parents=True, exist_ok=True)
+    out_html.write_text(html_out, encoding="utf-8", newline="")
+    print(f"\n[APPLY] → {out_html}")
     return 0
 
 

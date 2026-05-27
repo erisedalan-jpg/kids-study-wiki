@@ -60,6 +60,35 @@ class TestBlueprintCore(unittest.TestCase):
         self.assertEqual(old["难度倾向"], "易")
         self.assertIn(("选择", 1), agg["最新(24+)"])
 
+    def test_aggregate_oldera_drops_wen_keeps_buf(self):
+        # 旧结构去文科卷，但保留「不分」（物化生理综）；数学理科亦保留
+        rows = [
+            {"年份": "2010", "文理": "文", "题型": "选择", "题号": "1",
+             "难度": "易", "考点": "[甲]"},
+            {"年份": "2010", "文理": "不分", "题型": "选择", "题号": "1",
+             "难度": "易", "考点": "[乙]"},
+            {"年份": "2010", "文理": "理", "题型": "选择", "题号": "1",
+             "难度": "易", "考点": "[丙]"},
+        ]
+        agg = self.g.aggregate(rows, {})
+        slot = agg["旧结构(08-22)"][("选择", 1)]
+        kp = dict(slot["考点"])
+        self.assertNotIn("甲", kp)  # 文科被去除
+        self.assertEqual(kp["乙"], 1)  # 不分保留
+        self.assertEqual(kp["丙"], 1)  # 理科保留
+
+    def test_paths_for_subject_resolution(self):
+        from pathlib import Path
+        ed, norm, grp, out = self.g.paths_for("物理")
+        self.assertEqual(ed.name, "吉林-物理")
+        self.assertEqual(grp.name, "group_考点_物理.yaml")
+        self.assertEqual(out.name, "物理题位速查.html")
+        # 物理无 normalize_ 文件，回退 canonical_
+        self.assertEqual(norm.name, "canonical_考点_物理.yaml")
+        # 数学有 normalize_ 文件，优先用之
+        _, mnorm, _, _ = self.g.paths_for("数学")
+        self.assertEqual(mnorm.name, "normalize_考点_数学.yaml")
+
 
 class TestBlueprintIO(unittest.TestCase):
     def setUp(self):
