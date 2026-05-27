@@ -66,6 +66,21 @@ def resolve_concept(kaodian: str, alias_lookup: dict[str, str],
     return f"[[{stem}|{kaodian}]]", w
 
 
+def _generate_one(subject: str, kp: str, info: dict, alias_lookup: dict,
+                  weights: dict, call_fn) -> tuple[str, "str | None", str]:
+    """生成单个考点专题。返回 (考点, md或None, 状态)。call_fn(prompt)->带 .text 的结果。"""
+    prompt = build_prompt(subject, kp, info)
+    try:
+        body = call_fn(prompt).text
+    except Exception as ex:  # noqa: BLE001
+        return kp, None, f"LLM 失败 {ex}"
+    if not body_is_complete(body):
+        return kp, None, "输出空或缺区块"
+    concept_link, weight = resolve_concept(kp, alias_lookup, weights)
+    md = render_md(subject, kp, info, llm_body=body, weight=weight, concept_link=concept_link)
+    return kp, md, "ok"
+
+
 GROUP = lambda subj: Path(__file__).parent / f"group_考点_{subj}.yaml"
 
 
@@ -112,6 +127,7 @@ def main() -> int:
     ap.add_argument("--limit", type=int)
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--regen", action="store_true", help="草稿也重生")
+    ap.add_argument("--workers", type=int, default=16, help="并发生成线程数")
     args = ap.parse_args()
 
     exam_dir = REPO_ROOT / "真题" / f"{args.province}-{args.subject}"
@@ -156,38 +172,50 @@ def main() -> int:
     items = list(kmap.items())
     if args.limit:
         items = items[: args.limit]
-    done = skip = 0
+
+    # --- build todo list (apply skip logic; dry-run path unchanged) ---
+    skip = 0
+    if not args.apply:
+        done = 0
+        for kp, info in items:
+            fpath = out_dir / f"{_safe_name(kp)}.md"
+            if fpath.exists():
+                if read_frontmatter(fpath).get("状态") == "已校对" or not args.regen:
+                    skip += 1
+                    continue
+            print(f"  · {kp}（{info['真题数']}题）", flush=True)
+            done += 1
+        print(f"[dry-run] 将生成 {done} / 跳过 {skip}（复习/{args.subject}）", flush=True)
+        return 0
+
+    # --- apply mode: build todo, then parallel generation ---
+    todo = []
     for kp, info in items:
         fpath = out_dir / f"{_safe_name(kp)}.md"
         if fpath.exists():
             if read_frontmatter(fpath).get("状态") == "已校对" or not args.regen:
                 skip += 1
                 continue
-        if not args.apply:
-            print(f"  · {kp}（{info['真题数']}题）")
-            done += 1
-            continue
-        prompt = build_prompt(args.subject, kp, info)
-        try:
-            body = call(prompt=prompt, task=Task.COMPLEX,
-                        system=f"你是高考{args.subject}复习资料编辑，输出知识密集的应试复习正文。").text
-        except Exception as ex:  # noqa: BLE001
-            print(f"  ⚠ {kp}: LLM 失败 {ex}")
-            continue
-        if not body_is_complete(body):
-            missing = [b for b in _REQUIRED_BLOCKS if b not in body]
-            print(f"  ⚠ {kp}: LLM 输出空或缺区块 {missing or '(空)'}，跳过不写（可重跑补）")
-            continue
-        concept_link, weight = resolve_concept(kp, alias_lookup, weights)
-        md = render_md(args.subject, kp, info, llm_body=body, weight=weight,
-                       concept_link=concept_link)
-        fpath.write_text(md, encoding="utf-8")
-        done += 1
-        print(f"  ✓ {kp}（{info['真题数']}题）")
-    if args.apply:
-        print(f"[APPLY] 生成 {done} / 跳过 {skip}（复习/{args.subject}）")
-    else:
-        print(f"[dry-run] 将生成 {done} / 跳过 {skip}（复习/{args.subject}）")
+        todo.append((kp, info))
+
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    call_fn = lambda p: call(prompt=p, task=Task.COMPLEX,
+                             system=f"你是高考{args.subject}复习资料编辑，输出知识密集的应试复习正文。")
+    done = fail = 0
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futs = {pool.submit(_generate_one, args.subject, kp, info,
+                            alias_lookup, weights, call_fn): kp
+                for kp, info in todo}
+        for fut in as_completed(futs):
+            kp, md, status = fut.result()
+            if md is not None:
+                (out_dir / f"{_safe_name(kp)}.md").write_text(md, encoding="utf-8")
+                done += 1
+                print(f"  ✓ {kp}", flush=True)
+            else:
+                fail += 1
+                print(f"  ⚠ {kp}: {status}", flush=True)
+    print(f"[APPLY] 生成 {done} / 跳过 {skip} / 失败 {fail}（复习/{args.subject}）", flush=True)
     return 0
 
 

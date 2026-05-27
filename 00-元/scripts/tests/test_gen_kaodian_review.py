@@ -88,5 +88,44 @@ class TestBodyComplete(unittest.TestCase):
         self.assertFalse(g.body_is_complete("## 知识精要\nx\n## 高频易错\nx"))
 
 
+class TestGenerateOne(unittest.TestCase):
+    def _fake(self, text):
+        class R:
+            pass
+        r = R()
+        r.text = text
+        return lambda p: r
+
+    def _info(self):
+        return {
+            "父主题": "复数", "真题数": 1, "题位": [("选择", 1)],
+            "难度分布": {"易": 1}, "年份跨度": (2024, 2024),
+            "真题": [{"_bare": "2024-A-01", "年份": "2024", "难度": "易",
+                      "摘要": "求模", "题干文本": "求|z|", "解析文本": "解：..."}],
+        }
+
+    def test_complete_returns_md(self):
+        import gen_kaodian_review as g
+        body = "## 知识精要\nx\n## 解题方法与套路\nx\n## 高频易错\nx\n## 代表题精讲\nx"
+        kp, md, st = g._generate_one("数学", "复数", self._info(), {}, {}, self._fake(body))
+        self.assertEqual(st, "ok")
+        self.assertIsNotNone(md)
+        self.assertIn("## 知识精要", md)
+
+    def test_empty_body_returns_none(self):
+        import gen_kaodian_review as g
+        kp, md, st = g._generate_one("数学", "复数", self._info(), {}, {}, self._fake("  "))
+        self.assertIsNone(md)
+        self.assertIn("空", st)
+
+    def test_call_exception_returns_none(self):
+        import gen_kaodian_review as g
+        def boom(p):
+            raise RuntimeError("net")
+        kp, md, st = g._generate_one("数学", "复数", self._info(), {}, {}, boom)
+        self.assertIsNone(md)
+        self.assertIn("LLM 失败", st)
+
+
 if __name__ == "__main__":
     unittest.main()
