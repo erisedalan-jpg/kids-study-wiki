@@ -117,15 +117,19 @@ def main() -> int:
     if args.one:
         kmap = {args.one: kmap[args.one]} if args.one in kmap else {}
 
-    from fix_wikilinks import collect_targets
-    _, alias_lookup = collect_targets()
-    weights: dict[str, int] = {}
-    subj_dir = REPO_ROOT / args.subject
-    if subj_dir.is_dir():
-        for cp in subj_dir.glob("*.md"):
-            wf = read_frontmatter(cp)
-            if wf.get("weight"):
-                weights[cp.stem] = wf["weight"]
+    if args.apply:
+        from fix_wikilinks import collect_targets
+        _, alias_lookup = collect_targets()
+        weights: dict[str, int] = {}
+        subj_dir = REPO_ROOT / args.subject
+        if subj_dir.is_dir():
+            for cp in subj_dir.glob("*.md"):
+                wf = read_frontmatter(cp)
+                if wf.get("weight"):
+                    weights[cp.stem] = wf["weight"]
+    else:
+        alias_lookup = {}
+        weights = {}
 
     out_dir = REPO_ROOT / "复习" / args.subject
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -139,6 +143,10 @@ def main() -> int:
             if read_frontmatter(fpath).get("状态") == "已校对" or not args.regen:
                 skip += 1
                 continue
+        if not args.apply:
+            print(f"  · {kp}（{info['真题数']}题）")
+            done += 1
+            continue
         prompt = build_prompt(args.subject, kp, info)
         try:
             body = call(prompt=prompt, task=Task.COMPLEX,
@@ -149,11 +157,13 @@ def main() -> int:
         concept_link, weight = resolve_concept(kp, alias_lookup, weights)
         md = render_md(args.subject, kp, info, llm_body=body, weight=weight,
                        concept_link=concept_link)
-        if args.apply:
-            fpath.write_text(md, encoding="utf-8")
+        fpath.write_text(md, encoding="utf-8")
         done += 1
         print(f"  ✓ {kp}（{info['真题数']}题）")
-    print(f"{'[APPLY]' if args.apply else '[dry-run]'} 生成 {done} / 跳过 {skip}（复习/{args.subject}）")
+    if args.apply:
+        print(f"[APPLY] 生成 {done} / 跳过 {skip}（复习/{args.subject}）")
+    else:
+        print(f"[dry-run] 将生成 {done} / 跳过 {skip}（复习/{args.subject}）")
     return 0
 
 
