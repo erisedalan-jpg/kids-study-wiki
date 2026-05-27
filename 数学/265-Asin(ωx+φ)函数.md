@@ -9,7 +9,7 @@ aliases: [Asin(ωx+φ)函数, sinusoidal function, 正弦型函数, 简谐函数
 首次共读:
 最近共读:
 weight: 10
-weight_breakdown: {"prov_gen":{"吉林-理":1},"source":{"课标必考":0,"学习路径":1,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
+weight_breakdown: {"prov_gen":{"吉林-理":1},"source":{"课标必考":0,"学习路径":1,"alias":3},"period":"高中","config_version":"2026-05-20","computed":"2026-05-27"}
 吉林反链: 1
 黑龙江反链: 0
 北京反链: 0

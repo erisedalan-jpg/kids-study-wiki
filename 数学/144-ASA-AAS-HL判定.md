@@ -9,7 +9,7 @@ aliases: [ASA-AAS-HL判定, ASA AAS HL congruence, 角边角判定, 角角边判
 首次共读:
 最近共读:
 weight: 10
-weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":2,"alias":6},"period":"高中","config_version":"2026-05-20","computed":"2026-05-23"}
+weight_breakdown: {"prov_gen":{},"source":{"课标必考":0,"学习路径":2,"alias":6},"period":"高中","config_version":"2026-05-20","computed":"2026-05-27"}
 吉林反链: 0
 黑龙江反链: 0
 北京反链: 0

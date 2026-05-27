@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>奇函数性质</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>奇函数性质</h1><div class="review-mark" data-stem="820-奇函数性质"></div><div class="meta-card"><span><strong>权重</strong>12</span><span><strong>吉林命中</strong>6</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[函数]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 奇函数性质, 奇函数, 奇函数性质判定</p><h1>奇函数性质</h1>
+<blockquote>
+<p><strong>一句话</strong>：若函数 $f(x)$ 定义域关于原点对称，且对任意 $x$ 恒有 $f(-x) = -f(x)$，则 $f(x)$ 为奇函数，其图像关于原点中心对称。
+<strong>English</strong>: A function $f(x)$ is odd if $f(-x) = -f(x)$ for all $x$ in its symmetric domain, and its graph is symmetric about the origin.</p>
+</blockquote>
+<h2>🎓 考点精讲</h2>
+<ul>
+<li>
+<p><strong>定义与判定</strong>：<br />
+  奇函数的严格数学定义为 $f(-x) = -f(x)$ 对定义域内任意 $x$ 成立，且定义域必须关于原点对称（否则直接判定为非奇非偶）。<br />
+  常用判定步骤：先求定义域并检查对称性；再计算 $f(-x)$，化简后与 $-f(x)$ 比较。若 $f(0)$ 有意义，奇函数必过原点，即 $f(0)=0$。</p>
+</li>
+<li>
+<p><strong>运算法则与常用性质</strong>：<br />
+  奇函数 ± 奇函数 = 奇函数；偶函数 ± 偶函数 = 偶函数；奇 × 偶 = 奇；奇 × 奇 = 偶；复合函数 $f(g(x))$：若 $g$ 为奇函数，$f$ 为奇函数，则 $f(g(x))$ 为奇函数，等等。<br />
+  奇函数在关于原点对称的区间上单调性相同（若在 $(a,b)$ 递增，则在 $(-b,-a)$ 也递增）。奇函数的图像若连续，则必有 $f(0)=0$；若不连续，需分段验证。</p>
+</li>
+<li>
+<p><strong>高考典型设问</strong>：</p>
+</li>
+<li><strong>直接判断与参数求值</strong>：给解析式（含参数），利用奇函数定义 $f(-x) = -f(x)$ 列出恒等式对比系数求参数；或给分段函数，要求在原点对称区间上的表达式。</li>
+<li><strong>解不等式与比大小</strong>：已知奇函数在 $(0,+\infty)$ 的单调性或解析式，利用奇偶性与单调性脱去 “$f$” 解抽象不等式，如 $f(2x-1) + f(x) &lt; 0$ 可化为 $f(2x-1) &lt; -f(x) = f(-x)$，再结合单调性去掉函数符号。</li>
+<li>
+<p><strong>图像与积分应用</strong>：利用奇函数图像关于原点对称，快速判断对称区间上的定积分 $\int_{-a}^{a} f(x)dx = 0$（若区间对称且积分存在）。</p>
+</li>
+<li>
+<p><strong>关键方法</strong>：定义法、赋值法（令 $x = 0$、$x = -x$ 等）、图像法。解题时养成“定义域优先”的习惯。</p>
+</li>
+</ul>
+<h2>⚠️ 高频易错点</h2>
+<ul>
+<li><strong>忽略定义域对称性</strong>：拿到函数不检查定义域是否关于原点对称，直接代入 $f(-x)$ 得出错误结论。例如 $f(x) = x^2$($x \in (1,3]$) 非奇非偶。</li>
+<li><strong>滥用 $f(0)=0$</strong>：不审视 0 是否在定义域内就武断写作 $f(0)=0$，或根据 $f(0)=0$ 就反向推出奇函数，忽略了定义域对称与恒等式持久性。</li>
+<li><strong>分段函数奇偶性处理遗漏</strong>：求对称区间解析式时未严格用 $x \in (-\infty,0)$ 时 $-x &gt; 0$ 代入已知表达式取负号，混淆符号出错。</li>
+<li><strong>复合函数奇偶性误判</strong>：错误认为“外奇内奇”或“外偶内奇”等组合的结论，未按定义推导。正确应为 $f(g(-x))=f(-g(x))$，若 $f$ 为偶则等于 $f(g(x))$。</li>
+<li><strong>利用单调性脱 “$f$” 忽视定义域</strong>：解抽象不等式时虽然运用了奇函数变形，但忘写定义域限制范围，导致增解。</li>
+</ul>
+<h2>🌐 中英对照（术语表）</h2>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奇函数</td>
+<td>odd function</td>
+<td>满足 $f(-x)=-f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>偶函数</td>
+<td>even function</td>
+<td>满足 $f(-x)=f(x)$ 的函数</td>
+</tr>
+<tr>
+<td>原点对称</td>
+<td>symmetry about the origin</td>
+<td>奇函数图像的几何特征</td>
+</tr>
+<tr>
+<td>定义域</td>
+<td>domain</td>
+<td>函数自变量允许的取值范围</td>
+</tr>
+<tr>
+<td>恒等式</td>
+<td>identity</td>
+<td>对变量所有取值均成立的等式</td>
+</tr>
+</tbody>
+</table>
+<h2>📑 出处与参考资料</h2>
+<ul>
+<li><strong>教材</strong>：(待主会话核对教材索引)</li>
+<li><strong>课标</strong>：高中数学必修课程“函数的基本性质”（人教版、北师大版等均覆盖）</li>
+<li><strong>生成校对</strong>：DeepSeek-complex 生成于 2026-05-15，由家长核对</li>
+</ul>
+<h2>🔗 相关考点</h2>
+<ul>
+<li><a href="../atoms/284-函数的奇偶性.html">函数的奇偶性</a></li>
+<li><a href="../atoms/658-偶函数性质.html">偶函数性质</a></li>
+<li><a href="../atoms/432-导数与函数单调性.html">函数单调性</a></li>
+<li><a class="dead" title="未收录">抽象函数性质</a></li>
+<li><a class="dead" title="未收录">函数图像的对称性与周期性</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a href="../exam/数学/2008-文-04.html">2008-文-04</a></li>
+<li><a href="../exam/数学/2008-理-03.html">2008-理-03</a></li>
+<li><a href="../exam/数学/2012-文-16.html">2012-文-16</a></li>
+<li><a href="../exam/数学/2018-文-03.html">2018-文-03</a></li>
+<li><a href="../exam/数学/2018-文-12.html">2018-文-12</a></li>
+<li><a href="../exam/数学/2019-文-06.html">2019-文-06</a></li>
+<li><a href="../exam/数学/2019-理-13.html">2019-理-13</a></li>
+<li><a href="../exam/数学/2021-文-09.html">2021-文-09</a></li>
+<li><a href="../exam/数学/2021-理-04.html">2021-理-04</a></li>
+<li><a href="../exam/数学/2022-文-16.html">2022-文-16</a></li>
+</ul></div>
+</div>
+</body>
+</html>
