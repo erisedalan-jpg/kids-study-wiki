@@ -26,5 +26,23 @@ class TestBuildPrompt(unittest.TestCase):
         self.assertNotIn("\\(", p)                 # 模板无 LaTeX 圆括号定界符
 
 
+class TestRenderMd(unittest.TestCase):
+    def test_render_md_has_static_blocks(self):
+        import gen_kaodian_review as g
+        info = {"父主题": "复数", "真题数": 1, "题位": [("选择", 1)],
+                "难度分布": {"易": 1}, "年份跨度": (2024, 2024),
+                "真题": [{"_bare": "2024-A-01", "年份": "2024", "难度": "易",
+                          "摘要": "求模"}]}
+        md = g.render_md("数学", "复数", info, llm_body="## 知识精要\n模长公式",
+                         weight=12, concept_link="[[330-复数概念|复数]]")
+        self.assertIn("考点: 复数", md)            # frontmatter
+        self.assertIn("## 考点定位", md)
+        self.assertIn("## 知识精要", md)           # LLM 段嵌入
+        self.assertIn("## 全部真题清单", md)
+        self.assertIn("[[2024-A-01", md)           # 真题链接
+        self.assertIn("## 关联", md)
+        self.assertIn("[[330-复数概念|复数]]", md)
+
+
 if __name__ == "__main__":
     unittest.main()
