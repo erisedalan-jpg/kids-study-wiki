@@ -40,6 +40,16 @@ OUT_DIR = REPO_ROOT / "docs" / "student"
 SUBJECTS = ["数学", "物理", "化学", "生物"]
 DEFAULT_THRESHOLD = 3
 
+
+def source_dirs() -> list[Path]:
+    """返回学科词条源目录列表（4 科学科目录，供原子页渲染）。"""
+    return [REPO_ROOT / s for s in SUBJECTS]
+
+
+def review_source_dirs() -> list[Path]:
+    """返回复习专题源目录列表（复习/{学科}/，供复习页渲染）。"""
+    return [REPO_ROOT / "复习" / s for s in SUBJECTS]
+
 # KaTeX 0.16.11 离线包（首次需联网下载；之后完全离线）
 KATEX_VERSION = "0.16.11"
 KATEX_CDN = f"https://cdn.jsdelivr.net/npm/katex@{KATEX_VERSION}/dist"
@@ -356,6 +366,37 @@ def gen_exam_page(path: Path, fm: dict[str, str], body: str,
     return render_page(title, content, depth=2)
 
 
+def gen_review_page(path: Path, fm: dict[str, str], body: str,
+                    resolve: callable) -> str:
+    """考点专题复习页（复习/{学科}/{考点}.md → review/{学科}/{stem}.html）。
+
+    使用与 gen_atom_page 相同的 md_to_html + render_page 管道；
+    depth=2 使 vendor/style.css 路径正确（../../vendor/...）。
+    """
+    title = fm_get(fm, "title", path.stem)
+    weight = int(fm_get(fm, "weight", "0") or 0)
+    subject = fm_get(fm, "学科")
+    parent = fm_get(fm, "父主题")
+    exam_count = fm_get(fm, "真题数", "0")
+
+    meta = (
+        '<div class="meta-card">'
+        f'<span><strong>考点</strong>{html.escape(title)}</span>'
+        f'<span><strong>权重</strong>{weight}</span>'
+        f'<span><strong>真题数</strong>{html.escape(exam_count)}</span>'
+        f'<span><strong>学科</strong>{html.escape(subject)}</span>'
+        f'<span><strong>父主题</strong>{html.escape(parent)}</span>'
+        '</div>'
+    )
+
+    body_html = md_to_html(body, resolve, depth=2,
+                           relative_repo_prefix="../../../../",
+                           current_subject=subject)
+    mark_hook = f'<div class="review-mark" data-stem="{html.escape(path.stem)}"></div>'
+    content = f'<h1>{html.escape(title)}</h1>{mark_hook}{meta}{body_html}'
+    return render_page(title, content, depth=2)
+
+
 def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
                       thresholds: dict[str, int]) -> str:
     title = f"{subject} · 高频考点（吉林冲刺）"
@@ -465,6 +506,7 @@ def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "atoms").mkdir(exist_ok=True)
     (OUT_DIR / "exam").mkdir(exist_ok=True)
+    (OUT_DIR / "review").mkdir(exist_ok=True)
     (OUT_DIR / "vendor").mkdir(exist_ok=True)
 
     # 1) 扫所有 4 科词条 + 取 weight ≥ threshold
@@ -532,6 +574,22 @@ def main() -> int:
                 html_out, encoding="utf-8", newline="")
             n_atom += 1
 
+    # 3.5) 复习考点专题页（复习/{学科}/*.md → review/{学科}/{stem}.html）
+    n_review = 0
+    for rd in review_source_dirs():
+        if not rd.is_dir():
+            continue
+        subj_review_dir = OUT_DIR / "review" / rd.name
+        subj_review_dir.mkdir(parents=True, exist_ok=True)
+        for p in sorted(rd.glob("*.md")):
+            text = p.read_text(encoding="utf-8")
+            fm = read_frontmatter(p)
+            body = FM_RE.sub("", text, count=1)
+            html_out = gen_review_page(p, fm, body, resolve)
+            (subj_review_dir / f"{p.stem}.html").write_text(
+                html_out, encoding="utf-8", newline="")
+            n_review += 1
+
     # 4) 真题题级页（仅子集中词条反链命中的题，按当前学科消歧 stem）
     #    referenced_by_subject: 学科 → set(stem)，因同 stem 跨学科是不同题
     referenced_by_subject: dict[str, set[str]] = defaultdict(set)
@@ -574,7 +632,7 @@ def main() -> int:
     (OUT_DIR / "index.html").write_text(
         gen_home(stats, total, args.threshold), encoding="utf-8", newline="")
 
-    print(f"\n[APPLY] 词条 {n_atom} / 真题 {n_exam} / 索引 5 / 首页 1 → {OUT_DIR}")
+    print(f"\n[APPLY] 词条 {n_atom} / 真题 {n_exam} / 复习 {n_review} / 索引 5 / 首页 1 → {OUT_DIR}")
     return 0
 
 

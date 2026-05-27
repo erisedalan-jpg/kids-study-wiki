@@ -56,5 +56,69 @@ class TestReviewHooks(unittest.TestCase):
         self.assertIn('id="review-io"', page)
 
 
+class TestGenHtmlReview(unittest.TestCase):
+    def setUp(self):
+        import gen_html
+        self.gh = gen_html
+
+    def test_source_dirs_returns_subject_dirs(self):
+        dirs = self.gh.source_dirs()
+        names = [d.name for d in dirs]
+        self.assertEqual(names, self.gh.SUBJECTS)
+
+    def test_review_source_dirs_included(self):
+        dirs = self.gh.review_source_dirs()
+        # Each dir should be under 复习/
+        for d in dirs:
+            parts = d.parts
+            self.assertIn("复习", parts,
+                          msg=f"Expected '复习' in path parts of {d}")
+        # All SUBJECTS should be covered
+        names = [d.name for d in dirs]
+        self.assertEqual(names, self.gh.SUBJECTS)
+
+    def test_review_dir_included(self):
+        """Confirm 复习 appears in review_source_dirs (shape the task spec checks for)."""
+        dirs = self.gh.review_source_dirs()
+        self.assertTrue(
+            any(
+                getattr(d, "name", "") == "复习"
+                or str(d).replace("\\", "/").rstrip("/").endswith("复习")
+                or "复习" in str(d)
+                for d in dirs
+            )
+        )
+
+    def test_gen_review_page_renders_html(self):
+        """gen_review_page uses md_to_html + render_page pipeline and returns HTML."""
+        fm = {
+            "title": "二次函数",
+            "考点": "二次函数",
+            "父主题": "函数",
+            "学科": "数学",
+            "weight": "8",
+            "真题数": "5",
+            "状态": "草稿",
+        }
+        page = self.gh.gen_review_page(
+            Path("二次函数.md"), fm, "## 核心内容\n\n$y=ax^2+bx+c$",
+            lambda *a, **kw: ""
+        )
+        self.assertIn("<!DOCTYPE html>", page)
+        self.assertIn("二次函数", page)
+        self.assertIn("函数", page)      # 父主题
+        self.assertIn("数学", page)      # 学科
+        self.assertIn("review-mark", page)
+
+    def test_review_page_depth_is_2(self):
+        """review/{学科}/{stem}.html is at depth=2; vendor path uses ../../."""
+        fm = {"title": "T", "考点": "T", "父主题": "P", "学科": "数学",
+              "weight": "1", "真题数": "1", "状态": "草稿"}
+        page = self.gh.gen_review_page(
+            Path("T.md"), fm, "body", lambda *a, **kw: ""
+        )
+        self.assertIn("../../vendor/style.css", page)
+
+
 if __name__ == "__main__":
     unittest.main()
