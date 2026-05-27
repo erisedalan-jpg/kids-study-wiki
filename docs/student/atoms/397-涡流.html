@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>涡流</title>
+<link rel="stylesheet" href="../vendor/style.css">
+
+<link rel="stylesheet" href="../vendor/katex/katex.min.css">
+<script defer src="../vendor/katex/katex.min.js"></script>
+<script defer src="../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../index.html">总览</a><a href="../数学.html">数学</a><a href="../物理.html">物理</a><a href="../化学.html">化学</a><a href="../生物.html">生物</a></div>
+<h1>涡流</h1><div class="review-mark" data-stem="397-涡流"></div><div class="meta-card"><span><strong>权重</strong>7</span><span><strong>吉林命中</strong>1</span><span><strong>路径</strong>0</span><span><strong>学段</strong>[高中]</span><span><strong>主题</strong>[选必二, 电磁感应]</span></div><p style="font-size:0.9em;color:#666;"><strong>aliases</strong>: 涡流, eddy current, Foucault current</p><h2>🎓 涡流（高中物理）</h2>
+<h3>定义</h3>
+<p><strong>涡流</strong>（eddy current，又称傅科电流）是指当<strong>整块导体</strong>置于变化的磁场中（或在磁场中运动）时，导体内部感应产生的<strong>闭合电流</strong>。因为这些电流的流动路径像水的涡旋，故称涡流。</p>
+<h3>产生机理</h3>
+<p>涡流是电磁感应的一种宏观表现：
+- 变化的磁场穿过导体块 → 导体中各处感应出电动势
+- 导体本身构成闭合回路 → 电流在导体内部自由流动
+- 涡流路径复杂，呈漩涡状</p>
+<h3>涡流的危害与防护</h3>
+<p><strong>危害</strong>：
+1. <strong>发热损耗（铁损）</strong>：变压器铁芯、电动机定子铁芯中的涡流产生大量热，降低效率。
+2. <strong>意外加热</strong>：感应炉之外的金属部件发热。</p>
+<p><strong>防护措施</strong>（减小涡流）：
+- 铁芯用<strong>硅钢片叠压</strong>（互相绝缘），而非整块铁芯
+- 硅钢片平行于磁通量方向叠合，截断涡流路径，大大增加等效电阻，减小涡流
+- 使用<strong>高磁导率、高电阻率</strong>材料（如铁氧体）</p>
+<h3>涡流的利用</h3>
+<table>
+<thead>
+<tr>
+<th>应用</th>
+<th>原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电磁感应炉（感应加热）</strong></td>
+<td>高频交变磁场在金属中产生强涡流，将金属加热至熔化</td>
+</tr>
+<tr>
+<td><strong>涡流制动（磁流体制动）</strong></td>
+<td>列车、电表中利用涡流产生制动力（楞次定律阻碍运动）</td>
+</tr>
+<tr>
+<td><strong>电磁炉</strong></td>
+<td>高频交变磁场在铁锅底部产生涡流，直接加热锅底</td>
+</tr>
+<tr>
+<td><strong>金属探测器</strong></td>
+<td>金属中的涡流改变探测线圈的磁通量，触发报警</td>
+</tr>
+</tbody>
+</table>
+<h3>涡流制动的分析</h3>
+<p>当导体在磁场中运动时，内部涡流在磁场中受安培力，其方向（由楞次定律）总是<strong>阻碍</strong>导体的运动，产生制动效果（类似于"磁刹车"）。</p>
+<p>$$F_{\text{制动}} \propto v \cdot B^2$$（速度越大，制动力越大）</p>
+<p>这种制动平稳无接触，用于高速列车、精密仪器。</p>
+<h3>典型例题</h3>
+<p><strong>例（定性分析）</strong>：铝板在强磁场两极间运动时，为何会受到阻力？</p>
+<p>铝板运动切割磁感线 → 铝板内部产生涡流 → 涡流在磁场中受安培力 → 安培力方向（楞次定律）阻碍铝板运动 → 产生阻力（涡流制动）。</p>
+<h3>易错点</h3>
+<ol>
+<li>涡流不是"坏东西"——感应炉、电磁炉正是利用涡流。</li>
+<li>变压器铁芯用硅钢片，是为了<strong>减小涡流</strong>（减少铁损），不是为了增大磁通量。</li>
+<li>涡流的热效应遵从焦耳定律：$Q = I^2Rt$，只是涡流路径复杂，$R$ 难以精确计算。</li>
+</ol>
+<hr />
+<h2>📑 出处</h2>
+<ul>
+<li><strong>课标</strong>：《普通高中物理课程标准（2017年版2020年修订）》选择性必修课程·选择性必修第二册·第二章</li>
+<li><strong>教材</strong>：<code>素材/教材/ChinaTextbook/高中/物理/人教版-人民教育出版社/普通高中教科书·物理选择性必修 第二册.pdf</code>（第二章，页码待家长核对）</li>
+<li><strong>百科</strong>：涡流 - 维基百科（家长可自行搜索）</li>
+<li><strong>生成校对</strong>：Claude Sonnet 4.6 生成于 2026-05-09，由家长核对</li>
+</ul>
+<h2>🔗 相关词条</h2>
+<ul>
+<li><a class="dead" title="未收录">电磁感应现象</a></li>
+<li><a href="../atoms/393-楞次定律.html">楞次定律</a></li>
+<li><a href="../atoms/411-自感.html">自感</a></li>
+<li><a href="../atoms/377-互感.html">互感</a></li>
+<li><a href="../atoms/381-变压器.html">变压器</a></li>
+<li><a class="dead" title="未收录">电磁感应应用</a></li>
+<li><a class="dead" title="未收录">电磁感应能量转化</a></li>
+</ul>
+<div class="backlink-card"><h3>📌 高考真题命中</h3><ul>
+<li><a class="dead" title="未收录">2012-北京-07</a></li>
+<li><a class="dead" title="未收录">2015-新课标Ⅰ-06</a></li>
+<li><a href="../exam/物理/2020-新课标Ⅱ-01.html">2020-新课标Ⅱ-01</a></li>
+</ul></div>
+</div>
+</body>
+</html>
