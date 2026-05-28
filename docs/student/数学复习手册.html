@@ -32,6 +32,9 @@
 </style>
 
 <style>
+  /* 固定 A4 + 统一基础字号：四科一致（≈生物），防 Chromium 按内容宽度整体缩放 */
+  @page { size: A4; margin: 12mm; }
+  body { font-size: 11.5pt; }
   /* 手册专用样式（补充 PRINT_CSS 基础样式） */
   .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; overflow-wrap: anywhere; word-break: break-word; }
   .hb-title { font-size: 1.8em; font-weight: bold; margin: 12px 0 4px; }
@@ -5955,7 +5958,7 @@ D. $\neg(p\lor q)$</p>
   设 $f(x)$ 在 $[a,b]$ 上可积，称 $\Phi(x)=\int_{a}^{x} f(t) \,dt \quad (a \le x \le b)$ 为积分上限函数（变上限积分）。<br />
   若 $f(x)$ 在 $[a,b]$ 上连续，则 $\Phi(x)$ 在 $[a,b]$ 上可导，且<br />
   $$\Phi'(x)=f(x)$$<br />
-  更一般地，$\frac{d}{dx}\int_{a}^{g(x)}f(t) dt = f\big(g(x)\big)·g'(x)$（需 $f$ 连续，$g$ 可导）。</p>
+  更一般地，$\frac{d}{dx}\int_{a}^{g(x)}f(t) dt = f\big(g(x)\big)\cdot g'(x)$（需 $f$ 连续，$g$ 可导）。</p>
 </li>
 <li>
 <p><strong>定积分求平面图形面积</strong><br />
@@ -11614,7 +11617,7 @@ $\frac{2x_M}{8}+\frac{2y_M\cdot k}{4}=0 \Rightarrow \frac{x_M}{4}+\frac{y_M k}{2
 将 $P_{1}(15,4)$ 代入 $C$：
 $$15^{2}-4^{2}=m \;\Longrightarrow\; 225-16=209=m.$$
 故双曲线标准方程为
-$$\frac{x^{2}}{209}-\frac{y^{2}}{209}}=1\quad\text{或保留 }x^{2}-y^{2}=209.$$
+$$\frac{x^{2}}{209}-\frac{y^{2}}{209}=1\quad\text{或保留 }x^{2}-y^{2}=209.$$
 （后续可写直线方程 $y-4=k(x-15)$，与双曲线左支联立求 $Q_{1}$，再通过对称得 $P_{2}$，以此类推。）<br />
 <strong>点评/变式</strong><br />
 求曲线方程中的参数，直接代入满足条件的点是最高效的方法。此题双曲线为等轴双曲线 $x^{2}-y^{2}=m$，得出参数后即得完整标准方程。若点不在曲线上而是已知其它几何关系（如距离、焦点），则需结合 $a,b,c$ 关系求解。</p>
@@ -58549,4 +58552,22 @@ A．2个　　B．4个　　C．6个　　D．8个</p>
 <ul>
 <li>概念词条：子集个数</li>
 </ul></section></div></div>
-</div></body></html>
+</div>
+
+<script>
+window.addEventListener('load', function () {
+  function fit() {
+    var sel = ['.katex-display', '.kp-zhuanti table', '.kp-zhuanti pre'];
+    document.querySelectorAll(sel.join(',')).forEach(function (el) {
+      el.style.zoom = '';
+      var inner = el.querySelector('.katex') || el;
+      var avail = el.clientWidth || (el.parentElement && el.parentElement.clientWidth) || 0;
+      var w = inner.scrollWidth;
+      if (avail > 0 && w > avail) el.style.zoom = (avail / w).toFixed(4);
+    });
+  }
+  setTimeout(fit, 400);
+});
+</script>
+
+</body></html>
