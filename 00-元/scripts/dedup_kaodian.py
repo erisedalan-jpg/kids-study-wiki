@@ -118,3 +118,48 @@ def is_contrast_pair(a: str, b: str, groups: list[set[str]]) -> bool:
                     if t2 != t1 and a.replace(t1, t2) == b:
                         return True
     return False
+
+
+def load_canonical_map(subject: str) -> dict[str, str]:
+    """读 canonical_考点_<科>.yaml（变体→规范名）。无表则报错退出。"""
+    path = Path(__file__).parent / f"canonical_考点_{subject}.yaml"
+    if not path.exists():
+        raise SystemExit(f"无 canonical 表（非 4 理科？）：{subject}")
+    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def load_canonical_names(subject: str) -> set[str]:
+    """canonical 表的规范名（RHS）去重集——去重宇宙。"""
+    return set(load_canonical_map(subject).values())
+
+
+def load_parent_map(subject: str) -> dict[str, str]:
+    """规范名 → 父主题；未列入由调用方归「其他」。"""
+    import gen_exam_blueprint as g
+    _, _, group_yaml, _ = g.paths_for(subject)
+    return g.load_group(group_yaml) if group_yaml.exists() else {}
+
+
+def stats_from_rows(rows: list[dict], normalize: dict, group: dict) -> dict[str, dict]:
+    """纯函数：真题行 → {规范名: {真题数,题位,父主题,...}}。行内考点先 parse + canon 归一，
+    并按行去重（同行多个变体若归同一规范名，只计一次，防 build_kaodian_map 重复 append）。"""
+    import gen_exam_blueprint as g
+    from kaodian_aggregate import build_kaodian_map
+    atoms = []
+    for r in rows:
+        kps = sorted({g.canon(k, normalize) for k in g.parse_kaodian(r.get("考点", ""))})
+        a = dict(r)
+        a["考点"] = kps
+        atoms.append(a)
+    return build_kaodian_map(atoms, group)
+
+
+def load_exam_stats(subject: str) -> dict[str, dict]:
+    """读吉林卷真题 → 规范名统计（缺真题的规范名不在内，调用方默认 0）。
+    用 canonical 表归一（真题已迁移规范名，canon 等幂/兜底零散变体）。"""
+    import gen_exam_blueprint as g
+    exam_dir, _, group_yaml, _ = g.paths_for(subject)
+    rows = g.read_rows(exam_dir) if exam_dir.exists() else []
+    normalize = load_canonical_map(subject)
+    group = g.load_group(group_yaml) if group_yaml.exists() else {}
+    return stats_from_rows(rows, normalize, group)
