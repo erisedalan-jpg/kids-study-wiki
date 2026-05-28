@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>测试复习手册</title>
+<link rel="stylesheet" href="./vendor/style.css">
+
+<style>
+  body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color:#222; margin:0; }
+  .bp-wrap { max-width: 980px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.5em; margin: 8px 0; }
+  .era { margin-top: 18px; }
+  .era > h2 { border-bottom: 2px solid #333; padding-bottom: 4px; }
+  .slot { border: 1px solid #ccc; border-radius: 6px; padding: 8px 10px; margin: 8px 0;
+          break-inside: avoid; page-break-inside: avoid; }
+  .slot-h { font-weight: bold; margin-bottom: 4px; }
+  .slot-meta { color:#666; font-weight: normal; font-size: 0.85em; }
+  .kp { display: inline-block; margin: 2px 8px 2px 0; padding: 1px 6px;
+        background: #f0f0f0; border-radius: 4px; font-size: 0.92em; }
+  .kp b { color:#000; }
+  .bp-tree { font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+    white-space: pre; font-size: 0.9em; line-height: 1.55; margin: 4px 0 0; }
+  .bp-tree .tline { margin: 0; }
+  .thin { color:#a00; font-size: 0.85em; }
+  .legend { color:#666; font-size: 0.85em; margin: 6px 0 14px; }
+  @media print {
+    .bp-wrap { max-width: none; padding: 0; }
+    .era { page-break-before: always; }
+    .era:first-of-type { page-break-before: avoid; }
+    .slot { break-inside: avoid; page-break-inside: avoid; }
+    a { color:#000; text-decoration: none; }
+  }
+</style>
+
+<style>
+  /* 固定 A4 + 统一基础字号：四科一致（≈生物），防 Chromium 按内容宽度整体缩放 */
+  @page { size: A4; margin: 12mm; }
+  body { font-size: 11.5pt; }
+  /* 手册专用样式（补充 PRINT_CSS 基础样式） */
+  .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; overflow-wrap: anywhere; word-break: break-word; }
+  .hb-title { font-size: 1.8em; font-weight: bold; margin: 12px 0 4px; }
+  .hb-subtitle { color: #666; font-size: 0.95em; margin-bottom: 16px; }
+
+  /* 题位速查节 */
+  .tree-section { margin-bottom: 24px; }
+  .tree-section > h2 { border-bottom: 2px solid #333; padding-bottom: 4px; font-size: 1.2em; }
+  .slot-block { border: 1px solid #ccc; border-radius: 6px; padding: 8px 10px;
+                margin: 6px 0; break-inside: avoid; page-break-inside: avoid; }
+  .slot-title { font-weight: bold; font-size: 1em; margin-bottom: 4px; }
+  .slot-meta  { color: #666; font-weight: normal; font-size: 0.85em; }
+  .bp-tree { font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+             white-space: pre; font-size: 0.88em; line-height: 1.5; margin: 4px 0 0; }
+  .kp-link { color: #0055cc; text-decoration: none; }
+  .kp-link:hover { text-decoration: underline; }
+
+  /* 考点专题节 */
+  .parent-group { margin-top: 28px; }
+  .parent-group > h2 { font-size: 1.25em; border-left: 4px solid #555;
+                       padding-left: 8px; margin-bottom: 8px; }
+  .kp-zhuanti { margin-top: 16px; padding: 12px 14px 8px;
+                border: 1px solid #ddd; border-radius: 6px;
+                break-inside: avoid; page-break-inside: avoid;
+                overflow-wrap: anywhere; word-break: break-word; }
+  .kp-header  { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; color: #1a1a1a; }
+  .kp-meta    { font-size: 0.85em; color: #888; margin-bottom: 8px; }
+  .kp-zhuanti h2 { font-size: 1em; border-bottom: 1px solid #eee;
+                   padding-bottom: 2px; margin: 10px 0 4px; }
+  .kp-zhuanti h3 { font-size: 0.95em; margin: 8px 0 2px; }
+  .kp-zhuanti p  { margin: 4px 0 6px; font-size: 0.93em; line-height: 1.55; }
+  .kp-zhuanti ul, .kp-zhuanti ol { margin: 4px 0 6px 18px; font-size: 0.93em; }
+  .kp-zhuanti table { border-collapse: collapse; font-size: 0.88em; margin: 6px 0; }
+  .kp-zhuanti th, .kp-zhuanti td { border: 1px solid #ccc; padding: 3px 7px; }
+  .kp-zhuanti pre { background: #f6f6f6; padding: 8px; font-size: 0.85em;
+                    overflow-x: auto; border-radius: 4px; }
+
+  @media print {
+    .hb-wrap { max-width: none; padding: 0; }
+    .tree-section { page-break-before: always; }
+    .tree-section:first-of-type { page-break-before: avoid; }
+    .kp-zhuanti { page-break-before: always; }
+    a { color: #000; text-decoration: none; }
+    .kp-link { color: #000; }
+    .slot-block { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+
+<link rel="stylesheet" href="./vendor/katex/katex.min.css">
+<script defer src="./vendor/katex/katex.min.js"></script>
+<script defer src="./vendor/katex/contrib/mhchem.min.js"></script>
+<script defer src="./vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[
+    {left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+    throwOnError:false});"></script>
+</head>
+<body><div class="hb-wrap">
+<div class="hb-title">测试复习手册 · 吉林高考冲刺</div>
+<div class="hb-subtitle">题位速查脑图（顶部）+ 考点专题（正文）| Ctrl+P → A4 PDF</div>
+<div class="parent-group"><div class="kp-zhuanti"><p>正文测量段落字号是否被整体缩放，基准应为十点七磅左右的小四号字。This is a normal body paragraph used to measure the rendered font size.</p><p>$\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}\rightarrow\text{反应管硬质试管坩埚水蒸气检验无水CuSO4}$</p></div></div>
+</div>
+
+<script>
+function hbFit() {
+  var wrap = document.querySelector('.hb-wrap');
+  if (!wrap) return;
+  // 打印内容宽：A4(210mm) − 2×12mm 页边距 = 186mm @96dpi ≈ 703px；留 6px 安全余量
+  // 防边框/亚像素仍触发 Chromium 全局缩放。
+  var W = (186 * 96 / 25.4) - 6;
+  // 超出页宽的元素用 font-size 比例缩小（真正改变布局宽度）：
+  // 题位速查树 .bp-tree、行内/块级公式 .katex、表格、代码块
+  var sel = ['.bp-tree', '.katex', '.kp-zhuanti table', 'table', '.kp-zhuanti pre'];
+  document.querySelectorAll(sel.join(',')).forEach(function (el) {
+    el.style.fontSize = '';
+    // 迭代收敛：含 CJK 的 \text 公式宽度不随 font-size 线性缩放，单次会欠缩，
+    // 故重测后再缩，最多 4 次（每次必再小，快速收敛）。
+    for (var k = 0; k < 4 && el.scrollWidth > W; k++) {
+      var fs = parseFloat(getComputedStyle(el).fontSize);
+      el.style.fontSize = (fs * W / el.scrollWidth).toFixed(2) + 'px';
+    }
+  });
+}
+window.addEventListener('load', function () { setTimeout(hbFit, 500); });
+</script>
+
+</body></html>

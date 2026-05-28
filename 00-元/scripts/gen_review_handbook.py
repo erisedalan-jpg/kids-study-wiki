@@ -362,21 +362,33 @@ def build_full_html(subject: str, body_html: str) -> str:
     )
 
 
-# KaTeX 渲染后，把超出页宽的公式/表格用 zoom 局部缩小到恰好适配。
+# KaTeX 渲染后，把超出页宽的公式/表格用 font-size 局部缩小到恰好适配。
 # 这样没有元素超出页宽，Chromium 不再对整本做"适配页宽"缩放 → 四科正文字号统一。
+#
+# 两个关键点（踩坑见 docs/superpowers/working/_handbook_pdf_handoff.md）：
+#  1) 必须用 font-size 而非 zoom：CSS zoom 只缩"绘制矩形"，不改布局宽度，父容器仍溢出
+#     → Chromium 打印"整体缩放适配纸宽"照旧触发（化学曾被压到 0.66，正文 7.1pt）。
+#     font-size 改变真实布局宽度。
+#  2) 必须用 getBoundingClientRect().width 而非 scrollWidth 判超宽：含 SVG 拉伸箭头的公式
+#     （mhchem \\ce{}、\\xrightarrow）scrollWidth 恒为 0，scrollWidth 判据会漏掉它们；
+#     化学满是 \\ce 反应，最宽的 SVG 箭头公式(~1126px)正是逼出 0.66 整体缩放的元凶。
+#  3) 必须用真实打印宽而非 wrap.clientWidth：JS 在 screen 布局执行（视口≈800px），
+#     与打印实际内容宽（A4 210mm − 2×12mm 边距 = 186mm ≈ 703px @96dpi）不符。
 _FIT_SCRIPT = """
 <script>
 function hbFit() {
   var wrap = document.querySelector('.hb-wrap');
   if (!wrap) return;
-  var W = wrap.clientWidth;               // 页面内容宽（打印=A4-边距）
-  if (!W) return;
-  // 任何超出页宽的元素都会触发 Chromium 全局缩放，统统 zoom 到适配：
-  // 题位速查树 .bp-tree、行内/块级公式 .katex、表格、代码块
+  var W = (186 * 96 / 25.4) - 6;   // 打印内容宽 ≈703px，留 6px 安全余量
   var sel = ['.bp-tree', '.katex', '.kp-zhuanti table', 'table', '.kp-zhuanti pre'];
   document.querySelectorAll(sel.join(',')).forEach(function (el) {
-    el.style.zoom = '';
-    if (el.scrollWidth > W) el.style.zoom = (W / el.scrollWidth).toFixed(4);
+    el.style.fontSize = '';
+    // 迭代收敛：含 CJK/SVG 的公式宽度不随 font-size 线性缩放，单次会欠缩，
+    // 重测后再缩，最多 5 次（每次必再小，快速收敛）。用渲染宽 getBoundingClientRect。
+    for (var k = 0; k < 5 && el.getBoundingClientRect().width > W; k++) {
+      var fs = parseFloat(getComputedStyle(el).fontSize);
+      el.style.fontSize = (fs * W / el.getBoundingClientRect().width).toFixed(2) + 'px';
+    }
   });
 }
 window.addEventListener('load', function () { setTimeout(hbFit, 500); });
