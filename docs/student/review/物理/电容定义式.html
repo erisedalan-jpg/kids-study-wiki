@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电容定义式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电容定义式</h1><div class="review-mark" data-stem="电容定义式"></div><div class="meta-card"><span><strong>考点</strong>电容定义式</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>静电场</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：静电场</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择4</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电容定义式</strong>：$C=\dfrac{Q}{U}$，电容等于电容器所带电荷量与两极板间电压之比。单位法拉（F），$1\text{ F}=1\text{ C/V}$。</li>
+<li><strong>比值定义法</strong>：$C$ 是电容器本身的属性，<strong>与 $Q$、$U$ 无关</strong>——$Q$、$U$ 同比例变化，$C$ 不变；增大 $U$ 只会按比例增大 $Q$。</li>
+<li><strong>平行板电容器决定式</strong>：$C=\dfrac{\varepsilon_r S}{4\pi k d}$，电容由极板正对面积 $S$、间距 $d$、电介质 $\varepsilon_r$ 决定，与电荷电压无关。</li>
+<li><strong>电荷量关系</strong>：由定义式得 $Q=CU$；$C$ 不变时 $Q\propto U$，故 $\dfrac{Q_1}{Q_2}=\dfrac{U_1}{U_2}$。</li>
+<li><strong>稳态特性</strong>：直流稳态电容器支路无电流，其电压等于所并联端点的电位差。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>认清 $C$ 是常量</strong>：电路结构改变时电容器本身 $C$ 不变（除非改变极板几何），变的是电压 $U$ 与电荷 $Q$。</li>
+<li><strong>由定义式连接 $Q$ 与 $U$</strong>：求电荷量先求电压，$Q=CU$；求电荷量之比即求电压之比。</li>
+<li><strong>断电容求电压</strong>：稳态下把电容支路当断路，分析纯电阻网络得电容器两端电位差。</li>
+<li><strong>决定式判 $C$ 变化</strong>：若题改变正对面积、间距或插入电介质，用 $C=\dfrac{\varepsilon_r S}{4\pi k d}$ 判断电容变化方向。</li>
+<li><strong>比值法答题</strong>：$\dfrac{Q_1}{Q_2}=\dfrac{U_1}{U_2}$（$C$ 不变），快速出比。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误以为 $C$ 随 $Q$ 或 $U$ 变</strong>：$C=\dfrac{Q}{U}$ 是比值定义，$C$ 由电容器结构决定，与充电状态无关。</li>
+<li><strong>混淆定义式与决定式</strong>：$C=\dfrac{Q}{U}$ 用于"测量/计算"电容；$C=\dfrac{\varepsilon_r S}{4\pi k d}$ 用于"改变结构判变化"。</li>
+<li><strong>稳态电流误判</strong>：稳态电容支路无电流，串联电阻不分压。</li>
+<li><strong>电荷量与电压不分</strong>：$C$ 不变时电荷量比直接等于电压比。</li>
+<li><strong>极板几何变化忽略</strong>：插入介质、改变间距会改 $C$，此时 $Q$、$U$ 关系随之改变。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2016-新课标Ⅱ-04 电容器电荷量之比</h3>
+<p><strong>题目</strong>：四个等值电阻 $R$、电容器 $C$ 与电池 $E$（内阻可忽略）组成电路。开关 S 断开稳定时电荷量 $Q_1$；闭合 S 稳定后 $Q_2$。求 $\dfrac{Q_1}{Q_2}$。</p>
+<p><strong>思路</strong>：电容定义式 $C=\dfrac{Q}{U}$，$C$ 为常量，故 $\dfrac{Q_1}{Q_2}=\dfrac{U_{C1}}{U_{C2}}$。问题归结为两种开关状态下电容器两端电压之比。稳态电容支路断路，电容器电压等于其并联端电位差。</p>
+<p><strong>步骤</strong>：
+- <strong>建立比例关系</strong>：$Q_1=CU_{C1}$，$Q_2=CU_{C2}$，同一电容器 $C$ 相同，$\dfrac{Q_1}{Q_2}=\dfrac{U_{C1}}{U_{C2}}$。
+- <strong>S 断开求 $U_{C1}$</strong>：电容支路视为断路，分析剩余电阻网络中电容器并联端的电位差，由 $E$ 在串联电阻上的分压得 $U_{C1}$。
+- <strong>S 闭合求 $U_{C2}$</strong>：新接通的支路改变电阻串并联关系，重算节点电位得 $U_{C2}$。
+- <strong>代入求比</strong>：将 $U_{C1}$、$U_{C2}$ 代入比例式，得 $\dfrac{Q_1}{Q_2}$（具体数值由电阻连接确定，结果为简单比值）。</p>
+<p><strong>点评</strong>：本题精髓在于把"电荷量之比"用电容定义式 $C=\dfrac{Q}{U}$ 化为"电压之比"，避开求电容绝对值。$C$ 是不变常量，是比值定义法的核心理解。变式：插入电介质改变 $C$，则需同时考虑 $C$ 与 $U$ 的变化。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2016-新课标Ⅱ-04.html">2016-新课标Ⅱ-04</a>（2016 · 中） 四个等值电阻与电容器、电池组成的电路，通过开关通断改变电路结构，求电容器所带电荷量之比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/678-电容定义式.html">电容定义式</a></li>
+</ul>
+</div>
+</body>
+</html>

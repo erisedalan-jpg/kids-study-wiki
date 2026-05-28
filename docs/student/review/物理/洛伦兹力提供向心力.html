@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛伦兹力提供向心力</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>洛伦兹力提供向心力</h1><div class="review-mark" data-stem="洛伦兹力提供向心力"></div><div class="meta-card"><span><strong>考点</strong>洛伦兹力提供向心力</span><span><strong>权重</strong>10</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>物理</span><span><strong>父主题</strong>磁场 与 安培力洛伦兹力</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：磁场 与 安培力洛伦兹力</li>
+<li>权重 weight：10</li>
+<li>真题数：2；年份跨度：2019–2021</li>
+<li>出现题位：选择3 选择4</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>洛伦兹力提供向心力</strong>：带电粒子垂直进入匀强磁场做匀速圆周运动，洛伦兹力 $f=qvB$ 始终指向圆心充当向心力：
+$$qvB=\dfrac{mv^2}{R}$$</li>
+<li><strong>轨迹半径</strong>：$R=\dfrac{mv}{qB}$。引入比荷 $k=\dfrac{q}{m}$ 时 $R=\dfrac{v}{kB}$，即 $v=kBR$。同一磁场中 $R\propto v$。</li>
+<li><strong>周期</strong>：$T=\dfrac{2\pi m}{qB}$，与速度无关（速度大则半径大、周期不变）。</li>
+<li><strong>偏转角 = 轨迹圆心角</strong>：粒子速度方向转过的角度等于其轨迹圆弧所对的圆心角 $\alpha$。</li>
+<li><strong>弦长几何</strong>：粒子在磁场区内走的弦长 $L=2R\sin\dfrac{\alpha}{2}$（$\alpha$ 为偏转角）。</li>
+<li><strong>进出磁场对称性</strong>：进入点法线与离开点法线交于圆心；几何作图找圆心是定半径的关键。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>写向心力方程</strong>：$qvB=\dfrac{mv^2}{R}\Rightarrow R=\dfrac{mv}{qB}$，把动力学转为几何半径。</li>
+<li><strong>几何定弦长或偏转角</strong>：由题给入射点、出射点位置及边界形状，确定弦长 $L$ 或速度偏转角 $\alpha$。</li>
+<li><strong>弦长公式联系 $R$</strong>：$L=2R\sin\dfrac{\alpha}{2}$ 或直接由几何（如出射点在边界、圆心在某线上）求 $R$。</li>
+<li><strong>比荷题用 $v=kBR$</strong>：题给比荷 $k$ 时，求出 $R$ 后直接 $v=kBR$ 得速度。</li>
+<li><strong>求速度比化半径比</strong>：同粒子同磁场，$\dfrac{v_1}{v_2}=\dfrac{R_1}{R_2}$，由两情形几何分别求 $R$ 取比。</li>
+<li><strong>画法线找圆心</strong>：洛伦兹力垂直速度，圆心在过入射点垂直于入射速度的直线上；结合出射条件定圆心与 $R$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>半径公式记反</strong>：$R=\dfrac{mv}{qB}$，速度大半径大；周期 $T=\dfrac{2\pi m}{qB}$ 与速度无关，别弄混。</li>
+<li><strong>偏转角 ≠ 弦与边界夹角</strong>：偏转角是速度方向转过的角，等于轨迹圆心角，须用几何关系确认。</li>
+<li><strong>弦长用错半角</strong>：弦长 $L=2R\sin\dfrac{\alpha}{2}$ 用半角，不是 $\sin\alpha$。</li>
+<li><strong>圆心位置找错</strong>：圆心在过入射点且垂直于入射速度的直线上，方向由电荷正负与磁场方向（左手/洛伦兹力指向）确定。</li>
+<li><strong>比荷与电荷量混</strong>：$k=\dfrac{q}{m}$，$v=kBR$ 中用比荷，不要单独代 $q$、$m$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2021-全国乙-03 圆形磁场区偏转角求速度比</h3>
+<p><strong>题目</strong>：圆形区域内垂直纸面向里匀强磁场。质量 $m$、电荷量 $q$ 的带电粒子从圆周上 M 点沿直径 MON 方向射入。速度 $v_1$ 时离开磁场速度方向偏转 $90^\circ$；速度 $v_2$ 时偏转 $60^\circ$。不计重力，求 $\dfrac{v_1}{v_2}$。</p>
+<p><strong>思路</strong>：$R\propto v$，求速度比即求两情形轨迹半径比。粒子沿直径射入，偏转角即轨迹圆心角；由弦（M 到出射点，均在磁场边界圆上）与几何关系把轨迹半径 $R$ 用磁场区半径 $r$ 表示。</p>
+<p><strong>步骤</strong>：
+- 设磁场区半径 $r$。粒子从 M 沿直径方向射入，弦的一端为 M，另一端为出射点（在边界圆上）。
+- 偏转 $90^\circ$（$v_1$）：轨迹圆心角 $\alpha_1=90^\circ$。由几何，入射沿直径、偏转 $90^\circ$，弦满足 $L_1=2R_1\sin45^\circ=\sqrt2 R_1$；结合该弦为边界圆上的弦的几何约束，解得 $R_1=r$。
+- 偏转 $60^\circ$（$v_2$）：$\alpha_2=60^\circ$，弦 $L_2=2R_2\sin30^\circ=R_2$；同样几何约束解得 $R_2=\sqrt3\,r$。
+- 速度比：$\dfrac{v_1}{v_2}=\dfrac{R_1}{R_2}=\dfrac{r}{\sqrt3\,r}=\dfrac{\sqrt3}{3}=\dfrac{1}{\sqrt3}$。</p>
+<p><strong>点评</strong>：沿直径入射 + 边界出射的几何题，核心是"偏转角=圆心角"与弦长半角公式。速度比化半径比后，几何定 $R$ 与 $r$ 关系即可。</p>
+<h3>【代表题】2019-新课标Ⅱ-04 正方形磁场区电子射出速度</h3>
+<p><strong>题目</strong>：边长 $l$ 的正方形 abcd 内匀强磁场，$B$ 垂直纸面向外。ab 边中点 O 有电子源，垂直 ab 边向磁场内发射电子，比荷为 $k$。求从 a、d 两点射出的电子速度大小。</p>
+<p><strong>思路</strong>：洛伦兹力提供向心力，$R=\dfrac{v}{kB}$（用比荷）。电子从 O 垂直 ab 射入，做圆周运动后分别从 a、d 射出；由 O 到 a、O 到 d 的几何关系（弦长与圆心位置）分别求轨迹半径 $R$，再由 $v=kBR$ 得速度。</p>
+<p><strong>步骤</strong>：
+- <strong>从 a 射出</strong>：O 是 ab 中点，O 到 a 距离 $\dfrac{l}{2}$（沿 ab 边）。电子从 O 垂直 ab 射入，圆心在 ab 边上（过 O 垂直于入射速度，即沿 ab 方向）。轨迹为半圆或弧，O、a 都在 ab 边上，弦 Oa $=\dfrac{l}{2}$ 即为直径方向 → 半径 $R_a=\dfrac{l}{4}$。速度 $v_a=kBR_a=\dfrac{kBl}{4}$。
+- <strong>从 d 射出</strong>：d 是与 a 相邻的顶点，O 到 d 的位置由正方形几何确定（O 在 ab 中点，d 在 ab 同侧端点 a 的对边顶点）。圆心仍在过 O 垂直入射速度的直线（ab 边）上，设圆心到 O 距离 $R_d$，由圆心到 d 距离等于 $R_d$（d 在轨迹圆上）的几何方程：$R_d^2=\big(\dfrac{l}{2}\big)^2+(l-R_d)^2$ 类几何关系，解出 $R_d=\dfrac{5l}{8}$。速度 $v_d=kBR_d=\dfrac{5kBl}{8}$。</p>
+<p><strong>点评</strong>：圆心必在"过入射点且垂直入射速度"的直线上——本题即 ab 边。把出射点在轨迹圆上写成圆心到该点距离 = $R$ 的几何方程，是定半径的通法。求出 $R$ 后 $v=kBR$ 一步到位。变式可改出射点为 b 或 c，几何方程随之列出，方法不变。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/物理/2021-全国乙-03.html">2021-全国乙-03</a>（2021 · 中） 带电粒子在圆形磁场区域运动，结合几何关系求速度比</li>
+<li><a href="../../exam/物理/2019-新课标Ⅱ-04.html">2019-新课标Ⅱ-04</a>（2019 · 中） 求解电子在匀强磁场中做圆周运动从a、d点射出的速度大小。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/649-洛伦兹力提供向心力.html">洛伦兹力提供向心力</a></li>
+</ul>
+</div>
+</body>
+</html>

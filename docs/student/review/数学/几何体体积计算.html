@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几何体体积计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>几何体体积计算</h1><div class="review-mark" data-stem="几何体体积计算"></div><div class="meta-card"><span><strong>考点</strong>几何体体积计算</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>立体几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：立体几何</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：解答19</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>几何体体积计算的核心是熟记基本体积公式并灵活运用<strong>分割、补形、做差</strong>三大策略。</p>
+<ul>
+<li><strong>基本体积公式</strong>：</li>
+<li>长方体 / 正方体：$V=abc$（$a,b,c$ 为长宽高）。</li>
+<li>柱体（棱柱、圆柱）：$V=S_{底}\cdot h$。</li>
+<li>锥体（棱锥、圆锥）：$V=\dfrac{1}{3}S_{底}\cdot h$。</li>
+<li>台体：$V=\dfrac{1}{3}h\left(S_{上}+S_{下}+\sqrt{S_{上}S_{下}}\right)$。</li>
+<li>球：$V=\dfrac{4}{3}\pi r^3$。</li>
+<li><strong>直棱柱体积</strong>：底面积乘以高。当截面把柱体切成"前后两个直棱柱"时，可分别按"底面（截面方向的梯形 / 三角形）× 棱长"计算。</li>
+<li><strong>分割法</strong>：把不规则几何体拆成若干已知体积的基本体。</li>
+<li><strong>补形法</strong>：把缺角的体补成完整长方体 / 棱柱，再减去补上的部分。</li>
+<li><strong>做差法</strong>：大体积减去被截去 / 挖去部分的体积。</li>
+<li><strong>体积比与等积转化</strong>：求两部分体积之比时，可用公共的底或高约去，化简比值；锥体等底等高则等积。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>看清切割方式</strong>：平面截多面体后，判断两部分各是什么几何体（直棱柱、棱锥、不规则体）。</li>
+<li><strong>优选直棱柱视角</strong>：若截面平行于某组侧棱方向，可把两部分都看作"以截面方向多边形为底、以该棱长为高"的直棱柱，体积 = 该多边形面积 × 棱长。</li>
+<li><strong>梯形底面积</strong>：截面切出的侧面常为梯形，用 $S_{梯}=\dfrac{(a+b)h}{2}$ 算底面积。</li>
+<li><strong>作差验证</strong>：算出一部分体积后，用总体积减去它得另一部分，比值 = 部分 ∶（总 − 部分）。</li>
+<li><strong>化简比值</strong>：体积比中公共因子（如相同的"高"或"棱长"）可直接约掉，只比底面积。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>把切出的两部分都当成棱锥</strong>：实际多为直棱柱（底为梯形 / 三角形），体积公式不含 $\dfrac13$。</li>
+<li><strong>底面积与高对应错</strong>：直棱柱的"高"应是垂直于所取底面的棱长，取错方向导致结果错误。</li>
+<li><strong>梯形上下底取反或漏算</strong>：$\dfrac{(a+b)h}{2}$ 中 $a,b$ 是两平行边，$h$ 是它们间的距离。</li>
+<li><strong>比值未约简或方向写反</strong>：题目问"两部分体积比"，注意先后顺序与是否需写成最简整数比。</li>
+<li><strong>总体积算错</strong>：长方体 $V=abc$，单位与数据须核对。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>代表题（2015·文·19 第Ⅱ问，平面分割长方体求体积比）</strong></p>
+<p><strong>题目</strong>：长方体 $ABCD\text{-}A_1B_1C_1D_1$ 中 $AB=16$，$BC=10$，$AA_1=8$；$E,F$ 在 $A_1B_1,D_1C_1$ 上，$A_1E=D_1F=4$。过 $E,F$ 的平面 $\alpha$（截出正方形截面 $EFHG$）把长方体分成两部分，求两部分体积之比。</p>
+<p><strong>思路</strong>：截面 $\alpha$ 沿 $BC$ 方向（即 $A_1D_1$ 方向，长 $10$）平移不变，故两部分都是<strong>以 $BC=10$ 为公共"长度"（柱高）的直棱柱</strong>，底面分别是侧面 $ABB_1A_1$ 内被截线 $GE$ 分出的两个梯形。只需算两个梯形面积之比，柱高 $10$ 可约去。</p>
+<p><strong>步骤</strong>：
+1. 由第Ⅰ问，$E$ 在 $A_1B_1$ 上 $A_1E=4$；$G$ 在 $AB$ 上。由正方形边 $|EG|=10$ 及高 $AA_1=8$，水平投影差为 $6$，故 $AG=A_1E+6=4+6=10$（即 $BG=16-10=6$）。
+2. 截面把侧面矩形 $ABB_1A_1$（$16\times8$）分成两个直角梯形：
+   - 含顶点 $A,A_1$ 一侧的梯形，平行边为 $A_1E=4$ 与 $AG=10$，高（即 $AA_1$ 方向距离）为 $8$，面积 $S_1=\dfrac{(4+10)\times8}{2}=56$。
+   - 含顶点 $B,B_1$ 一侧的梯形，平行边为 $B_1E=16-4=12$ 与 $BG=16-10=6$，高 $8$，面积 $S_2=\dfrac{(12+6)\times8}{2}=72$。
+3. 两部分均为以对应梯形为底、$BC=10$ 为高的直棱柱，故
+$$V_1=56\times10=560,\qquad V_2=72\times10=720.$$
+4. 体积比 $V_1:V_2=560:720=7:9$。</p>
+<p><strong>点评</strong>：本题关键是识别"截面沿 $BC$ 方向平移不变"，从而两部分都是直棱柱，把三维体积比化简为二维梯形面积比，柱高约去。校验：$560+720=1280=16\times10\times8$，恰为长方体总体积，无误。变式：若截面不平行于任何棱，则两部分可能是棱锥或不规则体，需用分割 / 补形分别求体积。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2015-文-19.html">2015-文-19</a>（2015 · 中） 在长方体中根据给定条件作出正方形截面，并计算平面分割长方体所得两部分的体积比。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">几何体体积计算</a></li>
+</ul>
+</div>
+</body>
+</html>

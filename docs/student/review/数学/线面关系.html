@@ -32,97 +32,46 @@
 <li>难度分布：难1</li>
 </ul>
 <h2>知识精要</h2>
+<p>线面关系是立体几何解答题的主干，包含平行、垂直的判定与性质，以及空间角的计算。</p>
 <ul>
-<li><strong>线面平行</strong></li>
-<li>判定：若平面外一直线与平面内一直线平行，则该直线与平面平行。  </li>
-<li>性质：若一直线与平面平行，过该直线的平面与此平面相交，则交线与该直线平行。  </li>
-<li><strong>线面垂直</strong></li>
-<li>判定：若一直线与平面内两条相交直线都垂直，则该直线与平面垂直。  </li>
-<li>性质：若直线与平面垂直，则它与平面内任意直线都垂直；垂直于同一平面的两直线平行。  </li>
-<li><strong>面面平行</strong></li>
-<li>判定：若一平面内两条相交直线分别平行于另一平面内的两条相交直线，则两平面平行。  </li>
-<li><strong>面面垂直</strong></li>
-<li>判定：若一平面经过另一平面的垂线，则两平面垂直；若两平面垂直，则其中一平面内垂直于交线的直线必垂直于另一平面。  </li>
-<li><strong>空间角的向量公式</strong></li>
-<li>异面直线所成角：$\cos\theta=\frac{|\vec{a}\cdot\vec{b}|}{|\vec{a}||\vec{b}|}$，$\theta\in(0^\circ,90^\circ]$。  </li>
-<li>线面角：$\sin\theta=\frac{|\vec{n}\cdot\vec{d}|}{|\vec{n}||\vec{d}|}$，其中$\vec{d}$为直线方向向量，$\vec{n}$为平面法向量，$\theta\in[0^\circ,90^\circ]$。  </li>
-<li>面面角：$\cos\varphi=\frac{|\vec{n}_1\cdot\vec{n}_2|}{|\vec{n}_1||\vec{n}_2|}$，二面角需根据法向量方向区分锐钝。  </li>
-<li><strong>常用几何转化</strong></li>
-<li>正三角形中线即高线，兼具垂直与中点性质。  </li>
-<li>矩形侧棱垂直于底面边，可建立直角坐标系。  </li>
-<li>线面平行常导出线线平行（利用交线），为坐标运算提供坐标关系。</li>
+<li><strong>线面平行判定</strong>：平面外一条直线与平面内一条直线平行，则该直线与平面平行（$a\not\subset\alpha,\ b\subset\alpha,\ a\parallel b\Rightarrow a\parallel\alpha$）。<strong>性质</strong>：$a\parallel\alpha$ 且过 $a$ 的平面与 $\alpha$ 交于 $b$，则 $a\parallel b$。</li>
+<li><strong>线面垂直判定</strong>：一条直线垂直于平面内<strong>两条相交直线</strong>，则垂直于该平面。<strong>性质</strong>：垂直于同一平面的两直线平行。</li>
+<li><strong>面面垂直判定</strong>：若一个平面经过另一平面的一条<strong>垂线</strong>，则两平面垂直。<strong>性质</strong>：两面垂直，在一个面内垂直于交线的直线垂直于另一面。</li>
+<li><strong>线面角</strong>：直线与它在平面内射影所成的锐角，$\theta\in\left[0,\dfrac{\pi}{2}\right]$。</li>
+<li><strong>向量法求线面角</strong>：设直线方向向量 $\vec{u}$、平面法向量 $\vec{n}$，则 $\sin\theta=\dfrac{|\vec{u}\cdot\vec{n}|}{|\vec{u}||\vec{n}|}$（注意是 $\sin$ 不是 $\cos$）。</li>
+<li><strong>建系前提</strong>：找到（或构造）一组两两垂直的直线作坐标轴；中点、正三角形中心、矩形侧面等常提供垂直关系。</li>
 </ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>证明线面关系（几何推理为主）</strong></li>
-<li>证线线平行：中位线、平行四边形、对应边成比例、垂直于同一平面等。  </li>
-<li>证线面平行：找面内平行线（常借助中点、平行传递性）；或证面面平行后得线面平行。  </li>
-<li>证线面垂直：找面内两条相交直线分别与该直线垂直（常借助等腰三角形中线、矩形直角、勾股定理）。  </li>
-<li>
-<p>证面面垂直：找到其中一个平面内一条直线垂直于另一个平面（往往是找交线的垂线，或某直线垂直于另一平面内的两条相交直线）。  </p>
-</li>
-<li>
-<p><strong>求空间角（向量法为主）</strong></p>
-</li>
-<li>建系原则：优先以垂直关系为坐标轴（底面垂直关系、侧棱垂直底面等），使关键点坐标易于写出。  </li>
-<li>设点坐标：根据几何长度设参数，利用中点、中心、平行关系表示动点。  </li>
-<li>利用平行条件求参数：若某直线与平面平行，则该直线方向向量与平面法向量垂直（点积为零），或该直线上的点满足平面方程可解坐标。  </li>
-<li>计算法向量：求平面法向量常用两相交边向量叉积；线面角用方向向量与法向量夹角余弦的绝对值转正弦。  </li>
-<li>
-<p>检验范围：线面角结果必须在$[0^\circ,90^\circ]$内，正弦值非负。</p>
-</li>
-<li>
-<p><strong>选择几何法与向量法</strong></p>
-</li>
-<li>垂直/平行关系明显，求角问题可优先向量法统一处理。  </li>
-<li>几何法则用于快速证明第一问，为第二问建系提供垂直依据。</li>
+<li><strong>位置关系证明（平行 / 垂直）走"判定定理"</strong>：</li>
+<li>证线面平行：在面内找一条与已知线平行的线（常借中位线、平行四边形对边）。</li>
+<li>证线面垂直：在面内找两条相交直线都与已知线垂直（常借等腰三角形底边中线、正三角形高、矩形邻边）。</li>
+<li>证面面垂直：在一个面内找到另一面的垂线（先证线面垂直，再升级为面面垂直）。</li>
+<li><strong>善用"中点"条件</strong>：等腰 / 正三角形底边中点连线既是中线又是高（垂直底边），是构造垂直的常用突破口。</li>
+<li><strong>空间角优先建系（向量法）</strong>：找到三条两两垂直的线建立坐标系，写出各点坐标 → 求方向向量与法向量 → 代公式。线面角用 $\sin\theta=\dfrac{|\vec u\cdot\vec n|}{|\vec u||\vec n|}$。</li>
+<li><strong>法向量求法</strong>：设 $\vec n=(x,y,z)$，令它与平面内两不共线向量点积为 $0$，解出一组比例值。</li>
+<li><strong>几何法兜底</strong>：建系不便时，作出射影、找垂线段，在直角三角形中用边比求角的正弦。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li>线面所成角的正弦值是方向向量与法向量夹角余弦的绝对值，忘加绝对值易丢分；公式易误记为$\cos\theta=\frac{|\vec{n}\cdot\vec{d}|}{|\vec{n}||\vec{d}|}$。  </li>
-<li>平面法向量方向选取不当导致二面角锐/钝角判断错误，但纯线面角正弦恒正可避免此错。  </li>
-<li>坐标系建立时，原点选取不当导致坐标含过多根号或分数，增大计算量；应利用垂直交点或中点建系（如以矩形直角顶点为原点）。  </li>
-<li>利用平行条件时，忽略了“直线在平面外”这一前提，推导不出交点坐标。  </li>
-<li>在证明面面垂直时，未明确指出垂线位于其中一个平面内，导致逻辑链条不完整。</li>
+<li><strong>线面角公式用成 $\cos$</strong>：方向向量与法向量夹角的余弦的绝对值，等于线面角的<strong>正弦</strong>，切勿混淆。</li>
+<li><strong>判定定理条件不全</strong>：证线面垂直只找到一条垂线（须两条相交）；证线面平行忘了强调"直线在平面外"。</li>
+<li><strong>建系时坐标轴未验证两两垂直</strong>：随意设轴导致坐标错误。</li>
+<li><strong>法向量取错（方向 / 比例算错）</strong>：解方程组时漏解或符号错，最终角度错。</li>
+<li><strong>正三角形中心位置算错</strong>：中心到顶点距离为高的 $\dfrac23$、到边中点为高的 $\dfrac13$，常用错比例。</li>
+<li><strong>忘记角的范围</strong>：线面角取 $\left[0,\dfrac\pi2\right]$，正弦值取正。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3><strong>题目</strong>（2020全国卷·理20）</h3>
-<p>三棱柱$ABC-A_1B_1C_1$底面是正三角形，侧面$BB_1C_1C$为矩形，$M,N$为$BC,B_1C_1$中点，$P$在$AM$上。过$B_1C_1$和$P$的平面交$AB$于$E$，交$AC$于$F$。<br />
-（1）证明：$AA_1\parallel MN$，且平面$A_1AMN\perp$平面$EB_1C_1F$；<br />
-（2）设$O$为$\triangle A_1B_1C_1$的中心，若$AO\parallel$平面$EB_1C_1F$，且$AO=AB$，求直线$B_1E$与平面$A_1AMN$所成角的正弦值。</p>
-<h3><strong>思路</strong></h3>
-<ul>
-<li>第（1）问：利用矩形和中位线证$AA_1\parallel MN$；通过证明$B_1C_1\perp$平面$A_1AMN$得出面面垂直。  </li>
-<li>第（2）问：利用正三角形中心性质及平行条件建立空间直角坐标系，表示各点坐标，再由$AO\parallel$平面$EB_1C_1F$定出$P$点位置（即定$AE:EB$），最后用法向量求$B_1E$与平面$A_1AMN$所成角的正弦值。</li>
-</ul>
-<h3><strong>步骤</strong></h3>
-<p><strong>（1）证明</strong>
-- 矩形$BB_1C_1C\Rightarrow BB_1\parallel CC_1$，且$BB_1=CC_1$。<br />
-- $M,N$是中点$\Rightarrow MN\parallel BB_1\parallel CC_1$，又三棱柱中$AA_1\parallel BB_1$，故$AA_1\parallel MN$。<br />
-- 底面正三角形$\Rightarrow AM\perp BC$，又$BC\parallel B_1C_1\Rightarrow AM\perp B_1C_1$。<br />
-- 矩形$\Rightarrow BB_1\perp BC\Rightarrow MN\perp BC\parallel B_1C_1$，即$MN\perp B_1C_1$。<br />
-- $AM\cap MN=M$，故$B_1C_1\perp$平面$A_1AMN$。<br />
-- $B_1C_1\subset$平面$EB_1C_1F\Rightarrow$平面$EB_1C_1F\perp$平面$A_1AMN$。</p>
-<p><strong>（2）建系求角</strong>
-- 以$M$为原点，$MA$为$y$轴，$MN$为$z$轴，过$M$平行于$BC$的直线为$x$轴建立空间直角坐标系（使$B,C$在$x$轴上）。<br />
-- 设$AB=2$（便于正三角形计算），则$AM=\sqrt{3}$，$BC=2$。各点坐标：$B(-1,0,0)$，$C(1,0,0)$，$A(0,\sqrt{3},0)$，$A_1(0,\sqrt{3},h)$，$B_1(-1,0,h)$，$C_1(1,0,h)$，其中$h=AA_1$。<br />
-- $O$为$\triangle A_1B_1C_1$中心，$O(0,\frac{\sqrt{3}}{3},h)$。<br />
-- $P$在线段$AM$上，设$P(0,\lambda\sqrt{3},0)，\lambda\in[0,1]$。<br />
-- 平面$EB_1C_1F$过$B_1C_1$（即直线$x=t,y=0,z=h$）与$P$，由于交$AB$于$E$，交$AC$于$F$，故其与底面交线必过$P$且平行于$B_1C_1$。而$B_1C_1$平行于$x$轴，因此$E,F$在直线$y$坐标随$x$变化的$AB,AC$上，可得$E$坐标。具体可使用相似比：$P$分$AM$的比为$\lambda$，则平面与$AB$的交点$E$满足$BE:BA=\lambda$，于是$E$坐标为$B+\lambda(A-B)=(-1+ \lambda, \lambda\sqrt{3},0)$。<br />
-- 已知$AO\parallel$平面$EB_1C_1F$，则$\overrightarrow{AO}$与平面法向量$\vec{n}$垂直，且$\overrightarrow{AO}=(0,\frac{\sqrt{3}}{3}-\sqrt{3},h)=(0,-\frac{2\sqrt{3}}{3},h)$。<br />
-- 平面$EB_1C_1F$可用点$B_1(-1,0,h)$，$C_1(1,0,h)$，$E(-1+\lambda,\lambda\sqrt{3},0)$确定。其法向量$\vec{n}$可由$\overrightarrow{B_1C_1}=(2,0,0)$与$\overrightarrow{B_1E}=(\lambda,\lambda\sqrt{3},-h)$叉积得，即$\vec{n}=(0,2h,2\sqrt{3}\lambda)$（未归一化）。<br />
-- 由$\overrightarrow{AO}\cdot\vec{n}=0$：$0\cdot0+(-\frac{2\sqrt{3}}{3})\cdot2h+h\cdot2\sqrt{3}\lambda=0\Rightarrow -\frac{4\sqrt{3}h}{3}+2\sqrt{3}h\lambda=0\Rightarrow \lambda=\frac{2}{3}$。<br />
-- 题目又给$AO=AB=2$，故$|\overrightarrow{AO}|=\sqrt{0^2+(-\frac{2\sqrt{3}}{3})^2+h^2}=2\Rightarrow \frac{4}{3}+h^2=4\Rightarrow h=\frac{2\sqrt{6}}{3}$。<br />
-- 此时$E(-1+\frac{2}{3},\frac{2}{3}\sqrt{3},0)=(-\frac{1}{3},\frac{2\sqrt{3}}{3},0)$，$B_1=(-1,0,\frac{2\sqrt{6}}{3})$，$\overrightarrow{B_1E}=(\frac{2}{3},\frac{2\sqrt{3}}{3},-\frac{2\sqrt{6}}{3})$。<br />
-- 平面$A_1AMN$即平面$yoz$面（$x=0$），法向量可取$\vec{m}=(1,0,0)$。<br />
-- 线面角$\theta$满足$\sin\theta=\frac{|\overrightarrow{B_1E}\cdot\vec{m}|}{|\overrightarrow{B_1E}||\vec{m}|}=\frac{|\frac{2}{3}\cdot1+0+0|}{\sqrt{(\frac{2}{3})^2+(\frac{2\sqrt{3}}{3})^2+(-\frac{2\sqrt{6}}{3})^2}\cdot1}=\frac{\frac{2}{3}}{\sqrt{\frac{4}{9}+\frac{12}{9}+\frac{24}{9}}}=\frac{\frac{2}{3}}{\sqrt{\frac{40}{9}}}=\frac{\frac{2}{3}}{\frac{2\sqrt{10}}{3}}=\frac{1}{\sqrt{10}}=\frac{\sqrt{10}}{10}$。</p>
-<h3><strong>点评/变式</strong></h3>
-<ul>
-<li>本题完美体现“先用几何证垂直为建系铺路，再用向量统一算角”的解答路径。第一问的面面垂直直接提供了第二问中平面$A_1AMN$的法向量恰为$x$轴方向，大幅简化计算。  </li>
-<li>利用平行条件求动点参数是这类题的常见变式：可改为某线段长度为定值，或某角为定值，均可列出方程求解坐标。  </li>
-<li>易错点提醒：求$O$点坐标时要注意中心是重心，纵坐标应为底面正三角形高的$\frac{1}{3}$；$AO$长度条件若误记为$AO=A_1O$等会出错。正弦值结果需化成最简有理化分母。  </li>
-<li><strong>变式训练</strong>：若将条件“$AO\parallel$平面$EB_1C_1F$”改为“$B_1E$与平面$A_1AMN$所成角为$30^\circ$”，反求$\lambda$和$h$的关系，可进一步锻炼向量法应用。</li>
-</ul>
+<p><strong>代表题（2020·理·20，三棱柱中的平行垂直证明与线面角）</strong></p>
+<p><strong>题目</strong>：三棱柱 $ABC\text{-}A_1B_1C_1$ 底面是正三角形，侧面 $BB_1C_1C$ 是矩形，$M,N$ 分别为 $BC,B_1C_1$ 中点，$P$ 为 $AM$ 上一点，过 $B_1C_1$ 和 $P$ 的平面交 $AB$ 于 $E$、交 $AC$ 于 $F$。(1) 证明 $AA_1\parallel MN$，且平面 $A_1AMN\perp$ 平面 $EB_1C_1F$；(2) 设 $O$ 为 $\triangle A_1B_1C_1$ 的中心，若 $AO\parallel$ 平面 $EB_1C_1F$ 且 $AO=AB$，求直线 $B_1E$ 与平面 $A_1AMN$ 所成角的正弦值（答案 $\dfrac{\sqrt{10}}{10}$）。</p>
+<p><strong>思路</strong>：(1) 用中点构造平行与垂直——$M,N$ 为中点使 $MN\parallel BB_1\parallel AA_1$；正三角形底边中线 $AM\perp BC$，矩形侧面给 $MN\perp BC$，得 $BC\perp$ 平面 $A_1AMN$，从而面面垂直。(2) 建系，用 $AO\parallel$ 截面定出 $P$ 位置与几何尺寸，再用向量法求线面角。</p>
+<p><strong>步骤</strong>：
+1. <strong>证 $AA_1\parallel MN$</strong>：$M,N$ 分别为 $BC,B_1C_1$ 中点，侧面 $BB_1C_1C$ 为矩形故 $MN\parallel BB_1$；棱柱中 $BB_1\parallel AA_1$，故 $AA_1\parallel MN$。
+2. <strong>证面面垂直</strong>：底面正三角形中 $AM\perp BC$（中线即高）；矩形侧面中 $MN\perp BC$（$MN\parallel BB_1\perp BC$）。$AM,MN$ 是平面 $A_1AMN$ 内两条相交直线，故 $BC\perp$ 平面 $A_1AMN$。又 $BC\subset$ 平面 $EB_1C_1F$（$EF\parallel BC$ 且 $B_1C_1\parallel BC$），故平面 $EB_1C_1F$ 经过平面 $A_1AMN$ 的垂线 $BC$ 方向，得平面 $A_1AMN\perp$ 平面 $EB_1C_1F$。
+3. <strong>建系（第 2 问）</strong>：以 $M$ 为原点，$MB$ 方向为 $x$ 轴、$MA$ 方向为 $y$ 轴、$MN$ 方向为 $z$ 轴建系。设 $AB=2$，则正三角形高 $AM=\sqrt3$，相关点坐标可写出；由 $AO\parallel$ 平面 $EB_1C_1F$ 与 $AO=AB$ 定出棱柱高，确定各点精确坐标。
+4. <strong>求方向向量与法向量</strong>：求 $\overrightarrow{B_1E}$；平面 $A_1AMN$ 的法向量 $\vec n$（该平面含 $y,z$ 轴，法向量沿 $x$ 轴方向，即 $\vec n=(1,0,0)$，因 $BC\perp$ 该平面）。
+5. <strong>代公式</strong>：$\sin\theta=\dfrac{|\overrightarrow{B_1E}\cdot\vec n|}{|\overrightarrow{B_1E}||\vec n|}$，代入坐标计算得 $\sin\theta=\dfrac{\sqrt{10}}{10}$。</p>
+<p><strong>点评</strong>：本题第 1 问是"中点构造平行 + 正三角形 / 矩形给垂直 → 面面垂直"的标准链条；第 2 问体现"$BC\perp$ 平面 $A_1AMN$"的妙用——该垂直关系直接给出平面法向量方向，省去解法向量方程组。变式：把"求 $B_1E$ 与平面 $A_1AMN$ 的线面角"改为"求二面角"，则需两个法向量求 $\cos$；把底面改为直角三角形，则垂直关系的来源随之改变，但建系思路一致。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2020-理-20.html">2020-理-20</a>（2020 · 难） 正三角形底面三棱柱中，证AA₁//MN且平面A₁AMN⊥EB₁C₁F，再求直线B₁E与平面A₁AMN所成角正弦值√10/10。</li>

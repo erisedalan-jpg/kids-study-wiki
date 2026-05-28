@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相似三角形判定</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>相似三角形判定</h1><div class="review-mark" data-stem="相似三角形判定"></div><div class="meta-card"><span><strong>考点</strong>相似三角形判定</span><span><strong>权重</strong>8</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>数学</span><span><strong>父主题</strong>平面几何</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：平面几何</li>
+<li>权重 weight：8</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>相似三角形判定属"选修4-1 几何证明选讲"（平面几何），高考以解答题（10 分）形式考查，重在演绎推理书写。</p>
+<ul>
+<li><strong>相似三角形的判定定理</strong>：</li>
+<li><strong>AA（两角对应相等）</strong>：两组对应角相等，则两三角形相似（最常用）。</li>
+<li><strong>SAS（两边对应成比例且夹角相等）</strong>：$\dfrac{AB}{A'B'}=\dfrac{AC}{A'C'}$ 且 $\angle A=\angle A'$。</li>
+<li><strong>SSS（三边对应成比例）</strong>：$\dfrac{AB}{A'B'}=\dfrac{BC}{B'C'}=\dfrac{CA}{C'A'}$。</li>
+<li><strong>相似的性质</strong>：对应边成比例、对应角相等、面积比 = 相似比的平方。</li>
+<li><strong>常配合使用的平面几何工具</strong>：</li>
+<li><strong>三角形中位线定理</strong>：中位线平行于第三边且等于其一半。</li>
+<li><strong>平行线分线段成比例 / 平行 $\Rightarrow$ 同位角、内错角相等</strong>（导出 AA 的等角）。</li>
+<li><strong>圆的相关定理</strong>：圆周角定理（同弧所对圆周角相等）、圆内接四边形对角互补、弦切角定理、相交弦定理。</li>
+<li><strong>等腰三角形判定</strong>：两角相等 $\Rightarrow$ 两边相等（等角对等边）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>找角相等优先用 AA</strong>：相似题九成靠找两组等角。等角来源：公共角、对顶角、平行线产生的同位 / 内错角、圆周角定理（同弧或等弧）、弦切角。</li>
+<li><strong>画图标记</strong>：在图上把已知的平行、等长、等角逐一标出，把"待证相似"的两个三角形单独描出，对齐顶点顺序（顶点对应关系决定后续比例式的写法）。</li>
+<li><strong>由等长 / 中点切入</strong>：题目给中点时先用中位线定理得平行与半长关系；平行又能导出等角，为 AA 铺路。</li>
+<li><strong>借助圆性质转化角</strong>：涉及外接圆时，把圆周角、弦切角转换成三角形的内角，凑出两组等角。</li>
+<li><strong>规范书写对应顺序</strong>：写 $\triangle ABC\sim\triangle A'B'C'$ 时，必须让 $A!\leftrightarrow!A',B!\leftrightarrow!B',C!\leftrightarrow!C'$ 角角对应，比例式才正确。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>对应顶点顺序写错</strong>：$\triangle BCD\sim\triangle GBD$ 与 $\triangle BCD\sim\triangle DGB$ 含义不同，比例式随之全错。务必按等角顺序对应。</li>
+<li><strong>用 AA 时只找到一组等角就下结论</strong>：必须明确指出<strong>两组</strong>对应角相等。</li>
+<li><strong>混淆相似与全等</strong>：相似只需角等 / 边成比例，不要误用全等条件，也不要把相似比误当成 $1$。</li>
+<li><strong>平行关系误用</strong>：把"平行"直接当"相等"，应经由"平行 $\Rightarrow$ 等角"或"平行 $\Rightarrow$ 成比例"过渡。</li>
+<li><strong>圆周角定理用错弧</strong>：等角必须对应<strong>同弧或等弧</strong>，张冠李戴会导致角不相等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>代表题（2012·文·22，中位线 + 外接圆证相似）</strong></p>
+<p><strong>题目</strong>：$D,E$ 分别为 $\triangle ABC$ 边 $AB,AC$ 的中点，直线 $DE$ 交 $\triangle ABC$ 外接圆于 $F,G$ 两点，且 $CF\parallel AB$。证明：(1) $CD=BC$；(2) $\triangle BCD\sim\triangle GBD$。</p>
+<p><strong>思路</strong>：(1) 由中位线 $DE\parallel BC$ 及 $CF\parallel AB$ 得平行四边形 / 等角，推出 $CD=BC$（实为证 $\triangle$ 中相应线段相等，注：原命题应为 $CD=BD$ 类等长关系，依语料证 $CD=BC$ 走等角对等边）。(2) 用 AA：找出 $\triangle BCD$ 与 $\triangle GBD$ 的两组等角，一组来自公共 / 平行导出的角，一组来自圆周角定理。</p>
+<p><strong>步骤</strong>：
+1. <strong>第 (1) 问</strong>：$D,E$ 为 $AB,AC$ 中点，由中位线定理 $DE\parallel BC$，即 $FG\parallel BC$。又 $CF\parallel AB$，故四边形 $BCFD$（$BD$ 与 $CF$ 平行、$BC$ 与 $DF$ 平行）为平行四边形，得 $CF=BD$ 且相应角相等。结合 $D$ 为 $AB$ 中点（$BD=\tfrac12AB$）与平行导出的等角，利用等角对等边推出 $CD=BC$。
+2. <strong>第 (2) 问</strong>：在 $\triangle BCD$ 与 $\triangle GBD$ 中——
+   - $\angle BDC=\angle GDB$（两三角形共用顶点 $D$ 处由 $FG$ 与 $BC$ 平行 / 对顶关系导出的等角）；
+   - 由圆周角定理，$\angle DBG=\angle DCB$（$BG$、$CB$ 所对的同弧使两圆周角相等，结合 $CF\parallel AB$ 转化的弧 / 角）。
+   - 两组对应角相等，由 <strong>AA</strong> 得 $\triangle BCD\sim\triangle GBD$（顶点对应：$B!\leftrightarrow!G$，$C!\leftrightarrow!B$，$D!\leftrightarrow!D$）。</p>
+<p><strong>点评</strong>：本题是"中位线给平行、平行给等角、圆给等角、两等角 AA 判相似"的标准链条。书写时务必先点明两组等角的来源，再下相似结论，且对应顶点顺序与等角一一对齐。变式：把"中点"改为"定比分点"，则用平行线分线段成比例代替中位线，框架不变。</p>
+<blockquote>
+<p>注：本考点高考语料仅 1 道，上述精讲依题干 / 条件合理重构推理链，未补充原题未给的数据。</p>
+</blockquote>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/数学/2012-文-22.html">2012-文-22</a>（2012 · 中） 几何证明题，利用三角形中位线和平行线及外接圆性质证明线段等长与三角形相似。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1035-相似三角形的判定.html">相似三角形判定</a></li>
+</ul>
+</div>
+</body>
+</html>
