@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>隔膜扩散</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>隔膜扩散</h1><div class="review-mark" data-stem="隔膜扩散"></div><div class="meta-card"><span><strong>考点</strong>隔膜扩散</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>隔膜扩散的本质</strong>：体系中存在允许分子通过、禁止离子通过的选择性透过膜，最终达到扩散平衡与电离平衡同时满足的状态。</li>
+<li><strong>核心守恒关系</strong>：对于能自由穿过隔膜的粒子（如未电离的弱酸分子 $\mathrm{HA}$），平衡时其在膜两侧的<strong>浓度</strong>相等（ $c_\text{左}(\mathrm{HA}) = c_\text{右}(\mathrm{HA})$ ），而非物质的量相等。</li>
+<li><strong>电离平衡</strong>：各室内部独立遵循弱电解质的电离平衡，即 $K_a = \frac{c(\mathrm{H}^+) \cdot c(\mathrm{A}^-)}{c(\mathrm{HA})}$，且 $K_a$ 在同一温度下为定值（本题常温下 $K_a=1.0\times10^{-4}$）。</li>
+<li><strong>适用条件</strong>：适用于一元弱酸（或弱碱）体系，隔膜严格限制离子迁移，且分子扩散可逆。计算时需结合物料守恒与电荷守恒。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定可透粒子</strong>：提取题干信息，明确可自由穿过隔膜的粒子种类（通常为未电离分子），以及被限制的离子。</li>
+<li><strong>设未知数列扩散等式</strong>：设平衡时膜两侧可自由通过粒子的浓度为同一未知数 $x$，直接建立浓度相等关系。</li>
+<li><strong>写电离平衡表达式</strong>：对膜两侧分别列出电离平衡常数表达式，将各侧离子浓度用 $x$ 或新设未知数表示，联立得 $K_a$ 方程。</li>
+<li><strong>建立物料与电荷守恒</strong>：</li>
+<li><strong>物料守恒</strong>：膜两侧的初始总物质的量，应等于平衡时各侧所有含该元素粒子（分子+离子）的物质的量之和。</li>
+<li><strong>电荷守恒</strong>：单独对每侧溶液列电中性条件（注意 $\mathrm{H}^+$、$\mathrm{OH}^-$、$\mathrm{A}^-$ 及外加强酸强碱离子）。</li>
+<li><strong>联立求解</strong>：优先判断两侧离子浓度是否相等（若起始对称或仅由扩散驱动，往往 $y=z$），再将物料方程与平衡方程联立，解出平衡浓度，最终求 $\mathrm{pH}$ 或浓度。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>浓度与物质的量混淆</strong>：平衡时扩散粒子在膜两侧<strong>浓度相等</strong>，而非物质的量相等。若两侧体积不同，用物质的量分配会出错。</li>
+<li><strong>误判总浓度相等</strong>：膜两侧弱酸的总浓度（$c_\text{总}=c_{\mathrm{HA}}+c_{\mathrm{A}^-}$）一般不相等，因为离子不能穿过膜，只有未电离的 $\mathrm{HA}$ 分子浓度恒等。</li>
+<li><strong>忽略水的电离</strong>：当溶液酸性或碱性极弱（$\mathrm{pH} \approx 6\sim8$）时，水的电离不可忽略。常温下需考虑 $K_w$ 对电荷守恒的影响，尤其当 $K_a$ 较小或浓度极稀时。</li>
+<li><strong>直接搬用等体积公式</strong>：体积不等的隔膜体系中，物料守恒方程里的 $V$ 必须保留，不可随意约分或省略。</li>
+<li><strong>强酸/强碱干扰处理不当</strong>：若一侧添加了强酸（如 $\mathrm{HCl}$），其引入的 $\mathrm{H}^+$ 会抑制 $\mathrm{HA}$ 电离，但不能使 $\mathrm{HA}$ 分子浓度改变，需在电荷守恒中加上外加的阴/阳离子。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2022-全国乙-07</h3>
+<p><strong>题目</strong>：常温下，一元酸 $\mathrm{HA}$ 的 $K_a(\mathrm{HA}) = 1.0\times10^{-4}$。某体系中含有隔膜，$\mathrm{H}^+$ 与 $\mathrm{A}^-$ 不能穿过，未电离的 $\mathrm{HA}$ 可自由穿过。设膜两侧溶液初始体积均为 $1\,\mathrm{L}$，左室含 $\mathrm{HA}$ 总浓度 $0.10\,\mathrm{mol\cdot L^{-1}}$，右室为纯水。求平衡时两室的 $\mathrm{pH}$。</p>
+<p><strong>思路</strong>：
+- 扩散平衡时，未电离 $\mathrm{HA}$ 浓度在左右室相等，设为 $x$。
+- 由于左右室其余初始条件对称（纯水 vs 无其他电解质），且 $\mathrm{A}^-$ 不能迁移，两侧电离产生的离子浓度必相等，设为 $y$。
+- 利用物料守恒，左室初始 $\mathrm{HA}$ 总量一部分留在左室变为 $x+y$，一部分扩散到右室变为 $x+y$。
+- 联立 $K_a$ 表达式与物料方程解出 $x$、$y$，再求 $\mathrm{pH}$。</p>
+<p><strong>步骤</strong>：
+1. 设平衡时两侧未电离 $\mathrm{HA}$ 浓度均为 $x\ \mathrm{mol\cdot L^{-1}}$。
+2. 由对称性和膜限制，设左侧 $c(\mathrm{A}^-)=c(\mathrm{H}^+)=y$，右侧 $c(\mathrm{A}^-)=c(\mathrm{H}^+)=y$（水的电离可忽略，因 $K_a$ 较大，溶液呈酸性）。
+3. 代入 $K_a$：左侧 $\frac{y^2}{x} = 1.0\times10^{-4}$，右侧同样，得 $y = \sqrt{10^{-4}x}$。
+4. 物料守恒：初始左室 $\mathrm{HA}$ 总物质的量为 $0.10\times1=0.10\ \mathrm{mol}$。平衡时左室 $\mathrm{HA}$ 总浓度 $x+y$，右室 $x+y$，体积均为 $1\ \mathrm{L}$，故 $(x+y)+(x+y)=0.10$，即 $x+y=0.05$。
+5. 联立方程组：
+   $$
+   \begin{cases}
+   y = \sqrt{10^{-4} x} \
+   x + y = 0.05
+   \end{cases}
+   $$
+   代入得 $x + 10^{-2}\sqrt{x} = 0.05$。令 $\sqrt{x}=t$，则 $t^2 + 0.01t - 0.05=0$。
+   解得正根 $t = \frac{-0.01+\sqrt{0.0001+0.2}}{2} \approx \frac{0.447}{2} \approx 0.2235$，$\</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2022-全国乙-07.html">2022-全国乙-07</a>（2022 · 中） 考查弱酸电离平衡与隔膜扩散条件下溶液pH和粒子浓度关系的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/865-隔膜扩散.html">隔膜扩散</a></li>
+</ul>
+</div>
+</body>
+</html>

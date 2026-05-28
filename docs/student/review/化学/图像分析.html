@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图像分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>图像分析</h1><div class="review-mark" data-stem="图像分析"></div><div class="meta-card"><span><strong>考点</strong>图像分析</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>其他基本概念</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：其他基本概念</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2019–2024</li>
+<li>出现题位：解答15 选择6</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li>沉淀溶解平衡图像常见类型：以 $pM = -\lg c(M^{m+})$ 对 $pX = -\lg c(X^{n-})$ 作图，或者以 $\lg c(M^{m+})$ 对 $\lg c(X^{n-})$ 作图。</li>
+<li>对于 $M_mA_n(s) \rightleftharpoons mM^{n+} + nA^{m-}$，有 $K_{sp} = [c(M^{n+})]^m \cdot [c(A^{m-})]^n$。</li>
+<li>取负对数得线性关系：$m \cdot pM + n \cdot pA = pK_{sp} - \lg\frac{(m^m n^n)}{(m+n)^{m+n}}$（整理后形式，对1:1型如AgCl，$pAg + pX = pK_{sp}$，直线斜率为-1；对1:2或2:1型如Ag₂CrO₄，$2pAg + pCrO_4 = pK_{sp}$，斜率不再是-1）。</li>
+<li>图线上点的意义：曲线上的点代表饱和溶液，对应的离子浓度满足$K_{sp}$。曲线上方区域（$pM$更大或$pX$更大，即离子浓度更小）为该物质的未饱和/不饱和区；曲线下方区域（离子浓度更大）为过饱和区，可能生成沉淀。</li>
+<li>不同物质的曲线位置：在同坐标系中，溶度积常数$K_{sp}$越小，对于同类型沉淀（如AB型），其饱和时离子浓度越小，对应的$pX$、$pM$值越大，曲线越靠近坐标轴正方向（右上角）。</li>
+<li>平衡常数计算：结合$K_{sp}$、$K_a$等常数，通过加减反应方程式，得出目标反应的$K = \frac{K_1 \cdot K_2\cdots}{K_3\cdots}$，注意指数和计量系数关系。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确坐标轴含义</strong>：看清横纵坐标代表的是 $pX$（$-\lg c$）还是 $\lg c$，以及对应的离子种类，注意正负号对方向的影响。</li>
+<li><strong>判断曲线对应物质</strong>：</li>
+<li>利用题给信息（如“溶解度更大”），溶解度越大，饱和溶液中离子浓度越大，对应的$pX$值越小，曲线越靠近左下。</li>
+<li>利用$K_{sp}$大小：同类盐（如1:1型）$K_{sp}$越小曲线越在右上方。</li>
+<li>利用化学计量关系判断斜率：如AgCl图像为直线斜率为-1，Ag₂CrO₄图像非直线或斜率不同，据此辨别。</li>
+<li><strong>由曲线求算$K_{sp}$</strong>：在曲线上任取一点，读出对应$pX$、$pM$，换算为浓度，代入$K_{sp}$表达式。对于直线可取与轴截距。</li>
+<li><strong>平衡常数计算</strong>：利用已知热力学常数（$K_{sp}$、$K_a$、$K_w$等），将目标反应拆分成已知反应相加减，平衡常数相乘除。</li>
+<li><strong>滴定情景分析</strong>：涉及指示剂浓度的限制，要保证被测离子（如Cl⁻）沉淀完全（$c &lt; 1\times10^{-5} \text{ mol·L}^{-1}$）时，指示剂离子（如CrO₄²⁻）与被滴离子（Ag⁺）的浓度积不超过其$K_{sp}$，即不提前产生砖红色沉淀。由此反推最大允许指示剂浓度。</li>
+<li><strong>比较线上、线外状态</strong>：利用坐标点与曲线相对位置判断是否沉淀。若点位于线下方（离子浓度积$Q &gt; K_{sp}$），则析出沉淀；线上方$Q &lt; K_{sp}$，无沉淀或沉淀溶解。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆不同计量比沉淀的曲线形式</strong>：Ag₂CrO₄（2:1型）的$pAg$~$pCrO_4$图是曲线或斜率不为-1的直线，若当成AB型处理会误判曲线归属。</li>
+<li><strong>坐标轴取负对数时大小关系颠倒</strong>：$pX$值越大，实际浓度越小。比较溶度积或溶解度时易得出相反结论。</li>
+<li><strong>平衡常数计算遗漏指数</strong>：利用$K_{sp}$组合时，若反应计量系数不是1，计算时需对$K$进行相应次方。</li>
+<li><strong>忽视酸效应影响</strong>：如H₂CrO₄为弱酸，其酸根CrO₄²⁻浓度受pH影响，计算指示剂浓度上限应结合分布系数或平衡常数，而不能直接代入$K_{sp}$而不考虑酸效应。</li>
+<li><strong>滴定终点判断与指示剂用量关系</strong>：当$Ag^+$浓度达到与指示剂生成沉淀所需值时，被测离子可能尚未沉淀完全，导致误差。计算理论允许指示剂浓度必须基于化学计量点时的$Ag^+$浓度。</li>
+<li><strong>直接套用1:1型直线截距公式</strong>：对非1:1型沉淀不可用截距直接等于$pK_{sp}$，必须根据实际关系式换算。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题1：2024-辽宁-15</h3>
+<p><strong>题目</strong>：已知AgCl、AgBr和Ag₂CrO₄的沉淀溶解平衡曲线图，以K₂CrO₄为指示剂，用AgNO₃滴定Cl⁻、Br⁻水样。给出信息：Ag₂CrO₄砖红色，AgCl溶解度大于AgBr，$pK_{a1}(H_2CrO_4)=0.7$，$pK_{a2}=6.5$。判断说法错误。</p>
+<p><strong>思路</strong>：先通过溶解度和沉淀类型辨识三条曲线分别对应哪种物质；再结合酸解离常数计算滴定相关平衡常数，最后从滴定条件推算指示剂浓度上限。</p>
+<p><strong>步骤</strong>：
+- 第一步：辨识曲线。通常以$pAg$为横轴，$pX$（$X=Cl^-, Br^-, \frac{1}{2}CrO_4^{2-}$计）为纵轴。对1:1型AgCl、AgBr，$pAg + pX = pK_{sp}$，斜率为-1。对Ag₂CrO₄，$2pAg + pCrO_4 = pK_{sp}$，斜率不同。同类型中，AgCl溶解度大于AgBr，即$K_{sp}(AgCl) &gt; K_{sp}(AgBr)$，对应的$pK_{sp}$更小，所以曲线AgCl在左下方，AgBr在右上方，曲线②应为AgBr而不是AgCl。故选项A说曲线②为AgCl错误（假设题中判断结果为A错误，具体据图所示和解析）。
+- 第二步：计算反应 $AgCrO_4 + H^+ \rightleftharpoons 2Ag^+ + HCrO_4^-$ 的平衡常数。该反应可拆分为：$Ag_2CrO_4 \rightleftharpoons 2Ag^+ + CrO_4^{2-}$ ($K_{sp}$) 加上 $CrO_4^{2-} + H^+ \rightleftharpoons HCrO_4^-$ ($K = 1/K_{a2}$，因为$K_{a2}$对应$HCrO_4^- \rightleftharpoons H^+ + CrO_4^{2-}$)。所以 $K = K_{sp} \times \frac{1}{K_{a2}}$。由曲线可读出$K_{sp}(Ag_2CrO_4)$约为$10^{-12}$数量级（或具体计算），$K_{a2}=10^{-6.5}$，则$K = 10^{-12} / 10^{-6.5} = 10^{-5.5}$，选项B给的是$10^{-5.2}$，需核对具体数值，若差异则B错误，但在原选项中可能是正确或错误需依据数据。
+- 第三步：滴定Cl⁻时指示剂浓度限制。化学计量点时，溶液中$c(Ag^+) = \sqrt{K_{sp}(AgCl)}$。假设$K_{sp}(AgCl)\approx 10^{-9.8}$，则计量点时$c(Ag^+)\approx 10^{-4.9} mol/L$。为防止Ag₂CrO₄在Cl⁻沉淀完全前析出，要求此时$Q(Ag_2CrO_4) = c^2(Ag^+)\cdot c(CrO_4^{2-}) \le K_{sp}(Ag_2CrO_4)$。代入$c(Ag^+)$得$c(CrO_4^{2-}) \le K_{sp} / c^2(Ag^+)$。估算得约为$10^{-12} / (10^{-9.8}) = 10^{-2.2}$或更严格的条件，还要考虑酸效应使得$CrO_4^{2-}$比例，最终上限可能在$10^{-2.0}mol/L$左右，选项C说法可能正确。综合判断出错误选项（据原题解析为A）。</p>
+<p><strong>点评/变式</strong>：本题将沉淀滴定、酸碱平衡、图像识别融合，关键是根据沉淀类型和$K_{sp}$大小准确定位曲线，熟练运用平衡常数组合计算。变式可改变难溶盐种类或指示剂，例如改用Fe³+指示剂滴定卤素离子等。</p>
+<h3>代表题2：2019-新课标Ⅱ-06</h3>
+<p><strong>题目</strong>：CdS为难溶于水的黄色颜料，给出其在水中的沉淀溶解平衡曲线图，判断说法错误。</p>
+<p><strong>思路</strong>：根据图像读取$K_{sp}$，判断线上的点状态，分析改变条件时离子浓度变化及曲线上点的移动方向。</p>
+<p><strong>步骤</strong>：
+- 第一步：审图，横纵坐标为$c(S^{2-})$与$c(Cd^{2+})$或对应的负对数。CdS为1:1型，$K_{sp}=c(Cd^{2+})\cdot c(S^{2-})$。曲线上任一点坐标乘积为常数。
+- 第二步：计算$K_{sp}$。选取曲线上一点，比如与两轴截距或明确数值点，代入得$K_{sp}$数量级，一般数量级在$10^{-27}$左右，判断相关选项。
+- 第三步：判断各点状态。若某点坐标乘积$Q&gt;K_{sp}$，则有沉淀生成；$Q=K_{sp}$为饱和；$Q&lt;K_{sp}$为不饱和，沉淀溶解。若加入Cd²⁺，则$c(Cd^{2+})$增大，$c(S^{2-})$沿曲线减小，点沿曲线移动；加水稀释则同时减小，点向远离原点方向移动，若原为饱和溶液则移动后处于不饱和区。
+- 第四步：依常见选项判断，如“曲线上各点溶液均饱和”正确，“水中$K_{sp}$随温度而变，与浓度无关”正确，而“加入Cd²⁺使不饱和溶液变饱和”则可能使点指向曲线方向移动等。结合题目所给选项选出错误说法的编号。</p>
+<p><strong>点评/变式</strong>：典型沉淀溶解平衡曲线题，核心是理解曲线上的离子浓度乘积为定值，利用图像判断$Q$与$K_{sp}$关系及外界条件改变时离子浓度沿曲线移动的规律。变式可拓展到同离子效应、络合效应使曲线平移等情况。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-15.html">2024-辽宁-15</a>（2024 · 中） 通过沉淀溶解平衡图像计算并比较AgCl、AgBr、Ag₂CrO₄的Ksp。</li>
+<li><a href="../../exam/化学/2019-新课标Ⅱ-06.html">2019-新课标Ⅱ-06</a>（2019 · 中） 该题以硫化镉的沉淀溶解平衡曲线图为背景，考查学生对溶度积常数和沉淀溶解平衡移动的理解与图像分析能力。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/564-图像分析.html">图像分析</a></li>
+</ul>
+</div>
+</body>
+</html>

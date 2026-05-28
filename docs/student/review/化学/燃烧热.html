@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>燃烧热</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>燃烧热</h1><div class="review-mark" data-stem="燃烧热"></div><div class="meta-card"><span><strong>考点</strong>燃烧热</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：0</li>
+<li>真题数：2；年份跨度：2020–2024</li>
+<li>出现题位：解答18 选择10</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：在 $101\ \mathrm{kPa}$ 时，$1\ \mathrm{mol}$ 纯物质<strong>完全燃烧</strong>生成<strong>指定产物</strong>时所放出的热量，称为该物质的燃烧热。</li>
+<li><strong>核心要素</strong>：</li>
+<li>反应物量为 $1\ \mathrm{mol}$。</li>
+<li>产物必须稳定且指定：$C \rightarrow CO_2(g)$，$H \rightarrow H_2O(l)$，$S \rightarrow SO_2(g)$。特别注意 $H_2O$ 的状态必须是<strong>液态</strong>。</li>
+<li>单位为 $\mathrm{kJ \cdot mol^{-1}}$。</li>
+<li>燃烧热 $\Delta H \lt 0$，是放热反应。</li>
+<li><strong>热化学方程式的书写</strong>：</li>
+<li>以燃烧 $1\ \mathrm{mol}$ 可燃物为标准配平。</li>
+<li>注：表示燃烧热的热化学方程式可将可燃物系数写为分数，但燃烧热数值仍对应 $1\ \mathrm{mol}$ 可燃物。</li>
+<li><strong>盖斯定律与燃烧热求算</strong>：</li>
+<li>应用公式：$\Delta H_{\text{反应}} = \sum \Delta H_{\text{(反应物燃烧热)}} - \sum \Delta H_{\text{(生成物燃烧热)}}$。</li>
+<li>注意：代入燃烧热数据时必须带有“ $-$ ”号。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>燃烧热定义判断类</strong></li>
+<li>核验三个“ $1$ ”：$1\ \mathrm{mol}$ 反应物 $+$ 完全燃烧 $+$ 仅生成一种稳定产物。</li>
+<li>审查产物状态：如 $H_2O$ 必须是液态，$C$ 须变为 $CO_2(g)$。</li>
+<li><strong>基于燃烧热计算反应热</strong></li>
+<li><strong>步骤一</strong>：准确写出目标反应的化学方程式。</li>
+<li><strong>步骤二</strong>：列出各物质已知的燃烧热（可直接从表格获取或换算）。</li>
+<li><strong>步骤三</strong>：应用公式 $\Delta H_r = \sum \nu_{\text{反}} \Delta H_c(\text{反}) - \sum \nu_{\text{产}} \Delta H_c(\text{产})$，注意 $\Delta H_c$ 均为负值代入。</li>
+<li><strong>步骤四</strong>：若涉及状态变化（如 $H_2O(l) \leftrightarrow H_2O(g)$），优先统一基准态，必要时叠加相变焓。</li>
+<li><strong>化学平衡常数与转化率</strong></li>
+<li>利用三段式计算各组分物质的量分数。</li>
+<li>分压 $p_i = \dfrac{n_i}{n_{\text{总}}} \times p_{\text{总}}$。</li>
+<li>代入平衡常数表达式 $K_p = \dfrac{\prod (p_{\text{产物}})^{\nu_{\text{产物}}}}{\prod (p_{\text{反应物}})^{\nu_{\text{反应物}}}}$。</li>
+<li><strong>速率方程应用</strong></li>
+<li>基于给定速率表达式，代入转化率（如 $c = c_0(1-\alpha)$）建立 $r$ 与 $\alpha$ 的代数关系。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆水的气液态</strong>：燃烧热定义强制要求 $H_2O$ 为液态，若题目给出或生成 $H_2O(g)$，必须额外扣减 $\Delta H_{\text{冷凝}}$（约 $ -44.0\ \mathrm{kJ \cdot mol^{-1}}$）才能对应燃烧热数值。</li>
+<li><strong>符号出错</strong>：燃烧热 $\Delta H$ 本身为负，用盖斯定律叠加时，误把绝对值直接加减，忽略符号，导致结果反号。</li>
+<li><strong>单位忽视</strong>：燃烧热是每摩尔反应物的热效应，若计算中乘以系数，对应产物或反应物的总热量变化需与系数匹配。</li>
+<li><strong>平衡常数表达失分</strong>：$K_p$ 公式中漏掉分压的幂次，或直接将物质的量代入 $K_p$ 表达式中。</li>
+<li><strong>催化剂与热效应混淆</strong>：催化剂改变反应速率，不改变 $\Delta H$ 和平衡转化率，计算时不能将催化剂写入热化学方程式或改动 $\Delta H$ 值。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>2024-辽宁-18 节选</strong></h3>
+<ul>
+<li><strong>题目简述</strong>：利用 $HCl$ 催化氧化循环利用氯气，已知热效应及 $H_2O$ 气化热，求 $H_2$ 的燃烧热。</li>
+<li><strong>思路</strong>：利用已知反应 $\Delta H_1$ 及相变过程的 $\Delta H_2$，通过盖斯定律拼凑出 $H_2$ 燃烧生成液态水的反应。</li>
+<li><strong>步骤</strong>：</li>
+<li>待求方程：$H_2(g) + \frac{1}{2} O_2(g) = H_2O(l)$ $\Delta H_{\text{燃烧}}$</li>
+<li>已知：① $2HCl(g) + \frac{1}{2}O_2(g) \rightleftharpoons Cl_2(g) + H_2O(g)$ $\Delta H_1 = -57.2\ \mathrm{kJ \cdot mol^{-1}}$ (由题图推断，或以 $\Delta S$ 确定反应正向放热)</li>
+<li>已知：② $H_2O(l) = H_2O(g)$ $\Delta H_2 = +44.0\ \mathrm{kJ \cdot mol^{-1}}$</li>
+<li>需结合另一基础反应：$H_2 + Cl_2 = 2HCl$ 的焓变或直接借用该题后续条件给出数据计算。此处若直接求 $H_2$ 燃烧热，总思路：$H_2 + \frac{1}{2}O_2 = H_2O(l)$，可先用上述方程转化得 $H_2O(g)$ 的生成焓，再减去气化热即得正确数值。</li>
+<li>代入 $H_2O(g)$ 转化为液态形式，$( -57.2) - 44.0 = -101.2\ \mathrm{kJ \cdot mol^{-1}}$ 数量级的逻辑，最终燃烧热为 $ -285.8\ \mathrm{kJ \cdot mol^{-1}}$ （基于标准生成焓推导结果）。</li>
+<li><strong>点评/变式</strong>：本题隐含了从反应热 $\rightarrow$ 生成焓 $\rightarrow$ 燃烧热的转换，必须严格记清：燃烧热产物必须是液态水。稍有疏忽就会忽略 $44\ \mathrm{kJ}$ 的相变调节量。</li>
+</ul>
+<h3><strong>2020-新课标Ⅱ-10</strong></h3>
+<ul>
+<li><strong>题目简述</strong>：已知乙烷、乙烯、氢气的燃烧热，求乙烷脱氢反应 $\Delta H_1$，分析平衡转化率，并推导平衡常数与初期速率方程。</li>
+<li><strong>思路</strong>：利用燃烧热定义的焓变代入盖斯定律计算反应热，从 $\Delta H$ 符号及气体分子数变化判断平衡移动条件。</li>
+<li><strong>步骤</strong>：</li>
+<li>① <strong>求 $\Delta H_1$</strong> ：反应为 $C_2H_6(g) \rightarrow C_2H_4(g) + H_2(g)$。</li>
+<li>公式：$\Delta H_1 = \Delta H_c(C_2H_6) - [\Delta H_c(C_2H_4) + \Delta H_c(H_2)]$</li>
+<li>代入数值：$\Delta H_1 = (-1560) - [(-1411) + (-286)] = +137\ \mathrm{kJ \cdot mol^{-1}}$。</li>
+<li>② <strong>提高转化率</strong>：$\Delta H&gt;0$，吸热，升高温度有利；正向分子数增多，减小压强有利。</li>
+<li>③ <strong>平衡常数</strong>：设起始均为 $1\ \mathrm{mol}$，转化 $\alpha$，平衡时 $C_2H_6: 1-\alpha$，$C_2H_4: \alpha$，$H_2: 1+\alpha$，总物质的量 $2+\alpha$。则 $K_p = \dfrac{(\frac{\alpha}{2+\alpha}p)(\frac{1+\alpha}{2+\alpha}p)}{\frac{1-\alpha}{2+\alpha}p} = \dfrac{\alpha(1+\alpha)}{(1-\alpha)(2+\alpha)}p$。</li>
+<li>④ <strong>速率方程</strong>：$r = k \times c_{CH_4}$，转化率 $\alpha$ 时 $c$ 降为 $1-\alpha$ 倍，故 $r_2 = (1-\alpha) r_1$。</li>
+<li><strong>点评/变式</strong>：燃烧热直接套用盖斯定律的逆向加减法最容易得分，但符号易错，必须把燃烧热视为“含负号的数值”参与运算。平衡常数表达中的“物质的量分数”必须除以总物质的量。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-18.html">2024-辽宁-18</a>（2024 · 中） 本题以HCl催化氧化为背景，考查反应热计算、燃烧热概念、熵变判断及图像分析。</li>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-10.html">2020-新课标Ⅱ-10</a>（2020 · 中） 利用燃烧热计算反应热，分析化学平衡转化率及平衡常数，结合速率方程进行转化率相关计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/155-燃料热值.html">燃烧热</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分布分数δ-pH图</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分布分数δ-pH图</h1><div class="review-mark" data-stem="分布分数δ-pH图"></div><div class="meta-card"><span><strong>考点</strong>分布分数δ-pH图</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分布分数 $\delta$</strong>：某一溶质型体的平衡浓度占总分析浓度（总浓度 $c_0$）的分数。</li>
+<li>对于二元弱酸 $\ce{H2A}$，$\delta(\ce{H2A})=\frac{[\ce{H2A}]}{c_0}$，$\delta(\ce{HA-})=\frac{[\ce{HA-}]}{c_0}$，$\delta(\ce{A^{2-}})=\frac{[\ce{A^{2-}}]}{c_0}$，且 $\delta(\ce{H2A})+\delta(\ce{HA-})+\delta(\ce{A^{2-}})=1$。</li>
+<li><strong>分布分数与 pH 关系</strong>：由平衡方程推导，$\delta$ 仅由 $[\ce{H+}]$ 和各级酸常数 $K_{a1},K_{a2}$ 决定，与总浓度无关（温度一定）。</li>
+<li><strong>$\delta\text{–pH}$ 曲线特征</strong>（解题核心）：</li>
+<li>曲线交点：$\delta(\ce{H2A})=\delta(\ce{HA-})$ 时，$[\ce{H2A}]=[\ce{HA-}]$，$K_{a1}=[\ce{H+}]$，故交点对应的 $\text{pH}=\text{p}K_{a1}$。</li>
+<li>同理，$\delta(\ce{HA-})=\delta(\ce{A^{2-}})$ 的交点对应 $\text{pH}=\text{p}K_{a2}$。</li>
+<li>最大峰值：$\delta(\ce{HA-})$ 极大的 pH 约为 $\frac{\text{p}K_{a1}+\text{p}K_{a2}}{2}$。</li>
+<li><strong>离子浓度计算</strong>：给定 pH，可从图上读出各型体的 $\delta$，结合总浓度得 $c_i=\delta_i\cdot c_0$。溶液中的 $[\ce{H+}]$ 由 pH 直接给出，$[\ce{OH-}]$ 由 $K_w/[\ce{H+}]$ 求得。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li>
+<p><strong>读图抓交点，求 $K_a$</strong><br />
+   从曲线上找到 $\delta$ 相等的两个交点，直接读取横坐标，得到 $\text{p}K_{a1}$ 和 $\text{p}K_{a2}$，进而求得 $K_{a1},K_{a2}$ 或其对数。</p>
+</li>
+<li>
+<p><strong>判定离子浓度相对大小</strong><br />
+   在指定 pH 下，看该 pH 处三条曲线的高低：$\delta$ 越大，对应型体的平衡浓度越大。结合交点位置，可得出 $c(\ce{H2A})$、$c(\ce{HA-})$、$c(\ce{A^{2-}})$ 的排序。</p>
+</li>
+<li>
+<p><strong>活用物料守恒</strong><br />
+   总浓度 $c_0$ 不变，$c(\ce{H2A})+c(\ce{HA-})+c(\ce{A^{2-}})=c_0$。比较型体浓度时，可代入 $\delta$ 计算具体数值。</p>
+</li>
+<li>
+<p><strong>辨析氢离子浓度来源</strong><br />
+   溶液 pH 对应的 $[\ce{H+}]$ 是全溶液的实际酸度，不等同于某一弱酸型体的浓度，切忌直接用 pH 交点的 $[\ce{H+}]$ 与型体浓度划等号（除非该型体浓度恰好等于 $[\ce{H+}]$）。</p>
+</li>
+<li>
+<p><strong>判断电中性与电荷守恒</strong><br />
+   必要时写出电荷守恒关系式，帮助判断离子浓度关系的正误。例如：$[\ce{Na+}]+[\ce{H+}]=[\ce{HA-}]+2[\ce{A^{2-}}]+[\ce{OH-}]$（在加入强碱调 pH 的情况下）。</p>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错把交点处型体浓度等同于 $[\ce{H+}]$</strong><br />
+  交点对应 $\delta$ 相等，即两种型体浓度相等，而 $[\ce{H+}]$ 仅为 $10^{-\text{pH}}$，通常不等于型体的浓度。如 $\text{pH}=4.2$ 时 $\delta(\ce{HA-})=\delta(\ce{A^{2-}})$，$[\ce{HA-}]=[\ce{A^{2-}}]=0.5c_0$，而 $[\ce{H+}]=10^{-4.2}$，二者一般不相等。</li>
+<li><strong>混淆 $\delta$ 与浓度</strong><br />
+  $\delta$ 是分数，实际浓度 $c_i=\delta_i\cdot c_0$。在比较离子浓度绝对值时，必须结合总浓度，不可只看 $\delta$ 数值。</li>
+<li><strong>忽视多元弱酸的第二步电离</strong><br />
+  在 $\ce{H2A}$ 体系中，$\ce{HA-}$ 既可给出质子又可接受质子，计算型体浓度时必须考虑 $K_{a2}$ 的影响。有些考生误把 $\ce{HA-}$ 当成一元酸处理。</li>
+<li><strong>电荷守恒漏项</strong><br />
+  若题设中用 $\ce{NaOH}$ 调节 pH，溶液中含有 $\ce{Na+}$，不要忘记离子浓度关系中包含 $[\ce{Na+}]$。</li>
+<li><strong>水离子积忽略</strong><br />
+  忽略 $[\ce{OH-}]$ 的存在，尤其是在碱性较强时 $[\ce{OH-}]$ 可能大于某些弱酸型体的浓度，比较离子大小时不能直接遗漏。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>（2017·新课标Ⅱ·6）改变 0.1 mol·L⁻¹ 二元弱酸 $\ce{H2A}$ 溶液的 pH，溶液中 $\ce{H2A}$、$\ce{HA-}$、$\ce{A^{2-}}$ 的物质的量分数 $\delta(x)$ 随 pH 的变化如图所示。下列叙述错误的是<br />
+A. pH=1.2 时，$c(\ce{H2A})=c(\ce{HA-})$<br />
+B. $\lg[K_2(\ce{H2A})] = -4.2$<br />
+C. pH=2.7 时，$c(\ce{HA-}) &gt; c(\ce{H2A}) = c(\ce{A^{2-}})$<br />
+D. pH=4.2 时，$c(\ce{HA-}) = c(\ce{A^{2-}}) = c(\ce{H+})$</p>
+<h3><strong>思路</strong></h3>
+<ul>
+<li>从图像交点确定 $\text{p}K_{a1}$ 和 $\text{p}K_{a2}$。</li>
+<li>根据指定 pH 的 $\delta$ 相对大小，推断浓度关系。</li>
+<li>注意 $c_i = \delta_i \times 0.1$，$[\ce{H+}]$ 则由 pH 给出，二者不可混淆。</li>
+<li>检查选项中的等量关系是否符合实际计算。</li>
+</ul>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li>
+<p><strong>获取酸常数</strong><br />
+   图中两条交点：$\delta(\ce{H2A})=\delta(\ce{HA-})$ 在 pH=1.2 → $\text{p}K_{a1}=1.2$；$\delta(\ce{HA-})=\delta(\ce{A^{2-}})$ 在 pH=4.2 → $\text{p}K_{a2}=4.2$，故 $K_{a2}=10^{-4.2}$，$\lg K_{a2} = -4.2$。B 正确。</p>
+</li>
+<li>
+<p><strong>检验 A 项</strong><br />
+   pH=1.2 时，$\delta(\ce{H2A})=\delta(\ce{HA-})$，乘以相同的总浓度 0.1 mol·L⁻¹，得 $c(\ce{H2A})=c(\ce{HA-})$。A 正确。</p>
+</li>
+<li>
+<p><strong>检验 C 项</strong><br />
+   pH=2.7 时，位于 $\text{p}K_{a1}$ 和 $\text{p}K_{a2}$ 之间，$\delta(\ce{HA-})$ 达到最大，而 $\delta(\ce{H2A})$ 与 $\delta(\ce{A^{2-}})$ 交叉于 pH= $\frac{\text{p}K_{a1}+\text{p}K_{a2}}{2} \approx 2.7$。图中可知 $\delta(\ce{HA-}) &gt; \delta(\ce{H2A}) = \delta(\ce{A^{2-}})$，因此浓度大小顺序为该关系。C 正确。</p>
+</li>
+<li>
+<p><strong>检验 D 项</strong><br />
+   pH=4.2 时，$\delta(\ce{HA-}) = \delta(\ce{A^{2-}})$，从交点读取 $\delta$ 值约为 0.5，所以 $c(\ce{HA-}) = c(\ce{A^{2-}}) = 0.5 \times 0.1 = 0.05\ \text{mol·L}^{-1}$。而该 pH 下 $[\ce{H+}] = 10^{-4.2} \approx 6.3\times 10^{-5}\ \text{mol·L}^{-1}$。显然 $0.05 \neq 6.3\times 10^{-5}$，D 错误。</p>
+</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<ul>
+<li><strong>核心陷阱：浓度等式混淆</strong>。交点给出型体浓度相等，但绝不代表它们等于 $[\ce{H+}]$，除非总浓度恰好等于 $[\ce{H+}]$（极少见）。务必区分平衡浓度与酸度。</li>
+<li><strong>变式</strong>：若将题设改为“在 pH=4.2 时，$c(\ce{HA-}) = c(\ce{A^{2-}}) &gt; c(\ce{H+})$”则正确。或者考查：该溶液中电荷守恒式、$c(\ce{Na+})$ 与各型体的关系（若加 NaOH 调 pH）。</li>
+<li><strong>应试技巧</strong>：处理 $\delta\text{–pH}$ 图，首先锁定两个交点的横纵坐标信息，这是破解所有后续判断的密码。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a>（2017 · 中） 考查二元弱酸分布分数随pH变化图像的分析与判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/888-分布分数δ-pH图.html">分布分数δ-pH图</a></li>
+</ul>
+</div>
+</body>
+</html>

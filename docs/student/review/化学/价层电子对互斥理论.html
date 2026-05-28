@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>价层电子对互斥理论</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>价层电子对互斥理论</h1><div class="review-mark" data-stem="价层电子对互斥理论"></div><div class="meta-card"><span><strong>考点</strong>价层电子对互斥理论</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学键与分子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学键与分子结构</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>定义</strong>：价层电子对互斥理论（VSEPR）用于预测简单分子或离子的空间构型。核心思想是中心原子周围的价层电子对（包括σ键电子对和孤电子对）由于静电排斥作用，会尽可能彼此远离，趋向于分布在相距最远的位置，从而使体系能量最低。</p>
+<p><strong>核心公式</strong>：
+对于中心原子 A，其价层电子对数 $n$ 的计算公式为：
+$$n = \frac{a + xb}{2}$$
+其中：
+- $a$：中心原子的价电子数（主族元素等于最外层电子数，阳离子则减去电荷数，阴离子则加上电荷数）。
+- $x$：与中心原子结合的原子数。
+- $b$：每个结合原子提供的用于形成 σ 键的电子数。通常，H 和卤素提供 1 个电子，O 和 S 作为配位原子时提供 0 个电子，N 提供 -1 个电子。
+- 若计算出的 $n$ 值不为整数，则向上取整。例如，计算结果为 3.5，则 $n$ 取 4。</p>
+<p><strong>电子对空间构型与分子空间构型的关系</strong>：
+| 价层电子对数 ($n$) | 电子对空间构型 | 孤电子对数 ($m$) | 分子空间构型 | 实例 |
+| :---: | :---: | :---: | :---: | :---: |
+| 2 | 直线形 | 0 | 直线形 | $BeCl_2, CO_2$ |
+| 3 | 平面三角形 | 0 | 平面三角形 | $BF_3, SO_3$ |
+| 3 | 平面三角形 | 1 | V形（角形） | $SO_2, O_3$ |
+| 4 | 正四面体形 | 0 | 正四面体形 | $CH_4, SiF_4$ |
+| 4 | 正四面体形 | 1 | 三角锥形 | $NH_3, H_3O^+$ |
+| 4 | 正四面体形 | 2 | V形（角形） | $H_2O, H_2S$ |</p>
+<p><strong>适用条件</strong>：
+1. 适用于主族元素形成的简单分子或离子（ABm型）。
+2. 用于预测分子的几何构型，不考虑 π 键和离域键的影响。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定中心原子</strong>：通常是电负性小或原子个数少的原子。在真题的 $H_2S, SO_2, SO_3$ 分子中，中心原子均为 S。</li>
+<li><strong>提取价电子数 ($a$)</strong>：准确找出中心原子的最外层电子数。例如，S 作为中心原子时，其价电子数 $a=6$。</li>
+<li><strong>计算配位原子提供电子数 ($xb$)</strong>：</li>
+<li>明确每个配位原子的身份。</li>
+<li><strong>关键规则</strong>：配位原子为 H 或卤素时，$b=1$；配位原子为 O 或 S 时，$b=0$。真题中 $H_2S$ 的配位原子为 H，$SO_2$ 和 $SO_3$ 的配位原子为 O，故其 $b$ 值不同。</li>
+<li><strong>代入公式计算 $n$</strong>：</li>
+<li>计算 $H_2S$：$n = (6 + 2\times1) / 2 = 4$</li>
+<li>计算 $SO_2$：$n = (6 + 0) / 2 = 3$</li>
+<li>计算 $SO_3$：$n = (6 + 0) / 2 = 3$</li>
+<li><strong>判断并比较</strong>：根据计算结果，比较不同分子的价层电子对数，寻找差异。本题中 $H_2S$ 的 $n=4$，明显不同于 $SO_2$ 和 $SO_3$（$n=3$）。若需进一步判断构型，则计算孤电子对数 $m = n - x$，再对照表格确定分子构型。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆中心原子与配位原子提供的电子</strong>：计算时，公式中的 $a$ 专指中心原子的价电子数，切勿把配位原子的价电子数全部加在一起。务必牢记公式 $n = \frac{a + xb}{2}$ 各部分含义。</li>
+<li><strong>配位原子为氧族元素时，$b$ 值误判为 2</strong>：这是最高频的失分点。当 O、S 等作为<strong>配位原子</strong>时，它们在形成 σ 键时，通常认为只提供轨道，不提供电子，因此 $b = 0$。这与它们作为中心原子时提供 6 个电子完全不同，要严格区分情境。</li>
+<li><strong>计算出的 $n$ 直接等同于 σ 键数</strong>：价层电子对数 $n$ 包含 σ 键电子对和孤电子对。误将 $n$ 直接当作成键电子对数，会导致对分子构型（特别是 V 形、三角锥形等）的判断错误。</li>
+<li><strong>化学式简写造成的误判</strong>：遇到像 $S_8$ 这样的非 ABm 型分子，不能直接套用该公式。题干中判断 $S_8$ 熔沸点的依据是分子晶体中的作用力，而非 VSEPR 理论。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2018-新课标Ⅱ-11节选）根据价层电子对互斥理论，$H_2S$，$SO_2$，$SO_3$ 的气态分子中，中心原子价层电子对数不同于其他分子的是 $\underline{\qquad}$。</p>
+<p><strong>思路</strong>：该题考查价层电子对互斥理论的核心公式运用。关键在于正确识别每个分子的中心原子（均为 S），并准确判断配位原子（H 和 O）在计算中应提供的电子数（$b$ 值）。</p>
+<p><strong>步骤</strong>：
+1. 定中心：各分子的中心原子均为 S。
+2. 定 $a$ 值：S 原子最外层有 6 个电子，即 $a=6$。
+3. 定 $xb$ 值：
+   - 对于 $H_2S$，配位原子是 2 个 H，每个 H 提供 1 个电子，$xb = 2\times1 = 2$。
+   - 对于 $SO_2$，配位原子是 2 个 O，每个 O 作为配位原子不提供电子，$xb = 2\times0 = 0$。
+   - 对于 $SO_3$，配位原子是 3 个 O，$xb = 3\times0 = 0$。
+4. 计算 $n$：
+   - $H_2S$：$n = (6+2)/2 = 4$。
+   - $SO_2$：$n = (6+0)/2 = 3$。
+   - $SO_3$：$n = (6+0)/2 = 3$。
+5. 得结论：中心原子价层电子对数不同于其他分子的是 $H_2S$。</p>
+<p><strong>点评/变式</strong>：
+- <strong>点评</strong>：此题为理论的直接应用，是必得分的题目。解题的“分水岭”就在于能否记住<strong>配位原子是氧族元素时，$b$ 取 0</strong> 这一特殊规则。若不慎将 O 按 H 一样处理（$b=1$），则会算出 $SO_2$ 的 $n=4$，导致错选。
+- <strong>变式</strong>：若将题目改为中心原子孤电子对数不同的是哪个，则需在本题基础上进一步计算。
+  - $H_2S$ 的孤电子对数 $m = n - x = 4 - 2 = 2$。
+  - $SO_2$ 的孤电子对数 $m = 3 - 2 = 1$。
+  - $SO_3$ 的孤电子对数 $m = 3 - 3 = 0$。
+  - 此时结论则是“三者互不相同”。这提示我们，在完成 VSEPR 计算后，要灵活运用 $n$ 和 $m$ 两个参数去解答不同的问题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2018-新课标Ⅱ-11.html">2018-新课标Ⅱ-11</a>（2018 · 中） 该题考查物质结构与性质，涉及原子电子排布、价层电子对互斥理论和分子晶体熔沸点比较。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/419-VSEPR.html">价层电子对互斥理论</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电子守恒</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>电子守恒</h1><div class="review-mark" data-stem="电子守恒"></div><div class="meta-card"><span><strong>考点</strong>电子守恒</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2009–2024</li>
+<li>出现题位：填空12 选择1</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心定义</strong>：在氧化还原反应中，氧化剂得到的电子总数恒等于还原剂失去的电子总数。其本质是电子转移过程中的电荷守恒。</li>
+<li><strong>核心公式</strong>：$n(氧化剂) \times \Delta N(化合价降低值) = n(还原剂) \times \Delta N(化合价升高值)$。</li>
+<li><strong>适用场景</strong>：</li>
+<li>氧化还原反应的计算（如求物质的量之比、气体体积）。</li>
+<li>电化学（原电池、电解池）中的电极反应式书写与基于电量的计算。</li>
+<li>多步连续反应中，若只关注始态与终态元素价态，可直接建立电子守恒关系，跳过中间步骤。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>精准标价</strong>：准确标出反应前后所有变价元素的化合价，特别是注意有机物中 $C$ 的平均化合价或关键官能团碳的化合价。</li>
+<li><strong>锁定对象</strong>：明确该反应过程中“氧化剂”与“还原剂”具体是谁，注意同一物质在反应中可能既显氧化性/还原性又显酸性（如硝酸）。</li>
+<li><strong>列守恒式</strong>：</li>
+<li>针对化学反应：列式 $n(氧化剂) \times \Delta z = n(还原剂) \times \Delta z$。</li>
+<li>针对电化学：抓住“串联电路转移电子数相等”原则，列式 $\frac{Q}{F} = \frac{m}{M} \times \Delta z$，或直接由电极反应中转移电子数与产物的化学计量数比进行计算。</li>
+<li><strong>原子辅证</strong>：在电子守恒基础上，若涉及未被氧化/还原的部分（如成盐），必须结合原子守恒和质量守恒，确定各物质的总消耗量或实际生成的盐的量。</li>
+</ol>
+<h2>高频易错</h2>
+<ol>
+<li><strong>混淆“参与反应”与“被还原/被氧化”</strong>：以硝酸为例，反应中硝酸分为两部分：起酸性作用生成盐（未被还原）和起氧化性作用生成还原产物（被还原）。计算比例时，不可直接用总量相比。</li>
+<li><strong>电化学中多室耦合的电子分配</strong>：新型电解池常涉及“阳极耦合氧化反应替代析氧反应”。必须分清阴极、阳极各自发生的半反应，相同电量下阴极和阳极产物量不一定相同，氢气产量需将阴阳极叠加计算。</li>
+<li><strong>有机物氧化数计算失误</strong>：分析如 $HCHO$ 转化为 $HCOO^{-}$ 或 $H_{2}$ 的过程时，不能仅凭加氧去氢简单判断，需根据反应机理仔细剥离：可能既有生成甲酸盐的氧化过程，又伴随生成氢气的还原过程。</li>
+<li><strong>电极反应中隐含的介质反应</strong>：电极反应生成的产物（如酸）会立即与电解质溶液中的碱发生中和反应，书写总离子方程式或计算转移电子时，需确认是否已将后续中和反应考虑在内。</li>
+</ol>
+<h2>代表题精讲</h2>
+<h3>代表题一：2009-全国Ⅱ-01</h3>
+<ul>
+<li><strong>题目</strong>：物质的量之比为 $2:5$ 的锌与稀硝酸反应，被还原产物为 $N_{2}O$，求被还原与未被还原的硝酸物质的量之比。</li>
+<li><strong>思路</strong>：此题为典型的硝酸氧化还原计算。关键在于利用“锌没有剩余”这一条件，且硝酸同时承担酸性和氧化性角色。利用电子守恒找出生成盐的硝酸根（未被还原）与被还原为 $N_{2}O$ 的硝酸（被还原）的关系。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>电子守恒</strong>：$Zn$ 从 $0$ 升至 $+2$，$2mol$ 锌失去 $4mol$ 电子。$N$ 从 $+5$ 降至 $+1$，生成 $1mol N_{2}O$ 含 $2mol N$，共得 $2 \times 4 = 8mol$ 电子。由此可知，只有 $0.5mol N_{2}O$ 生成。
+  <em>纠错与进阶</em>：原解析提供捷径，我们回溯最严谨的配平逻辑。$2mol Zn$ 失 $4mol e^{-}$。此时若被还原的 $HNO_{3}$ 为 $x mol$，则生成 $N_{2}O$ 得电子总数为 $x \times (5-1)=4x$。列式 $4 = 4x$，解得 $x=1mol$。即被还原的硝酸为 $1mol$。</li>
+<li><strong>原子守恒（成盐）</strong>：$2mol Zn$ 生成 $2mol Zn(NO_{3})<em 3="3">{2}$，需要结合 $4mol NO</em>$，这部分来自未被还原的硝酸，为 $4mol$。}^{-</li>
+<li><strong>求比值</strong>：被还原的硝酸（$1mol$）与未被还原的硝酸（$4mol$）之比为 $1:4$。选项A正确。</li>
+<li><strong>点评/变式</strong>：此类题切忌用总硝酸量直接相减。变式变换金属（如 $Cu$、$Mg$）或还原产物（$NO$、$NH_{4}^{+}$），核心均需紧紧抓住“失电子总数=得电子总数”先求出被还原部分，再利用金属离子电荷数求出成盐部分。</li>
+</ul>
+<h3>代表题二：2024-辽宁-12</h3>
+<ul>
+<li><strong>题目</strong>：一种耦合$HCHO$制氢的电解装置。判断“相同电量下氢气理论产量是传统电解水的1.5倍”等说法的正误。</li>
+<li><strong>思路</strong>：首先根据物质转化（$HCHO$ 变 $HCOO^{-}$）判定阴阳极。随后，提取反应机理中隐藏的电子转移细节：阳极反应在氧化 $HCHO$ 的同时，部分中间体转化为 $H_{2}$。列出阴、阳极真实发生的主反应，对比转移电子与产氢量的关系。</li>
+<li><strong>步骤</strong>：</li>
+<li><strong>确定电极</strong>：$b$ 极 $HCHO$ 失电子变为 $HCOO^{-}$，为阳极；$a$ 极为阴极。</li>
+<li><strong>分析阴极产氢</strong>：阴极发生还原，$2H_{2}O + 2e^{-} = H_{2}↑ + 2OH^{-}$。每转移 $2mol e^{-}$，阴极生成 $1mol H_{2}$。</li>
+<li><strong>分析阳极产氢（本题核心陷阱）</strong>：根据题目所给反应机理，$HCHO$ 反应过程不仅生成了 $HCOO^{-}$，还伴随产生了活性极高的氢负离子（$H^{-}$）。氢负离子在阳极直接失电子：$2H^{-} - 2e^{-} = H_{2}↑$。因此，阳极总反应为：$2HCHO - 2e^{-} + 4OH^{-} \to 2HCOO^{-} + 2H_{2}O + H_{2}↑$。每转移 $2mol e^{-}$，阳极生成 $1mol H_{2}$。</li>
+<li><strong>对比判断</strong>：转移等电量（$2mol e^{-}$）时，该耦合装置阴极产 $1mol H_{2}$，阳极产 $1mol H_{2}$，共 $2mol H_{2}$。传统电解水阳极只产氧气不产氢气，阴极产 $1mol H_{2}$，共 $1mol H_{2}$。故理论产量是传统电解水的 $2$ 倍，并非 $1.5$ 倍。选项A错误。</li>
+<li><strong>点评/变式</strong>：本题极具迷惑性，属于电化学耦合信息题。考生若只关注$HCHO$变为甲酸的氧化路径，容易漏算随该过程同步释放出的氢气。这警示我们，对电极上所有的物质转化路径（特别是题目额外给出的中间体转化）都需进行完整的电子得失核算。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-12.html">2024-辽宁-12</a>（2024 · 中） 电化学电解池中电极反应、电子转移计算及离子移动方向的分析</li>
+<li><a href="../../exam/化学/2009-全国Ⅱ-01.html">2009-全国Ⅱ-01</a>（2009 · 中） 锌与稀硝酸反应中硝酸作用的计算</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/560-电子守恒.html">电子守恒</a></li>
+</ul>
+</div>
+</body>
+</html>

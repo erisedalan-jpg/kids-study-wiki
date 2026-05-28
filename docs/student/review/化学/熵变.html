@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>熵变</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>熵变</h1><div class="review-mark" data-stem="熵变"></div><div class="meta-card"><span><strong>考点</strong>熵变</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：解答18</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p><strong>熵（$S$）</strong>：衡量体系微观状态混乱度（无序度）的物理量，单位 $\text{J·mol}^{-1}\text{·K}^{-1}$。同一物质：$S(\text{气态}) &gt; S(\text{液态}) &gt; S(\text{固态})$。
+<strong>熵变（$\Delta S$）</strong>：反应或过程的混乱度变化，$\Delta S = \sum \nu S(\text{生成物}) - \sum \nu S(\text{反应物})$。
+<strong>快速判据</strong>——对于有气体参与的反应，只需比较反应前后气体总物质的量（$\Delta n_{\text{气}}$）：
+- $\Delta n_{\text{气}} &gt; 0$（气体分子数增加） $\Rightarrow \Delta S &gt; 0$；
+- $\Delta n_{\text{气}} &lt; 0$（气体分子数减少） $\Rightarrow \Delta S &lt; 0$；
+- $\Delta n_{\text{气}} = 0$ 时，需结合具体物质状态或给出数据判断，若各物质均为气体且反应前后分子数不变，则 $\Delta S \approx 0$（严格不为零）。
+<strong>熵与自发性</strong>：$\Delta G = \Delta H - T\Delta S$。
+- $\Delta H&lt;0,\ \Delta S&gt;0$：任意温度均自发；
+- $\Delta H&gt;0,\ \Delta S&lt;0$：任意温度均不自发；
+- $\Delta H&lt;0,\ \Delta S&lt;0$：低温自发；
+- $\Delta H&gt;0,\ \Delta S&gt;0$：高温自发。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>判$\Delta S$符号</strong>：</li>
+<li>写出配平化学方程式（必须配平）；</li>
+<li>观察反应物与生成物的状态（气、液、固），重点看气体；</li>
+<li>计算反应前后气体分子数之差 $\Delta n_{\text{气}}$，根据“气增则熵增，气减则熵减”快速作答；</li>
+<li>若无气体参与，从固态→液态→气态或粒子数增加的方向判断混乱度增大（$\Delta S &gt; 0$）。</li>
+<li><strong>利用$\Delta G = \Delta H - T\Delta S$分析温度对自发性的影响</strong>：</li>
+<li>先由已知条件（燃烧热、生成热等）算$\Delta H$，由题给数据或结论判$\Delta S$符号；</li>
+<li>设$\Delta G = 0$求转折温度 $T = \dfrac{\Delta H}{\Delta S}$（注意单位：$\Delta H$ 为 kJ·mol⁻¹，$\Delta S$ 为 J·mol⁻¹·K⁻¹，需统一为 kJ 或 J）；</li>
+<li>结合$\Delta H$与$\Delta S$正负，确定自发在高温端还是低温端。</li>
+<li><strong>结合平衡转化率图像分析$\Delta H$与$\Delta S$</strong>：</li>
+<li>较低流速下转化率近似平衡转化率，可用于比较不同温度下平衡移动方向；</li>
+<li>若升温平衡转化率下降，说明正反应放热（$\Delta H&lt;0$）；结合$\Delta S$符号可推断高压或低压对转化率的影响。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>忽略<strong>物质状态</strong>：只看化学计量数而不看气态标记（$g$），导致误判。如固体、液体的熵变贡献小，不能仅凭总物质的量变化判断。</li>
+<li>认为放热反应（$\Delta H&lt;0$）必然$\Delta S&gt;0$，或者吸热反应$\Delta S&lt;0$——<strong>焓变与熵变无必然联系</strong>。</li>
+<li>混淆<strong>化学反应熵变</strong>与<strong>物理变化熵变</strong>：升华、蒸发等过程熵增明显，但题目中若为相变过程，需单独依据气态程度判断。</li>
+<li>计算转折温度时，<strong>忘记统一能量单位</strong>（kJ 与 J 相差 1000 倍），导致数量级错误。</li>
+<li>$\Delta S$为零或近似为零的判定：反应前后气态分子数相同，且各物质均为气体时，$\Delta S$数值很小，但不能回答“等于零”，可选“较小”或由给定具体数据分析。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2024·辽宁卷·18节选）</h3>
+<p>工业反应 $2\text{HCl(g)} + \frac{1}{2}\text{O}_2\text{(g)} \rightleftharpoons \text{Cl}_2\text{(g)} + \text{H}_2\text{O(g)}\quad \Delta H = -57.2\ \text{kJ·mol}^{-1}$，需判断 $\Delta S$ 的符号，并根据下图（360℃、400℃、440℃，较低流速下近似平衡转化率）确定 $T_3$ 温度。</p>
+<p><strong>思路</strong><br />
+写出方程式，数气态分子数：反应物有 $2+0.5=2.5$ mol 气体，生成物有 $1+1=2$ mol 气体，气态分子数减少，因此 $\Delta S&lt;0$。因 $\Delta H&lt;0$，该反应正反应放热且熵减，升温平衡转化率应降低。较低流速下的转化率即平衡转化率，其中最高值对应最低温度，最低值对应最高温度。由图中三条曲线在低流速区的相对高低，可判断 $T_3$ 为最高温度 $440\degree\text{C}$。</p>
+<p><strong>步骤</strong><br />
+1. 判 $\Delta S$：反应前气态总物质的量 $= 2.5$ mol，反应后 $= 2$ mol，$\Delta n_{\text{气}} &lt; 0$，所以 $\Delta S &lt; 0$。<br />
+2. 由 $\Delta H = -57.2\ \text{kJ·mol}^{-1}&lt;0$，结合 $\Delta S&lt;0$，正反应为放热熵减反应。<br />
+3. 升温时平衡逆向移动，HCl 平衡转化率下降。图中三条曲线在较低流速（平衡区）转化率最高的是 360℃，最低的是 440℃，因此 $T_3 = 440\degree\text{C}$。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将 $\Delta S$ 符号判断与平衡转化率图像相结合，考察“气体数变化判熵变”和“温度对平衡移动的影响”。<br />
+- 若变式为：其他条件不变，欲提高 HCl 平衡转化率，可采取的措施？应为降温或加压（因为气体分子数减少，加压平衡正移）。<br />
+- 注意图像中“较低流速下近似平衡”是建立平衡判据的前提，若流速较高则动力学影响显著，不能直接用热力学数据解释。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-18.html">2024-辽宁-18</a>（2024 · 中） 本题以HCl催化氧化为背景，考查反应热计算、燃烧热概念、熵变判断及图像分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/553-熵变.html">熵变</a></li>
+</ul>
+</div>
+</body>
+</html>

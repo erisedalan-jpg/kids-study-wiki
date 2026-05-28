@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>热化学方程式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>热化学方程式</h1><div class="review-mark" data-stem="热化学方程式"></div><div class="meta-card"><span><strong>考点</strong>热化学方程式</span><span><strong>权重</strong>37</span><span><strong>真题数</strong>7</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：37</li>
+<li>真题数：7；年份跨度：2008–2023</li>
+<li>出现题位：选择6 选择9 选择10</li>
+<li>难度分布：易1 中5 难1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>热化学方程式</strong>：表示化学反应中<strong>物质的量</strong>与<strong>反应热（焓变 $\Delta H$）</strong> 关系的化学方程式。</li>
+<li><strong>书写要素</strong>：</li>
+<li>必须标注<strong>物质的状态</strong>：$s$（固）、$l$（液）、$g$（气）、$aq$（稀溶液）。</li>
+<li>化学计量数仅表示<strong>物质的量</strong>，可用分数。</li>
+<li><strong>$\Delta H$ 必须与化学计量数对应</strong>，单位 $kJ \cdot mol^{-1}$。</li>
+<li>写在方程式右侧，用“；”隔开。放热 $\Delta H &lt; 0$；吸热 $\Delta H &gt; 0$。</li>
+<li><strong>燃烧热</strong>：$1\ mol$ 纯物质<strong>完全燃烧</strong>生成<strong>稳定氧化物</strong>时放出的热量（$\Delta H &lt; 0$）。$H_2(g)$ 的稳定产物是 $H_2O(l)$，$C$ 的稳定产物是 $CO_2(g)$。</li>
+<li><strong>盖斯定律</strong>：反应热只与<strong>始终态</strong>有关，与途径无关。可通过方程式<strong>线性组合</strong>求目标反应 $\Delta H$。</li>
+<li><strong>反应热计算核心关系</strong>：
+  $$Q = n \cdot |\Delta H| \quad \text{或} \quad Q = \frac{V}{V_m} \cdot |\Delta H|$$</li>
+<li><strong>能量图判据</strong>：生成物总能量 &lt; 反应物总能量，$\Delta H &lt; 0$（放热）；反之吸热。反应条件（温度、压强、催化剂）影响平衡及选择性：放热反应低温、吸热反应高温利于正向进行；气体分子数减小的反应高压有利。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>盖斯定律法求 $\Delta H$</strong>：<ul>
+<li><strong>标</strong>：明确目标反应及各已知反应的 $\Delta H$。</li>
+<li><strong>调</strong>：调整已知反应方向（$\Delta H$ 变号）、系数（$\Delta H$ 同比例变化）。</li>
+<li><strong>消</strong>：消去目标中不出现的物质。</li>
+<li><strong>算</strong>：叠加各步 $\Delta H$ 即得目标 $\Delta H$。</li>
+</ul>
+</li>
+<li><strong>能量图像法求 $\Delta H$</strong>：
+    找准<strong>起点（反应物总能量）</strong> 与<strong>终点（生成物总能量）</strong>，$\Delta H = E_{生} - E_{反}$。多步反应 $\Delta H$ 可直接由始、终态能量差得出。</li>
+<li><strong>燃烧热/生成热组合法</strong>：
+    $\Delta H_{反应} = \sum \Delta H_{燃}(反应物) - \sum \Delta H_{燃}(生成物)$，或逆向用之构造热化学方程式。</li>
+<li><strong>混合物反应热计算</strong>：
+    设两物质物质的量 $x$、$y$；利用：<ul>
+<li>总体积/总质量/总物质的量方程。</li>
+<li>总放热量方程 = $x \cdot |\Delta H_A| + y \cdot |\Delta H_B|$。
+联立求解得出比例。</li>
+</ul>
+</li>
+<li><strong>非标准量换算</strong>：
+    注意气体体积换算至标准状况 ($22.4\ L/mol$) 再转换为物质的量，$Q = n \cdot |\Delta H|$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>物质状态未标或标错</strong>：$H_2O(l)$ 与 $H_2O(g)$ 对应焓变差异大，燃烧热中用 $H_2O(l)$。</li>
+<li><strong>$\Delta H$ 符号与数值</strong>：放热一定要写“-”；化学计量数翻倍时 $\Delta H$ 必须等倍率放大。</li>
+<li><strong>燃烧热概念模糊</strong>：可燃物必须为 1 mol，产物必须是稳定的氧化物，如 $C \rightarrow CO_2(g)$ 而非 $CO(g)$。</li>
+<li><strong>盖斯定律组合失误</strong>：方程式反向调整时 $\Delta H$ 忘记变号；加减计量数时未乘对应系数。</li>
+<li><strong>反应热单位</strong>：统一用 $kJ \cdot mol^{-1}$，勿与 $kJ$ 混淆。非标准体积直接计算必须转换为标准状况。</li>
+<li><strong>可逆反应“陷阱”</strong>：热化学方程式 $\Delta H$ 数值表示按计量系数完全反应的热量，与实际转化的物质无关。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>→ 2023-新课标-10 (节选)：根据能量图计算反应 $\frac{1}{2}N_2(g) + \frac{3}{2}H_2(g) = NH_3(g)$ 的 $\Delta H$。
+<strong>思路</strong>→ 用叠加能量变化图示或直接找反应物与生成物能量差（盖斯定律的图示化）。
+<strong>步骤</strong>→ 
+1. 由图中读出反应物起始相对能量与生成物终止相对能量。
+2. 算两者的差值即为 $\Delta H = E_{氨} - \left(\frac{1}{2}E_{N≡N} + \frac{3}{2}E_{H-H}\right)_{拆键等效}$ (图示通常提供能量差)。图中显示反应物总能量高于生成物，能量差为 $a\ kJ$ 则 $\Delta H = -a\ kJ \cdot mol^{-1}$ （结合图中数据通常得到 $-46$）。
+<strong>点评/变式</strong>→ 图形焓变：直接从图找最高点与最低点差。注意图示是单步还是多步；若中间有过渡态，只需关注始终态。</p>
+<p><strong>题目</strong>→ 2016-新课标Ⅱ-09 (节选)：已知反应①、②的热化学方程式及 $\Delta H$。解释“反应在热力学上趋势均很大”的原因，及提高产物选择性的关键。
+<strong>思路</strong>→ 运用 <strong>放热量大 $\rightarrow \Delta G = \Delta H - T\Delta S$，且 $\Delta H$ 极负</strong> 导致趋势大；选择性由动力学控制手段——催化剂实现。
+<strong>步骤</strong>→ 
+1. 观察①和②的 $\Delta H$ 分别是 $-515$、$-353\ kJ \cdot mol^{-1}$，均为大幅度放热。
+2. 热力学趋势取决于 $\Delta G$ 负值程度。大的 $-\Delta H$ 促使其自发进行趋势显著。
+3. 化学选择性：活化能差异用高选择性催化剂，区分主副反应快慢。
+<strong>点评/变式</strong>→ 热力学自发性与动力学选择性常结合考；催化剂不改变平衡但改变化学反应路径，调节产物分布。</p>
+<p><strong>题目</strong>→ 2011-新课标-09 (节选)：已知 $H_2$、$CO$、$CH_3OH$ 的燃烧热，书写甲醇不完全燃烧生成 $CO$ 和液态水的热化学方程式。
+<strong>思路</strong>→ 利用<strong>盖斯定律 + 燃烧热定义</strong>，写出各物质燃烧的总反应式，通过减法构造目标式。
+<strong>步骤</strong>→
+1. 列出已知：
+   (a) $CH_3OH(l) + \frac{3}{2} O_2(g) = CO_2(g) + 2H_2O(l)$  $\Delta H_a = -726.5$
+   (b) $CO(g) + \frac{1}{2} O_2(g) = CO_2(g)$  $\Delta H_b = -283.0$
+2. 目标：$CH_3OH(l) + O_2(g) = CO(g) + 2H_2O(l)$。
+   该反应 = (a) - (b) 得。
+3. $\Delta H = \Delta H_a - \Delta H_b = -726.5 - (-283.0) = -443.5\ kJ \cdot mol^{-1}$。
+4. 书写：$CH_3OH(l) + O_2(g) = CO(g) + 2H_2O(l) \quad \Delta H = -443.5\ kJ \cdot mol^{-1}$。
+<strong>点评/变式</strong>→ 同分异构变换（完全燃烧/部分氧化）的 $\Delta H$ 计算关键是选准“固定产物”燃烧反应。检查所有物质状态，特别是水为液态。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2023-新课标-10.html">2023-新课标-10</a>（2023 · 易） 根据能量图计算合成氨反应的焓变</li>
+<li><a href="../../exam/化学/2016-新课标Ⅱ-09.html">2016-新课标Ⅱ-09</a>（2016 · 中） 丙烯氨氧化法制丙烯腈的热化学与反应条件分析</li>
+<li><a href="../../exam/化学/2013-新课标Ⅱ-06.html">2013-新课标Ⅱ-06</a>（2013 · 中） 考查利用盖斯定律计算反应热，涉及天然气脱硫反应中的焓变关系。</li>
+<li><a href="../../exam/化学/2012-新课标-09.html">2012-新课标-09</a>（2012 · 难） 考查光气的合成与分解，涵盖氯气制备、热化学计算、有机反应书写和平衡图像分析。</li>
+<li><a href="../../exam/化学/2011-新课标-09.html">2011-新课标-09</a>（2011 · 中） 本题考查反应热计算、热化学方程式书写、化学平衡速率与图像分析。</li>
+<li><a href="../../exam/化学/2009-全国Ⅱ-06.html">2009-全国Ⅱ-06</a>（2009 · 中） 本题考查热化学方程式与反应热的计算，通过混合气体燃烧放热数据求物质的量之比。</li>
+<li><a href="../../exam/化学/2008-全国Ⅱ-09.html">2008-全国Ⅱ-09</a>（2008 · 中） 该题考查化学反应热效应、热化学方程式书写、可逆反应转化率计算及影响因素。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/309-热化学方程式.html">热化学方程式</a></li>
+</ul>
+</div>
+</body>
+</html>

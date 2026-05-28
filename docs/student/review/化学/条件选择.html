@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>条件选择</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>条件选择</h1><div class="review-mark" data-stem="条件选择"></div><div class="meta-card"><span><strong>考点</strong>条件选择</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ol>
+<li><strong>金属离子沉淀的pH控制</strong>：金属离子在水溶液中发生水解反应生成氢氧化物沉淀：
+    $$M^{n+} + nH_2O \rightleftharpoons M(OH)<em sp="sp">n \downarrow + nH^+$$
+    沉淀开始与完全的pH取决于金属氢氧化物的溶度积常数($K</em>$越小，沉淀所需pH越小，即越先沉淀。}$)。对于同类型沉淀，$K_{sp</li>
+<li><strong>分步沉淀原理</strong>：溶液中含有多种可沉淀离子时，通过逐步调节溶液的pH，可使金属离子按$K_{sp}$由小到大的顺序依次沉淀析出，实现离子分离。判断沉淀顺序的核心依据是<strong>达到一定残留浓度(如$10^{-5} \text{ mol}\cdot\text{L}^{-1}$)所需pH的大小</strong>。</li>
+<li><strong>水解反应的促进</strong>：加热和稀释均能促进盐类水解，常用于工业上制备特定化合物或实现特定金属离子的沉淀析出（如$TiO^{2+}$的水解析出）。</li>
+<li><strong>两性物质的性质</strong>：$\text{Al(OH)}_3$具有两性，既可溶于强酸，又可溶于强碱。在氨水($NH_3\cdot H_2O$)这类弱碱中不溶解。本题中通过调节pH至11.6，可确保$\text{Al}^{3+}$沉淀完全，但因其在强碱中会溶解，故需注意避免加入过量强碱。</li>
+</ol>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>提取与排序数据</strong>：首先从表格或描述中，将各金属离子开始沉淀和完全沉淀（常以残留浓度$c \le 1.0 \times 10^{-5} \text{mol} \cdot \text{L}^{-1}$为标准）的pH范围提取出来，并按完全沉淀所需pH从小到大的顺序进行排序。</li>
+<li><strong>定性判断流程</strong>：<ul>
+<li><strong>观察题给pH节点</strong>：关注题目明确指出的pH调节目标值（如11.6）。</li>
+<li><strong>比对沉淀顺序</strong>：将pH节点与排序后的金属离子沉淀范围进行比对。pH跨越某个离子的“沉淀完全”pH阈值，该离子就在此之前或在此过程中析出。析出顺序即为完全沉淀pH由小到大的顺序。</li>
+</ul>
+</li>
+<li><strong>半定量计算</strong>：<ul>
+<li><strong>利用极限pH求浓度</strong>：若知某离子完全沉淀时的pH（或溶液被调至的pH），可认为此时该离子浓度已降至$10^{-5} \text{ mol}\cdot\text{L}^{-1}$的残留标准。</li>
+<li><strong>运用水的离子积与Ksp</strong>：在给定pH的溶液中，$c(OH^-) = \frac{K_w}{c(H^+)}$。若该离子已开始或完全沉淀，其残留浓度由$K_{sp} = c(M^{n+}) \cdot c^n(OH^-)$约束，可据此计算。</li>
+</ul>
+</li>
+<li><strong>规范书写方程式</strong>：<ul>
+<li><strong>陌生化学反应</strong>：依据题干信息，找准反应物和生成物，根据元素守恒和化合价守恒进行配平。注意反应介质（如焙烧、酸溶等）和条件标注。</li>
+<li><strong>水解反应</strong>：盐的离子与水反应，通常在加热条件（可写△或加热符号）下进行，产物常有沉淀生成，注意写“$\downarrow$”。</li>
+</ul>
+</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“开始沉淀”与“沉淀完全”</strong>：计算某离子是否被沉淀除去，必须用<strong>沉淀完全的pH</strong>来判断，而非开始沉淀的pH。如本题中$Al^{3+}$沉淀完全的pH是4.7，远低于11.6，说明已沉淀完全。</li>
+<li><strong>忽视“沉淀溶解”的干扰</strong>：对于两性金属离子（如$Al^{3+}$），其氢氧化物沉淀在pH过高时会重新溶解。必须通过题设判断调节的pH是否进入重溶区。如本题只调到11.6，并采用弱碱氨水，可规避$Al(OH)_3$溶解。</li>
+<li><strong>不理解“母液”的成分</strong>：分步沉淀每一步的“滤液”或“母液”，其离子组成是在该pH条件下<strong>已沉淀离子浓度很低、未沉淀离子浓度基本保持原样</strong>的体系。</li>
+<li><strong>浓度计算忽视单位与残留标准</strong>：题目常设定“沉淀完全”时离子浓度 $\le 1.0 \times 10^{-5} \text{mol} \cdot \text{L}^{-1}$。当题目问及某离子浓度时，如沉淀已经发生，其浓度即在此数量级，不可带入初始浓度计算。</li>
+<li><strong>方程式书写丢三落四</strong>：漏写反应条件（高温、水浴、加热、焙烧等符号）、生成物状态（↓、↑）、气体符号，或复杂产物化学式写错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2021年全国乙卷第8题（节选）</h3>
+<p>（题干见上文）
+<strong>设问</strong>：
+(2) “水浸”后“滤液”的pH约为2.0，在“分步沉淀”时用氨水逐步调节pH至11.6，依次析出的金属离子是<strong><em>_</em></strong>。
+(3) “母液①"中$Mg^{2+}$浓度为<strong><em>_</em></strong> $\text{mol}\cdot\text{L}^{-1}$。
+(5) “酸溶”后，将溶液适当稀释并加热，$TiO^{2+}$水解析出$TiO_2 \cdot xH_2O$沉淀，该反应的离子方程式是<strong><em>_</em></strong>。</p>
+<h3><strong>思路与步骤</strong></h3>
+<h4><strong>第(2)问</strong></h4>
+<ul>
+<li><strong>思路</strong>：根据pH范围和表格数据，确定各离子完全沉淀的pH阈值，按阈值由小到大排序即为析出顺序。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>解读表格</strong>：$Fe^{3+}$（开始2.2，完全3.2）、$Al^{3+}$（开始3.5，完全4.7）、$Mg^{2+}$（开始9.5，完全11.1）、$Ca^{2+}$（开始12.4，完全13.8）。</li>
+<li><strong>分析过程</strong>：初始pH≈2.0，此时无沉淀。用氨水调pH至11.6。</li>
+<li><strong>逐一定性</strong>：<ul>
+<li>pH 2.0 → 11.6，先后跨越了 $Fe^{3+}$ (3.2)、$Al^{3+}$ (4.7)、$Mg^{2+}$ (11.1) 的完全沉淀pH。</li>
+<li>最终pH=11.6 尚未到达 $Ca^{2+}$ 开始沉淀的pH (12.4)，故 $Ca^{2+}$ 不沉淀。</li>
+</ul>
+</li>
+<li><strong>得出结论</strong>：沉淀析出顺序为 $Fe^{3+} &gt; Al^{3+} &gt; Mg^{2+}$。</li>
+</ol>
+</li>
+<li><strong>答案</strong>：$Fe^{3+}、Al^{3+}、Mg^{2+}$</li>
+</ul>
+<h4><strong>第(3)问</strong></h4>
+<ul>
+<li><strong>思路</strong>：“母液①”是沉淀出 $Fe(OH)_3$ 和 $Al(OH)_3$ 之后，刚要开始沉淀 $Mg(OH)_2$ 之前的溶液，其pH应处于 $Al^{3+}$ 完全沉淀之后，$Mg^{2+}$ 开始沉淀之前。严格来说，“母液①”是指在哪个沉淀步骤之后得到的滤液。流程中“分步沉淀”会依次析出，那么“母液①”指沉淀了 $Fe^{3+}、Al^{3+}$ 后，欲沉淀 $Mg^{2+}$ 并达到其沉淀完全状态时的滤液。此时pH调至11.6，已超过 $Mg^{2+}$ 完全沉淀的pH(11.1)。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>确定背景</strong>：在pH=11.6时，$Mg^{2+}$ 已沉淀完全。</li>
+<li><strong>应用概念</strong>：“沉淀完全”的定义是残留离子浓度 $\le 1.0 \times 10^{-5} \text{ mol}\cdot\text{L}^{-1}$。</li>
+<li><strong>直接作答</strong>：因此，“母液①”中 $c(Mg^{2+})$ 即为该残留标准。</li>
+</ol>
+</li>
+<li><strong>答案</strong>：$1.0 \times 10^{-5}$</li>
+<li><strong>点评/变式</strong>：此题极简，但陷阱极深。无需计算Ksp，直接考查对工艺“沉淀完全”这一约定俗成定量标准的理解。失分点在于试图用Ksp复杂计算而不得其法，或忘记了这一常识性标准。</li>
+</ul>
+<h4><strong>第(5)问</strong></h4>
+<ul>
+<li><strong>思路</strong>：根据信息“$TiO^{2+}$ 水解析出 $TiO_2 \cdot xH_2O$”，需依据水解反应原理书写方程式。盐类水解生成酸和碱式盐/氢氧化物。此处 $TiO^{2+}$ 可视为钛氧阳离子，水解生成 $TiO_2 \cdot xH_2O$（可看作含结晶水的偏钛酸 $H_2TiO_3$）和 $H^+$。反应条件需注明加热和稀释。</li>
+<li><strong>步骤</strong>：<ol>
+<li><strong>定反应物与产物</strong>：反应物：$TiO^{2+}$ 和水。产物：沉淀 $TiO_2 \cdot xH_2O$ 和氢离子。</li>
+<li><strong>配平及补项</strong>：<ul>
+<li>写骨架：$TiO^{2+} + \text{?}H_2O \longrightarrow TiO_2 \cdot xH_2O \downarrow + \text{?}H^+$</li>
+<li>根据Ti原子守恒，左右钛系数为1。</li>
+<li>根据H原子守恒，左边水分子数应为 $(x+1)$。因为右边生成物含 $2x$ 个H，加上 $H^+$ 中的H，左边水的H必须与之相等。左边有 $2(x+1)$ 个H，右边有 $2x$ 个H（在结晶水中），故多出2个H，恰好生成 $2H^+$。</li>
+<li>根据O原子守恒检查：左边 $(x+1)$ 个O，右边沉淀中有 $(2+x)$ 个O，不平。这里水解反应的本质是 $TiO^{2+}$ 结合水分子中的OH-，形成钛酸并与水分子结合。更准确的配平方法是将 $TiO_2 \cdot xH_2O$ 视为 $TiO(OH)_2 \cdot (x-1)H_2O$。</li>
+<li><strong>核心本质</strong>：$TiO^{2+}$ 与2个水分子反应，生成偏钛酸和2个$H^+$，再结合结晶水：$TiO^{2+} + 2H_2O \rightarrow H_2TiO_3 \downarrow + 2H^+$。$H_2TiO_3$ 即 $TiO_2 \cdot H_2O$。推广到 $x$ 个水，则需额外加 $(x-1)$ 个水分子作为结晶水。</li>
+<li>完整式子：$TiO^{2+} + (x+1)H_2O \xrightarrow{\text{加热, 稀释}} TiO_2 \cdot xH_2O \downarrow + 2H^+$。</li>
+</ul>
+</li>
+<li><strong>标注条件与状态</strong>：写明“加热、稀释”，产物打上沉淀箭头。此反应并非一般可逆水解，视为完全处理。</li>
+</ol>
+</li>
+<li><strong>答案</strong>：$TiO^{2+} + (x+1)H_2O \xrightarrow{\Delta, 稀释} TiO_2 \cdot xH_2O \downarrow + 2H^+$</li>
+<li><strong>点评/变式</strong>：书写陌生水解方程式时，关键是利用H、O原子守恒确定水分子和$H^+$的计量数。核心思想是：金属阳离子结合水分子中的 $OH^-$ 生成沉淀或弱碱，剩余的 $H^+$ 则游离出来，使溶液显酸性。加热、稀释等是促进水解的常见操作条件。</li>
+</ul>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2021-全国乙-08.html">2021-全国乙-08</a>（2021 · 中） 考查高钛炉渣回收钛铝镁的工艺流程，涉及方程书写、沉淀顺序、离子浓度等。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/877-条件选择.html">条件选择</a></li>
+</ul>
+</div>
+</body>
+</html>

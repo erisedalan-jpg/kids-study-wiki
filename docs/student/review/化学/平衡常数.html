@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平衡常数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平衡常数</h1><div class="review-mark" data-stem="平衡常数"></div><div class="meta-card"><span><strong>考点</strong>平衡常数</span><span><strong>权重</strong>39</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：39</li>
+<li>真题数：3；年份跨度：2020–2023</li>
+<li>出现题位：选择7 选择10</li>
+<li>难度分布：中3</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平衡常数定义</strong>：对于可逆反应 $a\mathrm{A}+b\mathrm{B} \rightleftharpoons c\mathrm{C}+d\mathrm{D}$，浓度平衡常数 $K_c = \frac{c^c(\mathrm{C}) \cdot c^d(\mathrm{D})}{c^a(\mathrm{A}) \cdot c^b(\mathrm{B})}$；若为气相反应，压强平衡常数 $K_p = \frac{p^c(\mathrm{C}) \cdot p^d(\mathrm{D})}{p^a(\mathrm{A}) \cdot p^b(\mathrm{B})}$，其中 $p_i$ 为平衡分压。  </li>
+<li><strong>适用范围与注意事项</strong>：  </li>
+<li>固体和纯液体不列入表达式（如 $\mathrm{AgCl(s)}$ 的 $K_{sp}=c(\mathrm{Ag}^+) \cdot c(\mathrm{Cl}^-)$）。  </li>
+<li>稀溶液中的溶剂（如水）的浓度视为常数，不列入。  </li>
+<li>$K$ 只受温度影响；使用平衡浓度（或分压）计算，单位通常省略。  </li>
+<li><strong>溶度积常数 $K_{sp}$</strong>：难溶电解质饱和溶液中离子浓度幂的乘积，代表溶解能力。  </li>
+<li><strong>配合物稳定常数（形成常数）</strong>：<br />
+  逐级稳定常数 $K_1$、$K_2$……或累积稳定常数 $\beta_n = K_1 \cdot K_2 \cdots K_n$。  </li>
+<li><strong>多重平衡规则</strong>：若反应可由几个反应相加得到，则总反应平衡常数为各分步平衡常数之积；若相减，则为商。  </li>
+<li><strong>分压计算</strong>：分压 = 总压 × 物质的量分数；可通过三段式结合总压或已知数据求解。  </li>
+<li><strong>转化率与 $K$ 的关系</strong>：恒压或恒容下，可通过转化率表达平衡时各组分分压（或浓度），代入 $K$ 表达式求解。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>图像法求平衡常数</strong>  </li>
+<li>分析坐标轴：“$\lg c(\mathrm{M})$–$\lg c(\mathrm{NH_3})$”类图像，关键点常为交点或端值。  </li>
+<li>写出平衡关系式，如 $K_{sp}=c(\mathrm{Ag}^+) \cdot c(\mathrm{Cl}^-)$，结合粒子守恒和图像数值计算常数。  </li>
+<li>
+<p>利用曲线交点代表两种粒子浓度相等时，可简化求解（如 $\mathrm{[Ag(NH_3)]^+}$ 与 $\mathrm{[Ag(NH_3)_2]^+}$ 浓度相等时，从反应商直接得出 $K$）。  </p>
+</li>
+<li>
+<p><strong>气相反应 $K_p$ 计算</strong>（如 ICl 分解、乙烷裂解）  </p>
+</li>
+<li><strong>步骤</strong>：<br />
+     ① 根据已知初始量和总压/分压变化，列出反应的三段式（起始量、转化量、平衡量）。<br />
+     ② 利用总压关系或已知平衡分压，求出各组分物质的量（或分压）。<br />
+     ③ 代入 $K_p$ 表达式，注意化学计量数的指数。  </li>
+<li>
+<p><strong>技巧</strong>：若无从直接获取分压，可通过同温同容下压强比等于物质的量比进行换算；恒压时用总压与物质的量分数。  </p>
+</li>
+<li>
+<p><strong>综合平衡常数与多重平衡</strong>（如配合物的逐级形成常数与 $K_{sp}$ 联用）  </p>
+</li>
+<li>写出总反应，将其拆分为已知常数的反应组合，利用 $K_{\text{总}} = K_1 \cdot K_2$ 等计算。  </li>
+<li>
+<p>利用粒子浓度限制（如饱和溶液各离子浓度关系）简化体系。  </p>
+</li>
+<li>
+<p><strong>转化率 $\alpha$ 直接代入求 $K_p$</strong>  </p>
+</li>
+<li>将初始量设为 $n_0$，平衡时各物质用 $\alpha$ 表示，求得总物质的量，再用分压公式表达，最终 $\alpha$、总压 $p$ 及 $K_p$ 联系在一起（如 $K_p = \frac{\alpha^2}{(1-\alpha)(1+\alpha)} \cdot p$ 等形式）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>固体、液体带入 $K$</strong>：平衡表达式中遗漏固体不计，如 $K_{sp}$ 不含固体。  </li>
+<li><strong>分压与总压混淆</strong>：计算 $K_p$ 时，误用总压代替分压，或未将物质的量转化为分压。  </li>
+<li><strong>化学计量数指数</strong>：代入表达式时忘记幂指数或写错分子分母。  </li>
+<li><strong>对数坐标识读</strong>：$\lg c$ 轴上的数值差直接对应浓度的数量级差，需注意 $[c] = 10^{\lg c}$。计算常数时易忽略负号或数量级。  </li>
+<li><strong>平衡常数与反应方向</strong>：正、逆反应常数互为倒数，写表达式时必须与所给方程一致。  </li>
+<li><strong>反应初始条件与“过量”“足量”</strong>：含有足量固体的体系，其平衡浓度由其沉淀溶解平衡决定（如 $\mathrm{AgCl}$ 饱和溶液，$c(\mathrm{Ag}^+) \cdot c(\mathrm{Cl}^-)=K_{sp}$ 始终成立）。  </li>
+<li><strong>单位书写</strong>：平衡常数一般不加单位，但某些 $K_p$ 可能写 $\mathrm{Pa}^{\Delta n}$ 形式，高考一般不要求写单位，按题直接列计算式即可。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2023 新课标-07）向 $\mathrm{AgCl}$ 饱和溶液（有足量 $\mathrm{AgCl}$ 固体）中滴加氨水，发生反应 $\mathrm{Ag^+ + NH_3 \rightleftharpoons [Ag(NH_3)]^+}$ 和 $\mathrm{[Ag(NH_3)]^+ + NH_3 \rightleftharpoons [Ag(NH_3)<em sp="sp">2]^+}$，图为 $\lg[c(\mathrm{M})/\mathrm{mol\cdot L^{-1}}]$ 与 $\lg[c(\mathrm{NH_3})/\mathrm{mol\cdot L^{-1}}]$ 的关系（其中 $\mathrm{M}$ 代表 $\mathrm{Ag^+}$、$\mathrm{Cl^-}$、$\mathrm{[Ag(NH_3)]^+}$ 或 $\mathrm{[Ag(NH_3)_2]^+}$）。判断说法错误的是：A. 曲线 I 可视为 $\mathrm{AgCl}$ 溶解度随 $\mathrm{NH_3}$ 浓度变化曲线；B. $\mathrm{AgCl}$ 的溶度积 $K</em>$；D. ……（略）}=10^{-9.75}$；C. 反应 $\mathrm{[Ag(NH_3)]^+ + NH_3 \rightleftharpoons [Ag(NH_3)_2]^+}$ 的 $K=10^{3.81</p>
+<p><strong>思路</strong><br />
+- 体系始终为 $\mathrm{AgCl}$ 饱和溶液，因此 $c(\mathrm{Ag}^+) \cdot c(\mathrm{Cl}^-) = K_{sp}$ 恒成立，因固体存在。<br />
+- 滴加氨水后，$c(\mathrm{NH_3})$ 增大，结合 $\mathrm{Ag}^+$ 使其浓度降低，而 $\mathrm{Cl}^-$ 应持续增大（因为 $\mathrm{AgCl}$ 不断溶解）。观察图像中曲线趋势，区分各离子。<br />
+- 溶度积可通过某一确定点计算，如曲线Ⅱ、Ⅲ交点或曲线Ⅳ的特征点。  </p>
+<p><strong>步骤</strong><br />
+1. <strong>曲线识别</strong>：对照题意，$\mathrm{Cl}^-$ 不参与配位，随氨水加入、$\mathrm{AgCl}$ 溶解，$c(\mathrm{Cl^-})$ 单调增大；图像中一直增大的曲线为 $\mathrm{Cl}^-$（设曲线Ⅲ）。$\mathrm{Ag^+}$ 被配合逐步消耗，随 $\lg c(\mathrm{NH_3})$ 增大而单调减小（应为曲线Ⅳ）。$\mathrm{[Ag(NH_3)]^+}$ 先增后减（中间产物），$\mathrm{[Ag(NH_3)<em sp="sp">2]^+}$ 持续增大（最终配离子）。由此可标出各曲线对应物质。<br />
+2. <strong>求 $K_{sp}$</strong>：当 $\lg c(\mathrm{NH_3})$ 极小（可认为是无氨水时的值），$\mathrm{Ag^+}$ 与 $\mathrm{Cl^-}$ 浓度均由 $\mathrm{AgCl}$ 溶解而来，图像左端 $\lg c(\mathrm{Ag^+}) = \lg c(\mathrm{Cl^-}) \approx -4.875$，因此 $c(\mathrm{Ag^+}) = c(\mathrm{Cl^-}) = 10^{-4.875}\ \mathrm{mol\cdot L^{-1}}$，$K</em>$，B 正确。} = 10^{-4.875} \times 10^{-4.875} = 10^{-9.75<br />
+3. <strong>求第二步配合平衡常数</strong>：在曲线代表 $\mathrm{[Ag(NH_3)]^+}$ 和 $\mathrm{[Ag(NH_3)_2]^+}$ 的交点处，两者浓度相等，则 $K = \frac{c(\mathrm{[Ag(NH_3)_2]^+})}{c(\mathrm{[Ag(NH_3)]^+}) \cdot c(\mathrm{NH_3})} = \frac{1}{c(\mathrm{NH_3})}$。交点处对应 $\lg c(\mathrm{NH_3}) \approx -3.81$，故 $c(\mathrm{NH_3}) = 10^{-3.81}$，$K = 10^{3.81}$，C 正确。<br />
+4. <strong>溶解度判断</strong>：曲线 I 可能是离子总浓度或某种组合，并非 $\mathrm{AgCl}$ 溶解度。且溶解度通常以 $\mathrm{Ag^+}$ 或 $\mathrm{Cl^-}$ 总浓度衡量，图像中无直接单一线条对应溶解度变化，故 A 错误。答案选 A。</p>
+<p><strong>点评/变式</strong><br />
+本题综合 $K_{sp}$ 与配位平衡，利用双对数图像求常数。技巧在于“交点”突显两种粒子浓度相等，直接获得平衡常数值。变式训练：将此方法迁移至酸效应下沉淀溶解、多级配位的图像题。</p>
+<p><strong>题目</strong>（2021 全国乙-10(2)）氯铂酸钡 $\mathrm{BaPtCl_6}$ 加热部分分解为 $\mathrm{BaCl_2}$、$\mathrm{Pt}$ 和 $\mathrm{Cl_2}$，376.8℃ 时 $K'_p = 1.0 \times 10^4\ \mathrm{Pa^4}$。在一硬质玻璃烧瓶中加入过量 $\mathrm{BaPtCl_6}$，抽真空后通入碘蒸气（初始压强 $20.0\ \mathrm{kPa}$），于 376.8℃ 平衡时总压 $32.5\ \mathrm{kPa}$。求 $\mathrm{ICl}$ 分压和反应 $2\mathrm{ICl(g)} \rightleftharpoons \mathrm{Cl_2(g) + I_2(g)}$ 的平衡常数 $K$。</p>
+<p><strong>思路</strong><br />
+- 先写两个独立反应：<br />
+  ① $\mathrm{BaPtCl_6(s) \rightleftharpoons BaCl_2(s) + Pt(s) + 2Cl_2(g)}$，存在 $K'_p = p^2(\mathrm{Cl_2})$。<br />
+  ② $\mathrm{I_2(g) + Cl_2(g) \rightleftharpoons 2ICl(g)}$（因此总反应为组合）。<br />
+- 利用 $K'_p$ 求平衡时 $p(\mathrm{Cl_2})$，再由初始碘压、总压变化计算各物种平衡分压，进而求得 $K$。</p>
+<p><strong>步骤</strong><br />
+1. 由 $K'_p = p^2(\mathrm{Cl_2}) = 1.0 \times 10^4\ \mathrm{Pa^4}$，得 $p(\mathrm{Cl_2}) = 100\ \mathrm{Pa} = 0.1\ \mathrm{kPa}$（因分压单位需统一，此处用 $\mathrm{kPa}$：$1.0\times10^4\ \mathrm{Pa^4} = (1.0\times10^{-2}\ \mathrm{kPa})^4$? 注意单位换算：$1\ \mathrm{kPa} = 10^3\ \mathrm{Pa}$，则 $K'_p = 1.0\times10^4\ \mathrm{Pa^4} = 1.0\times10^4 \times (10^{-3}\ \mathrm{kPa})^4 = 1.0\times10^4 \times 10^{-12}\ \mathrm{kPa^4} = 1.0\times10^{-8}\ \mathrm{kPa^4}$ ？高考题中一般直接用 $\mathrm{Pa}$ 计算，列式保持单位一致即可。标准答案均用 $\mathrm{Pa}$ 进行运算，最后列出 $K$ 表达式。此处直接给原解析逻辑：$p(\mathrm{Cl_2}) = \sqrt{K'_p} = 100\ \mathrm{Pa} = 0.1\ \mathrm{kPa}$。）<br />
+2. 设平衡时 $\mathrm{I_2}$ 转化了 $x\ \mathrm{kPa}$，对于反应 $\mathrm{I_2 + Cl_2 \rightleftharpoons 2ICl}$：<br />
+   起始分压：$\mathrm{I_2}$ 为 $20.0\ \mathrm{kPa}$，$\mathrm{Cl_2}$ 为 $p(\mathrm{Cl_2})$ 由第一步提供（但第一步反应会持续产生 $\mathrm{Cl_2}$，由于 $\mathrm{BaPtCl_6}$ 过量，$p(\mathrm{Cl_2})$ 始终恒定在 $0.1\ \mathrm{kPa}$）。<br />
+   平衡时：$p(\mathrm{I_2}) = 20.0 - x$，$p(\mathrm{Cl_2})$ 仍为 $0.1\ \mathrm{kPa}$（消耗的 $\mathrm{Cl_2}$ 由固体分解立即补充），$p(\mathrm{ICl}) = 2x$。<br />
+3. 总压 = $p(\mathrm{I_2}) + p(\mathrm{Cl_2}) + p(\mathrm{ICl}) = (20.0 - x) + 0.1 + 2x = 20.1 + x = 32.5\ \mathrm{kPa}$，解得 $x = 12.4\ \mathrm{kPa}$。<br />
+   所以 $p(\mathrm{IC</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2023-新课标-07.html">2023-新课标-07</a>（2023 · 中） 考查AgCl与氨水反应的沉淀溶解平衡及配合平衡，通过图像分析离子浓度关系和平衡常数计算。</li>
+<li><a href="../../exam/化学/2021-全国乙-10.html">2021-全国乙-10</a>（2021 · 中） 考查卤素互化物ICl的性质及化学平衡常数计算。</li>
+<li><a href="../../exam/化学/2020-新课标Ⅱ-10.html">2020-新课标Ⅱ-10</a>（2020 · 中） 利用燃烧热计算反应热，分析化学平衡转化率及平衡常数，结合速率方程进行转化率相关计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/342-化学平衡常数.html">平衡常数</a></li>
+</ul>
+</div>
+</body>
+</html>

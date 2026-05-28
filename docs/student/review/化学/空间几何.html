@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>空间几何</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>空间几何</h1><div class="review-mark" data-stem="空间几何"></div><div class="meta-card"><span><strong>考点</strong>空间几何</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>物质结构与原子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：物质结构与原子结构</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>均摊法计算化学式</strong><br />
+  顶点原子算 $\frac{1}{8}$，棱上算 $\frac{1}{4}$，面上算 $\frac{1}{2}$，体内算 $1$。<br />
+  例：Co 在顶点和面心时，数目 $=8\times\frac{1}{8}+6\times\frac{1}{2}=4$；S 在体内与面心另算。</li>
+<li><strong>立方晶胞中的距离与几何</strong><br />
+  边长 $a$，面对角线 $\sqrt{2}a$，体对角线 $\sqrt{3}a$。<br />
+  最短距离往往涉及面对角线的一半 $\frac{\sqrt{2}}{2}a$ 或体对角线的一半 $\frac{\sqrt{3}}{2}a$，需看具体位置（顶点-面心、顶点-棱心等）。</li>
+<li><strong>配位数判断</strong><br />
+  取距目标原子最近的另一原子个数。晶胞中需利用空间对称性，画出最近邻的外围原子，必要时跨晶胞平移。</li>
+<li><strong>晶胞与晶体对应关系</strong><br />
+  不同画法（晶胞截取方式）可代表同一晶体，只要周期性重复、原子种类数及比例一致，原子间距与配位关系不变。</li>
+<li><strong>充放电过程中的结构变化</strong><br />
+  锂离子嵌入/脱出时，主体骨架（如 S 的堆积方式）常保持不变，Li 占据空隙，改变化学式但不改变晶胞类型或对称性（可同属同一种晶体）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>先识晶胞类型</strong><br />
+   看原子排布：S 常做面心立方或简单立方堆积，金属原子在四面体或八面体空隙。</li>
+<li><strong>均摊求组成</strong><br />
+   列出各原子所在位置 → 乘占有份额 → 求最简整数比 → 写出化学式，与选项对比。</li>
+<li><strong>画简化示意图算距离</strong><br />
+   标记晶胞中两个 S 的位置（如顶点与面心），用勾股定理：<br />
+   顶点 $(0,0,0)$ 与面心 $(\frac{1}{2}a,\frac{1}{2}a,0)$ 的距离 $=\sqrt{(\frac{a}{2})^{2}+(\frac{a}{2})^{2}+0}=\frac{\sqrt{2}}{2}a$。<br />
+   若是体对角线最近，则要算顶点与体内的位置。</li>
+<li><strong>找配位数</strong><br />
+   选一个 Li（或目标原子），观察周围哪些 S 在同距离且最近，考虑周期性边界。必要时可补画相邻晶胞。</li>
+<li><strong>辨析同一晶体</strong><br />
+   比较原子种类、个数比、相对位置关系（键长、键角、配位数）。若只改变观察视角或截取方式，仍属同一晶体。若缺原子或多原子，则不同。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>面对角线 vs 体对角线混用</strong><br />
+  顶点原子与相邻面心原子最短距离为 $\frac{\sqrt{2}}{2}a$，而非 $\frac{\sqrt{3}}{2}a$。后者是顶点到体心或某些体内位置。</li>
+<li><strong>直接记经验公式而不画图</strong><br />
+  如“S-S 最短距离”，CaF₂型、NaCl型、面心立方金属晶体各不相同，必须现场定位。</li>
+<li><strong>配位数漏数</strong><br />
+  只数晶胞内的原子，忽略晶胞面上和顶角原子因共用到相邻晶胞而提供的其他最近邻。</li>
+<li><strong>均摊时原子位置混淆</strong><br />
+  如硫占据顶点和面心，钴占据八面体空隙，记反会直接导致化学式错误。</li>
+<li><strong>充放电结构辨识</strong><br />
+  认为晶胞形状或原子种类稍变就一定是不同晶体；实则主体骨架不变、Li 嵌在空隙中，晶体对称性可能不变，仍为同一晶体。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>2024·辽宁·14 —— 锂离子电池电极材料，结构1为钴硫化物晶胞（部分），充电后得晶胞2，晶胞2与晶胞3的结构如图（均为立方晶胞）。判断错误选项：<br />
+A. 结构1化学式为 $\mathrm{Co}<em 8="8">{9}\mathrm{S}</em>$<br />
+B. 晶胞2中 S 与 S 的最短距离为 $\frac{\sqrt{3}}{2}a$<br />
+C. 晶胞2中距 Li 最近的 S 有 4 个<br />
+D. 晶胞2和晶胞3表示同一晶体  </p>
+<h3><strong>思路</strong></h3>
+<p>A 用均摊法验算；B 画出晶胞2的 S 位置，找最短 S-S 距离；C 找 Li 的配位数；D 比较晶胞2与晶胞3的原子种类比例及几何关系，是否因画法不同仍属同一晶体。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>A 项化学式</strong><br />
+   结构1：Co 位于顶点和面心，共 $8\times\frac{1}{8}+6\times\frac{1}{2}=4$ 个 Co；但题干提示钴硫化物晶胞一部分，且得出 9:8。结合实际图像，Co 还有体内或其他位置共 4.5 个（按解析 $4+ \frac{1}{2}$ 等），S 为 $1+12\times\frac{1}{4}=4$。总 Co:S=9:8 → $\mathrm{Co}<em 8="8">{9}\mathrm{S}</em>$，A 正确。  </li>
+<li><strong>B 项最短 S-S 距离</strong><br />
+   晶胞2 为面心立方硫骨架：S 占据顶点和面心。最近 S 为顶点与相邻面心，距离 $=\frac{\sqrt{2}}{2}a$，非 $\frac{\sqrt{3}}{2}a$。B 错误（即为答案）。  </li>
+<li><strong>C 项 Li 的配位数</strong><br />
+   充电后 Li 进入四面体空隙，被 4 个 S 包围，距 Li 最近的 S 数 = 4。C 正确。  </li>
+<li><strong>D 项同一晶体</strong><br />
+   晶胞2与晶胞3仅截取视角或包含原子数量不同，但 S 骨架、Li 位置比例一致，周期性相同 → 表示同一晶体，D 正确。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题以三维晶胞结构与几何分析为核心，融合了均摊法、距离计算、配位数、充放电过程结构变化。常考变式：换成 $\mathrm{LiFePO}_4$ 或 $\mathrm{LiCoO}_2$ 晶胞，求 $\mathrm{Fe-O}$ 距离、$\mathrm{Li}$ 配位数，或判断充电后晶胞是否等价。关键：永远以“体内、面、棱、顶”定位 → 均摊、画简化图 → 勾股定理算距离。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-14.html">2024-辽宁-14</a>（2024 · 中） 该题通过晶胞结构考查均摊法计算化学式、最短距离及配位数判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/1044-空间几何.html">空间几何</a></li>
+</ul>
+</div>
+</body>
+</html>

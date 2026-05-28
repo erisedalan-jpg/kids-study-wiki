@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>均摊法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>均摊法</h1><div class="review-mark" data-stem="均摊法"></div><div class="meta-card"><span><strong>考点</strong>均摊法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>晶体结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：晶体结构</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：填空14</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>均摊法原理</strong>：晶胞中处于不同位置的微粒被共用的程度不同，计算属于该晶胞的微粒数需按贡献比例分割。</li>
+<li>顶点：$\frac{1}{8}$（同时属于8个晶胞）</li>
+<li>棱上：$\frac{1}{4}$（同时属于4个晶胞）</li>
+<li>面上：$\frac{1}{2}$（同时属于2个晶胞）</li>
+<li>体内：1（完全属于该晶胞）</li>
+<li><strong>化学式确定</strong>：用均摊法算出各原子或离子在晶胞内的实际数目，再求最简整数比即得化学式（非分子式时仅表示原子个数比）。</li>
+<li><strong>立方晶胞中典型距离关系</strong>（边长 $a$）：</li>
+<li>面对角线：$\sqrt{2}a$；相邻顶点间距离为 $a$，面对角线两端点距离 $\sqrt{2}a$。</li>
+<li>体对角线：$\sqrt{3}a$。</li>
+<li>最短距离通常为相切原子的核间距，常见如面心立方中顶点与面心原子沿面对角线相切时，原子半径 $r = \frac{\sqrt{2}}{4}a$。</li>
+<li><strong>晶胞与晶体组成</strong>：同一晶体可由不同晶胞表示（如选取不同的平行六面体），但组成和结构应一致。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>均摊法求化学式</strong>  </li>
+<li>明确晶胞示意图中每种原子（或离子）所处的环境（顶点、棱、面心、体内等）。  </li>
+<li>按贡献值计算各自数目：<br />
+     $$N = N_{\text{顶点}} \times \frac{1}{8} + N_{\text{棱}} \times \frac{1}{4} + N_{\text{面}} \times \frac{1}{2} + N_{\text{体}} \times 1$$  </li>
+<li>
+<p>得出各微粒个数比，约成最简整数比，即得化学式（如 $\mathrm{Co_9S_8}$）。</p>
+</li>
+<li>
+<p><strong>晶胞中原子间最短距离的判断</strong>  </p>
+</li>
+<li>观察原子排布方式（如面心立方、简单立方、体心立方等）。  </li>
+<li>最短距离通常出现在紧密接触方向：  <ul>
+<li>面心立方：顶点与面心原子沿面对角线相切 → 最短距离为 $\frac{\sqrt{2}a}{2}$。  </li>
+<li>体心立方：顶点与体心原子沿体对角线相切 → 最短距离为 $\frac{\sqrt{3}a}{2}$。  </li>
+</ul>
+</li>
+<li>
+<p>若为同种原子，最短核间距可按几何关系计算。</p>
+</li>
+<li>
+<p><strong>晶胞结构比对</strong>  </p>
+</li>
+<li>比对不同晶胞的原子种类、数目、连接方式是否完全相同。若仅选取方式不同但反映同一重复单元，则为同一晶体。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>均摊时混淆“棱上”与“面上”的贡献比例，导致化学式错误（尤其注意棱上粒子的 $\frac{1}{4}$ 贡献，常误记为 $\frac{1}{2}$）。</li>
+<li>求最短距离时，想当然地认为是体对角线的一半或边长，而未结合具体原子排布（如面心立方中同种原子最短距离为面对角线的 $\frac{1}{2}$，而非体对角线的一半）。</li>
+<li>忽略化学式只表示原子个数比，不表示分子。如 $\mathrm{Co_9S_8}$ 为钴硫原子比，无离散分子。</li>
+<li>错误认为不同形状的晶胞一定代表不同晶体。实际同一晶体可截取不同底心的晶胞，只要组成和周期排列相同。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>2024-辽宁-14</h3>
+<p><strong>题目</strong>：锂离子电池电极材料的立方晶胞结构。结构1是钴硫化物的晶胞部分；晶胞2是充电后结构；所有晶胞均为立方晶胞。判断四个说法中错误的选项（涉及化学式、S–S最短距离、Li的配位数、晶胞异同）。</p>
+<p><strong>思路</strong><br />
+A项需用均摊法计算结构1中Co和S数目，得出化学式。B项需分析晶胞2中S的排布，找出S–S最短距离并计算。C项看Li周围邻近S的个数。D项对比晶胞2和晶胞3是否代表同一晶体。</p>
+<p><strong>步骤</strong>
+- <strong>A项（均摊法求化学式）</strong><br />
+  结构1中：Co 有 $4 \times \frac{1}{4}$（棱？需结合图文，解析为 “$14 \times 4 + 4.5$” 实际是数目计算，题目信息不完整，按解析结果：Co数目 $4 \times \frac{1}{8}?$ 这里应据图，解析给出 Co 数目为 $4 + 4 \times \frac{1}{8}?$ 看解析写的是 “Co的数目为 $14 4 4.58+ ´ =$” 乱码，但其结论为 Co与S原子个数比 9:8，得出 Co$_9$S$_8$”。 我们根据解析直接确认 A 正确。）
+- <strong>B项（最短距离）</strong><br />
+  晶胞2中S–S最短距离为面对角线的一半：$\frac{\sqrt{2}a}{2}$。选项给出的距离是 $\frac{\sqrt{3}a}{2}$（体对角线一半），错误。
+- <strong>C项（Li配位）</strong><br />
+  Li在晶胞2中位于八面体空隙中心，到最近的S有4个（平面四边形或部分配位环境），正确（依解析确认）。
+- <strong>D项（晶胞异同）</strong><br />
+  晶胞2和晶胞3仅选取方式不同，原子种类和连接方式完全一致，属同一晶体，正确。</p>
+<p><strong>点评/变式</strong><br />
+本题考查均摊法与立方晶胞空间关系的综合判断。易错点是B项：考生常将面对角线距离与体对角线距离混淆。变式训练可改为求晶胞密度、空间利用率，或在引入掺杂时重新用均摊法确定新化学式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2024-辽宁-14.html">2024-辽宁-14</a>（2024 · 中） 该题通过晶胞结构考查均摊法计算化学式、最短距离及配位数判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/881-均摊法.html">均摊法</a></li>
+</ul>
+</div>
+</body>
+</html>

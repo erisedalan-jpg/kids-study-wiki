@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>误差分析</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>误差分析</h1><div class="review-mark" data-stem="误差分析"></div><div class="meta-card"><span><strong>考点</strong>误差分析</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学实验</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学实验</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<h3>一、误差分析的根本目的</h3>
+<p>定量实验的核心目标是准确测定待测组分的含量。误差分析的直接任务是判断由于操作不当或条件变化，导致测量结果（计算值）相对于真实值是<strong>偏高</strong>还是<strong>偏低</strong>。</p>
+<h3>二、滴定分析中误差的数学模型</h3>
+<p>在滴定分析中，待测物质的含量通常通过以下等量关系计算得出，误差最终来源于公式中相关物理量的变化。
+$$c_{\text{测}} = \frac{c_{\text{标}} \cdot V_{\text{标}}}{V_{\text{测}}} \quad \text{或} \quad m_{\text{测}} \propto c_{\text{标}} \cdot V_{\text{标}}$$
+在实际误差判断中，标准溶液浓度 $c_{\text{标}}$ 是给定的准确值，待测样品体积 $V_{\text{测}}$ 通常由定量量器（如移液管）准确量取并视为定值。因此，<strong>滴定管读取的标准溶液体积 $V_{\text{标}}$ 的偏大或偏小，直接决定了测定结果的偏高或偏低</strong>。
+- $V_{\text{标}}$ <strong>偏大</strong> $\rightarrow$ 测定结果<strong>偏高</strong>。
+- $V_{\text{标}}$ <strong>偏小</strong> $\rightarrow$ 测定结果<strong>偏低</strong>。</p>
+<h3>三、碘量法测定溶解氧的原理与计算关系</h3>
+<p><strong>1. 反应链</strong>
+- 氧的固定：$2\text{Mn(OH)}_2 + \text{O}_2 \longrightarrow 2\text{MnO(OH)}_2$
+- 酸化与碘的生成：$\text{MnO(OH)}_2 + 2\text{I}^- + 4\text{H}^+ \longrightarrow \text{Mn}^{2+} + \text{I}_2 + 3\text{H}_2\text{O}$
+- 滴定反应：$2\text{S}_2\text{O}_3^{2-} + \text{I}_2 \longrightarrow 2\text{I}^- + \text{S}_4\text{O}_6^{2-}$</p>
+<p><strong>2. 定量关系传递</strong>
+由以上反应可得如下关系式，这是进行含量计算的基础：
+$$\text{O}_2 \sim 2\text{MnO(OH)}_2 \sim 2\text{I}_2 \sim 4\text{S}_2\text{O}_3^{2-}$$
+设 $\text{Na}_2\text{S}_2\text{O}_3$ 浓度为 $a \ \text{mol}\cdot\text{L}^{-1}$，消耗体积为 $b \ \text{mL}$，则 $\text{Na}_2\text{S}_2\text{O}_3$ 的物质的量 $n = a \times b \times 10^{-3} \ \text{mol}$。
+根据关系式，水中溶解氧的物质的量 $n(\text{O}_2) = \frac{1}{4} n(\text{S}_2\text{O}_3^{2-})$，其质量 $m(\text{O}_2) = \frac{ab \times 10^{-3}}{4} \times 32 \ \text{g} = 8ab \ \text{mg}$。
+取水样体积为 $100.00 \ \text{mL} = 0.1 \ \text{L}$，因此溶解氧含量为 $80ab \ \text{mg}\cdot\text{L}^{-1}$。</p>
+<h2>解题方法与套路</h2>
+<h3>1. 误差判断题通用解题流程（三步法）</h3>
+<p><strong>第一步：定位误差操作影响的对象。</strong>
+准确判断不当操作直接导致了哪个<strong>实际测量值</strong>发生了改变。在滴定分析中，该对象通常是<strong>标准溶液体积 $V_{\text{标}}$ 的读数</strong>。需明确是读取值大于实际消耗值，还是小于实际消耗值。</p>
+<p><strong>第二步：确定 $V_{\text{标}}$ 是偏大还是偏小。</strong>
+- <strong>读数偏大</strong>的情况：滴定前仰视读数，滴定后俯视读数；滴定管尖嘴处有气泡，滴定后气泡消失；滴定后管壁悬挂液滴未流下。
+- <strong>读数偏小</strong>的情况：滴定前俯视读数，滴定后仰视读数；滴定完成后尖嘴处留有气泡；未用标准液润洗滴定管；锥形瓶用待测液润洗（该操作实际导致 $V_{\text{标}}$ 消耗量增大，但在此类误判中常因思考链不完整而出错，最终读取的 $V_{\text{标}}$ 是增大的）。
+- 本专题代表题中的关键特例：<strong>滴定完成时尖嘴处留有气泡</strong>，会导致液面读数（消耗体积）比实际流出的液体体积<strong>偏小</strong>。</p>
+<p><strong>第三步：代入关系式判断最终结果。</strong>
+根据 $c_{\text{测}} \propto V_{\text{标}}$ 这一简化关系得出结论：
+$V_{\text{标}}$ 偏大 $\Rightarrow$ 结果偏高；$V_{\text{标}}$ 偏小 $\Rightarrow$ 结果偏低。</p>
+<h3>2. 避免操作误差的答题模板</h3>
+<ul>
+<li><strong>取样时</strong>：要保证样品具有代表性，如“避免扰动水面，使测定值与水体实际溶解氧保持一致”。</li>
+<li><strong>配制溶液时</strong>：排除溶解气体的干扰，如“蒸馏水需煮沸、冷却后使用，目的是除去溶解的氧气和二氧化碳，并杀菌”。</li>
+</ul>
+<h2>高频易错</h2>
+<ul>
+<li><strong>滴定终点气泡残留的误判</strong>：<strong>核心陷阱！</strong> 滴定完成后，尖嘴处留有气泡，说明占据尖嘴空间的液体未被计算在滴出体积内。读取到的体积小于真实消耗的体积，导致 $V_{\text{标}}$ <strong>偏小</strong>，最终结果<strong>偏低</strong>。这与“滴定前有气泡，滴定后无气泡”导致的$V_{\text{标}}$偏大正好相反。</li>
+<li><strong>碘量法指示剂加入时机</strong>：淀粉溶液不能在滴定开始时加入。碘量法测溶解氧时，酸化和还原反应刚结束时碘单质浓度高，若此时加入淀粉，大量碘会被淀粉牢固吸附，导致后续 $\text{Na}<em _text_标="\text{标">2\text{S}_2\text{O}_3$ 脱落困难，滴定终点滞后，造成 $V</em>$ }<strong>偏大</strong>，结果偏高。应在滴定至溶液呈<strong>浅黄色</strong>时再加淀粉指示剂。</li>
+<li><strong>终点点颜色判断</strong>：碘遇淀粉变蓝，用 $\text{Na}_2\text{S}_2\text{O}_3$ 滴定碘，终点是由<strong>蓝色恰好变为无色</strong>，且半分钟内不变回蓝色。描述终点现象必须包含颜色变化和半分钟不恢复的确认。</li>
+<li><strong>定量计算中的单位换算</strong>：此类计算常涉及 $\text{mL}$ 与 $\text{L}$ 的换算、质量单位 $\text{g}$ 与 $\text{mg}$ 的换算。忽略换算会直接导致计算结果数量级错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2017-新课标Ⅱ-10</h3>
+<p><strong>题目</strong>：本题考查碘量法测定水中溶解氧的原理、操作、计算及误差分析。核心误差分析问题为：滴定完成时，若滴定管尖嘴处留有气泡，会导致测量结果偏高还是偏低？</p>
+<p><strong>思路</strong>：
+此问为典型的滴定操作误差分析。应立刻套用标准解题流程。首先明确，该不当操作直接影响滴定管放出液体体积的<strong>读数</strong>。接着分析该读数是偏大还是偏小，最后直接推导出对测量结果的影响。</p>
+<p><strong>步骤</strong>：
+1.  <strong>定位</strong>：不当操作是“滴定完成时，滴定管尖嘴处留有气泡”。这直接影响了<strong>标准 $\text{Na}<em _text_标="\text{标">2\text{S}_2\text{O}_3$ 溶液消耗体积（$V</em>$）的读取}</strong>。气泡占据了一部分本应是液体的空间。
+2.  <strong>判断 $V_{\text{标}}$</strong>：当读出滴定管液面刻度时，我们假设液面以下至尖嘴出口全部充满了标准液。但气泡的存在意味着实际流出并参与反应的溶液体积<strong>小于</strong>我们根据液面刻度差读出的体积。因此，读取的 $V_{\text{标}}$ <strong>偏小</strong>。
+3.  <strong>结论</strong>：根据公式，溶解氧含量正比于 $V_{\text{标}}$（当水样体积固定时，$\text{DO} \propto V_{\text{标}}$）。既然 $V_{\text{标}}$ 偏小，计算得到的溶解氧含量必然<strong>偏低</strong>。
+   故答案为：低。</p>
+<p><strong>点评/变式</strong>：
+- <strong>本题价值</strong>：精准考察了滴定分析中的一个经典但极易混淆的失分点。考生常将其与“滴定前尖嘴有气泡，滴定后消失”相混淆，后者会导致 $V_{\text{标}}$ 偏大，结果偏高。务必对比记忆。
+- <strong>变式引申</strong>：“若用 $\text{Na}<em _text_标="\text{标">2\text{S}_2\text{O}_3$ 溶液润洗滴定管后，未用标准液润洗，则测定结果如何？” 答：偏高。因为残留水会稀释标准液，导致滴定消耗的标准液体积 $V</em>$ 增大。
+- }<strong>计算验证</strong>：代入 $80ab \ \text{mg}\cdot\text{L}^{-1}$ 公式，气泡导致读取的体积 $b$ 比真实消耗的体积 $b_{\text{真}}$ 要小（$b &lt; b_{\text{真}}$），则计算结果 $80ab$ &lt; $80ab_{\text{真}}$，直观地证明了结果偏低。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2017-新课标Ⅱ-10.html">2017-新课标Ⅱ-10</a>（2017 · 中） 碘量法测定水中溶解氧的原理、操作及误差分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/724-误差分析.html">误差分析</a></li>
+</ul>
+</div>
+</body>
+</html>

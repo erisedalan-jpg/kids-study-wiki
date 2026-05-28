@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分子空间构型</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>分子空间构型</h1><div class="review-mark" data-stem="分子空间构型"></div><div class="meta-card"><span><strong>考点</strong>分子空间构型</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学键与分子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学键与分子结构</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2011–2011</li>
+<li>出现题位：填空12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<p>分子空间构型的核心判断依据是<strong>价层电子对互斥理论（VSEPR）</strong>与<strong>杂化轨道理论</strong>。<br />
+- <strong>VSEPR模型</strong>：中心原子周围的价层电子对（成键电子对+孤电子对）因排斥而尽量远离，由此决定电子对的空间排布，略去孤电子对后即得分子构型。<br />
+  - 孤电子对数公式：$孤电子对数 = \frac{1}{2}(a - x b)$<br />
+    $a$——中心原子价电子数（主族元素等于最外层电子数）；<br />
+    $x$——与中心原子结合的原子数；<br />
+    $b$——每个配位原子达到稳定结构所需电子数（H为1，其他原子通常为$8-$该原子最外层电子数）；<br />
+    对于离子，$a$ 需相应加减离子电荷数。<br />
+  - 价层电子对数 $= \sigma$ 键电子对数 $+$ 孤电子对数。<br />
+- <strong>杂化轨道类型</strong>：由价层电子对数直接推出（2对→$sp$，3对→$sp^2$，4对→$sp^3$，5对→$sp^3d$，6对→$sp^3d^2$），构型与VSEPR模型一致。<br />
+- <strong>键角</strong>：受孤电子对排斥力（孤对-孤对 $&gt;$ 孤对-成键 $&gt;$ 成键-成键）及配位原子电负性影响。无孤电子对时，键角为标准值（如 $sp^2$ 杂化平面三角形 $120^\circ$，$sp^3$ 杂化正四面体 $109.5^\circ$）。<br />
+- 常见构型：$sp$→直线形（$180^\circ$），$sp^2$→平面三角形（$120^\circ$）或V形（有孤对），$sp^3$→正四面体形、三角锥形或V形等。<br />
+- 考点常结合等电子体原理（如 $BF_3$ 与 $CO_3^{2-}$、$NO_3^-$ 互为等电子体，构型相似）进行拓展。</p>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定中心原子</strong>：通常是化合价绝对值最大或电负性较小的原子（H、F除外）。  </li>
+<li><strong>计算价层电子对数</strong>：  </li>
+<li>$\sigma$ 键电子对数 = 与中心原子直接相连的原子数（即单键、双键、三键各计为一对）。  </li>
+<li>孤电子对数 = $\frac{1}{2}(中心原子价电子数 + 离子电荷数调整 - 配位原子达稳定所需电子总数)$。  </li>
+<li>总电子对数 = $\sigma$ 键电子对数 + 孤电子对数。  </li>
+<li><strong>确定VSEPR模型</strong>：总电子对数 $n$ → 电子对空间构型（2直线、3平面三角、4正四面体等）。  </li>
+<li><strong>判断分子空间构型</strong>：去掉孤电子对占据的位置，只看配位原子空间排布。  </li>
+<li><strong>得出杂化方式与键角</strong>：杂化类型 $sp^{n-1}$（$n$ 为总电子对数），根据构型及孤对影响确定键角范围。  </li>
+<li><strong>交叉验证</strong>：利用等电子体、化学键极性、分子对称性等检查合理性。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>中心原子价电子数取错</strong>：对于阳离子少算电子，阴离子多算电子（如 $BF_4^-$ 中 B 价电子数需 $3+1=4$）。  </li>
+<li><strong>双键/三键仍计为一对$\sigma$成键电子</strong>，误将 $\pi$ 键计入价层电子对数导致错误。  </li>
+<li><strong>混淆VSEPR模型与分子构型</strong>：计算时只写总电子对构型，未略去孤对，导致错判（如 $NH_3$ 电子对四面体而分子为三角锥形）。  </li>
+<li><strong>孤电子对数目公式用错</strong>：配位原子为氢与卤素时稳定所需电子数不同，H需2，卤素需1（因其已有7个电子，需1个成键）；氧、硫等需2。  </li>
+<li><strong>直接记构型不看价态</strong>：同一元素不同价态或不同配位原子个数会导致构型变化（如 $BCl_3$ 与 $BF_4^-$）。  </li>
+<li><strong>误判杂化</strong>：如看到 $BF_3$ 就认为B与三个F成键是 $sp^3$，未算孤对导致错误（无孤对应为 $sp^2$）。  </li>
+<li><strong>键角比较时忽略孤对斥力或配位原子电负性</strong>：如 $NH_3$ 键角 $107^\circ &lt; 109.5^\circ$，而 $NF_3$ 键角比 $NH_3$ 更小。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题（2011·新课标，12题节选）</h3>
+<p><strong>题目</strong><br />
+判断 $BF_3$ 分子的 $F-B-F$ 键角、B原子杂化类型，以及 $BF_4^-$ 的立体结构。</p>
+<p><strong>思路</strong><br />
+用VSEPR理论先求价层电子对数 → 确定电子对构型与杂化 → 根据有无孤对得到分子/离子构型和键角。</p>
+<p><strong>步骤</strong><br />
+1. <strong>$BF_3$ 分析</strong><br />
+   - B最外层电子3个，为 $\sigma$ 键电子对数 $=3$（连3个F）。<br />
+   - 孤电子对数 $= \frac{1}{2}(3 - 3\times 1)=0$（每个F需1个电子成键）。总电子对 $=3$。<br />
+   - VSEPR模型为平面三角形，杂化 $sp^2$，无孤对，所以分子构型即为平面三角形，键角 $=120^\circ$。  </p>
+<ol>
+<li><strong>$BF_4^-$ 分析</strong>  </li>
+<li>阴离子，中心B价电子数调整为 $3 + 1=4$。  </li>
+<li>$\sigma$ 键电子对 $=4$，孤电子对 $= \frac{1}{2}(4 - 4\times 1)=0$，总电子对 $=4$。  </li>
+<li>电子对构型为正四面体，无孤对，离子构型为正四面体形，B杂化 $sp^3$。</li>
+</ol>
+<p><strong>点评/变式</strong><br />
+- 等电子体联想：$BF_3$ 与 $CO_3^{2-}$、$NO_3^-$ 互为等电子体，同样为平面三角形、$sp^2$ 杂化；$BF_4^-$ 与 $CCl_4$、$SiF_4$、$NH_4^+$ 均属正四面体、$sp^3$ 杂化。<br />
+- 变式：若将 $B$ 换为同族 $Al$，如 $AlCl_3$（气态）也为 $sp^2$ 平面三角形；但 $AlF_6^{3-}$ 则为 $sp^3d^2$ 八面体。通过改变中心原子半径及价层可扩展。<br />
+- 注意该题后续还涉及六方氮化硼层内 $B-N$ 共价键（$sp^2$ 杂化解释平面层）和层间分子间作用力，表明杂化理论不仅适于孤立的分子，也可用于分析原子晶体的局部结构，需灵活迁移。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2011-新课标-12.html">2011-新课标-12</a>（2011 · 中） 以硼砂为原料制备BN和BF₃，考查物质结构与性质，包括电子排布、电负性、杂化轨道、分子空间构型及晶体结构。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/430-分子空间构型.html">分子空间构型</a></li>
+</ul>
+</div>
+</body>
+</html>

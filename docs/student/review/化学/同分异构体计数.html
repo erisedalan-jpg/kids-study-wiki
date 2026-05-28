@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同分异构体计数</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>同分异构体计数</h1><div class="review-mark" data-stem="同分异构体计数"></div><div class="meta-card"><span><strong>考点</strong>同分异构体计数</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>基本概念与物理量</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：基本概念与物理量</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2018–2018</li>
+<li>出现题位：填空12</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>同分异构体定义</strong>：分子式相同但结构不同的化合物互称同分异构体。必须分子式严格一致，相对分子质量相同但分子式不同者不属同分异构。</li>
+<li><strong>主要类别与计数逻辑</strong>：</li>
+<li>碳架异构：碳原子连接顺序不同。</li>
+<li>位置异构：官能团在碳链或环上的位置不同。</li>
+<li>官能团异构：官能团种类不同。常见组合：烯烃与环烷烃；炔烃、二烯烃与环烯烃；醇与醚；醛与酮；羧酸与酯；葡萄糖与果糖等。</li>
+<li>立体异构在新课标中一般不作计数要求，题目明确“不考虑立体异构”时必须忽略顺反异构、手性异构。</li>
+<li><strong>限定条件下同分异构的推导规则</strong>：</li>
+<li>由性质条件反推官能团种类与个数（如与 $NaHCO_3$ 反应放气必含 $—COOH$；水解产物能发生银镜反应，原酯多为甲酸某酯）。利用不饱和度 $\Omega$ 辅助推断：$\Omega = \frac{2C+2-H}{2}$（$C$ 为碳原子数，$H$ 为氢原子数，卤素视为 $H$，$N$ 视为减 $CH$）。确定官能团后，将剩余骨架按碳链、位置有序排布，做到不重不漏。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定分子式，核定不饱和度</strong>：先通过燃烧数据、相对分子质量或反应计量关系求出分子式，计算 $\Omega$，明确应含双键、环或官能团数量。</li>
+<li><strong>由特征反应挖出“必含基团”</strong>：逐一翻译限制条件。与饱和 $NaHCO_3$ 生成 $CO_2$ → 必有 $—COOH$；$1\ mol$ 物质与 $2\ mol\ Na$ 反应 → 可能含 $2$ 个 $—OH$ 或 $2$ 个 $—COOH$；水解产物能银镜 → 甲酸酯等。将必含基团从分子式中整体扣除。</li>
+<li><strong>残余碳链的“搭骨架”操作</strong>：对扣除基团后的残余烷基骨架，从直链一端开始逐次缩短主链，移动官能团位置。书写时优先考虑对称性防重复。</li>
+<li><strong>有序穷举与检验</strong>：所有结构快速手写或脑海枚举，检验每个结构是否满足所有限制条件，剔除不稳定结构（如同一个碳上连两个羟基）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>官能团保护与扣除错误</strong>：提取羧基、酯基后，残余碳数的氢原子数目容易遗漏调整。计算时务必保留氧原子与不饱和度的同步扣除。</li>
+<li><strong>等效氢判断疏漏引发多写</strong>：苯环、对称的环烷烃或高度对称的烷基中，位移等效氢若被当作不等效，会凭空多出异构体。必须养成快速画对称轴、看等效环境的习惯。</li>
+<li><strong>忘记忽略立体异构</strong>：题目注明“不考虑立体异构”，就不得计入顺反异构或手性碳产生的不同构型。考生常对含碳碳双键或手性中心的结构多计数。</li>
+<li><strong>条件利用不全</strong>：题目提供核磁共振氢谱峰面积比、峰数目，这不仅是最后挑结构的依据，更是制约异构体总数的隐含条件。当 “可能结构”后紧跟“其中……”时，必须将两个条件分别用于“总数”与“某一种结构”的推导，不可混淆。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：F是B（异山梨醇，$C_6H_{10}O_4$）的同分异构体，7.30 g F与足量饱和 $NaHCO_3$ 反应可释放 2.24 L 二氧化碳（标准状况），F的可能结构共有几种（不考虑立体异构）？其中核磁共振氢谱为三组峰，峰面积比为 $3:1:1$ 的结构简式是什么？</p>
+<p><strong>思路</strong>：
+- 7.30 g F 与其放出 $CO_2$ 的量 0.1 mol（$2.24 L ÷ 22.4 L·mol^{-1}$）可建立物质的量关系。若 1 mol F 放出 1 mol $CO_2$，则 F 摩尔质量 73 g·mol⁻¹ 与 $C_6H_{10}O_4$ 的 146 不符，故 1 mol F 必含 2 mol $—COOH$。F 分子含两个羧基，剩余残基为 $C_4H_8$。异构计数转为在丁烷骨架上固定两个羧基的位置异构。
+- 最后利用氢谱条件（3 组峰，面积比 $3:1:1$）高度对称且含有孤立甲基，确定具体结构。</p>
+<p><strong>步骤</strong>：
+1. $n(CO_2) = \frac{2.24\ L}{22.4\ L·mol^{-1}} = 0.1\ mol$。$—COOH$ 与 $NaHCO_3$ 产生 $CO_2$ 的计量比为 $1:1$，故 $n(-COOH)=0.1\ mol$。$M(F)=7.30\ g ÷ (0.1\ mol÷2)=146\ g·mol^{-1}$，恰与 $C_6H_{10}O_4$ 摩尔质量吻合，F 含两个羧基。
+2. 扣除两个 $—COOH$，残基 $C_4H_8$ 为饱和烷基。两个羧基可连在同一碳或不同碳。不同碳的情况需考虑碳链异构和位置异构。
+   - 直链丁烷骨架：两个羧基在端位碳上不同组合，得 2,3-二羧基丁烷类位置。
+   - 异丁烷骨架：甲基分支上接羧基，存在对称等。
+   经过有序组装，排除重复，符合的稳定二酸总数为 9 种。
+3. “三组峰、面积比 $3:1:1$”的结构要求：总共 10 个氢被分为三类，且有一组为 3 个等效氢，推知分子高度对称，含有不与其他氢耦合的孤立甲基。在 9 种结构中锁定为 $HOOC—CH(CH_3)—CH_2—COOH$。</p>
+<p><strong>点评/变式</strong>：
+- 此题为典型的“定量推导+限定异构体计数+波谱验证”三层嵌套考法。先通过气体量反算官能团数目，将异构问题降维为烷基二取代位置异构，是通用策略。
+- 变式训练：若将 $NaHCO_3$ 换为金属钠，需注意醇羟基也会放氢，须结合其它条件甄别含氧官能团类型。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2018-新课标Ⅱ-12.html">2018-新课标Ⅱ-12</a>（2018 · 中） 本题考查以葡萄糖为原料的有机合成路线推断，涉及官能团、反应类型、结构简式和同分异构体数目判断。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/657-同分异构体计数.html">同分异构体计数</a></li>
+</ul>
+</div>
+</body>
+</html>

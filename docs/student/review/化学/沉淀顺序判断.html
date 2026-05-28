@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>沉淀顺序判断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>沉淀顺序判断</h1><div class="review-mark" data-stem="沉淀顺序判断"></div><div class="meta-card"><span><strong>考点</strong>沉淀顺序判断</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>分步沉淀原理</strong>：向含有多种离子的溶液中逐滴加入沉淀剂，离子积（$Q$）先达到其溶度积常数（$K_{sp}$）的难溶物优先析出。调节 pH 使金属阳离子生成氢氧化物沉淀时，开始沉淀所需 $c(OH^-)$ 由 $K_{sp}$ 和离子初始浓度决定。</li>
+<li><strong>沉淀完全的判据</strong>：当残余金属离子浓度 $c(M^{n+}) \leq 1.0 \times 10^{-5} \text{ mol·L}^{-1}$ 时，认为该离子已沉淀完全。</li>
+<li><strong>开始沉淀与完全沉淀的 pH</strong>：
+  对于 $M(OH)<em sp="sp">n (s) \rightleftharpoons M^{n+} + nOH^-$，设 $c(M^{n+})$ 为初始浓度（通常题目给定或为某固定值），则开始沉淀时：
+  $$c(OH^-) = \left( \frac{K</em>$$
+  $$pH = 14 - pOH$$
+  完全沉淀时用 $c(M^{n+}) = 1.0 \times 10^{-5} \text{ mol·L}^{-1}$ 代入计算。}}{c(M^{n+})} \right)^{1/n</li>
+<li><strong>应用条件</strong>：同一类型难溶物（如氢氧化物），可用开始沉淀和完全沉淀的 pH 区间直接比较析出顺序；不同类型（如硫化物、碳酸盐）须通过计算 $K_{sp}$ 与所需沉淀剂浓度进行判断。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定沉淀剂与产物形式</strong>：审题明确通过加什么沉淀（氨水→ $OH^-$，硫化物→ $S^{2-}$ 等），沉淀为何种物质。</li>
+<li><strong>提取沉淀拐点数据</strong>：从题设表格或信息中获取各离子开始沉淀、完全沉淀的所需离子浓度或 pH 值。</li>
+<li><strong>绘制沉淀 pH 轴（隐性步骤）</strong>：在草稿上将各离子的开始沉淀与完全沉淀 pH 从小到大排列，画出每个离子的沉淀区间。</li>
+<li><strong>结合操作进程排序</strong>：若向酸性溶液加碱逐步升高 pH，则按开始沉淀 pH 从小到大的顺序依次析出。先到达哪个离子的开始沉淀 pH，该离子就优先沉淀，当 pH 跨过其完全沉淀区间后，该离子沉淀结束。</li>
+<li><strong>关注终点与共存</strong>：注意调节的最终 pH 是否达到某些离子的开始沉淀值，若未达到则相应离子不析出。若题目问某一 pH 下的沉淀成分，需锁定该 pH 落在哪些离子的沉淀区间内。</li>
+<li><strong>特殊情况</strong>：若沉淀剂直接加入混合体系（而非逐步调节），需比较全部离子的离子积与 $K_{sp}$ 的相对大小，依然遵循“$Q \ge K_{sp}$ 先出”原则；对同离子效应、络合效应等引起的实际沉淀顺序变化，必须与题给数据保持一致。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆开始沉淀和完全沉淀 pH</strong>：用完全沉淀的 pH 当作开始析出点，导致顺序错乱。开始沉淀的 pH 才是析出信号。</li>
+<li><strong>忽视溶液初始 pH</strong>：分步沉淀前的溶液起始 pH 决定了首批析出的离子能否顺利出现。如 2021 全国乙题中初始 pH≈2.0，$Fe^{3+}$ 尚未开始沉淀（开始 pH 2.2），因此调节后首先析出的仍是 $Fe^{3+}$，而非 $Al^{3+}$。</li>
+<li><strong>误认为 $K_{sp}$ 越小越先沉淀</strong>：沉淀顺序由达到 $K_{sp}$ 所需的沉淀剂离子浓度决定，不仅与 $K_{sp}$ 有关，还与离子自身浓度、离子电荷有关。题给 pH 数据已包含浓度因素，直接使用即可。</li>
+<li><strong>忽略离子水解产生的酸性</strong>：调节 pH 过程中例如用氨水，未考虑水解使部分离子提前形成少量沉淀可能导致的共沉淀问题，但一般直接根据题给 pH 区间作答。</li>
+<li><strong>终点 pH 覆盖不全</strong>：未注意题目限制的 pH 终点（如调至 11.6），将终点后才会沉淀的离子（如 $Ca^{2+}$ 开始沉淀 12.4）也列入析出序列。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021全国乙卷08节选）：向含 $Fe^{3+}$、$Al^{3+}$、$Mg^{2+}$、$Ca^{2+}$ 的酸性滤液（pH≈2.0）中，用氨水逐步调节 pH 至 11.6 进行分步沉淀。已知各离子开始沉淀和完全沉淀的 pH：$Fe^{3+}$ (2.2~3.2)，$Al^{3+}$ (3.5~4.7)，$Mg^{2+}$ (9.5~11.1)，$Ca^{2+}$ (12.4~13.8)。判断依次析出的金属离子。</p>
+<p><strong>思路</strong>：初始 pH=2.0 &lt; 2.2，所有离子均未沉淀。随 pH 升高，各离子将以开始沉淀 pH 由小到大的次序逐一析出。提取区间，在 2.0→11.6 的 pH 变化路径上搜索被完全覆盖的离子。</p>
+<p><strong>步骤</strong>：
+1. 列出起止点：$Fe^{3+}$：开始 2.2，完全 3.2；$Al^{3+}$：开始 3.5，完全 4.7；$Mg^{2+}$：开始 9.5，完全 11.1；$Ca^{2+}$：开始 12.4，完全 13.8。
+2. 按开始沉淀 pH 从小到大依次考察：<br />
+   - pH 升至 2.2，$Fe^{3+}$ 开始析出，在 pH 3.2 基本沉淀完全。<br />
+   - pH 继续升至 3.5，$Al^{3+}$ 开始析出，在 pH 4.7 沉淀完全。<br />
+   - pH 升至 9.5，$Mg^{2+}$ 开始析出，在 pH 11.1 沉淀完全。<br />
+   - $Ca^{2+}$ 需 pH=12.4 才开始沉淀，操作终点 11.6 &lt; 12.4，故 Ca²⁺ 始终不析出。
+3. 因此依次析出的金属离子为 $Fe^{3+}$、$Al^{3+}$、$Mg^{2+}$。</p>
+<p><strong>点评/变式</strong>：本题直接给出现成的开始/完全沉淀 pH 表格，只需按 pH 升序“对号入座”，切忌用 $K_{sp}$ 数值比较代替。变式训练：若改为用 $NaOH$ 调节，且给出各离子初始浓度，需自行计算开始沉淀和完全沉淀的 pH，然后再排序。若初始溶液为碱性，则要反向考量随 pH 下降的溶解顺序。注意“分步沉淀”中前一种离子完全沉淀（$c \leq 10^{-5} \text{ mol·L}^{-1}$）后，后一种离子才开始显著析出，这是工业分离的基础。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2021-全国乙-08.html">2021-全国乙-08</a>（2021 · 中） 考查高钛炉渣回收钛铝镁的工艺流程，涉及方程书写、沉淀顺序、离子浓度等。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/746-沉淀顺序判断.html">沉淀顺序判断</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>粒子浓度关系</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>粒子浓度关系</h1><div class="review-mark" data-stem="粒子浓度关系"></div><div class="meta-card"><span><strong>考点</strong>粒子浓度关系</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>一元弱酸电离平衡</strong>：对于一元酸HA，$K_a=\frac{[H^+][A^-]}{[HA]}$，常温下 $K_a(HA)=1.0 \times 10^{-4}$。未电离的分子为主要存在形式，$[HA] \gg [H^+] \approx [A^-]$。</li>
+<li><strong>膜平衡原理</strong>：若半透膜只允许分子（HA）自由通透，而离子（$H^+$、$A^-$）不能通透，且膜两侧溶液体积不发生变化，则达平衡时，膜两侧的<strong>HA浓度必然相等</strong>：$[HA]<em 右="右">{左} = [HA]</em>$。</li>
+<li><strong>离子浓度关系推导</strong>：膜一侧溶质电离产生等量$H^+$和$A^-$；另一侧因HA通透而产生同浓度HA，但离子跨膜受阻，整体需同时满足$K_a$表达式。结合$[HA]$相等条件，可导出膜两侧$[H^+]$与$[A^-]$乘积相等，并由此比较各粒子浓度。</li>
+<li><strong>守恒关系辅助判断</strong>：粒子浓度比较常结合电荷守恒、物料守恒（原子守恒）和质子守恒，无论是单一溶液还是膜平衡体系，均可由守恒出发构建等式或不等式。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>理清溶质与平衡</strong>：明确有哪些溶质，写出电离方程式（如 $HA \rightleftharpoons H^+ + A^-$）及水的自耦电离（不可忽略）。</li>
+<li><strong>抓准等量条件</strong>：若存在半透膜且分子可自由通透，则两侧分子浓度相等。结合$K_a$表达式，利用“同一个分子浓度”串联两侧离子积关系。</li>
+<li><strong>推导关键关系式</strong>：由 $K_a=\frac{[H^+][A^-]}{[HA]}$ 及 $[HA]<em 右="右">{左}=[HA]</em>$，得 $[H^+]<em 左="左">{左}[A^-]</em> = [H^+]<em 右="右">{右}[A^-]</em>$。</li>
+<li><strong>假设或极限分析判大小</strong>：当某一侧初始仅为HA溶液时，$[H^+] \approx [A^-]$；另一侧若有外加酸碱或同离子，则离子浓度偏离相等，可结合电荷守恒推断各离子浓度相对大小。</li>
+<li><strong>逐项验证选项</strong>：将推导出的等式或不等式与选项比较，注意单位数量级是否合理，电解质弱电离程度通常很小。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>忽视膜两侧HA浓度相等</strong>：误认为膜两侧HA浓度因电离差异而不同，漏用“未电离分子可自由通透”核心条件。</li>
+<li><strong>忘记水的电离</strong>：当$[H^+]$或$[OH^-]$接近$10^{-7} \rm mol·L^{-1}$时，忽略水的电离会导致数量级错误。</li>
+<li><strong>盲目套用电荷守恒</strong>：膜两侧溶液是独立的，分别满足各自的电荷守恒，不可跨膜混合写守恒式。</li>
+<li><strong>误判离子乘积</strong>：利用$K_a$不变且$[HA]$相等，得出$[H^+][A^-]$相等，但常误认为$[H^+]$和$[A^-]$分别对应相等，实际上两者乘积相等，值可能不同。</li>
+<li><strong>数量级错乱</strong>：$K_a=10^{-4}$表示弱酸电离度很小，$[H^+]$远小于$[HA]$（约$10^{-2}$倍），若选项中$[H^+]$与$[HA]$接近，必错。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2022全国乙卷）常温下，一元酸HA的$K_a(HA)=1.0 \times 10^{-4}$。在某体系中，$H^+$与$A^-$离子不能穿过隔膜，未电离的HA可自由穿过隔膜。设溶液1、溶液2分别位于膜两侧，起始时溶液1为纯HA溶液，溶液2为某浓度的HA溶液外加少量NaA固体。达到平衡后，判断有关离子浓度关系的正误。</p>
+<p><strong>思路</strong>：由HA可通透可知平衡时$[HA]_1 = [HA]_2$，结合$K_a$相等可得$[H^+]_1[A^-]_1 = [H^+]_2[A^-]_2$。溶液2中因外加NaA完全电离，$[A^-]_2$较高，为满足乘积相等，$[H^+]_2$必定小于$[H^+]_1$，进而可对各选项涉及的大小关系作出判断。</p>
+<p><strong>步骤</strong>：
+1. 确定恒等量：膜对HA通透，达平衡时 $[HA]_1 = [HA]_2$。
+2. 写出$K_a$式：$K_a = \frac{[H^+]_1[A^-]_1}{[HA]_1} = \frac{[H^+]_2[A^-]_2}{[HA]_2}$，因分子相等，得 $[H^+]_1[A^-]_1 = [H^+]_2[A^-]_2$。
+3. 分析溶液1：仅HA电离，近似有 $[H^+]_1 \approx [A^-]_1$（忽略水的电离）。
+4. 分析溶液2：因外加NaA完全电离，$[A^-]_2 &gt; [H^+]_2$（电荷守恒要求 $[Na^+]+[H^+]_2 = [A^-]_2+[OH^-]_2$，可判断 $[A^-]_2$ 大于 $[H^+]_2$）。
+5. 对比乘积：由乘积相等 $[H^+]_1^2 \approx [H^+]_2[A^-]_2$，且 $[A^-]_2 &gt; [H^+]_2$，可得 $[H^+]_1 &gt; [H^+]_2$，进而推出膜两侧 $[A^-]$ 大小等结论。</p>
+<p><strong>点评/变式</strong>：本题将电离平衡与半透膜结合，核心在于识破“通透分子浓度相等”的桥梁作用，进而借助$K_a$打通离子关系。复习时应熟悉：凡涉及膜平衡的粒子浓度考题，必先找哪些粒子可通透，由此建立等式，再结合平衡常数或守恒式推理。变式可更换溶质（如弱碱）或膜特性（只允许某些离子通过），解题思路一致。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2022-全国乙-07.html">2022-全国乙-07</a>（2022 · 中） 考查弱酸电离平衡与隔膜扩散条件下溶液pH和粒子浓度关系的判断</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/814-粒子浓度关系.html">粒子浓度关系</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>质量分数计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>质量分数计算</h1><div class="review-mark" data-stem="质量分数计算"></div><div class="meta-card"><span><strong>考点</strong>质量分数计算</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>质量分数定义</strong>：组分质量与混合物总质量之比，常用符号 $w$ 或 $\omega$，表达式为<br />
+  $$w(B)=\frac{m(B)}{m(\text{体系})}\times100\%$$</li>
+<li><strong>热重分析中的质量分数计算</strong>：<br />
+  热重曲线给出样品在不同温度下的剩余质量分数（或失重百分数）。设初始质量为 $m_0$，某温度段后剩余质量分数为 $R\%$，则该段失去的质量分数为 $(100-R)\%$。<br />
+  失重质量分数可对应失去小分子（如 $\rm H_2O$、$\rm CO_2$、$\rm NH_3$ 等）的比例，据此推断分解产物及化学计量数。</li>
+<li><strong>元素守恒</strong>：热分解过程中，金属元素等难挥发组分在固相中质量守恒，利用质量分数推算固体残留物的化学式。</li>
+<li><strong>摩尔质量与质量分数的换算</strong>：<br />
+  若固体残留物为 $A_aB_b$，其质量 $m_{\text{残}}$ 与原始样品中某元素质量 $m_{\text{元素}}$ 满足：<br />
+  $$m_{\text{元素}}=m_{\text{残}}\times\frac{a\cdot M(A)}{M(A_aB_b)}$$<br />
+  且该元素质量等于初始样品中对应元素质量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确基准</strong>：热重曲线常以初始质量为 $100\%$，剩余质量或失重均为相对值，解题时先设初始质量为 $100\ \rm g$ 或依据化学式取 $1\ \rm mol$ 样品的质量，使计算直观。</li>
+<li><strong>对应失重平台</strong>：从曲线读取每个稳定的剩余质量分数 $R$，计算该阶段的失重百分数 $\Delta w\% = (100-R)\%$ 或相邻平台差值。</li>
+<li><strong>建立质量守恒方程</strong>：设样品化学式已知（或通过元素推断确定），写出可能失去小分子的化学方程式。根据理论失重率与实际失重率相等列方程，计算各平台对应的失去分子数目。
+   $$ \frac{m_{\text{失}}(\text{理论})}{M_{\text{样品}}} = \Delta w_{\text{实测}} $$</li>
+<li><strong>验证合理性</strong>：判断失去气体是否为题干限定条件（如“无刺激性气味”“常温下为气体”等），排除矛盾选项。</li>
+<li><strong>误差与有效数字</strong>：计算时注意摩尔质量的精度（使用 $M(\rm H_2O)=18.0\ \rm g\cdot mol^{-1}$ 等），结果保留与题干数据一致的有效数字。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>分子量算错</strong>：复杂含结晶水化合物（如 $\rm NH_4B_5O_8\cdot4H_2O$）摩尔质量较大，手算时容易累加错误，建议分步核对。</li>
+<li><strong>失重顺序混乱</strong>：结晶水、配位水、结构水等失去温度不同，误将低温段失去的物质当作氨气或其他气体，忽略题干“无刺激性气体”等关键提示。</li>
+<li><strong>将序号当原子数</strong>：如 $\rm YW_4X_5Z_8\cdot4W_2Z$ 中下角标读错，导致化学式推断错误，后续质量分数全面崩盘。</li>
+<li><strong>曲线读值不准</strong>：热重曲线坐标点为 $T$ 时刻剩余质量，需仔细区分是“剩余质量分数”还是“失重百分数”，代公式时符号混乱。</li>
+<li><strong>忽略单位</strong>：质量分数可写成小数或百分数，代入计算时忘记除以 $100$，造成数量级错误。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>（2022-全国乙-05）</h3>
+<p>化合物 $\rm YW_4X_5Z_8\cdot4W_2Z$ 可用于电讯器材、高级玻璃的制造。$\rm W、X、Y、Z$ 为短周期元素，原子序数依次增加，且加和为 $21$。$\rm YZ_2$ 分子的总电子数为奇数，常温下为气体。该化合物的热重曲线如图所示，在 $200\ \rm ^\circ C$ 以下热分解时无刺激性气体逸出。下列叙述正确的是（选项略，重点分析涉及质量分数的推理与计算）。</p>
+<p><strong>思路</strong><br />
+先根据元素信息推断 $\rm W、X、Y、Z$，写出化学式；再通过热重曲线低温段失去的分子结合“无刺激性气体”确定产物为水，利用失重百分数验证结晶水数目，并判断后续分解产物的组成，最后逐项分析选项正误。</p>
+<p><strong>步骤</strong><br />
+<strong>1. 元素推断</strong><br />
+$\rm YZ_2$ 常温下为气体，总电子数为奇数。短周期中常见气体且电子数奇数的 $\rm NO_2$（23电子）符合，故 $\rm Y$ 为 $\rm N$（7号）、$\rm Z$ 为 $\rm O$（8号）。<br />
+原子序数和 $w(X)+w(Y)+w(Z)+w(W)=21$，即<br />
+$$w(W)+w(X)+7+8=21 \Rightarrow w(W)+w(X)=6$$<br />
+原子序数依次增加且均小于 $\rm N$，$\rm W$ 和 $\rm X$ 只能是 $\rm H(1)$ 和 $\rm B(5)$。则化学式为 $\rm NH_4B_5O_8\cdot 4H_2O$（四水合五硼酸铵）。</p>
+<p><strong>2. 热重过程分析（质量分数计算）</strong><br />
+设样品为 $1\ \rm mol$，摩尔质量<br />
+$$M=18.0 + 10.8\times5 + 14.0 + 1.0\times4 + 8\times16.0 + 4\times18.0 = 272.0\ \rm g\cdot mol^{-1}$$<br />
+（注意：$\rm B$ 相对原子质量取 $10.8$）<br />
+低温段（$&lt;200\ \rm ^\circ C$）无刺激性气体，失去的只能是 $\rm H_2O$。<br />
+若完全失去 $4\ \rm H_2O$，理论失重质量分数为<br />
+$$\frac{4\times18.0}{272.0}\times100\% \approx 26.5\%$$<br />
+与热重曲线第一平台剩余质量分数约 $73.5\%$ 对应（失重 $26.5\%$），证实结晶水先脱去。</p>
+<p>继续升温，剩余物质 $\rm NH_4B_5O_8$ 进一步分解可能放出 $\rm NH_3$ 和 $\rm H_2O$（结构水），根据质量分数计算可确定最终残留物为 $\rm B_2O_3$ 等。利用硼元素守恒验证固体残留率，进而判断选项与计算结果是否吻合。</p>
+<p><strong>点评/变式</strong><br />
+- 本题将元素推断与定量热重分析结合，质量分数计算是核心工具，需要考生熟练运用守恒思维。<br />
+- 常见变式：更换为含结晶水的硫酸盐、草酸盐等，失重平台对应失去 $\rm H_2O$、$\rm CO$、$\rm CO_2$ 等，通过理论失重率反推化学式或验证纯度。<br />
+- 务必注意区分“剩余质量分数”与“失重百分数”，并在相关计算中始终使用同一基准。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2022-全国乙-05.html">2022-全国乙-05</a>（2022 · 中） 本题通过热重曲线推断化合物组成，结合元素周期律和守恒计算判断选项正误。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/839-质量分数计算.html">质量分数计算</a></li>
+</ul>
+</div>
+</body>
+</html>

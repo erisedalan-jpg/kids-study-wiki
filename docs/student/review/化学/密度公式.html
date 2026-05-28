@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>密度公式</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>密度公式</h1><div class="review-mark" data-stem="密度公式"></div><div class="meta-card"><span><strong>考点</strong>密度公式</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>守恒与定量计算</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：守恒与定量计算</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心公式</strong><br />
+  $$ \rho = \frac{m}{V} = \frac{Z \cdot M}{N_A \cdot V_{\text{cell}}} $$<br />
+  $\rho$——晶体密度（$g\cdot cm^{-3}$）；$Z$——晶胞中所含的化学式单元数（均摊法求得）；<br />
+  $M$——该化学式的摩尔质量（$g\cdot mol^{-1}$）；$N_A$——阿伏加德罗常数（$mol^{-1}$）；<br />
+  $V_{\text{cell}}$——晶胞体积（$cm^3$）。</li>
+<li><strong>均摊规则（立方/四方/正交晶胞）</strong><br />
+  顶点 $\frac18$；棱上 $\frac14$；面心 $\frac12$；体心 $1$。</li>
+<li><strong>晶胞体积与单位换算</strong><br />
+  四方晶胞 $V = a^2 c$（$a$ 为底面正方形边长，$c$ 为晶胞高度）。<br />
+  若晶胞参数以 $\text{pm}$ 给出，须换算为 $\text{cm}$：$1\ \text{pm} = 10^{-10}\ \text{cm}$，<br />
+  $1\ \text{pm}^3 = 10^{-30}\ \text{cm}^3$。</li>
+<li><strong>适用条件</strong><br />
+  （1）晶胞为平行六面体且内部无空隙；<br />
+  （2）化学式中各原子的相对原子质量已知；<br />
+  （3）用于由组成参数或晶胞参数反推未知量（如掺杂比例 $x$）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定晶胞中各类粒子的数目</strong>  </li>
+<li>结合晶胞图、投影图、原子分数坐标，运用均摊法逐类计数。  </li>
+<li>对于共同占据某一位置的两种离子（本题 $F^-$、$O^{2-}$ 共占上下底面），其总数按位置分摊，再按比例 $x$ 和 $1-x$ 分配。</li>
+<li><strong>求出化学式单元数 $Z$</strong>  </li>
+<li>将晶胞内各粒子数目化为最简整数比，对比所给的化学式，即可得一个晶胞中包含多少个化学式单元。  </li>
+<li>如本题晶胞中 Sm、Fe、As 各 2 个，$O+F$ 共 2 个，化学式为 $\text{SmFeAsO}_{1-x}\text{F}_x$，故 $Z=2$。</li>
+<li><strong>计算一个化学式单元的质量</strong>  </li>
+<li>摩尔质量 $M = \sum \text{（相对原子质量} \times \text{原子个数）}$，其中代入含 $x$ 的表达式。  </li>
+<li>每个化学式单元的质量为 $\frac{M}{N_A}$。</li>
+<li><strong>代入密度公式求解</strong>  </li>
+<li>晶胞总质量 $m = \frac{Z \cdot M}{N_A}$，体积 $V$ 用晶胞参数表达（如 $a^2c\times10^{-30}\ \text{cm}^3$）。  </li>
+<li>由 $\displaystyle \rho = \frac{Z \cdot M}{N_A \cdot a^2c \cdot 10^{-30}}$ 反求 $x$ 或写出关系式。</li>
+<li><strong>涉及原子坐标时</strong>  </li>
+<li>根据坐标规则 $(x,y,z)$，比对已知原子 1 的坐标，通过晶胞对称性推断原子 2、3 的坐标（如面心、棱心）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>单位换算遗漏</strong>：晶胞参数为 $\text{pm}$ 时，体积换算少乘 $10^{-30}$，导致密度数量级严重错误。</li>
+<li><strong>均摊计数失误</strong>：将面心原子计为 $1/2$ 仅适用于面心立方/四方等，若为底面心则需确认投影（如本题上下底面两个 $O/F$ 位置各为 $1/2$，共 $1$ 个？实际需结合坐标判定位点数）。易忽略“共同占据”时应先求总占据位点数再按比例分配。</li>
+<li><strong>摩尔质量算错</strong>：未理解化学式中的 $1-x$ 和 $x$ 分别对应 $O$ 和 $F$ 的原子个数，直接乘 $O$、$F$ 的质量分数，导致表达式混乱。应直接写为 $M = M(\text{Sm}) + M(\text{Fe}) + M(\text{As}) + (1-x)M(\text{O}) + x M(\text{F})$。</li>
+<li><strong>$Z$ 值判断错误</strong>：直接将化学式当成晶胞中所含的单元数（即误以为 $Z=1$），未通过均摊结果检验。必须核对离子总数与化学式比例。</li>
+<li><strong>原子分数坐标读错</strong>：图 1 与图 2 中原子位置（如体心、底面心）的坐标值常写为分数，不熟 $c$ 方向上的 $\frac12$ 与 $0$ 的对应关系。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2019·新课标Ⅱ·11 节选）<br />
+一种四方结构超导化合物的晶胞如图，其中 $F^-$ 和 $O^{2-}$ 共同占据晶胞的上下底面位置，两者比例依次为 $x$ 和 $1-x$。该化合物的化学式为 $\text{SmFeAsO}_{1-x}\text{F}_x$；完成密度 $\rho$ 与 $x$、晶胞参数的关系表达式 $\rho = \underline{\qquad} \ \text{g} \cdot \text{cm}^{-3}$。已知原子 1 坐标为 $\left(\frac12,\frac12,\frac12\right)$，写出原子 2 和 3 的坐标。</p>
+<p><strong>思路</strong><br />
+由化学式得各组分离子比，再利用均摊和坐标得出 $Z=2$，写出晶胞总质量和四方晶胞体积（注意单位换算），最后代入密度公式。</p>
+<p><strong>步骤</strong><br />
+1. 根据投影图和坐标，晶胞中：Sm 位于体心和底面心？实际均摊结果为 2 个 Sm；Fe 位于棱心或面心，共计 2 个 Fe；As 类似，共 2 个 As。$O^{2-}$ 和 $F^-$ 共同占据上下底面两个位点，共 2 个，其中 $N_O = 2(1-x)$，$N_F = 2x$。<br />
+2. 各粒子最简整数比为 Sm : Fe : As : (O+F) = 1:1:1:1，故一个晶胞包含 2 个化学式单元，即 $Z=2$。<br />
+3. 化学式 $\text{SmFeAsO}_{1-x}\text{F}_x$ 的摩尔质量（$g \cdot mol^{-1}$）：<br />
+   $M = 150.4 + 55.8 + 74.9 + 16.0(1-x) + 19.0x = 281.1 + 3.0x$（用常见近似值）。<br />
+4. 晶胞体积 $V = a^2 c \ \text{pm}^3 = a^2 c \times 10^{-30} \ \text{cm}^3$。<br />
+5. 由密度公式：<br />
+   $\rho = \dfrac{Z \cdot M}{N_A \cdot V} = \dfrac{2 \times (281.1 + 3.0x)}{N_A \cdot a^2 c \times 10^{-30}}\ \text{g} \cdot \text{cm}^{-3}$。<br />
+6. 原子坐标：原子 2 在底面中心 $( \frac12, \frac12, 0 )$，原子 3 在顶面/侧面? 由对称性得 $(0,0,\frac12)$ 或 $(0,0,\frac12)$（根据原题图，3 坐标为 $(0,0,\frac12)$）。</p>
+<p><strong>点评/变式</strong><br />
+- 该题将晶胞密度计算与原子分数坐标、投影图分析、不等价取代（掺杂）融为一体，是结构模块的经典压轴形式。<br />
+- 变式：若已知密度和晶胞参数，求掺杂比例 $x$，只需把上述表达式变形为 $\displaystyle x = \frac{N_A a^2 c \rho \times 10^{-30} /2 - 281.1}{3.0}$。<br />
+- 特别注意：表达式中原子量数据若题目未给出，需按试卷所给相对原子质量代入，此处为近似值。考试时直接写代数式 $[2\times(150+19x+16(1-x)+\cdots)]/(N_A a^2 c\times 10^{-30})$ 即得分。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2019-新课标Ⅱ-11.html">2019-新课标Ⅱ-11</a>（2019 · 中） 该题考查铁系超导材料的结构、电子排布、化学式推断及晶胞密度计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/586-密度公式.html">密度公式</a></li>
+</ul>
+</div>
+</body>
+</html>

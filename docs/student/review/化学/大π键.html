@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大π键</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>大π键</h1><div class="review-mark" data-stem="大π键"></div><div class="meta-card"><span><strong>考点</strong>大π键</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学键与分子结构</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学键与分子结构</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择11</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>大π键（离域π键）的定义</strong>：由多个原子提供相互平行的p轨道，轨道电子在整个分子或离子范围内运动的共价键，属于多中心多电子键。</li>
+<li><strong>表示方法</strong>：$\Pi_m^n$<br />
+  $m$——参与形成大π键的原子数（平行p轨道数）；<br />
+  $n$——参与大π键的电子总数（所有平行p轨道中的电子数加上离子电荷对应的电子）。</li>
+<li><strong>形成条件（“三要素”）</strong>：<br />
+  ①参与原子共面（或近平面）；<br />
+  ②原子均提供垂直于分子平面的p轨道（通常为sp或sp$^2$杂化）；<br />
+  ③电子总数 $n &lt; 2m$（确保存在π键，而非全满反键）。</li>
+<li><strong>常见示例</strong>：
+  | 粒子 | 杂化方式 | $m$（原子数） | $n$（电子数） | 大π键记法 |
+  |------|--------|---------------|--------------|------------|
+  | 苯 C₆H₆ | sp² | 6 | 6（每个C提供一个p电子） | $\Pi_6^6$ |
+  | N₅⁻（五氮阴离子） | sp² | 5 | 6（5个N各1个p电子+1个负电荷） | $\Pi_5^6$ |
+  | NO₃⁻ | sp² | 4（N+3O） | 6或4？（需实际分析） | 常为$\Pi_4^6$ |
+  | O₃ | sp² | 3 | 4（中心O提供2，端O各1） | $\Pi_3^4$ |
+  | SO₃ | sp² | 4 | 6 | $\Pi_4^6$ |
+  （注：上述数值取决于具体价键分析，真题中常给出苯为例类比推导。）</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>确定参与大π键的原子数 $m$</strong>  </li>
+<li>找出分子/离子中采取sp或sp$^2$杂化且提供垂直于该平面的p轨道的原子。  </li>
+<li>累加原子个数，即为 $m$。</li>
+<li><strong>计算大π键电子总数 $n$</strong>  </li>
+<li>每个参与原子提供的p电子数：  <ul>
+<li>sp$^2$杂化的碳、氮等：1个p电子（若为N且p轨道有孤对，需具体看）。  </li>
+<li>氧（端位）：提供1个p电子（有时提供2个，如中心氧在O₃中）。  </li>
+</ul>
+</li>
+<li>加上离子净电荷对应的电子数（负电荷加电子，正电荷减电子）。  </li>
+<li>对于环状体系，可先写出中性母体的电子数，再根据电荷调整。  </li>
+<li>注意：孤对电子若处于与平面平行的p轨道（如羰基氧），通常不参与大π键；若孤对电子处于与环平面垂直的p轨道，可能参与提供2个电子。</li>
+<li><strong>验证 $n &lt; 2m$</strong>  </li>
+<li>若满足，则大π键成立；若 $n = 2m$，相当于p轨道全满，反键轨道也填充，实际不会形成稳定大π键。</li>
+<li><strong>书写</strong>：按 $\Pi_m^n$ 格式独立作答。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>错加σ键电子</strong>：大π键只计数垂直于分子平面的p轨道电子，切勿将σ骨架电子或孤对电子（除非在垂直p轨道上）计入。  </li>
+<li><strong>忽略离子电荷</strong>：计算 $n$ 时，阴离子必须加上对应负电荷数的电子；阳离子要减去电子。典型错误：N₅⁻直接取5个电子，漏加负电荷，误写为 $\Pi_5^5$。  </li>
+<li><strong>混淆 $m$ 与 $n$ 的顺序</strong>：$\Pi_m^n$ 的上标为电子数，下标为原子数，不可颠倒。  </li>
+<li><strong>原子数不清</strong>：误将不参与大π键的原子（如sp³杂化原子）计入 $m$，或遗漏某些sp$^2$原子。  </li>
+<li><strong>误认为大π键仅存在于芳香环</strong>：NO₃⁻、O₃等非环体系也有大π键。</li>
+<li><strong>审题不细</strong>：题目可能要求书写“σ键总数”，与大π键分开，部分考生看混要求。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2017新课标Ⅱ，节选）：化合物R中含五氮阴离子N₅⁻，其局部结构如图（五元环，每个N均为sp²杂化）。已知大π键可用符号 $\Pi_m^n$ 表示，如苯为 $\Pi_6^6$。回答：N₅⁻中σ键总数为<strong><em>；N₅⁻中的大π键应表示为</em></strong>。</p>
+<p><strong>思路</strong><br />
+①先分析N₅⁻的空间构型与成键方式：五元环，5个N原子采取sp²杂化，每个N与相邻两N形成σ键，并有一对孤电子对占据sp²杂化轨道内（平行于环平面），剩余一个垂直p轨道未杂化。<br />
+②σ键计数：环内5个N—N σ单键，无其他σ键，故数目为5。<br />
+③大π键的 $m$：5个N原子各提供一个垂直于环平面的p轨道，$m=5$。<br />
+④电子总数 $n$：中性时每个N的p轨道有1个电子，共5个；N₅⁻带一个单位负电荷，该电子进入离域p体系，总电子数为 $5+1=6$。<br />
+⑤组合得出 $\Pi_5^6$。</p>
+<p><strong>步骤</strong><br />
+1. 判断杂化：每个N周围有3个方向（2个σ键+1对孤电子），sp²杂化。<br />
+2. σ键总数 = 环上边数 = 5。<br />
+3. 大π键原子数 $m$ = 参与提供p轨道的N原子数 = 5。<br />
+4. 大π键电子数 $n$ = $\sum$（每个N的p电子）+ 离子电荷 = $5\times1 +1 = 6$。<br />
+5. 书写大π键：$\Pi_5^6$。</p>
+<p><strong>点评/变式</strong><br />
+- 点评：本题依托新情景（氮五环阴离子），考查大π键符号书写与电荷影响，体现 “信息迁移” 能力。苯的示例既提供符号规则，又暗示类似芳香体系。关键点是正确加成负电荷的1个电子。<br />
+- 变式1：若题干中出现N₅⁺（正离子），则 $n=5-1=4$，大π键记为 $\Pi_5^4$（需验证稳定性）。<br />
+- 变式2：写出NO₃⁻的大π键符号（已知N与3个O均sp²杂化，共4个原子提供p轨道，N提供2个电子，每个O提供1个电子，离子负电荷提供1个电子，总计$2+3+1=6$，记为$\Pi_4^6$）。此变式可训练考生对多种原子贡献电子的分析能力。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2017-新课标Ⅱ-11.html">2017-新课标Ⅱ-11</a>（2017 · 中） 该题考查原子电子排布、第一电子亲和能变化规律、晶体的杂化轨道与化学键等知识。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/661-大π键.html">大π键</a></li>
+</ul>
+</div>
+</body>
+</html>

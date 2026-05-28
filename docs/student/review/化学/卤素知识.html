@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卤素知识</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>卤素知识</h1><div class="review-mark" data-stem="卤素知识"></div><div class="meta-card"><span><strong>考点</strong>卤素知识</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>元素周期律与周期表</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：元素周期律与周期表</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>核心概念</strong><ul>
+<li>卤素单质（$X_2$）的颜色、状态递变规律（$F_2$淡黄绿气→$Cl_2$黄绿气→$Br_2$红棕液→$I_2$紫黑固），液溴为红棕色液体。</li>
+<li>卤素互化物：由两种不同卤素原子形成的化合物，如 $ICl$。其中电负性较弱的卤素（如 $I$）呈正氧化态，具有较强的氧化性。</li>
+</ul>
+</li>
+<li><strong>核心公式与定理</strong><ul>
+<li><strong>化学平衡常数（经验平衡常数）</strong>
+  $$ \text{对于反应 } aA+pP \rightleftharpoons xX+yY \text{，有 } K_p = \frac{p^x_X \cdot p^y_Y}{p^a_A \cdot p^p_P} $$
+  其中 $p_i$ 为各组分平衡分压，单位需保持一致（本题用 $kPa$ 或 $Pa$）。固体和纯液体不列入表达式。</li>
+<li><strong>分压定律</strong>：混合气体总压等于各组分分压之和，某组分分压 $p_i = n_i / n_\text{总} \times p_\text{总}$，可直接由总量关系推算。</li>
+</ul>
+</li>
+<li><strong>适用条件</strong><ul>
+<li>$K_p$ 表达式中不出现固体或纯液体。</li>
+<li>平衡时各气体分压满足道尔顿分压定律。</li>
+<li>涉及多步反应时，可将总反应拆分为若干独立平衡，逐一列出关系式求解。</li>
+</ul>
+</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>陌生信息迁移法</strong></li>
+<li>遇到“卤素互化物”等新名词，当即从题干提取关键属性（如本例“强氧化性”“由两种卤素组成”），与已学卤素单质性质进行类比或区分。</li>
+<li>历史背景题（如溴的发现）直接考查基础记忆：溴（$Br_2$）常温为红棕色液体，该物理性质曾导致其被误认为 $ICl$。</li>
+<li><strong>多步气相平衡“三步走”</strong></li>
+<li><strong>第一步：写出独立基元反应</strong><br />
+     题目涉及两个平衡：
+     $$ BaPtCl_6(s) \rightleftharpoons BaCl_2(s) + Pt(s) + 2Cl_2(g) \quad \text{给定 } K_{p1}' $$
+     $$ 2ICl(g) \rightleftharpoons Cl_2(g) + I_2(g) \quad \text{待求 } K_{p2} $$</li>
+<li><strong>第二步：由总压变化推第一步平衡分压</strong><br />
+     由于第一步反应除 $Cl_2$ 外无其他气体，体系总压增加部分全部来自 $Cl_2$。抽真空后总压 = $Cl_2$ 分压。<br />
+     结合 $K_{p1}'$ 可验证或直接求算 $p_{Cl_2}$。</li>
+<li><strong>第三步：物料守恒求第二步平衡分压并代入 $K$ 表达式</strong><br />
+     用碘原子守恒、氯原子守恒或直接利用“初始—转化—平衡”三段式，求出 $ICl$ 和 $I_2$ 的平衡分压，代入目标反应 $K_{p2}$ 定义式，仅写出计算式即可。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误用平衡常数单位</strong>：$K_p'$ 给定为 $1.0 \times 10^4 \, Pa^2$，计算总压和分压时一定要统一单位。本题初始压强和终态压强均以 $kPa$ 给出，代入 $K_p$ 表达式时可直接用 $kPa$，切勿漏除以 $(1000)^2$ 进行换算。</li>
+<li><strong>混淆“总压”与“分压”</strong>：固体分解反应 $BaPtCl_6$ 产生的 $Cl_2$ 是体系唯一气体来源，初始抽真空后总压即为 $p_{Cl_2}$。若碘蒸气初始压强 $20.0 \, kPa$，第一步分解总压 $32.5 \, kPa$，则 $p_{Cl_2}=32.5 - 20.0 - p_{ICl\text{消耗}} \ldots$  即不可遗漏碘蒸气也已参与反应，体系总压由 $Cl_2$、未反应的 $ICl$ 和生成的 $I_2$ 共同贡献。</li>
+<li><strong>漏写平衡表达式中的幂指数</strong>：$2ICl(g) \rightleftharpoons Cl_2(g) + I_2(g)$ 的 $K_p = \frac{p_{Cl_2} \cdot p_{I_2}}{p_{ICl}^2}$。反应物计量数 $2$ 必须作为 $p_{ICl}$ 的指数。</li>
+<li><strong>易混淆性质</strong>：溴（$Br_2$）常温为红棕色液体，碘（$I_2$）为紫黑色固体，一氯化碘（$ICl$）性质与溴相似。历史上李比希误把溴当作 $ICl$，将错失元素记为“溴”。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong><br />
+(1) 历史上海藻提碘得到红棕色液体，因与 $ICl$ 性质相似被误认，错过的元素是<em><strong>_</strong>。<br />
+(2) 给定 $BaPtCl</em>6(s)$ 分解反应的 $K_p'$，在碘蒸气初始压强 $20.0 \, kPa$ 下，$376.8\,^\circ C$ 平衡时总压 $32.5 \, kPa$。求平衡时 $p_{ICl}$ 和反应 $2ICl(g) \rightleftharpoons Cl_2(g) + I_2(g)$ 的 $K_p$ 计算式。</p>
+<p><strong>思路</strong><br />
+- (1) 直接调用溴的物理性质记忆。<br />
+- (2) 总压 $32.5\, kPa$ 由 $I_2$ 初始蒸气、分解生成的 $Cl_2$ 以及反应消耗后剩余的 $ICl$ 贡献。第一步分解反应已知 $K_{p}' = p_{Cl_2}^2 = 1.0 \times 10^4 \, Pa^2 = 10^{-2} \, (kPa)^2$，可解得 $p_{Cl_2}$，进而建立物料守恒求 $p_{ICl}$ 和 $p_{I_2}$，最终写出 $K_{p2}$ 表达式。</p>
+<p><strong>步骤</strong><br />
+1. 统一单位：$K_p' = 1.0 \times 10^4 \, Pa^2 = (10\, kPa)^2 = 100 \, (kPa)^2$。由第一步分解平衡：$p_{Cl_2} = \sqrt{K_p'} = 10.0 \, kPa$。<br />
+2. 设平衡时 $ICl$ 分压为 $p_{ICl}$。初始 $I_2$ 分压为 $20.0 \, kPa$，因反应 $2ICl \rightleftharpoons Cl_2 + I_2$，生成 $Cl_2$ 的同时会生成等物质的量的 $I_2$。<br />
+   体系 $Cl_2$ 全来自第一步，即 $10.0 \, kPa$；但第二步反应中消耗 $ICl$ 会新生成部分 $Cl_2$ 被忽略？不对——按题意，第一步提供足量 $Cl_2$，$ICl$ 只与 $I_2$ 竞争 $Cl$？重新审题：$BaPtCl_6$ 分解产生 $Cl_2$，随后 $ICl$ 与 $I_2$、$Cl_2$ 建立第二个平衡。<br />
+   初始：$p_{Cl_2}=10.0\,kPa$, $p_{ICl}=x$, 总 $p_{\text{初}}=30.0$？ 题干说“抽真空后通入碘蒸气再封闭”，碘蒸气初始为 $20.0 \, kPa$，$BaPtCl_6$ 分解提供 $Cl_2$，总压平衡时 $32.5 \, kPa$。<br />
+   设转化了 $y\,kPa$ 的 $ICl$：<br />
+   $$ 2ICl \rightleftharpoons Cl_2 + I_2 $$<br />
+   平衡：$p_{ICl}=20.0 - 2y$（初始 $ICl$ 即初通入的碘蒸气全部算作 $ICl$？题干暗示“通入碘蒸气”后与过量 $BaPtCl_6$ 反应。先产生 $ICl$？化学过程：$I_2 + Cl_2 \rightleftharpoons 2ICl$。所以初始通入 $I_2$ $20.0\,kPa$，第一步分解提供 $Cl_2$ $10.0\,kPa$。它们反应生成 $ICl$，最终建立平衡$2ICl \rightleftharpoons Cl_2 + I_2$。<br />
+   总物料守恒：$I$ 原子总量 $2 \times 20.0 = 2p_{I_2} + p_{ICl}$；$Cl$ 原子总量 $2 \times 10.0 = 2p_{Cl_2} + p_{ICl}$。<br />
+   总压 $p_{\text{总}} = p_{Cl_2} + p_{I_2} + p_{ICl} = 32.5$。<br />
+   解方程组：由 Cl 守恒得 $p_{Cl_2} = 10.0 - 0.5p_{ICl}$；由 I 守恒得 $p_{I_2} = 20.0 - 0.5p_{ICl}$。<br />
+   代入总压：$(10.0 - 0.5p_{ICl}) + (20.0 - 0.5p_{ICl}) + p_{ICl} = 30.0 = 32.5$? 矛盾！<br />
+   说明初始碘与氯并未完全转化为 $ICl$，而是一部分直接进入平衡。直接列平衡关系：<br />
+   $p_{Cl_2}=10.0 \, kPa$（第一步分解固定）。<br />
+   设平衡时 $p_{ICl} = x$, $p_{I_2} = y$。<br />
+   I 守恒：$x + 2y = 40.0$（初始碘蒸气 $20.0 \, kPa$ 含 $2 \times 20.0$ 的 I 分压贡献）。<br />
+   总压：$10.0 + x + y = 32.5 \rightarrow x + y = 22.5$。<br />
+   联立解得 $y = 40.0 - x / 2$？ 直接解：$x + 2y = 40.0$ 和 $x + y = 22.5$，相减得 $y = 17.5 \, kPa$，$x = 5.0 \, kPa$。<br />
+   因此 $p_{ICl} = 5.0 \, kPa$。<br />
+3. 代入 $K_p$：$K = \frac{p_{Cl_2} \cdot p_{I_2}}{p_{ICl}^2} = \frac{10.0 \times 17.5}{5.0^2}$。<br />
+<strong>答案</strong> $p_{ICl}=5.0 \, kPa$；$K= \frac{10.0 \times 17.5}{5.0^2}$。</p>
+<p><strong>点评/变式</strong><br />
+- 该题将卤素性质与多重平衡结合，区分度极高。核心是识别“铆钉点”——第一步分解 $Cl_2$ 分压亘定为 $10.0 \, kPa$，剩余气体的物料守恒仅围绕碘、氯原子。
+- 变式：若 $BaPtCl_6$ 非过量，$Cl_2$ 分压不定，则需联立两个平衡方程，按化学计量数设未知数求解。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2021-全国乙-10.html">2021-全国乙-10</a>（2021 · 中） 考查卤素互化物ICl的性质及化学平衡常数计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/633-卤素知识.html">卤素知识</a></li>
+</ul>
+</div>
+</body>
+</html>

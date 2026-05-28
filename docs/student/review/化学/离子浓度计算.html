@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离子浓度计算</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>离子浓度计算</h1><div class="review-mark" data-stem="离子浓度计算"></div><div class="meta-card"><span><strong>考点</strong>离子浓度计算</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>化学</span><span><strong>父主题</strong>化学反应原理</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：化学反应原理</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2021–2021</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>沉淀完全的标准</strong>：当溶液中某金属离子的浓度 $c(M^{n+}) \le 1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$ 时，即可认为该离子已沉淀完全。该数值为约定俗成的判据，常直接用于计算。</li>
+<li><strong>溶度积常数 $K_{sp}$ 的计算</strong>：对于难溶电解质 $M_mA_n(s) \rightleftharpoons m M^{n+}(aq) + n A^{m-}(aq)$，$K_{sp} = c^m(M^{n+}) \cdot c^n(A^{m-})$。利用沉淀完全时的 pH 及残余离子浓度（$10^{-5} \ \text{mol} \cdot \text{L}^{-1}$），可反推出 $K_{sp}$ 或未知离子浓度。</li>
+<li><strong>金属氢氧化物的沉淀与 pH 的关系</strong>：$M(OH)<em sp="sp">n$ 的溶度积 $K</em> \cdot c^n(H^+)$，或直接用 $pOH$ 换算。} = c(M^{n+}) \cdot c^n(OH^-)$。结合水的离子积 $K_w = c(H^+) \cdot c(OH^-)$，可得 $c(M^{n+})$ 与 pH 的定量关系：$c(M^{n+}) = \dfrac{K_{sp}}{c^n(OH^-)} = \dfrac{K_{sp}}{(K_w / c(H^+))^n} = \dfrac{K_{sp}}{K_w^n</li>
+<li><strong>调节 pH 分步沉淀</strong>：控制溶液 pH 在两种离子形成氢氧化物沉淀的 pH 范围之间，可实现离子的选择性分离。判断沉淀顺序时，需比较开始沉淀及沉淀完全所需的 pH 大小。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定位数据，明确状态</strong>：先根据流程或问题确定溶液当前所处的 pH 及对应的沉淀阶段（开始沉淀、部分沉淀、沉淀完全、未沉淀）。审题时圈出表格中的“开始沉淀”“沉淀完全”的 pH 及注明的残余浓度（常为 $10^{-5} \ \text{mol} \cdot \text{L}^{-1}$）。</li>
+<li><strong>利用沉淀完全判据直接作答</strong>：若问题问的是沉淀完全后滤液中的某离子浓度，且所调节的 pH 已超过该离子沉淀完全的 pH，答案直接就是 $1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$。无需繁琐计算。</li>
+<li><strong>通过 $K_{sp}$ 间接计算任意 pH 下的离子浓度</strong>（若题目不提供完全沉淀的固定数值）：</li>
+<li>步骤一：利用“沉淀完全时的 pH”和 $c(M^{n+}) = 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$，代入 $K_{sp}$ 表达式，求出该氢氧化物的 $K_{sp}$。</li>
+<li>步骤二：由 $K_w$ 和目标 pH 求出 $c(OH^-)$。</li>
+<li>步骤三：利用 $c(M^{n+}) = K_{sp} / c^n(OH^-)$ 计算浓度。</li>
+<li><strong>比较离子沉淀顺序</strong>：根据各离子沉淀完全所需的最低 pH 从小到大排序，pH 越大越后沉淀。用氨水调 pH 由低到高时，先析出的是“沉淀完全 pH 低”的金属离子。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆“开始沉淀”与“沉淀完全”的 pH</strong>：计算浓度时误用开始沉淀的 pH 数据，导致 $c(M^{n+})$ 结果错误。务必看清问题对应的是“母液”（沉淀后的滤液）还是“刚有沉淀生成”的场景。</li>
+<li><strong>忽略 $10^{-5} \ \text{mol} \cdot \text{L}^{-1}$ 的直接应用</strong>：在 pH 已超过沉淀完全 pH 的条件下，反复用 $K_{sp}$ 计算，不仅耗时，还可能因 $K_w$ 取值位数引入误差。直接写 $10^{-5}$ 即可。</li>
+<li><strong>遗忘水的离子积常数 $K_w$ 与温度的关联</strong>：常温下 $K_w = 1.0 \times 10^{-14}$，若非 25℃ 题目会给出。乱用 $K_w$ 会导致 $c(OH^-)$ 与 pH 的换算出错。</li>
+<li><strong>错判沉淀终点</strong>：如调节最终 pH = 11.6，而 $\text{Mg}^{2+}$ 沉淀完全 pH = 11.1，认为沉淀不完全而用 $K_{sp}$ 去算平衡浓度，忽视了 11.6 已经满足沉淀完全条件，残余浓度就是规定的 $10^{-5}$。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2021-全国乙-08节选）：磁选后的炼铁高钛炉渣含 $\text{TiO}_2$、$\text{SiO}_2$、$\text{Al}_2\text{O}_3$、$\text{MgO}$、$\text{CaO}$ 及少量 $\text{Fe}_2\text{O}_3$。经焙烧、水浸后“滤液”pH 约为 2.0，用氨水逐步调 pH 至 11.6 分步沉淀。已知相关金属离子沉淀完全的 pH（当 $c = 1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$ 时）：$\text{Fe}^{3+}$ 3.2，$\text{Al}^{3+}$ 4.7，$\text{Mg}^{2+}$ 11.1，$\text{Ca}^{2+}$ 13.8。问：“母液①”中 $\text{Mg}^{2+}$ 浓度为多少 $\text{mol} \cdot \text{L}^{-1}$。</p>
+<p><strong>思路</strong>：母液①是调 pH 至 11.6 并分离沉淀后得到的滤液。11.6 &gt; 11.1（$\text{Mg}^{2+}$ 沉淀完全的 pH），说明 $\text{Mg}^{2+}$ 已经沉淀完全。依表中注释，沉淀完全时残留的金属离子浓度即为 $1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$。</p>
+<p><strong>步骤</strong>：
+1. 识别“母液①”对应流程位置：分步沉淀调 pH 至 11.6 后的液相。
+2. 比较 11.6 与 $\text{Mg}^{2+}$ 沉淀完全的 pH（11.1）：调定值更大，表明 $\text{Mg}^{2+}$ 已沉淀完全。
+3. 依据题设标准“沉淀完全时 $c = 1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$”，直接得出 $c(\text{Mg}^{2+}) = 1.0 \times 10^{-5} \ \text{mol} \cdot \text{L}^{-1}$。</p>
+<p><strong>点评/变式</strong>：本题是“离子浓度计算”最典型的直接赋值考法，无需任何计算，重在理解“沉淀完全”的操作定义。变式可能改为给出 $K_{sp}$，要求计算某 pH 下的离子浓度，或判断离子是否沉淀完全，此时应严格按照“用沉淀完全 pH 反推 $K_{sp}$，再代入目标 pH 计算”的四步套路。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/化学/2021-全国乙-08.html">2021-全国乙-08</a>（2021 · 中） 考查高钛炉渣回收钛铝镁的工艺流程，涉及方程书写、沉淀顺序、离子浓度等。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/810-离子浓度计算.html">离子浓度计算</a></li>
+</ul>
+</div>
+</body>
+</html>
