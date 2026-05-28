@@ -486,6 +486,31 @@ def gen_top_overview(all_atoms: list[tuple[Path, dict, int, str]]) -> str:
     return render_page("总览", content, depth=0)
 
 
+def review_referenced_exam_stems(
+    subject: str,
+    exam_stems: set[str],
+) -> set[str]:
+    """返回 复习/{subject}/*.md 中 [[X]] / [[X|...]] 引用、且属于 exam_stems 的 stem 集合。
+
+    用于在 exam 页渲染前把复习页引用的真题 stem 补入 referenced_by_subject，
+    消除复习页到 exam/*.html 的死链。
+    """
+    rd = REPO_ROOT / "复习" / subject
+    if not rd.is_dir():
+        return set()
+    result: set[str] = set()
+    for p in rd.glob("*.md"):
+        try:
+            text = p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for m in WIKILINK_RE.finditer(text):
+            target = m.group(1).strip()
+            if target in exam_stems:
+                result.add(target)
+    return result
+
+
 def main() -> int:
     setup_utf8()
     ap = argparse.ArgumentParser()
@@ -599,6 +624,21 @@ def main() -> int:
             for m in BACKLINK_RE.finditer(text):
                 for mm in re.finditer(r"\[\[([^\[\]|]+?)(?:\|[^\]]*)?\]\]", m.group(1)):
                     referenced_by_subject[s].add(mm.group(1).strip())
+
+    # 4b) 补充：复习页（复习/{学科}/*.md）中 [[X]] 引用的真题 stem 也需要出 exam 页，
+    #     否则复习页的 "全部真题清单" 链接会 404。
+    for sub in iter_exam_dirs():
+        if not sub.name.startswith("吉林"):
+            continue
+        parts = sub.name.split("-", 1)
+        if len(parts) != 2:
+            continue
+        subject_name = parts[1]
+        exam_stems_for_subj = {p.stem for p in sub.glob("*.md")}
+        extra = review_referenced_exam_stems(subject_name, exam_stems_for_subj)
+        if extra:
+            referenced_by_subject[subject_name].update(extra)
+
     n_exam = 0
     for sub in iter_exam_dirs():
         if not sub.name.startswith("吉林"):

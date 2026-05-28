@@ -1,4 +1,5 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -118,6 +119,109 @@ class TestGenHtmlReview(unittest.TestCase):
             Path("T.md"), fm, "body", lambda *a, **kw: ""
         )
         self.assertIn("../../vendor/style.css", page)
+
+
+class TestReviewReferencedExamStems(unittest.TestCase):
+    """Unit tests for review_referenced_exam_stems helper (dead-link fix)."""
+
+    def setUp(self):
+        import gen_html
+        self.gh = gen_html
+
+    def _make_review_dir(self, tmp: Path, subject: str, files: dict[str, str]) -> None:
+        """Create 复习/{subject}/*.md files under tmp/复习/{subject}/."""
+        d = tmp / "复习" / subject
+        d.mkdir(parents=True, exist_ok=True)
+        for name, content in files.items():
+            (d / name).write_text(content, encoding="utf-8")
+
+    def test_returns_matching_stems(self):
+        """Stems referenced by [[X]] in review pages that exist in exam_stems are returned."""
+        import gen_html
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_review_dir(tmp, "数学", {
+                "一元二次不等式.md": (
+                    "## 全部真题清单\n\n"
+                    "- [[2019-理-01]]（2019 · 易）\n"
+                    "- [[2016-理-02]]（2016 · 易）\n"
+                    "- [[2099-理-99]]（不存在的题）\n"
+                ),
+            })
+            exam_stems = {"2019-理-01", "2016-理-02", "2018-理-05"}
+            # Temporarily patch REPO_ROOT
+            orig_root = gen_html.REPO_ROOT
+            try:
+                gen_html.REPO_ROOT = tmp
+                result = gen_html.review_referenced_exam_stems("数学", exam_stems)
+            finally:
+                gen_html.REPO_ROOT = orig_root
+        self.assertEqual(result, {"2019-理-01", "2016-理-02"})
+
+    def test_ignores_non_exam_stems(self):
+        """Wikilinks that are NOT in exam_stems are not returned."""
+        import gen_html
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_review_dir(tmp, "数学", {
+                "考点.md": "[[词条链接|显示]] [[不是真题]]",
+            })
+            exam_stems = {"2022-理-01"}
+            orig_root = gen_html.REPO_ROOT
+            try:
+                gen_html.REPO_ROOT = tmp
+                result = gen_html.review_referenced_exam_stems("数学", exam_stems)
+            finally:
+                gen_html.REPO_ROOT = orig_root
+        self.assertEqual(result, set())
+
+    def test_handles_pipe_alias_wikilinks(self):
+        """[[stem|display]] form: only the stem part (before |) is extracted."""
+        import gen_html
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_review_dir(tmp, "物理", {
+                "牛顿第二定律.md": "[[2021-理-03|第3题]]",
+            })
+            exam_stems = {"2021-理-03"}
+            orig_root = gen_html.REPO_ROOT
+            try:
+                gen_html.REPO_ROOT = tmp
+                result = gen_html.review_referenced_exam_stems("物理", exam_stems)
+            finally:
+                gen_html.REPO_ROOT = orig_root
+        self.assertEqual(result, {"2021-理-03"})
+
+    def test_missing_review_dir_returns_empty(self):
+        """If 复习/{subject} does not exist, return empty set without error."""
+        import gen_html
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            orig_root = gen_html.REPO_ROOT
+            try:
+                gen_html.REPO_ROOT = tmp
+                result = gen_html.review_referenced_exam_stems("数学", {"2020-理-01"})
+            finally:
+                gen_html.REPO_ROOT = orig_root
+        self.assertEqual(result, set())
+
+    def test_multiple_review_files(self):
+        """Stems from multiple review .md files in the same subject dir are unioned."""
+        import gen_html
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            self._make_review_dir(tmp, "化学", {
+                "氧化还原.md": "[[2018-理-04]]\n[[2017-理-07]]",
+                "酸碱盐.md": "[[2018-理-04]]\n[[2016-理-09]]",
+            })
+            exam_stems = {"2018-理-04", "2017-理-07", "2016-理-09"}
+            orig_root = gen_html.REPO_ROOT
+            try:
+                gen_html.REPO_ROOT = tmp
+                result = gen_html.review_referenced_exam_stems("化学", exam_stems)
+            finally:
+                gen_html.REPO_ROOT = orig_root
+        self.assertEqual(result, {"2018-理-04", "2017-理-07", "2016-理-09"})
 
 
 if __name__ == "__main__":
