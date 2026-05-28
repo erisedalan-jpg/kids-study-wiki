@@ -224,5 +224,92 @@ class TestReviewReferencedExamStems(unittest.TestCase):
         self.assertEqual(result, {"2018-理-04", "2017-理-07", "2016-理-09"})
 
 
+class TestBuildReviewIndexHtml(unittest.TestCase):
+    """Tests for the pure helper build_review_index_html."""
+
+    def setUp(self):
+        import gen_html
+        self.gh = gen_html
+
+    def _make_entries(self):
+        return [
+            {"考点": "二次函数", "父主题": "函数", "weight": 8, "真题数": 5, "stem": "二次函数"},
+            {"考点": "指数函数", "父主题": "函数", "weight": 6, "真题数": 3, "stem": "指数函数"},
+            {"考点": "一元二次不等式", "父主题": "不等式", "weight": 19, "真题数": 6, "stem": "一元二次不等式"},
+            {"考点": "均值不等式", "父主题": "不等式", "weight": 12, "真题数": 4, "stem": "均值不等式"},
+        ]
+
+    def test_groups_by_parent_topic(self):
+        """HTML should contain both 父主题 names as headings."""
+        html_out = self.gh.build_review_index_html("数学", self._make_entries())
+        self.assertIn("函数", html_out)
+        self.assertIn("不等式", html_out)
+
+    def test_links_to_stem_html(self):
+        """Each 考点 should have a link to <stem>.html in the same dir."""
+        html_out = self.gh.build_review_index_html("数学", self._make_entries())
+        self.assertIn('href="二次函数.html"', html_out)
+        self.assertIn('href="一元二次不等式.html"', html_out)
+
+    def test_weight_and_count_in_label(self):
+        """Labels should include weight and 真题数."""
+        html_out = self.gh.build_review_index_html("数学", self._make_entries())
+        self.assertIn("weight 8", html_out)
+        self.assertIn("5题", html_out)
+
+    def test_parent_topic_ordering_by_total_weight(self):
+        """父主题 with higher total weight comes first (不等式 31 > 函数 14)."""
+        html_out = self.gh.build_review_index_html("数学", self._make_entries())
+        pos_inequality = html_out.find("不等式")
+        pos_function = html_out.find("函数")
+        self.assertLess(pos_inequality, pos_function,
+                        "不等式 (total weight 31) should precede 函数 (total weight 14)")
+
+    def test_within_group_ordering_by_weight_desc(self):
+        """Within a 父主题, higher-weight 考点 should appear before lower-weight."""
+        html_out = self.gh.build_review_index_html("数学", self._make_entries())
+        pos_quadratic = html_out.find("一元二次不等式")
+        pos_mean = html_out.find("均值不等式")
+        self.assertLess(pos_quadratic, pos_mean,
+                        "一元二次不等式 (weight 19) should precede 均值不等式 (weight 12)")
+
+    def test_defaults_for_missing_weight_and_count(self):
+        """Entries without weight/真题数 should not crash; default to 0."""
+        entries = [{"考点": "X", "父主题": "A", "stem": "X"}]
+        html_out = self.gh.build_review_index_html("数学", entries)
+        self.assertIn("X.html", html_out)
+        self.assertIn("weight 0", html_out)
+
+    def test_uncategorised_fallback(self):
+        """Entries without 父主题 should go under '（未分类）' group."""
+        entries = [{"考点": "孤儿考点", "stem": "孤儿考点", "weight": 3, "真题数": 1}]
+        html_out = self.gh.build_review_index_html("数学", entries)
+        self.assertIn("未分类", html_out)
+
+
+class TestHomepageReviewLinks(unittest.TestCase):
+    """Tests that gen_home includes links to per-subject review index pages."""
+
+    def setUp(self):
+        import gen_html
+        self.gh = gen_html
+
+    def _default_stats(self):
+        return {"数学": 10, "物理": 8, "化学": 7, "生物": 6}
+
+    def test_home_links_to_each_subject_review_index(self):
+        """index.html must contain links for all 4 subjects' review indexes."""
+        page = self.gh.gen_home(self._default_stats(), 31)
+        for subject in self.gh.SUBJECTS:
+            expected = f"review/{subject}/index.html"
+            self.assertIn(expected, page,
+                          msg=f"Homepage should link to {expected}")
+
+    def test_home_links_to_math_review_index(self):
+        """Explicit check for the 数学 link (regression guard)."""
+        page = self.gh.gen_home(self._default_stats(), 31)
+        self.assertIn("review/数学/index.html", page)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -436,7 +436,63 @@ def gen_subject_index(subject: str, atoms: list[tuple[Path, dict, int]],
     return render_page(title, content, depth=0)
 
 
+def build_review_index_html(subject: str,
+                             entries: list[dict[str, Any]]) -> str:
+    """构建 review/{subject}/index.html 正文 HTML（不含完整页框架）。
+
+    entries: 每项含 考点(str) / 父主题(str) / weight(int) / 真题数(int)。
+    按父主题分组，组内按 weight desc、真题数 desc 排序；
+    父主题行本身按组内 weight 总和 desc 排序。
+    返回可直接传入 render_page 的 content_html 字符串。
+    """
+    # 分组
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for e in entries:
+        groups[e.get("父主题") or "（未分类）"].append(e)
+
+    # 父主题排序：组内 weight 总和 desc
+    def group_key(parent: str) -> int:
+        return sum(e.get("weight", 0) for e in groups[parent])
+
+    sorted_parents = sorted(groups.keys(), key=group_key, reverse=True)
+
+    sections = []
+    for parent in sorted_parents:
+        items = sorted(groups[parent],
+                       key=lambda e: (-e.get("weight", 0), -e.get("真题数", 0)))
+        li_parts = []
+        for e in items:
+            kaodian = e.get("考点") or e.get("title") or ""
+            w = e.get("weight", 0)
+            cnt = e.get("真题数", 0)
+            stem = e.get("stem", kaodian)
+            href = f"{html.escape(stem)}.html"
+            label = f"{html.escape(kaodian)} (weight {w}·{cnt}题)"
+            li_parts.append(f'<li><a href="{href}">{label}</a></li>')
+        sections.append(
+            f'<h2>{html.escape(parent)}</h2>'
+            f'<ul>{"".join(li_parts)}</ul>'
+        )
+
+    n_total = sum(len(v) for v in groups.values())
+    header = (
+        f'<h1>{html.escape(subject)}考点专题复习</h1>'
+        f'<p>共 {n_total} 个考点，按父主题分组，组内按 weight 降序。</p>'
+    )
+    return header + "".join(sections)
+
+
+def gen_review_subject_index(subject: str, entries: list[dict[str, Any]]) -> str:
+    """生成 review/{subject}/index.html 完整页。"""
+    content = build_review_index_html(subject, entries)
+    return render_page(f"{subject}考点专题复习", content, depth=2)
+
+
 def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_THRESHOLD) -> str:
+    review_links = "".join(
+        f'<li><a href="review/{html.escape(s)}/index.html">{html.escape(s)}考点专题复习</a></li>'
+        for s in SUBJECTS
+    )
     content = (
         '<h1>吉林冲刺 · 学生重点 HTML</h1>'
         f'<p>数物化生 4 科 weight ≥ {threshold} 的核心词条，离线可读。'
@@ -451,6 +507,9 @@ def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_
         f'<li>🧬 <a href="生物.html">生物 ({stats_by_sub["生物"]})</a></li>'
         '<li>📊 <a href="总览.html">总览（跨 4 科 top 30）</a></li>'
         '</ul>'
+        '<hr>'
+        '<h2>考点专题复习</h2>'
+        f'<ul>{review_links}</ul>'
         '<hr>'
         '<p style="font-size:0.85em;color:#888;">使用提示：</p>'
         '<ul style="font-size:0.85em;color:#888;">'
@@ -600,12 +659,15 @@ def main() -> int:
             n_atom += 1
 
     # 3.5) 复习考点专题页（复习/{学科}/*.md → review/{学科}/{stem}.html）
+    #      + 每学科的 review/{学科}/index.html（按父主题分组）
     n_review = 0
+    n_review_index = 0
     for rd in review_source_dirs():
         if not rd.is_dir():
             continue
         subj_review_dir = OUT_DIR / "review" / rd.name
         subj_review_dir.mkdir(parents=True, exist_ok=True)
+        subj_entries: list[dict] = []
         for p in sorted(rd.glob("*.md")):
             text = p.read_text(encoding="utf-8")
             fm = read_frontmatter(p)
@@ -614,6 +676,20 @@ def main() -> int:
             (subj_review_dir / f"{p.stem}.html").write_text(
                 html_out, encoding="utf-8", newline="")
             n_review += 1
+            # 收集索引用元数据（默认 0 防 crash）
+            subj_entries.append({
+                "考点": fm_get(fm, "考点") or fm_get(fm, "title") or p.stem,
+                "title": fm_get(fm, "title", p.stem),
+                "父主题": fm_get(fm, "父主题"),
+                "weight": int(fm_get(fm, "weight", "0") or 0),
+                "真题数": int(fm_get(fm, "真题数", "0") or 0),
+                "stem": p.stem,
+            })
+        # 写 review/{学科}/index.html
+        idx_html = gen_review_subject_index(rd.name, subj_entries)
+        (subj_review_dir / "index.html").write_text(
+            idx_html, encoding="utf-8", newline="")
+        n_review_index += 1
 
     # 4) 真题题级页（仅子集中词条反链命中的题，按当前学科消歧 stem）
     #    referenced_by_subject: 学科 → set(stem)，因同 stem 跨学科是不同题
@@ -672,7 +748,7 @@ def main() -> int:
     (OUT_DIR / "index.html").write_text(
         gen_home(stats, total, args.threshold), encoding="utf-8", newline="")
 
-    print(f"\n[APPLY] 词条 {n_atom} / 真题 {n_exam} / 复习 {n_review} / 索引 5 / 首页 1 → {OUT_DIR}")
+    print(f"\n[APPLY] 词条 {n_atom} / 真题 {n_exam} / 复习 {n_review} / 复习索引 {n_review_index} / 索引 5 / 首页 1 → {OUT_DIR}")
     return 0
 
 
