@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+import html as _html
 import io
 import re
 import sys
@@ -27,6 +28,36 @@ def setup_utf8() -> None:
 
 # 仓库根（scripts/ → 00-元/ → 仓库根）
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+# ── 数学公式保护：markdown 转换会吃掉 $...$ 内的 \{ \} \\ 等反斜杠转义，
+#    破坏 KaTeX 渲染。转换前 mask、转换后 unmask，让 KaTeX 看到原始 LaTeX。──
+_MATH_TOKEN = "zZmAtHmAsKzZ"
+_MATH_BLOCK_RE = re.compile(r"\$\$.*?\$\$", re.DOTALL)
+_MATH_INLINE_RE = re.compile(r"\$[^\$\n]+?\$")
+
+
+def mask_math(text: str) -> tuple[str, list[str]]:
+    """把 $$...$$ / $...$ 数学区替换为占位符。返回 (屏蔽后文本, 原文列表)。
+    先块级后行内，避免 $$ 被行内规则误拆。占位符为纯字母数字，markdown 不动。"""
+    store: list[str] = []
+
+    def repl(m: re.Match) -> str:
+        store.append(m.group(0))
+        return f"{_MATH_TOKEN}{len(store) - 1}{_MATH_TOKEN}"
+
+    text = _MATH_BLOCK_RE.sub(repl, text)
+    text = _MATH_INLINE_RE.sub(repl, text)
+    return text, store
+
+
+def unmask_math(html_text: str, store: list[str]) -> str:
+    """还原 mask_math 的占位符为原始公式，HTML 转义 & < >（防破坏 HTML 解析；
+    KaTeX auto-render 读 textContent 时浏览器会解码回原样）。逆序还原避免前缀碰撞。"""
+    for i in range(len(store) - 1, -1, -1):
+        token = f"{_MATH_TOKEN}{i}{_MATH_TOKEN}"
+        html_text = html_text.replace(token, _html.escape(store[i], quote=False))
+    return html_text
 
 
 # 学期 → 排序键。数字越小越靠前。

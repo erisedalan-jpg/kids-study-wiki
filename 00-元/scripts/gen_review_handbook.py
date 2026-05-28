@@ -25,7 +25,9 @@ from typing import Any
 import markdown
 
 sys.path.insert(0, str(Path(__file__).parent))
-from _utils import REPO_ROOT, read_frontmatter, setup_utf8  # noqa: E402
+from _utils import (  # noqa: E402
+    REPO_ROOT, mask_math, read_frontmatter, setup_utf8, unmask_math,
+)
 from gen_exam_blueprint import (  # noqa: E402
     ERA_ORDER, TYPE_ORDER, PRINT_CSS, KATEX_HEAD,
     paths_for, read_rows, load_normalize, load_group,
@@ -147,8 +149,10 @@ def _render_body(body: str) -> str:
         return html.escape(disp)
 
     body = WIKILINK_RE.sub(strip_wiki, body)
+    # 公式 $...$ 先屏蔽再转换、转换后还原：防 markdown 吃掉 \{ \} \\ 等反斜杠
+    masked, math_store = mask_math(body)
     md = markdown.Markdown(extensions=["tables", "fenced_code"])
-    return md.convert(body)
+    return unmask_math(md.convert(masked), math_store)
 
 
 # ---------------------------------------------------------------------------

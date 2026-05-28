@@ -33,7 +33,7 @@ import markdown
 sys.path.insert(0, str(Path(__file__).parent))
 from _utils import (  # noqa: E402
     REPO_ROOT, iter_entries, iter_exam_dirs,
-    read_frontmatter, setup_utf8,
+    mask_math, read_frontmatter, setup_utf8, unmask_math,
 )
 
 OUT_DIR = REPO_ROOT / "docs" / "student"
@@ -226,18 +226,19 @@ def md_to_html(body: str, resolve: callable, depth: int,
         return f"![{alt}]({relative_repo_prefix}{s})"
     main_body = IMG_RE.sub(fix_img, main_body)
 
-    # 公式 $...$ 保留原文，包 span（可选 KaTeX 渲染钩子）
-    # 不破坏 markdown 表格 / 列表
+    # 公式 $...$ 先屏蔽再转换、转换后还原：防 markdown 吃掉 \{ \} \\ 等反斜杠
+    main_masked, math_store = mask_math(main_body)
     md = markdown.Markdown(extensions=["tables", "fenced_code", "attr_list"])
-    html_body = md.convert(main_body)
+    html_body = unmask_math(md.convert(main_masked), math_store)
 
     if backlink_section:
         bl_text = WIKILINK_RE.sub(
             lambda m: resolve(m, depth, current_subject), backlink_section)
         # 剥原始 `## 高考真题命中` 行（card 已有 h3 标题，避免双重）
         bl_text = re.sub(r"^##+\s*高考真题命中\s*$\n?", "", bl_text, flags=re.M)
+        bl_masked, bl_store = mask_math(bl_text)
         bl_md = markdown.Markdown(extensions=["tables", "fenced_code"])
-        bl_html = bl_md.convert(bl_text)
+        bl_html = unmask_math(bl_md.convert(bl_masked), bl_store)
         html_body += (
             '\n<div class="backlink-card">'
             '<h3>📌 高考真题命中</h3>'
