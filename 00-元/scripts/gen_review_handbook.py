@@ -8,13 +8,16 @@
 CLI:
   python 00-元/scripts/gen_review_handbook.py --subject 数学 --apply
   python 00-元/scripts/gen_review_handbook.py --subject 物理 --apply
+  python 00-元/scripts/gen_review_handbook.py --subject 物理 --apply --page-map /tmp/map.json
 """
 from __future__ import annotations
 
 import argparse
 import html
+import json
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -34,6 +37,14 @@ OUT_DIR = REPO_ROOT / "docs" / "student"
 FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 WIKILINK_RE = re.compile(r"\[\[([^\[\]#|]+?)(?:#[^|\]]+)?(?:\|([^\]]+))?\]\]")
 
+# Target visible column for dot-leader padding in the tree TOC
+_TREE_TOC_COL = 50
+
+
+def _vis_width(s: str) -> int:
+    """Compute visible width of string (CJK chars count as 2)."""
+    return sum(2 if unicodedata.east_asian_width(c) in ("W", "F") else 1 for c in s)
+
 
 # ---------------------------------------------------------------------------
 # Public helper — used in tests
@@ -51,8 +62,11 @@ def anchor_id(kaodian: str) -> str:
 def _tree_lines_linked(
     tree: list[tuple[str, int, list[tuple[str, int]]]],
     has_review: set[str],
+    page_map: dict[str, int] | None = None,
 ) -> list[str]:
-    """与 tree_to_lines 相同的树形格式，但子考点带 <a href> 跳转；无复习 md 的保持纯文本。"""
+    """与 tree_to_lines 相同的树形格式，但子考点带 <a href> 跳转；无复习 md 的保持纯文本。
+    若 page_map 给出且考点在其中，则在行末添加点状引导线 + 页码（目录式，填充右侧空白）。
+    """
     lines: list[str] = []
     n = len(tree)
     for i, (parent, pfreq, kids) in enumerate(tree):
@@ -75,7 +89,21 @@ def _tree_lines_linked(
                 )
             else:
                 child_html = html.escape(child)
-            lines.append(f"{indent}{c_branch} {child_html} ×{cfreq}")
+
+            # Build the page-ref suffix if available
+            if page_map and child in has_review and child in page_map:
+                page_num = page_map[child]
+                # Visible prefix (plain text, no HTML) for width measurement
+                visible_prefix = f"{indent}{c_branch} {child} ×{cfreq}"
+                vis_w = _vis_width(visible_prefix)
+                n_dots = max(1, _TREE_TOC_COL - vis_w)
+                pad_dots = "·" * n_dots
+                page_ref = f" p.{page_num}"
+                lines.append(
+                    f"{indent}{c_branch} {child_html} ×{cfreq}{pad_dots}{page_ref}"
+                )
+            else:
+                lines.append(f"{indent}{c_branch} {child_html} ×{cfreq}")
     return lines
 
 
@@ -179,13 +207,18 @@ HANDBOOK_EXTRA_CSS = """
 """
 
 
-def _render_tree_section(era: str, slots: dict, has_review: set[str]) -> str:
+def _render_tree_section(
+    era: str,
+    slots: dict,
+    has_review: set[str],
+    page_map: dict[str, int] | None = None,
+) -> str:
     """渲染一个时代的题位树（含超链接子考点）。"""
     rows_html = []
     for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
         d = slots[slot]
         tree = d.get("树", [])
-        linked_lines = _tree_lines_linked(tree, has_review)
+        linked_lines = _tree_lines_linked(tree, has_review, page_map)
         tree_html = '<div class="bp-tree">' + "".join(
             f"<div>{line}</div>" for line in linked_lines
         ) + "</div>"
@@ -212,11 +245,13 @@ def build_handbook_html(
     subject: str,
     tree_eras: dict,
     zhuanti_entries: list[dict[str, Any]],
+    page_map: dict[str, int] | None = None,
 ) -> str:
     """纯函数：组装手册 HTML（不含完整 <html> 外壳）。
 
     tree_eras: aggregate + attach_trees 的输出（同 gen_exam_blueprint 格式）
     zhuanti_entries: list of {考点, 父主题, weight, 真题数, body_html}
+    page_map: {考点: 页码} 用于目录式页码标注（可选；来自第一次渲染后 fitz 抽取）
     返回 <body> 内可插入的 HTML 片段。
     """
     has_review: set[str] = {e["考点"] for e in zhuanti_entries}
@@ -227,7 +262,7 @@ def build_handbook_html(
         slots = tree_eras.get(era, {})
         if not slots:
             continue
-        tree_parts.append(_render_tree_section(era, slots, has_review))
+        tree_parts.append(_render_tree_section(era, slots, has_review, page_map))
     tree_section = (
         '<div id="blueprint-section">'
         f'<h1>题位速查 · {html.escape(subject)}（吉林高考）</h1>'
@@ -259,9 +294,15 @@ def build_handbook_html(
             w = e.get("weight", 0)
             cnt = e.get("真题数", 0)
             body_html = e.get("body_html", "")
+            # Hidden locator token (white text on white background) so fitz can find the page.
+            # Must NOT use visibility:hidden/display:none — those prevent text from entering
+            # the PDF text layer. White color makes it invisible to human eyes but fitz can
+            # still extract it via text search.
+            safe = _safe_name(kp)
+            tok = f'<span style="color:#ffffff;font-size:1px">@@{safe}@@</span>'
             kp_sections.append(
                 f'<section class="kp-zhuanti" id="{html.escape(aid)}">'
-                f'<div class="kp-header">{html.escape(kp)}</div>'
+                f'<div class="kp-header">{tok}{html.escape(kp)}</div>'
                 f'<div class="kp-meta">weight {w} · 真题数 {cnt} · 父主题：{html.escape(parent)}</div>'
                 f"{body_html}"
                 "</section>"
@@ -321,10 +362,23 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="生成每科可打印复习手册 HTML")
     ap.add_argument("--subject", default="数学", help="学科（数学/物理/化学/生物），默认 数学")
     ap.add_argument("--apply", action="store_true", help="写盘；否则仅预览统计")
+    ap.add_argument("--page-map", default=None,
+                    help="JSON 文件路径 {考点: 页码}，用于目录式页码标注（第二次渲染时传入）")
     args = ap.parse_args()
 
     subject = args.subject
     exam_dir, norm_yaml, group_yaml, _ = paths_for(subject)
+
+    # 0) 可选页码映射
+    page_map: dict[str, int] | None = None
+    if args.page_map:
+        map_path = Path(args.page_map)
+        if map_path.exists():
+            with map_path.open(encoding="utf-8") as f:
+                page_map = json.load(f)
+            print(f"页码映射：{len(page_map)} 个考点（{map_path}）", flush=True)
+        else:
+            print(f"[WARN] --page-map 文件不存在：{map_path}", flush=True)
 
     # 1) 题位树
     rows = read_rows(exam_dir)
@@ -353,7 +407,7 @@ def main() -> int:
         return 0
 
     # 3) 组装 HTML
-    body_html = build_handbook_html(subject, agg, zhuanti_raw)
+    body_html = build_handbook_html(subject, agg, zhuanti_raw, page_map=page_map)
     full_html = build_full_html(subject, body_html)
 
     out_path = OUT_DIR / f"{subject}复习手册.html"

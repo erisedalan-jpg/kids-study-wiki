@@ -274,5 +274,105 @@ class TestIntegration(unittest.TestCase):
                         f"Broken hrefs: {hrefs - ids}")
 
 
+class TestPageMapAndLocatorToken(unittest.TestCase):
+    """Tests for page_map TOC refs and hidden locator tokens in kp-header."""
+
+    def setUp(self):
+        import gen_review_handbook as g
+        self.g = g
+
+    def _make_tree_eras(self, kaodian: str) -> dict:
+        return {
+            "最新(24+)": {
+                ("选择", 1): {
+                    "n": 3,
+                    "难度倾向": "易",
+                    "考点": [(kaodian, 3)],
+                    "树": [("物理父主题", 3, [(kaodian, 3)])],
+                }
+            }
+        }
+
+    def _make_entries(self, kaodian: str) -> list[dict]:
+        return [{
+            "考点": kaodian,
+            "父主题": "物理父主题",
+            "weight": 10,
+            "真题数": 3,
+            "body_html": "<p>考点内容</p>",
+        }]
+
+    def test_page_map_produces_page_ref_and_dot_leader(self):
+        """build_handbook_html(..., page_map={考点:7}) output contains 'p.7' and '·'."""
+        kaodian = "牛顿第二定律"
+        page_map = {kaodian: 7}
+        out = self.g.build_handbook_html(
+            "物理",
+            self._make_tree_eras(kaodian),
+            self._make_entries(kaodian),
+            page_map=page_map,
+        )
+        self.assertIn("p.7", out, "page ref 'p.7' not found in output")
+        self.assertIn("·", out, "dot leader '·' not found in output")
+
+    def test_kp_header_contains_locator_token(self):
+        """kp-header must contain the @@safe@@ hidden token for fitz search."""
+        from gen_kaodian_review import _safe_name
+        kaodian = "牛顿第二定律"
+        safe = _safe_name(kaodian)
+        out = self.g.build_handbook_html(
+            "物理",
+            self._make_tree_eras(kaodian),
+            self._make_entries(kaodian),
+        )
+        self.assertIn(f"@@{safe}@@", out,
+                      f"Hidden locator token @@{safe}@@ not found in kp-header")
+
+    def test_locator_token_present_without_page_map(self):
+        """Locator token must appear in BOTH passes (with and without page_map)."""
+        from gen_kaodian_review import _safe_name
+        kaodian = "动能定理"
+        safe = _safe_name(kaodian)
+        out_no_map = self.g.build_handbook_html(
+            "物理",
+            self._make_tree_eras(kaodian),
+            self._make_entries(kaodian),
+            page_map=None,
+        )
+        out_with_map = self.g.build_handbook_html(
+            "物理",
+            self._make_tree_eras(kaodian),
+            self._make_entries(kaodian),
+            page_map={kaodian: 42},
+        )
+        self.assertIn(f"@@{safe}@@", out_no_map, "Token missing in pass1 (no page_map)")
+        self.assertIn(f"@@{safe}@@", out_with_map, "Token missing in pass2 (with page_map)")
+
+    def test_no_page_ref_when_map_is_none(self):
+        """When page_map=None, no 'p.' page reference should appear in tree lines."""
+        kaodian = "万有引力"
+        out = self.g.build_handbook_html(
+            "物理",
+            self._make_tree_eras(kaodian),
+            self._make_entries(kaodian),
+            page_map=None,
+        )
+        # The tree should NOT have page refs
+        import re
+        tree_section = out.split('<div id="zhuanti-section">')[0]
+        self.assertNotIn(" p.", tree_section,
+                         "Unexpected page ref in tree when page_map=None")
+
+    def test_vis_width_cjk(self):
+        """CJK chars count as 2 in _vis_width."""
+        import gen_review_handbook as g
+        # "牛顿" is 2 CJK chars = width 4
+        self.assertEqual(g._vis_width("牛顿"), 4)
+        # ASCII chars count as 1
+        self.assertEqual(g._vis_width("abc"), 3)
+        # Mixed
+        self.assertEqual(g._vis_width("a牛b"), 1 + 2 + 1)
+
+
 if __name__ == "__main__":
     unittest.main()
