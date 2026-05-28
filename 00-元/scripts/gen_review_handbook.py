@@ -1,0 +1,367 @@
+"""每科可打印复习手册 HTML 生成器。
+
+将「题位速查脑图」（顶部）与「考点专题复习」内容（主体）合并为一份
+自包含 A4 可打印单页 HTML。
+
+输出路径：docs/student/<科>复习手册.html
+
+CLI:
+  python 00-元/scripts/gen_review_handbook.py --subject 数学 --apply
+  python 00-元/scripts/gen_review_handbook.py --subject 物理 --apply
+"""
+from __future__ import annotations
+
+import argparse
+import html
+import re
+import sys
+from collections import defaultdict
+from pathlib import Path
+from typing import Any
+
+import markdown
+
+sys.path.insert(0, str(Path(__file__).parent))
+from _utils import REPO_ROOT, read_frontmatter, setup_utf8  # noqa: E402
+from gen_exam_blueprint import (  # noqa: E402
+    ERA_ORDER, TYPE_ORDER, PRINT_CSS, KATEX_HEAD,
+    paths_for, read_rows, load_normalize, load_group,
+    aggregate, attach_trees, tree_to_lines,
+)
+from gen_kaodian_review import _safe_name  # noqa: E402
+
+OUT_DIR = REPO_ROOT / "docs" / "student"
+FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+WIKILINK_RE = re.compile(r"\[\[([^\[\]#|]+?)(?:#[^|\]]+)?(?:\|([^\]]+))?\]\]")
+
+
+# ---------------------------------------------------------------------------
+# Public helper — used in tests
+# ---------------------------------------------------------------------------
+
+def anchor_id(kaodian: str) -> str:
+    """考点 → HTML id 属性值，用于脑图 href 与正文 section id 的一致锚点。"""
+    return f"kp-{_safe_name(kaodian)}"
+
+
+# ---------------------------------------------------------------------------
+# Tree rendering with hyperlinks
+# ---------------------------------------------------------------------------
+
+def _tree_lines_linked(
+    tree: list[tuple[str, int, list[tuple[str, int]]]],
+    has_review: set[str],
+) -> list[str]:
+    """与 tree_to_lines 相同的树形格式，但子考点带 <a href> 跳转；无复习 md 的保持纯文本。"""
+    lines: list[str] = []
+    n = len(tree)
+    for i, (parent, pfreq, kids) in enumerate(tree):
+        p_last = (i == n - 1)
+        p_branch = "└─" if p_last else "├─"
+        star = " ★" if i == 0 and parent != "其他" else ""
+        # 父主题行：纯文本（无跳转目标）
+        lines.append(
+            f"{p_branch} {html.escape(parent)} ({pfreq}){star}"
+        )
+        cn = len(kids)
+        indent = "   " if p_last else "│  "
+        for j, (child, cfreq) in enumerate(kids):
+            c_branch = "└─" if j == cn - 1 else "├─"
+            if child in has_review:
+                aid = anchor_id(child)
+                child_html = (
+                    f'<a href="#{html.escape(aid)}" class="kp-link">'
+                    f"{html.escape(child)}</a>"
+                )
+            else:
+                child_html = html.escape(child)
+            lines.append(f"{indent}{c_branch} {child_html} ×{cfreq}")
+    return lines
+
+
+# ---------------------------------------------------------------------------
+# Review .md loading
+# ---------------------------------------------------------------------------
+
+def _fm_get(fm: dict[str, str], key: str, default: str = "") -> str:
+    return (fm.get(key) or default).strip()
+
+
+def load_zhuanti(subject: str) -> list[dict[str, Any]]:
+    """读取 复习/<subject>/*.md，返回每个考点的元数据 + 正文（frontmatter 已剥离）。"""
+    rd = REPO_ROOT / "复习" / subject
+    if not rd.is_dir():
+        return []
+    entries = []
+    for p in sorted(rd.glob("*.md")):
+        try:
+            text = p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        fm = read_frontmatter(p)
+        body = FM_RE.sub("", text, count=1).strip()
+        entries.append({
+            "考点": _fm_get(fm, "考点") or _fm_get(fm, "title") or p.stem,
+            "父主题": _fm_get(fm, "父主题") or "（未分类）",
+            "weight": int(_fm_get(fm, "weight", "0") or 0),
+            "真题数": int(_fm_get(fm, "真题数", "0") or 0),
+            "body": body,
+            "stem": p.stem,
+        })
+    return entries
+
+
+def _render_body(body: str) -> str:
+    """Markdown 正文 → HTML（含公式占位；wikilink 渲染为纯文本）。"""
+    # 去 wikilinks：保留显示文字
+    def strip_wiki(m: re.Match) -> str:
+        disp = m.group(2) or m.group(1)
+        return html.escape(disp)
+
+    body = WIKILINK_RE.sub(strip_wiki, body)
+    md = markdown.Markdown(extensions=["tables", "fenced_code"])
+    return md.convert(body)
+
+
+# ---------------------------------------------------------------------------
+# HTML assembly
+# ---------------------------------------------------------------------------
+
+HANDBOOK_EXTRA_CSS = """
+<style>
+  /* 手册专用样式（补充 PRINT_CSS 基础样式） */
+  .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; }
+  .hb-title { font-size: 1.8em; font-weight: bold; margin: 12px 0 4px; }
+  .hb-subtitle { color: #666; font-size: 0.95em; margin-bottom: 16px; }
+
+  /* 题位速查节 */
+  .tree-section { margin-bottom: 24px; }
+  .tree-section > h2 { border-bottom: 2px solid #333; padding-bottom: 4px; font-size: 1.2em; }
+  .slot-block { border: 1px solid #ccc; border-radius: 6px; padding: 8px 10px;
+                margin: 6px 0; break-inside: avoid; page-break-inside: avoid; }
+  .slot-title { font-weight: bold; font-size: 1em; margin-bottom: 4px; }
+  .slot-meta  { color: #666; font-weight: normal; font-size: 0.85em; }
+  .bp-tree { font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace;
+             white-space: pre; font-size: 0.88em; line-height: 1.5; margin: 4px 0 0; }
+  .kp-link { color: #0055cc; text-decoration: none; }
+  .kp-link:hover { text-decoration: underline; }
+
+  /* 考点专题节 */
+  .parent-group { margin-top: 28px; }
+  .parent-group > h2 { font-size: 1.25em; border-left: 4px solid #555;
+                       padding-left: 8px; margin-bottom: 8px; }
+  .kp-zhuanti { margin-top: 16px; padding: 12px 14px 8px;
+                border: 1px solid #ddd; border-radius: 6px;
+                break-inside: avoid; page-break-inside: avoid; }
+  .kp-header  { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; color: #1a1a1a; }
+  .kp-meta    { font-size: 0.85em; color: #888; margin-bottom: 8px; }
+  .kp-zhuanti h2 { font-size: 1em; border-bottom: 1px solid #eee;
+                   padding-bottom: 2px; margin: 10px 0 4px; }
+  .kp-zhuanti h3 { font-size: 0.95em; margin: 8px 0 2px; }
+  .kp-zhuanti p  { margin: 4px 0 6px; font-size: 0.93em; line-height: 1.55; }
+  .kp-zhuanti ul, .kp-zhuanti ol { margin: 4px 0 6px 18px; font-size: 0.93em; }
+  .kp-zhuanti table { border-collapse: collapse; font-size: 0.88em; margin: 6px 0; }
+  .kp-zhuanti th, .kp-zhuanti td { border: 1px solid #ccc; padding: 3px 7px; }
+  .kp-zhuanti pre { background: #f6f6f6; padding: 8px; font-size: 0.85em;
+                    overflow-x: auto; border-radius: 4px; }
+
+  @media print {
+    .hb-wrap { max-width: none; padding: 0; }
+    .tree-section { page-break-before: always; }
+    .tree-section:first-of-type { page-break-before: avoid; }
+    .kp-zhuanti { page-break-before: always; }
+    a { color: #000; text-decoration: none; }
+    .kp-link { color: #000; }
+    .slot-block { break-inside: avoid; page-break-inside: avoid; }
+  }
+</style>
+"""
+
+
+def _render_tree_section(era: str, slots: dict, has_review: set[str]) -> str:
+    """渲染一个时代的题位树（含超链接子考点）。"""
+    rows_html = []
+    for slot in sorted(slots, key=lambda s: (TYPE_ORDER.get(s[0], 9), s[1])):
+        d = slots[slot]
+        tree = d.get("树", [])
+        linked_lines = _tree_lines_linked(tree, has_review)
+        tree_html = '<div class="bp-tree">' + "".join(
+            f"<div>{line}</div>" for line in linked_lines
+        ) + "</div>"
+        thin = (
+            '<span style="color:#a00;font-size:0.85em;">（样本仅 %d，规律参考）</span>'
+            % d["n"]
+        ) if d["n"] <= 2 else ""
+        rows_html.append(
+            f'<div class="slot-block">'
+            f'<div class="slot-title">{html.escape(slot[0])}{slot[1]}'
+            f'<span class="slot-meta"> · n={d["n"]} · 难度{html.escape(d["难度倾向"])}'
+            f"</span>{thin}</div>"
+            f"{tree_html}</div>"
+        )
+    return (
+        f'<div class="tree-section">'
+        f"<h2>{html.escape(era)}</h2>"
+        + "".join(rows_html)
+        + "</div>"
+    )
+
+
+def build_handbook_html(
+    subject: str,
+    tree_eras: dict,
+    zhuanti_entries: list[dict[str, Any]],
+) -> str:
+    """纯函数：组装手册 HTML（不含完整 <html> 外壳）。
+
+    tree_eras: aggregate + attach_trees 的输出（同 gen_exam_blueprint 格式）
+    zhuanti_entries: list of {考点, 父主题, weight, 真题数, body_html}
+    返回 <body> 内可插入的 HTML 片段。
+    """
+    has_review: set[str] = {e["考点"] for e in zhuanti_entries}
+
+    # ── 题位速查脑图 ────────────────────────────────────────────────────
+    tree_parts = []
+    for era in ERA_ORDER:
+        slots = tree_eras.get(era, {})
+        if not slots:
+            continue
+        tree_parts.append(_render_tree_section(era, slots, has_review))
+    tree_section = (
+        '<div id="blueprint-section">'
+        f'<h1>题位速查 · {html.escape(subject)}（吉林高考）</h1>'
+        + "".join(tree_parts)
+        + "</div>"
+    )
+
+    # ── 考点专题 ─────────────────────────────────────────────────────────
+    # 按父主题分组，父组按组内 weight 总和 desc，组内按 weight desc / 真题数 desc
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for e in zhuanti_entries:
+        groups[e["父主题"]].append(e)
+
+    def group_weight(parent: str) -> int:
+        return sum(e.get("weight", 0) for e in groups[parent])
+
+    sorted_parents = sorted(groups.keys(), key=group_weight, reverse=True)
+
+    zhuanti_parts = []
+    for parent in sorted_parents:
+        items = sorted(
+            groups[parent],
+            key=lambda e: (-e.get("weight", 0), -e.get("真题数", 0)),
+        )
+        kp_sections = []
+        for e in items:
+            kp = e["考点"]
+            aid = anchor_id(kp)
+            w = e.get("weight", 0)
+            cnt = e.get("真题数", 0)
+            body_html = e.get("body_html", "")
+            kp_sections.append(
+                f'<section class="kp-zhuanti" id="{html.escape(aid)}">'
+                f'<div class="kp-header">{html.escape(kp)}</div>'
+                f'<div class="kp-meta">weight {w} · 真题数 {cnt} · 父主题：{html.escape(parent)}</div>'
+                f"{body_html}"
+                "</section>"
+            )
+        zhuanti_parts.append(
+            f'<div class="parent-group">'
+            f"<h2>{html.escape(parent)}</h2>"
+            + "".join(kp_sections)
+            + "</div>"
+        )
+
+    zhuanti_section = (
+        '<div id="zhuanti-section">'
+        f'<h1>{html.escape(subject)}考点专题复习</h1>'
+        + "".join(zhuanti_parts)
+        + "</div>"
+    )
+
+    return tree_section + "\n" + zhuanti_section
+
+
+# ---------------------------------------------------------------------------
+# Full HTML page
+# ---------------------------------------------------------------------------
+
+def _katex_head() -> str:
+    """返回 KaTeX head 片段（同 gen_exam_blueprint.KATEX_HEAD，路径 ./vendor/...）。"""
+    return KATEX_HEAD
+
+
+def build_full_html(subject: str, body_html: str) -> str:
+    """包裹完整 <html> 外壳（A4 打印 CSS + KaTeX）。"""
+    return (
+        f"<!DOCTYPE html>\n"
+        f'<html lang="zh-CN"><head><meta charset="utf-8">\n'
+        f'<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+        f"<title>{html.escape(subject)}复习手册</title>\n"
+        f'<link rel="stylesheet" href="./vendor/style.css">\n'
+        f"{PRINT_CSS}"
+        f"{HANDBOOK_EXTRA_CSS}"
+        f"{_katex_head()}"
+        f"</head>\n"
+        f"<body><div class=\"hb-wrap\">\n"
+        f'<div class="hb-title">{html.escape(subject)}复习手册 · 吉林高考冲刺</div>\n'
+        f'<div class="hb-subtitle">题位速查脑图（顶部）+ 考点专题（正文）| Ctrl+P → A4 PDF</div>\n'
+        f"{body_html}\n"
+        f"</div></body></html>"
+    )
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def main() -> int:
+    setup_utf8()
+    ap = argparse.ArgumentParser(description="生成每科可打印复习手册 HTML")
+    ap.add_argument("--subject", default="数学", help="学科（数学/物理/化学/生物），默认 数学")
+    ap.add_argument("--apply", action="store_true", help="写盘；否则仅预览统计")
+    args = ap.parse_args()
+
+    subject = args.subject
+    exam_dir, norm_yaml, group_yaml, _ = paths_for(subject)
+
+    # 1) 题位树
+    rows = read_rows(exam_dir)
+    print(f"真题：{len(rows)} 题（{exam_dir.name}）", flush=True)
+    normalize = load_normalize(norm_yaml)
+    agg = aggregate(rows, normalize)
+    group = load_group(group_yaml)
+    attach_trees(agg, group)
+
+    # 2) 复习专题
+    zhuanti_raw = load_zhuanti(subject)
+    print(f"复习专题：{len(zhuanti_raw)} 个考点（复习/{subject}/）", flush=True)
+
+    # 渲染正文 HTML
+    for e in zhuanti_raw:
+        e["body_html"] = _render_body(e["body"])
+
+    if not args.apply:
+        # dry-run：展示父主题分布
+        from collections import Counter
+        parent_ctr: Counter = Counter(e["父主题"] for e in zhuanti_raw)
+        print("\n父主题分布（top 10）：")
+        for p, cnt in parent_ctr.most_common(10):
+            print(f"  {p}: {cnt}")
+        print(f"\n(dry-run) 加 --apply 写 {subject}复习手册.html")
+        return 0
+
+    # 3) 组装 HTML
+    body_html = build_handbook_html(subject, agg, zhuanti_raw)
+    full_html = build_full_html(subject, body_html)
+
+    out_path = OUT_DIR / f"{subject}复习手册.html"
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(full_html, encoding="utf-8", newline="")
+    size_kb = out_path.stat().st_size // 1024
+    print(f"\n[APPLY] → {out_path}  ({size_kb} KB, {len(zhuanti_raw)} 考点)", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

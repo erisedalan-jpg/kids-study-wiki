@@ -493,6 +493,10 @@ def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_
         f'<li><a href="review/{html.escape(s)}/index.html">{html.escape(s)}考点专题复习</a></li>'
         for s in SUBJECTS
     )
+    handbook_links = "".join(
+        f'<li><a href="{html.escape(s)}复习手册.html">{html.escape(s)}复习手册（可打印）</a></li>'
+        for s in SUBJECTS
+    )
     content = (
         '<h1>吉林冲刺 · 学生重点 HTML</h1>'
         f'<p>数物化生 4 科 weight ≥ {threshold} 的核心词条，离线可读。'
@@ -510,6 +514,10 @@ def gen_home(stats_by_sub: dict[str, int], total: int, threshold: int = DEFAULT_
         '<hr>'
         '<h2>考点专题复习</h2>'
         f'<ul>{review_links}</ul>'
+        '<hr>'
+        '<h2>可打印复习手册</h2>'
+        '<p style="font-size:0.9em;color:#555;">题位速查脑图 + 全部考点专题合订，Ctrl+P → A4 PDF。</p>'
+        f'<ul>{handbook_links}</ul>'
         '<hr>'
         '<p style="font-size:0.85em;color:#888;">使用提示：</p>'
         '<ul style="font-size:0.85em;color:#888;">'
