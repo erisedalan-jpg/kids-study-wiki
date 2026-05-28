@@ -41,7 +41,7 @@ def _ensure_out_dir() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def render_html_to_pdf(html_path: Path, pdf_path: Path, *, timeout: int = 300) -> bool:
+def render_html_to_pdf(html_path: Path, pdf_path: Path, *, timeout: int = 1200) -> bool:
     """Call Edge headless to render html_path → pdf_path.
     Returns True on success (file produced), False otherwise.
     """
@@ -51,7 +51,7 @@ def render_html_to_pdf(html_path: Path, pdf_path: Path, *, timeout: int = 300) -
         "--headless=new",
         "--disable-gpu",
         "--no-pdf-header-footer",
-        "--virtual-time-budget=180000",
+        "--virtual-time-budget=300000",
         f"--print-to-pdf={pdf_path.resolve()}",
         html_uri,
     ]
@@ -95,22 +95,30 @@ def fitz_build_page_map(pdf_path: Path, kp_safe_pairs: list[tuple[str, str]]) ->
     """Search pdf_path for @@safe@@ tokens (primary) or visible 考点 text (fallback).
     Returns {考点: 1-based page}.
 
+    Uses a SINGLE-PASS text extraction for efficiency: all page texts are extracted
+    once and cached, then searched for each token. This avoids O(n_tokens × n_pages)
+    separate fitz calls.
+
     Primary: white-text @@safe@@ tokens embedded by gen_review_handbook.
-    Fallback: if 0 tokens found on a sampling probe (Edge may not output invisible
-    white text to the text layer on some versions), fall back to searching for the
-    visible 考点 text itself.  Each 考点 is unique so first match = section page.
+    Fallback: if 0 tokens found (Edge may suppress white text on some versions),
+    fall back to searching visible 考点 text, starting from the zhuanti section page
+    (to avoid false matches in the tree section).
     """
     import fitz  # type: ignore
     doc = fitz.open(str(pdf_path))
-    page_map: dict[str, int] = {}
     total_pages = doc.page_count
-    print(f"  fitz: {total_pages} pages, searching {len(kp_safe_pairs)} tokens …", flush=True)
+    print(f"  fitz: {total_pages} pages — extracting text (single pass) …", flush=True)
+
+    # Single-pass text extraction
+    page_texts: list[str] = [doc[i].get_text() for i in range(total_pages)]
+    doc.close()
 
     # ── Primary: token search ─────────────────────────────────────────────
+    page_map: dict[str, int] = {}
     for kp, safe in kp_safe_pairs:
         token = f"@@{safe}@@"
-        for i in range(total_pages):
-            if doc[i].search_for(token):
+        for i, text in enumerate(page_texts):
+            if token in text:
                 page_map[kp] = i + 1
                 break
 
@@ -126,27 +134,28 @@ def fitz_build_page_map(pdf_path: Path, kp_safe_pairs: list[tuple[str, str]]) ->
         print(f"  [FALLBACK] Using visible 考点 text search (skipping tree pages) …", flush=True)
         # Find first page of zhuanti section
         zhuanti_start = 0
-        for i in range(total_pages):
-            if doc[i].search_for("考点专题复习"):
+        for i, text in enumerate(page_texts):
+            if "考点专题复习" in text:
                 zhuanti_start = i
                 print(f"  zhuanti section starts at page {i+1}", flush=True)
                 break
         page_map = {}
         for kp, _safe in kp_safe_pairs:
             # Search from zhuanti_start to find section page (not tree page)
+            found = False
             for i in range(zhuanti_start, total_pages):
-                if doc[i].search_for(kp):
+                if kp in page_texts[i]:
                     page_map[kp] = i + 1
+                    found = True
                     break
             # If not found in zhuanti section, fall back to full search
-            if kp not in page_map:
-                for i in range(total_pages):
-                    if doc[i].search_for(kp):
+            if not found:
+                for i, text in enumerate(page_texts):
+                    if kp in text:
                         page_map[kp] = i + 1
                         break
         print(f"  fallback (visible text): {len(page_map)}/{len(kp_safe_pairs)} hits", flush=True)
 
-    doc.close()
     print(f"  page_map: {len(page_map)}/{len(kp_safe_pairs)} 考点定位成功", flush=True)
     return page_map
 
@@ -174,59 +183,68 @@ def fitz_verify(final_pdf: Path, page_map: dict[str, int],
                 kp_safe_pairs: list[tuple[str, str]]) -> bool:
     """Spot-check 3 考点: confirm section page in pass2 == page_map[考点].
     Tries @@token@@ search first; falls back to visible 考点 text search.
-    Also confirms footer '— 1 —' on first page.
+    Also confirms footer page number on first page.
     Returns True if all checks pass (no drift).
     """
     import fitz  # type: ignore
+    import re as _re
     doc = fitz.open(str(final_pdf))
     total = doc.page_count
+
+    # Single-pass text extraction for efficiency
+    page_texts: list[str] = [doc[i].get_text() for i in range(min(total, 20))]
+    doc.close()
 
     # Footer check: look for footer stamp on the first page.
     # fitz may render the em dash '—' as '·' or other glyphs depending on font metrics;
     # search for digit-containing footer text patterns instead of exact unicode.
     footer_ok = False
     if total > 0:
-        text = doc[0].get_text()
-        # Accept: '— 1 —' or '· 1 ·' or any variant containing ' 1 '
+        text = page_texts[0]
+        # Accept: '— 1 —' or '· 1 ·' or any variant
         if "— 1 —" in text or "· 1 ·" in text or "- 1 -" in text:
             footer_ok = True
         else:
-            # Broader check: last 100 chars contain ' 1 ' (the page number with spaces)
-            tail = text[-100:] if len(text) > 100 else text
-            import re as _re
+            # Broader check: last 200 chars contain a standalone '1' (page number)
+            tail = text[-200:] if len(text) > 200 else text
             if _re.search(r'[\W]1[\W]', tail):
                 footer_ok = True
     if not footer_ok:
         print("  [VERIFY FAIL] Footer page number not found on page 1", flush=True)
-        doc.close()
         return False
     print("  footer ✓ (page number on p.1)", flush=True)
+
+    # For the full check we need all page texts from the final PDF
+    doc2 = fitz.open(str(final_pdf))
+    all_texts: list[str] = [doc2[i].get_text() for i in range(total)]
+    doc2.close()
+
+    # Find zhuanti section start
+    zhuanti_start = 0
+    for i, text in enumerate(all_texts):
+        if "考点专题复习" in text:
+            zhuanti_start = i
+            break
 
     # TOC page-ref check: sample up to 3 考点 that are in page_map
     drift_found = False
     sample_pairs = [(kp, safe) for kp, safe in kp_safe_pairs if kp in page_map][:3]
     for kp, safe in sample_pairs:
         expected_page = page_map[kp]
-        # Try @@token@@ first, fall back to visible text
-        actual_page = None
+        # Try @@token@@ first, fall back to visible text from zhuanti section
         token = f"@@{safe}@@"
-        for i in range(total):
-            if doc[i].search_for(token):
+        actual_page = None
+        for i, text in enumerate(all_texts):
+            if token in text:
                 actual_page = i + 1
                 break
         if actual_page is None:
-            # Fallback: visible text, searching from zhuanti section start
-            zhuanti_start_v = 0
-            for ii in range(total):
-                if doc[ii].search_for("考点专题复习"):
-                    zhuanti_start_v = ii
-                    break
-            for i in range(zhuanti_start_v, total):
-                if doc[i].search_for(kp):
+            for i in range(zhuanti_start, total):
+                if kp in all_texts[i]:
                     actual_page = i + 1
                     break
         if actual_page is None:
-            print(f"  [VERIFY WARN] {kp!r} not found in final PDF (neither token nor text)", flush=True)
+            print(f"  [VERIFY WARN] {kp!r} not found in final PDF", flush=True)
         elif actual_page != expected_page:
             print(f"  [DRIFT] {kp!r}: page_map={expected_page}, actual={actual_page}", flush=True)
             drift_found = True
@@ -234,17 +252,12 @@ def fitz_verify(final_pdf: Path, page_map: dict[str, int],
             print(f"  refs ✓ {kp!r}: page_map={expected_page} == actual={actual_page}", flush=True)
 
     # TOC text check: look for 'p.' in first 20 pages
-    toc_ref_found = False
-    for i in range(min(20, total)):
-        if " p." in doc[i].get_text():
-            toc_ref_found = True
-            break
+    toc_ref_found = any(" p." in t for t in all_texts[:20])
     if toc_ref_found:
         print("  tree page-refs ✓ ('p.' found in first 20 pages)", flush=True)
     else:
         print("  [VERIFY WARN] No 'p.' page refs found in first 20 pages", flush=True)
 
-    doc.close()
     return not drift_found
 
 
