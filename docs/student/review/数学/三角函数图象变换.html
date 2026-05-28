@@ -32,111 +32,53 @@
 <li>难度分布：中1 易1</li>
 </ul>
 <h2>知识精要</h2>
-<ol>
-<li>
-<p><strong>$y=A\sin(\omega x+\varphi)+b$ 的图象变换基础</strong></p>
 <ul>
-<li><strong>振幅变换</strong>：$y=\sin x \xrightarrow{\text{纵坐标变为A倍}} y=A\sin x$ （$A&gt;1$ 伸长，$0&lt;A&lt;1$ 缩短）</li>
-<li><strong>周期变换</strong>：$y=\sin x \xrightarrow[\text{变为原来的}\frac{1}{\omega}\text{倍}]{\text{横坐标}} y=\sin \omega x$ （$\omega&gt;1$ 缩短，$0&lt;\omega&lt;1$ 伸长）</li>
-<li><strong>相位变换</strong>：$y=\sin x \xrightarrow[\text{（左加右减）}]{\text{左右平移}|\varphi|\text{个单位}} y=\sin(x+\varphi)$</li>
-<li><strong>上下平移</strong>：$y=\sin x \xrightarrow[\text{（上加下减）}]{\text{上下平移}|b|\text{个单位}} y=\sin x + b$</li>
+<li>图象变换基本式：$y=A\sin(\omega x+\varphi)+k$（$A&gt;0,\omega&gt;0$）。</li>
+<li>平移变换（左右）：$y=f(x)$ 左加右减，即 $y=f(x+a)$ 向左平移 $a$ 个单位（$a&gt;0$ 左移，$a&lt;0$ 右移）。注意：平移只针对 $x$ 本身。</li>
+<li>伸缩变换（横向）：$y=f(x)$ 保持纵坐标不变，横坐标变为原来的 $\dfrac{1}{\omega}$ 倍，得到 $y=f(\omega x)$。当 $\omega&gt;1$ 时横坐标缩短，$0&lt;\omega&lt;1$ 时横坐标伸长。</li>
+<li>变换顺序与含义：从 $y=\sin x$ 到 $y=\sin(\omega x+\varphi)$ 的两种路径：
+  ① 先平移后伸缩：$y=\sin x \to y=\sin(x+\varphi) \to y=\sin(\omega x+\varphi)$。
+  ② 先伸缩后平移：$y=\sin x \to y=\sin(\omega x) \to y=\sin[\omega(x+\frac{\varphi}{\omega})]=\sin(\omega x+\varphi)$，此时平移量为 $|\frac{\varphi}{\omega}|$。</li>
+<li>正切型函数图象变换同样适用：平移伸缩均针对 $x$ 进行操作，且正切周期为 $\pi$，利用周期性求参数时需加整数倍周期。</li>
 </ul>
-</li>
-<li>
-<p><strong>变换顺序与代换法则</strong>
-    两种主要顺序：</p>
-<ul>
-<li><strong>先伸缩后平移</strong>：$y=\sin x \to y=\sin \omega x \to y=\sin[\omega(x+\frac{\varphi}{\omega})]=\sin(\omega x+\varphi)$
-  注意：先伸缩后平移时，左右平移量应为 $\frac{|\varphi|}{\omega}$。</li>
-<li><strong>先平移后伸缩</strong>：$y=\sin x \to y=\sin(x+\varphi) \to y=\sin(\omega x+\varphi)$
-  此时平移量就是 $|\varphi|$，更直观，但应注意周期变换只改变 $x$ 的系数。</li>
-<li><strong>通用法则</strong>：变换总是指向 $x$ 本身。从 $f(x)$ 得到 $f(ax+b)$ 可视为 $x \to ax+b$，即先伸缩再平移，或先平移再伸缩，等价变形即可。</li>
-</ul>
-</li>
-<li>
-<p><strong>逆向还原函数的方法</strong>
-    已知变换后的解析式及变换过程，求原函数 $f(x)$，可采用：</p>
-<ul>
-<li><strong>正向推导法</strong>：设原函数为 $f(x)$，按给定变换顺序写出最终表达式，令其等于已知解析式，利用换元求 $f(x)$。</li>
-<li><strong>逆向推导法</strong>：从最终解析式出发，反向实施每一步变换（平移反向，伸缩倒数），直接得到 $f(x)$。</li>
-</ul>
-</li>
-<li>
-<p><strong>正切型函数的周期与平移</strong></p>
-<ul>
-<li>$y=\tan(\omega x+\varphi)$ 的最小正周期为 $\frac{\pi}{|\omega|}$。</li>
-<li>平移后图象重合，意味着平移量等于周期的整数倍，即 $\frac{\pi}{\omega} \cdot k$。求出等量关系，解出参数。</li>
-</ul>
-</li>
-</ol>
 <h2>解题方法与套路</h2>
 <ol>
-<li>
-<p><strong>正难则反——逆向变换法</strong>
-    当已知一系列变换及最终函数，反求初始函数解析式时，可采用逆向变换：</p>
-<ul>
-<li>将最终函数记为 $g(x)$。</li>
-<li>从最后一步变换开始，反向操作：向右平移 $\frac{\pi}{3}$ 的反向是向左平移 $\frac{\pi}{3}$；横坐标缩短为原来 $\frac{1}{2}$ 的反向是伸长为原来的 $2$ 倍。</li>
-<li>每个反向操作都直接对解析式进行 $x$ 的代换，逐步得到原函数。</li>
-<li>此法避免了设未知函数和复杂的代换，尤其适合选择题的快速求解。</li>
-</ul>
-</li>
-<li>
-<p><strong>正向代换——顺藤摸瓜法</strong>
-    若习惯正向思维，可设初始函数为 $f(x)$：</p>
-<ul>
-<li>按照题目描述的变换顺序，写出每一步后的解析式，注意伸缩变换时系数写在 $x$ 前面，平移变换时整体加减 $\varphi$ 并且要注意括号。</li>
-<li>例如：横坐标缩短到原来的 $\frac{1}{2}$ → $f(2x)$；再向右平移 $\frac{\pi}{3}$ → $f[2(x-\frac{\pi}{3})]=f(2x-\frac{2\pi}{3})$。</li>
-<li>令 $f(2x-\frac{2\pi}{3})$ 等于已知最终函数，然后令 $t=2x-\frac{2\pi}{3}$，解出 $x$ 代入等式右边，得到 $f(t)$ 表达式，即所求。</li>
-</ul>
-</li>
-<li>
-<p><strong>正切型函数重合问题——周期整数倍法</strong>
-    处理形如“$y=\tan(\omega x+\varphi)$ 向右平移 $\frac{\pi}{6}$ 个单位后与原图重合”的问题：</p>
-<ul>
-<li>写出平移后的解析式：$y=\tan[\omega(x-\frac{\pi}{6})+\varphi]=\tan(\omega x+\varphi-\frac{\omega\pi}{6})$。</li>
-<li>由于正切函数周期为 $\frac{\pi}{\omega}$，两函数重合意味着相位差为周期的整数倍：$-\frac{\omega\pi}{6}=k\pi$ （$k\in \mathbb Z$）。（注意：是 $k\pi$ 还是 $\frac{k\pi}{\omega}$？应看整体。平移后函数为 $\tan(\omega x + \varphi - \frac{\omega\pi}{6})$，欲与 $\tan(\omega x + \varphi)$ 重合，则 $\frac{\omega\pi}{6}=k\pi$ 是错误的，因为周期是 $\frac{\pi}{\omega}$，相位加周期整数倍不变，即 $\varphi - \frac{\omega\pi}{6} = \varphi + k\cdot\frac{\pi}{\omega}$ 吗？不对，恒定周期指自变量 $x$ 加 $\frac{\pi}{\omega}$ 函数值不变，所以 $\tan[\omega(x+\frac{\pi}{\omega})+\varphi] = \tan(\omega x+\pi+\varphi)=\tan(\omega x+\varphi)$。因此两函数重合的充要条件是：$\varphi-\frac{\omega\pi}{6} = \varphi + k\pi$ （因为正切函数的周期在相位处表现为加 $k\pi$）。所以 $-\frac{\omega\pi}{6}=k\pi$，得 $\omega = -6k$，结合 $\omega&gt;0$，取最小正值。但根据真题2009理8，答案推导为 $\frac{\omega\pi}{6} = k\pi$ 或类似，务必结合题目计算。）</li>
-<li>此类问题核心是：平移量等于周期的整数倍，列方程求 $\omega$ 的最小正值。</li>
-</ul>
-</li>
+<li><strong>正向/逆向变换法</strong>：给定初始函数与若干步变换，求最终解析式或原函数。可顺着变换顺序逐步写，也可从结果逆推。</li>
+<li>正向：按“谁变、怎么变”对 $x$ 作相应运算。注意伸缩只影响 $x$ 的系数，平移只改变 $x$ 的加减。</li>
+<li>逆向：将最终函数反向变换（平移反向，伸缩反向）。右移变左移，横坐标缩短变伸长。</li>
+<li><strong>待定系数法</strong>：当变换后与已知函数重合时，写出变换后解析式，利用“重合”条件令表达式相等，结合周期性建立等式，求出参数。</li>
+<li><strong>换元法</strong>：设中间变量，将复合变换拆解。如要求 $f(x)$，可设变换后的 $f(g(x))$ 与目标函数相等，令 $t=g(x)$，解出 $f(t)$。</li>
+<li><strong>注意平移量的提取</strong>：形如 $f(\omega x+\varphi)$ 的左右平移必须先化为 $f[\omega(x+\frac{\varphi}{\omega})]$ 再确定平移量，否则极易出错。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>伸缩系数颠倒</strong>：横坐标缩短到原来的 $\frac{1}{2}$，应是 $x$ 替换为 $2x$（系数变大），易错写成 $\frac{1}{2}x$。牢记：频率与周期成反比，缩短周期则 $\omega$ 变大。</li>
-<li><strong>平移量忘记提取系数</strong>：先周期变换再相位变换时，左右平移的是 $\frac{\varphi}{\omega}$ 个单位，而不是 $\varphi$ 个单位。例如 $y=\sin 2x$ 向左平移 $\frac{\pi}{6}$ 得 $y=\sin 2(x+\frac{\pi}{6})=\sin(2x+\frac{\pi}{3})$。若直接写成 $\sin(2x+\frac{\pi}{6})$ 就错了。</li>
-<li><strong>变换对象混淆</strong>：平移变换是对 $x$ 本身进行加减，而不是对 $\omega x$。反向操作时容易犯错。</li>
-<li><strong>正切函数的周期误用</strong>：由重合求 $\omega$ 时，注意正切函数 $\tan x$ 的周期是 $\pi$，对应 $\tan(\omega x)$ 的周期是 $\frac{\pi}{\omega}$，相位重合时差 $k\pi$ 而不是 $2k\pi$。</li>
-<li><strong>导数与逆向还原</strong>：在逆向变换时，每一步的运算规则容易遗忘，建议平时练习时对称记忆：向右平移对应向左反向；横坐标缩短对应反向伸长，且伸缩系数互为倒数。</li>
+<li><strong>平移与伸缩顺序混淆</strong>：先伸缩后平移时，平移量是 $\frac{\varphi}{\omega}$，不是 $\varphi$。务必提取 $x$ 的系数。</li>
+<li><strong>变换对象搞错</strong>：所有横坐标变换只对自变量 $x$ 进行，不可直接给 $\omega x+\varphi$ 整体加平移量。例如“右移 $\frac{\pi}{3}$”应写为 $f[\omega(x-\frac{\pi}{3})+\varphi]$，而非 $f(\omega x+\varphi-\frac{\pi}{3})$。</li>
+<li><strong>正切型周期误用</strong>：$y=\tan x$ 的周期是 $\pi$，利用重合条件列等式时加 $k\pi$ 而非 $2k\pi$。</li>
+<li><strong>系数符号遗漏</strong>：逆向求解时，反平移方向易错，可反复验算代入检验。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3><strong>题目</strong> 2021-理-07</h3>
-<p>把函数 $y=f(x)$ 图象上所有点的横坐标缩短到原来的 $\frac{1}{2}$，纵坐标不变，再把所得曲线向右平移 $\frac{\pi}{3}$ 个单位长度，得到函数 $y=\sin\left(x-\frac{\pi}{4}\right)$ 的图象，则 $f(x)=$ （选择题选项略）</p>
-<p><strong>思路</strong> 本题已知一系列变换及最终函数，求原函数解析式。适合用逆向变换法，从最终函数 $\sin\left(x-\frac{\pi}{4}\right)$ 出发，先向左平移 $\frac{\pi}{3}$，再将横坐标伸长到原来的 $2$ 倍。</p>
-<p><strong>步骤</strong>
-1. 最终函数：$g(x)=\sin\left(x-\frac{\pi}{4}\right)$。
-2. 第一步逆向：原过程“向右平移 $\frac{\pi}{3}$”的反向操作是“向左平移 $\frac{\pi}{3}$”。得到 $h(x)=g\left(x+\frac{\pi}{3}\right)=\sin\left(x+\frac{\pi}{3}-\frac{\pi}{4}\right)=\sin\left(x+\frac{\pi}{12}\right)$。
-3. 第二步逆向：原过程“横坐标缩短到原来的 $\frac{1}{2}$”的反向操作是“横坐标伸长到原来的 $2$ 倍”，即用 $\frac{x}{2}$ 替换 $x$。得到 $f(x)=h\left(\frac{x}{2}\right)=\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$。
-4. 与选项对比，$\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$ 即 $\sin 2\left(\frac{x}{2}\right)$？不，改写为标准形式：选项为 $\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$。注意原选项可能为 $\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$ 或 $\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$ 等。核对选项，正确选项应与此一致，故选B。</p>
-<p><strong>点评/变式</strong>
-- 使用逆向法避免设未知函数换元，步骤简捷。关键点：反向时“左右相反，伸缩取倒数”。
-- 变式：若将变换顺序颠倒（先向右平移再缩短横坐标），则还原步骤也需对应改变，原理相通。</p>
-<h3><strong>题目</strong> 2009-理-08</h3>
-<p>将函数 $y=\tan\left(\omega x+\frac{\pi}{6}\right)\ (\omega&gt;0)$ 的图象向右平移 $\frac{\pi}{6}$ 个单位长度后，与函数 $y=\tan\left(\omega x+\frac{\pi}{6}\right)$ 的图象重合，则 $\omega$ 的最小值为（选择题：$\frac{1}{2}, \frac{1}{4}, \frac{1}{6}, \frac{1}{8}$，待核实原题选项，实际选项为A.$\frac{1}{6}$ B.$\frac{1}{4}$ C.$\frac{1}{3}$ D.$\frac{1}{2}$，但解析中系数为6k+... 最终选D.$\frac{1}{2}$，这里按原始数据推导）</p>
-<p><strong>思路</strong> 图象重合说明平移量恰好是函数周期的整数倍。先写出平移后的解析式，利用正切函数周期性质建立方程求 $\omega$。</p>
-<p><strong>步骤</strong>
-1. 原函数：$y=\tan\left(\omega x+\frac{\pi}{6}\right)$。
-2. 向右平移 $\frac{\pi}{6}$ 个单位：$y=\tan\left[\omega\left(x-\frac{\pi}{6}\right)+\frac{\pi}{6}\right]=\tan\left(\omega x-\frac{\omega\pi}{6}+\frac{\pi}{6}\right)$。
-3. 要求该图象与 $y=\tan\left(\omega x+\frac{\pi}{6}\right)$ 重合。由于正切函数 $y=\tan\theta$ 的周期为 $\pi$，即 $\theta$ 每增加 $\pi$ 的整数倍，函数值不变。所以两函数重合的充要条件是相位相差 $k\pi$：
-   $$-\frac{\omega\pi}{6}+\frac{\pi}{6} = \frac{\pi}{6} + k\pi,\quad k\in\mathbb Z$$
-   化简得：$-\frac{\omega\pi}{6}=k\pi$，即 $\omega=-6k$。
-4. 因为 $\omega&gt;0$，取 $k=-1$ 得 $\omega=6$？原题解析为何是 $\omega=k+\dots$ ？我们回顾真题：题干可能是 $y=\tan(\omega x+\frac{\pi}{6})$ 向右平移 $\frac{\pi}{6}$ 后与 $y=\tan(\omega x+\frac{\pi}{6})$ 重合。上述推导得 $\omega=6$，但原题选项均为分数，说明我对题干的回忆可能有误。根据提供的解析片段：“【解答】解：y=tan（ωx+），向右平移  个单位可得：y=tan[ω（x﹣ ）+ ]=tan（ωx+） ∴﹣ω+kπ= ∴ω=k+（k∈Z），ωmin=．故选：D。” 原题目的函数可能不同。为配合资料，我们修正为常规类似题：若原图象 $y=\tan(\omega x+\frac{\pi}{4})$ 向右平移 $\frac{\pi}{6}$ 与 $y=\tan(\omega x+\frac{\pi}{6})$ 重合，求 $\omega$ 最小值。但这里按通用方法说明。本资料引用真题标准化：实际上2009全国卷理8原题是：将函数 $y=\tan(\omega x+\frac{\pi}{6})$ 向右平移 $\frac{\pi}{6}$ 后与 $y=\tan(\omega x+\frac{\pi}{6})$ 重合，求 $\omega$ 最小值。正确解答应为 $\omega=6k$，最小正值为6，不符合选项。说明我记忆有偏差，实际原题应是 $y=\tan(\omega x+\frac{\pi}{6})$ 平移后与 $y=\tan(\omega x+\frac{\pi}{6})$ 重合，但待定系数方程是 $\frac{\pi}{6}\omega = \frac{\pi}{6}+k\pi$？不对。基于历年真题，正确题目是：“若将函数 $y=\tan(\omega x+\frac{\pi}{4})(\omega&gt;0)$ 的图象向右平移 $\frac{\pi}{6}$ 个单位长度后，与函数 $y=\tan(\omega x+\frac{\pi}{6})$ 的图象重合，则 $\omega$ 的最小值为……” 这样的题目列方程：$\frac{\pi}{4}-\frac{\pi}{6}\omega = \frac{\pi}{6}+k\pi$，解得 $\omega=\frac12 +6k$，最小 $\frac12$。这也符合提供的解析片段。因此我们采用通用方法与思想总结即可。）</p>
-<p><strong>调整后规范性讲解</strong>（基于片段）
-平移后解析式：$y=\tan\left[\omega(x-\frac{\pi}{6})+\frac{\pi}{4}\right]=\tan\left(\omega x+\frac{\pi}{4}-\frac{\omega\pi}{6}\right)$。
-令其等于 $y=\tan\left(\omega x+\frac{\pi}{6}\right)$。由周期性质得：$\frac{\pi}{4}-\frac{\omega\pi}{6}=\frac{\pi}{6}+k\pi$，整理得 $\omega=\frac12+6k$，取 $k=0$ 时 $\omega_{\min}=\frac12$。</p>
-<p><strong>点评/变式</strong>
-- 本题核心是利用正切函数的周期为 $\pi$，建立相位差等于整数倍周期的方程。
-- 注意区别 $\sin/\cos$ 的周期为 $2\pi$，方程中对应 $2k\pi$。此类题型也常见于正弦余弦函数，务必区分。
-- 变式：若改为“向左平移 $\frac{\pi}{4}$ 后重合”，或“横坐标伸缩后重合”，解法本质相同，通过对比相位或利用周期公式列方程求最值。</p>
+<h3><strong>题目</strong>（2021-理-07）</h3>
+<p>把函数 $y=f(x)$ 图象上所有点的横坐标缩短到原来的 $\frac12$ 倍，纵坐标不变，再把所得曲线向右平移 $\frac{\pi}{3}$ 个单位长度，得到函数 $y=\sin(x-\frac{\pi}{4})$ 的图象，则 $f(x)=$（　）</p>
+<p>A. $\sin\left(\frac{x}{2}-\frac{7\pi}{12}\right)$　B. $\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$
+C. $\sin\left(2x-\frac{7\pi}{12}\right)$　D. $\sin\left(2x+\frac{\pi}{12}\right)$</p>
+<p><strong>思路</strong>：从目标逆向变换回到 $f(x)$，或设 $f(x)$ 正向写出变换结果，用待定系数或换元。</p>
+<p><strong>步骤</strong>（逆向）：
+1. 已知最终函数为 $y=\sin(x-\frac{\pi}{4})$。
+2. 该图象是“右移 $\frac{\pi}{3}$”得到的，故逆向需左移 $\frac{\pi}{3}$：得 $y=\sin\left((x+\frac{\pi}{3})-\frac{\pi}{4}\right)=\sin(x+\frac{\pi}{12})$。
+3. 上一步的结果是由“横坐标缩短到 $\frac12$”得到，逆向应将横坐标伸长为原来的 $2$ 倍（即 $x$ 换成 $\frac{x}{2}$）：得 $f(x)=\sin\left(\frac{x}{2}+\frac{\pi}{12}\right)$。
+4. 对应选项 B。</p>
+<p><strong>点评/变式</strong>：逆向操作关键是把变换反向且操作对象始终是 $x$。也可正向：设 $f(x)$，先伸缩得 $f(2x)$，再右移 $\frac{\pi}{3}$ 得 $f[2(x-\frac{\pi}{3})]=f(2x-\frac{2\pi}{3})$，令其等于 $\sin(x-\frac{\pi}{4})$ 并用换元 $t=2x-\frac{2\pi}{3}$，亦可求解。</p>
+<h3><strong>题目</strong>（2009-理-08）</h3>
+<p>若将函数 $y=\tan\left(\omega x+\frac{\pi}{4}\right)$（$\omega&gt;0$）的图象向右平移 $\frac{\pi}{6}$ 个单位长度后，与函数 $y=\tan\left(\omega x+\frac{\pi}{6}\right)$ 的图象重合，则 $\omega$ 的最小值为（　）</p>
+<p>A. $\frac{1}{6}$　B. $\frac{1}{4}$　C. $\frac{1}{3}$　D. $\frac{1}{2}$</p>
+<p><strong>思路</strong>：由平移写出新解析式，利用重合时正切函数的周期性列出方程求 $\omega$。</p>
+<p><strong>步骤</strong>：
+1. 右移 $\frac{\pi}{6}$：$y=\tan\left[\omega\left(x-\frac{\pi}{6}\right)+\frac{\pi}{4}\right] = \tan\left(\omega x - \frac{\omega\pi}{6} + \frac{\pi}{4}\right)$。
+2. 与 $y=\tan\left(\omega x + \frac{\pi}{6}\right)$ 重合，因此对应相角相差整数倍周期 $\pi$：$- \frac{\omega\pi}{6} + \frac{\pi}{4} = \frac{\pi}{6} + k\pi$，$k\in\mathbb{Z}$。
+3. 整理得 $\frac{\omega\pi}{6} = \frac{\pi}{4} - \frac{\pi}{6} - k\pi = \frac{\pi}{12} - k\pi$，两边除以 $\pi$ 并乘 $6$：$\omega = \frac{1}{2} - 6k$。
+4. 取 $k=0$ 得最小正数 $\omega = \frac{1}{2}$，故选 D。</p>
+<p><strong>点评/变式</strong>：本题为正切型函数的平移重合问题。易错点是忘记正切周期为 $\pi$ 而误用 $2\pi$，以及整理等式时符号错误。解法二也可直接利用平移量等于周期整数倍加相位差。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2021-理-07.html">2021-理-07</a>（2021 · 中） 考察三角函数的图像变换（伸缩与平移）及逆向还原解析式。</li>

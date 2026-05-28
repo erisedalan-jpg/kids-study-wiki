@@ -33,45 +33,65 @@
 </ul>
 <h2>知识精要</h2>
 <ul>
-<li><strong>数量积定义</strong>：$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta $，其中 $\theta$为$\vec{a},\vec{b}$的夹角（$0\le\theta\le\pi$）。</li>
-<li><strong>坐标运算</strong>：若$\vec{a}=(x_1,y_1)$，$\vec{b}=(x_2,y_2)$，则$\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。空间向量类似。</li>
-<li><strong>向量模长</strong>：$|\vec{a}|=\sqrt{\vec{a}\cdot\vec{a}}$，坐标下$|\vec{a}|=\sqrt{x_1^2+y_1^2}$。核心性质：$\vec{a}^2=|\vec{a}|^2$。</li>
-<li><strong>夹角公式</strong>：$\cos\theta=\dfrac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$。</li>
-<li><strong>垂直充要条件</strong>：对非零向量$\vec{a},\vec{b}$，$\vec{a}\perp\vec{b}\iff\vec{a}\cdot\vec{b}=0$。</li>
-<li><strong>运算律</strong>：交换律、分配律、数乘结合律：$(\lambda\vec{a})\cdot\vec{b}=\lambda(\vec{a}\cdot\vec{b})$。特别注意：数量积不满足结合律；$(\vec{a}\cdot\vec{b})\vec{c}\neq\vec{a}(\vec{b}\cdot\vec{c})$。</li>
-<li><strong>重要恒等式</strong>（“平方法”基础）：
-  $|\vec{a}\pm\vec{b}|^2=|\vec{a}|^2\pm2\vec{a}\cdot\vec{b}+|\vec{b}|^2$，
-  $(\vec{a}+\vec{b})\cdot(\vec{a}-\vec{b})=|\vec{a}|^2-|\vec{b}|^2$。</li>
-<li><strong>应用延伸</strong>：空间向量数量积定义、运算律同上，用于求线线角、线面角、二面角及证明垂直（如线面垂直线面角问题中$\overrightarrow{PB}\cdot\overrightarrow{AM}=0$）。</li>
+<li><strong>数量积定义</strong>：$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta$（$\theta$为$\vec{a},\vec{b}$的夹角，$\theta\in[0,\pi]$）。</li>
+<li><strong>坐标运算</strong>：若$\vec{a}=(x_1,y_1)$，$\vec{b}=(x_2,y_2)$，则$\vec{a}\cdot\vec{b}=x_1x_2+y_1y_2$。</li>
+<li><strong>模长公式</strong>：$|\vec{a}|=\sqrt{\vec{a}\cdot\vec{a}}=\sqrt{x_1^2+y_1^2}$；$|\vec{a}\pm\vec{b}|^2=|\vec{a}|^2\pm2\vec{a}\cdot\vec{b}+|\vec{b}|^2$。</li>
+<li><strong>夹角公式</strong>：$\cos\theta=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$。</li>
+<li><strong>垂直条件</strong>：$\vec{a}\perp\vec{b}\iff\vec{a}\cdot\vec{b}=0\iff x_1x_2+y_1y_2=0$。</li>
+<li><strong>运算律</strong>：交换律、分配律成立；数乘结合律$(\lambda\vec{a})\cdot\vec{b}=\lambda(\vec{a}\cdot\vec{b})$；<strong>向量数量积不满足结合律</strong>（$(\vec{a}\cdot\vec{b})\vec{c}\neq\vec{a}(\vec{b}\cdot\vec{c})$）。</li>
+<li><strong>几何意义</strong>：$\vec{a}\cdot\vec{b}$等于$|\vec{a}|$与$\vec{b}$在$\vec{a}$方向上的投影$|\vec{b}|\cos\theta$的乘积。</li>
 </ul>
 <h2>解题方法与套路</h2>
-<p>跨真题归纳通用解题步骤：
-1. <strong>定义优先，模夹关联</strong>：已知模长与夹角时，直接用定义$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta$。
-2. <strong>见到垂直写成零</strong>：凡出现$\perp$，立刻翻译为两向量的数量积等于$0$，建立方程。这是最高频突破口。
-3. <strong>平方脱模，数量积现</strong>：等式或条件中出现长度（模）等式，如$|\vec{a}+\vec{b}|=|\vec{a}-\vec{b}|$或已知$|\vec{a}\pm\vec{b}|$的值，两边平方，将模转化为数量积，利用$|\vec{v}|^2=\vec{v}^2$得到纯数量积方程。
-4. <strong>坐标化繁为简</strong>：图形规则（如矩形、正方形、等腰梯形、垂直关系）或已知坐标时，建系/设点，将向量坐标化，用坐标运算代替几何推导，尤其在立体几何数量积问题中几乎是必杀技。
-5. <strong>换元转化结构</strong>：对于复杂和差式可设$\vec{c}=\vec{a}-\vec{b}$等，简化已知条件结构，再结合数量积运算律求解，如2023年真题的方法二。
-6. <strong>运算律展开与因式分解</strong>：类似多项式运算，利用分配律将目标式展开，逐步转化为已知简单向量数量积；有时需提取公因式，如$\vec{a}\cdot(2\vec{b}-\vec{a})=0$展开。
-7. <strong>基底法（几何图形中）</strong>：选择已知夹角和模的两个不共线向量为基底（如正方形中邻边），将其他向量用基底表示，再计算数量积。</p>
+<ol>
+<li><strong>见模就平方</strong>：已知形如$|\vec{a}+\vec{b}|$、$|\vec{a}-\vec{b}|$等条件，立即两边平方，转化为模长与数量积的方程。</li>
+<li><strong>垂直转点乘为零</strong>：题设含垂直或判断垂直，直接列出$\vec{a}\cdot\vec{b}=0$，结合已知解出目标量。</li>
+<li><strong>基底法</strong>：几何图形中，选择模与夹角已知的两个不共线向量为基底，将目标向量用基底表示，再按运算律展开计算数量积。</li>
+<li><strong>坐标法</strong>：平面问题（尤其是规则图形或已知坐标）优先建系，将向量坐标化，利用$x_1x_2+y_1y_2$快速求解；空间问题则建立空间直角坐标系。</li>
+<li><strong>消元/方程思想</strong>：将条件等式平方或联立后，得到关于$|\vec{b}|$、$\vec{a}\cdot\vec{b}$等的方程（组），解之即得。</li>
+<li><strong>已知夹角与模长求数量积</strong>：直接套用定义式$\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|\cos\theta$。</li>
+</ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>数量积结果为实数</strong>：书写时$\vec{a}\cdot\vec{b}$是一个数，不要错写成向量。等式中的“=”号左右必须同为数或向量。</li>
-<li><strong>忽略夹角起点</strong>：求夹角时必须将向量平移至同一起点，题目常利用几何图形中点线位置干扰，易把补角当成夹角。</li>
-<li><strong>误用垂直条件</strong>：$\vec{a}\cdot\vec{b}=0\iff\vec{a}\perp\vec{b}$要求$\vec{a},\vec{b}$均为非零向量，零向量方向任意，不参与垂直判定。</li>
-<li><strong>模与数量积混淆</strong>：$|\vec{a}|^2=\vec{a}\cdot\vec{a}$而不是$\vec{a}^2$（$\vec{a}^2$这种写法通常指数量积自身，也是$|\vec{a}|^2$，但要明白含义），开方时莫忘取算术根。</li>
-<li><strong>坐标运算代错分量</strong>：向量坐标差运算或数量积坐标公式，容易出现$x_1 y_1+x_2 y_2$这种混乱，切记横乘横加纵乘纵。</li>
-<li><strong>乱用结合律</strong>：$(\vec{a}\cdot\vec{b})\cdot\vec{c}$无意义，前者是数乘向量，但$(\vec{a}\cdot\vec{b})\vec{c}$表示实数乘向量，不能再点乘；绝不能出现$(\vec{a}\cdot\vec{b})\cdot\vec{c}$这类符号。</li>
-<li><strong>忽略隐含条件</strong>：单位向量默认模为$1$，正方形、等边三角形自带边长和夹角信息，需第一时间转化为模和夹角数据。</li>
-<li><strong>方程漏解或多解</strong>：平方去模时可能产生增解，须结合向量模非负且实际几何意义检验。</li>
+<li><strong>混淆数量积与数乘</strong>：$\vec{a}\cdot\vec{b}$是数，$k\vec{a}$是向量；$( \vec{a}\cdot\vec{b} )\vec{c}$不能写成$\vec{a}(\vec{b}\cdot\vec{c})$。</li>
+<li><strong>夹角范围记错</strong>：$\theta\in[0,\pi]$，$\cos\theta$的符号由夹角决定，锐角时$\vec{a}\cdot\vec{b}&gt;0$，钝角时$&lt;0$，直角时$=0$。</li>
+<li><strong>模长忘记开方</strong>：由$|\vec{a}|^2=\vec{a}\cdot\vec{a}$求模长后，务必取算术平方根。</li>
+<li><strong>平方展开漏项</strong>：$|\vec{a}\pm\vec{b}|^2=|\vec{a}|^2\pm2\vec{a}\cdot\vec{b}+|\vec{b}|^2$，中间项系数2易漏。</li>
+<li><strong>坐标运算不对应</strong>：数量积坐标公式是“横×横+纵×纵”，错用为叉乘或分量不全。</li>
+<li><strong>垂直条件反向</strong>：仅当数量积为0时垂直，非零时需结合模长判断夹角。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3><strong>题目</strong>（2024-新课标Ⅱ-03）</h3>
-<p>已知向量$\vec{a},\vec{b}$满足$|\vec{a}|=1$，$|\vec{a}+2\vec{b}|=2$，且$(\vec{b}-\vec{a})\perp\vec{b}$，求$|\vec{b}|$。
-<strong>思路</strong>：两个条件给出模与垂直，目标求$|\vec{b}|$。由垂直转化为数量积为零，得$\vec{a}\cdot\vec{b}=|\vec{b}|^2$；再将$|\vec{a}+2\vec{b}|=2$平方，代入$\vec{a}\cdot\vec{b}$与$|\vec{a}|$，解关于$|\vec{b}|$的方程。
-<strong>步骤</strong>：
-1. 由$(\vec{b}-\vec{a})\perp\vec{b}$得$(\vec{b}-\vec{a})\cdot\vec{b}=0$，展开$\vec{b}\cdot\vec{b}-\vec{a}\cdot\vec{b}=0$，即$|\vec{b}|^2=\vec{a}\cdot\vec{b}$。（注：此处可推出$\vec{a}\cdot\vec{b}\ge0$，模非负）
-2. 将$|\vec{a}+2\vec{b}|=2$两边平方：$|\vec{a}|^2+4\vec{a}\cdot\vec{b}+4|\vec{b}|^2=4$。
-3. 代入$|\vec{a}|=1$及$\vec{a}\cdot\vec{b}=|\vec{b}|^2$：$1+4|\vec{b}|^2+4|\vec{b}|^2=4$，即$8|\vec{b}|^2=3$，得$|\vec{b}|^2=\frac38$，$|\vec{b}|=\frac{\sqrt{6}}{4}$。（选项给的是$\frac{\sqrt{2}}{2}$？题目答案选B $\frac{\sqrt{2}}{2}$。检查：解析中得$1+4+4b^2?$ 原解析：$1+4\vec{a}\cdot\vec{b}+4b^2=1+6b^2=4$，为什么$4\vec{a}\cdot\vec{b}+4b^2=6b^2$？因为由垂直得$2\vec{b}\cdot\vec{b}=2\vec{a}\cdot\vec{b}$，即$2|\vec{b}|^2=2\vec{a}\cdot\vec{b}$，所以$\vec{a}\cdot\vec{b}=|\vec{b}|^2$。那么$4\vec{a}\cdot\vec{b}+4|\vec{b}|^2=4|\vec{b}|^2+4|\vec{b}|^2=8|\vec{b}|^2$ 才对。但解析里写“$1+4\vec{a}\cdot\vec{b}+4b^2=1+6b^2$”，这意味着$\vec{a}\cdot\vec{b}+|\vec{b}|^2= \frac{3}{2}|\vec{b}|^2$？矛盾。检查原题：题干条件为$\vec{a}\perp (2\vec{b}-\vec{a})$？不对，原题是“$(\vec{b}-2\vec{a})\perp\vec{b}$”？看用户提供的2024题：题目是“已知向量a,b满足|a|=1,|a+2b|=2，且(b-2a)⊥b，则|b|=？”仔细看用户输入：“已知向量,a br r满足1, 2 2a a b= + =r r r，且2b a b- ^r r r” 混乱。原题图中是“且(b-2a)⊥b”，解析里写因为(b-2a)⊥b，所以(b-2a)·b=0，即2b·b=2a·b，所以a·b=b^2。等等：“2b·b=2a·b”出现2？可能题干是“b-2a”垂直b。看解析：“因为(b-2a)⊥b，所以(b-2a)·b=0，即2b·b=2a·b”，应该是“b·b - 2a·b=0”？不，如果(b-2a)⊥b，则(b-2a)·b=b^2-2a·b=0，得2a·b=b^2，a·b=b^2/2。然后再用|a+2b|=2平方：|a|^2+4a·b+4|b|^2=4 =&gt; 1+4*(b^2/2)+4b^2=1+2b^2+4b^2=1+6b^2=4，得b^2=1/2，|b|=√2/2。完全吻合。原用户输入题干因为OCR问题错误写成了“2b a b- ^”，实际是“b-2a⊥b”。我们要根据解析内容修正：题目应为“已知向量a,b满足|a|=1，|a+2b|=2，且(b-2a)⊥b，则|b|=”才对。由于作答要基于真题语料，解析中明确写“因为(b-2a)⊥b，所以(b-2a)·b=0，即2b^2=2a·b，从而a·b=b^2”？等一下看解析原文：“因为2b a b- ^r r r，所以2 0b a b- × =r r r，即22b a b= ×r r r”，这怪。它写的“2b a b- ^”应该是“(b-2a)⊥b”。它后面的“即22b a b= ×”是“即2a·b=2b^2”？不成，OCR把向量符号弄错了。我们作为专题资料，无需拘泥于原始OCR乱码，应以数学合理性呈现。决定：按解析的内容正确表述题干：已知|a|=1，|a+2b|=2，且(b-2a)⊥b，求|b|。但我看解析：它写的是“因为2b a b- ^r r r，所以2 0b a b- × =r r r，即22b a b= ×r r r”。 这可能原本是“(b-2a)⊥b”？“(b-2a)⊥b”就得到(b-2a)·b=0 =&gt; b^2 -2a·b=0 =&gt; b^2=2a·b，即a·b=b^2/2。然后“即22b a b= ×r r r” 这是“即2a·b = b^2”？乱。可判断正确条件是：$\vec{b</p>
+<h3>2024-新课标Ⅱ-03</h3>
+<p><strong>题目</strong>  已知$|\vec{a}|=1$，$|\vec{a}+2\vec{b}|=2$，且$(\vec{b}-2\vec{a})\perp\vec{b}$，求$|\vec{b}|$。</p>
+<p><strong>思路</strong>  利用垂直转数量积为0，得$\vec{b}$与$\vec{a}\cdot\vec{b}$的关系；再对$|\vec{a}+2\vec{b}|=2$平方，代入$|\vec{a}|$和$\vec{a}\cdot\vec{b}$的关系，解出$|\vec{b}|$。</p>
+<p><strong>步骤</strong>
+1. 由$(\vec{b}-2\vec{a})\perp\vec{b}$得$(\vec{b}-2\vec{a})\cdot\vec{b}=0$，即$\vec{b}^2-2\vec{a}\cdot\vec{b}=0$ ⇒ $|\vec{b}|^2=2\vec{a}\cdot\vec{b}$。
+2. 对$|\vec{a}+2\vec{b}|=2$两边平方：$|\vec{a}|^2+4\vec{a}\cdot\vec{b}+4|\vec{b}|^2=4$。
+3. 代入$|\vec{a}|=1$及$\vec{a}\cdot\vec{b}=\frac{1}{2}|\vec{b}|^2$得：$1+4\times\frac12|\vec{b}|^2+4|\vec{b}|^2=4$ ⇒ $1+6|\vec{b}|^2=4$。
+4. 解得$|\vec{b}|^2=\frac12$，故$|\vec{b}|=\frac{\sqrt{2}}{2}$。</p>
+<p><strong>点评/变式</strong>  典型“模与垂直”混合条件问题。关键是将垂直条件转化为不含向量的数量关系，再通过平方消去向量，化归为模长的方程。若条件改为“$\vec{b}-\vec{a}$与$\vec{b}$垂直”，思路完全一致。</p>
+<h3>2023-新课标Ⅱ-13</h3>
+<p><strong>题目</strong>  已知$|\vec{a}-\vec{b}|=\sqrt{3}$，$|\vec{a}+\vec{b}|=|2\vec{a}-\vec{b}|$，求$|\vec{b}|$。</p>
+<p><strong>思路</strong>  两个条件均给出向量的模，直接平方转化，联立后消去$\vec{a}\cdot\vec{b}$，即可求得$|\vec{b}|$。</p>
+<p><strong>步骤</strong><br />
+法一（直接平方）<br />
+1. $|\vec{a}+\vec{b}|=|2\vec{a}-\vec{b}|$两边平方：$|\vec{a}|^2+2\vec{a}\cdot\vec{b}+|\vec{b}|^2=4|\vec{a}|^2-4\vec{a}\cdot\vec{b}+|\vec{b}|^2$。<br />
+   化简得$3|\vec{a}|^2-6\vec{a}\cdot\vec{b}=0$ ⇒ $|\vec{a}|^2=2\vec{a}\cdot\vec{b}$。<br />
+2. $|\vec{a}-\vec{b}|=\sqrt{3}$两边平方：$|\vec{a}|^2-2\vec{a}\cdot\vec{b}+|\vec{b}|^2=3$。<br />
+   将$|\vec{a}|^2=2\vec{a}\cdot\vec{b}$代入，得$2\vec{a}\cdot\vec{b}-2\vec{a}\cdot\vec{b}+|\vec{b}|^2=3$，即$|\vec{b}|^2=3$，$|\vec{b}|=\sqrt{3}$。</p>
+<p>法二（换元）<br />
+设$\vec{c}=\vec{a}-\vec{b}$，则$|\vec{c}|=\sqrt{3}$。$\vec{a}+\vec{b}=\vec{c}+2\vec{b}$，$2\vec{a}-\vec{b}=2\vec{c}+3\vec{b}$。条件$|\vec{c}+2\vec{b}|=|2\vec{c}+3\vec{b}|$平方展开，可同样求得$|\vec{b}|=|\vec{c}|=\sqrt{3}$。</p>
+<p><strong>点评/变式</strong>  条件“$|\vec{u}|=|\vec{v}|$”且不含其他向量时，直接平方即可。若两条件中均出现同一对向量的线性组合，平方后相当于得到两个关于$|\vec{a}|^2,|\vec{b}|^2,\vec{a}\cdot\vec{b}$的方程，联立消元即解。</p>
+<h3>2021-理-18(1)</h3>
+<p><strong>题目</strong>  四棱锥$P-ABCD$底面$ABCD$为矩形，$PD\perp$底面，$PD=DC=1$，$M$为$BC$中点，且$PB\perp AM$，求$BC$。</p>
+<p><strong>思路</strong>  以点$D$为原点建系，将相关点坐标用$BC=2a$表示，利用$PB\perp AM$得$\overrightarrow{PB}\cdot\overrightarrow{AM}=0$，解出$a$，进而求得$BC$。</p>
+<p><strong>步骤</strong><br />
+1. 以$D$为坐标原点，$\overrightarrow{DA},\overrightarrow{DC},\overrightarrow{DP}$方向分别为$x,y,z$轴建系。<br />
+   设$BC=2a$，则$A(2a,0,0),B(2a,1,0),C(0,1,0),P(0,0,1)$。<br />
+2. $M$为$BC$中点，故$M(a,1,0)$。<br />
+   则$\overrightarrow{PB}=(2a,1,-1)$，$\overrightarrow{AM}=(-a,1,0)$。<br />
+3. 由$PB\perp AM$得$\overrightarrow{PB}\cdot\overrightarrow{AM}=0$，即$2a\cdot(-a)+1\cdot1+(-1)\cdot0=0$ ⇒ $-2a^2+1=0$。<br />
+4. 解得$a^2=\frac12$，$a=\frac{\sqrt{2}}{2}$，故$BC=2a=\sqrt{2}$。</p>
+<p><strong>点评/变式</strong>  立体几何中用空间向量解决垂直问题，比纯几何论证更直接。关键是用好“垂直⇔数量积为零”，并准确设出未知边长参数。同类问题中若求线段长，均可用待定系数建立方程，避免复杂的线面关系推理。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2024-新课标Ⅱ-03.html">2024-新课标Ⅱ-03</a>（2024 · 中） 向量垂直与模长计算，通过数量积为零和模长公式联立方程求向量模。</li>

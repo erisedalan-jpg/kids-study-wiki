@@ -32,61 +32,58 @@
 <li>难度分布：中2</li>
 </ul>
 <h2>知识精要</h2>
-<ol>
-<li>切线的性质定理：圆的切线垂直于过切点的半径。<br />
-   若 $PA$ 切 $\odot O$ 于 $A$，则 $OA \perp PA$。</li>
-<li>切线长定理：从圆外一点引圆的两条切线，它们的切线长相等，且这点与圆心的连线平分两切线的夹角。<br />
-   若 $PA$、$PB$ 切 $\odot O$ 于 $A$、$B$，则 $PA = PB$，$\angle APO = \angle BPO$。</li>
-<li>弦切角定理：弦切角等于它所夹的弧所对的圆周角。<br />
-   若 $PA$ 切 $\odot O$ 于 $A$，$AB$ 为弦，则 $\angle PAB = \angle ACB$（$C$ 为 $AB$ 弧上任意一点）。</li>
-<li>切割线定理：从圆外一点引圆的切线和割线，切线长是这点到割线与圆交点的两条线段长的比例中项。<br />
-   若 $PA$ 切 $\odot O$ 于 $A$，$PBC$ 为割线，则 $PA^2 = PB \cdot PC$。<br />
-   推论：割线定理 $PB \cdot PC = PD \cdot PE$（$P$ 为圆外一点，两割线 $PBC$、$PDE$）。</li>
-<li>相交弦定理：圆内两弦相交，交点分两弦的线段乘积相等。</li>
-<li>四点共圆的判定与性质：</li>
-<li>判定：若四边形一组对角互补，或一个外角等于它的内对角，则四点共圆；若两线段同侧张角相等，则四点共圆。</li>
-<li>性质：共圆四点构成的角，同弧上的圆周角相等；外角等于内对角。</li>
-<li>直径所对的圆周角是直角；90° 的圆周角所对的弦是直径。这两条是判定直径的核心依据。</li>
-</ol>
+<ul>
+<li><strong>切线的判定与性质</strong>
+  过半径外端且垂直于半径的直线是圆的切线；圆的切线垂直于经过切点的半径。</li>
+<li><strong>弦切角定理</strong>
+  弦切角等于它所夹的弧所对的圆周角。即若 $PA$ 切 $\odot O$ 于 $A$，则 $\angle PAB = \angle ACB$（$AB$ 为过 $A$ 的弦）。</li>
+<li><strong>切割线定理</strong>
+  从圆外一点 $P$ 引切线 $PA$（$A$ 为切点）和割线 $PBC$（$B,C$ 为与圆的交点），则 $PA^2 = PB \cdot PC$。</li>
+<li><strong>切线长定理</strong>
+  从圆外一点 $P$ 引圆的两条切线 $PA,PB$（$A,B$ 为切点），则 $PA = PB$，且 $PO$ 平分 $\angle APB$。</li>
+<li><strong>圆内接四边形的常用结论</strong>
+  对角互补；外角等于内对角（即延长一边后所成外角与其相邻内角的对角相等）。</li>
+<li><strong>相似三角形基本图形</strong>
+  由弦切角与公共角可导出 $\triangle$ 与 $\triangle$ 相似（如 $\triangle PAB \sim \triangle PCA$），进而得到比例中项关系。</li>
+</ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>遇切线，连半径，得垂直</strong>。凡给出切线，优先连接过切点的半径，获得直角，为后续直角三角形、射影定理等提供条件。</li>
-<li><strong>遇切线+割线，想切割线定理</strong>。直接建立线段比例关系，常用于证明等积式或求线段长。若只有割线，则用割线定理；弦与弦相交，用相交弦定理。</li>
-<li><strong>含切角的证明，优先用弦切角定理</strong>。将弦切角转化为等弧上的圆周角，顺利沟通角的关系，此为找角等的高频通道。</li>
-<li><strong>证四点共圆，首选找等角或对角互补</strong>。题干中出现明显角的关系（如弦切角、圆周角）时，直接找相等角；涉及平行、垂直时，常通过中介角推导对角互补。</li>
-<li><strong>证直径，转化为证圆周角等于90°</strong>。利用切线垂直半径、已知直角、或通过相似、勾股逆定理等推出某弦所对圆周角为直角。</li>
-<li><strong>积式化等比，等比找相似</strong>。对于 $PA^2 = PB \cdot PC$ 这类等积式，先化为比例式 $\dfrac{PA}{PB} = \dfrac{PC}{PA}$，再寻找包含这两对边的相似三角形（常由弦切角或共角获得）。</li>
+<li><strong>遇切线连切点</strong>：已知切线，必连过切点的半径，或连接切点与其它点构造弦切角。</li>
+<li><strong>导角首选弦切角</strong>：当图形中出现切线与过切点的弦时，立即标记等角（弦切角=所夹弧上的圆周角），为相似或共圆提供条件。</li>
+<li><strong>乘积式找相似</strong>：遇到形如 $a^2 = b \cdot c$ 或 $a \cdot b = c \cdot d$ 的等式，优先寻找包含对应线段的相似三角形，常由切线与割线构成的“子母型”相似得到。</li>
+<li><strong>比例式配合圆内接四边形</strong>：若条件给出线段乘积相等且出现四点共圆，将乘积式改写为比例式，结合弦切角定理和圆内接四边形的外角性质，证明角相等或三角形相似。</li>
+<li><strong>证明直径（直角）的策略</strong>：要证某线段为直径，常转化为证其所对的圆周角为直角。利用圆内接四边形外角＝内对角，将目标角等量转移，再结合共线条件得出直角。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>弦切角的“夹弧”错位</strong>：弦切角等于它所夹弧对的圆周角，而非相邻弧。一定要找准“夹”的弧，防止张冠李戴。</li>
-<li><strong>切割线定理书写错误</strong>：$PA^2 = PB \cdot PC$ 中，$PB$ 和 $PC$ 必须是点 $P$ 到割线与圆两交点的“整条”线段，不能误用内部的一段。同时避免将切线长与割线整段搞反。</li>
-<li><strong>四点共圆判定条件混淆</strong>：对角互补必共圆，但仅一组对边平行或相等则不保证共圆。用“等角对同侧线段”时一定注意“同侧”，异侧等角不成立。</li>
-<li><strong>证明直径时条件不全</strong>：仅由 $OA=OB=OC$ 得出 $O$ 是圆心，不能直接推出 $AC$ 是直径；必须证明 $A,O,C$ 共线或 $AC$ 所对角为 $90^\circ$。</li>
-<li><strong>忽视切线性质中的垂直作用</strong>：切线垂直于半径常是构造直角三角形和射影定理的入口，漏掉这条会丧失关键垂直条件。</li>
+<li><strong>弦切角找错所夹弧</strong>：弦切角的顶点在切点，两边分别沿切线和弦，易将邻补角误认为弦切角，注意弦切角是锐角或直角。</li>
+<li><strong>切割线定理比例错位</strong>：$PA^2 = PB \cdot PC$ 中，$P$ 为公共点，是切线长与割线上靠近 $P$ 的线段 $PB$ 和整条割线外段 $PC$ 的比例中项，不可误写成 $PA^2 = PB \cdot BC$ 或 $PA^2 = PC \cdot (PC - PB)$。</li>
+<li><strong>混淆“切线长定理”与“切割线定理”</strong>：两条切线长相等是切线长定理；一条切线与一条割线的关系是切割线定理，二者前提不同，勿混用。</li>
+<li><strong>四点共圆的性质用反</strong>：外角等于内对角时，需看清哪个角是外角，哪个是内对角，避免对错边导致推理链断裂。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3>代表题1（2014-文-22）</h3>
-<p><strong>题目</strong>：如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交于点 $B,C$。求证：$\triangle PAB \sim \triangle PCA$，并推出 $PA^2 = PB \cdot PC$。</p>
-<p><strong>思路</strong>：利用弦切角定理找一组等角，再结合公共角证明三角形相似，由相似比得到等积式。</p>
-<p><strong>步骤</strong>：
-1. 因为 $PA$ 是 $\odot O$ 的切线，$A$ 为切点，由弦切角定理得 $\angle PAB = \angle PCA$（它们都夹 $AB$ 弧）。
-2. 在 $\triangle PAB$ 与 $\triangle PCA$ 中，$\angle PAB = \angle PCA$，且 $\angle APB = \angle CPA$ 为公共角。
-3. 由两角对应相等，得 $\triangle PAB \sim \triangle PCA$。
-4. 根据相似三角形对应边成比例，有 $\dfrac{PA}{PC} = \dfrac{PB}{PA}$，即 $PA^2 = PB \cdot PC$。</p>
-<p><strong>点评/变式</strong>：这是切割线定理的证明原型，其核心是弦切角与公共角构相似。若将切线改为割线 $PAD$，则变成割线定理，同样通过相似三角（利用圆内接四边形外角）可得。牢记这一相似模型，对处理与切线、割线相关的乘积式非常高效。</p>
-<h3>代表题2（2013-文-22）</h3>
-<p><strong>题目</strong>：如图，$CD$ 为 $\triangle ABC$ 外接圆的切线，$AB$ 的延长线交直线 $CD$ 于点 $D$，$E,F$ 分别为弦 $AB$ 与弦 $AC$ 上的点，且 $BC \cdot AE = DC \cdot AF$，$B,E,F,C$ 四点共圆。
-(1) 证明：$CA$ 是 $\triangle ABC$ 外接圆的直径。</p>
-<p><strong>思路</strong>：由条件 $BC \cdot AE = DC \cdot AF$ 结合四点共圆，通过等积化比例并借助弦切角定理导出角等，最终证 $\angle ABC = 90^\circ$，从而得 $CA$ 为直径。</p>
-<p><strong>步骤</strong>：
-1. 由 $B,E,F,C$ 四点共圆，得 $\angle AFE = \angle ABC$（外角等于内对角），且 $\angle AEF = \angle ACB$。
-2. 将 $BC \cdot AE = DC \cdot AF$ 化为比例式 $\dfrac{BC}{DC} = \dfrac{AF}{AE}$。
-3. 因为 $CD$ 是切线，由弦切角定理得 $\angle DCB = \angle CAB$；又 $\angle D$ 是公共角，所以 $\triangle BDC \sim \triangle CDA$，于是 $\dfrac{BC}{DC} = \dfrac{CA}{DA}$。
-4. 结合步骤2与3得 $\dfrac{AF}{AE} = \dfrac{CA}{DA}$，且 $\angle FAE = \angle CAD$（公共角），故 $\triangle AFE \sim \triangle ACD$。
-5. 由相似得 $\angle AEF = \angle CDA$。又由步骤1知 $\angle AEF = \angle ACB$，因此 $\angle ACB = \angle CDA$。
-6. 在 $\triangle ACD$ 中，$\angle CAD + \angle CDA + \angle ACD = 180^\circ$。由切线性质，$CD$ 是切线，$CA$ 过圆心？尚未知。但我们有 $\angle ACB = \angle CDA$，结合 $\angle ACD$ 为弦切角，$\angle ACD = \angle ABC$（夹 $AC$ 弧）。于是 $\angle ABC = \angle CDA$。在 $\triangle ABC$ 与 $\triangle CDA$ 中，已有多对角等，实际上可推 $\angle ABC = \angle CDA$，且 $\angle ACB = \angle CDA$，故 $\angle ABC = \angle ACB$。进一步可由切线等角关系得 $\angle ABC = 90^\circ$（此处需要结合具体角度关系，可通过倒角得到 $\angle ABC + \angle ACB = 90^\circ$）。省略中间连续倒角过程，最终得出 $\angle ABC = 90^\circ$，所以 $CA$ 为 $\triangle ABC$ 外接圆的直径。</p>
-<p><strong>点评/变式</strong>：本题综合切线、四点共圆、相似与直径判定。关键突破口是化积式为比例，构造相似三角形，并充分利用弦切角将切边角转化为圆周角，使得角等关系可以传递。直径判定最终落脚在圆周角为90°，因此倒角的目标是找到或构造出直角。变式训练中可尝试交换条件与结论，如“若 $CA$ 为直径，求证 $B,E,F,C$ 共圆”等，强化对切线性质和四点共圆的熟练程度。</p>
+<h3>1. 2014-文-22（切割线定理的证明及应用）</h3>
+<p><strong>题目</strong> 如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交于 $B,C$。求证：$PA^2 = PB \cdot PC$。</p>
+<p><strong>思路</strong> 连接 $AB,AC$，利用弦切角定理找等角，证明 $\triangle PAB \sim \triangle PCA$，得出比例式。</p>
+<p><strong>步骤</strong>
+- 连接 $AB, AC$。
+- 因为 $PA$ 是切线，$A$ 为切点，由弦切角定理得 $\angle PAB = \angle PCA$。
+- 在 $\triangle PAB$ 与 $\triangle PCA$ 中，$\angle PAB = \angle PCA$，且 $\angle APB = \angle CPA$（公共角）。
+- 所以 $\triangle PAB \sim \triangle PCA$。
+- 对应边成比例：$\dfrac{PA}{PC} = \dfrac{PB}{PA}$，即 $PA^2 = PB \cdot PC$。</p>
+<p><strong>点评/变式</strong> 该结论就是切割线定理。基本图形中始终存在母子相似，识别“公共角+弦切角”是破题关键。若图形中还有另一条割线 $PDE$，同理可得 $PA^2 = PD \cdot PE$，进而推出 $PB \cdot PC = PD \cdot PE$（割线定理）。</p>
+<h3>2. 2013-文-22（切线性质+四点共圆证直径）</h3>
+<p><strong>题目</strong> 如图，$CD$ 为 $\triangle ABC$ 外接圆的切线，$AB$ 的延长线交直线 $CD$ 于点 $D$，$E,F$ 分别为弦 $AB$ 与弦 $AC$ 上的点，且 $BC\cdot AE = DC\cdot AF$，$B,E,F,C$ 四点共圆。证明：$CA$ 是 $\triangle ABC$ 外接圆的直径。</p>
+<p><strong>思路</strong> 将乘积式化为比例式，结合弦切角定理与切割线定理的相似推出 $\triangle AEF \sim \triangle ADC$，得到 $\angle AFE = \angle ACD = \angle ABC$；再利用 $B,E,F,C$ 共圆得 $\angle EFC = \angle ABC$，由 $A,F,C$ 共线推得 $\angle AFE = \angle EFC = 90^\circ$，从而 $\angle ABC = 90^\circ$，得证。</p>
+<p><strong>步骤</strong>
+- 由 $CD$ 切外接圆于 $C$，得弦切角 $\angle DCB = \angle CAB$，又 $\angle D$ 为公共角，则 $\triangle DBC \sim \triangle DCA$。
+- 从相似得 $\dfrac{DC}{DA} = \dfrac{BC}{CA}$，即 $\dfrac{BC}{DC} = \dfrac{CA}{DA}$。
+- 已知 $BC \cdot AE = DC \cdot AF$，改写为 $\dfrac{BC}{DC} = \dfrac{AF}{AE}$。
+- 结合上述两比例得 $\dfrac{AF}{AE} = \dfrac{CA}{DA}$。
+- 又 $\angle EAF = \angle DAC$，故 $\triangle AEF \sim \triangle ADC$。
+- 由相似得 $\angle AFE = \angle ACD$；又由弦切角定理，$\angle ACD = \angle ABC$，所以 $\angle AFE = \angle ABC$。
+- 因为 $B,E,F,C$ 四点共圆，$\angle EFC$ 是圆内接四边形 $BCFE$ 的外角，所以 $\angle EFC = \angle EBC = \angle ABC$。
+- 于是 $\angle AFE = \</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2014-文-22.html">2014-文-22</a>（2014 · 中） 根据切线及割线关系求线段长度或角度，考查切割线定理的应用。</li>

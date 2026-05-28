@@ -33,61 +33,63 @@
 </ul>
 <h2>知识精要</h2>
 <ul>
-<li><strong>简谐运动表达式</strong>：$y = A\sin(\omega t + \varphi)$ 或 $y = A\cos(\omega t + \varphi)$。<br />
-  其中 $A$ 为振幅，$\omega = \dfrac{2\pi}{T} = 2\pi f$ 为角频率（圆频率），$\varphi$ 为初相。  </li>
-<li><strong>各量确定</strong>：  </li>
-<li>振幅 $A$：由最大位移绝对值或结合初始位移与速度通过旋转矢量求得。  </li>
-<li>周期 $T$ 与 $\omega$：利用质点从特定位置（如最大位移、平衡位置）首次到达另一位置的时间与 $T/4$ 等的关系。  </li>
-<li>初相 $\varphi$：设出标准式后，代入 $t=0$ 的位移 $y_0$，得 $\sin\varphi = \dfrac{y_0}{A}$（或余弦），再结合此时速度方向（平衡位置向上/向下）确定 $\varphi$ 的唯一值。  </li>
-<li><strong>适用条件</strong>：质点做简谐运动，表达式只对单一振动质点；若涉及波，要区分波动方程与振动方程，振动方程是描述某固定质点的位移随时间变化。</li>
+<li><strong>简谐运动的表达式</strong>：$y = A\sin(\omega t + \varphi_0)$ 或 $y = A\cos(\omega t + \varphi_0)$。  </li>
+<li>$A$ — 振幅（质点离开平衡位置的最大位移）；  </li>
+<li>$\omega$ — 圆频率，$\omega = \dfrac{2\pi}{T} = 2\pi f$，$T$ 为周期；  </li>
+<li>$\varphi_0$ — 初相，由 $t = 0$ 时质点的位移和速度方向共同决定。</li>
+<li><strong>波动基本关系</strong>（简谐波沿 $x$ 轴传播）：  </li>
+<li>波速 $v = \dfrac{\Delta x}{\Delta t}$（在介质中由振动状态传播的时间与距离计算）；  </li>
+<li>波长 $\lambda = vT$；  </li>
+<li>质点振动周期等于波的周期 $T$。</li>
+<li><strong>由状态求初相</strong>：已知 $t = 0$ 时位移 $y_0$，可列出 $y_0 = A\sin\varphi_0$（或余弦形式），再结合下一时刻的运动方向确定 $\varphi_0$ 所在象限，求得具体值。常用特殊角对应值。</li>
 </ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>审题区分振动与波动</strong>：明确所求是质点的振动方程还是波的表达式，振动方程只含时间变量 $t$。  </li>
-<li><strong>求振幅 $A$</strong>：  </li>
-<li>若已知质点处于波峰或波谷，则振幅即位移绝对值；  </li>
-<li>若已知某时刻位移与速度方向，可结合 $A = \dfrac{|y|}{\sin(\omega t + \varphi)}$ 或旋转矢量图求。  </li>
-<li>在波动问题中，可结合空间几何与两点振动状态联动求 $A$。  </li>
-<li><strong>求周期 $T$（或 $\omega$）</strong>：  </li>
-<li>质点从最大位移第一次回到平衡位置用时 $T/4$；  </li>
-<li>从平衡位置到最大位移用时 $T/4$；  </li>
-<li>利用不同质点（如波峰处质点与另一质点）回平衡位置的时间差，结合传播关系求出 $T$。  </li>
-<li><strong>设振动方程并定初相 $\varphi$</strong>：  </li>
-<li>通常设为 $y = A\sin(\omega t + \varphi)$ 或 $y = A\cos(\omega t + \varphi)$；  </li>
-<li>代入 $t=0$ 的位移，解出 $\sin\varphi$，再判断 $\varphi$ 所在象限（由 $t=0$ 时速度方向定）；  </li>
-<li>若设为余弦，则 $y_0 = A\cos\varphi$，同样结合速度定 $\varphi$。  </li>
-<li><strong>检验</strong>：将所得方程代入另一已知时刻的状态验证。</li>
+<li><strong>挖掘周期信息</strong>：从题目给出的质点“第一次回到平衡位置”等时间条件，结合振动过程的对称性，求出周期 $T$。  </li>
+<li>质点从最大位移处回到平衡位置用时为 $\dfrac{T}{4}$，从某一位移回到平衡位置通常需要参考振动方程计算。</li>
+<li><strong>求波速与波长</strong>：利用两个质点之间的位置差 $\Delta x$ 和振动状态传播的时间差 $\Delta t$，由 $v = \dfrac{\Delta x}{\Delta t}$ 得波速；再通过 $\lambda = vT$ 求波长，并验证是否满足题给的波长约束（如“波长不小于某值”）。</li>
+<li><strong>建立振动方程</strong>：以质点 $O$ 为例，设 $y_O = A\sin(\omega t + \varphi_0)$（或余弦形式）。  </li>
+<li>由题中给出的 $t = 0$ 时 $y_O$ 的值得到 $A\sin\varphi_0$；  </li>
+<li>由其他时刻（如回到平衡位置的时刻）位移为 $0$，列出 $\sin(\omega t_1 + \varphi_0) = 0$，求出 $\varphi_0$ 和 $A$；  </li>
+<li>检验振动的速度方向以避免多解。</li>
+<li><strong>规范表达</strong>：结果中周期、波速、波长带单位；位移关系式写成 $y = 0.08\sin\left(\dfrac{5\pi}{3}t + \dfrac{\pi}{6}\right)\ \text{m}$ 等标准形式。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>把任意位置首次回平衡位置的时间直接当 $T/4$</strong>：只有从最大位移（波峰或波谷）或平衡位置到最大位移才为 $T/4$；否则需靠方程或旋转矢量计算。  </li>
-<li><strong>忽略速度方向导致初相多解</strong>：$\sin\varphi = y_0/A$ 在 $(-\pi, \pi]$ 内通常有两解，必须根据此时质点是向平衡位置靠近还是远离来判定正负。  </li>
-<li><strong>混淆振动方程与波动方程</strong>：振动方程只有 $t$，波动方程含 $t$ 和 $x$，且波动方程中的初相需考虑坐标原点。若题目要求“质点O的位移随时间变化”，应写纯振动方程。  </li>
-<li><strong>振幅取值错误</strong>：当初始位移不是最大位移时，不能直接将初始位移当成振幅，需结合其他条件（如波长限制、另一质点状态）解出 $A$。  </li>
-<li><strong>用 $\lambda \ge 10\,\text{cm}$ 等限定条件决定波长取值</strong>：易忽略题目隐含取舍，导致多解或错解。</li>
+<li><strong>直接用 $T/4$ 处理非特殊位置</strong>：质点第一次回到平衡位置不一定对应 $T/4$，只有当从最大位移处开始时才成立。本题 $O$ 在 $t=0$ 时位移为 $4\ \text{cm}$，并非波峰或波谷，不能直接套用。</li>
+<li><strong>忽视波长限制条件</strong>：通过机械波传播时间计算波速时，可能存在多解（相隔整数个周期），必须利用“波长不小于 $10\ \text{cm}$”这样的条件排除不合理值。</li>
+<li><strong>初相的多解性</strong>：由 $y_0 = A\sin\varphi_0$ 可得 $\varphi_0$ 的一般解，需结合质点下一时刻的运动方向（如向平衡位置运动，即位移减小方向）锁定正确象限，避免错误初相导致位移关系式反向。</li>
+<li><strong>振幅非直接给出</strong>：题中 $y_O(0) = 4\ \text{cm}$ 并非振幅，振幅需要结合其他时刻的位移方程联立求解。</li>
+<li><strong>混淆质点的振动与波的传播</strong>：质点只在自己平衡位置附近振动，波速是振动状态传播的速度。$t = 1\ \text{s}$ 时质点 $A$ 第一次回到平衡位置，这个时刻是质点 $A$ 自身振动的时间，不是波从 $O$ 传到 $A$ 的时间。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3><strong>题目</strong>（2016·新课标Ⅱ·16）</h3>
-<p>一列简谐横波沿 $x$ 轴正向传播，波长不小于 $10\,\text{cm}$。$O$ 和 $A$ 平衡位置分别在 $x=0$ 和 $x=5\,\text{cm}$。$t=0$ 时，质点 $O$ 位移 $y=4\,\text{cm}$，质点 $A$ 处于波峰；$t=\dfrac{1}{3}\,\text{s}$ 时 $O$ 第一次回到平衡位置，$t=1\,\text{s}$ 时 $A$ 第一次回到平衡位置。求：<br />
-（ⅰ）周期、波速、波长；<br />
+<p><strong>题目</strong><br />
+一列简谐横波沿 $x$ 轴正向传播，波长 $\lambda \geq 10\ \text{cm}$。$O$ 和 $A$ 的平衡位置在 $x=0$ 和 $x=5\ \text{cm}$。$t=0$ 时观测，$O$ 的位移 $y_O=4\ \text{cm}$，$A$ 处于波峰；$t=\dfrac{1}{3}\ \text{s}$ 时 $O$ 第一次回到平衡位置，$t=1\ \text{s}$ 时 $A$ 第一次回到平衡位置。求：<br />
+（ⅰ）周期、波速和波长；<br />
 （ⅱ）质点 $O$ 的位移随时间变化的关系式。</p>
 <p><strong>思路</strong><br />
-- 由 $A$ 最初在波峰、$1\,\text{s}$ 首次回平衡位置得 $T/4 = 1\,\text{s}$，故 $T=4\,\text{s}$。<br />
-- 由 $O$、$A$ 间距 $5\,\text{cm}$ 和 $t=0$ 时 $A$ 为波峰、$O$ 位移 $4\,\text{cm}$，结合 $\lambda\ge 10\,\text{cm}$ 可推振幅 $A_0$ 和波长 $\lambda$。利用 $O$ 在 $1/3\,\text{s}$ 回平衡位置确定其振动初相，进而得到波长与波速。<br />
-- 写出 $O$ 点的振动方程 $y_O = A\sin(\omega t + \varphi)$，代入初始条件求出 $A$ 和 $\varphi$。</p>
+（ⅰ）由 $A$ 在 $t=0$ 时处于波峰，可知 $A$ 从最大位移第一次回到平衡位置用时 $\dfrac{T}{4}$，从而直接得到周期 $T$。再由波速的定义，分析 $t=0$ 时 $A$ 为波峰这一状态是从 $O$ 传播过去的，结合 $O$ 的状态和传播时间，求出波速和波长。<br />
+（ⅱ）设 $y_O = A\sin(\omega t + \varphi_0)$，圆频率 $\omega = \frac{2\pi}{T}$。利用 $t=0$ 时 $y_O = 4\ \text{cm}$ 和 $t=\frac{1}{3}\ \text{s}$ 时 $y_O = 0$，求振幅 $A$ 和初相 $\varphi_0$，得出振动方程。</p>
 <p><strong>步骤</strong><br />
-1. <strong>求周期</strong>：$A$ 从波峰（最大位移）首次回到平衡位置用时 $\dfrac{T}{4}=1\,\text{s}$，得 $T=4\,\text{s}$。<br />
-2. <strong>求振幅与波长</strong>：设 $O$ 振动方程为 $y_O = A\sin(\omega t + \varphi)$，$t=0$ 时 $y_O = 4\,\text{cm} = A\sin\varphi$。$t=\dfrac{1}{3}\,\text{s}$ 时 $y_O=0$，得 $A\sin\left(\dfrac{2\pi}{4}\cdot\dfrac{1}{3}+\varphi\right)=0$。<br />
-   解得 $\omega = \dfrac{\pi}{2}\,\text{rad/s}$，由此 $\sin\left(\dfrac{\pi}{6}+\varphi\right)=0$，$\dfrac{\pi}{6}+\varphi = k\pi$。结合初相范围与 $O$ 正向平衡位置运动（$t=0$ 时速度应为负，因向下回平衡位置），得 $\varphi = \dfrac{5\pi}{6}$。则 $\sin\varphi = \dfrac12$，故 $A = \dfrac{4\,\text{cm}}{1/2} = 8\,\text{cm}$。<br />
-   $t=0$ 时 $A$ 在波峰，$O$ 与 $A$ 间距 $\Delta x = 5\,\text{cm}$，波向右传播，$O$ 相位落后 $A$。$A$ 的振动方程为 $y_A = 8\sin\left(\dfrac{\pi}{2} t + \dfrac{\pi}{2}\right)$（$t=0$ 波峰），或直接用余弦 $8\cos\left(\dfrac{\pi}{2}t\right)$。由两点相位差 $\Delta\varphi = \dfrac{2\pi\Delta x}{\lambda}$，且在 $t=0$ 时 $y_O=4\,\text{cm}$（正位移），$A$ 在正最大，故 $O$ 比 $A$ 相位落后 $\dfrac{\pi}{3}$（因为 $\sin(\pi/2 - \pi/3)=\sin(\pi/6)=1/2$，再考虑振幅得 4 cm）。这样 $\dfrac{2\pi\cdot5}{\lambda} = \dfrac{\pi}{3} + 2k\pi$，由于 $\lambda\ge10\,\text{cm}$，$5/\lambda \le 0.5$，取 $k=0$ 得 $\dfrac{10\pi}{\lambda} = \dfrac{\pi}{3}$，$\lambda = 30\,\text{cm}$。<br />
-3. <strong>波速</strong>：$v = \dfrac{\lambda}{T} = \dfrac{30}{4}\,\text{cm/s} = 7.5\,\text{cm/s}$。<br />
-4. <strong>振动方程</strong>：将 $T=4\,\text{s}$、$\omega=\dfrac{\pi}{2}$、$A=8\,\text{cm}$、$\varphi=\dfrac{5\pi}{6}$ 代入正弦形式，得<br />
-   $$y_O = 8\sin\left(\dfrac{\pi}{2}t + \dfrac{5\pi}{6}\right)\,\text{cm}$$<br />
-   或等价余弦形式 $y_O = 8\cos\left(\dfrac{\pi}{2}t + \dfrac{\pi}{3}\right)\,\text{cm}$。</p>
-<p><strong>点评/变式</strong><br />
-- 本题关键两步：利用波峰质点回平衡位置时间直接得出周期；利用两点振动状态与波程差求波长时，需结合波长限制保留正确解。<br />
-- 初相确定务必结合速度方向，不能只由位移。若漏判速度方向，$\varphi$ 可能误取 $\dfrac{\pi}{6}$，导致振动方程反向。<br />
-- 变式：若波长无下限约束，可能出现多解 $\lambda = \dfrac{30}{12k+1}\,\text{cm}$，此时需由题干筛选。</p>
+（ⅰ）<br />
+1. 质点 $A$ 在 $t=0$ 处于波峰（正最大位移），第一次回到平衡位置用时 $\dfrac{T}{4} = 1\ \text{s}$，得 $T = 4\ \text{s}$。<br />
+2. $t=0$ 时 $A$ 处为波峰，说明振动状态“波峰”在 $t=0$ 时正位于 $x=5\ \text{cm}$ 处。该状态是由波源方向传来的，其到达 $A$ 的时间即为 $t=0$。我们考虑 $O$ 点的状态：$O$ 在 $t=0$ 时位移 $4\ \text{cm}$ 且速度沿 $y$ 轴负方向（“第一次回到平衡位置”意味着此时向平衡位置运动，而 $4\ \text{cm}&gt;0$ 则速度向下）。波沿 $x$ 正向传播，因此 $O$ 点的振动相位超前于 $A$。设波峰从 $O$ 传到 $A$ 用时 $\Delta t$，则 $v = \dfrac{\Delta x}{\Delta t} = \dfrac{5\ \text{cm}}{\Delta t}$。<br />
+   我们需要寻找 $\Delta t$。已知 $O$ 在 $t=0$ 位移 $4\ \text{cm}$，速度向下，从此时到第一次到达波峰的时间应为振动到正最大位移的时间。<br />
+   设 $O$ 的振动方程为 $y_O = A\sin(\omega t + \varphi_0)$。$t=0$ 时 $y_O=4\ \text{cm}$，且 $v&lt;0$；$t=\frac{1}{3}\ \text{s}$ 时第一次 $y=0$。在正弦函数中，从正位移回到平衡位置的时间与初相有关。但此处我们可以利用波峰传播：$O$ 点在 $t=0$ 时不是波峰，但它可以推算出波峰到达 $O$ 的时刻。更直接的方法：利用 $O$ 第一次回到平衡位置的时间 $\frac{1}{3}\ \text{s}$，可求 $O$ 的周期和初相，然后得 $O$ 的波峰时刻。但步骤（ⅰ）可以用另一种思路：$t=0$ 时 $A$ 已在波峰，说明波峰到达 $A$ 的时刻为 $t=0$。该波峰是从 $O$ 点左侧传来的，到达 $O$ 的时刻为 $t = -\Delta t$（相对于 $A$ 落后）。<br />
+   因为 $O$ 和 $A$ 相距 $5\ \text{cm}$，波峰从 $O$ 传到 $A$ 的时间 $\Delta t = \dfrac{5\ \text{cm}}{v}$。同时，$O$ 在 $t=0$ 位移 $4\ \text{cm}$，且向平衡位置运动。由振动方程，若 $O$ 第一次到达波峰的时刻为 $t_P$，则 $t_P$ 必大于 $0$。波峰在 $O$ 点的时刻为 $t_P$，该状态传到 $A$ 的时刻为 $t_P + \Delta t$，而这个时刻题目暗示为 $0$？波峰在 $A$ 的时刻为 $t=0$。因此 $t_P + \Delta t = 0$ 或 $t_P + \Delta t = nT$。<br />
+   结合 $A$ 处于波峰，波峰是周期性出现的。因为波沿 $x$ 正向传播，故 $A$ 的波峰是由 $O$ 侧传来的前一周期或同一周期的波峰。由于 $t=0$ 时 $A$ 正位于波峰，而 $O$ 位移 $4\ \text{cm}$ 并非波峰，说明此时波峰已经通过了 $O$，但还未到达 $A$？矛盾。<br />
+   正确的推理：$t=0$ 时 $A$ 正处于波峰，表明这个波峰此刻就在 $x=5\ \text{cm}$。这个波峰在较早的时刻经过 $O$。设其经过 $O$ 的时刻为 $t_0$（$t_0 &lt; 0$）。则传播时间 $\Delta t' = 0 - t_0 = \frac{5\ \text{cm}}{v}$。同时，在 $t=0$ 时 $O$ 的位移为 $4\ \text{cm}$，且向平衡位置运动，那么从 $t_0$（波峰在 $O$）到 $t=0$，$O$ 振动了 $\Delta t'$ 时间。波峰处位移 $A$，经过 $\Delta t'$ 后位移变为 $4\ \text{cm}$，速度向下：$A\cos(\omega 0 + \varphi_0)$ 形式不太顺。<br />
+   换个思路：利用 $A$ 的状态求周期：$A$ 从波峰到平衡位置 $T/4 = 1 \text{s}$，所以 $T=4\text{s}$。<br />
+   求波速：波速可以由 $O$ 到 $A$ 的振动状态传播求得。考虑 $t=0$ 时 $O$ 位移 $4\ \text{cm}$ 且向下运动，这一状态传播到 $A$ 需要时间 $\Delta t_x = \frac{5\ \text{cm}}{v}$。当 $O$ 的状态传到 $A$ 时，$A$ 也将具有位移 $4\ \text{cm}$ 且向下运动。但 $A$ 在 $t=0$ 时是波峰，随后向平衡位置运动，那么在什么时刻 $A$ 的位移变为 $4\ \text{cm}$ 且向下？$A$ 的振动可设为 $y_A = A\cos\omega t$（因为 $t=0$ 波峰）。由 $A\cos\omega t_1 = 4\ \text{cm}$，且速度向下，即 $t_1$ 时 $\omega t_1$ 在第一象限。而 $t_1$ 应该等于 $\Delta t_x$（因为 $O$ 在 $t=0$ 的状态经过 $\Delta t_x$ 到达 $A$）。这可以列式。<br />
+   但更简单的方法是直接求出 $O$ 的振动方程，再求波速。我们可以先完成（ⅱ），得振动方程和波速。实际上，$O$ 的振动方程求出后，$O$ 在 $t=0$ 时的相位与 $A$ 在 $t=0$ 时的相位之差即可得波速。<br />
+<strong>标准解法</strong>：由 $A$ 从波峰到平衡位置时间 $1 \text{s}$ 得 $T=4\ \text{s}$。<br />
+   设波速为 $v$，则波从 $O$ 传到 $A$ 需时 $\Delta t = \frac{5}{v}$。$t=0$ 时 $A$ 为波峰，则 $t=-\Delta t$ 时 $O$ 为波峰。即 $O$ 在 $t=0$ 之前 $\Delta t$ 时刻处于波峰。从波峰到 $t=0$ 的位移 $4\ \text{cm}$，经过时间 $\Delta t$。对 $O$ 用余弦形式（以波峰为时间起点）：设 $y_O = A\cos\omega t'$，其中 $t' = t + \Delta t$（因为 $t=-\Delta t$ 时 $t'=0$）。则在 $t=0$ 时，$t'=\Delta t$，$\omega = \frac{2\pi}{T} = \frac{\pi}{2}$ rad/s。有 $A\cos(\frac{\pi}{2}\Delta t) = 4\ \text{cm}$。<br />
+   又已知 $t=\frac{1}{3}\ \text{s}$ 时 $O$ 第一次回到平衡位置，即 $y_O=0$。此时 $t' = \frac{1}{3} + \Delta t$，$\cos\left[\frac{\pi}{2}\left(\frac{1}{3}+\Delta t\right)\right] = 0$，且为第一次。第一次出现零值对应相位 $\frac{\pi}{2}$（从最大值下降）。所以 $\frac{\pi}{2}\left(\frac{1}{3}+\Delta t\right) = \frac{\pi}{2}$，得 $\frac{1}{3}+\Delta t = 1$，$\Delta t = \frac{2}{3}\ \text{s}$。则波速 $v = \frac{5\ \text{cm}}{\frac{2}{3}\ \text{s}} = 7.5\ \text{cm/s}=0.075\ \text{m/s}$。波长 $\lambda = vT = 0.075 \times 4 = 0.3\ \text{m} = 30\ \text{cm}$，满足 $\lambda \geq 10\ \text{cm}$。<br />
+   再把 $\Delta t$ 代回求振幅：$A\cos\left(\frac{\pi}{2}\cdot\frac{2}{3}\right) = A\cos\frac{\pi}{3} = A\cdot\frac{1}{2} = 4$，得 $A = 8\ \text{cm}$。  </p>
+<p>（ⅱ）<br />
+$O$ 的圆频率 $\omega = \frac{2\pi}{T} = \frac{\pi}{2}\ \text{rad/s}$。设 $y_O = A\sin(\omega t + \varphi_0)$ 或用上面的 $y_O = 0.08\cos\left[\frac{\pi}{2}(t+\frac{2}{3})\right]$ 化简。用正弦形式：$y_O = 8\sin\left(\frac{\pi}{2}t + \varphi_0\right)\ \text{cm}$。<br />
+$t=0$ 时 $y_O=4$，即 $8\sin\varphi_0 = 4 \Rightarrow \sin\varphi_0 = \frac{1}{2}$，$\varphi_0 = \frac{\pi}{6}$ 或 $\frac{5\pi}{6}$。<br />
+速度 $v_y = 8</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/物理/2016-新课标Ⅱ-16.html">2016-新课标Ⅱ-16</a>（2016 · 中） 已知波传播中两质点的位置和时间，求周期、波速、波长及质点振动方程。</li>

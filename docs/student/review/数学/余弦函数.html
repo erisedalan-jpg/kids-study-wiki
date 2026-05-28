@@ -33,59 +33,47 @@
 </ul>
 <h2>知识精要</h2>
 <ul>
-<li><strong>余弦函数的定义与图像</strong>：余弦函数 $y = \cos x$，定义域 $\mathbf{R}$，值域 $[-1,1]$，周期 $2\pi$，偶函数，在 $[2k\pi, 2k\pi+\pi]$ 上单调递减，在 $[2k\pi-\pi, 2k\pi]$ 上单调递增，图像关于 $y$ 轴对称。</li>
-<li><strong>余弦函数的常用公式</strong>：</li>
-<li>平方关系：$\cos^2 x + \sin^2 x = 1$.</li>
-<li>两角和与差：$\cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta$.</li>
-<li>二倍角公式：$\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha$.</li>
-<li>降幂公式：$\cos^2\alpha = \dfrac{1+\cos 2\alpha}{2}$，$\sin^2\alpha = \dfrac{1-\cos 2\alpha}{2}$.</li>
-<li>诱导公式：$\cos(\pi \pm \alpha) = -\cos\alpha$，$\cos(2\pi - \alpha) = \cos\alpha$，$\cos(\frac{\pi}{2} \pm \alpha) = \mp \sin\alpha$.</li>
-<li>和差化积：$\cos\alpha + \cos\beta = 2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}$，$\cos\alpha - \cos\beta = -2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}$.</li>
-<li><strong>三角形中的余弦定理</strong>：在 $\triangle ABC$ 中，角 $A, B, C$ 的对边分别为 $a, b, c$，则 $b^2 = a^2 + c^2 - 2ac\cos B$，变形得 $\cos B = \dfrac{a^2 + c^2 - b^2}{2ac}$.</li>
-<li><strong>隐含条件</strong>：三角形内角和 $A+B+C=\pi$，因此 $\cos B = -\cos(A+C)$，$\sin B = \sin(A+C)$.</li>
+<li><strong>余弦函数定义</strong>：在直角三角形中，锐角 $A$ 的邻边与斜边之比；推广到任意角，在单位圆中横坐标 $x=\cos\theta$。</li>
+<li><strong>基本性质</strong>：定义域 $\mathbb{R}$，值域 $[-1,1]$，偶函数，周期 $2\pi$，在 $[2k\pi,(2k+1)\pi]$ 上递减，在 $[(2k-1)\pi,2k\pi]$ 上递增。</li>
+<li><strong>诱导公式</strong>：$\cos(\pi\pm\theta)=-\cos\theta$，$\cos\left(\frac{\pi}{2}\pm\theta\right)=\mp\sin\theta$，$\cos(-\theta)=\cos\theta$。</li>
+<li><strong>和差公式</strong>：$\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta$。</li>
+<li><strong>和差化积</strong>：$\cos x+\cos y=2\cos\frac{x+y}{2}\cos\frac{x-y}{2}$，$\cos x-\cos y=-2\sin\frac{x+y}{2}\sin\frac{x-y}{2}$。</li>
+<li><strong>余弦定理</strong>：在 $\triangle ABC$ 中，$a^2=b^2+c^2-2bc\cos A$，轮换对称。用于已知两边及夹角求第三边，或已知三边求角。</li>
+<li><strong>三角形内角关系</strong>：$A+B+C=\pi$，$\cos(B+C)=-\cos A$，$\cos\frac{B+C}{2}=\sin\frac{A}{2}$。</li>
 </ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>统一角度与名称</strong>：若条件中含有 $A-C$ 与 $B$，立刻利用 $B = \pi - (A+C)$ 转化为 $\cos B = -\cos(A+C)$，将不同角组合合并为相同或互补角，再利用和差角公式展开或逆用。</li>
-<li><strong>边角互化</strong>：出现边长等式（如 $b^2 = ac$）时，优先用正弦定理 $a=2R\sin A$ 等化为角的关系，或用余弦定理将角的余弦转化为边，根据目标选择方向。求角常常化为纯角的三角函数方程。</li>
-<li><strong>多倍角公式与降幂</strong>：遇到平方、乘积形式时，用降幂公式 $\cos^2 x = \frac{1+\cos 2x}{2}$、积化和差等，将二次化为一次，消去常数，简化方程。</li>
-<li><strong>整体代换与解方程</strong>：将整理出的关于 $\cos$ 或 $\sin$ 的方程式看作整体，利用有界性、特定角范围进行求解，必要时配合均值不等式或二次函数求最值。</li>
-<li><strong>检验角的范围</strong>：求出 $\cos B$ 值后，由已知条件或边长关系确定 $B$ 是锐角还是钝角，再确认唯一解。</li>
+<li><strong>角化边与边化角</strong>：条件含边角混合时，利用正弦定理 $a=2R\sin A$ 或余弦定理统一成边或角的关系。</li>
+<li><strong>三角形内角代换</strong>：出现 $A+B$ 或 $C$ 时，利用 $A+B=\pi-C$ 及诱导公式将不同角统一为单角或两角。</li>
+<li><strong>和差化积消元</strong>：条件如 $\cos(A-C)+\cos B$ 类型，立刻将 $\cos B$ 写为 $-\cos(A+C)$，再用和差化积得到 $\sin A\sin C$ 或 $\cos A\cos C$ 的乘积形式。</li>
+<li><strong>余弦定理求角</strong>：已知三边或两边及一角，列出余弦定理方程求角；若出现 $b^2=ac$ 等乘积条件，常结合正弦定理转化为 $\sin^2 B=\sin A\sin C$。</li>
+<li><strong>多解取舍</strong>：由三角函数值求角时，注意内角范围 $(0,\pi)$，并结合边的大小关系（大边对大角）或隐含不等式（如 $a^2+c^2\ge 2ac$）舍去增根。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>忽视三角形内角限制</strong>：直接将 $A-C$ 和 $B$ 展开而忘记 $A+B+C=\pi$，导致无法化简。务必先利用互补关系将多角统一到少数角。</li>
-<li><strong>和角公式符号错误</strong>：$\cos(A+C) = \cos A\cos C - \sin A\sin C$，注意是减号，转化为 $-\cos B$ 时易漏掉负号。</li>
-<li><strong>降幂时常数项处理失误</strong>：如 $b^2=ac$ 转化为 $\sin^2 B = \sin A\sin C$ 后，降幂出现 $\frac{1-\cos 2B}{2} = \sin A\sin C$，右侧若再用积化和差，注意系数 $\frac12$ 的整体平衡。</li>
-<li><strong>忽略正余弦的有界性</strong>：得到 $\cos(A-C)$ 或 $\cos B$ 的方程后，未检查解是否在 $[-1,1]$ 内，导致引入增根。</li>
-<li><strong>忘记检验角是否合理</strong>：由 $\cos B = \frac12$ 得到 $B=60^\circ$ 或 $300^\circ$，不结合三角形内角范围而误写多解。</li>
-<li><strong>余弦定理边角互化时错用对应关系</strong>：角度与对边必须严格对应，如 $b$ 对应 $B$，切勿张冠李戴。</li>
+<li><strong>忽略三角形内角限制</strong>：$\sin B&gt;0$ 恒成立，但 $\cos B$ 可正可负，直接开方或约分时易忽略符号。</li>
+<li><strong>和差化积记错符号</strong>：$\cos x-\cos y=-2\sin\frac{x+y}{2}\sin\frac{x-y}{2}$，易漏负号。</li>
+<li><strong>余弦定理中夹角误用</strong>：公式 $a^2=b^2+c^2-2bc\cos A$ 必须对应边与对角，用错边角关系导致方程错误。</li>
+<li><strong>边角互化范围扩大</strong>：由 $b^2=ac$ 推出 $\sin^2 B=\sin A\sin C$ 是等价的，但反向时注意边的正实数范围不变；从角等式推边等式时不要直接约去可能为零的因式。</li>
+<li><strong>多解未检验导致失分</strong>：仅由 $\sin B=\frac{\sqrt{3}}{2}$ 得到 $B=\frac{\pi}{3}$ 或 $\frac{2\pi}{3}$ 后，必须代入另一条件验证，否则可能保留增根。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3>2009-理-17（2009年高考全国卷理科数学）</h3>
-<p><strong>题目</strong><br />
-在 $\triangle ABC$ 中，内角 $A, B, C$ 的对边长分别为 $a, b, c$，已知 $\cos(A-C) + \cos B = \frac{3}{2}$，且 $b^2 = ac$，求角 $B$.</p>
-<p><strong>思路</strong><br />
-利用 $B = \pi - (A+C)$ 将 $\cos B$ 化为 $-\cos(A+C)$，代入条件得 $\cos(A-C) - \cos(A+C) = \frac{3}{2}$。左边用和差化积或两角和差公式展开，得出 $\sin A\sin C$ 的表达式。再由 $b^2=ac$ 用正弦定理化为 $\sin^2 B = \sin A\sin C$，联立消去 $\sin A\sin C$，得到关于 $\sin B$ 或 $\cos B$ 的方程，结合三角恒等式和范围求解。也可将 $b^2=ac$ 用余弦定理转化为边的关系，但化为角更直接。</p>
-<p><strong>步骤</strong><br />
-1. 在 $\triangle ABC$ 中，$B = \pi - (A+C)$，于是 $\cos B = -\cos(A+C)$.<br />
-   条件化为 $\cos(A-C) - \cos(A+C) = \frac{3}{2}$.<br />
-2. 展开差与和的余弦：<br />
-   $\cos(A-C) = \cos A\cos C + \sin A\sin C$,<br />
-   $\cos(A+C) = \cos A\cos C - \sin A\sin C$,<br />
-   两式相减：$\cos(A-C) - \cos(A+C) = 2\sin A\sin C$.<br />
-   因此 $2\sin A\sin C = \frac{3}{2}$，即 $\sin A\sin C = \frac{3}{4}$.<br />
-3. 由正弦定理 $a=2R\sin A$，$b=2R\sin B$，$c=2R\sin C$，代入 $b^2 = ac$ 得：<br />
-   $(2R\sin B)^2 = (2R\sin A)(2R\sin C) \Rightarrow \sin^2 B = \sin A\sin C$.<br />
-   结合上一步，$\sin^2 B = \frac{3}{4}$.<br />
-4. 在 $\triangle ABC$ 中，$0 &lt; B &lt; \pi$，$\sin B &gt; 0$，故 $\sin B = \frac{\sqrt{3}}{2}$.<br />
-   所以 $B = \frac{\pi}{3}$ 或 $B = \frac{2\pi}{3}$.<br />
-5. 检验：若 $B = \frac{2\pi}{3}$，则 $\sin B = \frac{\sqrt{3}}{2}$ 依然满足 $\sin^2 B = \frac{3}{4}$。但结合条件 $b^2=ac$ 及余弦定理可进一步判断，实际上 $B=\frac{2\pi}{3}$ 会使 $b$ 最长，但 $b^2=ac$ 与余弦定理联立会导致矛盾（或由此时 $A, C$ 均为小于 $\frac{\pi}{3}$ 的角，$\sin A\sin C$ 的最大值小于 $\frac{3}{4}$）。更简洁的方法：由 $b^2=ac$ 得 $b$ 不是最大边就是中间边，$B$ 不可能为钝角？计算表明 $\sin A\sin C = \frac{3}{4}$，且 $A+C = \frac{2\pi}{3}$，可推出 $\cos(A-C) = 1$，进而 $A=C$，此时 $A=C=\frac{\pi}{3}$，$B=\frac{\pi}{3}$。故舍去 $B = \frac{2\pi}{3}$.<br />
-   综上，$B = \frac{\pi}{3}$.</p>
-<p><strong>点评/变式</strong><br />
-- 本题核心考点是三角恒等变换与正余弦定理的综合应用，需熟练掌握“化多角为单角”、“边角互化”两种主流路径。<br />
-- 易失分点在最后一步定解：不能仅由 $\sin B$ 得两解就草率下结论，务必结合三角形的隐含条件或其他边角关系进行筛解。<br />
-- 变式：若条件改为 $\cos(A-C) + \cos B = 1$，$a, b, c$ 成等比，求 $B$；或给出 $\sin A\sin C$ 具体值反向求等比关系。此类问题均可仿照上述步骤，先将三角函数关系化为正弦积，再用正弦定理沟通边比。</p>
+<p><strong>题目</strong>（2009全国Ⅰ理17改编）：在 $\triangle ABC$ 中，角 $A,B,C$ 的对边分别为 $a,b,c$，已知 $\cos(A-C)+\cos B=\frac{3}{2}$，且 $b^2=ac$，求角 $B$。</p>
+<p><strong>思路</strong>：利用 $A+B+C=\pi$ 将 $\cos B$ 转化为 $-\cos(A+C)$，通过和差化积得到 $\sin A\sin C$ 的值，再由 $b^2=ac$ 结合正弦定理建立关于角 $B$ 的方程，最后用余弦定理或边角关系舍去增根。</p>
+<p><strong>步骤</strong>：
+1. 由 $A+B+C=\pi$ 得 $B=\pi-(A+C)$，故 $\cos B=-\cos(A+C)$。
+   代入已知：
+   $\cos(A-C)-\cos(A+C)=\frac{3}{2}$。
+   和差化积：$\cos(A-C)-\cos(A+C)=-2\sin A\sin(-C)=2\sin A\sin C$。
+   所以 $2\sin A\sin C=\frac{3}{2}$，得 $\sin A\sin C=\frac{3}{4}$。
+2. 由 $b^2=ac$ 及正弦定理 $a=2R\sin A$ 等，得 $(2R\sin B)^2=(2R\sin A)(2R\sin C)$，即 $\sin^2 B=\sin A\sin C$。
+   于是 $\sin^2 B=\frac{3}{4}$，因 $B\in(0,\pi)$，$\sin B&gt;0$，故 $\sin B=\frac{\sqrt{3}}{2}$。
+   所以 $B=\frac{\pi}{3}$ 或 $B=\frac{2\pi}{3}$。
+3. 若 $B=\frac{2\pi}{3}$，则 $\cos B=-\frac{1}{2}$。由余弦定理：
+   $b^2=a^2+c^2-2ac\cos B=a^2+c^2+ac\ge 2ac+ac=3ac$，当且仅当 $a=c$ 时取等。
+   而已知 $b^2=ac$，代入得 $ac\ge 3ac$，即 $2ac\le0$，与 $a,c&gt;0$ 矛盾，故 $B\neq\frac{2\pi}{3}$。
+4. 综上，$B=\frac{\pi}{3}$。</p>
+<p><strong>点评</strong>：本题串联了诱导公式、和差化积、正弦定理、余弦定理及不等式取舍，是余弦函数在三角形中的典型综合应用。变式：若条件改为 $\cos(A-C)+\cos B=1$，$b^2=ac$，可类似解得角 $B$；注意本类问题中“乘积形式”往往引导使用正弦定理角化边或边化角。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2009-理-17.html">2009-理-17</a>（2009 · 中） 考查利用三角形内角关系及余弦公式求解边长。</li>

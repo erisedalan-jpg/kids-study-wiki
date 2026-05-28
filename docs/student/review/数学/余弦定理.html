@@ -33,71 +33,99 @@
 </ul>
 <h2>知识精要</h2>
 <ul>
-<li><strong>余弦定理</strong>：三角形任何一边的平方等于其他两边平方和减去这两边与它们夹角的余弦的积的两倍。
-  $$a^2 = b^2 + c^2 - 2bc\cos A$$
-  $$b^2 = a^2 + c^2 - 2ac\cos B$$
-  $$c^2 = a^2 + b^2 - 2ab\cos C$$</li>
-<li><strong>变形（求角公式）</strong>：
-  $$\cos A = \frac{b^2 + c^2 - a^2}{2bc},\quad \cos B = \frac{a^2 + c^2 - b^2}{2ac},\quad \cos C = \frac{a^2 + b^2 - c^2}{2ab}$$</li>
-<li><strong>适用条件</strong>：已知两边及夹角求第三边；已知三边求角；结合正弦定理实现边角互化；与面积公式 $S = \frac12 bc\sin A$ 配合求解三角形；判断三角形形状（$a^2+b^2 = c^2$ 直角，$<c^2$ 钝角，$>c^2$ 锐角）。</li>
-<li><strong>延伸应用</strong>：在四边形或多边形中，利用同一条对角线在不同三角形中两次使用余弦定理建立等式（四边形的互补角余弦相反：$\cos(\pi - \theta) = -\cos\theta$）；中线模型可借助邻补角余弦符号相反列方程；立体几何中求异面直线夹角或二面角常通过平移构造三角形，再用余弦定理。</li>
+<li><strong>余弦定理</strong>：三角形任何一边的平方等于其他两边平方的和减去这两边与它们夹角的余弦的积的两倍。
+   $$a^2 = b^2 + c^2 - 2bc\cos A$$
+   $$b^2 = a^2 + c^2 - 2ac\cos B$$
+   $$c^2 = a^2 + b^2 - 2ab\cos C$$</li>
+<li><strong>变形（角的余弦表达式）</strong>：
+   $$\cos A = \frac{b^2 + c^2 - a^2}{2bc}$$
+   $$\cos B = \frac{a^2 + c^2 - b^2}{2ac}$$
+   $$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$</li>
+<li><strong>适用条件与场景</strong>：</li>
+<li><strong>已知两边及其夹角</strong>，求第三边。</li>
+<li><strong>已知三边</strong>，求任意一角。</li>
+<li><strong>已知两边和其中一边的对角</strong>，求第三边（常结合二次方程讨论多解）。</li>
+<li><strong>关联定理</strong>：</li>
+<li><strong>正弦定理</strong>：$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R$（$R$ 为外接圆半径）。</li>
+<li><strong>三角形面积公式</strong>：$S = \frac{1}{2}ab\sin C = \frac{1}{2}bc\sin A = \frac{1}{2}ac\sin B$。</li>
+<li><strong>勾股定理</strong>：当 $A=90^\circ$ 时，$a^2 = b^2 + c^2$，是余弦定理的特例。</li>
 </ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>已知两边及夹角求第三边</strong>：直接代入余弦定理，注意系数与角对应关系，计算后开方取正值。</li>
-<li><strong>已知三边求角</strong>：先用余弦定理变形公式求角的余弦值，再结合三角形内角和与边的大小关系确定角的大小。</li>
-<li><strong>边角互化与证明</strong>：对于含边和角的关系式，先用正弦定理将边化为角的正弦，或用余弦定理将角的余弦化为边，目标是统一为边的平方关系或角的关系，再化简证明。如 $a^2 = b^2 + c^2$ 型结论常通过正弦定理化角、和差角公式展开、再用余弦定理消角得到。</li>
-<li><strong>余弦定理+面积公式组合</strong>：题设出现面积与边的关系时，先用 $S=\frac12 bc\sin A$ 求积或某边，再用余弦定理搭桥求其他边或角。如 $S$ 与 $b^2+c^2$ 已知，可求 $a$。</li>
-<li><strong>中线模型与补角模型</strong>：中点在三角形中常用 $\triangle ABD$ 与 $\triangle ADC$ 中 $\angle ADB + \angle ADC = \pi$，其余弦值互为相反数，将两个三角形容斥余弦定理相加减。也可使用向量关系 $AD = \frac12(AB+AC)$ 平方得到边长关系。四边形中 $A+C=\pi$ 时，连接 $BD$，在 $\triangle ABD$ 和 $\triangle BCD$ 中用余弦定理表示 $BD^2$，利用 $\cos A = -\cos C$ 建立等式。</li>
-<li><strong>求最值问题</strong>：由余弦定理得出边的关系式后，结合基本不等式 $b^2+c^2 \ge 2bc$ 或 $(b+c)^2$ 相关形式，求周长、面积或其中一边的最值，务必验证等号成立条件。</li>
-<li><strong>立体几何辅助应用</strong>：平移直线构造三角形后，利用余弦定理求异面直线所成角（注意最终取锐角）；直角三角柱中求线线角也可建系，但几何法用余弦定理计算简洁。</li>
+<li><strong>结构识别与公式选取</strong></li>
+<li>题目中出现“两边一夹角”直接代入余弦定理求对边。</li>
+<li>题目中给出三边或代数关系（如 $a^2+b^2-c^2$ 形式），优先利用余弦定理的推论求角。</li>
+<li>
+<p>“两边一对角”求第三边时，设未知边列方程，利用余弦定理得到二次方程，根据判别式或边长正负讨论解的存在性与个数。</p>
+</li>
+<li>
+<p><strong>边角互化策略</strong></p>
+</li>
+<li><strong>角化边</strong>：利用正弦定理 $a=2R\sin A$、$b=2R\sin B$、$c=2R\sin C$ 将已知条件全部转化为边的关系，再结合余弦定理消元。</li>
+<li><strong>边化角</strong>：将边的关系全部转化为角的正弦，利用三角恒等变换化简求角。</li>
+<li>
+<p><strong>证明$2a^2=b^2+c^2$等线性组合关系</strong>：高频使用 $\sin(A+C)=\sin B$ 及两角和差公式展开，统一角度后化简。</p>
+</li>
+<li>
+<p><strong>对边对角的统一处理</strong></p>
+</li>
+<li>若题目涉及“三角形面积”与“已知一角”，立即联立 $S=\frac{1}{2}\text{两边}\cdot\sin\text{夹角}$ 与余弦定理，构造方程组求解未知边。</li>
+<li>
+<p>遇到平面四边形或多边形，通过添加对角线将问题转化为多个三角形，逐次使用正、余弦定理传递边长。</p>
+</li>
+<li>
+<p><strong>几何条件的代数化</strong></p>
+</li>
+<li>中线条件：在相关三角形中使用余弦定理，或利用向量中线长公式，注意互补角余弦互为相反数。</li>
+<li>折叠、翻折问题：关注翻折前后不变的线段长度与几何关系，对固定三角形集中施用余弦定理。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>符号错误</strong>：当角为钝角时 $\cos A&lt;0$，计算 $a^2 = b^2+c^2 - 2bc\cos A$ 时负负得正，实际会拉长对边，漏掉负号会导致边长算短；求角时得到负值应得钝角，但误判为锐角。</li>
-<li><strong>补角余弦反号疏忽</strong>：四边形或多边形内角互补时，易写错 $\cos(180^\circ-\theta)=-\cos\theta$ 的符号，导致方程列错。</li>
-<li><strong>多解讨论遗漏</strong>：在涉及角度值时，若由正弦定理得两解，需结合余弦定理或“大边对大角”检验取舍；求边时通常取正数。</li>
-<li><strong>面积公式混淆</strong>：面积公式是 $S=\frac12 bc\sin A$，中间是正弦而不是余弦，易与余弦定理中的余弦项混用。</li>
-<li><strong>异面直线夹角范围</strong>：余弦定理算出异面直线夹角余弦值为负时，应取其绝对值作为答案，因为异面直线夹角范围为 $(0,\frac{\pi}{2}]$。</li>
-<li><strong>基本不等式取等条件</strong>：求最值时忽略三角形边长可为相等或具体数值的可行性，盲目套用导致错误。</li>
+<li><strong>角的范围与多解取舍</strong>：已知两边及一边对角时，忽略判断“大边对大角”导致漏解或增解。三角形内角范围 $(0^\circ, 180^\circ)$，余弦值对应角的唯一性（单调）优于正弦值。</li>
+<li><strong>公式混淆与符号错误</strong>：误记 $a^2 = b^2 + c^2 - 2bc\cos A$ 为加号或与向量点积混淆，导致最终结果符号出错。</li>
+<li><strong>结构误判</strong>：看到形似 $b\cos C + c\cos B$ 的结构未利用射影定理（即 $a = b\cos C + c\cos B$）简化，而反复强算两角和的三角函数，徒增计算量。</li>
+<li><strong>隐含条件疏漏</strong>：</li>
+<li>互补角关系：$\cos(\pi - \theta) = -\cos\theta$ 在四边形内角互补时频繁使用，方向反了导致边长计算错误。</li>
+<li>中线条件：中点在两个小三角形中产生的互补角，其余弦值互为相反数，构建方程时符号极易弄错。</li>
+<li>面积公式系数丢掉 $\frac{1}{2}$。</li>
+<li><strong>计算层面常见失误</strong>：</li>
+<li>平方根开方时不加讨论直接取正，忽视线段长必须为正的事实。</li>
+<li>将异面直线夹角误用三角形中余弦定理，未注意取绝对值或锐角的规定。</li>
 </ul>
 <h2>代表题精讲</h2>
-<h3>1. 2023·新课标Ⅱ·17（中线+面积+余弦定理）</h3>
-<p><strong>题目</strong>：在 $\triangle ABC$ 中，$S_{\triangle ABC} = 3$，$D$ 为 $BC$ 中点，$AD=1$。
-（1）若 $\angle ADC = \frac{\pi}{3}$，求 $\tan B$；
-（2）若 $b^2+c^2=8$，求 $b,c$。</p>
-<p><strong>思路</strong>：第（1）问利用 $AD$ 中线及邻补角关系，$\triangle ADC$ 与 $\triangle ADB$ 面积各为一半，先求边长 $a$，后在 $\triangle ABD$ 中由余弦定理求 $c$，再用余弦定理求 $\cos B$ 与 $\tan B$。第（2）问利用中线两侧补角的余弦互为相反数列方程，结合余弦定理和 $b^2+c^2=8$ 求 $a$，再求面积配合面积公式得角，最后解出 $b,c$。</p>
+<p><strong>题目</strong>：2023-新课标Ⅱ-17</p>
+<p><strong>题目简述</strong>：$\triangle ABC$ 面积为 $\sqrt{3}$，$D$为$BC$中点，$AD=1$。 (1) $\angle ADC = \frac{\pi}{3}$，求 $\tan B$；(2) $b^2 + c^2 = 8$，求 $b,c$。</p>
+<p><strong>思路</strong>：(1) 先用面积公式与已知角在 $\triangle ADC$ 中求出 $a$，再利用中线分割形成的互补角关系在 $\triangle ABD$ 中用余弦定理求 $c$，最后在 $\triangle ABC$ 中求 $B$ 的余弦与正切。(2) 在 $\triangle ABC, \triangle ABD, \triangle ACD$ 中反复利用余弦定理与互补角关系消去 $\cos \angle ADC$，得到 $a,b,c$ 关系式，联立已知条件求解。</p>
 <p><strong>步骤</strong>：
-（1）$\because D$ 为中点且 $S_{\triangle ABC}=3$，$\therefore S_{\triangle ADC} = \frac32$。又 $S_{\triangle ADC} = \frac12 \cdot AD \cdot DC \cdot \sin\frac{\pi}{3} = \frac12 \cdot 1 \cdot \frac{a}{2} \cdot \frac{\sqrt{3}}{2} = \frac{3}{2} \Rightarrow a=4$。在 $\triangle ABD$ 中，$\angle ADB = \frac{2\pi}{3}$，$AD=1$，$BD=2$，由余弦定理 $c^2 = 1^2+2^2-2\cdot 1\cdot 2\cos\frac{2\pi}{3} = 5 -4(-\frac12)=7$，$c=\sqrt{7}$。再由 $\triangle ABD$ 余弦定理求 $\cos B = \frac{7+4-1}{2\cdot \sqrt{7}\cdot 2} = \frac{5\sqrt{7}}{14}$，$\sin B = \frac{\sqrt{21}}{14}$，$\tan B = \frac{\sqrt{3}}{5}$。
-（2）设 $BD=DC=\frac a2$，在 $\triangle ABD$ 和 $\triangle ADC$ 中分别用余弦定理：
-$c^2 = 1^2 + (\frac a2)^2 - 2\cdot 1\cdot \frac a2 \cos\angle ADB$，
-$b^2 = 1^2 + (\frac a2)^2 - 2\cdot 1\cdot \frac a2 \cos\angle ADC$。
-因 $\angle ADB + \angle ADC = \pi$，$\cos\angle ADC = -\cos\angle ADB$，两式相加得 $b^2+c^2 = 2 + \frac{a^2}{2}$，已知 $b^2+c^2=8 \Rightarrow \frac{a^2}{2}=6 \Rightarrow a=2\sqrt{3}$。在 $\triangle ABC$ 中用余弦定理 $a^2 = b^2+c^2 - 2bc\cos A \Rightarrow 12 = 8 - 2bc\cos A$，得 $bc\cos A = -2$。又面积 $S=\frac12 bc\sin A = 3 \Rightarrow bc\sin A = 6$。联立得 $\tan A = -3$，$A$ 为钝角，$\cos A = -\frac{1}{\sqrt{10}}$，$bc = 2\sqrt{10}$。解方程组 $b^2+c^2=8$，$bc=2\sqrt{10}$ 得 $(b,c)$ 为 $\sqrt{2}, \sqrt{?}$ 需重新检查：$b^2+c^2=8, bc= ?$ 若 $bc=2\sqrt{10}$，则 $(b+c)^2 &gt;0$，具体求得 $b=c=2$ 的解析有出入，根据原题答案 $b=c=2$，实际 $a=2\sqrt{3}$，$b=c=2$ 时 $b^2+c^2=8$，面积 $\sqrt{3}$？需核实，原答案如此，步骤以参考答案为准修正。实际上 $b=c=2$ 时代入，$b^2+c^2=8$ 满足，面积是否符合？由 $a^2=12=b^2+c^2-2bc\cos A=8-8\cos A \Rightarrow \cos A = -\frac12$，$A=120^\circ$，$S=\frac12\cdot 2\cdot 2\cdot \sin 120^\circ = \sqrt{3}$，与 $S=3$ 不符？说明中间计算有简化。按真题答案直接得出 $b=c=2$ ，此处应略演算，直接给出他们通过求 $\cos \angle ADC$ 等方式可得 $b=c=2$。</p>
-<p><strong>点评/变式</strong>：中线问题常用两个补角余弦反号或向量平方，熟悉套路可快速列式。若改为 $AD$ 为角平分线，则多用面积比或正弦定理。</p>
-<h3>2. 2022·全国文·17（边角互化证明）</h3>
-<p><strong>题目</strong>：在 $\triangle ABC$ 中，已知 $\sin C \sin(A-B) = \sin B \sin(C-A)$。
-（1）若 $A=2B$，求 $C$；
-（2）证明：$2a^2 = b^2 + c^2$。</p>
-<p><strong>思路</strong>：利用两角差正弦公式展开，再使用正弦定理化角为边，结合余弦定理消去角，得到边的关系。</p>
+1. (1) $S_{\triangle ADC} = \frac{1}{2} \cdot 1 \cdot DC \cdot \sin \frac{\pi}{3} = \frac{1}{2} S_{\triangle ABC} = \frac{\sqrt{3}}{2}$，解得 $DC=2$，故 $a=4$。
+2. 在 $\triangle ABD$ 中，$\angle ADB = \frac{2\pi}{3}$，由余弦定理：$c^2 = 1^2 + 2^2 - 2\cdot 1 \cdot 2 \cdot \cos \frac{2\pi}{3} = 7$，得 $c=\sqrt{7}$。
+3. 在 $\triangle ABC$ 中，$\cos B = \frac{a^2 + c^2 - b^2}{2ac}$，但 $b$ 未知。改用 $\cos B = \frac{(\sqrt{7})^2 + 4^2 - b^2}{2\cdot 4 \cdot \sqrt{7}}$，需由面积求 $b$。由 $S=\frac{1}{2} a c \sin B = \sqrt{3}$ 得 $\sin B = \frac{\sqrt{3}}{2\sqrt{7}}$，进而 $\cos B = \frac{5\sqrt{7}}{14}$，$\tan B = \frac{\sqrt{3}}{5}$。
+4. (2) 在 $\triangle ADC$ 与 $\triangle ABD$ 中，$\cos \angle ADC = -\cos \angle ADB$，$DC=BD=\frac{a}{2}$。对两三角形用余弦定理写 $b^2, c^2$ 表达式：
+   $b^2 = 1^2 + (\frac{a}{2})^2 - 2\cdot 1 \cdot \frac{a}{2} \cos \angle ADC$；
+   $c^2 = 1^2 + (\frac{a}{2})^2 + 2\cdot 1 \cdot \frac{a}{2} \cos \angle ADC$。
+5. 两式相加得 $b^2 + c^2 = 2 + \frac{a^2}{2}$。代入已知 $b^2+c^2=8$ 得 $a = 2\sqrt{3}$。结合面积公式与 $b^2 + c^2 = 8$ 解得 $b=c=2$。</p>
+<p><strong>点评/变式</strong>：凡中线问题均可利用“互补角余弦相反”消去角参数，快速建立边长关系，避免强行引入向量。变式中可改 $D$ 为三等分点，利用相同原理构建方程。</p>
+<p><strong>题目</strong>：2022-文-17（理-17背景相同）</p>
+<p><strong>题目简述</strong>：$\triangle ABC$ 满足 $\sin(C-A)\sin B = \sin(B)\sin(C-A)$（等价简化为：$\sin(C-A)\sin B = \sin B \sin(C-A)$）已知条件实际为 $\sin(C-A)\sin B = \sin(B)\sin(C-A)$ 恒等式，原题为 $\sin(C-A)\sin B = \sin B \sin(C-A)$ 形式化叙述。采用理科原题：$\sin C \sin(A-B) = \sin B \sin(C-A)$。(1) 若 $A=2B$ 求 $C$；(2) 证明 $2a^2 = b^2 + c^2$。</p>
+<p><strong>思路</strong>：(1) 代入 $A=2B$ 化简为单角方程，利用三角形内角和 $A+B+C=\pi$ 解出 $C$。(2) 将已知等式两角差正弦展开，边化角（正弦定理）再角化边（余弦定理），整理即得证明。</p>
 <p><strong>步骤</strong>：
-（1）$A=2B$ 代入得 $\sin C \sin B = \sin B \sin(C-A)$，因 $\sin B&gt;0$，得 $\sin C = \sin(C-A)$。在 $\triangle ABC$ 内，$C \neq C-A$，则 $C + (C-A) = \pi$，得 $2C - A = \pi$，结合 $A+B+C=\pi$ 及 $A=2B$ 解得 $C = \frac{5\pi}{8}$。
-（2）展开条件式：
-$\sin C(\sin A\cos B - \cos A\sin B) = \sin B(\sin C\cos A - \cos C\sin A)$。
-由正弦定理 $\sin A = \frac{a}{2R}$ 等，代入并约去公因子可得：
-$ac \cos B - bc \cos A = bc \cos A - ab \cos C$。
-用余弦定理 $\cos A = \frac{b^2+c^2-a^2}{2bc}$ 等代入化简即得 $2a^2 = b^2+c^2$。</p>
-<p><strong>点评/变式</strong>：此类证明要敢于先展开再统一成边或角，余弦定理是最后消角的有力工具。常见变式为证明 $a^2 = b^2+bc$ 等，方法类似。</p>
-<h3>3. 2020·全国理·17（求角+最值）</h3>
-<p><strong>题目</strong>：$\triangle ABC$ 中，$\sin^2 A - \sin^2 B - \sin^2 C = \sin B \sin C$。
-（1）求 $A$；
-（2）若 $BC=3$，求 $\triangle ABC$ 周长的最大值。</p>
-<p><strong>思路</strong>：（1）直接用正弦定理角化边，得到 $a^2 - b^2 - c^2 = bc$，移项同余弦定理标准形式对比求 $\cos A$。（2）用余弦定理建立 $b,c$ 关系，结合基本不等式求 $b+c$ 最大值。</p>
+1. (1) $A=2B$，则 $\sin C \sin B = \sin B \sin(C-2B)$。由于 $\sin B \neq 0$，得 $\sin C = \sin(C-2B)$。
+2. $0&lt;C,C-2B&lt;\pi$，故 $\sin$ 值相等意味着 $C = C-2B$ 或 $C + (C-2B) = \pi$。前者得 $B=0$ 舍去，后者得 $2C-2B=\pi$，结合 $3B+C=\pi$ 解得 $C=\frac{5\pi}{8}$。
+3. (2) 已知 $\sin C (\sin A\cos B - \cos A\sin B) = \sin B (\sin C\cos A - \cos C\sin A)$，展开并移项得 $2\sin A \sin B \cos C = 0$。因 $\sin A,\sin B&gt;0$，则 $\cos C = 0$，$C=\frac{\pi}{2}$，则 $c^2 = a^2 + b^2$，与目标不符。
+   <strong>（应使用原题标准条件）</strong> 理科原题 $\sin C \sin(A-B) = \sin B \sin(C-A)$，展开左右：
+   左 $=\sin C(\sin A\cos B - \cos A\sin B)$，右 $=\sin B(\sin C\cos A - \cos C\sin A)$。
+4. 两边同除 $\sin A \sin B \sin C$ 或直接用正弦余弦定理：由正弦定理边化角逆用，将展开式化为边的关系：
+   $c(a\cos B - b\cos A) = b(c\cos A - a\cos C)$。
+5. 代入余弦定理：$\cos A=\frac{b^2+c^2-a^2}{2bc}$ 等，化简得 $a^2 - c^2 = b^2 - a^2$，即 $2a^2 = b^2 + c^2$。</p>
+<p><strong>点评/变式</strong>：三角形中仅含角的等式，一律利用 $A+B+C=\pi$ 消元、利用弦的展开式转边是定式操作。证明边关系时，余弦定理代入是最直接的恒等变形路径。</p>
+<p><strong>题目</strong>：2021-理-15</p>
+<p><strong>题目简述</strong>：已知三角形面积 $\sqrt{3}$，$\angle B = 60^\circ$，$a^2 + c^2 = 3ac$，求 $b$。</p>
+<p><strong>思路</strong>：由面积公式和夹角求出 $ac$，代入条件得到 $a^2+c^2$ 的具体数值，然后直接使用余弦定理求 $b$。</p>
 <p><strong>步骤</strong>：
-（1）由正弦定理：$a^2 - b^2 - c^2 = bc \Rightarrow b^2+c^2 - a^2 = -bc$。
-又 $b^2+c^2 - a^2 = 2bc\cos A$，故 $2bc\cos A = -bc \Rightarrow \cos A = -\frac12$。$A \in (0,\pi) \Rightarrow A = \frac{2\pi}{3}$。
-（2）$a=BC=3$，由余弦定理 $a^2 = b^2+c^2 - 2bc\cos A$，即 $9 = b^2+c^2 + bc$，也即 $(b+c)^2 - bc = 9$。
-由基本不等式 $bc \le \left(\frac{b+c}{2}\right)^2$，代入得 $(b+c)^2 - \frac{(b+c)^2}{4} \le 9 \Rightarrow \frac34 (b+c)^2 \le 9 \Rightarrow b+c \le 2\sqrt{3}$（当 $b=c$ 时取等）。周长 $L = a+b+c \le 3+2\sqrt{3}$，最大值为 $3+2\sqrt{3}$。</p>
-<p><strong>点评/变式</strong>：求角时若得到 $\cos A = -\frac12$ 要明确写出钝角。求最值时注意基本不等式方向与取等条件。若改为求面积最大值，可对 $b^2+c^2+bc=9$ 使用 $b^2+c^2 \ge 2bc$ 得 $3bc \le 9 \Rightarrow bc \le 3$，$S = \frac12 bc\sin A \le \frac{3\sqrt{3}}{4}$。</p>
+1. 面积 $S = \frac{1}{2}ac \sin 60^\circ = \frac{\sqrt{3}}{4}ac = \sqrt{3}$，解得 $ac = 4$。
+2. 由 $a^2 + c^2 = 3ac = 12$。
+3. 余弦定理：$b^2 = a^2 + c^2 - 2ac\cos 60^\circ = 12 - 2 \times 4 \times \frac{1}{2} = 8$，故 $b=2\sqrt{2}$。</p>
+<p><strong>点评/变式</strong>：面积公式与余弦定理的联合是“给面积定边长”的固定套路，遇此结构只需联立消元即可，切勿分开求 $a,c$ 单值，整体代换最省时。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2024-新课标Ⅱ-17.html">2024-新课标Ⅱ-17</a>（2024 · 中） 立体几何题，考查线面垂直的判定与性质，以及用空间向量法求解二面角的正弦值。</li>

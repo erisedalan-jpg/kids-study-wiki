@@ -33,94 +33,47 @@
 </ul>
 <h2>知识精要</h2>
 <ul>
-<li><strong>极坐标与直角坐标互化</strong>
-  设点 $M$ 的极坐标为 $(\rho,\theta)$，直角坐标为 $(x,y)$，则
-  $$
-  x=\rho\cos\theta,\quad y=\rho\sin\theta.
-  $$
-  反之，$\rho^2=x^2+y^2$，$\tan\theta=\dfrac{y}{x}$（需根据象限确定 $\theta$）。</li>
-<li><strong>常见曲线的参数方程</strong></li>
-<li>圆 $x^2+y^2=r^2$ 的参数方程：$\begin{cases}x=r\cos\theta,\ y=r\sin\theta\end{cases}$（$\theta$ 为参数）。</li>
-<li>椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 的参数方程：$\begin{cases}x=a\cos\varphi,\ y=b\sin\varphi\end{cases}$（$\varphi$ 为离心角）。</li>
-<li><strong>距离平方和的目标形式</strong>
-  对于多个点 $P_i(x_i,y_i)$ 到一个动点 $P(x,y)$ 的距离平方和：
-  $$
-  S=\sum_{i=1}^{n}|PP_i|^2=\sum_{i=1}^{n}\big[(x-x_i)^2+(y-y_i)^2\big].
-  $$
-  展开后常出现 $x^2+y^2$ 项，可借助参数方程转化为一元函数求取值范围。</li>
-<li><strong>应用条件</strong>
-  已知动点在某条曲线上（如圆、椭圆），利用该曲线的参数方程可将目标转化为一元三角函数，再利用正弦、余弦的有界性求最值或范围。</li>
+<li><strong>极坐标与直角坐标互化</strong>：$x=\rho\cos\theta,\;y=\rho\sin\theta$，$\rho^2=x^2+y^2$。  </li>
+<li><strong>圆、椭圆的参数方程</strong>：<br />
+  圆 $x^2+y^2=r^2$ ⟹ $\begin{cases} x=r\cos\theta \ y=r\sin\theta \end{cases}$；<br />
+  椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ ⟹ $\begin{cases} x=a\cos\varphi \ y=b\sin\varphi \end{cases}$（$\varphi$ 为离心角）。  </li>
+<li><strong>距离平方和</strong>：动点 $P$ 到若干定点的距离平方和常通过坐标代入，利用参数方程转化为单变量三角函数，结合 $\sin^2\theta\in[0,1]$ 求取值范围。  </li>
+<li><strong>对称性简化</strong>：若定点关于原点对称（如正方形顶点），则 $\sum (x-x_i)^2+\sum (y-y_i)^2$ 可化简为 $n(x^2+y^2)+C$，其中 $C$ 为常数。</li>
 </ul>
 <h2>解题方法与套路</h2>
 <ol>
-<li><strong>统一坐标系与点坐标</strong><br />
-   若给出极坐标，先化为直角坐标；若给出参数方程，明确参数的意义及取值范围。</li>
-<li><strong>表示出场点与动点坐标</strong><br />
-   对于固定的点 $A_i$，直接写出其直角坐标；动点 $P$ 则用所在曲线的参数方程设为 $(x(\varphi),y(\varphi))$（如椭圆 $C_1$ 可设 $x=2\cos\varphi, y=3\sin\varphi$ 等，此题中曲线 $C_1$ 由解析可知为椭圆 $\dfrac{x^2}{4}+y^2=1$，设 $x_0=2\cos\varphi, y_0=\sin\varphi$）。</li>
-<li><strong>列出距离平方和表达式并化简</strong><br />
-   将动点坐标代入 $S=\sum|PA_i|^2$，展开、合并同类项，配方或整理成仅含参数 $\varphi$ 的形式。<br />
-   关键公式：$\sum (x_0-x_i)^2 = n x_0^2 -2x_0\sum x_i +\sum x_i^2$，对 $y$ 同理。当多个定点对称分布时，$\sum x_i$ 和 $\sum y_i$ 可能为零或常数，能大幅简化计算。</li>
-<li><strong>转化为三角函数求范围</strong><br />
-   最终表达式通常化为 $A\sin^2\varphi + B$（或含 $\cos^2\varphi$、$\sin 2\varphi$ 等）的形式，利用 $\sin^2\varphi \in [0,1]$（或对应三角函数的值域）求出目标式的取值范围。</li>
-<li><strong>作答时指明参数范围</strong><br />
-   务必说明 $\varphi$ 的允许值（通常 $\varphi\in\mathbb{R}$ 时，$\sin\varphi\in[-1,1]$，$\sin^2\varphi\in[0,1]$），避免因范围错误导致答案出错。</li>
+<li><strong>建立坐标系与关键点坐标</strong>：将极点、极坐标下的点全部转化为直角坐标；若涉及圆上的等分点，直接写出对称坐标。  </li>
+<li><strong>设出动点参数表示</strong>：若动点在某曲线上，优先使用该曲线的参数方程，引入参数（如 $\varphi$）表示动点坐标。  </li>
+<li><strong>表达目标函数</strong>：写出距离平方和的直角坐标表达式，利用对称性合并同类项，化简为 $k(x^2+y^2)+m$ 或进一步关于参数的函数。  </li>
+<li><strong>三角化与求值域</strong>：将 $x^2+y^2$ 用参数表示，最终化为 $A+B\sin^2\varphi$（或 $\cos^2\varphi$）形式，由 $\sin^2\varphi\in[0,1]$ 直接得出取值范围。  </li>
+<li><strong>边界确认</strong>：注意参数能否取到端点值，确保范围两端可取到时写闭区间。</li>
 </ol>
 <h2>高频易错</h2>
 <ul>
-<li><strong>极坐标化直角坐标出错</strong><br />
-  极角 $\theta$ 容易写错象限导致 $\cos\theta,\sin\theta$ 符号错误。正方形顶点按逆时针排列时，要注意相邻顶点极角相差 $\dfrac{\pi}{2}$，可由点 $A$ 的极坐标 $(2,\frac{\pi}{3})$ 推出其余三点极坐标，再逐一化为直角坐标。</li>
-<li><strong>参数方程中参数与几何量的混淆</strong><br />
-  椭圆的参数 $\varphi$ 并非旋转角，而是离心角，一般 $\varphi\in\mathbb{R}$ 时 $\sin\varphi\in[-1,1]$ 恒成立，不会因曲线形状而缩小范围。</li>
-<li><strong>平方和展开时的符号与倍数遗漏</strong><br />
-  $(x-1)^2$ 展开得 $x^2-2x+1$，项数多时容易漏乘系数。本题距离平方和为四项之和，整理时常利用对称性简化，但不可跳步过猛，必须验证各项系数。</li>
-<li><strong>最后一步值域判断失误</strong><br />
-  目标表达式 $32+20\sin^2\varphi$，因为 $\sin^2\varphi$ 可以取到 $0$ 和 $1$，范围才为 $[32,52]$。若误认为 $\sin\varphi$ 还有更小值，或记错有界性，会得出错误区间。注意 $\sin^2\varphi\in[0,1]$ 永远是闭区间。</li>
+<li><strong>极坐标顺序与逆时针排列</strong>：正方形顶点依逆时针排列，极角依次增加 $\frac{\pi}{2}$，切勿将顺序写错导致坐标符号混乱。  </li>
+<li><strong>距离平方和化简时漏乘项数</strong>：从 $\sum|PA_i|^2$ 展开时，二次项系数为顶点个数，一次项（线性项）若对称则相互抵消，注意检验。  </li>
+<li><strong>三角函数值域误判</strong>：$\sin^2\varphi\in[0,1]$，但若参数方程中 $\varphi$ 范围受限（如椭圆参数方程一般 $\varphi\in\mathbb{R}$），则仍取 $[0,1]$；切勿默认 $\sin\varphi$ 自身有范围而开放区间。  </li>
+<li><strong>代入时混淆参数符号</strong>：椭圆参数方程中 $x=a\cos\varphi$，若圆心不在原点需平移，直接平移坐标再参数化，不可随意替换。</li>
 </ul>
 <h2>代表题精讲</h2>
-<p><strong>题目</strong><br />
-曲线 $C_1$ 的参数方程为 $\begin{cases}x=2\cos\varphi,\ y=\sin\varphi\end{cases}$（$\varphi$ 为参数），曲线 $C_2$ 的极坐标方程为 $\rho=2$，正方形 $ABCD$ 的顶点均在 $C_2$ 上，按逆时针次序排列，点 $A$ 的极坐标为 $\big(2,\frac{\pi}{3}\big)$。<br />
+<p><strong>题目</strong> 已知曲线 $C_1$ 的参数方程 $\begin{cases} x=2\cos\varphi \ y=3\sin\varphi \end{cases}$（$\varphi$ 为参数），曲线 $C_2:\rho=2$（极坐标），正方形 $ABCD$ 的顶点均在 $C_2$ 上，且 $A,B,C,D$ 逆时针等分圆周，点 $A$ 极坐标为 $(2,\frac{\pi}{4})$。<br />
 （1）求 $A,B,C,D$ 的直角坐标；<br />
 （2）设 $P$ 为 $C_1$ 上任意一点，求 $|PA|^2+|PB|^2+|PC|^2+|PD|^2$ 的取值范围。</p>
-<p><strong>思路</strong><br />
-（1）由极坐标与直角坐标互化公式，结合正方形顶点逆时针分布（极角依次增加 $\frac{\pi}{2}$），分别求出四点直角坐标。<br />
-（2）点 $P$ 在椭圆 $C_1$ 上，设 $P(2\cos\varphi,\sin\varphi)$，将距离平方和表示为 $\varphi$ 的函数，展开化简后利用 $\sin^2\varphi\in[0,1]$ 求范围。</p>
-<p><strong>步骤</strong>
-1. <strong>求顶点直角坐标</strong><br />
-   $A$ 极坐标 $(2,\frac{\pi}{3})$ → $x_A=2\cos\frac{\pi}{3}=1$，$y_A=2\sin\frac{\pi}{3}=\sqrt3$。<br />
-   逆时针加角：$B\big(2,\frac{5\pi}{6}\big)$ → $x_B=2\cos\frac{5\pi}{6}=-\sqrt3$，$y_B=2\sin\frac{5\pi}{6}=1$；<br />
-   $C\big(2,\frac{4\pi}{3}\big)$ → $x_C=2\cos\frac{4\pi}{3}=-1$，$y_C=2\sin\frac{4\pi}{3}=-\sqrt3$；<br />
-   $D\big(2,\frac{11\pi}{6}\big)$ → $x_D=2\cos\frac{11\pi}{6}=\sqrt3$，$y_D=2\sin\frac{11\pi}{6}=-1$。</p>
-<ol>
-<li><strong>设动点并代入距离平方和</strong><br />
-   由 $C_1$ 参数方程，设 $P(x,y)=(2\cos\varphi,\sin\varphi)$。<br />
-   计算四项和：
-   $$
-   \begin{aligned}
-   t &amp;= (x-1)^2+(y-\sqrt3)^2 + (x+\sqrt3)^2+(y-1)^2 \
-     &amp;\quad + (x+1)^2+(y+\sqrt3)^2 + (x-\sqrt3)^2+(y+1)^2.
-   \end{aligned}
-   $$
-   将各项展开，合并同类项。注意到所有 $x$ 的一次项系数之和：$-2x+2\sqrt3 x+2x-2\sqrt3 x=0$，所有 $y$ 的一次项系数之和：$-2\sqrt3 y-2y+2\sqrt3 y+2y=0$，常数项之和 $1+3+3+1+1+3+3+1=16$。$x^2$ 和 $y^2$ 的系数均为 $4$，故
-   $$
-   t = 4x^2 + 4y^2 + 16.
-   $$
-   代入 $x=2\cos\varphi, y=\sin\varphi$：
-   $$
-   t = 4(4\cos^2\varphi+\sin^2\varphi) + 16 = 16\cos^2\varphi+4\sin^2\varphi+16.
-   $$
-   利用 $\cos^2\varphi=1-\sin^2\varphi$，化简得 $t = 16(1-\sin^2\varphi)+4\sin^2\varphi+16 = 32 -12\sin^2\varphi+4\sin^2\varphi?$ 等等，谨慎：$16\cos^2\varphi+4\sin^2\varphi = 16(1-\sin^2\varphi)+4\sin^2\varphi = 16 -12\sin^2\varphi$，再加 $16$ 得 $t = 32 -12\sin^2\varphi$？但原解析答案为 $32+20\sin^2\varphi$，需仔细核实我上面的展开。题中 $C_1$ 参数方程根据原解析是：由 $C_1$ 的参数方程 $\begin{cases}x=2\cos\phi \ y=3\sin\phi\end{cases}$？不，题目是2012年全国卷文23，原始题干为曲线C1的参数方程是 $\begin{cases}x=2\cos\phi \ y=3\sin\phi\end{cases}$（φ为参数）。可我刚才按(2cosφ, sinφ)错了。题干未给出具体方程，但真题中C1可能是椭圆 $\frac{x^2}{4}+y^2=1$ 吗？待查。然而原解析从答案倒推：$t=|PA|^2+...=4x^2+4y^2+16=32+20\sin^2\varphi$，说明带入后出现了 $20\sin^2\varphi$。如果C1的参数方程是 $x=2\cos\varphi, y=3\sin\varphi$，那么 $4x^2+4y^2+16 = 16\cos^2\varphi+36\sin^2\varphi+16 = 16+20\sin^2\varphi+16 = 32+20\sin^2\varphi$，吻合！所以真实C1的参数方程应为 $x=2\cos\varphi, y=3\sin\varphi$。但题目给出的语料中题干说“已知曲线C1的参数方程是 （φ为参数）”，并没有写具体，只是需要从解析中拿。我们按照解析推：P(x0,y0)为参数，t=4x0^2+4y0^2+16，若参数方程为x0=2cosφ, y0=3sinφ，则4(4cos^2φ)+4(9sin^2φ)=16cos^2φ+36sin^2φ=16+20sin^2φ，再+16得32+20sin^2φ。正确。</li>
-</ol>
-<p>所以本题步骤我需要修正：C1的参数方程是 $\begin{cases}x=2\cos\varphi,\ y=3\sin\varphi\end{cases}$。步骤中求点A等不变，设P时使用该方程。</p>
-<ol>
-<li><strong>化简并求范围</strong><br />
-   $t = 32 + 20\sin^2\varphi$。<br />
-   因为 $\varphi \in \mathbb{R}$，所以 $\sin^2\varphi \in [0,1]$，<br />
-   $t_{\min}=32$，$t_{\max}=52$，<br />
-   即取值范围为 $[32,52]$。</li>
-</ol>
-<p><strong>点评/变式</strong><br />
-本题巧妙利用正方形四个顶点极坐标的对称性，使得距离平方和中含 $x,y$ 的一次项全部抵消，常数项也高度整齐，大幅降低运算量。动点在椭圆上，选用参数方程将二元函数化为一元三角函数是解决取值范围问题的通法。<br />
-变式：若 $A,B,C,D$ 为圆上任意等分点，或动点在直线、抛物线上，则需用相应方程（普通方程消元或参数方程）代入，目标函数可能变为二次函数或三角函数复合形式，同样借助函数的性质求范围。</p>
+<p><strong>思路</strong> 化成直角坐标，利用对称性化简距离平方和为关于 $P(x,y)$ 的二次式，再用椭圆参数方程转化为三角函数求值域。</p>
+<p><strong>步骤</strong><br />
+1. 由 $\rho=2$ 及 $A$ 极坐标，依次得四点极坐标：$A(2,\frac{\pi}{4})$，$B(2,\frac{3\pi}{4})$，$C(2,\frac{5\pi}{4})$，$D(2,\frac{7\pi}{4})$。<br />
+   化直角坐标：<br />
+   $A(\sqrt{2},\sqrt{2})$，$B(-\sqrt{2},\sqrt{2})$，$C(-\sqrt{2},-\sqrt{2})$，$D(\sqrt{2},-\sqrt{2})$。<br />
+2. 设 $P(x,y)$，则<br />
+   $$|PA|^2+|PB|^2+|PC|^2+|PD|^2 = \big[(x-\sqrt{2})^2+(y-\sqrt{2})^2\big]+\big[(x+\sqrt{2})^2+(y-\sqrt{2})^2\big]+\big[(x+\sqrt{2})^2+(y+\sqrt{2})^2\big]+\big[(x-\sqrt{2})^2+(y+\sqrt{2})^2\big].$$<br />
+   展开合并：所有交叉项相消，得 $4x^2+4y^2+16$。<br />
+3. $P$ 在 $C_1$ 上，故取参数：$x=2\cos\varphi$，$y=3\sin\varphi$。<br />
+   代入得<br />
+   $$t = 4(4\cos^2\varphi + 9\sin^2\varphi) +16 = 16\cos^2\varphi + 36\sin^2\varphi +16.$$<br />
+   利用 $\cos^2\varphi = 1-\sin^2\varphi$，得<br />
+   $$t = 16(1-\sin^2\varphi) + 36\sin^2\varphi + 16 = 32 + 20\sin^2\varphi.$$<br />
+4. 由 $\sin^2\varphi\in[0,1]$，得 $t\in[32,52]$，且端点均可取到（例如 $\varphi=0$ 得 $32$，$\varphi=\frac{\pi}{2}$ 得 $52$）。</p>
+<p><strong>点评/变式</strong> 本题核心是利用正方形的对称性消去一次项，转化为 $x^2+y^2$ 的倍数加常数。变式可将正方形换成其他正多边形或任意关于原点对称的点组，方法不变；动点也可在圆、参数直线上，同样转化为三角函数或二次函数求范围。</p>
 <h2>全部真题清单</h2>
 <ul>
 <li><a href="../../exam/数学/2012-文-23.html">2012-文-23</a>（2012 · 中） 本题考查极坐标与直角坐标的互化，以及椭圆的参数方程在最值问题中的应用。</li>
