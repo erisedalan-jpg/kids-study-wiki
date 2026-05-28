@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>核酸检测</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>核酸检测</h1><div class="review-mark" data-stem="核酸检测"></div><div class="meta-card"><span><strong>考点</strong>核酸检测</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>实验</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2022–2022</li>
+<li>出现题位：填空12</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<p>核酸检测的核心技术是 RT-PCR（逆转录-聚合酶链式反应），专门用于检测 RNA 病毒或特定基因的表达量。其理论基础是中心法则，即遗传信息可从 RNA 逆转录为 DNA。</p>
+<ul>
+<li><strong>基本流程</strong>：提取待测样本中的总 RNA → 逆转录（Reverse Transcription）合成互补 DNA（cDNA）→ 以 cDNA 为模板进行 PCR 扩增 → 通过荧光信号实时检测扩增产物。</li>
+<li><strong>关键酶与作用</strong>：<ul>
+<li><strong>逆转录酶</strong>：以 RNA 为模板，合成互补的 DNA 单链（cDNA），依赖于引物（通常为随机引物或特异性下游引物）。</li>
+<li><strong>热稳定 DNA 聚合酶</strong>（如 Taq 酶）：在 PCR 环节，以 cDNA 为模板，在引物引导下合成 DNA 新链，延伸方向始终为 $5^{\prime} \to 3^{\prime}$。</li>
+</ul>
+</li>
+<li><strong>荧光定量原理</strong>：利用荧光染料或荧光标记的探针，其发出的荧光信号强度与扩增产物的量成正比。通过监测达到设定荧光阈值所需的循环数（Ct 值），即可反推原始样本中模板的起始浓度。Ct 值与起始模板数呈反比。</li>
+<li><strong>适用条件与对象</strong>：适用于一切以 RNA 为遗传物质的生物（如新冠病毒、HIV、流感病毒等）及细胞内的 mRNA 检测。样本通常采集自含有病毒或目标细胞的部位（如鼻咽拭子、血液）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<p>处理核酸检测类试题，尤其是涉及实验原理和步骤排序时，可遵循以下逻辑链条：</p>
+<ol>
+<li><strong>明确遗传物质类型</strong>：先看清待测病毒的核酸是 DNA 还是 RNA。若是 RNA，检测核酸必经<strong>逆转录</strong>步骤；若是 DNA，直接进行 PCR 即可。</li>
+<li><strong>遵循“中心法则”方向</strong>：RT-PCR 的流程严格遵循 $RNA \rightarrow cDNA \rightarrow DNA$ 的顺序。提取 RNA 后，必须先利用逆转录酶获取 cDNA，再进行 PCR 变性、退火、延伸的循环。</li>
+<li><strong>区分“模板-产物”链的关系</strong>：逆转录阶段，模板是 RNA（单链），产物是 cDNA（单链）；PCR 阶段，模板变为双链 DNA 中的一条链（包含 cDNA），产物是双链 DNA。PCR 扩增的靶标是 DNA，不是 RNA。</li>
+<li><strong>补全原理表述的固定术语</strong>：当题目要求解释“获取病毒核酸后如何检测”，若核酸为 RNA，标准表述步骤通常需包含：“在逆转录酶作用下，以 RNA 为模板合成 cDNA，随后通过 PCR 技术对 cDNA 进行特异性扩增，根据荧光信号判定结果”。</li>
+<li><strong>排除试剂干扰</strong>：若题干涉及“样本中有杂核酸（如宿主 DNA）”，注意试剂盒是否包含 DNase（去除 DNA）步骤，以及 PCR 引物的特异性才是区分目标与非目标的关键。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>酶的功能张冠李戴</strong>：误以为 PCR 过程直接由“逆转录酶”完成扩增，或认为“Taq 酶”催化逆转录。实际上，逆转录酶仅在合成第一条 cDNA 链时工作，随后的 PCR 扩增幅完全由热稳定的 Taq 酶负责。</li>
+<li><strong>混淆核酸类型与检测目标</strong>：题目问的是“检测 RNA”，部分考生在书写检测原理时，错误地直接写“PCR 扩增病毒的 RNA”。需牢记 PCR 技术不能直接以 RNA 为模板，必须经过逆转录转化为 DNA。</li>
+<li><strong>忽视 $5^{\prime} \to 3^{\prime}$ 方向性问题</strong>：在写逆转录或 PCR 原理时，遗漏合成新链的延伸方向（$5^{\prime} \to 3^{\prime}$），这是酶催化合成的重要得分点。</li>
+<li><strong>错误推导 Ct 值</strong>：认为 Ct 值越大，病毒载量越高。正确的逻辑是：起始模板越多，只需越少的循环数就能达到设定的荧光阈值，因此 Ct 值越小，病毒核酸浓度越高。</li>
+<li><strong>取样与处理逻辑错误</strong>：认为“灭活处理”是为了破坏病毒 RNA。其实高温灭活（如 56°C）主要是破坏病毒蛋白质外壳使其失去感染性，而核酸检测是通过化学试剂直接裂解病毒以释放并提取核酸，二者的目的完全不同。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：推导 RT-PCR 法如何完成对新冠病毒 RNA 的检测，简述其基本步骤与原理。
+<strong>思路</strong>：从遗传物质 RNA 的特性切入，指出 PCR 不能直接作用 RNA，引出“逆转录”这一桥梁步骤。接着描述 PCR 如何扩增逆转录产物，最后说明如何通过荧光物理量来量化初始病毒量。
+<strong>步骤</strong>：
+1.  <strong>提取与逆转录</strong>：先从样本中分离出总 RNA。由于新冠病毒是 RNA 病毒，需在逆转录酶的催化下，以病毒 RNA 为模板，四种脱氧核苷酸为原料，合成互补的单链 DNA（cDNA）。
+2.  <strong>PCR 扩增</strong>：以合成的 cDNA 为模板，加入特异性的引物和热稳定的 Taq DNA 聚合酶，进行高温变性（解开双链）、低温退火（引物结合）、适温延伸（Taq 酶催化合成新链，方向 $5^{\prime} \to 3^{\prime}$）的多次循环，使特定的 cDNA 片段呈指数级扩增。
+3.  <strong>实时荧光检测</strong>：在反应体系中加入荧光染料或荧光探针。随着 PCR 循环进行，DNA 产物增多，荧光信号逐渐增强。仪器实时监测并记录达到特定荧光阈值所需的 Ct 值。
+4.  <strong>结果判定</strong>：通过比较待测样本与标准对照的 Ct 值，可判定样本中是否含有新冠病毒 RNA 及其相对含量。Ct 值低于某一阈值，判为阳性。
+<strong>点评/变式</strong>：此题是 RT-PCR 检测的通用模型。若题干将检测对象改为 HIV（同样是 RNA 病毒），也是完全相同的“逆转录+PCR”逻辑。但若检测对象改为乙肝病毒（DNA 病毒），则无需逆转录，直接提取 DNA 进行 PCR 即可，这是极易出现的对比变式。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2022-全国乙-12.html">2022-全国乙-12</a>（2022 · 易） 新冠病毒核酸检测采用RT-PCR方法的原理与步骤</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/494-核酸检测.html">核酸检测</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最适浓度</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>最适浓度</h1><div class="review-mark" data-stem="最适浓度"></div><div class="meta-card"><span><strong>考点</strong>最适浓度</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>稳态与调节</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：稳态与调节</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2010–2010</li>
+<li>出现题位：选择8</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>最适浓度</strong>：在生长素等植物激素的作用中，使生理效应（如弯曲角度$\alpha$、生长长度等）达到最大值所对应的浓度。</li>
+<li><strong>作用双重性</strong>：生长素的生理效应与浓度并非单调关系。在低于最适浓度时，效应随浓度升高而增强；达到最适浓度时效应最强；超过最适浓度后，效应随浓度升高而减弱。</li>
+<li><strong>效应等同原理</strong>：基于双重性，除最适浓度外，任何一个特定的生理效应（小于最大值）都对应着两个不同的浓度，一个位于最适浓度的左侧（低浓度），一个位于最适浓度的右侧（高浓度）。</li>
+<li><strong>浓度曲线拐点</strong>：效应-浓度关系曲线呈钟形或倒“U”形，最适浓度即曲线的顶点。曲线的上升段和下降段可以有同一效应水平的两点。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别曲线类型</strong>：首先判断题目所给的生理效应与浓度关系是否为典型的钟形曲线，确认其存在一个效应峰值（最适浓度）。</li>
+<li><strong>一效应双浓度判定</strong>：若题中指出某一非最大效应来自未知浓度，应立刻反应出该效应可对应A、B两个浓度，一个在最适浓度左侧，一个在右侧。</li>
+<li><strong>稀释实验设计思维</strong>：这是鉴别A、B浓度的核心方法。</li>
+<li><strong>原理</strong>：将未知浓度溶液稀释后，测量生理效应的变化方向。</li>
+<li><strong>若稀释后效应减弱</strong>（稀释后效应值 &lt; 原效应值）：原溶液处于最适浓度<strong>左侧</strong>的上升段。因浓度降低，效应沿曲线向左下方移动，故效应减小。</li>
+<li><strong>若稀释后效应增强</strong>（稀释后效应值 &gt; 原效应值）：原溶液处于最适浓度<strong>右侧</strong>的下降段。因浓度降低趋近最适浓度，效应沿曲线向左上方移动，故效应增大。</li>
+<li><strong>结论表述范式</strong>：预测并比较稀释前后效应值（如$\alpha_1$与$\alpha_2$）的大小，得出确切结论——“若……，则原溶液为A浓度；若……，则原溶液为B浓度”。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆单一性与双重性</strong>：误认为生理效应总是随浓度升高而单调递增或递减，看到同一效应值便断定浓度相同。须牢记生长素等物质存在“最适浓度”。</li>
+<li><strong>稀释结果的逻辑颠倒</strong>：在根据稀释后效应大小推断原浓度位置时，最容易出错。要牢记：稀释能使高于最适浓度的溶液效应<strong>增大</strong>（因其向最适浓度靠近），使低于最适浓度的溶液效应<strong>减小</strong>（因其远离最适浓度）。</li>
+<li><strong>忽略最适浓度的唯一性</strong>：错误地将效应大小的变化趋势等同于浓度的唯一性。除最大效应值外，任何小于最大值的效应值都对应两种可能浓度，必须通过附加实验（如稀释）来区分。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：(2010·新课标) 通过实验获得茎段弯曲角度$\alpha$与生长素浓度的钟形曲线。现测得一未知浓度溶液产生弯曲角度$\alpha_1$，从曲线上查得对应的低浓度A和高浓度B。为确定真实浓度，将其稀释至原浓度的80%后测得弯曲角度$\alpha_2$。请预测$\alpha_2$与$\alpha_1$的比较结果并给出相应结论。
+<strong>思路</strong>：本题核心考查生长素作用双重性中“同效应双浓度”的鉴别。解题关键在于利用稀释后生理效应（弯曲角度）的变化方向，反推原浓度在效应曲线上所处的位置。
+<strong>步骤</strong>：
+1. 分析可知，$\alpha_1$为非最大值，故原溶液可能是左侧上升段的A浓度，也可能是右侧下降段的B浓度。
+2. 分情况讨论稀释结果：
+   - 若原溶液为低浓度A，稀释后浓度变得更低，效应减弱，弯曲角度变小，表现为$\alpha_2 &lt; \alpha_1$。
+   - 若原溶液为高浓度B，稀释后浓度降低并向最适浓度靠拢，效应增强，弯曲角度变大，表现为$\alpha_2 &gt; \alpha_1$。
+3. 据此写出完全对应的结论：若$\alpha_2$小于$\alpha_1$，则该溶液的生长素浓度为A；若$\alpha_2$大于$\alpha_1$，则该溶液的生长素浓度为B。
+<strong>点评/变式</strong>：本题是“最适浓度”考点的经典模型。解题逻辑可概括为“稀释以定向”。变式训练中，可将“弯曲角度”换为“胚芽鞘伸长长度”“生根数量”等指标，或将植物激素换为作用具有最适浓度的酶、调节物质等，但“稀释效应判定法”的思维内核完全一致。牢牢把握“稀释后效应增大，则原液为高浓度；稀释后效应减小，则原液为低浓度”这一核心规律，是应对此类题目的不二法门。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2010-新课标-08.html">2010-新课标-08</a>（2010 · 中） 本题通过茎段弯曲实验考查生长素的作用特性及其浓度效应，解释不同浓度产生相同弯曲角度的原因。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/612-最适浓度.html">最适浓度</a></li>
+</ul>
+</div>
+</body>
+</html>

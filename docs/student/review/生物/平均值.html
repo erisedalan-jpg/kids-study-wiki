@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>平均值</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>平均值</h1><div class="review-mark" data-stem="平均值"></div><div class="meta-card"><span><strong>考点</strong>平均值</span><span><strong>权重</strong>0</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>实验</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：实验</li>
+<li>权重 weight：0</li>
+<li>真题数：1；年份跨度：2016–2016</li>
+<li>出现题位：选择5</li>
+<li>难度分布：易1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>平均值（样方法）</strong>：在被调查种群的分布范围内，随机选取若干个样方，计数每个样方内的个体数，求得每个样方的种群密度（个体数/样方面积），再计算所有样方种群密度的<strong>算术平均值</strong>，以此作为该种群的种群密度估计值。</li>
+<li><strong>核心公式</strong>：<br />
+  种群密度估计值 $= \frac{1}{n}\sum_{i=1}^{n}\frac{N_i}{S_0}$<br />
+  其中 $n$ 为样方总数，$N_i$ 为第 $i$ 个样方内的个体数，$S_0$ 为单个样方面积。<br />
+  等价于：种群密度估计值 $= \frac{\sum N_i}{n \times S_0}$。</li>
+<li><strong>适用条件</strong>：主要适用于<strong>植物</strong>、活动能力弱的动物（如蚜虫、跳蝻）及昆虫卵等，要求<strong>随机取样</strong>，不能掺入主观因素。</li>
+<li><strong>常用取样方法</strong>：  </li>
+<li><strong>五点取样法</strong>：适用于总体为非长条形，按梅花形取 5 个样方，样方大小一致。  </li>
+<li><strong>等距取样法</strong>：适用于长条形总体，将总体分成若干等份，按相等距离或间隔抽取样方。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题识类型</strong>：先看题中调查对象是植物还是活动能力强的动物。若是植物或活动能力弱的动物，优先联想样方法；若是活动能力强的动物，则联想标志重捕法。</li>
+<li><strong>锁定核心原理</strong>：样方法的本质是“以局部估整体”，通过抽取多个样方的密度求平均值来代表总体，而非直接计数整体或直接把样方总数简单除以地区总面积。</li>
+<li><strong>辨识错误选项的典型套路</strong>：  </li>
+<li><strong>直接推总</strong>：将样方内的总数直接除以整个调查地面积（混淆了局部与整体）。  </li>
+<li><strong>多此一举</strong>：求出样方总个体数，再乘以甲地面积（单位、逻辑均不通）。  </li>
+<li><strong>偷换概念</strong>：把计数每个样方再求平均的过程替换成直接计数地区内所有个体。</li>
+<li><strong>确认正确选项的特征</strong>：凡提到“每个样方的种群密度”→“求所有样方密度的平均值”这一流程的，即为标准表述。    </li>
+<li><strong>提醒边角案例</strong>：若题设要求“种群数量”而非“种群密度”，则应基于平均密度乘以总面积进行合理估算。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆总体与样方的关系</strong>：种群密度是单位面积上的个体数，不能直接用样方内个体总数除以地区总面积，因为样方并未覆盖整个地区。正确做法是先求每个样方的密度，再求其平均值。</li>
+<li><strong>颠倒计算逻辑</strong>：误以为先把所有样方的总数加起来，然后用这个总数除以甲地总面积就是种群密度。实际上，当样方总面积不等于地区总面积时，这么做相当于错误地放大了密度。</li>
+<li><strong>忽略“随机取样”的前提</strong>：样方法必须随机选取样方，若人为挑选个体多的地方取样，求出的平均值会偏高；反之则偏低，选择题中常以其他方式出现，做实验设计题时需注意表述。</li>
+<li><strong>不理解平均值的统计意义</strong>：平均值的核心作用是“用代表性样本的集中趋势估计总体参数的可靠估计”，不是简单加减。在样方法中，它以各样本密度的均值作为总体密度的点估计值。</li>
+<li><strong>取样原则与地形匹配记混</strong>：把五点取样法用于长条形地段，或把等距取样法用于正方形均匀地块，会导致取样代表性下降，产生系统误差。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2016年新课标Ⅱ卷第5题。调查甲地蒲公英种群密度，判断样方法的正确做法。<br />
+<strong>思路</strong>：分析样方法的标准操作定义，逐项排除常见错误手段。<br />
+<strong>步骤</strong>：<br />
+- A项：计数甲地内所有个体的总数除以甲地面积——这属于直接普查，不是样方法，且对于分布广泛的植物往往难以做到，且题干明确要求“采用样方法”，故排除。<br />
+- B项：计数所有样方内蒲公英总数除以甲地面积——分母是甲地面积，而非样方总面积，混淆了样方与总体，导致密度低估，逻辑错误。<br />
+- C项：计算出每个样方中蒲公英的密度，求出所有样方密度的平均值——完全符合样方法的操作流程与统计原理，正确。<br />
+- D项：求出所有样方蒲公英的总数，除以所有样方面积之和，再乘以甲地面积——最后一个步骤把样方密度再乘以甲地面积得出的是总个体数，而不是种群密度，且做法多此一举。<br />
+<strong>点评/变式</strong>：本题直接考查样方法的基本概念和操作步骤。考生对“先单位后整体”的密度含义理解不透彻就容易错选B。变式考法：给出样方记录表，要求计算种群密度；或将五点取样法与等距取样法适合的地形作为选择题考点出现。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2016-新课标Ⅱ-05.html">2016-新课标Ⅱ-05</a>（2016 · 易） 样方法调查种群密度的正确操作步骤。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/055-平均数.html">平均值</a></li>
+</ul>
+</div>
+</body>
+</html>

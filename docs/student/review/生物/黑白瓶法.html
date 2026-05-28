@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黑白瓶法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>黑白瓶法</h1><div class="review-mark" data-stem="黑白瓶法"></div><div class="meta-card"><span><strong>考点</strong>黑白瓶法</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物与环境</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物与环境</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择9</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>黑白瓶法原理</strong><br />
+  用于测定水生生态系统中浮游植物的初级生产量（总初级生产量、净初级生产量、呼吸消耗量）。实验基于生产者（浮游植物）的光合作用产氧和呼吸作用耗氧，通过对比透光瓶（可进行光合作用和呼吸作用）与不透光瓶（仅进行呼吸作用）中溶解氧的变化，结合初始溶氧量推算各类生产量。</li>
+<li><strong>核心假设</strong><br />
+  ① 甲瓶（不透光）与乙瓶（透光）中生产者的生物量、呼吸速率相同。<br />
+  ② 瓶内只有生产者，无消费者、分解者干扰。<br />
+  ③ 取样处水温和光照条件与放回原位后保持相同。</li>
+<li><strong>溶氧量变化关系</strong>（初始溶氧量 $A$，甲瓶终溶氧量 $B$，乙瓶终溶氧量 $C$）  </li>
+<li>呼吸消耗氧量 $= A - B$  </li>
+<li>净初级生产量 $= C - A$  </li>
+<li>总初级生产量 $= C - B$（或 $= (C-A)+(A-B)$）</li>
+<li><strong>应用条件</strong><br />
+  适用于小型静水水体（如池塘、湖泊表层），实验时间不宜过长（防止瓶内氧气过饱和、营养耗尽或代谢累积）。必须设置不透光瓶作为对照，否则无法扣除呼吸消耗。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确各个溶氧量的含义</strong><br />
+   $A$ 为实验起始溶氧量，$B$ 为无光条件下剩余的溶氧量，$C$ 为有光条件下最终的溶氧量。</li>
+<li><strong>列式推导</strong>  </li>
+<li>呼吸消耗 $= A - B$  </li>
+<li>光合净产氧（净初级生产量） $= C - A$  </li>
+<li>总产氧（总初级生产量） $= \text{净产氧} + \text{呼吸耗氧} = (C-A)+(A-B)=C-B$</li>
+<li><strong>根据设问直接代入</strong><br />
+   凡问“$C$与$A$的差值”即为净初级生产量，“$C$与$B$的差值”即为总初级生产量，“$A$与$B$的差值”即为呼吸消耗量。</li>
+<li><strong>注意单位换算与时间</strong><br />
+   若题干给出时间，需考虑该段时间内的生产量或速率，必要时除以时间得到速率（如 mg·L⁻¹·h⁻¹）。本题只问差值含义，不涉及计算。</li>
+<li><strong>结合生态系物质能量流动作答</strong><br />
+   总初级生产量表示生产者固定太阳能的总量，净初级生产量是可用于下一营养级或积累的有机物所含的能量。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆差值含义</strong><br />
+  最常失分点是将 $C-A$ 当作总初级生产量，忘了必须加上呼吸消耗（$A-B$）才等于总初级生产量。总初级生产量直接由 $C-B$ 得出。</li>
+<li><strong>忽略呼吸作用的对照意义</strong><br />
+  不透光瓶（黑瓶）的作用是消除呼吸耗氧的影响。没有黑瓶就无法得到净初级生产量与总初级生产量，只能得到表观光合变化。</li>
+<li><strong>忽视前提条件</strong><br />
+  题干强调“甲、乙瓶中生产者呼吸作用相同且瓶中只有生产者”，该条件是黑白瓶法有效的前提。若瓶中存在消费者或分解者，则耗氧数据包含这些生物的呼吸，不可直接用于植物生产量计算。</li>
+<li><strong>不理解 $B$ 可能小于 $A$</strong><br />
+  在无光条件下只能呼吸耗氧，故 $B &lt; A$。如果出现 $B \ge A$，说明实验时间太短或操作失误（如漏光、微生物耗氧过低等）。</li>
+<li><strong>将黑白瓶法用于非水生系统</strong><br />
+  该方法是基于溶解氧变化设计的，只适用于水环境。陆地生产量测定常用二氧化碳吸收法、收割法等。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong></h3>
+<p>（2019·新课标Ⅱ·9）针对水生生态系统，取水样分成三等份：一份直接测 $O_2$ 含量 $A$；另两份装入不透光瓶（甲）和透光瓶（乙），密闭后放回，若干小时后测得甲瓶 $O_2$ 含量 $B$、乙瓶 $O_2$ 含量 $C$。在呼吸作用相同且只有生产者的条件下，说明 $C$ 与 $A$ 的差值、$C$ 与 $B$ 的差值、$A$ 与 $B$ 的差值分别表示什么。</p>
+<h3><strong>思路</strong></h3>
+<p>串联光合与呼吸的氧变化：不透光瓶只有呼吸消耗，溶氧量从 $A$ 降到 $B$；透光瓶中同时进行光合产氧与呼吸耗氧，最终溶氧量为 $C$。由差值组合可剥离出净生产、总生产与呼吸消耗。</p>
+<h3><strong>步骤</strong></h3>
+<ol>
+<li><strong>分析甲瓶</strong>（黑瓶）：过程只有呼吸耗氧，无光合产氧。因此氧气减少量 $A-B$ 代表该段时间内生产者的呼吸消耗量。  </li>
+<li><strong>分析乙瓶</strong>（白瓶）：同时进行光合与呼吸，溶氧量从 $A$ 变为 $C$。净变化量 $C-A$ 代表氧气净增加量，即净初级生产量（光合产氧减去呼吸耗氧后的剩余部分）。  </li>
+<li><strong>推导总初级生产量</strong>：总初级生产量 = 净初级生产量 + 呼吸消耗量 = $(C-A)+(A-B)=C-B$。故 $C$ 与 $B$ 的差值直接代表总初级生产量（总光合产氧量）。  </li>
+<li><strong>作答</strong>  </li>
+<li>$C$ 与 $A$ 的差值：净初级生产量（或生产者净光合作用产氧量）。  </li>
+<li>$C$ 与 $B$ 的差值：总初级生产量（或生产者总光合作用产氧量）。  </li>
+<li>$A$ 与 $B$ 的差值：呼吸消耗的氧气量（或生产者呼吸作用耗氧量）。</li>
+</ol>
+<h3><strong>点评/变式</strong></h3>
+<p>本题直接考查黑白瓶法的基本推演，属于送分空。考生只需记牢“白瓶差值=净生产，黑瓶差值=呼吸，白减黑=总生产”这组口诀，即可快速得分。<br />
+<strong>变式拓展</strong>：若增加一瓶初始水样煮沸冷却（排除微生物呼吸）后不透光放置，则可用来验证非生物耗氧（如化学氧化），进一步校正呼吸值，此种情形须注意“真正”生产者呼吸量需扣除背景耗氧。<br />
+<strong>延申考点</strong>：总初级生产量与净初级生产量的关系常与生态系统能量流动、生态效率计算结合，明确概念有助于解决后续食物链中能量传递的计算题。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a>（2019 · 中） 考查生态系统能量来源与流向，以及利用黑白瓶法测定水生浮游植物总初级生产量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/734-黑白瓶法.html">黑白瓶法</a></li>
+</ul>
+</div>
+</body>
+</html>

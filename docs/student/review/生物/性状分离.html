@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>性状分离</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>性状分离</h1><div class="review-mark" data-stem="性状分离"></div><div class="meta-card"><span><strong>考点</strong>性状分离</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择5</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>性状分离</strong>：杂种后代中同时出现显性性状和隐性性状的现象。本质是等位基因的分离。</li>
+<li><strong>纯合子与杂合子</strong>：</li>
+<li>纯合子：遗传因子组成相同，自交后代不发生性状分离。</li>
+<li>杂合子：遗传因子组成不同，自交后代会发生性状分离（显性:隐性 = 3:1，若完全显性）。</li>
+<li><strong>鉴定个体基因型的常用方法</strong>：</li>
+<li><strong>自交法</strong>：让待测个体自花传粉，若子代发生性状分离，则待测个体为杂合子；若子代全为一种性状，则最可能为纯合子。适用条件：植物（雌雄同花或同株）、便于操作。</li>
+<li><strong>测交法</strong>：待测个体与隐性纯合子杂交，若子代出现性状分离（比例1:1），则待测个体为杂合子；若子代全为显性性状，则为纯合子。前提：已知隐性性状。</li>
+<li><strong>杂交法</strong>：待测个体与另一同性状个体杂交，若子代出现性状分离且比例为3:1，则双亲均为杂合子。此方法可在未知隐性性状时判断。</li>
+<li><strong>显隐性关系的确定</strong>：</li>
+<li>若亲本为同一性状，子代出现另一种性状（性状分离），则亲本性状为显性，新出现的性状为隐性。</li>
+<li>若亲本为相对性状，子代全为一种性状，则子代表现的性状为显性。 </li>
+</ul>
+<h2>解题方法与套路</h2>
+<p><strong>“是否杂合子”实验方案判断题通用解法</strong>：
+1. <strong>审题锁定未知条件</strong>：明确题干是否已给出显隐性。若无，则不能直接使用测交结果（比例1:1）来反推，因为1:1既可能是$Aa \times aa$，也可以是$aa \times Aa$（此时待测个体为隐性纯合）。
+2. <strong>逐一分析各实验组合</strong>：
+   - <strong>自交出现性状分离</strong> → 亲本必为杂合子。无论显隐性已知与否，此条直接成立。
+   - <strong>与同性状个体杂交，子代全为该性状</strong> → 无法判定。可能双亲均为纯合显性，或均为隐性纯合，或一杂合一纯合显性。
+   - <strong>与另一性状个体杂交，子代1:1</strong> → 若显隐性未知，不能判定待测个体是杂合子还是隐性纯合子。需结合其他条件。
+   - <strong>与同性状个体杂交，子代出现3:1的性状分离</strong> → 双亲均为杂合子（且性状为显性）。此条可直接判定待测个体为杂合子。
+3. <strong>对比选项，选取包含可判定实验的组合</strong>。优先选用不需要已知显隐性即可成立的实验（如①和④）。</p>
+<h2>高频易错</h2>
+<ul>
+<li><strong>落入“测交陷阱”</strong>：看到子代全缘叶:羽裂叶=1:1，就判定待测植株为杂合子。<strong>致命错误</strong>：当显隐性未定时，测交后代表现型比例1:1，待测个体既可以是杂合子（$Aa \times aa$），也可以是隐性纯合子（$aa \times Aa$）。题目未明确全缘叶为显性，故实验③不能判定。</li>
+<li><strong>误用“与同性状杂交子代全同”</strong>：实验②中，子代全为全缘叶，只能说明亲本之一可能为显性纯合，无法判定植株甲是杂合（$AA \times Aa$子代也全为显性）。考生易误以为“同性状杂交无分离”就是纯合。</li>
+<li><strong>忽视“自交”的绝对判据</strong>：无论显隐性已知与否，<strong>自交后代出现性状分离，则亲本一定是杂合子</strong>。这一条在实战中应作为铁律优先锁定。</li>
+<li><strong>比例3:1的解读盲区</strong>：只有双亲均为杂合子且完全显性时，子代才会出现3:1的性状比。实验④直接证明了植株甲与另一全缘叶植株均为杂合子（且全缘叶为显性），是可判定的。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2019-新课标Ⅱ-05 某种植物羽裂叶和全缘叶是一对相对性状，用全缘叶植株甲进行四个实验：①自交子代出现性状分离；②给另一全缘叶授粉子代全为全缘叶；③给羽裂叶授粉子代1:1；④给另一全缘叶授粉子代全缘:羽裂=3:1。问能判定甲为杂合子的实验组合。</p>
+<p><strong>思路</strong>：该题不知道全缘叶和羽裂叶的显隐性关系。需逐个实验分析：哪些实验在显隐性未知时仍能必定推出甲为杂合子。自交发生性状分离是铁证；同性状杂交出现3:1分离也是铁证；1:1测交必须已知隐性方可，未知时不行。</p>
+<p><strong>步骤</strong>：
+1. 分析实验①：植株甲自交，子代出现性状分离 → 甲产生两种配子，必为杂合子。成立。
+2. 分析实验②：甲与另一全缘叶杂交，子代全为全缘叶。若全缘叶为隐性，则甲和另一株均为隐性纯合，甲不是杂合子；若全缘叶为显性，另一株为显性纯合，甲可以是纯合也可以是杂合。无法确定。
+3. 分析实验③：甲与羽裂叶杂交，子代1:1。即为测交比例，但未知隐性性状。若全缘叶为显性（甲为$Aa$），则$Aa \times aa$得1:1；若羽裂叶为显性（甲为$aa$），则$aa \times Aa$也得1:1。此时甲可能是杂合也可能是隐性纯合，无法判定。
+4. 分析实验④：甲与另一全缘叶杂交，子代全缘:羽裂=3:1。性状分离比3:1的出现必然要求双亲均为杂合子（$Aa \times Aa$），且全缘叶为显性。由此可判定甲为杂合子。
+5. 能判定的实验是①和④，对应选项B。</p>
+<p><strong>点评/变式</strong>：本题核心考点是在未知显隐性条件下杂合子的判断逻辑。变式训练：若题干明确全缘叶为显性，则实验③（测交1:1）也可判定甲为杂合子，此时正确选项会包含③。务必先审清题意，有无“已知显隐性”是解题的分水岭。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a>（2019 · 中） 本实验通过分析杂交结果判断植株的基因型，需理解性状显隐性与杂合子判定依据</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/600-性状分离.html">性状分离</a></li>
+</ul>
+</div>
+</body>
+</html>

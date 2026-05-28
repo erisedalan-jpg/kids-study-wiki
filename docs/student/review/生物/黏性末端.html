@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黏性末端</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>黏性末端</h1><div class="review-mark" data-stem="黏性末端"></div><div class="meta-card"><span><strong>考点</strong>黏性末端</span><span><strong>权重</strong>7</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物技术与工程</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物技术与工程</li>
+<li>权重 weight：7</li>
+<li>真题数：1；年份跨度：2023–2023</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>黏性末端</strong>：限制酶在识别序列的两个对称位置交错切割DNA双链，产生的片段两端各有一段未配对的、单链突出的核苷酸序列。由于突出部分可根据碱基互补配对原则与另一个具有相同突出序列的末端“粘合”，故称黏性末端。</li>
+<li><strong>平末端</strong>：限制酶在识别序列的对称轴处同时切割两条链，产生的片段末端为平齐的双链，无双链突出。</li>
+<li><strong>产生条件</strong>：同一种限制酶切割不同DNA分子（如质粒与目的基因）可产生相同的黏性末端；不同的限制酶（如同尾酶，如BamHⅠ和BglⅡ）若切割后产生的黏性末端回文序列相同，末端也可互补连接。</li>
+<li><strong>连接条件</strong>：具有相同黏性末端的DNA片段可在DNA连接酶作用下通过碱基互补配对和磷酸二酯键重建共价连接；平末端连接效率较低，但也可连接。连接后形成的序列可能不再被原限制酶识别（若两侧序列不可恢复识别位点）。</li>
+<li><strong>意义</strong>：便于目的基因与载体定向连接，减少自身环化，提高重组效率。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>识别切割方式</strong>：看限制酶切割位点示意图：箭头指向磷酸二酯键的切割位置，判断是交错切口（产生黏性末端）还是对称轴切口（产生平末端）。黏性末端突出部分通常为2~4个碱基。</li>
+<li><strong>判断末端碱基</strong>：写出切割后末端单链序列（5'突出或3'突出），比较不同酶产生的末端序列是否有相同的单链延伸，若能完全碱基互补配对即可在连接酶作用下连接。</li>
+<li><strong>选择合适限制酶</strong>：目的基因与质粒需用产生相同黏性末端的限制酶切割（优先同一酶）；若使用两种不同但为同尾酶，要注意连接后可能消除识别位点，无法再次切割。</li>
+<li><strong>避免自身环化</strong>：常采用两种不同限制酶切割载体和目的基因，产生两端不同的黏性末端，进行定向克隆，防止载体或片段自身的无效环化。</li>
+<li><strong>验证重组体</strong>：连接后，可根据载体上的标记基因（如抗性基因、蓝白斑筛选）及酶切后电泳条带大小推断重组是否成功。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆黏性末端与平末端</strong>：只要能写出单链突出即为黏性末端，不要仅凭“连不连得上”判断。错例：认为切出相同末端就是相同限制酶，实则同尾酶也可产生相同黏性末端。</li>
+<li><strong>忽略末端类型（5'突出或3'突出）</strong>：限制酶切割可能产生5'突出或3'突出的黏性末端，但若突出序列互补，仍可配对（如BamHⅠ切出5'突出GATC，BglⅡ切出5'突出GATC，即使酶不同，末端可连接）。</li>
+<li><strong>误以为任何突出都可连接</strong>：必须是碱基完全互补的黏性末端才能高效连接，若不互补则无法稳定配对。</li>
+<li><strong>忽略连接后识别序列变化</strong>：两种同尾酶连接后，杂合位点可能不再被任何一种酶识别，导致后续无法再用这两酶切开。设计实验时要避免此陷阱。</li>
+<li><strong>平末端连接的特殊性</strong>：平末端连接无序列要求，但效率低，且易发生任意连接，容易出现反向插入或串联体，题目中往往需注意酶切防止此问题。</li>
+<li><strong>审题不慎</strong>：未看清“构建重组表达载体”可能要求基因正确插入启动子与终止子之间，双酶切定向克隆是常见答案。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2023-新课标-06</h3>
+<p><strong>题目</strong>简述：图示四种限制酶识别序列和切割位点（酶1：G↓AATTC，产生5'突出AATT；酶2：CCC↓GGG，产生平末端；酶3：G↓GATCC，产生5'突出GATC；酶4：A↓AGCTT，产生5'突出AGCT）。目的基因两端和质粒多克隆位点均含有这些酶切位点。请分析如何选择限制酶构建重组表达载体，并说明原因。</p>
+<p><strong>思路</strong>：判断每种酶切割产生的是黏性末端还是平末端→比较产生的黏性末端序列是否相同或互补→选择能产生相同末端且利于定向连接、避免自身环化的组合→阐述连接后的结果。</p>
+<p><strong>步骤</strong>：
+1. <strong>识别末端类型</strong>：酶1切割产生5'-AATT-3'黏性末端；酶3产生5'-GATC-3'黏性末端；酶4产生5'-AGCT-3'黏性末端；酶2产生平末端。酶1与酶3、酶4的末端序列不同，不能互补。
+2. <strong>选出可连接的末端</strong>：若目的基因和质粒都用酶1切割，两者产生相同的黏性末端AATT，可互补连接；同样，都用酶3或都用酶4也可；酶2平末端也可互连但效率低、无方向性。
+3. <strong>定向克隆方案</strong>：为避免自身环化和反向插入，宜用两种能产生不同黏性末端的限制酶分别切割目的基因和载体。例如，用酶1和酶3双酶切：目的基因左端为酶1末端（AATT），右端为酶3末端（GATC）；质粒对应两酶切后，左臂为酶1末端，右臂为酶3末端。由于两末端序列不同，只有目的基因按正确方向才能插入，且载体自身不会环化。
+4. <strong>连接结果</strong>：DNA连接酶将AATT与AATT配对、GATC与GATC配对连接，目的基因定向插入，且两个连接处可能分别保留酶1和酶3的识别位点（因为序列恢复），后续可用相应酶切鉴定。</p>
+<p><strong>点评/变式</strong>：本题核心考查黏性末端的产生与连接的专一性。易错处：①误以为任何不同酶切都能连接（实则需末端互补）；②忽略定向克隆双酶切的设计，导致载体自连或基因反向插入。变式：若题目要求构建原核表达载体，需确保插入方向与启动子一致，更突显双酶切的必要性。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2023-新课标-06.html">2023-新课标-06</a>（2023 · 中） 考查DNA连接酶类型、平末端与黏性末端连接方式，以及基因表达载体构建方案的合理性。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/748-黏性末端.html">黏性末端</a></li>
+</ul>
+</div>
+</body>
+</html>

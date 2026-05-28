@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>遗传推断</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>遗传推断</h1><div class="review-mark" data-stem="遗传推断"></div><div class="meta-card"><span><strong>考点</strong>遗传推断</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2017–2017</li>
+<li>出现题位：选择6</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>自由组合定律逆推</strong>：若杂交后代出现性状分离比总和为 $4^n$（$n$ 为杂合基因对数），则相关基因独立遗传，且 $F_1$ 为 $n$ 对基因的杂合子。本题 $52+3+9=64=4^3$，因此涉及 3 对独立分配的等位基因，$F_1$ 为三杂合（$AaBbDd$）。</li>
+<li><strong>基因互作与表型对应</strong>：透过题干给出的代谢途径，建立“基因型→表现型”映射。</li>
+<li>本题中，$A$ 使黄→褐，$B$ 使褐→黑，$D$ 完全抑制 $A$ 的表达（有 $D$ 则无 $A$ 功能）。隐性等位基因均无功能。</li>
+<li>表型规则：<ul>
+<li>当 $D_\ \,$（$DD$ 或 $Dd$）时：$A$ 被抑制，不论 $A,B$ 基因型如何，一律表现为<strong>黄色</strong>。</li>
+<li>当 $dd$（无抑制）时：</li>
+<li>$aa_\ \,$：无 $A$，无法褐化，<strong>黄色</strong>；</li>
+<li>$A_bb$：有 $A$ 产褐色素，无 $B$ 无法转黑，<strong>褐色</strong>；</li>
+<li>$A_B_$：有 $A$ 产褐，有 $B$ 转黑，<strong>黑色</strong>。</li>
+</ul>
+</li>
+<li>验证比例：$F_2$ 中黄色 $= \frac{3}{4}(D_)+\frac{1}{4}(dd)\times\frac{1}{4}(aa) = \frac{13}{16} = \frac{52}{64}$；褐色 $= \frac{1}{4}\times\frac{3}{16}=\frac{3}{64}$；黑色 $= \frac{1}{4}\times\frac{9}{16}=\frac{9}{64}$，与 $52:3:9$ 吻合。</li>
+<li><strong>亲本推断依据</strong>：纯合亲本杂交，$F_1$ 表现型统一且为黄色，自交得上述比例，则：</li>
+<li>$F_1$ 必为 $AaBbDd$（黄色，因含 $D$）；</li>
+<li>双亲均为纯合黄，且各贡献不同显性基因，使 $F_1$ 在三对位点均为杂合。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定对数</strong>：统计子代分离比总份数 $S$。若 $S = 4^n$，可初步判断 $n$ 对基因独立遗传，且 $F_1$ 为 $n$ 对杂合。本题 $S=64$，故 $n=3$，$F_1$ 基因型为三杂合。</li>
+<li><strong>建映射</strong>：详细阅读题干给出的基因功能、互作关系（如抑制、上位、互补），写出各种基因型组合对应的表现型。常用方法：先分类是否含有“开关基因”（如本题的 $D$），再在“无开关”时按其他基因推导。</li>
+<li><strong>拆比例</strong>：根据表型规则，将总份数拆分为几部分，写出每一表型对应的基因型通式，并计算理论占比，看是否与题给比例一致。若一致，说明互作模型正确。</li>
+<li><strong>锁亲本</strong>：在 $F_1$ 确定为 $AaBbDd$ 的前提下，列出所有可能产生三杂合 $F_1$ 的纯合亲本组合（须符合亲本自身表现型为黄色）。常见组合：$AABBDD \times aabbdd$；$AAbbDD \times aaBBdd$ 等。结合实际题意和选项，利用排除法筛选：若选项给出的亲本组合会产生 $F_1$ 某位点纯合，则不可能出现 3 对性状分离的 $64$ 组合，直接排除。</li>
+<li><strong>验证选优</strong>：将剩余选项代入，快速检验 $F_1$ 是否三杂合、是否表现黄色，即可锁定答案。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误判分离比基数</strong>：看到 $52:3:9$，就机械套用 $9:3:3:1$ 或其变式（总和 $16$），而忽略总和为 $64$，导致错判基因对数。必须先加和总数再看 $4^n$。</li>
+<li><strong>基因互作关系颠倒</strong>：题干说明 $D$ 抑制 $A$，考生容易错写为 $D$ 抑制 $B$，或误认为 $D$ 直接抑制色素生成。要严格按照流程：$A$ 作用→$B$ 作用，$D$ 只锁 $A$。</li>
+<li><strong>忽略“纯合亲本”和“$F_1$ 全为黄色”的双重条件</strong>：只关注组合是否能得到三杂合 $F_1$，忘记验证亲本本身是否均为纯合黄，或 $F_1$ 本身是否为黄色。如组合 $aaBBDD \times aabbdd$ 虽产生 $F_1$ 有杂合位点，但 $A$ 位点纯合 $aa$，不满足三杂合，且 $F_2$ 总份数将偏离 $64$。</li>
+<li><strong>选组合时忽略杂合全面性</strong>：若 $F_1$ 是 $AaBbDd$，则要求亲本在 $A、B、D$ 三个位点上互为不同纯合等位基因（一亲本显性纯合，另一亲本隐性纯合），且不能有任何位点两亲本同为纯合显性或隐性，否则该位点在 $F_1$ 中不杂合。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：某哺乳动物毛色由 3 对独立分配的常染色体等位基因 $A/a$、$B/b$、$D/d$ 控制。$A$ 使黄→褐，$B$ 使褐→黑，$D$ 完全抑制 $A$ 的表达。用两个纯合黄色品种杂交，$F_1$ 均为黄色，$F_2$ 毛色黄∶褐∶黑 $= 52∶3∶9$。选择正确的亲本组合。</p>
+<p><strong>思路</strong>：
+- $52+3+9=64=4^3$，因此 $F_1$ 为 $AaBbDd$，且三对基因自由组合。
+- 根据互作规则，存在 $D$ 时表现黄色，无 $D$ 时 $A_B_$ 黑、$A_bb$ 褐、$aa_\ \,$ 黄。$F_1$ 为黄，意味着 $F_1$ 带有至少一个显性 $D$，故基因型 $AaBbDd$ 符合。
+- 纯合黄色亲本要杂交产生 $AaBbDd$，必须是一个亲本提供显性基因，另一个提供隐性基因，且在每个位点互补。同时亲本自身必须为黄色。
+- 逐项排除选项中可能造成 $F_1$ 某位点纯合的配对。</p>
+<p><strong>步骤</strong>：
+1. 总份数 $=52+3+9=64=4^3$，推断 $F_1$ 基因型为 $AaBbDd$，两纯合亲本杂交得三杂合。
+2. 根据互作模型，纯合黄色可能的基因型有几类：$D$ 存在且其他任意（如 $AABBDD$、$AAbbDD$、$aabbDD$ 等）或 $dd$ 且无 $A$（如 $aabbdd$、$aaBBdd$ 等）。
+3. 检查选项：
+   - A 中 $AABBDD \times aaBBdd$：$F_1$ 为 $AaBBDd$（$B$ 位点纯合），不能产生 $64$ 组合，错误。
+   - B 中 $aaBBDD \times aabbdd$：$F_1$ 为 $aaBbDd$（$A$ 位点纯合 $aa$），错误。
+   - C 中 $aabbDD \times aabbdd$：$F_1$ 为 $aabbDd$（$A、B$ 均纯合），错误。
+   - D 中 $AAbbDD \times aaBBdd$：$F_1$ 为 $AaBbDd$（全杂合），自身为黄色（有 $D$）；$AABBDD \times aabbdd</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2017-新课标Ⅱ-06.html">2017-新课标Ⅱ-06</a>（2017 · 中） 通过3对基因的自由组合及互作关系，分析F2特殊性状分离比推断亲本组合。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/716-遗传推断.html">遗传推断</a></li>
+</ul>
+</div>
+</body>
+</html>

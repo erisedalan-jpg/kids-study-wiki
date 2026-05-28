@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>渔业资源管理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>渔业资源管理</h1><div class="review-mark" data-stem="渔业资源管理"></div><div class="meta-card"><span><strong>考点</strong>渔业资源管理</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物与环境</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物与环境</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：解答22</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>环境容纳量（K值）</strong>：在环境条件不受破坏的情况下，一定空间中所能维持的种群最大数量。渔业管理中捕捞量应控制在使种群数量维持在 $K/2$ 附近，此时种群增长速率最大，可实现最大持续产量（MSY）。</li>
+<li><strong>最大持续产量（MSY）</strong>：在不削弱种群长期繁殖能力的前提下，每年所能捕捞的最高产量。理论对应 $\frac{K}{2}$ 时的增长量。</li>
+<li><strong>增长速率与捕捞策略</strong>：</li>
+<li>种群数量 $N &lt; K/2$：增长速率上升，可在补充后维持增长。</li>
+<li>种群数量 $N = K/2$：增长速率最大，此时适度捕捞能获得最高产量且不影响种群恢复。</li>
+<li>种群数量 $N &gt; K/2$：增长速率下降，捕捞可释放密度制约压力。</li>
+<li><strong>渔业资源可持续管理措施</strong>：设立禁渔区、禁渔期，规定网目大小（保护幼鱼），控制捕捞强度（渔船数量、功率），实行限额捕捞（TAC），保护产卵场和栖息地。</li>
+<li><strong>种群增长的逻辑斯谛模型（Logistic growth）</strong>：
+  $$\frac{dN}{dt}=rN\left(1-\frac{N}{K}\right)$$
+  其中 $r$ 为内禀增长率，$N$ 为种群数量。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确管理目标</strong>：判断是追求最大持续产量还是恢复资源/保护生物多样性。</li>
+<li><strong>确定种群数量所处阶段</strong>：依据捕捞强度、现存资源量等信息，推断 $N$ 与 $K$ 的关系（是否低于 $K/2$、接近 $K$ 等）。</li>
+<li><strong>选取关键原理</strong>：</li>
+<li>若问最大产量，联系 $K/2$ 与最大增长速率。</li>
+<li>若问保护措施，从增加出生率、降低死亡率、提高环境容纳量等角度分析。</li>
+<li>若比较不同管理区（如捕捞区与保护区），用种群扩散、源-汇动态解释保护区对周边渔场的补充效应。</li>
+<li><strong>提出具体措施并联系现实政策</strong>：禁渔区、禁渔期、网具限制、限额捕捞等，说明其缓解捕捞压力、维持繁殖群体的作用。</li>
+<li><strong>预测效果</strong>：短、长期对种群数量、年龄结构、产量的影响。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li>误以为捕捞越少越好，忽略种群在资源利用中也需要适度捕捞以释放密度制约压力，维持高增长率。</li>
+<li>混淆“最大持续产量”对应 $K$ 值而非 $K/2$，错认为种群数量越多产量越大。</li>
+<li>在开放水域忽视保护区对捕捞区的溢出效应——幼鱼或成体从保护区扩散可补充捕捞区资源。</li>
+<li>只考虑成鱼捕捞而忽视小网目对幼鱼的兼捕导致繁殖群体下降。</li>
+<li>将“可持续发展”简单等同于禁止捕捞，忽视科学合理的利用也是保护的一种形式（“合理利用就是最好的保护”）。</li>
+<li>遗漏生态系统的整体性：捕捞影响的不只是目标种群，还会通过食物网引起级联效应。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题：2024-辽宁-22（2024）</h3>
+<p><strong>题目</strong>：为协调渔业资源的开发和保护，实现可持续发展，研究者在近海渔业生态系统的管控区中划分出甲（捕捞区）和乙（禁渔保护区），分析两区域的生产力和渔获量变化。</p>
+<p><strong>思路</strong>：本题考查保护区与捕捞区配合实现渔业可持续发展的原理。关键点：保护区作为资源“源”，通过个体扩散补充捕捞区，防止过度捕捞导致种群崩溃。可结合 $K/2$ 策略、种群密度制约和生态补偿效应作答。</p>
+<p><strong>步骤</strong>：
+1. <strong>辨识功能区作用</strong>：甲区允许捕捞以获取渔获量；乙区禁止捕捞以保护产卵场和幼鱼栖息地，维持种群繁殖基数。
+2. <strong>运用种群增长模型</strong>：保护区种群密度逐渐升高至接近 $K$，密度制约使个体向周围扩散；捕捞区种群因捕捞维持在较低密度（理想为 $K/2$ 附近），获得最高持续产量。
+3. <strong>阐述补充机制</strong>：保护区过量个体迁移至捕捞区，既减轻保护区内密度压力（维持高繁殖率），又为捕捞区提供源源不断的补充群体，使渔获量长期稳定。
+4. <strong>指出可持续发展要点</strong>：设置保护区比例恰当、网具避开幼鱼、控制捕捞努力量，可实现资源“越捕越多”（产量稳定，资源不衰退）。
+5. <strong>总结</strong>：保护区保障补充，捕捞区转化生产力，二者结合实现社会经济与生态双赢。</p>
+<p><strong>点评/变式</strong>：本题易混淆“完全保护”与“持续利用”。变式可考禁渔期：原理类似，在一段时间内禁止捕捞，给种群增长和繁殖窗口，开放期捕捞产量更高且持久。错答常表现为只强调保护而忽略输出，或忽略密度制约后的扩散效应。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2024-辽宁-22.html">2024-辽宁-22</a>（2024 · 中） 本题考查近海渔业生态系统的资源管理与可持续发展策略。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/784-渔业资源管理.html">渔业资源管理</a></li>
+</ul>
+</div>
+</body>
+</html>

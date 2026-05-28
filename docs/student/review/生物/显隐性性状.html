@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>显隐性性状</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>显隐性性状</h1><div class="review-mark" data-stem="显隐性性状"></div><div class="meta-card"><span><strong>考点</strong>显隐性性状</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2019–2019</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>相对性状</strong>：同种生物同一性状的不同表现类型。</li>
+<li><strong>显性性状</strong>：具有相对性状的亲本杂交，$F_1$ 表现出来的性状。在完全显性下，只要有显性基因即表达。</li>
+<li><strong>隐性性状</strong>：具有相对性状的亲本杂交，$F_1$ 未表现的性状。必须所有相关基因均为隐性纯合才表现。</li>
+<li><strong>判断显隐性的经典方法</strong>  </li>
+<li><strong>定义法</strong>：甲性状×乙性状 → 子代全为甲性状，则甲为显性。  </li>
+<li><strong>自交法</strong>：某性状自交，若子代出现性状分离，则亲本性状为显性；若子代全为该性状，则亲本可能为显性纯合或隐性纯合，无法单独定论。  </li>
+<li><strong>分离比法</strong>：若杂交子代出现 $3:1$ 等典型比例，占 $\frac{3}{4}$ 的性状为显性。</li>
+<li><strong>两对基因控制一对性状的特殊规则</strong>（如“只含隐性基因的个体表现隐性性状，其他基因型均表现显性性状”）  </li>
+<li>隐性性状对应唯一基因型：$aabb$。  </li>
+<li>显性性状对应所有含至少一个显性等位基因的基因型，包括 $A_B_\,,\;A_bb\,,\;aaB_$ 等 15 种（若两对基因独立，共 16 种组合）。  </li>
+<li>此类实质为基因互作中的“重叠作用”，显性基因具有功能冗余，只要有一个显性产物即足以表现显性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>转化题干规则</strong>：把文字描述改写为基因型  ‑  性状对应表。例如“只含隐性基因→隐性”意味着 $aabb$ 为隐性，其余全为显性。用字母和短线标记清楚，避免混淆。  </li>
+<li><strong>假设与排除</strong>：设显性性状对应的可能基因型群、隐性性状的唯一基因型。将实验个体的表现型映射到若干候选基因型。  </li>
+<li><strong>顺推自交与杂交推导</strong>：  </li>
+<li>若某性状自交子代全为该性状：亲本可能是显性纯合（如$AABB$, $AAbb$等）或隐性纯合（$aabb$）。需结合其他实验分辨。  </li>
+<li>出现性状分离的后代，分离比直接指向亲本基因型组合。例如 $3:1$ 不等于一对基因的分离比时，要考虑两对基因的特殊互作：$AaBb \times aabb$ 得到 $显:隐=3:1$ 意味着测交的显性个体含两个非连锁的显性基因且作用重叠。  </li>
+<li><strong>验证</strong>：把假设的基因型代回所有实验，检查子代表现型种类及比例是否吻合。若遇多组实验，先锁定最容易突破的实验（如出现 $3:1$ 的测交），再逆推其他。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>误将无分离的自交直接判为显性纯合</strong>：自交子代全显性（或全为某性状）有两种可能：亲本显性纯合或亲本隐性纯合。必须参考另一对性状的杂交或自交才能区分。  </li>
+<li><strong>忽略两对基因背景，用单基因思维硬套</strong>：看到 $3:1$ 就写$Aa\times Aa$，而不验证是否满足“全隐$=aabb$，其余显性”的对应规则。在重叠作用中，测交 $AaBb\times aabb$ 也会得到 $显:隐=3:1$，极易混淆。  </li>
+<li><strong>把“只含隐性基因”理解成“含隐性基因”</strong>：如 $Aabb$ 含隐性基因 $b$，但因有 $A$，仍为显性。只有同时不含 $A$ 和 $B$ 时才为隐性。  </li>
+<li><strong>计算显隐性性状比例时漏掉组合数</strong>：显性性状包含多种基因型，若题目要求特定基因型占显性的比例，须分别计数，不可直接用单基因定律。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题1</strong> （2019·全国Ⅱ卷，改编）<br />
+<strong>题目</strong>：某种甘蓝叶色有绿色和紫色，受独立遗传的基因 $A/a$ 和 $B/b$ 控制。只含隐性基因的个体表现隐性性状，其余基因型均表现显性性状。实验①：绿叶甘蓝（甲）自交，子代全为绿叶。请分析能否判断绿叶与紫色的显隐性关系。<br />
+<strong>思路</strong>：先根据规则确定隐性性状对应的唯一基因型 $aabb$，显性性状对应所有非 $aabb$ 基因型。实验①中甲自交子代无性状分离，说明甲为纯合子——可能为显性纯合（如 $AABB$、$AAbb$ 等）也可能为隐性纯合（$aabb$）。因此仅凭实验①无法确定绿叶是显性还是隐性。<br />
+<strong>步骤</strong>：<br />
+1. 设绿叶为显性，则甲是显性纯合且必含显性基因，自交后代全为显性（绿叶），与实验①吻合。<br />
+2. 设绿叶为隐性，则甲只能是 $aabb$，自交后代全为隐性（绿叶），也与实验①吻合。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2019-新课标Ⅱ-10.html">2019-新课标Ⅱ-10</a>（2019 · 中） 甘蓝叶色遗传实验中，基于基因型与表现型关系及自交结果推断性状显隐性和亲本基因型。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/611-显隐性性状.html">显隐性性状</a></li>
+</ul>
+</div>
+</body>
+</html>

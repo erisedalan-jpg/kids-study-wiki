@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>胚乳</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>胚乳</h1><div class="review-mark" data-stem="胚乳"></div><div class="meta-card"><span><strong>考点</strong>胚乳</span><span><strong>权重</strong>1</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>分子与细胞</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：分子与细胞</li>
+<li>权重 weight：1</li>
+<li>真题数：1；年份跨度：2012–2012</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>胚乳的起源与成分</strong>：被子植物的胚乳由精子和极核融合后发育而成，染色体组数通常为三倍体（3n）。玉米、水稻等单子叶植物的胚乳是种子中储存养分的主要结构，富含淀粉等有机物。</li>
+<li><strong>种子萌发过程中的物质转化</strong>：胚乳中贮藏的淀粉等大分子有机物必须先水解为小分子（如葡萄糖），才能被胚吸收利用。水解后的葡萄糖主要通过<strong>有氧呼吸</strong>（或生物氧化）为种子萌发提供能量。</li>
+<li><strong>呼吸作用与干重变化</strong>：在黑暗且只消耗胚乳养分的条件下，种子萌发初期总干重因呼吸消耗而下降。根据干重变化可计算呼吸速率：单位时间内单粒种子的干重减少量即为其呼吸消耗量。呼吸速率通常先增大后减小。</li>
+<li><strong>曲线分析关键</strong>：胚乳干重持续下降；种子总干重在胚未形成光合能力前不断减少，下降最快时段对应呼吸速率最大时段。计算某时段平均消耗干重时，宜用 $\frac{\Delta \text{干重}}{\Delta \text{时间}}$。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确坐标与曲线含义</strong>：横轴为萌发时间，纵轴为“平均每粒干重（mg）”，区分“总干重”曲线与“胚乳干重”曲线。</li>
+<li><strong>找关键期与变化量</strong>：</li>
+<li>将两条曲线上的点按给定时间（如24h间隔）读取或估算数值。</li>
+<li>某时间段种子总干重的减少量 = 该时段呼吸消耗的总有机物量。</li>
+<li><strong>计算呼吸速率最大的时段</strong>：</li>
+<li>计算相邻测定时间点间总干重的差值，差值最大（即减少最多）的时段即为呼吸速率最大时段。</li>
+<li>注意单位换算和时间间隔是否一致。若题干直接给出数据点，可直接作差比较。</li>
+<li><strong>计算该时段每粒种子的平均呼吸消耗干重</strong>：</li>
+<li>消耗值 = 时段初总干重 − 时段末总干重，单位为 mg/粒。</li>
+<li>若求该时段内的总消耗，则为此差值；若问平均速率（mg/粒·h），则除以该段小时数。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆总干重与胚乳干重</strong>：胚乳干重只反映胚乳剩余量，呼吸消耗需看总干重减少，因为胚的生长也是利用胚乳水解产物重新合成自身物质，总干重下降才代表有机物因呼吸而消失。</li>
+<li><strong>呼吸消耗≠胚乳减少量</strong>：胚乳减少的一部分有机物用于构建胚，未被彻底氧化，所以不能用胚乳干重减少直接代替呼吸消耗量。</li>
+<li><strong>时间单位错配</strong>：题目中时间常以“小时”或“天”给出，计算时需确保分母的时间单位与问题一致。例如本题时间间隔为24小时，所求为“在该时间段内每粒种子呼吸消耗的平均干重”，直接给出差值26.5 mg即可，若问速率则需除以24 h。</li>
+<li><strong>读数不准确</strong>：坐标图中数值点可能处于整数间，需要合理估读，如本题中总干重从约201.0 mg降至约174.5 mg，相减得26.5 mg，需细心。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：（2012-新课标-07）玉米种子在25℃、黑暗、水分适宜条件下萌发，每天定时取等量种子，分别直接烘干（总干重）和切取胚乳烘干称重，得到每粒平均干重变化曲线（图略）。回答： （1）胚乳淀粉水解产物及供能途径； （2）呼吸速率最大时段及该时段每粒种子呼吸消耗的平均干重。</p>
+<p><strong>思路</strong>：由题干“只考虑营养物质来源于胚乳”，确定干重减少仅由种子自身呼吸引起。观察曲线趋势得出总干重持续下降、胚乳干重下降更快。呼吸速率最大对应总干重下降最快的时段，通过逐段计算差值得出。第（1）问根据基础知识直接作答。</p>
+<p><strong>步骤</strong>：
+1. 第（1）问：胚乳主要成分为淀粉，种子萌发时淀粉被水解成<strong>葡萄糖</strong>，葡萄糖通过<strong>呼吸（或生物氧化）作用</strong>分解，为种子生命活动提供能量。故填：葡萄糖；呼吸（或生物氧化）。
+2. 第（2）问：分析总干重曲线数据，从萌发开始每隔24h读取近似值（单位mg）：0h→207.0，24h→206.0（减少1.0），48h→204.6（减少1.4），72h→201.0（减少3.6），96h→174.5（减少26.5），120h→170.0（减少4.5）。总干重减少量最大的时段为<strong>72–96小时</strong>，故此时呼吸速率最大。该时段内每粒种子呼吸消耗的平均干重即总干重减少量：201.0 − 174.5 = <strong>26.5 mg</strong>。</p>
+<p><strong>点评/变式</strong>：此题经典之处在于用双曲线法将胚乳消耗与种子总代谢区分开，考查了物质转化与能量代谢的综合分析。变式：若增加“幼苗出土后见光”条件，则总干重曲线将先降后升（光合作用开始），分析时必须注意有机物积累方向的变化。解题关键永远是紧扣“总干重变化反映净呼吸消耗量”。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2012-新课标-07.html">2012-新课标-07</a>（2012 · 中） 考查玉米种子黑暗中萌发时胚乳淀粉水解与呼吸消耗干重的分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a class="dead" title="未收录">胚乳</a></li>
+</ul>
+</div>
+</body>
+</html>

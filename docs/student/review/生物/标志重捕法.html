@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>标志重捕法</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>标志重捕法</h1><div class="review-mark" data-stem="标志重捕法"></div><div class="meta-card"><span><strong>考点</strong>标志重捕法</span><span><strong>权重</strong>20</span><span><strong>真题数</strong>3</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物与环境</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物与环境</li>
+<li>权重 weight：20</li>
+<li>真题数：3；年份跨度：2010–2023</li>
+<li>出现题位：选择4 选择9</li>
+<li>难度分布：易1 中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>定义</strong>：标志重捕法（标记重捕法）是估算<strong>活动能力强、活动范围大</strong>的动物种群密度的常用方法。</li>
+<li><strong>核心公式</strong>：</li>
+<li>设种群总数为 $N$，初次捕获并标记数为 $M$，重捕个体数为 $n$，重捕中有标记的个体数为 $m$。</li>
+<li>基于"标记个体在种群中的比例与在重捕样本中的比例相同"的假设，公式为：<br />
+    $$N = \frac{M \times n}{m}$$</li>
+<li><strong>适用条件与前提</strong>：</li>
+<li><strong>标记个体与未标记个体被重捕的概率相等</strong>（标记物不影响其活动、生存）。</li>
+<li><strong>调查期间种群保持稳定</strong>（无大量出生/死亡、无迁入/迁出）。</li>
+<li><strong>标记物不易脱落且能维持至调查结束</strong>。</li>
+<li><strong>误差分析</strong>：</li>
+<li>若标记物易脱落，重捕中带标记个体数 $m$ 偏小，则估算值 $N$ <strong>偏大</strong>。</li>
+<li>若标记导致个体更易被天敌捕食或活动受限，则 $m$ 偏小，估算值 $N$ <strong>偏大</strong>。</li>
+<li>若标记个体易被研究者重新捕捉导致 $m$ 偏大，估算值 $N$ <strong>偏小</strong>。</li>
+<li><strong>与其他方法的对比</strong>：</li>
+<li><strong>样方法</strong>：适用于植物、活动能力弱的动物（如蚜虫、跳蝻、昆虫卵）。</li>
+<li><strong>红外触发相机/空中拍照</strong>：适用于大型珍稀、活动隐秘的哺乳动物，对动物影响小，可同时获得数量、分布及物种丰富度信息，但难以准确区分未标记的个体（有时需替代方法）。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>直算型（直接套用公式）</strong>：</li>
+<li><strong>步骤</strong>：从题干提取数据（$M, n, m$），代入 $N = \frac{M \times n}{m}$ 计算。注意“重捕”数据容易混淆，须严格匹配含义。</li>
+<li><strong>关键单位换算</strong>：若涉及面积/体积比，需额外乘上总面积/样方面积倍率（如某题公式变形：种群数量 = $(S \times n) / m$）。</li>
+<li><strong>分析评价型（方法对比）</strong>：</li>
+<li><strong>步骤</strong>：对比以下几种常见考察点：<ul>
+<li><strong>适用对象</strong>：标志重捕法→活动力强；样方法→活动力弱/植物；新技术（红外相机）→大型隐秘动物。</li>
+<li><strong>对动物的干扰</strong>：标志重捕法需捕捉，干扰较大；红外相机或拍照技术属于非损伤性取样，干扰较小。</li>
+<li><strong>数据获取维度</strong>：标志重捕法主要获取种群密度；新技术常能同时提供丰富度、分布格局等信息。</li>
+</ul>
+</li>
+<li><strong>误差推定型</strong>：</li>
+<li><strong>步骤</strong>：依据"若标记个体重捕概率降低（死亡/脱落/警惕），则 $m$ 偏低，最终 $N$ 偏高；反则反之"的逻辑链推断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆重捕数据</strong>：在代入 $N=Mn/m$ 时，误将重捕个体总数 $n$ 当做重捕到的已标记数 $m$。记住：分母 $m$ 是"重捕到的已标记数"。</li>
+<li><strong>适用对象误判</strong>：错误地将标志重捕法用于<strong>植物、活动力极弱的小昆虫（如蚜虫）</strong>，这类对象适用<strong>样方法</strong>。</li>
+<li><strong>标记物丢失或对行为的影响</strong>：一旦题干提到“标记物易脱落”或“标记后易被捕食”，直接反应为调查结果（$N$）<strong>偏大</strong>。</li>
+<li><strong>混淆种群密度与丰富度</strong>：种群密度指<strong>单位面积/体积内某种群的个体数</strong>；丰富度指<strong>群落中物种数目的多少</strong>。新技术（如拍照）可同时调查两者，但标志重捕法主要针对单种群密度。</li>
+<li><strong>忽略样方法的多点原则</strong>：在涉及取样调查（如空中拍照）时，容易忘记填写“随机取样、样方大小一致、数量适宜”等基本原则。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>代表题 1：2010-新课标-09（5）</h3>
+<p><strong>题目</strong>：调查c种群密度，捕获50个标记后放掉，一段时间后重捕40个，其中5个带标记。求c种群数量。
+<strong>思路</strong>：这是最直接的公式计算题。谨记公式 $N = \frac{M \times n}{m}$，直接将题中三个数值套入即可。
+<strong>步骤</strong>：
+1. 确定各数值：第一次捕获并标记数 $M = 50$；重捕总数 $n = 40$；重捕中的标记数 $m = 5$。
+2. 代入公式：$N = \frac{50 \times 40}{5} = \frac{2000}{5} = 400$ 。
+3. 得出结果：种群数量约为 400 个。
+<strong>点评/变式</strong>：
+本题是基础保分题。公式中 $M$ 为第一次抓的，$m$ 为重捕中带标记的。失分点在于部分学生会误算为 $50 \times 5 / 40$。若改为“一段时间后捕获40个带5个标记，求在此次重捕前种群大概有多少只”，需考虑“重捕后是否放回”，但该类高中试题通常将题干重捕数直接视为 $n$ 和 $m$ 计算比例。</p>
+<h3>代表题 2：2023-新课标-04</h3>
+<p><strong>题目</strong>：关于红外触发相机调查野生哺乳动物的叙述，找出错误选项。
+<strong>思路</strong>：用排除法辨析新技术（红外相机）与标志重捕法的差异，考查知识点为物种丰富度、种群密度调查及干扰程度对比。
+<strong>步骤</strong>：
+1. A选项：红外相机能记录该区域内出现的多种动物，统计物种数即为<strong>物种丰富度</strong>，正确。
+2. B选项：对比标志重捕法（需麻醉/捕捉），红外相机是无接触调查，<strong>干扰较小</strong>，正确。
+3. C选项：通过对东北豹照片进行个体识别（依据斑纹等），可以统计其数量，得出<strong>种群密度</strong>，正确。
+4. D选项：红外相机只要拍到个体即可，没有理由能调查成年却<strong>不能调查幼年</strong>，幼年同样会在相机前活动拍摄到。因此D错误。
+<strong>点评/变式</strong>：
+此题代表趋势：生物技术与生态调查结合。注意：若动物无法进行个体识别（无独特花纹），则红外相机仅能丰富度/相对丰度，难以做标志重捕般的绝对数量统计。做题切忌思维定势，认为“拍照只能拍到成年”。</p>
+<h3>代表题 3：2022-全国乙-09</h3>
+<p><strong>题目</strong>：空中拍照法调查草原动物，（1）选取样方注意事项；（2）给出S、m、n求种群数量；（3）相比标志重捕法的优势。
+<strong>思路</strong>：本题重在变式，将样方调查法的基本原则与计数统计结合，并考查方法学评价。
+<strong>步骤</strong>：
+1. <strong>取样原则</strong>：拍照法本质上是在样方内计数。注意事项必须突出：<strong>随机取样、样方大小一致、样方数量适宜</strong>（遵循样方法核心规则）。
+2. <strong>计算种群数量</strong>：先算密度（样方内平均个体数 $n$ / 样方面积 $m$），再推总面积 $S$。种群数量 = $(S \times n) / m$。注意这里不再需要用标志重捕，直接对应密度与总面积的比例。
+3. <strong>优势回答</strong>：抓关键词“空中拍照”与“标志重捕”（需捕捉对比）。优势：<strong>对动物的不良影响小</strong>（不抓不惊扰）；<strong>调查周期短、操作简便</strong>（无需二次回捕）。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2023-新课标-04.html">2023-新课标-04</a>（2023 · 易） 该题考查红外触发相机技术在野生动物生态学研究中的应用，辨析其与标记重捕法的区别及数据解读。</li>
+<li><a href="../../exam/生物/2022-全国乙-09.html">2022-全国乙-09</a>（2022 · 中） 利用空中拍照和样方法调查草原哺乳动物种群数量，考查样方选取要点、种群密度估算公式及与标志重捕法的比较。</li>
+<li><a href="../../exam/生物/2010-新课标-09.html">2010-新课标-09</a>（2010 · 中） 考查生态系统中种间关系、食物链及种群密度变化，结合标记重捕法计算。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/365-标志重捕法.html">标志重捕法</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>初级生产量</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>初级生产量</h1><div class="review-mark" data-stem="初级生产量"></div><div class="meta-card"><span><strong>考点</strong>初级生产量</span><span><strong>权重</strong>11</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物与环境</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物与环境</li>
+<li>权重 weight：11</li>
+<li>真题数：2；年份跨度：2019–2024</li>
+<li>出现题位：填空16 选择9</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>初级生产量（GP）</strong>：生态系统中生产者通过光合作用或化能合成作用固定的太阳能总量或合成的有机物总量。<br />
+  公式：$GP = NP + R$，其中 $NP$ 为净初级生产量，$R$ 为生产者自身呼吸消耗的能量。</li>
+<li><strong>净初级生产量（NP）</strong>：初级生产量扣除生产者自身呼吸消耗后剩余的部分，即用于生产者生长、发育、繁殖及流向其他营养级的有机物量。</li>
+<li><strong>能量去向</strong>：$GP$ 中的 $R$ 以热能散失；$NP$ 可流向初级消费者、分解者，或以枯枝落叶等形式暂时未被利用（积累在土壤中）。</li>
+<li><strong>黑白瓶法测总初级生产量</strong>（以溶氧量为指标）：</li>
+<li>初始水样 $O_2$ 含量记为 $A$；</li>
+<li>不透光瓶只有呼吸耗氧，$n$ 小时后 $O_2$ 含量 $B$，则呼吸消耗量 $= A - B$；</li>
+<li>透光瓶光合与呼吸同时进行，$n$ 小时后 $O_2$ 含量 $C$，则净光合产氧量 $= C - A$；</li>
+<li>总初级生产量对应产氧量 $= (C - A) + (A - B) = C - B$。</li>
+<li><strong>适用条件</strong>：黑白瓶法要求瓶内生产者呼吸速率相同且只有生产者，常用于水生生态系统。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>区分“总”与“净”</strong>：见到“固定的太阳能”“制造的有机物总量”→总初级生产量；见到“积累的有机物”“剩余的能量”→净初级生产量。牢记 $GP = NP + R$。</li>
+<li><strong>理清能量流图</strong>：  </li>
+<li>看清方框/箭头代表的是能量、生物量还是 $O_2$ 变化；  </li>
+<li>箭头“呼吸”对应 $R$，去往分解者、消费者或“未利用”的箭头均源于 $NP$。</li>
+<li><strong>黑白瓶法解题三步走</strong>：  </li>
+<li>明确 $A$（初始值）、$B$（不透光瓶终值）、$C$（透光瓶终值）的含义；  </li>
+<li>呼吸消耗量 $= A - B$（必为正值）；净产氧量 $= C - A$；总产氧量 $= C - B$；  </li>
+<li>根据问题将氧气量换算为有机物量，并注意公式变形。</li>
+<li><strong>比例计算</strong>：若给出 $NP$ 的分配比例（如流向分解者占 36%），直接计算即可，但要先确认基数是否为 $NP$，而非 $GP$。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆 $GP$ 与太阳入射能</strong>：$GP$ 是已经固定的能量，远小于照射到生态系统的太阳能，不可等同。</li>
+<li><strong>把呼吸消耗当作“未被利用的能量”</strong>：呼吸消耗已散失，不属于$NP$的一部分，当然不构成“未被利用”。</li>
+<li><strong>黑白瓶实验中指标混淆</strong>：  </li>
+<li>$C - A$ 是净初级生产量对应的产氧量，不是总初级生产量；  </li>
+<li>不透光瓶直接给出呼吸耗氧量，不能用 $B - A$（应为 $A - B$）。</li>
+<li><strong>忽视实验前提</strong>：“生产者呼吸相同且瓶中只有生产者”，若条件不满足，不可直接用上述公式。</li>
+<li><strong>图解题抓不准基量</strong>：如“$E_3$ 占净初级生产量的 36%”，这里的 $E_3$ 是来自 $NP$ 的去向之一（如流入分解者），若误认为 $E_3$ 本身就是 $NP$ 则会认为数值矛盾。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3><strong>题目</strong>：2024 辽宁-16（能量流动示意图）</h3>
+<p><strong>题目简述</strong>：图示红松人工林能量流动，初级生产量沿碎屑食物链流动比例大，枯枝落叶和倒木被分解后剩余部分积累于土壤。给出注记“植物固定的太阳能为初级生产量，包括净初级生产量和自身呼吸消耗的能量”，选项涉及 $E$、$E_2$、$E_3$ 的判断。<br />
+<strong>思路</strong>：明确图中 $E$ 为总初级生产量，$E_2$ 为呼吸消耗 $R$，$E_3$ 为流向分解者的能量（或土壤积累）。根据定义辨析各选项。<br />
+<strong>步骤</strong>：<br />
+1. $E$ 是“植物固定的太阳能”，即总初级生产量 $GP$，不是照射到生态系统的全部太阳能→A 错。<br />
+2. $E_2$ 指向呼吸消耗，属于散失的热能，并非“未被利用的能量”→B 错。<br />
+3. 图可显示 $E_3$ 属于净初级生产量的一部分（去往枯枝落叶/分解者），若标注比例为 36%，则 C 说“$E_3$ 占净初级生产量的 36%”正确。<br />
+<strong>点评/变式</strong>：能量流图题需要紧扣注记，先定位 $GP$、$R$、$NP$，再匹配各去向。变式题会在箭头加数值求传递效率或未利用比例。</p>
+<h3><strong>题目</strong>：2019 新课标Ⅱ-09（黑白瓶法测总初级生产量）</h3>
+<p><strong>题目简述</strong>：<br />
+（1）森林生态系统中生产者能量来源及流向。<br />
+（2）黑白瓶法：三等份水样，初始氧量 $A$；不透光瓶（甲）终值 $B$；透光瓶（乙）终值 $C$，且条件为生产者呼吸相同且瓶中只有生产者。回答 $C$ 与 $A$ 的差值及总初级生产量表达式。<br />
+<strong>思路</strong>：<br />
+（1）基础记忆；<br />
+（2）利用公式 $NP$ 产氧 $= C-A$，总产氧 $= C-B$。<br />
+<strong>步骤</strong>：<br />
+1. （1）太阳能；初级消费者、分解者。<br />
+2. （2）$C-A$ 表示净初级生产量对应的产氧量（或净光合作用产氧量）。<br />
+   总初级生产量对应的产氧量 $= (C-A) + (A-B) = C-B$。<br />
+<strong>点评/变式</strong>：黑白瓶法核心在于区分“净”与“总”，并坚持用初始值 $A$ 做参照。变式可要求将氧气量换算为有机物量（乘以系数），或加入异养生物时修正公式，务必看清前提条件。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2024-辽宁-16.html">2024-辽宁-16</a>（2024 · 中） 红松人工林能量流动调查，分析初级生产量、净初级生产量和能量去向。</li>
+<li><a href="../../exam/生物/2019-新课标Ⅱ-09.html">2019-新课标Ⅱ-09</a>（2019 · 中） 考查生态系统能量来源与流向，以及利用黑白瓶法测定水生浮游植物总初级生产量。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/555-初级生产量.html">初级生产量</a></li>
+</ul>
+</div>
+</body>
+</html>

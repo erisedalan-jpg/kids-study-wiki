@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>翻译提前终止</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>翻译提前终止</h1><div class="review-mark" data-stem="翻译提前终止"></div><div class="meta-card"><span><strong>考点</strong>翻译提前终止</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：解答24</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>翻译提前终止</strong>：由于基因突变，mRNA上提前出现<strong>终止密码子</strong>（UAA、UAG、UGA），导致核糖体在翻译至该处时提前停止，合成的多肽链变短，通常使蛋白质空间结构改变、功能丧失。</li>
+<li><strong>两种主要突变类型</strong>：</li>
+<li><strong>无义突变</strong>：碱基替换使原有编码氨基酸的密码子变为终止密码子，直接导致翻译提前终止。</li>
+<li><strong>移码突变</strong>：碱基的插入或缺失（非3的整数倍）改变阅读框，使下游出现新的终止密码子，引发提前终止；与原序列相比，往往产生截短且序列异常的多肽。</li>
+<li><strong>密码子与反密码子</strong>：mRNA上的终止密码子无对应的tRNA，不能携带氨基酸进入核糖体A位点，释放因子识别并促使肽链释放。</li>
+<li><strong>蛋白质结构与功能</strong>：多肽链缩短可能导致活性位点缺失、疏水核心暴露、亚基组装异常等，使酶或结构蛋白失活，表现出突变性状。</li>
+<li><strong>等位基因与同源基因</strong>：同一位点的不同突变等位基因（如 $a_1$ 与 $A_1$）属等位基因；非等位的同源基因（如 $A_1$ 与 $A_2$）序列相同或高度相似，位于不同位点，可编码功能相同的蛋白。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>显隐性判断</strong>：纯合突变体与野生型杂交，若 $F_1$ 全为野生型表型，则突变为隐性；若全为突变型，则为显性。可据此逆推突变类型。</li>
+<li><strong>突变类型推断（依据模板链序列变化）</strong>：</li>
+<li>比较野生型与突变型模板链的碱基变化。</li>
+<li>若仅发生<strong>单个碱基替换</strong>，且导致对应mRNA密码子变为终止密码子，则为无义突变。</li>
+<li>若发生<strong>碱基缺失或插入</strong>，且改变阅读框，使下游出现终止密码子，则为移码突变。</li>
+<li>书写答案时需准确填空，如“碱基替换”“碱基插入/缺失”（或“移码突变”），“终止密码子”，“变短”等。</li>
+<li><strong>蛋白质功能验证</strong>：将正常基因转入突变体，若功能恢复，说明该基因控制该性状；常用于验证突变是功能丧失型。</li>
+<li><strong>酶活性数据解读</strong>：野生型基因编码有活性酶，突变体由于提前终止导致酶失活；图表中酶活性最高的株系即为野生型，其余为突变体。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆突变类型</strong>：碱基替换不一定都是无义突变，只有变为终止密码子的才属此类；变成其他氨基酸为错义突变。</li>
+<li><strong>移码突变必导致提前终止？</strong> 不一定，移码后若下游未出现终止密码子，可能延长或产生异常肽链，但题目通常以提前终止结局设问。</li>
+<li><strong>终止密码子位置判断</strong>：提前出现在编码区中间，使肽链变短；若发生在末尾附近，影响可能较小，但仍可能改变蛋白质功能。</li>
+<li><strong>填空用语</strong>：基因突变类型应写“碱基替换”或“碱基缺失/插入”，不能笼统写“基因突变”；“终止密码子”不能写成“终止子”（那是DNA上的）。</li>
+<li><strong>显隐性实验设计</strong>：不能用“将突变体与野生型杂交后再自交看比例”作为直接判断隐性突变的最简方案，应看 $F_1$ 表型即足以判断。</li>
+<li><strong>模板链与mRNA关系</strong>：注意题目给的是“模板链”，要转换为mRNA序列再找密码子；小心碱基互补方向。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024·辽宁·24节选）野生型小麦成熟期叶片正常枯黄（熟黄），单基因隐性突变纯合子 $ml$ 持绿。另有隐性突变的纯合子 $m2$，表型与 $ml$ 相同，由非等位同源基因 $A_2$ 突变为 $a_2$。题给图1显示了 $A_1$、$A_2$、$a_1$、$a_2$ 基因转录的模板链部分序列（需根据描述推断突变）。要求：判断 $ml$ 与野生型杂交 $F_1$ 表型；指出 $a_1$ 和 $a_2$ 的突变类型及对mRNA和肽链的影响；由图2酶活性结果判断野生型株系。</p>
+<p><strong>思路</strong><br />
+- （1）隐性突变纯合子与野生型杂交，$F_1$ 为杂合子，应表现为野生型性状（熟黄）；验证时将 $A_1$ 基因转入持绿（即突变体 $ml$）个体，看是否恢复熟黄。<br />
+- （2）根据模板链差异：从题图1知，$a_1$ 相比 $A_1$ 发生单个碱基替换，使对应mRNA的密码子由编码氨基酸变为 UAA/UAG/UGA，属无义突变；$a_2$ 相比 $A_2$ 发生碱基缺失（或插入），导致移码，下游提前出现终止密码子，属移码突变。两者都使mRNA提前出现终止密码子，翻译的多肽链变短，酶失活。图2中野生型有活性酶，应为酶活性最高的株系。</p>
+<p><strong>步骤</strong><br />
+1. （1）① 根据隐性突变定义，杂合子表现野生型，故 $F_1$ 表型填“熟黄”。<br />
+   ② 验证推论：将 $A_1$ 基因转入<strong>持绿</strong>（即 $ml$ 纯合子）个体中，若转基因植株恢复熟黄，则说明 $A_1$ 基因控制熟黄。<br />
+2. （2）① 比较图1模板链，$a_1$ 基因发生<strong>碱基替换</strong>，$a_2$ 基因发生<strong>碱基缺失</strong>（或碱基增添，视图像而定，此处按典型移码答缺失）。<br />
+   ② 突变使mRNA上都提前出现了<strong>终止密码子</strong>。<br />
+   ③ 翻译出的多肽链长度变<strong>短</strong>，蛋白质空间结构改变，活性丧失。<br />
+   ④ 野生型A酶有活性，数值最高，因此图2中酶活性最高的号株系为野生型（具体号数需见图，但按此原则判断）。</p>
+<p><strong>点评/变式</strong><br />
+该题综合考查显隐性鉴定、基因突变类型对翻译过程的影响以及功能验证。解题关键是将模板链变异正确对应到 mRNA 的密码子变化。变式可改为仅给mRNA序列，要求判断突变结果；或结合电泳、酶切等考查突变检测。答题时务必区分“碱基替换”与错义/无义突变的具体描述，以及“终止密码子”与“终止子”的不同。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2024-辽宁-24.html">2024-辽宁-24</a>（2024 · 中） 该题以小麦叶片持绿与熟黄突变为背景，考查基因突变类型判断、转基因功能验证及基因结构变异与酶活性分析。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/686-翻译提前终止.html">翻译提前终止</a></li>
+</ul>
+</div>
+</body>
+</html>

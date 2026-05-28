@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>基因来源推理</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>基因来源推理</h1><div class="review-mark" data-stem="基因来源推理"></div><div class="meta-card"><span><strong>考点</strong>基因来源推理</span><span><strong>权重</strong>5</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：5</li>
+<li>真题数：1；年份跨度：2015–2015</li>
+<li>出现题位：选择10</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>常染色体基因来源推理</strong>：个体的等位基因一个来自父方，一个来自母方。若父母均为杂合子（如 $Aa$），则无法确定父母传给子代的显性基因具体来自祖父还是祖母（或外祖父还是外祖母），因为父母产生配子时等位基因随机分离。</li>
+<li><strong>伴 X 染色体基因来源推理</strong>：</li>
+<li>男性：$X$ 染色体一定来自母亲，$Y$ 染色体一定来自父亲。</li>
+<li>女性：一条 $X$ 来自父亲，一条 $X$ 来自母亲。</li>
+<li>关键链条：父亲的 $X$ 必来自祖母（因祖父传给父亲的是 $Y$）；母亲的 $X$ 可来自外祖父或外祖母，无法唯一确定。</li>
+<li><strong>适用条件</strong>：不考虑基因突变和染色体变异，仅依据遗传规律。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>明确基因位置</strong>：先判断基因位于常染色体还是 $X$ 染色体，按题目要求或已知信息确定。</li>
+<li><strong>标出关键个体的基因型</strong>：根据表现型或题目假设，写出女孩、父母、祖辈的基因型（注意考虑可能存在的杂合情况）。</li>
+<li><strong>从子代到亲代逐级追溯</strong>：</li>
+<li>若为常染色体：指出该女孩的一个显性基因来自父亲，另一个来自母亲；由于父母均为 $A_$（可能杂合），无法进一步区分来自哪个祖辈。</li>
+<li>若为 $X$ 染色体：<ul>
+<li>女孩的其中一个 $X^A$ 来自父亲 $\to$ 父亲的 $X^A$ 一定来自祖母（父亲的 $Y$ 来自祖父）。</li>
+<li>女孩的另一个 $X^A$ 来自母亲 $\to$ 母亲的 $X^A$ 可能来自外祖父，也可能来自外祖母，无法确定。</li>
+</ul>
+</li>
+<li><strong>规范表述</strong>：用“必然来自”“无法确定”等术语，并简要给出判断依据。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆传递路径</strong>：误以为常染色体遗传中，父亲传给女儿的 $A$ 一定来自祖父——实际上也可能来自祖母，因为父亲的 $A$ 可以是其父母任一方遗传的。</li>
+<li><strong>伴 X 遗传中父亲 X 的来源记反</strong>：认为父亲的 $X$ 来自祖父，正确应是：父亲（$X^AY$）的 $X^A$ 只能来自母亲（祖母），$Y$ 来自父亲（祖父）。</li>
+<li><strong>外祖父与外祖母混淆</strong>：题目问“另一个 $X^A$ 来自外祖父还是外祖母”，容易不假思索写外祖母，实际上女孩母亲的 $X^A$ 既可来自外祖父（外祖父的 $X$ 全部传给女儿），也可来自外祖母（若外祖母为 $X^AX^a$），无法唯一确定。</li>
+<li><strong>忽略条件限定</strong>：题目假设“女孩基因型为 $X^AX^A$ 或 $AA$”，其中 $AA$ 可能来自父母双方的 $A$，不可默认全来自一方。</li>
+</ul>
+<h2>代表题精讲</h2>
+<h3>【代表题】2015-新课标Ⅱ-10</h3>
+<p><strong>题目</strong>：某女孩基因型为 $X^AX^A$ 或 $AA$，祖辈四人的基因型分别为：祖父 $X^AY$ 或 $Aa$，祖母 $X^AX^a$ 或 $Aa$，外祖父 $X^AY$ 或 $Aa$，外祖母 $X^AX^a$ 或 $Aa$。不考虑变异，回答：
+（1）若基因在常染色体上，能否确定女孩的 2 个 $A$ 来自祖辈中的哪两人？为什么？
+（2）若基因在 $X$ 染色体上，判断女孩的一个 $X^A$ 必然来自哪位祖辈，以及能否确定另一个 $X^A$ 的来源。</p>
+<p><strong>思路</strong>：
+- 第（1）问：常染色体遗传，女孩 $AA$ 的两个 $A$ 分别来自父亲和母亲。再由祖辈均为 $Aa$，推知父亲（$AA$ 或 $Aa$）的 $A$ 可能来自祖父或祖母，无法确定；母亲的 $A$ 同理无法确定。
+- 第（2）问：$X$ 染色体遗传，女孩 $X^AX^A$ 的两个 $X^A$，一个来自父亲，一个来自母亲。父亲基因型为 $X^AY$，其 $X^A$ 一定来自祖母（因父亲从祖父获得 $Y$）。母亲基因型为 $X^AX^a$，其 $X^A$ 可能来自外祖父（外祖父的 $X^A$ 必然传给女儿）或外祖母（若外祖母提供 $X^A$），故无法确定。</p>
+<p><strong>步骤</strong>：
+1. <strong>第（1）问</strong>：
+   - 女孩 $AA$ $\to$ 一个 $A$ 来自父亲，一个来自母亲。
+   - 祖辈均为 $Aa$ $\to$ 父亲可能为 $AA$ 或 $Aa$，他的 $A$ 基因可能是其父亲（祖父）的 $A$ 或母亲（祖母）的 $A$。
+   - 同理，母亲的 $A$ 也无法追溯至外祖父或外祖母中的特定一人。
+   - 因此：<strong>不能</strong>确定，理由如上。
+2. <strong>第（2）问</strong>：
+   - 女孩 $X^AX^A$ $\to$ 其一 $X^A$ 来自父亲，其二来自母亲。
+   - 父亲 $X^AY$：$X^A$ 只能来自祖母（祖父给父亲的是 $Y$） $\to$ 女孩的这一 $X^A$ <strong>必然来自祖母</strong>。
+   - 母亲 $X^AX^a$：母亲的 $X^A$ 可以来自外祖父（外祖父 $X^AY$ 一定传 $X^A$ 给女儿），也可以来自外祖母（外祖母 $X^AX^a$ 可能传 $X^A$） $\to$ <strong>无法确定</strong>女孩另一个 $X^A$ 是来自外祖父还是外祖母。</p>
+<p><strong>点评/变式</strong>：
+- 本题核心考点是常染色体传递的“不确定性”与伴 X 传递中“男性 $X$ 定源于母”的确定性。解题时画出遗传关系简图，用箭头标注基因流向，不易出错。
+- 变式：若祖母为 $X^aX^a$（隐性纯合），父亲为男性患者，则女孩从父亲获得的 $X$ 必然为祖母的 $X^a$，而非 $X^A$。灵活运用“父亲 XY 的 X 必来自祖母”这一铁律是解题关键。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2015-新课标Ⅱ-10.html">2015-新课标Ⅱ-10</a>（2015 · 中） 探究常染色体与X染色体遗传中显性基因来源的推断方法</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/579-基因来源推理.html">基因来源推理</a></li>
+</ul>
+</div>
+</body>
+</html>

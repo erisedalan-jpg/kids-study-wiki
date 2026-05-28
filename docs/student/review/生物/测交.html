@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>测交</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>测交</h1><div class="review-mark" data-stem="测交"></div><div class="meta-card"><span><strong>考点</strong>测交</span><span><strong>权重</strong>12</span><span><strong>真题数</strong>2</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：12</li>
+<li>真题数：2；年份跨度：2019–2021</li>
+<li>出现题位：选择5 选择6</li>
+<li>难度分布：中2</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>测交定义</strong>：将待测个体与隐性纯合子杂交，用以测定待测个体基因型的方法。</li>
+<li><strong>核心原理</strong>：<ul>
+<li>测交后代的<strong>表现型种类及比例</strong>，直接反映待测个体产生的<strong>配子种类及比例</strong>。</li>
+<li>基因的分离定律：一对杂合基因（如 $Aa$）测交，后代性状分离比为 $1:1$。</li>
+<li>基因的自由组合定律：位于非同源染色体上的非等位基因独立遗传。$n$ 对独立遗传的杂合基因测交，后代会出现 $2^n$ 种表现型，且比例相等，即 $(1:1)^n$ 展开后的比例。</li>
+</ul>
+</li>
+<li><strong>关键计算推论（针对 $n$ 对独立遗传的杂合子测交）</strong>：<ul>
+<li><strong>表现型种类</strong>：$2^n$ 种。</li>
+<li><strong>子代基因型概率</strong>：对于任一对基因，杂合子概率为 $\frac{1}{2}$，纯合子（隐性纯合）概率也为 $\frac{1}{2}$。因此，$n$ 对基因均杂合的概率为 $\left(\frac{1}{2}\right)^n$，$n$ 对基因均纯合的概率也为 $\left(\frac{1}{2}\right)^n$，两者在子代中的个体数<strong>理论相等</strong>。</li>
+<li><strong>杂合子与纯合子总数比较</strong>：当 $n \geq 2$ 时，子代中至少含有一对杂合基因的个体（即广义杂合子）数多于完全纯合的个体数。这可通过计算纯合子总概率 $\left(\frac{1}{2}\right)^n$，杂合子总概率为 $1 - \left(\frac{1}{2}\right)^n$ 进行比较得出。</li>
+</ul>
+</li>
+<li><strong>判断显隐性与纯杂合</strong>：测交是鉴定个体基因型的核心方法，但并非唯一方法。在显隐性关系未知时，需综合运用多种交配实验结果进行推断。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>审题定位，明确遗传方式</strong>：
+    首先看清题目要求，判断涉及的是一对还是多对相对性状，基因间是独立遗传（遵循自由组合定律）还是连锁遗传。对于多对独立遗传的基因，可将其分解为多个一对相对性状的问题进行分析，再组合。</li>
+<li><strong>拆解交配实验，反推基因型</strong>：<ul>
+<li><strong>若题目给出亲本及子代表现型与比例，要求推断亲本基因型</strong>：<ul>
+<li><strong>出现性状分离</strong>（如子代出现隐性性状）：则亲本双方必均含隐性基因，常用于鉴定显性杂合子。</li>
+<li><strong>子代出现特定比例</strong>：如 $1:1$，则亲本是测交组合（$Aa \times aa$）；如 $3:1$，则亲本是杂合子自交组合（$Aa \times Aa$）。对于多对基因，将各对性状的比例相乘进行综合判断，如 $(1:1) \times (3:1)$ 等。</li>
+</ul>
+</li>
+<li><strong>若要通过实验验证某个体是否为杂合子</strong>：<ul>
+<li><strong>首选测交</strong>：与隐性纯合子杂交，若后代出现 $1:1$ 的性状分离比，则为杂合子。</li>
+<li><strong>自交法（适用于自花传粉植物）</strong>：若自交后代出现性状分离，则为杂合子。</li>
+<li><strong>杂交法</strong>：与另一同性状个体杂交，若后代出现性状分离（如 $3:1$），则双亲均为杂合子。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>应用分离比例的数学模型（针对多对基因测交）</strong>：
+    牢记 $n$ 对独立遗传杂合子的测交子代，各表现型数量呈现均匀分布，比例为 $(1:1)^n$ 展开项，即 $1:1:1:\dots:1$（共 $2^n$ 项）。任何声称个体数目差异会随 $n$ 增大而改变的说法都是错误的。直接计算特定基因型的概率时，使用 $\left(\frac{1}{2}\right)^k$ 公式（$k$ 为相关基因对数）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>陷阱1：忽视隐性性状个体作为“测交亲本”的必然性</strong>。
+    在显隐性已知时，隐性个体一定是纯合子。当题目中亲本是显性与隐性杂交时，即等同于测交，其子代 $1:1$ 的性状分离比可直接用于判定显性亲本为杂合子。</li>
+<li><strong>陷阱2：混淆 “测交结果 $1:1$” 与 “判断杂合子的唯一性”</strong>。
+    测交子代出现 $1:1$ 的前提是显隐性关系已明确。若显隐性未知，$1:1$ 的分离比无法直接判断哪个亲本是杂合子。判定杂合子最可靠的内部证据是<strong>自交出现性状分离</strong>，或两个相同性状的亲本杂交，后代出现性状分离（比例为 $3:1$）。</li>
+<li><strong>陷阱3：将多基因测交比例类比自交比例</strong>。
+    $n$ 对独立遗传的杂合子，其<strong>测交</strong>后代比例是 $1:1:1:\dots:1$，所有表现型数目理论上<strong>相等</strong>，差异源自统计误差而非规律性。而<strong>自交</strong>后代会出现 $(3:1)^n$ 的展开比例，不同表现型数目差异巨大。做题时务必看清是“测交”还是“自交”。</li>
+<li><strong>陷阱4：误解“杂合子”概念的范围</strong>。
+    在基因型统计中，“纯合子”通常指所有相关基因均纯合的个体，即 $n$ 对基因均纯合。而“杂合子”通常指至少含有一对杂合基因的个体。被误判“杂合子个体数等于纯合子”通常是因为错误地只统计了“$n$ 对基因均杂合”的个体数。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>：2019-新课标Ⅱ-05 题干
+<strong>思路</strong>：本题的核心是在显隐性关系未知的前提下，判断植株甲（全缘叶）是否为杂合子。一个杂合子必须满足两个条件：①该性状为显性性状；②其基因型为杂合。我们需逐一分析4个实验方案，哪个能提供证明以上两点的充分证据。
+<strong>步骤</strong>：
+- <strong>分析实验①</strong>：让植株甲自交，子代出现性状分离。自交后代出现与自己不同的性状（羽裂叶），证明植株甲的全缘叶是显性，且植株甲同时含有显性与隐性基因，是<strong>杂合子</strong>。该方案可以判定。
+- <strong>分析实验②</strong>：用植株甲给另一全缘叶植株授粉，子代均为全缘叶。这有两种可能：一是双亲均为显性纯合子（$AA \times AA$）；二是一方为显性纯合子，一方为杂合子（$AA \times Aa$）。无法唯一判定植株甲是杂合子。该方案不可行。
+- <strong>分析实验③</strong>：用植株甲给羽裂叶植株授粉，子代性状分离比为 $1:1$。在显隐性未知时，这相当于测交比。若全缘叶为显性，则植株甲为杂合子（$Aa \times aa$）；若全缘叶为隐性，则植株甲为隐性纯合子（$aa \times Aa$）。不能唯一确定植株甲是杂合子。该方案不可行。
+- <strong>分析实验④</strong>：用植株甲给另一全缘叶植株授粉，子代出现 $3:1$ 的性状分离。这是杂合子自交（$Aa \times Aa$）的经典比例，直接证明亲本双亲均为具有相同显性性状的杂合子。该方案可以判定。
+<strong>点评/变式</strong>：判断个体是否为杂合子，最可靠的方法是看其自交或与相同表型个体杂交是否发生<strong>性状分离</strong>。出现特定分离比 $3:1$，是双显性杂合子交配的铁证。简单测交（$1:1$）只有在显隐性已知的前提下，才能判定显性亲本为杂合子。</p>
+<p><strong>题目</strong>：2021-全国乙-06 题干
+<strong>思路</strong>：本题是多对独立遗传基因的测交理论模型。植株A是 $n$ 对基因均杂合的二倍体。其测交即为 $AaBb\dots \times aabb\dots$（共 $n$ 对）。解题关键在于利用分离定律，将 $n$ 对基因拆开分析，再将对结果整合。
+<strong>步骤</strong>：
+- <strong>分析A选项</strong>：每对杂合基因测交产生2种表现型，$n$ 对独立遗传基因的组合情况是 $2^n$ 种。A正确。
+- <strong>分析B选项</strong>：每对基因测交比为 $1:1$，因此 $n$ 对基因测交后代比例为 $(1:1)^n = 1:1:1:\dots:1$。这意味着所有 $2^n$ 种表现型的个体数目理论上<strong>完全相等</strong>，与 $n$ 的大小无关。差异越大说法错误。B错误。
+- <strong>分析C选项</strong>：“$n$ 对基因均杂合”个体的概率是所有对都杂合，即 $\left(\frac{1}{2}\right)^n$。 “（$n$ 对基因均）纯合”个体的概率是所有对都纯合，即 $\left(\frac{1}{2}\right)^n$。两者个体数理论相等。C正确。
+- <strong>分析D选项</strong>：当 $n \geq 2$ 时，广义纯合子概率为 $\left(\frac{1}{2}\right)^n \leq \frac{1}{4}$。广义杂合子概率为 $1 - \left(\frac{1}{2}\right)^n \geq \frac{3}{4}$。杂合子个体数始终多于纯合子。D正确。
+<strong>点评/变式</strong>：抓住“多对基因测交后代所有表现型比例恒为 $1:1:1:\dots:1$”这一核心结论，可直接秒杀多对基因测交的比例类题目。计算特定基因型概率时，熟练运用“每个基因座上杂合/纯合均为 $\frac{1}{2}$ 概率”的分解组合原则。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2021-全国乙-06.html">2021-全国乙-06</a>（2021 · 中） 考查n对独立遗传杂合基因的测交子代表现型种类与比例关系。</li>
+<li><a href="../../exam/生物/2019-新课标Ⅱ-05.html">2019-新课标Ⅱ-05</a>（2019 · 中） 本实验通过分析杂交结果判断植株的基因型，需理解性状显隐性与杂合子判定依据</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/270-测交.html">测交</a></li>
+</ul>
+</div>
+</body>
+</html>

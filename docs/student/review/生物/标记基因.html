@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>标记基因</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>标记基因</h1><div class="review-mark" data-stem="标记基因"></div><div class="meta-card"><span><strong>考点</strong>标记基因</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>生物技术与工程</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：生物技术与工程</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：解答25</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>标记基因</strong>：载体DNA上用于鉴别受体细胞是否含有目的基因或重组载体的特殊基因。</li>
+<li><strong>常见类型</strong>：抗生素抗性基因（如卡那霉素抗性基因 $Kan^R$、潮霉素B抗性基因 $HygB^R$、氨苄青霉素抗性基因 $Amp^R$ 等）、荧光蛋白基因、颜色反应基因（如 $lacZ$）。</li>
+<li><strong>作用原理</strong>：</li>
+<li>未导入载体的细胞在含相应抗生素的培养基上不能存活。</li>
+<li>导入空载体或重组载体的细胞因表达抗性蛋白而存活，从而实现<strong>初步筛选</strong>。</li>
+<li>若标记基因在T-DNA（可转移DNA）内，可用于<strong>转化植株的筛选</strong>。</li>
+<li><strong>双标记筛选</strong>：骨架抗性基因（在质粒复制区，不进T-DNA）用于<strong>原核宿主</strong>（如农杆菌）筛选；T-DNA内标记基因用于<strong>真核受体</strong>（如棉花愈伤组织）筛选。</li>
+<li><strong>条件限制</strong>：标记基因必须位于T-DNA左右边界之间，才能整合到植物基因组并表达，从而赋予植物抗性。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>定位标记基因</strong>：观察质粒图谱，确定标记基因是否位于T-DNA区（$LB$至$RB$之间）。</li>
+<li><strong>区分筛选对象</strong>：</li>
+<li>细菌筛选：用质粒骨架上的标记基因（通常不在T-DNA内）。</li>
+<li>植物转化细胞筛选：用T-DNA区内的标记基因。</li>
+<li><strong>选择对应抗生素</strong>：根据筛选对象选取标记基因对应的抗生素（如 $Kan^R$→卡那霉素，$HygB^R$→潮霉素B）。</li>
+<li><strong>验证导入</strong>：若需检测目的基因是否整合到受体染色体，需提取基因组DNA，利用目的基因特异性引物进行PCR。</li>
+<li><strong>避免混淆</strong>：不可用骨架抗性基因筛选植物（因为骨架不整合入植物基因组），也不可用T-DNA内标记基因筛选农杆菌（因该基因在细菌中不表达或已有抗性）。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆筛选对象</strong>：误用骨架标记基因筛选转基因植物，导致假阳性或全部死亡。</li>
+<li><strong>忽略边界位置</strong>：未注意标记基因是否在T-DNA左右边界内，直接盲目选择抗生素。</li>
+<li><strong>启动子错误</strong>：真核标记基因需连接真核启动子（如CaMV35S），若用原核启动子则无法在植物中表达，筛选失败。</li>
+<li><strong>引物设计</strong>：检测植物基因组中目的基因时，引物必须依据目的基因序列，不能使用载体通用引物（除非目的基因两翼为载体序列）。</li>
+<li><strong>目的基因未必含标记基因</strong>：有时标记基因与目的基因不在同一T-DNA，此时需共转化，筛选时需关注两个标记。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024辽宁·25节选）：在棉花抗病虫基因工程中，穿梭质粒含有 $Kan^R$（卡那霉素抗性）和 $HygB^R$（潮霉素B抗性）两个标记基因，T-DNA左右边界内连有目的基因。问用哪个基因对应的抗生素初步筛选转化的棉花愈伤组织。</p>
+<p><strong>思路</strong>：棉花愈伤组织是植物细胞，需筛选整合了T-DNA的转化细胞。只有位于T-DNA内的标记基因才会插入植物基因组并表达，故应选取T-DNA内的标记基因对应的抗生素。</p>
+<p><strong>步骤</strong>：
+1. 观察穿梭质粒图谱：$HygB^R$ 位于T-DNA的 $LB$ 与 $RB$ 之间，$Kan^R$ 位于骨架区。
+2. 判断：植物筛选需用T-DNA内的标记基因 → $HygB^R$。
+3. 结论：用潮霉素B（对应 $HygB^R$）初步筛选棉花愈伤组织。</p>
+<p><strong>点评/变式</strong>：
+- 本题核心是<strong>区分骨架标记与T-DNA标记</strong>。若问“筛选含有重组质粒的农杆菌”，则需用 $Kan^R$（骨架标记）对应抗生素。
+- 变式：有时标记基因与目的基因融合或共用一个启动子，此时选择标记同时能指示目的基因表达。注意题干描述“初步筛选”，仅证明标记基因导入，后期还需分子检测目的基因。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2024-辽宁-25.html">2024-辽宁-25</a>（2024 · 中） 本题以改造Ti质粒培育抗虫棉花为背景，考查基因工程操作流程及相关技术。</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/617-标记基因.html">标记基因</a></li>
+</ul>
+</div>
+</body>
+</html>

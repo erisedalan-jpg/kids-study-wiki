@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DNA迁移率</title>
+<link rel="stylesheet" href="../../vendor/style.css">
+
+<link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+<script defer src="../../vendor/katex/katex.min.js"></script>
+<script defer src="../../vendor/katex/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$',right:'$',display:false}
+    ],
+    throwOnError:false
+  });"></script>
+
+<script src="../../vendor/review.js" defer></script>
+
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="../../index.html">总览</a><a href="../../数学.html">数学</a><a href="../../物理.html">物理</a><a href="../../化学.html">化学</a><a href="../../生物.html">生物</a></div>
+<h1>DNA迁移率</h1><div class="review-mark" data-stem="DNA迁移率"></div><div class="meta-card"><span><strong>考点</strong>DNA迁移率</span><span><strong>权重</strong>6</span><span><strong>真题数</strong>1</span><span><strong>学科</strong>生物</span><span><strong>父主题</strong>遗传与进化</span></div><h2>考点定位</h2>
+<ul>
+<li>父主题：遗传与进化</li>
+<li>权重 weight：6</li>
+<li>真题数：1；年份跨度：2024–2024</li>
+<li>出现题位：选择7</li>
+<li>难度分布：中1</li>
+</ul>
+<h2>知识精要</h2>
+<ul>
+<li><strong>电泳原理</strong>：DNA分子在高于等电点的pH缓冲液中带负电荷，在电场中由负极向正极泳动。迁移率指单位电场强度下分子的泳动速度。</li>
+<li><strong>迁移率影响因素</strong>：</li>
+<li><strong>DNA分子大小</strong>：在恒定电场和凝胶浓度下，迁移率与DNA片段大小成反比——小分子泳动快，大分子泳动慢（对数线性关系）。</li>
+<li><strong>凝胶浓度</strong>：琼脂糖凝胶起分子筛作用。浓度越高，有效孔径越小，相同大小DNA片段迁移越慢。分离小片段（&lt;500 bp）宜用较高浓度凝胶（1.5%~2%），分离大片段（&gt;5 kb）宜用低浓度凝胶（0.3%~0.8%）。</li>
+<li><strong>DNA构象</strong>：相同分子质量的超螺旋（cccDNA）、线性（Liner）、开环（ocDNA）迁移率不同，通常超螺旋最快，线性次之，开环最慢（但在含EB的胶中也可能线形最快）。</li>
+<li><strong>电场强度</strong>：低电压时迁移率与片段大小的对数成反比；电压过高，大片段相对迁移率降低，分辨率下降，且发热严重。</li>
+<li><strong>缓冲液离子强度</strong>：离子强度过低，导电性差，DNA泳动慢；离子强度过高，产热增多，可能使凝胶熔化，条带弯曲。</li>
+<li><strong>PCR产物鉴定</strong>：PCR产物为线性双链DNA，通过与适宜分子量标准（Marker）比较片段大小，判断是否特异扩增以及大小是否正确。凝胶浓度需根据预期产物大小选择。</li>
+</ul>
+<h2>解题方法与套路</h2>
+<ol>
+<li><strong>锁定核心变量</strong>：审题时首先明确题目考查迁移率的哪个影响因素（凝胶浓度、分子大小、构象、电压等），对应选项辨析。</li>
+<li><strong>对照一般规律</strong>：DNA片段越小跑得越快，凝胶浓度越高跑得越慢，电压低线性关系好，电压高分辨率差。</li>
+<li><strong>关注实验条件</strong>：涉及“PCR产物电泳”时，注意产物为线性DNA；注意“最适浓度/电压”表述，绝对化用词（如“电压越高越好”）常为错误选项。</li>
+<li><strong>排除法优先</strong>：选项中出现“与凝胶浓度无关”“迁移率仅取决于分子大小”等片面描述，直接排除；出现“高浓度凝胶分离大片段”违背分子筛效应，排除。</li>
+<li><strong>选项验证</strong>：对存疑选项，代入真实实验场景（如跑胶发现小片段弥散、大片段不进入胶）快速判断。</li>
+</ol>
+<h2>高频易错</h2>
+<ul>
+<li><strong>混淆凝胶浓度与片段大小的匹配关系</strong>：误以为“分离大片段要用高浓度胶”——实则低浓度胶孔径大，适合大片段通过；高浓度胶用于小片段。</li>
+<li><strong>误判电压影响</strong>：认为“电压越高，分离越快且效果不变”——实际高电压导致分辨率下降、条带弯曲、产热增加，大片段可能跑不过预期位置。</li>
+<li><strong>忽略构象差异</strong>：质粒酶切前后、连接产物等，同样大小但不同构象时迁移率不同，直接比对分子量会造成误判。</li>
+<li><strong>误将电泳位移速率等同于迁移率</strong>：迁移率是单位电场下的速度，与电压大小无关（恒定浓度），但实际泳动速率与电压成正比。选项若混淆概念，需警惕。</li>
+<li><strong>认为DNA带正电向负极移动</strong>：DNA磷酸骨架带负电，在电泳中向正极（阳极）移动，若描述反向立即排除。</li>
+</ul>
+<h2>代表题精讲</h2>
+<p><strong>题目</strong>（2024·辽宁卷·7）关于采用琼脂糖凝胶电泳鉴定PCR产物的实验，下列叙述正确的是<br />
+A. 琼脂糖凝胶浓度的选择需考虑待分离DNA片段的大小<br />
+B. 电泳时电压越高，不同大小DNA片段的分辨效果越好<br />
+C. 待分离的DNA片段越小，在凝胶中的泳动速率越慢<br />
+D. 电泳缓冲液的离子强度对DNA的迁移速率无影响</p>
+<p><strong>思路</strong><br />
+本题通过四个典型错误选项，综合考查琼脂糖凝胶电泳中影响DNA迁移率的关键因素。需逐项用基本原理甄别，尤其注意分子筛效应、电压影响、分子大小与速率关系等。</p>
+<p><strong>步骤</strong><br />
+1. 选项A：琼脂糖凝胶起分子筛作用，浓度决定孔径，分离不同大小的DNA片段必须选择适宜浓度（大片段低浓度，小片段高浓度），因此正确。<br />
+2. 选项B：电压升高虽然可加快泳动，但会导致大片段相对迁移率降低、条带扩散、分辨率下降，并非越高越好；同时发热剧烈，可能损坏凝胶。叙述错误。<br />
+3. 选项C：在相同条件下，小分子DNA受到的凝胶阻力小，泳动更快，而不是更慢。叙述与事实相反，错误。<br />
+4. 选项D：缓冲液提供导电离子，其离子强度影响电场分布和DNA迁移率。过低则泳动慢，过高则产热多，迁移行为改变，叙述“无影响”错误。<br />
+因此正确选项为A。</p>
+<p><strong>点评/变式</strong><br />
+本题是经典“直选式”实验选择题。未来可变式为“给定一段500 bp和3000 bp的PCR产物，应选用多大浓度琼脂糖胶”，需会转换匹配关系。也可与分子量标准（DNA Marker）图谱判读结合，考查条带位置的含义。</p>
+<h2>全部真题清单</h2>
+<ul>
+<li><a href="../../exam/生物/2024-辽宁-07.html">2024-辽宁-07</a>（2024 · 中） 考查琼脂糖凝胶电泳鉴定PCR产物的原理及操作要点</li>
+</ul>
+<h2>关联</h2>
+<ul>
+<li>概念词条：<a href="../../atoms/743-DNA迁移率.html">DNA迁移率</a></li>
+</ul>
+</div>
+</body>
+</html>
