@@ -17,6 +17,7 @@ import pypdf
 sys.path.insert(0, str(Path(__file__).parent))
 from _utils import REPO_ROOT, read_frontmatter, setup_utf8  # noqa: E402
 from exam_text_segment import segment_by_qno  # noqa: E402
+from fix_pua import clean_pua  # noqa: E402
 
 STEM_START, STEM_END = "<!-- 题干文本-start -->", "<!-- 题干文本-end -->"
 SOL_START, SOL_END = "<!-- 解析文本-start -->", "<!-- 解析文本-end -->"
@@ -85,7 +86,11 @@ def main() -> int:
         if seg["fallback"]:
             warn += 1
             fails.append(f"{p.name}: 切分回退（整页入解析）")
-        new = upsert_text_sections(text, stem=seg["题干"], sol=seg["解析"])
+        new = upsert_text_sections(
+            text,
+            stem=clean_pua(seg["题干"]),
+            sol=clean_pua(seg["解析"]),
+        )
         if args.apply and new != text:
             p.write_text(new, encoding="utf-8")
         done += 1
