@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import re as _re
 import sys
 from pathlib import Path
 
@@ -12,10 +13,22 @@ _PROMPT = Path(__file__).parent / "_prompts" / "kaodian_review.md"
 
 _REQUIRED_BLOCKS = ("## 知识精要", "## 解题方法与套路", "## 高频易错", "## 代表题精讲")
 
+_LEAK_MARKERS = ("让我重新", "这提示我们", "理解有误", "我需要重新", "重新审视",
+                 "似乎不对", "等等，", "等等,", "哦，", "不对，", "依然零解", "我们对总场")
+
 
 def body_is_complete(body: str) -> bool:
     """LLM 正文是否非空且含全部必需区块。"""
     return bool(body.strip()) and all(b in body for b in _REQUIRED_BLOCKS)
+
+
+def body_is_clean(body: str) -> bool:
+    """拒绝带推导草稿/自我怀疑的脏输出：超长行(>700)或多处思考犹豫标志。"""
+    if any(len(line) > 700 for line in body.splitlines()):
+        return False
+    if sum(body.count(m) for m in _LEAK_MARKERS) >= 2:
+        return False
+    return True
 
 
 def _load_template() -> str:
@@ -75,6 +88,8 @@ def _generate_one(subject: str, kp: str, info: dict, alias_lookup: dict,
         body = call_fn(prompt).text
         if not body_is_complete(body):
             return kp, None, "输出空或缺区块"
+        if not body_is_clean(body):
+            return kp, None, "疑似思考泄漏/超长行"
         concept_link, weight = resolve_concept(kp, alias_lookup, weights)
         md = render_md(subject, kp, info, llm_body=body, weight=weight, concept_link=concept_link)
         return kp, md, "ok"

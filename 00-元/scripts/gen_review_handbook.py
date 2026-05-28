@@ -130,7 +130,7 @@ def _render_body(body: str) -> str:
 HANDBOOK_EXTRA_CSS = """
 <style>
   /* 手册专用样式（补充 PRINT_CSS 基础样式） */
-  .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; }
+  .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; overflow-wrap: anywhere; word-break: break-word; }
   .hb-title { font-size: 1.8em; font-weight: bold; margin: 12px 0 4px; }
   .hb-subtitle { color: #666; font-size: 0.95em; margin-bottom: 16px; }
 
@@ -152,7 +152,8 @@ HANDBOOK_EXTRA_CSS = """
                        padding-left: 8px; margin-bottom: 8px; }
   .kp-zhuanti { margin-top: 16px; padding: 12px 14px 8px;
                 border: 1px solid #ddd; border-radius: 6px;
-                break-inside: avoid; page-break-inside: avoid; }
+                break-inside: avoid; page-break-inside: avoid;
+                overflow-wrap: anywhere; word-break: break-word; }
   .kp-header  { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; color: #1a1a1a; }
   .kp-meta    { font-size: 0.85em; color: #888; margin-bottom: 8px; }
   .kp-zhuanti h2 { font-size: 1em; border-bottom: 1px solid #eee;

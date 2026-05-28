@@ -88,6 +88,50 @@ class TestBodyComplete(unittest.TestCase):
         self.assertFalse(g.body_is_complete("## 知识精要\nx\n## 高频易错\nx"))
 
 
+class TestBodyClean(unittest.TestCase):
+    def test_clean_body_passes(self):
+        import gen_kaodian_review as g
+        body = "## 知识精要\nx\n## 解题方法与套路\nx\n## 高频易错\nx\n## 代表题精讲\n解法：步骤1，步骤2。"
+        self.assertTrue(g.body_is_clean(body))
+
+    def test_long_line_fails(self):
+        import gen_kaodian_review as g
+        long_line = "A" * 701
+        body = f"## 代表题精讲\n{long_line}\n## 知识精要\nx"
+        self.assertFalse(g.body_is_clean(body))
+
+    def test_two_leak_markers_fails(self):
+        import gen_kaodian_review as g
+        body = "## 代表题精讲\n让我重新考虑一下这道题，等等，好像不对。"
+        self.assertFalse(g.body_is_clean(body))
+
+    def test_single_leak_marker_passes(self):
+        import gen_kaodian_review as g
+        # one occurrence is below threshold (2), should still pass
+        body = "## 代表题精讲\n让我重新整理一下思路。"
+        self.assertTrue(g.body_is_clean(body))
+
+    def test_leaked_body_rejected_by_generate_one(self):
+        import gen_kaodian_review as g
+        # body passes body_is_complete but fails body_is_clean
+        long_line = "X" * 701
+        body = (
+            "## 知识精要\nx\n## 解题方法与套路\nx\n## 高频易错\nx\n"
+            f"## 代表题精讲\n{long_line}"
+        )
+        info = {
+            "父主题": "复数", "真题数": 1, "题位": [("选择", 1)],
+            "难度分布": {"易": 1}, "年份跨度": (2024, 2024),
+            "真题": [{"_bare": "2024-A-01", "年份": "2024", "难度": "易",
+                      "摘要": "求模", "题干文本": "求|z|", "解析文本": "解：..."}],
+        }
+        class R:
+            text = body
+        kp, md, st = g._generate_one("数学", "复数", info, {}, {}, lambda p: R())
+        self.assertIsNone(md)
+        self.assertIn("泄漏", st)
+
+
 class TestGenerateOne(unittest.TestCase):
     def _fake(self, text):
         class R:
