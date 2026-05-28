@@ -56,6 +56,7 @@ KATEX_CDN = f"https://cdn.jsdelivr.net/npm/katex@{KATEX_VERSION}/dist"
 KATEX_FILES = [
     "katex.min.css",
     "katex.min.js",
+    "contrib/mhchem.min.js",   # 化学式 \ce{...}（须在 auto-render 前加载）
     "contrib/auto-render.min.js",
 ]
 KATEX_FONTS = [  # 仅 woff2（现代浏览器够用）
@@ -117,6 +118,7 @@ def katex_head_html_at_depth(depth: int) -> str:
     return f"""
 <link rel="stylesheet" href="{prefix}/vendor/katex/katex.min.css">
 <script defer src="{prefix}/vendor/katex/katex.min.js"></script>
+<script defer src="{prefix}/vendor/katex/contrib/mhchem.min.js"></script>
 <script defer src="{prefix}/vendor/katex/contrib/auto-render.min.js"
   onload="renderMathInElement(document.body,{{
     delimiters:[
