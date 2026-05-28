@@ -80,7 +80,7 @@ D. pH=4.2 时，$c(\ce{HA-}) = c(\ce{A^{2-}}) = c(\ce{H+})$
    pH=2.7 时，位于 $\text{p}K_{a1}$ 和 $\text{p}K_{a2}$ 之间，$\delta(\ce{HA-})$ 达到最大，而 $\delta(\ce{H2A})$ 与 $\delta(\ce{A^{2-}})$ 交叉于 pH= $\frac{\text{p}K_{a1}+\text{p}K_{a2}}{2} \approx 2.7$。图中可知 $\delta(\ce{HA-}) > \delta(\ce{H2A}) = \delta(\ce{A^{2-}})$，因此浓度大小顺序为该关系。C 正确。
 
 4. **检验 D 项**  
-   pH=4.2 时，$\delta(\ce{HA-}) = \delta(\ce{A^{2-}})$，从交点读取 $\delta$ 值约为 0.5，所以 $c(\ce{HA-}) = c(\ce{A^{2-}}) = 0.5 \times 0.1 = 0.05\ \text{mol·L}^{-1}$。而该 pH 下 $[\ce{H+}] = 10^{-4.2} \approx 6.3\times 10^{-5}\ \text{mol·L}^{-1}$。显然 $0.05 \neq 6.3\times 10^{-5}$，D 错误。
+   pH=4.2 时，$\delta(\ce{HA-}) = \delta(\ce{A^{2-}})$，从交点读取 $\delta$ 值约为 0.5，所以 $c(\ce{HA-}) = c(\ce{A^{2-}}) = 0.5 \times 0.1 = 0.05\ \text{mol}\cdot \text{L}^{-1}$。而该 pH 下 $[\ce{H+}] = 10^{-4.2} \approx 6.3\times 10^{-5}\ \text{mol}\cdot \text{L}^{-1}$。显然 $0.05 \neq 6.3\times 10^{-5}$，D 错误。
 
 ### **点评/变式**
 - **核心陷阱：浓度等式混淆**。交点给出型体浓度相等，但绝不代表它们等于 $[\ce{H+}]$，除非总浓度恰好等于 $[\ce{H+}]$（极少见）。务必区分平衡浓度与酸度。
