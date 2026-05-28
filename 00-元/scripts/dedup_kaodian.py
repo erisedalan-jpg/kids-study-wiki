@@ -13,6 +13,7 @@ from _utils import setup_utf8  # noqa: E402
 # ── 去噪：删除不影响语义的虚词，使「函数的单调性」≡「函数单调性」 ──
 _NOISE = ("的", "之")
 _TAIL = ("运算", "问题")
+# _NOISE/_TAIL 可按需扩充
 
 
 def _denoise(s: str) -> str:
@@ -24,11 +25,12 @@ def _denoise(s: str) -> str:
 def _strip_tail(s: str) -> str:
     for t in _TAIL:
         if s.endswith(t) and len(s) > len(t):
-            s = s[: -len(t)]
+            return s[: -len(t)]  # 最多剥一个尾缀
     return s
 
 
 def _bigrams(s: str) -> set[str]:
+    # 单字符无 bigram，退化为字级集合（保证自身相似=1）
     if len(s) < 2:
         return {s} if s else set()
     return {s[i:i + 2] for i in range(len(s) - 1)}
@@ -82,6 +84,8 @@ def s_contain(a: str, b: str) -> float:
 
 def name_similarity(a: str, b: str) -> float:
     """词法相似度 ∈[0,1]。可插拔接口——嵌入层日后替换此函数。"""
+    if not a or not b:
+        return 0.0
     if a == b:
         return 1.0
     na, nb = _denoise(a), _denoise(b)

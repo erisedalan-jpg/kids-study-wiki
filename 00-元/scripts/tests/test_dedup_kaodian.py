@@ -29,6 +29,21 @@ class TestSimilarity(unittest.TestCase):
         self.assertLess(self.d.name_similarity("集合", "数列"), 0.3)
         self.assertLess(self.d.name_similarity("复数", "导数"), 0.5)
 
+    def test_empty_strings(self):
+        self.assertEqual(self.d.name_similarity("", ""), 0.0)
+        self.assertEqual(self.d.name_similarity("", "交集"), 0.0)
+        self.assertEqual(self.d.name_similarity("交集", ""), 0.0)
+
+    def test_single_char_identical(self):
+        self.assertEqual(self.d.name_similarity("点", "点"), 1.0)
+
+    def test_strip_tail_no_overflow(self):
+        self.assertEqual(self.d._strip_tail("运算"), "运算")
+        self.assertEqual(self.d._strip_tail("交集运算"), "交集")
+
+    def test_denoise_removes_noise(self):
+        self.assertEqual(self.d._denoise("函数的单调性"), "函数单调性")
+
 
 if __name__ == "__main__":
     unittest.main()
