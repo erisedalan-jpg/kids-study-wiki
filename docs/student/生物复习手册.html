@@ -33050,12 +33050,14 @@ D．组织液中的有些物质经毛细血管静脉端进入血液</p>
 <script>
 window.addEventListener('load', function () {
   function fit() {
-    var sel = ['.katex-display', '.kp-zhuanti table', '.kp-zhuanti pre'];
+    // 含行内 .katex（化学长方程多为行内 $...$）+ 表格 + 代码块
+    var sel = ['.katex', '.kp-zhuanti table', '.kp-zhuanti pre'];
     document.querySelectorAll(sel.join(',')).forEach(function (el) {
       el.style.zoom = '';
-      var inner = el.querySelector('.katex') || el;
-      var avail = el.clientWidth || (el.parentElement && el.parentElement.clientWidth) || 0;
-      var w = inner.scrollWidth;
+      // 可用宽 = 最近块级容器的内容宽（非元素自身宽，否则超宽表格永不触发）
+      var box = el.closest('.kp-zhuanti, .slot-block, .hb-wrap') || el.parentElement;
+      var avail = box ? box.clientWidth : 0;
+      var w = el.scrollWidth;
       if (avail > 0 && w > avail) el.style.zoom = (avail / w).toFixed(4);
     });
   }
