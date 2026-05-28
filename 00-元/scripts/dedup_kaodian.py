@@ -6,6 +6,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[0]))
 
 from _utils import setup_utf8  # noqa: E402
@@ -93,3 +95,26 @@ def name_similarity(a: str, b: str) -> float:
         return 0.97
     weighted = 0.6 * s_bigram(na, nb) + 0.25 * s_jaccard(na, nb) + 0.15 * s_edit(na, nb)
     return max(s_contain(na, nb), weighted)
+
+
+def load_contrast_groups(subject: str) -> list[set[str]]:
+    """读 contrast_terms.yaml，返回 通用 + 该科 的词组（set 列表）。"""
+    path = Path(__file__).parent / "contrast_terms.yaml"
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    groups: list[set[str]] = []
+    for key in ("通用", subject):
+        for grp in data.get(key, []) or []:
+            if grp:
+                groups.append(set(grp))
+    return groups
+
+
+def is_contrast_pair(a: str, b: str, groups: list[set[str]]) -> bool:
+    """a 把某组内一词换成同组另一词后 == b → 对立项。差一个对立词即命中。"""
+    for grp in groups:
+        for t1 in grp:
+            if t1 in a:
+                for t2 in grp:
+                    if t2 != t1 and a.replace(t1, t2) == b:
+                        return True
+    return False
