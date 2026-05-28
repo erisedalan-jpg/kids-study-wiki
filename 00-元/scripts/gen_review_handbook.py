@@ -161,6 +161,9 @@ def _render_body(body: str) -> str:
 
 HANDBOOK_EXTRA_CSS = """
 <style>
+  /* 固定 A4 + 统一基础字号：四科一致（≈生物），防 Chromium 按内容宽度整体缩放 */
+  @page { size: A4; margin: 12mm; }
+  body { font-size: 11.5pt; }
   /* 手册专用样式（补充 PRINT_CSS 基础样式） */
   .hb-wrap { max-width: 960px; margin: 0 auto; padding: 16px; overflow-wrap: anywhere; word-break: break-word; }
   .hb-title { font-size: 1.8em; font-weight: bold; margin: 12px 0 4px; }
@@ -353,8 +356,31 @@ def build_full_html(subject: str, body_html: str) -> str:
         f'<div class="hb-title">{html.escape(subject)}复习手册 · 吉林高考冲刺</div>\n'
         f'<div class="hb-subtitle">题位速查脑图（顶部）+ 考点专题（正文）| Ctrl+P → A4 PDF</div>\n'
         f"{body_html}\n"
-        f"</div></body></html>"
+        f"</div>\n"
+        f"{_FIT_SCRIPT}\n"
+        f"</body></html>"
     )
+
+
+# KaTeX 渲染后，把超出页宽的公式/表格用 zoom 局部缩小到恰好适配。
+# 这样没有元素超出页宽，Chromium 不再对整本做"适配页宽"缩放 → 四科正文字号统一。
+_FIT_SCRIPT = """
+<script>
+window.addEventListener('load', function () {
+  function fit() {
+    var sel = ['.katex-display', '.kp-zhuanti table', '.kp-zhuanti pre'];
+    document.querySelectorAll(sel.join(',')).forEach(function (el) {
+      el.style.zoom = '';
+      var inner = el.querySelector('.katex') || el;
+      var avail = el.clientWidth || (el.parentElement && el.parentElement.clientWidth) || 0;
+      var w = inner.scrollWidth;
+      if (avail > 0 && w > avail) el.style.zoom = (avail / w).toFixed(4);
+    });
+  }
+  setTimeout(fit, 400);
+});
+</script>
+"""
 
 
 # ---------------------------------------------------------------------------
