@@ -39,7 +39,7 @@ async function main() {
 
   await send("Runtime.enable", {});
   await send("Emulation.setEmulatedMedia", { media: "print" });
-  await sleep(12000); // 等 KaTeX 渲染 + fit() setTimeout(400) 跑完（大文档）
+  await sleep(35000); // 等 KaTeX 渲染（5800+公式）+ fit() 跑完（大文档）
 
   const expr = `(function(){
     var wrap=document.querySelector('.hb-wrap'); var W=wrap?wrap.clientWidth:document.body.clientWidth;
@@ -55,8 +55,9 @@ async function main() {
     return JSON.stringify({pageW:W, katexN:document.querySelectorAll('.katex').length, zoomed:document.querySelectorAll('[style*=zoom]').length, top:uniq.slice(0,18)},null,1);
   })()`;
   const r = await send("Runtime.evaluate", { expression: expr, returnByValue: true });
-  console.log(r.result.value);
+  require("fs").writeFileSync(path.resolve(process.argv[3] || "docs/student/_diag.json"),
+    (r.result && r.result.value) || JSON.stringify(r), "utf8");
   ws.close(); edge.kill();
   process.exit(0);
 }
-main().catch((e) => { console.error(e); edge.kill(); process.exit(1); });
+main().catch((e) => { require("fs").writeFileSync("docs/student/_diag.json", "ERR: " + e.stack); edge.kill(); process.exit(1); });

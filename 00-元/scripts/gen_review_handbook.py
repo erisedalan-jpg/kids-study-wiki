@@ -366,21 +366,20 @@ def build_full_html(subject: str, body_html: str) -> str:
 # 这样没有元素超出页宽，Chromium 不再对整本做"适配页宽"缩放 → 四科正文字号统一。
 _FIT_SCRIPT = """
 <script>
-window.addEventListener('load', function () {
-  function fit() {
-    // 含行内 .katex（化学长方程多为行内 $...$）+ 表格 + 代码块
-    var sel = ['.katex', '.kp-zhuanti table', '.kp-zhuanti pre'];
-    document.querySelectorAll(sel.join(',')).forEach(function (el) {
-      el.style.zoom = '';
-      // 可用宽 = 最近块级容器的内容宽（非元素自身宽，否则超宽表格永不触发）
-      var box = el.closest('.kp-zhuanti, .slot-block, .hb-wrap') || el.parentElement;
-      var avail = box ? box.clientWidth : 0;
-      var w = el.scrollWidth;
-      if (avail > 0 && w > avail) el.style.zoom = (avail / w).toFixed(4);
-    });
-  }
-  setTimeout(fit, 400);
-});
+function hbFit() {
+  var wrap = document.querySelector('.hb-wrap');
+  if (!wrap) return;
+  var W = wrap.clientWidth;               // 页面内容宽（打印=A4-边距）
+  if (!W) return;
+  // 任何超出页宽的元素都会触发 Chromium 全局缩放，统统 zoom 到适配：
+  // 题位速查树 .bp-tree、行内/块级公式 .katex、表格、代码块
+  var sel = ['.bp-tree', '.katex', '.kp-zhuanti table', 'table', '.kp-zhuanti pre'];
+  document.querySelectorAll(sel.join(',')).forEach(function (el) {
+    el.style.zoom = '';
+    if (el.scrollWidth > W) el.style.zoom = (W / el.scrollWidth).toFixed(4);
+  });
+}
+window.addEventListener('load', function () { setTimeout(hbFit, 500); });
 </script>
 """
 
