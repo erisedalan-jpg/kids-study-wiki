@@ -200,6 +200,11 @@ HANDBOOK_EXTRA_CSS = """
   .kp-zhuanti th, .kp-zhuanti td { border: 1px solid #ccc; padding: 3px 7px; }
   .kp-zhuanti pre { background: #f6f6f6; padding: 8px; font-size: 0.85em;
                     overflow-x: auto; border-radius: 4px; }
+  /* KaTeX 同时输出可见的 .katex-html + 无障碍用的 .katex-mathml(<math> 树)。
+     后者在本地 Chromium 原生 MathML 下以全宽(数百~千 px)参与布局，把内容撑宽，
+     逼出 Chromium 整页 shrink-to-fit(化学曾被压到 0.66/正文 7.1pt)。
+     PDF 不需要 MathML 无障碍副本，display:none 彻底移出布局(视觉等价)。 */
+  .katex-mathml { display: none !important; }
 
   @media print {
     .hb-wrap { max-width: none; padding: 0; }
@@ -365,29 +370,56 @@ def build_full_html(subject: str, body_html: str) -> str:
 # KaTeX 渲染后，把超出页宽的公式/表格用 font-size 局部缩小到恰好适配。
 # 这样没有元素超出页宽，Chromium 不再对整本做"适配页宽"缩放 → 四科正文字号统一。
 #
-# 两个关键点（踩坑见 docs/superpowers/working/_handbook_pdf_handoff.md）：
+# 关键点（踩坑见 docs/superpowers/working/_handbook_pdf_handoff.md）：
 #  1) 必须用 font-size 而非 zoom：CSS zoom 只缩"绘制矩形"，不改布局宽度，父容器仍溢出
-#     → Chromium 打印"整体缩放适配纸宽"照旧触发（化学曾被压到 0.66，正文 7.1pt）。
-#     font-size 改变真实布局宽度。
-#  2) 必须用 getBoundingClientRect().width 而非 scrollWidth 判超宽：含 SVG 拉伸箭头的公式
-#     （mhchem \\ce{}、\\xrightarrow）scrollWidth 恒为 0，scrollWidth 判据会漏掉它们；
-#     化学满是 \\ce 反应，最宽的 SVG 箭头公式(~1126px)正是逼出 0.66 整体缩放的元凶。
-#  3) 必须用真实打印宽而非 wrap.clientWidth：JS 在 screen 布局执行（视口≈800px），
+#     → Chromium "整体缩放适配纸宽"照旧触发（化学曾被压到 0.66，正文 7.1pt）。
+#  2) ⭐不能用 .katex 盒宽(getBoundingClientRect().width)判超宽：display 公式的
+#     .katex/.katex-html 是 block，宽度被容器钳到 ≈596px，但内部 .base(inline-block;
+#     white-space:nowrap)会以真实宽(如 1058px)溢出盒子。只测盒宽 → 判 596<697 漏判 →
+#     .base 溢出顶高 wrap.scrollWidth → 整页缩放照旧。必须测「自身 + 全部非 SVG 后代的
+#     最右边缘」(contentW)才是公式真实宽。跳过 SVG 内部：<path> 的 getBoundingClientRect
+#     是 viewBox 几何坐标，虚高到数千 px，会污染测量。
+#  3) MathML 副本由 CSS .katex-mathml{display:none} 移出布局(见 HANDBOOK_EXTRA_CSS)，
+#     否则 <math> 树以全宽参与布局，是化学整页缩放的主因(占溢出元素 ~97%)。
+#  4) 必须用真实打印宽而非 wrap.clientWidth：JS 在 screen 布局执行（视口≈800px），
 #     与打印实际内容宽（A4 210mm − 2×12mm 边距 = 186mm ≈ 703px @96dpi）不符。
 _FIT_SCRIPT = """
 <script>
 function hbFit() {
   var wrap = document.querySelector('.hb-wrap');
   if (!wrap) return;
-  var W = (186 * 96 / 25.4) - 6;   // 打印内容宽 ≈703px，留 6px 安全余量
+  var W = (186 * 96 / 25.4) - 4;   // 打印内容宽 ≈703px，留 4px 安全余量
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  // 元素「右边缘」(相对 wrap 左)才是是否超页宽的判据；同时取「左偏移」(相对 wrap)。
+  //   右边缘 = 元素自身 + 全部非 SVG 后代的最右边缘（display 公式 .katex 盒宽被容器钳住，
+  //            内部 .base 会溢出盒子，必须扫后代——详见上方注释②）。
+  //   左偏移 = 列表缩进/padding，不随 font-size 缩放，缩公式时要按 (W − 左偏移) 留出缩进空间，
+  //            否则缩到内容宽=W 后右边缘=左偏移+W 仍溢出（数学手册 0.94 残留缩放即此因）。
+  function edges(el) {
+    var wl = wrap.getBoundingClientRect().left;
+    var box = el.getBoundingClientRect();
+    var leftRel = box.left - wl, maxR = box.right;
+    var ch = el.getElementsByTagName('*');
+    for (var i = 0; i < ch.length; i++) {
+      var c = ch[i];
+      if (c.namespaceURI === SVGNS) continue;   // 跳过 <path> 等 SVG 几何坐标虚高
+      var r = c.getBoundingClientRect();
+      if ((r.width || r.height) && r.right > maxR) maxR = r.right;
+    }
+    return { leftRel: leftRel, rightRel: maxR - wl };
+  }
   var sel = ['.bp-tree', '.katex', '.kp-zhuanti table', 'table', '.kp-zhuanti pre'];
   document.querySelectorAll(sel.join(',')).forEach(function (el) {
     el.style.fontSize = '';
-    // 迭代收敛：含 CJK/SVG 的公式宽度不随 font-size 线性缩放，单次会欠缩，
-    // 重测后再缩，最多 5 次（每次必再小，快速收敛）。用渲染宽 getBoundingClientRect。
-    for (var k = 0; k < 5 && el.getBoundingClientRect().width > W; k++) {
+    // 迭代收敛：宽度不随 font-size 严格线性，单次可能欠缩，重测再缩，最多 6 次。
+    for (var k = 0; k < 6; k++) {
+      var e = edges(el);
+      if (e.rightRel <= W) break;
+      var contentWidth = e.rightRel - e.leftRel;   // 随 font 缩放的部分
+      var avail = W - e.leftRel;                   // 扣除固定缩进后留给内容的宽
+      if (avail <= 0) break;                        // 极端缩进，放弃(罕见)
       var fs = parseFloat(getComputedStyle(el).fontSize);
-      el.style.fontSize = (fs * W / el.getBoundingClientRect().width).toFixed(2) + 'px';
+      el.style.fontSize = (fs * avail / contentWidth).toFixed(2) + 'px';
     }
   });
 }
